@@ -65,9 +65,18 @@ Antwoord ALLEEN met een JSON array, geen andere tekst:
     "q": "De vraag",
     "options": ["optie A", "optie B", "optie C", "optie D"],
     "answer": 0,
-    "explanation": "Uitleg (1-2 zinnen) die verwijst naar de theorie uit dit hoofdstuk. Bijv: 'Volgens de regels uit §6.2 geldt dat...'"
+    "explanation": "Uitleg (1-2 zinnen) die verwijst naar de theorie uit dit hoofdstuk. Bijv: 'Volgens de regels uit §6.2 geldt dat...'",
+    "svg": "<svg>...</svg> of null"
   }
 ]
+
+BELANGRIJK OVER HET SVG VELD:
+- Als een vraag baat heeft bij een visueel diagram (meetkunde, grafieken, scheikundige structuren, kaarten, biologische processen etc.), genereer dan een simpele SVG tekening.
+- De SVG moet compact zijn: viewBox="0 0 300 200", gebruik heldere kleuren, labels in het Nederlands.
+- Voorbeelden: driehoeken met zijden/hoeken gelabeld, assenstelsels met functies, taartdiagrammen, molecuulstructuren.
+- Als een vraag GEEN diagram nodig heeft (bijv. een rekenvraag of taaldvraag), zet dan null voor het svg veld.
+- Minstens 30% van de vragen moet een SVG diagram hebben als het vak zich daarvoor leent (wiskunde, natuurkunde, scheikunde, biologie, aardrijkskunde).
+- Gebruik stroke en fill kleuren: #FF6B35 (oranje), #4ECDC4 (teal), #2d3436 (donkergrijs), #636e72 (grijs). Tekst in font-family Arial.
 
 Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
@@ -79,9 +88,16 @@ Antwoord ALLEEN met een JSON array, geen andere tekst:
     "q": "De vraag",
     "options": ["optie A", "optie B", "optie C", "optie D"],
     "answer": 0,
-    "explanation": "Korte uitleg waarom dit het juiste antwoord is (1-2 zinnen, helder en leerzaam)"
+    "explanation": "Korte uitleg waarom dit het juiste antwoord is (1-2 zinnen, helder en leerzaam)",
+    "svg": "<svg>...</svg> of null"
   }
 ]
+
+BELANGRIJK OVER HET SVG VELD:
+- Als een vraag baat heeft bij een visueel diagram, genereer een simpele SVG tekening.
+- De SVG moet compact zijn: viewBox="0 0 300 200", gebruik heldere kleuren, labels in het Nederlands.
+- Als een vraag GEEN diagram nodig heeft, zet dan null.
+- Gebruik kleuren: #FF6B35 (oranje), #4ECDC4 (teal), #2d3436 (donkergrijs). Tekst in font-family Arial.
 
 Regels:
 - "answer" is de index (0-3) van het juiste antwoord in de options array
@@ -103,7 +119,7 @@ Regels:
       },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
-        max_tokens: 2000,
+        max_tokens: 4000,
         messages: [{ role: "user", content: prompt }],
       }),
     });

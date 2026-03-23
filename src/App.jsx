@@ -359,7 +359,7 @@ export default function App() {
     if (questions.length === 0) {
       questions = shuffle(SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 8);
     }
-    setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion || 20, startedAt: Date.now() });
+    setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
 
@@ -1370,6 +1370,10 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <h2 style={styles.questionText}>{question.q}</h2>
+
+        {question.svg && (
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, padding: 12, background: "#f8f9fa", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
+        )}
 
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
