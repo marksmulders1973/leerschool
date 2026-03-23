@@ -1056,7 +1056,6 @@ function SelfStudy({ onStart, onBack }) {
             <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI }); }}>
               🚀 Start met oefenen!
             </button>
-            </button>
           </>
         )}
       </div>
