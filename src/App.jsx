@@ -475,6 +475,7 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
+          onQuit={() => { setGameState(null); setPage(role === "teacher" ? "teacher-home" : "student-home"); }}
         />
       )}
       {page === "results" && (
@@ -591,6 +592,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         @keyframes popIn { 0% { transform:scale(0.5); opacity:0; } 70% { transform:scale(1.1); } 100% { transform:scale(1); opacity:1; } }
         @keyframes confetti { 0% { transform:translateY(0) rotate(0deg); opacity:1; } 100% { transform:translateY(-200px) rotate(720deg); opacity:0; } }
         @keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes fadeBg { from { opacity:0; } to { opacity:1; } }
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
           25% { transform: translateX(-8px); }
@@ -994,7 +996,7 @@ function SelfStudy({ onStart, onBack }) {
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
-  const [timePerQuestion, setTimePerQuestion] = useState(25);
+  const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
 
   return (
@@ -1047,11 +1049,13 @@ function SelfStudy({ onStart, onBack }) {
             <div style={styles.settingsGroup}>
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
-              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion}s</label>
-              <input type="range" min={10} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
+              <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#4ECDC4", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
-            <button style={styles.startButton} onClick={() => onStart({ subject, level, questionCount, timePerQuestion })}>
+            <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI }); }}>
               🚀 Start met oefenen!
+            </button>
             </button>
           </>
         )}
@@ -1066,17 +1070,28 @@ function TextbookQuiz({ onStart, onBack }) {
   const [category, setCategory] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
   const [customBook, setCustomBook] = useState("");
-  const [edition, setEdition] = useState("");
-  const [chapter, setChapter] = useState("");
+  const [deel, setDeel] = useState("");
+  const [chapterNum, setChapterNum] = useState("");
+  const [paragraaf, setParagraaf] = useState("");
   const [topic, setTopic] = useState("");
   const [level, setLevel] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
-  const [timePerQuestion, setTimePerQuestion] = useState(25);
+  const [timePerQuestion, setTimePerQuestion] = useState(0);
 
   const bookName = selectedBook ? selectedBook.name : customBook;
+  const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
   const canNext1 = category !== "";
   const canNext2 = bookName.trim() !== "";
-  const canNext3 = chapter.trim() !== "" && level !== "";
+  const canNext3 = chapterNum !== "" && level !== "";
+
+  const selectStyle = {
+    width: "100%", padding: "14px 16px", borderRadius: 14, border: "2px solid #e0e6ed",
+    fontFamily: "'Nunito', sans-serif", fontSize: 16, fontWeight: 600, outline: "none",
+    background: "#fff", boxSizing: "border-box", appearance: "none",
+    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23636e72' d='M6 8L1 3h10z'/%3E%3C/svg%3E\")",
+    backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center",
+    cursor: "pointer",
+  };
 
   return (
     <div style={styles.page}>
@@ -1142,7 +1157,7 @@ function TextbookQuiz({ onStart, onBack }) {
 
         {step === 3 && (
           <div style={{ animation: "slideUp 0.3s ease" }}>
-            <h3 style={styles.stepTitle}>Details & hoofdstuk</h3>
+            <h3 style={styles.stepTitle}>Wat wil je oefenen?</h3>
 
             <div style={styles.settingsGroup}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, padding: 12, background: "#f8f9fa", borderRadius: 12 }}>
@@ -1153,34 +1168,76 @@ function TextbookQuiz({ onStart, onBack }) {
                 </div>
               </div>
 
-              <label style={styles.settingLabel}>Editie / Deel (optioneel)</label>
-              <input style={styles.textInput} value={edition} onChange={(e) => setEdition(e.target.value)} placeholder="Bijv. Editie 13, Deel 2" />
+              {/* Deel / Editie dropdown */}
+              <label style={styles.settingLabel}>📘 Deel / Editie</label>
+              <select style={selectStyle} value={deel} onChange={(e) => setDeel(e.target.value)}>
+                <option value="">-- Kies deel (optioneel) --</option>
+                {[1,2,3,4,5,6].map(n => <option key={n} value={`Deel ${n}`}>Deel {n}</option>)}
+                <option value="Editie 12">Editie 12</option>
+                <option value="Editie 13">Editie 13</option>
+                <option value="Editie 14">Editie 14</option>
+                <option value="A">Boek A</option>
+                <option value="B">Boek B</option>
+                <option value="C">Boek C</option>
+              </select>
 
-              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>Hoofdstuk / Paragraaf *</label>
-              <input style={styles.textInput} value={chapter} onChange={(e) => setChapter(e.target.value)} placeholder="Bijv. 6.2 of Hoofdstuk 3" />
+              {/* Hoofdstuk dropdown */}
+              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>📖 Hoofdstuk *</label>
+              <select style={{ ...selectStyle, borderColor: chapterNum ? "#4ECDC4" : "#e0e6ed" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
+                <option value="">-- Kies hoofdstuk --</option>
+                {Array.from({length: 20}, (_, i) => i + 1).map(n => <option key={n} value={n}>Hoofdstuk {n}</option>)}
+              </select>
 
-              <label style={styles.settingLabel}>Onderwerp (optioneel)</label>
+              {/* Paragraaf dropdown */}
+              {chapterNum && (
+                <>
+                  <label style={styles.settingLabel}>📄 Paragraaf</label>
+                  <select style={selectStyle} value={paragraaf} onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}>
+                    <option value="">-- Heel hoofdstuk --</option>
+                    {Array.from({length: 12}, (_, i) => i + 1).map(n => <option key={n} value={n}>§{chapterNum}.{n}</option>)}
+                  </select>
+                </>
+              )}
+
+              {/* Onderwerp (optioneel) */}
+              <label style={styles.settingLabel}>🎯 Onderwerp (optioneel)</label>
               <input style={styles.textInput} value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Bijv. Kwadratische vergelijkingen" />
 
-              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>Niveau *</label>
+              {/* Niveau */}
+              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>🎓 Niveau *</label>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 8 }}>
                 {LEVELS.map((l) => (
                   <button key={l.id} style={{
                     padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #4ECDC4" : "2px solid #e0e6ed",
                     background: level === l.id ? "#4ECDC410" : "#fff", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
                     fontWeight: 700, fontSize: 12, textAlign: "center",
-                  }} onClick={() => setLevel(l.id)}>
+                  }} onClick={() => { SoundEngine.play("click"); setLevel(l.id); }}>
                     {l.icon} {l.label}
                   </button>
                 ))}
               </div>
 
+              {/* Aantal vragen */}
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
 
-              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion}s</label>
-              <input type="range" min={10} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              {/* Timer */}
+              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
+              <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#4ECDC4", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
+
+            {/* Preview van selectie */}
+            {chapterNum && level && (
+              <div style={{ padding: 14, background: "#e8f5e9", borderRadius: 12, borderLeft: "4px solid #4CAF50", marginBottom: 16 }}>
+                <div style={{ fontSize: 13, color: "#2e7d32", lineHeight: 1.6 }}>
+                  <strong>Jouw selectie:</strong><br/>
+                  📕 {bookName} {deel ? `· ${deel}` : ""}<br/>
+                  📖 {chapter}{topic ? ` · ${topic}` : ""}<br/>
+                  🎓 {LEVELS.find(l => l.id === level)?.label}
+                </div>
+              </div>
+            )}
 
             <div style={styles.navRow}>
               <button style={styles.backBtn} onClick={() => setStep(2)}>← Vorige</button>
@@ -1195,7 +1252,7 @@ function TextbookQuiz({ onStart, onBack }) {
                   timePerQuestion,
                   textbook: {
                     bookName,
-                    edition: edition || null,
+                    edition: deel || null,
                     chapter,
                     topic: topic || null,
                     level,
@@ -1208,7 +1265,7 @@ function TextbookQuiz({ onStart, onBack }) {
 
             <div style={{ marginTop: 8, padding: 14, background: "#fff9e6", borderRadius: 12, borderLeft: "4px solid #ffc107" }}>
               <div style={{ fontSize: 13, color: "#856404", lineHeight: 1.5 }}>
-                💡 <strong>Tip:</strong> Hoe specifieker je het hoofdstuk en onderwerp invult, hoe beter de vragen aansluiten bij wat je leert!
+                💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen. "Heel hoofdstuk" werkt ook maar is breder.
               </div>
             </div>
           </div>
@@ -1219,26 +1276,28 @@ function TextbookQuiz({ onStart, onBack }) {
 }
 
 // ─── Play Quiz ───────────────────────────────────────────────────
-function PlayQuiz({ gameState, setGameState, onFinish }) {
-  const [timeLeft, setTimeLeft] = useState(gameState.timePerQuestion);
+function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
+  const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
+  const [timeLeft, setTimeLeft] = useState(noTimer ? 0 : gameState.timePerQuestion);
   const [selected, setSelected] = useState(null);
   const [showResult, setShowResult] = useState(false);
   const [showExplanation, setShowExplanation] = useState(false);
   const [scoreAnim, setScoreAnim] = useState(false);
+  const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const timerRef = useRef(null);
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
 
   useEffect(() => {
-    setTimeLeft(gameState.timePerQuestion);
+    setTimeLeft(noTimer ? 0 : gameState.timePerQuestion);
     setSelected(null);
     setShowResult(false);
     setShowExplanation(false);
   }, [gameState.currentQ, gameState.timePerQuestion]);
 
   useEffect(() => {
-    if (showResult) return;
+    if (showResult || noTimer) return;
     timerRef.current = setInterval(() => {
       setTimeLeft((t) => {
         if (t <= 4 && t > 1) SoundEngine.play("countdown");
@@ -1247,7 +1306,7 @@ function PlayQuiz({ gameState, setGameState, onFinish }) {
       });
     }, 1000);
     return () => clearInterval(timerRef.current);
-  }, [gameState.currentQ, showResult]);
+  }, [gameState.currentQ, showResult, noTimer]);
 
   const handleAnswer = (idx) => {
     if (showResult) return;
@@ -1279,23 +1338,36 @@ function PlayQuiz({ gameState, setGameState, onFinish }) {
     }, delay);
   };
 
-  const timerPct = (timeLeft / gameState.timePerQuestion) * 100;
-  const timerColor = timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
+  const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
+  const timerColor = noTimer ? "#4ECDC4" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
 
   return (
-    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color}20, #f8f9fa)` }}>
+    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#4ECDC4"}20, #f8f9fa)` }}>
       <div style={styles.quizHeader}>
+        <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#636e72" }}>
+          ✕ Stop
+        </button>
         <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
         <div style={{ ...styles.scoreDisplay, animation: scoreAnim ? "scoreFloat 0.6s ease" : "none" }}>⭐ {gameState.score}</div>
       </div>
 
-      <div style={styles.timerBar}>
-        <div style={{ ...styles.timerFill, width: `${timerPct}%`, background: timerColor, transition: "width 1s linear, background 0.5s" }} />
-      </div>
-      <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 18, fontWeight: 700, color: timerColor, marginBottom: 12, animation: timeLeft <= 5 ? "timerPulse 0.5s ease infinite" : "none" }}>
-        {timeLeft}s
-      </div>
+      {!noTimer && (
+        <>
+          <div style={styles.timerBar}>
+            <div style={{ ...styles.timerFill, width: `${timerPct}%`, background: timerColor, transition: "width 1s linear, background 0.5s" }} />
+          </div>
+          <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 18, fontWeight: 700, color: timerColor, marginBottom: 12, animation: timeLeft <= 5 ? "timerPulse 0.5s ease infinite" : "none" }}>
+            {timeLeft}s
+          </div>
+        </>
+      )}
+
+      {noTimer && (
+        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#4ECDC4", marginBottom: 12 }}>
+          ⏸️ Geen tijdslimiet — neem de tijd!
+        </div>
+      )}
 
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <h2 style={styles.questionText}>{question.q}</h2>
@@ -1336,6 +1408,32 @@ function PlayQuiz({ gameState, setGameState, onFinish }) {
           </div>
         )}
       </div>
+
+      {/* Quit confirmation overlay */}
+      {showQuitConfirm && (
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 100, animation: "fadeBg 0.2s ease" }}>
+          <div style={{ background: "#fff", borderRadius: 24, padding: "28px 24px", maxWidth: 320, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
+            <span style={{ fontSize: 48 }}>🛑</span>
+            <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
+            <p style={{ color: "#636e72", fontSize: 14, marginBottom: 20 }}>
+              Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
+              {gameState.score > 0 && ` Score: ${gameState.score} goed!`}
+            </p>
+            <div style={{ display: "flex", gap: 10 }}>
+              <button style={{ flex: 1, background: "#f0f4f8", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
+                Doorgaan
+              </button>
+              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff6b6b, #ee5a24)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
+                clearInterval(timerRef.current);
+                if (gameState.answers.length > 0) onFinish(gameState);
+                else onQuit();
+              }}>
+                Stoppen
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
