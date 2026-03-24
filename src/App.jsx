@@ -1099,6 +1099,7 @@ function TextbookQuiz({ onStart, onBack }) {
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [coverUrl, setCoverUrl] = useState(null);
   const [coverLoading, setCoverLoading] = useState(false);
+  const [coverZoom, setCoverZoom] = useState(false);
 
   const bookName = selectedBook ? selectedBook.name : customBook;
   const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
@@ -1113,15 +1114,20 @@ function TextbookQuiz({ onStart, onBack }) {
       setCoverLoading(true);
       try {
         const catLabel = TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label || "";
-        const query = `${bookName} ${deel || ""} ${catLabel} Noordhoff Malmberg`.trim();
+        const query = `intitle:${bookName} ${deel || ""} ${catLabel}`.trim();
         const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&langRestrict=nl&printType=books`);
         const data = await res.json();
-        // Find the best cover - prefer larger images
         let bestCover = null;
         for (const item of (data.items || [])) {
           const links = item.volumeInfo?.imageLinks;
-          const cover = links?.medium || links?.thumbnail || links?.smallThumbnail;
-          if (cover) { bestCover = cover.replace("http:", "https:").replace("&edge=curl", ""); break; }
+          if (links) {
+            // Get the largest available and force zoom for bigger image
+            let url = links.medium || links.large || links.thumbnail || links.smallThumbnail || "";
+            url = url.replace("http:", "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
+            if (!url.includes("zoom=")) url += "&zoom=2";
+            bestCover = url;
+            break;
+          }
         }
         setCoverUrl(bestCover);
       } catch { setCoverUrl(null); }
@@ -1245,14 +1251,17 @@ function TextbookQuiz({ onStart, onBack }) {
                 </optgroup>
               </select>
 
-              {/* Cover - GROOT, gecentreerd */}
+              {/* Cover - GROOT, gecentreerd, klikbaar */}
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px 0", padding: 20, background: "#162033", borderRadius: 16 }}>
                 {coverLoading ? (
                   <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <div style={{ width: 28, height: 28, border: "3px solid #5b86b8", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
                   </div>
                 ) : coverUrl ? (
-                  <img src={coverUrl} alt={bookName} style={{ width: 160, height: 210, borderRadius: 10, objectFit: "cover", boxShadow: "0 4px 20px rgba(0,0,0,0.5)" }} />
+                  <div onClick={() => setCoverZoom(true)} style={{ cursor: "pointer", position: "relative" }}>
+                    <img src={coverUrl} alt={bookName} style={{ width: 160, height: 210, borderRadius: 10, objectFit: "cover", boxShadow: "0 4px 20px rgba(0,0,0,0.5)" }} />
+                    <div style={{ position: "absolute", bottom: 8, right: 8, background: "rgba(0,0,0,0.6)", borderRadius: 8, padding: "4px 8px", fontSize: 11, color: "#fff" }}>🔍 Tik om te vergroten</div>
+                  </div>
                 ) : (
                   <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 48 }}>
                     {selectedBook?.icon || "📕"}
@@ -1262,8 +1271,21 @@ function TextbookQuiz({ onStart, onBack }) {
                   <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
                   <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
                   {coverUrl && <div style={{ fontSize: 14, color: "#5b86b8", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
+                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>Geen cover gevonden</div>}
                 </div>
               </div>
+
+              {/* Cover zoom overlay */}
+              {coverZoom && coverUrl && (
+                <div onClick={() => setCoverZoom(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200, cursor: "pointer", animation: "fadeBg 0.2s ease" }}>
+                  <img src={coverUrl} alt={bookName} style={{ maxWidth: "90%", maxHeight: "75vh", borderRadius: 12, boxShadow: "0 8px 40px rgba(0,0,0,0.6)", objectFit: "contain" }} />
+                  <div style={{ marginTop: 16, textAlign: "center" }}>
+                    <div style={{ fontWeight: 700, fontSize: 20, color: "#fff" }}>{bookName}</div>
+                    <div style={{ fontSize: 14, color: "#8899aa", marginTop: 4 }}>{deel || ""}</div>
+                  </div>
+                  <div style={{ marginTop: 16, fontSize: 13, color: "#667788" }}>Tik om te sluiten</div>
+                </div>
+              )}
 
               <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
 
