@@ -41,12 +41,12 @@ async function fetchAIQuestions(subject, level, count = 5, textbook = null) {
 
 // ─── Data ────────────────────────────────────────────────────────
 const SUBJECTS = [
-  { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#FF6B35" },
-  { id: "taal", label: "Taal", icon: "📝", color: "#4ECDC4" },
-  { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍", color: "#45B7D1" },
-  { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#96CEB4" },
-  { id: "natuur", label: "Natuur & Techniek", icon: "🔬", color: "#FFEAA7" },
-  { id: "engels", label: "Engels", icon: "🇬🇧", color: "#DDA0DD" },
+  { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#5b86b8" },
+  { id: "taal", label: "Taal", icon: "📝", color: "#7ba1cc" },
+  { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍", color: "#4a8db7" },
+  { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#8eaadb" },
+  { id: "natuur", label: "Natuur & Techniek", icon: "🔬", color: "#6b9fd4" },
+  { id: "engels", label: "Engels", icon: "🇬🇧", color: "#a0b8d8" },
 ];
 
 const LEVELS = [
@@ -397,10 +397,10 @@ export default function App() {
           <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Echte vragen zoeken...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
-              <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#4ECDC4", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
+              <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#8eaadb", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
-          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px" }}>We zoeken echte examen- en toetsvragen voor jou!</p>
+          <p style={{ color: "#556677", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px" }}>We zoeken echte examen- en toetsvragen voor jou!</p>
           <style>{`
             @keyframes loadDot {
               0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
@@ -556,7 +556,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
       <div style={styles.heroSection}>
         <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "85%", maxWidth: 340, marginBottom: 8, borderRadius: 16 }} />
         <p style={styles.subtitle}>Samen slim worden — op school en thuis!</p>
-        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#b2bec3", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft production</p>
+        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft production</p>
 
         <div style={{ ...styles.nameInput, animation: shake ? "shake 0.5s ease" : "none" }}>
           <label style={styles.inputLabel}>Wat is je naam?</label>
@@ -570,12 +570,12 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         </div>
 
         <div style={styles.roleCards}>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #FF6B35, #FF8C42)" }} onClick={() => handleSelect("student")}>
+          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #5b86b8, #7ba1cc)" }} onClick={() => handleSelect("student")}>
             <span style={styles.roleIcon}>🎒</span>
             <span style={styles.roleLabel}>Ik ben leerling</span>
             <span style={styles.roleDesc}>Oefenen & quizzen spelen</span>
           </button>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #4ECDC4, #44A08D)" }} onClick={() => handleSelect("teacher")}>
+          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => handleSelect("teacher")}>
             <span style={styles.roleIcon}>👩‍🏫</span>
             <span style={styles.roleLabel}>Ik ben leerkracht</span>
             <span style={styles.roleDesc}>Quizzen maken & opgeven</span>
@@ -653,11 +653,11 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
 
       <div style={styles.content}>
         <div style={styles.actionRow}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #FF6B35, #FF8C42)" }} onClick={onCreateQuiz}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #7ba1cc)" }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
             <span style={{ fontWeight: 700 }}>Nieuwe Quiz</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #4ECDC4, #44A08D)" }} onClick={onViewProgress}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>
             <span style={{ fontWeight: 700 }}>Voortgang</span>
           </button>
@@ -757,7 +757,7 @@ function CreateQuiz({ onSave, onBack }) {
                   onClick={() => setSubject(s.id)}
                 >
                   <span style={{ fontSize: 32 }}>{s.icon}</span>
-                  <span style={{ fontWeight: 700, fontSize: 14, color: "#2d3436" }}>{s.label}</span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
                 </button>
               ))}
             </div>
@@ -773,7 +773,7 @@ function CreateQuiz({ onSave, onBack }) {
                   key={l.id}
                   style={{
                     ...styles.levelCard,
-                    borderColor: level === l.id ? "#4ECDC4" : "transparent",
+                    borderColor: level === l.id ? "#8eaadb" : "transparent",
                     background: level === l.id ? "#4ECDC410" : "#fff",
                     boxShadow: level === l.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
                   }}
@@ -781,7 +781,7 @@ function CreateQuiz({ onSave, onBack }) {
                 >
                   <span style={{ fontSize: 28 }}>{l.icon}</span>
                   <strong>{l.label}</strong>
-                  <span style={{ fontSize: 12, color: "#636e72" }}>{l.desc}</span>
+                  <span style={{ fontSize: 12, color: "#8899aa" }}>{l.desc}</span>
                 </button>
               ))}
             </div>
@@ -860,10 +860,10 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         </div>
 
         <div style={styles.playersSection}>
-          <h4 style={{ fontFamily: "Fredoka", color: "#636e72", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
+          <h4 style={{ fontFamily: "Fredoka", color: "#8899aa", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
           <div style={styles.playersList}>
             {players.map((p, i) => (
-              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "#2d3436" : "#f0f0f0", color: i === 0 ? "#fff" : "#2d3436" }}>
+              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "#5b86b8" : "#f0f0f0", color: i === 0 ? "#fff" : "#2d3436" }}>
                 {i === 0 && "👑 "}{p} {i === players.length - 1 && players.length > 1 ? "" : ""}
               </span>
             ))}
@@ -928,7 +928,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #a29bfe, #6c5ce7)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
             <span style={{ fontSize: 24 }}>📖</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Zelf oefenen</span>
           </button>
@@ -936,11 +936,11 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
             <span style={{ fontSize: 24 }}>📕</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Uit je boek</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #fdcb6e, #f39c12)" }} onClick={onViewProgress}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #4a6fa5, #36537e)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 24 }}>📊</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #ff6b6b, #ee5a24)" }} onClick={onLeaderboard}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #8eaadb, #5b86b8)" }} onClick={onLeaderboard}>
             <span style={{ fontSize: 24 }}>🏆</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Scorebord</span>
           </button>
@@ -958,8 +958,8 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
                 <div key={q.id} style={{ ...styles.assignmentCard, opacity: done ? 0.6 : 1 }}>
                   <span style={{ fontSize: 24 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 700, color: "#2d3436" }}>{q.title}</div>
-                    <div style={{ fontSize: 12, color: "#636e72" }}>
+                    <div style={{ fontWeight: 700, color: "#e0e6f0" }}>{q.title}</div>
+                    <div style={{ fontSize: 12, color: "#8899aa" }}>
                       Deadline: {formatDate(q.deadline)} · {remaining <= 0 ? "Verlopen!" : `Nog ${remaining} dag${remaining !== 1 ? "en" : ""}`}
                     </div>
                   </div>
@@ -990,7 +990,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <span style={{ fontWeight: 600 }}>{subj?.label}</span>
-                    <span style={{ fontSize: 12, color: "#636e72", marginLeft: 8 }}>{LEVELS.find((l) => l.id === r.level)?.label}</span>
+                    <span style={{ fontSize: 12, color: "#8899aa", marginLeft: 8 }}>{LEVELS.find((l) => l.id === r.level)?.label}</span>
                   </div>
                   <div style={{
                     ...styles.scoreBadge,
@@ -1049,7 +1049,7 @@ function SelfStudy({ onStart, onBack }) {
                   key={l.id}
                   style={{
                     ...styles.levelCard,
-                    borderColor: level === l.id ? "#4ECDC4" : "transparent",
+                    borderColor: level === l.id ? "#8eaadb" : "transparent",
                     background: level === l.id ? "#4ECDC410" : "#fff",
                   }}
                   onClick={() => setLevel(l.id)}
@@ -1069,7 +1069,7 @@ function SelfStudy({ onStart, onBack }) {
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
-              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#4ECDC4", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#7ba1cc", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
             <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI }); }}>
               🚀 Start met oefenen!
@@ -1102,9 +1102,9 @@ function TextbookQuiz({ onStart, onBack }) {
   const canNext3 = chapterNum !== "" && level !== "";
 
   const selectStyle = {
-    width: "100%", padding: "14px 16px", borderRadius: 14, border: "2px solid #e0e6ed",
+    width: "100%", padding: "14px 16px", borderRadius: 14, border: "2px solid #2a3f5f",
     fontFamily: "'Nunito', sans-serif", fontSize: 16, fontWeight: 600, outline: "none",
-    background: "#fff", boxSizing: "border-box", appearance: "none",
+    background: "#1e2d45", boxSizing: "border-box", appearance: "none",
     backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23636e72' d='M6 8L1 3h10z'/%3E%3C/svg%3E\")",
     backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center",
     cursor: "pointer",
@@ -1123,7 +1123,7 @@ function TextbookQuiz({ onStart, onBack }) {
               {TEXTBOOK_CATEGORIES.map((cat) => (
                 <button key={cat.id} style={{
                   ...styles.levelCard,
-                  borderColor: category === cat.id ? "#FF6B35" : "transparent",
+                  borderColor: category === cat.id ? "#5b86b8" : "transparent",
                   background: category === cat.id ? "#FF6B3510" : "#fff",
                   boxShadow: category === cat.id ? "0 0 0 3px #FF6B3540" : "0 2px 8px rgba(0,0,0,0.06)",
                 }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); }}>
@@ -1148,7 +1148,7 @@ function TextbookQuiz({ onStart, onBack }) {
                 {TEXTBOOKS[category].map((book) => (
                   <button key={book.id} style={{
                     ...styles.levelCard,
-                    borderColor: selectedBook?.id === book.id ? "#4ECDC4" : "transparent",
+                    borderColor: selectedBook?.id === book.id ? "#8eaadb" : "transparent",
                     background: selectedBook?.id === book.id ? "#4ECDC410" : "#fff",
                     boxShadow: selectedBook?.id === book.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
                   }} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); }}>
@@ -1159,8 +1159,8 @@ function TextbookQuiz({ onStart, onBack }) {
               </div>
             )}
 
-            <div style={{ background: "#fff", borderRadius: 16, padding: 16, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-              <p style={{ fontSize: 13, color: "#636e72", marginBottom: 10, fontWeight: 600 }}>Of typ je boek zelf:</p>
+            <div style={{ background: "#1e2d45", borderRadius: 16, padding: 16, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+              <p style={{ fontSize: 13, color: "#8899aa", marginBottom: 10, fontWeight: 600 }}>Of typ je boek zelf:</p>
               <input style={styles.textInput} value={customBook} onChange={(e) => { setCustomBook(e.target.value); setSelectedBook(null); }} placeholder="Bijv. Wiskunde Flex deel 2" />
             </div>
 
@@ -1177,11 +1177,11 @@ function TextbookQuiz({ onStart, onBack }) {
             <h3 style={styles.stepTitle}>Wat wil je oefenen?</h3>
 
             <div style={styles.settingsGroup}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, padding: 12, background: "#f8f9fa", borderRadius: 12 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, padding: 12, background: "#162033", borderRadius: 12 }}>
                 <span style={{ fontSize: 28 }}>{selectedBook?.icon || "📕"}</span>
                 <div>
                   <div style={{ fontWeight: 700, fontSize: 14 }}>{bookName}</div>
-                  <div style={{ fontSize: 12, color: "#636e72" }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}</div>
+                  <div style={{ fontSize: 12, color: "#8899aa" }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}</div>
                 </div>
               </div>
 
@@ -1200,7 +1200,7 @@ function TextbookQuiz({ onStart, onBack }) {
 
               {/* Hoofdstuk dropdown */}
               <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>📖 Hoofdstuk *</label>
-              <select style={{ ...selectStyle, borderColor: chapterNum ? "#4ECDC4" : "#e0e6ed" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
+              <select style={{ ...selectStyle, borderColor: chapterNum ? "#8eaadb" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
                 <option value="">-- Kies hoofdstuk --</option>
                 {Array.from({length: 20}, (_, i) => i + 1).map(n => <option key={n} value={n}>Hoofdstuk {n}</option>)}
               </select>
@@ -1237,13 +1237,13 @@ function TextbookQuiz({ onStart, onBack }) {
               {/* Timer */}
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
-              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#4ECDC4", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#7ba1cc", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
 
             {/* Preview van selectie */}
             {chapterNum && level && (
-              <div style={{ padding: 14, background: "#e8f5e9", borderRadius: 12, borderLeft: "4px solid #4CAF50", marginBottom: 16 }}>
-                <div style={{ fontSize: 13, color: "#2e7d32", lineHeight: 1.6 }}>
+              <div style={{ padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #5b86b8", marginBottom: 16 }}>
+                <div style={{ fontSize: 13, color: "#8eaadb", lineHeight: 1.6 }}>
                   <strong>Jouw selectie:</strong><br/>
                   📕 {bookName} {deel ? `· ${deel}` : ""}<br/>
                   📖 {chapter}<br/>
@@ -1276,13 +1276,13 @@ function TextbookQuiz({ onStart, onBack }) {
               </button>
             </div>
 
-            <div style={{ marginTop: 8, padding: 14, background: "#fff9e6", borderRadius: 12, borderLeft: "4px solid #ffc107" }}>
-              <div style={{ fontSize: 13, color: "#856404", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#1e2d3a", borderRadius: 12, borderLeft: "4px solid #5b86b8" }}>
+              <div style={{ fontSize: 13, color: "#8eaadb", lineHeight: 1.5 }}>
                 💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen.
               </div>
             </div>
-            <div style={{ marginTop: 8, padding: 14, background: "#e8f5e9", borderRadius: 12, borderLeft: "4px solid #4CAF50" }}>
-              <div style={{ fontSize: 11, color: "#2e7d32", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #5b86b8" }}>
+              <div style={{ fontSize: 11, color: "#8eaadb", lineHeight: 1.5 }}>
                 ✅ De vragen zijn gebaseerd op echte examen- en toetsvragen die online gevonden worden voor dit vak en niveau. De bron wordt bij de uitleg vermeld.
               </div>
             </div>
@@ -1382,13 +1382,13 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
   };
 
   const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
-  const timerColor = noTimer ? "#4ECDC4" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
+  const timerColor = noTimer ? "#8eaadb" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
 
   return (
-    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#4ECDC4"}20, #f8f9fa)` }}>
+    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#8eaadb"}20, #f8f9fa)` }}>
       <div style={styles.quizHeader}>
-        <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#636e72" }}>
+        <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#8899aa" }}>
           ✕ Stop
         </button>
         <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
@@ -1407,7 +1407,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
       )}
 
       {noTimer && (
-        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#4ECDC4", marginBottom: 12 }}>
+        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#7ba1cc", marginBottom: 12 }}>
           ⏸️ Geen tijdslimiet — neem de tijd!
         </div>
       )}
@@ -1416,12 +1416,12 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
         <h2 style={styles.questionText}>{question.q}</h2>
 
         {question.svg && (
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, padding: 12, background: "#f8f9fa", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, padding: 12, background: "#162033", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
         )}
 
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
-            const colors = ["#FF6B35", "#4ECDC4", "#a29bfe", "#fdcb6e"];
+            const colors = ["#5b86b8", "#7ba1cc", "#8eaadb", "#4a8db7"];
             let bg = colors[i] + "15";
             let border = colors[i] + "40";
             let textColor = "#2d3436";
@@ -1449,18 +1449,18 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
         </div>
 
         {showExplanation && question.explanation && (
-          <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #e8f4fd, #f0f8ff)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
-            <div style={{ fontWeight: 800, marginBottom: 4, color: "#1a73e8" }}>💡 Uitleg</div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#333", marginBottom: question.source ? 8 : (waitingForUser ? 16 : 0) }}>{question.explanation}</div>
+          <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
+            <div style={{ fontWeight: 800, marginBottom: 4, color: "#7ba1cc" }}>💡 Uitleg</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#c0d0e0", marginBottom: question.source ? 8 : (waitingForUser ? 16 : 0) }}>{question.explanation}</div>
             {question.source && (
-              <div style={{ fontSize: 11, color: "#636e72", fontStyle: "italic", marginBottom: waitingForUser ? 12 : 0 }}>📚 {question.source}</div>
+              <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic", marginBottom: waitingForUser ? 12 : 0 }}>📚 {question.source}</div>
             )}
 
             {waitingForUser && (
               <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "slideUp 0.3s ease" }}>
                 <button onClick={goToNext} style={{
                   width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #4ECDC4, #44A08D)", color: "#fff",
+                  background: "linear-gradient(135deg, #5b86b8, #3d6494)", color: "#fff",
                   fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
                 }}>
                   {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
@@ -1468,14 +1468,14 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 
                 <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
                   width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #ff6b6b, #ee5a24)", color: "#fff",
+                  background: "linear-gradient(135deg, #8eaadb, #5b86b8)", color: "#fff",
                   fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 }}>
                   <span>🎬</span> Kijk een uitleg-video op YouTube
                 </button>
 
-                <p style={{ fontSize: 11, color: "#636e72", textAlign: "center", marginTop: 4 }}>
+                <p style={{ fontSize: 11, color: "#8899aa", textAlign: "center", marginTop: 4 }}>
                   Neem de tijd om de uitleg te lezen. Leren van fouten maakt je slimmer!
                 </p>
               </div>
@@ -1487,18 +1487,18 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (
         <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 100, animation: "fadeBg 0.2s ease" }}>
-          <div style={{ background: "#fff", borderRadius: 24, padding: "28px 24px", maxWidth: 320, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
+          <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 320, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 48 }}>🛑</span>
             <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
-            <p style={{ color: "#636e72", fontSize: 14, marginBottom: 20 }}>
+            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>
               Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
               {gameState.score > 0 && ` Score: ${gameState.score} goed!`}
             </p>
             <div style={{ display: "flex", gap: 10 }}>
-              <button style={{ flex: 1, background: "#f0f4f8", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
+              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
                 Doorgaan
               </button>
-              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff6b6b, #ee5a24)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
+              <button style={{ flex: 1, background: "linear-gradient(135deg, #8eaadb, #5b86b8)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
                 clearInterval(timerRef.current);
                 if (gameState.answers.length > 0) onFinish(gameState);
                 else onQuit();
@@ -1532,8 +1532,8 @@ function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
           </div>
         )}
         <div style={{ fontSize: 64, textAlign: "center", animation: "popIn 0.5s ease" }}>{emoji}</div>
-        <h2 style={{ fontFamily: "Fredoka", fontSize: 28, textAlign: "center", color: "#2d3436", margin: "12px 0 4px" }}>{grade}</h2>
-        <p style={{ textAlign: "center", color: "#636e72", marginBottom: 24 }}>
+        <h2 style={{ fontFamily: "Fredoka", fontSize: 28, textAlign: "center", color: "#e0e6f0", margin: "12px 0 4px" }}>{grade}</h2>
+        <p style={{ textAlign: "center", color: "#8899aa", marginBottom: 24 }}>
           {SUBJECTS.find((s) => s.id === latest.subject)?.label} · {LEVELS.find((l) => l.id === latest.level)?.label}
         </p>
 
@@ -1547,15 +1547,15 @@ function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
             <div key={i} style={styles.resultRow}>
               <span style={{ width: 24, textAlign: "center" }}>{a.isCorrect ? "✅" : "❌"}</span>
               <span style={{ flex: 1, fontSize: 13 }}>Vraag {i + 1}</span>
-              {a.isCorrect && <span style={{ fontSize: 11, color: "#636e72" }}>{a.timeLeft}s over</span>}
+              {a.isCorrect && <span style={{ fontSize: 11, color: "#8899aa" }}>{a.timeLeft}s over</span>}
             </div>
           ))}
         </div>
 
         <div style={{ display: "flex", gap: 10, marginTop: 24, flexWrap: "wrap" }}>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #a29bfe, #6c5ce7)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #ff6b6b, #ee5a24)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #4ECDC4, #44A08D)" }} onClick={onBack}>🏠 Terug</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #8eaadb, #5b86b8)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={onBack}>🏠 Terug</button>
         </div>
       </div>
     </div>
@@ -1597,7 +1597,7 @@ function TeacherProgress({ quizzes, progress, onBack }) {
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700 }}>{r.player}</div>
-                    <div style={{ fontSize: 12, color: "#636e72" }}>{subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
+                    <div style={{ fontSize: 12, color: "#8899aa" }}>{subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
                   </div>
                   <div style={{
                     ...styles.scoreBadge,
@@ -1663,7 +1663,7 @@ function StudentProgressView({ progress, onBack }) {
                   <div style={styles.progressBarSmall}>
                     <div style={{ ...styles.progressFillSmall, width: `${avg}%`, background: avg >= 80 ? "#28a745" : avg >= 50 ? "#f39c12" : "#e74c3c" }} />
                   </div>
-                  <div style={{ fontSize: 12, color: "#636e72", marginTop: 4 }}>{results.length} poging{results.length !== 1 ? "en" : ""}</div>
+                  <div style={{ fontSize: 12, color: "#8899aa", marginTop: 4 }}>{results.length} poging{results.length !== 1 ? "en" : ""}</div>
                 </div>
               );
             })}
@@ -1693,17 +1693,17 @@ function Leaderboard({ data, currentUser, onBack }) {
                   display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14,
                   background: isMe ? "linear-gradient(135deg, #fff9e6, #fff3cd)" : "#fff",
                   border: isMe ? "2px solid #ffc107" : "1px solid #e8eef5",
-                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.3)",
                   animation: `slideIn 0.3s ease ${i * 0.03}s both`,
                 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: 10, background: "#f0f4f8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    {i < 3 ? <span style={{ fontSize: 22 }}>{medals[i]}</span> : <span style={{ fontWeight: 800, color: "#636e72" }}>{i + 1}</span>}
+                  <div style={{ width: 36, height: 36, borderRadius: 10, background: "#162033", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    {i < 3 ? <span style={{ fontSize: 22 }}>{medals[i]}</span> : <span style={{ fontWeight: 800, color: "#8899aa" }}>{i + 1}</span>}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 700, fontSize: 14, color: "#2d3436" }}>
-                      {entry.player} {isMe && <span style={{ fontSize: 11, color: "#636e72" }}>(jij)</span>}
+                    <div style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>
+                      {entry.player} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
                     </div>
-                    <div style={{ fontSize: 11, color: "#636e72" }}>
+                    <div style={{ fontSize: 11, color: "#8899aa" }}>
                       {subj?.icon} {subj?.label} · {LEVELS.find((l) => l.id === entry.level)?.label}
                     </div>
                   </div>
@@ -1742,7 +1742,7 @@ const styles = {
   app: {
     fontFamily: "'Nunito', sans-serif",
     minHeight: "100vh",
-    background: "linear-gradient(160deg, #f0f4f8 0%, #e8eef5 50%, #f5f0eb 100%)",
+    background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     maxWidth: 480,
     margin: "0 auto",
     position: "relative",
@@ -1779,7 +1779,7 @@ const styles = {
   },
   subtitle: {
     fontFamily: "'Nunito', sans-serif",
-    color: "#636e72",
+    color: "#8899aa",
     fontSize: 16,
     marginBottom: 32,
     textAlign: "center",
@@ -1793,7 +1793,7 @@ const styles = {
     display: "block",
     fontWeight: 700,
     fontSize: 14,
-    color: "#2d3436",
+    color: "#e0e6f0",
     marginBottom: 6,
     fontFamily: "'Fredoka', sans-serif",
   },
@@ -1801,13 +1801,13 @@ const styles = {
     width: "100%",
     padding: "14px 16px",
     borderRadius: 14,
-    border: "2px solid #e0e6ed",
+    border: "2px solid #2a3f5f",
     fontFamily: "'Nunito', sans-serif",
     fontSize: 16,
     fontWeight: 600,
     outline: "none",
     transition: "border-color 0.2s",
-    background: "#fff",
+    background: "#1e2d45",
     boxSizing: "border-box",
   },
   roleCards: {
@@ -1827,7 +1827,7 @@ const styles = {
     gap: 8,
     cursor: "pointer",
     transition: "transform 0.2s, box-shadow 0.2s",
-    boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
+    boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
     color: "#fff",
   },
   roleIcon: { fontSize: 36 },
@@ -1840,14 +1840,14 @@ const styles = {
     alignItems: "center",
     gap: 12,
     padding: "16px 20px",
-    background: "#fff",
+    background: "#1e2d45",
     borderBottom: "1px solid #e8eef5",
     position: "sticky",
     top: 0,
     zIndex: 10,
   },
   headerBack: {
-    background: "#f0f4f8",
+    background: "#162033",
     border: "none",
     borderRadius: 12,
     width: 40,
@@ -1859,8 +1859,8 @@ const styles = {
     justifyContent: "center",
     fontWeight: 700,
   },
-  headerTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 22, margin: 0, color: "#2d3436" },
-  headerSubtitle: { fontSize: 13, color: "#636e72", margin: 0 },
+  headerTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 22, margin: 0, color: "#e0e6f0" },
+  headerSubtitle: { fontSize: 13, color: "#8899aa", margin: 0 },
 
   // Content
   content: { padding: "20px", flex: 1 },
@@ -1880,7 +1880,7 @@ const styles = {
     color: "#fff",
     fontFamily: "'Nunito', sans-serif",
     fontSize: 14,
-    boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.4)",
     transition: "transform 0.15s",
   },
 
@@ -1888,7 +1888,7 @@ const styles = {
   sectionTitle: {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 18,
-    color: "#2d3436",
+    color: "#e0e6f0",
     margin: "0 0 14px",
   },
 
@@ -1910,7 +1910,7 @@ const styles = {
     cursor: "pointer",
     transition: "all 0.2s",
     fontFamily: "'Nunito', sans-serif",
-    background: "#fff",
+    background: "#1e2d45",
   },
 
   // Level grid
@@ -1931,39 +1931,39 @@ const styles = {
     cursor: "pointer",
     transition: "all 0.2s",
     fontFamily: "'Nunito', sans-serif",
-    background: "#fff",
+    background: "#1e2d45",
   },
 
   // Settings
   settingsGroup: {
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 18,
     padding: 20,
     marginBottom: 20,
-    boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
   },
   settingLabel: {
     display: "block",
     fontWeight: 700,
     fontSize: 14,
-    color: "#2d3436",
+    color: "#e0e6f0",
     marginBottom: 6,
     marginTop: 16,
     fontFamily: "'Fredoka', sans-serif",
   },
   slider: {
     width: "100%",
-    accentColor: "#4ECDC4",
+    accentColor: "#8eaadb",
     height: 6,
   },
   toggleRow: { display: "flex", alignItems: "center", gap: 14, marginTop: 20, cursor: "pointer", padding: "12px 0" },
   toggle: { width: 48, height: 26, borderRadius: 13, transition: "background 0.2s", flexShrink: 0, position: "relative" },
-  toggleKnob: { width: 22, height: 22, borderRadius: 11, background: "#fff", boxShadow: "0 1px 4px rgba(0,0,0,0.2)", position: "absolute", top: 2, transition: "transform 0.2s" },
+  toggleKnob: { width: 22, height: 22, borderRadius: 11, background: "#1e2d45", boxShadow: "0 1px 4px rgba(0,0,0,0.2)", position: "absolute", top: 2, transition: "transform 0.2s" },
 
   // Progress bar
   progressBar: {
     height: 6,
-    background: "#e0e6ed",
+    background: "#2a3f5f",
     borderRadius: 3,
     marginBottom: 24,
     overflow: "hidden",
@@ -1977,12 +1977,12 @@ const styles = {
 
   // Step content
   stepContent: { animation: "slideUp 0.3s ease" },
-  stepTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#2d3436", marginBottom: 16 },
+  stepTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#e0e6f0", marginBottom: 16 },
 
   // Navigation
   navRow: { display: "flex", gap: 12, marginTop: 24, paddingBottom: 24 },
   backBtn: {
-    background: "#f0f4f8",
+    background: "#162033",
     border: "none",
     borderRadius: 14,
     padding: "14px 24px",
@@ -1990,10 +1990,10 @@ const styles = {
     fontWeight: 700,
     fontSize: 15,
     cursor: "pointer",
-    color: "#636e72",
+    color: "#8899aa",
   },
   nextBtn: {
-    background: "linear-gradient(135deg, #FF6B35, #FF8C42)",
+    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
     color: "#fff",
     border: "none",
     borderRadius: 14,
@@ -2008,15 +2008,15 @@ const styles = {
   // Lobby
   lobbyCard: {
     margin: "auto 20px",
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 24,
     padding: "32px 24px",
-    boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
     textAlign: "center",
   },
   lobbyLogo: { fontSize: 48, marginBottom: 8 },
-  lobbyTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 28, margin: 0, color: "#2d3436" },
-  lobbySubtitle: { color: "#636e72", marginBottom: 16 },
+  lobbyTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 28, margin: 0, color: "#e0e6f0" },
+  lobbySubtitle: { color: "#8899aa", marginBottom: 16 },
   whatsappButton: {
     display: "flex",
     alignItems: "center",
@@ -2041,14 +2041,14 @@ const styles = {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 36,
     fontWeight: 700,
-    background: "#f0f4f8",
+    background: "#162033",
     padding: "10px 16px",
     borderRadius: 12,
     letterSpacing: 2,
   },
   lobbyInfo: { display: "flex", justifyContent: "center", gap: 10, marginBottom: 20, flexWrap: "wrap" },
   badge: {
-    background: "#f0f4f8",
+    background: "#162033",
     padding: "6px 14px",
     borderRadius: 20,
     fontSize: 13,
@@ -2065,7 +2065,7 @@ const styles = {
   },
   startButton: {
     width: "100%",
-    background: "linear-gradient(135deg, #2d3436, #1a1a2e)",
+    background: "linear-gradient(135deg, #5b86b8, #3d6494)",
     color: "#fff",
     border: "none",
     borderRadius: 16,
@@ -2074,15 +2074,15 @@ const styles = {
     fontSize: 18,
     fontWeight: 700,
     cursor: "pointer",
-    boxShadow: "0 4px 20px rgba(0,0,0,0.2)",
+    boxShadow: "0 4px 20px rgba(91,134,184,0.4)",
     marginBottom: 16,
   },
-  waitingBox: { padding: 20, color: "#636e72" },
-  lobbyTip: { fontSize: 12, color: "#b2bec3", fontStyle: "italic" },
+  waitingBox: { padding: 20, color: "#8899aa" },
+  lobbyTip: { fontSize: 12, color: "#556677", fontStyle: "italic" },
   linkBtn: {
     background: "none",
     border: "none",
-    color: "#636e72",
+    color: "#8899aa",
     fontSize: 14,
     cursor: "pointer",
     marginTop: 8,
@@ -2093,17 +2093,17 @@ const styles = {
   // Quiz card
   quizList: { display: "flex", flexDirection: "column", gap: 12 },
   quizCard: {
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 18,
     padding: 16,
-    boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
   },
   quizCardHeader: { display: "flex", alignItems: "center", gap: 12, marginBottom: 10 },
-  quizTitle: { fontWeight: 700, fontSize: 15, color: "#2d3436" },
-  quizMeta: { fontSize: 12, color: "#636e72" },
+  quizTitle: { fontWeight: 700, fontSize: 15, color: "#e0e6f0" },
+  quizMeta: { fontSize: 12, color: "#8899aa" },
   quizCardActions: { display: "flex", gap: 8 },
   smallButton: {
-    background: "linear-gradient(135deg, #FF6B35, #FF8C42)",
+    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
     color: "#fff",
     border: "none",
     borderRadius: 10,
@@ -2114,8 +2114,8 @@ const styles = {
     fontFamily: "'Nunito', sans-serif",
   },
   smallButtonAlt: {
-    background: "#f0f4f8",
-    color: "#636e72",
+    background: "#162033",
+    color: "#8899aa",
     border: "none",
     borderRadius: 10,
     padding: "8px 16px",
@@ -2134,15 +2134,15 @@ const styles = {
 
   // Join section
   joinSection: {
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 18,
     padding: 20,
     marginBottom: 20,
-    boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
   },
   codeInputRow: { display: "flex", gap: 10 },
   joinButton: {
-    background: "linear-gradient(135deg, #FF6B35, #FF8C42)",
+    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
     color: "#fff",
     border: "none",
     borderRadius: 14,
@@ -2160,11 +2160,11 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: 12,
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 14,
     padding: "14px 16px",
     marginBottom: 10,
-    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
   },
   doneBadge: { fontSize: 13, fontWeight: 700 },
 
@@ -2173,11 +2173,11 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: 10,
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 14,
     padding: "12px 16px",
     marginBottom: 8,
-    boxShadow: "0 1px 6px rgba(0,0,0,0.03)",
+    boxShadow: "0 1px 6px rgba(0,0,0,0.3)",
   },
   scoreBadge: {
     padding: "4px 12px",
@@ -2196,17 +2196,17 @@ const styles = {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 16,
     fontWeight: 700,
-    color: "#636e72",
+    color: "#8899aa",
   },
   scoreDisplay: {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 16,
     fontWeight: 700,
-    color: "#FF6B35",
+    color: "#5b86b8",
   },
   timerBar: {
     height: 8,
-    background: "#e0e6ed",
+    background: "#2a3f5f",
     borderRadius: 4,
     margin: "0 20px 4px",
     overflow: "hidden",
@@ -2217,16 +2217,16 @@ const styles = {
   },
   questionCard: {
     margin: "0 20px",
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 24,
     padding: "28px 20px",
-    boxShadow: "0 8px 32px rgba(0,0,0,0.06)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
     animation: "slideUp 0.3s ease",
   },
   questionText: {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 20,
-    color: "#2d3436",
+    color: "#e0e6f0",
     textAlign: "center",
     marginBottom: 24,
     lineHeight: 1.4,
@@ -2239,7 +2239,7 @@ const styles = {
     padding: "16px",
     borderRadius: 14,
     border: "2px solid",
-    background: "#fff",
+    background: "#1e2d45",
     cursor: "pointer",
     fontFamily: "'Nunito', sans-serif",
     fontSize: 15,
@@ -2263,27 +2263,27 @@ const styles = {
   // Results
   resultsCard: {
     margin: "32px 20px",
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 24,
     padding: "32px 24px",
-    boxShadow: "0 8px 32px rgba(0,0,0,0.08)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
   },
   scoreCircle: {
     width: 140,
     height: 140,
     borderRadius: "50%",
-    background: "linear-gradient(135deg, #4ECDC4, #44A08D)",
+    background: "linear-gradient(135deg, #5b86b8, #3d6494)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     margin: "0 auto 24px",
-    boxShadow: "0 8px 24px rgba(78,205,196,0.3)",
+    boxShadow: "0 8px 24px rgba(91,134,184,0.4)",
   },
   scoreNumber: { fontFamily: "'Fredoka', sans-serif", fontSize: 36, fontWeight: 700, color: "#fff" },
   scoreDetail: { fontSize: 13, color: "rgba(255,255,255,0.85)" },
   resultDetails: {
-    background: "#f8f9fa",
+    background: "#162033",
     borderRadius: 14,
     padding: 12,
   },
@@ -2299,29 +2299,29 @@ const styles = {
   statsRow: { display: "flex", gap: 10, marginBottom: 24 },
   statCard: {
     flex: 1,
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 16,
     padding: "16px 12px",
     textAlign: "center",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
   },
-  statValue: { fontFamily: "'Fredoka', sans-serif", fontSize: 28, fontWeight: 700, color: "#2d3436" },
-  statLabel: { fontSize: 12, color: "#636e72", fontWeight: 600 },
+  statValue: { fontFamily: "'Fredoka', sans-serif", fontSize: 28, fontWeight: 700, color: "#e0e6f0" },
+  statLabel: { fontSize: 12, color: "#8899aa", fontWeight: 600 },
 
   // Empty state
-  emptyState: { textAlign: "center", padding: "48px 20px", color: "#636e72" },
+  emptyState: { textAlign: "center", padding: "48px 20px", color: "#8899aa" },
 
   // Subject progress
   subjectProgress: {
-    background: "#fff",
+    background: "#1e2d45",
     borderRadius: 16,
     padding: 16,
     marginBottom: 12,
-    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.3)",
   },
   progressBarSmall: {
     height: 8,
-    background: "#e0e6ed",
+    background: "#2a3f5f",
     borderRadius: 4,
     overflow: "hidden",
   },
