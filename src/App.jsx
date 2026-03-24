@@ -58,61 +58,61 @@ const LEVELS = [
 
 const TEXTBOOKS = {
   wiskunde: [
-    { id: "getal-ruimte", name: "Getal & Ruimte", icon: "📐" },
-    { id: "moderne-wiskunde", name: "Moderne Wiskunde", icon: "📊" },
-    { id: "wiskunde-flex", name: "Wiskunde Flex", icon: "🔢" },
-    { id: "wiskundebrief", name: "Wiskunde Brief", icon: "📝" },
-    { id: "nu-wiskunde", name: "Nu Wiskunde", icon: "✏️" },
+    { id: "getal-ruimte", name: "Getal & Ruimte", icon: "📐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "moderne-wiskunde", name: "Moderne Wiskunde", icon: "📊", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "wiskunde-flex", name: "Wiskunde Flex", icon: "🔢", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "wiskundebrief", name: "Wiskunde Brief", icon: "📝", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nu-wiskunde", name: "Nu Wiskunde", icon: "✏️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   nederlands: [
-    { id: "nieuw-nederlands", name: "Nieuw Nederlands", icon: "📖" },
-    { id: "talent", name: "Talent", icon: "🌟" },
-    { id: "op-niveau", name: "Op Niveau", icon: "📚" },
-    { id: "kern", name: "Kern", icon: "🔤" },
+    { id: "nieuw-nederlands", name: "Nieuw Nederlands", icon: "📖", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "talent", name: "Talent", icon: "🌟", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "op-niveau", name: "Op Niveau", icon: "📚", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "kern", name: "Kern", icon: "🔤", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   engels: [
-    { id: "stepping-stones", name: "Stepping Stones", icon: "🪨" },
-    { id: "all-right", name: "All Right!", icon: "✅" },
-    { id: "upload", name: "Upload", icon: "⬆️" },
-    { id: "keys", name: "Keys", icon: "🔑" },
+    { id: "stepping-stones", name: "Stepping Stones", icon: "🪨", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "all-right", name: "All Right!", icon: "✅", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "upload", name: "Upload", icon: "⬆️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "keys", name: "Keys", icon: "🔑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   aardrijkskunde: [
-    { id: "de-geo", name: "De Geo", icon: "🗺️" },
-    { id: "buitenland", name: "BuiteNLand", icon: "🌍" },
-    { id: "wereldwijs", name: "WereldWijs", icon: "🧭" },
+    { id: "de-geo", name: "De Geo", icon: "🗺️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "buitenland", name: "BuiteNLand", icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "wereldwijs", name: "WereldWijs", icon: "🧭", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   geschiedenis: [
-    { id: "feniks", name: "Feniks", icon: "🔥" },
-    { id: "memo", name: "MeMo", icon: "📜" },
-    { id: "geschiedeniswerkplaats", name: "Geschiedeniswerkplaats", icon: "⚒️" },
-    { id: "sprekend-verleden", name: "Sprekend Verleden", icon: "🗣️" },
+    { id: "feniks", name: "Feniks", icon: "🔥", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "memo", name: "MeMo", icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "geschiedeniswerkplaats", name: "Geschiedeniswerkplaats", icon: "⚒️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "sprekend-verleden", name: "Sprekend Verleden", icon: "🗣️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   biologie: [
-    { id: "biologie-voor-jou", name: "Biologie voor jou", icon: "🧬" },
-    { id: "nectar", name: "Nectar", icon: "🌺" },
-    { id: "10voorbiologie", name: "10 voor Biologie", icon: "🔬" },
+    { id: "biologie-voor-jou", name: "Biologie voor jou", icon: "🧬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nectar", name: "Nectar", icon: "🌺", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "10voorbiologie", name: "10 voor Biologie", icon: "🔬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   natuurkunde: [
-    { id: "sys-natuurkunde", name: "Systematische Natuurkunde", icon: "⚛️" },
-    { id: "nova", name: "Nova", icon: "💫" },
-    { id: "natuurkunde-overal", name: "Natuurkunde Overal", icon: "🌡️" },
+    { id: "sys-natuurkunde", name: "Systematische Natuurkunde", icon: "⚛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nova", name: "Nova", icon: "💫", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "natuurkunde-overal", name: "Natuurkunde Overal", icon: "🌡️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   scheikunde: [
-    { id: "chemie", name: "Chemie", icon: "🧪" },
-    { id: "scheikunde-overal", name: "Scheikunde Overal", icon: "⚗️" },
-    { id: "nova-scheikunde", name: "Nova Scheikunde", icon: "🔮" },
+    { id: "chemie", name: "Chemie", icon: "🧪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "scheikunde-overal", name: "Scheikunde Overal", icon: "⚗️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nova-scheikunde", name: "Nova Scheikunde", icon: "🔮", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   economie: [
-    { id: "economie-integraal", name: "Economie Integraal", icon: "💶" },
-    { id: "pincode", name: "Pincode", icon: "💳" },
+    { id: "economie-integraal", name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "pincode", name: "Pincode", icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   basisschool: [
-    { id: "pluspunt", name: "Pluspunt (rekenen)", icon: "➕" },
-    { id: "wereld-in-getallen", name: "De Wereld in Getallen", icon: "🔢" },
-    { id: "taal-actief", name: "Taal Actief", icon: "📝" },
-    { id: "staal", name: "Staal (taal)", icon: "✍️" },
-    { id: "blink", name: "Blink (wereld)", icon: "🌐" },
-    { id: "naut-meander-brandaan", name: "Naut/Meander/Brandaan", icon: "🏔️" },
+    { id: "pluspunt", name: "Pluspunt (rekenen)", icon: "➕", defaultLevel: "groep5" },
+    { id: "wereld-in-getallen", name: "De Wereld in Getallen", icon: "🔢", defaultLevel: "groep5" },
+    { id: "taal-actief", name: "Taal Actief", icon: "📝", defaultLevel: "groep5" },
+    { id: "staal", name: "Staal (taal)", icon: "✍️", defaultLevel: "groep5" },
+    { id: "blink", name: "Blink (wereld)", icon: "🌐", defaultLevel: "groep5" },
+    { id: "naut-meander-brandaan", name: "Naut/Meander/Brandaan", icon: "🏔️", defaultLevel: "groep5" },
   ],
 };
 
@@ -1154,7 +1154,7 @@ function TextbookQuiz({ onStart, onBack }) {
                     borderColor: selectedBook?.id === book.id ? "#8eaadb" : "transparent",
                     background: selectedBook?.id === book.id ? "#4ECDC410" : "#fff",
                     boxShadow: selectedBook?.id === book.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
-                  }} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); }}>
+                  }} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); if (book.defaultLevel) setLevel(book.defaultLevel); else setLevel(""); }}>
                     <span style={{ fontSize: 24 }}>{book.icon}</span>
                     <strong style={{ fontSize: 12, textAlign: "center" }}>{book.name}</strong>
                   </button>
@@ -1189,20 +1189,27 @@ function TextbookQuiz({ onStart, onBack }) {
               </div>
 
               {/* Deel / Editie dropdown */}
-              <label style={styles.settingLabel}>📘 Deel / Editie</label>
-              <select style={selectStyle} value={deel} onChange={(e) => setDeel(e.target.value)}>
-                <option value="">-- Kies deel (optioneel) --</option>
+              <label style={styles.settingLabel}>📘 Deel</label>
+              <select style={selectStyle} value={deel} onChange={(e) => {
+                const val = e.target.value;
+                setDeel(val);
+                // Auto-set level from book mapping
+                if (selectedBook?.autoLevel && selectedBook?.deelToLevel) {
+                  const deelNum = parseInt(val.replace(/\D/g, ""));
+                  if (deelNum && selectedBook.deelToLevel[deelNum]) {
+                    setLevel(selectedBook.deelToLevel[deelNum]);
+                  }
+                }
+                if (selectedBook?.defaultLevel) {
+                  setLevel(selectedBook.defaultLevel);
+                }
+              }}>
+                <option value="">-- Kies deel --</option>
                 {[1,2,3,4,5,6].map(n => <option key={n} value={`Deel ${n}`}>Deel {n}</option>)}
-                <option value="Editie 12">Editie 12</option>
-                <option value="Editie 13">Editie 13</option>
-                <option value="Editie 14">Editie 14</option>
-                <option value="A">Boek A</option>
-                <option value="B">Boek B</option>
-                <option value="C">Boek C</option>
               </select>
 
               {/* Hoofdstuk dropdown */}
-              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>📖 Hoofdstuk *</label>
+              <label style={{ ...styles.settingLabel, color: "#ff7b7b" }}>📖 Hoofdstuk *</label>
               <select style={{ ...selectStyle, borderColor: chapterNum ? "#8eaadb" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
                 <option value="">-- Kies hoofdstuk --</option>
                 {Array.from({length: 20}, (_, i) => i + 1).map(n => <option key={n} value={n}>Hoofdstuk {n}</option>)}
@@ -1219,19 +1226,29 @@ function TextbookQuiz({ onStart, onBack }) {
                 </>
               )}
 
-              {/* Niveau */}
-              <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>🎓 Niveau *</label>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 8 }}>
-                {LEVELS.map((l) => (
-                  <button key={l.id} style={{
-                    padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #4ECDC4" : "2px solid #e0e6ed",
-                    background: level === l.id ? "#4ECDC410" : "#fff", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
-                    fontWeight: 700, fontSize: 12, textAlign: "center",
-                  }} onClick={() => { SoundEngine.play("click"); setLevel(l.id); }}>
-                    {l.icon} {l.label}
-                  </button>
-                ))}
-              </div>
+              {/* Niveau - alleen tonen als het niet automatisch bepaald kan worden */}
+              {level ? (
+                <div style={{ marginTop: 16, padding: 12, background: "#162033", borderRadius: 12, display: "flex", alignItems: "center", gap: 10 }}>
+                  <span>🎓</span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: "#8eaadb" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
+                  {(selectedBook?.autoLevel) && <span style={{ fontSize: 11, color: "#667788", marginLeft: "auto" }}>automatisch bepaald</span>}
+                </div>
+              ) : (
+                <>
+                  <label style={{ ...styles.settingLabel, color: "#ff7b7b" }}>🎓 Niveau *</label>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 8 }}>
+                    {LEVELS.map((l) => (
+                      <button key={l.id} style={{
+                        padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #8eaadb" : "2px solid #2a3f5f",
+                        background: level === l.id ? "#8eaadb20" : "#1e2d45", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                        fontWeight: 700, fontSize: 12, textAlign: "center", color: "#e0e6f0",
+                      }} onClick={() => { SoundEngine.play("click"); setLevel(l.id); }}>
+                        {l.icon} {l.label}
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
 
               {/* Aantal vragen */}
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
@@ -1389,7 +1406,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
 
   return (
-    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#8eaadb"}20, #f8f9fa)` }}>
+    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#8eaadb"}15, #0f1729)` }}>
       <div style={styles.quizHeader}>
         <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#8899aa" }}>
           ✕ Stop
@@ -1425,19 +1442,19 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
             const colors = ["#5b86b8", "#7ba1cc", "#8eaadb", "#4a8db7"];
-            let bg = colors[i] + "15";
-            let border = colors[i] + "40";
-            let textColor = "#2d3436";
+            let bg = colors[i] + "20";
+            let border = colors[i] + "50";
+            let textColor = "#e0e6f0";
             let anim = "";
 
             if (showResult) {
               if (i === question.answer) {
-                bg = "#d4edda"; border = "#28a745"; textColor = "#155724";
+                bg = "#1a3a2a"; border = "#28a745"; textColor = "#6fcf87";
                 anim = "correctGlow 0.6s ease";
               } else if (i === selected && !gameState.answers[gameState.answers.length - 1]?.isCorrect) {
-                bg = "#f8d7da"; border = "#dc3545"; textColor = "#721c24";
+                bg = "#3a1a1a"; border = "#dc3545"; textColor = "#f08080";
                 anim = "wrongShake 0.5s ease";
-              } else { bg = "#f5f5f5"; border = "#ddd"; textColor = "#999"; }
+              } else { bg = "#162033"; border = "#2a3f5f"; textColor = "#667788"; }
             }
 
             return (
@@ -2256,13 +2273,14 @@ const styles = {
     width: 32,
     height: 32,
     borderRadius: 10,
-    background: "rgba(0,0,0,0.06)",
+    background: "rgba(255,255,255,0.1)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontSize: 14,
     fontWeight: 800,
     flexShrink: 0,
+    color: "#e0e6f0",
   },
 
   // Results
