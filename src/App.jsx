@@ -27,11 +27,11 @@ const SoundEngine = {
 };
 
 // ─── AI Question Generator ──────────────────────────────────────
-async function fetchAIQuestions(subject, level, count = 5, textbook = null) {
+async function fetchAIQuestions(subject, level, count = 5, textbook = null, topic = null) {
   try {
     const res = await fetch("/api/generate-questions", {
       method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ subject, level, count, textbook }),
+      body: JSON.stringify({ subject, level, count, textbook, topic }),
     });
     if (!res.ok) throw new Error("API error");
     const data = await res.json();
@@ -374,7 +374,7 @@ export default function App() {
     setLoadingMode(quiz.textbook?.bookName ? "textbook" : "self");
     let questions = [];
     if (quiz.useAI !== false) {
-      questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null);
+      questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null);
     }
     if (questions.length === 0) {
       const subjectQuestions = SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || [];
@@ -467,13 +467,15 @@ export default function App() {
       {page === "self-study" && (
         <SelfStudy
           onStart={(config) => {
+            const topicLabel = config.topic ? ` — ${config.topic}` : "";
             const quiz = {
               id: "self-" + Date.now(),
               subject: config.subject,
               level: config.level,
               questionCount: config.questionCount,
               timePerQuestion: config.timePerQuestion,
-              title: `${SUBJECTS.find((s) => s.id === config.subject)?.label} - Zelf oefenen`,
+              topic: config.topic || null,
+              title: `${SUBJECTS.find((s) => s.id === config.subject)?.label}${topicLabel} - Zelf oefenen`,
             };
             setCurrentQuiz(quiz);
             startGame(quiz, "self");
@@ -1073,6 +1075,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 function SelfStudy({ onStart, onBack }) {
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
+  const [topic, setTopic] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
@@ -1124,6 +1127,18 @@ function SelfStudy({ onStart, onBack }) {
 
         {subject && level && (
           <>
+            <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #2a3f5f" }}>
+              <label style={{ ...styles.settingLabel, marginBottom: 8 }}>💡 Waar wil je over leren? <span style={{ color: "#667788", fontWeight: 400 }}>(optioneel)</span></label>
+              <input
+                style={{ ...styles.textInput, fontSize: 15 }}
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                placeholder="Bijv. het zonnestelsel, breuken, de Tweede Wereldoorlog..."
+                maxLength={80}
+              />
+              {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Cool! Je krijgt vragen over: {topic}</div>}
+            </div>
+
             <div style={styles.settingsGroup}>
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
@@ -1131,7 +1146,7 @@ function SelfStudy({ onStart, onBack }) {
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
               {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
-            <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI }); }}>
+            <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI, topic: topic.trim() || null }); }}>
               🚀 Start met oefenen!
             </button>
           </>

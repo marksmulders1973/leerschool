@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'API key not configured' });
   }
 
-  const { subject, level, count = 5, textbook } = req.body;
+  const { subject, level, count = 5, textbook, topic } = req.body;
 
   // ─── Content Safety Filter ─────────────────────────────────────
   const BLOCKED_WORDS = [
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
   const allInputs = [
     textbook?.bookName, textbook?.edition, textbook?.chapter,
-    textbook?.topic, subject
+    textbook?.topic, subject, topic
   ].filter(Boolean);
 
   for (const input of allInputs) {
@@ -112,9 +112,11 @@ REGELS:
 - Minstens 40% van wiskunde-vragen moet een SVG hebben
 - Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
+    const topicLine = topic ? `\n- Onderwerp: ${topic}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Maak de vragen leerzaam en interessant over dit specifieke onderwerp.` : "";
+
     prompt = `Genereer ${count} quizvragen voor:
 - Vak: ${subjectLabel}
-- Niveau: ${levelLabel}
+- Niveau: ${levelLabel}${topicLine}
 
 Antwoord ALLEEN met een JSON array:
 [
