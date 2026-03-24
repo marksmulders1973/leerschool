@@ -393,7 +393,7 @@ export default function App() {
       {/* Loading overlay */}
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
-          <div style={{ animation: "float 1.5s ease infinite", fontSize: 64, marginBottom: 24 }}>🧠</div>
+          
           <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Big Brain Trainer laden...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
@@ -555,7 +555,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
     <div style={styles.page}>
       <div style={styles.heroSection}>
         <div style={styles.logoContainer}>
-          <span style={styles.logoIcon}>🧠</span>
+          
           <h1 style={styles.logoText}>
             
             <span style={{ color: "#FF6B35" }}>Big Brain</span>
@@ -598,7 +598,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
           }}
           onClick={() => {
-            const text = `🧠 Ken je Big Brain Trainer al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `Ken je Big Brain Trainer al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -704,7 +704,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `🧠 Big Brain Trainer Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+                        const text = `Big Brain Trainer Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -850,7 +850,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const text = `🧠 Doe mee met mijn Big Brain Trainer quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `Doe mee met mijn Big Brain Trainer quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -1475,7 +1475,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
                 </button>
 
                 <p style={{ fontSize: 11, color: "#636e72", textAlign: "center", marginTop: 4 }}>
-                  Neem de tijd om de uitleg te lezen. Leren van fouten maakt je slimmer! 🧠
+                  Neem de tijd om de uitleg te lezen. Leren van fouten maakt je slimmer!
                 </p>
               </div>
             )}
