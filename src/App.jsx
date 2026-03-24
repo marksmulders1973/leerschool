@@ -47,6 +47,9 @@ const SUBJECTS = [
   { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#69f0ae" },
   { id: "natuur", label: "Natuur & Techniek", icon: "🔬", color: "#6b9fd4" },
   { id: "engels", label: "Engels", icon: "🇬🇧", color: "#a0b8d8" },
+  { id: "duits", label: "Duits", icon: "🇩🇪", color: "#2bbd7e" },
+  { id: "frans", label: "Frans", icon: "🇫🇷", color: "#00b84d" },
+  { id: "maatschappijleer", label: "Maatschappijleer", icon: "🏛️", color: "#69f0ae" },
 ];
 
 const LEVELS = [
@@ -107,8 +110,21 @@ const TEXTBOOKS = {
     { id: "economie-integraal", name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
     { id: "pincode", name: "Pincode", icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
+  duits: [
+    { id: "na-klar", name: "Na Klar!", icon: "🇩🇪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "trabitour", name: "TrabiTour", icon: "🚗", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+  ],
+  frans: [
+    { id: "grandes-lignes", name: "Grandes Lignes", icon: "🇫🇷", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "daccord", name: "D'accord", icon: "🗼", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+  ],
+  maatschappijleer: [
+    { id: "leslab", name: "LesLab", icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "themas-maatschappijleer", name: "Thema's Maatschappijleer", icon: "👥", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+  ],
   basisschool: [
     { id: "pluspunt", name: "Pluspunt (rekenen)", icon: "➕", defaultLevel: "groep5" },
+    { id: "argus-clou", name: "Argus Clou", icon: "🔍", defaultLevel: "groep5" },
     { id: "wereld-in-getallen", name: "De Wereld in Getallen", icon: "🔢", defaultLevel: "groep5" },
     { id: "taal-actief", name: "Taal Actief", icon: "📝", defaultLevel: "groep5" },
     { id: "staal", name: "Staal (taal)", icon: "✍️", defaultLevel: "groep5" },
@@ -128,6 +144,9 @@ const TEXTBOOK_CATEGORIES = [
   { id: "natuurkunde", label: "Natuurkunde", icon: "⚛️" },
   { id: "scheikunde", label: "Scheikunde", icon: "🧪" },
   { id: "economie", label: "Economie", icon: "💶" },
+  { id: "duits", label: "Duits", icon: "🇩🇪" },
+  { id: "frans", label: "Frans", icon: "🇫🇷" },
+  { id: "maatschappijleer", label: "Maatschappijleer", icon: "🏛️" },
 ];
 
 const SAMPLE_QUESTIONS = {
@@ -1139,6 +1158,13 @@ function TextbookQuiz({ onStart, onBack }) {
     "Upload": () => makeBookCover("Upload", "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
     "Keys": () => makeBookCover("Keys", "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
     "New Interface": () => "/covers/new-interface-hv.jpg",
+    "Na Klar!": () => "/covers/na-klar.jpg",
+    "TrabiTour": () => "/covers/trabitour.jpg",
+    "Grandes Lignes": () => "/covers/grandes-lignes.jpg",
+    "D'accord": () => "/covers/daccord.jpg",
+    "LesLab": () => "/covers/leslab.jpg",
+    "Thema's Maatschappijleer": () => "/covers/themas-maatschappijleer.jpg",
+    "Argus Clou": () => "/covers/argus-clou.jpg",
     "De Geo": () => "/covers/de-geo.jpg",
     "BuiteNLand": () => "/covers/buitenland.jpg",
     "WereldWijs": () => "/covers/wereldwijs.jpg",
