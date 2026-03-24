@@ -1202,33 +1202,12 @@ function TextbookQuiz({ onStart, onBack }) {
             <h3 style={styles.stepTitle}>Wat wil je oefenen?</h3>
 
             <div style={styles.settingsGroup}>
-              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 16, padding: 14, background: "#162033", borderRadius: 14 }}>
-                {coverLoading ? (
-                  <div style={{ width: 70, height: 90, borderRadius: 8, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <div style={{ width: 20, height: 20, border: "3px solid #5b86b8", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
-                  </div>
-                ) : coverUrl ? (
-                  <img src={coverUrl} alt={bookName} style={{ width: 70, height: 90, borderRadius: 8, objectFit: "cover", flexShrink: 0, boxShadow: "0 2px 8px rgba(0,0,0,0.4)" }} />
-                ) : (
-                  <div style={{ width: 70, height: 90, borderRadius: 8, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 28 }}>
-                    {selectedBook?.icon || "📕"}
-                  </div>
-                )}
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontWeight: 700, fontSize: 15, color: "#e0e6f0" }}>{bookName}</div>
-                  <div style={{ fontSize: 12, color: "#8899aa" }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
-                  {coverUrl && <div style={{ fontSize: 11, color: "#5b86b8", marginTop: 4 }}>✅ Is dit je boek?</div>}
-                </div>
-              </div>
 
-              <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-
-              {/* Deel / Editie dropdown */}
+              {/* Deel dropdown EERST */}
               <label style={styles.settingLabel}>📘 Deel</label>
               <select style={selectStyle} value={deel} onChange={(e) => {
                 const val = e.target.value;
                 setDeel(val);
-                // Auto-set level from book mapping
                 if (selectedBook?.autoLevel && selectedBook?.deelToLevel) {
                   const deelNum = parseInt(val.replace(/\D/g, ""));
                   if (deelNum && selectedBook.deelToLevel[deelNum]) {
@@ -1242,6 +1221,28 @@ function TextbookQuiz({ onStart, onBack }) {
                 <option value="">-- Kies deel --</option>
                 {[1,2,3,4,5,6].map(n => <option key={n} value={`Deel ${n}`}>Deel {n}</option>)}
               </select>
+
+              {/* Cover - GROOT, gecentreerd */}
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px 0", padding: 20, background: "#162033", borderRadius: 16 }}>
+                {coverLoading ? (
+                  <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 28, height: 28, border: "3px solid #5b86b8", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                  </div>
+                ) : coverUrl ? (
+                  <img src={coverUrl} alt={bookName} style={{ width: 160, height: 210, borderRadius: 10, objectFit: "cover", boxShadow: "0 4px 20px rgba(0,0,0,0.5)" }} />
+                ) : (
+                  <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 48 }}>
+                    {selectedBook?.icon || "📕"}
+                  </div>
+                )}
+                <div style={{ marginTop: 14, textAlign: "center" }}>
+                  <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
+                  <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
+                  {coverUrl && <div style={{ fontSize: 14, color: "#5b86b8", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
+                </div>
+              </div>
+
+              <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
 
               {/* Hoofdstuk dropdown */}
               <label style={{ ...styles.settingLabel, color: "#ff7b7b" }}>📖 Hoofdstuk *</label>
