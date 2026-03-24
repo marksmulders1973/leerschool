@@ -603,6 +603,9 @@ function HomePage({ onSelectRole, userName, setUserName }) {
       </div>
 
       <style>{`
+        input, select, textarea { color: #ffffff !important; -webkit-text-fill-color: #ffffff !important; }
+        input::placeholder { color: #667788 !important; -webkit-text-fill-color: #667788 !important; }
+        select option { background: #1e2d45; color: #ffffff; }
         @keyframes correctGlow { 0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.4); } 70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); } 100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); } }
         @keyframes wrongShake { 0%,100% { transform: translateX(0); } 15%,45%,75% { transform: translateX(-6px); } 30%,60%,90% { transform: translateX(6px); } }
         @keyframes timerPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.15); } }
@@ -1810,6 +1813,7 @@ const styles = {
     background: "#1e2d45",
     boxSizing: "border-box",
     color: "#ffffff",
+    WebkitTextFillColor: "#ffffff",
   },
   roleCards: {
     display: "flex",
