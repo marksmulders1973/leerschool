@@ -41,10 +41,10 @@ async function fetchAIQuestions(subject, level, count = 5, textbook = null) {
 
 // ─── Data ────────────────────────────────────────────────────────
 const SUBJECTS = [
-  { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#5b86b8" },
-  { id: "taal", label: "Taal", icon: "📝", color: "#7ba1cc" },
-  { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍", color: "#4a8db7" },
-  { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#8eaadb" },
+  { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#00c853" },
+  { id: "taal", label: "Taal", icon: "📝", color: "#00e676" },
+  { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍", color: "#2bbd7e" },
+  { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#69f0ae" },
   { id: "natuur", label: "Natuur & Techniek", icon: "🔬", color: "#6b9fd4" },
   { id: "engels", label: "Engels", icon: "🇬🇧", color: "#a0b8d8" },
 ];
@@ -393,11 +393,11 @@ export default function App() {
       {/* Loading overlay */}
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
-          <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "70%", maxWidth: 280, marginBottom: 24, borderRadius: 12, animation: "pulse 2s ease infinite" }} />
+          <img src="/logo.jpg" alt="studiebol" style={{ width: "80%", maxWidth: 300, marginBottom: 24, borderRadius: 20, animation: "pulse 2s ease infinite" }} />
           <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Echte vragen zoeken...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
-              <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#8eaadb", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
+              <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#00e676", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
           <p style={{ color: "#8899aa", fontSize: 13, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5 }}>We zoeken de inhoudsopgave van je boek en maken vragen die écht bij je hoofdstuk passen!</p>
@@ -554,9 +554,9 @@ function HomePage({ onSelectRole, userName, setUserName }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
-        <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "85%", maxWidth: 340, marginBottom: 8, borderRadius: 16 }} />
-        <p style={styles.subtitle}>Samen slim worden — op school en thuis!</p>
-        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft production</p>
+        <img src="/logo.jpg" alt="studiebol" style={{ width: "90%", maxWidth: 360, marginBottom: 16, borderRadius: 20 }} />
+        <p style={styles.subtitle}>Jouw slimme studiebuddy!</p>
+        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft</p>
 
         <div style={{ ...styles.nameInput, animation: shake ? "shake 0.5s ease" : "none" }}>
           <label style={styles.inputLabel}>Wat is je naam?</label>
@@ -570,12 +570,12 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         </div>
 
         <div style={styles.roleCards}>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #5b86b8, #7ba1cc)" }} onClick={() => handleSelect("student")}>
+          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #00c853, #00e676)" }} onClick={() => handleSelect("student")}>
             <span style={styles.roleIcon}>🎒</span>
             <span style={styles.roleLabel}>Ik ben leerling</span>
             <span style={styles.roleDesc}>Oefenen & quizzen spelen</span>
           </button>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => handleSelect("teacher")}>
+          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => handleSelect("teacher")}>
             <span style={styles.roleIcon}>👩‍🏫</span>
             <span style={styles.roleLabel}>Ik ben leerkracht</span>
             <span style={styles.roleDesc}>Quizzen maken & opgeven</span>
@@ -591,7 +591,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
           }}
           onClick={() => {
-            const text = `Ken je Big Brain Trainer al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `Ken je studiebol al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -656,11 +656,11 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
 
       <div style={styles.content}>
         <div style={styles.actionRow}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #7ba1cc)" }} onClick={onCreateQuiz}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00e676)" }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
             <span style={{ fontWeight: 700 }}>Nieuwe Quiz</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={onViewProgress}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>
             <span style={{ fontWeight: 700 }}>Voortgang</span>
           </button>
@@ -700,7 +700,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `Big Brain Trainer Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+                        const text = `studiebol Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -776,7 +776,7 @@ function CreateQuiz({ onSave, onBack }) {
                   key={l.id}
                   style={{
                     ...styles.levelCard,
-                    borderColor: level === l.id ? "#8eaadb" : "transparent",
+                    borderColor: level === l.id ? "#69f0ae" : "transparent",
                     background: level === l.id ? "#4ECDC410" : "#fff",
                     boxShadow: level === l.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
                   }}
@@ -846,7 +846,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const text = `Doe mee met mijn Big Brain Trainer quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `Doe mee met mijn studiebol quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -866,7 +866,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
           <h4 style={{ fontFamily: "Fredoka", color: "#8899aa", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
           <div style={styles.playersList}>
             {players.map((p, i) => (
-              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "#5b86b8" : "#f0f0f0", color: i === 0 ? "#fff" : "#2d3436" }}>
+              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "#00c853" : "#f0f0f0", color: i === 0 ? "#fff" : "#2d3436" }}>
                 {i === 0 && "👑 "}{p} {i === players.length - 1 && players.length > 1 ? "" : ""}
               </span>
             ))}
@@ -931,7 +931,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
             <span style={{ fontSize: 24 }}>📖</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Zelf oefenen</span>
           </button>
@@ -939,11 +939,11 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
             <span style={{ fontSize: 24 }}>📕</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Uit je boek</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #4a6fa5, #36537e)" }} onClick={onViewProgress}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #36537e)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 24 }}>📊</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #8eaadb, #5b86b8)" }} onClick={onLeaderboard}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>
             <span style={{ fontSize: 24 }}>🏆</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Scorebord</span>
           </button>
@@ -1052,7 +1052,7 @@ function SelfStudy({ onStart, onBack }) {
                   key={l.id}
                   style={{
                     ...styles.levelCard,
-                    borderColor: level === l.id ? "#8eaadb" : "transparent",
+                    borderColor: level === l.id ? "#69f0ae" : "transparent",
                     background: level === l.id ? "#4ECDC410" : "#fff",
                   }}
                   onClick={() => setLevel(l.id)}
@@ -1072,7 +1072,7 @@ function SelfStudy({ onStart, onBack }) {
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
-              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#7ba1cc", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
             <button style={styles.startButton} onClick={() => { SoundEngine.play("click"); onStart({ subject, level, questionCount, timePerQuestion, useAI }); }}>
               🚀 Start met oefenen!
@@ -1216,7 +1216,7 @@ function TextbookQuiz({ onStart, onBack }) {
               {TEXTBOOK_CATEGORIES.map((cat) => (
                 <button key={cat.id} style={{
                   ...styles.levelCard,
-                  borderColor: category === cat.id ? "#5b86b8" : "transparent",
+                  borderColor: category === cat.id ? "#00c853" : "transparent",
                   background: category === cat.id ? "#FF6B3510" : "#fff",
                   boxShadow: category === cat.id ? "0 0 0 3px #FF6B3540" : "0 2px 8px rgba(0,0,0,0.06)",
                 }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); }}>
@@ -1241,7 +1241,7 @@ function TextbookQuiz({ onStart, onBack }) {
                 {TEXTBOOKS[category].map((book) => (
                   <button key={book.id} style={{
                     ...styles.levelCard,
-                    borderColor: selectedBook?.id === book.id ? "#8eaadb" : "transparent",
+                    borderColor: selectedBook?.id === book.id ? "#69f0ae" : "transparent",
                     background: selectedBook?.id === book.id ? "#4ECDC410" : "#fff",
                     boxShadow: selectedBook?.id === book.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
                   }} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); if (book.defaultLevel) setLevel(book.defaultLevel); else setLevel(""); }}>
@@ -1312,7 +1312,7 @@ function TextbookQuiz({ onStart, onBack }) {
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px 0", padding: 20, background: "#162033", borderRadius: 16 }}>
                 {coverLoading ? (
                   <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <div style={{ width: 28, height: 28, border: "3px solid #5b86b8", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                    <div style={{ width: 28, height: 28, border: "3px solid #00c853", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
                   </div>
                 ) : coverUrl ? (
                   <div onClick={() => setCoverZoom(true)} style={{ cursor: "pointer", position: "relative" }}>
@@ -1327,7 +1327,7 @@ function TextbookQuiz({ onStart, onBack }) {
                 <div style={{ marginTop: 14, textAlign: "center" }}>
                   <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
                   <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
-                  {coverUrl && <div style={{ fontSize: 14, color: "#5b86b8", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
+                  {coverUrl && <div style={{ fontSize: 14, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
                   {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>Geen cover gevonden</div>}
                 </div>
               </div>
@@ -1348,7 +1348,7 @@ function TextbookQuiz({ onStart, onBack }) {
 
               {/* Hoofdstuk dropdown */}
               <label style={{ ...styles.settingLabel, color: "#ff7b7b" }}>📖 Hoofdstuk *</label>
-              <select style={{ ...selectStyle, borderColor: chapterNum ? "#8eaadb" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
+              <select style={{ ...selectStyle, borderColor: chapterNum ? "#69f0ae" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
                 <option value="">-- Kies hoofdstuk --</option>
                 {Array.from({length: 20}, (_, i) => i + 1).map(n => <option key={n} value={n}>Hoofdstuk {n}</option>)}
               </select>
@@ -1368,7 +1368,7 @@ function TextbookQuiz({ onStart, onBack }) {
               {level ? (
                 <div style={{ marginTop: 16, padding: 12, background: "#162033", borderRadius: 12, display: "flex", alignItems: "center", gap: 10 }}>
                   <span>🎓</span>
-                  <span style={{ fontWeight: 700, fontSize: 14, color: "#8eaadb" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: "#69f0ae" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
                   {(selectedBook?.autoLevel) && <span style={{ fontSize: 11, color: "#667788", marginLeft: "auto" }}>automatisch bepaald</span>}
                 </div>
               ) : (
@@ -1377,8 +1377,8 @@ function TextbookQuiz({ onStart, onBack }) {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 8 }}>
                     {LEVELS.map((l) => (
                       <button key={l.id} style={{
-                        padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #8eaadb" : "2px solid #2a3f5f",
-                        background: level === l.id ? "#8eaadb20" : "#1e2d45", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                        padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #69f0ae" : "2px solid #2a3f5f",
+                        background: level === l.id ? "#69f0ae20" : "#1e2d45", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
                         fontWeight: 700, fontSize: 12, textAlign: "center", color: "#e0e6f0",
                       }} onClick={() => { SoundEngine.play("click"); setLevel(l.id); }}>
                         {l.icon} {l.label}
@@ -1395,13 +1395,13 @@ function TextbookQuiz({ onStart, onBack }) {
               {/* Timer */}
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
-              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#7ba1cc", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
             </div>
 
             {/* Preview van selectie */}
             {chapterNum && level && (
-              <div style={{ padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #5b86b8", marginBottom: 16 }}>
-                <div style={{ fontSize: 13, color: "#8eaadb", lineHeight: 1.6 }}>
+              <div style={{ padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #00c853", marginBottom: 16 }}>
+                <div style={{ fontSize: 13, color: "#69f0ae", lineHeight: 1.6 }}>
                   <strong>Jouw selectie:</strong><br/>
                   📕 {bookName} {deel ? `· ${deel}` : ""}<br/>
                   📖 {chapter}<br/>
@@ -1434,13 +1434,13 @@ function TextbookQuiz({ onStart, onBack }) {
               </button>
             </div>
 
-            <div style={{ marginTop: 8, padding: 14, background: "#1e2d3a", borderRadius: 12, borderLeft: "4px solid #5b86b8" }}>
-              <div style={{ fontSize: 13, color: "#8eaadb", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#1e2d3a", borderRadius: 12, borderLeft: "4px solid #00c853" }}>
+              <div style={{ fontSize: 13, color: "#69f0ae", lineHeight: 1.5 }}>
                 💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen.
               </div>
             </div>
-            <div style={{ marginTop: 8, padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #5b86b8" }}>
-              <div style={{ fontSize: 11, color: "#8eaadb", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #00c853" }}>
+              <div style={{ fontSize: 11, color: "#69f0ae", lineHeight: 1.5 }}>
                 ✅ De vragen zijn gebaseerd op echte examen- en toetsvragen die online gevonden worden voor dit vak en niveau. De bron wordt bij de uitleg vermeld.
               </div>
             </div>
@@ -1540,11 +1540,11 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
   };
 
   const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
-  const timerColor = noTimer ? "#8eaadb" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
+  const timerColor = noTimer ? "#69f0ae" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
 
   return (
-    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#8eaadb"}15, #0f1729)` }}>
+    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#00c853"}10, #0f1729)` }}>
       <div style={styles.quizHeader}>
         <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#8899aa" }}>
           ✕ Stop
@@ -1565,7 +1565,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
       )}
 
       {noTimer && (
-        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#7ba1cc", marginBottom: 12 }}>
+        <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#00e676", marginBottom: 12 }}>
           ⏸️ Geen tijdslimiet — neem de tijd!
         </div>
       )}
@@ -1579,7 +1579,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
-            const colors = ["#5b86b8", "#7ba1cc", "#8eaadb", "#4a8db7"];
+            const colors = ["#00c853", "#00e676", "#69f0ae", "#2bbd7e"];
             let bg = colors[i] + "20";
             let border = colors[i] + "50";
             let textColor = "#e0e6f0";
@@ -1608,7 +1608,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 
         {showExplanation && question.explanation && (
           <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
-            <div style={{ fontWeight: 800, marginBottom: 4, color: "#7ba1cc" }}>💡 Uitleg</div>
+            <div style={{ fontWeight: 800, marginBottom: 4, color: "#00e676" }}>💡 Uitleg</div>
             <div style={{ fontSize: 14, lineHeight: 1.5, color: "#c0d0e0", marginBottom: question.source ? 8 : (waitingForUser ? 16 : 0) }}>{question.explanation}</div>
             {question.source && (
               <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic", marginBottom: waitingForUser ? 12 : 0 }}>📚 {question.source}</div>
@@ -1618,7 +1618,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
               <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "slideUp 0.3s ease" }}>
                 <button onClick={goToNext} style={{
                   width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #5b86b8, #3d6494)", color: "#fff",
+                  background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff",
                   fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
                 }}>
                   {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
@@ -1626,7 +1626,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 
                 <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
                   width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #8eaadb, #5b86b8)", color: "#fff",
+                  background: "linear-gradient(135deg, #69f0ae, #00c853)", color: "#fff",
                   fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 }}>
@@ -1656,7 +1656,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
               <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
                 Doorgaan
               </button>
-              <button style={{ flex: 1, background: "linear-gradient(135deg, #8eaadb, #5b86b8)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
+              <button style={{ flex: 1, background: "linear-gradient(135deg, #69f0ae, #00c853)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
                 clearInterval(timerRef.current);
                 if (gameState.answers.length > 0) onFinish(gameState);
                 else onQuit();
@@ -1711,9 +1711,9 @@ function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
         </div>
 
         <div style={{ display: "flex", gap: 10, marginTop: 24, flexWrap: "wrap" }}>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #8eaadb, #5b86b8)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #5b86b8, #3d6494)" }} onClick={onBack}>🏠 Terug</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onBack}>🏠 Terug</button>
         </div>
       </div>
     </div>
@@ -2113,7 +2113,7 @@ const styles = {
   },
   slider: {
     width: "100%",
-    accentColor: "#8eaadb",
+    accentColor: "#69f0ae",
     height: 6,
   },
   toggleRow: { display: "flex", alignItems: "center", gap: 14, marginTop: 20, cursor: "pointer", padding: "12px 0" },
@@ -2153,7 +2153,7 @@ const styles = {
     color: "#8899aa",
   },
   nextBtn: {
-    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
+    background: "linear-gradient(135deg, #00c853, #00e676)",
     color: "#fff",
     border: "none",
     borderRadius: 14,
@@ -2225,7 +2225,7 @@ const styles = {
   },
   startButton: {
     width: "100%",
-    background: "linear-gradient(135deg, #5b86b8, #3d6494)",
+    background: "linear-gradient(135deg, #00c853, #00a844)",
     color: "#fff",
     border: "none",
     borderRadius: 16,
@@ -2234,7 +2234,7 @@ const styles = {
     fontSize: 18,
     fontWeight: 700,
     cursor: "pointer",
-    boxShadow: "0 4px 20px rgba(91,134,184,0.4)",
+    boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
     marginBottom: 16,
   },
   waitingBox: { padding: 20, color: "#8899aa" },
@@ -2263,7 +2263,7 @@ const styles = {
   quizMeta: { fontSize: 12, color: "#8899aa" },
   quizCardActions: { display: "flex", gap: 8 },
   smallButton: {
-    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
+    background: "linear-gradient(135deg, #00c853, #00e676)",
     color: "#fff",
     border: "none",
     borderRadius: 10,
@@ -2302,7 +2302,7 @@ const styles = {
   },
   codeInputRow: { display: "flex", gap: 10 },
   joinButton: {
-    background: "linear-gradient(135deg, #5b86b8, #7ba1cc)",
+    background: "linear-gradient(135deg, #00c853, #00e676)",
     color: "#fff",
     border: "none",
     borderRadius: 14,
@@ -2362,7 +2362,7 @@ const styles = {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 16,
     fontWeight: 700,
-    color: "#5b86b8",
+    color: "#00c853",
   },
   timerBar: {
     height: 8,
@@ -2433,13 +2433,13 @@ const styles = {
     width: 140,
     height: 140,
     borderRadius: "50%",
-    background: "linear-gradient(135deg, #5b86b8, #3d6494)",
+    background: "linear-gradient(135deg, #00c853, #00a844)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     margin: "0 auto 24px",
-    boxShadow: "0 8px 24px rgba(91,134,184,0.4)",
+    boxShadow: "0 8px 24px rgba(0,200,83,0.4)",
   },
   scoreNumber: { fontFamily: "'Fredoka', sans-serif", fontSize: 36, fontWeight: 700, color: "#fff" },
   scoreDetail: { fontSize: 13, color: "rgba(255,255,255,0.85)" },
