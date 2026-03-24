@@ -370,20 +370,26 @@ export default function App() {
   };
 
   const startGame = async (quiz, mode) => {
-    setLoading(true);
-    setLoadingMode(quiz.textbook?.bookName ? "textbook" : "self");
     let questions = [];
-    if (quiz.useAI !== false) {
-      questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null);
+
+    // Use pre-generated questions if available (teacher quiz → all students get same questions)
+    if (quiz.preGeneratedQuestions && quiz.preGeneratedQuestions.length > 0) {
+      questions = quiz.preGeneratedQuestions;
+    } else {
+      setLoading(true);
+      setLoadingMode(quiz.textbook?.bookName ? "textbook" : "self");
+      if (quiz.useAI !== false) {
+        questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null);
+      }
+      if (questions.length === 0) {
+        const subjectQuestions = SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || [];
+        questions = shuffle(subjectQuestions).slice(0, quiz.questionCount || 8);
+      }
+      if (questions.length === 0) {
+        questions = shuffle(SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 8);
+      }
+      setLoading(false);
     }
-    if (questions.length === 0) {
-      const subjectQuestions = SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || [];
-      questions = shuffle(subjectQuestions).slice(0, quiz.questionCount || 8);
-    }
-    if (questions.length === 0) {
-      questions = shuffle(SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 8);
-    }
-    setLoading(false);
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
@@ -435,7 +441,23 @@ export default function App() {
       )}
       {page === "create-quiz" && (
         <CreateQuiz
-          onSave={(q) => { const nq = createQuiz(q); setCurrentQuiz(nq); setPage("lobby"); }}
+          onSave={async (q) => {
+            // Pre-generate questions so all students get the same set
+            setLoading(true);
+            setLoadingMode(q.textbook?.bookName ? "textbook" : "self");
+            let questions = [];
+            if (q.useAI !== false) {
+              questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null);
+            }
+            if (questions.length === 0) {
+              const subjectQuestions = SAMPLE_QUESTIONS[q.subject]?.[q.level] || [];
+              questions = shuffle(subjectQuestions).slice(0, q.questionCount || 8);
+            }
+            setLoading(false);
+            const nq = createQuiz({ ...q, preGeneratedQuestions: questions });
+            setCurrentQuiz(nq);
+            setPage("lobby");
+          }}
           onBack={() => setPage("teacher-home")}
         />
       )}
@@ -920,6 +942,12 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
           <span style={styles.badge}>{subj?.icon} {subj?.label}</span>
           <span style={styles.badge}>{LEVELS.find((l) => l.id === quiz?.level)?.label}</span>
         </div>
+
+        {quiz?.preGeneratedQuestions?.length > 0 && (
+          <div style={{ margin: "12px 0", padding: 10, background: "#0a2a1a", borderRadius: 10, borderLeft: "3px solid #00c853", textAlign: "center" }}>
+            <div style={{ fontSize: 12, color: "#69f0ae" }}>✅ {quiz.preGeneratedQuestions.length} vragen klaar — iedereen krijgt dezelfde vragen!</div>
+          </div>
+        )}
 
         <div style={styles.playersSection}>
           <h4 style={{ fontFamily: "Fredoka", color: "#8899aa", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
