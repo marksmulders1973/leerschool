@@ -1108,15 +1108,59 @@ function TextbookQuiz({ onStart, onBack }) {
   const canNext3 = chapterNum !== "" && level !== "";
 
   // Known cover URLs for popular textbooks
-  const KNOWN_COVERS = {
-    "Getal & Ruimte": "/cover-getal-ruimte-2.jpg",
-    "Getal & Ruimte-Deel 2": "/cover-getal-ruimte-2.jpg",
-    "Getal & Ruimte-Deel 2, Editie 13": "/cover-getal-ruimte-2.jpg",
-    "Getal & Ruimte-Editie 13": "/cover-getal-ruimte-2.jpg",
-    "Wiskunde Flex": "/cover-getal-ruimte-2.jpg",
-    "Wiskunde Flex-Deel 2": "/cover-getal-ruimte-2.jpg",
-    "Wiskunde Flex-Deel 2, Editie 13": "/cover-getal-ruimte-2.jpg",
-    "Wiskunde Flex-Editie 13": "/cover-getal-ruimte-2.jpg",
+  // Generate SVG covers matching real book colors/styles
+  const makeBookCover = (title, subtitle, colors, icon) => {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+      <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${colors[0]}"/><stop offset="100%" stop-color="${colors[1]}"/></linearGradient></defs>
+      <rect width="200" height="280" rx="8" fill="url(#bg)"/>
+      <circle cx="140" cy="180" r="80" fill="${colors[2]}" opacity="0.3"/>
+      <circle cx="60" cy="100" r="50" fill="${colors[2]}" opacity="0.2"/>
+      <text x="20" y="50" font-family="Arial" font-weight="900" font-size="22" fill="white">${title}</text>
+      <text x="20" y="75" font-family="Arial" font-weight="400" font-size="13" fill="rgba(255,255,255,0.8)">${subtitle}</text>
+      <text x="100" y="180" font-family="Arial" font-size="48" text-anchor="middle" fill="rgba(255,255,255,0.15)">${icon}</text>
+      <text x="20" y="260" font-family="Arial" font-size="10" fill="rgba(255,255,255,0.5)">Noordhoff</text>
+    </svg>`;
+    return "data:image/svg+xml," + encodeURIComponent(svg);
+  };
+
+  const BOOK_COVERS = {
+    "Getal & Ruimte": () => "/cover-getal-ruimte-2.jpg",
+    "Wiskunde Flex": () => "/cover-getal-ruimte-2.jpg",
+    "Moderne Wiskunde": () => makeBookCover("Moderne", "Wiskunde", ["#1a5276","#2980b9","#3498db"], "MW"),
+    "Wiskunde Brief": () => makeBookCover("Wiskunde", "Brief", ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
+    "Nu Wiskunde": () => makeBookCover("Nu", "Wiskunde", ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
+    "Nieuw Nederlands": () => makeBookCover("Nieuw", "Nederlands", ["#6c3483","#8e44ad","#a569bd"], "NN"),
+    "Talent": () => makeBookCover("Talent", "Nederlands", ["#7d3c98","#9b59b6","#bb8fce"], "T"),
+    "Op Niveau": () => makeBookCover("Op Niveau", "Nederlands", ["#5b2c6f","#7d3c98","#a569bd"], "ON"),
+    "Kern": () => makeBookCover("Kern", "Nederlands", ["#4a235a","#6c3483","#8e44ad"], "K"),
+    "Stepping Stones": () => makeBookCover("Stepping", "Stones", ["#0e6655","#1abc9c","#48c9b0"], "SS"),
+    "All Right!": () => makeBookCover("All Right!", "Engels", ["#117864","#16a085","#45b39d"], "AR"),
+    "Upload": () => makeBookCover("Upload", "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
+    "Keys": () => makeBookCover("Keys", "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
+    "De Geo": () => makeBookCover("De Geo", "Aardrijkskunde", ["#1b4f72","#2e86c1","#5dade2"], "DG"),
+    "BuiteNLand": () => makeBookCover("BuiteNLand", "Aardrijkskunde", ["#154360","#1f618d","#2980b9"], "BN"),
+    "WereldWijs": () => makeBookCover("WereldWijs", "Aardrijkskunde", ["#1a5276","#2471a3","#5499c7"], "WW"),
+    "Feniks": () => makeBookCover("Feniks", "Geschiedenis", ["#922b21","#c0392b","#e74c3c"], "F"),
+    "MeMo": () => makeBookCover("MeMo", "Geschiedenis", ["#7b241c","#a93226","#cb4335"], "MM"),
+    "Geschiedeniswerkplaats": () => makeBookCover("Geschiedenis", "werkplaats", ["#641e16","#922b21","#b03a2e"], "GW"),
+    "Sprekend Verleden": () => makeBookCover("Sprekend", "Verleden", ["#78281f","#943126","#b03a2e"], "SV"),
+    "Biologie voor jou": () => makeBookCover("Biologie", "voor jou", ["#0e6655","#1e8449","#27ae60"], "BvJ"),
+    "Nectar": () => makeBookCover("Nectar", "Biologie", ["#196f3d","#27ae60","#52be80"], "N"),
+    "10 voor Biologie": () => makeBookCover("10 voor", "Biologie", ["#1d8348","#28b463","#58d68d"], "10"),
+    "Systematische Natuurkunde": () => makeBookCover("Systematische", "Natuurkunde", ["#1a237e","#283593","#3949ab"], "SN"),
+    "Nova": () => makeBookCover("Nova", "Natuurkunde", ["#0d47a1","#1565c0","#1e88e5"], "N"),
+    "Natuurkunde Overal": () => makeBookCover("Natuurkunde", "Overal", ["#1a237e","#1565c0","#42a5f5"], "NO"),
+    "Chemie": () => makeBookCover("Chemie", "Scheikunde", ["#4a148c","#6a1b9a","#8e24aa"], "C"),
+    "Scheikunde Overal": () => makeBookCover("Scheikunde", "Overal", ["#311b92","#4527a0","#5e35b1"], "SO"),
+    "Nova Scheikunde": () => makeBookCover("Nova", "Scheikunde", ["#4a148c","#7b1fa2","#9c27b0"], "NS"),
+    "Economie Integraal": () => makeBookCover("Economie", "Integraal", ["#e65100","#f57c00","#ff9800"], "EI"),
+    "Pincode": () => makeBookCover("Pincode", "Economie", ["#bf360c","#e64a19","#ff5722"], "P"),
+    "Pluspunt (rekenen)": () => makeBookCover("Pluspunt", "Rekenen", ["#00695c","#00897b","#009688"], "+"),
+    "De Wereld in Getallen": () => makeBookCover("De Wereld", "in Getallen", ["#004d40","#00695c","#00897b"], "WG"),
+    "Taal Actief": () => makeBookCover("Taal", "Actief", ["#4e342e","#6d4c41","#8d6e63"], "TA"),
+    "Staal (taal)": () => makeBookCover("Staal", "Taal", ["#37474f","#546e7a","#78909c"], "S"),
+    "Blink (wereld)": () => makeBookCover("Blink", "Wereld", ["#1565c0","#1e88e5","#42a5f5"], "B"),
+    "Naut/Meander/Brandaan": () => makeBookCover("Naut Meander", "Brandaan", ["#2e7d32","#388e3c","#43a047"], "NMB"),
   };
 
   // Search for book cover
@@ -1124,11 +1168,8 @@ function TextbookQuiz({ onStart, onBack }) {
     if (!bookName) { setCoverUrl(null); return; }
     const searchCover = async () => {
       setCoverLoading(true);
-      // 1. Check hardcoded covers first
-      const key1 = `${bookName}-${deel || ""}`.trim();
-      const key2 = `${bookName}-Deel 2`;
-      if (KNOWN_COVERS[key1]) { setCoverUrl(KNOWN_COVERS[key1]); setCoverLoading(false); return; }
-      if (KNOWN_COVERS[key2]) { setCoverUrl(KNOWN_COVERS[key2]); setCoverLoading(false); return; }
+      // 1. Check known book covers first
+      if (BOOK_COVERS[bookName]) { setCoverUrl(BOOK_COVERS[bookName]()); setCoverLoading(false); return; }
       
       // 2. Try Google Books as fallback
       try {
