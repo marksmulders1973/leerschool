@@ -105,16 +105,25 @@ Antwoord ALLEEN met een JSON array:
     "answer": 0,
     "explanation": "Uitleg waarom dit het juiste antwoord is (1-2 zinnen)",
     "source": "Bron: bijv. 'Eindexamen havo 2023' of 'wiskundeacademie.nl' of 'Gebaseerd op curriculum'",
-    "svg": null
+    "svg": "<svg viewBox='0 0 300 200'>...</svg>"
   }
 ]
 
 REGELS:
 - answer = index (0-3) van het juiste antwoord
 - Foute antwoorden moeten veelgemaakte fouten zijn
-- SVG: alleen als een diagram echt nodig is (meetkunde etc.), compact: viewBox="0 0 300 200", kleuren: #FF6B35, #4ECDC4, #2d3436
 - source: ALTIJD vermelden waar de vraag vandaan komt
-- Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
+
+SVG DIAGRAMMEN (BELANGRIJK):
+- Genereer een SVG bij ELKE vraag over: grafieken, functies, meetkunde, driehoeken, cirkels, hoeken, assenstelsels, scheikundige structuren, kaarten, krachten, schakelingen
+- Voorbeeld: bij "waar snijden f(x) en g(x) elkaar" MOET een assenstelsel met beide lijnen getekend worden
+- Gebruik viewBox="0 0 300 200", kleuren: #5b86b8 (blauw), #8eaadb (lichtblauw), #e0e6f0 (wit), #ff6b6b (rood voor hulplijnen)
+- Teken assen met pijlen, labels, roosters, en de relevante figuren/grafieken
+- Tekst in font-family="Arial" fill="#e0e6f0" (lichte kleur voor dark theme)
+- Als een vraag GEEN visueel element heeft (bijv. puur rekenen of taalvraag), zet dan null
+- Minstens 40% van de vragen bij wiskunde/natuurkunde/scheikunde MOET een SVG hebben
+
+Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
     prompt = `OPDRACHT: Zoek ECHTE toets- en examenvragen voor:
 - Vak: ${subjectLabel}
@@ -133,7 +142,7 @@ Antwoord ALLEEN met een JSON array:
     "answer": 0,
     "explanation": "Uitleg waarom dit het juiste antwoord is",
     "source": "Bron: bijv. 'Eindexamen vwo 2024' of 'Gebaseerd op curriculum'",
-    "svg": null
+    "svg": "<svg viewBox='0 0 300 200'>...</svg>"
   }
 ]
 
@@ -141,7 +150,7 @@ Regels:
 - answer = index (0-3) van juiste antwoord
 - Foute antwoorden = veelgemaakte fouten
 - Vragen in het Nederlands (behalve Engels)
-- SVG alleen bij meetkunde/diagrammen
+- SVG: genereer een diagram bij vragen over grafieken, functies, meetkunde, figuren, schakelingen etc. Gebruik viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0, font-family="Arial". Zet null als geen diagram nodig is.
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
 
