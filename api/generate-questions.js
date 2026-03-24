@@ -10,6 +10,38 @@ export default async function handler(req, res) {
 
   const { subject, level, count = 5, textbook } = req.body;
 
+  // ─── Content Safety Filter ─────────────────────────────────────
+  const BLOCKED_WORDS = [
+    'sex', 'porno', 'porn', 'drugs', 'wapen', 'bom', 'moord', 'dood', 'suicide',
+    'naak', 'naakt', 'penis', 'vagina', 'borst', 'orgasm', 'prostitu', 'verkracht',
+    'nazi', 'hitler', 'terrorist', 'hack', 'wachtwoord', 'password', 'gokken',
+    'alcohol', 'cocaine', 'heroïne', 'mdma', 'xtc', 'wiet', 'joint',
+    'fuck', 'shit', 'kut', 'hoer', 'slet', 'lul', 'kanker', 'tyfus',
+    'naked', 'nude', 'kill', 'murder', 'bomb', 'weapon', 'gun',
+    'xxx', 'onlyfans', 'tinder', 'dating', 'fetish', 'bdsm',
+  ];
+
+  const checkInput = (text) => {
+    if (!text) return true;
+    const lower = text.toLowerCase();
+    return !BLOCKED_WORDS.some(word => lower.includes(word));
+  };
+
+  // Check all user inputs
+  const allInputs = [
+    textbook?.bookName, textbook?.edition, textbook?.chapter, 
+    textbook?.topic, subject
+  ].filter(Boolean);
+
+  for (const input of allInputs) {
+    if (!checkInput(input)) {
+      return res.status(400).json({ 
+        error: 'Ongepaste invoer gedetecteerd. Vul alleen schoolgerelateerde onderwerpen in.',
+        questions: [] 
+      });
+    }
+  }
+
   const levelDescriptions = {
     groep5: "groep 5-6 basisschool (10-11 jaar), makkelijke vragen",
     groep7: "groep 7-8 basisschool (12-13 jaar), gemiddelde vragen",
@@ -120,6 +152,7 @@ Regels:
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 4000,
+        system: "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Je genereert UITSLUITEND vragen over schoolvakken en leerstof. Je weigert ALTIJD om vragen te maken over ongepaste, seksuele, gewelddadige, of niet-schoolgerelateerde onderwerpen. Als een invoerveld verdachte of ongepaste inhoud bevat, NEGEER die inhoud volledig en genereer gewoon standaard schoolvragen over het opgegeven vak en niveau. De veiligheid van kinderen is je hoogste prioriteit.",
         messages: [{ role: "user", content: prompt }],
       }),
     });

@@ -1223,10 +1223,6 @@ function TextbookQuiz({ onStart, onBack }) {
                 </>
               )}
 
-              {/* Onderwerp (optioneel) */}
-              <label style={styles.settingLabel}>🎯 Onderwerp (optioneel)</label>
-              <input style={styles.textInput} value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Bijv. Kwadratische vergelijkingen" />
-
               {/* Niveau */}
               <label style={{ ...styles.settingLabel, color: "#e74c3c" }}>🎓 Niveau *</label>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 8 }}>
@@ -1257,7 +1253,7 @@ function TextbookQuiz({ onStart, onBack }) {
                 <div style={{ fontSize: 13, color: "#2e7d32", lineHeight: 1.6 }}>
                   <strong>Jouw selectie:</strong><br/>
                   📕 {bookName} {deel ? `· ${deel}` : ""}<br/>
-                  📖 {chapter}{topic ? ` · ${topic}` : ""}<br/>
+                  📖 {chapter}<br/>
                   🎓 {LEVELS.find(l => l.id === level)?.label}
                 </div>
               </div>
@@ -1278,7 +1274,7 @@ function TextbookQuiz({ onStart, onBack }) {
                     bookName,
                     edition: deel || null,
                     chapter,
-                    topic: topic || null,
+                    topic: null,
                     level,
                   },
                 });
