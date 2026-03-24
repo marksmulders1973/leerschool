@@ -1534,10 +1534,27 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
   const getYouTubeUrl = (q) => {
+    // Extract the core topic from the question itself
+    const questionText = q.q || "";
+    // Use explanation keywords if available, otherwise the question
+    const explanation = q.explanation || "";
+    
+    // Try to extract key math/science terms from the question
+    const keywords = questionText
+      .replace(/[?!.,;:()]/g, " ")
+      .replace(/\b(wat|welke|welk|hoe|waarom|bereken|is|de|het|een|van|voor|met|bij|als|dan|niet|wel|geen|dit|dat|die|deze)\b/gi, "")
+      .trim()
+      .split(/\s+/)
+      .filter(w => w.length > 3)
+      .slice(0, 5)
+      .join(" ");
+    
+    // Build a focused search: topic keywords + subject + "uitleg"
     const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
-    const bookInfo = gameState.quiz.textbook?.bookName || "";
-    const searchTerms = [subj?.label || "", bookInfo, q.explanation?.split(".")[0] || q.q].filter(Boolean).join(" ").slice(0, 80);
-    return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchTerms + " uitleg Nederlands")}`;
+    const subjLabel = subj?.label || "";
+    const searchQuery = `${keywords} ${subjLabel} uitleg`.trim().slice(0, 80);
+    
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}`;
   };
 
   const goToNext = () => {
