@@ -394,13 +394,13 @@ export default function App() {
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
           <div style={{ animation: "float 1.5s ease infinite", fontSize: 64, marginBottom: 24 }}>🧠</div>
-          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Vragen genereren...</h2>
+          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Big Brain Trainer laden...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
               <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#4ECDC4", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
-          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif" }}>Even geduld, de AI bedenkt slimme vragen voor jou!</p>
+          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif" }}>Even geduld, de Big Brain Trainer maakt je vragen!</p>
           <style>{`
             @keyframes loadDot {
               0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
@@ -557,9 +557,9 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         <div style={styles.logoContainer}>
           <span style={styles.logoIcon}>🧠</span>
           <h1 style={styles.logoText}>
-            <span style={{ color: "#2d3436", fontSize: 32 }}>BB - </span>
-            <span style={{ color: "#FF6B35" }}>BIG</span>
-            <span style={{ color: "#4ECDC4" }}>Brain</span>
+            
+            <span style={{ color: "#FF6B35" }}>Big Brain</span>
+            <span style={{ color: "#4ECDC4" }}> Trainer</span>
           </h1>
         </div>
         <p style={styles.subtitle}>Samen slim worden — op school en thuis!</p>
@@ -598,7 +598,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
           }}
           onClick={() => {
-            const text = `🧠 Ken je BIG Brain al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `🧠 Ken je Big Brain Trainer al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -704,7 +704,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `🧠 BIG Brain Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+                        const text = `🧠 Big Brain Trainer Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -850,7 +850,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const text = `🧠 Doe mee met mijn BIG Brain quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
+            const text = `🧠 Doe mee met mijn Big Brain Trainer quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
