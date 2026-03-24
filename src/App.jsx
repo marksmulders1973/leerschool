@@ -573,7 +573,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
           }}
           onClick={() => {
-            const text = `🧠 Ken je LeerSchool al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n🎒 Vraag je leerkracht om de app-link of spelcode!`;
+            const text = `🧠 Ken je LeerSchool al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -679,7 +679,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `🧠 LeerSchool Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\nVul de code in de app in en doe mee!`;
+                        const text = `🧠 LeerSchool Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -825,7 +825,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const text = `🧠 Doe mee met mijn LeerSchool quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\nGa naar de LeerSchool app en vul de code in!`;
+            const text = `🧠 Doe mee met mijn LeerSchool quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://leerschoolnew.vercel.app`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
