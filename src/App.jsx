@@ -1097,12 +1097,34 @@ function TextbookQuiz({ onStart, onBack }) {
   const [level, setLevel] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
+  const [coverUrl, setCoverUrl] = useState(null);
+  const [coverLoading, setCoverLoading] = useState(false);
 
   const bookName = selectedBook ? selectedBook.name : customBook;
   const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
   const canNext1 = category !== "";
   const canNext2 = bookName.trim() !== "";
   const canNext3 = chapterNum !== "" && level !== "";
+
+  // Search for book cover when book or deel changes
+  useEffect(() => {
+    if (!bookName) { setCoverUrl(null); return; }
+    const searchCover = async () => {
+      setCoverLoading(true);
+      try {
+        const query = `${bookName} ${deel || ""} wiskunde schoolboek`.trim();
+        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=3&langRestrict=nl`);
+        const data = await res.json();
+        const cover = data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail 
+                   || data.items?.[1]?.volumeInfo?.imageLinks?.thumbnail
+                   || data.items?.[0]?.volumeInfo?.imageLinks?.smallThumbnail;
+        setCoverUrl(cover ? cover.replace("http:", "https:") : null);
+      } catch { setCoverUrl(null); }
+      setCoverLoading(false);
+    };
+    const timer = setTimeout(searchCover, 500);
+    return () => clearTimeout(timer);
+  }, [bookName, deel]);
 
   const selectStyle = {
     width: "100%", padding: "14px 16px", borderRadius: 14, border: "2px solid #2a3f5f",
@@ -1180,13 +1202,26 @@ function TextbookQuiz({ onStart, onBack }) {
             <h3 style={styles.stepTitle}>Wat wil je oefenen?</h3>
 
             <div style={styles.settingsGroup}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, padding: 12, background: "#162033", borderRadius: 12 }}>
-                <span style={{ fontSize: 28 }}>{selectedBook?.icon || "📕"}</span>
-                <div>
-                  <div style={{ fontWeight: 700, fontSize: 14 }}>{bookName}</div>
-                  <div style={{ fontSize: 12, color: "#8899aa" }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 16, padding: 14, background: "#162033", borderRadius: 14 }}>
+                {coverLoading ? (
+                  <div style={{ width: 70, height: 90, borderRadius: 8, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <div style={{ width: 20, height: 20, border: "3px solid #5b86b8", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                  </div>
+                ) : coverUrl ? (
+                  <img src={coverUrl} alt={bookName} style={{ width: 70, height: 90, borderRadius: 8, objectFit: "cover", flexShrink: 0, boxShadow: "0 2px 8px rgba(0,0,0,0.4)" }} />
+                ) : (
+                  <div style={{ width: 70, height: 90, borderRadius: 8, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: 28 }}>
+                    {selectedBook?.icon || "📕"}
+                  </div>
+                )}
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontWeight: 700, fontSize: 15, color: "#e0e6f0" }}>{bookName}</div>
+                  <div style={{ fontSize: 12, color: "#8899aa" }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
+                  {coverUrl && <div style={{ fontSize: 11, color: "#5b86b8", marginTop: 4 }}>✅ Is dit je boek?</div>}
                 </div>
               </div>
+
+              <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
 
               {/* Deel / Editie dropdown */}
               <label style={styles.settingLabel}>📘 Deel</label>
