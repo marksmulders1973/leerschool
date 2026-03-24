@@ -1304,16 +1304,35 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
   const [showExplanation, setShowExplanation] = useState(false);
   const [scoreAnim, setScoreAnim] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
+  const [waitingForUser, setWaitingForUser] = useState(false);
+  const nextStateRef = useRef(null);
   const timerRef = useRef(null);
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
+  const isSelfStudy = gameState.mode === "self" || noTimer;
+
+  const getYouTubeUrl = (q) => {
+    const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
+    const bookInfo = gameState.quiz.textbook?.bookName || "";
+    const searchTerms = [subj?.label || "", bookInfo, q.explanation?.split(".")[0] || q.q].filter(Boolean).join(" ").slice(0, 80);
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchTerms + " uitleg Nederlands")}`;
+  };
+
+  const goToNext = () => {
+    setWaitingForUser(false);
+    const ns = nextStateRef.current;
+    if (!ns) return;
+    if (isLast) onFinish(ns);
+    else setGameState({ ...ns, currentQ: ns.currentQ + 1 });
+  };
 
   useEffect(() => {
     setTimeLeft(noTimer ? 0 : gameState.timePerQuestion);
     setSelected(null);
     setShowResult(false);
     setShowExplanation(false);
+    setWaitingForUser(false);
   }, [gameState.currentQ, gameState.timePerQuestion]);
 
   useEffect(() => {
@@ -1350,12 +1369,18 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
       answers: [...gameState.answers, { questionIndex: gameState.currentQ, selected: idx, correct: question.answer, isCorrect, timeLeft }],
     };
     setGameState(newState);
+    nextStateRef.current = newState;
 
-    const delay = isCorrect ? 1200 : 3500;
-    setTimeout(() => {
-      if (isLast) onFinish(newState);
-      else setGameState({ ...newState, currentQ: newState.currentQ + 1 });
-    }, delay);
+    if (!isCorrect && isSelfStudy) {
+      // In self-study: wait for user to click "next"
+      setWaitingForUser(true);
+    } else {
+      const delay = isCorrect ? 1200 : 3500;
+      setTimeout(() => {
+        if (isLast) onFinish(newState);
+        else setGameState({ ...newState, currentQ: newState.currentQ + 1 });
+      }, delay);
+    }
   };
 
   const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
@@ -1428,7 +1453,32 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
         {showExplanation && question.explanation && (
           <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #e8f4fd, #f0f8ff)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
             <div style={{ fontWeight: 800, marginBottom: 4, color: "#1a73e8" }}>💡 Uitleg</div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#333" }}>{question.explanation}</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#333", marginBottom: waitingForUser ? 16 : 0 }}>{question.explanation}</div>
+
+            {waitingForUser && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "slideUp 0.3s ease" }}>
+                <button onClick={goToNext} style={{
+                  width: "100%", padding: "14px", border: "none", borderRadius: 12,
+                  background: "linear-gradient(135deg, #4ECDC4, #44A08D)", color: "#fff",
+                  fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
+                }}>
+                  {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
+                </button>
+
+                <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
+                  width: "100%", padding: "14px", border: "none", borderRadius: 12,
+                  background: "linear-gradient(135deg, #ff6b6b, #ee5a24)", color: "#fff",
+                  fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                }}>
+                  <span>🎬</span> Kijk een uitleg-video op YouTube
+                </button>
+
+                <p style={{ fontSize: 11, color: "#636e72", textAlign: "center", marginTop: 4 }}>
+                  Neem de tijd om de uitleg te lezen. Leren van fouten maakt je slimmer! 🧠
+                </p>
+              </div>
+            )}
           </div>
         )}
       </div>
