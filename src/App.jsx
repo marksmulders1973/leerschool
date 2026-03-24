@@ -394,13 +394,13 @@ export default function App() {
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
           <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "70%", maxWidth: 280, marginBottom: 24, borderRadius: 12, animation: "pulse 2s ease infinite" }} />
-          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Vragen genereren...</h2>
+          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Echte vragen zoeken...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
               <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#4ECDC4", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
-          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif" }}>Even geduld, de Big Brain Trainer maakt je vragen!</p>
+          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px" }}>We zoeken echte examen- en toetsvragen voor jou!</p>
           <style>{`
             @keyframes loadDot {
               0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
@@ -1281,9 +1281,9 @@ function TextbookQuiz({ onStart, onBack }) {
                 💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen.
               </div>
             </div>
-            <div style={{ marginTop: 8, padding: 14, background: "#f0f4f8", borderRadius: 12, borderLeft: "4px solid #b2bec3" }}>
-              <div style={{ fontSize: 11, color: "#636e72", lineHeight: 1.5 }}>
-                ℹ️ De vragen worden door AI gemaakt op basis van het Nederlandse curriculum voor dit vak en niveau. Ze komen niet letterlijk uit je boek, maar sluiten aan bij het onderwerp van dit hoofdstuk.
+            <div style={{ marginTop: 8, padding: 14, background: "#e8f5e9", borderRadius: 12, borderLeft: "4px solid #4CAF50" }}>
+              <div style={{ fontSize: 11, color: "#2e7d32", lineHeight: 1.5 }}>
+                ✅ De vragen zijn gebaseerd op echte examen- en toetsvragen die online gevonden worden voor dit vak en niveau. De bron wordt bij de uitleg vermeld.
               </div>
             </div>
           </div>
@@ -1451,7 +1451,10 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
         {showExplanation && question.explanation && (
           <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #e8f4fd, #f0f8ff)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
             <div style={{ fontWeight: 800, marginBottom: 4, color: "#1a73e8" }}>💡 Uitleg</div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#333", marginBottom: waitingForUser ? 16 : 0 }}>{question.explanation}</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#333", marginBottom: question.source ? 8 : (waitingForUser ? 16 : 0) }}>{question.explanation}</div>
+            {question.source && (
+              <div style={{ fontSize: 11, color: "#636e72", fontStyle: "italic", marginBottom: waitingForUser ? 12 : 0 }}>📚 {question.source}</div>
+            )}
 
             {waitingForUser && (
               <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "slideUp 0.3s ease" }}>
