@@ -1112,13 +1112,18 @@ function TextbookQuiz({ onStart, onBack }) {
     const searchCover = async () => {
       setCoverLoading(true);
       try {
-        const query = `${bookName} ${deel || ""} wiskunde schoolboek`.trim();
-        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=3&langRestrict=nl`);
+        const catLabel = TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label || "";
+        const query = `${bookName} ${deel || ""} ${catLabel} Noordhoff Malmberg`.trim();
+        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&langRestrict=nl&printType=books`);
         const data = await res.json();
-        const cover = data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail 
-                   || data.items?.[1]?.volumeInfo?.imageLinks?.thumbnail
-                   || data.items?.[0]?.volumeInfo?.imageLinks?.smallThumbnail;
-        setCoverUrl(cover ? cover.replace("http:", "https:") : null);
+        // Find the best cover - prefer larger images
+        let bestCover = null;
+        for (const item of (data.items || [])) {
+          const links = item.volumeInfo?.imageLinks;
+          const cover = links?.medium || links?.thumbnail || links?.smallThumbnail;
+          if (cover) { bestCover = cover.replace("http:", "https:").replace("&edge=curl", ""); break; }
+        }
+        setCoverUrl(bestCover);
       } catch { setCoverUrl(null); }
       setCoverLoading(false);
     };
@@ -1203,8 +1208,8 @@ function TextbookQuiz({ onStart, onBack }) {
 
             <div style={styles.settingsGroup}>
 
-              {/* Deel dropdown EERST */}
-              <label style={styles.settingLabel}>📘 Deel</label>
+              {/* Welke editie EERST */}
+              <label style={styles.settingLabel}>📘 Welke editie?</label>
               <select style={selectStyle} value={deel} onChange={(e) => {
                 const val = e.target.value;
                 setDeel(val);
@@ -1218,8 +1223,26 @@ function TextbookQuiz({ onStart, onBack }) {
                   setLevel(selectedBook.defaultLevel);
                 }
               }}>
-                <option value="">-- Kies deel --</option>
-                {[1,2,3,4,5,6].map(n => <option key={n} value={`Deel ${n}`}>Deel {n}</option>)}
+                <option value="">-- Kies editie / deel --</option>
+                <optgroup label="Deel">
+                  {[1,2,3,4,5,6,7,8].map(n => <option key={`d${n}`} value={`Deel ${n}`}>Deel {n}</option>)}
+                </optgroup>
+                <optgroup label="Editie">
+                  {[10,11,12,13,14,15].map(n => <option key={`e${n}`} value={`Editie ${n}`}>Editie {n}</option>)}
+                </optgroup>
+                <optgroup label="Combinatie">
+                  <option value="Deel 1, Editie 12">Deel 1 · Editie 12</option>
+                  <option value="Deel 1, Editie 13">Deel 1 · Editie 13</option>
+                  <option value="Deel 2, Editie 12">Deel 2 · Editie 12</option>
+                  <option value="Deel 2, Editie 13">Deel 2 · Editie 13</option>
+                  <option value="Deel 3, Editie 13">Deel 3 · Editie 13</option>
+                  <option value="Deel 4, Editie 13">Deel 4 · Editie 13</option>
+                </optgroup>
+                <optgroup label="Boek">
+                  <option value="Boek A">Boek A</option>
+                  <option value="Boek B">Boek B</option>
+                  <option value="Boek C">Boek C</option>
+                </optgroup>
               </select>
 
               {/* Cover - GROOT, gecentreerd */}
