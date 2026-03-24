@@ -112,13 +112,9 @@ REGELS:
 - Minstens 40% van wiskunde-vragen moet een SVG hebben
 - Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
-    prompt = `Zoek ECHTE toets- en examenvragen voor:
+    prompt = `Genereer ${count} quizvragen voor:
 - Vak: ${subjectLabel}
 - Niveau: ${levelLabel}
-- Aantal: ${count}
-
-STAP 1: Zoek via web search naar echte examenvragen op examenblad.nl, alleexamens.nl, wiskundeacademie.nl, havovwo.nl.
-STAP 2: Maak vragen gebaseerd op wat je vindt. Vermeld de bron.
 
 Antwoord ALLEEN met een JSON array:
 [
@@ -126,19 +122,36 @@ Antwoord ALLEEN met een JSON array:
     "q": "De vraag",
     "options": ["optie A", "optie B", "optie C", "optie D"],
     "answer": 0,
-    "explanation": "Uitleg waarom dit het juiste antwoord is",
-    "source": "Bron",
-    "svg": "<svg>...</svg> of null"
+    "explanation": "Uitleg waarom dit het juiste antwoord is (1-2 zinnen)",
+    "svg": "<svg viewBox='0 0 300 200'>...</svg> of null"
   }
 ]
 
 Regels:
-- answer = index (0-3)
-- SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0
+- answer = index (0-3) van het juiste antwoord
+- Maak de vragen gevarieerd en leerzaam, passend bij het niveau
+- Foute antwoorden moeten veelgemaakte fouten zijn
+- SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
+- Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
 
+  const useWebSearch = !!(textbook && textbook.bookName);
+
   try {
+    const requestBody = {
+      model: "claude-sonnet-4-20250514",
+      max_tokens: 4000,
+      system: useWebSearch
+        ? "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit."
+        : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. De veiligheid van kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.",
+      messages: [{ role: "user", content: prompt }],
+    };
+
+    if (useWebSearch) {
+      requestBody.tools = [{ type: "web_search_20250305", name: "web_search" }];
+    }
+
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
@@ -146,18 +159,7 @@ Regels:
         "x-api-key": apiKey,
         "anthropic-version": "2023-06-01",
       },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 4000,
-        system: "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit.",
-        tools: [
-          {
-            type: "web_search_20250305",
-            name: "web_search"
-          }
-        ],
-        messages: [{ role: "user", content: prompt }],
-      }),
+      body: JSON.stringify(requestBody),
     });
 
     const data = await response.json();

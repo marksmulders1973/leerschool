@@ -334,6 +334,7 @@ const fonts = `
 export default function App() {
   const [page, setPage] = useState("home");
   const [loading, setLoading] = useState(false);
+  const [loadingMode, setLoadingMode] = useState("self");
   const [role, setRole] = useState(null);
   const [userName, setUserName] = useState("");
   const [quizzes, setQuizzes] = useState([]);
@@ -370,6 +371,7 @@ export default function App() {
 
   const startGame = async (quiz, mode) => {
     setLoading(true);
+    setLoadingMode(quiz.textbook?.bookName ? "textbook" : "self");
     let questions = [];
     if (quiz.useAI !== false) {
       questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null);
@@ -414,13 +416,13 @@ export default function App() {
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
           <img src="/logo.jpg" alt="studiebol" style={{ width: "80%", maxWidth: 300, marginBottom: 24, borderRadius: 20, animation: "pulse 2s ease infinite" }} />
-          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Echte vragen zoeken...</h2>
+          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>{loadingMode === "textbook" ? "Echte vragen zoeken..." : "Vragen maken..."}</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
               <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#00e676", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
-          <p style={{ color: "#8899aa", fontSize: 13, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5 }}>We zoeken de inhoudsopgave van je boek en maken vragen die écht bij je hoofdstuk passen!</p>
+          <p style={{ color: "#8899aa", fontSize: 13, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5 }}>{loadingMode === "textbook" ? "We zoeken de inhoudsopgave van je boek en maken vragen die écht bij je hoofdstuk passen!" : "Even geduld, studiebol maakt leuke vragen voor je!"}</p>
           <style>{`
             @keyframes loadDot {
               0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
@@ -1356,7 +1358,7 @@ function TextbookQuiz({ onStart, onBack }) {
                   <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
                   <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
                   {coverUrl && <div style={{ fontSize: 14, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
-                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>Geen cover gevonden</div>}
+                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>📘 Juiste cover niet gevonden — inhoud klopt wel!</div>}
                 </div>
               </div>
 
