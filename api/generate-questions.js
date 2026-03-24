@@ -72,24 +72,24 @@ ${textbook.topic ? `- Onderwerp: ${textbook.topic}` : ""}
 ${textbook.level ? `- Niveau: ${levelDescriptions[textbook.level] || textbook.level}` : ""}
 
 JE TAAK:
-Je bent een ervaren Nederlandse docent die deze methode jarenlang heeft gebruikt. Je kent de opbouw, terminologie en leerdoelen van dit boek.
+Je bent een ervaren Nederlandse docent. Je kent het Nederlandse curriculum goed en weet welke onderwerpen normaal gesproken bij dit type hoofdstuk horen in deze methode.
+
+EERLIJKHEID:
+- Je hebt het boek NIET gelezen. Je weet NIET wat er precies op welke pagina staat.
+- Doe NOOIT alsof je het boek kent. Verwijs NOOIT naar specifieke paragrafen, pagina's of secties uit het boek (bijv. NIET "Volgens §6.2..." of "Zoals in het boek staat...").
+- Baseer je vragen op het Nederlandse curriculum voor dit vak, niveau en het onderwerp dat typisch bij dit hoofdstuknummer hoort.
 
 STRIKTE REGELS VOOR DE VRAGEN:
-1. De vragen MOETEN gaan over de exacte leerstof van het genoemde hoofdstuk/paragraaf. NIET over andere onderwerpen.
-2. Gebruik PRECIES dezelfde terminologie, notatie en methode als het boek. Bijvoorbeeld:
-   - Getal & Ruimte gebruikt andere notaties dan Moderne Wiskunde
-   - Stepping Stones gebruikt andere grammatica-termen dan All Right!
-   - Elke methode heeft een eigen aanpak en volgorde
-3. Houd je aan het niveau: vraag ALLEEN dingen die leerlingen op dit punt in het boek al geleerd hebben.
-4. De vragen moeten lijken op de oefeningen en toetsvragen uit het boek zelf.
+1. De vragen moeten gaan over het onderwerp dat normaal bij dit hoofdstuk hoort voor dit vak en niveau.
+2. Gebruik gangbare Nederlandse wiskundige/vakspecifieke terminologie.
+3. Houd je aan het niveau: vraag ALLEEN dingen die leerlingen op dit punt al geleerd zouden hebben.
+4. De vragen moeten lijken op typische oefeningen en toetsvragen.
 5. Maak een mix van:
    - Kennisvragen (definities, feiten)
    - Toepassingsvragen (berekeningen, voorbeelden)
    - Inzichtvragen (waarom, verklaar)
 6. De foute antwoorden moeten veelgemaakte fouten zijn die leerlingen echt maken.
-7. De uitleg moet verwijzen naar de theorie/regels uit dit specifieke hoofdstuk.
-
-Als je dit specifieke hoofdstuk niet met 100% zekerheid kent, genereer dan vragen die passen bij het onderwerp dat standaard in dit hoofdstuk behandeld wordt volgens het Nederlandse curriculum voor dit niveau. Verzin NOOIT vragen over onderwerpen die niet bij dit hoofdstuk horen.
+7. De uitleg moet helder en leerzaam zijn. Leg het wiskundig/vakinhoudelijk uit, ZONDER te verwijzen naar het boek.
 
 Antwoord ALLEEN met een JSON array, geen andere tekst:
 [
@@ -97,7 +97,7 @@ Antwoord ALLEEN met een JSON array, geen andere tekst:
     "q": "De vraag",
     "options": ["optie A", "optie B", "optie C", "optie D"],
     "answer": 0,
-    "explanation": "Uitleg (1-2 zinnen) die verwijst naar de theorie uit dit hoofdstuk. Bijv: 'Volgens de regels uit §6.2 geldt dat...'",
+    "explanation": "Duidelijke uitleg (1-2 zinnen). Leg uit WAAROM dit het juiste antwoord is. Verwijs NIET naar het boek.",
     "svg": "<svg>...</svg> of null"
   }
 ]

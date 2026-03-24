@@ -1278,7 +1278,12 @@ function TextbookQuiz({ onStart, onBack }) {
 
             <div style={{ marginTop: 8, padding: 14, background: "#fff9e6", borderRadius: 12, borderLeft: "4px solid #ffc107" }}>
               <div style={{ fontSize: 13, color: "#856404", lineHeight: 1.5 }}>
-                💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen. "Heel hoofdstuk" werkt ook maar is breder.
+                💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen.
+              </div>
+            </div>
+            <div style={{ marginTop: 8, padding: 14, background: "#f0f4f8", borderRadius: 12, borderLeft: "4px solid #b2bec3" }}>
+              <div style={{ fontSize: 11, color: "#636e72", lineHeight: 1.5 }}>
+                ℹ️ De vragen worden door AI gemaakt op basis van het Nederlandse curriculum voor dit vak en niveau. Ze komen niet letterlijk uit je boek, maar sluiten aan bij het onderwerp van dit hoofdstuk.
               </div>
             </div>
           </div>
