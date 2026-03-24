@@ -400,7 +400,7 @@ export default function App() {
               <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#8eaadb", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
             ))}
           </div>
-          <p style={{ color: "#556677", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px" }}>We zoeken echte examen- en toetsvragen voor jou!</p>
+          <p style={{ color: "#8899aa", fontSize: 13, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5 }}>We zoeken de inhoudsopgave van je boek en maken vragen die écht bij je hoofdstuk passen!</p>
           <style>{`
             @keyframes loadDot {
               0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }

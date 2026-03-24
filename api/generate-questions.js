@@ -28,15 +28,15 @@ export default async function handler(req, res) {
   };
 
   const allInputs = [
-    textbook?.bookName, textbook?.edition, textbook?.chapter, 
+    textbook?.bookName, textbook?.edition, textbook?.chapter,
     textbook?.topic, subject
   ].filter(Boolean);
 
   for (const input of allInputs) {
     if (!checkInput(input)) {
-      return res.status(400).json({ 
+      return res.status(400).json({
         error: 'Ongepaste invoer gedetecteerd.',
-        questions: [] 
+        questions: []
       });
     }
   }
@@ -49,19 +49,12 @@ export default async function handler(req, res) {
   };
 
   const subjectNames = {
-    rekenen: "Rekenen / Wiskunde",
-    taal: "Nederlandse Taal",
-    aardrijkskunde: "Aardrijkskunde",
-    geschiedenis: "Geschiedenis",
-    natuur: "Natuur & Techniek",
-    engels: "Engelse Taal",
-    wiskunde: "Wiskunde",
-    nederlands: "Nederlands",
-    biologie: "Biologie",
-    natuurkunde: "Natuurkunde",
-    scheikunde: "Scheikunde",
-    economie: "Economie",
-    basisschool: "Basisschool",
+    rekenen: "Rekenen / Wiskunde", taal: "Nederlandse Taal",
+    aardrijkskunde: "Aardrijkskunde", geschiedenis: "Geschiedenis",
+    natuur: "Natuur & Techniek", engels: "Engelse Taal",
+    wiskunde: "Wiskunde", nederlands: "Nederlands",
+    biologie: "Biologie", natuurkunde: "Natuurkunde",
+    scheikunde: "Scheikunde", economie: "Economie", basisschool: "Basisschool",
   };
 
   const subjectLabel = subjectNames[subject] || subject;
@@ -70,69 +63,34 @@ export default async function handler(req, res) {
   let prompt;
 
   if (textbook && textbook.bookName) {
-    prompt = `OPDRACHT: Zoek ECHTE toets- en examenvragen voor het volgende vak en niveau. Gebruik web search om bestaande vragen te vinden.
+    prompt = `JE TAAK: Genereer ${count} quizvragen die EXACT aansluiten bij een specifiek schoolboek-hoofdstuk.
 
-ZOEK NAAR:
-- Methode/Boek: ${textbook.bookName}
-- ${textbook.edition ? `Editie/Deel: ${textbook.edition}` : ""}
+STAP 1 - ZOEK DE INHOUDSOPGAVE:
+Zoek via web search naar de ECHTE inhoudsopgave van dit boek:
+- Boek: ${textbook.bookName}
+- ${textbook.edition ? `Deel/Editie: ${textbook.edition}` : ""}
 - ${textbook.chapter ? `Hoofdstuk/Paragraaf: ${textbook.chapter}` : ""}
-- Vak: ${subjectLabel}
 - Niveau: ${levelLabel}
 
-ZOEKSTRATEGIE:
-1. Zoek eerst naar echte examenvragen en oefentoetsen voor dit specifieke vak en niveau op sites zoals:
-   - examenblad.nl (officiële eindexamens)
-   - alleexamens.nl
-   - wiskundeacademie.nl / biologiepagina.nl / scheikundeacademie.nl
-   - havovwo.nl
-   - jouwexamen.nl
-   - kfrexamen.nl
-2. Zoek ook naar "${textbook.bookName} ${textbook.chapter || ""} oefentoets" of "toetsvragen"
-3. Zoek naar het ONDERWERP dat bij dit hoofdstuk hoort en vind echte oefenvragen daarover
+Zoek op:
+- "${textbook.bookName} ${textbook.edition || ""} inhoudsopgave"
+- "${textbook.bookName} ${textbook.chapter || ""} onderwerpen"
+- Site: noordhoff.nl, malmberg.nl, thiememeulenhoff.nl (uitgevers)
+- Site: studeersnel.nl, scholieren.com (samenvattingen met hoofdstukindeling)
+- Site: wiskunde.net, toets-mij.nl (uitwerkingen per hoofdstuk)
 
-BELANGRIJK:
-- Baseer je vragen ALLEEN op echte bronnen die je vindt via web search
-- Als je exacte examenvragen vindt, gebruik die (herformuleer ze indien nodig naar multiple choice)
-- Als je geen exacte vragen vindt, zoek dan het onderwerp op en maak vragen gebaseerd op de echte lesstof die je vindt
-- Vermeld bij elke vraag de bron in het "source" veld
-- ${count} vragen genereren
+STAP 2 - BEPAAL HET EXACTE ONDERWERP:
+Uit de gevonden inhoudsopgave: welke SPECIFIEKE onderwerpen worden behandeld in ${textbook.chapter || "dit hoofdstuk"}?
+Noteer de exacte paragraaftitels en onderwerpen.
 
-Antwoord ALLEEN met een JSON array:
-[
-  {
-    "q": "De vraag",
-    "options": ["optie A", "optie B", "optie C", "optie D"],
-    "answer": 0,
-    "explanation": "Uitleg waarom dit het juiste antwoord is (1-2 zinnen)",
-    "source": "Bron: bijv. 'Eindexamen havo 2023' of 'wiskundeacademie.nl' of 'Gebaseerd op curriculum'",
-    "svg": "<svg viewBox='0 0 300 200'>...</svg>"
-  }
-]
+STAP 3 - ZOEK ECHTE TOETSVRAGEN:
+Zoek nu naar echte toets- en examenvragen over deze SPECIFIEKE onderwerpen:
+- "${textbook.bookName} ${textbook.chapter || ""} toets"
+- "oefentoets ${subjectLabel} ${textbook.chapter || ""}"
+- Zoek op examenblad.nl, wiskundeacademie.nl, toets-mij.nl
 
-REGELS:
-- answer = index (0-3) van het juiste antwoord
-- Foute antwoorden moeten veelgemaakte fouten zijn
-- source: ALTIJD vermelden waar de vraag vandaan komt
-
-SVG DIAGRAMMEN (BELANGRIJK):
-- Genereer een SVG bij ELKE vraag over: grafieken, functies, meetkunde, driehoeken, cirkels, hoeken, assenstelsels, scheikundige structuren, kaarten, krachten, schakelingen
-- Voorbeeld: bij "waar snijden f(x) en g(x) elkaar" MOET een assenstelsel met beide lijnen getekend worden
-- Gebruik viewBox="0 0 300 200", kleuren: #5b86b8 (blauw), #8eaadb (lichtblauw), #e0e6f0 (wit), #ff6b6b (rood voor hulplijnen)
-- Teken assen met pijlen, labels, roosters, en de relevante figuren/grafieken
-- Tekst in font-family="Arial" fill="#e0e6f0" (lichte kleur voor dark theme)
-- Als een vraag GEEN visueel element heeft (bijv. puur rekenen of taalvraag), zet dan null
-- Minstens 40% van de vragen bij wiskunde/natuurkunde/scheikunde MOET een SVG hebben
-
-Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
-  } else {
-    prompt = `OPDRACHT: Zoek ECHTE toets- en examenvragen voor:
-- Vak: ${subjectLabel}
-- Niveau: ${levelLabel}
-- Aantal: ${count} vragen
-
-Zoek via web search naar echte examenvragen en oefentoetsen op sites als examenblad.nl, alleexamens.nl, wiskundeacademie.nl, havovwo.nl. 
-
-Baseer je vragen ALLEEN op echte bronnen. Vermeld de bron bij elke vraag.
+STAP 4 - GENEREER VRAGEN:
+Maak ${count} vragen die PRECIES gaan over de onderwerpen uit de gevonden inhoudsopgave.
 
 Antwoord ALLEEN met een JSON array:
 [
@@ -141,16 +99,42 @@ Antwoord ALLEEN met een JSON array:
     "options": ["optie A", "optie B", "optie C", "optie D"],
     "answer": 0,
     "explanation": "Uitleg waarom dit het juiste antwoord is",
-    "source": "Bron: bijv. 'Eindexamen vwo 2024' of 'Gebaseerd op curriculum'",
-    "svg": "<svg viewBox='0 0 300 200'>...</svg>"
+    "source": "Bron: bijv. 'Onderwerp uit H7: Meten - §7.2 Oppervlakte' of 'Gebaseerd op eindexamen havo 2023'",
+    "svg": "<svg viewBox='0 0 300 200'>...</svg> of null als geen diagram nodig"
+  }
+]
+
+REGELS:
+- answer = index (0-3) van het juiste antwoord
+- source: vermeld ALTIJD het gevonden onderwerp uit de inhoudsopgave + eventuele externe bron
+- Het antwoord MOET wiskundig/vakinhoudelijk correct zijn. Controleer dit!
+- SVG: teken een diagram bij vragen over grafieken, meetkunde, figuren etc. Gebruik viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0 (licht, voor dark theme), font-family="Arial". Zet null als geen diagram nodig.
+- Minstens 40% van wiskunde-vragen moet een SVG hebben
+- Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
+  } else {
+    prompt = `Zoek ECHTE toets- en examenvragen voor:
+- Vak: ${subjectLabel}
+- Niveau: ${levelLabel}
+- Aantal: ${count}
+
+STAP 1: Zoek via web search naar echte examenvragen op examenblad.nl, alleexamens.nl, wiskundeacademie.nl, havovwo.nl.
+STAP 2: Maak vragen gebaseerd op wat je vindt. Vermeld de bron.
+
+Antwoord ALLEEN met een JSON array:
+[
+  {
+    "q": "De vraag",
+    "options": ["optie A", "optie B", "optie C", "optie D"],
+    "answer": 0,
+    "explanation": "Uitleg waarom dit het juiste antwoord is",
+    "source": "Bron",
+    "svg": "<svg>...</svg> of null"
   }
 ]
 
 Regels:
-- answer = index (0-3) van juiste antwoord
-- Foute antwoorden = veelgemaakte fouten
-- Vragen in het Nederlands (behalve Engels)
-- SVG: genereer een diagram bij vragen over grafieken, functies, meetkunde, figuren, schakelingen etc. Gebruik viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0, font-family="Arial". Zet null als geen diagram nodig is.
+- answer = index (0-3)
+- SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
 
@@ -165,7 +149,7 @@ Regels:
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 4000,
-        system: "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je gebruikt web search om ECHTE examen- en toetsvragen te vinden. Je genereert UITSLUITEND vragen over schoolvakken. Je weigert ALTIJD ongepaste onderwerpen. De veiligheid van kinderen is je hoogste prioriteit.",
+        system: "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit.",
         tools: [
           {
             type: "web_search_20250305",
@@ -177,8 +161,7 @@ Regels:
     });
 
     const data = await response.json();
-    
-    // Extract text from response (may have multiple content blocks due to tool use)
+
     let text = "";
     if (data.content) {
       for (const block of data.content) {
@@ -187,22 +170,18 @@ Regels:
         }
       }
     }
-    
+
     if (!text) {
       throw new Error("No text in response");
     }
 
-    // Parse JSON from response
     const cleaned = text.replace(/```json|```/g, "").trim();
-    
-    // Find the JSON array in the response
     const jsonMatch = cleaned.match(/\[[\s\S]*\]/);
     if (!jsonMatch) {
-      throw new Error("No JSON array found in response");
+      throw new Error("No JSON array found");
     }
-    
+
     const questions = JSON.parse(jsonMatch[0]);
-    
     return res.status(200).json({ questions });
   } catch (error) {
     console.error("Question generation error:", error);
