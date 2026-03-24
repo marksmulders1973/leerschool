@@ -1109,19 +1109,14 @@ function TextbookQuiz({ onStart, onBack }) {
 
   // Known cover URLs for popular textbooks
   const KNOWN_COVERS = {
-    "Getal & Ruimte-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
-    "Getal & Ruimte-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
-    "Getal & Ruimte-Deel 1, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
-    "Getal & Ruimte-Deel 2, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
-    "Getal & Ruimte-Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
-    "Moderne Wiskunde-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001054564.jpg",
-    "Moderne Wiskunde-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001054618.jpg",
-    "Wiskunde Flex-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
-    "Wiskunde Flex-Deel 2, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
-    "Wiskunde Flex-Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
-    "Stepping Stones-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001871550.jpg",
-    "Stepping Stones-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001871574.jpg",
-    "Nectar-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001054724.jpg",
+    "Getal & Ruimte": "/cover-getal-ruimte-2.jpg",
+    "Getal & Ruimte-Deel 2": "/cover-getal-ruimte-2.jpg",
+    "Getal & Ruimte-Deel 2, Editie 13": "/cover-getal-ruimte-2.jpg",
+    "Getal & Ruimte-Editie 13": "/cover-getal-ruimte-2.jpg",
+    "Wiskunde Flex": "/cover-getal-ruimte-2.jpg",
+    "Wiskunde Flex-Deel 2": "/cover-getal-ruimte-2.jpg",
+    "Wiskunde Flex-Deel 2, Editie 13": "/cover-getal-ruimte-2.jpg",
+    "Wiskunde Flex-Editie 13": "/cover-getal-ruimte-2.jpg",
   };
 
   // Search for book cover
