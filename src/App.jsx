@@ -313,6 +313,7 @@ const fonts = `
 // ─── App Component ───────────────────────────────────────────────
 export default function App() {
   const [page, setPage] = useState("home");
+  const [loading, setLoading] = useState(false);
   const [role, setRole] = useState(null);
   const [userName, setUserName] = useState("");
   const [quizzes, setQuizzes] = useState([]);
@@ -348,6 +349,7 @@ export default function App() {
   };
 
   const startGame = async (quiz, mode) => {
+    setLoading(true);
     let questions = [];
     if (quiz.useAI !== false) {
       questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null);
@@ -359,6 +361,7 @@ export default function App() {
     if (questions.length === 0) {
       questions = shuffle(SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 8);
     }
+    setLoading(false);
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
@@ -386,6 +389,26 @@ export default function App() {
   return (
     <div style={styles.app}>
       <style>{fonts}</style>
+
+      {/* Loading overlay */}
+      {loading && (
+        <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
+          <div style={{ animation: "float 1.5s ease infinite", fontSize: 64, marginBottom: 24 }}>🧠</div>
+          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Vragen genereren...</h2>
+          <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
+            {[0,1,2,3,4].map(i => (
+              <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#4ECDC4", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
+            ))}
+          </div>
+          <p style={{ color: "#b2bec3", fontSize: 14, fontFamily: "'Nunito', sans-serif" }}>Even geduld, de AI bedenkt slimme vragen voor jou!</p>
+          <style>{`
+            @keyframes loadDot {
+              0%, 80%, 100% { transform: scale(0.5); opacity: 0.3; }
+              40% { transform: scale(1.2); opacity: 1; }
+            }
+          `}</style>
+        </div>
+      )}
       {page === "home" && (
         <HomePage
           onSelectRole={(r) => { setRole(r); setPage(r === "teacher" ? "teacher-home" : "student-home"); }}
