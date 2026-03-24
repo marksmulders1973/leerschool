@@ -393,8 +393,8 @@ export default function App() {
       {/* Loading overlay */}
       {loading && (
         <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
-          
-          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Big Brain Trainer laden...</h2>
+          <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "70%", maxWidth: 280, marginBottom: 24, borderRadius: 12, animation: "pulse 2s ease infinite" }} />
+          <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>Vragen genereren...</h2>
           <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
             {[0,1,2,3,4].map(i => (
               <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#4ECDC4", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
@@ -554,14 +554,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
-        <div style={styles.logoContainer}>
-          
-          <h1 style={styles.logoText}>
-            
-            <span style={{ color: "#FF6B35" }}>Big Brain</span>
-            <span style={{ color: "#4ECDC4" }}> Trainer</span>
-          </h1>
-        </div>
+        <img src="/logo.jpg" alt="Big Brain Trainer" style={{ width: "85%", maxWidth: 340, marginBottom: 8, borderRadius: 16 }} />
         <p style={styles.subtitle}>Samen slim worden — op school en thuis!</p>
         <p style={{ fontFamily: "'Nunito', sans-serif", color: "#b2bec3", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft production</p>
 
