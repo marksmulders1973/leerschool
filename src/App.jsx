@@ -1107,24 +1107,45 @@ function TextbookQuiz({ onStart, onBack }) {
   const canNext2 = bookName.trim() !== "";
   const canNext3 = chapterNum !== "" && level !== "";
 
-  // Search for book cover when book or deel changes
+  // Known cover URLs for popular textbooks
+  const KNOWN_COVERS = {
+    "Getal & Ruimte-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
+    "Getal & Ruimte-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
+    "Getal & Ruimte-Deel 1, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
+    "Getal & Ruimte-Deel 2, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
+    "Getal & Ruimte-Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304744.jpg",
+    "Moderne Wiskunde-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001054564.jpg",
+    "Moderne Wiskunde-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001054618.jpg",
+    "Wiskunde Flex-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
+    "Wiskunde Flex-Deel 2, Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
+    "Wiskunde Flex-Editie 13": "https://images.edu.noordhoff.nl/covers/9789001304751.jpg",
+    "Stepping Stones-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001871550.jpg",
+    "Stepping Stones-Deel 2": "https://images.edu.noordhoff.nl/covers/9789001871574.jpg",
+    "Nectar-Deel 1": "https://images.edu.noordhoff.nl/covers/9789001054724.jpg",
+  };
+
+  // Search for book cover
   useEffect(() => {
     if (!bookName) { setCoverUrl(null); return; }
     const searchCover = async () => {
       setCoverLoading(true);
+      // 1. Check hardcoded covers first
+      const key1 = `${bookName}-${deel || ""}`.trim();
+      const key2 = `${bookName}-Deel 2`;
+      if (KNOWN_COVERS[key1]) { setCoverUrl(KNOWN_COVERS[key1]); setCoverLoading(false); return; }
+      if (KNOWN_COVERS[key2]) { setCoverUrl(KNOWN_COVERS[key2]); setCoverLoading(false); return; }
+      
+      // 2. Try Google Books as fallback
       try {
-        const catLabel = TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label || "";
-        const query = `intitle:${bookName} ${deel || ""} ${catLabel}`.trim();
+        const query = `${bookName} ${deel || ""} schoolboek`.trim();
         const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&langRestrict=nl&printType=books`);
         const data = await res.json();
         let bestCover = null;
         for (const item of (data.items || [])) {
           const links = item.volumeInfo?.imageLinks;
           if (links) {
-            // Get the largest available and force zoom for bigger image
             let url = links.medium || links.large || links.thumbnail || links.smallThumbnail || "";
             url = url.replace("http:", "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
-            if (!url.includes("zoom=")) url += "&zoom=2";
             bestCover = url;
             break;
           }
@@ -1133,7 +1154,7 @@ function TextbookQuiz({ onStart, onBack }) {
       } catch { setCoverUrl(null); }
       setCoverLoading(false);
     };
-    const timer = setTimeout(searchCover, 500);
+    const timer = setTimeout(searchCover, 300);
     return () => clearTimeout(timer);
   }, [bookName, deel]);
 
