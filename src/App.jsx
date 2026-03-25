@@ -1333,7 +1333,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             style={styles.textInput}
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Vul je naam in..."
+            placeholder="Vul je naam in...studiebol"
             onKeyDown={(e) => e.key === "Enter" && name.trim() && handleSelect("student")}
           />
         </div>
