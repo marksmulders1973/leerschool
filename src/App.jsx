@@ -1558,17 +1558,21 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={level.startsWith("groep") ? level : ""}
-                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    const bucket = {"g1":"groep5","g2":"groep5","g3":"groep5","g4":"groep5","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    if (bucket) setLevel(bucket);
+                  }}
                 >
                   <option value="">-- Groep --</option>
-                  <option value="groep5">Groep 1</option>
-                  <option value="groep5">Groep 2</option>
-                  <option value="groep5">Groep 3</option>
-                  <option value="groep5">Groep 4</option>
-                  <option value="groep5">Groep 5</option>
-                  <option value="groep5">Groep 6</option>
-                  <option value="groep7">Groep 7</option>
-                  <option value="groep7">Groep 8</option>
+                  <option value="g1">Groep 1</option>
+                  <option value="g2">Groep 2</option>
+                  <option value="g3">Groep 3</option>
+                  <option value="g4">Groep 4</option>
+                  <option value="g5">Groep 5</option>
+                  <option value="g6">Groep 6</option>
+                  <option value="g7">Groep 7</option>
+                  <option value="g8">Groep 8</option>
                 </select>
               </div>
               <div style={{ flex: 1 }}>
@@ -1576,13 +1580,17 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={level.startsWith("klas") ? level : ""}
-                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                    if (bucket) setLevel(bucket);
+                  }}
                 >
                   <option value="">-- Klas --</option>
-                  <option value="klas1">Klas 1</option>
-                  <option value="klas1">Klas 2</option>
-                  <option value="klas3">Klas 3</option>
-                  <option value="klas3">Klas 4</option>
+                  <option value="k1">Klas 1</option>
+                  <option value="k2">Klas 2</option>
+                  <option value="k3">Klas 3</option>
+                  <option value="k4">Klas 4</option>
                 </select>
               </div>
             </div>
@@ -1893,17 +1901,21 @@ function SelfStudy({ onStart, onBack, onHome }) {
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={level.startsWith("groep") ? level : ""}
-                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    const bucket = {"g1":"groep5","g2":"groep5","g3":"groep5","g4":"groep5","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    if (bucket) setLevel(bucket);
+                  }}
                 >
                   <option value="">-- Groep --</option>
-                  <option value="groep5">Groep 1</option>
-                  <option value="groep5">Groep 2</option>
-                  <option value="groep5">Groep 3</option>
-                  <option value="groep5">Groep 4</option>
-                  <option value="groep5">Groep 5</option>
-                  <option value="groep5">Groep 6</option>
-                  <option value="groep7">Groep 7</option>
-                  <option value="groep7">Groep 8</option>
+                  <option value="g1">Groep 1</option>
+                  <option value="g2">Groep 2</option>
+                  <option value="g3">Groep 3</option>
+                  <option value="g4">Groep 4</option>
+                  <option value="g5">Groep 5</option>
+                  <option value="g6">Groep 6</option>
+                  <option value="g7">Groep 7</option>
+                  <option value="g8">Groep 8</option>
                 </select>
               </div>
               <div style={{ flex: 1 }}>
@@ -1911,13 +1923,17 @@ function SelfStudy({ onStart, onBack, onHome }) {
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={level.startsWith("klas") ? level : ""}
-                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                    if (bucket) setLevel(bucket);
+                  }}
                 >
                   <option value="">-- Klas --</option>
-                  <option value="klas1">Klas 1</option>
-                  <option value="klas1">Klas 2</option>
-                  <option value="klas3">Klas 3</option>
-                  <option value="klas3">Klas 4</option>
+                  <option value="k1">Klas 1</option>
+                  <option value="k2">Klas 2</option>
+                  <option value="k3">Klas 3</option>
+                  <option value="k4">Klas 4</option>
                 </select>
               </div>
             </div>
