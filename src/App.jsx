@@ -1308,8 +1308,6 @@ function HomePage({ onSelectRole, userName, setUserName }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
-        <img src="/logo.jpg" alt="studiebol" style={{ width: "90%", maxWidth: 360, marginBottom: 16, borderRadius: 20 }} />
-
         <video
           src="/intro.mp4"
           autoPlay
