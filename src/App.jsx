@@ -1835,6 +1835,7 @@ function SelfStudy({ onStart, onBack, onHome }) {
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
   const [topic, setTopic] = useState("");
+  const [showTopic, setShowTopic] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
@@ -1886,17 +1887,42 @@ function SelfStudy({ onStart, onBack, onHome }) {
 
         {subject && level && (
           <>
-            <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #2a3f5f" }}>
-              <label style={{ ...styles.settingLabel, marginBottom: 8 }}>💡 Waar wil je over leren? <span style={{ color: "#667788", fontWeight: 400 }}>(optioneel)</span></label>
-              <input
-                style={{ ...styles.textInput, fontSize: 15 }}
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                placeholder="Bijv. het zonnestelsel, breuken, de Tweede Wereldoorlog..."
-                maxLength={80}
-              />
-              {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Cool! Je krijgt vragen over: {topic}</div>}
-            </div>
+            <button
+              onClick={() => { setShowTopic(!showTopic); if (showTopic) setTopic(""); }}
+              style={{
+                width: "100%", marginBottom: 12, padding: "14px 18px",
+                background: showTopic ? "#1e3a2a" : "#1e2d45",
+                border: `2px solid ${showTopic ? "#00c853" : "#2a3f5f"}`,
+                borderRadius: 16, cursor: "pointer", display: "flex",
+                alignItems: "center", gap: 12, textAlign: "left",
+              }}
+            >
+              <span style={{ fontSize: 24 }}>{showTopic ? "✏️" : "💡"}</span>
+              <div>
+                <div style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 600 }}>
+                  {showTopic ? "Eigen onderwerp gekozen" : "Ik kies zelf een onderwerp"}
+                </div>
+                <div style={{ color: "#667788", fontSize: 12, marginTop: 2 }}>
+                  {showTopic ? "Klik om te annuleren" : "AI maakt vragen over jouw keuze"}
+                </div>
+              </div>
+              <span style={{ marginLeft: "auto", fontSize: 18 }}>{showTopic ? "✅" : "→"}</span>
+            </button>
+
+            {showTopic && (
+              <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Waar wil je over leren?</label>
+                <input
+                  style={{ ...styles.textInput, fontSize: 15 }}
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  placeholder="Bijv. het zonnestelsel, breuken, de Tweede Wereldoorlog..."
+                  maxLength={80}
+                  autoFocus
+                />
+                {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Cool! Je krijgt vragen over: {topic}</div>}
+              </div>
+            )}
 
             <div style={styles.settingsGroup}>
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
