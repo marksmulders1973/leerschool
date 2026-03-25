@@ -1863,6 +1863,8 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 function SelfStudy({ onStart, onBack, onHome }) {
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
+  const [groepSelect, setGroepSelect] = useState("");
+  const [klasSelect, setKlasSelect] = useState("");
   const [topic, setTopic] = useState("");
   const [showTopic, setShowTopic] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
@@ -1900,9 +1902,11 @@ function SelfStudy({ onStart, onBack, onHome }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={level.startsWith("groep") ? level : ""}
+                  value={groepSelect}
                   onChange={(e) => {
                     const v = e.target.value;
+                    setGroepSelect(v);
+                    setKlasSelect("");
                     const bucket = {"g1":"groep5","g2":"groep5","g3":"groep5","g4":"groep5","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) setLevel(bucket);
                   }}
@@ -1922,9 +1926,11 @@ function SelfStudy({ onStart, onBack, onHome }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={level.startsWith("klas") ? level : ""}
+                  value={klasSelect}
                   onChange={(e) => {
                     const v = e.target.value;
+                    setKlasSelect(v);
+                    setGroepSelect("");
                     const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
                     if (bucket) setLevel(bucket);
                   }}
