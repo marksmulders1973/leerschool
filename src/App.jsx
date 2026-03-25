@@ -1309,6 +1309,23 @@ function HomePage({ onSelectRole, userName, setUserName }) {
     <div style={styles.page}>
       <div style={styles.heroSection}>
         <img src="/logo.jpg" alt="studiebol" style={{ width: "90%", maxWidth: 360, marginBottom: 16, borderRadius: 20 }} />
+
+        <video
+          src="/intro.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: "90%",
+            maxWidth: 360,
+            borderRadius: 20,
+            marginBottom: 20,
+            boxShadow: "0 8px 32px rgba(0,200,83,0.25)",
+            display: "block",
+          }}
+        />
+
         <p style={styles.subtitle}>Jouw slimme studiebuddy!</p>
         <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft</p>
 
