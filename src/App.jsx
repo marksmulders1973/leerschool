@@ -535,6 +535,8 @@ export default function App() {
       {page === "results" && (
         <ResultsPage
           results={results}
+          quiz={currentQuiz}
+          userName={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
           onRetry={() => {
             if (currentQuiz) startGame(currentQuiz, "self");
@@ -804,17 +806,19 @@ function CreateQuiz({ onSave, onBack }) {
   const [deadline, setDeadline] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(20);
+  const [resultMethod, setResultMethod] = useState("whatsapp");
+  const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
 
   const canNext = () => {
     if (step === 1) return subject !== "";
     if (step === 2) return level !== "";
-    if (step === 3) return true;
+    if (step === 3) return resultMethod === "whatsapp" || (resultMethod === "email" && teacherEmail.includes("@"));
     return true;
   };
 
   const handleSave = () => {
-    onSave({ title: title || SUBJECTS.find((s) => s.id === subject)?.label + " Quiz", subject, level, deadline: deadline || null, questionCount, timePerQuestion });
+    onSave({ title: title || SUBJECTS.find((s) => s.id === subject)?.label + " Quiz", subject, level, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
   };
 
   return (
@@ -887,6 +891,33 @@ function CreateQuiz({ onSave, onBack }) {
 
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion}s</label>
               <input type="range" min={10} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+
+              <label style={styles.settingLabel}>📬 Hoe wil je resultaten ontvangen?</label>
+              <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+                <button onClick={() => setResultMethod("whatsapp")} style={{
+                  flex: 1, padding: "14px 10px", borderRadius: 12, border: resultMethod === "whatsapp" ? "2px solid #25D366" : "2px solid #2a3f5f",
+                  background: resultMethod === "whatsapp" ? "#0a2a1a" : "#1e2d45", cursor: "pointer",
+                  fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#e0e6f0", textAlign: "center",
+                }}>
+                  💬 WhatsApp
+                </button>
+                <button onClick={() => setResultMethod("email")} style={{
+                  flex: 1, padding: "14px 10px", borderRadius: 12, border: resultMethod === "email" ? "2px solid #00c853" : "2px solid #2a3f5f",
+                  background: resultMethod === "email" ? "#0a2a1a" : "#1e2d45", cursor: "pointer",
+                  fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#e0e6f0", textAlign: "center",
+                }}>
+                  📧 E-mail
+                </button>
+              </div>
+              {resultMethod === "email" && (
+                <div style={{ marginTop: 10 }}>
+                  <label style={styles.settingLabel}>Je e-mailadres</label>
+                  <input style={styles.textInput} type="email" value={teacherEmail} onChange={(e) => setTeacherEmail(e.target.value)} placeholder="bijv. docent@school.nl" />
+                </div>
+              )}
+              <p style={{ fontSize: 11, color: "#667788", marginTop: 8 }}>
+                {resultMethod === "whatsapp" ? "Leerlingen sturen hun score naar je via WhatsApp na de quiz." : "Leerlingen sturen hun score naar je e-mail na de quiz."}
+              </p>
             </div>
           </div>
         )}
@@ -1797,12 +1828,29 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 }
 
 // ─── Results Page ────────────────────────────────────────────────
-function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
+function ResultsPage({ results, quiz, userName, onBack, onRetry, onLeaderboard }) {
   const latest = results[results.length - 1];
   if (!latest) return null;
 
   const grade = latest.percentage >= 90 ? "🏆 Fantastisch!" : latest.percentage >= 70 ? "🌟 Goed gedaan!" : latest.percentage >= 50 ? "💪 Ga zo door!" : "📚 Blijven oefenen!";
   const emoji = latest.percentage >= 90 ? "🎉" : latest.percentage >= 70 ? "😊" : latest.percentage >= 50 ? "🙂" : "💪";
+  const [sent, setSent] = useState(false);
+
+  const subjLabel = SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
+  const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
+  const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Quiz: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
+
+  const sendViaWhatsApp = () => {
+    window.open(`https://wa.me/?text=${encodeURIComponent(resultText)}`, "_blank");
+    setSent(true);
+  };
+
+  const sendViaEmail = () => {
+    const email = quiz?.teacherEmail || "";
+    const subject = `studiebol resultaat: ${userName} — ${subjLabel} ${latest.percentage}%`;
+    window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(resultText)}`, "_blank");
+    setSent(true);
+  };
 
   return (
     <div style={styles.page}>
@@ -1817,7 +1865,7 @@ function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
         <div style={{ fontSize: 64, textAlign: "center", animation: "popIn 0.5s ease" }}>{emoji}</div>
         <h2 style={{ fontFamily: "Fredoka", fontSize: 28, textAlign: "center", color: "#e0e6f0", margin: "12px 0 4px" }}>{grade}</h2>
         <p style={{ textAlign: "center", color: "#8899aa", marginBottom: 24 }}>
-          {SUBJECTS.find((s) => s.id === latest.subject)?.label} · {LEVELS.find((l) => l.id === latest.level)?.label}
+          {subjLabel} · {LEVELS.find((l) => l.id === latest.level)?.label}
         </p>
 
         <div style={styles.scoreCircle}>
@@ -1834,6 +1882,27 @@ function ResultsPage({ results, onBack, onRetry, onLeaderboard }) {
             </div>
           ))}
         </div>
+
+        {/* Send results to teacher */}
+        {quiz?.resultMethod && !sent && (
+          <div style={{ marginTop: 20, padding: 16, background: "#0a2a1a", borderRadius: 14, borderLeft: "3px solid #00c853", textAlign: "center" }}>
+            <p style={{ fontSize: 14, color: "#69f0ae", fontWeight: 700, marginBottom: 10 }}>📬 Stuur je resultaat naar je leraar!</p>
+            {quiz.resultMethod === "whatsapp" ? (
+              <button onClick={sendViaWhatsApp} style={{ width: "100%", padding: 14, border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                💬 Verstuur via WhatsApp
+              </button>
+            ) : (
+              <button onClick={sendViaEmail} style={{ width: "100%", padding: 14, border: "none", borderRadius: 12, background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                📧 Verstuur via e-mail
+              </button>
+            )}
+          </div>
+        )}
+        {sent && (
+          <div style={{ marginTop: 20, padding: 12, background: "#0a2a1a", borderRadius: 14, textAlign: "center" }}>
+            <p style={{ fontSize: 13, color: "#69f0ae" }}>✅ Resultaat verstuurd!</p>
+          </div>
+        )}
 
         <div style={{ display: "flex", gap: 10, marginTop: 24, flexWrap: "wrap" }}>
           <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
