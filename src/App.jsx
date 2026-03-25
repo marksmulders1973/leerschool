@@ -1107,6 +1107,7 @@ export default function App() {
           onCreateQuiz={() => setPage("create-quiz")}
           onViewProgress={() => setPage("teacher-progress")}
           onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
         />
       )}
@@ -1130,6 +1131,7 @@ export default function App() {
             setPage("lobby");
           }}
           onBack={() => setPage("teacher-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "lobby" && (
@@ -1139,6 +1141,7 @@ export default function App() {
           isHost={role === "teacher"}
           onStart={() => startGame(currentQuiz, "multi")}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "student-home" && (
@@ -1153,6 +1156,7 @@ export default function App() {
           onSelfStudy={() => setPage("self-study")}
           onTextbook={() => setPage("textbook")}
           onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
         />
@@ -1174,6 +1178,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage("student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "textbook" && (
@@ -1193,6 +1198,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage("student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "play" && gameState && (
@@ -1201,6 +1207,7 @@ export default function App() {
           setGameState={setGameState}
           onFinish={finishGame}
           onQuit={() => { setGameState(null); setPage(role === "teacher" ? "teacher-home" : "student-home"); }}
+          onHome={() => { setGameState(null); setPage("home"); }}
         />
       )}
       {page === "results" && (
@@ -1209,6 +1216,7 @@ export default function App() {
           quiz={currentQuiz}
           userName={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
+          onHome={() => setPage("home")}
           onRetry={() => {
             if (currentQuiz) startGame(currentQuiz, "self");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
@@ -1221,12 +1229,14 @@ export default function App() {
           quizzes={quizzes}
           progress={studentProgress}
           onBack={() => setPage("teacher-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "student-progress" && (
         <StudentProgressView
           progress={studentProgress.filter((p) => p.player === userName)}
           onBack={() => setPage("student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "leaderboard" && (
@@ -1234,6 +1244,7 @@ export default function App() {
           data={leaderboard}
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
+          onHome={() => setPage("home")}
         />
       )}
     </div>
@@ -1418,10 +1429,10 @@ function HomePage({ onSelectRole, userName, setUserName }) {
 }
 
 // ─── Teacher Home ────────────────────────────────────────────────
-function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, onStartQuiz }) {
+function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, onHome, onStartQuiz }) {
   return (
     <div style={styles.page}>
-      <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} />
+      <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
         <div style={styles.actionRow}>
@@ -1485,7 +1496,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
 }
 
 // ─── Create Quiz ─────────────────────────────────────────────────
-function CreateQuiz({ onSave, onBack }) {
+function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
@@ -1509,7 +1520,7 @@ function CreateQuiz({ onSave, onBack }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Nieuwe Quiz" subtitle={`Stap ${step} van 3`} onBack={onBack} />
+      <Header title="Nieuwe Quiz" subtitle={`Stap ${step} van 3`} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}>
           <div style={{ ...styles.progressFill, width: `${(step / 3) * 100}%` }} />
@@ -1625,7 +1636,7 @@ function CreateQuiz({ onSave, onBack }) {
 }
 
 // ─── Lobby ───────────────────────────────────────────────────────
-function Lobby({ quiz, players, isHost, onStart, onBack }) {
+function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
   const subj = SUBJECTS.find((s) => s.id === quiz?.subject);
 
   return (
@@ -1687,14 +1698,17 @@ function Lobby({ quiz, players, isHost, onStart, onBack }) {
         )}
 
         <p style={styles.lobbyTip}>💡 Tip: Deel je scherm naar de TV zodat iedereen de vragen kan zien</p>
-        <button style={styles.linkBtn} onClick={onBack}>← Terug</button>
+        <div style={{ display: "flex", gap: 10 }}>
+          <button style={styles.linkBtn} onClick={onBack}>← Terug</button>
+          {onHome && <button style={styles.linkBtn} onClick={onHome}>🏠 Home</button>}
+        </div>
       </div>
     </div>
   );
 }
 
 // ─── Student Home ────────────────────────────────────────────────
-function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onViewProgress, onLeaderboard, onTextbook }) {
+function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook }) {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
 
@@ -1716,7 +1730,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 
   return (
     <div style={styles.page}>
-      <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} />
+      <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
         <div style={styles.joinSection}>
@@ -1817,7 +1831,7 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 }
 
 // ─── Self Study ──────────────────────────────────────────────────
-function SelfStudy({ onStart, onBack }) {
+function SelfStudy({ onStart, onBack, onHome }) {
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
   const [topic, setTopic] = useState("");
@@ -1827,7 +1841,7 @@ function SelfStudy({ onStart, onBack }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Zelf oefenen 📖" subtitle="Kies je vak en niveau" onBack={onBack} />
+      <Header title="Zelf oefenen 📖" subtitle="Kies je vak en niveau" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <h3 style={styles.sectionTitle}>Welk vak?</h3>
         <div style={styles.subjectGrid}>
@@ -1907,7 +1921,7 @@ function SelfStudy({ onStart, onBack }) {
 }
 
 // ─── Textbook Quiz ───────────────────────────────────────────────
-function TextbookQuiz({ onStart, onBack }) {
+function TextbookQuiz({ onStart, onBack, onHome }) {
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
@@ -2035,7 +2049,7 @@ function TextbookQuiz({ onStart, onBack }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Uit je boek 📕" subtitle={`Stap ${step} van 3`} onBack={step > 1 ? () => setStep(step - 1) : onBack} />
+      <Header title="Uit je boek 📕" subtitle={`Stap ${step} van 3`} onBack={step > 1 ? () => setStep(step - 1) : onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}><div style={{ ...styles.progressFill, width: `${(step / 3) * 100}%` }} /></div>
 
@@ -2282,7 +2296,7 @@ function TextbookQuiz({ onStart, onBack }) {
 }
 
 // ─── Play Quiz ───────────────────────────────────────────────────
-function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
+function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
   const [timeLeft, setTimeLeft] = useState(noTimer ? 0 : gameState.timePerQuestion);
   const [selected, setSelected] = useState(null);
@@ -2519,7 +2533,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit }) {
 }
 
 // ─── Results Page ────────────────────────────────────────────────
-function ResultsPage({ results, quiz, userName, onBack, onRetry, onLeaderboard }) {
+function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeaderboard }) {
   const latest = results[results.length - 1];
   if (!latest) return null;
 
@@ -2598,7 +2612,8 @@ function ResultsPage({ results, quiz, userName, onBack, onRetry, onLeaderboard }
         <div style={{ display: "flex", gap: 10, marginTop: 24, flexWrap: "wrap" }}>
           <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
           <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onBack}>🏠 Terug</button>
+          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onBack}>← Terug</button>
+          {onHome && <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #2a3f5f, #1e2d45)" }} onClick={onHome}>🏠 Home</button>}
         </div>
       </div>
     </div>
@@ -2606,10 +2621,10 @@ function ResultsPage({ results, quiz, userName, onBack, onRetry, onLeaderboard }
 }
 
 // ─── Teacher Progress ────────────────────────────────────────────
-function TeacherProgress({ quizzes, progress, onBack }) {
+function TeacherProgress({ quizzes, progress, onBack, onHome }) {
   return (
     <div style={styles.page}>
-      <Header title="Voortgang 📊" subtitle="Bekijk hoe je klas het doet" onBack={onBack} />
+      <Header title="Voortgang 📊" subtitle="Bekijk hoe je klas het doet" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {progress.length === 0 ? (
           <div style={styles.emptyState}>
@@ -2660,7 +2675,7 @@ function TeacherProgress({ quizzes, progress, onBack }) {
 }
 
 // ─── Student Progress View ───────────────────────────────────────
-function StudentProgressView({ progress, onBack }) {
+function StudentProgressView({ progress, onBack, onHome }) {
   const bySubject = {};
   progress.forEach((p) => {
     if (!bySubject[p.subject]) bySubject[p.subject] = [];
@@ -2669,7 +2684,7 @@ function StudentProgressView({ progress, onBack }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Mijn Voortgang 📊" subtitle="Zo doe jij het!" onBack={onBack} />
+      <Header title="Mijn Voortgang 📊" subtitle="Zo doe jij het!" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {progress.length === 0 ? (
           <div style={styles.emptyState}>
@@ -2718,11 +2733,11 @@ function StudentProgressView({ progress, onBack }) {
 }
 
 // ─── Leaderboard ─────────────────────────────────────────────────
-function Leaderboard({ data, currentUser, onBack }) {
+function Leaderboard({ data, currentUser, onBack, onHome }) {
   const medals = ["🥇", "🥈", "🥉"];
   return (
     <div style={styles.page}>
-      <Header title="Scorebord 🏆" subtitle="Top scores" onBack={onBack} />
+      <Header title="Scorebord 🏆" subtitle="Top scores" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {data.length === 0 ? (
           <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Speel een quiz om op het scorebord te komen.</p></div>
@@ -2768,14 +2783,17 @@ function Leaderboard({ data, currentUser, onBack }) {
 }
 
 // ─── Shared Components ───────────────────────────────────────────
-function Header({ title, subtitle, onBack }) {
+function Header({ title, subtitle, onBack, onHome }) {
   return (
     <div style={styles.header}>
       <button style={styles.headerBack} onClick={onBack}>←</button>
-      <div>
+      <div style={{ flex: 1 }}>
         <h2 style={styles.headerTitle}>{title}</h2>
         {subtitle && <p style={styles.headerSubtitle}>{subtitle}</p>}
       </div>
+      {onHome && (
+        <button style={{ ...styles.headerBack, fontSize: 18 }} onClick={onHome} title="Naar beginpagina">🏠</button>
+      )}
     </div>
   );
 }
