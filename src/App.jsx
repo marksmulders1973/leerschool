@@ -1552,24 +1552,45 @@ function CreateQuiz({ onSave, onBack, onHome }) {
         {step === 2 && (
           <div style={styles.stepContent}>
             <h3 style={styles.stepTitle}>Kies het niveau</h3>
-            <div style={styles.levelGrid}>
-              {LEVELS.map((l) => (
-                <button
-                  key={l.id}
-                  style={{
-                    ...styles.levelCard,
-                    borderColor: level === l.id ? "#69f0ae" : "transparent",
-                    background: level === l.id ? "#4ECDC410" : "#fff",
-                    boxShadow: level === l.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
-                  }}
-                  onClick={() => setLevel(l.id)}
+            <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={level.startsWith("groep") ? level : ""}
+                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
                 >
-                  <span style={{ fontSize: 28 }}>{l.icon}</span>
-                  <strong>{l.label}</strong>
-                  <span style={{ fontSize: 12, color: "#8899aa" }}>{l.desc}</span>
-                </button>
-              ))}
+                  <option value="">-- Groep --</option>
+                  <option value="groep5">Groep 1</option>
+                  <option value="groep5">Groep 2</option>
+                  <option value="groep5">Groep 3</option>
+                  <option value="groep5">Groep 4</option>
+                  <option value="groep5">Groep 5</option>
+                  <option value="groep5">Groep 6</option>
+                  <option value="groep7">Groep 7</option>
+                  <option value="groep7">Groep 8</option>
+                </select>
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={level.startsWith("klas") ? level : ""}
+                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                >
+                  <option value="">-- Klas --</option>
+                  <option value="klas1">Klas 1</option>
+                  <option value="klas1">Klas 2</option>
+                  <option value="klas3">Klas 3</option>
+                  <option value="klas3">Klas 4</option>
+                </select>
+              </div>
             </div>
+            {level && (
+              <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
+                ✅ Niveau gekozen!
+              </div>
+            )}
           </div>
         )}
 
@@ -1866,22 +1887,45 @@ function SelfStudy({ onStart, onBack, onHome }) {
         {subject && (
           <>
             <h3 style={styles.sectionTitle}>Welk niveau?</h3>
-            <div style={styles.levelGrid}>
-              {LEVELS.map((l) => (
-                <button
-                  key={l.id}
-                  style={{
-                    ...styles.levelCard,
-                    borderColor: level === l.id ? "#69f0ae" : "transparent",
-                    background: level === l.id ? "#4ECDC410" : "#fff",
-                  }}
-                  onClick={() => setLevel(l.id)}
+            <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={level.startsWith("groep") ? level : ""}
+                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
                 >
-                  <span style={{ fontSize: 24 }}>{l.icon}</span>
-                  <strong style={{ fontSize: 13 }}>{l.label}</strong>
-                </button>
-              ))}
+                  <option value="">-- Groep --</option>
+                  <option value="groep5">Groep 1</option>
+                  <option value="groep5">Groep 2</option>
+                  <option value="groep5">Groep 3</option>
+                  <option value="groep5">Groep 4</option>
+                  <option value="groep5">Groep 5</option>
+                  <option value="groep5">Groep 6</option>
+                  <option value="groep7">Groep 7</option>
+                  <option value="groep7">Groep 8</option>
+                </select>
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={level.startsWith("klas") ? level : ""}
+                  onChange={(e) => { if (e.target.value) setLevel(e.target.value); }}
+                >
+                  <option value="">-- Klas --</option>
+                  <option value="klas1">Klas 1</option>
+                  <option value="klas1">Klas 2</option>
+                  <option value="klas3">Klas 3</option>
+                  <option value="klas3">Klas 4</option>
+                </select>
+              </div>
             </div>
+            {level && (
+              <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
+                ✅ Niveau gekozen!
+              </div>
+            )}
           </>
         )}
 
