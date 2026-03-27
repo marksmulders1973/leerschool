@@ -2124,6 +2124,7 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
   const [category, setCategory] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
   const [customBook, setCustomBook] = useState("");
+  const [showCustomInput, setShowCustomInput] = useState(false);
   const [deel, setDeel] = useState("");
   const [chapterNum, setChapterNum] = useState("");
   const [paragraaf, setParagraaf] = useState("");
@@ -2303,28 +2304,59 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
 
         {step === 2 && (
           <div style={{ animation: "slideUp 0.3s ease" }}>
-            <h3 style={styles.stepTitle}>Kies je methode</h3>
-            
+            <h3 style={styles.stepTitle}>Kies je boek</h3>
+
             {TEXTBOOKS[category] && (
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
-                {TEXTBOOKS[category].map((book) => (
-                  <button key={book.id} style={{
-                    ...styles.levelCard,
-                    borderColor: selectedBook?.id === book.id ? "#69f0ae" : "transparent",
-                    background: selectedBook?.id === book.id ? "#4ECDC410" : "#fff",
-                    boxShadow: selectedBook?.id === book.id ? "0 0 0 3px #4ECDC440" : "0 2px 8px rgba(0,0,0,0.06)",
-                  }} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); if (book.defaultLevel) setLevel(book.defaultLevel); else setLevel(""); }}>
-                    <span style={{ fontSize: 24 }}>{book.icon}</span>
-                    <strong style={{ fontSize: 12, textAlign: "center" }}>{book.name}</strong>
-                  </button>
-                ))}
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
+                {TEXTBOOKS[category].map((book) => {
+                  const coverPath = BOOK_COVERS[book.name] ? BOOK_COVERS[book.name]("") : null;
+                  const isSelected = selectedBook?.id === book.id;
+                  return (
+                    <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else setLevel(""); }} style={{
+                      background: "transparent", border: "none", padding: 0, cursor: "pointer",
+                      display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
+                    }}>
+                      <div style={{
+                        width: "100%", aspectRatio: "3/4", borderRadius: 10, overflow: "hidden",
+                        border: isSelected ? "3px solid #00e676" : "3px solid transparent",
+                        boxShadow: isSelected ? "0 0 0 2px #00c85360, 0 4px 16px rgba(0,200,83,0.3)" : "0 2px 10px rgba(0,0,0,0.4)",
+                        position: "relative",
+                      }}>
+                        {coverPath ? (
+                          <img src={coverPath} alt={book.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                        ) : (
+                          <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32 }}>
+                            {book.icon}
+                          </div>
+                        )}
+                        {isSelected && (
+                          <div style={{ position: "absolute", top: 4, right: 4, background: "#00c853", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700 }}>✓</div>
+                        )}
+                      </div>
+                      <span style={{ fontSize: 11, color: isSelected ? "#00e676" : "#8eaadb", fontWeight: isSelected ? 700 : 500, textAlign: "center", lineHeight: 1.2 }}>{book.name}</span>
+                    </button>
+                  );
+                })}
               </div>
             )}
 
-            <div style={{ background: "#1e2d45", borderRadius: 16, padding: 16, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
-              <p style={{ fontSize: 13, color: "#8899aa", marginBottom: 10, fontWeight: 600 }}>Of typ je boek zelf:</p>
-              <input style={styles.textInput} value={customBook} onChange={(e) => { setCustomBook(e.target.value); setSelectedBook(null); }} placeholder="Bijv. Wiskunde Flex deel 2" />
-            </div>
+            {!showCustomInput ? (
+              <button onClick={() => { setShowCustomInput(true); setSelectedBook(null); }} style={{
+                width: "100%", padding: "13px", borderRadius: 14, border: "2px dashed #2a3f5f",
+                background: "transparent", color: "#8899aa", fontSize: 14, fontWeight: 600,
+                cursor: "pointer", marginBottom: 16,
+              }}>
+                📖 Mijn boek staat er niet bij
+              </button>
+            ) : (
+              <div style={{ background: "#1e2d45", borderRadius: 16, padding: 16, marginBottom: 16, border: "2px solid #2a3f5f" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                  <p style={{ fontSize: 13, color: "#00e676", fontWeight: 700, margin: 0 }}>📖 Typ je boek</p>
+                  <button onClick={() => { setShowCustomInput(false); setCustomBook(""); }} style={{ background: "none", border: "none", color: "#8899aa", cursor: "pointer", fontSize: 18 }}>✕</button>
+                </div>
+                <input style={styles.textInput} value={customBook} onChange={(e) => { setCustomBook(e.target.value); setSelectedBook(null); }} placeholder="Bijv. Wiskunde Flex deel 2" autoFocus />
+              </div>
+            )}
 
             <div style={styles.navRow}>
               <button style={styles.backBtn} onClick={() => setStep(1)}>← Vorige</button>
