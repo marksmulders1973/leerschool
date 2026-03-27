@@ -27,11 +27,12 @@ const SoundEngine = {
 };
 
 // ─── AI Question Generator ──────────────────────────────────────
-async function fetchAIQuestions(subject, level, count = 5, textbook = null, topic = null) {
+async function fetchAIQuestions(subject, level, count = 5, textbook = null, topic = null, signal = null) {
   try {
     const res = await fetch("/api/generate-questions", {
       method: "POST", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ subject, level, count, textbook, topic }),
+      signal,
     });
     if (!res.ok) throw new Error("API error");
     const data = await res.json();
@@ -1009,8 +1010,8 @@ export default function App() {
   const [players, setPlayers] = useState([]);
   const [results, setResults] = useState([]);
   const [studentProgress, setStudentProgress] = useState([]);
-
   const [leaderboard, setLeaderboard] = useState([]);
+  const abortControllerRef = useRef(null);
 
   // Load stored data
   useEffect(() => {
@@ -1042,16 +1043,16 @@ export default function App() {
     if (quiz.preGeneratedQuestions && quiz.preGeneratedQuestions.length > 0) {
       questions = quiz.preGeneratedQuestions;
     } else {
-      // Als er een specifiek onderwerp is ingevuld → AI ophalen
-      // Anders → direct standaardvragen gebruiken (snel, geen wachttijd)
       const hasTopic = quiz.topic && quiz.topic.trim().length > 0;
       const hasTextbook = !!quiz.textbook?.bookName;
 
       if ((hasTopic || hasTextbook) && quiz.useAI !== false) {
+        abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
-        questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null);
+        questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
         setLoading(false);
+        if (abortControllerRef.current?.signal.aborted) return;
       }
 
       if (questions.length === 0) {
@@ -1079,7 +1080,7 @@ export default function App() {
     setStudentProgress((prev) => [...prev, result]);
     setLeaderboard((prev) => {
       const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt }];
-      return updated.sort((a, b) => b.percentage - a.percentage || b.score - a.score).slice(0, 50);
+      return updated.sort((a, b) => b.percentage - a.percentage || b.total - a.total || b.score - a.score).slice(0, 50);
     });
     setGameState(null);
     setCurrentQuiz(null);
@@ -1092,7 +1093,10 @@ export default function App() {
 
       {/* Loading overlay */}
       {loading && (
-        <LoadingOverlay mode={loadingMode} />
+        <LoadingOverlay mode={loadingMode} onCancel={() => {
+          abortControllerRef.current?.abort();
+          setLoading(false);
+        }} />
       )}
       {page === "home" && (
         <HomePage
@@ -1115,18 +1119,19 @@ export default function App() {
       {page === "create-quiz" && (
         <CreateQuiz
           onSave={async (q) => {
-            // Pre-generate questions so all students get the same set
+            abortControllerRef.current = new AbortController();
             setLoading(true);
             setLoadingMode(q.textbook?.bookName ? "textbook" : "self");
             let questions = [];
             if (q.useAI !== false) {
-              questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null);
+              questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null, abortControllerRef.current.signal);
             }
+            setLoading(false);
+            if (abortControllerRef.current?.signal.aborted) return;
             if (questions.length === 0) {
               const subjectQuestions = SAMPLE_QUESTIONS[q.subject]?.[q.level] || [];
               questions = shuffle(subjectQuestions).slice(0, q.questionCount || 8);
             }
-            setLoading(false);
             const nq = createQuiz({ ...q, preGeneratedQuestions: questions });
             setCurrentQuiz(nq);
             setPage("lobby");
@@ -1253,7 +1258,7 @@ export default function App() {
 }
 
 // ─── Home Page ───────────────────────────────────────────────────
-function LoadingOverlay({ mode }) {
+function LoadingOverlay({ mode, onCancel }) {
   const [msgIndex, setMsgIndex] = useState(0);
   const textbookMessages = [
     "📚 Inhoudsopgave van je boek opzoeken...",
@@ -1288,6 +1293,11 @@ function LoadingOverlay({ mode }) {
       <p style={{ color: "#69f0ae", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5, fontWeight: 700, minHeight: 42, animation: "fadeIn 0.5s ease" }} key={msgIndex}>{messages[msgIndex]}</p>
       {mode === "textbook" && (
         <p style={{ color: "#556677", fontSize: 11, fontFamily: "'Nunito', sans-serif", textAlign: "center", marginTop: 8 }}>Echte vragen zoeken kost ~20 seconden — maar dan heb je ook wat!</p>
+      )}
+      {onCancel && (
+        <button onClick={onCancel} style={{ marginTop: 24, padding: "10px 24px", borderRadius: 12, border: "1px solid #2a3f5f", background: "transparent", color: "#556677", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+          Annuleren
+        </button>
       )}
       <style>{`
         @keyframes loadDot {
@@ -1750,6 +1760,10 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
     const quiz = quizzes.find((q) => q.code.toUpperCase() === code.trim().toUpperCase());
     if (!quiz) {
       setError("Quiz niet gevonden 😕");
+      return;
+    }
+    if (quiz.deadline && new Date(quiz.deadline) < new Date()) {
+      setError(`Deze quiz is verlopen op ${new Date(quiz.deadline).toLocaleDateString("nl-NL")} 📅`);
       return;
     }
     setError("");
@@ -2443,6 +2457,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const [scoreAnim, setScoreAnim] = useState(false);
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [waitingForUser, setWaitingForUser] = useState(false);
+  const [timedOut, setTimedOut] = useState(false);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -2466,12 +2481,11 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
       .slice(0, 5)
       .join(" ");
     
-    // Build a focused search: topic keywords + subject + "uitleg"
     const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
     const subjLabel = subj?.label || "";
-    const searchQuery = `${keywords} ${subjLabel} uitleg`.trim().slice(0, 80);
-    
-    return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}`;
+    const searchQuery = (keywords.trim() ? `${keywords} ${subjLabel}` : subjLabel + " uitleg") .trim().slice(0, 80);
+
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery + " uitleg")}`;
   };
 
   const goToNext = () => {
@@ -2488,6 +2502,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
     setShowResult(false);
     setShowExplanation(false);
     setWaitingForUser(false);
+    setTimedOut(false);
   }, [gameState.currentQ, gameState.timePerQuestion]);
 
   useEffect(() => {
@@ -2505,6 +2520,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const handleAnswer = (idx) => {
     if (showResult) return;
     clearInterval(timerRef.current);
+    if (idx === -1) setTimedOut(true);
     setSelected(idx);
     setShowResult(true);
 
@@ -2515,8 +2531,8 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
       setTimeout(() => setScoreAnim(false), 600);
     } else {
       SoundEngine.play("wrong");
-      setShowExplanation(true);
     }
+    setShowExplanation(true);
 
     const newState = {
       ...gameState,
@@ -2526,11 +2542,10 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
     setGameState(newState);
     nextStateRef.current = newState;
 
-    if (!isCorrect && isSelfStudy) {
-      // In self-study: wait for user to click "next"
+    if (isSelfStudy) {
       setWaitingForUser(true);
     } else {
-      const delay = isCorrect ? 1200 : 3500;
+      const delay = isCorrect ? 1200 : 5000;
       setTimeout(() => {
         if (isLast) onFinish(newState);
         else setGameState({ ...newState, currentQ: newState.currentQ + 1 });
@@ -2605,38 +2620,39 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
           })}
         </div>
 
+        {timedOut && showResult && (
+          <div style={{ marginTop: 12, textAlign: "center", padding: "10px", background: "#3a1a1a", borderRadius: 12, animation: "popIn 0.3s ease" }}>
+            <span style={{ fontSize: 22, fontWeight: 800, color: "#ff5252", fontFamily: "'Fredoka', sans-serif" }}>⏰ Tijd is om!</span>
+          </div>
+        )}
+
         {showExplanation && question.explanation && (
           <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
             <div style={{ fontWeight: 800, marginBottom: 4, color: "#00e676" }}>💡 Uitleg</div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#c0d0e0", marginBottom: question.source ? 8 : (waitingForUser ? 16 : 0) }}>{question.explanation}</div>
+            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
             {question.source && (
-              <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic", marginBottom: waitingForUser ? 12 : 0 }}>📚 {question.source}</div>
+              <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>
             )}
+          </div>
+        )}
 
-            {waitingForUser && (
-              <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "slideUp 0.3s ease" }}>
-                <button onClick={goToNext} style={{
-                  width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff",
-                  fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
-                }}>
-                  {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
-                </button>
-
-                <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
-                  width: "100%", padding: "14px", border: "none", borderRadius: 12,
-                  background: "linear-gradient(135deg, #69f0ae, #00c853)", color: "#fff",
-                  fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                }}>
-                  <span>🎬</span> Kijk een uitleg-video op YouTube
-                </button>
-
-                <p style={{ fontSize: 11, color: "#8899aa", textAlign: "center", marginTop: 4 }}>
-                  Neem de tijd om de uitleg te lezen. Leren van fouten maakt je slimmer!
-                </p>
-              </div>
-            )}
+        {waitingForUser && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 12, animation: "slideUp 0.3s ease" }}>
+            <button onClick={goToNext} style={{
+              width: "100%", padding: "14px", border: "none", borderRadius: 12,
+              background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff",
+              fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
+            }}>
+              {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
+            </button>
+            <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
+              width: "100%", padding: "14px", border: "1px solid #1a73e8", borderRadius: 12,
+              background: "#1a2f4a", color: "#69f0ae",
+              fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+            }}>
+              <span>🎬</span> Uitleg-video op YouTube
+            </button>
           </div>
         )}
       </div>
@@ -2747,11 +2763,11 @@ function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeade
           </div>
         )}
 
-        <div style={{ display: "flex", gap: 10, marginTop: 24, flexWrap: "wrap" }}>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
-          <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onBack}>← Terug</button>
-          {onHome && <button style={{ ...styles.bigButton, flex: 1, minWidth: 90, background: "linear-gradient(135deg, #2a3f5f, #1e2d45)" }} onClick={onHome}>🏠 Home</button>}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 24 }}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #2a3f5f, #1e2d45)" }} onClick={onBack}>← Terug</button>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1e2d45, #162033)" }} onClick={onHome}>🏠 Home</button>
         </div>
       </div>
     </div>
