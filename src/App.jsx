@@ -1131,7 +1131,8 @@ export default function App() {
         questions = shuffle(subjectQuestions).slice(0, quiz.questionCount || 20);
       }
       if (questions.length === 0) {
-        questions = shuffle(SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 20);
+        const fallbackLevel = quiz.level === "groep12" ? "groep12" : quiz.level === "groep3" ? "groep3" : "groep5";
+        questions = shuffle(SAMPLE_QUESTIONS.rekenen?.[fallbackLevel] || SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 20);
       }
     }
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
