@@ -54,12 +54,23 @@ const SUBJECTS = [
 ];
 
 const LEVELS = [
-  { id: "groep3", label: "Groep 1-4", desc: "Onderbouw basisschool", icon: "🌱" },
-  { id: "groep5", label: "Groep 5-6", desc: "Bovenbouw basis", icon: "🎒" },
-  { id: "groep7", label: "Groep 7-8", desc: "Bovenbouw verdieping", icon: "📚" },
-  { id: "klas1", label: "Klas 1-2", desc: "Brugklas", icon: "🎓" },
-  { id: "klas3", label: "Klas 3-4", desc: "Bovenbouw VO", icon: "🏆" },
+  { id: "groep12", label: "Groep 1-2", desc: "Kleuters", icon: "🌱" },
+  { id: "groep3",  label: "Groep 3-4", desc: "Onderbouw basisschool", icon: "📗" },
+  { id: "groep5",  label: "Groep 5-6", desc: "Bovenbouw basis", icon: "🎒" },
+  { id: "groep7",  label: "Groep 7-8", desc: "Bovenbouw verdieping", icon: "📚" },
+  { id: "klas1",   label: "Klas 1-2",  desc: "Brugklas", icon: "🎓" },
+  { id: "klas3",   label: "Klas 3-4",  desc: "Bovenbouw VO", icon: "🏆" },
 ];
+
+// Welke vakken zijn beschikbaar per niveau (op basis van officieel NL curriculum)
+const SUBJECT_FOR_LEVEL = {
+  groep12: ["rekenen", "taal"],
+  groep3:  ["rekenen", "taal", "natuur"],
+  groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
+  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
+  klas1:   ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "duits", "frans"],
+  klas3:   ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "duits", "frans", "maatschappijleer"],
+};
 
 const TEXTBOOKS = {
   wiskunde: [
@@ -153,6 +164,30 @@ const TEXTBOOK_CATEGORIES = [
 
 const SAMPLE_QUESTIONS = {
   rekenen: {
+    groep12: [
+      { q: "Hoeveel vingers zie je? ✋", options: ["3", "4", "5", "6"], answer: 2, explanation: "Een hand heeft 5 vingers." },
+      { q: "Wat komt na 7?", options: ["6", "7", "8", "9"], answer: 2, explanation: "Na 7 komt 8." },
+      { q: "Hoeveel is 2 + 3?", options: ["4", "5", "6", "7"], answer: 1, explanation: "2 + 3 = 5." },
+      { q: "Welk getal is het grootst?", options: ["3", "7", "5", "2"], answer: 1, explanation: "7 is het grootste getal." },
+      { q: "Hoeveel is 1 + 1?", options: ["1", "2", "3", "4"], answer: 1, explanation: "1 + 1 = 2." },
+      { q: "Wat is de helft van 4?", options: ["1", "2", "3", "4"], answer: 1, explanation: "De helft van 4 is 2." },
+      { q: "Hoeveel is 10 - 3?", options: ["5", "6", "7", "8"], answer: 2, explanation: "10 - 3 = 7." },
+      { q: "Welk getal is het kleinst?", options: ["9", "4", "6", "8"], answer: 1, explanation: "4 is het kleinste getal." },
+      { q: "Hoeveel is 3 + 4?", options: ["5", "6", "7", "8"], answer: 2, explanation: "3 + 4 = 7." },
+      { q: "Hoeveel is 5 - 2?", options: ["1", "2", "3", "4"], answer: 2, explanation: "5 - 2 = 3." },
+    ],
+    groep3: [
+      { q: "Hoeveel is 24 + 13?", options: ["36", "37", "38", "39"], answer: 1, explanation: "24 + 13 = 37." },
+      { q: "Hoeveel is 50 - 18?", options: ["28", "30", "32", "34"], answer: 2, explanation: "50 - 18 = 32." },
+      { q: "Wat is 5 × 2?", options: ["7", "8", "10", "12"], answer: 2, explanation: "5 × 2 = 10 (tafel van 2)." },
+      { q: "Hoeveel is 10 × 5?", options: ["40", "45", "50", "55"], answer: 2, explanation: "10 × 5 = 50 (tafel van 5)." },
+      { q: "Welk getal is even?", options: ["13", "17", "22", "25"], answer: 2, explanation: "22 is deelbaar door 2." },
+      { q: "Hoeveel is 36 + 24?", options: ["58", "60", "62", "64"], answer: 1, explanation: "36 + 24 = 60." },
+      { q: "Wat is 2 × 10?", options: ["12", "20", "22", "30"], answer: 1, explanation: "2 × 10 = 20 (tafel van 10)." },
+      { q: "Hoeveel is 75 - 25?", options: ["40", "45", "50", "55"], answer: 2, explanation: "75 - 25 = 50." },
+      { q: "Wat is 5 × 5?", options: ["20", "25", "30", "35"], answer: 1, explanation: "5 × 5 = 25 (tafel van 5)." },
+      { q: "Hoeveel is 48 + 12?", options: ["58", "60", "62", "68"], answer: 1, explanation: "48 + 12 = 60." },
+    ],
     groep5: [
       { q: "Wat is 347 + 258?", options: ["595", "605", "615", "585"], answer: 1, explanation: "347 + 258 = 605." },
       { q: "Hoeveel is 6 × 8?", options: ["42", "46", "48", "54"], answer: 2, explanation: "6 × 8 = 48." },
@@ -243,6 +278,30 @@ const SAMPLE_QUESTIONS = {
     ],
   },
   taal: {
+    groep12: [
+      { q: "Wat rijmt op 'kat'?", options: ["hond", "mat", "vis", "boom"], answer: 1, explanation: "'Mat' rijmt op 'kat'." },
+      { q: "Welke letter hoor je in 'boom'?", options: ["a", "b", "k", "p"], answer: 1, explanation: "'Boom' begint met de letter b." },
+      { q: "Wat rijmt op 'beer'?", options: ["bal", "meer", "doos", "pen"], answer: 1, explanation: "'Meer' rijmt op 'beer'." },
+      { q: "Welk woord is een dier?", options: ["tafel", "hond", "stoel", "lamp"], answer: 1, explanation: "Een hond is een dier." },
+      { q: "Welke letter hoor je in 'zon'?", options: ["z", "s", "p", "m"], answer: 0, explanation: "'Zon' begint met de letter z." },
+      { q: "Wat rijmt op 'fiets'?", options: ["auto", "boot", "diets", "trein"], answer: 2, explanation: "'Diets' rijmt op 'fiets'." },
+      { q: "Welk woord is een kleur?", options: ["appel", "rood", "rennen", "groot"], answer: 1, explanation: "Rood is een kleur." },
+      { q: "Welke letter hoor je in 'maan'?", options: ["n", "m", "b", "p"], answer: 1, explanation: "'Maan' begint met de letter m." },
+      { q: "Wat rijmt op 'boot'?", options: ["fiets", "brood", "trein", "auto"], answer: 1, explanation: "'Brood' rijmt op 'boot'." },
+      { q: "Welk woord is een vrucht?", options: ["stoep", "appel", "straat", "lamp"], answer: 1, explanation: "Een appel is een vrucht." },
+    ],
+    groep3: [
+      { q: "Welk woord schrijf je met een hoofdletter?", options: ["fiets", "amsterdam", "appel", "tafel"], answer: 1, explanation: "Steden schrijf je met een hoofdletter: Amsterdam." },
+      { q: "Wat is het meervoud van 'boom'?", options: ["booms", "bomen", "boomen", "boomes"], answer: 1, explanation: "'Bomen' is het meervoud van 'boom'." },
+      { q: "Welke zin klopt?", options: ["Ik loopt naar school.", "Ik loop naar school.", "Ik loops naar school.", "Ik lopen naar school."], answer: 1, explanation: "Bij 'ik' gebruik je de stam van het werkwoord: loop." },
+      { q: "Wat is het verkleinwoord van 'huis'?", options: ["huisje", "huiske", "huistje", "huisie"], answer: 0, explanation: "'Huisje' is het verkleinwoord." },
+      { q: "Welk woord rijmt op 'school'?", options: ["stoep", "stoel", "straat", "trein"], answer: 1, explanation: "'Stoel' rijmt op 'school'." },
+      { q: "Wat betekent 'vrolijk'?", options: ["verdrietig", "bang", "blij", "moe"], answer: 2, explanation: "'Vrolijk' betekent blij of opgewekt." },
+      { q: "Welk woord is fout gespeld?", options: ["bal", "fiest", "boom", "maan"], answer: 1, explanation: "Het is 'fiets', niet 'fiest'." },
+      { q: "Wat is het meervoud van 'kind'?", options: ["kinds", "kindes", "kinderen", "kindjes"], answer: 2, explanation: "'Kinderen' is het meervoud van 'kind'." },
+      { q: "Welke zin klopt?", options: ["De kat slaap.", "De kat slaapt.", "De kat slaaps.", "De kat slapen."], answer: 1, explanation: "Bij 'de kat' (hij/zij) gebruik je stam + t: slaapt." },
+      { q: "Wat is een woord voor water uit de lucht?", options: ["sneeuw", "regen", "wind", "zon"], answer: 1, explanation: "Regen valt uit de lucht als water." },
+    ],
     groep5: [
       { q: "Welk woord is fout geschreven?", options: ["fiets", "pannenkoek", "gezellig", "helemael"], answer: 3, explanation: "Het is 'helemaal', niet 'helemael'." },
       { q: "Wat is het meervoud van 'stad'?", options: ["stadden", "steden", "stads", "stads"], answer: 1, explanation: "'Steden' is het onregelmatige meervoud." },
@@ -513,6 +572,18 @@ const SAMPLE_QUESTIONS = {
     ],
   },
   natuur: {
+    groep3: [
+      { q: "Welk dier legt eieren?", options: ["Hond", "Kip", "Kat", "Koe"], answer: 1, explanation: "Een kip legt eieren." },
+      { q: "In welk seizoen vallen bladeren van de bomen?", options: ["Lente", "Zomer", "Herfst", "Winter"], answer: 2, explanation: "In de herfst worden de blaadjes bruin en vallen ze." },
+      { q: "Wat eten vlinders?", options: ["Gras", "Nectar van bloemen", "Wormen", "Vis"], answer: 1, explanation: "Vlinders drinken nectar uit bloemen." },
+      { q: "Welk dier slaapt de hele winter?", options: ["Hond", "Egel", "Kip", "Koe"], answer: 1, explanation: "Een egel houdt een winterslaap." },
+      { q: "Wat is een jonge hond?", options: ["Kitten", "Lammetje", "Puppy", "Kuiken"], answer: 2, explanation: "Een jonge hond heet een puppy." },
+      { q: "Waar leven vissen?", options: ["In de lucht", "In het water", "In de grond", "In een boom"], answer: 1, explanation: "Vissen leven in het water." },
+      { q: "Welke plant bloeit in de lente?", options: ["Kerstboom", "Tulp", "Cactus", "Varens"], answer: 1, explanation: "Tulpen bloeien in de lente." },
+      { q: "Wat maakt een bij?", options: ["Melk", "Honing", "Wol", "Eieren"], answer: 1, explanation: "Bijen maken honing van nectar." },
+      { q: "Hoeveel poten heeft een spin?", options: ["4", "6", "8", "10"], answer: 2, explanation: "Een spin heeft 8 poten." },
+      { q: "Wat doet een boom in de winter?", options: ["Bloeit", "Verliest zijn bladeren", "Groeit het snelst", "Zaadjes maken"], answer: 1, explanation: "De meeste bomen verliezen hun bladeren in de herfst/winter." },
+    ],
     groep5: [
       { q: "Wat hebben planten nodig om te groeien?", options: ["Alleen water", "Water, licht en CO2", "Alleen zonlicht", "Alleen aarde"], answer: 1, explanation: "Fotosynthese vereist water, zonlicht en CO2." },
       { q: "Welk orgaan pompt bloed rond?", options: ["Longen", "Lever", "Hart", "Nieren"], answer: 2, explanation: "Het hart pompt bloed door het lichaam." },
@@ -1541,7 +1612,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
           <div style={styles.stepContent}>
             <h3 style={styles.stepTitle}>Kies een vak</h3>
             <div style={styles.subjectGrid}>
-              {SUBJECTS.map((s) => (
+              {(level ? (SUBJECT_FOR_LEVEL[level] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
                 <button
                   key={s.id}
                   style={{
@@ -1571,7 +1642,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                   value={level.startsWith("groep") ? level : ""}
                   onChange={(e) => {
                     const v = e.target.value;
-                    const bucket = {"g1":"groep3","g2":"groep3","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) setLevel(bucket);
                   }}
                 >
@@ -1890,9 +1961,62 @@ function SelfStudy({ onStart, onBack, onHome }) {
     <div style={styles.page}>
       <Header title="Zelf oefenen 📖" subtitle="Kies je vak en niveau" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
+        <h3 style={styles.sectionTitle}>Welk niveau?</h3>
+        <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
+          <div style={{ flex: 1 }}>
+            <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
+            <select
+              style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+              value={groepSelect}
+              onChange={(e) => {
+                const v = e.target.value;
+                setGroepSelect(v);
+                setKlasSelect("");
+                const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
+              }}
+            >
+              <option value="">-- Groep --</option>
+              <option value="g1">Groep 1</option>
+              <option value="g2">Groep 2</option>
+              <option value="g3">Groep 3</option>
+              <option value="g4">Groep 4</option>
+              <option value="g5">Groep 5</option>
+              <option value="g6">Groep 6</option>
+              <option value="g7">Groep 7</option>
+              <option value="g8">Groep 8</option>
+            </select>
+          </div>
+          <div style={{ flex: 1 }}>
+            <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
+            <select
+              style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+              value={klasSelect}
+              onChange={(e) => {
+                const v = e.target.value;
+                setKlasSelect(v);
+                setGroepSelect("");
+                const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                if (bucket) setLevel(bucket);
+              }}
+            >
+              <option value="">-- Klas --</option>
+              <option value="k1">Klas 1</option>
+              <option value="k2">Klas 2</option>
+              <option value="k3">Klas 3</option>
+              <option value="k4">Klas 4</option>
+            </select>
+          </div>
+        </div>
+        {level && (
+          <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
+            ✅ Niveau gekozen!
+          </div>
+        )}
+
         <h3 style={styles.sectionTitle}>Welk vak?</h3>
         <div style={styles.subjectGrid}>
-          {SUBJECTS.map((s) => (
+          {(level ? (SUBJECT_FOR_LEVEL[level] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
             <button
               key={s.id}
               style={{
@@ -1908,63 +2032,6 @@ function SelfStudy({ onStart, onBack, onHome }) {
             </button>
           ))}
         </div>
-
-        {subject && (
-          <>
-            <h3 style={styles.sectionTitle}>Welk niveau?</h3>
-            <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
-              <div style={{ flex: 1 }}>
-                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
-                <select
-                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={groepSelect}
-                  onChange={(e) => {
-                    const v = e.target.value;
-                    setGroepSelect(v);
-                    setKlasSelect("");
-                    const bucket = {"g1":"groep3","g2":"groep3","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
-                    if (bucket) setLevel(bucket);
-                  }}
-                >
-                  <option value="">-- Groep --</option>
-                  <option value="g1">Groep 1</option>
-                  <option value="g2">Groep 2</option>
-                  <option value="g3">Groep 3</option>
-                  <option value="g4">Groep 4</option>
-                  <option value="g5">Groep 5</option>
-                  <option value="g6">Groep 6</option>
-                  <option value="g7">Groep 7</option>
-                  <option value="g8">Groep 8</option>
-                </select>
-              </div>
-              <div style={{ flex: 1 }}>
-                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
-                <select
-                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={klasSelect}
-                  onChange={(e) => {
-                    const v = e.target.value;
-                    setKlasSelect(v);
-                    setGroepSelect("");
-                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
-                    if (bucket) setLevel(bucket);
-                  }}
-                >
-                  <option value="">-- Klas --</option>
-                  <option value="k1">Klas 1</option>
-                  <option value="k2">Klas 2</option>
-                  <option value="k3">Klas 3</option>
-                  <option value="k4">Klas 4</option>
-                </select>
-              </div>
-            </div>
-            {level && (
-              <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
-                ✅ Niveau gekozen!
-              </div>
-            )}
-          </>
-        )}
 
         {subject && level && (
           <>
