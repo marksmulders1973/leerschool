@@ -2029,6 +2029,9 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
   const [coverUrl, setCoverUrl] = useState(null);
   const [coverLoading, setCoverLoading] = useState(false);
   const [coverZoom, setCoverZoom] = useState(false);
+  const [coverResults, setCoverResults] = useState([]);
+  const [coverResultIndex, setCoverResultIndex] = useState(0);
+  const [isKnownCover, setIsKnownCover] = useState(false);
 
   const bookName = selectedBook ? selectedBook.name : customBook;
   const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
@@ -2052,13 +2055,25 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
     return "data:image/svg+xml," + encodeURIComponent(svg);
   };
 
+  const deelNum = (d) => d ? (parseInt(d.replace(/\D/g, "")) || 0) : 0;
   const BOOK_COVERS = {
-    "Getal & Ruimte": () => "/covers/getal-ruimte-deel2.jpg",
-    "Wiskunde Flex": () => "/covers/getal-ruimte-deel2.jpg",
-    "Moderne Wiskunde": () => "/covers/moderne-wiskunde-a.jpg",
+    "Getal & Ruimte": (d) => ({ 1: "/covers/getal-ruimte-deel1.png", 2: "/covers/getal-ruimte-deel2.jpg", 3: "/covers/getal-ruimte-deel3.jpg", 4: "/covers/getal-ruimte-deel4.jpg" }[deelNum(d)] || "/covers/getal-ruimte-deel2.jpg"),
+    "Wiskunde Flex": (d) => deelNum(d) === 1 ? "/covers/getal-ruimte-flex-deel1.png" : "/covers/getal-ruimte-deel2.jpg",
+    "Moderne Wiskunde": (d) => {
+      if (!d) return "/covers/moderne-wiskunde-a.jpg";
+      if (d.toLowerCase().includes("boek b")) return "/covers/moderne-wiskunde-b.jpg";
+      if (d.toLowerCase().includes("boek c") || deelNum(d) >= 3) return "/covers/moderne-wiskunde-bovenbouw.jpg";
+      if (deelNum(d) === 2) return "/covers/moderne-wiskunde-b.jpg";
+      return "/covers/moderne-wiskunde-a.jpg";
+    },
     "Wiskunde Brief": () => makeBookCover("Wiskunde", "Brief", ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
     "Nu Wiskunde": () => makeBookCover("Nu", "Wiskunde", ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
-    "Nieuw Nederlands": () => "/covers/nieuw-nederlands-1.jpg",
+    "Nieuw Nederlands": (d) => {
+      if (!d) return "/covers/nieuw-nederlands-1.jpg";
+      if (d.toLowerCase().includes("vmbo")) return "/covers/nieuw-nederlands-vmbo.jpg";
+      if (d.includes("7")) return "/covers/nieuw-nederlands-7e.jpg";
+      return deelNum(d) >= 4 ? "/covers/nieuw-nederlands-4.jpg" : "/covers/nieuw-nederlands-1.jpg";
+    },
     "Talent": () => "/covers/talent.jpg",
     "Op Niveau": () => "/covers/op-niveau.jpg",
     "Kern": () => "/covers/kern.jpg",
@@ -2066,7 +2081,12 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
     "All Right!": () => "/covers/all-right.jpg",
     "Upload": () => makeBookCover("Upload", "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
     "Keys": () => makeBookCover("Keys", "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
-    "New Interface": () => "/covers/new-interface-hv.jpg",
+    "New Interface": (d) => {
+      if (!d) return "/covers/new-interface-hv.jpg";
+      if (d.toLowerCase().includes("vwo")) return "/covers/new-interface-vwo.jpg";
+      if (d.toLowerCase().includes("vh")) return "/covers/new-interface-vh.jpg";
+      return "/covers/new-interface-hv.jpg";
+    },
     "Na Klar!": () => "/covers/na-klar.jpg",
     "TrabiTour": () => "/covers/trabitour.jpg",
     "Grandes Lignes": () => "/covers/grandes-lignes.jpg",
@@ -2078,15 +2098,15 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
     "BuiteNLand": () => "/covers/buitenland.jpg",
     "WereldWijs": () => "/covers/wereldwijs.jpg",
     "Feniks": () => "/covers/feniks.jpg",
-    "MeMo": () => "/covers/memo.jpg",
+    "MeMo": (d) => deelNum(d) <= 2 ? "/covers/memo-onderbouw.jpg" : "/covers/memo.jpg",
     "Geschiedeniswerkplaats": () => "/covers/geschiedeniswerkplaats.jpg",
     "Sprekend Verleden": () => "/covers/sprekend-verleden.jpg",
-    "Biologie voor jou": () => "/covers/biologie-voor-jou.jpg",
-    "Nectar": () => "/covers/nectar.jpg",
+    "Biologie voor jou": (d) => deelNum(d) >= 3 ? "/covers/biologie-voor-jou-nieuw.jpg" : "/covers/biologie-voor-jou.jpg",
+    "Nectar": (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar.jpg",
     "10 voor Biologie": () => "/covers/10voorbiologie.jpg",
     "Systematische Natuurkunde": () => "/covers/sys-natuurkunde.jpg",
     "Nova": () => "/covers/nova.jpg",
-    "Natuurkunde Overal": () => "/covers/natuurkunde-overal-1.jpg",
+    "Natuurkunde Overal": (d) => deelNum(d) >= 4 ? "/covers/natuurkunde-overal-4.jpg" : "/covers/natuurkunde-overal-1.jpg",
     "Chemie": () => "/covers/chemie.jpg",
     "Scheikunde Overal": () => "/covers/scheikunde-overal.jpg",
     "Nova Scheikunde": () => "/covers/nova-scheikunde.jpg",
@@ -2102,29 +2122,36 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
 
   // Search for book cover
   useEffect(() => {
-    if (!bookName) { setCoverUrl(null); return; }
+    if (!bookName) { setCoverUrl(null); setCoverResults([]); setCoverResultIndex(0); setIsKnownCover(false); return; }
+    setCoverResultIndex(0);
     const searchCover = async () => {
       setCoverLoading(true);
       // 1. Check known book covers first
-      if (BOOK_COVERS[bookName]) { setCoverUrl(BOOK_COVERS[bookName]()); setCoverLoading(false); return; }
-      
-      // 2. Try Google Books as fallback
+      if (BOOK_COVERS[bookName]) {
+        setCoverUrl(BOOK_COVERS[bookName](deel));
+        setIsKnownCover(true);
+        setCoverResults([]);
+        setCoverLoading(false);
+        return;
+      }
+      setIsKnownCover(false);
+      // 2. Try Google Books as fallback — collect all results for cycling
       try {
         const query = `${bookName} ${deel || ""} schoolboek`.trim();
-        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=5&langRestrict=nl&printType=books`);
+        const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=8&langRestrict=nl&printType=books`);
         const data = await res.json();
-        let bestCover = null;
+        const covers = [];
         for (const item of (data.items || [])) {
           const links = item.volumeInfo?.imageLinks;
           if (links) {
             let url = links.medium || links.large || links.thumbnail || links.smallThumbnail || "";
             url = url.replace("http:", "https:").replace("&edge=curl", "").replace("zoom=1", "zoom=2");
-            bestCover = url;
-            break;
+            if (url) covers.push(url);
           }
         }
-        setCoverUrl(bestCover);
-      } catch { setCoverUrl(null); }
+        setCoverResults(covers);
+        setCoverUrl(covers[0] || null);
+      } catch { setCoverResults([]); setCoverUrl(null); }
       setCoverLoading(false);
     };
     const timer = setTimeout(searchCover, 300);
@@ -2264,8 +2291,26 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
                 <div style={{ marginTop: 14, textAlign: "center" }}>
                   <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
                   <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
-                  {coverUrl && <div style={{ fontSize: 14, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Is dit je boek?</div>}
-                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>📘 Juiste cover niet gevonden — inhoud klopt wel!</div>}
+                  {coverUrl && isKnownCover && <div style={{ fontSize: 13, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Cover gevonden</div>}
+                  {coverUrl && !isKnownCover && (
+                    <div style={{ marginTop: 10 }}>
+                      <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 6 }}>Is dit je boek?</div>
+                      <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
+                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#00c853", color: "#fff", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => setIsKnownCover(true)}>✅ Ja</button>
+                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#2a3f5f", color: "#8899aa", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => {
+                          const next = coverResultIndex + 1;
+                          if (next < coverResults.length) {
+                            setCoverResultIndex(next);
+                            setCoverUrl(coverResults[next]);
+                          } else {
+                            setCoverUrl(null);
+                            setCoverResults([]);
+                          }
+                        }}>❌ Nee, andere →</button>
+                      </div>
+                    </div>
+                  )}
+                  {!coverUrl && !coverLoading && <div style={{ fontSize: 12, color: "#667788", marginTop: 8 }}>📘 Cover niet gevonden — inhoud klopt wel!</div>}
                 </div>
               </div>
 
