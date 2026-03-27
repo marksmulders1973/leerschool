@@ -1583,12 +1583,16 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [level, setLevel] = useState("");
+  const [groepSelect, setGroepSelect] = useState("");
+  const [klasSelect, setKlasSelect] = useState("");
   const [deadline, setDeadline] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(20);
   const [resultMethod, setResultMethod] = useState("whatsapp");
   const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
+
+  const levelLabel = groepSelect ? `Groep ${groepSelect.replace("g","")}` : klasSelect ? `Klas ${klasSelect.replace("k","")}` : "";
 
   const canNext = () => {
     if (step === 1) return subject !== "";
@@ -1608,6 +1612,21 @@ function CreateQuiz({ onSave, onBack, onHome }) {
         <div style={styles.progressBar}>
           <div style={{ ...styles.progressFill, width: `${(step / 3) * 100}%` }} />
         </div>
+
+        {(subject || levelLabel) && (
+          <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+            {subject && (
+              <span style={{ fontSize: 12, background: "#1e2d45", color: "#8eaadb", padding: "4px 10px", borderRadius: 8, border: "1px solid #2a3f5f" }}>
+                📚 {SUBJECTS.find(s => s.id === subject)?.label}
+              </span>
+            )}
+            {levelLabel && (
+              <span style={{ fontSize: 12, background: "#1e3a2a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
+                🎒 {levelLabel}
+              </span>
+            )}
+          </div>
+        )}
 
         {step === 1 && (
           <div style={styles.stepContent}>
@@ -1640,11 +1659,13 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={level.startsWith("groep") ? level : ""}
+                  value={groepSelect}
                   onChange={(e) => {
                     const v = e.target.value;
+                    setGroepSelect(v);
+                    setKlasSelect("");
                     const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
-                    if (bucket) setLevel(bucket);
+                    if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
                   }}
                 >
                   <option value="">-- Groep --</option>
@@ -1662,9 +1683,11 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-                  value={level.startsWith("klas") ? level : ""}
+                  value={klasSelect}
                   onChange={(e) => {
                     const v = e.target.value;
+                    setKlasSelect(v);
+                    setGroepSelect("");
                     const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
                     if (bucket) setLevel(bucket);
                   }}
@@ -1678,8 +1701,8 @@ function CreateQuiz({ onSave, onBack, onHome }) {
               </div>
             </div>
             {level && (
-              <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
-                ✅ Niveau gekozen!
+              <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid #00c85340" }}>
+                ✅ Niveau gekozen: <span style={{ color: "#fff" }}>{levelLabel}</span>
               </div>
             )}
           </div>
