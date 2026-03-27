@@ -53,6 +53,7 @@ const SUBJECTS = [
 ];
 
 const LEVELS = [
+  { id: "groep3", label: "Groep 1-4", desc: "Onderbouw basisschool", icon: "🌱" },
   { id: "groep5", label: "Groep 5-6", desc: "Bovenbouw basis", icon: "🎒" },
   { id: "groep7", label: "Groep 7-8", desc: "Bovenbouw verdieping", icon: "📚" },
   { id: "klas1", label: "Klas 1-2", desc: "Brugklas", icon: "🎓" },
@@ -1560,7 +1561,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                   value={level.startsWith("groep") ? level : ""}
                   onChange={(e) => {
                     const v = e.target.value;
-                    const bucket = {"g1":"groep5","g2":"groep5","g3":"groep5","g4":"groep5","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    const bucket = {"g1":"groep3","g2":"groep3","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) setLevel(bucket);
                   }}
                 >
@@ -1907,7 +1908,7 @@ function SelfStudy({ onStart, onBack, onHome }) {
                     const v = e.target.value;
                     setGroepSelect(v);
                     setKlasSelect("");
-                    const bucket = {"g1":"groep5","g2":"groep5","g3":"groep5","g4":"groep5","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    const bucket = {"g1":"groep3","g2":"groep3","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
                     if (bucket) setLevel(bucket);
                   }}
                 >

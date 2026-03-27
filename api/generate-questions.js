@@ -42,8 +42,9 @@ export default async function handler(req, res) {
   }
 
   const levelDescriptions = {
-    groep5: "groep 5-6 basisschool (10-11 jaar)",
-    groep7: "groep 7-8 basisschool (12-13 jaar)",
+    groep3: "groep 1-4 basisschool (6-9 jaar) — onderbouw, heel eenvoudige vragen, korte zinnen, concrete voorbeelden, geen abstracte begrippen",
+    groep5: "groep 5-6 basisschool (10-11 jaar) — bovenbouw basis, matig moeilijk",
+    groep7: "groep 7-8 basisschool (12-13 jaar) — bovenbouw verdieping, uitdagender",
     klas1: "klas 1-2 middelbare school / vmbo-t/havo/vwo (13-15 jaar)",
     klas3: "klas 3-4 middelbare school / havo/vwo bovenbouw (15-17 jaar)",
   };
@@ -131,7 +132,10 @@ Antwoord ALLEEN met een JSON array:
 
 Regels:
 - answer = index (0-3) van het juiste antwoord
-- Maak de vragen gevarieerd en leerzaam, passend bij het niveau
+- Maak de vragen gevarieerd en leerzaam, STRIKT passend bij het niveau: ${levelLabel}
+- Voor groep 1-4: gebruik eenvoudige woorden, korte zinnen, en alledaagse situaties. GEEN moeilijke begrippen.
+- Voor groep 5-6: iets uitdagender, maar nog steeds basisschoolniveau.
+- Voor groep 7-8 en middelbare school: mag complexer en abstracter.
 - Foute antwoorden moeten veelgemaakte fouten zijn
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
