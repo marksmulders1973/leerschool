@@ -2736,14 +2736,18 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
             }}>
               {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
             </button>
-            <button onClick={() => window.open(getYouTubeUrl(question), "_blank")} style={{
+            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{
               width: "100%", padding: "14px", border: "1px solid #1a73e8", borderRadius: 12,
               background: "#1a2f4a", color: "#69f0ae",
               fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+              textDecoration: "none", boxSizing: "border-box",
             }}>
               <span>🎬</span> Uitleg-video op YouTube
-            </button>
+            </a>
+            <div style={{ fontSize: 11, color: "#556677", textAlign: "center", marginTop: 6 }}>
+              ↩️ Kom terug via de <strong style={{ color: "#8899aa" }}>← terug-knop</strong> van je browser
+            </div>
           </div>
         )}
       </div>
