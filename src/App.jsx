@@ -1402,21 +1402,36 @@ function HomePage({ onSelectRole, userName, setUserName }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
-        <video
-          src="/intro.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: "90%",
-            maxWidth: 360,
-            borderRadius: 20,
-            marginBottom: 20,
-            boxShadow: "0 8px 32px rgba(0,200,83,0.25)",
-            display: "block",
-          }}
-        />
+        <div style={{
+          position: "relative",
+          width: "90%",
+          maxWidth: 360,
+          marginBottom: 24,
+        }}>
+          <div style={{
+            position: "absolute",
+            inset: -24,
+            background: "radial-gradient(ellipse at center, rgba(30,100,200,0.4) 0%, transparent 70%)",
+            borderRadius: 50,
+            zIndex: 0,
+            pointerEvents: "none",
+          }} />
+          <video
+            src="/intro.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: "100%",
+              borderRadius: 18,
+              boxShadow: "0 6px 32px rgba(15,70,180,0.55)",
+              display: "block",
+              position: "relative",
+              zIndex: 1,
+            }}
+          />
+        </div>
 
         <p style={styles.subtitle}>Jouw slimme studiebuddy!</p>
         <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft</p>
@@ -1432,16 +1447,15 @@ function HomePage({ onSelectRole, userName, setUserName }) {
           />
         </div>
 
-        <div style={styles.roleCards}>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #00c853, #00e676)" }} onClick={() => handleSelect("student")}>
-            <span style={styles.roleIcon}>🎒</span>
-            <span style={styles.roleLabel}>Ik ben leerling</span>
-            <span style={styles.roleDesc}>Oefenen & quizzen spelen</span>
+        <div style={{ display: "flex", gap: 10, width: "100%", maxWidth: 360 }}>
+          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("leerling")}>
+            <img src="/leerling.jpg" alt="leerling" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
           </button>
-          <button style={{ ...styles.roleCard, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => handleSelect("teacher")}>
-            <span style={styles.roleIcon}>👩‍🏫</span>
-            <span style={styles.roleLabel}>Ik ben leerkracht</span>
-            <span style={styles.roleDesc}>Quizzen maken & opgeven</span>
+          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("student")}>
+            <img src="/student.jpg" alt="student" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
+          </button>
+          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("teacher")}>
+            <img src="/leerkracht.jpg" alt="leerkracht" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
           </button>
         </div>
 
@@ -3101,6 +3115,7 @@ const styles = {
     justifyContent: "center",
     padding: "48px 24px 32px",
     flex: 1,
+    background: "radial-gradient(ellipse 110% 45% at 50% 12%, rgba(20,90,200,0.18) 0%, transparent 70%)",
   },
   logoContainer: {
     display: "flex",
