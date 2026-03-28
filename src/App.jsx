@@ -81,13 +81,20 @@ const SUBJECT_FOR_LEVEL = {
 const TEXTBOOKS = {
   // ── Voortgezet onderwijs ──────────────────────────────────────
   wiskunde: [
-    { id: "getal-ruimte",      name: "Getal & Ruimte",     icon: "📐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "moderne-wiskunde",  name: "Moderne Wiskunde",   icon: "📊", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "wiskunde-flex",     name: "Wiskunde Flex",      icon: "🔢", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "nu-wiskunde",       name: "Nu Wiskunde",        icon: "✏️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "netwerk",           name: "Netwerk",            icon: "🕸️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "pythagoras",        name: "Pythagoras",         icon: "📏", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "wiskundebrief",     name: "Wiskunde Brief",     icon: "📝", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "gr-hv1-deel1",     name: "GR Havo/vwo 1 Deel 1",      icon: "📐", defaultLevel: "klas1" },
+    { id: "gr-hv1-deel2",     name: "GR Havo/vwo 1 Deel 2",      icon: "📐", defaultLevel: "klas1" },
+    { id: "gr-vwo1",          name: "GR VWO 1",                   icon: "📐", defaultLevel: "klas1" },
+    { id: "gr-vmbo-havo1",    name: "GR VMBO-gt/Havo 1",         icon: "📐", defaultLevel: "klas1" },
+    { id: "gr-hv2",           name: "GR Havo/vwo 2",             icon: "📐", defaultLevel: "klas1" },
+    { id: "mw-hv1a",          name: "Moderne Wiskunde Havo/vwo 1a", icon: "📊", defaultLevel: "klas1" },
+    { id: "mw-vwo1a",         name: "Moderne Wiskunde VWO 1a",   icon: "📊", defaultLevel: "klas1" },
+    { id: "mw-havo-a1",       name: "Moderne Wiskunde Havo A1",  icon: "📊", defaultLevel: "klas1" },
+    { id: "mw-vwo-b1",        name: "Moderne Wiskunde VWO B1",   icon: "📊", defaultLevel: "klas1" },
+    { id: "kern-wis-hv1a",    name: "KERN Wiskunde Havo/vwo 1A", icon: "📏", defaultLevel: "klas1" },
+    { id: "kern-wis-hv1b",    name: "KERN Wiskunde Havo/vwo 1B", icon: "📏", defaultLevel: "klas1" },
+    { id: "kern-wis-hv2a",    name: "KERN Wiskunde Havo/vwo 2A", icon: "📏", defaultLevel: "klas1" },
+    { id: "netwerk-wis",      name: "Netwerk Wiskunde",          icon: "🕸️", defaultLevel: "klas1" },
+    { id: "mathplus",         name: "MathPlus VWO",              icon: "🔢", defaultLevel: "klas1" },
   ],
   nederlands: [
     { id: "nieuw-nederlands",  name: "Nieuw Nederlands",   icon: "📖", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
@@ -2648,18 +2655,20 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
   const deelNum = (d) => d ? (parseInt(d.replace(/\D/g, "")) || 0) : 0;
   const BOOK_COVERS = {
     // ── Wiskunde VO ──────────────────────────────────────────────
-    "Getal & Ruimte": (d) => ({ 1: "/covers/getal-ruimte-deel1.png", 2: "/covers/getal-ruimte-deel2.jpg", 3: "/covers/getal-ruimte-deel3.jpg", 4: "/covers/getal-ruimte-deel4.jpg" }[deelNum(d)] || "/covers/getal-ruimte-deel2.jpg"),
-    "Wiskunde Flex":  (d) => deelNum(d) === 1 ? "/covers/getal-ruimte-flex-deel1.png" : "/covers/getal-ruimte-deel2.jpg",
-    "Moderne Wiskunde": (d) => {
-      if (!d) return "/covers/moderne-wiskunde-a.jpg";
-      if (d.toLowerCase().includes("boek b") || deelNum(d) === 2) return "/covers/moderne-wiskunde-b.jpg";
-      if (d.toLowerCase().includes("boek c") || deelNum(d) >= 3) return "/covers/moderne-wiskunde-bovenbouw.jpg";
-      return "/covers/moderne-wiskunde-a.jpg";
-    },
-    "Nu Wiskunde":   () => makeBookCover("Nu Wiskunde",  "",        ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
-    "Netwerk":       () => "/covers/netwerk-wiskunde.jpg",
-    "Pythagoras":    () => makeBookCover("Pythagoras",   "Wiskunde", ["#4a148c","#6a1b9a","#7b1fa2"], "P"),
-    "Wiskunde Brief":() => makeBookCover("Wiskunde",     "Brief",    ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
+    "GR Havo/vwo 1 Deel 1":      () => "/covers/gr-13e-hv1-deel1.png",
+    "GR Havo/vwo 1 Deel 2":      () => "/covers/gr-13e-hv1-deel2.png",
+    "GR VWO 1":                  () => "/covers/gr-13e-vwo1.png",
+    "GR VMBO-gt/Havo 1":         () => "/covers/gr-13e-vmbo-havo1.png",
+    "GR Havo/vwo 2":             () => "/covers/gr-13e-hv2.png",
+    "Moderne Wiskunde Havo/vwo 1a": () => "/covers/mw-13e-hv1a.png",
+    "Moderne Wiskunde VWO 1a":   () => "/covers/mw-13e-vwo1a.png",
+    "Moderne Wiskunde Havo A1":  () => "/covers/mw-12e-havo-a1.png",
+    "Moderne Wiskunde VWO B1":   () => "/covers/mw-12e-vwo-b1.png",
+    "KERN Wiskunde Havo/vwo 1A": () => "/covers/kern-wis-hv1a.png",
+    "KERN Wiskunde Havo/vwo 1B": () => "/covers/kern-wis-hv1b.jpg",
+    "KERN Wiskunde Havo/vwo 2A": () => "/covers/kern-wis-hv2a.jpg",
+    "Netwerk Wiskunde":          () => "/covers/netwerk-wiskunde.jpg",
+    "MathPlus VWO":              () => "/covers/mathplus-vwo1.jpg",
     // ── Nederlands VO ────────────────────────────────────────────
     "Nieuw Nederlands": (d) => {
       if (!d) return "/covers/nieuw-nederlands-1.jpg";
