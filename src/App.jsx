@@ -44,9 +44,15 @@ async function fetchAIQuestions(subject, level, count = 5, textbook = null, topi
 const SUBJECTS = [
   { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#00c853" },
   { id: "taal", label: "Taal", icon: "📝", color: "#00e676" },
+  { id: "wiskunde", label: "Wiskunde", icon: "📐", color: "#00c853" },
+  { id: "nederlands", label: "Nederlands", icon: "📖", color: "#00e676" },
   { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍", color: "#2bbd7e" },
   { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️", color: "#69f0ae" },
   { id: "natuur", label: "Natuur & Techniek", icon: "🔬", color: "#6b9fd4" },
+  { id: "biologie", label: "Biologie", icon: "🧬", color: "#00b84d" },
+  { id: "natuurkunde", label: "Natuurkunde", icon: "⚛️", color: "#6b9fd4" },
+  { id: "scheikunde", label: "Scheikunde", icon: "🧪", color: "#a0b8d8" },
+  { id: "economie", label: "Economie", icon: "💶", color: "#f9a825" },
   { id: "engels", label: "Engels", icon: "🇬🇧", color: "#a0b8d8" },
   { id: "duits", label: "Duits", icon: "🇩🇪", color: "#2bbd7e" },
   { id: "frans", label: "Frans", icon: "🇫🇷", color: "#00b84d" },
@@ -68,8 +74,8 @@ const SUBJECT_FOR_LEVEL = {
   groep3:  ["rekenen", "taal", "natuur"],
   groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
   groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
-  klas1:   ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "duits", "frans"],
-  klas3:   ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "duits", "frans", "maatschappijleer"],
+  klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "engels", "duits", "frans"],
+  klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "engels", "duits", "frans", "maatschappijleer"],
 };
 
 const TEXTBOOKS = {
