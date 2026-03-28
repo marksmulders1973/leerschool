@@ -1075,6 +1075,7 @@ export default function App() {
   const [loadingMode, setLoadingMode] = useState("self");
   const [role, setRole] = useState(null);
   const [userName, setUserName] = useState("");
+  const [userLevel, setUserLevel] = useState("");
   const [quizzes, setQuizzes] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [gameState, setGameState] = useState(null);
@@ -1175,6 +1176,7 @@ export default function App() {
           onSelectRole={(r) => { setRole(r); setPage(r === "teacher" ? "teacher-home" : "student-home"); }}
           userName={userName}
           setUserName={setUserName}
+          setUserLevel={setUserLevel}
         />
       )}
       {page === "teacher-home" && (
@@ -1385,16 +1387,19 @@ function LoadingOverlay({ mode, onCancel }) {
   );
 }
 
-function HomePage({ onSelectRole, userName, setUserName }) {
+function HomePage({ onSelectRole, userName, setUserName, setUserLevel }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState("role");
   const [pendingRole, setPendingRole] = useState(null);
+  const [level, setLevel] = useState("");
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
+  const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4], teacher: [] };
 
   const handleRoleClick = (role) => {
     setPendingRole(role);
+    setLevel("");
     setStep("name");
   };
 
@@ -1405,6 +1410,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
       return;
     }
     setUserName(name.trim());
+    setUserLevel(level);
     onSelectRole(pendingRole);
   };
 
@@ -1541,6 +1547,32 @@ function HomePage({ onSelectRole, userName, setUserName }) {
                 onKeyDown={(e) => e.key === "Enter" && handleConfirm()}
               />
             </div>
+
+            {levelOptions[pendingRole]?.length > 0 && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <label style={{ ...styles.inputLabel, marginBottom: 0 }}>
+                    {pendingRole === "leerling" ? "Welke groep zit je in?" : "Welke klas zit je in?"}
+                  </label>
+                  <button onClick={() => setLevel("")} style={{
+                    background: "none", border: "none", color: "rgba(255,255,255,0.35)",
+                    fontSize: 12, cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                  }}>sla over</button>
+                </div>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {levelOptions[pendingRole].map(n => (
+                    <button key={n} onClick={() => setLevel(String(n))} style={{
+                      width: 38, height: 38, borderRadius: 10,
+                      border: level === String(n) ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.15)",
+                      background: level === String(n) ? "rgba(0,212,255,0.15)" : "rgba(255,255,255,0.05)",
+                      color: level === String(n) ? "#00d4ff" : "rgba(255,255,255,0.6)",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
+                      cursor: "pointer",
+                    }}>{n}</button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             <button onClick={handleConfirm} style={{
               width: "100%", padding: "15px", borderRadius: 16, border: "none",
