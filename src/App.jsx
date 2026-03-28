@@ -147,7 +147,6 @@ const TEXTBOOKS = {
 };
 
 const TEXTBOOK_CATEGORIES = [
-  { id: "basisschool", label: "Basisschool", icon: "🎒" },
   { id: "wiskunde", label: "Wiskunde", icon: "📐" },
   { id: "nederlands", label: "Nederlands", icon: "📖" },
   { id: "engels", label: "Engels", icon: "🇬🇧" },
@@ -2461,18 +2460,14 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
               {TEXTBOOK_CATEGORIES.map((cat) => (
                 <button key={cat.id} style={{
                   ...styles.levelCard,
-                  borderColor: category === cat.id ? "#00c853" : "transparent",
-                  background: category === cat.id ? "#FF6B3510" : "#fff",
-                  boxShadow: category === cat.id ? "0 0 0 3px #FF6B3540" : "0 2px 8px rgba(0,0,0,0.06)",
-                }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); }}>
+                  borderColor: "transparent",
+                  background: "#fff",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+                }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); setStep(2); }}>
                   <span style={{ fontSize: 24 }}>{cat.icon}</span>
                   <strong style={{ fontSize: 13 }}>{cat.label}</strong>
                 </button>
               ))}
-            </div>
-            <div style={styles.navRow}>
-              <div style={{ flex: 1 }} />
-              <button style={{ ...styles.nextBtn, opacity: canNext1 ? 1 : 0.4 }} onClick={() => canNext1 && setStep(2)} disabled={!canNext1}>Volgende →</button>
             </div>
           </div>
         )}
