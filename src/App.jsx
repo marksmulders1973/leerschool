@@ -1243,6 +1243,8 @@ export default function App() {
       )}
       {page === "self-study" && (
         <SelfStudy
+          userLevel={userLevel}
+          userRole={role}
           onStart={(config) => {
             const topicLabel = config.topic ? ` — ${config.topic}` : "";
             const quiz = {
@@ -2133,11 +2135,17 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 }
 
 // ─── Self Study ──────────────────────────────────────────────────
-function SelfStudy({ onStart, onBack, onHome }) {
+function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
+  const groepBuckets = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"};
+  const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"};
+  const initGroep = userRole === "leerling" && userLevel ? `g${userLevel}` : "";
+  const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
+  const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas] || "";
+
   const [subject, setSubject] = useState("");
-  const [level, setLevel] = useState("");
-  const [groepSelect, setGroepSelect] = useState("");
-  const [klasSelect, setKlasSelect] = useState("");
+  const [level, setLevel] = useState(initLevel);
+  const [groepSelect, setGroepSelect] = useState(initGroep);
+  const [klasSelect, setKlasSelect] = useState(initKlas);
   const [topic, setTopic] = useState("");
   const [showTopic, setShowTopic] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
@@ -2148,57 +2156,61 @@ function SelfStudy({ onStart, onBack, onHome }) {
     <div style={styles.page}>
       <Header title="Zelf oefenen 📖" subtitle="Kies je vak en niveau" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
-        <h3 style={styles.sectionTitle}>Welk niveau?</h3>
-        <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
-          <div style={{ flex: 1 }}>
-            <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
-            <select
-              style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-              value={groepSelect}
-              onChange={(e) => {
-                const v = e.target.value;
-                setGroepSelect(v);
-                setKlasSelect("");
-                const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
-                if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
-              }}
-            >
-              <option value="">-- Groep --</option>
-              <option value="g1">Groep 1</option>
-              <option value="g2">Groep 2</option>
-              <option value="g3">Groep 3</option>
-              <option value="g4">Groep 4</option>
-              <option value="g5">Groep 5</option>
-              <option value="g6">Groep 6</option>
-              <option value="g7">Groep 7</option>
-              <option value="g8">Groep 8</option>
-            </select>
-          </div>
-          <div style={{ flex: 1 }}>
-            <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
-            <select
-              style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
-              value={klasSelect}
-              onChange={(e) => {
-                const v = e.target.value;
-                setKlasSelect(v);
-                setGroepSelect("");
-                const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
-                if (bucket) setLevel(bucket);
-              }}
-            >
-              <option value="">-- Klas --</option>
-              <option value="k1">Klas 1</option>
-              <option value="k2">Klas 2</option>
-              <option value="k3">Klas 3</option>
-              <option value="k4">Klas 4</option>
-            </select>
-          </div>
-        </div>
-        {level && (
-          <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
-            ✅ Niveau gekozen!
-          </div>
+        {!initLevel && (
+          <>
+            <h3 style={styles.sectionTitle}>Welk niveau?</h3>
+            <div style={{ display: "flex", gap: 12, marginBottom: 8 }}>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎒 Basisschool</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={groepSelect}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    setGroepSelect(v);
+                    setKlasSelect("");
+                    const bucket = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"}[v];
+                    if (bucket) { setLevel(bucket); if (subject && !(SUBJECT_FOR_LEVEL[bucket] || []).includes(subject)) setSubject(""); }
+                  }}
+                >
+                  <option value="">-- Groep --</option>
+                  <option value="g1">Groep 1</option>
+                  <option value="g2">Groep 2</option>
+                  <option value="g3">Groep 3</option>
+                  <option value="g4">Groep 4</option>
+                  <option value="g5">Groep 5</option>
+                  <option value="g6">Groep 6</option>
+                  <option value="g7">Groep 7</option>
+                  <option value="g8">Groep 8</option>
+                </select>
+              </div>
+              <div style={{ flex: 1 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
+                <select
+                  style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
+                  value={klasSelect}
+                  onChange={(e) => {
+                    const v = e.target.value;
+                    setKlasSelect(v);
+                    setGroepSelect("");
+                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                    if (bucket) setLevel(bucket);
+                  }}
+                >
+                  <option value="">-- Klas --</option>
+                  <option value="k1">Klas 1</option>
+                  <option value="k2">Klas 2</option>
+                  <option value="k3">Klas 3</option>
+                  <option value="k4">Klas 4</option>
+                </select>
+              </div>
+            </div>
+            {level && (
+              <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
+                ✅ Niveau gekozen!
+              </div>
+            )}
+          </>
         )}
 
         <h3 style={styles.sectionTitle}>Welk vak?</h3>
