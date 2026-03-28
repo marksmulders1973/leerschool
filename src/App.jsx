@@ -1415,7 +1415,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             display: "inline-block",
             textShadow: "0 0 18px rgba(78,255,145,0.55), 0 2px 0 rgba(0,80,30,0.4)",
           }}>
-            🧫 Oefen met echte examenvragen!
+            🧫 Van oefenen naar slagen!
           </div>
           {/* drip drops */}
           {["25%","42%","60%","77%"].map((left, i) => (
