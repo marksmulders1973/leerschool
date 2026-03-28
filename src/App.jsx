@@ -2397,67 +2397,100 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
 
   const deelNum = (d) => d ? (parseInt(d.replace(/\D/g, "")) || 0) : 0;
   const BOOK_COVERS = {
+    // ── Wiskunde VO ──────────────────────────────────────────────
     "Getal & Ruimte": (d) => ({ 1: "/covers/getal-ruimte-deel1.png", 2: "/covers/getal-ruimte-deel2.jpg", 3: "/covers/getal-ruimte-deel3.jpg", 4: "/covers/getal-ruimte-deel4.jpg" }[deelNum(d)] || "/covers/getal-ruimte-deel2.jpg"),
-    "Wiskunde Flex": (d) => deelNum(d) === 1 ? "/covers/getal-ruimte-flex-deel1.png" : "/covers/getal-ruimte-deel2.jpg",
+    "Wiskunde Flex":  (d) => deelNum(d) === 1 ? "/covers/getal-ruimte-flex-deel1.png" : "/covers/getal-ruimte-deel2.jpg",
     "Moderne Wiskunde": (d) => {
       if (!d) return "/covers/moderne-wiskunde-a.jpg";
-      if (d.toLowerCase().includes("boek b")) return "/covers/moderne-wiskunde-b.jpg";
+      if (d.toLowerCase().includes("boek b") || deelNum(d) === 2) return "/covers/moderne-wiskunde-b.jpg";
       if (d.toLowerCase().includes("boek c") || deelNum(d) >= 3) return "/covers/moderne-wiskunde-bovenbouw.jpg";
-      if (deelNum(d) === 2) return "/covers/moderne-wiskunde-b.jpg";
       return "/covers/moderne-wiskunde-a.jpg";
     },
-    "Wiskunde Brief": () => makeBookCover("Wiskunde", "Brief", ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
-    "Nu Wiskunde": () => makeBookCover("Nu", "Wiskunde", ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
+    "Nu Wiskunde":   () => makeBookCover("Nu Wiskunde",  "",        ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
+    "Netwerk":       () => makeBookCover("Netwerk",      "Wiskunde", ["#1a237e","#283593","#3949ab"], "N"),
+    "Pythagoras":    () => makeBookCover("Pythagoras",   "Wiskunde", ["#4a148c","#6a1b9a","#7b1fa2"], "P"),
+    "Wiskunde Brief":() => makeBookCover("Wiskunde",     "Brief",    ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
+    // ── Nederlands VO ────────────────────────────────────────────
     "Nieuw Nederlands": (d) => {
       if (!d) return "/covers/nieuw-nederlands-1.jpg";
       if (d.toLowerCase().includes("vmbo")) return "/covers/nieuw-nederlands-vmbo.jpg";
       if (d.includes("7")) return "/covers/nieuw-nederlands-7e.jpg";
       return deelNum(d) >= 4 ? "/covers/nieuw-nederlands-4.jpg" : "/covers/nieuw-nederlands-1.jpg";
     },
-    "Talent": () => "/covers/talent.jpg",
-    "Op Niveau": () => "/covers/op-niveau.jpg",
-    "Kern": () => "/covers/kern.jpg",
-    "Stepping Stones": () => "/covers/stepping-stones.jpg",
-    "All Right!": () => "/covers/all-right.jpg",
-    "Upload": () => makeBookCover("Upload", "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
-    "Keys": () => makeBookCover("Keys", "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
+    "Talent":        () => "/covers/talent.jpg",
+    "Op Niveau":     () => "/covers/op-niveau.jpg",
+    "Kern Nederlands":() => "/covers/kern.jpg",
+    // ── Engels VO ────────────────────────────────────────────────
+    "Stepping Stones":() => "/covers/stepping-stones.jpg",
+    "All Right!":    () => "/covers/all-right.jpg",
     "New Interface": (d) => {
       if (!d) return "/covers/new-interface-hv.jpg";
       if (d.toLowerCase().includes("vwo")) return "/covers/new-interface-vwo.jpg";
-      if (d.toLowerCase().includes("vh")) return "/covers/new-interface-vh.jpg";
+      if (d.toLowerCase().includes("vh"))  return "/covers/new-interface-vh.jpg";
       return "/covers/new-interface-hv.jpg";
     },
-    "Na Klar!": () => "/covers/na-klar.jpg",
-    "TrabiTour": () => "/covers/trabitour.jpg",
-    "Grandes Lignes": () => "/covers/grandes-lignes.jpg",
-    "D'accord": () => "/covers/daccord.jpg",
-    "LesLab": () => "/covers/leslab.jpg",
-    "Thema's Maatschappijleer": () => "/covers/themas-maatschappijleer.jpg",
-    "Argus Clou": () => "/covers/argus-clou.jpg",
-    "De Geo": () => "/covers/de-geo.jpg",
-    "BuiteNLand": () => "/covers/buitenland.jpg",
-    "WereldWijs": () => "/covers/wereldwijs.jpg",
-    "Feniks": () => "/covers/feniks.jpg",
-    "MeMo": (d) => deelNum(d) <= 2 ? "/covers/memo-onderbouw.jpg" : "/covers/memo.jpg",
-    "Geschiedeniswerkplaats": () => "/covers/geschiedeniswerkplaats.jpg",
-    "Sprekend Verleden": () => "/covers/sprekend-verleden.jpg",
-    "Biologie voor jou": (d) => deelNum(d) >= 3 ? "/covers/biologie-voor-jou-nieuw.jpg" : "/covers/biologie-voor-jou.jpg",
-    "Nectar": (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar.jpg",
-    "10 voor Biologie": () => "/covers/10voorbiologie.jpg",
-    "Systematische Natuurkunde": () => "/covers/sys-natuurkunde.jpg",
-    "Nova": () => "/covers/nova.jpg",
-    "Natuurkunde Overal": (d) => deelNum(d) >= 4 ? "/covers/natuurkunde-overal-4.jpg" : "/covers/natuurkunde-overal-1.jpg",
-    "Chemie": () => "/covers/chemie.jpg",
-    "Scheikunde Overal": () => "/covers/scheikunde-overal.jpg",
-    "Nova Scheikunde": () => "/covers/nova-scheikunde.jpg",
-    "Economie Integraal": () => "/covers/economie-integraal.jpg",
-    "Pincode": () => "/covers/pincode-new.jpg",
-    "Pluspunt (rekenen)": () => "/covers/pluspunt.jpg",
-    "De Wereld in Getallen": () => "/covers/wereld-in-getallen.jpg",
-    "Taal Actief": () => "/covers/taal-actief.jpg",
-    "Staal (taal)": () => "/covers/staal.jpg",
-    "Blink (wereld)": () => "/covers/blink.jpg",
-    "Naut/Meander/Brandaan": () => "/covers/naut-meander-brandaan.jpg",
+    "Upload":        () => makeBookCover("Upload",    "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
+    "Keys":          () => makeBookCover("Keys",      "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
+    "Kern Engels":   () => makeBookCover("Kern",      "Engels", ["#01579b","#0277bd","#039be5"], "KE"),
+    // ── Aardrijkskunde VO ────────────────────────────────────────
+    "De Geo":        () => "/covers/de-geo.jpg",
+    "BuiteNLand":    () => "/covers/buitenland.jpg",
+    // ── Geschiedenis VO ──────────────────────────────────────────
+    "Feniks":        () => "/covers/feniks.jpg",
+    "Sprekend Verleden":() => "/covers/sprekend-verleden.jpg",
+    "Geschiedeniswerkplaats":() => "/covers/geschiedeniswerkplaats.jpg",
+    "MeMo":          (d) => deelNum(d) <= 2 ? "/covers/memo-onderbouw.jpg" : "/covers/memo.jpg",
+    "Historica":     () => makeBookCover("Historica", "Geschiedenis", ["#4e342e","#6d4c41","#795548"], "H"),
+    // ── NaSk (onderbouw) ─────────────────────────────────────────
+    "Overal NaSk":   () => makeBookCover("Overal",   "NaSk", ["#1b5e20","#2e7d32","#388e3c"], "ON"),
+    "Newton NaSk":   () => makeBookCover("Newton",   "NaSk", ["#e65100","#ef6c00","#f57c00"], "NN"),
+    "Nova NaSk":     () => makeBookCover("Nova",     "NaSk", ["#311b92","#4527a0","#512da8"], "SN"),
+    // ── Biologie VO ──────────────────────────────────────────────
+    "Biologie voor Jou (BvJ)": (d) => deelNum(d) >= 3 ? "/covers/biologie-voor-jou-nieuw.jpg" : "/covers/biologie-voor-jou.jpg",
+    "Nectar":        (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar.jpg",
+    "Vivo":          () => makeBookCover("Vivo",     "Biologie", ["#1b5e20","#388e3c","#4caf50"], "V"),
+    "10 voor Biologie":() => "/covers/10voorbiologie.jpg",
+    // ── Natuurkunde VO ───────────────────────────────────────────
+    "Systematische Natuurkunde":() => "/covers/sys-natuurkunde.jpg",
+    "Pulsar":        () => makeBookCover("Pulsar",   "Natuurkunde", ["#0d47a1","#1565c0","#1976d2"], "PL"),
+    "Nova Natuurkunde":() => makeBookCover("Nova",   "Natuurkunde", ["#4a148c","#6a1b9a","#7b1fa2"], "NN"),
+    "Overal Natuurkunde":(d) => deelNum(d) >= 4 ? "/covers/natuurkunde-overal-4.jpg" : "/covers/natuurkunde-overal-1.jpg",
+    // ── Scheikunde VO ────────────────────────────────────────────
+    "Chemie Overal": () => "/covers/scheikunde-overal.jpg",
+    "Nova Scheikunde":() => "/covers/nova-scheikunde.jpg",
+    "Newton Scheikunde":() => makeBookCover("Newton","Scheikunde", ["#bf360c","#d84315","#e64a19"], "NS"),
+    // ── Economie VO ──────────────────────────────────────────────
+    "Pincode":       () => "/covers/pincode-new.jpg",
+    "Economie Integraal":() => "/covers/economie-integraal.jpg",
+    "Kern Economie": () => makeBookCover("Kern",    "Economie", ["#e65100","#ef6c00","#f57c00"], "KE"),
+    // ── Duits VO ─────────────────────────────────────────────────
+    "Na Klar!":      () => "/covers/na-klar.jpg",
+    "TrabiTour":     () => "/covers/trabitour.jpg",
+    "Neue Kontakte": () => makeBookCover("Neue","Kontakte", ["#b71c1c","#c62828","#d32f2f"], "NK"),
+    // ── Frans VO ─────────────────────────────────────────────────
+    "Grandes Lignes":() => "/covers/grandes-lignes.jpg",
+    "Bravoure":      () => makeBookCover("Bravoure","Frans", ["#1a237e","#283593","#3949ab"], "BR"),
+    "D'accord":      () => "/covers/daccord.jpg",
+    // ── Maatschappijleer VO ──────────────────────────────────────
+    "Thema's Maatschappijleer":() => "/covers/themas-maatschappijleer.jpg",
+    "Memo Maatschappijleer":   () => makeBookCover("Memo","Maatschappijleer", ["#37474f","#455a64","#546e7a"], "MM"),
+    "De Basis":      () => makeBookCover("De Basis","Maatschappijleer", ["#263238","#37474f","#455a64"], "DB"),
+    // ── Basisschool rekenen ──────────────────────────────────────
+    "Pluspunt":      () => "/covers/pluspunt.jpg",
+    "De Wereld in Getallen":() => "/covers/wereld-in-getallen.jpg",
+    "Getal & Ruimte Junior":() => makeBookCover("G&R","Junior", ["#00695c","#00796b","#00897b"], "GR"),
+    "Wizwijs":       () => makeBookCover("Wizwijs","Rekenen", ["#6a1b9a","#7b1fa2","#8e24aa"], "WW"),
+    "Alles Telt":    () => makeBookCover("Alles","Telt", ["#1565c0","#1976d2","#1e88e5"], "AT"),
+    // ── Basisschool taal ─────────────────────────────────────────
+    "Taal Actief":   () => "/covers/taal-actief.jpg",
+    "Staal":         () => "/covers/staal.jpg",
+    "Nieuw Nederlands Junior":() => makeBookCover("Nieuw NL","Junior", ["#004d40","#00695c","#00796b"], "NNJ"),
+    "Veilig Leren Lezen":() => makeBookCover("Veilig","Leren Lezen", ["#e53935","#d32f2f","#c62828"], "VLL"),
+    "Lijn 3":        () => makeBookCover("Lijn 3","Lezen", ["#f57f17","#f9a825","#fbc02d"], "L3"),
+    // ── Basisschool wereld & natuur ──────────────────────────────
+    "Naut / Meander / Brandaan":() => "/covers/naut-meander-brandaan.jpg",
+    "Argus Clou":    () => "/covers/argus-clou.jpg",
+    "Blink Wereld":  () => "/covers/blink.jpg",
   };
 
   // Search for book cover
