@@ -1181,6 +1181,7 @@ export default function App() {
       {page === "home" && (
         <HomePage
           onSelectRole={(r) => { setRole(r); setPage(r === "teacher" ? "teacher-home" : "student-home"); }}
+          onBack={role ? () => setPage(role === "teacher" ? "teacher-home" : "student-home") : null}
           userName={userName}
           setUserName={setUserName}
           setUserLevel={setUserLevel}
@@ -1400,7 +1401,7 @@ function LoadingOverlay({ mode, onCancel }) {
   );
 }
 
-function HomePage({ onSelectRole, userName, setUserName, setUserLevel }) {
+function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState("role");
@@ -1443,6 +1444,15 @@ function HomePage({ onSelectRole, userName, setUserName, setUserLevel }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
+
+        {/* Terug-knop als al ingelogd */}
+        {onBack && (
+          <div style={{ width: "100%", maxWidth: 360, display: "flex", justifyContent: "flex-start", marginBottom: 8 }}>
+            <button onClick={onBack} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontFamily: "'Nunito', sans-serif", fontSize: 14, cursor: "pointer", display: "flex", alignItems: "center", gap: 6 }}>
+              ← Terug naar dashboard
+            </button>
+          </div>
+        )}
 
         {/* Slime banner */}
         <div style={{ position: "relative", marginBottom: 18, textAlign: "center" }}>
