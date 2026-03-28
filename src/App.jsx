@@ -1095,6 +1095,7 @@ export default function App() {
     try { const q = localStorage.getItem("ls_quizzes"); if (q) setQuizzes(JSON.parse(q)); } catch {}
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
+    try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
   }, []);
 
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
@@ -1302,7 +1303,11 @@ export default function App() {
           results={results}
           quiz={currentQuiz}
           userName={userName}
-          onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
+          onBack={() => {
+            if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
+            else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
+            else setPage(role === "teacher" ? "teacher-home" : "student-home");
+          }}
           onHome={() => setPage("home")}
           onRetry={() => {
             if (currentQuiz) startGame(currentQuiz, "self");
@@ -1404,6 +1409,18 @@ function HomePage({ onSelectRole, userName, setUserName, setUserLevel }) {
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
   const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4], teacher: [] };
 
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("ls_user");
+      if (saved) {
+        const d = JSON.parse(saved);
+        if (d.name) setName(d.name);
+        if (d.role) { setPendingRole(d.role); setStep("name"); }
+        if (d.level) setLevel(d.level);
+      }
+    } catch {}
+  }, []);
+
   const handleRoleClick = (role) => {
     setPendingRole(role);
     setLevel("");
@@ -1418,6 +1435,7 @@ function HomePage({ onSelectRole, userName, setUserName, setUserLevel }) {
     }
     setUserName(name.trim());
     setUserLevel(level);
+    try { localStorage.setItem("ls_user", JSON.stringify({ name: name.trim(), level, role: pendingRole })); } catch {}
     onSelectRole(pendingRole);
   };
 
@@ -2925,15 +2943,26 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
           </div>
         )}
 
-        {showExplanation && question.explanation && (
-          <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
-            <div style={{ fontWeight: 800, marginBottom: 4, color: "#00e676" }}>💡 Uitleg</div>
-            <div style={{ fontSize: 14, lineHeight: 1.5, color: "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
-            {question.source && (
-              <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>
-            )}
-          </div>
-        )}
+        {showExplanation && question.explanation && (() => {
+          const lastAns = gameState.answers[gameState.answers.length - 1];
+          const isWrong = lastAns && !lastAns.isCorrect;
+          return (
+            <div style={{ marginTop: 16, padding: isWrong ? 18 : 16, background: isWrong ? "linear-gradient(135deg, #2a1500, #3a2000)" : "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: `4px solid ${isWrong ? "#ff9800" : "#1a73e8"}`, animation: "slideUp 0.3s ease" }}>
+              {isWrong && (
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "#69b2ff", marginBottom: 8, fontWeight: 700 }}>
+                  ✅ Het goede antwoord was: <span style={{ color: "#ffffff" }}>{question.options[question.answer]}</span>
+                </div>
+              )}
+              <div style={{ fontWeight: 800, marginBottom: 6, color: isWrong ? "#ffb74d" : "#00e676", fontSize: isWrong ? 16 : 14 }}>
+                {isWrong ? "📖 Zo zit het:" : "💡 Uitleg"}
+              </div>
+              <div style={{ fontSize: isWrong ? 15 : 14, lineHeight: 1.6, color: isWrong ? "#f0d8b0" : "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
+              {question.source && (
+                <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>
+              )}
+            </div>
+          );
+        })()}
 
         {waitingForUser && (
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 12, animation: "slideUp 0.3s ease" }}>
@@ -3066,6 +3095,27 @@ function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeade
           </div>
         )}
 
+        {latest.percentage < 60 && (
+          <div style={{ marginTop: 20, padding: 18, background: "#2a1500", borderRadius: 16, border: "2px solid #ff9800", animation: "slideUp 0.4s ease" }}>
+            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, color: "#ffb74d", fontWeight: 700, marginBottom: 4 }}>😕 Hier heb ik moeite mee</div>
+            <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button onClick={() => {
+                const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)\n\nKun je me helpen? 🙏`;
+                window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
+              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                💬 WhatsApp
+              </button>
+              <button onClick={() => {
+                const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)\n\nKun je me helpen?`;
+                window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft hulp nodig bij " + subjLabel)}&body=${encodeURIComponent(msg)}`, "_blank");
+              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                ✉️ E-mail
+              </button>
+            </div>
+          </div>
+        )}
+
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 24 }}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
@@ -3178,7 +3228,10 @@ function StudentProgressView({ progress, onBack, onHome }) {
                   <div style={styles.progressBarSmall}>
                     <div style={{ ...styles.progressFillSmall, width: `${avg}%`, background: avg >= 80 ? "#28a745" : avg >= 50 ? "#f39c12" : "#e74c3c" }} />
                   </div>
-                  <div style={{ fontSize: 12, color: "#8899aa", marginTop: 4 }}>{results.length} poging{results.length !== 1 ? "en" : ""}</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
+                    <span style={{ fontSize: 12, color: "#8899aa" }}>{results.length} poging{results.length !== 1 ? "en" : ""}</span>
+                    {avg < 60 && <span style={{ fontSize: 11, background: "#ff980020", color: "#ffb74d", padding: "2px 8px", borderRadius: 8, fontWeight: 700 }}>💪 extra aandacht nodig</span>}
+                  </div>
                 </div>
               );
             })}
