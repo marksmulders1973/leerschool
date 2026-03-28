@@ -1320,6 +1320,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           userRole={role}
+          userLevel={userLevel}
           onBack={() => setPage("student-home")}
           onHome={() => setPage("home")}
         />
@@ -2352,8 +2353,11 @@ function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
 }
 
 // ─── Textbook Quiz ───────────────────────────────────────────────
-function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
+function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
   const TEXTBOOK_CATEGORIES = userRole === "leerling" ? TEXTBOOK_CATEGORIES_PO : TEXTBOOK_CATEGORIES_VO;
+  const groepBuckets = {"1":"groep12","2":"groep12","3":"groep3","4":"groep3","5":"groep5","6":"groep5","7":"groep7","8":"groep7"};
+  const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3"};
+  const initLevel = userRole === "leerling" ? (groepBuckets[userLevel] || "") : userRole === "student" ? (klasBuckets[userLevel] || "") : "";
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
@@ -2363,7 +2367,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
   const [chapterNum, setChapterNum] = useState("");
   const [paragraaf, setParagraaf] = useState("");
   const [topic, setTopic] = useState("");
-  const [level, setLevel] = useState("");
+  const [level, setLevel] = useState(initLevel);
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [coverUrl, setCoverUrl] = useState(null);
@@ -2377,7 +2381,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
   const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
   const canNext1 = category !== "";
   const canNext2 = bookName.trim() !== "";
-  const canNext3 = chapterNum !== "" && level !== "";
+  const canNext3 = chapterNum !== "" && (level !== "" || initLevel !== "");
 
   // Known cover URLs for popular textbooks
   // Generate SVG covers matching real book colors/styles
