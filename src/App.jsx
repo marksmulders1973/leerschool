@@ -2451,7 +2451,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
     "Newton NaSk":   () => "/covers/newton-nask.jpg",
     "Nova NaSk":     () => "/covers/nova-nask.jpg",
     // ── Biologie VO ──────────────────────────────────────────────
-    "Biologie voor Jou (BvJ)": (d) => deelNum(d) >= 3 ? "/covers/biologie-voor-jou-nieuw.jpg" : "/covers/biologie-voor-jou.jpg",
+    "Biologie voor Jou (BvJ)": (d) => ({ 1: "/covers/bvj-havo-vwo-1.jpg", 2: "/covers/bvj-havo-vwo-2.jpg", 3: "/covers/bvj-havo-bovenbouw.jpg", 4: "/covers/bvj-vwo-bovenbouw.jpg" }[deelNum(d)] || "/covers/bvj-vmbo-onderbouw.jpg"),
     "Vivo":          () => "/covers/vivo.jpg",
     "Nectar":        (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar.jpg",
     "Vivo":          () => makeBookCover("Vivo",     "Biologie", ["#1b5e20","#388e3c","#4caf50"], "V"),
