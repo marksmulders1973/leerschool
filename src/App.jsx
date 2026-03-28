@@ -1409,13 +1409,13 @@ function HomePage({ onSelectRole, userName, setUserName }) {
             fontFamily: "'Fredoka', sans-serif",
             fontSize: 21,
             fontWeight: 700,
-            color: "#4eff91",
+            color: "#00d4ff",
             letterSpacing: 0.5,
             animation: "slimeWave 3.5s ease-in-out infinite",
             display: "inline-block",
-            textShadow: "0 0 18px rgba(78,255,145,0.55), 0 2px 0 rgba(0,80,30,0.4)",
+            textShadow: "0 0 18px rgba(0,212,255,0.7), 0 0 40px rgba(0,180,255,0.4)",
           }}>
-            🧫 Van oefenen naar slagen!
+            Elke studiebol slaagt
           </div>
           {/* drip drops */}
           {["25%","42%","60%","77%"].map((left, i) => (
@@ -1425,7 +1425,7 @@ function HomePage({ onSelectRole, userName, setUserName }) {
               left,
               width: 6,
               height: 0,
-              background: "radial-gradient(ellipse at top, #4eff91, #1aaa55)",
+              background: "radial-gradient(ellipse at top, #00d4ff, #0066aa)",
               borderRadius: "0 0 50% 50%",
               animation: `slimeDrip ${2.2 + i * 0.4}s ease-in-out infinite`,
               animationDelay: `${i * 0.5}s`,
@@ -1523,10 +1523,10 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         @keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
         @keyframes fadeBg { from { opacity:0; } to { opacity:1; } }
         @keyframes slimeWave {
-          0%, 100% { transform: scaleX(1) scaleY(1) translateY(0px); filter: drop-shadow(0 6px 4px rgba(80,255,120,0.35)); }
-          25% { transform: scaleX(1.04) scaleY(0.96) translateY(-2px); filter: drop-shadow(0 10px 6px rgba(80,255,120,0.5)); }
-          50% { transform: scaleX(0.97) scaleY(1.05) translateY(3px); filter: drop-shadow(0 3px 8px rgba(80,255,120,0.6)); }
-          75% { transform: scaleX(1.03) scaleY(0.98) translateY(-1px); filter: drop-shadow(0 8px 5px rgba(80,255,120,0.4)); }
+          0%, 100% { transform: scaleX(1) scaleY(1) translateY(0px); filter: drop-shadow(0 6px 4px rgba(0,212,255,0.35)); }
+          25% { transform: scaleX(1.04) scaleY(0.96) translateY(-2px); filter: drop-shadow(0 10px 6px rgba(0,212,255,0.5)); }
+          50% { transform: scaleX(0.97) scaleY(1.05) translateY(3px); filter: drop-shadow(0 3px 8px rgba(0,212,255,0.6)); }
+          75% { transform: scaleX(1.03) scaleY(0.98) translateY(-1px); filter: drop-shadow(0 8px 5px rgba(0,212,255,0.4)); }
         }
         @keyframes slimeDrip {
           0%, 80%, 100% { height: 0px; opacity: 0; }
