@@ -1480,13 +1480,13 @@ function HomePage({ onSelectRole, userName, setUserName }) {
 
         <div style={{ display: "flex", gap: 10, width: "100%", maxWidth: 360 }}>
           <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("leerling")}>
-            <img src="/leerling.jpg" alt="leerling" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
+            <img src="/leerling.jpg" alt="leerling" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
           </button>
           <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("student")}>
-            <img src="/student.jpg" alt="student" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
+            <img src="/student.jpg" alt="student" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
           </button>
           <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("teacher")}>
-            <img src="/leerkracht.jpg" alt="leerkracht" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block" }} />
+            <img src="/leerkracht.jpg" alt="leerkracht" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
           </button>
         </div>
 
