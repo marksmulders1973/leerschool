@@ -1124,7 +1124,8 @@ export default function App() {
       const hasTopic = quiz.topic && quiz.topic.trim().length > 0;
       const hasTextbook = !!quiz.textbook?.bookName;
 
-      if ((hasTopic || hasTextbook) && quiz.useAI !== false) {
+      const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
+      if ((hasTopic || hasTextbook || !hasSampleQuestions) && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
@@ -1138,7 +1139,7 @@ export default function App() {
         questions = shuffle(subjectQuestions).slice(0, quiz.questionCount || 20);
       }
       if (questions.length === 0) {
-        const fallbackLevel = quiz.level === "groep12" ? "groep12" : quiz.level === "groep3" ? "groep3" : "groep5";
+        const fallbackLevel = quiz.level?.startsWith("klas") ? "groep7" : (quiz.level === "groep12" ? "groep12" : quiz.level === "groep3" ? "groep3" : "groep5");
         questions = shuffle(SAMPLE_QUESTIONS.rekenen?.[fallbackLevel] || SAMPLE_QUESTIONS.rekenen?.groep5 || []).slice(0, quiz.questionCount || 20);
       }
     }
