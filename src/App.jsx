@@ -2407,7 +2407,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
       return "/covers/moderne-wiskunde-a.jpg";
     },
     "Nu Wiskunde":   () => makeBookCover("Nu Wiskunde",  "",        ["#0d3b66","#1d6fa5","#2a82b8"], "NW"),
-    "Netwerk":       () => makeBookCover("Netwerk",      "Wiskunde", ["#1a237e","#283593","#3949ab"], "N"),
+    "Netwerk":       () => "/covers/netwerk-wiskunde.jpg",
     "Pythagoras":    () => makeBookCover("Pythagoras",   "Wiskunde", ["#4a148c","#6a1b9a","#7b1fa2"], "P"),
     "Wiskunde Brief":() => makeBookCover("Wiskunde",     "Brief",    ["#1a3c5e","#2c6fad","#4a90c4"], "WB"),
     // ── Nederlands VO ────────────────────────────────────────────
@@ -2419,7 +2419,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
     },
     "Talent":        () => "/covers/talent.jpg",
     "Op Niveau":     () => "/covers/op-niveau.jpg",
-    "Kern Nederlands":() => "/covers/kern.jpg",
+    "Kern Nederlands":() => "/covers/kern-nederlands.png",
     // ── Engels VO ────────────────────────────────────────────────
     "Stepping Stones":() => "/covers/stepping-stones.jpg",
     "All Right!":    () => "/covers/all-right.jpg",
@@ -2432,6 +2432,7 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
     "Upload":        () => makeBookCover("Upload",    "Engels", ["#0b5345","#148f77","#1abc9c"], "U"),
     "Keys":          () => makeBookCover("Keys",      "Engels", ["#0e6251","#17a589","#45b39d"], "K"),
     "Kern Engels":   () => makeBookCover("Kern",      "Engels", ["#01579b","#0277bd","#039be5"], "KE"),
+    "Neue Kontakte": () => "/covers/neue-kontakte.png",
     // ── Aardrijkskunde VO ────────────────────────────────────────
     "De Geo":        () => "/covers/de-geo.jpg",
     "BuiteNLand":    () => "/covers/buitenland.jpg",
@@ -2442,17 +2443,18 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
     "MeMo":          (d) => deelNum(d) <= 2 ? "/covers/memo-onderbouw.jpg" : "/covers/memo.jpg",
     "Historica":     () => makeBookCover("Historica", "Geschiedenis", ["#4e342e","#6d4c41","#795548"], "H"),
     // ── NaSk (onderbouw) ─────────────────────────────────────────
-    "Overal NaSk":   () => makeBookCover("Overal",   "NaSk", ["#1b5e20","#2e7d32","#388e3c"], "ON"),
-    "Newton NaSk":   () => makeBookCover("Newton",   "NaSk", ["#e65100","#ef6c00","#f57c00"], "NN"),
-    "Nova NaSk":     () => makeBookCover("Nova",     "NaSk", ["#311b92","#4527a0","#512da8"], "SN"),
+    "Overal NaSk":   () => "/covers/overal-nask.jpg",
+    "Newton NaSk":   () => "/covers/newton-nask.jpg",
+    "Nova NaSk":     () => "/covers/nova-nask.jpg",
     // ── Biologie VO ──────────────────────────────────────────────
     "Biologie voor Jou (BvJ)": (d) => deelNum(d) >= 3 ? "/covers/biologie-voor-jou-nieuw.jpg" : "/covers/biologie-voor-jou.jpg",
+    "Vivo":          () => "/covers/vivo.jpg",
     "Nectar":        (d) => deelNum(d) >= 3 ? "/covers/nectar-bovenbouw.jpg" : "/covers/nectar.jpg",
     "Vivo":          () => makeBookCover("Vivo",     "Biologie", ["#1b5e20","#388e3c","#4caf50"], "V"),
     "10 voor Biologie":() => "/covers/10voorbiologie.jpg",
     // ── Natuurkunde VO ───────────────────────────────────────────
     "Systematische Natuurkunde":() => "/covers/sys-natuurkunde.jpg",
-    "Pulsar":        () => makeBookCover("Pulsar",   "Natuurkunde", ["#0d47a1","#1565c0","#1976d2"], "PL"),
+    "Pulsar":        () => "/covers/pulsar.jpg",
     "Nova Natuurkunde":() => makeBookCover("Nova",   "Natuurkunde", ["#4a148c","#6a1b9a","#7b1fa2"], "NN"),
     "Overal Natuurkunde":(d) => deelNum(d) >= 4 ? "/covers/natuurkunde-overal-4.jpg" : "/covers/natuurkunde-overal-1.jpg",
     // ── Scheikunde VO ────────────────────────────────────────────
@@ -2466,10 +2468,9 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
     // ── Duits VO ─────────────────────────────────────────────────
     "Na Klar!":      () => "/covers/na-klar.jpg",
     "TrabiTour":     () => "/covers/trabitour.jpg",
-    "Neue Kontakte": () => makeBookCover("Neue","Kontakte", ["#b71c1c","#c62828","#d32f2f"], "NK"),
     // ── Frans VO ─────────────────────────────────────────────────
     "Grandes Lignes":() => "/covers/grandes-lignes.jpg",
-    "Bravoure":      () => makeBookCover("Bravoure","Frans", ["#1a237e","#283593","#3949ab"], "BR"),
+    "Bravoure":      () => "/covers/bravoure.png",
     "D'accord":      () => "/covers/daccord.jpg",
     // ── Maatschappijleer VO ──────────────────────────────────────
     "Thema's Maatschappijleer":() => "/covers/themas-maatschappijleer.jpg",
@@ -2478,15 +2479,15 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
     // ── Basisschool rekenen ──────────────────────────────────────
     "Pluspunt":      () => "/covers/pluspunt.jpg",
     "De Wereld in Getallen":() => "/covers/wereld-in-getallen.jpg",
-    "Getal & Ruimte Junior":() => makeBookCover("G&R","Junior", ["#00695c","#00796b","#00897b"], "GR"),
-    "Wizwijs":       () => makeBookCover("Wizwijs","Rekenen", ["#6a1b9a","#7b1fa2","#8e24aa"], "WW"),
+    "Getal & Ruimte Junior":() => "/covers/getal-ruimte-junior.jpg",
+    "Wizwijs":       () => "/covers/wizwijs.jpg",
     "Alles Telt":    () => makeBookCover("Alles","Telt", ["#1565c0","#1976d2","#1e88e5"], "AT"),
     // ── Basisschool taal ─────────────────────────────────────────
     "Taal Actief":   () => "/covers/taal-actief.jpg",
     "Staal":         () => "/covers/staal.jpg",
     "Nieuw Nederlands Junior":() => makeBookCover("Nieuw NL","Junior", ["#004d40","#00695c","#00796b"], "NNJ"),
-    "Veilig Leren Lezen":() => makeBookCover("Veilig","Leren Lezen", ["#e53935","#d32f2f","#c62828"], "VLL"),
-    "Lijn 3":        () => makeBookCover("Lijn 3","Lezen", ["#f57f17","#f9a825","#fbc02d"], "L3"),
+    "Veilig Leren Lezen":() => "/covers/veilig-leren-lezen.webp",
+    "Lijn 3":        () => "/covers/lijn3.jpg",
     // ── Basisschool wereld & natuur ──────────────────────────────
     "Naut / Meander / Brandaan":() => "/covers/naut-meander-brandaan.jpg",
     "Argus Clou":    () => "/covers/argus-clou.jpg",
