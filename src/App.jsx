@@ -1402,6 +1402,37 @@ function HomePage({ onSelectRole, userName, setUserName }) {
   return (
     <div style={styles.page}>
       <div style={styles.heroSection}>
+
+        {/* Slime banner */}
+        <div style={{ position: "relative", marginBottom: 18, textAlign: "center" }}>
+          <div style={{
+            fontFamily: "'Fredoka', sans-serif",
+            fontSize: 21,
+            fontWeight: 700,
+            color: "#4eff91",
+            letterSpacing: 0.5,
+            animation: "slimeWave 3.5s ease-in-out infinite",
+            display: "inline-block",
+            textShadow: "0 0 18px rgba(78,255,145,0.55), 0 2px 0 rgba(0,80,30,0.4)",
+          }}>
+            🧫 Oefen met echte examenvragen!
+          </div>
+          {/* drip drops */}
+          {["25%","42%","60%","77%"].map((left, i) => (
+            <div key={i} style={{
+              position: "absolute",
+              bottom: -4,
+              left,
+              width: 6,
+              height: 0,
+              background: "radial-gradient(ellipse at top, #4eff91, #1aaa55)",
+              borderRadius: "0 0 50% 50%",
+              animation: `slimeDrip ${2.2 + i * 0.4}s ease-in-out infinite`,
+              animationDelay: `${i * 0.5}s`,
+            }} />
+          ))}
+        </div>
+
         <div style={{
           position: "relative",
           width: "90%",
@@ -1491,6 +1522,16 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         @keyframes confetti { 0% { transform:translateY(0) rotate(0deg); opacity:1; } 100% { transform:translateY(-200px) rotate(720deg); opacity:0; } }
         @keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
         @keyframes fadeBg { from { opacity:0; } to { opacity:1; } }
+        @keyframes slimeWave {
+          0%, 100% { transform: scaleX(1) scaleY(1) translateY(0px); filter: drop-shadow(0 6px 4px rgba(80,255,120,0.35)); }
+          25% { transform: scaleX(1.04) scaleY(0.96) translateY(-2px); filter: drop-shadow(0 10px 6px rgba(80,255,120,0.5)); }
+          50% { transform: scaleX(0.97) scaleY(1.05) translateY(3px); filter: drop-shadow(0 3px 8px rgba(80,255,120,0.6)); }
+          75% { transform: scaleX(1.03) scaleY(0.98) translateY(-1px); filter: drop-shadow(0 8px 5px rgba(80,255,120,0.4)); }
+        }
+        @keyframes slimeDrip {
+          0%, 80%, 100% { height: 0px; opacity: 0; }
+          40%, 60% { height: 14px; opacity: 0.7; }
+        }
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
           25% { transform: translateX(-8px); }
