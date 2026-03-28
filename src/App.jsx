@@ -1503,10 +1503,10 @@ function HomePage({ onSelectRole, userName, setUserName }) {
                   fontFamily: "'Fredoka', sans-serif", fontWeight: 700,
                   fontSize: 15, color: "#ffffff", letterSpacing: 0.3,
                 }}>{label}</span>
-                {sub && <span style={{
+                <span style={{
                   fontFamily: "'Nunito', sans-serif", fontSize: 10,
                   color: "rgba(255,255,255,0.7)", letterSpacing: 0.2,
-                }}>{sub}</span>}
+                }}>{sub || "\u00A0"}</span>
               </div>
             </button>
           ))}
