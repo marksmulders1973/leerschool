@@ -79,92 +79,124 @@ const SUBJECT_FOR_LEVEL = {
 };
 
 const TEXTBOOKS = {
+  // ── Voortgezet onderwijs ──────────────────────────────────────
   wiskunde: [
-    { id: "getal-ruimte", name: "Getal & Ruimte", icon: "📐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "moderne-wiskunde", name: "Moderne Wiskunde", icon: "📊", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "wiskunde-flex", name: "Wiskunde Flex", icon: "🔢", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "wiskundebrief", name: "Wiskunde Brief", icon: "📝", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "nu-wiskunde", name: "Nu Wiskunde", icon: "✏️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "getal-ruimte",      name: "Getal & Ruimte",     icon: "📐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "moderne-wiskunde",  name: "Moderne Wiskunde",   icon: "📊", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "wiskunde-flex",     name: "Wiskunde Flex",      icon: "🔢", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nu-wiskunde",       name: "Nu Wiskunde",        icon: "✏️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "netwerk",           name: "Netwerk",            icon: "🕸️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "pythagoras",        name: "Pythagoras",         icon: "📏", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "wiskundebrief",     name: "Wiskunde Brief",     icon: "📝", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   nederlands: [
-    { id: "nieuw-nederlands", name: "Nieuw Nederlands", icon: "📖", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "talent", name: "Talent", icon: "🌟", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "op-niveau", name: "Op Niveau", icon: "📚", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "kern", name: "Kern", icon: "🔤", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nieuw-nederlands",  name: "Nieuw Nederlands",   icon: "📖", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "talent",            name: "Talent",             icon: "🌟", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "op-niveau",         name: "Op Niveau",          icon: "📚", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "kern-nederlands",   name: "Kern Nederlands",    icon: "🔤", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   engels: [
-    { id: "stepping-stones", name: "Stepping Stones", icon: "🪨", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "all-right", name: "All Right!", icon: "✅", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "upload", name: "Upload", icon: "⬆️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "new-interface", name: "New Interface", icon: "🌐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "keys", name: "Keys", icon: "🔑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "stepping-stones",   name: "Stepping Stones",    icon: "🪨", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "all-right",         name: "All Right!",         icon: "✅", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "new-interface",     name: "New Interface",      icon: "🌐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "kern-engels",       name: "Kern Engels",        icon: "🔑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "upload",            name: "Upload",             icon: "⬆️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "keys",              name: "Keys",               icon: "🗝️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   aardrijkskunde: [
-    { id: "de-geo", name: "De Geo", icon: "🗺️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "buitenland", name: "BuiteNLand", icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "wereldwijs", name: "WereldWijs", icon: "🧭", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "de-geo",            name: "De Geo",             icon: "🗺️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "buitenland",        name: "BuiteNLand",         icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   geschiedenis: [
-    { id: "feniks", name: "Feniks", icon: "🔥", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "memo", name: "MeMo", icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "feniks",            name: "Feniks",             icon: "🔥", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "sprekend-verleden", name: "Sprekend Verleden",  icon: "🗣️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
     { id: "geschiedeniswerkplaats", name: "Geschiedeniswerkplaats", icon: "⚒️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "sprekend-verleden", name: "Sprekend Verleden", icon: "🗣️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "memo-geschiedenis", name: "MeMo",               icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "historica",         name: "Historica",          icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   biologie: [
-    { id: "biologie-voor-jou", name: "Biologie voor jou", icon: "🧬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "nectar", name: "Nectar", icon: "🌺", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "10voorbiologie", name: "10 voor Biologie", icon: "🔬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "biologie-voor-jou", name: "Biologie voor Jou (BvJ)", icon: "🧬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nectar",            name: "Nectar",             icon: "🌺", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "vivo",              name: "Vivo",               icon: "🦋", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "10voorbiologie",    name: "10 voor Biologie",   icon: "🔬", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+  ],
+  nask: [
+    { id: "overal-nask",       name: "Overal NaSk",        icon: "🔭", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "newton-nask",       name: "Newton NaSk",        icon: "🍎", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nova-nask",         name: "Nova NaSk",          icon: "💫", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   natuurkunde: [
-    { id: "sys-natuurkunde", name: "Systematische Natuurkunde", icon: "⚛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "nova", name: "Nova", icon: "💫", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "natuurkunde-overal", name: "Natuurkunde Overal", icon: "🌡️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "sys-natuurkunde",   name: "Systematische Natuurkunde", icon: "⚛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "pulsar",            name: "Pulsar",             icon: "💡", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "nova-nat",          name: "Nova Natuurkunde",   icon: "🌠", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "overal-nat",        name: "Overal Natuurkunde", icon: "🌡️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   scheikunde: [
-    { id: "chemie", name: "Chemie", icon: "🧪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "scheikunde-overal", name: "Scheikunde Overal", icon: "⚗️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "nova-scheikunde", name: "Nova Scheikunde", icon: "🔮", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "chemie-overal",     name: "Chemie Overal",      icon: "🧪", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "nova-scheikunde",   name: "Nova Scheikunde",    icon: "🔮", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "newton-scheikunde", name: "Newton Scheikunde",  icon: "⚗️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   economie: [
-    { id: "economie-integraal", name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
-    { id: "pincode", name: "Pincode", icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "pincode",           name: "Pincode",            icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "economie-integraal",name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "kern-economie",     name: "Kern Economie",      icon: "📊", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   duits: [
-    { id: "na-klar", name: "Na Klar!", icon: "🇩🇪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "trabitour", name: "TrabiTour", icon: "🚗", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "na-klar",           name: "Na Klar!",           icon: "🇩🇪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "trabitour",         name: "TrabiTour",          icon: "🚗", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "neue-kontakte",     name: "Neue Kontakte",      icon: "🤝", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   frans: [
-    { id: "grandes-lignes", name: "Grandes Lignes", icon: "🇫🇷", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "daccord", name: "D'accord", icon: "🗼", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "grandes-lignes",    name: "Grandes Lignes",     icon: "🇫🇷", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "bravoure",          name: "Bravoure",           icon: "🥐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "daccord",           name: "D'accord",           icon: "🗼", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
   ],
   maatschappijleer: [
-    { id: "leslab", name: "LesLab", icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
     { id: "themas-maatschappijleer", name: "Thema's Maatschappijleer", icon: "👥", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "memo-maatschappijleer",   name: "Memo Maatschappijleer",   icon: "📋", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "de-basis",                name: "De Basis",                icon: "🏫", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
-  basisschool: [
-    { id: "pluspunt", name: "Pluspunt (rekenen)", icon: "➕", defaultLevel: "groep5" },
-    { id: "argus-clou", name: "Argus Clou", icon: "🔍", defaultLevel: "groep5" },
-    { id: "wereld-in-getallen", name: "De Wereld in Getallen", icon: "🔢", defaultLevel: "groep5" },
-    { id: "taal-actief", name: "Taal Actief", icon: "📝", defaultLevel: "groep5" },
-    { id: "staal", name: "Staal (taal)", icon: "✍️", defaultLevel: "groep5" },
-    { id: "blink", name: "Blink (wereld)", icon: "🌐", defaultLevel: "groep5" },
-    { id: "naut-meander-brandaan", name: "Naut/Meander/Brandaan", icon: "🏔️", defaultLevel: "groep5" },
+  // ── Basisschool ──────────────────────────────────────────────
+  rekenen: [
+    { id: "pluspunt",          name: "Pluspunt",               icon: "➕", defaultLevel: "groep5" },
+    { id: "wereld-in-getallen",name: "De Wereld in Getallen",  icon: "🔢", defaultLevel: "groep5" },
+    { id: "gr-junior",         name: "Getal & Ruimte Junior",  icon: "📐", defaultLevel: "groep5" },
+    { id: "wizwijs",           name: "Wizwijs",                icon: "🧙", defaultLevel: "groep5" },
+    { id: "alles-telt",        name: "Alles Telt",             icon: "🧮", defaultLevel: "groep5" },
+  ],
+  taal: [
+    { id: "taal-actief",       name: "Taal Actief",            icon: "📝", defaultLevel: "groep5" },
+    { id: "staal",             name: "Staal",                  icon: "✍️", defaultLevel: "groep5" },
+    { id: "nieuw-nl-junior",   name: "Nieuw Nederlands Junior",icon: "📖", defaultLevel: "groep5" },
+    { id: "vll",               name: "Veilig Leren Lezen",     icon: "🔤", defaultLevel: "groep3" },
+    { id: "lijn3",             name: "Lijn 3",                 icon: "📚", defaultLevel: "groep3" },
+  ],
+  natuur: [
+    { id: "naut-meander-brandaan", name: "Naut / Meander / Brandaan", icon: "🏔️", defaultLevel: "groep5" },
+    { id: "argus-clou",        name: "Argus Clou",             icon: "🔍", defaultLevel: "groep5" },
+    { id: "blink",             name: "Blink Wereld",           icon: "🌐", defaultLevel: "groep5" },
   ],
 };
 
-const TEXTBOOK_CATEGORIES = [
-  { id: "wiskunde", label: "Wiskunde", icon: "📐" },
-  { id: "nederlands", label: "Nederlands", icon: "📖" },
-  { id: "engels", label: "Engels", icon: "🇬🇧" },
-  { id: "aardrijkskunde", label: "Aardrijkskunde", icon: "🌍" },
-  { id: "geschiedenis", label: "Geschiedenis", icon: "🏛️" },
-  { id: "biologie", label: "Biologie", icon: "🧬" },
-  { id: "natuurkunde", label: "Natuurkunde", icon: "⚛️" },
-  { id: "scheikunde", label: "Scheikunde", icon: "🧪" },
-  { id: "economie", label: "Economie", icon: "💶" },
-  { id: "duits", label: "Duits", icon: "🇩🇪" },
-  { id: "frans", label: "Frans", icon: "🇫🇷" },
-  { id: "maatschappijleer", label: "Maatschappijleer", icon: "🏛️" },
+const TEXTBOOK_CATEGORIES_VO = [
+  { id: "wiskunde",        label: "Wiskunde",         icon: "📐" },
+  { id: "nederlands",      label: "Nederlands",       icon: "📖" },
+  { id: "engels",          label: "Engels",           icon: "🇬🇧" },
+  { id: "aardrijkskunde",  label: "Aardrijkskunde",   icon: "🌍" },
+  { id: "geschiedenis",    label: "Geschiedenis",     icon: "🏛️" },
+  { id: "nask",            label: "NaSk",             icon: "🔭" },
+  { id: "biologie",        label: "Biologie",         icon: "🧬" },
+  { id: "natuurkunde",     label: "Natuurkunde",      icon: "⚛️" },
+  { id: "scheikunde",      label: "Scheikunde",       icon: "🧪" },
+  { id: "economie",        label: "Economie",         icon: "💶" },
+  { id: "duits",           label: "Duits",            icon: "🇩🇪" },
+  { id: "frans",           label: "Frans",            icon: "🇫🇷" },
+  { id: "maatschappijleer",label: "Maatschappijleer", icon: "🏛️" },
+];
+const TEXTBOOK_CATEGORIES_PO = [
+  { id: "rekenen", label: "Rekenen",          icon: "🔢" },
+  { id: "taal",    label: "Taal / Nederlands", icon: "📝" },
+  { id: "natuur",  label: "Wereld & Natuur",   icon: "🌿" },
 ];
 
 const SAMPLE_QUESTIONS = {
@@ -1287,6 +1319,7 @@ export default function App() {
             setCurrentQuiz(quiz);
             startGame(quiz, "self");
           }}
+          userRole={role}
           onBack={() => setPage("student-home")}
           onHome={() => setPage("home")}
         />
@@ -2319,7 +2352,8 @@ function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
 }
 
 // ─── Textbook Quiz ───────────────────────────────────────────────
-function TextbookQuiz({ onStart, onBack, onHome }) {
+function TextbookQuiz({ onStart, onBack, onHome, userRole }) {
+  const TEXTBOOK_CATEGORIES = userRole === "leerling" ? TEXTBOOK_CATEGORIES_PO : TEXTBOOK_CATEGORIES_VO;
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
@@ -2623,7 +2657,7 @@ function TextbookQuiz({ onStart, onBack, onHome }) {
                 )}
                 <div style={{ marginTop: 14, textAlign: "center" }}>
                   <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
-                  <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{TEXTBOOK_CATEGORIES.find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
+                  <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{[...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO].find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
                   {coverUrl && isKnownCover && <div style={{ fontSize: 13, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Cover gevonden</div>}
                   {coverUrl && !isKnownCover && (
                     <div style={{ marginTop: 10 }}>
