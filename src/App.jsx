@@ -1479,15 +1479,37 @@ function HomePage({ onSelectRole, userName, setUserName }) {
         </div>
 
         <div style={{ display: "flex", gap: 10, width: "100%", maxWidth: 360 }}>
-          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("leerling")}>
-            <img src="/leerling.jpg" alt="leerling" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
-          </button>
-          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("student")}>
-            <img src="/student.jpg" alt="student" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
-          </button>
-          <button style={{ flex: 1, border: "none", padding: 0, cursor: "pointer", borderRadius: 18, overflow: "hidden", boxShadow: "0 6px 24px rgba(0,0,0,0.5)", background: "none" }} onClick={() => handleSelect("teacher")}>
-            <img src="/leerkracht.jpg" alt="leerkracht" style={{ width: "100%", height: 170, objectFit: "cover", objectPosition: "center 62%", display: "block", mixBlendMode: "multiply" }} />
-          </button>
+          {[
+            { role: "leerling", label: "leerling", sub: "groep 1 t/m 8" },
+            { role: "student", label: "student", sub: "klas 1 t/m 4" },
+            { role: "teacher", label: "leerkracht", sub: "" },
+          ].map(({ role, label, sub }) => (
+            <button key={role} onClick={() => handleSelect(role)} style={{
+              flex: 1, border: "none", padding: 0, cursor: "pointer",
+              borderRadius: 18, overflow: "hidden",
+              boxShadow: "0 6px 24px rgba(0,0,0,0.5)",
+              background: "#0d2145", position: "relative",
+            }}>
+              <img src="/bol.jpg" alt={label} style={{
+                width: "100%", height: 140, objectFit: "cover",
+                objectPosition: "center center", display: "block",
+              }} />
+              <div style={{
+                background: "linear-gradient(to bottom, rgba(13,33,69,0) 0%, rgba(13,33,69,0.95) 100%)",
+                padding: "10px 6px 12px",
+                display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
+              }}>
+                <span style={{
+                  fontFamily: "'Fredoka', sans-serif", fontWeight: 700,
+                  fontSize: 15, color: "#ffffff", letterSpacing: 0.3,
+                }}>{label}</span>
+                {sub && <span style={{
+                  fontFamily: "'Nunito', sans-serif", fontSize: 10,
+                  color: "rgba(255,255,255,0.7)", letterSpacing: 0.2,
+                }}>{sub}</span>}
+              </div>
+            </button>
+          ))}
         </div>
 
         <button
