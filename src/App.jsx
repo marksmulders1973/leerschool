@@ -2575,17 +2575,17 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
             <h3 style={styles.stepTitle}>Kies je boek</h3>
 
             {TEXTBOOKS[category] && (
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 16 }}>
-                {TEXTBOOKS[category].map((book) => {
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14, marginBottom: 16 }}>
+                {[...TEXTBOOKS[category]].sort((a, b) => a.name.localeCompare(b.name, "nl")).map((book) => {
                   const coverPath = BOOK_COVERS[book.name] ? BOOK_COVERS[book.name]("") : null;
                   const isSelected = selectedBook?.id === book.id;
                   return (
                     <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else setLevel(""); }} style={{
                       background: "transparent", border: "none", padding: 0, cursor: "pointer",
-                      display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
+                      display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
                     }}>
                       <div style={{
-                        width: "100%", aspectRatio: "3/4", borderRadius: 10, overflow: "hidden",
+                        width: "100%", aspectRatio: "3/4", borderRadius: 12, overflow: "hidden",
                         border: isSelected ? "3px solid #00e676" : "3px solid transparent",
                         boxShadow: isSelected ? "0 0 0 2px #00c85360, 0 4px 16px rgba(0,200,83,0.3)" : "0 2px 10px rgba(0,0,0,0.4)",
                         position: "relative",
@@ -2593,15 +2593,15 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
                         {coverPath ? (
                           <img src={coverPath} alt={book.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                         ) : (
-                          <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 32 }}>
+                          <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40 }}>
                             {book.icon}
                           </div>
                         )}
                         {isSelected && (
-                          <div style={{ position: "absolute", top: 4, right: 4, background: "#00c853", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700 }}>✓</div>
+                          <div style={{ position: "absolute", top: 6, right: 6, background: "#00c853", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
                         )}
                       </div>
-                      <span style={{ fontSize: 11, color: isSelected ? "#00e676" : "#8eaadb", fontWeight: isSelected ? 700 : 500, textAlign: "center", lineHeight: 1.2 }}>{book.name}</span>
+                      <span style={{ fontSize: 12, color: isSelected ? "#00e676" : "#8eaadb", fontWeight: isSelected ? 700 : 500, textAlign: "center", lineHeight: 1.3 }}>{book.name}</span>
                     </button>
                   );
                 })}
