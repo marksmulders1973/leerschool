@@ -547,6 +547,227 @@ const CHAPTER_TITLES = {
     "Overheid",
     "Internationaal",
   ],
+  // ── Natuurkunde ──────────────────────────────────────────────
+  "sys-natuurkunde": [
+    "Krachten",
+    "Beweging",
+    "Energie en arbeid",
+    "Warmte en temperatuur",
+    "Trillingen en golven",
+    "Elektriciteit",
+    "Magnetisme en inductie",
+    "Straling en atoomfysica",
+  ],
+  "pulsar": [
+    "Krachten en beweging",
+    "Energie",
+    "Warmte",
+    "Golven en geluid",
+    "Licht en optica",
+    "Elektriciteit",
+    "Magnetisme",
+    "Moderne fysica",
+  ],
+  "nova-nat": [
+    "Krachten",
+    "Beweging",
+    "Energie",
+    "Warmte",
+    "Golven",
+    "Elektriciteit",
+    "Magnetisme",
+    "Straling",
+  ],
+  "overal-nat": [
+    "Krachten en beweging",
+    "Energie en arbeid",
+    "Warmte",
+    "Golven en geluid",
+    "Elektriciteit",
+    "Magnetisme",
+    "Licht",
+    "Straling",
+  ],
+  // ── Wiskunde: Moderne Wiskunde ───────────────────────────────
+  "mw-hv1a": [
+    "Getallen en variabelen",
+    "Verhoudingen en procenten",
+    "Meten en meetkunde",
+    "Formules en grafieken",
+    "Statistiek en kansen",
+  ],
+  "mw-vwo1a": [
+    "Getallen en variabelen",
+    "Verhoudingen en procenten",
+    "Meten en meetkunde",
+    "Formules en grafieken",
+    "Statistiek en kansen",
+  ],
+  "mw-havo-a1": [
+    "Getallen",
+    "Verhoudingen",
+    "Algebra",
+    "Meetkunde",
+    "Statistiek",
+  ],
+  "mw-vwo-b1": [
+    "Getallen",
+    "Verhoudingen",
+    "Algebra en functies",
+    "Meetkunde",
+    "Statistiek en kansen",
+  ],
+  // ── Wiskunde: KERN ───────────────────────────────────────────
+  "kern-wis-hv1a": [
+    "Getallen en bewerkingen",
+    "Verhoudingen",
+    "Meetkunde",
+    "Algebra",
+    "Statistiek",
+  ],
+  "kern-wis-hv1b": [
+    "Breuken en procenten",
+    "Algebra",
+    "Meetkunde",
+    "Functies en grafieken",
+    "Kansen",
+  ],
+  "kern-wis-hv2a": [
+    "Lineaire verbanden",
+    "Kwadratische verbanden",
+    "Meetkunde",
+    "Statistiek",
+    "Stelsels",
+  ],
+  "netwerk-wis": [
+    "Getallen",
+    "Verhoudingen",
+    "Meetkunde",
+    "Verbanden en grafieken",
+    "Statistiek en kansen",
+  ],
+  "mathplus": [
+    "Analyse",
+    "Algebra",
+    "Meetkunde",
+    "Statistiek en kansen",
+    "Differentiëren",
+  ],
+  // ── Basisschool: Rekenen ─────────────────────────────────────
+  "pluspunt": [
+    "Tellen en getallen",
+    "Optellen en aftrekken",
+    "Vermenigvuldigen",
+    "Delen",
+    "Breuken",
+    "Meten en tijd",
+    "Meetkunde",
+    "Statistiek",
+  ],
+  "wereld-in-getallen": [
+    "Tellen en getallen",
+    "Optellen en aftrekken",
+    "Vermenigvuldigen",
+    "Delen",
+    "Breuken en kommagetallen",
+    "Meten en tijd",
+    "Meetkunde",
+    "Statistiek",
+  ],
+  "gr-junior": [
+    "Getallen",
+    "Optellen en aftrekken",
+    "Vermenigvuldigen",
+    "Delen",
+    "Breuken",
+    "Meten",
+    "Meetkunde",
+  ],
+  "wizwijs": [
+    "Getallen",
+    "Optellen en aftrekken",
+    "Vermenigvuldigen en delen",
+    "Breuken",
+    "Meten en tijd",
+    "Meetkunde",
+  ],
+  "alles-telt": [
+    "Getallen",
+    "Optellen en aftrekken",
+    "Vermenigvuldigen",
+    "Delen",
+    "Meten en tijd",
+    "Meetkunde",
+    "Statistiek",
+  ],
+  // ── Basisschool: Taal ────────────────────────────────────────
+  "taal-actief": [
+    "Luisteren en spreken",
+    "Lezen",
+    "Schrijven",
+    "Spelling",
+    "Woordenschat",
+    "Taalbeschouwing",
+  ],
+  "staal": [
+    "Luisteren en spreken",
+    "Lezen",
+    "Schrijven",
+    "Spelling",
+    "Woordenschat",
+    "Grammatica",
+  ],
+  "nieuw-nl-junior": [
+    "Luisteren",
+    "Spreken",
+    "Lezen",
+    "Schrijven",
+    "Spelling",
+    "Woordenschat",
+  ],
+  "vll": [
+    "Letters en klanken",
+    "Woorden lezen",
+    "Zinnen lezen",
+    "Teksten lezen",
+    "Schrijven",
+    "Spelling",
+  ],
+  "lijn3": [
+    "Letters en klanken",
+    "Woorden",
+    "Zinnen",
+    "Teksten",
+    "Schrijven",
+  ],
+  // ── Basisschool: Natuur & Wereld ─────────────────────────────
+  "naut-meander-brandaan": [
+    "Het menselijk lichaam",
+    "Planten en dieren",
+    "Natuur en milieu",
+    "Weer en seizoenen",
+    "Aarde en ruimte",
+    "Techniek",
+    "Nederland en de wereld",
+  ],
+  "argus-clou": [
+    "Het menselijk lichaam",
+    "Planten",
+    "Dieren",
+    "Natuur en milieu",
+    "Weer en klimaat",
+    "Aarde en ruimte",
+    "Techniek en energie",
+  ],
+  "blink": [
+    "Het menselijk lichaam",
+    "Planten en dieren",
+    "Natuur en duurzaamheid",
+    "Klimaat en weer",
+    "Aarde en ruimte",
+    "Techniek",
+    "Nederland en de wereld",
+  ],
 };
 
 // Paragraaftitels per boek per hoofdstuk (index 0 = §X.1)
@@ -654,6 +875,182 @@ const PARAGRAPH_TITLES = {
     4: ["Functies", "Lineaire functies", "Grafieken", "Snijpunten"],
     5: ["Kansen berekenen", "Boomdiagrammen", "Combinaties"],
   },
+  // ── Systematische Natuurkunde ────────────────────────────────
+  "sys-natuurkunde": {
+    1: ["Kracht en massa", "Gewicht en zwaartekracht", "Krachten samenvoegen", "Evenwicht", "Druk"],
+    2: ["Snelheid", "Gemiddelde snelheid", "Versnelling", "Eenparig versnelde beweging", "Vrije val"],
+    3: ["Arbeid", "Kinetische energie", "Potentiële energie", "Behoud van energie", "Vermogen"],
+    4: ["Temperatuur en warmte", "Soortelijke warmte", "Smelt- en verdampingswarmte", "Warmtegeleiding en convectie", "Stralingsuitwisseling"],
+    5: ["Trillingen", "Golven", "Geluid en toonhoogte", "Licht als golf", "Elektromagnetisch spectrum"],
+    6: ["Elektrische lading", "Spanning", "Stroomsterkte", "Weerstand (wet van Ohm)", "Serie- en parallelschakeling", "Elektrisch vermogen"],
+    7: ["Magneten", "Magnetisch veld", "Kracht op stroomdraad", "Elektromagnetische inductie", "Transformator"],
+    8: ["Atoommodel", "Radioactiviteit", "Kernreacties", "Straling en gezondheid"],
+  },
+  // ── Pulsar, Nova Nat, Overal Nat (_default per hoofdstuk) ───
+  "pulsar": {
+    _default: ["Begrippen en theorie", "Formules en berekeningen", "Toepassingen", "Opgaven"],
+  },
+  "nova-nat": {
+    _default: ["Introductie en begrippen", "Formules en wetten", "Toepassingen en experimenten", "Opgaven"],
+  },
+  "overal-nat": {
+    _default: ["Begrippen", "Formules en berekeningen", "Experimenten", "Oefeningen"],
+  },
+  // ── Wiskunde (_default per hoofdstuk) ────────────────────────
+  "mw-hv1a":       { _default: ["Begrippen en definitie", "Rekenregels", "Toepassingen", "Gemengde opgaven"] },
+  "mw-vwo1a":      { _default: ["Begrippen en definitie", "Rekenregels", "Toepassingen", "Gemengde opgaven"] },
+  "mw-havo-a1":    { _default: ["Theorie", "Voorbeelden", "Oefeningen", "Extra uitdaging"] },
+  "mw-vwo-b1":     { _default: ["Theorie", "Voorbeelden", "Oefeningen", "Extra uitdaging"] },
+  "kern-wis-hv1a": { _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"] },
+  "kern-wis-hv1b": { _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"] },
+  "kern-wis-hv2a": { _default: ["Theorie", "Oefeningen", "Toepassingen", "Verdieping"] },
+  "netwerk-wis":   { _default: ["Oriëntatie", "Theorie", "Oefeningen", "Verrijking"] },
+  "mathplus":      { _default: ["Theorie en begrippen", "Standaardmethoden", "Toepassingen", "Bewijzen"] },
+  "gr-hv2": {
+    _default: ["Begrippen", "Rekenregels", "Toepassingen", "Gemengde opgaven"],
+  },
+  // ── Economie ─────────────────────────────────────────────────
+  "pincode": {
+    1: ["Schaarste", "Keuzes maken", "Kosten en baten", "Productiefactoren"],
+    2: ["Vraag", "Aanbod", "Marktevenwicht", "Overheid en de markt"],
+    3: ["Functies van geld", "Sparen en lenen", "Rente", "Betaalfuncties"],
+    4: ["Arbeidsmarkt", "Loon en salaris", "Uitkeringen", "Werkloosheid"],
+    5: ["Rol van de overheid", "Belastingen", "Sociale zekerheid", "Overheidsbeleid"],
+    6: ["Internationale handel", "Wisselkoersen", "Europese Unie", "Globalisering"],
+  },
+  "economie-integraal": {
+    1: ["Schaarste en keuzes", "Productiefactoren", "Ruil en geld", "Economische sectoren"],
+    2: ["Vraag", "Aanbod", "Marktevenwicht", "Prijselasticiteit"],
+    3: ["Productiekosten", "Omzet en winst", "Kostensoorten", "Break-even analyse"],
+    4: ["Arbeidsmarkt", "Lonen en CAO", "Werkgelegenheid", "Inflatie en loonkosten"],
+    5: ["Belastingen", "Overheidsuitgaven", "Begrotingstekort", "Economische politiek"],
+    6: ["Geld en betaalfuncties", "Centrale bank", "Krediet en rente", "Inflatie"],
+    7: ["Internationale handel", "Comparatieve voordelen", "Wisselkoersen", "Betalingsbalans"],
+    8: ["Economische groei", "Conjunctuurcycli", "Welvaart en welzijn", "Duurzame ontwikkeling"],
+  },
+  "kern-economie": {
+    _default: ["Begrippen", "Theorie", "Toepassingen", "Opgaven"],
+  },
+  // ── Maatschappijleer ─────────────────────────────────────────
+  "themas-maatschappijleer": {
+    1: ["Vormen van democratie", "Verkiezingen", "Politieke partijen", "Coalitievorming"],
+    2: ["Rechtsstatelijke beginselen", "Grondwet en grondrechten", "Strafrecht", "Burgerlijk recht"],
+    3: ["Sociale groepen", "Cultuur en identiteit", "Discriminatie", "Multiculturele samenleving"],
+    4: ["Sociale zekerheid", "Zorg en welzijn", "Onderwijs", "Hervorming verzorgingsstaat"],
+    5: ["Klassieke grondrechten", "Sociale grondrechten", "Internationale mensenrechten"],
+    6: ["Het parlement", "De regering", "Wetgeving", "Democratische controle"],
+    7: ["Buitenlandse politiek", "Internationale organisaties", "Conflicten en veiligheid"],
+  },
+  "memo-maatschappijleer": {
+    _default: ["Theorie", "Begrippen", "Casussen", "Toetsvragen"],
+  },
+  "de-basis": {
+    _default: ["Begrippen", "Theorie", "Toepassingen", "Vragen"],
+  },
+  // ── Scheikunde ───────────────────────────────────────────────
+  "chemie-overal": {
+    1: ["Zuivere stoffen en mengsels", "Eigenschappen van stoffen", "Dichtheid", "Oplossen en kristalliseren"],
+    2: ["Atoommodel van Bohr", "Atoommassa", "Moleculen", "Ionen"],
+    3: ["Chemische reacties", "Reactievergelijkingen", "Stoichiometrie", "Mol en molmassa"],
+    4: ["Zuurgraad en pH", "Zuren en basen", "Neutralisatie", "Buffers"],
+    5: ["Metalen en legeringen", "Reductie en oxidatie", "Corrosie", "Elektrolyse"],
+    6: ["Koolwaterstoffen", "Alkanen en alkenen", "Functionele groepen", "Plastics"],
+    7: ["Reactiesnelheid", "Evenwichtsreacties", "Le Chatelier", "Katalyse"],
+    8: ["Galvanische cel", "Elektrolyse", "Accumulatoren", "Brandstofcellen"],
+  },
+  "nova-scheikunde": {
+    _default: ["Begrippen en theorie", "Formules en reacties", "Berekeningen", "Experimenten"],
+  },
+  "newton-scheikunde": {
+    _default: ["Begrippen", "Theorie", "Oefeningen", "Practicum"],
+  },
+  // ── Engels ───────────────────────────────────────────────────
+  "stepping-stones": {
+    _default: ["Tekst en begrip", "Woordenschat", "Grammatica", "Luisteren", "Spreken", "Schrijven", "Examentraining"],
+  },
+  "all-right": {
+    _default: ["Tekst en begrip", "Woordenschat", "Grammatica", "Luisteren", "Spreken", "Schrijven"],
+  },
+  "new-interface": {
+    _default: ["Tekst en begrip", "Woordenschat", "Grammatica", "Vaardigheden", "Cultuur"],
+  },
+  "kern-engels": {
+    _default: ["Lezen", "Woordenschat", "Grammatica", "Luisteren", "Spreken", "Schrijven"],
+  },
+  "upload": {
+    _default: ["Tekst en begrip", "Woordenschat", "Grammatica", "Vaardigheden"],
+  },
+  "keys": {
+    _default: ["Lezen", "Woordenschat", "Grammatica", "Luisteren", "Spreken"],
+  },
+  // ── Duits ────────────────────────────────────────────────────
+  "na-klar": {
+    _default: ["Sprechen", "Wörter lernen", "Lesen", "Schreiben", "Grammatik", "Examentraining"],
+  },
+  "trabitour": {
+    _default: ["Textverstehen", "Wortschatz", "Grammatik", "Sprechen", "Schreiben"],
+  },
+  "neue-kontakte": {
+    _default: ["Textverstehen", "Wortschatz", "Grammatik", "Kommunikation", "Schreiben"],
+  },
+  // ── Frans ────────────────────────────────────────────────────
+  "grandes-lignes": {
+    _default: ["Vocabulaire", "Phrases-clés", "Lire", "Parler", "Écrire", "Grammaire", "Carrousel Culturel"],
+  },
+  "bravoure": {
+    _default: ["Vocabulaire", "Compréhension", "Grammaire", "Expression orale", "Expression écrite"],
+  },
+  "daccord": {
+    _default: ["Vocabulaire", "Compréhension", "Grammaire", "Communication", "Culture"],
+  },
+  // ── Nederlands ───────────────────────────────────────────────
+  "nn-hv1": {
+    _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Spreekvaardigheid", "Woordenschat", "Spelling", "Taalbeschouwing"],
+  },
+  "nn-hv2":         { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Spreekvaardigheid", "Woordenschat", "Spelling", "Grammatica"] },
+  "nn-havo3":       { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Woordenschat", "Spelling", "Literatuur"] },
+  "nn-vwo4":        { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Woordenschat", "Literatuur", "Examentraining"] },
+  "talent-hv1":     { _default: ["Luisteren", "Lezen", "Spreken", "Schrijven", "Woordenschat", "Spelling"] },
+  "talent-max-hv2b":{ _default: ["Luisteren", "Lezen", "Spreken", "Schrijven", "Woordenschat", "Grammatica"] },
+  "talent-max-vwo2b":{ _default: ["Lezen", "Schrijven", "Spreken", "Woordenschat", "Spelling", "Taalbeschouwing"] },
+  "talent-max-bb":  { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Literatuur", "Examentraining"] },
+  "op-niveau-hv1":  { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Spreken", "Woordenschat", "Spelling"] },
+  "op-niveau-hv2":  { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Woordenschat", "Spelling"] },
+  "op-niveau-havo45":{ _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Literatuur", "Examen"] },
+  "op-niveau-vwo56": { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Literatuur", "Examen"] },
+  "kern-nl-hv1":    { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Spreken", "Spelling", "Woordenschat"] },
+  "kern-nl-hv2":    { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Spelling", "Grammatica"] },
+  "kern-nl-havo3":  { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Literatuur", "Examen"] },
+  "kern-nl-vwo3":   { _default: ["Leesvaardigheid", "Schrijfvaardigheid", "Argumenteren", "Literatuur", "Examen"] },
+  // ── Aardrijkskunde ───────────────────────────────────────────
+  "buitenland": {
+    1: ["Kaarten lezen", "Coördinaten", "Schaal", "Soorten kaarten"],
+    2: ["Klimaatfactoren", "Klimaatzones", "Neerslag en temperatuur", "Klimaatverandering"],
+    3: ["Bevolkingsgroei", "Bevolkingsspreiding", "Migratie", "Vergrijzing"],
+    4: ["Verstedelijking", "Stadsstructuur", "Problemen in steden"],
+    5: ["Landbouwsystemen", "Voedselproductie", "Landbouw en milieu"],
+    6: ["Grondstoffen", "Industrie", "Energie"],
+    7: ["Hernieuwbare energie", "Milieuproblemen", "Duurzame ontwikkeling"],
+    8: ["Nederland in Europa", "Internationale handel"],
+    9: ["Mondiale problemen", "Arme en rijke landen"],
+    10: ["Globalisering", "Duurzame toekomst"],
+  },
+  // ── Basisschool: Rekenen ─────────────────────────────────────
+  "pluspunt":            { _default: ["Begrippen en uitleg", "Oefeningen", "Toepassingen", "Herhaling"] },
+  "wereld-in-getallen":  { _default: ["Begrippen en uitleg", "Oefeningen", "Toepassingen", "Extra"] },
+  "gr-junior":           { _default: ["Introductie", "Oefeningen", "Toepassingen", "Herhaling"] },
+  "wizwijs":             { _default: ["Begrippen", "Oefeningen", "Toepassingen", "Verdieping"] },
+  "alles-telt":          { _default: ["Begrippen", "Rekenregels", "Oefeningen", "Herhaling"] },
+  // ── Basisschool: Taal ────────────────────────────────────────
+  "taal-actief":   { _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"] },
+  "staal":         { _default: ["Theorie", "Oefeningen", "Schrijfopdrachten", "Herhaling"] },
+  "nieuw-nl-junior":{ _default: ["Tekst en begrip", "Woordenschat", "Spelling", "Schrijven"] },
+  "vll":           { _default: ["Klanken en letters", "Woorden", "Leesoefeningen", "Schrijven"] },
+  "lijn3":         { _default: ["Klanken en letters", "Woorden", "Zinnen", "Schrijven"] },
+  // ── Basisschool: Natuur ──────────────────────────────────────
+  "naut-meander-brandaan": { _default: ["Introductie", "Begrippen", "Opdrachten", "Samenvatting"] },
+  "argus-clou":            { _default: ["Introductie", "Begrippen", "Onderzoek", "Toepassing"] },
+  "blink":                 { _default: ["Introductie", "Begrippen", "Opdrachten", "Verdieping"] },
 };
 
 const TEXTBOOK_CATEGORIES_VO = [
@@ -3480,7 +3877,8 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
                   <select style={selectStyle} value={paragraaf} onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}>
                     <option value="">-- Heel hoofdstuk --</option>
                     {(() => {
-                      const paraTitles = selectedBook ? ((PARAGRAPH_TITLES[selectedBook.id] || {})[chapterNum] || []) : [];
+                      const _bookParas = selectedBook ? (PARAGRAPH_TITLES[selectedBook.id] || {}) : {};
+                      const paraTitles = _bookParas[chapterNum] || _bookParas._default || [];
                       const count = paraTitles.length > 0 ? paraTitles.length : 12;
                       return Array.from({length: count}, (_, i) => i + 1).map(n => {
                         const t = paraTitles[n - 1];
