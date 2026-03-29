@@ -549,6 +549,113 @@ const CHAPTER_TITLES = {
   ],
 };
 
+// Paragraaftitels per boek per hoofdstuk (index 0 = §X.1)
+const PARAGRAPH_TITLES = {
+  // ── Biologie voor Jou Havo/vwo Deel 1 ───────────────────────
+  "bvj-havo-vwo-1": {
+    1: ["Levend, dood en levenloos", "Organismen", "Groei en ontwikkeling", "Metamorfose", "Aanpassing aan de omgeving"],
+    2: ["Organen benoemen", "Van orgaan naar cel", "Cellen en celonderdelen", "Celwand en celmembraan", "Celdeling"],
+    3: ["Indelen en benoemen", "Virussen en bacteriën", "Protisten en schimmels", "Planten", "Dieren zonder ruggengraat", "Dieren met ruggengraat", "Determineren"],
+    4: ["Het skelet van de mens", "De bouw van botten", "Beenverbindingen", "Spieren", "Bewegen", "Steun bij planten en dieren"],
+    5: ["Zintuigen", "Het zenuwstelsel", "Reflexen en gedrag", "Hormonen", "Regeling"],
+    6: ["Bloemen en bestuiving", "Zaad en vrucht", "Ongeslachtelijke voortplanting bij planten", "Geslachtelijke voortplanting bij dieren", "Ontwikkeling van het ei", "Zorg voor nakomelingen"],
+  },
+  // ── Biologie voor Jou Havo/vwo Deel 2 ───────────────────────
+  "bvj-havo-vwo-2": {
+    1: ["Verbranding", "Ademhalen", "Longademhaling", "Gasuitwisseling in de longen", "Celademhaling"],
+    2: ["Voedingsstoffen", "Vertering in de mond en maag", "Vertering in de dunne darm", "Opname en transport", "Het grote en kleine darmkanaal"],
+    3: ["Bloed en bloedcellen", "Het hart", "Bloedvaten", "De bloedsomloop", "Lymfe en afweer"],
+    4: ["Erfelijkheid en DNA", "Van DNA naar eiwit", "Genen en allelen", "Overerving", "Mutaties", "Evolutie en natuurlijke selectie"],
+    5: ["Ecosystemen", "Voedselrelaties", "Kringlopen", "Populaties", "Milieuproblemen en duurzaamheid"],
+  },
+  // ── Biologie voor Jou VMBO onderbouw ────────────────────────
+  "bvj-vmbo-onderbouw": {
+    1: ["Levend, dood en levenloos", "Organismen", "Groei en ontwikkeling", "Aanpassing"],
+    2: ["Organen", "Cellen", "Celonderdelen", "Celdeling"],
+    3: ["Indelen", "Bacteriën en virussen", "Schimmels", "Planten", "Dieren"],
+    4: ["Het skelet", "Botten en gewrichten", "Spieren", "Bewegen"],
+    5: ["Zintuigen", "Zenuwstelsel", "Hormonen"],
+    6: ["Bloemen", "Bestuiving en zaad", "Voortplanting bij dieren"],
+  },
+  // ── Biologie voor Jou VMBO bovenbouw ────────────────────────
+  "bvj-vmbo-bovenbouw": {
+    1: ["Verbranding", "Ademhaling", "Longademhaling"],
+    2: ["Voedingsstoffen", "Vertering", "Opname"],
+    3: ["Bloed en bloedcellen", "Het hart", "Bloedvaten", "Bloedsomloop"],
+    4: ["Erfelijkheid", "Genen", "Overerving"],
+    5: ["Ecosystemen", "Voedselketens", "Milieu"],
+  },
+  // ── Nectar ───────────────────────────────────────────────────
+  "nectar": {
+    1: ["Cellen", "Celonderdelen", "Weefsels", "Organen"],
+    2: ["Voedingsstoffen", "Spijsverteringskanaal", "Vertering", "Opname"],
+    3: ["Bloed", "Het hart", "Bloedvaten", "Bloedsomloop", "Lymfe"],
+    4: ["Ademhaling", "Longen", "Gasuitwisseling", "Celademhaling"],
+    5: ["Nieren", "Urine", "Uitscheiding"],
+    6: ["Zintuigen", "Zenuwstelsel", "Hormonen", "Gedrag"],
+    7: ["Skelet", "Spieren", "Bewegen"],
+    8: ["Voortplanting", "Ontwikkeling"],
+    9: ["DNA en genen", "Overerving", "Mutaties"],
+    10: ["Evolutie", "Selectie", "Aanpassing"],
+    11: ["Ecosystemen", "Voedselketens", "Kringlopen", "Milieu"],
+  },
+  // ── De Geo ───────────────────────────────────────────────────
+  "de-geo": {
+    1: ["Kaarten lezen", "Coördinaten", "Schaal en afstand", "Hoogtelijnen"],
+    2: ["Klimaatfactoren", "Klimaatzones", "Neerslag en wind", "Weer"],
+    3: ["De watercyclus", "Rivieren", "Overstromingen", "Kustvormen"],
+    4: ["Wereldbevolking", "Bevolkingsgroei", "Migratie", "Vergrijzing"],
+    5: ["Verstedelijking", "Stadsstructuur", "Problemen in steden", "Slums"],
+    6: ["Landbouwsystemen", "Voedselproductie", "Landbouw en milieu"],
+    7: ["Energie", "Fossiele brandstoffen", "Duurzame energie", "Industrie"],
+    8: ["Verkeer en vervoer", "Globalisering", "Havens en luchthavens"],
+    9: ["Nederland: landschap", "Nederland: bevolking", "Nederland: economie"],
+    10: ["Europa: landen en regio's", "EU", "Europese economie"],
+    11: ["Arme en rijke landen", "Ontwikkelingshulp"],
+    12: ["Klimaatverandering", "Duurzame ontwikkeling"],
+  },
+  // ── Feniks (Geschiedenis) ────────────────────────────────────
+  "feniks": {
+    1: ["De eerste mensen", "Jagers en verzamelaars", "De landbouwrevolutie", "Eerste beschavingen"],
+    2: ["Het oude Griekenland", "De Griekse democratie", "Alexander de Grote", "Het Romeinse Rijk", "Romeins bestuur", "Val van Rome"],
+    3: ["Het feodale stelsel", "De kerk en het geloof", "Kruistochten", "Kloosters en wetenschap"],
+    4: ["Steden en handel", "De zwarte dood", "Opkomst van staten", "Honderdjarige Oorlog"],
+    5: ["Humanisme en Renaissance", "De boekdrukkunst", "Reformatie", "De ontdekkingsreizen"],
+    6: ["De Republiek der Zeven Provinciën", "De VOC", "De Gouden Eeuw", "Absolutisme in Europa"],
+    7: ["De Verlichting", "De Amerikaanse revolutie", "De Franse Revolutie", "Napoleon"],
+    8: ["Industrialisatie", "Socialisme en kapitalisme", "Kolonialisme", "Nationalisme"],
+    9: ["Eerste Wereldoorlog", "Russische Revolutie", "De jaren 1920-1930", "Tweede Wereldoorlog", "Holocaust"],
+    10: ["De Koude Oorlog", "Dekolonisatie", "Welvaartsstaat", "Globalisering", "Hedendaagse conflicten"],
+  },
+  // ── NaSk: Overal ─────────────────────────────────────────────
+  "overal-nask": {
+    1: ["Eigenschappen van stoffen", "Mengsels", "Oplossingen", "Scheiden van stoffen"],
+    2: ["Kracht en massa", "Snelheid", "Wrijving", "Valbeweging"],
+    3: ["Zwaartekracht", "Druk", "Hefbomen", "Drijven en zinken"],
+    4: ["Temperatuur en warmte", "Warmteoverdracht", "Energieomzetting"],
+    5: ["Licht en schaduw", "Spiegels", "Lenzen en zien"],
+    6: ["Geluidsgolven", "Toonhoogte en volume", "Geluid en gezondheid"],
+    7: ["Stroomkringen", "Spanning en stroomsterkte", "Schakelingen"],
+    8: ["Chemische reacties", "Verbranding", "Roest en corrosie"],
+  },
+  // ── Getal en Ruimte Havo/vwo 1 Deel 1 ───────────────────────
+  "gr-hv1-deel1": {
+    1: ["Gehele getallen", "Rekenen met negatieve getallen", "Machten", "Volgorde van bewerkingen"],
+    2: ["Breuken", "Procenten", "Verhoudingen", "Schaal"],
+    3: ["Omtrek en oppervlakte", "Inhoud", "Pythagoras", "Coördinaten"],
+    4: ["Variabelen en formules", "Grafieken lezen", "Grafieken tekenen", "Lineaire formules"],
+    5: ["Gegevens verzamelen", "Gemiddelde en mediaan", "Diagrammen", "Kansen"],
+  },
+  // ── Getal en Ruimte Havo/vwo 1 Deel 2 ───────────────────────
+  "gr-hv1-deel2": {
+    1: ["Breuken optellen en aftrekken", "Breuken vermenigvuldigen", "Breuken en vergelijkingen"],
+    2: ["Negatieve getallen", "Bewerkingen met negatieve getallen"],
+    3: ["Driehoeken", "Vierhoeken", "Symmetrie", "Oppervlakte en omtrek"],
+    4: ["Functies", "Lineaire functies", "Grafieken", "Snijpunten"],
+    5: ["Kansen berekenen", "Boomdiagrammen", "Combinaties"],
+  },
+};
+
 const TEXTBOOK_CATEGORIES_VO = [
   { id: "wiskunde",        label: "Wiskunde",         icon: "📐" },
   { id: "nederlands",      label: "Nederlands",       icon: "📖" },
@@ -3372,7 +3479,14 @@ function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
                   <label style={styles.settingLabel}>📄 Paragraaf</label>
                   <select style={selectStyle} value={paragraaf} onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}>
                     <option value="">-- Heel hoofdstuk --</option>
-                    {Array.from({length: 12}, (_, i) => i + 1).map(n => <option key={n} value={n}>§{chapterNum}.{n}</option>)}
+                    {(() => {
+                      const paraTitles = selectedBook ? ((PARAGRAPH_TITLES[selectedBook.id] || {})[chapterNum] || []) : [];
+                      const count = paraTitles.length > 0 ? paraTitles.length : 12;
+                      return Array.from({length: count}, (_, i) => i + 1).map(n => {
+                        const t = paraTitles[n - 1];
+                        return <option key={n} value={n}>{t ? `§${chapterNum}.${n} – ${t}` : `§${chapterNum}.${n}`}</option>;
+                      });
+                    })()}
                   </select>
                 </>
               )}
