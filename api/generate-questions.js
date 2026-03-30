@@ -11,19 +11,33 @@ export default async function handler(req, res) {
   const { subject, level, count = 5, textbook, topic } = req.body;
 
   // ─── Content Safety Filter ─────────────────────────────────────
+  // Educatieve onderwerpen die altijd toegestaan zijn
+  const EDUCATIONAL_WHITELIST = [
+    'seksuele voorlichting', 'sexuele voorlichting', 'seksualiteit',
+    'puberteit', 'voortplanting', 'menstruatie', 'anticonceptie',
+    'geslachtsorganen', 'geslachtsdelen', 'zwangerschap', 'geboorte',
+    'drugs en samenleving', 'drugsbeleid', 'drugs en alcohol', 'verslaving',
+    'alcohol en gezondheid', 'roken en gezondheid', 'roken & drugs',
+    'ehbo', 'eerste hulp', 'reanimeren', 'pesten', 'grensoverschrijdend gedrag',
+  ];
+
+  // Expliciet ongepaste termen (niet de educatieve varianten)
   const BLOCKED_WORDS = [
-    'sex', 'porno', 'porn', 'drugs', 'wapen', 'bom', 'moord', 'dood', 'suicide',
-    'naak', 'naakt', 'penis', 'vagina', 'borst', 'orgasm', 'prostitu', 'verkracht',
-    'nazi', 'hitler', 'terrorist', 'hack', 'wachtwoord', 'password', 'gokken',
-    'alcohol', 'cocaine', 'heroïne', 'mdma', 'xtc', 'wiet', 'joint',
+    'porno', 'porn', 'xxx', 'onlyfans', 'fetish', 'bdsm',
+    'orgasm', 'prostitu', 'verkracht', 'naaktfoto', 'sextape', 'sexting',
+    'nazi', 'hitler', 'terrorist',
+    'hack', 'wachtwoord', 'password', 'gokken',
+    'cocaine', 'heroïne', 'mdma', 'xtc', 'wiet', 'joint', 'blowen',
     'fuck', 'shit', 'kut', 'hoer', 'slet', 'lul', 'kanker', 'tyfus',
-    'naked', 'nude', 'kill', 'murder', 'bomb', 'weapon', 'gun',
-    'xxx', 'onlyfans', 'tinder', 'dating', 'fetish', 'bdsm',
+    'nude', 'naked', 'kill', 'murder', 'bomb', 'weapon', 'gun',
+    'wapen', 'bom', 'moord', 'suicide',
   ];
 
   const checkInput = (text) => {
     if (!text) return true;
     const lower = text.toLowerCase();
+    // Whitelist gaat voor: educatieve onderwerpen altijd toegestaan
+    if (EDUCATIONAL_WHITELIST.some(phrase => lower.includes(phrase))) return true;
     return !BLOCKED_WORDS.some(word => lower.includes(word));
   };
 
@@ -57,6 +71,7 @@ export default async function handler(req, res) {
     wiskunde: "Wiskunde", nederlands: "Nederlands",
     biologie: "Biologie", natuurkunde: "Natuurkunde",
     scheikunde: "Scheikunde", economie: "Economie", basisschool: "Basisschool",
+    vrij: "Vrij onderwerp",
   };
 
   const subjectLabel = subjectNames[subject] || subject;
