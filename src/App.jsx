@@ -2852,7 +2852,9 @@ function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel })
         </div>
 
         <p style={styles.subtitle}>Jouw slimme studiebuddy!</p>
-        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>@smulsoft</p>
+        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -24, marginBottom: 32, textAlign: "center" }}>
+          @smulsoft &nbsp;·&nbsp; <a href="/privacy.html" style={{ color: "#556677" }}>Privacybeleid</a>
+        </p>
 
         {step === "role" && (
           <div style={{ display: "flex", gap: 10, width: "100%", maxWidth: 360 }}>
