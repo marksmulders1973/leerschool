@@ -4185,6 +4185,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [waitingForUser, setWaitingForUser] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
+  const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -4230,6 +4231,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
     setShowExplanation(false);
     setWaitingForUser(false);
     setTimedOut(false);
+    setShowWrongOverlay(false);
   }, [gameState.currentQ, gameState.timePerQuestion]);
 
   useEffect(() => {
@@ -4270,7 +4272,11 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
     nextStateRef.current = newState;
 
     if (isSelfStudy) {
-      setWaitingForUser(true);
+      if (isCorrect) {
+        setWaitingForUser(true);
+      } else {
+        setTimeout(() => setShowWrongOverlay(true), 700);
+      }
     } else {
       const delay = isCorrect ? 1200 : 5000;
       setTimeout(() => {
@@ -4356,20 +4362,12 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
         {showExplanation && question.explanation && (() => {
           const lastAns = gameState.answers[gameState.answers.length - 1];
           const isWrong = lastAns && !lastAns.isCorrect;
+          if (isWrong && isSelfStudy) return null; // fout antwoord → overlay
           return (
-            <div style={{ marginTop: 16, padding: isWrong ? 18 : 16, background: isWrong ? "linear-gradient(135deg, #2a1500, #3a2000)" : "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: `4px solid ${isWrong ? "#ff9800" : "#1a73e8"}`, animation: "slideUp 0.3s ease" }}>
-              {isWrong && (
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "#69b2ff", marginBottom: 8, fontWeight: 700 }}>
-                  ✅ Het goede antwoord was: <span style={{ color: "#ffffff" }}>{question.options[question.answer]}</span>
-                </div>
-              )}
-              <div style={{ fontWeight: 800, marginBottom: 6, color: isWrong ? "#ffb74d" : "#00e676", fontSize: isWrong ? 16 : 14 }}>
-                {isWrong ? "📖 Zo zit het:" : "💡 Uitleg"}
-              </div>
-              <div style={{ fontSize: isWrong ? 15 : 14, lineHeight: 1.6, color: isWrong ? "#f0d8b0" : "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
-              {question.source && (
-                <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>
-              )}
+            <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
+              <div style={{ fontWeight: 800, marginBottom: 6, color: "#00e676", fontSize: 14 }}>💡 Uitleg</div>
+              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
+              {question.source && <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>}
             </div>
           );
         })()}
@@ -4398,6 +4396,83 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
           </div>
         )}
       </div>
+
+      {/* ── Fout antwoord: uitleg overlay ─────────────────── */}
+      {showWrongOverlay && (
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.93)", zIndex: 150, overflowY: "auto", animation: "fadeBg 0.3s ease", display: "flex", flexDirection: "column", alignItems: "center", padding: "24px 20px 32px" }}>
+          <div style={{ maxWidth: 480, width: "100%" }}>
+
+            {/* Emoji + titel */}
+            <div style={{ textAlign: "center", marginBottom: 22 }}>
+              <div style={{ fontSize: 56, marginBottom: 6 }}>😕</div>
+              <h2 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#ff8a65", margin: 0 }}>
+                Waarom had ik dit niet goed?
+              </h2>
+            </div>
+
+            {/* De vraag */}
+            <div style={{ background: "#1e2d45", borderRadius: 14, padding: "14px 16px", marginBottom: 14, border: "1px solid #2a3f5f" }}>
+              <div style={{ fontSize: 11, color: "#667788", fontWeight: 700, marginBottom: 6, textTransform: "uppercase", letterSpacing: 1 }}>De vraag</div>
+              <div style={{ fontSize: 15, color: "#e0e6f0", fontWeight: 600, lineHeight: 1.5 }}>{question.q}</div>
+            </div>
+
+            {/* Jouw antwoord vs goed antwoord */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 18 }}>
+              <div style={{ background: "#2a1010", borderRadius: 12, padding: "12px 14px", border: "2px solid #dc3545" }}>
+                <div style={{ fontSize: 10, color: "#ff6b6b", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>❌ Jouw antwoord</div>
+                <div style={{ fontSize: 13, color: "#f08080", lineHeight: 1.4 }}>
+                  {selected >= 0 ? question.options[selected] : "⏰ Geen antwoord (tijd om)"}
+                </div>
+              </div>
+              <div style={{ background: "#0f2a18", borderRadius: 12, padding: "12px 14px", border: "2px solid #28a745" }}>
+                <div style={{ fontSize: 10, color: "#69f0ae", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>✅ Goede antwoord</div>
+                <div style={{ fontSize: 13, color: "#6fcf87", lineHeight: 1.4 }}>
+                  {question.options[question.answer]}
+                </div>
+              </div>
+            </div>
+
+            {/* Uitleg */}
+            <div style={{ background: "linear-gradient(135deg, #1a2535, #162030)", borderRadius: 16, padding: 20, marginBottom: 14, border: "1px solid #2a4060" }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
+                📖 Zo zit het
+              </div>
+              <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5" }}>
+                {question.explanation}
+              </div>
+              {question.source && (
+                <div style={{ fontSize: 11, color: "#8899aa", marginTop: 12, fontStyle: "italic", borderTop: "1px solid #2a3f5f", paddingTop: 8 }}>
+                  📚 {question.source}
+                </div>
+              )}
+            </div>
+
+            {/* Tip */}
+            <div style={{ background: "#0f2018", borderRadius: 12, padding: "12px 16px", marginBottom: 20, border: "1px solid #1a4025", display: "flex", gap: 10, alignItems: "flex-start" }}>
+              <span style={{ fontSize: 18 }}>💡</span>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>Tip om het te onthouden</div>
+                <div style={{ fontSize: 13, color: "#90c0a0", lineHeight: 1.5 }}>
+                  Herhaal het goede antwoord hardop: <em style={{ color: "#b0d8b8" }}>"{question.options[question.answer]}"</em>. Koppel het aan een voorbeeld uit het echte leven.
+                </div>
+              </div>
+            </div>
+
+            {/* YouTube */}
+            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 16px", background: "#101c2e", border: "1px solid #1a73e8", borderRadius: 12, color: "#69b2ff", textDecoration: "none", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 14, marginBottom: 12 }}>
+              🎬 Zoek uitlegvideo op YouTube
+            </a>
+
+            {/* Terug knop */}
+            <button
+              onClick={() => { setShowWrongOverlay(false); goToNext(); }}
+              style={{ width: "100%", padding: "16px", background: "linear-gradient(135deg, #00c853, #00a844)", border: "none", borderRadius: 14, color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, cursor: "pointer", letterSpacing: 0.3 }}
+            >
+              {isLast ? "📊 Bekijk je resultaten" : "↩️ Keer terug naar vragen"}
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (
