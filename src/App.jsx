@@ -2449,7 +2449,9 @@ export default function App() {
       const hasTextbook = !!quiz.textbook?.bookName;
 
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
-      if ((hasTopic || hasTextbook || !hasSampleQuestions) && quiz.useAI !== false) {
+      const playedKey = `played_${quiz.subject}_${quiz.level}`;
+      const hasPlayedBefore = !!localStorage.getItem(playedKey);
+      if ((hasTopic || hasTextbook || !hasSampleQuestions || hasPlayedBefore) && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
@@ -2470,6 +2472,7 @@ export default function App() {
         return;
       }
     }
+    localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, "1");
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
