@@ -2411,6 +2411,7 @@ export default function App() {
   const [results, setResults] = useState([]);
   const [studentProgress, setStudentProgress] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
+  const [pendingQuizData, setPendingQuizData] = useState(null);
   const abortControllerRef = useRef(null);
 
   // Load stored data
@@ -2540,11 +2541,23 @@ export default function App() {
               const subjectQuestions = SAMPLE_QUESTIONS[q.subject]?.[q.level] || [];
               questions = shuffle(subjectQuestions).slice(0, q.questionCount || 8);
             }
-            const nq = createQuiz({ ...q, preGeneratedQuestions: questions });
-            setCurrentQuiz(nq);
-            setPage("lobby");
+            setPendingQuizData({ ...q, preGeneratedQuestions: questions });
+            setPage("quiz-preview");
           }}
           onBack={() => setPage("teacher-home")}
+          onHome={() => setPage("home")}
+        />
+      )}
+      {page === "quiz-preview" && pendingQuizData && (
+        <QuizPreview
+          quizConfig={pendingQuizData}
+          onConfirm={(finalQuestions) => {
+            const nq = createQuiz({ ...pendingQuizData, preGeneratedQuestions: finalQuestions });
+            setCurrentQuiz(nq);
+            setPendingQuizData(null);
+            setPage("lobby");
+          }}
+          onBack={() => setPage("create-quiz")}
           onHome={() => setPage("home")}
         />
       )}
@@ -3097,6 +3110,169 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
 }
 
 // ─── Create Quiz ─────────────────────────────────────────────────
+// ─── QuizPreview ─────────────────────────────────────────────────
+function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
+  const [questions, setQuestions] = useState(() =>
+    quizConfig.preGeneratedQuestions.map((q, i) => ({ ...q, id: i }))
+  );
+  const [editingId, setEditingId] = useState(null);
+  const [regenLoading, setRegenLoading] = useState(null);
+
+  const updateQuestion = (id, field, value) => {
+    setQuestions((prev) => prev.map((q) => q.id === id ? { ...q, [field]: value } : q));
+  };
+
+  const updateOption = (id, optIdx, value) => {
+    setQuestions((prev) => prev.map((q) => {
+      if (q.id !== id) return q;
+      const newOpts = [...q.options];
+      newOpts[optIdx] = value;
+      return { ...q, options: newOpts };
+    }));
+  };
+
+  const deleteQuestion = (id) => {
+    setQuestions((prev) => prev.filter((q) => q.id !== id));
+    if (editingId === id) setEditingId(null);
+  };
+
+  const regenQuestion = async (id) => {
+    setRegenLoading(id);
+    const fresh = await fetchAIQuestions(quizConfig.subject, quizConfig.level, 1, null, null, null);
+    setRegenLoading(null);
+    if (fresh.length > 0) {
+      setQuestions((prev) => prev.map((q) => q.id === id ? { ...fresh[0], id } : q));
+    }
+  };
+
+  const subj = SUBJECTS.find((s) => s.id === quizConfig.subject);
+  const levelLabel = LEVELS.find((l) => l.id === quizConfig.level)?.label || quizConfig.level;
+
+  return (
+    <div style={styles.page}>
+      <Header title="Vragen bekijken" subtitle={`${questions.length} vragen — ${subj?.icon} ${subj?.label} · ${levelLabel}`} onBack={onBack} onHome={onHome} />
+      <div style={styles.content}>
+        <div style={{ marginBottom: 12, padding: "10px 14px", background: "#0a1f35", borderRadius: 10, border: "1px solid #1e3a5a", fontSize: 13, color: "#8eaadb" }}>
+          ✏️ Tik op een vraag om hem te bewerken. Verwijder of regenereer vragen waar nodig.
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {questions.map((q, idx) => {
+            const isEditing = editingId === q.id;
+            const isRegen = regenLoading === q.id;
+            return (
+              <div key={q.id} style={{
+                background: isEditing ? "#0d2a45" : "#152032",
+                border: `1px solid ${isEditing ? "#00c853" : "#1e3a5a"}`,
+                borderRadius: 14,
+                padding: "14px 16px",
+                position: "relative",
+              }}>
+                {/* Header rij */}
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                  <span style={{ fontFamily: "Fredoka", fontWeight: 700, fontSize: 14, color: "#00c853", minWidth: 32 }}>
+                    #{idx + 1}
+                  </span>
+                  <div style={{ flex: 1 }} />
+                  <button
+                    onClick={() => regenQuestion(q.id)}
+                    disabled={isRegen}
+                    title="Nieuwe vraag genereren"
+                    style={{ background: "none", border: "1px solid #2a5080", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#8eaadb", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                  >
+                    {isRegen ? "⏳" : "🔄 Nieuwe vraag"}
+                  </button>
+                  <button
+                    onClick={() => setEditingId(isEditing ? null : q.id)}
+                    style={{ background: isEditing ? "#00c85320" : "none", border: `1px solid ${isEditing ? "#00c853" : "#2a5080"}`, borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: isEditing ? "#00c853" : "#8eaadb", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                  >
+                    {isEditing ? "✅ Klaar" : "✏️ Bewerken"}
+                  </button>
+                  <button
+                    onClick={() => deleteQuestion(q.id)}
+                    title="Vraag verwijderen"
+                    style={{ background: "none", border: "1px solid #5a1a1a", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#ff5252", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                  >
+                    🗑️
+                  </button>
+                </div>
+
+                {/* Vraagtekst */}
+                {isEditing ? (
+                  <textarea
+                    value={q.q}
+                    onChange={(e) => updateQuestion(q.id, "q", e.target.value)}
+                    style={{ ...styles.textInput, width: "100%", minHeight: 70, resize: "vertical", fontSize: 14, marginBottom: 10, boxSizing: "border-box" }}
+                  />
+                ) : (
+                  <p style={{ color: "#e0e6f0", fontSize: 15, fontWeight: 700, margin: "0 0 10px", lineHeight: 1.4 }}>{q.q}</p>
+                )}
+
+                {/* Antwoordopties */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {(q.options || []).map((opt, oi) => {
+                    const isCorrect = q.answer === oi;
+                    return (
+                      <div key={oi} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                        <button
+                          onClick={() => isEditing && updateQuestion(q.id, "answer", oi)}
+                          style={{
+                            width: 24, height: 24, borderRadius: "50%", border: `2px solid ${isCorrect ? "#00c853" : "#2a5080"}`,
+                            background: isCorrect ? "#00c853" : "transparent", cursor: isEditing ? "pointer" : "default",
+                            flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
+                          }}
+                          title={isEditing ? "Markeer als correct antwoord" : ""}
+                        >
+                          {isCorrect && <span style={{ color: "#fff", fontSize: 11, fontWeight: 900 }}>✓</span>}
+                        </button>
+                        {isEditing ? (
+                          <input
+                            value={opt}
+                            onChange={(e) => updateOption(q.id, oi, e.target.value)}
+                            style={{ ...styles.textInput, flex: 1, fontSize: 13, padding: "6px 10px" }}
+                          />
+                        ) : (
+                          <span style={{ color: isCorrect ? "#00e676" : "#8eaadb", fontSize: 13, fontWeight: isCorrect ? 700 : 400 }}>
+                            {["A","B","C","D"][oi]}. {opt}
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {isEditing && (
+                  <p style={{ fontSize: 11, color: "#556677", marginTop: 8 }}>
+                    Klik op het bolletje naast een antwoord om het als correct te markeren.
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {questions.length === 0 && (
+          <div style={{ textAlign: "center", padding: 32, color: "#556677" }}>
+            Geen vragen meer. Ga terug en maak een nieuwe quiz.
+          </div>
+        )}
+
+        <div style={{ ...styles.navRow, marginTop: 20 }}>
+          <button style={styles.backBtn} onClick={onBack}>← Terug</button>
+          <div style={{ flex: 1 }} />
+          <button
+            style={{ ...styles.nextBtn, opacity: questions.length > 0 ? 1 : 0.4 }}
+            disabled={questions.length === 0}
+            onClick={() => onConfirm(questions.map(({ id, ...rest }) => rest))}
+          >
+            🚀 Quiz starten ({questions.length} vragen)
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
