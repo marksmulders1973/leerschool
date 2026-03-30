@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a2f50"/>
+      <stop offset="100%" stop-color="#0a1220"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e676" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00e676" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Achtergrond -->
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+
+  <!-- Groene gloed -->
+  <ellipse cx="256" cy="230" rx="180" ry="160" fill="url(#glow)"/>
+
+  <!-- Afstudeerhoed - bord -->
+  <rect x="136" y="185" width="240" height="28" rx="6" fill="#00c853"/>
+
+  <!-- Afstudeerhoed - bol -->
+  <polygon points="256,130 156,190 256,215 356,190" fill="#00e676"/>
+
+  <!-- Kwastje -->
+  <line x1="356" y1="190" x2="356" y2="240" stroke="#00c853" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="356" cy="248" r="10" fill="#00c853"/>
+
+  <!-- Tekst: studiebol -->
+  <text x="256" y="330" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="white" text-anchor="middle" letter-spacing="-1">studie</text>
+  <text x="256" y="390" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#00e676" text-anchor="middle" letter-spacing="-1">bol</text>
+</svg>
