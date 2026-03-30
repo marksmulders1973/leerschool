@@ -2541,6 +2541,10 @@ export default function App() {
               const subjectQuestions = SAMPLE_QUESTIONS[q.subject]?.[q.level] || [];
               questions = shuffle(subjectQuestions).slice(0, q.questionCount || 8);
             }
+            if (questions.length === 0) {
+              alert("Kon geen vragen laden. Controleer je internetverbinding en probeer het opnieuw.");
+              return;
+            }
             setPendingQuizData({ ...q, preGeneratedQuestions: questions });
             setPage("quiz-preview");
           }}
