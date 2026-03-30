@@ -3276,6 +3276,7 @@ function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
 function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
+  const [topic, setTopic] = useState("");
   const [level, setLevel] = useState("");
   const [groepSelect, setGroepSelect] = useState("");
   const [klasSelect, setKlasSelect] = useState("");
@@ -3296,7 +3297,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   };
 
   const handleSave = () => {
-    onSave({ title: title || SUBJECTS.find((s) => s.id === subject)?.label + " Quiz", subject, level, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
+    onSave({ title: title || SUBJECTS.find((s) => s.id === subject)?.label + " Quiz", subject, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
   };
 
   return (
@@ -3335,7 +3336,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                     background: subject === s.id ? `${s.color}15` : "#fff",
                     boxShadow: subject === s.id ? `0 0 0 3px ${s.color}40` : "0 2px 8px rgba(0,0,0,0.06)",
                   }}
-                  onClick={() => setSubject(s.id)}
+                  onClick={() => { setSubject(s.id); setTopic(s.label); }}
                 >
                   <span style={{ fontSize: 32 }}>{s.icon}</span>
                   <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
@@ -3406,6 +3407,9 @@ function CreateQuiz({ onSave, onBack, onHome }) {
           <div style={styles.stepContent}>
             <h3 style={styles.stepTitle}>Instellingen</h3>
             <div style={styles.settingsGroup}>
+              <label style={styles.settingLabel}>Omschrijving / onderwerp</label>
+              <input style={styles.textInput} value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Bijv. Werkwoorden, Breuken, WOII..." />
+
               <label style={styles.settingLabel}>Titel (optioneel)</label>
               <input style={styles.textInput} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Bijv. Week 12 - Breuken" />
 
