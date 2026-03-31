@@ -2815,8 +2815,9 @@ export default function App() {
 
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
-      const hasPlayedBefore = !!localStorage.getItem(playedKey);
-      if ((hasTopic || hasTextbook || !hasSampleQuestions || hasPlayedBefore) && quiz.useAI !== false) {
+      const playCount = parseInt(localStorage.getItem(playedKey) || "0", 10);
+      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions || (playCount % 2 === 1);
+      if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
@@ -2848,7 +2849,8 @@ export default function App() {
         return;
       }
     }
-    localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, "1");
+    const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
+    localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
