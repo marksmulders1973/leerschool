@@ -4991,6 +4991,19 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
             }}>
               <span>🎬</span> Uitleg-video op YouTube
             </a>
+            <a
+              href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{
+                width: "100%", padding: "12px", border: "1px solid #445566", borderRadius: 12,
+                background: "#111e2e", color: "#556677",
+                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                textDecoration: "none", boxSizing: "border-box",
+              }}
+            >
+              <span>🚩</span> Fout melden
+            </a>
             <div style={{ fontSize: 11, color: "#556677", textAlign: "center", marginTop: 6 }}>
               ↩️ Kom terug via de <strong style={{ color: "#8899aa" }}>← terug-knop</strong> van je browser
             </div>
