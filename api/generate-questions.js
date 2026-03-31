@@ -56,12 +56,12 @@ export default async function handler(req, res) {
   }
 
   const levelDescriptions = {
-    groep12: "groep 1-2 basisschool (4-6 jaar, kleuters) — UITSLUITEND rekenen (tellen tot 20, vormen herkennen, meer/minder/evenveel) of taal (klanken, rijmwoorden, eerste letters herkennen). Gebruik maximaal 6 woorden per vraag. Alledaagse voorbeelden met dieren of speelgoed. Absoluut geen rekensommen met meer dan 10.",
-    groep3: "groep 3-4 basisschool (6-8 jaar) — rekenen: optellen en aftrekken tot 100, tafels van 2, 5 en 10; taal: lezen, schrijven, eenvoudige spelling en woordenschat; natuur: dieren, planten en seizoenen op belevingsniveau. Korte zinnen, concrete situaties uit het dagelijks leven.",
-    groep5: "groep 5-6 basisschool (9-11 jaar) — rekenen: getallen tot 10.000, vermenigvuldigen en delen, eenvoudige breuken, meten en wegen; taal: grammatica basis, woordenschat, begrijpend lezen; aardrijkskunde: Nederland en Europa (hoofdsteden, rivieren); geschiedenis: de tien tijdvakken globaal; natuur & techniek: ecosystemen, eenvoudige machines; engels: basiswoorden en korte zinnen. Matig moeilijk.",
-    groep7: "groep 7-8 basisschool (11-13 jaar) — rekenen: procenten, breuken, kommagetallen, oppervlakte en inhoud; taal: grammatica (persoonsvorm, lijdend voorwerp), spelling d/t, werkwoordvormen; aardrijkskunde: wereld en klimaatzones; geschiedenis: tijdvakken uitgebreider; natuur & techniek: sterrenstelsel, menselijk lichaam; engels: gesprekjes voeren, woordenschat breder. Uitdagend, voorbereiding op middelbare school.",
-    klas1: "klas 1-2 middelbare school / vmbo-t/havo/vwo (13-15 jaar) — wiskunde: vergelijkingen, meetkunde, statistiek; nederlands: stijlfiguren, zinsdelen; Engels/Duits/Frans: grammatica en teksten; aardrijkskunde en geschiedenis op VO-niveau. Duits en Frans mogen vanaf dit niveau.",
-    klas3: "klas 3-4 middelbare school / havo/vwo bovenbouw (15-17 jaar) — wiskunde: goniometrie, differentiëren, logaritmen; scheikunde, biologie, natuurkunde, economie, maatschappijleer op examenniveau. Abstracte concepten en formules zijn passend.",
+    groep12: "groep 1-2 basisschool (4-6 jaar, kleuters) — UITSLUITEND rekenen (tellen tot 20, vormen herkennen, meer/minder/evenveel) of taal (klanken, rijmwoorden, eerste letters herkennen). Gebruik maximaal 6 woorden per vraag. Alledaagse voorbeelden met dieren of speelgoed. Absoluut geen rekensommen met meer dan 10. NOOIT: optellen/aftrekken boven 10, tafel, breuken, spelling, grammatica.",
+    groep3: "groep 3-4 basisschool (6-8 jaar) — rekenen: optellen en aftrekken tot 100, tafels van 2, 5 en 10; taal: lezen, schrijven, eenvoudige spelling en woordenschat; natuur: dieren, planten en seizoenen op belevingsniveau. Korte zinnen, concrete situaties uit het dagelijks leven. NOOIT: breuken, procenten, vermenigvuldigen buiten de opgegeven tafels, lange deling, abstracte grammatica.",
+    groep5: "groep 5-6 basisschool (9-11 jaar) — rekenen: getallen tot 10.000, vermenigvuldigen en delen, eenvoudige breuken (½, ¼), meten en wegen; taal: grammatica basis, woordenschat, begrijpend lezen; aardrijkskunde: Nederland en Europa (hoofdsteden, rivieren); geschiedenis: de tien tijdvakken globaal; natuur & techniek: ecosystemen, eenvoudige machines; engels: basiswoorden en korte zinnen. NOOIT: procenten, decimalen, wortels, machten, algebra, vergelijkingen oplossen.",
+    groep7: "groep 7-8 basisschool (11-13 jaar) — rekenen: procenten, breuken, kommagetallen, oppervlakte en inhoud, eenvoudige statistiek (gemiddelde, modus); taal: grammatica (persoonsvorm, lijdend voorwerp, meewerkend voorwerp), spelling d/t, werkwoordvormen; aardrijkskunde: wereld en klimaatzones; geschiedenis: tijdvakken uitgebreider; natuur & techniek: sterrenstelsel, menselijk lichaam; engels: gesprekjes voeren, woordenschat breder. NOOIT: wortels, machten, algebra, vergelijkingen met letters, pythagoras, goniometrie — dat is middelbare school stof.",
+    klas1: "klas 1-2 middelbare school / vmbo-t/havo/vwo (13-15 jaar) — wiskunde: eenvoudige vergelijkingen (ax+b=c), pythagoras, machten en wortels, meetkunde, statistiek; nederlands: stijlfiguren, zinsdelen, tekstsoorten; Engels/Duits/Frans: grammatica en teksten; aardrijkskunde en geschiedenis op VO-niveau. Duits en Frans mogen vanaf dit niveau. NOOIT: differentiëren, integreren, goniometrie, logaritmen — dat is bovenbouw.",
+    klas3: "klas 3-4 middelbare school / havo/vwo bovenbouw (15-17 jaar) — wiskunde: goniometrie, differentiëren, logaritmen, integralen; scheikunde, biologie, natuurkunde, economie, maatschappijleer op examenniveau. Abstracte concepten en formules zijn passend.",
   };
 
   const subjectNames = {
@@ -149,12 +149,12 @@ Antwoord ALLEEN met een JSON array:
 Regels:
 - answer = index (0-3) van het juiste antwoord
 - Maak de vragen gevarieerd en leerzaam, STRIKT passend bij het niveau: ${levelLabel}
-- Voor groep 1-2 (kleuters): maximaal 6 woorden per vraag, tellen tot 20, rijmen, letters. GEEN sommen boven de 10. GEEN abstracte begrippen.
-- Voor groep 3-4: optellen/aftrekken tot 100, tafels van 2/5/10, eenvoudige spelling en leesvaardigheid. Korte concrete zinnen.
-- Voor groep 5-6: vakken als aardrijkskunde, geschiedenis en natuur komen hier pas echt aan bod. Engels op basisniveau (woorden/zinnen).
-- Voor groep 7-8: uitdagender, voorbereiding op VO. Engels mag in gespreksvorm.
-- Voor VO klas 1-2: Duits en Frans zijn beschikbaar. Meer abstracte stof.
-- Voor VO klas 3-4: Maatschappijleer, Economie, gevorderde exacte vakken.
+- Voor groep 1-2 (kleuters): tellen tot 20, rijmen, letters herkennen. NOOIT sommen boven 10, NOOIT breuken of abstracte begrippen.
+- Voor groep 3-4: optellen/aftrekken tot 100, tafels van 2/5/10. NOOIT breuken, procenten, lange deling of wortels.
+- Voor groep 5-6: eenvoudige breuken (½, ¼), getallen tot 10.000, meten. NOOIT procenten, decimalen, wortels, machten of algebra.
+- Voor groep 7-8: procenten, breuken, kommagetallen, oppervlakte. NOOIT wortels, machten, algebra met letters, vergelijkingen oplossen, pythagoras of goniometrie — dat is VO-stof.
+- Voor VO klas 1-2: vergelijkingen, pythagoras, machten en wortels, meetkunde. Duits en Frans beschikbaar. NOOIT differentiëren of goniometrie.
+- Voor VO klas 3-4: goniometrie, differentiëren, logaritmen, examenstof. Alle exacte vakken beschikbaar.
 - Foute antwoorden moeten veelgemaakte fouten zijn
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
