@@ -1312,7 +1312,7 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is het meervoud van 'kind'?", options: ["kinds", "kindes", "kinderen", "kindjes"], answer: 2, explanation: "'Kinderen' is het onregelmatige meervoud." },
       { q: "Welk woord past: 'De ... schijnt vandaag.'?", options: ["maan", "ster", "zon", "regen"], answer: 2, explanation: "De zon schijnt, dat is een bekende uitdrukking." },
       { q: "Wat is een samengesteld woord?", options: ["een werkwoord", "twee woorden die samen één nieuw woord vormen", "een werkwoord + bijvoeglijk naamwoord", "een meervoud"], answer: 1, explanation: "Bv: 'zonnebril' = zon + bril. Twee woorden vormen één nieuw woord." },
-      { q: "Welk woord is fout gespeld?", options: ["schrijven", "rijden", "fietsen", "wandelen"], answer: 0, explanation: "Alle woorden zijn goed gespeld in dit geval — let op: 'schrijven' is correct." },
+      { q: "Welk woord is fout gespeld?", options: ["schrjven", "rijden", "fietsen", "wandelen"], answer: 0, explanation: "'Schrjven' mist een 'i' — correct is 'schrijven'." },
       { q: "Wat is het verschil tussen 'er' en 'daar'?", options: ["Geen verschil", "'Er' is onbepaald, 'daar' wijst naar een specifieke plek", "'Daar' is onbepaald", "'Er' wijst naar een specifieke plek"], answer: 1, explanation: "'Er staat een fiets.' vs. 'De fiets staat daar.' — 'er' is onbepaald." },
       { q: "Welke zin gebruikt een actieve werkwoordsvorm?", options: ["De brief werd geschreven.", "Jan schrijft de brief.", "De les werd gegeven.", "Het huiswerk is gemaakt."], answer: 1, explanation: "Actief: onderwerp voert de handeling uit. Jan (onderwerp) schrijft." },
       { q: "Wat is het verschil tussen een werkwoord en een bijwoord?", options: ["Geen verschil", "Een werkwoord drukt een actie uit; een bijwoord geeft informatie over de actie", "Een bijwoord is een soort werkwoord", "Een werkwoord beschrijft hoe iets gedaan wordt"], answer: 1, explanation: "'Rennen' = werkwoord. 'Snel' (als 'snel rennen') = bijwoord." },
@@ -1377,7 +1377,7 @@ const SAMPLE_QUESTIONS = {
     klas3: [
       { q: "Welke literaire stroming hoort bij de 17e eeuw?", options: ["Romantiek", "Barok", "Naturalisme", "Modernisme"], answer: 1, explanation: "De Barok (17e eeuw): overdaad en vergankelijkheid." },
       { q: "Wat is een oxymoron?", options: ["Overdrijving", "Tegengestelde begrippen samen", "Herhaling", "Vergelijking"], answer: 1, explanation: "Bv: 'oorverdovende stilte'." },
-      { q: "Welke schrijfster schreef 'De aanslag'?", options: ["Multatuli", "Harry Mulisch", "Maarten 't Hart", "Arnon Grunberg"], answer: 1, explanation: "Harry Mulisch, 1982." },
+      { q: "Welke schrijver schreef 'De aanslag'?", options: ["Multatuli", "Harry Mulisch", "Maarten 't Hart", "Arnon Grunberg"], answer: 1, explanation: "Harry Mulisch schreef 'De aanslag' in 1982." },
       { q: "Wat kenmerkt het Naturalisme?", options: ["Romantiek en gevoel", "Wetenschappelijk, determinisme", "Symboliek en mystiek", "Ironie en satire"], answer: 1, explanation: "Naturalisme: mens bepaald door erfelijkheid en milieu." },
       { q: "Wat is een monologue intérieur?", options: ["Dialoog", "Innerlijke gedachtenstroom", "Brief in roman", "Alwetende verteller"], answer: 1, explanation: "De lezer leest de ongeordende gedachten van een personage." },
       { q: "Welke stroming kenmerkt de 19e eeuw in Nederland?", options: ["Verlichting", "Romantiek", "Modernisme", "Barok"], answer: 1, explanation: "De Romantiek (ca. 1780-1850): gevoel, natuur, verleden." },
