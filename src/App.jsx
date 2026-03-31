@@ -5080,6 +5080,15 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
               🎬 Zoek uitlegvideo op YouTube
             </a>
 
+            {/* Fout melden */}
+            <a
+              href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "#556677", textDecoration: "none", fontFamily: "'Nunito', sans-serif", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
+            >
+              🚩 Fout melden
+            </a>
+
             {/* Terug knop */}
             <button
               onClick={() => { setShowWrongOverlay(false); goToNext(); }}
