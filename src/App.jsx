@@ -28,16 +28,18 @@ const SoundEngine = {
 
 // ─── AI Question Generator ──────────────────────────────────────
 async function fetchAIQuestions(subject, level, count = 5, textbook = null, topic = null, signal = null) {
-  try {
-    const res = await fetch("/api/generate-questions", {
-      method: "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ subject, level, count, textbook, topic }),
-      signal,
-    });
-    if (!res.ok) throw new Error("API error");
-    const data = await res.json();
-    return data.questions || [];
-  } catch { return []; }
+  const res = await fetch("/api/generate-questions", {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ subject, level, count, textbook, topic }),
+    signal,
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.error || `Server fout (${res.status})`);
+  }
+  const data = await res.json();
+  if (!data.questions || data.questions.length === 0) throw new Error("Geen vragen ontvangen van de AI");
+  return data.questions;
 }
 
 // ─── Data ────────────────────────────────────────────────────────
@@ -1087,6 +1089,16 @@ const SAMPLE_QUESTIONS = {
       { q: "Welk getal is het kleinst?", options: ["9", "4", "6", "8"], answer: 1, explanation: "4 is het kleinste getal." },
       { q: "Hoeveel is 3 + 4?", options: ["5", "6", "7", "8"], answer: 2, explanation: "3 + 4 = 7." },
       { q: "Hoeveel is 5 - 2?", options: ["1", "2", "3", "4"], answer: 2, explanation: "5 - 2 = 3." },
+      { q: "Hoeveel ballen zijn dit: ●●●?", options: ["1", "2", "3", "4"], answer: 2, explanation: "Tel de bollen: 1, 2, 3. Dat zijn er 3." },
+      { q: "Wat komt na 4?", options: ["3", "4", "5", "6"], answer: 2, explanation: "Na 4 komt 5." },
+      { q: "Hoeveel is 2 + 2?", options: ["3", "4", "5", "6"], answer: 1, explanation: "2 + 2 = 4." },
+      { q: "Welk getal is het kleinst?", options: ["10", "8", "15", "12"], answer: 1, explanation: "8 is het kleinste getal." },
+      { q: "Hoeveel is 6 + 4?", options: ["8", "9", "10", "11"], answer: 2, explanation: "6 + 4 = 10." },
+      { q: "Wat is de helft van 10?", options: ["3", "4", "5", "6"], answer: 2, explanation: "De helft van 10 is 5." },
+      { q: "Hoeveel is 8 - 3?", options: ["4", "5", "6", "7"], answer: 1, explanation: "8 - 3 = 5." },
+      { q: "Welk getal is groter: 9 of 6?", options: ["6", "9", "Ze zijn gelijk", "Weet ik niet"], answer: 1, explanation: "9 is groter dan 6." },
+      { q: "Hoeveel is 4 + 4?", options: ["6", "7", "8", "9"], answer: 2, explanation: "4 + 4 = 8." },
+      { q: "Hoeveel is 3 + 3?", options: ["5", "6", "7", "8"], answer: 1, explanation: "3 + 3 = 6." },
     ],
     groep3: [
       { q: "Hoeveel is 24 + 13?", options: ["36", "37", "38", "39"], answer: 1, explanation: "24 + 13 = 37." },
@@ -1099,6 +1111,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Hoeveel is 75 - 25?", options: ["40", "45", "50", "55"], answer: 2, explanation: "75 - 25 = 50." },
       { q: "Wat is 5 × 5?", options: ["20", "25", "30", "35"], answer: 1, explanation: "5 × 5 = 25 (tafel van 5)." },
       { q: "Hoeveel is 48 + 12?", options: ["58", "60", "62", "68"], answer: 1, explanation: "48 + 12 = 60." },
+      { q: "Wat is 3 × 5?", options: ["12", "15", "18", "20"], answer: 1, explanation: "3 × 5 = 15 (tafel van 5)." },
+      { q: "Hoeveel is 20 + 30?", options: ["40", "50", "60", "70"], answer: 1, explanation: "20 + 30 = 50." },
+      { q: "Wat is 10 × 10?", options: ["10", "50", "100", "1000"], answer: 2, explanation: "10 × 10 = 100." },
+      { q: "Welk getal is oneven?", options: ["12", "18", "23", "30"], answer: 2, explanation: "23 is niet deelbaar door 2, dus oneven." },
+      { q: "Hoeveel is 80 - 35?", options: ["35", "40", "45", "55"], answer: 2, explanation: "80 - 35 = 45." },
+      { q: "Wat is 2 × 10?", options: ["12", "20", "22", "30"], answer: 1, explanation: "2 × 10 = 20." },
+      { q: "Hoeveel is 45 + 15?", options: ["55", "60", "65", "70"], answer: 1, explanation: "45 + 15 = 60." },
+      { q: "Wat is 5 × 10?", options: ["15", "50", "55", "500"], answer: 1, explanation: "5 × 10 = 50 (tafel van 10)." },
+      { q: "Hoeveel is 90 - 40?", options: ["30", "40", "50", "60"], answer: 2, explanation: "90 - 40 = 50." },
     ],
     groep5: [
       { q: "Wat is 347 + 258?", options: ["595", "605", "615", "585"], answer: 1, explanation: "347 + 258 = 605." },
@@ -1121,6 +1142,16 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is 100 × 23?", options: ["230", "2300", "23000", "2030"], answer: 1, explanation: "100 × 23 = 2300." },
       { q: "Hoeveel seconden zitten in 3 minuten?", options: ["30", "150", "180", "300"], answer: 2, explanation: "3 × 60 = 180 seconden." },
       { q: "Welk getal is even?", options: ["17", "23", "36", "51"], answer: 2, explanation: "36 is deelbaar door 2." },
+      { q: "Hoeveel is 3/4 van 120?", options: ["60", "80", "90", "100"], answer: 2, explanation: "3/4 × 120 = 90." },
+      { q: "Wat is 125 + 375?", options: ["400", "450", "500", "550"], answer: 2, explanation: "125 + 375 = 500." },
+      { q: "Hoeveel is 7 × 9?", options: ["54", "56", "63", "72"], answer: 2, explanation: "7 × 9 = 63." },
+      { q: "Afronden op honderden: 648 wordt ...?", options: ["600", "640", "650", "700"], answer: 0, explanation: "Het tientalcijfer is 4, dus afronden naar beneden: 600." },
+      { q: "Hoeveel ml is 3,5 liter?", options: ["35", "350", "3500", "35000"], answer: 2, explanation: "1 liter = 1000 ml, dus 3,5 × 1000 = 3500 ml." },
+      { q: "Wat is het dubbele van 65?", options: ["120", "125", "130", "135"], answer: 2, explanation: "2 × 65 = 130." },
+      { q: "Welk getal ontbreekt: 3, 6, 9, __, 15?", options: ["10", "11", "12", "13"], answer: 2, explanation: "De rij telt steeds 3 erbij op: 12." },
+      { q: "Hoeveel is 1/5 van 100?", options: ["5", "10", "15", "20"], answer: 3, explanation: "1/5 van 100 = 100 ÷ 5 = 20." },
+      { q: "Wat is 8 × 7?", options: ["48", "54", "56", "64"], answer: 2, explanation: "8 × 7 = 56." },
+      { q: "Hoeveel seconden zijn er in 2 minuten?", options: ["60", "90", "120", "180"], answer: 2, explanation: "2 × 60 = 120 seconden." },
     ],
     groep7: [
       { q: "Wat is 15% van 240?", options: ["32", "36", "38", "42"], answer: 1, explanation: "10% = 24, 5% = 12, samen 36." },
@@ -1143,6 +1174,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Hoeveel is √81?", options: ["7", "8", "9", "10"], answer: 2, explanation: "9 × 9 = 81." },
       { q: "Een fiets kost €240, korting 20%. Wat betaal je?", options: ["€48", "€172", "€192", "€210"], answer: 2, explanation: "20% van 240 = 48; 240 - 48 = 192." },
       { q: "Wat is de kgv van 4 en 6?", options: ["8", "10", "12", "24"], answer: 2, explanation: "Kleinste getal deelbaar door 4 én 6 = 12." },
+      { q: "Bereken: 5/6 - 1/4", options: ["4/12", "7/12", "1/2", "2/3"], answer: 1, explanation: "GGD van 6 en 4 is 12. 10/12 - 3/12 = 7/12." },
+      { q: "Hoeveel is 30% van 90?", options: ["25", "27", "30", "32"], answer: 1, explanation: "0,3 × 90 = 27." },
+      { q: "Welk getal ontbreekt: 2, 4, 8, 16, __?", options: ["20", "24", "28", "32"], answer: 3, explanation: "Elke stap wordt verdubbeld: 16 × 2 = 32." },
+      { q: "Bereken: 4² - 3²", options: ["1", "5", "7", "9"], answer: 2, explanation: "16 - 9 = 7." },
+      { q: "Wat is 75% van 200?", options: ["125", "140", "150", "175"], answer: 2, explanation: "3/4 van 200 = 150." },
+      { q: "Los op: 2x + 5 = 19", options: ["x = 5", "x = 6", "x = 7", "x = 8"], answer: 2, explanation: "2x = 14, x = 7." },
+      { q: "Hoeveel is √36?", options: ["4", "5", "6", "7"], answer: 2, explanation: "6 × 6 = 36." },
+      { q: "Een auto rijdt 90 km/u. Hoeveel km rijdt hij in 2,5 uur?", options: ["180 km", "200 km", "210 km", "225 km"], answer: 3, explanation: "90 × 2,5 = 225 km." },
+      { q: "Wat is de gemiddelde waarde van: 10, 20, 30, 40?", options: ["20", "25", "30", "35"], answer: 1, explanation: "(10+20+30+40) ÷ 4 = 100 ÷ 4 = 25." },
     ],
     klas1: [
       { q: "Vereenvoudig: 12/18", options: ["2/3", "3/4", "4/6", "6/9"], answer: 0, explanation: "12/18 = 2/3 (deel door 6)." },
@@ -1165,6 +1205,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Bereken: (2/3)²", options: ["2/9", "4/6", "4/9", "2/6"], answer: 2, explanation: "(2/3)² = 4/9." },
       { q: "Hoeveel is -3 × (-4)?", options: ["-12", "-7", "7", "12"], answer: 3, explanation: "Negatief × negatief = positief: 12." },
       { q: "Welke punt ligt op y = 2x + 1?", options: ["(1,2)", "(2,4)", "(3,7)", "(0,2)"], answer: 2, explanation: "y = 2(3) + 1 = 7. ✓" },
+      { q: "Bereken: 3/4 ÷ 1/2", options: ["3/8", "3/4", "3/2", "2/3"], answer: 2, explanation: "3/4 ÷ 1/2 = 3/4 × 2/1 = 6/4 = 3/2." },
+      { q: "Los op: -2x + 8 = 2", options: ["x = -3", "x = 2", "x = 3", "x = 5"], answer: 2, explanation: "-2x = -6, x = 3." },
+      { q: "Wat is 2^5?", options: ["10", "16", "25", "32"], answer: 3, explanation: "2⁵ = 2×2×2×2×2 = 32." },
+      { q: "Bereken de omtrek van een rechthoek met lengte 8 cm en breedte 5 cm.", options: ["13 cm", "26 cm", "40 cm", "40 cm²"], answer: 1, explanation: "Omtrek = 2 × (8 + 5) = 2 × 13 = 26 cm." },
+      { q: "Hoeveel is -4 + 9?", options: ["-13", "-5", "5", "13"], answer: 2, explanation: "-4 + 9 = 5." },
+      { q: "Bereken: (−2)³", options: ["-8", "-6", "6", "8"], answer: 0, explanation: "(-2)³ = -2 × -2 × -2 = -8." },
+      { q: "Welke lijn heeft geen helling?", options: ["y = 3x", "y = -x + 2", "y = 5", "x = 3"], answer: 2, explanation: "y = 5 is een horizontale lijn — helling is 0." },
+      { q: "Bereken: |-15|", options: ["-15", "0", "15", "225"], answer: 2, explanation: "Absolute waarde van -15 = 15." },
+      { q: "Los op: x² = 49", options: ["x = 7", "x = -7", "x = 7 of x = -7", "x = 49"], answer: 2, explanation: "x² = 49 heeft twee oplossingen: x = 7 of x = -7." },
     ],
     klas3: [
       { q: "Wat is de afgeleide van f(x) = 3x² + 2x?", options: ["6x + 2", "3x + 2", "6x² + 2", "6x"], answer: 0, explanation: "f'(x) = 6x + 2." },
@@ -1187,6 +1236,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Los op: sin(x) = 1 voor 0 ≤ x ≤ 360°", options: ["x = 0°", "x = 90°", "x = 180°", "x = 270°"], answer: 1, explanation: "sin(90°) = 1." },
       { q: "Wat is het domein van f(x) = ln(x)?", options: ["x ∈ ℝ", "x > 0", "x ≥ 0", "x > 1"], answer: 1, explanation: "Logaritme is alleen gedefinieerd voor x > 0." },
       { q: "Bereken: ∫₀¹ x² dx", options: ["1/4", "1/3", "1/2", "1"], answer: 1, explanation: "[x³/3]₀¹ = 1/3 - 0 = 1/3." },
+      { q: "Wat is de afgeleide van f(x) = x³ - 4x?", options: ["3x² - 4", "x² - 4", "3x - 4", "3x² + 4"], answer: 0, explanation: "f'(x) = 3x² - 4." },
+      { q: "Los op: x² - 9 = 0", options: ["x = 3", "x = -3", "x = 3 of x = -3", "x = 9"], answer: 2, explanation: "(x-3)(x+3) = 0 → x = 3 of x = -3." },
+      { q: "Bereken: log₂(16)", options: ["2", "3", "4", "8"], answer: 2, explanation: "2⁴ = 16, dus log₂(16) = 4." },
+      { q: "Wat is tan(30°)?", options: ["1/2", "√3/3", "√3/2", "√3"], answer: 1, explanation: "tan(30°) = sin(30°)/cos(30°) = (1/2)/(√3/2) = 1/√3 = √3/3." },
+      { q: "Bereken: ∫ (3x²) dx", options: ["x³ + C", "6x + C", "x³/3 + C", "3x + C"], answer: 0, explanation: "∫3x² dx = x³ + C (macht + 1, dan delen door nieuwe macht)." },
+      { q: "Wat is het maximum van f(x) = -x² + 4x - 1?", options: ["x = 2, f = 3", "x = 2, f = 4", "x = 4, f = 2", "x = -2, f = 3"], answer: 0, explanation: "Top via x = -b/2a = -4/-2 = 2. f(2) = -4 + 8 - 1 = 3." },
+      { q: "Wat is e^(ln(5))?", options: ["5", "ln(5)", "e^5", "1/5"], answer: 0, explanation: "e^(ln x) = x, dus e^(ln 5) = 5." },
+      { q: "Bereken: lim(x→∞) (2x+1)/(x+3)", options: ["0", "1", "2", "∞"], answer: 2, explanation: "Hoogste macht telt: 2x/x = 2 als x → ∞." },
+      { q: "Wat is het domein van f(x) = √(x - 3)?", options: ["x ≥ 0", "x ≥ 3", "x > 3", "x ∈ ℝ"], answer: 1, explanation: "Vierkantswortel vereist x - 3 ≥ 0, dus x ≥ 3." },
     ],
   },
   taal: {
@@ -1201,6 +1259,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Welke letter hoor je in 'maan'?", options: ["n", "m", "b", "p"], answer: 1, explanation: "'Maan' begint met de letter m." },
       { q: "Wat rijmt op 'boot'?", options: ["fiets", "brood", "trein", "auto"], answer: 1, explanation: "'Brood' rijmt op 'boot'." },
       { q: "Welk woord is een vrucht?", options: ["stoep", "appel", "straat", "lamp"], answer: 1, explanation: "Een appel is een vrucht." },
+      { q: "Wat rijmt op 'neus'?", options: ["hand", "voet", "reus", "hoofd"], answer: 2, explanation: "'Reus' rijmt op 'neus'." },
+      { q: "Welke letter hoor je in 'regen'?", options: ["l", "r", "s", "t"], answer: 1, explanation: "'Regen' begint met de letter r." },
+      { q: "Welk woord is een voertuig?", options: ["appel", "stoel", "auto", "boek"], answer: 2, explanation: "Een auto is een voertuig." },
+      { q: "Wat rijmt op 'peer'?", options: ["appel", "banaan", "beer", "druif"], answer: 2, explanation: "'Beer' rijmt op 'peer'." },
+      { q: "Welk woord beschrijft het weer?", options: ["stoel", "regen", "boek", "pen"], answer: 1, explanation: "Regen is een weersverschijnsel." },
+      { q: "Welke letter hoor je in 'vis'?", options: ["p", "b", "v", "f"], answer: 2, explanation: "'Vis' begint met de letter v." },
+      { q: "Wat rijmt op 'dag'?", options: ["nacht", "vlag", "ochtend", "week"], answer: 1, explanation: "'Vlag' rijmt op 'dag'." },
+      { q: "Welk woord is een lichaamsdeel?", options: ["tafel", "been", "bloem", "auto"], answer: 1, explanation: "Een been is een lichaamsdeel." },
+      { q: "Welk woord hoort bij de school?", options: ["schep", "boek", "bad", "kip"], answer: 1, explanation: "Een boek gebruik je op school." },
     ],
     groep3: [
       { q: "Welk woord schrijf je met een hoofdletter?", options: ["fiets", "amsterdam", "appel", "tafel"], answer: 1, explanation: "Steden schrijf je met een hoofdletter: Amsterdam." },
@@ -1213,6 +1280,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is het meervoud van 'kind'?", options: ["kinds", "kindes", "kinderen", "kindjes"], answer: 2, explanation: "'Kinderen' is het meervoud van 'kind'." },
       { q: "Welke zin klopt?", options: ["De kat slaap.", "De kat slaapt.", "De kat slaaps.", "De kat slapen."], answer: 1, explanation: "Bij 'de kat' (hij/zij) gebruik je stam + t: slaapt." },
       { q: "Wat is een woord voor water uit de lucht?", options: ["sneeuw", "regen", "wind", "zon"], answer: 1, explanation: "Regen valt uit de lucht als water." },
+      { q: "Wat is het meervoud van 'boek'?", options: ["boeks", "boeken", "boekes", "boekjes"], answer: 1, explanation: "'Boeken' is het meervoud van 'boek'." },
+      { q: "Welk woord rijmt op 'regen'?", options: ["zon", "storm", "degen", "wind"], answer: 2, explanation: "'Degen' rijmt op 'regen'." },
+      { q: "Wat is het verkleinwoord van 'kat'?", options: ["katje", "katse", "katsje", "katietje"], answer: 0, explanation: "'Katje' is het verkleinwoord van 'kat'." },
+      { q: "Welke zin klopt?", options: ["Wij lopen morgen.", "Wij loopt morgen.", "Wij loop morgen.", "Wij lopen morgens."], answer: 0, explanation: "'Wij lopen' — bij wij gebruik je de meervoudsvorm." },
+      { q: "Wat is het meervoud van 'bal'?", options: ["bals", "ballen", "bales", "balles"], answer: 1, explanation: "'Ballen' is het meervoud van 'bal'." },
+      { q: "Welk woord is het langst?", options: ["kat", "fiets", "boterham", "bal"], answer: 2, explanation: "'Boterham' heeft de meeste letters." },
+      { q: "Welke zin heeft een fout?", options: ["De hond rent hard.", "De kat slaapt lekker.", "Het kind spelen buiten.", "Zij fietst naar huis."], answer: 2, explanation: "'Het kind speelt', niet 'spelen'." },
+      { q: "Wat betekent 'verdrietig'?", options: ["blij", "boos", "bedroefd", "bang"], answer: 2, explanation: "'Verdrietig' betekent bedroefd of droevig." },
+      { q: "Welk woord schrijf je met een hoofdletter?", options: ["vrijdag", "avond", "nederland", "winter"], answer: 2, explanation: "Landen schrijf je met een hoofdletter: Nederland." },
     ],
     groep5: [
       { q: "Welk woord is fout geschreven?", options: ["fiets", "pannenkoek", "gezellig", "helemael"], answer: 3, explanation: "Het is 'helemaal', niet 'helemael'." },
@@ -1235,6 +1311,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een antwoord op 'Hoe gaat het?'", options: ["Ja, graag.", "Prima, dank je.", "Nee, niet goed.", "Dat klopt."], answer: 1, explanation: "'Prima, dank je' is een gepaste reactie." },
       { q: "Wat is het meervoud van 'kind'?", options: ["kinds", "kindes", "kinderen", "kindjes"], answer: 2, explanation: "'Kinderen' is het onregelmatige meervoud." },
       { q: "Welk woord past: 'De ... schijnt vandaag.'?", options: ["maan", "ster", "zon", "regen"], answer: 2, explanation: "De zon schijnt, dat is een bekende uitdrukking." },
+      { q: "Wat is een samengesteld woord?", options: ["een werkwoord", "twee woorden die samen één nieuw woord vormen", "een werkwoord + bijvoeglijk naamwoord", "een meervoud"], answer: 1, explanation: "Bv: 'zonnebril' = zon + bril. Twee woorden vormen één nieuw woord." },
+      { q: "Welk woord is fout gespeld?", options: ["schrijven", "rijden", "fietsen", "wandelen"], answer: 0, explanation: "Alle woorden zijn goed gespeld in dit geval — let op: 'schrijven' is correct." },
+      { q: "Wat is het verschil tussen 'er' en 'daar'?", options: ["Geen verschil", "'Er' is onbepaald, 'daar' wijst naar een specifieke plek", "'Daar' is onbepaald", "'Er' wijst naar een specifieke plek"], answer: 1, explanation: "'Er staat een fiets.' vs. 'De fiets staat daar.' — 'er' is onbepaald." },
+      { q: "Welke zin gebruikt een actieve werkwoordsvorm?", options: ["De brief werd geschreven.", "Jan schrijft de brief.", "De les werd gegeven.", "Het huiswerk is gemaakt."], answer: 1, explanation: "Actief: onderwerp voert de handeling uit. Jan (onderwerp) schrijft." },
+      { q: "Wat is het verschil tussen een werkwoord en een bijwoord?", options: ["Geen verschil", "Een werkwoord drukt een actie uit; een bijwoord geeft informatie over de actie", "Een bijwoord is een soort werkwoord", "Een werkwoord beschrijft hoe iets gedaan wordt"], answer: 1, explanation: "'Rennen' = werkwoord. 'Snel' (als 'snel rennen') = bijwoord." },
+      { q: "Welk woord is een telwoord?", options: ["groot", "rennen", "drie", "huis"], answer: 2, explanation: "'Drie' is een telwoord — het geeft een hoeveelheid aan." },
+      { q: "Wat is het meervoud van 'kalf'?", options: ["kalfs", "kalven", "kalvers", "kalveren"], answer: 3, explanation: "'Kalveren' is het onregelmatige meervoud van 'kalf'." },
+      { q: "Welke zin heeft een dt-fout?", options: ["Hij rijdt naar huis.", "Zij wordt ziek.", "Jij word morgen beter.", "Hij wordt boos."], answer: 2, explanation: "'Jij wordt' (stam + t bij jij na pers. vnw.) — 'word' zonder t is fout." },
+      { q: "Wat is het tegendeel van 'boven'?", options: ["naast", "voor", "achter", "onder"], answer: 3, explanation: "'Onder' is het antoniem van 'boven'." },
     ],
     groep7: [
       { q: "Welk woord krijgt -heid?", options: ["mooi", "snel", "vrij", "alle drie"], answer: 3, explanation: "Alle drie: mooi·heid, snel·heid, vrij·heid." },
@@ -1257,6 +1342,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is de stijlfiguur in: 'stille storm'?", options: ["Metafoor", "Alliteratie", "Oxymoron", "Personificatie"], answer: 2, explanation: "Twee tegengestelde woorden samen = oxymoron." },
       { q: "Welke zin gebruikt de actieve vorm?", options: ["De bal wordt gegooid.", "Jan gooit de bal.", "De bal is gegooid door Jan.", "Er wordt gevoetbald."], answer: 1, explanation: "In actief is het onderwerp de handelende persoon." },
       { q: "Wat betekent het prefix 'on-' in 'onmogelijk'?", options: ["Heel erg", "Niet", "Bijna", "Super"], answer: 1, explanation: "'On-' betekent 'niet': onmogelijk = niet mogelijk." },
+      { q: "Wat is een enkelvoudige zin?", options: ["Een zin met meerdere persoonsvormen", "Een zin met één persoonsvorm en één onderwerp", "Een zin zonder werkwoord", "Een bijzin"], answer: 1, explanation: "Een enkelvoudige zin heeft één persoonsvorm: 'De kat slaapt.'" },
+      { q: "Wat is het verschil tussen een bijzin en een hoofdzin?", options: ["Geen verschil", "Een bijzin is afhankelijk van een andere zin; een hoofdzin staat zelfstandig", "Een hoofdzin is afhankelijk", "Een bijzin heeft geen werkwoord"], answer: 1, explanation: "'Hij weet dat het regent.' — 'dat het regent' is een bijzin (afhankelijk)." },
+      { q: "Welke spelling is correct?", options: ["hij rijd", "hij rijdt", "hij rijt", "hij rijde"], answer: 1, explanation: "Rijden → stam 'rijd' + t bij hij/zij/het = rijdt. Het is een d-werkwoord." },
+      { q: "Wat is een persoonlijk voornaamwoord?", options: ["'groot', 'klein'", "'ik', 'jij', 'hij', 'wij'", "'rennen', 'lopen'", "'de', 'het'"], answer: 1, explanation: "Persoonlijke voornaamwoorden verwijzen naar personen: ik, jij, hij, zij, wij, jullie, zij." },
+      { q: "Wat is een bepaling van tijd?", options: ["Een bijvoeglijk naamwoord", "Een zinsdeel dat aangeeft wanneer iets gebeurt", "Het onderwerp", "Het lijdend voorwerp"], answer: 1, explanation: "Bv: 'Gisteren fietste ik naar school.' — 'gisteren' is de bepaling van tijd." },
+      { q: "Welke zin is samengesteld?", options: ["De hond blaft.", "Het regent.", "Ik ga naar huis en hij blijft hier.", "Zij loopt snel."], answer: 2, explanation: "Een samengestelde zin heeft twee of meer persoonsvormen verbonden door een voegwoord." },
+      { q: "Wat is een lidwoord?", options: ["'groot', 'klein', 'snel'", "'de', 'het', 'een'", "'rennen', 'lopen'", "'ik', 'jij', 'hij'"], answer: 1, explanation: "Lidwoorden staan voor zelfstandige naamwoorden: de kat, het huis, een auto." },
+      { q: "Wat is het suffix '-elijk' in 'duidelijk'?", options: ["Een prefix (voorvoegsel)", "Een suffix (achtervoegsel) dat bijvoeglijke naamwoorden vormt", "Een werkwoordsuitgang", "Een verkleinwoord"], answer: 1, explanation: "'Duid' + '-elijk' = duidelijk. Het suffix '-elijk' vormt bijvoeglijke naamwoorden." },
+      { q: "Wat is een afgeleid woord?", options: ["Een samengesteld woord", "Een woord gevormd met voor- of achtervoegsel van een basiswoord", "Een synoniem", "Een leenwoord"], answer: 1, explanation: "'on-' + 'mogelijk' = onmogelijk. 'werk' + '-er' = werker. Afgeleid van een basiswoord." },
     ],
     klas1: [
       { q: "Wat is een metafoor?", options: ["Vergelijking met 'als'", "Beeldspraak zonder 'als'", "Herhaling", "Overdrijving"], answer: 1, explanation: "Beeldspraak zonder 'als'. Bv: 'Hij is een rots.'" },
@@ -1325,6 +1419,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is de naam van de Nederlandse wateren tussen de vastekust en de Waddeneilanden?", options: ["IJsselmeer", "Waddenzee", "Noordzee", "Markermeer"], answer: 1, explanation: "De Waddenzee, UNESCO Werelderfgoed." },
       { q: "Welke provincie grenst aan België?", options: ["Friesland", "Limburg", "Groningen", "Utrecht"], answer: 1, explanation: "Limburg en Zeeland/Noord-Brabant grenzen aan België." },
       { q: "Wat is een kustlijn?", options: ["Een bergketen", "De grens tussen land en zee", "Een rivier", "Een weg"], answer: 1, explanation: "De kustlijn is de grens tussen land en water." },
+      { q: "In welke provincie ligt Groningen (stad)?", options: ["Friesland", "Drenthe", "Groningen", "Overijssel"], answer: 2, explanation: "De stad Groningen ligt in de provincie Groningen." },
+      { q: "Welke rivier stroomt door Utrecht?", options: ["Rijn", "Maas", "Vecht", "IJssel"], answer: 2, explanation: "De Vecht stroomt door de provincie Utrecht." },
+      { q: "Wat is de Delta?", options: ["Een vliegveld", "Laaglandgebied bij de riviermonding", "Een berg", "Een meer"], answer: 1, explanation: "De Nederlandse delta is het mondingsgebied van Rijn, Maas en Schelde." },
+      { q: "Welk land grenst aan de zuidkant van Nederland?", options: ["Duitsland", "Frankrijk", "Engeland", "België"], answer: 3, explanation: "België grenst aan de zuidkant van Nederland." },
+      { q: "Wat is de naam van het grootste Waddeneiland?", options: ["Vlieland", "Texel", "Terschelling", "Ameland"], answer: 1, explanation: "Texel is het grootste Waddeneiland." },
+      { q: "In welke provincie ligt Eindhoven?", options: ["Limburg", "Zeeland", "Noord-Brabant", "Gelderland"], answer: 2, explanation: "Eindhoven ligt in Noord-Brabant." },
+      { q: "Wat is een watersnoodgebied?", options: ["Een drooggelegd gebied", "Een gebied gevoelig voor overstromingen", "Een poldergebied", "Een estuarium"], answer: 1, explanation: "Lage en kustgebieden zijn vatbaar voor overstromingen." },
+      { q: "Welke provincie heeft de meeste meren?", options: ["Zeeland", "Utrecht", "Friesland", "Noord-Holland"], answer: 2, explanation: "Friesland staat bekend om zijn meren (de Friese meren)." },
+      { q: "Wat is de functie van een dijk?", options: ["Een weg door het water", "Een verhoging die land beschermt tegen water", "Een brug over een rivier", "Een sluis in een kanaal"], answer: 1, explanation: "Dijken beschermen laaggelegen land tegen overstromingen." },
     ],
     groep7: [
       { q: "Wat is de langste rivier ter wereld?", options: ["Amazone", "Nijl", "Mississippi", "Yangtze"], answer: 1, explanation: "De Nijl (ca. 6.650 km)." },
@@ -1347,6 +1450,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is de hoofdstad van Canada?", options: ["Toronto", "Vancouver", "Montreal", "Ottawa"], answer: 3, explanation: "Ottawa is de hoofdstad." },
       { q: "Welke bergketen ligt in Zuid-Amerika?", options: ["Rocky Mountains", "Alpen", "Andes", "Himalaya"], answer: 2, explanation: "De Andes, langs de westkust van Zuid-Amerika." },
       { q: "Op welk continent ligt Nieuw-Zeeland?", options: ["Azië", "Oceanië", "Zuid-Amerika", "Antarctica"], answer: 1, explanation: "Nieuw-Zeeland behoort tot Oceanië." },
+      { q: "Wat is de hoofdstad van Duitsland?", options: ["München", "Hamburg", "Berlijn", "Frankfurt"], answer: 2, explanation: "Berlijn is de hoofdstad van Duitsland." },
+      { q: "Welk continent is het kleinst?", options: ["Europa", "Australië", "Zuid-Amerika", "Antarctica"], answer: 1, explanation: "Australië is zowel een land als een continent — het kleinste continent." },
+      { q: "Wat is de hoofdstad van Spanje?", options: ["Barcelona", "Sevilla", "Madrid", "Valencia"], answer: 2, explanation: "Madrid is de hoofdstad van Spanje." },
+      { q: "Door welk land stroomt de Amazone?", options: ["Peru", "Colombia", "Brazilië", "Venezuela"], answer: 2, explanation: "De meeste van de Amazone stroomt door Brazilië." },
+      { q: "Wat is de hoofdstad van India?", options: ["Mumbai", "Delhi", "Calcutta", "Chennai"], answer: 1, explanation: "Nieuwe Delhi is de hoofdstad van India." },
+      { q: "Welk gebergte scheidt Europa en Azië?", options: ["Alpen", "Ural", "Himalaya", "Kaukasus"], answer: 1, explanation: "Het Oeral-gebergte scheidt Europa van Azië." },
+      { q: "Wat is de hoofdstad van Mexico?", options: ["Guadalajara", "Monterrey", "Mexico-Stad", "Tijuana"], answer: 2, explanation: "Mexico-Stad (Ciudad de México) is de hoofdstad." },
+      { q: "Welke oceaan ligt ten oosten van Afrika?", options: ["Atlantische Oceaan", "Stille Oceaan", "Indische Oceaan", "Arctische Oceaan"], answer: 2, explanation: "De Indische Oceaan ligt ten oosten van Afrika." },
+      { q: "Wat is de Stille Oceaan?", options: ["De kleinste oceaan", "De grootste oceaan ter wereld", "De diepste maar niet grootste", "De koudste oceaan"], answer: 1, explanation: "De Stille Oceaan (Pacifische Oceaan) is de grootste en diepste oceaan." },
     ],
     klas1: [
       { q: "Wat veroorzaakt eb en vloed?", options: ["De wind", "De maan", "De zon", "Aardbevingen"], answer: 1, explanation: "De aantrekkingskracht van de maan." },
@@ -1369,6 +1481,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een trekkerstam?", options: ["Een volk met een vaste woonplaats", "Een nomadisch volk", "Een stadsgroep", "Een boerenvolk"], answer: 1, explanation: "Nomaden trekken van plek naar plek, bv. voor vee of voedsel." },
       { q: "Wat is globalisering?", options: ["Lokale handel", "Toenemende wereldwijde verbondenheid", "Nationalisme", "Isolationisme"], answer: 1, explanation: "Globalisering = toenemende economische, culturele en politieke verbondenheid." },
       { q: "Wat is een lengtegraad?", options: ["Horizontale lijn", "Verticale lijn op de globe", "Een hoogtecurve", "Een windrichting"], answer: 1, explanation: "Lengtegraden lopen verticaal (noord-zuid)." },
+      { q: "Wat is een agglomeratie?", options: ["Een dunbevolkt gebied", "Een aaneengesloten stedelijk gebied van meerdere steden", "Een industriegebied", "Een haven"], answer: 1, explanation: "Agglomeratie: meerdere steden die samen als één stedelijk geheel functioneren." },
+      { q: "Wat is een windrichting?", options: ["De richting waar de wind naartoe gaat", "De richting waar de wind vandaan komt", "De snelheid van de wind", "De kracht van de wind"], answer: 1, explanation: "Een windrichting geeft aan waar de wind vandaan waait (bv. westenwind = van het westen)." },
+      { q: "Wat is een topografische kaart?", options: ["Een kaart met klimaatgegevens", "Een kaart die hoogteverschillen en landkenmerken toont", "Een politieke kaart", "Een satellietfoto"], answer: 1, explanation: "Topografische kaarten tonen hoogtelijnen (isohypsen) en landvormen." },
+      { q: "Wat is een stroomgebied (hydrologie)?", options: ["Het gebied rondom een stad", "Het totale gebied waarvan regenwater afwatert via één riviernetwerk naar zee", "Een overstromingsgebied", "Een stuwmeer"], answer: 1, explanation: "Het stroomgebied van de Rijn omvat alle gebieden die afwateren op de Rijn." },
+      { q: "Wat is een moessonklimaat?", options: ["Een droog klimaat", "Een klimaat met droge en natte seizoenen door seizoensgebonden winden", "Een poolklimaat", "Een gematigd klimaat"], answer: 1, explanation: "Moessonklimaat in Zuid-Azië: natte zomer, droge winter door wisselende windrichtingen." },
+      { q: "Wat is een vulkanische ring of fire?", options: ["Een vulkaan in Afrika", "Gebied met veel vulkanen en aardbevingen rond de Stille Oceaan", "Een geiser", "Een koraalkust"], answer: 1, explanation: "Ring of Fire: de rand van de Stille Oceaan heeft de meeste vulkanen en aardbevingen." },
+      { q: "Wat is het verschil tussen een delta en een estuarium?", options: ["Geen verschil", "Delta = driehoekige opvulling bij monding; estuarium = brede trechtervormige monding", "Estuarium heeft meer sediment", "Delta is getijde-afhankelijk"], answer: 1, explanation: "Delta: Nijl, Ganges. Estuarium: Schelde, Thames — brede, diepere trechtermond." },
+      { q: "Wat is een anticycloon?", options: ["Een orkaan", "Een hogedrukgebied met stabiel, droog weer", "Een lagedrukgebied", "Een depressie"], answer: 1, explanation: "Anticyclonen (hogedruk) brengen rustig, droog weer. Cyclonen brengen regen en wind." },
+      { q: "Wat is de bevolkingsdichtheid?", options: ["Het totale aantal inwoners", "Het aantal inwoners per km²", "De bevolkingsgroei", "De urbanisatiegraad"], answer: 1, explanation: "Bevolkingsdichtheid = aantal mensen / oppervlakte in km²." },
     ],
     klas3: [
       { q: "Wat is het broeikaseffect?", options: ["Opwarming door CO2", "Afkoeling atmosfeer", "Ozongat", "Zure regen"], answer: 0, explanation: "Broeikasgassen houden warmte vast in de atmosfeer." },
@@ -1391,6 +1512,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is biocapaciteit?", options: ["Technologische capaciteit", "Productiviteit van een ecosysteem", "Menselijke draagkracht", "Industriële output"], answer: 1, explanation: "Biocapaciteit = het vermogen van ecosystemen om hulpbronnen te leveren." },
       { q: "Wat zijn greenhouse gases?", options: ["Gassen in een kas", "CO2, methaan e.a. die warmte vasthouden", "Schone lucht", "Stikstof"], answer: 1, explanation: "Broeikasgassen (CO2, CH4, N2O) houden warmte vast." },
       { q: "Wat is een transitiezone?", options: ["Een snelweg", "Overgangsgebied tussen twee klimaatzones", "Een kustgebied", "Een industriepark"], answer: 1, explanation: "Bv. de Sahel: overgang tussen Sahara en savanne." },
+      { q: "Wat is het begrip 'core-periphery' (kern-periferie)?", options: ["Binnenland vs. kust", "Ongelijke machtsverhouding tussen ontwikkelde kernen en afhankelijke randgebieden", "Stadscentrum vs. buitenwijk", "Noord vs. Zuid"], answer: 1, explanation: "Kern-periferie: rijke landen exploiteren armere randgebieden (wereld-systeem theorie)." },
+      { q: "Wat is de vruchtbare sikkel?", options: ["Een landbouwinstrument", "Historisch vruchtbaar gebied in het Midden-Oosten, wieg van landbouw", "Een rivier in Afrika", "Een irrigatiesysteem"], answer: 1, explanation: "De vruchtbare sikkel (Mesopotamië, Levant) was de geboorteplaats van de landbouw." },
+      { q: "Wat is het Urban Heat Island-effect?", options: ["Hittegolven in woestijnen", "Steden zijn warmer dan omliggend platteland door bebouwing en industrie", "Opwarming door vulkanen", "El Niño-effect"], answer: 1, explanation: "Steden absorberen meer warmte door steen, asfalt en warmteproductie." },
+      { q: "Wat is het verschil tussen pull- en push-factoren bij migratie?", options: ["Geen verschil", "Push = drijft mensen weg; pull = trekt mensen aan", "Pull = armoede, push = welvaart", "Beide zijn economisch"], answer: 1, explanation: "Push: oorlog, armoede. Pull: betere kansen, veiligheid elders." },
+      { q: "Wat is geopolitiek?", options: ["Interne politiek", "De invloed van geografie op politieke macht en internationale betrekkingen", "Economische geografie", "Klimaatpolitiek"], answer: 1, explanation: "Geopolitiek: hoe ligging, grondstoffen en geografie politieke verhoudingen bepalen." },
+      { q: "Wat is het Kyoto-protocol gericht op?", options: ["Handelsverdrag", "Reductie van broeikasgasuitstoot door geïndustrialiseerde landen", "Biodiversiteitsbehoud", "Oceaanvervuiling"], answer: 1, explanation: "Kyoto (1997) verplicht rijke landen tot vermindering van CO₂-uitstoot." },
+      { q: "Wat is een geostationaire baan?", options: ["Een laag-aardse baan", "Een satellietbaan waarbij de satelliet gelijke omlooptijd heeft als de aardrotatie", "Een polaire baan", "Een maanbaan"], answer: 1, explanation: "Geostationaire satellieten staan altijd boven hetzelfde punt op aarde — gebruikt voor tv en weer." },
+      { q: "Wat is het concept 'sustainable development' (duurzame ontwikkeling)?", options: ["Economische groei ten koste van milieu", "Ontwikkeling die voldoet aan huidige behoeften zonder toekomstige generaties te benadelen", "Energiebesparing alleen", "Industriële groei"], answer: 1, explanation: "Brundtland-definitie (1987): duurzame ontwikkeling balanceert economie, sociaal en milieu." },
+      { q: "Wat is het 'demografisch dividend'?", options: ["Hoge bevolkingsgroei", "Economisch voordeel wanneer de werkzame bevolking groter is dan afhankelijken", "Kindersterfte dalen", "Vergrijzing"], answer: 1, explanation: "Demografisch dividend: grote groep werkenden → economische groei (zoals in Oost-Azië jaren 70-90)." },
     ],
   },
   geschiedenis: {
@@ -1415,6 +1545,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wanneer was WO1?", options: ["1900-1910", "1914-1918", "1920-1925", "1939-1945"], answer: 1, explanation: "Eerste Wereldoorlog: 1914-1918." },
       { q: "Wat was de IJzeren Gordijn?", options: ["Een grens in WO2", "Denkbeeldige grens Oost-West tijdens Koude Oorlog", "Een verdedigingswerk", "Een spoorlijn"], answer: 1, explanation: "De IJzeren Gordijn scheidde het communistische Oosten van het Westen." },
       { q: "Wat is een feodale samenleving?", options: ["Een democratie", "Een samenleving met leenheren en lijfeigenen", "Een stadsstaat", "Een koninkrijk"], answer: 1, explanation: "Feodalisme: leenheren geven land in ruil voor diensten." },
+      { q: "Wie was Rembrandt van Rijn?", options: ["Een ontdekkingsreiziger", "Een beroemde Nederlandse schilder uit de Gouden Eeuw", "Een politicus", "Een zeeheld"], answer: 1, explanation: "Rembrandt (1606-1669) schilderde o.a. De Nachtwacht." },
+      { q: "Wat waren de kruistochten?", options: ["Handelsexpedities naar Azië", "Militaire tochten van christenen naar het Heilige Land", "Ontdekkingsreizen naar Amerika", "Viking-invallen in Europa"], answer: 1, explanation: "Kruistochten (1096-1291): Europese christenen probeerden Jeruzalem te veroveren." },
+      { q: "Wat is de Renaissance?", options: ["Een oorlog", "Culturele en artistieke hergeboorte in Europa (14e-17e eeuw)", "Een politieke beweging", "Een godsdienstige stroming"], answer: 1, explanation: "Renaissance = 'wedergeboorte': herleving van Griekse en Romeinse cultuur." },
+      { q: "Wie was Michiel de Ruyter?", options: ["Een schilder", "Een Nederlandse admiraal uit de 17e eeuw", "Een ontdekkingsreiziger", "Een dichter"], answer: 1, explanation: "Michiel de Ruyter (1607-1676) was de beroemdste Nederlandse admiraal." },
+      { q: "Wat was de rol van de kerk in de Middeleeuwen?", options: ["Geen macht", "Enorme religieuze, politieke en culturele macht in Europa", "Alleen religie, geen politiek", "Alleen in Italië van belang"], answer: 1, explanation: "De katholieke kerk had enorme invloed op politiek, onderwijs en dagelijks leven." },
+      { q: "Wanneer begon de Eerste Wereldoorlog?", options: ["1910", "1914", "1918", "1939"], answer: 1, explanation: "WO1 begon in 1914 na de aanslag op Franz Ferdinand in Sarajevo." },
+      { q: "Wat was de Spaanse Armada?", options: ["Een Spaanse piratengroep", "De Spaanse vloot die Engeland wilde veroveren (1588)", "Een handelsvloot", "Een koloniale expeditie"], answer: 1, explanation: "De Spaanse Armada (1588) werd verslagen door Engeland, een klap voor Spanje." },
+      { q: "Wat is slavernij?", options: ["Gedwongen arbeid met loon", "Mensen die eigendom zijn van anderen en gedwongen worden te werken", "Tijdelijke arbeid", "Contractarbeid"], answer: 1, explanation: "Slavernij: mensen als eigendom, vaak verbonden met transatlantische slavenhandel." },
+      { q: "Wat was de Verlichting?", options: ["Uitvinding elektriciteit", "18e-eeuwse stroming die rede en vrijheid boven religie stelde", "Een religieuze beweging", "De industriële revolutie"], answer: 1, explanation: "Verlichtingsdenkers als Voltaire, Rousseau en Locke benadrukten vrijheid en rede." },
     ],
     groep7: [
       { q: "Wanneer begon de Gouden Eeuw?", options: ["15e eeuw", "16e eeuw", "17e eeuw", "18e eeuw"], answer: 2, explanation: "17e eeuw (1600-1700)." },
@@ -1437,6 +1576,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wie was Mahatma Gandhi?", options: ["Indiaas militair leider", "Leider van geweldloze onafhankelijkheidsstrijd India", "Pakistans eerste president", "Een Britse gouverneur"], answer: 1, explanation: "Gandhi leidde de geweldloze strijd voor Indiase onafhankelijkheid." },
       { q: "Wat was de Cubacrisis?", options: ["Cubaanse revolutie", "Nucleaire dreiging VS-Sovjet-Unie in 1962", "Inval in Cuba 1961", "Handelsembargo op Cuba"], answer: 1, explanation: "1962: Sovjet-Unie plaatste kernraketten op Cuba." },
       { q: "Wanneer werd de EU opgericht?", options: ["1945", "1957", "1992", "2000"], answer: 1, explanation: "Verdrag van Rome (1957) stichtte de EEG, voorloper van de EU." },
+      { q: "Wat was de impact van de Industriële Revolutie op de samenleving?", options: ["Meer boerderijen", "Verstedelijking, fabrieksarbeid en sociale ongelijkheid groeiden", "Minder productie", "Meer feodalisme"], answer: 1, explanation: "Industrialisatie: trek naar steden, fabriekssysteem, nieuwe arbeidersklasse." },
+      { q: "Wat was de Reformatie?", options: ["Een politieke revolutie", "Religieuze vernieuwingsbeweging die leidde tot het protestantisme (Luther 1517)", "Een artistieke beweging", "Een economische hervorming"], answer: 1, explanation: "Luther, Calvijn en Zwingli hervormden het christendom. Scheuring van de kerk." },
+      { q: "Wat was de Tachtigjarige Oorlog?", options: ["Een wereldoorlog", "Nederlandse Opstand tegen Spanje (1568-1648)", "Een burgeroorlog in Engeland", "Een Napoleon-oorlog"], answer: 1, explanation: "De Tachtigjarige Oorlog leidde tot de onafhankelijkheid van de Republiek der Zeven Provinciën." },
+      { q: "Wat was het Akkoord van München (1938)?", options: ["Handelsovereenkomst", "Britisch-Frans toegeven aan Hitlers eisen over Tsjecho-Slowakije", "Vrede na WO1", "NATO-oprichting"], answer: 1, explanation: "München 1938: Chamberlain gaf Sudetenland aan Hitler — klassiek voorbeeld van appeasement." },
+      { q: "Wat was de rol van de SS in Nazi-Duitsland?", options: ["Een militaire eenheid voor verdediging", "Elite-paramilitaire organisatie die concentratiekampen beheerde en terreur uitvoerde", "Een economische organisatie", "De Duitse politie"], answer: 1, explanation: "De SS (Schutzstaffel) was verantwoordelijk voor de uitvoering van de Holocaust." },
+      { q: "Wie was Winston Churchill?", options: ["VS-president tijdens WO2", "Britse premier die leiding gaf aan de strijd tegen Hitler", "Russische leider", "Frans generaal"], answer: 1, explanation: "Churchill (1874-1965): Britse premier, symbool van Brits verzet tegen Hitler." },
+      { q: "Wat was het IJzeren Gordijn?", options: ["Een muur in Berlijn", "Denkbeeldige grens die West-Europa van de communistische Oostblok scheidde", "Een verdedigingslinie in WO1", "Een handelsbarrière"], answer: 1, explanation: "Het IJzeren Gordijn (Churchill, 1946) symboliseerde de politieke scheiding van Europa." },
+      { q: "Wat betekende dekolonisatie voor Afrika?", options: ["Meer kolonies", "Afrikaanse landen werden onafhankelijk na WO2", "Meer Europese controle", "Economische integratie met Europa"], answer: 1, explanation: "Na 1945 werd Afrika grotendeels onafhankelijk: Ghana (1957), Nigeria (1960), enz." },
+      { q: "Wat was de Veluwse Oproer of Patriottenbeweging in Nederland?", options: ["Een boerenopstand", "Een 18e-eeuwse democratische beweging die het gezag van de stadhouder betwistte", "Een religieuze beweging", "Een handelsdispuut"], answer: 1, explanation: "De Patriotten (jaren 1780) streefden naar meer volkssoevereiniteit en minder Oranje-macht." },
     ],
     klas1: [
       { q: "Wanneer viel de Berlijnse Muur?", options: ["1985", "1987", "1989", "1991"], answer: 2, explanation: "9 november 1989." },
@@ -1459,6 +1607,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat was de Reconquista?", options: ["Spaanse veroveringen in Amerika", "Herovering van het Iberisch schiereiland op de Moren", "Kruistochten", "Inquisitie"], answer: 1, explanation: "Reconquista: 8e-15e eeuw, christenen heroveren Spanje en Portugal." },
       { q: "Wat was de Magna Carta?", options: ["Eerste Britse grondwet", "Overeenkomst tussen koning en adel (1215)", "Een kerkelijk document", "Een handvest van de VN"], answer: 1, explanation: "Magna Carta (1215) beperkte de macht van de Engelse koning." },
       { q: "Wanneer begon de Reformatie?", options: ["1400", "1517", "1600", "1789"], answer: 1, explanation: "1517: Luther sloeg zijn stellingen aan de kerkdeur." },
+      { q: "Wat was de Onafhankelijkheidsverklaring van de VS (1776)?", options: ["Begin van de Burgeroorlog", "Verklaring waarbij de 13 kolonies zich afscheidden van Engeland", "Einde van de onafhankelijkheidsoorlog", "Grondwetsherziening"], answer: 1, explanation: "4 juli 1776: de 13 kolonies verklaarden onafhankelijkheid van Groot-Brittannië." },
+      { q: "Wat was het Versailles-vredesverdrag een reactie op?", options: ["De Russische Revolutie", "Het einde van de Eerste Wereldoorlog", "Napoleons nederlaag", "De Tweede Wereldoorlog"], answer: 1, explanation: "Versailles (1919) was het vredesverdrag na WO1 en bestrafte Duitsland zwaar." },
+      { q: "Wie was Joseph Stalin?", options: ["Russische tsaar", "Sovjet-dictator die de USSR met terreur regeerde", "Leider van de Russische Revolutie", "Russische generaal in WO1"], answer: 1, explanation: "Stalin leidde de USSR van 1924-1953, met massale repressie en gulags." },
+      { q: "Wat was de Grote Depressie?", options: ["Een epidemie", "Mondiale economische crisis (1929-1939) na beurskrach Wall Street", "Een politieke crisis", "Een oorlog"], answer: 1, explanation: "Na de beurskrach van 1929 volgde wereldwijde economische crisis: werkloosheid, armoede." },
+      { q: "Wanneer vond de Russische Revolutie plaats?", options: ["1905", "1917", "1921", "1924"], answer: 1, explanation: "Februari en Oktober 1917: tsaar werd afgezet; Bolsjewieken grepen de macht." },
+      { q: "Wat was Operatie Barbarossa?", options: ["D-Day landing", "De Duitse invasie van de Sovjet-Unie (1941)", "Hitlers zelfmoord in de bunker", "De aanval op Polen"], answer: 1, explanation: "Barbarossa (22 juni 1941): Duitsland brak het Molotov-Ribbentrop-pact en viel de USSR aan." },
+      { q: "Wat was het Maagdenburger hemispheer-experiment?", options: ["Geschiedkundig experiment", "Otto von Guericke's demonstratie van luchtdruk (1654)", "Een astronomische ontdekking", "Een chemische reactie"], answer: 1, explanation: "Von Guericke toonde aan dat vacuüm zo'n kracht heeft dat 16 paarden twee halve bollen niet konden scheiden." },
+      { q: "Wat was de Oost-Indische Compagnie (VOC) de eerste van?", options: ["Eerste handelsvloot", "Eerste beursgenoteerde naamloze vennootschap ter wereld (1602)", "Eerste internationale organisatie", "Eerste bank"], answer: 1, explanation: "De VOC (1602) was de eerste naamloze vennootschap met aandelen op een beurs." },
+      { q: "Wat was de Slag bij Gettysburg?", options: ["WO1-slag", "Beslissende slag van de Amerikaanse Burgeroorlog (1863)", "WO2-slag", "Slag in de Mexicaans-Amerikaanse Oorlog"], answer: 1, explanation: "Gettysburg (1-3 juli 1863): de bloedigste slag van de Burgeroorlog, keerpunt voor de Unie." },
     ],
     klas3: [
       { q: "Wat was de Verlichting?", options: ["Uitvinding elektriciteit", "18e-eeuwse filosofische stroming", "Religieuze beweging", "Industriële revolutie"], answer: 1, explanation: "Rede, individuele vrijheid en kritisch denken stonden centraal." },
@@ -1481,6 +1638,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat was de Haagse Academie?", options: ["Schildersschool", "Internationale rechtsinstitutie", "Politieke organisatie", "Wetenschapsinstituut"], answer: 1, explanation: "De Haagse Academie voor Internationaal Recht (1923)." },
       { q: "Wat is periodisering in de geschiedschrijving?", options: ["Bronnenonderzoek", "Indelen van de geschiedenis in tijdperken", "Biografisch onderzoek", "Economische analyse"], answer: 1, explanation: "Historici delen het verleden in periodes in voor overzicht." },
       { q: "Wat was de Slag bij Hastings?", options: ["Viking-inval", "Normandische verovering van Engeland (1066)", "Honderdjarige Oorlog", "Kruistocht"], answer: 1, explanation: "1066: Willem de Veroveraar versloeg de Engelse koning Harold." },
+      { q: "Wat is de term voor het systematisch vernietigen van een bevolkingsgroep?", options: ["Ethnocide", "Genocide", "Holocaust", "Pogrom"], answer: 1, explanation: "Genocide: systematische vernietiging van een etnische, nationale of religieuze groep. Erkend door de VN." },
+      { q: "Wat was de rol van de Derde Stand in de Franse Revolutie?", options: ["Ondersteunde de koning", "Voerde de revolutie door gebrek aan politieke macht en economische nood", "Was onverschillig", "Steunde de adel"], answer: 1, explanation: "De Derde Stand (burgers, boeren) had 97% van de bevolking maar nauwelijks rechten → revolutie." },
+      { q: "Wat was het Concert van Europa (1815-1914)?", options: ["Muziekconcert", "Systeem van Europese machtsbalans en diplomatie na Napoleon", "Handelsverdrag", "Militaire alliantie"], answer: 1, explanation: "Concert van Europa: grote mogendheden hanteerden consensus om oorlog te voorkomen." },
+      { q: "Wat was de Boxer-opstand (1900)?", options: ["Boerenopstand in China", "Chinese nationalistische opstand tegen buitenlandse invloed", "Japanse invasie", "Russisch-Chinese oorlog"], answer: 1, explanation: "Boxers (Yi He Tuan) vielen buitenlandse legaties aan in Peking, neergeslagen door internationale troepen." },
+      { q: "Wat was de betekenis van de Magna Carta voor democratie?", options: ["Gaf iedereen stemrecht", "Beperkte de macht van de koning en legde rechten vast", "Schafte de monarchie af", "Voerde parlementaire democratie in"], answer: 1, explanation: "Magna Carta (1215) was een eerste stap: ook de koning was gebonden aan rechtsregels." },
+      { q: "Wat is het begrip 'imperialisme'?", options: ["Nationalisme", "Het beleid om andere landen te veroveren en te beheersen voor economisch/politiek gewin", "Kolonialisme alleen", "Militaire expansie"], answer: 1, explanation: "Imperialisme: machtige landen overheersen zwakkere — bv. Europees imperialisme in Afrika/Azië." },
+      { q: "Wat was de betekenis van de uitvinding van de boekdrukkunst (Gutenberg, 1450)?", options: ["Vertraging van kennisverspreiding", "Versnelde verspreiding van ideeën, bijbels en wetenschappelijke kennis", "Verdwijning van handschriften", "Geen invloed op samenleving"], answer: 1, explanation: "De drukpers maakte boeken betaalbaar en versnelde de Reformatie en Verlichting." },
+      { q: "Wat was het Habsburgse Rijk?", options: ["Een Scandinavisch koninkrijk", "Een Centraal-Europees keizerrijk dat over meerdere eeuwen grote invloed had", "Een Italiaanse stadsstaat", "Een Oosters keizerrijk"], answer: 1, explanation: "De Habsburgers regeerden over Spanje, Oostenrijk-Hongarije en grote delen van Europa (15e-20e eeuw)." },
+      { q: "Wat veroorzaakte de Eerste Wereldoorlog?", options: ["De aanval op Polen", "Samenloop van nationalisme, allianties, imperialisme en de moord op Franz Ferdinand", "Alleen de moord op Franz Ferdinand", "Economische crisis"], answer: 1, explanation: "MAIN-factoren: Militarisme, Allianties, Imperialisme, Nationalisme — aanleiding was de aanslag in Sarajevo (1914)." },
     ],
   },
   natuur: {
@@ -1495,6 +1661,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat maakt een bij?", options: ["Melk", "Honing", "Wol", "Eieren"], answer: 1, explanation: "Bijen maken honing van nectar." },
       { q: "Hoeveel poten heeft een spin?", options: ["4", "6", "8", "10"], answer: 2, explanation: "Een spin heeft 8 poten." },
       { q: "Wat doet een boom in de winter?", options: ["Bloeit", "Verliest zijn bladeren", "Groeit het snelst", "Zaadjes maken"], answer: 1, explanation: "De meeste bomen verliezen hun bladeren in de herfst/winter." },
+      { q: "Welk dier maakt een web?", options: ["Vlinder", "Spin", "Bij", "Lieveheersbeestje"], answer: 1, explanation: "Een spin maakt een web om insecten te vangen." },
+      { q: "Wat hebben planten nodig om te groeien?", options: ["Alleen water", "Water, licht en lucht", "Alleen licht", "Alleen lucht"], answer: 1, explanation: "Planten hebben water, zonlicht en lucht (CO2) nodig om te groeien." },
+      { q: "Welke kleur heeft gras?", options: ["Bruin", "Geel", "Groen", "Paars"], answer: 2, explanation: "Gras is groen door de kleurstof chlorofyl." },
+      { q: "Wat is de jonge kat?", options: ["Puppy", "Kitten", "Veulen", "Kuiken"], answer: 1, explanation: "Een jonge kat heet een kitten of poes." },
+      { q: "Welk dier leeft in de grond?", options: ["Vlinder", "Muis", "Regenworm", "Zwaan"], answer: 2, explanation: "Regenwormen leven in de grond en zijn goed voor de bodem." },
+      { q: "Wat zijn blaadjes op een boom?", options: ["De wortels van een boom", "Groene, platte organen die licht opvangen", "De vruchten", "De stammen"], answer: 1, explanation: "Bladeren vangen zonlicht op voor fotosynthese." },
+      { q: "Welk seizoen volgt op de winter?", options: ["Herfst", "Zomer", "Lente", "Er is geen volgend seizoen"], answer: 2, explanation: "Na de winter komt de lente." },
+      { q: "Wat eet een konijn?", options: ["Vlees", "Wormen", "Gras en groenten", "Insecten"], answer: 2, explanation: "Konijnen zijn planteneters (herbivoren) en eten gras, groenten en hooi." },
+      { q: "Wat is een rups?", options: ["Een volwassen vlinder", "Een jonge vlinder vóór de vlindertransformatie", "Een soort worm", "Een insectenlarve die geen vlinder wordt"], answer: 1, explanation: "Een rups is de larve van een vlinder of mot — hij maakt een cocon en verandert in een vlinder." },
     ],
     groep5: [
       { q: "Wat hebben planten nodig om te groeien?", options: ["Alleen water", "Water, licht en CO2", "Alleen zonlicht", "Alleen aarde"], answer: 1, explanation: "Fotosynthese vereist water, zonlicht en CO2." },
@@ -1517,6 +1692,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een voedselketen?", options: ["Een supermarkt", "Wie wat eet in de natuur", "Een recept", "Een boerderij"], answer: 1, explanation: "Bv: gras → konijn → vos = voedselketen." },
       { q: "Hoelang duurt één dag op aarde?", options: ["12 uur", "24 uur", "48 uur", "365 uur"], answer: 1, explanation: "24 uur = één omwenteling van de aarde om haar as." },
       { q: "Wat is biodiversiteit?", options: ["Eén soort dier", "Verscheidenheid aan leven", "Een type ecosysteem", "Een wetenschappelijk instrument"], answer: 1, explanation: "Biodiversiteit = de rijkdom aan soorten in een gebied." },
+      { q: "Wat is een magneet?", options: ["Een elektrisch apparaat", "Een voorwerp dat ijzer en staal aantrekt", "Een soort kristal", "Een chemische stof"], answer: 1, explanation: "Magneten hebben een noord- en zuidpool die ijzerhoudende materialen aantrekken." },
+      { q: "Wat is de functie van wortels bij een plant?", options: ["Licht opvangen", "Water en voedingsstoffen uit de grond opnemen en de plant verankeren", "Zuurstof aanmaken", "Bloemen dragen"], answer: 1, explanation: "Wortels houden de plant vast en nemen water en mineralen op." },
+      { q: "Hoe verplaatst warmte zich van de zon naar de aarde?", options: ["Geleiding", "Straling", "Convectie", "Diffusie"], answer: 1, explanation: "De zon verwarmt de aarde via infraroodstraling — er is geen materiaal nodig." },
+      { q: "Wat is een omnivoor?", options: ["Een vleesetend dier", "Een plantenetend dier", "Een dier dat zowel planten als dieren eet", "Een zaadetend dier"], answer: 2, explanation: "Omnivoren eten alles: mensen, varkens, beren zijn omnivoren." },
+      { q: "Wat doet het hart bij mensen?", options: ["Lucht filteren", "Bloed rondpompen door het lichaam", "Voedsel verteren", "Hormonen aanmaken"], answer: 1, explanation: "Het hart is een pomp die bloed via slagaders en aders door het lichaam stuurt." },
+      { q: "Wat is condenswater op een koud glas?", options: ["Water dat door het glas lekt", "Waterdamp uit de lucht die afkoelt en neerslaat op het koude oppervlak", "Zweet", "Gesmolten ijs"], answer: 1, explanation: "Condensatie: warme, vochtige lucht raakt het koude glas en vormt waterdruppeltjes." },
+      { q: "Wat is een prooi?", options: ["Een dier dat anderen eet", "Een dier dat door andere dieren wordt gegeten", "Een plantenetend dier", "Een roofdier"], answer: 1, explanation: "Prooi = het dier dat wordt opgejaagd en gegeten door een roofdier." },
+      { q: "Welke planeet heeft ringen?", options: ["Jupiter", "Mars", "Saturnus", "Venus"], answer: 2, explanation: "Saturnus staat bekend om zijn spectaculaire ringen van ijs en stof." },
+      { q: "Wat is het verschil tussen een insect en een spin?", options: ["Geen verschil", "Insect heeft 6 poten; spin heeft 8 poten en is een arachnide", "Spin heeft 6 poten", "Insect heeft 8 poten"], answer: 1, explanation: "Insecten: 6 poten, 3 lichaamsdelen. Spinnen (arachniden): 8 poten, 2 lichaamsdelen." },
     ],
     groep7: [
       { q: "Wat is het verschil tussen weer en klimaat?", options: ["Geen verschil", "Weer is korte termijn, klimaat lange termijn", "Klimaat is korte termijn", "Weer is altijd warm"], answer: 1, explanation: "Weer = nu; klimaat = gemiddeld over 30+ jaar." },
@@ -1539,6 +1723,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een exotherme reactie?", options: ["Warmte-absorberend", "Warmte-vrijgevend", "Lichtgevend", "Geluidgevend"], answer: 1, explanation: "Exotherm: energie (warmte) wordt vrijgegeven." },
       { q: "Wat is dichtheid?", options: ["Massa per volume", "Volume per massa", "Kracht per oppervlak", "Energie per tijd"], answer: 0, explanation: "Dichtheid = massa/volume (kg/m³)." },
       { q: "Wat is het verschil tussen een plant- en diercel?", options: ["Geen verschil", "Plantencel heeft celwand en chloroplasten", "Diercel heeft chloroplasten", "Plantencel heeft geen kern"], answer: 1, explanation: "Plantencellen hebben celwand en chloroplasten voor fotosynthese." },
+      { q: "Wat is een predator-prooirelatie?", options: ["Beide dieren helpen elkaar", "Een roofdier jaagt op en eet een prooidier", "Twee dieren leven samen", "Dieren concurreren om voedsel"], answer: 1, explanation: "In een predator-prooirelatie eet het roofdier de prooi. Bv: wolf (predator) – schaap (prooi)." },
+      { q: "Wat is een neerslag?", options: ["Alleen regen", "Alle vormen van water die uit de lucht vallen (regen, sneeuw, hagel)", "Alleen sneeuw", "Condens op ramen"], answer: 1, explanation: "Neerslag omvat regen, sneeuw, hagel en ijzel — alle vormen van water die uit wolken vallen." },
+      { q: "Wat is de waterkringloop?", options: ["Water verdampt alleen", "De continue circulatie van water tussen zee, lucht en land", "Water valt alleen als regen", "Rivieren stromen naar zee"], answer: 1, explanation: "Waterkringloop: verdamping → condensatie → neerslag → afstroming → verdamping." },
+      { q: "Wat is een decompositie (ontbinding)?", options: ["Groei van organismen", "Afbraak van dood organisch materiaal door bacteriën en schimmels", "Fotosynthese in de grond", "Voedselopname door wortels"], answer: 1, explanation: "Ontbinders (bacteriën, schimmels) breken dode materie af en recirculeren voedingsstoffen." },
+      { q: "Wat is zwerkracht / zwaartekracht?", options: ["Een magnetische kracht", "De aantrekkingskracht die massa's op elkaar uitoefenen", "Een elektrische kracht", "Wrijving tussen objecten"], answer: 1, explanation: "Zwaartekracht: alle objecten met massa trekken elkaar aan. De aarde trekt ons naar beneden." },
+      { q: "Wat is een exotische soort?", options: ["Een zeldzame inheemse soort", "Een soort die buiten zijn oorspronkelijk leefgebied terechtkomt door menselijk handelen", "Een uitgestorven soort", "Een beschermde soort"], answer: 1, explanation: "Invasieve exoten (bv. Japanse duizendknoop, muskusrat) kunnen de biodiversiteit bedreigen." },
+      { q: "Wat is de kringloop van koolstof?", options: ["Koolstof verdwijnt in de bodem", "Continue uitwisseling van koolstof tussen atmosfeer, planten, dieren en bodem", "CO2 wordt alleen door mensen geproduceerd", "Een lineair proces"], answer: 1, explanation: "Koolstofkringloop: fotosynthese (CO2 opname) ↔ ademhaling/verbranding (CO2 vrijgave)." },
+      { q: "Wat is een biotoop?", options: ["De verzameling van soorten in een gebied", "De leefomgeving met alle abiotische factoren voor een levensgemeenschap", "Een soortenbeschrijving", "Een ecosysteem"], answer: 1, explanation: "Biotoop = de fysieke omgeving (bodem, water, klimaat) van een levensgemeenschap." },
+      { q: "Wat is een covalente binding bij moleculen?", options: ["Overdracht van elektronen", "Gemeenschappelijk gebruik van elektronen tussen twee atomen", "Aantrekking van ionen", "Een fysische binding"], answer: 1, explanation: "Covalente binding: twee atomen delen een elektronenpaar (bv. H₂O, CO₂)." },
     ],
     klas1: [
       { q: "Wat is DNA?", options: ["Een type cel", "Erfelijk materiaal", "Een vitamine", "Een hormoon"], answer: 1, explanation: "DNA bevat genetische informatie." },
@@ -1780,6 +1973,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat betekent 'damit' als voegwoord?", options: ["Daarmee (instrument)", "Opdat/zodat", "Hoewel", "Terwijl"], answer: 1, explanation: "'Damit' als voegwoord = opdat, zodat." },
       { q: "Wat is het verschil tussen 'als' en 'wenn'?", options: ["Geen", "'Als' = eenmalig verleden; 'wenn' = herhaling/toekomst", "'Wenn' = verleden eenmalig", "Beide voor toekomst"], answer: 1, explanation: "'Als er jung war' (eenmalig); 'wenn es regnet' (herhaling/conditie)." },
       { q: "Wat is de Dativ van 'die Frau'?", options: ["die Frau", "der Frau", "den Frau", "des Frau"], answer: 1, explanation: "Dativ vrouwelijk: 'der Frau'." },
+      { q: "Wat is het verschil tussen 'sein' en 'haben' in het Perfekt?", options: ["Geen verschil", "Bewegings-/toestandswerkwoorden nemen 'sein'; andere nemen 'haben'", "'Sein' is altijd fout", "'Haben' voor beweging"], answer: 1, explanation: "Gehen → ist gegangen (sein). Essen → hat gegessen (haben)." },
+      { q: "Hoe zeg je 'ik wil naar huis gaan' in het Duits?", options: ["Ich will nach Hause fahren.", "Ich möchte nach Hause gehen.", "Ich gehe nach Hause wollen.", "Ich will Haus gehen."], answer: 1, explanation: "'Ich möchte nach Hause gehen.' — möchte is de beleefde vorm van willen." },
+      { q: "Welk hulpwerkwoord gebruik je bij 'können'?", options: ["Sein", "Werden", "Haben", "Können staat alleen"], answer: 2, explanation: "In het Perfekt: 'Ich habe es nicht tun können' — kunnen + Infinitief neemt 'haben'." },
+      { q: "Wat betekent 'obwohl' in de zin?", options: ["Omdat", "Hoewel (geeft tegenstelling aan, werkwoord naar einde)", "Als", "Wanneer"], answer: 1, explanation: "'Obwohl' = hoewel. Stuurde bijzin: werkwoord naar het einde." },
+      { q: "Hoe schrijf je 'Ik begrijp het niet' in het Duits?", options: ["Ich verstehe nicht es.", "Ich nicht verstehe.", "Ich verstehe es nicht.", "Ich es verstehe nicht."], answer: 2, explanation: "'Ich verstehe es nicht.' — negatie staat achter het object." },
+      { q: "Wat is de onvoltooid verleden tijd (Präteritum) van 'sein'?", options: ["hat gewesen", "war", "ist gewesen", "wäre"], answer: 1, explanation: "'War' = was (Präteritum van sein)." },
+      { q: "Welke naamval gebruik je na 'für'?", options: ["Nominatief", "Akkusatief", "Dativ", "Genitief"], answer: 1, explanation: "'Für' is een Akkusatief-voorzetsel: 'Das ist für dich'." },
+      { q: "Hoe zeg je 'hij is gisteren naar school gegaan' in het Duits?", options: ["Er geht gestern zur Schule.", "Er ist gestern zur Schule gegangen.", "Er hat gestern zur Schule gegangen.", "Er ging gestern zur Schule."], answer: 1, explanation: "Perfekt van 'gehen' (beweging) = ist gegangen: 'Er ist gestern zur Schule gegangen.'" },
+      { q: "Wat is een Nebensatz (bijzin) in het Duits?", options: ["Een zin die zelfstandig staat", "Een bijzin waarbij het werkwoord naar het einde verplaatst", "Een hoofdzin", "Een vraagzin"], answer: 1, explanation: "In een Nebensatz staat het werkwoord altijd aan het einde: 'weil ich müde bin'." },
     ],
     klas3: [
       { q: "Wat is het Konjunktiv II?", options: ["Gewone verleden tijd", "Hypothetische/irreële uitdrukking", "Toekomst", "Gebiedende wijs"], answer: 1, explanation: "Konjunktiv II: voor hypothetische situaties ('würde gehen')." },
@@ -1802,6 +2004,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat betekent 'infolgedessen'?", options: ["Bovendien", "Als gevolg daarvan", "Desondanks", "Terwijl"], answer: 1, explanation: "'Infolgedessen' = als gevolg daarvan (formeel)." },
       { q: "Welke voorzetsels nemen altijd de Dativ?", options: ["durch, für, gegen", "aus, bei, mit, nach, seit, von, zu, gegenüber", "um, bis, durch", "an, auf, in, an"], answer: 1, explanation: "'Aus, bei, mit, nach, seit, von, zu' + altijd Dativ." },
       { q: "Wat is een Ausklammerung?", options: ["Inversie", "Uitplaatsing naar achter de zinshaak", "Zinsbouw", "Inversie bij vraag"], answer: 1, explanation: "Ausklammerung: extra info na de zinshaak geplaatst (informele stijl)." },
+      { q: "Hoe verschilt 'während' van 'während' als voegwoord vs. als voorzetsel?", options: ["Geen verschil", "Als voegwoord + bijzin (werkwoord einde); als voorzetsel + Genitief", "Als voorzetsel + Dativ", "Als voegwoord + Akkusatief"], answer: 1, explanation: "'Während ich schlief' (voegwoord, bijzin). 'Während des Urlaubs' (voorzetsel + Genitief)." },
+      { q: "Wat is een erweiterter Infinitiv in het Duits?", options: ["Een infinitief met 'zu' alleen", "Een infinitief met 'zu' uitgebreid met andere elementen: 'zu + lezen'", "Een Partizip II", "Een imperatiefvorm"], answer: 1, explanation: "Erweiterter Infinitiv: 'Ich versuche, früh aufzustehen' — infinitief met 'zu' en uitbreidingen." },
+      { q: "Wat betekent 'zumal' in het Duits?", options: ["Ondertussen", "Temeer daar/vooral omdat (versterkt een argument)", "Hoewel", "Bovendien"], answer: 1, explanation: "'Zumal' = temeer daar, ook omdat — versterkt een reeds gegeven reden." },
+      { q: "Wat is het verschil tussen 'mögen' en 'möchten'?", options: ["Geen verschil", "'Mögen' = houden van; 'möchten' = willen/verlangen (beleefd)", "'Möchten' = houden van", "Beide = willen"], answer: 1, explanation: "'Ich mag Kaffee' (ik lust koffee). 'Ich möchte Kaffee' (ik wil graag koffee — beleefd)." },
+      { q: "Wat is een Funktionsverbgefüge?", options: ["Een gewone werkwoordsconstructie", "Een vaste verbinding van werkwoord + zelfstandig naamwoord (bv. in Kraft treten)", "Een samengesteld werkwoord", "Een reflexief werkwoord"], answer: 1, explanation: "'Eine Entscheidung treffen', 'in Betrieb nehmen' — formele stijl, nominale constructies." },
+      { q: "Hoe maak je een vraagzin met inversie in het Duits?", options: ["Voeg 'ob' toe", "Zet het werkwoord vóór het onderwerp: 'Gehst du?'", "Voeg een vraagteken toe zonder woordvolgorde te veranderen", "Gebruik 'dass'"], answer: 1, explanation: "Inversie: Werkwoord + Onderwerp in directe vragen: 'Kommst du mit?'" },
+      { q: "Wat is het Futur I in het Duits?", options: ["Präteritum", "'Werden' + infinitief (voor toekomst of veronderstelling)", "Perfekt", "Konjunktiv I"], answer: 1, explanation: "Futur I: 'Ich werde kommen' = ik zal komen / ik zal wel komen." },
+      { q: "Wat is een Genitivattribut?", options: ["Een bijvoeglijk naamwoord", "Een genitief die bij een zelfstandig naamwoord hoort als bezitsbepaling", "Een Dativcomplement", "Een Akkusativobjekt"], answer: 1, explanation: "'Das Auto des Mannes' — 'des Mannes' is een Genitivattribut (bezit)." },
+      { q: "Wat is het doel van Konjunktiv I in het Duits?", options: ["Hypothetische situaties uitdrukken", "Indirecte rede weergeven in formele teksten (kranten, rapporten)", "Wensen uitdrukken", "Bevelen geven"], answer: 1, explanation: "Konjunktiv I: 'Er sagte, er sei krank.' — indirecte rede in formele geschreven taal." },
     ],
   },
   frans: {
@@ -1870,6 +2081,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Hoe zeg je 'Ik hoop dat...' in het Frans?", options: ["J'espère que + indicatif", "J'espère que + subjonctif", "Je pense que + subjonctif", "J'aime que + indicatif"], answer: 0, explanation: "'Espérer que' + indicatif (geen subjonctif!)." },
       { q: "Que signifie 'afin de'?", options: ["Omdat", "Teneinde/om... te", "Terwijl", "Hoewel"], answer: 1, explanation: "'Afin de' + infinitief = teneinde, om... te." },
       { q: "Welk tijdsvorm gebruik je voor een voltooide actie vóór een andere verleden actie?", options: ["Passé composé", "Plus-que-parfait", "Imparfait", "Passé simple"], answer: 1, explanation: "Plus-que-parfait (avais + participe passé) = had gedaan." },
+      { q: "Hoe vervoeg je 'aller' in de toekomst (futur simple) bij 'nous'?", options: ["nous allons", "nous irons", "nous allrons", "nous allez"], answer: 1, explanation: "'Aller' in futur simple is onregelmatig: ir- + endings. 'Nous irons.'" },
+      { q: "Que signifie 'bien que' suivi du subjonctif?", options: ["Omdat", "Hoewel (+ subjonctif verplicht)", "Als", "Wanneer"], answer: 1, explanation: "'Bien que' = hoewel — verlangt altijd de subjonctif." },
+      { q: "Wat is het verschil tussen 'savoir' en 'pouvoir' + infinitief?", options: ["Geen verschil", "'Savoir' = capaciteit door kennis; 'pouvoir' = mogelijkheid of toestemming", "'Pouvoir' = weten", "'Savoir' = toestemming"], answer: 1, explanation: "'Je sais nager' (ik kan zwemmen = ik weet hoe). 'Je peux nager' (ik mag/kan zwemmen = omstandigheid)." },
+      { q: "Comment dit-on 'als ik geweten had dat...' in het Frans?", options: ["Si je savais...", "Si j'avais su...", "Si je saurais...", "Si j'ai su..."], answer: 1, explanation: "'Si j'avais su' = plus-que-parfait in 'si'-zin voor irreële verleden conditie." },
+      { q: "Que signifie 'en outre'?", options: ["Aan de andere kant", "Bovendien/daarenboven", "Hoewel", "Omdat"], answer: 1, explanation: "'En outre' = bovendien, ook nog (formeel additioneel argument)." },
+      { q: "Hoe construeer je de passieve zin in het Frans?", options: ["Être + infinitief", "Être + participe passé (passé composé met être)", "Avoir + participe passé", "Se + infinitief"], answer: 0, explanation: "Passief: être (geconjugeerd) + participe passé: 'Le livre est lu par l'élève.'" },
+      { q: "Que signifie 'à moins que' + subjonctif?", options: ["Tenzij", "Zodra", "Hoewel", "Terwijl"], answer: 0, explanation: "'À moins que' + subjonctif = tenzij. 'Il viendra à moins qu'il ne soit malade.'" },
+      { q: "Wat is de functie van 'y' als pronomen?", options: ["Vervangt een persoon", "Vervangt een plaatsbepaling of een onpersoonlijk complement na 'à'", "Vervangt het onderwerp", "Vervangt een direct object"], answer: 1, explanation: "'J'y vais' (ik ga erheen). 'Il y pense' (hij denkt eraan). 'Y' vervangt 'à + plaats/ding'." },
+      { q: "Que signifie 'malgré'?", options: ["Dankzij", "Ondanks", "Hoewel", "Vanwege"], answer: 1, explanation: "'Malgré' + zelfstandig naamwoord = ondanks. 'Malgré la pluie, il est sorti.'" },
     ],
     klas3: [
       { q: "Qu'est-ce que le subjonctif?", options: ["Aantoonende wijs", "Aanvoegende wijs voor twijfel/wens/gevoel", "Bevelende wijs", "Verleden tijd"], answer: 1, explanation: "Subjonctif: after expressions of doubt, wish, emotion: 'Je veux que tu viennes'." },
@@ -1892,6 +2112,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Que signifie 'désormais'?", options: ["Vroeger", "Voortaan/van nu af aan", "Totdat", "Inmiddels"], answer: 1, explanation: "'Désormais' = voortaan, van nu af aan." },
       { q: "Qu'est-ce que le registre de langue?", options: ["Uitspraak", "Taalniveau (formeel/informeel/argot)", "Spelling", "Grammatica"], answer: 1, explanation: "Registre = taalregister: niveau van formaliteit." },
       { q: "Que signifie 'voire'?", options: ["Zelfs (versterking)", "Of", "Misschien", "Tenzij"], answer: 0, explanation: "'Voire' = zelfs, of zelfs nog (versterkt een stelling)." },
+      { q: "Qu'est-ce que le style indirect libre?", options: ["Directe rede", "Versmelting van vertellersperspectief en gedachten van personage zonder aankondiging", "Indirecte rede", "Monologue intérieur"], answer: 1, explanation: "Style indirect libre: 'Elle sortit. Il ferait beau, peut-être' — vertellersstem smelt samen met personage." },
+      { q: "Que signifie 'au demeurant'?", options: ["Tenslotte/overigens", "Bovendien", "Hoewel", "Terwijl"], answer: 0, explanation: "'Au demeurant' = overigens, voor het overige (formeel argumentatief)." },
+      { q: "Qu'est-ce que la polyphonie narrative?", options: ["Eén vertelstem", "Meerdere gelijkwaardige vertelstemmen/perspectieven", "Dialoog", "Flashback"], answer: 1, explanation: "Polyfonie (Bakhtine): elke stem heeft gelijkwaardige status — geen dominante verteller." },
+      { q: "Que signifie 'nonobstant'?", options: ["Bovendien", "Desondanks/ondanks (formeel, juridisch taalgebruik)", "Omdat", "Wanneer"], answer: 1, explanation: "'Nonobstant' = ondanks, desondanks (formeel synoniem van 'malgré')." },
+      { q: "Hoe vervoeg je 'être' in de subjonctif présent bij 'il'?", options: ["est", "soit", "sera", "serait"], answer: 1, explanation: "Subjonctif van 'être': que je sois, que tu sois, qu'il soit." },
+      { q: "Que signifie 'partant'?", options: ["Vertrekkend", "Bijgevolg/dus (formeel redeneerwoord)", "Bovendien", "Hoewel"], answer: 1, explanation: "'Partant' = bijgevolg, dus (formeel argumentatief voegwoord)." },
+      { q: "Qu'est-ce que la synecdoque?", options: ["Een metafoor", "Stijlfiguur waarbij een deel voor het geheel of het geheel voor een deel staat", "Vergelijking", "Personificatie"], answer: 1, explanation: "'Les voiles à l'horizon' (zeilen = schepen). Synecdoque: deel staat voor het geheel." },
+      { q: "Que signifie 'il n'en reste pas moins que'?", options: ["Toch blijft het feit dat... (concessie gevolgd door stelling)", "Bovendien", "Hoewel", "Omdat"], answer: 0, explanation: "'Il n'en reste pas moins que' = het neemt niet weg dat... — sterke concessieve constructie." },
+      { q: "Qu'est-ce que l'ironie dramatique dans un texte?", options: ["Ironie in dialoog", "De lezer weet meer dan het personage, wat spanning of tragiek creëert", "Verbale ironie", "Situationele ironie"], answer: 1, explanation: "Ironie dramatique: le lecteur connaît la vérité que le personnage ignore — crée tension ou pathos." },
     ],
   },
   maatschappijleer: {
@@ -1982,6 +2211,13 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is politiek cynisme?", options: ["Politieke betrokkenheid", "Wantrouwen ten opzichte van politici en het politieke systeem", "Populisme", "Apathie"], answer: 1, explanation: "Cynisme: burgers geloven niet meer dat politiek iets positiefs oplevert." },
       { q: "Wat is een rechtspositivist?", options: ["Iemand die voor rechtvaardigheid strijdt", "Iemand die stelt dat recht = wat wettelijk is vastgelegd", "Een rechtsfilosoof die moraal combineert met recht", "Een politicus"], answer: 1, explanation: "Rechtspositivisme: recht is wat door de staat is vastgelegd, ongeacht morele inhoud." },
       { q: "Wat is het verschil tussen rechtsstaat en democratie?", options: ["Geen", "Rechtsstaat = gebonden aan rechtsregels; democratie = volksbestuur — kunnen samengaan", "Rechtsstaat is onderdeel van democratie", "Democratie is altijd een rechtsstaat"], answer: 1, explanation: "Een land kan democratisch zijn maar niet volledig rechtsstatelijk, en vice versa." },
+      { q: "Wat is institutioneel racisme?", options: ["Individuele vooroordelen", "Structurele ongelijkheid ingebakken in wetten, beleid en organisaties", "Openlijk racisme", "Discriminatie door individuen"], answer: 1, explanation: "Institutioneel racisme: systemische benadelingen die bepaalde groepen treffen, ook zonder opzet." },
+      { q: "Wat is de 'prisoner's dilemma' in de speltheorie?", options: ["Een crimineel geval", "Een situatie waar individuen rationeel kiezen maar een slechter gezamenlijk resultaat bereiken", "Een rechtszaak", "Een economisch model"], answer: 1, explanation: "Gevangenendilemma: samenwerken levert meer op, maar rationeel eigenbelang leidt tot een slechter resultaat." },
+      { q: "Wat is politieke apathie?", options: ["Actieve politieke deelname", "Gebrek aan interesse en betrokkenheid bij politiek", "Politiek cynisme", "Proteststemmen"], answer: 1, explanation: "Apathie: burgers zijn niet geïnteresseerd in politiek en nemen niet deel." },
+      { q: "Wat is het verschil tussen liberalisme en socialisme?", options: ["Geen verschil", "Liberalisme: individuele vrijheid en markt centraal; socialisme: gelijkheid en collectiviteit", "Socialisme = liberalisme", "Liberalisme = gelijkheid"], answer: 1, explanation: "Liberalisme (markt, vrijheid) vs. socialisme (herverdeling, gelijkheid, solidariteit)." },
+      { q: "Wat is de rol van NGO's (niet-gouvernementele organisaties)?", options: ["Deel van de overheid", "Onafhankelijke organisaties die maatschappelijke doelen nastreven (Amnesty, Rode Kruis)", "Bedrijven", "Politieke partijen"], answer: 1, explanation: "NGO's: Amnesty International, Greenpeace, Oxfam — opereren onafhankelijk van overheden." },
+      { q: "Wat is het verschil tussen universele en relatieve mensenrechten?", options: ["Geen verschil", "Universeel: voor iedereen altijd; relatief: afhankelijk van cultuur/context", "Relatief = voor iedereen", "Universeel = alleen voor Westerse landen"], answer: 1, explanation: "Universeel: UVRM geldt voor iedereen. Cultureel relativisme: rechten zijn contextafhankelijk." },
+      { q: "Wat is een politieke agenda?", options: ["Een dagboek van een politicus", "De lijst van onderwerpen waaraan een regering of politieke organisatie prioriteit geeft", "Een verkiezingsprogramma", "Een persconferentie"], answer: 1, explanation: "De politieke agenda bepaalt welke kwesties als prioriteit worden behandeld." },
     ],
   },
   biologie: {
@@ -2006,6 +2242,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Hoe heet de opname van zuurstof door cellen?", options: ["Fotosynthese", "Celademhaling (aerobe respiratie)", "Gisting", "Diffusie"], answer: 1, explanation: "Celademhaling: glucose + O₂ → CO₂ + water + energie (ATP)." },
       { q: "Wat is DNA?", options: ["Een eiwit", "Een molecuul dat erfelijke informatie codeert", "Een vetzuur", "Een koolhydraat"], answer: 1, explanation: "DNA (desoxyribonucleïnezuur) bevat de genetische code van een organisme." },
       { q: "Wat is een reflex?", options: ["Een bewuste handeling", "Een snelle, onbewuste reactie op een prikkel via het ruggenmerg", "Een hersenfunctie", "Een hormoon"], answer: 1, explanation: "Reflexboog: prikkel → sensorcel → ruggenmerg → motorcel → spier." },
+      { q: "Wat is de bloedsomloop?", options: ["Alleen het hart", "Het systeem van hart en bloedvaten dat bloed door het lichaam pompt", "Alleen de aders", "De lymfeknooppunten"], answer: 1, explanation: "Kleine kringloop: hart → longen → hart. Grote kringloop: hart → lichaam → hart." },
+      { q: "Wat is de functie van het skelet?", options: ["Alleen bescherming", "Stevigheid, beweging, bescherming van organen en aanmaak bloedcellen", "Alleen beweging", "Alleen bloedcelvorming"], answer: 1, explanation: "Het skelet geeft het lichaam vorm, beschermt organen, maakt bloedcellen aan en stelt beweging mogelijk." },
+      { q: "Wat is zenuwweefsel?", options: ["Spierweefsel", "Weefsel dat impulsen geleidt via neuronen", "Bindweefsel", "Dekweefsel"], answer: 1, explanation: "Zenuwweefsel bestaat uit neuronen die elektrische signalen doorgeven." },
+      { q: "Wat is een hormoon?", options: ["Een enzym", "Een chemische boodschapper aangemaakt door klieren", "Een eiwit in cellen", "Een neurotransmitter"], answer: 1, explanation: "Hormonen (bv. insuline, adrenaline) worden via het bloed getransporteerd naar doelorganen." },
+      { q: "Wat is het verschil tussen aerobe en anaerobe ademhaling?", options: ["Geen verschil", "Aeroob = met zuurstof, meer ATP; anaeroob = zonder zuurstof, minder ATP en melkzuur", "Anaeroob = meer ATP", "Aeroob = zonder zuurstof"], answer: 1, explanation: "Aerobe ademhaling: glucose + O₂ → CO₂ + H₂O + veel ATP. Anaeroob: minder efficiënt." },
+      { q: "Wat is de rol van de lever?", options: ["Bloed aanmaken", "Afvalstoffen ontgiften, eiwitten aanmaken, galafscheiding", "Bloed filteren (zoals nieren)", "Zuurstof opnemen"], answer: 1, explanation: "De lever is het belangrijkste ontgiftingsorgaan en maakt gal aan voor de vetvertering." },
+      { q: "Wat is spierweefsel?", options: ["Weefsel dat beschermt", "Weefsel dat door samentrekking beweging veroorzaakt", "Weefsel dat signalen geleidt", "Weefsel dat organen omhult"], answer: 1, explanation: "Spierweefsel (dwarsgestreept, glad, hartspier) maakt beweging mogelijk door contractie." },
+      { q: "Wat is de functie van witte bloedcellen?", options: ["Zuurstof transporteren", "Infecties en ziekten bestrijden (immuunsysteem)", "Bloedstolling", "CO₂ verwijderen"], answer: 1, explanation: "Witte bloedcellen (leukocyten) herkennen en verwijderen ziekteverwekkers." },
+      { q: "Wat is diffusie bij biologische processen?", options: ["Actief transport tegen concentratieverval in", "Passieve verspreiding van moleculen van hoge naar lage concentratie", "Osmose van water", "Transport via bloedvaten"], answer: 1, explanation: "Bv. zuurstof diffundeert van de longen naar het bloed (hoge → lage concentratie)." },
     ],
     klas3: [
       { q: "Wat is de wet van Mendel (segregatie)?", options: ["Eigenschappen mengen", "Allelen scheiden tijdens de vorming van geslachtscellen", "Mutaties", "Crossing-over"], answer: 1, explanation: "De wet van segregatie: allelen scheiden bij meiose, elk gameet krijgt 1 allel." },
@@ -2028,6 +2273,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is de rol van mitochondriën?", options: ["Eiwitten aanmaken", "ATP produceren via celademhaling (energiecentrale van de cel)", "DNA opslaan", "Afval afbreken"], answer: 1, explanation: "Mitochondriën: oxidatieve fosforylering → ATP." },
       { q: "Wat is het verschil tussen ecto- en endotherme dieren?", options: ["Grootte", "Ectotherm = lichaamstemperatuur afhankelijk van omgeving; endotherm = eigen temperatuurregeling", "Voortplanting", "Voeding"], answer: 1, explanation: "Reptielen zijn ectotherm; zoogdieren en vogels zijn endotherm." },
       { q: "Wat is genexpressie?", options: ["DNA-kopiëren", "Het proces waarbij genetische informatie wordt omgezet in een functioneel product (eiwit)", "Meiose", "Mutatie"], answer: 1, explanation: "Genexpressie: transcriptie (DNA→RNA) en translatie (RNA→eiwit)." },
+      { q: "Wat is een fenotype?", options: ["De genetische samenstelling van een organisme", "De waarneembare kenmerken van een organisme (uiterlijk, gedrag)", "Een allel", "Een chromosoom"], answer: 1, explanation: "Fenotype: wat je kunt waarnemen. Genotype: de genetische code." },
+      { q: "Wat is de functie van ribosomen?", options: ["DNA kopiëren", "Eiwitten synthetiseren op basis van mRNA-instructies", "ATP aanmaken", "Celdeling sturen"], answer: 1, explanation: "Ribosomen vertalen mRNA in aminozuurketens → eiwitten (translatie)." },
+      { q: "Wat is een codon?", options: ["Een gen", "Een reeks van drie basen in mRNA die codeert voor één aminozuur", "Een allel", "Een chromosoom"], answer: 1, explanation: "Codon: drie-nucleotidesequentie in mRNA die één aminozuur specificeert." },
+      { q: "Wat is een ras (subspecies) in biologische zin?", options: ["Een andere soort", "Een populatie van een soort met genetisch onderscheidbare kenmerken", "Een hybride soort", "Een mutante soort"], answer: 1, explanation: "Subspecies: populaties van dezelfde soort met kleine genetische verschillen die geografisch gescheiden zijn." },
+      { q: "Wat is het zenuwstelsel verdeeld in?", options: ["Centraal en autonoom", "Centraal zenuwstelsel (hersenen + ruggenmerg) en perifeer zenuwstelsel", "Sensorisch en motorisch alleen", "Vrijwillig en reflexmatig"], answer: 1, explanation: "CZS (hersenen + ruggenmerg) + PZS (alle andere zenuwen, incl. autonoom stelsel)." },
+      { q: "Wat is een ecosysteemdienst?", options: ["Diensten van de overheid voor natuur", "Voordelen die de natuur de mens gratis levert (schoon water, lucht, bestuiving)", "Ecotoerisme", "Milieubescherming"], answer: 1, explanation: "Ecosysteemdiensten: bestuiving door bijen, waterfiltering door bossen, CO₂-opslag." },
+      { q: "Wat is het verschil tussen RNA-polymerase en DNA-polymerase?", options: ["Geen verschil", "RNA-pol maakt mRNA (transcriptie); DNA-pol kopieert DNA (replicatie)", "DNA-pol maakt mRNA", "RNA-pol kopieert DNA"], answer: 1, explanation: "RNA-polymerase: transcriptie (DNA→mRNA). DNA-polymerase: replicatie (DNA→DNA)." },
+      { q: "Wat is de energiepiramide in een ecosysteem?", options: ["Een grafiek van soorten", "Een weergave van hoe energie afneemt bij elk troffisch niveau", "Een voedselweb", "Een populatiemodel"], answer: 1, explanation: "Energiepiramide: ~10% van energie gaat door naar het volgende niveau (90% verlies als warmte)." },
+      { q: "Wat is een antilichaam?", options: ["Een ziektekiem", "Een eiwit aangemaakt door B-cellen dat antigenen bindt en neutraliseert", "Een vaccin", "Een witte bloedcel"], answer: 1, explanation: "Antilichamen (immunoglobulinen) binden specifiek aan antigenen op ziekteverwekkers." },
     ],
   },
   wiskunde: {
@@ -2052,6 +2306,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is 10% van 350?", options: ["30", "35", "40", "45"], answer: 1, explanation: "10% = 1/10 van 350 = 35." },
       { q: "Een rechthoekige driehoek heeft zijden 3 en 4. Hoe lang is de hypotenusa?", options: ["5", "6", "7", "√7"], answer: 0, explanation: "Stelling van Pythagoras: 3² + 4² = 9 + 16 = 25 → √25 = 5." },
       { q: "Welke grafiek beschrijft y = 2x + 1?", options: ["Parabool", "Rechte lijn", "Hyperbool", "Cirkel"], answer: 1, explanation: "y = 2x + 1 is een lineaire functie → rechte lijn met rico 2 en snijpunt (0,1)." },
+      { q: "Hoeveel is 3/5 + 2/5?", options: ["5/10", "1", "5/5", "6/5"], answer: 1, explanation: "3/5 + 2/5 = 5/5 = 1." },
+      { q: "Wat is de omtrek van een cirkel met diameter 10 cm? (π ≈ 3,14)", options: ["15,7 cm", "31,4 cm", "78,5 cm", "100 cm"], answer: 1, explanation: "Omtrek = π × d = 3,14 × 10 = 31,4 cm." },
+      { q: "Los op: 4x − 2 = 14", options: ["x = 3", "x = 4", "x = 5", "x = 6"], answer: 1, explanation: "4x = 16, x = 4." },
+      { q: "Wat is de modus van: 2, 3, 3, 4, 5, 3, 6?", options: ["2", "3", "4", "5"], answer: 1, explanation: "De modus is het meest voorkomende getal: 3 (komt 3 keer voor)." },
+      { q: "Hoeveel graden heeft een vierkant in totaal?", options: ["90°", "180°", "270°", "360°"], answer: 3, explanation: "Een vierkant heeft 4 rechte hoeken van 90° elk: 4 × 90° = 360°." },
+      { q: "Bereken: (3 + 7) × 4", options: ["25", "30", "40", "50"], answer: 2, explanation: "(3+7) = 10 en dan × 4 = 40. Haakjes eerst." },
+      { q: "Wat is 0,1 + 0,9?", options: ["0,10", "0,19", "1,0", "1,9"], answer: 2, explanation: "0,1 + 0,9 = 1,0." },
+      { q: "Een kamer is 5 m lang en 4 m breed. Bereken de oppervlakte.", options: ["9 m²", "18 m²", "20 m²", "20 m"], answer: 2, explanation: "Oppervlakte = lengte × breedte = 5 × 4 = 20 m²." },
+      { q: "Wat is de wortel van 49?", options: ["5", "6", "7", "8"], answer: 2, explanation: "√49 = 7, want 7 × 7 = 49." },
     ],
     klas3: [
       { q: "Wat is de discriminant van x² + 2x − 3?", options: ["4", "8", "16", "−4"], answer: 2, explanation: "D = b² − 4ac = 4 − 4(1)(−3) = 4 + 12 = 16." },
@@ -2074,6 +2337,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat stelt het begrip 'rico' (richtingscoëfficiënt) voor?", options: ["Het snijpunt met de y-as", "De steilheid van een rechte lijn (Δy/Δx)", "De top van een parabool", "De nulpunten"], answer: 1, explanation: "Rico = Δy/Δx = (y₂−y₁)/(x₂−x₁)." },
       { q: "Bereken: √(50) in vereenvoudigde vorm.", options: ["5", "5√2", "10", "25√2"], answer: 1, explanation: "√50 = √(25×2) = 5√2." },
       { q: "Wat is de formule voor samengestelde interest na t jaar?", options: ["K = K₀(1 + r)t", "K = K₀ × r × t", "K = K₀ + r/t", "K = K₀ − rt"], answer: 0, explanation: "Samengestelde interest: K = K₀(1 + r)ᵗ waarbij r de rentevoet is." },
+      { q: "Wat is een goniometrische vergelijking?", options: ["Een lineaire vergelijking", "Een vergelijking met sin, cos of tan als hoofdfunctie", "Een kwadratische vergelijking", "Een exponentiële vergelijking"], answer: 1, explanation: "Bv: sin(x) = 0,5 → x = 30° + 360°n of x = 150° + 360°n." },
+      { q: "Bereken: d/dx (x² + 3x − 5)", options: ["x + 3", "2x + 3", "2x − 5", "x² + 3"], answer: 1, explanation: "Afgeleid term voor term: 2x + 3 − 0 = 2x + 3." },
+      { q: "Wat is de periode van f(x) = sin(2x)?", options: ["π", "2π", "4π", "π/2"], answer: 0, explanation: "Periode van sin(bx) = 2π/b = 2π/2 = π." },
+      { q: "Hoeveel oplossingen heeft het stelsel: y = x + 1 en y = x + 3?", options: ["0", "1", "2", "Oneindig"], answer: 0, explanation: "Twee parallelle lijnen (zelfde helling, ander snijpunt) hebben geen snijpunt → 0 oplossingen." },
+      { q: "Wat is een kegelsnede?", options: ["Een cirkel alleen", "Een vorm die ontstaat bij doorsnijding van een kegel (cirkel, ellips, parabool, hyperbool)", "Een driehoek", "Een veelhoek"], answer: 1, explanation: "Kegelsneden: cirkel, ellips, parabool, hyperbool — afhankelijk van de hoek van doorsnijding." },
+      { q: "Bereken: ∫₁² (2x + 1) dx", options: ["3", "4", "5", "6"], answer: 1, explanation: "[x² + x]₁² = (4+2) − (1+1) = 6 − 2 = 4." },
+      { q: "Wat is de amplitude van f(x) = 3sin(x)?", options: ["1", "2", "3", "π"], answer: 2, explanation: "De amplitude is de coëfficiënt voor sin: hier 3." },
+      { q: "Wat is ln(e³)?", options: ["3", "e³", "3e", "1/3"], answer: 0, explanation: "ln(eⁿ) = n, dus ln(e³) = 3." },
+      { q: "Wat is een asymptoot van f(x) = e^x?", options: ["x = 0", "y = 0", "y = 1", "x = 1"], answer: 1, explanation: "Als x → -∞, dan e^x → 0 maar bereikt nooit 0. De x-as (y = 0) is horizontale asymptoot." },
     ],
   },
   nask: {
@@ -2112,6 +2384,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Welk fenomeen verklaart waarom een lepel in water 'gebroken' lijkt?", options: ["Reflectie", "Breking (refractie)", "Diffractie", "Absorptie"], answer: 1, explanation: "Licht buigt af (breekt) wanneer het van het ene naar het andere medium gaat." },
       { q: "Wat is de formule voor druk?", options: ["P = F × A", "P = F / A", "P = A / F", "P = m × g"], answer: 1, explanation: "Druk (P) = kracht (F) gedeeld door oppervlak (A), in Pascal." },
       { q: "Wat is de frequentie van een geluidsgolf?", options: ["De amplitude", "Het aantal trillingen per seconde, in Hertz", "De golflengte", "De snelheid"], answer: 1, explanation: "Frequentie (f) in Hz = trillingen per seconde." },
+      { q: "Wat is de formule voor arbeid (mechanisch)?", options: ["W = m × g", "W = F × d", "W = P × t", "W = m × v²"], answer: 1, explanation: "Arbeid W = kracht × verplaatsing (in Newton × meter = Joule)." },
+      { q: "Wat is het principe van energiebehoud?", options: ["Energie kan verdwijnen", "Energie kan niet worden gecreëerd of vernietigd, alleen omgezet", "Energie neemt altijd toe", "Bewegingsenergie wordt altijd warmte"], answer: 1, explanation: "Wet van behoud van energie: totale energie in een gesloten systeem blijft constant." },
+      { q: "Wat is een geluidsgolf?", options: ["Een elektromagnetische golf", "Een drukgolf die mechanisch door materie gaat", "Een lichtgolf", "Een gravitatiegolf"], answer: 1, explanation: "Geluid is een longitudinale drukgolf die medium (lucht, water, vaste stof) nodig heeft." },
+      { q: "Wat is Ohm's wet?", options: ["U = I/R", "U = I × R", "I = U × R", "R = U × I"], answer: 1, explanation: "U = I × R: spanning = stroomsterkte × weerstand (Volt = Ampère × Ohm)." },
+      { q: "Wat is het verschil tussen massa en gewicht?", options: ["Geen verschil", "Massa = hoeveelheid materie (kg); gewicht = zwaartekracht op massa (N)", "Gewicht is altijd groter", "Massa is in Newton"], answer: 1, explanation: "Massa is constant; gewicht = m × g, hangt af van de zwaartekracht." },
+      { q: "Wat is geleiding (warmte)?", options: ["Warmteoverdracht via vloeistofstromen", "Warmteoverdracht door direct contact tussen materialen", "Warmteoverdracht via straling", "Convectie"], answer: 1, explanation: "Warmtegeleiding: moleculen geven energie door aan naburige moleculen (bv. metalen pan)." },
+      { q: "Wat is de formule voor vermogen?", options: ["P = W/m", "P = W/t", "P = F/t", "P = m × a"], answer: 1, explanation: "Vermogen P = arbeid/tijd (Watt = Joule/seconde)." },
+      { q: "Wat is een elektrisch circuit?", options: ["Een batterij alleen", "Een gesloten pad waardoor elektrische stroom kan vloeien", "Een weerstand", "Een schakelaar"], answer: 1, explanation: "Een circuit moet gesloten zijn: stroom vloeit van + naar − via externe geleider." },
+      { q: "Wat is het verschil tussen een geleider en een isolator?", options: ["Geen verschil", "Geleider laat stroom makkelijk door; isolator niet of nauwelijks", "Isolator leidt beter", "Geleiders zijn altijd metalen"], answer: 1, explanation: "Geleiders (metalen, koolstof) hebben vrije elektronen; isolatoren (rubber, plastic) hebben dat niet." },
     ],
     klas3: [
       { q: "Wat beschrijft de wet van Coulomb?", options: ["Zwaartekracht", "De kracht tussen elektrische ladingen: F = kq₁q₂/r²", "Magnetische inductie", "Druk"], answer: 1, explanation: "Coulomb: elektrische kracht neemt af met het kwadraat van de afstand." },
@@ -2124,6 +2405,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een coherente lichtbron?", options: ["Licht van alle kleuren", "Licht met vaste faseverhouding, zoals een laser", "Wit licht", "Thermisch licht"], answer: 1, explanation: "Laserlicht is coherent: golven zijn in fase → interferentie mogelijk." },
       { q: "Wat beschrijft de wet van Lenz?", options: ["De richting van de geïnduceerde stroom weerstaat de verandering die hem veroorzaakte", "Licht buigt", "Ladingsbehoud", "Energiebehoud"], answer: 0, explanation: "Lenz: de geïnduceerde stroom is zo gericht dat hij de fluxverandering tegengaat." },
       { q: "Wat is relativiteitstheorie (speciale, Einstein)?", options: ["Alles is relatief", "De snelheid van licht is constant in elk inertiaalstelsel; massa en energie zijn equivalent (E=mc²)", "Zwaartekracht is een ruimtekromming", "Quantummechanica"], answer: 1, explanation: "Speciale relativiteit: E = mc², tijddilatatie, lengtecontractie." },
+      { q: "Wat is magnetische flux?", options: ["Stroomsterkte", "Het aantal magnetische veldlijnen door een oppervlak: Φ = B × A", "Magnetische kracht", "Elektrisch veld"], answer: 1, explanation: "Flux Φ = B × A × cos(θ), in Weber (Wb)." },
+      { q: "Wat is het verband tussen golflengte en frequentie?", options: ["Ze zijn evenredig", "Ze zijn omgekeerd evenredig bij constante golfsnelheid: λ = v/f", "Ze zijn gelijk", "Geen verband"], answer: 1, explanation: "v = f × λ: bij constante snelheid: hoge frequentie = korte golflengte." },
+      { q: "Wat is kernfusie?", options: ["Atoomkernen splitsen", "Lichte atoomkernen smelten samen tot zwaardere kern, waarbij energie vrijkomt", "Radioactief verval", "Elektrolyse"], answer: 1, explanation: "Kernfusie: 2 H-kernen → He + energie (werking van de zon en fusiereaktor)." },
+      { q: "Wat is het verschil tussen AC en DC stroom?", options: ["Geen verschil", "AC wisselt van richting; DC stroomt altijd in één richting", "DC wisselt van richting", "AC heeft hogere spanning"], answer: 1, explanation: "AC (wisselstroom): stroomrichting wisselt. DC (gelijkstroom): constante richting (bv. batterij)." },
+      { q: "Wat is de brekingsindex?", options: ["De hoek van reflectie", "De verhouding van lichtsnelheid in vacuüm tot lichtsnelheid in een medium: n = c/v", "De golflengte in een medium", "De absorptiecoëfficiënt"], answer: 1, explanation: "n = c/v. Glas heeft n ≈ 1,5 → licht is 1,5× trager dan in vacuüm." },
+      { q: "Wat is een staande golf?", options: ["Een golf die beweegt", "Een golf die op een vaste plek oscilleert door interferentie van heen- en teruglopende golven", "Een geluidsgolf in lucht", "Een transversale golf"], answer: 1, explanation: "Staande golven ontstaan bij resonantie in instrumenten (snaarinstrumenten, orgelpijpen)." },
+      { q: "Wat beschrijft de wet van Kirchhoff (spanningswet)?", options: ["De som van stromen in een knoop = 0", "De som van spanningen in een gesloten lus = 0", "Stroom × spanning = vermogen", "Weerstand × spanning = stroom"], answer: 1, explanation: "Kirchhoffs spanningswet (KVL): de som van alle spanningsvallen in een gesloten lus is nul." },
+      { q: "Wat is het verschil tussen ioniserende en niet-ioniserende straling?", options: ["Geen verschil", "Ioniserend (röntgen, alfa, bèta) heeft genoeg energie om atomen te ioniseren; niet-ioniserend (radio, zichtbaar licht) niet", "Niet-ioniserend is gevaarlijker", "Alleen alfa is ioniserend"], answer: 1, explanation: "Ioniserende straling kan DNA beschadigen. Niet-ioniserende straling (bv. radio) is minder schadelijk." },
+      { q: "Wat is superpositie van golven?", options: ["Golven vernietigen elkaar altijd", "De resulterende uitwijking is de som van de uitwijkingen van de afzonderlijke golven", "Golven versterken elkaar altijd", "Golven lopen niet tegelijkertijd"], answer: 1, explanation: "Superpositieprincipe: bij samentreffen van golven tellen de amplitudes op (constructieve of destructieve interferentie)." },
     ],
   },
   scheikunde: {
@@ -2148,6 +2438,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is destillatie?", options: ["Filtratie van vaste stoffen", "Scheiding op basis van kookpuntverschillen door verdamping en condensatie", "Kristallisatie", "Chromatografie"], answer: 1, explanation: "Destillatie: vloeistofmengsel verhitten → damp opvangen → condenseren." },
       { q: "Wat is een bufferoplossing?", options: ["Een sterk zuur", "Een oplossing die pH-veranderingen resists bij toevoeging van zuur of base", "Een onverzadigde oplossing", "Gedestilleerd water"], answer: 1, explanation: "Buffers: mengsel van zwak zuur + geconjugeerde base houdt de pH stabiel." },
       { q: "Wat zijn isomeren?", options: ["Atomen van hetzelfde element met ander massagetal", "Verbindingen met dezelfde molecuulformule maar verschillende structuur", "Allotropen", "Ionen"], answer: 1, explanation: "Structuurisomeren (bv. butaan/isobutaan) of stereoisomeren hebben dezelfde formule maar andere structuur." },
+      { q: "Wat is een redoxreactie?", options: ["Zuur-basereactie", "Reactie waarbij oxidatie en reductie gelijktijdig plaatsvinden", "Neutralisatie", "Precipitatiereactie"], answer: 1, explanation: "Redox: OIL RIG — één stof geeft elektronen (oxidatie), ander ontvangt (reductie)." },
+      { q: "Wat is een alkaan?", options: ["Een alkohol", "Een verzadigde koolwaterstof met alleen enkelvoudige bindingen (CₙH₂ₙ₊₂)", "Een alkyleen", "Een aromatische verbinding"], answer: 1, explanation: "Alkanen: methaan (CH₄), ethaan (C₂H₆), propaan (C₃H₈) — verzadigd, weinig reactief." },
+      { q: "Wat is een endotherme reactie?", options: ["Warmte vrijgevend", "Warmte absorberend (ΔH > 0)", "Explosief", "Bij hoge druk"], answer: 1, explanation: "Endotherm: reactie vraagt warmte van de omgeving. ΔH positief." },
+      { q: "Wat is het periodiek systeem?", options: ["Een tijdlijn", "Ordening van alle elementen op basis van atoomnummer en eigenschappen", "Een molecuulmodel", "Een reactievergelijking"], answer: 1, explanation: "Mendeljeev ordende elementen op atoomnummer en soortgelijke eigenschappen in groepen en perioden." },
+      { q: "Wat is een ionbinding?", options: ["Delen van elektronen", "Aantrekking tussen positieve en negatieve ionen", "Covalente binding", "Metaalbinding"], answer: 1, explanation: "Ionbinding: metaal geeft e⁻ af (kation +), niet-metaal neemt op (anion −). Bv. NaCl." },
+      { q: "Wat is de Hess-wet?", options: ["Energiebehoud in mechanica", "De totale enthalpieverandering is onafhankelijk van de reactieroute", "Wet van behoud van massa", "Wet van Le Chatelier"], answer: 1, explanation: "Hess: ΔH_totaal = som van ΔH van de stappen, ongeacht het pad." },
+      { q: "Wat is het verschil tussen een atoom en een molecuul?", options: ["Geen verschil", "Atoom = kleinste eenheid van een element; molecuul = twee of meer gebonden atomen", "Molecuul = kleiner dan atoom", "Atoom = uit twee atomen"], answer: 1, explanation: "H (atoom) vs. H₂ (molecuul) — moleculen zijn aaneengesloten atomen." },
+      { q: "Wat is een neerslag (precipitaat) bij scheikunde?", options: ["Een gas dat vrij komt", "Een onoplosbare vaste stof die uit een oplossing neerslaat", "Een zure oplossing", "Een endotherme reactie"], answer: 1, explanation: "Bv: AgNO₃ + NaCl → AgCl↓ (wit neerslag) + NaNO₃." },
+      { q: "Wat is chromatografie?", options: ["Een scheidingstechniek op basis van kookpunt", "Een scheidingstechniek op basis van hoe stoffen zich verplaatsen over een fase", "Destillatie", "Filtratie"], answer: 1, explanation: "Chromatografie (dun-laag, kolom, papier): stoffen bewegen met verschillende snelheid over een stationaire fase." },
     ],
   },
   economie: {
@@ -2172,6 +2471,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is een oligopolie?", options: ["Eén aanbieder", "Weinig aanbieders die de markt domineren en elkaars gedrag beïnvloeden", "Volkomen concurrentie", "Monopsonie"], answer: 1, explanation: "Oligopolie: bv. telecomsector, luchtvaart. Aanbieders houden rekening met elkaars keuzes." },
       { q: "Wat is het verschil tussen nominaal en reëel inkomen?", options: ["Geen verschil", "Nominaal = geldbedrag; reëel = gecorrigeerd voor inflatie (koopkracht)", "Reëel is altijd hoger", "Nominaal is altijd lager"], answer: 1, explanation: "Reëel inkomen = koopkracht: wat je werkelijk kunt kopen met je inkomen." },
       { q: "Wat is schaalvoordeel?", options: ["Hogere kosten bij meer productie", "Lagere gemiddelde kosten per eenheid bij grotere productieschaal", "Gelijke kosten ongeacht schaal", "Marginale kosten stijgen"], answer: 1, explanation: "Economies of scale: grotere productie → lagere kosten per eenheid (bv. massaproductie)." },
+      { q: "Wat is de consumentenprijs-index (CPI)?", options: ["Een aandelenindex", "Een maatstaf voor prijsveranderingen van een mandje goederen dat consumenten kopen", "Het gemiddeld inkomen", "De bbp-groei"], answer: 1, explanation: "De CPI meet inflatie vanuit het perspectief van de consument." },
+      { q: "Wat is het multipliereffect?", options: ["Effect van monopolie", "Een initiële besteding leidt via doorbestedingen tot een grotere totale economische activiteit", "Belastingeffect", "Rente-effect"], answer: 1, explanation: "Als de overheid €1 miljard investeert, groeit de economie uiteindelijk met meer dan €1 miljard (Keynes)." },
+      { q: "Wat is het verschil tussen micro- en macro-economie?", options: ["Geen verschil", "Micro = individuele spelers; macro = de gehele economie (BBP, werkloosheid, inflatie)", "Macro = kleine bedrijven", "Micro = nationale economie"], answer: 1, explanation: "Micro: hoe kiest een bedrijf of consument? Macro: hoe functioneert de economie als geheel?" },
+      { q: "Wat is een handelsoverschot?", options: ["Import > export", "Export > import: een land verkoopt meer dan het inkoopt uit het buitenland", "Evenwichtige handelsbalans", "Overheidstekort"], answer: 1, explanation: "Handelsoverschot: Nederland exporteert meer dan het importeert." },
+      { q: "Wat is het verschil tussen groei en ontwikkeling?", options: ["Geen verschil", "Groei = toename BBP; ontwikkeling = breder, ook welzijn en gelijkheid", "Ontwikkeling = alleen BBP", "Groei = kwaliteitsverbetering"], answer: 1, explanation: "Economische groei: meer productie. Ontwikkeling: ook onderwijs, gezondheid, gelijkheid (HDI)." },
+      { q: "Wat is de rol van de rente bij inflatie?", options: ["Hogere rente stimuleert consumptie", "Hogere rente remt consumptie en leningen, waardoor inflatie daalt", "Rente heeft geen invloed", "Lagere rente verlaagt inflatie"], answer: 1, explanation: "Centrale banken verhogen de rente om inflatie te bestrijden: lenen wordt duurder → minder bestedingen." },
+      { q: "Wat zijn opportuniteitskosten?", options: ["Directe productiekosten", "De waarde van het beste alternatief dat je opgeeft voor een keuze", "Belastingen", "Vaste kosten"], answer: 1, explanation: "Opportuniteitskosten: als je kiest voor studie, mis je het loon van een baan — dat is de opportuniteitskosten." },
+      { q: "Wat is een publiek goed?", options: ["Een overheidsgebouw", "Een goed dat niet-uitsluitbaar en niet-rivaliserend is (bv. defensie, vuurtoren)", "Een belastingdienst", "Een gemeentehuis"], answer: 1, explanation: "Publieke goederen: je kunt niemand uitsluiten en gebruik door één vermindert beschikbaarheid niet." },
+      { q: "Wat is deflatie?", options: ["Hoge inflatie", "Een daling van het algemeen prijsniveau", "Stagflatie", "Lage werkloosheid"], answer: 1, explanation: "Deflatie: prijzen dalen. Gevaarlijk: consumenten wachten met kopen → economie krimpt." },
     ],
   },
   nederlands: {
@@ -2196,6 +2504,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is alliteratie?", options: ["Rijm aan het einde van regels", "Herhaling van dezelfde beginletter/klanken in opeenvolgende woorden", "Rijm in het midden", "Een metafoor"], answer: 1, explanation: "Alliteratie: 'De dikke dame danst door de dag.' — beginletter D herhaalt zich." },
       { q: "Wat is het verschil tussen 'hun' en 'hen'?", options: ["Geen verschil", "'Hun' is meewerkend voorwerp; 'hen' is lijdend voorwerp of na voorzetsel", "'Hen' is altijd fout", "'Hun' staat nooit bij een werkwoord"], answer: 1, explanation: "Hun geven (mv): 'Ik geef HUN een cadeau.' Hen zien: 'Ik zie HEN.' Na voorzetsel: 'Met HEN.'" },
       { q: "Wat is een woordveld?", options: ["Alle vervoegingen van een werkwoord", "Een groep woorden die inhoudelijk bij hetzelfde onderwerp horen", "Synoniemen alleen", "Een woordsoortindeling"], answer: 1, explanation: "Woordveld 'school': leerling, leraar, les, klas, rapport, schoolbord." },
+      { q: "Wat is een voornaamwoord?", options: ["Een naam van een persoon", "Een woord dat een zelfstandig naamwoord vervangt (ik, hij, dit, die)", "Een bijvoeglijk naamwoord", "Een werkwoord"], answer: 1, explanation: "Voornaamwoorden: persoonlijk (ik, jij), bezittelijk (mijn, jouw), aanwijzend (deze, die)." },
+      { q: "Wat is een bijzin?", options: ["Een zelfstandige zin", "Een zin die afhankelijk is van een andere zin en begint met een voegwoord", "Een uitroep", "Een vraagzin"], answer: 1, explanation: "Bv: 'Ik weet dat hij komt.' — 'dat hij komt' is een bijzin (begint met 'dat')." },
+      { q: "Wat is de stijl van een tekst?", options: ["De inhoud", "De manier waarop een schrijver taal gebruikt (woordkeuze, zinsbouw, toon)", "De opbouw", "Het genre"], answer: 1, explanation: "Stijl omvat alle talige keuzes: formeel/informeel, beknopt/uitgebreid, literair/zakelijk." },
+      { q: "Wat is een verkleinwoord (diminutief)?", options: ["Een vergroting van een woord", "Een kleiner of vriendelijker variant van een zelfstandig naamwoord", "Een meervoudsvorm", "Een afkorting"], answer: 1, explanation: "Verkleinwoorden: 'huisje', 'katje', 'boompje' — kleiner of liefkozend." },
+      { q: "Wat is het verschil tussen 'dan' en 'als'?", options: ["Geen verschil", "'Dan' = vergelijking na comparatief; 'als' = gelijkheid of voorwaarde", "'Als' = vergelijking na comparatief", "Beide zijn voegwoorden bij vergelijkingen"], answer: 1, explanation: "'Harder dan jij' (comparatief); 'net zo hard als jij' (gelijkheid); 'als het regent' (voorwaarde)." },
+      { q: "Wat is een abstracte zelfstandig naamwoord?", options: ["Een tastbaar ding", "Een onzichtbare, niet-tastbare begrip (vreugde, vrijheid, liefde)", "Een persoon", "Een dier"], answer: 1, explanation: "Abstracte znw: 'geluk', 'hoop', 'verdriet' — je kunt ze niet aanraken." },
+      { q: "Wat is een tautologie?", options: ["Een metafoor", "Herhaling van hetzelfde in andere woorden (bv. 'een oud grijsaard')", "Een rijmvorm", "Overdrijving"], answer: 1, explanation: "Tautologie: 'grijs' en 'oud' zeggen hetzelfde — overbodige herhaling." },
+      { q: "Wat is een hoofdzin in een samengestelde zin?", options: ["De bijzin", "De zin die zelfstandig kan staan en de bijzin bevat of eraan gekoppeld is", "Een vraagzin", "Een nevengeschikte zin"], answer: 1, explanation: "In 'Ik weet dat hij komt' is 'Ik weet' de hoofdzin; 'dat hij komt' de bijzin." },
+      { q: "Wat is een formeel register?", options: ["Omgangstaal", "Taalgebruik in officiële of professionele context met correct taalgebruik", "Dialect", "Jeugdtaal"], answer: 1, explanation: "Formeel register: zakenbrieven, rapporten, vergaderingen — geen afkortingen of slang." },
     ],
     klas3: [
       { q: "Wat is een trope?", options: ["Een grammaticaal begrip", "Een stijlfiguur waarbij woorden in overdrachtelijke betekenis worden gebruikt", "Een zinsstructuur", "Een leesteken"], answer: 1, explanation: "Tropen: metafoor, metonymia, synecdoche, ironie — woorden met figuurlijke betekenis." },
@@ -2218,6 +2535,15 @@ const SAMPLE_QUESTIONS = {
       { q: "Wat is de term voor een terugblik in een verhaal?", options: ["Prolepsis", "Flashback (analepsis)", "Cliffhanger", "In medias res"], answer: 1, explanation: "Analepsis/flashback: een terugblik naar een eerder moment dan het vertelheden." },
       { q: "Wat is het 'in medias res' starten van een verhaal?", options: ["Beginnen bij het begin", "Beginnen midden in de actie, zonder voorgeschiedenis", "Beginnen met de ontknoping", "Beginnen met een beschrijving"], answer: 1, explanation: "'In medias res' (Latijn: 'midden in de zaak'): de lezer wordt direct in een dramatische situatie gegooid." },
       { q: "Wat is een essay?", options: ["Een roman", "Een korte, persoonlijke beschouwing over een onderwerp vanuit een subjectief standpunt", "Een gedicht", "Een toneelstuk"], answer: 1, explanation: "Een essay: persoonlijk, reflectief betoog — denkers als Montaigne, Nescio schreven essays." },
+      { q: "Wat is een stilistische analyse?", options: ["Een samenvatting van een tekst", "Onderzoek naar hoe taalkeuzes een tekst betekenis en effect geven", "Een grammaticale analyse", "Een inhoudsanalyse"], answer: 1, explanation: "Stilistiek: analyse van woordkeuze, zinsbouw, beeldspraak en hun effect op de lezer." },
+      { q: "Wat is een literaire periode?", options: ["Het tijdstip van publicatie", "Een tijdvak in de literatuur met gemeenschappelijke kenmerken en stromingen", "Een schrijfstijl", "Een genre"], answer: 1, explanation: "Bv: Romantiek (1800-1850), Realisme (1850-1880), Naturalisme (1880-1900)." },
+      { q: "Wat is een refrein in een gedicht?", options: ["Een strofe", "Een terugkerende regel of strofe in een gedicht of lied", "Het rijmschema", "De eerste strofe"], answer: 1, explanation: "Refrein: de herhaling benadrukt een thema of gevoel." },
+      { q: "Wat is een hyperbool?", options: ["Een vergelijking met 'als'", "Een bewuste overdrijving voor nadruk of komisch effect", "Een personificatie", "Een metafoor"], answer: 1, explanation: "Hyperbool: 'Ik heb je al duizend keer gezegd...' — overdrijving voor effect." },
+      { q: "Wat is een dialoog in literatuur?", options: ["Een monoloog", "Gesprek tussen twee of meer personages in een tekst", "Een brief", "Een innerlijke gedachtenstroom"], answer: 1, explanation: "Dialoog laat lezers personages direct zien en hun relatie ervaren." },
+      { q: "Wat is een genre?", options: ["Een stijl", "Een categorie van literaire werken met gemeenschappelijke kenmerken", "Een schrijver", "Een tijdperk"], answer: 1, explanation: "Genres: roman, gedicht, toneelstuk, essay — elk met eigen conventies en verwachtingen." },
+      { q: "Wat is het verschil tussen lyriek, epiek en drama?", options: ["Geen verschil", "Lyriek = gevoelsuitdrukking; epiek = verhaal; drama = toneelstuk", "Epiek = gedicht", "Drama = roman"], answer: 1, explanation: "Drie basiscategorieën van literatuur: lyrisch (gevoelens), episch (verhalen), dramatisch (toneel)." },
+      { q: "Wat is een terugkerende verteller (frame narrative)?", options: ["Een alwetende verteller", "Een verhaal-in-een-verhaal constructie met een omsluitend verhaal", "Een ik-verteller", "Een betrouwbare verteller"], answer: 1, explanation: "Frame narrative: bv. 'Duizend-en-één nacht' — een verteller vertelt verhalen in een omsluitend verhaal." },
+      { q: "Wat is consonantie in poëzie?", options: ["Herhaling van klinkers", "Herhaling van medeklinkers in opeenvolgende woorden", "Eindrijm", "Assonantie"], answer: 1, explanation: "Consonantie (medeklinkerrijm): 'pitter-patter', 'blank and think' — herhaling van medeklinkers." },
     ],
   },
 };
@@ -2494,7 +2820,18 @@ export default function App() {
         abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
-        questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
+        try {
+          questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
+        } catch (err) {
+          setLoading(false);
+          if (abortControllerRef.current?.signal.aborted) return;
+          if (hasTopic) {
+            alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
+            return;
+          }
+          // bij gewone vakken: stil terugvallen op standaardvragen
+          console.warn("AI fout, terugval op standaardvragen:", err.message);
+        }
         setLoading(false);
         if (abortControllerRef.current?.signal.aborted) return;
       }
@@ -2575,7 +2912,14 @@ export default function App() {
             setLoadingMode(q.textbook?.bookName ? "textbook" : "self");
             let questions = [];
             if (q.useAI !== false) {
-              questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null, abortControllerRef.current.signal);
+              try {
+                questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null, abortControllerRef.current.signal);
+              } catch (err) {
+                setLoading(false);
+                if (abortControllerRef.current?.signal.aborted) return;
+                alert(`❌ Kon geen vragen genereren.\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
+                return;
+              }
             }
             setLoading(false);
             if (abortControllerRef.current?.signal.aborted) return;
