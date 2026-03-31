@@ -158,6 +158,17 @@ Regels:
 - Foute antwoorden moeten veelgemaakte fouten zijn
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
+
+KWALITEITSCONTROLE — doe dit voor elke vraag:
+1. Is het aangegeven antwoord (answer-index) aantoonbaar correct? Controleer dit.
+2. Klopt de uitleg feitelijk en volledig? De uitleg moet de REDEN geven, niet alleen het antwoord herhalen.
+3. Speciale regels voor Nederlandse taal:
+   - d/t spelling: stam + t bij hij/zij/het tegenwoordige tijd (hij wordt, hij fietst). "Geen t na enkelvoud" is FOUT — het is juist WEL een t na hij/zij/het.
+   - Verleden tijd zwak werkwoord: eindigt stam op t/k/f/s/ch/p (het kofschip) → -te/-ten, anders -de/-den.
+   - Persoonsvorm: het werkwoord dat vervoegd is naar persoon en tijd.
+4. Speciale regels voor rekenen: controleer alle berekeningen nogmaals.
+5. Als je twijfelt over een antwoord: kies een andere vraag waarover je zeker bent.
+
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
 
@@ -169,7 +180,7 @@ Regels:
       max_tokens: 4000,
       system: useWebSearch
         ? "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit."
-        : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. De veiligheid van kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.",
+        : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. BELANGRIJK: controleer elk antwoord en elke uitleg op feitelijke juistheid voordat je de JSON teruggeeft. Een fout antwoord of foutieve uitleg is erger dan geen vraag. De veiligheid en correctheid voor kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.",
       messages: [{ role: "user", content: prompt }],
     };
 
