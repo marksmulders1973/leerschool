@@ -4073,6 +4073,7 @@ function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
   const [klasSelect, setKlasSelect] = useState(initKlas);
   const [topic, setTopic] = useState("");
   const [eigenMode, setEigenMode] = useState(false);
+  const [showHoeWerkt, setShowHoeWerkt] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
@@ -4138,7 +4139,84 @@ function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
           </>
         )}
 
-        <h3 style={styles.sectionTitle}>Welk vak?</h3>
+        {/* ── Eigen onderwerp — featured bovenaan ───────── */}
+        <button
+          onClick={() => { SoundEngine.play("click"); const next = !eigenMode; setEigenMode(next); setSubject(""); setTopic(""); }}
+          style={{
+            width: "100%", marginBottom: 8, padding: "14px 18px",
+            background: eigenMode ? "linear-gradient(135deg, #1e3a2a, #1a3325)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
+            border: `2px solid ${eigenMode ? "#00c853" : "#3a5f8a"}`,
+            borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
+            boxShadow: eigenMode ? "0 0 0 3px #00c85330" : "0 2px 12px rgba(0,0,0,0.2)",
+          }}
+        >
+          <span style={{ fontSize: 26 }}>🎯</span>
+          <div style={{ flex: 1 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+                Zelf een onderwerp kiezen
+              </span>
+              <span style={{ background: "#00c853", color: "#000", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
+            </div>
+            <div style={{ color: "#7aaabb", fontSize: 12, marginTop: 3 }}>
+              Elk onderwerp — ook voor MBO &amp; HBO
+            </div>
+          </div>
+          <span style={{ fontSize: 18 }}>{eigenMode ? "✅" : "→"}</span>
+        </button>
+
+        {/* Hoe werkt dit? */}
+        <button
+          onClick={() => setShowHoeWerkt(v => !v)}
+          style={{ background: "none", border: "none", color: "#5588aa", fontSize: 12, cursor: "pointer", padding: "2px 4px", marginBottom: 8, textAlign: "left" }}
+        >
+          {showHoeWerkt ? "▲" : "▼"} Hoe werkt dit?
+        </button>
+        {showHoeWerkt && (
+          <div style={{ marginBottom: 12, padding: "12px 14px", background: "#111e2e", borderRadius: 12, border: "1px solid #2a3f5f", fontSize: 12, color: "#99bbcc", lineHeight: 1.7 }}>
+            De AI maakt <strong style={{ color: "#fff" }}>vragen op maat</strong> over elk onderwerp dat je typt — van zout en fotosynthese tot bedrijfseconomie of JavaScript.<br />
+            Handig voor basisschool en VO, maar ook voor <strong style={{ color: "#00c853" }}>MBO- en HBO-studenten</strong> die willen oefenen voor een tentamen of toets.
+          </div>
+        )}
+
+        {eigenMode && level && (
+          <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
+            <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Waar wil je over leren?</label>
+            <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; VO</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
+              {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"].map(s => (
+                <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
+                  style={{ padding: "4px 12px", background: topic === s ? "#00c853" : "#162a1e", border: `1px solid ${topic === s ? "#00c853" : "#2a4a3a"}`, borderRadius: 20, color: topic === s ? "#000" : "#69f0ae", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
+                  {s}
+                </button>
+              ))}
+            </div>
+            <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>MBO &amp; HBO</div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
+              {["Bedrijfseconomie", "Boekhouden", "Anatomie", "Recht & wetgeving", "Marketing", "ICT & netwerken", "Statistiek", "Verpleegkunde"].map(s => (
+                <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
+                  style={{ padding: "4px 12px", background: topic === s ? "#1a73e8" : "#121e30", border: `1px solid ${topic === s ? "#1a73e8" : "#2a3f5f"}`, borderRadius: 20, color: topic === s ? "#fff" : "#7aaabb", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
+                  {s}
+                </button>
+              ))}
+            </div>
+            <input
+              style={{ ...styles.textInput, fontSize: 15 }}
+              value={topic}
+              onChange={(e) => setTopic(e.target.value)}
+              placeholder="Of typ zelf een onderwerp..."
+              maxLength={80}
+            />
+            {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Je krijgt vragen over: {topic}</div>}
+          </div>
+        )}
+
+        {/* ── Standaard schoolvakken ───────────────────── */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "10px 0 10px" }}>
+          <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
+          <span style={{ color: "#667788", fontSize: 12, whiteSpace: "nowrap" }}>of kies een standaard schoolvak</span>
+          <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
+        </div>
         <div style={styles.subjectGrid}>
           {(level ? (SUBJECT_FOR_LEVEL[level] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
             <button
@@ -4156,55 +4234,6 @@ function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
             </button>
           ))}
         </div>
-
-        {/* ── OF: Eigen onderwerp ───────────────────────── */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "10px 0 8px" }}>
-          <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
-          <span style={{ color: "#667788", fontSize: 12, whiteSpace: "nowrap" }}>of kies zelf</span>
-          <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
-        </div>
-        <button
-          onClick={() => { SoundEngine.play("click"); const next = !eigenMode; setEigenMode(next); setSubject(""); setTopic(""); }}
-          style={{
-            width: "100%", marginBottom: 12, padding: "14px 18px",
-            background: eigenMode ? "#1e3a2a" : "#1e2d45",
-            border: `2px solid ${eigenMode ? "#00c853" : "#2a3f5f"}`,
-            borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
-          }}
-        >
-          <span style={{ fontSize: 24 }}>🎯</span>
-          <div>
-            <div style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 600 }}>
-              Zelf een onderwerp kiezen
-            </div>
-            <div style={{ color: "#667788", fontSize: 12, marginTop: 2 }}>
-              Seksuele voorlichting, klimaat, EHBO, media & meer
-            </div>
-          </div>
-          <span style={{ marginLeft: "auto", fontSize: 18 }}>{eigenMode ? "✅" : "→"}</span>
-        </button>
-
-        {eigenMode && level && (
-          <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
-            <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Waar wil je over leren?</label>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
-              {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"].map(s => (
-                <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
-                  style={{ padding: "4px 12px", background: topic === s ? "#00c853" : "#162a1e", border: `1px solid ${topic === s ? "#00c853" : "#2a4a3a"}`, borderRadius: 20, color: topic === s ? "#000" : "#69f0ae", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
-                  {s}
-                </button>
-              ))}
-            </div>
-            <input
-              style={{ ...styles.textInput, fontSize: 15 }}
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              placeholder="Of typ zelf een onderwerp..."
-              maxLength={80}
-            />
-            {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Je krijgt vragen over: {topic}</div>}
-          </div>
-        )}
 
         {((subject && level) || (eigenMode && level)) && (
           <>
