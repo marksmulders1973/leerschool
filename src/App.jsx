@@ -4898,7 +4898,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
 
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
-            const colors = ["#00c853", "#00e676", "#69f0ae", "#2bbd7e"];
+            const colors = ["#00c853", "#00c853", "#00c853", "#00c853"];
             let bg = colors[i] + "20";
             let border = colors[i] + "50";
             let textColor = "#e0e6f0";
