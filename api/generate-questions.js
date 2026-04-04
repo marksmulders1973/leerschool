@@ -176,7 +176,7 @@ KWALITEITSCONTROLE — doe dit voor elke vraag:
 
   try {
     const requestBody = {
-      model: "claude-sonnet-4-20250514",
+      model: useWebSearch ? "claude-sonnet-4-20250514" : "claude-haiku-4-5-20251001",
       max_tokens: 4000,
       system: useWebSearch
         ? "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit."
