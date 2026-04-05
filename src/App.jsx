@@ -3457,6 +3457,14 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
           </button>
         </div>
 
+        {/* ── QR code sectie ── */}
+        <div style={{ marginBottom: 20, padding: "16px", background: "#0d1b2a", borderRadius: 16, border: "1px solid #2a3f5f", textAlign: "center" }}>
+          <div style={{ fontSize: 13, color: "#8eaadb", fontWeight: 700, marginBottom: 10 }}>📱 Deel de app met je klas</div>
+          <img src="/qrcode.png" alt="QR code studiebol.online" style={{ width: 140, height: 140, borderRadius: 10, display: "block", margin: "0 auto 8px" }} />
+          <div style={{ fontSize: 11, color: "#556677" }}>Laat leerlingen scannen om de app te openen</div>
+          <div style={{ fontSize: 12, color: "#00e676", fontWeight: 700, marginTop: 4 }}>www.studiebol.online</div>
+        </div>
+
         {quizzes.length > 0 && (
           <>
             <h3 style={styles.sectionTitle}>Jouw quizzen</h3>
@@ -4069,6 +4077,12 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
           {quiz?.code?.split("").map((c, i) => (
             <span key={i} style={styles.codeLetter}>{c}</span>
           ))}
+        </div>
+
+        {/* QR code voor leerlingen die de app nog niet hebben */}
+        <div style={{ margin: "12px 0", textAlign: "center" }}>
+          <div style={{ fontSize: 11, color: "#667788", marginBottom: 6 }}>App nog niet? Scan de QR code:</div>
+          <img src="/qrcode.png" alt="QR code studiebol.online" style={{ width: 100, height: 100, borderRadius: 8, display: "block", margin: "0 auto" }} />
         </div>
 
         <button
