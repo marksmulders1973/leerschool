@@ -2771,6 +2771,7 @@ export default function App() {
   const [userName, setUserName] = useState("");
   const [userLevel, setUserLevel] = useState("");
   const [quizzes, setQuizzes] = useState([]);
+  const [classes, setClasses] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [gameState, setGameState] = useState(null);
   const [players, setPlayers] = useState([]);
@@ -2786,6 +2787,7 @@ export default function App() {
     try { const q = localStorage.getItem("ls_quizzes"); if (q) setQuizzes(JSON.parse(q)); } catch {}
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
+    try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
     // URL parameter ?code=XXXXX
     const urlCode = new URLSearchParams(window.location.search).get("code");
@@ -2795,6 +2797,7 @@ export default function App() {
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
   useEffect(() => { try { localStorage.setItem("ls_progress", JSON.stringify(studentProgress)); } catch {} }, [studentProgress]);
   useEffect(() => { try { localStorage.setItem("ls_leaderboard", JSON.stringify(leaderboard)); } catch {} }, [leaderboard]);
+  useEffect(() => { try { localStorage.setItem("ls_classes", JSON.stringify(classes)); } catch {} }, [classes]);
 
   // Als er een code in de URL staat en die niet lokaal bestaat → haal op uit Supabase en start direct
   useEffect(() => {
@@ -2947,8 +2950,10 @@ export default function App() {
         <TeacherHome
           userName={userName}
           quizzes={quizzes}
+          classes={classes}
           onCreateQuiz={() => setPage("create-quiz")}
           onViewProgress={() => setPage("teacher-progress")}
+          onManageClasses={() => setPage("class-manager")}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
@@ -2959,8 +2964,17 @@ export default function App() {
           }}
         />
       )}
+      {page === "class-manager" && (
+        <ClassManager
+          classes={classes}
+          onSave={(updated) => setClasses(updated)}
+          onBack={() => setPage("teacher-home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "create-quiz" && (
         <CreateQuiz
+          classes={classes}
           onSave={async (q) => {
             abortControllerRef.current = new AbortController();
             setLoading(true);
@@ -3511,7 +3525,7 @@ function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, p
 }
 
 // ─── Teacher Home ────────────────────────────────────────────────
-function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, onHome, onStartQuiz, onDeleteQuiz }) {
+function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz }) {
   return (
     <div style={styles.page}>
       <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
@@ -3527,6 +3541,10 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
             <span style={{ fontWeight: 700 }}>Voortgang</span>
           </button>
         </div>
+        <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1565c0, #1e88e5)", width: "100%", marginBottom: 16 }} onClick={onManageClasses}>
+          <span style={{ fontSize: 28 }}>👥</span>
+          <span style={{ fontWeight: 700 }}>Mijn Klassen{classes.length > 0 ? ` (${classes.length})` : ""}</span>
+        </button>
 
         {/* ── QR code sectie ── */}
         <div style={{ marginBottom: 20, padding: "16px", background: "#0d1b2a", borderRadius: 16, border: "1px solid #2a3f5f", textAlign: "center" }}>
@@ -3562,7 +3580,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         </div>
                       )}
                     </div>
-                    <div style={styles.quizCardActions}>
+                    <div style={{ ...styles.quizCardActions, flexWrap: "wrap" }}>
                       <button style={styles.smallButton} onClick={() => onStartQuiz(q)}>▶️ Start</button>
                       <button style={styles.smallButtonAlt} onClick={() => navigator.clipboard?.writeText(q.code)}>📋 Code</button>
                       <button style={{
@@ -3573,6 +3591,22 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
+                      {q.classId && (() => {
+                        const klas = classes.find(c => c.id === q.classId);
+                        if (!klas || klas.students.length === 0) return null;
+                        return (
+                          <button style={{
+                            ...styles.smallButton,
+                            background: "#1565c0",
+                            boxShadow: "0 2px 8px rgba(21,101,192,0.3)",
+                          }} onClick={() => {
+                            const emails = klas.students.map(s => s.email).filter(Boolean).join(",");
+                            const subject = encodeURIComponent(`Studiebol quiz: ${q.title || subj?.label || "Quiz"}`);
+                            const body = encodeURIComponent(`Hallo,\n\nDoe mee met de Studiebol quiz!\n\n📚 ${q.topic || subj?.label || "Quiz"}\n🎯 Code: ${q.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
+                            window.open(`mailto:${emails}?subject=${subject}&body=${body}`, "_blank");
+                          }}>📧 Mail klas</button>
+                        );
+                      })()}
                       <button style={{
                         ...styles.smallButton,
                         background: "#c62828",
@@ -3586,6 +3620,150 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
               })}
             </div>
           </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ─── Class Manager ───────────────────────────────────────────────
+function ClassManager({ classes, onSave, onBack, onHome }) {
+  const [editingClassId, setEditingClassId] = useState(null);
+  const [newClassName, setNewClassName] = useState("");
+  const [showNewClass, setShowNewClass] = useState(false);
+  const [editingStudent, setEditingStudent] = useState(null); // { classId, studentId } or null
+  const [editName, setEditName] = useState("");
+  const [editEmail, setEditEmail] = useState("");
+  const [newStudentClassId, setNewStudentClassId] = useState(null);
+  const [newStudentName, setNewStudentName] = useState("");
+  const [newStudentEmail, setNewStudentEmail] = useState("");
+
+  const addClass = () => {
+    if (!newClassName.trim()) return;
+    const newClass = { id: Date.now().toString(), name: newClassName.trim(), students: [] };
+    onSave([...classes, newClass]);
+    setNewClassName("");
+    setShowNewClass(false);
+  };
+
+  const deleteClass = (classId) => {
+    if (!window.confirm("Klas verwijderen?")) return;
+    onSave(classes.filter(c => c.id !== classId));
+  };
+
+  const renameClass = (classId, name) => {
+    onSave(classes.map(c => c.id === classId ? { ...c, name } : c));
+    setEditingClassId(null);
+  };
+
+  const addStudent = (classId) => {
+    if (!newStudentName.trim() && !newStudentEmail.trim()) return;
+    const student = { id: Date.now().toString(), name: newStudentName.trim(), email: newStudentEmail.trim() };
+    onSave(classes.map(c => c.id === classId ? { ...c, students: [...c.students, student] } : c));
+    setNewStudentName("");
+    setNewStudentEmail("");
+    setNewStudentClassId(null);
+  };
+
+  const saveStudent = (classId, studentId) => {
+    onSave(classes.map(c => c.id === classId ? {
+      ...c,
+      students: c.students.map(s => s.id === studentId ? { ...s, name: editName, email: editEmail } : s)
+    } : c));
+    setEditingStudent(null);
+  };
+
+  const deleteStudent = (classId, studentId) => {
+    onSave(classes.map(c => c.id === classId ? { ...c, students: c.students.filter(s => s.id !== studentId) } : c));
+  };
+
+  return (
+    <div style={styles.page}>
+      <Header title="👥 Mijn Klassen" subtitle="Leerlingen beheren" onBack={onBack} onHome={onHome} />
+      <div style={styles.content}>
+
+        {classes.map(klas => (
+          <div key={klas.id} style={{ background: "#1e2d45", borderRadius: 18, padding: 16, marginBottom: 16, boxShadow: "0 2px 12px rgba(0,0,0,0.3)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+              {editingClassId === klas.id ? (
+                <>
+                  <input
+                    style={{ ...styles.textInput, flex: 1, margin: 0 }}
+                    value={editName}
+                    onChange={e => setEditName(e.target.value)}
+                    onKeyDown={e => e.key === "Enter" && renameClass(klas.id, editName)}
+                    autoFocus
+                  />
+                  <button style={styles.smallButton} onClick={() => renameClass(klas.id, editName)}>✓</button>
+                  <button style={styles.smallButtonAlt} onClick={() => setEditingClassId(null)}>✕</button>
+                </>
+              ) : (
+                <>
+                  <span style={{ fontWeight: 700, fontSize: 16, color: "#e0e6f0", flex: 1 }}>{klas.name}</span>
+                  <span style={{ fontSize: 12, color: "#8899aa" }}>{klas.students.length} leerling{klas.students.length !== 1 ? "en" : ""}</span>
+                  <button style={styles.smallButtonAlt} onClick={() => { setEditingClassId(klas.id); setEditName(klas.name); }}>✏️</button>
+                  <button style={{ ...styles.smallButton, background: "#c62828" }} onClick={() => deleteClass(klas.id)}>🗑️</button>
+                </>
+              )}
+            </div>
+
+            {klas.students.map(student => (
+              <div key={student.id} style={{ background: "#162033", borderRadius: 10, padding: "10px 12px", marginBottom: 8 }}>
+                {editingStudent?.classId === klas.id && editingStudent?.studentId === student.id ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam" value={editName} onChange={e => setEditName(e.target.value)} />
+                    <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres" type="email" value={editEmail} onChange={e => setEditEmail(e.target.value)} />
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <button style={styles.smallButton} onClick={() => saveStudent(klas.id, student.id)}>✓ Opslaan</button>
+                      <button style={styles.smallButtonAlt} onClick={() => setEditingStudent(null)}>✕ Annuleer</button>
+                    </div>
+                  </div>
+                ) : (
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 700, fontSize: 13, color: "#e0e6f0" }}>{student.name || "—"}</div>
+                      <div style={{ fontSize: 11, color: "#8899aa" }}>{student.email || "Geen e-mail"}</div>
+                    </div>
+                    <button style={styles.smallButtonAlt} onClick={() => { setEditingStudent({ classId: klas.id, studentId: student.id }); setEditName(student.name); setEditEmail(student.email); }}>✏️</button>
+                    <button style={{ ...styles.smallButton, background: "#c62828", padding: "6px 10px" }} onClick={() => deleteStudent(klas.id, student.id)}>🗑️</button>
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {newStudentClassId === klas.id ? (
+              <div style={{ background: "#162033", borderRadius: 10, padding: "10px 12px", marginTop: 4 }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam leerling" value={newStudentName} onChange={e => setNewStudentName(e.target.value)} />
+                  <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres leerling" type="email" value={newStudentEmail} onChange={e => setNewStudentEmail(e.target.value)} />
+                  <div style={{ display: "flex", gap: 6 }}>
+                    <button style={styles.smallButton} onClick={() => addStudent(klas.id)}>+ Toevoegen</button>
+                    <button style={styles.smallButtonAlt} onClick={() => setNewStudentClassId(null)}>✕</button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <button style={{ ...styles.smallButtonAlt, width: "100%", marginTop: 4, padding: "8px", borderRadius: 10, textAlign: "center" }} onClick={() => setNewStudentClassId(klas.id)}>
+                + Leerling toevoegen
+              </button>
+            )}
+          </div>
+        ))}
+
+        {showNewClass ? (
+          <div style={{ background: "#1e2d45", borderRadius: 18, padding: 16, marginBottom: 16 }}>
+            <label style={styles.settingLabel}>Naam nieuwe klas</label>
+            <input style={styles.textInput} placeholder="bijv. Groep 5A" value={newClassName} onChange={e => setNewClassName(e.target.value)} onKeyDown={e => e.key === "Enter" && addClass()} autoFocus />
+            <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+              <button style={styles.smallButton} onClick={addClass}>✓ Aanmaken</button>
+              <button style={styles.smallButtonAlt} onClick={() => { setShowNewClass(false); setNewClassName(""); }}>✕ Annuleer</button>
+            </div>
+          </div>
+        ) : (
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1565c0, #1e88e5)", width: "100%" }} onClick={() => setShowNewClass(true)}>
+            <span style={{ fontSize: 24 }}>+</span>
+            <span style={{ fontWeight: 700 }}>Nieuwe klas aanmaken</span>
+          </button>
         )}
       </div>
     </div>
@@ -3801,7 +3979,7 @@ const EIGEN_TOPIC_SUGGESTIONS = [
   "Verkeersregels", "Digitale veiligheid", "Financiën & sparen", "Eerste hulp bij brand",
 ];
 
-function CreateQuiz({ onSave, onBack, onHome }) {
+function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [topic, setTopic] = useState("");
@@ -3809,6 +3987,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   const [level, setLevel] = useState("");
   const [groepSelect, setGroepSelect] = useState("");
   const [klasSelect, setKlasSelect] = useState("");
+  const [selectedClassId, setSelectedClassId] = useState("");
   const [deadline, setDeadline] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
@@ -3849,7 +4028,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
     const defaultTitle = eigenMode
       ? (topic ? `${topic} Quiz` : "Vrij onderwerp Quiz")
       : (SUBJECTS.find((s) => s.id === subject)?.label + " Quiz");
-    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
+    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null });
   };
 
   return (
@@ -4121,6 +4300,27 @@ function CreateQuiz({ onSave, onBack, onHome }) {
               <p style={{ fontSize: 11, color: "#667788", marginTop: 8 }}>
                 {resultMethod === "whatsapp" ? "Leerlingen sturen hun score naar je via WhatsApp na de quiz." : "Leerlingen sturen hun score naar je e-mail na de quiz."}
               </p>
+
+              {classes.length > 0 && (
+                <div style={{ marginTop: 14 }}>
+                  <label style={styles.settingLabel}>👥 Koppel een klas (optioneel)</label>
+                  <select
+                    style={{ ...styles.textInput, marginTop: 6 }}
+                    value={selectedClassId}
+                    onChange={(e) => setSelectedClassId(e.target.value)}
+                  >
+                    <option value="">— Geen klas —</option>
+                    {classes.map(c => (
+                      <option key={c.id} value={c.id}>{c.name} ({c.students.length} leerlingen)</option>
+                    ))}
+                  </select>
+                  {selectedClassId && (
+                    <p style={{ fontSize: 11, color: "#00e676", marginTop: 6 }}>
+                      ✅ Na aanmaken verschijnt "📧 Mail klas" knop in je dashboard.
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}
