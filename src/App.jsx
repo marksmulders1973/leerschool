@@ -3709,10 +3709,17 @@ const TEACHER_TOPIC_SUGGESTIONS = {
   },
 };
 
+const EIGEN_TOPIC_SUGGESTIONS = [
+  "Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp",
+  "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet",
+  "Verkeersregels", "Digitale veiligheid", "Financiën & sparen", "Eerste hulp bij brand",
+];
+
 function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [topic, setTopic] = useState("");
+  const [eigenMode, setEigenMode] = useState(false);
   const [level, setLevel] = useState("");
   const [groepSelect, setGroepSelect] = useState("");
   const [klasSelect, setKlasSelect] = useState("");
@@ -3726,30 +3733,55 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   const levelLabel = groepSelect ? `Groep ${groepSelect.replace("g","")}` : klasSelect ? `Klas ${klasSelect.replace("k","")}` : "";
   const isVO = level.startsWith("klas");
   const suggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
+  const totalSteps = eigenMode ? 3 : 4;
+  // eigenMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
+  const displayStep = eigenMode && step === 4 ? 3 : step;
 
   const canNext = () => {
-    if (step === 1) return subject !== "";
+    if (step === 1) return eigenMode ? topic.trim() !== "" : subject !== "";
     if (step === 2) return level !== "";
     if (step === 3) return true; // onderwerp is optioneel
     if (step === 4) return resultMethod === "whatsapp" || (resultMethod === "email" && teacherEmail.includes("@"));
     return true;
   };
 
+  const goNext = () => {
+    if (!canNext()) return;
+    // eigenMode: na stap 2 direct naar stap 4 (instellingen), sla stap 3 over
+    if (step === 2 && eigenMode) { setStep(4); return; }
+    setStep(step + 1);
+  };
+
+  const goBack = () => {
+    // eigenMode: vanuit stap 4 terug naar stap 2
+    if (step === 4 && eigenMode) { setStep(2); return; }
+    setStep(step - 1);
+  };
+
   const handleSave = () => {
-    onSave({ title: title || SUBJECTS.find((s) => s.id === subject)?.label + " Quiz", subject, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
+    const subjectId = eigenMode ? "vrij" : subject;
+    const defaultTitle = eigenMode
+      ? (topic ? `${topic} Quiz` : "Vrij onderwerp Quiz")
+      : (SUBJECTS.find((s) => s.id === subject)?.label + " Quiz");
+    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null });
   };
 
   return (
     <div style={styles.page}>
-      <Header title="Nieuwe Quiz" subtitle={`Stap ${step} van 4`} onBack={onBack} onHome={onHome} />
+      <Header title="Nieuwe Quiz" subtitle={`Stap ${displayStep} van ${totalSteps}`} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}>
-          <div style={{ ...styles.progressFill, width: `${(step / 4) * 100}%` }} />
+          <div style={{ ...styles.progressFill, width: `${(displayStep / totalSteps) * 100}%` }} />
         </div>
 
-        {(subject || levelLabel) && (
+        {(subject || eigenMode || levelLabel) && (
           <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
-            {subject && (
+            {eigenMode && !subject && (
+              <span style={{ fontSize: 12, background: "#2a1e3a", color: "#c07fff", padding: "4px 10px", borderRadius: 8, border: "1px solid #7c3aed40" }}>
+                🎯 Vrij onderwerp
+              </span>
+            )}
+            {subject && !eigenMode && (
               <span style={{ fontSize: 12, background: "#1e2d45", color: "#8eaadb", padding: "4px 10px", borderRadius: 8, border: "1px solid #2a3f5f" }}>
                 📚 {SUBJECTS.find(s => s.id === subject)?.label}
               </span>
@@ -3761,7 +3793,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
             )}
             {topic && (
               <span style={{ fontSize: 12, background: "#2a1e3a", color: "#c07fff", padding: "4px 10px", borderRadius: 8, border: "1px solid #7c3aed40" }}>
-                🎯 {topic}
+                ✨ {topic}
               </span>
             )}
           </div>
@@ -3769,7 +3801,67 @@ function CreateQuiz({ onSave, onBack, onHome }) {
 
         {step === 1 && (
           <div style={styles.stepContent}>
-            <h3 style={styles.stepTitle}>Kies een vak</h3>
+            {/* ── Eigen onderwerp kaart ── */}
+            <button
+              onClick={() => { const next = !eigenMode; setEigenMode(next); if (next) { setSubject(""); } else { setTopic(""); } }}
+              style={{
+                width: "100%", marginBottom: 12, padding: "14px 18px",
+                background: eigenMode ? "linear-gradient(135deg, #1e1a3a, #2a1e4a)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
+                border: `2px solid ${eigenMode ? "#7c3aed" : "#3a5f8a"}`,
+                borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
+                boxShadow: eigenMode ? "0 0 0 3px #7c3aed30" : "0 2px 12px rgba(0,0,0,0.2)",
+              }}
+            >
+              <span style={{ fontSize: 26 }}>🎯</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+                    Zelf een onderwerp kiezen
+                  </span>
+                  <span style={{ background: "#7c3aed", color: "#fff", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
+                </div>
+                <div style={{ color: "#8899bb", fontSize: 12, marginTop: 3 }}>
+                  Elk onderwerp — ook buiten de standaard vakken
+                </div>
+              </div>
+              <span style={{ fontSize: 18 }}>{eigenMode ? "✅" : "→"}</span>
+            </button>
+
+            {eigenMode && (
+              <div style={{ marginBottom: 14, padding: 16, background: "#1a1530", borderRadius: 14, border: "2px solid #7c3aed" }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Waar gaan de vragen over?</label>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginBottom: 12 }}>
+                  {EIGEN_TOPIC_SUGGESTIONS.map(s => (
+                    <button key={s} onClick={() => setTopic(topic === s ? "" : s)}
+                      style={{
+                        padding: "6px 13px", borderRadius: 20, cursor: "pointer",
+                        background: topic === s ? "#7c3aed" : "#1e1a30",
+                        border: `1px solid ${topic === s ? "#7c3aed" : "#3a2a5f"}`,
+                        color: topic === s ? "#fff" : "#a07fcc", fontSize: 12,
+                        fontFamily: "'Nunito', sans-serif", fontWeight: topic === s ? 700 : 400,
+                      }}>
+                      {s}
+                    </button>
+                  ))}
+                </div>
+                <input
+                  style={styles.textInput}
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  placeholder="Of typ zelf een onderwerp..."
+                  maxLength={80}
+                />
+                {topic && <div style={{ fontSize: 12, color: "#c07fff", fontWeight: 700, marginTop: 8 }}>✨ AI maakt vragen over: <span style={{ color: "#fff" }}>{topic}</span></div>}
+              </div>
+            )}
+
+            {/* ── Scheidingslijn ── */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "10px 0 12px" }}>
+              <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
+              <span style={{ color: "#556677", fontSize: 12, whiteSpace: "nowrap" }}>of kies een standaard vak</span>
+              <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
+            </div>
+
             <div style={styles.subjectGrid}>
               {(level ? (SUBJECT_FOR_LEVEL[level] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
                 <button
@@ -3777,10 +3869,11 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                   style={{
                     ...styles.subjectCard,
                     borderColor: subject === s.id ? s.color : "transparent",
-                    background: subject === s.id ? `${s.color}15` : "#fff",
+                    background: subject === s.id ? `${s.color}15` : eigenMode ? "#111820" : "#fff",
                     boxShadow: subject === s.id ? `0 0 0 3px ${s.color}40` : "0 2px 8px rgba(0,0,0,0.06)",
+                    opacity: eigenMode ? 0.45 : 1,
                   }}
-                  onClick={() => { setSubject(s.id); setTopic(""); }}
+                  onClick={() => { setSubject(s.id); setEigenMode(false); setTopic(""); }}
                 >
                   <span style={{ fontSize: 32 }}>{s.icon}</span>
                   <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
@@ -3946,10 +4039,10 @@ function CreateQuiz({ onSave, onBack, onHome }) {
         )}
 
         <div style={styles.navRow}>
-          {step > 1 && <button style={styles.backBtn} onClick={() => setStep(step - 1)}>← Vorige</button>}
+          {step > 1 && <button style={styles.backBtn} onClick={goBack}>← Vorige</button>}
           <div style={{ flex: 1 }} />
           {step < 4 ? (
-            <button style={{ ...styles.nextBtn, opacity: canNext() ? 1 : 0.4 }} onClick={() => canNext() && setStep(step + 1)} disabled={!canNext()}>
+            <button style={{ ...styles.nextBtn, opacity: canNext() ? 1 : 0.4 }} onClick={goNext} disabled={!canNext()}>
               {step === 3 && !topic ? "Overslaan →" : "Volgende →"}
             </button>
           ) : (
