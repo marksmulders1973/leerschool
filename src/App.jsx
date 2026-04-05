@@ -2777,14 +2777,18 @@ export default function App() {
   const [studentProgress, setStudentProgress] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
   const [pendingQuizData, setPendingQuizData] = useState(null);
+  const [pendingCode, setPendingCode] = useState("");
   const abortControllerRef = useRef(null);
 
-  // Load stored data
+  // Load stored data + check URL voor directe quiz-code
   useEffect(() => {
     try { const q = localStorage.getItem("ls_quizzes"); if (q) setQuizzes(JSON.parse(q)); } catch {}
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
+    // URL parameter ?code=XXXXX
+    const urlCode = new URLSearchParams(window.location.search).get("code");
+    if (urlCode) setPendingCode(urlCode.toUpperCase());
   }, []);
 
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
@@ -2888,11 +2892,19 @@ export default function App() {
       )}
       {page === "home" && (
         <HomePage
-          onSelectRole={(r) => { setRole(r); setPage(r === "teacher" ? "teacher-home" : "student-home"); }}
+          onSelectRole={(r) => {
+            setRole(r);
+            if (r === "student" && pendingCode) {
+              setPage("student-home");
+            } else {
+              setPage(r === "teacher" ? "teacher-home" : "student-home");
+            }
+          }}
           onBack={role ? () => setPage(role === "teacher" ? "teacher-home" : "student-home") : null}
           userName={userName}
           setUserName={setUserName}
           setUserLevel={setUserLevel}
+          pendingCode={pendingCode}
         />
       )}
       {page === "teacher-home" && (
@@ -2970,7 +2982,7 @@ export default function App() {
           progress={studentProgress.filter((p) => p.player === userName)}
           onJoinQuiz={(code) => {
             const quiz = quizzes.find((q) => q.code === code);
-            if (quiz) { setCurrentQuiz(quiz); setPage("lobby"); }
+            if (quiz) { setCurrentQuiz(quiz); setPendingCode(""); setPage("lobby"); }
           }}
           onSelfStudy={() => setPage("self-study")}
           onTextbook={() => setPage("textbook")}
@@ -2978,6 +2990,7 @@ export default function App() {
           onHome={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
+          pendingCode={pendingCode}
         />
       )}
       {page === "self-study" && (
@@ -3499,7 +3512,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://www.studiebol.online`;
+                        const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -4090,7 +4103,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
           style={styles.whatsappButton}
           onClick={() => {
             const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol quiz";
-            const text = `Doe mee met mijn studiebol quiz!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://www.studiebol.online`;
+            const text = `Doe mee met mijn studiebol quiz!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
@@ -4143,10 +4156,18 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
 }
 
 // ─── Student Home ────────────────────────────────────────────────
-function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook }) {
-  const [code, setCode] = useState("");
+function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode }) {
+  const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
-  const [showCode, setShowCode] = useState(false);
+  const [showCode, setShowCode] = useState(!!pendingCode);
+
+  // Als er een pendingCode is, direct joinen
+  useEffect(() => {
+    if (pendingCode) {
+      const quiz = quizzes.find((q) => q.code.toUpperCase() === pendingCode.toUpperCase());
+      if (quiz) { onJoinQuiz(pendingCode); }
+    }
+  }, [pendingCode, quizzes]);
 
   const handleJoin = () => {
     if (code.trim().length < 3) {
