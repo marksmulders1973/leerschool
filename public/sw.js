@@ -2,10 +2,8 @@ const CACHE = "studiebol-v1";
 
 const APP_SHELL = [
   "/",
-  "/src/main.jsx",
   "/manifest.json",
   "/icons/icon.svg",
-  "/intro.mp4",
 ];
 
 // Installeren: cache de app shell
