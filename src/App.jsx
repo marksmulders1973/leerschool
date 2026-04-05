@@ -3670,6 +3670,45 @@ function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
   );
 }
 
+const TEACHER_TOPIC_SUGGESTIONS = {
+  rekenen: {
+    basisschool: ["Breuken", "Tafels", "Vermenigvuldigen", "Optellen & aftrekken", "Delen", "Decimale getallen", "Klokkijken", "Meten & wegen", "Procenten", "Geometrie"],
+    vo: ["Algebra", "Vergelijkingen oplossen", "Pythagoras", "Functies & grafieken", "Statistiek", "Kansen", "Machtsverheffing", "Goniometrie", "Stelsels", "Verbanden"],
+  },
+  taal: {
+    basisschool: ["Werkwoorden", "Woordsoorten", "Spelling", "Lidwoorden", "Zinsontleding", "Grammatica", "Leestekens", "Synoniemen & antoniemen", "Begrijpend lezen"],
+    vo: ["Argumenteren", "Tekststructuur", "Retorica", "Spelling & grammatica", "Literatuurgeschiedenis", "Stijlfiguren", "Schrijfvaardigheid"],
+  },
+  aardrijkskunde: {
+    basisschool: ["Nederland", "Europa", "Landen & hoofdsteden", "Klimaatzones", "Rivieren & gebergten", "Werelddelen", "Kaart lezen"],
+    vo: ["Globalisering", "Klimaatverandering", "Bevolkingsgroei & migratie", "Economische zones", "Oceanografie", "Duurzaamheid", "Stedelijke ontwikkeling"],
+  },
+  geschiedenis: {
+    basisschool: ["Prehistorie", "Oude Egypte", "Grieken & Romeinen", "Middeleeuwen", "VOC & kolonisatie", "Franse Revolutie", "Tweede Wereldoorlog"],
+    vo: ["Eerste Wereldoorlog", "Tweede Wereldoorlog", "Koude Oorlog", "Industriële Revolutie", "Dekolonisatie", "Napoleontisch tijdperk", "Verzet & collaboratie"],
+  },
+  natuur: {
+    basisschool: ["Planten & dieren", "Menselijk lichaam", "Ecosystemen", "Weersomstandigheden", "Voedselketen", "Zintuigen", "Zonne-energie"],
+    vo: ["Fotosynthese", "Evolutie & Darwin", "Erfelijkheid & DNA", "Celbiologie", "Elektriciteitsleer", "Krachten & beweging", "Zuren & basen"],
+  },
+  engels: {
+    basisschool: ["Woordenschat", "Kleuren & cijfers", "Present simple", "Dagelijks Engels", "Dieren & natuur"],
+    vo: ["Present & past tense", "Onregelmatige werkwoorden", "Future tense", "Passive voice", "Conditionals", "Woordenschat", "Reading comprehension"],
+  },
+  duits: {
+    basisschool: ["Woordenschat", "De/Die/Das", "Begroetingen", "Kleuren & getallen"],
+    vo: ["De/Die/Das & naamvallen", "Werkwoorden & Perfekt", "Imperativ", "Adjectieven", "Woordenschat", "Separeerbare werkwoorden", "Bijzinnen"],
+  },
+  frans: {
+    basisschool: ["Woordenschat", "Begroetingen", "Le/La/Les", "Kleuren & getallen"],
+    vo: ["Le/La/Les & geslacht", "Passé composé", "Imparfait", "Subjonctif", "Adjectieven", "Woordenschat", "Werkwoorden"],
+  },
+  maatschappijleer: {
+    basisschool: ["Democratie", "Regels & wetten", "Nederland & de wereld"],
+    vo: ["Democratie & rechtsstaat", "Grondrechten", "Politieke partijen", "De Europese Unie", "Media & journalistiek", "Economie & arbeid", "Sociale ongelijkheid"],
+  },
+};
+
 function CreateQuiz({ onSave, onBack, onHome }) {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
@@ -3685,11 +3724,14 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   const [step, setStep] = useState(1);
 
   const levelLabel = groepSelect ? `Groep ${groepSelect.replace("g","")}` : klasSelect ? `Klas ${klasSelect.replace("k","")}` : "";
+  const isVO = level.startsWith("klas");
+  const suggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
 
   const canNext = () => {
     if (step === 1) return subject !== "";
     if (step === 2) return level !== "";
-    if (step === 3) return resultMethod === "whatsapp" || (resultMethod === "email" && teacherEmail.includes("@"));
+    if (step === 3) return true; // onderwerp is optioneel
+    if (step === 4) return resultMethod === "whatsapp" || (resultMethod === "email" && teacherEmail.includes("@"));
     return true;
   };
 
@@ -3699,10 +3741,10 @@ function CreateQuiz({ onSave, onBack, onHome }) {
 
   return (
     <div style={styles.page}>
-      <Header title="Nieuwe Quiz" subtitle={`Stap ${step} van 3`} onBack={onBack} onHome={onHome} />
+      <Header title="Nieuwe Quiz" subtitle={`Stap ${step} van 4`} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}>
-          <div style={{ ...styles.progressFill, width: `${(step / 3) * 100}%` }} />
+          <div style={{ ...styles.progressFill, width: `${(step / 4) * 100}%` }} />
         </div>
 
         {(subject || levelLabel) && (
@@ -3715,6 +3757,11 @@ function CreateQuiz({ onSave, onBack, onHome }) {
             {levelLabel && (
               <span style={{ fontSize: 12, background: "#1e3a2a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
                 🎒 {levelLabel}
+              </span>
+            )}
+            {topic && (
+              <span style={{ fontSize: 12, background: "#2a1e3a", color: "#c07fff", padding: "4px 10px", borderRadius: 8, border: "1px solid #7c3aed40" }}>
+                🎯 {topic}
               </span>
             )}
           </div>
@@ -3733,7 +3780,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
                     background: subject === s.id ? `${s.color}15` : "#fff",
                     boxShadow: subject === s.id ? `0 0 0 3px ${s.color}40` : "0 2px 8px rgba(0,0,0,0.06)",
                   }}
-                  onClick={() => { setSubject(s.id); setTopic(s.label); }}
+                  onClick={() => { setSubject(s.id); setTopic(""); }}
                 >
                   <span style={{ fontSize: 32 }}>{s.icon}</span>
                   <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
@@ -3802,11 +3849,60 @@ function CreateQuiz({ onSave, onBack, onHome }) {
 
         {step === 3 && (
           <div style={styles.stepContent}>
+            <h3 style={styles.stepTitle}>Kies een onderwerp</h3>
+            <p style={{ fontSize: 13, color: "#8899aa", marginBottom: 14, marginTop: -4 }}>
+              De AI maakt gerichte vragen over dit onderwerp. Je kunt ook overslaan voor algemene vragen.
+            </p>
+            {suggestions.length > 0 && (
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ fontSize: 12, color: "#667788", marginBottom: 8 }}>Suggesties voor {SUBJECTS.find(s => s.id === subject)?.label}:</div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {suggestions.map(s => (
+                    <button
+                      key={s}
+                      onClick={() => setTopic(topic === s ? "" : s)}
+                      style={{
+                        padding: "7px 14px", borderRadius: 20, cursor: "pointer",
+                        background: topic === s ? "#7c3aed" : "#1e2d45",
+                        border: `1px solid ${topic === s ? "#7c3aed" : "#2a3f5f"}`,
+                        color: topic === s ? "#fff" : "#8eaadb",
+                        fontSize: 13, fontWeight: topic === s ? 700 : 400,
+                        fontFamily: "'Nunito', sans-serif",
+                        transition: "all 0.15s",
+                      }}
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+            <div style={{ marginBottom: 8 }}>
+              <label style={{ ...styles.settingLabel, marginBottom: 6 }}>Of typ zelf een onderwerp:</label>
+              <input
+                style={styles.textInput}
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                placeholder="Bijv. Breuken met gelijke noemers, WOII..."
+                maxLength={80}
+              />
+            </div>
+            {topic ? (
+              <div style={{ fontSize: 12, color: "#c07fff", fontWeight: 700, padding: "8px 12px", background: "#1e0a2e", borderRadius: 10, border: "1px solid #7c3aed40" }}>
+                ✨ AI maakt vragen over: <span style={{ color: "#fff" }}>{topic}</span>
+              </div>
+            ) : (
+              <div style={{ fontSize: 12, color: "#667788", padding: "8px 12px", background: "#1a2030", borderRadius: 10, border: "1px solid #2a3f5f" }}>
+                ⚡ Geen onderwerp? Dan krijg je algemene {SUBJECTS.find(s => s.id === subject)?.label}-vragen.
+              </div>
+            )}
+          </div>
+        )}
+
+        {step === 4 && (
+          <div style={styles.stepContent}>
             <h3 style={styles.stepTitle}>Instellingen</h3>
             <div style={styles.settingsGroup}>
-              <label style={styles.settingLabel}>Omschrijving / onderwerp</label>
-              <input style={styles.textInput} value={topic} onChange={(e) => setTopic(e.target.value)} placeholder="Bijv. Werkwoorden, Breuken, WOII..." />
-
               <label style={styles.settingLabel}>Titel (optioneel)</label>
               <input style={styles.textInput} value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Bijv. Week 12 - Breuken" />
 
@@ -3852,9 +3948,9 @@ function CreateQuiz({ onSave, onBack, onHome }) {
         <div style={styles.navRow}>
           {step > 1 && <button style={styles.backBtn} onClick={() => setStep(step - 1)}>← Vorige</button>}
           <div style={{ flex: 1 }} />
-          {step < 3 ? (
+          {step < 4 ? (
             <button style={{ ...styles.nextBtn, opacity: canNext() ? 1 : 0.4 }} onClick={() => canNext() && setStep(step + 1)} disabled={!canNext()}>
-              Volgende →
+              {step === 3 && !topic ? "Overslaan →" : "Volgende →"}
             </button>
           ) : (
             <button style={styles.nextBtn} onClick={handleSave}>🚀 Quiz aanmaken</button>
