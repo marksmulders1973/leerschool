@@ -2837,7 +2837,7 @@ export default function App() {
     setQuizzes((prev) => [...prev, newQuiz]);
     // Sla op in Supabase zodat leerlingen via de link kunnen joinen
     supabase.from("quizzes").insert({ id: newQuiz.id, code: newQuiz.code, data: newQuiz }).then(({ error }) => {
-      if (error) console.warn("Supabase opslaan mislukt:", error.message);
+      if (error) alert(`❌ Quiz opslaan mislukt: ${error.message}\n\nDeel de link nog niet — leerlingen kunnen de quiz dan niet vinden.`);
     });
     return newQuiz;
   };
