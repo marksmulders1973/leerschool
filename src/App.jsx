@@ -3499,7 +3499,7 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `studiebol Quiz!\n\n📚 ${subj?.label}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://www.studiebol.online`;
+                        const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Open de app: https://www.studiebol.online`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                     </div>
@@ -4089,7 +4089,8 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const text = `Doe mee met mijn studiebol quiz!\n\n📚 Vak: ${subj?.label}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://www.studiebol.online`;
+            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol quiz";
+            const text = `Doe mee met mijn studiebol quiz!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Open de app: https://www.studiebol.online`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
