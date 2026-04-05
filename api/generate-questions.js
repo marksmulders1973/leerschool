@@ -129,11 +129,15 @@ REGELS:
 - Minstens 40% van wiskunde-vragen moet een SVG hebben
 - Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
+    const isVrijOnderwerp = subject === "vrij" && topic;
     const topicLine = topic ? `\n- Onderwerp: ${topic}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Maak de vragen leerzaam en interessant over dit specifieke onderwerp.` : "";
 
+    const vakRegel = isVrijOnderwerp
+      ? `- Onderwerp: ${topic} (vrij gekozen — GEEN rekenvragen tenzij het onderwerp expliciet over rekenen gaat)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: Maak algemene kennisquizvragen over "${topic}". Denk aan feiten, geschiedenis, begrippen, weetjes — passend bij het onderwerp. NIET automatisch rekenen of wiskunde gebruiken.`
+      : `- Vak: ${subjectLabel}\n- Niveau: ${levelLabel}${topicLine}`;
+
     prompt = `Genereer ${count} quizvragen voor:
-- Vak: ${subjectLabel}
-- Niveau: ${levelLabel}${topicLine}
+${vakRegel}
 
 Antwoord ALLEEN met een JSON array:
 [
