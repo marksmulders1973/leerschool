@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import supabase from "./supabase.js";
 
 // ─── Sound Engine ────────────────────────────────────────────────
 const SoundEngine = {
@@ -2795,6 +2796,30 @@ export default function App() {
   useEffect(() => { try { localStorage.setItem("ls_progress", JSON.stringify(studentProgress)); } catch {} }, [studentProgress]);
   useEffect(() => { try { localStorage.setItem("ls_leaderboard", JSON.stringify(leaderboard)); } catch {} }, [leaderboard]);
 
+  // Als er een code in de URL staat en die niet lokaal bestaat → haal op uit Supabase en start direct
+  useEffect(() => {
+    if (!pendingCode) return;
+    const localQuiz = quizzes.find((q) => q.code.toUpperCase() === pendingCode.toUpperCase());
+    if (localQuiz) return; // al lokaal aanwezig
+    supabase
+      .from("quizzes")
+      .select("data")
+      .eq("code", pendingCode.toUpperCase())
+      .single()
+      .then(({ data, error }) => {
+        if (error || !data) return;
+        const quiz = data.data;
+        setCurrentQuiz(quiz);
+        setPendingCode("");
+        // Zet naam als die er nog niet is, dan start direct
+        if (!userName) {
+          setPage("home"); // laat leerling eerst naam invoeren
+        } else {
+          startGame(quiz, "self");
+        }
+      });
+  }, [pendingCode, quizzes]);
+
   const createQuiz = (quiz) => {
     const newQuiz = {
       ...quiz,
@@ -2804,6 +2829,10 @@ export default function App() {
       players: [],
     };
     setQuizzes((prev) => [...prev, newQuiz]);
+    // Sla op in Supabase zodat leerlingen via de link kunnen joinen
+    supabase.from("quizzes").insert({ id: newQuiz.id, code: newQuiz.code, data: newQuiz }).then(({ error }) => {
+      if (error) console.warn("Supabase opslaan mislukt:", error.message);
+    });
     return newQuiz;
   };
 
@@ -2894,8 +2923,9 @@ export default function App() {
         <HomePage
           onSelectRole={(r) => {
             setRole(r);
-            if (r === "student" && pendingCode) {
-              setPage("student-home");
+            if (r === "student" && currentQuiz) {
+              // Quiz al opgehaald via Supabase-link → direct starten
+              startGame(currentQuiz, "self");
             } else {
               setPage(r === "teacher" ? "teacher-home" : "student-home");
             }
@@ -2916,6 +2946,11 @@ export default function App() {
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
+          onDeleteQuiz={(id) => {
+            const updated = quizzes.filter((q) => q.id !== id);
+            setQuizzes(updated);
+            try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
+          }}
         />
       )}
       {page === "create-quiz" && (
@@ -2956,10 +2991,9 @@ export default function App() {
         <QuizPreview
           quizConfig={pendingQuizData}
           onConfirm={(finalQuestions) => {
-            const nq = createQuiz({ ...pendingQuizData, preGeneratedQuestions: finalQuestions });
-            setCurrentQuiz(nq);
+            createQuiz({ ...pendingQuizData, preGeneratedQuestions: finalQuestions });
             setPendingQuizData(null);
-            setPage("lobby");
+            setPage("teacher-home");
           }}
           onBack={() => setPage("create-quiz")}
           onHome={() => setPage("home")}
@@ -3453,7 +3487,7 @@ function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel })
 }
 
 // ─── Teacher Home ────────────────────────────────────────────────
-function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, onHome, onStartQuiz }) {
+function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, onHome, onStartQuiz, onDeleteQuiz }) {
   return (
     <div style={styles.page}>
       <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
@@ -3515,6 +3549,13 @@ function TeacherHome({ userName, quizzes, onCreateQuiz, onViewProgress, onBack, 
                         const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
+                      <button style={{
+                        ...styles.smallButton,
+                        background: "#c62828",
+                        boxShadow: "0 2px 8px rgba(198,40,40,0.3)",
+                      }} onClick={() => {
+                        if (window.confirm(`Quiz "${q.title || subj?.label}" verwijderen?`)) onDeleteQuiz(q.id);
+                      }}>🗑️ Verwijder</button>
                     </div>
                   </div>
                 );
@@ -4084,18 +4125,13 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
     <div style={styles.page}>
       <div style={styles.lobbyCard}>
         <div style={styles.lobbyLogo}>🎯</div>
-        <h2 style={styles.lobbyTitle}>Wachtkamer</h2>
-        <p style={styles.lobbySubtitle}>Deel deze code met je klas:</p>
+        <h2 style={styles.lobbyTitle}>{isHost ? "Quiz klaar!" : "Wachtkamer"}</h2>
+        <p style={styles.lobbySubtitle}>{isHost ? `Code: ${quiz?.code}` : "Wachten tot de leerkracht start..."}</p>
 
-        <div style={styles.codeDisplay}>
-          {quiz?.code?.split("").map((c, i) => (
-            <span key={i} style={styles.codeLetter}>{c}</span>
-          ))}
-        </div>
-
-        {/* QR code voor leerlingen die de app nog niet hebben */}
+        {/* QR code + WhatsApp alleen voor leerkracht */}
+        {isHost && (<>
         <div style={{ margin: "12px 0", textAlign: "center" }}>
-          <div style={{ fontSize: 11, color: "#667788", marginBottom: 6 }}>App nog niet? Scan de QR code:</div>
+          <div style={{ fontSize: 11, color: "#667788", marginBottom: 6 }}>App nog niet? Laat leerlingen scannen:</div>
           <img src="/qrcode.png" alt="QR code studiebol.online" style={{ width: 100, height: 100, borderRadius: 8, display: "block", margin: "0 auto" }} />
         </div>
 
@@ -4103,15 +4139,17 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
           style={styles.whatsappButton}
           onClick={() => {
             const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol quiz";
-            const text = `Doe mee met mijn studiebol quiz!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
+            const text = `Doe mee met de studiebol quiz van je leerkracht!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+            onStart();
           }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style={{ flexShrink: 0 }}>
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
-          Nodig vrienden uit via WhatsApp
+          💬 Deel & Start
         </button>
+        </>)}
 
         <div style={styles.lobbyInfo}>
           <span>{players.length} speler{players.length !== 1 ? "s" : ""}</span>
@@ -4136,9 +4174,10 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
           </div>
         </div>
 
-        {isHost ? (
-          <button style={styles.startButton} onClick={onStart}>🚀 Start de Quiz!</button>
-        ) : (
+        {isHost && (
+          <button style={{ ...styles.startButton, background: "linear-gradient(135deg, #1a237e, #283593)", fontSize: 14, padding: "10px 20px" }} onClick={onStart}>🚀 Start zonder delen</button>
+        )}
+        {!isHost && (
           <div style={styles.waitingBox}>
             <span style={{ fontSize: 32 }}>⏳</span>
             <p>Wachten tot de leerkracht start...</p>
@@ -6070,6 +6109,7 @@ const styles = {
     fontFamily: "'Fredoka', sans-serif",
     fontSize: 36,
     fontWeight: 700,
+    color: "#ffffff",
     background: "#162033",
     padding: "10px 16px",
     borderRadius: 12,
