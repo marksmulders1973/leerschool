@@ -4144,6 +4144,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
 function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook }) {
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
+  const [showCode, setShowCode] = useState(false);
 
   const handleJoin = () => {
     if (code.trim().length < 3) {
@@ -4171,18 +4172,35 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
 
       <div style={styles.content}>
         <div style={styles.joinSection}>
-          <h3 style={styles.sectionTitle}>Doe mee met een quiz</h3>
-          <div style={styles.codeInputRow}>
-            <input
-              style={{ ...styles.textInput, flex: 1, textTransform: "uppercase", letterSpacing: 3, fontWeight: 700, textAlign: "center" }}
-              value={code}
-              onChange={(e) => { setCode(e.target.value.toUpperCase()); setError(""); }}
-              placeholder="SPELCODE"
-              maxLength={6}
-            />
-            <button style={styles.joinButton} onClick={handleJoin}>Doe mee! 🚀</button>
-          </div>
-          {error && <p style={styles.errorText}>{error}</p>}
+          <button
+            onClick={() => { setShowCode(v => !v); setError(""); setCode(""); }}
+            style={{
+              width: "100%", padding: "12px 16px", borderRadius: 12, cursor: "pointer",
+              background: showCode ? "#0a2a18" : "#1e2d45",
+              border: `2px solid ${showCode ? "#00c853" : "#2a3f5f"}`,
+              color: showCode ? "#00e676" : "#8eaadb",
+              fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 14,
+              display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+            }}
+          >
+            🔑 Ik heb een quizcode {showCode ? "▲" : "▼"}
+          </button>
+          {showCode && (
+            <div style={{ marginTop: 10 }}>
+              <div style={styles.codeInputRow}>
+                <input
+                  style={{ ...styles.textInput, flex: 1, textTransform: "uppercase", letterSpacing: 3, fontWeight: 700, textAlign: "center" }}
+                  value={code}
+                  onChange={(e) => { setCode(e.target.value.toUpperCase()); setError(""); }}
+                  placeholder="QUIZCODE"
+                  maxLength={6}
+                  autoFocus
+                />
+                <button style={styles.joinButton} onClick={handleJoin}>Meedoen</button>
+              </div>
+              {error && <p style={styles.errorText}>{error}</p>}
+            </div>
+          )}
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
