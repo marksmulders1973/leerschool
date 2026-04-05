@@ -3733,7 +3733,7 @@ function CreateQuiz({ onSave, onBack, onHome }) {
   const [klasSelect, setKlasSelect] = useState("");
   const [deadline, setDeadline] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
-  const [timePerQuestion, setTimePerQuestion] = useState(20);
+  const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [resultMethod, setResultMethod] = useState("whatsapp");
   const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
@@ -4013,8 +4013,9 @@ function CreateQuiz({ onSave, onBack, onHome }) {
               <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
               <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
 
-              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion}s</label>
-              <input type="range" min={10} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
+              <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
+              {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
 
               <label style={styles.settingLabel}>📬 Hoe wil je resultaten ontvangen?</label>
               <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
