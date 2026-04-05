@@ -2807,12 +2807,18 @@ export default function App() {
       .eq("code", pendingCode.toUpperCase())
       .single()
       .then(({ data, error }) => {
-        if (error || !data) return;
+        if (error || !data) {
+          alert(`❌ Quiz met code "${pendingCode}" niet gevonden.\n\nVraag de leerkracht om een nieuwe link te sturen.`);
+          setPendingCode("");
+          return;
+        }
         const quiz = data.data;
         setCurrentQuiz(quiz);
         setPendingCode("");
-        // Zet naam als die er nog niet is, dan start direct
-        if (!userName) {
+        // Lees naam direct uit localStorage om stale closure te vermijden
+        let hasUser = false;
+        try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); hasUser = !!d.name; } } catch {}
+        if (!hasUser) {
           setPage("home"); // laat leerling eerst naam invoeren
         } else {
           startGame(quiz, "self");
