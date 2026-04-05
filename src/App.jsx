@@ -2923,7 +2923,7 @@ export default function App() {
         <HomePage
           onSelectRole={(r) => {
             setRole(r);
-            if (r === "student" && currentQuiz) {
+            if (currentQuiz) {
               // Quiz al opgehaald via Supabase-link → direct starten
               startGame(currentQuiz, "self");
             } else {
@@ -3192,11 +3192,11 @@ function LoadingOverlay({ mode, onCancel }) {
   );
 }
 
-function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel }) {
+function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, pendingCode }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
-  const [step, setStep] = useState("role");
-  const [pendingRole, setPendingRole] = useState(null);
+  const [step, setStep] = useState(pendingCode ? "name" : "role");
+  const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [level, setLevel] = useState("");
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
@@ -3339,21 +3339,32 @@ function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel })
 
         {step === "name" && (
           <div style={{ width: "100%", maxWidth: 360, display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{
-              background: "rgba(255,255,255,0.06)", borderRadius: 16,
-              padding: "10px 14px", display: "flex", alignItems: "center", gap: 10,
-            }}>
-              <img src="/bol.jpg" alt="" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover" }} />
-              <div>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Je koos:</div>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, color: "#fff" }}>{roleLabels[pendingRole]}</div>
+            {pendingCode ? (
+              <div style={{
+                background: "rgba(0,200,83,0.15)", borderRadius: 16,
+                padding: "12px 16px", textAlign: "center",
+                border: "1px solid rgba(0,200,83,0.3)",
+              }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#00e676" }}>🎯 Quiz gevonden!</div>
+                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "#aabbcc", marginTop: 4 }}>Vul je naam in en de quiz start meteen</div>
               </div>
-              <button onClick={() => setStep("role")} style={{
-                marginLeft: "auto", background: "none", border: "none",
-                color: "rgba(255,255,255,0.4)", fontSize: 13, cursor: "pointer",
-                fontFamily: "'Nunito', sans-serif",
-              }}>← terug</button>
-            </div>
+            ) : (
+              <div style={{
+                background: "rgba(255,255,255,0.06)", borderRadius: 16,
+                padding: "10px 14px", display: "flex", alignItems: "center", gap: 10,
+              }}>
+                <img src="/bol.jpg" alt="" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover" }} />
+                <div>
+                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Je koos:</div>
+                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, color: "#fff" }}>{roleLabels[pendingRole]}</div>
+                </div>
+                <button onClick={() => setStep("role")} style={{
+                  marginLeft: "auto", background: "none", border: "none",
+                  color: "rgba(255,255,255,0.4)", fontSize: 13, cursor: "pointer",
+                  fontFamily: "'Nunito', sans-serif",
+                }}>← terug</button>
+              </div>
+            )}
 
             <div style={{ ...styles.nameInput, animation: shake ? "shake 0.5s ease" : "none" }}>
               <label style={styles.inputLabel}>Wat is je naam?</label>
