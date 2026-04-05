@@ -3014,9 +3014,16 @@ export default function App() {
           userName={userName}
           quizzes={quizzes}
           progress={studentProgress.filter((p) => p.player === userName)}
-          onJoinQuiz={(code) => {
-            const quiz = quizzes.find((q) => q.code === code);
-            if (quiz) { setCurrentQuiz(quiz); setPendingCode(""); setPage("lobby"); }
+          onJoinQuiz={async (code) => {
+            const upper = code.toUpperCase();
+            const local = quizzes.find((q) => q.code.toUpperCase() === upper);
+            if (local) { setCurrentQuiz(local); setPendingCode(""); startGame(local, "self"); return; }
+            // Niet lokaal → zoek in Supabase
+            const { data, error } = await supabase.from("quizzes").select("data").eq("code", upper).single();
+            if (error || !data) return "not_found";
+            setCurrentQuiz(data.data);
+            setPendingCode("");
+            startGame(data.data, "self");
           }}
           onSelfStudy={() => setPage("self-study")}
           onTextbook={() => setPage("textbook")}
@@ -4208,22 +4215,17 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
     }
   }, [pendingCode, quizzes]);
 
-  const handleJoin = () => {
-    if (code.trim().length < 3) {
-      setError("Vul een geldige code in");
-      return;
-    }
-    const quiz = quizzes.find((q) => q.code.toUpperCase() === code.trim().toUpperCase());
-    if (!quiz) {
-      setError("Quiz niet gevonden 😕");
-      return;
-    }
-    if (quiz.deadline && new Date(quiz.deadline) < new Date()) {
-      setError(`Deze quiz is verlopen op ${new Date(quiz.deadline).toLocaleDateString("nl-NL")} 📅`);
+  const handleJoin = async () => {
+    if (code.trim().length < 3) { setError("Vul een geldige code in"); return; }
+    const upper = code.trim().toUpperCase();
+    const local = quizzes.find((q) => q.code.toUpperCase() === upper);
+    if (local?.deadline && new Date(local.deadline) < new Date()) {
+      setError(`Deze quiz is verlopen op ${new Date(local.deadline).toLocaleDateString("nl-NL")} 📅`);
       return;
     }
     setError("");
-    onJoinQuiz(code.trim().toUpperCase());
+    const result = await onJoinQuiz(upper);
+    if (result === "not_found") setError("Quiz niet gevonden 😕");
   };
 
   const recentProgress = progress.slice(-5).reverse();
