@@ -5590,7 +5590,17 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
               <div>
                 <div style={{ fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>Tip om het te onthouden</div>
                 <div style={{ fontSize: 13, color: "#90c0a0", lineHeight: 1.5 }}>
-                  Herhaal het goede antwoord hardop: <em style={{ color: "#b0d8b8" }}>"{question.options[question.answer]}"</em>. Koppel het aan een voorbeeld uit het echte leven.
+                  {(() => {
+                    const s = gameState.quiz.subject;
+                    const antwoord = <em style={{ color: "#b0d8b8" }}>"{question.options[question.answer]}"</em>;
+                    if (s === "rekenen" || s === "wiskunde")
+                      return <>Schrijf de som nog een keer op en los hem stap voor stap op. Het goede antwoord is {antwoord}.</>;
+                    if (s === "taal" || s === "nederlands")
+                      return <>Maak zelf een zin met het goede antwoord {antwoord} — zo onthoudt je het beter.</>;
+                    if (s === "engels" || s === "duits" || s === "frans")
+                      return <>Zeg {antwoord} drie keer hardop en schrijf het op. Taal leer je door herhaling!</>;
+                    return <>Herhaal het goede antwoord hardop: {antwoord}. Koppel het aan iets wat je al weet.</>;
+                  })()}
                 </div>
               </div>
             </div>
