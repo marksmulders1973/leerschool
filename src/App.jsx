@@ -5651,12 +5651,11 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
 
 // ─── Breakout Mini-Game ──────────────────────────────────────────
 function BreakoutGame({ onClose }) {
-  const canvasRef = React.useRef(null);
-  const gameRef = React.useRef(null);
-  const [gameOver, setGameOver] = React.useState(null); // null = playing, true = won, false = lost
-  const [started, setStarted] = React.useState(false);
+  const canvasRef = useRef(null);
+  const [gameOver, setGameOver] = useState(null); // null = playing, true = won, false = lost
+  const [started, setStarted] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!started) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
