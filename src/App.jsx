@@ -5649,6 +5649,212 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   );
 }
 
+// ─── Breakout Mini-Game ──────────────────────────────────────────
+function BreakoutGame({ onClose }) {
+  const canvasRef = React.useRef(null);
+  const gameRef = React.useRef(null);
+  const [gameOver, setGameOver] = React.useState(null); // null = playing, true = won, false = lost
+  const [started, setStarted] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!started) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    // Paddle
+    const paddle = { w: W * 0.22, h: 10, x: W / 2, y: H - 28, speed: W * 0.012 };
+    // Ball
+    const ball = { r: 7, x: W / 2, y: H - 60, dx: W * 0.004, dy: -(H * 0.007) };
+    // Bricks
+    const COLS = 6, ROWS = 4;
+    const brickW = (W - 40) / COLS;
+    const brickH = 18;
+    const colors = ["#ff6b6b","#ffa94d","#ffe066","#69db7c","#4dabf7","#cc5de8"];
+    let bricks = [];
+    for (let r = 0; r < ROWS; r++)
+      for (let c = 0; c < COLS; c++)
+        bricks.push({ x: 20 + c * brickW, y: 40 + r * (brickH + 6), w: brickW - 4, h: brickH, alive: true, color: colors[r] });
+
+    let keys = {};
+    let touchX = null;
+    let running = true;
+
+    const onKeyDown = e => { keys[e.key] = true; };
+    const onKeyUp = e => { keys[e.key] = false; };
+    const onTouchStart = e => { touchX = e.touches[0].clientX; };
+    const onTouchMove = e => {
+      e.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const tx = e.touches[0].clientX - rect.left;
+      paddle.x = Math.max(paddle.w / 2, Math.min(W - paddle.w / 2, tx));
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keyup", onKeyUp);
+    canvas.addEventListener("touchstart", onTouchStart, { passive: true });
+    canvas.addEventListener("touchmove", onTouchMove, { passive: false });
+
+    function drawRoundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+      ctx.lineTo(x + w, y + h - r);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      ctx.lineTo(x + r, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+    }
+
+    let raf;
+    function loop() {
+      if (!running) return;
+
+      // Move paddle via keyboard
+      if (keys["ArrowLeft"] || keys["a"]) paddle.x = Math.max(paddle.w / 2, paddle.x - paddle.speed);
+      if (keys["ArrowRight"] || keys["d"]) paddle.x = Math.min(W - paddle.w / 2, paddle.x + paddle.speed);
+
+      // Move ball
+      ball.x += ball.dx;
+      ball.y += ball.dy;
+
+      // Wall bounce
+      if (ball.x - ball.r < 0) { ball.x = ball.r; ball.dx = Math.abs(ball.dx); }
+      if (ball.x + ball.r > W) { ball.x = W - ball.r; ball.dx = -Math.abs(ball.dx); }
+      if (ball.y - ball.r < 0) { ball.y = ball.r; ball.dy = Math.abs(ball.dy); }
+
+      // Paddle collision
+      if (ball.y + ball.r >= paddle.y && ball.y + ball.r <= paddle.y + paddle.h &&
+          ball.x >= paddle.x - paddle.w / 2 && ball.x <= paddle.x + paddle.w / 2) {
+        ball.dy = -Math.abs(ball.dy);
+        const offset = (ball.x - paddle.x) / (paddle.w / 2);
+        ball.dx = offset * W * 0.006;
+        ball.y = paddle.y - ball.r;
+      }
+
+      // Brick collision
+      let anyAlive = false;
+      for (const b of bricks) {
+        if (!b.alive) continue;
+        anyAlive = true;
+        if (ball.x + ball.r > b.x && ball.x - ball.r < b.x + b.w &&
+            ball.y + ball.r > b.y && ball.y - ball.r < b.y + b.h) {
+          b.alive = false;
+          const fromLeft = ball.x < b.x + b.w / 2;
+          const fromTop = ball.y < b.y + b.h / 2;
+          const overlapX = fromLeft ? (ball.x + ball.r - b.x) : (b.x + b.w - (ball.x - ball.r));
+          const overlapY = fromTop ? (ball.y + ball.r - b.y) : (b.y + b.h - (ball.y - ball.r));
+          if (overlapX < overlapY) ball.dx = fromLeft ? -Math.abs(ball.dx) : Math.abs(ball.dx);
+          else ball.dy = fromTop ? -Math.abs(ball.dy) : Math.abs(ball.dy);
+        }
+      }
+
+      // Win check
+      if (!anyAlive) { running = false; setGameOver(true); return; }
+
+      // Fall off bottom
+      if (ball.y - ball.r > H) { running = false; setGameOver(false); return; }
+
+      // Draw
+      ctx.fillStyle = "#0d1b2e";
+      ctx.fillRect(0, 0, W, H);
+
+      // Bricks
+      for (const b of bricks) {
+        if (!b.alive) continue;
+        ctx.fillStyle = b.color;
+        drawRoundRect(ctx, b.x, b.y, b.w, b.h, 4);
+        ctx.fill();
+        ctx.fillStyle = "rgba(255,255,255,0.2)";
+        drawRoundRect(ctx, b.x, b.y, b.w, 5, 4);
+        ctx.fill();
+      }
+
+      // Paddle
+      const grad = ctx.createLinearGradient(paddle.x - paddle.w/2, 0, paddle.x + paddle.w/2, 0);
+      grad.addColorStop(0, "#00c853");
+      grad.addColorStop(1, "#69f0ae");
+      ctx.fillStyle = grad;
+      drawRoundRect(ctx, paddle.x - paddle.w/2, paddle.y, paddle.w, paddle.h, 5);
+      ctx.fill();
+
+      // Ball
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
+      ctx.fillStyle = "#fff";
+      ctx.fill();
+
+      raf = requestAnimationFrame(loop);
+    }
+
+    raf = requestAnimationFrame(loop);
+
+    return () => {
+      running = false;
+      cancelAnimationFrame(raf);
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keyup", onKeyUp);
+      canvas.removeEventListener("touchstart", onTouchStart);
+      canvas.removeEventListener("touchmove", onTouchMove);
+    };
+  }, [started]);
+
+  const canvasSize = Math.min(340, window.innerWidth - 32);
+
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 9999, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 16 }}>
+      <div style={{ background: "#0d1b2e", borderRadius: 20, padding: 20, width: canvasSize + 8, boxShadow: "0 8px 40px rgba(0,200,83,0.3)" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+          <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69f0ae", fontWeight: 700 }}>🎮 Breakout!</span>
+          <button onClick={onClose} style={{ background: "none", border: "none", color: "#8899aa", fontSize: 20, cursor: "pointer" }}>✕</button>
+        </div>
+
+        {!started ? (
+          <div style={{ textAlign: "center", padding: "24px 0" }}>
+            <div style={{ fontSize: 52, marginBottom: 12 }}>🏆</div>
+            <p style={{ color: "#e0e6f0", fontFamily: "'Fredoka', sans-serif", fontSize: 16, marginBottom: 8 }}>Jij hebt het verdiend!</p>
+            <p style={{ color: "#8899aa", fontSize: 13, marginBottom: 20 }}>Breek alle blokken met de bal.<br/>Stuur de bal met je muisbeweging of pijltjestoetsen.</p>
+            <button onClick={() => setStarted(true)} style={{ padding: "14px 32px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, cursor: "pointer" }}>
+              🚀 Spelen!
+            </button>
+          </div>
+        ) : gameOver === true ? (
+          <div style={{ textAlign: "center", padding: "24px 0" }}>
+            <div style={{ fontSize: 56, marginBottom: 8 }}>🎊</div>
+            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#69f0ae", fontWeight: 700, marginBottom: 8 }}>Geweldig gewonnen!</p>
+            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>Alle blokken gebroken — jij bent een kampioen!</p>
+            <button onClick={onClose} style={{ padding: "14px 28px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, cursor: "pointer" }}>
+              🏠 Terug naar resultaten
+            </button>
+          </div>
+        ) : gameOver === false ? (
+          <div style={{ textAlign: "center", padding: "24px 0" }}>
+            <div style={{ fontSize: 48, marginBottom: 8 }}>😅</div>
+            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#ffb74d", fontWeight: 700, marginBottom: 8 }}>Helaas!</p>
+            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>De bal viel erdoorheen. Probeer het nog een keer!</p>
+            <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
+              <button onClick={() => { setGameOver(null); setStarted(false); }} style={{ padding: "13px 20px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                🔄 Opnieuw
+              </button>
+              <button onClick={onClose} style={{ padding: "13px 20px", background: "#1e2d45", border: "none", borderRadius: 14, color: "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                ✕ Sluiten
+              </button>
+            </div>
+          </div>
+        ) : (
+          <canvas ref={canvasRef} width={canvasSize} height={canvasSize} style={{ borderRadius: 12, display: "block", touchAction: "none" }} />
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ─── Results Page ────────────────────────────────────────────────
 function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeaderboard }) {
   const latest = results[results.length - 1];
@@ -5657,6 +5863,7 @@ function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeade
   const grade = latest.percentage >= 90 ? "🏆 Fantastisch!" : latest.percentage >= 70 ? "🌟 Goed gedaan!" : latest.percentage >= 50 ? "💪 Ga zo door!" : "📚 Blijven oefenen!";
   const emoji = latest.percentage >= 90 ? "🎉" : latest.percentage >= 70 ? "😊" : latest.percentage >= 50 ? "🙂" : "💪";
   const [sent, setSent] = useState(false);
+  const [showGame, setShowGame] = useState(false);
 
   const subjLabel = SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
@@ -5676,11 +5883,12 @@ function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeade
 
   return (
     <div style={styles.page}>
+      {showGame && <BreakoutGame onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>
-            {["🎉","⭐","🌟","✨","🎊","💫"].map((e, i) => (
-              <span key={i} style={{ position: "absolute", fontSize: 20, left: `${15+i*14}%`, top: -20, animation: `confetti 1.5s ease ${i*0.15}s both` }}>{e}</span>
+            {["🎉","⭐","🌟","✨","🎊","💫","🌈","🔥","💥","⚡"].map((e, i) => (
+              <span key={i} style={{ position: "absolute", fontSize: 18, left: `${8+i*9}%`, top: -20, animation: `confetti ${1.2+i*0.1}s ease ${i*0.12}s both` }}>{e}</span>
             ))}
           </div>
         )}
@@ -5744,6 +5952,27 @@ function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeade
                 ✉️ E-mail
               </button>
             </div>
+          </div>
+        )}
+
+        {latest.percentage >= 80 && (
+          <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
+            <button
+              onClick={() => setShowGame(true)}
+              style={{
+                width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
+                background: "linear-gradient(135deg, #7c3aed, #a855f7)",
+                color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 18,
+                fontWeight: 700, cursor: "pointer",
+                boxShadow: "0 4px 20px rgba(168,85,247,0.4)",
+                animation: "pulse 2s infinite",
+              }}
+            >
+              🎮 Verdien je beloning!
+            </button>
+            <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
+              Jij hebt 80% of meer — speel een mini-spelletje als beloning!
+            </p>
           </div>
         )}
 
