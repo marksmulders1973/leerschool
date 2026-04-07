@@ -5664,6 +5664,7 @@ function BreakoutGame({ onClose }) {
   const canvasRef = useRef(null);
   const [gameOver, setGameOver] = useState(null); // null = playing, true = won, false = lost
   const [started, setStarted] = useState(false);
+  const [attempts, setAttempts] = useState(0);
 
   useEffect(() => {
     if (!started) return;
@@ -5768,7 +5769,7 @@ function BreakoutGame({ onClose }) {
       if (!anyAlive) { running = false; setGameOver(true); return; }
 
       // Fall off bottom
-      if (ball.y - ball.r > H) { running = false; setGameOver(false); return; }
+      if (ball.y - ball.r > H) { running = false; setAttempts(a => a + 1); setGameOver(false); return; }
 
       // Draw
       ctx.fillStyle = "#0d1b2e";
@@ -5844,15 +5845,21 @@ function BreakoutGame({ onClose }) {
           </div>
         ) : gameOver === false ? (
           <div style={{ textAlign: "center", padding: "24px 0" }}>
-            <div style={{ fontSize: 48, marginBottom: 8 }}>😅</div>
-            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#ffb74d", fontWeight: 700, marginBottom: 8 }}>Helaas!</p>
-            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>De bal viel erdoorheen. Probeer het nog een keer!</p>
+            <div style={{ fontSize: 48, marginBottom: 8 }}>{attempts >= 2 ? "📚" : "😅"}</div>
+            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#ffb74d", fontWeight: 700, marginBottom: 8 }}>
+              {attempts >= 2 ? "Tijd om verder te leren!" : "Helaas!"}
+            </p>
+            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>
+              {attempts >= 2 ? "Je hebt twee keer gespeeld — goed geprobeerd! Ga verder met oefenen." : "De bal viel erdoorheen. Nog één kans!"}
+            </p>
             <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
-              <button onClick={() => { setGameOver(null); setStarted(false); }} style={{ padding: "13px 20px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
-                🔄 Opnieuw
-              </button>
-              <button onClick={onClose} style={{ padding: "13px 20px", background: "#1e2d45", border: "none", borderRadius: 14, color: "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
-                ✕ Sluiten
+              {attempts < 2 && (
+                <button onClick={() => { setGameOver(null); setStarted(false); }} style={{ padding: "13px 20px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                  🔄 Nog één kans!
+                </button>
+              )}
+              <button onClick={onClose} style={{ padding: "13px 20px", background: attempts >= 2 ? "linear-gradient(135deg, #00c853, #69f0ae)" : "#1e2d45", border: "none", borderRadius: 14, color: attempts >= 2 ? "#0d1b2e" : "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                {attempts >= 2 ? "🏠 Terug naar resultaten" : "✕ Sluiten"}
               </button>
             </div>
           </div>
