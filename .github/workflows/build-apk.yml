@@ -16,82 +16,151 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Bubblewrap
-        run: npm install -g @bubblewrap/cli
-
-      - name: Create Bubblewrap config
+      - name: Create TWA Android project
         run: |
-          mkdir -p ~/.bubblewrap
-          cat > ~/.bubblewrap/config.json << EOF
-          {
-            "jdkPath": "$JAVA_HOME",
-            "androidSdkPath": "$ANDROID_HOME"
+          mkdir -p twa/app/src/main/java/online/studiebol/app
+          mkdir -p twa/app/src/main/res/values
+          mkdir -p twa/app/src/main/res/mipmap-xxxhdpi
+          mkdir -p twa/gradle/wrapper
+
+          # Download icon
+          curl -s "https://studiebol.online/icons/icon-512.png" -o twa/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+
+          # settings.gradle
+          cat > twa/settings.gradle << 'EOF'
+          rootProject.name = "Studiebol"
+          include ':app'
+          EOF
+
+          # root build.gradle
+          cat > twa/build.gradle << 'EOF'
+          buildscript {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
+              dependencies {
+                  classpath 'com.android.tools.build:gradle:8.2.2'
+              }
+          }
+          allprojects {
+              repositories {
+                  google()
+                  mavenCentral()
+              }
           }
           EOF
 
-      - name: Create twa-manifest.json directly
-        run: |
-          mkdir twa-project && cd twa-project
-          cat > twa-manifest.json << 'EOF'
-          {
-            "packageId": "online.studiebol.app",
-            "host": "studiebol.online",
-            "name": "Studiebol",
-            "launcherName": "Studiebol",
-            "display": "standalone",
-            "themeColor": "#00c853",
-            "navigationColor": "#0a1220",
-            "navigationColorDark": "#0a1220",
-            "navigationDividerColor": "#0a1220",
-            "navigationDividerColorDark": "#0a1220",
-            "backgroundColor": "#0a1220",
-            "enableNotifications": false,
-            "startUrl": "/",
-            "iconUrl": "https://studiebol.online/icons/icon-512.png",
-            "maskableIconUrl": "https://studiebol.online/icons/icon-512.png",
-            "monochromeIconUrl": "https://studiebol.online/icons/icon-512.png",
-            "splashScreenFadeOutDuration": 300,
-            "signingKey": {
-              "path": "./keystore.ks",
-              "alias": "studiebol"
-            },
-            "appVersionCode": 1,
-            "appVersionName": "1.0.0",
-            "shortcuts": [],
-            "generatorApp": "bubblewrap-cli",
-            "webManifestUrl": "https://studiebol.online/manifest.json",
-            "sdkVersion": 3,
-            "minSdkVersion": 21,
-            "targetSdkVersion": 34,
-            "orientation": "portrait",
-            "isChromeOSOnly": false,
-            "isMetaQuest": false,
-            "fullScopeUrl": "https://studiebol.online/",
-            "fingerprints": [],
-            "additionalTrustedOrigins": [],
-            "retainedBundles": [],
-            "serviceAccountJsonFile": ""
+          # app/build.gradle
+          cat > twa/app/build.gradle << 'EOF'
+          plugins {
+              id 'com.android.application'
+          }
+          android {
+              compileSdk 34
+              namespace "online.studiebol.app"
+              defaultConfig {
+                  applicationId "online.studiebol.app"
+                  minSdk 21
+                  targetSdk 34
+                  versionCode 1
+                  versionName "1.0.0"
+              }
+              signingConfigs {
+                  release {
+                      storeFile file("../keystore.ks")
+                      storePassword "studiebol123"
+                      keyAlias "studiebol"
+                      keyPassword "studiebol123"
+                  }
+              }
+              buildTypes {
+                  release {
+                      minifyEnabled false
+                      signingConfig signingConfigs.release
+                  }
+              }
+          }
+          dependencies {
+              implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
           }
           EOF
 
-      - name: Bubblewrap update (init project from manifest)
-        run: |
-          cd twa-project
-          bubblewrap update --skipPwaValidation
+          # AndroidManifest.xml
+          cat > twa/app/src/main/AndroidManifest.xml << 'EOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+              <application
+                  android:label="Studiebol"
+                  android:icon="@mipmap/ic_launcher"
+                  android:theme="@style/Theme.App">
+                  <activity
+                      android:name="com.google.androidbrowserhelper.trusted.LauncherActivity"
+                      android:exported="true">
+                      <meta-data
+                          android:name="android.support.customtabs.trusted.DEFAULT_URL"
+                          android:value="https://studiebol.online" />
+                      <meta-data
+                          android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"
+                          android:resource="@color/colorPrimary" />
+                      <meta-data
+                          android:name="android.support.customtabs.trusted.SPLASH_SCREEN_BACKGROUND_COLOR"
+                          android:resource="@color/backgroundColor" />
+                      <intent-filter android:autoVerify="true">
+                          <action android:name="android.intent.action.MAIN" />
+                          <category android:name="android.intent.category.LAUNCHER" />
+                      </intent-filter>
+                      <intent-filter android:autoVerify="true">
+                          <action android:name="android.intent.action.VIEW"/>
+                          <category android:name="android.intent.category.DEFAULT" />
+                          <category android:name="android.intent.category.BROWSABLE"/>
+                          <data android:scheme="https" android:host="studiebol.online"/>
+                      </intent-filter>
+                  </activity>
+              </application>
+          </manifest>
+          EOF
+
+          # colors.xml
+          cat > twa/app/src/main/res/values/colors.xml << 'EOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <resources>
+              <color name="colorPrimary">#00c853</color>
+              <color name="backgroundColor">#0a1220</color>
+          </resources>
+          EOF
+
+          # styles.xml
+          cat > twa/app/src/main/res/values/styles.xml << 'EOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <resources>
+              <style name="Theme.App" parent="android:Theme.NoTitleBar.Fullscreen">
+                  <item name="android:windowBackground">@color/backgroundColor</item>
+              </style>
+          </resources>
+          EOF
+
+          # gradle wrapper properties
+          cat > twa/gradle/wrapper/gradle-wrapper.properties << 'EOF'
+          distributionBase=GRADLE_USER_HOME
+          distributionPath=wrapper/dists
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.2-bin.zip
+          zipStoreBase=GRADLE_USER_HOME
+          zipStorePath=wrapper/dists
+          EOF
+
+          # gradle wrapper jar (download)
+          curl -sL "https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar" \
+            -o twa/gradle/wrapper/gradle-wrapper.jar 2>/dev/null || true
+
+          # gradlew script
+          curl -sL "https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradlew" \
+            -o twa/gradlew && chmod +x twa/gradlew
 
       - name: Generate keystore
         run: |
-          cd twa-project
           keytool -genkey -v \
-            -keystore keystore.ks \
+            -keystore twa/keystore.ks \
             -alias studiebol \
             -keyalg RSA -keysize 2048 -validity 10000 \
             -storepass studiebol123 -keypass studiebol123 \
@@ -99,19 +168,12 @@ jobs:
 
       - name: Build APK
         run: |
-          cd twa-project
-          bubblewrap build \
-            --skipPwaValidation \
-            --signingKeyPath ./keystore.ks \
-            --signingKeyAlias studiebol \
-            --signingKeyStorePassword studiebol123 \
-            --signingKeyPassword studiebol123
+          cd twa
+          ./gradlew assembleRelease
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: studiebol-apk
-          path: |
-            twa-project/app-release-signed.apk
-            twa-project/app-release-bundle.aab
+          path: twa/app/build/outputs/apk/release/app-release.apk
           retention-days: 30
