@@ -153,6 +153,13 @@ jobs:
           curl -sL "https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradle/wrapper/gradle-wrapper.jar" \
             -o twa/gradle/wrapper/gradle-wrapper.jar 2>/dev/null || true
 
+          # gradle.properties
+          cat > twa/gradle.properties << 'EOF'
+          android.useAndroidX=true
+          android.enableJetifier=true
+          org.gradle.jvmargs=-Xmx2048m
+          EOF
+
           # gradlew script
           curl -sL "https://raw.githubusercontent.com/gradle/gradle/v8.2.0/gradlew" \
             -o twa/gradlew && chmod +x twa/gradlew
