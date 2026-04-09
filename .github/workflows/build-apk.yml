@@ -15,9 +15,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Bubblewrap
-        run: npm install -g @bubblewrap/cli
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -27,60 +24,38 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Create twa-manifest.json
-        run: |
-          cat > twa-manifest.json << 'EOF'
-          {
-            "packageId": "online.studiebol.app",
-            "host": "studiebol.online",
-            "name": "Studiebol",
-            "launcherName": "Studiebol",
-            "display": "standalone",
-            "themeColor": "#00c853",
-            "navigationColor": "#0a1220",
-            "backgroundColor": "#0a1220",
-            "startUrl": "/",
-            "iconUrl": "https://studiebol.online/icons/icon-512.png",
-            "maskableIconUrl": "https://studiebol.online/icons/icon-512.png",
-            "appVersionCode": 1,
-            "appVersionName": "1.0.0",
-            "signingKey": {
-              "path": "keystore.ks",
-              "alias": "studiebol"
-            },
-            "minSdkVersion": 21,
-            "targetSdkVersion": 34,
-            "orientation": "portrait",
-            "sdkVersion": 3
-          }
-          EOF
+      - name: Install Bubblewrap
+        run: npm install -g @bubblewrap/cli
 
-      - name: Generate keystore
-        run: |
-          keytool -genkey -v \
-            -keystore keystore.ks \
-            -alias studiebol \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -storepass studiebol123 \
-            -keypass studiebol123 \
-            -dname "CN=Studiebol, OU=Smulsoft, O=Smulsoft, L=NL, S=NL, C=NL"
-
-      - name: Configure Bubblewrap (skip interactive prompts)
+      - name: Configure Bubblewrap paths
         run: |
           mkdir -p ~/.bubblewrap
           echo "{\"jdkPath\": \"$JAVA_HOME\", \"androidSdkPath\": \"$ANDROID_HOME\"}" > ~/.bubblewrap/config.json
-          cat ~/.bubblewrap/config.json
 
-      - name: Build APK with Bubblewrap
-        env:
-          JAVA_HOME: ${{ env.JAVA_HOME }}
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
+      - name: Init Bubblewrap project
         run: |
-          bubblewrap build \
-            --skipPwaValidation \
-            --manifest twa-manifest.json \
+          mkdir twa-project && cd twa-project
+          # Beantwoord alle prompts automatisch met defaults (en 'n' voor JDK install)
+          printf 'n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' | \
+            bubblewrap init --manifest https://studiebol.online/manifest.json || true
+
+      - name: Check wat er aangemaakt is
+        run: ls -la twa-project/ && cat twa-project/twa-manifest.json 2>/dev/null || echo "geen manifest"
+
+      - name: Generate keystore
+        run: |
+          cd twa-project
+          keytool -genkey -v \
+            -keystore keystore.ks \
+            -alias studiebol \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass studiebol123 -keypass studiebol123 \
+            -dname "CN=Studiebol, OU=Smulsoft, O=Smulsoft, L=NL, S=NL, C=NL"
+
+      - name: Build APK
+        run: |
+          cd twa-project
+          printf 'y\n' | bubblewrap build \
             --signingKeyPath keystore.ks \
             --signingKeyAlias studiebol \
             --signingKeyStorePassword studiebol123 \
@@ -91,6 +66,6 @@ jobs:
         with:
           name: studiebol-apk
           path: |
-            app-release-signed.apk
-            app-release-bundle.aab
+            twa-project/app-release-signed.apk
+            twa-project/app-release-bundle.aab
           retention-days: 30
