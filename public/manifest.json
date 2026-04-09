@@ -2,6 +2,7 @@
   "name": "Studiebol",
   "short_name": "Studiebol",
   "description": "Oefen en speel quizzen met je klas — voor groep 1 t/m klas 4",
+  "id": "/",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
