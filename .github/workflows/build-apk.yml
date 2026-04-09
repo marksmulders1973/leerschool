@@ -67,7 +67,16 @@ jobs:
             -keypass studiebol123 \
             -dname "CN=Studiebol, OU=Smulsoft, O=Smulsoft, L=NL, S=NL, C=NL"
 
+      - name: Configure Bubblewrap (skip interactive prompts)
+        run: |
+          mkdir -p ~/.bubblewrap
+          echo "{\"jdkPath\": \"$JAVA_HOME\", \"androidSdkPath\": \"$ANDROID_HOME\"}" > ~/.bubblewrap/config.json
+          cat ~/.bubblewrap/config.json
+
       - name: Build APK with Bubblewrap
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME }}
+          ANDROID_HOME: ${{ env.ANDROID_HOME }}
         run: |
           bubblewrap build \
             --skipPwaValidation \
