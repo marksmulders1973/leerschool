@@ -1,6 +1,11 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import supabase from "./supabase.js";
 
+// ─── Analytics helper ────────────────────────────────────────────
+function track(event, params = {}) {
+  try { window.gtag?.("event", event, params); } catch (e) {}
+}
+
 // ─── Sound Engine ────────────────────────────────────────────────
 const SoundEngine = {
   ctx: null,
@@ -2893,6 +2898,7 @@ export default function App() {
     }
     const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
     localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
+    track("quiz_started", { subject: quiz.subject, level: quiz.level, mode, questions_count: questions.length, has_topic: !!(quiz.topic), has_textbook: !!(quiz.textbook?.bookName) });
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
   };
@@ -2912,6 +2918,7 @@ export default function App() {
       const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt }];
       return updated.sort((a, b) => b.percentage - a.percentage || b.total - a.total || b.score - a.score).slice(0, 50);
     });
+    track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: Math.round((Date.now() - finalState.startedAt) / 1000) });
     setGameState(null);
     setCurrentQuiz(null);
     setPage("results");
@@ -2932,6 +2939,7 @@ export default function App() {
         <HomePage
           onSelectRole={(r) => {
             setRole(r);
+            track("role_selected", { role: r });
             if (currentQuiz) {
               // Quiz al opgehaald via Supabase-link → direct starten
               startGame(currentQuiz, "self");
@@ -3103,8 +3111,8 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
-          onQuit={() => { setGameState(null); setPage(role === "teacher" ? "teacher-home" : "student-home"); }}
-          onHome={() => { setGameState(null); setPage("home"); }}
+          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); setGameState(null); setPage(role === "teacher" ? "teacher-home" : "student-home"); }}
+          onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setPage("home"); }}
         />
       )}
       {page === "results" && (
@@ -3119,6 +3127,7 @@ export default function App() {
           }}
           onHome={() => setPage("home")}
           onRetry={() => {
+            track("quiz_retried", { subject: currentQuiz?.subject, level: currentQuiz?.level });
             if (currentQuiz) startGame(currentQuiz, "self");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
           }}
@@ -5387,6 +5396,7 @@ function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
     }
     setShowExplanation(true);
 
+    track("question_answered", { subject: gameState.quiz.subject, level: gameState.quiz.level, question_nr: gameState.currentQ + 1, is_correct: isCorrect, timed_out: idx === -1 });
     const newState = {
       ...gameState,
       score: gameState.score + (isCorrect ? 1 : 0),
