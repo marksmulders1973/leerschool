@@ -2787,6 +2787,7 @@ export default function App() {
   const [pendingCode, setPendingCode] = useState("");
   const abortControllerRef = useRef(null);
   const [authUser, setAuthUser] = useState(null);
+  const [streak, setStreak] = useState(0);
 
   // Auth: laad sessie + luister naar wijzigingen
   useEffect(() => {
@@ -2800,6 +2801,7 @@ export default function App() {
         supabase.from("profiles").select("*").eq("id", u.id).single().then(({ data }) => {
           if (data?.display_name) setUserName(data.display_name);
           if (data?.level) setUserLevel(data.level);
+          if (data?.streak_days) setStreak(data.streak_days);
           if (data?.role) {
             setRole(data.role);
             setPage(data.role === "teacher" ? "teacher-home" : "student-home");
@@ -2833,6 +2835,7 @@ export default function App() {
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
+    try { const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}'); const today = new Date().toISOString().split("T")[0]; const yesterday = new Date(Date.now()-86400000).toISOString().split("T")[0]; if (s.last === today || s.last === yesterday) setStreak(s.streak); } catch {}
     // URL parameter ?code=XXXXX
     const urlCode = new URLSearchParams(window.location.search).get("code");
     if (urlCode) setPendingCode(urlCode.toUpperCase());
@@ -2958,8 +2961,26 @@ export default function App() {
       return updated.sort((a, b) => b.percentage - a.percentage || b.total - a.total || b.score - a.score).slice(0, 50);
     });
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: Math.round((Date.now() - finalState.startedAt) / 1000) });
+    // Globaal scorebord (iedereen, ook gasten)
+    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).catch(() => {});
+
+    // Streak + voortgang opslaan
+    const today = new Date().toISOString().split("T")[0];
+    const yesterday = new Date(Date.now() - 86400000).toISOString().split("T")[0];
     if (authUser) {
       supabase.from("progress").insert({ user_id: authUser.id, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).catch(() => {});
+      supabase.from("profiles").select("streak_days, last_played_date").eq("id", authUser.id).single().then(({ data: pd }) => {
+        const newStreak = pd?.last_played_date === today ? (pd.streak_days || 1) : pd?.last_played_date === yesterday ? (pd.streak_days || 0) + 1 : 1;
+        setStreak(newStreak);
+        supabase.from("profiles").update({ streak_days: newStreak, last_played_date: today }).eq("id", authUser.id).catch(() => {});
+      }).catch(() => {});
+    } else {
+      try {
+        const saved = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}');
+        const newStreak = saved.last === today ? saved.streak : saved.last === yesterday ? saved.streak + 1 : 1;
+        setStreak(newStreak);
+        localStorage.setItem("ls_streak", JSON.stringify({ streak: newStreak, last: today }));
+      } catch {}
     }
     setGameState(null);
     setCurrentQuiz(null);
@@ -3109,6 +3130,7 @@ export default function App() {
           onHome={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
+          streak={streak}
           pendingCode={pendingCode}
         />
       )}
@@ -4490,7 +4512,7 @@ function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
 }
 
 // ─── Student Home ────────────────────────────────────────────────
-function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode }) {
+function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak }) {
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -4523,6 +4545,15 @@ function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onB
       <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {streak >= 2 && (
+          <div style={{ display: "flex", alignItems: "center", gap: 10, background: "linear-gradient(135deg, rgba(255,111,0,0.15), rgba(255,160,0,0.1))", border: "1px solid rgba(255,111,0,0.3)", borderRadius: 14, padding: "12px 16px", marginBottom: 4 }}>
+            <span style={{ fontSize: 28 }}>🔥</span>
+            <div>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ff9800" }}>{streak} dagen op rij!</div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>Blijf zo doorgaan, je bent op dreef!</div>
+            </div>
+          </div>
+        )}
         <div style={styles.joinSection}>
           <button
             onClick={() => { setShowCode(v => !v); setError(""); setCode(""); }}
@@ -6275,15 +6306,32 @@ function StudentProgressView({ progress, userName, onBack, onHome }) {
 // ─── Leaderboard ─────────────────────────────────────────────────
 function Leaderboard({ data, currentUser, onBack, onHome }) {
   const medals = ["🥇", "🥈", "🥉"];
+  const [globalData, setGlobalData] = useState(null);
+
+  useEffect(() => {
+    supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, completed_at").order("percentage", { ascending: false }).order("score", { ascending: false }).limit(50)
+      .then(({ data: rows }) => { if (rows?.length) setGlobalData(rows); })
+      .catch(() => {});
+  }, []);
+
+  const entries = (globalData || data).map(e => ({
+    player: e.player_name || e.player,
+    subject: e.subject,
+    level: e.level,
+    score: e.score,
+    total: e.total,
+    percentage: e.percentage,
+  }));
+
   return (
     <div style={styles.page}>
-      <Header title="Scorebord 🏆" subtitle="Top scores" onBack={onBack} onHome={onHome} />
+      <Header title="Scorebord 🏆" subtitle={globalData ? "🌍 Globaal · Top 50" : "Top scores"} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
-        {data.length === 0 ? (
+        {entries.length === 0 ? (
           <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Speel een quiz om op het scorebord te komen.</p></div>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-            {data.slice(0, 20).map((entry, i) => {
+            {entries.slice(0, 50).map((entry, i) => {
               const subj = SUBJECTS.find((s) => s.id === entry.subject);
               const isMe = entry.player === currentUser;
               return (
