@@ -27,6 +27,7 @@ jobs:
             -o /tmp/icon-512.png
 
           # Resize naar juiste Android mipmap groottes via Python
+          pip install Pillow -q
           python3 << 'PYEOF'
           from PIL import Image
           import os
