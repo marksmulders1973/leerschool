@@ -20,11 +20,34 @@ jobs:
         run: |
           mkdir -p twa/app/src/main/java/online/studiebol/app
           mkdir -p twa/app/src/main/res/values
-          mkdir -p twa/app/src/main/res/mipmap-xxxhdpi
           mkdir -p twa/gradle/wrapper
 
-          # Download icon
-          curl -s "https://studiebol.online/icons/icon-512.png" -o twa/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+          # Download icon van GitHub (betrouwbaarder dan live domein)
+          curl -sL "https://raw.githubusercontent.com/marksmulders1973/leerschool/main/public/icons/icon-512.png" \
+            -o /tmp/icon-512.png
+
+          # Resize naar juiste Android mipmap groottes via Python
+          python3 << 'PYEOF'
+          from PIL import Image
+          import os
+
+          sizes = {
+            "mipmap-mdpi": 48,
+            "mipmap-hdpi": 72,
+            "mipmap-xhdpi": 96,
+            "mipmap-xxhdpi": 144,
+            "mipmap-xxxhdpi": 192,
+          }
+
+          src = Image.open("/tmp/icon-512.png").convert("RGBA")
+          base = "twa/app/src/main/res"
+
+          for folder, size in sizes.items():
+            os.makedirs(f"{base}/{folder}", exist_ok=True)
+            img = src.resize((size, size), Image.LANCZOS)
+            img.save(f"{base}/{folder}/ic_launcher.png")
+            print(f"Aangemaakt: {folder}/ic_launcher.png ({size}x{size})")
+          PYEOF
 
           # settings.gradle
           cat > twa/settings.gradle << 'EOF'
