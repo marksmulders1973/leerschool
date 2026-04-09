@@ -10,11 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -24,23 +19,73 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Install Bubblewrap
         run: npm install -g @bubblewrap/cli
 
-      - name: Configure Bubblewrap paths
+      - name: Create Bubblewrap config
         run: |
           mkdir -p ~/.bubblewrap
-          echo "{\"jdkPath\": \"$JAVA_HOME\", \"androidSdkPath\": \"$ANDROID_HOME\"}" > ~/.bubblewrap/config.json
+          cat > ~/.bubblewrap/config.json << EOF
+          {
+            "jdkPath": "$JAVA_HOME",
+            "androidSdkPath": "$ANDROID_HOME"
+          }
+          EOF
 
-      - name: Init Bubblewrap project
+      - name: Create twa-manifest.json directly
         run: |
           mkdir twa-project && cd twa-project
-          # Beantwoord alle prompts automatisch met defaults (en 'n' voor JDK install)
-          printf 'n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n' | \
-            bubblewrap init --manifest https://studiebol.online/manifest.json || true
+          cat > twa-manifest.json << 'EOF'
+          {
+            "packageId": "online.studiebol.app",
+            "host": "studiebol.online",
+            "name": "Studiebol",
+            "launcherName": "Studiebol",
+            "display": "standalone",
+            "themeColor": "#00c853",
+            "navigationColor": "#0a1220",
+            "navigationColorDark": "#0a1220",
+            "navigationDividerColor": "#0a1220",
+            "navigationDividerColorDark": "#0a1220",
+            "backgroundColor": "#0a1220",
+            "enableNotifications": false,
+            "startUrl": "/",
+            "iconUrl": "https://studiebol.online/icons/icon-512.png",
+            "maskableIconUrl": "https://studiebol.online/icons/icon-512.png",
+            "monochromeIconUrl": "https://studiebol.online/icons/icon-512.png",
+            "splashScreenFadeOutDuration": 300,
+            "signingKey": {
+              "path": "./keystore.ks",
+              "alias": "studiebol"
+            },
+            "appVersionCode": 1,
+            "appVersionName": "1.0.0",
+            "shortcuts": [],
+            "generatorApp": "bubblewrap-cli",
+            "webManifestUrl": "https://studiebol.online/manifest.json",
+            "sdkVersion": 3,
+            "minSdkVersion": 21,
+            "targetSdkVersion": 34,
+            "orientation": "portrait",
+            "isChromeOSOnly": false,
+            "isMetaQuest": false,
+            "fullScopeUrl": "https://studiebol.online/",
+            "fingerprints": [],
+            "additionalTrustedOrigins": [],
+            "retainedBundles": [],
+            "serviceAccountJsonFile": ""
+          }
+          EOF
 
-      - name: Check wat er aangemaakt is
-        run: ls -la twa-project/ && cat twa-project/twa-manifest.json 2>/dev/null || echo "geen manifest"
+      - name: Bubblewrap update (init project from manifest)
+        run: |
+          cd twa-project
+          bubblewrap update --skipPwaValidation
 
       - name: Generate keystore
         run: |
@@ -55,8 +100,9 @@ jobs:
       - name: Build APK
         run: |
           cd twa-project
-          printf 'y\n' | bubblewrap build \
-            --signingKeyPath keystore.ks \
+          bubblewrap build \
+            --skipPwaValidation \
+            --signingKeyPath ./keystore.ks \
             --signingKeyAlias studiebol \
             --signingKeyStorePassword studiebol123 \
             --signingKeyPassword studiebol123
