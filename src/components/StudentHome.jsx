@@ -231,4 +231,3 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
     </div>
   );
 }
-}

@@ -749,5 +749,3 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
     </div>
   );
 }
-
-}

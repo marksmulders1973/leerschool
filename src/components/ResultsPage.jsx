@@ -210,4 +210,3 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
     </div>
   );
 }
-}

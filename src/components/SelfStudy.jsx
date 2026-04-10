@@ -206,4 +206,3 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
     </div>
   );
 }
-}

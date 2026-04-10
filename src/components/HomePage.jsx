@@ -417,5 +417,3 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     </div>
   );
 }
-
-}

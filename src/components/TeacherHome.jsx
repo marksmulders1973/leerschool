@@ -103,4 +103,3 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
     </div>
   );
 }
-}

@@ -313,4 +313,3 @@ export function Leaderboard({ data, currentUser, onBack, onHome }) {
     </div>
   );
 }
-}

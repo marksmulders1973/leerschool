@@ -530,4 +530,3 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     </div>
   );
 }
-}
