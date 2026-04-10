@@ -1,4 +1,5 @@
-const CACHE = "studiebol-v1";
+const CACHE_SHELL = "studiebol-shell-v2";
+const CACHE_ASSETS = "studiebol-assets-v2";
 
 const APP_SHELL = [
   "/",
@@ -6,36 +7,75 @@ const APP_SHELL = [
   "/icons/icon.svg",
 ];
 
+// Static asset extensions that get cache-first treatment
+const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|svg|woff2|woff|ttf|ico)(\?.*)?$/;
+
 // Installeren: cache de app shell
 self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting())
+    caches.open(CACHE_SHELL)
+      .then((cache) => cache.addAll(APP_SHELL))
+      .then(() => self.skipWaiting())
   );
 });
 
 // Activeren: verwijder oude caches
 self.addEventListener("activate", (e) => {
+  const CURRENT_CACHES = [CACHE_SHELL, CACHE_ASSETS];
   e.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
+      Promise.all(
+        keys
+          .filter((k) => !CURRENT_CACHES.includes(k))
+          .map((k) => caches.delete(k))
+      )
     ).then(() => self.clients.claim())
   );
 });
 
-// Fetch: netwerk eerst, cache als fallback
+// Fetch strategy:
+// - API calls: always network, no cache
+// - Static assets (js/css/images/fonts): cache-first
+// - HTML navigation: network-first, fall back to cache
 self.addEventListener("fetch", (e) => {
-  // Sla API-calls altijd over (altijd netwerk)
-  if (e.request.url.includes("/api/")) return;
+  const url = e.request.url;
 
+  // Skip non-GET requests
+  if (e.request.method !== "GET") return;
+
+  // API calls: always network only
+  if (url.includes("/api/")) return;
+
+  // Static assets: cache-first
+  if (STATIC_EXTENSIONS.test(url)) {
+    e.respondWith(
+      caches.open(CACHE_ASSETS).then(async (cache) => {
+        const cached = await cache.match(e.request);
+        if (cached) return cached;
+
+        try {
+          const response = await fetch(e.request);
+          if (response.ok) {
+            cache.put(e.request, response.clone());
+          }
+          return response;
+        } catch {
+          return cached || new Response("Offline", { status: 503 });
+        }
+      })
+    );
+    return;
+  }
+
+  // HTML / navigation: network-first, fall back to cache
   e.respondWith(
     fetch(e.request)
-      .then((res) => {
-        // Sla succesvolle responses op in cache
-        if (res.ok && e.request.method === "GET") {
-          const clone = res.clone();
-          caches.open(CACHE).then((cache) => cache.put(e.request, clone));
+      .then((response) => {
+        if (response.ok) {
+          const clone = response.clone();
+          caches.open(CACHE_SHELL).then((cache) => cache.put(e.request, clone));
         }
-        return res;
+        return response;
       })
       .catch(() => caches.match(e.request))
   );
