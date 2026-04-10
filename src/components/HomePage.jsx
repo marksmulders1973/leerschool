@@ -64,8 +64,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     if (!name.trim()) setName(effectiveName);
     setUserName(effectiveName);
     setUserLevel(level);
-    try { localStorage.setItem("ls_user", JSON.stringify({ name: name.trim(), level, role: pendingRole })); } catch {}
-    onSaveProfile?.({ name: name.trim(), level, role: pendingRole });
+    try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole })); } catch {}
+    onSaveProfile?.({ name: effectiveName, level, role: pendingRole });
     onSelectRole(pendingRole);
   };
 

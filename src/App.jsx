@@ -59,6 +59,17 @@ export default function App() {
           } else {
             const googleName = u.user_metadata?.full_name || u.user_metadata?.name || "";
             if (googleName) setUserName(googleName);
+            // Geen Supabase profiel rol — check localStorage (bijv. gebruiker was eerst gast)
+            try {
+              const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+              if (saved.role && saved.name) {
+                setRole(saved.role);
+                if (saved.level) setUserLevel(saved.level);
+                setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
+                // Sla rol ook op in Supabase profiel voor volgende keer
+                supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).catch(() => {});
+              }
+            } catch {}
           }
         }).catch(() => {});
       }
