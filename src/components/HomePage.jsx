@@ -38,6 +38,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     } catch {}
   }, []);
 
+  // Naam automatisch invullen vanuit Google profiel
+  useEffect(() => {
+    if (authUser && !name.trim()) {
+      const googleName = authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split("@")[0] || "";
+      if (googleName) setName(googleName);
+    }
+  }, [authUser]);
+
   const handleRoleClick = (role) => {
     setPendingRole(role);
     setLevel("");
