@@ -2,12 +2,27 @@ import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { LEVELS } from "../constants.js";
 
+const ONBOARDING_STEPS = [
+  { emoji: "🎯", title: "Kies je vak en niveau", desc: "Uit 9 vakken, van groep 1 t/m klas 4" },
+  { emoji: "🤖", title: "AI maakt vragen voor jou", desc: "Elke quiz is anders, ook over jouw schoolboek" },
+  { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
+];
+
 export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [level, setLevel] = useState("");
+  const [onboardingStep, setOnboardingStep] = useState(0);
+  const [showOnboarding, setShowOnboarding] = useState(() => {
+    try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
+  });
+
+  const finishOnboarding = () => {
+    try { localStorage.setItem("ls_onboarded", "1"); } catch {}
+    setShowOnboarding(false);
+  };
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
   const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4], teacher: [] };
@@ -44,6 +59,83 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   return (
     <div style={styles.page}>
+      {showOnboarding && (
+        <div style={{
+          position: "fixed", inset: 0, zIndex: 9999,
+          background: "rgba(0,0,0,0.85)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          padding: 20,
+        }}>
+          <div style={{
+            background: "#0d1b2e",
+            border: "1px solid rgba(0,212,255,0.25)",
+            borderRadius: 24,
+            padding: "36px 28px",
+            maxWidth: 360,
+            width: "100%",
+            textAlign: "center",
+            boxShadow: "0 8px 48px rgba(0,0,0,0.7)",
+          }}>
+            {/* Step dots */}
+            <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 28 }}>
+              {ONBOARDING_STEPS.map((_, i) => (
+                <div key={i} style={{
+                  width: i === onboardingStep ? 24 : 8,
+                  height: 8,
+                  borderRadius: 4,
+                  background: i === onboardingStep ? "#00d4ff" : "rgba(0,212,255,0.25)",
+                  transition: "all 0.3s ease",
+                }} />
+              ))}
+            </div>
+
+            <div style={{ fontSize: 56, marginBottom: 16 }}>{ONBOARDING_STEPS[onboardingStep].emoji}</div>
+            <div style={{
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 22,
+              fontWeight: 700,
+              color: "#00d4ff",
+              marginBottom: 10,
+              lineHeight: 1.2,
+            }}>{ONBOARDING_STEPS[onboardingStep].title}</div>
+            <div style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 15,
+              color: "rgba(255,255,255,0.7)",
+              marginBottom: 32,
+              lineHeight: 1.5,
+            }}>{ONBOARDING_STEPS[onboardingStep].desc}</div>
+
+            {onboardingStep < ONBOARDING_STEPS.length - 1 ? (
+              <button
+                onClick={() => setOnboardingStep(s => s + 1)}
+                style={{
+                  width: "100%", padding: "15px", borderRadius: 16, border: "none",
+                  background: "linear-gradient(135deg, #0072ff, #00d4ff)",
+                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 17, fontWeight: 700, cursor: "pointer",
+                  boxShadow: "0 4px 20px rgba(0,212,255,0.35)",
+                }}
+              >
+                Volgende →
+              </button>
+            ) : (
+              <button
+                onClick={finishOnboarding}
+                style={{
+                  width: "100%", padding: "15px", borderRadius: 16, border: "none",
+                  background: "linear-gradient(135deg, #00c853, #00e676)",
+                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 17, fontWeight: 700, cursor: "pointer",
+                  boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
+                }}
+              >
+                Beginnen! 🚀
+              </button>
+            )}
+          </div>
+        </div>
+      )}
       <div style={styles.heroSection}>
 
         {/* Slime banner */}

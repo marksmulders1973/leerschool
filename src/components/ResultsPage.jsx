@@ -124,6 +124,82 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
           </div>
         )}
 
+        {/* Smart suggestion banner */}
+        {(() => {
+          const pct = latest.percentage;
+          const currentLevelIndex = LEVELS.findIndex(l => l.id === latest.level);
+          const nextLevel = currentLevelIndex >= 0 && currentLevelIndex < LEVELS.length - 1 ? LEVELS[currentLevelIndex + 1] : null;
+          const isHighest = currentLevelIndex === LEVELS.length - 1;
+
+          if (pct >= 85) {
+            return (
+              <div style={{
+                marginTop: 20, padding: "16px 18px", borderRadius: 16,
+                background: "linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,230,118,0.08))",
+                border: "1px solid rgba(0,200,83,0.35)",
+              }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#00e676", marginBottom: 6 }}>
+                  🚀 Goed bezig! Klaar voor een moeilijker niveau?
+                </div>
+                {isHighest ? (
+                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.6)" }}>
+                    Je zit al op het hoogste niveau! 🏆
+                  </div>
+                ) : (
+                  <button onClick={onRetry} style={{
+                    marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
+                    background: "linear-gradient(135deg, #00c853, #00a844)",
+                    color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                    fontSize: 14, fontWeight: 700, cursor: "pointer",
+                  }}>
+                    Probeer {nextLevel?.label}
+                  </button>
+                )}
+              </div>
+            );
+          } else if (pct < 50) {
+            return (
+              <div style={{
+                marginTop: 20, padding: "16px 18px", borderRadius: 16,
+                background: "linear-gradient(135deg, rgba(244,67,54,0.15), rgba(229,57,53,0.08))",
+                border: "1px solid rgba(244,67,54,0.35)",
+              }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ff7043", marginBottom: 6 }}>
+                  💪 Nog even oefenen! Dit vak verdient meer aandacht.
+                </div>
+                <button onClick={onRetry} style={{
+                  marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
+                  background: "linear-gradient(135deg, #e53935, #c62828)",
+                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer",
+                }}>
+                  Nog een keer
+                </button>
+              </div>
+            );
+          } else {
+            return (
+              <div style={{
+                marginTop: 20, padding: "16px 18px", borderRadius: 16,
+                background: "linear-gradient(135deg, rgba(255,152,0,0.15), rgba(255,193,7,0.08))",
+                border: "1px solid rgba(255,152,0,0.35)",
+              }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ffb74d", marginBottom: 6 }}>
+                  ⭐ Netjes! Speel nog een ronde om het vast te zetten.
+                </div>
+                <button onClick={onRetry} style={{
+                  marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
+                  background: "linear-gradient(135deg, #ff9800, #f57c00)",
+                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer",
+                }}>
+                  Nog een keer
+                </button>
+              </div>
+            );
+          }
+        })()}
+
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 24 }}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>

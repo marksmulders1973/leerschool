@@ -155,6 +155,53 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
           </div>
         ) : (
           <>
+            {/* Summary stats row */}
+            {(() => {
+              const avgScore = Math.round(progress.reduce((a, b) => a + b.percentage, 0) / progress.length);
+              // Find best subject (most attempts, highest avg)
+              let bestSubjId = null, bestAvg = -1;
+              Object.entries(bySubject).forEach(([id, results]) => {
+                const avg = Math.round(results.reduce((a, b) => a + b.percentage, 0) / results.length);
+                if (avg > bestAvg) { bestAvg = avg; bestSubjId = id; }
+              });
+              const bestSubj = SUBJECTS.find(s => s.id === bestSubjId);
+              return (
+                <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+                  <div style={{
+                    flex: 1, background: "#1e2d45", borderRadius: 14,
+                    padding: "14px 10px", textAlign: "center",
+                    border: "1px solid rgba(0,212,255,0.15)",
+                  }}>
+                    <div style={{ fontSize: 20, marginBottom: 4 }}>🎯</div>
+                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#00d4ff" }}>{progress.length}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Totaal gespeeld</div>
+                  </div>
+                  <div style={{
+                    flex: 1, background: "#1e2d45", borderRadius: 14,
+                    padding: "14px 10px", textAlign: "center",
+                    border: "1px solid rgba(0,230,118,0.15)",
+                  }}>
+                    <div style={{ fontSize: 20, marginBottom: 4 }}>✅</div>
+                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#00e676" }}>{avgScore}%</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Gemiddelde score</div>
+                  </div>
+                  <div style={{
+                    flex: 1, background: "#1e2d45", borderRadius: 14,
+                    padding: "14px 10px", textAlign: "center",
+                    border: "1px solid rgba(255,193,7,0.15)",
+                  }}>
+                    <div style={{ fontSize: 20, marginBottom: 4 }}>🔥</div>
+                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#ffb74d" }}>
+                      {bestSubj ? bestSubj.icon : "—"}
+                    </div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
+                      {bestSubj ? bestSubj.label : "Beste vak"}
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+
             <div style={styles.statsRow}>
               <div style={styles.statCard}>
                 <div style={styles.statValue}>{progress.length}</div>

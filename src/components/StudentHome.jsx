@@ -32,11 +32,54 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
 
   const recentProgress = progress.slice(-5).reverse();
 
+  // Streak protection: check if today has been played
+  const streakWarning = (() => {
+    if (!streak || streak <= 0) return null;
+    try {
+      const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}');
+      const today = new Date().toISOString().split("T")[0];
+      if (s.last !== today) return streak;
+    } catch {}
+    return null;
+  })();
+
+  // Weakest subject: min 2 attempts, lowest average percentage
+  const weakestSubject = (() => {
+    if (!progress || progress.length === 0) return null;
+    const bySubject = {};
+    progress.forEach((p) => {
+      if (!bySubject[p.subject]) bySubject[p.subject] = [];
+      bySubject[p.subject].push(p.percentage);
+    });
+    let weakId = null, weakAvg = Infinity;
+    Object.entries(bySubject).forEach(([id, percs]) => {
+      if (percs.length < 2) return;
+      const avg = Math.round(percs.reduce((a, b) => a + b, 0) / percs.length);
+      if (avg < weakAvg) { weakAvg = avg; weakId = id; }
+    });
+    if (!weakId) return null;
+    const subj = SUBJECTS.find(s => s.id === weakId);
+    return subj ? { ...subj, avg: weakAvg } : null;
+  })();
+
   return (
     <div style={styles.page}>
       <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {streakWarning && (
+          <div style={{
+            display: "flex", alignItems: "center", gap: 10,
+            background: "linear-gradient(135deg, rgba(255,152,0,0.18), rgba(255,193,7,0.1))",
+            border: "1px solid rgba(255,152,0,0.45)",
+            borderRadius: 14, padding: "12px 16px", marginBottom: 4,
+          }}>
+            <span style={{ fontSize: 24 }}>⚠️</span>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "#ffb74d", lineHeight: 1.4 }}>
+              Speel vandaag om je streak van <strong style={{ color: "#ff9800" }}>{streakWarning} {streakWarning === 1 ? "dag" : "dagen"}</strong> te bewaren!
+            </div>
+          </div>
+        )}
         {streak >= 2 && (
           <div style={{ display: "flex", alignItems: "center", gap: 10, background: "linear-gradient(135deg, rgba(255,111,0,0.15), rgba(255,160,0,0.1))", border: "1px solid rgba(255,111,0,0.3)", borderRadius: 14, padding: "12px 16px", marginBottom: 4 }}>
             <span style={{ fontSize: 28 }}>🔥</span>
@@ -44,6 +87,35 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
               <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ff9800" }}>{streak} dagen op rij!</div>
               <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>Blijf zo doorgaan, je bent op dreef!</div>
             </div>
+          </div>
+        )}
+        {weakestSubject && (
+          <div style={{
+            display: "flex", alignItems: "center", gap: 12,
+            background: "linear-gradient(135deg, rgba(33,150,243,0.12), rgba(30,136,229,0.07))",
+            border: "1px solid rgba(33,150,243,0.3)",
+            borderRadius: 14, padding: "12px 16px", marginBottom: 4,
+          }}>
+            <span style={{ fontSize: 26 }}>{weakestSubject.icon}</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#64b5f6" }}>
+                💪 {weakestSubject.label} heeft aandacht nodig
+              </div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
+                Gemiddeld {weakestSubject.avg}%
+              </div>
+            </div>
+            <button
+              onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}
+              style={{
+                padding: "8px 14px", border: "none", borderRadius: 10,
+                background: "linear-gradient(135deg, #1565c0, #0d47a1)",
+                color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                fontSize: 13, fontWeight: 700, cursor: "pointer", flexShrink: 0,
+              }}
+            >
+              Oefen nu
+            </button>
           </div>
         )}
         <div style={styles.joinSection}>
