@@ -87,9 +87,9 @@ export default function App() {
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
     try { const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}'); const today = new Date().toISOString().split("T")[0]; const yesterday = new Date(Date.now()-86400000).toISOString().split("T")[0]; if (s.last === today || s.last === yesterday) setStreak(s.streak); } catch {}
-    // URL parameter ?code=XXXXX
+    // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
     const urlCode = new URLSearchParams(window.location.search).get("code");
-    if (urlCode) setPendingCode(urlCode.toUpperCase());
+    if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
   }, []);
 
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
