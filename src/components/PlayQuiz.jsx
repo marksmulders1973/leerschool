@@ -364,8 +364,6 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   );
 }
 
-}
-
 export function BreakoutGame({ onClose }) {
   const canvasRef = useRef(null);
   const [gameOver, setGameOver] = useState(null); // null = playing, true = won, false = lost

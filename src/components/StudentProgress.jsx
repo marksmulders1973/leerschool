@@ -56,7 +56,6 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
     </div>
   );
 }
-}
 
 export function StudentProgressView({ progress, userName, onBack, onHome }) {
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -245,7 +244,6 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
       </div>
     </div>
   );
-}
 }
 
 export function Leaderboard({ data, currentUser, onBack, onHome }) {

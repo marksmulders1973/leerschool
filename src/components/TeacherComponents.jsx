@@ -146,7 +146,6 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
     </div>
   );
 }
-}
 
 export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
   const [questions, setQuestions] = useState(() =>
@@ -308,7 +307,6 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
       </div>
     </div>
   );
-}
 }
 
 export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
@@ -671,7 +669,6 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
       </div>
     </div>
   );
-}
 }
 
 export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
