@@ -1,5 +1,5 @@
-const CACHE_SHELL = "studiebol-shell-v2";
-const CACHE_ASSETS = "studiebol-assets-v2";
+const CACHE_SHELL = "studiebol-shell-v3";
+const CACHE_ASSETS = "studiebol-assets-v3";
 
 const APP_SHELL = [
   "/",
