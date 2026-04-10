@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS, TEXTBOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../constants.js";
 import { SoundEngine } from "../utils.js";
