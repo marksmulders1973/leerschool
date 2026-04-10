@@ -53,12 +53,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   const handleConfirm = () => {
-    if (!name.trim()) {
+    const effectiveName = name.trim() ||
+      (authUser && (authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split("@")[0])) ||
+      "";
+    if (!effectiveName) {
       setShake(true);
       setTimeout(() => setShake(false), 500);
       return;
     }
-    setUserName(name.trim());
+    if (!name.trim()) setName(effectiveName);
+    setUserName(effectiveName);
     setUserLevel(level);
     try { localStorage.setItem("ls_user", JSON.stringify({ name: name.trim(), level, role: pendingRole })); } catch {}
     onSaveProfile?.({ name: name.trim(), level, role: pendingRole });
