@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { SUBJECTS } from "../constants.js";
-import { SoundEngine } from "../utils.js";
+import { SoundEngine, track } from "../utils.js";
 
 export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
