@@ -163,15 +163,18 @@ Regels:
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
 
-KWALITEITSCONTROLE — doe dit voor elke vraag:
-1. Is het aangegeven antwoord (answer-index) aantoonbaar correct? Controleer dit.
-2. Klopt de uitleg feitelijk en volledig? De uitleg moet de REDEN geven, niet alleen het antwoord herhalen.
-3. Speciale regels voor Nederlandse taal:
+KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON schrijft:
+1. Schrijf het correcte antwoord op en bevestig: staat dit antwoord EXACT in options[answer]? Zo niet → herstel de answer-index.
+2. Controleer de drie foute opties: geen van deze mag eigenlijk ook correct zijn. Een vraag waarbij meerdere antwoorden juist zijn is onbruikbaar.
+3. Klopt de uitleg feitelijk? De uitleg moet de REDEN geven, niet alleen het antwoord herhalen.
+4. EXTRA STRENG — rangordeningen en statistieken (grootste, langste, meeste, hoogste, diepste, rijkste, hoofdstad, vlag, bevolking, oppervlakte): verifieer elk getal en elke rangorde met zekerheid. Controleer of het juiste antwoord ook echt de #1 of #2 is in de lijst, NIET per ongeluk #3 of #4. Twijfel = sla deze vraag over en maak een andere.
+5. EXTRA STRENG — Aardrijkskunde en Geschiedenis: dubbelcheck landen, grenzen, hoofdsteden, datums, namen van personen. Fouten hierin worden direct opgemerkt door leerlingen en docenten.
+6. Speciale regels voor Nederlandse taal:
    - d/t spelling: stam + t bij hij/zij/het tegenwoordige tijd (hij wordt, hij fietst). "Geen t na enkelvoud" is FOUT — het is juist WEL een t na hij/zij/het.
    - Verleden tijd zwak werkwoord: eindigt stam op t/k/f/s/ch/p (het kofschip) → -te/-ten, anders -de/-den.
    - Persoonsvorm: het werkwoord dat vervoegd is naar persoon en tijd.
-4. Speciale regels voor rekenen: controleer alle berekeningen nogmaals.
-5. Als je twijfelt over een antwoord: kies een andere vraag waarover je zeker bent.
+7. Speciale regels voor rekenen: controleer alle berekeningen nogmaals.
+8. Als je twijfelt over WELK antwoord correct is: maak een ANDERE vraag waarover je 100% zeker bent. Liever een makkelijkere zekere vraag dan een twijfelachtige moeilijke vraag.
 
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
