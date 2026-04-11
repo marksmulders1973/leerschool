@@ -1,9 +1,29 @@
+import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { formatDate, daysUntil } from "../utils.js";
 import Header from "./Header.jsx";
+import supabase from "../supabase.js";
 
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz }) {
+  const [completions, setCompletions] = useState({});
+  const [expandedQuiz, setExpandedQuiz] = useState(null);
+
+  useEffect(() => {
+    if (quizzes.length === 0) return;
+    const ids = quizzes.map((q) => q.id);
+    supabase.from("leaderboard").select("quiz_id, player_name, score, total, percentage, completed_at")
+      .in("quiz_id", ids)
+      .then(({ data }) => {
+        if (!data) return;
+        const grouped = {};
+        data.forEach((r) => {
+          if (!grouped[r.quiz_id]) grouped[r.quiz_id] = [];
+          grouped[r.quiz_id].push(r);
+        });
+        setCompletions(grouped);
+      });
+  }, [quizzes]);
   return (
     <div style={styles.page}>
       <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
@@ -58,6 +78,33 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                         </div>
                       )}
                     </div>
+                    {/* Completions teller */}
+                    {(() => {
+                      const done = completions[q.id] || [];
+                      return (
+                        <div>
+                          <button onClick={() => setExpandedQuiz(expandedQuiz === q.id ? null : q.id)}
+                            style={{ background: "none", border: "none", cursor: "pointer", padding: "4px 0 8px", display: "flex", alignItems: "center", gap: 6 }}>
+                            <span style={{ fontSize: 13, color: done.length > 0 ? "#00e676" : "#8899aa", fontWeight: 700 }}>
+                              👥 {done.length} leerling{done.length !== 1 ? "en" : ""} gemaakt
+                            </span>
+                            {done.length > 0 && <span style={{ fontSize: 11, color: "#8899aa" }}>{expandedQuiz === q.id ? "▲" : "▼"}</span>}
+                          </button>
+                          {expandedQuiz === q.id && done.length > 0 && (
+                            <div style={{ marginBottom: 10, background: "#0a1f30", borderRadius: 10, padding: "8px 12px", border: "1px solid rgba(0,212,255,0.15)" }}>
+                              {done.map((r, i) => (
+                                <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "4px 0", borderBottom: i < done.length - 1 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+                                  <span style={{ fontSize: 13, color: "#e0e6f0" }}>👤 {r.player_name}</span>
+                                  <span style={{ fontSize: 13, fontWeight: 700, color: r.percentage >= 80 ? "#00e676" : r.percentage >= 50 ? "#ffa726" : "#ff5252" }}>
+                                    {r.score}/{r.total} ({r.percentage}%)
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
                     <div style={{ ...styles.quizCardActions, flexWrap: "wrap" }}>
                       <button style={styles.smallButton} onClick={() => onStartQuiz(q)}>▶️ Start</button>
                       <button style={styles.smallButtonAlt} onClick={() => navigator.clipboard?.writeText(q.code)}>📋 Code</button>

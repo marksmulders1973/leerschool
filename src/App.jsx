@@ -230,7 +230,7 @@ export default function App() {
     });
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: Math.round((Date.now() - finalState.startedAt) / 1000) });
     // Globaal scorebord (iedereen, ook gasten)
-    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).catch(() => {});
+    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null }).catch(() => {});
 
     // Streak + voortgang opslaan
     const today = new Date().toISOString().split("T")[0];
