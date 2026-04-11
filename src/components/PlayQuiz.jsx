@@ -17,6 +17,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [questionImage, setQuestionImage] = useState(null);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
+  const wrongOverlayTimerRef = useRef(null);
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
@@ -127,7 +128,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       if (isCorrect) {
         setWaitingForUser(true);
       } else {
-        setTimeout(() => setShowWrongOverlay(true), 700);
+        wrongOverlayTimerRef.current = setTimeout(() => setShowWrongOverlay(true), 700);
       }
     } else {
       const delay = isCorrect ? 1200 : 5000;
@@ -386,7 +387,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (
-        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.5)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 100, animation: "fadeBg 0.2s ease" }}>
+        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, animation: "fadeBg 0.2s ease" }}>
           <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 320, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 48 }}>🛑</span>
             <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
@@ -398,10 +399,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
                 Doorgaan
               </button>
-              <button style={{ flex: 1, background: "linear-gradient(135deg, #69f0ae, #00c853)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
+              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff5252, #c62828)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
                 clearInterval(timerRef.current);
-                if (gameState.answers.length > 0) onFinish(gameState);
-                else onQuit();
+                clearTimeout(wrongOverlayTimerRef.current);
+                onQuit();
               }}>
                 Stoppen
               </button>
