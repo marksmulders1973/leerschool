@@ -126,6 +126,7 @@ REGELS:
 - answer = index (0-3) van het juiste antwoord
 - source: vermeld ALTIJD het gevonden onderwerp uit de inhoudsopgave + eventuele externe bron
 - Het antwoord MOET wiskundig/vakinhoudelijk correct zijn. Controleer dit!
+- ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door simpelweg de langste optie te kiezen.
 - SVG: teken een diagram bij vragen over grafieken, meetkunde, figuren etc. Gebruik viewBox="0 0 300 200", kleuren: #5b86b8, #8eaadb, #e0e6f0 (licht, voor dark theme), font-family="Arial". Zet null als geen diagram nodig.
 - Minstens 40% van wiskunde-vragen moet een SVG hebben
 - Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
@@ -162,6 +163,7 @@ Regels:
 - Voor VO klas 1-2: vergelijkingen, pythagoras, machten en wortels, meetkunde. Duits en Frans beschikbaar. NOOIT differentiëren of goniometrie.
 - Voor VO klas 3-4: goniometrie, differentiëren, logaritmen, examenstof. Alle exacte vakken beschikbaar.
 - Foute antwoorden moeten veelgemaakte fouten zijn
+- ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door de langste optie te kiezen.
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - imageSearch: geef een Nederlandse Wikipedia-zoekterm mee als een foto of kaart de vraag verduidelijkt. Gebruik dit bij: landen/eilanden/steden (bijv. "Kalimantan"), historische personen (bijv. "Anne Frank"), dieren/planten (bijv. "Blauwe vinvis"), vlaggen (bijv. "Vlag van Brazilië"), gebouwen/monumenten. Gebruik null als geen afbeelding de vraag verbetert.
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
@@ -178,6 +180,7 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
    - Persoonsvorm: het werkwoord dat vervoegd is naar persoon en tijd.
 7. Speciale regels voor rekenen: controleer alle berekeningen nogmaals.
 8. Als je twijfelt over WELK antwoord correct is: maak een ANDERE vraag waarover je 100% zeker bent. Liever een makkelijkere zekere vraag dan een twijfelachtige moeilijke vraag.
+9. ANTWOORDLENGTE CHECK: tel het aantal woorden van elke optie. Als het juiste antwoord meer dan 3 woorden langer is dan de kortste foute optie → herschrijf de foute opties zodat ze even lang zijn. Leerlingen mogen NIET kunnen gokken op basis van lengte.
 
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
