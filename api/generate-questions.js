@@ -230,6 +230,24 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
     }
 
     const questions = JSON.parse(jsonMatch[0]);
+
+    // Shuffle opties per vraag zodat het juiste antwoord niet altijd de langste optie is
+    const shuffleArr = (arr) => {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    };
+    for (const q of questions) {
+      if (Array.isArray(q.options) && typeof q.answer === 'number' && q.answer >= 0 && q.answer < q.options.length) {
+        const correct = q.options[q.answer];
+        q.options = shuffleArr(q.options);
+        q.answer = q.options.indexOf(correct);
+      }
+    }
+
     return res.status(200).json({ questions });
   } catch (error) {
     console.error("Question generation error:", error);

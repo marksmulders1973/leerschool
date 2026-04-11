@@ -141,6 +141,17 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
   const timerColor = noTimer ? "#69f0ae" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
+  const quizLabel = (() => {
+    const parts = [];
+    if (subj) parts.push(`${subj.icon} ${subj.label}`);
+    if (gameState.quiz.textbook?.bookName) {
+      parts.push(gameState.quiz.textbook.bookName);
+      if (gameState.quiz.textbook.chapter) parts.push(gameState.quiz.textbook.chapter);
+    } else if (gameState.quiz.topic) {
+      parts.push(gameState.quiz.topic);
+    }
+    return parts.join(" · ");
+  })();
 
   return (
     <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#00c853"}10, #0f1729)` }}>
@@ -151,6 +162,12 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
         <div style={{ ...styles.scoreDisplay, animation: scoreAnim ? "scoreFloat 0.6s ease" : "none" }}>⭐ {gameState.score}</div>
       </div>
+
+      {quizLabel && (
+        <div style={{ textAlign: "center", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 4, letterSpacing: 0.3 }}>
+          {quizLabel}
+        </div>
+      )}
 
       {!noTimer && (
         <>
