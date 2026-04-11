@@ -3,8 +3,8 @@ import styles from "../styles.js";
 import { LEVELS } from "../constants.js";
 
 const ONBOARDING_STEPS = [
-  { emoji: "🎯", title: "Kies je vak en niveau", desc: "Uit 9 vakken, van groep 1 t/m klas 4" },
-  { emoji: "🤖", title: "AI maakt vragen voor jou", desc: "Elke quiz is anders, ook over jouw schoolboek" },
+  { emoji: "📚", title: "Echte examenvragen, echte boeken", desc: "Echte voorbereiding voor je examen. Geen giswerk, gewoon oefenen wat telt." },
+  { emoji: "🤖", title: "Studiebol maakt vragen voor jou", desc: "Elke quiz is anders, ook over jouw eigen schoolboek" },
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
