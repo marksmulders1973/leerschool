@@ -8,7 +8,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
@@ -47,6 +47,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   }, [authUser]);
 
   const handleRoleClick = (role) => {
+    onOnboardingStart?.();
     setPendingRole(role);
     setLevel("");
     setStep("name");

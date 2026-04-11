@@ -40,6 +40,7 @@ export default function App() {
   const [authUser, setAuthUser] = useState(null);
   const [streak, setStreak] = useState(0);
   const pageRef = useRef("home");
+  const onboardingActiveRef = useRef(false);
 
   // Auth: laad sessie + luister naar wijzigingen
   useEffect(() => {
@@ -54,8 +55,9 @@ export default function App() {
           if (data?.display_name) setUserName(data.display_name);
           if (data?.level) setUserLevel(data.level);
           if (data?.streak_days) setStreak(data.streak_days);
-          // Alleen auto-navigeren als gebruiker nog op home pagina staat
+          // Alleen auto-navigeren als gebruiker nog op home staat en NIET bezig is met onboarding
           if (pageRef.current !== "home") return;
+          if (onboardingActiveRef.current) return;
           if (data?.role) {
             setRole(data.role);
             setPage(data.role === "teacher" ? "teacher-home" : "student-home");
@@ -274,7 +276,9 @@ export default function App() {
           authUser={authUser}
           onGoogleLogin={handleGoogleLogin}
           onLogout={handleLogout}
+          onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onSelectRole={(r) => {
+            onboardingActiveRef.current = false;
             setRole(r);
             track("role_selected", { role: r });
             if (currentQuiz) {
