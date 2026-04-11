@@ -8,12 +8,14 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
   const [editingClassId, setEditingClassId] = useState(null);
   const [newClassName, setNewClassName] = useState("");
   const [showNewClass, setShowNewClass] = useState(false);
-  const [editingStudent, setEditingStudent] = useState(null); // { classId, studentId } or null
+  const [editingStudent, setEditingStudent] = useState(null);
   const [editName, setEditName] = useState("");
   const [editEmail, setEditEmail] = useState("");
+  const [editPhone, setEditPhone] = useState("");
   const [newStudentClassId, setNewStudentClassId] = useState(null);
   const [newStudentName, setNewStudentName] = useState("");
   const [newStudentEmail, setNewStudentEmail] = useState("");
+  const [newStudentPhone, setNewStudentPhone] = useState("");
 
   const addClass = () => {
     if (!newClassName.trim()) return;
@@ -35,17 +37,16 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
 
   const addStudent = (classId) => {
     if (!newStudentName.trim() && !newStudentEmail.trim()) return;
-    const student = { id: Date.now().toString(), name: newStudentName.trim(), email: newStudentEmail.trim() };
+    const student = { id: Date.now().toString(), name: newStudentName.trim(), email: newStudentEmail.trim(), phone: newStudentPhone.trim() };
     onSave(classes.map(c => c.id === classId ? { ...c, students: [...c.students, student] } : c));
-    setNewStudentName("");
-    setNewStudentEmail("");
+    setNewStudentName(""); setNewStudentEmail(""); setNewStudentPhone("");
     setNewStudentClassId(null);
   };
 
   const saveStudent = (classId, studentId) => {
     onSave(classes.map(c => c.id === classId ? {
       ...c,
-      students: c.students.map(s => s.id === studentId ? { ...s, name: editName, email: editEmail } : s)
+      students: c.students.map(s => s.id === studentId ? { ...s, name: editName, email: editEmail, phone: editPhone } : s)
     } : c));
     setEditingStudent(null);
   };
@@ -90,6 +91,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                   <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                     <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam" value={editName} onChange={e => setEditName(e.target.value)} />
                     <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres" type="email" value={editEmail} onChange={e => setEditEmail(e.target.value)} />
+                    <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp nummer (bijv. 0612345678)" type="tel" value={editPhone} onChange={e => setEditPhone(e.target.value)} />
                     <div style={{ display: "flex", gap: 6 }}>
                       <button style={styles.smallButton} onClick={() => saveStudent(klas.id, student.id)}>✓ Opslaan</button>
                       <button style={styles.smallButtonAlt} onClick={() => setEditingStudent(null)}>✕ Annuleer</button>
@@ -100,8 +102,15 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 700, fontSize: 13, color: "#e0e6f0" }}>{student.name || "—"}</div>
                       <div style={{ fontSize: 11, color: "#8899aa" }}>{student.email || "Geen e-mail"}</div>
+                      {student.phone && <div style={{ fontSize: 11, color: "#25D366" }}>💬 {student.phone}</div>}
                     </div>
-                    <button style={styles.smallButtonAlt} onClick={() => { setEditingStudent({ classId: klas.id, studentId: student.id }); setEditName(student.name); setEditEmail(student.email); }}>✏️</button>
+                    {student.phone && (
+                      <button style={{ ...styles.smallButton, background: "#25D366", padding: "6px 10px", boxShadow: "0 2px 8px rgba(37,211,102,0.3)" }}
+                        onClick={() => window.open(`https://wa.me/${student.phone.replace(/\D/g, "").replace(/^0/, "31")}`, "_blank")}>
+                        💬
+                      </button>
+                    )}
+                    <button style={styles.smallButtonAlt} onClick={() => { setEditingStudent({ classId: klas.id, studentId: student.id }); setEditName(student.name); setEditEmail(student.email); setEditPhone(student.phone || ""); }}>✏️</button>
                     <button style={{ ...styles.smallButton, background: "#c62828", padding: "6px 10px" }} onClick={() => deleteStudent(klas.id, student.id)}>🗑️</button>
                   </div>
                 )}
@@ -113,6 +122,7 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   <input style={{ ...styles.textInput, margin: 0 }} placeholder="Naam leerling" value={newStudentName} onChange={e => setNewStudentName(e.target.value)} />
                   <input style={{ ...styles.textInput, margin: 0 }} placeholder="E-mailadres leerling" type="email" value={newStudentEmail} onChange={e => setNewStudentEmail(e.target.value)} />
+                  <input style={{ ...styles.textInput, margin: 0 }} placeholder="WhatsApp nummer (bijv. 0612345678)" type="tel" value={newStudentPhone} onChange={e => setNewStudentPhone(e.target.value)} />
                   <div style={{ display: "flex", gap: 6 }}>
                     <button style={styles.smallButton} onClick={() => addStudent(klas.id)}>+ Toevoegen</button>
                     <button style={styles.smallButtonAlt} onClick={() => setNewStudentClassId(null)}>✕</button>
