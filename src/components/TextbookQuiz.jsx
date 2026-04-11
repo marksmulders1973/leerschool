@@ -29,7 +29,15 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
   const [isKnownCover, setIsKnownCover] = useState(false);
 
   const bookName = selectedBook ? selectedBook.name : customBook;
-  const chapter = paragraaf ? `${chapterNum}.${paragraaf}` : (chapterNum ? `Hoofdstuk ${chapterNum}` : "");
+  const chapterTitle = selectedBook ? ((CHAPTER_TITLES[selectedBook.id] || [])[parseInt(chapterNum) - 1] || null) : null;
+  const paraTitle = selectedBook && chapterNum && paragraaf
+    ? (((PARAGRAPH_TITLES[selectedBook.id] || {})[chapterNum] || [])[parseInt(paragraaf) - 1] || null)
+    : null;
+  const chapter = paragraaf
+    ? `${chapterNum}.${paragraaf}${paraTitle ? ` – ${paraTitle}` : ""}`
+    : chapterNum
+      ? `Hoofdstuk ${chapterNum}${chapterTitle ? ` – ${chapterTitle}` : ""}`
+      : "";
   const canNext1 = category !== "";
   const canNext2 = bookName.trim() !== "";
   const canNext3 = chapterNum !== "" && (level !== "" || initLevel !== "");
