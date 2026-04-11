@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak }) {
+export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult }) {
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -209,11 +209,17 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
             {recentProgress.map((r) => {
               const subj = SUBJECTS.find((s) => s.id === r.subject);
               return (
-                <div key={r.id} style={styles.recentCard}>
+                <div key={r.id} style={{ ...styles.recentCard, cursor: onViewResult ? "pointer" : "default" }}
+                  onClick={() => onViewResult?.(r)}>
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <span style={{ fontWeight: 600 }}>{subj?.label}</span>
                     <span style={{ fontSize: 12, color: "#8899aa", marginLeft: 8 }}>{LEVELS.find((l) => l.id === r.level)?.label}</span>
+                    {r.completedAt && (
+                      <div style={{ fontSize: 11, color: "#8899aa", marginTop: 2 }}>
+                        {new Date(r.completedAt).toLocaleDateString("nl-NL", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}
+                      </div>
+                    )}
                   </div>
                   <div style={{
                     ...styles.scoreBadge,
@@ -222,6 +228,7 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
                   }}>
                     {r.percentage}%
                   </div>
+                  <span style={{ color: "#8899aa", fontSize: 16, marginLeft: 6 }}>›</span>
                 </div>
               );
             })}

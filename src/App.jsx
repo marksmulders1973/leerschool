@@ -400,6 +400,7 @@ export default function App() {
           onHome={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
+          onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}
           streak={streak}
           pendingCode={pendingCode}
         />
