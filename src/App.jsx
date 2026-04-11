@@ -39,6 +39,7 @@ export default function App() {
   const abortControllerRef = useRef(null);
   const [authUser, setAuthUser] = useState(null);
   const [streak, setStreak] = useState(0);
+  const pageRef = useRef("home");
 
   // Auth: laad sessie + luister naar wijzigingen
   useEffect(() => {
@@ -53,6 +54,8 @@ export default function App() {
           if (data?.display_name) setUserName(data.display_name);
           if (data?.level) setUserLevel(data.level);
           if (data?.streak_days) setStreak(data.streak_days);
+          // Alleen auto-navigeren als gebruiker nog op home pagina staat
+          if (pageRef.current !== "home") return;
           if (data?.role) {
             setRole(data.role);
             setPage(data.role === "teacher" ? "teacher-home" : "student-home");
@@ -103,6 +106,7 @@ export default function App() {
     if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
   }, []);
 
+  useEffect(() => { pageRef.current = page; }, [page]);
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
   useEffect(() => { try { localStorage.setItem("ls_progress", JSON.stringify(studentProgress)); } catch {} }, [studentProgress]);
   useEffect(() => { try { localStorage.setItem("ls_leaderboard", JSON.stringify(leaderboard)); } catch {} }, [leaderboard]);
