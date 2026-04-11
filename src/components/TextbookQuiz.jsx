@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles.js";
-import { SUBJECTS, LEVELS, TEXTBOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../constants.js";
+import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 
@@ -286,18 +286,48 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               </div>
             )}
 
+            {/* Dropdown: alle bekende boeken op alfabet */}
+            {ALL_KNOWN_BOOKS[category]?.length > 0 && (
+              <div style={{ marginBottom: 14 }}>
+                <p style={{ fontSize: 13, color: "#8eaadb", fontWeight: 600, margin: "0 0 8px 2px" }}>
+                  Of zoek in alle bekende boeken:
+                </p>
+                <select
+                  value={customBook && !selectedBook ? customBook : ""}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    if (!val) { setCustomBook(""); return; }
+                    setSelectedBook(null);
+                    setShowCustomInput(false);
+                    setCustomBook(val);
+                    const found = ALL_KNOWN_BOOKS[category]?.find(b => b.name === val);
+                    if (found?.level) setLevel(found.level);
+                  }}
+                  style={selectStyle}
+                >
+                  <option value="">📚 Alle bekende boeken (alfabetisch)…</option>
+                  {[...ALL_KNOWN_BOOKS[category]]
+                    .sort((a, b) => (a.label || a.name).localeCompare(b.label || b.name, "nl"))
+                    .map(b => (
+                      <option key={b.name} value={b.name}>{b.label || b.name}</option>
+                    ))
+                  }
+                </select>
+              </div>
+            )}
+
             {!showCustomInput ? (
-              <button onClick={() => { setShowCustomInput(true); setSelectedBook(null); }} style={{
+              <button onClick={() => { setShowCustomInput(true); setSelectedBook(null); setCustomBook(""); }} style={{
                 width: "100%", padding: "13px", borderRadius: 14, border: "2px dashed #2a3f5f",
                 background: "transparent", color: "#8899aa", fontSize: 14, fontWeight: 600,
                 cursor: "pointer", marginBottom: 16,
               }}>
-                📖 Mijn boek staat er niet bij
+                ✏️ Staat het er echt niet bij? Typ zelf
               </button>
             ) : (
               <div style={{ background: "#1e2d45", borderRadius: 16, padding: 16, marginBottom: 16, border: "2px solid #2a3f5f" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                  <p style={{ fontSize: 13, color: "#00e676", fontWeight: 700, margin: 0 }}>📖 Typ je boek</p>
+                  <p style={{ fontSize: 13, color: "#00e676", fontWeight: 700, margin: 0 }}>✏️ Typ je boek</p>
                   <button onClick={() => { setShowCustomInput(false); setCustomBook(""); }} style={{ background: "none", border: "none", color: "#8899aa", cursor: "pointer", fontSize: 18 }}>✕</button>
                 </div>
                 <input style={styles.textInput} value={customBook} onChange={(e) => { setCustomBook(e.target.value); setSelectedBook(null); }} placeholder="Bijv. Wiskunde Flex deel 2" autoFocus />
