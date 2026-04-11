@@ -14,6 +14,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [waitingForUser, setWaitingForUser] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
+  const [questionImage, setQuestionImage] = useState(null);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
 
@@ -60,7 +61,29 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     setWaitingForUser(false);
     setTimedOut(false);
     setShowWrongOverlay(false);
+    setQuestionImage(null);
   }, [gameState.currentQ, gameState.timePerQuestion]);
+
+  useEffect(() => {
+    const term = question?.imageSearch;
+    if (!term) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(`https://nl.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`);
+        const data = await res.json();
+        const url = data.thumbnail?.source;
+        if (!cancelled && url) { setQuestionImage(url); return; }
+      } catch {}
+      try {
+        const res2 = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(term)}`);
+        const data2 = await res2.json();
+        const url2 = data2.thumbnail?.source;
+        if (!cancelled && url2) setQuestionImage(url2);
+      } catch {}
+    })();
+    return () => { cancelled = true; };
+  }, [gameState.currentQ]);
 
   useEffect(() => {
     if (showResult || noTimer) return;
@@ -147,10 +170,19 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       )}
 
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
-        <h2 style={styles.questionText}>{question.q}</h2>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+          <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}>{question.q}</h2>
+          {questionImage && (
+            <img
+              src={questionImage}
+              alt=""
+              style={{ width: 90, height: 70, objectFit: "cover", borderRadius: 10, flexShrink: 0, boxShadow: "0 2px 10px rgba(0,0,0,0.4)" }}
+            />
+          )}
+        </div>
 
         {question.svg && (
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, padding: 12, background: "#162033", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, marginTop: 16, padding: 12, background: "#162033", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
         )}
 
         <div style={styles.optionsGrid}>
