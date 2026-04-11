@@ -5,9 +5,27 @@ import { formatDate, daysUntil } from "../utils.js";
 import Header from "./Header.jsx";
 import supabase from "../supabase.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
+
+  const exportCSV = (q) => {
+    const done = completions[q.id] || [];
+    const subj = SUBJECTS.find((s) => s.id === q.subject);
+    const rows = [["Naam", "Score", "Totaal", "Percentage", "Datum"]];
+    done.forEach((r) => rows.push([
+      r.player_name, r.score, r.total, r.percentage + "%",
+      new Date(r.completed_at).toLocaleDateString("nl-NL"),
+    ]));
+    const csv = rows.map((r) => r.join(";")).join("\n");
+    const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `studiebol_${q.title || subj?.label || "quiz"}_${q.code}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   useEffect(() => {
     if (quizzes.length === 0) return;
@@ -130,6 +148,21 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                             const body = encodeURIComponent(`Hallo,\n\nDoe mee met de Studiebol quiz!\n\n📚 ${q.topic || subj?.label || "Quiz"}\n🎯 Code: ${q.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
                             window.open(`mailto:${emails}?subject=${subject}&body=${body}`, "_blank");
                           }}>📧 Mail klas</button>
+                        );
+                      })()}
+                      <button style={{ ...styles.smallButtonAlt }} onClick={() => onDuplicateQuiz(q)}>📋 Kopieer</button>
+                      {(completions[q.id]?.length > 0) && (
+                        <button style={{ ...styles.smallButtonAlt }} onClick={() => exportCSV(q)}>📥 Export</button>
+                      )}
+                      {q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 3 && (() => {
+                        const klas = classes.find(c => c.id === q.classId);
+                        const msg = `⏰ Herinnering!\n\nDe deadline voor de Studiebol quiz nadert!\n\n📚 ${q.title || subj?.label || "Quiz"}\n🎯 Code: ${q.code}\n📅 Deadline: ${formatDate(q.deadline)}\n\n👉 Doe mee via: https://www.studiebol.online?code=${q.code}`;
+                        const phones = klas?.students?.map(s => s.phone).filter(Boolean) || [];
+                        return (
+                          <button style={{ ...styles.smallButton, background: "#f57c00", boxShadow: "0 2px 8px rgba(245,124,0,0.3)" }}
+                            onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank")}>
+                            ⏰ Herinnering
+                          </button>
                         );
                       })()}
                       <button style={{

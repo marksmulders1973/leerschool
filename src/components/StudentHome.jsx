@@ -169,6 +169,20 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
           </button>
         </div>
 
+        {/* Urgente deadline banner */}
+        {quizzes.filter((q) => q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 1 && !progress.some((p) => p.quizId === q.id)).map((q) => {
+          const subj = SUBJECTS.find((s) => s.id === q.subject);
+          return (
+            <div key={"banner-" + q.id} style={{ background: "linear-gradient(135deg, #b71c1c, #e53935)", borderRadius: 14, padding: "14px 16px", marginBottom: 12, display: "flex", alignItems: "center", gap: 12, animation: "pulse 2s infinite" }}>
+              <span style={{ fontSize: 28 }}>🚨</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Deadline bijna! {subj?.icon} {q.title}</div>
+                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.8)" }}>{daysUntil(q.deadline) === 0 ? "Vandaag de laatste dag!" : "Nog 1 dag — doe het nu!"}</div>
+              </div>
+            </div>
+          );
+        })}
+
         {/* Assigned quizzes */}
         {quizzes.filter((q) => q.deadline).length > 0 && (
           <>

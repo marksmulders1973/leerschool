@@ -311,6 +311,13 @@ export default function App() {
             setQuizzes(updated);
             try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
           }}
+          onDuplicateQuiz={(q) => {
+            const copy = { ...q, id: "quiz-" + Date.now(), code: generateCode(), title: (q.title ? q.title + " (kopie)" : undefined), deadline: null, createdAt: new Date().toISOString() };
+            const updated = [...quizzes, copy];
+            setQuizzes(updated);
+            try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
+            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy }).catch(() => {});
+          }}
         />
       )}
       {page === "class-manager" && (
