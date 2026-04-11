@@ -48,8 +48,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
   const goToNext = () => {
     setWaitingForUser(false);
-    const ns = nextStateRef.current;
-    if (!ns) return;
+    const ns = nextStateRef.current || gameState;
     if (isLast) onFinish(ns);
     else setGameState({ ...ns, currentQ: ns.currentQ + 1 });
   };
@@ -250,6 +249,12 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             </div>
           );
         })()}
+
+        {showResult && isLast && !waitingForUser && !showWrongOverlay && (
+          <button onClick={goToNext} style={{ width: "100%", marginTop: 16, padding: "14px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer", animation: "slideUp 0.3s ease" }}>
+            📊 Bekijk resultaten
+          </button>
+        )}
 
         {waitingForUser && (
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 12, animation: "slideUp 0.3s ease" }}>

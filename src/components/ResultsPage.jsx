@@ -17,15 +17,17 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
   const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Quiz: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
 
+  const shareText = `📊 Studiebol resultaat\n\n👤 ${userName || "Leerling"}\n📚 ${subjLabel}${quiz?.topic ? ` · ${quiz.topic}` : ""}\n✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ ${grade}`;
+
   const sendViaWhatsApp = () => {
-    window.open(`https://wa.me/?text=${encodeURIComponent(resultText)}`, "_blank");
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, "_blank");
     setSent(true);
   };
 
   const sendViaEmail = () => {
     const email = quiz?.teacherEmail || "";
-    const subject = `studiebol resultaat: ${userName} — ${subjLabel} ${latest.percentage}%`;
-    window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(resultText)}`, "_blank");
+    const subject = `Studiebol resultaat: ${userName} — ${subjLabel} ${latest.percentage}%`;
+    window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(shareText)}`, "_blank");
     setSent(true);
   };
 
@@ -61,26 +63,21 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
           ))}
         </div>
 
-        {/* Send results to teacher */}
-        {quiz?.resultMethod && !sent && (
-          <div style={{ marginTop: 20, padding: 16, background: "#0a2a1a", borderRadius: 14, borderLeft: "3px solid #00c853", textAlign: "center" }}>
-            <p style={{ fontSize: 14, color: "#69f0ae", fontWeight: 700, marginBottom: 10 }}>📬 Stuur je resultaat naar je leraar!</p>
-            {quiz.resultMethod === "whatsapp" ? (
-              <button onClick={sendViaWhatsApp} style={{ width: "100%", padding: 14, border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
-                💬 Verstuur via WhatsApp
-              </button>
-            ) : (
-              <button onClick={sendViaEmail} style={{ width: "100%", padding: 14, border: "none", borderRadius: 12, background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
-                📧 Verstuur via e-mail
-              </button>
-            )}
+        {/* Deel resultaat */}
+        <div style={{ marginTop: 20, padding: 16, background: "#0a1f30", borderRadius: 16, border: "1px solid rgba(0,212,255,0.2)" }}>
+          <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, marginBottom: 10, textAlign: "center", margin: "0 0 10px" }}>
+            📬 Deel je resultaat
+          </p>
+          <div style={{ display: "flex", gap: 8 }}>
+            <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+              💬 WhatsApp
+            </button>
+            <button onClick={sendViaEmail} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+              ✉️ E-mail
+            </button>
           </div>
-        )}
-        {sent && (
-          <div style={{ marginTop: 20, padding: 12, background: "#0a2a1a", borderRadius: 14, textAlign: "center" }}>
-            <p style={{ fontSize: 13, color: "#69f0ae" }}>✅ Resultaat verstuurd!</p>
-          </div>
-        )}
+          {sent && <p style={{ fontSize: 12, color: "#69f0ae", textAlign: "center", marginTop: 8, marginBottom: 0 }}>✅ Verstuurd!</p>}
+        </div>
 
         {latest.percentage < 60 && (
           <div style={{ marginTop: 20, padding: 18, background: "#2a1500", borderRadius: 16, border: "2px solid #ff9800", animation: "slideUp 0.4s ease" }}>
