@@ -22,6 +22,14 @@ const fonts = `
 export default function App() {
   const [page, setPage] = useState("home");
   const [loading, setLoading] = useState(false);
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
+  useEffect(() => {
+    const on = () => setIsOffline(false);
+    const off = () => setIsOffline(true);
+    window.addEventListener("online", on);
+    window.addEventListener("offline", off);
+    return () => { window.removeEventListener("online", on); window.removeEventListener("offline", off); };
+  }, []);
   const [loadingMode, setLoadingMode] = useState("self");
   const [role, setRole] = useState(null);
   const [userName, setUserName] = useState("");
@@ -183,11 +191,12 @@ export default function App() {
         } catch (err) {
           setLoading(false);
           if (abortControllerRef.current?.signal.aborted) return;
-          if (hasTopic) {
+          const isOffline = !navigator.onLine || err.message?.includes("fetch") || err.message?.includes("network") || err.message?.includes("Failed to fetch");
+          if (hasTopic && !isOffline) {
             alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
             return;
           }
-          // bij gewone vakken: stil terugvallen op standaardvragen
+          // Offline of gewone vakken: stil terugvallen op standaardvragen
           console.warn("AI fout, terugval op standaardvragen:", err.message);
         }
         setLoading(false);
@@ -258,6 +267,13 @@ export default function App() {
   return (
     <div style={styles.app}>
       <style>{fonts}</style>
+
+      {/* Offline banner */}
+      {isOffline && (
+        <div style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 9999, background: "#b71c1c", color: "#fff", textAlign: "center", padding: "8px 16px", fontSize: 13, fontFamily: "'Fredoka', sans-serif", fontWeight: 700 }}>
+          📵 Geen internet — je kunt nog oefenen met standaardvragen
+        </div>
+      )}
 
       {/* Loading overlay */}
       {loading && (
