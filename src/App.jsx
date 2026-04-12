@@ -80,7 +80,7 @@ export default function App() {
                 if (saved.level) setUserLevel(saved.level);
                 setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
                 // Sla rol ook op in Supabase profiel voor volgende keer
-                supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).catch(() => {});
+                supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).then(() => {}).catch(() => {});
               }
             } catch {}
           }
@@ -244,17 +244,17 @@ export default function App() {
     });
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: Math.round((Date.now() - finalState.startedAt) / 1000) });
     // Globaal scorebord (iedereen, ook gasten)
-    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null }).catch(() => {});
+    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null }).then(() => {}).catch(() => {});
 
     // Streak + voortgang opslaan
     const today = new Date().toISOString().split("T")[0];
     const yesterday = new Date(Date.now() - 86400000).toISOString().split("T")[0];
     if (authUser) {
-      supabase.from("progress").insert({ user_id: authUser.id, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).catch(() => {});
+      supabase.from("progress").insert({ user_id: authUser.id, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).then(() => {}).catch(() => {});
       supabase.from("profiles").select("streak_days, last_played_date").eq("id", authUser.id).single().then(({ data: pd }) => {
         const newStreak = pd?.last_played_date === today ? (pd.streak_days || 1) : pd?.last_played_date === yesterday ? (pd.streak_days || 0) + 1 : 1;
         setStreak(newStreak);
-        supabase.from("profiles").update({ streak_days: newStreak, last_played_date: today }).eq("id", authUser.id).catch(() => {});
+        supabase.from("profiles").update({ streak_days: newStreak, last_played_date: today }).eq("id", authUser.id).then(() => {}).catch(() => {});
       }).catch(() => {});
     } else {
       try {
@@ -291,7 +291,7 @@ export default function App() {
         <HomePage
           onSaveProfile={({ name, level, role }) => {
             if (authUser) {
-              supabase.from("profiles").upsert({ id: authUser.id, display_name: name, level, role }).catch(() => {});
+              supabase.from("profiles").upsert({ id: authUser.id, display_name: name, level, role }).then(() => {}).catch(() => {});
             }
           }}
           authUser={authUser}
@@ -337,7 +337,7 @@ export default function App() {
             const updated = [...quizzes, copy];
             setQuizzes(updated);
             try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
-            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy }).catch(() => {});
+            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy }).then(() => {}).catch(() => {});
           }}
         />
       )}
