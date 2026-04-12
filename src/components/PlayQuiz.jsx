@@ -195,7 +195,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             <img
               src={questionImage}
               alt=""
-              style={{ width: 90, height: 70, objectFit: "cover", borderRadius: 10, flexShrink: 0, boxShadow: "0 2px 10px rgba(0,0,0,0.4)" }}
+              style={{ width: question.imageUrl ? 130 : 90, height: question.imageUrl ? 100 : 70, objectFit: "cover", borderRadius: 10, flexShrink: 0, boxShadow: "0 2px 10px rgba(0,0,0,0.4)" }}
             />
           )}
         </div>
