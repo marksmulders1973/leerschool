@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles.js";
-import { SUBJECTS, LEVELS } from "../constants.js";
-import { formatDate, daysUntil } from "../utils.js";
+import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS } from "../constants.js";
+import { formatDate, daysUntil, shuffle } from "../utils.js";
 import Header from "./Header.jsx";
 import supabase from "../supabase.js";
 
@@ -25,6 +25,91 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
     a.download = `studiebol_${q.title || subj?.label || "quiz"}_${q.code}.csv`;
     a.click();
     URL.revokeObjectURL(url);
+  };
+
+  const printToets = (q) => {
+    const subj = SUBJECTS.find((s) => s.id === q.subject);
+    const level = LEVELS.find((l) => l.id === q.level);
+    const questions = (q.preGeneratedQuestions?.length > 0)
+      ? q.preGeneratedQuestions.slice(0, q.questionCount || 10)
+      : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10);
+
+    if (questions.length === 0) {
+      alert("Geen vragen beschikbaar voor deze quiz.");
+      return;
+    }
+
+    const letters = ["A", "B", "C", "D"];
+    const datum = new Date().toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
+
+    const studentVragen = questions.map((vraag, i) => `
+      <div class="vraag">
+        <div class="vraag-tekst">${i + 1}. ${vraag.q}</div>
+        ${vraag.options.map((opt, j) => `
+          <div class="optie">
+            <span class="bol"></span>
+            <span><strong>${letters[j]}.</strong> ${opt}</span>
+          </div>`).join("")}
+      </div>`).join("");
+
+    const antwoordVragen = questions.map((vraag, i) => `
+      <div class="vraag">
+        <div class="vraag-tekst">${i + 1}. ${vraag.q}</div>
+        <div class="antwoord">✓ ${letters[vraag.answer]}. ${vraag.options[vraag.answer]}</div>
+        ${vraag.explanation ? `<div class="uitleg">💡 ${vraag.explanation}</div>` : ""}
+      </div>`).join("");
+
+    const html = `<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Toets – ${subj?.label || q.title}</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; font-size: 12pt; color: #000; background: #fff; padding: 30px 40px; }
+    .kop { border-bottom: 2.5px solid #000; padding-bottom: 12px; margin-bottom: 22px; }
+    .kop h1 { font-size: 17pt; margin-bottom: 6px; }
+    .kop .invul { font-size: 11pt; margin-top: 8px; display: flex; gap: 30px; }
+    .invul-veld { border-bottom: 1.5px solid #000; min-width: 180px; display: inline-block; }
+    .vraag { margin-bottom: 20px; page-break-inside: avoid; }
+    .vraag-tekst { font-weight: bold; margin-bottom: 7px; line-height: 1.4; }
+    .optie { display: flex; align-items: center; gap: 8px; margin: 5px 0 5px 8px; font-size: 11pt; }
+    .bol { width: 14px; height: 14px; border: 1.8px solid #000; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+    .pagina-wissel { page-break-before: always; }
+    .label-leerkracht { background: #eee; border: 1px solid #bbb; border-radius: 4px; padding: 4px 12px; font-size: 10pt; font-style: italic; display: inline-block; margin-bottom: 16px; }
+    .antwoord { font-size: 11pt; margin: 4px 0 4px 8px; padding: 4px 10px; background: #e8f5e9; border-left: 3px solid #2e7d32; border-radius: 0 4px 4px 0; display: inline-block; font-weight: bold; color: #1b5e20; }
+    .uitleg { font-size: 10pt; color: #444; margin: 5px 0 0 8px; line-height: 1.4; }
+    @media print {
+      body { padding: 15px 20px; }
+      .pagina-wissel { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+  <div class="kop">
+    <h1>${subj?.icon || ""} ${q.title || subj?.label || "Toets"}</h1>
+    <div style="font-size:10pt;color:#555;">${level?.label || ""} · ${datum}</div>
+    <div class="invul">
+      <span>Naam: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+      <span>Klas: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+    </div>
+  </div>
+  ${studentVragen}
+
+  <div class="pagina-wissel"></div>
+
+  <div class="kop">
+    <h1>${subj?.icon || ""} Antwoordenblad – ${q.title || subj?.label || "Toets"}</h1>
+    <div class="label-leerkracht">🔒 Alleen voor de leerkracht</div>
+  </div>
+  ${antwoordVragen}
+</body>
+</html>`;
+
+    const win = window.open("", "_blank");
+    win.document.write(html);
+    win.document.close();
+    setTimeout(() => win.print(), 400);
   };
 
   useEffect(() => {
@@ -126,6 +211,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                     <div style={{ ...styles.quizCardActions, flexWrap: "wrap" }}>
                       <button style={styles.smallButton} onClick={() => onStartQuiz(q)}>▶️ Start</button>
                       <button style={styles.smallButtonAlt} onClick={() => navigator.clipboard?.writeText(q.code)}>📋 Code</button>
+                      <button style={{ ...styles.smallButton, background: "#5c6bc0", boxShadow: "0 2px 8px rgba(92,107,192,0.3)" }} onClick={() => printToets(q)}>🖨️ Print</button>
                       <button style={{
                         ...styles.smallButton,
                         background: "#25D366",
