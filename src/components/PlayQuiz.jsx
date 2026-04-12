@@ -189,7 +189,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
           <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}>{question.q}</h2>
-          {questionImage && (
+          {questionImage && !question.imageInExplanation && (
             <img
               src={questionImage}
               alt=""
@@ -244,7 +244,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           return (
             <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
               <div style={{ fontWeight: 800, marginBottom: 6, color: "#00e676", fontSize: 14 }}>💡 Uitleg</div>
-              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: question.source ? 8 : 0 }}>{question.explanation}</div>
+              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: (question.source || (question.imageInExplanation && questionImage)) ? 8 : 0 }}>{question.explanation}</div>
+              {question.imageInExplanation && questionImage && (
+                <img src={questionImage} alt="" style={{ width: "100%", maxHeight: 140, objectFit: "contain", borderRadius: 10, marginBottom: question.source ? 8 : 0, background: "#0f1729" }} />
+              )}
               {question.source && <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>}
             </div>
           );

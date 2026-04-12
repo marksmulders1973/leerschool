@@ -118,7 +118,8 @@ Antwoord ALLEEN met een JSON array:
     "explanation": "Uitleg waarom dit het juiste antwoord is",
     "source": "Bron: bijv. 'Onderwerp uit H7: Meten - §7.2 Oppervlakte' of 'Gebaseerd op eindexamen havo 2023'",
     "svg": "<svg viewBox='0 0 300 200'>...</svg> of null als geen diagram nodig",
-    "imageSearch": "Nederlandse Wikipedia-zoekterm als een foto/kaart helpt (bijv. 'Kalimantan', 'Fotosynthese', 'Hart menselijk lichaam') of null"
+    "imageSearch": "Nederlandse Wikipedia-zoekterm als een foto/kaart helpt (bijv. 'Kalimantan', 'Fotosynthese', 'Hart menselijk lichaam') of null",
+    "imageInExplanation": false
   }
 ]
 
@@ -149,7 +150,8 @@ Antwoord ALLEEN met een JSON array:
     "answer": 0,
     "explanation": "Uitleg waarom dit het juiste antwoord is (1-2 zinnen)",
     "svg": "<svg viewBox='0 0 300 200'>...</svg> of null",
-    "imageSearch": "Wikipedia-zoekterm of null"
+    "imageSearch": "Wikipedia-zoekterm of null",
+    "imageInExplanation": false
   }
 ]
 
@@ -166,6 +168,7 @@ Regels:
 - ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door de langste optie te kiezen.
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - imageSearch: geef een Nederlandse Wikipedia-zoekterm mee als een foto of kaart de vraag verduidelijkt. Gebruik dit bij: landen/eilanden/steden (bijv. "Kalimantan"), historische personen (bijv. "Anne Frank"), dieren/planten (bijv. "Blauwe vinvis"), vlaggen (bijv. "Vlag van Brazilië"), gebouwen/monumenten. Gebruik null als geen afbeelding de vraag verbetert.
+- imageInExplanation: zet dit op true als het Wikipedia-plaatje het antwoord zou verraden als leerlingen het VOOR het antwoorden zien. Dit geldt voor: formules (bijv. a²+b²=c²), berekeningen (bijv. 3/4=0,75), grafieken die de oplossing tonen, of diagrammen die het juiste antwoord direct zichtbaar maken. Bij twijfel: true. Bij foto's van personen, dieren, steden, kaarten: false.
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
 
 KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON schrijft:
