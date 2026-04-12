@@ -181,7 +181,10 @@ export default function App() {
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
       const playCount = parseInt(localStorage.getItem(playedKey) || "0", 10);
-      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions;
+      const questionsPerRound = quiz.questionCount || 10;
+      const standardPoolSize = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length;
+      const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
+      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
