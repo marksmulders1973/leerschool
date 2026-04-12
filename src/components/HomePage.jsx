@@ -376,7 +376,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             boxShadow: "0 4px 16px rgba(37,211,102,0.3)",
           }}
           onClick={() => {
-            const text = `Ken je studiebol al?\n\nSamen slim worden met leuke quizzen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.studiebol.online`;
+            const text = `Ken je studiebol al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.studiebol.online`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
           }}
         >
