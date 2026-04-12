@@ -13,7 +13,7 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
   const [sent, setSent] = useState(false);
   const [showGame, setShowGame] = useState(false);
 
-  const subjLabel = SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
+  const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
   const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Toets: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
 
@@ -48,9 +48,15 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
           {subjLabel} · {LEVELS.find((l) => l.id === latest.level)?.label}
         </p>
 
+        <div style={{ textAlign: "center", marginBottom: 8 }}>
+          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 38, fontWeight: 700, color: "#fff", lineHeight: 1.1 }}>
+            {latest.score} <span style={{ fontSize: 22, color: "#8899aa" }}>van de</span> {latest.total}
+          </div>
+          <div style={{ fontSize: 14, color: "#8899aa", marginTop: 2 }}>vragen goed</div>
+        </div>
         <div style={styles.scoreCircle}>
           <div style={styles.scoreNumber}>{latest.percentage}%</div>
-          <div style={styles.scoreDetail}>{latest.score} van {latest.total} goed</div>
+          <div style={styles.scoreDetail}>{grade}</div>
         </div>
 
         <div style={styles.resultDetails}>

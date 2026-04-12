@@ -231,6 +231,7 @@ export default function App() {
     const result = {
       id: Date.now().toString(), player: userName, quizId: finalState.quiz.id,
       subject: finalState.quiz.subject, level: finalState.quiz.level,
+      topic: finalState.quiz.topic || null,
       score: finalState.score, total: finalState.questions.length,
       percentage: Math.round((finalState.score / finalState.questions.length) * 100),
       answers: finalState.answers, questions: finalState.questions, completedAt: new Date().toISOString(),
