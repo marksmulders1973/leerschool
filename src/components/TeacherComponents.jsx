@@ -299,7 +299,7 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
 
         {questions.length === 0 && (
           <div style={{ textAlign: "center", padding: 32, color: "#556677" }}>
-            Geen vragen meer. Ga terug en maak een nieuwe quiz.
+            Geen vragen meer. Ga terug en maak een nieuwe toets.
           </div>
         )}
 
@@ -311,7 +311,7 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
             disabled={questions.length === 0}
             onClick={() => onConfirm(questions.map(({ id, ...rest }) => rest))}
           >
-            🚀 Quiz starten ({questions.length} vragen)
+            🚀 Toets starten ({questions.length} vragen)
           </button>
         </div>
       </div>
@@ -366,14 +366,14 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const handleSave = () => {
     const subjectId = eigenMode ? "vrij" : subject;
     const defaultTitle = eigenMode
-      ? (topic ? `${topic} Quiz` : "Vrij onderwerp Quiz")
-      : (SUBJECTS.find((s) => s.id === subject)?.label + " Quiz");
+      ? (topic ? `${topic} Toets` : "Vrij onderwerp Toets")
+      : (SUBJECTS.find((s) => s.id === subject)?.label + " Toets");
     onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null });
   };
 
   return (
     <div style={styles.page}>
-      <Header title="Nieuwe Quiz" subtitle={`Stap ${displayStep} van ${totalSteps}`} onBack={onBack} onHome={onHome} />
+      <Header title="Nieuwe Toets" subtitle={`Stap ${displayStep} van ${totalSteps}`} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         <div style={styles.progressBar}>
           <div style={{ ...styles.progressFill, width: `${(displayStep / totalSteps) * 100}%` }} />
@@ -638,7 +638,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </div>
               )}
               <p style={{ fontSize: 11, color: "#667788", marginTop: 8 }}>
-                {resultMethod === "whatsapp" ? "Leerlingen sturen hun score naar je via WhatsApp na de quiz." : "Leerlingen sturen hun score naar je e-mail na de quiz."}
+                {resultMethod === "whatsapp" ? "Leerlingen sturen hun score naar je via WhatsApp na de toets." : "Leerlingen sturen hun score naar je e-mail na de toets."}
               </p>
 
               {classes.length > 0 && (
@@ -673,7 +673,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               {step === 3 && !topic ? "Overslaan →" : "Volgende →"}
             </button>
           ) : (
-            <button style={styles.nextBtn} onClick={handleSave}>🚀 Quiz aanmaken</button>
+            <button style={styles.nextBtn} onClick={handleSave}>🚀 Toets aanmaken</button>
           )}
         </div>
       </div>
@@ -688,7 +688,7 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
     <div style={styles.page}>
       <div style={styles.lobbyCard}>
         <div style={styles.lobbyLogo}>🎯</div>
-        <h2 style={styles.lobbyTitle}>{isHost ? "Quiz klaar!" : "Wachtkamer"}</h2>
+        <h2 style={styles.lobbyTitle}>{isHost ? "Toets klaar!" : "Wachtkamer"}</h2>
         <p style={styles.lobbySubtitle}>{isHost ? `Code: ${quiz?.code}` : "Wachten tot de leerkracht start..."}</p>
 
         {/* QR code + WhatsApp alleen voor leerkracht */}
@@ -701,8 +701,8 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol quiz";
-            const text = `Doe mee met de studiebol quiz van je leerkracht!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
+            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol toets";
+            const text = `Doe mee met de studiebol toets van je leerkracht!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
             onStart();
           }}

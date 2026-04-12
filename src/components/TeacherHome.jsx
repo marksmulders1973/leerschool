@@ -35,7 +35,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
       : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10);
 
     if (questions.length === 0) {
-      alert("Geen vragen beschikbaar voor deze quiz.");
+      alert("Geen vragen beschikbaar voor deze toets.");
       return;
     }
 
@@ -135,7 +135,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
         <div style={styles.actionRow}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00e676)" }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
-            <span style={{ fontWeight: 700 }}>Nieuwe Quiz</span>
+            <span style={{ fontWeight: 700 }}>Nieuwe Toets</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>
@@ -217,7 +217,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `studiebol Quiz!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
+                        const text = `Studiebol Toets!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                       {q.classId && (() => {
@@ -230,8 +230,8 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                             boxShadow: "0 2px 8px rgba(21,101,192,0.3)",
                           }} onClick={() => {
                             const emails = klas.students.map(s => s.email).filter(Boolean).join(",");
-                            const subject = encodeURIComponent(`Studiebol quiz: ${q.title || subj?.label || "Quiz"}`);
-                            const body = encodeURIComponent(`Hallo,\n\nDoe mee met de Studiebol quiz!\n\n📚 ${q.topic || subj?.label || "Quiz"}\n🎯 Code: ${q.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
+                            const subject = encodeURIComponent(`Studiebol toets: ${q.title || subj?.label || "Toets"}`);
+                            const body = encodeURIComponent(`Hallo,\n\nDoe mee met de Studiebol toets!\n\n📚 ${q.topic || subj?.label || "Toets"}\n🎯 Code: ${q.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
                             window.open(`mailto:${emails}?subject=${subject}&body=${body}`, "_blank");
                           }}>📧 Mail klas</button>
                         );
@@ -242,7 +242,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                       )}
                       {q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 3 && (() => {
                         const klas = classes.find(c => c.id === q.classId);
-                        const msg = `⏰ Herinnering!\n\nDe deadline voor de Studiebol quiz nadert!\n\n📚 ${q.title || subj?.label || "Quiz"}\n🎯 Code: ${q.code}\n📅 Deadline: ${formatDate(q.deadline)}\n\n👉 Doe mee via: https://www.studiebol.online?code=${q.code}`;
+                        const msg = `⏰ Herinnering!\n\nDe deadline voor de Studiebol toets nadert!\n\n📚 ${q.title || subj?.label || "Toets"}\n🎯 Code: ${q.code}\n📅 Deadline: ${formatDate(q.deadline)}\n\n👉 Doe mee via: https://www.studiebol.online?code=${q.code}`;
                         const phones = klas?.students?.map(s => s.phone).filter(Boolean) || [];
                         return (
                           <button style={{ ...styles.smallButton, background: "#f57c00", boxShadow: "0 2px 8px rgba(245,124,0,0.3)" }}
@@ -256,7 +256,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                         background: "#c62828",
                         boxShadow: "0 2px 8px rgba(198,40,40,0.3)",
                       }} onClick={() => {
-                        if (window.confirm(`Quiz "${q.title || subj?.label}" verwijderen?`)) onDeleteQuiz(q.id);
+                        if (window.confirm(`Toets "${q.title || subj?.label}" verwijderen?`)) onDeleteQuiz(q.id);
                       }}>🗑️ Verwijder</button>
                     </div>
                   </div>

@@ -22,12 +22,12 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
     const upper = code.trim().toUpperCase();
     const local = quizzes.find((q) => q.code.toUpperCase() === upper);
     if (local?.deadline && new Date(local.deadline) < new Date()) {
-      setError(`Deze quiz is verlopen op ${new Date(local.deadline).toLocaleDateString("nl-NL")} 📅`);
+      setError(`Deze toets is verlopen op ${new Date(local.deadline).toLocaleDateString("nl-NL")} 📅`);
       return;
     }
     setError("");
     const result = await onJoinQuiz(upper);
-    if (result === "not_found") setError("Quiz niet gevonden 😕");
+    if (result === "not_found") setError("Toets niet gevonden 😕");
   };
 
   const recentProgress = progress.slice(-5).reverse();
@@ -130,7 +130,7 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
             }}
           >
-            🔑 Ik heb een quizcode {showCode ? "▲" : "▼"}
+            🔑 Ik heb een toetscode {showCode ? "▲" : "▼"}
           </button>
           {showCode && (
             <div style={{ marginTop: 10 }}>
@@ -139,7 +139,7 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
                   style={{ ...styles.textInput, flex: 1, textTransform: "uppercase", letterSpacing: 3, fontWeight: 700, textAlign: "center" }}
                   value={code}
                   onChange={(e) => { setCode(e.target.value.toUpperCase()); setError(""); }}
-                  placeholder="QUIZCODE"
+                  placeholder="TOETSCODE"
                   maxLength={6}
                   autoFocus
                 />

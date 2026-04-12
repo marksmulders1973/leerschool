@@ -134,7 +134,7 @@ export default function App() {
       .single()
       .then(({ data, error }) => {
         if (error || !data) {
-          alert(`❌ Quiz met code "${pendingCode}" niet gevonden.\n\nVraag de leerkracht om een nieuwe link te sturen.`);
+          alert(`❌ Toets met code "${pendingCode}" niet gevonden.\n\nVraag de leerkracht om een nieuwe link te sturen.`);
           setPendingCode("");
           return;
         }

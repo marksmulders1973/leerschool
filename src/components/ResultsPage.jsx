@@ -15,7 +15,7 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
 
   const subjLabel = SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
-  const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Quiz: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
+  const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Toets: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
 
   const shareText = `📊 Studiebol resultaat\n\n👤 ${userName || "Leerling"}\n📚 ${subjLabel}${quiz?.topic ? ` · ${quiz.topic}` : ""}\n✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ ${grade}`;
 
