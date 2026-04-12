@@ -157,7 +157,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
 
         {quizzes.length > 0 && (
           <>
-            <h3 style={styles.sectionTitle}>Jouw quizzen</h3>
+            <h3 style={styles.sectionTitle}>Jouw toetsen</h3>
             <div style={styles.quizList}>
               {quizzes.map((q) => {
                 const subj = SUBJECTS.find((s) => s.id === q.subject);
@@ -217,7 +217,10 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                         background: "#25D366",
                         boxShadow: "0 2px 8px rgba(37,211,102,0.3)",
                       }} onClick={() => {
-                        const text = `Studiebol Toets!\n\n📚 ${q.topic || subj?.label || "Vrij onderwerp"}\n🎯 Code: ${q.code}\n⏰ ${q.deadline ? `Deadline: ${formatDate(q.deadline)}` : "Geen deadline"}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}`;
+                        const vak = q.topic || subj?.label || "Vrij onderwerp";
+                        const niveau = LEVELS.find(l => l.id === q.level)?.label || "";
+                        const deadline = q.deadline ? `\n📅 Deadline: ${formatDate(q.deadline)}` : "";
+                        const text = `🎓 *Studiebol* — Toets klaarstaan!\n\n📚 ${vak}${niveau ? ` · ${niveau}` : ""}${deadline}\n\nKlik op de link en start direct:\n👉 https://www.studiebol.online?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                       {q.classId && (() => {
@@ -230,8 +233,10 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                             boxShadow: "0 2px 8px rgba(21,101,192,0.3)",
                           }} onClick={() => {
                             const emails = klas.students.map(s => s.email).filter(Boolean).join(",");
-                            const subject = encodeURIComponent(`Studiebol toets: ${q.title || subj?.label || "Toets"}`);
-                            const body = encodeURIComponent(`Hallo,\n\nDoe mee met de Studiebol toets!\n\n📚 ${q.topic || subj?.label || "Toets"}\n🎯 Code: ${q.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
+                            const vak2 = q.topic || subj?.label || "Toets";
+                            const niveau2 = LEVELS.find(l => l.id === q.level)?.label || "";
+                            const subject = encodeURIComponent(`Studiebol toets: ${vak2}`);
+                            const body = encodeURIComponent(`Hallo,\n\nEr staat een toets voor je klaar op Studiebol!\n\n📚 ${vak2}${niveau2 ? ` · ${niveau2}` : ""}\n\nKlik op de link en start direct:\n👉 https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
                             window.open(`mailto:${emails}?subject=${subject}&body=${body}`, "_blank");
                           }}>📧 Mail klas</button>
                         );
@@ -242,7 +247,8 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                       )}
                       {q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 3 && (() => {
                         const klas = classes.find(c => c.id === q.classId);
-                        const msg = `⏰ Herinnering!\n\nDe deadline voor de Studiebol toets nadert!\n\n📚 ${q.title || subj?.label || "Toets"}\n🎯 Code: ${q.code}\n📅 Deadline: ${formatDate(q.deadline)}\n\n👉 Doe mee via: https://www.studiebol.online?code=${q.code}`;
+                        const vak3 = q.topic || subj?.label || "Toets";
+                        const msg = `⏰ *Herinnering* — Studiebol\n\n📚 ${vak3}\n📅 Deadline: ${formatDate(q.deadline)}\n\nHeb je al geoefend? Klik en start:\n👉 https://www.studiebol.online?code=${q.code}`;
                         const phones = klas?.students?.map(s => s.phone).filter(Boolean) || [];
                         return (
                           <button style={{ ...styles.smallButton, background: "#f57c00", boxShadow: "0 2px 8px rgba(245,124,0,0.3)" }}

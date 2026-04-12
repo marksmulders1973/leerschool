@@ -701,8 +701,9 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol toets";
-            const text = `Doe mee met de studiebol toets van je leerkracht!\n\n📚 ${vakOfOnderwerp}\n🎯 Code: ${quiz?.code}\n\n👉 Direct meedoen: https://www.studiebol.online?code=${quiz?.code}`;
+            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol";
+            const niveau = LEVELS.find(l => l.id === quiz?.level)?.label || "";
+            const text = `🎓 *Studiebol* — Toets gestart!\n\n📚 ${vakOfOnderwerp}${niveau ? ` · ${niveau}` : ""}\n\nKlik op de link en doe mee:\n👉 https://www.studiebol.online?code=${quiz?.code}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
             onStart();
           }}
