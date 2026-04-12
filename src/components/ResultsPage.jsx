@@ -54,13 +54,23 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
         </div>
 
         <div style={styles.resultDetails}>
-          {latest.answers.map((a, i) => (
-            <div key={i} style={styles.resultRow}>
-              <span style={{ width: 24, textAlign: "center" }}>{a.isCorrect ? "✅" : "❌"}</span>
-              <span style={{ flex: 1, fontSize: 13 }}>Vraag {i + 1}</span>
-              {a.isCorrect && <span style={{ fontSize: 11, color: "#8899aa" }}>{a.timeLeft}s over</span>}
-            </div>
-          ))}
+          {latest.answers.map((a, i) => {
+            const q = latest.questions?.[a.questionIndex ?? i];
+            return (
+              <div key={i} style={{ ...styles.resultRow, flexDirection: "column", alignItems: "flex-start", gap: 4 }}>
+                <div style={{ display: "flex", alignItems: "flex-start", gap: 8, width: "100%" }}>
+                  <span style={{ width: 24, flexShrink: 0, textAlign: "center", marginTop: 1 }}>{a.isCorrect ? "✅" : "❌"}</span>
+                  <span style={{ flex: 1, fontSize: 13, color: "#c0d0e0", lineHeight: 1.4 }}>{q?.q || `Vraag ${i + 1}`}</span>
+                </div>
+                {!a.isCorrect && q && (
+                  <div style={{ marginLeft: 32, fontSize: 12, color: "#69f0ae" }}>
+                    ✔ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
+                    {a.selected >= 0 && <span style={{ color: "#ff7070" }}> · Jij: {q.options?.[a.selected]}</span>}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {/* Deel resultaat */}
