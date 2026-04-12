@@ -48,9 +48,15 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
   const goToNext = () => {
     setWaitingForUser(false);
+    setShowWrongOverlay(false);
     const ns = nextStateRef.current || gameState;
-    if (ns.currentQ >= ns.questions.length - 1) onFinish(ns);
-    else setGameState({ ...ns, currentQ: ns.currentQ + 1 });
+    console.log("[goToNext] currentQ:", ns.currentQ, "total:", ns.questions?.length, "isLast:", ns.currentQ >= (ns.questions?.length ?? 0) - 1);
+    if (ns.currentQ >= (ns.questions?.length ?? 0) - 1) {
+      console.log("[goToNext] calling onFinish");
+      try { onFinish(ns); } catch(e) { console.error("[goToNext] onFinish error:", e); alert("Resultaten fout: " + e.message); }
+    } else {
+      setGameState({ ...ns, currentQ: ns.currentQ + 1 });
+    }
   };
 
   useEffect(() => {
