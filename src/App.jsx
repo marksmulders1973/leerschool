@@ -177,6 +177,7 @@ export default function App() {
     } else {
       const hasTopic = quiz.topic && quiz.topic.trim().length > 0;
       const hasTextbook = !!quiz.textbook?.bookName;
+      const hasPredefinedTopicQuestions = hasTopic && (TOPIC_QUESTIONS[quiz.topic.toLowerCase()] || []).length > 0;
 
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
@@ -184,7 +185,7 @@ export default function App() {
       const questionsPerRound = quiz.questionCount || 10;
       const standardPoolSize = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length;
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
-      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions || hasExhaustedPool;
+      const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || !hasSampleQuestions || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
