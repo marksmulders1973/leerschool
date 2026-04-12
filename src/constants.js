@@ -2499,7 +2499,7 @@ export const SAMPLE_QUESTIONS = {
   wiskunde: {
     klas1: [
       { q: "Wat is de uitkomst van 3x + 5 = 14?", options: ["x = 2", "x = 3", "x = 4", "x = 6"], answer: 1, explanation: "3x = 14 - 5 = 9, dus x = 3." },
-      { q: "Wat is de oppervlakte van een rechthoek van 6 × 4 cm?", options: ["10 cm²", "20 cm²", "24 cm²", "48 cm²"], answer: 2, explanation: "Oppervlakte rechthoek = lengte × breedte = 6 × 4 = 24 cm².", imageSearch: "Rechthoek" },
+      { q: "Wat is de oppervlakte van een rechthoek van 6 × 4 cm?", options: ["10 cm²", "20 cm²", "24 cm²", "48 cm²"], answer: 2, explanation: "Oppervlakte rechthoek = lengte × breedte = 6 × 4 = 24 cm².", imageSearch: "Rechthoek", imageInExplanation: true },
       { q: "Hoeveel is 15% van 80?", options: ["8", "10", "12", "15"], answer: 2, explanation: "15% van 80 = 0,15 × 80 = 12." },
       { q: "Wat is de omtrek van een vierkant met zijde 7 cm?", options: ["14 cm", "21 cm", "28 cm", "49 cm"], answer: 2, explanation: "Omtrek vierkant = 4 × zijde = 4 × 7 = 28 cm.", imageSearch: "Vierkant" },
       { q: "Welk getal komt na de komma bij 7 ÷ 4?", options: ["1,5", "1,75", "2,0", "2,25"], answer: 1, explanation: "7 ÷ 4 = 1,75." },
@@ -2525,7 +2525,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Hoeveel graden heeft een vierkant in totaal?", options: ["90°", "180°", "270°", "360°"], answer: 3, explanation: "Een vierkant heeft 4 rechte hoeken van 90° elk: 4 × 90° = 360°.", imageSearch: "Vierkant" },
       { q: "Bereken: (3 + 7) × 4", options: ["25", "30", "40", "50"], answer: 2, explanation: "(3+7) = 10 en dan × 4 = 40. Haakjes eerst." },
       { q: "Wat is 0,1 + 0,9?", options: ["0,10", "0,19", "1,0", "1,9"], answer: 2, explanation: "0,1 + 0,9 = 1,0." },
-      { q: "Een kamer is 5 m lang en 4 m breed. Bereken de oppervlakte.", options: ["9 m²", "18 m²", "20 m²", "20 m"], answer: 2, explanation: "Oppervlakte = lengte × breedte = 5 × 4 = 20 m².", imageSearch: "Rechthoek" },
+      { q: "Een kamer is 5 m lang en 4 m breed. Bereken de oppervlakte.", options: ["9 m²", "18 m²", "20 m²", "20 m"], answer: 2, explanation: "Oppervlakte = lengte × breedte = 5 × 4 = 20 m².", imageSearch: "Rechthoek", imageInExplanation: true },
       { q: "Wat is de wortel van 49?", options: ["5", "6", "7", "8"], answer: 2, explanation: "√49 = 7, want 7 × 7 = 49." },
     ],
     klas3: [

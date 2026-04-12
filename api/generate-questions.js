@@ -169,6 +169,7 @@ Regels:
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
 - imageSearch: geef een Nederlandse Wikipedia-zoekterm mee als een foto of kaart de vraag verduidelijkt. Gebruik dit bij: landen/eilanden/steden (bijv. "Kalimantan"), historische personen (bijv. "Anne Frank"), dieren/planten (bijv. "Blauwe vinvis"), vlaggen (bijv. "Vlag van Brazilië"), gebouwen/monumenten. Gebruik null als geen afbeelding de vraag verbetert.
 - imageInExplanation: zet dit op true als het Wikipedia-plaatje het antwoord zou verraden als leerlingen het VOOR het antwoorden zien. Dit geldt voor: formules (bijv. a²+b²=c²), berekeningen (bijv. 3/4=0,75), grafieken die de oplossing tonen, of diagrammen die het juiste antwoord direct zichtbaar maken. Bij twijfel: true. Bij foto's van personen, dieren, steden, kaarten: false.
+- Voor meetkundevragen met specifieke maten (bijv. oppervlakte van een rechthoek van 8×6 cm): gebruik GEEN imageSearch maar teken een SVG met de maten erop — zo ziet de leerling de figuur zonder dat Wikipedia een gelabelde afbeelding toont met dezelfde maten als de vraag.
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
 
 KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON schrijft:
