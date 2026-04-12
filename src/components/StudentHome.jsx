@@ -173,12 +173,13 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
         {quizzes.filter((q) => q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 1 && !progress.some((p) => p.quizId === q.id)).map((q) => {
           const subj = SUBJECTS.find((s) => s.id === q.subject);
           return (
-            <div key={"banner-" + q.id} style={{ background: "linear-gradient(135deg, #b71c1c, #e53935)", borderRadius: 14, padding: "14px 16px", marginBottom: 12, display: "flex", alignItems: "center", gap: 12, animation: "pulse 2s infinite" }}>
+            <div key={"banner-" + q.id} onClick={() => { SoundEngine.play("click"); onJoinQuiz(q.code); }} style={{ background: "linear-gradient(135deg, #b71c1c, #e53935)", borderRadius: 14, padding: "14px 16px", marginBottom: 12, display: "flex", alignItems: "center", gap: 12, animation: "pulse 2s infinite", cursor: "pointer" }}>
               <span style={{ fontSize: 28 }}>🚨</span>
               <div style={{ flex: 1 }}>
                 <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Deadline bijna! {subj?.icon} {q.title}</div>
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.8)" }}>{daysUntil(q.deadline) === 0 ? "Vandaag de laatste dag!" : "Nog 1 dag — doe het nu!"}</div>
               </div>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", background: "rgba(0,0,0,0.25)", borderRadius: 8, padding: "6px 10px" }}>Start ›</span>
             </div>
           );
         })}
@@ -192,7 +193,7 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
               const remaining = daysUntil(q.deadline);
               const done = progress.some((p) => p.quizId === q.id);
               return (
-                <div key={q.id} style={{ ...styles.assignmentCard, opacity: done ? 0.6 : 1 }}>
+                <div key={q.id} onClick={() => { if (!done) { SoundEngine.play("click"); onJoinQuiz(q.code); } }} style={{ ...styles.assignmentCard, opacity: done ? 0.6 : 1, cursor: done ? "default" : "pointer" }}>
                   <span style={{ fontSize: 24 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700, color: "#e0e6f0" }}>{q.title}</div>
