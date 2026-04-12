@@ -1,14 +1,21 @@
-export default async function handler(req, res) {
+export const config = { runtime: 'edge' };
+
+const json = (data, status = 200) => new Response(JSON.stringify(data), {
+  status,
+  headers: { 'Content-Type': 'application/json' },
+});
+
+export default async function handler(req) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return json({ error: 'Method not allowed' }, 405);
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return res.status(500).json({ error: 'API key not configured' });
+    return json({ error: 'API key not configured' }, 500);
   }
 
-  const { subject, level, count = 5, textbook, topic } = req.body;
+  const { subject, level, count = 5, textbook, topic } = await req.json();
 
   // ─── Content Safety Filter ─────────────────────────────────────
   // Educatieve onderwerpen die altijd toegestaan zijn
@@ -48,10 +55,7 @@ export default async function handler(req, res) {
 
   for (const input of allInputs) {
     if (!checkInput(input)) {
-      return res.status(400).json({
-        error: 'Ongepaste invoer gedetecteerd.',
-        questions: []
-      });
+      return json({ error: 'Ongepaste invoer gedetecteerd.', questions: [] }, 400);
     }
   }
 
@@ -255,9 +259,9 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
       }
     }
 
-    return res.status(200).json({ questions });
+    return json({ questions });
   } catch (error) {
     console.error("Question generation error:", error);
-    return res.status(500).json({ error: "Failed to generate questions" });
+    return json({ error: "Failed to generate questions" }, 500);
   }
 }
