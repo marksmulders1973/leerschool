@@ -181,7 +181,7 @@ export default function App() {
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
       const playCount = parseInt(localStorage.getItem(playedKey) || "0", 10);
-      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions || (playCount % 2 === 1);
+      const useAIThisRound = hasTopic || hasTextbook || !hasSampleQuestions;
       if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
