@@ -65,6 +65,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   }, [gameState.currentQ, gameState.timePerQuestion]);
 
   useEffect(() => {
+    // Direct URL heeft prioriteit boven Wikipedia-zoekopdracht
+    if (question?.imageUrl) { setQuestionImage(question.imageUrl); return; }
     const term = question?.imageSearch;
     if (!term) return;
     let cancelled = false;
