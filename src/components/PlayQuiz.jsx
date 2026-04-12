@@ -49,8 +49,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const goToNext = () => {
     setWaitingForUser(false);
     const ns = nextStateRef.current || gameState;
-    if (ns.currentQ >= ns.questions.length - 1) onFinish(ns);
-    else setGameState({ ...ns, currentQ: ns.currentQ + 1 });
+    if (gameState.currentQ >= gameState.questions.length - 1) onFinish(ns);
+    else setGameState({ ...ns, currentQ: gameState.currentQ + 1 });
   };
 
   useEffect(() => {
