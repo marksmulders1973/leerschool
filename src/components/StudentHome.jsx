@@ -118,22 +118,15 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
             </button>
           </div>
         )}
-        <div style={styles.joinSection}>
+        <div style={{ textAlign: "center", marginBottom: 8 }}>
           <button
             onClick={() => { setShowCode(v => !v); setError(""); setCode(""); }}
-            style={{
-              width: "100%", padding: "12px 16px", borderRadius: 12, cursor: "pointer",
-              background: showCode ? "#0a2a18" : "#1e2d45",
-              border: `2px solid ${showCode ? "#00c853" : "#2a3f5f"}`,
-              color: showCode ? "#00e676" : "#8eaadb",
-              fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 14,
-              display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-            }}
+            style={{ background: "none", border: "none", color: "#4a6080", fontSize: 12, cursor: "pointer", padding: "4px 8px", textDecoration: "underline" }}
           >
-            🔑 Ik heb een toetscode {showCode ? "▲" : "▼"}
+            🔑 Code van leerkracht ontvangen?
           </button>
           {showCode && (
-            <div style={{ marginTop: 10 }}>
+            <div style={{ marginTop: 8 }}>
               <div style={styles.codeInputRow}>
                 <input
                   style={{ ...styles.textInput, flex: 1, textTransform: "uppercase", letterSpacing: 3, fontWeight: 700, textAlign: "center" }}
