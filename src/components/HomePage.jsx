@@ -246,7 +246,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           />
         </div>
 
-        <p style={styles.subtitle}>Jouw slimme studiebuddy!</p>
+        <p style={styles.subtitle}>Ik ken alle Nederlandse schoolboeken</p>
 
         {/* Tagline */}
         <p style={{
