@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { LEVELS } from "../constants.js";
 
@@ -15,6 +15,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [level, setLevel] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
+  const [activeRole, setActiveRole] = useState(0);
+  const audioCtxRef = useRef(null);
   const [showOnboarding, setShowOnboarding] = useState(() => {
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
@@ -26,6 +28,38 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
   const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4], teacher: [] };
+
+  const playBeep = (freq) => {
+    try {
+      if (!audioCtxRef.current) audioCtxRef.current = new (window.AudioContext || window.webkitAudioContext)();
+      const ctx = audioCtxRef.current;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = "sine";
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.06, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.18);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.18);
+    } catch(e) {}
+  };
+
+  // Trap-effect: leerling → student → leerkracht → loop
+  useEffect(() => {
+    if (step !== "role") return;
+    const freqs = [440, 554, 659]; // do-mi-sol
+    const timer = setInterval(() => {
+      setActiveRole(prev => {
+        const next = (prev + 1) % 3;
+        playBeep(freqs[next]);
+        return next;
+      });
+    }, 750);
+    playBeep(freqs[0]);
+    return () => clearInterval(timer);
+  }, [step]);
 
   useEffect(() => {
     try {
@@ -239,25 +273,29 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)", glowAnim: "roleGlowBlue 2s ease-in-out infinite" },
                 { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 4", color: "#7c3aed", glow: "rgba(124,58,237,0.35)", glowAnim: "roleGlowPurple 2s ease-in-out infinite 0.3s" },
                 { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)", glowAnim: "roleGlowGreen 2s ease-in-out infinite 0.6s" },
-              ].map(({ role, emoji, label, sub, color, glow, glowAnim }) => (
+              ].map(({ role, emoji, label, sub, color, glow, glowAnim }, idx) => {
+              const lit = activeRole === idx;
+              return (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   width: "100%",
-                  border: `1.5px solid ${color}55`,
+                  border: lit ? `2px solid ${color}` : `1.5px solid ${color}44`,
                   padding: "16px 20px",
                   cursor: "pointer",
                   borderRadius: 18,
-                  background: `linear-gradient(135deg, ${color}18 0%, ${color}08 100%)`,
-                  boxShadow: `0 4px 20px ${glow}`,
+                  background: lit
+                    ? `linear-gradient(135deg, ${color}35 0%, ${color}18 100%)`
+                    : `linear-gradient(135deg, ${color}10 0%, ${color}05 100%)`,
+                  boxShadow: lit
+                    ? `0 0 0 3px ${color}33, 0 8px 32px ${glow}`
+                    : `0 2px 10px rgba(0,0,0,0.3)`,
                   display: "flex",
                   alignItems: "center",
                   gap: 16,
                   textAlign: "left",
-                  transition: "transform 0.15s ease, box-shadow 0.15s ease",
-                }}
-                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 8px 28px ${glow}`; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = `0 4px 20px ${glow}`; }}
-                >
-                  <span style={{ fontSize: 32, flexShrink: 0 }}>{emoji}</span>
+                  transform: lit ? "scale(1.03)" : "scale(1)",
+                  transition: "all 0.3s ease",
+                }}>
+                  <span style={{ fontSize: lit ? 36 : 32, flexShrink: 0, transition: "font-size 0.3s ease" }}>{emoji}</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 2 }}>
                       Ik ben een
@@ -266,14 +304,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       fontFamily: "'Fredoka', sans-serif",
                       fontWeight: 700,
                       fontSize: 22,
-                      color: "#ffffff",
+                      color: lit ? "#ffffff" : "rgba(255,255,255,0.7)",
                       lineHeight: 1.1,
-                      animation: glowAnim,
+                      textShadow: lit ? `0 0 12px ${color}, 0 0 30px ${color}88` : "none",
+                      transition: "all 0.3s ease",
                     }}>{label}</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>{sub}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.35)", marginTop: 3, transition: "color 0.3s ease" }}>{sub}</div>
                   </div>
-                  <span style={{ fontSize: 20, color: color, flexShrink: 0, animation: "arrowBounce 1.2s ease-in-out infinite" }}>›</span>
+                  <span style={{ fontSize: 20, color: color, flexShrink: 0, opacity: lit ? 1 : 0.35, transform: lit ? "translateX(4px)" : "translateX(0)", transition: "all 0.3s ease" }}>›</span>
                 </button>
+              );
+            }}
               ))}
             </div>
           </div>
