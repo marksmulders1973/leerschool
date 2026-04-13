@@ -271,7 +271,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
                 { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)", glowAnim: "roleGlowBlue 2s ease-in-out infinite" },
-                { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 4", color: "#7c3aed", glow: "rgba(124,58,237,0.35)", glowAnim: "roleGlowPurple 2s ease-in-out infinite 0.3s" },
+                { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 6 · MAVO/HAVO/VWO/Gym", color: "#7c3aed", glow: "rgba(124,58,237,0.35)", glowAnim: "roleGlowPurple 2s ease-in-out infinite 0.3s" },
                 { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)", glowAnim: "roleGlowGreen 2s ease-in-out infinite 0.6s" },
               ].map(({ role, emoji, label, sub, color, glow, glowAnim }, idx) => {
               const lit = activeRole === idx;
