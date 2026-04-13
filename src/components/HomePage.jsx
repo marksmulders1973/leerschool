@@ -234,16 +234,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360 }}>
-            <p style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: 13,
-              color: "rgba(255,255,255,0.45)",
-              textAlign: "center",
-              marginBottom: 14,
-              marginTop: 0,
-              letterSpacing: 0.5,
-              textTransform: "uppercase",
-            }}>Waar voel jij je thuis?</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
                 { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)" },
