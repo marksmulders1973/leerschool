@@ -228,22 +228,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           Oefen met <strong style={{ color: "#00d4ff" }}>echte examenvragen</strong> voor rekenen, taal, aardrijkskunde en meer
         </p>
 
-        {/* Level badges */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 24, flexWrap: "wrap", justifyContent: "center" }}>
-          {["📚 groep 1 t/m 8", "🎓 klas 1 t/m 4"].map(label => (
-            <span key={label} style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: 12,
-              fontWeight: 700,
-              color: "rgba(255,255,255,0.85)",
-              background: "rgba(0,212,255,0.12)",
-              border: "1px solid rgba(0,212,255,0.25)",
-              borderRadius: 20,
-              padding: "4px 12px",
-            }}>{label}</span>
-          ))}
-        </div>
-
         <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -16, marginBottom: 20, textAlign: "center" }}>
           © Smulsoft &nbsp;·&nbsp; <a href="/privacy.html" style={{ color: "#556677" }}>Privacybeleid</a>
         </p>
