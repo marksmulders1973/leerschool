@@ -7,6 +7,9 @@ import Header from "./Header.jsx";
 const schoolTypeMatchesBook = (bookName, schoolType) => {
   if (!schoolType || !bookName) return false;
   const n = bookName.toLowerCase();
+  // Boek heeft expliciet schooltype in de naam → exacte match
+  const hasTypeInName = n.includes("mavo") || n.includes("vmbo") || n.includes("havo") || n.includes("vwo") || n.includes("gym");
+  if (!hasTypeInName) return true; // universeel boek: geschikt voor elk niveau
   if (schoolType === "mavo") return n.includes("mavo") || n.includes("vmbo");
   if (schoolType === "havo") return n.includes("havo");
   if (schoolType === "vwo") return n.includes("vwo");
