@@ -249,38 +249,58 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         </p>
 
         {step === "role" && (
-          <div style={{ display: "flex", gap: 10, width: "100%", maxWidth: 360 }}>
-            {[
-              { role: "leerling", label: "leerling", sub: "groep 1 t/m 8" },
-              { role: "student", label: "student", sub: "klas 1 t/m 4" },
-              { role: "teacher", label: "leerkracht", sub: "" },
-            ].map(({ role, label, sub }) => (
-              <button key={role} onClick={() => handleRoleClick(role)} style={{
-                flex: 1, border: "none", padding: 0, cursor: "pointer",
-                borderRadius: 18, overflow: "hidden",
-                boxShadow: "0 6px 24px rgba(0,0,0,0.5)",
-                background: "#0d2145", position: "relative",
-              }}>
-                <img src="/bol.jpg" alt={label} style={{
-                  width: "100%", height: 140, objectFit: "cover",
-                  objectPosition: "center center", display: "block",
-                }} />
-                <div style={{
-                  background: "linear-gradient(to bottom, rgba(13,33,69,0) 0%, rgba(13,33,69,0.95) 100%)",
-                  padding: "10px 6px 12px",
-                  display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
-                }}>
-                  <span style={{
-                    fontFamily: "'Fredoka', sans-serif", fontWeight: 700,
-                    fontSize: 15, color: "#ffffff", letterSpacing: 0.3,
-                  }}>{label}</span>
-                  <span style={{
-                    fontFamily: "'Nunito', sans-serif", fontSize: 10,
-                    color: "rgba(255,255,255,0.7)", letterSpacing: 0.2,
-                  }}>{sub || "\u00A0"}</span>
-                </div>
-              </button>
-            ))}
+          <div style={{ width: "100%", maxWidth: 360 }}>
+            <p style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 13,
+              color: "rgba(255,255,255,0.45)",
+              textAlign: "center",
+              marginBottom: 14,
+              marginTop: 0,
+              letterSpacing: 0.5,
+              textTransform: "uppercase",
+            }}>Waar voel jij je thuis?</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {[
+                { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)" },
+                { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 4", color: "#7c3aed", glow: "rgba(124,58,237,0.35)" },
+                { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)" },
+              ].map(({ role, emoji, label, sub, color, glow }) => (
+                <button key={role} onClick={() => handleRoleClick(role)} style={{
+                  width: "100%",
+                  border: `1.5px solid ${color}55`,
+                  padding: "16px 20px",
+                  cursor: "pointer",
+                  borderRadius: 18,
+                  background: `linear-gradient(135deg, ${color}18 0%, ${color}08 100%)`,
+                  boxShadow: `0 4px 20px ${glow}`,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                  textAlign: "left",
+                  transition: "transform 0.15s ease, box-shadow 0.15s ease",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = `0 8px 28px ${glow}`; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = `0 4px 20px ${glow}`; }}
+                >
+                  <span style={{ fontSize: 32, flexShrink: 0 }}>{emoji}</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 2 }}>
+                      Ik ben een
+                    </div>
+                    <div style={{
+                      fontFamily: "'Fredoka', sans-serif",
+                      fontWeight: 700,
+                      fontSize: 22,
+                      color: "#ffffff",
+                      lineHeight: 1.1,
+                    }}>{label}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>{sub}</div>
+                  </div>
+                  <span style={{ fontSize: 20, color: color, flexShrink: 0 }}>›</span>
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
