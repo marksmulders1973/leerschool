@@ -223,6 +223,17 @@ export default function App() {
         return;
       }
     }
+    // Shuffle antwoordopties zodat het correcte antwoord willekeurig verdeeld is over A/B/C/D
+    questions = questions.map((q) => {
+      if (!q.options || q.options.length < 2) return q;
+      const correctText = q.options[q.answer];
+      const shuffled = [...q.options];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return { ...q, options: shuffled, answer: shuffled.indexOf(correctText) };
+    });
     const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
     localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
     track("quiz_started", { subject: quiz.subject, level: quiz.level, mode, questions_count: questions.length, has_topic: !!(quiz.topic), has_textbook: !!(quiz.textbook?.bookName) });
