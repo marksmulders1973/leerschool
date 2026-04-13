@@ -278,40 +278,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               return (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   width: "100%",
-                  border: lit ? `2px solid ${color}` : `1.5px solid ${color}44`,
-                  padding: "16px 20px",
+                  border: "none",
+                  padding: "18px 20px",
                   cursor: "pointer",
                   borderRadius: 18,
-                  background: lit
-                    ? `linear-gradient(135deg, ${color}35 0%, ${color}18 100%)`
-                    : `linear-gradient(135deg, ${color}10 0%, ${color}05 100%)`,
-                  boxShadow: lit
-                    ? `0 0 0 3px ${color}33, 0 8px 32px ${glow}`
-                    : `0 2px 10px rgba(0,0,0,0.3)`,
+                  background: lit ? "#ffffff" : "rgba(255,255,255,0.06)",
+                  boxShadow: lit ? `0 6px 28px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.4)` : "none",
                   display: "flex",
                   alignItems: "center",
                   gap: 16,
                   textAlign: "left",
-                  transform: lit ? "scale(1.03)" : "scale(1)",
-                  transition: "all 0.3s ease",
+                  transform: lit ? "scale(1.04)" : "scale(1)",
+                  opacity: lit ? 1 : 0.4,
+                  transition: "all 0.35s ease",
                 }}>
-                  <span style={{ fontSize: lit ? 36 : 32, flexShrink: 0, transition: "font-size 0.3s ease" }}>{emoji}</span>
+                  <span style={{ fontSize: 32, flexShrink: 0 }}>{emoji}</span>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 2 }}>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "#888" : "rgba(255,255,255,0.4)", marginBottom: 2, transition: "color 0.35s ease" }}>
                       Ik ben een
                     </div>
                     <div style={{
                       fontFamily: "'Fredoka', sans-serif",
                       fontWeight: 700,
                       fontSize: 22,
-                      color: lit ? "#ffffff" : "rgba(255,255,255,0.7)",
+                      color: lit ? color : "#fff",
                       lineHeight: 1.1,
-                      textShadow: lit ? `0 0 12px ${color}, 0 0 30px ${color}88` : "none",
-                      transition: "all 0.3s ease",
+                      transition: "all 0.35s ease",
                     }}>{label}</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "rgba(255,255,255,0.7)" : "rgba(255,255,255,0.35)", marginTop: 3, transition: "color 0.3s ease" }}>{sub}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "#999" : "rgba(255,255,255,0.3)", marginTop: 3, transition: "color 0.35s ease" }}>{sub}</div>
                   </div>
-                  <span style={{ fontSize: 20, color: color, flexShrink: 0, opacity: lit ? 1 : 0.35, transform: lit ? "translateX(4px)" : "translateX(0)", transition: "all 0.3s ease" }}>›</span>
+                  <span style={{ fontSize: 22, color: lit ? color : "rgba(255,255,255,0.3)", transition: "all 0.35s ease" }}>›</span>
                 </button>
               );
             }}
