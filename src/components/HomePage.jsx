@@ -338,7 +338,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </div>
                 <button onClick={() => setStep("role")} style={{
                   marginLeft: "auto", background: "none", border: "none",
-                  color: "rgba(255,255,255,0.4)", fontSize: 13, cursor: "pointer",
+                  color: "rgba(255,255,255,0.75)", fontSize: 13, cursor: "pointer",
                   fontFamily: "'Nunito', sans-serif",
                 }}>← terug</button>
               </div>
@@ -362,10 +362,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   <label style={{ ...styles.inputLabel, marginBottom: 0 }}>
                     {pendingRole === "leerling" ? "Welke groep zit je in?" : "Welke klas zit je in?"}
                   </label>
-                  <button onClick={() => setLevel("")} style={{
-                    background: "none", border: "none", color: "rgba(255,255,255,0.35)",
-                    fontSize: 12, cursor: "pointer", fontFamily: "'Nunito', sans-serif",
-                  }}>sla over</button>
+                  <button onClick={() => { setLevel(""); setTimeout(handleConfirm, 0); }} style={{
+                    background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)",
+                    borderRadius: 8, padding: "4px 10px",
+                    color: "rgba(255,255,255,0.85)", fontSize: 12, cursor: "pointer",
+                    fontFamily: "'Nunito', sans-serif",
+                  }}>sla over →</button>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {levelOptions[pendingRole].map(n => (

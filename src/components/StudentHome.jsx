@@ -222,9 +222,9 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <span style={{ fontWeight: 600 }}>{subj?.label}</span>
-                    <span style={{ fontSize: 12, color: "#8899aa", marginLeft: 8 }}>{LEVELS.find((l) => l.id === r.level)?.label}</span>
+                    <span style={{ fontSize: 12, color: "#aabbcc", marginLeft: 8 }}>{LEVELS.find((l) => l.id === r.level)?.label}</span>
                     {r.completedAt && (
-                      <div style={{ fontSize: 11, color: "#8899aa", marginTop: 2 }}>
+                      <div style={{ fontSize: 11, color: "#aabbcc", marginTop: 2 }}>
                         {new Date(r.completedAt).toLocaleDateString("nl-NL", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}
                       </div>
                     )}

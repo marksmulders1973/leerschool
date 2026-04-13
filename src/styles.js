@@ -253,7 +253,7 @@ const styles = {
     fontWeight: 700,
     fontSize: 15,
     cursor: "pointer",
-    color: "#8899aa",
+    color: "#c0d0e0",
   },
   nextBtn: {
     background: "linear-gradient(135deg, #00c853, #00e676)",
@@ -346,7 +346,7 @@ const styles = {
   linkBtn: {
     background: "none",
     border: "none",
-    color: "#8899aa",
+    color: "#c0d0e0",
     fontSize: 14,
     cursor: "pointer",
     marginTop: 8,
