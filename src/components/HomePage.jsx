@@ -46,20 +46,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     } catch(e) {}
   };
 
-  // Trap-effect: leerling → student → leerkracht → loop
-  useEffect(() => {
-    if (step !== "role") return;
-    const freqs = [440, 554, 659]; // do-mi-sol
-    const timer = setInterval(() => {
-      setActiveRole(prev => {
-        const next = (prev + 1) % 3;
-        playBeep(freqs[next]);
-        return next;
-      });
-    }, 750);
-    playBeep(freqs[0]);
-    return () => clearInterval(timer);
-  }, [step]);
+  // Geen wisselanimatie meer — balken altijd rustig leesbaar
+  useEffect(() => {}, [step]);
 
   useEffect(() => {
     try {
@@ -273,44 +261,46 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)", glowAnim: "roleGlowBlue 2s ease-in-out infinite" },
                 { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 6 · MAVO/HAVO/VWO/Gym", color: "#7c3aed", glow: "rgba(124,58,237,0.35)", glowAnim: "roleGlowPurple 2s ease-in-out infinite 0.3s" },
                 { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)", glowAnim: "roleGlowGreen 2s ease-in-out infinite 0.6s" },
-              ].map(({ role, emoji, label, sub, color, glow, glowAnim }, idx) => {
-              const lit = activeRole === idx;
-              return (
+              ].map(({ role, emoji, label, sub, color }, idx) => (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   width: "100%",
                   border: "none",
                   padding: "18px 20px",
                   cursor: "pointer",
                   borderRadius: 18,
-                  background: lit ? "#ffffff" : "rgba(255,255,255,0.06)",
-                  boxShadow: lit ? `0 6px 28px rgba(255,255,255,0.25), 0 2px 8px rgba(0,0,0,0.4)` : "none",
+                  background: "#ffffff",
+                  boxShadow: "0 2px 10px rgba(0,0,0,0.18)",
                   display: "flex",
                   alignItems: "center",
                   gap: 16,
                   textAlign: "left",
-                  transform: lit ? "scale(1.04)" : "scale(1)",
-                  opacity: lit ? 1 : 0.4,
-                  transition: "all 0.35s ease",
-                }}>
+                  transition: "transform 0.15s ease, box-shadow 0.15s ease",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = `0 6px 24px rgba(0,0,0,0.22)`; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "0 2px 10px rgba(0,0,0,0.18)"; }}
+                >
                   <span style={{ fontSize: 32, flexShrink: 0 }}>{emoji}</span>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "#888" : "rgba(255,255,255,0.4)", marginBottom: 2, transition: "color 0.35s ease" }}>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#999", marginBottom: 2 }}>
                       Ik ben een
                     </div>
                     <div style={{
                       fontFamily: "'Fredoka', sans-serif",
                       fontWeight: 700,
                       fontSize: 22,
-                      color: lit ? color : "#fff",
+                      color: color,
                       lineHeight: 1.1,
-                      transition: "all 0.35s ease",
                     }}>{label}</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: lit ? "#999" : "rgba(255,255,255,0.3)", marginTop: 3, transition: "color 0.35s ease" }}>{sub}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#bbb", marginTop: 3 }}>{sub}</div>
                   </div>
-                  <span style={{ fontSize: 22, color: lit ? color : "rgba(255,255,255,0.3)", transition: "all 0.35s ease" }}>›</span>
+                  <span style={{ fontSize: 22, color: color }}>›</span>
                 </button>
-              );
-            })}
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: 14, animation: "pulseDown 1.4s ease-in-out infinite" }}>
+              <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
+                ↑ kies jouw rol om te starten
+              </span>
             </div>
           </div>
         )}
@@ -474,6 +464,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         @keyframes roleGlowGreen {
           0%, 100% { text-shadow: 0 0 8px rgba(0,137,123,0.4), 0 0 20px rgba(0,137,123,0.2); }
           50% { text-shadow: 0 0 16px rgba(0,200,160,0.9), 0 0 40px rgba(0,137,123,0.5); }
+        }
+        @keyframes pulseDown {
+          0%, 100% { opacity: 0.5; transform: translateY(0); }
+          50% { opacity: 1; transform: translateY(4px); }
         }
         @keyframes arrowBounce {
           0%, 100% { transform: translateX(0); }
