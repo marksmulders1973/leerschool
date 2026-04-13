@@ -355,7 +355,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   <label style={{ ...styles.inputLabel, marginBottom: 0 }}>
                     {pendingRole === "leerling" ? "Welke groep zit je in?" : "Welke klas zit je in?"}
                   </label>
-                  <button onClick={() => { setLevel(""); setTimeout(handleConfirm, 0); }} style={{
+                  <button onClick={() => setLevel("")} style={{
                     background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)",
                     borderRadius: 8, padding: "4px 10px",
                     color: "rgba(255,255,255,0.85)", fontSize: 12, cursor: "pointer",
@@ -374,32 +374,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     }}>{n}</button>
                   ))}
                 </div>
-                {pendingRole === "student" && (
-                  <div style={{ marginTop: 10 }}>
-                    <label style={{ ...styles.inputLabel, marginBottom: 6, display: "block" }}>
-                      Welk type onderwijs volg je?
-                    </label>
-                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                      {[
-                        { id: "mavo",  label: "MAVO",       color: "#f59e0b" },
-                        { id: "havo",  label: "HAVO",       color: "#3b82f6" },
-                        { id: "vwo",   label: "VWO",        color: "#8b5cf6" },
-                        { id: "gym",   label: "Gymnasium",  color: "#ec4899" },
-                      ].map(({ id, label, color }) => {
-                        const sel = schoolType === id;
-                        return (
-                          <button key={id} onClick={() => setSchoolType(sel ? "" : id)} style={{
-                            padding: "7px 14px", borderRadius: 10, cursor: "pointer",
-                            border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
-                            background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
-                            color: sel ? color : "rgba(255,255,255,0.6)",
-                            fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
-                          }}>{label}</button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
+              </div>
+            )}
+
+            {pendingRole === "student" && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <label style={{ ...styles.inputLabel, marginBottom: 0 }}>Welk type onderwijs volg je?</label>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {[
+                    { id: "mavo", label: "MAVO",      color: "#f59e0b" },
+                    { id: "havo", label: "HAVO",      color: "#3b82f6" },
+                    { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
+                    { id: "gym",  label: "Gymnasium", color: "#ec4899" },
+                  ].map(({ id, label, color }) => {
+                    const sel = schoolType === id;
+                    return (
+                      <button key={id} onClick={() => setSchoolType(sel ? "" : id)} style={{
+                        padding: "7px 14px", borderRadius: 10, cursor: "pointer",
+                        border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
+                        background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
+                        color: sel ? color : "rgba(255,255,255,0.6)",
+                        fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
+                      }}>{label}</button>
+                    );
+                  })}
+                </div>
               </div>
             )}
 
