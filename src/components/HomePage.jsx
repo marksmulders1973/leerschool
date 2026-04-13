@@ -291,7 +291,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       color: color,
                       lineHeight: 1.1,
                     }}>{label}</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#bbb", marginTop: 3 }}>{sub}</div>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, fontWeight: 700, color: "#333", marginTop: 3 }}>{sub}</div>
                   </div>
                   <span style={{ fontSize: 22, color: color }}>›</span>
                 </button>
