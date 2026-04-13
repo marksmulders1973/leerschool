@@ -236,10 +236,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           <div style={{ width: "100%", maxWidth: 360 }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
-                { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)" },
-                { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 4", color: "#7c3aed", glow: "rgba(124,58,237,0.35)" },
-                { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)" },
-              ].map(({ role, emoji, label, sub, color, glow }) => (
+                { role: "leerling", emoji: "🎒", label: "leerling", sub: "groep 1 t/m 8", color: "#0072ff", glow: "rgba(0,114,255,0.35)", glowAnim: "roleGlowBlue 2s ease-in-out infinite" },
+                { role: "student", emoji: "🎓", label: "student", sub: "klas 1 t/m 4", color: "#7c3aed", glow: "rgba(124,58,237,0.35)", glowAnim: "roleGlowPurple 2s ease-in-out infinite 0.3s" },
+                { role: "teacher", emoji: "📋", label: "leerkracht", sub: "maak quizzes voor je klas", color: "#00897b", glow: "rgba(0,137,123,0.35)", glowAnim: "roleGlowGreen 2s ease-in-out infinite 0.6s" },
+              ].map(({ role, emoji, label, sub, color, glow, glowAnim }) => (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   width: "100%",
                   border: `1.5px solid ${color}55`,
@@ -268,10 +268,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       fontSize: 22,
                       color: "#ffffff",
                       lineHeight: 1.1,
+                      animation: glowAnim,
                     }}>{label}</div>
                     <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 3 }}>{sub}</div>
                   </div>
-                  <span style={{ fontSize: 20, color: color, flexShrink: 0 }}>›</span>
+                  <span style={{ fontSize: 20, color: color, flexShrink: 0, animation: "arrowBounce 1.2s ease-in-out infinite" }}>›</span>
                 </button>
               ))}
             </div>
@@ -424,6 +425,22 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         @keyframes confetti { 0% { transform:translateY(0) rotate(0deg); opacity:1; } 100% { transform:translateY(-200px) rotate(720deg); opacity:0; } }
         @keyframes slideIn { from { opacity:0; transform:translateX(-20px); } to { opacity:1; transform:translateX(0); } }
         @keyframes fadeBg { from { opacity:0; } to { opacity:1; } }
+        @keyframes roleGlowBlue {
+          0%, 100% { text-shadow: 0 0 8px rgba(0,114,255,0.4), 0 0 20px rgba(0,114,255,0.2); }
+          50% { text-shadow: 0 0 16px rgba(0,180,255,0.9), 0 0 40px rgba(0,114,255,0.5); }
+        }
+        @keyframes roleGlowPurple {
+          0%, 100% { text-shadow: 0 0 8px rgba(124,58,237,0.4), 0 0 20px rgba(124,58,237,0.2); }
+          50% { text-shadow: 0 0 16px rgba(160,100,255,0.9), 0 0 40px rgba(124,58,237,0.5); }
+        }
+        @keyframes roleGlowGreen {
+          0%, 100% { text-shadow: 0 0 8px rgba(0,137,123,0.4), 0 0 20px rgba(0,137,123,0.2); }
+          50% { text-shadow: 0 0 16px rgba(0,200,160,0.9), 0 0 40px rgba(0,137,123,0.5); }
+        }
+        @keyframes arrowBounce {
+          0%, 100% { transform: translateX(0); }
+          50% { transform: translateX(5px); }
+        }
         @keyframes slimeWave {
           0%, 100% { transform: scaleX(1) scaleY(1) translateY(0px); filter: drop-shadow(0 6px 4px rgba(0,212,255,0.35)); }
           25% { transform: scaleX(1.04) scaleY(0.96) translateY(-2px); filter: drop-shadow(0 10px 6px rgba(0,212,255,0.5)); }
