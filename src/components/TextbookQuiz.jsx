@@ -43,11 +43,16 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
   const bookName = selectedBook ? selectedBook.name : customBook;
   const chapterTitle = selectedBook ? ((CHAPTER_TITLES[selectedBook.id] || [])[parseInt(chapterNum) - 1] || null) : null;
-  const paraTitle = selectedBook && chapterNum && paragraaf
+  const _bookParasData = selectedBook ? (PARAGRAPH_TITLES[selectedBook.id] || {}) : {};
+  const hasSpecificParaTitles = Object.keys(_bookParasData).some(k => k !== '_default');
+  const useParaFreeText = !!selectedBook && !hasSpecificParaTitles;
+  const paraTitle = !useParaFreeText && selectedBook && chapterNum && paragraaf
     ? (((PARAGRAPH_TITLES[selectedBook.id] || {})[chapterNum] || [])[parseInt(paragraaf) - 1] || null)
     : null;
   const chapter = paragraaf
-    ? `${chapterNum}.${paragraaf}${paraTitle ? ` – ${paraTitle}` : ""}`
+    ? (useParaFreeText
+      ? `Hoofdstuk ${chapterNum}, paragraaf: ${paragraaf}`
+      : `${chapterNum}.${paragraaf}${paraTitle ? ` – ${paraTitle}` : ""}`)
     : chapterNum
       ? `Hoofdstuk ${chapterNum}${chapterTitle ? ` – ${chapterTitle}` : ""}`
       : "";
@@ -601,22 +606,32 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                 })()}
               </select>
 
-              {/* Paragraaf dropdown */}
+              {/* Paragraaf dropdown of vrij tekstveld */}
               {chapterNum && (
                 <>
                   <label style={styles.settingLabel}>📄 Paragraaf</label>
-                  <select style={selectStyle} value={paragraaf} onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}>
-                    <option value="">-- Heel hoofdstuk --</option>
-                    {(() => {
-                      const _bookParas = selectedBook ? (PARAGRAPH_TITLES[selectedBook.id] || {}) : {};
-                      const paraTitles = _bookParas[chapterNum] || _bookParas._default || [];
-                      const count = paraTitles.length > 0 ? paraTitles.length : 12;
-                      return Array.from({length: count}, (_, i) => i + 1).map(n => {
-                        const t = paraTitles[n - 1];
-                        return <option key={n} value={n}>{t ? `§${chapterNum}.${n} – ${t}` : `§${chapterNum}.${n}`}</option>;
-                      });
-                    })()}
-                  </select>
+                  {useParaFreeText ? (
+                    <input
+                      type="text"
+                      placeholder="bv. §3.2 of 'Burgerrechten' (optioneel)"
+                      value={paragraaf}
+                      onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}
+                      style={{ ...selectStyle, cursor: "text" }}
+                    />
+                  ) : (
+                    <select style={selectStyle} value={paragraaf} onChange={(e) => { SoundEngine.play("click"); setParagraaf(e.target.value); }}>
+                      <option value="">-- Heel hoofdstuk --</option>
+                      {(() => {
+                        const _bookParas = selectedBook ? (PARAGRAPH_TITLES[selectedBook.id] || {}) : {};
+                        const paraTitles = _bookParas[chapterNum] || _bookParas._default || [];
+                        const count = paraTitles.length > 0 ? paraTitles.length : 12;
+                        return Array.from({length: count}, (_, i) => i + 1).map(n => {
+                          const t = paraTitles[n - 1];
+                          return <option key={n} value={n}>{t ? `§${chapterNum}.${n} – ${t}` : `§${chapterNum}.${n}`}</option>;
+                        });
+                      })()}
+                    </select>
+                  )}
                 </>
               )}
 
