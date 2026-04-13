@@ -395,7 +395,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                       const isMatch = schoolTypeMatchesBook(book.name, userSchoolType);
                       const matchColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
                       return (
-                        <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else if (!book.autoLevel) setLevel(""); setStep(3); }} style={{
+                        <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else if (!book.autoLevel) setLevel(initLevel || ""); setStep(3); }} style={{
                           background: "transparent", border: "none", padding: 0, cursor: "pointer",
                           display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
                         }}>
@@ -617,12 +617,14 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                 </>
               )}
 
-              {/* Niveau - alleen tonen als het niet automatisch bepaald kan worden */}
+              {/* Niveau - alleen grid tonen als er geen profiel-niveau bekend is */}
               {level ? (
                 <div style={{ marginTop: 16, padding: 12, background: "#162033", borderRadius: 12, display: "flex", alignItems: "center", gap: 10 }}>
                   <span>🎓</span>
                   <span style={{ fontWeight: 700, fontSize: 14, color: "#69f0ae" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
-                  {(selectedBook?.autoLevel) && <span style={{ fontSize: 11, color: "#667788", marginLeft: "auto" }}>automatisch bepaald</span>}
+                  <span style={{ fontSize: 11, color: "#667788", marginLeft: "auto" }}>
+                    {selectedBook?.autoLevel ? "automatisch op basis van editie" : initLevel ? "vanuit jouw profiel" : ""}
+                  </span>
                 </div>
               ) : (
                 <>
