@@ -310,8 +310,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   <span style={{ fontSize: 22, color: lit ? color : "rgba(255,255,255,0.3)", transition: "all 0.35s ease" }}>›</span>
                 </button>
               );
-            }}
-              ))}
+            })}
             </div>
           </div>
         )}
