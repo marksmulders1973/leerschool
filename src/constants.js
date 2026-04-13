@@ -1291,7 +1291,7 @@ export const ALL_KNOWN_BOOKS = {
 export const SAMPLE_QUESTIONS = {
   rekenen: {
     groep12: [
-      { q: "Hoeveel vingers zie je?", options: ["6", "3", "4", "5"], answer: 3, explanation: "Een hand heeft 5 vingers.", imageUrl: "https://source.unsplash.com/Avnof_IwPoQ/400x300" },
+      { q: "Hoeveel vingers zie je?", options: ["6", "3", "4", "5"], answer: 3, explanation: "Een hand heeft 5 vingers.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90"><text x="15" y="80" font-size="75">✋</text></svg>' },
       { q: "Wat komt na 7?", options: ["9", "8", "7", "6"], answer: 1, explanation: "Na 7 komt 8." },
       { q: "Hoeveel is 2 + 3?", options: ["5", "6", "7", "4"], answer: 0, explanation: "2 + 3 = 5." },
       { q: "Welk getal is het grootst?", options: ["5", "3", "2", "7"], answer: 3, explanation: "7 is het grootste getal." },
@@ -1332,7 +1332,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Hoeveel is 4 - 1?", options: ["3", "2", "4", "5"], answer: 0, explanation: "4 - 1 = 3." },
       { q: "Welk getal is even?", options: ["3", "5", "8", "1"], answer: 2, explanation: "8 is deelbaar door 2, dus even." },
       { q: "Hoeveel is 7 + 2?", options: ["10", "7", "8", "9"], answer: 3, explanation: "7 + 2 = 9." },
-      { q: "Hoeveel wielen heeft een fiets?", options: ["2", "4", "3", "1"], answer: 0, explanation: "Een fiets heeft 2 wielen.", imageUrl: "https://source.unsplash.com/dRJR64sIf68/400x300" },
+      { q: "Hoeveel wielen heeft een fiets?", options: ["2", "4", "3", "1"], answer: 0, explanation: "Een fiets heeft 2 wielen.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90"><text x="20" y="78" font-size="68">🚲</text></svg>' },
       { q: "Welk getal ontbreekt: 10, 9, __, 7?", options: ["9", "6", "7", "8"], answer: 3, explanation: "De rij telt steeds 1 eraf: 8." },
       { q: "Hoeveel is 5 + 3?", options: ["6", "7", "9", "8"], answer: 3, explanation: "5 + 3 = 8." },
       { q: "Wat is de helft van 8?", options: ["6", "3", "5", "4"], answer: 3, explanation: "De helft van 8 is 4." },
@@ -1341,8 +1341,8 @@ export const SAMPLE_QUESTIONS = {
       { q: "Hoeveel zijn 3 + 5?", options: ["6", "8", "7", "9"], answer: 1, explanation: "3 + 5 = 8." },
       { q: "Hoeveel is 2 + 7?", options: ["8", "9", "7", "10"], answer: 1, explanation: "2 + 7 = 9." },
       { q: "Welk getal ontbreekt: 5, __, 15, 20?", options: ["9", "12", "8", "10"], answer: 3, explanation: "De rij telt steeds 5 erbij op: 10." },
-      { q: "Hoeveel appels zie je?", options: ["2", "4", "3", "5"], answer: 2, explanation: "Tel de appels: 1, 2, 3. Dat zijn er 3.", imageUrl: "https://source.unsplash.com/iqIJE3Jo8YM/400x300" },
-      { q: "Hoeveel eendjes zie je?", options: ["3", "4", "2", "1"], answer: 0, explanation: "Tel de eendjes: 1, 2. Dat zijn er 2.", imageUrl: "https://source.unsplash.com/xI5s_SYKeBM/400x300" },
+      { q: "Hoeveel appels zie je?", options: ["2", "4", "3", "5"], answer: 2, explanation: "Tel de appels: 1, 2, 3. Dat zijn er 3.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90"><text x="5" y="75" font-size="58">🍎</text><text x="63" y="75" font-size="58">🍎</text><text x="121" y="75" font-size="58">🍎</text></svg>' },
+      { q: "Hoeveel eendjes zie je?", options: ["3", "4", "2", "1"], answer: 0, explanation: "Tel de eendjes: 1, 2. Dat zijn er 2.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 90"><text x="10" y="75" font-size="65">🐥</text><text x="75" y="75" font-size="65">🐥</text></svg>' },
       { q: "Hoeveel sterren zie je?", options: ["3", "4", "6", "5"], answer: 3, explanation: "Tel de sterren: 1, 2, 3, 4, 5. Dat zijn er 5.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 90"><text x="5" y="75" font-size="58">⭐</text><text x="58" y="75" font-size="58">⭐</text><text x="111" y="75" font-size="58">⭐</text><text x="164" y="75" font-size="58">⭐</text><text x="217" y="75" font-size="58">⭐</text></svg>' },
       { q: "Hoeveel auto's zie je?", options: ["3", "2", "4", "1"], answer: 2, explanation: "Tel de auto's: 1, 2, 3, 4. Dat zijn er 4.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 90"><text x="5" y="75" font-size="55">🚗</text><text x="63" y="75" font-size="55">🚗</text><text x="121" y="75" font-size="55">🚗</text><text x="179" y="75" font-size="55">🚗</text></svg>' },
       { q: "Hoeveel bloemen zie je?", options: ["4", "2", "1", "3"], answer: 2, explanation: "Er is maar 1 bloem.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90"><text x="25" y="78" font-size="70">🌻</text></svg>' },
