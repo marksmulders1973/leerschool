@@ -29,7 +29,13 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
 
   const printToets = (q) => {
     const subj = SUBJECTS.find((s) => s.id === q.subject);
-    const level = LEVELS.find((l) => l.id === q.level);
+    const baseLevelId = q.level?.split("-")[0] || q.level;
+    const schoolTypePart = q.level?.includes("-") ? q.level.split("-").slice(1).join("-") : "";
+    const schoolTypeNames = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" };
+    const level = LEVELS.find((l) => l.id === baseLevelId);
+    const levelDisplayLabel = level?.label
+      ? `${level.label}${schoolTypePart ? ` · ${schoolTypeNames[schoolTypePart] || schoolTypePart.toUpperCase()}` : ""}`
+      : q.level || "";
     const questions = (q.preGeneratedQuestions?.length > 0)
       ? q.preGeneratedQuestions.slice(0, q.questionCount || 10)
       : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10);
@@ -88,7 +94,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
 <body>
   <div class="kop">
     <h1>${subj?.icon || ""} ${q.title || subj?.label || "Toets"}</h1>
-    <div style="font-size:10pt;color:#555;">${level?.label || ""} · ${datum}</div>
+    <div style="font-size:10pt;color:#555;">${levelDisplayLabel}${levelDisplayLabel ? " · " : ""}${datum}</div>
     <div class="invul">
       <span>Naam: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
       <span>Klas: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>

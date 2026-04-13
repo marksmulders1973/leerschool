@@ -546,7 +546,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </select>
               </div>
             </div>
-            {klasSelect && ["k3","k4","k5","k6"].includes(klasSelect) && (
+            {klasSelect && (
               <div style={{ marginTop: 10 }}>
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🏫 Schooltype (optioneel)</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
