@@ -7,7 +7,7 @@ import Header from "./Header.jsx";
 export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
   const TEXTBOOK_CATEGORIES = userRole === "leerling" ? TEXTBOOK_CATEGORIES_PO : TEXTBOOK_CATEGORIES_VO;
   const groepBuckets = {"1":"groep12","2":"groep12","3":"groep3","4":"groep3","5":"groep5","6":"groep5","7":"groep7","8":"groep7"};
-  const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3"};
+  const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3","5":"klas5","6":"klas6"};
   const initLevel = userRole === "leerling" ? (groepBuckets[userLevel] || "") : userRole === "student" ? (klasBuckets[userLevel] || "") : "";
   const [step, setStep] = useState(1);
   const [category, setCategory] = useState("");
@@ -455,7 +455,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                 <option value="">-- Kies hoofdstuk --</option>
                 {(() => {
                   const titles = selectedBook ? (CHAPTER_TITLES[selectedBook.id] || []) : [];
-                  const count = titles.length > 0 ? titles.length : 20;
+                  const count = titles.length > 0 ? titles.length : (selectedBook?.chapters || 12);
                   return Array.from({length: count}, (_, i) => i + 1).map(n => {
                     const title = titles[n - 1];
                     return <option key={n} value={n}>{title ? `Hoofdstuk ${n} – ${title}` : `Hoofdstuk ${n}`}</option>;

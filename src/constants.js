@@ -11,6 +11,7 @@ export const SUBJECTS = [
   { id: "natuurkunde", label: "Natuurkunde", icon: "⚛️", color: "#6b9fd4" },
   { id: "scheikunde", label: "Scheikunde", icon: "🧪", color: "#a0b8d8" },
   { id: "economie", label: "Economie", icon: "💶", color: "#f9a825" },
+  { id: "beco", label: "Bedrijfseconomie", icon: "📈", color: "#e65100" },
   { id: "engels", label: "Engels", icon: "🇬🇧", color: "#a0b8d8" },
   { id: "duits", label: "Duits", icon: "🇩🇪", color: "#2bbd7e" },
   { id: "frans", label: "Frans", icon: "🇫🇷", color: "#00b84d" },
@@ -24,6 +25,8 @@ export const LEVELS = [
   { id: "groep7",  label: "Groep 7-8", desc: "Bovenbouw verdieping", icon: "📚" },
   { id: "klas1",   label: "Klas 1-2",  desc: "Brugklas", icon: "🎓" },
   { id: "klas3",   label: "Klas 3-4",  desc: "Bovenbouw VO", icon: "🏆" },
+  { id: "klas5",   label: "Klas 5",    desc: "HAVO eindexamen / VWO bovenbouw", icon: "🎯" },
+  { id: "klas6",   label: "Klas 6",    desc: "VWO/Gymnasium eindexamen", icon: "🏛️" },
 ];
 
 // Welke vakken zijn beschikbaar per niveau (op basis van officieel NL curriculum)
@@ -32,8 +35,10 @@ export const SUBJECT_FOR_LEVEL = {
   groep3:  ["rekenen", "taal", "natuur"],
   groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
   groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
-  klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "engels", "duits", "frans"],
-  klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "engels", "duits", "frans", "maatschappijleer"],
+  klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans"],
+  klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
+  klas5:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
+  klas6:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
 };
 
 export const TEXTBOOKS = {
@@ -73,23 +78,23 @@ export const TEXTBOOKS = {
     { id: "kern-nl-vwo3",      name: "KERN Nederlands VWO 3",           icon: "🔤", defaultLevel: "klas3" },
   ],
   engels: [
-    { id: "stepping-stones",   name: "Stepping Stones",    icon: "🪨", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "all-right",         name: "All Right!",         icon: "✅", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "new-interface",     name: "New Interface",      icon: "🌐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "kern-engels",       name: "Kern Engels",        icon: "🔑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "upload",            name: "Upload",             icon: "⬆️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "keys",              name: "Keys",               icon: "🗝️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "stepping-stones",   name: "Stepping Stones",    icon: "🪨", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "all-right",         name: "All Right!",         icon: "✅", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "new-interface",     name: "New Interface",      icon: "🌐", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "kern-engels",       name: "Kern Engels",        icon: "🔑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "upload",            name: "Upload",             icon: "⬆️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "keys",              name: "Keys",               icon: "🗝️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
   ],
   aardrijkskunde: [
-    { id: "de-geo",            name: "De Geo",             icon: "🗺️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "buitenland",        name: "BuiteNLand",         icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "de-geo",            name: "De Geo",             icon: "🗺️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5" } },
+    { id: "buitenland",        name: "BuiteNLand",         icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5" } },
   ],
   geschiedenis: [
-    { id: "feniks",            name: "Feniks",             icon: "🔥", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "sprekend-verleden", name: "Sprekend Verleden",  icon: "🗣️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "geschiedeniswerkplaats", name: "Geschiedeniswerkplaats", icon: "⚒️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "memo-geschiedenis", name: "MeMo",               icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
-    { id: "historica",         name: "Historica",          icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "feniks",            name: "Feniks",             icon: "🔥", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "sprekend-verleden", name: "Sprekend Verleden",  icon: "🗣️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "geschiedeniswerkplaats", name: "Geschiedeniswerkplaats", icon: "⚒️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "memo-geschiedenis", name: "MeMo",               icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
+    { id: "historica",         name: "Historica",          icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3", 5: "klas5", 6: "klas6" } },
   ],
   biologie: [
     { id: "bvj-havo-vwo-1",       name: "BvJ Havo/vwo Deel 1",     icon: "🧬", defaultLevel: "klas1" },
@@ -123,9 +128,15 @@ export const TEXTBOOKS = {
     { id: "newton-scheikunde", name: "Newton Scheikunde",  icon: "⚗️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   economie: [
-    { id: "pincode",           name: "Pincode",            icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
-    { id: "economie-integraal",name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
-    { id: "kern-economie",     name: "Kern Economie",      icon: "📊", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
+    { id: "pincode",           name: "Pincode",            icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5" } },
+    { id: "economie-integraal",name: "Economie Integraal", icon: "💶", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5" } },
+    { id: "kern-economie",     name: "Kern Economie",      icon: "📊", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5" } },
+  ],
+  beco: [
+    { id: "mo-havo",   name: "Management & Organisatie Havo",    icon: "📈", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5" } },
+    { id: "mo-vwo",    name: "Management & Organisatie VWO",     icon: "📈", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5", 4: "klas6" } },
+    { id: "kern-mo",   name: "KERN Management & Organisatie",    icon: "📊", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas5" } },
+    { id: "beco-havo", name: "Bedrijfseconomie Havo",            icon: "📉", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas5" } },
   ],
   duits: [
     { id: "na-klar",           name: "Na Klar!",           icon: "🇩🇪", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
@@ -480,6 +491,43 @@ export const CHAPTER_TITLES = {
     "Geld en banken",
     "Overheid",
     "Internationaal",
+  ],
+  // ── Bedrijfseconomie (M&O) ────────────────────────────────────
+  "mo-havo": [
+    "Inleiding bedrijfseconomie",
+    "Kosten en opbrengsten",
+    "Inkoop en voorraadbeheer",
+    "Personeel en arbeid",
+    "Marketing",
+    "Vermogen en financiering",
+    "Winst, verlies en liquiditeit",
+  ],
+  "mo-vwo": [
+    "Inleiding bedrijfseconomie",
+    "Kosten en opbrengsten",
+    "Inkoop en voorraadbeheer",
+    "Personeel en arbeid",
+    "Marketing",
+    "Vermogen en financiering",
+    "Winst, verlies en liquiditeit",
+    "Jaarrekening en financiële analyse",
+  ],
+  "kern-mo": [
+    "Wat is een bedrijf?",
+    "Kosten en opbrengsten",
+    "Vermogen en financiering",
+    "Marketing en verkoop",
+    "Personeel en organisatie",
+    "Jaarrekening",
+  ],
+  "beco-havo": [
+    "Inleiding en begrippen",
+    "Kosten",
+    "Opbrengsten en winst",
+    "Vermogen",
+    "Personeel",
+    "Marketing",
+    "Financiering",
   ],
   // ── Maatschappijleer ─────────────────────────────────────────
   "themas-maatschappijleer": [
@@ -889,6 +937,19 @@ export const PARAGRAPH_TITLES = {
   "kern-economie": {
     _default: ["Begrippen", "Theorie", "Toepassingen", "Opgaven"],
   },
+  // ── Bedrijfseconomie (M&O) ────────────────────────────────────
+  "mo-havo": {
+    _default: ["Begrippen en theorie", "Berekeningen", "Toepassingen", "Opgaven"],
+  },
+  "mo-vwo": {
+    _default: ["Begrippen en theorie", "Berekeningen", "Toepassingen", "Verdieping"],
+  },
+  "kern-mo": {
+    _default: ["Begrippen", "Berekeningen", "Toepassingen", "Opgaven"],
+  },
+  "beco-havo": {
+    _default: ["Theorie", "Berekeningen", "Toepassingen", "Herhaling"],
+  },
   // ── Maatschappijleer ─────────────────────────────────────────
   "themas-maatschappijleer": {
     1: ["Vormen van democratie", "Verkiezingen", "Politieke partijen", "Coalitievorming"],
@@ -1022,6 +1083,7 @@ export const TEXTBOOK_CATEGORIES_VO = [
   { id: "natuurkunde",     label: "Natuurkunde",      icon: "⚛️" },
   { id: "scheikunde",      label: "Scheikunde",       icon: "🧪" },
   { id: "economie",        label: "Economie",         icon: "💶" },
+  { id: "beco",            label: "Bedrijfseconomie", icon: "📈" },
   { id: "duits",           label: "Duits",            icon: "🇩🇪" },
   { id: "frans",           label: "Frans",            icon: "🇫🇷" },
   { id: "maatschappijleer",label: "Maatschappijleer", icon: "🏛️" },
@@ -1207,15 +1269,23 @@ export const ALL_KNOWN_BOOKS = {
   ],
   // ── Economie VO ───────────────────────────────────────────────────────────
   economie: [
-    { name: "Bedrijfseconomie",          level: "klas3" },
     { name: "Economie en Maatschappij",  level: "klas3" },
     { name: "Economie Integraal",        level: "klas3" },
     { name: "Economisch Actief",         level: "klas1" },
     { name: "KERN Economie",             level: "klas3" },
-    { name: "Management & Organisatie",  level: "klas3" },
     { name: "Markt",                     level: "klas1" },
     { name: "Pincode",                   level: "klas3" },
     { name: "PROFIT",                    level: "klas3" },
+  ],
+  // ── Bedrijfseconomie VO ───────────────────────────────────────────────────
+  beco: [
+    { name: "Management & Organisatie Havo",    level: "klas3" },
+    { name: "Management & Organisatie VWO",     level: "klas3" },
+    { name: "KERN Management & Organisatie",    level: "klas3" },
+    { name: "Bedrijfseconomie Havo",            level: "klas3" },
+    { name: "Bedrijfseconomie VWO",             level: "klas3" },
+    { name: "BeCo Havo/vwo",                    level: "klas3" },
+    { name: "Management & Organisatie",         level: "klas3" },
   ],
   // ── Duits VO ──────────────────────────────────────────────────────────────
   duits: [

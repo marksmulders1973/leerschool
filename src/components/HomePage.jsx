@@ -27,7 +27,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   const roleLabels = { leerling: "leerling", student: "student", teacher: "leerkracht" };
-  const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4], teacher: [] };
+  const levelOptions = { leerling: [1,2,3,4,5,6,7,8], student: [1,2,3,4,5,6], teacher: [] };
 
   const playBeep = (freq) => {
     try {

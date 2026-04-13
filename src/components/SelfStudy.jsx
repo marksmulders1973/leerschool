@@ -6,7 +6,7 @@ import Header from "./Header.jsx";
 
 export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
   const groepBuckets = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"};
-  const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"};
+  const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"};
   const initGroep = userRole === "leerling" && userLevel ? `g${userLevel}` : "";
   const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
   const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas] || "";
@@ -63,7 +63,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                     const v = e.target.value;
                     setKlasSelect(v);
                     setGroepSelect("");
-                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"}[v];
                     if (bucket) setLevel(bucket);
                   }}
                 >
@@ -72,6 +72,8 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                   <option value="k2">Klas 2</option>
                   <option value="k3">Klas 3</option>
                   <option value="k4">Klas 4</option>
+                  <option value="k5">Klas 5</option>
+                  <option value="k6">Klas 6</option>
                 </select>
               </div>
             </div>
