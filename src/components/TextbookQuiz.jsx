@@ -4,7 +4,17 @@ import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel }) {
+const schoolTypeMatchesBook = (bookName, schoolType) => {
+  if (!schoolType || !bookName) return false;
+  const n = bookName.toLowerCase();
+  if (schoolType === "mavo") return n.includes("mavo") || n.includes("vmbo");
+  if (schoolType === "havo") return n.includes("havo");
+  if (schoolType === "vwo") return n.includes("vwo");
+  if (schoolType === "gym") return n.includes("vwo") || n.includes("gym");
+  return false;
+};
+
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType }) {
   const TEXTBOOK_CATEGORIES = userRole === "leerling" ? TEXTBOOK_CATEGORIES_PO : TEXTBOOK_CATEGORIES_VO;
   const groepBuckets = {"1":"groep12","2":"groep12","3":"groep3","4":"groep3","5":"groep5","6":"groep5","7":"groep7","8":"groep7"};
   const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3","5":"klas5","6":"klas6"};
@@ -365,37 +375,58 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
             <h3 style={styles.stepTitle}>Kies je boek</h3>
 
             {TEXTBOOKS[category] && (
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14, marginBottom: 16 }}>
-                {[...TEXTBOOKS[category]].sort((a, b) => a.name.localeCompare(b.name, "nl")).map((book) => {
-                  const coverPath = BOOK_COVERS[book.name] ? BOOK_COVERS[book.name]("") : null;
-                  const isSelected = selectedBook?.id === book.id;
-                  return (
-                    <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else if (!book.autoLevel) setLevel(""); setStep(3); }} style={{
-                      background: "transparent", border: "none", padding: 0, cursor: "pointer",
-                      display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
-                    }}>
-                      <div style={{
-                        width: "100%", aspectRatio: "3/4", borderRadius: 12, overflow: "hidden",
-                        border: isSelected ? "3px solid #00e676" : "3px solid transparent",
-                        boxShadow: isSelected ? "0 0 0 2px #00c85360, 0 4px 16px rgba(0,200,83,0.3)" : "0 2px 10px rgba(0,0,0,0.4)",
-                        position: "relative",
-                      }}>
-                        {coverPath ? (
-                          <img src={coverPath} alt={book.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                        ) : (
-                          <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40 }}>
-                            {book.icon}
+              <>
+                {userSchoolType && TEXTBOOKS[category].some(b => schoolTypeMatchesBook(b.name, userSchoolType)) && (
+                  <p style={{ fontSize: 12, color: "#8eaadb", fontWeight: 600, margin: "0 0 10px 2px" }}>
+                    ✨ Boeken voor jouw niveau staan bovenaan
+                  </p>
+                )}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14, marginBottom: 16 }}>
+                  {[...TEXTBOOKS[category]]
+                    .sort((a, b) => {
+                      const aMatch = schoolTypeMatchesBook(a.name, userSchoolType) ? 1 : 0;
+                      const bMatch = schoolTypeMatchesBook(b.name, userSchoolType) ? 1 : 0;
+                      if (aMatch !== bMatch) return bMatch - aMatch;
+                      return a.name.localeCompare(b.name, "nl");
+                    })
+                    .map((book) => {
+                      const coverPath = BOOK_COVERS[book.name] ? BOOK_COVERS[book.name]("") : null;
+                      const isSelected = selectedBook?.id === book.id;
+                      const isMatch = schoolTypeMatchesBook(book.name, userSchoolType);
+                      const matchColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
+                      return (
+                        <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else if (!book.autoLevel) setLevel(""); setStep(3); }} style={{
+                          background: "transparent", border: "none", padding: 0, cursor: "pointer",
+                          display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
+                        }}>
+                          <div style={{
+                            width: "100%", aspectRatio: "3/4", borderRadius: 12, overflow: "hidden",
+                            border: isSelected ? "3px solid #00e676" : isMatch ? `2px solid ${matchColor}88` : "3px solid transparent",
+                            boxShadow: isSelected ? "0 0 0 2px #00c85360, 0 4px 16px rgba(0,200,83,0.3)" : isMatch ? `0 2px 12px ${matchColor}44` : "0 2px 10px rgba(0,0,0,0.4)",
+                            position: "relative",
+                          }}>
+                            {coverPath ? (
+                              <img src={coverPath} alt={book.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            ) : (
+                              <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40 }}>
+                                {book.icon}
+                              </div>
+                            )}
+                            {isSelected && (
+                              <div style={{ position: "absolute", top: 6, right: 6, background: "#00c853", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
+                            )}
+                            {!isSelected && isMatch && (
+                              <div style={{ position: "absolute", top: 6, left: 6, background: matchColor, borderRadius: 6, padding: "2px 6px", fontSize: 10, fontWeight: 700, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                                Jouw niveau
+                              </div>
+                            )}
                           </div>
-                        )}
-                        {isSelected && (
-                          <div style={{ position: "absolute", top: 6, right: 6, background: "#00c853", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
-                        )}
-                      </div>
-                      <span style={{ fontSize: 12, color: isSelected ? "#00e676" : "#8eaadb", fontWeight: isSelected ? 700 : 500, textAlign: "center", lineHeight: 1.3 }}>{book.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
+                          <span style={{ fontSize: 12, color: isSelected ? "#00e676" : isMatch ? matchColor : "#8eaadb", fontWeight: isSelected || isMatch ? 700 : 500, textAlign: "center", lineHeight: 1.3 }}>{book.name}</span>
+                        </button>
+                      );
+                    })}
+                </div>
+              </>
             )}
 
             {/* Dropdown: alle bekende boeken op alfabet */}

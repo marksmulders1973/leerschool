@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult }) {
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -62,11 +62,33 @@ export default function StudentHome({ userName, quizzes, progress, onJoinQuiz, o
     return subj ? { ...subj, avg: weakAvg } : null;
   })();
 
+  const schoolTypeLabel = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
+  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
+  const profileBadge = userLevel && schoolTypeLabel
+    ? `Klas ${userLevel} · ${schoolTypeLabel}`
+    : userLevel
+    ? `Klas ${userLevel}`
+    : schoolTypeLabel || null;
+
   return (
     <div style={styles.page}>
       <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {profileBadge && (
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: 6,
+            background: `${schoolTypeColor}18`,
+            border: `1px solid ${schoolTypeColor}55`,
+            borderRadius: 20, padding: "5px 14px",
+            marginBottom: 8, alignSelf: "flex-start",
+          }}>
+            <span style={{ fontSize: 14 }}>🎓</span>
+            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: schoolTypeColor }}>
+              {profileBadge}
+            </span>
+          </div>
+        )}
         {streakWarning && (
           <div style={{
             display: "flex", alignItems: "center", gap: 10,

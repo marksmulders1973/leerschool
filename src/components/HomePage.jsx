@@ -8,12 +8,13 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [level, setLevel] = useState("");
+  const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [activeRole, setActiveRole] = useState(0);
   const audioCtxRef = useRef(null);
@@ -72,6 +73,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     onOnboardingStart?.();
     setPendingRole(role);
     setLevel("");
+    setSchoolType("");
     setStep("name");
   };
 
@@ -87,8 +89,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     if (!name.trim()) setName(effectiveName);
     setUserName(effectiveName);
     setUserLevel(level);
-    try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole })); } catch {}
-    try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole }); } catch {}
+    setUserSchoolType?.(schoolType);
+    try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
+    try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
     onSelectRole(pendingRole);
   };
 
@@ -371,6 +374,32 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     }}>{n}</button>
                   ))}
                 </div>
+                {pendingRole === "student" && (
+                  <div style={{ marginTop: 10 }}>
+                    <label style={{ ...styles.inputLabel, marginBottom: 6, display: "block" }}>
+                      Welk type onderwijs volg je?
+                    </label>
+                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                      {[
+                        { id: "mavo",  label: "MAVO",       color: "#f59e0b" },
+                        { id: "havo",  label: "HAVO",       color: "#3b82f6" },
+                        { id: "vwo",   label: "VWO",        color: "#8b5cf6" },
+                        { id: "gym",   label: "Gymnasium",  color: "#ec4899" },
+                      ].map(({ id, label, color }) => {
+                        const sel = schoolType === id;
+                        return (
+                          <button key={id} onClick={() => setSchoolType(sel ? "" : id)} style={{
+                            padding: "7px 14px", borderRadius: 10, cursor: "pointer",
+                            border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
+                            background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
+                            color: sel ? color : "rgba(255,255,255,0.6)",
+                            fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
+                          }}>{label}</button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 

@@ -34,6 +34,7 @@ export default function App() {
   const [role, setRole] = useState(null);
   const [userName, setUserName] = useState("");
   const [userLevel, setUserLevel] = useState("");
+  const [userSchoolType, setUserSchoolType] = useState("");
   const [quizzes, setQuizzes] = useState([]);
   const [classes, setClasses] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
@@ -62,6 +63,7 @@ export default function App() {
         supabase.from("profiles").select("*").eq("id", u.id).single().then(({ data }) => {
           if (data?.display_name) setUserName(data.display_name);
           if (data?.level) setUserLevel(data.level);
+          if (data?.school_type) setUserSchoolType(data.school_type);
           if (data?.streak_days) setStreak(data.streak_days);
           // Alleen auto-navigeren als gebruiker nog op home staat en NIET bezig is met onboarding
           if (pageRef.current !== "home") return;
@@ -78,6 +80,7 @@ export default function App() {
               if (saved.role && saved.name) {
                 setRole(saved.role);
                 if (saved.level) setUserLevel(saved.level);
+                if (saved.schoolType) setUserSchoolType(saved.schoolType);
                 setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
                 // Sla rol ook op in Supabase profiel voor volgende keer
                 supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).then(() => {}).catch(() => {});
@@ -99,6 +102,7 @@ export default function App() {
     setAuthUser(null);
     setUserName("");
     setUserLevel("");
+    setUserSchoolType("");
     setRole(null);
     setPage("home");
   };
@@ -109,7 +113,7 @@ export default function App() {
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
-    try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); } } catch {}
+    try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); if (d.schoolType) setUserSchoolType(d.schoolType); } } catch {}
     try { const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}'); const today = new Date().toISOString().split("T")[0]; const yesterday = new Date(Date.now()-86400000).toISOString().split("T")[0]; if (s.last === today || s.last === yesterday) setStreak(s.streak); } catch {}
     // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
     const urlCode = new URLSearchParams(window.location.search).get("code");
@@ -289,9 +293,9 @@ export default function App() {
       )}
       {page === "home" && (
         <HomePage
-          onSaveProfile={({ name, level, role }) => {
+          onSaveProfile={({ name, level, role, schoolType }) => {
             if (authUser) {
-              supabase.from("profiles").upsert({ id: authUser.id, display_name: name, level, role }).then(() => {}).catch(() => {});
+              supabase.from("profiles").upsert({ id: authUser.id, display_name: name, level, role, school_type: schoolType || "" }).then(() => {}).catch(() => {});
             }
           }}
           authUser={authUser}
@@ -303,7 +307,6 @@ export default function App() {
             setRole(r);
             track("role_selected", { role: r });
             if (currentQuiz) {
-              // Quiz al opgehaald via Supabase-link → direct starten
               startGame(currentQuiz, "self");
             } else {
               setPage(r === "teacher" ? "teacher-home" : "student-home");
@@ -313,6 +316,7 @@ export default function App() {
           userName={userName}
           setUserName={setUserName}
           setUserLevel={setUserLevel}
+          setUserSchoolType={setUserSchoolType}
           pendingCode={pendingCode}
         />
       )}
@@ -409,6 +413,8 @@ export default function App() {
       {page === "student-home" && (
         <StudentHome
           userName={userName}
+          userLevel={userLevel}
+          userSchoolType={userSchoolType}
           quizzes={quizzes}
           progress={studentProgress.filter((p) => p.player === userName)}
           onJoinQuiz={async (code) => {
@@ -473,6 +479,7 @@ export default function App() {
           }}
           userRole={role}
           userLevel={userLevel}
+          userSchoolType={userSchoolType}
           onBack={() => setPage("student-home")}
           onHome={() => setPage("home")}
         />
