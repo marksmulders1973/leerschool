@@ -327,6 +327,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [level, setLevel] = useState("");
   const [groepSelect, setGroepSelect] = useState("");
   const [klasSelect, setKlasSelect] = useState("");
+  const [schoolTypeSelect, setSchoolTypeSelect] = useState("");
   const [selectedClassId, setSelectedClassId] = useState("");
   const [deadline, setDeadline] = useState("");
   const [questionCount, setQuestionCount] = useState(8);
@@ -335,7 +336,12 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
 
-  const levelLabel = groepSelect ? `Groep ${groepSelect.replace("g","")}` : klasSelect ? `Klas ${klasSelect.replace("k","")}` : "";
+  const schoolTypeLabel = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
+  const levelLabel = groepSelect
+    ? `Groep ${groepSelect.replace("g","")}`
+    : klasSelect
+    ? `Klas ${klasSelect.replace("k","")}${schoolTypeLabel ? ` · ${schoolTypeLabel}` : ""}`
+    : "";
   const isVO = level.startsWith("klas");
   const suggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
   const totalSteps = eigenMode ? 3 : 4;
@@ -468,7 +474,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             </div>
 
             <div style={styles.subjectGrid}>
-              {(level ? (SUBJECT_FOR_LEVEL[level] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
+              {(level ? (SUBJECT_FOR_LEVEL[level] || SUBJECT_FOR_LEVEL[level.split("-")[0]] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
                 <button
                   key={s.id}
                   style={{
@@ -525,7 +531,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     const v = e.target.value;
                     setKlasSelect(v);
                     setGroepSelect("");
-                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3"}[v];
+                    setSchoolTypeSelect("");
+                    const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"}[v];
                     if (bucket) setLevel(bucket);
                   }}
                 >
@@ -534,11 +541,37 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                   <option value="k2">Klas 2</option>
                   <option value="k3">Klas 3</option>
                   <option value="k4">Klas 4</option>
+                  <option value="k5">Klas 5</option>
+                  <option value="k6">Klas 6</option>
                 </select>
               </div>
             </div>
+            {klasSelect && ["k3","k4","k5","k6"].includes(klasSelect) && (
+              <div style={{ marginTop: 10 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🏫 Schooltype (optioneel)</label>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  {[
+                    { id: "mavo", label: "MAVO",      color: "#f59e0b" },
+                    { id: "havo", label: "HAVO",      color: "#3b82f6" },
+                    { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
+                    { id: "gym",  label: "Gymnasium", color: "#ec4899" },
+                  ].map(({ id, label, color }) => {
+                    const sel = schoolTypeSelect === id;
+                    return (
+                      <button key={id} onClick={() => { setSchoolTypeSelect(sel ? "" : id); const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"}[klasSelect]; if (bucket) setLevel(`${bucket}${sel ? "" : `-${id}`}`); }} style={{
+                        padding: "6px 14px", borderRadius: 10, cursor: "pointer",
+                        border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
+                        background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
+                        color: sel ? color : "rgba(255,255,255,0.6)",
+                        fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                      }}>{label}</button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
             {level && (
-              <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid #00c85340" }}>
+              <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, marginTop: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid #00c85340" }}>
                 ✅ Niveau gekozen: <span style={{ color: "#fff" }}>{levelLabel}</span>
               </div>
             )}

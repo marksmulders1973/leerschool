@@ -66,6 +66,18 @@ export default async function handler(req) {
     groep7: "groep 7-8 basisschool (11-13 jaar) — rekenen: procenten, breuken, kommagetallen, oppervlakte en inhoud, eenvoudige statistiek (gemiddelde, modus); taal: grammatica (persoonsvorm, lijdend voorwerp, meewerkend voorwerp), spelling d/t, werkwoordvormen; aardrijkskunde: wereld en klimaatzones; geschiedenis: tijdvakken uitgebreider; natuur & techniek: sterrenstelsel, menselijk lichaam; engels: gesprekjes voeren, woordenschat breder. NOOIT: wortels, machten, algebra, vergelijkingen met letters, pythagoras, goniometrie — dat is middelbare school stof.",
     klas1: "klas 1-2 middelbare school / vmbo-t/havo/vwo (13-15 jaar) — wiskunde: eenvoudige vergelijkingen (ax+b=c), pythagoras, machten en wortels, meetkunde, statistiek; nederlands: stijlfiguren, zinsdelen, tekstsoorten; Engels/Duits/Frans: grammatica en teksten; aardrijkskunde en geschiedenis op VO-niveau. Duits en Frans mogen vanaf dit niveau. NOOIT: differentiëren, integreren, goniometrie, logaritmen — dat is bovenbouw.",
     klas3: "klas 3-4 middelbare school / havo/vwo bovenbouw (15-17 jaar) — wiskunde: goniometrie, differentiëren, logaritmen, integralen; scheikunde, biologie, natuurkunde, economie, maatschappijleer op examenniveau. Abstracte concepten en formules zijn passend.",
+    klas5: "klas 5 middelbare school HAVO/VWO (16-17 jaar) — HAVO: eindexamenstof, vragen op HAVO-examenniveau; VWO bovenbouw: verdieping en uitbreiding. Wiskunde A/B: differentiëren en integreren, statistiek, goniometrie, complexe getallen; exacte vakken op examenniveau. Hogere denkvaardigheden, analyseren, bewijzen en redeneren worden verwacht.",
+    klas6: "klas 6 middelbare school VWO/Gymnasium (17-18 jaar) — eindexamenniveau VWO. Wiskunde B: geavanceerd differentiëren en integreren, vectoren, complexe getallen, ruimtemeetkunde. Gymnasium: ook Latijn en Grieks. Hoogste VO-niveau, vragen zijn vergelijkbaar met echte VWO-eindexamens. Maximale abstractie en redeneerdiepte.",
+    "klas3-mavo": "klas 3-4 MAVO/VMBO-t (15-17 jaar) — eindexamenniveau MAVO. Wiskunde: basisalgebra, verbanden, statistiek; exacte vakken en maatschappijleer op MAVO-examenniveau. Concreet en toepassingsgericht, minder abstract dan HAVO/VWO.",
+    "klas3-havo": "klas 3-4 HAVO bovenbouw (15-17 jaar) — HAVO examenstof. Wiskunde A/B onderbouw bovenbouw: goniometrie, differentiëren, statistiek; exacte vakken op HAVO-niveau. Abstracte concepten passend bij HAVO, niet zo diepgaand als VWO.",
+    "klas3-vwo": "klas 3-4 VWO bovenbouw (15-17 jaar) — VWO examenstof. Wiskunde B: goniometrie, differentiëren, logaritmen, integralen; exacte vakken op VWO-niveau. Diepgaande redeneervaardigheden en abstractievermogen vereist.",
+    "klas3-gym": "klas 3-4 Gymnasium bovenbouw (15-17 jaar) — VWO+ niveau met klassieke talen. Wiskunde en exacte vakken op VWO-niveau. Gymnasium-context: ook Latijn, Grieks, antieke cultuur. Hogere talige en analytische eisen dan regulier VWO.",
+    "klas5-mavo": "klas 5 MAVO eindexamen (16-17 jaar) — eindexamenstof MAVO/VMBO-t. Vragen direct bruikbaar als examenvoorbereiding. Concreet, toepassingsgericht, geen VWO-abstractieniveau.",
+    "klas5-havo": "klas 5 HAVO eindexamen (16-17 jaar) — eindexamenstof HAVO. Vragen op HAVO CE-niveau: redeneren, analyseren, toepassen. Wiskunde A/B: differentiëren, integreren, statistiek, kansen. Exacte vakken op HAVO-examenniveau.",
+    "klas5-vwo": "klas 5 VWO bovenbouw (16-17 jaar) — VWO niveau, voorbereiding op eindexamen. Wiskunde B: geavanceerde analyse, goniometrie, ruimtemeetkunde. Vragen vergelijkbaar met VWO HAVO+1 jaar extra diepgang.",
+    "klas5-gym": "klas 5 Gymnasium (16-17 jaar) — VWO+ met Latijn en Grieks. Wiskunde en exacte vakken op hoog VWO-niveau. Gymnasium-specifiek: klassieke teksten, antieke geschiedenis, retorica.",
+    "klas6-vwo": "klas 6 VWO eindexamen (17-18 jaar) — eindexamenstof VWO. Vragen op VWO CE-niveau: hoogste abstractieniveau middelbaar onderwijs. Wiskunde B: complexe getallen, vectoren, geavanceerde analyse. Alle vakken op eindexamenniveau.",
+    "klas6-gym": "klas 6 Gymnasium eindexamen (17-18 jaar) — VWO eindexamenniveau met Gymnasium-profiel. Naast alle VWO-vakken ook Latijn en/of Grieks op eindexamenniveau. Hoogste niveau middelbaar onderwijs.",
   };
 
   const subjectNames = {
@@ -168,6 +180,9 @@ Regels:
 - Voor groep 7-8: procenten, breuken, kommagetallen, oppervlakte. NOOIT wortels, machten, algebra met letters, vergelijkingen oplossen, pythagoras of goniometrie — dat is VO-stof.
 - Voor VO klas 1-2: vergelijkingen, pythagoras, machten en wortels, meetkunde. Duits en Frans beschikbaar. NOOIT differentiëren of goniometrie.
 - Voor VO klas 3-4: goniometrie, differentiëren, logaritmen, examenstof. Alle exacte vakken beschikbaar.
+- Voor VO klas 5 HAVO: eindexamenstof HAVO, vragen op CE-niveau. Wiskunde A/B differentiëren, integreren, statistiek.
+- Voor VO klas 5 VWO/Gymnasium: hogere abstractie dan HAVO, VWO-examenstof, geavanceerde wiskunde B.
+- Voor VO klas 6 VWO/Gymnasium: eindexamenniveau VWO, complexe getallen, vectoren, alle vakken op eindexamen CE-niveau.
 - Foute antwoorden moeten veelgemaakte fouten zijn
 - ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door de langste optie te kiezen.
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig
