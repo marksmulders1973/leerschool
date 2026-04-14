@@ -379,18 +379,17 @@ export const CHAPTER_TITLES = {
   ],
   // ── Getal en Ruimte ──────────────────────────────────────────
   "gr-hv1-deel1": [
-    "Getallen",
-    "Verhoudingen en procenten",
-    "Meten en meetkunde",
-    "Formules en grafieken",
-    "Statistiek",
+    "Figuren",
+    "Getallen en formules",
+    "Assenstelsel en grafieken",
+    "Hoeken en symmetrie",
+    "Reken",
   ],
   "gr-hv1-deel2": [
-    "Breuken",
-    "Negatieve getallen",
-    "Driehoeken en vierhoeken",
-    "Functies en grafieken",
-    "Kansen en combineren",
+    "Formules en letters",
+    "Meten",
+    "Herleiden en machten",
+    "Symmetrie en vlakke figuren",
   ],
   "gr-hv2": [
     "Procenten en indexcijfers",
@@ -1229,19 +1228,18 @@ export const PARAGRAPH_TITLES = {
   },
   // ── Getal en Ruimte Havo/vwo 1 Deel 1 ───────────────────────
   "gr-hv1-deel1": {
-    1: ["Gehele getallen", "Rekenen met negatieve getallen", "Machten", "Volgorde van bewerkingen"],
-    2: ["Breuken", "Procenten", "Verhoudingen", "Schaal"],
-    3: ["Omtrek en oppervlakte", "Inhoud", "Pythagoras", "Coördinaten"],
-    4: ["Variabelen en formules", "Grafieken lezen", "Grafieken tekenen", "Lineaire formules"],
-    5: ["Gegevens verzamelen", "Gemiddelde en mediaan", "Diagrammen", "Kansen"],
+    1: ["Lijnen", "Rechthoek en vierkant", "Cirkels", "Balk en kubus", "Prisma en piramide", "Uitslagen"],
+    2: ["Bewerking", "Breuken", "Negatieve getallen", "Woordformules", "Formules met letters"],
+    3: ["Negatieve getallen vermenigvuldigen", "Negatieve getallen delen", "Negatieve breuken", "Assenstelsel", "Omgaan met grafieken", "Grafieken en formules"],
+    4: ["Hoeken en graden", "Hoeken meten en tekenen", "Hoeken berekenen", "Lijnsymmetrie", "Draaisymmetrie"],
+    5: ["Decimale getallen", "De rekenmachine", "Rekenen in alledaagse getallen", "Procenten", "Evenredig en omgekeerd evenredig"],
   },
   // ── Getal en Ruimte Havo/vwo 1 Deel 2 ───────────────────────
   "gr-hv1-deel2": {
-    1: ["Breuken optellen en aftrekken", "Breuken vermenigvuldigen", "Breuken en vergelijkingen"],
-    2: ["Negatieve getallen", "Bewerkingen met negatieve getallen"],
-    3: ["Driehoeken", "Vierhoeken", "Symmetrie", "Oppervlakte en omtrek"],
-    4: ["Functies", "Lineaire functies", "Grafieken", "Snijpunten"],
-    5: ["Kansen berekenen", "Boomdiagrammen", "Combinaties"],
+    1: ["Kwadraten", "Kwadratische formules", "Grafieken", "Rekenen met letters", "Herleiden"],
+    2: ["Lengte", "Oppervlakte", "De cirkel", "Inhoud", "Aanzichten"],
+    3: ["Herleiden", "Haakjes wegwerken", "Machten", "De wetenschappelijke notatie", "Machten en letters"],
+    4: ["Lijnsymmetrie", "Draaisymmetrie", "Bijzondere driehoeken", "Bijzondere vierhoeken", "Z-hoeken en F-hoeken"],
   },
   // ── Systematische Natuurkunde ────────────────────────────────
   "sys-natuurkunde": {
