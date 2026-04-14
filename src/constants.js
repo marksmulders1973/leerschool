@@ -1220,6 +1220,18 @@ export const PARAGRAPH_TITLES = {
     9: ["Eerste Wereldoorlog", "Russische Revolutie", "De jaren 1920-1930", "Tweede Wereldoorlog", "Holocaust"],
     10: ["De Koude Oorlog", "Dekolonisatie", "Welvaartsstaat", "Globalisering", "Hedendaagse conflicten"],
   },
+  // ── Sprekend Verleden (Geschiedenis) ─────────────────────────
+  "sprekend-verleden": {
+    1: ["De eerste mensen", "Jagers en verzamelaars", "Landbouwrevolutie", "Eerste beschavingen"],
+    2: ["Het oude Griekenland", "De democratie", "Het Romeinse Rijk", "Val van Rome"],
+    3: ["Het feodale stelsel", "De kerk", "Kruistochten", "Steden en handel"],
+    4: ["Humanisme en Renaissance", "De Reformatie", "Ontdekkingsreizen", "De Republiek"],
+    5: ["De Verlichting", "Amerikaanse revolutie", "Franse Revolutie", "Napoleon"],
+    6: ["De industriële revolutie", "Socialisme", "Kolonialisme", "Nationalisme"],
+    7: ["Eerste Wereldoorlog", "Het interbellum", "Tweede Wereldoorlog", "Holocaust"],
+    8: ["De Koude Oorlog", "Dekolonisatie", "Welvaartsstaat", "Kernwapenwedloop"],
+    9: ["Einde Koude Oorlog", "Internationale samenwerking", "Globalisering", "Hedendaagse conflicten"],
+  },
   // ── NaSk: Overal ─────────────────────────────────────────────
   "overal-nask": {
     1: ["Eigenschappen van stoffen", "Mengsels", "Oplossingen", "Scheiden van stoffen"],
@@ -1420,7 +1432,14 @@ export const PARAGRAPH_TITLES = {
     8: ["Galvanische cel", "Elektrolyse", "Accumulatoren", "Brandstofcellen"],
   },
   "nova-scheikunde": {
-    _default: ["Begrippen en theorie", "Formules en reacties", "Berekeningen", "Experimenten"],
+    1: ["Begrippen", "Eigenschappen meten", "Mengsels", "Scheiden van stoffen"],
+    2: ["Atoommodel", "Atoommassa en molmassa", "Moleculen", "Ionen"],
+    3: ["Reactievergelijkingen opstellen", "Stoichiometrie", "Mol", "Energieveranderingen"],
+    4: ["pH en zuurgraad", "Zuren en basen", "Neutralisatie", "Titreren"],
+    5: ["Zouten en ionen", "Oplosbaarheid", "Neerslag", "Zouten in de industrie"],
+    6: ["Alkanen", "Alkenen en alkynen", "Functionele groepen", "Isomerie"],
+    7: ["Monomeren en polymeren", "Kunststoffen", "Biopolymeren", "Plastics en milieu"],
+    8: ["Reactiesnelheid", "Evenwichtsreacties", "Le Chatelier", "Katalyse"],
   },
   "newton-scheikunde": {
     _default: ["Begrippen", "Theorie", "Oefeningen", "Practicum"],
