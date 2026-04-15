@@ -482,14 +482,12 @@ export const CHAPTER_TITLES = {
     "Basen",
   ],
   "nova-scheikunde": [
-    "Stoffen en eigenschappen",
-    "Atomen en moleculen",
-    "Chemische reacties",
-    "Zuren en basen",
+    "Chemisch rekenen",
+    "Chemische bindingen",
+    "Organische verbindingen",
     "Zouten",
-    "Koolwaterstoffen",
-    "Polymeren",
-    "Reactiekinetiek",
+    "Reacties in beweging",
+    "Chemisch evenwicht en zuur-base",
   ],
   "newton-scheikunde": [
     "Stoffen",
@@ -1474,7 +1472,12 @@ export const PARAGRAPH_TITLES = {
     8: ["Basen in water", "pH van basen in water", "Zuur-basereacties", "Zwakke zuren en basen"],
   },
   "nova-scheikunde": {
-    _default: ["Begrippen", "Theorie", "Oefeningen", "Practicum"],
+    1: ["Atoombouw en periodiek systeem", "De chemische hoeveelheid", "Rekenen met gehaltes", "Rekenen aan reacties", "Practica"],
+    2: ["Atoombinding", "Bindingen tussen moleculen", "Metaalbinding", "Ionbinding", "Practica"],
+    3: ["Koolstofverbindingen", "Systematische naamgeving", "Brandstoffen", "Organische chemie", "Practica"],
+    4: ["Formules en naamgeving van zouten", "Oplosbaarheid van zouten", "Bijzondere zouten", "Rekenen aan zoutoplossingen", "Practica"],
+    5: ["Energie en reactie", "Reactiewarmte", "Reactiesnelheid", "Reactiesnelheid beïnvloeden", "Practica"],
+    6: ["Chemisch evenwicht", "Evenwichtsverschuivingen", "Zuren en basen in water", "Waterevenwicht", "Practica"],
   },
   "newton-scheikunde": {
     _default: ["Begrippen", "Theorie", "Oefeningen", "Practicum"],
