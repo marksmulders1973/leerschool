@@ -4783,6 +4783,18 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is een nulpunt van een functie?", options: ["De waarde van f(0)", "Het maximum van de functie", "Een x-waarde waarbij f(x) = 0", "De afgeleide op x=0"], answer: 2, explanation: "Nulpunten zijn de x-waarden waarbij de grafiek de x-as snijdt, dus f(x) = 0." },
       { q: "Wat is de tweede afgeleide test voor een maximum?", options: ["f'(a) = 0 en f''(a) > 0", "f'(a) > 0 en f''(a) = 0", "f'(a) = 0 en f''(a) < 0", "f'(a) < 0 en f''(a) = 0"], answer: 2, explanation: "Maximum: f'(a) = 0 en f''(a) < 0 (grafiek hol naar beneden). Minimum: f'(a) = 0 en f''(a) > 0." },
     ],
+    klas6: [
+      { q: "Wat is de productfunctieregel voor differentiëren?", options: ["(f·g)' = f'·g'", "(f·g)' = f'·g - f·g'", "(f·g)' = f'·g + f·g'", "(f·g)' = (f'+g')²"], answer: 2, explanation: "Productregel: (f·g)' = f'·g + f·g'. Bv: (x²·sin x)' = 2x·sin x + x²·cos x." },
+      { q: "Wat is de quotiëntregel?", options: ["(f/g)' = f'·g / g²", "(f/g)' = (f'g - fg') / g²", "(f/g)' = f'/g'", "(f/g)' = f'g + fg'"], answer: 1, explanation: "Quotiëntregel: (f/g)' = (f'g - fg') / g². Let op de volgorde: teller eerst, dan aftrekken." },
+      { q: "Wat is ∫eˣ dx?", options: ["eˣ/x + c", "xeˣ + c", "eˣ + c", "e^(x+1) + c"], answer: 2, explanation: "De exponentiële functie eˣ is zijn eigen afgeleide én primitieve: ∫eˣ dx = eˣ + c." },
+      { q: "Wat is de limiet lim(x→0) sin(x)/x?", options: ["0", "onbepaald", "∞", "1"], answer: 3, explanation: "lim(x→0) sin(x)/x = 1. Dit is een fundamentele limiet die gebruikt wordt bij het afleiden van sin(x)' = cos(x)." },
+      { q: "Wat zijn de nulpunten van sin(x) = 0?", options: ["x = π/2 + kπ", "x = π + 2kπ", "x = kπ", "x = 2kπ"], answer: 2, explanation: "sin(x) = 0 bij x = 0, π, 2π, ... = kπ (k ∈ ℤ). cos(x) = 0 bij x = π/2 + kπ." },
+      { q: "Wat is partieel integreren?", options: ["Integreren met substitutie", "∫f·g' dx = f·g - ∫f'·g dx", "∫f·g dx = ∫f dx · ∫g dx", "Integreren van samengestelde functies"], answer: 1, explanation: "Partieel integreren (omgekeerde productregel): ∫u·v' dx = u·v - ∫u'·v dx. Handig bij bv. ∫x·eˣ dx." },
+      { q: "Wat is het volume van een omwentelingslichaam om de x-as?", options: ["V = π∫[f(x)]dx", "V = 2π∫x·f(x)dx", "V = π∫[f(x)]² dx", "V = ∫[f(x)]² dx"], answer: 2, explanation: "Volume omwenteling om x-as: V = π∫ₐᵇ [f(x)]² dx. De doorsnede is een cirkel met straal f(x)." },
+      { q: "Wat is de definitie van een asymptoot?", options: ["Een snijpunt van twee functies", "Een lijn waar de grafiek naar toe nadert maar nooit (of pas op ∞) raakt", "De top van een parabool", "Een raaklijn in een buigpunt"], answer: 1, explanation: "Asymptoot: lijn die de grafiek benadert maar niet snijdt. Horizontaal: lim(x→±∞) f(x), verticaal: noemer = 0." },
+      { q: "Wat is een buigpunt?", options: ["Een punt waar f'(x) = 0", "Een punt waar de grafiek zijn maximum bereikt", "Een punt waar de krommingsrichting verandert (f''(x) wisselt van teken)", "Een snijpunt met de x-as"], answer: 2, explanation: "Buigpunt: f''(x) = 0 én f'' wisselt van teken. Op dat punt gaat de grafiek van hol naar bol of andersom." },
+      { q: "Wat is de stelling van de middelwaarde (MVS)?", options: ["Er bestaat een punt c waar f(c) = gemiddelde van f(a) en f(b)", "Er bestaat een punt c in (a,b) waar f'(c) = (f(b)-f(a))/(b-a)", "De integraal is gelijk aan het oppervlak", "Een continue functie heeft een maximum"], answer: 1, explanation: "MVS: als f continu is op [a,b] en differentieerbaar op (a,b), bestaat er c zodat f'(c) = (f(b)-f(a))/(b-a)." },
+    ],
   },
   "mens-maatschappij": {
     klas1: [
