@@ -289,12 +289,12 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "De Basis":      () => makeBookCover("De Basis","Maatschappijleer", ["#263238","#37474f","#455a64"], "DB"),
     "In de Samenleving":       () => makeBookCover("In de","Samenleving", ["#1a237e","#283593","#3949ab"], "IS"),
     // ── Spaans VO ────────────────────────────────────────────────
-    "¿Qué tal?":     () => makeBookCover("¿Qué","tal?",     ["#c62828","#d32f2f","#e53935"], "QT"),
-    "Juntos":        () => makeBookCover("Juntos","",        ["#e65100","#ef6c00","#f57c00"], "JU"),
-    "Puerta Nueva":  () => makeBookCover("Puerta","Nueva",   ["#880e4f","#ad1457","#c2185b"], "PN"),
-    "Contacto":      () => makeBookCover("Con","tacto",      ["#4a148c","#6a1b9a","#7b1fa2"], "CO"),
-    "Temas":         () => makeBookCover("Temas","",         ["#1b5e20","#2e7d32","#388e3c"], "TE"),
-    "Dos Mundos":    () => makeBookCover("Dos","Mundos",     ["#006064","#00838f","#0097a7"], "DM"),
+    "Paso Adelante": () => makeBookCover("Paso","Adelante",  ["#c62828","#d32f2f","#e53935"], "PA"),
+    "Caminos nieuw": () => makeBookCover("Caminos","nieuw",  ["#e65100","#ef6c00","#f57c00"], "CA"),
+    "Reporteros":    () => makeBookCover("Repor","teros",    ["#880e4f","#ad1457","#c2185b"], "RE"),
+    "Gente joven":   () => makeBookCover("Gente","joven",    ["#4a148c","#6a1b9a","#7b1fa2"], "GJ"),
+    "¡Apúntate!":    () => makeBookCover("¡Apún","tate!",    ["#1b5e20","#2e7d32","#388e3c"], "AP"),
+    "Con gusto":     () => makeBookCover("Con","gusto",      ["#006064","#00838f","#0097a7"], "CG"),
     // ── Latijn VO ────────────────────────────────────────────────
     "Prima Nova":    () => makeBookCover("Prima","Nova",     ["#bf360c","#d84315","#e64a19"], "PN"),
     "Index":         () => makeBookCover("Index","Latijn",   ["#1a237e","#283593","#3949ab"], "IX"),
