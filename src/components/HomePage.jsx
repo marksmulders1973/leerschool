@@ -253,8 +253,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           Oefen met <strong style={{ color: "#00d4ff" }}>echte examenvragen</strong> voor rekenen, taal, aardrijkskunde en meer
         </p>
 
-        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -16, marginBottom: 20, textAlign: "center" }}>
+        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#556677", fontSize: 11, marginTop: -16, marginBottom: 4, textAlign: "center" }}>
           © Smulsoft &nbsp;·&nbsp; <a href="/privacy.html" style={{ color: "#556677" }}>Privacybeleid</a>
+        </p>
+        <p style={{ fontFamily: "'Nunito', sans-serif", color: "#445566", fontSize: 10, marginBottom: 20, textAlign: "center" }}>
+          Deze app is in ontwikkeling en kan fouten bevatten.
         </p>
 
         {step === "role" && (
