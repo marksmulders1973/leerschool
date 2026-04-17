@@ -4762,7 +4762,20 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is het verschil tussen arm en rijk land?", options: ["Alleen klimaat bepaalt dit", "Een arm land heeft een laag bbp per hoofd van de bevolking en lage levensstandaard", "Arme landen hebben meer inwoners", "Rijke landen liggen altijd in Europa"], answer: 1, explanation: "Inkomen per hoofd, gezondheidszorg, onderwijs en infrastructuur zijn factoren die de welvaart van een land bepalen." },
     ],
   },
-  levensbeschouwing: {},
+  levensbeschouwing: {
+    klas1: [
+      { q: "Wat zijn de vijf zuilen van de islam?", options: ["Gebed, vasten, aalmoezen, hajj, jihad", "Geloofsgetuigenis, gebed, aalmoezen, vasten, bedevaart naar Mekka", "Bijbel lezen, bidden, vasten, aalmoezen, pelgrimstocht", "Geloof, hoop, liefde, vasten, gebed"], answer: 1, explanation: "De vijf zuilen: shahada (geloofsgetuigenis), salat (gebed 5x/dag), zakat (aalmoezen), sawm (vasten ramadan), hajj (bedevaart)." },
+      { q: "Wat is het heilige boek van het christendom?", options: ["Koran", "Thora", "Bijbel", "Vedas"], answer: 2, explanation: "De Bijbel bestaat uit het Oude Testament (Hebreeuws) en het Nieuwe Testament (Grieks). Het Oude Testament is ook heilig voor joden (Tenach)." },
+      { q: "Wat betekent 'humanisme'?", options: ["Een geloof in goden", "Een levensovertuiging waarbij de mens en zijn waarden centraal staan, zonder godsdienst", "Een stroming binnen het christendom", "Het geloof in de natuur"], answer: 1, explanation: "Humanisme = seculiere levensovertuiging. Centrale waarden: menselijke waardigheid, rede, vrijheid, verantwoordelijkheid." },
+      { q: "Wat vieren christenen met Pasen?", options: ["De geboorte van Jezus", "De dood van Jezus", "De opstanding van Jezus", "De hemelvaart van Jezus"], answer: 2, explanation: "Pasen = opstanding van Jezus op de derde dag na zijn kruisiging. Kerst = geboorte van Jezus." },
+      { q: "Wat is de heilige stad voor zowel jodendom, christendom als islam?", options: ["Mekka", "Medina", "Rome", "Jeruzalem"], answer: 3, explanation: "Jeruzalem is heilig voor drie wereldreligies: de Tempelberg (jodendom), de Heilig-Grafkerk (christendom) en de Al-Aqsamoskee (islam)." },
+      { q: "Wat is karma in het hindoeïsme en boeddhisme?", options: ["Een gebed", "Het principe dat goede of slechte daden gevolgen hebben voor dit en volgend leven", "Een heilig boek", "Een religieuze leider"], answer: 1, explanation: "Karma = oorzaak en gevolg van daden. Goede daden leiden tot gunstige wedergeboorte; slechte daden tot ongunstige." },
+      { q: "Wat is het verschil tussen monotheïsme en polytheïsme?", options: ["Monotheïsme = geloof in geen goden, polytheïsme = geloof in één god", "Monotheïsme = geloof in één god, polytheïsme = geloof in meerdere goden", "Er is geen verschil", "Monotheïsme = wetenschap, polytheïsme = religie"], answer: 1, explanation: "Monotheïsme (één god): jodendom, christendom, islam. Polytheïsme (meerdere goden): hindoeïsme, oude Grieken/Romeinen." },
+      { q: "Wat is de betekenis van de Ramadan?", options: ["Het islamitische nieuwjaar", "De geboorte van de profeet Mohammed", "Een vastentijd van één maand voor moslims", "Het feest na de bedevaart"], answer: 2, explanation: "Ramadan = de negende maand van de islamitische kalender. Moslims vasten van zonsopgang tot zonsondergang." },
+      { q: "Welk symbool hoort bij het jodendom?", options: ["Het kruis", "De halve maan", "De yin-yang", "De Davidster"], answer: 3, explanation: "De Davidster (Magen David) is het symbool van het jodendom en staat ook op de vlag van Israël." },
+      { q: "Wat is een levensvraag?", options: ["Een vraag op een toets", "Een vraag over dagelijkse problemen", "Een diepgaande vraag over de zin van het leven, goed en kwaad, of het bestaan van god", "Een wetenschappelijke vraag"], answer: 2, explanation: "Levensvragen: Waarom zijn we er? Wat is goed en kwaad? Wat gebeurt er na de dood? Religie en filosofie geven antwoorden." },
+    ],
+  },
   maw: {},
 };
 
