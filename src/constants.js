@@ -4679,6 +4679,18 @@ export const SAMPLE_QUESTIONS = {
       { q: "Vertaal: 'Tengo que estudiar'", options: ["Ik wil studeren", "Ik kan studeren", "Ik studeer", "Ik moet studeren"], answer: 3, explanation: "'Tener que + infinitief' = moeten. Deber + infinitief is ook mogelijk maar formeler." },
       { q: "Wat betekent 'sin embargo'?", options: ["bovendien", "toch / desondanks", "want", "dus"], answer: 1, explanation: "'Sin embargo' = echter / desondanks / toch. Wordt gebruikt om een contrast aan te geven." },
     ],
+    klas5: [
+      { q: "Wanneer gebruik je de subjuntivo in het Spaans?", options: ["Altijd bij twijfel of onzekerheid, wensen, emoties en na bepaalde voegwoorden", "Alleen bij vragen", "Alleen in de verleden tijd", "Alleen in gebiedende zinnen"], answer: 0, explanation: "Subjuntivo gebruik je bij subjectiviteit: twijfel (quizás), wensen (quiero que), emoties (es bueno que), doel (para que)." },
+      { q: "Hoe vorm je de subjuntivo presente van 'hablar' (yo)?", options: ["hablo", "hablé", "hable", "hablara"], answer: 2, explanation: "Subjuntivo presente: -ar werkwoorden krijgen -e uitgang. yo hable, tú hables, él hable, nosotros hablemos." },
+      { q: "Wat is het verschil tussen pretérito indefinido en pretérito imperfecto?", options: ["Geen verschil", "Indefinido = afgeronde actie; imperfecto = voortdurende/herhaalde toestand in het verleden", "Imperfecto = afgeronde actie; indefinido = gewoonte", "Indefinido = toekomst; imperfecto = verleden"], answer: 1, explanation: "Indefinido: 'Ayer comí' (Gisteren at ik). Imperfecto: 'De niño comía mucho' (Als kind at ik veel / placht te eten)." },
+      { q: "Hoe zeg je 'als ik meer tijd had' (hypothetisch) in het Spaans?", options: ["Si tengo más tiempo", "Si tuve más tiempo", "Si tuviera más tiempo", "Si tendré más tiempo"], answer: 2, explanation: "Hypothetische if-zin (onwerkelijk): 'si + imperfecto subjuntivo'. Tuviera = imperfecto subjuntivo van tener." },
+      { q: "Wat is het passief in het Spaans?", options: ["ser + participio (bv. fue construido)", "estar + gerundio", "tener + infinitief", "haber + participio"], answer: 0, explanation: "Passief: ser + participio. 'La casa fue construida' = Het huis werd gebouwd. Participio past bij geslacht/getal." },
+      { q: "Wat betekent 'a menos que'?", options: ["zodat", "hoewel", "tenzij", "nadat"], answer: 2, explanation: "'A menos que + subjuntivo' = tenzij. Bv: 'Iré a menos que llueva' = Ik ga, tenzij het regent." },
+      { q: "Hoe vervoeg je 'ir' in de pretérito indefinido (él)?", options: ["iba", "irá", "fue", "va"], answer: 2, explanation: "'Ir' en 'ser' hebben dezelfde vormen in de indefinido: fui, fuiste, fue, fuimos, fuisteis, fueron. Context bepaalt de betekenis." },
+      { q: "Wat is het condicional simple van 'poder' (yo)?", options: ["podría", "pude", "puedo", "podré"], answer: 0, explanation: "Condicional simple = zou kunnen. 'Podría' = ik zou kunnen. Condicional eindigt op -ía, -ías, -ía, -íamos..." },
+      { q: "Wat betekent 'sin que + subjuntivo'?", options: ["zodat", "opdat", "zonder dat", "nadat"], answer: 2, explanation: "'Sin que + subjuntivo' = zonder dat. Bv: 'Salió sin que lo viera' = Hij vertrok zonder dat ik hem zag." },
+      { q: "Wat is het verschil tussen 'por' en 'para'?", options: ["Geen verschil", "por = oorzaak/ruil/duur; para = doel/bestemming/deadline", "para = oorzaak; por = doel", "Beide betekenen 'voor' zonder verschil"], answer: 1, explanation: "'Por' = oorzaak, reden, ruil, duur (por amor, por dos horas). 'Para' = doel, bestemming, deadline (para mañana, para ti)." },
+    ],
   },
   latijn: {
     klas1: [
