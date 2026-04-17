@@ -166,7 +166,7 @@ export const TEXTBOOKS = {
     { id: "de-basis",                name: "De Basis",                icon: "🏫", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   spaans: [
-    { id: "paso-adelante", name: "Paso Adelante", icon: "🇪🇸", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "paso-adelante", name: "Paso Adelante", icon: "🇪🇸", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas5" } },
     { id: "caminos",       name: "Caminos nieuw", icon: "🛤️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
     { id: "reporteros",    name: "Reporteros",    icon: "📰", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
     { id: "gente-joven",   name: "Gente joven",   icon: "🧑", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
@@ -251,6 +251,39 @@ export const TEXTBOOKS = {
 
 // Hoofdstuktitels per boek (index 0 = Hoofdstuk 1)
 export const CHAPTER_TITLES = {
+  // ── Spaans VO ─────────────────────────────────────────────────
+  "paso-adelante-1": [
+    "Vacaciones en la playa",
+    "En camino",
+    "Mi casa es tu casa",
+    "¡Vamos al instituto!",
+    "Ir de tiendas en Madrid",
+    "En verano en Cádiz",
+  ],
+  "paso-adelante-2": [
+    "Adiós a las vacaciones",
+    "¡Qué aproveche!",
+    "Y tú, ¿Cómo eres?",
+    "De aventura en Perú",
+    "Una vida soleada",
+    "¡De paseo por Salamanca!",
+  ],
+  "paso-adelante-3": [
+    "Entre mar y montaña",
+    "Fiesta y amor en Sevilla",
+    "Corazón, corazón",
+    "¡Sano como una manzana!",
+    "El dinero viene y va",
+    "Un viaje por el mundo español",
+  ],
+  "paso-adelante-4": [
+    "Hoy en oferta",
+    "El reino donde el sol nunca se pone",
+    "¡Hay que cuidarse!",
+    "Las últimas noticias",
+    "Soy artista",
+    "¡Buen viaje!",
+  ],
   // ── Biologie voor Jou (BvJ) — thema-indeling ─────────────────
   "bvj-havo-vwo-1": [
     "Wat is biologie?",

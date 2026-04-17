@@ -289,7 +289,11 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
     "De Basis":      () => makeBookCover("De Basis","Maatschappijleer", ["#263238","#37474f","#455a64"], "DB"),
     "In de Samenleving":       () => makeBookCover("In de","Samenleving", ["#1a237e","#283593","#3949ab"], "IS"),
     // ── Spaans VO ────────────────────────────────────────────────
-    "Paso Adelante": () => makeBookCover("Paso","Adelante",  ["#c62828","#d32f2f","#e53935"], "PA"),
+    "Paso Adelante 1": () => "https://images.ctfassets.net/huogrpkfou0w/2f9Ittiq7IHArjXLAljE5t/4e5377633263a84b9512980e7b7799ac/9789001788551.png",
+    "Paso Adelante 2": () => "https://images.ctfassets.net/huogrpkfou0w/3890sFBdwwp08YXqScM1ki/de87b96f2652c8dbfc4e6858e27ac5c2/9789001788568.png",
+    "Paso Adelante 3": () => "https://images.ctfassets.net/huogrpkfou0w/6IZwkxvqpTcIm4Nz19yXRW/cd0dde1772af368aeb7316f37cb2ccaa/9789001796471.png",
+    "Paso Adelante 4": () => "https://images.ctfassets.net/huogrpkfou0w/7aXphtMrW9Vb2QHgtXVKGm/940ce4ba49ade6b5d867021f6ba9b5fd/9789001815677.png",
+    "Paso Adelante": () => "https://images.ctfassets.net/huogrpkfou0w/2f9Ittiq7IHArjXLAljE5t/4e5377633263a84b9512980e7b7799ac/9789001788551.png",
     "Caminos nieuw": () => makeBookCover("Caminos","nieuw",  ["#e65100","#ef6c00","#f57c00"], "CA"),
     "Reporteros":    () => makeBookCover("Repor","teros",    ["#880e4f","#ad1457","#c2185b"], "RE"),
     "Gente joven":   () => makeBookCover("Gente","joven",    ["#4a148c","#6a1b9a","#7b1fa2"], "GJ"),
