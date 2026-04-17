@@ -16,6 +16,15 @@ export const SUBJECTS = [
   { id: "duits", label: "Duits", icon: "🇩🇪", color: "#2bbd7e" },
   { id: "frans", label: "Frans", icon: "🇫🇷", color: "#00b84d" },
   { id: "maatschappijleer", label: "Maatschappijleer", icon: "🏛️", color: "#69f0ae" },
+  { id: "nask",            label: "NaSk / Science",   icon: "🔭", color: "#6b9fd4" },
+  { id: "spaans",          label: "Spaans",            icon: "🇪🇸", color: "#e65100" },
+  { id: "grieks",          label: "Grieks",            icon: "🏺", color: "#a0b8d8" },
+  { id: "latijn",          label: "Latijn",            icon: "📜", color: "#c8a96e" },
+  { id: "wiskunde-a",      label: "Wiskunde A",        icon: "📊", color: "#00c853" },
+  { id: "wiskunde-b",      label: "Wiskunde B",        icon: "📐", color: "#0072ff" },
+  { id: "mens-maatschappij", label: "Mens & Maatschappij", icon: "🌐", color: "#69f0ae" },
+  { id: "levensbeschouwing", label: "Levensbeschouwing",  icon: "🕊️", color: "#a0b8d8" },
+  { id: "maw",             label: "MAW",               icon: "📊", color: "#f9a825" },
 ];
 
 export const LEVELS = [
@@ -35,10 +44,10 @@ export const SUBJECT_FOR_LEVEL = {
   groep3:  ["rekenen", "taal", "natuur"],
   groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
   groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
-  klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans"],
-  klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
-  klas5:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
-  klas6:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "maatschappijleer"],
+  klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "mens-maatschappij", "levensbeschouwing"],
+  klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "levensbeschouwing"],
+  klas5:   ["wiskunde", "wiskunde-a", "wiskunde-b", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "maw"],
+  klas6:   ["wiskunde", "wiskunde-a", "wiskunde-b", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "maw"],
 };
 
 export const TEXTBOOKS = {
@@ -156,6 +165,23 @@ export const TEXTBOOKS = {
     { id: "memo-maatschappijleer",   name: "Memo Maatschappijleer",   icon: "📋", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
     { id: "de-basis",                name: "De Basis",                icon: "🏫", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
+  spaans: [
+    { id: "que-tal",      name: "¿Qué tal?",   icon: "🇪🇸", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "dos-mundos",   name: "Dos Mundos",  icon: "🌍", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+  ],
+  latijn: [
+    { id: "prima-nova",   name: "Prima Nova",  icon: "📜", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+    { id: "index-latijn", name: "Index",       icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas1", 2: "klas1", 3: "klas3", 4: "klas3" } },
+  ],
+  grieks: [
+    { id: "hellas",       name: "Hellas",      icon: "🏺", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5", 4: "klas5" } },
+    { id: "polis-grieks", name: "Polis",       icon: "🏛️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5", 4: "klas5" } },
+  ],
+  "wiskunde-a": [],
+  "wiskunde-b": [],
+  "mens-maatschappij": [],
+  levensbeschouwing: [],
+  maw: [],
   // ── Basisschool ──────────────────────────────────────────────
   rekenen: [
     { id: "pluspunt",          name: "Pluspunt",               icon: "➕", defaultLevel: "groep5" },
@@ -1606,7 +1632,15 @@ export const TEXTBOOK_CATEGORIES_VO = [
   { id: "beco",            label: "Bedrijfseconomie", icon: "📈" },
   { id: "duits",           label: "Duits",            icon: "🇩🇪" },
   { id: "frans",           label: "Frans",            icon: "🇫🇷" },
-  { id: "maatschappijleer",label: "Maatschappijleer", icon: "🏛️" },
+  { id: "maatschappijleer",  label: "Maatschappijleer",    icon: "🏛️" },
+  { id: "spaans",            label: "Spaans",              icon: "🇪🇸" },
+  { id: "latijn",            label: "Latijn",              icon: "📜" },
+  { id: "grieks",            label: "Grieks",              icon: "🏺" },
+  { id: "wiskunde-a",        label: "Wiskunde A",          icon: "📊" },
+  { id: "wiskunde-b",        label: "Wiskunde B",          icon: "📐" },
+  { id: "mens-maatschappij", label: "Mens & Maatschappij", icon: "🌐" },
+  { id: "levensbeschouwing", label: "Levensbeschouwing",   icon: "🕊️" },
+  { id: "maw",               label: "MAW",                 icon: "📊" },
 ];
 export const TEXTBOOK_CATEGORIES_PO = [
   { id: "rekenen", label: "Rekenen",          icon: "🔢" },
@@ -4620,6 +4654,14 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is consonantie in poëzie?", options: ["Eindrijm", "Assonantie", "Herhaling van klinkers onder bepaalde omstandigheden", "Herhaling van medeklinkers in opeenvolgende woorden"], answer: 3, explanation: "Consonantie (medeklinkerrijm): 'pitter-patter', 'blank and think' — herhaling van medeklinkers." },
     ],
   },
+  spaans: {},
+  latijn: {},
+  grieks: {},
+  "wiskunde-a": {},
+  "wiskunde-b": {},
+  "mens-maatschappij": {},
+  levensbeschouwing: {},
+  maw: {},
 };
 
 // ─── Vragen voor vrije onderwerpen ─────────────────────────────
@@ -4875,6 +4917,38 @@ export const TEACHER_TOPIC_SUGGESTIONS = {
   maatschappijleer: {
     basisschool: ["Democratie", "Regels & wetten", "Nederland & de wereld"],
     vo: ["Democratie & rechtsstaat", "Grondrechten", "Politieke partijen", "De Europese Unie", "Media & journalistiek", "Economie & arbeid", "Sociale ongelijkheid"],
+  },
+  spaans: {
+    basisschool: [],
+    vo: ["Woordenschat", "Werkwoorden", "Presente de indicativo", "Pretérito indefinido", "Ser & estar", "Reflexieve werkwoorden", "Grammatica"],
+  },
+  latijn: {
+    basisschool: [],
+    vo: ["Naamvallen", "Werkwoorden & conjugatie", "Woordenschat", "Zinsbouw", "Ablativus", "Participium", "Vertalen"],
+  },
+  grieks: {
+    basisschool: [],
+    vo: ["Alfabet", "Naamvallen", "Woordenschat", "Werkwoorden", "Participium", "Syntaxis", "Vertalen"],
+  },
+  "wiskunde-a": {
+    basisschool: [],
+    vo: ["Statistiek & kansen", "Verbanden & grafieken", "Exponentiële groei", "Differentiaalrekening", "Matrices", "Logica", "Regressie"],
+  },
+  "wiskunde-b": {
+    basisschool: [],
+    vo: ["Differentiëren", "Integreren", "Goniometrie", "Complexe getallen", "Vectoren", "Limieten", "Ruimtemeetkunde"],
+  },
+  "mens-maatschappij": {
+    basisschool: [],
+    vo: ["Democratie", "Economie & geld", "Nederland & wereld", "Duurzaamheid", "Cultuur & samenleving", "Mensenrechten"],
+  },
+  levensbeschouwing: {
+    basisschool: [],
+    vo: ["Levensvragen", "Wereldreligies", "Ethiek & moraal", "Islam", "Christendom", "Jodendom", "Humanisme"],
+  },
+  maw: {
+    basisschool: [],
+    vo: ["Macht & gezag", "Democratie & politiek", "Socialisatie", "Sociale ongelijkheid", "Globalisering", "Culturele diversiteit", "Sociale cohesie"],
   },
 };
 
