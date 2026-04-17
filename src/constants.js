@@ -4748,7 +4748,20 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is de tweede afgeleide test voor een maximum?", options: ["f'(a) = 0 en f''(a) > 0", "f'(a) > 0 en f''(a) = 0", "f'(a) = 0 en f''(a) < 0", "f'(a) < 0 en f''(a) = 0"], answer: 2, explanation: "Maximum: f'(a) = 0 en f''(a) < 0 (grafiek hol naar beneden). Minimum: f'(a) = 0 en f''(a) > 0." },
     ],
   },
-  "mens-maatschappij": {},
+  "mens-maatschappij": {
+    klas1: [
+      { q: "Wat is een democratie?", options: ["Een land geleid door één koning", "Een bestuursvorm waarbij het volk (in)direct beslist", "Een land zonder wetten", "Een bestuursvorm waarbij het leger regeert"], answer: 1, explanation: "Democratie (Grieks: demos = volk, kratos = macht) = volksbestuur. In Nederland kiezen burgers via verkiezingen hun vertegenwoordigers." },
+      { q: "Wat is het verschil tussen een wet en een regel?", options: ["Geen verschil", "Een wet is minder belangrijk dan een regel", "Een wet is vastgesteld door de overheid en wettelijk bindend; een regel hoeft dat niet te zijn", "Een regel is altijd landelijk geldig"], answer: 2, explanation: "Wetten zijn officieel vastgesteld door de overheid (Tweede Kamer, Eerste Kamer, Koning) en zijn juridisch bindend voor iedereen." },
+      { q: "Wat is de Tweede Kamer?", options: ["Het hoogste rechtscollege van Nederland", "De vergadering van Nederlanders die wetten maken namens het volk", "Het kabinet van ministers", "De Senaat"], answer: 1, explanation: "De Tweede Kamer heeft 150 gekozen leden die wetten maken, de regering controleren en debatten voeren." },
+      { q: "Wat betekent 'grondrecht'?", options: ["Het recht op een stuk grond", "Een fundamenteel recht voor alle burgers vastgelegd in de Grondwet", "Een lokale wet", "Het recht om te stemmen"], answer: 1, explanation: "Grondrechten zijn basisrechten in de Grondwet: vrijheid van meningsuiting, godsdienstvrijheid, gelijke behandeling etc." },
+      { q: "Wat is de rol van de rechter in Nederland?", options: ["Wetten maken", "Verkiezingen organiseren", "Wetten uitleggen en rechtspreken in geschillen", "De minister-president aanwijzen"], answer: 2, explanation: "Rechters spreken recht: ze interpreteren wetten en beslissen in juridische conflicten. Ze zijn onafhankelijk van de politiek." },
+      { q: "Wat is een subsidie?", options: ["Een belasting die je betaalt", "Financiële steun van de overheid voor een bepaald doel", "Een lening van de bank", "Een boete van de gemeente"], answer: 1, explanation: "Subsidie = geld van de overheid voor maatschappelijk gewenste activiteiten (bijv. duurzame energie, kunst, sport)." },
+      { q: "Wat is globalisering?", options: ["De bevolking van de wereld neemt af", "Landen worden steeds meer van elkaar afhankelijk en verbonden", "Landen worden steeds meer geïsoleerd", "Alleen westerse landen doen mee aan de wereldeconomie"], answer: 1, explanation: "Globalisering = wereldwijde vervlechting van economie, cultuur en politiek. Denk aan internationale handel, internet, migratie." },
+      { q: "Wat is het bruto binnenlands product (bbp)?", options: ["Het gemiddelde inkomen per persoon", "De totale waarde van alle goederen en diensten in een land per jaar", "De totale schuld van een land", "Het totale belastinginkomen van een land"], answer: 1, explanation: "BBP = maatstaf voor de economische omvang van een land. Hoog BBP = grote economie." },
+      { q: "Wat is een politieke partij?", options: ["Een feestje van politici", "Een organisatie van mensen met gedeelde politieke opvattingen die meedoet aan verkiezingen", "Een afdeling van de overheid", "Een rechterlijke instantie"], answer: 1, explanation: "Politieke partijen bundelen mensen met vergelijkbare ideeën en proberen via verkiezingen invloed te krijgen op het beleid." },
+      { q: "Wat is het verschil tussen arm en rijk land?", options: ["Alleen klimaat bepaalt dit", "Een arm land heeft een laag bbp per hoofd van de bevolking en lage levensstandaard", "Arme landen hebben meer inwoners", "Rijke landen liggen altijd in Europa"], answer: 1, explanation: "Inkomen per hoofd, gezondheidszorg, onderwijs en infrastructuur zijn factoren die de welvaart van een land bepalen." },
+    ],
+  },
   levensbeschouwing: {},
   maw: {},
 };
