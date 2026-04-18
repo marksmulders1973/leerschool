@@ -186,12 +186,13 @@ export default function App() {
       const hasPredefinedTopicQuestions = hasTopic && (TOPIC_QUESTIONS[quiz.topic.toLowerCase()] || []).length > 0;
 
       const hasSampleQuestions = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length > 0;
+      const hasSubjectTopicQuestions = !hasTopic && (TOPIC_QUESTIONS[quiz.subject?.toLowerCase()] || []).length > 0;
       const playedKey = `played_${quiz.subject}_${quiz.level}`;
       const playCount = parseInt(localStorage.getItem(playedKey) || "0", 10);
       const questionsPerRound = quiz.questionCount || 10;
       const standardPoolSize = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length;
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
-      const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || !hasSampleQuestions || hasExhaustedPool;
+      const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || (!hasSampleQuestions && !hasSubjectTopicQuestions) || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
@@ -216,6 +217,7 @@ export default function App() {
       if (questions.length === 0) {
         const subjectQuestions = SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level]
           || (quiz.topic ? TOPIC_QUESTIONS[quiz.topic.toLowerCase()] : null)
+          || TOPIC_QUESTIONS[quiz.subject?.toLowerCase()]
           || [];
         questions = shuffle(subjectQuestions).slice(0, quiz.questionCount || 20);
       }
