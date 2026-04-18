@@ -121,6 +121,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     fontWeight: 700,
+    color: "#e0e6f0",
   },
   headerTitle: { fontFamily: "'Fredoka', sans-serif", fontSize: 22, margin: 0, color: "#e0e6f0" },
   headerSubtitle: { fontSize: 13, color: "#8899aa", margin: 0 },
