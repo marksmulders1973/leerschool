@@ -446,7 +446,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
             {schoolType2 && (
               <>
-                <h3 style={styles.stepTitle}>Welk vak?</h3>
+                <h3 style={styles.stepTitle}>Van welk vak wil je je boek kiezen?</h3>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
                   {TEXTBOOK_CATEGORIES.map((cat) => (
                     <button key={cat.id} style={{
