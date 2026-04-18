@@ -4,14 +4,16 @@ import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole }) {
+export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole, initialSubject }) {
   const groepBuckets = {"g1":"groep12","g2":"groep12","g3":"groep3","g4":"groep3","g5":"groep5","g6":"groep5","g7":"groep7","g8":"groep7"};
   const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"};
   const initGroep = userRole === "leerling" && userLevel ? `g${userLevel}` : "";
   const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
-  const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas] || "";
+  // Cito, topografie, begrijpend-lezen zijn groep 7 vakken — gebruik groep7 als default level
+  const citoSubjects = ["cito", "topografie", "begrijpend-lezen"];
+  const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas] || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "");
 
-  const [subject, setSubject] = useState("");
+  const [subject, setSubject] = useState(initialSubject || "");
   const [level, setLevel] = useState(initLevel);
   const [groepSelect, setGroepSelect] = useState(initGroep);
   const [klasSelect, setKlasSelect] = useState(initKlas);

@@ -4,6 +4,7 @@ import { LEVELS } from "../constants.js";
 
 const FEATURES = [
   {
+    id: "cito",
     icon: "🎯",
     label: "Cito oefenen",
     sub: "Oefen de eindtoets",
@@ -14,6 +15,7 @@ const FEATURES = [
     badge: null,
   },
   {
+    id: "schoolboeken",
     icon: "📚",
     label: "Schoolboeken",
     sub: "100+ echte boeken",
@@ -24,6 +26,7 @@ const FEATURES = [
     badge: null,
   },
   {
+    id: "ai-vragen",
     icon: "🤖",
     label: "AI-vragen",
     sub: "Elk onderwerp",
@@ -34,6 +37,7 @@ const FEATURES = [
     badge: "Nieuw",
   },
   {
+    id: "topografie",
     icon: "🗺️",
     label: "Topografie",
     sub: "Landen & provincies",
@@ -44,6 +48,7 @@ const FEATURES = [
     badge: null,
   },
   {
+    id: "begrijpend-lezen",
     icon: "📖",
     label: "Begrijpend lezen",
     sub: "Groep 5–8",
@@ -54,6 +59,7 @@ const FEATURES = [
     badge: null,
   },
   {
+    id: "scorebord",
     icon: "🏆",
     label: "Scorebord",
     sub: "Strijd om de top",
@@ -65,6 +71,7 @@ const FEATURES = [
     badge: null,
   },
   {
+    id: "leerkrachten",
     icon: "📋",
     label: "Leerkrachten",
     sub: "Maak quizzes voor je klas",
@@ -77,7 +84,7 @@ const FEATURES = [
   },
 ];
 
-function FeatureShowcase() {
+function FeatureShowcase({ onFeatureClick }) {
   const featured = FEATURES[0];
   const normal = FEATURES.slice(1, 5);
   const small = FEATURES.slice(5);
@@ -89,7 +96,7 @@ function FeatureShowcase() {
     flexDirection: "column",
     justifyContent: "flex-end",
     padding: "14px 14px 12px",
-    cursor: "default",
+    cursor: "pointer",
     transition: "transform 0.15s ease, box-shadow 0.15s ease",
     position: "relative",
     overflow: "hidden",
@@ -130,15 +137,19 @@ function FeatureShowcase() {
         marginBottom: 8,
       }}>
         {/* Featured card (spans 2 rows) */}
-        <div style={{
-          ...cardBase,
-          background: featured.bg,
-          borderColor: featured.border,
-          gridRow: "span 2",
-          minHeight: 140,
-          justifyContent: "flex-end",
-          paddingBottom: 16,
-        }}>
+        <div
+          onClick={() => onFeatureClick?.(featured.id)}
+          onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.02)"; e.currentTarget.style.boxShadow = `0 6px 24px ${featured.border}`; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
+          style={{
+            ...cardBase,
+            background: featured.bg,
+            borderColor: featured.border,
+            gridRow: "span 2",
+            minHeight: 140,
+            justifyContent: "flex-end",
+            paddingBottom: 16,
+          }}>
           {renderBadge(featured.badge, featured.color)}
           <div style={{ fontSize: 36, marginBottom: 8 }}>{featured.icon}</div>
           <div style={{
@@ -158,13 +169,17 @@ function FeatureShowcase() {
 
         {/* 4 normal cards */}
         {normal.map((f) => (
-          <div key={f.label} style={{
-            ...cardBase,
-            background: f.bg,
-            borderColor: f.border,
-            minHeight: 64,
-            padding: "10px 10px 9px",
-          }}>
+          <div key={f.label}
+            onClick={() => onFeatureClick?.(f.id)}
+            onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = `0 4px 16px ${f.border}`; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
+            style={{
+              ...cardBase,
+              background: f.bg,
+              borderColor: f.border,
+              minHeight: 64,
+              padding: "10px 10px 9px",
+            }}>
             {renderBadge(f.badge, f.color)}
             <div style={{ fontSize: 22, marginBottom: 4 }}>{f.icon}</div>
             <div style={{
@@ -187,17 +202,21 @@ function FeatureShowcase() {
       {/* Bottom row: 2 small cards */}
       <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 8 }}>
         {small.map((f) => (
-          <div key={f.label} style={{
-            ...cardBase,
-            background: f.bg,
-            borderColor: f.border,
-            flexDirection: "row",
-            alignItems: "center",
-            padding: "10px 12px",
-            gap: 10,
-            minHeight: 0,
-            justifyContent: "flex-start",
-          }}>
+          <div key={f.label}
+            onClick={() => onFeatureClick?.(f.id)}
+            onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.02)"; e.currentTarget.style.boxShadow = `0 4px 16px ${f.border}`; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
+            style={{
+              ...cardBase,
+              background: f.bg,
+              borderColor: f.border,
+              flexDirection: "row",
+              alignItems: "center",
+              padding: "10px 12px",
+              gap: 10,
+              minHeight: 0,
+              justifyContent: "flex-start",
+            }}>
             <div style={{ fontSize: 20, flexShrink: 0 }}>{f.icon}</div>
             <div>
               <div style={{
@@ -231,6 +250,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
+  const [pendingFeature, setPendingFeature] = useState(null);
   const [level, setLevel] = useState("");
   const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
@@ -295,6 +315,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     setStep("name");
   };
 
+  const handleFeatureClick = (featureId) => {
+    const role = featureId === "leerkrachten" ? "teacher" : "leerling";
+    setPendingFeature(featureId);
+    handleRoleClick(role);
+  };
+
   const handleConfirm = () => {
     const effectiveName = name.trim() ||
       (authUser && (authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split("@")[0])) ||
@@ -310,7 +336,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     setUserSchoolType?.(schoolType);
     try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
     try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
-    onSelectRole(pendingRole);
+    onSelectRole(pendingRole, pendingFeature);
   };
 
   return (
@@ -478,7 +504,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           Deze app is in ontwikkeling en kan fouten bevatten.
         </p>
 
-        {step === "role" && <FeatureShowcase />}
+        {step === "role" && <FeatureShowcase onFeatureClick={handleFeatureClick} />}
 
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360 }}>

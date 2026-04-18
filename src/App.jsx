@@ -45,6 +45,7 @@ export default function App() {
   const [leaderboard, setLeaderboard] = useState([]);
   const [pendingQuizData, setPendingQuizData] = useState(null);
   const [pendingCode, setPendingCode] = useState("");
+  const [pendingFeature, setPendingFeature] = useState(null);
   const abortControllerRef = useRef(null);
   const [authUser, setAuthUser] = useState(null);
   const [streak, setStreak] = useState(0);
@@ -313,15 +314,20 @@ export default function App() {
           onGoogleLogin={handleGoogleLogin}
           onLogout={handleLogout}
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
-          onSelectRole={(r) => {
+          onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
-            track("role_selected", { role: r });
-            if (currentQuiz) {
-              startGame(currentQuiz, "self");
-            } else {
-              setPage(r === "teacher" ? "teacher-home" : "student-home");
+            track("role_selected", { role: r, feature: feature || null });
+            if (currentQuiz) { startGame(currentQuiz, "self"); return; }
+            if (feature === "schoolboeken") { setPage("textbook"); return; }
+            if (feature === "scorebord") { setPage("leaderboard"); return; }
+            if (feature === "leerkrachten") { setPage("teacher-home"); return; }
+            if (feature === "cito" || feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen") {
+              setPendingFeature(feature);
+              setPage("self-study");
+              return;
             }
+            setPage(r === "teacher" ? "teacher-home" : "student-home");
           }}
           onBack={role ? () => setPage(role === "teacher" ? "teacher-home" : "student-home") : null}
           userName={userName}
@@ -454,7 +460,9 @@ export default function App() {
         <SelfStudy
           userLevel={userLevel}
           userRole={role}
+          initialSubject={pendingFeature}
           onStart={(config) => {
+            setPendingFeature(null);
             const topicLabel = config.topic ? ` — ${config.topic}` : "";
             const quiz = {
               id: "self-" + Date.now(),
@@ -468,8 +476,8 @@ export default function App() {
             setCurrentQuiz(quiz);
             startGame(quiz, "self");
           }}
-          onBack={() => setPage("student-home")}
-          onHome={() => setPage("home")}
+          onBack={() => { setPendingFeature(null); setPage("student-home"); }}
+          onHome={() => { setPendingFeature(null); setPage("home"); }}
         />
       )}
       {page === "textbook" && (
