@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Over Studiebol — gratis oefenplatform voor basisschool en voortgezet onderwijs" />
+  <title>Over Studiebol</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%);
+      min-height: 100vh;
+      color: #fff;
+      padding: 32px 20px 64px;
+    }
+    .container { max-width: 640px; margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+    .logo-icon { font-size: 40px; }
+    .logo-name {
+      font-size: 28px;
+      font-weight: 800;
+      color: #00d4ff;
+      letter-spacing: -0.5px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00d4ff;
+      margin: 32px 0 10px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 12px;
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+    ul li {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      padding: 6px 0;
+      padding-left: 24px;
+      position: relative;
+      line-height: 1.5;
+    }
+    ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #00c853;
+      font-weight: 700;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 40px;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, #0072ff, #00d4ff);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .back-link:hover { opacity: 0.9; }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 32px 0;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <span class="logo-icon">🎓</span>
+      <span class="logo-name">Studiebol</span>
+    </div>
+
+    <h1>Over Studiebol</h1>
+    <p>
+      Studiebol is een <strong style="color:#fff">gratis oefenplatform</strong> voor kinderen in de basisschool (groep 1 t/m 8)
+      en het voortgezet onderwijs (klas 1 t/m 4). De app helpt leerlingen om op een leuke manier te oefenen
+      voor toetsen, overhoringen en de Cito eindtoets.
+    </p>
+
+    <h2>Voor wie is Studiebol?</h2>
+    <div class="card">
+      <ul>
+        <li>Leerlingen in groep 1 t/m 8 (basisschool)</li>
+        <li>Studenten in klas 1 t/m 4 (MAVO, HAVO, VWO, Gymnasium)</li>
+        <li>Leerkrachten die quizzes willen maken voor hun klas</li>
+        <li>Ouders die hun kind willen helpen oefenen</li>
+      </ul>
+    </div>
+
+    <h2>Wat kun je oefenen?</h2>
+    <div class="card">
+      <ul>
+        <li>Rekenen &amp; wiskunde (alle groepen en niveaus)</li>
+        <li>Taal &amp; spelling (basisschool)</li>
+        <li>Begrijpend lezen (groep 5 t/m 8)</li>
+        <li>Topografie — provincies, landen, hoofdsteden</li>
+        <li>Aardrijkskunde, geschiedenis, biologie en meer (VO)</li>
+        <li>Cito eindtoets voorbereiding</li>
+        <li>100+ echte Nederlandse schoolboeken</li>
+      </ul>
+    </div>
+
+    <h2>Functies</h2>
+    <div class="card">
+      <ul>
+        <li>Vragen op basis van echte schoolboeken (AI-gegenereerd per hoofdstuk)</li>
+        <li>Scorebord — speel tegen anderen</li>
+        <li>Leerkracht-modus: maak en deel quizzes met een code</li>
+        <li>Offline beschikbaar via de app (PWA / Android)</li>
+        <li>Gratis — geen abonnement, geen reclame voor kinderen</li>
+      </ul>
+    </div>
+
+    <h2>Wie maakt Studiebol?</h2>
+    <p>
+      Studiebol is gemaakt door <strong style="color:#fff">Smulsoft</strong>, een klein softwarebedrijf uit Nederland.
+      De app is gebouwd met de missie om goed onderwijs bereikbaar te maken voor elk kind, ongeacht achtergrond of budget.
+    </p>
+
+    <hr class="divider" />
+
+    <h2>Contact</h2>
+    <div class="card">
+      <div class="contact-row">
+        <span>📧</span>
+        <span>Voor vragen of feedback: <a href="mailto:info@smulsoft.nl" style="color:#00d4ff">info@smulsoft.nl</a></span>
+      </div>
+    </div>
+
+    <p style="margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.35);">
+      © Smulsoft &nbsp;·&nbsp;
+      <a href="/privacy.html" style="color: rgba(255,255,255,0.35);">Privacybeleid</a>
+    </p>
+
+    <a href="/" class="back-link">← Terug naar Studiebol</a>
+  </div>
+</body>
+</html>
