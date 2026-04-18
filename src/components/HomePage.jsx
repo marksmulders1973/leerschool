@@ -18,55 +18,60 @@ const TICKER_ITEMS = [
 ];
 
 function TickerBanner() {
-  // Items dubbel voor naadloze loop
   const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
   return (
-    <div style={{
-      width: "100%",
-      maxWidth: 400,
-      overflow: "hidden",
-      marginBottom: 18,
-      padding: "8px 0",
-      borderTop: "1px solid rgba(0,212,255,0.12)",
-      borderBottom: "1px solid rgba(0,212,255,0.12)",
-      position: "relative",
-    }}>
-      {/* Links/rechts fade */}
+    <>
+      <style>{`
+        @keyframes tickerScroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
       <div style={{
-        position: "absolute", left: 0, top: 0, bottom: 0, width: 32,
-        background: "linear-gradient(to right, #0f1729, transparent)",
-        zIndex: 2, pointerEvents: "none",
-      }} />
-      <div style={{
-        position: "absolute", right: 0, top: 0, bottom: 0, width: 32,
-        background: "linear-gradient(to left, #0f1729, transparent)",
-        zIndex: 2, pointerEvents: "none",
-      }} />
-      <div style={{
-        display: "flex",
-        gap: 0,
-        animation: "tickerScroll 28s linear infinite",
-        width: "max-content",
+        width: "100%",
+        maxWidth: 400,
+        overflow: "hidden",
+        marginBottom: 18,
+        padding: "8px 0",
+        borderTop: "1px solid rgba(0,212,255,0.12)",
+        borderBottom: "1px solid rgba(0,212,255,0.12)",
+        position: "relative",
       }}>
-        {items.map((item, i) => (
-          <span key={i} style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: 6,
-            padding: "0 18px",
-            whiteSpace: "nowrap",
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: 13,
-            fontWeight: 700,
-            color: "rgba(255,255,255,0.65)",
-          }}>
-            <span style={{ fontSize: 15 }}>{item.icon}</span>
-            {item.text}
-            <span style={{ color: "rgba(0,212,255,0.35)", marginLeft: 8 }}>·</span>
-          </span>
-        ))}
+        <div style={{
+          position: "absolute", left: 0, top: 0, bottom: 0, width: 32,
+          background: "linear-gradient(to right, #0f1729, transparent)",
+          zIndex: 2, pointerEvents: "none",
+        }} />
+        <div style={{
+          position: "absolute", right: 0, top: 0, bottom: 0, width: 32,
+          background: "linear-gradient(to left, #0f1729, transparent)",
+          zIndex: 2, pointerEvents: "none",
+        }} />
+        <div style={{
+          display: "flex",
+          animation: "tickerScroll 28s linear infinite",
+          width: "max-content",
+        }}>
+          {items.map((item, i) => (
+            <span key={i} style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              padding: "0 18px",
+              whiteSpace: "nowrap",
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 13,
+              fontWeight: 700,
+              color: "rgba(255,255,255,0.65)",
+            }}>
+              <span style={{ fontSize: 15 }}>{item.icon}</span>
+              {item.text}
+              <span style={{ color: "rgba(0,212,255,0.35)", marginLeft: 8 }}>·</span>
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -811,10 +816,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         @keyframes slimeDrip {
           0%, 80%, 100% { height: 0px; opacity: 0; }
           40%, 60% { height: 14px; opacity: 0.7; }
-        }
-        @keyframes tickerScroll {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
         }
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
