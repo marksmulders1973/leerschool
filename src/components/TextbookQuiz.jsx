@@ -18,7 +18,9 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
 };
 
 export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType }) {
-  const TEXTBOOK_CATEGORIES = userRole === "leerling" ? TEXTBOOK_CATEGORIES_PO : TEXTBOOK_CATEGORIES_VO;
+  const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
+  const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
+  const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
   const groepBuckets = {"1":"groep12","2":"groep12","3":"groep3","4":"groep3","5":"groep5","6":"groep5","7":"groep7","8":"groep7"};
   const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3","5":"klas5","6":"klas6"};
   const initLevel = userRole === "leerling" ? (groepBuckets[userLevel] || "") : userRole === "student" ? (klasBuckets[userLevel] || "") : "";
@@ -422,20 +424,50 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
         {step === 1 && (
           <div style={{ animation: "slideUp 0.3s ease" }}>
-            <h3 style={styles.stepTitle}>Welk vak?</h3>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
-              {TEXTBOOK_CATEGORIES.map((cat) => (
-                <button key={cat.id} style={{
-                  ...styles.levelCard,
-                  borderColor: "transparent",
-                  background: "#fff",
-                  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-                }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); setStep(2); }}>
-                  <span style={{ fontSize: 24 }}>{cat.icon}</span>
-                  <strong style={{ fontSize: 13 }}>{cat.label}</strong>
+            {/* Basisschool / VO toggle — altijd zichtbaar */}
+            <div style={{ display: "flex", gap: 8, marginBottom: 18 }}>
+              {[
+                { id: "po", label: "🎒 Basisschool", sub: "groep 1–8" },
+                { id: "vo", label: "🎓 Voortgezet onderwijs", sub: "klas 1–6" },
+              ].map(t => (
+                <button key={t.id} onClick={() => { setSchoolType2(t.id); setCategory(""); setSelectedBook(null); }} style={{
+                  flex: 1, padding: "10px 8px", borderRadius: 12, cursor: "pointer",
+                  border: schoolType2 === t.id ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.15)",
+                  background: schoolType2 === t.id ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
+                  color: schoolType2 === t.id ? "#00d4ff" : "rgba(255,255,255,0.55)",
+                  fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                  display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
+                }}>
+                  {t.label}
+                  <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, fontWeight: 400, opacity: 0.6 }}>{t.sub}</span>
                 </button>
               ))}
             </div>
+
+            {schoolType2 && (
+              <>
+                <h3 style={styles.stepTitle}>Welk vak?</h3>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
+                  {TEXTBOOK_CATEGORIES.map((cat) => (
+                    <button key={cat.id} style={{
+                      ...styles.levelCard,
+                      borderColor: "transparent",
+                      background: "#fff",
+                      boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+                    }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); setStep(2); }}>
+                      <span style={{ fontSize: 24 }}>{cat.icon}</span>
+                      <strong style={{ fontSize: 13 }}>{cat.label}</strong>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {!schoolType2 && (
+              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.4)", textAlign: "center", marginTop: 16 }}>
+                Kies hierboven basisschool of voortgezet onderwijs
+              </p>
+            )}
           </div>
         )}
 
