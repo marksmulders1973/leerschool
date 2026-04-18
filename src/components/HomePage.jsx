@@ -2,6 +2,224 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { LEVELS } from "../constants.js";
 
+const FEATURES = [
+  {
+    icon: "🎯",
+    label: "Cito oefenen",
+    sub: "Oefen de eindtoets",
+    color: "#ff6b35",
+    bg: "rgba(255,107,53,0.12)",
+    border: "rgba(255,107,53,0.25)",
+    featured: true,
+    badge: null,
+  },
+  {
+    icon: "📚",
+    label: "Schoolboeken",
+    sub: "100+ echte boeken",
+    color: "#0072ff",
+    bg: "rgba(0,114,255,0.12)",
+    border: "rgba(0,114,255,0.2)",
+    featured: false,
+    badge: null,
+  },
+  {
+    icon: "🤖",
+    label: "AI-vragen",
+    sub: "Elk onderwerp",
+    color: "#7c3aed",
+    bg: "rgba(124,58,237,0.12)",
+    border: "rgba(124,58,237,0.2)",
+    featured: false,
+    badge: "Nieuw",
+  },
+  {
+    icon: "🗺️",
+    label: "Topografie",
+    sub: "Landen & provincies",
+    color: "#059669",
+    bg: "rgba(5,150,105,0.12)",
+    border: "rgba(5,150,105,0.2)",
+    featured: false,
+    badge: null,
+  },
+  {
+    icon: "📖",
+    label: "Begrijpend lezen",
+    sub: "Groep 5–8",
+    color: "#d97706",
+    bg: "rgba(217,119,6,0.12)",
+    border: "rgba(217,119,6,0.2)",
+    featured: false,
+    badge: null,
+  },
+  {
+    icon: "🏆",
+    label: "Scorebord",
+    sub: "Strijd om de top",
+    color: "#e11d48",
+    bg: "rgba(225,29,72,0.12)",
+    border: "rgba(225,29,72,0.2)",
+    featured: false,
+    small: true,
+    badge: null,
+  },
+  {
+    icon: "📋",
+    label: "Leerkrachten",
+    sub: "Maak quizzes voor je klas",
+    color: "#00897b",
+    bg: "rgba(0,137,123,0.12)",
+    border: "rgba(0,137,123,0.2)",
+    featured: false,
+    small: true,
+    badge: null,
+  },
+];
+
+function FeatureShowcase() {
+  const featured = FEATURES[0];
+  const normal = FEATURES.slice(1, 5);
+  const small = FEATURES.slice(5);
+
+  const cardBase = {
+    borderRadius: 16,
+    border: "1px solid",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    padding: "14px 14px 12px",
+    cursor: "default",
+    transition: "transform 0.15s ease, box-shadow 0.15s ease",
+    position: "relative",
+    overflow: "hidden",
+  };
+
+  const renderBadge = (badge, color) => badge ? (
+    <div style={{
+      position: "absolute", top: 8, right: 8,
+      background: color, color: "#fff",
+      fontSize: 9, fontWeight: 800,
+      fontFamily: "'Fredoka', sans-serif",
+      padding: "2px 7px", borderRadius: 20,
+      letterSpacing: 0.3,
+    }}>{badge}</div>
+  ) : null;
+
+  return (
+    <div style={{ width: "100%", maxWidth: 360, marginBottom: 24 }}>
+      <div style={{
+        fontFamily: "'Fredoka', sans-serif",
+        fontSize: 13,
+        fontWeight: 700,
+        color: "rgba(255,255,255,0.4)",
+        letterSpacing: 1,
+        textTransform: "uppercase",
+        marginBottom: 10,
+        textAlign: "center",
+      }}>
+        Wat kun je oefenen?
+      </div>
+
+      {/* Grid: featured left (tall), 2x2 right */}
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "1.6fr 1fr 1fr",
+        gridTemplateRows: "auto auto",
+        gap: 8,
+        marginBottom: 8,
+      }}>
+        {/* Featured card (spans 2 rows) */}
+        <div style={{
+          ...cardBase,
+          background: featured.bg,
+          borderColor: featured.border,
+          gridRow: "span 2",
+          minHeight: 140,
+          justifyContent: "flex-end",
+          paddingBottom: 16,
+        }}>
+          {renderBadge(featured.badge, featured.color)}
+          <div style={{ fontSize: 36, marginBottom: 8 }}>{featured.icon}</div>
+          <div style={{
+            fontFamily: "'Fredoka', sans-serif",
+            fontSize: 17,
+            fontWeight: 700,
+            color: featured.color,
+            lineHeight: 1.2,
+            marginBottom: 3,
+          }}>{featured.label}</div>
+          <div style={{
+            fontFamily: "'Nunito', sans-serif",
+            fontSize: 12,
+            color: "rgba(255,255,255,0.55)",
+          }}>{featured.sub}</div>
+        </div>
+
+        {/* 4 normal cards */}
+        {normal.map((f) => (
+          <div key={f.label} style={{
+            ...cardBase,
+            background: f.bg,
+            borderColor: f.border,
+            minHeight: 64,
+            padding: "10px 10px 9px",
+          }}>
+            {renderBadge(f.badge, f.color)}
+            <div style={{ fontSize: 22, marginBottom: 4 }}>{f.icon}</div>
+            <div style={{
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 13,
+              fontWeight: 700,
+              color: f.color,
+              lineHeight: 1.2,
+              marginBottom: 1,
+            }}>{f.label}</div>
+            <div style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 10,
+              color: "rgba(255,255,255,0.45)",
+            }}>{f.sub}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom row: 2 small cards */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 8 }}>
+        {small.map((f) => (
+          <div key={f.label} style={{
+            ...cardBase,
+            background: f.bg,
+            borderColor: f.border,
+            flexDirection: "row",
+            alignItems: "center",
+            padding: "10px 12px",
+            gap: 10,
+            minHeight: 0,
+            justifyContent: "flex-start",
+          }}>
+            <div style={{ fontSize: 20, flexShrink: 0 }}>{f.icon}</div>
+            <div>
+              <div style={{
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 13,
+                fontWeight: 700,
+                color: f.color,
+                lineHeight: 1.2,
+              }}>{f.label}</div>
+              <div style={{
+                fontFamily: "'Nunito', sans-serif",
+                fontSize: 10,
+                color: "rgba(255,255,255,0.45)",
+              }}>{f.sub}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Echte examenvragen, echte boeken", desc: "Echte voorbereiding voor je examen. Geen giswerk, gewoon oefenen wat telt." },
   { emoji: "🤖", title: "Studiebol maakt vragen voor jou", desc: "Elke quiz is anders, ook over jouw eigen schoolboek" },
@@ -259,6 +477,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         <p style={{ fontFamily: "'Nunito', sans-serif", color: "#445566", fontSize: 10, marginBottom: 20, textAlign: "center" }}>
           Deze app is in ontwikkeling en kan fouten bevatten.
         </p>
+
+        {step === "role" && <FeatureShowcase />}
 
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360 }}>
