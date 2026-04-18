@@ -25,6 +25,12 @@ export const SUBJECTS = [
   { id: "mens-maatschappij", label: "Mens & Maatschappij", icon: "🌐", color: "#69f0ae" },
   { id: "levensbeschouwing", label: "Levensbeschouwing",  icon: "🕊️", color: "#a0b8d8" },
   { id: "maw",             label: "MAW",               icon: "📊", color: "#f9a825" },
+  // ── Basisschool speerpunten ───────────────────────────────────
+  { id: "topografie",        label: "Topografie",        icon: "🗺️", color: "#2bbd7e" },
+  { id: "spelling",          label: "Spelling",          icon: "🔡", color: "#00e676" },
+  { id: "begrijpend-lezen",  label: "Begrijpend Lezen",  icon: "📖", color: "#69f0ae" },
+  { id: "verkeer",           label: "Verkeer",           icon: "🚦", color: "#f9a825" },
+  { id: "cito",              label: "Cito Oefenen",      icon: "🎯", color: "#ff6d00", citoMode: true },
 ];
 
 export const LEVELS = [
@@ -42,8 +48,8 @@ export const LEVELS = [
 export const SUBJECT_FOR_LEVEL = {
   groep12: ["rekenen", "taal"],
   groep3:  ["rekenen", "taal", "natuur"],
-  groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
-  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels"],
+  groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "topografie", "spelling", "begrijpend-lezen"],
+  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "topografie", "spelling", "begrijpend-lezen", "verkeer", "cito"],
   klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "mens-maatschappij", "levensbeschouwing"],
   klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "levensbeschouwing"],
   klas5:   ["wiskunde", "wiskunde-a", "wiskunde-b", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "maw"],
@@ -1721,9 +1727,14 @@ export const TEXTBOOK_CATEGORIES_VO = [
   { id: "maw",               label: "MAW",                 icon: "📊" },
 ];
 export const TEXTBOOK_CATEGORIES_PO = [
-  { id: "rekenen", label: "Rekenen",          icon: "🔢" },
-  { id: "taal",    label: "Taal / Nederlands", icon: "📝" },
-  { id: "natuur",  label: "Wereld & Natuur",   icon: "🌿" },
+  { id: "rekenen",          label: "Rekenen",          icon: "🔢" },
+  { id: "taal",             label: "Taal / Nederlands", icon: "📝" },
+  { id: "spelling",         label: "Spelling",          icon: "🔡" },
+  { id: "begrijpend-lezen", label: "Begrijpend Lezen",  icon: "📖" },
+  { id: "natuur",           label: "Wereld & Natuur",   icon: "🌿" },
+  { id: "engels-po",        label: "Engels",            icon: "🇬🇧" },
+  { id: "geschiedenis-po",  label: "Geschiedenis",      icon: "🏛️" },
+  { id: "aardrijkskunde-po",label: "Aardrijkskunde",    icon: "🌍" },
 ];
 
 // ─── Alle bekende schoolboeken per vak (voor dropdown) ──────────────────────
@@ -2082,6 +2093,50 @@ export const ALL_KNOWN_BOOKS = {
     { name: "Naut / Meander / Brandaan",      level: "groep5" },
     { name: "O&O (Onderzoek & Ontdekking)",   level: "groep5" },
     { name: "Topondernemers",                 level: "groep5" },
+  ],
+  // ── Basisschool spelling ──────────────────────────────────────────────────
+  "spelling": [
+    { name: "Spelling in de Lift",            level: "groep5" },
+    { name: "Staal Spelling",                 level: "groep5" },
+    { name: "Taal Actief Spelling",           level: "groep5" },
+    { name: "Woordbouw",                      level: "groep5" },
+    { name: "Spelling op Maat",               level: "groep5" },
+    { name: "Stap voor Stap Spelling",        level: "groep3" },
+  ],
+  // ── Basisschool begrijpend lezen ──────────────────────────────────────────
+  "begrijpend-lezen": [
+    { name: "Blink Begrijpend Lezen",         level: "groep5" },
+    { name: "Nieuwsbegrip XL",                level: "groep5" },
+    { name: "Lees Zeker",                     level: "groep5" },
+    { name: "Tekstverwerken",                 level: "groep5" },
+    { name: "Estafette Begrijpend Lezen",     level: "groep5" },
+    { name: "Leesparade",                     level: "groep3" },
+    { name: "Taal voor Kleuters",             level: "groep3" },
+  ],
+  // ── Basisschool Engels ────────────────────────────────────────────────────
+  "engels-po": [
+    { name: "Take it Easy",                   level: "groep5" },
+    { name: "Hello World",                    level: "groep5" },
+    { name: "Join In",                        level: "groep5" },
+    { name: "Project English",                level: "groep5" },
+    { name: "Groove.me",                      level: "groep5" },
+    { name: "Real English",                   level: "groep5" },
+  ],
+  // ── Basisschool geschiedenis ──────────────────────────────────────────────
+  "geschiedenis-po": [
+    { name: "Blink Geschiedenis",             level: "groep5" },
+    { name: "Brandaan Geschiedenis",          level: "groep5" },
+    { name: "Speurtocht",                     level: "groep5" },
+    { name: "Tijdvak",                        level: "groep5" },
+    { name: "De Hollandse School",            level: "groep5" },
+  ],
+  // ── Basisschool aardrijkskunde ────────────────────────────────────────────
+  "aardrijkskunde-po": [
+    { name: "Blink Aardrijkskunde",           level: "groep5" },
+    { name: "Brandaan Aardrijkskunde",        level: "groep5" },
+    { name: "De Wereld Dichtbij",             level: "groep5" },
+    { name: "Meander Aardrijkskunde",         level: "groep5" },
+    { name: "Topografie in de Basisschool",   level: "groep5" },
   ],
 };
 
@@ -5059,7 +5114,43 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is multi-culturalisme als beleidsbenadering?", options: ["Alle culturen moeten assimileren naar de dominante cultuur", "Verschillende culturen kunnen naast elkaar bestaan met behoud van eigen identiteit, ondersteund door beleid", "Eén staatscultuur verplicht voor iedereen", "Culturen mogen niet mengen"], answer: 1, explanation: "Multiculturalisme als beleid: erkenning en ondersteuning van culturele diversiteit. Staat van debat: tegenstanders pleiten voor integratie." },
     ],
   },
+  // ── Basisschool speerpunten ───────────────────────────────────
+  topografie: {
+    // TODO: provincies NL + hoofdsteden, rivieren, werelddelen, Europese landen/hoofdsteden
+    // Primaire bron: gebruik imageSearch met kaartjes
+    groep5: [],
+    groep7: [],
+  },
+  spelling: {
+    // TODO: dt-regels, werkwoordvervoegingen, hoofdletters, leestekens, moeilijke woorden
+    groep3: [],
+    groep5: [],
+    groep7: [],
+  },
+  "begrijpend-lezen": {
+    // TODO: korte teksten met 3-5 begripsvragen per tekst, oplopend in moeilijkheid
+    groep5: [],
+    groep7: [],
+  },
+  verkeer: {
+    // TODO: verkeersborden, voorrangsregels, fietsregels, gevaarherkenning — groep 7 verkeersexamen niveau
+    groep7: [],
+  },
+  cito: {
+    // TODO: gemengde Cito/IEP-stijl vragen: rekenen, taal, begrijpend lezen, wereld oriëntatie
+    // Apart bakje in de app — eigen flow (niet via normaal vak → niveau)
+    groep7: [],
+  },
 };
+
+// ─── Cito Oefenen — onderdelen ──────────────────────────────────
+// Gebruikt door het aparte Cito-bakje in de app (citoMode: true in SUBJECTS)
+export const CITO_ONDERDELEN = [
+  { id: "rekenen",          label: "Rekenen & Wiskunde", icon: "🔢", color: "#00c853" },
+  { id: "taal",             label: "Taal",               icon: "📝", color: "#00e676" },
+  { id: "begrijpend-lezen", label: "Begrijpend Lezen",   icon: "📖", color: "#69f0ae" },
+  { id: "wereldorientatie", label: "Wereld Oriëntatie",  icon: "🌍", color: "#2bbd7e" },
+];
 
 // ─── Vragen voor vrije onderwerpen ─────────────────────────────
 export const TOPIC_QUESTIONS = {
@@ -5346,6 +5437,27 @@ export const TEACHER_TOPIC_SUGGESTIONS = {
   maw: {
     basisschool: [],
     vo: ["Macht & gezag", "Democratie & politiek", "Socialisatie", "Sociale ongelijkheid", "Globalisering", "Culturele diversiteit", "Sociale cohesie"],
+  },
+  // ── Basisschool speerpunten ───────────────────────────────────
+  topografie: {
+    basisschool: ["Provincies Nederland", "Hoofdsteden Nederland", "Rivieren Nederland", "Europese landen", "Europese hoofdsteden", "Werelddelen", "Landen & vlaggen"],
+    vo: [],
+  },
+  spelling: {
+    basisschool: ["dt-regels", "Werkwoordvervoegingen", "Hoofdletters", "Leestekens", "Moeilijke woorden", "Samenstelling", "Verdubbeling & verdubbelings"],
+    vo: [],
+  },
+  "begrijpend-lezen": {
+    basisschool: ["Informatieve teksten", "Instructieteksten", "Beschrijvende teksten", "Nieuwsberichten", "Verhalen"],
+    vo: [],
+  },
+  verkeer: {
+    basisschool: ["Verkeersborden", "Voorrangsregels", "Fietsregels", "Gevaarherkenning", "Stoplichten", "Voetganger & rijbaan"],
+    vo: [],
+  },
+  cito: {
+    basisschool: ["Rekenen", "Taal", "Begrijpend lezen", "Wereld oriëntatie"],
+    vo: [],
   },
 };
 
