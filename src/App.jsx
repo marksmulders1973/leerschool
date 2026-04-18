@@ -9,6 +9,7 @@ import HomePage from "./components/HomePage.jsx";
 import StudentHome from "./components/StudentHome.jsx";
 import SelfStudy from "./components/SelfStudy.jsx";
 import TextbookQuiz from "./components/TextbookQuiz.jsx";
+import CitoPage from "./components/CitoPage.jsx";
 import PlayQuiz from "./components/PlayQuiz.jsx";
 import ResultsPage from "./components/ResultsPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
@@ -322,7 +323,8 @@ export default function App() {
             if (feature === "schoolboeken") { setPage("textbook"); return; }
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
-            if (feature === "cito" || feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen") {
+            if (feature === "cito") { setPage("cito"); return; }
+            if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen") {
               setPendingFeature(feature);
               setPage("self-study");
               return;
@@ -478,6 +480,27 @@ export default function App() {
           }}
           onBack={() => { setPendingFeature(null); setPage("student-home"); }}
           onHome={() => { setPendingFeature(null); setPage("home"); }}
+        />
+      )}
+      {page === "cito" && (
+        <CitoPage
+          onStart={(config) => {
+            const label = config.topic?.split(":")[0] || "Cito";
+            const quiz = {
+              id: "cito-" + Date.now(),
+              subject: config.subject,
+              level: config.level,
+              questionCount: config.questionCount,
+              timePerQuestion: config.timePerQuestion,
+              useAI: true,
+              topic: config.topic,
+              title: `Cito — ${label}`,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
+          onBack={() => setPage("student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "textbook" && (
