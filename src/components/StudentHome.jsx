@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult, onDeleteResult }) {
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -259,6 +259,13 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                     {r.percentage}%
                   </div>
                   <span style={{ color: "#8899aa", fontSize: 16, marginLeft: 6 }}>›</span>
+                  {onDeleteResult && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onDeleteResult(r.id); }}
+                      style={{ marginLeft: 6, background: "none", border: "none", color: "#ff6b6b", fontSize: 16, cursor: "pointer", padding: "2px 4px", lineHeight: 1, borderRadius: 6, flexShrink: 0 }}
+                      title="Verwijder"
+                    >×</button>
+                  )}
                 </div>
               );
             })}

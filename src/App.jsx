@@ -456,6 +456,7 @@ export default function App() {
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
           onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}
+          onDeleteResult={(id) => setStudentProgress(prev => prev.filter(p => p.id !== id))}
           streak={streak}
           pendingCode={pendingCode}
         />
