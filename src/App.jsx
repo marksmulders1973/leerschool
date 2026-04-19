@@ -326,7 +326,7 @@ export default function App() {
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
             if (feature === "cito") { setPage("cito"); return; }
-            if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen") {
+            if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen" || feature === "eindexamen") {
               setPendingFeature(feature);
               setPage("self-study");
               return;

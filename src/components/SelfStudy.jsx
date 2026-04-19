@@ -11,7 +11,9 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
   // Cito, topografie, begrijpend-lezen zijn groep 7 vakken — gebruik groep7 als default level
   const citoSubjects = ["cito", "topografie", "begrijpend-lezen"];
-  const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas] || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "");
+  const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas]
+    || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "")
+    || (initialSubject === "eindexamen" ? "klas3" : "");
 
   const [subject, setSubject] = useState(initialSubject || "");
   const [level, setLevel] = useState(initLevel);

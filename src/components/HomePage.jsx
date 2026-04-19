@@ -12,7 +12,7 @@ const TICKER_ITEMS = [
   { icon: "🎒", text: "Groep 1 t/m 8" },
   { icon: "🎓", text: "MAVO · HAVO · VWO · Gymnasium" },
   { icon: "🏆", text: "Scorebord — strijd om de top" },
-  { icon: "📋", text: "Quizzes voor leerkrachten" },
+  { icon: "📋", text: "Leerkrachten: maak een kennistest voor uw klas" },
   { icon: "🔢", text: "Rekenen, taal, wiskunde en meer" },
   { icon: "⚡", text: "Vragen altijd anders door AI" },
 ];
@@ -147,7 +147,7 @@ const FEATURES = [
     id: "leerkrachten",
     icon: "📋",
     label: "Leerkrachten",
-    sub: "Maak quizzes voor je klas",
+    sub: "Maak een kennistest voor uw klas",
     color: "#00897b",
     bg: "rgba(0,137,123,0.12)",
     border: "rgba(0,137,123,0.2)",
@@ -155,12 +155,24 @@ const FEATURES = [
     small: true,
     badge: null,
   },
+  {
+    id: "eindexamen",
+    icon: "🎓",
+    label: "Eindexamen",
+    sub: "VMBO · HAVO · VWO",
+    color: "#7c4dff",
+    bg: "rgba(124,77,255,0.12)",
+    border: "rgba(124,77,255,0.2)",
+    featured: false,
+    small: false,
+    badge: null,
+  },
 ];
 
 function FeatureShowcase({ onFeatureClick }) {
   const featured = FEATURES[0];
-  const normal = FEATURES.slice(1, 5);
-  const small = FEATURES.slice(5);
+  const normal = FEATURES.filter(f => !f.featured && !f.small);
+  const small = FEATURES.filter(f => f.small);
 
   const cardBase = {
     borderRadius: 16,
@@ -566,7 +578,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {[
                 { role: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff" },
                 { role: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed" },
-                { role: "teacher",  emoji: "📋", label: "Leerkracht", sub: "quizzes",  color: "#00897b" },
+                { role: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest",  color: "#00897b" },
               ].map(({ role, emoji, label, sub, color }) => (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   flex: 1,
