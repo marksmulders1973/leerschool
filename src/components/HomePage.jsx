@@ -164,7 +164,7 @@ const FEATURES = [
     bg: "rgba(124,77,255,0.12)",
     border: "rgba(124,77,255,0.2)",
     featured: false,
-    small: false,
+    small: true,
     badge: null,
   },
 ];
@@ -284,8 +284,8 @@ function FeatureShowcase({ onFeatureClick }) {
         ))}
       </div>
 
-      {/* Bottom row: 2 small cards */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 2fr", gap: 8 }}>
+      {/* Bottom row: small cards */}
+      <div style={{ display: "grid", gridTemplateColumns: `repeat(${small.length}, 1fr)`, gap: 8 }}>
         {small.map((f) => (
           <div key={f.label}
             onClick={() => onFeatureClick?.(f.id)}
