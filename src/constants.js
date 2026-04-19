@@ -143,7 +143,6 @@ export const TEXTBOOKS = {
   scheikunde: [
     { id: "chemie-overal",     name: "Chemie Overal",      icon: "🧪", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
     { id: "nova-scheikunde",   name: "Nova Scheikunde",    icon: "🔮", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
-    { id: "newton-scheikunde", name: "Newton Scheikunde",  icon: "⚗️", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3" } },
   ],
   economie: [
     { id: "pincode",           name: "Pincode",            icon: "💳", autoLevel: true, deelToLevel: { 1: "klas3", 2: "klas3", 3: "klas5" } },
@@ -597,15 +596,6 @@ export const CHAPTER_TITLES = {
     "Zouten",
     "Reacties in beweging",
     "Chemisch evenwicht en zuur-base",
-  ],
-  "newton-scheikunde": [
-    "Stoffen",
-    "Atoommodel",
-    "Bindingen",
-    "Reacties",
-    "Zuren en basen",
-    "Redoxreacties",
-    "Organische chemie",
   ],
   // ── Economie ─────────────────────────────────────────────────
   "pincode": [
@@ -1605,9 +1595,6 @@ export const PARAGRAPH_TITLES = {
     4: ["Formules en naamgeving van zouten", "Oplosbaarheid van zouten", "Bijzondere zouten", "Rekenen aan zoutoplossingen", "Practica"],
     5: ["Energie en reactie", "Reactiewarmte", "Reactiesnelheid", "Reactiesnelheid beïnvloeden", "Practica"],
     6: ["Chemisch evenwicht", "Evenwichtsverschuivingen", "Zuren en basen in water", "Waterevenwicht", "Practica"],
-  },
-  "newton-scheikunde": {
-    _default: ["Begrippen", "Theorie", "Oefeningen", "Practicum"],
   },
   // ── Engels ───────────────────────────────────────────────────
   "stepping-stones": {
