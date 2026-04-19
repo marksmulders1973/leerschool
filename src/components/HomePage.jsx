@@ -494,41 +494,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        {/* Slime banner */}
-        <div style={{ position: "relative", marginBottom: 18, textAlign: "center" }}>
-          <div style={{
-            fontFamily: "'Fredoka', sans-serif",
-            fontSize: 21,
-            fontWeight: 700,
-            color: "#00d4ff",
-            letterSpacing: 0.5,
-            animation: "slimeWave 3.5s ease-in-out infinite",
-            display: "inline-block",
-            textShadow: "0 0 18px rgba(0,212,255,0.7), 0 0 40px rgba(0,180,255,0.4)",
-          }}>
-            Elke studiebol slaagt
-          </div>
-          {/* drip drops */}
-          {["25%","42%","60%","77%"].map((left, i) => (
-            <div key={i} style={{
-              position: "absolute",
-              bottom: -4,
-              left,
-              width: 6,
-              height: 0,
-              background: "radial-gradient(ellipse at top, #00d4ff, #0066aa)",
-              borderRadius: "0 0 50% 50%",
-              animation: `slimeDrip ${2.2 + i * 0.4}s ease-in-out infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }} />
-          ))}
-        </div>
-
         <div style={{
           position: "relative",
           width: "80%",
-          maxWidth: 260,
-          marginBottom: 16,
+          maxWidth: 240,
+          marginBottom: 14,
         }}>
           <div style={{
             position: "absolute",
@@ -561,40 +531,32 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         <TickerBanner />
 
         {step === "role" && (
-          <div style={{ width: "100%", maxWidth: 360 }}>
-            <div style={{
-              fontFamily: "'Fredoka', sans-serif",
-              fontSize: 16,
-              fontWeight: 700,
-              color: "#fff",
-              textAlign: "center",
-              marginBottom: 10,
-            }}>Kies je rol</div>
-            <div style={{ display: "flex", gap: 8 }}>
+          <div style={{ width: "100%", maxWidth: 360, marginBottom: 4 }}>
+            <div style={{ display: "flex", gap: 10 }}>
               {[
                 { role: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff" },
                 { role: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed" },
-                { role: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest",  color: "#00897b" },
+                { role: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b" },
               ].map(({ role, emoji, label, sub, color }) => (
                 <button key={role} onClick={() => handleRoleClick(role)} style={{
                   flex: 1,
-                  border: `1px solid ${color}44`,
-                  padding: "10px 6px",
+                  border: `1.5px solid ${color}55`,
+                  padding: "13px 6px",
                   cursor: "pointer",
-                  borderRadius: 14,
-                  background: `${color}11`,
+                  borderRadius: 16,
+                  background: `${color}14`,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  gap: 4,
+                  gap: 5,
                   transition: "transform 0.15s ease, background 0.15s ease",
                 }}
-                onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.04)"; e.currentTarget.style.background = `${color}22`; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.background = `${color}11`; }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.background = `${color}28`; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.background = `${color}14`; }}
                 >
-                  <span style={{ fontSize: 22 }}>{emoji}</span>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 14, color }}>{label}</div>
-                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.4)" }}>{sub}</div>
+                  <span style={{ fontSize: 26 }}>{emoji}</span>
+                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 15, color }}>{label}</div>
+                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{sub}</div>
                 </button>
               ))}
             </div>
@@ -816,16 +778,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         @keyframes arrowBounce {
           0%, 100% { transform: translateX(0); }
           50% { transform: translateX(5px); }
-        }
-        @keyframes slimeWave {
-          0%, 100% { transform: scaleX(1) scaleY(1) translateY(0px); filter: drop-shadow(0 6px 4px rgba(0,212,255,0.35)); }
-          25% { transform: scaleX(1.04) scaleY(0.96) translateY(-2px); filter: drop-shadow(0 10px 6px rgba(0,212,255,0.5)); }
-          50% { transform: scaleX(0.97) scaleY(1.05) translateY(3px); filter: drop-shadow(0 3px 8px rgba(0,212,255,0.6)); }
-          75% { transform: scaleX(1.03) scaleY(0.98) translateY(-1px); filter: drop-shadow(0 8px 5px rgba(0,212,255,0.4)); }
-        }
-        @keyframes slimeDrip {
-          0%, 80%, 100% { height: 0px; opacity: 0; }
-          40%, 60% { height: 14px; opacity: 0.7; }
         }
         @keyframes shake {
           0%, 100% { transform: translateX(0); }
