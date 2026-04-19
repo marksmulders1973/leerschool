@@ -560,20 +560,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* Lichtkrant ticker */}
         <TickerBanner />
 
-        {step === "role" && <FeatureShowcase onFeatureClick={handleFeatureClick} />}
-
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360 }}>
             <div style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: 11,
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 16,
               fontWeight: 700,
-              color: "rgba(255,255,255,0.35)",
-              textTransform: "uppercase",
-              letterSpacing: 1,
+              color: "#fff",
               textAlign: "center",
-              marginBottom: 8,
-            }}>Of kies je rol</div>
+              marginBottom: 10,
+            }}>Kies je rol</div>
             <div style={{ display: "flex", gap: 8 }}>
               {[
                 { role: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff" },
@@ -604,6 +600,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             </div>
           </div>
         )}
+
+        {step === "role" && <FeatureShowcase onFeatureClick={handleFeatureClick} />}
 
         {step === "name" && (
           <div style={{ width: "100%", maxWidth: 360, display: "flex", flexDirection: "column", gap: 12 }}>
