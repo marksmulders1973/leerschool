@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL } from "../constants.js";
 import { SoundEngine } from "../utils.js";
@@ -25,6 +25,13 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [useAI, setUseAI] = useState(true);
+
+  // Direct starten als subject + level al bekend zijn via feature card
+  useEffect(() => {
+    if (initialSubject && initLevel && !["cito", "vrij", "eindexamen"].includes(initialSubject)) {
+      onStart({ subject: initialSubject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic: null });
+    }
+  }, []);
 
   return (
     <div style={styles.page}>
