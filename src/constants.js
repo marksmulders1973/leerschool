@@ -561,14 +561,13 @@ export const CHAPTER_TITLES = {
     "Atomen en moleculen",
   ],
   "newton-nask": [
-    "Stoffen",
-    "Bewegen",
-    "Krachten",
-    "Energie",
-    "Licht en geluid",
-    "Elektriciteit",
-    "Scheikundige veranderingen",
-    "Atoommodel",
+    "Het vak NaSk",
+    "Licht en straling",
+    "Elektriciteit en magnetisme",
+    "Energie en warmte",
+    "Kracht en beweging",
+    "Geluid",
+    "Stoffen en deeltjes",
   ],
   "nova-nask": [
     "Onderzoeken",
@@ -1359,6 +1358,16 @@ export const PARAGRAPH_TITLES = {
     6: ["Geluidsgolven", "Toonhoogte en volume", "Geluid en gezondheid"],
     7: ["Stroomkringen", "Spanning en stroomsterkte", "Schakelingen"],
     8: ["Chemische reacties", "Verbranding", "Roest en corrosie"],
+  },
+  // ── NaSk: Newton (deel 1 vmbo-kgt, bron: ThiemeMeulenhoff Issuu inkijkexemplaar) ──
+  "newton-nask": {
+    1: ["Natuurwetenschappen", "Veilig proeven doen", "Onderzoeken", "Rekenen en resultaten tonen"],
+    2: ["Kleuren zien", "Licht en schaduw", "Lenzen", "Spiegelbeelden", "Andere straling"],
+    3: ["Apparaten", "Magneten", "Spanningsbronnen", "Elektrische stroom", "Elektriciteit en veiligheid"],
+    4: ["Hoe maak je iets warm?", "Warmte verplaatsen", "Verbranden", "Temperatuur"],
+    5: ["Allerlei soorten krachten", "De werking van krachten", "Snelheid", "Veiligheid en verkeer"],
+    6: ["Geluidsbronnen en geluidstrillingen", "De snelheid van het geluid", "Gehoor"],
+    7: ["Deeltjes en fasen", "Faseovergangen", "Zwaar en licht", "Stoffen, stofeigenschappen en mengsels", "Stoffen scheiden"],
   },
   // ── Getal en Ruimte Havo/vwo 1 Deel 1 ───────────────────────
   "gr-hv1-deel1": {
