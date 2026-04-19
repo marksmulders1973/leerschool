@@ -244,7 +244,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         return;
       }
     } catch {}
-    handleRoleClick(role);
+    // Nieuwe gebruiker: direct doorgaan zonder naam (gast), niet de naamstap tonen
+    onSelectRole(role, featureId);
   };
 
   const handleConfirm = () => {
