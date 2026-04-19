@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import { BreakoutGame } from "./PlayQuiz.jsx";
 
-export default function ResultsPage({ results, quiz, userName, onBack, onHome, onRetry, onLeaderboard }) {
+export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onLeaderboard }) {
   const latest = results[results.length - 1];
   if (!latest) return null;
 
@@ -212,6 +212,43 @@ export default function ResultsPage({ results, quiz, userName, onBack, onHome, o
             );
           }
         })()}
+
+        {!authUser && (
+          <div style={{
+            marginTop: 20,
+            padding: "14px 16px",
+            background: "linear-gradient(135deg, rgba(66,133,244,0.15), rgba(66,133,244,0.08))",
+            border: "1px solid rgba(66,133,244,0.35)",
+            borderRadius: 16,
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+          }}>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "#7ab3ff", marginBottom: 2 }}>
+                🏆 Bewaar je score
+              </div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>
+                Log in om je voortgang en streak bij te houden
+              </div>
+            </div>
+            <button onClick={onLogin} style={{
+              flexShrink: 0,
+              padding: "9px 14px",
+              border: "none",
+              borderRadius: 12,
+              background: "#4285f4",
+              color: "#fff",
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+            }}>
+              G Inloggen
+            </button>
+          </div>
+        )}
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 24 }}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>🔄 Opnieuw</button>

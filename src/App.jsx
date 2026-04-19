@@ -542,6 +542,8 @@ export default function App() {
           results={results}
           quiz={currentQuiz}
           userName={userName}
+          authUser={authUser}
+          onLogin={handleGoogleLogin}
           onBack={() => {
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
