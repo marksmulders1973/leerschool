@@ -570,14 +570,14 @@ export const CHAPTER_TITLES = {
     "Stoffen en deeltjes",
   ],
   "nova-nask": [
-    "Onderzoeken",
+    "Natuur- en scheikunde",
     "Stoffen en materialen",
-    "Krachten en beweging",
-    "Energie en warmte",
-    "Licht",
-    "Geluid",
+    "Water",
     "Elektriciteit",
-    "Scheikunde",
+    "Warmte",
+    "Kracht en beweging",
+    "Geluid",
+    "Licht",
   ],
   // ── Scheikunde ───────────────────────────────────────────────
   "chemie-overal": [
@@ -1368,6 +1368,14 @@ export const PARAGRAPH_TITLES = {
     5: ["Allerlei soorten krachten", "De werking van krachten", "Snelheid", "Veiligheid en verkeer"],
     6: ["Geluidsbronnen en geluidstrillingen", "De snelheid van het geluid", "Gehoor"],
     7: ["Deeltjes en fasen", "Faseovergangen", "Zwaar en licht", "Stoffen, stofeigenschappen en mengsels", "Stoffen scheiden"],
+  },
+  // ── NaSk: Nova (vmbo-bk 1-2, bron: Malmberg docentenhandleiding + Scholieren.com) ──
+  "nova-nask": {
+    2: ["Stoffen", "Materialen", "Massa en volume", "Dichtheid"],
+    3: ["IJs, water, waterdamp", "Temperatuur", "Veranderen van fase", "Kookpunt en smeltpunt"],
+    4: ["Een stroomkring maken", "Spanningsbronnen", "Schakelingen", "Vermogen en energie"],
+    7: ["Geluid maken en horen", "Toonhoogte en frequentie", "Geluidssterkte"],
+    8: ["Licht en schaduw", "Spiegelbeelden", "Licht en kleur", "Infrarood en ultraviolet"],
   },
   // ── Getal en Ruimte Havo/vwo 1 Deel 1 ───────────────────────
   "gr-hv1-deel1": {
