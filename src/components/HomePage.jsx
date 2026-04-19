@@ -75,250 +75,102 @@ function TickerBanner() {
   );
 }
 
-const FEATURES = [
-  {
-    id: "cito",
-    icon: "🎯",
-    label: "Cito oefenen",
-    sub: "Oefen de eindtoets",
-    color: "#ff6b35",
-    bg: "rgba(255,107,53,0.12)",
-    border: "rgba(255,107,53,0.25)",
-    featured: true,
-    badge: null,
-  },
-  {
-    id: "schoolboeken",
-    icon: "📚",
-    label: "Schoolboeken",
-    sub: "100+ echte boeken",
-    color: "#0072ff",
-    bg: "rgba(0,114,255,0.12)",
-    border: "rgba(0,114,255,0.2)",
-    featured: false,
-    badge: null,
-  },
-  {
-    id: "ai-vragen",
-    icon: "🤖",
-    label: "AI-vragen",
-    sub: "Elk onderwerp",
-    color: "#7c3aed",
-    bg: "rgba(124,58,237,0.12)",
-    border: "rgba(124,58,237,0.2)",
-    featured: false,
-    badge: "Nieuw",
-  },
-  {
-    id: "topografie",
-    icon: "🗺️",
-    label: "Topografie",
-    sub: "Landen & provincies",
-    color: "#059669",
-    bg: "rgba(5,150,105,0.12)",
-    border: "rgba(5,150,105,0.2)",
-    featured: false,
-    badge: null,
-  },
-  {
-    id: "begrijpend-lezen",
-    icon: "📖",
-    label: "Begrijpend lezen",
-    sub: "Groep 5–8",
-    color: "#d97706",
-    bg: "rgba(217,119,6,0.12)",
-    border: "rgba(217,119,6,0.2)",
-    featured: false,
-    badge: null,
-  },
-  {
-    id: "scorebord",
-    icon: "🏆",
-    label: "Scorebord",
-    sub: "Strijd om de top",
-    color: "#e11d48",
-    bg: "rgba(225,29,72,0.12)",
-    border: "rgba(225,29,72,0.2)",
-    featured: false,
-    small: true,
-    badge: null,
-  },
-  {
-    id: "leerkrachten",
-    icon: "📋",
-    label: "Leerkrachten",
-    sub: "Maak een kennistest voor uw klas",
-    color: "#00897b",
-    bg: "rgba(0,137,123,0.12)",
-    border: "rgba(0,137,123,0.2)",
-    featured: false,
-    small: true,
-    badge: null,
-  },
-  {
-    id: "eindexamen",
-    icon: "🎓",
-    label: "Eindexamen",
-    sub: "VMBO · HAVO · VWO",
-    color: "#7c4dff",
-    bg: "rgba(124,77,255,0.12)",
-    border: "rgba(124,77,255,0.2)",
-    featured: false,
-    small: true,
-    badge: null,
-  },
+const FEATURES_LEFT = [
+  { id: "cito",      icon: "🎯", label: "Cito oefenen", sub: "Oefen de eindtoets",  color: "#ff6b35", bg: "rgba(255,107,53,0.12)", border: "rgba(255,107,53,0.25)", badge: null },
+  { id: "eindexamen",icon: "🎓", label: "Eindexamen",   sub: "VMBO · HAVO · VWO",   color: "#7c4dff", bg: "rgba(124,77,255,0.12)", border: "rgba(124,77,255,0.2)",  badge: null },
+];
+const FEATURES_RIGHT = [
+  { id: "schoolboeken",    label: "Schoolboeken",    sub: "100+ echte boeken",          color: "#0072ff", bg: "rgba(0,114,255,0.12)",   border: "rgba(0,114,255,0.2)",   badge: null },
+  { id: "ai-vragen",       label: "AI-vragen",       sub: "Elk onderwerp",              color: "#7c3aed", bg: "rgba(124,58,237,0.12)",  border: "rgba(124,58,237,0.2)",  badge: "Nieuw" },
+  { id: "topografie",      label: "Topografie",      sub: "Landen & provincies",        color: "#059669", bg: "rgba(5,150,105,0.12)",   border: "rgba(5,150,105,0.2)",   badge: null },
+  { id: "begrijpend-lezen",label: "Begrijpend lezen",sub: "Groep 5–8",                  color: "#d97706", bg: "rgba(217,119,6,0.12)",   border: "rgba(217,119,6,0.2)",   badge: null },
+  { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
+  { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
 ];
 
 function FeatureShowcase({ onFeatureClick }) {
-  const featured = FEATURES[0];
-  const normal = FEATURES.filter(f => !f.featured && !f.small);
-  const small = FEATURES.filter(f => f.small);
-
   const cardBase = {
-    borderRadius: 16,
+    borderRadius: 14,
     border: "1px solid",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "flex-end",
-    padding: "14px 14px 12px",
     cursor: "pointer",
     transition: "transform 0.15s ease, box-shadow 0.15s ease",
     position: "relative",
     overflow: "hidden",
   };
 
+  const hover = (color) => ({
+    onMouseEnter: e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = `0 4px 18px ${color}55`; },
+    onMouseLeave: e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; },
+  });
+
   const renderBadge = (badge, color) => badge ? (
     <div style={{
-      position: "absolute", top: 8, right: 8,
+      position: "absolute", top: 6, right: 6,
       background: color, color: "#fff",
       fontSize: 9, fontWeight: 800,
       fontFamily: "'Fredoka', sans-serif",
-      padding: "2px 7px", borderRadius: 20,
-      letterSpacing: 0.3,
+      padding: "2px 6px", borderRadius: 20,
     }}>{badge}</div>
   ) : null;
 
   return (
     <div style={{ width: "100%", maxWidth: 360, marginBottom: 24 }}>
       <div style={{
-        fontFamily: "'Fredoka', sans-serif",
-        fontSize: 13,
-        fontWeight: 700,
-        color: "rgba(255,255,255,0.4)",
-        letterSpacing: 1,
-        textTransform: "uppercase",
-        marginBottom: 10,
-        textAlign: "center",
-      }}>
-        Wat kun je oefenen?
-      </div>
+        fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+        color: "rgba(255,255,255,0.4)", letterSpacing: 1,
+        textTransform: "uppercase", marginBottom: 10, textAlign: "center",
+      }}>Wat kun je oefenen?</div>
 
-      {/* Grid: featured left (tall), 2x2 right */}
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "1.6fr 1fr 1fr",
-        gridTemplateRows: "auto auto",
-        gap: 8,
-        marginBottom: 8,
-      }}>
-        {/* Featured card (spans 2 rows) */}
-        <div
-          onClick={() => onFeatureClick?.(featured.id)}
-          onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.02)"; e.currentTarget.style.boxShadow = `0 6px 24px ${featured.border}`; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
-          style={{
-            ...cardBase,
-            background: featured.bg,
-            borderColor: featured.border,
-            gridRow: "span 2",
-            minHeight: 140,
-            justifyContent: "flex-end",
-            paddingBottom: 16,
-          }}>
-          {renderBadge(featured.badge, featured.color)}
-          <div style={{ fontSize: 36, marginBottom: 8 }}>{featured.icon}</div>
-          <div style={{
-            fontFamily: "'Fredoka', sans-serif",
-            fontSize: 17,
-            fontWeight: 700,
-            color: featured.color,
-            lineHeight: 1.2,
-            marginBottom: 3,
-          }}>{featured.label}</div>
-          <div style={{
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: 12,
-            color: "rgba(255,255,255,0.55)",
-          }}>{featured.sub}</div>
+      <div style={{ display: "flex", gap: 8 }}>
+
+        {/* Linkerkolom: Cito + Eindexamen */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, flex: "1.15 0 0" }}>
+          {FEATURES_LEFT.map(f => (
+            <div key={f.id}
+              onClick={() => onFeatureClick?.(f.id)}
+              {...hover(f.color)}
+              style={{
+                ...cardBase,
+                flex: 1,
+                background: f.bg,
+                borderColor: f.border,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                padding: "12px 12px 14px",
+                minHeight: 90,
+              }}>
+              {renderBadge(f.badge, f.color)}
+              <div style={{ fontSize: 30, marginBottom: 6 }}>{f.icon}</div>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
+            </div>
+          ))}
         </div>
 
-        {/* 4 normal cards */}
-        {normal.map((f) => (
-          <div key={f.label}
-            onClick={() => onFeatureClick?.(f.id)}
-            onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = `0 4px 16px ${f.border}`; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
-            style={{
-              ...cardBase,
-              background: f.bg,
-              borderColor: f.border,
-              minHeight: 64,
-              padding: "10px 10px 9px",
-            }}>
-            {renderBadge(f.badge, f.color)}
-            <div style={{ fontSize: 22, marginBottom: 4 }}>{f.icon}</div>
-            <div style={{
-              fontFamily: "'Fredoka', sans-serif",
-              fontSize: 13,
-              fontWeight: 700,
-              color: f.color,
-              lineHeight: 1.2,
-              marginBottom: 1,
-            }}>{f.label}</div>
-            <div style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: 10,
-              color: "rgba(255,255,255,0.45)",
-            }}>{f.sub}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Bottom row: small cards */}
-      <div style={{ display: "grid", gridTemplateColumns: `repeat(${small.length}, 1fr)`, gap: 8 }}>
-        {small.map((f) => (
-          <div key={f.label}
-            onClick={() => onFeatureClick?.(f.id)}
-            onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.02)"; e.currentTarget.style.boxShadow = `0 4px 16px ${f.border}`; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; }}
-            style={{
-              ...cardBase,
-              background: f.bg,
-              borderColor: f.border,
-              flexDirection: "row",
-              alignItems: "center",
-              padding: "10px 12px",
-              gap: 10,
-              minHeight: 0,
-              justifyContent: "flex-start",
-            }}>
-            <div style={{ fontSize: 20, flexShrink: 0 }}>{f.icon}</div>
-            <div>
-              <div style={{
-                fontFamily: "'Fredoka', sans-serif",
-                fontSize: 13,
-                fontWeight: 700,
-                color: f.color,
-                lineHeight: 1.2,
-              }}>{f.label}</div>
-              <div style={{
-                fontFamily: "'Nunito', sans-serif",
-                fontSize: 10,
-                color: "rgba(255,255,255,0.45)",
-              }}>{f.sub}</div>
+        {/* Rechterkolom: 6 blokken zonder icoon, 2×3 grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, flex: "2 0 0" }}>
+          {FEATURES_RIGHT.map(f => (
+            <div key={f.id}
+              onClick={() => onFeatureClick?.(f.id)}
+              {...hover(f.color)}
+              style={{
+                ...cardBase,
+                background: f.bg,
+                borderColor: f.border,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: "10px 10px",
+                minHeight: 58,
+              }}>
+              {renderBadge(f.badge, f.color)}
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{f.sub}</div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </div>
   );
