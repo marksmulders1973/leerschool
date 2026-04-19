@@ -662,13 +662,11 @@ export const CHAPTER_TITLES = {
   ],
   // ── Maatschappijleer ─────────────────────────────────────────
   "themas-maatschappijleer": [
-    "Democratie",
+    "Wat is maatschappijleer?",
     "Rechtsstaat",
+    "Parlementaire democratie",
     "Pluriforme samenleving",
     "Verzorgingsstaat",
-    "Grondrechten",
-    "Parlementaire democratie",
-    "Internationale betrekkingen",
   ],
   "memo-maatschappijleer": [
     "Staat en democratie",
@@ -1561,15 +1559,13 @@ export const PARAGRAPH_TITLES = {
   "beco-havo": {
     _default: ["Begrippen", "Theorie", "Berekeningen", "Toepassingen"],
   },
-  // ── Maatschappijleer ─────────────────────────────────────────
+  // ── Maatschappijleer: Thema's (bron: leren.jojoschool.nl, HAVO lesboek) ──
   "themas-maatschappijleer": {
-    1: ["Vormen van democratie", "Verkiezingen", "Politieke partijen", "Coalitievorming"],
-    2: ["Rechtsstatelijke beginselen", "Grondwet en grondrechten", "Strafrecht", "Burgerlijk recht"],
-    3: ["Sociale groepen", "Cultuur en identiteit", "Discriminatie", "Multiculturele samenleving"],
-    4: ["Sociale zekerheid", "Zorg en welzijn", "Onderwijs", "Hervorming verzorgingsstaat"],
-    5: ["Klassieke grondrechten", "Sociale grondrechten", "Internationale mensenrechten"],
-    6: ["Het parlement", "De regering", "Wetgeving", "Democratische controle"],
-    7: ["Buitenlandse politiek", "Internationale organisaties", "Conflicten en veiligheid"],
+    1: ["Wat is maatschappijleer?", "De maatschappij onderzoeken", "Media en nepnieuws", "Kritisch denken"],
+    2: ["Wat is een rechtsstaat?", "Voorwaarden voor een rechtsstaat", "Criminaliteit en opsporing", "Rechtspraak en straffen", "Conflicten oplossen", "Blik over de grens", "Uitdagingen voor de rechtsstaat"],
+    3: ["Wat is democratie?", "Politieke stromingen", "Politieke partijen", "Verkiezingen", "De regering reageert", "Het parlement controleert", "Politiek dicht bij huis", "Invloed op de politiek", "Internationale samenwerking"],
+    4: ["Wat is een pluriforme samenleving?", "Worden wie je bent", "Hokjesdenken", "Migratie naar Nederland", "Integratie gaat niet vanzelf", "Nederland verandert", "Allemaal burgers"],
+    5: ["Wat is een verzorgingsstaat?", "Ontwikkeling van de verzorgingsstaat", "Onderwijs", "Gezondheidszorg", "Sociale zekerheid", "Werken nu en in de toekomst", "Verzorgingsstaten wereldwijd"],
   },
   "memo-maatschappijleer": {
     _default: ["Theorie", "Begrippen", "Casussen", "Vragen"],
