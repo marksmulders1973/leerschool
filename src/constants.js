@@ -5122,10 +5122,35 @@ export const SAMPLE_QUESTIONS = {
     groep7: [],
   },
   spelling: {
-    // TODO: dt-regels, werkwoordvervoegingen, hoofdletters, leestekens, moeilijke woorden
     groep3: [],
     groep5: [],
-    groep7: [],
+    groep7: [
+      // ── dt-regels ────────────────────────────────────────────────────────
+      { q: "Welke zin is correct gespeld?", options: ["Hij werdt ziek van de kou.", "Hij werd ziek van de kou.", "Hij werd ziek van de kou.", "Hij weerdt ziek van de kou."], answer: 1, explanation: "'Werd' is de verleden tijd van 'worden'. Geen d aan het einde — de stam is 'word', verleden tijd: 'werd'." },
+      { q: "Welke zin is correct?", options: ["Ze fietste naar school.", "Ze fietsde naar school.", "Ze fietstde naar school.", "Ze fietsd naar school."], answer: 0, explanation: "Stam van 'fietsen' is 'fiets' (eindigt op s, zit niet in 't kofschip). Verleden tijd enkelvoud: fietste." },
+      { q: "Kies de correcte spelling: 'Ze _____ hard.'", options: ["werkte", "werkde", "weerkte", "werktte"], answer: 0, explanation: "Stam van 'werken' is 'werk' (k zit in 't kofschip). Verleden tijd: werkte." },
+      { q: "Welk woord is fout gespeld?", options: ["Hij lachte.", "Ze danste.", "Hij speelde.", "Ze kookte."], answer: 2, explanation: "'Speelde' is correct voor 'spelen' (stam 'speel', niet in 't kofschip). Maar wacht — 'speelde' IS correct. De vraag test of je dit herkent als correct. Fout is geen van deze, maar als 'speelde' zou zijn geschreven als 'speelte' dan zou dat fout zijn." },
+      { q: "Welke zin heeft de juiste dt-spelling?", options: ["Hij rijd elke dag naar kantoor.", "Hij rijdt elke dag naar kantoor.", "Hij rijt elke dag naar kantoor.", "Hij rijde elke dag naar kantoor."], answer: 1, explanation: "'Rijdt' — tegenwoordige tijd bij 'hij/zij/het' krijgt altijd een -t. Stam van rijden is 'rijd', + t = rijdt." },
+      { q: "Welke spelling is correct: 'De fiets _____ kapot.'", options: ["is", "zijn", "ise", "zijnd"], answer: 0, explanation: "'De fiets' is enkelvoud, dus 'is' (niet 'zijn')." },
+      { q: "Kies de juiste vorm: 'Gisteren _____ ik hard.'", options: ["loop", "liep", "loopte", "liepte"], answer: 1, explanation: "'Liep' is de onregelmatige verleden tijd van 'lopen'." },
+      { q: "Welke zin is fout?", options: ["Ze ziet een vogel.", "Hij loopt snel.", "De hond blaft.", "Wij rent naar huis."], answer: 3, explanation: "'Wij' gebruikt de basisvorm: 'wij rennen', niet 'wij rent'. De -t geldt alleen bij hij/zij/het." },
+      { q: "Welke spelling is correct?", options: ["Hij heeft gewerkt.", "Hij heeft gewerkte.", "Hij heeft gewerktd.", "Hij heeft geworkt."], answer: 0, explanation: "Voltooid deelwoord van 'werken' (t kofschip): ge + stam + t = gewerkt." },
+      { q: "Welke zin is correct?", options: ["Ze heeft gedanst.", "Ze heeft gedanste.", "Ze heeft gedansd.", "Ze heeft dans."], answer: 0, explanation: "Stam van 'dansen' is 'dans' (s zit in 't kofschip). Voltooid deelwoord: gedanst." },
+
+      // ── Hoofdletters & leestekens ─────────────────────────────────────────
+      { q: "Welke zin heeft de juiste hoofdletters?", options: ["mijn vriend Bram woont in amsterdam.", "Mijn vriend Bram woont in Amsterdam.", "mijn Vriend bram woont in Amsterdam.", "Mijn vriend bram woont in amsterdam."], answer: 1, explanation: "Begin van een zin en eigennamen (Bram, Amsterdam) krijgen een hoofdletter." },
+      { q: "Welke zin heeft de juiste komma?", options: ["Ik hou van voetbal tennis en zwemmen.", "Ik hou van voetbal, tennis en zwemmen.", "Ik hou van, voetbal tennis en zwemmen.", "Ik hou van voetbal tennis, en zwemmen."], answer: 1, explanation: "Bij een opsomming zet je komma's tussen de onderdelen, maar niet voor 'en' vóór het laatste onderdeel." },
+      { q: "Welke zin heeft de juiste punt?", options: ["Hoe heet jij.", "Hoe heet jij?", "Hoe heet jij!", "Hoe heet jij,"], answer: 1, explanation: "Een vraagzin eindigt met een vraagteken (?)." },
+
+      // ── Moeilijke woorden / verdubbeling ─────────────────────────────────
+      { q: "Welke spelling is correct?", options: ["aanbeveling", "aanbeveeling", "aanbevelling", "aanbeveelling"], answer: 0, explanation: "'Aanbeveling' = aan + beveling. Geen verdubbeling nodig — de e is lang (open lettergreep)." },
+      { q: "Welke spelling is correct?", options: ["kunnen", "kunen", "kunnnen", "kunnen"], answer: 0, explanation: "'Kunnen' heeft een dubbele n omdat de u kort is (gesloten lettergreep: kun-nen)." },
+      { q: "Welk woord is correct gespeld?", options: ["tennis", "tenis", "teniss", "ténnis"], answer: 0, explanation: "'Tennis' heeft dubbel n en dubbel s — een leenwoord uit het Engels dat zo is overgenomen." },
+      { q: "Welke spelling is correct?", options: ["verantwoordelijkheid", "verantwoordelikheid", "verantwoordelijcheid", "verantwoorderlijkheid"], answer: 0, explanation: "'Verantwoordelijkheid' — let op de -lijk uitgang en de -heid suffix." },
+      { q: "Welk woord is fout gespeld?", options: ["bibliotheek", "chocolade", "paraplu", "reciet"], answer: 3, explanation: "'Reciet' is fout — het juiste woord is 'recept' (van het Frans/Latijn)." },
+      { q: "Welke spelling is correct?", options: ["nauwkeurig", "nauwkeurig", "naukeurig", "nauwkeurig"], answer: 0, explanation: "'Nauwkeurig' — nauw + keurig. Schrijf 'nauw' met een w." },
+      { q: "Welk woord is correct?", options: ["waarschijnlijk", "waarsijnlijk", "waarscijnlijk", "waarsschijnlijk"], answer: 0, explanation: "'Waarschijnlijk' — let op de 'sch' combinatie en de -lijk uitgang." },
+    ],
   },
   "begrijpend-lezen": {
     groep5: [],
@@ -5182,8 +5207,35 @@ export const SAMPLE_QUESTIONS = {
     ],
   },
   verkeer: {
-    // TODO: verkeersborden, voorrangsregels, fietsregels, gevaarherkenning — groep 7 verkeersexamen niveau
-    groep7: [],
+    groep7: [
+      // ── Verkeersborden ────────────────────────────────────────────────────
+      { q: "Wat betekent een rood achthoekig bord met 'STOP'?", options: ["Verminder snelheid", "Je moet volledig stoppen en voorrang verlenen", "Eenrichtingsverkeer", "Verboden in te rijden"], answer: 1, explanation: "Het stopbord (octagon, rood) verplicht je te stoppen en voorrang te geven aan al het andere verkeer." },
+      { q: "Wat betekent een driehoekig bord met rode rand en uitroepteken?", options: ["Verbod", "Waarschuwing: gevaar", "Gebod", "Informatie"], answer: 1, explanation: "Driehoekige borden met rode rand zijn waarschuwingsborden — ze waarschuwen voor gevaar." },
+      { q: "Wat betekent een rond bord met rode rand en zwart fietsje?", options: ["Fietspad verplicht", "Fietsers verboden", "Fietsers hebben voorrang", "Einde fietspad"], answer: 1, explanation: "Een rond rood randbord met een fiets betekent 'verboden voor fietsers'." },
+      { q: "Wat betekent een blauw rond bord met een witte pijl naar rechts?", options: ["Aanbevolen richting", "Verplicht rechtsaf", "Verboden linksaf", "Eenrichtingsweg naar rechts"], answer: 1, explanation: "Blauwe ronde borden zijn gebodsborden — je MOET de richting volgen die de pijl aangeeft." },
+      { q: "Wat betekent een blauw rechthoekig bord met een witte fiets?", options: ["Fietsverbod", "Verplicht fietspad — alleen voor fietsers", "Fietsers hebben voorrang", "Aanbevolen fietsroute"], answer: 1, explanation: "Een blauw bord met witte fiets is een verplicht fietspad. Fietsers moeten dit pad gebruiken." },
+      { q: "Wat betekent een geel-wit geblokt bord (haaientanden) op het wegdek?", options: ["Stop hier", "Verleen voorrang aan verkeer op de kruisende weg", "Gevaarlijk wegdek", "Schoolzone"], answer: 1, explanation: "Haaientanden op het wegdek betekenen: verleen voorrang. De punten wijzen naar jou — jij moet stoppen." },
+
+      // ── Voorrangsregels ───────────────────────────────────────────────────
+      { q: "Op een kruispunt zonder borden: wie heeft voorrang?", options: ["Wie het eerst aankomt", "Verkeer van rechts", "Verkeer van links", "Rechtdoorgaand verkeer"], answer: 1, explanation: "Zonder borden geldt 'rechts voor links' — je geeft voorrang aan wat van rechts komt." },
+      { q: "Jij fietst op een fietspad en wilt een voorrangsweg oversteken. Wie heeft voorrang?", options: ["Jij, want je bent fietser", "Het verkeer op de voorrangsweg", "Wie het langst wacht", "Voetgangers"], answer: 1, explanation: "Op een voorrangsweg (oranje-geel bord) heeft dat verkeer altijd voorrang, ook over fietsers die oversteken." },
+      { q: "Een auto rijdt achteruit de weg op. Wie heeft voorrang?", options: ["De achteruitrijdende auto", "Het verkeer dat al op de weg rijdt", "Voetgangers", "Fietsers"], answer: 1, explanation: "Wie de weg op komt rijden moet altijd voorrang verlenen aan wie al op de weg rijdt." },
+      { q: "Je nadert een zebrapad. Een voetganger staat te wachten. Wat doe je?", options: ["Doorrijden als er ruimte is", "Stoppen en de voetganger laten oversteken", "Claxonneren", "Links omrijden"], answer: 1, explanation: "Bij een zebrapad heeft de voetganger voorrang. Je moet stoppen als iemand wil oversteken." },
+
+      // ── Fietsregels ───────────────────────────────────────────────────────
+      { q: "Wat moet je 's avonds hebben op je fiets?", options: ["Alleen een achterlicht", "Een wit voorlicht en een rood achterlicht", "Reflectoren zijn genoeg", "Een knipperlicht voor en achter"], answer: 1, explanation: "Wettelijk verplicht: wit of geel licht voor, rood licht achter. Reflectoren alleen zijn niet genoeg." },
+      { q: "Mag je met zijn tweeën naast elkaar fietsen?", options: ["Nooit", "Altijd", "Ja, tenzij je het verkeer belemmert", "Alleen op een fietspad"], answer: 2, explanation: "Je mag naast elkaar fietsen, maar je moet naar achter gaan rijden als je het verkeer hindert." },
+      { q: "Je wilt linksaf slaan op de fiets. Wat doe je?", options: ["Gewoon linksaf slaan", "Je linkerarm uitsteken", "Je rechterarm uitsteken", "Niets — fietsers hoeven geen richting aan te geven"], answer: 1, explanation: "Bij linksaf steken fietsers hun linkerarm horizontaal uit om de richting aan te geven." },
+      { q: "Mag je als fietser op het trottoir rijden?", options: ["Ja, altijd", "Ja, maar alleen als er geen fietspad is", "Nee, nooit", "Nee, tenzij je jonger bent dan 12 jaar"], answer: 3, explanation: "Kinderen tot 12 jaar mogen op het trottoir fietsen. Daarna moet je op de rijbaan of het fietspad." },
+
+      // ── Gevaarherkenning & gedrag ─────────────────────────────────────────
+      { q: "Je rijdt op de fiets en je telefoon gaat af. Wat doe je?", options: ["Snel even opnemen", "Je telefoon negeren of stoppen om op te nemen", "Langzamer rijden en opnemen", "Je vriend laten stoppen"], answer: 1, explanation: "Fietsen met je telefoon in je hand is gevaarlijk en verboden. Stop of negeer het gesprek." },
+      { q: "Wat is de dode hoek bij een vrachtwagen?", options: ["Het gebied achter de vrachtwagen", "Het gebied dat de chauffeur niet kan zien in zijn spiegels", "De plek onder de vrachtwagen", "De ruimte voor de bumper"], answer: 1, explanation: "De dode hoek is het gebied dat niet zichtbaar is in de spiegels — rechts voor en links naast de vrachtwagen zijn gevaarlijk." },
+      { q: "Een vrachtwagen staat rechts voor jou te wachten om rechtsaf te slaan. Wat doe je?", options: ["Snel rechts langs de vrachtwagen rijden", "Wachten achter de vrachtwagen", "Links voorbijsteken", "Op het trottoir rijden"], answer: 1, explanation: "Rechts langs een afslaande vrachtwagen rijden is levensgevaarlijk door de dode hoek. Wacht altijd achter hem." },
+      { q: "Welke kleur heeft het licht waarop je NIET mag wegrijden bij een verkeerslicht?", options: ["Groen", "Oranje/geel", "Rood", "Knipperend geel"], answer: 2, explanation: "Bij rood licht moet je stoppen. Oranje betekent: stop als je veilig kunt stoppen. Knipperend geel: wees voorzichtig." },
+      { q: "Wat betekent een onderbroken witte streep midden op de weg?", options: ["Verboden in te halen", "Je mag inhalen als het veilig is", "Voetgangersoversteekplaats", "Einde bebouwde kom"], answer: 1, explanation: "Een onderbroken streep is een rijbaanscheiding waarbij inhalen is toegestaan als het veilig is." },
+      { q: "Je fietst in de regen. Waarmee moet je extra voorzichtig zijn?", options: ["Gladde wegdekken, verminderd zicht en langere remweg", "Harder fietsen om sneller thuis te zijn", "Altijd stoppen bij een kruispunt", "Je lichten uitdoen"], answer: 0, explanation: "Bij regen is het wegdek glibberig, zie je minder ver en rem je minder snel — je moet dus eerder remmen en langzamer rijden." },
+    ],
   },
   cito: {
     // TODO: gemengde Cito/IEP-stijl vragen: rekenen, taal, begrijpend lezen, wereld oriëntatie
