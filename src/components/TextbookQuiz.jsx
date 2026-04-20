@@ -34,7 +34,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
   const [paragraaf, setParagraaf] = useState("");
   const [topic, setTopic] = useState("");
   const [level, setLevel] = useState(initLevel);
-  const [questionCount, setQuestionCount] = useState(8);
+  const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
   const [coverUrl, setCoverUrl] = useState(null);
   const [coverLoading, setCoverLoading] = useState(false);
@@ -755,8 +755,12 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               )}
 
               {/* Aantal vragen */}
-              <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
-              <input type="range" min={3} max={15} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span></div>
+              <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
+                {[5, 10, 15, 20].map(n => (
+                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700 }}>{n}</button>
+                ))}
+              </div>
 
               {/* Timer */}
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>

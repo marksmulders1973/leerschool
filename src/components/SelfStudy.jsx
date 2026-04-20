@@ -203,8 +203,12 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
         {((subject && level) || (eigenMode && level)) && (
           <>
             <div style={styles.settingsGroup}>
-              <label style={styles.settingLabel}>Aantal vragen: {questionCount}</label>
-              <input type="range" min={3} max={20} value={questionCount} onChange={(e) => setQuestionCount(+e.target.value)} style={styles.slider} />
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span></div>
+              <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
+                {[5, 10, 15, 20].map(n => (
+                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700 }}>{n}</button>
+                ))}
+              </div>
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>
               <input type="range" min={0} max={60} step={5} value={timePerQuestion} onChange={(e) => setTimePerQuestion(+e.target.value)} style={styles.slider} />
               {timePerQuestion === 0 && <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginTop: 4 }}>Sleep naar rechts voor een tijdslimiet</div>}
