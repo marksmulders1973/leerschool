@@ -12,6 +12,7 @@ import TextbookQuiz from "./components/TextbookQuiz.jsx";
 import CitoPage from "./components/CitoPage.jsx";
 import PlayQuiz from "./components/PlayQuiz.jsx";
 import ResultsPage from "./components/ResultsPage.jsx";
+import TafelsPage from "./components/TafelsPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
@@ -343,7 +344,8 @@ export default function App() {
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
             if (feature === "cito") { setPage("cito"); return; }
-            if (feature === "tafels" || feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen" || feature === "eindexamen") {
+            if (feature === "tafels") { setPage("tafels"); return; }
+            if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen" || feature === "eindexamen") {
               setPendingFeature(feature);
               setPage("self-study");
               return;
@@ -562,6 +564,30 @@ export default function App() {
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
         />
       )}
+      {page === "tafels" && (
+        <TafelsPage
+          userName={userName}
+          studentProgress={studentProgress}
+          onStart={(tafelNum) => {
+            const questions = generateTafelQuestions(tafelNum, 10);
+            const topic = tafelNum === "mix" ? "tafels mix" : `tafel van ${tafelNum}`;
+            const quiz = {
+              id: "self-tafels-" + Date.now(),
+              subject: "rekenen",
+              level: userLevel || "groep5",
+              topic,
+              tafelNummer: tafelNum,
+              questionCount: 10,
+              timePerQuestion: 0,
+              preGeneratedQuestions: questions,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
+          onBack={() => setPage(role ? "student-home" : "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "results" && (
         <ResultsPage
           results={results}
@@ -570,6 +596,7 @@ export default function App() {
           authUser={authUser}
           onLogin={handleGoogleLogin}
           onBack={() => {
+            if (currentQuiz?.id?.startsWith("self-tafels")) { setPage("tafels"); return; }
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
@@ -581,6 +608,19 @@ export default function App() {
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
           }}
           onLeaderboard={() => setPage("leaderboard")}
+          onNextTafel={(() => {
+            const topic = currentQuiz?.topic;
+            if (!topic?.startsWith("tafel van ")) return undefined;
+            const num = parseInt(topic.replace("tafel van ", ""));
+            if (num >= 12) return undefined;
+            return () => {
+              const nextNum = num + 1;
+              const questions = generateTafelQuestions(nextNum, 10);
+              const quiz = { id: "self-tafels-" + Date.now(), subject: "rekenen", level: userLevel || "groep5", topic: `tafel van ${nextNum}`, tafelNummer: nextNum, questionCount: 10, timePerQuestion: 0, preGeneratedQuestions: questions };
+              setCurrentQuiz(quiz);
+              startGame(quiz, "self");
+            };
+          })()}
         />
       )}
       {page === "teacher-progress" && (
