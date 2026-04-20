@@ -9,10 +9,11 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const klasBuckets  = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"};
   const initGroep = userRole === "leerling" && userLevel ? `g${userLevel}` : "";
   const initKlas  = userRole === "student"  && userLevel ? `k${userLevel}` : "";
-  // Cito, topografie, begrijpend-lezen zijn groep 7 vakken — gebruik groep7 als default level
-  const citoSubjects = ["cito", "topografie", "begrijpend-lezen"];
+  // Cito, begrijpend-lezen zijn groep 7 vakken — gebruik groep7 als default level
+  const citoSubjects = ["cito", "begrijpend-lezen"];
   const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas]
     || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "")
+    || (initialSubject === "tafels" ? "groep5" : "")
     || (initialSubject === "eindexamen" ? "klas3" : "");
 
   const [subject, setSubject] = useState(initialSubject || "");
@@ -29,7 +30,9 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   // Direct starten als subject + level al bekend zijn via feature card
   useEffect(() => {
     if (initialSubject && initLevel && !["cito", "vrij", "eindexamen"].includes(initialSubject)) {
-      onStart({ subject: initialSubject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic: null });
+      const topic = initialSubject === "tafels" ? "tafels (vermenigvuldiging)" : null;
+      const subject = initialSubject === "tafels" ? "rekenen" : initialSubject;
+      onStart({ subject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic });
     }
   }, []);
 

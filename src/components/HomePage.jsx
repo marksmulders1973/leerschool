@@ -7,7 +7,7 @@ const TICKER_ITEMS = [
   { icon: "📚", text: "100+ echte schoolboeken" },
   { icon: "🤖", text: "AI-vragen over elk onderwerp" },
   { icon: "✅", text: "100% gratis" },
-  { icon: "🗺️", text: "Topografie: provincies & landen" },
+  { icon: "✖️", text: "Tafels oefenen: groep 3 t/m 6" },
   { icon: "📖", text: "Begrijpend lezen groep 5–8" },
   { icon: "🎒", text: "Groep 1 t/m 8" },
   { icon: "🎓", text: "VMBO-TL · HAVO · VWO · Gymnasium" },
@@ -82,7 +82,7 @@ const FEATURES_LEFT = [
 const FEATURES_RIGHT = [
   { id: "schoolboeken",    label: "Schoolboeken",    sub: "100+ echte boeken",          color: "#0072ff", bg: "rgba(0,114,255,0.12)",   border: "rgba(0,114,255,0.2)",   badge: null },
   { id: "ai-vragen",       label: "AI-vragen",       sub: "Elk onderwerp",              color: "#7c3aed", bg: "rgba(124,58,237,0.12)",  border: "rgba(124,58,237,0.2)",  badge: "Nieuw" },
-  { id: "topografie",      label: "Topografie",      sub: "Landen & provincies",        color: "#059669", bg: "rgba(5,150,105,0.12)",   border: "rgba(5,150,105,0.2)",   badge: null },
+  { id: "tafels",           label: "Tafels oefenen",  sub: "Groep 3 t/m 6",             color: "#059669", bg: "rgba(5,150,105,0.12)",   border: "rgba(5,150,105,0.2)",   badge: null },
   { id: "begrijpend-lezen",label: "Begrijpend lezen",sub: "Groep 5–8",                  color: "#d97706", bg: "rgba(217,119,6,0.12)",   border: "rgba(217,119,6,0.2)",   badge: null },
   { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
   { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },

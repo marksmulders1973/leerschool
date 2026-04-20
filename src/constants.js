@@ -48,8 +48,8 @@ export const LEVELS = [
 export const SUBJECT_FOR_LEVEL = {
   groep12: ["rekenen", "taal"],
   groep3:  ["rekenen", "taal", "natuur"],
-  groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "topografie", "spelling", "begrijpend-lezen"],
-  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "topografie", "spelling", "begrijpend-lezen", "verkeer", "cito"],
+  groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen"],
+  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen", "verkeer", "cito"],
   klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "mens-maatschappij", "levensbeschouwing"],
   klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "levensbeschouwing"],
   klas5:   ["wiskunde", "wiskunde-a", "wiskunde-b", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "maw"],
