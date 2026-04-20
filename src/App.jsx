@@ -14,6 +14,7 @@ import PlayQuiz from "./components/PlayQuiz.jsx";
 import ResultsPage from "./components/ResultsPage.jsx";
 import TafelsPage from "./components/TafelsPage.jsx";
 import RedactiesommenPage from "./components/RedactiesommenPage.jsx";
+import BegrijpendLezenPage from "./components/BegrijpendLezenPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
@@ -362,7 +363,8 @@ export default function App() {
             if (feature === "cito") { setPage("cito"); return; }
             if (feature === "tafels") { setPage("tafels"); return; }
             if (feature === "redactiesommen") { setPage("redactiesommen"); return; }
-            if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen" || feature === "eindexamen") {
+            if (feature === "begrijpend-lezen") { setPage("begrijpend-lezen"); return; }
+            if (feature === "topografie" || feature === "ai-vragen" || feature === "eindexamen") {
               setPendingFeature(feature);
               setPage("self-study");
               return;
@@ -629,6 +631,30 @@ export default function App() {
           onHome={() => setPage("home")}
         />
       )}
+      {page === "begrijpend-lezen" && (
+        <BegrijpendLezenPage
+          userName={userName}
+          studentProgress={studentProgress}
+          onStart={(catId) => {
+            const topic = catId === "mix" ? "begrijpend-lezen mix" : `begrijpend-lezen ${catId}`;
+            const pool = TOPIC_QUESTIONS[topic] || [];
+            const preGeneratedQuestions = shuffle([...pool]).slice(0, 10);
+            const quiz = {
+              id: "self-bl-" + Date.now(),
+              subject: "begrijpend-lezen",
+              level: userLevel || "groep7",
+              topic,
+              questionCount: 10,
+              timePerQuestion: 0,
+              preGeneratedQuestions,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
+          onBack={() => setPage(role ? "student-home" : "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "results" && (
         <ResultsPage
           results={results}
@@ -639,6 +665,7 @@ export default function App() {
           onBack={() => {
             if (currentQuiz?.id?.startsWith("self-tafels")) { setPage("tafels"); return; }
             if (currentQuiz?.id?.startsWith("self-redactie")) { setPage("redactiesommen"); return; }
+            if (currentQuiz?.id?.startsWith("self-bl-")) { setPage("begrijpend-lezen"); return; }
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");

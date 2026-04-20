@@ -6052,6 +6052,27 @@ TOPIC_QUESTIONS["redactiesommen mix"] = [
   ...TOPIC_QUESTIONS["redactiesommen gemengd"],
 ];
 
+// ── Begrijpend lezen per categorie ────────────────────────────────────
+// _blVragen indices: 0-2 regenwoud, 3-5 dagboek, 6-8 wolf, 9-11 instructie,
+//   12-14 verhaal, 15-17 brief, 18-20 maan, 21-23 reclame, 24-26 giraf, 27-29 mening
+TOPIC_QUESTIONS["begrijpend-lezen informatief"] = [
+  ..._blVragen.slice(0, 3),   // informatieve tekst: regenwoud
+  ..._blVragen.slice(18, 21), // informatieve tekst: de maan
+  ..._blVragen.slice(24, 27), // beschrijvende tekst: de giraf
+];
+TOPIC_QUESTIONS["begrijpend-lezen verhalend"] = [
+  ..._blVragen.slice(3, 6),   // dagboek
+  ..._blVragen.slice(6, 9),   // nieuwsbericht: de wolf
+  ..._blVragen.slice(12, 15), // verhaal: de oude boom
+];
+TOPIC_QUESTIONS["begrijpend-lezen functioneel"] = [
+  ..._blVragen.slice(9, 12),  // instructietekst: vogels voeren
+  ..._blVragen.slice(15, 18), // brief aan burgemeester
+  ..._blVragen.slice(21, 24), // reclametekst
+  ..._blVragen.slice(27, 30), // feit en mening
+];
+TOPIC_QUESTIONS["begrijpend-lezen mix"] = _blVragen;
+
 export const EIGEN_TOPIC_SUGGESTIONS = [
   "Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp",
   "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet",
