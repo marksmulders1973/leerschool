@@ -13,7 +13,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const citoSubjects = ["cito", "begrijpend-lezen"];
   const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas]
     || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "")
-    || (initialSubject === "tafels" ? "groep5" : "")
+    || (["tafels","spelling","woordenschat","redactiesommen"].includes(initialSubject) ? "groep5" : "")
     || (initialSubject === "eindexamen" ? "klas3" : "");
 
   const [subject, setSubject] = useState(initialSubject || "");
@@ -30,8 +30,13 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   // Direct starten als subject + level al bekend zijn via feature card
   useEffect(() => {
     if (initialSubject && initLevel && !["cito", "vrij", "eindexamen"].includes(initialSubject)) {
-      const topic = initialSubject === "tafels" ? "tafels (vermenigvuldiging)" : null;
-      const subject = initialSubject === "tafels" ? "rekenen" : initialSubject;
+      const topicMap = {
+        tafels:         ["rekenen", "tafels (vermenigvuldiging)"],
+        spelling:       ["taal",    "spelling en dt-regels"],
+        woordenschat:   ["taal",    "woordenschat, synoniemen en betekenissen"],
+        redactiesommen: ["rekenen", "redactiesommen"],
+      };
+      const [subject, topic] = topicMap[initialSubject] || [initialSubject, null];
       onStart({ subject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic });
     }
   }, []);

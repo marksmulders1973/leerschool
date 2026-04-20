@@ -84,6 +84,9 @@ const FEATURES_RIGHT = [
   { id: "ai-vragen",       label: "AI-vragen",       sub: "Elk onderwerp",              color: "#7c3aed", bg: "rgba(124,58,237,0.12)",  border: "rgba(124,58,237,0.2)",  badge: "Nieuw" },
   { id: "tafels",           label: "Tafels oefenen",  sub: "Groep 3 t/m 6",             color: "#059669", bg: "rgba(5,150,105,0.12)",   border: "rgba(5,150,105,0.2)",   badge: null },
   { id: "begrijpend-lezen",label: "Begrijpend lezen",sub: "Groep 5–8",                  color: "#d97706", bg: "rgba(217,119,6,0.12)",   border: "rgba(217,119,6,0.2)",   badge: null },
+  { id: "spelling",        label: "Spelling",        sub: "dt-regels & werkwoorden",    color: "#f43f5e", bg: "rgba(244,63,94,0.12)",   border: "rgba(244,63,94,0.2)",   badge: null },
+  { id: "woordenschat",    label: "Woordenschat",    sub: "Synoniemen & betekenissen",  color: "#0891b2", bg: "rgba(8,145,178,0.12)",   border: "rgba(8,145,178,0.2)",   badge: null },
+  { id: "redactiesommen",  label: "Redactiesommen",  sub: "Rekenen met tekst",          color: "#ea580c", bg: "rgba(234,88,12,0.12)",   border: "rgba(234,88,12,0.2)",   badge: null },
   { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
   { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
 ];
