@@ -560,7 +560,7 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
-          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); setGameState(null); setCurrentQuiz(null); setPage(role === "teacher" ? "teacher-home" : "student-home"); }}
+          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
         />
       )}
