@@ -27,7 +27,7 @@ function generateTafelQuestions(tafel, count) {
       if (candidate !== correct && candidate > 0) wrongs.add(candidate);
     }
     const opts = [correct, ...wrongs].sort(() => Math.random() - 0.5);
-    return { question: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
+    return { q: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
   };
   if (tafel === "mix") {
     const pairs = [];
