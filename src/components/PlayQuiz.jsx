@@ -24,12 +24,16 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
   const SUBJECT_VIDEOS = {
-    rekenen:       "https://www.youtube.com/watch?v=3tDBiUBiUQs",
-    spelling:      "https://www.youtube.com/watch?v=pkMclCinI8s",
-    aardrijkskunde:"https://www.youtube.com/watch?v=cc6Fb7rOirU",
-    geschiedenis:  "https://www.youtube.com/watch?v=Avqi2aVHMr0",
-    natuur:        "https://www.youtube.com/watch?v=Jw1PCm5_LD4",
-    engels:        "https://www.youtube.com/watch?v=UBKq1Ta3y9Q",
+    rekenen:          "https://www.youtube.com/watch?v=3tDBiUBiUQs",
+    spelling:         "https://www.youtube.com/watch?v=pkMclCinI8s",
+    aardrijkskunde:   "https://www.youtube.com/watch?v=cc6Fb7rOirU",
+    geschiedenis:     "https://www.youtube.com/watch?v=Avqi2aVHMr0",
+    natuur:           "https://www.youtube.com/watch?v=Jw1PCm5_LD4",
+    engels:           "https://www.youtube.com/watch?v=UBKq1Ta3y9Q",
+    duits:            "https://www.youtube.com/watch?v=g1T8_0azyP8",
+    frans:            "https://www.youtube.com/watch?v=ij19pZ6b81Q",
+    wiskunde:         "https://www.youtube.com/watch?v=IsCM89GWtKI",
+    maatschappijleer: "https://www.youtube.com/watch?v=LLIH4LE4Wqg",
   };
   const TOPIC_VIDEOS = {
     breuken:   "https://www.youtube.com/watch?v=PYVIS91pnEg",
