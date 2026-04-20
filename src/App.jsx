@@ -226,7 +226,7 @@ export default function App() {
       const questionsPerRound = quiz.questionCount || 10;
       const standardPoolSize = (SAMPLE_QUESTIONS[quiz.subject]?.[quiz.level] || []).length;
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
-      const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || (!hasSampleQuestions && !hasSubjectTopicQuestions) || hasExhaustedPool;
+      const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || (!hasSampleQuestions && !hasSubjectTopicQuestions && !hasPredefinedTopicQuestions) || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
         abortControllerRef.current = new AbortController();
         setLoading(true);
@@ -689,6 +689,12 @@ export default function App() {
           onHome={() => setPage("home")}
         />
       )}
+    <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
+      <a href="/over.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Over Studiebol</a>
+      ·
+      <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
+      · © Smulsoft
+    </footer>
     </div>
   );
 }

@@ -1509,14 +1509,24 @@ export const PARAGRAPH_TITLES = {
     7: ["Stijgen en dalen", "Toenamediagrammen", "Gemiddelde verandering", "Hellingen benaderen"],
     8: ["Meten", "Rekenen met breuken", "Haakjes wegwerken", "Rekenen met wortels en machten", "Exponentieel verband"],
   },
+  // ── KERN Wiskunde (bron: leren.jojoschool.nl) ────────────────
   "kern-wis-hv1a": {
-    _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"],
+    1: ["Positieve en negatieve getallen", "Met negatieve getallen vermenigvuldigen en delen", "Breuken", "Met breuken vermenigvuldigen en delen", "Machtsverheffen"],
+    2: ["Punten en lijnen", "Hoeken", "Vlakke figuren", "Tekenen en spiegelen", "Symmetrie"],
+    3: ["Het assenstelsel", "Verbanden", "Formules en grafieken", "Lineaire en kwadratische verbanden", "Variabelen"],
+    4: ["Data", "Verhoudingen", "Procenten", "Diagrammen", "Grafieken"],
   },
   "kern-wis-hv1b": {
-    _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"],
+    5: ["Lengte, tijd en snelheid", "Omtrek en oppervlakte", "Oppervlakte driehoek", "Omtrek en oppervlakte cirkel", "Inhoud"],
+    6: ["Lineaire formules", "Vergelijkingen", "Lijnen", "Vergelijkingen oplossen", "Vergelijkingen toepassen"],
+    7: ["Driehoeken", "Vierhoeken", "Hoeken berekenen", "F- en Z-hoeken", "Oppervlaktes berekenen"],
+    8: ["Rekenen met variabelen", "Haakjes wegwerken", "Ontbinden in factoren", "Merkwaardige producten", "Breuken met variabelen"],
   },
   "kern-wis-hv2a": {
-    _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"],
+    1: ["Veelvouden, delers en priemgetallen", "Machten", "Wortels", "Wortels herleiden", "Het decimale getallenstelsel"],
+    2: ["Ruimtefiguren", "Inhoud van ruimtefiguren", "Punten, lijnen en doorsnedes", "Aanzichten en kijklijnen", "Uitslagen en oppervlakte"],
+    3: ["Lineaire verbanden", "Recht evenredige verbanden", "Kwadratische verbanden", "Omgekeerd evenredige verbanden", "Wortelverbanden"],
+    4: ["Tellen: roosterdiagram en boomdiagram", "Tellen: wegendiagram en systematisch noteren", "Kansen", "Kansen berekenen", "Met en zonder terugleggen"],
   },
   "netwerk-wis": {
     _default: ["Theorie", "Oefeningen", "Toepassingen", "Herhaling"],
@@ -1674,12 +1684,12 @@ export const PARAGRAPH_TITLES = {
   "alles-telt": {
     _default: ["Begrippen en uitleg", "Oefeningen", "Toepassingen", "Herhaling"],
   },
-  // ── Basisschool: Taal ────────────────────────────────────────
+  // ── Basisschool: Taal (bron: malmberg.nl) ────────────────────
   "taal-actief": {
-    _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"],
+    _default: ["Thema 1: Elkaar leren kennen", "Thema 2: Je uitdrukken", "Thema 3: Een mening vormen", "Thema 4: Overtuigen", "Thema 5: Samen beslissen", "Thema 6: Informeren", "Thema 7: Uitleggen", "Thema 8: Verhalen bedenken"],
   },
   "staal": {
-    _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"],
+    _default: ["Thema 1: Amsterdam", "Thema 2: Jungle", "Thema 3: Ondergronds", "Thema 4: Plankenkoorts", "Thema 5: Pronkstukken", "Thema 6: Spijsvertering", "Thema 7: Sport", "Thema 8: Zeebenen"],
   },
   "nieuw-nl-junior": {
     _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"],
@@ -1688,7 +1698,7 @@ export const PARAGRAPH_TITLES = {
     _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"],
   },
   "lijn3": {
-    _default: ["Theorie en begrippen", "Oefeningen", "Toepassingen", "Herhaling"],
+    _default: ["Thema 1: De nieuwe groep", "Thema 2: De boom", "Thema 3: Smakelijk eten", "Thema 4: Op wielen", "Thema 5: Mijn lijf", "Thema 6: Het is feest!", "Thema 7: Zon, maan en sterren", "Thema 8: De schat", "Thema 9: Kunst", "Thema 10: Dieren", "Thema 11: Een hut bouwen", "Thema 12: Overal water"],
   },
   // ── Basisschool: Natuur ──────────────────────────────────────
   "naut-meander-brandaan": {
@@ -5168,13 +5178,74 @@ export const SAMPLE_QUESTIONS = {
   },
   // ── Basisschool speerpunten ───────────────────────────────────
   topografie: {
-    // TODO: provincies NL + hoofdsteden, rivieren, werelddelen, Europese landen/hoofdsteden
-    // Primaire bron: gebruik imageSearch met kaartjes
-    groep5: [],
-    groep7: [],
+    groep5: [
+      { q: "Hoeveel provincies heeft Nederland?", options: ["10", "11", "12", "13"], answer: 2, explanation: "Nederland heeft 12 provincies.", imageSearch: "provinces of Netherlands map" },
+      { q: "Wat is de hoofdstad van de provincie Groningen?", options: ["Assen", "Leeuwarden", "Groningen", "Emmen"], answer: 2, explanation: "De hoofdstad van de provincie Groningen is de stad Groningen.", imageSearch: "Groningen province Netherlands map" },
+      { q: "Welke provincie ligt het meest zuidelijk in Nederland?", options: ["Noord-Brabant", "Limburg", "Zeeland", "Gelderland"], answer: 1, explanation: "Limburg is de meest zuidelijke provincie van Nederland.", imageSearch: "Limburg province Netherlands map" },
+      { q: "Wat is de hoofdstad van Nederland?", options: ["Rotterdam", "Den Haag", "Utrecht", "Amsterdam"], answer: 3, explanation: "Amsterdam is de hoofdstad van Nederland.", imageSearch: "Amsterdam Netherlands map" },
+      { q: "In welke provincie ligt Rotterdam?", options: ["Utrecht", "Noord-Holland", "Zuid-Holland", "Zeeland"], answer: 2, explanation: "Rotterdam ligt in de provincie Zuid-Holland.", imageSearch: "Zuid-Holland province Netherlands map" },
+      { q: "Wat is het IJsselmeer?", options: ["Een rivier in Overijssel", "Een meer dat vroeger de Zuiderzee heette", "Een zeearm in Zeeland", "Een kanaal in Groningen"], answer: 1, explanation: "Het IJsselmeer was vroeger de Zuiderzee, maar werd afgesloten door de Afsluitdijk.", imageSearch: "IJsselmeer Netherlands map" },
+      { q: "Welke provincie heeft Leeuwarden als hoofdstad?", options: ["Groningen", "Drenthe", "Friesland", "Flevoland"], answer: 2, explanation: "Leeuwarden is de hoofdstad van Friesland.", imageSearch: "Friesland province Netherlands map" },
+      { q: "Welke rivier stroomt langs Rotterdam naar de zee?", options: ["IJssel", "Rijn", "Maas", "Schelde"], answer: 2, explanation: "De Maas stroomt via de Nieuwe Maas langs Rotterdam naar de Noordzee.", imageSearch: "Maas river Netherlands map" },
+      { q: "Wat is de Waddenzee?", options: ["Een meer in Noord-Holland", "Een ondiepe zee tussen de kust en de Waddeneilanden", "Een rivier in Friesland", "Een kanaal in Groningen"], answer: 1, explanation: "De Waddenzee is een ondiepe zee tussen de Nederlandse kust en de Waddeneilanden.", imageSearch: "Wadden Sea Netherlands map" },
+      { q: "In welke provincie ligt Eindhoven?", options: ["Limburg", "Gelderland", "Zeeland", "Noord-Brabant"], answer: 3, explanation: "Eindhoven ligt in de provincie Noord-Brabant.", imageSearch: "Noord-Brabant province Netherlands map" },
+      { q: "Welke provincie is het nieuwst?", options: ["Zeeland", "Flevoland", "Drenthe", "Utrecht"], answer: 1, explanation: "Flevoland is de jongste provincie van Nederland, opgericht in 1986. Het land is ingepolderd uit het IJsselmeer.", imageSearch: "Flevoland province Netherlands map" },
+      { q: "Wat is de hoofdstad van Noord-Holland?", options: ["Amsterdam", "Haarlem", "Alkmaar", "Zaandam"], answer: 1, explanation: "Haarlem is de hoofdstad van de provincie Noord-Holland. Amsterdam is de hoofdstad van Nederland.", imageSearch: "Noord-Holland province Netherlands map" },
+      { q: "Welke rivier stroomt door Gelderland richting het IJsselmeer?", options: ["Rijn", "Maas", "IJssel", "Schelde"], answer: 2, explanation: "De IJssel stroomt door Gelderland en Overijssel naar het IJsselmeer.", imageSearch: "IJssel river Netherlands map" },
+      { q: "Welke provincie heeft Middelburg als hoofdstad?", options: ["Noord-Brabant", "Limburg", "Zeeland", "Zuid-Holland"], answer: 2, explanation: "Zeeland heeft Middelburg als hoofdstad en grenst aan België.", imageSearch: "Zeeland province Netherlands map" },
+      { q: "In welke provincie ligt Den Haag?", options: ["Noord-Holland", "Utrecht", "Zeeland", "Zuid-Holland"], answer: 3, explanation: "Den Haag ligt in Zuid-Holland en is de stad waar de Nederlandse regering zetelt.", imageSearch: "The Hague Zuid-Holland Netherlands map" },
+      { q: "Welke provincie ligt tussen Friesland en Groningen in het zuiden?", options: ["Overijssel", "Drenthe", "Flevoland", "Utrecht"], answer: 1, explanation: "Drenthe ligt ten zuiden van zowel Friesland als Groningen.", imageSearch: "Drenthe province Netherlands map" },
+      { q: "Hoe heet de dijk die het IJsselmeer afsluit van de Waddenzee?", options: ["Deltawerken", "Houtribdijk", "Afsluitdijk", "Oosterscheldekering"], answer: 2, explanation: "De Afsluitdijk verbindt Noord-Holland met Friesland en sluit het IJsselmeer af.", imageSearch: "Afsluitdijk Netherlands map" },
+      { q: "Wat is de hoofdstad van de provincie Utrecht?", options: ["Arnhem", "Nijmegen", "Utrecht", "Amersfoort"], answer: 2, explanation: "De stad Utrecht is de hoofdstad van de provincie Utrecht.", imageSearch: "Utrecht province Netherlands map" },
+      { q: "Welke provincie heeft Arnhem als hoofdstad?", options: ["Overijssel", "Utrecht", "Gelderland", "Noord-Brabant"], answer: 2, explanation: "Arnhem is de hoofdstad van de provincie Gelderland.", imageSearch: "Gelderland province Netherlands map" },
+      { q: "Welke grote zee grenst aan de westkust van Nederland?", options: ["Waddenzee", "Oostzee", "Noordzee", "Middellandse Zee"], answer: 2, explanation: "De Noordzee grenst aan de westkust van Nederland.", imageSearch: "North Sea Netherlands coast map" },
+    ],
+    groep7: [
+      { q: "Wat is de hoofdstad van Frankrijk?", options: ["Brussel", "Parijs", "Lyon", "Berlijn"], answer: 1, explanation: "Parijs is de hoofdstad van Frankrijk.", imageSearch: "France map Europe" },
+      { q: "Welke landen grenzen direct aan Nederland?", options: ["Duitsland en België", "Duitsland, België en Luxemburg", "Duitsland en Denemarken", "België en Frankrijk"], answer: 0, explanation: "Nederland grenst direct aan Duitsland (oost) en België (zuid). Luxemburg en Denemarken grenzen niet aan Nederland.", imageSearch: "Netherlands neighboring countries map" },
+      { q: "Hoeveel werelddelen zijn er?", options: ["5", "6", "7", "8"], answer: 2, explanation: "Er zijn 7 werelddelen: Europa, Azië, Afrika, Noord-Amerika, Zuid-Amerika, Oceanië en Antarctica.", imageSearch: "world continents map" },
+      { q: "Wat is de hoofdstad van Duitsland?", options: ["München", "Hamburg", "Frankfurt", "Berlijn"], answer: 3, explanation: "Berlijn is de hoofdstad van Duitsland.", imageSearch: "Germany map Europe" },
+      { q: "Welke oceaan ligt ten westen van Europa?", options: ["Stille Oceaan", "Indische Oceaan", "Atlantische Oceaan", "Arctische Oceaan"], answer: 2, explanation: "De Atlantische Oceaan ligt ten westen van Europa.", imageSearch: "Atlantic Ocean world map" },
+      { q: "Wat is de hoofdstad van Spanje?", options: ["Barcelona", "Valencia", "Madrid", "Sevilla"], answer: 2, explanation: "Madrid is de hoofdstad van Spanje.", imageSearch: "Spain map Europe" },
+      { q: "In welk werelddeel ligt Brazilië?", options: ["Noord-Amerika", "Afrika", "Azië", "Zuid-Amerika"], answer: 3, explanation: "Brazilië ligt in Zuid-Amerika en is het grootste land van dat continent.", imageSearch: "South America continents map" },
+      { q: "Wat is de hoofdstad van Italië?", options: ["Milaan", "Rome", "Napels", "Venetië"], answer: 1, explanation: "Rome is de hoofdstad van Italië.", imageSearch: "Italy map Europe" },
+      { q: "Welke zee ligt tussen Nederland en Groot-Brittannië?", options: ["Middellandse Zee", "Oostzee", "Rode Zee", "Noordzee"], answer: 3, explanation: "De Noordzee ligt tussen Nederland en Groot-Brittannië.", imageSearch: "North Sea Europe map" },
+      { q: "Wat is de hoofdstad van Polen?", options: ["Krakau", "Warschau", "Gdansk", "Wroclaw"], answer: 1, explanation: "Warschau is de hoofdstad van Polen.", imageSearch: "Poland map Europe" },
+      { q: "In welk werelddeel ligt Australië?", options: ["Azië", "Afrika", "Zuid-Amerika", "Oceanië"], answer: 3, explanation: "Australië ligt in het werelddeel Oceanië.", imageSearch: "Australia Oceania world map" },
+      { q: "Wat is de hoofdstad van België?", options: ["Antwerpen", "Gent", "Luik", "Brussel"], answer: 3, explanation: "Brussel is de hoofdstad van België en ook de zetel van de Europese Unie.", imageSearch: "Belgium map Europe" },
+      { q: "Welke oceaan is de grootste ter wereld?", options: ["Atlantische Oceaan", "Indische Oceaan", "Stille Oceaan", "Arctische Oceaan"], answer: 2, explanation: "De Stille Oceaan (Pacifische Oceaan) is de grootste oceaan ter wereld.", imageSearch: "Pacific Ocean world map" },
+      { q: "In welk werelddeel ligt China?", options: ["Afrika", "Europa", "Azië", "Oceanië"], answer: 2, explanation: "China ligt in Azië.", imageSearch: "Asia continent world map" },
+      { q: "Wat is de hoofdstad van Zweden?", options: ["Oslo", "Kopenhagen", "Helsinki", "Stockholm"], answer: 3, explanation: "Stockholm is de hoofdstad van Zweden.", imageSearch: "Sweden map Europe" },
+      { q: "Wat is de hoofdstad van Portugal?", options: ["Madrid", "Barcelona", "Lissabon", "Porto"], answer: 2, explanation: "Lissabon is de hoofdstad van Portugal.", imageSearch: "Portugal map Europe" },
+      { q: "In welk werelddeel ligt Egypte?", options: ["Azië", "Afrika", "Europa", "Zuid-Amerika"], answer: 1, explanation: "Egypte ligt in Afrika, aan de noordoostkant van het continent.", imageSearch: "Africa continent world map" },
+      { q: "Wat is de hoofdstad van Oostenrijk?", options: ["Bern", "Wenen", "Zürich", "Salzburg"], answer: 1, explanation: "Wenen is de hoofdstad van Oostenrijk.", imageSearch: "Austria map Europe" },
+      { q: "Welke twee werelddelen worden samen 'Amerika' genoemd?", options: ["Noord-Amerika en Oceanië", "Zuid-Amerika en Afrika", "Noord-Amerika en Zuid-Amerika", "Europa en Noord-Amerika"], answer: 2, explanation: "Noord-Amerika en Zuid-Amerika worden samen 'Amerika' of 'de Amerika's' genoemd.", imageSearch: "Americas North South America world map" },
+      { q: "Wat is de hoofdstad van Griekenland?", options: ["Istanbul", "Athene", "Sofia", "Skopje"], answer: 1, explanation: "Athene is de hoofdstad van Griekenland en een van de oudste steden ter wereld.", imageSearch: "Greece map Europe" },
+    ],
   },
   spelling: {
-    groep3: [],
+    groep3: [
+      { q: "Hoe schrijf je het dier dat miauwt?", options: ["cat", "kaat", "katt", "kat"], answer: 3, explanation: "Het dier dat miauwt heet een 'kat'. K-A-T." },
+      { q: "Welk woord is goed gespeld?", options: ["hont", "hond", "honde", "hondt"], answer: 1, explanation: "Het woord is 'hond'. H-O-N-D. Een hond blaft." },
+      { q: "Je speelt ermee buiten en gooit het. Hoe schrijf je dat?", options: ["bell", "bel", "bal", "ball"], answer: 2, explanation: "Je speelt met een 'bal'. B-A-L." },
+      { q: "Meerdere katten. Hoe schrijf je dat?", options: ["katsen", "kats", "katten", "katen"], answer: 2, explanation: "Meer dan één kat zijn 'katten'. K-A-T-T-E-N." },
+      { q: "Welke zin begint goed met een hoofdletter?", options: ["de kat slaapt.", "De kat slaapt.", "de Kat slaapt.", "DE kat slaapt."], answer: 1, explanation: "Een zin begint altijd met een hoofdletter. 'De kat slaapt.' is goed." },
+      { q: "Hoe schrijf je het dier dat in water zwemt?", options: ["fis", "vish", "vis", "fiss"], answer: 2, explanation: "Een 'vis' zwemt in het water. V-I-S." },
+      { q: "Meerdere ballen. Hoe schrijf je dat?", options: ["balen", "bals", "ballens", "ballen"], answer: 3, explanation: "Meer dan één bal zijn 'ballen'. B-A-L-L-E-N." },
+      { q: "Hij loopt naar school. Welk woord is het werkwoord?", options: ["hij", "school", "loopt", "naar"], answer: 2, explanation: "'Loopt' is het werkwoord. Het vertelt wat hij doet: lopen." },
+      { q: "Hoe schrijf je het dier dat in de wei staat en melk geeft?", options: ["ko", "coe", "koe", "ku"], answer: 2, explanation: "Een 'koe' staat in de wei. K-O-E." },
+      { q: "Welke zin is goed gespeld?", options: ["zij springt hoog.", "Zij Springt hoog.", "Zij springt hoog.", "zij Springt hoog."], answer: 2, explanation: "De zin begint met hoofdletter 'Z'. Alleen het eerste woord krijgt een hoofdletter." },
+      { q: "Meerdere honden. Hoe schrijf je dat?", options: ["honden", "honds", "hondes", "hondtes"], answer: 0, explanation: "Meer dan één hond zijn 'honden'. H-O-N-D-E-N." },
+      { q: "Hoe schrijf je het dier dat kan vliegen en tjilpt?", options: ["fogel", "vogell", "voegel", "vogel"], answer: 3, explanation: "Een 'vogel' kan vliegen. V-O-G-E-L." },
+      { q: "Zij springt. Welk woord is het werkwoord?", options: ["zij", "de", "springt", "een"], answer: 2, explanation: "'Springt' is het werkwoord. Het vertelt wat zij doet: springen." },
+      { q: "Hoe schrijf je wat je drinkt als je dorst hebt?", options: ["wather", "watr", "water", "watur"], answer: 2, explanation: "Je drinkt 'water' als je dorst hebt. W-A-T-E-R." },
+      { q: "Meerdere vissen. Hoe schrijf je dat?", options: ["vises", "visens", "visjes", "vissen"], answer: 3, explanation: "Meer dan één vis zijn 'vissen'. V-I-S-S-E-N." },
+      { q: "Welke zin begint goed?", options: ["de hond rent.", "De hond rent.", "DE hond rent.", "de Hond rent."], answer: 1, explanation: "Een zin begint altijd met een hoofdletter. 'De hond rent.' is goed." },
+      { q: "Hoe schrijf je wat op je hoofd groeit?", options: ["har", "haar", "haer", "haarr"], answer: 1, explanation: "Op je hoofd groeit 'haar'. H-A-A-R." },
+      { q: "Hij slaapt. Welk woord is het werkwoord?", options: ["slaapt", "hij", "een", "de"], answer: 0, explanation: "'Slaapt' is het werkwoord. Het vertelt wat hij doet: slapen." },
+      { q: "Meerdere vogels. Hoe schrijf je dat?", options: ["vogelens", "vogelen", "vogels", "vogelts"], answer: 2, explanation: "Meer dan één vogel zijn 'vogels'. V-O-G-E-L-S." },
+      { q: "Hoe schrijf je wat je gebruikt om soep mee te eten?", options: ["lepell", "leppel", "lepel", "lepal"], answer: 2, explanation: "Je eet soep met een 'lepel'. L-E-P-E-L." },
+    ],
     groep5: [
       { q: "Welke spelling is correct?", options: ["Hij rent snel.", "Hij rendt snel.", "Hij rend snel.", "Hij rennd snel."], answer: 0, explanation: "Stam van 'rennen' is 'ren'. Bij hij/zij/het: ren + t = rent." },
       { q: "Hoe schrijf je het meervoud van 'kat'?", options: ["katen", "katten", "katts", "kat"], answer: 1, explanation: "De a in 'kat' is kort. Meervoud: katten (dubbele t bewaakt de korte klank)." },
