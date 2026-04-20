@@ -24,6 +24,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
   const getYouTubeUrl = (q) => {
+    if (q.youtubeUrl) return q.youtubeUrl;
     // Extract the core topic from the question itself
     const questionText = q.q || "";
     // Use explanation keywords if available, otherwise the question

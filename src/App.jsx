@@ -17,6 +17,21 @@ import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
 
+const TAFEL_VIDEOS = {
+  1:  "https://www.youtube.com/watch?v=1rXBuNLDuM0",
+  2:  "https://www.youtube.com/watch?v=rnHUjxmFYG4",
+  3:  "https://www.youtube.com/watch?v=42Qe8ONZfX0",
+  4:  "https://www.youtube.com/watch?v=aLV9XC0UtC8",
+  5:  "https://www.youtube.com/watch?v=iNaqcwN7cSs",
+  6:  "https://www.youtube.com/watch?v=iAHwxUE4ULk",
+  7:  "https://www.youtube.com/watch?v=rZZzGFhKcas",
+  8:  "https://www.youtube.com/watch?v=10FO_bwGmqE",
+  9:  "https://www.youtube.com/watch?v=5bF7n2hXjd0",
+  10: "https://www.youtube.com/watch?v=szD6nX6fcHg",
+  11: "https://www.youtube.com/results?search_query=tafel+van+11+kinderen",
+  12: "https://www.youtube.com/results?search_query=tafel+van+12+kinderen",
+};
+
 function generateTafelQuestions(tafel, count) {
   const makePair = (n, t) => {
     const correct = n * t;
@@ -27,7 +42,7 @@ function generateTafelQuestions(tafel, count) {
       if (candidate !== correct && candidate > 0) wrongs.add(candidate);
     }
     const opts = [correct, ...wrongs].sort(() => Math.random() - 0.5);
-    return { q: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
+    return { q: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct), youtubeUrl: TAFEL_VIDEOS[t] };
   };
   if (tafel === "mix") {
     const pairs = [];
