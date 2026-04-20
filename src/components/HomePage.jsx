@@ -122,7 +122,7 @@ function FeatureShowcase({ onFeatureClick }) {
         fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
         color: "rgba(255,255,255,0.4)", letterSpacing: 1,
         textTransform: "uppercase", marginBottom: 10, textAlign: "center",
-      }}>Wat kun je oefenen?</div>
+      }}>Ontdek wat je allemaal kunt oefenen!</div>
 
       <div style={{ display: "flex", gap: 8 }}>
 
