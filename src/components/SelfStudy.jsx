@@ -31,10 +31,10 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   useEffect(() => {
     if (initialSubject && initLevel && !["cito", "vrij", "eindexamen"].includes(initialSubject)) {
       const topicMap = {
-        tafels:         ["rekenen", "tafels (vermenigvuldiging)"],
-        spelling:       ["taal",    "spelling en dt-regels"],
-        woordenschat:   ["taal",    "woordenschat, synoniemen en betekenissen"],
-        redactiesommen: ["rekenen", "redactiesommen"],
+        tafels:         ["rekenen",        "tafels (vermenigvuldiging)"],
+        spelling:       ["spelling",       "spelling, dt-regels en werkwoorden"],
+        woordenschat:   ["woordenschat",   "woordenschat, synoniemen en betekenissen"],
+        redactiesommen: ["redactiesommen", "redactiesommen"],
       };
       const [subject, topic] = topicMap[initialSubject] || [initialSubject, null];
       onStart({ subject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic });
