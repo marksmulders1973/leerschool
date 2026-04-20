@@ -150,11 +150,7 @@ export default function App() {
         // Lees naam direct uit localStorage om stale closure te vermijden
         let hasUser = false;
         try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); hasUser = !!d.name; } } catch {}
-        if (!hasUser) {
-          setPage("home"); // laat leerling eerst naam invoeren
-        } else {
-          startGame(quiz, "self");
-        }
+        setPage("home"); // altijd eerst homepage tonen, niet automatisch starten
       });
   }, [pendingCode, quizzes]);
 
