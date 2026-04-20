@@ -6052,6 +6052,31 @@ TOPIC_QUESTIONS["redactiesommen mix"] = [
   ...TOPIC_QUESTIONS["redactiesommen gemengd"],
 ];
 
+// ── Spelling per categorie ────────────────────────────────────────────
+// groep3: meervoud=3,6,10,14,18 | woorden=0,1,2,5,8,11,13,16,19 | hoofdletters=4,9,15 | werkwoord=7,12,17
+// groep5: werkwoord/dt=0,3,6,8,11,13,15,18 | meervoud=1,2,5,7,10,12,14,16,19 | woorden=4,9,17
+// groep7: dt=0-9 | hoofdletters=10,11,12 | moeilijk=13-19
+{
+  const _sp3 = SAMPLE_QUESTIONS.spelling.groep3;
+  const _sp5 = SAMPLE_QUESTIONS.spelling.groep5;
+  const _sp7 = SAMPLE_QUESTIONS.spelling.groep7;
+  TOPIC_QUESTIONS["spelling werkwoorden"] = [
+    ...[7,12,17].map(i => _sp3[i]),
+    ...[0,3,6,8,11,13,15,18].map(i => _sp5[i]),
+    ...[0,1,2,3,4,5,6,7,8,9].map(i => _sp7[i]),
+  ];
+  TOPIC_QUESTIONS["spelling meervoud"] = [
+    ...[3,6,10,14,18].map(i => _sp3[i]),
+    ...[1,2,5,7,10,12,14,16,19].map(i => _sp5[i]),
+  ];
+  TOPIC_QUESTIONS["spelling woorden"] = [
+    ...[0,1,2,4,5,8,9,11,13,15,16,19].map(i => _sp3[i]),
+    ...[4,9,17].map(i => _sp5[i]),
+    ...[10,11,12,13,14,15,16,17,18,19].map(i => _sp7[i]),
+  ];
+  TOPIC_QUESTIONS["spelling mix"] = [..._sp3, ..._sp5, ..._sp7];
+}
+
 // ── Woordenschat per categorie ────────────────────────────────────────
 // groep5 indices: syn=0,2,4,7,9,11,14,17 | ant=1,5,8,12,15,18 | bet=3,6,10,13,16,19
 // groep7 indices: syn=0,2,6,10,14,15,19 | ant=4,8,12,17 | bet+uitdr=1,3,5,7,9,11,13,16,18
