@@ -31,6 +31,61 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
               </div>
             </div>
 
+            {/* ── Tafels overzicht per leerling ── */}
+            {(() => {
+              const tafelResults = progress.filter(p => p.topic?.startsWith("tafel van "));
+              if (tafelResults.length === 0) return null;
+              const players = [...new Set(tafelResults.map(p => p.player))];
+              const getBest = (player, n) => {
+                const rows = tafelResults.filter(p => p.player === player && p.topic === `tafel van ${n}`);
+                if (rows.length === 0) return null;
+                return Math.max(...rows.map(r => r.percentage));
+              };
+              return (
+                <div style={{ marginBottom: 20 }}>
+                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#e0e6f0", fontWeight: 700, marginBottom: 10 }}>
+                    ✖️ Tafels per leerling
+                  </div>
+                  <div style={{ overflowX: "auto" }}>
+                    <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
+                      <thead>
+                        <tr>
+                          <th style={{ textAlign: "left", color: "#8899aa", paddingBottom: 6, paddingRight: 8, whiteSpace: "nowrap" }}>Leerling</th>
+                          {Array.from({ length: 12 }, (_, i) => (
+                            <th key={i+1} style={{ color: "#8899aa", paddingBottom: 6, width: 28, textAlign: "center" }}>{i+1}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {players.map(player => (
+                          <tr key={player}>
+                            <td style={{ color: "#e0e6f0", fontWeight: 700, paddingRight: 8, paddingBottom: 4, whiteSpace: "nowrap" }}>{player}</td>
+                            {Array.from({ length: 12 }, (_, i) => {
+                              const best = getBest(player, i + 1);
+                              const bg = best === null ? "rgba(255,255,255,0.05)" : best >= 70 ? "rgba(0,200,83,0.3)" : "rgba(255,152,0,0.3)";
+                              const color = best === null ? "#556677" : best >= 70 ? "#69f0ae" : "#ffb74d";
+                              return (
+                                <td key={i+1} style={{ textAlign: "center", paddingBottom: 4 }}>
+                                  <div style={{ width: 26, height: 26, borderRadius: 6, background: bg, color, fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto" }}>
+                                    {best !== null ? `${best}%` : "–"}
+                                  </div>
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div style={{ display: "flex", gap: 12, marginTop: 8, fontSize: 11, color: "#8899aa" }}>
+                    <span style={{ color: "#69f0ae" }}>🟩 ≥70% beheerst</span>
+                    <span style={{ color: "#ffb74d" }}>🟧 &lt;70% bezig</span>
+                    <span>⬜ nog niet</span>
+                  </div>
+                </div>
+              );
+            })()}
+
             {progress.slice().reverse().map((r) => {
               const subj = SUBJECTS.find((s) => s.id === r.subject);
               return (
@@ -38,7 +93,7 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700 }}>{r.player}</div>
-                    <div style={{ fontSize: 12, color: "#8899aa" }}>{subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
+                    <div style={{ fontSize: 12, color: "#8899aa" }}>{r.topic || subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
                   </div>
                   <div style={{
                     ...styles.scoreBadge,
