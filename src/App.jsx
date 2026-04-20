@@ -16,6 +16,22 @@ import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
 
+function generateTafelQuestions(tafel, count) {
+  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  const picked = [...nums].sort(() => Math.random() - 0.5).slice(0, Math.min(count, 12));
+  return picked.map(n => {
+    const correct = n * tafel;
+    const wrongs = new Set();
+    while (wrongs.size < 3) {
+      const steps = Math.floor(Math.random() * 4) + 1;
+      const candidate = Math.random() < 0.5 ? correct + steps * tafel : Math.max(tafel, correct - steps * tafel);
+      if (candidate !== correct && candidate > 0) wrongs.add(candidate);
+    }
+    const opts = [correct, ...wrongs].sort(() => Math.random() - 0.5);
+    return { question: `${n} × ${tafel} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
+  });
+}
+
 const fonts = `
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap');
 `;
@@ -374,6 +390,13 @@ export default function App() {
         <CreateQuiz
           classes={classes}
           onSave={async (q) => {
+            // Tafels: genereer vragen lokaal, geen AI nodig
+            if (q.tafelNummer) {
+              const questions = generateTafelQuestions(q.tafelNummer, q.questionCount || 10);
+              setPendingQuizData({ ...q, preGeneratedQuestions: questions });
+              setPage("quiz-preview");
+              return;
+            }
             abortControllerRef.current = new AbortController();
             setLoading(true);
             setLoadingMode(q.textbook?.bookName ? "textbook" : "self");

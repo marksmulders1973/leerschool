@@ -324,6 +324,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [subject, setSubject] = useState("");
   const [topic, setTopic] = useState("");
   const [eigenMode, setEigenMode] = useState(false);
+  const [tafelMode, setTafelMode] = useState(false);
+  const [selectedTafel, setSelectedTafel] = useState(0);
   const [level, setLevel] = useState("");
   const [groepSelect, setGroepSelect] = useState("");
   const [klasSelect, setKlasSelect] = useState("");
@@ -344,12 +346,12 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
     : "";
   const isVO = level.startsWith("klas");
   const suggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
-  const totalSteps = eigenMode ? 3 : 4;
-  // eigenMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
-  const displayStep = eigenMode && step === 4 ? 3 : step;
+  const totalSteps = (eigenMode || tafelMode) ? 3 : 4;
+  // eigenMode/tafelMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
+  const displayStep = (eigenMode || tafelMode) && step === 4 ? 3 : step;
 
   const canNext = () => {
-    if (step === 1) return eigenMode ? topic.trim() !== "" : subject !== "";
+    if (step === 1) return eigenMode ? topic.trim() !== "" : tafelMode ? selectedTafel > 0 : subject !== "";
     if (step === 2) return level !== "";
     if (step === 3) return true; // onderwerp is optioneel
     if (step === 4) return resultMethod === "whatsapp" || (resultMethod === "email" && teacherEmail.includes("@"));
@@ -358,23 +360,26 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   const goNext = () => {
     if (!canNext()) return;
-    // eigenMode: na stap 2 direct naar stap 4 (instellingen), sla stap 3 over
-    if (step === 2 && eigenMode) { setStep(4); return; }
+    // eigenMode/tafelMode: na stap 2 direct naar stap 4 (instellingen), sla stap 3 over
+    if (step === 2 && (eigenMode || tafelMode)) { setStep(4); return; }
     setStep(step + 1);
   };
 
   const goBack = () => {
-    // eigenMode: vanuit stap 4 terug naar stap 2
-    if (step === 4 && eigenMode) { setStep(2); return; }
+    // eigenMode/tafelMode: vanuit stap 4 terug naar stap 2
+    if (step === 4 && (eigenMode || tafelMode)) { setStep(2); return; }
     setStep(step - 1);
   };
 
   const handleSave = () => {
-    const subjectId = eigenMode ? "vrij" : subject;
+    const subjectId = eigenMode ? "vrij" : tafelMode ? "rekenen" : subject;
+    const topicVal = eigenMode ? null : tafelMode ? `tafel van ${selectedTafel}` : (topic || null);
     const defaultTitle = eigenMode
       ? (topic ? `${topic} Toets` : "Vrij onderwerp Toets")
+      : tafelMode
+      ? `Tafel van ${selectedTafel}`
       : (SUBJECTS.find((s) => s.id === subject)?.label + " Toets");
-    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topic || null, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null });
+    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topicVal, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null, tafelNummer: tafelMode ? selectedTafel : undefined });
   };
 
   return (
@@ -392,7 +397,12 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 🎯 Vrij onderwerp
               </span>
             )}
-            {subject && !eigenMode && (
+            {tafelMode && selectedTafel > 0 && (
+              <span style={{ fontSize: 12, background: "#0a2a1a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
+                ✖️ Tafel van {selectedTafel}
+              </span>
+            )}
+            {subject && !eigenMode && !tafelMode && (
               <span style={{ fontSize: 12, background: "#1e2d45", color: "#8eaadb", padding: "4px 10px", borderRadius: 8, border: "1px solid #2a3f5f" }}>
                 📚 {SUBJECTS.find(s => s.id === subject)?.label}
               </span>
@@ -466,14 +476,59 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               </div>
             )}
 
+            {/* ── Tafels oefenen kaart ── */}
+            <button
+              onClick={() => { const next = !tafelMode; setTafelMode(next); if (next) { setEigenMode(false); setSubject(""); setTopic(""); } else { setSelectedTafel(0); } }}
+              style={{
+                width: "100%", marginBottom: 12, padding: "14px 18px",
+                background: tafelMode ? "linear-gradient(135deg, #0a2a1a, #1a3a2a)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
+                border: `2px solid ${tafelMode ? "#00c853" : "#3a5f8a"}`,
+                borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
+                boxShadow: tafelMode ? "0 0 0 3px #00c85330" : "0 2px 12px rgba(0,0,0,0.2)",
+              }}
+            >
+              <span style={{ fontSize: 26 }}>✖️</span>
+              <div style={{ flex: 1 }}>
+                <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+                  Tafels oefenen
+                </span>
+                <div style={{ color: "#8899bb", fontSize: 12, marginTop: 3 }}>
+                  Geef een specifieke tafel op als oefening
+                </div>
+              </div>
+              <span style={{ fontSize: 18 }}>{tafelMode ? "✅" : "→"}</span>
+            </button>
+
+            {tafelMode && (
+              <div style={{ marginBottom: 14, padding: 16, background: "#0a2a1a", borderRadius: 14, border: "2px solid #00c853" }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Welke tafel?</label>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  {Array.from({ length: 12 }, (_, i) => i + 1).map(n => (
+                    <button key={n} onClick={() => setSelectedTafel(n)} style={{
+                      width: 44, height: 44, borderRadius: 10, cursor: "pointer",
+                      border: selectedTafel === n ? "2px solid #00c853" : "1px solid rgba(255,255,255,0.15)",
+                      background: selectedTafel === n ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
+                      color: selectedTafel === n ? "#00c853" : "rgba(255,255,255,0.6)",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
+                    }}>{n}</button>
+                  ))}
+                </div>
+                {selectedTafel > 0 && (
+                  <div style={{ fontSize: 12, color: "#00e676", fontWeight: 700, marginTop: 10 }}>
+                    ✅ Tafel van {selectedTafel} geselecteerd — vragen worden automatisch aangemaakt
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* ── Scheidingslijn ── */}
-            <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "10px 0 12px" }}>
+            {!tafelMode && <div style={{ display: "flex", alignItems: "center", gap: 10, margin: "10px 0 12px" }}>
               <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
               <span style={{ color: "#556677", fontSize: 12, whiteSpace: "nowrap" }}>of kies een standaard vak</span>
               <div style={{ flex: 1, height: 1, background: "#2a3f5f" }} />
-            </div>
+            </div>}
 
-            <div style={styles.subjectGrid}>
+            {!tafelMode && <div style={styles.subjectGrid}>
               {(level ? (SUBJECT_FOR_LEVEL[level] || SUBJECT_FOR_LEVEL[level.split("-")[0]] || []).map(id => SUBJECTS.find(s => s.id === id)).filter(Boolean) : SUBJECTS).map((s) => (
                 <button
                   key={s.id}
@@ -490,7 +545,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                   <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
                 </button>
               ))}
-            </div>
+            </div>}
           </div>
         )}
 
