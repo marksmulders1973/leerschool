@@ -336,7 +336,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
 
-  const schoolTypeLabel = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
+  const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
   const levelLabel = groepSelect
     ? `Groep ${groepSelect.replace("g","")}`
     : klasSelect
@@ -551,7 +551,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🏫 Schooltype (optioneel)</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
-                    { id: "mavo", label: "MAVO",      color: "#f59e0b" },
+                    { id: "mavo", label: "VMBO-TL",   color: "#f59e0b" },
                     { id: "havo", label: "HAVO",      color: "#3b82f6" },
                     { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
                     { id: "gym",  label: "Gymnasium", color: "#ec4899" },

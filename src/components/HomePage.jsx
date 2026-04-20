@@ -10,7 +10,7 @@ const TICKER_ITEMS = [
   { icon: "🗺️", text: "Topografie: provincies & landen" },
   { icon: "📖", text: "Begrijpend lezen groep 5–8" },
   { icon: "🎒", text: "Groep 1 t/m 8" },
-  { icon: "🎓", text: "MAVO · HAVO · VWO · Gymnasium" },
+  { icon: "🎓", text: "VMBO-TL · HAVO · VWO · Gymnasium" },
   { icon: "🏆", text: "Scorebord — strijd om de top" },
   { icon: "📋", text: "Leerkrachten: maak een kennistest voor uw klas" },
   { icon: "🔢", text: "Rekenen, taal, wiskunde en meer" },
@@ -492,7 +492,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <label style={{ ...styles.inputLabel, marginBottom: 0 }}>Welk type onderwijs volg je?</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
-                    { id: "mavo", label: "MAVO",      color: "#f59e0b" },
+                    { id: "mavo", label: "VMBO-TL",   color: "#f59e0b" },
                     { id: "havo", label: "HAVO",      color: "#3b82f6" },
                     { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
                     { id: "gym",  label: "Gymnasium", color: "#ec4899" },

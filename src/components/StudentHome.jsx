@@ -62,7 +62,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     return subj ? { ...subj, avg: weakAvg } : null;
   })();
 
-  const schoolTypeLabel = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
+  const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
   const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
   const profileBadge = userLevel && schoolTypeLabel
     ? `Klas ${userLevel} · ${schoolTypeLabel}`

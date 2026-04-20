@@ -31,7 +31,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
     const subj = SUBJECTS.find((s) => s.id === q.subject);
     const baseLevelId = q.level?.split("-")[0] || q.level;
     const schoolTypePart = q.level?.includes("-") ? q.level.split("-").slice(1).join("-") : "";
-    const schoolTypeNames = { mavo: "MAVO", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" };
+    const schoolTypeNames = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" };
     const level = LEVELS.find((l) => l.id === baseLevelId);
     const levelDisplayLabel = level?.label
       ? `${level.label}${schoolTypePart ? ` · ${schoolTypeNames[schoolTypePart] || schoolTypePart.toUpperCase()}` : ""}`
