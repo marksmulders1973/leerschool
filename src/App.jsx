@@ -611,6 +611,8 @@ export default function App() {
           studentProgress={studentProgress}
           onStart={(catId) => {
             const topic = catId === "mix" ? "redactiesommen mix" : `redactiesommen ${catId}`;
+            const pool = TOPIC_QUESTIONS[topic] || [];
+            const preGeneratedQuestions = shuffle([...pool]).slice(0, 10);
             const quiz = {
               id: "self-redactie-" + Date.now(),
               subject: "rekenen",
@@ -618,6 +620,7 @@ export default function App() {
               topic,
               questionCount: 10,
               timePerQuestion: 0,
+              preGeneratedQuestions,
             };
             setCurrentQuiz(quiz);
             startGame(quiz, "self");
