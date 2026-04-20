@@ -15,6 +15,7 @@ import ResultsPage from "./components/ResultsPage.jsx";
 import TafelsPage from "./components/TafelsPage.jsx";
 import RedactiesommenPage from "./components/RedactiesommenPage.jsx";
 import BegrijpendLezenPage from "./components/BegrijpendLezenPage.jsx";
+import WoordenschatPage from "./components/WoordenschatPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
@@ -364,6 +365,7 @@ export default function App() {
             if (feature === "tafels") { setPage("tafels"); return; }
             if (feature === "redactiesommen") { setPage("redactiesommen"); return; }
             if (feature === "begrijpend-lezen") { setPage("begrijpend-lezen"); return; }
+            if (feature === "woordenschat") { setPage("woordenschat"); return; }
             if (feature === "topografie" || feature === "ai-vragen" || feature === "eindexamen") {
               setPendingFeature(feature);
               setPage("self-study");
@@ -579,7 +581,7 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
-          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : role === "teacher" ? "teacher-home" : "student-home"); }}
+          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
         />
       )}
@@ -631,6 +633,30 @@ export default function App() {
           onHome={() => setPage("home")}
         />
       )}
+      {page === "woordenschat" && (
+        <WoordenschatPage
+          userName={userName}
+          studentProgress={studentProgress}
+          onStart={(catId) => {
+            const topic = catId === "mix" ? "woordenschat mix" : `woordenschat ${catId}`;
+            const pool = TOPIC_QUESTIONS[topic] || [];
+            const preGeneratedQuestions = shuffle([...pool]).slice(0, 10);
+            const quiz = {
+              id: "self-ws-" + Date.now(),
+              subject: "woordenschat",
+              level: userLevel || "groep7",
+              topic,
+              questionCount: 10,
+              timePerQuestion: 0,
+              preGeneratedQuestions,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
+          onBack={() => setPage(role ? "student-home" : "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "begrijpend-lezen" && (
         <BegrijpendLezenPage
           userName={userName}
@@ -666,6 +692,7 @@ export default function App() {
             if (currentQuiz?.id?.startsWith("self-tafels")) { setPage("tafels"); return; }
             if (currentQuiz?.id?.startsWith("self-redactie")) { setPage("redactiesommen"); return; }
             if (currentQuiz?.id?.startsWith("self-bl-")) { setPage("begrijpend-lezen"); return; }
+            if (currentQuiz?.id?.startsWith("self-ws-")) { setPage("woordenschat"); return; }
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");

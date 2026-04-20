@@ -6052,6 +6052,27 @@ TOPIC_QUESTIONS["redactiesommen mix"] = [
   ...TOPIC_QUESTIONS["redactiesommen gemengd"],
 ];
 
+// ── Woordenschat per categorie ────────────────────────────────────────
+// groep5 indices: syn=0,2,4,7,9,11,14,17 | ant=1,5,8,12,15,18 | bet=3,6,10,13,16,19
+// groep7 indices: syn=0,2,6,10,14,15,19 | ant=4,8,12,17 | bet+uitdr=1,3,5,7,9,11,13,16,18
+{
+  const _ws5 = SAMPLE_QUESTIONS.woordenschat.groep5;
+  const _ws7 = SAMPLE_QUESTIONS.woordenschat.groep7;
+  TOPIC_QUESTIONS["woordenschat synoniemen"] = [
+    ...[0,2,4,7,9,11,14,17].map(i => _ws5[i]),
+    ...[0,2,6,10,14,15,19].map(i => _ws7[i]),
+  ];
+  TOPIC_QUESTIONS["woordenschat antoniemen"] = [
+    ...[1,5,8,12,15,18].map(i => _ws5[i]),
+    ...[4,8,12,17].map(i => _ws7[i]),
+  ];
+  TOPIC_QUESTIONS["woordenschat betekenis"] = [
+    ...[3,6,10,13,16,19].map(i => _ws5[i]),
+    ...[1,3,5,7,9,11,13,16,18].map(i => _ws7[i]),
+  ];
+  TOPIC_QUESTIONS["woordenschat mix"] = [..._ws5, ..._ws7];
+}
+
 // ── Begrijpend lezen per categorie ────────────────────────────────────
 // _blVragen indices: 0-2 regenwoud, 3-5 dagboek, 6-8 wolf, 9-11 instructie,
 //   12-14 verhaal, 15-17 brief, 18-20 maan, 21-23 reclame, 24-26 giraf, 27-29 mening
