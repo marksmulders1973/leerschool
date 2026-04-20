@@ -373,11 +373,11 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   const handleSave = () => {
     const subjectId = eigenMode ? "vrij" : tafelMode ? "rekenen" : subject;
-    const topicVal = eigenMode ? null : tafelMode ? `tafel van ${selectedTafel}` : (topic || null);
+    const topicVal = eigenMode ? null : tafelMode ? (selectedTafel === "mix" ? "tafels mix" : `tafel van ${selectedTafel}`) : (topic || null);
     const defaultTitle = eigenMode
       ? (topic ? `${topic} Toets` : "Vrij onderwerp Toets")
       : tafelMode
-      ? `Tafel van ${selectedTafel}`
+      ? (selectedTafel === "mix" ? "Alle tafels mix" : `Tafel van ${selectedTafel}`)
       : (SUBJECTS.find((s) => s.id === subject)?.label + " Toets");
     onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topicVal, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null, tafelNummer: tafelMode ? selectedTafel : undefined });
   };
@@ -399,7 +399,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             )}
             {tafelMode && selectedTafel > 0 && (
               <span style={{ fontSize: 12, background: "#0a2a1a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
-                ✖️ Tafel van {selectedTafel}
+                ✖️ {selectedTafel === "mix" ? "Alle tafels mix" : `Tafel van ${selectedTafel}`}
               </span>
             )}
             {subject && !eigenMode && !tafelMode && (
@@ -512,10 +512,17 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                       fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
                     }}>{n}</button>
                   ))}
+                  <button onClick={() => setSelectedTafel("mix")} style={{
+                    padding: "0 12px", height: 44, borderRadius: 10, cursor: "pointer",
+                    border: selectedTafel === "mix" ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
+                    background: selectedTafel === "mix" ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
+                    color: selectedTafel === "mix" ? "#ff6b35" : "rgba(255,255,255,0.6)",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                  }}>Mix 🔀</button>
                 </div>
                 {selectedTafel > 0 && (
                   <div style={{ fontSize: 12, color: "#00e676", fontWeight: 700, marginTop: 10 }}>
-                    ✅ Tafel van {selectedTafel} geselecteerd — vragen worden automatisch aangemaakt
+                    ✅ {selectedTafel === "mix" ? "Alle tafels door elkaar" : `Tafel van ${selectedTafel}`} — vragen worden automatisch aangemaakt
                   </div>
                 )}
               </div>

@@ -17,19 +17,24 @@ import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/Teach
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
 
 function generateTafelQuestions(tafel, count) {
-  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  const picked = [...nums].sort(() => Math.random() - 0.5).slice(0, Math.min(count, 12));
-  return picked.map(n => {
-    const correct = n * tafel;
+  const makePair = (n, t) => {
+    const correct = n * t;
     const wrongs = new Set();
     while (wrongs.size < 3) {
       const steps = Math.floor(Math.random() * 4) + 1;
-      const candidate = Math.random() < 0.5 ? correct + steps * tafel : Math.max(tafel, correct - steps * tafel);
+      const candidate = Math.random() < 0.5 ? correct + steps * t : Math.max(t, correct - steps * t);
       if (candidate !== correct && candidate > 0) wrongs.add(candidate);
     }
     const opts = [correct, ...wrongs].sort(() => Math.random() - 0.5);
-    return { question: `${n} × ${tafel} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
-  });
+    return { question: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct) };
+  };
+  if (tafel === "mix") {
+    const pairs = [];
+    for (let t = 1; t <= 12; t++) for (let n = 1; n <= 12; n++) pairs.push([n, t]);
+    return pairs.sort(() => Math.random() - 0.5).slice(0, count).map(([n, t]) => makePair(n, t));
+  }
+  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  return [...nums].sort(() => Math.random() - 0.5).slice(0, Math.min(count, 12)).map(n => makePair(n, tafel));
 }
 
 const fonts = `

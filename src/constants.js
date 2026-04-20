@@ -5701,6 +5701,18 @@ export const TEACHER_TOPIC_SUGGESTIONS = {
   },
 };
 
+// Automatisch gegenereerde tafels-vragen (1×1 t/m 12×12)
+for (let t = 1; t <= 12; t++) {
+  TOPIC_QUESTIONS[`tafel van ${t}`] = Array.from({ length: 12 }, (_, j) => {
+    const n = j + 1, c = n * t;
+    const pos = (n + t) % 4;
+    const w = [Math.max(t, c - t), c + t, c + 2 * t];
+    const opts = [...w]; opts.splice(pos, 0, c);
+    return { q: `${n} × ${t} = ?`, options: opts.slice(0, 4).map(String), answer: pos };
+  });
+}
+TOPIC_QUESTIONS["tafels mix"] = Array.from({ length: 12 }, (_, i) => TOPIC_QUESTIONS[`tafel van ${i + 1}`]).flat();
+
 export const EIGEN_TOPIC_SUGGESTIONS = [
   "Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp",
   "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet",
