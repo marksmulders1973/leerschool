@@ -537,14 +537,17 @@ export default function App() {
       {page === "cito" && (
         <CitoPage
           onStart={(config) => {
-            const label = config.topic?.split(":")[0] || "Cito";
+            const topicKey = `cito ${config.citoId}`;
+            const pool = TOPIC_QUESTIONS[topicKey] || [];
+            const shuffled = [...pool].sort(() => Math.random() - 0.5);
+            const label = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" }[config.citoId] || "Cito";
             const quiz = {
               id: "cito-" + Date.now(),
               subject: config.subject,
               level: config.level,
               questionCount: config.questionCount,
               timePerQuestion: config.timePerQuestion,
-              useAI: true,
+              preGeneratedQuestions: shuffled.slice(0, config.questionCount),
               topic: config.topic,
               title: `Cito — ${label}`,
             };
@@ -583,7 +586,7 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
-          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : role === "teacher" ? "teacher-home" : "student-home"); }}
+          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); const wasCito = gameState?.quiz?.id?.startsWith("cito-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : wasCito ? "cito" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
         />
       )}
@@ -720,6 +723,7 @@ export default function App() {
             if (currentQuiz?.id?.startsWith("self-bl-")) { setPage("begrijpend-lezen"); return; }
             if (currentQuiz?.id?.startsWith("self-ws-")) { setPage("woordenschat"); return; }
             if (currentQuiz?.id?.startsWith("self-sp-")) { setPage("spelling"); return; }
+            if (currentQuiz?.id?.startsWith("cito-")) { setPage("cito"); return; }
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");

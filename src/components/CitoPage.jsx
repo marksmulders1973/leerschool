@@ -71,11 +71,11 @@ export default function CitoPage({ onStart, onBack, onHome }) {
     if (!selected) return;
     SoundEngine.play("click");
     onStart({
+      citoId: selected.id,
       subject: selected.subject,
       level: "groep7",
       questionCount,
       timePerQuestion: 0,
-      useAI: true,
       topic: selected.topic,
     });
   };
@@ -243,7 +243,7 @@ export default function CitoPage({ onStart, onBack, onHome }) {
           <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
             De eindtoets wordt gemaakt in groep 8. De vragen zijn op IEP/Cito-stijl:
             meerkeuze over rekenen, taal, begrijpend lezen en wereld oriëntatie.
-            Vragen worden gegenereerd door AI.
+            Vragen komen uit een vaste vragenbank — geen AI nodig.
           </div>
         </div>
 

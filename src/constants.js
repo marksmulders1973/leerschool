@@ -6119,6 +6119,31 @@ TOPIC_QUESTIONS["begrijpend-lezen functioneel"] = [
 ];
 TOPIC_QUESTIONS["begrijpend-lezen mix"] = _blVragen;
 
+// ── Cito per categorie ────────────────────────────────────────────────
+// cito.groep7: 0-4 rekenen, 5-9 taal, 10-12 begrijpend lezen, 13-19 wereld oriëntatie
+{
+  const _cito7  = SAMPLE_QUESTIONS.cito.groep7;
+  const _rek7   = SAMPLE_QUESTIONS.rekenen.groep7;
+  const _taal7  = SAMPLE_QUESTIONS.taal.groep7;
+  const _sp7    = SAMPLE_QUESTIONS.spelling.groep7;
+  const _ws7    = SAMPLE_QUESTIONS.woordenschat.groep7;
+  const _aard7  = SAMPLE_QUESTIONS.aardrijkskunde.groep7;
+  const _gesch7 = SAMPLE_QUESTIONS.geschiedenis.groep7;
+  const _nat7   = SAMPLE_QUESTIONS.natuur.groep7;
+
+  TOPIC_QUESTIONS["cito rekenen"]          = [..._cito7.slice(0, 5),  ..._rek7];
+  TOPIC_QUESTIONS["cito taal"]             = [..._cito7.slice(5, 10), ..._taal7, ..._sp7, ..._ws7];
+  TOPIC_QUESTIONS["cito begrijpend-lezen"] = [..._cito7.slice(10, 13), ..._blVragen];
+  TOPIC_QUESTIONS["cito wereldorientatie"] = [..._cito7.slice(13, 20), ..._aard7, ..._gesch7, ..._nat7];
+  TOPIC_QUESTIONS["cito gemengd"] = [
+    ..._cito7,
+    ..._rek7,
+    ..._taal7, ..._sp7, ..._ws7,
+    ..._blVragen,
+    ..._aard7, ..._gesch7, ..._nat7,
+  ];
+}
+
 export const EIGEN_TOPIC_SUGGESTIONS = [
   "Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp",
   "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet",
