@@ -63,16 +63,17 @@ export default function TafelsPage({ userName, studentProgress = [], onStart, on
                 key={n}
                 onClick={() => onStart(n)}
                 style={{
-                  padding: "14px 0", borderRadius: 14, cursor: "pointer",
+                  padding: "10px 0", borderRadius: 14, cursor: "pointer",
                   background: bg, border: `2px solid ${border}`, color,
-                  fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700,
-                  display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
+                  fontFamily: "'Fredoka', sans-serif", fontSize: 22, fontWeight: 700,
+                  display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
                   transition: "transform 0.1s",
                 }}
               >
+                <span style={{ fontSize: 9, fontFamily: "'Nunito', sans-serif", fontWeight: 600, opacity: 0.6, letterSpacing: 0.2 }}>tafel van</span>
                 {n}
                 {score !== null && (
-                  <span style={{ fontSize: 10, fontFamily: "'Nunito', sans-serif", fontWeight: 700, opacity: 0.8 }}>
+                  <span style={{ fontSize: 9, fontFamily: "'Nunito', sans-serif", fontWeight: 700, opacity: 0.8 }}>
                     {score}%
                   </span>
                 )}
