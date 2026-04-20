@@ -23,8 +23,27 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const isLast = gameState.currentQ === gameState.questions.length - 1;
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
+  const SUBJECT_VIDEOS = {
+    rekenen:       "https://www.youtube.com/watch?v=3tDBiUBiUQs",
+    spelling:      "https://www.youtube.com/watch?v=pkMclCinI8s",
+    aardrijkskunde:"https://www.youtube.com/watch?v=cc6Fb7rOirU",
+    geschiedenis:  "https://www.youtube.com/watch?v=Avqi2aVHMr0",
+    natuur:        "https://www.youtube.com/watch?v=Jw1PCm5_LD4",
+    engels:        "https://www.youtube.com/watch?v=UBKq1Ta3y9Q",
+  };
+  const TOPIC_VIDEOS = {
+    breuken:   "https://www.youtube.com/watch?v=PYVIS91pnEg",
+    procenten: "https://www.youtube.com/watch?v=LaT5FrD3UUA",
+    "dt-regels":"https://www.youtube.com/watch?v=pkMclCinI8s",
+  };
+
   const getYouTubeUrl = (q) => {
     if (q.youtubeUrl) return q.youtubeUrl;
+    const topic = (gameState.quiz?.topic || "").toLowerCase();
+    const topicKey = Object.keys(TOPIC_VIDEOS).find(k => topic.includes(k));
+    if (topicKey) return TOPIC_VIDEOS[topicKey];
+    const subjVideo = SUBJECT_VIDEOS[gameState.quiz?.subject];
+    if (subjVideo) return subjVideo;
     // Extract the core topic from the question itself
     const questionText = q.q || "";
     // Use explanation keywords if available, otherwise the question
