@@ -36,9 +36,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     maatschappijleer: "https://www.youtube.com/watch?v=LLIH4LE4Wqg",
   };
   const TOPIC_VIDEOS = {
-    breuken:   "https://www.youtube.com/watch?v=PYVIS91pnEg",
-    procenten: "https://www.youtube.com/watch?v=LaT5FrD3UUA",
-    "dt-regels":"https://www.youtube.com/watch?v=pkMclCinI8s",
+    breuken:          "https://www.youtube.com/watch?v=PYVIS91pnEg",
+    procenten:        "https://www.youtube.com/watch?v=LaT5FrD3UUA",
+    "dt-regels":      "https://www.youtube.com/watch?v=pkMclCinI8s",
+    "redactiesommen": "https://www.youtube.com/watch?v=0RFbJpY5Lds",
   };
 
   const getYouTubeUrl = (q) => {

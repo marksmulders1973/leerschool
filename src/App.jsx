@@ -13,6 +13,7 @@ import CitoPage from "./components/CitoPage.jsx";
 import PlayQuiz from "./components/PlayQuiz.jsx";
 import ResultsPage from "./components/ResultsPage.jsx";
 import TafelsPage from "./components/TafelsPage.jsx";
+import RedactiesommenPage from "./components/RedactiesommenPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
@@ -360,6 +361,7 @@ export default function App() {
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
             if (feature === "cito") { setPage("cito"); return; }
             if (feature === "tafels") { setPage("tafels"); return; }
+            if (feature === "redactiesommen") { setPage("redactiesommen"); return; }
             if (feature === "topografie" || feature === "begrijpend-lezen" || feature === "ai-vragen" || feature === "eindexamen") {
               setPendingFeature(feature);
               setPage("self-study");
@@ -575,7 +577,7 @@ export default function App() {
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}
-          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : role === "teacher" ? "teacher-home" : "student-home"); }}
+          onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
         />
       )}
@@ -603,6 +605,27 @@ export default function App() {
           onHome={() => setPage("home")}
         />
       )}
+      {page === "redactiesommen" && (
+        <RedactiesommenPage
+          userName={userName}
+          studentProgress={studentProgress}
+          onStart={(catId) => {
+            const topic = catId === "mix" ? "redactiesommen mix" : `redactiesommen ${catId}`;
+            const quiz = {
+              id: "self-redactie-" + Date.now(),
+              subject: "rekenen",
+              level: userLevel || "groep6",
+              topic,
+              questionCount: 10,
+              timePerQuestion: 0,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
+          onBack={() => setPage(role ? "student-home" : "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "results" && (
         <ResultsPage
           results={results}
@@ -612,6 +635,7 @@ export default function App() {
           onLogin={handleGoogleLogin}
           onBack={() => {
             if (currentQuiz?.id?.startsWith("self-tafels")) { setPage("tafels"); return; }
+            if (currentQuiz?.id?.startsWith("self-redactie")) { setPage("redactiesommen"); return; }
             if (currentQuiz?.id?.startsWith("self-")) setPage("self-study");
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
