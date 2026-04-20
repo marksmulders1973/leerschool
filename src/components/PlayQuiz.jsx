@@ -39,7 +39,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     breuken:          "https://www.youtube.com/watch?v=PYVIS91pnEg",
     procenten:        "https://www.youtube.com/watch?v=LaT5FrD3UUA",
     "dt-regels":      "https://www.youtube.com/watch?v=pkMclCinI8s",
-    "redactiesommen": "https://www.youtube.com/watch?v=0RFbJpY5Lds",
+    "redactiesommen": "https://www.youtube.com/results?search_query=redactiesommen+groep+5+6+uitleg",
   };
 
   const getYouTubeUrl = (q) => {
