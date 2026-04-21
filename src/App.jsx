@@ -870,6 +870,7 @@ export default function App() {
           defaultPlan={role === "teacher" ? "teacher_pro" : "parent_pro"}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
           onHome={() => setPage("home")}
+          subscription={subscription}
           onLogin={handleGoogleLogin}
           onTrialStarted={(sub) => {
             setSubscription(sub);

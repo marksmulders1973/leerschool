@@ -71,7 +71,7 @@ const FREE_FEATURES = [
   "✓ Tot 20 toetsen aanmaken (leerkracht)",
 ];
 
-export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin, onTrialStarted }) {
+export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin, onTrialStarted, subscription }) {
   const [selected, setSelected] = useState(defaultPlan || "teacher_pro");
   const [email, setEmail] = useState(authUser?.email || "");
   const [sent, setSent] = useState(false);
@@ -195,7 +195,15 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         </div>
 
         {/* Trial CTA */}
-        {trialDone ? (
+        {subscription?.trial_started_at && !trialDone ? (
+          <div style={{ borderRadius: 14, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.04)", padding: "14px 16px", marginBottom: 16, display: "flex", alignItems: "center", gap: 12 }}>
+            <span style={{ fontSize: 22 }}>ℹ️</span>
+            <div>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.7)", marginBottom: 2 }}>Proefperiode al gebruikt</div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.4)" }}>Je hebt eerder al een gratis proefperiode gehad. Neem een abonnement om door te gaan.</div>
+            </div>
+          </div>
+        ) : trialDone ? (
           <div style={{ borderRadius: 16, border: "1px solid rgba(0,200,83,0.3)", background: "rgba(0,200,83,0.08)", padding: "24px", textAlign: "center", marginBottom: 16 }}>
             <div style={{ fontSize: 40, marginBottom: 10 }}>🎉</div>
             <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>Proefperiode gestart!</div>
