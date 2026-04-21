@@ -177,8 +177,30 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
+        {/* Cito smart aanbeveling */}
+        {quiz?.citoId && (() => {
+          const pct = latest.percentage;
+          const onderdelen = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" };
+          const label = onderdelen[quiz.citoId] || "Cito";
+          const nextSuggestions = { rekenen: "Taal", taal: "Begrijpend Lezen", "begrijpend-lezen": "Wereld Oriëntatie", wereldorientatie: "Alles gemengd", gemengd: null };
+          const next = nextSuggestions[quiz.citoId];
+          return (
+            <div style={{ marginTop: 20, padding: "16px 18px", borderRadius: 16, background: pct >= 70 ? "rgba(0,200,83,0.1)" : "rgba(255,152,0,0.12)", border: `1px solid ${pct >= 70 ? "rgba(0,200,83,0.3)" : "rgba(255,152,0,0.35)"}` }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: pct >= 70 ? "#69f0ae" : "#ffb74d", marginBottom: 4 }}>
+                {pct >= 80 ? `🏆 Geweldig bij ${label}!` : pct >= 60 ? `👍 Goed bezig bij ${label}` : `💪 ${label} verdient meer oefening`}
+              </div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
+                {pct >= 80 && next ? `Je scoort goed hier! Ga nu ${next} oefenen.` : pct < 60 ? `Oefen dit onderdeel vaker om je eindtoets score te verhogen.` : `Nog een rondje om het vast te zetten, dan verder naar het volgende onderdeel.`}
+              </div>
+              <button onClick={onBack} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "#00c853" : "#ff9800", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
+                {pct >= 80 && next ? `Probeer ${next} →` : `Nog een keer ${label}`}
+              </button>
+            </div>
+          );
+        })()}
+
         {/* Smart suggestion banner */}
-        {(() => {
+        {!quiz?.citoId && (() => {
           const pct = latest.percentage;
           const currentLevelIndex = LEVELS.findIndex(l => l.id === latest.level);
           const nextLevel = currentLevelIndex >= 0 && currentLevelIndex < LEVELS.length - 1 ? LEVELS[currentLevelIndex + 1] : null;

@@ -6178,7 +6178,7 @@ TOPIC_QUESTIONS["begrijpend-lezen functioneel"] = [
 TOPIC_QUESTIONS["begrijpend-lezen mix"] = _blVragen;
 
 // ── Cito per categorie ────────────────────────────────────────────────
-// cito.groep7: 0-4 rekenen, 5-9 taal, 10-12 begrijpend lezen, 13-19 wereld oriëntatie
+// cito.groep7: 0-9 rekenen, 10-17 taal, 18-24 begrijpend lezen (3+4), 25-36 wereld oriëntatie (12)
 {
   const _cito7  = SAMPLE_QUESTIONS.cito.groep7;
   const _rek7   = SAMPLE_QUESTIONS.rekenen.groep7;
@@ -6189,12 +6189,22 @@ TOPIC_QUESTIONS["begrijpend-lezen mix"] = _blVragen;
   const _gesch7 = SAMPLE_QUESTIONS.geschiedenis.groep7;
   const _nat7   = SAMPLE_QUESTIONS.natuur.groep7;
 
-  TOPIC_QUESTIONS["cito rekenen"]          = [..._cito7.slice(0, 5),  ..._rek7];
-  TOPIC_QUESTIONS["cito taal"]             = [..._cito7.slice(5, 10), ..._taal7, ..._sp7, ..._ws7];
-  TOPIC_QUESTIONS["cito begrijpend-lezen"] = [..._cito7.slice(10, 13), ..._blVragen];
-  TOPIC_QUESTIONS["cito wereldorientatie"] = [..._cito7.slice(13, 20), ..._aard7, ..._gesch7, ..._nat7];
+  // Echte Cito-stijl tekst groep7: Ruimtevaart (5 vragen)
+  const _realBL7 = [
+    { q: "Lees de tekst:\n\n\"In 1969 landde de Apollo 11 op de maan. Neil Armstrong was de eerste mens die voet op de maan zette. Zijn collega Buzz Aldrin volgde. De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen. De missie duurde in totaal 8 dagen. Sindsdien zijn er nog vijf maanlandingen geweest. Na 1972 is de mens niet meer op de maan geweest, maar ruimtevaartorganisaties als NASA en de Europese ESA plannen nieuwe maanmissies voor de jaren 2020.\"\n\nWat was bijzonder aan Neil Armstrong?", options: ["Hij was de enige astronaut die de maan aandeed", "Hij was de eerste mens die op de maan liep", "Hij bestuurde de Apollo 11 vanuit de aarde", "Hij bleef in de kapsule cirkelen"], answer: 1, explanation: "De tekst zegt: 'Neil Armstrong was de eerste mens die voet op de maan zette'." },
+    { q: "Lees de tekst:\n\n\"In 1969 landde de Apollo 11 op de maan. Neil Armstrong was de eerste mens die voet op de maan zette. Zijn collega Buzz Aldrin volgde. De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen. De missie duurde in totaal 8 dagen. Sindsdien zijn er nog vijf maanlandingen geweest. Na 1972 is de mens niet meer op de maan geweest, maar ruimtevaartorganisaties als NASA en de Europese ESA plannen nieuwe maanmissies voor de jaren 2020.\"\n\nWat deed Michael Collins tijdens de missie?", options: ["Hij zette als tweede voet op de maan", "Hij bleef op aarde als vluchtleider", "Hij cirkelde in de kapsule terwijl de anderen op de maan liepen", "Hij was de piloot die de raket lanceerde"], answer: 2, explanation: "De tekst: 'De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen'." },
+    { q: "Lees de tekst:\n\n\"In 1969 landde de Apollo 11 op de maan. Neil Armstrong was de eerste mens die voet op de maan zette. Zijn collega Buzz Aldrin volgde. De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen. De missie duurde in totaal 8 dagen. Sindsdien zijn er nog vijf maanlandingen geweest. Na 1972 is de mens niet meer op de maan geweest, maar ruimtevaartorganisaties als NASA en de Europese ESA plannen nieuwe maanmissies voor de jaren 2020.\"\n\nHoeveel maanlandingen zijn er in totaal geweest (inclusief Apollo 11)?", options: ["3", "4", "5", "6"], answer: 3, explanation: "Apollo 11 + 5 daarna = 6 maanlandingen totaal. De tekst zegt 'zijn er nog vijf maanlandingen geweest'." },
+    { q: "Lees de tekst:\n\n\"In 1969 landde de Apollo 11 op de maan. Neil Armstrong was de eerste mens die voet op de maan zette. Zijn collega Buzz Aldrin volgde. De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen. De missie duurde in totaal 8 dagen. Sindsdien zijn er nog vijf maanlandingen geweest. Na 1972 is de mens niet meer op de maan geweest, maar ruimtevaartorganisaties als NASA en de Europese ESA plannen nieuwe maanmissies voor de jaren 2020.\"\n\nWelke conclusie kun je trekken over bemande maanvluchten na 1972?", options: ["Ze zijn nog steeds bezig", "Ze zijn na 1972 gestopt maar worden waarschijnlijk hervat", "Ze zijn definitief afgelopen", "Alleen ESA gaat terug naar de maan"], answer: 1, explanation: "De tekst: 'Na 1972 is de mens niet meer op de maan geweest, maar... plannen nieuwe maanmissies'. Dit betekent: gestopt, maar niet definitief." },
+    { q: "Lees de tekst:\n\n\"In 1969 landde de Apollo 11 op de maan. Neil Armstrong was de eerste mens die voet op de maan zette. Zijn collega Buzz Aldrin volgde. De derde astronaut, Michael Collins, bleef in de maanraketkapsule cirkelen. De missie duurde in totaal 8 dagen. Sindsdien zijn er nog vijf maanlandingen geweest. Na 1972 is de mens niet meer op de maan geweest, maar ruimtevaartorganisaties als NASA en de Europese ESA plannen nieuwe maanmissies voor de jaren 2020.\"\n\nWat is de ESA?", options: ["Een Amerikaans ruimtevaartbureau", "De Europese ruimtevaartorganisatie", "Een afdeling van NASA", "Een internationale satellietdienst"], answer: 1, explanation: "ESA staat voor European Space Agency — de Europese ruimtevaartorganisatie, vergelijkbaar met NASA in de VS." },
+  ];
+
+  TOPIC_QUESTIONS["cito rekenen"]          = [..._cito7.slice(0, 10),  ..._rek7];
+  TOPIC_QUESTIONS["cito taal"]             = [..._cito7.slice(10, 18), ..._taal7, ..._sp7, ..._ws7];
+  TOPIC_QUESTIONS["cito begrijpend-lezen"] = [..._cito7.slice(18, 25), ..._realBL7, ..._blVragen];
+  TOPIC_QUESTIONS["cito wereldorientatie"] = [..._cito7.slice(25, 37), ..._aard7, ..._gesch7, ..._nat7];
   TOPIC_QUESTIONS["cito gemengd"] = [
     ..._cito7,
+    ..._realBL7,
     ..._rek7,
     ..._taal7, ..._sp7, ..._ws7,
     ..._blVragen,

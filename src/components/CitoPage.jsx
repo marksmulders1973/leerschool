@@ -62,10 +62,16 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] }) {
   const [groep, setGroep] = useState("8");
   const [selected, setSelected] = useState(null);
   const [questionCount, setQuestionCount] = useState(10);
+
+  const getBestScore = (id) => {
+    const matches = citoProgress.filter(r => r.citoId === id && r.citoGroep === groep);
+    if (!matches.length) return null;
+    return Math.max(...matches.map(r => r.percentage));
+  };
 
   const handleStart = () => {
     if (!selected) return;
@@ -109,6 +115,7 @@ export default function CitoPage({ onStart, onBack, onHome }) {
         {(() => {
           const f = ONDERDELEN[0];
           const sel = selected?.id === f.id;
+          const best = getBestScore(f.id);
           return (
             <div onClick={() => { setSelected(sel ? null : f); SoundEngine.play("click"); }}
               style={{
@@ -130,6 +137,11 @@ export default function CitoPage({ onStart, onBack, onHome }) {
               <div style={{ flex: 1 }}>
                 <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 19, fontWeight: 700, color: f.color }}>{f.label}</div>
                 <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{f.sub}</div>
+                {best !== null && (
+                  <div style={{ marginTop: 4, display: "inline-block", padding: "2px 8px", borderRadius: 8, background: best >= 80 ? "rgba(0,200,83,0.2)" : "rgba(255,152,0,0.2)", border: `1px solid ${best >= 80 ? "rgba(0,200,83,0.4)" : "rgba(255,152,0,0.4)"}`, fontFamily: "'Fredoka', sans-serif", fontSize: 12, color: best >= 80 ? "#69f0ae" : "#ffb74d", fontWeight: 700 }}>
+                    beste score: {best}%
+                  </div>
+                )}
               </div>
               <div style={{
                 width: 24, height: 24, borderRadius: "50%",
@@ -157,6 +169,7 @@ export default function CitoPage({ onStart, onBack, onHome }) {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
           {ONDERDELEN.slice(1).map(f => {
             const sel = selected?.id === f.id;
+            const best = getBestScore(f.id);
             return (
               <div key={f.id}
                 onClick={() => { setSelected(sel ? null : f); SoundEngine.play("click"); }}
@@ -189,6 +202,11 @@ export default function CitoPage({ onStart, onBack, onHome }) {
                 <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>
                   {f.sub}
                 </div>
+                {best !== null && (
+                  <div style={{ marginTop: 5, padding: "2px 6px", borderRadius: 6, background: best >= 80 ? "rgba(0,200,83,0.18)" : "rgba(255,152,0,0.18)", fontFamily: "'Fredoka', sans-serif", fontSize: 11, color: best >= 80 ? "#69f0ae" : "#ffb74d", fontWeight: 700, display: "inline-block" }}>
+                    {best >= 80 ? "✓" : "⚠"} {best}%
+                  </div>
+                )}
               </div>
             );
           })}

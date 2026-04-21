@@ -291,6 +291,7 @@ export default function App() {
       id: Date.now().toString(), player: userName, quizId: finalState.quiz.id,
       subject: finalState.quiz.subject, level: finalState.quiz.level,
       topic: finalState.quiz.topic || null,
+      citoId: finalState.quiz.citoId || null, citoGroep: finalState.quiz.citoGroep || null,
       score: finalState.score, total: finalState.questions.length,
       percentage: Math.round((finalState.score / finalState.questions.length) * 100),
       timeTaken: Math.round((Date.now() - finalState.startedAt) / 1000),
@@ -563,6 +564,7 @@ export default function App() {
       )}
       {page === "cito" && (
         <CitoPage
+          citoProgress={studentProgress.filter(r => r.player === userName && r.citoId)}
           onStart={(config) => {
             const topicKey = config.groep === "8" ? `cito groep8-${config.citoId}` : `cito ${config.citoId}`;
             const pool = TOPIC_QUESTIONS[topicKey] || [];
@@ -572,6 +574,8 @@ export default function App() {
               id: "cito-" + Date.now(),
               subject: config.subject,
               level: config.level,
+              citoId: config.citoId,
+              citoGroep: config.groep,
               questionCount: config.questionCount,
               timePerQuestion: config.timePerQuestion,
               preGeneratedQuestions: shuffled.slice(0, config.questionCount),
