@@ -185,7 +185,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onPro }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
@@ -416,6 +416,35 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {step === "role" && (
+          <div style={{ width: "100%", maxWidth: 360, marginBottom: 12, display: "flex", gap: 8 }}>
+            <button onClick={() => onOuderDashboard?.()} style={{
+              flex: 1, padding: "10px 8px", borderRadius: 14, cursor: "pointer",
+              border: "1px solid rgba(0,176,255,0.3)", background: "rgba(0,176,255,0.08)",
+              color: "#00b0ff", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 3,
+            }}>
+              <span style={{ fontSize: 18 }}>👨‍👩‍👧</span>
+              <span>Ouder Dashboard</span>
+            </button>
+            <button onClick={() => onPro?.()} style={{
+              flex: 1, padding: "10px 8px", borderRadius: 14, cursor: "pointer",
+              border: "1px solid rgba(168,85,247,0.4)", background: "rgba(168,85,247,0.1)",
+              color: "#c084fc", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 3,
+              position: "relative",
+            }}>
+              <span style={{
+                position: "absolute", top: -8, right: 8,
+                background: "#a855f7", color: "#fff", fontSize: 9, fontWeight: 800,
+                fontFamily: "'Fredoka', sans-serif", padding: "2px 6px", borderRadius: 10,
+              }}>BINNENKORT</span>
+              <span style={{ fontSize: 18 }}>✨</span>
+              <span>Studiebol Pro</span>
+            </button>
           </div>
         )}
 

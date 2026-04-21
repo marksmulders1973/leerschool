@@ -22,6 +22,7 @@ import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/Teach
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
 import UpgradePage from "./components/UpgradePage.jsx";
 import OuderDashboard from "./components/OuderDashboard.jsx";
+import ProPage from "./components/ProPage.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -245,6 +246,21 @@ export default function App() {
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
       const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || (!hasSampleQuestions && !hasSubjectTopicQuestions && !hasPredefinedTopicQuestions) || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
+        // AI-limiet check: gratis gebruikers max 5 AI-quiz sessies per dag
+        const FREE_AI_DAILY_LIMIT = 5;
+        const isProUser = subscription?.tier && subscription.tier !== "free";
+        if (!isProUser) {
+          try {
+            const today = new Date().toISOString().split("T")[0];
+            const aiUsage = JSON.parse(localStorage.getItem("ls_ai_usage") || '{"date":"","count":0}');
+            const todayCount = aiUsage.date === today ? aiUsage.count : 0;
+            if (todayCount >= FREE_AI_DAILY_LIMIT) {
+              setPage("pro");
+              return;
+            }
+            localStorage.setItem("ls_ai_usage", JSON.stringify({ date: today, count: todayCount + 1 }));
+          } catch {}
+        }
         abortControllerRef.current = new AbortController();
         setLoading(true);
         setLoadingMode(hasTextbook ? "textbook" : "self");
@@ -394,6 +410,7 @@ export default function App() {
           onLogout={handleLogout}
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onPro={() => setPage("pro")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
@@ -432,10 +449,10 @@ export default function App() {
           quizCount={quizzes.length}
           quizLimit={FREE_QUIZ_LIMIT}
           isTeacherPro={isTeacherPro}
-          onCreateQuiz={() => quizLimitReached ? setPage("upgrade") : setPage("create-quiz")}
+          onCreateQuiz={() => quizLimitReached ? setPage("pro") : setPage("create-quiz")}
           onViewProgress={() => setPage("teacher-progress")}
           onManageClasses={() => setPage("class-manager")}
-          onUpgrade={() => setPage("upgrade")}
+          onUpgrade={() => setPage("pro")}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
@@ -832,10 +849,10 @@ export default function App() {
           }}
         />
       )}
-      {page === "upgrade" && (
-        <UpgradePage
+      {page === "pro" && (
+        <ProPage
           authUser={authUser}
-          plan={role === "teacher" ? "teacher_pro" : "parent_pro"}
+          defaultPlan={role === "teacher" ? "teacher_pro" : "parent_pro"}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
           onHome={() => setPage("home")}
         />
@@ -846,7 +863,7 @@ export default function App() {
           subscription={subscription}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
-          onUpgrade={() => setPage("upgrade")}
+          onUpgrade={() => setPage("pro")}
           onLogin={handleGoogleLogin}
         />
       )}
