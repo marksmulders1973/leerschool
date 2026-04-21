@@ -567,17 +567,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {step === "role" && (
           <>
             <button
-              onClick={onOuderDashboard}
-              style={{
-                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                background: "rgba(0,176,255,0.08)", color: "#00b0ff", border: "1px solid rgba(0,176,255,0.3)",
-                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
-                fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 20, width: "100%",
-              }}
-            >
-              👨‍👩‍👧 Ouder Dashboard — volg je kind
-            </button>
-            <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 background: "none", color: "#25D366", border: "1px solid rgba(37,211,102,0.3)",
