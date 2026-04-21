@@ -89,7 +89,7 @@ const FEATURES_RIGHT = [
   { id: "redactiesommen",  label: "Redactiesommen",  sub: "Rekenen met tekst",          color: "#ea580c", bg: "rgba(234,88,12,0.12)",   border: "rgba(234,88,12,0.2)",   badge: null },
   { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
   { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
-  { id: "pro",             label: "Studiebol Pro",   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: "✨" },
+  { id: "pro",             label: "Studiebol Pro",   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: null },
 ];
 
 function FeatureShowcase({ onFeatureClick }) {
@@ -169,7 +169,14 @@ function FeatureShowcase({ onFeatureClick }) {
                 minHeight: 58,
               }}>
               {renderBadge(f.badge, f.color)}
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
+              {f.id === "pro" ? (
+                <div style={{ lineHeight: 1.2, marginBottom: 2 }}>
+                  <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>Studiebol</span>
+                  <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 900, color: f.color, background: `${f.color}22`, borderRadius: 4, padding: "0 4px", marginLeft: 2 }}>PRO</span>
+                </div>
+              ) : (
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
+              )}
               <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{f.sub}</div>
             </div>
           ))}
