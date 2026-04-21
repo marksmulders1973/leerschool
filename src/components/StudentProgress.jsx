@@ -301,7 +301,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
   );
 }
 
-export function Leaderboard({ data, currentUser, onBack, onHome, onRetry }) {
+export function Leaderboard({ data, results, currentUser, onBack, onHome, onRetry }) {
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
 
@@ -319,6 +319,7 @@ export function Leaderboard({ data, currentUser, onBack, onHome, onRetry }) {
     total: e.total,
     percentage: e.percentage,
     timeTaken: e.time_taken ?? e.timeTaken ?? null,
+    completedAt: e.completed_at || e.date || null,
   }));
 
   return (
@@ -360,14 +361,18 @@ export function Leaderboard({ data, currentUser, onBack, onHome, onRetry }) {
                     }}>
                       {entry.percentage}%
                     </div>
-                    {isMe && entry.percentage === 100 && onRetry && (
-                      <button
-                        onClick={() => onRetry(entry)}
-                        style={{ padding: "4px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
-                      >
-                        🔄 Beter!
-                      </button>
-                    )}
+                    {isMe && entry.percentage === 100 && onRetry && (() => {
+                      const matchedResult = results?.find(r => r.subject === entry.subject && r.level === entry.level && r.completedAt === entry.completedAt && r.questions?.length);
+                      return (
+                        <button
+                          onClick={() => onRetry(entry, matchedResult?.questions || null)}
+                          style={{ padding: "4px 10px", border: `1px solid ${matchedResult ? "#00d4ff" : "#8899aa"}`, borderRadius: 8, background: "transparent", color: matchedResult ? "#00d4ff" : "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                          title={matchedResult ? "Exact dezelfde vragen" : "Nieuwe vragen (originele niet meer beschikbaar)"}
+                        >
+                          🔄 Beter!
+                        </button>
+                      );
+                    })()}
                   </div>
                 </div>
               );

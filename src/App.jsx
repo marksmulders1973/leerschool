@@ -775,11 +775,12 @@ export default function App() {
       {page === "leaderboard" && (
         <Leaderboard
           data={leaderboard}
+          results={results}
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
           onHome={() => setPage("home")}
-          onRetry={(entry) => {
-            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: 10, timePerQuestion: 0, topic: entry.topic || null, title: null };
+          onRetry={(entry, questions) => {
+            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions?.length || 10, timePerQuestion: 0, topic: entry.topic || null, title: null, ...(questions ? { preGeneratedQuestions: questions } : {}) };
             startGame(quiz, "self");
           }}
         />
