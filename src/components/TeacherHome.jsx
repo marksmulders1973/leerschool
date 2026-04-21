@@ -5,7 +5,7 @@ import { formatDate, daysUntil, shuffle } from "../utils.js";
 import Header from "./Header.jsx";
 import supabase from "../supabase.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
 
@@ -163,7 +163,20 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
             </button>
           </div>
         )}
-        {isTeacherPro && (
+        {isTeacherPro && trialDaysLeft !== null && trialDaysLeft > 0 && (
+          <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 10, background: "rgba(0,200,83,0.08)", border: "1px solid rgba(0,200,83,0.25)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+            <div>
+              <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "#69f0ae", fontWeight: 700 }}>🎁 Gratis proefperiode actief</span>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 1 }}>
+                Nog {trialDaysLeft} {trialDaysLeft === 1 ? "dag" : "dagen"} resterend
+              </div>
+            </div>
+            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(0,200,83,0.2)", color: "#69f0ae", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+              Abonnement →
+            </button>
+          </div>
+        )}
+        {isTeacherPro && (trialDaysLeft === null || trialDaysLeft === 0) && (
           <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(255,107,53,0.08)", border: "1px solid rgba(255,107,53,0.2)", display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "#ff8c42", fontWeight: 700 }}>✨ Pro — onbeperkt toetsen</span>
           </div>

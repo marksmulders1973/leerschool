@@ -71,13 +71,30 @@ const FREE_FEATURES = [
   "✓ Tot 20 toetsen aanmaken (leerkracht)",
 ];
 
-export default function ProPage({ onBack, onHome, authUser, defaultPlan }) {
+export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin, onTrialStarted }) {
   const [selected, setSelected] = useState(defaultPlan || "teacher_pro");
   const [email, setEmail] = useState(authUser?.email || "");
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [trialDone, setTrialDone] = useState(false);
+  const [trialError, setTrialError] = useState("");
 
   const plan = PLANS.find(p => p.id === selected);
+
+  const handleStartTrial = async () => {
+    if (!authUser) { onLogin?.(); return; }
+    setLoading(true);
+    setTrialError("");
+    const { error } = await supabase.from("subscriptions").upsert({
+      user_id: authUser.id,
+      tier: selected,
+      trial_started_at: new Date().toISOString(),
+    }, { onConflict: "user_id" });
+    setLoading(false);
+    if (error) { setTrialError("Er ging iets mis. Probeer opnieuw."); return; }
+    setTrialDone(true);
+    onTrialStarted?.({ tier: selected, trial_started_at: new Date().toISOString() });
+  };
 
   const handleWaitlist = async () => {
     if (!email.includes("@")) return;
@@ -95,8 +112,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan }) {
 
         {/* Hero banner */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
-          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: "rgba(168,85,247,0.15)", border: "1px solid rgba(168,85,247,0.3)", fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#c084fc", fontWeight: 700, marginBottom: 10 }}>
-            BINNENKORT BESCHIKBAAR
+          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: "rgba(0,200,83,0.15)", border: "1px solid rgba(0,200,83,0.3)", fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#69f0ae", fontWeight: 700, marginBottom: 10 }}>
+            1 MAAND GRATIS PROBEREN
           </div>
           <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 28, fontWeight: 700, color: "#fff", lineHeight: 1.2, marginBottom: 6 }}>
             Studiebol is gratis.<br />Pro maakt het krachtig.
@@ -176,6 +193,39 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan }) {
             ))}
           </div>
         </div>
+
+        {/* Trial CTA */}
+        {trialDone ? (
+          <div style={{ borderRadius: 16, border: "1px solid rgba(0,200,83,0.3)", background: "rgba(0,200,83,0.08)", padding: "24px", textAlign: "center", marginBottom: 16 }}>
+            <div style={{ fontSize: 40, marginBottom: 10 }}>🎉</div>
+            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>Proefperiode gestart!</div>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.55)" }}>
+              Je hebt 30 dagen gratis toegang tot {plan?.label} Pro. Geen creditcard nodig.
+            </div>
+          </div>
+        ) : (
+          <div style={{ borderRadius: 16, border: `1px solid ${plan?.color || "#a855f7"}55`, background: plan ? `${plan.bg}` : "rgba(168,85,247,0.08)", padding: "18px 16px", marginBottom: 16 }}>
+            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
+              🎁 Probeer {plan?.label} Pro gratis
+            </div>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 14 }}>
+              30 dagen alle Pro-functies — geen creditcard, geen verplichtingen.
+            </div>
+            {trialError && <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#ff6b6b", marginBottom: 10 }}>{trialError}</div>}
+            <button
+              onClick={handleStartTrial}
+              disabled={loading}
+              style={{ width: "100%", padding: "14px", borderRadius: 12, border: "none", background: plan ? `linear-gradient(135deg, ${plan.color}dd, ${plan.color}99)` : "#a855f7", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, cursor: "pointer" }}
+            >
+              {loading ? "Bezig..." : authUser ? `🚀 Start gratis proefperiode` : `🔑 Inloggen om te starten`}
+            </button>
+            {!authUser && (
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.3)", textAlign: "center", marginTop: 8 }}>
+                Je hebt een account nodig om de proefperiode te activeren
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Waitlist */}
         {!sent ? (

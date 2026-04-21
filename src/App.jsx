@@ -209,7 +209,14 @@ export default function App() {
       });
   }, [pendingCode, quizzes]);
 
-  const isTeacherPro = subscription?.tier === "teacher_pro";
+  const trialDaysLeft = (() => {
+    if (!subscription?.trial_started_at) return null;
+    const started = new Date(subscription.trial_started_at);
+    const diff = 30 - Math.floor((Date.now() - started.getTime()) / 86400000);
+    return diff > 0 ? diff : 0;
+  })();
+  const isOnTrial = trialDaysLeft !== null && trialDaysLeft > 0;
+  const isTeacherPro = isOnTrial || subscription?.tier === "teacher_pro";
   const quizLimitReached = !isTeacherPro && quizzes.length >= FREE_QUIZ_LIMIT;
 
   const createQuiz = (quiz) => {
@@ -451,6 +458,7 @@ export default function App() {
           quizCount={quizzes.length}
           quizLimit={FREE_QUIZ_LIMIT}
           isTeacherPro={isTeacherPro}
+          trialDaysLeft={trialDaysLeft}
           onCreateQuiz={() => quizLimitReached ? setPage("pro") : setPage("create-quiz")}
           onViewProgress={() => setPage("teacher-progress")}
           onManageClasses={() => setPage("class-manager")}
@@ -862,6 +870,11 @@ export default function App() {
           defaultPlan={role === "teacher" ? "teacher_pro" : "parent_pro"}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
           onHome={() => setPage("home")}
+          onLogin={handleGoogleLogin}
+          onTrialStarted={(sub) => {
+            setSubscription(sub);
+            setPage(role === "teacher" ? "teacher-home" : "home");
+          }}
         />
       )}
       {page === "ouder-dashboard" && (
