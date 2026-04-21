@@ -6203,12 +6203,61 @@ TOPIC_QUESTIONS["begrijpend-lezen mix"] = _blVragen;
 
   // Groep 8 pools (harder vragen)
   const _cito8 = SAMPLE_QUESTIONS.cito.groep8;
-  TOPIC_QUESTIONS["cito groep8-rekenen"]          = [..._cito8.slice(0, 10),  ..._rek7];
-  TOPIC_QUESTIONS["cito groep8-taal"]             = [..._cito8.slice(10, 18), ..._taal7, ..._sp7, ..._ws7];
-  TOPIC_QUESTIONS["cito groep8-begrijpend-lezen"] = [..._cito8.slice(18, 22), ..._blVragen];
+
+  // Echte vragen van doorstroomtoets.online — rekenen groep 8
+  const _realRek8 = [
+    { q: "20 van de 25 kinderen in groep 8 hebben hun weektaak af. Hoeveel procent is dat?", options: ["0,80%", "85%", "80%", "15%"], answer: 2, explanation: "20 ÷ 25 = 0,8 → 0,8 × 100 = 80%" },
+    { q: "4/21 + 1/3 = ?", options: ["5/24", "5/21", "11/24", "11/21"], answer: 3, explanation: "1/3 = 7/21, dus 4/21 + 7/21 = 11/21" },
+    { q: "Op een kaart (schaal 1:1.000.000) meet Tim 14 cm. Hoeveel km is dat in werkelijkheid?", options: ["1.400 km", "14.000 km", "140 km", "14.000.000 km"], answer: 2, explanation: "14 cm × 1.000.000 = 14.000.000 cm = 140 km" },
+    { q: "220.009 − 6.099 − 4.987 ≈ ?", options: ["11.000", "208.000", "10.000", "209.000"], answer: 3, explanation: "220.009 − 6.099 ≈ 213.910, min 4.987 ≈ 208.923 → afgerond ≈ 209.000" },
+    { q: "Tanja heeft €110,89. Ze pint €20,90. Hoeveel houdt ze over?", options: ["€90,01", "€90,99", "€89,01", "€89,99"], answer: 3, explanation: "€110,89 − €20,90 = €89,99" },
+    { q: "Een fietspad heeft een oppervlakte van 6.000 m² en een breedte van 4 m. Hoe lang is het pad?", options: ["24.000 m", "2.400 m", "15.000 m", "1.500 m"], answer: 3, explanation: "6.000 ÷ 4 = 1.500 m" },
+    { q: "Mohammed koopt 1.300 g vis. Hoeveel kg is dat?", options: ["13 kg", "130 kg", "0,13 kg", "1,3 kg"], answer: 3, explanation: "1.300 g ÷ 1.000 = 1,3 kg" },
+    { q: "5 × 150 − 50 = ?", options: ["650", "750", "800", "700"], answer: 3, explanation: "5 × 150 = 750, dan 750 − 50 = 700" },
+    { q: "12,5% van 4.000 is?", options: ["50", "1.000", "100", "500"], answer: 3, explanation: "12,5% = 1/8, dus 4.000 ÷ 8 = 500" },
+    { q: "890 ÷ ___ = 0,89. Wat staat er op de stippellijn?", options: ["100", "0,1", "0,001", "1.000"], answer: 3, explanation: "890 ÷ 1.000 = 0,890 = 0,89" },
+    { q: "Hoeveel liter is 480 deciliter?", options: ["4,8 l", "0,48 l", "0,048 l", "48 l"], answer: 3, explanation: "1 l = 10 dl, dus 480 dl ÷ 10 = 48 l" },
+    { q: "3% van 1 miljoen is?", options: ["3.000", "300.000", "300", "30.000"], answer: 3, explanation: "3% van 1.000.000 = 0,03 × 1.000.000 = 30.000" },
+    { q: "Hoeveel glazen van 25 cl kunnen worden gevuld met 2 liter melk?", options: ["12", "50", "80", "8"], answer: 3, explanation: "2 l = 200 cl, 200 ÷ 25 = 8 glazen" },
+    { q: "Van 1.250 ontsnapte kalkoenen zijn 750 teruggevonden. Welk deel is dat?", options: ["7/10", "7/12", "2/3", "3/5"], answer: 3, explanation: "750 ÷ 1.250 = 3/5" },
+    { q: "25,27 + 2,6 = ?", options: ["27,33", "27,32", "28,2", "27,87"], answer: 3, explanation: "25,27 + 2,60 = 27,87 (let op komma-uitlijning)" },
+    { q: "Vera fietst 24 km/uur. Hoe lang doet ze over 60 km?", options: ["2 uur en 45 minuten", "1 uur en 45 minuten", "3 uur en 15 minuten", "2 uur en 30 minuten"], answer: 3, explanation: "60 ÷ 24 = 2,5 uur = 2 uur en 30 minuten" },
+    { q: "Een zandbak is 3 m × 6 m × 0,5 m en is half gevuld. Hoeveel m³ zand bevat de zandbak?", options: ["18 m³", "9 m³", "9,5 m³", "4,5 m³"], answer: 3, explanation: "3 × 6 × 0,5 = 9 m³ vol, half = 4,5 m³" },
+    { q: "4,5 × 4,5 = ?", options: ["16,25", "16,75", "16,50", "20,25"], answer: 3, explanation: "4,5² = 20,25" },
+    { q: "De afstand tussen 2 bruggen is op een kaart 4 cm. De schaal is 1:200.000. Hoeveel km?", options: ["0,8 km", "0,4 km", "4 km", "8 km"], answer: 3, explanation: "4 cm × 200.000 = 800.000 cm = 8 km" },
+    { q: "Hoeveel procent is 50 van de 200?", options: ["1/4%", "50%", "40%", "25%"], answer: 3, explanation: "50 ÷ 200 = 0,25 = 25%" },
+    { q: "2½ − 1 3/6 = ?", options: ["1 2/6", "5/6", "1 1/6", "1"], answer: 3, explanation: "2½ = 2 3/6, dus 2 3/6 − 1 3/6 = 1" },
+    { q: "35% van 800 = ?", options: ["350", "250", "380", "280"], answer: 3, explanation: "35% = 35/100, 35 × 8 = 280" },
+    { q: "5/6 × 2/5 = ?", options: ["5/6", "13/30", "3/5", "1/3"], answer: 3, explanation: "(5 × 2) ÷ (6 × 5) = 10/30 = 1/3" },
+  ];
+
+  // Echte vragen van doorstroomtoets.online — taal groep 8 (zinsontleding + woordbenoemen)
+  const _realTaal8 = [
+    { q: "\"Door de Afsluitdijk werd de Zuiderzee van de Noordzee gescheiden.\" Wat is het gezegde?", options: ["werd", "gescheiden", "de Zuiderzee", "werd gescheiden"], answer: 3, explanation: "Het gezegde is persoonsvorm + werkwoordelijk deel samen: 'werd gescheiden' (passieve constructie)." },
+    { q: "\"In de tijd van monniken en ridders woonden edelmannen in kastelen.\" Wat is het onderwerp?", options: ["in de tijd van monniken en ridders", "woonden", "in kastelen", "edelmannen"], answer: 3, explanation: "Het onderwerp is wie of wat iets doet: edelmannen (woonden)." },
+    { q: "\"De wolf beet het schaap in zijn nek.\" Wat is het lijdend voorwerp?", options: ["de wolf", "beet", "in zijn nek", "het schaap"], answer: 3, explanation: "Het lijdend voorwerp is wie de handeling ondergaat: het schaap (de wolf beet wie? → het schaap)." },
+    { q: "\"Morgen geef ik je een chocoladereep!\" Wat is het meewerkend voorwerp?", options: ["een chocoladereep", "geef", "ik", "je"], answer: 3, explanation: "Het meewerkend voorwerp is aan wie iets gegeven wordt: je (ik geef aan wie? → je)." },
+    { q: "\"Wanneer ben je voor het laatst op vakantie geweest?\" Wat is de persoonsvorm?", options: ["wanneer", "geweest", "zeggen", "ben"], answer: 3, explanation: "De persoonsvorm is het vervoegde werkwoord dat van persoon en getal afhangt: ben." },
+    { q: "\"We zijn met de bus naar het Rijksmuseum geweest.\" Welk woord is een zelfstandig naamwoord?", options: ["zijn", "de", "naar", "Rijksmuseum"], answer: 3, explanation: "Rijksmuseum is een zelfstandig naamwoord (naam voor een gebouw/ding)." },
+    { q: "\"We hebben in de klas nieuwe chromebooks gekregen.\" Welk woord is een bijvoeglijk naamwoord?", options: ["we", "in", "chromebooks", "nieuwe"], answer: 3, explanation: "'Nieuwe' is een bijvoeglijk naamwoord — het beschrijft het zelfstandig naamwoord 'chromebooks'." },
+    { q: "\"Groep 8 gaat aan het eind van dit schooljaar op kamp.\" Welk woord is een voorzetsel?", options: ["groep", "eind", "dit", "op"], answer: 3, explanation: "'Op' is een voorzetsel — het geeft een relatie aan (op kamp = locatie/richting)." },
+    { q: "\"Heb je een uil wel eens horen vliegen?\" Welk woord is een werkwoord?", options: ["je", "eens", "uil", "vliegen"], answer: 3, explanation: "'Vliegen' is een werkwoord (infinitief) — het drukt een handeling uit." },
+  ];
+
+  // Echte vragen Cito-stijl — begrijpend lezen groep 8 (plastic soep tekst)
+  const _realBL8 = [
+    { q: "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat is de hoofdgedachte van deze tekst?", options: ["Vissen worden ziek van plastic in zee", "Wetenschappers zijn het oneens over klimaat", "Plastic soep is een probleem dat mensen en dieren treft en moeilijk op te lossen is", "Er zwemmen miljoenen tonnen plastic in de oceanen"], answer: 2, explanation: "De hoofdgedachte vat de hele tekst samen: plastic soep treft het hele ecosysteem en oplossingen zijn omstreden." },
+    { q: "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWaarom is plastic soep gevaarlijk voor mensen?", options: ["Mensen zwemmen in de oceanen", "Plastic breekt niet af en blijft eeuwig bestaan", "Plastic belandt via vissen en vogels in de voedselketen van mensen", "Wetenschappers eten ook vis"], answer: 2, explanation: "De tekst zegt expliciet: vissen en vogels eten plastic, waarna het in de menselijke voedselketen terechtkomt." },
+    { q: "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat betekent het woord 'voedselketen' in deze tekst?", options: ["Een ketting van eten en drinken", "De manier waarop levende wezens van elkaar afhankelijk zijn voor voedsel", "Een supermarkt met gezonde producten", "Een wetenschappelijk experiment"], answer: 1, explanation: "De voedselketen beschrijft wie wat eet: plant → dier → mens. Plastic verspreidt zich zo van vis naar mens." },
+  ];
+
+  TOPIC_QUESTIONS["cito groep8-rekenen"]          = [..._cito8.slice(0, 10),  ..._realRek8, ..._rek7];
+  TOPIC_QUESTIONS["cito groep8-taal"]             = [..._cito8.slice(10, 18), ..._realTaal8, ..._taal7, ..._sp7, ..._ws7];
+  TOPIC_QUESTIONS["cito groep8-begrijpend-lezen"] = [..._cito8.slice(18, 22), ..._realBL8, ..._blVragen];
   TOPIC_QUESTIONS["cito groep8-wereldorientatie"] = [..._cito8.slice(22, 34), ..._aard7, ..._gesch7, ..._nat7];
   TOPIC_QUESTIONS["cito groep8-gemengd"] = [
     ..._cito8,
+    ..._realRek8, ..._realTaal8, ..._realBL8,
     ..._rek7,
     ..._taal7, ..._sp7, ..._ws7,
     ..._blVragen,
