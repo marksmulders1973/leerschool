@@ -98,6 +98,7 @@ export default function App() {
   const [authUser, setAuthUser] = useState(null);
   const [streak, setStreak] = useState(0);
   const [subscription, setSubscription] = useState({ tier: "free" });
+  const [schoolLogoUrl, setSchoolLogoUrl] = useState("");
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
 
@@ -118,6 +119,7 @@ export default function App() {
           if (data?.level) setUserLevel(data.level);
           if (data?.school_type) setUserSchoolType(data.school_type);
           if (data?.streak_days) setStreak(data.streak_days);
+          if (data?.school_logo_url) setSchoolLogoUrl(data.school_logo_url);
           // Alleen auto-navigeren als gebruiker nog op home staat en NIET bezig is met onboarding
           if (pageRef.current !== "home") return;
           if (onboardingActiveRef.current) return;
@@ -455,6 +457,11 @@ export default function App() {
           onUpgrade={() => setPage("pro")}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
+          schoolLogoUrl={schoolLogoUrl}
+          onLogoUpdate={(url) => {
+            setSchoolLogoUrl(url);
+            if (authUser) supabase.from("profiles").update({ school_logo_url: url }).eq("id", authUser.id).then(() => {}).catch(() => {});
+          }}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
           onDeleteQuiz={(id) => {
             const updated = quizzes.filter((q) => q.id !== id);

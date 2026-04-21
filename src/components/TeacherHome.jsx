@@ -5,9 +5,18 @@ import { formatDate, daysUntil, shuffle } from "../utils.js";
 import Header from "./Header.jsx";
 import supabase from "../supabase.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
+
+  const handleLogoUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 500 * 1024) { alert("Logo mag maximaal 500 KB zijn."); return; }
+    const reader = new FileReader();
+    reader.onload = (ev) => onLogoUpdate?.(ev.target.result);
+    reader.readAsDataURL(file);
+  };
 
   const exportCSV = (q) => {
     const done = completions[q.id] || [];
@@ -93,6 +102,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
 </head>
 <body>
   <div class="kop">
+    ${schoolLogoUrl ? `<img src="${schoolLogoUrl}" alt="Schoollogo" style="height:48px;max-width:160px;object-fit:contain;margin-bottom:8px;display:block;" />` : ""}
     <h1>${subj?.icon || ""} ${q.title || subj?.label || "Toets"}</h1>
     <div style="font-size:10pt;color:#555;">${levelDisplayLabel}${levelDisplayLabel ? " · " : ""}${datum}</div>
     <div class="invul">
@@ -105,6 +115,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
   <div class="pagina-wissel"></div>
 
   <div class="kop">
+    ${schoolLogoUrl ? `<img src="${schoolLogoUrl}" alt="Schoollogo" style="height:48px;max-width:160px;object-fit:contain;margin-bottom:8px;display:block;" />` : ""}
     <h1>${subj?.icon || ""} Antwoordenblad – ${q.title || subj?.label || "Toets"}</h1>
     <div class="label-leerkracht">🔒 Alleen voor de leerkracht</div>
   </div>
@@ -157,6 +168,38 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
             <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "#ff8c42", fontWeight: 700 }}>✨ Pro — onbeperkt toetsen</span>
           </div>
         )}
+
+        {/* Schoollogo blok */}
+        {isTeacherPro ? (
+          <div style={{ marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(168,85,247,0.07)", border: "1px solid rgba(168,85,247,0.25)", display: "flex", alignItems: "center", gap: 12 }}>
+            {schoolLogoUrl ? (
+              <img src={schoolLogoUrl} alt="Schoollogo" style={{ height: 44, maxWidth: 100, objectFit: "contain", borderRadius: 6, background: "#fff", padding: 4 }} />
+            ) : (
+              <div style={{ width: 48, height: 44, borderRadius: 8, background: "rgba(168,85,247,0.15)", border: "1.5px dashed rgba(168,85,247,0.4)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>🏫</div>
+            )}
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "#c084fc", marginBottom: 2 }}>
+                {schoolLogoUrl ? "Schoollogo actief" : "Nog geen schoollogo"}
+              </div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)" }}>
+                {schoolLogoUrl ? "Verschijnt op toetsen en in de app" : "Upload een logo — verschijnt op alle toetsen"}
+              </div>
+            </div>
+            <label style={{ padding: "7px 12px", borderRadius: 10, background: "rgba(168,85,247,0.2)", border: "1px solid rgba(168,85,247,0.4)", color: "#c084fc", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+              {schoolLogoUrl ? "Wijzig" : "Upload"}
+              <input type="file" accept="image/*" onChange={handleLogoUpload} style={{ display: "none" }} />
+            </label>
+            {schoolLogoUrl && (
+              <button onClick={() => onLogoUpdate?.("")} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.3)", fontSize: 18, cursor: "pointer", padding: 0, lineHeight: 1 }}>×</button>
+            )}
+          </div>
+        ) : (
+          <div style={{ marginBottom: 16, padding: "10px 14px", borderRadius: 12, background: "rgba(168,85,247,0.05)", border: "1px dashed rgba(168,85,247,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+            <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.35)" }}>🏫 Eigen schoollogo op toetsen — Pro</span>
+            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(168,85,247,0.2)", color: "#c084fc", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Upgrade →</button>
+          </div>
+        )}
+
         <div style={styles.actionRow}>
           <button style={{ ...styles.bigButton, background: quizLimitReached ? "rgba(255,255,255,0.06)" : "linear-gradient(135deg, #00c853, #00e676)", opacity: quizLimitReached ? 0.7 : 1 }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
