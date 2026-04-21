@@ -112,14 +112,27 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               💬 WhatsApp
             </button>
-            <button onClick={() => { window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}&quote=${encodeURIComponent(shareText)}`, "_blank"); setSent(true); }} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
-              📘 Facebook
-            </button>
             <button onClick={sendViaEmail} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               ✉️ E-mail
             </button>
           </div>
           {sent && <p style={{ fontSize: 12, color: "#69f0ae", textAlign: "center", marginTop: 8, marginBottom: 0 }}>✅ Verstuurd!</p>}
+        </div>
+
+        {/* Deel de app */}
+        <div style={{ marginTop: 12, padding: 16, background: "linear-gradient(135deg, #0d1f3c, #0a1525)", borderRadius: 16, border: "1px solid rgba(24,119,242,0.35)" }}>
+          <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, margin: "0 0 10px", textAlign: "center" }}>
+            📣 Ken jij ook kinderen die dit leuk vinden?
+          </p>
+          <button
+            onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`, "_blank")}
+            style={{ width: "100%", padding: "13px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}
+          >
+            <span style={{ fontSize: 18 }}>📘</span> Deel Studiebol op Facebook
+          </button>
+          <p style={{ fontSize: 11, color: "#556677", textAlign: "center", margin: "8px 0 0" }}>
+            Gratis oefenplatform — help andere ouders het te ontdekken!
+          </p>
         </div>
 
         {(
