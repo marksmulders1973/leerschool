@@ -19,6 +19,10 @@ function ScoreBadge({ pct }) {
   );
 }
 
+function generateCode() {
+  return Math.random().toString(36).substring(2, 8).toUpperCase();
+}
+
 export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin }) {
   const isPro = subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
@@ -28,6 +32,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   const [newChildName, setNewChildName] = useState("");
   const [loading, setLoading] = useState(false);
   const [scoresLoading, setScoresLoading] = useState(false);
+  const [linkMethod, setLinkMethod] = useState("whatsapp"); // "whatsapp" | "naam"
+  const [inviteCode, setInviteCode] = useState("");
+  const [inviteSent, setInviteSent] = useState(false);
 
   // Laad gekoppelde kinderen
   useEffect(() => {
@@ -88,6 +95,23 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     setSelectedChild(prev => children.find(c => c.id !== id)?.child_name || null);
   };
 
+  const generateInvite = async () => {
+    if (!authUser) return;
+    setLoading(true);
+    const code = generateCode();
+    const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
+    await supabase.from("link_codes").insert({ code, parent_user_id: authUser.id, expires_at: expires }).catch(() => {});
+    setInviteCode(code);
+    setInviteSent(false);
+    setLoading(false);
+  };
+
+  const sendWhatsApp = () => {
+    const msg = encodeURIComponent(`Hoi! Open Studiebol (studiebol.online) en voer de koppelcode *${inviteCode}* in bij 'Koppel met ouder'. Dan kan ik jouw voortgang zien 😊 (code is 48 uur geldig)`);
+    window.open(`https://wa.me/?text=${msg}`, "_blank");
+    setInviteSent(true);
+  };
+
   // Statistieken berekenen
   const subjectStats = childScores.reduce((acc, r) => {
     const key = r.subject;
@@ -146,7 +170,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
         {/* Kinderen koppelen */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
-          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)", marginBottom: 10 }}>
+          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.8)", marginBottom: 12 }}>
             👶 Mijn kinderen
           </div>
 
@@ -165,22 +189,77 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
             </div>
           ))}
 
-          {/* Voeg kind toe */}
-          <div style={{ display: "flex", gap: 8, marginTop: 4 }}>
-            <input
-              value={newChildName}
-              onChange={e => setNewChildName(e.target.value)}
-              onKeyDown={e => e.key === "Enter" && addChild()}
-              placeholder="Naam van je kind (zoals in de app)"
-              style={{ flex: 1, padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)", color: "#fff", fontFamily: "'Nunito', sans-serif", fontSize: 13, outline: "none" }}
-            />
-            <button onClick={addChild} disabled={loading || !newChildName.trim()} style={{ padding: "9px 14px", borderRadius: 10, border: "none", background: newChildName.trim() ? "#00b0ff" : "rgba(255,255,255,0.1)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
-              {loading ? "..." : "+ Voeg toe"}
-            </button>
+          {/* Methode tabs */}
+          <div style={{ display: "flex", gap: 6, marginBottom: 12, marginTop: children.length ? 10 : 0 }}>
+            {[
+              { id: "whatsapp", label: "📱 Via WhatsApp", desc: "Kind op telefoon" },
+              { id: "naam",     label: "✏️ Naam invullen", desc: "Zit naast je" },
+            ].map(m => (
+              <button key={m.id} onClick={() => setLinkMethod(m.id)} style={{
+                flex: 1, padding: "9px 6px", borderRadius: 10, cursor: "pointer",
+                border: linkMethod === m.id ? "1.5px solid rgba(0,176,255,0.5)" : "1px solid rgba(255,255,255,0.1)",
+                background: linkMethod === m.id ? "rgba(0,176,255,0.1)" : "rgba(255,255,255,0.03)",
+              }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: linkMethod === m.id ? "#00b0ff" : "rgba(255,255,255,0.5)" }}>{m.label}</div>
+                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>{m.desc}</div>
+              </button>
+            ))}
           </div>
-          <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 6 }}>
-            Vul dezelfde naam in als je kind gebruikt in de app
-          </div>
+
+          {/* WhatsApp flow */}
+          {linkMethod === "whatsapp" && (
+            <div>
+              {!inviteCode ? (
+                <>
+                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10, lineHeight: 1.5 }}>
+                    Je kind opent de app op zijn/haar telefoon en voert de code in. Je ontvangt daarna automatisch de voortgang.
+                  </div>
+                  <button onClick={generateInvite} disabled={loading} style={{ width: "100%", padding: "11px", borderRadius: 10, border: "none", background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                    {loading ? "Genereren..." : "📲 Genereer uitnodigingscode"}
+                  </button>
+                </>
+              ) : (
+                <div>
+                  <div style={{ textAlign: "center", padding: "12px 0 8px" }}>
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 4 }}>Koppelcode (48 uur geldig)</div>
+                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 36, fontWeight: 700, color: "#00b0ff", letterSpacing: 6 }}>{inviteCode}</div>
+                  </div>
+                  <button onClick={sendWhatsApp} style={{ width: "100%", padding: "12px", borderRadius: 10, border: "none", background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer", marginTop: 8, display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
+                    <span style={{ fontSize: 18 }}>💬</span> Stuur via WhatsApp
+                  </button>
+                  {inviteSent && (
+                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#69f0ae", textAlign: "center", marginTop: 8 }}>
+                      ✓ Verstuurd! Je kind voert de code in bij 'Koppel met ouder'.
+                    </div>
+                  )}
+                  <button onClick={() => { setInviteCode(""); setInviteSent(false); }} style={{ width: "100%", marginTop: 8, padding: "7px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", background: "none", color: "rgba(255,255,255,0.35)", fontFamily: "'Nunito', sans-serif", fontSize: 12, cursor: "pointer" }}>
+                    Nieuwe code genereren
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Naam invullen flow */}
+          {linkMethod === "naam" && (
+            <div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10 }}>
+                Vul de naam in zoals je kind die gebruikt in de app.
+              </div>
+              <div style={{ display: "flex", gap: 8 }}>
+                <input
+                  value={newChildName}
+                  onChange={e => setNewChildName(e.target.value)}
+                  onKeyDown={e => e.key === "Enter" && addChild()}
+                  placeholder="Naam van je kind"
+                  style={{ flex: 1, padding: "9px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.06)", color: "#fff", fontFamily: "'Nunito', sans-serif", fontSize: 13, outline: "none" }}
+                />
+                <button onClick={addChild} disabled={loading || !newChildName.trim()} style={{ padding: "9px 14px", borderRadius: 10, border: "none", background: newChildName.trim() ? "#00b0ff" : "rgba(255,255,255,0.1)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+                  {loading ? "..." : "Voeg toe"}
+                </button>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Dashboard inhoud — alleen als kind geselecteerd */}
