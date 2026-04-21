@@ -304,11 +304,24 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
 export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onChallenge }) {
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
+  const [globalHof, setGlobalHof] = useState({});
 
   useEffect(() => {
     supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
       .then(({ data: rows }) => { if (rows?.length) setGlobalData(rows); })
       .catch(() => {});
+    // Hall of Fame van Supabase laden (top 5 per vak/niveau met vragen)
+    supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, questions").order("time_taken", { ascending: true })
+      .then(({ data: rows }) => {
+        if (!rows?.length) return;
+        const hof = {};
+        rows.forEach(r => {
+          const key = `${r.subject}-${r.level}`;
+          if (!hof[key]) hof[key] = [];
+          if (hof[key].length < 5) hof[key].push({ player: r.player_name, timeTaken: r.time_taken, questions: r.questions });
+        });
+        setGlobalHof(hof);
+      }).catch(() => {});
   }, []);
 
   const entries = (globalData || data).map(e => ({
@@ -363,7 +376,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                     </div>
                     {entry.percentage === 100 && onChallenge && (() => {
                       const hofKey = `${entry.subject}-${entry.level}`;
-                      const hofEntry = hallOfFame?.[hofKey]?.[0];
+                      const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
                       if (!hofEntry?.questions?.length) return null;
                       const isMyScore = isMe && entry.timeTaken === hofEntry.timeTaken;
                       return (

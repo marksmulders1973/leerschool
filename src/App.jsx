@@ -301,8 +301,9 @@ export default function App() {
       const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt, timeTaken: result.timeTaken }];
       return updated.sort((a, b) => b.percentage - a.percentage || (a.timeTaken || 9999) - (b.timeTaken || 9999) || b.total - a.total || b.score - a.score).slice(0, 50);
     });
-    // Hall of Fame: top 5 per vak+niveau met vragen opslaan voor eerlijk uitdagen
+    // Hall of Fame: top 5 per vak+niveau opslaan met vragen (lokaal + Supabase)
     if (result.percentage === 100) {
+      // Lokaal opslaan
       try {
         const hofKey = `${result.subject}-${result.level}`;
         const hof = JSON.parse(localStorage.getItem("ls_hof") || "{}");
@@ -313,6 +314,15 @@ export default function App() {
         localStorage.setItem("ls_hof", JSON.stringify(hof));
         setHallOfFame({ ...hof });
       } catch {}
+      // Supabase opslaan + top 5 bewaken
+      supabase.from("hall_of_fame").insert({ subject: result.subject, level: result.level, player_name: userName, time_taken: result.timeTaken, percentage: 100, completed_at: result.completedAt, questions: result.questions })
+        .then(() => supabase.from("hall_of_fame").select("id, time_taken").eq("subject", result.subject).eq("level", result.level).order("time_taken", { ascending: true }))
+        .then(({ data: rows }) => {
+          if (rows && rows.length > 5) {
+            const toDelete = rows.slice(5).map(r => r.id);
+            supabase.from("hall_of_fame").delete().in("id", toDelete).then(() => {}).catch(() => {});
+          }
+        }).catch(() => {});
     }
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
     // Globaal scorebord (iedereen, ook gasten)
