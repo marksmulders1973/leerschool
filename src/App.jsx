@@ -778,6 +778,10 @@ export default function App() {
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
           onHome={() => setPage("home")}
+          onRetry={(entry) => {
+            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: 10, timePerQuestion: 0, topic: entry.topic || null, title: null };
+            startGame(quiz, "self");
+          }}
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>

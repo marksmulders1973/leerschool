@@ -301,7 +301,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
   );
 }
 
-export function Leaderboard({ data, currentUser, onBack, onHome }) {
+export function Leaderboard({ data, currentUser, onBack, onHome, onRetry }) {
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
 
@@ -352,12 +352,22 @@ export function Leaderboard({ data, currentUser, onBack, onHome }) {
                       {entry.timeTaken ? <span style={{ marginLeft: 6, color: "#00d4ff" }}>⏱ {entry.timeTaken < 60 ? `${entry.timeTaken}s` : `${Math.floor(entry.timeTaken / 60)}m ${entry.timeTaken % 60}s`}</span> : null}
                     </div>
                   </div>
-                  <div style={{
-                    padding: "4px 12px", borderRadius: 10, fontWeight: 800, fontSize: 15,
-                    background: entry.percentage >= 80 ? "#d4edda" : entry.percentage >= 50 ? "#fff3cd" : "#f8d7da",
-                    color: entry.percentage >= 80 ? "#155724" : entry.percentage >= 50 ? "#856404" : "#721c24",
-                  }}>
-                    {entry.percentage}%
+                  <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
+                    <div style={{
+                      padding: "4px 12px", borderRadius: 10, fontWeight: 800, fontSize: 15,
+                      background: entry.percentage >= 80 ? "#d4edda" : entry.percentage >= 50 ? "#fff3cd" : "#f8d7da",
+                      color: entry.percentage >= 80 ? "#155724" : entry.percentage >= 50 ? "#856404" : "#721c24",
+                    }}>
+                      {entry.percentage}%
+                    </div>
+                    {isMe && entry.percentage === 100 && onRetry && (
+                      <button
+                        onClick={() => onRetry(entry)}
+                        style={{ padding: "4px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                      >
+                        🔄 Beter!
+                      </button>
+                    )}
                   </div>
                 </div>
               );
