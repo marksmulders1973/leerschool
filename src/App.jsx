@@ -847,6 +847,7 @@ export default function App() {
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onUpgrade={() => setPage("upgrade")}
+          onLogin={handleGoogleLogin}
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
