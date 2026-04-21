@@ -155,7 +155,8 @@ export default function App() {
   useEffect(() => {
     try { const q = localStorage.getItem("ls_quizzes"); if (q) setQuizzes(JSON.parse(q)); } catch {}
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
-    try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
+    // Lokale leaderboard niet meer laden — Supabase is de bron van waarheid
+    localStorage.removeItem("ls_leaderboard");
     try { const h = localStorage.getItem("ls_hof"); if (h) setHallOfFame(JSON.parse(h)); } catch {}
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); if (d.schoolType) setUserSchoolType(d.schoolType); } } catch {}

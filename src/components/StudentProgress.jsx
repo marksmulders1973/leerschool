@@ -308,7 +308,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
 
   useEffect(() => {
     supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
-      .then(({ data: rows }) => { if (rows?.length) setGlobalData(rows); })
+      .then(({ data: rows }) => { setGlobalData(rows || []); })
       .catch(() => {});
     // Hall of Fame van Supabase laden (top 5 per vak/niveau met vragen)
     supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, questions").order("time_taken", { ascending: true })
