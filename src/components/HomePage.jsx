@@ -89,6 +89,7 @@ const FEATURES_RIGHT = [
   { id: "redactiesommen",  label: "Redactiesommen",  sub: "Rekenen met tekst",          color: "#ea580c", bg: "rgba(234,88,12,0.12)",   border: "rgba(234,88,12,0.2)",   badge: null },
   { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
   { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
+  { id: "pro",             label: "Studiebol Pro",   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: "✨" },
 ];
 
 function FeatureShowcase({ onFeatureClick }) {
@@ -234,6 +235,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   const handleFeatureClick = (featureId) => {
+    if (featureId === "pro") { onPro?.(); return; }
     const role = featureId === "leerkrachten" ? "teacher" : "leerling";
     setPendingFeature(featureId);
     // Terugkerende gebruiker: naam al opgeslagen → direct doorgaan
@@ -416,35 +418,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </button>
               ))}
             </div>
-          </div>
-        )}
-
-        {step === "role" && (
-          <div style={{ width: "100%", maxWidth: 360, marginBottom: 12, display: "flex", gap: 8 }}>
-            <button onClick={() => onOuderDashboard?.()} style={{
-              flex: 1, padding: "10px 8px", borderRadius: 14, cursor: "pointer",
-              border: "1px solid rgba(0,176,255,0.3)", background: "rgba(0,176,255,0.08)",
-              color: "#00b0ff", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
-              display: "flex", flexDirection: "column", alignItems: "center", gap: 3,
-            }}>
-              <span style={{ fontSize: 18 }}>👨‍👩‍👧</span>
-              <span>Ouder Dashboard</span>
-            </button>
-            <button onClick={() => onPro?.()} style={{
-              flex: 1, padding: "10px 8px", borderRadius: 14, cursor: "pointer",
-              border: "1px solid rgba(168,85,247,0.4)", background: "rgba(168,85,247,0.1)",
-              color: "#c084fc", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
-              display: "flex", flexDirection: "column", alignItems: "center", gap: 3,
-              position: "relative",
-            }}>
-              <span style={{
-                position: "absolute", top: -8, right: 8,
-                background: "#a855f7", color: "#fff", fontSize: 9, fontWeight: 800,
-                fontFamily: "'Fredoka', sans-serif", padding: "2px 6px", borderRadius: 10,
-              }}>BINNENKORT</span>
-              <span style={{ fontSize: 18 }}>✨</span>
-              <span>Studiebol Pro</span>
-            </button>
           </div>
         )}
 
