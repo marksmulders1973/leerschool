@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import { BreakoutGame } from "./PlayQuiz.jsx";
 
-export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onLeaderboard, onNextTafel }) {
+export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
   const latest = results[results.length - 1];
   if (!latest) return null;
 
@@ -58,6 +58,30 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           <div style={styles.scoreNumber}>{latest.percentage}%</div>
           <div style={styles.scoreDetail}>{grade}</div>
         </div>
+        {latest.timeTaken > 0 && (
+          <div style={{ textAlign: "center", fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#8899aa", marginBottom: 8 }}>
+            ⏱ {latest.timeTaken < 60 ? `${latest.timeTaken}s` : `${Math.floor(latest.timeTaken / 60)}m ${latest.timeTaken % 60}s`}
+          </div>
+        )}
+        {latest.percentage === 100 && onReplay && (
+          <div style={{ marginBottom: 8, animation: "popIn 0.5s ease 0.2s both" }}>
+            <button
+              onClick={onReplay}
+              style={{
+                width: "100%", padding: "14px 20px", border: "2px solid #00d4ff", borderRadius: 16,
+                background: "linear-gradient(135deg, #003a4f, #001e2e)",
+                color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 17,
+                fontWeight: 700, cursor: "pointer",
+                boxShadow: "0 4px 16px rgba(0,212,255,0.2)",
+              }}
+            >
+              🔄 Ik kan dit beter! Zelfde vragen, sneller?
+            </button>
+            <p style={{ textAlign: "center", fontSize: 11, color: "#8899aa", marginTop: 4 }}>
+              Exact dezelfde vragen — probeer het nog sneller te doen
+            </p>
+          </div>
+        )}
 
         <div style={styles.resultDetails}>
           {latest.answers.map((a, i) => {

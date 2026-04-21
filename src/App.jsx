@@ -290,17 +290,18 @@ export default function App() {
       topic: finalState.quiz.topic || null,
       score: finalState.score, total: finalState.questions.length,
       percentage: Math.round((finalState.score / finalState.questions.length) * 100),
+      timeTaken: Math.round((Date.now() - finalState.startedAt) / 1000),
       answers: finalState.answers, questions: finalState.questions, completedAt: new Date().toISOString(),
     };
     setResults((prev) => [...prev, result]);
     setStudentProgress((prev) => [...prev, result]);
     setLeaderboard((prev) => {
-      const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt }];
-      return updated.sort((a, b) => b.percentage - a.percentage || b.total - a.total || b.score - a.score).slice(0, 50);
+      const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt, timeTaken: result.timeTaken }];
+      return updated.sort((a, b) => b.percentage - a.percentage || (a.timeTaken || 9999) - (b.timeTaken || 9999) || b.total - a.total || b.score - a.score).slice(0, 50);
     });
-    track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: Math.round((Date.now() - finalState.startedAt) / 1000) });
+    track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
     // Globaal scorebord (iedereen, ook gasten)
-    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null }).then(() => {}).catch(() => {});
+    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
 
     // Streak + voortgang opslaan
     const today = new Date().toISOString().split("T")[0];
@@ -733,6 +734,11 @@ export default function App() {
             track("quiz_retried", { subject: currentQuiz?.subject, level: currentQuiz?.level });
             if (currentQuiz) startGame(currentQuiz, "self");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
+          }}
+          onReplay={() => {
+            const latest = results[results.length - 1];
+            if (!latest?.questions?.length || !currentQuiz) return;
+            startGame({ ...currentQuiz, id: currentQuiz.id + "-replay-" + Date.now(), preGeneratedQuestions: latest.questions }, "self");
           }}
           onLeaderboard={() => setPage("leaderboard")}
           onNextTafel={(() => {

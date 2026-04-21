@@ -15,9 +15,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [timedOut, setTimedOut] = useState(false);
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   const [questionImage, setQuestionImage] = useState(null);
+  const [elapsed, setElapsed] = useState(0);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
   const wrongOverlayTimerRef = useRef(null);
+  const elapsedRef = useRef(null);
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
@@ -167,6 +169,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   }, [gameState.currentQ]);
 
   useEffect(() => {
+    elapsedRef.current = setInterval(() => {
+      setElapsed(Math.round((Date.now() - gameState.startedAt) / 1000));
+    }, 1000);
+    return () => clearInterval(elapsedRef.current);
+  }, [gameState.startedAt]);
+
+  useEffect(() => {
     if (showResult || noTimer) return;
     timerRef.current = setInterval(() => {
       setTimeLeft((t) => {
@@ -240,7 +249,12 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#8899aa" }}>
           ✕ Stop
         </button>
-        <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+          <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
+          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 12, color: "#8899aa" }}>
+            ⏱ {elapsed < 60 ? `${elapsed}s` : `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`}
+          </div>
+        </div>
         <div style={{ ...styles.scoreDisplay, animation: scoreAnim ? "scoreFloat 0.6s ease" : "none" }}>⭐ {gameState.score}</div>
       </div>
 

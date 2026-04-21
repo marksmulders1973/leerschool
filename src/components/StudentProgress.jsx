@@ -306,7 +306,7 @@ export function Leaderboard({ data, currentUser, onBack, onHome }) {
   const [globalData, setGlobalData] = useState(null);
 
   useEffect(() => {
-    supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, completed_at").order("percentage", { ascending: false }).order("score", { ascending: false }).limit(50)
+    supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
       .then(({ data: rows }) => { if (rows?.length) setGlobalData(rows); })
       .catch(() => {});
   }, []);
@@ -318,6 +318,7 @@ export function Leaderboard({ data, currentUser, onBack, onHome }) {
     score: e.score,
     total: e.total,
     percentage: e.percentage,
+    timeTaken: e.time_taken ?? e.timeTaken ?? null,
   }));
 
   return (
@@ -348,6 +349,7 @@ export function Leaderboard({ data, currentUser, onBack, onHome }) {
                     </div>
                     <div style={{ fontSize: 11, color: "#8899aa" }}>
                       {subj?.icon} {subj?.label} · {LEVELS.find((l) => l.id === entry.level)?.label}
+                      {entry.timeTaken ? <span style={{ marginLeft: 6, color: "#00d4ff" }}>⏱ {entry.timeTaken < 60 ? `${entry.timeTaken}s` : `${Math.floor(entry.timeTaken / 60)}m ${entry.timeTaken % 60}s`}</span> : null}
                     </div>
                   </div>
                   <div style={{
