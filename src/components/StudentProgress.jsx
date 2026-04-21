@@ -301,7 +301,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
   );
 }
 
-export function Leaderboard({ data, results, currentUser, onBack, onHome, onRetry }) {
+export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onChallenge }) {
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
 
@@ -361,15 +361,18 @@ export function Leaderboard({ data, results, currentUser, onBack, onHome, onRetr
                     }}>
                       {entry.percentage}%
                     </div>
-                    {isMe && entry.percentage === 100 && onRetry && (() => {
-                      const matchedResult = results?.find(r => r.subject === entry.subject && r.level === entry.level && r.completedAt === entry.completedAt && r.questions?.length);
+                    {entry.percentage === 100 && onChallenge && (() => {
+                      const hofKey = `${entry.subject}-${entry.level}`;
+                      const hofEntry = hallOfFame?.[hofKey]?.[0];
+                      if (!hofEntry?.questions?.length) return null;
+                      const isMyScore = isMe && entry.timeTaken === hofEntry.timeTaken;
                       return (
                         <button
-                          onClick={() => onRetry(entry, matchedResult?.questions || null)}
-                          style={{ padding: "4px 10px", border: `1px solid ${matchedResult ? "#00d4ff" : "#8899aa"}`, borderRadius: 8, background: "transparent", color: matchedResult ? "#00d4ff" : "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
-                          title={matchedResult ? "Exact dezelfde vragen" : "Nieuwe vragen (originele niet meer beschikbaar)"}
+                          onClick={() => onChallenge(entry, hofEntry.questions)}
+                          style={{ padding: "4px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: isMyScore ? "rgba(0,212,255,0.15)" : "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                          title="Exact dezelfde vragen — eerlijke wedstrijd!"
                         >
-                          🔄 Beter!
+                          {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
                         </button>
                       );
                     })()}

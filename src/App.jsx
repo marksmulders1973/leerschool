@@ -85,6 +85,7 @@ export default function App() {
   const [results, setResults] = useState([]);
   const [studentProgress, setStudentProgress] = useState([]);
   const [leaderboard, setLeaderboard] = useState([]);
+  const [hallOfFame, setHallOfFame] = useState({});
   const [pendingQuizData, setPendingQuizData] = useState(null);
   const [pendingCode, setPendingCode] = useState("");
   const [pendingFeature, setPendingFeature] = useState(null);
@@ -155,6 +156,7 @@ export default function App() {
     try { const q = localStorage.getItem("ls_quizzes"); if (q) setQuizzes(JSON.parse(q)); } catch {}
     try { const p = localStorage.getItem("ls_progress"); if (p) setStudentProgress(JSON.parse(p)); } catch {}
     try { const l = localStorage.getItem("ls_leaderboard"); if (l) setLeaderboard(JSON.parse(l)); } catch {}
+    try { const h = localStorage.getItem("ls_hof"); if (h) setHallOfFame(JSON.parse(h)); } catch {}
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); if (d.schoolType) setUserSchoolType(d.schoolType); } } catch {}
     try { const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}'); const today = new Date().toISOString().split("T")[0]; const yesterday = new Date(Date.now()-86400000).toISOString().split("T")[0]; if (s.last === today || s.last === yesterday) setStreak(s.streak); } catch {}
@@ -299,6 +301,19 @@ export default function App() {
       const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt, timeTaken: result.timeTaken }];
       return updated.sort((a, b) => b.percentage - a.percentage || (a.timeTaken || 9999) - (b.timeTaken || 9999) || b.total - a.total || b.score - a.score).slice(0, 50);
     });
+    // Hall of Fame: top 5 per vak+niveau met vragen opslaan voor eerlijk uitdagen
+    if (result.percentage === 100) {
+      try {
+        const hofKey = `${result.subject}-${result.level}`;
+        const hof = JSON.parse(localStorage.getItem("ls_hof") || "{}");
+        const entries = hof[hofKey] || [];
+        entries.push({ player: userName, percentage: 100, timeTaken: result.timeTaken, completedAt: result.completedAt, questions: result.questions });
+        entries.sort((a, b) => (a.timeTaken || 9999) - (b.timeTaken || 9999));
+        hof[hofKey] = entries.slice(0, 5);
+        localStorage.setItem("ls_hof", JSON.stringify(hof));
+        setHallOfFame({ ...hof });
+      } catch {}
+    }
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
     // Globaal scorebord (iedereen, ook gasten)
     supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
@@ -775,12 +790,12 @@ export default function App() {
       {page === "leaderboard" && (
         <Leaderboard
           data={leaderboard}
-          results={results}
+          hallOfFame={hallOfFame}
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
           onHome={() => setPage("home")}
-          onRetry={(entry, questions) => {
-            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions?.length || 10, timePerQuestion: 0, topic: entry.topic || null, title: null, ...(questions ? { preGeneratedQuestions: questions } : {}) };
+          onChallenge={(entry, questions) => {
+            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
             startGame(quiz, "self");
           }}
         />
