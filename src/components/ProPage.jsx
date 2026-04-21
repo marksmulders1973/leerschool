@@ -42,22 +42,62 @@ const PLANS = [
     ],
   },
   {
-    id: "school",
+    id: "school_s",
+    icon: "🏡",
+    label: "School S",
+    price: "€29",
+    period: "/maand",
+    color: "#a855f7",
+    bg: "rgba(168,85,247,0.10)",
+    border: "rgba(168,85,247,0.3)",
+    tag: null,
+    limit: 150,
+    features: [
+      { text: "Alle leerkrachten onbeperkt", pro: true },
+      { text: "Ouder-toegang via schoolcode (max 150 leerlingen)", pro: true },
+      { text: "Schoolbrede voortgang dashboard", pro: true },
+      { text: "Eigen schoollogo in de app", pro: true },
+      { text: "Jaarfactuur beschikbaar", pro: true },
+    ],
+  },
+  {
+    id: "school_m",
     icon: "🎓",
-    label: "School",
+    label: "School M",
     price: "€49",
     period: "/maand",
     color: "#a855f7",
     bg: "rgba(168,85,247,0.12)",
     border: "rgba(168,85,247,0.35)",
-    tag: "Beste waarde",
+    tag: "Meest gekozen",
+    limit: 450,
     features: [
       { text: "Alle leerkrachten onbeperkt", pro: true },
-      { text: "Ouder-toegang voor alle leerlingen", pro: true },
+      { text: "Ouder-toegang via schoolcode (max 450 leerlingen)", pro: true },
       { text: "Schoolbrede voortgang dashboard", pro: true },
+      { text: "Eigen schoollogo in de app", pro: true },
       { text: "Jaarfactuur beschikbaar", pro: true },
       { text: "Prioriteit ondersteuning", pro: true },
+    ],
+  },
+  {
+    id: "school_l",
+    icon: "🏛️",
+    label: "School L",
+    price: "€79",
+    period: "/maand",
+    color: "#a855f7",
+    bg: "rgba(168,85,247,0.14)",
+    border: "rgba(168,85,247,0.4)",
+    tag: null,
+    limit: 800,
+    features: [
+      { text: "Alle leerkrachten onbeperkt", pro: true },
+      { text: "Ouder-toegang via schoolcode (max 800 leerlingen)", pro: true },
+      { text: "Schoolbrede voortgang dashboard", pro: true },
       { text: "Eigen schoollogo in de app", pro: true },
+      { text: "Jaarfactuur beschikbaar", pro: true },
+      { text: "Prioriteit ondersteuning", pro: true },
     ],
   },
 ];
@@ -136,34 +176,56 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         </div>
 
         {/* Plan selector */}
-        <div style={{ display: "flex", gap: 6, marginBottom: 16 }}>
-          {PLANS.map(p => (
-            <button key={p.id} onClick={() => setSelected(p.id)} style={{
-              flex: 1, padding: "9px 4px", borderRadius: 12, cursor: "pointer",
-              border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
-              background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
-              transition: "all 0.15s",
-              position: "relative",
-            }}>
-              {p.tag && (
-                <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>
-                  {p.tag}
-                </div>
-              )}
-              <div style={{ fontSize: 18 }}>{p.icon}</div>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: selected === p.id ? "#fff" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
-            </button>
-          ))}
+        <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
+          {/* Rij 1: Ouder + Leerkracht */}
+          <div style={{ display: "flex", gap: 6 }}>
+            {PLANS.filter(p => ["parent_pro", "teacher_pro"].includes(p.id)).map(p => (
+              <button key={p.id} onClick={() => setSelected(p.id)} style={{
+                flex: 1, padding: "9px 4px", borderRadius: 12, cursor: "pointer",
+                border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
+                background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
+                transition: "all 0.15s", position: "relative",
+              }}>
+                {p.tag && <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>{p.tag}</div>}
+                <div style={{ fontSize: 18 }}>{p.icon}</div>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: selected === p.id ? "#fff" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
+              </button>
+            ))}
+          </div>
+          {/* Rij 2: School S/M/L */}
+          <div style={{ display: "flex", gap: 6 }}>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.3)", display: "flex", alignItems: "center", paddingLeft: 2, whiteSpace: "nowrap" }}>School:</div>
+            {PLANS.filter(p => p.id.startsWith("school_")).map(p => (
+              <button key={p.id} onClick={() => setSelected(p.id)} style={{
+                flex: 1, padding: "9px 4px", borderRadius: 12, cursor: "pointer",
+                border: selected === p.id ? `2px solid ${p.color}` : "1px solid rgba(255,255,255,0.08)",
+                background: selected === p.id ? p.bg : "rgba(255,255,255,0.03)",
+                transition: "all 0.15s", position: "relative",
+              }}>
+                {p.tag && <div style={{ position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)", background: p.color, color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 9, fontWeight: 700, padding: "2px 7px", borderRadius: 10, whiteSpace: "nowrap" }}>{p.tag}</div>}
+                <div style={{ fontSize: 16 }}>{p.icon}</div>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, color: selected === p.id ? p.color : "rgba(255,255,255,0.4)", marginTop: 2 }}>{p.label}</div>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: selected === p.id ? "#fff" : "rgba(255,255,255,0.3)", marginTop: 1 }}>{p.price}</div>
+                {p.limit && <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 9, color: selected === p.id ? "rgba(255,255,255,0.5)" : "rgba(255,255,255,0.2)", marginTop: 1 }}>t/m {p.limit}</div>}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Plan detail kaart */}
         {plan && (
           <div style={{ borderRadius: 20, border: `2px solid ${plan.color}`, background: plan.bg, padding: "20px 18px", marginBottom: 20, boxShadow: `0 8px 32px ${plan.bg}` }}>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 16 }}>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: plan.limit ? 4 : 16 }}>
               <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 38, fontWeight: 700, color: "#fff" }}>{plan.price}</span>
               <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.4)" }}>{plan.period}</span>
             </div>
+            {plan.limit && (
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 14, display: "flex", alignItems: "center", gap: 6 }}>
+                <span style={{ background: `${plan.color}22`, border: `1px solid ${plan.color}44`, borderRadius: 6, padding: "2px 8px", color: plan.color, fontWeight: 700, fontSize: 11 }}>Max {plan.limit} leerlingen</span>
+                <span>Meer leerlingen? Kies een groter plan.</span>
+              </div>
+            )}
             <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
               {plan.features.map((f, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
