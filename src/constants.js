@@ -2292,7 +2292,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is 8 × 2?", options: ["16", "14", "20", "18"], answer: 0, explanation: "8 × 2 = 16 (tafel van 2)." },
       { q: "Hoeveel is 64 - 27?", options: ["43", "33", "47", "37"], answer: 3, explanation: "64 - 27 = 37." },
       { q: "Wat is 9 × 5?", options: ["55", "40", "45", "50"], answer: 2, explanation: "9 × 5 = 45 (tafel van 5)." },
-      { q: "Hoeveel is 53 + 29?", options: ["72", "92", "82", "72"], answer: 2, explanation: "53 + 29 = 82." },
+      { q: "Hoeveel is 53 + 29?", options: ["72", "92", "82", "68"], answer: 2, explanation: "53 + 29 = 82." },
       { q: "Wat is 4 × 2?", options: ["8", "12", "10", "6"], answer: 0, explanation: "4 × 2 = 8 (tafel van 2)." },
       { q: "Hoeveel is 71 - 34?", options: ["47", "43", "33", "37"], answer: 3, explanation: "71 - 34 = 37." },
       { q: "Welk getal is even?", options: ["51", "34", "27", "13"], answer: 1, explanation: "34 is deelbaar door 2, dus even." },
@@ -2602,7 +2602,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welk woord rijmt op 'maan'?", options: ["zon", "baan", "wolk", "regen"], answer: 1, explanation: "'Baan' rijmt op 'maan'." },
       { q: "Wat betekent 'snel'?", options: ["groot", "langzaam of groot", "langzaam", "hard/vlug"], answer: 3, explanation: "'Snel' betekent vlug of hard." },
       { q: "Welk woord is fout gespeld?", options: ["fiest", "huis of boom", "boom", "goed"], answer: 0, explanation: "Het is 'fiets', niet 'fiest'." },
-      { q: "Wat is het meervoud van 'fiets'?", options: ["fietsjes", "fietss", "fietsen", "fietsen"], answer: 2, explanation: "'Fietsen' is het meervoud van 'fiets'." },
+      { q: "Wat is het meervoud van 'fiets'?", options: ["fietsjes", "fietss", "fietsen", "fietses"], answer: 2, explanation: "'Fietsen' is het meervoud van 'fiets'." },
       { q: "Welke zin heeft een hoofdletter aan het begin?", options: ["De hond blaft.", "de Hond blaft.", "de hond blaft.", "De hond Blaft."], answer: 0, explanation: "Elke zin begint met een hoofdletter." },
       { q: "Wat is het verkleinwoord van 'stoel'?", options: ["stoelke", "stoelje", "stoelsje", "stoeltje"], answer: 3, explanation: "'Stoeltje' is het verkleinwoord van 'stoel'." },
       { q: "Welk woord betekent het tegenovergestelde van 'groot'?", options: ["breed", "klein", "lang", "dik"], answer: 1, explanation: "'Klein' is het antoniem van 'groot'." },
@@ -2630,7 +2630,7 @@ export const SAMPLE_QUESTIONS = {
     ],
     groep5: [
       { q: "Welk woord is fout geschreven?", options: ["pannenkoek", "fiets", "helemael", "gezellig"], answer: 2, explanation: "Het is 'helemaal', niet 'helemael'." },
-      { q: "Wat is het meervoud van 'stad'?", options: ["steden", "stads", "stadden", "stads"], answer: 0, explanation: "'Steden' is het onregelmatige meervoud." },
+      { q: "Wat is het meervoud van 'stad'?", options: ["steden", "stads", "stadden", "stadjes"], answer: 0, explanation: "'Steden' is het onregelmatige meervoud." },
       { q: "Welk woord is een bijvoeglijk naamwoord?", options: ["mooi", "tafel", "snel", "rennen"], answer: 0, explanation: "'Mooi' beschrijft een zelfstandig naamwoord." },
       { q: "Welke zin is correct?", options: ["Hij wordt boos", "Hij wort boos", "Hij word boos", "Hij wordd boos"], answer: 0, explanation: "Stam (word) + t = wordt." },
       { q: "Wat is een synoniem van 'blij'?", options: ["vrolijk", "verdrietig", "moe", "boos"], answer: 0, explanation: "'Vrolijk' betekent hetzelfde als 'blij'." },
@@ -2728,7 +2728,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is een superlatief?", options: ["Geen vergelijking of Vergrotende trap", "Vergrotende trap", "Geen vergelijking", "Overtreffende trap"], answer: 3, explanation: "Superlatief = overtreffende trap: 'het snelst', 'de mooiste'." },
       { q: "Welk zinsdeel ontbreekt: 'Morgen ... ik naar Amsterdam.'?", options: ["onderwerp", "bepaling van tijd", "persoonsvorm", "lijdend voorwerp"], answer: 2, explanation: "De persoonsvorm ontbreekt: 'ga' (Morgen ga ik naar Amsterdam)." },
       { q: "Wat is een prolepsis?", options: ["Vooruitwijzing in een verhaal (flash-forward)", "Terugblik in een verhaal onder bepaalde omstandigheden", "Een cliffhanger", "Een inleiding"], answer: 0, explanation: "Prolepsis = anticipatie: vooruitwijzen naar een later moment in het verhaal." },
-      { q: "Welke schrijfwijze is correct?", options: ["hij heeft gescored", "hij heeft gescored", "hij heeft gescoord", "hij heeft scoren"], answer: 2, explanation: "'Gescoord' — het voltooid deelwoord van 'scoren'." },
+      { q: "Welke schrijfwijze is correct?", options: ["hij heeft gescored", "hij heeft gescore", "hij heeft gescoord", "hij heeft scoren"], answer: 2, explanation: "'Gescoord' — het voltooid deelwoord van 'scoren'." },
       { q: "Wat is een epanalepsis?", options: ["Herhaling aan einde en einde van een zin of alinea", "Overdrijving", "Herhaling aan begin en einde van een zin of alinea", "Een vergelijking"], answer: 2, explanation: "Epanalepsis: 'In het begin was het woord, en aan het einde was het woord.' — herhalende structuur." },
       { q: "Welke zin bevat een meewerkend voorwerp?", options: ["Zij geeft haar broer een cadeau.", "Wij lopen naar school. of De hond blaft luid.", "Wij lopen naar school.", "Hij leest een boek."], answer: 0, explanation: "Aan wie geeft zij? → haar broer = meewerkend voorwerp." },
     ],
@@ -3279,7 +3279,7 @@ export const SAMPLE_QUESTIONS = {
   },
   natuur: {
     groep3: [
-      { q: "Welk dier legt eieren?", options: ["Kip", "Hond", "Kat", "Koe"], answer: 0, explanation: "Een kip legt eieren.", imageSearch: "Kip" },
+      { q: "Welk dier legt eieren?", options: ["Kip", "Hond", "Kat", "Koe"], answer: 0, explanation: "Een kip legt eieren.", svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 90"><rect width="180" height="90" rx="12" fill="#0d1f3c"/><text x="65" y="62" font-size="52" text-anchor="middle" font-family="sans-serif">🐔</text><text x="125" y="62" font-size="40" text-anchor="middle" font-family="sans-serif">🥚</text><text x="90" y="84" font-size="10" fill="#69f0ae" text-anchor="middle" font-family="sans-serif">Kip legt eieren</text></svg>' },
       { q: "In welk seizoen vallen bladeren van de bomen?", options: ["Winter", "Zomer", "Lente", "Herfst"], answer: 3, explanation: "In de herfst worden de blaadjes bruin en vallen ze." },
       { q: "Wat eten vlinders?", options: ["Vis", "Wormen in de natuur", "Nectar van bloemen", "Gras"], answer: 2, explanation: "Vlinders drinken nectar uit bloemen." },
       { q: "Welk dier slaapt de hele winter?", options: ["Koe", "Hond", "Kip", "Egel"], answer: 3, explanation: "Een egel houdt een winterslaap.", imageSearch: "Egel" },
@@ -4868,7 +4868,7 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is een bijvoeglijk naamwoord?", options: ["Een voornaamwoord dat een eigenschap van een zelfstandig naamwoord beschrijft", "Een werkwoord", "Een woord dat een eigenschap van een zelfstandig naamwoord beschrijft", "Een voornaamwoord"], answer: 2, explanation: "BV: 'de grote hond' — 'grote' is het bijvoeglijk naamwoord." },
       { q: "Wat is een synoniem?", options: ["Een woord met (bijna) dezelfde betekenis", "Een woord met tegengestelde betekenis", "Een samengesteld woord", "Een woord met tegengestelde betekenis of Een samengesteld woord"], answer: 0, explanation: "Synoniemen: blij = vrolijk = opgewekt. Ze zijn uitwisselbaar in context." },
       { q: "Welk leesteken geeft een vraag aan?", options: ["?", ".", ";", "!"], answer: 0, explanation: "Een zin die een vraag stelt, eindigt met een vraagteken (?)." },
-      { q: "Wat is de verkleinvorm van 'tafel'?", options: ["Tafelen", "Tafeltje", "Tafeltje", "Tafeltjen"], answer: 2, explanation: "Verkleinvorm van 'tafel' = 'tafeltje' (met verkleiningsuitgang -tje)." },
+      { q: "Wat is de verkleinvorm van 'tafel'?", options: ["Tafelen", "Tafeldje", "Tafeltje", "Tafeltjen"], answer: 2, explanation: "Verkleinvorm van 'tafel' = 'tafeltje' (met verkleiningsuitgang -tje)." },
       { q: "Wat is een actieve zin?", options: ["De handelende persoon is het lijdend voorwerp", "Er is geen werkwoord", "De handeling is in de verleden tijd", "Het onderwerp voert de handeling uit"], answer: 3, explanation: "Actief: 'De hond bijt de man.' — de hond (onderwerp) bijt (handeling)." },
       { q: "Wat is een passieve zin?", options: ["Het onderwerp ondergaat de handeling (er staat 'worden' of 'zijn' + voltooid deelwoord)", "Het onderwerp ondergaat de handeling (er staat 'worden' of 'zijn' + onvoltooid deelwoord)", "Een ontkenningszin", "De handelende persoon is het onderwerp"], answer: 0, explanation: "Passief: 'De man wordt gebeten (door de hond).' — man ondergaat de handeling." },
       { q: "Wat is een enkelvoudig onderwerp?", options: ["Eén persoon of ding als onderwerp in de zin", "Meerdere personen als onderwerp of Een bijzin als onderwerp", "Een bijzin als onderwerp", "Meerdere personen als onderwerp"], answer: 0, explanation: "Enkelvoudig onderwerp: 'De leerling leest.' — 'De leerling' is het onderwerp." },
@@ -5270,7 +5270,7 @@ export const SAMPLE_QUESTIONS = {
     ],
     groep7: [
       // ── dt-regels ────────────────────────────────────────────────────────
-      { q: "Welke zin is correct gespeld?", options: ["Hij werdt ziek van de kou.", "Hij werd ziek van de kou.", "Hij werd ziek van de kou.", "Hij weerdt ziek van de kou."], answer: 1, explanation: "'Werd' is de verleden tijd van 'worden'. Geen d aan het einde — de stam is 'word', verleden tijd: 'werd'." },
+      { q: "Welke zin is correct gespeld?", options: ["Hij werdt ziek van de kou.", "Hij werd ziek van de kou.", "Hij worde ziek van de kou.", "Hij weerdt ziek van de kou."], answer: 1, explanation: "'Werd' is de verleden tijd van 'worden'. Geen d aan het einde — de stam is 'word', verleden tijd: 'werd'." },
       { q: "Welke zin is correct?", options: ["Ze fietste naar school.", "Ze fietsde naar school.", "Ze fietstde naar school.", "Ze fietsd naar school."], answer: 0, explanation: "Stam van 'fietsen' is 'fiets' (eindigt op s, zit niet in 't kofschip). Verleden tijd enkelvoud: fietste." },
       { q: "Kies de correcte spelling: 'Ze _____ hard.'", options: ["werkte", "werkde", "weerkte", "werktte"], answer: 0, explanation: "Stam van 'werken' is 'werk' (k zit in 't kofschip). Verleden tijd: werkte." },
       { q: "Welk woord is fout gespeld?", options: ["Hij lachte.", "Ze danste.", "Hij speelde.", "Ze kookte."], answer: 2, explanation: "'Speelde' is correct voor 'spelen' (stam 'speel', niet in 't kofschip). Maar wacht — 'speelde' IS correct. De vraag test of je dit herkent als correct. Fout is geen van deze, maar als 'speelde' zou zijn geschreven als 'speelte' dan zou dat fout zijn." },
@@ -5288,11 +5288,11 @@ export const SAMPLE_QUESTIONS = {
 
       // ── Moeilijke woorden / verdubbeling ─────────────────────────────────
       { q: "Welke spelling is correct?", options: ["aanbeveling", "aanbeveeling", "aanbevelling", "aanbeveelling"], answer: 0, explanation: "'Aanbeveling' = aan + beveling. Geen verdubbeling nodig — de e is lang (open lettergreep)." },
-      { q: "Welke spelling is correct?", options: ["kunnen", "kunen", "kunnnen", "kunnen"], answer: 0, explanation: "'Kunnen' heeft een dubbele n omdat de u kort is (gesloten lettergreep: kun-nen)." },
+      { q: "Welke spelling is correct?", options: ["kunnen", "kunen", "kunnnen", "kunenn"], answer: 0, explanation: "'Kunnen' heeft een dubbele n omdat de u kort is (gesloten lettergreep: kun-nen)." },
       { q: "Welk woord is correct gespeld?", options: ["tennis", "tenis", "teniss", "ténnis"], answer: 0, explanation: "'Tennis' heeft dubbel n en dubbel s — een leenwoord uit het Engels dat zo is overgenomen." },
       { q: "Welke spelling is correct?", options: ["verantwoordelijkheid", "verantwoordelikheid", "verantwoordelijcheid", "verantwoorderlijkheid"], answer: 0, explanation: "'Verantwoordelijkheid' — let op de -lijk uitgang en de -heid suffix." },
       { q: "Welk woord is fout gespeld?", options: ["bibliotheek", "chocolade", "paraplu", "reciet"], answer: 3, explanation: "'Reciet' is fout — het juiste woord is 'recept' (van het Frans/Latijn)." },
-      { q: "Welke spelling is correct?", options: ["nauwkeurig", "nauwkeurig", "naukeurig", "nauwkeurig"], answer: 0, explanation: "'Nauwkeurig' — nauw + keurig. Schrijf 'nauw' met een w." },
+      { q: "Welke spelling is correct?", options: ["nauwkeurig", "nauwkeurich", "naukeurig", "nauwkeurieg"], answer: 0, explanation: "'Nauwkeurig' — nauw + keurig. Schrijf 'nauw' met een w." },
       { q: "Welk woord is correct?", options: ["waarschijnlijk", "waarsijnlijk", "waarscijnlijk", "waarsschijnlijk"], answer: 0, explanation: "'Waarschijnlijk' — let op de 'sch' combinatie en de -lijk uitgang." },
     ],
   },
