@@ -112,6 +112,9 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               💬 WhatsApp
             </button>
+            <button onClick={() => { window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}&quote=${encodeURIComponent(shareText)}`, "_blank"); setSent(true); }} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+              📘 Facebook
+            </button>
             <button onClick={sendViaEmail} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               ✉️ E-mail
             </button>
