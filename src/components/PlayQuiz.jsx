@@ -339,7 +339,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           return (
             <div style={{ marginTop: 16, padding: 16, background: "linear-gradient(135deg, #1a2f4a, #1e3550)", borderRadius: 14, borderLeft: "4px solid #1a73e8", animation: "slideUp 0.3s ease" }}>
               <div style={{ fontWeight: 800, marginBottom: 6, color: "#00e676", fontSize: 14 }}>💡 Uitleg</div>
-              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: (question.source || (question.imageInExplanation && questionImage)) ? 8 : 0 }}>{question.explanation}</div>
+              <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: (question.source || (question.imageInExplanation && questionImage)) ? 8 : 0, whiteSpace: "pre-line" }}>{question.explanation}</div>
               {question.imageInExplanation && questionImage && (
                 <img src={questionImage} alt="" style={{ width: "100%", maxHeight: 140, objectFit: "contain", borderRadius: 10, marginBottom: question.source ? 8 : 0, background: "#0f1729" }} />
               )}
@@ -432,7 +432,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
                 📖 Zo zit het
               </div>
-              <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5" }}>
+              <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5", whiteSpace: "pre-line" }}>
                 {question.explanation}
               </div>
               {question.source && (
