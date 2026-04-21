@@ -5,7 +5,7 @@ import { formatDate, daysUntil, shuffle } from "../utils.js";
 import Header from "./Header.jsx";
 import supabase from "../supabase.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
 
@@ -138,10 +138,29 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
       <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {/* Quiz limiet banner */}
+        {!isTeacherPro && (
+          <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 12, background: quizLimitReached ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.04)", border: `1px solid ${quizLimitReached ? "rgba(255,107,53,0.4)" : "rgba(255,255,255,0.1)"}`, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+            <div>
+              <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: quizLimitReached ? "#ff8c42" : "rgba(255,255,255,0.5)", fontWeight: 700 }}>
+                {quizLimitReached ? "⚠️ Limiet bereikt" : `📝 ${quizCount}/${quizLimit} toetsen`}
+              </span>
+              {!quizLimitReached && <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Gratis tot {quizLimit} toetsen</div>}
+            </div>
+            <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#ff6b35" : "rgba(255,107,53,0.2)", color: quizLimitReached ? "#fff" : "#ff8c42", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+              {quizLimitReached ? "Upgrade →" : "Pro: onbeperkt"}
+            </button>
+          </div>
+        )}
+        {isTeacherPro && (
+          <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(255,107,53,0.08)", border: "1px solid rgba(255,107,53,0.2)", display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "#ff8c42", fontWeight: 700 }}>✨ Pro — onbeperkt toetsen</span>
+          </div>
+        )}
         <div style={styles.actionRow}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00e676)" }} onClick={onCreateQuiz}>
+          <button style={{ ...styles.bigButton, background: quizLimitReached ? "rgba(255,255,255,0.06)" : "linear-gradient(135deg, #00c853, #00e676)", opacity: quizLimitReached ? 0.7 : 1 }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
-            <span style={{ fontWeight: 700 }}>Nieuwe Toets</span>
+            <span style={{ fontWeight: 700 }}>{quizLimitReached ? "🔒 Nieuwe Toets" : "Nieuwe Toets"}</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>

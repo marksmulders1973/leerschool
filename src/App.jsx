@@ -20,6 +20,10 @@ import SpellingPage from "./components/SpellingPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
 import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
+import UpgradePage from "./components/UpgradePage.jsx";
+import OuderDashboard from "./components/OuderDashboard.jsx";
+
+const FREE_QUIZ_LIMIT = 20;
 
 const TAFEL_VIDEOS = {
   1:  "https://www.youtube.com/watch?v=1rXBuNLDuM0",
@@ -92,6 +96,7 @@ export default function App() {
   const abortControllerRef = useRef(null);
   const [authUser, setAuthUser] = useState(null);
   const [streak, setStreak] = useState(0);
+  const [subscription, setSubscription] = useState({ tier: "free" });
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
 
@@ -104,6 +109,9 @@ export default function App() {
       const u = session?.user ?? null;
       setAuthUser(u);
       if (u) {
+        supabase.from("subscriptions").select("*").eq("user_id", u.id).single().then(({ data }) => {
+          if (data) setSubscription(data);
+        }).catch(() => {});
         supabase.from("profiles").select("*").eq("id", u.id).single().then(({ data }) => {
           if (data?.display_name) setUserName(data.display_name);
           if (data?.level) setUserLevel(data.level);
@@ -197,6 +205,9 @@ export default function App() {
         setPage("home"); // altijd eerst homepage tonen, niet automatisch starten
       });
   }, [pendingCode, quizzes]);
+
+  const isTeacherPro = subscription?.tier === "teacher_pro";
+  const quizLimitReached = !isTeacherPro && quizzes.length >= FREE_QUIZ_LIMIT;
 
   const createQuiz = (quiz) => {
     const newQuiz = {
@@ -382,6 +393,7 @@ export default function App() {
           onGoogleLogin={handleGoogleLogin}
           onLogout={handleLogout}
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
+          onOuderDashboard={() => setPage("ouder-dashboard")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
@@ -416,9 +428,14 @@ export default function App() {
           userName={userName}
           quizzes={quizzes}
           classes={classes}
-          onCreateQuiz={() => setPage("create-quiz")}
+          quizLimitReached={quizLimitReached}
+          quizCount={quizzes.length}
+          quizLimit={FREE_QUIZ_LIMIT}
+          isTeacherPro={isTeacherPro}
+          onCreateQuiz={() => quizLimitReached ? setPage("upgrade") : setPage("create-quiz")}
           onViewProgress={() => setPage("teacher-progress")}
           onManageClasses={() => setPage("class-manager")}
+          onUpgrade={() => setPage("upgrade")}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
@@ -813,6 +830,23 @@ export default function App() {
             const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
             startGame(quiz, "self");
           }}
+        />
+      )}
+      {page === "upgrade" && (
+        <UpgradePage
+          authUser={authUser}
+          plan={role === "teacher" ? "teacher_pro" : "parent_pro"}
+          onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
+      {page === "ouder-dashboard" && (
+        <OuderDashboard
+          authUser={authUser}
+          subscription={subscription}
+          onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
+          onUpgrade={() => setPage("upgrade")}
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
