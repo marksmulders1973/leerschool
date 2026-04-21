@@ -564,7 +564,7 @@ export default function App() {
       {page === "cito" && (
         <CitoPage
           onStart={(config) => {
-            const topicKey = `cito ${config.citoId}`;
+            const topicKey = config.groep === "8" ? `cito groep8-${config.citoId}` : `cito ${config.citoId}`;
             const pool = TOPIC_QUESTIONS[topicKey] || [];
             const shuffled = [...pool].sort(() => Math.random() - 0.5);
             const label = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" }[config.citoId] || "Cito";

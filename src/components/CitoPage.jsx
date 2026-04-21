@@ -72,8 +72,9 @@ export default function CitoPage({ onStart, onBack, onHome }) {
     SoundEngine.play("click");
     onStart({
       citoId: selected.id,
+      groep,
       subject: selected.subject,
-      level: "groep7",
+      level: `groep${groep}`,
       questionCount,
       timePerQuestion: 0,
       topic: selected.topic,
