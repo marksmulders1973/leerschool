@@ -157,7 +157,7 @@ REGELS:
     const hasCustomTopic = !!topic && !isVrijOnderwerp;
 
     const vakRegel = isVrijOnderwerp
-      ? `- Onderwerp: ${topic} (vrij gekozen — GEEN rekenvragen tenzij het onderwerp expliciet over rekenen gaat)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: Maak algemene kennisquizvragen over "${topic}". Denk aan feiten, geschiedenis, begrippen, processen, weetjes — passend bij het onderwerp. NIET automatisch rekenen of wiskunde gebruiken.\nAls het een specifiek bedrijf, locatie, persoon of organisatie is: gebruik de beschrijving in het onderwerp als basis. Maak vragen over wat het is, wat het doet, hoe het werkt, waar het staat — ook als je er weinig over weet, maak dan vragen die logisch passen bij de omschrijving.`
+      ? `- Onderwerp: ${topic}\n- Niveau (alleen voor moeilijkheidsgraad): ${levelLabel}\n\nSTAP 1 — ZOEK HET ONDERWERP OP:\nZoek via web search naar "${topic.trim().split(/[:—\n]/)[0].trim()}" om te begrijpen wat het is.\n- Wat is het? (bedrijf, persoon, plek, concept, gebeurtenis?)\n- Wat doet/deed het? Hoe werkt het?\n- Welke feiten, cijfers, namen, datums zijn relevant?\n\nSTAP 2 — MAAK DE VRAGEN:\nMaak ${count} kennisquizvragen UITSLUITEND over "${topic.trim().split(/[:—\n]/)[0].trim()}" op basis van wat je hebt gevonden.\n- GEEN rekensommen tenzij het onderwerp expliciet over rekenen gaat\n- Vragen over feiten, processen, begrippen, geschiedenis of weetjes van dit specifieke onderwerp\n- Gebruik de gevonden informatie als basis voor correcte antwoorden`
       : hasCustomTopic
         ? `- Onderwerp: ${topic}\n- Vak-context: ${subjectLabel} (gebruik dit alleen als het past bij het onderwerp)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Het onderwerp is leidend — niet het vak. Maak kennisquizvragen over feiten, begrippen, geschiedenis of weetjes over "${topic}". Gebruik de vak-context alleen als die logisch past. NIET automatisch ${subjectLabel.toLowerCase()}-vragen maken als het onderwerp er niets mee te maken heeft.`
         : `- Vak: ${subjectLabel}\n- Niveau: ${levelLabel}`;
@@ -215,14 +215,19 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
 - Geef ALLEEN de JSON array, geen markdown, geen backticks`;
   }
 
-  const useWebSearch = !!(textbook && textbook.bookName);
+  const useTextbookSearch = !!(textbook && textbook.bookName);
+  // Vrij onderwerp met eigen topic → web search zodat Claude het onderwerp online kan opzoeken
+  const useTopicSearch = !!(subject === "vrij" && topic && topic.trim().length > 0);
+  const useWebSearch = useTextbookSearch || useTopicSearch;
 
   try {
     const requestBody = {
       model: useWebSearch ? "claude-sonnet-4-20250514" : "claude-haiku-4-5-20251001",
       max_tokens: 4000,
-      system: useWebSearch
+      system: useTextbookSearch
         ? "Je bent een Nederlandse docent die quizvragen zoekt voor schoolkinderen. Je MOET web search gebruiken om eerst de ECHTE inhoudsopgave van het schoolboek te vinden voordat je vragen maakt. Vragen MOETEN aansluiten bij de werkelijke lesstof van het opgegeven hoofdstuk. Je genereert UITSLUITEND schoolvragen. De veiligheid van kinderen is je hoogste prioriteit."
+        : useTopicSearch
+        ? "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen over een specifiek onderwerp. Gebruik web search om het onderwerp op te zoeken zodat je accurate, feitelijk correcte vragen kunt stellen. Geef UITSLUITEND de JSON array terug, geen andere tekst. De veiligheid van kinderen is je hoogste prioriteit."
         : "Je bent een Nederlandse schooldocent die quizvragen maakt voor kinderen. Genereer gevarieerde, leerzame vragen die passen bij het opgegeven vak en niveau. BELANGRIJK: controleer elk antwoord en elke uitleg op feitelijke juistheid voordat je de JSON teruggeeft. Een fout antwoord of foutieve uitleg is erger dan geen vraag. De veiligheid en correctheid voor kinderen is je hoogste prioriteit. Je genereert UITSLUITEND schoolvragen.",
       messages: [{ role: "user", content: prompt }],
     };
