@@ -798,30 +798,69 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       }}>
                         {entry.percentage}%
                       </div>
-                      {/* Acties */}
-                      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-                        {canChallenge && (
-                          <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
-                            style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
-                            🎯 Uitdagen
-                          </button>
-                        )}
-                        {isMe && (
-                          <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
-                            style={{ padding: "3px 8px", border: "1px solid #25D366", borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none" }}>
-                            📲 Delen
-                          </a>
-                        )}
-                      </div>
+                      {/* Acties (voor #2 en #3) */}
+                      {i > 0 && (
+                        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                          {canChallenge && (
+                            <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
+                              style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
+                              🎯 Uitdagen
+                            </button>
+                          )}
+                          {isMe && (
+                            <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                              style={{ padding: "3px 8px", border: "1px solid #25D366", borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none" }}>
+                              📲 Delen
+                            </a>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
 
                   {/* Kampioen-banner voor #1 */}
-                  {i === 0 && (
-                    <div style={{ marginTop: 12, padding: "8px 12px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)", fontSize: 11, color: "#aaa", textAlign: "center" }}>
-                      {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
+                  {i === 0 && !isMe && (
+                    <div style={{ marginTop: 12, padding: "8px 12px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                      <span style={{ fontSize: 11, color: "#aaa" }}>
+                        {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
+                      </span>
+                      {canChallenge && (
+                        <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
+                          style={{ padding: "4px 12px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+                          🎯 Uitdagen
+                        </button>
+                      )}
                     </div>
                   )}
+
+                  {/* Deel-sectie voor #1 als het jij bent */}
+                  {i === 0 && isMe && (() => {
+                    const waText = `🏆 Kijk eens wat ik heb gehaald met Studiebol!\n\nIk ben ${current.title}! 🎉\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 👉 https://studiebol.online`;
+                    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`;
+                    return (
+                      <div style={{ marginTop: 14, padding: "12px 14px", borderRadius: 12, background: "rgba(255,215,0,0.06)", border: "1px solid rgba(255,215,0,0.25)" }}>
+                        <div style={{ fontSize: 12, color: "#ffd700", fontWeight: 800, textAlign: "center", marginBottom: 10 }}>
+                          🎉 Kijk eens wat ik heb gehaald! Deel het!
+                        </div>
+                        <div style={{ display: "flex", gap: 8 }}>
+                          <a href={`https://wa.me/?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer" style={{
+                            flex: 1, padding: "10px 8px", borderRadius: 10, background: "#25D366",
+                            color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13,
+                            textDecoration: "none", textAlign: "center", display: "block",
+                          }}>
+                            📱 WhatsApp
+                          </a>
+                          <a href={fbUrl} target="_blank" rel="noopener noreferrer" style={{
+                            flex: 1, padding: "10px 8px", borderRadius: 10, background: "#1877F2",
+                            color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13,
+                            textDecoration: "none", textAlign: "center", display: "block",
+                          }}>
+                            👍 Facebook
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               );
             })}
