@@ -5491,7 +5491,6 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welk gas is het meest aanwezig in de atmosfeer van de aarde?", options: ["Zuurstof (O₂)", "Kooldioxide (CO₂)", "Stikstof (N₂)", "Waterdamp"], answer: 2, explanation: "De atmosfeer bestaat voor ~78% uit stikstof (N₂), ~21% zuurstof, en een klein deel andere gassen." },
       { q: "Hoe heet het verschijnsel waarbij de aarde opwarmt door broeikasgassen?", options: ["Ozonvervuiling", "Zure regen", "Het broeikaseffect", "UV-straling"], answer: 2, explanation: "Het broeikaseffect: CO₂ en andere gassen houden warmte vast in de atmosfeer, waardoor de aarde opwarmt." },
       { q: "Welke uitvinding van Johannes Gutenberg (±1450) veranderde de wereld?", options: ["De stoommachine", "De boekdrukkunst", "Het kompas", "Het buskruit"], answer: 1, explanation: "Gutenberg uitvond de boekdrukpers (~1450). Hierdoor konden boeken snel worden gekopieerd en verspreid." },
-    ]
     ],
     groep8: [
       // ── Rekenen & Wiskunde (10 vragen, moeilijker) ──────────────────
