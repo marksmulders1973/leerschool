@@ -452,7 +452,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                             {hofEntries.map((e, rank) => {
                               const isMe = e.player === currentUser;
                               const canChallenge = onChallenge && e.questions?.length;
-                              const hofShareText = `🏅 Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan? Doe de uitdaging! 🎯\nhttps://studiebol.online`;
+                              const myShareText = `🏅 Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan? Doe de uitdaging! 🎯\nhttps://studiebol.online`;
+                              const challengeText = `💪 Hey! Kun jij ${e.player} verslaan op Studiebol?\n\n${e.player} staat in de Hall of Fame:\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nDoe de uitdaging! 🎯\nhttps://studiebol.online`;
                               return (
                                 <div key={rank} style={{
                                   padding: "10px 14px",
@@ -477,21 +478,17 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                       </button>
                                     )}
                                   </div>
-                                  {isMe && (
-                                    <div style={{ marginTop: 8, padding: "8px 10px", borderRadius: 10, background: "rgba(0,212,255,0.06)", border: "1px solid rgba(0,212,255,0.2)" }}>
-                                      <div style={{ fontSize: 11, color: "#00d4ff", fontWeight: 700, marginBottom: 6 }}>🎉 Jij staat hier! Deel het en daag anderen uit:</div>
-                                      <div style={{ display: "flex", gap: 6 }}>
-                                        <a href={`https://wa.me/?text=${encodeURIComponent(hofShareText)}`} target="_blank" rel="noopener noreferrer"
-                                          style={{ flex: 1, padding: "7px 4px", borderRadius: 8, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 12, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                          📱 WhatsApp
-                                        </a>
-                                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                          style={{ flex: 1, padding: "7px 4px", borderRadius: 8, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 12, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                          👍 Facebook
-                                        </a>
-                                      </div>
-                                    </div>
-                                  )}
+                                  {/* Deel-knoppen: eigen entry → "deel jouw record", anders → "daag uit" */}
+                                  <div style={{ marginTop: 7, display: "flex", gap: 5 }}>
+                                    <a href={`https://wa.me/?text=${encodeURIComponent(isMe ? myShareText : challengeText)}`} target="_blank" rel="noopener noreferrer"
+                                      style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                      📱 {isMe ? "Deel" : "Uitdagen"} WA
+                                    </a>
+                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                      style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                      👍 {isMe ? "Deel" : "Uitdagen"} FB
+                                    </a>
+                                  </div>
                                 </div>
                               );
                             })}
