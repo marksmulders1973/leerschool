@@ -14,7 +14,8 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const initLevel = groepBuckets[initGroep] || klasBuckets[initKlas]
     || (initialSubject && citoSubjects.includes(initialSubject) ? "groep7" : "")
     || (["tafels","spelling","woordenschat","redactiesommen"].includes(initialSubject) ? "groep5" : "")
-    || (initialSubject === "eindexamen" ? "klas3" : "");
+    || (initialSubject === "eindexamen" ? "klas3" : "")
+    || (initialSubject === "ai-vragen" ? "nvt" : "");
 
   const [subject, setSubject] = useState(initialSubject || "");
   const [level, setLevel] = useState(initLevel);
