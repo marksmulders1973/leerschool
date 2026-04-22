@@ -220,8 +220,7 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
   const useTopicSearch = !!(subject === "vrij" && topic && topic.trim().length > 0);
   const useWebSearch = useTextbookSearch || useTopicSearch;
 
-  try {
-    const requestBody = {
+  const requestBody = {
       model: useWebSearch ? "claude-sonnet-4-20250514" : "claude-haiku-4-5-20251001",
       max_tokens: 4000,
       system: useTextbookSearch
