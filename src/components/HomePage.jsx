@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../styles.js";
-import { LEVELS } from "../constants.js";
+import { LEVELS, SUBJECTS } from "../constants.js";
+import supabase from "../supabase.js";
 
 const TICKER_ITEMS = [
   { icon: "🎯", text: "Cito eindtoets oefenen" },
@@ -18,7 +19,41 @@ const TICKER_ITEMS = [
 ];
 
 function TickerBanner() {
-  const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
+  const [weekWinner, setWeekWinner] = useState(null);
+
+  useEffect(() => {
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    const day = now.getDay();
+    startOfWeek.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
+    startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek);
+    endOfWeek.setDate(startOfWeek.getDate() + 6);
+    endOfWeek.setHours(23, 59, 59, 999);
+
+    const fmtShort = (d) => d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
+    const weekLabel = `${fmtShort(startOfWeek)}–${fmtShort(endOfWeek)}`;
+
+    supabase.from("leaderboard")
+      .select("player_name, subject, level, title, topic, percentage, time_taken")
+      .gte("completed_at", startOfWeek.toISOString())
+      .lte("completed_at", endOfWeek.toISOString())
+      .order("percentage", { ascending: false })
+      .order("time_taken", { ascending: true, nullsFirst: false })
+      .limit(1)
+      .then(({ data }) => { if (data?.[0]) setWeekWinner({ ...data[0], weekLabel }); })
+      .catch(() => {});
+  }, []);
+
+  const winnerItems = weekWinner ? (() => {
+    const subj = SUBJECTS.find(s => s.id === weekWinner.subject);
+    const vakLabel = weekWinner.title || weekWinner.topic?.split('\n')[0].slice(0, 40) || (subj ? `${subj.label}` : weekWinner.subject);
+    return [{ icon: "🏆", text: `Gefeliciteerd ${weekWinner.player_name}! 🎉 Studiebol van de week (${weekWinner.weekLabel}) — ${vakLabel} · ${weekWinner.percentage}%`, special: true }];
+  })() : [];
+
+  const allItems = [...winnerItems, ...TICKER_ITEMS, ...winnerItems, ...TICKER_ITEMS];
+  const items = allItems;
+
   return (
     <>
       <style>{`
@@ -49,7 +84,7 @@ function TickerBanner() {
         }} />
         <div style={{
           display: "flex",
-          animation: "tickerScroll 28s linear infinite",
+          animation: `tickerScroll ${28 + winnerItems.length * 4}s linear infinite`,
           width: "max-content",
         }}>
           {items.map((item, i) => (
@@ -60,13 +95,14 @@ function TickerBanner() {
               padding: "0 18px",
               whiteSpace: "nowrap",
               fontFamily: "'Nunito', sans-serif",
-              fontSize: 13,
+              fontSize: item.special ? 14 : 13,
               fontWeight: 700,
-              color: "rgba(255,255,255,0.65)",
+              color: item.special ? "#ffd700" : "rgba(255,255,255,0.65)",
+              textShadow: item.special ? "0 0 12px rgba(255,215,0,0.5)" : "none",
             }}>
-              <span style={{ fontSize: 15 }}>{item.icon}</span>
+              <span style={{ fontSize: item.special ? 17 : 15 }}>{item.icon}</span>
               {item.text}
-              <span style={{ color: "rgba(0,212,255,0.35)", marginLeft: 8 }}>·</span>
+              <span style={{ color: item.special ? "rgba(255,215,0,0.3)" : "rgba(0,212,255,0.35)", marginLeft: 8 }}>·</span>
             </span>
           ))}
         </div>
