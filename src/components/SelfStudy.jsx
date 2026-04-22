@@ -181,7 +181,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
           <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
             <label style={{ ...styles.settingLabel, marginBottom: 4 }}>Waar wil je over leren?</label>
             <div style={{ fontSize: 11, color: "#7aaa88", marginBottom: 10, lineHeight: 1.5 }}>
-              💡 <strong>Tip:</strong> omschrijf het onderwerp zo duidelijk mogelijk. Bijv. <em>"Sonac: een fabriek in Vuren die dierlijk vet verwerkt"</em> of <em>"de fotosynthese bij planten"</em>. Hoe meer context, hoe beter de vragen!
+              💡 <strong>Tip:</strong> omschrijf het onderwerp zo duidelijk mogelijk. Bijv. <em>"De Franse Revolutie"</em> of <em>"fotosynthese bij planten"</em> of <em>"mijn fabriek: wij verwerken dierlijk vet tot veevoer"</em>. Hoe meer context, hoe beter de vragen!
             </div>
             <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; VO</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
@@ -205,7 +205,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
               style={{ ...styles.textInput, fontSize: 14, resize: "vertical", minHeight: 56 }}
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              placeholder="Bijv. 'Sonac: een fabriek in Vuren die dierlijk vet en eiwitten verwerkt' of 'de Franse Revolutie'..."
+              placeholder="Bijv. 'de Franse Revolutie' of 'mijn werkplek: wij maken...' of 'fotosynthese bij planten'..."
               maxLength={200}
               rows={2}
             />
