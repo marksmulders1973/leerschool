@@ -129,10 +129,26 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                 </select>
               </div>
             </div>
-            {level && (
+            {level && level !== "nvt" && (
               <div style={{ fontSize: 12, color: "#00e676", fontWeight: 600, marginBottom: 12 }}>
                 ✅ Niveau gekozen!
               </div>
+            )}
+            {eigenMode && !groepSelect && !klasSelect && (
+              <button
+                onClick={() => setLevel(level === "nvt" ? "" : "nvt")}
+                style={{
+                  width: "100%", marginTop: 8, marginBottom: 12, padding: "10px 14px", borderRadius: 12, cursor: "pointer",
+                  border: level === "nvt" ? "2px solid #8899aa" : "1px solid rgba(255,255,255,0.1)",
+                  background: level === "nvt" ? "rgba(136,153,170,0.15)" : "rgba(255,255,255,0.04)",
+                  color: level === "nvt" ? "#c0cfe0" : "#8899aa",
+                  fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 14,
+                  display: "flex", alignItems: "center", justifyContent: "space-between",
+                }}
+              >
+                <span>🚫 Niet van toepassing — ik zit niet op school</span>
+                <span>{level === "nvt" ? "✅" : "→"}</span>
+              </button>
             )}
           </>
         )}
