@@ -20,6 +20,39 @@ const TICKER_ITEMS = [
 
 function TickerBanner() {
   const [winners, setWinners] = useState([]);
+  const [awardItems, setAwardItems] = useState([]);
+
+  useEffect(() => {
+    // Fetch week-awards voor lichtkrant (Doorzetter + Hardwerker)
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
+    startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
+
+    supabase.from("leaderboard")
+      .select("player_name, score, percentage, completed_at")
+      .gte("completed_at", startOfWeek.toISOString())
+      .lte("completed_at", endOfWeek.toISOString())
+      .order("completed_at", { ascending: true })
+      .then(({ data }) => {
+        if (!data?.length) return;
+        const byPlayer = {};
+        data.forEach(e => {
+          if (!byPlayer[e.player_name]) byPlayer[e.player_name] = [];
+          byPlayer[e.player_name].push(e);
+        });
+        const players = Object.entries(byPlayer);
+        const [doorzName, doorzE] = [...players].sort((a, b) => b[1].length - a[1].length)[0] || [];
+        const [hardName, hardE] = [...players].sort((a, b) => b[1].reduce((s, e) => s + (e.score || 0), 0) - a[1].reduce((s, e) => s + (e.score || 0), 0))[0] || [];
+        const verbPlayers = players.filter(([, e]) => e.length >= 2).map(([name, e]) => ({ name, imp: e[e.length - 1].percentage - e[0].percentage })).filter(p => p.imp > 0).sort((a, b) => b.imp - a.imp);
+        const items = [];
+        if (doorzName) items.push({ icon: "💪", text: `Knap! ${doorzName} is Doorzetter van de week — ${doorzE.length} toetsen gemaakt!`, special: true });
+        if (hardName && hardName !== doorzName) items.push({ icon: "🧠", text: `Wauw! ${hardName} is Hardwerker van de week — ${hardE.reduce((s, e) => s + (e.score || 0), 0)} vragen goed!`, special: true });
+        if (verbPlayers[0] && verbPlayers[0].name !== doorzName && verbPlayers[0].name !== hardName) items.push({ icon: "📈", text: `Super! ${verbPlayers[0].name} is Verbeteraar van de week — +${verbPlayers[0].imp}% verbeterd!`, special: true });
+        setAwardItems(items);
+      }).catch(() => {});
+  }, []);
 
   useEffect(() => {
     const now = new Date();
@@ -65,15 +98,16 @@ function TickerBanner() {
     return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
-  // Verspreid winnaars tussen de gewone items
-  const half = Math.ceil(TICKER_ITEMS.length / Math.max(winnerItems.length, 1));
+  // Verspreid alle speciale items (kampioenen + awards) tussen gewone items
+  const allSpecial = [...winnerItems, ...awardItems];
+  const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {
     combined.push(item);
-    const wi = winnerItems[Math.floor(i / half)];
-    if (wi && i % half === half - 1) combined.push(wi);
+    const si = allSpecial[Math.floor(i / half)];
+    if (si && i % half === half - 1) combined.push(si);
   });
-  winnerItems.forEach(wi => { if (!combined.includes(wi)) combined.push(wi); });
+  allSpecial.forEach(si => { if (!combined.includes(si)) combined.push(si); });
   const items = [...combined, ...combined];
 
   return (
@@ -106,7 +140,7 @@ function TickerBanner() {
         }} />
         <div style={{
           display: "flex",
-          animation: `tickerScroll ${30 + winnerItems.length * 5}s linear infinite`,
+          animation: `tickerScroll ${30 + allSpecial.length * 5}s linear infinite`,
           width: "max-content",
         }}>
           {items.map((item, i) => (

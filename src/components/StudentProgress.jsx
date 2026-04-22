@@ -350,19 +350,43 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
 
   return (
     <div style={styles.page}>
+      <style>{`@keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
       <Header title="Scorebord 🏆" subtitle={globalData ? "🌍 Globaal · Top 50" : "Top scores"} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {onKampioenen && (
-          <button onClick={onKampioenen} style={{
-            width: "100%", padding: "14px", borderRadius: 14, border: "2px solid #ffd700",
-            background: "linear-gradient(135deg, #2a1f00, #3a2c00)", color: "#ffd700",
-            fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer",
-            marginBottom: 14, display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
-          }}>
-            <span style={{ fontSize: 22 }}>👑</span>
-            Kampioenen — dag · week · maand · jaar
-            <span style={{ fontSize: 22 }}>👑</span>
-          </button>
+          <>
+            <button onClick={onKampioenen} style={{
+              width: "100%", padding: "14px", borderRadius: 14, border: "2px solid #ffd700",
+              background: "linear-gradient(135deg, #2a1f00, #3a2c00)", color: "#ffd700",
+              fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer",
+              marginBottom: 0, display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
+            }}>
+              <span style={{ fontSize: 22 }}>👑</span>
+              Kampioenen — dag · week · maand · jaar
+              <span style={{ fontSize: 22 }}>👑</span>
+            </button>
+            {/* Mini-lichtkrant onder de gele balk */}
+            {entries.length > 0 && (() => {
+              const tickerEntries = entries.slice(0, 10);
+              const tickerText = tickerEntries.map(e => {
+                const subj = SUBJECTS.find(s => s.id === e.subject);
+                const label = e.title || e.topic?.split('\n')[0].slice(0, 25) || subj?.label || e.subject;
+                return `${subj?.icon || "🎯"} ${e.player} · ${label} · ${e.percentage}%`;
+              }).join("  ·  ");
+              const doubled = tickerText + "  ·  " + tickerText;
+              return (
+                <div style={{ overflow: "hidden", borderRadius: "0 0 10px 10px", background: "rgba(255,215,0,0.06)", borderLeft: "2px solid #ffd70033", borderRight: "2px solid #ffd70033", borderBottom: "2px solid #ffd70033", marginBottom: 14, padding: "5px 0" }}>
+                  <div style={{ display: "flex", animation: "tickerScroll 35s linear infinite", width: "max-content" }}>
+                    {[0, 1].map(i => (
+                      <span key={i} style={{ fontSize: 11, color: "#c8a820", fontFamily: "'Nunito', sans-serif", fontWeight: 700, whiteSpace: "nowrap", padding: "0 12px" }}>
+                        {tickerText}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+          </>
         )}
         {/* ── Hall of Fame sectie ── */}
         {(() => {
@@ -573,16 +597,76 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
   const [winners, setWinners] = useState({ dag: [], week: [], maand: [], jaar: [] });
   const [loading, setLoading] = useState(true);
   const [globalHof, setGlobalHof] = useState({});
+  const [awards, setAwards] = useState({});
+  const [awardsLoading, setAwardsLoading] = useState({});
 
-  useEffect(() => {
+  const periodRanges = (() => {
     const now = new Date();
     const startOfDay = new Date(now); startOfDay.setHours(0, 0, 0, 0);
+    const endOfDay = new Date(now); endOfDay.setHours(23, 59, 59, 999);
     const startOfWeek = new Date(now);
-    const day = now.getDay();
-    startOfWeek.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
-    startOfWeek.setHours(0, 0, 0, 0);
+    const d = now.getDay();
+    startOfWeek.setDate(now.getDate() - (d === 0 ? 6 : d - 1)); startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
     const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const endOfYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59, 999);
+    return {
+      dag:   { from: startOfDay,   to: endOfDay   },
+      week:  { from: startOfWeek,  to: endOfWeek  },
+      maand: { from: startOfMonth, to: endOfMonth },
+      jaar:  { from: startOfYear,  to: endOfYear  },
+    };
+  })();
+
+  const calcAwards = (entries) => {
+    if (!entries.length) return {};
+    const byPlayer = {};
+    entries.forEach(e => {
+      const name = e.player_name;
+      if (!byPlayer[name]) byPlayer[name] = [];
+      byPlayer[name].push(e);
+    });
+    const players = Object.entries(byPlayer);
+    const sorted = (fn) => [...players].sort(fn)[0];
+
+    const [doorzName, doorzE] = sorted((a, b) => b[1].length - a[1].length) || [];
+    const [hardName, hardE] = sorted((a, b) => b[1].reduce((s, e) => s + (e.score || 0), 0) - a[1].reduce((s, e) => s + (e.score || 0), 0)) || [];
+    const verbPlayers = players
+      .filter(([, e]) => e.length >= 2)
+      .map(([name, e]) => ({ name, imp: e[e.length - 1].percentage - e[0].percentage }))
+      .filter(p => p.imp > 0).sort((a, b) => b.imp - a.imp);
+    const [actiefName, actiefE] = sorted((a, b) => new Set(b[1].map(e => e.completed_at?.slice(0, 10))).size - new Set(a[1].map(e => e.completed_at?.slice(0, 10))).size) || [];
+
+    return {
+      doorzetter: doorzName ? { name: doorzName, value: doorzE.length, unit: "toetsen gemaakt" } : null,
+      hardwerker: hardName ? { name: hardName, value: hardE.reduce((s, e) => s + (e.score || 0), 0), unit: "vragen goed" } : null,
+      verbeteraar: verbPlayers[0] ? { name: verbPlayers[0].name, value: verbPlayers[0].imp, unit: "% verbeterd" } : null,
+      actiefste: actiefName ? { name: actiefName, value: new Set(actiefE.map(e => e.completed_at?.slice(0, 10))).size, unit: "dagen actief" } : null,
+    };
+  };
+
+  useEffect(() => {
+    if (awards[activePeriod] || awardsLoading[activePeriod]) return;
+    setAwardsLoading(prev => ({ ...prev, [activePeriod]: true }));
+    const { from, to } = periodRanges[activePeriod];
+    supabase.from("leaderboard")
+      .select("player_name, score, total, percentage, completed_at")
+      .gte("completed_at", from.toISOString())
+      .lte("completed_at", to.toISOString())
+      .order("completed_at", { ascending: true })
+      .then(({ data }) => {
+        setAwards(prev => ({ ...prev, [activePeriod]: calcAwards(data || []) }));
+        setAwardsLoading(prev => ({ ...prev, [activePeriod]: false }));
+      }).catch(() => setAwardsLoading(prev => ({ ...prev, [activePeriod]: false })));
+  }, [activePeriod]);
+
+  useEffect(() => {
+    const { from: startOfDay } = periodRanges.dag;
+    const { from: startOfWeek } = periodRanges.week;
+    const { from: startOfMonth } = periodRanges.maand;
+    const { from: startOfYear } = periodRanges.jaar;
 
     const fetchTop3 = (since) =>
       supabase.from("leaderboard")
@@ -741,6 +825,61 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 </div>
               );
             })}
+
+            {/* ── Aanmoedigingsprijzen ── */}
+            {(() => {
+              const periodLabel = current.label.toLowerCase();
+              const periodAwards = awards[activePeriod];
+              const awardDefs = [
+                { key: "doorzetter", icon: "💪", title: "Doorzetter",    color: "#00c853", bg: "#001a08", border: "#00c853", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "hardwerker", icon: "🧠", title: "Hardwerker",    color: "#1a73e8", bg: "#000d1a", border: "#1a73e8", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "verbeteraar",icon: "📈", title: "Verbeteraar",   color: "#ff9800", bg: "#1a0d00", border: "#ff9800", msg: (a) => `+${a.value}% verbeterd ${periodLabel}` },
+                { key: "actiefste",  icon: "🔥", title: "Meest actief",  color: "#e91e63", bg: "#1a0010", border: "#e91e63", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+              ];
+              const hasAny = periodAwards && Object.values(periodAwards).some(Boolean);
+              if (!hasAny && !awardsLoading[activePeriod]) return null;
+              return (
+                <div style={{ marginTop: 8 }}>
+                  <div style={{ textAlign: "center", color: "#8899aa", fontSize: 12, fontWeight: 700, marginBottom: 10, letterSpacing: 1 }}>
+                    — AANMOEDIGINGSPRIJZEN —
+                  </div>
+                  {awardsLoading[activePeriod] ? (
+                    <div style={{ textAlign: "center", color: "#8899aa", fontSize: 12 }}>Laden...</div>
+                  ) : (
+                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                      {awardDefs.map(({ key, icon, title, color, bg, border, msg }) => {
+                        const a = periodAwards?.[key];
+                        if (!a) return null;
+                        const isMe = a.name === currentUser;
+                        return (
+                          <div key={key} style={{
+                            display: "flex", alignItems: "center", gap: 12, padding: "12px 14px",
+                            borderRadius: 14, background: bg, border: `1.5px solid ${border}22`,
+                            boxShadow: isMe ? `0 0 12px ${color}33` : "none",
+                          }}>
+                            <div style={{ fontSize: 28, flexShrink: 0 }}>{icon}</div>
+                            <div style={{ flex: 1 }}>
+                              <div style={{ fontSize: 11, color, fontWeight: 800, letterSpacing: 0.5 }}>{title.toUpperCase()}</div>
+                              <div style={{ fontSize: 14, fontWeight: 800, color: isMe ? color : "#e0e6f0", marginTop: 2 }}>
+                                {a.name} {isMe && <span style={{ fontSize: 10, color: "#8899aa" }}>(jij!)</span>}
+                              </div>
+                              <div style={{ fontSize: 11, color: "#8899aa", marginTop: 1 }}>{msg(a)}</div>
+                            </div>
+                            {isMe && (
+                              <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel}!\n${a.value} ${a.unit} — zo doe ik dat! 💪\n\nhttps://studiebol.online`)}`}
+                                target="_blank" rel="noopener noreferrer"
+                                style={{ padding: "4px 10px", border: `1px solid #25D366`, borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                📲 Delen
+                              </a>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
           </div>
         )}
       </div>
