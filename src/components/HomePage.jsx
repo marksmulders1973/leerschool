@@ -19,40 +19,62 @@ const TICKER_ITEMS = [
 ];
 
 function TickerBanner() {
-  const [weekWinner, setWeekWinner] = useState(null);
+  const [winners, setWinners] = useState([]);
 
   useEffect(() => {
     const now = new Date();
-    const startOfWeek = new Date(now);
-    const day = now.getDay();
-    startOfWeek.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
-    startOfWeek.setHours(0, 0, 0, 0);
-    const endOfWeek = new Date(startOfWeek);
-    endOfWeek.setDate(startOfWeek.getDate() + 6);
-    endOfWeek.setHours(23, 59, 59, 999);
-
     const fmtShort = (d) => d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
-    const weekLabel = `${fmtShort(startOfWeek)}–${fmtShort(endOfWeek)}`;
 
-    supabase.from("leaderboard")
-      .select("player_name, subject, level, title, topic, percentage, time_taken")
-      .gte("completed_at", startOfWeek.toISOString())
-      .lte("completed_at", endOfWeek.toISOString())
-      .order("percentage", { ascending: false })
-      .order("time_taken", { ascending: true, nullsFirst: false })
-      .limit(1)
-      .then(({ data }) => { if (data?.[0]) setWeekWinner({ ...data[0], weekLabel }); })
-      .catch(() => {});
+    const startOfDay = new Date(now); startOfDay.setHours(0, 0, 0, 0);
+    const endOfDay = new Date(now); endOfDay.setHours(23, 59, 59, 999);
+
+    const startOfWeek = new Date(now);
+    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
+    startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
+
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
+
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const endOfYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59, 999);
+
+    const periods = [
+      { icon: "☀️", label: "dag",   periode: fmtShort(startOfDay),                                    from: startOfDay,   to: endOfDay   },
+      { icon: "📅", label: "week",  periode: `${fmtShort(startOfWeek)}–${fmtShort(endOfWeek)}`,        from: startOfWeek,  to: endOfWeek  },
+      { icon: "🗓️", label: "maand", periode: now.toLocaleDateString("nl-NL", { month: "long" }),        from: startOfMonth, to: endOfMonth },
+      { icon: "👑", label: "jaar",  periode: String(now.getFullYear()),                                  from: startOfYear,  to: endOfYear  },
+    ];
+
+    Promise.all(periods.map(p =>
+      supabase.from("leaderboard")
+        .select("player_name, subject, level, title, topic, percentage, time_taken")
+        .gte("completed_at", p.from.toISOString())
+        .lte("completed_at", p.to.toISOString())
+        .order("percentage", { ascending: false })
+        .order("time_taken", { ascending: true, nullsFirst: false })
+        .limit(1)
+        .then(({ data }) => data?.[0] ? { ...p, winner: data[0] } : null)
+        .catch(() => null)
+    )).then(results => setWinners(results.filter(Boolean)));
   }, []);
 
-  const winnerItems = weekWinner ? (() => {
-    const subj = SUBJECTS.find(s => s.id === weekWinner.subject);
-    const vakLabel = weekWinner.title || weekWinner.topic?.split('\n')[0].slice(0, 40) || (subj ? `${subj.label}` : weekWinner.subject);
-    return [{ icon: "🏆", text: `Gefeliciteerd ${weekWinner.player_name}! 🎉 Studiebol van de week (${weekWinner.weekLabel}) — ${vakLabel} · ${weekWinner.percentage}%`, special: true }];
-  })() : [];
+  const winnerItems = winners.map(({ icon, label, periode, winner }) => {
+    const subj = SUBJECTS.find(s => s.id === winner.subject);
+    const vakLabel = winner.title || winner.topic?.split('\n')[0].slice(0, 35) || (subj ? subj.label : winner.subject);
+    return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
+  });
 
-  const allItems = [...winnerItems, ...TICKER_ITEMS, ...winnerItems, ...TICKER_ITEMS];
-  const items = allItems;
+  // Verspreid winnaars tussen de gewone items
+  const half = Math.ceil(TICKER_ITEMS.length / Math.max(winnerItems.length, 1));
+  const combined = [];
+  TICKER_ITEMS.forEach((item, i) => {
+    combined.push(item);
+    const wi = winnerItems[Math.floor(i / half)];
+    if (wi && i % half === half - 1) combined.push(wi);
+  });
+  winnerItems.forEach(wi => { if (!combined.includes(wi)) combined.push(wi); });
+  const items = [...combined, ...combined];
 
   return (
     <>
@@ -84,7 +106,7 @@ function TickerBanner() {
         }} />
         <div style={{
           display: "flex",
-          animation: `tickerScroll ${28 + winnerItems.length * 4}s linear infinite`,
+          animation: `tickerScroll ${30 + winnerItems.length * 5}s linear infinite`,
           width: "max-content",
         }}>
           {items.map((item, i) => (
