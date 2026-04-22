@@ -157,7 +157,7 @@ REGELS:
     const hasCustomTopic = !!topic && !isVrijOnderwerp;
 
     const vakRegel = isVrijOnderwerp
-      ? `- Onderwerp: ${topic} (vrij gekozen — GEEN rekenvragen tenzij het onderwerp expliciet over rekenen gaat)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: Maak algemene kennisquizvragen over "${topic}". Denk aan feiten, geschiedenis, begrippen, weetjes — passend bij het onderwerp. NIET automatisch rekenen of wiskunde gebruiken.`
+      ? `- Onderwerp: ${topic} (vrij gekozen — GEEN rekenvragen tenzij het onderwerp expliciet over rekenen gaat)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: Maak algemene kennisquizvragen over "${topic}". Denk aan feiten, geschiedenis, begrippen, processen, weetjes — passend bij het onderwerp. NIET automatisch rekenen of wiskunde gebruiken.\nAls het een specifiek bedrijf, locatie, persoon of organisatie is: gebruik de beschrijving in het onderwerp als basis. Maak vragen over wat het is, wat het doet, hoe het werkt, waar het staat — ook als je er weinig over weet, maak dan vragen die logisch passen bij de omschrijving.`
       : hasCustomTopic
         ? `- Onderwerp: ${topic}\n- Vak-context: ${subjectLabel} (gebruik dit alleen als het past bij het onderwerp)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Het onderwerp is leidend — niet het vak. Maak kennisquizvragen over feiten, begrippen, geschiedenis of weetjes over "${topic}". Gebruik de vak-context alleen als die logisch past. NIET automatisch ${subjectLabel.toLowerCase()}-vragen maken als het onderwerp er niets mee te maken heeft.`
         : `- Vak: ${subjectLabel}\n- Niveau: ${levelLabel}`;

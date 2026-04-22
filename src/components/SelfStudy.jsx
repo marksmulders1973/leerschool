@@ -22,6 +22,9 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const [klasSelect, setKlasSelect] = useState(initKlas);
   const [topic, setTopic] = useState("");
   const [eigenMode, setEigenMode] = useState(false);
+  const [topicPreview, setTopicPreview] = useState(null); // null | { found, title, description, image }
+  const [previewLoading, setPreviewLoading] = useState(false);
+  const [previewConfirmed, setPreviewConfirmed] = useState(false);
   const [showHoeWerkt, setShowHoeWerkt] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
@@ -40,6 +43,36 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
       onStart({ subject, level: initLevel, questionCount: 10, timePerQuestion: 0, useAI: true, topic });
     }
   }, []);
+
+  const fetchTopicPreview = async () => {
+    const searchTerm = topic.trim().split(/[:—\n]/)[0].trim();
+    if (!searchTerm) return;
+    setPreviewLoading(true);
+    setTopicPreview(null);
+    setPreviewConfirmed(false);
+    try {
+      let found = false;
+      for (const lang of ["nl", "en"]) {
+        const resp = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(searchTerm)}`);
+        if (resp.ok) {
+          const d = await resp.json();
+          if (d.type !== "disambiguation") {
+            setTopicPreview({ found: true, title: d.title, description: d.extract?.slice(0, 300) || "", image: d.thumbnail?.source || null });
+            found = true;
+            break;
+          }
+        }
+      }
+      if (!found) setTopicPreview({ found: false });
+    } catch {
+      setTopicPreview({ found: false });
+    }
+    setPreviewLoading(false);
+  };
+
+  const topicForAI = previewConfirmed && topicPreview?.found && topicPreview.description
+    ? `${topic.trim()}\n\nAchtergrond: ${topicPreview.description}`
+    : topic.trim() || null;
 
   return (
     <div style={styles.page}>
@@ -146,7 +179,10 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
 
         {eigenMode && level && (
           <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
-            <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Waar wil je over leren?</label>
+            <label style={{ ...styles.settingLabel, marginBottom: 4 }}>Waar wil je over leren?</label>
+            <div style={{ fontSize: 11, color: "#7aaa88", marginBottom: 10, lineHeight: 1.5 }}>
+              💡 <strong>Tip:</strong> omschrijf het onderwerp zo duidelijk mogelijk. Bijv. <em>"Sonac: een fabriek in Vuren die dierlijk vet verwerkt"</em> of <em>"de fotosynthese bij planten"</em>. Hoe meer context, hoe beter de vragen!
+            </div>
             <div style={{ color: "#556677", fontSize: 11, marginBottom: 8 }}>Basisschool &amp; VO</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
               {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"].map(s => (
@@ -165,14 +201,67 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                 </button>
               ))}
             </div>
-            <input
-              style={{ ...styles.textInput, fontSize: 15 }}
+            <textarea
+              style={{ ...styles.textInput, fontSize: 14, resize: "vertical", minHeight: 56 }}
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              placeholder="Of typ zelf een onderwerp..."
-              maxLength={80}
+              placeholder="Bijv. 'Sonac: een fabriek in Vuren die dierlijk vet en eiwitten verwerkt' of 'de Franse Revolutie'..."
+              maxLength={200}
+              rows={2}
             />
-            {topic && <div style={{ fontSize: 11, color: "#00e676", marginTop: 6, fontWeight: 600 }}>✨ Je krijgt vragen over: {topic}</div>}
+            <div style={{ fontSize: 10, color: "#445566", textAlign: "right", marginTop: 2 }}>{topic.length}/200</div>
+
+            {/* Preview knop */}
+            {topic.trim().length > 2 && !previewConfirmed && (
+              <button
+                onClick={fetchTopicPreview}
+                disabled={previewLoading}
+                style={{ marginTop: 8, padding: "8px 16px", borderRadius: 10, border: "1px solid #00c853", background: "transparent", color: "#00c853", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: previewLoading ? "default" : "pointer" }}
+              >
+                {previewLoading ? "⏳ Zoeken..." : "🔍 Bedoel je dit? Zoek preview"}
+              </button>
+            )}
+
+            {/* Preview kaart */}
+            {topicPreview && !previewConfirmed && (
+              <div style={{ marginTop: 10, borderRadius: 14, overflow: "hidden", border: `2px solid ${topicPreview.found ? "#00c853" : "#556677"}`, background: "#0f1e2e" }}>
+                {topicPreview.found ? (
+                  <>
+                    {topicPreview.image && (
+                      <img src={topicPreview.image} alt={topicPreview.title} style={{ width: "100%", maxHeight: 160, objectFit: "cover" }} />
+                    )}
+                    <div style={{ padding: 12 }}>
+                      <div style={{ fontWeight: 800, color: "#00e676", fontSize: 14, marginBottom: 6 }}>📖 {topicPreview.title}</div>
+                      <div style={{ fontSize: 12, color: "#aabbcc", lineHeight: 1.5, marginBottom: 10 }}>{topicPreview.description}</div>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <button onClick={() => setPreviewConfirmed(true)} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
+                          ✅ Ja, hierover!
+                        </button>
+                        <button onClick={() => { setTopicPreview(null); setTopic(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+                          ❌ Nee, aanpassen
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <div style={{ padding: 14 }}>
+                    <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
+                      ❓ Niets gevonden op Wikipedia voor <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong>.<br />
+                      Geen probleem — we maken vragen op basis van jouw omschrijving!
+                    </div>
+                    <button onClick={() => setPreviewConfirmed(true)} style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
+                      👍 Doorgaan met mijn omschrijving
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {previewConfirmed && (
+              <div style={{ marginTop: 8, fontSize: 12, color: "#00e676", fontWeight: 700 }}>
+                ✅ Bevestigd! Je krijgt vragen over: <em>{topicPreview?.title || topic.trim().split(/[:—\n]/)[0].trim()}</em>
+              </div>
+            )}
           </div>
         )}
 
@@ -221,7 +310,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             <button
               style={{ ...styles.startButton, opacity: eigenMode && !topic.trim() ? 0.45 : 1 }}
               disabled={eigenMode && !topic.trim()}
-              onClick={() => { if (eigenMode && !topic.trim()) return; SoundEngine.play("click"); onStart({ subject: eigenMode ? "vrij" : subject, level, questionCount, timePerQuestion, useAI, topic: topic.trim() || null }); }}
+              onClick={() => { if (eigenMode && !topic.trim()) return; SoundEngine.play("click"); onStart({ subject: eigenMode ? "vrij" : subject, level, questionCount, timePerQuestion, useAI, topic: eigenMode ? topicForAI : (topic.trim() || null) }); }}
             >
               🚀 Start met oefenen!
             </button>
