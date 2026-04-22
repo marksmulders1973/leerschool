@@ -358,27 +358,19 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const displayStep = (eigenMode || tafelMode) && step === 4 ? 3 : step;
 
   const fetchTopicPreview = async () => {
-    const searchTerm = topic.trim().split(/[:—\n]/)[0].trim();
-    if (!searchTerm) return;
+    if (!topic.trim()) return;
     setPreviewLoading(true);
     setTopicPreview(null);
     setPreviewConfirmed(false);
     setExtraContext("");
     try {
-      let found = false;
-      for (const lang of ["nl", "en"]) {
-        const resp = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(searchTerm)}`);
-        if (resp.ok) {
-          const d = await resp.json();
-          if (d.type !== "disambiguation") {
-            const preview = { found: true, title: d.title, description: d.extract?.slice(0, 300) || "", image: d.thumbnail?.source || null };
-            setTopicPreview(preview);
-            found = true;
-            break;
-          }
-        }
-      }
-      if (!found) setTopicPreview({ found: false });
+      const resp = await fetch("/api/preview-topic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic: topic.trim() }),
+      });
+      const d = await resp.json();
+      setTopicPreview(d.found ? { found: true, title: d.title, description: d.description } : { found: false });
     } catch {
       setTopicPreview({ found: false });
     }
@@ -506,17 +498,34 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     </button>
                   ))}
                 </div>
-                <input
-                  style={styles.textInput}
-                  value={topic}
-                  onChange={(e) => { setTopic(e.target.value); setTopicPreview(null); setPreviewConfirmed(false); setTopicForAI(""); }}
-                  placeholder="Of typ zelf een onderwerp..."
-                  maxLength={80}
-                />
+                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <input
+                    style={{ ...styles.textInput, flex: 1, marginBottom: 0 }}
+                    value={topic}
+                    onChange={(e) => { setTopic(e.target.value); setTopicPreview(null); setPreviewConfirmed(false); setTopicForAI(""); }}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && topic.trim().length > 2 && !previewConfirmed && !topicPreview && !previewLoading) {
+                        e.preventDefault();
+                        fetchTopicPreview();
+                      }
+                    }}
+                    placeholder="Of typ zelf een onderwerp..."
+                    maxLength={80}
+                  />
+                  {!previewConfirmed && !topicPreview && (
+                    <button
+                      onClick={() => { if (topic.trim().length > 2 && !previewLoading) fetchTopicPreview(); }}
+                      disabled={topic.trim().length <= 2 || previewLoading}
+                      style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "#7c3aed" : "#2a1e3a", color: topic.trim().length > 2 && !previewLoading ? "#fff" : "#4a3a6a", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0 }}
+                    >
+                      {previewLoading ? "⏳" : "🔍 Zoeken →"}
+                    </button>
+                  )}
+                </div>
 
                 {/* Preview laad-indicator */}
                 {previewLoading && (
-                  <div style={{ marginTop: 8, fontSize: 13, color: "#a07fcc" }}>⏳ Even controleren wat dit is...</div>
+                  <div style={{ marginTop: 8, fontSize: 13, color: "#a07fcc" }}>⏳ Even zoeken wat dit is...</div>
                 )}
 
                 {/* Preview kaart */}
@@ -550,12 +559,9 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     ) : (
                       <div style={{ padding: 14 }}>
                         <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
-                          ❓ We konden <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> niet opzoeken.<br />
-                          Vertel kort wat het is — dan maken we goede vragen!
+                          ❓ Kon geen informatie vinden over <strong>"{topic.trim()}"</strong>.<br />
+                          Geef een korte omschrijving — dan maakt de AI goede vragen!
                         </div>
-                        <label style={{ fontSize: 12, color: "#a07fcc", fontWeight: 700, display: "block", marginBottom: 6 }}>
-                          Wat is/doet {topic.trim().split(/[:—\n]/)[0].trim()}?
-                        </label>
                         <textarea
                           style={{ ...styles.textInput, fontSize: 13, resize: "vertical", minHeight: 64, marginBottom: 10 }}
                           value={extraContext}
