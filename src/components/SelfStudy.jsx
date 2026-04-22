@@ -188,7 +188,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
           </div>
         )}
 
-        {eigenMode && level && (
+        {eigenMode && (
           <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
             <label style={{ ...styles.settingLabel, marginBottom: 4 }}>Waar wil je over leren?</label>
             <div style={{ fontSize: 11, color: "#7aaa88", marginBottom: 10, lineHeight: 1.5 }}>
