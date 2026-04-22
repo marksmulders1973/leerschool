@@ -375,10 +375,10 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
               }).join("  ·  ");
               const doubled = tickerText + "  ·  " + tickerText;
               return (
-                <div style={{ overflow: "hidden", borderRadius: "0 0 10px 10px", background: "rgba(255,215,0,0.06)", borderLeft: "2px solid #ffd70033", borderRight: "2px solid #ffd70033", borderBottom: "2px solid #ffd70033", marginBottom: 14, padding: "5px 0" }}>
-                  <div style={{ display: "flex", animation: "tickerScroll 35s linear infinite", width: "max-content" }}>
+                <div style={{ overflow: "hidden", borderRadius: "0 0 10px 10px", background: "rgba(255,215,0,0.08)", borderLeft: "2px solid #ffd70044", borderRight: "2px solid #ffd70044", borderBottom: "2px solid #ffd70044", marginBottom: 14, padding: "8px 0" }}>
+                  <div style={{ display: "flex", animation: "tickerScroll 40s linear infinite", width: "max-content" }}>
                     {[0, 1].map(i => (
-                      <span key={i} style={{ fontSize: 11, color: "#c8a820", fontFamily: "'Nunito', sans-serif", fontWeight: 700, whiteSpace: "nowrap", padding: "0 12px" }}>
+                      <span key={i} style={{ fontSize: 14, color: "#f0c830", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, whiteSpace: "nowrap", padding: "0 16px" }}>
                         {tickerText}
                       </span>
                     ))}
