@@ -821,18 +821,19 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       }}>
                         {entry.percentage}%
                       </div>
-                      {/* Acties (voor #2 en #3) */}
-                      {i > 0 && (
-                        <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "flex-end" }}>
-                          {canChallenge && (
-                            <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
-                              style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
-                              💪 Ik kan dit beter!
-                            </button>
-                          )}
-                          {isMe && (
+                      {/* Acties (voor #2 en hoger) */}
+                      {i > 0 && (() => {
+                        const challengeShareText = `💪 ${playerName} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter? 👉 https://studiebol.online`;
+                        return (
+                          <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "flex-end" }}>
+                            {canChallenge && (
+                              <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
+                                style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
+                                💪 Ik kan dit beter!
+                              </button>
+                            )}
                             <div style={{ display: "flex", gap: 4 }}>
-                              <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                              <a href={`https://wa.me/?text=${encodeURIComponent(isMe ? shareText : challengeShareText)}`} target="_blank" rel="noopener noreferrer"
                                 style={{ padding: "3px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
                                 📱 WA
                               </a>
@@ -841,9 +842,9 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                                 👍 FB
                               </a>
                             </div>
-                          )}
-                        </div>
-                      )}
+                          </div>
+                        );
+                      })()}
                     </div>
                   </div>
 
