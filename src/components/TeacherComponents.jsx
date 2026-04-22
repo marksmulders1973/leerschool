@@ -339,7 +339,9 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [step, setStep] = useState(1);
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
-  const levelLabel = groepSelect
+  const levelLabel = level === "nvt"
+    ? "Niet van toepassing"
+    : groepSelect
     ? `Groep ${groepSelect.replace("g","")}`
     : klasSelect
     ? `Klas ${klasSelect.replace("k","")}${schoolTypeLabel ? ` · ${schoolTypeLabel}` : ""}`
@@ -613,11 +615,12 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🏫 Schooltype (optioneel)</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
-                    { id: "mavo", label: "VMBO-TL",   color: "#f59e0b" },
-                    { id: "havo", label: "HAVO",      color: "#3b82f6" },
-                    { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
-                    { id: "gym",  label: "Gymnasium", color: "#ec4899" },
-                  ].map(({ id, label, color }) => {
+                    { id: "mavo", label: "VMBO-TL",   color: "#f59e0b", maxKlas: 4 },
+                    { id: "havo", label: "HAVO",      color: "#3b82f6", maxKlas: 5 },
+                    { id: "vwo",  label: "VWO",       color: "#8b5cf6", maxKlas: 6 },
+                    { id: "gym",  label: "Gymnasium", color: "#ec4899", maxKlas: 6 },
+                  ].filter(({ maxKlas }) => parseInt(klasSelect.replace("k","")) <= maxKlas)
+                   .map(({ id, label, color }) => {
                     const sel = schoolTypeSelect === id;
                     return (
                       <button key={id} onClick={() => { setSchoolTypeSelect(sel ? "" : id); const bucket = {"k1":"klas1","k2":"klas1","k3":"klas3","k4":"klas3","k5":"klas5","k6":"klas6"}[klasSelect]; if (bucket) setLevel(`${bucket}${sel ? "" : `-${id}`}`); }} style={{
@@ -632,7 +635,25 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </div>
               </div>
             )}
-            {level && (
+
+            {/* Niet van toepassing */}
+            {!groepSelect && !klasSelect && (
+              <div style={{ marginTop: 14 }}>
+                <button
+                  onClick={() => setLevel(level === "nvt" ? "" : "nvt")}
+                  style={{
+                    width: "100%", padding: "10px", borderRadius: 12, cursor: "pointer",
+                    border: level === "nvt" ? "2px solid #8899aa" : "1px solid rgba(255,255,255,0.1)",
+                    background: level === "nvt" ? "rgba(136,153,170,0.15)" : "rgba(255,255,255,0.03)",
+                    color: level === "nvt" ? "#c0cfe0" : "#667788",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                  }}>
+                  {level === "nvt" ? "✅ Geen niveau (niet van toepassing)" : "— Geen niveau / niet van toepassing —"}
+                </button>
+              </div>
+            )}
+
+            {(level && level !== "") && (
               <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, marginTop: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid #00c85340" }}>
                 ✅ Niveau gekozen: <span style={{ color: "#fff" }}>{levelLabel}</span>
               </div>
