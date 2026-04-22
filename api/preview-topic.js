@@ -1,4 +1,4 @@
-export const config = { maxDuration: 30 };
+export const config = { runtime: 'edge', maxDuration: 30 };
 
 const json = (data, status = 200) => new Response(JSON.stringify(data), {
   status,
