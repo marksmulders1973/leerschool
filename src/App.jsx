@@ -335,6 +335,7 @@ export default function App() {
       id: Date.now().toString(), player: userName, quizId: finalState.quiz.id,
       subject: finalState.quiz.subject, level: finalState.quiz.level,
       topic: finalState.quiz.topic || null,
+      title: finalState.quiz.title || null,
       citoId: finalState.quiz.citoId || null, citoGroep: finalState.quiz.citoGroep || null,
       score: finalState.score, total: finalState.questions.length,
       percentage: Math.round((finalState.score / finalState.questions.length) * 100),
@@ -344,7 +345,7 @@ export default function App() {
     setResults((prev) => [...prev, result]);
     setStudentProgress((prev) => [...prev, result]);
     setLeaderboard((prev) => {
-      const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, date: result.completedAt, timeTaken: result.timeTaken }];
+      const updated = [...prev, { player: userName, score: result.score, total: result.total, percentage: result.percentage, subject: result.subject, level: result.level, topic: result.topic, title: result.title, date: result.completedAt, timeTaken: result.timeTaken }];
       return updated.sort((a, b) => b.percentage - a.percentage || (a.timeTaken || 9999) - (b.timeTaken || 9999) || b.total - a.total || b.score - a.score).slice(0, 50);
     });
     // Hall of Fame: top 5 per vak+niveau opslaan met vragen (lokaal + Supabase)
@@ -372,7 +373,7 @@ export default function App() {
     }
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
     // Globaal scorebord (iedereen, ook gasten)
-    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
+    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
 
     // Streak + voortgang opslaan
     const today = new Date().toISOString().split("T")[0];

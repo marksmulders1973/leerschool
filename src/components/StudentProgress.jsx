@@ -316,7 +316,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
   };
 
   useEffect(() => {
-    supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
+    supabase.from("leaderboard").select("player_name, subject, level, topic, title, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
       .then(({ data: rows }) => { setGlobalData(rows || []); })
       .catch(() => {});
     // Hall of Fame van Supabase laden (top 5 per vak/niveau met vragen)
@@ -342,6 +342,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
     percentage: e.percentage,
     timeTaken: e.time_taken ?? e.timeTaken ?? null,
     completedAt: e.completed_at || e.date || null,
+    topic: e.topic || null,
+    title: e.title || null,
   }));
 
   return (
@@ -383,9 +385,15 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                       {entry.player} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
                     </div>
                     <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700 }}>
-                      {subj?.icon} {subj?.label} · {LEVELS.find((l) => l.id === entry.level)?.label}
+                      {entry.title
+                        ? <span>📝 {entry.title}</span>
+                        : subj
+                          ? <span>{subj.icon} {subj.label} · {LEVELS.find((l) => l.id === entry.level)?.label}</span>
+                          : <span>🎯 {entry.topic || entry.subject}</span>
+                      }
                       {entry.timeTaken ? <span style={{ marginLeft: 6, color: "#00d4ff" }}>⏱ {entry.timeTaken < 60 ? `${entry.timeTaken}s` : `${Math.floor(entry.timeTaken / 60)}m ${entry.timeTaken % 60}s`}</span> : null}
                     </div>
+                    {entry.topic && !entry.title && <div style={{ fontSize: 10, color: "#7a9a7a", marginTop: 1 }}>📖 {entry.topic.split('\n')[0].slice(0, 60)}</div>}
                     {entry.completedAt && <div style={{ fontSize: 10, color: "#556677", marginTop: 2 }}>📅 {fmtDate(entry.completedAt)}</div>}
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
