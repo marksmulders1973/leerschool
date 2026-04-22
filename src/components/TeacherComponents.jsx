@@ -341,6 +341,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [previewLoading, setPreviewLoading] = useState(false);
   const [previewConfirmed, setPreviewConfirmed] = useState(false);
   const [topicForAI, setTopicForAI] = useState("");
+  const [extraContext, setExtraContext] = useState("");
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
   const levelLabel = level === "nvt"
@@ -362,6 +363,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
     setPreviewLoading(true);
     setTopicPreview(null);
     setPreviewConfirmed(false);
+    setExtraContext("");
     try {
       let found = false;
       for (const lang of ["nl", "en"]) {
@@ -548,14 +550,33 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     ) : (
                       <div style={{ padding: 14 }}>
                         <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
-                          ❓ Niets gevonden voor <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> op Wikipedia.<br />
-                          Geen probleem — vragen worden gemaakt op basis van jouw omschrijving!
+                          ❓ We konden <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> niet opzoeken.<br />
+                          Vertel kort wat het is — dan maken we goede vragen!
                         </div>
+                        <label style={{ fontSize: 12, color: "#a07fcc", fontWeight: 700, display: "block", marginBottom: 6 }}>
+                          Wat is/doet {topic.trim().split(/[:—\n]/)[0].trim()}?
+                        </label>
+                        <textarea
+                          style={{ ...styles.textInput, fontSize: 13, resize: "vertical", minHeight: 64, marginBottom: 10 }}
+                          value={extraContext}
+                          onChange={(e) => setExtraContext(e.target.value)}
+                          placeholder={`bijv. "een fabriek die dierlijke bijproducten verwerkt tot veevoer en industrieel vet"`}
+                          maxLength={300}
+                          rows={3}
+                          autoFocus
+                        />
                         <button
-                          onClick={() => { setTopicForAI(topic.trim()); setPreviewConfirmed(true); }}
-                          style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#7c3aed", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                          onClick={() => {
+                            const enriched = extraContext.trim()
+                              ? `${topic.trim()}\n\nOmschrijving: ${extraContext.trim()}`
+                              : topic.trim();
+                            setTopicForAI(enriched);
+                            setPreviewConfirmed(true);
+                          }}
+                          disabled={!extraContext.trim()}
+                          style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#7c3aed" : "#334", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
                         >
-                          👍 Doorgaan met mijn omschrijving
+                          ✅ Doorgaan met deze omschrijving
                         </button>
                       </div>
                     )}

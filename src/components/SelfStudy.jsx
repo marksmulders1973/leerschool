@@ -25,6 +25,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const [topicPreview, setTopicPreview] = useState(null); // null | { found, title, description, image }
   const [previewLoading, setPreviewLoading] = useState(false);
   const [previewConfirmed, setPreviewConfirmed] = useState(false);
+  const [extraContext, setExtraContext] = useState("");
   const [showHoeWerkt, setShowHoeWerkt] = useState(false);
   const [questionCount, setQuestionCount] = useState(10);
   const [timePerQuestion, setTimePerQuestion] = useState(0);
@@ -50,6 +51,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
     setPreviewLoading(true);
     setTopicPreview(null);
     setPreviewConfirmed(false);
+    setExtraContext("");
     try {
       let found = false;
       for (const lang of ["nl", "en"]) {
@@ -266,18 +268,34 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                 ) : (
                   <div style={{ padding: 14 }}>
                     <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
-                      ❓ Niets gevonden op Wikipedia voor <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong>.<br />
-                      Geen probleem — we maken vragen op basis van jouw omschrijving!
+                      ❓ We konden <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> niet opzoeken.<br />
+                      Vertel kort wat het is — dan maken we goede vragen!
                     </div>
+                    <label style={{ fontSize: 12, color: "#7aaa88", fontWeight: 700, display: "block", marginBottom: 6 }}>
+                      Wat is/doet {topic.trim().split(/[:—\n]/)[0].trim()}?
+                    </label>
+                    <textarea
+                      style={{ ...styles.textInput, fontSize: 13, resize: "vertical", minHeight: 64, marginBottom: 10 }}
+                      value={extraContext}
+                      onChange={(e) => setExtraContext(e.target.value)}
+                      placeholder={`bijv. "een fabriek in Vuren die dierlijke bijproducten verwerkt tot veevoer en industrieel vet"`}
+                      maxLength={300}
+                      rows={3}
+                      autoFocus
+                    />
                     <button
                       onClick={() => {
+                        const enriched = extraContext.trim()
+                          ? `${topic.trim()}\n\nOmschrijving: ${extraContext.trim()}`
+                          : topic.trim() || null;
                         setPreviewConfirmed(true);
                         SoundEngine.play("click");
-                        onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: topic.trim() || null });
+                        onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: enriched });
                       }}
-                      style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                      disabled={!extraContext.trim()}
+                      style={{ width: "100%", padding: "10px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#1a73e8" : "#334455", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
                     >
-                      👍 Doorgaan met mijn omschrijving → Start →
+                      🚀 Start de toets →
                     </button>
                   </div>
                 )}
