@@ -473,7 +473,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                     {canChallenge && (
                                       <button onClick={() => onChallenge({ subject: subjectId, level: levelId, topic: null }, e.questions)}
                                         style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-                                        🎯 Uitdagen
+                                        💪 Ik kan dit beter!
                                       </button>
                                     )}
                                   </div>
@@ -577,7 +577,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                   style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
                                   title="Exact dezelfde vragen — eerlijke wedstrijd!"
                                 >
-                                  {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
+                                  {isMyScore ? "🔄 Beter!" : "💪 Ik kan dit beter!"}
                                 </button>
                                 <div style={{ fontSize: 9, color: "#8899aa", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
                               </>
@@ -830,7 +830,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                           {canChallenge && (
                             <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
                               style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
-                              🎯 Uitdagen
+                              💪 Ik kan dit beter!
                             </button>
                           )}
                           {isMe && (
@@ -859,7 +859,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       {canChallenge && (
                         <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
                           style={{ padding: "4px 12px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-                          🎯 Uitdagen
+                          💪 Ik kan dit beter!
                         </button>
                       )}
                     </div>
