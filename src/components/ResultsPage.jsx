@@ -103,10 +103,35 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           })}
         </div>
 
-        {/* Deel resultaat */}
-        <div style={{ marginTop: 20, padding: 16, background: "#0a1f30", borderRadius: 16, border: "1px solid rgba(0,212,255,0.2)" }}>
+        {/* Daag vrienden uit (bij goede score) */}
+        {latest.percentage >= 80 && (() => {
+          const challengeText = `🏆 Kijk eens! Ik heb ${latest.percentage}% gehaald op Studiebol!\n\n${userName || "Ik"} · ${subjLabel}${latest.timeTaken > 0 ? ` · ${latest.timeTaken < 60 ? latest.timeTaken + "s" : Math.floor(latest.timeTaken / 60) + "m " + (latest.timeTaken % 60) + "s"}` : ""}\n\nKun jij dit ook? Daag mij uit! 🎯\nhttps://studiebol.online`;
+          return (
+            <div style={{ marginTop: 20, padding: 16, borderRadius: 16, background: "linear-gradient(135deg, #1a2a0a, #0f1a06)", border: "2px solid rgba(0,200,83,0.4)" }}>
+              <p style={{ fontSize: 14, color: "#69f0ae", fontWeight: 800, textAlign: "center", margin: "0 0 10px" }}>
+                🎯 Daag vrienden uit!
+              </p>
+              <p style={{ fontSize: 11, color: "#8899aa", textAlign: "center", margin: "0 0 10px" }}>
+                Deel je score — kunnen zij dit ook halen?
+              </p>
+              <div style={{ display: "flex", gap: 8 }}>
+                <a href={`https://wa.me/?text=${encodeURIComponent(challengeText)}`} target="_blank" rel="noopener noreferrer"
+                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
+                  📱 WhatsApp
+                </a>
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
+                  👍 Facebook
+                </a>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Deel resultaat naar leraar */}
+        <div style={{ marginTop: 12, padding: 16, background: "#0a1f30", borderRadius: 16, border: "1px solid rgba(0,212,255,0.2)" }}>
           <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, marginBottom: 10, textAlign: "center", margin: "0 0 10px" }}>
-            📬 Deel je resultaat
+            📬 Stuur resultaat naar leraar/ouder
           </p>
           <div style={{ display: "flex", gap: 8 }}>
             <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>

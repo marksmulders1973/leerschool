@@ -452,28 +452,45 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                             {hofEntries.map((e, rank) => {
                               const isMe = e.player === currentUser;
                               const canChallenge = onChallenge && e.questions?.length;
+                              const hofShareText = `🏅 Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan? Doe de uitdaging! 🎯\nhttps://studiebol.online`;
                               return (
                                 <div key={rank} style={{
-                                  display: "flex", alignItems: "center", gap: 10,
                                   padding: "10px 14px",
-                                  background: rank === 0 ? "rgba(255,215,0,0.06)" : isMe ? "rgba(0,212,255,0.04)" : "transparent",
+                                  background: rank === 0 ? "rgba(255,215,0,0.06)" : isMe ? "rgba(0,212,255,0.06)" : "transparent",
                                   borderTop: rank > 0 ? "1px solid #111e11" : "none",
                                 }}>
-                                  <span style={{ fontSize: rank === 0 ? 22 : 18, width: 28, textAlign: "center" }}>{hofMedals[rank]}</span>
-                                  <div style={{ flex: 1 }}>
-                                    <div style={{ fontWeight: 700, fontSize: 13, color: rank === 0 ? "#ffd700" : isMe ? "#00d4ff" : "#c0d0c0" }}>
-                                      {e.player} {isMe && <span style={{ fontSize: 10, color: "#556677" }}>(jij)</span>}
+                                  <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                                    <span style={{ fontSize: rank === 0 ? 22 : 18, width: 28, textAlign: "center", flexShrink: 0 }}>{hofMedals[rank]}</span>
+                                    <div style={{ flex: 1 }}>
+                                      <div style={{ fontWeight: 700, fontSize: 13, color: rank === 0 ? "#ffd700" : isMe ? "#00d4ff" : "#c0d0c0" }}>
+                                        {e.player} {isMe && <span style={{ fontSize: 10, color: "#556677" }}>(jij)</span>}
+                                      </div>
+                                      <div style={{ fontSize: 11, color: "#556677", marginTop: 1 }}>
+                                        ⏱ {fmtTime(e.timeTaken)}
+                                        {e.completedAt && <span style={{ marginLeft: 8 }}>📅 {fmtDate(e.completedAt)}</span>}
+                                      </div>
                                     </div>
-                                    <div style={{ fontSize: 11, color: "#556677", marginTop: 1 }}>
-                                      ⏱ {fmtTime(e.timeTaken)}
-                                      {e.completedAt && <span style={{ marginLeft: 8 }}>📅 {fmtDate(e.completedAt)}</span>}
-                                    </div>
+                                    {canChallenge && (
+                                      <button onClick={() => onChallenge({ subject: subjectId, level: levelId, topic: null }, e.questions)}
+                                        style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+                                        🎯 Uitdagen
+                                      </button>
+                                    )}
                                   </div>
-                                  {canChallenge && (
-                                    <button onClick={() => onChallenge({ subject: subjectId, level: levelId, topic: null }, e.questions)}
-                                      style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-                                      🎯 Uitdagen
-                                    </button>
+                                  {isMe && (
+                                    <div style={{ marginTop: 8, padding: "8px 10px", borderRadius: 10, background: "rgba(0,212,255,0.06)", border: "1px solid rgba(0,212,255,0.2)" }}>
+                                      <div style={{ fontSize: 11, color: "#00d4ff", fontWeight: 700, marginBottom: 6 }}>🎉 Jij staat hier! Deel het en daag anderen uit:</div>
+                                      <div style={{ display: "flex", gap: 6 }}>
+                                        <a href={`https://wa.me/?text=${encodeURIComponent(hofShareText)}`} target="_blank" rel="noopener noreferrer"
+                                          style={{ flex: 1, padding: "7px 4px", borderRadius: 8, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 12, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          📱 WhatsApp
+                                        </a>
+                                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                          style={{ flex: 1, padding: "7px 4px", borderRadius: 8, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 12, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          👍 Facebook
+                                        </a>
+                                      </div>
+                                    </div>
                                   )}
                                 </div>
                               );
@@ -531,43 +548,52 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                     }}>
                       {entry.percentage}%
                     </div>
-                    {onChallenge && (() => {
+                    {(() => {
                       const hofKey = `${entry.subject}-${entry.level}`;
                       const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
-                      if (!hofEntry?.questions?.length) return null;
-                      const isMyScore = isMe && entry.timeTaken === hofEntry.timeTaken;
+                      const hasHof = hofEntry?.questions?.length && onChallenge;
+                      const isMyScore = isMe && entry.timeTaken === hofEntry?.timeTaken;
                       const alreadyChallenged = !!challenged[hofKey];
                       const subjectLabel = subj?.label || entry.subject;
                       const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
+                      const timeTxt = entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : "";
+                      const scoreShareText = `🏆 Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} · ${levelLabel} · ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`;
                       return (
                         <>
-                          {alreadyChallenged && !isMyScore ? (
-                            <div style={{ fontSize: 10, color: "#556677", textAlign: "center", padding: "4px 8px", border: "1px solid #334", borderRadius: 8 }}>✓ Geprobeerd</div>
-                          ) : (
-                            <button
-                              onClick={() => {
-                                if (!isMyScore) {
-                                  const updated = { ...challenged, [hofKey]: true };
-                                  localStorage.setItem("ls_challenged", JSON.stringify(updated));
-                                  setChallenged(updated);
-                                }
-                                onChallenge(entry, hofEntry.questions);
-                              }}
-                              style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
-                              title="Exact dezelfde vragen — eerlijke wedstrijd!"
-                            >
-                              {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
-                            </button>
+                          {hasHof && (
+                            alreadyChallenged && !isMyScore ? (
+                              <div style={{ fontSize: 10, color: "#556677", textAlign: "center", padding: "4px 8px", border: "1px solid #334", borderRadius: 8 }}>✓ Geprobeerd</div>
+                            ) : (
+                              <>
+                                <button
+                                  onClick={() => {
+                                    if (!isMyScore) {
+                                      const updated = { ...challenged, [hofKey]: true };
+                                      localStorage.setItem("ls_challenged", JSON.stringify(updated));
+                                      setChallenged(updated);
+                                    }
+                                    onChallenge(entry, hofEntry.questions);
+                                  }}
+                                  style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                                  title="Exact dezelfde vragen — eerlijke wedstrijd!"
+                                >
+                                  {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
+                                </button>
+                                <div style={{ fontSize: 9, color: "#8899aa", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
+                              </>
+                            )
                           )}
-                          <div style={{ fontSize: 9, color: "#8899aa", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
                           {isMe && (
-                            <a
-                              href={`https://wa.me/?text=${encodeURIComponent(`🏆 Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} · ${levelLabel} · ${entry.percentage}%${entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : ""}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`)}`}
-                              target="_blank" rel="noopener noreferrer"
-                              style={{ fontSize: 10, color: "#25D366", textDecoration: "none", whiteSpace: "nowrap" }}
-                            >
-                              📲 Delen
-                            </a>
+                            <div style={{ display: "flex", gap: 4, marginTop: 2 }}>
+                              <a href={`https://wa.me/?text=${encodeURIComponent(scoreShareText)}`} target="_blank" rel="noopener noreferrer"
+                                style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                📱 WA
+                              </a>
+                              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                👍 FB
+                              </a>
+                            </div>
                           )}
                         </>
                       );
@@ -800,7 +826,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       </div>
                       {/* Acties (voor #2 en #3) */}
                       {i > 0 && (
-                        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "flex-end" }}>
                           {canChallenge && (
                             <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
                               style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
@@ -808,10 +834,16 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                             </button>
                           )}
                           {isMe && (
-                            <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
-                              style={{ padding: "3px 8px", border: "1px solid #25D366", borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none" }}>
-                              📲 Delen
-                            </a>
+                            <div style={{ display: "flex", gap: 4 }}>
+                              <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                                style={{ padding: "3px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
+                                📱 WA
+                              </a>
+                              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                style={{ padding: "3px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
+                                👍 FB
+                              </a>
+                            </div>
                           )}
                         </div>
                       )}
@@ -905,11 +937,17 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                               <div style={{ fontSize: 11, color: "#8899aa", marginTop: 1 }}>{msg(a)}</div>
                             </div>
                             {isMe && (
-                              <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel}!\n${a.value} ${a.unit} — zo doe ik dat! 💪\n\nhttps://studiebol.online`)}`}
-                                target="_blank" rel="noopener noreferrer"
-                                style={{ padding: "4px 10px", border: `1px solid #25D366`, borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap" }}>
-                                📲 Delen
-                              </a>
+                              <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                                <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel} op Studiebol!\n${a.value} ${a.unit} — zo doe ik dat! 💪\nKun jij dit ook? 👉 https://studiebol.online`)}`}
+                                  target="_blank" rel="noopener noreferrer"
+                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
+                                  📱 WhatsApp
+                                </a>
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
+                                  👍 Facebook
+                                </a>
+                              </div>
                             )}
                           </div>
                         );
