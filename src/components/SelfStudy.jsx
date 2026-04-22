@@ -211,15 +211,9 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             />
             <div style={{ fontSize: 10, color: "#445566", textAlign: "right", marginTop: 2 }}>{topic.length}/200</div>
 
-            {/* Preview knop */}
-            {topic.trim().length > 2 && !previewConfirmed && (
-              <button
-                onClick={fetchTopicPreview}
-                disabled={previewLoading}
-                style={{ marginTop: 8, padding: "8px 16px", borderRadius: 10, border: "1px solid #00c853", background: "transparent", color: "#00c853", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: previewLoading ? "default" : "pointer" }}
-              >
-                {previewLoading ? "⏳ Zoeken..." : "🔍 Bedoel je dit? Zoek preview"}
-              </button>
+            {/* Preview laad-indicator */}
+            {previewLoading && (
+              <div style={{ marginTop: 8, fontSize: 13, color: "#7aaa88" }}>⏳ Even controleren wat dit is...</div>
             )}
 
             {/* Preview kaart */}
@@ -234,8 +228,18 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                       <div style={{ fontWeight: 800, color: "#00e676", fontSize: 14, marginBottom: 6 }}>📖 {topicPreview.title}</div>
                       <div style={{ fontSize: 12, color: "#aabbcc", lineHeight: 1.5, marginBottom: 10 }}>{topicPreview.description}</div>
                       <div style={{ display: "flex", gap: 8 }}>
-                        <button onClick={() => setPreviewConfirmed(true)} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
-                          ✅ Ja, hierover!
+                        <button
+                          onClick={() => {
+                            const enrichedTopic = topicPreview.description
+                              ? `${topic.trim()}\n\nAchtergrond: ${topicPreview.description}`
+                              : topic.trim() || null;
+                            setPreviewConfirmed(true);
+                            SoundEngine.play("click");
+                            onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: enrichedTopic });
+                          }}
+                          style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                        >
+                          ✅ Ja! Start de toets →
                         </button>
                         <button onClick={() => { setTopicPreview(null); setTopic(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
                           ❌ Nee, aanpassen
@@ -249,8 +253,15 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                       ❓ Niets gevonden op Wikipedia voor <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong>.<br />
                       Geen probleem — we maken vragen op basis van jouw omschrijving!
                     </div>
-                    <button onClick={() => setPreviewConfirmed(true)} style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
-                      👍 Doorgaan met mijn omschrijving
+                    <button
+                      onClick={() => {
+                        setPreviewConfirmed(true);
+                        SoundEngine.play("click");
+                        onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: topic.trim() || null });
+                      }}
+                      style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                    >
+                      👍 Doorgaan met mijn omschrijving → Start →
                     </button>
                   </div>
                 )}
@@ -309,10 +320,18 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             )}
             <button
               style={{ ...styles.startButton, opacity: eigenMode && !topic.trim() ? 0.45 : 1 }}
-              disabled={eigenMode && !topic.trim()}
-              onClick={() => { if (eigenMode && !topic.trim()) return; SoundEngine.play("click"); onStart({ subject: eigenMode ? "vrij" : subject, level, questionCount, timePerQuestion, useAI, topic: eigenMode ? topicForAI : (topic.trim() || null) }); }}
+              disabled={eigenMode && !topic.trim() || previewLoading}
+              onClick={() => {
+                if (eigenMode && !topic.trim()) return;
+                if (eigenMode && topic.trim().length > 2 && !previewConfirmed && !topicPreview) {
+                  fetchTopicPreview();
+                  return;
+                }
+                SoundEngine.play("click");
+                onStart({ subject: eigenMode ? "vrij" : subject, level, questionCount, timePerQuestion, useAI, topic: eigenMode ? topicForAI : (topic.trim() || null) });
+              }}
             >
-              🚀 Start met oefenen!
+              {previewLoading ? "⏳ Onderwerp controleren..." : "🚀 Start met oefenen!"}
             </button>
           </>
         )}
