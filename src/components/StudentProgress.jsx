@@ -301,24 +301,33 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
   );
 }
 
-export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onChallenge }) {
+export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onChallenge, onKampioenen }) {
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
   const [globalHof, setGlobalHof] = useState({});
+  const [challenged, setChallenged] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("ls_challenged") || "{}"); } catch { return {}; }
+  });
+
+  const fmtDate = (iso) => {
+    if (!iso) return null;
+    const d = new Date(iso);
+    return d.toLocaleDateString("nl-NL", { day: "numeric", month: "short", year: "numeric" }) + " " + d.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+  };
 
   useEffect(() => {
     supabase.from("leaderboard").select("player_name, subject, level, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
       .then(({ data: rows }) => { setGlobalData(rows || []); })
       .catch(() => {});
     // Hall of Fame van Supabase laden (top 5 per vak/niveau met vragen)
-    supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, questions").order("time_taken", { ascending: true })
+    supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, completed_at, questions").order("time_taken", { ascending: true })
       .then(({ data: rows }) => {
         if (!rows?.length) return;
         const hof = {};
         rows.forEach(r => {
           const key = `${r.subject}-${r.level}`;
           if (!hof[key]) hof[key] = [];
-          if (hof[key].length < 5) hof[key].push({ player: r.player_name, timeTaken: r.time_taken, questions: r.questions });
+          if (hof[key].length < 5) hof[key].push({ player: r.player_name, timeTaken: r.time_taken, completedAt: r.completed_at, questions: r.questions });
         });
         setGlobalHof(hof);
       }).catch(() => {});
@@ -339,6 +348,18 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
     <div style={styles.page}>
       <Header title="Scorebord 🏆" subtitle={globalData ? "🌍 Globaal · Top 50" : "Top scores"} onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
+        {onKampioenen && (
+          <button onClick={onKampioenen} style={{
+            width: "100%", padding: "14px", borderRadius: 14, border: "2px solid #ffd700",
+            background: "linear-gradient(135deg, #2a1f00, #3a2c00)", color: "#ffd700",
+            fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer",
+            marginBottom: 14, display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
+          }}>
+            <span style={{ fontSize: 22 }}>👑</span>
+            Kampioenen — dag · week · maand · jaar
+            <span style={{ fontSize: 22 }}>👑</span>
+          </button>
+        )}
         {entries.length === 0 ? (
           <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Speel een quiz om op het scorebord te komen.</p></div>
         ) : (
@@ -361,10 +382,11 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                     <div style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>
                       {entry.player} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
                     </div>
-                    <div style={{ fontSize: 11, color: "#8899aa" }}>
+                    <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700 }}>
                       {subj?.icon} {subj?.label} · {LEVELS.find((l) => l.id === entry.level)?.label}
                       {entry.timeTaken ? <span style={{ marginLeft: 6, color: "#00d4ff" }}>⏱ {entry.timeTaken < 60 ? `${entry.timeTaken}s` : `${Math.floor(entry.timeTaken / 60)}m ${entry.timeTaken % 60}s`}</span> : null}
                     </div>
+                    {entry.completedAt && <div style={{ fontSize: 10, color: "#556677", marginTop: 2 }}>📅 {fmtDate(entry.completedAt)}</div>}
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 4 }}>
                     <div style={{
@@ -374,22 +396,237 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                     }}>
                       {entry.percentage}%
                     </div>
-                    {entry.percentage === 100 && onChallenge && (() => {
+                    {onChallenge && (() => {
                       const hofKey = `${entry.subject}-${entry.level}`;
                       const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
                       if (!hofEntry?.questions?.length) return null;
                       const isMyScore = isMe && entry.timeTaken === hofEntry.timeTaken;
+                      const alreadyChallenged = !!challenged[hofKey];
+                      const subjectLabel = subj?.label || entry.subject;
+                      const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
                       return (
-                        <button
-                          onClick={() => onChallenge(entry, hofEntry.questions)}
-                          style={{ padding: "4px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: isMyScore ? "rgba(0,212,255,0.15)" : "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
-                          title="Exact dezelfde vragen — eerlijke wedstrijd!"
-                        >
-                          {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
-                        </button>
+                        <>
+                          {alreadyChallenged && !isMyScore ? (
+                            <div style={{ fontSize: 10, color: "#556677", textAlign: "center", padding: "4px 8px", border: "1px solid #334", borderRadius: 8 }}>✓ Geprobeerd</div>
+                          ) : (
+                            <button
+                              onClick={() => {
+                                if (!isMyScore) {
+                                  const updated = { ...challenged, [hofKey]: true };
+                                  localStorage.setItem("ls_challenged", JSON.stringify(updated));
+                                  setChallenged(updated);
+                                }
+                                onChallenge(entry, hofEntry.questions);
+                              }}
+                              style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                              title="Exact dezelfde vragen — eerlijke wedstrijd!"
+                            >
+                              {isMyScore ? "🔄 Beter!" : "🎯 Uitdagen"}
+                            </button>
+                          )}
+                          <div style={{ fontSize: 9, color: "#8899aa", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
+                          {isMe && (
+                            <a
+                              href={`https://wa.me/?text=${encodeURIComponent(`🏆 Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} · ${levelLabel} · ${entry.percentage}%${entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : ""}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`)}`}
+                              target="_blank" rel="noopener noreferrer"
+                              style={{ fontSize: 10, color: "#25D366", textDecoration: "none", whiteSpace: "nowrap" }}
+                            >
+                              📲 Delen
+                            </a>
+                          )}
+                        </>
                       );
                     })()}
                   </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFame }) {
+  const periods = [
+    { id: "dag",   label: "Vandaag",  icon: "☀️",  title: "Studiebol van de dag" },
+    { id: "week",  label: "Week",     icon: "📅",  title: "Studiebol van de week" },
+    { id: "maand", label: "Maand",    icon: "🗓️",  title: "Studiebol van de maand" },
+    { id: "jaar",  label: "Jaar",     icon: "👑",  title: "Studiebol van het jaar" },
+  ];
+  const medals = ["👑", "🥈", "🥉"];
+  const medalColors = ["#ffd700", "#c0c0c0", "#cd7f32"];
+
+  const [activePeriod, setActivePeriod] = useState("dag");
+  const [winners, setWinners] = useState({ dag: [], week: [], maand: [], jaar: [] });
+  const [loading, setLoading] = useState(true);
+  const [globalHof, setGlobalHof] = useState({});
+
+  useEffect(() => {
+    const now = new Date();
+    const startOfDay = new Date(now); startOfDay.setHours(0, 0, 0, 0);
+    const startOfWeek = new Date(now);
+    const day = now.getDay();
+    startOfWeek.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
+    startOfWeek.setHours(0, 0, 0, 0);
+    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+
+    const fetchTop3 = (since) =>
+      supabase.from("leaderboard")
+        .select("player_name, subject, level, score, total, percentage, time_taken, completed_at")
+        .gte("completed_at", since.toISOString())
+        .order("percentage", { ascending: false })
+        .order("time_taken", { ascending: true, nullsFirst: false })
+        .limit(3)
+        .then(({ data }) => data || []);
+
+    Promise.all([
+      fetchTop3(startOfDay),
+      fetchTop3(startOfWeek),
+      fetchTop3(startOfMonth),
+      fetchTop3(startOfYear),
+    ]).then(([dag, week, maand, jaar]) => {
+      setWinners({ dag, week, maand, jaar });
+      setLoading(false);
+    }).catch(() => setLoading(false));
+
+    supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, questions").order("time_taken", { ascending: true })
+      .then(({ data: rows }) => {
+        if (!rows?.length) return;
+        const hof = {};
+        rows.forEach(r => {
+          const key = `${r.subject}-${r.level}`;
+          if (!hof[key]) hof[key] = [];
+          if (hof[key].length < 5) hof[key].push({ player: r.player_name, timeTaken: r.time_taken, questions: r.questions });
+        });
+        setGlobalHof(hof);
+      }).catch(() => {});
+  }, []);
+
+  const fmtDate = (iso) => {
+    if (!iso) return null;
+    const d = new Date(iso);
+    return d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" }) + " " + d.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+  };
+
+  const fmtTime = (s) => s < 60 ? `${s}s` : `${Math.floor(s / 60)}m ${s % 60}s`;
+
+  const current = periods.find(p => p.id === activePeriod);
+  const list = winners[activePeriod] || [];
+
+  return (
+    <div style={styles.page}>
+      <Header title="Kampioenen 👑" subtitle="De beste spelers per periode" onBack={onBack} onHome={onHome} />
+      <div style={styles.content}>
+        {/* Periode tabs */}
+        <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+          {periods.map(p => (
+            <button key={p.id} onClick={() => setActivePeriod(p.id)} style={{
+              flex: 1, padding: "10px 4px", borderRadius: 12, border: "none", cursor: "pointer",
+              fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13,
+              background: activePeriod === p.id ? "linear-gradient(135deg, #ffd700, #ffaa00)" : "#1a2a3a",
+              color: activePeriod === p.id ? "#1a1a00" : "#8899aa",
+              boxShadow: activePeriod === p.id ? "0 2px 12px rgba(255,215,0,0.4)" : "none",
+              transition: "all 0.2s",
+            }}>
+              <div style={{ fontSize: 20 }}>{p.icon}</div>
+              <div>{p.label}</div>
+            </button>
+          ))}
+        </div>
+
+        {loading ? (
+          <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Laden...</div>
+        ) : list.length === 0 ? (
+          <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
+            <div style={{ fontSize: 48 }}>🏆</div>
+            <p>Nog geen scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.<br />Speel een quiz om de eerste kampioen te worden!</p>
+          </div>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div style={{ textAlign: "center", color: "#ffd700", fontWeight: 800, fontSize: 16, letterSpacing: 1, marginBottom: 4 }}>
+              {current.icon} {current.title.toUpperCase()} {current.icon}
+            </div>
+
+            {list.map((entry, i) => {
+              const subj = SUBJECTS.find(s => s.id === entry.subject);
+              const levelLabel = LEVELS.find(l => l.id === entry.level)?.label || entry.level;
+              const isMe = (entry.player_name || entry.player) === currentUser;
+              const hofKey = `${entry.subject}-${entry.level}`;
+              const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
+              const canChallenge = !!hofEntry?.questions?.length && onChallenge;
+              const playerName = entry.player_name || entry.player;
+              const shareText = `${i === 0 ? `🏆 Ik ben de ${current.title}!` : `🥈 Ik sta #${i+1} bij de ${current.title}!`}\n${playerName} · ${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`;
+
+              return (
+                <div key={i} style={{
+                  borderRadius: 16, padding: i === 0 ? "20px 18px" : "14px 16px",
+                  background: i === 0
+                    ? "linear-gradient(135deg, #2a1f00, #3a2c00)"
+                    : "#111d2b",
+                  border: `2px solid ${medalColors[i] || "#334455"}`,
+                  boxShadow: i === 0 ? `0 4px 20px rgba(255,215,0,0.25)` : "0 1px 4px rgba(0,0,0,0.3)",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    {/* Medaille */}
+                    <div style={{
+                      width: i === 0 ? 52 : 40, height: i === 0 ? 52 : 40,
+                      borderRadius: 14, background: "#162033",
+                      display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+                      fontSize: i === 0 ? 28 : 22,
+                    }}>
+                      {medals[i] || `#${i+1}`}
+                    </div>
+
+                    {/* Info */}
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: 800, fontSize: i === 0 ? 18 : 15, color: medalColors[i] || "#e0e6f0" }}>
+                        {playerName} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
+                      </div>
+                      <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700, marginTop: 2 }}>
+                        {subj?.icon} {subj?.label} · {levelLabel}
+                        {entry.time_taken ? <span style={{ marginLeft: 6, color: "#00d4ff" }}>⏱ {fmtTime(entry.time_taken)}</span> : null}
+                      </div>
+                      {entry.completed_at && <div style={{ fontSize: 10, color: "#556677", marginTop: 2 }}>📅 {fmtDate(entry.completed_at)}</div>}
+                    </div>
+
+                    {/* Score badge */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+                      <div style={{
+                        padding: i === 0 ? "6px 14px" : "4px 10px",
+                        borderRadius: 10, fontWeight: 800, fontSize: i === 0 ? 18 : 14,
+                        background: entry.percentage >= 80 ? "#1a3a1a" : "#3a2a0a",
+                        color: entry.percentage >= 80 ? "#6fcf87" : "#ffd700",
+                        border: `1px solid ${entry.percentage >= 80 ? "#28a745" : "#ffa000"}`,
+                      }}>
+                        {entry.percentage}%
+                      </div>
+                      {/* Acties */}
+                      <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+                        {canChallenge && (
+                          <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
+                            style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
+                            🎯 Uitdagen
+                          </button>
+                        )}
+                        {isMe && (
+                          <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
+                            style={{ padding: "3px 8px", border: "1px solid #25D366", borderRadius: 8, color: "#25D366", fontSize: 10, fontWeight: 700, textDecoration: "none" }}>
+                            📲 Delen
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Kampioen-banner voor #1 */}
+                  {i === 0 && (
+                    <div style={{ marginTop: 12, padding: "8px 12px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)", fontSize: 11, color: "#aaa", textAlign: "center" }}>
+                      {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
+                    </div>
+                  )}
                 </div>
               );
             })}

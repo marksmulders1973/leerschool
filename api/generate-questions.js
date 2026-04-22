@@ -153,11 +153,14 @@ REGELS:
 - Geef ALLEEN de JSON array terug, geen markdown, geen backticks`;
   } else {
     const isVrijOnderwerp = subject === "vrij" && topic;
-    const topicLine = topic ? `\n- Onderwerp: ${topic}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Maak de vragen leerzaam en interessant over dit specifieke onderwerp.` : "";
+    // Als een specifiek onderwerp is opgegeven bij een vak, laat het onderwerp de vragen bepalen
+    const hasCustomTopic = !!topic && !isVrijOnderwerp;
 
     const vakRegel = isVrijOnderwerp
       ? `- Onderwerp: ${topic} (vrij gekozen — GEEN rekenvragen tenzij het onderwerp expliciet over rekenen gaat)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: Maak algemene kennisquizvragen over "${topic}". Denk aan feiten, geschiedenis, begrippen, weetjes — passend bij het onderwerp. NIET automatisch rekenen of wiskunde gebruiken.`
-      : `- Vak: ${subjectLabel}\n- Niveau: ${levelLabel}${topicLine}`;
+      : hasCustomTopic
+        ? `- Onderwerp: ${topic}\n- Vak-context: ${subjectLabel} (gebruik dit alleen als het past bij het onderwerp)\n- Niveau (alleen voor moeilijkheid): ${levelLabel}\n\nBELANGRIJK: ALLE vragen moeten gaan over "${topic}". Het onderwerp is leidend — niet het vak. Maak kennisquizvragen over feiten, begrippen, geschiedenis of weetjes over "${topic}". Gebruik de vak-context alleen als die logisch past. NIET automatisch ${subjectLabel.toLowerCase()}-vragen maken als het onderwerp er niets mee te maken heeft.`
+        : `- Vak: ${subjectLabel}\n- Niveau: ${levelLabel}`;
 
     prompt = `Genereer ${count} quizvragen voor:
 ${vakRegel}
@@ -177,8 +180,8 @@ Antwoord ALLEEN met een JSON array:
 
 Regels:
 - answer = index (0-3) van het juiste antwoord
-- Maak de vragen gevarieerd en leerzaam, STRIKT passend bij het niveau: ${levelLabel}
-- Voor groep 1-2 (kleuters): tellen tot 20, rijmen, letters herkennen. NOOIT sommen boven 10, NOOIT breuken of abstracte begrippen.
+- Maak de vragen gevarieerd en leerzaam, passend bij het niveau: ${levelLabel}
+${isVrijOnderwerp || hasCustomTopic ? `- Het niveau bepaalt alleen de moeilijkheidsgraad van de taal en vragen — NIET het soort vragen. Maak geen reken- of taalsommen tenzij het onderwerp daar expliciet om vraagt.` : `- Voor groep 1-2 (kleuters): tellen tot 20, rijmen, letters herkennen. NOOIT sommen boven 10, NOOIT breuken of abstracte begrippen.
 - Voor groep 3-4: optellen/aftrekken tot 100, tafels van 2/5/10. NOOIT breuken, procenten, lange deling of wortels.
 - Voor groep 5-6: eenvoudige breuken (½, ¼), getallen tot 10.000, meten. NOOIT procenten, decimalen, wortels, machten of algebra.
 - Voor groep 7-8: procenten, breuken, kommagetallen, oppervlakte. NOOIT wortels, machten, algebra met letters, vergelijkingen oplossen, pythagoras of goniometrie — dat is VO-stof.
@@ -186,7 +189,7 @@ Regels:
 - Voor VO klas 3-4: goniometrie, differentiëren, logaritmen, examenstof. Alle exacte vakken beschikbaar.
 - Voor VO klas 5 HAVO: eindexamenstof HAVO, vragen op CE-niveau. Wiskunde A/B differentiëren, integreren, statistiek.
 - Voor VO klas 5 VWO/Gymnasium: hogere abstractie dan HAVO, VWO-examenstof, geavanceerde wiskunde B.
-- Voor VO klas 6 VWO/Gymnasium: eindexamenniveau VWO, complexe getallen, vectoren, alle vakken op eindexamen CE-niveau.
+- Voor VO klas 6 VWO/Gymnasium: eindexamenniveau VWO, complexe getallen, vectoren, alle vakken op eindexamen CE-niveau.`}
 - Foute antwoorden moeten veelgemaakte fouten zijn
 - ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door de langste optie te kiezen.
 - SVG bij meetkunde/grafieken, viewBox="0 0 300 200", kleuren: #00c853, #69f0ae, #e0e6f0. Zet null als geen diagram nodig

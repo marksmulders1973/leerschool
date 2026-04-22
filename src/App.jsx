@@ -19,7 +19,7 @@ import WoordenschatPage from "./components/WoordenschatPage.jsx";
 import SpellingPage from "./components/SpellingPage.jsx";
 import TeacherHome from "./components/TeacherHome.jsx";
 import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
-import { TeacherProgress, StudentProgressView, Leaderboard } from "./components/StudentProgress.jsx";
+import { TeacherProgress, StudentProgressView, Leaderboard, Kampioenen } from "./components/StudentProgress.jsx";
 import UpgradePage from "./components/UpgradePage.jsx";
 import OuderDashboard from "./components/OuderDashboard.jsx";
 import ProPage from "./components/ProPage.jsx";
@@ -307,7 +307,15 @@ export default function App() {
     questions = questions.map((q) => {
       if (!q.options || q.options.length < 2) return q;
       const correctText = q.options[q.answer];
-      const shuffled = [...q.options];
+      // Verwijder duplicaten (behoud correct antwoord altijd)
+      const seen = new Set();
+      const deduped = q.options.filter((opt) => {
+        const key = String(opt).trim().toLowerCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+      const shuffled = [...deduped];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
@@ -857,6 +865,19 @@ export default function App() {
           hallOfFame={hallOfFame}
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
+          onHome={() => setPage("home")}
+          onKampioenen={() => setPage("kampioenen")}
+          onChallenge={(entry, questions) => {
+            const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
+            startGame(quiz, "self");
+          }}
+        />
+      )}
+      {page === "kampioenen" && (
+        <Kampioenen
+          currentUser={userName}
+          hallOfFame={hallOfFame}
+          onBack={() => setPage("leaderboard")}
           onHome={() => setPage("home")}
           onChallenge={(entry, questions) => {
             const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
