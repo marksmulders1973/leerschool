@@ -21,7 +21,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   const [groepSelect, setGroepSelect] = useState(initGroep);
   const [klasSelect, setKlasSelect] = useState(initKlas);
   const [topic, setTopic] = useState("");
-  const [eigenMode, setEigenMode] = useState(false);
+  const [eigenMode, setEigenMode] = useState(initialSubject === "ai-vragen");
   const [topicPreview, setTopicPreview] = useState(null); // null | { found, title, description, image }
   const [previewLoading, setPreviewLoading] = useState(false);
   const [previewConfirmed, setPreviewConfirmed] = useState(false);
@@ -46,26 +46,19 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
   }, []);
 
   const fetchTopicPreview = async () => {
-    const searchTerm = topic.trim().split(/[:—\n]/)[0].trim();
-    if (!searchTerm) return;
+    if (!topic.trim()) return;
     setPreviewLoading(true);
     setTopicPreview(null);
     setPreviewConfirmed(false);
     setExtraContext("");
     try {
-      let found = false;
-      for (const lang of ["nl", "en"]) {
-        const resp = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(searchTerm)}`);
-        if (resp.ok) {
-          const d = await resp.json();
-          if (d.type !== "disambiguation") {
-            setTopicPreview({ found: true, title: d.title, description: d.extract?.slice(0, 300) || "", image: d.thumbnail?.source || null });
-            found = true;
-            break;
-          }
-        }
-      }
-      if (!found) setTopicPreview({ found: false });
+      const resp = await fetch("/api/preview-topic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ topic: topic.trim() }),
+      });
+      const d = await resp.json();
+      setTopicPreview(d.found ? { found: true, title: d.title, description: d.description } : { found: false });
     } catch {
       setTopicPreview({ found: false });
     }
@@ -229,6 +222,16 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             />
             <div style={{ fontSize: 10, color: "#445566", textAlign: "right", marginTop: 2 }}>{topic.length}/200</div>
 
+            {/* Controleer-knop direct onder het tekstveld */}
+            {topic.trim().length > 2 && !previewConfirmed && !topicPreview && !previewLoading && (
+              <button
+                onClick={() => { SoundEngine.play("click"); fetchTopicPreview(); }}
+                style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 12, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 14, cursor: "pointer" }}
+              >
+                🔍 Controleer onderwerp →
+              </button>
+            )}
+
             {/* Preview laad-indicator */}
             {previewLoading && (
               <div style={{ marginTop: 8, fontSize: 13, color: "#7aaa88" }}>⏳ Even controleren wat dit is...</div>
@@ -267,13 +270,10 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                   </>
                 ) : (
                   <div style={{ padding: 14 }}>
-                    <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
-                      ❓ We konden <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> niet opzoeken.<br />
-                      Vertel kort wat het is — dan maken we goede vragen!
+                    <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 12 }}>
+                      ❓ Kon geen informatie vinden over <strong>"{topic.trim()}"</strong>.<br />
+                      Geef een korte omschrijving — dan maakt de AI goede vragen!
                     </div>
-                    <label style={{ fontSize: 12, color: "#7aaa88", fontWeight: 700, display: "block", marginBottom: 6 }}>
-                      Wat is/doet {topic.trim().split(/[:—\n]/)[0].trim()}?
-                    </label>
                     <textarea
                       style={{ ...styles.textInput, fontSize: 13, resize: "vertical", minHeight: 64, marginBottom: 10 }}
                       value={extraContext}
