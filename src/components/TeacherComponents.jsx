@@ -337,6 +337,10 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [resultMethod, setResultMethod] = useState("whatsapp");
   const [teacherEmail, setTeacherEmail] = useState("");
   const [step, setStep] = useState(1);
+  const [topicPreview, setTopicPreview] = useState(null);
+  const [previewLoading, setPreviewLoading] = useState(false);
+  const [previewConfirmed, setPreviewConfirmed] = useState(false);
+  const [topicForAI, setTopicForAI] = useState("");
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
   const levelLabel = level === "nvt"
@@ -352,6 +356,33 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   // eigenMode/tafelMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
   const displayStep = (eigenMode || tafelMode) && step === 4 ? 3 : step;
 
+  const fetchTopicPreview = async () => {
+    const searchTerm = topic.trim().split(/[:—\n]/)[0].trim();
+    if (!searchTerm) return;
+    setPreviewLoading(true);
+    setTopicPreview(null);
+    setPreviewConfirmed(false);
+    try {
+      let found = false;
+      for (const lang of ["nl", "en"]) {
+        const resp = await fetch(`https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(searchTerm)}`);
+        if (resp.ok) {
+          const d = await resp.json();
+          if (d.type !== "disambiguation") {
+            const preview = { found: true, title: d.title, description: d.extract?.slice(0, 300) || "", image: d.thumbnail?.source || null };
+            setTopicPreview(preview);
+            found = true;
+            break;
+          }
+        }
+      }
+      if (!found) setTopicPreview({ found: false });
+    } catch {
+      setTopicPreview({ found: false });
+    }
+    setPreviewLoading(false);
+  };
+
   const canNext = () => {
     if (step === 1) return eigenMode ? topic.trim() !== "" : tafelMode ? selectedTafel > 0 : subject !== "";
     if (step === 2) return level !== "";
@@ -362,6 +393,12 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   const goNext = () => {
     if (!canNext()) return;
+    if (step === 1 && eigenMode && topic.trim() !== "") {
+      if (!previewConfirmed) {
+        if (!topicPreview) fetchTopicPreview();
+        return; // wacht op bevestiging
+      }
+    }
     // eigenMode/tafelMode: na stap 2 direct naar stap 4 (instellingen), sla stap 3 over
     if (step === 2 && (eigenMode || tafelMode)) { setStep(4); return; }
     setStep(step + 1);
@@ -375,7 +412,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   const handleSave = () => {
     const subjectId = eigenMode ? "vrij" : tafelMode ? "rekenen" : subject;
-    const topicVal = eigenMode ? null : tafelMode ? (selectedTafel === "mix" ? "tafels mix" : `tafel van ${selectedTafel}`) : (topic || null);
+    const topicVal = eigenMode ? (topicForAI || topic.trim() || null) : tafelMode ? (selectedTafel === "mix" ? "tafels mix" : `tafel van ${selectedTafel}`) : (topic || null);
     const defaultTitle = eigenMode
       ? (topic ? `${topic} Toets` : "Vrij onderwerp Toets")
       : tafelMode
@@ -470,11 +507,66 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 <input
                   style={styles.textInput}
                   value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
+                  onChange={(e) => { setTopic(e.target.value); setTopicPreview(null); setPreviewConfirmed(false); setTopicForAI(""); }}
                   placeholder="Of typ zelf een onderwerp..."
                   maxLength={80}
                 />
-                {topic && <div style={{ fontSize: 12, color: "#c07fff", fontWeight: 700, marginTop: 8 }}>✨ AI maakt vragen over: <span style={{ color: "#fff" }}>{topic}</span></div>}
+
+                {/* Preview laad-indicator */}
+                {previewLoading && (
+                  <div style={{ marginTop: 8, fontSize: 13, color: "#a07fcc" }}>⏳ Even controleren wat dit is...</div>
+                )}
+
+                {/* Preview kaart */}
+                {topicPreview && !previewConfirmed && (
+                  <div style={{ marginTop: 10, borderRadius: 14, overflow: "hidden", border: `2px solid ${topicPreview.found ? "#7c3aed" : "#556677"}`, background: "#0f1020" }}>
+                    {topicPreview.found ? (
+                      <>
+                        {topicPreview.image && <img src={topicPreview.image} alt={topicPreview.title} style={{ width: "100%", maxHeight: 140, objectFit: "cover" }} />}
+                        <div style={{ padding: 12 }}>
+                          <div style={{ fontWeight: 800, color: "#c07fff", fontSize: 14, marginBottom: 6 }}>📖 {topicPreview.title}</div>
+                          <div style={{ fontSize: 12, color: "#aabbcc", lineHeight: 1.5, marginBottom: 10 }}>{topicPreview.description}</div>
+                          <div style={{ display: "flex", gap: 8 }}>
+                            <button
+                              onClick={() => {
+                                const enriched = topicPreview.description
+                                  ? `${topic.trim()}\n\nAchtergrond: ${topicPreview.description}`
+                                  : topic.trim();
+                                setTopicForAI(enriched);
+                                setPreviewConfirmed(true);
+                              }}
+                              style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#7c3aed", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                            >
+                              ✅ Ja, hierover!
+                            </button>
+                            <button onClick={() => { setTopicPreview(null); setTopic(""); setTopicForAI(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+                              ❌ Nee, aanpassen
+                            </button>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <div style={{ padding: 14 }}>
+                        <div style={{ color: "#aabbcc", fontSize: 13, marginBottom: 10 }}>
+                          ❓ Niets gevonden voor <strong>"{topic.trim().split(/[:—\n]/)[0].trim()}"</strong> op Wikipedia.<br />
+                          Geen probleem — vragen worden gemaakt op basis van jouw omschrijving!
+                        </div>
+                        <button
+                          onClick={() => { setTopicForAI(topic.trim()); setPreviewConfirmed(true); }}
+                          style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: "#7c3aed", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                        >
+                          👍 Doorgaan met mijn omschrijving
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {previewConfirmed && (
+                  <div style={{ marginTop: 8, fontSize: 12, color: "#c07fff", fontWeight: 700 }}>
+                    ✅ Bevestigd! Vragen worden gemaakt over: <em style={{ color: "#fff" }}>{topicPreview?.title || topic.trim().split(/[:—\n]/)[0].trim()}</em>
+                  </div>
+                )}
               </div>
             )}
 
@@ -789,8 +881,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
           {step > 1 && <button style={styles.backBtn} onClick={goBack}>← Vorige</button>}
           <div style={{ flex: 1 }} />
           {step < 4 ? (
-            <button style={{ ...styles.nextBtn, opacity: canNext() ? 1 : 0.4 }} onClick={goNext} disabled={!canNext()}>
-              {step === 3 && !topic ? "Overslaan →" : "Volgende →"}
+            <button style={{ ...styles.nextBtn, opacity: canNext() ? 1 : 0.4 }} onClick={goNext} disabled={!canNext() || previewLoading}>
+              {previewLoading ? "⏳ Controleren..." : step === 1 && eigenMode && topic.trim() && !previewConfirmed ? "🔍 Controleer onderwerp →" : step === 3 && !topic ? "Overslaan →" : "Volgende →"}
             </button>
           ) : (
             <button style={styles.nextBtn} onClick={handleSave}>🚀 Toets aanmaken</button>
