@@ -212,29 +212,39 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                 </button>
               ))}
             </div>
-            <textarea
-              style={{ ...styles.textInput, fontSize: 14, resize: "vertical", minHeight: 56 }}
-              value={topic}
-              onChange={(e) => setTopic(e.target.value)}
-              placeholder="Bijv. 'de Franse Revolutie' of 'mijn werkplek: wij maken...' of 'fotosynthese bij planten'..."
-              maxLength={200}
-              rows={2}
-            />
-            <div style={{ fontSize: 10, color: "#445566", textAlign: "right", marginTop: 2 }}>{topic.length}/200</div>
-
-            {/* Controleer-knop direct onder het tekstveld */}
-            {topic.trim().length > 2 && !previewConfirmed && !topicPreview && !previewLoading && (
-              <button
-                onClick={() => { SoundEngine.play("click"); fetchTopicPreview(); }}
-                style={{ width: "100%", marginTop: 10, padding: "10px", borderRadius: 12, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 14, cursor: "pointer" }}
-              >
-                🔍 Controleer onderwerp →
-              </button>
-            )}
+            <div style={{ display: "flex", gap: 8, alignItems: "flex-end" }}>
+              <div style={{ flex: 1 }}>
+                <textarea
+                  style={{ ...styles.textInput, fontSize: 14, resize: "none", minHeight: 48, marginBottom: 0 }}
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey && topic.trim().length > 2 && !previewConfirmed && !topicPreview && !previewLoading) {
+                      e.preventDefault();
+                      SoundEngine.play("click");
+                      fetchTopicPreview();
+                    }
+                  }}
+                  placeholder="Bijv. 'de Franse Revolutie' of 'fotosynthese bij planten'..."
+                  maxLength={200}
+                  rows={2}
+                />
+                <div style={{ fontSize: 10, color: "#445566", textAlign: "right", marginTop: 2 }}>{topic.length}/200</div>
+              </div>
+              {!previewConfirmed && !topicPreview && (
+                <button
+                  onClick={() => { if (topic.trim().length > 2 && !previewLoading) { SoundEngine.play("click"); fetchTopicPreview(); } }}
+                  disabled={topic.trim().length <= 2 || previewLoading}
+                  style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "#00c853" : "#1a3a2a", color: topic.trim().length > 2 && !previewLoading ? "#000" : "#446644", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0, marginBottom: 18 }}
+                >
+                  {previewLoading ? "⏳" : "🔍 Zoeken →"}
+                </button>
+              )}
+            </div>
 
             {/* Preview laad-indicator */}
             {previewLoading && (
-              <div style={{ marginTop: 8, fontSize: 13, color: "#7aaa88" }}>⏳ Even controleren wat dit is...</div>
+              <div style={{ marginTop: 4, fontSize: 13, color: "#7aaa88" }}>⏳ Even zoeken wat dit is...</div>
             )}
 
             {/* Preview kaart */}
