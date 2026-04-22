@@ -305,6 +305,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
   const medals = ["🥇", "🥈", "🥉"];
   const [globalData, setGlobalData] = useState(null);
   const [globalHof, setGlobalHof] = useState({});
+  const [hofOpen, setHofOpen] = useState(false);
+  const [openHofKeys, setOpenHofKeys] = useState(new Set());
   const [challenged, setChallenged] = useState(() => {
     try { return JSON.parse(localStorage.getItem("ls_challenged") || "{}"); } catch { return {}; }
   });
@@ -362,6 +364,107 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
             <span style={{ fontSize: 22 }}>👑</span>
           </button>
         )}
+        {/* ── Hall of Fame sectie ── */}
+        {(() => {
+          const mergedHof = { ...hallOfFame };
+          Object.entries(globalHof).forEach(([key, entries]) => { mergedHof[key] = entries; });
+          const hofKeys = Object.keys(mergedHof).filter(k => mergedHof[k]?.length > 0);
+          if (hofKeys.length === 0) return null;
+          const hofMedals = ["👑", "🥈", "🥉", "4️⃣", "5️⃣"];
+          const fmtTime = (s) => !s ? "—" : s < 60 ? `${s}s` : `${Math.floor(s / 60)}m ${s % 60}s`;
+
+          return (
+            <div style={{ marginBottom: 14 }}>
+              <button onClick={() => setHofOpen(o => !o)} style={{
+                width: "100%", padding: "12px 16px", borderRadius: 14,
+                border: "2px solid #c0a030", background: hofOpen ? "linear-gradient(135deg, #1a1200, #2a2000)" : "linear-gradient(135deg, #111800, #1e2500)",
+                color: "#e8c840", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15,
+                cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between",
+              }}>
+                <span>🏅 Hall of Fame — snelste 100% per vak</span>
+                <span style={{ fontSize: 18 }}>{hofOpen ? "▲" : "▼"}</span>
+              </button>
+
+              {hofOpen && (
+                <div style={{ display: "flex", flexDirection: "column", gap: 6, marginTop: 8 }}>
+                  {hofKeys.sort().map(key => {
+                    const parts = key.split("-");
+                    const subjectId = parts[0];
+                    const levelId = parts.slice(1).join("-");
+                    const subj = SUBJECTS.find(s => s.id === subjectId);
+                    const levelLabel = LEVELS.find(l => l.id === levelId)?.label || levelId;
+                    const hofEntries = mergedHof[key];
+                    const isKeyOpen = openHofKeys.has(key);
+
+                    return (
+                      <div key={key} style={{ borderRadius: 12, overflow: "hidden", border: "1px solid #2a3520", background: "#0e1a0e" }}>
+                        {/* Vak-header */}
+                        <button onClick={() => setOpenHofKeys(prev => {
+                          const next = new Set(prev);
+                          next.has(key) ? next.delete(key) : next.add(key);
+                          return next;
+                        })} style={{
+                          width: "100%", padding: "10px 14px", background: "transparent", border: "none",
+                          display: "flex", alignItems: "center", justifyContent: "space-between",
+                          cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
+                        }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                            <span style={{ fontSize: 20 }}>{subj?.icon || "🎯"}</span>
+                            <div style={{ textAlign: "left" }}>
+                              <div style={{ fontWeight: 800, fontSize: 13, color: "#e8c840" }}>{subj?.label || subjectId}</div>
+                              <div style={{ fontSize: 11, color: "#6a8a6a" }}>{levelLabel} · {hofEntries.length} record{hofEntries.length !== 1 ? "s" : ""}</div>
+                            </div>
+                          </div>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                            <span style={{ fontSize: 20 }}>👑</span>
+                            <span style={{ fontSize: 13, color: "#e8c840", fontWeight: 700 }}>{hofEntries[0]?.player}</span>
+                            <span style={{ color: "#6a8a6a", fontSize: 12 }}>{isKeyOpen ? "▲" : "▼"}</span>
+                          </div>
+                        </button>
+
+                        {/* Top 5 lijst */}
+                        {isKeyOpen && (
+                          <div style={{ borderTop: "1px solid #1a2a1a" }}>
+                            {hofEntries.map((e, rank) => {
+                              const isMe = e.player === currentUser;
+                              const canChallenge = onChallenge && e.questions?.length;
+                              return (
+                                <div key={rank} style={{
+                                  display: "flex", alignItems: "center", gap: 10,
+                                  padding: "10px 14px",
+                                  background: rank === 0 ? "rgba(255,215,0,0.06)" : isMe ? "rgba(0,212,255,0.04)" : "transparent",
+                                  borderTop: rank > 0 ? "1px solid #111e11" : "none",
+                                }}>
+                                  <span style={{ fontSize: rank === 0 ? 22 : 18, width: 28, textAlign: "center" }}>{hofMedals[rank]}</span>
+                                  <div style={{ flex: 1 }}>
+                                    <div style={{ fontWeight: 700, fontSize: 13, color: rank === 0 ? "#ffd700" : isMe ? "#00d4ff" : "#c0d0c0" }}>
+                                      {e.player} {isMe && <span style={{ fontSize: 10, color: "#556677" }}>(jij)</span>}
+                                    </div>
+                                    <div style={{ fontSize: 11, color: "#556677", marginTop: 1 }}>
+                                      ⏱ {fmtTime(e.timeTaken)}
+                                      {e.completedAt && <span style={{ marginLeft: 8 }}>📅 {fmtDate(e.completedAt)}</span>}
+                                    </div>
+                                  </div>
+                                  {canChallenge && (
+                                    <button onClick={() => onChallenge({ subject: subjectId, level: levelId, topic: null }, e.questions)}
+                                      style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+                                      🎯 Uitdagen
+                                    </button>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
         {entries.length === 0 ? (
           <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Speel een quiz om op het scorebord te komen.</p></div>
         ) : (
