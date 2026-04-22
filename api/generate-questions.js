@@ -236,48 +236,59 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
       requestBody.tools = [{ type: "web_search_20250305", name: "web_search" }];
     }
 
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+  const callAnthropic = async (body) => {
+    const resp = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify(requestBody),
+      headers: { "Content-Type": "application/json", "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
+      body: JSON.stringify(body),
     });
+    const data = await resp.json();
+    if (!resp.ok) {
+      const msg = data?.error?.message || data?.error || `HTTP ${resp.status}`;
+      throw new Error(msg);
+    }
+    return data;
+  };
 
-    const data = await response.json();
-
+  const parseQuestions = (data) => {
     let text = "";
-    if (data.content) {
-      for (const block of data.content) {
-        if (block.type === "text" && block.text) {
-          text += block.text;
-        }
-      }
+    for (const block of (data.content || [])) {
+      if (block.type === "text" && block.text) text += block.text;
     }
-
-    if (!text) {
-      throw new Error("No text in response");
-    }
-
+    if (!text) throw new Error("Geen tekst ontvangen van de AI");
     const cleaned = text.replace(/```json|```/g, "").trim();
     const jsonMatch = cleaned.match(/\[[\s\S]*\]/);
-    if (!jsonMatch) {
-      throw new Error("No JSON array found");
+    if (!jsonMatch) throw new Error("AI gaf geen geldige JSON terug");
+    return JSON.parse(jsonMatch[0]);
+  };
+
+  const shuffleArr = (arr) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
+  try {
+    let data;
+    try {
+      data = await callAnthropic(requestBody);
+    } catch (firstErr) {
+      // Fallback: als web search of Sonnet faalt → probeer Haiku zonder web search
+      if (useWebSearch) {
+        console.warn("Web search mislukt, probeer zonder:", firstErr.message);
+        const fallbackBody = { ...requestBody, model: "claude-haiku-4-5-20251001", tools: undefined };
+        delete fallbackBody.tools;
+        data = await callAnthropic(fallbackBody);
+      } else {
+        throw firstErr;
+      }
     }
 
-    const questions = JSON.parse(jsonMatch[0]);
+    const questions = parseQuestions(data);
 
-    // Shuffle opties per vraag zodat het juiste antwoord niet altijd de langste optie is
-    const shuffleArr = (arr) => {
-      const a = [...arr];
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    };
     for (const q of questions) {
       if (Array.isArray(q.options) && typeof q.answer === 'number' && q.answer >= 0 && q.answer < q.options.length) {
         const correct = q.options[q.answer];
@@ -288,7 +299,7 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
 
     return json({ questions });
   } catch (error) {
-    console.error("Question generation error:", error);
-    return json({ error: "Failed to generate questions" }, 500);
+    console.error("Question generation error:", error.message);
+    return json({ error: error.message || "Kon geen vragen genereren" }, 500);
   }
 }

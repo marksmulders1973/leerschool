@@ -482,11 +482,11 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                   <div style={{ marginTop: 7, display: "flex", gap: 5 }}>
                                     <a href={`https://wa.me/?text=${encodeURIComponent(isMe ? myShareText : challengeText)}`} target="_blank" rel="noopener noreferrer"
                                       style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                      📱 {isMe ? "Deel" : "Uitdagen"} WA
+                                      📱 {isMe ? "Deel" : "💪 Daag uit"} WA
                                     </a>
                                     <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
                                       style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                      👍 {isMe ? "Deel" : "Uitdagen"} FB
+                                      👍 {isMe ? "Deel" : "💪 Daag uit"} FB
                                     </a>
                                   </div>
                                 </div>
@@ -848,19 +848,33 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                   </div>
 
                   {/* Kampioen-banner voor #1 */}
-                  {i === 0 && !isMe && (
-                    <div style={{ marginTop: 12, padding: "8px 12px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                      <span style={{ fontSize: 11, color: "#aaa" }}>
-                        {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
-                      </span>
-                      {canChallenge && (
-                        <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
-                          style={{ padding: "4px 12px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-                          💪 Ik kan dit beter!
-                        </button>
-                      )}
-                    </div>
-                  )}
+                  {i === 0 && !isMe && (() => {
+                    const waText = `💪 ${entry.player} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter? 👉 https://studiebol.online`;
+                    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`;
+                    return (
+                      <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)" }}>
+                        <div style={{ fontSize: 11, color: "#aaa", marginBottom: 8 }}>
+                          {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
+                        </div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                          {canChallenge && (
+                            <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
+                              style={{ flex: 1, minWidth: 100, padding: "7px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+                              💪 Ik kan dit beter!
+                            </button>
+                          )}
+                          <a href={`https://wa.me/?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer"
+                            style={{ flex: 1, minWidth: 80, padding: "7px 10px", borderRadius: 8, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                            📱 WhatsApp
+                          </a>
+                          <a href={fbUrl} target="_blank" rel="noopener noreferrer"
+                            style={{ flex: 1, minWidth: 80, padding: "7px 10px", borderRadius: 8, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                            👍 Facebook
+                          </a>
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   {/* Deel-sectie voor #1 als het jij bent */}
                   {i === 0 && isMe && (() => {
