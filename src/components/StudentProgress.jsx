@@ -606,6 +606,116 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
   );
 }
 
+async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelLabel, percentage, timeTaken, periodTitle, shareText }) {
+  return new Promise((resolve) => {
+    const W = 1080, H = 1080;
+    const canvas = document.createElement("canvas");
+    canvas.width = W; canvas.height = H;
+    const ctx = canvas.getContext("2d");
+
+    // Achtergrond
+    const grad = ctx.createLinearGradient(0, 0, W, H);
+    grad.addColorStop(0, "#0f1729");
+    grad.addColorStop(1, "#1a2744");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, W, H);
+
+    // Gouden rand
+    ctx.strokeStyle = "#ffd700";
+    ctx.lineWidth = 10;
+    ctx.strokeRect(18, 18, W - 36, H - 36);
+
+    // Gouden gloed in hoeken
+    const glow = ctx.createRadialGradient(W/2, 0, 0, W/2, 0, 500);
+    glow.addColorStop(0, "rgba(255,215,0,0.12)");
+    glow.addColorStop(1, "transparent");
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.textAlign = "center";
+
+    // Kroon
+    ctx.font = "160px serif";
+    ctx.fillText("👑", W / 2, 195);
+
+    // KAMPIOEN titel
+    ctx.font = "bold 58px Arial";
+    ctx.fillStyle = "#ffd700";
+    ctx.fillText("STUDIEBOL KAMPIOEN", W / 2, 295);
+
+    // Periode
+    ctx.font = "36px Arial";
+    ctx.fillStyle = "rgba(255,255,255,0.55)";
+    ctx.fillText(periodTitle.toUpperCase(), W / 2, 350);
+
+    // Lijn
+    ctx.strokeStyle = "rgba(255,215,0,0.3)";
+    ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(80, 380); ctx.lineTo(W - 80, 380); ctx.stroke();
+
+    // Naam
+    ctx.font = "bold 88px Arial";
+    ctx.fillStyle = "#ffffff";
+    const nameText = playerName.length > 14 ? playerName.slice(0, 13) + "…" : playerName;
+    ctx.fillText(nameText, W / 2, 490);
+
+    // Vak
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "#00d4ff";
+    const vakText = `${subjectIcon || "📚"} ${subjectLabel} · ${levelLabel}`;
+    ctx.fillText(vakText, W / 2, 560);
+
+    // Score
+    ctx.font = "bold 140px Arial";
+    ctx.fillStyle = percentage >= 80 ? "#00e676" : "#ffd700";
+    ctx.fillText(`${percentage}%`, W / 2, 720);
+
+    // Tijd
+    if (timeTaken) {
+      ctx.font = "36px Arial";
+      ctx.fillStyle = "rgba(255,255,255,0.45)";
+      const fmtT = (s) => s < 60 ? `${s}s` : `${Math.floor(s/60)}m ${s%60}s`;
+      ctx.fillText(`⏱ ${fmtT(timeTaken)}`, W / 2, 780);
+    }
+
+    // Lijn
+    ctx.strokeStyle = "rgba(0,212,255,0.25)";
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(80, 820); ctx.lineTo(W - 80, 820); ctx.stroke();
+
+    // Uitdaging
+    ctx.font = "34px Arial";
+    ctx.fillStyle = "rgba(255,255,255,0.65)";
+    ctx.fillText("Kun jij dit verslaan? 🎯", W / 2, 880);
+
+    // URL
+    ctx.font = "bold 40px Arial";
+    ctx.fillStyle = "#00d4ff";
+    ctx.fillText("studiebol.online", W / 2, 940);
+
+    canvas.toBlob(async (blob) => {
+      const file = new File([blob], "studiebol-kampioen.png", { type: "image/png" });
+      try {
+        if (navigator.share && navigator.canShare?.({ files: [file] })) {
+          await navigator.share({ files: [file], text: shareText, title: "Studiebol Kampioen 👑" });
+        } else {
+          // Desktop: download afbeelding + open Facebook
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a"); a.href = url; a.download = "studiebol-kampioen.png"; a.click();
+          setTimeout(() => URL.revokeObjectURL(url), 1000);
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}&quote=${encodeURIComponent(shareText)}`, "_blank");
+        }
+      } catch {
+        // Fallback: alleen download
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a"); a.href = url; a.download = "studiebol-kampioen.png"; a.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      }
+      resolve();
+    }, "image/png");
+  });
+}
+
 export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFame }) {
   const periods = [
     { id: "dag",   label: "Vandaag",  icon: "☀️",  title: "Studiebol van de dag" },
@@ -879,12 +989,21 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
                   {/* Deel-sectie voor #1 als het jij bent */}
                   {i === 0 && isMe && (() => {
-                    const waText = `🏆 Kijk eens wat ik heb gehaald met Studiebol!\n\nIk ben ${current.title}! 🎉\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 👉 https://studiebol.online`;
-                    const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`;
+                    const waText = `🏆 Jippie! Ik ben ${current.title}! 👑\n\n${playerName} · ${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 🎯\n👉 https://studiebol.online`;
+                    const cardData = {
+                      playerName,
+                      subjectIcon: subj?.icon || "📚",
+                      subjectLabel: subj?.label || entry.subject,
+                      levelLabel,
+                      percentage: entry.percentage,
+                      timeTaken: entry.time_taken,
+                      periodTitle: current.title,
+                      shareText: waText,
+                    };
                     return (
-                      <div style={{ marginTop: 14, padding: "12px 14px", borderRadius: 12, background: "rgba(255,215,0,0.06)", border: "1px solid rgba(255,215,0,0.25)" }}>
+                      <div style={{ marginTop: 14, padding: "14px", borderRadius: 12, background: "rgba(255,215,0,0.06)", border: "1px solid rgba(255,215,0,0.25)" }}>
                         <div style={{ fontSize: 12, color: "#ffd700", fontWeight: 800, textAlign: "center", marginBottom: 10 }}>
-                          🎉 Kijk eens wat ik heb gehaald! Deel het!
+                          🎉 Jippie! Jij bent {current.title}! Deel het!
                         </div>
                         <div style={{ display: "flex", gap: 8 }}>
                           <a href={`https://wa.me/?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer" style={{
@@ -894,13 +1013,13 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                           }}>
                             📱 WhatsApp
                           </a>
-                          <a href={fbUrl} target="_blank" rel="noopener noreferrer" style={{
+                          <button onClick={() => deelKampioenKaart(cardData)} style={{
                             flex: 1, padding: "10px 8px", borderRadius: 10, background: "#1877F2",
                             color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13,
-                            textDecoration: "none", textAlign: "center", display: "block",
+                            border: "none", cursor: "pointer", textAlign: "center",
                           }}>
                             👍 Facebook
-                          </a>
+                          </button>
                         </div>
                       </div>
                     );
