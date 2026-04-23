@@ -297,6 +297,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [showOnboarding, setShowOnboarding] = useState(() => {
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
+  const [installPrompt, setInstallPrompt] = useState(null);
+  const [installDismissed, setInstallDismissed] = useState(() => {
+    try { return !!localStorage.getItem("ls_pwa_dismissed"); } catch { return false; }
+  });
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+
+  useEffect(() => {
+    const handler = (e) => { e.preventDefault(); setInstallPrompt(e); };
+    window.addEventListener("beforeinstallprompt", handler);
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
 
   const finishOnboarding = () => {
     try { localStorage.setItem("ls_onboarded", "1"); } catch {}
@@ -521,6 +533,66 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         )}
 
         {step === "role" && <FeatureShowcase onFeatureClick={handleFeatureClick} />}
+
+        {/* PWA install banner */}
+        {step === "role" && !isStandalone && !installDismissed && (installPrompt || isIOS) && (
+          <div style={{
+            width: "100%", maxWidth: 360,
+            background: "linear-gradient(135deg, rgba(0,72,200,0.18), rgba(0,212,255,0.10))",
+            border: "1px solid rgba(0,212,255,0.3)",
+            borderRadius: 14,
+            padding: "12px 14px",
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            marginBottom: 16,
+          }}>
+            <span style={{ fontSize: 26, flexShrink: 0 }}>📲</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
+                Installeer als app
+              </div>
+              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                {isIOS ? "Tik op Deel → Voeg toe aan beginscherm" : "Gratis · ook offline beschikbaar"}
+              </div>
+            </div>
+            {!isIOS && (
+              <button
+                onClick={async () => {
+                  if (!installPrompt) return;
+                  installPrompt.prompt();
+                  const { outcome } = await installPrompt.userChoice;
+                  if (outcome === "accepted") {
+                    setInstallPrompt(null);
+                    try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
+                    setInstallDismissed(true);
+                  }
+                }}
+                style={{
+                  background: "linear-gradient(135deg, #0072ff, #00d4ff)",
+                  border: "none", borderRadius: 10,
+                  padding: "8px 14px",
+                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  flexShrink: 0,
+                  boxShadow: "0 2px 10px rgba(0,212,255,0.35)",
+                }}
+              >Installeer</button>
+            )}
+            <button
+              onClick={() => {
+                try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
+                setInstallDismissed(true);
+              }}
+              style={{
+                background: "none", border: "none",
+                color: "rgba(255,255,255,0.35)", fontSize: 18,
+                cursor: "pointer", padding: "0 2px", flexShrink: 0, lineHeight: 1,
+              }}
+              aria-label="Sluiten"
+            >×</button>
+          </div>
+        )}
 
         {step === "name" && (
           <div style={{ width: "100%", maxWidth: 360, display: "flex", flexDirection: "column", gap: 12 }}>
