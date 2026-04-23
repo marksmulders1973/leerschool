@@ -168,7 +168,7 @@ function TickerBanner() {
 }
 
 const FEATURES_LEFT = [
-  { id: "cito",      icon: "🎯", label: "Cito oefenen", sub: "Oefen de eindtoets",  color: "#ff6b35", bg: "rgba(255,107,53,0.12)", border: "rgba(255,107,53,0.25)", badge: null },
+  { id: "cito",      icon: "🎯", label: "Cito oefenen", sub: "Oefen de eindtoets",  color: "#ff6b35", bg: "rgba(255,107,53,0.12)", border: "rgba(255,107,53,0.25)", badge: null, vakken: ["🔢 Rekenen", "📝 Taal", "📖 Lezen", "🌍 Wereld", "📊 Studievaardigh."] },
   { id: "eindexamen",icon: "🎓", label: "Eindexamen",   sub: "VMBO · HAVO · VWO",   color: "#7c4dff", bg: "rgba(124,77,255,0.12)", border: "rgba(124,77,255,0.2)",  badge: null },
 ];
 const FEATURES_RIGHT = [
@@ -238,8 +238,16 @@ function FeatureShowcase({ onFeatureClick }) {
               }}>
               {renderBadge(f.badge, f.color)}
               <div style={{ fontSize: 30, marginBottom: 6 }}>{f.icon}</div>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: f.vakken ? 6 : 2 }}>{f.label}</div>
+              {f.vakken ? (
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+                  {f.vakken.map(v => (
+                    <span key={v} style={{ fontFamily: "'Nunito', sans-serif", fontSize: 9, color: "rgba(255,255,255,0.6)", background: "rgba(255,255,255,0.07)", borderRadius: 4, padding: "2px 5px", whiteSpace: "nowrap" }}>{v}</span>
+                  ))}
+                </div>
+              ) : (
+                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
+              )}
             </div>
           ))}
         </div>
