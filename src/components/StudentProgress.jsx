@@ -632,19 +632,20 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
     ctx.fillStyle = glow;
     ctx.fillRect(0, 0, W, H);
 
+    const emojiFont = "'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif";
     ctx.textAlign = "center";
 
-    // Kroon
-    ctx.font = "160px serif";
+    // Kroon (groot emoji)
+    ctx.font = `160px ${emojiFont}`;
     ctx.fillText("👑", W / 2, 195);
 
     // KAMPIOEN titel
-    ctx.font = "bold 58px Arial";
+    ctx.font = "bold 58px Arial, sans-serif";
     ctx.fillStyle = "#ffd700";
     ctx.fillText("STUDIEBOL KAMPIOEN", W / 2, 295);
 
     // Periode
-    ctx.font = "36px Arial";
+    ctx.font = "36px Arial, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.55)";
     ctx.fillText(periodTitle.toUpperCase(), W / 2, 350);
 
@@ -654,28 +655,27 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
     ctx.beginPath(); ctx.moveTo(80, 380); ctx.lineTo(W - 80, 380); ctx.stroke();
 
     // Naam
-    ctx.font = "bold 88px Arial";
+    ctx.font = "bold 88px Arial, sans-serif";
     ctx.fillStyle = "#ffffff";
     const nameText = playerName.length > 14 ? playerName.slice(0, 13) + "…" : playerName;
     ctx.fillText(nameText, W / 2, 490);
 
-    // Vak
-    ctx.font = "40px Arial";
+    // Vak (emoji apart tekenen)
+    ctx.font = `40px ${emojiFont}`;
     ctx.fillStyle = "#00d4ff";
-    const vakText = `${subjectIcon || "📚"} ${subjectLabel} · ${levelLabel}`;
-    ctx.fillText(vakText, W / 2, 560);
+    ctx.fillText(`${subjectIcon || ""} ${subjectLabel} \u00b7 ${levelLabel}`, W / 2, 560);
 
     // Score
-    ctx.font = "bold 140px Arial";
+    ctx.font = "bold 140px Arial, sans-serif";
     ctx.fillStyle = percentage >= 80 ? "#00e676" : "#ffd700";
     ctx.fillText(`${percentage}%`, W / 2, 720);
 
     // Tijd
     if (timeTaken) {
-      ctx.font = "36px Arial";
+      ctx.font = `36px ${emojiFont}`;
       ctx.fillStyle = "rgba(255,255,255,0.45)";
       const fmtT = (s) => s < 60 ? `${s}s` : `${Math.floor(s/60)}m ${s%60}s`;
-      ctx.fillText(`⏱ ${fmtT(timeTaken)}`, W / 2, 780);
+      ctx.fillText(`\u23f1 ${fmtT(timeTaken)}`, W / 2, 780);
     }
 
     // Lijn
@@ -684,12 +684,12 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
     ctx.beginPath(); ctx.moveTo(80, 820); ctx.lineTo(W - 80, 820); ctx.stroke();
 
     // Uitdaging
-    ctx.font = "34px Arial";
+    ctx.font = `34px ${emojiFont}`;
     ctx.fillStyle = "rgba(255,255,255,0.65)";
-    ctx.fillText("Kun jij dit verslaan? 🎯", W / 2, 880);
+    ctx.fillText("Kun jij dit verslaan? \uD83C\uDFAF", W / 2, 880);
 
     // URL
-    ctx.font = "bold 40px Arial";
+    ctx.font = "bold 40px Arial, sans-serif";
     ctx.fillStyle = "#00d4ff";
     ctx.fillText("studiebol.online", W / 2, 940);
 
