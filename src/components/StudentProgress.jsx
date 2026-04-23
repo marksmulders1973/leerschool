@@ -478,17 +478,24 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                       </button>
                                     )}
                                   </div>
-                                  {/* Deel-knoppen: eigen entry → "deel jouw record", anders → "daag uit" */}
-                                  <div style={{ marginTop: 7, display: "flex", gap: 5 }}>
-                                    <a href={`https://wa.me/?text=${encodeURIComponent(isMe ? myShareText : challengeText)}`} target="_blank" rel="noopener noreferrer"
-                                      style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                      📱 {isMe ? "Deel" : "💪 Daag uit"} WA
-                                    </a>
-                                    <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                      style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
-                                      👍 {isMe ? "Deel" : "💪 Daag uit"} FB
-                                    </a>
-                                  </div>
+                                  {/* Deel-knoppen: alleen voor eigen entry */}
+                                  {isMe && (
+                                    <div style={{ marginTop: 8 }}>
+                                      <div style={{ fontSize: 10, fontWeight: 800, color: "#ffd700", fontFamily: "'Fredoka', sans-serif", marginBottom: 4, textAlign: "center" }}>
+                                        🎉 Deel je super resultaat!
+                                      </div>
+                                      <div style={{ display: "flex", gap: 5 }}>
+                                        <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
+                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          📱 WhatsApp
+                                        </a>
+                                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          👍 Facebook
+                                        </a>
+                                      </div>
+                                    </div>
+                                  )}
                                 </div>
                               );
                             })}
@@ -554,7 +561,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                       const subjectLabel = subj?.label || entry.subject;
                       const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
                       const timeTxt = entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : "";
-                      const myShareText = `Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
+                      const myShareText = `🏆 Kijk mijn super resultaat op Studiebol!\n\n${i === 0 ? "Ik sta op #1!" : `Ik sta op #${i + 1}`} — ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 💪\nhttps://studiebol.online`;
                       const challengeShareText = `Kun jij ${entry.player} verslaan op Studiebol?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging!\nhttps://studiebol.online`;
                       const shareText = isMe ? myShareText : challengeShareText;
                       return (
@@ -582,16 +589,23 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                               </>
                             )
                           )}
-                          <div style={{ display: "flex", gap: 4, marginTop: 2 }}>
-                            <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
-                              style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
-                              📱 {isMe ? "Deel" : "Uitdagen"}
-                            </a>
-                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                              style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
-                              👍 {isMe ? "Deel" : "Uitdagen"}
-                            </a>
-                          </div>
+                          {isMe && (
+                            <div style={{ marginTop: 4 }}>
+                              <div style={{ fontSize: 9, fontWeight: 800, color: "#ffd700", fontFamily: "'Fredoka', sans-serif", marginBottom: 3, textAlign: "center" }}>
+                                🎉 Deel je super resultaat!
+                              </div>
+                              <div style={{ display: "flex", gap: 4 }}>
+                                <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
+                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                  📱 WhatsApp
+                                </a>
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                  👍 Facebook
+                                </a>
+                              </div>
+                            </div>
+                          )}
                         </>
                       );
                     })()}
