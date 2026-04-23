@@ -627,7 +627,7 @@ export default function App() {
             const topicKey = config.groep === "8" ? `cito groep8-${config.citoId}` : `cito ${config.citoId}`;
             const pool = TOPIC_QUESTIONS[topicKey] || [];
             const shuffled = [...pool].sort(() => Math.random() - 0.5);
-            const label = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" }[config.citoId] || "Cito";
+            const label = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie", studievaardigheden: "Studievaardigheden" }[config.citoId] || "Cito";
             const quiz = {
               id: "cito-" + Date.now(),
               subject: config.subject,

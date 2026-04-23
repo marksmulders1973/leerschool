@@ -60,6 +60,17 @@ const ONDERDELEN = [
     subject: "aardrijkskunde",
     topic: "Cito eindtoets wereld oriëntatie groep 7-8: aardrijkskunde, geschiedenis, natuur & techniek",
   },
+  {
+    id: "studievaardigheden",
+    icon: "📊",
+    label: "Studievaardigheden",
+    sub: "Tabellen, grafieken, tijdlijnen, kaarten",
+    color: "#e040fb",
+    bg: "rgba(224,64,251,0.08)",
+    border: "rgba(224,64,251,0.25)",
+    subject: "studievaardigheden",
+    topic: "Cito eindtoets studievaardigheden groep 7-8: tabellen lezen, grafieken interpreteren, tijdlijnen, kaarten",
+  },
 ];
 
 export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] }) {
