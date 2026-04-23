@@ -452,8 +452,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                             {hofEntries.map((e, rank) => {
                               const isMe = e.player === currentUser;
                               const canChallenge = onChallenge && e.questions?.length;
-                              const myShareText = `🏅 Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan? Doe de uitdaging! 🎯\nhttps://studiebol.online`;
-                              const challengeText = `💪 Hey! Kun jij ${e.player} verslaan op Studiebol?\n\n${e.player} staat in de Hall of Fame:\n${subj?.label || subjectId} · ${levelLabel} · 100% in ${fmtTime(e.timeTaken)}\n\nDoe de uitdaging! 🎯\nhttps://studiebol.online`;
+                              const myShareText = `Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
+                              const challengeText = `Kun jij ${e.player} verslaan op Studiebol?\n\n${e.player} staat in de Hall of Fame:\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nDoe de uitdaging!\nhttps://studiebol.online`;
                               return (
                                 <div key={rank} style={{
                                   padding: "10px 14px",
@@ -554,8 +554,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                       const subjectLabel = subj?.label || entry.subject;
                       const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
                       const timeTxt = entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : "";
-                      const myShareText = `🏆 Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} · ${levelLabel} · ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`;
-                      const challengeShareText = `💪 Kun jij ${entry.player} verslaan op Studiebol?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} · ${levelLabel} · ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging! 🎯\nhttps://studiebol.online`;
+                      const myShareText = `Ik sta #${i + 1} op het Studiebol scorebord!\n${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
+                      const challengeShareText = `Kun jij ${entry.player} verslaan op Studiebol?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging!\nhttps://studiebol.online`;
                       const shareText = isMe ? myShareText : challengeShareText;
                       return (
                         <>
@@ -903,7 +903,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
               const canChallenge = !!hofEntry?.questions?.length && onChallenge;
               const playerName = entry.player_name || entry.player;
-              const shareText = `${i === 0 ? `🏆 Ik ben de ${current.title}!` : `🥈 Ik sta #${i+1} bij de ${current.title}!`}\n${playerName} · ${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 🎯\nhttps://studiebol.online`;
+              const shareText = `${i === 0 ? `Ik ben de ${current.title}!` : `Ik sta #${i+1} bij de ${current.title}!`}\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
 
               return (
                 <div key={i} style={{
@@ -950,7 +950,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       </div>
                       {/* Acties (voor #2 en hoger) */}
                       {i > 0 && (() => {
-                        const challengeShareText = `💪 ${playerName} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter? 👉 https://studiebol.online`;
+                        const challengeShareText = `${playerName} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter?\nhttps://studiebol.online`;
                         return (
                           <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "flex-end" }}>
                             {canChallenge && (
@@ -977,7 +977,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
                   {/* Kampioen-banner voor #1 */}
                   {i === 0 && !isMe && (() => {
-                    const waText = `💪 ${entry.player} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter? 👉 https://studiebol.online`;
+                    const waText = `${entry.player} daagt je uit ${current.title.toLowerCase()} te verslaan op Studiebol!\n\n${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij het beter?\nhttps://studiebol.online`;
                     const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`;
                     return (
                       <div style={{ marginTop: 12, padding: "12px 14px", borderRadius: 10, background: "rgba(255,215,0,0.08)", border: "1px solid rgba(255,215,0,0.2)" }}>
@@ -1006,7 +1006,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
                   {/* Deel-sectie voor #1 als het jij bent */}
                   {i === 0 && isMe && (() => {
-                    const waText = `🏆 Jippie! Ik ben ${current.title}! 👑\n\n${playerName} · ${subj?.label || entry.subject} · ${levelLabel} · ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan? 🎯\n👉 https://studiebol.online`;
+                    const waText = `Jippie! Ik ben ${current.title}!\n\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij dit verslaan?\nhttps://studiebol.online`;
                     const cardData = {
                       playerName,
                       subjectIcon: subj?.icon || "📚",
