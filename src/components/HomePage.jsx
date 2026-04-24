@@ -305,13 +305,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
   const [installPrompt, setInstallPrompt] = useState(null);
-  const [installDismissed, setInstallDismissed] = useState(() => {
-    try { return !!localStorage.getItem("ls_pwa_dismissed"); } catch { return false; }
-  });
+  const [showInstallHelp, setShowInstallHelp] = useState(false);
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
   const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 
   useEffect(() => {
+    if (window.__pwaInstallPrompt) setInstallPrompt(window.__pwaInstallPrompt);
     const handler = (e) => { e.preventDefault(); setInstallPrompt(e); };
     window.addEventListener("beforeinstallprompt", handler);
     return () => window.removeEventListener("beforeinstallprompt", handler);
@@ -560,63 +559,71 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {step === "role" && <FeatureShowcase onFeatureClick={handleFeatureClick} />}
 
-        {/* PWA install banner */}
-        {step === "role" && !isStandalone && !installDismissed && (installPrompt || isIOS) && (
-          <div style={{
-            width: "100%", maxWidth: 360,
-            background: "linear-gradient(135deg, rgba(0,72,200,0.18), rgba(0,212,255,0.10))",
-            border: "1px solid rgba(0,212,255,0.3)",
-            borderRadius: 14,
-            padding: "12px 14px",
-            display: "flex",
-            alignItems: "center",
-            gap: 12,
-            marginBottom: 16,
-          }}>
+        {/* PWA install banner — altijd zichtbaar tot app geïnstalleerd is */}
+        {step === "role" && !isStandalone && (
+          <button
+            onClick={async () => {
+              if (installPrompt) {
+                installPrompt.prompt();
+                const { outcome } = await installPrompt.userChoice;
+                if (outcome === "accepted") setInstallPrompt(null);
+                return;
+              }
+              setShowInstallHelp(true);
+            }}
+            style={{
+              width: "100%", maxWidth: 360,
+              background: "linear-gradient(135deg, rgba(0,72,200,0.18), rgba(0,212,255,0.10))",
+              border: "1px solid rgba(0,212,255,0.3)",
+              borderRadius: 14,
+              padding: "12px 14px",
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              marginBottom: 16,
+              cursor: "pointer",
+              fontFamily: "'Nunito', sans-serif",
+              textAlign: "left",
+            }}>
             <span style={{ fontSize: 26, flexShrink: 0 }}>📲</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
-                Installeer als app
+                Zet Studiebol op je telefoon of laptop
               </div>
               <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                {isIOS ? "Tik op Deel → Voeg toe aan beginscherm" : "Gratis · ook offline beschikbaar"}
+                Gratis · werkt ook offline · sneller dan de browser
               </div>
             </div>
-            {!isIOS && (
-              <button
-                onClick={async () => {
-                  if (!installPrompt) return;
-                  installPrompt.prompt();
-                  const { outcome } = await installPrompt.userChoice;
-                  if (outcome === "accepted") {
-                    setInstallPrompt(null);
-                    try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
-                    setInstallDismissed(true);
-                  }
-                }}
-                style={{
-                  background: "linear-gradient(135deg, #0072ff, #00d4ff)",
-                  border: "none", borderRadius: 10,
-                  padding: "8px 14px",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 13, fontWeight: 700, cursor: "pointer",
-                  flexShrink: 0,
-                  boxShadow: "0 2px 10px rgba(0,212,255,0.35)",
-                }}
-              >Installeer</button>
-            )}
-            <button
-              onClick={() => {
-                try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
-                setInstallDismissed(true);
-              }}
-              style={{
-                background: "none", border: "none",
-                color: "rgba(255,255,255,0.35)", fontSize: 18,
-                cursor: "pointer", padding: "0 2px", flexShrink: 0, lineHeight: 1,
-              }}
-              aria-label="Sluiten"
-            >×</button>
+            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>Installeer →</span>
+          </button>
+        )}
+
+        {showInstallHelp && (
+          <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "#e0e6f0", fontFamily: "'Nunito', sans-serif" }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+              {isIOS ? (
+                <>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
+                  <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
+                    <li>Open <strong>studiebol.online</strong> in Safari</li>
+                    <li>Tik op het <strong>Deel-icoontje</strong> (vierkant met pijl omhoog)</li>
+                    <li>Kies <strong>"Zet op beginscherm"</strong></li>
+                  </ol>
+                </>
+              ) : (
+                <>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer Studiebol als app:</p>
+                  <ul style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
+                    <li><strong>Android/Chrome</strong>: menu (⋮) → "App installeren"</li>
+                    <li><strong>Windows/Mac</strong>: klik op het installatie-icoon in de adresbalk</li>
+                    <li><strong>Edge</strong>: menu → "Apps" → "Deze site installeren"</li>
+                  </ul>
+                </>
+              )}
+              <p style={{ fontSize: 12, color: "#8899aa", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <button onClick={() => setShowInstallHelp(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
+            </div>
           </div>
         )}
 
