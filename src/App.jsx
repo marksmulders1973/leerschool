@@ -26,6 +26,60 @@ import ProPage from "./components/ProPage.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
+// ─── AI question pool helpers ──────────────────────────────────
+// Gegenereerde AI-vragen gaan naar Supabase ai_question_pool zodat de
+// vragenbank groeit en we bij volgende quizzes AI-calls kunnen vermijden.
+const normalizePoolText = (s) => String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
+const computeQHash = (question, subject, level) =>
+  `${subject}|${level}|${normalizePoolText(question)}`.slice(0, 240);
+const buildTextbookKey = (textbook) => {
+  if (!textbook?.bookName) return null;
+  return [textbook.bookName, textbook.chapter || "", textbook.paragraph || textbook.topic || ""]
+    .map(s => String(s || "").trim()).join("|").slice(0, 240);
+};
+const fetchPoolQuestions = async (subject, level, topic, textbookKey, count) => {
+  try {
+    let query = supabase.from("ai_question_pool")
+      .select("question, options, answer, explanation, svg, youtube_url")
+      .eq("subject", subject)
+      .eq("level", level);
+    query = topic ? query.eq("topic", topic) : query.is("topic", null);
+    query = textbookKey ? query.eq("textbook_key", textbookKey) : query.is("textbook_key", null);
+    const { data } = await query.limit(Math.max(count * 5, 30));
+    return data || [];
+  } catch { return []; }
+};
+const saveQuestionsToPool = (qs, subject, level, topic, textbookKey) => {
+  if (!qs?.length) return;
+  const rows = qs
+    .filter(q => q && q.q && Array.isArray(q.options) && q.options.length >= 2 && typeof q.answer === "number")
+    .map(q => ({
+      subject, level,
+      topic: topic || null,
+      textbook_key: textbookKey,
+      question: q.q,
+      options: q.options,
+      answer: q.answer,
+      explanation: q.explanation || null,
+      svg: q.svg || null,
+      youtube_url: q.youtubeUrl || null,
+      q_hash: computeQHash(q.q, subject, level),
+    }));
+  if (!rows.length) return;
+  supabase.from("ai_question_pool")
+    .upsert(rows, { onConflict: "q_hash", ignoreDuplicates: true })
+    .then(() => {})
+    .catch(() => {});
+};
+const poolRowToQuestion = (r) => ({
+  q: r.question,
+  options: r.options,
+  answer: r.answer,
+  explanation: r.explanation || undefined,
+  svg: r.svg || undefined,
+  youtubeUrl: r.youtube_url || undefined,
+});
+
 const TAFEL_VIDEOS = {
   1:  "https://www.youtube.com/watch?v=1rXBuNLDuM0",
   2:  "https://www.youtube.com/watch?v=rnHUjxmFYG4",
@@ -255,39 +309,56 @@ export default function App() {
       const hasExhaustedPool = hasSampleQuestions && (playCount * questionsPerRound >= standardPoolSize);
       const useAIThisRound = (hasTopic && !hasPredefinedTopicQuestions) || hasTextbook || (!hasSampleQuestions && !hasSubjectTopicQuestions && !hasPredefinedTopicQuestions) || hasExhaustedPool;
       if (useAIThisRound && quiz.useAI !== false) {
-        // AI-limiet check: gratis gebruikers max 5 AI-quiz sessies per dag
-        const FREE_AI_DAILY_LIMIT = 5;
-        const isProUser = isLaunchPromoActive() || (subscription?.tier && subscription.tier !== "free");
-        if (!isProUser) {
+        const poolCount = quiz.questionCount || 8;
+        const topicKey = quiz.topic || null;
+        const textbookKey = buildTextbookKey(quiz.textbook);
+        // Stap 1: probeer eerst de gedeelde vragenbank (eerder gegenereerde
+        // AI-vragen). Scheelt een AI-call als er genoeg variatie in pool zit.
+        const poolRows = await fetchPoolQuestions(quiz.subject, quiz.level, topicKey, textbookKey, poolCount);
+        const MIN_POOL_FOR_REUSE = poolCount * 2; // pas hergebruiken bij voldoende variatie
+        if (poolRows.length >= MIN_POOL_FOR_REUSE) {
+          questions = shuffle(poolRows.map(poolRowToQuestion)).slice(0, poolCount);
+        } else {
+          // Stap 2: pool te klein — val terug op AI-generatie
+          // AI-limiet check: gratis gebruikers max 5 AI-quiz sessies per dag
+          const FREE_AI_DAILY_LIMIT = 5;
+          const isProUser = isLaunchPromoActive() || (subscription?.tier && subscription.tier !== "free");
+          if (!isProUser) {
+            try {
+              const today = new Date().toISOString().split("T")[0];
+              const aiUsage = JSON.parse(localStorage.getItem("ls_ai_usage") || '{"date":"","count":0}');
+              const todayCount = aiUsage.date === today ? aiUsage.count : 0;
+              if (todayCount >= FREE_AI_DAILY_LIMIT) {
+                setPage("pro");
+                return;
+              }
+              localStorage.setItem("ls_ai_usage", JSON.stringify({ date: today, count: todayCount + 1 }));
+            } catch {}
+          }
+          abortControllerRef.current = new AbortController();
+          setLoading(true);
+          setLoadingMode(hasTextbook ? "textbook" : "self");
           try {
-            const today = new Date().toISOString().split("T")[0];
-            const aiUsage = JSON.parse(localStorage.getItem("ls_ai_usage") || '{"date":"","count":0}');
-            const todayCount = aiUsage.date === today ? aiUsage.count : 0;
-            if (todayCount >= FREE_AI_DAILY_LIMIT) {
-              setPage("pro");
+            questions = await fetchAIQuestions(quiz.subject, quiz.level, poolCount, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
+            // Stap 3: sla verse AI-vragen op in de pool zodat de vragenbank groeit
+            if (questions?.length) saveQuestionsToPool(questions, quiz.subject, quiz.level, topicKey, textbookKey);
+          } catch (err) {
+            setLoading(false);
+            if (abortControllerRef.current?.signal.aborted) return;
+            const isOffline = !navigator.onLine || err.message?.includes("fetch") || err.message?.includes("network") || err.message?.includes("Failed to fetch");
+            // Val eventueel terug op pool-vragen ook al is het onder het minimum — beter dan niks
+            if (poolRows.length > 0) {
+              questions = shuffle(poolRows.map(poolRowToQuestion)).slice(0, poolCount);
+            }
+            if (!questions?.length && hasTopic && !isOffline) {
+              alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
               return;
             }
-            localStorage.setItem("ls_ai_usage", JSON.stringify({ date: today, count: todayCount + 1 }));
-          } catch {}
-        }
-        abortControllerRef.current = new AbortController();
-        setLoading(true);
-        setLoadingMode(hasTextbook ? "textbook" : "self");
-        try {
-          questions = await fetchAIQuestions(quiz.subject, quiz.level, quiz.questionCount || 8, quiz.textbook || null, quiz.topic || null, abortControllerRef.current.signal);
-        } catch (err) {
+            console.warn("AI fout, terugval op standaardvragen:", err.message);
+          }
           setLoading(false);
           if (abortControllerRef.current?.signal.aborted) return;
-          const isOffline = !navigator.onLine || err.message?.includes("fetch") || err.message?.includes("network") || err.message?.includes("Failed to fetch");
-          if (hasTopic && !isOffline) {
-            alert(`❌ Kon geen vragen maken over "${quiz.topic}".\n\nFoutmelding: ${err.message}\n\nControleer of de API key nog actief is in het Vercel dashboard.`);
-            return;
-          }
-          // Offline of gewone vakken: stil terugvallen op standaardvragen
-          console.warn("AI fout, terugval op standaardvragen:", err.message);
         }
-        setLoading(false);
-        if (abortControllerRef.current?.signal.aborted) return;
       }
 
       if (questions.length === 0) {
