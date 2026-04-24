@@ -237,7 +237,6 @@ function FeatureShowcase({ onFeatureClick }) {
                 minHeight: 90,
               }}>
               {renderBadge(f.badge, f.color)}
-              <div style={{ fontSize: 30, marginBottom: 6 }}>{f.icon}</div>
               <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: f.vakken ? 6 : 2 }}>{f.label}</div>
               {f.vakken ? (
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
