@@ -15,6 +15,30 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
+
+  const stripHtml = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  const wrongDetails = latest.answers
+    .filter(a => !a.isCorrect)
+    .map(a => {
+      const q = latest.questions?.[a.questionIndex];
+      if (!q) return null;
+      const opts = Array.isArray(q.options) ? q.options : [];
+      const gave = a.selected != null && a.selected >= 0 && opts[a.selected] != null ? stripHtml(opts[a.selected]) : "(geen antwoord)";
+      const right = opts[a.correct] != null ? stripHtml(opts[a.correct]) : "";
+      return { question: stripHtml(q.q), userAnswer: gave, correctAnswer: right, explanation: stripHtml(q.explanation) };
+    })
+    .filter(Boolean);
+
+  const MAX_Q_IN_MESSAGE = 5;
+  const shownWrong = wrongDetails.slice(0, MAX_Q_IN_MESSAGE);
+  const restCount = wrongDetails.length - shownWrong.length;
+  const wrongQuestionsBlock = shownWrong.length === 0 ? "" :
+    "\n\nDe vragen waar ik fout op had:\n\n" +
+    shownWrong.map((w, i) => {
+      const base = `${i + 1}) ${w.question}\n   ❌ Ik koos: ${w.userAnswer}\n   ✅ Juist: ${w.correctAnswer}`;
+      return w.explanation ? `${base}\n   💡 ${w.explanation}` : base;
+    }).join("\n\n") +
+    (restCount > 0 ? `\n\n(En nog ${restCount} ${restCount === 1 ? "vraag" : "vragen"} meer.)` : "");
   const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Toets: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
 
   const shareText = `📊 Studiebol resultaat\n\n👤 ${userName || "Leerling"}\n📚 ${subjLabel}${quiz?.topic ? ` · ${quiz.topic}` : ""}\n✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ ${grade}`;
@@ -166,13 +190,13 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
             <div style={{ display: "flex", gap: 8 }}>
               <button onClick={() => {
-                const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)\n\nKun je me helpen? 🙏`;
+                const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen? 🙏`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
               }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 💬 WhatsApp
               </button>
               <button onClick={() => {
-                const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)\n\nKun je me helpen?`;
+                const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen?`;
                 window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft hulp nodig bij " + subjLabel)}&body=${encodeURIComponent(msg)}`, "_blank");
               }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 ✉️ E-mail
