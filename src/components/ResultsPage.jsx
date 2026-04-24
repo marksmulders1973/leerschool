@@ -14,6 +14,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const [showGame, setShowGame] = useState(false);
   const [showIosInstall, setShowIosInstall] = useState(false);
   const [installed, setInstalled] = useState(false);
+  const [copied, setCopied] = useState(false);
   const isIOS = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
   const isStandalone = typeof window !== "undefined" && (window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone);
 
@@ -35,6 +36,32 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
     }
   };
   const canShowInstall = !isStandalone && !installed;
+
+  const appShareUrl = "https://www.studiebol.online";
+  const appShareText = "Gratis oefenen voor groep 1-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!";
+  const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
+  const handleNativeShare = async () => {
+    if (canNativeShare) {
+      try { await navigator.share({ title: "Studiebol", text: appShareText, url: appShareUrl }); } catch {}
+    } else {
+      handleCopyLink();
+    }
+  };
+  const handleCopyLink = async () => {
+    const text = `${appShareText} ${appShareUrl}`;
+    try {
+      if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(text);
+      else { const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  };
+  const handleWhatsappShareApp = () => {
+    window.open(`https://wa.me/?text=${encodeURIComponent(`${appShareText} ${appShareUrl}`)}`, "_blank");
+  };
+  const handleFacebookShareApp = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(appShareUrl)}`, "_blank");
+  };
 
   const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
@@ -196,12 +223,33 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, margin: "0 0 10px", textAlign: "center" }}>
             📣 Ken jij ook kinderen die dit leuk vinden?
           </p>
-          <button
-            onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`, "_blank")}
-            style={{ width: "100%", padding: "13px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}
-          >
-            <span style={{ fontSize: 18 }}>📘</span> Deel Studiebol op Facebook
-          </button>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+            <button
+              onClick={handleFacebookShareApp}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+            >
+              <span style={{ fontSize: 16 }}>📘</span> Facebook
+            </button>
+            <button
+              onClick={handleWhatsappShareApp}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+            >
+              <span style={{ fontSize: 16 }}>💬</span> WhatsApp
+            </button>
+            <button
+              onClick={handleNativeShare}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, #7c3aed, #ec4899)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              title={canNativeShare ? "Delen via je eigen apps (TikTok, Snap, Insta, ...)" : "Link kopiëren"}
+            >
+              <span style={{ fontSize: 16 }}>📤</span> {canNativeShare ? "Delen" : "Kopieer"}
+            </button>
+            <button
+              onClick={handleCopyLink}
+              style={{ padding: "11px 6px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 12, background: copied ? "rgba(105,240,174,0.18)" : "rgba(255,255,255,0.06)", color: copied ? "#69f0ae" : "#e0e6f0", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+            >
+              <span style={{ fontSize: 16 }}>{copied ? "✅" : "🔗"}</span> {copied ? "Gekopieerd!" : "Link kopiëren"}
+            </button>
+          </div>
           {canShowInstall && (
             <button
               onClick={handleInstallClick}
