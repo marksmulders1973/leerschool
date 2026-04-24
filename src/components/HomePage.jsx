@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles.js";
-import { LEVELS, SUBJECTS } from "../constants.js";
+import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import supabase from "../supabase.js";
 
 const TICKER_ITEMS = [
@@ -506,6 +506,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {/* Lichtkrant ticker */}
         <TickerBanner />
+
+        {step === "role" && isLaunchPromoActive() && (
+          <div style={{
+            width: "100%", maxWidth: 360, marginBottom: 12,
+            padding: "10px 14px",
+            background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
+            border: "1px solid rgba(105,240,174,0.35)",
+            borderRadius: 14,
+            fontFamily: "'Nunito', sans-serif",
+            textAlign: "center"
+          }}>
+            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
+              {LAUNCH_PROMO_SHORT}
+            </div>
+            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
+              {LAUNCH_PROMO_LONG}
+            </div>
+          </div>
+        )}
 
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360, marginBottom: 4 }}>

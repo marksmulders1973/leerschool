@@ -1,6 +1,7 @@
 import { useState } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
+import { isLaunchPromoActive } from "../constants.js";
 
 const PLANS = [
   {
@@ -152,14 +153,16 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
 
         {/* Hero banner */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
-          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: "rgba(0,200,83,0.15)", border: "1px solid rgba(0,200,83,0.3)", fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "#69f0ae", fontWeight: 700, marginBottom: 10 }}>
-            1 MAAND GRATIS PROBEREN
+          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: isLaunchPromoActive() ? "rgba(124,58,237,0.18)" : "rgba(0,200,83,0.15)", border: isLaunchPromoActive() ? "1px solid rgba(167,139,250,0.5)" : "1px solid rgba(0,200,83,0.3)", fontFamily: "'Nunito', sans-serif", fontSize: 12, color: isLaunchPromoActive() ? "#c4b5fd" : "#69f0ae", fontWeight: 700, marginBottom: 10 }}>
+            {isLaunchPromoActive() ? "🎉 LANCERING — ALLES GRATIS IN 2026" : "1 MAAND GRATIS PROBEREN"}
           </div>
           <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 28, fontWeight: 700, color: "#fff", lineHeight: 1.2, marginBottom: 6 }}>
-            Studiebol is gratis.<br />Pro maakt het krachtig.
+            {isLaunchPromoActive() ? <>Alle Pro-functies<br />gratis t/m 31 dec 2026</> : <>Studiebol is gratis.<br />Pro maakt het krachtig.</>}
           </div>
           <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.45)" }}>
-            Leerlingen oefenen altijd gratis — Pro is voor ouders en leerkrachten
+            {isLaunchPromoActive()
+              ? "Geen betaling, geen creditcard. Prijzen hieronder starten pas in 2027."
+              : "Leerlingen oefenen altijd gratis — Pro is voor ouders en leerkrachten"}
           </div>
         </div>
 

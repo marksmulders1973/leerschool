@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
+import { isLaunchPromoActive } from "../constants.js";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -24,7 +25,7 @@ function generateCode() {
 }
 
 export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin }) {
-  const isPro = subscription?.tier === "parent_pro";
+  const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
   const [selectedChild, setSelectedChild] = useState(null);
   const [childScores, setChildScores] = useState([]);

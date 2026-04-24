@@ -1,3 +1,13 @@
+// ─── Launch promo: alle PRO-functies gratis t/m 31 dec 2026 ──────
+// Tijdelijk: we hebben nog geen Stripe-integratie en nog geen echte
+// gebruikers, dus open alles zodat vroege testers volledig kunnen
+// proberen. Zet LAUNCH_PROMO_END terug naar verleden of maak de
+// helper altijd false om de promo te beëindigen.
+export const LAUNCH_PROMO_END = new Date("2027-01-01T00:00:00");
+export const isLaunchPromoActive = () => Date.now() < LAUNCH_PROMO_END.getTime();
+export const LAUNCH_PROMO_SHORT = "🎉 Dit jaar gratis wegens lancering";
+export const LAUNCH_PROMO_LONG = "Alle Pro-functies gratis t/m 31 december 2026 — geen betaling, gewoon proberen.";
+
 // ─── Subjects & Levels ──────────────────────────────────────────
 export const SUBJECTS = [
   { id: "rekenen", label: "Rekenen", icon: "🔢", color: "#00c853" },

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import supabase from "./supabase.js";
 import styles from "./styles.js";
-import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS } from "./constants.js";
+import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
 
 import LoadingOverlay from "./components/LoadingOverlay.jsx";
@@ -216,7 +216,7 @@ export default function App() {
     return diff > 0 ? diff : 0;
   })();
   const isOnTrial = trialDaysLeft !== null && trialDaysLeft > 0;
-  const isTeacherPro = isOnTrial || subscription?.tier === "teacher_pro";
+  const isTeacherPro = isLaunchPromoActive() || isOnTrial || subscription?.tier === "teacher_pro";
   const quizLimitReached = !isTeacherPro && quizzes.length >= FREE_QUIZ_LIMIT;
 
   const createQuiz = (quiz) => {
@@ -257,7 +257,7 @@ export default function App() {
       if (useAIThisRound && quiz.useAI !== false) {
         // AI-limiet check: gratis gebruikers max 5 AI-quiz sessies per dag
         const FREE_AI_DAILY_LIMIT = 5;
-        const isProUser = subscription?.tier && subscription.tier !== "free";
+        const isProUser = isLaunchPromoActive() || (subscription?.tier && subscription.tier !== "free");
         if (!isProUser) {
           try {
             const today = new Date().toISOString().split("T")[0];
