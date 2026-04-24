@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine } from "../utils.js";
@@ -12,6 +12,29 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const emoji = latest.percentage >= 90 ? "🎉" : latest.percentage >= 70 ? "😊" : latest.percentage >= 50 ? "🙂" : "💪";
   const [sent, setSent] = useState(false);
   const [showGame, setShowGame] = useState(false);
+  const [showIosInstall, setShowIosInstall] = useState(false);
+  const [installed, setInstalled] = useState(false);
+  const isIOS = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isStandalone = typeof window !== "undefined" && (window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone);
+
+  useEffect(() => {
+    const onInstalled = () => setInstalled(true);
+    window.addEventListener("appinstalled", onInstalled);
+    return () => window.removeEventListener("appinstalled", onInstalled);
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (isIOS) { setShowIosInstall(true); return; }
+    const prompt = window.__pwaInstallPrompt;
+    if (!prompt) { setShowIosInstall(true); return; }
+    prompt.prompt();
+    const { outcome } = await prompt.userChoice;
+    if (outcome === "accepted") {
+      window.__pwaInstallPrompt = null;
+      setInstalled(true);
+    }
+  };
+  const canShowInstall = !isStandalone && !installed;
 
   const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
@@ -179,10 +202,46 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           >
             <span style={{ fontSize: 18 }}>📘</span> Deel Studiebol op Facebook
           </button>
+          {canShowInstall && (
+            <button
+              onClick={handleInstallClick}
+              style={{ width: "100%", marginTop: 8, padding: "10px 8px", border: "1px solid rgba(0,212,255,0.4)", borderRadius: 12, background: "rgba(0,212,255,0.08)", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+            >
+              <span style={{ fontSize: 16 }}>📲</span> Zet Studiebol op je telefoon of laptop
+            </button>
+          )}
           <p style={{ fontSize: 11, color: "#556677", textAlign: "center", margin: "8px 0 0" }}>
             Gratis oefenplatform — help andere ouders het te ontdekken!
           </p>
         </div>
+        {showIosInstall && (
+          <div onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "#e0e6f0", fontFamily: "'Nunito', sans-serif" }}>
+              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+              {isIOS ? (
+                <>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
+                  <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
+                    <li>Open <strong>studiebol.online</strong> in Safari</li>
+                    <li>Tik op het <strong>Deel-icoontje</strong> (vierkant met pijl omhoog)</li>
+                    <li>Kies <strong>"Zet op beginscherm"</strong></li>
+                  </ol>
+                </>
+              ) : (
+                <>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer Studiebol als app:</p>
+                  <ul style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
+                    <li><strong>Android/Chrome</strong>: menu (⋮) → "App installeren"</li>
+                    <li><strong>Windows/Mac</strong>: klik op het installatie-icoon in de adresbalk</li>
+                    <li><strong>Edge</strong>: menu → "Apps" → "Deze site installeren"</li>
+                  </ul>
+                </>
+              )}
+              <p style={{ fontSize: 12, color: "#8899aa", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <button onClick={() => setShowIosInstall(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
+            </div>
+          </div>
+        )}
 
         {(
           <div style={{ marginTop: 20, padding: 18, background: "#2a1500", borderRadius: 16, border: "2px solid #ff9800", animation: "slideUp 0.4s ease" }}>

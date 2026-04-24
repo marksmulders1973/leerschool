@@ -706,7 +706,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </select>
               </div>
               <div style={{ flex: 1 }}>
-                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs</label>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs<br /><span style={{ fontSize: 11, fontWeight: 400, color: "#8899aa" }}>VMBO-TL, HAVO, VWO, Gymnasium</span></label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={klasSelect}
@@ -730,8 +730,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               </div>
             </div>
             {klasSelect && (
-              <div style={{ marginTop: 10 }}>
-                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🏫 Schooltype (optioneel)</label>
+              <div style={{ marginTop: 14, padding: 12, background: "rgba(59,130,246,0.08)", borderRadius: 12, border: "1px solid rgba(59,130,246,0.25)" }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 8, color: "#93c5fd" }}>🏫 Kies je schooltype</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
                     { id: "mavo", label: "VMBO-TL",   color: "#f59e0b", maxKlas: 4 },

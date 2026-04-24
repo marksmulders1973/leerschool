@@ -294,7 +294,20 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         </div>
 
         {question.svg && (
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: 20, marginTop: 16, padding: 12, background: "#162033", borderRadius: 14 }} dangerouslySetInnerHTML={{ __html: question.svg }} />
+          <div
+            style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 20, marginTop: 16, padding: 16, background: "#162033", borderRadius: 14, minHeight: 220 }}
+            dangerouslySetInnerHTML={{
+              __html: question.svg.replace(
+                /<svg\b([^>]*)>/i,
+                (m, attrs) => {
+                  const cleaned = attrs
+                    .replace(/\s(width|height)=("[^"]*"|'[^']*')/gi, "")
+                    .replace(/\sstyle=("[^"]*"|'[^']*')/gi, "");
+                  return `<svg${cleaned} style="width:100%;max-width:460px;height:auto;display:block;">`;
+                }
+              )
+            }}
+          />
         )}
 
         <div style={styles.optionsGrid}>
