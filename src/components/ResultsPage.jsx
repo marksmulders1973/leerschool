@@ -3,6 +3,7 @@ import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import { BreakoutGame } from "./PlayQuiz.jsx";
+import supabase from "../supabase.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
   const latest = results[results.length - 1];
@@ -40,9 +41,16 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const appShareUrl = "https://www.studiebol.online";
   const appShareText = "Gratis oefenen voor groep 1-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!";
   const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
+
+  const logShareEvent = (platform) => {
+    const name = (userName || "").trim().slice(0, 60);
+    if (!name) return;
+    try { supabase.from("share_events").insert({ shared_by: name, platform }).then(() => {}).catch(() => {}); } catch {}
+  };
+
   const handleNativeShare = async () => {
     if (canNativeShare) {
-      try { await navigator.share({ title: "Studiebol", text: appShareText, url: appShareUrl }); } catch {}
+      try { await navigator.share({ title: "Studiebol", text: appShareText, url: appShareUrl }); logShareEvent("native"); } catch {}
     } else {
       handleCopyLink();
     }
@@ -54,13 +62,16 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
       else { const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); }
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
+      logShareEvent("copy");
     } catch {}
   };
   const handleWhatsappShareApp = () => {
     window.open(`https://wa.me/?text=${encodeURIComponent(`${appShareText} ${appShareUrl}`)}`, "_blank");
+    logShareEvent("whatsapp");
   };
   const handleFacebookShareApp = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(appShareUrl)}`, "_blank");
+    logShareEvent("facebook");
   };
 
   const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;

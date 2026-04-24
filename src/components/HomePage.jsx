@@ -21,6 +21,34 @@ const TICKER_ITEMS = [
 function TickerBanner() {
   const [winners, setWinners] = useState([]);
   const [awardItems, setAwardItems] = useState([]);
+  const [shareItems, setShareItems] = useState([]);
+
+  useEffect(() => {
+    const twoDaysAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString();
+    supabase.from("share_events")
+      .select("shared_by, created_at")
+      .gte("created_at", twoDaysAgo)
+      .order("created_at", { ascending: false })
+      .limit(50)
+      .then(({ data }) => {
+        if (!data?.length) return;
+        // Dedupe per naam — één bedankje per persoon in de rotatie
+        const seen = new Set();
+        const unique = [];
+        for (const e of data) {
+          const n = (e.shared_by || "").trim();
+          if (!n || seen.has(n.toLowerCase())) continue;
+          seen.add(n.toLowerCase());
+          unique.push(n);
+          if (unique.length >= 8) break;
+        }
+        setShareItems(unique.map(name => ({
+          icon: "💙",
+          text: `Studiebol bedankt ${name} voor het delen van de app!`,
+          special: true,
+        })));
+      }).catch(() => {});
+  }, []);
 
   useEffect(() => {
     // Fetch week-awards voor lichtkrant (Doorzetter + Hardwerker)
@@ -98,8 +126,8 @@ function TickerBanner() {
     return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
-  // Verspreid alle speciale items (kampioenen + awards) tussen gewone items
-  const allSpecial = [...winnerItems, ...awardItems];
+  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes) tussen gewone items
+  const allSpecial = [...winnerItems, ...awardItems, ...shareItems];
   const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {
