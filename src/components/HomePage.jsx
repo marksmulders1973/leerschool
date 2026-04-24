@@ -305,7 +305,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [showOnboarding, setShowOnboarding] = useState(() => {
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
-  const [installPrompt, setInstallPrompt] = useState(null);
+  const [installPrompt, setInstallPrompt] = useState(() => window.__deferredInstallPrompt || null);
   const [installDismissed, setInstallDismissed] = useState(() => {
     try { return !!localStorage.getItem("ls_pwa_dismissed"); } catch { return false; }
   });
@@ -313,9 +313,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 
   useEffect(() => {
-    const handler = (e) => { e.preventDefault(); setInstallPrompt(e); };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+    const capture = (e) => { e.preventDefault(); setInstallPrompt(e); };
+    const useDeferred = () => {
+      if (window.__deferredInstallPrompt) setInstallPrompt(window.__deferredInstallPrompt);
+    };
+    window.addEventListener("beforeinstallprompt", capture);
+    window.addEventListener("ls-install-ready", useDeferred);
+    useDeferred();
+    return () => {
+      window.removeEventListener("beforeinstallprompt", capture);
+      window.removeEventListener("ls-install-ready", useDeferred);
+    };
   }, []);
 
   const finishOnboarding = () => {
@@ -568,13 +576,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <button
                 onClick={async () => {
                   if (!installPrompt) return;
-                  installPrompt.prompt();
-                  const { outcome } = await installPrompt.userChoice;
-                  if (outcome === "accepted") {
-                    setInstallPrompt(null);
-                    try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
-                    setInstallDismissed(true);
-                  }
+                  try {
+                    await installPrompt.prompt();
+                    const { outcome } = await installPrompt.userChoice;
+                    if (outcome === "accepted") {
+                      try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch {}
+                      setInstallDismissed(true);
+                    }
+                  } catch {}
+                  window.__deferredInstallPrompt = null;
+                  setInstallPrompt(null);
                 }}
                 style={{
                   background: "linear-gradient(135deg, #0072ff, #00d4ff)",

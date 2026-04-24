@@ -140,6 +140,20 @@
       gtag("js", new Date());
       gtag("config", "G-9J72M8CBJ9");
     </script>
+    <script>
+      // Vang beforeinstallprompt zo vroeg mogelijk op — anders mist React het event
+      // op de laptop (Chrome/Edge), omdat het vaak vuurt voordat useEffect registreert.
+      window.__deferredInstallPrompt = null;
+      window.addEventListener("beforeinstallprompt", function (e) {
+        e.preventDefault();
+        window.__deferredInstallPrompt = e;
+        window.dispatchEvent(new Event("ls-install-ready"));
+      });
+      window.addEventListener("appinstalled", function () {
+        window.__deferredInstallPrompt = null;
+        try { localStorage.setItem("ls_pwa_dismissed", "1"); } catch (err) {}
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
