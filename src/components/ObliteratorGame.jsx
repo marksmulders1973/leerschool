@@ -83,15 +83,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
   }
   const [canvasSize, setCanvasSize] = useState(berekenCanvas);
   const [canvasW, canvasH] = canvasSize;
+  const [isFullscreen, setIsFullscreen] = useState(false);
   useEffect(() => {
     const onResize = () => setCanvasSize(berekenCanvas());
+    const onFsChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+      // canvas opnieuw berekenen bij fullscreen-wissel
+      setTimeout(() => setCanvasSize(berekenCanvas()), 50);
+    };
     window.addEventListener("resize", onResize);
     window.addEventListener("orientationchange", onResize);
+    document.addEventListener("fullscreenchange", onFsChange);
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("orientationchange", onResize);
+      document.removeEventListener("fullscreenchange", onFsChange);
     };
   }, []);
+
+  function toggleFullscreen() {
+    try {
+      if (!document.fullscreenElement) {
+        const el = wrapperRef.current;
+        if (el?.requestFullscreen) el.requestFullscreen();
+        else if (el?.webkitRequestFullscreen) el.webkitRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      }
+    } catch {}
+  }
 
   useEffect(() => {
     if (fase !== "spelen") return;
@@ -539,7 +560,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     }
 
     // ---------- SPELER ----------
-    const speler = { x: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0 };
+    const speler = { x: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
     function spelerBots() { const m = 4 * SCHAAL; return { x: speler.x + m, y: speler.y + m, breedte: speler.breedte - m * 2, hoogte: speler.hoogte - m * 2 }; }
     function tekenSpeler() {
       const cx = speler.x + speler.breedte / 2;
@@ -623,12 +644,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     function spring() {
       if (!spelLoopt) return;
       muziekStart();
-      if (!speler.springt) {
-        speler.snelheidY = SPRING_KRACHT;
+      if (speler.sprongTeller < 2) {
+        const eersteSprong = speler.sprongTeller === 0;
+        // tweede sprong iets zwakker (85%) maar nog steeds krachtig genoeg
+        speler.snelheidY = SPRING_KRACHT * (eersteSprong ? 1 : 0.85);
         speler.springt = true;
+        speler.sprongTeller++;
         springGeluid();
-        spawnParticles(speler.x + 8 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa20", { spread: 3, opwaarts: 0, leven: 18, grootte: 4, zwaartekracht: 0.05, glow: 14 });
-        spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 4, "#ffee60", { spread: 2, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0.02, glow: 12 });
+        if (eersteSprong) {
+          spawnParticles(speler.x + 8 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa20", { spread: 3, opwaarts: 0, leven: 18, grootte: 4, zwaartekracht: 0.05, glow: 14 });
+          spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 4, "#ffee60", { spread: 2, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0.02, glow: 12 });
+        } else {
+          // dubbele sprong: blauwe energie-burst rondom speler
+          const cx = speler.x + speler.breedte / 2;
+          const cy = speler.y + speler.hoogte / 2;
+          spawnParticles(cx, cy, 14, "#40c0ff", { spread: 6, opwaarts: 0, leven: 24, grootte: 4, zwaartekracht: 0.02, krimp: true, glow: 18 });
+          spawnParticles(cx, cy, 8, "#ffffff", { spread: 4, opwaarts: 0, leven: 18, grootte: 3, zwaartekracht: 0, krimp: true, glow: 14 });
+          piep(660, 0.07, "sine", 0.10);
+        }
       }
     }
     const onKey = (e) => { if (e.code === "Space") { e.preventDefault(); spring(); } };
@@ -664,7 +697,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
           spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
         }
-        speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0;
+        speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
       }
       trail();
       volgendObstakelOver--;
@@ -886,6 +919,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       speler.springt = false;
       speler.rotatie = 0;
       speler.trailTeller = 0;
+      speler.sprongTeller = 0;
       shakeKracht = 0;
       volgendObstakelOver = 90; // iets meer ademruimte na respawn
       spelLoopt = true;
@@ -985,23 +1019,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       </div>
 
       <div ref={wrapperRef} style={{
-        width: canvasW, padding: 10, borderRadius: 12,
-        background: "linear-gradient(135deg, #0a0414, #1a0a2e)",
-        boxShadow: "0 0 40px rgba(255,80,40,0.5)",
-        border: "2px solid #ff5030",
-        position: "relative"
+        width: isFullscreen ? "100vw" : canvasW,
+        height: isFullscreen ? "100vh" : "auto",
+        padding: isFullscreen ? 16 : 10,
+        borderRadius: isFullscreen ? 0 : 12,
+        background: isFullscreen
+          ? "#000"
+          : "linear-gradient(135deg, #0a0414, #1a0a2e)",
+        boxShadow: isFullscreen ? "none" : "0 0 40px rgba(255,80,40,0.5)",
+        border: isFullscreen ? "none" : "2px solid #ff5030",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: isFullscreen ? "center" : "flex-start"
       }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8, width: "100%" }}>
           <span style={{
             fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 22, letterSpacing: 4,
             background: "linear-gradient(180deg, #fff 0%, #ffcc40 50%, #ff3030 100%)",
             WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent",
             filter: "drop-shadow(0 0 6px rgba(255,80,40,0.8))"
           }}>OBLITERATOR</span>
-          <button onClick={onClose} style={{
-            background: "none", border: "none", color: "#ffcc40", fontSize: 22, cursor: "pointer",
-            padding: "0 6px"
-          }}>✕</button>
+          <div style={{ display: "flex", gap: 4 }}>
+            <button onClick={toggleFullscreen} title={isFullscreen ? "Sluit fullscreen" : "Open fullscreen"} style={{
+              background: "none", border: "none", color: "#ffcc40", fontSize: 18, cursor: "pointer",
+              padding: "0 6px", lineHeight: 1
+            }}>{isFullscreen ? "↙" : "⛶"}</button>
+            <button onClick={onClose} style={{
+              background: "none", border: "none", color: "#ffcc40", fontSize: 22, cursor: "pointer",
+              padding: "0 6px"
+            }}>✕</button>
+          </div>
         </div>
 
         {fase === "menu" && (
