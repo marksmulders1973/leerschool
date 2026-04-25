@@ -70,12 +70,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     .filter(h => h.naam === (userName || "Speler"))
     .reduce((m, h) => Math.max(m, h.score), 0);
 
-  // canvas-grootte fit aan viewport, ratio 2:1
-  const [canvasW, canvasH] = (() => {
+  // canvas-grootte: 2:1 ratio, fit binnen viewport (W én H), reageert op rotatie
+  function berekenCanvas() {
     if (typeof window === "undefined") return [800, 400];
-    const max = Math.min(800, window.innerWidth - 24);
-    return [max, Math.round(max / 2)];
-  })();
+    const reserveH = 200; // ruimte voor lichtkrant + logo + game-over knoppen + padding
+    const maxW = Math.max(280, Math.min(800, window.innerWidth - 24));
+    const maxH = Math.max(140, window.innerHeight - reserveH);
+    // breedste mogelijk binnen 2:1 ratio
+    let w = Math.min(maxW, maxH * 2);
+    w = Math.max(280, w);
+    return [Math.round(w), Math.round(w / 2)];
+  }
+  const [canvasSize, setCanvasSize] = useState(berekenCanvas);
+  const [canvasW, canvasH] = canvasSize;
+  useEffect(() => {
+    const onResize = () => setCanvasSize(berekenCanvas());
+    window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (fase !== "spelen") return;
@@ -106,7 +122,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     let raf;
     let scoreElText = 0;
     const startLevens = 3 + bonusLeven;
+    const MAX_LEVENS = 5;
     let levens = startLevens;
+    let streak = 0;
+    let multiplier = 1;
+    let multiplierFlashTeller = 0; // frames voor "x3!" flash
+    let aantalObstakelsTotaal = 0;
+    const bonusHarten = [];
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -656,8 +678,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         o.x -= spelSnelheid;
         if (obstRaakt(o)) { levenVerlies(); return; }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
-          o.gescoord = true; score++; scoreElText = score; scoreGeluid();
+          o.gescoord = true;
+          streak++;
+          const oudeMultiplier = multiplier;
+          multiplier = Math.min(5, 1 + Math.floor(streak / 5));
+          if (multiplier > oudeMultiplier) {
+            multiplierFlashTeller = 60;
+            // confetti-explosie bij multiplier-upgrade
+            spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 18, "#69f0ae", { spread: 8, opwaarts: 3, leven: 35, grootte: 4, zwaartekracht: 0.15, glow: 18 });
+            piep(660, 0.06, "sine", 0.12);
+            setTimeout(() => piep(990, 0.06, "sine", 0.12), 60);
+            setTimeout(() => piep(1320, 0.08, "sine", 0.10), 120);
+          }
+          score += multiplier;
+          scoreElText = score;
+          scoreGeluid();
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 5, "#ffee60", { spread: 5, opwaarts: 2, leven: 22, grootte: 3, zwaartekracht: 0.1, glow: 14 });
+          aantalObstakelsTotaal++;
+          // bonus-hart spawn (elke ~25 obstakels, 40% kans)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
+            const yMin = (200 + Math.random() * 60) * SCHAAL;
+            bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+          }
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
       }
@@ -665,6 +707,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         particles[i].update();
         if (particles[i].dood) particles.splice(i, 1);
       }
+
+      // bonus-harten
+      for (let i = bonusHarten.length - 1; i >= 0; i--) {
+        const h = bonusHarten[i];
+        h.x -= spelSnelheid;
+        h.fase += 0.08;
+        h.y += Math.sin(h.fase) * 0.5;
+        // pickup-check
+        const dx = (speler.x + speler.breedte / 2) - h.x;
+        const dy = (speler.y + speler.hoogte / 2) - h.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!h.opgepakt && dist < (h.grootte + speler.breedte) / 2) {
+          h.opgepakt = true;
+          if (levens < MAX_LEVENS) {
+            levens++;
+          } else {
+            score += 5; // cap bereikt: bonus-punten ipv leven
+          }
+          piep(880, 0.06, "sine", 0.15);
+          setTimeout(() => piep(1320, 0.08, "sine", 0.12), 50);
+          spawnParticles(h.x, h.y, 16, "#ff4040", { spread: 6, opwaarts: 2, leven: 30, grootte: 4, zwaartekracht: 0.05, glow: 20 });
+          spawnParticles(h.x, h.y, 8, "#ffaaaa", { spread: 3, opwaarts: 1, leven: 25, grootte: 3, zwaartekracht: 0, glow: 14 });
+        }
+        if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
+      }
+
+      if (multiplierFlashTeller > 0) multiplierFlashTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
     }
     function tekenLevens() {
@@ -687,7 +756,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       for (const p of particles) p.teken();
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
-      // score + levens
+
+      // bonus-harten tekenen
+      for (const h of bonusHarten) {
+        ctx.save();
+        ctx.translate(h.x, h.y);
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#ff4040";
+        ctx.font = `${h.grootte}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("❤️", 0, 0);
+        // pulserend wit randje
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = `rgba(255,255,255,${0.3 + Math.sin(h.fase * 2) * 0.2})`;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(0, 0, h.grootte * 0.7, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
+      // score + record
       ctx.shadowBlur = 0;
       ctx.fillStyle = "#ffeb3b";
       ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
@@ -696,6 +785,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       ctx.fillStyle = "#ff8050";
       ctx.textAlign = "right";
       ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
+
+      // multiplier-display (alleen bij streak)
+      if (multiplier > 1) {
+        ctx.fillStyle = multiplier >= 5 ? "#ff4040" : multiplier >= 3 ? "#ffcc40" : "#69f0ae";
+        ctx.shadowBlur = 12; ctx.shadowColor = ctx.fillStyle;
+        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(`STREAK x${multiplier}`, W / 2, 28 * SCHAAL);
+      }
+
+      // big flash bij multiplier-upgrade
+      if (multiplierFlashTeller > 0) {
+        const t = multiplierFlashTeller / 60;
+        ctx.globalAlpha = t;
+        ctx.fillStyle = "#69f0ae";
+        ctx.shadowBlur = 30; ctx.shadowColor = "#69f0ae";
+        ctx.font = `bold ${48 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`x${multiplier}!`, W / 2, H * 0.5);
+        ctx.globalAlpha = 1;
+      }
+
       ctx.restore();
       tekenLevens();
     }
@@ -708,6 +819,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       shakeKracht = 22;
       muziekStop();
       doodGeluid();
+      // streak breekt bij dood
+      streak = 0;
+      multiplier = 1;
+      multiplierFlashTeller = 0;
       for (let i = 0; i < 50; i++) {
         const k = i % 3 === 0 ? "#ff2030" : (i % 3 === 1 ? "#ffaa20" : "#ffee60");
         particles.push(new Particle(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, k, { spread: 12, opwaarts: 3, leven: 55, grootte: 4, zwaartekracht: 0.2, glow: 16 }));
@@ -757,9 +872,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     }
 
     function respawn() {
-      // clear obstakels + particles, reset speler, score blijft
+      // clear obstakels + particles + bonusHarten, reset speler, score blijft
       obstakels.length = 0;
       particles.length = 0;
+      bonusHarten.length = 0;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
@@ -812,7 +928,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       try { audioCtx?.close(); } catch {}
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fase, userName]);
+  }, [fase, userName, canvasW]);
 
   // ---------- VRAAG-HANDLERS ----------
   function beantwoordVraag(idx) {
