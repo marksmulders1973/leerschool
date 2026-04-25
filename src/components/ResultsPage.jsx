@@ -90,6 +90,21 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
     })
     .filter(Boolean);
 
+  // Foute vragen met full options voor OBLITERATOR vraag-modal
+  const wrongQuestions = latest.answers
+    .filter(a => !a.isCorrect)
+    .map(a => {
+      const q = latest.questions?.[a.questionIndex];
+      if (!q || !Array.isArray(q.options) || q.options.length < 2) return null;
+      return {
+        q: stripHtml(q.q),
+        options: q.options.map(stripHtml),
+        correct: q.correct,
+        explanation: stripHtml(q.explanation || ""),
+      };
+    })
+    .filter(Boolean);
+
   const MAX_Q_IN_MESSAGE = 5;
   const shownWrong = wrongDetails.slice(0, MAX_Q_IN_MESSAGE);
   const restCount = wrongDetails.length - shownWrong.length;
@@ -118,7 +133,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   return (
     <div style={styles.page}>
-      {showGame && <ObliteratorGame userName={userName} authUser={authUser} onClose={() => setShowGame(false)} />}
+      {showGame && <ObliteratorGame userName={userName} authUser={authUser} wrongQuestions={wrongQuestions} onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>

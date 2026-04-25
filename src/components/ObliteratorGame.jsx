@@ -27,14 +27,33 @@ async function schrijfScore(naam, userId, score) {
   } catch {}
 }
 
-export default function ObliteratorGame({ userName, authUser, onClose }) {
+const SESSIE_KEY_PREFIX = "obliterator-sessies-";
+const BONUS_KEY_PREFIX = "obliterator-bonus-";
+
+function leesInt(key) {
+  try { return parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch { return 0; }
+}
+function schrijfInt(key, val) {
+  try { localStorage.setItem(key, String(val)); } catch {}
+}
+
+export default function ObliteratorGame({ userName, authUser, wrongQuestions, onClose }) {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
-  const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood"
+  const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
   const [nieuwRecord, setNieuwRecord] = useState(false);
   const [laden, setLaden] = useState(true);
+
+  const sessieKey = SESSIE_KEY_PREFIX + (userName || "anon");
+  const bonusKey = BONUS_KEY_PREFIX + (userName || "anon");
+  const [bonusLeven, setBonusLeven] = useState(() => leesInt(bonusKey));
+
+  // vraag-state
+  const [vraag, setVraag] = useState(null);
+  const [vraagAntwoord, setVraagAntwoord] = useState(null); // null | index
+  const [vraagBeloning, setVraagBeloning] = useState(false); // toon "+1 leven" feedback
 
   // top 25 ophalen bij mount + na elke game-over
   useEffect(() => {
@@ -86,6 +105,8 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
     let shakeKracht = 0;
     let raf;
     let scoreElText = 0;
+    const startLevens = 3 + bonusLeven;
+    let levens = startLevens;
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -633,7 +654,7 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= spelSnelheid;
-        if (obstRaakt(o)) { gameOver(); return; }
+        if (obstRaakt(o)) { levenVerlies(); return; }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true; score++; scoreElText = score; scoreGeluid();
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 5, "#ffee60", { spread: 5, opwaarts: 2, leven: 22, grootte: 3, zwaartekracht: 0.1, glow: 14 });
@@ -646,6 +667,19 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
       }
       if (shakeKracht > 0) shakeKracht *= 0.85;
     }
+    function tekenLevens() {
+      ctx.save();
+      ctx.font = `${22 * SCHAAL}px serif`;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      for (let i = 0; i < startLevens; i++) {
+        const heeft = i < levens;
+        ctx.globalAlpha = heeft ? 1 : 0.3;
+        if (heeft) { ctx.shadowBlur = 14; ctx.shadowColor = "#ff4040"; } else { ctx.shadowBlur = 0; }
+        ctx.fillText(heeft ? "❤️" : "🖤", 12 + i * 28 * SCHAAL, 50 * SCHAAL);
+      }
+      ctx.restore();
+    }
     function teken() {
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
@@ -653,7 +687,7 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
       for (const p of particles) p.teken();
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
-      // score boven canvas
+      // score + levens
       ctx.shadowBlur = 0;
       ctx.fillStyle = "#ffeb3b";
       ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
@@ -663,12 +697,13 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
       ctx.textAlign = "right";
       ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
       ctx.restore();
+      tekenLevens();
     }
     function lus() {
       update(); teken();
       if (spelLoopt) raf = requestAnimationFrame(lus);
     }
-    function gameOver() {
+    function levenVerlies() {
       spelLoopt = false;
       shakeKracht = 22;
       muziekStop();
@@ -677,6 +712,7 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
         const k = i % 3 === 0 ? "#ff2030" : (i % 3 === 1 ? "#ffaa20" : "#ffee60");
         particles.push(new Particle(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, k, { spread: 12, opwaarts: 3, leven: 55, grootte: 4, zwaartekracht: 0.2, glow: 16 }));
       }
+      const isLaatste = levens <= 1;
       let teller = 0;
       function uitloop() {
         teller++;
@@ -689,20 +725,79 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
         }
         for (const o of obstakels) tekenObstakel(o);
         ctx.restore();
+        tekenLevens();
+        // overlay tekst
+        if (teller > 20) {
+          ctx.save();
+          ctx.fillStyle = "rgba(0,0,0,0.5)";
+          ctx.fillRect(0, H * 0.35, W, H * 0.3);
+          ctx.fillStyle = isLaatste ? "#ff4040" : "#ffcc40";
+          ctx.font = `bold ${30 * SCHAAL}px Impact, Arial Black, sans-serif`;
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.shadowBlur = 18; ctx.shadowColor = ctx.fillStyle;
+          if (isLaatste) {
+            ctx.fillText("OBLITERATED!", W / 2, H * 0.45);
+          } else {
+            ctx.fillText("💔 LEVEN VERLOREN", W / 2, H * 0.43);
+            ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
+            ctx.fillStyle = "#ffffff";
+            ctx.fillText(`${levens - 1} ${levens - 1 === 1 ? "LEVEN" : "LEVENS"} OVER`, W / 2, H * 0.55);
+          }
+          ctx.restore();
+        }
         if (shakeKracht > 0.5) shakeKracht *= 0.9;
         if (teller < 70) raf = requestAnimationFrame(uitloop);
         else {
-          // klaar — score schrijven, top opnieuw laden, eind-scherm tonen
-          const huidigBeste = highscores.find(h => h.naam === (userName || "Speler"))?.score || 0;
-          setNieuwRecord(score > huidigBeste && score > 0);
-          setEindScore(score);
-          schrijfScore(userName, authUser?.id, score).then(() => {
-            laadTopScores().then(s => setHighscores(s));
-            setFase("dood");
-          });
+          levens--;
+          if (levens > 0) respawn();
+          else eindeSessie();
         }
       }
       uitloop();
+    }
+
+    function respawn() {
+      // clear obstakels + particles, reset speler, score blijft
+      obstakels.length = 0;
+      particles.length = 0;
+      speler.x = 100 * SCHAAL;
+      speler.y = GROND_Y;
+      speler.snelheidY = 0;
+      speler.springt = false;
+      speler.rotatie = 0;
+      speler.trailTeller = 0;
+      shakeKracht = 0;
+      volgendObstakelOver = 90; // iets meer ademruimte na respawn
+      spelLoopt = true;
+      muziekStart();
+      raf = requestAnimationFrame(lus);
+    }
+
+    function eindeSessie() {
+      // bonus verbruiken
+      schrijfInt(bonusKey, 0);
+      // sessie-counter ophogen
+      const aantal = leesInt(sessieKey) + 1;
+      schrijfInt(sessieKey, aantal);
+      const triggerVraag = aantal % 3 === 0 && wrongQuestions && wrongQuestions.length > 0;
+
+      const huidigBeste = highscores.find(h => h.naam === (userName || "Speler"))?.score || 0;
+      setNieuwRecord(score > huidigBeste && score > 0);
+      setEindScore(score);
+      setBonusLeven(0);
+
+      schrijfScore(userName, authUser?.id, score).then(() => {
+        laadTopScores().then(s => setHighscores(s));
+        if (triggerVraag) {
+          const idx = Math.floor(Math.random() * wrongQuestions.length);
+          setVraag(wrongQuestions[idx]);
+          setVraagAntwoord(null);
+          setVraagBeloning(false);
+          setFase("vraag");
+        } else {
+          setFase("dood");
+        }
+      });
     }
 
     raf = requestAnimationFrame(lus);
@@ -718,6 +813,24 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fase, userName]);
+
+  // ---------- VRAAG-HANDLERS ----------
+  function beantwoordVraag(idx) {
+    if (vraagAntwoord !== null) return;
+    setVraagAntwoord(idx);
+    if (vraag && idx === vraag.correct) {
+      setVraagBeloning(true);
+      setBonusLeven(1);
+      schrijfInt(bonusKey, 1);
+    }
+  }
+
+  function vraagAfsluiten() {
+    setFase("dood");
+    setVraag(null);
+    setVraagAntwoord(null);
+    setVraagBeloning(false);
+  }
 
   // ---------- LICHTKRANT ----------
   const lichtkrantTekst = highscores.length > 0
@@ -782,10 +895,14 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
               Hoe verder je komt, hoe sneller en feller het wordt. Achtergrond verandert om de 8 punten.
             </p>
             {persoonlijkRecord > 0 && (
-              <p style={{ color: "#ffcc40", fontSize: 14, marginBottom: 14 }}>
+              <p style={{ color: "#ffcc40", fontSize: 14, marginBottom: 6 }}>
                 Jouw record: <strong>{persoonlijkRecord}</strong>
               </p>
             )}
+            <p style={{ color: "#ff8050", fontSize: 14, marginBottom: 14 }}>
+              {Array(3 + bonusLeven).fill("❤️").join(" ")}
+              {bonusLeven > 0 && <span style={{ color: "#69f0ae", marginLeft: 8 }}>(+1 bonus!)</span>}
+            </p>
             <button onClick={() => setFase("spelen")} style={{
               padding: "14px 32px",
               background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
@@ -806,6 +923,110 @@ export default function ObliteratorGame({ userName, authUser, onClose }) {
             height={canvasH}
             style={{ display: "block", borderRadius: 8, touchAction: "none", width: canvasW, height: canvasH, background: "#0a0a0e" }}
           />
+        )}
+
+        {fase === "vraag" && vraag && (
+          <div style={{ padding: "12px 8px" }}>
+            <div style={{ textAlign: "center", marginBottom: 14 }}>
+              <div style={{ fontSize: 38, marginBottom: 4 }}>💀📚</div>
+              <p style={{
+                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 22, letterSpacing: 2,
+                color: "#ffcc40", marginBottom: 4,
+                textShadow: "0 0 10px rgba(255,180,60,0.7)"
+              }}>OEFENVRAAG</p>
+              <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, letterSpacing: 1 }}>
+                Even oefenen wat je moeilijk vond — goed antwoord = +1 leven volgende keer
+              </p>
+            </div>
+
+            <div style={{
+              padding: "14px 16px", borderRadius: 10, marginBottom: 12,
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,150,40,0.3)"
+            }}>
+              <p style={{ color: "#fff", fontSize: 15, lineHeight: 1.4, fontFamily: "'Nunito', sans-serif" }}>
+                {vraag.q}
+              </p>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {vraag.options.map((opt, i) => {
+                const isAnswered = vraagAntwoord !== null;
+                const isJuist = i === vraag.correct;
+                const isGekozen = i === vraagAntwoord;
+                let bg = "rgba(255,255,255,0.06)";
+                let border = "rgba(255,150,40,0.3)";
+                let kleur = "#fff";
+                if (isAnswered) {
+                  if (isJuist) { bg = "rgba(0,200,83,0.2)"; border = "#00c853"; kleur = "#69f0ae"; }
+                  else if (isGekozen) { bg = "rgba(244,67,54,0.2)"; border = "#f44336"; kleur = "#ff6b6b"; }
+                  else { bg = "rgba(255,255,255,0.03)"; kleur = "rgba(255,255,255,0.45)"; }
+                }
+                return (
+                  <button
+                    key={i}
+                    onClick={() => beantwoordVraag(i)}
+                    disabled={isAnswered}
+                    style={{
+                      padding: "12px 14px", borderRadius: 10, textAlign: "left",
+                      background: bg, border: `1.5px solid ${border}`,
+                      color: kleur, fontSize: 14, fontWeight: 600,
+                      cursor: isAnswered ? "default" : "pointer",
+                      fontFamily: "'Nunito', sans-serif",
+                      transition: "transform 0.1s",
+                    }}
+                  >
+                    <span style={{ marginRight: 8, fontWeight: 700 }}>
+                      {String.fromCharCode(65 + i)}.
+                    </span>
+                    {opt}
+                    {isAnswered && isJuist && <span style={{ float: "right" }}>✓</span>}
+                    {isAnswered && isGekozen && !isJuist && <span style={{ float: "right" }}>✗</span>}
+                  </button>
+                );
+              })}
+            </div>
+
+            {vraagAntwoord !== null && (
+              <div style={{ marginTop: 14 }}>
+                <div style={{
+                  padding: "12px 14px", borderRadius: 10,
+                  background: vraagBeloning ? "rgba(0,200,83,0.15)" : "rgba(255,180,60,0.12)",
+                  border: `1px solid ${vraagBeloning ? "#00c853" : "rgba(255,180,60,0.4)"}`
+                }}>
+                  <p style={{ color: vraagBeloning ? "#69f0ae" : "#ffcc40", fontSize: 14, fontWeight: 700, marginBottom: 6 }}>
+                    {vraagBeloning ? "🎉 Goed! +1 extra leven volgende keer ❤️" : "Geen straf — je leert door 💪"}
+                  </p>
+                  {vraag.explanation && (
+                    <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.4 }}>
+                      💡 {vraag.explanation}
+                    </p>
+                  )}
+                </div>
+                <button onClick={vraagAfsluiten} style={{
+                  marginTop: 10, width: "100%", padding: "12px",
+                  background: "linear-gradient(135deg, #ffcc40, #ff5030)",
+                  border: "none", borderRadius: 12, color: "#1a0008",
+                  fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 16, letterSpacing: 2,
+                  fontWeight: 700, cursor: "pointer"
+                }}>
+                  ➡️ DOOR NAAR SCOREBORD
+                </button>
+              </div>
+            )}
+
+            {vraagAntwoord === null && (
+              <button onClick={vraagAfsluiten} style={{
+                marginTop: 14, width: "100%", padding: "8px",
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.15)",
+                borderRadius: 10, color: "rgba(255,255,255,0.5)",
+                fontSize: 12, cursor: "pointer"
+              }}>
+                Liever overslaan
+              </button>
+            )}
+          </div>
         )}
 
         {fase === "dood" && (
