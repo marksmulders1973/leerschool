@@ -1,0 +1,853 @@
+import { useEffect, useRef, useState } from "react";
+
+const HS_KEY = "obliterator-highscores";
+const MAX_HS = 10;
+
+function leesHighscores() {
+  try {
+    const raw = localStorage.getItem(HS_KEY);
+    if (!raw) return [];
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr : [];
+  } catch { return []; }
+}
+
+function schrijfHighscore(naam, score) {
+  const lijst = leesHighscores();
+  lijst.push({ naam: (naam || "Speler").slice(0, 16), score, datum: new Date().toISOString().slice(0, 10) });
+  lijst.sort((a, b) => b.score - a.score);
+  const top = lijst.slice(0, MAX_HS);
+  try { localStorage.setItem(HS_KEY, JSON.stringify(top)); } catch {}
+  return top;
+}
+
+export default function ObliteratorGame({ userName, onClose }) {
+  const canvasRef = useRef(null);
+  const wrapperRef = useRef(null);
+  const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood"
+  const [eindScore, setEindScore] = useState(0);
+  const [highscores, setHighscores] = useState(() => leesHighscores());
+  const [nieuwRecord, setNieuwRecord] = useState(false);
+
+  const persoonlijkRecord = highscores
+    .filter(h => h.naam === (userName || "Speler"))
+    .reduce((m, h) => Math.max(m, h.score), 0);
+
+  // canvas-grootte fit aan viewport, ratio 2:1
+  const [canvasW, canvasH] = (() => {
+    if (typeof window === "undefined") return [800, 400];
+    const max = Math.min(800, window.innerWidth - 24);
+    return [max, Math.round(max / 2)];
+  })();
+
+  useEffect(() => {
+    if (fase !== "spelen") return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+
+    const W = canvas.width;
+    const H = canvas.height;
+    // schalen tov originele 800x400
+    const SCHAAL = W / 800;
+    const PLAFOND_HOOGTE = 60 * SCHAAL;
+    const GROND_Y = 340 * SCHAAL;
+    const SPELER_GROOTTE = 32 * SCHAAL;
+    const ZWAARTEKRACHT = 0.75 * SCHAAL;
+    const SPRING_KRACHT = -13.5 * SCHAAL;
+    const START_SNELHEID = 9 * SCHAAL;
+    const MAX_SNELHEID = 15 * SCHAAL;
+    const BAKSTEEN_W = 60 * SCHAAL;
+    const BAKSTEEN_H = 30 * SCHAAL;
+
+    let spelSnelheid = START_SNELHEID;
+    let frameTeller = 0;
+    let score = 0;
+    let spelLoopt = true;
+    let volgendObstakelOver = 60;
+    let shakeKracht = 0;
+    let raf;
+    let scoreElText = 0;
+
+    // ---------- BIOMES ----------
+    const BIOMES = [
+      { bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
+      { bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
+      { bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] }
+    ];
+    const BIOOM_BASSWORTELS = [55, 49, 58];
+    let huidigBioom = 0, nextBioom = 1, bioomFade = 1, laatsteWisselScore = 0;
+    const BIOOM_FADE_DUUR = 60;
+    const lerp = (a, b, t) => a + (b - a) * t;
+    function biomeKleur(eig, alpha) {
+      const c1 = BIOMES[huidigBioom][eig], c2 = BIOMES[nextBioom][eig];
+      const t = 1 - bioomFade;
+      const r = Math.round(lerp(c1[0], c2[0], t)), g = Math.round(lerp(c1[1], c2[1], t)), b = Math.round(lerp(c1[2], c2[2], t));
+      return alpha !== undefined ? `rgba(${r},${g},${b},${alpha})` : `rgb(${r},${g},${b})`;
+    }
+    function checkBioomWissel() {
+      if (score > 0 && score % 8 === 0 && score !== laatsteWisselScore) {
+        laatsteWisselScore = score;
+        huidigBioom = nextBioom;
+        nextBioom = (nextBioom + 1) % BIOMES.length;
+        bioomFade = 0;
+        muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom];
+      }
+      if (bioomFade < 1) bioomFade = Math.min(1, bioomFade + 1 / BIOOM_FADE_DUUR);
+    }
+
+    // ---------- AUDIO ----------
+    let audioCtx = null;
+    function aud() { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); return audioCtx; }
+    function piep(freq, duur, type = "square", volume = 0.15) {
+      try {
+        const a = aud();
+        const osc = a.createOscillator(), gain = a.createGain();
+        osc.type = type; osc.frequency.setValueAtTime(freq, a.currentTime);
+        gain.gain.setValueAtTime(volume, a.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + duur);
+        osc.connect(gain); gain.connect(a.destination);
+        osc.start(); osc.stop(a.currentTime + duur);
+      } catch {}
+    }
+    function springGeluid() { piep(330, 0.08, "sawtooth", 0.1); setTimeout(() => piep(495, 0.06, "sawtooth", 0.08), 30); }
+    function scoreGeluid() { piep(880, 0.05, "sine", 0.08); setTimeout(() => piep(1320, 0.05, "sine", 0.06), 40); }
+    function doodGeluid() {
+      try {
+        const a = aud();
+        const osc = a.createOscillator(), gain = a.createGain();
+        osc.type = "sawtooth";
+        osc.frequency.setValueAtTime(180, a.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(30, a.currentTime + 0.5);
+        gain.gain.setValueAtTime(0.25, a.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.5);
+        osc.connect(gain); gain.connect(a.destination);
+        osc.start(); osc.stop(a.currentTime + 0.5);
+      } catch {}
+    }
+
+    // ---------- HARDCORE MUZIEK ----------
+    const muziek = {
+      draait: false, bpm: 160, beat: 0, startTijd: 0, masterGain: null, noiseBuffer: null,
+      bassRiff: [0,0,7,0,0,5,0,3,0,0,7,0,10,8,7,5], bassWortel: 55, schedTimer: null
+    };
+    function maakNoiseBuffer() {
+      if (muziek.noiseBuffer) return muziek.noiseBuffer;
+      const a = aud();
+      const buf = a.createBuffer(1, a.sampleRate * 0.5, a.sampleRate);
+      const data = buf.getChannelData(0);
+      for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+      muziek.noiseBuffer = buf; return buf;
+    }
+    function muziekKick(t) {
+      const a = aud();
+      const osc = a.createOscillator(), gain = a.createGain();
+      osc.type = "sine"; osc.frequency.setValueAtTime(140, t); osc.frequency.exponentialRampToValueAtTime(38, t + 0.10);
+      gain.gain.setValueAtTime(0, t); gain.gain.linearRampToValueAtTime(0.55, t + 0.005);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.18);
+      osc.connect(gain).connect(muziek.masterGain); osc.start(t); osc.stop(t + 0.2);
+      const klik = a.createOscillator(), klikGain = a.createGain();
+      klik.type = "square"; klik.frequency.setValueAtTime(2000, t);
+      klikGain.gain.setValueAtTime(0.15, t); klikGain.gain.exponentialRampToValueAtTime(0.001, t + 0.012);
+      klik.connect(klikGain).connect(muziek.masterGain); klik.start(t); klik.stop(t + 0.015);
+    }
+    function muziekSnare(t) {
+      const a = aud();
+      const src = a.createBufferSource(); src.buffer = maakNoiseBuffer();
+      const filter = a.createBiquadFilter(); filter.type = "highpass"; filter.frequency.value = 1500;
+      const gain = a.createGain();
+      gain.gain.setValueAtTime(0.35, t); gain.gain.exponentialRampToValueAtTime(0.001, t + 0.15);
+      src.connect(filter).connect(gain).connect(muziek.masterGain); src.start(t); src.stop(t + 0.15);
+      const osc = a.createOscillator(), oscGain = a.createGain();
+      osc.type = "triangle"; osc.frequency.setValueAtTime(180, t); osc.frequency.exponentialRampToValueAtTime(80, t + 0.08);
+      oscGain.gain.setValueAtTime(0.18, t); oscGain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+      osc.connect(oscGain).connect(muziek.masterGain); osc.start(t); osc.stop(t + 0.1);
+    }
+    function muziekHat(t, open = false) {
+      const a = aud();
+      const src = a.createBufferSource(); src.buffer = maakNoiseBuffer();
+      const filter = a.createBiquadFilter(); filter.type = "highpass"; filter.frequency.value = 7000;
+      const gain = a.createGain();
+      const decay = open ? 0.18 : 0.04;
+      gain.gain.setValueAtTime(0.18, t); gain.gain.exponentialRampToValueAtTime(0.001, t + decay);
+      src.connect(filter).connect(gain).connect(muziek.masterGain); src.start(t); src.stop(t + decay);
+    }
+    function muziekBass(t, halveTonen, lengte) {
+      const a = aud();
+      const freq = muziek.bassWortel * Math.pow(2, halveTonen / 12);
+      const osc = a.createOscillator(), gain = a.createGain(), filter = a.createBiquadFilter();
+      filter.type = "lowpass"; filter.frequency.setValueAtTime(800, t);
+      filter.frequency.exponentialRampToValueAtTime(180, t + lengte * 0.8); filter.Q.value = 8;
+      osc.type = "sawtooth"; osc.frequency.setValueAtTime(freq, t);
+      gain.gain.setValueAtTime(0, t); gain.gain.linearRampToValueAtTime(0.28, t + 0.005);
+      gain.gain.setValueAtTime(0.28, t + lengte * 0.7); gain.gain.exponentialRampToValueAtTime(0.001, t + lengte);
+      osc.connect(filter).connect(gain).connect(muziek.masterGain); osc.start(t); osc.stop(t + lengte);
+    }
+    function muziekStem(t, halveTonen, lengte) {
+      const a = aud();
+      const freq = muziek.bassWortel * 4 * Math.pow(2, halveTonen / 12);
+      const osc = a.createOscillator(), gain = a.createGain();
+      osc.type = "sawtooth"; osc.frequency.setValueAtTime(freq, t);
+      gain.gain.setValueAtTime(0, t); gain.gain.linearRampToValueAtTime(0.06, t + 0.05);
+      gain.gain.setValueAtTime(0.06, t + lengte * 0.7); gain.gain.exponentialRampToValueAtTime(0.001, t + lengte);
+      osc.connect(gain).connect(muziek.masterGain); osc.start(t); osc.stop(t + lengte);
+    }
+    function muziekStart() {
+      if (muziek.draait) return;
+      try {
+        const a = aud(); if (a.state === "suspended") a.resume();
+        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.5; muziek.masterGain.connect(a.destination); }
+        muziek.draait = true; muziek.beat = 0; muziek.startTijd = a.currentTime + 0.1;
+        plan();
+      } catch {}
+    }
+    function muziekStop() {
+      muziek.draait = false;
+      if (muziek.schedTimer) clearTimeout(muziek.schedTimer);
+    }
+    function plan() {
+      if (!muziek.draait) return;
+      const a = aud();
+      const tijdPer16 = 60 / muziek.bpm / 4;
+      const lookahead = 0.12;
+      while (muziek.startTijd + muziek.beat * tijdPer16 < a.currentTime + lookahead) {
+        const t = muziek.startTijd + muziek.beat * tijdPer16;
+        const stap = muziek.beat % 16;
+        if (stap % 4 === 0) muziekKick(t);
+        if (stap === 14) muziekKick(t);
+        if (stap === 4 || stap === 12) muziekSnare(t);
+        if (stap % 2 === 1) muziekHat(t, stap === 7 || stap === 15);
+        const bn = muziek.bassRiff[stap];
+        if (bn !== undefined && (stap % 2 === 0 || stap === 7 || stap === 11)) muziekBass(t, bn - 12, tijdPer16 * 1.5);
+        if (stap === 0) muziekStem(t, 0, tijdPer16 * 8);
+        if (stap === 8) muziekStem(t, 7, tijdPer16 * 4);
+        muziek.beat++;
+      }
+      muziek.schedTimer = setTimeout(plan, 25);
+    }
+
+    // ---------- PARTICLES ----------
+    class Particle {
+      constructor(x, y, kleur, opt = {}) {
+        this.x = x; this.y = y;
+        this.vx = (Math.random() - 0.5) * (opt.spread || 4);
+        this.vy = (Math.random() - 0.5) * (opt.spread || 4) - (opt.opwaarts || 0);
+        this.leven = opt.leven || 30; this.maxLeven = this.leven;
+        this.grootte = opt.grootte || 3; this.kleur = kleur;
+        this.zwaartekracht = opt.zwaartekracht !== undefined ? opt.zwaartekracht : 0.15;
+        this.krimp = opt.krimp !== undefined ? opt.krimp : true;
+        this.glow = opt.glow !== undefined ? opt.glow : 12;
+      }
+      update() { this.x += this.vx; this.y += this.vy; this.vy += this.zwaartekracht; this.leven--; }
+      teken() {
+        const alpha = this.leven / this.maxLeven;
+        const g = this.krimp ? this.grootte * alpha : this.grootte;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        if (this.glow) { ctx.shadowBlur = this.glow; ctx.shadowColor = this.kleur; }
+        ctx.fillStyle = this.kleur;
+        ctx.fillRect(this.x - g / 2, this.y - g / 2, g, g);
+        ctx.restore();
+      }
+      get dood() { return this.leven <= 0; }
+    }
+    const particles = [];
+    const spawnParticles = (x, y, n, k, o) => { for (let i = 0; i < n; i++) particles.push(new Particle(x, y, k, o)); };
+
+    // ---------- DECOR ----------
+    const DECOR_EMOJI = ["💀","🦴","☠️","🕷️","⛧"];
+    const decoraties = [];
+    for (let i = 0; i < 8; i++) decoraties.push({
+      x: 150 + i * 200 + Math.random() * 80, y: (90 + Math.random() * 180) * SCHAAL,
+      grootte: (32 + Math.random() * 28) * SCHAAL, emoji: DECOR_EMOJI[Math.floor(Math.random() * DECOR_EMOJI.length)],
+      parallax: 0.3 + Math.random() * 0.25, rotatie: (Math.random() - 0.5) * 0.4
+    });
+    function tekenDecoraties() {
+      for (const d of decoraties) {
+        d.x -= spelSnelheid * d.parallax;
+        if (d.x < -80) {
+          d.x = W + 80 + Math.random() * 200;
+          d.y = (90 + Math.random() * 180) * SCHAAL;
+          d.grootte = (32 + Math.random() * 28) * SCHAAL;
+          d.emoji = DECOR_EMOJI[Math.floor(Math.random() * DECOR_EMOJI.length)];
+          d.rotatie = (Math.random() - 0.5) * 0.4;
+        }
+        ctx.save();
+        ctx.translate(d.x, d.y); ctx.rotate(d.rotatie);
+        ctx.globalAlpha = 0.55; ctx.shadowBlur = 18; ctx.shadowColor = biomeKleur("glow", 0.8);
+        ctx.font = `${d.grootte}px serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(d.emoji, 0, 0);
+        ctx.restore();
+      }
+    }
+
+    const vleermuizen = [];
+    for (let i = 0; i < 3; i++) {
+      const y = (80 + Math.random() * 180) * SCHAAL;
+      vleermuizen.push({ x: Math.random() * W, y, basisY: y, grootte: (22 + Math.random() * 12) * SCHAAL, fase: Math.random() * Math.PI * 2, snelheid: 1.5 + Math.random() });
+    }
+    function tekenVleermuizen() {
+      for (const v of vleermuizen) {
+        v.x -= v.snelheid + spelSnelheid * 0.25;
+        v.fase += 0.15;
+        v.y = v.basisY + Math.sin(v.fase) * 18;
+        if (v.x < -50) { v.x = W + 50; v.basisY = (80 + Math.random() * 180) * SCHAAL; v.snelheid = 1.5 + Math.random(); }
+        ctx.save();
+        ctx.translate(v.x, v.y);
+        const flap = 0.7 + Math.abs(Math.sin(v.fase * 2)) * 0.3;
+        ctx.scale(flap, 1);
+        ctx.globalAlpha = 0.85; ctx.shadowBlur = 12; ctx.shadowColor = biomeKleur("glow", 0.6);
+        ctx.font = `${v.grootte}px serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🦇", 0, 0);
+        ctx.restore();
+      }
+    }
+
+    const fakkels = [];
+    for (let i = 0; i < 3; i++) fakkels.push({ x: 200 + i * 280 + Math.random() * 80, y: (130 + Math.random() * 80) * SCHAAL, grootte: 36 * SCHAAL });
+    function tekenFakkels() {
+      for (const f of fakkels) {
+        f.x -= spelSnelheid * 0.4;
+        if (f.x < -60) { f.x = W + 60 + Math.random() * 200; f.y = (130 + Math.random() * 80) * SCHAAL; }
+        if (frameTeller % 2 === 0) particles.push(new Particle(f.x + (Math.random() - 0.5) * 4, f.y - 8, Math.random() < 0.5 ? "#ff7820" : "#ffcc40", { spread: 0.8, leven: 30, grootte: 4, zwaartekracht: -0.08, krimp: true, glow: 16 }));
+        if (frameTeller % 5 === 0) particles.push(new Particle(f.x + (Math.random() - 0.5) * 6, f.y - 4, "#ffffaa", { spread: 0.5, leven: 18, grootte: 3, zwaartekracht: -0.1, krimp: true, glow: 12 }));
+        ctx.save();
+        ctx.translate(f.x, f.y);
+        ctx.shadowBlur = 20; ctx.shadowColor = "#ff6020";
+        ctx.font = `${f.grootte}px serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🔥", 0, 0);
+        ctx.restore();
+      }
+    }
+
+    const glasVensters = [];
+    for (let i = 0; i < 2; i++) glasVensters.push({ x: 150 + i * 500, y: 110 * SCHAAL, breedte: 90 * SCHAAL, hoogte: 130 * SCHAAL });
+    function tekenGlasInLood() {
+      for (const g of glasVensters) {
+        g.x -= spelSnelheid * 0.4;
+        if (g.x + g.breedte < -50) g.x = W + 100 + Math.random() * 200;
+        if (g.x > W + 100) continue;
+        ctx.save();
+        ctx.fillStyle = "rgba(20,15,25,0.8)";
+        ctx.fillRect(g.x - 6, g.y - 6, g.breedte + 12, g.hoogte + 12);
+        const cx = g.x + g.breedte / 2;
+        ctx.shadowBlur = 25; ctx.shadowColor = biomeKleur("glow", 0.7);
+        ctx.beginPath();
+        ctx.moveTo(g.x, g.y + g.hoogte);
+        ctx.lineTo(g.x, g.y + 20);
+        ctx.quadraticCurveTo(cx, g.y - 10, g.x + g.breedte, g.y + 20);
+        ctx.lineTo(g.x + g.breedte, g.y + g.hoogte);
+        ctx.closePath();
+        ctx.fillStyle = biomeKleur("lichtbundel", 0.3); ctx.fill();
+        ctx.shadowBlur = 0;
+        const patches = [
+          { x: 0.2, y: 0.25, w: 0.25, h: 0.2, kleur: "#ff4080" },
+          { x: 0.55, y: 0.25, w: 0.25, h: 0.2, kleur: "#40c0ff" },
+          { x: 0.25, y: 0.55, w: 0.5, h: 0.15, kleur: "#ffcc40" },
+          { x: 0.3, y: 0.75, w: 0.4, h: 0.18, kleur: "#80ff60" }
+        ];
+        for (const p of patches) {
+          ctx.fillStyle = p.kleur; ctx.globalAlpha = 0.45;
+          ctx.fillRect(g.x + g.breedte * p.x, g.y + g.hoogte * p.y, g.breedte * p.w, g.hoogte * p.h);
+        }
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "rgba(20,15,25,0.9)"; ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(g.x, g.y + g.hoogte * 0.5); ctx.lineTo(g.x + g.breedte, g.y + g.hoogte * 0.5);
+        ctx.moveTo(g.x + g.breedte / 2, g.y + 10); ctx.lineTo(g.x + g.breedte / 2, g.y + g.hoogte);
+        ctx.stroke();
+        ctx.strokeStyle = "rgba(60,50,70,0.9)"; ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(g.x, g.y + g.hoogte);
+        ctx.lineTo(g.x, g.y + 20);
+        ctx.quadraticCurveTo(cx, g.y - 10, g.x + g.breedte, g.y + 20);
+        ctx.lineTo(g.x + g.breedte, g.y + g.hoogte);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    function tekenMist() {
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      ctx.save();
+      for (let i = 0; i < 3; i++) {
+        const offset = (frameTeller * (0.3 + i * 0.1)) % W;
+        const grad = ctx.createLinearGradient(0, grondTop - 40, 0, grondTop + 10);
+        grad.addColorStop(0, "rgba(180,170,200,0)");
+        grad.addColorStop(1, `rgba(180,170,200,${0.08 + i * 0.04})`);
+        ctx.fillStyle = grad;
+        for (let x = -W; x < W * 2; x += 200) {
+          const wx = x + offset - i * 50;
+          ctx.beginPath();
+          ctx.ellipse(wx, grondTop - 5, 120, 25, 0, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      ctx.restore();
+    }
+
+    // ---------- ACHTERGROND ----------
+    function tekenBakstenenMuur() {
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
+      ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+      const offset = (frameTeller * spelSnelheid * 0.15) % BAKSTEEN_W;
+      ctx.save();
+      ctx.globalAlpha = 0.55;
+      for (let y = PLAFOND_HOOGTE; y < grondTop; y += BAKSTEEN_H) {
+        const rij = Math.floor((y - PLAFOND_HOOGTE) / BAKSTEEN_H);
+        const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
+        for (let x = -BAKSTEEN_W - offset + xOff; x < W + BAKSTEEN_W; x += BAKSTEEN_W) {
+          const grad = ctx.createLinearGradient(x, y, x, y + BAKSTEEN_H);
+          grad.addColorStop(0, biomeKleur("bakstenenLicht"));
+          grad.addColorStop(1, biomeKleur("bakstenenDonker"));
+          ctx.fillStyle = grad;
+          ctx.fillRect(x + 1, y + 1, BAKSTEEN_W - 2, BAKSTEEN_H - 2);
+          ctx.fillStyle = biomeKleur("bakstenenHighlight", 0.3);
+          ctx.fillRect(x + 1, y + 1, BAKSTEEN_W - 2, 2);
+          ctx.fillStyle = "rgba(0,0,0,0.4)";
+          ctx.fillRect(x + 1, y + BAKSTEEN_H - 3, BAKSTEEN_W - 2, 2);
+        }
+      }
+      ctx.restore();
+    }
+    function tekenLichtbundels() {
+      ctx.save();
+      const bundels = [{ x: 80, b: 50 }, { x: 280, b: 70 }, { x: 480, b: 60 }, { x: 680, b: 55 }];
+      for (const bb of bundels) {
+        const x = (bb.x - frameTeller * spelSnelheid * 0.25) % (W + 150);
+        const echtX = x < -100 ? x + W + 200 : x;
+        const pulse = 0.4 + Math.sin(frameTeller * 0.04 + bb.x) * 0.15;
+        const grad = ctx.createLinearGradient(echtX, PLAFOND_HOOGTE, echtX, GROND_Y + SPELER_GROOTTE);
+        grad.addColorStop(0, biomeKleur("lichtbundel", pulse * 0.6));
+        grad.addColorStop(0.5, biomeKleur("lichtbundel", pulse * 0.3));
+        grad.addColorStop(1, biomeKleur("lichtbundel", pulse * 0.05));
+        ctx.fillStyle = grad;
+        ctx.fillRect(echtX - bb.b / 2, PLAFOND_HOOGTE, bb.b, GROND_Y + SPELER_GROOTTE - PLAFOND_HOOGTE);
+      }
+      ctx.restore();
+    }
+    function tekenPlafond() {
+      const grad = ctx.createLinearGradient(0, 0, 0, PLAFOND_HOOGTE);
+      grad.addColorStop(0, "#1a1620"); grad.addColorStop(1, "#3a3340");
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, PLAFOND_HOOGTE - 8);
+      ctx.save();
+      ctx.shadowBlur = 12; ctx.shadowColor = biomeKleur("glow", 0.5);
+      ctx.fillStyle = biomeKleur("bakstenenHighlight", 0.6);
+      ctx.fillRect(0, PLAFOND_HOOGTE - 10, W, 2);
+      ctx.restore();
+      const offset = (frameTeller * spelSnelheid * 0.5) % 50;
+      for (let x = -offset; x < W + 50; x += 50) {
+        const h = 18 + ((Math.floor(x / 50)) % 3) * 4;
+        const g2 = ctx.createLinearGradient(x, PLAFOND_HOOGTE - 8, x, PLAFOND_HOOGTE - 8 + h);
+        g2.addColorStop(0, "#dfdfe8"); g2.addColorStop(1, "#7a7a85");
+        ctx.fillStyle = g2;
+        ctx.beginPath();
+        ctx.moveTo(x, PLAFOND_HOOGTE - 8);
+        ctx.lineTo(x + 12, PLAFOND_HOOGTE - 8 + h);
+        ctx.lineTo(x + 24, PLAFOND_HOOGTE - 8);
+        ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = "rgba(255,255,255,0.6)"; ctx.lineWidth = 1; ctx.stroke();
+      }
+    }
+    function tekenGrond() {
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const grad = ctx.createLinearGradient(0, grondTop, 0, H);
+      grad.addColorStop(0, biomeKleur("grondLicht")); grad.addColorStop(1, biomeKleur("grondDonker"));
+      ctx.fillStyle = grad; ctx.fillRect(0, grondTop, W, H - grondTop);
+      const offset = (frameTeller * spelSnelheid) % BAKSTEEN_W;
+      ctx.save();
+      ctx.globalAlpha = 0.5;
+      for (let y = grondTop; y < H; y += BAKSTEEN_H) {
+        const rij = Math.floor((y - grondTop) / BAKSTEEN_H);
+        const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
+        for (let x = -BAKSTEEN_W - offset + xOff; x < W + BAKSTEEN_W; x += BAKSTEEN_W) {
+          ctx.fillStyle = biomeKleur("bakstenenDonker");
+          ctx.fillRect(x + 1, y + 1, BAKSTEEN_W - 2, BAKSTEEN_H - 2);
+          ctx.fillStyle = biomeKleur("bakstenenHighlight", 0.25);
+          ctx.fillRect(x + 1, y + 1, BAKSTEEN_W - 2, 2);
+        }
+      }
+      ctx.restore();
+      ctx.save();
+      ctx.shadowBlur = 18; ctx.shadowColor = biomeKleur("glow", 0.7);
+      ctx.strokeStyle = biomeKleur("glow", 0.7); ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, grondTop); ctx.lineTo(W, grondTop); ctx.stroke();
+      ctx.restore();
+    }
+
+    // ---------- SPELER ----------
+    const speler = { x: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0 };
+    function spelerBots() { const m = 4 * SCHAAL; return { x: speler.x + m, y: speler.y + m, breedte: speler.breedte - m * 2, hoogte: speler.hoogte - m * 2 }; }
+    function tekenSpeler() {
+      const cx = speler.x + speler.breedte / 2;
+      const cy = speler.y + speler.hoogte / 2;
+      const r = speler.breedte / 2;
+      ctx.save();
+      ctx.translate(cx, cy); ctx.rotate(speler.rotatie);
+      ctx.shadowBlur = 25; ctx.shadowColor = "#ff2030";
+      const grad = ctx.createRadialGradient(-r * 0.3, -r * 0.3, 2, 0, 0, r);
+      grad.addColorStop(0, "#ff5060"); grad.addColorStop(0.6, "#cc1525"); grad.addColorStop(1, "#7a0010");
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "#ffffff"; ctx.fillRect(-r, -3 * SCHAAL, r * 2, 6 * SCHAAL);
+      ctx.fillStyle = "#aa1020"; ctx.fillRect(-r, -1 * SCHAAL, r * 2, 2 * SCHAAL);
+      ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(0, 0, r - 1, 0, Math.PI * 2); ctx.stroke();
+      ctx.fillStyle = "rgba(255,255,255,0.5)";
+      ctx.beginPath(); ctx.arc(-r * 0.4, -r * 0.4, r * 0.18, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+    }
+
+    // ---------- OBSTAKELS ----------
+    const obstakels = [];
+    function tekenStenenStekel(x, y, b, h) {
+      ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
+      const grad = ctx.createLinearGradient(x, y, x, y + h);
+      grad.addColorStop(0, "#f0f0f5"); grad.addColorStop(0.6, "#a8a8b0"); grad.addColorStop(1, "#5a5a65");
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.closePath(); ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(0,0,0,0.4)";
+      ctx.beginPath(); ctx.moveTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.lineTo(x + b - 4, y + h); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = "rgba(255,255,255,0.6)";
+      ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b / 2 - 1, y + 2); ctx.lineTo(x + 3, y + h); ctx.closePath(); ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,0.7)"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.closePath(); ctx.stroke();
+      ctx.restore();
+    }
+    function tekenStenenBlok(x, y, b, h) {
+      ctx.save(); ctx.shadowBlur = 10; ctx.shadowColor = "rgba(255,255,255,0.3)";
+      const grad = ctx.createLinearGradient(x, y, x, y + h);
+      grad.addColorStop(0, "#dadae3"); grad.addColorStop(1, "#6a6a75");
+      ctx.fillStyle = grad; ctx.fillRect(x, y, b, h);
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(255,255,255,0.5)"; ctx.fillRect(x, y, b, 3); ctx.fillRect(x, y, 3, h);
+      ctx.fillStyle = "rgba(0,0,0,0.4)"; ctx.fillRect(x + b - 3, y, 3, h); ctx.fillRect(x, y + h - 3, b, 3);
+      ctx.strokeStyle = "rgba(0,0,0,0.3)"; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x + b / 2, y + 6); ctx.lineTo(x + b / 2, y + h - 6);
+      ctx.moveTo(x + 6, y + h / 2); ctx.lineTo(x + b - 6, y + h / 2); ctx.stroke();
+      ctx.restore();
+    }
+    function botst(a, b) { return a.x < b.x + b.breedte && a.x + a.breedte > b.x && a.y < b.y + b.hoogte && a.y + a.hoogte > b.y; }
+    function maakObstakel() {
+      const r = Math.random();
+      let type = 0;
+      if (score > 2 && r < 0.30) type = 1;
+      else if (score > 6 && r < 0.50) type = 2;
+      const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : 30 * SCHAAL;
+      const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
+      obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+    }
+    function tekenObstakel(o) {
+      if (o.type === 0) tekenStenenStekel(o.x, o.y, o.breedte, o.hoogte);
+      else if (o.type === 1) {
+        tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
+        tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
+      } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+    }
+    function obstRaakt(o) {
+      const s = spelerBots();
+      if (o.type === 1) {
+        const a1 = { x: o.x, y: o.y, breedte: 24 * SCHAAL, hoogte: o.hoogte };
+        const b1 = { x: o.x + 30 * SCHAAL, y: o.y, breedte: 24 * SCHAAL, hoogte: o.hoogte };
+        return botst(s, a1) || botst(s, b1);
+      }
+      return botst(s, { x: o.x, y: o.y, breedte: o.breedte, hoogte: o.hoogte });
+    }
+
+    // ---------- INPUT ----------
+    function spring() {
+      if (!spelLoopt) return;
+      muziekStart();
+      if (!speler.springt) {
+        speler.snelheidY = SPRING_KRACHT;
+        speler.springt = true;
+        springGeluid();
+        spawnParticles(speler.x + 8 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa20", { spread: 3, opwaarts: 0, leven: 18, grootte: 4, zwaartekracht: 0.05, glow: 14 });
+        spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 4, "#ffee60", { spread: 2, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0.02, glow: 12 });
+      }
+    }
+    const onKey = (e) => { if (e.code === "Space") { e.preventDefault(); spring(); } };
+    const onClick = () => spring();
+    const onTouch = (e) => { e.preventDefault(); spring(); };
+    window.addEventListener("keydown", onKey);
+    canvas.addEventListener("mousedown", onClick);
+    canvas.addEventListener("touchstart", onTouch, { passive: false });
+
+    // ---------- TRAIL ----------
+    function trail() {
+      const cx = speler.x + 4 * SCHAAL, cy = speler.y + speler.hoogte / 2;
+      if (speler.trailTeller % 2 === 0) {
+        particles.push(new Particle(cx + Math.random() * 4 - 2, cy + (Math.random() - 0.5) * 8, Math.random() < 0.5 ? "#ff7820" : "#ffcc40", { spread: 1.2, leven: 18, grootte: 5, zwaartekracht: -0.02, krimp: true, glow: 16 }));
+      }
+      if (speler.trailTeller % 4 === 0) {
+        particles.push(new Particle(cx, cy + (Math.random() - 0.5) * 6, "#ffffaa", { spread: 0.8, leven: 12, grootte: 3, zwaartekracht: 0, krimp: true, glow: 10 }));
+      }
+      speler.trailTeller++;
+    }
+
+    // ---------- LOOP ----------
+    function update() {
+      if (!spelLoopt) return;
+      frameTeller++;
+      checkBioomWissel();
+      spelSnelheid = Math.min(MAX_SNELHEID, START_SNELHEID + score * 0.10 * SCHAAL);
+      speler.snelheidY += ZWAARTEKRACHT;
+      speler.y += speler.snelheidY;
+      if (speler.springt) speler.rotatie += 0.18;
+      if (speler.y >= GROND_Y) {
+        if (speler.springt) {
+          spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
+          spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
+        }
+        speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0;
+      }
+      trail();
+      volgendObstakelOver--;
+      if (volgendObstakelOver <= 0) {
+        maakObstakel();
+        const minA = Math.max(28, 50 - score * 0.8);
+        volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * 25);
+      }
+      for (let i = obstakels.length - 1; i >= 0; i--) {
+        const o = obstakels[i];
+        o.x -= spelSnelheid;
+        if (obstRaakt(o)) { gameOver(); return; }
+        if (!o.gescoord && o.x + o.breedte < speler.x) {
+          o.gescoord = true; score++; scoreElText = score; scoreGeluid();
+          spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 5, "#ffee60", { spread: 5, opwaarts: 2, leven: 22, grootte: 3, zwaartekracht: 0.1, glow: 14 });
+        }
+        if (o.x + o.breedte < 0) obstakels.splice(i, 1);
+      }
+      for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        if (particles[i].dood) particles.splice(i, 1);
+      }
+      if (shakeKracht > 0) shakeKracht *= 0.85;
+    }
+    function teken() {
+      ctx.save();
+      if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
+      tekenBakstenenMuur(); tekenGlasInLood(); tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+      for (const p of particles) p.teken();
+      tekenSpeler();
+      for (const o of obstakels) tekenObstakel(o);
+      // score boven canvas
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "#ffeb3b";
+      ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "left";
+      ctx.fillText(`SCORE: ${scoreElText}`, 12, 28 * SCHAAL);
+      ctx.fillStyle = "#ff8050";
+      ctx.textAlign = "right";
+      ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
+      ctx.restore();
+    }
+    function lus() {
+      update(); teken();
+      if (spelLoopt) raf = requestAnimationFrame(lus);
+    }
+    function gameOver() {
+      spelLoopt = false;
+      shakeKracht = 22;
+      muziekStop();
+      doodGeluid();
+      for (let i = 0; i < 50; i++) {
+        const k = i % 3 === 0 ? "#ff2030" : (i % 3 === 1 ? "#ffaa20" : "#ffee60");
+        particles.push(new Particle(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, k, { spread: 12, opwaarts: 3, leven: 55, grootte: 4, zwaartekracht: 0.2, glow: 16 }));
+      }
+      let teller = 0;
+      function uitloop() {
+        teller++;
+        ctx.save();
+        if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
+        tekenBakstenenMuur(); tekenGlasInLood(); tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].update(); particles[i].teken();
+          if (particles[i].dood) particles.splice(i, 1);
+        }
+        for (const o of obstakels) tekenObstakel(o);
+        ctx.restore();
+        if (shakeKracht > 0.5) shakeKracht *= 0.9;
+        if (teller < 70) raf = requestAnimationFrame(uitloop);
+        else {
+          // klaar — toon eind-scherm via React state
+          const top = schrijfHighscore(userName, score);
+          const beste = top.find(h => h.naam === (userName || "Speler"))?.score || 0;
+          setNieuwRecord(score >= beste && score > 0);
+          setHighscores(top);
+          setEindScore(score);
+          setFase("dood");
+        }
+      }
+      uitloop();
+    }
+
+    raf = requestAnimationFrame(lus);
+
+    return () => {
+      spelLoopt = false;
+      cancelAnimationFrame(raf);
+      muziekStop();
+      window.removeEventListener("keydown", onKey);
+      canvas.removeEventListener("mousedown", onClick);
+      canvas.removeEventListener("touchstart", onTouch);
+      try { audioCtx?.close(); } catch {}
+    };
+  }, [fase, userName, persoonlijkRecord]);
+
+  // ---------- LICHTKRANT ----------
+  const lichtkrantTekst = highscores.length > 0
+    ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam} — ${h.score}`).join("    •    ")
+    : "Nog geen high scores — wees de eerste! 💀";
+
+  return (
+    <div style={{
+      position: "fixed", inset: 0, background: "rgba(0,0,0,0.92)", zIndex: 9999,
+      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 12
+    }}>
+      {/* Lichtkrant — altijd bovenaan zichtbaar */}
+      <div style={{
+        width: canvasW, marginBottom: 8, borderRadius: 8,
+        background: "linear-gradient(90deg, rgba(40,5,15,0.9), rgba(60,10,25,0.9))",
+        border: "1px solid rgba(255,80,40,0.5)",
+        boxShadow: "0 0 20px rgba(255,80,40,0.4)",
+        overflow: "hidden", height: 32, position: "relative"
+      }}>
+        <div style={{
+          whiteSpace: "nowrap",
+          fontFamily: "Impact, 'Arial Black', sans-serif",
+          fontSize: 16, letterSpacing: 1.5,
+          color: "#ffcc40",
+          textShadow: "0 0 8px rgba(255,150,40,0.8)",
+          position: "absolute", top: 6, left: 0,
+          animation: "obliterator-marquee 22s linear infinite",
+          paddingLeft: "100%"
+        }}>
+          {lichtkrantTekst}    •    {lichtkrantTekst}
+        </div>
+      </div>
+
+      <div ref={wrapperRef} style={{
+        width: canvasW, padding: 10, borderRadius: 12,
+        background: "linear-gradient(135deg, #0a0414, #1a0a2e)",
+        boxShadow: "0 0 40px rgba(255,80,40,0.5)",
+        border: "2px solid #ff5030",
+        position: "relative"
+      }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+          <span style={{
+            fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 22, letterSpacing: 4,
+            background: "linear-gradient(180deg, #fff 0%, #ffcc40 50%, #ff3030 100%)",
+            WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent",
+            filter: "drop-shadow(0 0 6px rgba(255,80,40,0.8))"
+          }}>OBLITERATOR</span>
+          <button onClick={onClose} style={{
+            background: "none", border: "none", color: "#ffcc40", fontSize: 22, cursor: "pointer",
+            padding: "0 6px"
+          }}>✕</button>
+        </div>
+
+        {fase === "menu" && (
+          <div style={{ textAlign: "center", padding: "30px 12px" }}>
+            <div style={{ fontSize: 56, marginBottom: 8 }}>💀🔥💀</div>
+            <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 6 }}>Spring over de stekels!</p>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, marginBottom: 6 }}>
+              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> om te springen
+            </p>
+            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
+              Hoe verder je komt, hoe sneller en feller het wordt. Achtergrond verandert om de 8 punten.
+            </p>
+            {persoonlijkRecord > 0 && (
+              <p style={{ color: "#ffcc40", fontSize: 14, marginBottom: 14 }}>
+                Jouw record: <strong>{persoonlijkRecord}</strong>
+              </p>
+            )}
+            <button onClick={() => setFase("spelen")} style={{
+              padding: "14px 32px",
+              background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
+              border: "none", borderRadius: 14, color: "#1a0008",
+              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, letterSpacing: 3,
+              fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 0 20px rgba(255,100,60,0.6)"
+            }}>
+              🔥 START
+            </button>
+          </div>
+        )}
+
+        {fase === "spelen" && (
+          <canvas
+            ref={canvasRef}
+            width={canvasW}
+            height={canvasH}
+            style={{ display: "block", borderRadius: 8, touchAction: "none", width: canvasW, height: canvasH, background: "#0a0a0e" }}
+          />
+        )}
+
+        {fase === "dood" && (
+          <div style={{ textAlign: "center", padding: "20px 12px" }}>
+            <div style={{ fontSize: 56, marginBottom: 8 }}>{nieuwRecord ? "🏆" : "💀"}</div>
+            <p style={{
+              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 28, letterSpacing: 3,
+              color: "#ff4040", marginBottom: 8,
+              textShadow: "0 0 12px rgba(255,60,40,0.9)"
+            }}>OBLITERATED!</p>
+            <p style={{ color: "#ffcc40", fontSize: 22, marginBottom: 8, fontWeight: 700 }}>Score: {eindScore}</p>
+            {nieuwRecord && (
+              <p style={{ color: "#69f0ae", fontSize: 15, marginBottom: 12, fontWeight: 700 }}>
+                🎉 Nieuw persoonlijk record!
+              </p>
+            )}
+
+            {/* Top 5 high scores */}
+            <div style={{
+              marginTop: 12, marginBottom: 16, padding: "12px 16px", borderRadius: 10,
+              background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,150,40,0.3)"
+            }}>
+              <div style={{ color: "#ffcc40", fontSize: 13, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>TOP 5</div>
+              {highscores.slice(0, 5).map((h, i) => (
+                <div key={i} style={{
+                  display: "flex", justifyContent: "space-between",
+                  fontSize: 13, color: h.naam === (userName || "Speler") ? "#69f0ae" : "rgba(255,255,255,0.75)",
+                  padding: "3px 0", fontFamily: "'Nunito', sans-serif"
+                }}>
+                  <span>#{i + 1} {h.naam}</span>
+                  <span style={{ fontWeight: 700 }}>{h.score}</span>
+                </div>
+              ))}
+              {highscores.length === 0 && (
+                <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>Nog geen scores</div>
+              )}
+            </div>
+
+            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+              <button onClick={() => { setFase("menu"); }} style={{
+                padding: "12px 24px",
+                background: "linear-gradient(135deg, #ffcc40, #ff5030)",
+                border: "none", borderRadius: 12, color: "#1a0008",
+                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 16, letterSpacing: 2,
+                fontWeight: 700, cursor: "pointer"
+              }}>🔄 OPNIEUW</button>
+              <button onClick={onClose} style={{
+                padding: "12px 24px", background: "rgba(255,255,255,0.1)",
+                border: "1px solid rgba(255,255,255,0.2)", borderRadius: 12,
+                color: "#fff", fontSize: 15, fontWeight: 700, cursor: "pointer"
+              }}>✕ Sluiten</button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <style>{`
+        @keyframes obliterator-marquee {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+    </div>
+  );
+}

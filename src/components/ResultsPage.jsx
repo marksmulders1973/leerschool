@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine } from "../utils.js";
-import { BreakoutGame } from "./PlayQuiz.jsx";
+import ObliteratorGame from "./ObliteratorGame.jsx";
 import supabase from "../supabase.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
@@ -118,7 +118,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   return (
     <div style={styles.page}>
-      {showGame && <BreakoutGame onClose={() => setShowGame(false)} />}
+      {showGame && <ObliteratorGame userName={userName} onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>
@@ -323,26 +323,26 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
-        {latest.percentage >= 80 && (
-          <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
-            <button
-              onClick={() => setShowGame(true)}
-              style={{
-                width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
-                background: "linear-gradient(135deg, #7c3aed, #a855f7)",
-                color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 18,
-                fontWeight: 700, cursor: "pointer",
-                boxShadow: "0 4px 20px rgba(168,85,247,0.4)",
-                animation: "pulse 2s infinite",
-              }}
-            >
-              🎮 Verdien je beloning!
-            </button>
-            <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
-              Jij hebt 80% of meer — speel een mini-spelletje als beloning!
-            </p>
-          </div>
-        )}
+        <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
+          <button
+            onClick={() => setShowGame(true)}
+            style={{
+              width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
+              background: "linear-gradient(135deg, #ff5030, #ffcc40)",
+              color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: 20, letterSpacing: 3, fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 4px 20px rgba(255,80,40,0.5)",
+              animation: "pulse 2s infinite",
+            }}
+          >
+            💀 SPEEL OBLITERATOR 🔥
+          </button>
+          <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
+            {latest.percentage >= 80
+              ? "Jij hebt het verdiend — kraak de high score!"
+              : "Even ontspannen? Speel OBLITERATOR en pak een high score!"}
+          </p>
+        </div>
 
         {/* Cito smart aanbeveling */}
         {quiz?.citoId && (() => {
