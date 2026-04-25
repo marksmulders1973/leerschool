@@ -118,7 +118,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   return (
     <div style={styles.page}>
-      {showGame && <ObliteratorGame userName={userName} onClose={() => setShowGame(false)} />}
+      {showGame && <ObliteratorGame userName={userName} authUser={authUser} onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>

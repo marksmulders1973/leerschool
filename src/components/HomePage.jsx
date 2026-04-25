@@ -25,20 +25,22 @@ function TickerBanner() {
   const [obliteratorItems, setObliteratorItems] = useState([]);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem("obliterator-highscores");
-      if (!raw) return;
-      const arr = JSON.parse(raw);
-      if (!Array.isArray(arr) || arr.length === 0) return;
-      const top = arr.slice(0, 2);
-      setObliteratorItems(top.map((h, i) => ({
-        icon: i === 0 ? "💀" : "🔥",
-        text: i === 0
-          ? `OBLITERATOR-kampioen: ${h.naam} — ${h.score} punten!`
-          : `OBLITERATOR top: ${h.naam} kraakte ${h.score} punten!`,
-        special: true,
-      })));
-    } catch {}
+    supabase.from("obliterator_scores")
+      .select("player_name, score")
+      .order("score", { ascending: false })
+      .order("created_at", { ascending: true })
+      .limit(2)
+      .then(({ data }) => {
+        if (!data?.length) return;
+        setObliteratorItems(data.map((h, i) => ({
+          icon: i === 0 ? "💀" : "🔥",
+          text: i === 0
+            ? `OBLITERATOR-kampioen: ${h.player_name} — ${h.score} punten!`
+            : `OBLITERATOR top: ${h.player_name} kraakte ${h.score} punten!`,
+          special: true,
+        })));
+      })
+      .catch(() => {});
   }, []);
 
   useEffect(() => {

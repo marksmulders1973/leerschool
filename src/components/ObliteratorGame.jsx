@@ -1,33 +1,51 @@
 import { useEffect, useRef, useState } from "react";
+import supabase from "../supabase.js";
 
-const HS_KEY = "obliterator-highscores";
-const MAX_HS = 10;
+const TOP_LIMIT = 25;
 
-function leesHighscores() {
+async function laadTopScores() {
   try {
-    const raw = localStorage.getItem(HS_KEY);
-    if (!raw) return [];
-    const arr = JSON.parse(raw);
-    return Array.isArray(arr) ? arr : [];
+    const { data, error } = await supabase
+      .from("obliterator_scores")
+      .select("player_name, score, created_at")
+      .order("score", { ascending: false })
+      .order("created_at", { ascending: true })
+      .limit(TOP_LIMIT);
+    if (error) return [];
+    return (data || []).map(d => ({ naam: d.player_name, score: d.score, datum: d.created_at?.slice(0, 10) }));
   } catch { return []; }
 }
 
-function schrijfHighscore(naam, score) {
-  const lijst = leesHighscores();
-  lijst.push({ naam: (naam || "Speler").slice(0, 16), score, datum: new Date().toISOString().slice(0, 10) });
-  lijst.sort((a, b) => b.score - a.score);
-  const top = lijst.slice(0, MAX_HS);
-  try { localStorage.setItem(HS_KEY, JSON.stringify(top)); } catch {}
-  return top;
+async function schrijfScore(naam, userId, score) {
+  if (!score || score <= 0) return;
+  try {
+    await supabase.from("obliterator_scores").insert({
+      player_name: (naam || "Speler").slice(0, 30),
+      user_id: userId || null,
+      score,
+    });
+  } catch {}
 }
 
-export default function ObliteratorGame({ userName, onClose }) {
+export default function ObliteratorGame({ userName, authUser, onClose }) {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood"
   const [eindScore, setEindScore] = useState(0);
-  const [highscores, setHighscores] = useState(() => leesHighscores());
+  const [highscores, setHighscores] = useState([]);
   const [nieuwRecord, setNieuwRecord] = useState(false);
+  const [laden, setLaden] = useState(true);
+
+  // top 25 ophalen bij mount + na elke game-over
+  useEffect(() => {
+    let actief = true;
+    laadTopScores().then(s => {
+      if (!actief) return;
+      setHighscores(s);
+      setLaden(false);
+    });
+    return () => { actief = false; };
+  }, [fase]);
 
   const persoonlijkRecord = highscores
     .filter(h => h.naam === (userName || "Speler"))
@@ -674,13 +692,14 @@ export default function ObliteratorGame({ userName, onClose }) {
         if (shakeKracht > 0.5) shakeKracht *= 0.9;
         if (teller < 70) raf = requestAnimationFrame(uitloop);
         else {
-          // klaar — toon eind-scherm via React state
-          const top = schrijfHighscore(userName, score);
-          const beste = top.find(h => h.naam === (userName || "Speler"))?.score || 0;
-          setNieuwRecord(score >= beste && score > 0);
-          setHighscores(top);
+          // klaar — score schrijven, top opnieuw laden, eind-scherm tonen
+          const huidigBeste = highscores.find(h => h.naam === (userName || "Speler"))?.score || 0;
+          setNieuwRecord(score > huidigBeste && score > 0);
           setEindScore(score);
-          setFase("dood");
+          schrijfScore(userName, authUser?.id, score).then(() => {
+            laadTopScores().then(s => setHighscores(s));
+            setFase("dood");
+          });
         }
       }
       uitloop();
@@ -697,7 +716,8 @@ export default function ObliteratorGame({ userName, onClose }) {
       canvas.removeEventListener("touchstart", onTouch);
       try { audioCtx?.close(); } catch {}
     };
-  }, [fase, userName, persoonlijkRecord]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fase, userName]);
 
   // ---------- LICHTKRANT ----------
   const lichtkrantTekst = highscores.length > 0
@@ -803,13 +823,16 @@ export default function ObliteratorGame({ userName, onClose }) {
               </p>
             )}
 
-            {/* Top 5 high scores */}
+            {/* Top 10 high scores (scorebord top 25 — bovenste 10 zichtbaar) */}
             <div style={{
               marginTop: 12, marginBottom: 16, padding: "12px 16px", borderRadius: 10,
-              background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,150,40,0.3)"
+              background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,150,40,0.3)",
+              maxHeight: 280, overflowY: "auto"
             }}>
-              <div style={{ color: "#ffcc40", fontSize: 13, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>TOP 5</div>
-              {highscores.slice(0, 5).map((h, i) => (
+              <div style={{ color: "#ffcc40", fontSize: 13, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>
+                🏆 SCOREBORD TOP {Math.min(highscores.length, TOP_LIMIT)}
+              </div>
+              {highscores.slice(0, 10).map((h, i) => (
                 <div key={i} style={{
                   display: "flex", justifyContent: "space-between",
                   fontSize: 13, color: h.naam === (userName || "Speler") ? "#69f0ae" : "rgba(255,255,255,0.75)",
@@ -819,8 +842,11 @@ export default function ObliteratorGame({ userName, onClose }) {
                   <span style={{ fontWeight: 700 }}>{h.score}</span>
                 </div>
               ))}
-              {highscores.length === 0 && (
-                <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>Nog geen scores</div>
+              {highscores.length === 0 && !laden && (
+                <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>Nog geen scores — wees de eerste!</div>
+              )}
+              {laden && (
+                <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>Scorebord laden…</div>
               )}
             </div>
 
