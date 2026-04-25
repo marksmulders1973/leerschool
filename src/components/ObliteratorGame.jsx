@@ -655,7 +655,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       if (!spelLoopt) return;
       frameTeller++;
       checkBioomWissel();
-      spelSnelheid = Math.min(MAX_SNELHEID, START_SNELHEID + score * 0.10 * SCHAAL);
+      spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
       speler.snelheidY += ZWAARTEKRACHT;
       speler.y += speler.snelheidY;
       if (speler.springt) speler.rotatie += 0.18;
@@ -670,8 +670,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       volgendObstakelOver--;
       if (volgendObstakelOver <= 0) {
         maakObstakel();
-        const minA = Math.max(28, 50 - score * 0.8);
-        volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * 25);
+        // snelheid is constant, dus moeilijkheid puur via spacing:
+        // score 0  -> 55-85 frames (rustig begin)
+        // score 30 -> 22-37 frames (pittig)
+        const minA = Math.max(22, 55 - score * 1.2);
+        const variatie = Math.max(8, 30 - score * 0.5);
+        volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
       }
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
