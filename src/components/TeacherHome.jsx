@@ -82,9 +82,11 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: Arial, sans-serif; font-size: 12pt; color: #000; background: #fff; padding: 30px 40px; }
-    .kop { border-bottom: 2.5px solid #000; padding-bottom: 12px; margin-bottom: 22px; }
+    .kop { border-bottom: 2.5px solid #000; padding-bottom: 12px; margin-bottom: 22px; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+    .kop-tekst { flex: 1; min-width: 0; }
+    .kop-logo { height: 90px; max-width: 220px; object-fit: contain; flex-shrink: 0; }
     .kop h1 { font-size: 17pt; margin-bottom: 6px; }
-    .kop .invul { font-size: 11pt; margin-top: 8px; display: flex; gap: 30px; }
+    .kop .invul { font-size: 11pt; margin-top: 8px; display: flex; gap: 30px; flex-wrap: wrap; }
     .invul-veld { border-bottom: 1.5px solid #000; min-width: 180px; display: inline-block; }
     .vraag { margin-bottom: 20px; page-break-inside: avoid; }
     .vraag-tekst { font-weight: bold; margin-bottom: 7px; line-height: 1.4; }
@@ -102,22 +104,26 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
 </head>
 <body>
   <div class="kop">
-    ${schoolLogoUrl ? `<img src="${schoolLogoUrl}" alt="Schoollogo" style="height:48px;max-width:160px;object-fit:contain;margin-bottom:8px;display:block;" />` : ""}
-    <h1>${subj?.icon || ""} ${q.title || subj?.label || "Toets"}</h1>
-    <div style="font-size:10pt;color:#555;">${levelDisplayLabel}${levelDisplayLabel ? " · " : ""}${datum}</div>
-    <div class="invul">
-      <span>Naam: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
-      <span>Klas: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+    <div class="kop-tekst">
+      <h1>${subj?.icon || ""} ${q.title || subj?.label || "Toets"}</h1>
+      <div style="font-size:10pt;color:#555;">${levelDisplayLabel}${levelDisplayLabel ? " · " : ""}${datum}</div>
+      <div class="invul">
+        <span>Naam: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+        <span>Klas: <span class="invul-veld">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+      </div>
     </div>
+    ${schoolLogoUrl ? `<img class="kop-logo" src="${schoolLogoUrl}" alt="Schoollogo" />` : ""}
   </div>
   ${studentVragen}
 
   <div class="pagina-wissel"></div>
 
   <div class="kop">
-    ${schoolLogoUrl ? `<img src="${schoolLogoUrl}" alt="Schoollogo" style="height:48px;max-width:160px;object-fit:contain;margin-bottom:8px;display:block;" />` : ""}
-    <h1>${subj?.icon || ""} Antwoordenblad – ${q.title || subj?.label || "Toets"}</h1>
-    <div class="label-leerkracht">🔒 Alleen voor de leerkracht</div>
+    <div class="kop-tekst">
+      <h1>${subj?.icon || ""} Antwoordenblad – ${q.title || subj?.label || "Toets"}</h1>
+      <div class="label-leerkracht">🔒 Alleen voor de leerkracht</div>
+    </div>
+    ${schoolLogoUrl ? `<img class="kop-logo" src="${schoolLogoUrl}" alt="Schoollogo" />` : ""}
   </div>
   ${antwoordVragen}
 </body>
