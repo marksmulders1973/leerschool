@@ -22,6 +22,24 @@ function TickerBanner() {
   const [winners, setWinners] = useState([]);
   const [awardItems, setAwardItems] = useState([]);
   const [shareItems, setShareItems] = useState([]);
+  const [obliteratorItems, setObliteratorItems] = useState([]);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("obliterator-highscores");
+      if (!raw) return;
+      const arr = JSON.parse(raw);
+      if (!Array.isArray(arr) || arr.length === 0) return;
+      const top = arr.slice(0, 2);
+      setObliteratorItems(top.map((h, i) => ({
+        icon: i === 0 ? "💀" : "🔥",
+        text: i === 0
+          ? `OBLITERATOR-kampioen: ${h.naam} — ${h.score} punten!`
+          : `OBLITERATOR top: ${h.naam} kraakte ${h.score} punten!`,
+        special: true,
+      })));
+    } catch {}
+  }, []);
 
   useEffect(() => {
     const twoDaysAgo = new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString();
@@ -126,8 +144,8 @@ function TickerBanner() {
     return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
-  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes) tussen gewone items
-  const allSpecial = [...winnerItems, ...awardItems, ...shareItems];
+  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR) tussen gewone items
+  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems];
   const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {
