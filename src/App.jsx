@@ -174,12 +174,10 @@ export default function App() {
           if (data?.school_type) setUserSchoolType(data.school_type);
           if (data?.streak_days) setStreak(data.streak_days);
           if (data?.school_logo_url) setSchoolLogoUrl(data.school_logo_url);
-          // Alleen auto-navigeren als gebruiker nog op home staat en NIET bezig is met onboarding
-          if (pageRef.current !== "home") return;
-          if (onboardingActiveRef.current) return;
+          // Rol wel laden, maar NIET automatisch wegnavigeren — app blijft op home
+          // (gebruiker kiest zelf of-ie naar dashboard wil via de homepage)
           if (data?.role) {
             setRole(data.role);
-            setPage(data.role === "teacher" ? "teacher-home" : "student-home");
           } else {
             const googleName = u.user_metadata?.full_name || u.user_metadata?.name || "";
             if (googleName) setUserName(googleName);
@@ -190,7 +188,6 @@ export default function App() {
                 setRole(saved.role);
                 if (saved.level) setUserLevel(saved.level);
                 if (saved.schoolType) setUserSchoolType(saved.schoolType);
-                setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
                 // Sla rol ook op in Supabase profiel voor volgende keer
                 supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).then(() => {}).catch(() => {});
               }
