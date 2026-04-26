@@ -1645,6 +1645,75 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
     }
+
+    function tekenLevelProgressie() {
+      // Tijdens boss: HP-balk is voldoende, balk verbergen
+      if (bossActief || bossWinAnim > 0) return;
+      const balkX = 80 * SCHAAL;
+      const balkY = 8 * SCHAAL;
+      const balkW = W - balkX - 80 * SCHAAL;
+      const balkH = 14 * SCHAAL;
+
+      // tijd binnen huidigLevel berekenen (vanaf level-startpunt)
+      const tijdInDitLevel = frameTeller - (huidigLevel - 1) * LEVEL_DUUR_FRAMES;
+      const fractie = Math.max(0, Math.min(1, tijdInDitLevel / LEVEL_DUUR_FRAMES));
+
+      const isBossNext = BOSS_TRIGGER_LEVELS.includes(huidigLevel);
+      const eindEmoji = isBossNext ? (huidigLevel === 5 ? "👹" : "💀") : "🏁";
+      const eindKleur = isBossNext ? "#ff4040" : "#69f0ae";
+      const fillKleur = isBossNext && fractie > 0.7 ? "#ff8050" : "#69f0ae";
+
+      ctx.save();
+      // background
+      ctx.fillStyle = "rgba(0,0,0,0.55)";
+      ctx.fillRect(balkX, balkY, balkW, balkH);
+      // border
+      ctx.strokeStyle = `rgba(${isBossNext ? "255,80,80" : "255,255,255"},0.5)`;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(balkX, balkY, balkW, balkH);
+      // progress fill
+      ctx.fillStyle = fillKleur;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = fillKleur;
+      ctx.fillRect(balkX + 2, balkY + 2, (balkW - 4) * fractie, balkH - 4);
+
+      // begin-icoon (links, kasteel)
+      ctx.shadowBlur = 0;
+      ctx.font = `${balkH * 1.1}px serif`;
+      ctx.textAlign = "right"; ctx.textBaseline = "middle";
+      ctx.fillStyle = "#fff";
+      ctx.fillText("🏰", balkX - 4, balkY + balkH / 2);
+
+      // eind-icoon (rechts, vlag of monster) — pulserend bij boss-next
+      const pulseEnd = isBossNext ? 0.7 + Math.sin(frameTeller * 0.15) * 0.3 : 1;
+      ctx.globalAlpha = pulseEnd;
+      ctx.textAlign = "left"; ctx.textBaseline = "middle";
+      ctx.fillText(eindEmoji, balkX + balkW + 4, balkY + balkH / 2);
+      ctx.globalAlpha = 1;
+
+      // speler-marker (witte pulserende punt)
+      const playerMarkX = balkX + 2 + (balkW - 4) * fractie;
+      const pulse = 0.7 + Math.sin(frameTeller * 0.2) * 0.3;
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#fff";
+      ctx.fillStyle = `rgba(255,255,255,${pulse})`;
+      ctx.beginPath();
+      ctx.arc(playerMarkX, balkY + balkH / 2, balkH * 0.55, 0, Math.PI * 2);
+      ctx.fill();
+
+      // label onder balk: "L3 · BOSS NEXT!" of "L3"
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = isBossNext ? "#ff8050" : "rgba(255,255,255,0.7)";
+      ctx.font = `bold ${10 * SCHAAL}px Impact, sans-serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "top";
+      ctx.fillText(
+        `L${huidigLevel}${isBossNext ? " · BOSS NEXT!" : ""}`,
+        balkX + balkW / 2,
+        balkY + balkH + 2,
+      );
+
+      ctx.restore();
+    }
     function teken() {
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
@@ -1903,21 +1972,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textAlign = "right";
       ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
 
-      // Level + voortgang naar volgend level
-      const tijdInLevel = frameTeller - (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
-      const fractieInLevel = (tijdInLevel % LEVEL_DUUR_FRAMES) / LEVEL_DUUR_FRAMES;
+      // Level-label compact in HUD (grote balk komt bovenin via tekenLevelBalk)
       ctx.fillStyle = "#69f0ae";
       ctx.shadowBlur = 8; ctx.shadowColor = "#69f0ae";
       ctx.font = `bold ${14 * SCHAAL}px Impact, Arial Black, sans-serif`;
       ctx.textAlign = "left";
       ctx.fillText(`LEVEL ${huidigLevel}${huidigLevel < MAX_LEVEL ? "" : " (MAX)"}`, 12, 50 * SCHAAL);
-      // dunne progressie-balk onder level-tekst
-      ctx.shadowBlur = 0;
-      const balkW = 90 * SCHAAL;
-      ctx.fillStyle = "rgba(105,240,174,0.2)";
-      ctx.fillRect(12, 56 * SCHAAL, balkW, 4);
-      ctx.fillStyle = "#69f0ae";
-      ctx.fillRect(12, 56 * SCHAAL, balkW * fractieInLevel, 4);
 
       // multiplier-display (alleen bij streak)
       if (multiplier > 1) {
@@ -2107,6 +2167,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       ctx.restore();
       tekenLevens();
+      tekenLevelProgressie();
 
       // countdown overlay (bovenop alles)
       if (countdown > 0) {
