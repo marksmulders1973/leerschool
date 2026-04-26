@@ -178,6 +178,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     let multiplierFlashTeller = 0; // frames voor "x3!" flash
     let aantalObstakelsTotaal = 0;
     const bonusHarten = [];
+    const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
+    let countdown = COUNTDOWN_FRAMES;
+    // vlieg-power-up
+    let vliegFrames = 0; // > 0 = immune
+    const VLIEG_DUUR = 600; // 10 sec
+    const raketten = []; // pickups in lucht
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -610,9 +616,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       const cx = speler.x + speler.breedte / 2;
       const cy = speler.y + speler.hoogte / 2;
       const r = speler.breedte / 2;
+
+      // gouden aura tijdens vliegen (immune)
+      if (vliegFrames > 0) {
+        ctx.save();
+        ctx.translate(cx, cy);
+        // pulserend gouden schild
+        const pulse = 0.6 + Math.sin(frameTeller * 0.3) * 0.3;
+        ctx.shadowBlur = 35; ctx.shadowColor = "#ffcc40";
+        ctx.strokeStyle = `rgba(255,204,64,${pulse})`;
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(0, 0, r * 1.6, 0, Math.PI * 2);
+        ctx.stroke();
+        // tweede ring
+        ctx.strokeStyle = `rgba(255,255,255,${pulse * 0.5})`;
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(0, 0, r * 1.9, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+      }
+
       ctx.save();
       ctx.translate(cx, cy); ctx.rotate(speler.rotatie);
-      ctx.shadowBlur = 25; ctx.shadowColor = "#ff2030";
+      ctx.shadowBlur = 25; ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
       const grad = ctx.createRadialGradient(-r * 0.3, -r * 0.3, 2, 0, 0, r);
       grad.addColorStop(0, "#ff5060"); grad.addColorStop(0.6, "#cc1525"); grad.addColorStop(1, "#7a0010");
       ctx.fillStyle = grad;
@@ -708,12 +736,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         }
       }
     }
-    const onKey = (e) => { if (e.code === "Space") { e.preventDefault(); spring(); } };
-    const onClick = () => spring();
-    const onTouch = (e) => { e.preventDefault(); spring(); };
+    // alleen reageren op input wanneer canvas zichtbaar/actief is
+    const onKey = (e) => {
+      if (e.code !== "Space") return;
+      // alleen tijdens daadwerkelijke gameplay (niet in vraag-modal of menu)
+      if (!spelLoopt) return;
+      e.preventDefault();
+      spring();
+    };
+    // unified pointer-event op canvas (vervangt mousedown + touchstart)
+    const onPointer = (e) => {
+      // pointerdown event komt alleen van canvas (we registreren alleen daar)
+      // extra defensief: check toch het target
+      if (e.target !== canvas) return;
+      e.preventDefault();
+      spring();
+    };
     window.addEventListener("keydown", onKey);
-    canvas.addEventListener("mousedown", onClick);
-    canvas.addEventListener("touchstart", onTouch, { passive: false });
+    canvas.addEventListener("pointerdown", onPointer, { passive: false });
 
     // ---------- TRAIL ----------
     function trail() {
@@ -731,6 +771,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     function update() {
       if (!spelLoopt) return;
       frameTeller++;
+
+      // countdown bij start van een sessie / na respawn
+      if (countdown > 0) {
+        const stap = Math.ceil(countdown / (COUNTDOWN_FRAMES / 3));
+        const vorigStap = Math.ceil((countdown - 1) / (COUNTDOWN_FRAMES / 3));
+        if (stap !== vorigStap && vorigStap > 0) {
+          // tick-geluid bij elke nieuwe count
+          piep(660, 0.06, "sine", 0.10);
+        } else if (countdown === 1) {
+          // GO! geluid
+          piep(990, 0.10, "sine", 0.14);
+          setTimeout(() => piep(1320, 0.10, "sine", 0.12), 60);
+        }
+        countdown--;
+        return; // alle game-logic pauzeren
+      }
+
       checkBioomWissel();
       spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
       speler.snelheidY += ZWAARTEKRACHT;
@@ -757,7 +814,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= spelSnelheid;
-        if (obstRaakt(o)) { levenVerlies(); return; }
+        if (vliegFrames === 0 && obstRaakt(o)) { levenVerlies(); return; }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true;
           streak++;
@@ -780,6 +837,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
           if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
             const yMin = (200 + Math.random() * 60) * SCHAAL;
             bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+          }
+          // raket-pickup: zeldzaam, elke ~50 obstakels, 30% kans, alleen als niet al aan het vliegen
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 50 === 0 && Math.random() < 0.3 && vliegFrames === 0) {
+            const yPos = (180 + Math.random() * 80) * SCHAAL;
+            raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
           }
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
@@ -814,6 +876,37 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
       }
 
+      // raket pickups
+      for (let i = raketten.length - 1; i >= 0; i--) {
+        const r = raketten[i];
+        r.x -= spelSnelheid;
+        r.fase += 0.10;
+        r.y += Math.sin(r.fase) * 0.4;
+        const dx = (speler.x + speler.breedte / 2) - r.x;
+        const dy = (speler.y + speler.hoogte / 2) - r.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
+          r.opgepakt = true;
+          vliegFrames = VLIEG_DUUR;
+          piep(523, 0.08, "sine", 0.14);
+          setTimeout(() => piep(784, 0.08, "sine", 0.14), 60);
+          setTimeout(() => piep(1047, 0.10, "sine", 0.14), 120);
+          setTimeout(() => piep(1568, 0.14, "sine", 0.12), 200);
+          spawnParticles(r.x, r.y, 24, "#ffcc40", { spread: 9, opwaarts: 2, leven: 35, grootte: 5, zwaartekracht: 0.05, glow: 22 });
+          spawnParticles(r.x, r.y, 12, "#ff8050", { spread: 5, opwaarts: 3, leven: 28, grootte: 4, zwaartekracht: 0, glow: 18 });
+        }
+        if (r.x < -50 || r.opgepakt) raketten.splice(i, 1);
+      }
+
+      // vliegFrames decrement
+      if (vliegFrames > 0) {
+        vliegFrames--;
+        // continue trail-emission tijdens vliegen
+        if (frameTeller % 2 === 0) {
+          spawnParticles(speler.x, speler.y + speler.hoogte / 2, 2, "#ffcc40", { spread: 1, opwaarts: 0, leven: 16, grootte: 3, zwaartekracht: 0, glow: 14 });
+        }
+      }
+
       if (multiplierFlashTeller > 0) multiplierFlashTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
     }
@@ -837,6 +930,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       for (const p of particles) p.teken();
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
+
+      // raketten tekenen
+      for (const r of raketten) {
+        ctx.save();
+        ctx.translate(r.x, r.y);
+        // pulserende cirkel rondom raket
+        ctx.shadowBlur = 24;
+        ctx.shadowColor = "#ffcc40";
+        ctx.strokeStyle = `rgba(255,204,64,${0.4 + Math.sin(r.fase * 2) * 0.3})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(0, 0, r.grootte * 0.75, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.font = `${r.grootte}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🚀", 0, 0);
+        ctx.restore();
+      }
 
       // bonus-harten tekenen
       for (const h of bonusHarten) {
@@ -874,6 +985,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
         ctx.fillText(`STREAK x${multiplier}`, W / 2, 28 * SCHAAL);
+      }
+
+      // vlieg-timer (boven score)
+      if (vliegFrames > 0) {
+        const seconden = Math.ceil(vliegFrames / 60);
+        ctx.fillStyle = "#ffcc40";
+        ctx.shadowBlur = 16; ctx.shadowColor = "#ffcc40";
+        ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(`🚀 IMMUNE ${seconden}s`, W / 2, 50 * SCHAAL);
       }
 
       // big flash bij multiplier-upgrade
@@ -927,6 +1048,40 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
 
       ctx.restore();
       tekenLevens();
+
+      // countdown overlay (bovenop alles)
+      if (countdown > 0) {
+        const total = COUNTDOWN_FRAMES;
+        const stap = Math.ceil(countdown / (total / 3)); // 3, 2, 1
+        const stapText = stap >= 3 ? "3" : stap === 2 ? "2" : "1";
+        const fadeIn = 1 - ((countdown % (total / 3)) / (total / 3));
+        ctx.save();
+        ctx.fillStyle = "rgba(0,0,0,0.55)";
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = "#ffcc40";
+        ctx.shadowBlur = 30; ctx.shadowColor = "#ff5030";
+        ctx.font = `bold ${110 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.globalAlpha = 0.4 + fadeIn * 0.6;
+        ctx.fillText(stapText, W / 2, H / 2);
+        ctx.globalAlpha = 1;
+        ctx.fillStyle = "#fff";
+        ctx.shadowBlur = 12;
+        ctx.font = `bold ${20 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("KLAARMAKEN...", W / 2, H * 0.78);
+        ctx.restore();
+      } else if (countdown === 0 && frameTeller < 50) {
+        // korte "GO!" flits direct na countdown
+        const go_alpha = Math.max(0, 1 - frameTeller / 50);
+        ctx.save();
+        ctx.globalAlpha = go_alpha;
+        ctx.fillStyle = "#69f0ae";
+        ctx.shadowBlur = 30; ctx.shadowColor = "#69f0ae";
+        ctx.font = `bold ${90 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("GO!", W / 2, H / 2);
+        ctx.restore();
+      }
     }
     function lus() {
       update(); teken();
@@ -991,10 +1146,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     }
 
     function respawn() {
-      // clear obstakels + particles + bonusHarten, reset speler, score blijft
+      // clear obstakels + particles + bonusHarten + raketten, reset speler, score blijft
       obstakels.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
+      raketten.length = 0;
+      vliegFrames = 0;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
@@ -1004,6 +1161,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       speler.sprongTeller = 0;
       shakeKracht = 0;
       volgendObstakelOver = 90; // iets meer ademruimte na respawn
+      countdown = COUNTDOWN_FRAMES; // re-arm countdown
       spelLoopt = true;
       muziekStart();
       raf = requestAnimationFrame(lus);
@@ -1043,8 +1201,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       cancelAnimationFrame(raf);
       muziekStop();
       window.removeEventListener("keydown", onKey);
-      canvas.removeEventListener("mousedown", onClick);
-      canvas.removeEventListener("touchstart", onTouch);
+      canvas.removeEventListener("pointerdown", onPointer);
       try { audioCtx?.close(); } catch {}
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1166,6 +1323,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: 4, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels overspringen</strong> = +punten (5× op rij = streak x2 → x5!)</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
+              <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
