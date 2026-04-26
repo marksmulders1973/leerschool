@@ -181,13 +181,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
 
     // ---------- BIOMES ----------
     const BIOMES = [
-      { bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
-      { bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
-      { bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] }
+      { naam:'GOTHIC CRYPT', emoji:['💀','🦴','☠️','🕷️','⛧'], bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
+      { naam:"WIZARD'S LAIR", emoji:['🧙','🔮','📚','🕯️','⚗️'], bgTop:[25,12,20], bgBot:[50,25,40], bakstenenLicht:[80,45,50], bakstenenDonker:[40,20,28], bakstenenHighlight:[140,90,100], lichtbundel:[255,180,100], schedel:[220,180,240], glow:[255,130,200], grondLicht:[60,30,38], grondDonker:[20,8,14] },
+      { naam:'MAGIC PORTAL', emoji:['🔮','✨','⭐','🌙','⛧'], bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
+      { naam:'GRAVEYARD', emoji:['🪦','🌕','🦇','👻','🕯️'], bgTop:[4,8,24], bgBot:[12,18,48], bakstenenLicht:[40,50,75], bakstenenDonker:[18,22,38], bakstenenHighlight:[80,100,140], lichtbundel:[180,200,255], schedel:[220,230,255], glow:[150,180,255], grondLicht:[22,28,50], grondDonker:[6,8,16] },
+      { naam:'INFERNO', emoji:['💀','🔥','⚔️','🗡️','☠️'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] }
     ];
-    const BIOOM_BASSWORTELS = [55, 49, 58];
+    const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58]; // verschillende bass-tonen per biome
     let huidigBioom = 0, nextBioom = 1, bioomFade = 1, laatsteWisselScore = 0;
+    let levelUpFlash = 0;       // frames dat de overgang-flash zichtbaar is
+    let levelUpNaam = '';       // naam van het nieuwe biome dat we tonen
     const BIOOM_FADE_DUUR = 60;
+    const LEVEL_UP_DUUR = 110;
     const lerp = (a, b, t) => a + (b - a) * t;
     function biomeKleur(eig, alpha) {
       const c1 = BIOMES[huidigBioom][eig], c2 = BIOMES[nextBioom][eig];
@@ -201,9 +206,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         huidigBioom = nextBioom;
         nextBioom = (nextBioom + 1) % BIOMES.length;
         bioomFade = 0;
-        muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom];
+        muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom] || 55;
+        // start LEVEL UP flash met naam van nieuw biome
+        levelUpFlash = LEVEL_UP_DUUR;
+        levelUpNaam = BIOMES[huidigBioom]?.naam || '';
+        // bonus piep-cascade
+        piep(523, 0.08, "sine", 0.14);
+        setTimeout(() => piep(659, 0.08, "sine", 0.14), 80);
+        setTimeout(() => piep(784, 0.10, "sine", 0.14), 160);
+        setTimeout(() => piep(1047, 0.14, "sine", 0.12), 250);
       }
       if (bioomFade < 1) bioomFade = Math.min(1, bioomFade + 1 / BIOOM_FADE_DUUR);
+      if (levelUpFlash > 0) levelUpFlash--;
     }
 
     // ---------- AUDIO ----------
@@ -365,11 +379,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     const spawnParticles = (x, y, n, k, o) => { for (let i = 0; i < n; i++) particles.push(new Particle(x, y, k, o)); };
 
     // ---------- DECOR ----------
-    const DECOR_EMOJI = ["💀","🦴","☠️","🕷️","⛧"];
+    function huidigeEmojiSet() {
+      return BIOMES[huidigBioom]?.emoji || ["💀","🦴","☠️","🕷️","⛧"];
+    }
     const decoraties = [];
     for (let i = 0; i < 8; i++) decoraties.push({
       x: 150 + i * 200 + Math.random() * 80, y: (90 + Math.random() * 180) * SCHAAL,
-      grootte: (32 + Math.random() * 28) * SCHAAL, emoji: DECOR_EMOJI[Math.floor(Math.random() * DECOR_EMOJI.length)],
+      grootte: (32 + Math.random() * 28) * SCHAAL, emoji: (() => { const set = huidigeEmojiSet(); return set[Math.floor(Math.random() * set.length)]; })(),
       parallax: 0.3 + Math.random() * 0.25, rotatie: (Math.random() - 0.5) * 0.4
     });
     function tekenDecoraties() {
@@ -379,7 +395,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
           d.x = W + 80 + Math.random() * 200;
           d.y = (90 + Math.random() * 180) * SCHAAL;
           d.grootte = (32 + Math.random() * 28) * SCHAAL;
-          d.emoji = DECOR_EMOJI[Math.floor(Math.random() * DECOR_EMOJI.length)];
+          d.emoji = (() => { const set = huidigeEmojiSet(); return set[Math.floor(Math.random() * set.length)]; })();
           d.rotatie = (Math.random() - 0.5) * 0.4;
         }
         ctx.save();
@@ -872,6 +888,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         ctx.globalAlpha = 1;
       }
 
+      // LEVEL UP flash (biome-overgang): "WORLD 2" + biome-naam
+      if (levelUpFlash > 0) {
+        const t = levelUpFlash / LEVEL_UP_DUUR; // 1 → 0
+        // donkere overlay-band (semi-transparant) bovenop alles
+        const fadeIn = Math.min(1, (1 - t) * 4);     // snelle fade-in
+        const fadeOut = Math.min(1, t * 2.5);         // langere zichtbare fase
+        const alpha = Math.min(fadeIn, fadeOut);
+
+        ctx.globalAlpha = alpha * 0.55;
+        ctx.fillStyle = "#000";
+        ctx.fillRect(0, H * 0.32, W, H * 0.36);
+
+        ctx.globalAlpha = alpha;
+        // "WORLD N" klein label
+        ctx.fillStyle = "#ffcc40";
+        ctx.shadowBlur = 16; ctx.shadowColor = "#ff5030";
+        ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`WORLD ${huidigBioom + 1} / ${BIOMES.length}`, W / 2, H * 0.42);
+
+        // biome-naam groot
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowBlur = 26; ctx.shadowColor = biomeKleur("glow", 1);
+        ctx.font = `bold ${36 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText(levelUpNaam, W / 2, H * 0.52);
+
+        // emoji rand
+        const emojiSet = BIOMES[huidigBioom]?.emoji || [];
+        if (emojiSet.length) {
+          ctx.shadowBlur = 14;
+          ctx.font = `${22 * SCHAAL}px serif`;
+          ctx.fillText(emojiSet.slice(0, 4).join(' '), W / 2, H * 0.62);
+        }
+
+        ctx.globalAlpha = 1;
+      }
+
       ctx.restore();
       tekenLevens();
     }
@@ -888,6 +941,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       streak = 0;
       multiplier = 1;
       multiplierFlashTeller = 0;
+      levelUpFlash = 0;
       for (let i = 0; i < 50; i++) {
         const k = i % 3 === 0 ? "#ff2030" : (i % 3 === 1 ? "#ffaa20" : "#ffee60");
         particles.push(new Particle(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, k, { spread: 12, opwaarts: 3, leven: 55, grootte: 4, zwaartekracht: 0.2, glow: 16 }));
@@ -1100,6 +1154,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               {Array(3 + bonusLeven).fill("❤️").join(" ")}
               {bonusLeven > 0 && <span style={{ color: "#69f0ae", marginLeft: 8 }}>(+1 bonus!)</span>}
             </p>
+
+            {/* Mini legenda — wat raken voor extra punten? */}
+            <div style={{
+              marginBottom: 16, padding: "10px 12px", borderRadius: 10,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,150,40,0.25)",
+              textAlign: "left", fontSize: 12, lineHeight: 1.6,
+              fontFamily: "'Nunito', sans-serif", color: "rgba(255,255,255,0.75)"
+            }}>
+              <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: 4, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
+              <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels overspringen</strong> = +punten (5× op rij = streak x2 → x5!)</div>
+              <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
+              <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
+            </div>
             {isFullscreen && isPortrait && (
               <div style={{
                 marginBottom: 16, padding: "12px 16px", borderRadius: 10,
