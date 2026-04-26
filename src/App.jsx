@@ -25,6 +25,7 @@ import OuderDashboard from "./components/OuderDashboard.jsx";
 import ProPage from "./components/ProPage.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import ObliteratorGame from "./components/ObliteratorGame.jsx";
+import AdminFeedback from "./components/AdminFeedback.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -532,6 +533,7 @@ export default function App() {
           onLogout={handleLogout}
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onAdminFeedback={() => setPage("admin-feedback")}
           onPro={() => setPage("pro")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
@@ -1012,6 +1014,12 @@ export default function App() {
           onHome={() => setPage("home")}
           onUpgrade={() => setPage("pro")}
           onLogin={handleGoogleLogin}
+        />
+      )}
+      {page === "admin-feedback" && (
+        <AdminFeedback
+          onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>

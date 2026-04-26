@@ -372,7 +372,8 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onPro }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPro }) {
+  const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
@@ -387,6 +388,84 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [installPrompt, setInstallPrompt] = useState(null);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
   const [shareToast, setShareToast] = useState(null);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [feedbackText, setFeedbackText] = useState("");
+  const [feedbackError, setFeedbackError] = useState("");
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [feedbackBusy, setFeedbackBusy] = useState(false);
+  const [feedbackImage, setFeedbackImage] = useState(null);
+  const [feedbackImagePreview, setFeedbackImagePreview] = useState(null);
+
+  const FEEDBACK_LIMIT_KEY = "feedback_today";
+  const feedbackQuotaReached = () => {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const raw = JSON.parse(localStorage.getItem(FEEDBACK_LIMIT_KEY) || "{}");
+      return raw.date === today && (raw.count || 0) >= 3;
+    } catch { return false; }
+  };
+  const incrementFeedbackQuota = () => {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const raw = JSON.parse(localStorage.getItem(FEEDBACK_LIMIT_KEY) || "{}");
+      const count = raw.date === today ? (raw.count || 0) + 1 : 1;
+      localStorage.setItem(FEEDBACK_LIMIT_KEY, JSON.stringify({ date: today, count }));
+    } catch {}
+  };
+  const handleImageKies = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!file.type.startsWith("image/")) { setFeedbackError("Alleen afbeeldingen (.png/.jpg/.webp)."); return; }
+    if (file.size > 2 * 1024 * 1024) { setFeedbackError("Afbeelding is te groot (max 2 MB)."); return; }
+    setFeedbackError("");
+    setFeedbackImage(file);
+    const url = URL.createObjectURL(file);
+    setFeedbackImagePreview(url);
+  };
+  const verwijderImage = () => {
+    if (feedbackImagePreview) URL.revokeObjectURL(feedbackImagePreview);
+    setFeedbackImage(null);
+    setFeedbackImagePreview(null);
+  };
+  const sluitFeedback = () => {
+    verwijderImage();
+    setFeedbackText(""); setFeedbackError(""); setFeedbackSent(false); setShowFeedback(false);
+  };
+  const verstuurFeedback = async () => {
+    const tekst = feedbackText.trim();
+    if (tekst.length < 15) { setFeedbackError("Schrijf even iets meer (minimaal 15 tekens)."); return; }
+    if (feedbackQuotaReached()) { setFeedbackError("Je hebt vandaag al 3 berichten gestuurd. Probeer morgen weer."); return; }
+    setFeedbackBusy(true); setFeedbackError("");
+    try {
+      let screenshotUrl = null;
+      if (feedbackImage) {
+        const ext = (feedbackImage.name.split(".").pop() || "png").toLowerCase().slice(0, 5);
+        const path = `${new Date().toISOString().slice(0, 10)}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
+        const { error: upErr } = await supabase.storage.from("feedback-screenshots").upload(path, feedbackImage, { contentType: feedbackImage.type, upsert: false });
+        if (upErr) throw upErr;
+        const { data } = supabase.storage.from("feedback-screenshots").getPublicUrl(path);
+        screenshotUrl = data?.publicUrl || null;
+      }
+      const { error } = await supabase.from("feedback").insert({
+        message: tekst.slice(0, 2000),
+        player_name: (name || userName || "").trim().slice(0, 60) || null,
+        user_id: authUser?.id || null,
+        page_url: typeof window !== "undefined" ? window.location.href.slice(0, 500) : null,
+        user_agent: typeof navigator !== "undefined" ? (navigator.userAgent || "").slice(0, 300) : null,
+        screenshot_url: screenshotUrl,
+      });
+      if (error) throw error;
+      incrementFeedbackQuota();
+      setFeedbackSent(true);
+      setFeedbackText("");
+      verwijderImage();
+      setTimeout(() => { setShowFeedback(false); setFeedbackSent(false); }, 2000);
+    } catch (e) {
+      setFeedbackError("Kon je tip niet versturen. Probeer het zo nog eens.");
+    } finally {
+      setFeedbackBusy(false);
+    }
+  };
 
   // log share-event + toon "bedankt" toast (Hall of Fame voor delers)
   const trackShare = (platform) => {
@@ -939,7 +1018,139 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span style={{ fontSize: 16 }}>🎮</span>
               Deel OBLITERATOR (mini-spel)
             </button>
+            <button
+              style={{
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                background: "none", color: "#ffcc40", border: "1px solid rgba(255,204,64,0.35)",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+              }}
+              onClick={() => { setShowFeedback(true); setFeedbackError(""); setFeedbackSent(false); }}
+            >
+              <span style={{ fontSize: 16 }}>💡</span>
+              Tip aan de maker
+            </button>
+            {isAdmin && onAdminFeedback && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(0,200,83,0.10))",
+                  color: "#69f0ae", border: "1px solid rgba(105,240,174,0.4)",
+                  borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                  fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                }}
+                onClick={onAdminFeedback}
+              >
+                <span style={{ fontSize: 16 }}>📬</span>
+                Tips lezen (admin)
+              </button>
+            )}
           </>
+        )}
+
+        {showFeedback && (
+          <div
+            onClick={(e) => { if (e.target === e.currentTarget) sluitFeedback(); }}
+            style={{
+              position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", zIndex: 10000,
+              display: "flex", alignItems: "center", justifyContent: "center", padding: 16,
+            }}
+          >
+            <div style={{
+              background: "linear-gradient(135deg, #1a2238, #0f1626)",
+              border: "1px solid rgba(255,204,64,0.4)", borderRadius: 16,
+              padding: "20px 18px", maxWidth: 440, width: "100%",
+              boxShadow: "0 10px 40px rgba(0,0,0,0.5)",
+            }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
+                <div style={{ fontSize: 18, fontWeight: 700, color: "#ffcc40", fontFamily: "'Fredoka', sans-serif" }}>
+                  💡 Tip aan de maker
+                </div>
+                <button onClick={sluitFeedback} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer" }}>×</button>
+              </div>
+              <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, marginBottom: 10, lineHeight: 1.4 }}>
+                Heb je een idee, een fout gevonden of werkt iets niet? Schrijf het hier — Mark leest alle tips zelf.
+              </p>
+              <div style={{
+                background: "rgba(255,152,0,0.1)", border: "1px solid rgba(255,152,0,0.35)",
+                borderRadius: 10, padding: "8px 12px", marginBottom: 10,
+                color: "#ffb74d", fontSize: 11, lineHeight: 1.4,
+              }}>
+                ⚠️ <strong>Belangrijk:</strong> deel geen foto's van jezelf, je naam, adres of andere persoonlijke gegevens. Een screenshot van een vraag of fout in de app is wél prima.
+              </div>
+              {feedbackSent ? (
+                <div style={{ textAlign: "center", padding: "20px 0", color: "#69f0ae", fontSize: 15, fontWeight: 700 }}>
+                  ✅ Bedankt! Je tip is binnen.
+                </div>
+              ) : (
+                <>
+                  <textarea
+                    value={feedbackText}
+                    onChange={(e) => setFeedbackText(e.target.value)}
+                    placeholder="Wat wil je melden?"
+                    maxLength={2000}
+                    rows={5}
+                    disabled={feedbackBusy}
+                    style={{
+                      width: "100%", padding: "10px 12px", borderRadius: 10,
+                      background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.15)",
+                      color: "#fff", fontFamily: "'Nunito', sans-serif", fontSize: 14,
+                      resize: "vertical", boxSizing: "border-box", outline: "none",
+                    }}
+                  />
+                  <div style={{ display: "flex", justifyContent: "space-between", marginTop: 4, fontSize: 11, color: "rgba(255,255,255,0.4)" }}>
+                    <span>{feedbackText.trim().length < 15 ? `Nog ${Math.max(0, 15 - feedbackText.trim().length)} tekens nodig` : "OK"}</span>
+                    <span>{feedbackText.length}/2000</span>
+                  </div>
+
+                  {/* Screenshot uploader */}
+                  <div style={{ marginTop: 10 }}>
+                    {!feedbackImage ? (
+                      <label style={{
+                        display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                        padding: "8px 12px", border: "1px dashed rgba(255,255,255,0.25)",
+                        borderRadius: 10, color: "rgba(255,255,255,0.7)",
+                        fontSize: 12, cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                      }}>
+                        📷 Screenshot toevoegen (optioneel, max 2 MB)
+                        <input type="file" accept="image/*" onChange={handleImageKies} disabled={feedbackBusy} style={{ display: "none" }} />
+                      </label>
+                    ) : (
+                      <div style={{ display: "flex", alignItems: "center", gap: 10, padding: 8, background: "rgba(255,255,255,0.05)", borderRadius: 10 }}>
+                        <img src={feedbackImagePreview} alt="screenshot" style={{ width: 60, height: 60, objectFit: "cover", borderRadius: 6 }} />
+                        <div style={{ flex: 1, fontSize: 12, color: "rgba(255,255,255,0.7)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                          {feedbackImage.name}
+                        </div>
+                        <button onClick={verwijderImage} disabled={feedbackBusy} style={{ background: "none", border: "1px solid rgba(255,255,255,0.2)", borderRadius: 6, color: "rgba(255,255,255,0.7)", padding: "4px 8px", fontSize: 11, cursor: "pointer" }}>
+                          verwijder
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  {feedbackError && (
+                    <div style={{ marginTop: 8, color: "#ff7043", fontSize: 12 }}>{feedbackError}</div>
+                  )}
+
+                  <button
+                    onClick={verstuurFeedback}
+                    disabled={feedbackBusy || feedbackText.trim().length < 15}
+                    style={{
+                      marginTop: 12, width: "100%", padding: "11px 16px", borderRadius: 10,
+                      background: feedbackText.trim().length >= 15 && !feedbackBusy
+                        ? "linear-gradient(135deg, #ffcc40, #ffaa00)"
+                        : "rgba(255,255,255,0.1)",
+                      color: feedbackText.trim().length >= 15 && !feedbackBusy ? "#1a1a00" : "rgba(255,255,255,0.4)",
+                      border: "none", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                      cursor: feedbackBusy || feedbackText.trim().length < 15 ? "not-allowed" : "pointer",
+                    }}
+                  >
+                    {feedbackBusy ? "Versturen…" : "Verstuur tip"}
+                  </button>
+                </>
+              )}
+            </div>
+          </div>
         )}
 
         {/* Footer */}
