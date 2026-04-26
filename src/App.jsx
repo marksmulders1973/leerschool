@@ -451,8 +451,13 @@ export default function App() {
         }).catch(() => {});
     }
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
-    // Globaal scorebord (iedereen, ook gasten)
-    supabase.from("leaderboard").insert({ player_name: userName, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
+    // Globaal scorebord — alleen inserten als er een echte naam is (geen lege/whitespace)
+    const naamSchoon = (userName || "").trim();
+    if (naamSchoon.length >= 2) {
+      supabase.from("leaderboard").insert({ player_name: naamSchoon, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
+    } else {
+      track("leaderboard_skipped_no_name", { subject: result.subject, level: result.level });
+    }
 
     // Streak + voortgang opslaan
     const today = new Date().toISOString().split("T")[0];
