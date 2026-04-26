@@ -944,13 +944,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yMin = (200 + Math.random() * 60) * SCHAAL;
             bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // raket-pickup: zeldzaam, elke ~50 obstakels, 30% kans, alleen als niet al aan het vliegen
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 50 === 0 && Math.random() < 0.3 && vliegFrames === 0) {
+          // raket-pickup: elke ~25 obstakels, 55% kans (effectief elke ~45 obstakels = 1x per ~25 sec)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.55 && vliegFrames === 0) {
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // FLIP-pickup: nog zeldzamer, elke ~70 obstakels, 25% kans, alleen als niet al gevlipt of pending
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 70 === 0 && Math.random() < 0.25 && flipFrames === 0 && flipPending === 0) {
+          // FLIP-pickup: elke ~35 obstakels, 50% kans (effectief elke ~70 obstakels = 1x per ~40 sec)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 35 === 0 && Math.random() < 0.50 && flipFrames === 0 && flipPending === 0) {
             const yPos = (170 + Math.random() * 100) * SCHAAL;
             flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
@@ -1336,7 +1336,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 16; ctx.shadowColor = "#ffcc40";
         ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
-        ctx.fillText(`🚀 IMMUNE ${seconden}s`, W / 2, 50 * SCHAAL);
+        ctx.fillText(`🚀 ONKWETSBAAR ${seconden}s`, W / 2, 50 * SCHAAL);
       }
 
       // FLIP-timer (rechts naast vlieg-timer of op zelfde plek)
@@ -1736,8 +1736,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels</strong> = vermijden (raken kost 1 leven)</div>
               <div>🟦 <strong style={{ color: "#80c0ff" }}>Lichtblauwe blokken</strong> = veilig om op te springen en overheen te rollen</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
-              <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
-              <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven (na 2 sec waarschuwing)</div>
+              <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec ONKWETSBAAR (geen schade van stekels!)</div>
+              <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven op het plafond (na 2 sec waarschuwing)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
