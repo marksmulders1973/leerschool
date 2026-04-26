@@ -8,22 +8,23 @@ async function laadTopScores() {
   try {
     const { data, error } = await supabase
       .from("obliterator_scores")
-      .select("player_name, score, created_at")
+      .select("player_name, score, level, created_at")
       .order("score", { ascending: false })
       .order("created_at", { ascending: true })
       .limit(TOP_LIMIT);
     if (error) return [];
-    return (data || []).map(d => ({ naam: d.player_name, score: d.score, datum: d.created_at?.slice(0, 10) }));
+    return (data || []).map(d => ({ naam: d.player_name, score: d.score, level: d.level || null, datum: d.created_at?.slice(0, 10) }));
   } catch { return []; }
 }
 
-async function schrijfScore(naam, userId, score) {
+async function schrijfScore(naam, userId, score, level) {
   if (!score || score <= 0) return;
   try {
     await supabase.from("obliterator_scores").insert({
       player_name: (naam || "Speler").slice(0, 30),
       user_id: userId || null,
       score,
+      level: level || null,
     });
   } catch {}
 }
@@ -45,6 +46,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const prRef = useRef(0); // persoonlijk record (refs voor game-loop closure)
   const wrRef = useRef(0); // wereldrecord (top score)
   const startLevelRef = useRef(1); // bij welk level deze sessie begint (1..MAX_LEVEL)
+  const eindLevelRef = useRef(1); // level bij game-over (voor highscore-opslag)
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
@@ -2389,6 +2391,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // huidige level krijgt ook een record (score sinds level-start)
       const scoreInHuidigLevel = score - scoreBijLevelStart;
       sessieLevelRecords[huidigLevel] = Math.max(sessieLevelRecords[huidigLevel] || 0, scoreInHuidigLevel);
+      eindLevelRef.current = huidigLevel;
       const naam = (userName || "").trim();
       if (authUser?.id && naam) {
         Object.entries(sessieLevelRecords).forEach(([lvl, sc]) => {
@@ -2439,7 +2442,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       setEindScore(score);
       setBonusLeven(0);
 
-      schrijfScore(userName, authUser?.id, score).then(() => {
+      schrijfScore(userName, authUser?.id, score, eindLevelRef.current).then(() => {
         laadTopScores().then(s => setHighscores(s));
         if (triggerWelkom) {
           setFase("welkom");
@@ -2506,7 +2509,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
   // ---------- LICHTKRANT ----------
   const lichtkrantTekst = highscores.length > 0
-    ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam} — ${h.score}`).join("    •    ")
+    ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam}${h.level ? ` (L${h.level})` : ""} — ${h.score}`).join("    •    ")
     : "Nog geen high scores — wees de eerste! 💀";
 
   return (
@@ -2932,7 +2935,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   fontSize: 13, color: h.naam === (userName || "Speler") ? "#69f0ae" : "rgba(255,255,255,0.75)",
                   padding: "2px 0", fontFamily: "'Nunito', sans-serif"
                 }}>
-                  <span>#{i + 1} {h.naam}</span>
+                  <span>#{i + 1} {h.naam}{h.level ? <span style={{ color: "rgba(255,204,64,0.85)", marginLeft: 6, fontWeight: 700 }}>L{h.level}</span> : null}</span>
                   <span style={{ fontWeight: 700 }}>{h.score}</span>
                 </div>
               ))}
