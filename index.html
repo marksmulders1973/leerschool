@@ -238,6 +238,14 @@
     <script type="module" src="/src/main.jsx"></script>
 
     <!-- English translate banner — alleen voor non-NL bezoekers (focus op NLers in USA) -->
+    <style>
+      /* Verberg Google Translate's eigen banner + tooltips — wij hebben eigen UI */
+      .skiptranslate, iframe.skiptranslate, .goog-te-banner-frame { display: none !important; }
+      body { top: 0 !important; position: static !important; }
+      .goog-tooltip, .goog-tooltip:hover, .goog-tooltip-popup { display: none !important; }
+      .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+      #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+    </style>
     <script>
       (function () {
         try {
@@ -252,10 +260,14 @@
                 includedLanguages: "en",
                 layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false,
+                multilanguagePage: false,
               }, "studiebol-translate");
             } catch (e) {}
           };
+          // Forceer body-positie naar normaal mocht Google die toch verschuiven
+          var fixBody = function () { document.body.style.top = "0"; document.body.style.position = "static"; };
           window.addEventListener("DOMContentLoaded", function () {
+            fixBody();
             var bar = document.createElement("div");
             bar.id = "studiebol-translate-bar";
             bar.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(135deg,#1877F2,#0d5dbf);color:#fff;padding:8px 12px;display:flex;align-items:center;gap:10px;justify-content:center;font-family:'Segoe UI',Tahoma,sans-serif;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,0.3);flex-wrap:wrap";
@@ -269,6 +281,9 @@
             s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
             s.async = true;
             document.body.appendChild(s);
+            // body-fix periodiek (Google probeert body soms te verschuiven na load)
+            var t = setInterval(fixBody, 500);
+            setTimeout(function () { clearInterval(t); }, 8000);
           });
         } catch (e) {}
       })();
