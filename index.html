@@ -188,7 +188,35 @@
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/sw.js");
+          navigator.serviceWorker.register("/sw.js").then((reg) => {
+            // Detecteer een nieuwe SW die wacht
+            const triggerUpdate = (waitingSw) => {
+              if (!waitingSw) return;
+              window.__pendingSw = waitingSw;
+              window.dispatchEvent(new CustomEvent("studiebol:update-available"));
+            };
+            // Als er al een waiting SW is bij registratie
+            if (reg.waiting && navigator.serviceWorker.controller) triggerUpdate(reg.waiting);
+            // Nieuwe SW gevonden tijdens deze sessie
+            reg.addEventListener("updatefound", () => {
+              const installing = reg.installing;
+              if (!installing) return;
+              installing.addEventListener("statechange", () => {
+                if (installing.state === "installed" && navigator.serviceWorker.controller) {
+                  triggerUpdate(reg.waiting || installing);
+                }
+              });
+            });
+            // Periodiek update-check (elke 60 sec) zodat nieuwe versie snel wordt opgemerkt
+            setInterval(() => { reg.update().catch(() => {}); }, 60_000);
+          }).catch(() => {});
+          // Bij controllerchange = nieuwe SW heeft overgenomen → 1x reload
+          let reloaded = false;
+          navigator.serviceWorker.addEventListener("controllerchange", () => {
+            if (reloaded) return;
+            reloaded = true;
+            window.location.reload();
+          });
         });
       }
       window.__pwaInstallPrompt = null;

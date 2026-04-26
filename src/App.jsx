@@ -23,6 +23,7 @@ import { TeacherProgress, StudentProgressView, Leaderboard, Kampioenen } from ".
 import UpgradePage from "./components/UpgradePage.jsx";
 import OuderDashboard from "./components/OuderDashboard.jsx";
 import ProPage from "./components/ProPage.jsx";
+import UpdateBanner from "./components/UpdateBanner.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -469,6 +470,9 @@ export default function App() {
   return (
     <div style={styles.app}>
       <style>{fonts}</style>
+
+      {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}
+      <UpdateBanner />
 
       {/* Offline banner */}
       {isOffline && (
