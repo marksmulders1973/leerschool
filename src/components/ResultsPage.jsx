@@ -91,11 +91,22 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
     .filter(Boolean);
 
   // Foute vragen met full options voor OBLITERATOR vraag-modal
+  // Filter vragen met plaatjes/SVG eruit — die zijn zonder visueel niet te beantwoorden
   const wrongQuestions = latest.answers
     .filter(a => !a.isCorrect)
     .map(a => {
       const q = latest.questions?.[a.questionIndex];
       if (!q || !Array.isArray(q.options) || q.options.length < 2) return null;
+      const ruwQ = String(q.q || "");
+      const ruwOpts = q.options.map(o => String(o || ""));
+      const heeftBeeld =
+        /<img|<svg|\bsrc=|<picture/i.test(ruwQ) ||
+        ruwOpts.some(o => /<img|<svg|\bsrc=|<picture/i.test(o)) ||
+        q.svg || q.image || q.imageUrl;
+      if (heeftBeeld) return null;
+      // Vraag verwijst naar een visueel ("plaatje", "afbeelding", "hierboven", "hieronder")?
+      const tekst = stripHtml(q.q || "").toLowerCase();
+      if (/plaatje|afbeelding|figuur|hierboven|hieronder|tekening|grafiek/.test(tekst)) return null;
       return {
         q: stripHtml(q.q),
         options: q.options.map(stripHtml),
