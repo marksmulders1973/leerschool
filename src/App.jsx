@@ -124,12 +124,27 @@ const fonts = `
 `;
 
 export default function App() {
-  // Deeplink ?play=obliterator → spel direct openen (van shared link)
+  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage)
   const initialPage = (() => {
     if (typeof window === "undefined") return "home";
     try {
       const sp = new URLSearchParams(window.location.search);
       if (sp.get("play") === "obliterator") return "obliteratorDirect";
+      const go = sp.get("go");
+      if (go) {
+        const map = {
+          cito: "cito",
+          tafels: "tafels",
+          spelling: "spelling",
+          woordenschat: "woordenschat",
+          "begrijpend-lezen": "begrijpend-lezen",
+          redactiesommen: "redactiesommen",
+          schoolboeken: "textbook",
+          leerkracht: "teacher-home",
+          scorebord: "leaderboard",
+        };
+        if (map[go]) return map[go];
+      }
     } catch {}
     return "home";
   })();
