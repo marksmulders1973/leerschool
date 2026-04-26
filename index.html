@@ -237,7 +237,7 @@
 
     <script type="module" src="/src/main.jsx"></script>
 
-    <!-- Google Translate widget — alleen voor non-NL bezoekers (USA, Sweden, France etc.) -->
+    <!-- English translate banner — alleen voor non-NL bezoekers (focus op NLers in USA) -->
     <script>
       (function () {
         try {
@@ -245,23 +245,21 @@
           var isNL = lang.startsWith("nl");
           var dismissed = localStorage.getItem("ls_translate_dismiss") === "1";
           if (isNL || dismissed) return;
-          // Lazy-load Google Translate alleen als nodig
           window.googleTranslateElementInit = function () {
             try {
               new window.google.translate.TranslateElement({
                 pageLanguage: "nl",
-                includedLanguages: "en,de,fr,es,it,sv,pt,pl,tr,ar,zh-CN,ja,ko,uk,ru,id",
+                includedLanguages: "en",
                 layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false,
               }, "studiebol-translate");
             } catch (e) {}
           };
-          // Inject banner pas na DOM-load (geen FOUC)
           window.addEventListener("DOMContentLoaded", function () {
             var bar = document.createElement("div");
             bar.id = "studiebol-translate-bar";
             bar.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(135deg,#1877F2,#0d5dbf);color:#fff;padding:8px 12px;display:flex;align-items:center;gap:10px;justify-content:center;font-family:'Segoe UI',Tahoma,sans-serif;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,0.3);flex-wrap:wrap";
-            bar.innerHTML = '<span>🌐 Translate this page:</span><span id="studiebol-translate"></span><button id="studiebol-translate-dismiss" style="background:rgba(255,255,255,0.18);color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-weight:600">✕ Dismiss</button>';
+            bar.innerHTML = '<span>🇳🇱→🇬🇧 Translate to English:</span><span id="studiebol-translate"></span><button id="studiebol-translate-dismiss" style="background:rgba(255,255,255,0.18);color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-weight:600">✕ Dismiss</button>';
             document.body.appendChild(bar);
             document.getElementById("studiebol-translate-dismiss").onclick = function () {
               try { localStorage.setItem("ls_translate_dismiss", "1"); } catch (e) {}

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import supabase from "../supabase.js";
+import { track } from "../utils.js";
 
 const TOP_LIMIT = 25;
 
@@ -1774,6 +1775,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // sessie-counter ophogen
       const aantal = leesInt(sessieKey) + 1;
       schrijfInt(sessieKey, aantal);
+      // tracking: hoe vaak sessie afgemaakt + score-niveau
+      try {
+        track("obliterator_session_complete", {
+          score,
+          aantal_sessies_speler: aantal,
+          source: vanDeelLink ? "deeplink" : "in_app",
+          nieuw_persoonlijk_record: score > prRef.current,
+          nieuw_wereldrecord: score > wrRef.current && wrRef.current > 0,
+        });
+      } catch {}
       const driedeSessie = aantal % 3 === 0;
       const triggerWelkom = driedeSessie && vanDeelLink; // deeplink-bezoeker -> Studiebol-conversie
       const triggerVraag = !triggerWelkom && driedeSessie && wrongQuestions && wrongQuestions.length > 0;
@@ -1979,7 +1990,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
-            <button onClick={() => setFase("spelen")} style={{
+            <button onClick={() => {
+              track("obliterator_started", {
+                source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
+                personal_record: persoonlijkRecord || 0,
+                bonus_leven: bonusLeven || 0,
+              });
+              setFase("spelen");
+            }} style={{
               padding: isPortrait ? "14px 32px" : "10px 28px",
               background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
               border: "none", borderRadius: 14, color: "#1a0008",
