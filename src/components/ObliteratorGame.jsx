@@ -1452,37 +1452,45 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillText(`🔄 FLIP ${sec}s${eindigtBijna ? " — EINDIGT!" : ""}`, W / 2, vliegFrames > 0 ? 70 * SCHAAL : 50 * SCHAAL);
       }
 
-      // FLIP pending: "FLIP IN N SEC" big banner
+      // FLIP pending: "FLIP IN N SEC" — kleine centered box bovenaan (niet zicht-blokkerend)
       if (flipPending > 0) {
         const sec = Math.ceil(flipPending / 60);
+        const boxW = Math.min(360 * SCHAAL, W * 0.6);
+        const boxH = 60 * SCHAAL;
+        const boxX = (W - boxW) / 2;
+        const boxY = H * 0.10;
         ctx.save();
-        ctx.fillStyle = "rgba(40,80,180,0.55)";
-        ctx.fillRect(0, H * 0.30, W, H * 0.40);
+        ctx.fillStyle = "rgba(40,80,180,0.78)";
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeStyle = "rgba(128,192,255,0.9)";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
         ctx.fillStyle = "#ffffff";
-        ctx.shadowBlur = 28; ctx.shadowColor = "#80c0ff";
-        ctx.font = `bold ${42 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.shadowBlur = 18; ctx.shadowColor = "#80c0ff";
+        ctx.font = `bold ${24 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText(`🔄 FLIP IN ${sec}`, W / 2, H * 0.42);
-        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
-        ctx.fillStyle = "#80c0ff";
-        ctx.fillText("HOU JE VAST!", W / 2, H * 0.56);
+        ctx.fillText(`🔄 FLIP IN ${sec} — HOU JE VAST!`, W / 2, boxY + boxH / 2);
         ctx.restore();
       }
 
-      // FLIP eindigt: laatste 3 sec — "BACK TO NORMAL IN N"
+      // FLIP eindigt: laatste 3 sec — "BACK TO NORMAL IN N" (kleine box, zelfde positie)
       if (flipFrames > 0 && flipFrames <= 180) {
         const sec = Math.ceil(flipFrames / 60);
+        const boxW = Math.min(420 * SCHAAL, W * 0.7);
+        const boxH = 60 * SCHAAL;
+        const boxX = (W - boxW) / 2;
+        const boxY = H * 0.10;
         ctx.save();
-        ctx.fillStyle = "rgba(180,80,40,0.50)"; // warm rood-oranje (terug naar normaal)
-        ctx.fillRect(0, H * 0.30, W, H * 0.40);
+        ctx.fillStyle = "rgba(180,80,40,0.78)";
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeStyle = "rgba(255,170,64,0.9)";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
         ctx.fillStyle = "#ffffff";
-        ctx.shadowBlur = 28; ctx.shadowColor = "#ffaa40";
-        ctx.font = `bold ${36 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.shadowBlur = 18; ctx.shadowColor = "#ffaa40";
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText(`BACK TO NORMAL IN ${sec}`, W / 2, H * 0.42);
-        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
-        ctx.fillStyle = "#ffaa40";
-        ctx.fillText("KOM NAAR DE GROND!", W / 2, H * 0.56);
+        ctx.fillText(`BACK TO NORMAL IN ${sec} — NAAR DE GROND!`, W / 2, boxY + boxH / 2);
         ctx.restore();
       }
 
