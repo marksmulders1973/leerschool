@@ -144,7 +144,7 @@ Antwoord ALLEEN met een JSON array:
 ]
 
 REGELS:
-- answer = index (0-3) van het juiste antwoord
+- answer = index (0-3) van het juiste antwoord. CONTROLE: classificeer voor elke vraag eerst alle 4 opties los als "CORRECT" of "FOUT" met reden. Er moet PRECIES 1 correct zijn. Kopieer dan de tekst van die optie letterlijk en tel de positie (0–3) — dat is "answer". Niet gokken.
 - source: vermeld ALTIJD het gevonden onderwerp uit de inhoudsopgave + eventuele externe bron
 - Het antwoord MOET wiskundig/vakinhoudelijk correct zijn. Controleer dit!
 - ANTWOORDLENGTE: alle vier opties moeten VERGELIJKBAAR lang zijn (± dezelfde woordenlengte). Het juiste antwoord mag NIET langer of uitgebreider zijn dan de foute opties. Leerlingen raden anders het juiste antwoord door simpelweg de langste optie te kiezen.
@@ -199,8 +199,13 @@ ${isVrijOnderwerp || hasCustomTopic ? `- Het niveau bepaalt alleen de moeilijkhe
 - Vragen in het Nederlands (behalve bij Engels/Frans/Duits: vragen mogen in die taal, uitleg in Nederlands)
 
 KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON schrijft:
-1. Schrijf het correcte antwoord op en bevestig: staat dit antwoord EXACT in options[answer]? Zo niet → herstel de answer-index.
-2. Controleer de drie foute opties: geen van deze mag eigenlijk ook correct zijn. Een vraag waarbij meerdere antwoorden juist zijn is onbruikbaar.
+1. ELKE OPTIE AFZONDERLIJK CLASSIFICEREN: voor optie 0, 1, 2 én 3 — bepaal apart "CORRECT" of "FOUT" met een korte reden. Doe dit ZELFS als je denkt het juiste antwoord al te weten. Voorbeeld voor "Welke zin klopt?":
+   - Optie 0 "Hij slaap goed." — FOUT, mist persoonsvorm-t bij hij.
+   - Optie 1 "Hij slaapt goed." — CORRECT, stam+t.
+   - Optie 2 "Hij slaapt goeds." — FOUT, "goeds" bestaat niet.
+   - Optie 3 "Hij slaaps goed." — FOUT, -s is geen NL-vervoeging.
+   Tel daarna: er moet PRECIES 1 optie CORRECT zijn. Zo niet → herschrijf de vraag.
+2. ANSWER-INDEX BEPALEN: kopieer de tekst van de CORRECT-optie letterlijk en zoek de positie (0–3) op in je options-array. Zet die positie in "answer". Niet gokken — letterlijk de index tellen.
 3. Klopt de uitleg feitelijk? De uitleg moet de REDEN geven, niet alleen het antwoord herhalen.
 4. EXTRA STRENG — rangordeningen en statistieken (grootste, langste, meeste, hoogste, diepste, rijkste, hoofdstad, vlag, bevolking, oppervlakte): verifieer elk getal en elke rangorde met zekerheid. Controleer of het juiste antwoord ook echt de #1 of #2 is in de lijst, NIET per ongeluk #3 of #4. Twijfel = sla deze vraag over en maak een andere.
 5. EXTRA STRENG — Aardrijkskunde en Geschiedenis: dubbelcheck landen, grenzen, hoofdsteden, datums, namen van personen. Fouten hierin worden direct opgemerkt door leerlingen en docenten.
@@ -208,6 +213,7 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
    - d/t spelling: stam + t bij hij/zij/het tegenwoordige tijd (hij wordt, hij fietst). "Geen t na enkelvoud" is FOUT — het is juist WEL een t na hij/zij/het.
    - Verleden tijd zwak werkwoord: eindigt stam op t/k/f/s/ch/p (het kofschip) → -te/-ten, anders -de/-den.
    - Persoonsvorm: het werkwoord dat vervoegd is naar persoon en tijd.
+   - "Welke zin klopt?"-vragen: pas stap 1 hierboven extra strikt toe — leerlingen kunnen niet "ongeveer" goed antwoorden bij grammatica.
 7. Speciale regels voor rekenen: controleer alle berekeningen nogmaals.
 8. Als je twijfelt over WELK antwoord correct is: maak een ANDERE vraag waarover je 100% zeker bent. Liever een makkelijkere zekere vraag dan een twijfelachtige moeilijke vraag.
 9. ANTWOORDLENGTE CHECK: tel het aantal woorden van elke optie. Als het juiste antwoord meer dan 3 woorden langer is dan de kortste foute optie → herschrijf de foute opties zodat ze even lang zijn. Leerlingen mogen NIET kunnen gokken op basis van lengte.
