@@ -44,6 +44,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const springRef = useRef(() => {}); // wordt door game-loop ingevuld
   const prRef = useRef(0); // persoonlijk record (refs voor game-loop closure)
   const wrRef = useRef(0); // wereldrecord (top score)
+  const startLevelRef = useRef(1); // bij welk level deze sessie begint (1..MAX_LEVEL)
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
@@ -62,6 +63,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // share
   const [linkGekopieerd, setLinkGekopieerd] = useState(false);
   const [shareToast, setShareToast] = useState(null);
+
+  // Levels-state (records per level voor deze speler) — alleen ingelogd
+  const [levelRecords, setLevelRecords] = useState({}); // { level: record_score }
+  const [gekozenStartLevel, setGekozenStartLevel] = useState(1);
+  const MAX_LEVEL_UI = 10;
+  const heeftLogin = !!authUser?.id;
+  // hoogste level waar je een record op hebt = "vrijgespeeld tot en met"
+  const maxVrijgespeeld = Math.max(1, Math.max(...Object.keys(levelRecords).map(k => parseInt(k, 10) + 1), 1));
+  const maxKiesbaar = Math.min(MAX_LEVEL_UI, maxVrijgespeeld);
+  useEffect(() => {
+    if (!authUser?.id) { setLevelRecords({}); return; }
+    supabase.from("obliterator_levels")
+      .select("level, record_score")
+      .eq("user_id", authUser.id)
+      .then(({ data }) => {
+        if (!data) return;
+        const m = {};
+        data.forEach(r => { m[r.level] = r.record_score; });
+        setLevelRecords(m);
+        // default-keuze: hoogste vrijgespeelde level
+        const top = Math.min(MAX_LEVEL_UI, Math.max(1, Math.max(...data.map(r => r.level + 1), 1)));
+        setGekozenStartLevel(top);
+      })
+      .catch(() => {});
+  }, [authUser?.id]);
+  // update startLevelRef bij elke keuze (game-loop leest ref)
+  useEffect(() => { startLevelRef.current = gekozenStartLevel; }, [gekozenStartLevel]);
   const SHARE_URL = "https://www.studiebol.online?play=obliterator";
   const shareTekst = (score) =>
     score > 0
@@ -242,6 +270,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const bonusHarten = [];
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
     let countdown = COUNTDOWN_FRAMES;
+    // Levels: 20 sec per level, max 10 levels
+    const LEVEL_DUUR_FRAMES = 1200; // 20 sec @ 60fps
+    const MAX_LEVEL = 10;
+    let huidigLevel = startLevelRef.current || 1; // start-level uit menu
+    let levelGehaaldFlash = 0;
+    let levelGehaaldNummer = 0;
+    const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
+    let scoreBijLevelStart = 0;
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
@@ -928,6 +964,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       checkBioomWissel();
       spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
+
+      // Level-detectie: huidigLevel klimt op basis van speltijd vanaf level-startpunt
+      const tijdInLevel = frameTeller - (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
+      const nieuwLevel = Math.min(MAX_LEVEL, startLevelRef.current + Math.floor(tijdInLevel / LEVEL_DUUR_FRAMES));
+      if (nieuwLevel !== huidigLevel) {
+        // sla record op voor het level dat we nét hebben afgesloten
+        const scoreInDitLevel = score - scoreBijLevelStart;
+        sessieLevelRecords[huidigLevel] = Math.max(sessieLevelRecords[huidigLevel] || 0, scoreInDitLevel);
+        // begin nieuw level
+        scoreBijLevelStart = score;
+        huidigLevel = nieuwLevel;
+        levelGehaaldNummer = nieuwLevel - 1; // het level dat zojuist gehaald is
+        levelGehaaldFlash = 130; // ~2 sec banner
+        // bonus piep
+        piep(880, 0.10, "sine", 0.15);
+        setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
+        // confetti
+        spawnParticles(W * 0.5, H * 0.3, 24, "#69f0ae", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+      }
+      if (levelGehaaldFlash > 0) levelGehaaldFlash--;
       // gravity: inverteren tijdens FLIP
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
       const yVorig = speler.y;
@@ -1485,6 +1541,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textAlign = "right";
       ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
 
+      // Level + voortgang naar volgend level
+      const tijdInLevel = frameTeller - (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
+      const fractieInLevel = (tijdInLevel % LEVEL_DUUR_FRAMES) / LEVEL_DUUR_FRAMES;
+      ctx.fillStyle = "#69f0ae";
+      ctx.shadowBlur = 8; ctx.shadowColor = "#69f0ae";
+      ctx.font = `bold ${14 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "left";
+      ctx.fillText(`LEVEL ${huidigLevel}${huidigLevel < MAX_LEVEL ? "" : " (MAX)"}`, 12, 50 * SCHAAL);
+      // dunne progressie-balk onder level-tekst
+      ctx.shadowBlur = 0;
+      const balkW = 90 * SCHAAL;
+      ctx.fillStyle = "rgba(105,240,174,0.2)";
+      ctx.fillRect(12, 56 * SCHAAL, balkW, 4);
+      ctx.fillStyle = "#69f0ae";
+      ctx.fillRect(12, 56 * SCHAAL, balkW * fractieInLevel, 4);
+
       // multiplier-display (alleen bij streak)
       if (multiplier > 1) {
         ctx.fillStyle = multiplier >= 5 ? "#ff4040" : multiplier >= 3 ? "#ffcc40" : "#69f0ae";
@@ -1554,6 +1626,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
         ctx.fillText(`BACK TO NORMAL IN ${sec} — NAAR DE GROND!`, W / 2, boxY + boxH / 2);
+        ctx.restore();
+      }
+
+      // LEVEL GEHAALD banner — kleine box bovenaan, niet zicht-blokkerend
+      if (levelGehaaldFlash > 0) {
+        const fade = Math.min(1, levelGehaaldFlash / 24);
+        const boxW = Math.min(360 * SCHAAL, W * 0.7);
+        const boxH = 56 * SCHAAL;
+        const boxX = (W - boxW) / 2;
+        const boxY = H * 0.10;
+        ctx.save();
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = "rgba(0,80,40,0.78)";
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeStyle = "#69f0ae";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
+        ctx.fillStyle = "#69f0ae";
+        ctx.shadowBlur = 22; ctx.shadowColor = "#69f0ae";
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`🏆 LEVEL ${levelGehaaldNummer} GEHAALD!`, W / 2, boxY + boxH / 2);
         ctx.restore();
       }
 
@@ -1770,6 +1864,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     function eindeSessie() {
+      // sla level-records op naar Supabase (alleen voor ingelogde users)
+      // huidige level krijgt ook een record (score sinds level-start)
+      const scoreInHuidigLevel = score - scoreBijLevelStart;
+      sessieLevelRecords[huidigLevel] = Math.max(sessieLevelRecords[huidigLevel] || 0, scoreInHuidigLevel);
+      const naam = (userName || "").trim();
+      if (authUser?.id && naam) {
+        Object.entries(sessieLevelRecords).forEach(([lvl, sc]) => {
+          if (sc <= 0) return;
+          const lvlInt = parseInt(lvl, 10);
+          // upsert: insert of update als score hoger
+          supabase.from("obliterator_levels")
+            .select("record_score")
+            .eq("user_id", authUser.id)
+            .eq("level", lvlInt)
+            .maybeSingle()
+            .then(({ data }) => {
+              if (!data) {
+                supabase.from("obliterator_levels").insert({
+                  user_id: authUser.id, player_name: naam, level: lvlInt, record_score: sc,
+                }).then(() => {}).catch(() => {});
+              } else if (sc > (data.record_score || 0)) {
+                supabase.from("obliterator_levels")
+                  .update({ record_score: sc, laatst_bijgewerkt: new Date().toISOString() })
+                  .eq("user_id", authUser.id).eq("level", lvlInt)
+                  .then(() => {}).catch(() => {});
+              }
+            }).catch(() => {});
+        });
+      }
+
       // bonus verbruiken
       schrijfInt(bonusKey, 0);
       // sessie-counter ophogen
@@ -1808,6 +1932,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           setFase("dood");
         }
       });
+    }
+
+    // pre-set state als speler vanaf hoger level start: density + biome matchen
+    if (startLevelRef.current > 1) {
+      const aanpassing = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
+      frameTeller = aanpassing;
+      // biome verspringt: elke 8 punten in normale flow, hier mappen we ruwweg level→biome
+      const startBioomIdx = Math.min(BIOMES.length - 1, startLevelRef.current - 1);
+      huidigBioom = startBioomIdx;
+      nextBioom = (startBioomIdx + 1) % BIOMES.length;
+      bioomFade = 1;
+      muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom] || 55;
+      // density al direct hoger door score-boost
+      score = startLevelRef.current * 5; // start met wat punten zodat density-formule werkt
+      scoreElText = score;
+      scoreBijLevelStart = score;
     }
 
     raf = requestAnimationFrame(lus);
@@ -1990,11 +2130,51 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
+            {/* Level-keuze (alleen voor ingelogde users) */}
+            {heeftLogin && (
+              <div style={{ marginBottom: 14, padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.08)", border: "1px solid rgba(105,240,174,0.3)" }}>
+                <div style={{ color: "#69f0ae", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 6, textAlign: "center" }}>
+                  KIES JE STARTLEVEL
+                </div>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center" }}>
+                  {Array.from({ length: maxKiesbaar }).map((_, i) => {
+                    const lvl = i + 1;
+                    const rec = levelRecords[lvl];
+                    const isSelected = gekozenStartLevel === lvl;
+                    return (
+                      <button key={lvl} onClick={() => setGekozenStartLevel(lvl)} style={{
+                        padding: "6px 10px", borderRadius: 8, border: "none",
+                        background: isSelected
+                          ? "linear-gradient(135deg, #00c853, #69f0ae)"
+                          : "rgba(255,255,255,0.08)",
+                        color: isSelected ? "#0d1b2e" : "#fff",
+                        fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 13, letterSpacing: 1,
+                        fontWeight: 700, cursor: "pointer", minWidth: 36,
+                      }}>
+                        L{lvl}{rec ? <span style={{ display: "block", fontSize: 9, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
+                      </button>
+                    );
+                  })}
+                </div>
+                {maxKiesbaar < MAX_LEVEL_UI && (
+                  <p style={{ textAlign: "center", fontSize: 10, color: "rgba(255,255,255,0.45)", margin: "6px 0 0 0" }}>
+                    Speel verder om Level {maxKiesbaar + 1} vrij te spelen
+                  </p>
+                )}
+              </div>
+            )}
+            {!heeftLogin && (
+              <p style={{ textAlign: "center", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 10 }}>
+                💡 Log in om je level-progressie en records op te slaan
+              </p>
+            )}
+
             <button onClick={() => {
               track("obliterator_started", {
                 source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
                 personal_record: persoonlijkRecord || 0,
                 bonus_leven: bonusLeven || 0,
+                start_level: heeftLogin ? gekozenStartLevel : 1,
               });
               setFase("spelen");
             }} style={{
