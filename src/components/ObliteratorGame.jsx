@@ -67,7 +67,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Levels-state (records per level voor deze speler) — alleen ingelogd
   const [levelRecords, setLevelRecords] = useState({}); // { level: record_score }
   const [gekozenStartLevel, setGekozenStartLevel] = useState(1);
-  const MAX_LEVEL_UI = 10;
+  const MAX_LEVEL_UI = 100;
   const heeftLogin = !!authUser?.id;
   // hoogste level waar je een record op hebt = "vrijgespeeld tot en met"
   const maxVrijgespeeld = Math.max(1, Math.max(...Object.keys(levelRecords).map(k => parseInt(k, 10) + 1), 1));
@@ -270,24 +270,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const bonusHarten = [];
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
     let countdown = COUNTDOWN_FRAMES;
-    // Levels: 30 sec per level, max 10 levels (= 5 min totaal voor MAX)
+    // Levels: 30 sec per level, max 100 levels (= 50 min totaal voor MAX)
     const LEVEL_DUUR_FRAMES = 1800; // 30 sec @ 60fps
-    const MAX_LEVEL = 10;
+    const MAX_LEVEL = 100;
     let huidigLevel = startLevelRef.current || 1; // start-level uit menu
     let levelGehaaldFlash = 0;
     let levelGehaaldNummer = 0;
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
     let scoreBijLevelStart = 0;
-    // Boss-fights — na elk 5e level (na L5 en L10)
-    const BOSS_TRIGGER_LEVELS = [5, 10];
-    const BOSS_MAX_HP = 100;
-    const BOSS_LASER_DAMAGE = 6;        // ~17 hits = ~10 sec dood
-    const BOSS_AANVAL_INTERVAL = 90;    // 1.5 sec tussen attacks
+    // Boss-fights — na elk 5e level (5, 10, 15 ... 95)
+    const BOSS_TRIGGER_LEVELS = (() => { const a = []; for (let i = 5; i <= 95; i += 5) a.push(i); return a; })();
+    const BOSS_MAX_HP_BASE = 100;       // op L5; schaalt met level
+    const BOSS_LASER_DAMAGE = 6;        // constant — verlengt dood-tijd bij hoger HP
+    const BOSS_AANVAL_INTERVAL_BASE = 90; // 1.5 sec op L5; sneller bij hoger
     const BOSS_PROJECTIEL_SNELHEID = 7 * SCHAAL;
     const SPELER_LASER_SNELHEID = 12 * SCHAAL;
     const BOSS_NA_LEVEL_VLAGGEN = new Set(); // welke triggers in deze sessie al gespeeld
     let bossActief = false;
     let bossHp = 0;
+    let bossMaxHpHuidig = BOSS_MAX_HP_BASE;
+    let bossAanvalIntervalHuidig = BOSS_AANVAL_INTERVAL_BASE;
     let bossX = W * 0.78;
     let bossY = H * 0.4;
     const bossGrootte = Math.min(160 * SCHAAL, H * 0.4); // half scherm hoog max
@@ -381,7 +383,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
-      bossHp = BOSS_MAX_HP;
+      // Boss-HP schaalt met level: L5=100, L10=140, L20=220, L50=500, L95=860, L100=onhaalbaar
+      bossHp = BOSS_MAX_HP_BASE + Math.floor((naLevel - 5) / 5) * 40;
+      bossMaxHpHuidig = bossHp;
+      // attack-interval sneller bij hoger boss-level (max 2x sneller)
+      bossAanvalIntervalHuidig = Math.max(35, BOSS_AANVAL_INTERVAL_BASE - Math.floor((naLevel - 5) / 5) * 6);
       bossX = W * 0.78;
       bossY = H * 0.42;
       bossInkomendLevel = naarLevel;
@@ -1232,11 +1238,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       volgendObstakelOver--;
       if (volgendObstakelOver <= 0) {
         maakObstakel();
-        // grond-stekels rustiger sinds plafond ze nu aanvult (~50/50)
-        // score 0  -> 80-115 frames
-        // score 30 -> 50-75 frames
-        const minA = Math.max(50, 80 - score * 1.0);
-        const variatie = Math.max(15, 35 - score * 0.5);
+        // density schaalt nu vooral op level (score-aandeel houdt mooi af bij beginners)
+        // L1  : 80-115 frames (rustig)
+        // L20 : 56-78 frames
+        // L50 : 28-43 frames
+        // L100: 18-28 frames (vrijwel onmogelijk)
+        const minA = Math.max(18, 80 - huidigLevel * 0.65 - score * 0.2);
+        const variatie = Math.max(10, 35 - huidigLevel * 0.30);
         volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
       }
       for (let i = obstakels.length - 1; i >= 0; i--) {
@@ -1596,7 +1604,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // BOSS ATTACKS — schiet projectielen naar speler
         bossAanvalTeller--;
         if (bossAanvalTeller <= 0 && bossHp > 0) {
-          bossAanvalTeller = BOSS_AANVAL_INTERVAL - Math.floor((BOSS_MAX_HP - bossHp) / 20) * 10; // sneller bij lager HP
+          bossAanvalTeller = Math.max(20, bossAanvalIntervalHuidig - Math.floor((bossMaxHpHuidig - bossHp) / 20) * 10); // sneller bij lager HP
           // schiet richting speler-positie op moment van vuren
           const tgtX = speler.x + speler.breedte / 2;
           const tgtY = speler.y + speler.hoogte / 2;
@@ -1659,7 +1667,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const fractie = Math.max(0, Math.min(1, tijdInDitLevel / LEVEL_DUUR_FRAMES));
 
       const isBossNext = BOSS_TRIGGER_LEVELS.includes(huidigLevel);
-      const eindEmoji = isBossNext ? (huidigLevel === 5 ? "👹" : "💀") : "🏁";
+      const bossNextNr = Math.floor((huidigLevel + 5) / 5) - 1; // welk boss-nummer komt er
+      const bossEmojiSet = ["👹","💀","👺","🐉","👻","🤖","👽","🦑","🦂","🦖","🐙","☠️","🐍","🦠","🧟","🦇","🕷️","🐲","💩"];
+      const eindEmoji = isBossNext ? bossEmojiSet[Math.min(bossEmojiSet.length - 1, Math.max(0, bossNextNr - 1))] : "🏁";
       const eindKleur = isBossNext ? "#ff4040" : "#69f0ae";
       const fillKleur = isBossNext && fractie > 0.7 ? "#ff8050" : "#69f0ae";
 
@@ -1774,8 +1784,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       // ───── BOSS render ─────
       if (bossActief) {
-        // boss-tint shift: licht (HP=100) → rood (HP=0)
-        const hpFractie = Math.max(0, bossHp / BOSS_MAX_HP);
+        // boss-tint shift: licht (volle HP) → rood (HP=0)
+        const hpFractie = Math.max(0, bossHp / bossMaxHpHuidig);
         const r = 255;
         const g = Math.floor(180 * hpFractie);
         const b = Math.floor(120 * hpFractie);
@@ -1801,8 +1811,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.beginPath();
         ctx.arc(0, 0, bossGrootte * 0.5, 0, Math.PI * 2);
         ctx.stroke();
-        // monster-emoji (skull/devil afhankelijk van level)
-        const emoji = (huidigLevel === 5) ? "👹" : "💀";
+        // monster-emoji wisselt per boss-fight nummer (1=L5, 2=L10, ... 19=L95)
+        const bossEmojis = ["👹","💀","👺","🐉","👻","🤖","👽","🦑","🦂","🦖","🐙","☠️","🐍","🦠","🧟","🦇","🕷️","🐲","💩"];
+        const bossNr = Math.floor(huidigLevel / 5) - 1; // L5→0, L10→1, L95→18
+        const emoji = bossEmojis[Math.min(bossEmojis.length - 1, Math.max(0, bossNr))];
         ctx.shadowBlur = 12; ctx.shadowColor = "#000";
         ctx.font = `${bossGrootte * 0.55}px serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
@@ -1830,7 +1842,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 8; ctx.shadowColor = "#000";
         ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText(`BOSS HP ${Math.max(0, Math.ceil(bossHp))} / ${BOSS_MAX_HP}`, bossX, hpBalkY + hpBalkH / 2);
+        ctx.fillText(`BOSS HP ${Math.max(0, Math.ceil(bossHp))} / ${bossMaxHpHuidig}`, bossX, hpBalkY + hpBalkH / 2);
         ctx.restore();
 
         // SPELER lasers (cyaan-groene streepjes)
@@ -2596,22 +2608,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 <div style={{ color: "#69f0ae", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 6, textAlign: "center" }}>
                   KIES JE STARTLEVEL
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center" }}>
+                <div style={{
+                  display: "flex", flexWrap: "wrap", gap: 4,
+                  justifyContent: "center",
+                  maxHeight: 180, overflowY: "auto",
+                  padding: "4px 2px",
+                }}>
                   {Array.from({ length: maxKiesbaar }).map((_, i) => {
                     const lvl = i + 1;
                     const rec = levelRecords[lvl];
                     const isSelected = gekozenStartLevel === lvl;
+                    const isBossLvl = lvl % 5 === 0;
                     return (
                       <button key={lvl} onClick={() => setGekozenStartLevel(lvl)} style={{
-                        padding: "6px 10px", borderRadius: 8, border: "none",
+                        padding: "5px 8px", borderRadius: 7, border: isBossLvl ? "1px solid rgba(255,80,80,0.5)" : "none",
                         background: isSelected
                           ? "linear-gradient(135deg, #00c853, #69f0ae)"
-                          : "rgba(255,255,255,0.08)",
-                        color: isSelected ? "#0d1b2e" : "#fff",
-                        fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 13, letterSpacing: 1,
-                        fontWeight: 700, cursor: "pointer", minWidth: 36,
+                          : isBossLvl ? "rgba(255,80,80,0.15)" : "rgba(255,255,255,0.08)",
+                        color: isSelected ? "#0d1b2e" : isBossLvl ? "#ff8050" : "#fff",
+                        fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 12, letterSpacing: 0.5,
+                        fontWeight: 700, cursor: "pointer", minWidth: 32,
                       }}>
-                        L{lvl}{rec ? <span style={{ display: "block", fontSize: 9, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
+                        L{lvl}{isBossLvl ? "👹" : ""}{rec ? <span style={{ display: "block", fontSize: 8, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
                       </button>
                     );
                   })}
