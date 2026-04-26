@@ -278,6 +278,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let levelGehaaldNummer = 0;
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
     let scoreBijLevelStart = 0;
+    // Boss-fights — na elk 5e level (na L5 en L10)
+    const BOSS_TRIGGER_LEVELS = [5, 10];
+    const BOSS_MAX_HP = 100;
+    const BOSS_LASER_DAMAGE = 6;        // ~17 hits = ~10 sec dood
+    const BOSS_AANVAL_INTERVAL = 90;    // 1.5 sec tussen attacks
+    const BOSS_PROJECTIEL_SNELHEID = 7 * SCHAAL;
+    const SPELER_LASER_SNELHEID = 12 * SCHAAL;
+    const BOSS_NA_LEVEL_VLAGGEN = new Set(); // welke triggers in deze sessie al gespeeld
+    let bossActief = false;
+    let bossHp = 0;
+    let bossX = W * 0.78;
+    let bossY = H * 0.4;
+    const bossGrootte = Math.min(160 * SCHAAL, H * 0.4); // half scherm hoog max
+    let bossAanvalTeller = 60;
+    const bossLasers = [];   // projectielen van boss naar speler
+    const spelerLasers = []; // projectielen van speler naar boss
+    let bossWinAnim = 0;     // frames voor "BOSS DEFEATED!" hoera
+    let bossInkomendLevel = 0; // het level waarnaar we doorgaan na de boss
+    let bossPulse = 0;       // visueel pulserend
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
@@ -360,6 +379,81 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (bioomFade < 1) bioomFade = Math.min(1, bioomFade + 1 / BIOOM_FADE_DUUR);
       if (levelUpFlash > 0) levelUpFlash--;
     }
+    function startBoss(naLevel, naarLevel) {
+      bossActief = true;
+      bossHp = BOSS_MAX_HP;
+      bossX = W * 0.78;
+      bossY = H * 0.42;
+      bossInkomendLevel = naarLevel;
+      bossAanvalTeller = 90;
+      bossLasers.length = 0;
+      spelerLasers.length = 0;
+      // clear normale game-elementen (geen botsing tijdens boss)
+      obstakels.length = 0;
+      ringen.length = 0;
+      platforms.length = 0;
+      plafondStekels.length = 0;
+      bonusHarten.length = 0;
+      raketten.length = 0;
+      flipPickups.length = 0;
+      // spawn-tellers ophogen zodat tijdens boss niets nieuws verschijnt
+      volgendObstakelOver = 999999;
+      ringSpawnTeller = 999999;
+      platformSpawnTeller = 999999;
+      plafondStekelSpawnTeller = 999999;
+      logoSpawnTeller = 999999;
+      // dramatische intro: piep + confetti
+      piep(196, 0.30, "sawtooth", 0.20); // dreigend laag
+      setTimeout(() => piep(220, 0.25, "sawtooth", 0.18), 200);
+      setTimeout(() => piep(165, 0.40, "sawtooth", 0.20), 500);
+      shakeKracht = 18;
+      spawnParticles(bossX, bossY, 30, "#ff4040", { spread: 12, opwaarts: 0, leven: 50, grootte: 5, zwaartekracht: 0.05, glow: 20 });
+    }
+
+    function bossWin() {
+      // groot hoera-moment
+      bossActief = false;
+      bossWinAnim = 180; // 3 sec
+      // mega-explosie waar boss stond
+      for (let i = 0; i < 80; i++) {
+        const k = ["#ffd700", "#69f0ae", "#ff4040", "#ffaa20", "#ffffff"][i % 5];
+        spawnParticles(bossX, bossY, 1, k, { spread: 16, opwaarts: 4, leven: 90, grootte: 6, zwaartekracht: 0.18, glow: 22 });
+      }
+      // victory fanfare
+      piep(523, 0.12, "sine", 0.18);
+      setTimeout(() => piep(659, 0.12, "sine", 0.18), 120);
+      setTimeout(() => piep(784, 0.14, "sine", 0.18), 240);
+      setTimeout(() => piep(1047, 0.20, "sine", 0.18), 380);
+      // beloning: +50 score + 1 leven (max blijft 5)
+      score += 50;
+      scoreElText = score;
+      if (levens < MAX_LEVENS) levens++;
+      shakeKracht = 14;
+      // na anim: doorgaan naar volgende level
+      setTimeout(() => {
+        scoreBijLevelStart = score;
+        huidigLevel = bossInkomendLevel;
+        levelGehaaldNummer = bossInkomendLevel - 1;
+        levelGehaaldFlash = 130;
+        setBiomeVoorLevel(bossInkomendLevel);
+        // spawn-tellers terug naar normaal zodat gameplay hervat
+        volgendObstakelOver = 60;
+        ringSpawnTeller = 60;
+        platformSpawnTeller = 240;
+        plafondStekelSpawnTeller = 240;
+        logoSpawnTeller = 360;
+      }, 1800);
+    }
+
+    function spelerSchiet() {
+      // laser vanuit speler-positie naar rechts
+      const cx = speler.x + speler.breedte;
+      const cy = speler.y + speler.hoogte / 2;
+      spelerLasers.push({ x: cx, y: cy });
+      piep(880, 0.04, "square", 0.08);
+      spawnParticles(cx, cy, 4, "#69f0ae", { spread: 1, opwaarts: 0, leven: 12, grootte: 2, zwaartekracht: 0, glow: 10 });
+    }
+
     function setBiomeVoorLevel(lvl) {
       const idx = Math.min(BIOMES.length - 1, lvl - 1);
       if (idx === huidigBioom) return;
@@ -938,6 +1032,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function spring() {
       if (!spelLoopt) return;
       muziekStart();
+      // Tijdens boss: tap = jump + laser tegelijk
+      if (bossActief) spelerSchiet();
       // ONBEPERKT springen — geen cap meer
       {
         const sprongNr = speler.sprongTeller; // 0 = eerste, 1 = tweede, daarna alle vervolg
@@ -1032,6 +1128,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       checkBioomWissel();
       spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
+      // tijdens boss: spelTijd telt niet door (level-progressie pauzeert)
+      if (bossActief) frameTeller--;
 
       // Level-detectie: huidigLevel klimt op basis van speltijd vanaf level-startpunt
       const tijdInLevel = frameTeller - (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
@@ -1040,18 +1138,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // sla record op voor het level dat we nét hebben afgesloten
         const scoreInDitLevel = score - scoreBijLevelStart;
         sessieLevelRecords[huidigLevel] = Math.max(sessieLevelRecords[huidigLevel] || 0, scoreInDitLevel);
-        // begin nieuw level
-        scoreBijLevelStart = score;
-        huidigLevel = nieuwLevel;
-        levelGehaaldNummer = nieuwLevel - 1; // het level dat zojuist gehaald is
-        levelGehaaldFlash = 130; // ~2 sec banner
-        // wissel biome + muziek (bass + BPM) per level
-        setBiomeVoorLevel(nieuwLevel);
-        // bonus piep
-        piep(880, 0.10, "sine", 0.15);
-        setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
-        // confetti
-        spawnParticles(W * 0.5, H * 0.3, 24, "#69f0ae", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+
+        const oudLevel = huidigLevel;
+        // BOSS-TRIGGER: na L5 / L10 (boss vóór doorgaan naar volgend level)
+        if (BOSS_TRIGGER_LEVELS.includes(oudLevel) && !BOSS_NA_LEVEL_VLAGGEN.has(oudLevel)) {
+          BOSS_NA_LEVEL_VLAGGEN.add(oudLevel);
+          startBoss(oudLevel, nieuwLevel);
+          // huidigLevel blijft staan; pas na win → naar nieuwLevel
+        } else {
+          // begin nieuw level
+          scoreBijLevelStart = score;
+          huidigLevel = nieuwLevel;
+          levelGehaaldNummer = nieuwLevel - 1; // het level dat zojuist gehaald is
+          levelGehaaldFlash = 130; // ~2 sec banner
+          // wissel biome + muziek (bass + BPM) per level
+          setBiomeVoorLevel(nieuwLevel);
+          // bonus piep
+          piep(880, 0.10, "sine", 0.15);
+          setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
+          // confetti
+          spawnParticles(W * 0.5, H * 0.3, 24, "#69f0ae", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+        }
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
       // gravity: inverteren tijdens FLIP
@@ -1460,6 +1567,70 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (multiplierFlashTeller > 0) multiplierFlashTeller--;
       if (recordBannerTeller > 0) recordBannerTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
+
+      // ───── BOSS-FASE ─────
+      if (bossActief) {
+        bossPulse += 0.08;
+        // boss zweeft licht op-en-neer
+        bossY = H * 0.42 + Math.sin(bossPulse * 0.5) * 18 * SCHAAL;
+
+        // SPELER-LASERS scrollen naar rechts, raken boss?
+        for (let i = spelerLasers.length - 1; i >= 0; i--) {
+          const l = spelerLasers[i];
+          l.x += SPELER_LASER_SNELHEID;
+          // raak boss?
+          const dx = l.x - bossX;
+          const dy = l.y - bossY;
+          if (Math.abs(dx) < bossGrootte / 2 && Math.abs(dy) < bossGrootte / 2) {
+            bossHp -= BOSS_LASER_DAMAGE;
+            spawnParticles(l.x, l.y, 8, "#ffcc40", { spread: 4, opwaarts: 1, leven: 18, grootte: 3, zwaartekracht: 0, glow: 14 });
+            piep(440 + Math.random() * 200, 0.04, "square", 0.06);
+            spelerLasers.splice(i, 1);
+            shakeKracht = Math.max(shakeKracht, 4);
+            if (bossHp <= 0) { bossWin(); break; }
+            continue;
+          }
+          if (l.x > W + 20) spelerLasers.splice(i, 1);
+        }
+
+        // BOSS ATTACKS — schiet projectielen naar speler
+        bossAanvalTeller--;
+        if (bossAanvalTeller <= 0 && bossHp > 0) {
+          bossAanvalTeller = BOSS_AANVAL_INTERVAL - Math.floor((BOSS_MAX_HP - bossHp) / 20) * 10; // sneller bij lager HP
+          // schiet richting speler-positie op moment van vuren
+          const tgtX = speler.x + speler.breedte / 2;
+          const tgtY = speler.y + speler.hoogte / 2;
+          const dx = tgtX - bossX;
+          const dy = tgtY - bossY;
+          const len = Math.sqrt(dx * dx + dy * dy);
+          bossLasers.push({
+            x: bossX - bossGrootte * 0.3,
+            y: bossY,
+            vx: (dx / len) * BOSS_PROJECTIEL_SNELHEID,
+            vy: (dy / len) * BOSS_PROJECTIEL_SNELHEID,
+          });
+          piep(165, 0.10, "sawtooth", 0.10);
+        }
+
+        // BOSS-LASERS bewegen + collision met speler
+        const sb = spelerBots();
+        for (let i = bossLasers.length - 1; i >= 0; i--) {
+          const bl = bossLasers[i];
+          bl.x += bl.vx;
+          bl.y += bl.vy;
+          // raakt speler?
+          if (vliegFrames === 0 && bl.x >= sb.x && bl.x <= sb.x + sb.breedte
+              && bl.y >= sb.y && bl.y <= sb.y + sb.hoogte) {
+            bossLasers.splice(i, 1);
+            levenVerlies();
+            return;
+          }
+          if (bl.x < -20 || bl.x > W + 20 || bl.y < -20 || bl.y > H + 20) {
+            bossLasers.splice(i, 1);
+          }
+        }
+      }
+      if (bossWinAnim > 0) bossWinAnim--;
     }
     function tekenLevens() {
       ctx.save();
@@ -1531,6 +1702,113 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
+
+      // ───── BOSS render ─────
+      if (bossActief) {
+        // boss-tint shift: licht (HP=100) → rood (HP=0)
+        const hpFractie = Math.max(0, bossHp / BOSS_MAX_HP);
+        const r = 255;
+        const g = Math.floor(180 * hpFractie);
+        const b = Math.floor(120 * hpFractie);
+        // pulserend glow
+        const pulse = 0.7 + Math.sin(bossPulse) * 0.2;
+        ctx.save();
+        ctx.translate(bossX, bossY);
+        ctx.shadowBlur = 30 + (1 - hpFractie) * 25; // intenser bij minder HP
+        ctx.shadowColor = `rgb(${r},${g},${b})`;
+        // monster-cirkel
+        const grad = ctx.createRadialGradient(-bossGrootte * 0.2, -bossGrootte * 0.2, bossGrootte * 0.1, 0, 0, bossGrootte * 0.55);
+        grad.addColorStop(0, `rgba(${r},${Math.min(255, g + 50)},${Math.min(255, b + 50)},${pulse})`);
+        grad.addColorStop(0.6, `rgb(${r},${g},${b})`);
+        grad.addColorStop(1, `rgba(${Math.floor(r * 0.6)},${Math.floor(g * 0.4)},${Math.floor(b * 0.4)},1)`);
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(0, 0, bossGrootte * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+        // donker outline
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(80,0,0,0.7)";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(0, 0, bossGrootte * 0.5, 0, Math.PI * 2);
+        ctx.stroke();
+        // monster-emoji (skull/devil afhankelijk van level)
+        const emoji = (huidigLevel === 5) ? "👹" : "💀";
+        ctx.shadowBlur = 12; ctx.shadowColor = "#000";
+        ctx.font = `${bossGrootte * 0.55}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(emoji, 0, 0);
+        ctx.restore();
+
+        // HP-balk boven boss
+        ctx.save();
+        const hpBalkW = bossGrootte * 0.9;
+        const hpBalkH = 10 * SCHAAL;
+        const hpBalkX = bossX - hpBalkW / 2;
+        const hpBalkY = bossY - bossGrootte * 0.55 - 18 * SCHAAL;
+        // background
+        ctx.fillStyle = "rgba(0,0,0,0.65)";
+        ctx.fillRect(hpBalkX - 2, hpBalkY - 2, hpBalkW + 4, hpBalkH + 4);
+        // fill (kleur shift met HP)
+        ctx.fillStyle = `rgb(${r},${g},${b})`;
+        ctx.fillRect(hpBalkX, hpBalkY, hpBalkW * hpFractie, hpBalkH);
+        // border
+        ctx.strokeStyle = "rgba(255,255,255,0.7)";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(hpBalkX, hpBalkY, hpBalkW, hpBalkH);
+        // text
+        ctx.fillStyle = "#fff";
+        ctx.shadowBlur = 8; ctx.shadowColor = "#000";
+        ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`BOSS HP ${Math.max(0, Math.ceil(bossHp))} / ${BOSS_MAX_HP}`, bossX, hpBalkY + hpBalkH / 2);
+        ctx.restore();
+
+        // SPELER lasers (cyaan-groene streepjes)
+        for (const l of spelerLasers) {
+          ctx.save();
+          ctx.shadowBlur = 14; ctx.shadowColor = "#69f0ae";
+          ctx.strokeStyle = "#69f0ae";
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.moveTo(l.x - 14 * SCHAAL, l.y);
+          ctx.lineTo(l.x, l.y);
+          ctx.stroke();
+          ctx.restore();
+        }
+        // BOSS lasers (rode bollen)
+        for (const bl of bossLasers) {
+          ctx.save();
+          ctx.shadowBlur = 18; ctx.shadowColor = "#ff3030";
+          ctx.fillStyle = "#ff5050";
+          ctx.beginPath();
+          ctx.arc(bl.x, bl.y, 7 * SCHAAL, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#fff";
+          ctx.beginPath();
+          ctx.arc(bl.x - 2, bl.y - 2, 2 * SCHAAL, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      // BOSS WIN banner
+      if (bossWinAnim > 0) {
+        const fade = Math.min(1, bossWinAnim / 30);
+        ctx.save();
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = "rgba(0,80,40,0.85)";
+        ctx.fillRect(0, H * 0.30, W, H * 0.40);
+        ctx.fillStyle = "#69f0ae";
+        ctx.shadowBlur = 35; ctx.shadowColor = "#69f0ae";
+        ctx.font = `bold ${44 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🏆 BOSS DEFEATED!", W / 2, H * 0.42);
+        ctx.font = `bold ${20 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = "#fff";
+        ctx.fillText("+50 SCORE · +1 LEVEN", W / 2, H * 0.55);
+        ctx.restore();
+      }
 
       // gouden ringen tekenen
       for (const r of ringen) {
@@ -1950,6 +2228,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       plafondStekelSpawnTeller = 240;
       studiebolLogos.length = 0;
       logoSpawnTeller = 360;
+      // boss-state reset zodat je 'm opnieuw kunt verslaan na respawn
+      bossActief = false;
+      bossLasers.length = 0;
+      spelerLasers.length = 0;
+      bossWinAnim = 0;
+      BOSS_NA_LEVEL_VLAGGEN.clear();
       vliegFrames = 0;
       flipFrames = 0;
       flipPending = 0;
