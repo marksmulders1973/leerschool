@@ -56,6 +56,42 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
   const [vraagAntwoord, setVraagAntwoord] = useState(null); // null | index
   const [vraagBeloning, setVraagBeloning] = useState(false); // toon "+1 leven" feedback
 
+  // share
+  const [linkGekopieerd, setLinkGekopieerd] = useState(false);
+  const SHARE_URL = "https://www.studiebol.online";
+  const shareTekst = (score) =>
+    score > 0
+      ? `💀 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
+      : `💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥 ${SHARE_URL}`;
+  const handleWhatsApp = () => {
+    window.open(`https://wa.me/?text=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+  };
+  const handleFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SHARE_URL)}&quote=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+  };
+  const handleX = () => {
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+  };
+  const handleCopy = async () => {
+    try {
+      const tekst = shareTekst(eindScore);
+      if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(tekst);
+      else {
+        const ta = document.createElement("textarea");
+        ta.value = tekst; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); document.body.removeChild(ta);
+      }
+      setLinkGekopieerd(true);
+      setTimeout(() => setLinkGekopieerd(false), 2000);
+    } catch {}
+  };
+  const handleNative = async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: "OBLITERATOR · Studiebol", text: shareTekst(eindScore), url: SHARE_URL }); } catch {}
+    } else {
+      handleCopy();
+    }
+  };
+
   // top 25 ophalen bij mount + na elke game-over
   useEffect(() => {
     let actief = true;
@@ -1748,6 +1784,48 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               {laden && (
                 <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 13 }}>Scorebord laden…</div>
               )}
+            </div>
+
+            {/* DEEL knoppen — share je score */}
+            <div style={{
+              marginBottom: 14, padding: "10px 12px", borderRadius: 10,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,150,40,0.25)"
+            }}>
+              <div style={{ color: "#ffcc40", fontSize: 12, fontWeight: 700, marginBottom: 8, letterSpacing: 1, textAlign: "center" }}>
+                📢 DEEL JE SCORE
+              </div>
+              <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
+                <button onClick={handleWhatsApp} title="WhatsApp" style={{
+                  padding: "8px 12px", background: "#25D366", border: "none", borderRadius: 8,
+                  color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  fontFamily: "'Fredoka', sans-serif", display: "flex", alignItems: "center", gap: 4
+                }}>💬 WhatsApp</button>
+                <button onClick={handleFacebook} title="Facebook" style={{
+                  padding: "8px 12px", background: "#1877F2", border: "none", borderRadius: 8,
+                  color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  fontFamily: "'Fredoka', sans-serif", display: "flex", alignItems: "center", gap: 4
+                }}>📘 Facebook</button>
+                <button onClick={handleX} title="X (Twitter)" style={{
+                  padding: "8px 12px", background: "#000", border: "1px solid #444", borderRadius: 8,
+                  color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  fontFamily: "'Fredoka', sans-serif", display: "flex", alignItems: "center", gap: 4
+                }}>𝕏 X</button>
+                <button onClick={handleCopy} title="Kopieer link" style={{
+                  padding: "8px 12px", background: linkGekopieerd ? "#00c853" : "rgba(255,255,255,0.1)",
+                  border: "1px solid rgba(255,255,255,0.2)", borderRadius: 8,
+                  color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  fontFamily: "'Fredoka', sans-serif", display: "flex", alignItems: "center", gap: 4
+                }}>{linkGekopieerd ? "✓ Gekopieerd!" : "🔗 Kopieer"}</button>
+                {typeof navigator !== "undefined" && typeof navigator.share === "function" && (
+                  <button onClick={handleNative} title="Deel via..." style={{
+                    padding: "8px 12px", background: "linear-gradient(135deg, #ffcc40, #ff5030)",
+                    border: "none", borderRadius: 8, color: "#1a0008",
+                    fontSize: 13, fontWeight: 700, cursor: "pointer",
+                    fontFamily: "'Fredoka', sans-serif"
+                  }}>📤 Deel...</button>
+                )}
+              </div>
             </div>
 
             <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
