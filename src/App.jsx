@@ -521,6 +521,15 @@ export default function App() {
           }}
         />
       )}
+      {page === "obliteratorPlay" && (
+        <ObliteratorGame
+          userName={userName || "Speler"}
+          authUser={authUser}
+          wrongQuestions={[]}
+          vanDeelLink={false}
+          onClose={() => setPage("home")}
+        />
+      )}
       {page === "home" && (
         <HomePage
           onSaveProfile={({ name, level, role, schoolType }) => {
@@ -534,7 +543,7 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
-          onPlayObliterator={() => setPage("obliteratorDirect")}
+          onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
