@@ -58,19 +58,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
   // share
   const [linkGekopieerd, setLinkGekopieerd] = useState(false);
+  const [shareToast, setShareToast] = useState(null);
   const SHARE_URL = "https://www.studiebol.online?play=obliterator";
   const shareTekst = (score) =>
     score > 0
       ? `💀 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
       : `💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥 ${SHARE_URL}`;
+
+  const trackShare = (platform) => {
+    const naam = (userName || "").trim().slice(0, 60);
+    if (naam && naam.toLowerCase() !== "speler") {
+      try { supabase.from("share_events").insert({ shared_by: naam, platform: `obliterator-${platform}` }).then(() => {}).catch(() => {}); } catch {}
+    }
+    setShareToast(naam && naam.toLowerCase() !== "speler"
+      ? "🌟 Bedankt! Je staat in de Hall of Fame voor delers"
+      : "🌟 Bedankt voor het delen!");
+    setTimeout(() => setShareToast(null), 3500);
+  };
+
   const handleWhatsApp = () => {
     window.open(`https://wa.me/?text=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+    trackShare("whatsapp");
   };
   const handleFacebook = () => {
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SHARE_URL)}&quote=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+    trackShare("facebook");
   };
   const handleX = () => {
     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareTekst(eindScore))}`, "_blank");
+    trackShare("x");
   };
   const handleCopy = async () => {
     try {
@@ -82,11 +98,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       setLinkGekopieerd(true);
       setTimeout(() => setLinkGekopieerd(false), 2000);
+      trackShare("copy");
     } catch {}
   };
   const handleNative = async () => {
     if (navigator.share) {
-      try { await navigator.share({ title: "OBLITERATOR · Studiebol", text: shareTekst(eindScore), url: SHARE_URL }); } catch {}
+      try {
+        await navigator.share({ title: "OBLITERATOR · Studiebol", text: shareTekst(eindScore), url: SHARE_URL });
+        trackShare("native");
+      } catch {}
     } else {
       handleCopy();
     }
@@ -1511,6 +1531,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         padding: 12, overflowY: "auto", WebkitOverflowScrolling: "touch"
       }}
     >
+      {shareToast && (
+        <div style={{
+          position: "fixed", left: "50%", bottom: 20, transform: "translateX(-50%)",
+          zIndex: 100001, padding: "12px 18px", borderRadius: 14,
+          background: "linear-gradient(135deg, #ffd700, #ffaa00)",
+          color: "#1a1a00", fontFamily: "'Fredoka', sans-serif",
+          fontSize: 14, fontWeight: 700, letterSpacing: 0.3,
+          boxShadow: "0 4px 20px rgba(255,215,0,0.5)",
+          maxWidth: "calc(100vw - 24px)", textAlign: "center",
+        }}>
+          {shareToast}
+        </div>
+      )}
       {/* Lichtkrant — altijd bovenaan zichtbaar */}
       <div style={{
         width: canvasW, marginBottom: 8, borderRadius: 8,

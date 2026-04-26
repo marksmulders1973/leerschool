@@ -838,15 +838,35 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     if (awards[activePeriod] || awardsLoading[activePeriod]) return;
     setAwardsLoading(prev => ({ ...prev, [activePeriod]: true }));
     const { from, to } = periodRanges[activePeriod];
-    supabase.from("leaderboard")
-      .select("player_name, score, total, percentage, completed_at")
-      .gte("completed_at", from.toISOString())
-      .lte("completed_at", to.toISOString())
-      .order("completed_at", { ascending: true })
-      .then(({ data }) => {
-        setAwards(prev => ({ ...prev, [activePeriod]: calcAwards(data || []) }));
-        setAwardsLoading(prev => ({ ...prev, [activePeriod]: false }));
-      }).catch(() => setAwardsLoading(prev => ({ ...prev, [activePeriod]: false })));
+    Promise.all([
+      supabase.from("leaderboard")
+        .select("player_name, score, total, percentage, completed_at")
+        .gte("completed_at", from.toISOString())
+        .lte("completed_at", to.toISOString())
+        .order("completed_at", { ascending: true })
+        .then(({ data }) => data || []).catch(() => []),
+      supabase.from("share_events")
+        .select("shared_by, platform, created_at")
+        .gte("created_at", from.toISOString())
+        .lte("created_at", to.toISOString())
+        .then(({ data }) => data || []).catch(() => []),
+    ]).then(([lb, shares]) => {
+      const baseAwards = calcAwards(lb);
+      // Vriendenmaker = persoon met de meeste shares in deze periode
+      let vriend = null;
+      if (shares.length) {
+        const tally = {};
+        shares.forEach(s => {
+          const n = (s.shared_by || "").trim();
+          if (!n) return;
+          tally[n] = (tally[n] || 0) + 1;
+        });
+        const top = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
+        if (top) vriend = { name: top[0], value: top[1], unit: top[1] === 1 ? "keer gedeeld" : "keer gedeeld" };
+      }
+      setAwards(prev => ({ ...prev, [activePeriod]: { ...baseAwards, vriendenmaker: vriend } }));
+      setAwardsLoading(prev => ({ ...prev, [activePeriod]: false }));
+    }).catch(() => setAwardsLoading(prev => ({ ...prev, [activePeriod]: false })));
   }, [activePeriod]);
 
   useEffect(() => {
@@ -1146,10 +1166,11 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               const periodLabel = current.label.toLowerCase();
               const periodAwards = awards[activePeriod];
               const awardDefs = [
-                { key: "doorzetter", icon: "💪", title: "Doorzetter",    color: "#00c853", bg: "#001a08", border: "#00c853", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
-                { key: "hardwerker", icon: "🧠", title: "Hardwerker",    color: "#1a73e8", bg: "#000d1a", border: "#1a73e8", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
-                { key: "verbeteraar",icon: "📈", title: "Verbeteraar",   color: "#ff9800", bg: "#1a0d00", border: "#ff9800", msg: (a) => `+${a.value}% verbeterd ${periodLabel}` },
-                { key: "actiefste",  icon: "🔥", title: "Meest actief",  color: "#e91e63", bg: "#1a0010", border: "#e91e63", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "doorzetter",   icon: "💪", title: "Doorzetter",    color: "#00c853", bg: "#001a08", border: "#00c853", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "hardwerker",   icon: "🧠", title: "Hardwerker",    color: "#1a73e8", bg: "#000d1a", border: "#1a73e8", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "verbeteraar",  icon: "📈", title: "Verbeteraar",   color: "#ff9800", bg: "#1a0d00", border: "#ff9800", msg: (a) => `+${a.value}% verbeterd ${periodLabel}` },
+                { key: "actiefste",    icon: "🔥", title: "Meest actief",  color: "#e91e63", bg: "#1a0010", border: "#e91e63", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "vriendenmaker",icon: "🌟", title: "Vriendenmaker", color: "#ffd700", bg: "#1a1500", border: "#ffd700", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
               ];
               const hasAny = periodAwards && Object.values(periodAwards).some(Boolean);
               if (!hasAny && !awardsLoading[activePeriod]) return null;

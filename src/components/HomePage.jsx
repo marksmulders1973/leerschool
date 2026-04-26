@@ -23,6 +23,37 @@ function TickerBanner() {
   const [awardItems, setAwardItems] = useState([]);
   const [shareItems, setShareItems] = useState([]);
   const [obliteratorItems, setObliteratorItems] = useState([]);
+  const [vriendenmakerItem, setVriendenmakerItem] = useState(null);
+
+  useEffect(() => {
+    // Vriendenmaker van de week (meeste shares)
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    const d = now.getDay();
+    startOfWeek.setDate(now.getDate() - (d === 0 ? 6 : d - 1)); startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
+    supabase.from("share_events")
+      .select("shared_by, created_at")
+      .gte("created_at", startOfWeek.toISOString())
+      .lte("created_at", endOfWeek.toISOString())
+      .then(({ data }) => {
+        if (!data?.length) return;
+        const tally = {};
+        data.forEach(e => {
+          const n = (e.shared_by || "").trim();
+          if (!n) return;
+          tally[n] = (tally[n] || 0) + 1;
+        });
+        const top = Object.entries(tally).sort((a, b) => b[1] - a[1])[0];
+        if (top && top[1] >= 2) {
+          setVriendenmakerItem({
+            icon: "🌟",
+            text: `Top! ${top[0]} is Vriendenmaker van de week — ${top[1]} keer gedeeld!`,
+            special: true,
+          });
+        }
+      }).catch(() => {});
+  }, []);
 
   useEffect(() => {
     supabase.from("obliterator_scores")
@@ -146,8 +177,8 @@ function TickerBanner() {
     return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
-  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR) tussen gewone items
-  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems];
+  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR + Vriendenmaker) tussen gewone items
+  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems, ...(vriendenmakerItem ? [vriendenmakerItem] : [])];
   const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {
@@ -354,6 +385,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   });
   const [installPrompt, setInstallPrompt] = useState(null);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
+  const [shareToast, setShareToast] = useState(null);
+
+  // log share-event + toon "bedankt" toast (Hall of Fame voor delers)
+  const trackShare = (platform) => {
+    const naam = (name || userName || "").trim().slice(0, 60);
+    if (naam) {
+      try { supabase.from("share_events").insert({ shared_by: naam, platform }).then(() => {}).catch(() => {}); } catch {}
+    }
+    setShareToast(naam ? "🌟 Bedankt! Je staat in de Hall of Fame voor delers" : "🌟 Bedankt voor het delen!");
+    setTimeout(() => setShareToast(null), 3500);
+  };
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
   const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 
@@ -438,6 +480,21 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   return (
     <div style={styles.page}>
+      {/* Bedankt-toast na delen */}
+      {shareToast && (
+        <div style={{
+          position: "fixed", left: "50%", bottom: 20, transform: "translateX(-50%)",
+          zIndex: 100001, padding: "12px 18px", borderRadius: 14,
+          background: "linear-gradient(135deg, #ffd700, #ffaa00)",
+          color: "#1a1a00", fontFamily: "'Fredoka', sans-serif",
+          fontSize: 14, fontWeight: 700, letterSpacing: 0.3,
+          boxShadow: "0 4px 20px rgba(255,215,0,0.5)",
+          maxWidth: "calc(100vw - 24px)", textAlign: "center",
+          animation: "popIn 0.35s ease",
+        }}>
+          {shareToast}
+        </div>
+      )}
       {showOnboarding && (
         <div style={{
           position: "fixed", inset: 0, zIndex: 9999,
@@ -828,6 +885,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               onClick={() => {
                 const text = `Ken je studiebol al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.studiebol.online`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+                trackShare("whatsapp");
               }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366">
@@ -842,7 +900,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
               }}
-              onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`, "_blank")}
+              onClick={() => {
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`, "_blank");
+                trackShare("facebook");
+              }}
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="#1877F2">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -865,10 +926,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 if (navigator.share) {
                   try {
                     await navigator.share({ title: "OBLITERATOR · Studiebol", text, url });
+                    trackShare("obliterator-native");
                     return;
                   } catch {}
                 }
                 window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, "_blank");
+                trackShare("obliterator-whatsapp");
               }}
             >
               <span style={{ fontSize: 16 }}>🎮</span>
