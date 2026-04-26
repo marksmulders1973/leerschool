@@ -2056,7 +2056,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         display: "flex", flexDirection: "column", alignItems: "center",
         justifyContent: (fase === "dood" || fase === "vraag" || (fase === "menu" && !isPortrait)) ? "flex-start" : "center",
         padding: 12,
-        paddingBottom: fase === "dood" || fase === "vraag" ? 80 : 12,
+        paddingBottom: (fase === "dood" || fase === "vraag" || fase === "menu") ? 90 : 12,
         overflowY: fase === "spelen" ? "hidden" : "auto",
         overscrollBehavior: fase === "spelen" ? "contain" : "auto",
         touchAction: fase === "spelen" ? "none" : "auto",
@@ -2226,24 +2226,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </p>
             )}
 
-            <button onClick={() => {
-              track("obliterator_started", {
-                source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
-                personal_record: persoonlijkRecord || 0,
-                bonus_leven: bonusLeven || 0,
-                start_level: heeftLogin ? gekozenStartLevel : 1,
-              });
-              setFase("spelen");
-            }} style={{
-              padding: isPortrait ? "14px 32px" : "10px 28px",
-              background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
-              border: "none", borderRadius: 14, color: "#1a0008",
-              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: isPortrait ? 20 : 17, letterSpacing: 3,
-              fontWeight: 700, cursor: "pointer",
-              boxShadow: "0 0 20px rgba(255,100,60,0.6)"
+            <div style={{
+              position: "sticky", bottom: 0, marginTop: 8,
+              padding: "10px 0 6px",
+              background: "linear-gradient(to top, rgba(10,5,20,0.96) 60%, rgba(10,5,20,0.4) 100%)",
+              zIndex: 5,
             }}>
-              🔥 START
-            </button>
+              <button onClick={() => {
+                track("obliterator_started", {
+                  source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
+                  personal_record: persoonlijkRecord || 0,
+                  bonus_leven: bonusLeven || 0,
+                  start_level: heeftLogin ? gekozenStartLevel : 1,
+                });
+                setFase("spelen");
+              }} style={{
+                width: "100%",
+                padding: isPortrait ? "14px 32px" : "10px 28px",
+                background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
+                border: "none", borderRadius: 14, color: "#1a0008",
+                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: isPortrait ? 20 : 17, letterSpacing: 3,
+                fontWeight: 700, cursor: "pointer",
+                boxShadow: "0 0 20px rgba(255,100,60,0.6)"
+              }}>
+                🔥 START
+              </button>
+            </div>
           </div>
         )}
 
