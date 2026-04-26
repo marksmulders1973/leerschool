@@ -1036,6 +1036,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
           speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
         }
+        // plafond-clamp: speler kan niet boven het plafond uit (anders vliegt hij buiten beeld)
+        const minY = PLAFOND_HOOGTE + 2;
+        if (speler.y < minY) {
+          speler.y = minY;
+          if (speler.snelheidY < 0) {
+            speler.snelheidY = Math.max(0, speler.snelheidY * -0.3); // zachte bonk + klein stuiterterugje
+            spawnParticles(speler.x + speler.breedte / 2, speler.y, 6, "#cccccc", { spread: 2.5, opwaarts: -0.5, leven: 14, grootte: 2, zwaartekracht: 0.1, glow: 0 });
+          }
+        }
       }
       trail();
       volgendObstakelOver--;
@@ -1999,11 +2008,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         e.preventDefault();
         springRef.current?.();
       }}
+      onTouchMove={(e) => {
+        // tijdens spelen: geen scroll/swipe-gesture toelaten — blijft canvas stabiel
+        if (fase === "spelen") e.preventDefault();
+      }}
       style={{
         position: "fixed", inset: 0, background: "rgba(0,0,0,0.92)", zIndex: 9999,
         display: "flex", flexDirection: "column", alignItems: "center",
         justifyContent: (fase === "dood" || fase === "vraag" || (fase === "menu" && !isPortrait)) ? "flex-start" : "center",
-        padding: 12, overflowY: "auto", WebkitOverflowScrolling: "touch"
+        padding: 12,
+        overflowY: fase === "spelen" ? "hidden" : "auto",
+        overscrollBehavior: "contain",
+        touchAction: fase === "spelen" ? "none" : "auto",
+        WebkitOverflowScrolling: "touch",
       }}
     >
       {shareToast && (
