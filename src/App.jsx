@@ -24,6 +24,7 @@ import UpgradePage from "./components/UpgradePage.jsx";
 import OuderDashboard from "./components/OuderDashboard.jsx";
 import ProPage from "./components/ProPage.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
+import ObliteratorGame from "./components/ObliteratorGame.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -122,7 +123,16 @@ const fonts = `
 `;
 
 export default function App() {
-  const [page, setPage] = useState("home");
+  // Deeplink ?play=obliterator → spel direct openen (van shared link)
+  const initialPage = (() => {
+    if (typeof window === "undefined") return "home";
+    try {
+      const sp = new URLSearchParams(window.location.search);
+      if (sp.get("play") === "obliterator") return "obliteratorDirect";
+    } catch {}
+    return "home";
+  })();
+  const [page, setPage] = useState(initialPage);
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -487,6 +497,23 @@ export default function App() {
           abortControllerRef.current?.abort();
           setLoading(false);
         }} />
+      )}
+      {page === "obliteratorDirect" && (
+        <ObliteratorGame
+          userName={userName || "Speler"}
+          authUser={authUser}
+          wrongQuestions={[]}
+          vanDeelLink={true}
+          onNaarStudiebol={() => {
+            // ruim query-param op zodat refresh in normale flow start
+            try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
+            setPage("home");
+          }}
+          onClose={() => {
+            try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
+            setPage("home");
+          }}
+        />
       )}
       {page === "home" && (
         <HomePage

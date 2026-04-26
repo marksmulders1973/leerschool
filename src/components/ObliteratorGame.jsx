@@ -37,7 +37,7 @@ function schrijfInt(key, val) {
   try { localStorage.setItem(key, String(val)); } catch {}
 }
 
-export default function ObliteratorGame({ userName, authUser, wrongQuestions, onClose }) {
+export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose }) {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
   const springRef = useRef(() => {}); // wordt door game-loop ingevuld
@@ -58,7 +58,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
 
   // share
   const [linkGekopieerd, setLinkGekopieerd] = useState(false);
-  const SHARE_URL = "https://www.studiebol.online";
+  const SHARE_URL = "https://www.studiebol.online?play=obliterator";
   const shareTekst = (score) =>
     score > 0
       ? `💀 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
@@ -1430,7 +1430,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       // sessie-counter ophogen
       const aantal = leesInt(sessieKey) + 1;
       schrijfInt(sessieKey, aantal);
-      const triggerVraag = aantal % 3 === 0 && wrongQuestions && wrongQuestions.length > 0;
+      const driedeSessie = aantal % 3 === 0;
+      const triggerWelkom = driedeSessie && vanDeelLink; // deeplink-bezoeker -> Studiebol-conversie
+      const triggerVraag = !triggerWelkom && driedeSessie && wrongQuestions && wrongQuestions.length > 0;
 
       const huidigBeste = highscores.find(h => h.naam === (userName || "Speler"))?.score || 0;
       setNieuwRecord(score > huidigBeste && score > 0);
@@ -1439,7 +1441,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
 
       schrijfScore(userName, authUser?.id, score).then(() => {
         laadTopScores().then(s => setHighscores(s));
-        if (triggerVraag) {
+        if (triggerWelkom) {
+          setFase("welkom");
+        } else if (triggerVraag) {
           const idx = Math.floor(Math.random() * wrongQuestions.length);
           setVraag(wrongQuestions[idx]);
           setVraagAntwoord(null);
@@ -1740,6 +1744,59 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
                 Liever overslaan
               </button>
             )}
+          </div>
+        )}
+
+        {fase === "welkom" && (
+          <div style={{ textAlign: "center", padding: "24px 14px" }}>
+            <div style={{ fontSize: 48, marginBottom: 8 }}>🎓✨</div>
+            <p style={{
+              fontFamily: "'Fredoka', sans-serif", fontSize: 22, fontWeight: 700,
+              color: "#69f0ae", marginBottom: 6,
+              textShadow: "0 0 12px rgba(105,240,174,0.5)"
+            }}>Welkom bij Studiebol!</p>
+            <p style={{ color: "#ffcc40", fontSize: 16, fontWeight: 700, marginBottom: 14 }}>
+              Score: {eindScore}
+            </p>
+            <div style={{
+              padding: "14px 16px", borderRadius: 12, marginBottom: 16,
+              background: "rgba(105,240,174,0.08)",
+              border: "1px solid rgba(105,240,174,0.35)",
+              textAlign: "left", fontFamily: "'Nunito', sans-serif",
+              fontSize: 13, lineHeight: 1.5, color: "rgba(255,255,255,0.85)"
+            }}>
+              <div style={{ color: "#69f0ae", fontWeight: 700, marginBottom: 6, fontSize: 14 }}>
+                Leuk dat je OBLITERATOR speelt!
+              </div>
+              <div style={{ marginBottom: 6 }}>
+                Studiebol is de <strong>gratis leer-app</strong> waar dit spel in zit:
+              </div>
+              <div>📚 Cito-eindtoets · spelling · rekenen · wiskunde · talen</div>
+              <div>🎓 Voor groep 1-8, MAVO, HAVO, VWO en gymnasium</div>
+              <div>🏆 Verdien medailles, kom in de Hall of Fame</div>
+              <div>💯 Alles gratis — geen advertenties, geen abonnement</div>
+            </div>
+            <button onClick={() => onNaarStudiebol?.()} style={{
+              width: "100%", padding: "14px 20px",
+              background: "linear-gradient(135deg, #00c853, #69f0ae)",
+              border: "none", borderRadius: 14, color: "#0d1b2e",
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 17, fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
+              marginBottom: 8
+            }}>
+              🚀 Ontdek Studiebol
+            </button>
+            <button onClick={() => setFase("menu")} style={{
+              width: "100%", padding: "10px 18px",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.15)",
+              borderRadius: 12, color: "rgba(255,255,255,0.7)",
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 14, fontWeight: 600, cursor: "pointer"
+            }}>
+              Nog 1 keer spelen
+            </button>
           </div>
         )}
 

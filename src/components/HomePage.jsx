@@ -861,7 +861,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               }}
               onClick={async () => {
                 const text = "💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥";
-                const url = "https://www.studiebol.online";
+                const url = "https://www.studiebol.online?play=obliterator";
                 if (navigator.share) {
                   try {
                     await navigator.share({ title: "OBLITERATOR · Studiebol", text, url });
