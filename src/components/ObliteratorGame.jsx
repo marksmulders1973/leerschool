@@ -257,6 +257,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // plafond-stekels (ZELDZAAM, raakbaar, hangen vanaf plafond)
     const plafondStekels = [];
     let plafondStekelTeller = 0; // teller t.o.v. obstakels-totaal
+    // Studiebol-logo als subtiele achtergrond-decoratie (af en toe)
+    const studiebolLogos = [];
+    let logoSpawnTeller = 360; // eerste logo na ~6 sec
+    const logoImg = new Image();
+    let logoGeladen = false;
+    logoImg.onload = () => { logoGeladen = true; };
+    logoImg.onerror = () => { logoGeladen = false; };
+    logoImg.src = "/icons/icon-192.png";
     const PLATFORM_HOOGTE = 14 * SCHAAL;
     const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
@@ -1080,6 +1088,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (platforms[i].x + platforms[i].breedte < -20) platforms.splice(i, 1);
       }
 
+      // Studiebol-logo achtergrond — af en toe een subtiel logo dat mee-scrollt
+      logoSpawnTeller--;
+      if (logoSpawnTeller <= 0 && logoGeladen) {
+        const grootte = (110 + Math.random() * 80) * SCHAAL;
+        const y = (90 + Math.random() * 110) * SCHAAL;
+        studiebolLogos.push({ x: W + grootte, y, grootte });
+        logoSpawnTeller = 720 + Math.floor(Math.random() * 600); // 12-22 sec
+      }
+      for (let i = studiebolLogos.length - 1; i >= 0; i--) {
+        studiebolLogos[i].x -= spelSnelheid * 0.4; // langzaam = parallax
+        if (studiebolLogos[i].x + studiebolLogos[i].grootte < -10) studiebolLogos.splice(i, 1);
+      }
+
       // plafond-stekels scrollen + collision
       for (let i = plafondStekels.length - 1; i >= 0; i--) {
         const ps = plafondStekels[i];
@@ -1253,7 +1274,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function teken() {
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
-      tekenBakstenenMuur(); tekenGlasInLood(); tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+      tekenBakstenenMuur(); tekenGlasInLood();
+      // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
+      if (logoGeladen && studiebolLogos.length) {
+        ctx.save();
+        ctx.globalAlpha = 0.22;
+        for (const l of studiebolLogos) {
+          ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
+        }
+        ctx.restore();
+      }
+      tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
 
       // tint tijdens FLIP
       if (flipFrames > 0) {
@@ -1548,7 +1579,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         teller++;
         ctx.save();
         if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
-        tekenBakstenenMuur(); tekenGlasInLood(); tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+        tekenBakstenenMuur(); tekenGlasInLood();
+        if (logoGeladen && studiebolLogos.length) {
+          ctx.save(); ctx.globalAlpha = 0.22;
+          for (const l of studiebolLogos) ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
+          ctx.restore();
+        }
+        tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
         for (let i = particles.length - 1; i >= 0; i--) {
           particles[i].update(); particles[i].teken();
           if (particles[i].dood) particles.splice(i, 1);
@@ -1599,6 +1636,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       platforms.length = 0;
       platformSpawnTeller = 240;
       plafondStekels.length = 0;
+      studiebolLogos.length = 0;
+      logoSpawnTeller = 360;
       vliegFrames = 0;
       flipFrames = 0;
       flipPending = 0;
