@@ -339,24 +339,46 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         )}
 
         <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
-          <button
-            onClick={() => setShowGame(true)}
-            style={{
-              width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
-              background: "linear-gradient(135deg, #ff5030, #ffcc40)",
-              color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
-              fontSize: 20, letterSpacing: 3, fontWeight: 700, cursor: "pointer",
-              boxShadow: "0 4px 20px rgba(255,80,40,0.5)",
-              animation: "pulse 2s infinite",
-            }}
-          >
-            💀 SPEEL OBLITERATOR 🔥
-          </button>
-          <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
-            {latest.percentage >= 80
-              ? "Jij hebt het verdiend — kraak de high score!"
-              : "Even ontspannen? Speel OBLITERATOR en pak een high score!"}
-          </p>
+          {latest.percentage >= 50 ? (
+            <>
+              <button
+                onClick={() => setShowGame(true)}
+                style={{
+                  width: "100%", padding: "16px 20px", border: "none", borderRadius: 16,
+                  background: "linear-gradient(135deg, #ff5030, #ffcc40)",
+                  color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
+                  fontSize: 20, letterSpacing: 3, fontWeight: 700, cursor: "pointer",
+                  boxShadow: "0 4px 20px rgba(255,80,40,0.5)",
+                  animation: "pulse 2s infinite",
+                }}
+              >
+                💀 SPEEL OBLITERATOR 🔥
+              </button>
+              <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
+                {latest.percentage >= 80
+                  ? "Jij hebt het verdiend — kraak de high score!"
+                  : "Mooie score! Speel OBLITERATOR als beloning."}
+              </p>
+            </>
+          ) : (
+            <div style={{
+              padding: "14px 16px", borderRadius: 14,
+              background: "linear-gradient(135deg, rgba(255,150,40,0.10), rgba(255,80,40,0.05))",
+              border: "1px solid rgba(255,150,40,0.35)",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: 28, marginBottom: 4 }}>🔒</div>
+              <p style={{
+                fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 15, letterSpacing: 1,
+                color: "#ffcc40", marginBottom: 4
+              }}>
+                OBLITERATOR — score nog niet voldoende
+              </p>
+              <p style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
+                Haal <strong style={{ color: "#69f0ae" }}>50% of hoger</strong> bij een toets om het mini-spel te verdienen!
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Cito smart aanbeveling */}
