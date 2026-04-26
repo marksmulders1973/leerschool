@@ -254,9 +254,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // lichtblauwe platforms (halverwege canvas, veilig om op te rollen)
     const platforms = [];
     let platformSpawnTeller = 240; // eerste platform na 4 sec
-    // plafond-stekels (ZELDZAAM, raakbaar, hangen vanaf plafond)
+    // plafond-stekels (raakbaar, hangen vanaf plafond) — eigen spawn-teller
     const plafondStekels = [];
-    let plafondStekelTeller = 0; // teller t.o.v. obstakels-totaal
+    let plafondStekelSpawnTeller = 240; // eerste plafond-stekel na ~4 sec
     // Studiebol-logo als subtiele achtergrond-decoratie (af en toe)
     const studiebolLogos = [];
     let logoSpawnTeller = 360; // eerste logo na ~6 sec
@@ -974,11 +974,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       volgendObstakelOver--;
       if (volgendObstakelOver <= 0) {
         maakObstakel();
-        // snelheid is constant, dus moeilijkheid puur via spacing:
-        // score 0  -> 55-85 frames (rustig begin)
-        // score 30 -> 22-37 frames (pittig)
-        const minA = Math.max(22, 55 - score * 1.2);
-        const variatie = Math.max(8, 30 - score * 0.5);
+        // grond-stekels rustiger sinds plafond ze nu aanvult (~50/50)
+        // score 0  -> 80-115 frames
+        // score 30 -> 50-75 frames
+        const minA = Math.max(50, 80 - score * 1.0);
+        const variatie = Math.max(15, 35 - score * 0.5);
         volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
       }
       for (let i = obstakels.length - 1; i >= 0; i--) {
@@ -1003,15 +1003,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (170 + Math.random() * 100) * SCHAAL;
             flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // plafond-stekel: ZELDZAAM, gevaarlijk obstakel dat hoofd raakt bij hoge sprong
-          // alleen vanaf score 5 en max 1 per ~30 obstakels
-          if (score >= 5 && aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 30 === 0 && Math.random() < 0.5) {
-            plafondStekels.push({
-              x: W + 40,
-              breedte: 26 * SCHAAL,
-              hoogte: (24 + Math.random() * 12) * SCHAAL,
-            });
-          }
+          // (plafond-stekel-spawn werkt nu via eigen plafondStekelSpawnTeller, hieronder)
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
       }
@@ -1099,6 +1091,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = studiebolLogos.length - 1; i >= 0; i--) {
         studiebolLogos[i].x -= spelSnelheid * 0.4; // langzaam = parallax
         if (studiebolLogos[i].x + studiebolLogos[i].grootte < -10) studiebolLogos.splice(i, 1);
+      }
+
+      // plafond-stekel spawn (~50/50 met grond-stekels)
+      // start vanaf score 3 zodat speler eerst veilig kan inkomen
+      plafondStekelSpawnTeller--;
+      if (plafondStekelSpawnTeller <= 0 && score >= 3) {
+        plafondStekels.push({
+          x: W + 40,
+          breedte: 26 * SCHAAL,
+          hoogte: (24 + Math.random() * 14) * SCHAAL,
+        });
+        // vergelijkbare cadans als grond, lichte variatie
+        plafondStekelSpawnTeller = 90 + Math.floor(Math.random() * 60);
       }
 
       // plafond-stekels scrollen + collision
@@ -1661,6 +1666,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       platforms.length = 0;
       platformSpawnTeller = 240;
       plafondStekels.length = 0;
+      plafondStekelSpawnTeller = 240;
       studiebolLogos.length = 0;
       logoSpawnTeller = 360;
       vliegFrames = 0;
