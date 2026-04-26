@@ -2017,8 +2017,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         display: "flex", flexDirection: "column", alignItems: "center",
         justifyContent: (fase === "dood" || fase === "vraag" || (fase === "menu" && !isPortrait)) ? "flex-start" : "center",
         padding: 12,
+        paddingBottom: fase === "dood" || fase === "vraag" ? 80 : 12,
         overflowY: fase === "spelen" ? "hidden" : "auto",
-        overscrollBehavior: "contain",
+        overscrollBehavior: fase === "spelen" ? "contain" : "auto",
         touchAction: fase === "spelen" ? "none" : "auto",
         WebkitOverflowScrolling: "touch",
       }}
@@ -2458,7 +2459,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </div>
             </div>
 
-            <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
+            <div style={{
+              position: "sticky", bottom: 0, marginTop: 4,
+              padding: "12px 0 8px",
+              background: "linear-gradient(to top, rgba(10,5,20,0.96) 60%, rgba(10,5,20,0.4) 100%)",
+              display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap",
+              zIndex: 5,
+            }}>
               <button onClick={() => { setFase("menu"); }} style={{
                 padding: "12px 24px",
                 background: "linear-gradient(135deg, #ffcc40, #ff5030)",
