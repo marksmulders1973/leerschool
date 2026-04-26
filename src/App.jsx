@@ -533,6 +533,25 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onPro={() => setPage("pro")}
+          onSnelstart={() => {
+            // ⚡ Snelstart: direct rekenen-quiz met preGenerated vragen, geen klikken nodig
+            track("snelstart_clicked", { source: "homepage" });
+            const lvl = userLevel || "groep5";
+            const pool = SAMPLE_QUESTIONS.rekenen?.[lvl] || SAMPLE_QUESTIONS.rekenen?.groep5 || [];
+            const vragen = shuffle([...pool]).slice(0, 5);
+            if (vragen.length === 0) return;
+            const quiz = {
+              id: "snelstart-" + Date.now(),
+              subject: "rekenen",
+              level: lvl,
+              topic: "snelstart",
+              questionCount: 5,
+              timePerQuestion: 0,
+              preGeneratedQuestions: vragen,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);

@@ -372,7 +372,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onPro }) {
+export default function HomePage({ onSelectRole, onSnelstart, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onPro }) {
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
   const [step, setStep] = useState(pendingCode ? "name" : "role");
@@ -628,6 +628,24 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
               {LAUNCH_PROMO_LONG}
             </div>
+          </div>
+        )}
+
+        {step === "role" && onSnelstart && (
+          <div style={{ width: "100%", maxWidth: 360, marginBottom: 14 }}>
+            <button onClick={onSnelstart} style={{
+              width: "100%", padding: "14px 18px", borderRadius: 14, border: "none",
+              background: "linear-gradient(135deg, #ff5030, #ffcc40)",
+              color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: 18, letterSpacing: 2, fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 4px 20px rgba(255,80,40,0.4)",
+              animation: "pulse 2.5s ease-in-out infinite",
+            }}>
+              ⚡ SNELLE QUIZ — DIRECT BEGINNEN
+            </button>
+            <p style={{ textAlign: "center", fontSize: 11, color: "#8899aa", marginTop: 4 }}>
+              5 vragen rekenen, geen klikken vooraf nodig
+            </p>
           </div>
         )}
 
