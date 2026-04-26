@@ -717,23 +717,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     function spring() {
       if (!spelLoopt) return;
       muziekStart();
-      if (speler.sprongTeller < 2) {
-        const eersteSprong = speler.sprongTeller === 0;
-        // tweede sprong iets zwakker (85%) maar nog steeds krachtig genoeg
-        speler.snelheidY = SPRING_KRACHT * (eersteSprong ? 1 : 0.85);
+      if (speler.sprongTeller < 3) {
+        const sprongNr = speler.sprongTeller; // 0 = eerste, 1 = tweede, 2 = derde
+        // krachten: 100% / 85% / 75% — derde is voor noodgevallen, niet om hoogte te halen
+        const kracht = sprongNr === 0 ? 1 : sprongNr === 1 ? 0.85 : 0.75;
+        speler.snelheidY = SPRING_KRACHT * kracht;
         speler.springt = true;
         speler.sprongTeller++;
         springGeluid();
-        if (eersteSprong) {
+        const cx = speler.x + speler.breedte / 2;
+        const cy = speler.y + speler.hoogte / 2;
+        if (sprongNr === 0) {
           spawnParticles(speler.x + 8 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa20", { spread: 3, opwaarts: 0, leven: 18, grootte: 4, zwaartekracht: 0.05, glow: 14 });
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 4, "#ffee60", { spread: 2, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0.02, glow: 12 });
-        } else {
-          // dubbele sprong: blauwe energie-burst rondom speler
-          const cx = speler.x + speler.breedte / 2;
-          const cy = speler.y + speler.hoogte / 2;
+        } else if (sprongNr === 1) {
+          // tweede sprong: blauwe energie-burst
           spawnParticles(cx, cy, 14, "#40c0ff", { spread: 6, opwaarts: 0, leven: 24, grootte: 4, zwaartekracht: 0.02, krimp: true, glow: 18 });
           spawnParticles(cx, cy, 8, "#ffffff", { spread: 4, opwaarts: 0, leven: 18, grootte: 3, zwaartekracht: 0, krimp: true, glow: 14 });
           piep(660, 0.07, "sine", 0.10);
+        } else {
+          // derde sprong: paars-roze redding-burst
+          spawnParticles(cx, cy, 18, "#c060ff", { spread: 7, opwaarts: 0, leven: 26, grootte: 4, zwaartekracht: 0.02, krimp: true, glow: 20 });
+          spawnParticles(cx, cy, 10, "#ff80ff", { spread: 5, opwaarts: 0, leven: 20, grootte: 3, zwaartekracht: 0, krimp: true, glow: 16 });
+          piep(880, 0.09, "sine", 0.12);
         }
       }
     }
@@ -1311,7 +1317,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
             <div style={{ fontSize: 56, marginBottom: 8 }}>💀🔥💀</div>
             <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 6 }}>Spring over de stekels!</p>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, marginBottom: 6 }}>
-              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · 2× = dubbele jump
+              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · tot <strong style={{ color: "#c060ff" }}>3 sprongen</strong> in de lucht!
             </p>
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
               Hoe verder je komt, hoe meer obstakels op elkaar. Achtergrond verandert om de 8 punten.
