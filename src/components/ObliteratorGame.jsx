@@ -214,8 +214,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const SPELER_GROOTTE = 32 * SCHAAL;
     const ZWAARTEKRACHT = 0.75 * SCHAAL;
     const SPRING_KRACHT = -13.5 * SCHAAL;
-    const START_SNELHEID = 9 * SCHAAL;
-    const MAX_SNELHEID = 15 * SCHAAL;
+    const START_SNELHEID = 7 * SCHAAL;
+    const MAX_SNELHEID = 12 * SCHAAL;
     const BAKSTEEN_W = 60 * SCHAAL;
     const BAKSTEEN_H = 30 * SCHAAL;
 
