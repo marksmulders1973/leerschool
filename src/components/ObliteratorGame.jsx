@@ -185,6 +185,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
     const raketten = []; // pickups in lucht
+    // FLIP-power-up (gravity-inversie)
+    let flipPending = 0;       // 2-sec countdown na pickup
+    const FLIP_PENDING_DUUR = 120;
+    let flipFrames = 0;        // > 0 = gevlipt
+    const FLIP_DUUR = 600;     // 10 sec
+    const flipPickups = [];
+    const PLAFOND_NIVEAU = PLAFOND_HOOGTE + 12;
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -721,7 +728,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         const sprongNr = speler.sprongTeller; // 0 = eerste, 1 = tweede, 2 = derde
         // krachten: 100% / 85% / 75% — derde is voor noodgevallen, niet om hoogte te halen
         const kracht = sprongNr === 0 ? 1 : sprongNr === 1 ? 0.85 : 0.75;
-        speler.snelheidY = SPRING_KRACHT * kracht;
+        // tijdens FLIP: omgekeerd (omlaag duiken)
+        const richting = flipFrames > 0 ? -1 : 1;
+        speler.snelheidY = SPRING_KRACHT * kracht * richting;
         speler.springt = true;
         speler.sprongTeller++;
         springGeluid();
@@ -795,15 +804,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
 
       checkBioomWissel();
       spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
-      speler.snelheidY += ZWAARTEKRACHT;
+      // gravity: inverteren tijdens FLIP
+      speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
       speler.y += speler.snelheidY;
-      if (speler.springt) speler.rotatie += 0.18;
-      if (speler.y >= GROND_Y) {
-        if (speler.springt) {
-          spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
-          spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
+      if (speler.springt) speler.rotatie += flipFrames > 0 ? -0.18 : 0.18;
+
+      if (flipFrames > 0) {
+        // plafond-clamp tijdens FLIP
+        if (speler.y <= PLAFOND_NIVEAU) {
+          if (speler.springt) {
+            spawnParticles(speler.x + 4 * SCHAAL, speler.y, 8, "#80c0ff", { spread: 3, opwaarts: -1, leven: 16, grootte: 3, zwaartekracht: -0.1, glow: 12 });
+          }
+          speler.y = PLAFOND_NIVEAU; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
         }
-        speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
+        // grond-stop tijdens FLIP: bereik je toch de grond, dan stuit je terug ipv dood
+        if (speler.y >= GROND_Y) {
+          speler.y = GROND_Y;
+          speler.snelheidY = -8 * SCHAAL; // bounce omhoog (richting plafond)
+          spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 16, grootte: 3, zwaartekracht: 0.08, glow: 0 });
+        }
+      } else {
+        // normale grond-clamp
+        if (speler.y >= GROND_Y) {
+          if (speler.springt) {
+            spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
+            spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
+          }
+          speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
+        }
       }
       trail();
       volgendObstakelOver--;
@@ -819,7 +847,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= spelSnelheid;
-        if (vliegFrames === 0 && obstRaakt(o)) { levenVerlies(); return; }
+        if (vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) { levenVerlies(); return; }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true;
           streak++;
@@ -847,6 +875,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
           if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 50 === 0 && Math.random() < 0.3 && vliegFrames === 0) {
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
+          }
+          // FLIP-pickup: nog zeldzamer, elke ~70 obstakels, 25% kans, alleen als niet al gevlipt of pending
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 70 === 0 && Math.random() < 0.25 && flipFrames === 0 && flipPending === 0) {
+            const yPos = (170 + Math.random() * 100) * SCHAAL;
+            flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
@@ -912,6 +945,57 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         }
       }
 
+      // FLIP-pickups
+      for (let i = flipPickups.length - 1; i >= 0; i--) {
+        const f = flipPickups[i];
+        f.x -= spelSnelheid;
+        f.fase += 0.10;
+        f.y += Math.sin(f.fase) * 0.4;
+        const dx = (speler.x + speler.breedte / 2) - f.x;
+        const dy = (speler.y + speler.hoogte / 2) - f.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!f.opgepakt && dist < (f.grootte + speler.breedte) / 2) {
+          f.opgepakt = true;
+          flipPending = FLIP_PENDING_DUUR;
+          piep(440, 0.10, "sine", 0.14);
+          setTimeout(() => piep(330, 0.10, "sine", 0.14), 120);
+          spawnParticles(f.x, f.y, 22, "#80c0ff", { spread: 8, opwaarts: 2, leven: 32, grootte: 5, zwaartekracht: 0.05, glow: 22 });
+          spawnParticles(f.x, f.y, 12, "#c060ff", { spread: 5, opwaarts: 3, leven: 28, grootte: 4, zwaartekracht: 0, glow: 18 });
+        }
+        if (f.x < -50 || f.opgepakt) flipPickups.splice(i, 1);
+      }
+
+      // FLIP pending countdown -> trigger flip
+      if (flipPending > 0) {
+        flipPending--;
+        if (flipPending === 0) {
+          // kick off de flip!
+          flipFrames = FLIP_DUUR;
+          speler.y = PLAFOND_NIVEAU;
+          speler.snelheidY = 0;
+          speler.springt = false;
+          speler.sprongTeller = 0;
+          shakeKracht = 12;
+          // GO sound
+          piep(660, 0.10, "sine", 0.14);
+          setTimeout(() => piep(990, 0.12, "sine", 0.14), 80);
+        }
+      }
+
+      // FLIP frames decrement
+      if (flipFrames > 0) {
+        flipFrames--;
+        // trail bij plafond (omhoog wijzend)
+        if (frameTeller % 3 === 0) {
+          spawnParticles(speler.x, speler.y + speler.hoogte / 2, 2, "#80c0ff", { spread: 1, opwaarts: -0.5, leven: 18, grootte: 3, zwaartekracht: -0.05, glow: 14 });
+        }
+        if (flipFrames === 0) {
+          // flip-eind: GO terug naar normaal
+          shakeKracht = 8;
+          piep(330, 0.12, "sine", 0.12);
+        }
+      }
+
       if (multiplierFlashTeller > 0) multiplierFlashTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
     }
@@ -932,6 +1016,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
       tekenBakstenenMuur(); tekenGlasInLood(); tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+
+      // tint tijdens FLIP
+      if (flipFrames > 0) {
+        const eindigtBijna = flipFrames < 90;
+        ctx.save();
+        ctx.globalCompositeOperation = "overlay";
+        ctx.fillStyle = eindigtBijna
+          ? `rgba(255,80,80,${0.15 + Math.sin(frameTeller * 0.3) * 0.05})`
+          : `rgba(80,140,255,0.20)`;
+        ctx.fillRect(0, 0, W, H);
+        ctx.restore();
+      }
+
       for (const p of particles) p.teken();
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
@@ -951,6 +1048,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         ctx.font = `${r.grootte}px serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
         ctx.fillText("🚀", 0, 0);
+        ctx.restore();
+      }
+
+      // FLIP-pickups tekenen
+      for (const f of flipPickups) {
+        ctx.save();
+        ctx.translate(f.x, f.y);
+        ctx.shadowBlur = 24;
+        ctx.shadowColor = "#80c0ff";
+        ctx.strokeStyle = `rgba(128,192,255,${0.4 + Math.sin(f.fase * 2) * 0.3})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(0, 0, f.grootte * 0.75, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.font = `${f.grootte}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("🔄", 0, 0);
         ctx.restore();
       }
 
@@ -1000,6 +1114,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
         ctx.fillText(`🚀 IMMUNE ${seconden}s`, W / 2, 50 * SCHAAL);
+      }
+
+      // FLIP-timer (rechts naast vlieg-timer of op zelfde plek)
+      if (flipFrames > 0) {
+        const sec = Math.ceil(flipFrames / 60);
+        const eindigtBijna = flipFrames < 90;
+        ctx.fillStyle = eindigtBijna ? "#ff6060" : "#80c0ff";
+        ctx.shadowBlur = 16; ctx.shadowColor = ctx.fillStyle;
+        ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(`🔄 FLIP ${sec}s${eindigtBijna ? " — EINDIGT!" : ""}`, W / 2, vliegFrames > 0 ? 70 * SCHAAL : 50 * SCHAAL);
+      }
+
+      // FLIP pending: "FLIP IN N SEC" big banner
+      if (flipPending > 0) {
+        const sec = Math.ceil(flipPending / 60);
+        ctx.save();
+        ctx.fillStyle = "rgba(40,80,180,0.55)";
+        ctx.fillRect(0, H * 0.30, W, H * 0.40);
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowBlur = 28; ctx.shadowColor = "#80c0ff";
+        ctx.font = `bold ${42 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`🔄 FLIP IN ${sec}`, W / 2, H * 0.42);
+        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = "#80c0ff";
+        ctx.fillText("HOU JE VAST!", W / 2, H * 0.56);
+        ctx.restore();
       }
 
       // big flash bij multiplier-upgrade
@@ -1151,12 +1293,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     }
 
     function respawn() {
-      // clear obstakels + particles + bonusHarten + raketten, reset speler, score blijft
+      // clear obstakels + particles + bonusHarten + raketten + flipPickups, reset speler, score blijft
       obstakels.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
+      flipPickups.length = 0;
       vliegFrames = 0;
+      flipFrames = 0;
+      flipPending = 0;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
@@ -1346,6 +1491,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels overspringen</strong> = +punten (5× op rij = streak x2 → x5!)</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
               <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
+              <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven (na 2 sec waarschuwing)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
