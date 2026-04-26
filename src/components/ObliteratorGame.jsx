@@ -984,6 +984,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     window.addEventListener("keydown", onKey);
     canvas.addEventListener("pointerdown", onPointer, { passive: false });
 
+    // Extra blokkades om scroll-gestures te voorkomen tijdens spelen
+    const blockTouch = (e) => { e.preventDefault(); };
+    canvas.addEventListener("touchstart", blockTouch, { passive: false });
+    canvas.addEventListener("touchmove", blockTouch, { passive: false });
+    canvas.addEventListener("touchend", blockTouch, { passive: false });
+    // body-scroll volledig uit tijdens spel-loop (terugzetten in cleanup)
+    const origBodyOverflow = document.body.style.overflow;
+    const origBodyTouchAction = document.body.style.touchAction;
+    const origHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.body.style.touchAction = "none";
+    document.documentElement.style.overflow = "hidden";
+
     // ---------- TRAIL ----------
     function trail() {
       const cx = speler.x + 4 * SCHAAL, cy = speler.y + speler.hoogte / 2;
@@ -2045,6 +2058,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       muziekStop();
       window.removeEventListener("keydown", onKey);
       canvas.removeEventListener("pointerdown", onPointer);
+      canvas.removeEventListener("touchstart", blockTouch);
+      canvas.removeEventListener("touchmove", blockTouch);
+      canvas.removeEventListener("touchend", blockTouch);
+      document.body.style.overflow = origBodyOverflow;
+      document.body.style.touchAction = origBodyTouchAction;
+      document.documentElement.style.overflow = origHtmlOverflow;
       springRef.current = () => {};
       try { audioCtx?.close(); } catch {}
     };
