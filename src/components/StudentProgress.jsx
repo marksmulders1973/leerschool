@@ -772,6 +772,72 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
   const [actieveSpelers, setActieveSpelers] = useState(new Set()); // 👑 voor zeer actieve users
   const naamMetKroon = (naam) => `${naam}${actieveSpelers.has((naam || "").trim()) ? " 👑" : ""}`;
 
+  // 👏 kudos systeem
+  const [kudosMap, setKudosMap] = useState({}); // sleutel: `${type}:${id}` -> { aantal, gevers: [naam, ...] }
+  const [kudosToast, setKudosToast] = useState(null);
+  const kudosKey = (type, id) => `${type}:${id}`;
+  const haalKudosOp = async (entries) => {
+    if (!entries || !entries.length) return;
+    const sleutels = entries.map(e => ({ type: e.type, id: e.id })).filter(e => e.id != null);
+    if (!sleutels.length) return;
+    // Eén query per type — Supabase 'in' filter
+    const types = [...new Set(sleutels.map(s => s.type))];
+    const updates = {};
+    await Promise.all(types.map(async (t) => {
+      const ids = sleutels.filter(s => s.type === t).map(s => s.id);
+      try {
+        const { data } = await supabase.from("kudos")
+          .select("target_id, giver_name, created_at")
+          .eq("target_type", t)
+          .in("target_id", ids)
+          .order("created_at", { ascending: true });
+        (data || []).forEach(k => {
+          const k2 = kudosKey(t, k.target_id);
+          if (!updates[k2]) updates[k2] = { aantal: 0, gevers: [] };
+          if (!updates[k2].gevers.includes(k.giver_name)) {
+            updates[k2].gevers.push(k.giver_name);
+            updates[k2].aantal++;
+          }
+        });
+      } catch {}
+    }));
+    setKudosMap(prev => ({ ...prev, ...updates }));
+  };
+
+  const geefKudo = async (type, id, targetNaam) => {
+    const giver = (currentUser || "").trim();
+    if (!giver) {
+      setKudosToast("Log in / vul je naam in om felicitaties te geven");
+      setTimeout(() => setKudosToast(null), 2500);
+      return;
+    }
+    if (giver === targetNaam) {
+      setKudosToast("Je kunt jezelf niet feliciteren 😉");
+      setTimeout(() => setKudosToast(null), 2500);
+      return;
+    }
+    const sleutel = kudosKey(type, id);
+    const huidig = kudosMap[sleutel] || { aantal: 0, gevers: [] };
+    if (huidig.gevers.includes(giver)) {
+      setKudosToast(`Je hebt ${targetNaam} al gefeliciteerd`);
+      setTimeout(() => setKudosToast(null), 2500);
+      return;
+    }
+    // optimistic update
+    setKudosMap(prev => ({
+      ...prev,
+      [sleutel]: { aantal: huidig.aantal + 1, gevers: [...huidig.gevers, giver] }
+    }));
+    setKudosToast(`👏 Bedankt! ${targetNaam} krijgt jouw felicitatie`);
+    setTimeout(() => setKudosToast(null), 2800);
+    try {
+      await supabase.from("kudos").insert({
+        target_type: type, target_id: id,
+        target_player_name: targetNaam, giver_name: giver,
+      });
+    } catch {}
+  };
+
   const periodRanges = (() => {
     const now = new Date();
     const startOfDay = new Date(now); startOfDay.setHours(0, 0, 0, 0);
@@ -882,7 +948,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
     const fetchTop6Toetsen = (since) =>
       supabase.from("leaderboard")
-        .select("player_name, subject, level, score, total, percentage, time_taken, completed_at")
+        .select("id, player_name, subject, level, score, total, percentage, time_taken, completed_at")
         .gte("completed_at", since.toISOString())
         .order("percentage", { ascending: false })
         .order("time_taken", { ascending: true, nullsFirst: false })
@@ -891,7 +957,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
     const fetchTop6Obli = (since) =>
       supabase.from("obliterator_scores")
-        .select("player_name, score, created_at")
+        .select("id, player_name, score, created_at")
         .gte("created_at", since.toISOString())
         .order("score", { ascending: false })
         .order("created_at", { ascending: true })
@@ -924,6 +990,8 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     ]).then(([dag, week, maand, jaar]) => {
       setWinners({ dag, week, maand, jaar });
       setLoading(false);
+      const allIds = [dag, week, maand, jaar].flat().filter(e => e.id != null).map(e => ({ type: "toets", id: e.id }));
+      if (allIds.length) haalKudosOp(allIds);
     }).catch(() => setLoading(false));
 
     // Obliterator-blok per periode
@@ -932,7 +1000,11 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
       fetchTop6Obli(startOfWeek),
       fetchTop6Obli(startOfMonth),
       fetchTop6Obli(startOfYear),
-    ]).then(([dag, week, maand, jaar]) => setObliPerPeriode({ dag, week, maand, jaar }));
+    ]).then(([dag, week, maand, jaar]) => {
+      setObliPerPeriode({ dag, week, maand, jaar });
+      const allIds = [dag, week, maand, jaar].flat().filter(e => e.id != null).map(e => ({ type: "obli", id: e.id }));
+      if (allIds.length) haalKudosOp(allIds);
+    });
 
     // Delers-blok per periode
     Promise.all([
@@ -984,6 +1056,19 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
   return (
     <div style={styles.page}>
       <Header title="Kampioenen 👑" subtitle="De beste spelers per periode" onBack={onBack} onHome={onHome} />
+      {kudosToast && (
+        <div style={{
+          position: "fixed", left: "50%", bottom: 20, transform: "translateX(-50%)",
+          zIndex: 100001, padding: "12px 18px", borderRadius: 14,
+          background: "linear-gradient(135deg, #ffd700, #ffaa00)",
+          color: "#1a1a00", fontFamily: "'Fredoka', sans-serif",
+          fontSize: 14, fontWeight: 700, letterSpacing: 0.3,
+          boxShadow: "0 4px 20px rgba(255,215,0,0.5)",
+          maxWidth: "calc(100vw - 24px)", textAlign: "center",
+        }}>
+          {kudosToast}
+        </div>
+      )}
       <div style={styles.content}>
         {/* Periode tabs */}
         <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
@@ -1187,6 +1272,53 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                     </div>
                   )}
 
+                  {/* Kudos-rij — felicitatie geven of ontvangen */}
+                  {entry.id != null && (() => {
+                    const k = kudosMap[kudosKey("toets", entry.id)];
+                    const heeftAlGegeven = !!k && k.gevers.includes(currentUser);
+                    if (isMe) {
+                      if (k && k.aantal > 0) {
+                        return (
+                          <div style={{ marginTop: 10, padding: "8px 12px", borderRadius: 10, background: "rgba(105,240,174,0.10)", border: "1px solid rgba(105,240,174,0.3)" }}>
+                            <div style={{ fontSize: 12, color: "#69f0ae", fontWeight: 700 }}>
+                              {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal} felicitatie{k.aantal === 1 ? "" : "s"} ontvangen
+                            </div>
+                            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>
+                              {k.gevers.slice(0, 5).join(", ")}{k.gevers.length > 5 ? ` vinden +${k.gevers.length - 5} anderen` : ""} {k.aantal === 1 ? "vindt" : "vinden"} dat je het goed hebt gedaan!
+                            </div>
+                          </div>
+                        );
+                      }
+                      return null;
+                    }
+                    return (
+                      <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                        <button
+                          onClick={() => geefKudo("toets", entry.id, playerName)}
+                          disabled={heeftAlGegeven}
+                          style={{
+                            padding: "6px 14px", borderRadius: 999, border: "none",
+                            background: heeftAlGegeven ? "rgba(105,240,174,0.18)" : "linear-gradient(135deg, #ffd700, #ffaa00)",
+                            color: heeftAlGegeven ? "#69f0ae" : "#1a1a00",
+                            fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 12,
+                            cursor: heeftAlGegeven ? "default" : "pointer",
+                          }}
+                        >
+                          {heeftAlGegeven ? "✓ gefeliciteerd" : "👏 Goed gedaan!"}
+                        </button>
+                        {k && k.aantal > 0 && (
+                          <span style={{ fontSize: 11, color: "rgba(255,215,0,0.85)" }}>
+                            {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal}× —{" "}
+                            <span style={{ color: "rgba(255,255,255,0.65)" }}>
+                              {k.gevers.slice(0, 3).join(", ")}
+                              {k.gevers.length > 3 ? ` +${k.gevers.length - 3}` : ""}
+                            </span>
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })()}
+
                   {/* Deel-sectie voor #1 als het jij bent */}
                   {i === 0 && isMe && (() => {
                     const waText = `Jippie! Ik ben ${current.title}!\n\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij dit verslaan?\nhttps://studiebol.online`;
@@ -1243,24 +1375,60 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 (obliPerPeriode[activePeriod] || []).map((entry, i) => {
                   const isMe = entry.player_name === currentUser;
                   const medalIcon = i === 0 ? "👑" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i + 1}`;
+                  const k = kudosMap[kudosKey("obli", entry.id)];
+                  const heeftAlGegeven = !!k && k.gevers.includes(currentUser);
                   return (
                     <div key={i} style={{
-                      display: "flex", alignItems: "center", gap: 12,
+                      display: "flex", flexDirection: "column", gap: 6,
                       padding: "10px 14px", borderRadius: 10,
                       background: isMe
                         ? "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(105,240,174,0.05))"
                         : i < 3 ? "rgba(255,200,80,0.08)" : "rgba(255,255,255,0.04)",
                       border: isMe ? "1px solid rgba(105,240,174,0.5)" : i < 3 ? "1px solid rgba(255,200,80,0.3)" : "1px solid rgba(255,255,255,0.1)",
                     }}>
-                      <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
-                        {medalIcon}
+                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                        <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
+                          {medalIcon}
+                        </div>
+                        <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
+                          {naamMetKroon(entry.player_name)}{isMe ? " (jij)" : ""}
+                        </div>
+                        <div style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, color: "#ffcc40", textShadow: "0 0 8px rgba(255,150,40,0.5)" }}>
+                          {entry.score}
+                        </div>
                       </div>
-                      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
-                        {naamMetKroon(entry.player_name)}{isMe ? " (jij)" : ""}
-                      </div>
-                      <div style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, color: "#ffcc40", textShadow: "0 0 8px rgba(255,150,40,0.5)" }}>
-                        {entry.score}
-                      </div>
+                      {entry.id != null && !isMe && (
+                        <div style={{ display: "flex", alignItems: "center", gap: 8, marginLeft: 48, flexWrap: "wrap" }}>
+                          <button
+                            onClick={() => geefKudo("obli", entry.id, entry.player_name)}
+                            disabled={heeftAlGegeven}
+                            style={{
+                              padding: "5px 12px", borderRadius: 999,
+                              border: "none",
+                              background: heeftAlGegeven ? "rgba(105,240,174,0.18)" : "linear-gradient(135deg, #ffd700, #ffaa00)",
+                              color: heeftAlGegeven ? "#69f0ae" : "#1a1a00",
+                              fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 11,
+                              cursor: heeftAlGegeven ? "default" : "pointer",
+                            }}
+                          >
+                            {heeftAlGegeven ? "✓ gefeliciteerd" : "👏 Goed gedaan!"}
+                          </button>
+                          {k && k.aantal > 0 && (
+                            <span style={{ fontSize: 11, color: "rgba(255,215,0,0.85)" }}>
+                              {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal}× —{" "}
+                              <span style={{ color: "rgba(255,255,255,0.65)" }}>
+                                {k.gevers.slice(0, 3).join(", ")}
+                                {k.gevers.length > 3 ? ` +${k.gevers.length - 3}` : ""}
+                              </span>
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      {entry.id != null && isMe && k && k.aantal > 0 && (
+                        <div style={{ marginLeft: 48, fontSize: 12, color: "#69f0ae" }}>
+                          {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal} felicitatie{k.aantal === 1 ? "" : "s"} ontvangen — van {k.gevers.slice(0, 5).join(", ")}{k.gevers.length > 5 ? ` +${k.gevers.length - 5}` : ""}
+                        </div>
+                      )}
                     </div>
                   );
                 })
