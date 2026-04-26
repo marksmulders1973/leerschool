@@ -41,6 +41,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
   const springRef = useRef(() => {}); // wordt door game-loop ingevuld
+  const prRef = useRef(0); // persoonlijk record (refs voor game-loop closure)
+  const wrRef = useRef(0); // wereldrecord (top score)
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
@@ -126,6 +128,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const persoonlijkRecord = highscores
     .filter(h => h.naam === (userName || "Speler"))
     .reduce((m, h) => Math.max(m, h.score), 0);
+  const wereldRecord = highscores[0]?.score || 0;
+  useEffect(() => { prRef.current = persoonlijkRecord; wrRef.current = wereldRecord; }, [persoonlijkRecord, wereldRecord]);
 
   // ref om fullscreen-state in berekenCanvas te lezen zonder TDZ/closure-issues
   const fsRef = useRef(false);
@@ -260,6 +264,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Studiebol-logo als subtiele achtergrond-decoratie (af en toe)
     const studiebolLogos = [];
     let logoSpawnTeller = 360; // eerste logo na ~6 sec
+    // record-banner state — voor spanning-melding bij PR/WR
+    let recordBannerTekst = "";
+    let recordBannerKleur = "#fff";
+    let recordBannerTeller = 0;
+    let prHintGedaan = false, prFlashGedaan = false;
+    let wrHintGedaan = false, wrFlashGedaan = false;
     const logoImg = new Image();
     let logoGeladen = false;
     logoImg.onload = () => { logoGeladen = true; };
@@ -1168,6 +1178,52 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
           score += multiplier;
           scoreElText = score;
+
+          // record-checks voor spanning-melding
+          const pr = prRef.current;
+          const wr = wrRef.current;
+          if (pr > 0 && !prHintGedaan && score >= pr - 4 && score < pr) {
+            prHintGedaan = true;
+            recordBannerTekst = `🔥 Nog ${pr - score + 1} tot je record!`;
+            recordBannerKleur = "#ffaa40";
+            recordBannerTeller = 110;
+          }
+          if (pr > 0 && !prFlashGedaan && score > pr) {
+            prFlashGedaan = true;
+            recordBannerTekst = "🎉 NIEUW PERSOONLIJK RECORD!";
+            recordBannerKleur = "#69f0ae";
+            recordBannerTeller = 160;
+            // confetti
+            for (let p = 0; p < 24; p++) {
+              const k = ["#69f0ae", "#ffd700", "#ffaa40"][p % 3];
+              spawnParticles(W / 2 + (Math.random() - 0.5) * 200, H * 0.3, 1, k, { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+            }
+            piep(523, 0.1, "sine", 0.14);
+            setTimeout(() => piep(659, 0.1, "sine", 0.14), 100);
+            setTimeout(() => piep(784, 0.12, "sine", 0.14), 200);
+          }
+          if (wr > pr && !wrHintGedaan && score >= wr - 4 && score < wr) {
+            wrHintGedaan = true;
+            recordBannerTekst = `🌟 Nog ${wr - score + 1} tot WERELDRECORD!`;
+            recordBannerKleur = "#ffd700";
+            recordBannerTeller = 130;
+          }
+          if (wr > 0 && !wrFlashGedaan && score > wr && score > pr) {
+            wrFlashGedaan = true;
+            recordBannerTekst = "🌟 NIEUW WERELDRECORD! 🌟";
+            recordBannerKleur = "#ffd700";
+            recordBannerTeller = 200;
+            // mega confetti
+            for (let p = 0; p < 50; p++) {
+              const k = ["#ffd700", "#ffaa00", "#fff", "#69f0ae"][p % 4];
+              spawnParticles(W / 2 + (Math.random() - 0.5) * 300, H * 0.3, 1, k, { spread: 14, opwaarts: 5, leven: 80, grootte: 6, zwaartekracht: 0.18, glow: 22 });
+            }
+            piep(523, 0.1, "sine", 0.16);
+            setTimeout(() => piep(659, 0.1, "sine", 0.16), 100);
+            setTimeout(() => piep(784, 0.1, "sine", 0.16), 200);
+            setTimeout(() => piep(1047, 0.20, "sine", 0.16), 300);
+          }
+
           // ching!-sound
           piep(1320, 0.04, "sine", 0.10);
           setTimeout(() => piep(1760, 0.05, "sine", 0.08), 25);
@@ -1261,6 +1317,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       if (multiplierFlashTeller > 0) multiplierFlashTeller--;
+      if (recordBannerTeller > 0) recordBannerTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
     }
     function tekenLevens() {
@@ -1499,6 +1556,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // record-banner (PR-naderen, PR-gebroken, WR-naderen, WR-gebroken)
+      if (recordBannerTeller > 0) {
+        const fade = Math.min(1, recordBannerTeller / 24);
+        const boxW = Math.min(440 * SCHAAL, W * 0.78);
+        const boxH = 50 * SCHAAL;
+        const boxX = (W - boxW) / 2;
+        const boxY = H * 0.20;
+        ctx.save();
+        ctx.globalAlpha = fade;
+        ctx.fillStyle = "rgba(0,0,0,0.62)";
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeStyle = recordBannerKleur;
+        ctx.lineWidth = 2;
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
+        ctx.fillStyle = recordBannerKleur;
+        ctx.shadowBlur = 20; ctx.shadowColor = recordBannerKleur;
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(recordBannerTekst, W / 2, boxY + boxH / 2);
+        ctx.restore();
+      }
+
       // big flash bij multiplier-upgrade
       if (multiplierFlashTeller > 0) {
         const t = multiplierFlashTeller / 60;
@@ -1599,6 +1678,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       multiplier = 1;
       multiplierFlashTeller = 0;
       levelUpFlash = 0;
+      // record-banner state niet resetten — score loopt door tijdens dezelfde sessie
+      // (sessieEinde reset alles via component-mount)
       for (let i = 0; i < 50; i++) {
         const k = i % 3 === 0 ? "#ff2030" : (i % 3 === 1 ? "#ffaa20" : "#ffee60");
         particles.push(new Particle(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, k, { spread: 12, opwaarts: 3, leven: 55, grootte: 4, zwaartekracht: 0.2, glow: 16 }));
