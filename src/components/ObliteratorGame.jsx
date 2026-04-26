@@ -1251,7 +1251,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       style={{
         position: "fixed", inset: 0, background: "rgba(0,0,0,0.92)", zIndex: 9999,
         display: "flex", flexDirection: "column", alignItems: "center",
-        justifyContent: fase === "dood" || fase === "vraag" ? "flex-start" : "center",
+        justifyContent: (fase === "dood" || fase === "vraag" || (fase === "menu" && !isPortrait)) ? "flex-start" : "center",
         padding: 12, overflowY: "auto", WebkitOverflowScrolling: "touch"
       }}
     >
@@ -1313,34 +1313,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         </div>
 
         {fase === "menu" && (
-          <div style={{ textAlign: "center", padding: "30px 12px" }}>
-            <div style={{ fontSize: 56, marginBottom: 8 }}>💀🔥💀</div>
-            <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 6 }}>Spring over de stekels!</p>
-            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, marginBottom: 6 }}>
+          <div style={{ textAlign: "center", padding: isPortrait ? "30px 12px" : "8px 12px" }}>
+            <div style={{ fontSize: isPortrait ? 56 : 32, marginBottom: isPortrait ? 8 : 2 }}>💀🔥💀</div>
+            <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: isPortrait ? 18 : 15, fontWeight: 700, marginBottom: isPortrait ? 6 : 2 }}>Spring over de stekels!</p>
+            <p style={{ color: "rgba(255,255,255,0.6)", fontSize: isPortrait ? 13 : 11, marginBottom: isPortrait ? 6 : 2 }}>
               <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · tot <strong style={{ color: "#c060ff" }}>3 sprongen</strong> in de lucht!
             </p>
-            <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
-              Hoe verder je komt, hoe meer obstakels op elkaar. Achtergrond verandert om de 8 punten.
-            </p>
+            {isPortrait && (
+              <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
+                Hoe verder je komt, hoe meer obstakels op elkaar. Achtergrond verandert om de 8 punten.
+              </p>
+            )}
             {persoonlijkRecord > 0 && (
-              <p style={{ color: "#ffcc40", fontSize: 14, marginBottom: 6 }}>
+              <p style={{ color: "#ffcc40", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 6 : 2 }}>
                 Jouw record: <strong>{persoonlijkRecord}</strong>
               </p>
             )}
-            <p style={{ color: "#ff8050", fontSize: 14, marginBottom: 14 }}>
+            <p style={{ color: "#ff8050", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 14 : 6 }}>
               {Array(3 + bonusLeven).fill("❤️").join(" ")}
               {bonusLeven > 0 && <span style={{ color: "#69f0ae", marginLeft: 8 }}>(+1 bonus!)</span>}
             </p>
 
-            {/* Mini legenda — wat raken voor extra punten? */}
+            {/* Mini legenda — compact in landscape */}
             <div style={{
-              marginBottom: 16, padding: "10px 12px", borderRadius: 10,
+              marginBottom: isPortrait ? 16 : 8, padding: isPortrait ? "10px 12px" : "6px 10px", borderRadius: 10,
               background: "rgba(255,255,255,0.04)",
               border: "1px solid rgba(255,150,40,0.25)",
-              textAlign: "left", fontSize: 12, lineHeight: 1.6,
+              textAlign: "left", fontSize: isPortrait ? 12 : 11, lineHeight: isPortrait ? 1.6 : 1.4,
               fontFamily: "'Nunito', sans-serif", color: "rgba(255,255,255,0.75)"
             }}>
-              <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: 4, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
+              <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: isPortrait ? 4 : 2, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels overspringen</strong> = +punten (5× op rij = streak x2 → x5!)</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
               <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
@@ -1362,10 +1364,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               </div>
             )}
             <button onClick={() => setFase("spelen")} style={{
-              padding: "14px 32px",
+              padding: isPortrait ? "14px 32px" : "10px 28px",
               background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
               border: "none", borderRadius: 14, color: "#1a0008",
-              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, letterSpacing: 3,
+              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: isPortrait ? 20 : 17, letterSpacing: 3,
               fontWeight: 700, cursor: "pointer",
               boxShadow: "0 0 20px rgba(255,100,60,0.6)"
             }}>
