@@ -871,7 +871,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, "_blank");
               }}
             >
-              <span style={{ fontSize: 16 }}>💀</span>
+              <span style={{ fontSize: 16 }}>🎮</span>
               Deel OBLITERATOR (mini-spel)
             </button>
           </>
