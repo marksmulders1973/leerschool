@@ -407,7 +407,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
               <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
                 {pct >= 80 && next ? `Je scoort goed hier! Ga nu ${next} oefenen.` : pct < 60 ? `Oefen dit onderdeel vaker om je eindtoets score te verhogen.` : `Nog een rondje om het vast te zetten, dan verder naar het volgende onderdeel.`}
               </div>
-              <button onClick={onBack} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "#00c853" : "#ff9800", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
+              <button onClick={pct >= 80 && next ? onBack : onRetry} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "#00c853" : "#ff9800", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                 {pct >= 80 && next ? `Probeer ${next} →` : `Nog een keer ${label}`}
               </button>
             </div>
