@@ -70,11 +70,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     .filter(h => h.naam === (userName || "Speler"))
     .reduce((m, h) => Math.max(m, h.score), 0);
 
+  // ref om fullscreen-state in berekenCanvas te lezen zonder TDZ/closure-issues
+  const fsRef = useRef(false);
+
   // canvas-grootte: 2:1 ratio, fit binnen viewport (W én H), reageert op rotatie
   function berekenCanvas() {
     if (typeof window === "undefined") return [800, 400];
-    const reserveH = 200; // ruimte voor lichtkrant + logo + game-over knoppen + padding
-    const maxW = Math.max(280, Math.min(800, window.innerWidth - 24));
+    // in fullscreen veel minder reserve (geen lichtkrant, kleinere header)
+    const fsActief = fsRef.current || (typeof document !== "undefined" && (document.fullscreenElement || document.webkitFullscreenElement));
+    const reserveH = fsActief ? 80 : 200;
+    const horizPadding = fsActief ? 16 : 24;
+    const maxW = Math.max(280, Math.min(fsActief ? 1600 : 800, window.innerWidth - horizPadding));
     const maxH = Math.max(140, window.innerHeight - reserveH);
     // breedste mogelijk binnen 2:1 ratio
     let w = Math.min(maxW, maxH * 2);
@@ -84,34 +90,56 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
   const [canvasSize, setCanvasSize] = useState(berekenCanvas);
   const [canvasW, canvasH] = canvasSize;
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isPortrait, setIsPortrait] = useState(typeof window !== "undefined" && window.innerHeight > window.innerWidth);
+  useEffect(() => { fsRef.current = isFullscreen; }, [isFullscreen]);
+
   useEffect(() => {
-    const onResize = () => setCanvasSize(berekenCanvas());
+    const onResize = () => {
+      setCanvasSize(berekenCanvas());
+      setIsPortrait(window.innerHeight > window.innerWidth);
+    };
     const onFsChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
-      // canvas opnieuw berekenen bij fullscreen-wissel
+      const fsActief = !!(document.fullscreenElement || document.webkitFullscreenElement);
+      // alleen synced bij browser-fs; bij CSS-only laat state staan
+      if (!fsActief) setIsFullscreen(false);
       setTimeout(() => setCanvasSize(berekenCanvas()), 50);
     };
     window.addEventListener("resize", onResize);
     window.addEventListener("orientationchange", onResize);
     document.addEventListener("fullscreenchange", onFsChange);
+    document.addEventListener("webkitfullscreenchange", onFsChange);
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("orientationchange", onResize);
       document.removeEventListener("fullscreenchange", onFsChange);
+      document.removeEventListener("webkitfullscreenchange", onFsChange);
     };
   }, []);
 
   function toggleFullscreen() {
-    try {
-      if (!document.fullscreenElement) {
-        const el = wrapperRef.current;
-        if (el?.requestFullscreen) el.requestFullscreen();
-        else if (el?.webkitRequestFullscreen) el.webkitRequestFullscreen();
-      } else {
+    if (isFullscreen) {
+      // exit
+      try {
         if (document.exitFullscreen) document.exitFullscreen();
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-      }
-    } catch {}
+      } catch {}
+      try { window.screen?.orientation?.unlock?.(); } catch {}
+      setIsFullscreen(false);
+    } else {
+      // enter — set state direct (CSS-only werkt altijd), probeer browser-fs op de achtergrond
+      setIsFullscreen(true);
+      const el = wrapperRef.current;
+      try {
+        if (el?.requestFullscreen) el.requestFullscreen().catch(() => {});
+        else if (el?.webkitRequestFullscreen) el.webkitRequestFullscreen();
+      } catch {}
+      // probeer orientation lock naar landscape (Android Chrome in fullscreen)
+      setTimeout(() => {
+        try { window.screen?.orientation?.lock?.("landscape").catch(() => {}); } catch {}
+      }, 150);
+      // canvas herrekenen na CSS-shift
+      setTimeout(() => setCanvasSize(berekenCanvas()), 50);
+    }
   }
 
   useEffect(() => {
@@ -1058,10 +1086,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
             <div style={{ fontSize: 56, marginBottom: 8 }}>💀🔥💀</div>
             <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, marginBottom: 6 }}>Spring over de stekels!</p>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 13, marginBottom: 6 }}>
-              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> om te springen
+              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · 2× = dubbele jump
             </p>
             <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
-              Hoe verder je komt, hoe sneller en feller het wordt. Achtergrond verandert om de 8 punten.
+              Hoe verder je komt, hoe meer obstakels op elkaar. Achtergrond verandert om de 8 punten.
             </p>
             {persoonlijkRecord > 0 && (
               <p style={{ color: "#ffcc40", fontSize: 14, marginBottom: 6 }}>
@@ -1072,6 +1100,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               {Array(3 + bonusLeven).fill("❤️").join(" ")}
               {bonusLeven > 0 && <span style={{ color: "#69f0ae", marginLeft: 8 }}>(+1 bonus!)</span>}
             </p>
+            {isFullscreen && isPortrait && (
+              <div style={{
+                marginBottom: 16, padding: "12px 16px", borderRadius: 10,
+                background: "rgba(105,240,174,0.12)",
+                border: "1px solid rgba(105,240,174,0.4)",
+                animation: "pulse 1.8s ease-in-out infinite"
+              }}>
+                <p style={{ color: "#69f0ae", fontSize: 14, fontWeight: 700, margin: 0 }}>
+                  📱 ➡️ 📱 Draai je telefoon liggend
+                </p>
+                <p style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, margin: "4px 0 0 0" }}>
+                  Daarna op START drukken voor de beste ervaring
+                </p>
+              </div>
+            )}
             <button onClick={() => setFase("spelen")} style={{
               padding: "14px 32px",
               background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
