@@ -753,7 +753,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     { id: "week",  label: "Week",     icon: "📅",  title: "Studiebol van de week" },
     { id: "maand", label: "Maand",    icon: "🗓️",  title: "Studiebol van de maand" },
     { id: "jaar",  label: "Jaar",     icon: "👑",  title: "Studiebol van het jaar" },
-    { id: "obliterator", label: "Obliterator", icon: "💀", title: "OBLITERATOR Top 25" },
+    { id: "obliterator", label: "Obliterator", icon: "👽", title: "OBLITERATOR Top 25" },
   ];
   const medals = ["👑", "🥈", "🥉"];
   const medalColors = ["#ffd700", "#c0c0c0", "#cd7f32"];
@@ -1092,7 +1092,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
             <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Scorebord laden…</div>
           ) : obliteratorScores.length === 0 ? (
             <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
-              <div style={{ fontSize: 48 }}>💀</div>
+              <div style={{ fontSize: 48 }}>👽</div>
               <p>Nog geen OBLITERATOR-scores.<br />Speel het spel na een quiz om de eerste te worden!</p>
             </div>
           ) : (
@@ -1103,7 +1103,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 border: "1px solid rgba(255,80,40,0.5)",
                 boxShadow: "0 0 20px rgba(255,80,40,0.3)"
               }}>
-                <div style={{ fontSize: 28, marginBottom: 2 }}>💀🔥💀</div>
+                <div style={{ fontSize: 28, marginBottom: 2 }}>👽🛸👽</div>
                 <div style={{
                   fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, letterSpacing: 3,
                   color: "#ffcc40",
@@ -1364,11 +1364,11 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
             {/* ────────────────── BLOK 2: TOP 6 OBLITERATOR ────────────────── */}
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               <div style={{ textAlign: "center", color: "#ff8050", fontWeight: 800, fontSize: 15, letterSpacing: 2, marginBottom: 4 }}>
-                💀 TOP 6 OBLITERATOR — {current.label.toUpperCase()} 🔥
+                👽 TOP 6 OBLITERATOR — {current.label.toUpperCase()} 🛸
               </div>
               {(obliPerPeriode[activePeriod] || []).length === 0 ? (
                 <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
-                  <div style={{ fontSize: 32, marginBottom: 4 }}>💀</div>
+                  <div style={{ fontSize: 32, marginBottom: 4 }}>👽</div>
                   <p style={{ margin: 0, fontSize: 13 }}>Nog geen game-scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.</p>
                 </div>
               ) : (

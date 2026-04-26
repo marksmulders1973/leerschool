@@ -95,8 +95,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const SHARE_URL = "https://www.studiebol.online?play=obliterator";
   const shareTekst = (score) =>
     score > 0
-      ? `💀 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
-      : `💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥 ${SHARE_URL}`;
+      ? `🛸 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
+      : `🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 👽 ${SHARE_URL}`;
 
   const trackShare = (platform) => {
     const naam = (userName || "").trim().slice(0, 60);
@@ -343,28 +343,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
     // ---------- BIOMES ----------
-    // 10 biomes — één per level. Eerst 5 originele, dan 5 nieuwe variaties.
+    // 10 biomes — één per level. Sci-fi/space/alien-thema (school-veilig).
     const BIOMES = [
-      // Level 1
-      { naam:'GOTHIC CRYPT', emoji:['💀','🦴','☠️','🕷️','⛧'], bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
-      // Level 2
-      { naam:"WIZARD'S LAIR", emoji:['🧙','🔮','📚','🕯️','⚗️'], bgTop:[25,12,20], bgBot:[50,25,40], bakstenenLicht:[80,45,50], bakstenenDonker:[40,20,28], bakstenenHighlight:[140,90,100], lichtbundel:[255,180,100], schedel:[220,180,240], glow:[255,130,200], grondLicht:[60,30,38], grondDonker:[20,8,14] },
-      // Level 3
-      { naam:'MAGIC PORTAL', emoji:['🔮','✨','⭐','🌙','⛧'], bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
-      // Level 4
-      { naam:'GRAVEYARD', emoji:['🪦','🌕','🦇','👻','🕯️'], bgTop:[4,8,24], bgBot:[12,18,48], bakstenenLicht:[40,50,75], bakstenenDonker:[18,22,38], bakstenenHighlight:[80,100,140], lichtbundel:[180,200,255], schedel:[220,230,255], glow:[150,180,255], grondLicht:[22,28,50], grondDonker:[6,8,16] },
-      // Level 5
-      { naam:'INFERNO', emoji:['💀','🔥','⚔️','🗡️','☠️'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] },
-      // Level 6 — Frozen Crypt (ijs/cyaan)
-      { naam:'FROZEN CRYPT', emoji:['❄️','🧊','💀','⛄','🦴'], bgTop:[8,18,30], bgBot:[20,40,60], bakstenenLicht:[58,82,108], bakstenenDonker:[24,40,60], bakstenenHighlight:[120,170,210], lichtbundel:[180,230,255], schedel:[200,240,255], glow:[140,220,255], grondLicht:[34,52,76], grondDonker:[10,16,28] },
-      // Level 7 — Toxic Swamp (groen-paars)
-      { naam:'TOXIC SWAMP', emoji:['🐸','🍄','☠️','🦠','🪲'], bgTop:[8,22,8], bgBot:[18,46,16], bakstenenLicht:[40,72,32], bakstenenDonker:[18,36,14], bakstenenHighlight:[80,140,60], lichtbundel:[160,255,80], schedel:[200,255,180], glow:[120,255,100], grondLicht:[26,52,18], grondDonker:[8,18,4] },
-      // Level 8 — Blood Cathedral (zwart-rood)
-      { naam:'BLOOD CATHEDRAL', emoji:['🩸','✝️','💀','🦇','⛓️'], bgTop:[20,2,4], bgBot:[60,8,14], bakstenenLicht:[80,20,28], bakstenenDonker:[40,8,12], bakstenenHighlight:[160,40,56], lichtbundel:[255,80,100], schedel:[255,200,200], glow:[255,40,80], grondLicht:[60,12,18], grondDonker:[16,2,4] },
-      // Level 9 — Crystal Cave (geel-amber-saffraan)
-      { naam:'CRYSTAL CAVE', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,4], bgBot:[60,42,8], bakstenenLicht:[110,80,30], bakstenenDonker:[60,42,14], bakstenenHighlight:[200,160,60], lichtbundel:[255,220,80], schedel:[255,240,180], glow:[255,200,60], grondLicht:[80,52,18], grondDonker:[24,14,4] },
-      // Level 10 — Void Dimension (zwart met paars-roze accent)
-      { naam:'VOID DIMENSION', emoji:['🌌','🕳️','👁️','⛓️','💀'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16] },
+      // Level 1 — Asteroid Field
+      { naam:'ASTEROID FIELD', emoji:['🪨','☄️','🌑','⭐','🛸'], bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
+      // Level 2 — Space Lab
+      { naam:'SPACE LAB', emoji:['🧪','🔬','⚗️','💊','🤖'], bgTop:[25,12,20], bgBot:[50,25,40], bakstenenLicht:[80,45,50], bakstenenDonker:[40,20,28], bakstenenHighlight:[140,90,100], lichtbundel:[255,180,100], schedel:[220,180,240], glow:[255,130,200], grondLicht:[60,30,38], grondDonker:[20,8,14] },
+      // Level 3 — Wormhole
+      { naam:'WORMHOLE', emoji:['🌀','✨','⭐','🌙','🛸'], bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
+      // Level 4 — Satellite Graveyard (verlaten ruimtestations)
+      { naam:'SATELLITE FIELD', emoji:['🛰️','🚀','⚙️','🌑','🛸'], bgTop:[4,8,24], bgBot:[12,18,48], bakstenenLicht:[40,50,75], bakstenenDonker:[18,22,38], bakstenenHighlight:[80,100,140], lichtbundel:[180,200,255], schedel:[220,230,255], glow:[150,180,255], grondLicht:[22,28,50], grondDonker:[6,8,16] },
+      // Level 5 — Solar Forge (gloeiende ster)
+      { naam:'SOLAR FORGE', emoji:['☀️','🔥','⚡','🌟','🌋'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] },
+      // Level 6 — Ice Planet
+      { naam:'ICE PLANET', emoji:['❄️','🧊','🪐','⛄','🌌'], bgTop:[8,18,30], bgBot:[20,40,60], bakstenenLicht:[58,82,108], bakstenenDonker:[24,40,60], bakstenenHighlight:[120,170,210], lichtbundel:[180,230,255], schedel:[200,240,255], glow:[140,220,255], grondLicht:[34,52,76], grondDonker:[10,16,28] },
+      // Level 7 — Alien Jungle (groen-buitenaards)
+      { naam:'ALIEN JUNGLE', emoji:['🌿','🍄','🦠','🪲','👽'], bgTop:[8,22,8], bgBot:[18,46,16], bakstenenLicht:[40,72,32], bakstenenDonker:[18,36,14], bakstenenHighlight:[80,140,60], lichtbundel:[160,255,80], schedel:[200,255,180], glow:[120,255,100], grondLicht:[26,52,18], grondDonker:[8,18,4] },
+      // Level 8 — Alien Hive (rood-organisch ruimteschip)
+      { naam:'ALIEN HIVE', emoji:['👽','🛸','🥚','🦠','⚡'], bgTop:[20,2,4], bgBot:[60,8,14], bakstenenLicht:[80,20,28], bakstenenDonker:[40,8,12], bakstenenHighlight:[160,40,56], lichtbundel:[255,80,100], schedel:[255,200,200], glow:[255,40,80], grondLicht:[60,12,18], grondDonker:[16,2,4] },
+      // Level 9 — Crystal Asteroid (geel-amber-saffraan)
+      { naam:'CRYSTAL ASTEROID', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,4], bgBot:[60,42,8], bakstenenLicht:[110,80,30], bakstenenDonker:[60,42,14], bakstenenHighlight:[200,160,60], lichtbundel:[255,220,80], schedel:[255,240,180], glow:[255,200,60], grondLicht:[80,52,18], grondDonker:[24,14,4] },
+      // Level 10 — Black Hole (zwart met paars-roze accent)
+      { naam:'BLACK HOLE', emoji:['🌌','🕳️','🪐','⭐','🛸'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16] },
     ];
     // 10 bass-tonen + 10 BPM-waarden per level (gradueel sneller bij hoger level)
     const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58, 62, 69, 51, 78, 46];
@@ -641,7 +641,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     // ---------- DECOR ----------
     function huidigeEmojiSet() {
-      return BIOMES[huidigBioom]?.emoji || ["💀","🦴","☠️","🕷️","⛧"];
+      return BIOMES[huidigBioom]?.emoji || ["🪨","☄️","🌑","⭐","🛸"];
     }
     const decoraties = [];
     for (let i = 0; i < 8; i++) decoraties.push({
@@ -685,7 +685,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.scale(flap, 1);
         ctx.globalAlpha = 0.85; ctx.shadowBlur = 12; ctx.shadowColor = biomeKleur("glow", 0.6);
         ctx.font = `${v.grootte}px serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText("🦇", 0, 0);
+        ctx.fillText("🛸", 0, 0);
         ctx.restore();
       }
     }
@@ -1697,7 +1697,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       const isBossNext = BOSS_TRIGGER_LEVELS.includes(huidigLevel);
       const bossNextNr = Math.floor((huidigLevel + 5) / 5) - 1; // welk boss-nummer komt er
-      const bossEmojiSet = ["👹","💀","👺","🐉","👻","🤖","👽","🦑","🦂","🦖","🐙","☠️","🐍","🦠","🧟","🦇","🕷️","🐲","💩"];
+      const bossEmojiSet = ["🤖","👽","🛸","🦑","👁️","🐙","🦠","☄️","🪐","⚡","🚀","🌌","🛰️","🦂","🐲","🔱","🌑","⚙️","🦖"];
       const eindEmoji = isBossNext ? bossEmojiSet[Math.min(bossEmojiSet.length - 1, Math.max(0, bossNextNr - 1))] : "🏁";
       const eindKleur = isBossNext ? "#ff4040" : "#69f0ae";
       const fillKleur = isBossNext && fractie > 0.7 ? "#ff8050" : "#69f0ae";
@@ -1842,7 +1842,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.arc(0, 0, bossGrootte * 0.5, 0, Math.PI * 2);
         ctx.stroke();
         // monster-emoji wisselt per boss-fight nummer (1=L5, 2=L10, ... 19=L95)
-        const bossEmojis = ["👹","💀","👺","🐉","👻","🤖","👽","🦑","🦂","🦖","🐙","☠️","🐍","🦠","🧟","🦇","🕷️","🐲","💩"];
+        const bossEmojis = ["🤖","👽","🛸","🦑","👁️","🐙","🦠","☄️","🪐","⚡","🚀","🌌","🛰️","🦂","🐲","🔱","🌑","⚙️","🦖"];
         const bossNr = Math.floor(huidigLevel / 5) - 1; // L5→0, L10→1, L95→18
         const emoji = bossEmojis[Math.min(bossEmojis.length - 1, Math.max(0, bossNr))];
         ctx.shadowBlur = 12; ctx.shadowColor = "#000";
@@ -2510,7 +2510,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // ---------- LICHTKRANT ----------
   const lichtkrantTekst = highscores.length > 0
     ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam}${h.level ? ` (L${h.level})` : ""} — ${h.score}`).join("    •    ")
-    : "Nog geen high scores — wees de eerste! 💀";
+    : "Nog geen high scores — wees de eerste! 👽";
 
   return (
     <div
@@ -2612,7 +2612,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
         {fase === "menu" && (
           <div style={{ textAlign: "center", padding: isPortrait ? "30px 12px" : "8px 12px" }}>
-            <div style={{ fontSize: isPortrait ? 56 : 32, marginBottom: isPortrait ? 8 : 2 }}>💀🔥💀</div>
+            <div style={{ fontSize: isPortrait ? 56 : 32, marginBottom: isPortrait ? 8 : 2 }}>👽🛸👽</div>
             <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: isPortrait ? 18 : 15, fontWeight: 700, marginBottom: isPortrait ? 6 : 2 }}>Spring over de stekels!</p>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: isPortrait ? 13 : 11, marginBottom: isPortrait ? 6 : 2 }}>
               <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · <strong style={{ color: "#c060ff" }}>oneindig</strong> doortikken om hoog te blijven!
@@ -2750,7 +2750,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         {fase === "vraag" && vraag && (
           <div style={{ padding: "12px 8px" }}>
             <div style={{ textAlign: "center", marginBottom: 14 }}>
-              <div style={{ fontSize: 38, marginBottom: 4 }}>💀📚</div>
+              <div style={{ fontSize: 38, marginBottom: 4 }}>👽📚</div>
               <p style={{
                 fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 22, letterSpacing: 2,
                 color: "#ffcc40", marginBottom: 4,
@@ -2906,7 +2906,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
         {fase === "dood" && (
           <div style={{ textAlign: "center", padding: isPortrait ? "20px 12px" : "10px 12px" }}>
-            <div style={{ fontSize: isPortrait ? 56 : 36, marginBottom: isPortrait ? 8 : 4 }}>{nieuwRecord ? "🏆" : "💀"}</div>
+            <div style={{ fontSize: isPortrait ? 56 : 36, marginBottom: isPortrait ? 8 : 4 }}>{nieuwRecord ? "🏆" : "👽"}</div>
             <p style={{
               fontFamily: "Impact, 'Arial Black', sans-serif",
               fontSize: isPortrait ? 28 : 22, letterSpacing: 3,

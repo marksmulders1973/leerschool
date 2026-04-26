@@ -65,7 +65,7 @@ function TickerBanner() {
       .then(({ data }) => {
         if (!data?.length) return;
         setObliteratorItems(data.map((h, i) => ({
-          icon: i === 0 ? "💀" : "🔥",
+          icon: i === 0 ? "👽" : "🛸",
           text: i === 0
             ? `OBLITERATOR-kampioen: ${h.player_name} — ${h.score} punten!`
             : `OBLITERATOR top: ${h.player_name} kraakte ${h.score} punten!`,
@@ -923,7 +923,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 boxShadow: "0 0 12px rgba(255,80,40,0.15)",
               }}
               onClick={async () => {
-                const text = "💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥";
+                const text = "🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 👽";
                 const url = "https://www.studiebol.online?play=obliterator";
                 if (navigator.share) {
                   try {

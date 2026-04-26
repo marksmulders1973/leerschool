@@ -363,7 +363,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   animation: "pulse 2s infinite",
                 }}
               >
-                💀 SPEEL OBLITERATOR 🔥
+                👽 SPEEL OBLITERATOR 🛸
               </button>
               <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
                 {latest.percentage >= 80
