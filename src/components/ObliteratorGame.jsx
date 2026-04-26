@@ -299,6 +299,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let bossWinAnim = 0;     // frames voor "BOSS DEFEATED!" hoera
     let bossInkomendLevel = 0; // het level waarnaar we doorgaan na de boss
     let bossPulse = 0;       // visueel pulserend
+    // Boss-fight heeft eigen 3-levens: speler kan 3× geraakt worden voordat normale leven verloren gaat
+    const BOSS_LEVENS_MAX = 3;
+    let bossLevens = BOSS_LEVENS_MAX;
+    let bossHitInvincibility = 0; // frames waarin speler niet geraakt kan worden na hit
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
@@ -392,6 +396,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bossY = H * 0.42;
       bossInkomendLevel = naarLevel;
       bossAanvalTeller = 90;
+      bossLevens = BOSS_LEVENS_MAX;
+      bossHitInvincibility = 0;
       bossLasers.length = 0;
       spelerLasers.length = 0;
       // clear normale game-elementen (geen botsing tijdens boss)
@@ -938,6 +944,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       ctx.save();
+      // hit-knipper tijdens boss-invincibility (speler half doorzichtig in cycli)
+      if (bossHitInvincibility > 0 && Math.floor(bossHitInvincibility / 6) % 2 === 0) {
+        ctx.globalAlpha = 0.35;
+      }
       ctx.translate(cx, cy);
       if (vliegSchaal !== 1) ctx.scale(vliegSchaal, vliegSchaal);
       ctx.rotate(speler.rotatie);
@@ -1622,16 +1632,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
         // BOSS-LASERS bewegen + collision met speler
         const sb = spelerBots();
+        if (bossHitInvincibility > 0) bossHitInvincibility--;
         for (let i = bossLasers.length - 1; i >= 0; i--) {
           const bl = bossLasers[i];
           bl.x += bl.vx;
           bl.y += bl.vy;
-          // raakt speler?
-          if (vliegFrames === 0 && bl.x >= sb.x && bl.x <= sb.x + sb.breedte
+          // trail particle voor zichtbaarheid
+          if (frameTeller % 2 === 0) {
+            particles.push(new Particle(bl.x, bl.y, "#ff8050", { spread: 1, opwaarts: 0, leven: 14, grootte: 3, zwaartekracht: 0, glow: 8 }));
+          }
+          // raakt speler? alleen als geen vlieg-immune en geen recente hit-cooldown
+          if (vliegFrames === 0 && bossHitInvincibility === 0
+              && bl.x >= sb.x && bl.x <= sb.x + sb.breedte
               && bl.y >= sb.y && bl.y <= sb.y + sb.hoogte) {
             bossLasers.splice(i, 1);
-            levenVerlies();
-            return;
+            bossLevens--;
+            // hit-effects
+            shakeKracht = 16;
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 18, "#ff4040", { spread: 8, opwaarts: 2, leven: 30, grootte: 4, zwaartekracht: 0.1, glow: 18 });
+            piep(220, 0.15, "sawtooth", 0.18);
+            if (bossLevens <= 0) {
+              // alle boss-levens op = leven kwijt, boss reset (kun je opnieuw proberen)
+              levenVerlies();
+              return;
+            }
+            // korte invincibility na hit (1 sec) zodat snelle vuren niet alles weghaalt
+            bossHitInvincibility = 60;
           }
           if (bl.x < -20 || bl.x > W + 20 || bl.y < -20 || bl.y > H + 20) {
             bossLasers.splice(i, 1);
@@ -1845,30 +1871,66 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillText(`BOSS HP ${Math.max(0, Math.ceil(bossHp))} / ${bossMaxHpHuidig}`, bossX, hpBalkY + hpBalkH / 2);
         ctx.restore();
 
-        // SPELER lasers (cyaan-groene streepjes)
+        // BOSS-LEVENS hartjes (links bovenin, naast normale levens)
+        ctx.save();
+        ctx.font = `${20 * SCHAAL}px serif`;
+        ctx.textAlign = "left"; ctx.textBaseline = "top";
+        ctx.shadowBlur = 12; ctx.shadowColor = "#ff4040";
+        for (let i = 0; i < BOSS_LEVENS_MAX; i++) {
+          const heeft = i < bossLevens;
+          ctx.globalAlpha = heeft ? 1 : 0.25;
+          ctx.fillText(heeft ? "💚" : "🤍", 12 + i * 26 * SCHAAL, 80 * SCHAAL);
+        }
+        ctx.restore();
+
+        // SPELER lasers — dik cyaan-groen met witte kern voor maximale zichtbaarheid
         for (const l of spelerLasers) {
           ctx.save();
-          ctx.shadowBlur = 14; ctx.shadowColor = "#69f0ae";
-          ctx.strokeStyle = "#69f0ae";
-          ctx.lineWidth = 3;
+          // outer glow
+          ctx.shadowBlur = 24; ctx.shadowColor = "#69f0ae";
+          ctx.strokeStyle = "#a0ffce";
+          ctx.lineWidth = 7 * SCHAAL;
+          ctx.lineCap = "round";
           ctx.beginPath();
-          ctx.moveTo(l.x - 14 * SCHAAL, l.y);
+          ctx.moveTo(l.x - 28 * SCHAAL, l.y);
+          ctx.lineTo(l.x, l.y);
+          ctx.stroke();
+          // witte kern
+          ctx.shadowBlur = 0;
+          ctx.strokeStyle = "#ffffff";
+          ctx.lineWidth = 3 * SCHAAL;
+          ctx.beginPath();
+          ctx.moveTo(l.x - 28 * SCHAAL, l.y);
           ctx.lineTo(l.x, l.y);
           ctx.stroke();
           ctx.restore();
         }
-        // BOSS lasers (rode bollen)
+        // BOSS lasers — grote 3-laagse rode bol + gele kern
         for (const bl of bossLasers) {
           ctx.save();
-          ctx.shadowBlur = 18; ctx.shadowColor = "#ff3030";
-          ctx.fillStyle = "#ff5050";
+          // outer glow
+          ctx.shadowBlur = 26; ctx.shadowColor = "#ff3030";
+          ctx.fillStyle = "#ff3030";
           ctx.beginPath();
-          ctx.arc(bl.x, bl.y, 7 * SCHAAL, 0, Math.PI * 2);
+          ctx.arc(bl.x, bl.y, 13 * SCHAAL, 0, Math.PI * 2);
           ctx.fill();
-          ctx.fillStyle = "#fff";
+          // middle oranje
+          ctx.shadowBlur = 0;
+          ctx.fillStyle = "#ffaa20";
           ctx.beginPath();
-          ctx.arc(bl.x - 2, bl.y - 2, 2 * SCHAAL, 0, Math.PI * 2);
+          ctx.arc(bl.x, bl.y, 8 * SCHAAL, 0, Math.PI * 2);
           ctx.fill();
+          // kern wit-geel
+          ctx.fillStyle = "#ffffaa";
+          ctx.beginPath();
+          ctx.arc(bl.x, bl.y, 3.5 * SCHAAL, 0, Math.PI * 2);
+          ctx.fill();
+          // pulsende witte rand
+          ctx.strokeStyle = `rgba(255,255,255,${0.6 + Math.sin(frameTeller * 0.4) * 0.3})`;
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.arc(bl.x, bl.y, 13 * SCHAAL, 0, Math.PI * 2);
+          ctx.stroke();
           ctx.restore();
         }
       }
