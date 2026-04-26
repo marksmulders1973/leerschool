@@ -5,6 +5,38 @@ import { SoundEngine, track } from "../utils.js";
 
 export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
+
+  // Drop-off tracking: trigger 'quiz_first_question_seen' bij eerste mount
+  useEffect(() => {
+    if (gameState.currentQ === 0) {
+      track("quiz_first_question_seen", {
+        subject: gameState.quiz?.subject,
+        level: gameState.quiz?.level,
+        total_questions: gameState.questions?.length,
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // beforeunload: track als user wegnavigeert tijdens quiz
+  useEffect(() => {
+    const onUnload = () => {
+      if (gameState && gameState.questions && gameState.currentQ < gameState.questions.length) {
+        try {
+          window.gtag?.("event", "quiz_abandoned_unload", {
+            subject: gameState.quiz?.subject,
+            level: gameState.quiz?.level,
+            at_question: gameState.currentQ + 1,
+            total_questions: gameState.questions.length,
+            score_so_far: gameState.score,
+          });
+        } catch {}
+      }
+    };
+    window.addEventListener("beforeunload", onUnload);
+    return () => window.removeEventListener("beforeunload", onUnload);
+  }, [gameState]);
+
   const [timeLeft, setTimeLeft] = useState(noTimer ? 0 : gameState.timePerQuestion);
   const [selected, setSelected] = useState(null);
   const [showResult, setShowResult] = useState(false);

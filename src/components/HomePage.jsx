@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import supabase from "../supabase.js";
+import { track } from "../utils.js";
 
 const TICKER_ITEMS = [
   { icon: "🎯", text: "Cito eindtoets oefenen" },
@@ -475,6 +476,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     setUserSchoolType?.(schoolType);
     try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
     try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
+    track("name_entered", { name_length: effectiveName.length, level, role: pendingRole, school_type: schoolType || "" });
     onSelectRole(pendingRole, pendingFeature);
   };
 
