@@ -534,6 +534,7 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
+          onPlayObliterator={() => setPage("obliteratorDirect")}
           onPro={() => setPage("pro")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;

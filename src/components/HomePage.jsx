@@ -372,7 +372,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPro }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -1018,6 +1018,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span style={{ fontSize: 16 }}>🎮</span>
               Deel OBLITERATOR (mini-spel)
             </button>
+            {onPlayObliterator && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #ff5030, #ffaa00)",
+                  color: "#1a0008",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(255,80,40,0.35)",
+                }}
+                onClick={() => { track("obliterator_play_from_home"); onPlayObliterator(); }}
+              >
+                <span style={{ fontSize: 18 }}>🛸</span>
+                Speel OBLITERATOR
+              </button>
+            )}
             <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
