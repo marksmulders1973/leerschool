@@ -796,7 +796,7 @@ export default function App() {
               level: userLevel || "groep5",
               topic,
               tafelNummer: tafelNum,
-              questionCount: 10,
+              questionCount: 5,
               timePerQuestion: 0,
               preGeneratedQuestions: questions,
             };
@@ -820,7 +820,7 @@ export default function App() {
               subject: "rekenen",
               level: userLevel || "groep6",
               topic,
-              questionCount: 10,
+              questionCount: 5,
               timePerQuestion: 0,
               preGeneratedQuestions,
             };
@@ -844,7 +844,7 @@ export default function App() {
               subject: "spelling",
               level: userLevel || "groep5",
               topic,
-              questionCount: 10,
+              questionCount: 5,
               timePerQuestion: 0,
               preGeneratedQuestions,
             };
@@ -868,7 +868,7 @@ export default function App() {
               subject: "woordenschat",
               level: userLevel || "groep7",
               topic,
-              questionCount: 10,
+              questionCount: 5,
               timePerQuestion: 0,
               preGeneratedQuestions,
             };
@@ -892,7 +892,7 @@ export default function App() {
               subject: "begrijpend-lezen",
               level: userLevel || "groep7",
               topic,
-              questionCount: 10,
+              questionCount: 5,
               timePerQuestion: 0,
               preGeneratedQuestions,
             };
@@ -941,7 +941,7 @@ export default function App() {
             return () => {
               const nextNum = num + 1;
               const questions = generateTafelQuestions(nextNum, 10);
-              const quiz = { id: "self-tafels-" + Date.now(), subject: "rekenen", level: userLevel || "groep5", topic: `tafel van ${nextNum}`, tafelNummer: nextNum, questionCount: 10, timePerQuestion: 0, preGeneratedQuestions: questions };
+              const quiz = { id: "self-tafels-" + Date.now(), subject: "rekenen", level: userLevel || "groep5", topic: `tafel van ${nextNum}`, tafelNummer: nextNum, questionCount: 5, timePerQuestion: 0, preGeneratedQuestions: questions };
               setCurrentQuiz(quiz);
               startGame(quiz, "self");
             };
