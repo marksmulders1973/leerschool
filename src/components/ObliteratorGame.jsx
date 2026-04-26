@@ -192,6 +192,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     const FLIP_DUUR = 600;     // 10 sec
     const flipPickups = [];
     const PLAFOND_NIVEAU = PLAFOND_HOOGTE + 12;
+    // gouden ringen — primary score-bron (Sonic-stijl)
+    const ringen = [];
+    let ringSpawnTeller = 60; // eerste ring na ~1 sec
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -850,22 +853,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         if (vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) { levenVerlies(); return; }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true;
-          streak++;
-          const oudeMultiplier = multiplier;
-          multiplier = Math.min(5, 1 + Math.floor(streak / 5));
-          if (multiplier > oudeMultiplier) {
-            multiplierFlashTeller = 60;
-            // confetti-explosie bij multiplier-upgrade
-            spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 18, "#69f0ae", { spread: 8, opwaarts: 3, leven: 35, grootte: 4, zwaartekracht: 0.15, glow: 18 });
-            piep(660, 0.06, "sine", 0.12);
-            setTimeout(() => piep(990, 0.06, "sine", 0.12), 60);
-            setTimeout(() => piep(1320, 0.08, "sine", 0.10), 120);
-          }
-          score += multiplier;
-          scoreElText = score;
-          scoreGeluid();
-          spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 5, "#ffee60", { spread: 5, opwaarts: 2, leven: 22, grootte: 3, zwaartekracht: 0.1, glow: 14 });
-          aantalObstakelsTotaal++;
+          aantalObstakelsTotaal++; // teller voor pickups (niet voor score)
           // bonus-hart spawn (elke ~25 obstakels, 40% kans)
           if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
             const yMin = (200 + Math.random() * 60) * SCHAAL;
@@ -912,6 +900,58 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
           spawnParticles(h.x, h.y, 8, "#ffaaaa", { spread: 3, opwaarts: 1, leven: 25, grootte: 3, zwaartekracht: 0, glow: 14 });
         }
         if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
+      }
+
+      // gouden ringen spawn — soms 1, soms een rij
+      ringSpawnTeller--;
+      if (ringSpawnTeller <= 0) {
+        const isRij = Math.random() < 0.45;
+        const yBase = (170 + Math.random() * 110) * SCHAAL;
+        if (isRij) {
+          const aantal = 3 + Math.floor(Math.random() * 3); // 3-5
+          const tussenruimte = 36 * SCHAAL;
+          // soms recht, soms boog (omhoog/omlaag)
+          const boog = (Math.random() - 0.5) * 0.6; // -0.3 .. 0.3
+          for (let i = 0; i < aantal; i++) {
+            const yOff = boog * (i - (aantal - 1) / 2) * 30 * SCHAAL;
+            ringen.push({ x: W + 40 + i * tussenruimte, y: yBase + yOff, fase: i * 0.4, opgepakt: false, grootte: 24 * SCHAAL });
+          }
+          ringSpawnTeller = 100 + Math.floor(Math.random() * 60);
+        } else {
+          ringen.push({ x: W + 40, y: yBase, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+          ringSpawnTeller = 70 + Math.floor(Math.random() * 50);
+        }
+      }
+      // ringen update + pickup
+      for (let i = ringen.length - 1; i >= 0; i--) {
+        const r = ringen[i];
+        r.x -= spelSnelheid;
+        r.fase += 0.10;
+        const dx = (speler.x + speler.breedte / 2) - r.x;
+        const dy = (speler.y + speler.hoogte / 2) - r.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
+          r.opgepakt = true;
+          streak++;
+          const oudeMultiplier = multiplier;
+          multiplier = Math.min(5, 1 + Math.floor(streak / 5));
+          if (multiplier > oudeMultiplier) {
+            multiplierFlashTeller = 60;
+            spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 18, "#69f0ae", { spread: 8, opwaarts: 3, leven: 35, grootte: 4, zwaartekracht: 0.15, glow: 18 });
+            piep(660, 0.06, "sine", 0.12);
+            setTimeout(() => piep(990, 0.06, "sine", 0.12), 60);
+            setTimeout(() => piep(1320, 0.08, "sine", 0.10), 120);
+          }
+          score += multiplier;
+          scoreElText = score;
+          // ching!-sound
+          piep(1320, 0.04, "sine", 0.10);
+          setTimeout(() => piep(1760, 0.05, "sine", 0.08), 25);
+          // gouden particles burst
+          spawnParticles(r.x, r.y, 10, "#ffd700", { spread: 4, opwaarts: 1, leven: 22, grootte: 4, zwaartekracht: 0.08, glow: 18 });
+          spawnParticles(r.x, r.y, 5, "#ffffaa", { spread: 2, opwaarts: 0.5, leven: 16, grootte: 3, zwaartekracht: 0, glow: 12 });
+        }
+        if (r.x < -50 || r.opgepakt) ringen.splice(i, 1);
       }
 
       // raket pickups
@@ -1032,6 +1072,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       for (const p of particles) p.teken();
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
+
+      // gouden ringen tekenen
+      for (const r of ringen) {
+        const pulse = 0.85 + Math.sin(r.fase * 2) * 0.15;
+        ctx.save();
+        ctx.translate(r.x, r.y);
+        ctx.scale(pulse, 1);
+        // outer gouden ring
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#ffd700";
+        ctx.strokeStyle = "#ffd700";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.arc(0, 0, r.grootte * 0.5, 0, Math.PI * 2);
+        ctx.stroke();
+        // inner darker rim
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "#cc9900";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(0, 0, r.grootte * 0.5 - 3, 0, Math.PI * 2);
+        ctx.stroke();
+        // wit glansje (sonic-stijl highlight)
+        ctx.fillStyle = "rgba(255,255,200,0.85)";
+        ctx.beginPath();
+        ctx.arc(-r.grootte * 0.18, -r.grootte * 0.18, r.grootte * 0.07, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
 
       // raketten tekenen
       for (const r of raketten) {
@@ -1299,6 +1368,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       bonusHarten.length = 0;
       raketten.length = 0;
       flipPickups.length = 0;
+      ringen.length = 0;
+      ringSpawnTeller = 60;
       vliegFrames = 0;
       flipFrames = 0;
       flipPending = 0;
@@ -1488,7 +1559,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
               fontFamily: "'Nunito', sans-serif", color: "rgba(255,255,255,0.75)"
             }}>
               <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: isPortrait ? 4 : 2, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
-              <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels overspringen</strong> = +punten (5× op rij = streak x2 → x5!)</div>
+              <div>💍 <strong style={{ color: "#ffd700" }}>Gouden ringen pakken</strong> = +punten (5× op rij = streak x2 → x5!)</div>
+              <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels</strong> = vermijden (raken kost 1 leven)</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
               <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
               <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven (na 2 sec waarschuwing)</div>
