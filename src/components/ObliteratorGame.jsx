@@ -828,9 +828,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function spring() {
       if (!spelLoopt) return;
       muziekStart();
-      if (speler.sprongTeller < 3) {
-        const sprongNr = speler.sprongTeller; // 0 = eerste, 1 = tweede, 2 = derde
-        // krachten: 100% / 85% / 75% — derde is voor noodgevallen, niet om hoogte te halen
+      // ONBEPERKT springen — geen cap meer
+      {
+        const sprongNr = speler.sprongTeller; // 0 = eerste, 1 = tweede, daarna alle vervolg
+        // krachten: 100% / 85% / 75% (75% voor elke verdere sprong)
         const kracht = sprongNr === 0 ? 1 : sprongNr === 1 ? 0.85 : 0.75;
         // tijdens FLIP: omgekeerd (omlaag duiken)
         const richting = flipFrames > 0 ? -1 : 1;
@@ -1778,7 +1779,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             <div style={{ fontSize: isPortrait ? 56 : 32, marginBottom: isPortrait ? 8 : 2 }}>💀🔥💀</div>
             <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: isPortrait ? 18 : 15, fontWeight: 700, marginBottom: isPortrait ? 6 : 2 }}>Spring over de stekels!</p>
             <p style={{ color: "rgba(255,255,255,0.6)", fontSize: isPortrait ? 13 : 11, marginBottom: isPortrait ? 6 : 2 }}>
-              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · tot <strong style={{ color: "#c060ff" }}>3 sprongen</strong> in de lucht!
+              <strong style={{ color: "#ff8050" }}>SPATIE</strong> of <strong style={{ color: "#ff8050" }}>KLIK</strong> = springen · <strong style={{ color: "#c060ff" }}>oneindig</strong> doortikken om hoog te blijven!
             </p>
             {isPortrait && (
               <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 12, marginBottom: 20 }}>
