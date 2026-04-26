@@ -214,8 +214,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const SPELER_GROOTTE = 32 * SCHAAL;
     const ZWAARTEKRACHT = 0.75 * SCHAAL;
     const SPRING_KRACHT = -13.5 * SCHAAL;
-    const START_SNELHEID = 7 * SCHAAL;
-    const MAX_SNELHEID = 12 * SCHAAL;
+    const START_SNELHEID = 6 * SCHAAL;
+    const MAX_SNELHEID = 10 * SCHAAL;
     const BAKSTEEN_W = 60 * SCHAAL;
     const BAKSTEEN_H = 30 * SCHAAL;
 
@@ -254,6 +254,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // lichtblauwe platforms (halverwege canvas, veilig om op te rollen)
     const platforms = [];
     let platformSpawnTeller = 240; // eerste platform na 4 sec
+    // plafond-stekels (ZELDZAAM, raakbaar, hangen vanaf plafond)
+    const plafondStekels = [];
+    let plafondStekelTeller = 0; // teller t.o.v. obstakels-totaal
     const PLATFORM_HOOGTE = 14 * SCHAAL;
     const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
@@ -633,27 +636,64 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function tekenPlafond() {
+      // alleen vlak plafond + glow-rand. Echte raakbare stekels worden via
+      // plafondStekels[] dynamisch gespawnd voor visuele duidelijkheid:
+      // "tand zichtbaar = gevaar".
       const grad = ctx.createLinearGradient(0, 0, 0, PLAFOND_HOOGTE);
       grad.addColorStop(0, "#1a1620"); grad.addColorStop(1, "#3a3340");
-      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, PLAFOND_HOOGTE - 8);
+      ctx.fillStyle = grad; ctx.fillRect(0, 0, W, PLAFOND_HOOGTE - 4);
       ctx.save();
-      ctx.shadowBlur = 12; ctx.shadowColor = biomeKleur("glow", 0.5);
+      ctx.shadowBlur = 14; ctx.shadowColor = biomeKleur("glow", 0.5);
       ctx.fillStyle = biomeKleur("bakstenenHighlight", 0.6);
-      ctx.fillRect(0, PLAFOND_HOOGTE - 10, W, 2);
+      ctx.fillRect(0, PLAFOND_HOOGTE - 6, W, 2);
       ctx.restore();
-      const offset = (frameTeller * spelSnelheid * 0.5) % 50;
-      for (let x = -offset; x < W + 50; x += 50) {
-        const h = 18 + ((Math.floor(x / 50)) % 3) * 4;
-        const g2 = ctx.createLinearGradient(x, PLAFOND_HOOGTE - 8, x, PLAFOND_HOOGTE - 8 + h);
-        g2.addColorStop(0, "#dfdfe8"); g2.addColorStop(1, "#7a7a85");
-        ctx.fillStyle = g2;
-        ctx.beginPath();
-        ctx.moveTo(x, PLAFOND_HOOGTE - 8);
-        ctx.lineTo(x + 12, PLAFOND_HOOGTE - 8 + h);
-        ctx.lineTo(x + 24, PLAFOND_HOOGTE - 8);
-        ctx.closePath(); ctx.fill();
-        ctx.strokeStyle = "rgba(255,255,255,0.6)"; ctx.lineWidth = 1; ctx.stroke();
-      }
+    }
+    function tekenPlafondStekel(x, b, h) {
+      // omgedraaide stekel: basis bovenaan tegen plafond, punt naar beneden
+      const yTop = PLAFOND_HOOGTE - 4;
+      const yBot = yTop + h;
+      ctx.save();
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "rgba(255,200,200,0.5)";
+      const grad = ctx.createLinearGradient(x, yTop, x, yBot);
+      grad.addColorStop(0, "#7a7a85");
+      grad.addColorStop(0.5, "#bababf");
+      grad.addColorStop(1, "#f0f0f5");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.moveTo(x, yTop);
+      ctx.lineTo(x + b, yTop);
+      ctx.lineTo(x + b / 2, yBot);
+      ctx.closePath();
+      ctx.fill();
+      // donker randje rechts
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(0,0,0,0.4)";
+      ctx.beginPath();
+      ctx.moveTo(x + b / 2, yBot);
+      ctx.lineTo(x + b, yTop);
+      ctx.lineTo(x + b - 4, yTop);
+      ctx.closePath();
+      ctx.fill();
+      // wit highlight links
+      ctx.fillStyle = "rgba(255,255,255,0.6)";
+      ctx.beginPath();
+      ctx.moveTo(x, yTop);
+      ctx.lineTo(x + b / 2, yBot);
+      ctx.lineTo(x + b / 2 - 1, yBot - 2);
+      ctx.lineTo(x + 3, yTop);
+      ctx.closePath();
+      ctx.fill();
+      // outline
+      ctx.strokeStyle = "rgba(255,255,255,0.7)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, yTop);
+      ctx.lineTo(x + b, yTop);
+      ctx.lineTo(x + b / 2, yBot);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
     }
     function tekenGrond() {
       const grondTop = GROND_Y + SPELER_GROOTTE;
@@ -944,15 +984,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yMin = (200 + Math.random() * 60) * SCHAAL;
             bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // raket-pickup: elke ~25 obstakels, 55% kans (effectief elke ~45 obstakels = 1x per ~25 sec)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.55 && vliegFrames === 0) {
+          // raket-pickup: elke ~16 obstakels, 65% kans (effectief elke ~25 obstakels = 1x per ~15 sec)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 16 === 0 && Math.random() < 0.65 && vliegFrames === 0) {
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // FLIP-pickup: elke ~35 obstakels, 50% kans (effectief elke ~70 obstakels = 1x per ~40 sec)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 35 === 0 && Math.random() < 0.50 && flipFrames === 0 && flipPending === 0) {
+          // FLIP-pickup: elke ~22 obstakels, 65% kans (effectief elke ~34 obstakels = 1x per ~20 sec)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 22 === 0 && Math.random() < 0.65 && flipFrames === 0 && flipPending === 0) {
             const yPos = (170 + Math.random() * 100) * SCHAAL;
             flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+          }
+          // plafond-stekel: ZELDZAAM, gevaarlijk obstakel dat hoofd raakt bij hoge sprong
+          // alleen vanaf score 5 en max 1 per ~30 obstakels
+          if (score >= 5 && aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 30 === 0 && Math.random() < 0.5) {
+            plafondStekels.push({
+              x: W + 40,
+              breedte: 26 * SCHAAL,
+              hoogte: (24 + Math.random() * 12) * SCHAAL,
+            });
           }
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
@@ -1028,6 +1077,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = platforms.length - 1; i >= 0; i--) {
         platforms[i].x -= spelSnelheid;
         if (platforms[i].x + platforms[i].breedte < -20) platforms.splice(i, 1);
+      }
+
+      // plafond-stekels scrollen + collision
+      for (let i = plafondStekels.length - 1; i >= 0; i--) {
+        const ps = plafondStekels[i];
+        ps.x -= spelSnelheid;
+        if (vliegFrames === 0 && flipFrames === 0) {
+          const stekelBot = (PLAFOND_HOOGTE - 4) + ps.hoogte;
+          // hitbox iets krapper voor genadigheid
+          const m = 4 * SCHAAL;
+          if (
+            speler.x + speler.breedte - m > ps.x + m
+            && speler.x + m < ps.x + ps.breedte - m
+            && speler.y + m < stekelBot
+          ) {
+            levenVerlies();
+            return;
+          }
+        }
+        if (ps.x + ps.breedte < -10) plafondStekels.splice(i, 1);
       }
 
       // gouden ringen spawn — soms 1, soms een rij
@@ -1226,6 +1295,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
+      for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
 
       // gouden ringen tekenen
       for (const r of ringen) {
@@ -1483,6 +1553,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (particles[i].dood) particles.splice(i, 1);
         }
         for (const o of obstakels) tekenObstakel(o);
+        for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
         ctx.restore();
         tekenLevens();
         // overlay tekst
@@ -1526,6 +1597,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ringSpawnTeller = 60;
       platforms.length = 0;
       platformSpawnTeller = 240;
+      plafondStekels.length = 0;
       vliegFrames = 0;
       flipFrames = 0;
       flipPending = 0;
@@ -1733,7 +1805,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }}>
               <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: isPortrait ? 4 : 2, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
               <div>💍 <strong style={{ color: "#ffd700" }}>Gouden ringen pakken</strong> = +punten (5× op rij = streak x2 → x5!)</div>
-              <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels</strong> = vermijden (raken kost 1 leven)</div>
+              <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels (op grond én aan plafond)</strong> = vermijden (raken kost 1 leven)</div>
               <div>🟦 <strong style={{ color: "#80c0ff" }}>Lichtblauwe blokken</strong> = veilig om op te springen en overheen te rollen</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
               <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec ONKWETSBAAR (geen schade van stekels!)</div>
