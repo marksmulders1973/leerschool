@@ -990,15 +990,37 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // platform spawn — lichtblauwe rust-blokjes halverwege canvas
       platformSpawnTeller--;
       if (platformSpawnTeller <= 0) {
-        const breedte = (90 + Math.random() * 100) * SCHAAL;
+        const breedte = (160 + Math.random() * 140) * SCHAAL; // langer: 160-300
         platforms.push({ x: W + 20, y: PLATFORM_Y, breedte });
-        // 30% kans op tweede platform vlak erna voor "platform-naar-platform" sprong
-        if (Math.random() < 0.3) {
-          const gap = (40 + Math.random() * 40) * SCHAAL;
-          const breedte2 = (80 + Math.random() * 80) * SCHAAL;
+        const variant = Math.random();
+        if (variant < 0.30) {
+          // 30%: tweede platform BOVEN de eerste — extra sprong omhoog
+          // hoog genoeg om met enkele sprong te halen, met ringen-rij erboven
+          const breedte2 = (110 + Math.random() * 100) * SCHAAL;
+          const xOff = Math.max(20 * SCHAAL, (breedte - breedte2) / 2);
+          const platform2X = W + 20 + xOff;
+          const platform2Y = PLATFORM_Y - 95 * SCHAAL;
+          platforms.push({ x: platform2X, y: platform2Y, breedte: breedte2 });
+          // bonus-ringen boven de hoge platform (4-5 op een rij)
+          const aantalRingen = 4 + Math.floor(Math.random() * 2);
+          const ringTussenruimte = Math.min(36 * SCHAAL, (breedte2 - 20 * SCHAAL) / aantalRingen);
+          const ringStartX = platform2X + (breedte2 - ringTussenruimte * (aantalRingen - 1)) / 2;
+          for (let i = 0; i < aantalRingen; i++) {
+            ringen.push({
+              x: ringStartX + i * ringTussenruimte,
+              y: platform2Y - 28 * SCHAAL,
+              fase: i * 0.4, opgepakt: false, grootte: 24 * SCHAAL,
+            });
+          }
+          platformSpawnTeller = 360 + Math.floor(Math.random() * 240);
+        } else if (variant < 0.55) {
+          // 25%: tweede platform NAAST de eerste — platform-naar-platform sprong
+          const gap = (40 + Math.random() * 60) * SCHAAL;
+          const breedte2 = (140 + Math.random() * 120) * SCHAAL;
           platforms.push({ x: W + 20 + breedte + gap, y: PLATFORM_Y, breedte: breedte2 });
           platformSpawnTeller = 360 + Math.floor(Math.random() * 240);
         } else {
+          // 45%: enkele platform
           platformSpawnTeller = 240 + Math.floor(Math.random() * 200);
         }
       }
