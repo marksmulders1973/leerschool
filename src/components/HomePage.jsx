@@ -849,6 +849,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </svg>
               Deel via Facebook
             </button>
+            <button
+              style={{
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                background: "linear-gradient(135deg, rgba(255,80,40,0.12), rgba(255,204,64,0.12))",
+                color: "#ff8050",
+                border: "1px solid rgba(255,80,40,0.45)",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                boxShadow: "0 0 12px rgba(255,80,40,0.15)",
+              }}
+              onClick={async () => {
+                const text = "💀 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 🔥";
+                const url = "https://www.studiebol.online";
+                if (navigator.share) {
+                  try {
+                    await navigator.share({ title: "OBLITERATOR · Studiebol", text, url });
+                    return;
+                  } catch {}
+                }
+                window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + url)}`, "_blank");
+              }}
+            >
+              <span style={{ fontSize: 16 }}>💀</span>
+              Deel OBLITERATOR (mini-spel)
+            </button>
           </>
         )}
 
