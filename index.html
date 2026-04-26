@@ -33,6 +33,57 @@
     <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     <title>Studiebol — Gratis oefenplatform voor basisschool en voortgezet onderwijs</title>
+
+    <!-- JSON-LD structured data voor Google rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Studiebol",
+      "alternateName": "Studiebol — Gratis oefenplatform",
+      "url": "https://www.studiebol.online",
+      "logo": "https://www.studiebol.online/logo.jpg",
+      "description": "Gratis oefenplatform voor basisschool (groep 1-8) en voortgezet onderwijs (MAVO, HAVO, VWO, gymnasium). Oefen rekenen, taal, wiskunde, aardrijkskunde, geschiedenis, Engels, Duits, Frans, spelling, begrijpend lezen en Cito-eindtoets.",
+      "inLanguage": "nl-NL",
+      "areaServed": "NL",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Studiebol",
+      "url": "https://www.studiebol.online",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Web, iOS, Android (PWA)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "Oefenen rekenen, taal, wiskunde, aardrijkskunde, geschiedenis",
+        "Cito-eindtoets oefenen",
+        "Schoolboeken: 100+ titels gekoppeld",
+        "AI-vragen die elke keer anders zijn",
+        "Hall of Fame en kampioensspellen",
+        "Gratis voor leerlingen, ouders en leerkrachten"
+      ],
+      "screenshot": "https://www.studiebol.online/logo.jpg",
+      "inLanguage": "nl-NL"
+    }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -185,6 +236,45 @@
     </section>
 
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Google Translate widget — alleen voor non-NL bezoekers (USA, Sweden, France etc.) -->
+    <script>
+      (function () {
+        try {
+          var lang = (navigator.language || "").toLowerCase();
+          var isNL = lang.startsWith("nl");
+          var dismissed = localStorage.getItem("ls_translate_dismiss") === "1";
+          if (isNL || dismissed) return;
+          // Lazy-load Google Translate alleen als nodig
+          window.googleTranslateElementInit = function () {
+            try {
+              new window.google.translate.TranslateElement({
+                pageLanguage: "nl",
+                includedLanguages: "en,de,fr,es,it,sv,pt,pl,tr,ar,zh-CN,ja,ko,uk,ru,id",
+                layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false,
+              }, "studiebol-translate");
+            } catch (e) {}
+          };
+          // Inject banner pas na DOM-load (geen FOUC)
+          window.addEventListener("DOMContentLoaded", function () {
+            var bar = document.createElement("div");
+            bar.id = "studiebol-translate-bar";
+            bar.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:99999;background:linear-gradient(135deg,#1877F2,#0d5dbf);color:#fff;padding:8px 12px;display:flex;align-items:center;gap:10px;justify-content:center;font-family:'Segoe UI',Tahoma,sans-serif;font-size:13px;box-shadow:0 2px 10px rgba(0,0,0,0.3);flex-wrap:wrap";
+            bar.innerHTML = '<span>🌐 Translate this page:</span><span id="studiebol-translate"></span><button id="studiebol-translate-dismiss" style="background:rgba(255,255,255,0.18);color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;font-weight:600">✕ Dismiss</button>';
+            document.body.appendChild(bar);
+            document.getElementById("studiebol-translate-dismiss").onclick = function () {
+              try { localStorage.setItem("ls_translate_dismiss", "1"); } catch (e) {}
+              bar.remove();
+            };
+            var s = document.createElement("script");
+            s.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            s.async = true;
+            document.body.appendChild(s);
+          });
+        } catch (e) {}
+      })();
+    </script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
