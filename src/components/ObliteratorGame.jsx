@@ -251,6 +251,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // gouden ringen — primary score-bron (Sonic-stijl)
     const ringen = [];
     let ringSpawnTeller = 60; // eerste ring na ~1 sec
+    // lichtblauwe platforms (halverwege canvas, veilig om op te rollen)
+    const platforms = [];
+    let platformSpawnTeller = 240; // eerste platform na 4 sec
+    const PLATFORM_HOOGTE = 14 * SCHAAL;
+    const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
     // ---------- BIOMES ----------
     const BIOMES = [
@@ -865,8 +870,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
       // gravity: inverteren tijdens FLIP
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
+      const yVorig = speler.y;
       speler.y += speler.snelheidY;
       if (speler.springt) speler.rotatie += flipFrames > 0 ? -0.18 : 0.18;
+
+      // platform-landing: alleen tijdens normale gravity, alleen bij vallen
+      // (van bovenaf landen — niet vanuit onderkant doorheen)
+      if (flipFrames === 0 && speler.snelheidY > 0) {
+        for (const p of platforms) {
+          const horizOverlap = (speler.x + speler.breedte > p.x) && (speler.x < p.x + p.breedte);
+          if (!horizOverlap) continue;
+          const voetVorig = yVorig + speler.hoogte;
+          const voetNu = speler.y + speler.hoogte;
+          // voet ging van boven platform naar onder platform-top in deze frame -> land
+          if (voetVorig <= p.y + 1 && voetNu >= p.y) {
+            speler.y = p.y - speler.hoogte;
+            speler.snelheidY = 0;
+            if (speler.springt) {
+              spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte, 6, "#80c0ff", { spread: 2, opwaarts: 0.5, leven: 16, grootte: 3, zwaartekracht: 0.08, glow: 12 });
+            }
+            speler.springt = false;
+            speler.rotatie = 0;
+            speler.sprongTeller = 0;
+            break;
+          }
+        }
+      }
 
       if (flipFrames > 0) {
         // plafond-clamp tijdens FLIP
@@ -956,6 +985,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           spawnParticles(h.x, h.y, 8, "#ffaaaa", { spread: 3, opwaarts: 1, leven: 25, grootte: 3, zwaartekracht: 0, glow: 14 });
         }
         if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
+      }
+
+      // platform spawn — lichtblauwe rust-blokjes halverwege canvas
+      platformSpawnTeller--;
+      if (platformSpawnTeller <= 0) {
+        const breedte = (90 + Math.random() * 100) * SCHAAL;
+        platforms.push({ x: W + 20, y: PLATFORM_Y, breedte });
+        // 30% kans op tweede platform vlak erna voor "platform-naar-platform" sprong
+        if (Math.random() < 0.3) {
+          const gap = (40 + Math.random() * 40) * SCHAAL;
+          const breedte2 = (80 + Math.random() * 80) * SCHAAL;
+          platforms.push({ x: W + 20 + breedte + gap, y: PLATFORM_Y, breedte: breedte2 });
+          platformSpawnTeller = 360 + Math.floor(Math.random() * 240);
+        } else {
+          platformSpawnTeller = 240 + Math.floor(Math.random() * 200);
+        }
+      }
+      // platforms scrollen
+      for (let i = platforms.length - 1; i >= 0; i--) {
+        platforms[i].x -= spelSnelheid;
+        if (platforms[i].x + platforms[i].breedte < -20) platforms.splice(i, 1);
       }
 
       // gouden ringen spawn — soms 1, soms een rij
@@ -1126,6 +1176,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       for (const p of particles) p.teken();
+      // platforms (achter de speler getekend)
+      for (const p of platforms) {
+        ctx.save();
+        // glow rondom platform
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#80c0ff";
+        // body — gradient van licht naar donkerder cyaan
+        const grad = ctx.createLinearGradient(0, p.y, 0, p.y + PLATFORM_HOOGTE);
+        grad.addColorStop(0, "#a0e0ff");
+        grad.addColorStop(0.5, "#60a8e8");
+        grad.addColorStop(1, "#3070b8");
+        ctx.fillStyle = grad;
+        ctx.fillRect(p.x, p.y, p.breedte, PLATFORM_HOOGTE);
+        // wit highlight bovenaan
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "rgba(255,255,255,0.65)";
+        ctx.fillRect(p.x + 2, p.y + 1, p.breedte - 4, 2);
+        // donkere randje onder
+        ctx.fillStyle = "rgba(20,40,80,0.6)";
+        ctx.fillRect(p.x, p.y + PLATFORM_HOOGTE - 2, p.breedte, 2);
+        // outline
+        ctx.strokeStyle = "rgba(255,255,255,0.8)";
+        ctx.lineWidth = 1;
+        ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, PLATFORM_HOOGTE - 1);
+        ctx.restore();
+      }
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
 
@@ -1426,6 +1502,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       flipPickups.length = 0;
       ringen.length = 0;
       ringSpawnTeller = 60;
+      platforms.length = 0;
+      platformSpawnTeller = 240;
       vliegFrames = 0;
       flipFrames = 0;
       flipPending = 0;
@@ -1634,6 +1712,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div style={{ color: "#ffcc40", fontWeight: 700, marginBottom: isPortrait ? 4 : 2, textAlign: "center", letterSpacing: 1 }}>HOE PUNTEN PAKKEN?</div>
               <div>💍 <strong style={{ color: "#ffd700" }}>Gouden ringen pakken</strong> = +punten (5× op rij = streak x2 → x5!)</div>
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels</strong> = vermijden (raken kost 1 leven)</div>
+              <div>🟦 <strong style={{ color: "#80c0ff" }}>Lichtblauwe blokken</strong> = veilig om op te springen en overheen te rollen</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
               <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec immune (zeldzaam!)</div>
               <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven (na 2 sec waarschuwing)</div>
