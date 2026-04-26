@@ -440,30 +440,38 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               </div>
             </div>
 
-            {/* Uitleg */}
-            <div style={{ background: "linear-gradient(135deg, #1a2535, #162030)", borderRadius: 16, padding: 20, marginBottom: 14, border: "1px solid #2a4060" }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
-                📖 Zo zit het
-              </div>
-              <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5", whiteSpace: "pre-line" }}>
-                {question.explanation}
-              </div>
-              {question.source && (
-                <div style={{ fontSize: 11, color: "#8899aa", marginTop: 12, fontStyle: "italic", borderTop: "1px solid #2a3f5f", paddingTop: 8 }}>
-                  📚 {question.source}
+            {/* Uitleg — alleen tonen als er ook echt uitleg is */}
+            {question.explanation && String(question.explanation).trim() !== "" && (
+              <div style={{ background: "linear-gradient(135deg, #1a2535, #162030)", borderRadius: 16, padding: 20, marginBottom: 14, border: "1px solid #2a4060" }}>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
+                  📖 Zo zit het
                 </div>
-              )}
-            </div>
+                <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5", whiteSpace: "pre-line" }}>
+                  {question.explanation}
+                </div>
+                {question.source && (
+                  <div style={{ fontSize: 11, color: "#8899aa", marginTop: 12, fontStyle: "italic", borderTop: "1px solid #2a3f5f", paddingTop: 8 }}>
+                    📚 {question.source}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Tip */}
             <div style={{ background: "#0f2018", borderRadius: 12, padding: "12px 16px", marginBottom: 20, border: "1px solid #1a4025", display: "flex", gap: 10, alignItems: "flex-start" }}>
               <span style={{ fontSize: 18 }}>💡</span>
               <div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>Tip om het te onthouden</div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>
+                  {(question.explanation && String(question.explanation).trim() !== "") ? "Tip om het te onthouden" : "Geen uitleg beschikbaar"}
+                </div>
                 <div style={{ fontSize: 13, color: "#90c0a0", lineHeight: 1.5 }}>
                   {(() => {
+                    const heeftUitleg = question.explanation && String(question.explanation).trim() !== "";
                     const s = gameState.quiz.subject;
                     const antwoord = <em style={{ color: "#b0d8b8" }}>"{question.options[question.answer]}"</em>;
+                    if (!heeftUitleg) {
+                      return <>Bij deze vraag staat (nog) geen uitleg in de database. Bekijk de <strong>YouTube-knop</strong> hieronder voor een korte uitleg, of meld de vraag via <strong>Fout melden</strong> zodat we 'm beter kunnen maken. Het goede antwoord is {antwoord}.</>;
+                    }
                     if (s === "rekenen" || s === "wiskunde")
                       return <>Schrijf de som nog een keer op en los hem stap voor stap op. Het goede antwoord is {antwoord}.</>;
                     if (s === "taal" || s === "nederlands")
