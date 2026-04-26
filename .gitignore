@@ -2,3 +2,11 @@ node_modules
 dist
 .env
 .vercel
+
+# Lokale eenmalige opruim-scripts (vragen-database fixes)
+check-dupes*.py
+fix-dupes*.py
+fix_answers.py
+fix_antwoord_lengte.py
+fix_definitie_vragen.py
+replace-groep7.*
