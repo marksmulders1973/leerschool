@@ -270,8 +270,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const bonusHarten = [];
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
     let countdown = COUNTDOWN_FRAMES;
-    // Levels: 20 sec per level, max 10 levels
-    const LEVEL_DUUR_FRAMES = 1200; // 20 sec @ 60fps
+    // Levels: 30 sec per level, max 10 levels (= 5 min totaal voor MAX)
+    const LEVEL_DUUR_FRAMES = 1800; // 30 sec @ 60fps
     const MAX_LEVEL = 10;
     let huidigLevel = startLevelRef.current || 1; // start-level uit menu
     let levelGehaaldFlash = 0;
@@ -316,14 +316,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
     // ---------- BIOMES ----------
+    // 10 biomes — één per level. Eerst 5 originele, dan 5 nieuwe variaties.
     const BIOMES = [
+      // Level 1
       { naam:'GOTHIC CRYPT', emoji:['💀','🦴','☠️','🕷️','⛧'], bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
+      // Level 2
       { naam:"WIZARD'S LAIR", emoji:['🧙','🔮','📚','🕯️','⚗️'], bgTop:[25,12,20], bgBot:[50,25,40], bakstenenLicht:[80,45,50], bakstenenDonker:[40,20,28], bakstenenHighlight:[140,90,100], lichtbundel:[255,180,100], schedel:[220,180,240], glow:[255,130,200], grondLicht:[60,30,38], grondDonker:[20,8,14] },
+      // Level 3
       { naam:'MAGIC PORTAL', emoji:['🔮','✨','⭐','🌙','⛧'], bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
+      // Level 4
       { naam:'GRAVEYARD', emoji:['🪦','🌕','🦇','👻','🕯️'], bgTop:[4,8,24], bgBot:[12,18,48], bakstenenLicht:[40,50,75], bakstenenDonker:[18,22,38], bakstenenHighlight:[80,100,140], lichtbundel:[180,200,255], schedel:[220,230,255], glow:[150,180,255], grondLicht:[22,28,50], grondDonker:[6,8,16] },
-      { naam:'INFERNO', emoji:['💀','🔥','⚔️','🗡️','☠️'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] }
+      // Level 5
+      { naam:'INFERNO', emoji:['💀','🔥','⚔️','🗡️','☠️'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] },
+      // Level 6 — Frozen Crypt (ijs/cyaan)
+      { naam:'FROZEN CRYPT', emoji:['❄️','🧊','💀','⛄','🦴'], bgTop:[8,18,30], bgBot:[20,40,60], bakstenenLicht:[58,82,108], bakstenenDonker:[24,40,60], bakstenenHighlight:[120,170,210], lichtbundel:[180,230,255], schedel:[200,240,255], glow:[140,220,255], grondLicht:[34,52,76], grondDonker:[10,16,28] },
+      // Level 7 — Toxic Swamp (groen-paars)
+      { naam:'TOXIC SWAMP', emoji:['🐸','🍄','☠️','🦠','🪲'], bgTop:[8,22,8], bgBot:[18,46,16], bakstenenLicht:[40,72,32], bakstenenDonker:[18,36,14], bakstenenHighlight:[80,140,60], lichtbundel:[160,255,80], schedel:[200,255,180], glow:[120,255,100], grondLicht:[26,52,18], grondDonker:[8,18,4] },
+      // Level 8 — Blood Cathedral (zwart-rood)
+      { naam:'BLOOD CATHEDRAL', emoji:['🩸','✝️','💀','🦇','⛓️'], bgTop:[20,2,4], bgBot:[60,8,14], bakstenenLicht:[80,20,28], bakstenenDonker:[40,8,12], bakstenenHighlight:[160,40,56], lichtbundel:[255,80,100], schedel:[255,200,200], glow:[255,40,80], grondLicht:[60,12,18], grondDonker:[16,2,4] },
+      // Level 9 — Crystal Cave (geel-amber-saffraan)
+      { naam:'CRYSTAL CAVE', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,4], bgBot:[60,42,8], bakstenenLicht:[110,80,30], bakstenenDonker:[60,42,14], bakstenenHighlight:[200,160,60], lichtbundel:[255,220,80], schedel:[255,240,180], glow:[255,200,60], grondLicht:[80,52,18], grondDonker:[24,14,4] },
+      // Level 10 — Void Dimension (zwart met paars-roze accent)
+      { naam:'VOID DIMENSION', emoji:['🌌','🕳️','👁️','⛓️','💀'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16] },
     ];
-    const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58]; // verschillende bass-tonen per biome
+    // 10 bass-tonen + 10 BPM-waarden per level (gradueel sneller bij hoger level)
+    const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58, 62, 69, 51, 78, 46];
+    const BPM_PER_LEVEL = [150, 154, 158, 162, 165, 168, 170, 172, 175, 180];
     let huidigBioom = 0, nextBioom = 1, bioomFade = 1, laatsteWisselScore = 0;
     let levelUpFlash = 0;       // frames dat de overgang-flash zichtbaar is
     let levelUpNaam = '';       // naam van het nieuwe biome dat we tonen
@@ -337,23 +355,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       return alpha !== undefined ? `rgba(${r},${g},${b},${alpha})` : `rgb(${r},${g},${b})`;
     }
     function checkBioomWissel() {
-      if (score > 0 && score % 8 === 0 && score !== laatsteWisselScore) {
-        laatsteWisselScore = score;
-        huidigBioom = nextBioom;
-        nextBioom = (nextBioom + 1) % BIOMES.length;
-        bioomFade = 0;
-        muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom] || 55;
-        // start LEVEL UP flash met naam van nieuw biome
-        levelUpFlash = LEVEL_UP_DUUR;
-        levelUpNaam = BIOMES[huidigBioom]?.naam || '';
-        // bonus piep-cascade
-        piep(523, 0.08, "sine", 0.14);
-        setTimeout(() => piep(659, 0.08, "sine", 0.14), 80);
-        setTimeout(() => piep(784, 0.10, "sine", 0.14), 160);
-        setTimeout(() => piep(1047, 0.14, "sine", 0.12), 250);
-      }
+      // Biome volgt nu het level (1 op 1). Wissel-actie wordt getriggerd vanuit
+      // level-overgang in update(), niet meer via score-modulo.
       if (bioomFade < 1) bioomFade = Math.min(1, bioomFade + 1 / BIOOM_FADE_DUUR);
       if (levelUpFlash > 0) levelUpFlash--;
+    }
+    function setBiomeVoorLevel(lvl) {
+      const idx = Math.min(BIOMES.length - 1, lvl - 1);
+      if (idx === huidigBioom) return;
+      huidigBioom = idx;
+      nextBioom = idx; // beide zelfde -> interpolatie geeft constant deze biome
+      bioomFade = 1;
+      muziek.bassWortel = BIOOM_BASSWORTELS[idx] || 55;
+      muziek.bpm = BPM_PER_LEVEL[idx] || 160;
+      // LEVEL UP flash met nieuwe biome-naam
+      levelUpFlash = LEVEL_UP_DUUR;
+      levelUpNaam = BIOMES[idx]?.naam || '';
     }
 
     // ---------- AUDIO ----------
@@ -977,6 +994,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         huidigLevel = nieuwLevel;
         levelGehaaldNummer = nieuwLevel - 1; // het level dat zojuist gehaald is
         levelGehaaldFlash = 130; // ~2 sec banner
+        // wissel biome + muziek (bass + BPM) per level
+        setBiomeVoorLevel(nieuwLevel);
         // bonus piep
         piep(880, 0.10, "sine", 0.15);
         setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
@@ -1943,18 +1962,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       });
     }
 
-    // pre-set state als speler vanaf hoger level start: density + biome matchen
+    // Initialiseer biome + muziek voor het start-level (level 1 of hoger)
+    setBiomeVoorLevel(startLevelRef.current);
+    levelUpFlash = 0; // we tonen geen "level X gehaald" voor de start zelf
     if (startLevelRef.current > 1) {
-      const aanpassing = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
-      frameTeller = aanpassing;
-      // biome verspringt: elke 8 punten in normale flow, hier mappen we ruwweg level→biome
-      const startBioomIdx = Math.min(BIOMES.length - 1, startLevelRef.current - 1);
-      huidigBioom = startBioomIdx;
-      nextBioom = (startBioomIdx + 1) % BIOMES.length;
-      bioomFade = 1;
-      muziek.bassWortel = BIOOM_BASSWORTELS[huidigBioom] || 55;
-      // density al direct hoger door score-boost
-      score = startLevelRef.current * 5; // start met wat punten zodat density-formule werkt
+      // pre-set frameTeller zodat density-formule meteen op level-niveau zit
+      frameTeller = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
+      score = startLevelRef.current * 5;
       scoreElText = score;
       scoreBijLevelStart = score;
     }
