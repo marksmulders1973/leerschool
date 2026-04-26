@@ -753,6 +753,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     { id: "week",  label: "Week",     icon: "📅",  title: "Studiebol van de week" },
     { id: "maand", label: "Maand",    icon: "🗓️",  title: "Studiebol van de maand" },
     { id: "jaar",  label: "Jaar",     icon: "👑",  title: "Studiebol van het jaar" },
+    { id: "obliterator", label: "Obliterator", icon: "💀", title: "OBLITERATOR Top 25" },
   ];
   const medals = ["👑", "🥈", "🥉"];
   const medalColors = ["#ffd700", "#c0c0c0", "#cd7f32"];
@@ -763,6 +764,8 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
   const [globalHof, setGlobalHof] = useState({});
   const [awards, setAwards] = useState({});
   const [awardsLoading, setAwardsLoading] = useState({});
+  const [obliteratorScores, setObliteratorScores] = useState(null); // null = nog niet geladen
+  const [obliteratorLoading, setObliteratorLoading] = useState(false);
 
   const periodRanges = (() => {
     const now = new Date();
@@ -811,7 +814,27 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     };
   };
 
+  // OBLITERATOR top 25 fetchen wanneer tab voor het eerst geopend wordt
   useEffect(() => {
+    if (activePeriod !== "obliterator" || obliteratorScores !== null || obliteratorLoading) return;
+    setObliteratorLoading(true);
+    supabase.from("obliterator_scores")
+      .select("player_name, score, created_at")
+      .order("score", { ascending: false })
+      .order("created_at", { ascending: true })
+      .limit(25)
+      .then(({ data }) => {
+        setObliteratorScores(data || []);
+        setObliteratorLoading(false);
+      })
+      .catch(() => {
+        setObliteratorScores([]);
+        setObliteratorLoading(false);
+      });
+  }, [activePeriod]);
+
+  useEffect(() => {
+    if (activePeriod === "obliterator") return; // skip voor obliterator
     if (awards[activePeriod] || awardsLoading[activePeriod]) return;
     setAwardsLoading(prev => ({ ...prev, [activePeriod]: true }));
     const { from, to } = periodRanges[activePeriod];
@@ -896,7 +919,81 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
           ))}
         </div>
 
-        {loading ? (
+        {activePeriod === "obliterator" ? (
+          obliteratorLoading || obliteratorScores === null ? (
+            <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Scorebord laden…</div>
+          ) : obliteratorScores.length === 0 ? (
+            <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
+              <div style={{ fontSize: 48 }}>💀</div>
+              <p>Nog geen OBLITERATOR-scores.<br />Speel het spel na een quiz om de eerste te worden!</p>
+            </div>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{
+                textAlign: "center", padding: "14px 16px", borderRadius: 14, marginBottom: 4,
+                background: "linear-gradient(135deg, #2a0a14, #4a1020)",
+                border: "1px solid rgba(255,80,40,0.5)",
+                boxShadow: "0 0 20px rgba(255,80,40,0.3)"
+              }}>
+                <div style={{ fontSize: 28, marginBottom: 2 }}>💀🔥💀</div>
+                <div style={{
+                  fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, letterSpacing: 3,
+                  color: "#ffcc40",
+                  textShadow: "0 0 10px rgba(255,150,40,0.8)"
+                }}>OBLITERATOR TOP 25</div>
+                <div style={{ color: "rgba(255,255,255,0.55)", fontSize: 12, marginTop: 4 }}>
+                  Sneller spel · 5 werelden · pittigste highscore-strijd
+                </div>
+              </div>
+              {obliteratorScores.map((entry, i) => {
+                const isMe = entry.player_name === currentUser;
+                const datum = entry.created_at
+                  ? new Date(entry.created_at).toLocaleDateString("nl-NL", { day: "numeric", month: "short", year: "numeric" })
+                  : "";
+                const medalIcon = i === 0 ? "👑" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i + 1}`;
+                return (
+                  <div key={i} style={{
+                    display: "flex", alignItems: "center", gap: 12,
+                    padding: "10px 14px", borderRadius: 10,
+                    background: isMe
+                      ? "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(105,240,174,0.05))"
+                      : i < 3 ? "rgba(255,200,80,0.08)" : "rgba(255,255,255,0.04)",
+                    border: isMe
+                      ? "1px solid rgba(105,240,174,0.5)"
+                      : i < 3 ? "1px solid rgba(255,200,80,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                  }}>
+                    <div style={{
+                      minWidth: 36, textAlign: "center",
+                      fontSize: i < 3 ? 22 : 14, fontWeight: 800,
+                      color: i < 3 ? "#ffd700" : "#8899aa"
+                    }}>
+                      {medalIcon}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{
+                        fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
+                        color: isMe ? "#69f0ae" : "#fff"
+                      }}>
+                        {entry.player_name}{isMe ? " (jij)" : ""}
+                      </div>
+                      <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>
+                        {datum}
+                      </div>
+                    </div>
+                    <div style={{
+                      fontFamily: "Impact, 'Arial Black', sans-serif",
+                      fontSize: 22, color: "#ffcc40",
+                      textShadow: "0 0 8px rgba(255,150,40,0.5)",
+                      letterSpacing: 1
+                    }}>
+                      {entry.score}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )
+        ) : loading ? (
           <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Laden...</div>
         ) : list.length === 0 ? (
           <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
