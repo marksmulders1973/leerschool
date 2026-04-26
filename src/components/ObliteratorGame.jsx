@@ -825,17 +825,37 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.save();
       ctx.translate(cx, cy); ctx.rotate(speler.rotatie);
       ctx.shadowBlur = 25; ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
-      const grad = ctx.createRadialGradient(-r * 0.3, -r * 0.3, 2, 0, 0, r);
-      grad.addColorStop(0, "#ff5060"); grad.addColorStop(0.6, "#cc1525"); grad.addColorStop(1, "#7a0010");
-      ctx.fillStyle = grad;
-      ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
-      ctx.shadowBlur = 0;
-      ctx.fillStyle = "#ffffff"; ctx.fillRect(-r, -3 * SCHAAL, r * 2, 6 * SCHAAL);
-      ctx.fillStyle = "#aa1020"; ctx.fillRect(-r, -1 * SCHAAL, r * 2, 2 * SCHAAL);
-      ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.5;
-      ctx.beginPath(); ctx.arc(0, 0, r - 1, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillStyle = "rgba(255,255,255,0.5)";
-      ctx.beginPath(); ctx.arc(-r * 0.4, -r * 0.4, r * 0.18, 0, Math.PI * 2); ctx.fill();
+
+      if (logoGeladen) {
+        // Studiebol-logo als speler — image binnen cirkel-clip + witte rand
+        ctx.save();
+        ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.clip();
+        // donker achtergrondje binnen cirkel zodat logo contrast heeft
+        ctx.fillStyle = "#0a0a14";
+        ctx.fillRect(-r, -r, r * 2, r * 2);
+        // image schalen (de bol in icon-192 zit gecentreerd onder de "Studiebol"-tekst)
+        ctx.drawImage(logoImg, -r * 1.05, -r * 1.05, r * 2.1, r * 2.1);
+        ctx.restore();
+        // dunne witte rand om de bol
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(255,255,255,0.85)";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(0, 0, r - 0.5, 0, Math.PI * 2); ctx.stroke();
+      } else {
+        // fallback: rode bol met witte band (oude weergave)
+        const grad = ctx.createRadialGradient(-r * 0.3, -r * 0.3, 2, 0, 0, r);
+        grad.addColorStop(0, "#ff5060"); grad.addColorStop(0.6, "#cc1525"); grad.addColorStop(1, "#7a0010");
+        ctx.fillStyle = grad;
+        ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "#ffffff"; ctx.fillRect(-r, -3 * SCHAAL, r * 2, 6 * SCHAAL);
+        ctx.fillStyle = "#aa1020"; ctx.fillRect(-r, -1 * SCHAAL, r * 2, 2 * SCHAAL);
+        // alleen voor fallback (geen logo geladen): witte rand + glans
+        ctx.strokeStyle = "#ffffff"; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(0, 0, r - 1, 0, Math.PI * 2); ctx.stroke();
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
+        ctx.beginPath(); ctx.arc(-r * 0.4, -r * 0.4, r * 0.18, 0, Math.PI * 2); ctx.fill();
+      }
       ctx.restore();
     }
 
@@ -1007,7 +1027,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
       const yVorig = speler.y;
       speler.y += speler.snelheidY;
-      if (speler.springt) speler.rotatie += flipFrames > 0 ? -0.18 : 0.18;
+      // rotatie: tijdens springen sneller, op grond/plafond constant rollen (logo-bol draait altijd)
+      if (speler.springt) {
+        speler.rotatie += flipFrames > 0 ? -0.18 : 0.18;
+      } else {
+        speler.rotatie += flipFrames > 0 ? -0.10 : 0.10; // langzamer rollen op vaste ondergrond
+      }
 
       // platform-landing: alleen tijdens normale gravity, alleen bij vallen
       // (van bovenaf landen — niet vanuit onderkant doorheen)
