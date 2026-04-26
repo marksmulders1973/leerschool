@@ -1278,7 +1278,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
       if (logoGeladen && studiebolLogos.length) {
         ctx.save();
-        ctx.globalAlpha = 0.22;
+        ctx.globalAlpha = 0.42;
         for (const l of studiebolLogos) {
           ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
         }
@@ -1581,7 +1581,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
         tekenBakstenenMuur(); tekenGlasInLood();
         if (logoGeladen && studiebolLogos.length) {
-          ctx.save(); ctx.globalAlpha = 0.22;
+          ctx.save(); ctx.globalAlpha = 0.42;
           for (const l of studiebolLogos) ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
           ctx.restore();
         }
