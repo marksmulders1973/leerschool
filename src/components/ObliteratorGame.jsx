@@ -40,6 +40,7 @@ function schrijfInt(key, val) {
 export default function ObliteratorGame({ userName, authUser, wrongQuestions, onClose }) {
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
+  const springRef = useRef(() => {}); // wordt door game-loop ingevuld
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
@@ -736,18 +737,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         }
       }
     }
-    // alleen reageren op input wanneer canvas zichtbaar/actief is
+    // expose spring naar buiten (voor outer pointerdown handler)
+    springRef.current = spring;
+
     const onKey = (e) => {
       if (e.code !== "Space") return;
-      // alleen tijdens daadwerkelijke gameplay (niet in vraag-modal of menu)
       if (!spelLoopt) return;
       e.preventDefault();
       spring();
     };
-    // unified pointer-event op canvas (vervangt mousedown + touchstart)
     const onPointer = (e) => {
-      // pointerdown event komt alleen van canvas (we registreren alleen daar)
-      // extra defensief: check toch het target
       if (e.target !== canvas) return;
       e.preventDefault();
       spring();
@@ -1202,6 +1201,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
       muziekStop();
       window.removeEventListener("keydown", onKey);
       canvas.removeEventListener("pointerdown", onPointer);
+      springRef.current = () => {};
       try { audioCtx?.close(); } catch {}
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1231,10 +1231,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
     : "Nog geen high scores — wees de eerste! 💀";
 
   return (
-    <div style={{
-      position: "fixed", inset: 0, background: "rgba(0,0,0,0.92)", zIndex: 9999,
-      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 12
-    }}>
+    <div
+      onPointerDown={(e) => {
+        // tijdens spelen: hele zwarte ruimte buiten knoppen werkt als spring-zone
+        if (fase !== "spelen") return;
+        // laat clicks op knoppen ongemoeid (sluit/fullscreen werken normaal)
+        if (e.target.closest && e.target.closest("button")) return;
+        // canvas heeft eigen handler — voorkom dubbele trigger
+        if (e.target.tagName === "CANVAS") return;
+        e.preventDefault();
+        springRef.current?.();
+      }}
+      style={{
+        position: "fixed", inset: 0, background: "rgba(0,0,0,0.92)", zIndex: 9999,
+        display: "flex", flexDirection: "column", alignItems: "center",
+        justifyContent: fase === "dood" || fase === "vraag" ? "flex-start" : "center",
+        padding: 12, overflowY: "auto", WebkitOverflowScrolling: "touch"
+      }}
+    >
       {/* Lichtkrant — altijd bovenaan zichtbaar */}
       <div style={{
         width: canvasW, marginBottom: 8, borderRadius: 8,
@@ -1468,34 +1482,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, on
         )}
 
         {fase === "dood" && (
-          <div style={{ textAlign: "center", padding: "20px 12px" }}>
-            <div style={{ fontSize: 56, marginBottom: 8 }}>{nieuwRecord ? "🏆" : "💀"}</div>
+          <div style={{ textAlign: "center", padding: isPortrait ? "20px 12px" : "10px 12px" }}>
+            <div style={{ fontSize: isPortrait ? 56 : 36, marginBottom: isPortrait ? 8 : 4 }}>{nieuwRecord ? "🏆" : "💀"}</div>
             <p style={{
-              fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 28, letterSpacing: 3,
-              color: "#ff4040", marginBottom: 8,
+              fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: isPortrait ? 28 : 22, letterSpacing: 3,
+              color: "#ff4040", marginBottom: isPortrait ? 8 : 4,
               textShadow: "0 0 12px rgba(255,60,40,0.9)"
             }}>OBLITERATED!</p>
-            <p style={{ color: "#ffcc40", fontSize: 22, marginBottom: 8, fontWeight: 700 }}>Score: {eindScore}</p>
+            <p style={{ color: "#ffcc40", fontSize: isPortrait ? 22 : 18, marginBottom: 6, fontWeight: 700 }}>Score: {eindScore}</p>
             {nieuwRecord && (
-              <p style={{ color: "#69f0ae", fontSize: 15, marginBottom: 12, fontWeight: 700 }}>
+              <p style={{ color: "#69f0ae", fontSize: isPortrait ? 15 : 13, marginBottom: 8, fontWeight: 700 }}>
                 🎉 Nieuw persoonlijk record!
               </p>
             )}
 
-            {/* Top 10 high scores (scorebord top 25 — bovenste 10 zichtbaar) */}
+            {/* Top high scores — compact in landscape */}
             <div style={{
-              marginTop: 12, marginBottom: 16, padding: "12px 16px", borderRadius: 10,
+              marginTop: 10, marginBottom: 12, padding: "10px 14px", borderRadius: 10,
               background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,150,40,0.3)",
-              maxHeight: 280, overflowY: "auto"
+              maxHeight: isPortrait ? 280 : 120, overflowY: "auto"
             }}>
-              <div style={{ color: "#ffcc40", fontSize: 13, fontWeight: 700, marginBottom: 6, letterSpacing: 1 }}>
+              <div style={{ color: "#ffcc40", fontSize: 13, fontWeight: 700, marginBottom: 4, letterSpacing: 1 }}>
                 🏆 SCOREBORD TOP {Math.min(highscores.length, TOP_LIMIT)}
               </div>
-              {highscores.slice(0, 10).map((h, i) => (
+              {highscores.slice(0, isPortrait ? 10 : 5).map((h, i) => (
                 <div key={i} style={{
                   display: "flex", justifyContent: "space-between",
                   fontSize: 13, color: h.naam === (userName || "Speler") ? "#69f0ae" : "rgba(255,255,255,0.75)",
-                  padding: "3px 0", fontFamily: "'Nunito', sans-serif"
+                  padding: "2px 0", fontFamily: "'Nunito', sans-serif"
                 }}>
                   <span>#{i + 1} {h.naam}</span>
                   <span style={{ fontWeight: 700 }}>{h.score}</span>
