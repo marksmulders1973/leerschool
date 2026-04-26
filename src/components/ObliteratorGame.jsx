@@ -1675,7 +1675,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const heeft = i < levens;
         ctx.globalAlpha = heeft ? 1 : 0.3;
         if (heeft) { ctx.shadowBlur = 14; ctx.shadowColor = "#ff4040"; } else { ctx.shadowBlur = 0; }
-        ctx.fillText(heeft ? "❤️" : "🖤", 12 + i * 28 * SCHAAL, 50 * SCHAAL);
+        ctx.fillText(heeft ? "❤️" : "🖤", 12 + i * 28 * SCHAAL, 78 * SCHAAL);
       }
       ctx.restore();
     }
@@ -1683,10 +1683,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenLevelProgressie() {
       // Tijdens boss: HP-balk is voldoende, balk verbergen
       if (bossActief || bossWinAnim > 0) return;
-      const balkX = 80 * SCHAAL;
+      // Balk helemaal bovenaan canvas (boven score-rij die op y=28 staat)
+      const balkX = 28 * SCHAAL;
       const balkY = 8 * SCHAAL;
-      const balkW = W - balkX - 80 * SCHAAL;
-      const balkH = 14 * SCHAAL;
+      const balkW = W - balkX - 28 * SCHAAL;
+      const balkH = 12 * SCHAAL;
 
       // tijd binnen huidigLevel berekenen (vanaf level-startpunt)
       const tijdInDitLevel = frameTeller - (huidigLevel - 1) * LEVEL_DUUR_FRAMES;
@@ -1737,15 +1738,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.arc(playerMarkX, balkY + balkH / 2, balkH * 0.55, 0, Math.PI * 2);
       ctx.fill();
 
-      // label onder balk: "L3 · BOSS NEXT!" of "L3"
-      ctx.shadowBlur = 0;
-      ctx.fillStyle = isBossNext ? "#ff8050" : "rgba(255,255,255,0.7)";
-      ctx.font = `bold ${10 * SCHAAL}px Impact, sans-serif`;
+      // label onder balk: groter "LEVEL 3" + waarschuwing als boss-next
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = isBossNext ? "#ff5030" : "#69f0ae";
+      ctx.fillStyle = isBossNext ? "#ff8050" : "#69f0ae";
+      ctx.font = `bold ${17 * SCHAAL}px Impact, Arial Black, sans-serif`;
       ctx.textAlign = "center"; ctx.textBaseline = "top";
       ctx.fillText(
-        `L${huidigLevel}${isBossNext ? " · BOSS NEXT!" : ""}`,
+        `LEVEL ${huidigLevel}${huidigLevel >= MAX_LEVEL ? " (MAX)" : ""}${isBossNext ? " — BOSS NEXT!" : ""}`,
         balkX + balkW / 2,
-        balkY + balkH + 2,
+        balkY + balkH + 4,
       );
 
       ctx.restore();
@@ -1879,7 +1881,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         for (let i = 0; i < BOSS_LEVENS_MAX; i++) {
           const heeft = i < bossLevens;
           ctx.globalAlpha = heeft ? 1 : 0.25;
-          ctx.fillText(heeft ? "💚" : "🤍", 12 + i * 26 * SCHAAL, 80 * SCHAAL);
+          ctx.fillText(heeft ? "💚" : "🤍", 12 + i * 26 * SCHAAL, 108 * SCHAAL);
         }
         ctx.restore();
 
@@ -2041,17 +2043,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.fillStyle = "#ffeb3b";
       ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
       ctx.textAlign = "left";
-      ctx.fillText(`SCORE: ${scoreElText}`, 12, 28 * SCHAAL);
+      ctx.fillText(`SCORE: ${scoreElText}`, 12, 56 * SCHAAL);
       ctx.fillStyle = "#ff8050";
       ctx.textAlign = "right";
-      ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 28 * SCHAAL);
+      ctx.fillText(`RECORD: ${persoonlijkRecord}`, W - 12, 56 * SCHAAL);
 
-      // Level-label compact in HUD (grote balk komt bovenin via tekenLevelBalk)
-      ctx.fillStyle = "#69f0ae";
-      ctx.shadowBlur = 8; ctx.shadowColor = "#69f0ae";
-      ctx.font = `bold ${14 * SCHAAL}px Impact, Arial Black, sans-serif`;
-      ctx.textAlign = "left";
-      ctx.fillText(`LEVEL ${huidigLevel}${huidigLevel < MAX_LEVEL ? "" : " (MAX)"}`, 12, 50 * SCHAAL);
+      // (LEVEL-label nu in tekenLevelProgressie() — duidelijker daar)
 
       // multiplier-display (alleen bij streak)
       if (multiplier > 1) {
@@ -2059,7 +2056,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 12; ctx.shadowColor = ctx.fillStyle;
         ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
-        ctx.fillText(`STREAK x${multiplier}`, W / 2, 28 * SCHAAL);
+        ctx.fillText(`STREAK x${multiplier}`, W / 2, 56 * SCHAAL);
       }
 
       // vlieg-timer (boven score)
@@ -2069,7 +2066,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 16; ctx.shadowColor = "#ffcc40";
         ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
-        ctx.fillText(`🚀 ONKWETSBAAR ${seconden}s`, W / 2, 50 * SCHAAL);
+        ctx.fillText(`🚀 ONKWETSBAAR ${seconden}s`, W / 2, 78 * SCHAAL);
       }
 
       // FLIP-timer (rechts naast vlieg-timer of op zelfde plek)
@@ -2080,7 +2077,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 16; ctx.shadowColor = ctx.fillStyle;
         ctx.font = `bold ${16 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center";
-        ctx.fillText(`🔄 FLIP ${sec}s${eindigtBijna ? " — EINDIGT!" : ""}`, W / 2, vliegFrames > 0 ? 70 * SCHAAL : 50 * SCHAAL);
+        ctx.fillText(`🔄 FLIP ${sec}s${eindigtBijna ? " — EINDIGT!" : ""}`, W / 2, vliegFrames > 0 ? 98 * SCHAAL : 78 * SCHAAL);
       }
 
       // FLIP pending: "FLIP IN N SEC" — kleine centered box bovenaan (niet zicht-blokkerend)
