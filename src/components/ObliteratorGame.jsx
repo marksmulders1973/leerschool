@@ -822,9 +822,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // Tijdens vliegen: speler groeit naar 2.5x — grow eerste 30f, shrink laatste 30f
+      let vliegSchaal = 1;
+      if (vliegFrames > 0) {
+        if (vliegFrames > VLIEG_DUUR - 30) {
+          // grow phase (begin)
+          const t = (VLIEG_DUUR - vliegFrames) / 30;
+          vliegSchaal = 1 + t * 1.5;
+        } else if (vliegFrames < 30) {
+          // shrink phase (einde)
+          vliegSchaal = 1 + (vliegFrames / 30) * 1.5;
+        } else {
+          vliegSchaal = 2.5;
+        }
+      }
+
       ctx.save();
-      ctx.translate(cx, cy); ctx.rotate(speler.rotatie);
-      ctx.shadowBlur = 25; ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
+      ctx.translate(cx, cy);
+      if (vliegSchaal !== 1) ctx.scale(vliegSchaal, vliegSchaal);
+      ctx.rotate(speler.rotatie);
+      ctx.shadowBlur = vliegFrames > 0 ? 35 : 25;
+      ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
 
       if (logoGeladen) {
         // Studiebol-logo als speler — image binnen cirkel-clip + witte rand
@@ -1658,6 +1676,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.font = `bold ${24 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
         ctx.fillText(`🔄 FLIP IN ${sec} — HOU JE VAST!`, W / 2, boxY + boxH / 2);
+        ctx.restore();
+      }
+
+      // RAKET eindigt: laatste 3 sec — countdown banner
+      if (vliegFrames > 0 && vliegFrames <= 180) {
+        const sec = Math.ceil(vliegFrames / 60);
+        const boxW = Math.min(420 * SCHAAL, W * 0.7);
+        const boxH = 56 * SCHAAL;
+        const boxX = (W - boxW) / 2;
+        const boxY = H * 0.10;
+        ctx.save();
+        ctx.fillStyle = "rgba(180,120,40,0.78)";
+        ctx.fillRect(boxX, boxY, boxW, boxH);
+        ctx.strokeStyle = "#ffcc40";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(boxX, boxY, boxW, boxH);
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowBlur = 18; ctx.shadowColor = "#ffcc40";
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`🚀 SCHILD STOPT IN ${sec}`, W / 2, boxY + boxH / 2);
         ctx.restore();
       }
 
