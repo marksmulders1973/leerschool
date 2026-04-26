@@ -1469,6 +1469,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // FLIP eindigt: laatste 3 sec — "BACK TO NORMAL IN N"
+      if (flipFrames > 0 && flipFrames <= 180) {
+        const sec = Math.ceil(flipFrames / 60);
+        ctx.save();
+        ctx.fillStyle = "rgba(180,80,40,0.50)"; // warm rood-oranje (terug naar normaal)
+        ctx.fillRect(0, H * 0.30, W, H * 0.40);
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowBlur = 28; ctx.shadowColor = "#ffaa40";
+        ctx.font = `bold ${36 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText(`BACK TO NORMAL IN ${sec}`, W / 2, H * 0.42);
+        ctx.font = `bold ${18 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = "#ffaa40";
+        ctx.fillText("KOM NAAR DE GROND!", W / 2, H * 0.56);
+        ctx.restore();
+      }
+
       // big flash bij multiplier-upgrade
       if (multiplierFlashTeller > 0) {
         const t = multiplierFlashTeller / 60;
