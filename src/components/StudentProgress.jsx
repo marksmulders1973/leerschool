@@ -766,6 +766,11 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
   const [awardsLoading, setAwardsLoading] = useState({});
   const [obliteratorScores, setObliteratorScores] = useState(null); // null = nog niet geladen
   const [obliteratorLoading, setObliteratorLoading] = useState(false);
+  // Per-periode blokken (top 6 elk)
+  const [obliPerPeriode, setObliPerPeriode] = useState({ dag: [], week: [], maand: [], jaar: [] });
+  const [delersPerPeriode, setDelersPerPeriode] = useState({ dag: [], week: [], maand: [], jaar: [] });
+  const [actieveSpelers, setActieveSpelers] = useState(new Set()); // 👑 voor zeer actieve users
+  const naamMetKroon = (naam) => `${naam}${actieveSpelers.has((naam || "").trim()) ? " 👑" : ""}`;
 
   const periodRanges = (() => {
     const now = new Date();
@@ -875,24 +880,82 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
     const { from: startOfMonth } = periodRanges.maand;
     const { from: startOfYear } = periodRanges.jaar;
 
-    const fetchTop3 = (since) =>
+    const fetchTop6Toetsen = (since) =>
       supabase.from("leaderboard")
         .select("player_name, subject, level, score, total, percentage, time_taken, completed_at")
         .gte("completed_at", since.toISOString())
         .order("percentage", { ascending: false })
         .order("time_taken", { ascending: true, nullsFirst: false })
-        .limit(3)
-        .then(({ data }) => data || []);
+        .limit(6)
+        .then(({ data }) => data || []).catch(() => []);
 
+    const fetchTop6Obli = (since) =>
+      supabase.from("obliterator_scores")
+        .select("player_name, score, created_at")
+        .gte("created_at", since.toISOString())
+        .order("score", { ascending: false })
+        .order("created_at", { ascending: true })
+        .limit(6)
+        .then(({ data }) => data || []).catch(() => []);
+
+    const fetchTop6Delers = (since) =>
+      supabase.from("share_events")
+        .select("shared_by, created_at")
+        .gte("created_at", since.toISOString())
+        .then(({ data }) => {
+          const tally = {};
+          (data || []).forEach(e => {
+            const n = (e.shared_by || "").trim();
+            if (!n) return;
+            tally[n] = (tally[n] || 0) + 1;
+          });
+          return Object.entries(tally)
+            .sort((a, b) => b[1] - a[1])
+            .slice(0, 6)
+            .map(([naam, aantal]) => ({ naam, aantal }));
+        }).catch(() => []);
+
+    // Toetsen-blok per periode
     Promise.all([
-      fetchTop3(startOfDay),
-      fetchTop3(startOfWeek),
-      fetchTop3(startOfMonth),
-      fetchTop3(startOfYear),
+      fetchTop6Toetsen(startOfDay),
+      fetchTop6Toetsen(startOfWeek),
+      fetchTop6Toetsen(startOfMonth),
+      fetchTop6Toetsen(startOfYear),
     ]).then(([dag, week, maand, jaar]) => {
       setWinners({ dag, week, maand, jaar });
       setLoading(false);
     }).catch(() => setLoading(false));
+
+    // Obliterator-blok per periode
+    Promise.all([
+      fetchTop6Obli(startOfDay),
+      fetchTop6Obli(startOfWeek),
+      fetchTop6Obli(startOfMonth),
+      fetchTop6Obli(startOfYear),
+    ]).then(([dag, week, maand, jaar]) => setObliPerPeriode({ dag, week, maand, jaar }));
+
+    // Delers-blok per periode
+    Promise.all([
+      fetchTop6Delers(startOfDay),
+      fetchTop6Delers(startOfWeek),
+      fetchTop6Delers(startOfMonth),
+      fetchTop6Delers(startOfYear),
+    ]).then(([dag, week, maand, jaar]) => setDelersPerPeriode({ dag, week, maand, jaar }));
+
+    // Actieve spelers (👑) — >=5 toets-pogingen in laatste 7 dagen
+    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+    supabase.from("leaderboard")
+      .select("player_name")
+      .gte("completed_at", sevenDaysAgo.toISOString())
+      .then(({ data }) => {
+        if (!data) return;
+        const tally = {};
+        data.forEach(e => {
+          const n = (e.player_name || "").trim();
+          if (n) tally[n] = (tally[n] || 0) + 1;
+        });
+        setActieveSpelers(new Set(Object.keys(tally).filter(n => tally[n] >= 5)));
+      }).catch(() => {});
 
     supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, questions").order("time_taken", { ascending: true })
       .then(({ data: rows }) => {
@@ -1015,16 +1078,20 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
           )
         ) : loading ? (
           <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Laden...</div>
-        ) : list.length === 0 ? (
-          <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
-            <div style={{ fontSize: 48 }}>🏆</div>
-            <p>Nog geen scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.<br />Speel een quiz om de eerste kampioen te worden!</p>
-          </div>
         ) : (
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            <div style={{ textAlign: "center", color: "#ffd700", fontWeight: 800, fontSize: 16, letterSpacing: 1, marginBottom: 4 }}>
-              {current.icon} {current.title.toUpperCase()} {current.icon}
-            </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+            {/* ────────────────── BLOK 1: TOP 6 TOETSEN ────────────────── */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ textAlign: "center", color: "#ffd700", fontWeight: 800, fontSize: 15, letterSpacing: 2, marginBottom: 4 }}>
+                🏆 TOP 6 TOETSEN — {current.label.toUpperCase()} 🏆
+              </div>
+
+              {list.length === 0 && (
+                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                  <div style={{ fontSize: 32, marginBottom: 4 }}>🏆</div>
+                  <p style={{ margin: 0, fontSize: 13 }}>Nog geen toets-scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.</p>
+                </div>
+              )}
 
             {list.map((entry, i) => {
               const subj = SUBJECTS.find(s => s.id === entry.subject);
@@ -1059,7 +1126,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                     {/* Info */}
                     <div style={{ flex: 1 }}>
                       <div style={{ fontWeight: 800, fontSize: i === 0 ? 18 : 15, color: medalColors[i] || "#e0e6f0" }}>
-                        {playerName} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
+                        {naamMetKroon(playerName)} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
                       </div>
                       <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700, marginTop: 2 }}>
                         {subj?.icon} {subj?.label} · {levelLabel}
@@ -1160,8 +1227,85 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 </div>
               );
             })}
+            </div>
 
-            {/* ── Aanmoedigingsprijzen ── */}
+            {/* ────────────────── BLOK 2: TOP 6 OBLITERATOR ────────────────── */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ textAlign: "center", color: "#ff8050", fontWeight: 800, fontSize: 15, letterSpacing: 2, marginBottom: 4 }}>
+                💀 TOP 6 OBLITERATOR — {current.label.toUpperCase()} 🔥
+              </div>
+              {(obliPerPeriode[activePeriod] || []).length === 0 ? (
+                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                  <div style={{ fontSize: 32, marginBottom: 4 }}>💀</div>
+                  <p style={{ margin: 0, fontSize: 13 }}>Nog geen game-scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.</p>
+                </div>
+              ) : (
+                (obliPerPeriode[activePeriod] || []).map((entry, i) => {
+                  const isMe = entry.player_name === currentUser;
+                  const medalIcon = i === 0 ? "👑" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i + 1}`;
+                  return (
+                    <div key={i} style={{
+                      display: "flex", alignItems: "center", gap: 12,
+                      padding: "10px 14px", borderRadius: 10,
+                      background: isMe
+                        ? "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(105,240,174,0.05))"
+                        : i < 3 ? "rgba(255,200,80,0.08)" : "rgba(255,255,255,0.04)",
+                      border: isMe ? "1px solid rgba(105,240,174,0.5)" : i < 3 ? "1px solid rgba(255,200,80,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                    }}>
+                      <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
+                        {medalIcon}
+                      </div>
+                      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
+                        {naamMetKroon(entry.player_name)}{isMe ? " (jij)" : ""}
+                      </div>
+                      <div style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, color: "#ffcc40", textShadow: "0 0 8px rgba(255,150,40,0.5)" }}>
+                        {entry.score}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            {/* ────────────────── BLOK 3: TOP 6 DELERS ────────────────── */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ textAlign: "center", color: "#ffd700", fontWeight: 800, fontSize: 15, letterSpacing: 2, marginBottom: 4 }}>
+                🌟 TOP 6 DELERS — {current.label.toUpperCase()} 🌟
+              </div>
+              {(delersPerPeriode[activePeriod] || []).length === 0 ? (
+                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                  <div style={{ fontSize: 32, marginBottom: 4 }}>🌟</div>
+                  <p style={{ margin: 0, fontSize: 13 }}>Nog geen delers {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.<br />Deel via een knop om hier te komen!</p>
+                </div>
+              ) : (
+                (delersPerPeriode[activePeriod] || []).map((entry, i) => {
+                  const isMe = entry.naam === currentUser;
+                  const medalIcon = i === 0 ? "👑" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i + 1}`;
+                  return (
+                    <div key={i} style={{
+                      display: "flex", alignItems: "center", gap: 12,
+                      padding: "10px 14px", borderRadius: 10,
+                      background: isMe
+                        ? "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(105,240,174,0.05))"
+                        : i < 3 ? "rgba(255,215,0,0.08)" : "rgba(255,255,255,0.04)",
+                      border: isMe ? "1px solid rgba(105,240,174,0.5)" : i < 3 ? "1px solid rgba(255,215,0,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                    }}>
+                      <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
+                        {medalIcon}
+                      </div>
+                      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
+                        {naamMetKroon(entry.naam)}{isMe ? " (jij)" : ""}
+                      </div>
+                      <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "#ffd700", fontWeight: 700 }}>
+                        {entry.aantal}× gedeeld
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+
+            {/* ── DE REST: Aanmoedigingsprijzen ── */}
             {(() => {
               const periodLabel = current.label.toLowerCase();
               const periodAwards = awards[activePeriod];
