@@ -18,6 +18,8 @@ const C = {
 const PATH_THEMES = {
   breuken: { gradient: "linear-gradient(135deg, #ff8a65, #d84315)", accent: "#ffccbc" },
   procenten: { gradient: "linear-gradient(135deg, #66bb6a, #2e7d32)", accent: "#a5d6a7" },
+  "negatieve-getallen": { gradient: "linear-gradient(135deg, #455a64, #263238)", accent: "#90a4ae" },
+  verhoudingen: { gradient: "linear-gradient(135deg, #ab47bc, #6a1b9a)", accent: "#ce93d8" },
   parabolen: { gradient: "linear-gradient(135deg, #00c853, #00a040)", accent: "#69f0ae" },
   ruimtemeetkunde: { gradient: "linear-gradient(135deg, #00a8c8, #007a96)", accent: "#80deea" },
   "kwadraten-wortels": { gradient: "linear-gradient(135deg, #9c27b0, #6a1b9a)", accent: "#ce93d8" },
@@ -26,6 +28,8 @@ const PATH_THEMES = {
   "lineaire-formules": { gradient: "linear-gradient(135deg, #1976d2, #0d47a1)", accent: "#90caf9" },
   "rekenen-met-letters": { gradient: "linear-gradient(135deg, #00897b, #00695c)", accent: "#80cbc4" },
   "vlakke-figuren": { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
+  goniometrie: { gradient: "linear-gradient(135deg, #c62828, #7f0000)", accent: "#ef9a9a" },
+  statistiek: { gradient: "linear-gradient(135deg, #00bcd4, #006064)", accent: "#80deea" },
 };
 
 const SUBJECT_LABELS = {

@@ -13,11 +13,17 @@ import rekenenMetLetters from "./rekenenMetLetters";
 import vlakkeFiguren from "./vlakkeFiguren";
 import breuken from "./breuken";
 import procenten from "./procenten";
+import negatieveGetallen from "./negatieveGetallen";
+import verhoudingen from "./verhoudingen";
+import statistiek from "./statistiek";
+import goniometrie from "./goniometrie";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
   breuken,
   procenten,
+  "negatieve-getallen": negatieveGetallen,
+  verhoudingen,
   // Klas 1-2 algebra-basis
   "rekenen-met-letters": rekenenMetLetters,
   "kwadraten-wortels": kwadratenWortels,
@@ -28,7 +34,10 @@ export const ALL_LEARN_PATHS = {
   // Klas 2 meetkunde
   "vlakke-figuren": vlakkeFiguren,
   pythagoras,
+  goniometrie,
   ruimtemeetkunde,
+  // Statistiek
+  statistiek,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad
