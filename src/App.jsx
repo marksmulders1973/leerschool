@@ -26,6 +26,7 @@ import ProPage from "./components/ProPage.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import ObliteratorGame from "./components/ObliteratorGame.jsx";
 import AdminFeedback from "./components/AdminFeedback.jsx";
+import LearnPath from "./components/LearnPath.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -149,6 +150,8 @@ export default function App() {
     return "home";
   })();
   const [page, setPage] = useState(initialPage);
+  const [activeLearnPathId, setActiveLearnPathId] = useState(null);
+  const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -519,6 +522,15 @@ export default function App() {
           setLoading(false);
         }} />
       )}
+      {page === "learn-path" && activeLearnPathId && (
+        <LearnPath
+          pathId={activeLearnPathId}
+          userName={userName || "Speler"}
+          authUser={authUser}
+          onBack={() => setPage(learnPathReturnPage || "home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "obliteratorDirect" && (
         <ObliteratorGame
           userName={userName || "Speler"}
@@ -560,6 +572,7 @@ export default function App() {
           onAdminFeedback={() => setPage("admin-feedback")}
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
+          onLearnPath={(id) => { setActiveLearnPathId(id); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
@@ -808,6 +821,7 @@ export default function App() {
           onFinish={finishGame}
           onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); const wasCito = gameState?.quiz?.id?.startsWith("cito-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : wasCito ? "cito" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
+          onLearnPathRequest={(id) => { setActiveLearnPathId(id); setLearnPathReturnPage("play"); setPage("learn-path"); }}
         />
       )}
       {page === "tafels" && (

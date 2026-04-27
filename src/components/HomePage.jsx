@@ -372,7 +372,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -1033,6 +1033,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               >
                 <span style={{ fontSize: 18 }}>🛸</span>
                 Speel OBLITERATOR
+              </button>
+            )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #00c853, #00a040)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(0,200,83,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "parabolen" }); onLearnPath("parabolen"); }}
+              >
+                <span style={{ fontSize: 18 }}>📐</span>
+                Leer parabolen stap-voor-stap
               </button>
             )}
             <button

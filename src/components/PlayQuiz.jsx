@@ -2,8 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { SUBJECTS } from "../constants.js";
 import { SoundEngine, track } from "../utils.js";
+import { findLearnPathForQuestion } from "../learnPaths/parabolen.js";
 
-export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome }) {
+export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome, onLearnPathRequest }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
 
   // Drop-off tracking: trigger 'quiz_first_question_seen' bij eerste mount
@@ -542,17 +543,32 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       )}
 
       {/* Quit confirmation overlay */}
-      {showQuitConfirm && (
+      {showQuitConfirm && (() => {
+        const matchedPath = onLearnPathRequest ? findLearnPathForQuestion(question?.q) : null;
+        return (
         <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, animation: "fadeBg 0.2s ease" }}>
-          <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 320, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
+          <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 340, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 48 }}>🛑</span>
             <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
             <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>
               Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
               {gameState.score > 0 && ` Score: ${gameState.score} goed!`}
             </p>
+            {matchedPath && (
+              <button
+                style={{ width: "100%", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14, marginBottom: 12, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
+                onClick={() => {
+                  clearInterval(timerRef.current);
+                  clearTimeout(wrongOverlayTimerRef.current);
+                  track("learn_path_from_quiz", { path: matchedPath, at_question: gameState.currentQ + 1 });
+                  onLearnPathRequest(matchedPath);
+                }}
+              >
+                📐 Snap ik niet — leg stap-voor-stap uit
+              </button>
+            )}
             <div style={{ display: "flex", gap: 10 }}>
-              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => setShowQuitConfirm(false)}>
+              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14, color: "#fff" }} onClick={() => setShowQuitConfirm(false)}>
                 Doorgaan
               </button>
               <button style={{ flex: 1, background: "linear-gradient(135deg, #ff5252, #c62828)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
@@ -565,7 +581,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             </div>
           </div>
         </div>
-      )}
+        );
+      })()}
     </div>
   );
 }
