@@ -2276,8 +2276,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
     }
+    // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
+    const TARGET_FRAME_MS = 1000 / 60;
+    let laatsteFrameTijd = 0;
     function lus() {
-      update(); teken();
+      const nu = performance.now();
+      if (nu - laatsteFrameTijd >= TARGET_FRAME_MS - 1) {
+        laatsteFrameTijd = nu;
+        update(); teken();
+      }
       if (spelLoopt) raf = requestAnimationFrame(lus);
     }
     function levenVerlies() {
