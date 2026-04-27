@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import supabase from "../supabase";
 import { ALL_LEARN_PATHS } from "../learnPaths";
+import MiniQuiz from "./MiniQuiz.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -131,18 +132,23 @@ function SvgFigure({ svg }) {
   );
 }
 
-export default function LearnPath({ pathId, userName, authUser, onBack, onHome }) {
+export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome }) {
   const path = ALL_LEARN_PATHS[pathId];
   const player = (userName || "Speler").trim() || "Speler";
 
+  // Als initialStepIdx meegegeven is (vanuit toets-vraag), spring direct naar die stap.
+  const startMode = typeof initialStepIdx === "number" ? "reading" : "overview";
+  const startStep = typeof initialStepIdx === "number" ? initialStepIdx : 0;
+
   // mode: overview | reading | checking | wrong | stepDone | allDone
-  const [mode, setMode] = useState("overview");
-  const [stepIdx, setStepIdx] = useState(0);
+  const [mode, setMode] = useState(startMode);
+  const [stepIdx, setStepIdx] = useState(startStep);
   const [checkIdx, setCheckIdx] = useState(0);
   const [selected, setSelected] = useState(null);
   const [attempts, setAttempts] = useState(1);
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [loaded, setLoaded] = useState(false);
+  const [showMiniQuiz, setShowMiniQuiz] = useState(false);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -378,17 +384,35 @@ export default function LearnPath({ pathId, userName, authUser, onBack, onHome }
             </div>
             <div style={{ fontSize: 14, color: C.text, marginBottom: 14 }}>
               {stepIdx + 1 < totalSteps
-                ? `Goed bezig. Door naar stap ${stepIdx + 2}, of terug naar het overzicht.`
+                ? `Goed bezig. Door naar stap ${stepIdx + 2}, of test eerst even of het echt is blijven hangen.`
                 : "Helemaal klaar — laatste stap geweest!"}
             </div>
+            {!showMiniQuiz && (
+              <button
+                onClick={() => setShowMiniQuiz(true)}
+                style={{ ...btnPrimary(), background: `linear-gradient(135deg, ${C.warm}, #f9a825)`, color: "#1a0008", boxShadow: "0 4px 16px rgba(255,213,79,0.35)" }}
+              >
+                📝 Test wat je net leerde
+              </button>
+            )}
             {stepIdx + 1 < totalSteps && (
-              <button onClick={goNext} style={btnPrimary()}>
+              <button onClick={goNext} style={{ ...btnPrimary(), marginTop: 8 }}>
                 Volgende stap ▶
               </button>
             )}
             <button onClick={() => setMode("overview")} style={{ ...btnSecondary(), marginTop: 8 }}>
               📋 Terug naar overzicht
             </button>
+
+            {showMiniQuiz && (
+              <MiniQuiz
+                subject={path.subject || "wiskunde"}
+                level={path.level || "klas1-vwo"}
+                topicLabel={`${path.title} — ${step.title}`}
+                count={3}
+                onClose={() => setShowMiniQuiz(false)}
+              />
+            )}
           </div>
         )}
       </div>
