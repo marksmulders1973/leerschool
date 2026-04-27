@@ -72,8 +72,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const MAX_LEVEL_UI = 100;
   const heeftLogin = !!authUser?.id;
   // hoogste level waar je een record op hebt = "vrijgespeeld tot en met"
+  // Anonieme spelers krijgen ook gewoon alle levels (Mark's keuze: lage drempel).
   const maxVrijgespeeld = Math.max(1, Math.max(...Object.keys(levelRecords).map(k => parseInt(k, 10) + 1), 1));
-  const maxKiesbaar = Math.min(MAX_LEVEL_UI, maxVrijgespeeld);
+  const maxKiesbaar = heeftLogin ? Math.min(MAX_LEVEL_UI, maxVrijgespeeld) : MAX_LEVEL_UI;
   useEffect(() => {
     if (!authUser?.id) { setLevelRecords({}); return; }
     supabase.from("obliterator_levels")
@@ -2684,48 +2685,46 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
-            {/* Level-keuze (alleen voor ingelogde users) */}
-            {heeftLogin && (
-              <div style={{ marginBottom: 14, padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.08)", border: "1px solid rgba(105,240,174,0.3)" }}>
-                <div style={{ color: "#69f0ae", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 6, textAlign: "center" }}>
-                  KIES JE STARTLEVEL
-                </div>
-                <div style={{
-                  display: "flex", flexWrap: "wrap", gap: 4,
-                  justifyContent: "center",
-                  maxHeight: 180, overflowY: "auto",
-                  padding: "4px 2px",
-                }}>
-                  {Array.from({ length: maxKiesbaar }).map((_, i) => {
-                    const lvl = i + 1;
-                    const rec = levelRecords[lvl];
-                    const isSelected = gekozenStartLevel === lvl;
-                    const isBossLvl = lvl % 5 === 0;
-                    return (
-                      <button key={lvl} onClick={() => setGekozenStartLevel(lvl)} style={{
-                        padding: "5px 8px", borderRadius: 7, border: isBossLvl ? "1px solid rgba(255,80,80,0.5)" : "none",
-                        background: isSelected
-                          ? "linear-gradient(135deg, #00c853, #69f0ae)"
-                          : isBossLvl ? "rgba(255,80,80,0.15)" : "rgba(255,255,255,0.08)",
-                        color: isSelected ? "#0d1b2e" : isBossLvl ? "#ff8050" : "#fff",
-                        fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 12, letterSpacing: 0.5,
-                        fontWeight: 700, cursor: "pointer", minWidth: 32,
-                      }}>
-                        L{lvl}{isBossLvl ? "👹" : ""}{rec ? <span style={{ display: "block", fontSize: 8, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
-                      </button>
-                    );
-                  })}
-                </div>
-                {maxKiesbaar < MAX_LEVEL_UI && (
-                  <p style={{ textAlign: "center", fontSize: 10, color: "rgba(255,255,255,0.45)", margin: "6px 0 0 0" }}>
-                    Speel verder om Level {maxKiesbaar + 1} vrij te spelen
-                  </p>
-                )}
+            {/* Level-keuze — voor iedereen, ingelogd of niet. Records per level alleen voor ingelogd. */}
+            <div style={{ marginBottom: 14, padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.08)", border: "1px solid rgba(105,240,174,0.3)" }}>
+              <div style={{ color: "#69f0ae", fontSize: 12, fontWeight: 700, letterSpacing: 1, marginBottom: 6, textAlign: "center" }}>
+                KIES JE STARTLEVEL
               </div>
-            )}
+              <div style={{
+                display: "flex", flexWrap: "wrap", gap: 4,
+                justifyContent: "center",
+                maxHeight: 180, overflowY: "auto",
+                padding: "4px 2px",
+              }}>
+                {Array.from({ length: maxKiesbaar }).map((_, i) => {
+                  const lvl = i + 1;
+                  const rec = levelRecords[lvl];
+                  const isSelected = gekozenStartLevel === lvl;
+                  const isBossLvl = lvl % 5 === 0;
+                  return (
+                    <button key={lvl} onClick={() => setGekozenStartLevel(lvl)} style={{
+                      padding: "5px 8px", borderRadius: 7, border: isBossLvl ? "1px solid rgba(255,80,80,0.5)" : "none",
+                      background: isSelected
+                        ? "linear-gradient(135deg, #00c853, #69f0ae)"
+                        : isBossLvl ? "rgba(255,80,80,0.15)" : "rgba(255,255,255,0.08)",
+                      color: isSelected ? "#0d1b2e" : isBossLvl ? "#ff8050" : "#fff",
+                      fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 12, letterSpacing: 0.5,
+                      fontWeight: 700, cursor: "pointer", minWidth: 32,
+                    }}>
+                      L{lvl}{isBossLvl ? "👹" : ""}{rec ? <span style={{ display: "block", fontSize: 8, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
+                    </button>
+                  );
+                })}
+              </div>
+              {heeftLogin && maxKiesbaar < MAX_LEVEL_UI && (
+                <p style={{ textAlign: "center", fontSize: 10, color: "rgba(255,255,255,0.45)", margin: "6px 0 0 0" }}>
+                  Speel verder om Level {maxKiesbaar + 1} vrij te spelen
+                </p>
+              )}
+            </div>
             {!heeftLogin && (
               <p style={{ textAlign: "center", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 10 }}>
-                💡 Log in om je level-progressie en records op te slaan
+                💡 Log in om records per level apart te bewaren
               </p>
             )}
 
@@ -2740,7 +2739,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
                   personal_record: persoonlijkRecord || 0,
                   bonus_leven: bonusLeven || 0,
-                  start_level: heeftLogin ? gekozenStartLevel : 1,
+                  start_level: gekozenStartLevel,
                 });
                 setFase("spelen");
               }} style={{
