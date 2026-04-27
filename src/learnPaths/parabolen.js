@@ -124,8 +124,29 @@ const steps = [
   },
   {
     title: "Een tabel met y = x²",
-    explanation: "Nu doen we hetzelfde als de vorige stap, maar met de regel **y = x²**.\n\nVoor elke x rekenen we x · x uit:\n\n| x | y = x² |\n|---|--------|\n| 0 | 0 · 0 = 0 |\n| 1 | 1 · 1 = 1 |\n| 2 | 2 · 2 = 4 |\n| 3 | 3 · 3 = 9 |\n| 4 | 4 · 4 = 16 |\n| 5 | 5 · 5 = 25 |\n\nValt je iets op? De y-waardes worden **steeds sneller groter**:\n• Van 0 naar 1: stap van 1\n• Van 1 naar 4: stap van 3\n• Van 4 naar 9: stap van 5\n• Van 9 naar 16: stap van 7\n\nDit gaat een belangrijke rol spelen bij de parabool. Onthoud: y = x² stijgt **versneld**.",
-    svg: null,
+    explanation: "Nu doen we hetzelfde als de vorige stap, maar met de regel **y = x²**.\n\nVoor elke x rekenen we x · x uit:\n\n| x | y = x² |\n|---|--------|\n| 0 | 0 · 0 = 0 |\n| 1 | 1 · 1 = 1 |\n| 2 | 2 · 2 = 4 |\n| 3 | 3 · 3 = 9 |\n| 4 | 4 · 4 = 16 |\n| 5 | 5 · 5 = 25 |\n\nValt je iets op? De y-waardes worden **steeds sneller groter**:\n• Van 0 naar 1: stap van **1**\n• Van 1 naar 4: stap van **3**\n• Van 4 naar 9: stap van **5**\n• Van 9 naar 16: stap van **7**\n• Van 16 naar 25: stap van **9**\n\nIn het plaatje hieronder zie je dat ook: elke staaf is een stuk **groter** dan de vorige. Bij gewone optellen (zoals y = x + 1) zou elke staaf even veel hoger zijn — hier niet. Y = x² **schiet weg**. Onthoud dit, want het is precies wat de parabool zijn U-vorm geeft.",
+    svg: `<svg viewBox="0 0 300 210">
+<line x1="20" y1="155" x2="280" y2="155" stroke="${COLORS.axis}" stroke-width="1"/>
+<rect x="40" y="155" width="30" height="0" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="55" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=0</text>
+<text x="55" y="150" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">0</text>
+<rect x="78" y="150" width="30" height="5" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="93" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=1</text>
+<text x="93" y="145" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
+<rect x="116" y="135" width="30" height="20" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="131" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=2</text>
+<text x="131" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
+<rect x="154" y="110" width="30" height="45" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="169" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=3</text>
+<text x="169" y="105" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">9</text>
+<rect x="192" y="75" width="30" height="80" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="207" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=4</text>
+<text x="207" y="70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">16</text>
+<rect x="230" y="30" width="30" height="125" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="245" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=5</text>
+<text x="245" y="25" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">25</text>
+<text x="150" y="195" text-anchor="middle" fill="#8899aa" font-size="10" font-family="Arial" font-style="italic">staven groeien steeds sneller — niet met gelijke stappen</text>
+</svg>`,
     checks: [
       {
         q: "Regel: y = x². Als x = 7, wat is y?",
@@ -225,8 +246,33 @@ ${gridSvg}
   // ─── C. De parabool ontdekken ────────────────────────────
   {
     title: "Tabel uitrekenen: y = x²",
-    explanation: "Hetzelfde als bij y = x doen we nu, maar met de regel **y = x²** (dus y = x · x).\n\nWe nemen ook **negatieve** x-en mee, want -2 · -2 = 4 (twee keer een minteken geeft een plus).\n\n| x | y = x² |\n|---|--------|\n| -3 | 9 |\n| -2 | 4 |\n| -1 | 1 |\n| 0 | 0 |\n| 1 | 1 |\n| 2 | 4 |\n| 3 | 9 |\n\nKijk wat er opvalt: **de y-waardes zijn nooit negatief**. Want een getal maal zichzelf is altijd positief (of 0).\n\nOok zie je dat de tabel **symmetrisch** is — links en rechts van x=0 staan dezelfde y-waardes.",
-    svg: null,
+    explanation: "Hetzelfde als bij y = x doen we nu, maar met de regel **y = x²** (dus y = x · x).\n\nWe nemen ook **negatieve** x-en mee, want -2 · -2 = 4 (twee keer een minteken geeft een plus).\n\n| x | y = x² |\n|---|--------|\n| -3 | 9 |\n| -2 | 4 |\n| -1 | 1 |\n| 0 | 0 |\n| 1 | 1 |\n| 2 | 4 |\n| 3 | 9 |\n\nKijk wat er opvalt: **de y-waardes zijn nooit negatief**. Want een getal maal zichzelf is altijd positief (of 0).\n\nOok zie je dat de tabel **symmetrisch** is — links en rechts van x=0 staan dezelfde y-waardes. In het plaatje hieronder zie je dat heel goed: het is een **U-patroon**, gespiegeld in het midden. Dit is de eerste keer dat we de parabool écht zien doorschemeren.",
+    svg: `<svg viewBox="0 0 300 210">
+<line x1="20" y1="155" x2="280" y2="155" stroke="${COLORS.axis}" stroke-width="1"/>
+<line x1="150" y1="20" x2="150" y2="170" stroke="#69f0ae" stroke-width="1" stroke-dasharray="3 3"/>
+<rect x="47" y="47" width="25" height="108" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="60" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=-3</text>
+<text x="60" y="42" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">9</text>
+<rect x="77" y="107" width="25" height="48" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="90" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=-2</text>
+<text x="90" y="102" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
+<rect x="107" y="143" width="25" height="12" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="120" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=-1</text>
+<text x="120" y="138" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
+<text x="150" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=0</text>
+<text x="150" y="150" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">0</text>
+<rect x="167" y="143" width="25" height="12" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="180" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=1</text>
+<text x="180" y="138" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
+<rect x="197" y="107" width="25" height="48" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="210" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=2</text>
+<text x="210" y="102" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
+<rect x="227" y="47" width="25" height="108" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="240" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">x=3</text>
+<text x="240" y="42" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">9</text>
+<text x="160" y="40" fill="#69f0ae" font-size="10" font-family="Arial" font-style="italic">spiegel-as</text>
+<text x="150" y="195" text-anchor="middle" fill="#8899aa" font-size="10" font-family="Arial" font-style="italic">links en rechts gelijk: de U-vorm van de parabool</text>
+</svg>`,
     checks: [
       {
         q: "Bij regel y = x²: als x = -2, wat is y?",
