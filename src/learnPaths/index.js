@@ -11,16 +11,24 @@ import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen";
 import lineaireFormules from "./lineaireFormules";
 import rekenenMetLetters from "./rekenenMetLetters";
 import vlakkeFiguren from "./vlakkeFiguren";
+import breuken from "./breuken";
+import procenten from "./procenten";
 
 export const ALL_LEARN_PATHS = {
-  parabolen,
-  ruimtemeetkunde,
-  "kwadraten-wortels": kwadratenWortels,
-  pythagoras,
-  "kwadratische-vergelijkingen": kwadratischeVergelijkingen,
-  "lineaire-formules": lineaireFormules,
+  // Klas 1 basis (komen het eerst aan bod)
+  breuken,
+  procenten,
+  // Klas 1-2 algebra-basis
   "rekenen-met-letters": rekenenMetLetters,
+  "kwadraten-wortels": kwadratenWortels,
+  // Klas 2 functies
+  "lineaire-formules": lineaireFormules,
+  parabolen,
+  "kwadratische-vergelijkingen": kwadratischeVergelijkingen,
+  // Klas 2 meetkunde
   "vlakke-figuren": vlakkeFiguren,
+  pythagoras,
+  ruimtemeetkunde,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

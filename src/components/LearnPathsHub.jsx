@@ -16,6 +16,8 @@ const C = {
 
 // Per pad een gradient + accent-kleur (voor visuele herkenning)
 const PATH_THEMES = {
+  breuken: { gradient: "linear-gradient(135deg, #ff8a65, #d84315)", accent: "#ffccbc" },
+  procenten: { gradient: "linear-gradient(135deg, #66bb6a, #2e7d32)", accent: "#a5d6a7" },
   parabolen: { gradient: "linear-gradient(135deg, #00c853, #00a040)", accent: "#69f0ae" },
   ruimtemeetkunde: { gradient: "linear-gradient(135deg, #00a8c8, #007a96)", accent: "#80deea" },
   "kwadraten-wortels": { gradient: "linear-gradient(135deg, #9c27b0, #6a1b9a)", accent: "#ce93d8" },
