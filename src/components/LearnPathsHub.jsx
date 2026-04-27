@@ -166,7 +166,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
             <span style={{ fontSize: 20 }}>🎓</span>
             <span>Hele leerlijn — per klas</span>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 18 }}>
+          <div className="lp-grid" style={{ marginBottom: 18 }}>
             {Object.values(CURRICULA).map((cur) => {
               const allPathIds = cur.phases.flatMap((p) => p.pathIds);
               const total = curriculumTotalSteps(cur.id);
@@ -274,7 +274,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                 <span>{meta.title}</span>
                 <span style={{ color: C.muted, fontSize: 12, fontWeight: 500 }}>· {pathList.length} paden</span>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div className="lp-grid">
                 {pathList.map((p) => {
                   const done = progressByPath[p.id]?.size || 0;
                   const total = p.steps.length;
