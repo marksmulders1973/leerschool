@@ -240,8 +240,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
-    const W = canvas.width;
-    const H = canvas.height;
+    // High-DPI rendering: scherp canvas op moderne telefoons (iPhone, Galaxy, Pixel — DPR 2-3).
+    // Cap op 2 zodat 3x-DPR devices niet 9x meer pixels hoeven te renderen.
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const cssW = canvas.width;
+    const cssH = canvas.height;
+    if (dpr > 1) {
+      canvas.width = Math.round(cssW * dpr);
+      canvas.height = Math.round(cssH * dpr);
+      canvas.style.width = cssW + "px";
+      canvas.style.height = cssH + "px";
+      ctx.scale(dpr, dpr);
+    }
+    const W = cssW;
+    const H = cssH;
     // schalen tov originele 800x400
     const SCHAAL = W / 800;
     const PLAFOND_HOOGTE = 60 * SCHAAL;
