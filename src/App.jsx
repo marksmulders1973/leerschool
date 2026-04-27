@@ -27,6 +27,7 @@ import UpdateBanner from "./components/UpdateBanner.jsx";
 import ObliteratorGame from "./components/ObliteratorGame.jsx";
 import AdminFeedback from "./components/AdminFeedback.jsx";
 import LearnPath from "./components/LearnPath.jsx";
+import LearnPathsHub from "./components/LearnPathsHub.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -533,6 +534,20 @@ export default function App() {
           onHome={() => setPage("home")}
         />
       )}
+      {page === "learn-paths-hub" && (
+        <LearnPathsHub
+          userName={userName || "Speler"}
+          authUser={authUser}
+          onPickPath={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("learn-paths-hub");
+            setPage("learn-path");
+          }}
+          onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "obliteratorDirect" && (
         <ObliteratorGame
           userName={userName || "Speler"}
@@ -575,6 +590,7 @@ export default function App() {
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
+          onLearnPathsHub={() => setPage("learn-paths-hub")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);

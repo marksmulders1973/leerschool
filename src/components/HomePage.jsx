@@ -372,7 +372,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -1035,140 +1035,21 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Speel OBLITERATOR
               </button>
             )}
-            {onLearnPath && (
+            {onLearnPathsHub && (
               <button
                 style={{
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #00c853, #00a040)",
+                  background: "linear-gradient(135deg, #00c853, #1976d2)",
                   color: "#fff",
                   border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(0,200,83,0.35)",
+                  borderRadius: 12, padding: "14px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 15, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 18px rgba(0,200,83,0.35)",
                 }}
-                onClick={() => { track("learn_path_from_home", { path: "parabolen" }); onLearnPath("parabolen"); }}
+                onClick={() => { track("learn_paths_hub_open"); onLearnPathsHub(); }}
               >
-                <span style={{ fontSize: 18 }}>📐</span>
-                Leer parabolen stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #00a8c8, #007a96)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(0,168,200,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "ruimtemeetkunde" }); onLearnPath("ruimtemeetkunde"); }}
-              >
-                <span style={{ fontSize: 18 }}>📦</span>
-                Leer ruimtemeetkunde stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #9c27b0, #6a1b9a)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(156,39,176,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "kwadraten-wortels" }); onLearnPath("kwadraten-wortels"); }}
-              >
-                <span style={{ fontSize: 18 }}>²</span>
-                Leer kwadraten en wortels stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #ff7043, #d84315)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(255,112,67,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "pythagoras" }); onLearnPath("pythagoras"); }}
-              >
-                <span style={{ fontSize: 18 }}>📐</span>
-                Leer Pythagoras stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #ffd54f, #f9a825)",
-                  color: "#1a0008",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(255,213,79,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "kwadratische-vergelijkingen" }); onLearnPath("kwadratische-vergelijkingen"); }}
-              >
-                <span style={{ fontSize: 18 }}>🟰</span>
-                Leer kwadratische vergelijkingen stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #1976d2, #0d47a1)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(25,118,210,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "lineaire-formules" }); onLearnPath("lineaire-formules"); }}
-              >
-                <span style={{ fontSize: 18 }}>📈</span>
-                Leer lineaire formules stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #00897b, #00695c)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(0,137,123,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "rekenen-met-letters" }); onLearnPath("rekenen-met-letters"); }}
-              >
-                <span style={{ fontSize: 18 }}>🔤</span>
-                Leer rekenen met letters stap-voor-stap
-              </button>
-            )}
-            {onLearnPath && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #ec407a, #ad1457)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 16px rgba(236,64,122,0.35)",
-                }}
-                onClick={() => { track("learn_path_from_home", { path: "vlakke-figuren" }); onLearnPath("vlakke-figuren"); }}
-              >
-                <span style={{ fontSize: 18 }}>📐</span>
-                Leer vlakke figuren stap-voor-stap
+                <span style={{ fontSize: 20 }}>📚</span>
+                Leerpaden — kies een onderwerp
               </button>
             )}
             <button
