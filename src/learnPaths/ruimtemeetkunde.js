@@ -619,7 +619,19 @@ const steps = [
   {
     title: "Vergrotingsfactor toepassen",
     explanation: "Als je k weet, kun je elke afmeting van een origineel **omrekenen** naar de bijbehorende afmeting in het beeld:\n\n**afmeting beeld = afmeting origineel × k**\n\nEn andersom:\n\n**afmeting origineel = afmeting beeld ÷ k**\n\nVoorbeeld: een foto van 6 cm bij 4 cm wordt vergroot met k = 2,5.\n• nieuwe lengte = 6 × 2,5 = **15 cm**\n• nieuwe breedte = 4 × 2,5 = **10 cm**\n\nVoorbeeld: een grote tekening (30 cm) wordt verkleind tot 12 cm. Verkleining-factor?\n• k = 12 ÷ 30 = **0,4** (oftewel ⅖)\n\nMet k = 0,4 kun je nu elke andere afmeting omrekenen naar de verkleinde versie.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<rect x="20" y="80" width="50" height="35" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
+<text x="45" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">6 × 4 cm</text>
+<text x="45" y="68" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">origineel</text>
+<text x="115" y="98" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">× k</text>
+<text x="115" y="115" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial">(= × 2,5)</text>
+<line x1="90" y1="100" x2="140" y2="100" stroke="${COLORS.point}" stroke-width="2"/>
+<polygon points="140,95 150,100 140,105" fill="${COLORS.point}"/>
+<rect x="160" y="50" width="125" height="88" fill="rgba(255,112,67,0.18)" stroke="${COLORS.curveAlt}" stroke-width="2"/>
+<text x="222" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">15 × 10 cm</text>
+<text x="222" y="40" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">beeld</text>
+<text x="150" y="190" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">6 × 2,5 = 15  ·  4 × 2,5 = 10</text>
+</svg>`,
     checks: [
       {
         q: "Een rechthoek van 7 cm wordt vergroot met k = 4. Hoe lang wordt het beeld?",
@@ -639,7 +651,16 @@ const steps = [
   {
     title: "Lengtes vergroten met factor k",
     explanation: "We zagen al: bij vergroting met factor k worden **alle lengtes** k× zo groot.\n\nDus als je een figuur vergroot met k = 3:\n• elke zijde wordt 3× zo lang\n• elke straal wordt 3× zo lang\n• elke hoogte wordt 3× zo hoog\n\n**Eenvoudig**: lengte → k × lengte\n\nMaar wat doet dat met **omtrek**, **oppervlakte** en **inhoud**? Dat gaan we de volgende drie stappen uitzoeken. Het antwoord is verrassend — vooral voor oppervlakte en inhoud.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="60" x2="100" y2="60" stroke="${COLORS.curve}" stroke-width="4"/>
+<text x="70" y="50" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">5 cm</text>
+<text x="70" y="80" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">origineel</text>
+<text x="180" y="65" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">× k = × 3</text>
+<line x1="40" y1="135" x2="220" y2="135" stroke="${COLORS.curveAlt}" stroke-width="4"/>
+<text x="130" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">15 cm</text>
+<text x="130" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">na vergroten</text>
+<text x="150" y="185" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">5 × 3 = 15</text>
+</svg>`,
     checks: [
       {
         q: "Een lijntje is 7 cm. Bij vergroting met k = 5 wordt het ...",
@@ -764,7 +785,24 @@ const steps = [
   {
     title: "Samenvatting — de regel van k, k², k³",
     explanation: "Even alles op een rij. Bij vergroting met factor **k**:\n\n| Wat | Factor | Bij k = 2 | Bij k = 3 |\n|-----|--------|-----------|-----------|\n| Lengte (1D) | × **k** | 2× | 3× |\n| Omtrek (1D) | × **k** | 2× | 3× |\n| Oppervlakte (2D) | × **k²** | 4× | 9× |\n| Inhoud (3D) | × **k³** | 8× | 27× |\n\n**Geheugentruc**: kijk naar het kleine cijfertje achter cm:\n• cm (1D) → factor k¹ = k\n• cm² (2D) → factor k²\n• cm³ (3D) → factor k³\n\nDe **macht** in de eenheid is precies de macht van k. Best handig.\n\n**Welk getal bij welke vraag?** Stel je iets vergroot met k = 4. Dan:\n• Lengte 4× zo groot\n• Oppervlakte 16× zo groot (4²)\n• Inhoud 64× zo groot (4³)\n\nKlinkt veel — en dat klopt. Daarom bevat een dubbel zo grote ballon ineens 8× zoveel lucht.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="40" x2="110" y2="40" stroke="${COLORS.curve2}" stroke-width="4"/>
+<text x="135" y="44" fill="${COLORS.text}" font-size="12" font-family="Arial">lengte</text>
+<text x="200" y="44" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">× k</text>
+<text x="240" y="44" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1D)</text>
+<rect x="50" y="75" width="50" height="35" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
+<text x="135" y="98" fill="${COLORS.text}" font-size="12" font-family="Arial">oppervlakte</text>
+<text x="220" y="98" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">× k²</text>
+<text x="252" y="98" fill="${COLORS.muted}" font-size="11" font-family="Arial">(2D)</text>
+<g transform="translate(50, 140)" stroke="${COLORS.curveAlt}" stroke-width="2" fill="rgba(255,112,67,0.20)">
+<polygon points="0,15 50,15 50,45 0,45"/>
+<polygon points="0,15 12,3 62,3 50,15"/>
+<polygon points="50,15 62,3 62,33 50,45"/>
+</g>
+<text x="135" y="170" fill="${COLORS.text}" font-size="12" font-family="Arial">inhoud</text>
+<text x="200" y="170" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">× k³</text>
+<text x="240" y="170" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3D)</text>
+</svg>`,
     checks: [
       {
         q: "Vergroting met k = 5. Hoeveel keer zo groot wordt de oppervlakte?",
@@ -795,7 +833,19 @@ const steps = [
   {
     title: "Eindopdracht 1: tegels op een vloer",
     explanation: "Praktisch voorbeeld. Een vloer is **5 m bij 4 m**. Hij wordt betegeld met vierkante tegels van **20 cm bij 20 cm**.\n\n**Vraag 1**: Wat is de oppervlakte van de vloer?\n→ 5 × 4 = **20 m²**\n\n**Vraag 2**: Wat is de oppervlakte van één tegel?\n→ 20 × 20 = **400 cm²** = **0,04 m²** (let op de eenheid!)\n\n**Vraag 3**: Hoeveel tegels heb je nodig?\n→ 20 m² ÷ 0,04 m² = **500 tegels**\n\n**Tip**: bij dit soort vraagstukken altijd opletten dat alle eenheden hetzelfde zijn. Reken cm en m **niet** door elkaar.\n\nDe eindopdracht hieronder gaat over hetzelfde idee.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<defs>
+<pattern id="tegels" width="20" height="20" patternUnits="userSpaceOnUse">
+<rect width="20" height="20" fill="rgba(255,112,67,0.15)" stroke="${COLORS.curveAlt}" stroke-width="1"/>
+</pattern>
+</defs>
+<rect x="40" y="40" width="200" height="120" fill="url(#tegels)" stroke="${COLORS.curve}" stroke-width="3"/>
+<text x="140" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">5 m</text>
+<text x="28" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4 m</text>
+<text x="140" y="98" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">vloer 20 m²</text>
+<text x="140" y="115" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegels 20 × 20 cm</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">20 ÷ 0,04 = 500 tegels</text>
+</svg>`,
     checks: [
       {
         q: "Vloer 6 m bij 5 m. Tegels 50 cm bij 50 cm (= ½ m bij ½ m). Hoeveel tegels?",
@@ -813,7 +863,25 @@ const steps = [
   {
     title: "Eindopdracht 2: maquette van een gebouw",
     explanation: "Een architect maakt een **maquette** (kleine 3D-versie) van een gebouw met **schaal 1 : 50** — dat betekent: 1 cm in de maquette = 50 cm in het echt. De vergrotingsfactor van **maquette → echt gebouw** is dus **k = 50**.\n\nDe maquette is een blokvormig gebouw van 20 cm × 10 cm × 8 cm.\n\n**Vraag 1**: Wat is de inhoud van de maquette?\n→ 20 × 10 × 8 = **1600 cm³**\n\n**Vraag 2**: Wat is de inhoud van het echte gebouw (in m³)?\n→ Inhoud schaalt met k³ = 50³ = 125 000\n→ Echt = 1600 × 125 000 = 200 000 000 cm³\n→ = **200 m³** (delen door 1 000 000 want 1 m³ = 1 000 000 cm³)\n\n**Vraag 3**: Hoeveel keer zo groot is de oppervlakte van het echte gebouw?\n→ k² = 50² = **2500 keer** (gevels van het gebouw zijn 2500× zo groot als die op de maquette)",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<g transform="translate(20, 95)" stroke="${COLORS.curve}" stroke-width="2" fill="rgba(0,200,83,0.20)">
+<polygon points="0,30 50,30 50,75 0,75"/>
+<polygon points="0,30 15,15 65,15 50,30"/>
+<polygon points="50,30 65,15 65,60 50,75"/>
+</g>
+<text x="50" y="190" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">maquette</text>
+<text x="50" y="80" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">20×10×8 cm</text>
+<text x="125" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">× k = × 50</text>
+<line x1="100" y1="105" x2="145" y2="105" stroke="${COLORS.point}" stroke-width="2"/>
+<polygon points="145,100 155,105 145,110" fill="${COLORS.point}"/>
+<g transform="translate(170, 25)" stroke="${COLORS.curveAlt}" stroke-width="2" fill="rgba(255,112,67,0.18)">
+<polygon points="0,40 75,40 75,140 0,140"/>
+<polygon points="0,40 25,15 100,15 75,40"/>
+<polygon points="75,40 100,15 100,115 75,140"/>
+</g>
+<text x="225" y="190" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">echt: inhoud × 50³</text>
+<text x="225" y="178" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">= 125 000 × 1600 cm³</text>
+</svg>`,
     checks: [
       {
         q: "Maquette inhoud 100 cm³, schaal 1 : 20. Inhoud echt gebouw?",
@@ -831,7 +899,20 @@ const steps = [
   {
     title: "Eindopdracht 3: een aquarium",
     explanation: "Tijd voor een gemengde opgave die alles samenbrengt. Een **aquarium** heeft de vorm van een balk: **80 cm lang, 40 cm breed, 50 cm hoog**.\n\n**Vraag 1: Hoeveel water past erin (in liter)?**\n• Inhoud = 80 × 40 × 50 = **160 000 cm³**\n• 1 liter = 1000 cm³\n• Dus 160 000 ÷ 1000 = **160 liter**\n\n**Vraag 2: De winkelier verkoopt ook een groter aquarium met k = 1,5 (alle zijden 1,5× zo groot). Wat is de inhoud?**\n• k³ = 1,5 × 1,5 × 1,5 = 3,375\n• Nieuwe inhoud = 160 × 3,375 = **540 liter**\n\n**Vraag 3: Hoeveel keer meer water past in dat grotere aquarium?**\n• 540 ÷ 160 = 3,375 — exact k³ ✓\n\nMet k = 1,5 lijkt het 'maar' anderhalf keer groter, maar het bevat al **3,375 keer** zoveel water. Dat is de kracht van de k³-regel.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<g transform="translate(80, 40)" stroke="${COLORS.curve}" stroke-width="2.5">
+<polygon points="0,30 100,30 100,100 0,100" fill="rgba(0,168,200,0.20)"/>
+<polygon points="0,30 25,10 125,10 100,30" fill="rgba(0,168,200,0.10)"/>
+<polygon points="100,30 125,10 125,80 100,100" fill="rgba(0,168,200,0.15)"/>
+<line x1="0" y1="50" x2="100" y2="50" stroke="#00a8c8" stroke-width="2"/>
+<line x1="0" y1="50" x2="25" y2="30" stroke="#00a8c8" stroke-width="1.5"/>
+<line x1="100" y1="50" x2="125" y2="30" stroke="#00a8c8" stroke-width="1.5"/>
+</g>
+<text x="220" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">↕ 50</text>
+<text x="130" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">l 80 · b 40 cm</text>
+<text x="150" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">80 × 40 × 50 = 160 000 cm³</text>
+<text x="150" y="194" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">= 160 liter</text>
+</svg>`,
     checks: [
       {
         q: "Aquarium van 50 × 30 × 40 cm. Hoeveel liter past erin? (1 L = 1000 cm³)",

@@ -137,7 +137,23 @@ const steps = [
   {
     title: "Een tabel: bij elke x een y",
     explanation: "We gaan nu **tabellen** maken. Een tabel laat in twee rijtjes zien: links een **x**, en daarnaast de **y** die daarbij hoort volgens een **regel**.\n\n**Regel**: y = x + 1\n\n| x | y |\n|---|---|\n| 0 | 1 |\n| 1 | 2 |\n| 2 | 3 |\n| 3 | 4 |\n\nKijk: bij elke x doen we +1 om y te krijgen. Simpel.\n\nMet een andere regel — bijvoorbeeld **y = x + 5** — krijg je weer andere y-waardes:\n\n| x | y |\n|---|---|\n| 0 | 5 |\n| 1 | 6 |\n| 2 | 7 |\n\nOnthoud: de regel zegt wat je met x moet doen om y te krijgen.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">Regel:  y = x + 1</text>
+<rect x="80" y="38" width="140" height="148" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5"/>
+<line x1="80" y1="65" x2="220" y2="65" stroke="${COLORS.curve}" stroke-width="1.5"/>
+<line x1="150" y1="38" x2="150" y2="186" stroke="${COLORS.curve}" stroke-width="1.5"/>
+<text x="115" y="58" text-anchor="middle" fill="${COLORS.text}" font-family="Arial" font-weight="bold" font-size="14">x</text>
+<text x="185" y="58" text-anchor="middle" fill="${COLORS.text}" font-family="Arial" font-weight="bold" font-size="14">y</text>
+<text x="115" y="87" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">0</text>
+<text x="185" y="87" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">1</text>
+<text x="115" y="112" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">1</text>
+<text x="185" y="112" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">2</text>
+<text x="115" y="137" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">2</text>
+<text x="185" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">3</text>
+<text x="115" y="162" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">3</text>
+<text x="185" y="162" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="115" y="183" text-anchor="middle" fill="${COLORS.muted || '#8899aa'}" font-size="11" font-family="Arial">→ +1</text>
+</svg>`,
     checks: [
       {
         q: "Regel: y = x + 5. Als x = 3, wat is y?",
@@ -709,7 +725,22 @@ ${gridSvg}
   {
     title: 'De "c" in y = x² + c',
     explanation: 'Wiskundigen geven dat verschuifgetal weer een eigen letter: **c**. De algemene vorm is dan **y = x² + c**.\n\n• Bij y = x² **+ 7**, is c = 7\n• Bij y = x² **− 4**, is c = -4 (let op: het minteken hoort bij de c!)\n• Bij y = x² zonder iets, is c = 0\n\nWat doet de c?\n\n• **c > 0** (positief) → parabool schuift **omhoog**\n• **c < 0** (negatief) → parabool schuift **omlaag**\n• **c = 0** → geen verschuiving\n\nEn de **top** zit altijd op **(0, c)**. Eenvoudig.',
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+${baseAxes}
+${gridSvg}
+<path d="M 90 14 Q 150 122 210 14" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
+<text x="200" y="30" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = x² + 5</text>
+<path d="M 90 44 Q 150 156 210 44" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
+<text x="215" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+<path d="M 90 74 Q 150 186 210 74" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
+<text x="200" y="160" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = x² − 3</text>
+<circle cx="150" cy="70" r="4" fill="${COLORS.point}"/>
+<text x="160" y="73" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">(0, 5)</text>
+<circle cx="150" cy="100" r="4" fill="${COLORS.point}"/>
+<text x="160" y="103" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">(0, 0)</text>
+<circle cx="150" cy="130" r="4" fill="${COLORS.point}"/>
+<text x="160" y="133" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">(0, -3)</text>
+</svg>`,
     checks: [
       {
         q: "Bij y = x² − 6, wat is c?",
@@ -765,7 +796,17 @@ ${gridSvg}
   {
     title: "De top bij y = x² + c",
     explanation: "Voor de eenvoudige vorm **y = x² + c** zit de top altijd op **(0, c)**.\n\nWaarom? Omdat het laagste punt van y = x² op (0, 0) zat, en de + c-verschuiving alleen verticaal werkt — de top schuift dus mee.\n\nVoorbeelden:\n• y = x² + 4 → top is **(0, 4)**\n• y = x² − 5 → top is **(0, -5)**\n• y = x² → top is **(0, 0)**\n\nDit werkt ook met een **a** ervoor:\n• y = 3x² + 2 → top is **(0, 2)**\n• y = -x² − 7 → top is **(0, -7)** (let op: dit is een berg, dus de top is het **hoogste** punt)",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+${baseAxes}
+${gridSvg}
+<path d="M 100 30 Q 150 130 200 30" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
+<line x1="150" y1="40" x2="150" y2="180" stroke="#69f0ae" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="150" cy="80" r="6" fill="${COLORS.point}"/>
+<text x="160" y="78" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">top: (0, c)</text>
+<text x="160" y="93" fill="${COLORS.muted || '#8899aa'}" font-size="10" font-family="Arial">altijd op de y-as</text>
+<text x="155" y="138" fill="${COLORS.muted || '#8899aa'}" font-size="10" font-family="Arial">x = 0</text>
+<text x="225" y="35" fill="${COLORS.curve}" font-size="11" font-family="Arial">y = x² + c</text>
+</svg>`,
     checks: [
       {
         q: "Wat is de top van y = x² − 8?",
@@ -830,7 +871,16 @@ ${gridSvg}
   {
     title: "De topformule x_top = -b/(2a)",
     explanation: "Om de **x-coördinaat van de top** te vinden bij y = ax² + bx + c, gebruik je deze formule:\n\n**x_top = −b / (2·a)**\n\nIn woorden: tegengesteld teken van b, gedeeld door 2 maal a.\n\nVoorbeeld 1: **y = x² + 4x**\n• a = 1, b = 4\n• x_top = −4 / (2·1) = **−2**\n• Vul x = −2 in: y = (−2)² + 4·(−2) = 4 − 8 = **−4**\n• Top = **(−2, −4)**\n\nVoorbeeld 2: **y = 2x² − 8x + 3**\n• a = 2, b = −8\n• x_top = −(−8) / (2·2) = 8 / 4 = **2**\n• Vul x = 2 in: y = 2·(2²) − 8·2 + 3 = 8 − 16 + 3 = **−5**\n• Top = **(2, −5)**\n\nLet op die dubbele min in voorbeeld 2: −(−8) wordt **+8**.",
-    svg: null,
+    svg: `<svg viewBox="0 0 300 200">
+<text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">y = 2x² − 8x + 3</text>
+<text x="150" y="40" text-anchor="middle" fill="${COLORS.muted || '#8899aa'}" font-size="11" font-family="Arial">a = 2,  b = −8,  c = 3</text>
+<line x1="40" y1="55" x2="260" y2="55" stroke="${COLORS.curve}" stroke-width="1" opacity="0.4"/>
+<text x="150" y="80" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">x_top  =  −b / (2·a)</text>
+<text x="150" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">=  −(−8) / (2·2)</text>
+<text x="150" y="130" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">=  8 / 4</text>
+<rect x="100" y="150" width="100" height="34" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="150" y="173" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x_top = 2</text>
+</svg>`,
     checks: [
       {
         q: "y = x² + 6x. Wat is x_top?",
