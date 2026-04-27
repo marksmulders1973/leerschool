@@ -31,6 +31,7 @@ const PATH_THEMES = {
   "vlakke-figuren": { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
   goniometrie: { gradient: "linear-gradient(135deg, #c62828, #7f0000)", accent: "#ef9a9a" },
   statistiek: { gradient: "linear-gradient(135deg, #00bcd4, #006064)", accent: "#80deea" },
+  werkwoordsvervoeging: { gradient: "linear-gradient(135deg, #00e676, #00a040)", accent: "#b9f6ca" },
 };
 
 const SUBJECT_LABELS = {

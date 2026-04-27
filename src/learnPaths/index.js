@@ -17,6 +17,7 @@ import negatieveGetallen from "./negatieveGetallen";
 import verhoudingen from "./verhoudingen";
 import statistiek from "./statistiek";
 import goniometrie from "./goniometrie";
+import werkwoordsvervoeging from "./werkwoordsvervoeging";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -38,6 +39,8 @@ export const ALL_LEARN_PATHS = {
   ruimtemeetkunde,
   // Statistiek
   statistiek,
+  // Nederlands
+  werkwoordsvervoeging,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

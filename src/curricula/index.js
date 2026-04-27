@@ -76,6 +76,21 @@ export const CURRICULA = {
       },
     ],
   },
+  "nederlands-onderbouw": {
+    id: "nederlands-onderbouw",
+    title: "Nederlands — Onderbouw",
+    subject: "taal",
+    emoji: "📖",
+    intro:
+      "De fundamenten van Nederlands voor klas 1-2. Begint met spelling en werkwoordsvervoeging — dé basis voor goed schrijven.",
+    phases: [
+      {
+        title: "Spelling van werkwoorden",
+        emoji: "📝",
+        pathIds: ["werkwoordsvervoeging"],
+      },
+    ],
+  },
 };
 
 // Hulp: alle pathIds in een curriculum (in volgorde, plat).
