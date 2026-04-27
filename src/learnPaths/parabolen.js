@@ -103,15 +103,15 @@ ${baseAxes}
     },
     {
       title: "Wat doet de a in y = ax²?",
-      explanation: "De **a** is het getal vóór x². Hij doet twee dingen:\n\n**1. Teken (+ of −)**: bepaalt of het dal of berg is (dat weet je al).\n\n**2. Grootte**: bepaalt hoe **smal of breed** de parabool is.\n• **a groot** (zoals 3 of 5) → **smalle**, steile parabool\n• **a klein** (zoals ½ of 0,2) → **brede**, flauwe parabool\n• **a = 1** → de standaard parabool y = x²\n\nVuistregel: een grotere a 'duwt' de parabool sneller omhoog.",
+      explanation: "**Eerst: wat is 'a'?**\n\nWiskundigen schrijven y = **a**x² als algemene vorm. De **a** is gewoon een afkorting voor *het getal dat vóór x² staat*. Even per voorbeeld:\n\n• y = **4**x² → hier is a = **4**\n• y = **½**x² → hier is a = **½**\n• y = **−2**x² → hier is a = **−2**\n• y = x² → hier is a = **1** (de 1 wordt niet opgeschreven, maar staat er onzichtbaar)\n\n**Wat doet die a?**\n\nHij bepaalt twee dingen:\n\n**1. Teken (+ of −)**: of het dal of berg is (dat weet je al).\n\n**2. Grootte van het getal**: hoe **smal of breed** de parabool is.\n• **a groot** (zoals 3 of 5) → **smalle**, steile parabool\n• **a klein** (zoals ½ of 0,2) → **brede**, flauwe parabool\n• **a = 1** → de standaard parabool y = x²\n\nVuistregel: hoe groter de a, hoe sneller de parabool omhoog 'schiet'.",
       svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 <path d="M 120 30 Q 150 170 180 30" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
-<text x="115" y="22" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = 3x² (smal)</text>
+<text x="100" y="22" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = 3x²  (a = 3, smal)</text>
 <path d="M 80 40 Q 150 160 220 40" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
-<text x="222" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+<text x="222" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²  (a = 1)</text>
 <path d="M 30 70 Q 150 130 270 70" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
-<text x="35" y="80" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = ½x² (breed)</text>
+<text x="35" y="80" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = ½x²  (a = ½, breed)</text>
 </svg>`,
       checks: [
         {
