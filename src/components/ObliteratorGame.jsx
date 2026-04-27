@@ -786,27 +786,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
     }
 
-    const vleermuizen = [];
-    for (let i = 0; i < 3; i++) {
-      const y = (80 + Math.random() * 180) * SCHAAL;
-      vleermuizen.push({ x: Math.random() * W, y, basisY: y, grootte: (22 + Math.random() * 12) * SCHAAL, fase: Math.random() * Math.PI * 2, snelheid: 1.5 + Math.random() });
-    }
-    function tekenVleermuizen() {
-      for (const v of vleermuizen) {
-        v.x -= v.snelheid + effSnelheid * 0.25;
-        v.fase += 0.15;
-        v.y = v.basisY + Math.sin(v.fase) * 18;
-        if (v.x < -50) { v.x = W + 50; v.basisY = (80 + Math.random() * 180) * SCHAAL; v.snelheid = 1.5 + Math.random(); }
-        ctx.save();
-        ctx.translate(v.x, v.y);
-        const flap = 0.7 + Math.abs(Math.sin(v.fase * 2)) * 0.3;
-        ctx.scale(flap, 1);
-        ctx.globalAlpha = 0.85; ctx.shadowBlur = 12; ctx.shadowColor = biomeKleur("glow", 0.6);
-        ctx.font = `${v.grootte}px serif`; ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText("🛸", 0, 0);
-        ctx.restore();
-      }
-    }
 
     const fakkels = [];
     for (let i = 0; i < 3; i++) fakkels.push({ x: 200 + i * 280 + Math.random() * 80, y: (130 + Math.random() * 80) * SCHAAL, grootte: 36 * SCHAAL });
@@ -1595,7 +1574,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             setTimeout(() => piep(990, 0.06, "sine", 0.12), 60);
             setTimeout(() => piep(1320, 0.08, "sine", 0.10), 120);
           }
-          score += multiplier;
+          // Level-bonus: hogere levels geven meer punten per ring zodat high-score
+          // op L20+ haalbaar blijft ondanks de hogere obstakel-density.
+          // Curve: L1=1×, L5=~1.6×, L10=~2.4×, L20=~3.9×, L50=~8.4×, L100=~15.9×.
+          const levelFactor = 1 + (huidigLevel - 1) * 0.15;
+          score += Math.max(1, Math.round(multiplier * levelFactor));
           scoreElText = score;
 
           // record-checks voor spanning-melding
@@ -2005,7 +1988,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         ctx.restore();
       }
-      tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+      tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
 
       // tint tijdens FLIP
       if (flipFrames > 0) {
@@ -2641,7 +2624,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           for (const l of studiebolLogos) ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
           ctx.restore();
         }
-        tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenVleermuizen(); tekenPlafond(); tekenGrond(); tekenMist();
+        tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
         for (let i = particles.length - 1; i >= 0; i--) {
           particles[i].update(); particles[i].teken();
           if (particles[i].dood) particles.splice(i, 1);
