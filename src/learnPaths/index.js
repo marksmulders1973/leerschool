@@ -8,6 +8,8 @@ import ruimtemeetkunde from "./ruimtemeetkunde";
 import kwadratenWortels from "./kwadratenWortels";
 import pythagoras from "./pythagoras";
 import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen";
+import lineaireFormules from "./lineaireFormules";
+import rekenenMetLetters from "./rekenenMetLetters";
 
 export const ALL_LEARN_PATHS = {
   parabolen,
@@ -15,6 +17,8 @@ export const ALL_LEARN_PATHS = {
   "kwadraten-wortels": kwadratenWortels,
   pythagoras,
   "kwadratische-vergelijkingen": kwadratischeVergelijkingen,
+  "lineaire-formules": lineaireFormules,
+  "rekenen-met-letters": rekenenMetLetters,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

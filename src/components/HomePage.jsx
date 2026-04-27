@@ -1120,6 +1120,40 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Leer kwadratische vergelijkingen stap-voor-stap
               </button>
             )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #1976d2, #0d47a1)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(25,118,210,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "lineaire-formules" }); onLearnPath("lineaire-formules"); }}
+              >
+                <span style={{ fontSize: 18 }}>📈</span>
+                Leer lineaire formules stap-voor-stap
+              </button>
+            )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #00897b, #00695c)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(0,137,123,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "rekenen-met-letters" }); onLearnPath("rekenen-met-letters"); }}
+              >
+                <span style={{ fontSize: 18 }}>🔤</span>
+                Leer rekenen met letters stap-voor-stap
+              </button>
+            )}
             <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
