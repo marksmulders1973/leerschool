@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import supabase from "../supabase";
-import { ALL_LEARN_PATHS } from "../learnPaths/parabolen";
+import { ALL_LEARN_PATHS } from "../learnPaths";
 
 const C = {
   bg: "#0f1729",

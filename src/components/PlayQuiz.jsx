@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../styles.js";
 import { SUBJECTS } from "../constants.js";
 import { SoundEngine, track } from "../utils.js";
-import { findLearnPathForQuestion } from "../learnPaths/parabolen.js";
+import { findLearnPathForQuestion } from "../learnPaths/index.js";
 
 export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome, onLearnPathRequest }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
