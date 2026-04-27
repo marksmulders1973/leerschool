@@ -1069,6 +1069,57 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Leer ruimtemeetkunde stap-voor-stap
               </button>
             )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #9c27b0, #6a1b9a)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(156,39,176,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "kwadraten-wortels" }); onLearnPath("kwadraten-wortels"); }}
+              >
+                <span style={{ fontSize: 18 }}>²</span>
+                Leer kwadraten en wortels stap-voor-stap
+              </button>
+            )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #ff7043, #d84315)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(255,112,67,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "pythagoras" }); onLearnPath("pythagoras"); }}
+              >
+                <span style={{ fontSize: 18 }}>📐</span>
+                Leer Pythagoras stap-voor-stap
+              </button>
+            )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #ffd54f, #f9a825)",
+                  color: "#1a0008",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(255,213,79,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "kwadratische-vergelijkingen" }); onLearnPath("kwadratische-vergelijkingen"); }}
+              >
+                <span style={{ fontSize: 18 }}>🟰</span>
+                Leer kwadratische vergelijkingen stap-voor-stap
+              </button>
+            )}
             <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,

@@ -5,10 +5,16 @@
 
 import parabolen from "./parabolen";
 import ruimtemeetkunde from "./ruimtemeetkunde";
+import kwadratenWortels from "./kwadratenWortels";
+import pythagoras from "./pythagoras";
+import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen";
 
 export const ALL_LEARN_PATHS = {
   parabolen,
   ruimtemeetkunde,
+  "kwadraten-wortels": kwadratenWortels,
+  pythagoras,
+  "kwadratische-vergelijkingen": kwadratischeVergelijkingen,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad
