@@ -921,27 +921,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const cy = speler.y + speler.hoogte / 2;
       const r = speler.breedte / 2;
 
-      // gouden aura tijdens vliegen (immune)
-      if (vliegFrames > 0) {
-        ctx.save();
-        ctx.translate(cx, cy);
-        // pulserend gouden schild
-        const pulse = 0.6 + Math.sin(frameTeller * 0.3) * 0.3;
-        ctx.shadowBlur = 35; ctx.shadowColor = "#ffcc40";
-        ctx.strokeStyle = `rgba(255,204,64,${pulse})`;
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.arc(0, 0, r * 1.6, 0, Math.PI * 2);
-        ctx.stroke();
-        // tweede ring
-        ctx.strokeStyle = `rgba(255,255,255,${pulse * 0.5})`;
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.arc(0, 0, r * 1.9, 0, Math.PI * 2);
-        ctx.stroke();
-        ctx.restore();
-      }
-
       // Tijdens vliegen: speler groeit naar 2.5x — grow eerste 30f, shrink laatste 30f
       let vliegSchaal = 1;
       if (vliegFrames > 0) {
@@ -955,6 +934,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         } else {
           vliegSchaal = 2.5;
         }
+      }
+
+      // gouden schild tijdens vliegen (immune) — schaalt mee met spelergrootte
+      // zodat het schild altijd even ruim om het poppetje sluit, ook als die
+      // groter wordt
+      if (vliegFrames > 0) {
+        ctx.save();
+        ctx.translate(cx, cy);
+        const pulse = 0.6 + Math.sin(frameTeller * 0.3) * 0.3;
+        ctx.shadowBlur = 35 * vliegSchaal; ctx.shadowColor = "#ffcc40";
+        ctx.strokeStyle = `rgba(255,204,64,${pulse})`;
+        ctx.lineWidth = 3 * vliegSchaal;
+        ctx.beginPath();
+        ctx.arc(0, 0, r * 1.6 * vliegSchaal, 0, Math.PI * 2);
+        ctx.stroke();
+        // tweede ring
+        ctx.strokeStyle = `rgba(255,255,255,${pulse * 0.5})`;
+        ctx.lineWidth = 1.5 * vliegSchaal;
+        ctx.beginPath();
+        ctx.arc(0, 0, r * 1.9 * vliegSchaal, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
       }
 
       ctx.save();
@@ -1998,11 +1999,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
-      // raketten tekenen
+      // schild-pickups tekenen (was vroeger 🚀, nu 🛡️ — past beter bij effect "onkwetsbaar")
       for (const r of raketten) {
         ctx.save();
         ctx.translate(r.x, r.y);
-        // pulserende cirkel rondom raket
+        // pulserende cirkel rondom schild
         ctx.shadowBlur = 24;
         ctx.shadowColor = "#ffcc40";
         ctx.strokeStyle = `rgba(255,204,64,${0.4 + Math.sin(r.fase * 2) * 0.3})`;
@@ -2012,7 +2013,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.stroke();
         ctx.font = `${r.grootte}px serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText("🚀", 0, 0);
+        ctx.fillText("🛡️", 0, 0);
         ctx.restore();
       }
 
@@ -2132,7 +2133,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.shadowBlur = 18; ctx.shadowColor = "#ffcc40";
         ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.fillText(`🚀 SCHILD STOPT IN ${sec}`, W / 2, boxY + boxH / 2);
+        ctx.fillText(`🛡️ SCHILD STOPT IN ${sec}`, W / 2, boxY + boxH / 2);
         ctx.restore();
       }
 
@@ -2664,7 +2665,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>🔺 <strong style={{ color: "#ffeb3b" }}>Stekels (op grond én aan plafond)</strong> = vermijden (raken kost 1 leven)</div>
               <div>🟦 <strong style={{ color: "#80c0ff" }}>Lichtblauwe blokken</strong> = veilig om op te springen en overheen te rollen</div>
               <div>❤️ <strong style={{ color: "#ff6b6b" }}>Hartje pakken</strong> = +1 leven (max 5)</div>
-              <div>🚀 <strong style={{ color: "#ffcc40" }}>Raket pakken</strong> = 10 sec ONKWETSBAAR (geen schade van stekels!)</div>
+              <div>🛡️ <strong style={{ color: "#ffcc40" }}>Schild pakken</strong> = 10 sec ONKWETSBAAR (geen schade van stekels!)</div>
               <div>🔄 <strong style={{ color: "#80c0ff" }}>FLIP pakken</strong> = 10 sec ondersteboven op het plafond (na 2 sec waarschuwing)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
