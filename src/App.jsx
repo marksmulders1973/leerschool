@@ -506,7 +506,7 @@ export default function App() {
   };
 
   return (
-    <div style={styles.app}>
+    <div className="app-shell" style={styles.app}>
       <style>{fonts}</style>
 
       {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}

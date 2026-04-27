@@ -182,13 +182,17 @@
     </script>
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
+      body {
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         background: linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%);
         min-height: 100vh;
         -webkit-tap-highlight-color: transparent;
       }
       #root { min-height: 100vh; }
+      /* Responsive container — vroeger hardcoded 480px in styles.app, nu schaalt mee per device. */
+      .app-shell { max-width: 480px; margin: 0 auto; }
+      @media (min-width: 600px)  { .app-shell { max-width: 560px; } }
+      @media (min-width: 1024px) { .app-shell { max-width: 800px; } }
     </style>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9399858013370724" crossorigin="anonymous"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J72M8CBJ9"></script>
