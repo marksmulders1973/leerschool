@@ -72,12 +72,29 @@ const steps = [
   },
   {
     title: "Wat betekent x²?",
-    explanation: "Soms zie je een klein **2**-tje boven een getal of letter staan, zoals **3²** of **x²**. Dat 2-tje heet een **macht**. Het betekent: *vermenigvuldig met zichzelf*.\n\nDus:\n• **3²** = 3 · 3 = **9**\n• **5²** = 5 · 5 = **25**\n• **10²** = 10 · 10 = **100**\n\nBij **x²** doe je hetzelfde: x² betekent **x · x**.\n\nVul een getal in voor x:\n• Als x = 4, dan x² = 4 · 4 = **16**\n• Als x = 7, dan x² = 7 · 7 = **49**\n\nLetterlijk: stop het getal in het doosje x, en vermenigvuldig het dan met zichzelf.",
+    explanation: "Soms zie je een klein **2**-tje boven een getal of letter staan, zoals **3²** of **x²**. Dat 2-tje heet een **macht**. Het betekent: *vermenigvuldig met zichzelf*.\n\nDus:\n• **3²** = 3 · 3 = **9**\n• **5²** = 5 · 5 = **25**\n• **10²** = 10 · 10 = **100**\n\nBij **x²** doe je hetzelfde: x² betekent **x · x**. Vul een getal in voor x:\n• Als x = 4, dan x² = 4 · 4 = **16**\n• Als x = 7, dan x² = 7 · 7 = **49**\n\n**Waarom heet het 'kwadraat'?**\n\nKwadraat is een oud woord voor **vierkant**. En dat slaat ergens op: x² is namelijk de **oppervlakte van een vierkant** waarvan elke zijde lengte x heeft.\n\nKijk naar het plaatje hieronder: een vierkantje van 1 bij 1 heeft 1 hokje. Een vierkantje van 2 bij 2 heeft 2·2 = 4 hokjes. Een vierkantje van 5 bij 5 heeft al 25 hokjes. Hoe groter de zijde x, hoe **veel sneller** het aantal hokjes (de oppervlakte) groeit.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="150" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">x² = x · x</text>
-<text x="150" y="100" text-anchor="middle" fill="${COLORS.curve}" font-size="22" font-family="Arial">3² = 3 · 3 = 9</text>
-<text x="150" y="135" text-anchor="middle" fill="${COLORS.curve2}" font-size="22" font-family="Arial">5² = 5 · 5 = 25</text>
-<text x="150" y="170" text-anchor="middle" fill="${COLORS.point}" font-size="22" font-family="Arial">10² = 10 · 10 = 100</text>
+<defs>
+<pattern id="cell" width="8" height="8" patternUnits="userSpaceOnUse">
+<rect width="8" height="8" fill="rgba(0,200,83,0.28)" stroke="${COLORS.curve}" stroke-width="0.7"/>
+</pattern>
+</defs>
+<text x="150" y="20" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">x² = oppervlakte van een vierkant met zijde x</text>
+<rect x="38" y="132" width="8" height="8" fill="url(#cell)"/>
+<text x="42" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">1²</text>
+<text x="42" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">= 1</text>
+<rect x="78" y="124" width="16" height="16" fill="url(#cell)"/>
+<text x="86" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">2²</text>
+<text x="86" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">= 4</text>
+<rect x="120" y="116" width="24" height="24" fill="url(#cell)"/>
+<text x="132" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">3²</text>
+<text x="132" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">= 9</text>
+<rect x="170" y="108" width="32" height="32" fill="url(#cell)"/>
+<text x="186" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4²</text>
+<text x="186" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">= 16</text>
+<rect x="220" y="100" width="40" height="40" fill="url(#cell)"/>
+<text x="240" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">5²</text>
+<text x="240" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">= 25</text>
 </svg>`,
     checks: [
       {
@@ -494,14 +511,33 @@ ${gridSvg}
   },
   {
     title: "y = 2x² uitrekenen en vergelijken",
-    explanation: "Tijd om te zien wat **a = 2** doet. Pak weer een tabel, met x = 0, 1, 2, 3.\n\n**Regel y = 2x²** → eerst x² uitrekenen, dan **maal 2**:\n\n| x | x² | y = 2x² |\n|---|----|---------|\n| 0 | 0 | 0 |\n| 1 | 1 | 2 |\n| 2 | 4 | 8 |\n| 3 | 9 | 18 |\n\nVergelijk met y = x²:\n\n| x | y = x² | y = 2x² |\n|---|--------|---------|\n| 1 | 1 | 2 |\n| 2 | 4 | 8 |\n| 3 | 9 | 18 |\n\nDe y-waardes zijn bij y = 2x² **twee keer zo groot**. De parabool stijgt dus **sneller** — hij wordt **smaller**.",
-    svg: `<svg viewBox="0 0 300 200">
-${baseAxes}
-${gridSvg}
-<path d="M 130 30 Q 150 170 170 30" stroke="${COLORS.curveAlt}" stroke-width="2.5" fill="none"/>
-<text x="100" y="22" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = 2x² (smaller)</text>
-<path d="M 90 44 Q 150 156 210 44" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
-<text x="215" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+    explanation: "Tijd om te zien wat **a = 2** doet. Pak weer een tabel, met x = 0, 1, 2, 3.\n\n**Regel y = 2x²** → eerst x² uitrekenen, dan **maal 2**:\n\n| x | x² | y = 2x² |\n|---|----|---------|\n| 0 | 0 | 0 |\n| 1 | 1 | 2 |\n| 2 | 4 | 8 |\n| 3 | 9 | 18 |\n\nVergelijk met y = x²:\n\n| x | y = x² | y = 2x² |\n|---|--------|---------|\n| 1 | 1 | 2 |\n| 2 | 4 | 8 |\n| 3 | 9 | 18 |\n\nIn het plaatje hieronder zie je het direct: de oranje staaf is bij **elke x precies twee keer zo hoog** als de groene. De parabool stijgt dus 2× zo snel — hij wordt **smaller en steiler**.",
+    svg: `<svg viewBox="0 0 300 210">
+<line x1="20" y1="170" x2="280" y2="170" stroke="${COLORS.axis}" stroke-width="1"/>
+<rect x="40" y="20" width="14" height="0" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="56" y="20" width="14" height="0" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="55" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=0</text>
+<text x="47" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">0</text>
+<text x="63" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">0</text>
+<rect x="100" y="163" width="14" height="7" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="116" y="156" width="14" height="14" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="115" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=1</text>
+<text x="107" y="158" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">1</text>
+<text x="123" y="151" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">2</text>
+<rect x="160" y="142" width="14" height="28" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="176" y="114" width="14" height="56" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="175" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=2</text>
+<text x="167" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">4</text>
+<text x="183" y="109" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">8</text>
+<rect x="220" y="107" width="14" height="63" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="236" y="44" width="14" height="126" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="235" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=3</text>
+<text x="227" y="102" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">9</text>
+<text x="243" y="39" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">18</text>
+<rect x="40" y="200" width="10" height="6" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="55" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x²</text>
+<rect x="160" y="200" width="10" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="175" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = 2x²  (telkens 2× zo hoog)</text>
 </svg>`,
     checks: [
       {
@@ -519,7 +555,7 @@ ${gridSvg}
   },
   {
     title: "Hoe groter a, hoe smaller",
-    explanation: "Bij **y = ax²** geldt deze regel:\n\n• **a > 1** (groter dan 1) → smal, steile parabool\n• **a = 1** → de standaard y = x²\n• **0 < a < 1** (tussen 0 en 1, zoals ½) → breed, flauwe parabool\n\nIntuïtie: een grotere a *vermenigvuldigt* de y-waardes harder. Bij y = 5x² stijg je 5 keer zo snel als bij y = x², dus de parabool gaat ineens steil omhoog → hij is smal.\n\nBij y = ½x² halveer je elke y, dus hij stijgt langzamer en lijkt breder.",
+    explanation: "Bij **y = ax²** geldt deze regel:\n\n• **a > 1** (groter dan 1) → smal, steile parabool\n• **a = 1** → de standaard y = x²\n• **0 < a < 1** (tussen 0 en 1, zoals ½) → breed, flauwe parabool\n\nKijk maar naar de getallen bij dezelfde x:\n\n| x | y = ½x² | y = x² | y = 3x² |\n|---|---------|--------|---------|\n| 1 | 0,5 | 1 | 3 |\n| 2 | 2 | 4 | 12 |\n| 3 | 4,5 | 9 | 27 |\n\nBij x = 3 zit je bij y = 3x² al op **27**, terwijl y = ½x² nog maar op **4,5** staat. Dezelfde x — heel andere y. Daarom ziet 3x² er smal en steil uit, en ½x² breed en flauw.\n\nIn het plaatje hieronder zie je de drie krommes naast elkaar, met hun a-waardes erbij.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -555,8 +591,32 @@ ${gridSvg}
   },
   {
     title: "y = ½x² uitrekenen",
-    explanation: "Voor de zekerheid even een **brede** parabool uitrekenen. **Regel y = ½x²** → eerst x², dan delen door 2 (of: maal ½):\n\n| x | x² | y = ½x² |\n|---|----|---------|\n| 0 | 0 | 0 |\n| 2 | 4 | 2 |\n| 4 | 16 | 8 |\n| 6 | 36 | 18 |\n\nVergelijk: bij x = 6 was y = 36 voor y = x², maar nu **y = 18**. De helft.\n\nDaarom is deze parabool flauwer en breder — bij dezelfde x stijgt hij **half zo snel** omhoog.",
-    svg: null,
+    explanation: "Voor de zekerheid even een **brede** parabool uitrekenen. **Regel y = ½x²** → eerst x², dan delen door 2 (of: maal ½):\n\n| x | x² | y = ½x² |\n|---|----|---------|\n| 0 | 0 | 0 |\n| 2 | 4 | 2 |\n| 4 | 16 | 8 |\n| 6 | 36 | 18 |\n\nVergelijk: bij x = 6 was y = 36 voor y = x², maar nu **y = 18**. De helft.\n\nIn het plaatje hieronder zie je dat ook: de oranje staaf (y = ½x²) is bij elke x precies **half zo hoog** als de groene (y = x²). Daarom is deze parabool flauwer en breder — hij stijgt langzamer.",
+    svg: `<svg viewBox="0 0 300 210">
+<line x1="20" y1="170" x2="280" y2="170" stroke="${COLORS.axis}" stroke-width="1"/>
+<text x="55" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=0</text>
+<text x="47" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">0</text>
+<text x="63" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">0</text>
+<rect x="100" y="158" width="14" height="12" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="116" y="164" width="14" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="115" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=2</text>
+<text x="107" y="153" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">4</text>
+<text x="123" y="159" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">2</text>
+<rect x="160" y="122" width="14" height="48" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="176" y="146" width="14" height="24" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="175" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=4</text>
+<text x="167" y="117" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">16</text>
+<text x="183" y="141" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">8</text>
+<rect x="220" y="62" width="14" height="108" fill="${COLORS.curve}" opacity="0.85"/>
+<rect x="236" y="116" width="14" height="54" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="235" y="185" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">x=6</text>
+<text x="227" y="57" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">36</text>
+<text x="243" y="111" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">18</text>
+<rect x="40" y="200" width="10" height="6" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="55" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x²</text>
+<rect x="160" y="200" width="10" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="175" y="206" fill="${COLORS.text}" font-size="10" font-family="Arial">y = ½x²  (telkens half zo hoog)</text>
+</svg>`,
     checks: [
       {
         q: "Bij y = ½x²: als x = 8, wat is y?",
@@ -583,8 +643,11 @@ ${gridSvg}
 <text x="200" y="35" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = x² + 2</text>
 <path d="M 90 44 Q 150 156 210 44" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
 <text x="215" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
-<circle cx="150" cy="74" r="3" fill="${COLORS.point}"/>
-<circle cx="150" cy="100" r="3" fill="${COLORS.point}"/>
+<circle cx="150" cy="100" r="3.5" fill="${COLORS.point}"/>
+<circle cx="150" cy="74" r="3.5" fill="${COLORS.point}"/>
+<line x1="168" y1="100" x2="168" y2="78" stroke="${COLORS.point}" stroke-width="2"/>
+<polygon points="168,73 164,82 172,82" fill="${COLORS.point}"/>
+<text x="174" y="92" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">+2 omhoog</text>
 </svg>`,
     checks: [
       {
@@ -610,8 +673,11 @@ ${gridSvg}
 <text x="215" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
 <path d="M 90 84 Q 150 196 210 84" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
 <text x="200" y="170" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = x² − 3</text>
-<circle cx="150" cy="100" r="3" fill="${COLORS.point}"/>
-<circle cx="150" cy="139" r="3" fill="${COLORS.point}"/>
+<circle cx="150" cy="100" r="3.5" fill="${COLORS.point}"/>
+<circle cx="150" cy="139" r="3.5" fill="${COLORS.point}"/>
+<line x1="168" y1="102" x2="168" y2="135" stroke="${COLORS.point}" stroke-width="2"/>
+<polygon points="164,131 172,131 168,140" fill="${COLORS.point}"/>
+<text x="174" y="124" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">−3 omlaag</text>
 </svg>`,
     checks: [
       {
@@ -703,8 +769,26 @@ ${gridSvg}
   },
   {
     title: 'Een nieuwe term: de "b"',
-    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n**y = ax² + bx + c**\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = x² + 5 → a = 1, b = 0 (geen x-term), c = 5\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar links of rechts schuift.",
-    svg: null,
+    explanation: "Tot nu zagen we **y = ax² + c**. Nu voegen we een term toe die de top **horizontaal** kan verschuiven: **bx**.\n\nDe volledige algemene vorm is dan:\n\n**y = ax² + bx + c**\n\nDrie letters dus:\n• **a** = getal vóór x²\n• **b** = getal vóór x (zonder kwadraat)\n• **c** = los getal\n\nVoorbeelden:\n• y = x² + 4x → a = 1, b = 4, c = 0\n• y = 2x² − 6x + 1 → a = 2, b = -6, c = 1\n• y = x² + 5 → a = 1, b = 0 (geen x-term), c = 5\n\nDe **bx**-term zorgt dat de top niet meer netjes op de y-as zit, maar naar **links of rechts** schuift. Kijk naar het plaatje: drie parabolen, allemaal a = 1, maar met verschillende b. De top verspringt horizontaal.",
+    svg: `<svg viewBox="0 0 300 200">
+${baseAxes}
+${gridSvg}
+<path d="M 126 100 Q 138 140 150 100" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
+<path d="M 138 80 Q 150 120 162 80" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
+<path d="M 150 100 Q 162 140 174 100" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
+<circle cx="150" cy="100" r="4" fill="${COLORS.curve}"/>
+<text x="155" y="93" fill="${COLORS.curve}" font-size="9" font-family="Arial" font-weight="bold">(0, 0)</text>
+<circle cx="138" cy="120" r="4" fill="${COLORS.curve2}"/>
+<text x="92" y="135" fill="${COLORS.curve2}" font-size="9" font-family="Arial" font-weight="bold">(-2, -4)</text>
+<circle cx="162" cy="120" r="4" fill="${COLORS.curveAlt}"/>
+<text x="170" y="135" fill="${COLORS.curveAlt}" font-size="9" font-family="Arial" font-weight="bold">(2, -4)</text>
+<rect x="20" y="28" width="10" height="6" fill="${COLORS.curve2}" opacity="0.85"/>
+<text x="34" y="34" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x² + 4x  (b = +4 → top naar links)</text>
+<rect x="20" y="44" width="10" height="6" fill="${COLORS.curve}" opacity="0.85"/>
+<text x="34" y="50" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x²  (b = 0 → top in het midden)</text>
+<rect x="20" y="60" width="10" height="6" fill="${COLORS.curveAlt}" opacity="0.85"/>
+<text x="34" y="66" fill="${COLORS.text}" font-size="10" font-family="Arial">y = x² − 4x  (b = -4 → top naar rechts)</text>
+</svg>`,
     checks: [
       {
         q: "In y = 2x² + 6x + 1, wat is b?",
@@ -789,8 +873,20 @@ ${gridSvg}
   },
   {
     title: "Nulpunten van y = x² − 9",
-    explanation: "Om de nulpunten te vinden, **stel y = 0** in en los op:\n\n**Voorbeeld**: y = x² − 9\n\n1. Stel y = 0: **x² − 9 = 0**\n2. Zet de 9 naar de andere kant: **x² = 9**\n3. Welke x maakt dat x² = 9? Dat zijn er **twee**: x = 3 of x = −3 (want 3·3 = 9 én −3·−3 = 9)\n\nDe nulpunten zijn dus **x = 3** en **x = −3**.\n\nDit kun je ook in de tabel checken: bij x = 3 is y = 9 − 9 = 0 ✓. Bij x = −3 is y = 9 − 9 = 0 ✓.\n\n**Vuistregel** voor y = x² − getal: de nulpunten zijn ± de wortel van het getal.\n• y = x² − 16 → x² = 16 → x = ±4\n• y = x² − 25 → x² = 25 → x = ±5",
-    svg: null,
+    explanation: "Om de nulpunten te vinden, **stel y = 0** in en los op:\n\n**Voorbeeld**: y = x² − 9\n\n1. Stel y = 0: **x² − 9 = 0**\n2. Zet de 9 naar de andere kant: **x² = 9**\n3. Welke x maakt dat x² = 9? Dat zijn er **twee**: x = 3 of x = −3 (want 3·3 = 9 én −3·−3 = 9)\n\nDe nulpunten zijn dus **x = 3** en **x = −3**.\n\nIn het plaatje hieronder zie je het direct: de parabool zakt naar zijn top op (0, −9), en snijdt de x-as op precies twee plekken — die gele puntjes zijn de nulpunten.\n\n**Vuistregel** voor y = x² − getal: de nulpunten zijn ± de wortel van het getal.\n• y = x² − 16 → x² = 16 → x = ±4\n• y = x² − 25 → x² = 25 → x = ±5",
+    svg: `<svg viewBox="0 0 300 200">
+${baseAxes}
+${gridSvg}
+<path d="M 126 79 Q 150 175 174 79" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
+<circle cx="132" cy="100" r="6" fill="${COLORS.point}"/>
+<text x="98" y="92" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">x = -3</text>
+<circle cx="168" cy="100" r="6" fill="${COLORS.point}"/>
+<text x="172" y="92" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">x = 3</text>
+<circle cx="150" cy="127" r="4" fill="${COLORS.curveAlt}"/>
+<text x="156" y="142" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">top (0, -9)</text>
+<text x="180" y="60" fill="${COLORS.curve}" font-size="11" font-family="Arial" font-weight="bold">y = x² − 9</text>
+<text x="40" y="190" fill="#8899aa" font-size="9" font-family="Arial" font-style="italic">de parabool snijdt de x-as twee keer — daar zijn de nulpunten</text>
+</svg>`,
     checks: [
       {
         q: "Wat zijn de nulpunten van y = x² − 16?",
