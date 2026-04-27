@@ -18,6 +18,7 @@ import verhoudingen from "./verhoudingen";
 import statistiek from "./statistiek";
 import goniometrie from "./goniometrie";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
+import argumentatieleer from "./argumentatieleer";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -41,6 +42,7 @@ export const ALL_LEARN_PATHS = {
   statistiek,
   // Nederlands
   werkwoordsvervoeging,
+  argumentatieleer,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

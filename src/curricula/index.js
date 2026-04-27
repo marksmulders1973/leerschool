@@ -91,6 +91,21 @@ export const CURRICULA = {
       },
     ],
   },
+  "nederlands-havo4": {
+    id: "nederlands-havo4",
+    title: "Nederlands — Havo 4",
+    subject: "taal",
+    emoji: "💬",
+    intro:
+      "Examenstof leesvaardigheid: argumentatieleer (standpunten, argumentatieschema's, drogredenen). Past bij elke gangbare methode (Kern, Nieuw Nederlands, Talent, Op Niveau) — eigen uitleg en oefenvragen.",
+    phases: [
+      {
+        title: "Argumentatie & leesvaardigheid",
+        emoji: "💬",
+        pathIds: ["argumentatieleer"],
+      },
+    ],
+  },
 };
 
 // Hulp: alle pathIds in een curriculum (in volgorde, plat).
