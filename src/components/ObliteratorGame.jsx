@@ -17,16 +17,68 @@ async function laadTopScores() {
   } catch { return []; }
 }
 
+// Pending high-scores die nog niet naar Supabase zijn gepusht (offline gespeeld).
+// Wordt geflusht bij component-mount en bij 'online' event.
+const PENDING_SCORES_KEY = "obliterator-pending-scores";
+
+function leesPendingScores() {
+  try {
+    const raw = localStorage.getItem(PENDING_SCORES_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch { return []; }
+}
+function schrijfPendingScores(arr) {
+  try { localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(arr || [])); } catch {}
+}
+function pushNaarPendingQueue(payload) {
+  const queue = leesPendingScores();
+  queue.push({ ...payload, _gespeeld_op: Date.now() });
+  // cap op 50 om localStorage-bloat te voorkomen
+  if (queue.length > 50) queue.splice(0, queue.length - 50);
+  schrijfPendingScores(queue);
+}
+
 async function schrijfScore(naam, userId, score, level) {
   if (!score || score <= 0) return;
+  const payload = {
+    player_name: (naam || "Speler").slice(0, 30),
+    user_id: userId || null,
+    score,
+    level: level || null,
+  };
+  // Direct queue-en zodra offline; vermijdt onnodige network-call die zeker faalt.
+  if (typeof navigator !== "undefined" && navigator.onLine === false) {
+    pushNaarPendingQueue(payload);
+    return;
+  }
   try {
-    await supabase.from("obliterator_scores").insert({
-      player_name: (naam || "Speler").slice(0, 30),
-      user_id: userId || null,
-      score,
-      level: level || null,
-    });
-  } catch {}
+    const { error } = await supabase.from("obliterator_scores").insert(payload);
+    if (error) throw error;
+  } catch {
+    // Network-failure of API-fout: bewaar lokaal en flush bij volgende online-moment.
+    pushNaarPendingQueue(payload);
+  }
+}
+
+async function flushPendingScores() {
+  if (typeof navigator !== "undefined" && navigator.onLine === false) return;
+  const queue = leesPendingScores();
+  if (!queue.length) return;
+  const overgebleven = [];
+  for (const item of queue) {
+    try {
+      const { error } = await supabase.from("obliterator_scores").insert({
+        player_name: item.player_name,
+        user_id: item.user_id,
+        score: item.score,
+        level: item.level,
+      });
+      if (error) overgebleven.push(item);
+    } catch {
+      overgebleven.push(item);
+    }
+  }
+  schrijfPendingScores(overgebleven);
 }
 
 const SESSIE_KEY_PREFIX = "obliterator-sessies-";
@@ -178,6 +230,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     });
     return () => { actief = false; };
   }, [fase]);
+
+  // Offline-scores syncen: flush queue bij mount, en automatisch zodra browser weer online komt.
+  // Maakt dat scores die offline (bv. in de auto) zijn gespeeld alsnog meetellen voor leaderboard.
+  useEffect(() => {
+    flushPendingScores().then(() => laadTopScores().then(s => setHighscores(s))).catch(() => {});
+    const opOnline = () => {
+      flushPendingScores().then(() => laadTopScores().then(s => setHighscores(s))).catch(() => {});
+    };
+    window.addEventListener("online", opOnline);
+    return () => window.removeEventListener("online", opOnline);
+  }, []);
 
   const persoonlijkRecord = highscores
     .filter(h => h.naam === (userName || "Speler"))
