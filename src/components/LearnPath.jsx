@@ -525,6 +525,39 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   </div>
                 </div>
               </div>
+              {(() => {
+                const repSvg = stepsInCh.map((i) => path.steps[i]?.svg).find((s) => s);
+                if (!repSvg) return null;
+                const sizedSvg = repSvg.replace(
+                  /<svg\b([^>]*)>/i,
+                  (m, attrs) => {
+                    const cleaned = attrs.replace(/\s(width|height|style)="[^"]*"/g, "");
+                    return `<svg${cleaned} style="height:100%;width:auto;display:block;">`;
+                  }
+                );
+                return (
+                  <div
+                    style={{
+                      margin: "10px 12px 4px",
+                      padding: 6,
+                      background: "#0a1424",
+                      border: `1px solid ${C.border}`,
+                      borderRadius: 10,
+                      height: 96,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      overflow: "hidden",
+                      opacity: allDone ? 0.55 : 1,
+                    }}
+                  >
+                    <div
+                      style={{ height: "100%", display: "flex", alignItems: "center" }}
+                      dangerouslySetInnerHTML={{ __html: sizedSvg }}
+                    />
+                  </div>
+                );
+              })()}
               <div style={{ padding: "8px 8px" }}>
                 {stepsInCh.map((idx) => {
                   const s = path.steps[idx];
