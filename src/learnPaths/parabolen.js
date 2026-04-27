@@ -41,9 +41,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Een rechte lijn hoort bij een lineaire functie (y = ax + b). Een parabool buigt — een lijn niet.",
-            "Een cirkel buigt steeds dezelfde kant op. Een parabool buigt op de assen-as om: hij gaat eerst naar beneden en dan weer omhoog (of andersom).",
-            "Een parabool is juist heel vloeiend en heeft geen hoeken of knikken.",
+            "Een lijn buigt niet. Een parabool wel — kijk nog eens naar het plaatje hierboven.",
+            "Een cirkel sluit zich. Loopt een parabool ook helemaal terug naar het beginpunt?",
+            "Heeft het plaatje hierboven hoeken of knikken? Of is het vloeiend?",
           ],
         },
         {
@@ -52,7 +52,7 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Toch wel! Door het midden van elke parabool kun je een spiegel-as tekenen. Links en rechts daarvan is de vorm precies gelijk.",
+            "Kijk nog eens naar het plaatje. Als je een lijn door het midden trekt — kun je dan zien dat links en rechts gelijk zijn?",
           ],
         },
       ],
@@ -76,7 +76,7 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Kijk naar het teken vóór x². Er staat een **min**, dus het is een bergparabool (∩-vorm met een hoogste punt).",
+            "Kijk goed naar wat er vóór x² staat. Welk teken zie je daar — plus of min? En wat hoort daarbij?",
           ],
         },
         {
@@ -85,9 +85,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "De bergparabool opent naar beneden — daar zit het hoogste punt bovenaan, niet een laagste punt.",
-            "Nee, alleen één van de twee: de dalparabool. Een bergparabool heeft een hoogste punt.",
-            "Elke parabool heeft een top. Bij een dal is dat het laagste punt.",
+            "Een bergparabool opent naar beneden (∩). Zit zijn top hoog of laag?",
+            "Eén van de twee heeft een laagste punt, niet allebei. Welke vorm heeft echt een dieptepunt?",
+            "Elke parabool heeft een top — een hoogste of laagste punt. Welke soort heeft een laagste?",
           ],
         },
         {
@@ -96,7 +96,7 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Het getal 5 staat positief vóór x² (geen min). Dus dal.",
+            "Bergparabool hoort bij een **min**-teken vóór x². Staat er hier een min?",
           ],
         },
       ],
@@ -120,9 +120,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "y = x² is de standaard. Een grotere a maakt 'm smaller, een kleinere a breder.",
-            "½ is kleiner dan 1, dus juist breder dan y = x².",
-            "0,1 is heel klein, dus heel breed.",
+            "y = x² is de standaard (a = 1). Welke a in de lijst is groter dan 1?",
+            "½ is kleiner dan 1. Maakt een kleinere a 'm smaller of juist breder?",
+            "0,1 is een heel klein getal. Wat doet een kleine a met de breedte?",
           ],
         },
         {
@@ -131,9 +131,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Geen min vóór x², dus dal — niet berg.",
-            "Geen min, dus dal — al is hij wel breed.",
-            "100 is positief, dus dal (en heel smal).",
+            "Bergparabool herken je aan het teken vóór x². Welk teken staat er bij deze vergelijking?",
+            "Welk teken staat hier vóór ½x²? En hoort dat bij dal of berg?",
+            "100 is een positief getal — geen min. Wat hoort daarbij?",
           ],
         },
       ],
@@ -157,9 +157,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Het is +5, niet -5. Een plus duwt de parabool omhoog.",
-            "Met + c verschuif je verticaal (omhoog/omlaag), niet horizontaal.",
-            "Bij y = x² is de top (0,0). Bij y = x² + 5 is de top (0, 5) — wel degelijk verschoven.",
+            "Plus en min werken anders. Een +c duwt 'm één kant op, een −c de andere. Welke kant hoort bij +5?",
+            "Met +c en −c beweeg je verticaal (op de y-as). Past 'naar rechts' daarbij?",
+            "Bij y = x² is de top (0, 0). Verandert de +5 daar iets aan?",
           ],
         },
         {
@@ -168,9 +168,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "De −4 verschuift de parabool omlaag. De top zit dus 4 onder de x-as.",
-            "Bij y = x² zit de top op (0, 0), maar door de −4 schuift hij omlaag naar (0, -4).",
-            "−4 betekent omlaag, niet horizontaal naar rechts. De top blijft op de y-as (x = 0).",
+            "Een −c duwt de parabool één kant op. Komt de top dan precies óp de x-as terecht, of erlangs?",
+            "Een **min** vóór een getal — duwt dat omhoog of omlaag?",
+            "(4, 0) zou betekenen: 4 naar rechts, 0 omhoog. Maar een +c of −c verschuift verticaal, niet horizontaal.",
           ],
         },
       ],
@@ -192,9 +192,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Bij y = x² + c zit de top op de y-as, dus x = 0. De c is hier 7, dus y = 7.",
-            "Geen verschuiving, dus standaard top is (0, 0). Maar +7 verschuift 'm omhoog naar (0, 7).",
-            "+7 verschuift omhoog (positieve y), niet omlaag.",
+            "(7, 0) zou 7 naar rechts zijn. Maar +7 verschuift verticaal, niet horizontaal — kijk nog eens.",
+            "(0, 0) is de top van y = x² zonder iets erbij. Maar er staat +7 — verandert dat de top niet?",
+            "Het is een **plus** 7, geen min. Welke richting duwt een plus?",
           ],
         },
         {
@@ -203,9 +203,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Het min-teken zit al in de formule. x_top = -(-6)/(2·3) = 6/6 = +1, niet -1.",
-            "Reken nog eens: −b/(2a) = −(−6)/(2·3) = 6/6 = 1.",
-            "6 is alleen het tussenresultaat (boven de breukstreep). Je moet nog delen door 2a = 6.",
+            "De formule is x_top = −b / (2a). Hier is b = **−6** (mét minteken). Wat doet −(−6)?",
+            "Vul nog eens precies in: a = 3, b = −6. Wat geeft −b dan? En 2a?",
+            "6 is alleen het bovenste deel van −b/(2a). Je moet nog delen door 2a — wat is 2a hier?",
           ],
         },
       ],
@@ -228,9 +228,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "x² = 16 betekent: welk getal in het kwadraat is 16? Dat is 4 (en −4), niet 16 zelf.",
-            "Het zijn er twee: niet alleen het positieve, maar ook het negatieve. Want (−4)² = 16 ook.",
-            "Er bestaat een x waarvoor x² = 16, namelijk x = 4 of x = −4. Dus wel degelijk nulpunten.",
+            "x² = 16 vraagt: welk getal kwadraat is 16? Probeer eens 16·16 — is dat 16?",
+            "x² = 16 heeft niet één maar twéé oplossingen (positief én negatief). Welke twee?",
+            "Probeer y = 0 in te vullen: x² − 16 = 0, dus x² = 16. Heeft dat een oplossing?",
           ],
         },
         {
@@ -239,9 +239,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "x² + 1 = 0 zou betekenen x² = −1. Maar een kwadraat is nooit negatief, dus er is geen oplossing.",
-            "Voor 2 nulpunten zou je een minteken vóór de losse term nodig hebben (x² − iets). Hier is het +1.",
-            "Een parabool snijdt een lijn (de x-as) maximaal 2 keer.",
+            "Stel y = 0: x² + 1 = 0, dus x² = −1. Kan een kwadraat ooit negatief worden?",
+            "Welk teken vóór de losse term geeft 2 nulpunten? Plus of min? Wat staat er hier?",
+            "Een parabool snijdt een lijn (de x-as) hooguit een paar keer — niet eindeloos vaak.",
           ],
         },
       ],
@@ -271,9 +271,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Het teken vóór x² is +, dus dal — niet berg. En de top zit op (0, −4), niet (0, 4).",
-            "De top klopt niet: bij −4 schuift de parabool omlaag, dus de top zit op (0, −4).",
-            "De top klopt, maar er zijn wél nulpunten: x² = 4 geeft x = ±2.",
+            "Twee dingen kloppen niet hier: kijk naar het teken vóór x² (dal of berg?), en kijk waar een **−4** de top heen duwt.",
+            "Soort parabool en nulpunten kloppen, maar de top niet: schuift een −4 de top omhoog of omlaag?",
+            "Soort en top kloppen, maar geen nulpunten? Probeer y = 0 in te vullen: heeft x² − 4 = 0 een oplossing?",
           ],
         },
         {
@@ -287,9 +287,9 @@ ${baseAxes}
           answer: 0,
           wrongHints: [
             null,
-            "Pas op met het min-teken in de formule: x_top = −b/(2a) = −6/2 = −3, niet +3.",
-            "x_top klopt, maar reken y nog eens: y_top = (−3)² + 6·(−3) = 9 − 18 = −9, niet +9.",
-            "Vergeet niet x_top = −b/(2a) toe te passen. b = 6, a = 1, dus x_top = −6/2 = −3.",
+            "Pas op met de min in x_top = **−**b/(2a). Hier is b = +6. Wat wordt −b dan?",
+            "x_top klopt — maar reken y_top opnieuw: vul x = −3 in y = x² + 6x in. Let op het teken!",
+            "Heb je x_top = −b/(2a) toegepast? b = 6, dus −b = ... en 2a = ...",
           ],
         },
       ],
