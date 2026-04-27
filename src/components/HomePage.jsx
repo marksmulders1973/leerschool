@@ -1154,6 +1154,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Leer rekenen met letters stap-voor-stap
               </button>
             )}
+            {onLearnPath && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #ec407a, #ad1457)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(236,64,122,0.35)",
+                }}
+                onClick={() => { track("learn_path_from_home", { path: "vlakke-figuren" }); onLearnPath("vlakke-figuren"); }}
+              >
+                <span style={{ fontSize: 18 }}>📐</span>
+                Leer vlakke figuren stap-voor-stap
+              </button>
+            )}
             <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
