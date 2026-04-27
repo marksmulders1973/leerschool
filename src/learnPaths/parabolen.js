@@ -33,6 +33,19 @@ const gridSvg = (() => {
   return lines;
 })();
 
+// Mini-emoji per stap (zelfde volgorde als steps[])
+const stepEmojis = [
+  "📦", "²", "📋", "📊",                          // A. Helemaal het begin
+  "➕", "📍", "📈",                                // B. Assenstelsel
+  "🧮", "✨", "🌊", "📐",                          // C. Parabool ontdekken
+  "🥣", "⛰️", "🔍",                                 // D. Dal/berg
+  "🅰️", "✖️", "↔️", "〰️",                            // E. De a
+  "⬆️", "⬇️", "🆑",                                  // F. Schuiven
+  "🎯", "📌", "🅱️", "🧮",                            // G. Top vinden
+  "⚓", "✂️", "🚫",                                  // H. Nulpunten
+  "⚽", "⛲", "🎓", "🏆",                             // I. Toepassingen + eindopdrachten
+];
+
 const chapters = [
   { letter: "A", title: "Helemaal het begin", emoji: "🌱", from: 0, to: 3 },
   { letter: "B", title: "Tekenen op een assenstelsel", emoji: "📊", from: 4, to: 6 },
@@ -1073,6 +1086,9 @@ ${gridSvg}
     ],
   },
 ];
+
+// Koppel emoji aan elke stap
+steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const parabolen = {
   id: "parabolen",

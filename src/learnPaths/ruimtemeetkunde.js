@@ -15,6 +15,17 @@ const COLORS = {
   muted: "#8899aa",
 };
 
+// Mini-emoji per stap (zelfde volgorde als steps[])
+const stepEmojis = [
+  "🟩", "▭", "🔺",                    // A. Oppervlakte
+  "📏", "🤔", "⭕",                    // B. Omtrek
+  "🎲", "🧊", "⬜", "📦",              // C. Inhoud balk/kubus
+  "🥫", "🔵", "🔻", "🍦",              // D. Cilinder/piramide/kegel
+  "🔍", "✖️", "🔢",                    // E. Vergrotingsfactor
+  "↔️", "🔁", "🟦", "🟫", "📋",        // F. k/k²/k³ regel
+  "🧱", "🏛️", "🐠",                    // G. Eindopdrachten
+];
+
 const chapters = [
   { letter: "A", title: "Oppervlakte (2D)", emoji: "🟩", from: 0, to: 2 },
   { letter: "B", title: "Omtrek (2D)", emoji: "📏", from: 3, to: 5 },
@@ -836,6 +847,9 @@ const steps = [
     ],
   },
 ];
+
+// Koppel emoji aan elke stap
+steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const ruimtemeetkunde = {
   id: "ruimtemeetkunde",

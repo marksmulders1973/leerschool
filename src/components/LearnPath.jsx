@@ -562,6 +562,11 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                       <span style={{ flex: 1, color: done ? C.muted : "#fff", fontWeight: isNext ? 700 : 500 }}>
                         {s.title}
                       </span>
+                      {s.emoji && (
+                        <span style={{ fontSize: 16, marginLeft: 4, opacity: done ? 0.55 : 0.95 }}>
+                          {s.emoji}
+                        </span>
+                      )}
                       <span style={{ color: C.muted, fontSize: 14 }}>›</span>
                     </button>
                   );
