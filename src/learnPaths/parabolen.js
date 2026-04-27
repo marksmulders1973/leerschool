@@ -30,9 +30,9 @@ const parabolen = {
       explanation: "Een parabool is een vloeiende, symmetrische kromme in de vorm van een **U** (of omgekeerde U). Je ziet 'm bij een fontein, bij de baan van een gegooide bal en bij satellietschotels.\n\nDe simpelste parabool heeft de vergelijking **y = x²**. Voor elke x reken je x maal x uit, en dat is de y-waarde.\n\nBelangrijk: een parabool is altijd **spiegelsymmetrisch** — links en rechts van het midden is hij precies gelijk.",
       svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
-<path d="M 80 160 Q 150 -40 220 160" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
-<line x1="150" y1="40" x2="150" y2="160" stroke="${COLORS.curve2}" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="158" y="55" fill="${COLORS.curve2}" font-size="10" font-family="Arial">spiegel-as</text>
+<path d="M 80 40 Q 150 240 220 40" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
+<line x1="150" y1="40" x2="150" y2="170" stroke="${COLORS.curve2}" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="158" y="60" fill="${COLORS.curve2}" font-size="10" font-family="Arial">spiegel-as</text>
 </svg>`,
       checks: [
         {
@@ -62,11 +62,11 @@ ${baseAxes}
       explanation: "Er zijn twee soorten parabolen:\n\n• **Dalparabool** — opent naar **boven**, vorm van een U, heeft een **laagste punt** (de top zit onderaan).\n• **Bergparabool** — opent naar **beneden**, vorm van een ∩, heeft een **hoogste punt** (de top zit bovenaan).\n\nHoe weet je welke je hebt? Kijk naar het **teken vóór x²**:\n\n• **y = x²** of **y = 2x²** → **plus**, dus **dal**parabool\n• **y = -x²** of **y = -3x²** → **min**, dus **berg**parabool",
       svg: `<svg viewBox="0 0 300 200">
 <line x1="10" y1="100" x2="290" y2="100" stroke="${COLORS.axis}" stroke-width="1"/>
-<path d="M 30 170 Q 80 0 130 170" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
-<text x="60" y="190" fill="${COLORS.curve}" font-size="11" font-family="Arial">dalparabool</text>
+<path d="M 30 30 Q 80 200 130 30" stroke="${COLORS.curve}" stroke-width="2.5" fill="none"/>
+<text x="58" y="195" fill="${COLORS.curve}" font-size="11" font-family="Arial">dalparabool</text>
 <text x="78" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
-<path d="M 170 30 Q 220 200 270 30" stroke="${COLORS.curveAlt}" stroke-width="2.5" fill="none"/>
-<text x="195" y="190" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">bergparabool</text>
+<path d="M 170 170 Q 220 0 270 170" stroke="${COLORS.curveAlt}" stroke-width="2.5" fill="none"/>
+<text x="195" y="195" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">bergparabool</text>
 <text x="210" y="155" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = -x²</text>
 </svg>`,
       checks: [
@@ -106,12 +106,12 @@ ${baseAxes}
       explanation: "De **a** is het getal vóór x². Hij doet twee dingen:\n\n**1. Teken (+ of −)**: bepaalt of het dal of berg is (dat weet je al).\n\n**2. Grootte**: bepaalt hoe **smal of breed** de parabool is.\n• **a groot** (zoals 3 of 5) → **smalle**, steile parabool\n• **a klein** (zoals ½ of 0,2) → **brede**, flauwe parabool\n• **a = 1** → de standaard parabool y = x²\n\nVuistregel: een grotere a 'duwt' de parabool sneller omhoog.",
       svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
-<path d="M 110 160 Q 150 -200 190 160" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
-<text x="115" y="50" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = 3x² (smal)</text>
-<path d="M 80 160 Q 150 -40 220 160" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
-<text x="222" y="105" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
-<path d="M 30 160 Q 150 60 270 160" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
-<text x="35" y="155" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = ½x² (breed)</text>
+<path d="M 120 30 Q 150 170 180 30" stroke="${COLORS.curveAlt}" stroke-width="2" fill="none"/>
+<text x="115" y="22" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial">y = 3x² (smal)</text>
+<path d="M 80 40 Q 150 160 220 40" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
+<text x="222" y="50" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+<path d="M 30 70 Q 150 130 270 70" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
+<text x="35" y="80" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = ½x² (breed)</text>
 </svg>`,
       checks: [
         {
@@ -143,12 +143,12 @@ ${baseAxes}
       explanation: "We bouwen de vergelijking nu uit naar **y = ax² + c**.\n\nDe **c** verschuift de hele parabool **omhoog of omlaag**:\n\n• **+ c** (positief) → parabool schuift **omhoog**\n• **− c** (negatief) → parabool schuift **omlaag**\n\nVoorbeeld: y = x² + 3 is dezelfde vorm als y = x², maar de top zit nu op (0, 3) — dus 3 hoger.\n\nDe **vorm** verandert niet, alleen de **plek**.",
       svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
-<path d="M 90 100 Q 150 -100 210 100" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
-<text x="200" y="60" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = x² + 3</text>
-<path d="M 80 160 Q 150 -40 220 160" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
-<text x="225" y="115" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+<path d="M 90 20 Q 150 140 210 20" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
+<text x="200" y="35" fill="${COLORS.curve2}" font-size="10" font-family="Arial">y = x² + 3</text>
+<path d="M 80 40 Q 150 160 220 40" stroke="${COLORS.curve}" stroke-width="2" fill="none"/>
+<text x="225" y="60" fill="${COLORS.curve}" font-size="10" font-family="Arial">y = x²</text>
+<circle cx="150" cy="70" r="3" fill="${COLORS.point}"/>
 <circle cx="150" cy="100" r="3" fill="${COLORS.point}"/>
-<circle cx="150" cy="160" r="3" fill="${COLORS.point}"/>
 </svg>`,
       checks: [
         {
