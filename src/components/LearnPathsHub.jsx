@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import supabase from "../supabase";
 import { ALL_LEARN_PATHS } from "../learnPaths";
+import { CURRICULA, curriculumTotalSteps } from "../curricula";
 
 const C = {
   bg: "#0f1729",
@@ -39,7 +40,7 @@ const SUBJECT_LABELS = {
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 
-export default function LearnPathsHub({ userName, authUser, onPickPath, onHome, onBack }) {
+export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCurriculum, onHome, onBack }) {
   const player = (userName || "Speler").trim() || "Speler";
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
@@ -146,7 +147,111 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onHome, 
         )}
       </div>
 
+      {onPickCurriculum && Object.keys(CURRICULA).length > 0 && (
+        <div style={{ padding: "4px 14px 8px" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "8px 4px 12px",
+              fontFamily: "'Fredoka', sans-serif",
+              fontSize: 16,
+              color: C.text,
+              fontWeight: 700,
+            }}
+          >
+            <span style={{ fontSize: 20 }}>🎓</span>
+            <span>Hele leerlijn — per klas</span>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 18 }}>
+            {Object.values(CURRICULA).map((cur) => {
+              const allPathIds = cur.phases.flatMap((p) => p.pathIds);
+              const total = curriculumTotalSteps(cur.id);
+              const done = allPathIds.reduce(
+                (s, pid) => s + (progressByPath[pid]?.size || 0),
+                0
+              );
+              const pct = total ? Math.round((done / total) * 100) : 0;
+              const isStarted = done > 0;
+              const isComplete = done >= total && total > 0;
+              return (
+                <button
+                  key={cur.id}
+                  onClick={() => onPickCurriculum(cur.id)}
+                  style={curriculumCard(isComplete)}
+                >
+                  <div
+                    style={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 12,
+                      background: isComplete
+                        ? `linear-gradient(135deg, ${C.good}, #00a040)`
+                        : `linear-gradient(135deg, ${C.warm}, #f9a825)`,
+                      color: isComplete ? "#fff" : "#1a0008",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 24,
+                      flexShrink: 0,
+                      boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                    }}
+                  >
+                    {cur.emoji}
+                  </div>
+                  <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
+                      <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#fff", fontWeight: 700 }}>
+                        {cur.title}
+                      </span>
+                      {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
+                    </div>
+                    <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 5 : 0 }}>
+                      {allPathIds.length} leerpaden · {total} stappen totaal
+                    </div>
+                    {isStarted && (
+                      <div>
+                        <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                          <div
+                            style={{
+                              height: "100%",
+                              width: `${pct}%`,
+                              background: `linear-gradient(90deg, ${C.warm}, ${C.good})`,
+                              transition: "width 0.4s",
+                            }}
+                          />
+                        </div>
+                        <div style={{ fontSize: 11, color: C.warm, marginTop: 3, fontWeight: 700 }}>
+                          {done}/{total} · {pct}%
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       <div style={{ padding: "0 14px 32px" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "8px 4px 12px",
+            fontFamily: "'Fredoka', sans-serif",
+            fontSize: 16,
+            color: C.text,
+            fontWeight: 700,
+          }}
+        >
+          <span style={{ fontSize: 20 }}>🎯</span>
+          <span>Of kies een los onderwerp</span>
+        </div>
         {Object.entries(grouped).map(([subject, pathList]) => {
           const meta = SUBJECT_LABELS[subject] || { title: subject, emoji: "📘" };
           return (
@@ -323,5 +428,22 @@ function pathCard(theme, isComplete) {
     transition: "transform 0.2s, border-color 0.2s",
     fontFamily: "'Nunito', sans-serif",
     width: "100%",
+  };
+}
+
+function curriculumCard(isComplete) {
+  return {
+    background: "rgba(40,55,85,0.7)",
+    border: `2px solid ${isComplete ? C.good : C.warm}`,
+    borderRadius: 14,
+    padding: 12,
+    cursor: "pointer",
+    transition: "transform 0.2s, border-color 0.2s",
+    fontFamily: "'Nunito', sans-serif",
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+    boxShadow: "0 3px 12px rgba(255,213,79,0.10)",
   };
 }

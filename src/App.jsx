@@ -28,6 +28,7 @@ import ObliteratorGame from "./components/ObliteratorGame.jsx";
 import AdminFeedback from "./components/AdminFeedback.jsx";
 import LearnPath from "./components/LearnPath.jsx";
 import LearnPathsHub from "./components/LearnPathsHub.jsx";
+import Curriculum from "./components/Curriculum.jsx";
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -154,6 +155,7 @@ export default function App() {
   const [activeLearnPathId, setActiveLearnPathId] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
+  const [activeCurriculumId, setActiveCurriculumId] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -544,7 +546,25 @@ export default function App() {
             setLearnPathReturnPage("learn-paths-hub");
             setPage("learn-path");
           }}
+          onPickCurriculum={(id) => {
+            setActiveCurriculumId(id);
+            setPage("curriculum");
+          }}
           onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
+        />
+      )}
+      {page === "curriculum" && activeCurriculumId && (
+        <Curriculum
+          curriculumId={activeCurriculumId}
+          userName={userName || "Speler"}
+          onPickStep={(pid, stepIdx) => {
+            setActiveLearnPathId(pid);
+            setActiveLearnStepIdx(stepIdx);
+            setLearnPathReturnPage("curriculum");
+            setPage("learn-path");
+          }}
+          onBack={() => setPage("learn-paths-hub")}
           onHome={() => setPage("home")}
         />
       )}
