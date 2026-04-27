@@ -353,6 +353,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const BAKSTEEN_H = 30 * SCHAAL;
 
     let spelSnelheid = START_SNELHEID;
+    // effSnelheid = spelSnelheid * (slowMul) — wordt elke frame in update() gezet,
+    // moet in outer scope staan zodat tekenDecoraties/tekenFakkels/tekenGlasInLood
+    // (gedefinieerd buiten update()) erbij kunnen.
+    let effSnelheid = START_SNELHEID;
     let frameTeller = 0;
     let score = 0;
     let spelLoopt = true;
@@ -1248,7 +1252,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // anders zou de level-tijd-progressie ook in de war raken). Achtergrond-pattern-offsets blijven op
       // spelSnelheid om visuele jitter bij in/uit-fade te voorkomen.
       const slowMul = slowFrames > 0 ? SLOW_FACTOR : 1;
-      const effSnelheid = spelSnelheid * slowMul;
+      effSnelheid = spelSnelheid * slowMul;
       // tijdens boss: spelTijd telt niet door (level-progressie pauzeert)
       if (bossActief) frameTeller--;
 
