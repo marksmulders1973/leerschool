@@ -21,6 +21,7 @@ import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
 import tekstanalyse from "./tekstanalyse";
+import literatuurgeschiedenis from "./literatuurgeschiedenis";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -47,6 +48,7 @@ export const ALL_LEARN_PATHS = {
   argumentatieleer,
   schrijfvaardigheid,
   tekstanalyse,
+  literatuurgeschiedenis,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

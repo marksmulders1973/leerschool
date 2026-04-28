@@ -109,6 +109,11 @@ export const CURRICULA = {
         emoji: "✍️",
         pathIds: ["schrijfvaardigheid"],
       },
+      {
+        title: "Literatuur",
+        emoji: "📚",
+        pathIds: ["literatuurgeschiedenis"],
+      },
     ],
   },
 };
