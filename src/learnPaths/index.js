@@ -18,6 +18,7 @@ import verhoudingen from "./verhoudingen";
 import statistiek from "./statistiek";
 import goniometrie from "./goniometrie";
 import coordinatenstelsel from "./coordinatenstelsel";
+import vergelijkingenOplossen from "./vergelijkingenOplossen";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
@@ -35,6 +36,7 @@ export const ALL_LEARN_PATHS = {
   verhoudingen,
   // Klas 1-2 algebra-basis
   "rekenen-met-letters": rekenenMetLetters,
+  "vergelijkingen-oplossen": vergelijkingenOplossen,
   "kwadraten-wortels": kwadratenWortels,
   // Klas 2 functies
   "lineaire-formules": lineaireFormules,
