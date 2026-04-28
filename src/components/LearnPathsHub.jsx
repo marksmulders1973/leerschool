@@ -45,6 +45,7 @@ const PATH_THEMES = {
   kansrekening: { gradient: "linear-gradient(135deg, #00acc1, #006064)", accent: "#80deea" },
   exponentieel: { gradient: "linear-gradient(135deg, #f4511e, #bf360c)", accent: "#ffab91" },
   differentieren: { gradient: "linear-gradient(135deg, #3949ab, #1a237e)", accent: "#9fa8da" },
+  logaritmen: { gradient: "linear-gradient(135deg, #00838f, #006064)", accent: "#80deea" },
 };
 
 const SUBJECT_LABELS = {
