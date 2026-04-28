@@ -17,6 +17,7 @@ import negatieveGetallen from "./negatieveGetallen";
 import verhoudingen from "./verhoudingen";
 import statistiek from "./statistiek";
 import goniometrie from "./goniometrie";
+import coordinatenstelsel from "./coordinatenstelsel";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
@@ -27,6 +28,7 @@ import zinsontleding from "./zinsontleding";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
+  coordinatenstelsel,
   breuken,
   procenten,
   "negatieve-getallen": negatieveGetallen,

@@ -29,6 +29,11 @@ export const CURRICULA = {
         emoji: "🅰️",
         pathIds: ["verhoudingen", "rekenen-met-letters"],
       },
+      {
+        title: "Coördinaten + grafieken",
+        emoji: "📐",
+        pathIds: ["coordinatenstelsel"],
+      },
     ],
   },
   "wiskunde-klas2": {

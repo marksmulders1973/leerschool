@@ -38,6 +38,7 @@ const PATH_THEMES = {
   literatuurgeschiedenis: { gradient: "linear-gradient(135deg, #bf8f30, #6d4c1d)", accent: "#ffd54f" },
   spelling: { gradient: "linear-gradient(135deg, #26a69a, #00695c)", accent: "#80cbc4" },
   zinsontleding: { gradient: "linear-gradient(135deg, #7e57c2, #4527a0)", accent: "#b39ddb" },
+  coordinatenstelsel: { gradient: "linear-gradient(135deg, #43a047, #1b5e20)", accent: "#a5d6a7" },
 };
 
 const SUBJECT_LABELS = {
