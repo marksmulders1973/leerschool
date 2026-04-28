@@ -77,7 +77,7 @@ export const CURRICULA = {
       {
         title: "Data & kans",
         emoji: "📊",
-        pathIds: ["statistiek"],
+        pathIds: ["statistiek", "kansrekening"],
       },
     ],
   },

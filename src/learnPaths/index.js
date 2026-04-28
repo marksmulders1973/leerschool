@@ -16,6 +16,7 @@ import procenten from "./procenten";
 import negatieveGetallen from "./negatieveGetallen";
 import verhoudingen from "./verhoudingen";
 import statistiek from "./statistiek";
+import kansrekening from "./kansrekening";
 import goniometrie from "./goniometrie";
 import coordinatenstelsel from "./coordinatenstelsel";
 import vergelijkingenOplossen from "./vergelijkingenOplossen";
@@ -51,8 +52,9 @@ export const ALL_LEARN_PATHS = {
   pythagoras,
   goniometrie,
   ruimtemeetkunde,
-  // Statistiek
+  // Statistiek + kans
   statistiek,
+  kansrekening,
   // Nederlands
   werkwoordsvervoeging,
   spelling,
