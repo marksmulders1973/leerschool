@@ -35,6 +35,7 @@ import spelling from "./spelling";
 import zinsontleding from "./zinsontleding";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels";
 import celBiologie from "./celBiologie";
+import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -77,6 +78,8 @@ export const ALL_LEARN_PATHS = {
   "onregelmatige-werkwoorden-engels": onregelmatigeWerkwoordenEngels,
   // Biologie
   "cel-biologie": celBiologie,
+  // Geschiedenis
+  "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

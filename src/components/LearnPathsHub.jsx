@@ -49,6 +49,7 @@ const PATH_THEMES = {
   periodiek: { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
   "onregelmatige-werkwoorden-engels": { gradient: "linear-gradient(135deg, #c62828, #1565c0)", accent: "#90caf9" },
   "cel-biologie": { gradient: "linear-gradient(135deg, #00b84d, #1b5e20)", accent: "#a5d6a7" },
+  "tijdvakken-geschiedenis": { gradient: "linear-gradient(135deg, #6d4c41, #3e2723)", accent: "#bcaaa4" },
 };
 
 const SUBJECT_LABELS = {
@@ -56,6 +57,7 @@ const SUBJECT_LABELS = {
   taal: { title: "Nederlands", emoji: "📖" },
   engels: { title: "Engels", emoji: "🇬🇧" },
   biologie: { title: "Biologie", emoji: "🧬" },
+  geschiedenis: { title: "Geschiedenis", emoji: "🏛️" },
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 

@@ -18,6 +18,8 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   engels: "engels",
   "engels-po": "engels",
   biologie: "biologie",
+  geschiedenis: "geschiedenis",
+  "geschiedenis-po": "geschiedenis",
   // NaSk = biologie + natuurkunde + scheikunde (mavo/vmbo). Wacht met mapping
   // tot er ook natuurkunde- en scheikunde-paden zijn — anders krijgt een NaSk-
   // leerling alleen biologie te zien zonder dat dat duidelijk is.
