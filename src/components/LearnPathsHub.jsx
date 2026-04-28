@@ -43,6 +43,7 @@ const PATH_THEMES = {
   machten: { gradient: "linear-gradient(135deg, #5e35b1, #311b92)", accent: "#b39ddb" },
   stelsels: { gradient: "linear-gradient(135deg, #d81b60, #880e4f)", accent: "#f48fb1" },
   kansrekening: { gradient: "linear-gradient(135deg, #00acc1, #006064)", accent: "#80deea" },
+  exponentieel: { gradient: "linear-gradient(135deg, #f4511e, #bf360c)", accent: "#ffab91" },
 };
 
 const SUBJECT_LABELS = {

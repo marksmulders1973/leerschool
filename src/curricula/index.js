@@ -75,6 +75,11 @@ export const CURRICULA = {
         pathIds: ["goniometrie"],
       },
       {
+        title: "Functies & groei",
+        emoji: "📈",
+        pathIds: ["exponentieel"],
+      },
+      {
         title: "Data & kans",
         emoji: "📊",
         pathIds: ["statistiek", "kansrekening"],
