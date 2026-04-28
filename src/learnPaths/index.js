@@ -105,10 +105,12 @@ export const ALL_LEARN_PATHS = {
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad
 // op basis van de tekst van een quiz-vraag.
+// `allowedSubjects` (optioneel): array van leerpad-`subject`-keys waarbinnen
+// gezocht mag worden (bv. ["taal"] bij begrijpend-lezen, ["wiskunde"] bij
+// wiskunde). Voorkomt dat een quizvraag in vak A naar een pad van vak B
+// springt door een toevallige keyword-overlap.
 // Returnt { pathId, stepIdx } of null als er geen match is.
-// Backwards-compat: oude callers die alleen pathId verwachten kunnen nog
-// `result?.pathId` lezen, of een oude "string"-vorm via een wrapper.
-export function findLearnPathForQuestion(questionText) {
+export function findLearnPathForQuestion(questionText, allowedSubjects = null) {
   if (!questionText) return null;
   const lower = questionText.toLowerCase();
   // Verzamel "betekenisvolle" woorden uit de vraag (>= 4 chars, geen stopwoorden)
@@ -118,7 +120,12 @@ export function findLearnPathForQuestion(questionText) {
     .map((w) => w.trim())
     .filter((w) => w.length >= 4 && !stop.has(w));
 
+  const allowedSet = Array.isArray(allowedSubjects) && allowedSubjects.length > 0
+    ? new Set(allowedSubjects)
+    : null;
+
   for (const path of Object.values(ALL_LEARN_PATHS)) {
+    if (allowedSet && !allowedSet.has(path.subject)) continue;
     const padMatcht = path.triggerKeywords?.some((kw) => lower.includes(kw.toLowerCase()));
     if (!padMatcht) continue;
 

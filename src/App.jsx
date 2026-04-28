@@ -32,7 +32,24 @@ import Curriculum from "./components/Curriculum.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import MeeBezig from "./components/MeeBezig.jsx";
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
+import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
+
+// Labels voor leerpad-subject-keys (los van SUBJECTS in constants — die gebruikt categorie-ids).
+const SUBJECT_LABELS_FOR_HUB = {
+  wiskunde: "Wiskunde",
+  taal: "Nederlands",
+  engels: "Engels",
+  biologie: "Biologie",
+  geschiedenis: "Geschiedenis",
+  aardrijkskunde: "Aardrijkskunde",
+  natuurkunde: "Natuurkunde",
+  scheikunde: "Scheikunde",
+  economie: "Economie",
+  beco: "Bedrijfseconomie",
+  duits: "Duits",
+  frans: "Frans",
+};
 
 // Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's
 // (play, learn-path, curriculum, results, obliterator*, pro, admin-feedback,
@@ -604,15 +621,31 @@ export default function App() {
       {page === "learn-meebezig" && meeBezigCategory && (() => {
         const allCats = [...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO];
         const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };
+        const fromQuiz = learnPathReturnPage === "play" && gameState;
+        const relatedSubjects = categoryToLearnSubjects(meeBezigCategory);
+        const relatedCount = relatedSubjects.length > 0
+          ? Object.values(ALL_LEARN_PATHS).filter((p) => relatedSubjects.includes(p.subject)).length
+          : 0;
+        const relatedLabel = relatedSubjects.length > 0
+          ? relatedSubjects.map((s) => SUBJECT_LABELS_FOR_HUB[s] || s).join(" + ")
+          : null;
+        const backTarget = fromQuiz ? "play" : "textbook";
         return (
           <MeeBezig
             subjectId={cat.id}
             subjectLabel={cat.label}
             subjectIcon={cat.icon}
             userName={userName}
-            onBack={() => { setMeeBezigCategory(null); setPage("textbook"); }}
-            onHome={() => { setMeeBezigCategory(null); setPage("home"); }}
+            onBack={() => { setMeeBezigCategory(null); setPage(backTarget); }}
+            onHome={() => { setMeeBezigCategory(null); setLearnPathReturnPage("home"); setPage("home"); }}
             onGoOefenen={() => { setMeeBezigCategory(null); setPage("textbook"); }}
+            relatedHubCount={relatedCount}
+            relatedHubLabel={relatedLabel}
+            onViewRelated={relatedCount > 0 ? () => {
+              setLearnFilterSubject(relatedSubjects.length === 1 ? relatedSubjects[0] : relatedSubjects);
+              setMeeBezigCategory(null);
+              setPage("learn-paths-hub");
+            } : null}
           />
         );
       })()}
@@ -932,19 +965,13 @@ export default function App() {
           onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); const wasCito = gameState?.quiz?.id?.startsWith("cito-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : wasCito ? "cito" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
           onLearnPathRequest={(req) => {
-            // Fallback: vraag heeft geen specifieke leerpadmatch — stuur naar
-            // leerpaden-hub gefilterd op het vak van de quiz, zodat de leerling
-            // tóch ergens een passend pad ziet.
-            if (req && typeof req === "object" && !req.pathId && req.fallbackSubject) {
-              const subjects = categoryToLearnSubjects(req.fallbackSubject);
+            // Geen specifieke leerpad-match voor deze vraag → "Mee bezig"-pagina
+            // ("komt eraan / wordt aan gewerkt"). De pagina toont eventueel een
+            // knop naar de leerpaden-hub als er andere paden zijn voor dit vak.
+            if (req && typeof req === "object" && req.noMatch) {
               setLearnPathReturnPage("play");
-              if (subjects.length > 0) {
-                setLearnFilterSubject(subjects.length === 1 ? subjects[0] : subjects);
-                setPage("learn-paths-hub");
-              } else {
-                setMeeBezigCategory(req.fallbackSubject);
-                setPage("learn-meebezig");
-              }
+              setMeeBezigCategory(req.fallbackCategory || null);
+              setPage("learn-meebezig");
               return;
             }
             const isObj = req && typeof req === "object";

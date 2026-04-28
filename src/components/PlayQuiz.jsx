@@ -3,6 +3,7 @@ import styles from "../styles.js";
 import { SUBJECTS } from "../constants.js";
 import { SoundEngine, track } from "../utils.js";
 import { findLearnPathForQuestion } from "../learnPaths/index.js";
+import { categoryToLearnSubjects } from "../learnPaths/subjectMapping.js";
 
 export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome, onLearnPathRequest }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
@@ -375,15 +376,17 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         {!showResult && onLearnPathRequest && (
           <button
             onClick={() => {
-              const matched = findLearnPathForQuestion(question?.q);
               const subject = gameState?.quiz?.subject;
+              const allowedSubjects = subject ? categoryToLearnSubjects(subject) : null;
+              const matched = findLearnPathForQuestion(question?.q, allowedSubjects);
               track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
               clearInterval(timerRef.current);
               clearTimeout(wrongOverlayTimerRef.current);
               if (matched) {
                 onLearnPathRequest(matched);
               } else {
-                onLearnPathRequest({ fallbackSubject: subject });
+                // Geen specifieke pad-match binnen het vak → toon "Mee bezig"
+                onLearnPathRequest({ noMatch: true, fallbackCategory: subject });
               }
             }}
             style={{
@@ -581,7 +584,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (() => {
-        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q) : null;
+        const stopSubject = gameState?.quiz?.subject;
+        const stopAllowed = stopSubject ? categoryToLearnSubjects(stopSubject) : null;
+        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed) : null;
         return (
         <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, animation: "fadeBg 0.2s ease" }}>
           <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 340, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>

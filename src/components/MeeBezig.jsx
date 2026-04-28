@@ -7,7 +7,7 @@ import { track } from "../utils.js";
 // Pagina voor vakken die wél in 'Oefenen' bestaan, maar nog géén leerpaden hebben.
 // "We zijn ermee bezig!" + opt-in voor wachtlijst (learn_path_waitlist tabel).
 
-export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userName, onBack, onHome, onGoOefenen }) {
+export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userName, onBack, onHome, onGoOefenen, relatedHubCount = 0, relatedHubLabel = null, onViewRelated = null }) {
   const [waitCount, setWaitCount] = useState(null);
   const [signedUp, setSignedUp] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -151,13 +151,40 @@ export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userNam
           )}
         </div>
 
+        {relatedHubCount > 0 && onViewRelated && (
+          <div style={{ marginTop: 18 }}>
+            <p style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 13, color: "rgba(255,255,255,0.55)",
+              textAlign: "center", marginBottom: 10,
+            }}>
+              Voor jouw specifieke onderwerp werken we nog aan uitleg.
+              Intussen kun je wél andere onderwerpen leren:
+            </p>
+            <button
+              onClick={onViewRelated}
+              style={{
+                width: "100%", padding: "12px 14px",
+                borderRadius: 12, cursor: "pointer",
+                border: "1px solid rgba(0,200,83,0.45)",
+                background: "rgba(0,200,83,0.10)",
+                color: "#69f0ae",
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 15, fontWeight: 700,
+              }}
+            >
+              📚 Bekijk {relatedHubCount} {relatedHubCount === 1 ? "leerpad" : "leerpaden"} voor {relatedHubLabel || subjectLabel || subjectId}
+            </button>
+          </div>
+        )}
+
         <div style={{ marginTop: 18 }}>
           <p style={{
             fontFamily: "'Nunito', sans-serif",
             fontSize: 13, color: "rgba(255,255,255,0.55)",
             textAlign: "center", marginBottom: 10,
           }}>
-            In de tussentijd kun je wel toetsen maken voor dit vak:
+            Of maak alvast een toets:
           </p>
           {onGoOefenen && (
             <button
