@@ -48,12 +48,14 @@ const PATH_THEMES = {
   logaritmen: { gradient: "linear-gradient(135deg, #00838f, #006064)", accent: "#80deea" },
   periodiek: { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
   "onregelmatige-werkwoorden-engels": { gradient: "linear-gradient(135deg, #c62828, #1565c0)", accent: "#90caf9" },
+  "cel-biologie": { gradient: "linear-gradient(135deg, #00b84d, #1b5e20)", accent: "#a5d6a7" },
 };
 
 const SUBJECT_LABELS = {
   wiskunde: { title: "Wiskunde", emoji: "🧮" },
   taal: { title: "Nederlands", emoji: "📖" },
   engels: { title: "Engels", emoji: "🇬🇧" },
+  biologie: { title: "Biologie", emoji: "🧬" },
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 

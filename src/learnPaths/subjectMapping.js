@@ -17,6 +17,10 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   "begrijpend-lezen": "taal",
   engels: "engels",
   "engels-po": "engels",
+  biologie: "biologie",
+  // NaSk = biologie + natuurkunde + scheikunde (mavo/vmbo). Wacht met mapping
+  // tot er ook natuurkunde- en scheikunde-paden zijn — anders krijgt een NaSk-
+  // leerling alleen biologie te zien zonder dat dat duidelijk is.
 };
 
 export function categoryToLearnSubject(categoryId) {
