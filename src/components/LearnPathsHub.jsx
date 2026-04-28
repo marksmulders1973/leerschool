@@ -37,6 +37,7 @@ const PATH_THEMES = {
   tekstanalyse: { gradient: "linear-gradient(135deg, #00897b, #004d40)", accent: "#80cbc4" },
   literatuurgeschiedenis: { gradient: "linear-gradient(135deg, #bf8f30, #6d4c1d)", accent: "#ffd54f" },
   spelling: { gradient: "linear-gradient(135deg, #26a69a, #00695c)", accent: "#80cbc4" },
+  zinsontleding: { gradient: "linear-gradient(135deg, #7e57c2, #4527a0)", accent: "#b39ddb" },
 };
 
 const SUBJECT_LABELS = {

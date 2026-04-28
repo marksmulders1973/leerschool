@@ -82,17 +82,17 @@ export const CURRICULA = {
     subject: "taal",
     emoji: "📖",
     intro:
-      "De fundamenten van Nederlands voor klas 1-2: spelling van werkwoorden (d/t), algemene spelling (lettergrepen, ei/ij, samenstellingen, verkleinwoorden) — de basis voor goed schrijven.",
+      "De fundamenten van Nederlands voor klas 1-2: spelling van werkwoorden (d/t), algemene spelling (ei/ij, samenstellingen, verkleinwoorden), zinsontleding (pv, onderwerp, gezegde, voorwerpen, bepalingen). De basis voor goed schrijven en lezen.",
     phases: [
       {
-        title: "Spelling van werkwoorden",
-        emoji: "📝",
-        pathIds: ["werkwoordsvervoeging"],
+        title: "Spelling",
+        emoji: "🔤",
+        pathIds: ["werkwoordsvervoeging", "spelling"],
       },
       {
-        title: "Algemene spelling",
-        emoji: "🔤",
-        pathIds: ["spelling"],
+        title: "Grammatica",
+        emoji: "🧩",
+        pathIds: ["zinsontleding"],
       },
     ],
   },

@@ -23,6 +23,7 @@ import schrijfvaardigheid from "./schrijfvaardigheid";
 import tekstanalyse from "./tekstanalyse";
 import literatuurgeschiedenis from "./literatuurgeschiedenis";
 import spelling from "./spelling";
+import zinsontleding from "./zinsontleding";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -47,6 +48,7 @@ export const ALL_LEARN_PATHS = {
   // Nederlands
   werkwoordsvervoeging,
   spelling,
+  zinsontleding,
   argumentatieleer,
   schrijfvaardigheid,
   tekstanalyse,
