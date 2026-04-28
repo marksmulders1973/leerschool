@@ -332,7 +332,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     <div style={pageStyle()}>
       <Header onBack={() => setMode("overview")} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
 
-      {/* Mini-info: stap nummer + voortgangsbalk */}
+      {/* Mini-info: stap nummer + voortgangsbalk + prev/next-navigatie */}
       <div style={{ padding: "12px 18px 6px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
           <span>Stap {stepIdx + 1} van {totalSteps}</span>
@@ -348,6 +348,43 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             }}
           />
         </div>
+        {/* Vrije navigatie tussen stappen — werkt alleen in reading/stepDone, niet midden in een check */}
+        {(mode === "reading" || mode === "stepDone") && (
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 10 }}>
+            <button
+              onClick={() => stepIdx > 0 && goToStep(stepIdx - 1)}
+              disabled={stepIdx === 0}
+              style={{
+                flex: 1, padding: "8px 12px",
+                background: stepIdx === 0 ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
+                border: `1px solid ${stepIdx === 0 ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
+                borderRadius: 10,
+                color: stepIdx === 0 ? "rgba(255,255,255,0.25)" : C.text,
+                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                cursor: stepIdx === 0 ? "not-allowed" : "pointer",
+                transition: "background 0.15s",
+              }}
+            >
+              ← Vorige stap
+            </button>
+            <button
+              onClick={() => stepIdx + 1 < totalSteps && goToStep(stepIdx + 1)}
+              disabled={stepIdx + 1 >= totalSteps}
+              style={{
+                flex: 1, padding: "8px 12px",
+                background: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
+                border: `1px solid ${stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
+                borderRadius: 10,
+                color: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.25)" : C.text,
+                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                cursor: stepIdx + 1 >= totalSteps ? "not-allowed" : "pointer",
+                transition: "background 0.15s",
+              }}
+            >
+              Volgende stap →
+            </button>
+          </div>
+        )}
       </div>
 
       <div style={{ padding: "10px 18px 28px" }}>
