@@ -23,6 +23,7 @@ import vergelijkingenOplossen from "./vergelijkingenOplossen";
 import stelsels from "./stelsels";
 import machten from "./machten";
 import exponentieel from "./exponentieel";
+import differentieren from "./differentieren";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
@@ -45,6 +46,7 @@ export const ALL_LEARN_PATHS = {
   "kwadraten-wortels": kwadratenWortels,
   machten,
   exponentieel,
+  differentieren,
   // Klas 2 functies
   "lineaire-formules": lineaireFormules,
   parabolen,
