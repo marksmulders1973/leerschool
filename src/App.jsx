@@ -29,6 +29,21 @@ import AdminFeedback from "./components/AdminFeedback.jsx";
 import LearnPath from "./components/LearnPath.jsx";
 import LearnPathsHub from "./components/LearnPathsHub.jsx";
 import Curriculum from "./components/Curriculum.jsx";
+import BottomNav from "./components/BottomNav.jsx";
+
+// Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's
+// (play, learn-path, curriculum, results, obliterator*, pro, admin-feedback,
+// onboarding-naam-step) krijgen geen nav om afleiding te voorkomen.
+const BOTTOMNAV_PAGES = new Set([
+  "home",
+  "learn-paths-hub",
+  "kampioenen", "leaderboard", "student-progress", "teacher-progress",
+  "student-home", "teacher-home",
+  "self-study", "textbook", "cito", "tafels",
+  "redactiesommen", "spelling", "woordenschat", "begrijpend-lezen",
+  "create-quiz", "quiz-preview", "class-manager", "lobby",
+  "ouder-dashboard",
+]);
 
 const FREE_QUIZ_LIMIT = 20;
 
@@ -244,6 +259,24 @@ export default function App() {
     setUserLevel("");
     setUserSchoolType("");
     setRole(null);
+    setPage("home");
+  };
+
+  // Bottom-nav navigatie. "_oefenen" = special: skipt naam-step voor terugkerende
+  // gebruikers en gaat naar student-home of teacher-home afhankelijk van rol.
+  const handleBottomNavNavigate = (target) => {
+    if (target !== "_oefenen") { setPage(target); return; }
+    try {
+      const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+      if (saved.name) {
+        if (saved.name && !userName) setUserName(saved.name);
+        if (saved.level && !userLevel) setUserLevel(saved.level);
+        if (saved.role && !role) setRole(saved.role);
+        setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
+        return;
+      }
+    } catch {}
+    // Geen opgeslagen naam → eerst naar home voor onboarding
     setPage("home");
   };
 
@@ -506,7 +539,10 @@ export default function App() {
   };
 
   return (
-    <div className="app-shell" style={styles.app}>
+    <div
+      className="app-shell"
+      style={{ ...styles.app, paddingBottom: BOTTOMNAV_PAGES.has(page) ? 70 : 0 }}
+    >
       <style>{fonts}</style>
 
       {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}
@@ -1111,6 +1147,9 @@ export default function App() {
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
       · © Smulsoft
     </footer>
+    {BOTTOMNAV_PAGES.has(page) && (
+      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} />
+    )}
     </div>
   );
 }
