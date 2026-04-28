@@ -25,6 +25,7 @@ import machten from "./machten";
 import exponentieel from "./exponentieel";
 import logaritmen from "./logaritmen";
 import differentieren from "./differentieren";
+import periodiek from "./periodiek";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
@@ -49,6 +50,7 @@ export const ALL_LEARN_PATHS = {
   exponentieel,
   logaritmen,
   differentieren,
+  periodiek,
   // Klas 2 functies
   "lineaire-formules": lineaireFormules,
   parabolen,

@@ -46,6 +46,7 @@ const PATH_THEMES = {
   exponentieel: { gradient: "linear-gradient(135deg, #f4511e, #bf360c)", accent: "#ffab91" },
   differentieren: { gradient: "linear-gradient(135deg, #3949ab, #1a237e)", accent: "#9fa8da" },
   logaritmen: { gradient: "linear-gradient(135deg, #00838f, #006064)", accent: "#80deea" },
+  periodiek: { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
 };
 
 const SUBJECT_LABELS = {
