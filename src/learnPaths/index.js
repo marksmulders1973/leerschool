@@ -20,6 +20,7 @@ import goniometrie from "./goniometrie";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
+import tekstanalyse from "./tekstanalyse";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -45,6 +46,7 @@ export const ALL_LEARN_PATHS = {
   werkwoordsvervoeging,
   argumentatieleer,
   schrijfvaardigheid,
+  tekstanalyse,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

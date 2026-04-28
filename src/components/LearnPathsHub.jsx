@@ -34,6 +34,7 @@ const PATH_THEMES = {
   werkwoordsvervoeging: { gradient: "linear-gradient(135deg, #00e676, #00a040)", accent: "#b9f6ca" },
   argumentatieleer: { gradient: "linear-gradient(135deg, #5e35b1, #311b92)", accent: "#b39ddb" },
   schrijfvaardigheid: { gradient: "linear-gradient(135deg, #1976d2, #0d47a1)", accent: "#90caf9" },
+  tekstanalyse: { gradient: "linear-gradient(135deg, #00897b, #004d40)", accent: "#80cbc4" },
 };
 
 const SUBJECT_LABELS = {

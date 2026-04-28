@@ -100,9 +100,9 @@ export const CURRICULA = {
       "Examenstof havo 4-5: leesvaardigheid (argumentatie + drogredenen) en schrijfvaardigheid (betoog, beschouwing, uiteenzetting). Past bij elke gangbare methode — eigen uitleg en oefenvragen.",
     phases: [
       {
-        title: "Argumentatie & leesvaardigheid",
-        emoji: "💬",
-        pathIds: ["argumentatieleer"],
+        title: "Leesvaardigheid",
+        emoji: "🔍",
+        pathIds: ["argumentatieleer", "tekstanalyse"],
       },
       {
         title: "Schrijfvaardigheid",
