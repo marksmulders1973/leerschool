@@ -55,6 +55,8 @@ const PATH_THEMES = {
   "atoombouw-scheikunde": { gradient: "linear-gradient(135deg, #ad1457, #4a148c)", accent: "#ce93d8" },
   "vraag-aanbod-economie": { gradient: "linear-gradient(135deg, #f9a825, #ef6c00)", accent: "#ffe082" },
   "balans-beco": { gradient: "linear-gradient(135deg, #e65100, #bf360c)", accent: "#ffab91" },
+  "naamvallen-duits": { gradient: "linear-gradient(135deg, #424242, #212121)", accent: "#bdbdbd" },
+  "passe-compose-frans": { gradient: "linear-gradient(135deg, #1565c0, #b71c1c)", accent: "#90caf9" },
 };
 
 const SUBJECT_LABELS = {
@@ -68,6 +70,8 @@ const SUBJECT_LABELS = {
   scheikunde: { title: "Scheikunde", emoji: "🧪" },
   economie: { title: "Economie", emoji: "💶" },
   beco: { title: "Bedrijfseconomie", emoji: "📊" },
+  duits: { title: "Duits", emoji: "🇩🇪" },
+  frans: { title: "Frans", emoji: "🇫🇷" },
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 

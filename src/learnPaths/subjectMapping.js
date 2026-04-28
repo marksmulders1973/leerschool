@@ -26,6 +26,8 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   scheikunde: "scheikunde",
   economie: "economie",
   beco: "beco",
+  duits: "duits",
+  frans: "frans",
   // NaSk (mavo/vmbo) = biologie + natuurkunde + scheikunde gebundeld
   nask: ["biologie", "natuurkunde", "scheikunde"],
   // Wereld & Natuur (PO) = brede natuur — bundel biologie + aardrijkskunde

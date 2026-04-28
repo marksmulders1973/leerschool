@@ -41,6 +41,8 @@ import krachtenNatuurkunde from "./krachtenNatuurkunde";
 import atoombouwScheikunde from "./atoombouwScheikunde";
 import vraagAanbodEconomie from "./vraagAanbodEconomie";
 import balansBeco from "./balansBeco";
+import naamvallenDuits from "./naamvallenDuits";
+import passeComposeFrans from "./passeComposeFrans";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -95,6 +97,10 @@ export const ALL_LEARN_PATHS = {
   "vraag-aanbod-economie": vraagAanbodEconomie,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
+  // Duits
+  "naamvallen-duits": naamvallenDuits,
+  // Frans
+  "passe-compose-frans": passeComposeFrans,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad
