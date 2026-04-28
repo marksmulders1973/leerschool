@@ -97,12 +97,17 @@ export const CURRICULA = {
     subject: "taal",
     emoji: "💬",
     intro:
-      "Examenstof leesvaardigheid: argumentatieleer (standpunten, argumentatieschema's, drogredenen). Past bij elke gangbare methode (Kern, Nieuw Nederlands, Talent, Op Niveau) — eigen uitleg en oefenvragen.",
+      "Examenstof havo 4-5: leesvaardigheid (argumentatie + drogredenen) en schrijfvaardigheid (betoog, beschouwing, uiteenzetting). Past bij elke gangbare methode — eigen uitleg en oefenvragen.",
     phases: [
       {
         title: "Argumentatie & leesvaardigheid",
         emoji: "💬",
         pathIds: ["argumentatieleer"],
+      },
+      {
+        title: "Schrijfvaardigheid",
+        emoji: "✍️",
+        pathIds: ["schrijfvaardigheid"],
       },
     ],
   },
