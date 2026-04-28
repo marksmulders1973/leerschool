@@ -56,7 +56,14 @@ const SUBJECT_LABELS = {
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 
-export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCurriculum, onHome, onBack }) {
+// `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".
+// Indien gezet, toont alleen paden + curricula van dat vak.
+const SUBJECT_TO_CURRICULUM_PREFIX = {
+  wiskunde: "wiskunde",
+  taal: "nederlands",
+};
+
+export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null }) {
   const player = (userName || "Speler").trim() || "Speler";
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
@@ -90,7 +97,10 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     };
   }, [player]);
 
-  const paths = Object.values(ALL_LEARN_PATHS);
+  const allPaths = Object.values(ALL_LEARN_PATHS);
+  const paths = filterSubject
+    ? allPaths.filter((p) => (p.subject || "wiskunde") === filterSubject)
+    : allPaths;
 
   // Groepeer per vak
   const grouped = {};
@@ -99,6 +109,15 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     if (!grouped[subj]) grouped[subj] = [];
     grouped[subj].push(p);
   });
+
+  const curriculumPrefix = filterSubject ? SUBJECT_TO_CURRICULUM_PREFIX[filterSubject] : null;
+  const visibleCurricula = filterSubject
+    ? Object.values(CURRICULA).filter((c) => curriculumPrefix && c.id.startsWith(curriculumPrefix + "-"))
+    : Object.values(CURRICULA);
+  const headerTitle = filterSubject
+    ? `Leren — ${(SUBJECT_LABELS[filterSubject] || { title: filterSubject }).title}`
+    : "Leerpaden";
+  const headerEmoji = filterSubject ? (SUBJECT_LABELS[filterSubject]?.emoji || "📚") : "📚";
 
   // Vind onafgemaakt pad voor "doorgaan"-banner
   const continuePath = (() => {
@@ -116,7 +135,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
 
   return (
     <div style={pageStyle()}>
-      <Header onBack={onBack || onHome} onHome={onHome} title="Leerpaden" emoji="📚" />
+      <Header onBack={onBack || onHome} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
 
       <div style={{ padding: "16px 18px 8px" }}>
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
@@ -163,7 +182,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
         )}
       </div>
 
-      {onPickCurriculum && Object.keys(CURRICULA).length > 0 && (
+      {onPickCurriculum && visibleCurricula.length > 0 && (
         <div style={{ padding: "4px 14px 8px" }}>
           <div
             style={{
@@ -181,7 +200,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
             <span>Hele leerlijn — per klas</span>
           </div>
           <div className="lp-grid" style={{ marginBottom: 18 }}>
-            {Object.values(CURRICULA).map((cur) => {
+            {visibleCurricula.map((cur) => {
               const allPathIds = cur.phases.flatMap((p) => p.pathIds);
               const total = curriculumTotalSteps(cur.id);
               const done = allPathIds.reduce(

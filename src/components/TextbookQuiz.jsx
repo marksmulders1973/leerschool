@@ -3,6 +3,7 @@ import styles from "../styles.js";
 import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../constants.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
+import { hasLearnPathsForCategory, countLearnPathsForCategory } from "../learnPaths/subjectMapping.js";
 
 const schoolTypeMatchesBook = (bookName, schoolType) => {
   if (!schoolType || !bookName) return false;
@@ -17,7 +18,7 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   return false;
 };
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType }) {
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn }) {
   const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
   const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
   const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
@@ -446,19 +447,83 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
             {schoolType2 && (
               <>
-                <h3 style={styles.stepTitle}>Van welk vak wil je je boek kiezen?</h3>
+                <h3 style={styles.stepTitle}>Kies je vak — leren of oefenen?</h3>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
-                  {TEXTBOOK_CATEGORIES.map((cat) => (
-                    <button key={cat.id} style={{
-                      ...styles.levelCard,
-                      borderColor: "transparent",
-                      background: "#fff",
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-                    }} onClick={() => { SoundEngine.play("click"); setCategory(cat.id); setSelectedBook(null); setStep(2); }}>
-                      <span style={{ fontSize: 24 }}>{cat.icon}</span>
-                      <strong style={{ fontSize: 13 }}>{cat.label}</strong>
-                    </button>
-                  ))}
+                  {TEXTBOOK_CATEGORIES.map((cat) => {
+                    const hasPaths = hasLearnPathsForCategory(cat.id);
+                    const pathCount = countLearnPathsForCategory(cat.id);
+                    const onOefenen = () => {
+                      SoundEngine.play("click");
+                      setCategory(cat.id);
+                      setSelectedBook(null);
+                      setStep(2);
+                    };
+                    const onLeren = () => {
+                      SoundEngine.play("click");
+                      if (onPickLearn) onPickLearn(cat.id);
+                    };
+                    return (
+                      <div key={cat.id} style={{
+                        background: "#fff",
+                        borderRadius: 16,
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+                        overflow: "hidden",
+                        display: "flex", flexDirection: "column",
+                      }}>
+                        <div style={{
+                          display: "flex", alignItems: "center", gap: 8,
+                          padding: "10px 12px 6px",
+                          color: "#1f2a44",
+                        }}>
+                          <span style={{ fontSize: 22 }}>{cat.icon}</span>
+                          <strong style={{ fontSize: 13, lineHeight: 1.2 }}>{cat.label}</strong>
+                        </div>
+                        <div style={{
+                          display: "grid",
+                          gridTemplateColumns: "1fr 1fr",
+                          borderTop: "1px solid rgba(0,0,0,0.06)",
+                        }}>
+                          <button
+                            onClick={onLeren}
+                            style={{
+                              border: "none",
+                              cursor: "pointer",
+                              padding: "9px 4px",
+                              background: hasPaths ? "rgba(0,200,83,0.10)" : "rgba(255,179,0,0.10)",
+                              color: hasPaths ? "#00a040" : "#b07300",
+                              fontFamily: "'Fredoka', sans-serif",
+                              fontSize: 12, fontWeight: 700,
+                              display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
+                              borderRight: "1px solid rgba(0,0,0,0.06)",
+                            }}
+                          >
+                            <span style={{ fontSize: 16 }}>📚</span>
+                            <span>Leren</span>
+                            <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>
+                              {hasPaths ? `${pathCount} paden` : "binnenkort"}
+                            </span>
+                          </button>
+                          <button
+                            onClick={onOefenen}
+                            style={{
+                              border: "none",
+                              cursor: "pointer",
+                              padding: "9px 4px",
+                              background: "rgba(0,212,255,0.10)",
+                              color: "#0096b8",
+                              fontFamily: "'Fredoka', sans-serif",
+                              fontSize: 12, fontWeight: 700,
+                              display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
+                            }}
+                          >
+                            <span style={{ fontSize: 16 }}>🎯</span>
+                            <span>Oefenen</span>
+                            <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>uit je boek</span>
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </>
             )}

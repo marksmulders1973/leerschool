@@ -30,6 +30,9 @@ import LearnPath from "./components/LearnPath.jsx";
 import LearnPathsHub from "./components/LearnPathsHub.jsx";
 import Curriculum from "./components/Curriculum.jsx";
 import BottomNav from "./components/BottomNav.jsx";
+import MeeBezig from "./components/MeeBezig.jsx";
+import { categoryToLearnSubject, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
+import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 
 // Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's
 // (play, learn-path, curriculum, results, obliterator*, pro, admin-feedback,
@@ -37,6 +40,7 @@ import BottomNav from "./components/BottomNav.jsx";
 const BOTTOMNAV_PAGES = new Set([
   "home",
   "learn-paths-hub",
+  "learn-meebezig",
   "kampioenen", "leaderboard", "student-progress", "teacher-progress",
   "student-home", "teacher-home",
   "self-study", "textbook", "cito", "tafels",
@@ -171,6 +175,10 @@ export default function App() {
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);
+  // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
+  const [learnFilterSubject, setLearnFilterSubject] = useState(null);
+  // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
+  const [meeBezigCategory, setMeeBezigCategory] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -265,7 +273,9 @@ export default function App() {
   // Bottom-nav navigatie. "_oefenen" = special: skipt naam-step voor terugkerende
   // gebruikers en gaat naar student-home of teacher-home afhankelijk van rol.
   const handleBottomNavNavigate = (target) => {
-    if (target !== "_oefenen") { setPage(target); return; }
+    // Bottom-tab "Leren" opent altijd de volledige hub — geen vakfilter
+    if (target === "learn-paths-hub") { setLearnFilterSubject(null); setPage(target); return; }
+    if (target !== "_oefenen") { setLearnFilterSubject(null); setPage(target); return; }
     try {
       const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
       if (saved.name) {
@@ -576,6 +586,7 @@ export default function App() {
         <LearnPathsHub
           userName={userName || "Speler"}
           authUser={authUser}
+          filterSubject={learnFilterSubject}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);
@@ -586,10 +597,25 @@ export default function App() {
             setActiveCurriculumId(id);
             setPage("curriculum");
           }}
-          onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
+          onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
+          onHome={() => { setLearnFilterSubject(null); setPage("home"); }}
         />
       )}
+      {page === "learn-meebezig" && meeBezigCategory && (() => {
+        const allCats = [...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO];
+        const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };
+        return (
+          <MeeBezig
+            subjectId={cat.id}
+            subjectLabel={cat.label}
+            subjectIcon={cat.icon}
+            userName={userName}
+            onBack={() => { setMeeBezigCategory(null); setPage("textbook"); }}
+            onHome={() => { setMeeBezigCategory(null); setPage("home"); }}
+            onGoOefenen={() => { setMeeBezigCategory(null); setPage("textbook"); }}
+          />
+        );
+      })()}
       {page === "curriculum" && activeCurriculumId && (
         <Curriculum
           curriculumId={activeCurriculumId}
@@ -884,6 +910,16 @@ export default function App() {
           userRole={role}
           userLevel={userLevel}
           userSchoolType={userSchoolType}
+          onPickLearn={(catId) => {
+            const subj = categoryToLearnSubject(catId);
+            if (hasLearnPathsForCategory(catId) && subj) {
+              setLearnFilterSubject(subj);
+              setPage("learn-paths-hub");
+            } else {
+              setMeeBezigCategory(catId);
+              setPage("learn-meebezig");
+            }
+          }}
           onBack={() => setPage("student-home")}
           onHome={() => setPage("home")}
         />
