@@ -39,6 +39,8 @@ import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde";
 import krachtenNatuurkunde from "./krachtenNatuurkunde";
 import atoombouwScheikunde from "./atoombouwScheikunde";
+import vraagAanbodEconomie from "./vraagAanbodEconomie";
+import balansBeco from "./balansBeco";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -89,6 +91,10 @@ export const ALL_LEARN_PATHS = {
   "krachten-natuurkunde": krachtenNatuurkunde,
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
+  // Economie
+  "vraag-aanbod-economie": vraagAanbodEconomie,
+  // Bedrijfseconomie
+  "balans-beco": balansBeco,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

@@ -53,6 +53,8 @@ const PATH_THEMES = {
   "klimaten-aardrijkskunde": { gradient: "linear-gradient(135deg, #43a047, #1565c0)", accent: "#90caf9" },
   "krachten-natuurkunde": { gradient: "linear-gradient(135deg, #fb8c00, #d84315)", accent: "#ffab91" },
   "atoombouw-scheikunde": { gradient: "linear-gradient(135deg, #ad1457, #4a148c)", accent: "#ce93d8" },
+  "vraag-aanbod-economie": { gradient: "linear-gradient(135deg, #f9a825, #ef6c00)", accent: "#ffe082" },
+  "balans-beco": { gradient: "linear-gradient(135deg, #e65100, #bf360c)", accent: "#ffab91" },
 };
 
 const SUBJECT_LABELS = {
@@ -64,6 +66,8 @@ const SUBJECT_LABELS = {
   aardrijkskunde: { title: "Aardrijkskunde", emoji: "🌍" },
   natuurkunde: { title: "Natuurkunde", emoji: "⚛️" },
   scheikunde: { title: "Scheikunde", emoji: "🧪" },
+  economie: { title: "Economie", emoji: "💶" },
+  beco: { title: "Bedrijfseconomie", emoji: "📊" },
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 
