@@ -47,7 +47,7 @@ export const CURRICULA = {
       {
         title: "Algebra-bouwstenen",
         emoji: "🧱",
-        pathIds: ["vergelijkingen-oplossen", "kwadraten-wortels", "machten", "lineaire-formules"],
+        pathIds: ["vergelijkingen-oplossen", "stelsels", "kwadraten-wortels", "machten", "lineaire-formules"],
       },
       {
         title: "Meetkunde",

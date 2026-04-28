@@ -41,6 +41,7 @@ const PATH_THEMES = {
   coordinatenstelsel: { gradient: "linear-gradient(135deg, #43a047, #1b5e20)", accent: "#a5d6a7" },
   "vergelijkingen-oplossen": { gradient: "linear-gradient(135deg, #ffb300, #e65100)", accent: "#ffe082" },
   machten: { gradient: "linear-gradient(135deg, #5e35b1, #311b92)", accent: "#b39ddb" },
+  stelsels: { gradient: "linear-gradient(135deg, #d81b60, #880e4f)", accent: "#f48fb1" },
 };
 
 const SUBJECT_LABELS = {

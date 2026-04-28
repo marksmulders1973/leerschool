@@ -19,6 +19,7 @@ import statistiek from "./statistiek";
 import goniometrie from "./goniometrie";
 import coordinatenstelsel from "./coordinatenstelsel";
 import vergelijkingenOplossen from "./vergelijkingenOplossen";
+import stelsels from "./stelsels";
 import machten from "./machten";
 import werkwoordsvervoeging from "./werkwoordsvervoeging";
 import argumentatieleer from "./argumentatieleer";
@@ -38,6 +39,7 @@ export const ALL_LEARN_PATHS = {
   // Klas 1-2 algebra-basis
   "rekenen-met-letters": rekenenMetLetters,
   "vergelijkingen-oplossen": vergelijkingenOplossen,
+  stelsels,
   "kwadraten-wortels": kwadratenWortels,
   machten,
   // Klas 2 functies
