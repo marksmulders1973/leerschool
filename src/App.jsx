@@ -31,7 +31,7 @@ import LearnPathsHub from "./components/LearnPathsHub.jsx";
 import Curriculum from "./components/Curriculum.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import MeeBezig from "./components/MeeBezig.jsx";
-import { categoryToLearnSubject, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
+import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 
 // Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's
@@ -911,9 +911,9 @@ export default function App() {
           userLevel={userLevel}
           userSchoolType={userSchoolType}
           onPickLearn={(catId) => {
-            const subj = categoryToLearnSubject(catId);
-            if (hasLearnPathsForCategory(catId) && subj) {
-              setLearnFilterSubject(subj);
+            const subjects = categoryToLearnSubjects(catId);
+            if (hasLearnPathsForCategory(catId) && subjects.length > 0) {
+              setLearnFilterSubject(subjects.length === 1 ? subjects[0] : subjects);
               setPage("learn-paths-hub");
             } else {
               setMeeBezigCategory(catId);

@@ -36,6 +36,9 @@ import zinsontleding from "./zinsontleding";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels";
 import celBiologie from "./celBiologie";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis";
+import klimatenAardrijkskunde from "./klimatenAardrijkskunde";
+import krachtenNatuurkunde from "./krachtenNatuurkunde";
+import atoombouwScheikunde from "./atoombouwScheikunde";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -80,6 +83,12 @@ export const ALL_LEARN_PATHS = {
   "cel-biologie": celBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
+  // Aardrijkskunde
+  "klimaten-aardrijkskunde": klimatenAardrijkskunde,
+  // Natuurkunde
+  "krachten-natuurkunde": krachtenNatuurkunde,
+  // Scheikunde
+  "atoombouw-scheikunde": atoombouwScheikunde,
 };
 
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad

@@ -20,24 +20,36 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   biologie: "biologie",
   geschiedenis: "geschiedenis",
   "geschiedenis-po": "geschiedenis",
-  // NaSk = biologie + natuurkunde + scheikunde (mavo/vmbo). Wacht met mapping
-  // tot er ook natuurkunde- en scheikunde-paden zijn — anders krijgt een NaSk-
-  // leerling alleen biologie te zien zonder dat dat duidelijk is.
+  aardrijkskunde: "aardrijkskunde",
+  "aardrijkskunde-po": "aardrijkskunde",
+  natuurkunde: "natuurkunde",
+  scheikunde: "scheikunde",
+  // NaSk (mavo/vmbo) = biologie + natuurkunde + scheikunde gebundeld
+  nask: ["biologie", "natuurkunde", "scheikunde"],
+  // Wereld & Natuur (PO) = brede natuur — bundel biologie + aardrijkskunde
+  natuur: ["biologie", "aardrijkskunde"],
 };
 
 export function categoryToLearnSubject(categoryId) {
   return CATEGORY_TO_LEARN_SUBJECT[categoryId] || null;
 }
 
+// Returnt altijd een array van leerpad-subjects (1 of meer). Lege array = geen mapping.
+export function categoryToLearnSubjects(categoryId) {
+  const v = CATEGORY_TO_LEARN_SUBJECT[categoryId];
+  if (!v) return [];
+  return Array.isArray(v) ? v : [v];
+}
+
 export function hasLearnPathsForCategory(categoryId) {
-  const subj = categoryToLearnSubject(categoryId);
-  if (!subj) return false;
-  return Object.values(ALL_LEARN_PATHS).some((p) => p.subject === subj);
+  const subjects = categoryToLearnSubjects(categoryId);
+  if (subjects.length === 0) return false;
+  return Object.values(ALL_LEARN_PATHS).some((p) => subjects.includes(p.subject));
 }
 
 // Aantal leerpaden voor visuele badge op de tegel ("17 paden")
 export function countLearnPathsForCategory(categoryId) {
-  const subj = categoryToLearnSubject(categoryId);
-  if (!subj) return 0;
-  return Object.values(ALL_LEARN_PATHS).filter((p) => p.subject === subj).length;
+  const subjects = categoryToLearnSubjects(categoryId);
+  if (subjects.length === 0) return 0;
+  return Object.values(ALL_LEARN_PATHS).filter((p) => subjects.includes(p.subject)).length;
 }

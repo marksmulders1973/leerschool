@@ -50,6 +50,9 @@ const PATH_THEMES = {
   "onregelmatige-werkwoorden-engels": { gradient: "linear-gradient(135deg, #c62828, #1565c0)", accent: "#90caf9" },
   "cel-biologie": { gradient: "linear-gradient(135deg, #00b84d, #1b5e20)", accent: "#a5d6a7" },
   "tijdvakken-geschiedenis": { gradient: "linear-gradient(135deg, #6d4c41, #3e2723)", accent: "#bcaaa4" },
+  "klimaten-aardrijkskunde": { gradient: "linear-gradient(135deg, #43a047, #1565c0)", accent: "#90caf9" },
+  "krachten-natuurkunde": { gradient: "linear-gradient(135deg, #fb8c00, #d84315)", accent: "#ffab91" },
+  "atoombouw-scheikunde": { gradient: "linear-gradient(135deg, #ad1457, #4a148c)", accent: "#ce93d8" },
 };
 
 const SUBJECT_LABELS = {
@@ -58,11 +61,15 @@ const SUBJECT_LABELS = {
   engels: { title: "Engels", emoji: "🇬🇧" },
   biologie: { title: "Biologie", emoji: "🧬" },
   geschiedenis: { title: "Geschiedenis", emoji: "🏛️" },
+  aardrijkskunde: { title: "Aardrijkskunde", emoji: "🌍" },
+  natuurkunde: { title: "Natuurkunde", emoji: "⚛️" },
+  scheikunde: { title: "Scheikunde", emoji: "🧪" },
   natuur: { title: "Natuur & Techniek", emoji: "🔬" },
 };
 
 // `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".
-// Indien gezet, toont alleen paden + curricula van dat vak.
+// Mag ook een array zijn (bv. NaSk = ["biologie","natuurkunde","scheikunde"]).
+// Indien gezet, toont alleen paden + curricula van die vakken.
 const SUBJECT_TO_CURRICULUM_PREFIX = {
   wiskunde: "wiskunde",
   taal: "nederlands",
@@ -103,8 +110,12 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
   }, [player]);
 
   const allPaths = Object.values(ALL_LEARN_PATHS);
-  const paths = filterSubject
-    ? allPaths.filter((p) => (p.subject || "wiskunde") === filterSubject)
+  // Normaliseer filterSubject tot een array van toegestane subjects (of null = alles).
+  const filterArr = filterSubject == null
+    ? null
+    : Array.isArray(filterSubject) ? filterSubject : [filterSubject];
+  const paths = filterArr
+    ? allPaths.filter((p) => filterArr.includes(p.subject || "wiskunde"))
     : allPaths;
 
   // Groepeer per vak
@@ -115,14 +126,24 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     grouped[subj].push(p);
   });
 
-  const curriculumPrefix = filterSubject ? SUBJECT_TO_CURRICULUM_PREFIX[filterSubject] : null;
-  const visibleCurricula = filterSubject
-    ? Object.values(CURRICULA).filter((c) => curriculumPrefix && c.id.startsWith(curriculumPrefix + "-"))
+  const curriculumPrefixes = filterArr
+    ? filterArr.map((s) => SUBJECT_TO_CURRICULUM_PREFIX[s]).filter(Boolean)
+    : null;
+  const visibleCurricula = curriculumPrefixes
+    ? Object.values(CURRICULA).filter((c) => curriculumPrefixes.some((p) => c.id.startsWith(p + "-")))
     : Object.values(CURRICULA);
-  const headerTitle = filterSubject
-    ? `Leren — ${(SUBJECT_LABELS[filterSubject] || { title: filterSubject }).title}`
-    : "Leerpaden";
-  const headerEmoji = filterSubject ? (SUBJECT_LABELS[filterSubject]?.emoji || "📚") : "📚";
+
+  let headerTitle = "Leerpaden";
+  let headerEmoji = "📚";
+  if (filterArr && filterArr.length === 1) {
+    const meta = SUBJECT_LABELS[filterArr[0]] || { title: filterArr[0], emoji: "📚" };
+    headerTitle = `Leren — ${meta.title}`;
+    headerEmoji = meta.emoji;
+  } else if (filterArr && filterArr.length > 1) {
+    const titles = filterArr.map((s) => (SUBJECT_LABELS[s] || { title: s }).title).join(" + ");
+    headerTitle = `Leren — ${titles}`;
+    headerEmoji = "🔬";
+  }
 
   // Vind onafgemaakt pad voor "doorgaan"-banner
   const continuePath = (() => {
