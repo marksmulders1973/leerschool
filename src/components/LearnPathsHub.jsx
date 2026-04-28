@@ -47,6 +47,7 @@ const PATH_THEMES = {
   differentieren: { gradient: "linear-gradient(135deg, #3949ab, #1a237e)", accent: "#9fa8da" },
   logaritmen: { gradient: "linear-gradient(135deg, #00838f, #006064)", accent: "#80deea" },
   periodiek: { gradient: "linear-gradient(135deg, #ec407a, #ad1457)", accent: "#f48fb1" },
+  "onregelmatige-werkwoorden-engels": { gradient: "linear-gradient(135deg, #c62828, #1565c0)", accent: "#90caf9" },
 };
 
 const SUBJECT_LABELS = {

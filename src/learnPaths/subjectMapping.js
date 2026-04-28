@@ -15,6 +15,8 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   taal: "taal",
   spelling: "taal",
   "begrijpend-lezen": "taal",
+  engels: "engels",
+  "engels-po": "engels",
 };
 
 export function categoryToLearnSubject(categoryId) {
