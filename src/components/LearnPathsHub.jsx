@@ -36,6 +36,7 @@ const PATH_THEMES = {
   schrijfvaardigheid: { gradient: "linear-gradient(135deg, #1976d2, #0d47a1)", accent: "#90caf9" },
   tekstanalyse: { gradient: "linear-gradient(135deg, #00897b, #004d40)", accent: "#80cbc4" },
   literatuurgeschiedenis: { gradient: "linear-gradient(135deg, #bf8f30, #6d4c1d)", accent: "#ffd54f" },
+  spelling: { gradient: "linear-gradient(135deg, #26a69a, #00695c)", accent: "#80cbc4" },
 };
 
 const SUBJECT_LABELS = {

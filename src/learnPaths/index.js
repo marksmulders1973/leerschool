@@ -22,6 +22,7 @@ import argumentatieleer from "./argumentatieleer";
 import schrijfvaardigheid from "./schrijfvaardigheid";
 import tekstanalyse from "./tekstanalyse";
 import literatuurgeschiedenis from "./literatuurgeschiedenis";
+import spelling from "./spelling";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -45,6 +46,7 @@ export const ALL_LEARN_PATHS = {
   statistiek,
   // Nederlands
   werkwoordsvervoeging,
+  spelling,
   argumentatieleer,
   schrijfvaardigheid,
   tekstanalyse,
