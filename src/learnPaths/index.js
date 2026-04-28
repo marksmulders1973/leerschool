@@ -3,46 +3,46 @@
 //   1. Een nieuwe file in src/learnPaths/<naam>.js (zelfde structuur als parabolen.js)
 //   2. Importeer en registreer hem hieronder
 
-import parabolen from "./parabolen";
-import ruimtemeetkunde from "./ruimtemeetkunde";
-import kwadratenWortels from "./kwadratenWortels";
-import pythagoras from "./pythagoras";
-import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen";
-import lineaireFormules from "./lineaireFormules";
-import rekenenMetLetters from "./rekenenMetLetters";
-import vlakkeFiguren from "./vlakkeFiguren";
-import breuken from "./breuken";
-import procenten from "./procenten";
-import negatieveGetallen from "./negatieveGetallen";
-import verhoudingen from "./verhoudingen";
-import statistiek from "./statistiek";
-import kansrekening from "./kansrekening";
-import goniometrie from "./goniometrie";
-import coordinatenstelsel from "./coordinatenstelsel";
-import vergelijkingenOplossen from "./vergelijkingenOplossen";
-import stelsels from "./stelsels";
-import machten from "./machten";
-import exponentieel from "./exponentieel";
-import logaritmen from "./logaritmen";
-import differentieren from "./differentieren";
-import periodiek from "./periodiek";
-import werkwoordsvervoeging from "./werkwoordsvervoeging";
-import argumentatieleer from "./argumentatieleer";
-import schrijfvaardigheid from "./schrijfvaardigheid";
-import tekstanalyse from "./tekstanalyse";
-import literatuurgeschiedenis from "./literatuurgeschiedenis";
-import spelling from "./spelling";
-import zinsontleding from "./zinsontleding";
-import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels";
-import celBiologie from "./celBiologie";
-import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis";
-import klimatenAardrijkskunde from "./klimatenAardrijkskunde";
-import krachtenNatuurkunde from "./krachtenNatuurkunde";
-import atoombouwScheikunde from "./atoombouwScheikunde";
-import vraagAanbodEconomie from "./vraagAanbodEconomie";
-import balansBeco from "./balansBeco";
-import naamvallenDuits from "./naamvallenDuits";
-import passeComposeFrans from "./passeComposeFrans";
+import parabolen from "./parabolen.js";
+import ruimtemeetkunde from "./ruimtemeetkunde.js";
+import kwadratenWortels from "./kwadratenWortels.js";
+import pythagoras from "./pythagoras.js";
+import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen.js";
+import lineaireFormules from "./lineaireFormules.js";
+import rekenenMetLetters from "./rekenenMetLetters.js";
+import vlakkeFiguren from "./vlakkeFiguren.js";
+import breuken from "./breuken.js";
+import procenten from "./procenten.js";
+import negatieveGetallen from "./negatieveGetallen.js";
+import verhoudingen from "./verhoudingen.js";
+import statistiek from "./statistiek.js";
+import kansrekening from "./kansrekening.js";
+import goniometrie from "./goniometrie.js";
+import coordinatenstelsel from "./coordinatenstelsel.js";
+import vergelijkingenOplossen from "./vergelijkingenOplossen.js";
+import stelsels from "./stelsels.js";
+import machten from "./machten.js";
+import exponentieel from "./exponentieel.js";
+import logaritmen from "./logaritmen.js";
+import differentieren from "./differentieren.js";
+import periodiek from "./periodiek.js";
+import werkwoordsvervoeging from "./werkwoordsvervoeging.js";
+import argumentatieleer from "./argumentatieleer.js";
+import schrijfvaardigheid from "./schrijfvaardigheid.js";
+import tekstanalyse from "./tekstanalyse.js";
+import literatuurgeschiedenis from "./literatuurgeschiedenis.js";
+import spelling from "./spelling.js";
+import zinsontleding from "./zinsontleding.js";
+import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js";
+import celBiologie from "./celBiologie.js";
+import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
+import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
+import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
+import atoombouwScheikunde from "./atoombouwScheikunde.js";
+import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
+import balansBeco from "./balansBeco.js";
+import naamvallenDuits from "./naamvallenDuits.js";
+import passeComposeFrans from "./passeComposeFrans.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -103,39 +103,57 @@ export const ALL_LEARN_PATHS = {
   "passe-compose-frans": passeComposeFrans,
 };
 
+import { QUESTION_PATH_MAP } from "./questionPathMap.generated.js";
+
 // Vind het meest passende leerpad én de meest passende stap binnen dat pad
 // op basis van de tekst van een quiz-vraag.
 // `allowedSubjects` (optioneel): array van leerpad-`subject`-keys waarbinnen
 // gezocht mag worden (bv. ["taal"] bij begrijpend-lezen, ["wiskunde"] bij
 // wiskunde). Voorkomt dat een quizvraag in vak A naar een pad van vak B
 // springt door een toevallige keyword-overlap.
+//
+// Strategie:
+// 1. Exact-lookup in QUESTION_PATH_MAP (gegenereerd door
+//    `scripts/match-questions-to-paths.mjs`). Deze map dekt alle hardcoded
+//    vragen in src/constants.js en is snel + deterministisch.
+// 2. Bij geen entry — runtime keyword-fallback (voor AI-gegenereerde
+//    vragen of vragen die niet in de map staan).
+//
 // Returnt { pathId, stepIdx } of null als er geen match is.
 export function findLearnPathForQuestion(questionText, allowedSubjects = null) {
   if (!questionText) return null;
+
+  const allowedSet = Array.isArray(allowedSubjects) && allowedSubjects.length > 0
+    ? new Set(allowedSubjects)
+    : null;
+
+  // Stap 1: exact lookup in pre-gegenereerde map
+  const exact = QUESTION_PATH_MAP[questionText];
+  if (exact) {
+    if (!allowedSet) return exact;
+    const taggedPath = ALL_LEARN_PATHS[exact.pathId];
+    if (taggedPath && allowedSet.has(taggedPath.subject)) return exact;
+    // Vak-mismatch: val terug op runtime-zoek hieronder
+  }
+
+  // Stap 2: runtime keyword-fallback
   const lower = questionText.toLowerCase();
-  // Verzamel "betekenisvolle" woorden uit de vraag (>= 4 chars, geen stopwoorden)
   const stop = new Set(["een", "het", "deze", "die", "voor", "wordt", "wat", "hoe", "welk", "welke", "bij", "naar", "dan", "als", "maar", "ook", "niet", "met", "van", "uit", "tot", "kun", "kan", "krijg", "geef", "zonder", "samen", "telkens", "klopt"]);
   const words = lower
     .split(/[^a-zà-ž0-9²³½]+/i)
     .map((w) => w.trim())
     .filter((w) => w.length >= 4 && !stop.has(w));
 
-  const allowedSet = Array.isArray(allowedSubjects) && allowedSubjects.length > 0
-    ? new Set(allowedSubjects)
-    : null;
-
   for (const path of Object.values(ALL_LEARN_PATHS)) {
     if (allowedSet && !allowedSet.has(path.subject)) continue;
     const padMatcht = path.triggerKeywords?.some((kw) => lower.includes(kw.toLowerCase()));
     if (!padMatcht) continue;
 
-    // Zoek beste stap binnen dit pad
     let bestStepIdx = 0;
     let bestScore = 0;
     path.steps.forEach((step, idx) => {
       const stepText = (step.title + " " + (step.explanation || "")).toLowerCase();
       let score = 0;
-      // Kernwoord match — title-match telt extra
       const titleLower = step.title.toLowerCase();
       for (const w of words) {
         if (titleLower.includes(w)) score += 3;
