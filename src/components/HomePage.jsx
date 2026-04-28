@@ -521,6 +521,28 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     setStep("name");
   };
 
+  // Primaire CTA "Oefenen": leerling-flow zonder featureId (geen specifieke feature kiezen).
+  // Skipt naam-prompt voor terugkerende gebruikers (zelfde patroon als handleFeatureClick).
+  const handleOefenenClick = () => {
+    track("home_cta_oefenen");
+    try {
+      const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
+      if (saved.name) {
+        setUserName(saved.name);
+        if (saved.level) setUserLevel(saved.level);
+        if (saved.schoolType) setUserSchoolType?.(saved.schoolType);
+        onSelectRole(saved.role || "leerling");
+        return;
+      }
+    } catch {}
+    handleRoleClick("leerling");
+  };
+
+  const handleLerenClick = () => {
+    track("home_cta_leren");
+    onLearnPathsHub?.();
+  };
+
   const handleFeatureClick = (featureId) => {
     if (featureId === "pro") { onPro?.(); return; }
     const role = featureId === "leerkrachten" ? "teacher" : "leerling";
@@ -706,6 +728,58 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             </div>
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
               {LAUNCH_PROMO_LONG}
+            </div>
+          </div>
+        )}
+
+        {/* Primaire CTA's: Leren vs Oefenen — vervangt het versplinterde knoppen-veld onderaan */}
+        {step === "role" && (
+          <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
+            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 10, textAlign: "center", letterSpacing: 0.3 }}>
+              Wat wil je doen?
+            </div>
+            <div style={{ display: "flex", gap: 12 }}>
+              {onLearnPathsHub && (
+                <button
+                  onClick={handleLerenClick}
+                  style={{
+                    flex: 1,
+                    background: "linear-gradient(135deg, #00c853, #00897b)",
+                    border: "none", borderRadius: 18, padding: "18px 10px",
+                    color: "#fff", cursor: "pointer",
+                    display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
+                    boxShadow: "0 6px 20px rgba(0,200,83,0.35)",
+                    transition: "transform 0.15s",
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
+                >
+                  <span style={{ fontSize: 34 }}>📚</span>
+                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700 }}>Leren</div>
+                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, opacity: 0.92 }}>uitleg + checks per stap</div>
+                </button>
+              )}
+              <button
+                onClick={handleOefenenClick}
+                style={{
+                  flex: 1,
+                  background: "linear-gradient(135deg, #ff8030, #ffaa00)",
+                  border: "none", borderRadius: 18, padding: "18px 10px",
+                  color: "#1a0a00", cursor: "pointer",
+                  display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
+                  boxShadow: "0 6px 20px rgba(255,140,40,0.35)",
+                  transition: "transform 0.15s",
+                }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
+              >
+                <span style={{ fontSize: 34 }}>🎯</span>
+                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700 }}>Oefenen</div>
+                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, opacity: 0.92 }}>toetsen, tafels, cito</div>
+              </button>
+            </div>
+            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 14, textAlign: "center" }}>
+              of kies hieronder een rol ↓
             </div>
           </div>
         )}
@@ -1035,23 +1109,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Speel OBLITERATOR
               </button>
             )}
-            {onLearnPathsHub && (
-              <button
-                style={{
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  background: "linear-gradient(135deg, #00c853, #1976d2)",
-                  color: "#fff",
-                  border: "none",
-                  borderRadius: 12, padding: "14px 18px", fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 15, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
-                  boxShadow: "0 4px 18px rgba(0,200,83,0.35)",
-                }}
-                onClick={() => { track("learn_paths_hub_open"); onLearnPathsHub(); }}
-              >
-                <span style={{ fontSize: 20 }}>📚</span>
-                Leerpaden — kies een onderwerp
-              </button>
-            )}
+            {/* Oude losse 'Leerpaden — kies een onderwerp' knop is verwijderd; staat nu als primaire CTA bovenaan. */}
             <button
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
