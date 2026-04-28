@@ -132,6 +132,39 @@ function SvgFigure({ svg }) {
   );
 }
 
+// Knop die een YouTube-zoekopdracht opent voor de huidige stap.
+// Gebruik bewust een search-URL ipv vaste video-URL: dan is de
+// inhoud altijd actueel en is er geen onderhoud aan dode links.
+function YoutubeZoekKnop({ pathTitle, stepTitle, subject }) {
+  const vakLabel = subject === "taal" ? "Nederlands"
+    : subject === "wiskunde" ? "wiskunde"
+    : subject || "uitleg";
+  const query = `${stepTitle} ${pathTitle} ${vakLabel} uitleg`;
+  const url = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: "inline-flex", alignItems: "center", gap: 8,
+        marginTop: 12, marginBottom: 6,
+        padding: "9px 14px",
+        background: "linear-gradient(135deg, #ff0000, #c4302b)",
+        border: "none", borderRadius: 12,
+        color: "#fff",
+        fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+        textDecoration: "none",
+        boxShadow: "0 3px 12px rgba(255,0,0,0.25)",
+        cursor: "pointer",
+      }}
+    >
+      <span style={{ fontSize: 18 }}>🎥</span>
+      Bekijk uitleg op YouTube
+    </a>
+  );
+}
+
 export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome }) {
   const path = ALL_LEARN_PATHS[pathId];
   const player = (userName || "Speler").trim() || "Speler";
@@ -326,6 +359,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           <>
             <SvgFigure svg={step.svg} />
             <Explanation text={step.explanation} />
+            <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
           </>
         )}
 
