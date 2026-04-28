@@ -372,7 +372,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -778,6 +778,34 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, opacity: 0.92 }}>toetsen, tafels, cito</div>
               </button>
             </div>
+            {onMyMastery && (() => {
+              // Toon de "Mijn voortgang"-knop alleen voor terugkerende leerlingen
+              // (= naam in localStorage). Voor nieuwe bezoekers heeft het geen
+              // betekenis nog en zou het de keuze versnipperen.
+              let savedName = null;
+              try { savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim(); } catch {}
+              if (!savedName) return null;
+              return (
+                <button
+                  onClick={() => { track("home_cta_mastery"); onMyMastery(); }}
+                  style={{
+                    width: "100%", marginTop: 12,
+                    padding: "12px 14px",
+                    borderRadius: 14,
+                    border: "1px solid rgba(0,200,83,0.40)",
+                    background: "rgba(0,200,83,0.10)",
+                    color: "#69f0ae",
+                    fontFamily: "'Fredoka', sans-serif",
+                    fontSize: 14, fontWeight: 700,
+                    cursor: "pointer",
+                    display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  }}
+                >
+                  <span style={{ fontSize: 18 }}>📈</span>
+                  <span>Mijn voortgang — {savedName}</span>
+                </button>
+              );
+            })()}
             <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 14, textAlign: "center" }}>
               of kies hieronder een rol ↓
             </div>

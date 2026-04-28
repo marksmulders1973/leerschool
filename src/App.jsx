@@ -31,6 +31,7 @@ import LearnPathsHub from "./components/LearnPathsHub.jsx";
 import Curriculum from "./components/Curriculum.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import MeeBezig from "./components/MeeBezig.jsx";
+import MyMastery from "./components/MyMastery.jsx";
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
@@ -58,6 +59,7 @@ const BOTTOMNAV_PAGES = new Set([
   "home",
   "learn-paths-hub",
   "learn-meebezig",
+  "my-mastery",
   "kampioenen", "leaderboard", "student-progress", "teacher-progress",
   "student-home", "teacher-home",
   "self-study", "textbook", "cito", "tafels",
@@ -618,6 +620,19 @@ export default function App() {
           onHome={() => { setLearnFilterSubject(null); setPage("home"); }}
         />
       )}
+      {page === "my-mastery" && (
+        <MyMastery
+          userName={userName}
+          onPickPath={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("my-mastery");
+            setPage("learn-path");
+          }}
+          onBack={() => setPage("home")}
+          onHome={() => setPage("home")}
+        />
+      )}
       {page === "learn-meebezig" && meeBezigCategory && (() => {
         const allCats = [...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO];
         const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };
@@ -706,6 +721,7 @@ export default function App() {
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => setPage("learn-paths-hub")}
+          onMyMastery={() => setPage("my-mastery")}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
@@ -959,6 +975,7 @@ export default function App() {
       )}
       {page === "play" && gameState && (
         <PlayQuiz
+          userName={userName}
           gameState={gameState}
           setGameState={setGameState}
           onFinish={finishGame}

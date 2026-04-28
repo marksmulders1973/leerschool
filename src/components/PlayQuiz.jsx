@@ -4,8 +4,14 @@ import { SUBJECTS } from "../constants.js";
 import { SoundEngine, track } from "../utils.js";
 import { findLearnPathForQuestion } from "../learnPaths/index.js";
 import { categoryToLearnSubjects } from "../learnPaths/subjectMapping.js";
+import { recordAnswer as recordMasteryAnswer } from "../mastery.js";
 
-export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome, onLearnPathRequest }) {
+// Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
+// Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
+// nadenken niet (1.5 sec is sneller dan een mens die de vraag echt leest).
+const MIN_READ_MS = 1500;
+
+export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, onHome, onLearnPathRequest, userName = null }) {
   const noTimer = !gameState.timePerQuestion || gameState.timePerQuestion === 0;
 
   // Drop-off tracking: trigger 'quiz_first_question_seen' bij eerste mount
@@ -50,6 +56,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   const [questionImage, setQuestionImage] = useState(null);
   const [elapsed, setElapsed] = useState(0);
+  // Anti-game: knoppen 1.5 sec disabled na elke nieuwe vraag.
+  const [canAnswer, setCanAnswer] = useState(false);
   const nextStateRef = useRef(null);
   const timerRef = useRef(null);
   const wrongOverlayTimerRef = useRef(null);
@@ -221,8 +229,18 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     return () => clearInterval(timerRef.current);
   }, [gameState.currentQ, showResult, noTimer]);
 
+  // Reset anti-game timer bij elke nieuwe vraag
+  useEffect(() => {
+    setCanAnswer(false);
+    const t = setTimeout(() => setCanAnswer(true), MIN_READ_MS);
+    return () => clearTimeout(t);
+  }, [gameState.currentQ]);
+
   const handleAnswer = (idx) => {
     if (showResult) return;
+    // Anti-game: blokkeer handmatige antwoorden binnen MIN_READ_MS, maar
+    // laat timeout-antwoorden (idx === -1) wel door.
+    if (!canAnswer && idx !== -1) return;
     clearInterval(timerRef.current);
     if (idx === -1) setTimedOut(true);
     setSelected(idx);
@@ -239,6 +257,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     setShowExplanation(true);
 
     track("question_answered", { subject: gameState.quiz.subject, level: gameState.quiz.level, question_nr: gameState.currentQ + 1, is_correct: isCorrect, timed_out: idx === -1 });
+
+    // Schrijf prestatie weg in topic_mastery — fire-and-forget.
+    if (userName && idx !== -1) {
+      recordMasteryAnswer({ playerName: userName, questionText: question?.q, isCorrect }).catch(() => {});
+    }
     const newState = {
       ...gameState,
       score: gameState.score + (isCorrect ? 1 : 0),
@@ -362,8 +385,23 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               } else { bg = "#162033"; border = "#2a3f5f"; textColor = "#667788"; }
             }
 
+            const dimmed = !showResult && !canAnswer;
             return (
-              <button key={i} style={{ ...styles.optionButton, background: bg, borderColor: border, color: textColor, cursor: showResult ? "default" : "pointer", animation: anim }} onClick={() => !showResult && handleAnswer(i)}>
+              <button
+                key={i}
+                disabled={dimmed}
+                style={{
+                  ...styles.optionButton,
+                  background: bg,
+                  borderColor: border,
+                  color: textColor,
+                  cursor: showResult ? "default" : (canAnswer ? "pointer" : "not-allowed"),
+                  animation: anim,
+                  opacity: dimmed ? 0.5 : 1,
+                  transition: "opacity 0.3s ease",
+                }}
+                onClick={() => !showResult && canAnswer && handleAnswer(i)}
+              >
                 <span style={styles.optionLetter}>{String.fromCharCode(65 + i)}</span>
                 <span style={{ flex: 1 }}>{opt}</span>
                 {showResult && i === question.answer && <span style={{ fontSize: 18 }}>✅</span>}
