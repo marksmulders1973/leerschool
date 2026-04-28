@@ -932,6 +932,21 @@ export default function App() {
           onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); const wasCito = gameState?.quiz?.id?.startsWith("cito-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : wasCito ? "cito" : role === "teacher" ? "teacher-home" : "student-home"); }}
           onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
           onLearnPathRequest={(req) => {
+            // Fallback: vraag heeft geen specifieke leerpadmatch — stuur naar
+            // leerpaden-hub gefilterd op het vak van de quiz, zodat de leerling
+            // tóch ergens een passend pad ziet.
+            if (req && typeof req === "object" && !req.pathId && req.fallbackSubject) {
+              const subjects = categoryToLearnSubjects(req.fallbackSubject);
+              setLearnPathReturnPage("play");
+              if (subjects.length > 0) {
+                setLearnFilterSubject(subjects.length === 1 ? subjects[0] : subjects);
+                setPage("learn-paths-hub");
+              } else {
+                setMeeBezigCategory(req.fallbackSubject);
+                setPage("learn-meebezig");
+              }
+              return;
+            }
             const isObj = req && typeof req === "object";
             setActiveLearnPathId(isObj ? req.pathId : req);
             setActiveLearnStepIdx(isObj && typeof req.stepIdx === "number" ? req.stepIdx : null);

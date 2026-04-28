@@ -372,6 +372,43 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           })}
         </div>
 
+        {!showResult && onLearnPathRequest && (
+          <button
+            onClick={() => {
+              const matched = findLearnPathForQuestion(question?.q);
+              const subject = gameState?.quiz?.subject;
+              track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
+              clearInterval(timerRef.current);
+              clearTimeout(wrongOverlayTimerRef.current);
+              if (matched) {
+                onLearnPathRequest(matched);
+              } else {
+                onLearnPathRequest({ fallbackSubject: subject });
+              }
+            }}
+            style={{
+              width: "100%",
+              marginTop: 14,
+              padding: "12px 14px",
+              borderRadius: 14,
+              border: "1px solid rgba(0,212,255,0.40)",
+              background: "rgba(0,212,255,0.08)",
+              color: "#80deea",
+              fontFamily: "'Nunito', sans-serif",
+              fontSize: 14,
+              fontWeight: 700,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+            }}
+          >
+            <span style={{ fontSize: 18 }}>🤔</span>
+            <span>Ik weet het niet — leg het uit</span>
+          </button>
+        )}
+
         {timedOut && showResult && (
           <div style={{ marginTop: 12, textAlign: "center", padding: "10px", background: "#3a1a1a", borderRadius: 12, animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 22, fontWeight: 800, color: "#ff5252", fontFamily: "'Fredoka', sans-serif" }}>⏰ Tijd is om!</span>
