@@ -577,6 +577,7 @@ const vlakkeFiguren = {
   emoji: "📐",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.meetkunde.vlak"],
   intro: "Meetkundige constructies en vierhoeken: middelloodlijn, bissectrice, zwaartelijn, hoogtelijn — en hoe ze de in- en omgeschreven cirkels van een driehoek bepalen. Plus oppervlakteformules voor parallellogram, ruit en trapezium.",
   triggerKeywords: ["middelloodlijn", "bissectrice", "zwaartelijn", "hoogtelijn", "ingeschreven cirkel", "omgeschreven cirkel", "parallellogram", "ruit", "trapezium", "zwaartepunt"],
   chapters,

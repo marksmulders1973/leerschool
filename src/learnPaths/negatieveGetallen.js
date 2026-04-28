@@ -322,6 +322,7 @@ const negatieveGetallen = {
   emoji: "🌡️",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.rekenen.negatief"],
   intro: "Negatieve getallen zijn getallen kleiner dan nul. Je ziet ze bij temperaturen onder nul, schulden, hoogtes onder zeeniveau. Hier leer je: getallenlijn, optellen/aftrekken/vermenigvuldigen met negatieve getallen, en de regels voor plus-min combinaties.",
   triggerKeywords: ["negatief", "negatieve getallen", "−", "min × min", "tegengestelde", "getallenlijn"],
   chapters,

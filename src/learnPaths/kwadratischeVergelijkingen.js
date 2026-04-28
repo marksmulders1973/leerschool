@@ -404,6 +404,7 @@ const kwadratischeVergelijkingen = {
   emoji: "🟰",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.algebra.kwadratisch", "WI.algebra.parabolen"],
   intro: "H7 uit Wiskunde Flex deel 2: hoe los je een vergelijking met x² erin op? Twee methodes: rechtstreeks via x² = c, en factoriseren via x buiten haakjes. Met praktische toepassingen.",
   triggerKeywords: ["kwadratische vergelijking", "factoriseren", "x² = ", "buiten haakjes", "x² + bx", "ax² + bx + c"],
   chapters,

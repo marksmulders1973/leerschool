@@ -282,6 +282,7 @@ const verhoudingen = {
   emoji: "⚖️",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.rekenen.verhoudingen"],
   intro: "Verhoudingen vergelijken hoeveelheden — bij recepten, schaalmodellen, kortingen, mengen. Hier leer je: notatie a : b, vereenvoudigen, verhoudingstabellen, kruisproduct, schaalmodellen en recepten omrekenen.",
   triggerKeywords: ["verhouding", "verhoudingen", "schaal", "evenredig", "kruisproduct", "verhoudingstabel"],
   chapters,

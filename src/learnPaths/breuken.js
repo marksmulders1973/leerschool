@@ -484,6 +484,7 @@ const breuken = {
   emoji: "🍕",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.rekenen.breuken"],
   intro: "Breuken zijn fundamenteel in álle wiskunde — niet alleen klas 1. Hier leer je vanaf de basis: wat is een breuk, gelijkwaardige breuken, optellen/aftrekken (met gelijknamig maken), vermenigvuldigen/delen (omdraaien-truc), en praktische toepassingen.",
   triggerKeywords: ["breuk", "breuken", "teller", "noemer", "gelijknamig", "vereenvoudigen", "½", "⅓", "¾"],
   chapters,

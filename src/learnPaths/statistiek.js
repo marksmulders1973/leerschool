@@ -332,6 +332,7 @@ const statistiek = {
   emoji: "📊",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.statistiek.beschrijven"],
   intro: "Statistiek bestudeert gegevens (data). Hier leer je: frequentietabellen, staafdiagrammen, drie centrummaten (gemiddelde, modus, mediaan), bereik als spreidingsmaat, en wanneer je welke gebruikt.",
   triggerKeywords: ["statistiek", "gemiddelde", "modus", "mediaan", "frequentie", "staafdiagram", "bereik"],
   chapters,

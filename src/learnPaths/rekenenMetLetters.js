@@ -497,6 +497,7 @@ const rekenenMetLetters = {
   emoji: "🔤",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.algebra.basis"],
   intro: "Algebra-basis: hoe reken je met letters? Termen herleiden, haakjes wegwerken, merkwaardige producten ((a+b)², (a−b)², (a+b)(a−b)) en rekenen met machten. Fundament voor élke wiskunde later.",
   triggerKeywords: ["herleiden", "haakjes wegwerken", "merkwaardig product", "machten", "termen", "soortgelijke termen", "(a+b)²"],
   chapters,

@@ -644,6 +644,7 @@ const kwadratenWortels = {
   emoji: "²",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.algebra.kwadraten"],
   intro: "H5 uit Wiskunde Flex deel 2: vanaf het kwadraat (3² = 9) tot wortels (√), rekenen met wortels, x² = c oplossen, en de soorten getallen (rationaal, irrationaal). Op basisniveau opgebouwd.",
   triggerKeywords: ["kwadraat", "kwadraten", "wortel", "wortels", "√", "x²", "irrationaal", "rationaal", "soorten getallen"],
   chapters,

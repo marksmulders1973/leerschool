@@ -294,6 +294,7 @@ const goniometrie = {
   emoji: "📐",
   level: "klas3-vwo",
   subject: "wiskunde",
+  topics: ["WI.meetkunde.gonio"],
   intro: "Goniometrie gaat over de verhoudingen tussen zijden in een rechthoekige driehoek, vanuit een gekozen hoek. Met sin, cos en tan kun je elke onbekende zijde of hoek uitrekenen — handig om hoogtes te bepalen zonder te meten.",
   triggerKeywords: ["sinus", "cosinus", "tangens", "sin", "cos", "tan", "goniometrie", "SOS-CAS-TOA"],
   chapters,

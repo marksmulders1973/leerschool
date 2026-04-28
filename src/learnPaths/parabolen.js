@@ -1146,6 +1146,7 @@ const parabolen = {
   emoji: "📐",
   level: "klas1-vwo",
   subject: "wiskunde",
+  topics: ["WI.algebra.parabolen"],
   intro: "In 32 stapjes ontdek je wat een parabool is — vanaf de allereerste basis (wat is x²?) tot het uitrekenen van de top en de nulpunten. Geen voorkennis nodig.",
   triggerKeywords: ["parabool", "parabolen", "dalparabool", "bergparabool", "y=x²", "y = x²", "kwadratische functie"],
   chapters,
