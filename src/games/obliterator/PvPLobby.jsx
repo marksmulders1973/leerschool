@@ -207,24 +207,30 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
         </span>
       </div>
 
-      <div style={codeBoxStyle}>
-        <div style={codeLabelStyle}>Match-code</div>
-        <div style={codeStyle}>{match.id.toUpperCase()}</div>
+      <div style={shareIntroStyle}>
+        Stuur je vriend de uitnodiging — hij hoeft niks in te typen,
+        de link doet de rest.
       </div>
 
-      <div style={shareSectionStyle}>
-        <a
-          href={whatsappShareLink(match.id, playerName)}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ ...primaryBtnStyle, background: "#25d366", borderColor: "#128c7e", textDecoration: "none" }}
-        >
-          📱 Deel via WhatsApp
-        </a>
-        <button type="button" onClick={copyLink} style={{ ...ghostBtnStyle, marginTop: 8 }}>
-          {copied ? "✓ Link gekopieerd" : "📋 Kopieer link"}
-        </button>
-      </div>
+      <a
+        href={whatsappShareLink(match.id, playerName)}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          ...primaryBtnStyle,
+          background: "#25d366",
+          borderColor: "#128c7e",
+          textDecoration: "none",
+          fontSize: 16,
+          padding: "14px 16px",
+          minHeight: 52,
+        }}
+      >
+        📱 Deel via WhatsApp
+      </a>
+      <button type="button" onClick={copyLink} style={{ ...ghostBtnStyle, marginTop: 8 }}>
+        {copied ? "✓ Link gekopieerd" : "📋 Of kopieer link voor andere chat"}
+      </button>
 
       <div style={statusStyle}>
         {bothPresent ? (
@@ -380,33 +386,13 @@ const vsStyle = {
   flexShrink: 0,
 };
 
-const codeBoxStyle = {
-  background: "rgba(0,0,0,0.35)",
-  border: "1px solid var(--color-border)",
-  borderRadius: 12,
-  padding: "12px 14px",
+const shareIntroStyle = {
+  fontSize: 13,
+  color: "var(--color-text-muted)",
   textAlign: "center",
   marginBottom: 12,
-};
-
-const codeLabelStyle = {
-  fontSize: 11,
-  color: "var(--color-text-muted)",
-  fontFamily: "var(--font-display)",
-  letterSpacing: 0.8,
-  marginBottom: 4,
-};
-
-const codeStyle = {
-  fontFamily: "var(--font-mono)",
-  fontSize: 28,
-  fontWeight: 800,
-  color: "var(--color-text-strong)",
-  letterSpacing: 4,
-};
-
-const shareSectionStyle = {
-  marginBottom: 14,
+  lineHeight: 1.4,
+  fontFamily: "var(--font-body)",
 };
 
 const statusStyle = {
