@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import supabase from "../supabase";
-import { ALL_LEARN_PATHS } from "../learnPaths";
-import { CURRICULA, curriculumNextStep, curriculumTotalSteps } from "../curricula";
+import supabase from "../../supabase";
+import { ALL_LEARN_PATHS } from "../../learnPaths";
+import { CURRICULA, curriculumNextStep, curriculumTotalSteps } from "../../curricula";
 
 const C = {
   bg: "#0f1729",

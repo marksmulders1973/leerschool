@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import supabase from "../supabase";
-import { ALL_LEARN_PATHS } from "../learnPaths";
-import MiniQuiz from "./MiniQuiz.jsx";
+import supabase from "../../supabase";
+import { ALL_LEARN_PATHS } from "../../learnPaths";
+import MiniQuiz from "../../components/MiniQuiz.jsx";
 
 const C = {
   bg: "#0f1729",

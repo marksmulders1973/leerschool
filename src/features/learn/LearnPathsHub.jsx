@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import supabase from "../supabase";
-import { ALL_LEARN_PATHS } from "../learnPaths";
-import { CURRICULA, curriculumTotalSteps } from "../curricula";
-import { SUBJECTS as SUBJECT_LABELS } from "../shared/subjects.js";
+import supabase from "../../supabase";
+import { ALL_LEARN_PATHS } from "../../learnPaths";
+import { CURRICULA, curriculumTotalSteps } from "../../curricula";
+import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 
 const C = {
   bg: "#0f1729",

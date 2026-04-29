@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import supabase from "../supabase.js";
-import styles from "../styles.js";
-import Header from "./Header.jsx";
-import { track } from "../utils.js";
+import supabase from "../../supabase.js";
+import styles from "../../styles.js";
+import Header from "../../components/Header.jsx";
+import { track } from "../../utils.js";
 
 // Pagina voor vakken die wél in 'Oefenen' bestaan, maar nog géén leerpaden hebben.
 // "We zijn ermee bezig!" + opt-in voor wachtlijst (learn_path_waitlist tabel).
