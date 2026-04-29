@@ -38,11 +38,26 @@ const HIGH_SCORE_KEY = "obliterator_v2_highscore";
  *
  * Phases: "start" | "countdown" | "playing" | "paused" | "gameover"
  */
-export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreSubmit }) {
+export default function ObliteratorV2({
+  playerName = "Speler",
+  onClose,
+  onScoreSubmit,
+  // PvP-modus: als pvpMatch + pvpSub gegeven zijn, draait de game in
+  // duel-modus met seeded RNG, opponent-ghost-render en eindscherm.
+  pvpMatch = null,
+  pvpSub = null,
+  pvpRole = null, // "host" of "guest"
+  pvpStartsAt = null, // timestamp (ms) voor sync-start
+  onChallengeFriend = null, // callback voor "Daag vriend uit"-knop op startscherm
+}) {
   const canvasRef = useRef(null);
   const stateRef = useRef(null);
   const phaseRef = useRef("start");
   const unlockedRef = useRef(loadUnlocked());
+  // PvP: opponent-state uit ontvangen ticks. Houden in ref zodat we hem
+  // 60fps kunnen renderen zonder elke tick een React-re-render te triggeren.
+  const opponentRef = useRef({ y: PHYSICS.groundY - PHYSICS.playerSize, score: 0, alive: true });
+  const isPvP = !!(pvpMatch && pvpSub);
 
   const [phase, setPhase] = useState("start");
   const [hud, setHud] = useState({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
@@ -74,6 +89,51 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   useEffect(() => {
     stateRef.current = createGameState({ isDaily: false });
   }, []);
+
+  // ── PvP: opponent-tick listener + auto-start ─────────────────
+  useEffect(() => {
+    if (!isPvP || !pvpSub) return;
+    // Hook tick-handler in (vorige handlers blijven, bv. presence)
+    const channel = pvpSub.channel;
+    const tickHandler = ({ payload }) => {
+      if (!payload || payload.from === pvpRole) return;
+      opponentRef.current = {
+        y: payload.y,
+        score: payload.score,
+        alive: payload.alive,
+        weapon: !!payload.weapon,
+      };
+    };
+    channel.on("broadcast", { event: "tick" }, tickHandler);
+
+    // Start direct met seeded RNG. Countdown sync via pvpStartsAt.
+    const seedRng = makeRng(pvpMatch.seed);
+    stateRef.current = createGameState({ rng: seedRng });
+    setSecondChancesUsed(0);
+    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+
+    const msToStart = Math.max(0, (pvpStartsAt || Date.now() + 3000) - Date.now());
+    setPhase("countdown");
+    setCountdown(Math.max(1, Math.ceil(msToStart / 1000)));
+    playSound("countdown");
+    let n = Math.max(1, Math.ceil(msToStart / 1000));
+    const id = setInterval(() => {
+      n--;
+      if (n > 0) {
+        setCountdown(n);
+        playSound("countdown");
+      } else {
+        clearInterval(id);
+        playSound("start");
+        setPhase("playing");
+      }
+    }, 700);
+
+    return () => {
+      clearInterval(id);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPvP]);
 
   // ───────────────────────── Game loop ─────────────────────────
   useEffect(() => {
@@ -269,6 +329,32 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       // ─── Render ─────────────────────────────────────
       render(canvasRef.current, s, hintObstacle);
 
+      // PvP: teken tegenstander als gekleurde ghost-orb. Eigen kleur is
+      // theme.accent, opponent krijgt blauw of rood al naargelang rol.
+      if (isPvP && opponentRef.current && canvasRef.current) {
+        const ctx = canvasRef.current.getContext("2d");
+        const opp = opponentRef.current;
+        const oppColor = pvpRole === "host" ? "#ff5252" : "#42a5f5";
+        const oppX = PHYSICS.playerX + 8; // iets verschoven zodat hij niet over jou ligt
+        ctx.save();
+        ctx.globalAlpha = opp.alive ? 0.55 : 0.25;
+        ctx.fillStyle = oppColor;
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = oppColor;
+        ctx.beginPath();
+        ctx.arc(
+          oppX + PHYSICS.playerSize / 2,
+          opp.y + PHYSICS.playerSize / 2,
+          PHYSICS.playerSize / 2,
+          0,
+          Math.PI * 2
+        );
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.globalAlpha = 1;
+        ctx.restore();
+      }
+
       // HUD update — niet elke frame
       if (ts - lastHudPush > 100) {
         setHud({
@@ -284,6 +370,17 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           weaponSecondsLeft: Math.max(0, Math.ceil((s.weaponUntil - now) / 1000)),
         });
         lastHudPush = ts;
+
+        // PvP: 10Hz tick (elke 100ms zelfde als HUD).
+        if (isPvP && pvpSub) {
+          pvpSub.sendTick({
+            y: s.player.y,
+            vy: s.player.vy,
+            score: Math.floor(s.score),
+            alive: s.lives > 0,
+            weapon: now < s.weaponUntil,
+          });
+        }
       }
 
       raf = requestAnimationFrame(tick);
@@ -511,7 +608,23 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   // Wordt aangeroepen als s.lives === 0. Beslist of we de tweede-kans-modal
   // tonen of meteen game-over draaien. Leest uit ref omdat de game-loop in
   // useEffect[] een stale closure heeft op state.
+  // In PvP-modus: geen tweede kans (zou de duel onderbreken). Direct
+  // pvp-finished phase, eigen score wordt gefinaliseerd.
   function handleDeath(s) {
+    if (isPvP) {
+      // Stuur laatste tick met alive=false zodat tegenstander dat ziet
+      if (pvpSub) {
+        pvpSub.sendTick({
+          y: s.player.y,
+          vy: s.player.vy,
+          score: Math.floor(s.score),
+          alive: false,
+          weapon: false,
+        });
+      }
+      setPhase("pvp-finished");
+      return;
+    }
     if (secondChancesUsedRef.current < MAX_SECOND_CHANCES) {
       // Bevries: zet phase op "second-chance". Loop pauseert vanzelf
       // omdat phaseRef.current !== "playing".
@@ -624,12 +737,33 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         />
       )}
 
+      {/* PvP score-bar bovenaan tijdens spel */}
+      {isPvP && (phase === "playing" || phase === "paused" || phase === "pvp-finished") && (
+        <PvPScoreBar
+          you={{
+            name: playerName,
+            score: hud.score,
+            color: pvpRole === "host" ? "#42a5f5" : "#ff5252",
+            label: pvpRole === "host" ? "Blauw" : "Rood",
+            alive: hud.lives > 0,
+          }}
+          opponent={{
+            name: pvpRole === "host" ? pvpMatch.guest_name : pvpMatch.host_name,
+            score: opponentRef.current.score,
+            color: pvpRole === "host" ? "#ff5252" : "#42a5f5",
+            label: pvpRole === "host" ? "Rood" : "Blauw",
+            alive: opponentRef.current.alive,
+          }}
+        />
+      )}
+
       {phase === "start" && (
         <StartScreen
           highScore={highScore}
           onStartNormal={() => startCountdown({ daily: false })}
           onStartDaily={() => startCountdown({ daily: true })}
           onShowAchievements={() => setShowAchievements(true)}
+          onChallengeFriend={onChallengeFriend}
           unlockedCount={unlockedCount}
           dailyDate={todayUtcString()}
         />
@@ -656,6 +790,19 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           playerName={playerName}
           isDaily={isDaily}
           onReplay={restart}
+          onClose={onClose}
+        />
+      )}
+      {phase === "pvp-finished" && pvpMatch && (
+        <PvPEndScreen
+          yourName={playerName}
+          yourScore={hud.score}
+          yourRole={pvpRole}
+          opponentName={pvpRole === "host" ? pvpMatch.guest_name : pvpMatch.host_name}
+          opponentScore={opponentRef.current.score}
+          opponentAlive={opponentRef.current.alive}
+          matchCode={pvpMatch.id}
+          pvpSub={pvpSub}
           onClose={onClose}
         />
       )}
@@ -1215,7 +1362,7 @@ function PuIcon({ emoji }) {
   );
 }
 
-function StartScreen({ highScore, onStartNormal, onStartDaily, onShowAchievements, unlockedCount, dailyDate }) {
+function StartScreen({ highScore, onStartNormal, onStartDaily, onShowAchievements, onChallengeFriend, unlockedCount, dailyDate }) {
   // Stop tap-bubble naar overlay zodat klik op kop niet beide knoppen triggert
   const stop = (e) => e.stopPropagation();
   return (
@@ -1267,6 +1414,28 @@ function StartScreen({ highScore, onStartNormal, onStartDaily, onShowAchievement
       >
         🗓️ DAGELIJKSE UITDAGING
       </button>
+      {onChallengeFriend && (
+        <button
+          onClick={(e) => { stop(e); onChallengeFriend(); }}
+          onTouchStart={stop}
+          style={{
+            marginTop: 10,
+            padding: "10px 22px",
+            background: "linear-gradient(135deg, #42a5f5, #ff5252)",
+            color: "#fff",
+            border: "none",
+            borderRadius: 14,
+            fontSize: 13,
+            fontWeight: 800,
+            cursor: "pointer",
+            fontFamily: "Fredoka, sans-serif",
+            boxShadow: "0 4px 14px rgba(255,82,82,0.45)",
+            letterSpacing: 0.4,
+          }}
+        >
+          ⚔️ DAAG VRIEND UIT (1v1)
+        </button>
+      )}
       <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
         Iedereen wereldwijd: dezelfde obstakels van vandaag ({dailyDate})
       </div>
@@ -1717,3 +1886,254 @@ const tabBtnActive = {
   color: "#ffd54f",
   borderColor: "#ffd54f",
 };
+
+// ═══════════════════════ PvP UI ═══════════════════════
+function PvPScoreBar({ you, opponent }) {
+  const winning = you.score > opponent.score;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: 4,
+        left: 12,
+        right: 12,
+        display: "flex",
+        gap: 6,
+        pointerEvents: "none",
+        zIndex: 10,
+      }}
+    >
+      <PvPSidePanel side="left" entry={you} highlight={winning} youLabel="JIJ" />
+      <PvPSidePanel side="right" entry={opponent} highlight={!winning} />
+    </div>
+  );
+}
+
+function PvPSidePanel({ side, entry, highlight, youLabel }) {
+  return (
+    <div
+      style={{
+        flex: 1,
+        background: highlight
+          ? `linear-gradient(135deg, ${entry.color}, rgba(0,0,0,0.4))`
+          : "rgba(0,0,0,0.55)",
+        border: `1px solid ${highlight ? entry.color : "rgba(255,255,255,0.15)"}`,
+        borderRadius: 10,
+        padding: "5px 10px",
+        textAlign: side === "left" ? "left" : "right",
+        backdropFilter: "blur(4px)",
+        opacity: entry.alive ? 1 : 0.55,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "Fredoka, sans-serif",
+          fontSize: 10,
+          fontWeight: 700,
+          color: "#fff",
+          opacity: 0.9,
+          textShadow: "0 1px 2px rgba(0,0,0,0.5)",
+          textTransform: "uppercase",
+          letterSpacing: 0.6,
+        }}
+      >
+        {youLabel || entry.label}
+        {!entry.alive && " 💀"}
+      </div>
+      <div
+        style={{
+          fontFamily: "Fredoka, sans-serif",
+          fontSize: 18,
+          fontWeight: 900,
+          color: "#fff",
+          textShadow: "0 2px 4px rgba(0,0,0,0.5)",
+          lineHeight: 1.1,
+        }}
+      >
+        {entry.score}
+      </div>
+      <div
+        style={{
+          fontSize: 10,
+          color: "rgba(255,255,255,0.85)",
+          fontFamily: "Nunito, sans-serif",
+          textShadow: "0 1px 2px rgba(0,0,0,0.5)",
+        }}
+      >
+        {entry.name || "—"}
+      </div>
+    </div>
+  );
+}
+
+function PvPEndScreen({
+  yourName,
+  yourScore,
+  yourRole,
+  opponentName,
+  opponentScore,
+  opponentAlive,
+  matchCode,
+  pvpSub,
+  onClose,
+}) {
+  // Wachten tot tegenstander ook dood is. Toon "wachten op tegenstander"
+  // als zij nog leven.
+  const [waiting, setWaiting] = useState(opponentAlive);
+
+  // Polling — elke 200ms check ref
+  useEffect(() => {
+    if (!opponentAlive) {
+      setWaiting(false);
+      return;
+    }
+    const id = setInterval(() => {
+      // We ontvangen tick-updates via subscribeMatch handler die opponentRef
+      // muteert; de prop opponentAlive wordt hier niet bijgewerkt. Re-check.
+      if (!pvpSub) return;
+    }, 200);
+    return () => clearInterval(id);
+  }, [opponentAlive, pvpSub]);
+
+  // Watcher: re-render als opponent uiteindelijk dood gaat. Hack: poll prop.
+  useEffect(() => {
+    if (!opponentAlive) setWaiting(false);
+  }, [opponentAlive]);
+
+  const youWon = !waiting && yourScore > opponentScore;
+  const tied = !waiting && yourScore === opponentScore;
+  const yourColor = yourRole === "host" ? "#42a5f5" : "#ff5252";
+  const oppColor = yourRole === "host" ? "#ff5252" : "#42a5f5";
+
+  return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        background: "rgba(0,0,0,0.9)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 16,
+        zIndex: 60,
+      }}
+    >
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 380,
+          background: "var(--color-bg-overlay)",
+          border: "2px solid var(--color-game-energy)",
+          borderRadius: 18,
+          padding: 20,
+          textAlign: "center",
+          boxShadow: "var(--shadow-glow-game), var(--shadow-lg)",
+          fontFamily: "var(--font-body)",
+          color: "#fff",
+        }}
+      >
+        {waiting ? (
+          <>
+            <div style={{ fontSize: 38, marginBottom: 6 }}>⏳</div>
+            <div style={{ fontFamily: "Fredoka, sans-serif", fontSize: 18, fontWeight: 800 }}>
+              Jouw run zit erop!
+            </div>
+            <div style={{ color: "var(--color-text-muted)", fontSize: 13, marginTop: 6 }}>
+              Wachten tot {opponentName || "tegenstander"} ook klaar is…
+            </div>
+            <div
+              style={{
+                marginTop: 18,
+                fontFamily: "Fredoka, sans-serif",
+                fontSize: 32,
+                fontWeight: 900,
+                color: yourColor,
+              }}
+            >
+              {yourScore}
+            </div>
+            <button onClick={onClose} style={{ ...ghostBtn, marginTop: 16 }}>
+              Stoppen
+            </button>
+          </>
+        ) : (
+          <>
+            <div style={{ fontSize: 50, marginBottom: 4 }}>
+              {tied ? "🤝" : youWon ? "🏆" : "💪"}
+            </div>
+            <div
+              style={{
+                fontFamily: "Fredoka, sans-serif",
+                fontSize: 22,
+                fontWeight: 900,
+                color: tied ? "#ffd54f" : youWon ? "var(--color-success)" : "var(--color-game-energy)",
+                marginBottom: 14,
+                textTransform: "uppercase",
+                letterSpacing: 1,
+              }}
+            >
+              {tied ? "Gelijkspel!" : youWon ? "Jij wint!" : "Verloren"}
+            </div>
+            <div style={{ display: "flex", gap: 10, marginBottom: 16 }}>
+              <ScoreCol name={yourName} score={yourScore} color={yourColor} highlight={youWon || tied} label="JIJ" />
+              <ScoreCol name={opponentName} score={opponentScore} color={oppColor} highlight={!youWon && !tied} />
+            </div>
+            <div
+              style={{
+                fontSize: 11,
+                color: "var(--color-text-muted)",
+                marginBottom: 14,
+                fontFamily: "var(--font-mono)",
+              }}
+            >
+              match: {matchCode}
+            </div>
+            <button onClick={onClose} style={{ ...primaryBtn, width: "100%" }}>
+              Terug naar home
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ScoreCol({ name, score, color, highlight, label }) {
+  return (
+    <div
+      style={{
+        flex: 1,
+        background: highlight ? `linear-gradient(135deg, ${color}, rgba(0,0,0,0.5))` : "rgba(0,0,0,0.4)",
+        border: `1px solid ${highlight ? color : "rgba(255,255,255,0.15)"}`,
+        borderRadius: 12,
+        padding: "10px 8px",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: "Fredoka, sans-serif",
+          fontSize: 10,
+          fontWeight: 800,
+          color: "#fff",
+          opacity: 0.85,
+          letterSpacing: 0.6,
+          marginBottom: 2,
+        }}
+      >
+        {label || name}
+      </div>
+      <div
+        style={{
+          fontFamily: "Fredoka, sans-serif",
+          fontSize: 24,
+          fontWeight: 900,
+          color: "#fff",
+          lineHeight: 1.1,
+        }}
+      >
+        {score}
+      </div>
+      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.7)" }}>{name}</div>
+    </div>
+  );
+}
