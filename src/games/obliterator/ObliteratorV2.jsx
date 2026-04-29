@@ -17,6 +17,7 @@ import {
 import { loadUnlocked, processEvent } from "./systems/achievements.js";
 import { themeForLevel } from "./data/themes.js";
 import { playSound, unlockAudio, setMuted, isMuted } from "./audio.js";
+import { makeRng, dailySeed, todayUtcString } from "./seed.js";
 import supabase from "../../supabase.js";
 
 const CANVAS_W = 360;
@@ -46,13 +47,15 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     catch { return 0; }
   });
   const [countdown, setCountdown] = useState(3);
+  // Daily Challenge state — wordt gezet vóór startCountdown bij daily-knop
+  const [isDaily, setIsDaily] = useState(false);
 
   // Sync phase met ref voor de game loop
   useEffect(() => { phaseRef.current = phase; }, [phase]);
 
   // Init state on mount
   useEffect(() => {
-    stateRef.current = createGameState();
+    stateRef.current = createGameState({ isDaily: false });
   }, []);
 
   // ───────────────────────── Game loop ─────────────────────────
@@ -105,12 +108,12 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       if (willJump) playSound("jump");
       s.input.tapped = false;
 
-      // Spawn
+      // Spawn — gebruikt s.rng zodat de Daily Challenge deterministisch is.
       if (ts - lastSpawnTime > spawnIntervalFor(s.level)) {
         spawnObstacle(s);
         lastSpawnTime = ts;
-        if (Math.random() < powerupChanceFor(s.level)) spawnPowerup(s);
-        if (Math.random() < 0.4) spawnStar(s);
+        if (s.rng() < powerupChanceFor(s.level)) spawnPowerup(s);
+        if (s.rng() < 0.4) spawnStar(s);
       }
 
       // Move + collide obstakels
@@ -207,11 +210,10 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       e.preventDefault();
       unlockAudio();
 
-      // Phase-aware: start → countdown, countdown → wachten, playing → jump
-      if (phaseRef.current === "start") {
-        startCountdown();
-        return;
-      }
+      // Phase-aware: start → er zijn 2 knoppen op de overlay (normal/daily),
+      // dus we starten hier NIET automatisch op tik op canvas. Tik op de
+      // knop in de Overlay zelf doet dat.
+      if (phaseRef.current === "start") return;
       if (phaseRef.current !== "playing") return;
       if (stateRef.current) stateRef.current.input.tapped = true;
     };
@@ -237,7 +239,15 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   }, []);
 
   // ─── Phase-handlers ──────────────────────────────────
-  function startCountdown() {
+  function startCountdown(opts = {}) {
+    const daily = !!opts.daily;
+    setIsDaily(daily);
+    // Re-init state met juiste rng voor deze run
+    stateRef.current = createGameState({
+      isDaily: daily,
+      dailyDate: daily ? todayUtcString() : null,
+    });
+    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
     setPhase("countdown");
     setCountdown(3);
     playSound("countdown");
@@ -256,8 +266,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   }
 
   function restart() {
-    stateRef.current = createGameState();
-    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+    // Bewaar daily-mode tussen runs zodat speler dezelfde challenge opnieuw doet
     setPhase("start");
   }
 
@@ -349,6 +358,8 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       bestCombo: s.bestCombo,
       obliterates: s.totalObliterates,
       isNewHigh: wasNewHigh,
+      isDaily: s.isDaily,
+      dailyDate: s.dailyDate,
     });
   }
 
@@ -395,7 +406,14 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         />
       )}
 
-      {phase === "start" && <StartScreen highScore={highScore} onTap={startCountdown} />}
+      {phase === "start" && (
+        <StartScreen
+          highScore={highScore}
+          onStartNormal={() => startCountdown({ daily: false })}
+          onStartDaily={() => startCountdown({ daily: true })}
+          dailyDate={todayUtcString()}
+        />
+      )}
       {phase === "countdown" && <CountdownOverlay n={countdown} />}
       {phase === "paused" && (
         <PauseMenu onResume={() => setPhase("playing")} onQuit={onClose} />
@@ -407,6 +425,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           highScore={highScore}
           isNewHigh={hud.score >= highScore && hud.score > 0}
           playerName={playerName}
+          isDaily={isDaily}
           onReplay={restart}
           onClose={onClose}
         />
@@ -419,7 +438,11 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
 
 // ═══════════════════════ Game state ═══════════════════════
 
-function createGameState() {
+function createGameState(opts = {}) {
+  const isDaily = !!opts.isDaily;
+  const dailyDate = opts.dailyDate || null;
+  // rng: deterministisch bij Daily, anders Math.random.
+  const rng = opts.rng || (isDaily ? makeRng(dailySeed()) : Math.random);
   return {
     score: 0,
     combo: 0,
@@ -438,12 +461,15 @@ function createGameState() {
     shieldActive: false,
     slowmoUntil: 0,
     multiplierBoostUntil: 0,
+    rng,
+    isDaily,
+    dailyDate,
   };
 }
 
 function spawnObstacle(s) {
   const types = obstacleVarietyFor(s.level);
-  const type = types[Math.floor(Math.random() * types.length)];
+  const type = types[Math.floor(s.rng() * types.length)];
   const presets = {
     block: { w: 30, h: 30, y: PHYSICS.groundY - 30 },
     spike: { w: 22, h: 28, y: PHYSICS.groundY - 28 },
@@ -459,7 +485,7 @@ function spawnPowerup(s) {
   s.powerups.push({
     x: CANVAS_W + 20,
     y: PHYSICS.groundY - 90,
-    kind: kinds[Math.floor(Math.random() * kinds.length)],
+    kind: kinds[Math.floor(s.rng() * kinds.length)],
     w: 26,
     h: 26,
     dead: false,
@@ -469,7 +495,7 @@ function spawnPowerup(s) {
 function spawnStar(s) {
   s.stars.push({
     x: CANVAS_W + 20,
-    y: PHYSICS.groundY - 60 - Math.random() * 70,
+    y: PHYSICS.groundY - 60 - s.rng() * 70,
     w: 16,
     h: 16,
     dead: false,
@@ -732,21 +758,62 @@ function PuIcon({ emoji }) {
   );
 }
 
-function StartScreen({ highScore, onTap }) {
+function StartScreen({ highScore, onStartNormal, onStartDaily, dailyDate }) {
+  // Stop tap-bubble naar overlay zodat klik op kop niet beide knoppen triggert
+  const stop = (e) => e.stopPropagation();
   return (
-    <Overlay onClick={onTap}>
-      <div style={{ fontSize: 64 }}>💀</div>
-      <h1 style={{ ...overlayTitle, fontSize: 38, letterSpacing: 1 }}>OBLITERATOR</h1>
-      <div style={{ color: "#ffd54f", fontSize: 13, marginTop: 4 }}>v2 — combo edition</div>
+    <Overlay>
+      <div style={{ fontSize: 60 }}>💀</div>
+      <h1 style={{ ...overlayTitle, fontSize: 36, letterSpacing: 1, margin: "4px 0 0" }}>OBLITERATOR</h1>
+      <div style={{ color: "#ffd54f", fontSize: 12, marginTop: 4 }}>v2 — combo edition</div>
       {highScore > 0 && (
-        <div style={{ color: "#bcd", marginTop: 16, fontSize: 14 }}>
+        <div style={{ color: "#bcd", marginTop: 12, fontSize: 13 }}>
           🏆 Persoonlijk record: <strong style={{ color: "#fff" }}>{highScore}</strong>
         </div>
       )}
-      <div style={{ marginTop: 32, padding: "10px 18px", borderRadius: 999, background: "rgba(0,200,83,0.18)", border: "1px solid #00c853", fontSize: 13, fontWeight: 700, color: "#69f0ae", animation: "pulse 1.5s ease infinite" }}>
-        TIK OM TE BEGINNEN
+      <button
+        onClick={(e) => { stop(e); onStartNormal(); }}
+        onTouchStart={stop}
+        style={{
+          marginTop: 24,
+          padding: "12px 28px",
+          background: "linear-gradient(135deg, #00c853, #00a040)",
+          color: "#fff",
+          border: "none",
+          borderRadius: 14,
+          fontSize: 15,
+          fontWeight: 800,
+          cursor: "pointer",
+          fontFamily: "Fredoka, sans-serif",
+          boxShadow: "0 4px 16px rgba(0,200,83,0.45)",
+          letterSpacing: 0.5,
+        }}
+      >
+        ▶ SPELEN
+      </button>
+      <button
+        onClick={(e) => { stop(e); onStartDaily(); }}
+        onTouchStart={stop}
+        style={{
+          marginTop: 10,
+          padding: "10px 22px",
+          background: "linear-gradient(135deg, #ffd54f, #ff9800)",
+          color: "#1a1a1a",
+          border: "none",
+          borderRadius: 14,
+          fontSize: 13,
+          fontWeight: 800,
+          cursor: "pointer",
+          fontFamily: "Fredoka, sans-serif",
+          boxShadow: "0 4px 14px rgba(255,213,79,0.4)",
+        }}
+      >
+        🗓️ DAGELIJKSE UITDAGING
+      </button>
+      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
+        Iedereen wereldwijd: dezelfde obstakels van vandaag ({dailyDate})
       </div>
-      <div style={{ marginTop: 22, fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, textAlign: "center", maxWidth: 280 }}>
+      <div style={{ marginTop: 18, fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, textAlign: "center", maxWidth: 280 }}>
         🎯 Tik om te springen<br />
         💥 Spring vlak boven obstakel = obliterate (×2 punten)<br />
         🔥 Combo bouwt multiplier op (×2 → ×3 → ×5 → ×8)<br />
@@ -776,41 +843,57 @@ function PauseMenu({ onResume, onQuit }) {
   );
 }
 
-function GameOverScreen({ score, level, highScore, isNewHigh, playerName, onReplay, onClose }) {
+function GameOverScreen({ score, level, highScore, isNewHigh, playerName, isDaily, onReplay, onClose }) {
   return (
     <Overlay>
-      <div style={{ fontSize: 56 }}>💥</div>
-      <h2 style={overlayTitle}>Game Over</h2>
-      <div
-        style={{
-          fontSize: 56,
-          fontWeight: 900,
-          color: "#ffd54f",
-          margin: "8px 0",
-          textShadow: "0 4px 12px rgba(0,0,0,0.5)",
-        }}
-      >
-        {score}
-      </div>
-      <div style={{ color: "#bcd", marginBottom: 8 }}>Level bereikt: {level}</div>
-      {isNewHigh && (
+      <div style={{ fontSize: 50 }}>💥</div>
+      <h2 style={{ ...overlayTitle, fontSize: 26 }}>Game Over</h2>
+      {isDaily && (
         <div
           style={{
             background: "linear-gradient(135deg, #ffd54f, #ff9800)",
             color: "#1a1a1a",
-            padding: "6px 14px",
+            padding: "3px 10px",
             borderRadius: 999,
             fontWeight: 800,
-            fontSize: 13,
-            marginBottom: 16,
+            fontSize: 11,
+            marginTop: 4,
+          }}
+        >
+          🗓️ DAGELIJKSE UITDAGING
+        </div>
+      )}
+      <div
+        style={{
+          fontSize: 52,
+          fontWeight: 900,
+          color: "#ffd54f",
+          margin: "6px 0",
+          textShadow: "0 4px 12px rgba(0,0,0,0.5)",
+          lineHeight: 1,
+        }}
+      >
+        {score}
+      </div>
+      <div style={{ color: "#bcd", marginBottom: 8, fontSize: 13 }}>Level bereikt: {level}</div>
+      {isNewHigh && !isDaily && (
+        <div
+          style={{
+            background: "linear-gradient(135deg, #ffd54f, #ff9800)",
+            color: "#1a1a1a",
+            padding: "5px 12px",
+            borderRadius: 999,
+            fontWeight: 800,
+            fontSize: 12,
+            marginBottom: 8,
             boxShadow: "0 4px 16px rgba(255,213,79,0.5)",
           }}
         >
           🏆 NIEUW PERSOONLIJK RECORD
         </div>
       )}
-      <Leaderboard playerName={playerName} myScore={score} />
-      <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
+      <Leaderboard playerName={playerName} myScore={score} initialTab={isDaily ? "daily" : "all"} />
+      <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
         <button style={primaryBtn} onClick={onReplay}>↻ Nog eens</button>
         <button style={ghostBtn} onClick={onClose}>Terug</button>
       </div>
@@ -818,9 +901,9 @@ function GameOverScreen({ score, level, highScore, isNewHigh, playerName, onRepl
   );
 }
 
-function Leaderboard({ playerName, myScore }) {
+function Leaderboard({ playerName, myScore, initialTab = "all" }) {
   const [scores, setScores] = useState(null);
-  const [tab, setTab] = useState("all"); // "all" | "today"
+  const [tab, setTab] = useState(initialTab); // "all" | "today" | "daily"
 
   useEffect(() => {
     let cancelled = false;
@@ -829,13 +912,20 @@ function Leaderboard({ playerName, myScore }) {
         let q = supabase
           .from("obliterator_scores")
           .select("player_name, score, level, created_at")
-          .like("level", "v2-%")
           .order("score", { ascending: false })
           .limit(10);
-        if (tab === "today") {
-          const since = new Date();
-          since.setHours(0, 0, 0, 0);
-          q = q.gte("created_at", since.toISOString());
+        if (tab === "daily") {
+          // Daily Challenge — alleen runs van vandaag's seed.
+          const today = todayUtcString();
+          q = q.like("level", `v2-daily-${today}-%`);
+        } else {
+          // All-time / vandaag — alle v2-runs (incl. daily, omdat skill telt)
+          q = q.like("level", "v2-%");
+          if (tab === "today") {
+            const since = new Date();
+            since.setHours(0, 0, 0, 0);
+            q = q.gte("created_at", since.toISOString());
+          }
         }
         const { data } = await q;
         if (!cancelled) setScores(Array.isArray(data) ? data : []);
@@ -847,8 +937,8 @@ function Leaderboard({ playerName, myScore }) {
   }, [tab]);
 
   return (
-    <div style={{ width: "100%", maxWidth: 280, marginTop: 8 }}>
-      <div style={{ display: "flex", gap: 4, marginBottom: 6, justifyContent: "center" }}>
+    <div style={{ width: "100%", maxWidth: 280, marginTop: 6 }}>
+      <div style={{ display: "flex", gap: 4, marginBottom: 6, justifyContent: "center", flexWrap: "wrap" }}>
         <button
           onClick={() => setTab("all")}
           style={{ ...tabBtn, ...(tab === "all" ? tabBtnActive : {}) }}
@@ -860,6 +950,12 @@ function Leaderboard({ playerName, myScore }) {
           style={{ ...tabBtn, ...(tab === "today" ? tabBtnActive : {}) }}
         >
           Vandaag
+        </button>
+        <button
+          onClick={() => setTab("daily")}
+          style={{ ...tabBtn, ...(tab === "daily" ? tabBtnActive : {}) }}
+        >
+          🗓️ Daily
         </button>
       </div>
       <div

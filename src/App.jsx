@@ -785,16 +785,22 @@ export default function App() {
         <ObliteratorV2
           playerName={userName || "Speler"}
           onClose={() => setPage("home")}
-          onScoreSubmit={({ score, level, bestCombo, obliterates }) => {
-            // Hergebruik bestaande obliterator_scores-tabel met _v2-suffix in level-veld
-            // zodat we beide naast elkaar kunnen tracken zonder schema-wijziging.
+          onScoreSubmit={({ score, level, bestCombo, obliterates, isDaily, dailyDate }) => {
+            // Tag-formaat in obliterator_scores.level:
+            //   v2-{level}                    voor normale runs
+            //   v2-daily-{date}-{level}       voor Daily Challenge
+            // Zo kan de leaderboard filteren met LIKE 'v2-daily-2026-04-29-%'
+            // en de algemene 'v2-%' query pakt beide types op.
+            const tag = isDaily && dailyDate
+              ? `v2-daily-${dailyDate}-${level}`
+              : `v2-${level}`;
             try {
               supabase
                 .from("obliterator_scores")
                 .insert({
                   player_name: userName || "Speler",
                   score,
-                  level: `v2-${level}`,
+                  level: tag,
                   user_id: authUser?.id || null,
                 })
                 .then(() => {})
