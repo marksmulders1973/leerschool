@@ -13,7 +13,10 @@ export function speedFor(level) {
 
 export function spawnIntervalFor(level) {
   // ms tussen obstakel-spawns. Snel level → korter interval.
-  return Math.max(700, 1500 - (level - 1) * 90);
+  // Tuning 2026-04-29: -30% obstakels (interval × 1/0.7 = 1.43) zodat
+  // de tweede-kans-flow ademruimte heeft en het spel minder grindy voelt.
+  // Voor: 1500→700ms. Nu: 2150→1000ms.
+  return Math.max(1000, 2150 - (level - 1) * 130);
 }
 
 export function obstacleVarietyFor(level) {
