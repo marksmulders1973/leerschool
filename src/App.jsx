@@ -872,7 +872,7 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
-          onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPlayObliterator={() => setPage("obliterator-v2")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => setPage("learn-paths-hub")}
