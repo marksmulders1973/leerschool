@@ -3,7 +3,7 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
-import MasteryCTABanner from "./MasteryCTABanner.jsx";
+import MasteryCTABanner from "../features/mastery/MasteryCTABanner.jsx";
 
 const TICKER_ITEMS = [
   { icon: "🎯", text: "Cito eindtoets oefenen" },

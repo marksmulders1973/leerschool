@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery.js";
-import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
-import { track } from "../utils.js";
-import { subjectMeta } from "../shared/subjects.js";
+import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "./mastery.js";
+import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
+import { track } from "../../utils.js";
+import { subjectMeta } from "../../shared/subjects.js";
 
 /**
  * MasteryCTABanner — éérste primaire CTA op homepage voor terugkerende

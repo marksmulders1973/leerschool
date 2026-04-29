@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "./Header.jsx";
-import styles from "../styles.js";
-import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery.js";
-import { SUBJECTS as SUBJECT_LABELS } from "../shared/subjects.js";
+import Header from "../../components/Header.jsx";
+import styles from "../../styles.js";
+import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "./mastery.js";
+import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 
 /**
  * MyMastery — voortgangs-pagina.

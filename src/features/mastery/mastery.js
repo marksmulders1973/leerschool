@@ -9,10 +9,10 @@
 // is afgerond. `topic_mastery` is iets anders: het tracked toets-prestatie
 // per onderwerp. Samen vormen ze de hand-in-hand-loop.
 
-import supabase from "./supabase.js";
-import { getCurrentUserId } from "./auth.js";
-import { QUESTION_PATH_MAP } from "./learnPaths/questionPathMap.generated.js";
-import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
+import supabase from "../../supabase.js";
+import { getCurrentUserId } from "../../auth.js";
+import { QUESTION_PATH_MAP } from "../../learnPaths/questionPathMap.generated.js";
+import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
 
 const MIN_ATTEMPTS_FOR_LEVEL = 5; // hoeveel pogingen vóór we een niveau toekennen
 

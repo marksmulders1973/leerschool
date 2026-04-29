@@ -62,7 +62,7 @@ const LearnPath = lazy(() => import("./components/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./components/LearnPathsHub.jsx"));
 const Curriculum = lazy(() => import("./components/Curriculum.jsx"));
 const MeeBezig = lazy(() => import("./components/MeeBezig.jsx"));
-const MyMastery = lazy(() => import("./components/MyMastery.jsx"));
+const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
