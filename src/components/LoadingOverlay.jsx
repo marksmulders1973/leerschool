@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// Fullscreen loading-overlay voor lange AI-calls (toetsvraag-generatie).
+// Niet voor route-overgangen — daar gebruiken we PageLoader (3px shimmer).
+
 export default function LoadingOverlay({ mode, onCancel }) {
   const [msgIndex, setMsgIndex] = useState(0);
   const textbookMessages = [
@@ -21,26 +24,115 @@ export default function LoadingOverlay({ mode, onCancel }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setMsgIndex(prev => (prev + 1) % messages.length);
+      setMsgIndex((prev) => (prev + 1) % messages.length);
     }, mode === "textbook" ? 4000 : 5000);
     return () => clearInterval(interval);
   }, [mode, messages.length]);
 
   return (
-    <div style={{ position: "fixed", inset: 0, background: "linear-gradient(135deg, #1a1a2e, #16213e)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200 }}>
-      <img src="/logo.jpg" alt="studiebol" style={{ width: "80%", maxWidth: 300, marginBottom: 24, borderRadius: 20, animation: "pulse 2s ease infinite" }} />
-      <h2 style={{ fontFamily: "'Fredoka', sans-serif", color: "#fff", fontSize: 22, marginBottom: 12 }}>{mode === "textbook" ? "Echte vragen zoeken..." : "Vragen op maat maken..."}</h2>
-      <div style={{ display: "flex", gap: 6, marginBottom: 20 }}>
-        {[0,1,2,3,4].map(i => (
-          <div key={i} style={{ width: 12, height: 12, borderRadius: 6, background: "#00e676", animation: `loadDot 1.2s ease ${i * 0.15}s infinite` }} />
+    <div
+      role="status"
+      aria-live="polite"
+      style={{
+        position: "fixed",
+        inset: 0,
+        background:
+          "linear-gradient(135deg, var(--color-bg-base), var(--color-bg-surface))",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 200,
+        padding: "var(--space-5)",
+      }}
+    >
+      <img
+        src="/logo.jpg"
+        alt="studiebol"
+        style={{
+          width: "80%",
+          maxWidth: 300,
+          marginBottom: "var(--space-5)",
+          borderRadius: "var(--radius-xl)",
+          animation: "pulse 2s ease infinite",
+        }}
+      />
+      <h2
+        style={{
+          fontFamily: "var(--font-display)",
+          color: "var(--color-text-strong)",
+          fontSize: "var(--font-size-xl)",
+          fontWeight: "var(--font-weight-bold)",
+          marginBottom: "var(--space-3)",
+        }}
+      >
+        {mode === "textbook" ? "Echte vragen zoeken..." : "Vragen op maat maken..."}
+      </h2>
+      <div
+        aria-hidden="true"
+        style={{ display: "flex", gap: 6, marginBottom: "var(--space-5)" }}
+      >
+        {[0, 1, 2, 3, 4].map((i) => (
+          <div
+            key={i}
+            style={{
+              width: 12,
+              height: 12,
+              borderRadius: "var(--radius-pill)",
+              background: "var(--color-brand-primary)",
+              animation: `loadDot 1.2s ease ${i * 0.15}s infinite`,
+            }}
+          />
         ))}
       </div>
-      <p style={{ color: "#69f0ae", fontSize: 14, fontFamily: "'Nunito', sans-serif", textAlign: "center", padding: "0 20px", lineHeight: 1.5, fontWeight: 700, minHeight: 42, animation: "fadeIn 0.5s ease" }} key={msgIndex}>{messages[msgIndex]}</p>
-      <p style={{ color: "#556677", fontSize: 11, fontFamily: "'Nunito', sans-serif", textAlign: "center", marginTop: 8, padding: "0 20px" }}>
-        {mode === "textbook" ? "Echte vragen zoeken kost ~20 seconden — maar dan heb je ook wat!" : "⏱️ Duurt ongeveer 20-30 seconden — kwaliteit kost even tijd!"}
+      <p
+        key={msgIndex}
+        style={{
+          color: "var(--color-brand-primary-100)",
+          fontSize: "var(--font-size-md)",
+          fontFamily: "var(--font-body)",
+          textAlign: "center",
+          padding: "0 var(--space-5)",
+          lineHeight: "var(--line-height-normal)",
+          fontWeight: "var(--font-weight-bold)",
+          minHeight: 42,
+          animation: "fadeIn 0.5s ease",
+        }}
+      >
+        {messages[msgIndex]}
+      </p>
+      <p
+        style={{
+          color: "var(--color-text-subtle)",
+          fontSize: "var(--font-size-xs)",
+          fontFamily: "var(--font-body)",
+          textAlign: "center",
+          marginTop: "var(--space-2)",
+          padding: "0 var(--space-5)",
+        }}
+      >
+        {mode === "textbook"
+          ? "Echte vragen zoeken kost ~20 seconden — maar dan heb je ook wat!"
+          : "⏱️ Duurt ongeveer 20-30 seconden — kwaliteit kost even tijd!"}
       </p>
       {onCancel && (
-        <button onClick={onCancel} style={{ marginTop: 24, padding: "10px 24px", borderRadius: 12, border: "1px solid #2a3f5f", background: "transparent", color: "#556677", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+        <button
+          type="button"
+          onClick={onCancel}
+          style={{
+            marginTop: "var(--space-5)",
+            padding: "var(--space-3) var(--space-5)",
+            borderRadius: "var(--radius-md)",
+            border: "1px solid var(--color-border)",
+            background: "transparent",
+            color: "var(--color-text-muted)",
+            fontFamily: "var(--font-body)",
+            fontWeight: "var(--font-weight-bold)",
+            fontSize: "var(--font-size-sm)",
+            cursor: "pointer",
+            minHeight: "var(--tap-target-min)",
+          }}
+        >
           Annuleren
         </button>
       )}

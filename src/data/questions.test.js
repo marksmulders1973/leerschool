@@ -79,6 +79,9 @@ describe("fetchQuestions", () => {
     expect(cacheSize()).toBe(2);
   });
 
+  // Constants.js is groot (60K+ regels) — dynamische import duurt op
+  // Windows soms 5+ seconden. Verhoog timeout zodat de test geen vals
+  // negatieve resultaat geeft door filesystem-prestatie.
   it("bij Supabase-error valt terug op constants.js", async () => {
     supabase.from.mockReturnValue(makeChain({ data: null, error: { message: "boom" } }));
 
@@ -86,7 +89,7 @@ describe("fetchQuestions", () => {
     // constants.js heeft echte rekenen-vragen voor groep12
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBeGreaterThan(0);
-  });
+  }, 30000);
 
   it("bij lege Supabase-response valt terug op constants.js", async () => {
     supabase.from.mockReturnValue(makeChain({ data: [], error: null }));
@@ -94,7 +97,7 @@ describe("fetchQuestions", () => {
     const result = await fetchQuestions({ subject: "rekenen", level: "groep12", limit: 3 });
     expect(Array.isArray(result)).toBe(true);
     expect(result.length).toBeGreaterThan(0);
-  });
+  }, 30000);
 
   it("clearQuestionsCache leegt de cache", async () => {
     supabase.from.mockReturnValue(makeChain({ data: [{ q: "x", options: [], answer: 0 }], error: null }));

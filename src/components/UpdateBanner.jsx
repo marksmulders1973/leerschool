@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+// Banner bovenaan als de service-worker een nieuwe build heeft klaargezet.
+// Tikt-vernieuwen → SKIP_WAITING + page-reload.
+
 export default function UpdateBanner() {
   const [zichtbaar, setZichtbaar] = useState(false);
   const [verwerken, setVerwerken] = useState(false);
@@ -16,8 +19,6 @@ export default function UpdateBanner() {
     const sw = window.__pendingSw;
     if (sw && typeof sw.postMessage === "function") {
       sw.postMessage({ type: "SKIP_WAITING" });
-      // De SW activeert -> controllerchange listener in index.html doet reload
-      // Fallback: na 2.5 sec sowieso reloaden
       setTimeout(() => window.location.reload(), 2500);
     } else {
       window.location.reload();
@@ -27,38 +28,71 @@ export default function UpdateBanner() {
   if (!zichtbaar) return null;
 
   return (
-    <div style={{
-      position: "fixed", top: 0, left: 0, right: 0, zIndex: 100000,
-      background: "linear-gradient(135deg, #00c853, #69f0ae)",
-      color: "#0d1b2e",
-      padding: "10px 14px",
-      display: "flex", alignItems: "center", justifyContent: "space-between",
-      gap: 10, boxShadow: "0 4px 16px rgba(0,200,83,0.4)",
-      fontFamily: "'Fredoka', sans-serif",
-      animation: "slideDown 0.3s ease-out",
-    }}>
+    <div
+      role="status"
+      aria-live="polite"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 100000,
+        background:
+          "linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-primary-100))",
+        color: "var(--color-bg-base)",
+        padding: "var(--space-3) var(--space-4)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "var(--space-3)",
+        boxShadow: "var(--shadow-glow-success)",
+        fontFamily: "var(--font-display)",
+        animation: "slideDown var(--motion-slow) var(--ease-out)",
+      }}
+    >
       <style>{`
         @keyframes slideDown {
           from { transform: translateY(-100%); opacity: 0; }
           to   { transform: translateY(0); opacity: 1; }
         }
       `}</style>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, flex: 1, minWidth: 0 }}>
-        <span style={{ fontSize: 18 }}>🔄</span>
+      <div style={{ display: "flex", alignItems: "center", gap: "var(--space-2)", flex: 1, minWidth: 0 }}>
+        <span style={{ fontSize: 18 }} aria-hidden="true">🔄</span>
         <div style={{ minWidth: 0, overflow: "hidden" }}>
-          <div style={{ fontWeight: 700, fontSize: 14 }}>Nieuwe versie beschikbaar</div>
-          <div style={{ fontSize: 12, opacity: 0.75, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          <div style={{ fontWeight: "var(--font-weight-bold)", fontSize: "var(--font-size-md)" }}>
+            Nieuwe versie beschikbaar
+          </div>
+          <div
+            style={{
+              fontSize: "var(--font-size-xs)",
+              opacity: 0.75,
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
             Tik vernieuwen voor de laatste functies
           </div>
         </div>
       </div>
-      <button onClick={vernieuw} disabled={verwerken} style={{
-        padding: "8px 16px", borderRadius: 10, border: "none",
-        background: verwerken ? "rgba(13,27,46,0.4)" : "#0d1b2e",
-        color: "#69f0ae", fontFamily: "'Fredoka', sans-serif",
-        fontSize: 14, fontWeight: 700, cursor: verwerken ? "default" : "pointer",
-        whiteSpace: "nowrap"
-      }}>
+      <button
+        type="button"
+        onClick={vernieuw}
+        disabled={verwerken}
+        style={{
+          padding: "var(--space-2) var(--space-4)",
+          borderRadius: "var(--radius-sm)",
+          border: "none",
+          background: verwerken ? "rgba(11, 18, 36, 0.4)" : "var(--color-bg-base)",
+          color: "var(--color-brand-primary-100)",
+          fontFamily: "var(--font-display)",
+          fontSize: "var(--font-size-md)",
+          fontWeight: "var(--font-weight-bold)",
+          cursor: verwerken ? "default" : "pointer",
+          whiteSpace: "nowrap",
+          minHeight: "var(--tap-target-min)",
+        }}
+      >
         {verwerken ? "Vernieuwen…" : "Vernieuw"}
       </button>
     </div>
