@@ -2,12 +2,27 @@ import { useEffect, useState } from "react";
 import supabase from "../../supabase.js";
 import styles from "../../styles.js";
 import Header from "../../components/Header.jsx";
+import Card from "../../shared/ui/Card.jsx";
+import Button from "../../shared/ui/Button.jsx";
 import { track } from "../../utils.js";
 
 // Pagina voor vakken die wél in 'Oefenen' bestaan, maar nog géén leerpaden hebben.
 // "We zijn ermee bezig!" + opt-in voor wachtlijst (learn_path_waitlist tabel).
+//
+// Design-system v1: Card + Button, brand-tokens.
 
-export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userName, onBack, onHome, onGoOefenen, relatedHubCount = 0, relatedHubLabel = null, onViewRelated = null }) {
+export default function MeeBezig({
+  subjectId,
+  subjectLabel,
+  subjectIcon,
+  userName,
+  onBack,
+  onHome,
+  onGoOefenen,
+  relatedHubCount = 0,
+  relatedHubLabel = null,
+  onViewRelated = null,
+}) {
   const [waitCount, setWaitCount] = useState(null);
   const [signedUp, setSignedUp] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -72,39 +87,51 @@ export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userNam
         onHome={onHome}
       />
       <div style={styles.content}>
-        <div style={{
-          background: "linear-gradient(135deg, rgba(0,200,83,0.10), rgba(0,212,255,0.06))",
-          border: "1px solid rgba(0,200,83,0.30)",
-          borderRadius: 18, padding: "22px 18px",
-          textAlign: "center",
-        }}>
-          <div style={{ fontSize: 48, marginBottom: 8 }}>🛠️</div>
-          <h2 style={{
-            fontFamily: "'Fredoka', sans-serif",
-            fontSize: 22, fontWeight: 700, color: "#fff",
-            margin: "0 0 6px 0",
-          }}>
+        <Card
+          variant="ghost"
+          padding="lg"
+          style={{
+            background:
+              "linear-gradient(135deg, var(--color-success-soft), var(--color-info-soft))",
+            borderColor: "var(--color-brand-primary)",
+            borderRadius: "var(--radius-lg)",
+            textAlign: "center",
+          }}
+        >
+          <div style={{ fontSize: 48, marginBottom: "var(--space-2)" }} aria-hidden="true">🛠️</div>
+          <h2
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "var(--font-size-xl)",
+              fontWeight: "var(--font-weight-bold)",
+              color: "var(--color-text-strong)",
+              margin: "0 0 6px 0",
+            }}
+          >
             We zijn ermee bezig!
           </h2>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: 14, color: "rgba(255,255,255,0.78)",
-            margin: 0, lineHeight: 1.5,
-          }}>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "var(--font-size-sm)",
+              color: "var(--color-text)",
+              margin: 0,
+              lineHeight: "var(--line-height-normal)",
+            }}
+          >
             Voor <strong>{subjectLabel || subjectId}</strong> bouwen we op dit moment de leerpaden — van begin tot eind, met uitleg per stap.
           </p>
-        </div>
+        </Card>
 
-        <div style={{
-          marginTop: 14,
-          background: "rgba(255,255,255,0.04)",
-          border: "1px solid rgba(255,255,255,0.10)",
-          borderRadius: 14, padding: "14px 14px",
-        }}>
-          <div style={{
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: 13, color: "rgba(255,255,255,0.7)", marginBottom: 8,
-          }}>
+        <Card variant="ghost" style={{ marginTop: "var(--space-3)" }}>
+          <div
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "var(--font-size-sm)",
+              color: "var(--color-text-muted)",
+              marginBottom: "var(--space-2)",
+            }}
+          >
             {waitCount === null
               ? "Anderen die hierop wachten worden geteld…"
               : waitCount === 0
@@ -115,92 +142,97 @@ export default function MeeBezig({ subjectId, subjectLabel, subjectIcon, userNam
           </div>
 
           {!signedUp ? (
-            <button
-              onClick={onSignup}
+            <Button
+              variant="primary"
+              fullWidth
+              size="lg"
               disabled={busy}
-              style={{
-                width: "100%", padding: "12px 14px",
-                borderRadius: 12, border: "none", cursor: busy ? "wait" : "pointer",
-                background: "linear-gradient(135deg, #00c853, #00a040)",
-                color: "#fff",
-                fontFamily: "'Fredoka', sans-serif",
-                fontSize: 15, fontWeight: 700,
-                boxShadow: "0 4px 14px rgba(0,200,83,0.35)",
-                opacity: busy ? 0.7 : 1,
-              }}
+              onClick={onSignup}
             >
               {busy ? "Bezig…" : "🔔 Hou me op de hoogte"}
-            </button>
+            </Button>
           ) : (
-            <div style={{
-              padding: "11px 14px",
-              borderRadius: 12,
-              background: "rgba(0,200,83,0.15)",
-              border: "1px solid rgba(0,200,83,0.45)",
-              color: "#69f0ae",
-              fontFamily: "'Fredoka', sans-serif",
-              fontSize: 14, fontWeight: 700,
-              textAlign: "center",
-            }}>
+            <div
+              style={{
+                padding: "var(--space-3) var(--space-4)",
+                borderRadius: "var(--radius-md)",
+                background: "var(--color-success-soft)",
+                border: "1px solid var(--color-success)",
+                color: "var(--color-brand-primary-100)",
+                fontFamily: "var(--font-display)",
+                fontSize: "var(--font-size-md)",
+                fontWeight: "var(--font-weight-bold)",
+                textAlign: "center",
+              }}
+            >
               ✅ Bedankt! We laten je weten zodra het klaarstaat.
             </div>
           )}
 
           {err && (
-            <div style={{ marginTop: 8, fontSize: 12, color: "#ff8a80" }}>{err}</div>
+            <div
+              style={{
+                marginTop: "var(--space-2)",
+                fontSize: "var(--font-size-xs)",
+                color: "var(--color-danger)",
+              }}
+            >
+              {err}
+            </div>
           )}
-        </div>
+        </Card>
 
         {relatedHubCount > 0 && onViewRelated && (
-          <div style={{ marginTop: 18 }}>
-            <p style={{
-              fontFamily: "'Nunito', sans-serif",
-              fontSize: 13, color: "rgba(255,255,255,0.55)",
-              textAlign: "center", marginBottom: 10,
-            }}>
+          <div style={{ marginTop: "var(--space-5)" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "var(--font-size-sm)",
+                color: "var(--color-text-subtle)",
+                textAlign: "center",
+                marginBottom: "var(--space-3)",
+              }}
+            >
               Voor jouw specifieke onderwerp werken we nog aan uitleg.
               Intussen kun je wél andere onderwerpen leren:
             </p>
-            <button
+            <Button
+              variant="ghost"
+              fullWidth
+              size="lg"
               onClick={onViewRelated}
               style={{
-                width: "100%", padding: "12px 14px",
-                borderRadius: 12, cursor: "pointer",
-                border: "1px solid rgba(0,200,83,0.45)",
-                background: "rgba(0,200,83,0.10)",
-                color: "#69f0ae",
-                fontFamily: "'Fredoka', sans-serif",
-                fontSize: 15, fontWeight: 700,
+                background: "var(--color-success-soft)",
+                borderColor: "var(--color-brand-primary)",
+                color: "var(--color-brand-primary-100)",
               }}
             >
               📚 Bekijk {relatedHubCount} {relatedHubCount === 1 ? "leerpad" : "leerpaden"} voor {relatedHubLabel || subjectLabel || subjectId}
-            </button>
+            </Button>
           </div>
         )}
 
-        <div style={{ marginTop: 18 }}>
-          <p style={{
-            fontFamily: "'Nunito', sans-serif",
-            fontSize: 13, color: "rgba(255,255,255,0.55)",
-            textAlign: "center", marginBottom: 10,
-          }}>
+        <div style={{ marginTop: "var(--space-5)" }}>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "var(--font-size-sm)",
+              color: "var(--color-text-subtle)",
+              textAlign: "center",
+              marginBottom: "var(--space-3)",
+            }}
+          >
             Of maak alvast een toets:
           </p>
           {onGoOefenen && (
-            <button
+            <Button
+              variant="secondary"
+              fullWidth
+              size="lg"
               onClick={onGoOefenen}
-              style={{
-                width: "100%", padding: "12px 14px",
-                borderRadius: 12, cursor: "pointer",
-                border: "1px solid rgba(0,212,255,0.45)",
-                background: "rgba(0,212,255,0.10)",
-                color: "#00d4ff",
-                fontFamily: "'Fredoka', sans-serif",
-                fontSize: 15, fontWeight: 700,
-              }}
             >
               🎯 Naar oefenen — {subjectLabel || subjectId}
-            </button>
+            </Button>
           )}
         </div>
       </div>
