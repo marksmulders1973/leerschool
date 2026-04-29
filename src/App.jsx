@@ -12,6 +12,7 @@ import LoadingOverlay from "./components/LoadingOverlay.jsx";
 import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
+import PageLoader from "./app/PageLoader.jsx";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
@@ -655,8 +656,11 @@ export default function App() {
         }} />
       )}
 
-      {/* Suspense voor lazy-loaded pages (P1.4 — bundle splitsen) */}
-      <Suspense fallback={<LoadingOverlay mode="page" />}>
+      {/* Suspense voor lazy-loaded pages (P1.4 — bundle splitsen).
+          PageLoader is een subtiele dunne balk bovenaan; eerder gebruikten
+          we LoadingOverlay (fullscreen zwart) wat eruitzag als crash bij
+          elke korte chunk-fetch. */}
+      <Suspense fallback={<PageLoader />}>
       {page === "learn-path" && activeLearnPathId && (
         <LearnPath
           pathId={activeLearnPathId}
