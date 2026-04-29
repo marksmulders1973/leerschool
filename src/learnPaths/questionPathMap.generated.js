@@ -456,8 +456,12 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 8
   },
   "Welk woord is een bijvoeglijk naamwoord?": {
-    "pathId": "zinsontleding",
-    "stepIdx": 10
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 2
+  },
+  "Welk woord is een zelfstandig naamwoord?": {
+    "pathId": "goniometrie",
+    "stepIdx": 3
   },
   "Wat is een werkwoord?": {
     "pathId": "werkwoordsvervoeging",
@@ -472,8 +476,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 4
   },
   "Wat is het verschil tussen een werkwoord en een bijwoord?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 9
   },
   "Welke zin heeft een dt-fout?": {
     "pathId": "werkwoordsvervoeging",
@@ -487,6 +491,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 6
   },
+  "Welk lidwoord hoort bij 'huis'?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 3
+  },
   "Wat is de verleden tijd van 'schrijven'?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 6
@@ -495,13 +503,29 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 9
   },
+  "Wat is een lidwoord?": {
+    "pathId": "goniometrie",
+    "stepIdx": 1
+  },
   "Wat is de verleden tijd van 'zijn'?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 7
   },
+  "Welk woord hoort bij de woordsoort 'voornaamwoord'?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 5
+  },
+  "Hoe schrijf je dit correct: 'Hij is een goed____ jongen'?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 3
+  },
   "Welke zin is correct gespeld?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 9
+  },
+  "Welk woord is een bezittelijk voornaamwoord?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 6
   },
   "Welk woord is een werkwoord?": {
     "pathId": "werkwoordsvervoeging",
@@ -563,13 +587,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "spelling",
     "stepIdx": 12
   },
+  "Wat is een persoonlijk voornaamwoord?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 5
+  },
   "Wat is een bepaling van tijd?": {
     "pathId": "zinsontleding",
     "stepIdx": 9
   },
   "Welke zin is samengesteld?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 13
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 8
   },
   "Wat is een bijwoordelijke bepaling?": {
     "pathId": "zinsontleding",
@@ -666,6 +694,10 @@ export const QUESTION_PATH_MAP = {
   "Wat is een argumentum ad hominem?": {
     "pathId": "argumentatieleer",
     "stepIdx": 2
+  },
+  "Welk woord is een concessief voegwoord?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 8
   },
   "Welke zin is een enkelvoudige zin?": {
     "pathId": "zinsontleding",
@@ -782,6 +814,10 @@ export const QUESTION_PATH_MAP = {
   "Wat is een slotstrophe in een sonnet?": {
     "pathId": "schrijfvaardigheid",
     "stepIdx": 11
+  },
+  "Wat is het verschil tussen lyriek en epiek?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 3
   },
   "Welke woestijn is de grootste ter wereld?": {
     "pathId": "spelling",
@@ -1367,6 +1403,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 0
   },
+  "Fill in: I suggest ___ early.": {
+    "pathId": "present-tenses-engels",
+    "stepIdx": 0
+  },
   "What is the present perfect of 'eat'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 10
@@ -1375,9 +1415,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 0
   },
+  "Fill in: She regrets ___ the job.": {
+    "pathId": "present-tenses-engels",
+    "stepIdx": 0
+  },
+  "What is a gerund?": {
+    "pathId": "present-tenses-engels",
+    "stepIdx": 3
+  },
   "Which sentence uses the present perfect correctly?": {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 10
+  },
+  "Fill in: She ___ to the gym every day.": {
+    "pathId": "present-tenses-engels",
+    "stepIdx": 0
+  },
+  "What is the passive of 'They are building a bridge'?": {
+    "pathId": "present-tenses-engels",
+    "stepIdx": 3
   },
   "What is 'stream of consciousness'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
@@ -2967,9 +3023,21 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 5
   },
+  "Wat is het verschil tussen 'hun' en 'hen'?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 7
+  },
+  "Wat is een voornaamwoord?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 6
+  },
   "Wat is een verkleinwoord (diminutief)?": {
     "pathId": "spelling",
     "stepIdx": 10
+  },
+  "Wat is een abstracte zelfstandig naamwoord?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 1
   },
   "Wat is het verschil tussen een enkelvoudige en samengestelde zin?": {
     "pathId": "werkwoordsvervoeging",
@@ -3291,6 +3359,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 0
   },
+  "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat vertelt het detail van 'het litteken in de schors' aan de lezer?": {
+    "pathId": "kwadraten-wortels",
+    "stepIdx": 5
+  },
   "Lees de brief:\n\n\"Beste burgemeester,\nWij, de leerlingen van groep 7 van basisschool De Beuk, schrijven u deze brief omdat we ons zorgen maken over het verkeer bij onze school. Elke ochtend is het gevaarlijk oversteken bij de zebra op de Schoolstraat. We vragen u vriendelijk om een verkeersregelaar of een verkeerslicht te plaatsen.\nMet vriendelijke groet, Groep 7\"\n\nWat is het doel van deze brief?": {
     "pathId": "goniometrie",
     "stepIdx": 5
@@ -3319,9 +3391,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten",
     "stepIdx": 0
   },
+  "Lees de twee zinnen:\n\nZin A: 'Nederland telt meer dan 17 miljoen inwoners.'\nZin B: 'Nederland is een van de fijnste landen om in te wonen.'\n\nWelke zin is een feit en welke een mening?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 1
+  },
   "Lees de tekst:\n\n\"Elk jaar wordt Sint Nicolaas in Nederland gevierd op 5 december. Kinderen zetten hun schoen en krijgen cadeautjes. Sommige mensen vinden dit feest achterhaald, terwijl anderen het een prachtige traditie vinden.\"\n\nWelk gedeelte van de tekst bevat een mening?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 2
+  },
+  "Lees de twee uitspraken:\n\nA: 'De Eiffeltoren is 330 meter hoog.'\nB: 'De Eiffeltoren is het mooiste gebouw van Europa.'\n\nWat is het verschil tussen uitspraak A en B?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 5
   },
   "Wat is bevruchting?": {
     "pathId": "cel-biologie",
@@ -3788,8 +3868,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 5
   },
   "Hoe helpt minder vlees eten het klimaat?": {
-    "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 8
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 7
   },
   "Wat is de rol van ijskappen bij klimaatregulatie?": {
     "pathId": "klimaten-aardrijkskunde",
@@ -4040,8 +4120,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat is de AVG (Algemene Verordening Gegevensbescherming)?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 2
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 6
   },
   "Wat is digitale etiquette (netiquette)?": {
     "pathId": "literatuurgeschiedenis",
@@ -5027,10 +5107,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "kwadraten-wortels",
     "stepIdx": 5
   },
-  "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat vertelt het detail van 'het litteken in de schors' aan de lezer?": {
-    "pathId": "kwadraten-wortels",
-    "stepIdx": 5
-  },
   "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat voelt Sander waarschijnlijk in dit fragment?": {
     "pathId": "kwadraten-wortels",
     "stepIdx": 5
@@ -5042,14 +5118,6 @@ export const QUESTION_PATH_MAP = {
   "Lees de tekst:\n\n\"SuperFit sportdrankjes geven jou de energie die je nodig hebt! Wetenschappers hebben bewezen dat kinderen die SuperFit drinken beter presteren op school. Bestel nu en krijg 20% korting! Jouw kinderen verdienen het allerbeste.\"\n\nWat is het doel van deze tekst?": {
     "pathId": "procenten",
     "stepIdx": 6
-  },
-  "Lees de twee zinnen:\n\nZin A: 'Nederland telt meer dan 17 miljoen inwoners.'\nZin B: 'Nederland is een van de fijnste landen om in te wonen.'\n\nWelke zin is een feit en welke een mening?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 2
-  },
-  "Lees de twee uitspraken:\n\nA: 'De Eiffeltoren is 330 meter hoog.'\nB: 'De Eiffeltoren is het mooiste gebouw van Europa.'\n\nWat is het verschil tussen uitspraak A en B?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 8
   },
   "Een bakker bakt 180 broodjes. Hij verkoopt ze per 6 in een zak. Hoeveel zakken heeft hij nodig?": {
     "pathId": "krachten-natuurkunde",
@@ -5175,10 +5243,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is een lidwoord?": {
-    "pathId": "goniometrie",
-    "stepIdx": 1
-  },
   "Wat is het suffix '-elijk' in 'duidelijk'?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
@@ -5187,17 +5251,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 6
   },
-  "Welk woord is een zelfstandig naamwoord?": {
-    "pathId": "goniometrie",
-    "stepIdx": 3
-  },
   "Wat is het verschil tussen een hoofdzin en een bijzin?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
-  },
-  "Welk woord is een bezittelijk voornaamwoord?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 6
   },
   "Welke zin gebruikt de gebiedende wijs?": {
     "pathId": "krachten-natuurkunde",
@@ -5283,8 +5339,12 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
+  "Welk lidwoord hoort bij 'fiets'?": {
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 1
+  },
   "Kies het juiste betrekkelijk voornaamwoord: 'De film ___ ik zag was spannend.'": {
-    "pathId": "krachten-natuurkunde",
+    "pathId": "woordsoorten-nederlands",
     "stepIdx": 6
   },
   "Wat is de langste rivier ter wereld?": {
@@ -6028,8 +6088,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke zin bevat een fout?": {
-    "pathId": "goniometrie",
-    "stepIdx": 7
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 6
   },
   "Wat betekent het woord 'absurd'?": {
     "pathId": "logaritmen",
@@ -6064,12 +6124,12 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 8
   },
   "\"We hebben in de klas nieuwe chromebooks gekregen.\" Welk woord is een bijvoeglijk naamwoord?": {
-    "pathId": "goniometrie",
-    "stepIdx": 3
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 2
   },
   "\"Groep 8 gaat aan het eind van dit schooljaar op kamp.\" Welk woord is een voorzetsel?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 9
+    "pathId": "woordsoorten-nederlands",
+    "stepIdx": 7
   },
   "\"Heb je een uil wel eens horen vliegen?\" Welk woord is een werkwoord?": {
     "pathId": "werkwoordsvervoeging",

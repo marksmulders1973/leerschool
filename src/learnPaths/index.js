@@ -43,6 +43,9 @@ import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
 import balansBeco from "./balansBeco.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
+import presentTensesEngels from "./presentTensesEngels.js";
+import pastTensesEngels from "./pastTensesEngels.js";
+import woordsoortenNederlands from "./woordsoortenNederlands.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -81,8 +84,11 @@ export const ALL_LEARN_PATHS = {
   schrijfvaardigheid,
   tekstanalyse,
   literatuurgeschiedenis,
+  "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
   "onregelmatige-werkwoorden-engels": onregelmatigeWerkwoordenEngels,
+  "present-tenses-engels": presentTensesEngels,
+  "past-tenses-engels": pastTensesEngels,
   // Biologie
   "cel-biologie": celBiologie,
   // Geschiedenis
