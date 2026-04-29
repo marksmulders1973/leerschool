@@ -1028,8 +1028,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat was het Marshallplan?": {
-    "pathId": "tijdvakken-geschiedenis",
-    "stepIdx": 2
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wanneer vond de bestorming van de Bastille plaats?": {
     "pathId": "tijdvakken-geschiedenis",
@@ -1040,7 +1040,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 5
   },
   "Wanneer werd de VN opgericht?": {
-    "pathId": "tijdvakken-geschiedenis",
+    "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 9
   },
   "Wanneer viel de Berlijnse Muur?": {
@@ -1219,21 +1219,145 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 4
   },
+  "In welk seizoen vallen bladeren van de bomen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Wat eten vlinders?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Welk dier slaapt de hele winter?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Waar leven vissen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
+  "Welke plant bloeit in de lente?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Wat maakt een bij?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Hoeveel poten heeft een spin?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
+  "Wat doet een boom in de winter?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Welk dier maakt een web?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 4
+  },
   "Wat hebben planten nodig om te groeien?": {
-    "pathId": "cel-biologie",
-    "stepIdx": 5
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Wat zijn blaadjes op een boom?": {
-    "pathId": "cel-biologie",
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Welk seizoen volgt op de winter?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Wat eet een konijn?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is een rups?": {
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 5
   },
   "Welke kleur heeft een spiegel als hij licht ontvangt?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 1
   },
-  "Wat is een paddenstoel?": {
-    "pathId": "cel-biologie",
+  "Hoeveel poten heeft een insect?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
+  },
+  "Wat maakt een kikker?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 5
+  },
+  "Welk dier heeft schubben?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
+  "Wat heb je nodig om een plant te laten groeien?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Welk dier maakt honing?": {
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 1
+  },
+  "Wat is de functie van vleugels bij vogels?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
+  },
+  "Welk seizoen is het als de bladeren groen zijn en bloemen bloeien?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Wat doet een vlinder met bloemen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Welk dier is een roofdier?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 4
+  },
+  "Wat is de functie van de bek bij een vogel?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
+  },
+  "Welk dier bouwt een nest in een boom?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Wat heeft een boom niet nodig om te leven?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is het verschil tussen een vlinder en een mot?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Wat is een paddenstoel?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is zaad bij een plant?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat maakt een kikker met zijn tong?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
+  "Welk seizoen volgt na de herfst?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Wat is het verschil tussen een planteneter en een vleesetend dier?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 4
+  },
+  "Waarom zijn bijen belangrijk voor bloemen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is een kiemdraad bij een zaadje?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Wat is fotosynthese?": {
     "pathId": "cel-biologie",
@@ -1243,25 +1367,125 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 8
   },
+  "Wat is een zoogdier?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
+  },
+  "Wat is een herbivoor?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Welk dier is een insect?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 4
+  },
+  "Welke planeet is het dichtst bij de zon?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 0
+  },
+  "Wat is een carnivoor?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is een voedselketen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is de functie van wortels bij een plant?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is een omnivoor?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat doet het hart bij mensen?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
+  },
+  "Wat is het verschil tussen een insect en een spin?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
+  "Wat is een roofdier?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
   "Wat heeft een plant nodig om te groeien?": {
-    "pathId": "cel-biologie",
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is het verschil tussen warmbloedige en koudbloedige dieren?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
+  },
+  "Wat is de functie van de wortels van een plant?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
+  "Wat is het leven van een vlinder (metamorfose)?": {
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 5
+  },
+  "Wat is het verschil tussen een carnivoor, herbivoor en omnivoor?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is de rol van een decomponent (afbreker)?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is het verschil tussen een slak en een naaktslak?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 4
+  },
+  "Wat is het verschil tussen dag- en nachtdieren?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Wat is zuurstof en waarvoor hebben dieren het nodig?": {
     "pathId": "cel-biologie",
     "stepIdx": 5
   },
+  "Wat is het verschil tussen een vis en een amfibie?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
   "Wat is de rol van de zon in het leven op aarde?": {
-    "pathId": "cel-biologie",
-    "stepIdx": 5
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 0
+  },
+  "Wat is een kelk, meeldraden en stamper bij een bloem?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
+  "Wat is het verschil tussen prooi en predator?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
   },
   "Wat is het verschil tussen weer en klimaat?": {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 0
   },
+  "Wat is een voedselweb?": {
+    "pathId": "goniometrie",
+    "stepIdx": 0
+  },
   "Wat is een producent in een voedselketen?": {
-    "pathId": "cel-biologie",
-    "stepIdx": 5
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
+  },
+  "Wat is een chemische reactie?": {
+    "pathId": "atoombouw-scheikunde",
+    "stepIdx": 8
+  },
+  "Wat is een fossiel?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
+  },
+  "Wat is een symbiose?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Wat is het verschil tussen een plant- en diercel?": {
     "pathId": "cel-biologie",
@@ -1275,6 +1499,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klimaten-aardrijkskunde",
     "stepIdx": 6
   },
+  "Wat is een covalente binding bij moleculen?": {
+    "pathId": "atoombouw-scheikunde",
+    "stepIdx": 7
+  },
   "Wat is het verschil tussen fotosynthese en celademhaling?": {
     "pathId": "cel-biologie",
     "stepIdx": 5
@@ -1287,16 +1515,20 @@ export const QUESTION_PATH_MAP = {
     "pathId": "breuken",
     "stepIdx": 8
   },
-  "Wat is een chemische reactie?": {
-    "pathId": "atoombouw-scheikunde",
-    "stepIdx": 8
-  },
   "Wat is het verschil tussen organische en anorganische stoffen?": {
     "pathId": "goniometrie",
     "stepIdx": 0
   },
   "Wat is een voedingsstof voor planten?": {
     "pathId": "cel-biologie",
+    "stepIdx": 4
+  },
+  "Wat is adaptatie bij dieren?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
+  },
+  "Wat is symbiose?": {
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 4
   },
   "Wat is het verschil tussen een kernreactie en een chemische reactie?": {
@@ -1319,6 +1551,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 4
   },
+  "Wat is het verschil tussen brekingsindex en reflectie?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
+  },
   "Wat is het verschil tussen een dier- en plantencel?": {
     "pathId": "cel-biologie",
     "stepIdx": 6
@@ -1331,9 +1567,21 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 5
   },
+  "Wat is een ecosysteemdienst?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
+  },
   "Wat is de functie van een vacuole in plantencellen?": {
     "pathId": "cel-biologie",
     "stepIdx": 7
+  },
+  "Wat is een gameet?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 0
+  },
+  "Wat is een exoskellet?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
   },
   "Wat is een protist?": {
     "pathId": "cel-biologie",
@@ -1351,9 +1599,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "cel-biologie",
     "stepIdx": 9
   },
+  "Wat is het Pauli-uitsluitingsprincipe?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
   "Wat is apoptose?": {
     "pathId": "cel-biologie",
     "stepIdx": 5
+  },
+  "Wat is het verschil tussen alfa-, beta- en gammastraling?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Wat is het verschil tussen endotherm en exotherm?": {
     "pathId": "cel-biologie",
@@ -1366,6 +1622,18 @@ export const QUESTION_PATH_MAP = {
   "Wat is semipermeabiliteit van celmembranen?": {
     "pathId": "cel-biologie",
     "stepIdx": 0
+  },
+  "What do you say when you meet someone?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 8
+  },
+  "What is 'huis' in English?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 5
+  },
+  "What day comes after Monday?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 7
   },
   "What is the past tense of 'go'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
@@ -1411,9 +1679,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 10
   },
+  "Fill in: He ___ be at home — his light is on.": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 4
+  },
   "What is the plural of 'child'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 0
+  },
+  "What is the passive voice of 'They built the house'?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 5
   },
   "Fill in: She regrets ___ the job.": {
     "pathId": "present-tenses-engels",
@@ -1427,6 +1703,18 @@ export const QUESTION_PATH_MAP = {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 10
   },
+  "Fill in: By the time he arrived, we ___ dinner.": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 7
+  },
+  "Fill in: She ___ rather stay home than go out.": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 4
+  },
+  "What does 'significant' mean?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 1
+  },
   "Fill in: She ___ to the gym every day.": {
     "pathId": "present-tenses-engels",
     "stepIdx": 0
@@ -1435,9 +1723,17 @@ export const QUESTION_PATH_MAP = {
     "pathId": "present-tenses-engels",
     "stepIdx": 3
   },
+  "What is a 'conditional sentence'?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 4
+  },
   "What is 'stream of consciousness'?": {
     "pathId": "onregelmatige-werkwoorden-engels",
     "stepIdx": 0
+  },
+  "What does 'anachronism' mean?": {
+    "pathId": "woordenschat-engels",
+    "stepIdx": 7
   },
   "What does 'soliloquy' mean in drama?": {
     "pathId": "onregelmatige-werkwoorden-engels",
@@ -1858,6 +2154,302 @@ export const QUESTION_PATH_MAP = {
   "Qu'est-ce que la modalisation dans un texte?": {
     "pathId": "passe-compose-frans",
     "stepIdx": 3
+  },
+  "Wat is democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is een grondwet?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wie is het staatshoofd van Nederland?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 5
+  },
+  "Wat is de Tweede Kamer?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is verkiezingen houden?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
+  },
+  "Wat is een rechter?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is de Eerste Kamer?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
+  "Wie kiest de Tweede Kamer?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is een kabinet?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
+  "Wat is een coalitie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is de oppositie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is de rol van de minister-president?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
+  "Wat is een grondrecht?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is de Europese Unie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
+  },
+  "Wat is een rechtbank?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is de functie van de Tweede Kamer?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is milieu een politiek thema?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 5
+  },
+  "Wat is een referendum?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
+  },
+  "Wat is het Europees parlement?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is pluriformiteit?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is de taak van de minister van Onderwijs?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
+  "Wat is de trias politica?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat zijn grondrechten?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is de rechtsstaat?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is subsidiariteit in de EU?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
+  "Wat is pluralisme?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is het verschil tussen directe en representatieve democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is een grondwetswijziging?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is het verschil tussen nationale en internationale wetgeving?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is de functie van de Hoge Raad?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is een mensenrechtenverdrag?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is staatsmacht en hoe wordt die beperkt?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat is het verschil tussen criminaliteit en delinquentie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is een sociaal netwerk (maatschappelijk)?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
+  },
+  "Wat is het verschil tussen een monistisch en een dualistisch stelsel?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is een politieke beweging?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is het kiesrecht?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
+  },
+  "Wat is een meerderheidsregel?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is een macht die controleert (watchdog)?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat is het verschil tussen een regering en het parlement?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is een rechtsstaat?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is politieke participatie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 5
+  },
+  "Wat zijn burgerrechten?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 8
+  },
+  "Wat is de rol van de media in een democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat is constitutionele monarchie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 5
+  },
+  "Wat is het subsidiariteitsbeginsel?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is een politiek systeem?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is de functie van de oppositie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is een parlementaire democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 3
+  },
+  "Wat is de rol van de Europese Commissie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
+  },
+  "Wat is het verschil tussen soft power en hard power?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is resocialisatie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
+  },
+  "Wat is een civil society?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is het principe van gelijke behandeling?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is een consensus democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 10
+  },
+  "Wat is de Verlichting en haar invloed op democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is het verschil tussen migratie en vluchtelingenstatus?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
+  },
+  "Wat is een democratische rechtsstaat?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is mondiale governance?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is het verschil tussen actief en passief kiesrecht?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 10
+  },
+  "Wat is een constitutie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is het verschil tussen een rechtsstaat en een politiestaat?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is het verschil tussen formele en materiële gelijkheid?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is de trias politica in de praktijk?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat is het democratisch deficit in de EU?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is deliberatieve democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is het verschil tussen formele en materiële rechtsstaat?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is een grondrecht in horizontale werking?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 6
+  },
+  "Wat is het verschil tussen rechtsstaat en democratie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is het verschil tussen een confederatie en een federatie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
+  },
+  "Wat is het Condorcet-paradox?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 2
+  },
+  "Wat is een rechtsstaat in crisis (democratic backsliding)?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
+  },
+  "Wat is het verschil tussen democratisch en antidemocratisch populisme?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Wat is dekolonisatie?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
   },
   "Wat is de taak van de celkern?": {
     "pathId": "cel-biologie",
@@ -3336,8 +3928,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 8
   },
   "Lees de tekst:\n\n\"Het tropische regenwoud is een van de rijkste ecosystemen op aarde. Meer dan de helft van alle planten- en diersoorten ter wereld leeft er. Het regenwoud speelt ook een belangrijke rol in het klimaat: de bomen nemen CO₂ op en geven zuurstof terug. Helaas wordt er elk jaar een groot deel gekapt voor landbouw en houtwinning.\"\n\nWelke conclusie kun je trekken uit deze tekst?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 12
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Lees het dagboekfragment:\n\n\"Maandag 14 mei\nVandaag had ik mijn eerste zwemles. Ik was zo zenuwachtig dat ik bijna niet in het water wilde stappen. De juf was gelukkig heel aardig en hielp me. Uiteindelijk zwom ik twee baantjes! Ik ben er trots op, maar mijn handen trillen nog van de spanning.\"\n\nWat is het doel van een dagboek als tekstsoort?": {
     "pathId": "tekstanalyse",
@@ -3348,16 +3940,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Lees de instructietekst:\n\n\"Vogels voeren in de winter\n1. Hang een vogelhuisje op een rustige plek, niet te dicht bij ramen.\n2. Vul het met zaadmix, meelwormen of ongezouten pinda's.\n3. Zorg dat het voer droog blijft — een afdakje helpt hierbij.\n4. Hou het huisje schoon om ziekte te voorkomen.\n5. Vul het dagelijks bij, want vogels worden afhankelijk van jouw hulp.\"\n\nWaarom moet je het vogelhuisje schoonhouden?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Lees de instructietekst:\n\n\"Vogels voeren in de winter\n1. Hang een vogelhuisje op een rustige plek, niet te dicht bij ramen.\n2. Vul het met zaadmix, meelwormen of ongezouten pinda's.\n3. Zorg dat het voer droog blijft — een afdakje helpt hierbij.\n4. Hou het huisje schoon om ziekte te voorkomen.\n5. Vul het dagelijks bij, want vogels worden afhankelijk van jouw hulp.\"\n\nWat is het doel van deze tekst?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Lees de instructietekst:\n\n\"Vogels voeren in de winter\n1. Hang een vogelhuisje op een rustige plek, niet te dicht bij ramen.\n2. Vul het met zaadmix, meelwormen of ongezouten pinda's.\n3. Zorg dat het voer droog blijft — een afdakje helpt hierbij.\n4. Hou het huisje schoon om ziekte te voorkomen.\n5. Vul het dagelijks bij, want vogels worden afhankelijk van jouw hulp.\"\n\nWelk voedsel wordt NIET aanbevolen?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Lees het verhaalfragment:\n\n\"In de tuin stond een oude eikenboom. Sander had er altijd in geklommen, maar nu stond er een man met een zaag. 'Die boom moet weg,' zei zijn vader. 'De wortels beschadigen de fundering.' Sander slikte. Hij keek naar het litteken in de schors waar hij zijn naam had gegraveerd. 'Mag ik nog even afscheid nemen?' vroeg hij.\"\n\nWat vertelt het detail van 'het litteken in de schors' aan de lezer?": {
     "pathId": "kwadraten-wortels",
@@ -3400,8 +3992,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Lees de twee uitspraken:\n\nA: 'De Eiffeltoren is 330 meter hoog.'\nB: 'De Eiffeltoren is het mooiste gebouw van Europa.'\n\nWat is het verschil tussen uitspraak A en B?": {
-    "pathId": "woordsoorten-nederlands",
-    "stepIdx": 5
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wat is bevruchting?": {
     "pathId": "cel-biologie",
@@ -3499,6 +4091,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "argumentatieleer",
     "stepIdx": 2
   },
+  "Wat is de prostaat?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 0
+  },
   "Wat is sperma?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 0
@@ -3512,8 +4108,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 3
   },
   "Wat is de clitoris?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Wat is een zygote?": {
     "pathId": "cel-biologie",
@@ -3752,8 +4348,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 4
   },
   "Wat is het alarmnummer in Nederland?": {
-    "pathId": "statistiek",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 9
   },
   "Wat doe je bij een bewusteloos persoon die NIET ademt?": {
     "pathId": "kansrekening",
@@ -3784,8 +4380,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 6
   },
   "Hoe herken je een beroerte? (gebruik FAST)": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 3
+    "pathId": "woordenschat-engels",
+    "stepIdx": 6
   },
   "Wat doe je bij iemand die hyperventileert?": {
     "pathId": "krachten-natuurkunde",
@@ -4120,8 +4716,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat is de AVG (Algemene Verordening Gegevensbescherming)?": {
-    "pathId": "woordsoorten-nederlands",
-    "stepIdx": 6
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 7
   },
   "Wat is digitale etiquette (netiquette)?": {
     "pathId": "literatuurgeschiedenis",
@@ -4171,17 +4767,25 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
+  "Op een parkeerplaats staan 136 auto's. Er komen 47 bij. Hoeveel zijn er nu?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
+  },
   "Een school heeft 312 leerlingen. Er schrijven zich 56 nieuwe in. Hoeveel zijn er nu?": {
     "pathId": "schrijfvaardigheid",
     "stepIdx": 11
+  },
+  "Een bibliotheek heeft 568 boeken. Er komen 145 bij. Hoeveel zijn er nu?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Kees heeft 87 punten. Hij verdient er nog 34 bij. Hoeveel punten heeft hij?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
   "Er vliegen 34 vogels op een boom. Er komen 27 bij. Hoeveel zijn er nu?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 5
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Een fietspad is 560 meter en wordt verlengd met 280 meter. Hoe lang is het nu?": {
     "pathId": "werkwoordsvervoeging",
@@ -4206,6 +4810,14 @@ export const QUESTION_PATH_MAP = {
   "Een school koopt 125 pennen en later nog 96. Hoeveel pennen zijn er nu?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 5
+  },
+  "In een dorp wonen 1.248 mensen. Er komen 375 nieuwe inwoners bij. Hoeveel?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
+  "Een boerderij heeft 86 koeien en 47 schapen. Hoeveel dieren zijn er?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Tom heeft 235 punten en scoort er nog 88 bij. Hoeveel heeft hij nu?": {
     "pathId": "krachten-natuurkunde",
@@ -4404,8 +5016,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 2
   },
   "Een kooi heeft 5 rijen van 8 vogels. Hoeveel vogels zijn er?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 2
   },
   "Een emmer wordt 4 keer gevuld met 6,5 liter. Hoeveel liter in totaal?": {
     "pathId": "werkwoordsvervoeging",
@@ -4879,8 +5491,12 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
   },
+  "Meerdere vissen. Hoe schrijf je dat?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 3
+  },
   "Meerdere vogels. Hoe schrijf je dat?": {
-    "pathId": "krachten-natuurkunde",
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 2
   },
   "Hoe schrijf je het meervoud van 'tafel'?": {
@@ -4894,6 +5510,10 @@ export const QUESTION_PATH_MAP = {
   "Je speelt ermee buiten en gooit het. Hoe schrijf je dat?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
+  },
+  "Hoe schrijf je het dier dat in water zwemt?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Hoe schrijf je het dier dat in de wei staat en melk geeft?": {
     "pathId": "krachten-natuurkunde",
@@ -5219,6 +5839,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
   },
+  "Welk woord heeft een d aan het einde bij uitspreken?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 0
+  },
   "Wat is een antoniem van 'vroeg'?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
@@ -5360,8 +5984,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke oceaan ligt tussen Europa en Amerika?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wat is de hoofdstad van China?": {
     "pathId": "krachten-natuurkunde",
@@ -5384,8 +6008,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke zee ligt tussen Europa en Afrika?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Welke bergketen ligt in Zuid-Amerika?": {
     "pathId": "krachten-natuurkunde",
@@ -5395,9 +6019,13 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 6
   },
+  "Wat is de hoofdstad van India?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 4
+  },
   "Welk gebergte scheidt Europa en Azië?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Welke oceaan ligt ten oosten van Afrika?": {
     "pathId": "krachten-natuurkunde",
@@ -5412,8 +6040,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke bergketen vormt de grens tussen Europa en Azië?": {
-    "pathId": "werkwoordsvervoeging",
-    "stepIdx": 4
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wat is de hoofdstad van Zuid-Afrika?": {
     "pathId": "krachten-natuurkunde",
@@ -5432,8 +6060,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Welke berg is de hoogste in Europa (buiten de Kaukasus)?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wat is de hoofdstad van Argentinië?": {
     "pathId": "krachten-natuurkunde",
@@ -5524,7 +6152,7 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 9
   },
   "Wat was het IJzeren Gordijn?": {
-    "pathId": "krachten-natuurkunde",
+    "pathId": "nederlandse-staat-maatschappijleer",
     "stepIdx": 0
   },
   "Wat betekende dekolonisatie voor Afrika?": {
@@ -5540,20 +6168,20 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 8
   },
   "Wat was het doel van de SS-Einsatzgruppen?": {
-    "pathId": "kansrekening",
-    "stepIdx": 4
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wat was het Ottoman-rijk?": {
     "pathId": "ruimtemeetkunde",
     "stepIdx": 15
   },
   "Wat was de betekenis van de Spoorwegstaking van 1944?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
+    "pathId": "woordenschat-engels",
+    "stepIdx": 7
   },
   "Wat was de betekenis van het Verdrag van Utrecht (1713)?": {
-    "pathId": "logaritmen",
-    "stepIdx": 0
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Wie was Peter de Grote van Rusland?": {
     "pathId": "goniometrie",
@@ -5572,8 +6200,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat was het belang van de Suezcrisis (1956)?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 5
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
   },
   "Wat was de Cubaanse Revolutie (1959)?": {
     "pathId": "krachten-natuurkunde",
@@ -5588,14 +6216,10 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 6
   },
   "Wie was Charles Darwin en wat was zijn bijdrage?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 4
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 1
   },
   "Wat is een ecosysteem?": {
-    "pathId": "goniometrie",
-    "stepIdx": 0
-  },
-  "Wat is een voedselweb?": {
     "pathId": "goniometrie",
     "stepIdx": 0
   },
@@ -5635,10 +6259,6 @@ export const QUESTION_PATH_MAP = {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 1
   },
-  "Wat is een symbiose?": {
-    "pathId": "krachten-natuurkunde",
-    "stepIdx": 0
-  },
   "Wat is een exotherme reactie?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 0
@@ -5666,10 +6286,6 @@ export const QUESTION_PATH_MAP = {
   "Wat is een exotische soort?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
-  },
-  "Wat is een covalente binding bij moleculen?": {
-    "pathId": "atoombouw-scheikunde",
-    "stepIdx": 7
   },
   "Wat is de pH-schaal?": {
     "pathId": "verhoudingen",
@@ -5705,14 +6321,6 @@ export const QUESTION_PATH_MAP = {
   },
   "Wat is het effect van luchtvervuiling op mensen?": {
     "pathId": "krachten-natuurkunde",
-    "stepIdx": 1
-  },
-  "Wat is adaptatie bij dieren?": {
-    "pathId": "kansrekening",
-    "stepIdx": 11
-  },
-  "Wat is symbiose?": {
-    "pathId": "atoombouw-scheikunde",
     "stepIdx": 1
   },
   "Bekijk de tabel. Welke stad heeft de hoogste temperatuur?": {
@@ -5768,8 +6376,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 9
   },
   "Bekijk het staafdiagram. In welk seizoen vallen de meeste regendagen?": {
-    "pathId": "ruimtemeetkunde",
-    "stepIdx": 9
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 7
   },
   "Bekijk het staafdiagram. Wie spaart het meest per maand?": {
     "pathId": "ruimtemeetkunde",
@@ -5828,8 +6436,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 6
   },
   "Bekijk het cirkeldiagram. Welk seizoen is het populairst?": {
-    "pathId": "procenten",
-    "stepIdx": 10
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 6
   },
   "Bekijk het cirkeldiagram. Hoeveel procent fietst naar school?": {
     "pathId": "procenten",
@@ -5944,12 +6552,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 1
   },
   "Hoe heet het proces waarbij planten met behulp van zonlicht voedsel aanmaken?": {
-    "pathId": "goniometrie",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Welke zee grenst aan de west- en noordkust van Nederland?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
+  },
+  "Hoe noemen we dieren die zowel op land als in water kunnen leven?": {
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 5
   },
   "Welk land is de grootste producent van cacao ter wereld?": {
     "pathId": "procenten",
@@ -6083,6 +6695,10 @@ export const QUESTION_PATH_MAP = {
     "pathId": "procenten",
     "stepIdx": 0
   },
+  "Wat is het meervoud van 'museum'?": {
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 0
+  },
   "Wat is het meervoud van 'crisis'?": {
     "pathId": "krachten-natuurkunde",
     "stepIdx": 0
@@ -6152,16 +6768,16 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 9
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat is de hoofdgedachte van deze tekst?": {
-    "pathId": "goniometrie",
-    "stepIdx": 2
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWaarom is plastic soep gevaarlijk voor mensen?": {
-    "pathId": "logaritmen",
-    "stepIdx": 1
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat betekent het woord 'voedselketen' in deze tekst?": {
-    "pathId": "logaritmen",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 9
   },
   "Wat was de aanleiding voor de Eerste Wereldoorlog in 1914?": {
     "pathId": "logaritmen",
@@ -6188,23 +6804,23 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Wat is de fotosynthese-vergelijking (vereenvoudigd)?": {
-    "pathId": "vergelijkingen-oplossen",
-    "stepIdx": 0
+    "pathId": "dieren-seizoenen-natuur",
+    "stepIdx": 8
   },
   "Hoe heet de periode van 1000-1500 in de Europese geschiedenis?": {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 4
   },
   "Wat is de Golfstroom?": {
-    "pathId": "klimaten-aardrijkskunde",
-    "stepIdx": 3
+    "pathId": "nederlandse-staat-maatschappijleer",
+    "stepIdx": 1
   },
   "Welke grondstof wordt gewonnen in de Groningse bodem en veroorzaakte aardbevingen?": {
     "pathId": "werkwoordsvervoeging",
     "stepIdx": 6
   },
   "Wat is het verschil tussen een zoogdier en een reptiel?": {
-    "pathId": "krachten-natuurkunde",
+    "pathId": "dieren-seizoenen-natuur",
     "stepIdx": 1
   }
 };

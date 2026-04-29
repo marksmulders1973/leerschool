@@ -46,6 +46,9 @@ import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
 import pastTensesEngels from "./pastTensesEngels.js";
 import woordsoortenNederlands from "./woordsoortenNederlands.js";
+import woordenschatEngels from "./woordenschatEngels.js";
+import nederlandseStaatMaatschappijleer from "./nederlandseStaatMaatschappijleer.js";
+import dierenSeizoenenNatuur from "./dierenSeizoenenNatuur.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -89,6 +92,7 @@ export const ALL_LEARN_PATHS = {
   "onregelmatige-werkwoorden-engels": onregelmatigeWerkwoordenEngels,
   "present-tenses-engels": presentTensesEngels,
   "past-tenses-engels": pastTensesEngels,
+  "woordenschat-engels": woordenschatEngels,
   // Biologie
   "cel-biologie": celBiologie,
   // Geschiedenis
@@ -107,6 +111,10 @@ export const ALL_LEARN_PATHS = {
   "naamvallen-duits": naamvallenDuits,
   // Frans
   "passe-compose-frans": passeComposeFrans,
+  // Maatschappijleer
+  "nederlandse-staat-maatschappijleer": nederlandseStaatMaatschappijleer,
+  // PO Wereld & Natuur
+  "dieren-seizoenen-natuur": dierenSeizoenenNatuur,
 };
 
 import { QUESTION_PATH_MAP } from "./questionPathMap.generated.js";

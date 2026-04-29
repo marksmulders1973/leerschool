@@ -49,8 +49,9 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   beco: "beco",
   duits: "duits",
   frans: "frans",
+  maatschappijleer: "maatschappijleer",
   nask: ["biologie", "natuurkunde", "scheikunde"],
-  natuur: ["biologie", "aardrijkskunde"],
+  natuur: ["natuur", "biologie", "aardrijkskunde"],
 };
 
 function categoryToSubjects(categoryId) {

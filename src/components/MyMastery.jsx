@@ -16,6 +16,8 @@ const SUBJECT_LABELS = {
   beco: { title: "Bedrijfseconomie", emoji: "📊" },
   duits: { title: "Duits", emoji: "🇩🇪" },
   frans: { title: "Frans", emoji: "🇫🇷" },
+  maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
+  natuur: { title: "Natuur (PO)", emoji: "🌿" },
 };
 
 export default function MyMastery({ userName, onPickPath, onBack, onHome }) {

@@ -28,10 +28,11 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   beco: "beco",
   duits: "duits",
   frans: "frans",
+  maatschappijleer: "maatschappijleer",
   // NaSk (mavo/vmbo) = biologie + natuurkunde + scheikunde gebundeld
   nask: ["biologie", "natuurkunde", "scheikunde"],
-  // Wereld & Natuur (PO) = brede natuur — bundel biologie + aardrijkskunde
-  natuur: ["biologie", "aardrijkskunde"],
+  // Wereld & Natuur (PO) = bundel het PO-natuur-pad + biologie + aardrijkskunde
+  natuur: ["natuur", "biologie", "aardrijkskunde"],
 };
 
 export function categoryToLearnSubject(categoryId) {

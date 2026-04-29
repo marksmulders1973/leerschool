@@ -50,6 +50,8 @@ const SUBJECT_LABELS_FOR_HUB = {
   beco: "Bedrijfseconomie",
   duits: "Duits",
   frans: "Frans",
+  maatschappijleer: "Maatschappijleer",
+  natuur: "Natuur (PO)",
 };
 
 // Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's

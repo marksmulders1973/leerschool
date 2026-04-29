@@ -51,6 +51,9 @@ const PATH_THEMES = {
   "present-tenses-engels": { gradient: "linear-gradient(135deg, #1976d2, #283593)", accent: "#90caf9" },
   "past-tenses-engels": { gradient: "linear-gradient(135deg, #ad1457, #4527a0)", accent: "#ce93d8" },
   "woordsoorten-nederlands": { gradient: "linear-gradient(135deg, #00897b, #1565c0)", accent: "#80deea" },
+  "woordenschat-engels": { gradient: "linear-gradient(135deg, #1565c0, #6a1b9a)", accent: "#ce93d8" },
+  "nederlandse-staat-maatschappijleer": { gradient: "linear-gradient(135deg, #c62828, #1565c0)", accent: "#90caf9" },
+  "dieren-seizoenen-natuur": { gradient: "linear-gradient(135deg, #66bb6a, #43a047)", accent: "#a5d6a7" },
   "cel-biologie": { gradient: "linear-gradient(135deg, #00b84d, #1b5e20)", accent: "#a5d6a7" },
   "tijdvakken-geschiedenis": { gradient: "linear-gradient(135deg, #6d4c41, #3e2723)", accent: "#bcaaa4" },
   "klimaten-aardrijkskunde": { gradient: "linear-gradient(135deg, #43a047, #1565c0)", accent: "#90caf9" },
@@ -75,7 +78,8 @@ const SUBJECT_LABELS = {
   beco: { title: "Bedrijfseconomie", emoji: "📊" },
   duits: { title: "Duits", emoji: "🇩🇪" },
   frans: { title: "Frans", emoji: "🇫🇷" },
-  natuur: { title: "Natuur & Techniek", emoji: "🔬" },
+  maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
+  natuur: { title: "Natuur (PO)", emoji: "🌿" },
 };
 
 // `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".
