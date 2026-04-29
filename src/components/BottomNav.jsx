@@ -1,16 +1,15 @@
 import { track } from "../utils.js";
 
 // Bottom-tabs nav (Duolingo-style). Vier tabs: Home, Leren, Oefenen, Kampioenen.
-// Profiel-tab nog niet — pas toevoegen als er een echte profielpagina is.
+// Design-system v1: tokens, tap-target ≥ 44px, glow-indicator op brand-primary.
 
 const TABS = [
   { id: "home",       label: "Home",       emoji: "🏠", target: "home" },
   { id: "leren",      label: "Leren",      emoji: "📚", target: "learn-paths-hub" },
-  { id: "oefenen",    label: "Oefenen",    emoji: "🎯", target: "_oefenen" }, // special: gaat naar leerling/teacher-home via App-handler
+  { id: "oefenen",    label: "Oefenen",    emoji: "🎯", target: "_oefenen" },
   { id: "kampioenen", label: "Kampioenen", emoji: "🏆", target: "kampioenen" },
 ];
 
-// Map current page → welke tab visueel actief is.
 function bepaalActieveTab(page) {
   if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
@@ -28,39 +27,52 @@ export default function BottomNav({ currentPage, onNavigate }) {
   const actief = bepaalActieveTab(currentPage);
   return (
     <nav
+      aria-label="Hoofdnavigatie"
       style={{
         position: "fixed",
         bottom: 0, left: 0, right: 0,
-        background: "rgba(15,23,41,0.96)",
-        borderTop: "1px solid rgba(255,255,255,0.10)",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
+        background: "rgba(11, 18, 36, 0.92)",
+        borderTop: "1px solid var(--color-border-soft)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
         zIndex: 100,
         paddingBottom: "env(safe-area-inset-bottom)",
       }}
     >
-      <div className="app-shell" style={{ width: "100%", display: "flex", justifyContent: "space-around", alignItems: "stretch" }}>
+      <div
+        className="app-shell"
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "stretch",
+          minHeight: "var(--bottom-nav-height)",
+        }}
+      >
         {TABS.map((tab) => {
           const isActief = actief === tab.id;
           return (
             <button
               key={tab.id}
+              type="button"
+              aria-current={isActief ? "page" : undefined}
               onClick={() => { track("bottomnav_click", { tab: tab.id }); onNavigate(tab.target); }}
               style={{
                 flex: 1,
-                padding: "9px 4px 7px",
+                minWidth: "var(--tap-target-min)",
+                padding: "var(--space-2) var(--space-1) var(--space-1)",
                 border: "none",
                 background: "transparent",
-                color: isActief ? "#69f0ae" : "rgba(255,255,255,0.62)",
-                fontFamily: "'Fredoka', sans-serif",
-                fontSize: 11,
-                fontWeight: 700,
+                color: isActief ? "var(--color-brand-primary-100)" : "var(--color-text-muted)",
+                fontFamily: "var(--font-display)",
+                fontSize: "var(--font-size-xs)",
+                fontWeight: "var(--font-weight-bold)",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: 2,
-                transition: "color 0.15s",
+                transition: "color var(--motion-fast) var(--ease-out)",
                 position: "relative",
               }}
             >
@@ -72,12 +84,21 @@ export default function BottomNav({ currentPage, onNavigate }) {
                     top: 0, left: "20%", right: "20%",
                     height: 3,
                     borderRadius: "0 0 3px 3px",
-                    background: "linear-gradient(90deg, #00c853, #69f0ae)",
-                    boxShadow: "0 0 8px rgba(105,240,174,0.6)",
+                    background:
+                      "linear-gradient(90deg, var(--color-brand-primary), var(--color-brand-primary-100))",
+                    boxShadow: "var(--shadow-glow-success)",
                   }}
                 />
               )}
-              <span style={{ fontSize: 22, opacity: isActief ? 1 : 0.78, transition: "opacity 0.15s, transform 0.15s", transform: isActief ? "scale(1.05)" : "scale(1)" }}>
+              <span
+                aria-hidden="true"
+                style={{
+                  fontSize: 22,
+                  opacity: isActief ? 1 : 0.78,
+                  transition: "opacity var(--motion-fast), transform var(--motion-fast) var(--ease-bounce)",
+                  transform: isActief ? "scale(1.08)" : "scale(1)",
+                }}
+              >
                 {tab.emoji}
               </span>
               <span>{tab.label}</span>

@@ -1,81 +1,156 @@
 /*
- * Studiebol design tokens v0 — P1.5
+ * Studiebol design tokens v1 — design system.
  *
- * Eerste laag van het design system. Doel: één plek voor kleuren,
- * spacing, radii zodat we later af kunnen van inline styles in elk
- * component. Volg deze tokens vanaf nu in nieuwe componenten.
+ * Bron-van-waarheid voor kleur, typografie, spacing, radii, shadow en motion.
+ * Nieuwe componenten gebruiken alleen deze tokens; geen hex-codes inline.
  *
- * Filosofie (uit de architectuur-audit):
- *   - 1 primary, 1 accent, 1 alert + grayscale.
- *   - Geen gradients als er geen functioneel doel is.
- *   - Typografie eerst, kleur tweede.
+ * Filosofie:
+ *   - 1 primary (groen) per scherm. Secondary (blauw) alleen voor leerpad.
+ *   - Game-kleuren leven in een eigen namespace (--color-game-*) en horen
+ *     niet in de leer-UI te staan — visuele scheiding studie ↔ spel.
+ *   - 4-pt spacing-grid. Geen losse pixels meer in components.
+ *   - Motion is opt-in: standaard gedrag mag rustig zijn.
  */
 
 :root {
-  /* ─── Color: brand ─────────────────────────────────────────────── */
-  --color-primary: #00c853;        /* Studiebol groen */
-  --color-primary-soft: #69f0ae;
-  --color-primary-dark: #00a040;
+  /* ─── Brand ─────────────────────────────────────────────────────── */
+  --color-brand-primary:        #00C853;       /* Studiebol-groen — succes, hoofdactie */
+  --color-brand-primary-700:    #00A040;       /* Hover/pressed */
+  --color-brand-primary-100:    #69F0AE;       /* Soft tint, badges, achtergrondvlakken */
 
-  --color-accent: #00d4ff;         /* cyaan voor secundaire acties */
-  --color-accent-soft: #80deea;
+  --color-brand-secondary:      #3B82F6;       /* Studie-blauw — leerpad, info, links */
+  --color-brand-secondary-700:  #1E5BC6;
+  --color-brand-secondary-100:  #93C5FD;
 
-  --color-alert: #e53935;          /* fouten / waarschuwingen */
-  --color-alert-soft: #ff8a80;
+  /* ─── Game (alleen OBLITERATOR — niet in leer-UI gebruiken) ─────── */
+  --color-game-energy:          #FF6B35;       /* Hoofdcolor game */
+  --color-game-power:           #FFD600;       /* Combo / multiplier */
+  --color-game-danger:          #E53935;       /* Crash / game-over */
 
-  --color-warm: #ffd54f;           /* highlight, accent voor uitleg */
+  /* ─── Surface (donker thema) ────────────────────────────────────── */
+  --color-bg-base:              #0B1224;       /* App-bg */
+  --color-bg-surface:           #131C33;       /* Page content */
+  --color-bg-elevated:          #1A2541;       /* Cards */
+  --color-bg-overlay:           #243149;       /* Modals, popovers */
 
-  /* ─── Color: surface (donker thema) ─────────────────────────────── */
-  --color-bg: #0f1729;
-  --color-bg-elevated: #1a2744;
-  --color-surface: rgba(30, 45, 70, 0.6);
-  --color-surface-hover: rgba(40, 60, 90, 0.8);
-  --color-border: #2a3f5f;
-  --color-border-soft: rgba(255, 255, 255, 0.10);
+  /* Glass-look voor cards die op patterned bg leven */
+  --color-bg-glass:             rgba(30, 45, 70, 0.6);
+  --color-bg-glass-hover:       rgba(40, 60, 90, 0.8);
 
-  /* ─── Color: text ──────────────────────────────────────────────── */
-  --color-text: #e0e6f0;
-  --color-text-strong: #ffffff;
-  --color-text-muted: #8899aa;
-  --color-text-subtle: rgba(255, 255, 255, 0.55);
+  /* ─── Text ──────────────────────────────────────────────────────── */
+  --color-text-strong:          #FFFFFF;
+  --color-text:                 #E6EBF5;
+  --color-text-muted:           #9AA8C0;
+  --color-text-subtle:          #5E6B85;
 
-  /* ─── Spacing scale (4-base) ───────────────────────────────────── */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
-  --space-6: 32px;
-  --space-7: 48px;
+  /* ─── Border ────────────────────────────────────────────────────── */
+  --color-border:               #2D3F5F;
+  --color-border-soft:          rgba(255, 255, 255, 0.08);
+  --color-border-focus:         #3B82F6;
 
-  /* ─── Border radii ─────────────────────────────────────────────── */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
-  --radius-pill: 999px;
+  /* ─── Semantic ──────────────────────────────────────────────────── */
+  --color-success:              #00C853;
+  --color-success-soft:         rgba(0, 200, 83, 0.15);
+  --color-warning:              #FFB74D;
+  --color-warning-soft:         rgba(255, 183, 77, 0.15);
+  --color-danger:               #FF5252;
+  --color-danger-soft:          rgba(255, 82, 82, 0.15);
+  --color-info:                 #42A5F5;
+  --color-info-soft:            rgba(66, 165, 245, 0.15);
 
-  /* ─── Typografie ───────────────────────────────────────────────── */
-  --font-display: "Fredoka", "Nunito", sans-serif;
-  --font-body: "Nunito", sans-serif;
+  /* ─── Mastery (Bronze/Silver/Gold) ──────────────────────────────── */
+  --color-mastery-bronze:       #CD7F32;
+  --color-mastery-silver:       #C0C0C0;
+  --color-mastery-gold:         #FFD700;
+  --color-mastery-unmeasured:   #6B7896;
 
-  --font-size-xs: 11px;
-  --font-size-sm: 13px;
-  --font-size-md: 15px;
-  --font-size-lg: 18px;
-  --font-size-xl: 22px;
-  --font-size-2xl: 28px;
+  /* ─── Legacy aliases (kunnen weg zodra alle code op nieuwe tokens zit) ── */
+  --color-primary:              var(--color-brand-primary);
+  --color-primary-dark:         var(--color-brand-primary-700);
+  --color-primary-soft:         var(--color-brand-primary-100);
+  --color-accent:               #00d4ff;
+  --color-accent-soft:          #80deea;
+  --color-alert:                var(--color-danger);
+  --color-alert-soft:           #ff8a80;
+  --color-warm:                 #ffd54f;
+  --color-bg:                   var(--color-bg-base);
+  --color-surface:              var(--color-bg-glass);
+  --color-surface-hover:        var(--color-bg-glass-hover);
 
-  --font-weight-regular: 400;
-  --font-weight-medium: 600;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
+  /* ─── Spacing scale (4-pt grid) ─────────────────────────────────── */
+  --space-0:   0px;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   24px;
+  --space-6:   32px;
+  --space-7:   48px;
+  --space-8:   64px;
 
-  /* ─── Shadows ──────────────────────────────────────────────────── */
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.20);
-  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.30);
-  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.40);
+  /* ─── Border radii ──────────────────────────────────────────────── */
+  --radius-xs:    6px;
+  --radius-sm:    10px;
+  --radius-md:    14px;
+  --radius-lg:    18px;
+  --radius-xl:    24px;
+  --radius-pill:  999px;
 
-  /* ─── Layout ───────────────────────────────────────────────────── */
-  --content-max-width: 640px;
+  /* ─── Typografie ────────────────────────────────────────────────── */
+  --font-display: "Fredoka", "Nunito", system-ui, sans-serif;
+  --font-body:    "Nunito", system-ui, sans-serif;
+  --font-mono:    ui-monospace, "JetBrains Mono", "Fira Code", monospace;
+
+  --font-size-xs:           11px;
+  --font-size-sm:           13px;
+  --font-size-md:           15px;
+  --font-size-lg:           18px;
+  --font-size-xl:           20px;
+  --font-size-2xl:          26px;
+  --font-size-display-sm:   20px;
+  --font-size-display-md:   26px;
+  --font-size-display-lg:   32px;
+
+  --line-height-tight:      1.15;
+  --line-height-snug:       1.35;
+  --line-height-normal:     1.55;
+  --line-height-relaxed:    1.7;
+
+  --font-weight-regular:    400;
+  --font-weight-medium:     600;
+  --font-weight-bold:       700;
+  --font-weight-black:      900;
+
+  /* ─── Shadows ───────────────────────────────────────────────────── */
+  --shadow-xs:   0 1px 2px rgba(0, 0, 0, 0.20);
+  --shadow-sm:   0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-md:   0 4px 14px rgba(0, 0, 0, 0.30);
+  --shadow-lg:   0 12px 32px rgba(0, 0, 0, 0.45);
+
+  /* Glow-shadows: alleen voor accenten (correct-feedback, game-CTA) */
+  --shadow-glow-success:  0 0 20px rgba(0, 200, 83, 0.45);
+  --shadow-glow-info:     0 0 20px rgba(59, 130, 246, 0.45);
+  --shadow-glow-game:     0 0 24px rgba(255, 107, 53, 0.55);
+
+  /* ─── Motion ────────────────────────────────────────────────────── */
+  --motion-fast:    120ms;
+  --motion-base:    200ms;
+  --motion-slow:    400ms;
+  --ease-out:       cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ─── Layout ────────────────────────────────────────────────────── */
+  --content-max-width:  640px;
+  --tap-target-min:     44px;
+  --bottom-nav-height:  64px;
+}
+
+/* Reduced-motion: respecteer system-preference */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-base: 0ms;
+    --motion-slow: 0ms;
+  }
 }
