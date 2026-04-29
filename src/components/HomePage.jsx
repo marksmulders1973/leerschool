@@ -373,7 +373,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onChallengeFriend, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -1161,6 +1161,24 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               >
                 <span style={{ fontSize: 18 }}>🛸</span>
                 Speel OBLITERATOR
+              </button>
+            )}
+            {onChallengeFriend && (
+              <button
+                style={{
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  background: "linear-gradient(135deg, #42a5f5, #ff5252)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "var(--font-display)",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
+                  boxShadow: "0 4px 16px rgba(255,82,82,0.30)",
+                  letterSpacing: 0.4,
+                }}
+                onClick={() => { track("pvp_challenge_from_home"); onChallengeFriend(); }}
+              >
+                <span style={{ fontSize: 18 }}>⚔️</span>
+                Daag een vriend uit (1v1)
               </button>
             )}
             {/* Oude losse 'Leerpaden — kies een onderwerp' knop is verwijderd; staat nu als primaire CTA bovenaan. */}
