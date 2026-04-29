@@ -711,8 +711,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           />
         </div>
 
-        {/* Lichtkrant ticker */}
-        <TickerBanner />
+        {/* Lichtkrant ticker — P1.8: verbergen voor ingelogde leerlingen
+            (mastery-CTA neemt de focus). Voor nieuwe bezoekers blijft hij
+            zichtbaar als sociaal bewijs. */}
+        {(() => {
+          let hasName = false;
+          try {
+            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          return !hasName ? <TickerBanner /> : null;
+        })()}
 
         {step === "role" && isLaunchPromoActive() && (
           <div style={{
