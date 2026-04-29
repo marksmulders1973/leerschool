@@ -482,6 +482,16 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 topicLabel={`${path.title} — ${step.title}`}
                 count={3}
                 onClose={() => setShowMiniQuiz(false)}
+                pathId={path.id}
+                playerName={userName}
+                onLessonReturn={() => {
+                  // Drempel niet gehaald → mini-quiz dicht en scroll naar
+                  // de uitleg. Gebruiker leest opnieuw, kan dan opnieuw klikken.
+                  setShowMiniQuiz(false);
+                  if (typeof window !== "undefined") {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }
+                }}
               />
             )}
           </div>

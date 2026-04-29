@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { recordAnswerForPath } from "../mastery.js";
 
 const C = {
   card: "rgba(30,45,70,0.6)",
@@ -10,7 +11,31 @@ const C = {
   warm: "#ffd54f",
 };
 
-export default function MiniQuiz({ subject, level, topicLabel, count = 3, onClose }) {
+// Drempel voor "voldoende beheersing" — 2/3 of meer → mag verder.
+// Dit is bewust niet 100%: één foutje moet niet verlammend werken.
+const PASS_RATIO = 2 / 3;
+
+/**
+ * MiniQuiz na een leerpad-stap (P1.7 adaptief).
+ *
+ * Nieuwe props sinds P1.7:
+ *   - pathId, playerName: voor mastery-registratie via recordAnswer.
+ *     Zonder deze blijft het component werken (zoals voorheen) maar
+ *     dan wordt geen voortgang opgeslagen.
+ *   - onLessonReturn: callback om de leerling terug te sturen naar de
+ *     bijbehorende leerpad-stap als ze de drempel niet halen.
+ *     Default: gebruikt onClose (sluit gewoon de mini-quiz).
+ */
+export default function MiniQuiz({
+  subject,
+  level,
+  topicLabel,
+  count = 3,
+  onClose,
+  pathId = null,
+  playerName = null,
+  onLessonReturn = null,
+}) {
   const [questions, setQuestions] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -57,7 +82,15 @@ export default function MiniQuiz({ subject, level, topicLabel, count = 3, onClos
     if (showResult) return;
     setSelected(i);
     setShowResult(true);
-    if (i === current.answer) setScore(score + 1);
+    const isCorrect = i === current.answer;
+    if (isCorrect) setScore(score + 1);
+
+    // P1.7: registreer in mastery zodat de voortgang van leerpad-stappen
+    // ook telt voor "Mijn voortgang" en aanbevelingen. Fire-and-forget.
+    // We gebruiken pathId expliciet (AI-vragen staan niet in QUESTION_PATH_MAP).
+    if (playerName && pathId) {
+      recordAnswerForPath({ playerName, pathId, isCorrect }).catch(() => {});
+    }
   };
 
   const handleNext = () => {
@@ -147,26 +180,48 @@ export default function MiniQuiz({ subject, level, topicLabel, count = 3, onClos
         </>
       )}
 
-      {allDone && questions && (
-        <div style={{ textAlign: "center", padding: "10px 0" }}>
-          <div style={{ fontSize: 36, marginBottom: 4 }}>
-            {score === questions.length ? "🎉" : score >= questions.length / 2 ? "👍" : "💪"}
+      {allDone && questions && (() => {
+        const ratio = score / questions.length;
+        const isPerfect = score === questions.length;
+        const isPassing = ratio >= PASS_RATIO;
+        return (
+          <div style={{ textAlign: "center", padding: "10px 0" }}>
+            <div style={{ fontSize: 36, marginBottom: 4 }}>
+              {isPerfect ? "🎉" : isPassing ? "👍" : "💪"}
+            </div>
+            <div style={{ fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
+              {score} van {questions.length} goed
+            </div>
+            <div style={{ fontSize: 13, color: C.muted, marginBottom: 14 }}>
+              {isPerfect
+                ? "Helemaal vlekkeloos! Klaar voor de volgende stap."
+                : isPassing
+                ? "Goede start — je beheerst de stof voldoende."
+                : "Nog niet sterk genoeg. Lees de uitleg eerst opnieuw, daarna nog een ronde."}
+            </div>
+            {isPassing ? (
+              <button onClick={onClose} style={btnPrimary()}>
+                Door naar de volgende stap ▶
+              </button>
+            ) : (
+              <>
+                <button
+                  onClick={() => {
+                    if (onLessonReturn) onLessonReturn();
+                    else onClose();
+                  }}
+                  style={btnPrimary()}
+                >
+                  📖 Lees de uitleg opnieuw
+                </button>
+                <button onClick={onClose} style={{ ...btnSecondary(), marginTop: 8 }}>
+                  Sluiten
+                </button>
+              </>
+            )}
           </div>
-          <div style={{ fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 4 }}>
-            {score} van {questions.length} goed
-          </div>
-          <div style={{ fontSize: 13, color: C.muted, marginBottom: 14 }}>
-            {score === questions.length
-              ? "Helemaal vlekkeloos! Klaar voor de volgende stap."
-              : score >= questions.length / 2
-              ? "Goede start. Lees de uitleg nog eens als je wil."
-              : "Nog niet helemaal — lees de uitleg even opnieuw door."}
-          </div>
-          <button onClick={onClose} style={btnPrimary()}>
-            Terug naar het leerpad
-          </button>
-        </div>
-      )}
+        );
+      })()}
     </div>
   );
 }

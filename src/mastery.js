@@ -43,6 +43,14 @@ export function pathIdForQuestion(questionText) {
 // Schrijf één antwoord weg in `topic_mastery`. Gebruikt upsert: bestaat de
 // (player, path) al, dan attempts + correct ophogen; anders rij aanmaken.
 // Returnt de nieuwe (attempts, correct) of null bij failure.
+//
+// Twee varianten:
+//   - recordAnswer({ playerName, questionText, isCorrect }) — leidt het pad
+//     af uit QUESTION_PATH_MAP (voor hardcoded vragen uit constants.js).
+//     Geen tag → returnt null en doet niets.
+//   - recordAnswerForPath({ playerName, pathId, isCorrect }) — directe
+//     versie die pathId expliciet meekrijgt (voor AI-gegenereerde
+//     mini-quiz-vragen na een leerpad-stap).
 export async function recordAnswer({ playerName, questionText, isCorrect, userId = null }) {
   const player = (playerName || "").trim();
   if (!player) return null;
@@ -52,6 +60,47 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
   try {
     // Eerst lezen, dan upsert. Niet ideaal qua atomiciteit maar
     // wel simpel + voldoende voor één-leerling-per-sessie.
+    const { data: existing } = await supabase
+      .from("topic_mastery")
+      .select("attempts, correct")
+      .eq("player_name", player)
+      .eq("path_id", pathId)
+      .maybeSingle();
+
+    const attempts = (existing?.attempts || 0) + 1;
+    const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
+
+    const row = {
+      player_name: player,
+      path_id: pathId,
+      attempts,
+      correct,
+      last_seen: new Date().toISOString(),
+    };
+    if (userId) row.user_id = userId;
+
+    const { error } = await supabase
+      .from("topic_mastery")
+      .upsert(row, { onConflict: "player_name,path_id" });
+    if (error) return null;
+    return { pathId, attempts, correct, level: getMasteryLevel(attempts, correct) };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Variant van recordAnswer waar het pathId expliciet wordt meegegeven.
+ * Bedoeld voor mini-quiz na een leerpad-stap (AI-gegenereerde vragen
+ * staan niet in QUESTION_PATH_MAP, dus de auto-lookup faalt).
+ *
+ * Returnt {pathId, attempts, correct, level} of null bij failure.
+ */
+export async function recordAnswerForPath({ playerName, pathId, isCorrect, userId = null }) {
+  const player = (playerName || "").trim();
+  if (!player || !pathId) return null;
+
+  try {
     const { data: existing } = await supabase
       .from("topic_mastery")
       .select("attempts, correct")
