@@ -12,12 +12,17 @@ import {
   subscribeMatch,
   whatsappShareLink,
 } from "./pvp.js";
+import { getCurrentUserId } from "../../auth.js";
 
 const TEAM_HOST = { name: "Blauw", color: "#42a5f5", emoji: "🔵" };
 const TEAM_GUEST = { name: "Rood", color: "#ff5252", emoji: "🔴" };
 
-export default function PvPLobby({ playerName, mode, code, onMatchReady, onClose }) {
+export default function PvPLobby({ playerName, mode: initialMode, code, onMatchReady, onClose }) {
   // mode: "host" (maak nieuwe match) of "guest" (join bestaande via code)
+  // Kan switchen van guest → host als ik (logged-in user) de host blijk te zijn
+  // van de match die ik probeer te joinen — dat gebeurt als je je eigen
+  // gedeelde link op dezelfde browser opent.
+  const [mode, setMode] = useState(initialMode);
   const [phase, setPhase] = useState("loading"); // loading | error | waiting | ready
   const [match, setMatch] = useState(null);
   const [error, setError] = useState(null);
@@ -48,13 +53,19 @@ export default function PvPLobby({ playerName, mode, code, onMatchReady, onClose
             setPhase("error");
             return;
           }
-          if (existing.status !== "lobby" && existing.status !== "ready") {
-            setError(
-              existing.status === "finished"
-                ? "Deze match is al afgelopen"
-                : "Match is niet meer joinable"
-            );
+          if (existing.status === "finished") {
+            setError("Deze match is al afgelopen");
             setPhase("error");
+            return;
+          }
+          // Slim: ben ik de host? Dat gebeurt als je je eigen gedeelde link
+          // opent op hetzelfde apparaat. Switch naar host-view, geen
+          // dubbele guest-join nodig.
+          const myUid = await getCurrentUserId();
+          if (myUid && existing.host_user_id === myUid) {
+            setMode("host");
+            setMatch(existing);
+            setPhase("waiting");
             return;
           }
           // Probeer te joinen (alleen als nog geen guest)
@@ -70,7 +81,7 @@ export default function PvPLobby({ playerName, mode, code, onMatchReady, onClose
               return;
             }
             setMatch(joined);
-          } else if (existing.guest_name === playerName) {
+          } else if (existing.guest_name === playerName || existing.guest_user_id === myUid) {
             // We zijn de guest, herverbind
             setMatch(existing);
           } else {
@@ -185,7 +196,34 @@ export default function PvPLobby({ playerName, mode, code, onMatchReady, onClose
 // ─── Host-paneel: code + WhatsApp-knop + start ─────────────────
 function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel }) {
   const [copied, setCopied] = useState(false);
+  const [polledGuestName, setPolledGuestName] = useState(match.guest_name || null);
+  const [waitSeconds, setWaitSeconds] = useState(0);
   const url = `${window.location.origin}/duel/${match.id}`;
+
+  // Polling: check elke 3s of er een guest in de DB-rij is verschenen.
+  // Realtime presence is sneller maar pas actief als guest in zelfde channel
+  // zit. DB-update gebeurt al bij joinMatch, dus dit geeft eerder signaal.
+  useEffect(() => {
+    if (polledGuestName) return; // al gevonden
+    let cancelled = false;
+    const id = setInterval(async () => {
+      try {
+        const m = await fetchMatch(match.id);
+        if (!cancelled && m?.guest_name) setPolledGuestName(m.guest_name);
+      } catch {}
+    }, 3000);
+    return () => { cancelled = true; clearInterval(id); };
+  }, [match.id, polledGuestName]);
+
+  // Tikker voor "wacht-tijd" zodat we hint kunnen tonen na 60 sec
+  useEffect(() => {
+    if (polledGuestName || bothPresent) return;
+    const id = setInterval(() => setWaitSeconds((s) => s + 1), 1000);
+    return () => clearInterval(id);
+  }, [polledGuestName, bothPresent]);
+
+  const opponentSeen = polledGuestName || bothPresent;
+  const guestNaam = polledGuestName || match.guest_name;
 
   const copyLink = async () => {
     try {
@@ -202,8 +240,8 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
           {TEAM_HOST.emoji} {playerName} (Blauw)
         </span>
         <span style={vsStyle}>VS</span>
-        <span style={{ ...teamBadgeStyle, background: bothPresent ? TEAM_GUEST.color : "#444" }}>
-          {bothPresent ? `${TEAM_GUEST.emoji} ${match.guest_name}` : "⏳ Wachten…"}
+        <span style={{ ...teamBadgeStyle, background: opponentSeen ? TEAM_GUEST.color : "#444" }}>
+          {opponentSeen ? `${TEAM_GUEST.emoji} ${guestNaam || "Klaar"}` : "⏳ Wachten…"}
         </span>
       </div>
 
@@ -232,14 +270,35 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
         {copied ? "✓ Link gekopieerd" : "📋 Of kopieer link voor andere chat"}
       </button>
 
+      <div
+        style={{
+          marginTop: 10,
+          padding: "8px 10px",
+          borderRadius: 8,
+          background: "rgba(0,0,0,0.3)",
+          fontSize: 11,
+          color: "var(--color-text-muted)",
+          fontFamily: "var(--font-mono)",
+          textAlign: "center",
+          wordBreak: "break-all",
+        }}
+      >
+        {url}
+      </div>
+
       <div style={statusStyle}>
-        {bothPresent ? (
+        {opponentSeen ? (
           <span style={{ color: "var(--color-success)", fontFamily: "var(--font-display)" }}>
-            ✓ Tegenstander online — klaar om te starten!
+            ✓ {guestNaam ? `${guestNaam} is binnen` : "Tegenstander gezien"} — klaar om te starten!
+          </span>
+        ) : waitSeconds > 60 ? (
+          <span style={{ color: "var(--color-warning)" }}>
+            Geen reactie na {Math.floor(waitSeconds / 60)} min — link niet aangekomen?
+            Probeer opnieuw te delen of stuur de URL hierboven via een andere chat.
           </span>
         ) : (
           <span style={{ color: "var(--color-text-muted)" }}>
-            Wacht tot je vriend de link opent…
+            Wacht tot je vriend de link opent… ({waitSeconds}s)
           </span>
         )}
       </div>
@@ -247,12 +306,12 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
       <button
         type="button"
         onClick={onStart}
-        disabled={!bothPresent}
+        disabled={!opponentSeen}
         style={{
           ...primaryBtnStyle,
           marginTop: 14,
-          opacity: bothPresent ? 1 : 0.45,
-          cursor: bothPresent ? "pointer" : "not-allowed",
+          opacity: opponentSeen ? 1 : 0.45,
+          cursor: opponentSeen ? "pointer" : "not-allowed",
         }}
       >
         ⚔️ START DUEL
