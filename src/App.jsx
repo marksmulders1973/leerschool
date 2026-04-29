@@ -27,30 +27,30 @@ const RedactiesommenPage = lazy(() => import("./components/RedactiesommenPage.js
 const BegrijpendLezenPage = lazy(() => import("./components/BegrijpendLezenPage.jsx"));
 const WoordenschatPage = lazy(() => import("./components/WoordenschatPage.jsx"));
 const SpellingPage = lazy(() => import("./components/SpellingPage.jsx"));
-const TeacherHome = lazy(() => import("./components/TeacherHome.jsx"));
+const TeacherHome = lazy(() => import("./features/teacher/TeacherHome.jsx"));
 const ClassManager = lazy(() =>
-  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.ClassManager }))
+  import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.ClassManager }))
 );
 const CreateQuiz = lazy(() =>
-  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.CreateQuiz }))
+  import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.CreateQuiz }))
 );
 const QuizPreview = lazy(() =>
-  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.QuizPreview }))
+  import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.QuizPreview }))
 );
 const Lobby = lazy(() =>
-  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.Lobby }))
+  import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.Lobby }))
 );
 const TeacherProgress = lazy(() =>
-  import("./components/StudentProgress.jsx").then((m) => ({ default: m.TeacherProgress }))
+  import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.TeacherProgress }))
 );
 const StudentProgressView = lazy(() =>
-  import("./components/StudentProgress.jsx").then((m) => ({ default: m.StudentProgressView }))
+  import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.StudentProgressView }))
 );
 const Leaderboard = lazy(() =>
-  import("./components/StudentProgress.jsx").then((m) => ({ default: m.Leaderboard }))
+  import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.Leaderboard }))
 );
 const Kampioenen = lazy(() =>
-  import("./components/StudentProgress.jsx").then((m) => ({ default: m.Kampioenen }))
+  import("./features/teacher/StudentProgress.jsx").then((m) => ({ default: m.Kampioenen }))
 );
 const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));

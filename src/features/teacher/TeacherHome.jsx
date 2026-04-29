@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import styles from "../styles.js";
-import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS } from "../constants.js";
-import { formatDate, daysUntil, shuffle } from "../utils.js";
-import Header from "./Header.jsx";
-import supabase from "../supabase.js";
+import styles from "../../styles.js";
+import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS } from "../../constants.js";
+import { formatDate, daysUntil, shuffle } from "../../utils.js";
+import Header from "../../components/Header.jsx";
+import supabase from "../../supabase.js";
 
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft }) {
   const [completions, setCompletions] = useState({});

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import styles from "../styles.js";
-import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL, TEACHER_TOPIC_SUGGESTIONS, EIGEN_TOPIC_SUGGESTIONS } from "../constants.js";
-import { daysUntil, fetchAIQuestions } from "../utils.js";
-import Header from "./Header.jsx";
+import styles from "../../styles.js";
+import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL, TEACHER_TOPIC_SUGGESTIONS, EIGEN_TOPIC_SUGGESTIONS } from "../../constants.js";
+import { daysUntil, fetchAIQuestions } from "../../utils.js";
+import Header from "../../components/Header.jsx";
 
 export function ClassManager({ classes, onSave, onBack, onHome }) {
   const [editingClassId, setEditingClassId] = useState(null);

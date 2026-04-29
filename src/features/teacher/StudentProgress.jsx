@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import supabase from "../supabase.js";
-import styles from "../styles.js";
-import { SUBJECTS, LEVELS } from "../constants.js";
-import Header from "./Header.jsx";
+import supabase from "../../supabase.js";
+import styles from "../../styles.js";
+import { SUBJECTS, LEVELS } from "../../constants.js";
+import Header from "../../components/Header.jsx";
 
 export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
   return (
