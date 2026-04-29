@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+*.generated.js
+*.generated.ts
+src/constants.js
+public/
+.vercel
