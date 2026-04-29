@@ -1,0 +1,81 @@
+/*
+ * Studiebol design tokens v0 — P1.5
+ *
+ * Eerste laag van het design system. Doel: één plek voor kleuren,
+ * spacing, radii zodat we later af kunnen van inline styles in elk
+ * component. Volg deze tokens vanaf nu in nieuwe componenten.
+ *
+ * Filosofie (uit de architectuur-audit):
+ *   - 1 primary, 1 accent, 1 alert + grayscale.
+ *   - Geen gradients als er geen functioneel doel is.
+ *   - Typografie eerst, kleur tweede.
+ */
+
+:root {
+  /* ─── Color: brand ─────────────────────────────────────────────── */
+  --color-primary: #00c853;        /* Studiebol groen */
+  --color-primary-soft: #69f0ae;
+  --color-primary-dark: #00a040;
+
+  --color-accent: #00d4ff;         /* cyaan voor secundaire acties */
+  --color-accent-soft: #80deea;
+
+  --color-alert: #e53935;          /* fouten / waarschuwingen */
+  --color-alert-soft: #ff8a80;
+
+  --color-warm: #ffd54f;           /* highlight, accent voor uitleg */
+
+  /* ─── Color: surface (donker thema) ─────────────────────────────── */
+  --color-bg: #0f1729;
+  --color-bg-elevated: #1a2744;
+  --color-surface: rgba(30, 45, 70, 0.6);
+  --color-surface-hover: rgba(40, 60, 90, 0.8);
+  --color-border: #2a3f5f;
+  --color-border-soft: rgba(255, 255, 255, 0.10);
+
+  /* ─── Color: text ──────────────────────────────────────────────── */
+  --color-text: #e0e6f0;
+  --color-text-strong: #ffffff;
+  --color-text-muted: #8899aa;
+  --color-text-subtle: rgba(255, 255, 255, 0.55);
+
+  /* ─── Spacing scale (4-base) ───────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* ─── Border radii ─────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* ─── Typografie ───────────────────────────────────────────────── */
+  --font-display: "Fredoka", "Nunito", sans-serif;
+  --font-body: "Nunito", sans-serif;
+
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 28px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* ─── Shadows ──────────────────────────────────────────────────── */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.20);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.30);
+  --shadow-lg: 0 8px 28px rgba(0, 0, 0, 0.40);
+
+  /* ─── Layout ───────────────────────────────────────────────────── */
+  --content-max-width: 640px;
+}

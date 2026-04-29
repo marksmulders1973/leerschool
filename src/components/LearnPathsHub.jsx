@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import supabase from "../supabase";
 import { ALL_LEARN_PATHS } from "../learnPaths";
 import { CURRICULA, curriculumTotalSteps } from "../curricula";
+import { SUBJECTS as SUBJECT_LABELS } from "../shared/subjects.js";
 
 const C = {
   bg: "#0f1729",
@@ -63,23 +64,6 @@ const PATH_THEMES = {
   "balans-beco": { gradient: "linear-gradient(135deg, #e65100, #bf360c)", accent: "#ffab91" },
   "naamvallen-duits": { gradient: "linear-gradient(135deg, #424242, #212121)", accent: "#bdbdbd" },
   "passe-compose-frans": { gradient: "linear-gradient(135deg, #1565c0, #b71c1c)", accent: "#90caf9" },
-};
-
-const SUBJECT_LABELS = {
-  wiskunde: { title: "Wiskunde", emoji: "🧮" },
-  taal: { title: "Nederlands", emoji: "📖" },
-  engels: { title: "Engels", emoji: "🇬🇧" },
-  biologie: { title: "Biologie", emoji: "🧬" },
-  geschiedenis: { title: "Geschiedenis", emoji: "🏛️" },
-  aardrijkskunde: { title: "Aardrijkskunde", emoji: "🌍" },
-  natuurkunde: { title: "Natuurkunde", emoji: "⚛️" },
-  scheikunde: { title: "Scheikunde", emoji: "🧪" },
-  economie: { title: "Economie", emoji: "💶" },
-  beco: { title: "Bedrijfseconomie", emoji: "📊" },
-  duits: { title: "Duits", emoji: "🇩🇪" },
-  frans: { title: "Frans", emoji: "🇫🇷" },
-  maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
-  natuur: { title: "Natuur (PO)", emoji: "🌿" },
 };
 
 // `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".

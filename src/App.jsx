@@ -64,24 +64,14 @@ const MyMastery = lazy(() => import("./components/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
+import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 
-// Labels voor leerpad-subject-keys (los van SUBJECTS in constants — die gebruikt categorie-ids).
-const SUBJECT_LABELS_FOR_HUB = {
-  wiskunde: "Wiskunde",
-  taal: "Nederlands",
-  engels: "Engels",
-  biologie: "Biologie",
-  geschiedenis: "Geschiedenis",
-  aardrijkskunde: "Aardrijkskunde",
-  natuurkunde: "Natuurkunde",
-  scheikunde: "Scheikunde",
-  economie: "Economie",
-  beco: "Bedrijfseconomie",
-  duits: "Duits",
-  frans: "Frans",
-  maatschappijleer: "Maatschappijleer",
-  natuur: "Natuur (PO)",
-};
+// SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
+// Deze constant blijft tijdelijk voor backwards-compat met code die alleen
+// de title als string verwacht.
+const SUBJECT_LABELS_FOR_HUB = Object.fromEntries(
+  Object.entries(LEARN_PATH_SUBJECTS).map(([key, { title }]) => [key, title])
+);
 
 // Pagina's waar de bottom-nav zichtbaar is. Deep-flow / focus-modus pagina's
 // (play, learn-path, curriculum, results, obliterator*, pro, admin-feedback,

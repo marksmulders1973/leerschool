@@ -2,23 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header.jsx";
 import styles from "../styles.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery.js";
-
-const SUBJECT_LABELS = {
-  wiskunde: { title: "Wiskunde", emoji: "🧮" },
-  taal: { title: "Nederlands", emoji: "📖" },
-  engels: { title: "Engels", emoji: "🇬🇧" },
-  biologie: { title: "Biologie", emoji: "🧬" },
-  geschiedenis: { title: "Geschiedenis", emoji: "🏛️" },
-  aardrijkskunde: { title: "Aardrijkskunde", emoji: "🌍" },
-  natuurkunde: { title: "Natuurkunde", emoji: "⚛️" },
-  scheikunde: { title: "Scheikunde", emoji: "🧪" },
-  economie: { title: "Economie", emoji: "💶" },
-  beco: { title: "Bedrijfseconomie", emoji: "📊" },
-  duits: { title: "Duits", emoji: "🇩🇪" },
-  frans: { title: "Frans", emoji: "🇫🇷" },
-  maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
-  natuur: { title: "Natuur (PO)", emoji: "🌿" },
-};
+import { SUBJECTS as SUBJECT_LABELS } from "../shared/subjects.js";
 
 export default function MyMastery({ userName, onPickPath, onBack, onHome }) {
   const [records, setRecords] = useState([]);
