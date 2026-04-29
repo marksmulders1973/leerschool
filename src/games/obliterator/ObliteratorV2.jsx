@@ -127,13 +127,18 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
 
       // Spawn — gebruikt s.rng zodat de Daily Challenge deterministisch is.
       if (ts - lastSpawnTime > spawnIntervalFor(s.level)) {
-        spawnObstacle(s);
+        // Tijdens safe-zone na schans: skip grond-obstakels (Mark's eis:
+        // niet direct op spike landen na schans/loop).
+        if (now >= s.noObstaclesUntil) {
+          spawnObstacle(s);
+        }
         lastSpawnTime = ts;
         if (s.rng() < powerupChanceFor(s.level)) spawnPowerup(s);
         if (s.rng() < 0.4) spawnStar(s);
-        // 🌀 Warp tunnel: 2% per spawn-tick, alleen tot level 7. Hogere
-        // levels hebben weinig kop-ruimte (cap is 10), zou frustrerend zijn.
+        // 🌀 Warp tunnel: 2% per spawn-tick, alleen tot level 7.
         if (s.level <= 7 && s.rng() < 0.02) spawnWarp(s);
+        // 🛹 Schans/looping: 2% per spawn-tick, alleen tot level 7.
+        if (s.level <= 7 && s.rng() < 0.02) spawnRamp(s);
       }
 
       // ⚡ Wapen-tick: auto-fire + alien-spawn als wapen actief.
@@ -232,6 +237,26 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         }
       }
       s.warps = s.warps.filter((w) => w.x > -80 && !w.dead);
+
+      // 🛹 Schansen + loopings — bij contact: super-jump + collectibles.
+      for (const r of s.ramps) {
+        r.x -= speed;
+        if (pickupCollision(s.player, r)) {
+          handleRamp(s, r, speed);
+          r.dead = true;
+        }
+      }
+      s.ramps = s.ramps.filter((r) => r.x > -60 && !r.dead);
+
+      // 💎 Collectibles (hartjes, ringen) — bewegen mee, pak op bij overlap.
+      for (const c of s.collectibles) {
+        c.x -= speed;
+        if (pickupCollision(s.player, c)) {
+          handleCollectible(s, c, multBoostActive);
+          c.dead = true;
+        }
+      }
+      s.collectibles = s.collectibles.filter((c) => c.x > -40 && !c.dead);
 
       // Particles
       s.particles = s.particles
@@ -426,6 +451,34 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     playSound("boom");
   }
 
+  // 🛹 Speler raakt schans/looping → super-jump + collectibles + safe-zone.
+  function handleRamp(s, ramp, speed) {
+    const isLoop = ramp.type === "loop";
+    s.player.vy = -17; // super-jump
+    s.player.onGround = false;
+    s.player.didTap = false;
+    // Safe-zone: 1.5 sec geen grond-obstakels (Mark's eis: niet direct op spike landen)
+    s.noObstaclesUntil = performance.now() + 1500;
+    spawnRampCollectibles(s, isLoop, speed);
+    playSound(isLoop ? "warp" : "powerup"); // loop = warp-toon (omhoog), schans = pickup-toon
+    emitParticles(s, "powerup", ramp.x, ramp.y);
+    s.score += isLoop ? 100 : 50; // bonus voor het raken zelf
+  }
+
+  // 💎 Speler pakt hartje of ring tijdens vlucht.
+  function handleCollectible(s, c, multBoost) {
+    if (c.kind === "heart") {
+      s.lives = Math.min(5, s.lives + 1);
+      emitParticles(s, "powerup", c.x, c.y);
+      playSound("powerup");
+    } else {
+      // Ring → +50 punten × multiplier
+      s.score += 50 * (multBoost ? 2 : 1);
+      emitParticles(s, "collect", c.x, c.y);
+      playSound("collect");
+    }
+  }
+
   // Speler raakt warp-portal → 1-3 levels omhoog (cap 10).
   function handleWarp(s, w) {
     const jump = 1 + Math.floor(s.rng() * 3); // 1, 2 of 3
@@ -486,7 +539,10 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     s.aliens = [];
     s.lasers = [];
     s.warps = [];
+    s.ramps = [];
+    s.collectibles = [];
     s.weaponUntil = 0;
+    s.noObstaclesUntil = 0;
     s.player = makePlayer();
     setSecondChancesUsed((n) => n + 1);
     setHud((h) => ({ ...h, lives: extraLives, combo: 0, mult: 1 }));
@@ -639,6 +695,9 @@ function createGameState(opts = {}) {
     aliens: [],            // 🛸 vijanden tijdens weapon-modus
     lasers: [],            // ⚡ auto-fire projectielen
     warps: [],             // 🌀 portals naar hogere levels
+    ramps: [],             // 🛹 schansen + loopings
+    collectibles: [],      // 💎 hartjes (+leven) en ringen (+score) tijdens schans
+    noObstaclesUntil: 0,   // safe-zone na schans/loop — geen grond-obstakels
     shake: 0,
     shieldActive: false,
     slowmoUntil: 0,
@@ -708,6 +767,54 @@ function spawnLaser(s) {
     h: 4,
     dead: false,
   });
+}
+
+// 🛹 Schans of looping — beide triggeren super-jump. 70% schans, 30% loop.
+// Loop = extended schans: meer ringen + gegarandeerd hartje.
+function spawnRamp(s) {
+  const isLoop = s.rng() < 0.3;
+  s.ramps.push({
+    x: CANVAS_W + 30,
+    y: PHYSICS.groundY - 26,
+    w: 36,
+    h: 26,
+    type: isLoop ? "loop" : "schans",
+    dead: false,
+  });
+}
+
+// Plaatst hartjes + ringen langs de boog van een super-jump zodat de speler
+// ze tijdens de vlucht oppakt. Wiskunde: speler-y(t) = y₀ + (-17)t + 0.35t²
+// (jumpVelocity -17, gravity 0.7). Wereld beweegt links met `speed`, dus
+// een collectible op x = playerX + speed·t ontmoet de speler bij frame t.
+function spawnRampCollectibles(s, isLoop, speed) {
+  // Frames: midden van de stijg-/daal-fase, plus piek.
+  // Boog duurt ~48 frames. Ringen op 8/16/24/32/40, hartje op 24 (piek).
+  const frames = isLoop ? [8, 14, 20, 26, 32, 38, 44] : [10, 20, 30, 40];
+  for (const t of frames) {
+    const y = PHYSICS.groundY - PHYSICS.playerSize + (-17 * t) + 0.5 * 0.7 * t * t;
+    s.collectibles.push({
+      x: PHYSICS.playerX + speed * t,
+      y: Math.max(50, y - 6),
+      w: 18,
+      h: 18,
+      kind: "ring",
+      dead: false,
+    });
+  }
+  // Hartje: bij loop altijd, bij schans 25% kans. Op het piekmoment (t=24).
+  if (isLoop || s.rng() < 0.25) {
+    const t = 24;
+    const y = PHYSICS.groundY - PHYSICS.playerSize + (-17 * t) + 0.5 * 0.7 * t * t;
+    s.collectibles.push({
+      x: PHYSICS.playerX + speed * t,
+      y: Math.max(40, y - 18),
+      w: 22,
+      h: 22,
+      kind: "heart",
+      dead: false,
+    });
+  }
 }
 
 // 🌀 Warp tunnel — portal-cirkel die over de baan beweegt. Bij contact:
@@ -838,6 +945,71 @@ function render(canvas, s, hintObstacle) {
       ctx.stroke();
     }
     ctx.shadowBlur = 0;
+  }
+
+  // 🛹 Schansen & loopings
+  for (const r of s.ramps) {
+    if (r.type === "loop") {
+      // Looping: gele cirkel-arc
+      const cx = r.x + r.w / 2;
+      const cy = r.y + r.h / 2;
+      ctx.strokeStyle = "#ffeb3b";
+      ctx.lineWidth = 4;
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#ffeb3b";
+      ctx.beginPath();
+      ctx.arc(cx, cy - 8, r.w / 2 + 4, 0, Math.PI * 2);
+      ctx.stroke();
+      // Tweede ring binnen voor diepte
+      ctx.strokeStyle = "rgba(255, 235, 59, 0.6)";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(cx, cy - 8, r.w / 2 - 2, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    } else {
+      // Schans: groene driehoek-helling (hoog rechts)
+      ctx.fillStyle = "#00c853";
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "#69f0ae";
+      ctx.beginPath();
+      ctx.moveTo(r.x, r.y + r.h);
+      ctx.lineTo(r.x + r.w, r.y);
+      ctx.lineTo(r.x + r.w, r.y + r.h);
+      ctx.closePath();
+      ctx.fill();
+      // Pijl-omhoog op de schans
+      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.font = "bold 14px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("↗", r.x + r.w * 0.65, r.y + r.h * 0.5);
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  // 💎 Collectibles
+  for (const c of s.collectibles) {
+    const cx = c.x + c.w / 2;
+    const cy = c.y + c.h / 2;
+    if (c.kind === "heart") {
+      ctx.shadowBlur = 16;
+      ctx.shadowColor = "#ff5252";
+      ctx.fillStyle = "#ff5252";
+      ctx.font = "bold 22px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText("❤️", cx, cy + 8);
+      ctx.shadowBlur = 0;
+    } else {
+      // Ring: cyan cirkel met holle midden
+      ctx.strokeStyle = "#00e5ff";
+      ctx.lineWidth = 3;
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "#00e5ff";
+      ctx.beginPath();
+      ctx.arc(cx, cy, c.w / 2, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
   }
 
   // 🛸 Aliens
@@ -1003,7 +1175,7 @@ function HUD({ score, combo, level, lives, mult, slowmoActive, multBoostActive, 
         </div>
       </div>
       <div style={{ display: "flex", gap: 4, alignItems: "center", pointerEvents: "auto" }}>
-        {Array.from({ length: 3 }).map((_, i) => (
+        {Array.from({ length: Math.max(3, lives) }).map((_, i) => (
           <span key={i} style={{ fontSize: 16, opacity: i < lives ? 1 : 0.2 }}>❤️</span>
         ))}
         <button
