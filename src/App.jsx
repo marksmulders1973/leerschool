@@ -18,10 +18,10 @@ import PageLoader from "./app/PageLoader.jsx";
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
-const TextbookQuiz = lazy(() => import("./components/TextbookQuiz.jsx"));
+const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
 const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
-const PlayQuiz = lazy(() => import("./components/PlayQuiz.jsx"));
-const ResultsPage = lazy(() => import("./components/ResultsPage.jsx"));
+const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
+const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
 const RedactiesommenPage = lazy(() => import("./components/RedactiesommenPage.jsx"));
 const BegrijpendLezenPage = lazy(() => import("./components/BegrijpendLezenPage.jsx"));

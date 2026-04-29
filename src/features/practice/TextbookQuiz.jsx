@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import styles from "../styles.js";
-import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../constants.js";
-import { SoundEngine } from "../utils.js";
-import Header from "./Header.jsx";
-import { hasLearnPathsForCategory, countLearnPathsForCategory } from "../learnPaths/subjectMapping.js";
+import styles from "../../styles.js";
+import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../../constants.js";
+import { SoundEngine } from "../../utils.js";
+import Header from "../../components/Header.jsx";
+import { hasLearnPathsForCategory, countLearnPathsForCategory } from "../../learnPaths/subjectMapping.js";
 
 const schoolTypeMatchesBook = (bookName, schoolType) => {
   if (!schoolType || !bookName) return false;

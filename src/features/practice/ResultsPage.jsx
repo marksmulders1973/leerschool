@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import styles from "../styles.js";
-import { SUBJECTS, LEVELS } from "../constants.js";
-import { SoundEngine } from "../utils.js";
-import ObliteratorGame from "./ObliteratorGame.jsx";
-import supabase from "../supabase.js";
+import styles from "../../styles.js";
+import { SUBJECTS, LEVELS } from "../../constants.js";
+import { SoundEngine } from "../../utils.js";
+import ObliteratorGame from "../../components/ObliteratorGame.jsx";
+import supabase from "../../supabase.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
   const latest = results[results.length - 1];

@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import styles from "../styles.js";
-import { SUBJECTS } from "../constants.js";
-import { SoundEngine, track } from "../utils.js";
-import { findLearnPathForQuestion } from "../learnPaths/index.js";
-import { categoryToLearnSubjects } from "../learnPaths/subjectMapping.js";
-import { recordAnswer as recordMasteryAnswer } from "../features/mastery/mastery.js";
+import styles from "../../styles.js";
+import { SUBJECTS } from "../../constants.js";
+import { SoundEngine, track } from "../../utils.js";
+import { findLearnPathForQuestion } from "../../learnPaths/index.js";
+import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
+import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt

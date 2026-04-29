@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { recordAnswerForPath } from "../features/mastery/mastery.js";
+import { recordAnswerForPath } from "../mastery/mastery.js";
 
 const C = {
   card: "rgba(30,45,70,0.6)",
