@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import supabase from "./supabase.js";
+import { ensureSession } from "./auth.js";
 import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
@@ -267,8 +268,16 @@ export default function App() {
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
 
-  // Auth: laad sessie + luister naar wijzigingen
+  // Auth: bij mount eerst zorgen voor een sessie (anonymous sign-in als
+  // gebruiker nog geen Google-login heeft). Daarna laad de sessie + luister
+  // naar wijzigingen. Hierdoor heeft élke bezoeker een auth.uid() en kan
+  // RLS strikt op user_id worden gezet.
   useEffect(() => {
+    let cancelled = false;
+    ensureSession().then((session) => {
+      if (cancelled) return;
+      if (session?.user) setAuthUser(session.user);
+    }).catch(() => {});
     supabase.auth?.getSession?.().then(({ data: { session } = {} } = {}) => {
       if (session?.user) setAuthUser(session.user);
     }).catch(() => {});
@@ -307,7 +316,10 @@ export default function App() {
         }).catch(() => {});
       }
     });
-    return () => sub?.data?.subscription?.unsubscribe?.();
+    return () => {
+      cancelled = true;
+      sub?.data?.subscription?.unsubscribe?.();
+    };
   }, []);
 
   const handleGoogleLogin = () => {
