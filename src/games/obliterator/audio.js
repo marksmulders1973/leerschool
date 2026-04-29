@@ -120,6 +120,27 @@ const SFX = {
     dur: 0.3,
     volume: 0.32,
   },
+  shoot: {
+    type: "square",
+    freq: 1200,
+    slideTo: 600,
+    dur: 0.05,
+    volume: 0.10,
+  },
+  boom: {
+    type: "sawtooth",
+    freq: 250,
+    slideTo: 60,
+    dur: 0.18,
+    volume: 0.32,
+  },
+  warp: {
+    type: "sine",
+    freq: 200,
+    slideTo: 1800,
+    dur: 0.5,
+    volume: 0.36,
+  },
 };
 
 /**

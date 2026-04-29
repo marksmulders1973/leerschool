@@ -131,7 +131,13 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         lastSpawnTime = ts;
         if (s.rng() < powerupChanceFor(s.level)) spawnPowerup(s);
         if (s.rng() < 0.4) spawnStar(s);
+        // 🌀 Warp tunnel: 2% per spawn-tick, alleen tot level 7. Hogere
+        // levels hebben weinig kop-ruimte (cap is 10), zou frustrerend zijn.
+        if (s.level <= 7 && s.rng() < 0.02) spawnWarp(s);
       }
+
+      // ⚡ Wapen-tick: auto-fire + alien-spawn als wapen actief.
+      tickWeapon(s, multBoostActive);
 
       // Move + collide obstakels
       let hintObstacle = null; // dichtsbijzijnde obstakel in obliterate-zone
@@ -188,6 +194,45 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       }
       s.stars = s.stars.filter((st) => st.x > -50 && !st.dead);
 
+      // 🛸 Aliens — bewegen langzamer dan obstakels, lichte wave.
+      for (const a of s.aliens) {
+        a.x -= speed * 0.55;
+        a.phase += 0.08;
+        a.y += a.dy + Math.sin(a.phase) * 0.4;
+      }
+      s.aliens = s.aliens.filter((a) => a.x > -60 && !a.dead);
+
+      // ⚡ Lasers — naar rechts, raak aliens.
+      for (const l of s.lasers) {
+        l.x += 9;
+        for (const a of s.aliens) {
+          if (a.dead) continue;
+          if (
+            l.x < a.x + a.w &&
+            l.x + l.w > a.x &&
+            l.y < a.y + a.h &&
+            l.y + l.h > a.y
+          ) {
+            handleAlienHit(s, a, multBoostActive);
+            a.dead = true;
+            l.dead = true;
+            break;
+          }
+        }
+      }
+      s.lasers = s.lasers.filter((l) => !l.dead && l.x < CANVAS_W + 20);
+
+      // 🌀 Warp-tunnels — speler die erin springt warpt levels omhoog.
+      for (const w of s.warps) {
+        w.x -= speed;
+        w.rot += 0.06;
+        if (pickupCollision(s.player, w)) {
+          handleWarp(s, w);
+          w.dead = true;
+        }
+      }
+      s.warps = s.warps.filter((w) => w.x > -80 && !w.dead);
+
       // Particles
       s.particles = s.particles
         .map((p) => ({ ...p, x: p.x + p.vx, y: p.y + p.vy, life: p.life - 1, vy: p.vy + 0.3 }))
@@ -210,6 +255,8 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           slowmoActive,
           multBoostActive,
           shieldActive: s.shieldActive,
+          weaponActive: now < s.weaponUntil,
+          weaponSecondsLeft: Math.max(0, Math.ceil((s.weaponUntil - now) / 1000)),
         });
         lastHudPush = ts;
       }
@@ -341,9 +388,61 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     s.score += pointsFor("powerup", s.combo);
     emitParticles(s, "powerup", p.x, p.y);
     playSound("powerup");
+    const now = performance.now();
     if (p.kind === "shield") s.shieldActive = true;
-    else if (p.kind === "slowmo") s.slowmoUntil = performance.now() + 3000;
-    else if (p.kind === "multiplier") s.multiplierBoostUntil = performance.now() + 5000;
+    else if (p.kind === "slowmo") s.slowmoUntil = now + 3000;
+    else if (p.kind === "multiplier") s.multiplierBoostUntil = now + 5000;
+    else if (p.kind === "weapon") {
+      s.weaponUntil = now + 20000;
+      s.weaponSpawnedAliens = 0;     // reset budget van 3 aliens
+      s.weaponLastSpawn = now;       // wacht ~6 sec voor eerste alien
+      s.weaponLastShot = 0;          // direct mogen schieten
+    }
+  }
+
+  // Wapen actief? → auto-fire elke ~600ms. Alien-spawning: 3 stuks
+  // verdeeld over de 20 sec. Wordt aangeroepen vanuit de game-loop.
+  function tickWeapon(s, multBoost) {
+    const now = performance.now();
+    if (now >= s.weaponUntil) return;
+    // Auto-fire
+    if (now - s.weaponLastShot > 600) {
+      spawnLaser(s);
+      playSound("shoot");
+      s.weaponLastShot = now;
+    }
+    // Aliens budget = 3 over 20 sec. Plant ze ongeveer elke 5-7 sec.
+    if (s.weaponSpawnedAliens < 3 && now - s.weaponLastSpawn > 5000 + Math.random() * 1500) {
+      spawnAlien(s);
+      s.weaponSpawnedAliens += 1;
+      s.weaponLastSpawn = now;
+    }
+  }
+
+  // Speler heeft alien geraakt met laser → punten + particles + sfx.
+  function handleAlienHit(s, alien, multBoost) {
+    s.score += pointsFor("powerup", s.combo) * (multBoost ? 2 : 1); // ~200 base
+    emitParticles(s, "obliterate", alien.x + alien.w / 2, alien.y + alien.h / 2);
+    playSound("boom");
+  }
+
+  // Speler raakt warp-portal → 1-3 levels omhoog (cap 10).
+  function handleWarp(s, w) {
+    const jump = 1 + Math.floor(s.rng() * 3); // 1, 2 of 3
+    const newLevel = Math.min(10, s.level + jump);
+    const actualJump = newLevel - s.level;
+    if (actualJump <= 0) return;
+    s.level = newLevel;
+    s.theme = themeForLevel(newLevel);
+    // Ook score-boost zodat voortgang voelbaar is
+    s.score += 250 * actualJump;
+    s.shake = Math.min(20, 6 + actualJump * 4);
+    playSound("warp");
+    // Per gewarpt level een level-up flash
+    for (let i = 0; i < actualJump; i++) {
+      setTimeout(() => playSound("level_up"), 120 * i);
+    }
+    emitParticles(s, "level_up", w.x + w.w / 2, w.y + w.h / 2);
   }
 
   function checkTierFlash(prevMult, newCombo) {
@@ -384,6 +483,10 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     s.shieldActive = false;
     s.obstacles = [];
     s.powerups = [];
+    s.aliens = [];
+    s.lasers = [];
+    s.warps = [];
+    s.weaponUntil = 0;
     s.player = makePlayer();
     setSecondChancesUsed((n) => n + 1);
     setHud((h) => ({ ...h, lives: extraLives, combo: 0, mult: 1 }));
@@ -533,10 +636,17 @@ function createGameState(opts = {}) {
     powerups: [],
     stars: [],
     particles: [],
+    aliens: [],            // 🛸 vijanden tijdens weapon-modus
+    lasers: [],            // ⚡ auto-fire projectielen
+    warps: [],             // 🌀 portals naar hogere levels
     shake: 0,
     shieldActive: false,
     slowmoUntil: 0,
     multiplierBoostUntil: 0,
+    weaponUntil: 0,        // wapen-modus actief tot deze ms
+    weaponSpawnedAliens: 0,// max 3 aliens per weapon-burst
+    weaponLastSpawn: 0,    // ms van laatste alien-spawn
+    weaponLastShot: 0,     // ms van laatste auto-fire
     rng,
     isDaily,
     dailyDate,
@@ -557,13 +667,54 @@ function spawnObstacle(s) {
 }
 
 function spawnPowerup(s) {
-  const kinds = ["shield", "slowmo", "multiplier"];
+  // 4 power-ups in rotation; weapon ~25% kans (gelijk verdeeld).
+  const kinds = ["shield", "slowmo", "multiplier", "weapon"];
   s.powerups.push({
     x: CANVAS_W + 20,
     y: PHYSICS.groundY - 90,
     kind: kinds[Math.floor(s.rng() * kinds.length)],
     w: 26,
     h: 26,
+    dead: false,
+  });
+}
+
+// 🛸 Alien — vliegt hoog, langzamer dan obstakels. Geactiveerd alleen
+// tijdens weapon-modus. Mark wil "3 aliens per 20 sec wapen".
+function spawnAlien(s) {
+  // Hoogte tussen y=60 en y=160 (ruim boven jump-bereik).
+  s.aliens.push({
+    x: CANVAS_W + 30,
+    y: 60 + s.rng() * 100,
+    w: 28,
+    h: 24,
+    dy: (s.rng() - 0.5) * 0.6, // lichte verticale drift
+    phase: s.rng() * Math.PI * 2,
+    dead: false,
+    hp: 1,
+  });
+}
+
+// ⚡ Laser — projectiel vanuit speler horizontaal naar rechts.
+function spawnLaser(s) {
+  s.lasers.push({
+    x: PHYSICS.playerX + 30,
+    y: s.player.y + 10,
+    w: 14,
+    h: 4,
+    dead: false,
+  });
+}
+
+// 🌀 Warp tunnel — portal-cirkel die over de baan beweegt. Bij contact:
+// 1-3 levels omhoog. Niet voor level 8+ (cap is 10, weinig zin).
+function spawnWarp(s) {
+  s.warps.push({
+    x: CANVAS_W + 40,
+    y: PHYSICS.groundY - 80, // op springbare hoogte
+    w: 50,
+    h: 60,
+    rot: 0,
     dead: false,
   });
 }
@@ -646,7 +797,12 @@ function render(canvas, s, hintObstacle) {
 
   // Power-ups
   for (const p of s.powerups) {
-    const colors = { shield: "#42a5f5", slowmo: "#ab47bc", multiplier: "#ffd54f" };
+    const colors = {
+      shield: "#42a5f5",
+      slowmo: "#ab47bc",
+      multiplier: "#ffd54f",
+      weapon: "#ff5252",
+    };
     ctx.fillStyle = colors[p.kind] || s.theme.accent;
     ctx.shadowBlur = 14;
     ctx.shadowColor = colors[p.kind] || s.theme.accent;
@@ -657,8 +813,56 @@ function render(canvas, s, hintObstacle) {
     ctx.fillStyle = "#fff";
     ctx.font = "bold 14px sans-serif";
     ctx.textAlign = "center";
-    const icons = { shield: "🛡", slowmo: "⏱", multiplier: "×" };
+    const icons = { shield: "🛡", slowmo: "⏱", multiplier: "×", weapon: "⚡" };
     ctx.fillText(icons[p.kind] || "?", p.x + p.w / 2, p.y + p.h / 2 + 5);
+  }
+
+  // 🌀 Warp-tunnels — concentric draaiende ringen, blauw/cyaan.
+  for (const w of s.warps) {
+    const cx = w.x + w.w / 2;
+    const cy = w.y + w.h / 2;
+    const rings = 4;
+    for (let r = 0; r < rings; r++) {
+      const radius = (w.w / 2) * (1 - r * 0.18);
+      const hue = 180 + r * 12;
+      ctx.strokeStyle = `hsla(${hue}, 90%, 60%, ${0.85 - r * 0.15})`;
+      ctx.lineWidth = 3;
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = `hsl(${hue}, 90%, 60%)`;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, w.rot + r * 0.4, w.rot + r * 0.4 + Math.PI * 1.6);
+      ctx.stroke();
+    }
+    ctx.shadowBlur = 0;
+  }
+
+  // 🛸 Aliens
+  for (const a of s.aliens) {
+    if (a.dead) continue;
+    const cx = a.x + a.w / 2;
+    const cy = a.y + a.h / 2;
+    // Body (UFO-disc)
+    ctx.fillStyle = "#ff8a80";
+    ctx.shadowBlur = 12;
+    ctx.shadowColor = "#ff5252";
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, a.w / 2, a.h / 2.5, 0, 0, Math.PI * 2);
+    ctx.fill();
+    // Cockpit
+    ctx.fillStyle = "#ffeb3b";
+    ctx.beginPath();
+    ctx.ellipse(cx, cy - 5, a.w / 4, a.h / 4, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  // ⚡ Lasers
+  for (const l of s.lasers) {
+    ctx.fillStyle = "#ffeb3b";
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = "#ff5252";
+    ctx.fillRect(l.x, l.y, l.w, l.h);
+    ctx.shadowBlur = 0;
   }
 
   // Obstakels
@@ -747,7 +951,7 @@ function render(canvas, s, hintObstacle) {
 
 // ═══════════════════════ UI ═══════════════════════
 
-function HUD({ score, combo, level, lives, mult, slowmoActive, multBoostActive, shieldActive, highScore, muted, onPause, onMute }) {
+function HUD({ score, combo, level, lives, mult, slowmoActive, multBoostActive, shieldActive, weaponActive, weaponSecondsLeft, highScore, muted, onPause, onMute }) {
   return (
     <div
       style={{
@@ -791,6 +995,7 @@ function HUD({ score, combo, level, lives, mult, slowmoActive, multBoostActive, 
           {shieldActive && <PuIcon emoji="🛡" />}
           {slowmoActive && <PuIcon emoji="⏱" />}
           {multBoostActive && <PuIcon emoji="✨" />}
+          {weaponActive && <PuIcon emoji={`⚡${weaponSecondsLeft}s`} />}
         </div>
       </div>
       <div style={{ display: "flex", gap: 4, alignItems: "center", pointerEvents: "auto" }}>
