@@ -19,7 +19,13 @@ import { ACHIEVEMENTS, TOTAL_ACHIEVEMENTS } from "./data/achievementsData.js";
 import { themeForLevel } from "./data/themes.js";
 import { playSound, unlockAudio, setMuted, isMuted } from "./audio.js";
 import { makeRng, dailySeed, todayUtcString } from "./seed.js";
+import SecondChance from "./SecondChance.jsx";
 import supabase from "../../supabase.js";
+
+// Max keer dat een speler een tweede-kans-quiz mag doen per run.
+// Voorkomt oneindig spelen via vragen, maar geeft genoeg ademruimte
+// (eerste 2 voelen "gratis", 3e is laatste kans).
+const MAX_SECOND_CHANCES = 3;
 
 const CANVAS_W = 360;
 const CANVAS_H = 540;
@@ -54,9 +60,15 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   const [showAchievements, setShowAchievements] = useState(false);
   // Tellen we direct hoeveel er unlocked zijn — herrekenen na elke unlock
   const [unlockedCount, setUnlockedCount] = useState(unlockedRef.current.size);
+  // Tweede-kans-feature: hoe vaak deze run al gebruikt.
+  // Ref-versie zodat de game-loop (createt 1x in useEffect[]) altijd de
+  // verse waarde leest — anders stale-closure die altijd 0 ziet.
+  const [secondChancesUsed, setSecondChancesUsed] = useState(0);
+  const secondChancesUsedRef = useRef(0);
 
   // Sync phase met ref voor de game loop
   useEffect(() => { phaseRef.current = phase; }, [phase]);
+  useEffect(() => { secondChancesUsedRef.current = secondChancesUsed; }, [secondChancesUsed]);
 
   // Init state on mount
   useEffect(() => {
@@ -140,7 +152,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         if (result === "hit") {
           handleHit(s, o);
           if (s.lives <= 0) {
-            triggerGameOver(s);
+            handleDeath(s);
             return;
           }
           o.scored = true;
@@ -253,6 +265,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       dailyDate: daily ? todayUtcString() : null,
     });
     setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+    setSecondChancesUsed(0);
     setPhase("countdown");
     setCountdown(3);
     playSound("countdown");
@@ -343,6 +356,46 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     }
   }
 
+  // Wordt aangeroepen als s.lives === 0. Beslist of we de tweede-kans-modal
+  // tonen of meteen game-over draaien. Leest uit ref omdat de game-loop in
+  // useEffect[] een stale closure heeft op state.
+  function handleDeath(s) {
+    if (secondChancesUsedRef.current < MAX_SECOND_CHANCES) {
+      // Bevries: zet phase op "second-chance". Loop pauseert vanzelf
+      // omdat phaseRef.current !== "playing".
+      playSound("hit");
+      setPhase("second-chance");
+      return;
+    }
+    triggerGameOver(s);
+  }
+
+  // Speler heeft X vragen goed beantwoord → krijgt X levens en gaat door.
+  // Score blijft staan, combo reset, obstakels gewist (1 sec respijt).
+  function handleSecondChanceContinue(extraLives) {
+    const s = stateRef.current;
+    if (!s || extraLives < 1) {
+      // Geen levens verdiend → gewone game-over
+      if (s) triggerGameOver(s);
+      return;
+    }
+    s.lives = extraLives;
+    s.combo = 0;
+    s.shieldActive = false;
+    s.obstacles = [];
+    s.powerups = [];
+    s.player = makePlayer();
+    setSecondChancesUsed((n) => n + 1);
+    setHud((h) => ({ ...h, lives: extraLives, combo: 0, mult: 1 }));
+    setPhase("playing");
+  }
+
+  // Speler kiest "stoppen" in tweede-kans-modal → reguliere game-over.
+  function handleSecondChanceGiveUp() {
+    const s = stateRef.current;
+    if (s) triggerGameOver(s);
+  }
+
   function triggerGameOver(s) {
     const finalScore = Math.floor(s.score);
     playSound("game_over");
@@ -425,6 +478,15 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       {phase === "countdown" && <CountdownOverlay n={countdown} />}
       {phase === "paused" && (
         <PauseMenu onResume={() => setPhase("playing")} onQuit={onClose} />
+      )}
+      {phase === "second-chance" && (
+        <SecondChance
+          playerName={playerName}
+          chancesUsed={secondChancesUsed}
+          maxChances={MAX_SECOND_CHANCES}
+          onContinue={handleSecondChanceContinue}
+          onGiveUp={handleSecondChanceGiveUp}
+        />
       )}
       {phase === "gameover" && (
         <GameOverScreen
