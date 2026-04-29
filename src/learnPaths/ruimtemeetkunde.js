@@ -312,8 +312,8 @@ const steps = [
 <line x1="80" y1="60" x2="100" y2="40" stroke="${COLORS.curve}" stroke-width="0.7"/>
 </g>
 <text x="170" y="70" fill="${COLORS.text}" font-size="11" font-family="Arial">4 lang</text>
-<text x="170" y="90" fill="${COLORS.text}" font-size="11" font-family="Arial">2 breed</text>
-<text x="170" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">1 hoog</text>
+<text x="170" y="90" fill="${COLORS.text}" font-size="11" font-family="Arial">1 breed</text>
+<text x="170" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">2 hoog</text>
 <text x="170" y="135" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">= 8 blokjes</text>
 <text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">inhoud = aantal blokjes dat erin past</text>
 </svg>`,
