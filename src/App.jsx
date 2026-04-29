@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import supabase from "./supabase.js";
 import styles from "./styles.js";
+import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
 
@@ -192,6 +194,37 @@ export default function App() {
     return "home";
   })();
   const [page, setPage] = useState(initialPage);
+  // Router-mirror (P1.2): bestaande `page`-state blijft werken, maar URL
+  // volgt mee. Hierdoor werken deep links, browser-back en shareable URLs
+  // direct, zónder dat we eerst alle pagina's als <Route> hoeven te splitsen.
+  // Stap 2 (volgende migratie): per feature `<Route>`s toevoegen en `page`
+  // stapsgewijs vervangen.
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isFirstRouterRender = useRef(true);
+  // page → URL
+  useEffect(() => {
+    if (isFirstRouterRender.current) {
+      isFirstRouterRender.current = false;
+      // Eerste render: URL is bron van waarheid (deep link wint)
+      const fromUrl = pageForPath(location.pathname);
+      if (fromUrl !== page) setPage(fromUrl);
+      return;
+    }
+    const expected = pathForPage(page);
+    if (expected && expected !== location.pathname) {
+      navigate(expected);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
+  // browser back/forward: URL → page
+  useEffect(() => {
+    if (isFirstRouterRender.current) return;
+    const newPage = pageForPath(location.pathname);
+    if (newPage !== page) setPage(newPage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]);
+
   const [activeLearnPathId, setActiveLearnPathId] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
