@@ -15,8 +15,8 @@ import { subjectMeta } from "../../shared/subjects.js";
  *
  * Klik → onPickPath(pathId) — App.jsx routeert naar leerpad-stap.
  *
- * Doel: één duidelijk volgende-stap-beslissing in plaats van het huidige
- * versplinterde knoppen-veld op de homepage.
+ * Design-system v1: gebruikt brand-tokens. Refresher-CTA krijgt warning-tone
+ * (oranje warning, niet game-energy — dit blijft een leer-component).
  */
 export default function MasteryCTABanner({ userName, onPickPath, onStartFirst }) {
   const player = (userName || "").trim();
@@ -41,14 +41,10 @@ export default function MasteryCTABanner({ userName, onPickPath, onStartFirst })
     };
   }, [player]);
 
-  // Niet renderen voor: geen naam, of nog laden, of geen aanbeveling EN geen records
   if (!player) return null;
-  if (records === null) return null; // wachten op laden
+  if (records === null) return null;
   if (!recommended && records.length === 0) {
-    // Eerste keer — kleine nudge ipv niets
-    return (
-      <FirstTimeNudge userName={player} onStart={onStartFirst} />
-    );
+    return <FirstTimeNudge userName={player} onStart={onStartFirst} />;
   }
   if (!recommended) return null; // alles op goud — geen CTA
 
@@ -57,26 +53,37 @@ export default function MasteryCTABanner({ userName, onPickPath, onStartFirst })
 
 function FirstTimeNudge({ userName, onStart }) {
   return (
-    <div
+    <button
+      type="button"
+      onClick={onStart}
       style={{
         width: "100%",
         maxWidth: 360,
         marginBottom: "var(--space-4)",
         padding: "var(--space-4)",
         borderRadius: "var(--radius-lg)",
-        background: "rgba(0, 200, 83, 0.10)",
-        border: "1px solid rgba(0, 200, 83, 0.35)",
+        background: "var(--color-success-soft)",
+        border: "1px solid var(--color-brand-primary)",
         color: "var(--color-text)",
         fontFamily: "var(--font-body)",
         fontSize: "var(--font-size-sm)",
         textAlign: "center",
+        cursor: onStart ? "pointer" : "default",
       }}
     >
-      <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, marginBottom: 4 }}>
+      <div
+        style={{
+          fontFamily: "var(--font-display)",
+          fontWeight: "var(--font-weight-bold)",
+          fontSize: "var(--font-size-md)",
+          color: "var(--color-text-strong)",
+          marginBottom: 4,
+        }}
+      >
         Hoi {userName} 👋
       </div>
       <div>Maak je eerste toets — je voortgang verschijnt hier.</div>
-    </div>
+    </button>
   );
 }
 
@@ -97,11 +104,12 @@ function RecommendedCard({ player, record, onPickPath }) {
     onPickPath?.(record.pathId);
   };
 
-  // Refresher (spaced-rep due) krijgt warmere kleur als visuele variatie.
-  const gradient = isRefresher
-    ? "linear-gradient(135deg, #ef6c00, #b71c1c)"
-    : "linear-gradient(135deg, var(--color-primary), var(--color-primary-dark))";
-  const borderColor = isRefresher ? "#b71c1c" : "var(--color-primary-dark)";
+  // Refresher (spaced-rep due) krijgt warning-tone als visuele variatie.
+  // Bewust niet game-energy — dit blijft een leer-CTA.
+  const background = isRefresher
+    ? "linear-gradient(135deg, var(--color-warning), #ef6c00)"
+    : "linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-primary-700))";
+  const borderColor = isRefresher ? "#ef6c00" : "var(--color-brand-primary-700)";
 
   const eyebrow = isRefresher
     ? `🔁 Tijd voor refresher, ${player}:`
@@ -112,15 +120,16 @@ function RecommendedCard({ player, record, onPickPath }) {
 
   return (
     <button
+      type="button"
       onClick={handleClick}
       style={{
         width: "100%",
         maxWidth: 360,
         marginBottom: "var(--space-4)",
         padding: "var(--space-4)",
-        borderRadius: "var(--radius-xl)",
+        borderRadius: "var(--radius-lg)",
         border: `1px solid ${borderColor}`,
-        background: gradient,
+        background,
         color: "var(--color-text-strong)",
         cursor: "pointer",
         textAlign: "left",
@@ -129,7 +138,7 @@ function RecommendedCard({ player, record, onPickPath }) {
         gap: "var(--space-3)",
         boxShadow: "var(--shadow-md)",
         fontFamily: "var(--font-body)",
-        transition: "transform 0.15s ease",
+        transition: "transform var(--motion-fast) var(--ease-out)",
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = "translateY(-2px)";
@@ -138,7 +147,7 @@ function RecommendedCard({ player, record, onPickPath }) {
         e.currentTarget.style.transform = "translateY(0)";
       }}
     >
-      <span style={{ fontSize: 36 }}>{path.emoji || subj.emoji}</span>
+      <span style={{ fontSize: 36 }} aria-hidden="true">{path.emoji || subj.emoji}</span>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div
           style={{
@@ -153,8 +162,8 @@ function RecommendedCard({ player, record, onPickPath }) {
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "var(--font-size-lg)",
-            fontWeight: 700,
-            lineHeight: 1.15,
+            fontWeight: "var(--font-weight-bold)",
+            lineHeight: "var(--line-height-tight)",
           }}
         >
           {path.title}
@@ -169,7 +178,7 @@ function RecommendedCard({ player, record, onPickPath }) {
           {subText}
         </div>
       </div>
-      <span style={{ fontSize: 22, opacity: 0.85 }}>›</span>
+      <span style={{ fontSize: 22, opacity: 0.85 }} aria-hidden="true">›</span>
     </button>
   );
 }

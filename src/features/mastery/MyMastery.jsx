@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
+import Card from "../../shared/ui/Card.jsx";
+import Badge from "../../shared/ui/Badge.jsx";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "./mastery.js";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 
@@ -12,7 +14,17 @@ import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
  *   2. Ouder-zicht (P1.10 deel 2b): als `viewedPlayer` is doorgegeven,
  *      toont het de mastery van die naam met een 'ouder-modus'-banner.
  *      Onderwerpen zijn niet klikbaar — read-only voor de ouder.
+ *
+ * Design-system v1: Card + Badge components, brand-tokens voor kleur.
  */
+
+const LEVEL_TONE = {
+  gold: "gold",
+  silver: "silver",
+  bronze: "bronze",
+  unmeasured: "unmeasured",
+};
+
 export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, onHome }) {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,7 +41,6 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
     return () => { cancelled = true; };
   }, [player]);
 
-  // Groepeer per vak
   const grouped = {};
   records.forEach((r) => {
     const subj = r.path?.subject || "anders";
@@ -53,97 +64,119 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
       />
       <div style={styles.content}>
         {isParentView && (
-          <div
+          <Card
+            variant="ghost"
+            padding="sm"
             style={{
-              padding: "10px 14px",
-              borderRadius: 12,
-              background: "rgba(0, 212, 255, 0.10)",
-              border: "1px solid rgba(0, 212, 255, 0.40)",
-              color: "#80deea",
-              fontFamily: "var(--font-body, 'Nunito')",
-              fontSize: 13,
-              marginBottom: 14,
+              background: "var(--color-info-soft)",
+              borderColor: "var(--color-info)",
+              color: "var(--color-info)",
+              fontSize: "var(--font-size-sm)",
+              marginBottom: "var(--space-4)",
               textAlign: "center",
             }}
           >
             👀 <strong>Ouder-zicht</strong> — alleen lezen, je kunt zelf geen oefening starten.
-          </div>
+          </Card>
         )}
+
         {!player && (
-          <div style={info()}>
+          <InfoCard>
             {isParentView
               ? "Geen leerling-naam in URL. Geef bv. ?leerling=Sara mee."
               : "Vul eerst je naam in (op de startpagina) om je voortgang bij te houden."}
-          </div>
+          </InfoCard>
         )}
 
         {player && loading && (
-          <div style={info()}>Voortgang laden…</div>
+          <InfoCard>Voortgang laden…</InfoCard>
         )}
 
         {player && !loading && records.length === 0 && (
-          <div style={info()}>
+          <InfoCard>
             Nog geen voortgang. Maak eerst een paar toetsvragen — daarna verschijnt
             hier per onderwerp je niveau (🥉 brons → 🥈 zilver → 🥇 goud).
-          </div>
+          </InfoCard>
         )}
 
         {player && !loading && records.length > 0 && (
           <>
             {/* Totalen */}
-            <div style={{
-              display: "flex", gap: 8, marginBottom: 18,
-              padding: "12px 14px",
-              borderRadius: 14,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.10)",
-            }}>
+            <Card
+              variant="ghost"
+              style={{
+                display: "flex",
+                gap: "var(--space-2)",
+                marginBottom: "var(--space-5)",
+              }}
+            >
               {["gold", "silver", "bronze", "unmeasured"].map((lvl) => {
                 const meta = MASTERY_LABELS[lvl];
                 const n = totals[lvl] || 0;
                 return (
                   <div key={lvl} style={{ flex: 1, textAlign: "center" }}>
-                    <div style={{ fontSize: 22 }}>{meta.emoji}</div>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: meta.color, fontFamily: "Fredoka" }}>{n}</div>
-                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{meta.label}</div>
+                    <div style={{ fontSize: 22 }} aria-hidden="true">{meta.emoji}</div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontSize: "var(--font-size-md)",
+                        fontWeight: "var(--font-weight-bold)",
+                        color: meta.color,
+                      }}
+                    >
+                      {n}
+                    </div>
+                    <div
+                      style={{
+                        fontSize: "var(--font-size-xs)",
+                        color: "var(--color-text-subtle)",
+                      }}
+                    >
+                      {meta.label}
+                    </div>
                   </div>
                 );
               })}
-            </div>
+            </Card>
 
             {/* Aanbeveling */}
             {recommended && onPickPath && !isParentView && (
               <button
+                type="button"
                 onClick={() => onPickPath(recommended.pathId)}
                 style={{
                   width: "100%",
-                  padding: "14px 16px",
-                  marginBottom: 18,
-                  borderRadius: 14,
-                  border: "none",
+                  padding: "var(--space-4)",
+                  marginBottom: "var(--space-5)",
+                  borderRadius: "var(--radius-md)",
+                  border: "1px solid var(--color-brand-primary-700)",
                   cursor: "pointer",
-                  background: "linear-gradient(135deg, #00c853, #00a040)",
-                  color: "#fff",
-                  fontFamily: "Fredoka",
-                  fontSize: 14,
-                  fontWeight: 700,
+                  background:
+                    "linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-primary-700))",
+                  color: "var(--color-text-strong)",
+                  fontFamily: "var(--font-display)",
+                  fontSize: "var(--font-size-md)",
+                  fontWeight: "var(--font-weight-bold)",
                   textAlign: "left",
                   display: "flex",
                   alignItems: "center",
-                  gap: 12,
-                  boxShadow: "0 4px 16px rgba(0,200,83,0.30)",
+                  gap: "var(--space-3)",
+                  boxShadow: "var(--shadow-md)",
+                  transition: "transform var(--motion-fast) var(--ease-out)",
                 }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; }}
               >
-                <span style={{ fontSize: 28 }}>{recommended.path.emoji || "📚"}</span>
+                <span style={{ fontSize: 28 }} aria-hidden="true">{recommended.path.emoji || "📚"}</span>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 11, opacity: 0.85 }}>Voortbouwen op:</div>
-                  <div style={{ fontSize: 16 }}>{recommended.path.title}</div>
-                  <div style={{ fontSize: 11, opacity: 0.9, marginTop: 2 }}>
+                  <div style={{ fontSize: "var(--font-size-xs)", opacity: 0.85 }}>Voortbouwen op:</div>
+                  <div style={{ fontSize: "var(--font-size-lg)" }}>{recommended.path.title}</div>
+                  <div style={{ fontSize: "var(--font-size-xs)", opacity: 0.9, marginTop: 2 }}>
                     {MASTERY_LABELS[recommended.level].emoji} {MASTERY_LABELS[recommended.level].label} —
                     {recommended.attempts > 0 ? ` ${recommended.correct}/${recommended.attempts} (${Math.round(recommended.correct / recommended.attempts * 100)}%)` : ""}
                   </div>
                 </div>
-                <span style={{ fontSize: 18 }}>›</span>
+                <span style={{ fontSize: 18 }} aria-hidden="true">›</span>
               </button>
             )}
 
@@ -151,51 +184,95 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
             {Object.entries(grouped).map(([subj, list]) => {
               const meta = SUBJECT_LABELS[subj] || { title: subj, emoji: "📘" };
               return (
-                <div key={subj} style={{ marginBottom: 18 }}>
-                  <div style={{
-                    display: "flex", alignItems: "center", gap: 8,
-                    padding: "8px 4px 10px",
-                    fontFamily: "Fredoka", fontSize: 16, fontWeight: 700, color: "#e0e6f0",
-                  }}>
-                    <span style={{ fontSize: 20 }}>{meta.emoji}</span>
+                <div key={subj} style={{ marginBottom: "var(--space-5)" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "var(--space-2)",
+                      padding: "var(--space-2) var(--space-1) var(--space-3)",
+                      fontFamily: "var(--font-display)",
+                      fontSize: "var(--font-size-lg)",
+                      fontWeight: "var(--font-weight-bold)",
+                      color: "var(--color-text)",
+                    }}
+                  >
+                    <span style={{ fontSize: 20 }} aria-hidden="true">{meta.emoji}</span>
                     <span>{meta.title}</span>
-                    <span style={{ color: "#8899aa", fontSize: 12, fontWeight: 500 }}>
+                    <span
+                      style={{
+                        color: "var(--color-text-muted)",
+                        fontSize: "var(--font-size-sm)",
+                        fontWeight: "var(--font-weight-medium)",
+                      }}
+                    >
                       · {list.length} {list.length === 1 ? "onderwerp" : "onderwerpen"}
                     </span>
                   </div>
 
                   {list.map((r) => {
-                    const meta = MASTERY_LABELS[r.level];
+                    const lvlMeta = MASTERY_LABELS[r.level];
                     const pct = r.attempts > 0 ? Math.round((r.correct / r.attempts) * 100) : 0;
                     return (
                       <button
                         key={r.pathId}
+                        type="button"
                         onClick={() => !isParentView && onPickPath && onPickPath(r.pathId)}
                         disabled={isParentView}
                         style={{
                           width: "100%",
-                          marginBottom: 8,
-                          padding: "12px 14px",
-                          borderRadius: 12,
-                          border: `1px solid ${meta.color}40`,
-                          background: "rgba(30,45,70,0.55)",
-                          color: "#e0e6f0",
-                          fontFamily: "Nunito",
-                          cursor: "pointer",
+                          marginBottom: "var(--space-2)",
+                          padding: "var(--space-3) var(--space-4)",
+                          borderRadius: "var(--radius-md)",
+                          border: `1px solid ${lvlMeta.color}40`,
+                          background: "var(--color-bg-elevated)",
+                          color: "var(--color-text)",
+                          fontFamily: "var(--font-body)",
+                          cursor: isParentView ? "default" : "pointer",
+                          opacity: isParentView ? 0.85 : 1,
                           textAlign: "left",
                           display: "flex",
                           alignItems: "center",
-                          gap: 12,
+                          gap: "var(--space-3)",
+                          transition: "background var(--motion-fast) var(--ease-out)",
                         }}
                       >
-                        <span style={{ fontSize: 22 }}>{meta.emoji}</span>
+                        <span style={{ fontSize: 22 }} aria-hidden="true">{lvlMeta.emoji}</span>
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontSize: 14, fontWeight: 700 }}>{r.path.title}</div>
-                          <div style={{ fontSize: 11, color: "#8899aa", marginTop: 2 }}>
-                            {meta.label} — {r.correct}/{r.attempts} ({pct}%)
+                          <div
+                            style={{
+                              fontSize: "var(--font-size-md)",
+                              fontWeight: "var(--font-weight-bold)",
+                              color: "var(--color-text-strong)",
+                            }}
+                          >
+                            {r.path.title}
+                          </div>
+                          <div
+                            style={{
+                              fontSize: "var(--font-size-xs)",
+                              color: "var(--color-text-muted)",
+                              marginTop: 2,
+                              display: "flex",
+                              alignItems: "center",
+                              gap: "var(--space-2)",
+                            }}
+                          >
+                            <Badge tone={LEVEL_TONE[r.level] || "neutral"} size="sm">
+                              {lvlMeta.label}
+                            </Badge>
+                            <span>{r.correct}/{r.attempts} ({pct}%)</span>
                           </div>
                         </div>
-                        <span style={{ color: "#8899aa", fontSize: 16 }}>›</span>
+                        <span
+                          style={{
+                            color: "var(--color-text-muted)",
+                            fontSize: "var(--font-size-lg)",
+                          }}
+                          aria-hidden="true"
+                        >
+                          ›
+                        </span>
                       </button>
                     );
                   })}
@@ -209,14 +286,17 @@ export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, 
   );
 }
 
-function info() {
-  return {
-    padding: "16px 18px",
-    borderRadius: 14,
-    background: "rgba(255,255,255,0.04)",
-    border: "1px solid rgba(255,255,255,0.10)",
-    fontSize: 13,
-    color: "rgba(255,255,255,0.78)",
-    lineHeight: 1.5,
-  };
+function InfoCard({ children }) {
+  return (
+    <Card
+      variant="ghost"
+      style={{
+        fontSize: "var(--font-size-sm)",
+        color: "var(--color-text-muted)",
+        lineHeight: "var(--line-height-normal)",
+      }}
+    >
+      {children}
+    </Card>
+  );
 }
