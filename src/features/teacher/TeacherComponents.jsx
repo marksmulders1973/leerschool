@@ -77,8 +77,8 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                 </>
               ) : (
                 <>
-                  <span style={{ fontWeight: 700, fontSize: 16, color: "#e0e6f0", flex: 1 }}>{klas.name}</span>
-                  <span style={{ fontSize: 12, color: "#8899aa" }}>{klas.students.length} leerling{klas.students.length !== 1 ? "en" : ""}</span>
+                  <span style={{ fontWeight: 700, fontSize: 16, color: "var(--color-text)", flex: 1 }}>{klas.name}</span>
+                  <span style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{klas.students.length} leerling{klas.students.length !== 1 ? "en" : ""}</span>
                   <button style={styles.smallButtonAlt} onClick={() => { setEditingClassId(klas.id); setEditName(klas.name); }}>✏️</button>
                   <button style={{ ...styles.smallButton, background: "#c62828" }} onClick={() => deleteClass(klas.id)}>🗑️</button>
                 </>
@@ -100,8 +100,8 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
                 ) : (
                   <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontWeight: 700, fontSize: 13, color: "#e0e6f0" }}>{student.name || "—"}</div>
-                      <div style={{ fontSize: 11, color: "#8899aa" }}>{student.email || "Geen e-mail"}</div>
+                      <div style={{ fontWeight: 700, fontSize: 13, color: "var(--color-text)" }}>{student.name || "—"}</div>
+                      <div style={{ fontSize: 11, color: "var(--color-text-muted)" }}>{student.email || "Geen e-mail"}</div>
                       {student.phone && <div style={{ fontSize: 11, color: "#25D366" }}>💬 {student.phone}</div>}
                     </div>
                     {student.phone && (
@@ -209,14 +209,14 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
             return (
               <div key={q.id} style={{
                 background: isEditing ? "#0d2a45" : "#152032",
-                border: `1px solid ${isEditing ? "#00c853" : "#1e3a5a"}`,
+                border: `1px solid ${isEditing ? "var(--color-brand-primary)" : "#1e3a5a"}`,
                 borderRadius: 14,
                 padding: "14px 16px",
                 position: "relative",
               }}>
                 {/* Header rij */}
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
-                  <span style={{ fontFamily: "Fredoka", fontWeight: 700, fontSize: 14, color: "#00c853", minWidth: 32 }}>
+                  <span style={{ fontFamily: "Fredoka", fontWeight: 700, fontSize: 14, color: "var(--color-brand-primary)", minWidth: 32 }}>
                     #{idx + 1}
                   </span>
                   <div style={{ flex: 1 }} />
@@ -224,20 +224,20 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
                     onClick={() => regenQuestion(q.id)}
                     disabled={isRegen}
                     title="Nieuwe vraag genereren"
-                    style={{ background: "none", border: "1px solid #2a5080", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#8eaadb", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                    style={{ background: "none", border: "1px solid #2a5080", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#8eaadb", fontSize: 12, fontFamily: "var(--font-body)" }}
                   >
                     {isRegen ? "⏳" : "🔄 Nieuwe vraag"}
                   </button>
                   <button
                     onClick={() => setEditingId(isEditing ? null : q.id)}
-                    style={{ background: isEditing ? "#00c85320" : "none", border: `1px solid ${isEditing ? "#00c853" : "#2a5080"}`, borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: isEditing ? "#00c853" : "#8eaadb", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                    style={{ background: isEditing ? "var(--color-brand-primary)20" : "none", border: `1px solid ${isEditing ? "var(--color-brand-primary)" : "#2a5080"}`, borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: isEditing ? "var(--color-brand-primary)" : "#8eaadb", fontSize: 12, fontFamily: "var(--font-body)" }}
                   >
                     {isEditing ? "✅ Klaar" : "✏️ Bewerken"}
                   </button>
                   <button
                     onClick={() => deleteQuestion(q.id)}
                     title="Vraag verwijderen"
-                    style={{ background: "none", border: "1px solid #5a1a1a", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#ff5252", fontSize: 12, fontFamily: "'Nunito', sans-serif" }}
+                    style={{ background: "none", border: "1px solid #5a1a1a", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#ff5252", fontSize: 12, fontFamily: "var(--font-body)" }}
                   >
                     🗑️
                   </button>
@@ -251,7 +251,7 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
                     style={{ ...styles.textInput, width: "100%", minHeight: 70, resize: "vertical", fontSize: 14, marginBottom: 10, boxSizing: "border-box" }}
                   />
                 ) : (
-                  <p style={{ color: "#e0e6f0", fontSize: 15, fontWeight: 700, margin: "0 0 10px", lineHeight: 1.4 }}>{q.q}</p>
+                  <p style={{ color: "var(--color-text)", fontSize: 15, fontWeight: 700, margin: "0 0 10px", lineHeight: 1.4 }}>{q.q}</p>
                 )}
 
                 {/* Antwoordopties */}
@@ -263,13 +263,13 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
                         <button
                           onClick={() => isEditing && updateQuestion(q.id, "answer", oi)}
                           style={{
-                            width: 24, height: 24, borderRadius: "50%", border: `2px solid ${isCorrect ? "#00c853" : "#2a5080"}`,
-                            background: isCorrect ? "#00c853" : "transparent", cursor: isEditing ? "pointer" : "default",
+                            width: 24, height: 24, borderRadius: "50%", border: `2px solid ${isCorrect ? "var(--color-brand-primary)" : "#2a5080"}`,
+                            background: isCorrect ? "var(--color-brand-primary)" : "transparent", cursor: isEditing ? "pointer" : "default",
                             flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center",
                           }}
                           title={isEditing ? "Markeer als correct antwoord" : ""}
                         >
-                          {isCorrect && <span style={{ color: "#fff", fontSize: 11, fontWeight: 900 }}>✓</span>}
+                          {isCorrect && <span style={{ color: "var(--color-text-strong)", fontSize: 11, fontWeight: 900 }}>✓</span>}
                         </button>
                         {isEditing ? (
                           <input
@@ -431,7 +431,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               </span>
             )}
             {tafelMode && selectedTafel > 0 && (
-              <span style={{ fontSize: 12, background: "#0a2a1a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
+              <span style={{ fontSize: 12, background: "#0a2a1a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid var(--color-brand-primary)40" }}>
                 ✖️ {selectedTafel === "mix" ? "Alle tafels mix" : `Tafel van ${selectedTafel}`}
               </span>
             )}
@@ -441,7 +441,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               </span>
             )}
             {levelLabel && (
-              <span style={{ fontSize: 12, background: "#1e3a2a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid #00c85340" }}>
+              <span style={{ fontSize: 12, background: "#1e3a2a", color: "#00e676", padding: "4px 10px", borderRadius: 8, border: "1px solid var(--color-brand-primary)40" }}>
                 🎒 {levelLabel}
               </span>
             )}
@@ -469,10 +469,10 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               <span style={{ fontSize: 26 }}>🎯</span>
               <div style={{ flex: 1 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+                  <span style={{ color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>
                     Zelf een onderwerp kiezen
                   </span>
-                  <span style={{ background: "#7c3aed", color: "#fff", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
+                  <span style={{ background: "#7c3aed", color: "var(--color-text-strong)", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
                 </div>
                 <div style={{ color: "#8899bb", fontSize: 12, marginTop: 3 }}>
                   Elk onderwerp — ook buiten de standaard vakken
@@ -491,8 +491,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                         padding: "6px 13px", borderRadius: 20, cursor: "pointer",
                         background: topic === s ? "#7c3aed" : "#1e1a30",
                         border: `1px solid ${topic === s ? "#7c3aed" : "#3a2a5f"}`,
-                        color: topic === s ? "#fff" : "#a07fcc", fontSize: 12,
-                        fontFamily: "'Nunito', sans-serif", fontWeight: topic === s ? 700 : 400,
+                        color: topic === s ? "var(--color-text-strong)" : "#a07fcc", fontSize: 12,
+                        fontFamily: "var(--font-body)", fontWeight: topic === s ? 700 : 400,
                       }}>
                       {s}
                     </button>
@@ -516,7 +516,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     <button
                       onClick={() => { if (topic.trim().length > 2 && !previewLoading) fetchTopicPreview(); }}
                       disabled={topic.trim().length <= 2 || previewLoading}
-                      style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "#7c3aed" : "#2a1e3a", color: topic.trim().length > 2 && !previewLoading ? "#fff" : "#4a3a6a", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0 }}
+                      style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "#7c3aed" : "#2a1e3a", color: topic.trim().length > 2 && !previewLoading ? "var(--color-text-strong)" : "#4a3a6a", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0 }}
                     >
                       {previewLoading ? "⏳" : "🔍 Zoeken →"}
                     </button>
@@ -546,11 +546,11 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                                 setTopicForAI(enriched);
                                 setPreviewConfirmed(true);
                               }}
-                              style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#7c3aed", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                              style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#7c3aed", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
                             >
                               ✅ Ja, hierover!
                             </button>
-                            <button onClick={() => { setTopicPreview(null); setTopic(""); setTopicForAI(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+                            <button onClick={() => { setTopicPreview(null); setTopic(""); setTopicForAI(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
                               ❌ Nee, aanpassen
                             </button>
                           </div>
@@ -580,7 +580,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                             setPreviewConfirmed(true);
                           }}
                           disabled={!extraContext.trim()}
-                          style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#7c3aed" : "#334", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
+                          style={{ width: "100%", padding: "8px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#7c3aed" : "#334", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
                         >
                           ✅ Doorgaan met deze omschrijving
                         </button>
@@ -591,7 +591,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
                 {previewConfirmed && (
                   <div style={{ marginTop: 8, fontSize: 12, color: "#c07fff", fontWeight: 700 }}>
-                    ✅ Bevestigd! Vragen worden gemaakt over: <em style={{ color: "#fff" }}>{topicPreview?.title || topic.trim().split(/[:—\n]/)[0].trim()}</em>
+                    ✅ Bevestigd! Vragen worden gemaakt over: <em style={{ color: "var(--color-text-strong)" }}>{topicPreview?.title || topic.trim().split(/[:—\n]/)[0].trim()}</em>
                   </div>
                 )}
               </div>
@@ -603,14 +603,14 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               style={{
                 width: "100%", marginBottom: 12, padding: "14px 18px",
                 background: tafelMode ? "linear-gradient(135deg, #0a2a1a, #1a3a2a)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
-                border: `2px solid ${tafelMode ? "#00c853" : "#3a5f8a"}`,
+                border: `2px solid ${tafelMode ? "var(--color-brand-primary)" : "#3a5f8a"}`,
                 borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
-                boxShadow: tafelMode ? "0 0 0 3px #00c85330" : "0 2px 12px rgba(0,0,0,0.2)",
+                boxShadow: tafelMode ? "0 0 0 3px var(--color-brand-primary)30" : "0 2px 12px rgba(0,0,0,0.2)",
               }}
             >
               <span style={{ fontSize: 26 }}>✖️</span>
               <div style={{ flex: 1 }}>
-                <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+                <span style={{ color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>
                   Tafels oefenen
                 </span>
                 <div style={{ color: "#8899bb", fontSize: 12, marginTop: 3 }}>
@@ -621,16 +621,16 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             </button>
 
             {tafelMode && (
-              <div style={{ marginBottom: 14, padding: 16, background: "#0a2a1a", borderRadius: 14, border: "2px solid #00c853" }}>
+              <div style={{ marginBottom: 14, padding: 16, background: "#0a2a1a", borderRadius: 14, border: "2px solid var(--color-brand-primary)" }}>
                 <label style={{ ...styles.settingLabel, marginBottom: 8 }}>Welke tafel?</label>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {Array.from({ length: 12 }, (_, i) => i + 1).map(n => (
                     <button key={n} onClick={() => setSelectedTafel(n)} style={{
                       width: 44, height: 44, borderRadius: 10, cursor: "pointer",
-                      border: selectedTafel === n ? "2px solid #00c853" : "1px solid rgba(255,255,255,0.15)",
+                      border: selectedTafel === n ? "2px solid var(--color-brand-primary)" : "1px solid rgba(255,255,255,0.15)",
                       background: selectedTafel === n ? "rgba(0,200,83,0.15)" : "rgba(255,255,255,0.05)",
-                      color: selectedTafel === n ? "#00c853" : "rgba(255,255,255,0.6)",
-                      fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
+                      color: selectedTafel === n ? "var(--color-brand-primary)" : "rgba(255,255,255,0.6)",
+                      fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700,
                     }}>{n}</button>
                   ))}
                   <button onClick={() => setSelectedTafel("mix")} style={{
@@ -638,7 +638,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     border: selectedTafel === "mix" ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
                     background: selectedTafel === "mix" ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
                     color: selectedTafel === "mix" ? "#ff6b35" : "rgba(255,255,255,0.6)",
-                    fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                    fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
                   }}>Mix 🔀</button>
                 </div>
                 {selectedTafel > 0 && (
@@ -663,14 +663,14 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                   style={{
                     ...styles.subjectCard,
                     borderColor: subject === s.id ? s.color : "transparent",
-                    background: subject === s.id ? `${s.color}15` : eigenMode ? "#111820" : "#fff",
+                    background: subject === s.id ? `${s.color}15` : eigenMode ? "#111820" : "var(--color-text-strong)",
                     boxShadow: subject === s.id ? `0 0 0 3px ${s.color}40` : "0 2px 8px rgba(0,0,0,0.06)",
                     opacity: eigenMode ? 0.45 : 1,
                   }}
                   onClick={() => { setSubject(s.id); setEigenMode(false); setTopic(""); }}
                 >
                   <span style={{ fontSize: 32 }}>{s.icon}</span>
-                  <span style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>{s.label}</span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text)" }}>{s.label}</span>
                 </button>
               ))}
             </div>}
@@ -706,7 +706,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </select>
               </div>
               <div style={{ flex: 1 }}>
-                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs<br /><span style={{ fontSize: 11, fontWeight: 400, color: "#8899aa" }}>VMBO-TL, HAVO, VWO, Gymnasium</span></label>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>🎓 Voortgezet onderwijs<br /><span style={{ fontSize: 11, fontWeight: 400, color: "var(--color-text-muted)" }}>VMBO-TL, HAVO, VWO, Gymnasium</span></label>
                 <select
                   style={{ ...styles.textInput, fontSize: 14, cursor: "pointer" }}
                   value={klasSelect}
@@ -747,7 +747,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                         border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
                         background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
                         color: sel ? color : "rgba(255,255,255,0.6)",
-                        fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                        fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
                       }}>{label}</button>
                     );
                   })}
@@ -765,7 +765,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                     border: level === "nvt" ? "2px solid #8899aa" : "1px solid rgba(255,255,255,0.1)",
                     background: level === "nvt" ? "rgba(136,153,170,0.15)" : "rgba(255,255,255,0.03)",
                     color: level === "nvt" ? "#c0cfe0" : "#667788",
-                    fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                    fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
                   }}>
                   {level === "nvt" ? "✅ Geen niveau (niet van toepassing)" : "— Geen niveau / niet van toepassing —"}
                 </button>
@@ -773,8 +773,8 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             )}
 
             {(level && level !== "") && (
-              <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, marginTop: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid #00c85340" }}>
-                ✅ Niveau gekozen: <span style={{ color: "#fff" }}>{levelLabel}</span>
+              <div style={{ fontSize: 13, color: "#00e676", fontWeight: 700, marginBottom: 12, marginTop: 12, padding: "8px 12px", background: "#0a2a18", borderRadius: 10, border: "1px solid var(--color-brand-primary)40" }}>
+                ✅ Niveau gekozen: <span style={{ color: "var(--color-text-strong)" }}>{levelLabel}</span>
               </div>
             )}
           </div>
@@ -783,7 +783,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
         {step === 3 && (
           <div style={styles.stepContent}>
             <h3 style={styles.stepTitle}>Kies een onderwerp</h3>
-            <p style={{ fontSize: 13, color: "#8899aa", marginBottom: 14, marginTop: -4 }}>
+            <p style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14, marginTop: -4 }}>
               De AI maakt gerichte vragen over dit onderwerp. Je kunt ook overslaan voor algemene vragen.
             </p>
             {suggestions.length > 0 && (
@@ -798,9 +798,9 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                         padding: "7px 14px", borderRadius: 20, cursor: "pointer",
                         background: topic === s ? "#7c3aed" : "#1e2d45",
                         border: `1px solid ${topic === s ? "#7c3aed" : "#2a3f5f"}`,
-                        color: topic === s ? "#fff" : "#8eaadb",
+                        color: topic === s ? "var(--color-text-strong)" : "#8eaadb",
                         fontSize: 13, fontWeight: topic === s ? 700 : 400,
-                        fontFamily: "'Nunito', sans-serif",
+                        fontFamily: "var(--font-body)",
                         transition: "all 0.15s",
                       }}
                     >
@@ -822,7 +822,7 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             </div>
             {topic ? (
               <div style={{ fontSize: 12, color: "#c07fff", fontWeight: 700, padding: "8px 12px", background: "#1e0a2e", borderRadius: 10, border: "1px solid #7c3aed40" }}>
-                ✨ AI maakt vragen over: <span style={{ color: "#fff" }}>{topic}</span>
+                ✨ AI maakt vragen over: <span style={{ color: "var(--color-text-strong)" }}>{topic}</span>
               </div>
             ) : (
               <div style={{ fontSize: 12, color: "#667788", padding: "8px 12px", background: "#1a2030", borderRadius: 10, border: "1px solid #2a3f5f" }}>
@@ -842,10 +842,10 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
               <label style={styles.settingLabel}>Deadline</label>
               <input style={styles.textInput} type="date" value={deadline} onChange={(e) => setDeadline(e.target.value)} />
 
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span></div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span></div>
               <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
                 {[5, 10, 15, 20].map(n => (
-                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700 }}>{n}</button>
+                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700 }}>{n}</button>
                 ))}
               </div>
 
@@ -858,14 +858,14 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 <button onClick={() => setResultMethod("whatsapp")} style={{
                   flex: 1, padding: "14px 10px", borderRadius: 12, border: resultMethod === "whatsapp" ? "2px solid #25D366" : "2px solid #2a3f5f",
                   background: resultMethod === "whatsapp" ? "#0a2a1a" : "#1e2d45", cursor: "pointer",
-                  fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#e0e6f0", textAlign: "center",
+                  fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 13, color: "var(--color-text)", textAlign: "center",
                 }}>
                   💬 WhatsApp
                 </button>
                 <button onClick={() => setResultMethod("email")} style={{
-                  flex: 1, padding: "14px 10px", borderRadius: 12, border: resultMethod === "email" ? "2px solid #00c853" : "2px solid #2a3f5f",
+                  flex: 1, padding: "14px 10px", borderRadius: 12, border: resultMethod === "email" ? "2px solid var(--color-brand-primary)" : "2px solid #2a3f5f",
                   background: resultMethod === "email" ? "#0a2a1a" : "#1e2d45", cursor: "pointer",
-                  fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#e0e6f0", textAlign: "center",
+                  fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 13, color: "var(--color-text)", textAlign: "center",
                 }}>
                   📧 E-mail
                 </button>
@@ -961,16 +961,16 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
         </div>
 
         {quiz?.preGeneratedQuestions?.length > 0 && (
-          <div style={{ margin: "12px 0", padding: 10, background: "#0a2a1a", borderRadius: 10, borderLeft: "3px solid #00c853", textAlign: "center" }}>
-            <div style={{ fontSize: 12, color: "#69f0ae" }}>✅ {quiz.preGeneratedQuestions.length} vragen klaar — iedereen krijgt dezelfde vragen!</div>
+          <div style={{ margin: "12px 0", padding: 10, background: "#0a2a1a", borderRadius: 10, borderLeft: "3px solid var(--color-brand-primary)", textAlign: "center" }}>
+            <div style={{ fontSize: 12, color: "var(--color-brand-primary-100)" }}>✅ {quiz.preGeneratedQuestions.length} vragen klaar — iedereen krijgt dezelfde vragen!</div>
           </div>
         )}
 
         <div style={styles.playersSection}>
-          <h4 style={{ fontFamily: "Fredoka", color: "#8899aa", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
+          <h4 style={{ fontFamily: "Fredoka", color: "var(--color-text-muted)", fontSize: 13, letterSpacing: 1 }}>SPELERS</h4>
           <div style={styles.playersList}>
             {players.map((p, i) => (
-              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "#00c853" : "#f0f0f0", color: i === 0 ? "#fff" : "#2d3436" }}>
+              <span key={i} style={{ ...styles.playerChip, background: i === 0 ? "var(--color-brand-primary)" : "#f0f0f0", color: i === 0 ? "var(--color-text-strong)" : "#2d3436" }}>
                 {i === 0 && "👑 "}{p} {i === players.length - 1 && players.length > 1 ? "" : ""}
               </span>
             ))}

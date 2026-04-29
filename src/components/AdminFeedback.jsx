@@ -29,13 +29,13 @@ export default function AdminFeedback({ onBack, onHome }) {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0a0e1a", padding: "20px 16px 60px", color: "#fff", fontFamily: "'Nunito', sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#0a0e1a", padding: "20px 16px 60px", color: "var(--color-text-strong)", fontFamily: "'Nunito', sans-serif" }}>
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
           <h1 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#ffcc40", margin: 0 }}>💡 Tips & Feedback</h1>
           <div style={{ display: "flex", gap: 8 }}>
-            <button onClick={onBack} style={{ padding: "8px 12px", background: "rgba(255,255,255,0.08)", color: "#fff", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, cursor: "pointer", fontSize: 13 }}>← Terug</button>
-            <button onClick={onHome} style={{ padding: "8px 12px", background: "rgba(255,255,255,0.08)", color: "#fff", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, cursor: "pointer", fontSize: 13 }}>🏠 Home</button>
+            <button onClick={onBack} style={{ padding: "8px 12px", background: "rgba(255,255,255,0.08)", color: "var(--color-text-strong)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, cursor: "pointer", fontSize: 13 }}>← Terug</button>
+            <button onClick={onHome} style={{ padding: "8px 12px", background: "rgba(255,255,255,0.08)", color: "var(--color-text-strong)", border: "1px solid rgba(255,255,255,0.15)", borderRadius: 8, cursor: "pointer", fontSize: 13 }}>🏠 Home</button>
           </div>
         </div>
 
@@ -73,7 +73,7 @@ export default function AdminFeedback({ onBack, onHome }) {
                   <span><strong style={{ color: "#ffcc40" }}>{item.player_name || "anoniem"}</strong> · {fmtDatum(item.created_at)}</span>
                   <span>#{item.id}</span>
                 </div>
-                <div style={{ fontSize: 14, color: item.resolved ? "rgba(255,255,255,0.55)" : "#fff", whiteSpace: "pre-wrap", lineHeight: 1.4, marginBottom: 8 }}>
+                <div style={{ fontSize: 14, color: item.resolved ? "rgba(255,255,255,0.55)" : "var(--color-text-strong)", whiteSpace: "pre-wrap", lineHeight: 1.4, marginBottom: 8 }}>
                   {item.message}
                 </div>
                 {item.screenshot_url && (
@@ -88,7 +88,7 @@ export default function AdminFeedback({ onBack, onHome }) {
                 )}
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {!item.resolved && (
-                    <button disabled={busy[item.id]} onClick={() => update(item.id, { resolved: true })} style={{ padding: "5px 10px", background: "rgba(105,240,174,0.15)", border: "1px solid rgba(105,240,174,0.4)", color: "#69f0ae", borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer" }}>✓ Afhandelen</button>
+                    <button disabled={busy[item.id]} onClick={() => update(item.id, { resolved: true })} style={{ padding: "5px 10px", background: "rgba(105,240,174,0.15)", border: "1px solid rgba(105,240,174,0.4)", color: "var(--color-brand-primary-100)", borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer" }}>✓ Afhandelen</button>
                   )}
                   {item.resolved && (
                     <button disabled={busy[item.id]} onClick={() => update(item.id, { resolved: false })} style={{ padding: "5px 10px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)", borderRadius: 6, fontSize: 11, cursor: "pointer" }}>↺ Heropenen</button>

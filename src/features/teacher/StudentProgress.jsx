@@ -43,27 +43,27 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
               };
               return (
                 <div style={{ marginBottom: 20 }}>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#e0e6f0", fontWeight: 700, marginBottom: 10 }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text)", fontWeight: 700, marginBottom: 10 }}>
                     ✖️ Tafels per leerling
                   </div>
                   <div style={{ overflowX: "auto" }}>
                     <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12 }}>
                       <thead>
                         <tr>
-                          <th style={{ textAlign: "left", color: "#8899aa", paddingBottom: 6, paddingRight: 8, whiteSpace: "nowrap" }}>Leerling</th>
+                          <th style={{ textAlign: "left", color: "var(--color-text-muted)", paddingBottom: 6, paddingRight: 8, whiteSpace: "nowrap" }}>Leerling</th>
                           {Array.from({ length: 12 }, (_, i) => (
-                            <th key={i+1} style={{ color: "#8899aa", paddingBottom: 6, width: 28, textAlign: "center" }}>{i+1}</th>
+                            <th key={i+1} style={{ color: "var(--color-text-muted)", paddingBottom: 6, width: 28, textAlign: "center" }}>{i+1}</th>
                           ))}
                         </tr>
                       </thead>
                       <tbody>
                         {players.map(player => (
                           <tr key={player}>
-                            <td style={{ color: "#e0e6f0", fontWeight: 700, paddingRight: 8, paddingBottom: 4, whiteSpace: "nowrap" }}>{player}</td>
+                            <td style={{ color: "var(--color-text)", fontWeight: 700, paddingRight: 8, paddingBottom: 4, whiteSpace: "nowrap" }}>{player}</td>
                             {Array.from({ length: 12 }, (_, i) => {
                               const best = getBest(player, i + 1);
                               const bg = best === null ? "rgba(255,255,255,0.05)" : best >= 70 ? "rgba(0,200,83,0.3)" : "rgba(255,152,0,0.3)";
-                              const color = best === null ? "#556677" : best >= 70 ? "#69f0ae" : "#ffb74d";
+                              const color = best === null ? "#556677" : best >= 70 ? "var(--color-brand-primary-100)" : "#ffb74d";
                               return (
                                 <td key={i+1} style={{ textAlign: "center", paddingBottom: 4 }}>
                                   <div style={{ width: 26, height: 26, borderRadius: 6, background: bg, color, fontSize: 10, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto" }}>
@@ -77,8 +77,8 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
                       </tbody>
                     </table>
                   </div>
-                  <div style={{ display: "flex", gap: 12, marginTop: 8, fontSize: 11, color: "#8899aa" }}>
-                    <span style={{ color: "#69f0ae" }}>🟩 ≥70% beheerst</span>
+                  <div style={{ display: "flex", gap: 12, marginTop: 8, fontSize: 11, color: "var(--color-text-muted)" }}>
+                    <span style={{ color: "var(--color-brand-primary-100)" }}>🟩 ≥70% beheerst</span>
                     <span style={{ color: "#ffb74d" }}>🟧 &lt;70% bezig</span>
                     <span>⬜ nog niet</span>
                   </div>
@@ -93,7 +93,7 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
                   <span style={{ fontSize: 20 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontWeight: 700 }}>{r.player}</div>
-                    <div style={{ fontSize: 12, color: "#8899aa" }}>{r.topic || subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{r.topic || subj?.label} · {LEVELS.find((l) => l.id === r.level)?.label}</div>
                   </div>
                   <div style={{
                     ...styles.scoreBadge,
@@ -154,12 +154,12 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
             </div>
           ) : (
             <>
-              <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 16 }}>
+              <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 16 }}>
                 {uniqueWrong.length} vraag{uniqueWrong.length !== 1 ? "en" : ""} die je fout had — klik op de hulpknop als je er moeite mee hebt.
               </div>
               {uniqueWrong.map(({ q, selectedOption }, i) => (
                 <div key={i} style={{ background: "#1e2d45", borderRadius: 16, padding: 16, marginBottom: 14, borderLeft: "4px solid #ff5252" }}>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, color: "#e0e6f0", marginBottom: 10, lineHeight: 1.4 }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 15, color: "var(--color-text)", marginBottom: 10, lineHeight: 1.4 }}>
                     {i + 1}. {q.q}
                   </div>
                   {selectedOption >= 0 && q.options?.[selectedOption] && (
@@ -167,7 +167,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                       ❌ Jouw antwoord: <strong>{q.options[selectedOption]}</strong>
                     </div>
                   )}
-                  <div style={{ fontSize: 12, color: "#69f0ae", marginBottom: q.explanation ? 10 : 14 }}>
+                  <div style={{ fontSize: 12, color: "var(--color-brand-primary-100)", marginBottom: q.explanation ? 10 : 14 }}>
                     ✅ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
                   </div>
                   {q.explanation && (
@@ -179,13 +179,13 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                     <button onClick={() => {
                       const msg = `Hoi! 👋\n\nIk ben ${userName} en ik snap deze vraag niet:\n\n"${q.q}"\n\nHet goede antwoord is: ${q.options?.[q.answer]}\nMaar ik snap nog niet waarom. Kun je het uitleggen? 🙏`;
                       window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
-                    }} style={{ flex: 1, padding: "10px 8px", border: "none", borderRadius: 10, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
+                    }} style={{ flex: 1, padding: "10px 8px", border: "none", borderRadius: 10, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                       💬 WhatsApp
                     </button>
                     <button onClick={() => {
                       const msg = `Hoi!\n\nIk ben ${userName} en ik snap deze vraag niet:\n\n"${q.q}"\n\nHet goede antwoord is: ${q.options?.[q.answer]}\nMaar ik snap nog niet waarom. Kun je het uitleggen?`;
                       window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft een vraag over " + subj?.label)}&body=${encodeURIComponent(msg)}`, "_blank");
-                    }} style={{ flex: 1, padding: "10px 8px", border: "none", borderRadius: 10, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
+                    }} style={{ flex: 1, padding: "10px 8px", border: "none", borderRadius: 10, background: "#1a73e8", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                       ✉️ E-mail
                     </button>
                   </div>
@@ -227,8 +227,8 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                     border: "1px solid rgba(0,212,255,0.15)",
                   }}>
                     <div style={{ fontSize: 20, marginBottom: 4 }}>🎯</div>
-                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#00d4ff" }}>{progress.length}</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Totaal gespeeld</div>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700, color: "#00d4ff" }}>{progress.length}</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Totaal gespeeld</div>
                   </div>
                   <div style={{
                     flex: 1, background: "#1e2d45", borderRadius: 14,
@@ -236,8 +236,8 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                     border: "1px solid rgba(0,230,118,0.15)",
                   }}>
                     <div style={{ fontSize: 20, marginBottom: 4 }}>✅</div>
-                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#00e676" }}>{avgScore}%</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Gemiddelde score</div>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700, color: "#00e676" }}>{avgScore}%</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Gemiddelde score</div>
                   </div>
                   <div style={{
                     flex: 1, background: "#1e2d45", borderRadius: 14,
@@ -245,10 +245,10 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                     border: "1px solid rgba(255,193,7,0.15)",
                   }}>
                     <div style={{ fontSize: 20, marginBottom: 4 }}>🔥</div>
-                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, fontWeight: 700, color: "#ffb74d" }}>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 700, color: "#ffb74d" }}>
                       {bestSubj ? bestSubj.icon : "—"}
                     </div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
                       {bestSubj ? bestSubj.label : "Beste vak"}
                     </div>
                   </div>
@@ -279,15 +279,15 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                 <button key={subId} onClick={() => setSelectedSubject(subId)} style={{ ...styles.subjectProgress, width: "100%", textAlign: "left", cursor: "pointer", border: "none", display: "block" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                     <span style={{ fontSize: 24 }}>{subj?.icon}</span>
-                    <strong style={{ color: "#e0e6f0" }}>{subj?.label}</strong>
+                    <strong style={{ color: "var(--color-text)" }}>{subj?.label}</strong>
                     <span style={{ marginLeft: "auto", fontWeight: 700, color: avg >= 80 ? "#28a745" : avg >= 50 ? "#f39c12" : "#e74c3c" }}>{avg}%</span>
-                    <span style={{ fontSize: 18, color: "#8899aa" }}>›</span>
+                    <span style={{ fontSize: 18, color: "var(--color-text-muted)" }}>›</span>
                   </div>
                   <div style={styles.progressBarSmall}>
                     <div style={{ ...styles.progressFillSmall, width: `${avg}%`, background: avg >= 80 ? "#28a745" : avg >= 50 ? "#f39c12" : "#e74c3c" }} />
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 6 }}>
-                    <span style={{ fontSize: 12, color: "#8899aa" }}>{results.length} poging{results.length !== 1 ? "en" : ""}</span>
+                    <span style={{ fontSize: 12, color: "var(--color-text-muted)" }}>{results.length} poging{results.length !== 1 ? "en" : ""}</span>
                     {wrongCount > 0 && <span style={{ fontSize: 11, color: "#ff8a80" }}>· {wrongCount} fout</span>}
                     {avg < 60 && <span style={{ fontSize: 11, background: "#ff980020", color: "#ffb74d", padding: "2px 8px", borderRadius: 8, fontWeight: 700 }}>💪 aandacht nodig</span>}
                   </div>
@@ -358,7 +358,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
             <button onClick={onKampioenen} style={{
               width: "100%", padding: "14px", borderRadius: 14, border: "2px solid #ffd700",
               background: "linear-gradient(135deg, #2a1f00, #3a2c00)", color: "#ffd700",
-              fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer",
+              fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15, cursor: "pointer",
               marginBottom: 0, display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
             }}>
               <span style={{ fontSize: 22 }}>👑</span>
@@ -378,7 +378,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                 <div style={{ overflow: "hidden", borderRadius: "0 0 10px 10px", background: "rgba(255,215,0,0.08)", borderLeft: "2px solid #ffd70044", borderRight: "2px solid #ffd70044", borderBottom: "2px solid #ffd70044", marginBottom: 14, padding: "8px 0" }}>
                   <div style={{ display: "flex", animation: "tickerScroll 40s linear infinite", width: "max-content" }}>
                     {[0, 1].map(i => (
-                      <span key={i} style={{ fontSize: 14, color: "#f0c830", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, whiteSpace: "nowrap", padding: "0 16px" }}>
+                      <span key={i} style={{ fontSize: 14, color: "#f0c830", fontFamily: "var(--font-display)", fontWeight: 700, whiteSpace: "nowrap", padding: "0 16px" }}>
                         {tickerText}
                       </span>
                     ))}
@@ -402,7 +402,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
               <button onClick={() => setHofOpen(o => !o)} style={{
                 width: "100%", padding: "12px 16px", borderRadius: 14,
                 border: "2px solid #c0a030", background: hofOpen ? "linear-gradient(135deg, #1a1200, #2a2000)" : "linear-gradient(135deg, #111800, #1e2500)",
-                color: "#e8c840", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 15,
+                color: "#e8c840", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15,
                 cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between",
               }}>
                 <span>🏅 Hall of Fame — snelste 100% per vak</span>
@@ -430,7 +430,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                         })} style={{
                           width: "100%", padding: "10px 14px", background: "transparent", border: "none",
                           display: "flex", alignItems: "center", justifyContent: "space-between",
-                          cursor: "pointer", fontFamily: "'Fredoka', sans-serif",
+                          cursor: "pointer", fontFamily: "var(--font-display)",
                         }}>
                           <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                             <span style={{ fontSize: 20 }}>{subj?.icon || "🎯"}</span>
@@ -473,7 +473,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                     </div>
                                     {canChallenge && (
                                       <button onClick={() => onChallenge({ subject: subjectId, level: levelId, topic: null }, e.questions)}
-                                        style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+                                        style={{ padding: "3px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
                                         💪 Ik kan dit beter!
                                       </button>
                                     )}
@@ -481,16 +481,16 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                   {/* Deel-knoppen: alleen voor eigen entry */}
                                   {isMe && (
                                     <div style={{ marginTop: 8 }}>
-                                      <div style={{ fontSize: 10, fontWeight: 800, color: "#ffd700", fontFamily: "'Fredoka', sans-serif", marginBottom: 4, textAlign: "center" }}>
+                                      <div style={{ fontSize: 10, fontWeight: 800, color: "#ffd700", fontFamily: "var(--font-display)", marginBottom: 4, textAlign: "center" }}>
                                         🎉 Deel je super resultaat!
                                       </div>
                                       <div style={{ display: "flex", gap: 5 }}>
                                         <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
-                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
                                           📱 WhatsApp
                                         </a>
                                         <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
+                                          style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
                                           👍 Facebook
                                         </a>
                                       </div>
@@ -520,17 +520,17 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
               return (
                 <div key={i} style={{
                   display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14,
-                  background: isMe ? "linear-gradient(135deg, #fff9e6, #fff3cd)" : "#fff",
+                  background: isMe ? "linear-gradient(135deg, #fff9e6, #fff3cd)" : "var(--color-text-strong)",
                   border: isMe ? "2px solid #ffc107" : "1px solid #e8eef5",
                   boxShadow: "0 1px 4px rgba(0,0,0,0.3)",
                   animation: `slideIn 0.3s ease ${i * 0.03}s both`,
                 }}>
                   <div style={{ width: 36, height: 36, borderRadius: 10, background: "#162033", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    {i < 3 ? <span style={{ fontSize: 22 }}>{medals[i]}</span> : <span style={{ fontWeight: 800, color: "#8899aa" }}>{i + 1}</span>}
+                    {i < 3 ? <span style={{ fontSize: 22 }}>{medals[i]}</span> : <span style={{ fontWeight: 800, color: "var(--color-text-muted)" }}>{i + 1}</span>}
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 700, fontSize: 14, color: "#e0e6f0" }}>
-                      {entry.player} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
+                    <div style={{ fontWeight: 700, fontSize: 14, color: "var(--color-text)" }}>
+                      {entry.player} {isMe && <span style={{ fontSize: 11, color: "var(--color-text-muted)" }}>(jij)</span>}
                     </div>
                     <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700 }}>
                       {entry.title
@@ -580,27 +580,27 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                     }
                                     onChallenge(entry, hofEntry.questions);
                                   }}
-                                  style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
+                                  style={{ padding: "4px 10px", border: `1px solid ${isMyScore ? "#ffd700" : "#00d4ff"}`, borderRadius: 8, background: isMyScore ? "rgba(255,215,0,0.15)" : "transparent", color: isMyScore ? "#ffd700" : "#00d4ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}
                                   title="Exact dezelfde vragen — eerlijke wedstrijd!"
                                 >
                                   {isMyScore ? "🔄 Beter!" : "💪 Ik kan dit beter!"}
                                 </button>
-                                <div style={{ fontSize: 9, color: "#8899aa", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
+                                <div style={{ fontSize: 9, color: "var(--color-text-muted)", textAlign: "center", marginTop: 1 }}>zelfde vragen</div>
                               </>
                             )
                           )}
                           {isMe && (
                             <div style={{ marginTop: 4 }}>
-                              <div style={{ fontSize: 9, fontWeight: 800, color: "#ffd700", fontFamily: "'Fredoka', sans-serif", marginBottom: 3, textAlign: "center" }}>
+                              <div style={{ fontSize: 9, fontWeight: 800, color: "#ffd700", fontFamily: "var(--font-display)", marginBottom: 3, textAlign: "center" }}>
                                 🎉 Deel je super resultaat!
                               </div>
                               <div style={{ display: "flex", gap: 4 }}>
                                 <a href={`https://wa.me/?text=${encodeURIComponent(myShareText)}`} target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
                                   📱 WhatsApp
                                 </a>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
+                                  style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
                                   👍 Facebook
                                 </a>
                               </div>
@@ -1061,7 +1061,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
           position: "fixed", left: "50%", bottom: 20, transform: "translateX(-50%)",
           zIndex: 100001, padding: "12px 18px", borderRadius: 14,
           background: "linear-gradient(135deg, #ffd700, #ffaa00)",
-          color: "#1a1a00", fontFamily: "'Fredoka', sans-serif",
+          color: "#1a1a00", fontFamily: "var(--font-display)",
           fontSize: 14, fontWeight: 700, letterSpacing: 0.3,
           boxShadow: "0 4px 20px rgba(255,215,0,0.5)",
           maxWidth: "calc(100vw - 24px)", textAlign: "center",
@@ -1075,9 +1075,9 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
           {periods.map(p => (
             <button key={p.id} onClick={() => setActivePeriod(p.id)} style={{
               flex: 1, padding: "10px 4px", borderRadius: 12, border: "none", cursor: "pointer",
-              fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13,
+              fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 13,
               background: activePeriod === p.id ? "linear-gradient(135deg, #ffd700, #ffaa00)" : "#1a2a3a",
-              color: activePeriod === p.id ? "#1a1a00" : "#8899aa",
+              color: activePeriod === p.id ? "#1a1a00" : "var(--color-text-muted)",
               boxShadow: activePeriod === p.id ? "0 2px 12px rgba(255,215,0,0.4)" : "none",
               transition: "all 0.2s",
             }}>
@@ -1089,9 +1089,9 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
         {activePeriod === "obliterator" ? (
           obliteratorLoading || obliteratorScores === null ? (
-            <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Scorebord laden…</div>
+            <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: 40 }}>Scorebord laden…</div>
           ) : obliteratorScores.length === 0 ? (
-            <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>
+            <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: 40 }}>
               <div style={{ fontSize: 48 }}>👽</div>
               <p>Nog geen OBLITERATOR-scores.<br />Speel het spel na een quiz om de eerste te worden!</p>
             </div>
@@ -1133,14 +1133,14 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                     <div style={{
                       minWidth: 36, textAlign: "center",
                       fontSize: i < 3 ? 22 : 14, fontWeight: 800,
-                      color: i < 3 ? "#ffd700" : "#8899aa"
+                      color: i < 3 ? "#ffd700" : "var(--color-text-muted)"
                     }}>
                       {medalIcon}
                     </div>
                     <div style={{ flex: 1 }}>
                       <div style={{
-                        fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
-                        color: isMe ? "#69f0ae" : "#fff"
+                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
+                        color: isMe ? "var(--color-brand-primary-100)" : "var(--color-text-strong)"
                       }}>
                         {entry.player_name}{isMe ? " (jij)" : ""}
                       </div>
@@ -1162,7 +1162,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
             </div>
           )
         ) : loading ? (
-          <div style={{ textAlign: "center", color: "#8899aa", padding: 40 }}>Laden...</div>
+          <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: 40 }}>Laden...</div>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {/* ────────────────── BLOK 1: TOP 6 TOETSEN ────────────────── */}
@@ -1172,7 +1172,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               </div>
 
               {list.length === 0 && (
-                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
                   <div style={{ fontSize: 32, marginBottom: 4 }}>🏆</div>
                   <p style={{ margin: 0, fontSize: 13 }}>Nog geen toets-scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.</p>
                 </div>
@@ -1210,8 +1210,8 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
                     {/* Info */}
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontWeight: 800, fontSize: i === 0 ? 18 : 15, color: medalColors[i] || "#e0e6f0" }}>
-                        {naamMetKroon(playerName)} {isMe && <span style={{ fontSize: 11, color: "#8899aa" }}>(jij)</span>}
+                      <div style={{ fontWeight: 800, fontSize: i === 0 ? 18 : 15, color: medalColors[i] || "var(--color-text)" }}>
+                        {naamMetKroon(playerName)} {isMe && <span style={{ fontSize: 11, color: "var(--color-text-muted)" }}>(jij)</span>}
                       </div>
                       <div style={{ fontSize: 12, color: "#c0cfe0", fontWeight: 700, marginTop: 2 }}>
                         {subj?.icon} {subj?.label} · {levelLabel}
@@ -1237,18 +1237,18 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                           <div style={{ display: "flex", flexDirection: "column", gap: 4, alignItems: "flex-end" }}>
                             {canChallenge && (
                               <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
-                                style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
+                                style={{ padding: "3px 8px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 10, fontWeight: 700, cursor: "pointer" }}>
                                 💪 Ik kan dit beter!
                               </button>
                             )}
                             {isMe && (
                               <div style={{ display: "flex", gap: 4 }}>
                                 <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "3px 8px", borderRadius: 7, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
+                                  style={{ padding: "3px 8px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
                                   📱 Deel
                                 </a>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "3px 8px", borderRadius: 7, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
+                                  style={{ padding: "3px 8px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
                                   👍 Deel
                                 </a>
                               </div>
@@ -1266,7 +1266,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                         {activePeriod === "jaar" ? "👑 Kroon dit jaar — kan jij dit verslaan?" : `🔥 Toppositie ${current.label.toLowerCase()} — kan jij dit verslaan?`}
                       </div>
                       <button onClick={() => onChallenge({ subject: entry.subject, level: entry.level, topic: null }, hofEntry.questions)}
-                        style={{ width: "100%", padding: "7px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>
+                        style={{ width: "100%", padding: "7px 10px", border: "1px solid #00d4ff", borderRadius: 8, background: "transparent", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>
                         💪 Ik kan dit beter!
                       </button>
                     </div>
@@ -1280,7 +1280,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       if (k && k.aantal > 0) {
                         return (
                           <div style={{ marginTop: 10, padding: "8px 12px", borderRadius: 10, background: "rgba(105,240,174,0.10)", border: "1px solid rgba(105,240,174,0.3)" }}>
-                            <div style={{ fontSize: 12, color: "#69f0ae", fontWeight: 700 }}>
+                            <div style={{ fontSize: 12, color: "var(--color-brand-primary-100)", fontWeight: 700 }}>
                               {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal} felicitatie{k.aantal === 1 ? "" : "s"} ontvangen
                             </div>
                             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", marginTop: 2 }}>
@@ -1299,8 +1299,8 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                           style={{
                             padding: "6px 14px", borderRadius: 999, border: "none",
                             background: heeftAlGegeven ? "rgba(105,240,174,0.18)" : "linear-gradient(135deg, #ffd700, #ffaa00)",
-                            color: heeftAlGegeven ? "#69f0ae" : "#1a1a00",
-                            fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 12,
+                            color: heeftAlGegeven ? "var(--color-brand-primary-100)" : "#1a1a00",
+                            fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12,
                             cursor: heeftAlGegeven ? "default" : "pointer",
                           }}
                         >
@@ -1340,14 +1340,14 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                         <div style={{ display: "flex", gap: 8 }}>
                           <a href={`https://wa.me/?text=${encodeURIComponent(waText)}`} target="_blank" rel="noopener noreferrer" style={{
                             flex: 1, padding: "10px 8px", borderRadius: 10, background: "#25D366",
-                            color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13,
+                            color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13,
                             textDecoration: "none", textAlign: "center", display: "block",
                           }}>
                             📱 WhatsApp
                           </a>
                           <button onClick={() => deelKampioenKaart(cardData)} style={{
                             flex: 1, padding: "10px 8px", borderRadius: 10, background: "#1877F2",
-                            color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13,
+                            color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13,
                             border: "none", cursor: "pointer", textAlign: "center",
                           }}>
                             👍 Facebook
@@ -1367,7 +1367,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 👽 TOP 6 OBLITERATOR — {current.label.toUpperCase()} 🛸
               </div>
               {(obliPerPeriode[activePeriod] || []).length === 0 ? (
-                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
                   <div style={{ fontSize: 32, marginBottom: 4 }}>👽</div>
                   <p style={{ margin: 0, fontSize: 13 }}>Nog geen game-scores {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.</p>
                 </div>
@@ -1387,10 +1387,10 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                       border: isMe ? "1px solid rgba(105,240,174,0.5)" : i < 3 ? "1px solid rgba(255,200,80,0.3)" : "1px solid rgba(255,255,255,0.1)",
                     }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                        <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
+                        <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "var(--color-text-muted)" }}>
                           {medalIcon}
                         </div>
-                        <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
+                        <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: isMe ? "var(--color-brand-primary-100)" : "var(--color-text-strong)" }}>
                           {naamMetKroon(entry.player_name)}{isMe ? " (jij)" : ""}
                         </div>
                         <div style={{ fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 20, color: "#ffcc40", textShadow: "0 0 8px rgba(255,150,40,0.5)" }}>
@@ -1406,8 +1406,8 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                               padding: "5px 12px", borderRadius: 999,
                               border: "none",
                               background: heeftAlGegeven ? "rgba(105,240,174,0.18)" : "linear-gradient(135deg, #ffd700, #ffaa00)",
-                              color: heeftAlGegeven ? "#69f0ae" : "#1a1a00",
-                              fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 11,
+                              color: heeftAlGegeven ? "var(--color-brand-primary-100)" : "#1a1a00",
+                              fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11,
                               cursor: heeftAlGegeven ? "default" : "pointer",
                             }}
                           >
@@ -1425,7 +1425,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                         </div>
                       )}
                       {entry.id != null && isMe && k && k.aantal > 0 && (
-                        <div style={{ marginLeft: 48, fontSize: 12, color: "#69f0ae" }}>
+                        <div style={{ marginLeft: 48, fontSize: 12, color: "var(--color-brand-primary-100)" }}>
                           {"⭐".repeat(Math.min(k.aantal, 10))} {k.aantal} felicitatie{k.aantal === 1 ? "" : "s"} ontvangen — van {k.gevers.slice(0, 5).join(", ")}{k.gevers.length > 5 ? ` +${k.gevers.length - 5}` : ""}
                         </div>
                       )}
@@ -1441,7 +1441,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                 🌟 TOP 6 DELERS — {current.label.toUpperCase()} 🌟
               </div>
               {(delersPerPeriode[activePeriod] || []).length === 0 ? (
-                <div style={{ textAlign: "center", color: "#8899aa", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
+                <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: "24px 12px", background: "rgba(255,255,255,0.03)", borderRadius: 12 }}>
                   <div style={{ fontSize: 32, marginBottom: 4 }}>🌟</div>
                   <p style={{ margin: 0, fontSize: 13 }}>Nog geen delers {activePeriod === "dag" ? "vandaag" : `deze ${activePeriod}`}.<br />Deel via een knop om hier te komen!</p>
                 </div>
@@ -1458,13 +1458,13 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                         : i < 3 ? "rgba(255,215,0,0.08)" : "rgba(255,255,255,0.04)",
                       border: isMe ? "1px solid rgba(105,240,174,0.5)" : i < 3 ? "1px solid rgba(255,215,0,0.3)" : "1px solid rgba(255,255,255,0.1)",
                     }}>
-                      <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "#8899aa" }}>
+                      <div style={{ minWidth: 36, textAlign: "center", fontSize: i < 3 ? 22 : 14, fontWeight: 800, color: i < 3 ? "#ffd700" : "var(--color-text-muted)" }}>
                         {medalIcon}
                       </div>
-                      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: isMe ? "#69f0ae" : "#fff" }}>
+                      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: isMe ? "var(--color-brand-primary-100)" : "var(--color-text-strong)" }}>
                         {naamMetKroon(entry.naam)}{isMe ? " (jij)" : ""}
                       </div>
-                      <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "#ffd700", fontWeight: 700 }}>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "#ffd700", fontWeight: 700 }}>
                         {entry.aantal}× gedeeld
                       </div>
                     </div>
@@ -1478,7 +1478,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               const periodLabel = current.label.toLowerCase();
               const periodAwards = awards[activePeriod];
               const awardDefs = [
-                { key: "doorzetter",   icon: "💪", title: "Doorzetter",    color: "#00c853", bg: "#001a08", border: "#00c853", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
+                { key: "doorzetter",   icon: "💪", title: "Doorzetter",    color: "var(--color-brand-primary)", bg: "#001a08", border: "var(--color-brand-primary)", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
                 { key: "hardwerker",   icon: "🧠", title: "Hardwerker",    color: "#1a73e8", bg: "#000d1a", border: "#1a73e8", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
                 { key: "verbeteraar",  icon: "📈", title: "Verbeteraar",   color: "#ff9800", bg: "#1a0d00", border: "#ff9800", msg: (a) => `+${a.value}% verbeterd ${periodLabel}` },
                 { key: "actiefste",    icon: "🔥", title: "Meest actief",  color: "#e91e63", bg: "#1a0010", border: "#e91e63", msg: (a) => `${a.value} ${a.unit} ${periodLabel}` },
@@ -1488,11 +1488,11 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               if (!hasAny && !awardsLoading[activePeriod]) return null;
               return (
                 <div style={{ marginTop: 8 }}>
-                  <div style={{ textAlign: "center", color: "#8899aa", fontSize: 12, fontWeight: 700, marginBottom: 10, letterSpacing: 1 }}>
+                  <div style={{ textAlign: "center", color: "var(--color-text-muted)", fontSize: 12, fontWeight: 700, marginBottom: 10, letterSpacing: 1 }}>
                     — AANMOEDIGINGSPRIJZEN —
                   </div>
                   {awardsLoading[activePeriod] ? (
-                    <div style={{ textAlign: "center", color: "#8899aa", fontSize: 12 }}>Laden...</div>
+                    <div style={{ textAlign: "center", color: "var(--color-text-muted)", fontSize: 12 }}>Laden...</div>
                   ) : (
                     <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                       {awardDefs.map(({ key, icon, title, color, bg, border, msg }) => {
@@ -1508,20 +1508,20 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                             <div style={{ fontSize: 28, flexShrink: 0 }}>{icon}</div>
                             <div style={{ flex: 1 }}>
                               <div style={{ fontSize: 11, color, fontWeight: 800, letterSpacing: 0.5 }}>{title.toUpperCase()}</div>
-                              <div style={{ fontSize: 14, fontWeight: 800, color: isMe ? color : "#e0e6f0", marginTop: 2 }}>
-                                {a.name} {isMe && <span style={{ fontSize: 10, color: "#8899aa" }}>(jij!)</span>}
+                              <div style={{ fontSize: 14, fontWeight: 800, color: isMe ? color : "var(--color-text)", marginTop: 2 }}>
+                                {a.name} {isMe && <span style={{ fontSize: 10, color: "var(--color-text-muted)" }}>(jij!)</span>}
                               </div>
-                              <div style={{ fontSize: 11, color: "#8899aa", marginTop: 1 }}>{msg(a)}</div>
+                              <div style={{ fontSize: 11, color: "var(--color-text-muted)", marginTop: 1 }}>{msg(a)}</div>
                             </div>
                             {isMe && (
                               <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                                 <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel} op Studiebol!\n${a.value} ${a.unit} — zo doe ik dat! 💪\nKun jij dit ook? 👉 https://studiebol.online`)}`}
                                   target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
+                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
                                   📱 WhatsApp
                                 </a>
                                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
+                                  style={{ padding: "4px 10px", borderRadius: 8, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
                                   👍 Facebook
                                 </a>
                               </div>

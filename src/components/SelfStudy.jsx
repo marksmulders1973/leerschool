@@ -137,8 +137,8 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                   width: "100%", marginTop: 8, marginBottom: 12, padding: "10px 14px", borderRadius: 12, cursor: "pointer",
                   border: level === "nvt" ? "2px solid #8899aa" : "1px solid rgba(255,255,255,0.1)",
                   background: level === "nvt" ? "rgba(136,153,170,0.15)" : "rgba(255,255,255,0.04)",
-                  color: level === "nvt" ? "#c0cfe0" : "#8899aa",
-                  fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 14,
+                  color: level === "nvt" ? "#c0cfe0" : "var(--color-text-muted)",
+                  fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 14,
                   display: "flex", alignItems: "center", justifyContent: "space-between",
                 }}
               >
@@ -155,18 +155,18 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
           style={{
             width: "100%", marginBottom: 8, padding: "14px 18px",
             background: eigenMode ? "linear-gradient(135deg, #1e3a2a, #1a3325)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
-            border: `2px solid ${eigenMode ? "#00c853" : "#3a5f8a"}`,
+            border: `2px solid ${eigenMode ? "var(--color-brand-primary)" : "#3a5f8a"}`,
             borderRadius: 16, cursor: "pointer", display: "flex", alignItems: "center", gap: 12, textAlign: "left",
-            boxShadow: eigenMode ? "0 0 0 3px #00c85330" : "0 2px 12px rgba(0,0,0,0.2)",
+            boxShadow: eigenMode ? "0 0 0 3px var(--color-brand-primary)30" : "0 2px 12px rgba(0,0,0,0.2)",
           }}
         >
           <span style={{ fontSize: 26 }}>🎯</span>
           <div style={{ flex: 1 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700 }}>
+              <span style={{ color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>
                 Zelf een onderwerp kiezen
               </span>
-              <span style={{ background: "#00c853", color: "#000", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
+              <span style={{ background: "var(--color-brand-primary)", color: "#000", fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 20 }}>AI</span>
             </div>
             <div style={{ color: "#7aaabb", fontSize: 12, marginTop: 3 }}>
               Elk onderwerp — ook voor MBO &amp; HBO
@@ -184,13 +184,13 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
         </button>
         {showHoeWerkt && (
           <div style={{ marginBottom: 12, padding: "12px 14px", background: "#111e2e", borderRadius: 12, border: "1px solid #2a3f5f", fontSize: 12, color: "#99bbcc", lineHeight: 1.7 }}>
-            De AI maakt <strong style={{ color: "#fff" }}>vragen op maat</strong> over elk onderwerp dat je typt — van zout en fotosynthese tot bedrijfseconomie of JavaScript.<br />
-            Handig voor basisschool en VO, maar ook voor <strong style={{ color: "#00c853" }}>MBO- en HBO-studenten</strong> die willen oefenen voor een tentamen of toets.
+            De AI maakt <strong style={{ color: "var(--color-text-strong)" }}>vragen op maat</strong> over elk onderwerp dat je typt — van zout en fotosynthese tot bedrijfseconomie of JavaScript.<br />
+            Handig voor basisschool en VO, maar ook voor <strong style={{ color: "var(--color-brand-primary)" }}>MBO- en HBO-studenten</strong> die willen oefenen voor een tentamen of toets.
           </div>
         )}
 
         {eigenMode && (
-          <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid #00c853" }}>
+          <div style={{ marginBottom: 16, padding: 16, background: "#1e2d45", borderRadius: 16, border: "2px solid var(--color-brand-primary)" }}>
             <label style={{ ...styles.settingLabel, marginBottom: 4 }}>Waar wil je over leren?</label>
             <div style={{ fontSize: 11, color: "#7aaa88", marginBottom: 10, lineHeight: 1.5 }}>
               💡 <strong>Tip:</strong> omschrijf het onderwerp zo duidelijk mogelijk. Bijv. <em>"De Franse Revolutie"</em> of <em>"fotosynthese bij planten"</em> of <em>"mijn fabriek: wij verwerken dierlijk vet tot veevoer"</em>. Hoe meer context, hoe beter de vragen!
@@ -199,7 +199,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 10 }}>
               {["Seksuele voorlichting", "Puberteit", "Roken & drugs", "EHBO & eerste hulp", "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet"].map(s => (
                 <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
-                  style={{ padding: "4px 12px", background: topic === s ? "#00c853" : "#162a1e", border: `1px solid ${topic === s ? "#00c853" : "#2a4a3a"}`, borderRadius: 20, color: topic === s ? "#000" : "#69f0ae", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
+                  style={{ padding: "4px 12px", background: topic === s ? "var(--color-brand-primary)" : "#162a1e", border: `1px solid ${topic === s ? "var(--color-brand-primary)" : "#2a4a3a"}`, borderRadius: 20, color: topic === s ? "#000" : "var(--color-brand-primary-100)", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
                   {s}
                 </button>
               ))}
@@ -208,7 +208,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
               {["Bedrijfseconomie", "Boekhouden", "Anatomie", "Recht & wetgeving", "Marketing", "ICT & netwerken", "Statistiek", "Verpleegkunde"].map(s => (
                 <button key={s} onClick={() => { SoundEngine.play("click"); setTopic(s); }}
-                  style={{ padding: "4px 12px", background: topic === s ? "#1a73e8" : "#121e30", border: `1px solid ${topic === s ? "#1a73e8" : "#2a3f5f"}`, borderRadius: 20, color: topic === s ? "#fff" : "#7aaabb", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
+                  style={{ padding: "4px 12px", background: topic === s ? "#1a73e8" : "#121e30", border: `1px solid ${topic === s ? "#1a73e8" : "#2a3f5f"}`, borderRadius: 20, color: topic === s ? "var(--color-text-strong)" : "#7aaabb", fontSize: 12, cursor: "pointer", fontWeight: topic === s ? 700 : 400 }}>
                   {s}
                 </button>
               ))}
@@ -236,7 +236,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                 <button
                   onClick={() => { if (topic.trim().length > 2 && !previewLoading) { SoundEngine.play("click"); fetchTopicPreview(); } }}
                   disabled={topic.trim().length <= 2 || previewLoading}
-                  style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "#00c853" : "#1a3a2a", color: topic.trim().length > 2 && !previewLoading ? "#000" : "#446644", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0, marginBottom: 18 }}
+                  style={{ padding: "12px 14px", borderRadius: 12, border: "none", background: topic.trim().length > 2 && !previewLoading ? "var(--color-brand-primary)" : "#1a3a2a", color: topic.trim().length > 2 && !previewLoading ? "#000" : "#446644", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: topic.trim().length > 2 && !previewLoading ? "pointer" : "default", whiteSpace: "nowrap", flexShrink: 0, marginBottom: 18 }}
                 >
                   {previewLoading ? "⏳" : "🔍 Zoeken →"}
                 </button>
@@ -250,7 +250,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
 
             {/* Preview kaart */}
             {topicPreview && !previewConfirmed && (
-              <div style={{ marginTop: 10, borderRadius: 14, overflow: "hidden", border: `2px solid ${topicPreview.found ? "#00c853" : "#556677"}`, background: "#0f1e2e" }}>
+              <div style={{ marginTop: 10, borderRadius: 14, overflow: "hidden", border: `2px solid ${topicPreview.found ? "var(--color-brand-primary)" : "#556677"}`, background: "#0f1e2e" }}>
                 {topicPreview.found ? (
                   <>
                     {topicPreview.image && (
@@ -269,11 +269,11 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                             SoundEngine.play("click");
                             onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: enrichedTopic });
                           }}
-                          style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "#00c853", color: "#000", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
+                          style={{ flex: 1, padding: "8px", borderRadius: 10, border: "none", background: "var(--color-brand-primary)", color: "#000", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: "pointer" }}
                         >
                           ✅ Ja! Start de toets →
                         </button>
-                        <button onClick={() => { setTopicPreview(null); setTopic(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
+                        <button onClick={() => { setTopicPreview(null); setTopic(""); }} style={{ flex: 1, padding: "8px", borderRadius: 10, border: "1px solid #556677", background: "transparent", color: "#aabbcc", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>
                           ❌ Nee, aanpassen
                         </button>
                       </div>
@@ -304,7 +304,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
                         onStart({ subject: "vrij", level, questionCount, timePerQuestion, useAI, topic: enriched });
                       }}
                       disabled={!extraContext.trim()}
-                      style={{ width: "100%", padding: "10px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#1a73e8" : "#334455", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
+                      style={{ width: "100%", padding: "10px", borderRadius: 10, border: "none", background: extraContext.trim() ? "#1a73e8" : "#334455", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13, cursor: extraContext.trim() ? "pointer" : "default", opacity: extraContext.trim() ? 1 : 0.5 }}
                     >
                       🚀 Start de toets →
                     </button>
@@ -334,7 +334,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
               style={{
                 ...styles.subjectCard,
                 borderColor: subject === s.id ? s.color : "transparent",
-                background: subject === s.id ? `${s.color}15` : "#fff",
+                background: subject === s.id ? `${s.color}15` : "var(--color-text-strong)",
                 boxShadow: subject === s.id ? `0 0 0 3px ${s.color}40` : "0 2px 8px rgba(0,0,0,0.06)",
               }}
               onClick={() => { setSubject(s.id); setEigenMode(false); setTopic(""); }}
@@ -348,10 +348,10 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
         {((subject && level) || (eigenMode && level)) && (
           <>
             <div style={styles.settingsGroup}>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span></div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span></div>
               <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
                 {[5, 10, 15, 20].map(n => (
-                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700 }}>{n}</button>
+                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700 }}>{n}</button>
                 ))}
               </div>
               <label style={styles.settingLabel}>Tijd per vraag: {timePerQuestion === 0 ? "♾️ Geen limiet" : `${timePerQuestion}s`}</label>

@@ -21,7 +21,7 @@ const ONDERDELEN = [
     icon: "🔢",
     label: "Rekenen & Wiskunde",
     sub: "Breuken, meten, verbanden",
-    color: "#00c853",
+    color: "var(--color-brand-primary)",
     bg: "rgba(0,200,83,0.1)",
     border: "rgba(0,200,83,0.25)",
     subject: "rekenen",
@@ -106,7 +106,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
 
         {/* Groep selector */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700 }}>
+          <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700 }}>
             Welke groep?
           </span>
           {["7", "8"].map(g => (
@@ -115,7 +115,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
               border: groep === g ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
               background: groep === g ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
               color: groep === g ? "#ff6b35" : "rgba(255,255,255,0.55)",
-              fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
+              fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700,
             }}>
               Groep {g}
             </button>
@@ -146,10 +146,10 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
             >
               <span style={{ fontSize: 36 }}>{f.icon}</span>
               <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 19, fontWeight: 700, color: f.color }}>{f.label}</div>
-                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{f.sub}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 19, fontWeight: 700, color: f.color }}>{f.label}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{f.sub}</div>
                 {best !== null && (
-                  <div style={{ marginTop: 4, display: "inline-block", padding: "2px 8px", borderRadius: 8, background: best >= 80 ? "rgba(0,200,83,0.2)" : "rgba(255,152,0,0.2)", border: `1px solid ${best >= 80 ? "rgba(0,200,83,0.4)" : "rgba(255,152,0,0.4)"}`, fontFamily: "'Fredoka', sans-serif", fontSize: 12, color: best >= 80 ? "#69f0ae" : "#ffb74d", fontWeight: 700 }}>
+                  <div style={{ marginTop: 4, display: "inline-block", padding: "2px 8px", borderRadius: 8, background: best >= 80 ? "rgba(0,200,83,0.2)" : "rgba(255,152,0,0.2)", border: `1px solid ${best >= 80 ? "rgba(0,200,83,0.4)" : "rgba(255,152,0,0.4)"}`, fontFamily: "var(--font-display)", fontSize: 12, color: best >= 80 ? "var(--color-brand-primary-100)" : "#ffb74d", fontWeight: 700 }}>
                     beste score: {best}%
                   </div>
                 )}
@@ -159,7 +159,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
                 border: `2px solid ${sel ? f.color : "rgba(255,255,255,0.2)"}`,
                 background: sel ? f.color : "transparent",
                 display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: 14, color: "#fff", flexShrink: 0,
+                fontSize: 14, color: "var(--color-text-strong)", flexShrink: 0,
               }}>
                 {sel ? "✓" : ""}
               </div>
@@ -170,7 +170,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
         {/* Divider */}
         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
           <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.07)" }} />
-          <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.3)", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }}>
+          <span style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }}>
             of kies een onderdeel
           </span>
           <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.07)" }} />
@@ -203,18 +203,18 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
                       width: 20, height: 20, borderRadius: "50%",
                       background: f.color,
                       display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 12, color: "#fff",
+                      fontSize: 12, color: "var(--color-text-strong)",
                     }}>✓</div>
                   )}
                 </div>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2 }}>
                   {f.label}
                 </div>
-                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>
                   {f.sub}
                 </div>
                 {best !== null && (
-                  <div style={{ marginTop: 5, padding: "2px 6px", borderRadius: 6, background: best >= 80 ? "rgba(0,200,83,0.18)" : "rgba(255,152,0,0.18)", fontFamily: "'Fredoka', sans-serif", fontSize: 11, color: best >= 80 ? "#69f0ae" : "#ffb74d", fontWeight: 700, display: "inline-block" }}>
+                  <div style={{ marginTop: 5, padding: "2px 6px", borderRadius: 6, background: best >= 80 ? "rgba(0,200,83,0.18)" : "rgba(255,152,0,0.18)", fontFamily: "var(--font-display)", fontSize: 11, color: best >= 80 ? "var(--color-brand-primary-100)" : "#ffb74d", fontWeight: 700, display: "inline-block" }}>
                     {best >= 80 ? "✓" : "⚠"} {best}%
                   </div>
                 )}
@@ -225,8 +225,8 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
 
         {/* Aantal vragen */}
         <div>
-          <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>
-            Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>
+            Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span>
           </div>
           <div style={{ display: "flex", gap: 6 }}>
             {[5, 10, 15, 20].map(n => (
@@ -235,7 +235,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
                 border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
                 background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
                 color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)",
-                fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
+                fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
               }}>{n}</button>
             ))}
           </div>
@@ -250,8 +250,8 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
             background: selected
               ? "linear-gradient(135deg, #ff6b35, #ff8c42)"
               : "rgba(255,255,255,0.08)",
-            color: selected ? "#fff" : "rgba(255,255,255,0.3)",
-            fontFamily: "'Fredoka', sans-serif",
+            color: selected ? "var(--color-text-strong)" : "rgba(255,255,255,0.3)",
+            fontFamily: "var(--font-display)",
             fontSize: 18, fontWeight: 700, cursor: selected ? "pointer" : "default",
             boxShadow: selected ? "0 4px 20px rgba(255,107,53,0.4)" : "none",
             transition: "all 0.2s ease",
@@ -267,10 +267,10 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
           borderRadius: 12,
           padding: "12px 16px",
         }}>
-          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "rgba(255,107,53,0.9)", marginBottom: 4 }}>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "rgba(255,107,53,0.9)", marginBottom: 4 }}>
             💡 Over de Cito eindtoets
           </div>
-          <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
             De eindtoets wordt gemaakt in groep 8. De vragen zijn op IEP/Cito-stijl:
             meerkeuze over rekenen, taal, begrijpend lezen en wereld oriëntatie.
             Vragen komen uit een vaste vragenbank — geen AI nodig.

@@ -84,7 +84,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             marginBottom: 8, alignSelf: "flex-start",
           }}>
             <span style={{ fontSize: 14 }}>🎓</span>
-            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: schoolTypeColor }}>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: schoolTypeColor }}>
               {profileBadge}
             </span>
           </div>
@@ -97,7 +97,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             borderRadius: 14, padding: "12px 16px", marginBottom: 4,
           }}>
             <span style={{ fontSize: 24 }}>⚠️</span>
-            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "#ffb74d", lineHeight: 1.4 }}>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "#ffb74d", lineHeight: 1.4 }}>
               Speel vandaag om je streak van <strong style={{ color: "#ff9800" }}>{streakWarning} {streakWarning === 1 ? "dag" : "dagen"}</strong> te bewaren!
             </div>
           </div>
@@ -106,8 +106,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           <div style={{ display: "flex", alignItems: "center", gap: 10, background: "linear-gradient(135deg, rgba(255,111,0,0.15), rgba(255,160,0,0.1))", border: "1px solid rgba(255,111,0,0.3)", borderRadius: 14, padding: "12px 16px", marginBottom: 4 }}>
             <span style={{ fontSize: 28 }}>🔥</span>
             <div>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ff9800" }}>{streak} dagen op rij!</div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>Blijf zo doorgaan, je bent op dreef!</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#ff9800" }}>{streak} dagen op rij!</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)" }}>Blijf zo doorgaan, je bent op dreef!</div>
             </div>
           </div>
         )}
@@ -120,10 +120,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           }}>
             <span style={{ fontSize: 26 }}>{weakestSubject.icon}</span>
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#64b5f6" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#64b5f6" }}>
                 💪 {weakestSubject.label} heeft aandacht nodig
               </div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>
                 Gemiddeld {weakestSubject.avg}%
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               style={{
                 padding: "8px 14px", border: "none", borderRadius: 10,
                 background: "linear-gradient(135deg, #1565c0, #0d47a1)",
-                color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", flexShrink: 0,
               }}
             >
@@ -166,7 +166,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
             <span style={{ fontSize: 24 }}>📖</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Zelf oefenen</span>
           </button>
@@ -178,7 +178,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 24 }}>📊</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
           </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, var(--color-brand-primary))" }} onClick={onLeaderboard}>
             <span style={{ fontSize: 24 }}>🏆</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Scorebord</span>
           </button>
@@ -191,10 +191,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <div key={"banner-" + q.id} onClick={() => { SoundEngine.play("click"); onJoinQuiz(q.code); }} style={{ background: "linear-gradient(135deg, #b71c1c, #e53935)", borderRadius: 14, padding: "14px 16px", marginBottom: 12, display: "flex", alignItems: "center", gap: 12, animation: "pulse 2s infinite", cursor: "pointer" }}>
               <span style={{ fontSize: 28 }}>🚨</span>
               <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "#fff" }}>Deadline bijna! {subj?.icon} {q.title}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "var(--color-text-strong)" }}>Deadline bijna! {subj?.icon} {q.title}</div>
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.8)" }}>{daysUntil(q.deadline) === 0 ? "Vandaag de laatste dag!" : "Nog 1 dag — doe het nu!"}</div>
               </div>
-              <span style={{ fontSize: 13, fontWeight: 700, color: "#fff", background: "rgba(0,0,0,0.25)", borderRadius: 8, padding: "6px 10px" }}>Start ›</span>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)", background: "rgba(0,0,0,0.25)", borderRadius: 8, padding: "6px 10px" }}>Start ›</span>
             </div>
           );
         })}
@@ -211,8 +211,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                 <div key={q.id} onClick={() => { if (!done) { SoundEngine.play("click"); onJoinQuiz(q.code); } }} style={{ ...styles.assignmentCard, opacity: done ? 0.6 : 1, cursor: done ? "default" : "pointer" }}>
                   <span style={{ fontSize: 24 }}>{subj?.icon}</span>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontWeight: 700, color: "#e0e6f0" }}>{q.title}</div>
-                    <div style={{ fontSize: 12, color: "#8899aa" }}>
+                    <div style={{ fontWeight: 700, color: "var(--color-text)" }}>{q.title}</div>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted)" }}>
                       Deadline: {formatDate(q.deadline)} · {remaining <= 0 ? "Verlopen!" : `Nog ${remaining} dag${remaining !== 1 ? "en" : ""}`}
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   }}>
                     {r.percentage}%
                   </div>
-                  <span style={{ color: "#8899aa", fontSize: 16, marginLeft: 6 }}>›</span>
+                  <span style={{ color: "var(--color-text-muted)", fontSize: 16, marginLeft: 6 }}>›</span>
                   {onDeleteResult && (
                     <button
                       onClick={(e) => { e.stopPropagation(); onDeleteResult(r.id); }}
