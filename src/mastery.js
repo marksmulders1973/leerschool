@@ -10,6 +10,7 @@
 // per onderwerp. Samen vormen ze de hand-in-hand-loop.
 
 import supabase from "./supabase.js";
+import { getCurrentUserId } from "./auth.js";
 import { QUESTION_PATH_MAP } from "./learnPaths/questionPathMap.generated.js";
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 
@@ -89,6 +90,10 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
   const pathId = pathIdForQuestion(questionText);
   if (!pathId) return null; // geen tag → niets te tellen
 
+  // Auto-fill user_id uit huidige sessie (anon of permanent) zodat strikte
+  // RLS-policy auth.uid() = user_id slaagt.
+  const resolvedUserId = userId || (await getCurrentUserId());
+
   try {
     // Eerst lezen, dan upsert. Niet ideaal qua atomiciteit maar
     // wel simpel + voldoende voor één-leerling-per-sessie.
@@ -115,7 +120,7 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
       next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
-    if (userId) row.user_id = userId;
+    if (resolvedUserId) row.user_id = resolvedUserId;
 
     const { error } = await supabase
       .from("topic_mastery")
@@ -137,6 +142,8 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
 export async function recordAnswerForPath({ playerName, pathId, isCorrect, userId = null }) {
   const player = (playerName || "").trim();
   if (!player || !pathId) return null;
+
+  const resolvedUserId = userId || (await getCurrentUserId());
 
   try {
     const { data: existing } = await supabase
@@ -162,7 +169,7 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
       next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
-    if (userId) row.user_id = userId;
+    if (resolvedUserId) row.user_id = resolvedUserId;
 
     const { error } = await supabase
       .from("topic_mastery")
