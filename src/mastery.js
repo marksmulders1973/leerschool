@@ -32,6 +32,38 @@ export const MASTERY_LABELS = {
   gold: { label: "Goud", emoji: "🥇", color: "#ffd700" },
 };
 
+// ─── Spaced repetition (P1.10) ──────────────────────────────────────────
+// Leitner-light: bij goed antwoord verlengt het interval, bij fout reset
+// het naar 1 dag. Zo komen onderwerpen periodiek terug zolang ze nog
+// niet zijn vastgezet, en blijven 'goud' onderwerpen lang weg.
+//
+// Intervallen in dagen, op basis van streak (aantal opeenvolgende correct).
+const REVIEW_INTERVALS_DAYS = [1, 3, 7, 21, 60, 120];
+
+/**
+ * Bereken hoeveel dagen tot het onderwerp opnieuw geoefend moet worden,
+ * op basis van een (nieuwe) streak en of het laatste antwoord goed was.
+ * - isCorrect=false → altijd 1 dag (reset).
+ * - isCorrect=true  → interval bij streak-positie, met cap.
+ */
+export function nextReviewIntervalDays(streak, isCorrect) {
+  if (!isCorrect) return REVIEW_INTERVALS_DAYS[0];
+  const idx = Math.min(streak, REVIEW_INTERVALS_DAYS.length - 1);
+  return REVIEW_INTERVALS_DAYS[idx];
+}
+
+/**
+ * Compute new streak waarde + next_due_at op basis van vorige streak en
+ * uitkomst. Handig om tests rondom dit onafhankelijk van Supabase te draaien.
+ */
+export function nextSpacedRepetitionState({ prevStreak = 0, isCorrect, now = new Date() }) {
+  const streak = isCorrect ? prevStreak + 1 : 0;
+  const days = nextReviewIntervalDays(streak, isCorrect);
+  const nextDueAt = new Date(now);
+  nextDueAt.setDate(nextDueAt.getDate() + days);
+  return { streak, nextDueAt, intervalDays: days };
+}
+
 // Zoek pathId voor een vraag-tekst (uit pre-getagde map).
 // Returnt null als de vraag niet getagd is.
 export function pathIdForQuestion(questionText) {
@@ -62,19 +94,25 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
     // wel simpel + voldoende voor één-leerling-per-sessie.
     const { data: existing } = await supabase
       .from("topic_mastery")
-      .select("attempts, correct")
+      .select("attempts, correct, streak")
       .eq("player_name", player)
       .eq("path_id", pathId)
       .maybeSingle();
 
     const attempts = (existing?.attempts || 0) + 1;
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
+    const sr = nextSpacedRepetitionState({
+      prevStreak: existing?.streak || 0,
+      isCorrect,
+    });
 
     const row = {
       player_name: player,
       path_id: pathId,
       attempts,
       correct,
+      streak: sr.streak,
+      next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
     if (userId) row.user_id = userId;
@@ -103,19 +141,25 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
   try {
     const { data: existing } = await supabase
       .from("topic_mastery")
-      .select("attempts, correct")
+      .select("attempts, correct, streak")
       .eq("player_name", player)
       .eq("path_id", pathId)
       .maybeSingle();
 
     const attempts = (existing?.attempts || 0) + 1;
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
+    const sr = nextSpacedRepetitionState({
+      prevStreak: existing?.streak || 0,
+      isCorrect,
+    });
 
     const row = {
       player_name: player,
       path_id: pathId,
       attempts,
       correct,
+      streak: sr.streak,
+      next_due_at: sr.nextDueAt.toISOString(),
       last_seen: new Date().toISOString(),
     };
     if (userId) row.user_id = userId;
@@ -127,6 +171,37 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
     return { pathId, attempts, correct, level: getMasteryLevel(attempts, correct) };
   } catch {
     return null;
+  }
+}
+
+/**
+ * Haal onderwerpen op die nu geoefend moeten worden (next_due_at <= now).
+ * Voor de spaced-repetition-feed: deze worden bovenaan gezet in
+ * recommendNextTopic / homepage CTA.
+ */
+export async function loadDueTopics(playerName) {
+  const player = (playerName || "").trim();
+  if (!player) return [];
+  try {
+    const { data } = await supabase
+      .from("topic_mastery")
+      .select("path_id, attempts, correct, streak, last_seen, next_due_at")
+      .eq("player_name", player)
+      .lte("next_due_at", new Date().toISOString())
+      .order("next_due_at", { ascending: true });
+    if (!Array.isArray(data)) return [];
+    return data.map((r) => ({
+      pathId: r.path_id,
+      attempts: r.attempts || 0,
+      correct: r.correct || 0,
+      streak: r.streak || 0,
+      lastSeen: r.last_seen,
+      nextDueAt: r.next_due_at,
+      level: getMasteryLevel(r.attempts || 0, r.correct || 0),
+      path: ALL_LEARN_PATHS[r.path_id] || null,
+    })).filter((r) => r.path);
+  } catch {
+    return [];
   }
 }
 

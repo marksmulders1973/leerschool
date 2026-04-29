@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { getMasteryLevel, recommendNextTopic, MASTERY_LABELS } from "./mastery.js";
+import {
+  getMasteryLevel,
+  recommendNextTopic,
+  MASTERY_LABELS,
+  nextReviewIntervalDays,
+  nextSpacedRepetitionState,
+} from "./mastery.js";
 
 describe("getMasteryLevel", () => {
   it("geeft 'unmeasured' bij 0 pogingen", () => {
@@ -92,5 +98,54 @@ describe("recommendNextTopic", () => {
       { pathId: "b", level: "bronze", lastSeen: oud, attempts: 6, correct: 3 },
     ];
     expect(recommendNextTopic(records).pathId).toBe("b");
+  });
+});
+
+describe("nextReviewIntervalDays", () => {
+  it("fout antwoord → altijd 1 dag, ongeacht streak", () => {
+    expect(nextReviewIntervalDays(0, false)).toBe(1);
+    expect(nextReviewIntervalDays(5, false)).toBe(1);
+    expect(nextReviewIntervalDays(100, false)).toBe(1);
+  });
+
+  it("goed antwoord schaalt op streak: 1, 3, 7, 21, 60, 120", () => {
+    expect(nextReviewIntervalDays(0, true)).toBe(1);
+    expect(nextReviewIntervalDays(1, true)).toBe(3);
+    expect(nextReviewIntervalDays(2, true)).toBe(7);
+    expect(nextReviewIntervalDays(3, true)).toBe(21);
+    expect(nextReviewIntervalDays(4, true)).toBe(60);
+    expect(nextReviewIntervalDays(5, true)).toBe(120);
+  });
+
+  it("clipt op maximum (5+ streak blijft 120 dagen)", () => {
+    expect(nextReviewIntervalDays(10, true)).toBe(120);
+    expect(nextReviewIntervalDays(50, true)).toBe(120);
+  });
+});
+
+describe("nextSpacedRepetitionState", () => {
+  it("correct antwoord verhoogt streak, fout reset naar 0", () => {
+    const a = nextSpacedRepetitionState({ prevStreak: 3, isCorrect: true });
+    expect(a.streak).toBe(4);
+
+    const b = nextSpacedRepetitionState({ prevStreak: 5, isCorrect: false });
+    expect(b.streak).toBe(0);
+  });
+
+  it("nextDueAt is now + intervalDays (eerste correct → streak 1 = 3 dagen)", () => {
+    const fixed = new Date("2026-04-29T10:00:00Z");
+    const r = nextSpacedRepetitionState({ prevStreak: 0, isCorrect: true, now: fixed });
+    // prevStreak 0 + correct → nieuwe streak 1 → REVIEW_INTERVALS_DAYS[1] = 3 dagen.
+    expect(r.intervalDays).toBe(3);
+    const expected = new Date(fixed);
+    expected.setDate(expected.getDate() + 3);
+    expect(r.nextDueAt.toISOString()).toBe(expected.toISOString());
+  });
+
+  it("fout antwoord met hoge streak resets naar 1 dag", () => {
+    const fixed = new Date("2026-04-29T10:00:00Z");
+    const r = nextSpacedRepetitionState({ prevStreak: 4, isCorrect: false, now: fixed });
+    expect(r.streak).toBe(0);
+    expect(r.intervalDays).toBe(1);
   });
 });
