@@ -686,19 +686,25 @@ export default function App() {
           onHome={() => { setLearnFilterSubject(null); setPage("home"); }}
         />
       )}
-      {page === "my-mastery" && (
-        <MyMastery
-          userName={userName}
-          onPickPath={(id) => {
-            setActiveLearnPathId(id);
-            setActiveLearnStepIdx(null);
-            setLearnPathReturnPage("my-mastery");
-            setPage("learn-path");
-          }}
-          onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
-        />
-      )}
+      {page === "my-mastery" && (() => {
+        // P1.10 deel 2b: ouder-zicht via URL ?leerling=Sara — alleen lezen.
+        const params = new URLSearchParams(location.search);
+        const viewedPlayer = (params.get("leerling") || "").trim() || null;
+        return (
+          <MyMastery
+            userName={userName}
+            viewedPlayer={viewedPlayer}
+            onPickPath={(id) => {
+              setActiveLearnPathId(id);
+              setActiveLearnStepIdx(null);
+              setLearnPathReturnPage("my-mastery");
+              setPage("learn-path");
+            }}
+            onBack={() => setPage("home")}
+            onHome={() => setPage("home")}
+          />
+        );
+      })()}
       {page === "learn-meebezig" && meeBezigCategory && (() => {
         const allCats = [...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO];
         const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };

@@ -4,10 +4,20 @@ import styles from "../styles.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery.js";
 import { SUBJECTS as SUBJECT_LABELS } from "../shared/subjects.js";
 
-export default function MyMastery({ userName, onPickPath, onBack, onHome }) {
+/**
+ * MyMastery — voortgangs-pagina.
+ *
+ * Twee modi:
+ *   1. Eigen leerling-zicht: gebruikt `userName` uit App-state.
+ *   2. Ouder-zicht (P1.10 deel 2b): als `viewedPlayer` is doorgegeven,
+ *      toont het de mastery van die naam met een 'ouder-modus'-banner.
+ *      Onderwerpen zijn niet klikbaar — read-only voor de ouder.
+ */
+export default function MyMastery({ userName, viewedPlayer, onPickPath, onBack, onHome }) {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
-  const player = (userName || "").trim();
+  const isParentView = !!viewedPlayer;
+  const player = (viewedPlayer || userName || "").trim();
 
   useEffect(() => {
     let cancelled = false;
@@ -36,15 +46,34 @@ export default function MyMastery({ userName, onPickPath, onBack, onHome }) {
   return (
     <div style={styles.page}>
       <Header
-        title={`📈 Mijn voortgang`}
-        subtitle={player ? `Hi ${player}` : "Voer eerst een naam in"}
+        title={isParentView ? "👨‍👩‍👧 Voortgang" : "📈 Mijn voortgang"}
+        subtitle={isParentView ? `Voortgang van ${player}` : (player ? `Hi ${player}` : "Voer eerst een naam in")}
         onBack={onBack}
         onHome={onHome}
       />
       <div style={styles.content}>
+        {isParentView && (
+          <div
+            style={{
+              padding: "10px 14px",
+              borderRadius: 12,
+              background: "rgba(0, 212, 255, 0.10)",
+              border: "1px solid rgba(0, 212, 255, 0.40)",
+              color: "#80deea",
+              fontFamily: "var(--font-body, 'Nunito')",
+              fontSize: 13,
+              marginBottom: 14,
+              textAlign: "center",
+            }}
+          >
+            👀 <strong>Ouder-zicht</strong> — alleen lezen, je kunt zelf geen oefening starten.
+          </div>
+        )}
         {!player && (
           <div style={info()}>
-            Vul eerst je naam in (op de startpagina) om je voortgang bij te houden.
+            {isParentView
+              ? "Geen leerling-naam in URL. Geef bv. ?leerling=Sara mee."
+              : "Vul eerst je naam in (op de startpagina) om je voortgang bij te houden."}
           </div>
         )}
 
@@ -83,7 +112,7 @@ export default function MyMastery({ userName, onPickPath, onBack, onHome }) {
             </div>
 
             {/* Aanbeveling */}
-            {recommended && onPickPath && (
+            {recommended && onPickPath && !isParentView && (
               <button
                 onClick={() => onPickPath(recommended.pathId)}
                 style={{
@@ -141,7 +170,8 @@ export default function MyMastery({ userName, onPickPath, onBack, onHome }) {
                     return (
                       <button
                         key={r.pathId}
-                        onClick={() => onPickPath && onPickPath(r.pathId)}
+                        onClick={() => !isParentView && onPickPath && onPickPath(r.pathId)}
+                        disabled={isParentView}
                         style={{
                           width: "100%",
                           marginBottom: 8,
