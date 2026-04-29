@@ -86,11 +86,29 @@ function RecommendedCard({ player, record, onPickPath }) {
   const meta = MASTERY_LABELS[record.level];
   const subj = subjectMeta(path.subject);
   const pct = record.attempts > 0 ? Math.round((record.correct / record.attempts) * 100) : 0;
+  const isRefresher = record.reason === "due";
 
   const handleClick = () => {
-    track("home_mastery_cta_click", { pathId: record.pathId, level: record.level });
+    track("home_mastery_cta_click", {
+      pathId: record.pathId,
+      level: record.level,
+      reason: record.reason || "level",
+    });
     onPickPath?.(record.pathId);
   };
+
+  // Refresher (spaced-rep due) krijgt warmere kleur als visuele variatie.
+  const gradient = isRefresher
+    ? "linear-gradient(135deg, #ef6c00, #b71c1c)"
+    : "linear-gradient(135deg, var(--color-primary), var(--color-primary-dark))";
+  const borderColor = isRefresher ? "#b71c1c" : "var(--color-primary-dark)";
+
+  const eyebrow = isRefresher
+    ? `🔁 Tijd voor refresher, ${player}:`
+    : `Vandaag, ${player}:`;
+  const subText = isRefresher
+    ? `Eerder ${meta.emoji} ${meta.label}${record.attempts > 0 ? ` — ${pct}% goed` : ""} · opnieuw oefenen`
+    : `${meta.emoji} ${meta.label}${record.attempts > 0 ? ` — ${record.correct}/${record.attempts} (${pct}%)` : ""}`;
 
   return (
     <button
@@ -101,9 +119,8 @@ function RecommendedCard({ player, record, onPickPath }) {
         marginBottom: "var(--space-4)",
         padding: "var(--space-4)",
         borderRadius: "var(--radius-xl)",
-        border: "1px solid var(--color-primary-dark)",
-        background:
-          "linear-gradient(135deg, var(--color-primary), var(--color-primary-dark))",
+        border: `1px solid ${borderColor}`,
+        background: gradient,
         color: "var(--color-text-strong)",
         cursor: "pointer",
         textAlign: "left",
@@ -126,11 +143,11 @@ function RecommendedCard({ player, record, onPickPath }) {
         <div
           style={{
             fontSize: "var(--font-size-xs)",
-            opacity: 0.85,
+            opacity: 0.9,
             marginBottom: 2,
           }}
         >
-          Vandaag, {player}:
+          {eyebrow}
         </div>
         <div
           style={{
@@ -149,8 +166,7 @@ function RecommendedCard({ player, record, onPickPath }) {
             opacity: 0.92,
           }}
         >
-          {meta.emoji} {meta.label}
-          {record.attempts > 0 && ` — ${record.correct}/${record.attempts} (${pct}%)`}
+          {subText}
         </div>
       </div>
       <span style={{ fontSize: 22, opacity: 0.85 }}>›</span>

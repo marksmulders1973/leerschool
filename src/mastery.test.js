@@ -101,6 +101,52 @@ describe("recommendNextTopic", () => {
   });
 });
 
+describe("recommendNextTopic — spaced-rep due-prioriteit", () => {
+  const fixed = new Date("2026-04-29T10:00:00Z");
+  const past = "2026-04-25T10:00:00Z";
+  const future = "2026-05-30T10:00:00Z";
+
+  it("kiest een due-record boven een niet-due-record", () => {
+    const records = [
+      { pathId: "niet-due", level: "bronze", lastSeen: past, attempts: 5, correct: 2, nextDueAt: future },
+      { pathId: "wel-due", level: "silver", lastSeen: past, attempts: 8, correct: 6, nextDueAt: past },
+    ];
+    const r = recommendNextTopic(records, fixed);
+    expect(r.pathId).toBe("wel-due");
+    expect(r.reason).toBe("due");
+  });
+
+  it("kiest oudste due bij meerdere due-records", () => {
+    const olderDue = "2026-04-20T10:00:00Z";
+    const newerDue = "2026-04-27T10:00:00Z";
+    const records = [
+      { pathId: "newer", level: "bronze", lastSeen: past, attempts: 5, correct: 2, nextDueAt: newerDue },
+      { pathId: "older", level: "silver", lastSeen: past, attempts: 8, correct: 6, nextDueAt: olderDue },
+    ];
+    const r = recommendNextTopic(records, fixed);
+    expect(r.pathId).toBe("older");
+  });
+
+  it("een goud onderwerp dat due is komt óók terug (forgetting curve)", () => {
+    const records = [
+      { pathId: "goud-vergeten", level: "gold", lastSeen: past, attempts: 12, correct: 12, nextDueAt: past },
+    ];
+    const r = recommendNextTopic(records, fixed);
+    expect(r.pathId).toBe("goud-vergeten");
+    expect(r.reason).toBe("due");
+  });
+
+  it("zonder due-records valt het terug op niveau-basis", () => {
+    const records = [
+      { pathId: "silver", level: "silver", lastSeen: past, attempts: 8, correct: 6, nextDueAt: future },
+      { pathId: "bronze", level: "bronze", lastSeen: past, attempts: 5, correct: 2, nextDueAt: future },
+    ];
+    const r = recommendNextTopic(records, fixed);
+    expect(r.pathId).toBe("bronze");
+    expect(r.reason).toBe("level");
+  });
+});
+
 describe("nextReviewIntervalDays", () => {
   it("fout antwoord → altijd 1 dag, ongeacht streak", () => {
     expect(nextReviewIntervalDays(0, false)).toBe(1);

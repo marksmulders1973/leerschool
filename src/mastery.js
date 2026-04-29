@@ -220,7 +220,7 @@ export async function loadMasteryForPlayer(playerName) {
   try {
     const { data } = await supabase
       .from("topic_mastery")
-      .select("path_id, attempts, correct, last_seen")
+      .select("path_id, attempts, correct, last_seen, next_due_at, streak")
       .eq("player_name", player)
       .order("last_seen", { ascending: false });
     if (!Array.isArray(data)) return [];
@@ -228,7 +228,9 @@ export async function loadMasteryForPlayer(playerName) {
       pathId: r.path_id,
       attempts: r.attempts || 0,
       correct: r.correct || 0,
+      streak: r.streak || 0,
       lastSeen: r.last_seen,
+      nextDueAt: r.next_due_at,
       level: getMasteryLevel(r.attempts || 0, r.correct || 0),
       path: ALL_LEARN_PATHS[r.path_id] || null,
     })).filter((r) => r.path); // filter records waarvan pad niet meer bestaat
@@ -237,18 +239,38 @@ export async function loadMasteryForPlayer(playerName) {
   }
 }
 
-// Onderwerp dat als "volgende stap" aanbevolen kan worden:
-// laagste mastery (excl. goud), recent niet bezig.
-export function recommendNextTopic(masteryRecords) {
+/**
+ * Onderwerp dat als "volgende stap" aanbevolen kan worden.
+ *
+ * Volgorde van prioriteit (P1.10):
+ *   1. **Due-records** (next_due_at <= now): spaced-rep zegt dat dit
+ *      onderwerp opnieuw moet worden geoefend. Oudst-due eerst.
+ *      Goud-onderwerpen die due zijn doen óók mee — vergeten is mogelijk.
+ *   2. Niet-due records met laagste niveau (unmeasured > bronze > silver),
+ *      bij gelijk niveau oudste lastSeen eerst. Goud-onderwerpen zonder
+ *      due-status worden hier overgeslagen.
+ */
+export function recommendNextTopic(masteryRecords, now = new Date()) {
   if (!Array.isArray(masteryRecords) || masteryRecords.length === 0) return null;
-  const candidates = masteryRecords.filter((r) => r.level !== "gold");
-  if (candidates.length === 0) return null;
-  // Sorteer op: brons/unmeasured eerst, dan zilver. Daarbinnen op laatste-keer (oudste eerst).
+  const nowMs = now instanceof Date ? now.getTime() : new Date(now).getTime();
+
+  const isDue = (r) => r.nextDueAt && new Date(r.nextDueAt).getTime() <= nowMs;
+
+  // 1. Due-records eerst — alle niveaus (ook goud, want vergeten kan).
+  const due = masteryRecords.filter(isDue);
+  if (due.length > 0) {
+    due.sort((a, b) => new Date(a.nextDueAt) - new Date(b.nextDueAt));
+    return { ...due[0], reason: "due" };
+  }
+
+  // 2. Niet-due, niet-goud — laagste niveau eerst.
   const order = { unmeasured: 0, bronze: 1, silver: 2, gold: 3 };
+  const candidates = masteryRecords.filter((r) => r.level !== "gold" && !isDue(r));
+  if (candidates.length === 0) return null;
   candidates.sort((a, b) => {
     const lvl = order[a.level] - order[b.level];
     if (lvl !== 0) return lvl;
     return new Date(a.lastSeen) - new Date(b.lastSeen);
   });
-  return candidates[0];
+  return { ...candidates[0], reason: "level" };
 }
