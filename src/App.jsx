@@ -56,6 +56,7 @@ const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
+const ObliteratorV2 = lazy(() => import("./games/obliterator/ObliteratorV2.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const LearnPath = lazy(() => import("./components/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./components/LearnPathsHub.jsx"));
@@ -778,6 +779,30 @@ export default function App() {
           wrongQuestions={[]}
           vanDeelLink={false}
           onClose={() => setPage("home")}
+        />
+      )}
+      {page === "obliterator-v2" && (
+        <ObliteratorV2
+          playerName={userName || "Speler"}
+          onClose={() => setPage("home")}
+          onScoreSubmit={({ score, level, bestCombo, obliterates }) => {
+            // Hergebruik bestaande obliterator_scores-tabel met _v2-suffix in level-veld
+            // zodat we beide naast elkaar kunnen tracken zonder schema-wijziging.
+            try {
+              supabase
+                .from("obliterator_scores")
+                .insert({
+                  player_name: userName || "Speler",
+                  score,
+                  level: `v2-${level}`,
+                  user_id: authUser?.id || null,
+                })
+                .then(() => {})
+                .catch(() => {});
+            } catch {
+              // ignore
+            }
+          }}
         />
       )}
       {page === "home" && (

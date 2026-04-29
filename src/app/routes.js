@@ -37,6 +37,7 @@ export const PAGE_TO_PATH = {
   play: "/quiz",
   results: "/resultaat",
   obliterator: "/obliterator",
+  "obliterator-v2": "/obliterator-v2",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",
