@@ -16,40 +16,46 @@ import {
 } from "./systems/difficulty.js";
 import { loadUnlocked, processEvent } from "./systems/achievements.js";
 import { themeForLevel } from "./data/themes.js";
+import { playSound, unlockAudio, setMuted, isMuted } from "./audio.js";
+import supabase from "../../supabase.js";
 
 const CANVAS_W = 360;
 const CANVAS_H = 540;
+const HIGH_SCORE_KEY = "obliterator_v2_highscore";
 
 /**
- * OBLITERATOR V2 — modulair runner-game.
+ * OBLITERATOR V2 — modulaire runner-game met polish:
+ * audio, power-ups echt aangesloten, start-scherm, countdown,
+ * combo-tier flash, obliterate-window hint, leaderboard.
  *
- * Mechanic:
- *   - Tap = jump (één knop).
- *   - Obstakel net passeren met recente tap = OBLITERATE → +50, combo+2.
- *   - Obstakel passeren zonder perfect timing = JUMP → +10, combo+1.
- *   - Hit = life -1, combo reset.
- *
- * State zit in refs voor performance — React state alleen voor HUD, pause,
- * gameover en achievement-toasts.
+ * Phases: "start" | "countdown" | "playing" | "paused" | "gameover"
  */
 export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreSubmit }) {
   const canvasRef = useRef(null);
   const stateRef = useRef(null);
-  const pausedRef = useRef(false);
-  const gameOverRef = useRef(false);
+  const phaseRef = useRef("start");
   const unlockedRef = useRef(loadUnlocked());
 
+  const [phase, setPhase] = useState("start");
   const [hud, setHud] = useState({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
-  const [paused, setPaused] = useState(false);
-  const [gameOver, setGameOver] = useState(false);
   const [achievementToast, setAchievementToast] = useState(null);
+  const [tierFlash, setTierFlash] = useState(null);
+  const [muted, setMutedState] = useState(false);
+  const [highScore, setHighScore] = useState(() => {
+    try { return parseInt(localStorage.getItem(HIGH_SCORE_KEY) || "0", 10) || 0; }
+    catch { return 0; }
+  });
+  const [countdown, setCountdown] = useState(3);
 
-  // Init state op mount
+  // Sync phase met ref voor de game loop
+  useEffect(() => { phaseRef.current = phase; }, [phase]);
+
+  // Init state on mount
   useEffect(() => {
     stateRef.current = createGameState();
   }, []);
 
-  // Game loop
+  // ───────────────────────── Game loop ─────────────────────────
   useEffect(() => {
     let raf;
     let lastSpawnTime = 0;
@@ -61,26 +67,42 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
         raf = requestAnimationFrame(tick);
         return;
       }
+      const ph = phaseRef.current;
 
-      // Pauze + game-over respecteren
-      if (pausedRef.current || gameOverRef.current) {
+      // Render altijd — ook in pause/start zodat scherm leeft
+      if (ph !== "playing") {
+        // Particles blijven nog kort doorlopen voor visuele continuïteit
+        s.particles = s.particles
+          .map((p) => ({ ...p, x: p.x + p.vx, y: p.y + p.vy, life: p.life - 1, vy: p.vy + 0.3 }))
+          .filter((p) => p.life > 0);
+        if (s.shake > 0) s.shake = Math.max(0, s.shake - 0.6);
+        render(canvasRef.current, s, /*hintHighlight*/ null);
         raf = requestAnimationFrame(tick);
         return;
       }
 
-      // ─── Update ─────────────────────────────────────
+      // ─── Update (alleen tijdens playing) ─────────────────
       const newLevel = levelFromScore(s.score);
       if (newLevel !== s.level) {
         s.level = newLevel;
         s.theme = themeForLevel(newLevel);
         emitParticles(s, "level_up", PHYSICS.playerX + 20, s.player.y);
+        playSound("level_up");
         const ach = processEvent({ type: "level_up" }, s, unlockedRef.current);
         if (ach.length) showAchievement(ach[0]);
       }
-      const speed = speedFor(s.level);
 
-      // Input → physics
+      // Power-up modifiers
+      const now = performance.now();
+      const slowmoActive = now < s.slowmoUntil;
+      const multBoostActive = now < s.multiplierBoostUntil;
+      const speed = speedFor(s.level) * (slowmoActive ? 0.5 : 1);
+
+      // Input → physics. Speel jump-sound alleen als de tap daadwerkelijk
+      // resulteerde in een sprong (op de grond stond + getapt).
+      const willJump = s.input.tapped && s.player.onGround;
       updatePlayer(s.player, s.input);
+      if (willJump) playSound("jump");
       s.input.tapped = false;
 
       // Spawn
@@ -92,13 +114,20 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       }
 
       // Move + collide obstakels
+      let hintObstacle = null; // dichtsbijzijnde obstakel in obliterate-zone
       for (const o of s.obstacles) {
         o.x -= speed;
         if (o.dy) {
-          // Moving obstakel — sinusvormig op en neer
           o.phase = (o.phase || 0) + 0.07;
           o.y = o.baseY + Math.sin(o.phase) * 24;
         }
+
+        // Visual hint: obstakel binnen "perfecte zone" 0-50px voor player en speler kan jumpen
+        const dx = o.x - PHYSICS.playerX;
+        if (!o.scored && dx > -20 && dx < 60 && (!hintObstacle || dx < hintObstacle.x - PHYSICS.playerX)) {
+          hintObstacle = o;
+        }
+
         const result = resolveCollision(s.player, o);
         if (result === "hit") {
           handleHit(s, o);
@@ -108,15 +137,15 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           }
           o.scored = true;
         } else if (result === "obliterate") {
-          handleObliterate(s, o);
+          handleObliterate(s, o, multBoostActive);
         } else if (result === "jump") {
-          handleJump(s);
+          handleJump(s, multBoostActive);
           o.scored = true;
         }
       }
       s.obstacles = s.obstacles.filter((o) => o.x > -50 && !o.dead);
 
-      // Move + pickup powerups
+      // Power-ups
       for (const p of s.powerups) {
         p.x -= speed;
         if (pickupCollision(s.player, p)) {
@@ -126,35 +155,31 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       }
       s.powerups = s.powerups.filter((p) => p.x > -50 && !p.dead);
 
-      // Move + pickup sterren
+      // Sterren
       for (const star of s.stars) {
         star.x -= speed;
         if (pickupCollision(s.player, star)) {
-          s.score += pointsFor("collect", s.combo);
+          const earned = pointsFor("collect", s.combo) * (multBoostActive ? 2 : 1);
+          s.score += earned;
           emitParticles(s, "collect", star.x, star.y);
+          playSound("collect");
           star.dead = true;
         }
       }
       s.stars = s.stars.filter((st) => st.x > -50 && !st.dead);
 
-      // Particles tick
+      // Particles
       s.particles = s.particles
-        .map((p) => ({
-          ...p,
-          x: p.x + p.vx,
-          y: p.y + p.vy,
-          life: p.life - 1,
-          vy: p.vy + 0.3,
-        }))
+        .map((p) => ({ ...p, x: p.x + p.vx, y: p.y + p.vy, life: p.life - 1, vy: p.vy + 0.3 }))
         .filter((p) => p.life > 0);
 
       // Schermshake decay
       if (s.shake > 0) s.shake = Math.max(0, s.shake - 0.6);
 
       // ─── Render ─────────────────────────────────────
-      render(canvasRef.current, s);
+      render(canvasRef.current, s, hintObstacle);
 
-      // HUD update — niet elke frame, dat is overkill
+      // HUD update — niet elke frame
       if (ts - lastHudPush > 100) {
         setHud({
           score: Math.floor(s.score),
@@ -162,6 +187,9 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           level: s.level,
           lives: s.lives,
           mult: multiplierFor(s.combo).mult,
+          slowmoActive,
+          multBoostActive,
+          shieldActive: s.shieldActive,
         });
         lastHudPush = ts;
       }
@@ -173,27 +201,28 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     return () => cancelAnimationFrame(raf);
   }, []);
 
-  // Sync paused/gameOver state met refs zodat de loop ze ziet
-  useEffect(() => {
-    pausedRef.current = paused;
-  }, [paused]);
-  useEffect(() => {
-    gameOverRef.current = gameOver;
-  }, [gameOver]);
-
-  // Input handling — touch + mouse + spatie/pijl-omhoog
+  // ─── Input ───────────────────────────────────────────
   useEffect(() => {
     const handleTap = (e) => {
       e.preventDefault();
-      if (stateRef.current && !pausedRef.current && !gameOverRef.current) {
-        stateRef.current.input.tapped = true;
+      unlockAudio();
+
+      // Phase-aware: start → countdown, countdown → wachten, playing → jump
+      if (phaseRef.current === "start") {
+        startCountdown();
+        return;
       }
+      if (phaseRef.current !== "playing") return;
+      if (stateRef.current) stateRef.current.input.tapped = true;
     };
     const handleKey = (e) => {
       if (e.code === "Space" || e.code === "ArrowUp") {
         handleTap(e);
       } else if (e.code === "Escape") {
-        setPaused((p) => !p);
+        if (phaseRef.current === "playing") setPhase("paused");
+        else if (phaseRef.current === "paused") setPhase("playing");
+      } else if (e.code === "KeyM") {
+        toggleMute();
       }
     };
     window.addEventListener("keydown", handleKey);
@@ -207,23 +236,61 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     };
   }, []);
 
-  // ─── Event-handlers (muteren state direct) ──────────────────
-  function handleObliterate(s, obstacle) {
-    s.score += pointsFor("obliterate", s.combo);
+  // ─── Phase-handlers ──────────────────────────────────
+  function startCountdown() {
+    setPhase("countdown");
+    setCountdown(3);
+    playSound("countdown");
+    let n = 3;
+    const id = setInterval(() => {
+      n--;
+      if (n > 0) {
+        setCountdown(n);
+        playSound("countdown");
+      } else {
+        clearInterval(id);
+        playSound("start");
+        setPhase("playing");
+      }
+    }, 700);
+  }
+
+  function restart() {
+    stateRef.current = createGameState();
+    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+    setPhase("start");
+  }
+
+  function toggleMute() {
+    const next = !isMuted();
+    setMuted(next);
+    setMutedState(next);
+  }
+
+  // ─── Event-handlers (muteren state direct) ──────────
+  function handleObliterate(s, obstacle, multBoost) {
+    const prevMult = multiplierFor(s.combo).mult;
+    const earned = pointsFor("obliterate", s.combo) * (multBoost ? 2 : 1);
+    s.score += earned;
     s.combo += 2;
     s.bestCombo = Math.max(s.bestCombo, s.combo);
     s.totalObliterates++;
     obstacle.dead = true;
     emitParticles(s, "obliterate", obstacle.x, obstacle.y);
     s.shake = 6;
+    playSound("obliterate");
+    checkTierFlash(prevMult, s.combo);
     const ach = processEvent({ type: "obliterate" }, s, unlockedRef.current);
     if (ach.length) showAchievement(ach[0]);
   }
 
-  function handleJump(s) {
-    s.score += pointsFor("jump", s.combo);
+  function handleJump(s, multBoost) {
+    const prevMult = multiplierFor(s.combo).mult;
+    const earned = pointsFor("jump", s.combo) * (multBoost ? 2 : 1);
+    s.score += earned;
     s.combo += 1;
     s.bestCombo = Math.max(s.bestCombo, s.combo);
+    checkTierFlash(prevMult, s.combo);
     const ach = processEvent({ type: "jump" }, s, unlockedRef.current);
     if (ach.length) showAchievement(ach[0]);
   }
@@ -233,30 +300,55 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       s.shieldActive = false;
       emitParticles(s, "shield", PHYSICS.playerX, s.player.y);
       obstacle.dead = true;
+      playSound("powerup"); // shield-pop
       return;
     }
     s.lives = Math.max(0, s.lives - 1);
     s.combo = 0;
     s.shake = 14;
     emitParticles(s, "hit", obstacle.x, obstacle.y);
+    playSound("hit");
   }
 
   function handlePowerup(s, p) {
     s.score += pointsFor("powerup", s.combo);
     emitParticles(s, "powerup", p.x, p.y);
+    playSound("powerup");
     if (p.kind === "shield") s.shieldActive = true;
     else if (p.kind === "slowmo") s.slowmoUntil = performance.now() + 3000;
     else if (p.kind === "multiplier") s.multiplierBoostUntil = performance.now() + 5000;
   }
 
+  function checkTierFlash(prevMult, newCombo) {
+    const newMult = multiplierFor(newCombo).mult;
+    if (newMult > prevMult) {
+      const tier = multiplierFor(newCombo);
+      setTierFlash({ text: tier.label || `×${tier.mult}`, t: Date.now() });
+      playSound("combo_tier");
+      setTimeout(() => setTierFlash(null), 1200);
+    }
+  }
+
   function triggerGameOver(s) {
-    gameOverRef.current = true;
-    setGameOver(true);
+    const finalScore = Math.floor(s.score);
+    playSound("game_over");
+    // High-score lokaal bijwerken
+    let wasNewHigh = false;
+    try {
+      const prev = parseInt(localStorage.getItem(HIGH_SCORE_KEY) || "0", 10) || 0;
+      if (finalScore > prev) {
+        localStorage.setItem(HIGH_SCORE_KEY, String(finalScore));
+        setHighScore(finalScore);
+        wasNewHigh = true;
+      }
+    } catch {}
+    setPhase("gameover");
     onScoreSubmit?.({
-      score: Math.floor(s.score),
+      score: finalScore,
       level: s.level,
       bestCombo: s.bestCombo,
       obliterates: s.totalObliterates,
+      isNewHigh: wasNewHigh,
     });
   }
 
@@ -265,13 +357,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
     setTimeout(() => setAchievementToast(null), 2400);
   }
 
-  function restart() {
-    stateRef.current = createGameState();
-    gameOverRef.current = false;
-    setGameOver(false);
-    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
-  }
-
+  // ────────────────────────────────────────────────────
   return (
     <div
       style={{
@@ -297,22 +383,41 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
         }}
       />
-      <HUD {...hud} onPause={() => setPaused(true)} onClose={onClose} />
-      {paused && <PauseMenu onResume={() => setPaused(false)} onQuit={onClose} />}
-      {gameOver && (
+
+      {/* HUD — alleen tijdens playing/paused */}
+      {(phase === "playing" || phase === "paused") && (
+        <HUD
+          {...hud}
+          highScore={highScore}
+          muted={muted}
+          onPause={() => setPhase("paused")}
+          onMute={toggleMute}
+        />
+      )}
+
+      {phase === "start" && <StartScreen highScore={highScore} onTap={startCountdown} />}
+      {phase === "countdown" && <CountdownOverlay n={countdown} />}
+      {phase === "paused" && (
+        <PauseMenu onResume={() => setPhase("playing")} onQuit={onClose} />
+      )}
+      {phase === "gameover" && (
         <GameOverScreen
           score={hud.score}
           level={hud.level}
+          highScore={highScore}
+          isNewHigh={hud.score >= highScore && hud.score > 0}
+          playerName={playerName}
           onReplay={restart}
           onClose={onClose}
         />
       )}
+      {tierFlash && <TierFlash text={tierFlash.text} />}
       {achievementToast && <AchievementToast {...achievementToast} />}
     </div>
   );
 }
 
-// ═══════════════════════ Helpers ═══════════════════════
+// ═══════════════════════ Game state ═══════════════════════
 
 function createGameState() {
   return {
@@ -396,13 +501,14 @@ function emitParticles(s, kind, x = PHYSICS.playerX, y = 200) {
   }
 }
 
-function render(canvas, s) {
+// ═══════════════════════ Render ═══════════════════════
+
+function render(canvas, s, hintObstacle) {
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
   const W = canvas.width;
   const H = canvas.height;
 
-  // Schermshake
   const shx = (Math.random() - 0.5) * s.shake;
   const shy = (Math.random() - 0.5) * s.shake;
   ctx.save();
@@ -414,6 +520,12 @@ function render(canvas, s) {
   grd.addColorStop(1, s.theme.bg[1]);
   ctx.fillStyle = grd;
   ctx.fillRect(0, 0, W, H);
+
+  // Slowmo-tint
+  if (performance.now() < s.slowmoUntil) {
+    ctx.fillStyle = "rgba(171, 71, 188, 0.18)";
+    ctx.fillRect(0, 0, W, H);
+  }
 
   // Grond
   ctx.fillStyle = s.theme.ground;
@@ -449,6 +561,16 @@ function render(canvas, s) {
 
   // Obstakels
   for (const o of s.obstacles) {
+    const isHint = o === hintObstacle;
+    if (isHint) {
+      // Ring rondom obstakel
+      ctx.strokeStyle = "#ffeb3b";
+      ctx.lineWidth = 3;
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#ffeb3b";
+      ctx.strokeRect(o.x - 4, o.y - 4, o.w + 8, o.h + 8);
+      ctx.shadowBlur = 0;
+    }
     ctx.fillStyle = s.theme.obstacle;
     if (o.type === "spike") {
       ctx.beginPath();
@@ -459,10 +581,8 @@ function render(canvas, s) {
       ctx.fill();
     } else {
       ctx.fillRect(o.x, o.y, o.w, o.h);
-      // Highlight bovenkant voor diepte
       ctx.fillStyle = "rgba(255,255,255,0.2)";
       ctx.fillRect(o.x, o.y, o.w, 3);
-      ctx.fillStyle = s.theme.obstacle;
     }
   }
 
@@ -497,6 +617,21 @@ function render(canvas, s) {
     ctx.stroke();
   }
 
+  // Multiplier-glow
+  if (performance.now() < s.multiplierBoostUntil) {
+    ctx.strokeStyle = "#ffd54f";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.arc(
+      PHYSICS.playerX + PHYSICS.playerSize / 2,
+      s.player.y + PHYSICS.playerSize / 2,
+      PHYSICS.playerSize / 2 + 10,
+      0,
+      Math.PI * 2
+    );
+    ctx.stroke();
+  }
+
   // Particles
   for (const p of s.particles) {
     ctx.globalAlpha = Math.max(0, p.life / 30);
@@ -510,7 +645,7 @@ function render(canvas, s) {
 
 // ═══════════════════════ UI ═══════════════════════
 
-function HUD({ score, combo, level, lives, mult, onPause, onClose }) {
+function HUD({ score, combo, level, lives, mult, slowmoActive, multBoostActive, shieldActive, highScore, muted, onPause, onMute }) {
   return (
     <div
       style={{
@@ -528,16 +663,18 @@ function HUD({ score, combo, level, lives, mult, onPause, onClose }) {
     >
       <div>
         <div style={{ fontSize: 28, fontWeight: 900, textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}>{score}</div>
-        <div style={{ fontSize: 12, opacity: 0.9 }}>Lvl {level}</div>
+        <div style={{ fontSize: 11, opacity: 0.85, textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>
+          Lvl {level} · top {highScore}
+        </div>
       </div>
-      <div style={{ textAlign: "center", flex: 1 }}>
+      <div style={{ textAlign: "center", flex: 1, marginTop: 2 }}>
         {combo > 0 && (
           <div
             style={{
               display: "inline-block",
-              padding: "4px 12px",
+              padding: "4px 14px",
               borderRadius: 999,
-              background: "rgba(0,0,0,0.55)",
+              background: "rgba(0,0,0,0.6)",
               fontSize: 16,
               fontWeight: 700,
               color: mult > 1 ? "#ffd54f" : "#fff",
@@ -547,30 +684,85 @@ function HUD({ score, combo, level, lives, mult, onPause, onClose }) {
             🔥 {combo} {mult > 1 && `×${mult}`}
           </div>
         )}
+        {/* Power-up icons */}
+        <div style={{ marginTop: 4, display: "flex", gap: 4, justifyContent: "center" }}>
+          {shieldActive && <PuIcon emoji="🛡" />}
+          {slowmoActive && <PuIcon emoji="⏱" />}
+          {multBoostActive && <PuIcon emoji="✨" />}
+        </div>
       </div>
       <div style={{ display: "flex", gap: 4, alignItems: "center", pointerEvents: "auto" }}>
         {Array.from({ length: 3 }).map((_, i) => (
           <span key={i} style={{ fontSize: 16, opacity: i < lives ? 1 : 0.2 }}>❤️</span>
         ))}
         <button
-          onClick={onPause}
-          aria-label="Pauze"
-          style={{
-            marginLeft: 8,
-            background: "rgba(0,0,0,0.5)",
-            color: "#fff",
-            border: "none",
-            borderRadius: 8,
-            width: 32,
-            height: 32,
-            cursor: "pointer",
-            fontSize: 14,
-          }}
+          onClick={onMute}
+          aria-label="Mute"
+          style={iconBtnStyle}
         >
-          ⏸
+          {muted ? "🔇" : "🔊"}
         </button>
+        <button onClick={onPause} aria-label="Pauze" style={iconBtnStyle}>⏸</button>
       </div>
     </div>
+  );
+}
+
+const iconBtnStyle = {
+  background: "rgba(0,0,0,0.55)",
+  color: "#fff",
+  border: "none",
+  borderRadius: 8,
+  width: 30,
+  height: 30,
+  cursor: "pointer",
+  fontSize: 13,
+};
+
+function PuIcon({ emoji }) {
+  return (
+    <span style={{
+      display: "inline-block",
+      padding: "2px 6px",
+      borderRadius: 999,
+      background: "rgba(255,255,255,0.15)",
+      fontSize: 12,
+      backdropFilter: "blur(4px)",
+    }}>{emoji}</span>
+  );
+}
+
+function StartScreen({ highScore, onTap }) {
+  return (
+    <Overlay onClick={onTap}>
+      <div style={{ fontSize: 64 }}>💀</div>
+      <h1 style={{ ...overlayTitle, fontSize: 38, letterSpacing: 1 }}>OBLITERATOR</h1>
+      <div style={{ color: "#ffd54f", fontSize: 13, marginTop: 4 }}>v2 — combo edition</div>
+      {highScore > 0 && (
+        <div style={{ color: "#bcd", marginTop: 16, fontSize: 14 }}>
+          🏆 Persoonlijk record: <strong style={{ color: "#fff" }}>{highScore}</strong>
+        </div>
+      )}
+      <div style={{ marginTop: 32, padding: "10px 18px", borderRadius: 999, background: "rgba(0,200,83,0.18)", border: "1px solid #00c853", fontSize: 13, fontWeight: 700, color: "#69f0ae", animation: "pulse 1.5s ease infinite" }}>
+        TIK OM TE BEGINNEN
+      </div>
+      <div style={{ marginTop: 22, fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, textAlign: "center", maxWidth: 280 }}>
+        🎯 Tik om te springen<br />
+        💥 Spring vlak boven obstakel = obliterate (×2 punten)<br />
+        🔥 Combo bouwt multiplier op (×2 → ×3 → ×5 → ×8)<br />
+        ❤️ 3 levens — combo reset bij hit
+      </div>
+    </Overlay>
+  );
+}
+
+function CountdownOverlay({ n }) {
+  return (
+    <Overlay>
+      <div style={{ fontSize: 120, fontWeight: 900, color: "#ffd54f", textShadow: "0 8px 32px rgba(0,0,0,0.8)", animation: "popIn 0.4s ease" }}>
+        {n}
+      </div>
+    </Overlay>
   );
 }
 
@@ -584,7 +776,7 @@ function PauseMenu({ onResume, onQuit }) {
   );
 }
 
-function GameOverScreen({ score, level, onReplay, onClose }) {
+function GameOverScreen({ score, level, highScore, isNewHigh, playerName, onReplay, onClose }) {
   return (
     <Overlay>
       <div style={{ fontSize: 56 }}>💥</div>
@@ -600,10 +792,145 @@ function GameOverScreen({ score, level, onReplay, onClose }) {
       >
         {score}
       </div>
-      <div style={{ color: "#bcd", marginBottom: 20 }}>Level bereikt: {level}</div>
-      <button style={primaryBtn} onClick={onReplay}>↻ Opnieuw spelen</button>
-      <button style={ghostBtn} onClick={onClose}>Terug</button>
+      <div style={{ color: "#bcd", marginBottom: 8 }}>Level bereikt: {level}</div>
+      {isNewHigh && (
+        <div
+          style={{
+            background: "linear-gradient(135deg, #ffd54f, #ff9800)",
+            color: "#1a1a1a",
+            padding: "6px 14px",
+            borderRadius: 999,
+            fontWeight: 800,
+            fontSize: 13,
+            marginBottom: 16,
+            boxShadow: "0 4px 16px rgba(255,213,79,0.5)",
+          }}
+        >
+          🏆 NIEUW PERSOONLIJK RECORD
+        </div>
+      )}
+      <Leaderboard playerName={playerName} myScore={score} />
+      <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
+        <button style={primaryBtn} onClick={onReplay}>↻ Nog eens</button>
+        <button style={ghostBtn} onClick={onClose}>Terug</button>
+      </div>
     </Overlay>
+  );
+}
+
+function Leaderboard({ playerName, myScore }) {
+  const [scores, setScores] = useState(null);
+  const [tab, setTab] = useState("all"); // "all" | "today"
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        let q = supabase
+          .from("obliterator_scores")
+          .select("player_name, score, level, created_at")
+          .like("level", "v2-%")
+          .order("score", { ascending: false })
+          .limit(10);
+        if (tab === "today") {
+          const since = new Date();
+          since.setHours(0, 0, 0, 0);
+          q = q.gte("created_at", since.toISOString());
+        }
+        const { data } = await q;
+        if (!cancelled) setScores(Array.isArray(data) ? data : []);
+      } catch {
+        if (!cancelled) setScores([]);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [tab]);
+
+  return (
+    <div style={{ width: "100%", maxWidth: 280, marginTop: 8 }}>
+      <div style={{ display: "flex", gap: 4, marginBottom: 6, justifyContent: "center" }}>
+        <button
+          onClick={() => setTab("all")}
+          style={{ ...tabBtn, ...(tab === "all" ? tabBtnActive : {}) }}
+        >
+          All-time
+        </button>
+        <button
+          onClick={() => setTab("today")}
+          style={{ ...tabBtn, ...(tab === "today" ? tabBtnActive : {}) }}
+        >
+          Vandaag
+        </button>
+      </div>
+      <div
+        style={{
+          background: "rgba(0,0,0,0.4)",
+          borderRadius: 10,
+          padding: 8,
+          maxHeight: 160,
+          overflow: "auto",
+          fontSize: 12,
+          fontFamily: "Nunito, sans-serif",
+        }}
+      >
+        {scores === null && <div style={{ color: "#bcd", textAlign: "center", padding: 8 }}>Laden…</div>}
+        {scores && scores.length === 0 && (
+          <div style={{ color: "#bcd", textAlign: "center", padding: 8 }}>Nog geen scores. Wees de eerste!</div>
+        )}
+        {scores && scores.map((row, i) => {
+          const isMe = row.player_name === playerName && row.score === myScore;
+          return (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: "4px 6px",
+                borderRadius: 6,
+                background: isMe ? "rgba(255,213,79,0.2)" : "transparent",
+                color: isMe ? "#ffd54f" : "#fff",
+                fontWeight: isMe ? 700 : 400,
+              }}
+            >
+              <span>{i + 1}. {row.player_name}</span>
+              <span>{row.score}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function TierFlash({ text }) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "40%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        fontSize: 56,
+        fontWeight: 900,
+        color: "#ffd54f",
+        fontFamily: "Fredoka, sans-serif",
+        textShadow: "0 8px 32px rgba(0,0,0,0.7)",
+        animation: "tierFlash 1.2s ease forwards",
+        pointerEvents: "none",
+        zIndex: 25,
+        letterSpacing: 2,
+      }}
+    >
+      {text}
+      <style>{`
+        @keyframes tierFlash {
+          0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+          20%  { opacity: 1; transform: translate(-50%, -50%) scale(1.3); }
+          50%  { opacity: 1; transform: translate(-50%, -50%) scale(1.0); }
+          100% { opacity: 0; transform: translate(-50%, -80%) scale(0.9); }
+        }
+      `}</style>
+    </div>
   );
 }
 
@@ -626,6 +953,7 @@ function AchievementToast({ icon, title, desc }) {
         boxShadow: "0 8px 28px rgba(0,0,0,0.6)",
         border: "1px solid rgba(255,213,79,0.4)",
         zIndex: 30,
+        animation: "slideDown 0.3s ease",
       }}
     >
       <span style={{ fontSize: 32 }}>{icon}</span>
@@ -637,8 +965,9 @@ function AchievementToast({ icon, title, desc }) {
   );
 }
 
-const Overlay = ({ children }) => (
+const Overlay = ({ children, onClick }) => (
   <div
+    onClick={onClick}
     style={{
       position: "absolute",
       inset: 12,
@@ -650,16 +979,20 @@ const Overlay = ({ children }) => (
       borderRadius: 18,
       fontFamily: "Fredoka, sans-serif",
       backdropFilter: "blur(6px)",
+      cursor: onClick ? "pointer" : "default",
+      padding: "20px 16px",
+      boxSizing: "border-box",
+      overflow: "auto",
     }}
   >
     {children}
   </div>
 );
 
-const overlayTitle = { color: "#fff", fontSize: 30, margin: "8px 0" };
+const overlayTitle = { color: "#fff", fontSize: 30, margin: "8px 0", textAlign: "center" };
 
 const primaryBtn = {
-  padding: "12px 28px",
+  padding: "12px 24px",
   background: "linear-gradient(135deg, #00c853, #00a040)",
   color: "#fff",
   border: "none",
@@ -667,19 +1000,34 @@ const primaryBtn = {
   fontSize: 15,
   fontWeight: 700,
   cursor: "pointer",
-  marginTop: 12,
   fontFamily: "inherit",
   boxShadow: "0 4px 14px rgba(0,200,83,0.4)",
 };
 
 const ghostBtn = {
-  padding: "12px 28px",
+  padding: "12px 24px",
   background: "transparent",
   color: "#fff",
   border: "1px solid rgba(255,255,255,0.3)",
   borderRadius: 12,
   fontSize: 14,
   cursor: "pointer",
-  marginTop: 8,
   fontFamily: "inherit",
+};
+
+const tabBtn = {
+  background: "rgba(0,0,0,0.4)",
+  color: "rgba(255,255,255,0.7)",
+  border: "1px solid rgba(255,255,255,0.15)",
+  padding: "4px 12px",
+  borderRadius: 999,
+  fontSize: 11,
+  cursor: "pointer",
+  fontFamily: "Fredoka, sans-serif",
+};
+
+const tabBtnActive = {
+  background: "rgba(255,213,79,0.2)",
+  color: "#ffd54f",
+  borderColor: "#ffd54f",
 };
