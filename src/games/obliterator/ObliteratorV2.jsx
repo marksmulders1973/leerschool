@@ -15,6 +15,7 @@ import {
   powerupChanceFor,
 } from "./systems/difficulty.js";
 import { loadUnlocked, processEvent } from "./systems/achievements.js";
+import { ACHIEVEMENTS, TOTAL_ACHIEVEMENTS } from "./data/achievementsData.js";
 import { themeForLevel } from "./data/themes.js";
 import { playSound, unlockAudio, setMuted, isMuted } from "./audio.js";
 import { makeRng, dailySeed, todayUtcString } from "./seed.js";
@@ -49,6 +50,10 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
   const [countdown, setCountdown] = useState(3);
   // Daily Challenge state — wordt gezet vóór startCountdown bij daily-knop
   const [isDaily, setIsDaily] = useState(false);
+  // Achievements-overzicht overlay (los van phase, kan vanuit elke fase)
+  const [showAchievements, setShowAchievements] = useState(false);
+  // Tellen we direct hoeveel er unlocked zijn — herrekenen na elke unlock
+  const [unlockedCount, setUnlockedCount] = useState(unlockedRef.current.size);
 
   // Sync phase met ref voor de game loop
   useEffect(() => { phaseRef.current = phase; }, [phase]);
@@ -365,6 +370,7 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
 
   function showAchievement(ach) {
     setAchievementToast(ach);
+    setUnlockedCount(unlockedRef.current.size);
     setTimeout(() => setAchievementToast(null), 2400);
   }
 
@@ -411,6 +417,8 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
           highScore={highScore}
           onStartNormal={() => startCountdown({ daily: false })}
           onStartDaily={() => startCountdown({ daily: true })}
+          onShowAchievements={() => setShowAchievements(true)}
+          unlockedCount={unlockedCount}
           dailyDate={todayUtcString()}
         />
       )}
@@ -432,6 +440,12 @@ export default function ObliteratorV2({ playerName = "Speler", onClose, onScoreS
       )}
       {tierFlash && <TierFlash text={tierFlash.text} />}
       {achievementToast && <AchievementToast {...achievementToast} />}
+      {showAchievements && (
+        <AchievementsScreen
+          unlockedRef={unlockedRef}
+          onClose={() => setShowAchievements(false)}
+        />
+      )}
     </div>
   );
 }
@@ -758,7 +772,7 @@ function PuIcon({ emoji }) {
   );
 }
 
-function StartScreen({ highScore, onStartNormal, onStartDaily, dailyDate }) {
+function StartScreen({ highScore, onStartNormal, onStartDaily, onShowAchievements, unlockedCount, dailyDate }) {
   // Stop tap-bubble naar overlay zodat klik op kop niet beide knoppen triggert
   const stop = (e) => e.stopPropagation();
   return (
@@ -813,7 +827,25 @@ function StartScreen({ highScore, onStartNormal, onStartDaily, dailyDate }) {
       <div style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
         Iedereen wereldwijd: dezelfde obstakels van vandaag ({dailyDate})
       </div>
-      <div style={{ marginTop: 18, fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, textAlign: "center", maxWidth: 280 }}>
+      <button
+        onClick={(e) => { stop(e); onShowAchievements(); }}
+        onTouchStart={stop}
+        style={{
+          marginTop: 14,
+          padding: "8px 16px",
+          background: "rgba(255,255,255,0.1)",
+          color: "#fff",
+          border: "1px solid rgba(255,255,255,0.25)",
+          borderRadius: 999,
+          fontSize: 12,
+          fontWeight: 700,
+          cursor: "pointer",
+          fontFamily: "Fredoka, sans-serif",
+        }}
+      >
+        🏆 Achievements ({unlockedCount}/{TOTAL_ACHIEVEMENTS})
+      </button>
+      <div style={{ marginTop: 16, fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.7, textAlign: "center", maxWidth: 280 }}>
         🎯 Tik om te springen<br />
         💥 Spring vlak boven obstakel = obliterate (×2 punten)<br />
         🔥 Combo bouwt multiplier op (×2 → ×3 → ×5 → ×8)<br />
@@ -1027,6 +1059,121 @@ function TierFlash({ text }) {
         }
       `}</style>
     </div>
+  );
+}
+
+function AchievementsScreen({ unlockedRef, onClose }) {
+  const unlockedCount = unlockedRef.size;
+  const pct = Math.round((unlockedCount / TOTAL_ACHIEVEMENTS) * 100);
+  return (
+    <Overlay>
+      <div style={{ width: "100%", maxWidth: 320, display: "flex", flexDirection: "column", alignItems: "stretch" }}>
+        <div style={{ textAlign: "center", marginBottom: 12 }}>
+          <div style={{ fontSize: 36 }}>🏆</div>
+          <h2 style={{ ...overlayTitle, fontSize: 22, margin: "4px 0" }}>Achievements</h2>
+          <div style={{ color: "#bcd", fontSize: 12 }}>
+            {unlockedCount} van {TOTAL_ACHIEVEMENTS} unlocked · {pct}%
+          </div>
+          {/* Progress bar */}
+          <div
+            style={{
+              height: 6,
+              background: "rgba(255,255,255,0.1)",
+              borderRadius: 999,
+              marginTop: 8,
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                height: "100%",
+                width: `${pct}%`,
+                background: "linear-gradient(90deg, #ffd54f, #ff9800)",
+                transition: "width 0.4s ease",
+              }}
+            />
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 6,
+            maxHeight: 360,
+            overflowY: "auto",
+            padding: "4px 2px",
+          }}
+        >
+          {ACHIEVEMENTS.map((ach) => {
+            const isUnlocked = unlockedRef.has(ach.id);
+            return (
+              <div
+                key={ach.id}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 10,
+                  padding: "8px 10px",
+                  borderRadius: 10,
+                  background: isUnlocked
+                    ? "rgba(255,213,79,0.12)"
+                    : "rgba(255,255,255,0.04)",
+                  border: isUnlocked
+                    ? "1px solid rgba(255,213,79,0.45)"
+                    : "1px solid rgba(255,255,255,0.08)",
+                  opacity: isUnlocked ? 1 : 0.55,
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 24,
+                    filter: isUnlocked ? "none" : "grayscale(1)",
+                  }}
+                >
+                  {isUnlocked ? ach.icon : "🔒"}
+                </span>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 700,
+                      color: isUnlocked ? "#ffd54f" : "rgba(255,255,255,0.7)",
+                      fontFamily: "Fredoka, sans-serif",
+                    }}
+                  >
+                    {ach.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: "rgba(255,255,255,0.55)",
+                      fontFamily: "Nunito, sans-serif",
+                    }}
+                  >
+                    {ach.desc}
+                  </div>
+                </div>
+                {isUnlocked && (
+                  <span style={{ fontSize: 16, color: "#69f0ae" }}>✓</span>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <button
+          onClick={onClose}
+          style={{
+            ...primaryBtn,
+            marginTop: 14,
+            background: "linear-gradient(135deg, #00c853, #00a040)",
+          }}
+        >
+          Terug
+        </button>
+      </div>
+    </Overlay>
   );
 }
 
