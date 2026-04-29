@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import supabase from "./supabase.js";
 import { ensureSession } from "./auth.js";
@@ -7,34 +7,60 @@ import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
 
+// Eager imports: alleen wat élke gebruiker direct ziet of nodig heeft.
 import LoadingOverlay from "./components/LoadingOverlay.jsx";
 import HomePage from "./components/HomePage.jsx";
-import StudentHome from "./components/StudentHome.jsx";
-import SelfStudy from "./components/SelfStudy.jsx";
-import TextbookQuiz from "./components/TextbookQuiz.jsx";
-import CitoPage from "./components/CitoPage.jsx";
-import PlayQuiz from "./components/PlayQuiz.jsx";
-import ResultsPage from "./components/ResultsPage.jsx";
-import TafelsPage from "./components/TafelsPage.jsx";
-import RedactiesommenPage from "./components/RedactiesommenPage.jsx";
-import BegrijpendLezenPage from "./components/BegrijpendLezenPage.jsx";
-import WoordenschatPage from "./components/WoordenschatPage.jsx";
-import SpellingPage from "./components/SpellingPage.jsx";
-import TeacherHome from "./components/TeacherHome.jsx";
-import { ClassManager, CreateQuiz, QuizPreview, Lobby } from "./components/TeacherComponents.jsx";
-import { TeacherProgress, StudentProgressView, Leaderboard, Kampioenen } from "./components/StudentProgress.jsx";
-import UpgradePage from "./components/UpgradePage.jsx";
-import OuderDashboard from "./components/OuderDashboard.jsx";
-import ProPage from "./components/ProPage.jsx";
-import UpdateBanner from "./components/UpdateBanner.jsx";
-import ObliteratorGame from "./components/ObliteratorGame.jsx";
-import AdminFeedback from "./components/AdminFeedback.jsx";
-import LearnPath from "./components/LearnPath.jsx";
-import LearnPathsHub from "./components/LearnPathsHub.jsx";
-import Curriculum from "./components/Curriculum.jsx";
 import BottomNav from "./components/BottomNav.jsx";
-import MeeBezig from "./components/MeeBezig.jsx";
-import MyMastery from "./components/MyMastery.jsx";
+import UpdateBanner from "./components/UpdateBanner.jsx";
+
+// Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
+// pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
+const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
+const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
+const TextbookQuiz = lazy(() => import("./components/TextbookQuiz.jsx"));
+const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
+const PlayQuiz = lazy(() => import("./components/PlayQuiz.jsx"));
+const ResultsPage = lazy(() => import("./components/ResultsPage.jsx"));
+const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
+const RedactiesommenPage = lazy(() => import("./components/RedactiesommenPage.jsx"));
+const BegrijpendLezenPage = lazy(() => import("./components/BegrijpendLezenPage.jsx"));
+const WoordenschatPage = lazy(() => import("./components/WoordenschatPage.jsx"));
+const SpellingPage = lazy(() => import("./components/SpellingPage.jsx"));
+const TeacherHome = lazy(() => import("./components/TeacherHome.jsx"));
+const ClassManager = lazy(() =>
+  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.ClassManager }))
+);
+const CreateQuiz = lazy(() =>
+  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.CreateQuiz }))
+);
+const QuizPreview = lazy(() =>
+  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.QuizPreview }))
+);
+const Lobby = lazy(() =>
+  import("./components/TeacherComponents.jsx").then((m) => ({ default: m.Lobby }))
+);
+const TeacherProgress = lazy(() =>
+  import("./components/StudentProgress.jsx").then((m) => ({ default: m.TeacherProgress }))
+);
+const StudentProgressView = lazy(() =>
+  import("./components/StudentProgress.jsx").then((m) => ({ default: m.StudentProgressView }))
+);
+const Leaderboard = lazy(() =>
+  import("./components/StudentProgress.jsx").then((m) => ({ default: m.Leaderboard }))
+);
+const Kampioenen = lazy(() =>
+  import("./components/StudentProgress.jsx").then((m) => ({ default: m.Kampioenen }))
+);
+const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
+const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
+const ProPage = lazy(() => import("./components/ProPage.jsx"));
+const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
+const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
+const LearnPath = lazy(() => import("./components/LearnPath.jsx"));
+const LearnPathsHub = lazy(() => import("./components/LearnPathsHub.jsx"));
+const Curriculum = lazy(() => import("./components/Curriculum.jsx"));
+const MeeBezig = lazy(() => import("./components/MeeBezig.jsx"));
+const MyMastery = lazy(() => import("./components/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
@@ -638,6 +664,9 @@ export default function App() {
           setLoading(false);
         }} />
       )}
+
+      {/* Suspense voor lazy-loaded pages (P1.4 — bundle splitsen) */}
+      <Suspense fallback={<LoadingOverlay mode="page" />}>
       {page === "learn-path" && activeLearnPathId && (
         <LearnPath
           pathId={activeLearnPathId}
@@ -1289,6 +1318,7 @@ export default function App() {
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
       · © Smulsoft
     </footer>
+    </Suspense>
     {BOTTOMNAV_PAGES.has(page) && (
       <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} />
     )}
