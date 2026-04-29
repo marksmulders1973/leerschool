@@ -3,6 +3,7 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import MasteryCTABanner from "./MasteryCTABanner.jsx";
 
 const TICKER_ITEMS = [
   { icon: "🎯", text: "Cito eindtoets oefenen" },
@@ -372,7 +373,7 @@ const ONBOARDING_STEPS = [
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
@@ -731,6 +732,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             </div>
           </div>
         )}
+
+        {/* Mastery-CTA voor terugkerende leerlingen (P1.6).
+            Toont één primaire actie op basis van mastery-records. */}
+        {step === "role" && onPickPath && (() => {
+          let savedName = null;
+          try {
+            savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          if (!savedName) return null;
+          return (
+            <MasteryCTABanner
+              userName={savedName}
+              onPickPath={onPickPath}
+              onStartFirst={onLearnPathsHub}
+            />
+          );
+        })()}
 
         {/* Primaire CTA's: Leren vs Oefenen — vervangt het versplinterde knoppen-veld onderaan */}
         {step === "role" && (

@@ -788,6 +788,13 @@ export default function App() {
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => setPage("learn-paths-hub")}
           onMyMastery={() => setPage("my-mastery")}
+          onPickPath={(id) => {
+            // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("home");
+            setPage("learn-path");
+          }}
           onSelectRole={(r, feature) => {
             onboardingActiveRef.current = false;
             setRole(r);
