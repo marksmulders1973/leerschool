@@ -9,8 +9,8 @@ const C = {
   card: "rgba(30,45,70,0.6)",
   cardHover: "rgba(40,60,90,0.8)",
   border: "#2a3f5f",
-  text: "#e0e6f0",
-  muted: "#8899aa",
+  text: "var(--color-text)",
+  muted: "var(--color-text-muted)",
   good: "#00c853",
   warm: "#ffd54f",
   accent: "#5b86b8",
@@ -22,7 +22,7 @@ const PATH_THEMES = {
   procenten: { gradient: "linear-gradient(135deg, #66bb6a, #2e7d32)", accent: "#a5d6a7" },
   "negatieve-getallen": { gradient: "linear-gradient(135deg, #455a64, #263238)", accent: "#90a4ae" },
   verhoudingen: { gradient: "linear-gradient(135deg, #ab47bc, #6a1b9a)", accent: "#ce93d8" },
-  parabolen: { gradient: "linear-gradient(135deg, #00c853, #00a040)", accent: "#69f0ae" },
+  parabolen: { gradient: "linear-gradient(135deg, #00c853, #00a040)", accent: "var(--color-brand-primary-100)" },
   ruimtemeetkunde: { gradient: "linear-gradient(135deg, #00a8c8, #007a96)", accent: "#80deea" },
   "kwadraten-wortels": { gradient: "linear-gradient(135deg, #9c27b0, #6a1b9a)", accent: "#ce93d8" },
   pythagoras: { gradient: "linear-gradient(135deg, #ff7043, #d84315)", accent: "#ffab91" },
@@ -215,7 +215,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
               alignItems: "center",
               gap: 8,
               padding: "8px 4px 12px",
-              fontFamily: "'Fredoka', sans-serif",
+              fontFamily: "var(--font-display)",
               fontSize: 16,
               color: C.text,
               fontWeight: 700,
@@ -249,7 +249,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                       background: isComplete
                         ? `linear-gradient(135deg, ${C.good}, #00a040)`
                         : `linear-gradient(135deg, ${C.warm}, #f9a825)`,
-                      color: isComplete ? "#fff" : "#1a0008",
+                      color: isComplete ? "var(--color-text-strong)" : "#1a0008",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -262,7 +262,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                   </div>
                   <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-                      <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#fff", fontWeight: 700 }}>
+                      <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
                         {cur.title}
                       </span>
                       {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
@@ -303,7 +303,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
             alignItems: "center",
             gap: 8,
             padding: "8px 4px 12px",
-            fontFamily: "'Fredoka', sans-serif",
+            fontFamily: "var(--font-display)",
             fontSize: 16,
             color: C.text,
             fontWeight: 700,
@@ -322,7 +322,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                   alignItems: "center",
                   gap: 8,
                   padding: "8px 6px 14px",
-                  fontFamily: "'Fredoka', sans-serif",
+                  fontFamily: "var(--font-display)",
                   fontSize: 16,
                   color: C.text,
                   fontWeight: 700,
@@ -367,7 +367,7 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                         </div>
                         <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
                           <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-                            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#fff", fontWeight: 700 }}>
+                            <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
                               {p.title}
                             </span>
                             {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
@@ -432,7 +432,7 @@ function Header({ onBack, onHome, title, emoji }) {
         ←
       </button>
       <div style={{ fontSize: 22 }}>{emoji}</div>
-      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#fff" }}>{title}</div>
+      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-text-strong)" }}>{title}</div>
       <button
         onClick={onHome}
         style={{ border: "none", background: "transparent", color: C.text, fontSize: 22, cursor: "pointer", padding: 6 }}
@@ -449,7 +449,7 @@ function pageStyle() {
     minHeight: "100vh",
     background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     color: C.text,
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
   };
 }
 
@@ -470,8 +470,8 @@ function continueBtn() {
     border: "none",
     borderRadius: 14,
     padding: "14px 16px",
-    color: "#fff",
-    fontFamily: "'Nunito', sans-serif",
+    color: "var(--color-text-strong)",
+    fontFamily: "var(--font-body)",
     cursor: "pointer",
     marginBottom: 14,
     boxShadow: "0 4px 16px rgba(0,200,83,0.25)",
@@ -486,7 +486,7 @@ function pathCard(theme, isComplete) {
     padding: 14,
     cursor: "pointer",
     transition: "transform 0.2s, border-color 0.2s",
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
     width: "100%",
   };
 }
@@ -499,7 +499,7 @@ function curriculumCard(isComplete) {
     padding: 12,
     cursor: "pointer",
     transition: "transform 0.2s, border-color 0.2s",
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
     width: "100%",
     display: "flex",
     alignItems: "center",

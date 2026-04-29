@@ -7,9 +7,9 @@ const C = {
   bg: "#0f1729",
   card: "rgba(30,45,70,0.6)",
   border: "#2a3f5f",
-  text: "#e0e6f0",
-  muted: "#8899aa",
-  good: "#00c853",
+  text: "var(--color-text)",
+  muted: "var(--color-text-muted)",
+  good: "var(--color-brand-primary)",
   bad: "#ff5252",
   accent: "#5b86b8",
   warm: "#ffd54f",
@@ -46,7 +46,7 @@ function renderTable(block, key) {
         style={{
           borderCollapse: "collapse",
           width: "100%",
-          fontFamily: "'Nunito', sans-serif",
+          fontFamily: "var(--font-body)",
           fontSize: 14,
           color: C.text,
         }}
@@ -62,7 +62,7 @@ function renderTable(block, key) {
                   background: "rgba(0,200,83,0.08)",
                   textAlign: "left",
                   fontWeight: 700,
-                  color: "#fff",
+                  color: "var(--color-text-strong)",
                 }}
               >
                 {renderInline(h)}
@@ -152,8 +152,8 @@ function YoutubeZoekKnop({ pathTitle, stepTitle, subject }) {
         padding: "9px 14px",
         background: "linear-gradient(135deg, #ff0000, #c4302b)",
         border: "none", borderRadius: 12,
-        color: "#fff",
-        fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+        color: "var(--color-text-strong)",
+        fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
         textDecoration: "none",
         boxShadow: "0 3px 12px rgba(255,0,0,0.25)",
         cursor: "pointer",
@@ -360,7 +360,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 border: `1px solid ${stepIdx === 0 ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
                 borderRadius: 10,
                 color: stepIdx === 0 ? "rgba(255,255,255,0.25)" : C.text,
-                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
                 cursor: stepIdx === 0 ? "not-allowed" : "pointer",
                 transition: "background 0.15s",
               }}
@@ -376,7 +376,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 border: `1px solid ${stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
                 borderRadius: 10,
                 color: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.25)" : C.text,
-                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
                 cursor: stepIdx + 1 >= totalSteps ? "not-allowed" : "pointer",
                 transition: "background 0.15s",
               }}
@@ -388,7 +388,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       </div>
 
       <div style={{ padding: "10px 18px 28px" }}>
-        <h2 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#fff", margin: "10px 0 6px" }}>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "10px 0 6px" }}>
           {stepIdx + 1}. {step.title}
         </h2>
 
@@ -411,7 +411,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 14 }}>
+            <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               {currentCheck.q}
             </div>
             {currentCheck.options.map((opt, i) => {
@@ -586,11 +586,11 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     height: 32,
                     borderRadius: 8,
                     background: allDone ? C.good : C.accent,
-                    color: "#fff",
+                    color: "var(--color-text-strong)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontFamily: "'Fredoka', sans-serif",
+                    fontFamily: "var(--font-display)",
                     fontWeight: 700,
                     fontSize: 16,
                   }}
@@ -598,7 +598,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   {ch.letter}
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#fff" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)" }}>
                     {ch.emoji} {ch.title}
                   </div>
                   <div style={{ fontSize: 12, color: C.muted }}>
@@ -659,7 +659,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                         border: "none",
                         borderRadius: 10,
                         color: C.text,
-                        fontFamily: "'Nunito', sans-serif",
+                        fontFamily: "var(--font-body)",
                         fontSize: 14,
                         cursor: "pointer",
                         marginBottom: 3,
@@ -673,7 +673,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                       <span style={{ color: C.muted, minWidth: 22, fontSize: 12, fontWeight: 700 }}>
                         {idx + 1}.
                       </span>
-                      <span style={{ flex: 1, color: done ? C.muted : "#fff", fontWeight: isNext ? 700 : 500 }}>
+                      <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext ? 700 : 500 }}>
                         {s.title}
                       </span>
                       {s.emoji && (
@@ -698,7 +698,7 @@ function AllDone({ path, onHome, onBackToOverview }) {
   return (
     <div style={{ textAlign: "center", padding: "30px 12px" }}>
       <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
-      <h2 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 26, color: "#fff", marginBottom: 8 }}>
+      <h2 style={{ fontFamily: "var(--font-display)", fontSize: 26, color: "var(--color-text-strong)", marginBottom: 8 }}>
         Knap gedaan!
       </h2>
       <div style={{ color: C.text, fontSize: 16, marginBottom: 24, lineHeight: 1.5 }}>
@@ -729,7 +729,7 @@ function Header({ onBack, onHome, title, emoji, backLabel }) {
         ←{backLabel ? <span style={{ fontSize: 12, marginLeft: 4 }}>{backLabel}</span> : null}
       </button>
       <div style={{ fontSize: 22 }}>{emoji}</div>
-      <div style={{ flex: 1, fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#fff" }}>{title}</div>
+      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-text-strong)" }}>{title}</div>
       <button onClick={onHome} style={iconBtn()}>🏠</button>
     </div>
   );
@@ -741,7 +741,7 @@ function pageStyle() {
     minHeight: "100vh",
     background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     color: C.text,
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
   };
 }
 
@@ -762,10 +762,10 @@ function btnPrimary() {
     border: "none",
     borderRadius: 14,
     background: `linear-gradient(135deg, ${C.good}, #00a040)`,
-    color: "#fff",
+    color: "var(--color-text-strong)",
     fontWeight: 700,
     fontSize: 16,
-    fontFamily: "'Fredoka', sans-serif",
+    fontFamily: "var(--font-display)",
     cursor: "pointer",
     marginTop: 16,
     boxShadow: "0 4px 16px rgba(0,200,83,0.3)",
@@ -782,7 +782,7 @@ function btnSecondary() {
     color: C.text,
     fontWeight: 700,
     fontSize: 15,
-    fontFamily: "'Fredoka', sans-serif",
+    fontFamily: "var(--font-display)",
     cursor: "pointer",
   };
 }
@@ -795,7 +795,7 @@ function iconBtn() {
     fontSize: 18,
     cursor: "pointer",
     padding: "6px 8px",
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
     display: "inline-flex",
     alignItems: "center",
   };
@@ -822,7 +822,7 @@ function optionStyle(selected, isCorrectChoice, locked) {
     borderRadius: 12,
     background: bg,
     color: C.text,
-    fontFamily: "'Nunito', sans-serif",
+    fontFamily: "var(--font-body)",
     fontSize: 15,
     fontWeight: 600,
     marginBottom: 8,

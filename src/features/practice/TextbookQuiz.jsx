@@ -410,7 +410,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
   const selectStyle = {
     width: "100%", padding: "14px 16px", borderRadius: 14, border: "2px solid #2a3f5f",
-    fontFamily: "'Nunito', sans-serif", fontSize: 16, fontWeight: 600, outline: "none",
+    fontFamily: "var(--font-body)", fontSize: 16, fontWeight: 600, outline: "none",
     background: "#1e2d45", boxSizing: "border-box", appearance: "none", color: "#ffffff",
     backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238899aa' d='M6 8L1 3h10z'/%3E%3C/svg%3E\")",
     backgroundRepeat: "no-repeat", backgroundPosition: "right 16px center",
@@ -436,11 +436,11 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                   border: schoolType2 === t.id ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.15)",
                   background: schoolType2 === t.id ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
                   color: schoolType2 === t.id ? "#00d4ff" : "rgba(255,255,255,0.55)",
-                  fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                  fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
                   display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
                 }}>
                   {t.label}
-                  <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, fontWeight: 400, opacity: 0.6 }}>{t.sub}</span>
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: 10, fontWeight: 400, opacity: 0.6 }}>{t.sub}</span>
                 </button>
               ))}
             </div>
@@ -464,7 +464,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                     };
                     return (
                       <div key={cat.id} style={{
-                        background: "#fff",
+                        background: "var(--color-text-strong)",
                         borderRadius: 16,
                         boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
                         overflow: "hidden",
@@ -491,7 +491,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               padding: "9px 4px",
                               background: hasPaths ? "rgba(0,200,83,0.10)" : "rgba(255,179,0,0.10)",
                               color: hasPaths ? "#00a040" : "#b07300",
-                              fontFamily: "'Fredoka', sans-serif",
+                              fontFamily: "var(--font-display)",
                               fontSize: 12, fontWeight: 700,
                               display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
                               borderRight: "1px solid rgba(0,0,0,0.06)",
@@ -511,7 +511,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               padding: "9px 4px",
                               background: "rgba(0,212,255,0.10)",
                               color: "#0096b8",
-                              fontFamily: "'Fredoka', sans-serif",
+                              fontFamily: "var(--font-display)",
                               fontSize: 12, fontWeight: 700,
                               display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
                             }}
@@ -529,7 +529,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
             )}
 
             {!schoolType2 && (
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.4)", textAlign: "center", marginTop: 16 }}>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.4)", textAlign: "center", marginTop: 16 }}>
                 Kies hierboven basisschool of voortgezet onderwijs
               </p>
             )}
@@ -568,7 +568,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                           <div style={{
                             width: "100%", aspectRatio: "3/4", borderRadius: 12, overflow: "hidden",
                             border: isSelected ? "3px solid #00e676" : isMatch ? `2px solid ${matchColor}88` : "3px solid transparent",
-                            boxShadow: isSelected ? "0 0 0 2px #00c85360, 0 4px 16px rgba(0,200,83,0.3)" : isMatch ? `0 2px 12px ${matchColor}44` : "0 2px 10px rgba(0,0,0,0.4)",
+                            boxShadow: isSelected ? "0 0 0 2px var(--color-brand-primary)60, 0 4px 16px rgba(0,200,83,0.3)" : isMatch ? `0 2px 12px ${matchColor}44` : "0 2px 10px rgba(0,0,0,0.4)",
                             position: "relative",
                           }}>
                             {coverPath ? (
@@ -579,10 +579,10 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               </div>
                             )}
                             {isSelected && (
-                              <div style={{ position: "absolute", top: 6, right: 6, background: "#00c853", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
+                              <div style={{ position: "absolute", top: 6, right: 6, background: "var(--color-brand-primary)", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
                             )}
                             {!isSelected && isMatch && (
-                              <div style={{ position: "absolute", top: 6, left: 6, background: matchColor, borderRadius: 6, padding: "2px 6px", fontSize: 10, fontWeight: 700, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                              <div style={{ position: "absolute", top: 6, left: 6, background: matchColor, borderRadius: 6, padding: "2px 6px", fontSize: 10, fontWeight: 700, color: "var(--color-text-strong)", fontFamily: "var(--font-display)" }}>
                                 Jouw niveau
                               </div>
                             )}
@@ -628,7 +628,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
             {!showCustomInput ? (
               <button onClick={() => { setShowCustomInput(true); setSelectedBook(null); setCustomBook(""); }} style={{
                 width: "100%", padding: "13px", borderRadius: 14, border: "2px dashed #2a3f5f",
-                background: "transparent", color: "#8899aa", fontSize: 14, fontWeight: 600,
+                background: "transparent", color: "var(--color-text-muted)", fontSize: 14, fontWeight: 600,
                 cursor: "pointer", marginBottom: 16,
               }}>
                 ✏️ Staat het er echt niet bij? Typ zelf
@@ -637,7 +637,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               <div style={{ background: "#1e2d45", borderRadius: 16, padding: 16, marginBottom: 16, border: "2px solid #2a3f5f" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
                   <p style={{ fontSize: 13, color: "#00e676", fontWeight: 700, margin: 0 }}>✏️ Typ je boek</p>
-                  <button onClick={() => { setShowCustomInput(false); setCustomBook(""); }} style={{ background: "none", border: "none", color: "#8899aa", cursor: "pointer", fontSize: 18 }}>✕</button>
+                  <button onClick={() => { setShowCustomInput(false); setCustomBook(""); }} style={{ background: "none", border: "none", color: "var(--color-text-muted)", cursor: "pointer", fontSize: 18 }}>✕</button>
                 </div>
                 <input style={styles.textInput} value={customBook} onChange={(e) => { setCustomBook(e.target.value); setSelectedBook(null); }} placeholder="Bijv. Wiskunde Flex deel 2" autoFocus />
               </div>
@@ -698,12 +698,12 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", margin: "20px 0", padding: 20, background: "#162033", borderRadius: 16 }}>
                 {coverLoading ? (
                   <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <div style={{ width: 28, height: 28, border: "3px solid #00c853", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                    <div style={{ width: 28, height: 28, border: "3px solid var(--color-brand-primary)", borderTopColor: "transparent", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
                   </div>
                 ) : coverUrl ? (
                   <div onClick={() => setCoverZoom(true)} style={{ cursor: "pointer", position: "relative" }}>
                     <img src={coverUrl} alt={bookName} style={{ width: 160, height: 210, borderRadius: 10, objectFit: "cover", boxShadow: "0 4px 20px rgba(0,0,0,0.5)" }} />
-                    <div style={{ position: "absolute", bottom: 8, right: 8, background: "rgba(0,0,0,0.6)", borderRadius: 8, padding: "4px 8px", fontSize: 11, color: "#fff" }}>🔍 Tik om te vergroten</div>
+                    <div style={{ position: "absolute", bottom: 8, right: 8, background: "rgba(0,0,0,0.6)", borderRadius: 8, padding: "4px 8px", fontSize: 11, color: "var(--color-text-strong)" }}>🔍 Tik om te vergroten</div>
                   </div>
                 ) : (
                   <div style={{ width: 160, height: 210, borderRadius: 10, background: "#2a3f5f", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 48 }}>
@@ -711,15 +711,15 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                   </div>
                 )}
                 <div style={{ marginTop: 14, textAlign: "center" }}>
-                  <div style={{ fontWeight: 700, fontSize: 17, color: "#e0e6f0" }}>{bookName}</div>
-                  <div style={{ fontSize: 13, color: "#8899aa", marginTop: 4 }}>{[...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO].find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
-                  {coverUrl && isKnownCover && <div style={{ fontSize: 13, color: "#00c853", marginTop: 8, fontWeight: 700 }}>✅ Cover gevonden</div>}
+                  <div style={{ fontWeight: 700, fontSize: 17, color: "var(--color-text)" }}>{bookName}</div>
+                  <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginTop: 4 }}>{[...TEXTBOOK_CATEGORIES_VO, ...TEXTBOOK_CATEGORIES_PO].find(c => c.id === category)?.label}{deel ? ` · ${deel}` : ""}</div>
+                  {coverUrl && isKnownCover && <div style={{ fontSize: 13, color: "var(--color-brand-primary)", marginTop: 8, fontWeight: 700 }}>✅ Cover gevonden</div>}
                   {coverUrl && !isKnownCover && (
                     <div style={{ marginTop: 10 }}>
-                      <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 6 }}>Is dit je boek?</div>
+                      <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 6 }}>Is dit je boek?</div>
                       <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
-                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#00c853", color: "#fff", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => setIsKnownCover(true)}>✅ Ja</button>
-                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#2a3f5f", color: "#8899aa", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => {
+                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "var(--color-brand-primary)", color: "var(--color-text-strong)", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => setIsKnownCover(true)}>✅ Ja</button>
+                        <button style={{ padding: "6px 14px", borderRadius: 8, border: "none", background: "#2a3f5f", color: "var(--color-text-muted)", fontWeight: 700, cursor: "pointer", fontSize: 13 }} onClick={() => {
                           const next = coverResultIndex + 1;
                           if (next < coverResults.length) {
                             setCoverResultIndex(next);
@@ -741,8 +741,8 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                 <div onClick={() => setCoverZoom(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", zIndex: 200, cursor: "pointer", animation: "fadeBg 0.2s ease" }}>
                   <img src={coverUrl} alt={bookName} style={{ maxWidth: "90%", maxHeight: "75vh", borderRadius: 12, boxShadow: "0 8px 40px rgba(0,0,0,0.6)", objectFit: "contain" }} />
                   <div style={{ marginTop: 16, textAlign: "center" }}>
-                    <div style={{ fontWeight: 700, fontSize: 20, color: "#fff" }}>{bookName}</div>
-                    <div style={{ fontSize: 14, color: "#8899aa", marginTop: 4 }}>{deel || ""}</div>
+                    <div style={{ fontWeight: 700, fontSize: 20, color: "var(--color-text-strong)" }}>{bookName}</div>
+                    <div style={{ fontSize: 14, color: "var(--color-text-muted)", marginTop: 4 }}>{deel || ""}</div>
                   </div>
                   <div style={{ marginTop: 16, fontSize: 13, color: "#667788" }}>Tik om te sluiten</div>
                 </div>
@@ -752,7 +752,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
               {/* Hoofdstuk dropdown */}
               <label style={{ ...styles.settingLabel, color: "#ff7b7b" }}>📖 Hoofdstuk *</label>
-              <select style={{ ...selectStyle, borderColor: chapterNum ? "#69f0ae" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
+              <select style={{ ...selectStyle, borderColor: chapterNum ? "var(--color-brand-primary-100)" : "#2a3f5f" }} value={chapterNum} onChange={(e) => { SoundEngine.play("click"); setChapterNum(e.target.value); setParagraaf(""); }}>
                 <option value="">-- Kies hoofdstuk --</option>
                 {(() => {
                   const titles = selectedBook ? (CHAPTER_TITLES[selectedBook.id] || []) : [];
@@ -797,7 +797,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               {level ? (
                 <div style={{ marginTop: 16, padding: 12, background: "#162033", borderRadius: 12, display: "flex", alignItems: "center", gap: 10 }}>
                   <span>🎓</span>
-                  <span style={{ fontWeight: 700, fontSize: 14, color: "#69f0ae" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
+                  <span style={{ fontWeight: 700, fontSize: 14, color: "var(--color-brand-primary-100)" }}>Niveau: {LEVELS.find(l => l.id === level)?.label}</span>
                   <span style={{ fontSize: 11, color: "#667788", marginLeft: "auto" }}>
                     {selectedBook?.autoLevel ? "automatisch op basis van editie" : initLevel ? "vanuit jouw profiel" : ""}
                   </span>
@@ -809,8 +809,8 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                     {LEVELS.map((l) => (
                       <button key={l.id} style={{
                         padding: "10px", borderRadius: 12, border: level === l.id ? "2px solid #69f0ae" : "2px solid #2a3f5f",
-                        background: level === l.id ? "#69f0ae20" : "#1e2d45", cursor: "pointer", fontFamily: "'Nunito', sans-serif",
-                        fontWeight: 700, fontSize: 12, textAlign: "center", color: "#e0e6f0",
+                        background: level === l.id ? "#69f0ae20" : "#1e2d45", cursor: "pointer", fontFamily: "var(--font-body)",
+                        fontWeight: 700, fontSize: 12, textAlign: "center", color: "var(--color-text)",
                       }} onClick={() => { SoundEngine.play("click"); setLevel(l.id); }}>
                         {l.icon} {l.label}
                       </button>
@@ -820,10 +820,10 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               )}
 
               {/* Aantal vragen */}
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "#fff" }}>{questionCount}</span></div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span></div>
               <div style={{ display: "flex", gap: 6, marginBottom: 12 }}>
                 {[5, 10, 15, 20].map(n => (
-                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700 }}>{n}</button>
+                  <button key={n} onClick={() => setQuestionCount(n)} style={{ flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer", border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)", background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)", color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700 }}>{n}</button>
                 ))}
               </div>
 
@@ -835,8 +835,8 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
 
             {/* Preview van selectie */}
             {chapterNum && level && (
-              <div style={{ padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #00c853", marginBottom: 16 }}>
-                <div style={{ fontSize: 13, color: "#69f0ae", lineHeight: 1.6 }}>
+              <div style={{ padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid var(--color-brand-primary)", marginBottom: 16 }}>
+                <div style={{ fontSize: 13, color: "var(--color-brand-primary-100)", lineHeight: 1.6 }}>
                   <strong>Jouw selectie:</strong><br/>
                   📕 {bookName} {deel ? `· ${deel}` : ""}<br/>
                   📖 {chapter}<br/>
@@ -869,13 +869,13 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
               </button>
             </div>
 
-            <div style={{ marginTop: 8, padding: 14, background: "#1e2d3a", borderRadius: 12, borderLeft: "4px solid #00c853" }}>
-              <div style={{ fontSize: 13, color: "#69f0ae", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#1e2d3a", borderRadius: 12, borderLeft: "4px solid var(--color-brand-primary)" }}>
+              <div style={{ fontSize: 13, color: "var(--color-brand-primary-100)", lineHeight: 1.5 }}>
                 💡 <strong>Tip:</strong> Kies een paragraaf voor de beste vragen.
               </div>
             </div>
-            <div style={{ marginTop: 8, padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid #00c853" }}>
-              <div style={{ fontSize: 11, color: "#69f0ae", lineHeight: 1.5 }}>
+            <div style={{ marginTop: 8, padding: 14, background: "#162a1e", borderRadius: 12, borderLeft: "4px solid var(--color-brand-primary)" }}>
+              <div style={{ fontSize: 11, color: "var(--color-brand-primary-100)", lineHeight: 1.5 }}>
                 ✅ De vragen zijn gebaseerd op echte examen- en toetsvragen die online gevonden worden voor dit vak en niveau. De bron wordt bij de uitleg vermeld.
               </div>
             </div>

@@ -231,7 +231,7 @@ function TickerBanner() {
               gap: 6,
               padding: "0 18px",
               whiteSpace: "nowrap",
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-body)",
               fontSize: item.special ? 14 : 13,
               fontWeight: 700,
               color: item.special ? "#ffd700" : "rgba(255,255,255,0.65)",
@@ -283,9 +283,9 @@ function FeatureShowcase({ onFeatureClick }) {
   const renderBadge = (badge, color) => badge ? (
     <div style={{
       position: "absolute", top: 6, right: 6,
-      background: color, color: "#fff",
+      background: color, color: "var(--color-text-strong)",
       fontSize: 9, fontWeight: 800,
-      fontFamily: "'Fredoka', sans-serif",
+      fontFamily: "var(--font-display)",
       padding: "2px 6px", borderRadius: 20,
     }}>{badge}</div>
   ) : null;
@@ -293,7 +293,7 @@ function FeatureShowcase({ onFeatureClick }) {
   return (
     <div style={{ width: "100%", maxWidth: 360, marginBottom: 24 }}>
       <div style={{
-        fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+        fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
         color: "rgba(255,255,255,0.4)", letterSpacing: 1,
         textTransform: "uppercase", marginBottom: 10, textAlign: "center",
       }}>Ontdek wat je allemaal kunt oefenen!</div>
@@ -318,15 +318,15 @@ function FeatureShowcase({ onFeatureClick }) {
                 minHeight: 90,
               }}>
               {renderBadge(f.badge, f.color)}
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: f.vakken ? 6 : 2 }}>{f.label}</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: f.vakken ? 6 : 2 }}>{f.label}</div>
               {f.vakken ? (
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
                   {f.vakken.map(v => (
-                    <span key={v} style={{ fontFamily: "'Nunito', sans-serif", fontSize: 9, color: "rgba(255,255,255,0.6)", background: "rgba(255,255,255,0.07)", borderRadius: 4, padding: "2px 5px", whiteSpace: "nowrap" }}>{v}</span>
+                    <span key={v} style={{ fontFamily: "var(--font-body)", fontSize: 9, color: "rgba(255,255,255,0.6)", background: "rgba(255,255,255,0.07)", borderRadius: 4, padding: "2px 5px", whiteSpace: "nowrap" }}>{v}</span>
                   ))}
                 </div>
               ) : (
-                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
               )}
             </div>
           ))}
@@ -351,13 +351,13 @@ function FeatureShowcase({ onFeatureClick }) {
               {renderBadge(f.badge, f.color)}
               {f.id === "pro" ? (
                 <div style={{ lineHeight: 1.2, marginBottom: 2 }}>
-                  <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>Studiebol</span>
-                  <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 900, color: f.color, background: `${f.color}22`, borderRadius: 4, padding: "0 4px", marginLeft: 2 }}>PRO</span>
+                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>Studiebol</span>
+                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 900, color: f.color, background: `${f.color}22`, borderRadius: 4, padding: "0 4px", marginLeft: 2 }}>PRO</span>
                 </div>
               ) : (
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
               )}
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{f.sub}</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{f.sub}</div>
             </div>
           ))}
         </div>
@@ -590,7 +590,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           position: "fixed", left: "50%", bottom: 20, transform: "translateX(-50%)",
           zIndex: 100001, padding: "12px 18px", borderRadius: 14,
           background: "linear-gradient(135deg, #ffd700, #ffaa00)",
-          color: "#1a1a00", fontFamily: "'Fredoka', sans-serif",
+          color: "#1a1a00", fontFamily: "var(--font-display)",
           fontSize: 14, fontWeight: 700, letterSpacing: 0.3,
           boxShadow: "0 4px 20px rgba(255,215,0,0.5)",
           maxWidth: "calc(100vw - 24px)", textAlign: "center",
@@ -631,7 +631,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
             <div style={{ fontSize: 56, marginBottom: 16 }}>{ONBOARDING_STEPS[onboardingStep].emoji}</div>
             <div style={{
-              fontFamily: "'Fredoka', sans-serif",
+              fontFamily: "var(--font-display)",
               fontSize: 22,
               fontWeight: 700,
               color: "#00d4ff",
@@ -639,7 +639,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               lineHeight: 1.2,
             }}>{ONBOARDING_STEPS[onboardingStep].title}</div>
             <div style={{
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-body)",
               fontSize: 15,
               color: "rgba(255,255,255,0.7)",
               marginBottom: 32,
@@ -652,7 +652,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 style={{
                   width: "100%", padding: "15px", borderRadius: 16, border: "none",
                   background: "linear-gradient(135deg, #0072ff, #00d4ff)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 17, fontWeight: 700, cursor: "pointer",
                   boxShadow: "0 4px 20px rgba(0,212,255,0.35)",
                 }}
@@ -664,8 +664,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 onClick={finishOnboarding}
                 style={{
                   width: "100%", padding: "15px", borderRadius: 16, border: "none",
-                  background: "linear-gradient(135deg, #00c853, #00e676)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  background: "linear-gradient(135deg, var(--color-brand-primary), #00e676)",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 17, fontWeight: 700, cursor: "pointer",
                   boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
                 }}
@@ -729,10 +729,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
             border: "1px solid rgba(105,240,174,0.35)",
             borderRadius: 14,
-            fontFamily: "'Nunito', sans-serif",
+            fontFamily: "var(--font-body)",
             textAlign: "center"
           }}>
-            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
               {LAUNCH_PROMO_SHORT}
             </div>
             <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
@@ -761,7 +761,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* Primaire CTA's: Leren vs Oefenen — vervangt het versplinterde knoppen-veld onderaan */}
         {step === "role" && (
           <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
-            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 10, textAlign: "center", letterSpacing: 0.3 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 10, textAlign: "center", letterSpacing: 0.3 }}>
               Wat wil je doen?
             </div>
             <div style={{ display: "flex", gap: 12 }}>
@@ -770,9 +770,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   onClick={handleLerenClick}
                   style={{
                     flex: 1,
-                    background: "linear-gradient(135deg, #00c853, #00897b)",
+                    background: "linear-gradient(135deg, var(--color-brand-primary), #00897b)",
                     border: "none", borderRadius: 18, padding: "18px 10px",
-                    color: "#fff", cursor: "pointer",
+                    color: "var(--color-text-strong)", cursor: "pointer",
                     display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
                     boxShadow: "0 6px 20px rgba(0,200,83,0.35)",
                     transition: "transform 0.15s",
@@ -781,8 +781,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
                 >
                   <span style={{ fontSize: 34 }}>📚</span>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700 }}>Leren</div>
-                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, opacity: 0.92 }}>uitleg + checks per stap</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700 }}>Leren</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, opacity: 0.92 }}>uitleg + checks per stap</div>
                 </button>
               )}
               <button
@@ -800,8 +800,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 <span style={{ fontSize: 34 }}>🎯</span>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700 }}>Oefenen</div>
-                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, opacity: 0.92 }}>toetsen, tafels, cito</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700 }}>Oefenen</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, opacity: 0.92 }}>toetsen, tafels, cito</div>
               </button>
             </div>
             {onMyMastery && (() => {
@@ -820,8 +820,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     borderRadius: 14,
                     border: "1px solid rgba(0,200,83,0.40)",
                     background: "rgba(0,200,83,0.10)",
-                    color: "#69f0ae",
-                    fontFamily: "'Fredoka', sans-serif",
+                    color: "var(--color-brand-primary-100)",
+                    fontFamily: "var(--font-display)",
                     fontSize: 14, fontWeight: 700,
                     cursor: "pointer",
                     display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
@@ -832,7 +832,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </button>
               );
             })()}
-            <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 14, textAlign: "center" }}>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 14, textAlign: "center" }}>
               of kies hieronder een rol ↓
             </div>
           </div>
@@ -863,8 +863,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.background = `${color}14`; }}
                 >
                   <span style={{ fontSize: 26 }}>{emoji}</span>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 15, color }}>{label}</div>
-                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{sub}</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, color }}>{label}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{sub}</div>
                 </button>
               ))}
             </div>
@@ -896,26 +896,26 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               gap: 12,
               marginBottom: 16,
               cursor: "pointer",
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-body)",
               textAlign: "left",
             }}>
             <span style={{ fontSize: 26, flexShrink: 0 }}>📲</span>
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
                 Zet Studiebol op je telefoon of laptop
               </div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
                 Gratis · werkt ook offline · sneller dan de browser
               </div>
             </div>
-            <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>Installeer →</span>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>Installeer →</span>
           </button>
         )}
 
         {showInstallHelp && (
           <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
-            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "#e0e6f0", fontFamily: "'Nunito', sans-serif" }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
               {isIOS ? (
                 <>
                   <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
@@ -935,8 +935,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   </ul>
                 </>
               )}
-              <p style={{ fontSize: 12, color: "#8899aa", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
-              <button onClick={() => setShowInstallHelp(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
+              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <button onClick={() => setShowInstallHelp(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
             </div>
           </div>
         )}
@@ -949,8 +949,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 padding: "12px 16px", textAlign: "center",
                 border: "1px solid rgba(0,200,83,0.3)",
               }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#00e676" }}>🎯 Quiz gevonden!</div>
-                <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "#aabbcc", marginTop: 4 }}>Vul je naam in en de quiz start meteen</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "#00e676" }}>🎯 Quiz gevonden!</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "#aabbcc", marginTop: 4 }}>Vul je naam in en de quiz start meteen</div>
               </div>
             ) : (
               <div style={{
@@ -959,13 +959,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               }}>
                 <img src="/bol.jpg" alt="" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover" }} />
                 <div>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Je koos:</div>
-                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, color: "#fff" }}>{roleLabels[pendingRole]}</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Je koos:</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "var(--color-text-strong)" }}>{roleLabels[pendingRole]}</div>
                 </div>
                 <button onClick={() => setStep("role")} style={{
                   marginLeft: "auto", background: "none", border: "none",
                   color: "rgba(255,255,255,0.75)", fontSize: 13, cursor: "pointer",
-                  fontFamily: "'Nunito', sans-serif",
+                  fontFamily: "var(--font-body)",
                 }}>← terug</button>
               </div>
             )}
@@ -992,7 +992,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)",
                     borderRadius: 8, padding: "4px 10px",
                     color: "rgba(255,255,255,0.85)", fontSize: 12, cursor: "pointer",
-                    fontFamily: "'Nunito', sans-serif",
+                    fontFamily: "var(--font-body)",
                   }}>sla over →</button>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -1002,7 +1002,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       border: level === String(n) ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.15)",
                       background: level === String(n) ? "rgba(0,212,255,0.15)" : "rgba(255,255,255,0.05)",
                       color: level === String(n) ? "#00d4ff" : "rgba(255,255,255,0.6)",
-                      fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700,
+                      fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700,
                       cursor: "pointer",
                     }}>{n}</button>
                   ))}
@@ -1027,7 +1027,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         border: sel ? `2px solid ${color}` : "1px solid rgba(255,255,255,0.15)",
                         background: sel ? `${color}22` : "rgba(255,255,255,0.05)",
                         color: sel ? color : "rgba(255,255,255,0.6)",
-                        fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700,
+                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
                       }}>{label}</button>
                     );
                   })}
@@ -1040,15 +1040,15 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <div style={{ display: "flex", alignItems: "center", gap: 10, background: "rgba(0,200,83,0.12)", border: "1px solid rgba(0,200,83,0.3)", borderRadius: 16, padding: "12px 16px" }}>
                   <div style={{ width: 36, height: 36, borderRadius: "50%", background: "rgba(0,200,83,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✓</div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, color: "#00e676" }}>Ingelogd</div>
-                    <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{authUser.email}</div>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "#00e676" }}>Ingelogd</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>{authUser.email}</div>
                   </div>
-                  <button onClick={onLogout} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.4)", fontSize: 12, cursor: "pointer", fontFamily: "'Nunito', sans-serif" }}>Uitloggen</button>
+                  <button onClick={onLogout} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.4)", fontSize: 12, cursor: "pointer", fontFamily: "var(--font-body)" }}>Uitloggen</button>
                 </div>
                 <button onClick={handleConfirm} style={{
                   width: "100%", padding: "15px", borderRadius: 16, border: "none",
-                  background: "linear-gradient(135deg, #00c853, #00897b)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  background: "linear-gradient(135deg, var(--color-brand-primary), #00897b)",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 17, fontWeight: 700, cursor: "pointer",
                   boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
                 }}>
@@ -1060,7 +1060,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <button onClick={handleConfirm} style={{
                   width: "100%", padding: "15px", borderRadius: 16, border: "none",
                   background: "linear-gradient(135deg, #1565c0, #0d47a1)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 17, fontWeight: 700, cursor: "pointer",
                   boxShadow: "0 4px 20px rgba(13,71,161,0.5)",
                 }}>
@@ -1070,7 +1070,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   width: "100%", padding: "15px", borderRadius: 16,
                   border: "1px solid rgba(255,255,255,0.15)",
                   background: "#ffffff",
-                  color: "#333", fontFamily: "'Fredoka', sans-serif",
+                  color: "#333", fontFamily: "var(--font-display)",
                   fontSize: 17, fontWeight: 700, cursor: "pointer",
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
                 }}>
@@ -1088,7 +1088,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 background: "none", color: "#25D366", border: "1px solid rgba(37,211,102,0.3)",
-                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "var(--font-body)",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 20, width: "100%",
               }}
               onClick={() => {
@@ -1106,7 +1106,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 background: "none", color: "#1877F2", border: "1px solid rgba(24,119,242,0.3)",
-                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "var(--font-body)",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
               }}
               onClick={() => {
@@ -1125,7 +1125,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 background: "linear-gradient(135deg, rgba(255,80,40,0.12), rgba(255,204,64,0.12))",
                 color: "#ff8050",
                 border: "1px solid rgba(255,80,40,0.45)",
-                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "var(--font-body)",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
                 boxShadow: "0 0 12px rgba(255,80,40,0.15)",
               }}
@@ -1153,7 +1153,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   background: "linear-gradient(135deg, #ff5030, #ffaa00)",
                   color: "#1a0008",
                   border: "none",
-                  borderRadius: 12, padding: "12px 18px", fontFamily: "'Fredoka', sans-serif",
+                  borderRadius: 12, padding: "12px 18px", fontFamily: "var(--font-display)",
                   fontSize: 14, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
                   boxShadow: "0 4px 16px rgba(255,80,40,0.35)",
                 }}
@@ -1168,7 +1168,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 background: "none", color: "#ffcc40", border: "1px solid rgba(255,204,64,0.35)",
-                borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                borderRadius: 12, padding: "10px 18px", fontFamily: "var(--font-body)",
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
               }}
               onClick={() => { setShowFeedback(true); setFeedbackError(""); setFeedbackSent(false); }}
@@ -1181,8 +1181,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 style={{
                   display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                   background: "linear-gradient(135deg, rgba(105,240,174,0.15), rgba(0,200,83,0.10))",
-                  color: "#69f0ae", border: "1px solid rgba(105,240,174,0.4)",
-                  borderRadius: 12, padding: "10px 18px", fontFamily: "'Nunito', sans-serif",
+                  color: "var(--color-brand-primary-100)", border: "1px solid rgba(105,240,174,0.4)",
+                  borderRadius: 12, padding: "10px 18px", fontFamily: "var(--font-body)",
                   fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
                 }}
                 onClick={onAdminFeedback}
@@ -1209,7 +1209,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               boxShadow: "0 10px 40px rgba(0,0,0,0.5)",
             }}>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-                <div style={{ fontSize: 18, fontWeight: 700, color: "#ffcc40", fontFamily: "'Fredoka', sans-serif" }}>
+                <div style={{ fontSize: 18, fontWeight: 700, color: "#ffcc40", fontFamily: "var(--font-display)" }}>
                   💡 Tip aan de maker
                 </div>
                 <button onClick={sluitFeedback} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer" }}>×</button>
@@ -1225,7 +1225,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 ⚠️ <strong>Belangrijk:</strong> deel geen foto's van jezelf, je naam, adres of andere persoonlijke gegevens. Een screenshot van een vraag of fout in de app is wél prima.
               </div>
               {feedbackSent ? (
-                <div style={{ textAlign: "center", padding: "20px 0", color: "#69f0ae", fontSize: 15, fontWeight: 700 }}>
+                <div style={{ textAlign: "center", padding: "20px 0", color: "var(--color-brand-primary-100)", fontSize: 15, fontWeight: 700 }}>
                   ✅ Bedankt! Je tip is binnen.
                 </div>
               ) : (
@@ -1240,7 +1240,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     style={{
                       width: "100%", padding: "10px 12px", borderRadius: 10,
                       background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.15)",
-                      color: "#fff", fontFamily: "'Nunito', sans-serif", fontSize: 14,
+                      color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14,
                       resize: "vertical", boxSizing: "border-box", outline: "none",
                     }}
                   />
@@ -1256,7 +1256,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
                         padding: "8px 12px", border: "1px dashed rgba(255,255,255,0.25)",
                         borderRadius: 10, color: "rgba(255,255,255,0.7)",
-                        fontSize: 12, cursor: "pointer", fontFamily: "'Nunito', sans-serif",
+                        fontSize: 12, cursor: "pointer", fontFamily: "var(--font-body)",
                       }}>
                         📷 Screenshot toevoegen (optioneel, max 2 MB)
                         <input type="file" accept="image/*" onChange={handleImageKies} disabled={feedbackBusy} style={{ display: "none" }} />
@@ -1287,7 +1287,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         ? "linear-gradient(135deg, #ffcc40, #ffaa00)"
                         : "rgba(255,255,255,0.1)",
                       color: feedbackText.trim().length >= 15 && !feedbackBusy ? "#1a1a00" : "rgba(255,255,255,0.4)",
-                      border: "none", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                      border: "none", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
                       cursor: feedbackBusy || feedbackText.trim().length < 15 ? "not-allowed" : "pointer",
                     }}
                   >
@@ -1308,13 +1308,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           width: "100%",
           maxWidth: 360,
         }}>
-          <p style={{ fontFamily: "'Nunito', sans-serif", color: "#445566", fontSize: 11, margin: "0 0 4px" }}>
+          <p style={{ fontFamily: "var(--font-body)", color: "#445566", fontSize: 11, margin: "0 0 4px" }}>
             © Smulsoft &nbsp;·&nbsp;
             <a href="/over.html" style={{ color: "#445566" }}>Over</a>
             &nbsp;·&nbsp;
             <a href="/privacy.html" style={{ color: "#445566" }}>Privacybeleid</a>
           </p>
-          <p style={{ fontFamily: "'Nunito', sans-serif", color: "#334455", fontSize: 10, margin: 0 }}>
+          <p style={{ fontFamily: "var(--font-body)", color: "#334455", fontSize: 10, margin: 0 }}>
             Deze app is in ontwikkeling en kan fouten bevatten.
           </p>
         </div>

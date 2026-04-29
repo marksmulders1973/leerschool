@@ -286,7 +286,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   };
 
   const timerPct = noTimer ? 100 : (timeLeft / gameState.timePerQuestion) * 100;
-  const timerColor = noTimer ? "#69f0ae" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
+  const timerColor = noTimer ? "var(--color-brand-primary-100)" : timerPct > 60 ? "#66bb6a" : timerPct > 30 ? "#ffa726" : "#ff5252";
   const subj = SUBJECTS.find((s) => s.id === gameState.quiz.subject);
   const quizLabel = (() => {
     const parts = [];
@@ -301,14 +301,14 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   })();
 
   return (
-    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "#00c853"}10, #0f1729)` }}>
+    <div style={{ ...styles.page, background: `linear-gradient(135deg, ${subj?.color || "var(--color-brand-primary)"}10, #0f1729)` }}>
       <div style={styles.quizHeader}>
-        <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 13, color: "#8899aa" }}>
+        <button onClick={() => setShowQuitConfirm(true)} style={{ background: "rgba(0,0,0,0.06)", border: "none", borderRadius: 10, padding: "8px 14px", cursor: "pointer", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 13, color: "var(--color-text-muted)" }}>
           ✕ Stop
         </button>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
           <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
-          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 12, color: "#8899aa" }}>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "var(--color-text-muted)" }}>
             ⏱ {elapsed < 60 ? `${elapsed}s` : `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`}
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       </div>
 
       {quizLabel && (
-        <div style={{ textAlign: "center", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 4, letterSpacing: 0.3 }}>
+        <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 4, letterSpacing: 0.3 }}>
           {quizLabel}
         </div>
       )}
@@ -369,10 +369,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
         <div style={styles.optionsGrid}>
           {question.options.map((opt, i) => {
-            const colors = ["#00c853", "#00c853", "#00c853", "#00c853"];
+            const colors = ["var(--color-brand-primary)", "var(--color-brand-primary)", "var(--color-brand-primary)", "var(--color-brand-primary)"];
             let bg = colors[i] + "20";
             let border = colors[i] + "50";
-            let textColor = "#e0e6f0";
+            let textColor = "var(--color-text)";
             let anim = "";
 
             if (showResult) {
@@ -435,7 +435,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               border: "1px solid rgba(0,212,255,0.40)",
               background: "rgba(0,212,255,0.08)",
               color: "#80deea",
-              fontFamily: "'Nunito', sans-serif",
+              fontFamily: "var(--font-body)",
               fontSize: 14,
               fontWeight: 700,
               cursor: "pointer",
@@ -452,7 +452,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
         {timedOut && showResult && (
           <div style={{ marginTop: 12, textAlign: "center", padding: "10px", background: "#3a1a1a", borderRadius: 12, animation: "popIn 0.3s ease" }}>
-            <span style={{ fontSize: 22, fontWeight: 800, color: "#ff5252", fontFamily: "'Fredoka', sans-serif" }}>⏰ Tijd is om!</span>
+            <span style={{ fontSize: 22, fontWeight: 800, color: "#ff5252", fontFamily: "var(--font-display)" }}>⏰ Tijd is om!</span>
           </div>
         )}
 
@@ -467,13 +467,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               {question.imageInExplanation && questionImage && (
                 <img src={questionImage} alt="" style={{ width: "100%", maxHeight: 140, objectFit: "contain", borderRadius: 10, marginBottom: question.source ? 8 : 0, background: "#0f1729" }} />
               )}
-              {question.source && <div style={{ fontSize: 11, color: "#8899aa", fontStyle: "italic" }}>📚 {question.source}</div>}
+              {question.source && <div style={{ fontSize: 11, color: "var(--color-text-muted)", fontStyle: "italic" }}>📚 {question.source}</div>}
             </div>
           );
         })()}
 
         {showResult && isLast && !waitingForUser && !showWrongOverlay && (
-          <button onClick={goToNext} style={{ width: "100%", marginTop: 16, padding: "14px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer", animation: "slideUp 0.3s ease" }}>
+          <button onClick={goToNext} style={{ width: "100%", marginTop: 16, padding: "14px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer", animation: "slideUp 0.3s ease" }}>
             📊 Bekijk resultaten
           </button>
         )}
@@ -482,15 +482,15 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 12, animation: "slideUp 0.3s ease" }}>
             <button onClick={goToNext} style={{
               width: "100%", padding: "14px", border: "none", borderRadius: 12,
-              background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff",
-              fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer",
+              background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)", color: "var(--color-text-strong)",
+              fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer",
             }}>
               {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
             </button>
             <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{
               width: "100%", padding: "14px", border: "1px solid #1a73e8", borderRadius: 12,
-              background: "#1a2f4a", color: "#69f0ae",
-              fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer",
+              background: "#1a2f4a", color: "var(--color-brand-primary-100)",
+              fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer",
               display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
               textDecoration: "none", boxSizing: "border-box",
             }}>
@@ -502,7 +502,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               style={{
                 width: "100%", padding: "12px", border: "1px solid #445566", borderRadius: 12,
                 background: "#111e2e", color: "#556677",
-                fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 600, cursor: "pointer",
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 600, cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 textDecoration: "none", boxSizing: "border-box",
               }}
@@ -510,7 +510,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               <span>🚩</span> Fout melden
             </a>
             <div style={{ fontSize: 11, color: "#556677", textAlign: "center", marginTop: 6 }}>
-              ↩️ Kom terug via de <strong style={{ color: "#8899aa" }}>← terug-knop</strong> van je browser
+              ↩️ Kom terug via de <strong style={{ color: "var(--color-text-muted)" }}>← terug-knop</strong> van je browser
             </div>
           </div>
         )}
@@ -524,7 +524,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             {/* Emoji + titel */}
             <div style={{ textAlign: "center", marginBottom: 22 }}>
               <div style={{ fontSize: 56, marginBottom: 6 }}>😕</div>
-              <h2 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#ff8a65", margin: 0 }}>
+              <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "#ff8a65", margin: 0 }}>
                 Waarom had ik dit niet goed?
               </h2>
             </div>
@@ -532,7 +532,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             {/* De vraag */}
             <div style={{ background: "#1e2d45", borderRadius: 14, padding: "14px 16px", marginBottom: 14, border: "1px solid #2a3f5f" }}>
               <div style={{ fontSize: 11, color: "#667788", fontWeight: 700, marginBottom: 6, textTransform: "uppercase", letterSpacing: 1 }}>De vraag</div>
-              <div style={{ fontSize: 15, color: "#e0e6f0", fontWeight: 600, lineHeight: 1.5 }}>{question.q}</div>
+              <div style={{ fontSize: 15, color: "var(--color-text)", fontWeight: 600, lineHeight: 1.5 }}>{question.q}</div>
             </div>
 
             {/* Jouw antwoord vs goed antwoord */}
@@ -544,7 +544,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 </div>
               </div>
               <div style={{ background: "#0f2a18", borderRadius: 12, padding: "12px 14px", border: "2px solid #28a745" }}>
-                <div style={{ fontSize: 10, color: "#69f0ae", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>✅ Goede antwoord</div>
+                <div style={{ fontSize: 10, color: "var(--color-brand-primary-100)", fontWeight: 800, marginBottom: 5, textTransform: "uppercase", letterSpacing: 0.5 }}>✅ Goede antwoord</div>
                 <div style={{ fontSize: 13, color: "#6fcf87", lineHeight: 1.4 }}>
                   {question.options[question.answer]}
                 </div>
@@ -554,14 +554,14 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             {/* Uitleg — alleen tonen als er ook echt uitleg is */}
             {question.explanation && String(question.explanation).trim() !== "" && (
               <div style={{ background: "linear-gradient(135deg, #1a2535, #162030)", borderRadius: 16, padding: 20, marginBottom: 14, border: "1px solid #2a4060" }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "#69b2ff", marginBottom: 12, display: "flex", alignItems: "center", gap: 8 }}>
                   📖 Zo zit het
                 </div>
                 <div style={{ fontSize: 15, lineHeight: 1.75, color: "#d0e4f5", whiteSpace: "pre-line" }}>
                   {question.explanation}
                 </div>
                 {question.source && (
-                  <div style={{ fontSize: 11, color: "#8899aa", marginTop: 12, fontStyle: "italic", borderTop: "1px solid #2a3f5f", paddingTop: 8 }}>
+                  <div style={{ fontSize: 11, color: "var(--color-text-muted)", marginTop: 12, fontStyle: "italic", borderTop: "1px solid #2a3f5f", paddingTop: 8 }}>
                     📚 {question.source}
                   </div>
                 )}
@@ -572,7 +572,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             <div style={{ background: "#0f2018", borderRadius: 12, padding: "12px 16px", marginBottom: 20, border: "1px solid #1a4025", display: "flex", gap: 10, alignItems: "flex-start" }}>
               <span style={{ fontSize: 18 }}>💡</span>
               <div>
-                <div style={{ fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: 4 }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 4 }}>
                   {(question.explanation && String(question.explanation).trim() !== "") ? "Tip om het te onthouden" : "Geen uitleg beschikbaar"}
                 </div>
                 <div style={{ fontSize: 13, color: "#90c0a0", lineHeight: 1.5 }}>
@@ -596,7 +596,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             </div>
 
             {/* YouTube */}
-            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 16px", background: "#101c2e", border: "1px solid #1a73e8", borderRadius: 12, color: "#69b2ff", textDecoration: "none", fontFamily: "'Nunito', sans-serif", fontWeight: 700, fontSize: 14, marginBottom: 12 }}>
+            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 16px", background: "#101c2e", border: "1px solid #1a73e8", borderRadius: 12, color: "#69b2ff", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 14, marginBottom: 12 }}>
               🎬 Zoek uitlegvideo op YouTube
             </a>
 
@@ -604,7 +604,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             <a
               href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
               target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "#556677", textDecoration: "none", fontFamily: "'Nunito', sans-serif", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "#556677", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
             >
               🚩 Fout melden
             </a>
@@ -612,7 +612,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             {/* Terug knop */}
             <button
               onClick={() => { setShowWrongOverlay(false); goToNext(); }}
-              style={{ width: "100%", padding: "16px", background: "linear-gradient(135deg, #00c853, #00a844)", border: "none", borderRadius: 14, color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, cursor: "pointer", letterSpacing: 0.3 }}
+              style={{ width: "100%", padding: "16px", background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)", border: "none", borderRadius: 14, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, cursor: "pointer", letterSpacing: 0.3 }}
             >
               {isLast ? "📊 Bekijk je resultaten" : "↩️ Keer terug naar vragen"}
             </button>
@@ -630,13 +630,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 340, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
             <span style={{ fontSize: 48 }}>🛑</span>
             <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
-            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>
+            <p style={{ color: "var(--color-text-muted)", fontSize: 14, marginBottom: 20 }}>
               Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
               {gameState.score > 0 && ` Score: ${gameState.score} goed!`}
             </p>
             {matched && (
               <button
-                style={{ width: "100%", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14, marginBottom: 12, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
+                style={{ width: "100%", background: "linear-gradient(135deg, var(--color-brand-primary), #00a040)", color: "var(--color-text-strong)", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14, marginBottom: 12, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
                 onClick={() => {
                   clearInterval(timerRef.current);
                   clearTimeout(wrongOverlayTimerRef.current);
@@ -648,10 +648,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               </button>
             )}
             <div style={{ display: "flex", gap: 10 }}>
-              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14, color: "#fff" }} onClick={() => setShowQuitConfirm(false)}>
+              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14, color: "var(--color-text-strong)" }} onClick={() => setShowQuitConfirm(false)}>
                 Doorgaan
               </button>
-              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff5252, #c62828)", color: "#fff", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "'Nunito', sans-serif", fontSize: 14 }} onClick={() => {
+              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff5252, #c62828)", color: "var(--color-text-strong)", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14 }} onClick={() => {
                 clearInterval(timerRef.current);
                 clearTimeout(wrongOverlayTimerRef.current);
                 onQuit();
@@ -795,8 +795,8 @@ export function BreakoutGame({ onClose }) {
 
       // Paddle
       const grad = ctx.createLinearGradient(paddle.x - paddle.w/2, 0, paddle.x + paddle.w/2, 0);
-      grad.addColorStop(0, "#00c853");
-      grad.addColorStop(1, "#69f0ae");
+      grad.addColorStop(0, "var(--color-brand-primary)");
+      grad.addColorStop(1, "var(--color-brand-primary-100)");
       ctx.fillStyle = grad;
       drawRoundRect(ctx, paddle.x - paddle.w/2, paddle.y, paddle.w, paddle.h, 5);
       ctx.fill();
@@ -804,7 +804,7 @@ export function BreakoutGame({ onClose }) {
       // Ball
       ctx.beginPath();
       ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
-      ctx.fillStyle = "#fff";
+      ctx.fillStyle = "var(--color-text-strong)";
       ctx.fill();
 
       raf = requestAnimationFrame(loop);
@@ -828,44 +828,44 @@ export function BreakoutGame({ onClose }) {
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 9999, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: 16 }}>
       <div style={{ background: "#0d1b2e", borderRadius: 20, padding: 20, width: canvasSize + 8, boxShadow: "0 8px 40px rgba(0,200,83,0.3)" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
-          <span style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, color: "#69f0ae", fontWeight: 700 }}>🎮 Breakout!</span>
-          <button onClick={onClose} style={{ background: "none", border: "none", color: "#8899aa", fontSize: 20, cursor: "pointer" }}>✕</button>
+          <span style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-brand-primary-100)", fontWeight: 700 }}>🎮 Breakout!</span>
+          <button onClick={onClose} style={{ background: "none", border: "none", color: "var(--color-text-muted)", fontSize: 20, cursor: "pointer" }}>✕</button>
         </div>
 
         {!started ? (
           <div style={{ textAlign: "center", padding: "24px 0" }}>
             <div style={{ fontSize: 52, marginBottom: 12 }}>🏆</div>
-            <p style={{ color: "#e0e6f0", fontFamily: "'Fredoka', sans-serif", fontSize: 16, marginBottom: 8 }}>Jij hebt het verdiend!</p>
-            <p style={{ color: "#8899aa", fontSize: 13, marginBottom: 20 }}>Breek alle blokken met de bal.<br/>Stuur de bal met je muisbeweging of pijltjestoetsen.</p>
-            <button onClick={() => setStarted(true)} style={{ padding: "14px 32px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, cursor: "pointer" }}>
+            <p style={{ color: "var(--color-text)", fontFamily: "var(--font-display)", fontSize: 16, marginBottom: 8 }}>Jij hebt het verdiend!</p>
+            <p style={{ color: "var(--color-text-muted)", fontSize: 13, marginBottom: 20 }}>Breek alle blokken met de bal.<br/>Stuur de bal met je muisbeweging of pijltjestoetsen.</p>
+            <button onClick={() => setStarted(true)} style={{ padding: "14px 32px", background: "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, cursor: "pointer" }}>
               🚀 Spelen!
             </button>
           </div>
         ) : gameOver === true ? (
           <div style={{ textAlign: "center", padding: "24px 0" }}>
             <div style={{ fontSize: 56, marginBottom: 8 }}>🎊</div>
-            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#69f0ae", fontWeight: 700, marginBottom: 8 }}>Geweldig gewonnen!</p>
-            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>Alle blokken gebroken — jij bent een kampioen!</p>
-            <button onClick={onClose} style={{ padding: "14px 28px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, cursor: "pointer" }}>
+            <p style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-brand-primary-100)", fontWeight: 700, marginBottom: 8 }}>Geweldig gewonnen!</p>
+            <p style={{ color: "var(--color-text-muted)", fontSize: 14, marginBottom: 20 }}>Alle blokken gebroken — jij bent een kampioen!</p>
+            <button onClick={onClose} style={{ padding: "14px 28px", background: "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, cursor: "pointer" }}>
               🏠 Terug naar resultaten
             </button>
           </div>
         ) : gameOver === false ? (
           <div style={{ textAlign: "center", padding: "24px 0" }}>
             <div style={{ fontSize: 48, marginBottom: 8 }}>{attempts >= 2 ? "📚" : "😅"}</div>
-            <p style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, color: "#ffb74d", fontWeight: 700, marginBottom: 8 }}>
+            <p style={{ fontFamily: "var(--font-display)", fontSize: 20, color: "#ffb74d", fontWeight: 700, marginBottom: 8 }}>
               {attempts >= 2 ? "Tijd om verder te leren!" : "Helaas!"}
             </p>
-            <p style={{ color: "#8899aa", fontSize: 14, marginBottom: 20 }}>
+            <p style={{ color: "var(--color-text-muted)", fontSize: 14, marginBottom: 20 }}>
               {attempts >= 2 ? "Je hebt twee keer gespeeld — goed geprobeerd! Ga verder met oefenen." : "De bal viel erdoorheen. Nog één kans!"}
             </p>
             <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
               {attempts < 2 && (
-                <button onClick={() => { setGameOver(null); setStarted(false); }} style={{ padding: "13px 20px", background: "linear-gradient(135deg, #00c853, #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                <button onClick={() => { setGameOver(null); setStarted(false); }} style={{ padding: "13px 20px", background: "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)", border: "none", borderRadius: 14, color: "#0d1b2e", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                   🔄 Nog één kans!
                 </button>
               )}
-              <button onClick={onClose} style={{ padding: "13px 20px", background: attempts >= 2 ? "linear-gradient(135deg, #00c853, #69f0ae)" : "#1e2d45", border: "none", borderRadius: 14, color: attempts >= 2 ? "#0d1b2e" : "#8899aa", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+              <button onClick={onClose} style={{ padding: "13px 20px", background: attempts >= 2 ? "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)" : "#1e2d45", border: "none", borderRadius: 14, color: attempts >= 2 ? "#0d1b2e" : "var(--color-text-muted)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 {attempts >= 2 ? "🏠 Terug naar resultaten" : "✕ Sluiten"}
               </button>
             </div>

@@ -154,23 +154,23 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
         <div style={{ fontSize: 64, textAlign: "center", animation: "popIn 0.5s ease" }}>{emoji}</div>
-        <h2 style={{ fontFamily: "Fredoka", fontSize: 28, textAlign: "center", color: "#e0e6f0", margin: "12px 0 4px" }}>{grade}</h2>
-        <p style={{ textAlign: "center", color: "#8899aa", marginBottom: 24 }}>
+        <h2 style={{ fontFamily: "Fredoka", fontSize: 28, textAlign: "center", color: "var(--color-text)", margin: "12px 0 4px" }}>{grade}</h2>
+        <p style={{ textAlign: "center", color: "var(--color-text-muted)", marginBottom: 24 }}>
           {subjLabel} · {LEVELS.find((l) => l.id === latest.level)?.label}
         </p>
 
         <div style={{ textAlign: "center", marginBottom: 8 }}>
-          <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 38, fontWeight: 700, color: "#fff", lineHeight: 1.1 }}>
-            {latest.score} <span style={{ fontSize: 22, color: "#8899aa" }}>van de</span> {latest.total}
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 38, fontWeight: 700, color: "var(--color-text-strong)", lineHeight: 1.1 }}>
+            {latest.score} <span style={{ fontSize: 22, color: "var(--color-text-muted)" }}>van de</span> {latest.total}
           </div>
-          <div style={{ fontSize: 14, color: "#8899aa", marginTop: 2 }}>vragen goed</div>
+          <div style={{ fontSize: 14, color: "var(--color-text-muted)", marginTop: 2 }}>vragen goed</div>
         </div>
         <div style={styles.scoreCircle}>
           <div style={styles.scoreNumber}>{latest.percentage}%</div>
           <div style={styles.scoreDetail}>{grade}</div>
         </div>
         {latest.timeTaken > 0 && (
-          <div style={{ textAlign: "center", fontFamily: "'Fredoka', sans-serif", fontSize: 16, color: "#8899aa", marginBottom: 8 }}>
+          <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-muted)", marginBottom: 8 }}>
             ⏱ {latest.timeTaken < 60 ? `${latest.timeTaken}s` : `${Math.floor(latest.timeTaken / 60)}m ${latest.timeTaken % 60}s`}
           </div>
         )}
@@ -181,14 +181,14 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
               style={{
                 width: "100%", padding: "14px 20px", border: "2px solid #00d4ff", borderRadius: 16,
                 background: "linear-gradient(135deg, #003a4f, #001e2e)",
-                color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 17,
+                color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 17,
                 fontWeight: 700, cursor: "pointer",
                 boxShadow: "0 4px 16px rgba(0,212,255,0.2)",
               }}
             >
               🔄 Ik kan dit beter! Zelfde vragen, sneller?
             </button>
-            <p style={{ textAlign: "center", fontSize: 11, color: "#8899aa", marginTop: 4 }}>
+            <p style={{ textAlign: "center", fontSize: 11, color: "var(--color-text-muted)", marginTop: 4 }}>
               Exact dezelfde vragen — probeer het nog sneller te doen
             </p>
           </div>
@@ -204,7 +204,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   <span style={{ flex: 1, fontSize: 13, color: "#c0d0e0", lineHeight: 1.4 }}>{q?.q || `Vraag ${i + 1}`}</span>
                 </div>
                 {!a.isCorrect && q && (
-                  <div style={{ marginLeft: 32, fontSize: 12, color: "#69f0ae" }}>
+                  <div style={{ marginLeft: 32, fontSize: 12, color: "var(--color-brand-primary-100)" }}>
                     ✔ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
                     {a.selected >= 0 && <span style={{ color: "#ff7070" }}> · Jij: {q.options?.[a.selected]}</span>}
                   </div>
@@ -219,19 +219,19 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           const challengeText = `🏆 Kijk eens! Ik heb ${latest.percentage}% gehaald op Studiebol!\n\n${userName || "Ik"} · ${subjLabel}${latest.timeTaken > 0 ? ` · ${latest.timeTaken < 60 ? latest.timeTaken + "s" : Math.floor(latest.timeTaken / 60) + "m " + (latest.timeTaken % 60) + "s"}` : ""}\n\nKun jij dit ook? Daag mij uit! 🎯\nhttps://studiebol.online`;
           return (
             <div style={{ marginTop: 20, padding: 16, borderRadius: 16, background: "linear-gradient(135deg, #1a2a0a, #0f1a06)", border: "2px solid rgba(0,200,83,0.4)" }}>
-              <p style={{ fontSize: 14, color: "#69f0ae", fontWeight: 800, textAlign: "center", margin: "0 0 10px" }}>
+              <p style={{ fontSize: 14, color: "var(--color-brand-primary-100)", fontWeight: 800, textAlign: "center", margin: "0 0 10px" }}>
                 🎯 Daag vrienden uit!
               </p>
-              <p style={{ fontSize: 11, color: "#8899aa", textAlign: "center", margin: "0 0 10px" }}>
+              <p style={{ fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", margin: "0 0 10px" }}>
                 Deel je score — kunnen zij dit ook halen?
               </p>
               <div style={{ display: "flex", gap: 8 }}>
                 <a href={`https://wa.me/?text=${encodeURIComponent(challengeText)}`} target="_blank" rel="noopener noreferrer"
-                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
+                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   📱 WhatsApp
                 </a>
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
-                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
+                  style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   👍 Facebook
                 </a>
               </div>
@@ -241,48 +241,48 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
         {/* Deel resultaat naar leraar */}
         <div style={{ marginTop: 12, padding: 16, background: "#0a1f30", borderRadius: 16, border: "1px solid rgba(0,212,255,0.2)" }}>
-          <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, marginBottom: 10, textAlign: "center", margin: "0 0 10px" }}>
+          <p style={{ fontSize: 13, color: "var(--color-text-muted)", fontWeight: 700, marginBottom: 10, textAlign: "center", margin: "0 0 10px" }}>
             📬 Stuur resultaat naar leraar/ouder
           </p>
           <div style={{ display: "flex", gap: 8 }}>
-            <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+            <button onClick={sendViaWhatsApp} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               💬 WhatsApp
             </button>
-            <button onClick={sendViaEmail} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+            <button onClick={sendViaEmail} style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               ✉️ E-mail
             </button>
           </div>
-          {sent && <p style={{ fontSize: 12, color: "#69f0ae", textAlign: "center", marginTop: 8, marginBottom: 0 }}>✅ Verstuurd!</p>}
+          {sent && <p style={{ fontSize: 12, color: "var(--color-brand-primary-100)", textAlign: "center", marginTop: 8, marginBottom: 0 }}>✅ Verstuurd!</p>}
         </div>
 
         {/* Deel de app */}
         <div style={{ marginTop: 12, padding: 16, background: "linear-gradient(135deg, #0d1f3c, #0a1525)", borderRadius: 16, border: "1px solid rgba(24,119,242,0.35)" }}>
-          <p style={{ fontSize: 13, color: "#8899aa", fontWeight: 700, margin: "0 0 10px", textAlign: "center" }}>
+          <p style={{ fontSize: 13, color: "var(--color-text-muted)", fontWeight: 700, margin: "0 0 10px", textAlign: "center" }}>
             📣 Ken jij ook kinderen die dit leuk vinden?
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
             <button
               onClick={handleFacebookShareApp}
-              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#1877F2", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
             >
               <span style={{ fontSize: 16 }}>📘</span> Facebook
             </button>
             <button
               onClick={handleWhatsappShareApp}
-              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
             >
               <span style={{ fontSize: 16 }}>💬</span> WhatsApp
             </button>
             <button
               onClick={handleNativeShare}
-              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, #7c3aed, #ec4899)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              style={{ padding: "11px 6px", border: "none", borderRadius: 12, background: "linear-gradient(135deg, #7c3aed, #ec4899)", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
               title={canNativeShare ? "Delen via je eigen apps (TikTok, Snap, Insta, ...)" : "Link kopiëren"}
             >
               <span style={{ fontSize: 16 }}>📤</span> {canNativeShare ? "Delen" : "Kopieer"}
             </button>
             <button
               onClick={handleCopyLink}
-              style={{ padding: "11px 6px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 12, background: copied ? "rgba(105,240,174,0.18)" : "rgba(255,255,255,0.06)", color: copied ? "#69f0ae" : "#e0e6f0", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              style={{ padding: "11px 6px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: 12, background: copied ? "rgba(105,240,174,0.18)" : "rgba(255,255,255,0.06)", color: copied ? "var(--color-brand-primary-100)" : "var(--color-text)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
             >
               <span style={{ fontSize: 16 }}>{copied ? "✅" : "🔗"}</span> {copied ? "Gekopieerd!" : "Link kopiëren"}
             </button>
@@ -290,7 +290,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           {canShowInstall && (
             <button
               onClick={handleInstallClick}
-              style={{ width: "100%", marginTop: 8, padding: "10px 8px", border: "1px solid rgba(0,212,255,0.4)", borderRadius: 12, background: "rgba(0,212,255,0.08)", color: "#00d4ff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+              style={{ width: "100%", marginTop: 8, padding: "10px 8px", border: "1px solid rgba(0,212,255,0.4)", borderRadius: 12, background: "rgba(0,212,255,0.08)", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
             >
               <span style={{ fontSize: 16 }}>📲</span> Zet Studiebol op je telefoon of laptop
             </button>
@@ -301,8 +301,8 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         </div>
         {showIosInstall && (
           <div onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
-            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "#e0e6f0", fontFamily: "'Nunito', sans-serif" }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
               {isIOS ? (
                 <>
                   <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
@@ -322,27 +322,27 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   </ul>
                 </>
               )}
-              <p style={{ fontSize: 12, color: "#8899aa", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
-              <button onClick={() => setShowIosInstall(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
+              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <button onClick={() => setShowIosInstall(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
             </div>
           </div>
         )}
 
         {(
           <div style={{ marginTop: 20, padding: 18, background: "#2a1500", borderRadius: 16, border: "2px solid #ff9800", animation: "slideUp 0.4s ease" }}>
-            <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, color: "#ffb74d", fontWeight: 700, marginBottom: 4 }}>😕 Hier heb ik moeite mee</div>
-            <div style={{ fontSize: 13, color: "#8899aa", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 17, color: "#ffb74d", fontWeight: 700, marginBottom: 4 }}>😕 Hier heb ik moeite mee</div>
+            <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
             <div style={{ display: "flex", gap: 8 }}>
               <button onClick={() => {
                 const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen? 🙏`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
-              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 💬 WhatsApp
               </button>
               <button onClick={() => {
                 const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen?`;
                 window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft hulp nodig bij " + subjLabel)}&body=${encodeURIComponent(msg)}`, "_blank");
-              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+              }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 ✉️ E-mail
               </button>
             </div>
@@ -365,7 +365,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
               >
                 👽 SPEEL OBLITERATOR 🛸
               </button>
-              <p style={{ textAlign: "center", fontSize: 12, color: "#8899aa", marginTop: 6 }}>
+              <p style={{ textAlign: "center", fontSize: 12, color: "var(--color-text-muted)", marginTop: 6 }}>
                 {latest.percentage >= 80
                   ? "Jij hebt het verdiend — kraak de high score!"
                   : "Mooie score! Speel OBLITERATOR als beloning."}
@@ -386,7 +386,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 OBLITERATOR — score nog niet voldoende
               </p>
               <p style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
-                Haal <strong style={{ color: "#69f0ae" }}>50% of hoger</strong> bij een toets om het mini-spel te verdienen!
+                Haal <strong style={{ color: "var(--color-brand-primary-100)" }}>50% of hoger</strong> bij een toets om het mini-spel te verdienen!
               </p>
             </div>
           )}
@@ -401,13 +401,13 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           const next = nextSuggestions[quiz.citoId];
           return (
             <div style={{ marginTop: 20, padding: "16px 18px", borderRadius: 16, background: pct >= 70 ? "rgba(0,200,83,0.1)" : "rgba(255,152,0,0.12)", border: `1px solid ${pct >= 70 ? "rgba(0,200,83,0.3)" : "rgba(255,152,0,0.35)"}` }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: pct >= 70 ? "#69f0ae" : "#ffb74d", marginBottom: 4 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: pct >= 70 ? "var(--color-brand-primary-100)" : "#ffb74d", marginBottom: 4 }}>
                 {pct >= 80 ? `🏆 Geweldig bij ${label}!` : pct >= 60 ? `👍 Goed bezig bij ${label}` : `💪 ${label} verdient meer oefening`}
               </div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
                 {pct >= 80 && next ? `Je scoort goed hier! Ga nu ${next} oefenen.` : pct < 60 ? `Oefen dit onderdeel vaker om je eindtoets score te verhogen.` : `Nog een rondje om het vast te zetten, dan verder naar het volgende onderdeel.`}
               </div>
-              <button onClick={pct >= 80 && next ? onBack : onRetry} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "#00c853" : "#ff9800", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
+              <button onClick={pct >= 80 && next ? onBack : onRetry} style={{ marginTop: 10, padding: "9px 16px", borderRadius: 12, border: "none", background: pct >= 70 ? "var(--color-brand-primary)" : "#ff9800", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                 {pct >= 80 && next ? `Probeer ${next} →` : `Nog een keer ${label}`}
               </button>
             </div>
@@ -428,18 +428,18 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 background: "linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,230,118,0.08))",
                 border: "1px solid rgba(0,200,83,0.35)",
               }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#00e676", marginBottom: 6 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#00e676", marginBottom: 6 }}>
                   🚀 Goed bezig! Klaar voor een moeilijker niveau?
                 </div>
                 {isHighest ? (
-                  <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 13, color: "rgba(255,255,255,0.6)" }}>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.6)" }}>
                     Je zit al op het hoogste niveau! 🏆
                   </div>
                 ) : (
                   <button onClick={onRetry} style={{
                     marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
-                    background: "linear-gradient(135deg, #00c853, #00a844)",
-                    color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                    background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)",
+                    color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                     fontSize: 14, fontWeight: 700, cursor: "pointer",
                   }}>
                     Probeer {nextLevel?.label}
@@ -454,13 +454,13 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 background: "linear-gradient(135deg, rgba(244,67,54,0.15), rgba(229,57,53,0.08))",
                 border: "1px solid rgba(244,67,54,0.35)",
               }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ff7043", marginBottom: 6 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#ff7043", marginBottom: 6 }}>
                   💪 Nog even oefenen! Dit vak verdient meer aandacht.
                 </div>
                 <button onClick={onRetry} style={{
                   marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
                   background: "linear-gradient(135deg, #e53935, #c62828)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 14, fontWeight: 700, cursor: "pointer",
                 }}>
                   Nog een keer
@@ -474,13 +474,13 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                 background: "linear-gradient(135deg, rgba(255,152,0,0.15), rgba(255,193,7,0.08))",
                 border: "1px solid rgba(255,152,0,0.35)",
               }}>
-                <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 16, fontWeight: 700, color: "#ffb74d", marginBottom: 6 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: "#ffb74d", marginBottom: 6 }}>
                   ⭐ Netjes! Speel nog een ronde om het vast te zetten.
                 </div>
                 <button onClick={onRetry} style={{
                   marginTop: 8, padding: "10px 18px", borderRadius: 12, border: "none",
                   background: "linear-gradient(135deg, #ff9800, #f57c00)",
-                  color: "#fff", fontFamily: "'Fredoka', sans-serif",
+                  color: "var(--color-text-strong)", fontFamily: "var(--font-display)",
                   fontSize: 14, fontWeight: 700, cursor: "pointer",
                 }}>
                   Nog een keer
@@ -502,10 +502,10 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             gap: 12,
           }}>
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 700, color: "#7ab3ff", marginBottom: 2 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#7ab3ff", marginBottom: 2 }}>
                 🏆 Bewaar je score
               </div>
-              <div style={{ fontFamily: "'Nunito', sans-serif", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.4 }}>
                 Log in om je voortgang en streak bij te houden
               </div>
             </div>
@@ -515,8 +515,8 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
               border: "none",
               borderRadius: 12,
               background: "#4285f4",
-              color: "#fff",
-              fontFamily: "'Fredoka', sans-serif",
+              color: "var(--color-text-strong)",
+              fontFamily: "var(--font-display)",
               fontSize: 13,
               fontWeight: 700,
               cursor: "pointer",
@@ -530,14 +530,14 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {onNextTafel && (
           <button
             onClick={onNextTafel}
-            style={{ width: "100%", marginTop: 20, padding: "16px 0", borderRadius: 14, border: "none", cursor: "pointer", background: "linear-gradient(135deg, #00c853, #00a844)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 18, fontWeight: 700, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
+            style={{ width: "100%", marginTop: 20, padding: "16px 0", borderRadius: 14, border: "none", cursor: "pointer", background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
           >
             Volgende tafel →
           </button>
         )}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: onNextTafel ? 10 : 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00c853, #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>➕ 5 vragen erbij</button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, #00c853)" }} onClick={onLeaderboard}>🏆 Scorebord</button>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={() => { SoundEngine.play("click"); onRetry(); }}>➕ 5 vragen erbij</button>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #69f0ae, var(--color-brand-primary))" }} onClick={onLeaderboard}>🏆 Scorebord</button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #2a3f5f, #1e2d45)" }} onClick={onBack}>← Tafels</button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #1e2d45, #162033)" }} onClick={onHome}>🏠 Home</button>
         </div>
