@@ -656,6 +656,10 @@ function createGameState(opts = {}) {
 function spawnObstacle(s) {
   const types = obstacleVarietyFor(s.level);
   const type = types[Math.floor(s.rng() * types.length)];
+  // Tuning 2026-04-29: Mark wil 50% minder grond-hindernissen (spikes/blocks/
+  // walls/doubles). Als RNG een grond-type kiest, met 50% kans helemaal niet
+  // spawnen. "moving" (zwevend) blijft volledig — dan blijft er gameplay over.
+  if (type !== "moving" && s.rng() < 0.5) return;
   const presets = {
     block: { w: 30, h: 30, y: PHYSICS.groundY - 30 },
     spike: { w: 22, h: 28, y: PHYSICS.groundY - 28 },
