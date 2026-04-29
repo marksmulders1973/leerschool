@@ -80,6 +80,8 @@ export default function ObliteratorV2({
   // verse waarde leest — anders stale-closure die altijd 0 ziet.
   const [secondChancesUsed, setSecondChancesUsed] = useState(0);
   const secondChancesUsedRef = useRef(0);
+  // PvP-only: emoji-reactie van tegenstander om kort te tonen
+  const [incomingReact, setIncomingReact] = useState(null);
 
   // Sync phase met ref voor de game loop
   useEffect(() => { phaseRef.current = phase; }, [phase]);
@@ -105,6 +107,64 @@ export default function ObliteratorV2({
       };
     };
     channel.on("broadcast", { event: "tick" }, tickHandler);
+
+    // Tegenstander vuurde een laser → komt van rechts naar onze speler.
+    // Reizt ~40 frames; speler kan ontwijken door te jumpen.
+    const laserHandler = ({ payload }) => {
+      if (!payload || payload.from === pvpRole) return;
+      const s = stateRef.current;
+      if (!s) return;
+      s.hostileLasers.push({
+        x: CANVAS_W,
+        y: payload.y + 10, // hartlijn van opponent player
+        w: 14,
+        h: 4,
+        dead: false,
+      });
+    };
+    channel.on("broadcast", { event: "laser" }, laserHandler);
+
+    const hitHandler = ({ payload }) => {
+      // Tegenstander meldt dat ZIJ ons hebben geraakt — niets te doen, wij
+      // detecteren zelf de hit lokaal. Kept voor toekomstige bevestiging.
+    };
+    channel.on("broadcast", { event: "hit" }, hitHandler);
+
+    // Host kan rematch starten → guest ontvangt nieuwe start-tijd. Reset beide.
+    const restartHandler = ({ payload }) => {
+      if (pvpRole === "host") return; // host triggerde dit zelf
+      const startsAt = payload?.startsAt;
+      if (!startsAt) return;
+      const seedRng = makeRng(pvpMatch.seed);
+      stateRef.current = createGameState({ rng: seedRng });
+      opponentRef.current = { y: PHYSICS.groundY - PHYSICS.playerSize, score: 0, alive: true };
+      setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+      setPhase("countdown");
+      const ms = Math.max(0, startsAt - Date.now());
+      setCountdown(Math.max(1, Math.ceil(ms / 1000)));
+      playSound("countdown");
+      let n = Math.max(1, Math.ceil(ms / 1000));
+      const id = setInterval(() => {
+        n--;
+        if (n > 0) {
+          setCountdown(n);
+          playSound("countdown");
+        } else {
+          clearInterval(id);
+          playSound("start");
+          setPhase("playing");
+        }
+      }, 700);
+    };
+    channel.on("broadcast", { event: "start" }, restartHandler);
+
+    // Emoji-reactie van tegenstander → toon kort als floating toast
+    const reactHandler = ({ payload }) => {
+      if (!payload || payload.from === pvpRole) return;
+      setIncomingReact({ emoji: payload.emoji, ts: Date.now() });
+      setTimeout(() => setIncomingReact(null), 1800);
+    };
+    channel.on("broadcast", { event: "react" }, reactHandler);
 
     // Start direct met seeded RNG. Countdown sync via pvpStartsAt.
     const seedRng = makeRng(pvpMatch.seed);
@@ -308,6 +368,32 @@ export default function ObliteratorV2({
       }
       s.ramps = s.ramps.filter((r) => r.x > -60 && !r.dead);
 
+      // 🔴 Hostile lasers (PvP) — komen van rechts, raken speler bij AABB.
+      // Speler kan ontwijken door te jumpen. Bij raak: 500ms slowmo, GEEN
+      // leven kwijt (anders te frustrerend bij 1v1 met ouder/kind).
+      for (const hl of s.hostileLasers) {
+        hl.x -= 7; // iets langzamer dan eigen lasers zodat ontwijken kan
+        const px = PHYSICS.playerX;
+        const py = s.player.y;
+        const pw = PHYSICS.playerSize;
+        const ph = PHYSICS.playerSize;
+        if (
+          hl.x < px + pw &&
+          hl.x + hl.w > px &&
+          hl.y < py + ph &&
+          hl.y + hl.h > py
+        ) {
+          hl.dead = true;
+          // Stun-effect: 500ms slowmo + screen-flash
+          s.slowmoUntil = now + 500;
+          s.shake = 8;
+          emitParticles(s, "hit", PHYSICS.playerX + pw / 2, py + ph / 2);
+          playSound("hit");
+          if (isPvP && pvpSub) pvpSub.sendHit(pvpRole === "host" ? "host" : "guest");
+        }
+      }
+      s.hostileLasers = s.hostileLasers.filter((hl) => !hl.dead && hl.x > -20);
+
       // 💎 Collectibles (hartjes, ringen) — bewegen mee, pak op bij overlap.
       for (const c of s.collectibles) {
         c.x -= speed;
@@ -457,6 +543,38 @@ export default function ObliteratorV2({
     setPhase("start");
   }
 
+  // PvP rematch — alleen host kan starten. Genereer nieuwe seed via tijdstempel
+  // zodat beide clients dezelfde RNG hebben. Broadcast 'start' event.
+  function handleRematch() {
+    if (!isPvP || !pvpSub || pvpRole !== "host") return;
+    const newSeed = Date.now() & 0x7fffffff;
+    pvpMatch.seed = newSeed; // muteer het object zodat de useEffect deze gebruikt
+    // Stuur start-event naar opponent met nieuwe startsAt
+    const startsAt = Date.now() + 3000;
+    pvpSub.sendStart(startsAt);
+    // Lokaal opnieuw initialiseren
+    const seedRng = makeRng(newSeed);
+    stateRef.current = createGameState({ rng: seedRng });
+    opponentRef.current = { y: PHYSICS.groundY - PHYSICS.playerSize, score: 0, alive: true };
+    setSecondChancesUsed(0);
+    setHud({ score: 0, combo: 0, level: 1, lives: 3, mult: 1 });
+    setPhase("countdown");
+    setCountdown(3);
+    playSound("countdown");
+    let n = 3;
+    const id = setInterval(() => {
+      n--;
+      if (n > 0) {
+        setCountdown(n);
+        playSound("countdown");
+      } else {
+        clearInterval(id);
+        playSound("start");
+        setPhase("playing");
+      }
+    }, 700);
+  }
+
   function toggleMute() {
     const next = !isMuted();
     setMuted(next);
@@ -532,6 +650,10 @@ export default function ObliteratorV2({
       spawnLaser(s);
       playSound("shoot");
       s.weaponLastShot = now;
+      // PvP: broadcast eigen laser zodat opponent een hostile-laser ziet komen
+      if (isPvP && pvpSub) {
+        pvpSub.sendLaser(s.player.y);
+      }
     }
     // Aliens budget = 3 over 20 sec. Plant ze ongeveer elke 5-7 sec.
     if (s.weaponSpawnedAliens < 3 && now - s.weaponLastSpawn > 5000 + Math.random() * 1500) {
@@ -654,8 +776,10 @@ export default function ObliteratorV2({
     s.warps = [];
     s.ramps = [];
     s.collectibles = [];
+    s.hostileLasers = [];
     s.weaponUntil = 0;
     s.noObstaclesUntil = 0;
+    s.stunUntil = 0;
     s.player = makePlayer();
     setSecondChancesUsed((n) => n + 1);
     setHud((h) => ({ ...h, lives: extraLives, combo: 0, mult: 1 }));
@@ -772,6 +896,59 @@ export default function ObliteratorV2({
       {phase === "paused" && (
         <PauseMenu onResume={() => setPhase("playing")} onQuit={onClose} />
       )}
+      {/* PvP emoji-reactie toast van tegenstander */}
+      {isPvP && incomingReact && (
+        <div
+          style={{
+            position: "absolute",
+            top: 70,
+            right: 16,
+            fontSize: 38,
+            zIndex: 30,
+            pointerEvents: "none",
+            animation: "fadeIn 0.2s",
+            filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.6))",
+          }}
+        >
+          {incomingReact.emoji}
+        </div>
+      )}
+
+      {/* PvP: emoji-reactie-knoppen tijdens spel */}
+      {isPvP && phase === "playing" && pvpSub && (
+        <div
+          style={{
+            position: "absolute",
+            bottom: 12,
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
+            gap: 6,
+            zIndex: 20,
+            pointerEvents: "auto",
+          }}
+        >
+          {["🔥", "😂", "😱", "💪", "👋"].map((emoji) => (
+            <button
+              key={emoji}
+              type="button"
+              onClick={(e) => { e.stopPropagation(); pvpSub.sendReact(emoji); }}
+              onTouchStart={(e) => e.stopPropagation()}
+              style={{
+                fontSize: 18,
+                padding: "4px 8px",
+                borderRadius: 999,
+                border: "1px solid rgba(255,255,255,0.25)",
+                background: "rgba(0,0,0,0.45)",
+                cursor: "pointer",
+              }}
+            >
+              {emoji}
+            </button>
+          ))}
+        </div>
+      )}
+
       {phase === "second-chance" && (
         <SecondChance
           playerName={playerName}
@@ -804,6 +981,7 @@ export default function ObliteratorV2({
           matchCode={pvpMatch.id}
           pvpSub={pvpSub}
           onClose={onClose}
+          onRematch={pvpRole === "host" ? handleRematch : null}
         />
       )}
       {tierFlash && <TierFlash text={tierFlash.text} />}
@@ -845,6 +1023,8 @@ function createGameState(opts = {}) {
     ramps: [],             // 🛹 schansen + loopings
     collectibles: [],      // 💎 hartjes (+leven) en ringen (+score) tijdens schans
     noObstaclesUntil: 0,   // safe-zone na schans/loop — geen grond-obstakels
+    hostileLasers: [],     // 🔴 PvP — lasers afgevuurd door tegenstander, komen van rechts
+    stunUntil: 0,          // PvP — geraakt door opp-laser → kort vertraagd
     shake: 0,
     shieldActive: false,
     slowmoUntil: 0,
@@ -1179,12 +1359,24 @@ function render(canvas, s, hintObstacle) {
     ctx.shadowBlur = 0;
   }
 
-  // ⚡ Lasers
+  // ⚡ Lasers (eigen, geel)
   for (const l of s.lasers) {
     ctx.fillStyle = "#ffeb3b";
     ctx.shadowBlur = 10;
     ctx.shadowColor = "#ff5252";
     ctx.fillRect(l.x, l.y, l.w, l.h);
+    ctx.shadowBlur = 0;
+  }
+
+  // 🔴 Hostile lasers (PvP) — rood, vanuit rechts
+  for (const hl of s.hostileLasers || []) {
+    ctx.fillStyle = "#ff5252";
+    ctx.shadowBlur = 14;
+    ctx.shadowColor = "#ff1744";
+    ctx.fillRect(hl.x, hl.y, hl.w, hl.h);
+    // Trailing glow naar achteren
+    ctx.fillStyle = "rgba(255, 82, 82, 0.4)";
+    ctx.fillRect(hl.x + hl.w, hl.y + 1, 18, hl.h - 2);
     ctx.shadowBlur = 0;
   }
 
@@ -1976,6 +2168,7 @@ function PvPEndScreen({
   matchCode,
   pvpSub,
   onClose,
+  onRematch,
 }) {
   // Wachten tot tegenstander ook dood is. Toon "wachten op tegenstander"
   // als zij nog leven.
@@ -2088,8 +2281,16 @@ function PvPEndScreen({
             >
               match: {matchCode}
             </div>
-            <button onClick={onClose} style={{ ...primaryBtn, width: "100%" }}>
-              Terug naar home
+            {onRematch && (
+              <button
+                onClick={onRematch}
+                style={{ ...primaryBtn, width: "100%", marginBottom: 8 }}
+              >
+                ↻ REVANCHE — zelfde tegenstander
+              </button>
+            )}
+            <button onClick={onClose} style={{ ...ghostBtn, width: "100%" }}>
+              Stoppen
             </button>
           </>
         )}
