@@ -12,7 +12,7 @@ const COLORS = {
 };
 
 const stepEmojis = [
-  "📐", "🔻", "📏",                  // A. Rechthoekige driehoeken
+  "📐", "🔣", "🔻", "📏",             // A. Rechthoekige driehoeken
   "🟰", "🔢", "🎯",                  // B. De stelling
   "📤", "✏️", "🧮",                   // C. Schuine zijde uitrekenen
   "📥", "🔄",                        // D. Rechthoekszijde uitrekenen
@@ -20,11 +20,11 @@ const stepEmojis = [
 ];
 
 const chapters = [
-  { letter: "A", title: "Rechthoekige driehoeken", emoji: "📐", from: 0, to: 2 },
-  { letter: "B", title: "De stelling van Pythagoras", emoji: "🟰", from: 3, to: 5 },
-  { letter: "C", title: "De schuine zijde berekenen", emoji: "📤", from: 6, to: 8 },
-  { letter: "D", title: "Een rechthoekszijde berekenen", emoji: "📥", from: 9, to: 10 },
-  { letter: "E", title: "Pythagoras in 3D + eindopdracht", emoji: "📦", from: 11, to: 12 },
+  { letter: "A", title: "Rechthoekige driehoeken", emoji: "📐", from: 0, to: 3 },
+  { letter: "B", title: "De stelling van Pythagoras", emoji: "🟰", from: 4, to: 6 },
+  { letter: "C", title: "De schuine zijde berekenen", emoji: "📤", from: 7, to: 9 },
+  { letter: "D", title: "Een rechthoekszijde berekenen", emoji: "📥", from: 10, to: 11 },
+  { letter: "E", title: "Pythagoras in 3D + eindopdracht", emoji: "📦", from: 12, to: 13 },
 ];
 
 const steps = [
@@ -50,6 +50,74 @@ const steps = [
           "Twee rechte hoeken zou samen 180° zijn — dan is er geen ruimte meer voor de derde hoek.",
           "Drie rechte hoeken samen is 270°. Maar alle hoeken van een driehoek zijn samen 180°. Dat past niet.",
           "Bij 0 rechte hoeken is het geen rechthoekige driehoek. De definitie zegt: 1 rechte hoek.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "Meetkundige tekens herkennen",
+    explanation: "In meetkunde gebruiken we **vaste tekens** om iets te laten zien zonder cijfers of woorden. De vijf belangrijkste:\n\n**1. Klein vierkantje 🔲 = rechte hoek (90°)**\nDe belangrijkste! Zie je een vierkantje in een hoek, dan is die hoek **precies 90°**. Voor Pythagoras heb je dit teken altijd nodig — Pythagoras werkt **alleen** als er een rechte hoek is.\n\n**2. Boogje in een hoek = 'dit is de hoek'**\nVaak met een letter erbij (∠A) of een getal (60°). Het boogje wijst gewoon de hoek aan — zegt niets over de soort.\n\n**3. Streepjes op zijden = even lang**\nTwee zijden met **één streepje** zijn even lang. Twee zijden met **twee streepjes** zijn ook even lang (maar mogelijk een andere lengte dan die met één streepje).\n\n**4. Pijltjes op zijden = evenwijdig**\nLijnen met dezelfde pijltjes lopen **evenwijdig** — ze raken elkaar nooit, ook niet als je ze heel ver doortrekt.\n\n**5. Meerdere boogjes in hoeken = even grote hoeken**\nTwee hoeken met dezelfde boogjes zijn even groot (zelfde graden).\n\n**Onthoud vooral het vierkantje** — dat is voor heel dit hoofdstuk de sleutel om Pythagoras te mogen gebruiken.",
+    svg: `<svg viewBox="0 0 300 200">
+<polygon points="20,150 90,150 20,90" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
+<rect x="20" y="138" width="12" height="12" fill="none" stroke="${COLORS.curveAlt}" stroke-width="2"/>
+<text x="55" y="178" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="10" font-family="Arial" font-weight="bold">vierkantje = 90°</text>
+<polygon points="135,150 200,150 167,90" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
+<line x1="146" y1="125" x2="153" y2="115" stroke="${COLORS.point}" stroke-width="2"/>
+<line x1="181" y1="115" x2="188" y2="125" stroke="${COLORS.point}" stroke-width="2"/>
+<text x="167" y="178" text-anchor="middle" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">streepjes = even lang</text>
+<line x1="225" y1="105" x2="290" y2="105" stroke="${COLORS.curve2}" stroke-width="2"/>
+<line x1="225" y1="140" x2="290" y2="140" stroke="${COLORS.curve2}" stroke-width="2"/>
+<polygon points="252,101 260,105 252,109" fill="${COLORS.curve2}"/>
+<polygon points="252,136 260,140 252,144" fill="${COLORS.curve2}"/>
+<text x="257" y="178" text-anchor="middle" fill="${COLORS.curve2}" font-size="10" font-family="Arial" font-weight="bold">pijltjes = evenwijdig</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat betekent een klein vierkantje getekend in een hoek?",
+        options: [
+          "Die hoek is precies 90° (rechte hoek)",
+          "Die hoek is kleiner dan 90°",
+          "Die hoek is groter dan 90°",
+          "Die hoek is even groot als een andere hoek",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Hoeken kleiner dan 90° heten scherp en hebben geen vast teken. Kijk nog eens naar wat het vierkantje juist wél aangeeft.",
+          "Hoeken groter dan 90° heten stomp en hebben ook geen vast teken. Het vierkantje wijst op een specifieke hoekgrootte.",
+          "Voor 'even grote hoeken' gebruiken we juist boogjes (dezelfde aantallen). Het vierkantje doet iets anders.",
+        ],
+      },
+      {
+        q: "In een driehoek staan op twee zijden allebei één streepje. Wat weet je dan?",
+        options: [
+          "Die twee zijden zijn even lang",
+          "Die twee zijden zijn evenwijdig",
+          "Die twee hoeken bij die zijden zijn 90°",
+          "De driehoek is rechthoekig",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Voor evenwijdig gebruiken we pijltjes, niet streepjes. En zijden van een driehoek raken elkaar in de hoeken — evenwijdig zijn ze nooit.",
+          "Voor een rechte hoek (90°) gebruiken we het vierkantje, niet streepjes op de zijden.",
+          "Een rechthoekige driehoek herken je aan het vierkantje in één hoek, niet aan streepjes op zijden.",
+        ],
+      },
+      {
+        q: "Bij Pythagoras moet er altijd één bepaald teken in de driehoek staan. Welk teken?",
+        options: [
+          "Het vierkantje (rechte hoek)",
+          "Streepjes (even lange zijden)",
+          "Pijltjes (evenwijdige zijden)",
+          "Een boogje met een letter",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Pythagoras werkt ook bij driehoeken waarvan álle zijden verschillend lang zijn. Streepjes hoeven niet aanwezig te zijn.",
+          "In een driehoek raken alle zijden elkaar in de hoeken — evenwijdig zijn ze nooit. Dit teken kan dus niet de voorwaarde zijn.",
+          "Boogjes wijzen alleen aan welke hoek bedoeld is, maar zeggen niets over hoe groot die hoek moet zijn. Pythagoras eist een specifieke hoekgrootte.",
         ],
       },
     ],
