@@ -1339,35 +1339,99 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenDungeonOverlay() {
       if (!dungeonMode && dungeonFadeOut === 0) return;
       ctx.save();
-      // Dark-blue/purple kleurfilter over hele scherm
-      ctx.fillStyle = "rgba(15, 18, 50, 0.42)";
+
+      // 1. Donkere blauw-paarse achtergrond-tint over heel scherm
+      ctx.fillStyle = "rgba(18, 20, 50, 0.62)";
       ctx.fillRect(0, 0, W, H);
-      // Vignette aan de randen voor "dungeon"-feel
-      const vGrad = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.3, W / 2, H / 2, Math.max(W, H) * 0.7);
+
+      // 2. Dungeon-brick overlay over de muur — patroon van rechthoekige
+      //    bakstenen met offset per rij. Lijkt op donkere dungeon-walls.
+      const brickW = 72 * SCHAAL;
+      const brickH = 30 * SCHAAL;
+      ctx.strokeStyle = "rgba(70, 80, 110, 0.55)";
+      ctx.fillStyle = "rgba(40, 50, 90, 0.30)";
+      ctx.lineWidth = 1.5 * SCHAAL;
+      for (let row = 0; row * brickH < H; row++) {
+        const yRow = row * brickH;
+        const offset = (row % 2) * (brickW / 2);
+        for (let col = -1; col * brickW < W + brickW; col++) {
+          const x = col * brickW + offset;
+          // Klein highlight-streepje aan de bovenkant van de baksteen
+          ctx.fillRect(x + 2, yRow + 2, brickW - 4, 3 * SCHAAL);
+          ctx.strokeRect(x, yRow, brickW, brickH);
+        }
+      }
+
+      // 3. Hangende kettingen vanaf de bovenrand (3 stuks, vaste posities)
+      const chainPositions = [W * 0.18, W * 0.52, W * 0.82];
+      const chainLengths  = [110, 80, 140].map(v => v * SCHAAL);
+      ctx.fillStyle = "rgba(160, 165, 180, 0.85)";
+      ctx.strokeStyle = "rgba(60, 65, 75, 0.9)";
+      ctx.lineWidth = 1 * SCHAAL;
+      for (let i = 0; i < chainPositions.length; i++) {
+        const cxC = chainPositions[i];
+        const len = chainLengths[i];
+        // Subtiele swing op basis van frameTeller
+        const swing = Math.sin(frameTeller * 0.02 + i) * 4 * SCHAAL;
+        for (let cy = 0; cy < len; cy += 9 * SCHAAL) {
+          const isEven = Math.floor(cy / (9 * SCHAAL)) % 2 === 0;
+          const x = cxC + swing * (cy / len);
+          if (isEven) {
+            ctx.beginPath();
+            ctx.ellipse(x, cy + 4.5 * SCHAAL, 4 * SCHAAL, 5 * SCHAAL, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+          } else {
+            ctx.beginPath();
+            ctx.ellipse(x, cy + 4.5 * SCHAAL, 5 * SCHAAL, 4 * SCHAAL, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+          }
+        }
+      }
+
+      // 4. Water aan de onderkant — geanimeerde golven met schuim
+      const waterY = H - 70 * SCHAAL;
+      const waveOff = frameTeller * 1.2;
+      // Water-fill
+      ctx.fillStyle = "rgba(40, 110, 200, 0.55)";
+      ctx.beginPath();
+      ctx.moveTo(0, waterY + Math.sin(waveOff * 0.04) * 3 * SCHAAL);
+      for (let x = 0; x <= W; x += 6) {
+        const wy = waterY + Math.sin((x + waveOff) * 0.045) * 4 * SCHAAL
+                          + Math.sin((x - waveOff) * 0.06) * 2 * SCHAAL;
+        ctx.lineTo(x, wy);
+      }
+      ctx.lineTo(W, H);
+      ctx.lineTo(0, H);
+      ctx.closePath();
+      ctx.fill();
+      // Schuim-streep bovenaan het water
+      ctx.strokeStyle = "rgba(220, 235, 255, 0.55)";
+      ctx.lineWidth = 2 * SCHAAL;
+      ctx.beginPath();
+      ctx.moveTo(0, waterY + Math.sin(waveOff * 0.04) * 3 * SCHAAL);
+      for (let x = 0; x <= W; x += 6) {
+        const wy = waterY + Math.sin((x + waveOff) * 0.045) * 4 * SCHAAL
+                          + Math.sin((x - waveOff) * 0.06) * 2 * SCHAAL;
+        ctx.lineTo(x, wy);
+      }
+      ctx.stroke();
+
+      // 5. Vignette aan de randen voor donkere dungeon-feel
+      const vGrad = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.3, W / 2, H / 2, Math.max(W, H) * 0.75);
       vGrad.addColorStop(0, "rgba(0,0,0,0)");
-      vGrad.addColorStop(1, "rgba(0,0,0,0.55)");
+      vGrad.addColorStop(1, "rgba(0,0,0,0.65)");
       ctx.fillStyle = vGrad;
       ctx.fillRect(0, 0, W, H);
-      // Brick-pattern strip aan onder- en bovenrand (suggereert dungeon-muur)
-      ctx.fillStyle = "rgba(60, 70, 110, 0.55)";
-      const brickH = 18 * SCHAAL;
-      const brickW = 60 * SCHAAL;
-      // Bovenrand
-      for (let x = 0; x < W; x += brickW) {
-        ctx.fillRect(x + 2, 2, brickW - 4, brickH);
-      }
-      // Onderrand
-      for (let x = brickW / 2; x < W; x += brickW) {
-        ctx.fillRect(x + 2, H - brickH - 2, brickW - 4, brickH);
-      }
-      // Fade-in overlay (zwart, transparantie afhankelijk van dungeonFadeIn)
+
+      // Fade-in/out
       if (dungeonFadeIn > 0) {
-        ctx.fillStyle = `rgba(0,0,0,${(dungeonFadeIn / DUNGEON_FADE) * 0.85})`;
+        ctx.fillStyle = `rgba(0,0,0,${(dungeonFadeIn / DUNGEON_FADE) * 0.90})`;
         ctx.fillRect(0, 0, W, H);
       }
-      // Fade-out overlay (zwart, andersom)
       if (dungeonFadeOut > 0) {
-        ctx.fillStyle = `rgba(0,0,0,${((DUNGEON_FADE - dungeonFadeOut) / DUNGEON_FADE) * 0.85})`;
+        ctx.fillStyle = `rgba(0,0,0,${((DUNGEON_FADE - dungeonFadeOut) / DUNGEON_FADE) * 0.90})`;
         ctx.fillRect(0, 0, W, H);
       }
       ctx.restore();
@@ -1840,12 +1904,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // PORTAL naar dungeon-wereld — elke ~15 obstakels, 80% kans
+          // PORTAL naar dungeon-wereld — elke ~8 obstakels, 90% kans
           // Niet tijdens boss/flip/loop/dungeon zelf.
           if (
             !bossActief && flipFrames === 0 && !loopActief && !dungeonMode &&
-            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 15 === 0 &&
-            Math.random() < 0.8
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 8 === 0 &&
+            Math.random() < 0.9
           ) {
             const yPos = (170 + Math.random() * 90) * SCHAAL;
             portals.push({
