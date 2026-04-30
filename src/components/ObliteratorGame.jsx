@@ -606,30 +606,51 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     // ---------- AUDIO ----------
     let audioCtx = null;
-    function aud() { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); return audioCtx; }
-    function piep(freq, duur, type = "square", volume = 0.15) {
+    let masterFilter = null; // lowpass-filter op alle output (haalt hoge harmonics weg)
+    function aud() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        masterFilter = audioCtx.createBiquadFilter();
+        masterFilter.type = "lowpass";
+        masterFilter.frequency.setValueAtTime(2800, audioCtx.currentTime); // cutoff ~2.8 kHz
+        masterFilter.Q.setValueAtTime(0.7, audioCtx.currentTime);
+        masterFilter.connect(audioCtx.destination);
+      }
+      return audioCtx;
+    }
+    // Piep met zachte attack-ramp (geen click), kleine frequentie-jitter
+    // (geen monotonie), en lowpass via masterFilter (geen scherpe harmonics).
+    function piep(freq, duur, type = "triangle", volume = 0.10) {
       try {
         const a = aud();
         const osc = a.createOscillator(), gain = a.createGain();
-        osc.type = type; osc.frequency.setValueAtTime(freq, a.currentTime);
-        gain.gain.setValueAtTime(volume, a.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + duur);
-        osc.connect(gain); gain.connect(a.destination);
+        // Auto-replace harde sawtooth/square door zachtere triangle
+        const safeType = (type === "sawtooth" || type === "square") ? "triangle" : type;
+        osc.type = safeType;
+        // ±2% frequentie-jitter zodat herhaalde piep niet exact zelfde toon is
+        const jittered = freq * (1 + (Math.random() - 0.5) * 0.04);
+        osc.frequency.setValueAtTime(jittered, a.currentTime);
+        // Attack: 5ms ramp van 0 naar volume (geen click), dan exp decay
+        gain.gain.setValueAtTime(0.0001, a.currentTime);
+        gain.gain.linearRampToValueAtTime(volume, a.currentTime + 0.005);
+        gain.gain.exponentialRampToValueAtTime(0.0001, a.currentTime + duur);
+        osc.connect(gain); gain.connect(masterFilter);
         osc.start(); osc.stop(a.currentTime + duur);
       } catch {}
     }
-    function springGeluid() { piep(330, 0.08, "sawtooth", 0.1); setTimeout(() => piep(495, 0.06, "sawtooth", 0.08), 30); }
-    function scoreGeluid() { piep(880, 0.05, "sine", 0.08); setTimeout(() => piep(1320, 0.05, "sine", 0.06), 40); }
+    function springGeluid() { piep(330, 0.08, "triangle", 0.07); setTimeout(() => piep(495, 0.06, "triangle", 0.06), 30); }
+    function scoreGeluid() { piep(880, 0.05, "sine", 0.06); setTimeout(() => piep(1320, 0.05, "sine", 0.05), 40); }
     function doodGeluid() {
       try {
         const a = aud();
         const osc = a.createOscillator(), gain = a.createGain();
-        osc.type = "sawtooth";
+        osc.type = "triangle"; // was sawtooth — minder schor
         osc.frequency.setValueAtTime(180, a.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(30, a.currentTime + 0.5);
-        gain.gain.setValueAtTime(0.25, a.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, a.currentTime + 0.5);
-        osc.connect(gain); gain.connect(a.destination);
+        osc.frequency.exponentialRampToValueAtTime(40, a.currentTime + 0.5);
+        gain.gain.setValueAtTime(0.0001, a.currentTime);
+        gain.gain.linearRampToValueAtTime(0.18, a.currentTime + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, a.currentTime + 0.5);
+        osc.connect(gain); gain.connect(masterFilter);
         osc.start(); osc.stop(a.currentTime + 0.5);
       } catch {}
     }
@@ -1698,12 +1719,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // PORTAL naar dungeon-wereld — elke ~25 obstakels, 70% kans
+          // PORTAL naar dungeon-wereld — elke ~15 obstakels, 80% kans
           // Niet tijdens boss/flip/loop/dungeon zelf.
           if (
             !bossActief && flipFrames === 0 && !loopActief && !dungeonMode &&
-            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 &&
-            Math.random() < 0.7
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 15 === 0 &&
+            Math.random() < 0.8
           ) {
             const yPos = (170 + Math.random() * 90) * SCHAAL;
             portals.push({
@@ -1719,38 +1740,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // 70% schans, 30% looping.
           if (
             !bossActief && flipFrames === 0 &&
-            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 10 === 0 &&
-            Math.random() < 0.75
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
+            Math.random() < 0.85
           ) {
-            // Geen schans spawnen als er nog een obstakel dicht bij de
-            // schans-positie staat — anders blokkeert dat de toegang.
-            // Check: laatste-obstakel-rechterkant moet > 250 px links van W zijn.
-            const minVrijeRuimte = 250 * SCHAAL;
-            let geenObstakelInDeWeg = true;
-            for (const o of obstakels) {
-              if (o.x + o.breedte > W - minVrijeRuimte) {
-                geenObstakelInDeWeg = false;
-                break;
-              }
-            }
-            if (geenObstakelInDeWeg) {
-              const isLoop = Math.random() < 0.3;
-              // Schans: ~25% van scherm-hoogte. Looping: ~40% — kleiner zodat
-              // speler en omgeving zichtbaar blijven tijdens de loop-rit.
-              const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
-              const breedte = isLoop ? 0.38 * H : 0.36 * H;
-              schansen.push({
-                x: W + 40,
-                y: GROND_Y + SPELER_GROOTTE - hoogte,
-                breedte,
-                hoogte,
-                type: isLoop ? "loop" : "schans",
-                geactiveerd: false,
-              });
-              // Voorkom dat het volgende obstakel direct ná deze schans spawnt
-              // (anders staat-ie meteen achter de safe-zone klaar om te raken).
-              volgendObstakelOver = Math.max(volgendObstakelOver, 90);
-            }
+            const isLoop = Math.random() < 0.3;
+            // Schans: ~25% van scherm-hoogte. Looping: ~40% — kleiner zodat
+            // speler en omgeving zichtbaar blijven tijdens de loop-rit.
+            const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
+            const breedte = isLoop ? 0.38 * H : 0.36 * H;
+            schansen.push({
+              x: W + 40,
+              y: GROND_Y + SPELER_GROOTTE - hoogte,
+              breedte,
+              hoogte,
+              type: isLoop ? "loop" : "schans",
+              geactiveerd: false,
+            });
+            // Voorkom dat het volgende obstakel direct ná deze schans spawnt
+            // — duwt 'm naar achter zodat de safe-zone na de schans niet
+            // meteen op een nieuwe spike valt.
+            volgendObstakelOver = Math.max(volgendObstakelOver, 110);
           }
           // (plafond-stekel-spawn werkt nu via eigen plafondStekelSpawnTeller, hieronder)
         }
