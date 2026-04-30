@@ -20,6 +20,7 @@ const stepEmojis = [
   "⚖️", "📍", "📐",                 // D. Zwaartelijn/hoogtelijn (3)
   "▱", "🔷", "🪟",                 // E. Vierhoeken (3)
   "🏁", "🏆",                       // F. Eindopdrachten (2)
+  "📝",                            // G. Examenstijl
 ];
 
 const chapters = [
@@ -29,6 +30,7 @@ const chapters = [
   { letter: "D", title: "Zwaartelijn en hoogtelijn", emoji: "⚖️", from: 8, to: 10 },
   { letter: "E", title: "Oppervlakte van vierhoeken", emoji: "▱", from: 11, to: 13 },
   { letter: "F", title: "Eindopdrachten", emoji: "🏁", from: 14, to: 15 },
+  { letter: "G", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 16, to: 16 },
 ];
 
 const steps = [
@@ -563,6 +565,53 @@ const steps = [
           "Je bent de ½ vergeten. ½ × (8 + 12) × 5 = ½ × 20 × 5 = ½ × 100 = 50.",
           "Je hebt 12 × 5 gedaan. Maar je moet eerst de twee evenwijdige zijden optellen, dan × hoogte, dan × ½.",
           "20 = 8 + 12. Maar je moet nog × hoogte (5) en × ½ doen.",
+        ],
+      },
+    ],
+  },
+  // ─── G. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — speeltuin met grasveld en zandbak",
+    explanation: "Op het CSE krijg je vaak een **combinatie-figuur**: een rechthoekige tuin met daarin een rond/half-rond stuk dat anders is. Examen-stijl probeer-vraag:\n\n> **Een speeltuin is rechthoekig** met afmetingen 12,0 m × 8,0 m. Daarin ligt een **halfronde zandbak** met diameter 6,0 m langs één lange zijde van de tuin. De rest is grasveld.\n\n**Aanpak in 3 stappen:**\n1. **Hele tuin** = 12,0 × 8,0 = **96 m²**.\n2. **Zandbak** = ½ × π × r². Diameter 6,0 → straal 3,0. Oppervlakte = ½ × π × 3² = ½ × π × 9 ≈ **14,1 m²**.\n3. **Grasveld** = hele tuin − zandbak = 96 − 14,1 ≈ **81,9 m²**.\n\n**Examen-tips**:\n• Lees goed: diameter of straal? **r = d / 2**.\n• Een **halfronde** vorm = **½ × π × r²**.\n• Rond af volgens de instructie (vaak 1 decimaal).",
+    svg: `<svg viewBox="0 0 300 200">
+<rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.18)" stroke="${COLORS.curve}" stroke-width="2"/>
+<path d="M 100 40 A 50 50 0 0 1 200 40 Z" fill="rgba(255,213,79,0.45)" stroke="${COLORS.point}" stroke-width="2"/>
+<text x="150" y="105" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">grasveld</text>
+<text x="150" y="62" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">zandbak</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">12,0 m × 8,0 m · zandbak Ø 6,0 m</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is de oppervlakte van de **hele speeltuin**?",
+        options: ["96 m²", "20 m²", "40 m²", "120 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is alleen de omtrek-helft (12 + 8). Oppervlakte = lengte × breedte.",
+          "Je hebt door 2 gedeeld of zoiets. Reken: 12 × 8 = 96.",
+          "Niet — 12 × 8 = 96, niet 120.",
+        ],
+      },
+      {
+        q: "Wat is de oppervlakte van de **halfronde zandbak**? (diameter 6,0 m, gebruik π ≈ 3,14)",
+        options: ["≈ 14,1 m²", "≈ 28,3 m²", "≈ 9,4 m²", "≈ 18,8 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is een hele cirkel (π × r²). Voor halfrond moet je nog ÷ 2.",
+          "Je hebt waarschijnlijk de diameter ipv straal gebruikt, of × ½ vergeten.",
+          "Dichtbij. Reken: r = 3, dus ½ × π × 9 ≈ 14,1 m². 18,8 lijkt op 6π — waar komt dat vandaan?",
+        ],
+      },
+      {
+        q: "Wat is de oppervlakte van het **grasveld** (de rest)?",
+        options: ["≈ 81,9 m²", "≈ 96,0 m²", "≈ 110,1 m²", "≈ 67,8 m²"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de hele tuin. Vergeet niet de zandbak ervan af te trekken.",
+          "Je hebt de zandbak erbij OPgeteld — moet aftrekken.",
+          "Je hebt waarschijnlijk een hele cirkel afgetrokken ipv halfrond.",
         ],
       },
     ],

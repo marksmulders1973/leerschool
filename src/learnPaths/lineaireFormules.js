@@ -24,6 +24,7 @@ const stepEmojis = [
   "🎯", "📍", "✏️",                  // C. Lijn tekenen / formule opstellen
   "⚖️", "🔄", "🧮",                  // D. Vergelijkingen oplossen
   "🚗", "💰", "🏁", "🏆",            // E. Toepassingen + eind
+  "📝",                              // F. Examenstijl
 ];
 
 const chapters = [
@@ -32,6 +33,7 @@ const chapters = [
   { letter: "C", title: "Lijn tekenen + formule opstellen", emoji: "✏️", from: 6, to: 8 },
   { letter: "D", title: "Vergelijkingen oplossen — balansmethode", emoji: "⚖️", from: 9, to: 11 },
   { letter: "E", title: "Toepassingen + eindopdrachten", emoji: "🏁", from: 12, to: 15 },
+  { letter: "F", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 16, to: 16 },
 ];
 
 const steps = [
@@ -545,6 +547,58 @@ ${baseAxes}
           "Je hebt a en b verwisseld. a = (14−2)/(4−0) = 12/4 = 3. b = 2 (het y-coord bij x=0).",
           "−2 zou kloppen als (0, -2). Maar het eerste punt is (0, **2**), dus b = 2.",
           "4 is Δx, niet de helling. Helling = Δy/Δx = 12/4 = 3.",
+        ],
+      },
+    ],
+  },
+  // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — taxi-tarief",
+    explanation: "Klassieke CSE-context: een tarief met **startbedrag + per-eenheid-prijs**. De lineaire formule beschrijft de prijs perfect.\n\n> **Een taxibedrijf rekent €4,00 startbedrag plus €1,80 per gereden kilometer.**\n\n**Aanpak in 3 stappen:**\n1. **Formule opstellen**: prijs `p` = startbedrag + tarief × aantal km. Dus **p = 1,80k + 4**.\n2. **Prijs uitrekenen**: bij 12 km → p = 1,80 × 12 + 4 = 21,60 + 4 = **€25,60**.\n3. **Andersom — aantal km bij gegeven prijs**: bij €31 → 31 = 1,80k + 4 → 1,80k = 27 → k = **15 km**.\n\n**Examen-tips**:\n• Lees goed: wat is de **constante** (b, het startbedrag) en wat is per-eenheid (a, het km-tarief)?\n• Eenheden bij elk getal (€, km).\n• Bij omgekeerde vraag: balansmethode of `(p − b) / a`.",
+    svg: `<svg viewBox="0 0 300 200">
+${baseAxes}
+<text x="155" y="38" fill="${COLORS.text}" font-size="11" font-family="Arial">prijs €</text>
+<text x="270" y="115" fill="${COLORS.text}" font-size="11" font-family="Arial">km</text>
+<line x1="150" y1="120" x2="270" y2="40" stroke="${COLORS.curve}" stroke-width="2.5"/>
+<circle cx="150" cy="120" r="4" fill="${COLORS.point}"/>
+<text x="125" y="135" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">(0; 4)</text>
+<circle cx="225" cy="70" r="4" fill="${COLORS.point}"/>
+<text x="230" y="68" fill="${COLORS.point}" font-size="10" font-family="Arial" font-weight="bold">(12; 25,60)</text>
+<rect x="40" y="170" width="220" height="22" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="150" y="186" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">p = 1,80 · k + 4</text>
+</svg>`,
+    checks: [
+      {
+        q: "Welke **formule** hoort bij dit taxi-tarief (€4 start + €1,80 per km)?",
+        options: ["p = 1,80k + 4", "p = 4k + 1,80", "p = 1,80 + 4k", "p = 5,80k"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt a en b verwisseld. Het start-bedrag is €4 (vast = b), per km is €1,80 (a).",
+          "Verwarrend genoteerd — feitelijk is dit p = 4k + 1,80, en dat klopt niet (4 is geen tarief per km).",
+          "Je hebt 4 + 1,80 opgeteld — niet doen, het zijn verschillende rollen.",
+        ],
+      },
+      {
+        q: "Wat kost een rit van **12 km**?",
+        options: ["€25,60", "€21,60", "€69,60", "€16,00"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je bent het startbedrag (€4) vergeten op te tellen. 1,80 × 12 = 21,60, plus 4 = 25,60.",
+          "Je hebt 5,80 × 12 gedaan (a en b opgeteld). Niet — gebruik de formule.",
+          "Je hebt 12 + 4 = 16. Maar 1,80 × 12 ≠ 12.",
+        ],
+      },
+      {
+        q: "Hoeveel km is een rit als de **prijs €31** is?",
+        options: ["15 km", "17 km", "19 km", "12 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je bent het startbedrag vergeten af te trekken. 31 − 4 = 27, dan 27 / 1,80 = 15.",
+          "Je hebt direct 31 / 1,80 ≈ 17 gedaan zonder de €4 af te trekken.",
+          "Net niet. Reken: (31 − 4) / 1,80 = 27 / 1,80 = 15.",
         ],
       },
     ],

@@ -24,6 +24,7 @@ const stepEmojis = [
   "🔍", "✖️", "🔢",                    // E. Vergrotingsfactor
   "↔️", "🔁", "🟦", "🟫", "📋",        // F. k/k²/k³ regel
   "🧱", "🏛️", "🐠",                    // G. Eindopdrachten
+  "📝",                                // H. Examenstijl
 ];
 
 const chapters = [
@@ -34,6 +35,7 @@ const chapters = [
   { letter: "E", title: "De vergrotingsfactor", emoji: "🔍", from: 14, to: 16 },
   { letter: "F", title: "Wat doet vergroten met omtrek/oppervlakte/inhoud?", emoji: "📐", from: 17, to: 21 },
   { letter: "G", title: "Eindopdrachten", emoji: "🏁", from: 22, to: 24 },
+  { letter: "H", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 25, to: 25 },
 ];
 
 const steps = [
@@ -923,6 +925,58 @@ const steps = [
           "Je hebt 50 + 30 + 40 = 120 gedaan (optellen). Bij inhoud vermenigvuldig je: 50 × 30 × 40.",
           "Je bent vergeten te delen door 1000 om naar liter om te rekenen. 60 000 cm³ ÷ 1000 = 60 L.",
           "Te weinig. Reken: 50 × 30 = 1500. 1500 × 40 = 60 000 cm³. Dan ÷ 1000 = 60 L.",
+        ],
+      },
+    ],
+  },
+  // ─── H. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — cilindrische watertank",
+    explanation: "Klassieke CSE-context: een **cilindrische tank** of **container** waar je inhoud (in liter) van moet berekenen.\n\n> **Een waterton is een cilinder met een diameter van 60 cm en een hoogte van 80 cm.**\n\n**Aanpak in 3 stappen:**\n1. **Inhoud van een cilinder** = π · r² · h.\n   Diameter 60 → straal r = **30 cm**.\n   Inhoud = π × 30² × 80 = π × 900 × 80 = π × 72.000 ≈ **226.195 cm³**.\n2. **Omrekenen naar liter**: 1 liter = 1000 cm³. Dus 226.195 cm³ ≈ **226 liter**.\n3. **Halve tank**: hoeveel liter zit erin als de ton tot de helft is gevuld? 226 / 2 ≈ **113 liter**.\n\n**Examen-tips**:\n• `r = d / 2` — let op of er diameter of straal staat.\n• 1 dm³ = 1 liter; 1000 cm³ = 1 dm³ = 1 liter.\n• Rond af zoals het examen aangeeft (vaak hele liters of 1 decimaal).",
+    svg: `<svg viewBox="0 0 300 200">
+<ellipse cx="150" cy="50" rx="50" ry="14" fill="rgba(66,165,245,0.5)" stroke="#42a5f5" stroke-width="2"/>
+<line x1="100" y1="50" x2="100" y2="160" stroke="#42a5f5" stroke-width="2"/>
+<line x1="200" y1="50" x2="200" y2="160" stroke="#42a5f5" stroke-width="2"/>
+<path d="M 100 160 A 50 14 0 0 0 200 160" fill="rgba(66,165,245,0.7)" stroke="#42a5f5" stroke-width="2"/>
+<path d="M 100 160 A 50 14 0 0 1 200 160" fill="none" stroke="#42a5f5" stroke-width="2" stroke-dasharray="3 2"/>
+<line x1="100" y1="50" x2="200" y2="50" stroke="#ffd54f" stroke-width="2"/>
+<text x="150" y="42" text-anchor="middle" fill="#ffd54f" font-size="11" font-family="Arial" font-weight="bold">Ø 60 cm</text>
+<line x1="220" y1="50" x2="220" y2="160" stroke="#ffd54f" stroke-width="2"/>
+<text x="240" y="110" fill="#ffd54f" font-size="11" font-family="Arial" font-weight="bold">h = 80 cm</text>
+<text x="150" y="190" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial">Inhoud = π · r² · h</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is de **straal** r van de waterton?",
+        options: ["30 cm", "60 cm", "120 cm", "15 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de diameter — de doorsnee. Straal = halve diameter.",
+          "Te groot. Reken: r = d / 2 = 60 / 2 = 30.",
+          "Niet — je hebt door 4 gedeeld. r = d / 2 = 30.",
+        ],
+      },
+      {
+        q: "Wat is de **inhoud** in cm³? (gebruik π ≈ 3,14)",
+        options: ["≈ 226.080 cm³", "≈ 7.536 cm³", "≈ 11.304 cm³", "≈ 4.800 cm³"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt waarschijnlijk r in plaats van r² gebruikt. Inhoud = π × 30² × 80.",
+          "Je hebt diameter gebruikt: π × 60 × 60. Maar er is r² nodig (= 30²) voor de oppervlakte van de cirkel.",
+          "Te klein. Reken: π × 900 × 80 ≈ 226.000.",
+        ],
+      },
+      {
+        q: "Hoeveel **liter** kan er in de ton?",
+        options: ["≈ 226 L", "≈ 22,6 L", "≈ 2.260 L", "≈ 22.600 L"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt door 10.000 gedeeld in plaats van 1000. 1 L = 1000 cm³.",
+          "Je hebt de inhoud niet door 1000 gedeeld.",
+          "Helemaal niet door 1000 gedeeld.",
         ],
       },
     ],

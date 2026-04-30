@@ -9,13 +9,14 @@ const COLORS = {
   muted: "#8899aa",
 };
 
-const stepEmojis = ["📐", "🏷️", "🔤", "📏", "📐", "📏", "🔄", "🎯", "🧮", "🏢", "🏆"];
+const stepEmojis = ["📐", "🏷️", "🔤", "📏", "📐", "📏", "🔄", "🎯", "🧮", "🏢", "🏆", "📝"];
 
 const chapters = [
   { letter: "A", title: "Rechthoekige driehoek herhaling", emoji: "📐", from: 0, to: 1 },
   { letter: "B", title: "Sinus, cosinus, tangens", emoji: "🔤", from: 2, to: 5 },
   { letter: "C", title: "Hoek of zijde uitrekenen", emoji: "🎯", from: 6, to: 8 },
   { letter: "D", title: "Toepassingen + eindopdracht", emoji: "🏆", from: 9, to: 10 },
+  { letter: "E", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 11, to: 11 },
 ];
 
 const steps = [
@@ -281,6 +282,57 @@ const steps = [
         ],
         answer: 0,
         wrongHints: [null, "Te veel — schuin × sin 45° = 8 × 0,71 ≈ 5,7.", "0,71 is sin 45°, niet de zijde. Vermenigvuldig met 8.", "Te weinig. Reken: 8 × 0,71 ≈ 5,7."],
+      },
+    ],
+  },
+  // ─── E. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — schuin dak van een schuur",
+    explanation: "Klassieke CSE-context: een **schuin dak** of **steile helling** waarvan je hoogte of afstand met sin/cos/tan moet uitrekenen.\n\n> **Een schuurdak heeft een schuine kant van 6,0 m lang.** Het dak maakt een hoek van 35° met de horizontale grond.\n\n**Aanpak in 3 stappen — onthoud SOS-CAS-TOA:**\n• **S**in = Overstaand / Schuin\n• **C**os = Aanliggend / Schuin\n• **T**an = Overstaand / Aanliggend\n\n1. **Hoogte van de dak-top** (overstaand bij 35°): sin 35° = h / 6,0 → h = 6,0 × sin 35° ≈ 6,0 × 0,5736 ≈ **3,4 m**.\n2. **Horizontale lengte** (aanliggend): cos 35° = b / 6,0 → b = 6,0 × cos 35° ≈ 6,0 × 0,8192 ≈ **4,9 m**.\n3. **Check met Pythagoras**: 3,4² + 4,9² = 11,56 + 24,01 = 35,57 → √35,57 ≈ 5,96 ≈ 6,0 ✓\n\n**Examen-tips**:\n• Teken de driehoek én markeer de hoek waarop je werkt.\n• Schrijf de juiste verhouding op (S/C/T) vóór je de rekenmachine gebruikt.\n• Rekenmachine in **DEG-stand** (graden), niet RAD.",
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="160" x2="280" y2="160" stroke="#8899aa" stroke-width="1.5"/>
+<polygon points="60,160 240,160 240,90" fill="rgba(0,200,83,0.15)" stroke="#00c853" stroke-width="2"/>
+<line x1="60" y1="160" x2="240" y2="90" stroke="#ffd54f" stroke-width="2.5"/>
+<text x="115" y="120" fill="#ffd54f" font-size="11" font-family="Arial" font-weight="bold">6,0 m</text>
+<text x="148" y="178" fill="#42a5f5" font-size="10" font-family="Arial" font-weight="bold">b = 4,9 m</text>
+<text x="248" y="128" fill="#ef5350" font-size="10" font-family="Arial" font-weight="bold">h = 3,4 m</text>
+<path d="M 80 160 A 22 22 0 0 0 81 153" fill="none" stroke="#ff7043" stroke-width="2"/>
+<text x="92" y="155" fill="#ff7043" font-size="11" font-family="Arial" font-weight="bold">35°</text>
+<rect x="225" y="145" width="15" height="15" fill="none" stroke="#00c853" stroke-width="1"/>
+</svg>`,
+    checks: [
+      {
+        q: "Welke verhouding gebruik je om de **hoogte h** uit te rekenen?",
+        options: ["sin 35° = h / 6,0", "cos 35° = h / 6,0", "tan 35° = h / 6,0", "h = 6,0 / 35"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "cos verbindt aanliggend met schuin. Hoogte is over-staand bij 35°.",
+          "tan verbindt overstaand met aanliggend, niet met schuin.",
+          "Niet zomaar delen door de hoek — gebruik sin/cos/tan.",
+        ],
+      },
+      {
+        q: "Wat is de **hoogte h** afgerond op 1 decimaal? (sin 35° ≈ 0,5736)",
+        options: ["3,4 m", "4,9 m", "5,7 m", "10,5 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de horizontale afstand b (cos 35° × 6,0).",
+          "Je hebt de waarde van sin verward — sin 35° ≈ 0,5736, NIET 0,71.",
+          "Je hebt 6,0 / sin 35° gedaan i.p.v. 6,0 × sin 35°.",
+        ],
+      },
+      {
+        q: "Wat is de **horizontale afstand b** afgerond? (cos 35° ≈ 0,8192)",
+        options: ["4,9 m", "3,4 m", "10,5 m", "7,3 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is de hoogte (sin × 6,0), niet de horizontale afstand.",
+          "Je hebt 6,0 / cos 35° gedaan i.p.v. 6,0 × cos 35°.",
+          "Niet — reken 6,0 × 0,8192 ≈ 4,9.",
+        ],
       },
     ],
   },

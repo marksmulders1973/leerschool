@@ -16,6 +16,7 @@ const stepEmojis = [
   "🟰", "🚫",                        // B. Eenvoudig x² = c
   "✂️", "0️⃣", "🧮",                  // C. Factoriseren
   "📊", "🏗️", "🏁", "🏆",            // D. Toepassingen
+  "📝",                              // E. Examenstijl
 ];
 
 const chapters = [
@@ -23,6 +24,7 @@ const chapters = [
   { letter: "B", title: "Eenvoudig: x² = c", emoji: "🟰", from: 3, to: 4 },
   { letter: "C", title: "Factoriseren: x(x + a) = 0", emoji: "✂️", from: 5, to: 7 },
   { letter: "D", title: "Toepassingen + eindopdracht", emoji: "🏁", from: 8, to: 11 },
+  { letter: "E", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 12, to: 12 },
 ];
 
 const steps = [
@@ -390,6 +392,59 @@ const steps = [
           "Bijna! Bij x(x + 9) = 0 → x + 9 = 0 → x = **−9** (let op: minteken).",
           "x² = c regel is voor zonder x-term. Hier wél een x-term — gebruik factoriseren.",
           "Vergeet x = 0 niet als oplossing.",
+        ],
+      },
+    ],
+  },
+  // ─── E. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — bal omhoog gegooid",
+    explanation: "Klassieke CSE-context: een **bal of voorwerp gegooid** met een hoogte-formule die kwadratisch is in tijd.\n\n> **Een bal wordt recht omhoog gegooid.** De hoogte (in meters) na t seconden is gegeven door **h = −5t² + 20t**.\n\n**Aanpak in 3 stappen:**\n1. **Wanneer is de bal weer op de grond?** Op de grond geldt h = 0. Dus −5t² + 20t = 0 → factoriseren: t(−5t + 20) = 0 → t = 0 OF t = 4. Dus na **4 seconden** weer op de grond (t = 0 was startpunt).\n2. **Wanneer is de bal op 15 m hoogte?** Stel −5t² + 20t = 15 → −5t² + 20t − 15 = 0 → :−5 → t² − 4t + 3 = 0 → (t − 1)(t − 3) = 0 → t = **1 of 3**. Op weg omhoog (t = 1) en op weg omlaag (t = 3).\n3. **Maximum hoogte?** Maximum ligt midden tussen de twee nulpunten → t = 2. Invullen: h = −5·4 + 20·2 = −20 + 40 = **20 m**.\n\n**Examen-tips**:\n• 'Op de grond' → h = 0.\n• Bij 'wanneer is hoogte X?' → kwadratische vergelijking: alle naar één kant, dan factoriseren.",
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="170" x2="280" y2="170" stroke="#8899aa" stroke-width="1.5"/>
+<line x1="40" y1="20" x2="40" y2="170" stroke="#8899aa" stroke-width="1.5"/>
+<text x="20" y="30" fill="#e0e6f0" font-size="11" font-family="Arial">h (m)</text>
+<text x="265" y="185" fill="#e0e6f0" font-size="11" font-family="Arial">t (sec)</text>
+<path d="M 60 170 Q 160 30 260 170" fill="none" stroke="#00c853" stroke-width="2.5"/>
+<circle cx="60" cy="170" r="4" fill="#ffd54f"/>
+<circle cx="160" cy="50" r="6" fill="#ff5252"/>
+<text x="130" y="42" fill="#ff5252" font-size="11" font-family="Arial" font-weight="bold">max 20 m bij t=2</text>
+<circle cx="260" cy="170" r="4" fill="#ffd54f"/>
+<text x="248" y="190" fill="#ffd54f" font-size="10" font-family="Arial">t=4</text>
+<text x="55" y="190" fill="#ffd54f" font-size="10" font-family="Arial">t=0</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wanneer is de bal **weer op de grond** (h = 0)?",
+        options: ["Bij t = 4 sec", "Bij t = 5 sec", "Bij t = 20 sec", "Nooit"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna. Reken: −5t² + 20t = 0 → t(−5t + 20) = 0 → −5t + 20 = 0 → t = 4.",
+          "Veel te laat. Bal valt na 4 sec terug.",
+          "Wat omhoog gaat komt naar beneden. Vind t door h = 0 te stellen.",
+        ],
+      },
+      {
+        q: "Op welke tijden is de bal **op 15 m hoogte**?",
+        options: ["Bij t = 1 én t = 3 sec", "Alleen bij t = 1 sec", "Alleen bij t = 3 sec", "Bij t = 0 én t = 4 sec"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "De bal komt twee keer langs 15 m: omhoog (t=1) én omlaag (t=3).",
+          "Idem — twee keer.",
+          "Dat zijn t-waarden voor h = 0 (start en eind), niet voor 15 m.",
+        ],
+      },
+      {
+        q: "Wat is de **maximum-hoogte** van de bal?",
+        options: ["20 m", "15 m", "5 m", "40 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Niet — 15 m is een gegeven hoogte uit de vorige vraag.",
+          "Te laag. Vul t = 2 in: h = −5·4 + 20·2 = 20.",
+          "Te hoog. h(2) = −5·4 + 40 = −20 + 40 = 20.",
         ],
       },
     ],

@@ -9,7 +9,7 @@ const COLORS = {
   muted: "#8899aa",
 };
 
-const stepEmojis = ["📊", "📋", "📈", "🧮", "🔁", "📍", "⚖️", "📏", "📐", "🎯", "📦", "🏆"];
+const stepEmojis = ["📊", "📋", "📈", "🧮", "🔁", "📍", "⚖️", "📏", "📐", "🎯", "📦", "🏆", "📝"];
 
 const chapters = [
   { letter: "A", title: "Verzamelen en weergeven", emoji: "📊", from: 0, to: 2 },
@@ -17,6 +17,7 @@ const chapters = [
   { letter: "C", title: "Spreiding en bereik", emoji: "📏", from: 7, to: 8 },
   { letter: "D", title: "Grafieken interpreteren", emoji: "📐", from: 9, to: 9 },
   { letter: "E", title: "Toepassingen + eindopdracht", emoji: "🏆", from: 10, to: 11 },
+  { letter: "F", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 12, to: 12 },
 ];
 
 const steps = [
@@ -319,6 +320,63 @@ const steps = [
         options: ["7,2", "7", "36", "5"],
         answer: 0,
         wrongHints: [null, "Te laag. Som = 36, ÷ 5 = 7,2.", "36 is de som. Deel nog door 5.", "5 is de kleinste, niet gemiddelde."],
+      },
+    ],
+  },
+  // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — toetscijfers van een klas",
+    explanation: "Klassieke CSE-context: een **frequentietabel** met cijfers van een klas en je moet centrummaten berekenen.\n\n> **Klas 4A heeft 20 leerlingen.** Cijfers wiskundetoets:\n>\n> | Cijfer | 4 | 5 | 6 | 7 | 8 | 9 |\n> | Aantal | 1 | 3 | 5 | 6 | 4 | 1 |\n\n**Aanpak in 3 stappen:**\n1. **Gemiddelde** = (som van alle cijfers) / (totaal aantal leerlingen).\n   Som = 4·1 + 5·3 + 6·5 + 7·6 + 8·4 + 9·1 = 4 + 15 + 30 + 42 + 32 + 9 = **132**.\n   Gemiddelde = 132 / 20 = **6,6**.\n2. **Modus** = cijfer dat **het vaakst** voorkomt. Hier 7 (6 leerlingen). Dus modus = **7**.\n3. **Mediaan** (middelste cijfer): 20 leerlingen → mediaan = gemiddelde van 10e en 11e cijfer in volgorde. Cumulatief: 1, 4, 9, 15, 19, 20. De 10e en 11e zitten beide bij cijfer 7. Mediaan = **7**.\n\n**Examen-tips**:\n• Bij `n × cijfer` werken voor de som — niet alle cijfers los optellen.\n• Mediaan bij even aantal: gemiddelde van middelste twee.\n• Modus = MEEST voorkomende, niet gemiddelde.",
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="170" x2="280" y2="170" stroke="#8899aa" stroke-width="1.2"/>
+<line x1="40" y1="20" x2="40" y2="170" stroke="#8899aa" stroke-width="1.2"/>
+<rect x="60" y="160" width="22" height="10" fill="#42a5f5"/>
+<text x="71" y="185" text-anchor="middle" fill="#e0e6f0" font-size="10" font-family="Arial">4</text>
+<rect x="92" y="140" width="22" height="30" fill="#42a5f5"/>
+<text x="103" y="185" text-anchor="middle" fill="#e0e6f0" font-size="10" font-family="Arial">5</text>
+<rect x="124" y="120" width="22" height="50" fill="#42a5f5"/>
+<text x="135" y="185" text-anchor="middle" fill="#e0e6f0" font-size="10" font-family="Arial">6</text>
+<rect x="156" y="110" width="22" height="60" fill="#ff5252"/>
+<text x="167" y="185" text-anchor="middle" fill="#ff5252" font-size="10" font-family="Arial" font-weight="bold">7★</text>
+<rect x="188" y="130" width="22" height="40" fill="#42a5f5"/>
+<text x="199" y="185" text-anchor="middle" fill="#e0e6f0" font-size="10" font-family="Arial">8</text>
+<rect x="220" y="160" width="22" height="10" fill="#42a5f5"/>
+<text x="231" y="185" text-anchor="middle" fill="#e0e6f0" font-size="10" font-family="Arial">9</text>
+<text x="160" y="34" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial" font-weight="bold">Cijferverdeling klas 4A (n=20)</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is het **gemiddelde cijfer**?",
+        options: ["6,6", "6,5", "7,0", "5,5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Bijna. Reken zorgvuldig: som = 132, ÷ 20 = 6,6.",
+          "Dat is de modus, niet het gemiddelde.",
+          "Te laag. Reken: 132 / 20 = 6,6.",
+        ],
+      },
+      {
+        q: "Wat is de **modus**?",
+        options: ["7", "6", "8", "5"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Modus is de cijfer met de hoogste frequentie. 6 heeft 5 leerlingen, 7 heeft 6 leerlingen → 7 is hoger.",
+          "Slechts 4 leerlingen hadden een 8.",
+          "Slechts 3 leerlingen hadden een 5.",
+        ],
+      },
+      {
+        q: "Wat is de **mediaan**?",
+        options: ["7", "6,6", "6", "8"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het gemiddelde, niet de mediaan. Mediaan = middelste waarde.",
+          "Te laag. Cumulatief is de 10e en 11e leerling beide bij cijfer 7.",
+          "Te hoog. De middelste leerlingen zaten op een 7.",
+        ],
       },
     ],
   },

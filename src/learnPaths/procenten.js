@@ -17,6 +17,7 @@ const stepEmojis = [
   "🔢", "📊",                        // C. Welk % is X van Y
   "💸", "📈",                        // D. Korting + toename
   "🛒", "🏆",                        // E. Eindopdrachten
+  "📝",                              // F. Examenstijl
 ];
 
 const chapters = [
@@ -25,6 +26,7 @@ const chapters = [
   { letter: "C", title: "Welk percentage is X van Y?", emoji: "🔢", from: 6, to: 7 },
   { letter: "D", title: "Korting en toename", emoji: "💸", from: 8, to: 9 },
   { letter: "E", title: "Eindopdrachten", emoji: "🏆", from: 10, to: 11 },
+  { letter: "F", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 12, to: 12 },
 ];
 
 const steps = [
@@ -404,6 +406,58 @@ const steps = [
           "€150 is de oorspronkelijke prijs als 20% korting. Bij 25% korting: 120 / 0,75 = 160.",
           "€144 = €120 + 20%. Maar je zoekt het origineel: deel €120 door 0,75 (= 75%).",
           "€96 = €120 − 20%. Andersom — je zoekt de **hogere** prijs van vóór de korting.",
+        ],
+      },
+    ],
+  },
+  // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — huizenprijs in 4 jaar",
+    explanation: "Klassieke CSE-context: een **prijsstijging** of **-daling** uitrekenen, vaak met **indexcijfer**.\n\n> **In 2020 kostte een gemiddeld huis €280.000.** In 2024 is dat **€420.000**.\n\n**Aanpak in 3 stappen:**\n1. **Absolute stijging** = nieuw − oud = 420.000 − 280.000 = **€140.000**.\n2. **Procentuele stijging** = (stijging / oude waarde) × 100% = (140.000 / 280.000) × 100% = 0,5 × 100 = **50%**.\n3. **Indexcijfer** met 2020 = 100: indexcijfer 2024 = (nieuw / oud) × 100 = (420.000 / 280.000) × 100 = **150**.\n\n**Examen-tips**:\n• Procentuele verandering: deel altijd door de **oude** waarde.\n• Indexcijfer: het basisjaar krijgt 100. Andere jaren tov dat basisjaar.\n• Een index van 150 betekent: 50% gestegen sinds basisjaar.",
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="170" x2="280" y2="170" stroke="#8899aa" stroke-width="1.2"/>
+<line x1="40" y1="20" x2="40" y2="170" stroke="#8899aa" stroke-width="1.2"/>
+<rect x="80" y="100" width="40" height="70" fill="#42a5f5"/>
+<text x="100" y="185" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial">2020</text>
+<text x="100" y="92" text-anchor="middle" fill="#42a5f5" font-size="10" font-family="Arial" font-weight="bold">€280k</text>
+<rect x="200" y="55" width="40" height="115" fill="#ff7043"/>
+<text x="220" y="185" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial">2024</text>
+<text x="220" y="48" text-anchor="middle" fill="#ff7043" font-size="10" font-family="Arial" font-weight="bold">€420k</text>
+<text x="160" y="35" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial" font-weight="bold">+ 50%</text>
+<text x="160" y="48" text-anchor="middle" fill="#ffd54f" font-size="10" font-family="Arial">index: 100 → 150</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is de **absolute stijging** van de huizenprijs?",
+        options: ["€140.000", "€700.000", "€280.000", "€420.000"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt opgeteld in plaats van afgetrokken. Stijging = nieuw − oud.",
+          "Dat is de oude prijs.",
+          "Dat is de nieuwe prijs.",
+        ],
+      },
+      {
+        q: "Wat is de **procentuele stijging**?",
+        options: ["50%", "33%", "100%", "150%"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt gedeeld door de **nieuwe** waarde. Moet door de oude (140.000 / 280.000 = 0,5 = 50%).",
+          "100% zou betekenen: prijs verdubbeld. Maar 280k → 420k is geen verdubbeling.",
+          "Dat is het indexcijfer, niet het stijgingspercentage.",
+        ],
+      },
+      {
+        q: "Wat is het **indexcijfer in 2024** (basisjaar 2020 = 100)?",
+        options: ["150", "50", "120", "100"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het stijgingspercentage. Indexcijfer = 100 + 50 = 150.",
+          "Te laag. Reken: (420.000 / 280.000) × 100 = 150.",
+          "100 is alleen geldig voor het basisjaar. 2024 is gestegen, dus > 100.",
         ],
       },
     ],
