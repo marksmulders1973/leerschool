@@ -1698,12 +1698,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // PORTAL naar dungeon-wereld — zeldzaam (elke ~50 obstakels, 50% kans)
+          // PORTAL naar dungeon-wereld — elke ~25 obstakels, 70% kans
           // Niet tijdens boss/flip/loop/dungeon zelf.
           if (
             !bossActief && flipFrames === 0 && !loopActief && !dungeonMode &&
-            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 50 === 0 &&
-            Math.random() < 0.5
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 &&
+            Math.random() < 0.7
           ) {
             const yPos = (170 + Math.random() * 90) * SCHAAL;
             portals.push({
@@ -1719,13 +1719,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // 70% schans, 30% looping.
           if (
             !bossActief && flipFrames === 0 &&
-            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 14 === 0 &&
-            Math.random() < 0.6
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 10 === 0 &&
+            Math.random() < 0.75
           ) {
             // Geen schans spawnen als er nog een obstakel dicht bij de
             // schans-positie staat — anders blokkeert dat de toegang.
-            // Check: laatste-obstakel-rechterkant moet > 350 px links van W zijn.
-            const minVrijeRuimte = 350 * SCHAAL;
+            // Check: laatste-obstakel-rechterkant moet > 250 px links van W zijn.
+            const minVrijeRuimte = 250 * SCHAAL;
             let geenObstakelInDeWeg = true;
             for (const o of obstakels) {
               if (o.x + o.breedte > W - minVrijeRuimte) {
