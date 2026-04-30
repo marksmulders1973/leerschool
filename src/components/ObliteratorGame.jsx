@@ -1920,11 +1920,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               opgepakt: false,
             });
           }
-          // SCHANS / LOOPING — elke ~14 obstakels, 60% kans. Skip tijdens boss
-          // (focus moet op boss blijven) en tijdens FLIP (te veel edge cases).
-          // 70% schans, 30% looping.
+          // SCHANS / LOOPING — elke ~6 obstakels, 85% kans. Skip tijdens boss,
+          // FLIP en dungeon (super-jump in dungeon = vlieg door plafond-stekels
+          // = direct dood).
           if (
-            !bossActief && flipFrames === 0 &&
+            !bossActief && flipFrames === 0 && !dungeonMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
             Math.random() < 0.85
           ) {
