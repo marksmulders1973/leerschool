@@ -1094,6 +1094,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     // ---------- OBSTAKELS ----------
     const obstakels = [];
+    // Schansen + loopings — bij contact super-jump + safe-zone + arc-pickups.
+    // schansen[] = { x, y, breedte, hoogte, type: 'schans'|'loop', geactiveerd }
+    const schansen = [];
+    // Frames-teller voor 'safe-zone' direct na een schans: zo lang > 0 worden
+    // er geen nieuwe grond-obstakels gespawnd zodat speler niet direct op een
+    // spike landt na de super-sprong.
+    let schansVeiligeFrames = 0;
     function tekenStenenStekel(x, y, b, h) {
       ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -1138,6 +1145,44 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
         tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
       } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+    }
+    function tekenSchans(sc) {
+      ctx.save();
+      if (sc.type === "loop") {
+        // Looping: gele cirkel-arc met dubbele ring
+        const cx = sc.x + sc.breedte / 2;
+        const cy = sc.y + sc.hoogte / 2 - 4 * SCHAAL;
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = "#ffeb3b";
+        ctx.strokeStyle = "#ffeb3b";
+        ctx.lineWidth = 4 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, sc.breedte / 2, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(255,235,59,0.55)";
+        ctx.lineWidth = 2 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, sc.breedte / 2 - 6 * SCHAAL, 0, Math.PI * 2);
+        ctx.stroke();
+      } else {
+        // Schans: groene driehoek-helling met witte pijl
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = "#69f0ae";
+        ctx.fillStyle = "#00c853";
+        ctx.beginPath();
+        ctx.moveTo(sc.x, sc.y + sc.hoogte);
+        ctx.lineTo(sc.x + sc.breedte, sc.y);
+        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);
+        ctx.closePath();
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "rgba(255,255,255,0.95)";
+        ctx.font = `bold ${16 * SCHAAL}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText("↗", sc.x + sc.breedte * 0.65, sc.y + sc.hoogte * 0.55 + 4 * SCHAAL);
+      }
+      ctx.restore();
     }
     function obstRaakt(o) {
       const s = spelerBots();
@@ -1355,17 +1400,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       trail();
+      // Decrement safe-zone teller (na schans-sprong)
+      if (schansVeiligeFrames > 0) schansVeiligeFrames--;
       volgendObstakelOver--;
       if (volgendObstakelOver <= 0) {
-        maakObstakel();
-        // density schaalt nu vooral op level (score-aandeel houdt mooi af bij beginners)
-        // L1  : 80-115 frames (rustig)
-        // L20 : 56-78 frames
-        // L50 : 28-43 frames
-        // L100: 18-28 frames (vrijwel onmogelijk)
-        const minA = Math.max(18, 80 - huidigLevel * 0.65 - score * 0.2);
-        const variatie = Math.max(10, 35 - huidigLevel * 0.30);
-        volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
+        if (schansVeiligeFrames > 0) {
+          // Tijdens vlucht/landing na schans: geen nieuwe obstakels op grond,
+          // korte herprobeer-cooldown zodat we niet de hele safe-zone wachten.
+          volgendObstakelOver = 30;
+        } else {
+          maakObstakel();
+          // density schaalt nu vooral op level (score-aandeel houdt mooi af bij beginners)
+          // L1  : 80-115 frames (rustig)
+          // L20 : 56-78 frames
+          // L50 : 28-43 frames
+          // L100: 18-28 frames (vrijwel onmogelijk)
+          const minA = Math.max(18, 80 - huidigLevel * 0.65 - score * 0.2);
+          const variatie = Math.max(10, 35 - huidigLevel * 0.30);
+          volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
+        }
       }
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
@@ -1404,9 +1457,108 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
+          // SCHANS / LOOPING — elke ~14 obstakels, 60% kans. Skip tijdens boss
+          // (focus moet op boss blijven) en tijdens FLIP (te veel edge cases).
+          // 70% schans, 30% looping.
+          if (
+            !bossActief && flipFrames === 0 &&
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 14 === 0 &&
+            Math.random() < 0.6
+          ) {
+            const isLoop = Math.random() < 0.3;
+            const breedte = (isLoop ? 50 : 56) * SCHAAL;
+            const hoogte  = (isLoop ? 50 : 30) * SCHAAL;
+            schansen.push({
+              x: W + 40,
+              y: GROND_Y + SPELER_GROOTTE - hoogte,
+              breedte,
+              hoogte,
+              type: isLoop ? "loop" : "schans",
+              geactiveerd: false,
+            });
+          }
           // (plafond-stekel-spawn werkt nu via eigen plafondStekelSpawnTeller, hieronder)
         }
         if (o.x + o.breedte < 0) obstakels.splice(i, 1);
+      }
+      // ---------- SCHANSEN + LOOPINGS ----------
+      // Beweeg, render, en check collision met speler. Bij contact:
+      //   - super-jump (1.7× normale sprongkracht)
+      //   - safe-zone van 70 frames (geen nieuwe grond-obstakels)
+      //   - ringen verspreid over de boog (4 voor schans, 7 voor loop)
+      //   - 1 piek-cadeau (40% hartje, 20% magneet, 20% slow-mo, 20% bom)
+      for (let i = schansen.length - 1; i >= 0; i--) {
+        const sc = schansen[i];
+        sc.x -= effSnelheid;
+
+        // (Render gebeurt in teken() via tekenSchans, niet hier.)
+
+        // Collision (alleen één keer + niet tijdens boss/flip)
+        if (!sc.geactiveerd && !bossActief && flipFrames === 0) {
+          const sb = spelerBots();
+          const overlapt =
+            sb.x + sb.breedte > sc.x &&
+            sb.x < sc.x + sc.breedte &&
+            sb.y + sb.hoogte > sc.y;
+          if (overlapt) {
+            sc.geactiveerd = true;
+            const isLoop = sc.type === "loop";
+
+            // Super-jump (1.7× sprongkracht); reset multi-jump teller
+            const superKracht = SPRING_KRACHT * 1.7;
+            speler.snelheidY = superKracht;
+            speler.springt = true;
+            speler.sprongTeller = 0;
+
+            // Safe-zone — geen nieuwe grond-obstakels gedurende landing
+            schansVeiligeFrames = 70;
+
+            // Particles + geluid
+            spawnParticles(
+              speler.x + speler.breedte / 2,
+              speler.y + speler.hoogte / 2,
+              isLoop ? 22 : 16,
+              isLoop ? "#ffeb3b" : "#69f0ae",
+              { spread: 6, opwaarts: 4, leven: 30, grootte: 5, zwaartekracht: 0.05, glow: 18 }
+            );
+            springGeluid();
+
+            // Arc-collectibles — y(t) = GROND_Y + super·t + ½·g·t²
+            // Wereld beweegt naar links met effSnelheid; spawn op x = speler.x + effSnelheid·t
+            // zodat speler ze t frames later precies tegenkomt.
+            const ringFrames = isLoop ? [10, 18, 26, 34, 42, 50, 58] : [14, 26, 38, 50];
+            for (const t of ringFrames) {
+              const yArc = GROND_Y + superKracht * t + 0.5 * ZWAARTEKRACHT * t * t;
+              ringen.push({
+                x: speler.x + effSnelheid * t,
+                y: Math.max(60 * SCHAAL, yArc),
+                grootte: 22 * SCHAAL,
+                fase: 0,
+                opgepakt: false,
+              });
+            }
+
+            // Piek-cadeau op middelste t (waar speler hoogste is)
+            const tPiek = isLoop ? 34 : 26;
+            const yPiekRaw = GROND_Y + superKracht * tPiek + 0.5 * ZWAARTEKRACHT * tPiek * tPiek;
+            const yPiek = Math.max(50 * SCHAAL, yPiekRaw - 18 * SCHAAL);
+            const xPiek = speler.x + effSnelheid * tPiek;
+
+            // Verdeling: 40% hartje, 20% magneet, 20% slow-mo, 20% bom (geen mini-boss)
+            const r = Math.random();
+            if (r < 0.4 && levens < MAX_LEVENS) {
+              bonusHarten.push({ x: xPiek, y: yPiek, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+            } else if (r < 0.6 && magneetFrames === 0) {
+              magneetPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            } else if (r < 0.8 && slowFrames === 0) {
+              slowMoPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            } else {
+              bombPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
+          }
+        }
+
+        if (sc.x + sc.breedte < 0) schansen.splice(i, 1);
       }
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
@@ -2052,6 +2204,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
+      for (const sc of schansen) tekenSchans(sc);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
 
       // ───── BOSS render ─────
@@ -2635,6 +2788,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (particles[i].dood) particles.splice(i, 1);
         }
         for (const o of obstakels) tekenObstakel(o);
+        for (const sc of schansen) tekenSchans(sc);
         for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
         ctx.restore();
         tekenLevens();
