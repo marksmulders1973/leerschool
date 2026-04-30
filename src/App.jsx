@@ -56,8 +56,6 @@ const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
-const ObliteratorV2 = lazy(() => import("./games/obliterator/ObliteratorV2.jsx"));
-const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
@@ -189,16 +187,9 @@ const fonts = `
 `;
 
 export default function App() {
-  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage),
-  // /duel/:code (PvP-uitnodiging)
-  const initialPvpJoinCode = (() => {
-    if (typeof window === "undefined") return null;
-    const m = window.location.pathname.match(/^\/duel\/([a-z0-9]{4,12})/i);
-    return m ? m[1].toLowerCase() : null;
-  })();
+  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage)
   const initialPage = (() => {
     if (typeof window === "undefined") return "home";
-    if (initialPvpJoinCode) return "pvp-lobby";
     try {
       const sp = new URLSearchParams(window.location.search);
       if (sp.get("play") === "obliterator") return "obliteratorDirect";
@@ -238,9 +229,6 @@ export default function App() {
       if (fromUrl !== page) setPage(fromUrl);
       return;
     }
-    // pvp-lobby heeft een dynamische URL (/duel/:code) — niet redirecten naar /duel
-    // anders verliest de guest de match-code uit de URL.
-    if (page === "pvp-lobby") return;
     const expected = pathForPage(page);
     if (expected && expected !== location.pathname) {
       navigate(expected);
@@ -263,10 +251,6 @@ export default function App() {
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
   // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
   const [meeBezigCategory, setMeeBezigCategory] = useState(null);
-  // PvP duel state — fase 'lobby' = match maken/joinen, 'play' = spel draait
-  const [pvpState, setPvpState] = useState(
-    initialPvpJoinCode ? { phase: "lobby", mode: "guest", code: initialPvpJoinCode } : null
-  );
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -796,72 +780,6 @@ export default function App() {
           onClose={() => setPage("home")}
         />
       )}
-      {page === "pvp-lobby" && pvpState?.phase === "lobby" && (
-        <PvPLobby
-          playerName={userName || "Speler"}
-          mode={pvpState.mode}
-          code={pvpState.code}
-          onMatchReady={(match, sub, role, startsAt) => {
-            setPvpState({ phase: "play", mode: pvpState.mode, code: match.id, match, sub, role, startsAt });
-            setPage("pvp-play");
-          }}
-          onClose={() => {
-            setPvpState(null);
-            setPage("home");
-            // Schoon URL op (verwijder /duel/...)
-            try { window.history.replaceState({}, "", "/"); } catch {}
-          }}
-        />
-      )}
-      {page === "pvp-play" && pvpState?.phase === "play" && pvpState.match && (
-        <ObliteratorV2
-          playerName={userName || "Speler"}
-          pvpMatch={pvpState.match}
-          pvpSub={pvpState.sub}
-          pvpRole={pvpState.role}
-          pvpStartsAt={pvpState.startsAt}
-          onClose={() => {
-            try { pvpState.sub?.unsub(); } catch {}
-            setPvpState(null);
-            setPage("home");
-            try { window.history.replaceState({}, "", "/"); } catch {}
-          }}
-        />
-      )}
-      {page === "obliterator-v2" && (
-        <ObliteratorV2
-          playerName={userName || "Speler"}
-          onClose={() => setPage("home")}
-          onChallengeFriend={() => {
-            setPvpState({ phase: "lobby", mode: "host" });
-            setPage("pvp-lobby");
-          }}
-          onScoreSubmit={({ score, level, bestCombo, obliterates, isDaily, dailyDate }) => {
-            // Tag-formaat in obliterator_scores.level:
-            //   v2-{level}                    voor normale runs
-            //   v2-daily-{date}-{level}       voor Daily Challenge
-            // Zo kan de leaderboard filteren met LIKE 'v2-daily-2026-04-29-%'
-            // en de algemene 'v2-%' query pakt beide types op.
-            const tag = isDaily && dailyDate
-              ? `v2-daily-${dailyDate}-${level}`
-              : `v2-${level}`;
-            try {
-              supabase
-                .from("obliterator_scores")
-                .insert({
-                  player_name: userName || "Speler",
-                  score,
-                  level: tag,
-                  user_id: authUser?.id || null,
-                })
-                .then(() => {})
-                .catch(() => {});
-            } catch {
-              // ignore
-            }
-          }}
-        />
-      )}
       {page === "home" && (
         <HomePage
           onSaveProfile={({ name, level, role, schoolType }) => {
@@ -876,10 +794,6 @@ export default function App() {
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
           onPlayObliterator={() => setPage("obliteratorPlay")}
-          onChallengeFriend={() => {
-            setPvpState({ phase: "lobby", mode: "host" });
-            setPage("pvp-lobby");
-          }}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
           onLearnPathsHub={() => setPage("learn-paths-hub")}
