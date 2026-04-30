@@ -193,6 +193,7 @@ export function subscribeMatch({ code, role, name, handlers = {} }) {
  */
 export function whatsappShareLink(matchCode, hostName) {
   const url = `${window.location.origin}/duel/${matchCode}`;
-  const text = `🎮 ${hostName} daagt je uit in OBLITERATOR! Klik om mee te doen: ${url}`;
+  // OBLITERATOR voorop, gebruikersnaam ondergeschikt. *bold* werkt in WhatsApp.
+  const text = `🎮 *OBLITERATOR* ⚔️\n\nJe wordt uitgedaagd voor een duel door ${hostName}!\n\nTik op de link om mee te spelen:\n${url}`;
   return `https://wa.me/?text=${encodeURIComponent(text)}`;
 }

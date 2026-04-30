@@ -198,6 +198,7 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
   const [copied, setCopied] = useState(false);
   const [polledGuestName, setPolledGuestName] = useState(match.guest_name || null);
   const [waitSeconds, setWaitSeconds] = useState(0);
+  const [invitedName, setInvitedName] = useState("");
   const url = `${window.location.origin}/duel/${match.id}`;
 
   // Polling: check elke 3s of er een guest in de DB-rij is verschenen.
@@ -250,6 +251,14 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
         de link doet de rest.
       </div>
 
+      <input
+        type="text"
+        placeholder="Voor wie? (bv. Brian)"
+        value={invitedName}
+        onChange={(e) => setInvitedName(e.target.value)}
+        style={inviteInputStyle}
+      />
+
       <a
         href={whatsappShareLink(match.id, playerName)}
         target="_blank"
@@ -266,6 +275,9 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
       >
         📱 Deel via WhatsApp
       </a>
+      <div style={postShareHintStyle}>
+        💡 Na delen: <strong>terug naar deze app</strong> en hier wachten — niet zelf op de link drukken.
+      </div>
       <button type="button" onClick={copyLink} style={{ ...ghostBtnStyle, marginTop: 8 }}>
         {copied ? "✓ Link gekopieerd" : "📋 Of kopieer link voor andere chat"}
       </button>
@@ -293,12 +305,14 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
           </span>
         ) : waitSeconds > 60 ? (
           <span style={{ color: "var(--color-warning)" }}>
-            Geen reactie na {Math.floor(waitSeconds / 60)} min — link niet aangekomen?
-            Probeer opnieuw te delen of stuur de URL hierboven via een andere chat.
+            Geen reactie {invitedName ? `van ${invitedName} ` : ""}na {Math.floor(waitSeconds / 60)} min —
+            link niet aangekomen? Probeer opnieuw te delen of stuur de URL hierboven via een andere chat.
           </span>
         ) : (
           <span style={{ color: "var(--color-text-muted)" }}>
-            Wacht tot je vriend de link opent… ({waitSeconds}s)
+            {invitedName
+              ? `Wacht op ${invitedName}… (${waitSeconds}s)`
+              : `Wacht tot je vriend de link opent… (${waitSeconds}s)`}
           </span>
         )}
       </div>
@@ -490,4 +504,30 @@ const ghostBtnStyle = {
   fontWeight: 700,
   cursor: "pointer",
   minHeight: 44,
+};
+
+const inviteInputStyle = {
+  width: "100%",
+  padding: "10px 12px",
+  marginBottom: 10,
+  border: "1px solid var(--color-border)",
+  borderRadius: 10,
+  background: "rgba(0,0,0,0.3)",
+  color: "var(--color-text)",
+  fontFamily: "var(--font-body)",
+  fontSize: 14,
+  outline: "none",
+  boxSizing: "border-box",
+};
+
+const postShareHintStyle = {
+  marginTop: 8,
+  padding: "8px 10px",
+  borderRadius: 8,
+  background: "rgba(255, 184, 0, 0.10)",
+  border: "1px solid rgba(255, 184, 0, 0.35)",
+  color: "var(--color-text)",
+  fontSize: 12,
+  lineHeight: 1.4,
+  textAlign: "center",
 };
