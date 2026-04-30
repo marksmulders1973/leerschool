@@ -257,8 +257,8 @@ export default function ObliteratorV2({
         if (s.rng() < 0.4) spawnStar(s);
         // 🌀 Warp tunnel: 2% per spawn-tick, alleen tot level 7.
         if (s.level <= 7 && s.rng() < 0.02) spawnWarp(s);
-        // 🛹 Schans/looping: 2% per spawn-tick, alleen tot level 7.
-        if (s.level <= 7 && s.rng() < 0.02) spawnRamp(s);
+        // 🛹 Schans/looping: 6% per spawn-tick, t/m level 10.
+        if (s.level <= 10 && s.rng() < 0.06) spawnRamp(s);
       }
 
       // ⚡ Wapen-tick: auto-fire + alien-spawn als wapen actief.
