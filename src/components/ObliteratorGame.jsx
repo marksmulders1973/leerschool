@@ -1223,36 +1223,86 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillRect(lFx, footY - footH, footW, 2 * SCHAAL);
         ctx.fillRect(rFx, footY - footH, footW, 2 * SCHAAL);
       } else {
-        // Schans: triangulair, helling vóór de speler. Speler is fixed op x=100,
-        // wereld scrollt naar links → de LINKERkant van de schans (sc.x) raakt
-        // de speler eerst. Daar zit de slope-tip op grondniveau; slope loopt
-        // omhoog naar de top-rechts; vertikale wand zit op rechts (achterkant).
+        // Schans als skate-ramp: gebogen slope (convex, kicker-stijl) +
+        // kort vlak deck bovenop + verticale achterkant. Donker materiaal met
+        // panel-lijnen en witte arrow-grafiek. Speler raakt eerst slope-tip
+        // (links-onder), 'rolt' over de boog naar de deck.
+        const xL = sc.x;                          // linker (slope-tip op grond)
+        const yB = sc.y + sc.hoogte;              // grondniveau
+        const yT = sc.y;                          // bovenkant (deck-niveau)
+        const xR = sc.x + sc.breedte;             // rechter (achterkant)
+        // Curve gaat van slope-tip omhoog naar 85% breedte op deck-niveau,
+        // dan kort vlak naar volle breedte. Control point boven straight-line
+        // = convexe bocht (uitstekend, kicker-vorm).
+        const xDeckStart = xL + sc.breedte * 0.85;
+        const cpx = xL + sc.breedte * 0.55;
+        const cpy = yB - sc.hoogte * 0.92;        // hoog → meer ronding
+
+        // Body fill — donker grijs gradient
         ctx.shadowBlur = 14;
-        ctx.shadowColor = "#69f0ae";
-        const grad = ctx.createLinearGradient(sc.x, sc.y, sc.x, sc.y + sc.hoogte);
-        grad.addColorStop(0, "#69f0ae");
-        grad.addColorStop(1, "#00a040");
+        ctx.shadowColor = "rgba(0,0,0,0.7)";
+        const grad = ctx.createLinearGradient(0, yT, 0, yB);
+        grad.addColorStop(0, "#3a3a44");
+        grad.addColorStop(1, "#1a1a22");
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.moveTo(sc.x, sc.y + sc.hoogte);                       // bottom-left (slope-tip, grond)
-        ctx.lineTo(sc.x + sc.breedte, sc.y);                      // top-right (piek)
-        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);          // bottom-right (achterkant onder)
+        ctx.moveTo(xL, yB);
+        ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+        ctx.lineTo(xR, yT);                       // deck
+        ctx.lineTo(xR, yB);                       // achterkant omlaag
         ctx.closePath();
         ctx.fill();
-        // Slope-rand accent (van slope-tip onder-links naar piek rechts-boven)
         ctx.shadowBlur = 0;
-        ctx.strokeStyle = "rgba(255,255,255,0.85)";
-        ctx.lineWidth = 3 * SCHAAL;
+
+        // Slope-rand accent (witte hoogte-lijn over de boog)
+        ctx.strokeStyle = "rgba(220, 220, 230, 0.65)";
+        ctx.lineWidth = 2 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(sc.x, sc.y + sc.hoogte);
-        ctx.lineTo(sc.x + sc.breedte, sc.y);
+        ctx.moveTo(xL, yB);
+        ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+        ctx.lineTo(xR, yT);
         ctx.stroke();
-        // Pijl-omhoog midden op de helling
-        ctx.fillStyle = "rgba(255,255,255,0.95)";
-        ctx.font = `bold ${Math.floor(sc.hoogte * 0.32)}px sans-serif`;
+
+        // Panel-lijnen — horizontale segmenten zoals op echte skate-ramp
+        ctx.strokeStyle = "rgba(255,255,255,0.10)";
+        ctx.lineWidth = 1 * SCHAAL;
+        for (let frac = 0.2; frac < 1.0; frac += 0.2) {
+          const yPanel = yB - sc.hoogte * frac;
+          // Vind x op de curve voor deze hoogte (approximatie via lineair zoeken)
+          let xPanel = xL;
+          for (let t = 0; t <= 1; t += 0.02) {
+            const cy_t = (1 - t) * (1 - t) * yB + 2 * (1 - t) * t * cpy + t * t * yT;
+            if (cy_t <= yPanel) {
+              const cx_t = (1 - t) * (1 - t) * xL + 2 * (1 - t) * t * cpx + t * t * xDeckStart;
+              xPanel = cx_t;
+              break;
+            }
+          }
+          ctx.beginPath();
+          ctx.moveTo(xPanel, yPanel);
+          ctx.lineTo(xR, yPanel);
+          ctx.stroke();
+        }
+
+        // Witte arrow-grafiek (zoals op de echte ramp) midden op de boog
+        ctx.fillStyle = "rgba(220, 230, 240, 0.85)";
+        ctx.font = `bold ${Math.floor(sc.hoogte * 0.36)}px sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText("↗", sc.x + sc.breedte * 0.55, sc.y + sc.hoogte * 0.55);
+        ctx.fillText("↗", xL + sc.breedte * 0.55, yB - sc.hoogte * 0.45);
+
+        // Subtiele groene glow-halo om interactiviteit te signaleren
+        ctx.save();
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = "#69f0ae";
+        ctx.strokeStyle = "rgba(105, 240, 174, 0.30)";
+        ctx.lineWidth = 3 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(xL, yB);
+        ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+        ctx.lineTo(xR, yT);
+        ctx.stroke();
+        ctx.restore();
       }
       ctx.restore();
     }
@@ -1537,18 +1587,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 14 === 0 &&
             Math.random() < 0.6
           ) {
-            const isLoop = Math.random() < 0.3;
-            // Schans: ~25% van scherm-hoogte. Looping: ~55% — beeld-vullend.
-            const hoogte  = isLoop ? 0.55 * H : 0.25 * H;
-            const breedte = isLoop ? 0.45 * H : 0.36 * H;
-            schansen.push({
-              x: W + 40,
-              y: GROND_Y + SPELER_GROOTTE - hoogte,
-              breedte,
-              hoogte,
-              type: isLoop ? "loop" : "schans",
-              geactiveerd: false,
-            });
+            // Geen schans spawnen als er nog een obstakel dicht bij de
+            // schans-positie staat — anders blokkeert dat de toegang.
+            // Check: laatste-obstakel-rechterkant moet > 350 px links van W zijn.
+            const minVrijeRuimte = 350 * SCHAAL;
+            let geenObstakelInDeWeg = true;
+            for (const o of obstakels) {
+              if (o.x + o.breedte > W - minVrijeRuimte) {
+                geenObstakelInDeWeg = false;
+                break;
+              }
+            }
+            if (geenObstakelInDeWeg) {
+              const isLoop = Math.random() < 0.3;
+              // Schans: ~25% van scherm-hoogte. Looping: ~55% — beeld-vullend.
+              const hoogte  = isLoop ? 0.55 * H : 0.25 * H;
+              const breedte = isLoop ? 0.45 * H : 0.36 * H;
+              schansen.push({
+                x: W + 40,
+                y: GROND_Y + SPELER_GROOTTE - hoogte,
+                breedte,
+                hoogte,
+                type: isLoop ? "loop" : "schans",
+                geactiveerd: false,
+              });
+              // Voorkom dat het volgende obstakel direct ná deze schans spawnt
+              // (anders staat-ie meteen achter de safe-zone klaar om te raken).
+              volgendObstakelOver = Math.max(volgendObstakelOver, 90);
+            }
           }
           // (plafond-stekel-spawn werkt nu via eigen plafondStekelSpawnTeller, hieronder)
         }
