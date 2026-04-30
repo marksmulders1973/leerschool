@@ -1133,11 +1133,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // bevroren (effSnelheid = 0) tijdens de animatie.
     let loopActief = false;
     let loopRef = null;
-    let loopProgress = 0;          // 0 → 1, fractie van revolutie
-    let loopStartAngle = 0;        // entry-hoek (atan2 vanuit loop-center)
+    let loopProgress = 0;          // 0 → 1, fractie van loop-rit
     let loopRadiusX = 0;
     let loopRadiusY = 0;
-    const LOOP_DUUR = 50;          // frames per volledige revolutie
+    const LOOP_DUUR = 55;          // frames voor de hele loop-rit
+    const LOOP_ENTRY = 0.85 * Math.PI;     // entry-hoek: lower-left
+    const LOOP_SWEEP = 1.5 * Math.PI;      // 270° — over de top, exit lower-right
     // ──────── DUNGEON-WERELD (Fase 1) ────────
     // Portal-pickup spawnt af en toe; bij contact gaat speler 25 sec naar
     // 'dungeon-mode' (dark-blue overlay + brick-edges). Bestaande gameplay
@@ -1624,28 +1625,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!spelLoopt) return;
       frameTeller++;
 
-      // ───── LOOP-ANIMATIE — speler volgt circulaire baan, wereld bevroren ─────
+      // ───── LOOP-RIT — speler gaat van links-onder over de top naar rechts-onder ─────
       if (loopActief) {
         loopProgress += 1 / LOOP_DUUR;
         if (loopProgress >= 1) {
-          // Klaar — terug naar normale spelflow
+          // Klaar — exit-ramp boost (helling waardoor speler nog even
+          // hoog schiet zoals Mark vroeg) + terug naar fixed x=100
           loopActief = false;
           loopRef = null;
           speler.x = 100 * SCHAAL;
           speler.y = GROND_Y;
-          speler.snelheidY = 0;
-          speler.springt = false;
+          speler.snelheidY = SPRING_KRACHT * 1.0; // omhoog-boost als kicker
+          speler.springt = true;
           speler.sprongTeller = 0;
           speler.rotatie = 0;
-          schansVeiligeFrames = 30;
-          // Val door naar normale update — wereld hervat
+          schansVeiligeFrames = 60;
+          spawnParticles(
+            speler.x + speler.breedte / 2, speler.y,
+            18, "#ffeb3b",
+            { spread: 6, opwaarts: 4, leven: 28, grootte: 5, glow: 16 }
+          );
+          springGeluid();
         } else {
-          // Mid-loop: positie + rotatie volgen ellipse rond loopRef-center.
-          // Increasing angle in y-down canvas = met de klok mee → speler gaat
-          // eerst omhoog (vanaf entry-hoek), over de top, terug naar entry.
+          // Mid-loop: positie volgt LOOP_SWEEP (1.5π = 270°), rotatie altijd
+          // 2π zodat speler visueel een volledige flip maakt en upright eindigt.
           const cx = loopRef.x + loopRef.breedte / 2;
           const cy = loopRef.y + loopRef.hoogte / 2;
-          const ang = loopStartAngle + loopProgress * 2 * Math.PI;
+          const ang = LOOP_ENTRY + loopProgress * LOOP_SWEEP;
           speler.x = cx + loopRadiusX * Math.cos(ang) - speler.breedte / 2;
           speler.y = cy + loopRadiusY * Math.sin(ang) - speler.hoogte / 2;
           speler.rotatie = loopProgress * 2 * Math.PI;
@@ -1913,7 +1919,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               loopActief = true;
               loopRef = sc;
               loopProgress = 0;
-              loopStartAngle = 0.7 * Math.PI; // entry: lower-left
               loopRadiusX = sc.breedte / 2 - speler.breedte / 2 - 6 * SCHAAL;
               loopRadiusY = sc.hoogte / 2 - speler.hoogte / 2 - 6 * SCHAAL;
               speler.snelheidY = 0;
@@ -1926,6 +1931,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { spread: 6, opwaarts: 2, leven: 26, grootte: 5, glow: 16 }
               );
               springGeluid();
+              // Spawn rings langs de loop-baan zodat speler ze tijdens de
+              // rit oppakt. 5 rings, gelijk verdeeld over de sweep-hoek.
+              const cxR = sc.x + sc.breedte / 2;
+              const cyR = sc.y + sc.hoogte / 2;
+              const ringRx = sc.breedte / 2 - 8 * SCHAAL;
+              const ringRy = sc.hoogte / 2 - 8 * SCHAAL;
+              for (let r = 1; r <= 5; r++) {
+                const t = r / 6; // 1/6, 2/6, ... 5/6 — overslaan begin/eind
+                const ringAng = LOOP_ENTRY + t * LOOP_SWEEP;
+                ringen.push({
+                  x: cxR + ringRx * Math.cos(ringAng) - 11 * SCHAAL,
+                  y: cyR + ringRy * Math.sin(ringAng) - 11 * SCHAAL,
+                  grootte: 22 * SCHAAL,
+                  fase: r * 0.6,
+                  opgepakt: false,
+                });
+              }
             } else {
               // ── SCHANS — super-jump + arc-pickups (originele gedrag) ─────
               sc.geactiveerd = true;
