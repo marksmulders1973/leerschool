@@ -875,7 +875,7 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
-          onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPlayObliterator={() => setPage("obliterator-v2")}
           onChallengeFriend={() => {
             setPvpState({ phase: "lobby", mode: "host" });
             setPage("pvp-lobby");
