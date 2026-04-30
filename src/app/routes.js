@@ -38,6 +38,7 @@ export const PAGE_TO_PATH = {
   results: "/resultaat",
   obliterator: "/obliterator",
   "obliterator-v2": "/obliterator-v2",
+  "pvp-lobby": "/duel",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",

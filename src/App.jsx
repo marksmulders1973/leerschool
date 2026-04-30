@@ -238,6 +238,9 @@ export default function App() {
       if (fromUrl !== page) setPage(fromUrl);
       return;
     }
+    // pvp-lobby heeft een dynamische URL (/duel/:code) — niet redirecten naar /duel
+    // anders verliest de guest de match-code uit de URL.
+    if (page === "pvp-lobby") return;
     const expected = pathForPage(page);
     if (expected && expected !== location.pathname) {
       navigate(expected);
