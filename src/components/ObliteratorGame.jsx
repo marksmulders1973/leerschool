@@ -1149,60 +1149,79 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenSchans(sc) {
       ctx.save();
       if (sc.type === "loop") {
-        // Looping als tunnel: dubbele ovaal-ring met gat aan de onderkant
-        // (waar speler erin gaat en eruit komt). Twee ringen geven diepte.
+        // Looping als echte race-baan-loop (Carrera-stijl):
+        //   - achterste rail (parallax-shift voor 3D)
+        //   - voorste rail met highlight bovenaan
+        //   - radiale track-segmenten (rails-detail)
+        //   - montage-voetjes onderaan op de grond
+        //   - subtiele oranje glow-halo om interactiviteit te signaleren
+        // Gat aan de onderkant = entry/exit (hoeken 0.4π t/m 0.6π skip).
         const cx = sc.x + sc.breedte / 2;
         const cy = sc.y + sc.hoogte / 2;
-        const rx_o = sc.breedte / 2;
-        const ry_o = sc.hoogte / 2;
-        const rx_i = rx_o - 14 * SCHAAL;
-        const ry_i = ry_o - 14 * SCHAAL;
-        // Hoeken in canvas (y-down): 0=rechts, 0.5π=onder, π=links, 1.5π=boven.
-        // Gat onder: skip 0.4π t/m 0.6π. Teken arc met startAng=0.6π, endAng=2.4π,
-        // anticlockwise=false → gaat rechtsom door links/boven/rechts (1.8π = 324°).
+        const rx = sc.breedte / 2;
+        const ry = sc.hoogte / 2;
         const startAng = 0.6 * Math.PI;
         const endAng   = 2.4 * Math.PI;
-        // Outer ring (gele glow)
-        ctx.shadowBlur = 18;
-        ctx.shadowColor = "#ffeb3b";
-        ctx.strokeStyle = "#ffeb3b";
-        ctx.lineWidth = 6 * SCHAAL;
+
+        // 1. Glow-halo (interactief signaal)
+        ctx.save();
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#ffaa20";
+        ctx.strokeStyle = "rgba(255, 170, 32, 0.40)";
+        ctx.lineWidth = 14 * SCHAAL;
         ctx.beginPath();
-        ctx.ellipse(cx, cy, rx_o, ry_o, 0, startAng, endAng, false);
+        ctx.ellipse(cx, cy, rx, ry, 0, startAng, endAng, false);
         ctx.stroke();
-        // Inner ring (donkerder, voor tunneldiepte)
-        ctx.shadowBlur = 0;
-        ctx.strokeStyle = "rgba(255,235,59,0.55)";
-        ctx.lineWidth = 3 * SCHAAL;
+        ctx.restore();
+
+        // 2. Achterste rail (parallax shift naar links-boven voor diepte)
+        ctx.strokeStyle = "#15151c";
+        ctx.lineWidth = 10 * SCHAAL;
         ctx.beginPath();
-        ctx.ellipse(cx, cy, rx_i, ry_i, 0, startAng, endAng, false);
+        ctx.ellipse(cx - 7 * SCHAAL, cy - 5 * SCHAAL, rx, ry, 0, startAng, endAng, false);
         ctx.stroke();
-        // Entry/exit-pijltjes bij het onderste gat — visueel "hier ga je in/uit"
-        ctx.fillStyle = "#ffeb3b";
-        const exX = cx + rx_o * Math.cos(0.4 * Math.PI);
-        const exY = cy + ry_o * Math.sin(0.4 * Math.PI);
-        const enX = cx + rx_o * Math.cos(0.6 * Math.PI);
-        const enY = cy + ry_o * Math.sin(0.6 * Math.PI);
-        // klein driehoekje aan beide gat-uiteindes naar buiten
-        const t = 6 * SCHAAL;
+
+        // 3. Voorste rail (hoofdloop)
+        ctx.strokeStyle = "#2c2c36";
+        ctx.lineWidth = 11 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(exX, exY);
-        ctx.lineTo(exX + t, exY + t);
-        ctx.lineTo(exX - t * 0.4, exY + t);
-        ctx.closePath();
-        ctx.fill();
+        ctx.ellipse(cx, cy, rx, ry, 0, startAng, endAng, false);
+        ctx.stroke();
+
+        // 4. Highlight bovenaan voorste rail (metaal-reflectie)
+        ctx.strokeStyle = "rgba(180, 180, 200, 0.55)";
+        ctx.lineWidth = 2 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(enX, enY);
-        ctx.lineTo(enX - t, enY + t);
-        ctx.lineTo(enX + t * 0.4, enY + t);
-        ctx.closePath();
-        ctx.fill();
-        // Centraal: cirkel-pijl-symbool als richting-indicator
-        ctx.fillStyle = "rgba(255,255,255,0.65)";
-        ctx.font = `bold ${Math.floor(ry_o * 0.55)}px sans-serif`;
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText("⟲", cx, cy);
+        ctx.ellipse(cx, cy - 2 * SCHAAL, rx + 1 * SCHAAL, ry + 1 * SCHAAL, 0, 1.15 * Math.PI, 1.85 * Math.PI, false);
+        ctx.stroke();
+
+        // 5. Track-segmenten (radiale dashes voor rails-detail)
+        ctx.strokeStyle = "rgba(110, 110, 125, 0.65)";
+        ctx.lineWidth = 1.5 * SCHAAL;
+        for (let a = 0.66 * Math.PI; a <= 2.34 * Math.PI; a += Math.PI * 0.10) {
+          const x1 = cx + (rx - 5 * SCHAAL) * Math.cos(a);
+          const y1 = cy + (ry - 5 * SCHAAL) * Math.sin(a);
+          const x2 = cx + (rx + 5 * SCHAAL) * Math.cos(a);
+          const y2 = cy + (ry + 5 * SCHAAL) * Math.sin(a);
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+
+        // 6. Montage-voetjes onderaan (verbinding met grond)
+        const footH = 10 * SCHAAL;
+        const footW = 18 * SCHAAL;
+        const footY = sc.y + sc.hoogte;
+        const lFx = cx + rx * Math.cos(0.6 * Math.PI) - footW / 2;
+        const rFx = cx + rx * Math.cos(0.4 * Math.PI) - footW / 2;
+        ctx.fillStyle = "#15151c";
+        ctx.fillRect(lFx, footY - footH, footW, footH);
+        ctx.fillRect(rFx, footY - footH, footW, footH);
+        // bovenkant-highlight op voetjes
+        ctx.fillStyle = "rgba(140, 140, 160, 0.45)";
+        ctx.fillRect(lFx, footY - footH, footW, 2 * SCHAAL);
+        ctx.fillRect(rFx, footY - footH, footW, 2 * SCHAAL);
       } else {
         // Schans: triangulair, helling vóór de speler. Speler is fixed op x=100,
         // wereld scrollt naar links → de LINKERkant van de schans (sc.x) raakt
