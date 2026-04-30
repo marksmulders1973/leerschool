@@ -257,8 +257,8 @@ export default function ObliteratorV2({
         if (s.rng() < 0.4) spawnStar(s);
         // 🌀 Warp tunnel: 2% per spawn-tick, alleen tot level 7.
         if (s.level <= 7 && s.rng() < 0.02) spawnWarp(s);
-        // 🛹 Schans/looping: 6% per spawn-tick, t/m level 10.
-        if (s.level <= 10 && s.rng() < 0.06) spawnRamp(s);
+        // 🛹 Schans/looping: 10% per spawn-tick, t/m level 10.
+        if (s.level <= 10 && s.rng() < 0.10) spawnRamp(s);
       }
 
       // ⚡ Wapen-tick: auto-fire + alien-spawn als wapen actief.
@@ -1116,7 +1116,7 @@ function spawnRamp(s) {
 // een collectible op x = playerX + speed·t ontmoet de speler bij frame t.
 function spawnRampCollectibles(s, isLoop, speed) {
   // Frames: midden van de stijg-/daal-fase, plus piek.
-  // Boog duurt ~48 frames. Ringen op 8/16/24/32/40, hartje op 24 (piek).
+  // Boog duurt ~48 frames. Ringen op 8/16/24/32/40, piek-cadeau op t=24.
   const frames = isLoop ? [8, 14, 20, 26, 32, 38, 44] : [10, 20, 30, 40];
   for (const t of frames) {
     const y = PHYSICS.groundY - PHYSICS.playerSize + (-17 * t) + 0.5 * 0.7 * t * t;
@@ -1129,18 +1129,36 @@ function spawnRampCollectibles(s, isLoop, speed) {
       dead: false,
     });
   }
-  // Hartje: bij loop altijd, bij schans 25% kans. Op het piekmoment (t=24).
-  if (isLoop || s.rng() < 0.25) {
+  // Piek-cadeau (t=24): bij loop altijd, bij schans 60% kans (was 25%).
+  // Variëert over hartje + 3 powerups zodat schansen meer impact hebben.
+  if (isLoop || s.rng() < 0.6) {
     const t = 24;
     const y = PHYSICS.groundY - PHYSICS.playerSize + (-17 * t) + 0.5 * 0.7 * t * t;
-    s.collectibles.push({
-      x: PHYSICS.playerX + speed * t,
-      y: Math.max(40, y - 18),
-      w: 22,
-      h: 22,
-      kind: "heart",
-      dead: false,
-    });
+    const peakX = PHYSICS.playerX + speed * t;
+    const peakY = Math.max(40, y - 18);
+    // Distributie: 40% hartje, 60% powerup (slowmo/multiplier/shield).
+    // Geen 'weapon' op piek — te krachtig voor een gratis pickup.
+    const r = s.rng();
+    if (r < 0.4) {
+      s.collectibles.push({
+        x: peakX,
+        y: peakY,
+        w: 22,
+        h: 22,
+        kind: "heart",
+        dead: false,
+      });
+    } else {
+      const kinds = ["slowmo", "multiplier", "shield"];
+      s.powerups.push({
+        x: peakX,
+        y: peakY,
+        w: 26,
+        h: 26,
+        kind: kinds[Math.floor(s.rng() * kinds.length)],
+        dead: false,
+      });
+    }
   }
 }
 
