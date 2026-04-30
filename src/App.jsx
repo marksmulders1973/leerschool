@@ -55,7 +55,6 @@ const Kampioenen = lazy(() =>
 const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
-const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const ObliteratorV2 = lazy(() => import("./games/obliterator/ObliteratorV2.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
@@ -771,29 +770,26 @@ export default function App() {
         />
       )}
       {page === "obliteratorDirect" && (
-        <ObliteratorGame
-          userName={userName || "Speler"}
-          authUser={authUser}
-          wrongQuestions={[]}
-          vanDeelLink={true}
-          onNaarStudiebol={() => {
-            // ruim query-param op zodat refresh in normale flow start
-            try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
-            setPage("home");
-          }}
+        <ObliteratorV2
+          playerName={userName || "Speler"}
           onClose={() => {
             try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
             setPage("home");
           }}
+          onChallengeFriend={() => {
+            setPvpState({ phase: "lobby", mode: "host" });
+            setPage("pvp-lobby");
+          }}
         />
       )}
       {page === "obliteratorPlay" && (
-        <ObliteratorGame
-          userName={userName || "Speler"}
-          authUser={authUser}
-          wrongQuestions={[]}
-          vanDeelLink={false}
+        <ObliteratorV2
+          playerName={userName || "Speler"}
           onClose={() => setPage("home")}
+          onChallengeFriend={() => {
+            setPvpState({ phase: "lobby", mode: "host" });
+            setPage("pvp-lobby");
+          }}
         />
       )}
       {page === "pvp-lobby" && pvpState?.phase === "lobby" && (
