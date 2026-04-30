@@ -9,13 +9,14 @@ const COLORS = {
   muted: "#8899aa",
 };
 
-const stepEmojis = ["⚖️", "✏️", "🟰", "📋", "🔍", "🗺️", "📐", "🍳", "🚗", "🏆"];
+const stepEmojis = ["⚖️", "✏️", "🟰", "📋", "🔍", "🗺️", "📐", "🍳", "🚗", "🏆", "📝"];
 
 const chapters = [
   { letter: "A", title: "Wat is een verhouding?", emoji: "⚖️", from: 0, to: 2 },
   { letter: "B", title: "Verhoudingstabellen", emoji: "📋", from: 3, to: 5 },
   { letter: "C", title: "Schaal", emoji: "🗺️", from: 6, to: 7 },
   { letter: "D", title: "Toepassingen", emoji: "🏆", from: 8, to: 9 },
+  { letter: "E", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 10, to: 10 },
 ];
 
 const steps = [
@@ -268,6 +269,62 @@ const steps = [
           "14 = 2/5 × 35? Nee, 14 = ⅖ × 35 = 70/5 = 14. Wacht, dat is wel 14, maar... totaal delen = 2+5 = 7. Per deel = 35/7 = 5. Dus 2 delen = 10.",
           "5 = 35/7 = waarde van 1 deel. Maar je hebt 2 delen → 10.",
           "20 zou kloppen als verhouding 4:3 was. Hier 2:5 → totaal 7 delen, dus per deel 5, en 2 delen = 10.",
+        ],
+      },
+    ],
+  },
+  // ─── E. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — afstand op een kaart",
+    explanation: "Klassieke CSE-context: een **landkaart of plattegrond met schaal**, en je moet een werkelijke afstand uitrekenen. Of andersom.\n\n> **Op een kaart staat schaal 1 : 25.000.** De afstand tussen twee dorpen is op de kaart **8,4 cm**.\n\n**Aanpak in 3 stappen:**\n1. **Wat betekent schaal 1 : 25.000?** 1 cm op de kaart = 25.000 cm in werkelijkheid.\n2. **Werkelijke afstand**: 8,4 cm × 25.000 = **210.000 cm**.\n3. **Omrekenen naar km**: 210.000 cm ÷ 100 = 2.100 m ÷ 1.000 = **2,1 km**.\n\n**Andersom — werkelijke afstand naar kaart-afstand:**\nWerkelijke afstand 5 km = 500.000 cm. Op kaart: 500.000 ÷ 25.000 = **20 cm**.\n\n**Examen-tips**:\n• Schaal 1 : N betekent: 1 op kaart = N in echt.\n• Reken altijd via dezelfde eenheid: cm × N = cm. Dan converteren.\n• 1 m = 100 cm · 1 km = 1000 m = 100.000 cm.",
+    svg: `<svg viewBox="0 0 300 200">
+<rect x="40" y="50" width="220" height="100" fill="rgba(105,240,174,0.10)" stroke="#69f0ae" stroke-width="1.5"/>
+<text x="150" y="35" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial">Kaart — schaal 1 : 25.000</text>
+<circle cx="80" cy="100" r="6" fill="#ff5252"/>
+<text x="62" y="120" fill="#ff5252" font-size="10" font-family="Arial" font-weight="bold">Dorp A</text>
+<circle cx="220" cy="100" r="6" fill="#ff5252"/>
+<text x="200" y="120" fill="#ff5252" font-size="10" font-family="Arial" font-weight="bold">Dorp B</text>
+<line x1="80" y1="100" x2="220" y2="100" stroke="#ffd54f" stroke-width="2" stroke-dasharray="4 2"/>
+<text x="150" y="92" text-anchor="middle" fill="#ffd54f" font-size="10" font-family="Arial" font-weight="bold">8,4 cm op kaart</text>
+<text x="150" y="180" text-anchor="middle" fill="#42a5f5" font-size="11" font-family="Arial" font-weight="bold">In werkelijkheid: ?</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat betekent **schaal 1 : 25.000**?",
+        options: [
+          "1 cm op de kaart komt overeen met 25.000 cm in werkelijkheid",
+          "1 cm op de kaart komt overeen met 25.000 m in werkelijkheid",
+          "25.000 cm op de kaart komt overeen met 1 cm in werkelijkheid",
+          "1 km op de kaart komt overeen met 25.000 km in werkelijkheid",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Eenheid is cm aan beide kanten — niet m.",
+          "Dat is 25.000 : 1 — andersom.",
+          "Te groot. Reken in cm: 1 cm = 25.000 cm.",
+        ],
+      },
+      {
+        q: "Wat is de werkelijke afstand in **cm** tussen de dorpen (8,4 cm op kaart)?",
+        options: ["210.000 cm", "29.762 cm", "2.100 cm", "8.400 cm"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt gedeeld in plaats van vermenigvuldigd. Reken: 8,4 × 25.000 = 210.000.",
+          "Je bent door 100 gedeeld na de vermenigvuldiging — dat is meters.",
+          "Niet vermenigvuldigd. 8,4 × 25.000 = 210.000.",
+        ],
+      },
+      {
+        q: "Reken om naar **km** — wat is de afstand?",
+        options: ["2,1 km", "21 km", "0,21 km", "210 km"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt door 10.000 gedeeld in plaats van 100.000.",
+          "Je hebt te diep gedeeld — door 1.000.000.",
+          "Te groot. 1 km = 100.000 cm, dus 210.000 / 100.000 = 2,1.",
         ],
       },
     ],

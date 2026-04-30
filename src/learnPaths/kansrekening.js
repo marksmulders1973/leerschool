@@ -21,6 +21,7 @@ const stepEmojis = [
   "🌳", "✖️", "🔁",                     // C. Kansboom
   "➕", "🚫",                            // D. Optellen + complement
   "🎯", "📝", "🏆",                    // E. Eindopdracht
+  "📝",                                  // F. Examenstijl
 ];
 
 const chapters = [
@@ -29,6 +30,7 @@ const chapters = [
   { letter: "C", title: "Kansboom + vermenigvuldigen", emoji: "🌳", from: 6, to: 8 },
   { letter: "D", title: "Optellen + complement", emoji: "➕", from: 9, to: 10 },
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 11, to: 13 },
+  { letter: "F", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 14, to: 14 },
 ];
 
 const steps = [
@@ -564,6 +566,68 @@ const steps = [
           "Verkeerd berekend complement — 1 − 12/30 = 18/30, niet 12/30.",
           "Dat is een ratio. Kans = gunstig/totaal. P(meisje) = 18/30 = 3/5.",
           "Onlogisch — kans kan nooit > 1.",
+        ],
+      },
+    ],
+  },
+  // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — pakje knikkers + tweede trekking",
+    explanation: "Klassieke CSE-context: een **zakje met gekleurde knikkers** en je trekt er twee uit (of een vergelijkbare kans-situatie). Vaak met **kansboom**.\n\n> **In een zak zitten 8 knikkers**: **3 rode** en **5 blauwe**. Je trekt er **2** uit, **zonder terugleggen**.\n\n**Aanpak in 3 stappen — kansboom:**\n1. **Eerste trekking**:\n   • P(rood) = 3/8\n   • P(blauw) = 5/8\n2. **Tweede trekking** (zonder terugleggen — totaal is nu 7):\n   • Na rood: P(rood) = 2/7, P(blauw) = 5/7\n   • Na blauw: P(rood) = 3/7, P(blauw) = 4/7\n3. **Combineer** (vermenigvuldigen langs takken):\n   • P(rood + rood) = 3/8 × 2/7 = **6/56 = 3/28**\n   • P(blauw + blauw) = 5/8 × 4/7 = **20/56 = 5/14**\n   • P(precies 1 rood) = P(R,B) + P(B,R) = (3/8 × 5/7) + (5/8 × 3/7) = 15/56 + 15/56 = **30/56 = 15/28**\n\n**Examen-tips**:\n• 'Zonder terugleggen': totaal verandert na elke trekking.\n• Kansboom helpt bij meerdere stappen.\n• Vermenigvuldigen langs een tak; optellen bij verschillende takken.",
+    svg: `<svg viewBox="0 0 300 200">
+<text x="150" y="22" text-anchor="middle" fill="#e0e6f0" font-size="11" font-family="Arial" font-weight="bold">Kansboom — 3 rood, 5 blauw, zonder terugleggen</text>
+<text x="40" y="100" fill="#e0e6f0" font-size="10" font-family="Arial">start</text>
+<line x1="60" y1="100" x2="130" y2="60" stroke="#ff5252" stroke-width="2"/>
+<text x="80" y="76" fill="#ff5252" font-size="10" font-family="Arial">3/8</text>
+<line x1="60" y1="100" x2="130" y2="140" stroke="#42a5f5" stroke-width="2"/>
+<text x="80" y="135" fill="#42a5f5" font-size="10" font-family="Arial">5/8</text>
+<text x="135" y="65" fill="#ff5252" font-size="11" font-family="Arial" font-weight="bold">R</text>
+<text x="135" y="148" fill="#42a5f5" font-size="11" font-family="Arial" font-weight="bold">B</text>
+<line x1="150" y1="60" x2="220" y2="40" stroke="#ff5252" stroke-width="1.5"/>
+<line x1="150" y1="60" x2="220" y2="80" stroke="#42a5f5" stroke-width="1.5"/>
+<text x="180" y="48" fill="#ff5252" font-size="9" font-family="Arial">2/7</text>
+<text x="180" y="78" fill="#42a5f5" font-size="9" font-family="Arial">5/7</text>
+<line x1="150" y1="140" x2="220" y2="120" stroke="#ff5252" stroke-width="1.5"/>
+<line x1="150" y1="140" x2="220" y2="160" stroke="#42a5f5" stroke-width="1.5"/>
+<text x="180" y="128" fill="#ff5252" font-size="9" font-family="Arial">3/7</text>
+<text x="180" y="158" fill="#42a5f5" font-size="9" font-family="Arial">4/7</text>
+<text x="225" y="44" fill="#ff5252" font-size="10" font-family="Arial">RR</text>
+<text x="225" y="84" fill="#e0e6f0" font-size="10" font-family="Arial">RB</text>
+<text x="225" y="124" fill="#e0e6f0" font-size="10" font-family="Arial">BR</text>
+<text x="225" y="164" fill="#42a5f5" font-size="10" font-family="Arial">BB</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is **P(eerst rood, daarna rood)** — beide rood?",
+        options: ["3/8 × 2/7 = 6/56", "3/8 × 3/7 = 9/56", "3/8 + 2/7 = 37/56", "3/8 × 3/8 = 9/64"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Na de eerste rode trekking blijven er 2 rode over (was 3), niet 3.",
+          "Optellen werkt niet voor 'na elkaar'-kansen. Vermenigvuldigen.",
+          "'Zonder terugleggen' — totaal verandert. Niet 8 maar 7 na de eerste.",
+        ],
+      },
+      {
+        q: "Wat is **P(beide blauw)**?",
+        options: ["5/8 × 4/7 = 20/56", "5/8 × 5/7 = 25/56", "5/8 + 4/7 = 67/56", "5/8 × 5/8 = 25/64"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Na de eerste blauwe blijven er 4 blauwe over (was 5).",
+          "Niet optellen voor 'na elkaar'-kansen.",
+          "Zonder terugleggen — totaal is 7 in tweede trekking.",
+        ],
+      },
+      {
+        q: "Wat is **P(precies één rood)**?",
+        options: ["15/28", "30/56", "Allebei (gelijk)", "3/28"],
+        answer: 2,
+        wrongHints: [
+          "Klopt qua getal, maar 30/56 = 15/28 — vereenvoudig altijd.",
+          "Klopt qua waarde maar nog te vereenvoudigen.",
+          null,
+          "Dat is P(beide rood). Voor 'precies één' tel je P(R,B) + P(B,R) op.",
         ],
       },
     ],
