@@ -1149,38 +1149,89 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenSchans(sc) {
       ctx.save();
       if (sc.type === "loop") {
-        // Looping: gele cirkel-arc met dubbele ring
+        // Looping als tunnel: dubbele ovaal-ring met gat aan de onderkant
+        // (waar speler erin gaat en eruit komt). Twee ringen geven diepte.
         const cx = sc.x + sc.breedte / 2;
-        const cy = sc.y + sc.hoogte / 2 - 4 * SCHAAL;
-        ctx.shadowBlur = 14;
+        const cy = sc.y + sc.hoogte / 2;
+        const rx_o = sc.breedte / 2;
+        const ry_o = sc.hoogte / 2;
+        const rx_i = rx_o - 14 * SCHAAL;
+        const ry_i = ry_o - 14 * SCHAAL;
+        // Hoeken in canvas (y-down): 0=rechts, 0.5π=onder, π=links, 1.5π=boven.
+        // Gat onder: skip 0.4π t/m 0.6π. Teken arc met startAng=0.6π, endAng=2.4π,
+        // anticlockwise=false → gaat rechtsom door links/boven/rechts (1.8π = 324°).
+        const startAng = 0.6 * Math.PI;
+        const endAng   = 2.4 * Math.PI;
+        // Outer ring (gele glow)
+        ctx.shadowBlur = 18;
         ctx.shadowColor = "#ffeb3b";
         ctx.strokeStyle = "#ffeb3b";
-        ctx.lineWidth = 4 * SCHAAL;
+        ctx.lineWidth = 6 * SCHAAL;
         ctx.beginPath();
-        ctx.arc(cx, cy, sc.breedte / 2, 0, Math.PI * 2);
+        ctx.ellipse(cx, cy, rx_o, ry_o, 0, startAng, endAng, false);
         ctx.stroke();
+        // Inner ring (donkerder, voor tunneldiepte)
         ctx.shadowBlur = 0;
         ctx.strokeStyle = "rgba(255,235,59,0.55)";
-        ctx.lineWidth = 2 * SCHAAL;
+        ctx.lineWidth = 3 * SCHAAL;
         ctx.beginPath();
-        ctx.arc(cx, cy, sc.breedte / 2 - 6 * SCHAAL, 0, Math.PI * 2);
+        ctx.ellipse(cx, cy, rx_i, ry_i, 0, startAng, endAng, false);
         ctx.stroke();
-      } else {
-        // Schans: groene driehoek-helling met witte pijl
-        ctx.shadowBlur = 12;
-        ctx.shadowColor = "#69f0ae";
-        ctx.fillStyle = "#00c853";
+        // Entry/exit-pijltjes bij het onderste gat — visueel "hier ga je in/uit"
+        ctx.fillStyle = "#ffeb3b";
+        const exX = cx + rx_o * Math.cos(0.4 * Math.PI);
+        const exY = cy + ry_o * Math.sin(0.4 * Math.PI);
+        const enX = cx + rx_o * Math.cos(0.6 * Math.PI);
+        const enY = cy + ry_o * Math.sin(0.6 * Math.PI);
+        // klein driehoekje aan beide gat-uiteindes naar buiten
+        const t = 6 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(sc.x, sc.y + sc.hoogte);
-        ctx.lineTo(sc.x + sc.breedte, sc.y);
-        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);
+        ctx.moveTo(exX, exY);
+        ctx.lineTo(exX + t, exY + t);
+        ctx.lineTo(exX - t * 0.4, exY + t);
         ctx.closePath();
         ctx.fill();
-        ctx.shadowBlur = 0;
-        ctx.fillStyle = "rgba(255,255,255,0.95)";
-        ctx.font = `bold ${16 * SCHAAL}px sans-serif`;
+        ctx.beginPath();
+        ctx.moveTo(enX, enY);
+        ctx.lineTo(enX - t, enY + t);
+        ctx.lineTo(enX + t * 0.4, enY + t);
+        ctx.closePath();
+        ctx.fill();
+        // Centraal: cirkel-pijl-symbool als richting-indicator
+        ctx.fillStyle = "rgba(255,255,255,0.65)";
+        ctx.font = `bold ${Math.floor(ry_o * 0.55)}px sans-serif`;
         ctx.textAlign = "center";
-        ctx.fillText("↗", sc.x + sc.breedte * 0.65, sc.y + sc.hoogte * 0.55 + 4 * SCHAAL);
+        ctx.textBaseline = "middle";
+        ctx.fillText("⟲", cx, cy);
+      } else {
+        // Schans: triangulair, helling vóór de speler (slope van bottom-right
+        // naar top-left). Speler komt vanaf rechts en raakt eerst de slope-tip.
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = "#69f0ae";
+        const grad = ctx.createLinearGradient(sc.x, sc.y, sc.x, sc.y + sc.hoogte);
+        grad.addColorStop(0, "#69f0ae");
+        grad.addColorStop(1, "#00a040");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.moveTo(sc.x, sc.y);                                   // top-left (piek)
+        ctx.lineTo(sc.x, sc.y + sc.hoogte);                       // bottom-left
+        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);          // bottom-right (slope-tip)
+        ctx.closePath();
+        ctx.fill();
+        // Slope-rand accent
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(255,255,255,0.85)";
+        ctx.lineWidth = 3 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(sc.x + sc.breedte, sc.y + sc.hoogte);
+        ctx.lineTo(sc.x, sc.y);
+        ctx.stroke();
+        // Pijl-omhoog op de slope, schaalt mee met hoogte
+        ctx.fillStyle = "rgba(255,255,255,0.95)";
+        ctx.font = `bold ${Math.floor(sc.hoogte * 0.32)}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("↗", sc.x + sc.breedte * 0.45, sc.y + sc.hoogte * 0.55);
       }
       ctx.restore();
     }
@@ -1466,8 +1517,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             Math.random() < 0.6
           ) {
             const isLoop = Math.random() < 0.3;
-            const breedte = (isLoop ? 50 : 56) * SCHAAL;
-            const hoogte  = (isLoop ? 50 : 30) * SCHAAL;
+            // Schans: ~25% van scherm-hoogte. Looping: ~55% — beeld-vullend.
+            const hoogte  = isLoop ? 0.55 * H : 0.25 * H;
+            const breedte = isLoop ? 0.45 * H : 0.36 * H;
             schansen.push({
               x: W + 40,
               y: GROND_Y + SPELER_GROOTTE - hoogte,
