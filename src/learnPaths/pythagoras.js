@@ -17,6 +17,7 @@ const stepEmojis = [
   "📤", "✏️", "🧮",                   // C. Schuine zijde uitrekenen
   "📥", "🔄",                        // D. Rechthoekszijde uitrekenen
   "📦", "🏁",                        // E. 3D + eindopdracht
+  "📝",                              // F. Examenstijl
 ];
 
 const chapters = [
@@ -25,6 +26,7 @@ const chapters = [
   { letter: "C", title: "De schuine zijde berekenen", emoji: "📤", from: 7, to: 9 },
   { letter: "D", title: "Een rechthoekszijde berekenen", emoji: "📥", from: 10, to: 11 },
   { letter: "E", title: "Pythagoras in 3D + eindopdracht", emoji: "📦", from: 12, to: 13 },
+  { letter: "F", title: "Examenstijl — VMBO-GT CSE", emoji: "📝", from: 14, to: 14 },
 ];
 
 const steps = [
@@ -498,6 +500,61 @@ const steps = [
           "Je hebt 10 − 6 = 4 gedaan. Maar Pythagoras: h² = 10² − 6² = 100 − 36 = 64, dus h = 8.",
           "16 = 100 − 64 + 80 of zoiets vreemd. Reken: h² = 100 − 36 = 64, dus h = √64 = 8.",
           "Dat is groter dan de ladder zelf — onmogelijk. Reken: 10² − 6² = 64, h = √64 = 8.",
+        ],
+      },
+    ],
+  },
+  // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
+  {
+    title: "CSE-vraag — touw tussen twee bomen",
+    explanation: "Op het CSE GL/TL kom je Pythagoras vaak tegen in **praktische context** — touwen, paden, ladders, schuine afstanden. Examen-stijl probeer-vraag:\n\n> **Tussen twee bomen wordt een touw gespannen voor een vlaggetje.** Boom A is 3,0 m hoog, boom B is 5,4 m hoog. De afstand op de grond tussen de twee bomen is 7,2 m. Het touw loopt van de top van boom A naar de top van boom B.\n\n**Aanpak in 3 stappen:**\n1. **Teken de driehoek** in gedachten: maak een denkbeeldige horizontale lijn tussen de twee toppen. Het verschil in hoogte = 5,4 − 3,0 = **2,4 m**.\n2. **Zoek de rechthoekige driehoek**: rechthoekszijden = 7,2 m (horizontaal) en 2,4 m (verticaal verschil). Schuine zijde = lengte van het touw.\n3. **Pythagoras toepassen**: c² = 7,2² + 2,4² = 51,84 + 5,76 = 57,60. Dus c = √57,60 ≈ **7,59 m**.\n\n**Examen-tip**: rond af volgens de instructie (vaak 1 decimaal of hele cm). En denk aan **eenheden**.",
+    svg: `<svg viewBox="0 0 300 200">
+<line x1="40" y1="170" x2="280" y2="170" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="80" y1="170" x2="80" y2="120" stroke="#5a3a18" stroke-width="6"/>
+<circle cx="80" cy="115" r="14" fill="#2e7d32"/>
+<text x="60" y="190" fill="${COLORS.text}" font-size="11" font-family="Arial">A (3,0 m)</text>
+<line x1="240" y1="170" x2="240" y2="80" stroke="#5a3a18" stroke-width="6"/>
+<circle cx="240" cy="75" r="18" fill="#388e3c"/>
+<text x="220" y="190" fill="${COLORS.text}" font-size="11" font-family="Arial">B (5,4 m)</text>
+<line x1="80" y1="115" x2="240" y2="75" stroke="${COLORS.point}" stroke-width="2.5"/>
+<line x1="80" y1="115" x2="240" y2="115" stroke="${COLORS.muted}" stroke-width="1" stroke-dasharray="3 2"/>
+<line x1="240" y1="75" x2="240" y2="115" stroke="${COLORS.muted}" stroke-width="1" stroke-dasharray="3 2"/>
+<text x="155" y="108" fill="${COLORS.muted}" font-size="10" font-family="Arial">7,2 m</text>
+<text x="248" y="98" fill="${COLORS.muted}" font-size="10" font-family="Arial">2,4 m</text>
+<text x="158" y="85" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">c = touw</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is de **horizontale** rechthoekszijde van de driehoek?",
+        options: ["7,2 m", "2,4 m", "5,4 m", "3,0 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is het hoogteverschil tussen de toppen, niet de horizontale.",
+          "Dat is de hoogte van boom B.",
+          "Dat is de hoogte van boom A.",
+        ],
+      },
+      {
+        q: "En de **verticale** rechthoekszijde (hoogteverschil)?",
+        options: ["2,4 m", "5,4 m", "8,4 m", "3,0 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Dat is alleen de hoogte van boom B; je moet het VERSCHIL pakken.",
+          "Je hebt opgeteld in plaats van afgetrokken.",
+          "Dat is de hoogte van boom A; je hebt het verschil nodig.",
+        ],
+      },
+      {
+        q: "Pythagoras toepassen: hoe lang is het touw, afgerond op 2 decimalen?",
+        options: ["7,59 m", "9,60 m", "5,76 m", "4,80 m"],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Je hebt waarschijnlijk de zijden bij elkaar opgeteld zonder kwadrateren.",
+          "Dat is alleen 2,4² in een vorm — je vergeet de wortel + 7,2² er niet bij op te tellen.",
+          "Eén van de zijden, niet de schuine zijde. Bereken c² = 7,2² + 2,4² en dan √.",
         ],
       },
     ],
