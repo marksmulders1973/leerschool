@@ -1111,6 +1111,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let loopRadiusX = 0;
     let loopRadiusY = 0;
     const LOOP_DUUR = 50;          // frames per volledige revolutie
+    // ──────── DUNGEON-WERELD (Fase 1) ────────
+    // Portal-pickup spawnt af en toe; bij contact gaat speler 25 sec naar
+    // 'dungeon-mode' (dark-blue overlay + brick-edges). Bestaande gameplay
+    // loopt door — alleen het scherm ziet er anders uit. Bij overleven:
+    // bonus-hart + score-boost. Dood = normaal life-verlies, geen extra straf.
+    const portals = [];
+    let dungeonMode = false;
+    let dungeonFrames = 0;
+    let dungeonFadeIn = 0;        // > 0 = aan het inkomen
+    let dungeonFadeOut = 0;       // > 0 = aan het uitgaan
+    const DUNGEON_DUUR = 1500;    // ~25 sec @ 60fps
+    const DUNGEON_FADE = 30;      // frames voor fade-in / fade-out
     function tekenStenenStekel(x, y, b, h) {
       ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -1155,6 +1167,73 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
         tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
       } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+    }
+    function tekenPortal(p) {
+      // Paarse swirl-portal: 3 concentrische ringen die roteren met fase
+      ctx.save();
+      const cx = p.x;
+      const cy = p.y;
+      const r = p.grootte / 2;
+      ctx.shadowBlur = 22;
+      ctx.shadowColor = "#a040ff";
+      // Buitenste ring
+      ctx.strokeStyle = "rgba(160, 64, 255, 0.85)";
+      ctx.lineWidth = 4 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, p.fase, p.fase + Math.PI * 1.7);
+      ctx.stroke();
+      // Middelste ring (tegen-roterend)
+      ctx.strokeStyle = "rgba(220, 140, 255, 0.75)";
+      ctx.lineWidth = 3 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.65, -p.fase * 1.3, -p.fase * 1.3 + Math.PI * 1.7);
+      ctx.stroke();
+      // Centrum-glow
+      ctx.shadowBlur = 0;
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 0.4);
+      grad.addColorStop(0, "rgba(255, 200, 255, 0.85)");
+      grad.addColorStop(1, "rgba(120, 40, 200, 0)");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.4, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+    function tekenDungeonOverlay() {
+      if (!dungeonMode && dungeonFadeOut === 0) return;
+      ctx.save();
+      // Dark-blue/purple kleurfilter over hele scherm
+      ctx.fillStyle = "rgba(15, 18, 50, 0.42)";
+      ctx.fillRect(0, 0, W, H);
+      // Vignette aan de randen voor "dungeon"-feel
+      const vGrad = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.3, W / 2, H / 2, Math.max(W, H) * 0.7);
+      vGrad.addColorStop(0, "rgba(0,0,0,0)");
+      vGrad.addColorStop(1, "rgba(0,0,0,0.55)");
+      ctx.fillStyle = vGrad;
+      ctx.fillRect(0, 0, W, H);
+      // Brick-pattern strip aan onder- en bovenrand (suggereert dungeon-muur)
+      ctx.fillStyle = "rgba(60, 70, 110, 0.55)";
+      const brickH = 18 * SCHAAL;
+      const brickW = 60 * SCHAAL;
+      // Bovenrand
+      for (let x = 0; x < W; x += brickW) {
+        ctx.fillRect(x + 2, 2, brickW - 4, brickH);
+      }
+      // Onderrand
+      for (let x = brickW / 2; x < W; x += brickW) {
+        ctx.fillRect(x + 2, H - brickH - 2, brickW - 4, brickH);
+      }
+      // Fade-in overlay (zwart, transparantie afhankelijk van dungeonFadeIn)
+      if (dungeonFadeIn > 0) {
+        ctx.fillStyle = `rgba(0,0,0,${(dungeonFadeIn / DUNGEON_FADE) * 0.85})`;
+        ctx.fillRect(0, 0, W, H);
+      }
+      // Fade-out overlay (zwart, andersom)
+      if (dungeonFadeOut > 0) {
+        ctx.fillStyle = `rgba(0,0,0,${((DUNGEON_FADE - dungeonFadeOut) / DUNGEON_FADE) * 0.85})`;
+        ctx.fillRect(0, 0, W, H);
+      }
+      ctx.restore();
     }
     function tekenSchans(sc) {
       ctx.save();
@@ -1619,6 +1698,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
+          // PORTAL naar dungeon-wereld — zeldzaam (elke ~50 obstakels, 50% kans)
+          // Niet tijdens boss/flip/loop/dungeon zelf.
+          if (
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode &&
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 50 === 0 &&
+            Math.random() < 0.5
+          ) {
+            const yPos = (170 + Math.random() * 90) * SCHAAL;
+            portals.push({
+              x: W + 40,
+              y: yPos,
+              grootte: 50 * SCHAAL,
+              fase: 0,
+              opgepakt: false,
+            });
+          }
           // SCHANS / LOOPING — elke ~14 obstakels, 60% kans. Skip tijdens boss
           // (focus moet op boss blijven) en tijdens FLIP (te veel edge cases).
           // 70% schans, 30% looping.
@@ -1767,6 +1862,51 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
 
         if (sc.x + sc.breedte < 0) schansen.splice(i, 1);
+      }
+      // ───── PORTALS — beweeg, render-state, en check contact ─────
+      for (let i = portals.length - 1; i >= 0; i--) {
+        const p = portals[i];
+        p.x -= effSnelheid;
+        p.fase += 0.10;
+        // Pickup-collision (enkel als niet al in dungeon en geen boss/flip/loop)
+        if (!p.opgepakt && !dungeonMode && !bossActief && flipFrames === 0 && !loopActief) {
+          const dx = (speler.x + speler.breedte / 2) - p.x;
+          const dy = (speler.y + speler.hoogte / 2) - p.y;
+          if (Math.sqrt(dx * dx + dy * dy) < (p.grootte + speler.breedte) / 2) {
+            p.opgepakt = true;
+            // Activeer dungeon-mode
+            dungeonMode = true;
+            dungeonFrames = 0;
+            dungeonFadeIn = DUNGEON_FADE;
+            spawnParticles(p.x, p.y, 24, "#a040ff", { spread: 7, opwaarts: 1, leven: 30, grootte: 5, glow: 18 });
+            piep(440, 0.18, "sine", 0.14);
+            setTimeout(() => piep(660, 0.16, "sine", 0.12), 80);
+          }
+        }
+        if (p.x + p.grootte < 0 || p.opgepakt) portals.splice(i, 1);
+      }
+      // ───── DUNGEON-MODE-TIMER ─────
+      if (dungeonMode) {
+        dungeonFrames++;
+        if (dungeonFadeIn > 0) dungeonFadeIn--;
+        // Bij DUNGEON_DUUR: start exit-fade
+        if (dungeonFrames === DUNGEON_DUUR) {
+          dungeonFadeOut = DUNGEON_FADE;
+        }
+        if (dungeonFrames > DUNGEON_DUUR) {
+          dungeonFadeOut--;
+          if (dungeonFadeOut <= 0) {
+            // Exit dungeon — geef reward
+            dungeonMode = false;
+            dungeonFrames = 0;
+            if (levens < MAX_LEVENS) levens++;
+            score += 100;
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 30, "#ffd54f", { spread: 8, opwaarts: 3, leven: 40, grootte: 5, glow: 22 });
+            piep(660, 0.10, "sine", 0.14);
+            setTimeout(() => piep(990, 0.10, "sine", 0.12), 90);
+            setTimeout(() => piep(1320, 0.12, "sine", 0.10), 180);
+          }
+        }
       }
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
@@ -2413,6 +2553,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
       for (const sc of schansen) tekenSchans(sc);
+      for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
 
       // ───── BOSS render ─────
@@ -2950,6 +3091,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillText("GO!", W / 2, H / 2);
         ctx.restore();
       }
+      // Dungeon-overlay ALS ALLERLAATSTE — boven alles
+      tekenDungeonOverlay();
     }
     // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
     const TARGET_FRAME_MS = 1000 / 60;
@@ -2997,6 +3140,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         for (const o of obstakels) tekenObstakel(o);
         for (const sc of schansen) tekenSchans(sc);
+        for (const p of portals) tekenPortal(p);
         for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
         ctx.restore();
         tekenLevens();
