@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "vak": "Wiskunde",
+    "niveau": "VMBO-GL/TL (mavo / vmbo-gt)",
+    "examen": "CSE — Centraal Schriftelijk Examen",
+    "bron": "https://www.alleexamens.nl/examens/VMBO-GL%20en%20TL/Wiskunde/",
+    "officieel": "https://www.examenblad.nl",
+    "opgehaald": "2026-04-30",
+    "opmerking": "2020 niet beschikbaar — CSE is dat jaar wegens corona niet centraal afgenomen."
+  },
+  "_curriculum_topics": [
+    "rekenen-en-meten",
+    "verhoudingen-procenten",
+    "grafieken-tabellen",
+    "vergelijkingen-formules",
+    "lineaire-formules",
+    "kwadratische-formules",
+    "vlakke-meetkunde",
+    "pythagoras",
+    "goniometrie-rechthoekige-driehoek",
+    "ruimtemeetkunde",
+    "oppervlakte-omtrek-inhoud",
+    "statistiek",
+    "kansrekening",
+    "informatieverwerking-grafieken-diagrammen"
+  ],
+  "examens": [
+    {
+      "jaar": 2025,
+      "tijdvak": "I",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2025/I/Wiskunde/Wiskunde%202025%20I_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2025/I/Wiskunde/Wiskunde%202025%20I_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2025,
+      "tijdvak": "II",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2025/II/Wiskunde/Wiskunde%202025%20II_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2025/II/Wiskunde/Wiskunde%202025%20II_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2024,
+      "tijdvak": "I",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2024/I/Wiskunde/Wiskunde%202024%20I_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2024/I/Wiskunde/Wiskunde%202024%20I_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2024,
+      "tijdvak": "II",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2024/II/Wiskunde/Wiskunde%202024%20II_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2024/II/Wiskunde/Wiskunde%202024%20II_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2023,
+      "tijdvak": "I",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2023/I/Wiskunde/Wiskunde%202023%20I_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2023/I/Wiskunde/Wiskunde%202023%20I_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2023,
+      "tijdvak": "II",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2023/II/Wiskunde/Wiskunde%202023%20II_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2023/II/Wiskunde/Wiskunde%202023%20II_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2022,
+      "tijdvak": "I",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/I/Wiskunde/Wiskunde%202022%20I_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/I/Wiskunde/Wiskunde%202022%20I_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2022,
+      "tijdvak": "II",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/II/Wiskunde/Wiskunde%202022%20II_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/II/Wiskunde/Wiskunde%202022%20II_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2022,
+      "tijdvak": "III",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/III/Wiskunde/Wiskunde%202022%20III_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2022/III/Wiskunde/Wiskunde%202022%20III_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2021,
+      "tijdvak": "I",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/I/Wiskunde/Wiskunde%202021%20I_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/I/Wiskunde/Wiskunde%202021%20I_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2021,
+      "tijdvak": "II",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/II/Wiskunde/Wiskunde%202021%20II_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/II/Wiskunde/Wiskunde%202021%20II_correctievoorschrift.pdf"
+    },
+    {
+      "jaar": 2021,
+      "tijdvak": "III",
+      "opgaven": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/III/Wiskunde/Wiskunde%202021%20III_opgaven.pdf",
+      "correctievoorschrift": "https://static.alleexamens.nl/VMBO-GL%20en%20TL/Wiskunde/2021/III/Wiskunde/Wiskunde%202021%20III_correctievoorschrift.pdf"
+    }
+  ]
+}
