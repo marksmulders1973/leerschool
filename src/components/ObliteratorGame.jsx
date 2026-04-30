@@ -1925,9 +1925,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (schansVeiligeFrames > 0) schansVeiligeFrames--;
       volgendObstakelOver--;
       if (volgendObstakelOver <= 0) {
-        if (schansVeiligeFrames > 0) {
-          // Tijdens vlucht/landing na schans: geen nieuwe obstakels op grond,
-          // korte herprobeer-cooldown zodat we niet de hele safe-zone wachten.
+        if (schansVeiligeFrames > 0 || dungeonMode) {
+          // Geen grond-obstakels tijdens vlucht/landing na schans, en niet
+          // in dungeon-mode (water op de vloer maakt blocks onzichtbaar —
+          // dungeon krijgt zijn hazard via haaien).
           volgendObstakelOver = 30;
         } else {
           maakObstakel();
