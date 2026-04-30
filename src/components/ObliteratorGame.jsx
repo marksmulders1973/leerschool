@@ -1315,67 +1315,110 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     function tekenHaai(h) {
       ctx.save();
-      // Body: donkergrijze ovaal met lichte buik
       const cx = h.x + h.breedte / 2;
       const cy = h.y + h.hoogte / 2;
       const swayY = Math.sin(h.fase) * 1.5 * SCHAAL;
-      // Schaduw onder haai (in water)
-      ctx.fillStyle = "rgba(0,0,0,0.25)";
-      ctx.beginPath();
-      ctx.ellipse(cx, h.y + h.hoogte + 3 * SCHAAL, h.breedte / 2.5, 4 * SCHAAL, 0, 0, Math.PI * 2);
-      ctx.fill();
-      // Body fill
-      ctx.fillStyle = "#3a4554";
+      // Subtiele rode glow-halo zodat haai opvalt tegen de donkere dungeon
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "rgba(255, 70, 60, 0.55)";
+      // Body — gradient van licht-grijs (rug) naar wit-blauw (buik)
+      const grad = ctx.createLinearGradient(0, h.y, 0, h.y + h.hoogte);
+      grad.addColorStop(0, "#8090a8");
+      grad.addColorStop(0.55, "#6a7a92");
+      grad.addColorStop(1, "#dde5f0");
+      ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.ellipse(cx, cy + swayY, h.breedte / 2, h.hoogte / 2, 0, 0, Math.PI * 2);
       ctx.fill();
-      // Lichte buik
-      ctx.fillStyle = "rgba(220, 230, 240, 0.55)";
+      ctx.shadowBlur = 0;
+      // Witte outline rond body voor contrast tegen water
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.92)";
+      ctx.lineWidth = 2.5 * SCHAAL;
       ctx.beginPath();
-      ctx.ellipse(cx, cy + swayY + h.hoogte * 0.18, h.breedte * 0.42, h.hoogte * 0.28, 0, 0, Math.PI * 2);
+      ctx.ellipse(cx, cy + swayY, h.breedte / 2, h.hoogte / 2, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      // Schaduw onder haai (op vloer)
+      ctx.fillStyle = "rgba(0,0,0,0.30)";
+      ctx.beginPath();
+      ctx.ellipse(cx, h.y + h.hoogte + 3 * SCHAAL, h.breedte / 2.5, 4 * SCHAAL, 0, 0, Math.PI * 2);
       ctx.fill();
-      // Staart — driehoek aan de rechter (achter)kant
-      ctx.fillStyle = "#2c3640";
+      // Staart — grote driehoek aan rechter (achter)kant
+      ctx.fillStyle = "#5a6a85";
       ctx.beginPath();
       ctx.moveTo(h.x + h.breedte, cy + swayY);
-      ctx.lineTo(h.x + h.breedte + 14 * SCHAAL, h.y - 4 * SCHAAL + swayY);
-      ctx.lineTo(h.x + h.breedte + 14 * SCHAAL, h.y + h.hoogte + 4 * SCHAAL + swayY);
+      ctx.lineTo(h.x + h.breedte + 18 * SCHAAL, h.y - 6 * SCHAAL + swayY);
+      ctx.lineTo(h.x + h.breedte + 18 * SCHAAL, h.y + h.hoogte + 6 * SCHAAL + swayY);
       ctx.closePath();
       ctx.fill();
-      // Rugvin
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.6)";
+      ctx.lineWidth = 1.5 * SCHAAL;
+      ctx.stroke();
+      // Rugvin — groter, scherper
+      ctx.fillStyle = "#5a6a85";
       ctx.beginPath();
-      ctx.moveTo(cx - 6 * SCHAAL, h.y + swayY);
-      ctx.lineTo(cx + 2 * SCHAAL, h.y - 16 * SCHAAL + swayY);
-      ctx.lineTo(cx + 8 * SCHAAL, h.y + swayY);
+      ctx.moveTo(cx - 8 * SCHAAL, h.y + 2 * SCHAAL + swayY);
+      ctx.lineTo(cx + 4 * SCHAAL, h.y - 22 * SCHAAL + swayY);
+      ctx.lineTo(cx + 14 * SCHAAL, h.y + 2 * SCHAAL + swayY);
       ctx.closePath();
       ctx.fill();
-      // Oog (links, want haai zwemt naar links)
-      ctx.fillStyle = "#fff";
+      ctx.stroke();
+      // ─── BOOS GEZICHT ───
+      const eyeX = h.x + h.breedte * 0.22;
+      const eyeY = cy + swayY - 3 * SCHAAL;
+      // Rode gloeiende oog
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = "#ff2020";
+      ctx.fillStyle = "#ff5050";
       ctx.beginPath();
-      ctx.arc(h.x + h.breedte * 0.22, cy + swayY - 2 * SCHAAL, 3 * SCHAAL, 0, Math.PI * 2);
+      ctx.arc(eyeX, eyeY, 4.5 * SCHAAL, 0, Math.PI * 2);
       ctx.fill();
+      ctx.shadowBlur = 0;
+      // Pupil zwart
       ctx.fillStyle = "#000";
       ctx.beginPath();
-      ctx.arc(h.x + h.breedte * 0.22, cy + swayY - 2 * SCHAAL, 1.5 * SCHAAL, 0, Math.PI * 2);
+      ctx.arc(eyeX, eyeY, 2 * SCHAAL, 0, Math.PI * 2);
       ctx.fill();
-      // Mond met tanden (subtiel)
+      // Boze wenkbrauw (V-vorm) boven oog
       ctx.strokeStyle = "#000";
-      ctx.lineWidth = 1.5 * SCHAAL;
+      ctx.lineWidth = 2.8 * SCHAAL;
+      ctx.lineCap = "round";
       ctx.beginPath();
-      ctx.moveTo(h.x + 4 * SCHAAL, cy + swayY + 4 * SCHAAL);
-      ctx.lineTo(h.x + h.breedte * 0.22, cy + swayY + 6 * SCHAAL);
+      ctx.moveTo(eyeX - 8 * SCHAAL, eyeY - 9 * SCHAAL);
+      ctx.lineTo(eyeX + 6 * SCHAAL, eyeY - 4 * SCHAAL);
       ctx.stroke();
-      // Witte tanden-driehoekjes
+      // Open mond — donker gat
+      ctx.fillStyle = "#2a0d0d";
+      ctx.beginPath();
+      ctx.moveTo(h.x + 1 * SCHAAL, cy + swayY + 1 * SCHAAL);
+      ctx.lineTo(h.x + h.breedte * 0.32, cy + swayY + 5 * SCHAAL);
+      ctx.lineTo(h.x + h.breedte * 0.32, cy + swayY + 11 * SCHAAL);
+      ctx.lineTo(h.x + 1 * SCHAAL, cy + swayY + 9 * SCHAAL);
+      ctx.closePath();
+      ctx.fill();
+      // Tanden — bovenrij + onderrij, scherp wit
       ctx.fillStyle = "#fff";
-      for (let t = 0; t < 3; t++) {
-        const tx = h.x + 6 * SCHAAL + t * 5 * SCHAAL;
-        const ty = cy + swayY + 5 * SCHAAL;
+      ctx.strokeStyle = "rgba(0,0,0,0.4)";
+      ctx.lineWidth = 0.8 * SCHAAL;
+      for (let t = 0; t < 5; t++) {
+        const tx = h.x + 3 * SCHAAL + t * 5.5 * SCHAAL;
+        const tyTop = cy + swayY + 2 * SCHAAL;
+        const tyBot = cy + swayY + 11 * SCHAAL;
+        // Boven (omlaag wijzend)
         ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(tx + 2 * SCHAAL, ty + 3 * SCHAAL);
-        ctx.lineTo(tx + 4 * SCHAAL, ty);
+        ctx.moveTo(tx, tyTop);
+        ctx.lineTo(tx + 2.5 * SCHAAL, tyTop + 5 * SCHAAL);
+        ctx.lineTo(tx + 5 * SCHAAL, tyTop);
         ctx.closePath();
         ctx.fill();
+        ctx.stroke();
+        // Onder (omhoog wijzend)
+        ctx.beginPath();
+        ctx.moveTo(tx + 1.2 * SCHAAL, tyBot);
+        ctx.lineTo(tx + 3.5 * SCHAAL, tyBot - 5 * SCHAAL);
+        ctx.lineTo(tx + 6 * SCHAAL, tyBot);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
       }
       ctx.restore();
     }
@@ -2178,9 +2221,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (dungeonFadeIn === 0 && haaiSpawnTeller <= 0) {
           haaien.push({
             x: W + 40 * SCHAAL,
-            y: GROND_Y + SPELER_GROOTTE - 28 * SCHAAL, // op vloerniveau (in het water)
-            breedte: 72 * SCHAAL,
-            hoogte: 28 * SCHAAL,
+            y: GROND_Y + SPELER_GROOTTE - 36 * SCHAAL, // op vloerniveau (in water)
+            breedte: 90 * SCHAAL,                      // groter
+            hoogte: 36 * SCHAAL,                       // groter
             fase: 0,
             dood: false,
           });
