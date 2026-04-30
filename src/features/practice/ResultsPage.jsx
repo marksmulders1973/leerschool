@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS } from "../../constants.js";
 import { SoundEngine } from "../../utils.js";
-import ObliteratorV2 from "../../games/obliterator/ObliteratorV2.jsx";
+import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import supabase from "../../supabase.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
@@ -144,7 +144,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   return (
     <div style={styles.page}>
-      {showGame && <ObliteratorV2 playerName={userName} onClose={() => setShowGame(false)} />}
+      {showGame && <ObliteratorGame userName={userName} authUser={authUser} wrongQuestions={wrongQuestions} onClose={() => setShowGame(false)} />}
       <div style={{ ...styles.resultsCard, animation: "slideUp 0.4s ease" }}>
         {latest.percentage >= 80 && (
           <div style={{ position: "relative", height: 0, overflow: "visible" }}>
