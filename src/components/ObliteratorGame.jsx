@@ -99,6 +99,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const wrRef = useRef(0); // wereldrecord (top score)
   const startLevelRef = useRef(1); // bij welk level deze sessie begint (1..MAX_LEVEL)
   const eindLevelRef = useRef(1); // level bij game-over (voor highscore-opslag)
+  // Top-3 namen voor de spandoek-fans op de grond (rouleren door highscores).
+  // Default-fallback als Supabase nog niet geladen heeft of leeg is.
+  const topSpelersRef = useRef(["Brian", "Anouk", "Mark"]);
   const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
@@ -227,6 +230,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!actief) return;
       setHighscores(s);
       setLaden(false);
+      // Update top-3 ref voor spandoek-fans
+      const namen = (s || []).slice(0, 3).map(x => x.naam).filter(Boolean);
+      if (namen.length > 0) topSpelersRef.current = namen;
     });
     return () => { actief = false; };
   }, [fase]);
@@ -1144,6 +1150,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let dungeonFadeOut = 0;       // > 0 = aan het uitgaan
     const DUNGEON_DUUR = 1500;    // ~25 sec @ 60fps
     const DUNGEON_FADE = 30;      // frames voor fade-in / fade-out
+    // ──────── FAN-SPANDOEKEN ────────
+    // Mannetjes met spandoek met de naam van de top-3 highscore-spelers.
+    // Spawnt periodiek vanaf rechter rand, rolt langs zoals decoratie.
+    const fans = [];              // { x, naam, tekst, breedte, hoogte }
+    let fanSpawnTeller = 600;     // eerste banner ~10 sec na start
+    const FAN_INTERVAL = 1500;    // daarna elke ~25 sec
     function tekenStenenStekel(x, y, b, h) {
       ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -1188,6 +1200,100 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
         tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
       } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+    }
+    function spawnFanGroep() {
+      const namen = topSpelersRef.current && topSpelersRef.current.length > 0
+        ? topSpelersRef.current
+        : ["Speler"];
+      const naam = namen[Math.floor(Math.random() * namen.length)];
+      const naamUp = String(naam).toUpperCase().slice(0, 14);
+      const variants = [
+        `TOP: ${naamUp}`,
+        `${naamUp} IS DE BESTE!`,
+        `GO ${naamUp}!`,
+        `#1 ${naamUp}`,
+        `HUP ${naamUp}!`,
+      ];
+      const tekst = variants[Math.floor(Math.random() * variants.length)];
+      // Banner-breedte schaalt mee met tekstlengte (ruwweg)
+      const tekstW = Math.max(160, tekst.length * 14) * SCHAAL;
+      fans.push({
+        x: W + 40,
+        naam,
+        tekst,
+        breedte: tekstW,
+        hoogte: 70 * SCHAAL,
+      });
+    }
+    function tekenFanGroep(f) {
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const figH = 32 * SCHAAL;
+      const figW = 14 * SCHAAL;
+      const figLeftX = f.x;
+      const figRightX = f.x + f.breedte - figW;
+      const baseY = grondTop;             // mannetjes staan op de grond
+      const headTopY = baseY - figH;      // hoofd-niveau
+      const bannerY = headTopY - 30 * SCHAAL;
+      const bannerH = 22 * SCHAAL;
+      const bannerL = figLeftX + figW / 2 - 4 * SCHAAL;
+      const bannerR = figRightX + figW / 2 + 4 * SCHAAL;
+      const bannerW = bannerR - bannerL;
+
+      ctx.save();
+      // Stokjes: van top-hand omhoog naar banner
+      ctx.strokeStyle = "#8a6a40";
+      ctx.lineWidth = 2.5 * SCHAAL;
+      ctx.beginPath();
+      ctx.moveTo(figLeftX + figW / 2, headTopY + 8 * SCHAAL);
+      ctx.lineTo(figLeftX + figW / 2, bannerY + bannerH);
+      ctx.moveTo(figRightX + figW / 2, headTopY + 8 * SCHAAL);
+      ctx.lineTo(figRightX + figW / 2, bannerY + bannerH);
+      ctx.stroke();
+
+      // Banner — wit met rode rand
+      ctx.fillStyle = "rgba(255, 250, 235, 0.95)";
+      ctx.fillRect(bannerL, bannerY, bannerW, bannerH);
+      ctx.strokeStyle = "#ff5252";
+      ctx.lineWidth = 2 * SCHAAL;
+      ctx.strokeRect(bannerL, bannerY, bannerW, bannerH);
+
+      // Banner-tekst
+      ctx.fillStyle = "#1a1a1a";
+      ctx.font = `bold ${Math.floor(bannerH * 0.62)}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(f.tekst, bannerL + bannerW / 2, bannerY + bannerH / 2);
+
+      // Stick-figures (links en rechts)
+      for (const fx of [figLeftX, figRightX]) {
+        const cx = fx + figW / 2;
+        // Hoofd
+        ctx.fillStyle = "#ffcc88";
+        ctx.beginPath();
+        ctx.arc(cx, headTopY + 5 * SCHAAL, 5 * SCHAAL, 0, Math.PI * 2);
+        ctx.fill();
+        // Lichaam (T-shirt kleur)
+        ctx.strokeStyle = "#3070d0";
+        ctx.lineWidth = 3 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(cx, headTopY + 10 * SCHAAL);
+        ctx.lineTo(cx, baseY - 10 * SCHAAL);
+        ctx.stroke();
+        // Armen (omhoog naar het stokje van de banner)
+        ctx.beginPath();
+        ctx.moveTo(cx, headTopY + 14 * SCHAAL);
+        ctx.lineTo(cx, headTopY + 8 * SCHAAL);
+        ctx.stroke();
+        // Benen
+        ctx.strokeStyle = "#222";
+        ctx.beginPath();
+        ctx.moveTo(cx, baseY - 10 * SCHAAL);
+        ctx.lineTo(cx - 5 * SCHAAL, baseY - 1 * SCHAAL);
+        ctx.moveTo(cx, baseY - 10 * SCHAAL);
+        ctx.lineTo(cx + 5 * SCHAAL, baseY - 1 * SCHAAL);
+        ctx.stroke();
+      }
+      ctx.restore();
     }
     function tekenPortal(p) {
       // Paarse swirl-portal: 3 concentrische ringen die roteren met fase
@@ -1894,6 +2000,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         if (p.x + p.grootte < 0 || p.opgepakt) portals.splice(i, 1);
       }
+      // ───── FAN-SPANDOEKEN ─────
+      // Periodieke spandoek-spawn met top-3 highscore-namen
+      fanSpawnTeller--;
+      if (fanSpawnTeller <= 0 && !bossActief && !dungeonMode) {
+        spawnFanGroep();
+        fanSpawnTeller = FAN_INTERVAL;
+      }
+      for (let i = fans.length - 1; i >= 0; i--) {
+        fans[i].x -= effSnelheid;
+        if (fans[i].x + fans[i].breedte < -50) fans.splice(i, 1);
+      }
       // ───── DUNGEON-MODE-TIMER ─────
       if (dungeonMode) {
         dungeonFrames++;
@@ -2559,6 +2676,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, PLATFORM_HOOGTE - 1);
         ctx.restore();
       }
+      // Fans (spandoek met highscore-naam) op achtergrond, vóór speler/obstakels
+      for (const f of fans) tekenFanGroep(f);
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
       for (const sc of schansen) tekenSchans(sc);
@@ -3147,6 +3266,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           particles[i].update(); particles[i].teken();
           if (particles[i].dood) particles.splice(i, 1);
         }
+        for (const f of fans) tekenFanGroep(f);
         for (const o of obstakels) tekenObstakel(o);
         for (const sc of schansen) tekenSchans(sc);
         for (const p of portals) tekenPortal(p);
