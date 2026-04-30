@@ -1216,45 +1216,48 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ];
       const tekst = variants[Math.floor(Math.random() * variants.length)];
       // Banner-breedte schaalt mee met tekstlengte (ruwweg)
-      const tekstW = Math.max(160, tekst.length * 14) * SCHAAL;
+      const tekstW = Math.max(220, tekst.length * 22) * SCHAAL;
       fans.push({
         x: W + 40,
         naam,
         tekst,
         breedte: tekstW,
-        hoogte: 70 * SCHAAL,
+        hoogte: 130 * SCHAAL,
       });
     }
     function tekenFanGroep(f) {
       const grondTop = GROND_Y + SPELER_GROOTTE;
-      const figH = 32 * SCHAAL;
-      const figW = 14 * SCHAAL;
+      const figH = 70 * SCHAAL;          // was 32 — ruim 2× zo groot
+      const figW = 26 * SCHAAL;          // was 14
       const figLeftX = f.x;
       const figRightX = f.x + f.breedte - figW;
       const baseY = grondTop;             // mannetjes staan op de grond
       const headTopY = baseY - figH;      // hoofd-niveau
-      const bannerY = headTopY - 30 * SCHAAL;
-      const bannerH = 22 * SCHAAL;
-      const bannerL = figLeftX + figW / 2 - 4 * SCHAAL;
-      const bannerR = figRightX + figW / 2 + 4 * SCHAAL;
+      const bannerY = headTopY - 50 * SCHAAL;
+      const bannerH = 40 * SCHAAL;        // was 22
+      const bannerL = figLeftX + figW / 2 - 6 * SCHAAL;
+      const bannerR = figRightX + figW / 2 + 6 * SCHAAL;
       const bannerW = bannerR - bannerL;
 
       ctx.save();
-      // Stokjes: van top-hand omhoog naar banner
+      // Stokjes (paaltjes): van top-hand omhoog naar banner
       ctx.strokeStyle = "#8a6a40";
-      ctx.lineWidth = 2.5 * SCHAAL;
+      ctx.lineWidth = 4 * SCHAAL;
       ctx.beginPath();
-      ctx.moveTo(figLeftX + figW / 2, headTopY + 8 * SCHAAL);
+      ctx.moveTo(figLeftX + figW / 2, headTopY + 12 * SCHAAL);
       ctx.lineTo(figLeftX + figW / 2, bannerY + bannerH);
-      ctx.moveTo(figRightX + figW / 2, headTopY + 8 * SCHAAL);
+      ctx.moveTo(figRightX + figW / 2, headTopY + 12 * SCHAAL);
       ctx.lineTo(figRightX + figW / 2, bannerY + bannerH);
       ctx.stroke();
 
+      // Banner-schaduw (subtiel onder de banner)
+      ctx.fillStyle = "rgba(0,0,0,0.25)";
+      ctx.fillRect(bannerL + 3 * SCHAAL, bannerY + 3 * SCHAAL, bannerW, bannerH);
       // Banner — wit met rode rand
-      ctx.fillStyle = "rgba(255, 250, 235, 0.95)";
+      ctx.fillStyle = "rgba(255, 250, 235, 0.97)";
       ctx.fillRect(bannerL, bannerY, bannerW, bannerH);
       ctx.strokeStyle = "#ff5252";
-      ctx.lineWidth = 2 * SCHAAL;
+      ctx.lineWidth = 3 * SCHAAL;
       ctx.strokeRect(bannerL, bannerY, bannerW, bannerH);
 
       // Banner-tekst
@@ -1264,33 +1267,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textBaseline = "middle";
       ctx.fillText(f.tekst, bannerL + bannerW / 2, bannerY + bannerH / 2);
 
-      // Stick-figures (links en rechts)
+      // Stick-figures (links en rechts) — groter en met meer detail
       for (const fx of [figLeftX, figRightX]) {
         const cx = fx + figW / 2;
+        const headR = 10 * SCHAAL;
         // Hoofd
         ctx.fillStyle = "#ffcc88";
         ctx.beginPath();
-        ctx.arc(cx, headTopY + 5 * SCHAAL, 5 * SCHAAL, 0, Math.PI * 2);
+        ctx.arc(cx, headTopY + headR, headR, 0, Math.PI * 2);
         ctx.fill();
-        // Lichaam (T-shirt kleur)
+        ctx.strokeStyle = "#a06030";
+        ctx.lineWidth = 1.5 * SCHAAL;
+        ctx.stroke();
+        // Lichaam (blauw shirt)
         ctx.strokeStyle = "#3070d0";
-        ctx.lineWidth = 3 * SCHAAL;
+        ctx.lineWidth = 6 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(cx, headTopY + 10 * SCHAAL);
-        ctx.lineTo(cx, baseY - 10 * SCHAAL);
+        ctx.moveTo(cx, headTopY + headR * 2);
+        ctx.lineTo(cx, baseY - 22 * SCHAAL);
         ctx.stroke();
-        // Armen (omhoog naar het stokje van de banner)
+        // Armen omhoog (om de paal vast te houden)
+        ctx.lineWidth = 4 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(cx, headTopY + 14 * SCHAAL);
-        ctx.lineTo(cx, headTopY + 8 * SCHAAL);
+        ctx.moveTo(cx, headTopY + headR * 2 + 4 * SCHAAL);
+        ctx.lineTo(cx, headTopY + headR * 0.8);
         ctx.stroke();
-        // Benen
+        // Benen (donker)
         ctx.strokeStyle = "#222";
+        ctx.lineWidth = 5 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(cx, baseY - 10 * SCHAAL);
-        ctx.lineTo(cx - 5 * SCHAAL, baseY - 1 * SCHAAL);
-        ctx.moveTo(cx, baseY - 10 * SCHAAL);
-        ctx.lineTo(cx + 5 * SCHAAL, baseY - 1 * SCHAAL);
+        ctx.moveTo(cx, baseY - 22 * SCHAAL);
+        ctx.lineTo(cx - 9 * SCHAAL, baseY - 1 * SCHAAL);
+        ctx.moveTo(cx, baseY - 22 * SCHAAL);
+        ctx.lineTo(cx + 9 * SCHAAL, baseY - 1 * SCHAAL);
         ctx.stroke();
       }
       ctx.restore();
@@ -1892,31 +1901,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             sb.y + sb.hoogte > sc.y;
           if (overlapt) {
             const isLoop = sc.type === "loop";
-            // Voor loop: extra check dat speler binnen de ring zit (afstand
-            // tot loop-center < binnenring-straal). Voorkomt dat de loop al
-            // triggert bij eerste AABB-overlap (speler nog buiten de ring).
-            let trigger = !isLoop;
-            if (isLoop) {
-              const cx = sc.x + sc.breedte / 2;
-              const cy = sc.y + sc.hoogte / 2;
-              const dx = (speler.x + speler.breedte / 2) - cx;
-              const dy = (speler.y + speler.hoogte / 2) - cy;
-              const distSq = dx * dx + dy * dy;
-              const triggerR = Math.min(sc.breedte, sc.hoogte) / 2 - speler.breedte / 2;
-              trigger = distSq < triggerR * triggerR;
-            }
+            // Loop triggert direct op AABB-overlap. Speler teleporteert naar
+            // de vaste entry-hoek (0.7π = lower-left van loop) en draait dan
+            // rechtsom door de hele revolutie. Particle-burst verbergt de
+            // teleport. Distance-check zorgde anders dat trigger nooit
+            // afging omdat speler op de grond altijd verder dan rx/2 is.
 
-            if (trigger && isLoop) {
+            if (isLoop) {
               // ── LOOP — speler gaat ECHT door de loop heen ─────
               sc.geactiveerd = true;
               loopActief = true;
               loopRef = sc;
               loopProgress = 0;
-              const cx = sc.x + sc.breedte / 2;
-              const cy = sc.y + sc.hoogte / 2;
-              const dx = (speler.x + speler.breedte / 2) - cx;
-              const dy = (speler.y + speler.hoogte / 2) - cy;
-              loopStartAngle = Math.atan2(dy, dx);
+              loopStartAngle = 0.7 * Math.PI; // entry: lower-left
               loopRadiusX = sc.breedte / 2 - speler.breedte / 2 - 6 * SCHAAL;
               loopRadiusY = sc.hoogte / 2 - speler.hoogte / 2 - 6 * SCHAAL;
               speler.snelheidY = 0;
@@ -1925,11 +1922,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               spawnParticles(
                 speler.x + speler.breedte / 2,
                 speler.y + speler.hoogte / 2,
-                14, "#ffaa20",
-                { spread: 5, opwaarts: 2, leven: 22, grootte: 4, glow: 14 }
+                20, "#ffaa20",
+                { spread: 6, opwaarts: 2, leven: 26, grootte: 5, glow: 16 }
               );
               springGeluid();
-            } else if (trigger) {
+            } else {
               // ── SCHANS — super-jump + arc-pickups (originele gedrag) ─────
               sc.geactiveerd = true;
               const superKracht = SPRING_KRACHT * 1.7;
