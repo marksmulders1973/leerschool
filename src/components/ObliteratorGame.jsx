@@ -1204,8 +1204,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.textBaseline = "middle";
         ctx.fillText("⟲", cx, cy);
       } else {
-        // Schans: triangulair, helling vóór de speler (slope van bottom-right
-        // naar top-left). Speler komt vanaf rechts en raakt eerst de slope-tip.
+        // Schans: triangulair, helling vóór de speler. Speler is fixed op x=100,
+        // wereld scrollt naar links → de LINKERkant van de schans (sc.x) raakt
+        // de speler eerst. Daar zit de slope-tip op grondniveau; slope loopt
+        // omhoog naar de top-rechts; vertikale wand zit op rechts (achterkant).
         ctx.shadowBlur = 14;
         ctx.shadowColor = "#69f0ae";
         const grad = ctx.createLinearGradient(sc.x, sc.y, sc.x, sc.y + sc.hoogte);
@@ -1213,25 +1215,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         grad.addColorStop(1, "#00a040");
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.moveTo(sc.x, sc.y);                                   // top-left (piek)
-        ctx.lineTo(sc.x, sc.y + sc.hoogte);                       // bottom-left
-        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);          // bottom-right (slope-tip)
+        ctx.moveTo(sc.x, sc.y + sc.hoogte);                       // bottom-left (slope-tip, grond)
+        ctx.lineTo(sc.x + sc.breedte, sc.y);                      // top-right (piek)
+        ctx.lineTo(sc.x + sc.breedte, sc.y + sc.hoogte);          // bottom-right (achterkant onder)
         ctx.closePath();
         ctx.fill();
-        // Slope-rand accent
+        // Slope-rand accent (van slope-tip onder-links naar piek rechts-boven)
         ctx.shadowBlur = 0;
         ctx.strokeStyle = "rgba(255,255,255,0.85)";
         ctx.lineWidth = 3 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(sc.x + sc.breedte, sc.y + sc.hoogte);
-        ctx.lineTo(sc.x, sc.y);
+        ctx.moveTo(sc.x, sc.y + sc.hoogte);
+        ctx.lineTo(sc.x + sc.breedte, sc.y);
         ctx.stroke();
-        // Pijl-omhoog op de slope, schaalt mee met hoogte
+        // Pijl-omhoog midden op de helling
         ctx.fillStyle = "rgba(255,255,255,0.95)";
         ctx.font = `bold ${Math.floor(sc.hoogte * 0.32)}px sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText("↗", sc.x + sc.breedte * 0.45, sc.y + sc.hoogte * 0.55);
+        ctx.fillText("↗", sc.x + sc.breedte * 0.55, sc.y + sc.hoogte * 0.55);
       }
       ctx.restore();
     }
