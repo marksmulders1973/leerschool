@@ -41,6 +41,7 @@ import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
 import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
 import balansBeco from "./balansBeco.js";
+import pincodeEconomieVmboGt4 from "./pincodeEconomieVmboGt4.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
@@ -105,6 +106,7 @@ export const ALL_LEARN_PATHS = {
   "atoombouw-scheikunde": atoombouwScheikunde,
   // Economie
   "vraag-aanbod-economie": vraagAanbodEconomie,
+  "pincode-economie-vmbo-gt-4": pincodeEconomieVmboGt4,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
   // Duits
