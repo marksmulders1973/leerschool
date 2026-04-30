@@ -1101,6 +1101,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // er geen nieuwe grond-obstakels gespawnd zodat speler niet direct op een
     // spike landt na de super-sprong.
     let schansVeiligeFrames = 0;
+    // Loop-animatie state — als loopActief, volgt speler de circulaire baan
+    // van loopRef (1 volledige revolutie in LOOP_DUUR frames). Wereld is
+    // bevroren (effSnelheid = 0) tijdens de animatie.
+    let loopActief = false;
+    let loopRef = null;
+    let loopProgress = 0;          // 0 → 1, fractie van revolutie
+    let loopStartAngle = 0;        // entry-hoek (atan2 vanuit loop-center)
+    let loopRadiusX = 0;
+    let loopRadiusY = 0;
+    const LOOP_DUUR = 50;          // frames per volledige revolutie
     function tekenStenenStekel(x, y, b, h) {
       ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -1319,6 +1329,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // ---------- INPUT ----------
     function spring() {
       if (!spelLoopt) return;
+      if (loopActief) return; // input genegeerd tijdens loop-animatie
       muziekStart();
       // Tijdens boss: tap = jump + laser tegelijk
       if (bossActief) spelerSchiet();
@@ -1397,6 +1408,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function update() {
       if (!spelLoopt) return;
       frameTeller++;
+
+      // ───── LOOP-ANIMATIE — speler volgt circulaire baan, wereld bevroren ─────
+      if (loopActief) {
+        loopProgress += 1 / LOOP_DUUR;
+        if (loopProgress >= 1) {
+          // Klaar — terug naar normale spelflow
+          loopActief = false;
+          loopRef = null;
+          speler.x = 100 * SCHAAL;
+          speler.y = GROND_Y;
+          speler.snelheidY = 0;
+          speler.springt = false;
+          speler.sprongTeller = 0;
+          speler.rotatie = 0;
+          schansVeiligeFrames = 30;
+          // Val door naar normale update — wereld hervat
+        } else {
+          // Mid-loop: positie + rotatie volgen ellipse rond loopRef-center.
+          // Increasing angle in y-down canvas = met de klok mee → speler gaat
+          // eerst omhoog (vanaf entry-hoek), over de top, terug naar entry.
+          const cx = loopRef.x + loopRef.breedte / 2;
+          const cy = loopRef.y + loopRef.hoogte / 2;
+          const ang = loopStartAngle + loopProgress * 2 * Math.PI;
+          speler.x = cx + loopRadiusX * Math.cos(ang) - speler.breedte / 2;
+          speler.y = cy + loopRadiusY * Math.sin(ang) - speler.hoogte / 2;
+          speler.rotatie = loopProgress * 2 * Math.PI;
+          return; // skip alles — wereld bevroren
+        }
+      }
 
       // countdown bij start van een sessie / na respawn
       if (countdown > 0) {
@@ -1600,9 +1640,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }
             if (geenObstakelInDeWeg) {
               const isLoop = Math.random() < 0.3;
-              // Schans: ~25% van scherm-hoogte. Looping: ~55% — beeld-vullend.
-              const hoogte  = isLoop ? 0.55 * H : 0.25 * H;
-              const breedte = isLoop ? 0.45 * H : 0.36 * H;
+              // Schans: ~25% van scherm-hoogte. Looping: ~40% — kleiner zodat
+              // speler en omgeving zichtbaar blijven tijdens de loop-rit.
+              const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
+              const breedte = isLoop ? 0.38 * H : 0.36 * H;
               schansen.push({
                 x: W + 40,
                 y: GROND_Y + SPELER_GROOTTE - hoogte,
@@ -1632,67 +1673,95 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
         // (Render gebeurt in teken() via tekenSchans, niet hier.)
 
-        // Collision (alleen één keer + niet tijdens boss/flip)
-        if (!sc.geactiveerd && !bossActief && flipFrames === 0) {
+        // Collision (alleen één keer + niet tijdens boss/flip/loop-animatie)
+        if (!sc.geactiveerd && !bossActief && flipFrames === 0 && !loopActief) {
           const sb = spelerBots();
           const overlapt =
             sb.x + sb.breedte > sc.x &&
             sb.x < sc.x + sc.breedte &&
             sb.y + sb.hoogte > sc.y;
           if (overlapt) {
-            sc.geactiveerd = true;
             const isLoop = sc.type === "loop";
-
-            // Super-jump (1.7× sprongkracht); reset multi-jump teller
-            const superKracht = SPRING_KRACHT * 1.7;
-            speler.snelheidY = superKracht;
-            speler.springt = true;
-            speler.sprongTeller = 0;
-
-            // Safe-zone — geen nieuwe grond-obstakels gedurende landing
-            schansVeiligeFrames = 70;
-
-            // Particles + geluid
-            spawnParticles(
-              speler.x + speler.breedte / 2,
-              speler.y + speler.hoogte / 2,
-              isLoop ? 22 : 16,
-              isLoop ? "#ffeb3b" : "#69f0ae",
-              { spread: 6, opwaarts: 4, leven: 30, grootte: 5, zwaartekracht: 0.05, glow: 18 }
-            );
-            springGeluid();
-
-            // Arc-collectibles — y(t) = GROND_Y + super·t + ½·g·t²
-            // Wereld beweegt naar links met effSnelheid; spawn op x = speler.x + effSnelheid·t
-            // zodat speler ze t frames later precies tegenkomt.
-            const ringFrames = isLoop ? [10, 18, 26, 34, 42, 50, 58] : [14, 26, 38, 50];
-            for (const t of ringFrames) {
-              const yArc = GROND_Y + superKracht * t + 0.5 * ZWAARTEKRACHT * t * t;
-              ringen.push({
-                x: speler.x + effSnelheid * t,
-                y: Math.max(60 * SCHAAL, yArc),
-                grootte: 22 * SCHAAL,
-                fase: 0,
-                opgepakt: false,
-              });
+            // Voor loop: extra check dat speler binnen de ring zit (afstand
+            // tot loop-center < binnenring-straal). Voorkomt dat de loop al
+            // triggert bij eerste AABB-overlap (speler nog buiten de ring).
+            let trigger = !isLoop;
+            if (isLoop) {
+              const cx = sc.x + sc.breedte / 2;
+              const cy = sc.y + sc.hoogte / 2;
+              const dx = (speler.x + speler.breedte / 2) - cx;
+              const dy = (speler.y + speler.hoogte / 2) - cy;
+              const distSq = dx * dx + dy * dy;
+              const triggerR = Math.min(sc.breedte, sc.hoogte) / 2 - speler.breedte / 2;
+              trigger = distSq < triggerR * triggerR;
             }
 
-            // Piek-cadeau op middelste t (waar speler hoogste is)
-            const tPiek = isLoop ? 34 : 26;
-            const yPiekRaw = GROND_Y + superKracht * tPiek + 0.5 * ZWAARTEKRACHT * tPiek * tPiek;
-            const yPiek = Math.max(50 * SCHAAL, yPiekRaw - 18 * SCHAAL);
-            const xPiek = speler.x + effSnelheid * tPiek;
+            if (trigger && isLoop) {
+              // ── LOOP — speler gaat ECHT door de loop heen ─────
+              sc.geactiveerd = true;
+              loopActief = true;
+              loopRef = sc;
+              loopProgress = 0;
+              const cx = sc.x + sc.breedte / 2;
+              const cy = sc.y + sc.hoogte / 2;
+              const dx = (speler.x + speler.breedte / 2) - cx;
+              const dy = (speler.y + speler.hoogte / 2) - cy;
+              loopStartAngle = Math.atan2(dy, dx);
+              loopRadiusX = sc.breedte / 2 - speler.breedte / 2 - 6 * SCHAAL;
+              loopRadiusY = sc.hoogte / 2 - speler.hoogte / 2 - 6 * SCHAAL;
+              speler.snelheidY = 0;
+              speler.springt = false;
+              speler.sprongTeller = 0;
+              spawnParticles(
+                speler.x + speler.breedte / 2,
+                speler.y + speler.hoogte / 2,
+                14, "#ffaa20",
+                { spread: 5, opwaarts: 2, leven: 22, grootte: 4, glow: 14 }
+              );
+              springGeluid();
+            } else if (trigger) {
+              // ── SCHANS — super-jump + arc-pickups (originele gedrag) ─────
+              sc.geactiveerd = true;
+              const superKracht = SPRING_KRACHT * 1.7;
+              speler.snelheidY = superKracht;
+              speler.springt = true;
+              speler.sprongTeller = 0;
+              schansVeiligeFrames = 70;
+              spawnParticles(
+                speler.x + speler.breedte / 2,
+                speler.y + speler.hoogte / 2,
+                16, "#69f0ae",
+                { spread: 6, opwaarts: 4, leven: 30, grootte: 5, zwaartekracht: 0.05, glow: 18 }
+              );
+              springGeluid();
 
-            // Verdeling: 40% hartje, 20% magneet, 20% slow-mo, 20% bom (geen mini-boss)
-            const r = Math.random();
-            if (r < 0.4 && levens < MAX_LEVENS) {
-              bonusHarten.push({ x: xPiek, y: yPiek, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
-            } else if (r < 0.6 && magneetFrames === 0) {
-              magneetPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-            } else if (r < 0.8 && slowFrames === 0) {
-              slowMoPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-            } else {
-              bombPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+              // Arc-collectibles — y(t) = GROND_Y + super·t + ½·g·t²
+              const ringFrames = [14, 26, 38, 50];
+              for (const t of ringFrames) {
+                const yArc = GROND_Y + superKracht * t + 0.5 * ZWAARTEKRACHT * t * t;
+                ringen.push({
+                  x: speler.x + effSnelheid * t,
+                  y: Math.max(60 * SCHAAL, yArc),
+                  grootte: 22 * SCHAAL,
+                  fase: 0,
+                  opgepakt: false,
+                });
+              }
+              // Piek-cadeau op t=26 (hoogste punt van de boog)
+              const tPiek = 26;
+              const yPiekRaw = GROND_Y + superKracht * tPiek + 0.5 * ZWAARTEKRACHT * tPiek * tPiek;
+              const yPiek = Math.max(50 * SCHAAL, yPiekRaw - 18 * SCHAAL);
+              const xPiek = speler.x + effSnelheid * tPiek;
+              const r = Math.random();
+              if (r < 0.4 && levens < MAX_LEVENS) {
+                bonusHarten.push({ x: xPiek, y: yPiek, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+              } else if (r < 0.6 && magneetFrames === 0) {
+                magneetPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+              } else if (r < 0.8 && slowFrames === 0) {
+                slowMoPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+              } else {
+                bombPickups.push({ x: xPiek, y: yPiek, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+              }
             }
           }
         }
