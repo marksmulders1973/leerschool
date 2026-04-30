@@ -1151,10 +1151,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let dungeonFadeOut = 0;       // > 0 = aan het uitgaan
     const DUNGEON_DUUR = 1500;    // ~25 sec @ 60fps
     const DUNGEON_FADE = 30;      // frames voor fade-in / fade-out
-    // Haaien — alleen tijdens dungeon-mode. Zwemmen aan vloerniveau,
-    // bij contact: levenVerlies (geen spikes meer in dungeon, water erbij).
-    const haaien = [];
-    let haaiSpawnTeller = 180;
     // ──────── FAN-SPANDOEKEN ────────
     // Mannetjes met spandoek met de naam van de top-3 highscore-spelers.
     // Spawnt periodiek vanaf rechter rand, rolt langs zoals decoratie.
@@ -1195,10 +1191,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       let type = 0;
       if (score > 2 && r < 0.30) type = 1;
       else if (score > 6 && r < 0.50) type = 2;
-      // Tijdens dungeon-modus: geen spikes (water op de vloer maakt ze
-      // onzichtbaar). In plaats daarvan altijd block-type + haaien als
-      // hazard.
-      if (dungeonMode) type = 2;
       const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : 30 * SCHAAL;
       const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
       obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
@@ -1310,72 +1302,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.moveTo(cx, baseY - 22 * SCHAAL);
         ctx.lineTo(cx + 9 * SCHAAL, baseY - 1 * SCHAAL);
         ctx.stroke();
-      }
-      ctx.restore();
-    }
-    function tekenHaai(h) {
-      ctx.save();
-      // Body: donkergrijze ovaal met lichte buik
-      const cx = h.x + h.breedte / 2;
-      const cy = h.y + h.hoogte / 2;
-      const swayY = Math.sin(h.fase) * 1.5 * SCHAAL;
-      // Schaduw onder haai (in water)
-      ctx.fillStyle = "rgba(0,0,0,0.25)";
-      ctx.beginPath();
-      ctx.ellipse(cx, h.y + h.hoogte + 3 * SCHAAL, h.breedte / 2.5, 4 * SCHAAL, 0, 0, Math.PI * 2);
-      ctx.fill();
-      // Body fill
-      ctx.fillStyle = "#3a4554";
-      ctx.beginPath();
-      ctx.ellipse(cx, cy + swayY, h.breedte / 2, h.hoogte / 2, 0, 0, Math.PI * 2);
-      ctx.fill();
-      // Lichte buik
-      ctx.fillStyle = "rgba(220, 230, 240, 0.55)";
-      ctx.beginPath();
-      ctx.ellipse(cx, cy + swayY + h.hoogte * 0.18, h.breedte * 0.42, h.hoogte * 0.28, 0, 0, Math.PI * 2);
-      ctx.fill();
-      // Staart — driehoek aan de rechter (achter)kant
-      ctx.fillStyle = "#2c3640";
-      ctx.beginPath();
-      ctx.moveTo(h.x + h.breedte, cy + swayY);
-      ctx.lineTo(h.x + h.breedte + 14 * SCHAAL, h.y - 4 * SCHAAL + swayY);
-      ctx.lineTo(h.x + h.breedte + 14 * SCHAAL, h.y + h.hoogte + 4 * SCHAAL + swayY);
-      ctx.closePath();
-      ctx.fill();
-      // Rugvin
-      ctx.beginPath();
-      ctx.moveTo(cx - 6 * SCHAAL, h.y + swayY);
-      ctx.lineTo(cx + 2 * SCHAAL, h.y - 16 * SCHAAL + swayY);
-      ctx.lineTo(cx + 8 * SCHAAL, h.y + swayY);
-      ctx.closePath();
-      ctx.fill();
-      // Oog (links, want haai zwemt naar links)
-      ctx.fillStyle = "#fff";
-      ctx.beginPath();
-      ctx.arc(h.x + h.breedte * 0.22, cy + swayY - 2 * SCHAAL, 3 * SCHAAL, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = "#000";
-      ctx.beginPath();
-      ctx.arc(h.x + h.breedte * 0.22, cy + swayY - 2 * SCHAAL, 1.5 * SCHAAL, 0, Math.PI * 2);
-      ctx.fill();
-      // Mond met tanden (subtiel)
-      ctx.strokeStyle = "#000";
-      ctx.lineWidth = 1.5 * SCHAAL;
-      ctx.beginPath();
-      ctx.moveTo(h.x + 4 * SCHAAL, cy + swayY + 4 * SCHAAL);
-      ctx.lineTo(h.x + h.breedte * 0.22, cy + swayY + 6 * SCHAAL);
-      ctx.stroke();
-      // Witte tanden-driehoekjes
-      ctx.fillStyle = "#fff";
-      for (let t = 0; t < 3; t++) {
-        const tx = h.x + 6 * SCHAAL + t * 5 * SCHAAL;
-        const ty = cy + swayY + 5 * SCHAAL;
-        ctx.beginPath();
-        ctx.moveTo(tx, ty);
-        ctx.lineTo(tx + 2 * SCHAAL, ty + 3 * SCHAAL);
-        ctx.lineTo(tx + 4 * SCHAAL, ty);
-        ctx.closePath();
-        ctx.fill();
       }
       ctx.restore();
     }
@@ -2168,23 +2094,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         fans[i].x -= effSnelheid;
         if (fans[i].x + fans[i].breedte < -50) fans.splice(i, 1);
       }
-      // ───── DUNGEON-MODE-TIMER + HAAIEN ─────
+      // ───── DUNGEON-MODE-TIMER ─────
       if (dungeonMode) {
         dungeonFrames++;
         if (dungeonFadeIn > 0) dungeonFadeIn--;
-        // Spawn af en toe een haai (alleen tijdens dungeon, niet tijdens fade-in)
-        haaiSpawnTeller--;
-        if (dungeonFadeIn === 0 && haaiSpawnTeller <= 0) {
-          haaien.push({
-            x: W + 40 * SCHAAL,
-            y: GROND_Y + SPELER_GROOTTE - 28 * SCHAAL, // op vloerniveau (in het water)
-            breedte: 72 * SCHAAL,
-            hoogte: 28 * SCHAAL,
-            fase: 0,
-            dood: false,
-          });
-          haaiSpawnTeller = 180 + Math.floor(Math.random() * 180); // 3-6 sec
-        }
         // Bij DUNGEON_DUUR: start exit-fade
         if (dungeonFrames === DUNGEON_DUUR) {
           dungeonFadeOut = DUNGEON_FADE;
@@ -2203,22 +2116,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             setTimeout(() => piep(1320, 0.12, "sine", 0.10), 180);
           }
         }
-      }
-      // Beweeg + check collision met haaien (los van dungeonMode-status,
-      // bestaande haaien blijven uitscrollen ook na dungeon-end)
-      for (let i = haaien.length - 1; i >= 0; i--) {
-        const h = haaien[i];
-        h.x -= effSnelheid * 0.95;
-        h.fase += 0.10;
-        if (!h.dood && vliegFrames === 0 && flipFrames === 0 && !loopActief) {
-          const sb = spelerBots();
-          if (botst(sb, { x: h.x, y: h.y, breedte: h.breedte, hoogte: h.hoogte })) {
-            levenVerlies();
-            h.dood = true;
-            spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 16, "#80c0ff", { spread: 6, opwaarts: 2, leven: 24, grootte: 4, glow: 14 });
-          }
-        }
-        if (h.x + h.breedte < -60 || h.dood) haaien.splice(i, 1);
       }
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
@@ -2866,7 +2763,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const f of fans) tekenFanGroep(f);
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
-      for (const h of haaien) tekenHaai(h);
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
@@ -3455,7 +3351,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         for (const f of fans) tekenFanGroep(f);
         for (const o of obstakels) tekenObstakel(o);
-        for (const h of haaien) tekenHaai(h);
         for (const sc of schansen) tekenSchans(sc);
         for (const p of portals) tekenPortal(p);
         for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
