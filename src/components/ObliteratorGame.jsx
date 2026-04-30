@@ -383,7 +383,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
     let scoreBijLevelStart = 0;
     // Boss-fights — na elk 5e level (5, 10, 15 ... 95)
-    const BOSS_TRIGGER_LEVELS = (() => { const a = []; for (let i = 5; i <= 95; i += 5) a.push(i); return a; })();
+    // Boss vaker: eerste op level 4, daarna elke 4 levels (was: vanaf 5, elke 5).
+    const BOSS_TRIGGER_LEVELS = (() => { const a = []; for (let i = 4; i <= 96; i += 4) a.push(i); return a; })();
     const BOSS_MAX_HP_BASE = 100;       // op L5; schaalt met level
     const BOSS_LASER_DAMAGE = 6;        // constant — verlengt dood-tijd bij hoger HP
     const BOSS_AANVAL_INTERVAL_BASE = 90; // 1.5 sec op L5; sneller bij hoger
@@ -1388,8 +1389,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const yPos = (170 + Math.random() * 100) * SCHAAL;
             flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
-          // MAGNEET-pickup: elke ~28 obstakels, 50% kans
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 28 === 0 && Math.random() < 0.5 && magneetFrames === 0) {
+          // MAGNEET-pickup: elke ~18 obstakels, 70% kans (was 28 / 50%)
+          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 18 === 0 && Math.random() < 0.7 && magneetFrames === 0) {
             const yPos = (180 + Math.random() * 80) * SCHAAL;
             magneetPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
