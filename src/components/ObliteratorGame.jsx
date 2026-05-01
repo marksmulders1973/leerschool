@@ -2790,8 +2790,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       trail();
       // Decrement safe-zone teller (na schans-sprong)
       if (schansVeiligeFrames > 0) schansVeiligeFrames--;
-      volgendObstakelOver--;
-      if (volgendObstakelOver <= 0) {
+      // Tijdens bonus-fase: alle spawn-tellers stilzetten zodat er geen
+      // items pieleren bij W (effSnelheid=0 = ze bewegen niet maar zouden
+      // wel spawnen). Mark: 'na bonus zie ik veel ringen, dingen dubbel'.
+      if (!bonusFase) volgendObstakelOver--;
+      if (!bonusFase && volgendObstakelOver <= 0) {
         if (schansVeiligeFrames > 0 || dungeonMode) {
           // Geen grond-obstakels tijdens vlucht/landing na schans, en niet
           // in dungeon-mode (water op de vloer maakt blocks onzichtbaar —
@@ -3031,7 +3034,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // ───── FAN-SPANDOEKEN ─────
       // Periodieke spandoek-spawn met top-3 highscore-namen
-      fanSpawnTeller--;
+      if (!bonusFase) fanSpawnTeller--;
       if (fanSpawnTeller <= 0 && !bossActief && !dungeonMode) {
         spawnFanGroep();
         fanSpawnTeller = FAN_INTERVAL;
@@ -3216,7 +3219,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       // platform spawn — lichtblauwe rust-blokjes halverwege canvas
-      platformSpawnTeller--;
+      if (!bonusFase) platformSpawnTeller--;
       if (platformSpawnTeller <= 0) {
         const breedte = (160 + Math.random() * 140) * SCHAAL; // langer: 160-300
         platforms.push({ x: W + 20, y: PLATFORM_Y, breedte });
@@ -3259,7 +3262,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       // Studiebol-logo achtergrond — af en toe een subtiel logo dat mee-scrollt
-      logoSpawnTeller--;
+      if (!bonusFase) logoSpawnTeller--;
       if (logoSpawnTeller <= 0 && logoGeladen) {
         const grootte = (110 + Math.random() * 80) * SCHAAL;
         const y = (90 + Math.random() * 110) * SCHAAL;
@@ -3274,8 +3277,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // plafond-stekel spawn (~50/50 met grond-stekels)
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
-      plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode) {
+      if (!bonusFase) plafondStekelSpawnTeller--;
+      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode && !bonusFase) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -3307,8 +3310,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       // gouden ringen spawn — soms 1, soms een rij
-      ringSpawnTeller--;
-      if (ringSpawnTeller <= 0) {
+      if (!bonusFase) ringSpawnTeller--;
+      if (!bonusFase && ringSpawnTeller <= 0) {
         const isRij = Math.random() < 0.45;
         const yBase = (170 + Math.random() * 110) * SCHAAL;
         if (isRij) {
