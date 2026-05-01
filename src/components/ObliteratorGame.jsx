@@ -150,6 +150,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Default-fallback als Supabase nog niet geladen heeft of leeg is.
   const topSpelersRef = useRef(["Brian", "Anouk", "Mark"]);
   const [fase, setFase] = useState(pvpMatch ? "spelen" : "menu"); // PvP slaat menu over
+  // Custom-level-editor state
+  const [editorObstakels, setEditorObstakels] = useState([]); // [{type, x, y?}]
+  const [editorTool, setEditorTool] = useState("spike");
+  const [editorLevelNaam, setEditorLevelNaam] = useState("Mijn level");
+  const [editorOpslaan, setEditorOpslaan] = useState({ bezig: false, error: null, ok: false });
   // Ghost-state voor PvP: opponent's laatst-bekende positie + score
   const ghostStateRef = useRef({ y: 0, vy: 0, score: 0, alive: true, name: "" });
   // PvP-eindstand (winner + scores) zodra match is afgerond
@@ -6629,15 +6634,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
-            {/* Custom Levels-tegel — eigen levels maken (editor komt binnenkort) */}
+            {/* Custom Levels-tegel — opent de editor */}
             <button
-              onClick={() => alert(
-                `🎨 Custom Levels Editor\n\n` +
-                `Je hebt 💍 ${munten} ${munten === 1 ? "munt" : "munten"} gespaard.\n\n` +
-                `De editor zelf komt in een volgende update — daarin kun je obstakels op je eigen level plaatsen. ` +
-                `Sommige obstakels worden gratis, andere kosten munten (en jij admin's krijgen alles gratis).\n\n` +
-                `Voor nu: blijf ringen pakken om je portemonnee te vullen!`
-              )}
+              onClick={() => {
+                setEditorOpslaan({ bezig: false, error: null, ok: false });
+                setFase("custom-editor");
+              }}
               style={{
                 width: "100%",
                 padding: "12px 14px",
@@ -6659,7 +6661,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             >
               <span>🎨 Custom Levels</span>
               <span style={{ fontSize: 11, fontWeight: 600, opacity: 0.9, background: "rgba(0,0,0,0.25)", padding: "3px 8px", borderRadius: 999 }}>
-                💍 {munten} · binnenkort
+                💍 {munten} · open editor
               </span>
             </button>
 
@@ -7095,6 +7097,227 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }}>
               Nog 1 keer spelen
             </button>
+          </div>
+        )}
+
+        {fase === "custom-editor" && (
+          <div style={{ width: "100%", maxWidth: 720, padding: "12px 14px", color: "#fff" }}>
+            {(() => {
+              const TOOLS = [
+                { id: "spike",       label: "Spike",        emoji: "🔺", kost: 0 },
+                { id: "blok",        label: "Blok",         emoji: "🟦", kost: 0 },
+                { id: "ring",        label: "Ring",         emoji: "💍", kost: 0 },
+                { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5 },
+                { id: "mijn",        label: "Mijn",         emoji: "💣", kost: 10 },
+              ];
+              const LEVEL_LENGTE = 4000;
+              const TRACK_HOOGTE = 220;
+              const trackToScreen = 0.32; // editor toont ~32% van level-breedte
+              const editorBreedte = LEVEL_LENGTE * trackToScreen;
+              const tool = TOOLS.find((t) => t.id === editorTool) || TOOLS[0];
+              const isAdmin = isObliterAdmin;
+              const handleCanvasTap = (e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const tapX = e.clientX - rect.left;
+                const tapY = e.clientY - rect.top;
+                const wereldX = Math.round((tapX / rect.width) * editorBreedte);
+                const wereldY = Math.round((tapY / rect.height) * TRACK_HOOGTE);
+                // Kost-check (admin negeert)
+                if (!isAdmin && tool.kost > 0 && munten < tool.kost) {
+                  setEditorOpslaan({ bezig: false, error: `Niet genoeg munten (${tool.kost} nodig, je hebt er ${munten})`, ok: false });
+                  return;
+                }
+                if (!isAdmin && tool.kost > 0) {
+                  // Trek munten af + persist
+                  setMunten((m) => {
+                    const nieuw = Math.max(0, m - tool.kost);
+                    try { schrijfInt(muntenKey, nieuw); } catch {}
+                    return nieuw;
+                  });
+                }
+                setEditorObstakels((arr) => [
+                  ...arr,
+                  { type: tool.id, x: wereldX, y: tool.id === "ring" ? wereldY : undefined },
+                ]);
+                setEditorOpslaan({ bezig: false, error: null, ok: false });
+              };
+              const handleVerwijderLaatste = () => {
+                setEditorObstakels((arr) => arr.slice(0, -1));
+              };
+              const handleClear = () => {
+                if (window.confirm("Alles verwijderen?")) setEditorObstakels([]);
+              };
+              const handleSave = async () => {
+                if (editorObstakels.length === 0) {
+                  setEditorOpslaan({ bezig: false, error: "Plaats eerst minstens 1 obstakel", ok: false });
+                  return;
+                }
+                setEditorOpslaan({ bezig: true, error: null, ok: false });
+                try {
+                  const { error } = await supabase
+                    .from("obliterator_user_levels")
+                    .insert({
+                      maker_naam: (userName || "Anoniem").trim(),
+                      maker_user_id: authUser?.id || null,
+                      naam: editorLevelNaam.trim() || "Naamloos level",
+                      obstakels: editorObstakels,
+                      lengte: LEVEL_LENGTE,
+                      publiek: true,
+                    });
+                  if (error) throw error;
+                  setEditorOpslaan({ bezig: false, error: null, ok: true });
+                  setTimeout(() => setEditorOpslaan((s) => ({ ...s, ok: false })), 2500);
+                } catch (e) {
+                  setEditorOpslaan({ bezig: false, error: e?.message || "Opslaan mislukt", ok: false });
+                }
+              };
+              return (
+                <>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+                    <button
+                      onClick={() => setFase("menu")}
+                      style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "#fff", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13 }}
+                    >
+                      ← Menu
+                    </button>
+                    <div style={{ fontSize: 12, color: "#ffd54f", fontWeight: 700 }}>💍 {munten} {isAdmin && "(admin = gratis)"}</div>
+                  </div>
+                  <h2 style={{ fontFamily: "Impact, sans-serif", fontSize: 22, color: "#ff9d40", letterSpacing: 1.5, marginBottom: 8 }}>
+                    🎨 LEVEL EDITOR
+                  </h2>
+                  <input
+                    type="text"
+                    value={editorLevelNaam}
+                    onChange={(e) => setEditorLevelNaam(e.target.value)}
+                    placeholder="Naam van je level"
+                    style={{ width: "100%", padding: "8px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(0,0,0,0.3)", color: "#fff", fontSize: 14, marginBottom: 12, boxSizing: "border-box" }}
+                  />
+                  {/* Palet */}
+                  <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
+                    {TOOLS.map((t) => {
+                      const actief = editorTool === t.id;
+                      const betaalbaar = isAdmin || t.kost === 0 || munten >= t.kost;
+                      return (
+                        <button
+                          key={t.id}
+                          onClick={() => setEditorTool(t.id)}
+                          disabled={!betaalbaar}
+                          style={{
+                            padding: "8px 10px", borderRadius: 10,
+                            border: actief ? "2px solid #ff9d40" : "1px solid rgba(255,255,255,0.2)",
+                            background: actief ? "rgba(255,157,64,0.18)" : "rgba(255,255,255,0.04)",
+                            color: betaalbaar ? "#fff" : "rgba(255,255,255,0.4)",
+                            cursor: betaalbaar ? "pointer" : "not-allowed",
+                            fontFamily: "'Fredoka', sans-serif", fontSize: 12,
+                            display: "flex", alignItems: "center", gap: 4,
+                          }}
+                          title={t.kost > 0 ? `${t.kost} munten per stuk` : "Gratis"}
+                        >
+                          <span style={{ fontSize: 18 }}>{t.emoji}</span>
+                          <span>{t.label}</span>
+                          {t.kost > 0 && (
+                            <span style={{ fontSize: 10, color: "#ffd54f", marginLeft: 2 }}>
+                              💍{t.kost}
+                            </span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginBottom: 8 }}>
+                    Tap op het track om <strong>{tool.emoji} {tool.label}</strong> te plaatsen
+                    {!isAdmin && tool.kost > 0 && ` (kost ${tool.kost} munten per stuk)`}
+                  </div>
+                  {/* Track-canvas (geconcept) */}
+                  <div
+                    onClick={handleCanvasTap}
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: TRACK_HOOGTE,
+                      background: "linear-gradient(180deg, #1a2740 0%, #2a3f5f 100%)",
+                      borderRadius: 12,
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      cursor: "crosshair",
+                      overflow: "hidden",
+                      marginBottom: 8,
+                    }}
+                  >
+                    {/* grond-lijn */}
+                    <div style={{ position: "absolute", left: 0, right: 0, bottom: 30, height: 2, background: "rgba(255,255,255,0.3)" }} />
+                    {/* plafond-lijn */}
+                    <div style={{ position: "absolute", left: 0, right: 0, top: 18, height: 2, background: "rgba(255,255,255,0.2)" }} />
+                    {editorObstakels.map((o, i) => {
+                      const t = TOOLS.find((tt) => tt.id === o.type);
+                      const x = (o.x / editorBreedte) * 100;
+                      let topPercent;
+                      if (o.type === "plafondstekel") topPercent = 8;
+                      else if (o.type === "ring") topPercent = ((o.y || 110) / TRACK_HOOGTE) * 100;
+                      else topPercent = 78; // grond-niveau
+                      return (
+                        <div
+                          key={i}
+                          style={{
+                            position: "absolute",
+                            left: `${x}%`,
+                            top: `${topPercent}%`,
+                            transform: "translate(-50%, -50%)",
+                            fontSize: 22,
+                            pointerEvents: "none",
+                          }}
+                        >
+                          {t?.emoji || "❓"}
+                        </div>
+                      );
+                    })}
+                    {editorObstakels.length === 0 && (
+                      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13, pointerEvents: "none" }}>
+                        Tap hier om obstakels te plaatsen
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
+                    {editorObstakels.length} obstakel{editorObstakels.length === 1 ? "" : "s"} geplaatst · level-lengte {LEVEL_LENGTE}px
+                  </div>
+                  {editorOpslaan.error && (
+                    <div style={{ padding: "8px 12px", borderRadius: 8, background: "rgba(255,80,40,0.18)", border: "1px solid rgba(255,80,40,0.5)", color: "#ff8060", fontSize: 12, marginBottom: 8 }}>
+                      ⚠️ {editorOpslaan.error}
+                    </div>
+                  )}
+                  {editorOpslaan.ok && (
+                    <div style={{ padding: "8px 12px", borderRadius: 8, background: "rgba(105,240,174,0.18)", border: "1px solid rgba(105,240,174,0.5)", color: "#69f0ae", fontSize: 12, marginBottom: 8 }}>
+                      ✅ Level opgeslagen!
+                    </div>
+                  )}
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 6 }}>
+                    <button
+                      onClick={handleVerwijderLaatste}
+                      disabled={editorObstakels.length === 0}
+                      style={{ padding: "10px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: editorObstakels.length === 0 ? "rgba(255,255,255,0.3)" : "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer" }}
+                    >
+                      ↩️ Laatste weg
+                    </button>
+                    <button
+                      onClick={handleClear}
+                      disabled={editorObstakels.length === 0}
+                      style={{ padding: "10px", borderRadius: 10, border: "1px solid rgba(255,80,40,0.4)", background: "rgba(255,80,40,0.10)", color: editorObstakels.length === 0 ? "rgba(255,255,255,0.3)" : "#ff8060", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer" }}
+                    >
+                      🗑️ Alles wissen
+                    </button>
+                  </div>
+                  <button
+                    onClick={handleSave}
+                    disabled={editorOpslaan.bezig || editorObstakels.length === 0}
+                    style={{ width: "100%", padding: "12px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 800, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer", opacity: editorObstakels.length === 0 ? 0.5 : 1, marginBottom: 8 }}
+                  >
+                    {editorOpslaan.bezig ? "Opslaan…" : "💾 Opslaan in cloud"}
+                  </button>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", textAlign: "center" }}>
+                    Speel-engine voor custom levels volgt — voor nu kun je bouwen + opslaan.
+                  </div>
+                </>
+              );
+            })()}
           </div>
         )}
 
