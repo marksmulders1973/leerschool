@@ -2468,9 +2468,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!bonusFase && !bossActief && !dungeonMode) {
         if (!periscoop) periscoopSpawnTeller--;
         if (!periscoop && periscoopSpawnTeller <= 0) {
-          // Vermijd center-screen waar speler staat — spawn tussen 0.45 en 0.85 W
+          // Spawn helemaal rechts; periscoop schuift LEFTWARD over de hele
+          // breedte zodat hij gegarandeerd over de speler (x≈100) heen
+          // passeert. Mark's klacht: 'periscoop is rechts, ik links, kom
+          // er niet bij'.
           periscoop = {
-            x: W * (0.45 + Math.random() * 0.4),
+            x: W + 30 * SCHAAL,
             faseNaam: "uit",
             faseFrames: 0,
           };
@@ -2481,6 +2484,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       if (periscoop) {
         periscoop.faseFrames++;
+        // Periscoop schuift constant naar links zodat speler (vast op
+        // x=100) gegarandeerd onder de lens komt. Snelheid berekend zodat
+        // 'ie binnen de hang-fase ongeveer 65% van de breedte aflegt —
+        // speler kan 'm zien aankomen en sprong timen.
+        const slideSpeed = (W * 0.7) / (PERISCOOP_HANG_FRAMES + PERISCOOP_UIT_FRAMES);
+        periscoop.x -= slideSpeed;
         if (periscoop.faseNaam === "uit" && periscoop.faseFrames >= PERISCOOP_UIT_FRAMES) {
           periscoop.faseNaam = "hang";
           periscoop.faseFrames = 0;
@@ -2489,6 +2498,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           periscoop.faseFrames = 0;
         } else if (periscoop.faseNaam === "in" && periscoop.faseFrames >= PERISCOOP_IN_FRAMES) {
           periscoop = null;
+        }
+        // Als 'ie te ver naar links is gevaren (voorbij speler), trek
+        // 'm vroegtijdig terug — anders verdwijnt 'ie buiten beeld
+        if (periscoop && periscoop.x < -40 && periscoop.faseNaam !== "in") {
+          periscoop.faseNaam = "in";
+          periscoop.faseFrames = 0;
         }
         // Collision-check tijdens uit/hang fase: lens-cirkel raakt speler-bbox
         if (periscoop && (periscoop.faseNaam === "uit" || periscoop.faseNaam === "hang")) {
