@@ -399,7 +399,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PERISCOOP_LENS_R = 32;       // hitbox-radius (was 22 — ruimere collision)
     let bonusFase = false;
     let bonusFrames = 0;
-    const BONUS_DUUR = 600; // 10 sec actief schieten
+    const BONUS_DUUR = 900; // 15 sec actief schieten/aanraken
     let bonusIntroFrames = 0;
     const BONUS_INTRO_DUUR = 120; // 2 sec "BONUS LEVEL" voorscherm
     const bonusRingen = [];
@@ -1829,7 +1829,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textBaseline = "top";
       ctx.shadowBlur = 14;
       ctx.shadowColor = "#ffd700";
-      ctx.fillText(`🎯 BONUS! +${bonusScore}  ·  SCHIET RINGEN!`, W / 2, balkY + balkH + 6);
+      ctx.fillText(`🎯 BONUS! +${bonusScore}  ·  RAAK OF SCHIET RINGEN!`, W / 2, balkY + balkH + 6);
       ctx.restore();
     }
     function tekenBonusEindFlash() {
@@ -1844,7 +1844,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textBaseline = "middle";
       ctx.shadowBlur = 24;
       ctx.shadowColor = "#ffd700";
-      ctx.fillText(`+${bonusScore} BONUS!`, W / 2, H / 2);
+      ctx.fillText(`BONUS SCORE BEHAALD: ${bonusScore}`, W / 2, H / 2);
       ctx.restore();
     }
     function tekenSchatkist(s) {
@@ -2634,12 +2634,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }
             bonusRingSpawnTeller = 22 + Math.floor(Math.random() * 14);
           }
-          // bonus-ringen bewegen
-          for (let i = bonusRingen.length - 1; i >= 0; i--) {
-            const r = bonusRingen[i];
-            r.x += r.vx;
-            r.fase += 0.18;
-            if (r.x < -40 || r.opgepakt) bonusRingen.splice(i, 1);
+          // bonus-ringen bewegen + speler-aanraking telt ook als raak
+          {
+            const sb = spelerBots();
+            const sCx = sb.x + sb.breedte / 2;
+            const sCy = sb.y + sb.hoogte / 2;
+            const sR = Math.min(sb.breedte, sb.hoogte) / 2;
+            for (let i = bonusRingen.length - 1; i >= 0; i--) {
+              const r = bonusRingen[i];
+              r.x += r.vx;
+              r.fase += 0.18;
+              if (!r.opgepakt) {
+                const ringR = r.grootte * 0.85;
+                const dx = r.x - sCx;
+                const dy = r.y - sCy;
+                if (Math.sqrt(dx * dx + dy * dy) < ringR + sR) {
+                  r.opgepakt = true;
+                  bonusScore += 5;
+                  score += 5;
+                  spawnParticles(r.x, r.y, 14, "#ffd700", { spread: 6, opwaarts: 1.5, leven: 26, grootte: 4, glow: 18 });
+                  spawnParticles(r.x, r.y, 8, "#ffffff", { spread: 4, opwaarts: 1, leven: 20, grootte: 3, glow: 14 });
+                  piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
+                }
+              }
+              if (r.x < -40 || r.opgepakt) bonusRingen.splice(i, 1);
+            }
           }
           // lasers bewegen + raken bonus-ringen?
           for (let li = spelerLasers.length - 1; li >= 0; li--) {
@@ -4908,7 +4927,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>💥 <strong style={{ color: "#ff5040" }}>Bom pakken</strong> = ALLE stekels op het scherm vernietigen!</div>
               <div>🐠 <strong style={{ color: "#ffaa30" }}>Vis pakken</strong> = +5 punten + 5 sec bubbel-shield (haaien gaan dood bij contact!)</div>
               <div>💰 <strong style={{ color: "#ffd700" }}>Schatkist pakken</strong> (water-wereld) = +25 punten + 25 HP BONUS!</div>
-              <div>🔭 <strong style={{ color: "#fff8a0" }}>Periscoop</strong> = exact erin springen = 10 sec BONUS-RONDE (klik = schiet + spring tegelijk, ringen raken = +5 elk!)</div>
+              <div>🔭 <strong style={{ color: "#fff8a0" }}>Periscoop</strong> = exact erin springen = 15 sec BONUS-RONDE (ringen schieten OF aanraken = +5 elk!)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
