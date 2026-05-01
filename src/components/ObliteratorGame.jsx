@@ -107,6 +107,14 @@ const DECOR_CATALOG = [
   { id: "decor_vogel",        label: "Vogel",        emoji: "🐦", grootte: 24, bob: { snelheid: 3, amp: 5 } },
   { id: "decor_rots",         label: "Rots",         emoji: "🪨", grootte: 28 },
   { id: "decor_fakkel",       label: "Fakkel",       emoji: "🔥", grootte: 26, bob: { snelheid: 6, amp: 1.5 } },
+  // Cheerful platformer-decor (Mario-vibe)
+  { id: "decor_zonnebloem",   label: "Zonnebloem",   emoji: "🌻", grootte: 32 },
+  { id: "decor_bord",         label: "Bordje",       emoji: "🪧", grootte: 28 },
+  { id: "decor_pijp",         label: "Pijp",         emoji: "🟢", grootte: 34 },
+  { id: "decor_mystery",      label: "Mystery-blok", emoji: "❓", grootte: 28, bob: { snelheid: 2, amp: 2 } },
+  { id: "decor_krat",         label: "Krat (decor)", emoji: "📦", grootte: 30 },
+  { id: "decor_ladder",       label: "Ladder",       emoji: "🪜", grootte: 36 },
+  { id: "decor_sprankel",     label: "Sprankel",     emoji: "✨", grootte: 22, bob: { snelheid: 5, amp: 3 } },
 ];
 const DECOR_RENDER = Object.fromEntries(DECOR_CATALOG.map((d) => [d.id, d]));
 
@@ -947,28 +955,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PLATFORM_Y = 220 * SCHAAL; // top-Y, halverwege tussen plafond en grond
 
     // ---------- BIOMES ----------
-    // 10 biomes — één per level. Sci-fi/space/alien-thema (school-veilig).
+    // 10 biomes — één per level. Levels 1-7: vrolijk Mario-platformer-palet
+    // (lichtblauwe lucht, bruine aarde, grass-band, witte spikes, kratten).
+    // Levels 8-10: donkerder boss-vibes voor contrast op het einde.
+    // Velden: stijl ('cheerful'|'donker') stuurt spike/blok-render en grass-band.
+    // grasLicht/grasDonker zijn de twee tinten van de gras-band bovenop de grond.
     const BIOMES = [
-      // Level 1 — Asteroid Field
-      { naam:'ASTEROID FIELD', emoji:['🪨','☄️','🌑','⭐','🛸'], bgTop:[10,10,14], bgBot:[20,16,28], bakstenenLicht:[42,37,48], bakstenenDonker:[21,17,26], bakstenenHighlight:[80,70,90], lichtbundel:[255,220,100], schedel:[180,170,200], glow:[255,200,100], grondLicht:[42,37,48], grondDonker:[14,10,20] },
-      // Level 2 — Space Lab
-      { naam:'SPACE LAB', emoji:['🧪','🔬','⚗️','💊','🤖'], bgTop:[25,12,20], bgBot:[50,25,40], bakstenenLicht:[80,45,50], bakstenenDonker:[40,20,28], bakstenenHighlight:[140,90,100], lichtbundel:[255,180,100], schedel:[220,180,240], glow:[255,130,200], grondLicht:[60,30,38], grondDonker:[20,8,14] },
-      // Level 3 — Wormhole
-      { naam:'WORMHOLE', emoji:['🌀','✨','⭐','🌙','🛸'], bgTop:[10,0,20], bgBot:[30,10,50], bakstenenLicht:[58,37,64], bakstenenDonker:[26,13,42], bakstenenHighlight:[106,74,128], lichtbundel:[200,120,255], schedel:[200,150,255], glow:[220,130,255], grondLicht:[42,26,58], grondDonker:[10,0,20] },
-      // Level 4 — Satellite Graveyard (verlaten ruimtestations)
-      { naam:'SATELLITE FIELD', emoji:['🛰️','🚀','⚙️','🌑','🛸'], bgTop:[4,8,24], bgBot:[12,18,48], bakstenenLicht:[40,50,75], bakstenenDonker:[18,22,38], bakstenenHighlight:[80,100,140], lichtbundel:[180,200,255], schedel:[220,230,255], glow:[150,180,255], grondLicht:[22,28,50], grondDonker:[6,8,16] },
-      // Level 5 — Solar Forge (gloeiende ster)
-      { naam:'SOLAR FORGE', emoji:['☀️','🔥','⚡','🌟','🌋'], bgTop:[16,4,4], bgBot:[40,12,6], bakstenenLicht:[58,32,24], bakstenenDonker:[26,10,8], bakstenenHighlight:[106,53,48], lichtbundel:[255,130,50], schedel:[255,180,140], glow:[255,100,40], grondLicht:[58,16,16], grondDonker:[10,0,0] },
-      // Level 6 — Ice Planet
-      { naam:'ICE PLANET', emoji:['❄️','🧊','🪐','⛄','🌌'], bgTop:[8,18,30], bgBot:[20,40,60], bakstenenLicht:[58,82,108], bakstenenDonker:[24,40,60], bakstenenHighlight:[120,170,210], lichtbundel:[180,230,255], schedel:[200,240,255], glow:[140,220,255], grondLicht:[34,52,76], grondDonker:[10,16,28] },
-      // Level 7 — Alien Jungle (groen-buitenaards)
-      { naam:'ALIEN JUNGLE', emoji:['🌿','🍄','🦠','🪲','👽'], bgTop:[8,22,8], bgBot:[18,46,16], bakstenenLicht:[40,72,32], bakstenenDonker:[18,36,14], bakstenenHighlight:[80,140,60], lichtbundel:[160,255,80], schedel:[200,255,180], glow:[120,255,100], grondLicht:[26,52,18], grondDonker:[8,18,4] },
-      // Level 8 — Alien Hive (rood-organisch ruimteschip)
-      { naam:'ALIEN HIVE', emoji:['👽','🛸','🥚','🦠','⚡'], bgTop:[20,2,4], bgBot:[60,8,14], bakstenenLicht:[80,20,28], bakstenenDonker:[40,8,12], bakstenenHighlight:[160,40,56], lichtbundel:[255,80,100], schedel:[255,200,200], glow:[255,40,80], grondLicht:[60,12,18], grondDonker:[16,2,4] },
-      // Level 9 — Crystal Asteroid (geel-amber-saffraan)
-      { naam:'CRYSTAL ASTEROID', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,4], bgBot:[60,42,8], bakstenenLicht:[110,80,30], bakstenenDonker:[60,42,14], bakstenenHighlight:[200,160,60], lichtbundel:[255,220,80], schedel:[255,240,180], glow:[255,200,60], grondLicht:[80,52,18], grondDonker:[24,14,4] },
-      // Level 10 — Black Hole (zwart met paars-roze accent)
-      { naam:'BLACK HOLE', emoji:['🌌','🕳️','🪐','⭐','🛸'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16] },
+      // Level 1 — Grass Hills (Super Mario Land 1-1 vibe)
+      { naam:'GRASS HILLS', stijl:'cheerful', emoji:['🌳','🌻','☁️','🦋','⭐'], bgTop:[120,200,235], bgBot:[170,225,245], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,250,200], schedel:[255,240,200], glow:[255,220,120], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[141,198,63], grasDonker:[79,138,42] },
+      // Level 2 — Pink Forest
+      { naam:'PINK FOREST', stijl:'cheerful', emoji:['🌸','🌷','🦋','🌳','💖'], bgTop:[180,225,245], bgBot:[245,210,225], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,220,240], schedel:[255,220,240], glow:[255,180,210], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[245,176,207], grasDonker:[230,69,122] },
+      // Level 3 — Sky Island (Sonic Hill Top vibe)
+      { naam:'SKY ISLAND', stijl:'cheerful', emoji:['☁️','🪂','🦅','⭐','✨'], bgTop:[170,220,250], bgBot:[210,240,250], bakstenenLicht:[160,110,60], bakstenenDonker:[110,75,40], bakstenenHighlight:[220,170,110], lichtbundel:[255,255,220], schedel:[255,240,200], glow:[180,220,255], grondLicht:[160,110,60], grondDonker:[90,60,30], grasLicht:[160,220,140], grasDonker:[100,170,90] },
+      // Level 4 — Sunset Beach
+      { naam:'SUNSET BEACH', stijl:'cheerful', emoji:['🌅','🌴','🐚','🦩','⛵'], bgTop:[255,180,140], bgBot:[255,210,180], bakstenenLicht:[210,170,120], bakstenenDonker:[160,125,80], bakstenenHighlight:[245,210,170], lichtbundel:[255,210,150], schedel:[255,230,200], glow:[255,180,120], grondLicht:[210,170,120], grondDonker:[140,105,65], grasLicht:[180,210,120], grasDonker:[120,160,80] },
+      // Level 5 — Desert Oasis
+      { naam:'DESERT OASIS', stijl:'cheerful', emoji:['🌵','☀️','🐪','🌴','🪨'], bgTop:[255,210,140], bgBot:[255,225,175], bakstenenLicht:[210,165,90], bakstenenDonker:[160,120,55], bakstenenHighlight:[245,205,135], lichtbundel:[255,250,180], schedel:[255,240,180], glow:[255,200,80], grondLicht:[210,165,90], grondDonker:[140,100,50], grasLicht:[180,200,90], grasDonker:[110,135,55] },
+      // Level 6 — Ice Plateau (cheerful winter, niet sci-fi)
+      { naam:'ICE PLATEAU', stijl:'cheerful', emoji:['❄️','⛄','🐧','🌨️','🧊'], bgTop:[180,220,245], bgBot:[225,240,250], bakstenenLicht:[140,165,195], bakstenenDonker:[100,125,155], bakstenenHighlight:[200,220,240], lichtbundel:[255,255,255], schedel:[230,240,255], glow:[180,220,255], grondLicht:[140,165,195], grondDonker:[90,115,145], grasLicht:[235,245,255], grasDonker:[180,200,225] },
+      // Level 7 — Alien Meadow (cheerful sci-fi: paarse lucht, cyan gras)
+      { naam:'ALIEN MEADOW', stijl:'cheerful', emoji:['🌌','👽','🛸','🌟','🪐'], bgTop:[180,150,235], bgBot:[220,200,250], bakstenenLicht:[120,90,170], bakstenenDonker:[80,60,120], bakstenenHighlight:[170,140,220], lichtbundel:[200,180,255], schedel:[230,200,255], glow:[180,140,255], grondLicht:[120,90,170], grondDonker:[70,50,110], grasLicht:[140,255,200], grasDonker:[60,180,140] },
+      // Level 8 — Volcano Valley (overgang naar donker — boss-vibes beginnen)
+      { naam:'VOLCANO VALLEY', stijl:'donker', emoji:['🌋','🔥','🪨','⚡','💀'], bgTop:[60,15,15], bgBot:[100,25,15], bakstenenLicht:[90,30,20], bakstenenDonker:[50,15,8], bakstenenHighlight:[180,60,30], lichtbundel:[255,130,40], schedel:[255,180,140], glow:[255,80,30], grondLicht:[90,30,20], grondDonker:[40,12,8], grasLicht:[80,30,20], grasDonker:[40,15,10] },
+      // Level 9 — Crystal Cave
+      { naam:'CRYSTAL CAVE', stijl:'donker', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,40], bgBot:[60,42,80], bakstenenLicht:[110,80,140], bakstenenDonker:[60,42,90], bakstenenHighlight:[200,160,255], lichtbundel:[255,220,255], schedel:[255,240,255], glow:[200,150,255], grondLicht:[80,52,110], grondDonker:[24,14,40], grasLicht:[80,60,90], grasDonker:[40,30,50] },
+      // Level 10 — Black Hole (eindbaas-arena)
+      { naam:'BLACK HOLE', stijl:'donker', emoji:['🌌','🕳️','🪐','⭐','🛸'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16], grasLicht:[40,20,60], grasDonker:[20,10,30] },
     ];
     // 10 bass-tonen + 10 BPM-waarden per level (gradueel sneller bij hoger level)
     const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58, 62, 69, 51, 78, 46];
@@ -990,6 +1002,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // level-overgang in update(), niet meer via score-modulo.
       if (bioomFade < 1) bioomFade = Math.min(1, bioomFade + 1 / BIOOM_FADE_DUUR);
       if (levelUpFlash > 0) levelUpFlash--;
+    }
+    // Mix-factor 0..1: 0 = volledig donker biome zichtbaar, 1 = volledig cheerful
+    // biome zichtbaar. Tijdens biome-fade lerpt dit lineair mee. Gebruikt voor
+    // gras-band opacity, brick-pattern dimming in de lucht, etc.
+    function cheerfulMix() {
+      const cur = BIOMES[huidigBioom]?.stijl === "cheerful" ? 1 : 0;
+      const prev = BIOMES[nextBioom]?.stijl === "cheerful" ? 1 : 0;
+      // bioomFade 0 = nextBioom volledig zichtbaar, 1 = huidigBioom volledig
+      return prev * (1 - bioomFade) + cur * bioomFade;
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
@@ -1475,9 +1496,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const bg = ctx.createLinearGradient(0, 0, 0, H);
       bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+      // Cheerful biomes hebben een open lucht — brick-pattern bijna onzichtbaar.
+      // Donker behoudt de oude muur-look. Tijdens biome-fade lerpt dit smooth.
+      const cheerful = cheerfulMix();
+      const brickOpacity = 0.55 * (1 - cheerful) + 0.05 * cheerful;
       const offset = (frameTeller * spelSnelheid * 0.15) % BAKSTEEN_W;
       ctx.save();
-      ctx.globalAlpha = 0.55;
+      ctx.globalAlpha = brickOpacity;
       for (let y = PLAFOND_HOOGTE; y < grondTop; y += BAKSTEEN_H) {
         const rij = Math.floor((y - PLAFOND_HOOGTE) / BAKSTEEN_H);
         const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
@@ -1682,7 +1707,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       ctx.restore();
+      // Gras-band bovenop de aarde — Mario-stijl bobbel-randje. Opacity volgt
+      // cheerfulMix() zodat de band fade-in/out tussen donker ↔ cheerful.
+      const cheerful = cheerfulMix();
+      if (cheerful > 0.02) {
+        ctx.save();
+        ctx.globalAlpha = cheerful;
+        const grasH = 14 * SCHAAL;
+        // Donkere gras-strip onderlaag
+        ctx.fillStyle = biomeKleur("grasDonker");
+        ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
+        // Lichte gras met bobbel-rand bovenop
+        ctx.fillStyle = biomeKleur("grasLicht");
+        const bobbel = 18 * SCHAAL;
+        const bobH = 6 * SCHAAL;
+        const grasOff = (frameTeller * spelSnelheid * 0.5) % bobbel;
+        ctx.beginPath();
+        ctx.moveTo(-grasOff, grondTop);
+        for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
+          ctx.quadraticCurveTo(xb + bobbel * 0.5, grondTop - bobH, xb + bobbel, grondTop);
+        }
+        ctx.lineTo(W + bobbel, grondTop + grasH * 0.65);
+        ctx.lineTo(-grasOff, grondTop + grasH * 0.65);
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+      // Grond-rand glow (alleen op donkere biomes — cheerful heeft het gras al)
       ctx.save();
+      ctx.globalAlpha = 1 - cheerful;
       ctx.shadowBlur = 18; ctx.shadowColor = biomeKleur("glow", 0.7);
       ctx.strokeStyle = biomeKleur("glow", 0.7); ctx.lineWidth = 2;
       ctx.beginPath(); ctx.moveTo(0, grondTop); ctx.lineTo(W, grondTop); ctx.stroke();
@@ -1956,8 +2009,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const fans = [];              // { x, naam, tekst, breedte, hoogte }
     let fanSpawnTeller = 600;     // eerste banner ~10 sec na start
     const FAN_INTERVAL = 1500;    // daarna elke ~25 sec
-    function tekenStenenStekel(x, y, b, h) {
-      ctx.save(); ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
+    function tekenStenenStekel(x, y, b, h, stijl) {
+      ctx.save();
+      if (stijl === "white") {
+        // Mario-stijl: pure witte spike, geen stenen-textuur. Schaduw rechts +
+        // dunne grijze outline voor afgrenzing tegen lichte achtergrond.
+        ctx.shadowBlur = 8; ctx.shadowColor = "rgba(255,255,255,0.55)";
+        ctx.fillStyle = "#fafafd";
+        ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.closePath(); ctx.fill();
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "rgba(140,140,160,0.45)";
+        ctx.beginPath(); ctx.moveTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.lineTo(x + b - 3, y + h); ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = "rgba(110,110,130,0.85)"; ctx.lineWidth = 1.4;
+        ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.stroke();
+        ctx.restore();
+        return;
+      }
+      // stone (default)
+      ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
       grad.addColorStop(0, "#f0f0f5"); grad.addColorStop(0.6, "#a8a8b0"); grad.addColorStop(1, "#5a5a65");
       ctx.fillStyle = grad;
@@ -1971,8 +2040,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.beginPath(); ctx.moveTo(x, y + h); ctx.lineTo(x + b / 2, y); ctx.lineTo(x + b, y + h); ctx.closePath(); ctx.stroke();
       ctx.restore();
     }
-    function tekenStenenBlok(x, y, b, h) {
-      ctx.save(); ctx.shadowBlur = 10; ctx.shadowColor = "rgba(255,255,255,0.3)";
+    function tekenStenenBlok(x, y, b, h, stijl) {
+      ctx.save();
+      if (stijl === "crate") {
+        // Houten krat: 2 tinten geel-bruin met X-cross diagonalen
+        ctx.shadowBlur = 8; ctx.shadowColor = "rgba(232,184,85,0.45)";
+        ctx.fillStyle = "#a06a2c"; // donker hout (rand)
+        ctx.fillRect(x, y, b, h);
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "#e8b855"; // licht hout (binnenkant)
+        ctx.fillRect(x + 3, y + 3, b - 6, h - 6);
+        // Donker outline rond binnenkant
+        ctx.strokeStyle = "#6b421d"; ctx.lineWidth = 1.5;
+        ctx.strokeRect(x + 3, y + 3, b - 6, h - 6);
+        // X-cross
+        ctx.strokeStyle = "#8b5a2a"; ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(x + 5, y + 5); ctx.lineTo(x + b - 5, y + h - 5);
+        ctx.moveTo(x + b - 5, y + 5); ctx.lineTo(x + 5, y + h - 5);
+        ctx.stroke();
+        // Buiten-rand
+        ctx.strokeStyle = "rgba(60,30,10,0.6)"; ctx.lineWidth = 1.5;
+        ctx.strokeRect(x + 0.5, y + 0.5, b - 1, h - 1);
+        ctx.restore();
+        return;
+      }
+      // stone (default)
+      ctx.shadowBlur = 10; ctx.shadowColor = "rgba(255,255,255,0.3)";
       const grad = ctx.createLinearGradient(x, y, x, y + h);
       grad.addColorStop(0, "#dadae3"); grad.addColorStop(1, "#6a6a75");
       ctx.fillStyle = grad; ctx.fillRect(x, y, b, h);
@@ -2148,19 +2242,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
         return;
       }
-      // Contrast-glow in donkere werelden zodat stenen-obstakels niet wegvallen
-      // tegen de dungeon-water of hell-mist achtergrond.
+      // Render-stijl op basis van huidige biome — cheerful gebruikt witte spikes
+      // en houten kratten, donker gebruikt de oude stenen-stijl. dungeon/hell
+      // forceren altijd stenen omdat dat hun karakter is.
+      const cheerful = !dungeonMode && !hellMode && BIOMES[huidigBioom]?.stijl === "cheerful";
+      const stekelStijl = cheerful ? "white" : "stone";
+      const blokStijl = cheerful ? "crate" : "stone";
       const darkMode = dungeonMode || hellMode;
       if (darkMode) {
         ctx.save();
         ctx.shadowBlur = 12;
         ctx.shadowColor = hellMode ? "rgba(255,160,80,0.9)" : "rgba(255,220,120,0.85)";
       }
-      if (o.type === 0) tekenStenenStekel(o.x, o.y, o.breedte, o.hoogte);
+      if (o.type === 0) tekenStenenStekel(o.x, o.y, o.breedte, o.hoogte, stekelStijl);
       else if (o.type === 1) {
-        tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
-        tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
-      } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+        tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte, stekelStijl);
+        tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte, stekelStijl);
+      } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte, blokStijl);
       if (darkMode) ctx.restore();
     }
     function spawnFanGroep() {
