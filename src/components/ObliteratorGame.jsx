@@ -797,6 +797,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // moet in outer scope staan zodat tekenDecoraties/tekenFakkels/tekenGlasInLood
     // (gedefinieerd buiten update()) erbij kunnen.
     let effSnelheid = START_SNELHEID;
+    // Cumulatieve world-scroll offset — gebruikt voor hill-positie. Voorlopig
+    // alleen incrementeren, nog niet gebruikt door render of physics.
+    let worldScrollX = 0;
     let frameTeller = 0;
     let score = 0;
     let spelLoopt = true;
@@ -1011,6 +1014,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const prev = BIOMES[nextBioom]?.stijl === "cheerful" ? 1 : 0;
       // bioomFade 0 = nextBioom volledig zichtbaar, 1 = huidigBioom volledig
       return prev * (1 - bioomFade) + cur * bioomFade;
+    }
+    // ── HILL-PHYSICS helpers (Stap 1: gedefinieerd, nog niet gebruikt) ───
+    // Hills zijn alleen actief in cheerful biomes + normale spel-modus.
+    // Custom-levels, boss, bonus, dungeon, hell blijven plat.
+    function hillsActief() {
+      return !customLevelMode && !bonusFase && !bossActief && !dungeonMode && !hellMode &&
+             SCHAAL > 0 && BIOMES[huidigBioom]?.stijl === "cheerful";
+    }
+    // Vloer-hoogte boven GROND_Y op gegeven world-x. Som van 3 sines voor
+    // natuurlijke variatie, amplitude schaalt met SCHAAL.
+    function vloerHoogte(worldX) {
+      if (!hillsActief() || !Number.isFinite(worldX)) return 0;
+      const a = 28 * Math.sin(worldX * 0.0085);
+      const b = 14 * Math.sin(worldX * 0.022 + 1.5);
+      const c = 6 * Math.sin(worldX * 0.06 + 0.7);
+      const v = (a + b + c) * SCHAAL;
+      return Number.isFinite(v) ? v : 0;
+    }
+    function vloerSlope(worldX) {
+      if (!hillsActief() || !Number.isFinite(worldX) || SCHAAL <= 0) return 0;
+      const dx = 6 * SCHAAL;
+      const sl = (vloerHoogte(worldX + dx) - vloerHoogte(worldX - dx)) / (2 * dx);
+      return Number.isFinite(sl) ? sl : 0;
+    }
+    function vloerY(worldX) {
+      const h = vloerHoogte(worldX);
+      return GROND_Y - (Number.isFinite(h) ? h : 0);
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
@@ -4384,6 +4414,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         effSnelheid *= zoneSpeedMul;
       }
+      // Stap 1: cumulatieve world-scroll bijhouden. Wordt nog niet gelezen door
+      // andere code — alleen tracker voor latere hill-positie-berekeningen.
+      worldScrollX += effSnelheid;
+      if (!Number.isFinite(worldScrollX)) worldScrollX = 0;
       if (afgeremFrames > 0) afgeremFrames--;
       if (hpFlashTeller > 0) hpFlashTeller--;
       // Live audio-instellingen toepassen (mute/volume vanuit settings-panel)
