@@ -399,7 +399,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PERISCOOP_LENS_R = 32;       // hitbox-radius (was 22 — ruimere collision)
     let bonusFase = false;
     let bonusFrames = 0;
-    const BONUS_DUUR = 600; // 10 sec
+    const BONUS_DUUR = 600; // 10 sec actief schieten
+    let bonusIntroFrames = 0;
+    const BONUS_INTRO_DUUR = 120; // 2 sec "BONUS LEVEL" voorscherm
     const bonusRingen = [];
     let bonusRingSpawnTeller = 20;
     let bonusScore = 0;
@@ -1606,14 +1608,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bonusFase = true;
       bonusFrames = BONUS_DUUR;
       bonusScore = 0;
+      bonusIntroFrames = BONUS_INTRO_DUUR; // 2 sec "BONUS LEVEL" intro
       bonusRingen.length = 0;
       bonusRingSpawnTeller = 18;
       spelerLasers.length = 0;
+      // CLEAN SLATE: alles wat damage kan doen of in de weg staat opruimen
+      // zodat speler NIET af kan tijdens bonus (Mark: 'nu ging ik af, niet leuk').
+      obstakels.length = 0;
+      haaien.length = 0;
+      plafondStekels.length = 0;
+      schansen.length = 0;
+      portals.length = 0;
+      schatkisten.length = 0;
+      vissen.length = 0;
+      bubbels.length = 0;
+      // Reguliere pickups ook weg — focus is alleen ringen-schieten
+      ringen.length = 0;
+      bonusHarten.length = 0;
+      raketten.length = 0;
+      flipPickups.length = 0;
+      magneetPickups.length = 0;
+      slowMoPickups.length = 0;
+      bombPickups.length = 0;
       // periscoop trekt zich snel terug
       if (periscoop) {
         periscoop.faseNaam = "in";
         periscoop.faseFrames = PERISCOOP_IN_FRAMES - 8;
       }
+      // Speler reset naar basis-positie zodat 'ie niet midden in een
+      // sprong-arc vastzit
+      speler.snelheidX = 0;
       // start-fanfare
       piep(660, 0.10, "sine", 0.14);
       setTimeout(() => piep(880, 0.10, "sine", 0.14), 80);
@@ -1699,9 +1723,54 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenBonusFase() {
       if (!bonusFase) return;
       ctx.save();
-      // donkere semi-overlay zodat bonus duidelijk apart voelt
-      ctx.fillStyle = "rgba(0, 0, 30, 0.35)";
+      // VOLLEDIG ZWARTE achtergrond — bonus is een aparte mini-game,
+      // wereld eronder verdwijnt. Mark: 'gewoon zwarte achtergrond'.
+      ctx.fillStyle = "#000000";
       ctx.fillRect(0, 0, W, H);
+      // Speler bovenop de zwarte achtergrond zodat 'ie zichtbaar blijft
+      tekenSpeler();
+      // subtiele paarse sterren-achtergrond voor sfeer
+      const t = (BONUS_DUUR - bonusFrames);
+      for (let i = 0; i < 40; i++) {
+        const sx = ((i * 37 + t * 0.5) % W);
+        const sy = ((i * 73) % H);
+        const tw = 0.3 + Math.sin(t * 0.05 + i) * 0.3;
+        ctx.fillStyle = `rgba(180, 120, 255, ${tw * 0.6})`;
+        ctx.beginPath();
+        ctx.arc(sx, sy, 1.5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      // INTRO-overlay: "BONUS LEVEL" 2 sec lang
+      if (bonusIntroFrames > 0) {
+        const t2 = bonusIntroFrames / BONUS_INTRO_DUUR; // 1 -> 0
+        const fadeIn = Math.min(1, (1 - t2) * 4);       // snelle fade-in
+        const fadeOut = Math.min(1, t2 * 5);            // fade-out aan einde
+        const alpha = Math.min(fadeIn, fadeOut);
+        const scale = 1 + Math.sin((1 - t2) * Math.PI) * 0.15;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.translate(W / 2, H / 2);
+        ctx.scale(scale, scale);
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "#ffd700";
+        ctx.fillStyle = "#ffd700";
+        ctx.font = `bold ${64 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("BONUS LEVEL", 0, -20 * SCHAAL);
+        // sub-tekst
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = "#fff8a0";
+        ctx.fillStyle = "#ffffff";
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("KLIK = SCHIETEN + SPRINGEN", 0, 32 * SCHAAL);
+        ctx.font = `${16 * SCHAAL}px 'Nunito', sans-serif`;
+        ctx.fillStyle = "rgba(255,255,255,0.85)";
+        ctx.fillText("raak alle ringen — +5 punten elk!", 0, 60 * SCHAAL);
+        ctx.restore();
+        ctx.restore();
+        return; // skip ringen/lasers/UI tijdens intro
+      }
       // bonus-ringen
       for (const r of bonusRingen) {
         if (r.opgepakt) continue;
@@ -2537,9 +2606,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       // ── BONUS-FASE: ringen spawnen + lasers + collision ──
       if (bonusFase) {
+        // Intro-fase: 2 sec "BONUS LEVEL" voorscherm voordat de ringen
+        // beginnen, zodat speler weet wat er komt en kan zich richten.
+        if (bonusIntroFrames > 0) {
+          bonusIntroFrames--;
+        }
         bonusFrames--;
         if (bonusFrames <= 0) {
           eindeBonusFase();
+        } else if (bonusIntroFrames > 0) {
+          // tijdens intro: nog geen ringen spawnen, alleen aankondiging
         } else {
           // bonus-ringen spawnen in willekeurige y, vliegen naar links
           bonusRingSpawnTeller--;
@@ -2729,7 +2805,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= effSnelheid;
-        if (vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) {
+        if (!bonusFase && vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) {
           // Type 0/1 = spikes → HP-damage; type 2 = blok → afremmen ipv damage
           if (o.type === 2) afremTotale(o);
           else { hitTotale(); if (!spelLoopt) return; }
@@ -3031,7 +3107,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const h = haaien[i];
         h.x -= effSnelheid * 0.95;
         h.fase += 0.10;
-        if (!h.dood && vliegFrames === 0 && flipFrames === 0 && !loopActief) {
+        if (!h.dood && !bonusFase && vliegFrames === 0 && flipFrames === 0 && !loopActief) {
           const sb = spelerBots();
           if (botst(sb, { x: h.x, y: h.y, breedte: h.breedte, hoogte: h.hoogte })) {
             if (bubbelFrames > 0) {
@@ -3206,7 +3282,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = plafondStekels.length - 1; i >= 0; i--) {
         const ps = plafondStekels[i];
         ps.x -= effSnelheid;
-        if (vliegFrames === 0 && flipFrames === 0) {
+        if (!bonusFase && vliegFrames === 0 && flipFrames === 0) {
           const stekelBot = (PLAFOND_HOOGTE - 4) + ps.hoogte;
           // hitbox iets krapper voor genadigheid
           const m = 4 * SCHAAL;
@@ -4536,6 +4612,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       periscoopSpawnTeller = 600;
       bonusFase = false;
       bonusFrames = 0;
+      bonusIntroFrames = 0;
       bonusRingen.length = 0;
       bonusScore = 0;
       bonusEindFlash = 0;
