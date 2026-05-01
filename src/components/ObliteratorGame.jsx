@@ -1021,30 +1021,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // breken bestaande designs).
     function hillsActief() {
       return !customLevelMode && !bonusFase && !bossActief && !dungeonMode && !hellMode &&
-             BIOMES[huidigBioom]?.stijl === "cheerful";
+             SCHAAL > 0 && BIOMES[huidigBioom]?.stijl === "cheerful";
     }
     // Hoogte van de vloer boven GROND_Y op gegeven world-x. Positief = heuvel-piek
     // (grond hoger op canvas = kleinere y). Drie sine-lagen geven natuurlijk-
     // ogende variatie zonder repetitie. Amplitude schaalt met SCHAAL.
     function vloerHoogte(worldX) {
-      if (!hillsActief()) return 0;
+      if (!hillsActief() || !Number.isFinite(worldX)) return 0;
       const a = 28 * Math.sin(worldX * 0.0085);
       const b = 14 * Math.sin(worldX * 0.022 + 1.5);
       const c = 6 * Math.sin(worldX * 0.06 + 0.7);
-      return (a + b + c) * SCHAAL;
+      const v = (a + b + c) * SCHAAL;
+      return Number.isFinite(v) ? v : 0;
     }
     // Slope = afgeleide van vloerHoogte (eerste-orde finite difference).
     // > 0 = grond stijgt vooruit (uphill voor speler).
     // < 0 = grond daalt (downhill).
     function vloerSlope(worldX) {
-      if (!hillsActief()) return 0;
+      if (!hillsActief() || !Number.isFinite(worldX) || SCHAAL <= 0) return 0;
       const dx = 6 * SCHAAL;
-      return (vloerHoogte(worldX + dx) - vloerHoogte(worldX - dx)) / (2 * dx);
+      const sl = (vloerHoogte(worldX + dx) - vloerHoogte(worldX - dx)) / (2 * dx);
+      return Number.isFinite(sl) ? sl : 0;
     }
     // Effectieve player-Y wanneer op de grond. Bij vlakke vloer = GROND_Y.
     // Op een heuvel = lager (kleinere y). In donker biome = GROND_Y altijd.
     function vloerY(worldX) {
-      return GROND_Y - vloerHoogte(worldX);
+      const h = vloerHoogte(worldX);
+      return GROND_Y - (Number.isFinite(h) ? h : 0);
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
@@ -1738,11 +1741,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const hills = hillsActief();
       // Hill-top points: per ~8px berekening van vloer-y. Hergebruikt voor
       // aarde-polygon, brick-clip en gras-bobbel zodat alles synchroon loopt.
-      const stride = 10 * SCHAAL;
+      // Alleen berekenen als hills echt actief zijn (en stride > 0 om infinite-loop
+      // te voorkomen bij niet-geïnitialiseerde canvas).
+      const stride = Math.max(2, 10 * SCHAAL);
       const topPoints = [];
-      for (let sx = -stride; sx <= W + stride; sx += stride) {
-        const wx = worldScrollX + sx;
-        topPoints.push({ x: sx, y: grondTopFlat - vloerHoogte(wx) });
+      if (hills && stride > 0) {
+        for (let sx = -stride; sx <= W + stride; sx += stride) {
+          const wx = worldScrollX + sx;
+          topPoints.push({ x: sx, y: grondTopFlat - vloerHoogte(wx) });
+        }
       }
       // Aarde-fill — polygon met wavy top in hill-mode, anders rechthoek
       const grad = ctx.createLinearGradient(0, grondTopFlat, 0, grondBottom);
@@ -4472,14 +4479,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
+      // Defensive: voorkom NaN-cascade als worldScrollX of speler.y ergens
+      // corrupt zijn geraakt. Reset naar veilige waarde zodat de game niet vastvriest.
+      if (!Number.isFinite(worldScrollX)) worldScrollX = 0;
+      if (!Number.isFinite(speler.y)) speler.y = GROND_Y;
+      if (!Number.isFinite(speler.snelheidY)) speler.snelheidY = 0;
       effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
       // Hill-rolling speed-modifier (Sonic-stijl): uphill remt af, downhill
       // versnelt. Slope is afgeleide van vloerHoogte op speler-positie.
       if (hillsActief()) {
         const playerWX = worldScrollX + speler.x;
         const slope = vloerSlope(playerWX);
-        const slopeMul = Math.max(0.65, Math.min(1.35, 1 - slope * 0.55));
-        effSnelheid *= slopeMul;
+        if (Number.isFinite(slope)) {
+          const slopeMul = Math.max(0.65, Math.min(1.35, 1 - slope * 0.55));
+          if (Number.isFinite(slopeMul)) effSnelheid *= slopeMul;
+        }
       }
       // Custom-zones (lowgrav / boost / slow): bepaal eerst welke aanpassingen
       // actief zijn op basis van waar de speler nu in een zone staat. Toepassen
