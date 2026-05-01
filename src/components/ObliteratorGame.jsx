@@ -165,6 +165,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Ref naar selected skin zodat de game-loop hem kan lezen zonder remount
   const skinRef = useRef(selectedSkin);
   useEffect(() => { skinRef.current = selectedSkin; }, [selectedSkin]);
+  // Trigger ref voor admin-activatie van Oblivion Pulse cutscene
+  const oblivionTriggerRef = useRef({ trigger: false });
   useEffect(() => {
     audioVolumeRef.current = { aan: geluidAan, volume };
     try { localStorage.setItem("obliterator-geluid-aan", geluidAan ? "1" : "0"); } catch {}
@@ -650,6 +652,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       hellFadeIn = 0;
       hellFadeOut = 0;
       vonken.length = 0;
+      // Oblivion-mode bij boss reset
+      oblivionMode = false;
+      oblivionFrames = 0;
+      oblivionFadeOut = 0;
+      cutsceneFase = "geen";
+      cutsceneFrames = 0;
+      warpStrepen.length = 0;
       // dramatische intro: piep + confetti
       piep(196, 0.30, "sawtooth", 0.20); // dreigend laag
       setTimeout(() => piep(220, 0.25, "sawtooth", 0.18), 200);
@@ -1426,6 +1435,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let lavaDamageCooldown = 0;   // anti-spam-i-frames bovenop hpFlashTeller
     const vonken = [];            // opstijgende lava-vonkjes (visueel)
     let vonkSpawnTeller = 0;
+
+    // ── OBLIVION PULSE — admin-only special level ──
+    // Cutscene-fase: portaal → warp door ruimte → black-hole-instorting → land in Oblivion Pulse
+    // Tijdens oblivionMode: extreme moeilijkheid in space-thema. Overleven 60 sec = Black Hole skin.
+    let cutsceneFase = "geen"; // "geen" | "portal" | "warp" | "blackhole" | "settle"
+    let cutsceneFrames = 0;
+    const CUTSCENE_PORTAL_DUUR = 90;     // 1.5 sec portaal-zoom
+    const CUTSCENE_WARP_DUUR = 150;      // 2.5 sec starfield-warp
+    const CUTSCENE_BLACKHOLE_DUUR = 100; // ~1.7 sec black-hole-instorting
+    const CUTSCENE_SETTLE_DUUR = 40;     // 0.7 sec settle in Oblivion
+    let oblivionMode = false;
+    let oblivionFrames = 0;
+    let oblivionFadeOut = 0;
+    const OBLIVION_DUUR_VOOR_UNLOCK = 3600; // 60 sec overleven = unlock
+    const OBLIVION_FADE = 40;
+    let oblivionUnlockGedaan = false;
+    // visuele warp-strepen tijdens cutscene
+    const warpStrepen = [];
+    // pre-init: starfield voor space achtergrond
+    const ruimteSterren = [];
+    for (let i = 0; i < 80; i++) {
+      ruimteSterren.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: 0.5 + Math.random() * 1.8,
+        snel: 0.2 + Math.random() * 0.6,
+        helderheid: 0.4 + Math.random() * 0.6,
+      });
+    }
     // Haaien — alleen tijdens dungeon-mode. Zwemmen aan vloerniveau,
     // bij contact: levenVerlies (geen spikes meer in dungeon, water erbij).
     const haaien = [];
@@ -2392,6 +2430,206 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.fillRect(0, H * 0.6, W, H * 0.4);
       ctx.restore();
     }
+    // ── OBLIVION-PULSE renderers ──
+    function tekenRuimteAchtergrond() {
+      // Diepzwarte gradient → paars-blauw onderaan, sterren, planeten parallax
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, "#000005");
+      bg.addColorStop(0.6, "#080014");
+      bg.addColorStop(1, "#180428");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+      // sterren — twinkelen + langzaam horizontaal scrollen
+      const sterOff = (frameTeller * 0.3) % W;
+      ctx.save();
+      for (const s of ruimteSterren) {
+        const sx = (s.x - sterOff * s.snel + W * 2) % W;
+        const tw = 0.6 + Math.sin(frameTeller * 0.05 + s.x) * 0.4;
+        ctx.fillStyle = `rgba(255, 255, 255, ${s.helderheid * tw})`;
+        ctx.beginPath();
+        ctx.arc(sx, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+      // planeten als achtergrondcirkels (4 vaste posities, parallax)
+      const planetOff = (frameTeller * 0.5) % 600;
+      const planeten = [
+        { x: 100, y: H * 0.18, r: 38, c1: "#ff8050", c2: "#a02010" },
+        { x: 380, y: H * 0.30, r: 22, c1: "#80c0ff", c2: "#2050a0" },
+        { x: 600, y: H * 0.12, r: 30, c1: "#a0ff90", c2: "#208040" },
+        { x: 850, y: H * 0.22, r: 26, c1: "#ffd060", c2: "#a06010" },
+      ];
+      ctx.save();
+      for (let lap = -1; lap < 3; lap++) {
+        for (const pl of planeten) {
+          const px = pl.x + lap * 600 - planetOff;
+          if (px < -60 || px > W + 60) continue;
+          ctx.shadowBlur = 20;
+          ctx.shadowColor = pl.c1;
+          const grad = ctx.createRadialGradient(px - pl.r * 0.3, pl.y - pl.r * 0.3, 1, px, pl.y, pl.r);
+          grad.addColorStop(0, pl.c1);
+          grad.addColorStop(1, pl.c2);
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(px, pl.y, pl.r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      ctx.restore();
+      // metallic vloer (donkergrijs met paarse stripes)
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const vloerGrad = ctx.createLinearGradient(0, grondTop, 0, H);
+      vloerGrad.addColorStop(0, "#2a1a3a");
+      vloerGrad.addColorStop(0.5, "#1a0a28");
+      vloerGrad.addColorStop(1, "#08000a");
+      ctx.fillStyle = vloerGrad;
+      ctx.fillRect(0, grondTop, W, H - grondTop);
+      // bovenrand vloer: lila glow-streep
+      ctx.save();
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#a040ff";
+      ctx.fillStyle = "rgba(180, 80, 240, 0.85)";
+      ctx.fillRect(0, grondTop, W, 2);
+      ctx.restore();
+      // panelen-streepjes op de vloer
+      ctx.fillStyle = "rgba(140, 60, 220, 0.20)";
+      const paneelOff = (frameTeller * 4) % 60;
+      for (let x = -60 + paneelOff; x < W; x += 60) {
+        ctx.fillRect(x, grondTop + 4, 1, H - grondTop - 4);
+      }
+    }
+    function tekenCutscene() {
+      if (cutsceneFase === "geen") return;
+      const cx = W / 2;
+      const cy = H / 2;
+      ctx.save();
+      // PORTAL FASE — radiale swirl die naar binnen zoomt
+      if (cutsceneFase === "portal") {
+        const t = cutsceneFrames / CUTSCENE_PORTAL_DUUR; // 0 → 1
+        // donker oppervlak
+        ctx.fillStyle = "rgba(0,0,0,1)";
+        ctx.fillRect(0, 0, W, H);
+        // groeiend portaal
+        const r = 50 + t * Math.max(W, H) * 0.6;
+        ctx.shadowBlur = 40;
+        ctx.shadowColor = "#a040ff";
+        // 3 ringen draaien
+        for (let i = 0; i < 3; i++) {
+          ctx.strokeStyle = `rgba(${180 + i * 20}, ${60 + i * 30}, ${220 + i * 10}, ${0.85 - i * 0.15})`;
+          ctx.lineWidth = (5 - i) * SCHAAL;
+          ctx.beginPath();
+          ctx.arc(cx, cy, r * (1 - i * 0.15), frameTeller * 0.05 * (i + 1), frameTeller * 0.05 * (i + 1) + Math.PI * 1.7);
+          ctx.stroke();
+        }
+        // helder centrum (warm wit met paars rand)
+        const centerR = r * 0.4;
+        const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, centerR);
+        grad.addColorStop(0, "rgba(255, 240, 255, 1)");
+        grad.addColorStop(0.5, "rgba(220, 140, 255, 0.85)");
+        grad.addColorStop(1, "rgba(120, 40, 200, 0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(cx, cy, centerR, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      // WARP FASE — strepen van centrum schieten naar buiten (hyperspace)
+      else if (cutsceneFase === "warp") {
+        ctx.fillStyle = "#000";
+        ctx.fillRect(0, 0, W, H);
+        // donkere paarse glow op achtergrond
+        const bgGrad = ctx.createRadialGradient(cx, cy, 10, cx, cy, Math.max(W, H));
+        bgGrad.addColorStop(0, "rgba(80, 30, 140, 0.5)");
+        bgGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, W, H);
+        // strepen (sterren-streaks)
+        for (const s of warpStrepen) {
+          const x1 = cx + Math.cos(s.angle) * s.dist;
+          const y1 = cy + Math.sin(s.angle) * s.dist;
+          const x2 = cx + Math.cos(s.angle) * (s.dist + s.len);
+          const y2 = cy + Math.sin(s.angle) * (s.dist + s.len);
+          ctx.shadowBlur = 12;
+          ctx.shadowColor = s.kleur;
+          ctx.strokeStyle = s.kleur;
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(x1, y1);
+          ctx.lineTo(x2, y2);
+          ctx.stroke();
+        }
+      }
+      // BLACK HOLE FASE — alles spiraalt naar het centrum, donker zwart gat groeit
+      else if (cutsceneFase === "blackhole") {
+        const t = cutsceneFrames / CUTSCENE_BLACKHOLE_DUUR;
+        // achtergrond donker paars
+        ctx.fillStyle = "#08000c";
+        ctx.fillRect(0, 0, W, H);
+        // spiralerende warp-strepen die naar binnen worden gezogen
+        for (const s of warpStrepen) {
+          s.dist = Math.max(0, s.dist - 6);
+          s.angle += 0.05;
+          if (s.dist > 5) {
+            const x1 = cx + Math.cos(s.angle) * s.dist;
+            const y1 = cy + Math.sin(s.angle) * s.dist;
+            const x2 = cx + Math.cos(s.angle) * (s.dist + s.len * 0.7);
+            const y2 = cy + Math.sin(s.angle) * (s.dist + s.len * 0.7);
+            ctx.strokeStyle = s.kleur;
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+          }
+        }
+        // accretion-disc (groeit + roteert)
+        const discR = 50 + t * Math.min(W, H) * 0.45;
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(frameTeller * 0.06);
+        const disc = ctx.createRadialGradient(0, 0, discR * 0.3, 0, 0, discR);
+        disc.addColorStop(0, "rgba(255, 200, 80, 0)");
+        disc.addColorStop(0.4, "rgba(255, 130, 40, 0.85)");
+        disc.addColorStop(0.85, "rgba(180, 60, 220, 0.7)");
+        disc.addColorStop(1, "rgba(0, 0, 0, 0)");
+        ctx.fillStyle = disc;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, discR, discR * 0.4, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+        // event-horizon (zwart gat) groeit
+        const ehR = 30 + t * Math.min(W, H) * 0.35;
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "#a040ff";
+        ctx.fillStyle = "#000";
+        ctx.beginPath();
+        ctx.arc(cx, cy, ehR, 0, Math.PI * 2);
+        ctx.fill();
+        // randje paars gloed
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(180, 80, 255, 0.8)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(cx, cy, ehR, 0, Math.PI * 2);
+        ctx.stroke();
+        // tekst "OBLIVION PULSE" verschijnt
+        if (t > 0.5) {
+          ctx.fillStyle = `rgba(255, 200, 255, ${(t - 0.5) * 2})`;
+          ctx.font = `bold ${28 * SCHAAL}px Impact, Arial Black, sans-serif`;
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.shadowBlur = 22; ctx.shadowColor = "#a040ff";
+          ctx.fillText("OBLIVION PULSE", cx, cy + ehR + 36 * SCHAAL);
+        }
+      }
+      // SETTLE FASE — fade in naar Oblivion-niveau
+      else if (cutsceneFase === "settle") {
+        const t = 1 - cutsceneFrames / CUTSCENE_SETTLE_DUUR; // 1 → 0
+        tekenRuimteAchtergrond();
+        // dark veil dat oplost
+        ctx.fillStyle = `rgba(0,0,0,${t})`;
+        ctx.fillRect(0, 0, W, H);
+      }
+      ctx.restore();
+    }
     function tekenSpikeTower(x, topY) {
       // Vertikale rode rotspilaar met groen-gele spikes aan de randen
       const grondTop = GROND_Y + SPELER_GROOTTE;
@@ -2748,6 +2986,52 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
     }
+    function tekenOblivionOverlay() {
+      if (!oblivionMode && oblivionFadeOut === 0) return;
+      ctx.save();
+      // tijd-balk + banner
+      if (oblivionMode && !oblivionUnlockGedaan) {
+        const balkX = W * 0.18;
+        const balkY = 38 * SCHAAL;
+        const balkW = W * 0.64;
+        const balkH = 9 * SCHAAL;
+        const fractie = oblivionFrames / OBLIVION_DUUR_VOOR_UNLOCK;
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#a040ff";
+        ctx.fillStyle = "rgba(8, 0, 16, 0.8)";
+        ctx.fillRect(balkX, balkY, balkW, balkH);
+        const fillGrad = ctx.createLinearGradient(balkX, 0, balkX + balkW, 0);
+        fillGrad.addColorStop(0, "#6020a0");
+        fillGrad.addColorStop(0.5, "#a040ff");
+        fillGrad.addColorStop(1, "#ff80a0");
+        ctx.fillStyle = fillGrad;
+        ctx.fillRect(balkX, balkY, balkW * fractie, balkH);
+        ctx.shadowBlur = 24;
+        ctx.fillStyle = "#e0a0ff";
+        ctx.font = `bold ${20 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        const restSec = Math.max(0, Math.ceil((OBLIVION_DUUR_VOOR_UNLOCK - oblivionFrames) / 60));
+        ctx.fillText(`🌌 OBLIVION PULSE — ${restSec}s tot Black Hole skin`, W / 2, balkY + balkH + 4);
+      }
+      // unlock-celebration
+      if (oblivionUnlockGedaan) {
+        const fade = Math.min(1, oblivionFadeOut / (OBLIVION_FADE * 2));
+        ctx.fillStyle = `rgba(160, 60, 220, ${0.18 * fade})`;
+        ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = `rgba(255, 240, 255, ${fade})`;
+        ctx.font = `bold ${44 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.shadowBlur = 26;
+        ctx.shadowColor = "#a040ff";
+        ctx.fillText("🌑 BLACK HOLE SKIN", W / 2, H * 0.45);
+        ctx.font = `bold ${24 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillStyle = `rgba(220, 180, 255, ${fade})`;
+        ctx.fillText("ONTGRENDELD!", W / 2, H * 0.55);
+      }
+      ctx.restore();
+    }
     function tekenHellOverlay() {
       if (!hellMode && hellFadeOut === 0) return;
       ctx.save();
@@ -3053,6 +3337,102 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function update() {
       if (!spelLoopt) return;
       frameTeller++;
+
+      // ── CUTSCENE update (Oblivion Pulse intro) ──
+      if (cutsceneFase !== "geen") {
+        cutsceneFrames++;
+        // warp-strepen voortbewegen tijdens warp-fase
+        if (cutsceneFase === "warp") {
+          if (cutsceneFrames % 2 === 0) {
+            // spawn nieuwe streep vanuit centrum
+            const angle = Math.random() * Math.PI * 2;
+            warpStrepen.push({
+              angle,
+              dist: 5,
+              snel: 4 + Math.random() * 8,
+              kleur: Math.random() < 0.7 ? "#ffffff" : (Math.random() < 0.5 ? "#a0d8ff" : "#ffe080"),
+              len: 8 + Math.random() * 14,
+            });
+          }
+          for (let i = warpStrepen.length - 1; i >= 0; i--) {
+            const s = warpStrepen[i];
+            s.dist += s.snel;
+            s.snel *= 1.06; // accelerate
+            if (s.dist > Math.max(W, H)) warpStrepen.splice(i, 1);
+          }
+        }
+        // fase-transities
+        if (cutsceneFase === "portal" && cutsceneFrames >= CUTSCENE_PORTAL_DUUR) {
+          cutsceneFase = "warp";
+          cutsceneFrames = 0;
+          warpStrepen.length = 0;
+          shakeKracht = 6;
+          piep(140, 0.6, "sawtooth", 0.18);
+        } else if (cutsceneFase === "warp" && cutsceneFrames >= CUTSCENE_WARP_DUUR) {
+          cutsceneFase = "blackhole";
+          cutsceneFrames = 0;
+          shakeKracht = 12;
+          piep(50, 0.9, "sine", 0.22);
+          setTimeout(() => piep(36, 1.0, "sine", 0.18), 200);
+        } else if (cutsceneFase === "blackhole" && cutsceneFrames >= CUTSCENE_BLACKHOLE_DUUR) {
+          cutsceneFase = "settle";
+          cutsceneFrames = 0;
+        } else if (cutsceneFase === "settle" && cutsceneFrames >= CUTSCENE_SETTLE_DUUR) {
+          cutsceneFase = "geen";
+          cutsceneFrames = 0;
+          oblivionMode = true;
+          oblivionFrames = 0;
+          oblivionUnlockGedaan = false;
+          // reset speler positie + hp
+          speler.y = GROND_Y;
+          speler.snelheidY = 0;
+          hp = HP_MAX;
+          piep(220, 0.30, "triangle", 0.16);
+          setTimeout(() => piep(330, 0.25, "triangle", 0.14), 80);
+        }
+        // Tijdens cutscene gaat de gewone spel-update niet door — alleen
+        // particles + frametellers updaten zodat scene "leeft".
+        for (let i = particles.length - 1; i >= 0; i--) {
+          particles[i].update();
+          if (particles[i].dood) particles.splice(i, 1);
+        }
+        if (shakeKracht > 0.5) shakeKracht *= 0.94;
+        return;
+      }
+
+      // ── OBLIVION-MODE update (extreme space-level) ──
+      if (oblivionMode) {
+        oblivionFrames++;
+        // Unlock op 60 sec (eenmalig)
+        if (!oblivionUnlockGedaan && oblivionFrames >= OBLIVION_DUUR_VOOR_UNLOCK) {
+          oblivionUnlockGedaan = true;
+          score += 500;
+          // Black Hole skin ontgrendelen via React state-setter
+          try {
+            setUnlockedSkins((prev) => prev.includes("blackhole") ? prev : [...prev, "blackhole"]);
+            setSelectedSkin("blackhole");
+          } catch {}
+          // grote viering — confetti + ring-flits
+          for (let i = 0; i < 40; i++) {
+            const k = ["#a040ff", "#ffd54f", "#69f0ae", "#ff80a0"][i % 4];
+            spawnParticles(W / 2, H / 2, 3, k, { spread: 14, opwaarts: 5, leven: 70, grootte: 6, glow: 22 });
+          }
+          piep(660, 0.20, "sine", 0.18);
+          setTimeout(() => piep(990, 0.20, "sine", 0.16), 100);
+          setTimeout(() => piep(1320, 0.25, "sine", 0.14), 220);
+          setTimeout(() => piep(1760, 0.30, "sine", 0.12), 380);
+          oblivionFadeOut = OBLIVION_FADE * 2;
+        }
+        // Na unlock: fade-out → terug naar normaal (game gaat door, score blijft)
+        if (oblivionUnlockGedaan) {
+          if (oblivionFadeOut > 0) oblivionFadeOut--;
+          if (oblivionFadeOut <= 0) {
+            oblivionMode = false;
+            oblivionFrames = 0;
+          }
+        }
+      }
+
 
       // ───── LOOP-RIT — speler gaat van links-onder over de top naar rechts-onder ─────
       if (loopActief) {
@@ -3498,8 +3878,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // L20 : 88-118 frames
           // L50 : 60-86 frames
           // L100: 26-42 frames
-          const minA = Math.max(26, 110 - huidigLevel * 0.55 - score * 0.18);
-          const variatie = Math.max(14, 45 - huidigLevel * 0.28);
+          // OBLIVION PULSE: extreme — 30-50 frames vanaf het begin.
+          let minA, variatie;
+          if (oblivionMode) {
+            minA = 30; variatie = 20;
+          } else {
+            minA = Math.max(26, 110 - huidigLevel * 0.55 - score * 0.18);
+            variatie = Math.max(14, 45 - huidigLevel * 0.28);
+          }
           volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
         }
       }
@@ -3514,40 +3900,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true;
           aantalObstakelsTotaal++; // teller voor pickups (niet voor score)
-          // bonus-hart spawn (elke ~25 obstakels, 40% kans)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
-            const yMin = (200 + Math.random() * 60) * SCHAAL;
-            bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
-          }
-          // raket-pickup: elke ~16 obstakels, 65% kans (effectief elke ~25 obstakels = 1x per ~15 sec)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 16 === 0 && Math.random() < 0.65 && vliegFrames === 0) {
-            const yPos = (180 + Math.random() * 80) * SCHAAL;
-            raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
-          }
-          // FLIP-pickup: elke ~22 obstakels, 65% kans (effectief elke ~34 obstakels = 1x per ~20 sec)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 22 === 0 && Math.random() < 0.65 && flipFrames === 0 && flipPending === 0) {
-            const yPos = (170 + Math.random() * 100) * SCHAAL;
-            flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-          }
-          // MAGNEET-pickup: elke ~18 obstakels, 70% kans (was 28 / 50%)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 18 === 0 && Math.random() < 0.7 && magneetFrames === 0) {
-            const yPos = (180 + Math.random() * 80) * SCHAAL;
-            magneetPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-          }
-          // SLOW-MO-pickup: elke ~34 obstakels, 45% kans
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 34 === 0 && Math.random() < 0.45 && slowFrames === 0) {
-            const yPos = (170 + Math.random() * 100) * SCHAAL;
-            slowMoPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-          }
-          // BOMB-pickup: elke ~40 obstakels, 35% kans (zeldzaam, krachtig effect)
-          if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 40 === 0 && Math.random() < 0.35) {
-            const yPos = (180 + Math.random() * 80) * SCHAAL;
-            bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+          // GEEN power-ups in Oblivion Pulse — extreme difficulty, geen schild, geen reddingsboei.
+          if (!oblivionMode) {
+            // bonus-hart spawn (elke ~25 obstakels, 40% kans)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
+              const yMin = (200 + Math.random() * 60) * SCHAAL;
+              bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+            }
+            // raket-pickup: elke ~16 obstakels, 65% kans (effectief elke ~25 obstakels = 1x per ~15 sec)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 16 === 0 && Math.random() < 0.65 && vliegFrames === 0) {
+              const yPos = (180 + Math.random() * 80) * SCHAAL;
+              raketten.push({ x: W + 40, y: yPos, grootte: 32 * SCHAAL, fase: 0, opgepakt: false });
+            }
+            // FLIP-pickup: elke ~22 obstakels, 65% kans (effectief elke ~34 obstakels = 1x per ~20 sec)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 22 === 0 && Math.random() < 0.65 && flipFrames === 0 && flipPending === 0) {
+              const yPos = (170 + Math.random() * 100) * SCHAAL;
+              flipPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
+            // MAGNEET-pickup: elke ~18 obstakels, 70% kans (was 28 / 50%)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 18 === 0 && Math.random() < 0.7 && magneetFrames === 0) {
+              const yPos = (180 + Math.random() * 80) * SCHAAL;
+              magneetPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
+            // SLOW-MO-pickup: elke ~34 obstakels, 45% kans
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 34 === 0 && Math.random() < 0.45 && slowFrames === 0) {
+              const yPos = (170 + Math.random() * 100) * SCHAAL;
+              slowMoPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
+            // BOMB-pickup: elke ~40 obstakels, 35% kans (zeldzaam, krachtig effect)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 40 === 0 && Math.random() < 0.35) {
+              const yPos = (180 + Math.random() * 80) * SCHAAL;
+              bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
           }
           // PORTAL naar dungeon-wereld — elke ~8 obstakels, 90% kans
           // Niet tijdens boss/flip/loop/dungeon/hell zelf.
           if (
-            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 8 === 0 &&
             Math.random() < 0.9
           ) {
@@ -3564,7 +3953,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // HELL-PORTAAL — zeldzaam, vanaf score 100. Elke ~32 obstakels, 60% kans.
           // Niet tijdens boss/dungeon/hell/flip/loop. Rood + ander effect.
           if (
-            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode &&
             score >= 100 &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 32 === 0 &&
             Math.random() < 0.6
@@ -3583,7 +3972,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // FLIP en dungeon (super-jump in dungeon = vlieg door plafond-stekels
           // = direct dood).
           if (
-            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode &&
+            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode && !oblivionMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
             Math.random() < 0.85
           ) {
@@ -4070,7 +4459,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       if (!bonusFase) plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode && !hellMode && !bonusFase) {
+      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode) && !dungeonMode && !hellMode && !bonusFase) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -4078,7 +4467,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         });
         // Iets dichter dan voorheen (was 90+60) — meer luchtgevaar zodat
         // 'blijven zweven' niet langer een gratis safe-strategie is.
-        plafondStekelSpawnTeller = 70 + Math.floor(Math.random() * 50);
+        // OBLIVION PULSE: extreem dicht (40-70 frames) — spikes overal.
+        plafondStekelSpawnTeller = oblivionMode
+          ? 40 + Math.floor(Math.random() * 30)
+          : 70 + Math.floor(Math.random() * 50);
       }
 
       // plafond-stekels scrollen + collision
@@ -4109,7 +4501,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!bonusFase) zwevendeMineSpawnTeller--;
       if (
         zwevendeMineSpawnTeller <= 0
-        && score >= 5
+        && (score >= 5 || oblivionMode)
         && !dungeonMode
         && !hellMode
         && !bonusFase
@@ -4129,8 +4521,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           amp: (8 + Math.random() * 6) * SCHAAL, // bobbing-amplitude
         });
         // L1: 180-260 frames (3-4.3 sec) · L50: 100-160 frames · L100: 60-120
-        const minM = Math.max(60, 180 - huidigLevel * 1.2);
-        const varM = Math.max(40, 80 - huidigLevel * 0.4);
+        // OBLIVION: 35-65 frames — overal mijnen
+        let minM, varM;
+        if (oblivionMode) {
+          minM = 35; varM = 30;
+        } else {
+          minM = Math.max(60, 180 - huidigLevel * 1.2);
+          varM = Math.max(40, 80 - huidigLevel * 0.4);
+        }
         zwevendeMineSpawnTeller = Math.floor(minM) + Math.floor(Math.random() * varM);
       }
 
@@ -4660,9 +5058,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function teken() {
+      // Cutscene? — overschrijft alles met de Oblivion-Pulse intro.
+      if (cutsceneFase !== "geen") {
+        tekenCutscene();
+        return;
+      }
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
-      if (hellMode) {
+      if (oblivionMode) {
+        // Oblivion-Pulse mode: ruimte-achtergrond
+        tekenRuimteAchtergrond();
+      } else if (hellMode) {
         // Hell-mode: dark-red bg + parallax-rotsen + lava-grond. Skip de
         // bakstenen-muur, glas-in-lood, lichtbundels, fakkels, plafond.
         tekenHellAchtergrond();
@@ -5323,6 +5729,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
       tekenHellOverlay();
+      tekenOblivionOverlay();
       // Speler NOG EEN KEER tijdens dungeon — anders dekt het ondoorzichtige
       // water (#0e3c70) de rode bal volledig af (alleen schild-glow steekt
       // boven water uit). Mark's klacht: 'onder water ben ik onzichtbaar
@@ -5536,6 +5943,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       hellFadeIn = 0;
       hellFadeOut = 0;
       vonken.length = 0;
+      // Oblivion-mode reset bij respawn (cutscene niet — die hoort bij admin-trigger)
+      oblivionMode = false;
+      oblivionFrames = 0;
+      oblivionFadeOut = 0;
+      cutsceneFase = "geen";
+      cutsceneFrames = 0;
+      warpStrepen.length = 0;
       bonusEindFlash = 0;
       speler.x = speler.basisX;
       speler.y = GROND_Y;
@@ -5634,6 +6048,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       score = startLevelRef.current * 5;
       scoreElText = score;
       scoreBijLevelStart = score;
+    }
+
+    // Admin trigger: Oblivion Pulse cutscene? (Eenmalig, reset trigger.)
+    if (oblivionTriggerRef.current && oblivionTriggerRef.current.trigger) {
+      oblivionTriggerRef.current.trigger = false;
+      cutsceneFase = "portal";
+      cutsceneFrames = 0;
+      // ruim alles op zodat cutscene zuiver begint
+      obstakels.length = 0;
+      ringen.length = 0;
+      platforms.length = 0;
+      plafondStekels.length = 0;
+      zwevendeMinen.length = 0;
+      schansen.length = 0;
+      portals.length = 0;
+      fans.length = 0;
+      bonusHarten.length = 0;
+      raketten.length = 0;
+      bombPickups.length = 0;
+      magneetPickups.length = 0;
+      slowMoPickups.length = 0;
+      flipPickups.length = 0;
+      vonken.length = 0;
+      // setup dramatisch openings-effect
+      shakeKracht = 14;
     }
 
     raf = requestAnimationFrame(lus);
@@ -5966,18 +6405,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     </div>
                   </div>
                   <button
-                    disabled
+                    onClick={() => {
+                      oblivionTriggerRef.current.trigger = true;
+                      track("obliterator_started", {
+                        source: "oblivion_admin",
+                        personal_record: persoonlijkRecord || 0,
+                        bonus_leven: bonusLeven || 0,
+                        start_level: 1,
+                      });
+                      setFase("spelen");
+                    }}
                     style={{
-                      width: "100%", padding: "10px 14px", borderRadius: 10,
-                      background: "rgba(180,60,220,0.10)",
-                      border: "1px dashed rgba(180,60,220,0.4)",
-                      color: "rgba(220,180,255,0.6)",
-                      fontFamily: "'Fredoka', sans-serif", fontSize: 13,
-                      cursor: "not-allowed",
+                      width: "100%", padding: "12px 14px", borderRadius: 10,
+                      background: "linear-gradient(135deg, #b440e0, #6020a0)",
+                      border: "none",
+                      color: "#fff",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                      cursor: "pointer",
+                      boxShadow: "0 4px 18px rgba(180,60,220,0.45)",
+                      letterSpacing: 0.5,
                     }}
                   >
-                    🌌 Activeer Oblivion Pulse · binnenkort
+                    🌌 Activeer Oblivion Pulse
                   </button>
+                  <p style={{ color: "rgba(220,180,255,0.6)", fontSize: 10, marginTop: 6, marginBottom: 0, textAlign: "center" }}>
+                    Cutscene → ruimte → black hole → 60 sec overleven = Black Hole skin
+                  </p>
                 </div>
               );
             })()}
