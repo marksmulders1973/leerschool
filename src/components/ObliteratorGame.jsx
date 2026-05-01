@@ -1204,6 +1204,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const vissen = [];
     const VIS_KLEUREN = ["#ffaa30", "#ff5588", "#ffee60", "#80e8ff", "#a0ff80", "#ff80c0", "#ff5040"];
     let visSpawnTeller = 30;
+    // Bubbels stijgen op vanaf de bodem — pure decoratie tijdens dungeon-mode
+    const bubbels = [];
+    // Schatkisten — zeldzame pickup in dungeon-water voor +score bonus
+    const schatkisten = [];
+    let schatkistSpawnTeller = 480; // eerste ~8 sec na entry, dan random
     // ──────── FAN-SPANDOEKEN ────────
     // Mannetjes met spandoek met de naam van de top-3 highscore-spelers.
     // Spawnt periodiek vanaf rechter rand, rolt langs zoals decoratie.
@@ -1545,6 +1550,98 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
     }
+    function tekenSchatkist(s) {
+      ctx.save();
+      const x = s.x;
+      const y = s.y + Math.sin(s.fase) * 3;
+      const b = s.breedte;
+      const h = s.hoogte;
+
+      // Pulserend gouden aura — duidelijke "pakken!"-signaal
+      const pulse = 0.6 + Math.sin(s.fase * 1.5) * 0.3;
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = `rgba(255, 215, 0, ${pulse * 0.20})`;
+      ctx.beginPath();
+      ctx.ellipse(x + b / 2, y + h / 2, b * 1.0, h * 1.1, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = `rgba(255, 215, 0, ${pulse * 0.35})`;
+      ctx.beginPath();
+      ctx.ellipse(x + b / 2, y + h / 2, b * 0.75, h * 0.85, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Schatkist body (bruin met houtnerf)
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#ffd700";
+      const bodyGrad = ctx.createLinearGradient(x, y + h * 0.4, x, y + h);
+      bodyGrad.addColorStop(0, "#a86028");
+      bodyGrad.addColorStop(1, "#5a3010");
+      ctx.fillStyle = bodyGrad;
+      ctx.fillRect(x, y + h * 0.4, b, h * 0.6);
+      ctx.shadowBlur = 0;
+      // Houtnerf
+      ctx.strokeStyle = "rgba(60, 30, 10, 0.6)";
+      ctx.lineWidth = 1 * SCHAAL;
+      for (let i = 1; i < 3; i++) {
+        const yy = y + h * 0.4 + (i / 3) * h * 0.6;
+        ctx.beginPath();
+        ctx.moveTo(x + 2, yy);
+        ctx.lineTo(x + b - 2, yy);
+        ctx.stroke();
+      }
+
+      // Deksel (bovenkant, gewelfd)
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#ffd700";
+      ctx.fillStyle = "#8a4818";
+      ctx.beginPath();
+      ctx.moveTo(x, y + h * 0.45);
+      ctx.lineTo(x, y + h * 0.25);
+      ctx.quadraticCurveTo(x + b / 2, y - h * 0.05, x + b, y + h * 0.25);
+      ctx.lineTo(x + b, y + h * 0.45);
+      ctx.closePath();
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Gouden banden (twee horizontale strips)
+      ctx.fillStyle = "#ffd700";
+      ctx.fillRect(x, y + h * 0.45, b, 4 * SCHAAL);
+      ctx.fillRect(x, y + h * 0.78, b, 3 * SCHAAL);
+      // Donkere randen voor diepte
+      ctx.fillStyle = "rgba(120, 80, 0, 0.6)";
+      ctx.fillRect(x, y + h * 0.45 + 4 * SCHAAL, b, 1.5 * SCHAAL);
+
+      // Slot — gouden cirkel met sleutelgat
+      const slotCx = x + b / 2;
+      const slotCy = y + h * 0.62;
+      const slotR = h * 0.13;
+      ctx.fillStyle = "#ffd700";
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "#fff8a0";
+      ctx.beginPath();
+      ctx.arc(slotCx, slotCy, slotR, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "#5a3010";
+      ctx.beginPath();
+      ctx.arc(slotCx, slotCy - slotR * 0.15, slotR * 0.32, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillRect(slotCx - 1, slotCy - slotR * 0.15, 2, slotR * 0.6);
+
+      // Sparkle-sterretjes om de schatkist (3 stuks die roteren)
+      for (let i = 0; i < 3; i++) {
+        const a = s.fase * 0.7 + i * (Math.PI * 2 / 3);
+        const sx = x + b / 2 + Math.cos(a) * b * 0.7;
+        const sy = y + h / 2 + Math.sin(a) * h * 0.9;
+        const sz = 2 + Math.sin(s.fase * 2 + i) * 1;
+        ctx.fillStyle = "#ffffff";
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = "#fff8a0";
+        ctx.beginPath();
+        ctx.arc(sx, sy, sz * SCHAAL, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
     function tekenVis(v) {
       ctx.save();
       ctx.translate(v.x, v.y);
@@ -1655,62 +1752,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenDungeonOverlay() {
       if (!dungeonMode && dungeonFadeOut === 0) return;
       ctx.save();
-
-      // 1. Donkere blauw-paarse achtergrond-tint over heel scherm
-      ctx.fillStyle = "rgba(18, 20, 50, 0.62)";
-      ctx.fillRect(0, 0, W, H);
-
-      // 2. Dungeon-brick overlay over de muur — patroon van rechthoekige
-      //    bakstenen met offset per rij. Lijkt op donkere dungeon-walls.
-      const brickW = 72 * SCHAAL;
-      const brickH = 30 * SCHAAL;
-      ctx.strokeStyle = "rgba(70, 80, 110, 0.55)";
-      ctx.fillStyle = "rgba(40, 50, 90, 0.30)";
-      ctx.lineWidth = 1.5 * SCHAAL;
-      for (let row = 0; row * brickH < H; row++) {
-        const yRow = row * brickH;
-        const offset = (row % 2) * (brickW / 2);
-        for (let col = -1; col * brickW < W + brickW; col++) {
-          const x = col * brickW + offset;
-          // Klein highlight-streepje aan de bovenkant van de baksteen
-          ctx.fillRect(x + 2, yRow + 2, brickW - 4, 3 * SCHAAL);
-          ctx.strokeRect(x, yRow, brickW, brickH);
-        }
-      }
-
-      // 3. Hangende kettingen vanaf de bovenrand (3 stuks, vaste posities)
-      const chainPositions = [W * 0.18, W * 0.52, W * 0.82];
-      const chainLengths  = [110, 80, 140].map(v => v * SCHAAL);
-      ctx.fillStyle = "rgba(160, 165, 180, 0.85)";
-      ctx.strokeStyle = "rgba(60, 65, 75, 0.9)";
-      ctx.lineWidth = 1 * SCHAAL;
-      for (let i = 0; i < chainPositions.length; i++) {
-        const cxC = chainPositions[i];
-        const len = chainLengths[i];
-        // Subtiele swing op basis van frameTeller
-        const swing = Math.sin(frameTeller * 0.02 + i) * 4 * SCHAAL;
-        for (let cy = 0; cy < len; cy += 9 * SCHAAL) {
-          const isEven = Math.floor(cy / (9 * SCHAAL)) % 2 === 0;
-          const x = cxC + swing * (cy / len);
-          if (isEven) {
-            ctx.beginPath();
-            ctx.ellipse(x, cy + 4.5 * SCHAAL, 4 * SCHAAL, 5 * SCHAAL, 0, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.stroke();
-          } else {
-            ctx.beginPath();
-            ctx.ellipse(x, cy + 4.5 * SCHAAL, 5 * SCHAAL, 4 * SCHAAL, 0, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.stroke();
-          }
-        }
-      }
-
-      // 4. Water aan de onderkant — geanimeerde golven met schuim
       const waterY = H - 70 * SCHAAL;
       const waveOff = frameTeller * 1.2;
-      // Water-fill
-      ctx.fillStyle = "rgba(40, 110, 200, 0.55)";
+
+      // 1. Lichte blauw-tint over alleen het BOVEN-water gebied (= lucht).
+      //    Voorheen 0.62 alpha donker over hele scherm — Mark's klacht
+      //    'achtergrond niet helder'. Nu lichter en alleen boven het water,
+      //    zodat de water-laag eronder zelf de tint mag bepalen.
+      ctx.fillStyle = "rgba(80, 150, 210, 0.30)";
+      ctx.fillRect(0, 0, W, waterY + 4 * SCHAAL);
+
+      // 2. Water aan de onderkant — DEKKEND zodat de stenen muur er niet
+      //    doorheen schemert. Mark's klacht: 'stenen muur loopt zichtbaar
+      //    door het water'. Twee lagen: ondoorzichtige basis + lichtere
+      //    glans erbovenop voor diepte.
+      ctx.fillStyle = "#0e3c70"; // dekkend diep oceaanblauw
+      ctx.beginPath();
+      ctx.moveTo(0, waterY + Math.sin(waveOff * 0.04) * 3 * SCHAAL);
+      for (let x = 0; x <= W; x += 6) {
+        const wy = waterY + Math.sin((x + waveOff) * 0.045) * 4 * SCHAAL
+                          + Math.sin((x - waveOff) * 0.06) * 2 * SCHAAL;
+        ctx.lineTo(x, wy);
+      }
+      ctx.lineTo(W, H);
+      ctx.lineTo(0, H);
+      ctx.closePath();
+      ctx.fill();
+      // Lichtere blauwe glans bovenaan het water (gradient van licht naar dieper)
+      const watGrad = ctx.createLinearGradient(0, waterY, 0, H);
+      watGrad.addColorStop(0, "rgba(80, 180, 230, 0.55)");
+      watGrad.addColorStop(0.5, "rgba(40, 100, 180, 0.20)");
+      watGrad.addColorStop(1, "rgba(10, 30, 70, 0)");
+      ctx.fillStyle = watGrad;
       ctx.beginPath();
       ctx.moveTo(0, waterY + Math.sin(waveOff * 0.04) * 3 * SCHAAL);
       for (let x = 0; x <= W; x += 6) {
@@ -1723,7 +1796,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.closePath();
       ctx.fill();
       // Schuim-streep bovenaan het water
-      ctx.strokeStyle = "rgba(220, 235, 255, 0.55)";
+      ctx.strokeStyle = "rgba(230, 240, 255, 0.85)";
       ctx.lineWidth = 2 * SCHAAL;
       ctx.beginPath();
       ctx.moveTo(0, waterY + Math.sin(waveOff * 0.04) * 3 * SCHAAL);
@@ -1734,10 +1807,100 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.stroke();
 
-      // 5. Vignette aan de randen voor donkere dungeon-feel
-      const vGrad = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.3, W / 2, H / 2, Math.max(W, H) * 0.75);
+      // 3. Zon-stralen door het water, schuin van bovenaf — geeft sfeer +
+      //    helderheid (vervangt de doelloze hangende kettingen).
+      ctx.save();
+      ctx.globalCompositeOperation = "lighter";
+      const baseY = 0;
+      for (let i = 0; i < 5; i++) {
+        const baseX = (i * 220 + frameTeller * 0.4) % (W + 300) - 100;
+        const pulse = 0.18 + Math.sin(frameTeller * 0.025 + i) * 0.06;
+        ctx.beginPath();
+        ctx.moveTo(baseX, baseY);
+        ctx.lineTo(baseX + 70 * SCHAAL, baseY);
+        ctx.lineTo(baseX + 200 * SCHAAL, H);
+        ctx.lineTo(baseX + 130 * SCHAAL, H);
+        ctx.closePath();
+        const sg = ctx.createLinearGradient(baseX, 0, baseX + 100, H);
+        sg.addColorStop(0, `rgba(255, 250, 200, ${pulse})`);
+        sg.addColorStop(1, "rgba(255, 250, 200, 0)");
+        ctx.fillStyle = sg;
+        ctx.fill();
+      }
+      ctx.restore();
+
+      // 4. Zeewier vanaf de bodem — lange wuivende strengen, geeft
+      //    dynamiek + onderwater-thema (vervangt kettingen). Vaste posities
+      //    voor stabiliteit, hoogtes en kleuren wisselend.
+      const zeewierGroepen = [
+        { x: W * 0.08, h: 95, kleur: "#1a8a3a" },
+        { x: W * 0.22, h: 70, kleur: "#229a44" },
+        { x: W * 0.36, h: 55, kleur: "#1a8a3a" },
+        { x: W * 0.55, h: 88, kleur: "#16703a" },
+        { x: W * 0.72, h: 65, kleur: "#229a44" },
+        { x: W * 0.88, h: 100, kleur: "#1a8a3a" },
+      ];
+      for (let i = 0; i < zeewierGroepen.length; i++) {
+        const z = zeewierGroepen[i];
+        const len = z.h * SCHAAL;
+        const baseXz = z.x;
+        const baseYz = H;
+        // strepen van 3 dunner wordende strengen per groep
+        for (let s = -1; s <= 1; s++) {
+          const offsetX = s * 5 * SCHAAL;
+          ctx.strokeStyle = z.kleur;
+          ctx.lineWidth = (3 - Math.abs(s)) * SCHAAL;
+          ctx.lineCap = "round";
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = z.kleur;
+          ctx.beginPath();
+          for (let h = 0; h <= len; h += 5 * SCHAAL) {
+            const sway = Math.sin(frameTeller * 0.04 + i + h * 0.05) * (h / len) * 8 * SCHAAL;
+            const yy = baseYz - h;
+            const xx = baseXz + offsetX + sway;
+            if (h === 0) ctx.moveTo(xx, yy);
+            else ctx.lineTo(xx, yy);
+          }
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+        }
+        // klein lichter blaadje aan de top
+        ctx.fillStyle = "#5acc6a";
+        const sway = Math.sin(frameTeller * 0.04 + i + len * 0.05) * 8 * SCHAAL;
+        ctx.beginPath();
+        ctx.ellipse(baseXz + sway, baseYz - len, 4 * SCHAAL, 8 * SCHAAL, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 5. Bubbels stijgen op vanaf de bodem — extra leven in het water
+      if (frameTeller % 8 === 0 && bubbels.length < 30) {
+        bubbels.push({
+          x: Math.random() * W,
+          y: H + 4,
+          grootte: (2 + Math.random() * 6) * SCHAAL,
+          snelheid: (0.5 + Math.random()) * SCHAAL,
+          wiebel: Math.random() * Math.PI * 2,
+        });
+      }
+      for (let bi = bubbels.length - 1; bi >= 0; bi--) {
+        const b = bubbels[bi];
+        b.y -= b.snelheid;
+        b.wiebel += 0.06;
+        b.x += Math.sin(b.wiebel) * 0.3;
+        if (b.y < waterY - 4) { bubbels.splice(bi, 1); continue; }
+        ctx.strokeStyle = "rgba(220, 240, 255, 0.6)";
+        ctx.lineWidth = 1.2 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(b.x, b.y, b.grootte / 2, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      // 6. Lichte vignette — minder donker dan voorheen (0.65 -> 0.40)
+      //    zodat het beeld niet zo somber voelt. Mark: 'achtergrond niet
+      //    helder'.
+      const vGrad = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.4, W / 2, H / 2, Math.max(W, H) * 0.8);
       vGrad.addColorStop(0, "rgba(0,0,0,0)");
-      vGrad.addColorStop(1, "rgba(0,0,0,0.65)");
+      vGrad.addColorStop(1, "rgba(0,0,0,0.40)");
       ctx.fillStyle = vGrad;
       ctx.fillRect(0, 0, W, H);
 
@@ -2429,9 +2592,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           });
           haaiSpawnTeller = 180 + Math.floor(Math.random() * 180); // 3-6 sec
         }
-        // Spawn vissen vaker — kleurig, decoratief, geen schade
+        // Spawn vissen — max 2 tegelijk in beeld zodat de bubbel-shield
+        // niet doorlopend wordt ververst door pickups (haaien moeten gevaar
+        // blijven). Mark's feedback: 'heel veel minder van deze vissen, max 2'.
         visSpawnTeller--;
-        if (dungeonFadeIn === 0 && visSpawnTeller <= 0) {
+        if (dungeonFadeIn === 0 && visSpawnTeller <= 0 && vissen.length < 2) {
           const waterTop = H - 70 * SCHAAL;
           vissen.push({
             x: W + 30 * SCHAAL,
@@ -2442,7 +2607,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             kleur: VIS_KLEUREN[Math.floor(Math.random() * VIS_KLEUREN.length)],
             snelheid: 0.6 + Math.random() * 0.6,
           });
-          visSpawnTeller = 90 + Math.floor(Math.random() * 60);
+          visSpawnTeller = 240 + Math.floor(Math.random() * 180);
+        }
+        // SCHATKIST — zeldzame bonus-pickup tijdens dungeon (max 1 in beeld).
+        // Springen/raken = +25 score + gouden burst. Mark's input: 'weinig
+        // spannends al een schans, bedenk iets leuks'.
+        schatkistSpawnTeller--;
+        if (dungeonFadeIn === 0 && schatkistSpawnTeller <= 0 && schatkisten.length < 1) {
+          schatkisten.push({
+            x: W + 50 * SCHAAL,
+            y: (200 + Math.random() * 80) * SCHAAL,  // op springhoogte, varieert
+            breedte: 40 * SCHAAL,
+            hoogte: 32 * SCHAAL,
+            fase: 0,
+            opgepakt: false,
+          });
+          schatkistSpawnTeller = 540 + Math.floor(Math.random() * 360); // 9-15 sec
         }
         // Bij DUNGEON_DUUR: start exit-fade
         if (dungeonFrames === DUNGEON_DUUR) {
@@ -2513,6 +2693,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Bubbel-shield aftellen
       if (bubbelFrames > 0) bubbelFrames--;
+      // Schatkisten — bewegen + pickup
+      for (let i = schatkisten.length - 1; i >= 0; i--) {
+        const s = schatkisten[i];
+        s.x -= effSnelheid;
+        s.fase += 0.08;
+        const sb = spelerBots();
+        const kBox = { x: s.x, y: s.y + Math.sin(s.fase) * 3, breedte: s.breedte, hoogte: s.hoogte };
+        if (!s.opgepakt && !loopActief && botst(sb, kBox)) {
+          s.opgepakt = true;
+          score += 25;
+          piep(660, 0.08, "sine", 0.12);
+          setTimeout(() => piep(990, 0.08, "sine", 0.10), 60);
+          setTimeout(() => piep(1320, 0.10, "sine", 0.10), 130);
+          setTimeout(() => piep(1760, 0.14, "sine", 0.08), 220);
+          // gouden burst
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 24, "#ffd700", { spread: 8, opwaarts: 2, leven: 32, grootte: 5, glow: 20 });
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 12, "#ffffff", { spread: 6, opwaarts: 2, leven: 26, grootte: 3, glow: 14 });
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 8, "#ff8030", { spread: 7, opwaarts: 1.5, leven: 28, grootte: 4, glow: 16 });
+        }
+        if (s.x + s.breedte < -20 || s.opgepakt) schatkisten.splice(i, 1);
+      }
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
         if (particles[i].dood) particles.splice(i, 1);
@@ -3315,11 +3516,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.save();
         ctx.translate(r.x, r.y);
         ctx.scale(pulse, 1);
+        // Extra dikke glow tijdens dungeon-mode zodat ringen niet wegtinten
+        // achter de blauwe water-overlay (Mark's klacht: 'ringen niet helder').
+        if (dungeonMode) {
+          ctx.shadowBlur = 30;
+          ctx.shadowColor = "#fff8a0";
+          ctx.strokeStyle = "rgba(255, 248, 160, 0.55)";
+          ctx.lineWidth = 9;
+          ctx.beginPath();
+          ctx.arc(0, 0, r.grootte * 0.5, 0, Math.PI * 2);
+          ctx.stroke();
+        }
         // outer gouden ring
-        ctx.shadowBlur = 22;
+        ctx.shadowBlur = dungeonMode ? 40 : 22;
         ctx.shadowColor = "#ffd700";
         ctx.strokeStyle = "#ffd700";
-        ctx.lineWidth = 4;
+        ctx.lineWidth = dungeonMode ? 5.5 : 4;
         ctx.beginPath();
         ctx.arc(0, 0, r.grootte * 0.5, 0, Math.PI * 2);
         ctx.stroke();
@@ -3701,9 +3913,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
-      // Vissen + haaien NA de overlay zodat het water-paneel ze niet grijs tint
+      // Vissen + haaien + schatkisten NA de overlay zodat ze niet grijs getint worden
       for (const v of vissen) tekenVis(v);
       for (const h of haaien) tekenHaai(h);
+      for (const s of schatkisten) tekenSchatkist(s);
       // Bubbel-shield rond speler (van vis-pickup) — ook na overlay zodat 'ie helder blijft
       if (bubbelFrames > 0) {
         const cx = speler.x + speler.breedte / 2;
@@ -3846,6 +4059,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bubbelFrames = 0;
       flipFrames = 0;
       flipPending = 0;
+      schatkisten.length = 0;
+      bubbels.length = 0;
+      schatkistSpawnTeller = 480;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
@@ -4126,6 +4342,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>🐌 <strong style={{ color: "#a060ff" }}>Slow-mo pakken</strong> = 5 sec wereld in halve snelheid (adempauze!)</div>
               <div>💥 <strong style={{ color: "#ff5040" }}>Bom pakken</strong> = ALLE stekels op het scherm vernietigen!</div>
               <div>🐠 <strong style={{ color: "#ffaa30" }}>Vis pakken</strong> = +5 punten + 5 sec bubbel-shield (haaien gaan dood bij contact!)</div>
+              <div>💰 <strong style={{ color: "#ffd700" }}>Schatkist pakken</strong> (water-wereld) = +25 punten BONUS!</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
