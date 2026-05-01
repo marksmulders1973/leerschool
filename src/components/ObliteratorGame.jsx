@@ -1726,19 +1726,51 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenGrond() {
       const grondTop = GROND_Y + SPELER_GROOTTE;
       const cheerful = cheerfulMix();
-      // Cheerful biomes: aarde is een drijvend platform-band met onderrand.
-      // Donker biomes: aarde loopt door tot canvas-bottom (atmospheric).
       const bandActief = cheerful > 0.5;
       const GROND_DIKTE = 80 * SCHAAL;
       const grondBottom = bandActief ? grondTop + GROND_DIKTE : H;
+      // Stap 2: hill-curve voor cheerful biomes. Speler en obstakels blijven
+      // op hun absolute y — alleen visueel zien we golvende grond.
+      const hills = hillsActief();
+      const stride = Math.max(2, 10 * SCHAAL);
+      const topPoints = [];
+      if (hills) {
+        for (let sx = -stride; sx <= W + stride; sx += stride) {
+          topPoints.push({ x: sx, y: grondTop - vloerHoogte(worldScrollX + sx) });
+        }
+      }
+      // Aarde-fill: polygon (hills) of rectangle (vlak)
       const grad = ctx.createLinearGradient(0, grondTop, 0, grondBottom);
       grad.addColorStop(0, biomeKleur("grondLicht")); grad.addColorStop(1, biomeKleur("grondDonker"));
-      ctx.fillStyle = grad; ctx.fillRect(0, grondTop, W, grondBottom - grondTop);
+      ctx.fillStyle = grad;
+      if (hills && topPoints.length > 0) {
+        ctx.beginPath();
+        ctx.moveTo(topPoints[0].x, topPoints[0].y);
+        for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y);
+        ctx.lineTo(topPoints[topPoints.length - 1].x, grondBottom);
+        ctx.lineTo(topPoints[0].x, grondBottom);
+        ctx.closePath();
+        ctx.fill();
+      } else {
+        ctx.fillRect(0, grondTop, W, grondBottom - grondTop);
+      }
+      // Brick-pattern: in hills-mode geclipt naar polygon zodat het niet
+      // boven de aarde uitsteekt. In flat-mode gewoon volle rechthoek.
       const offset = (frameTeller * spelSnelheid) % BAKSTEEN_W;
       ctx.save();
       ctx.globalAlpha = 0.5;
-      for (let y = grondTop; y < grondBottom; y += BAKSTEEN_H) {
-        const rij = Math.floor((y - grondTop) / BAKSTEEN_H);
+      if (hills && topPoints.length > 0) {
+        ctx.beginPath();
+        ctx.moveTo(topPoints[0].x, topPoints[0].y);
+        for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y);
+        ctx.lineTo(topPoints[topPoints.length - 1].x, grondBottom);
+        ctx.lineTo(topPoints[0].x, grondBottom);
+        ctx.closePath();
+        ctx.clip();
+      }
+      const brickStartY = hills ? grondTop - 30 * SCHAAL : grondTop;
+      for (let y = brickStartY; y < grondBottom; y += BAKSTEEN_H) {
+        const rij = Math.floor((y - brickStartY) / BAKSTEEN_H);
         const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
         for (let x = -BAKSTEEN_W - offset + xOff; x < W + BAKSTEEN_W; x += BAKSTEEN_W) {
           ctx.fillStyle = biomeKleur("bakstenenDonker");
@@ -1753,22 +1785,52 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.save();
         ctx.globalAlpha = cheerful;
         const grasH = 14 * SCHAAL;
-        const bobbel = 18 * SCHAAL;
+        const bobbel = Math.max(2, 18 * SCHAAL);
         const bobH = 6 * SCHAAL;
         const grasOff = (frameTeller * spelSnelheid * 0.5) % bobbel;
-        // Top: dunne donker-strip + lichte bobbel naar boven
-        ctx.fillStyle = biomeKleur("grasDonker");
-        ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
-        ctx.fillStyle = biomeKleur("grasLicht");
-        ctx.beginPath();
-        ctx.moveTo(-grasOff, grondTop);
-        for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
-          ctx.quadraticCurveTo(xb + bobbel * 0.5, grondTop - bobH, xb + bobbel, grondTop);
+        // Top-grass: bobbel-curve volgt hill-curve in hills-mode, anders flat
+        if (hills && topPoints.length > 0) {
+          // Donker-strip volgt hill-curve
+          ctx.fillStyle = biomeKleur("grasDonker");
+          ctx.beginPath();
+          ctx.moveTo(topPoints[0].x, topPoints[0].y - 4 * SCHAAL);
+          for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y - 4 * SCHAAL);
+          for (let i = topPoints.length - 1; i >= 0; i--) ctx.lineTo(topPoints[i].x, topPoints[i].y + grasH);
+          ctx.closePath();
+          ctx.fill();
+          // Licht-gras met bobbel-pieken op hill-curve
+          ctx.fillStyle = biomeKleur("grasLicht");
+          ctx.beginPath();
+          ctx.moveTo(-grasOff, grondTop - vloerHoogte(worldScrollX - grasOff));
+          for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
+            const midX = xb + bobbel * 0.5;
+            const endX = xb + bobbel;
+            const midBaseY = grondTop - vloerHoogte(worldScrollX + midX);
+            const endBaseY = grondTop - vloerHoogte(worldScrollX + endX);
+            ctx.quadraticCurveTo(midX, midBaseY - bobH, endX, endBaseY);
+          }
+          // Sluit terug langs hill-curve
+          ctx.lineTo(W + bobbel, grondTop - vloerHoogte(worldScrollX + W + bobbel) + grasH * 0.65);
+          for (let i = topPoints.length - 1; i >= 0; i--) {
+            ctx.lineTo(topPoints[i].x, topPoints[i].y + grasH * 0.65);
+          }
+          ctx.closePath();
+          ctx.fill();
+        } else {
+          // Flat: bestaande render
+          ctx.fillStyle = biomeKleur("grasDonker");
+          ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
+          ctx.fillStyle = biomeKleur("grasLicht");
+          ctx.beginPath();
+          ctx.moveTo(-grasOff, grondTop);
+          for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
+            ctx.quadraticCurveTo(xb + bobbel * 0.5, grondTop - bobH, xb + bobbel, grondTop);
+          }
+          ctx.lineTo(W + bobbel, grondTop + grasH * 0.65);
+          ctx.lineTo(-grasOff, grondTop + grasH * 0.65);
+          ctx.closePath();
+          ctx.fill();
         }
-        ctx.lineTo(W + bobbel, grondTop + grasH * 0.65);
-        ctx.lineTo(-grasOff, grondTop + grasH * 0.65);
-        ctx.closePath();
-        ctx.fill();
         // Onderrand (alleen bij band-modus): gespiegelde bobbel naar onderen
         if (bandActief) {
           ctx.fillStyle = biomeKleur("grasDonker");
