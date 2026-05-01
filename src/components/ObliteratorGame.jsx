@@ -1192,6 +1192,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // bij contact: levenVerlies (geen spikes meer in dungeon, water erbij).
     const haaien = [];
     let haaiSpawnTeller = 180;
+    // Vissen — kleurige decoratie in dungeon-water (geen schade).
+    const vissen = [];
+    const VIS_KLEUREN = ["#ffaa30", "#ff5588", "#ffee60", "#80e8ff", "#a0ff80", "#ff80c0", "#ff5040"];
+    let visSpawnTeller = 30;
     // ──────── FAN-SPANDOEKEN ────────
     // Mannetjes met spandoek met de naam van de top-3 highscore-spelers.
     // Spawnt periodiek vanaf rechter rand, rolt langs zoals decoratie.
@@ -1251,21 +1255,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const namen = topSpelersRef.current && topSpelersRef.current.length > 0
         ? topSpelersRef.current
         : ["Speler"];
-      const naam = namen[Math.floor(Math.random() * namen.length)];
+      // Kies een random index uit top-3; index = rang - 1
+      const idx = Math.floor(Math.random() * Math.min(namen.length, 3));
+      const naam = namen[idx];
+      const rang = idx + 1;
       const naamUp = String(naam).toUpperCase().slice(0, 14);
-      const variants = [
-        `TOP: ${naamUp}`,
-        `${naamUp} IS DE BESTE!`,
-        `GO ${naamUp}!`,
-        `#1 ${naamUp}`,
-        `HUP ${naamUp}!`,
-      ];
-      const tekst = variants[Math.floor(Math.random() * variants.length)];
+      const tekst = `GEFELICITEERD ${naamUp} MET JE HIGH SCORE ${rang}E PLAATS!`;
       // Banner-breedte schaalt mee met tekstlengte (ruwweg)
-      const tekstW = Math.max(220, tekst.length * 22) * SCHAAL;
+      const tekstW = Math.max(280, tekst.length * 14) * SCHAAL;
       fans.push({
         x: W + 40,
         naam,
+        rang,
         tekst,
         breedte: tekstW,
         hoogte: 130 * SCHAAL,
@@ -1313,34 +1314,105 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.textBaseline = "middle";
       ctx.fillText(f.tekst, bannerL + bannerW / 2, bannerY + bannerH / 2);
 
-      // Stick-figures (links en rechts) — groter en met meer detail
-      for (const fx of [figLeftX, figRightX]) {
-        const cx = fx + figW / 2;
-        const headR = 10 * SCHAAL;
-        // Hoofd
+      // Hoedkleur per rang: goud / zilver / brons
+      const hoedKleur = f.rang === 1 ? "#ffd700" : f.rang === 2 ? "#d8d8d8" : "#cd7f32";
+      const hoedRand = f.rang === 1 ? "#a08000" : f.rang === 2 ? "#888888" : "#7a4a18";
+      // Shirt-kleuren per mannetje verschillend zodat ze niet identiek zijn
+      const shirtL = f.rang === 1 ? "#e84545" : f.rang === 2 ? "#3070d0" : "#69b840";
+      const shirtR = f.rang === 1 ? "#3070d0" : f.rang === 2 ? "#e84545" : "#a040c0";
+      // Lichte zwaai-animatie via frameTeller voor levendigheid
+      const wave = Math.sin(frameTeller * 0.18) * 3 * SCHAAL;
+
+      // Stick-figures (links en rechts) — kleurig + partyhoedje + gezichtje
+      const sides = [
+        { fx: figLeftX, shirt: shirtL, mirror: 1 },
+        { fx: figRightX, shirt: shirtR, mirror: -1 },
+      ];
+      for (const s of sides) {
+        const cx = s.fx + figW / 2;
+        const headR = 11 * SCHAAL;
+        const headCx = cx;
+        const headCy = headTopY + headR;
+
+        // Lichaam (gekleurd shirt) — eerst onder hoofd
+        ctx.strokeStyle = s.shirt;
+        ctx.lineWidth = 7 * SCHAAL;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(cx, headCy + headR);
+        ctx.lineTo(cx, baseY - 22 * SCHAAL);
+        ctx.stroke();
+
+        // Armen — eentje omhoog naar de paal, andere zwaait
+        ctx.lineWidth = 4 * SCHAAL;
+        ctx.strokeStyle = "#ffcc88";  // huid
+        ctx.beginPath();
+        // Vasthoudende arm omhoog
+        ctx.moveTo(cx, headCy + headR + 4 * SCHAAL);
+        ctx.lineTo(cx, headCy + headR * 0.2);
+        // Zwaaiende vrije arm aan de buitenkant
+        const buitenX = cx + s.mirror * (10 + Math.abs(wave * 0.6)) * SCHAAL;
+        const buitenY = headCy + headR + 4 * SCHAAL + wave;
+        ctx.moveTo(cx, headCy + headR + 6 * SCHAAL);
+        ctx.lineTo(buitenX, buitenY);
+        ctx.stroke();
+        // Hand (klein cirkeltje aan einde zwaai)
         ctx.fillStyle = "#ffcc88";
         ctx.beginPath();
-        ctx.arc(cx, headTopY + headR, headR, 0, Math.PI * 2);
+        ctx.arc(buitenX, buitenY, 2.5 * SCHAAL, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Hoofd (rond, huid-kleurig met lichte randje)
+        ctx.fillStyle = "#ffd9a8";
+        ctx.beginPath();
+        ctx.arc(headCx, headCy, headR, 0, Math.PI * 2);
         ctx.fill();
         ctx.strokeStyle = "#a06030";
         ctx.lineWidth = 1.5 * SCHAAL;
         ctx.stroke();
-        // Lichaam (blauw shirt)
-        ctx.strokeStyle = "#3070d0";
-        ctx.lineWidth = 6 * SCHAAL;
+
+        // Gezichtje — twee zwarte oogjes + vrolijke mond
+        ctx.fillStyle = "#222";
         ctx.beginPath();
-        ctx.moveTo(cx, headTopY + headR * 2);
-        ctx.lineTo(cx, baseY - 22 * SCHAAL);
-        ctx.stroke();
-        // Armen omhoog (om de paal vast te houden)
-        ctx.lineWidth = 4 * SCHAAL;
+        ctx.arc(headCx - 3 * SCHAAL, headCy - 1 * SCHAAL, 1.5 * SCHAAL, 0, Math.PI * 2);
+        ctx.arc(headCx + 3 * SCHAAL, headCy - 1 * SCHAAL, 1.5 * SCHAAL, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = "#222";
+        ctx.lineWidth = 1.5 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(cx, headTopY + headR * 2 + 4 * SCHAAL);
-        ctx.lineTo(cx, headTopY + headR * 0.8);
+        ctx.arc(headCx, headCy + 2 * SCHAAL, 4 * SCHAAL, 0.15 * Math.PI, 0.85 * Math.PI);
         ctx.stroke();
+
+        // Partyhoedje boven het hoofd — driehoek met pompom
+        const hoedH = 14 * SCHAAL;
+        const hoedB = headR * 1.5;
+        const hoedTopY = headCy - headR - hoedH;
+        ctx.fillStyle = hoedKleur;
+        ctx.beginPath();
+        ctx.moveTo(headCx - hoedB / 2, headCy - headR + 2 * SCHAAL);
+        ctx.lineTo(headCx + hoedB / 2, headCy - headR + 2 * SCHAAL);
+        ctx.lineTo(headCx, hoedTopY);
+        ctx.closePath();
+        ctx.fill();
+        ctx.strokeStyle = hoedRand;
+        ctx.lineWidth = 1.5 * SCHAAL;
+        ctx.stroke();
+        // Pompom op de top
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(headCx, hoedTopY, 3 * SCHAAL, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.strokeStyle = hoedRand;
+        ctx.lineWidth = 1 * SCHAAL;
+        ctx.stroke();
+        // Streep onderaan hoed
+        ctx.fillStyle = hoedRand;
+        ctx.fillRect(headCx - hoedB / 2, headCy - headR + 1 * SCHAAL, hoedB, 2 * SCHAAL);
+
         // Benen (donker)
         ctx.strokeStyle = "#222";
         ctx.lineWidth = 5 * SCHAAL;
+        ctx.lineCap = "round";
         ctx.beginPath();
         ctx.moveTo(cx, baseY - 22 * SCHAAL);
         ctx.lineTo(cx - 9 * SCHAAL, baseY - 1 * SCHAAL);
@@ -1355,22 +1427,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const cx = h.x + h.breedte / 2;
       const cy = h.y + h.hoogte / 2;
       const swayY = Math.sin(h.fase) * 1.5 * SCHAAL;
-      // Subtiele rode glow-halo zodat haai opvalt tegen de donkere dungeon
-      ctx.shadowBlur = 18;
-      ctx.shadowColor = "rgba(255, 70, 60, 0.55)";
-      // Body — gradient van licht-grijs (rug) naar wit-blauw (buik)
+      // Sterke rood-oranje glow-halo zodat haai duidelijk opvalt
+      ctx.shadowBlur = 26;
+      ctx.shadowColor = "rgba(255, 80, 40, 0.85)";
+      // Donkere outline-laag (stevige zwarte rand voor max contrast)
+      ctx.fillStyle = "#0a1020";
+      ctx.beginPath();
+      ctx.ellipse(cx, cy + swayY, h.breedte / 2 + 3 * SCHAAL, h.hoogte / 2 + 3 * SCHAAL, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      // Body — sterker contrast: donkere rug, lichte buik
       const grad = ctx.createLinearGradient(0, h.y, 0, h.y + h.hoogte);
-      grad.addColorStop(0, "#8090a8");
-      grad.addColorStop(0.55, "#6a7a92");
+      grad.addColorStop(0, "#3a4a60");
+      grad.addColorStop(0.55, "#5a6a82");
+      grad.addColorStop(0.7, "#f0f4f8");
       grad.addColorStop(1, "#dde5f0");
       ctx.fillStyle = grad;
       ctx.beginPath();
       ctx.ellipse(cx, cy + swayY, h.breedte / 2, h.hoogte / 2, 0, 0, Math.PI * 2);
       ctx.fill();
-      ctx.shadowBlur = 0;
-      // Witte outline rond body voor contrast tegen water
-      ctx.strokeStyle = "rgba(255, 255, 255, 0.92)";
-      ctx.lineWidth = 2.5 * SCHAAL;
+      // Dikke witte outline rond body
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 3.5 * SCHAAL;
       ctx.beginPath();
       ctx.ellipse(cx, cy + swayY, h.breedte / 2, h.hoogte / 2, 0, 0, Math.PI * 2);
       ctx.stroke();
@@ -1457,6 +1535,61 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fill();
         ctx.stroke();
       }
+      ctx.restore();
+    }
+    function tekenVis(v) {
+      ctx.save();
+      ctx.translate(v.x, v.y);
+      // Sterke glow zodat vis duidelijk afsteekt tegen donkere dungeon
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = v.kleur;
+
+      // Body — ovaal, kleur per vis
+      const gr = v.grootte;
+      const grad = ctx.createLinearGradient(0, -gr * 0.6, 0, gr * 0.6);
+      grad.addColorStop(0, v.kleur);
+      grad.addColorStop(1, "#ffffff");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, gr, gr * 0.55, 0, 0, Math.PI * 2);
+      ctx.fill();
+      // Donker outline voor max contrast
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "#0a1830";
+      ctx.lineWidth = 2 * SCHAAL;
+      ctx.stroke();
+
+      // Staart — driehoek die met fase wiebelt voor leven
+      const swish = Math.sin(v.fase) * 4 * SCHAAL;
+      ctx.fillStyle = v.kleur;
+      ctx.beginPath();
+      ctx.moveTo(gr * 0.85, 0);
+      ctx.lineTo(gr * 1.55, -gr * 0.5 + swish);
+      ctx.lineTo(gr * 1.55, gr * 0.5 + swish);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      // Oog — wit met zwart pupil, opvallend
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(-gr * 0.55, -gr * 0.15, gr * 0.22, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.strokeStyle = "#0a1830";
+      ctx.lineWidth = 1 * SCHAAL;
+      ctx.stroke();
+      ctx.fillStyle = "#0a1830";
+      ctx.beginPath();
+      ctx.arc(-gr * 0.6, -gr * 0.15, gr * 0.10, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Vrolijke mond
+      ctx.strokeStyle = "#0a1830";
+      ctx.lineWidth = 1.5 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(-gr * 0.7, gr * 0.15, gr * 0.18, 0.1 * Math.PI, 0.9 * Math.PI);
+      ctx.stroke();
+
       ctx.restore();
     }
     function tekenPortal(p) {
@@ -2249,7 +2382,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         fans[i].x -= effSnelheid;
         if (fans[i].x + fans[i].breedte < -50) fans.splice(i, 1);
       }
-      // ───── DUNGEON-MODE-TIMER + HAAIEN ─────
+      // ───── DUNGEON-MODE-TIMER + HAAIEN + VISSEN ─────
       if (dungeonMode) {
         dungeonFrames++;
         if (dungeonFadeIn > 0) dungeonFadeIn--;
@@ -2265,6 +2398,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             dood: false,
           });
           haaiSpawnTeller = 180 + Math.floor(Math.random() * 180); // 3-6 sec
+        }
+        // Spawn vissen vaker — kleurig, decoratief, geen schade
+        visSpawnTeller--;
+        if (dungeonFadeIn === 0 && visSpawnTeller <= 0) {
+          const waterTop = H - 70 * SCHAAL;
+          vissen.push({
+            x: W + 30 * SCHAAL,
+            // Vissen zwemmen in het water-gebied (onder waterTop, boven de bodem)
+            y: waterTop + 10 * SCHAAL + Math.random() * (H - waterTop - 20 * SCHAAL),
+            grootte: (10 + Math.random() * 8) * SCHAAL,
+            fase: Math.random() * Math.PI * 2,
+            kleur: VIS_KLEUREN[Math.floor(Math.random() * VIS_KLEUREN.length)],
+            snelheid: 0.6 + Math.random() * 0.6,
+          });
+          visSpawnTeller = 25 + Math.floor(Math.random() * 30);
         }
         // Bij DUNGEON_DUUR: start exit-fade
         if (dungeonFrames === DUNGEON_DUUR) {
@@ -2300,6 +2448,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
         }
         if (h.x + h.breedte < -60 || h.dood) haaien.splice(i, 1);
+      }
+      // Beweeg vissen (decoratie — geen botsing met speler)
+      for (let i = vissen.length - 1; i >= 0; i--) {
+        const v = vissen[i];
+        v.x -= effSnelheid * 0.85 + v.snelheid;
+        v.fase += 0.18;
+        // lichte op-en-neer wiebel
+        v.y += Math.sin(v.fase) * 0.4;
+        if (v.x + v.grootte * 2 < -40) vissen.splice(i, 1);
       }
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
@@ -2945,6 +3102,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Fans (spandoek met highscore-naam) op achtergrond, vóór speler/obstakels
       for (const f of fans) tekenFanGroep(f);
+      // Vissen achter de speler/haaien zodat haaien voor blijven (= gevaarlijk = focus)
+      for (const v of vissen) tekenVis(v);
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
       for (const h of haaien) tekenHaai(h);
@@ -3535,6 +3694,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (particles[i].dood) particles.splice(i, 1);
         }
         for (const f of fans) tekenFanGroep(f);
+        for (const v of vissen) tekenVis(v);
         for (const o of obstakels) tekenObstakel(o);
         for (const h of haaien) tekenHaai(h);
         for (const sc of schansen) tekenSchans(sc);
