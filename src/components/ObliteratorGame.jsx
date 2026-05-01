@@ -171,7 +171,50 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const skinRef = useRef(selectedSkin);
   useEffect(() => { skinRef.current = selectedSkin; }, [selectedSkin]);
   // Trigger ref voor admin-activatie van Oblivion Pulse cutscene
-  const oblivionTriggerRef = useRef({ trigger: false });
+  const oblivionTriggerRef = useRef({ trigger: false, lastSeenEventId: 0 });
+
+  // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
+  // bij iedereen die op dat moment speelt de cutscene triggert.
+  useEffect(() => {
+    let mounted = true;
+    // Eerst de hoogste bestaande id ophalen zodat we OUDE events niet alsnog triggeren
+    (async () => {
+      try {
+        const { data } = await supabase
+          .from("oblivion_events")
+          .select("id")
+          .order("id", { ascending: false })
+          .limit(1);
+        if (mounted && data && data[0]) {
+          oblivionTriggerRef.current.lastSeenEventId = data[0].id;
+        }
+      } catch {}
+    })();
+    const channel = supabase
+      .channel("oblivion-events")
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "oblivion_events" },
+        (payload) => {
+          const ev = payload?.new;
+          if (!ev || !ev.id) return;
+          // Skip events ouder dan 90 sec (na app-reload niet retroactief triggeren)
+          try {
+            const t = new Date(ev.triggered_at).getTime();
+            if (Date.now() - t > 90_000) return;
+          } catch {}
+          // Vermijd dubbele trigger op hetzelfde event
+          if (ev.id <= oblivionTriggerRef.current.lastSeenEventId) return;
+          oblivionTriggerRef.current.lastSeenEventId = ev.id;
+          oblivionTriggerRef.current.trigger = true;
+        }
+      )
+      .subscribe();
+    return () => {
+      mounted = false;
+      try { supabase.removeChannel(channel); } catch {}
+    };
+  }, []);
   useEffect(() => {
     audioVolumeRef.current = { aan: geluidAan, volume };
     try { localStorage.setItem("obliterator-geluid-aan", geluidAan ? "1" : "0"); } catch {}
@@ -3342,6 +3385,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function update() {
       if (!spelLoopt) return;
       frameTeller++;
+      // Realtime/admin trigger? → start cutscene mid-game
+      checkOblivionTrigger();
 
       // ── CUTSCENE update (Oblivion Pulse intro) ──
       if (cutsceneFase !== "geen") {
@@ -6076,30 +6121,40 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       scoreBijLevelStart = score;
     }
 
-    // Admin trigger: Oblivion Pulse cutscene? (Eenmalig, reset trigger.)
-    if (oblivionTriggerRef.current && oblivionTriggerRef.current.trigger) {
-      oblivionTriggerRef.current.trigger = false;
-      cutsceneFase = "portal";
-      cutsceneFrames = 0;
-      // ruim alles op zodat cutscene zuiver begint
-      obstakels.length = 0;
-      ringen.length = 0;
-      platforms.length = 0;
-      plafondStekels.length = 0;
-      zwevendeMinen.length = 0;
-      schansen.length = 0;
-      portals.length = 0;
-      fans.length = 0;
-      bonusHarten.length = 0;
-      raketten.length = 0;
-      bombPickups.length = 0;
-      magneetPickups.length = 0;
-      slowMoPickups.length = 0;
-      flipPickups.length = 0;
-      vonken.length = 0;
-      // setup dramatisch openings-effect
-      shakeKracht = 14;
+    // Helper: Oblivion-Pulse trigger (kan elk moment afgaan via lokale admin-knop
+    // OF via realtime broadcast vanaf een andere speler).
+    function checkOblivionTrigger() {
+      if (
+        oblivionTriggerRef.current &&
+        oblivionTriggerRef.current.trigger &&
+        cutsceneFase === "geen" &&
+        !oblivionMode &&
+        !bossActief
+      ) {
+        oblivionTriggerRef.current.trigger = false;
+        cutsceneFase = "portal";
+        cutsceneFrames = 0;
+        // ruim alles op zodat cutscene zuiver begint — score blijft staan
+        obstakels.length = 0;
+        ringen.length = 0;
+        platforms.length = 0;
+        plafondStekels.length = 0;
+        zwevendeMinen.length = 0;
+        schansen.length = 0;
+        portals.length = 0;
+        fans.length = 0;
+        bonusHarten.length = 0;
+        raketten.length = 0;
+        bombPickups.length = 0;
+        magneetPickups.length = 0;
+        slowMoPickups.length = 0;
+        flipPickups.length = 0;
+        vonken.length = 0;
+        shakeKracht = 14;
+      }
     }
+    // Eerste check meteen bij init — admin die start met de knop ziet 'm direct
+    checkOblivionTrigger();
 
     raf = requestAnimationFrame(lus);
 
@@ -6428,15 +6483,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     </div>
                   </div>
                   <button
-                    onClick={() => {
+                    onClick={async () => {
+                      // 1. Lokaal direct triggeren zodat admin geen lag voelt
                       oblivionTriggerRef.current.trigger = true;
+                      // 2. Wereldwijd broadcasten via Supabase — alle spelers
+                      //    die op dit moment in OBLITERATOR zitten zien 'm.
+                      try {
+                        const { data: ins } = await supabase
+                          .from("oblivion_events")
+                          .insert({ triggered_by_name: (userName || "Admin").trim() })
+                          .select("id")
+                          .single();
+                        if (ins?.id) {
+                          // markeer als gezien zodat de eigen Realtime-subscribe niet
+                          // opnieuw triggert (dubbele cutscene)
+                          oblivionTriggerRef.current.lastSeenEventId = ins.id;
+                        }
+                      } catch {}
                       track("obliterator_started", {
                         source: "oblivion_admin",
                         personal_record: persoonlijkRecord || 0,
                         bonus_leven: bonusLeven || 0,
                         start_level: 1,
                       });
-                      setFase("spelen");
+                      if (fase !== "spelen") setFase("spelen");
                     }}
                     style={{
                       width: "100%", padding: "12px 14px", borderRadius: 10,
