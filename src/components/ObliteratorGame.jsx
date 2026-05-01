@@ -889,6 +889,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let bossWinAnim = 0;     // frames voor "BOSS DEFEATED!" hoera
     let bossInkomendLevel = 0; // het level waarnaar we doorgaan na de boss
     let bossPulse = 0;       // visueel pulserend
+    // Boss-intro: 2.5 sec voorscherm met "PAS OP! [naam]" — boss-attack-logic
+    // wordt geskipt zolang dit > 0.
+    let bossIntroFrames = 0;
+    const BOSS_INTRO_DUUR = 150;
+    // Dark-arena fade: paint zwarte overlay over wereld zodra bossActief.
+    // Lerpt 0..1 in/uit bij start/eind van boss-fight voor smooth overgang.
+    let bossArenaFade = 0;
+    // Naam per boss-fight (hetzelfde aantal als bossEmojis).
+    const BOSS_NAMES = [
+      "BOLT-9000", "ZARGON", "NEBULA", "KRAKEN", "DE WAARNEMER", "OCTO-PRIME",
+      "VIROX", "METEORA", "SATURNAR", "VOLTAR", "ASTRA", "GALAXOR",
+      "ORBITAR", "STING", "DRAGOR", "NEPTUNUS", "ECLIPSE", "COG", "REX",
+    ];
     // Boss-fight heeft eigen 3-levens: speler kan 3× geraakt worden voordat normale leven verloren gaat
     const BOSS_LEVENS_MAX = 3;
     let bossLevens = BOSS_LEVENS_MAX;
@@ -1049,6 +1062,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
+      bossIntroFrames = BOSS_INTRO_DUUR; // intro-overlay met naam, attack-logic geskipt
       // Boss-HP schaalt met level: L5=100, L10=140, L20=220, L50=500, L95=860, L100=onhaalbaar
       bossHp = BOSS_MAX_HP_BASE + Math.floor((naLevel - 5) / 5) * 40;
       bossMaxHpHuidig = bossHp;
@@ -6014,6 +6028,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // boss zweeft licht op-en-neer
         bossY = H * 0.42 + Math.sin(bossPulse * 0.5) * 18 * SCHAAL;
 
+        // INTRO: 2.5 sec lang alleen aankondiging — geen attacks, geen damage.
+        if (bossIntroFrames > 0) {
+          bossIntroFrames--;
+          spelerLasers.length = 0; // schoten worden niet geaccepteerd tijdens intro
+        } else {
         // SPELER-LASERS scrollen naar rechts, raken boss?
         for (let i = spelerLasers.length - 1; i >= 0; i--) {
           const l = spelerLasers[i];
@@ -6085,8 +6104,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             bossLasers.splice(i, 1);
           }
         }
+        } // einde else-tak (intro voorbij)
       }
       if (bossWinAnim > 0) bossWinAnim--;
+      // Boss-arena fade: 0..1, 60 frames in/uit. Wordt elders gerenderd als
+      // zwarte overlay voor "boss-fight in een aparte arena"-feel.
+      if (bossActief && bossArenaFade < 1) bossArenaFade = Math.min(1, bossArenaFade + 1 / 60);
+      if (!bossActief && bossArenaFade > 0) bossArenaFade = Math.max(0, bossArenaFade - 1 / 60);
     }
     function tekenLevens() {
       ctx.save();
@@ -6459,6 +6483,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // ───── BOSS-ARENA dark overlay ─────
+      // Faded in zodra bossActief, faded uit bij win — verandert het hele scherm
+      // in een donkere arena waar boss + speler oplichten. Apart van hellMode.
+      if (bossArenaFade > 0) {
+        ctx.fillStyle = `rgba(0, 0, 0, ${0.82 * bossArenaFade})`;
+        ctx.fillRect(0, 0, W, H);
+      }
       // ───── BOSS render ─────
       if (bossActief) {
         // boss-tint shift: licht (volle HP) → rood (HP=0)
@@ -6586,6 +6617,42 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
 
+      // BOSS-INTRO overlay: "PAS OP! [NAAM]" 2.5 sec lang bij start
+      if (bossActief && bossIntroFrames > 0) {
+        const t2 = bossIntroFrames / BOSS_INTRO_DUUR; // 1 → 0
+        const fadeIn = Math.min(1, (1 - t2) * 4);
+        const fadeOut = Math.min(1, t2 * 5);
+        const alpha = Math.min(fadeIn, fadeOut);
+        const scale = 1 + Math.sin((1 - t2) * Math.PI) * 0.12;
+        const bossNr = Math.floor(huidigLevel / 5) - 1;
+        const naamIdx = Math.min(BOSS_NAMES.length - 1, Math.max(0, bossNr));
+        const naam = BOSS_NAMES[naamIdx];
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.translate(W / 2, H * 0.42);
+        ctx.scale(scale, scale);
+        // "PAS OP!" rood met flickering glow
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "#ff3030";
+        ctx.fillStyle = "#ff5040";
+        ctx.font = `bold ${48 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("⚠ PAS OP! ⚠", 0, -50 * SCHAAL);
+        // Boss-naam goud-fel
+        ctx.shadowBlur = 36;
+        ctx.shadowColor = "#ffd54f";
+        ctx.fillStyle = "#ffd54f";
+        ctx.font = `bold ${66 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText(naam, 0, 18 * SCHAAL);
+        // Sub: "DE EINDBAAS"
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = "#fff";
+        ctx.fillStyle = "rgba(255,255,255,0.9)";
+        ctx.font = `bold ${20 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.fillText("— DE EINDBAAS —", 0, 70 * SCHAAL);
+        ctx.restore();
+      }
       // BOSS WIN banner
       if (bossWinAnim > 0) {
         const fade = Math.min(1, bossWinAnim / 30);
