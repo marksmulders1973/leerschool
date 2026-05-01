@@ -156,21 +156,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [editorLevelNaam, setEditorLevelNaam] = useState("Mijn level");
   const [editorOpslaan, setEditorOpslaan] = useState({ bezig: false, error: null, ok: false });
   const [editorLengte, setEditorLengte] = useState(4000);
-  const [editorTab, setEditorTab] = useState("maken"); // "maken" | "spelen"
+  const [editorTab, setEditorTab] = useState("maken"); // "maken" | "mijn" | "spelen"
   const [communityLevels, setCommunityLevels] = useState([]);
   const [communityLevelsLaden, setCommunityLevelsLaden] = useState(false);
+  const [mijnLevels, setMijnLevels] = useState([]);
+  const [mijnLevelsLaden, setMijnLevelsLaden] = useState(false);
+  // Bumpen om community/mijn-lijst opnieuw te laden na save/delete/toggle
+  const [levelsReloadTick, setLevelsReloadTick] = useState(0);
   const [actiefCustomLevel, setActiefCustomLevel] = useState(null); // {id, naam, obstakels, lengte, maker_naam}
   const customLevelRef = useRef(null);
   useEffect(() => { customLevelRef.current = actiefCustomLevel; }, [actiefCustomLevel]);
-  // Levels laden zodra speler-tab opent
+  // Levels laden zodra speler-tab opent — featured eerst, dan populair, dan recent
   useEffect(() => {
     if (fase !== "custom-editor" || editorTab !== "spelen") return;
     let cancelled = false;
     setCommunityLevelsLaden(true);
     supabase
       .from("obliterator_user_levels")
-      .select("id, naam, maker_naam, obstakels, lengte, plays, created_at")
+      .select("id, naam, maker_naam, obstakels, lengte, plays, featured, created_at")
       .eq("publiek", true)
+      .order("featured", { ascending: false })
+      .order("plays", { ascending: false })
       .order("created_at", { ascending: false })
       .limit(50)
       .then(({ data, error }) => {
@@ -179,7 +185,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         setCommunityLevelsLaden(false);
       });
     return () => { cancelled = true; };
-  }, [fase, editorTab]);
+  }, [fase, editorTab, levelsReloadTick]);
+  // Eigen levels laden zodra "Mijn"-tab opent (vereist login)
+  useEffect(() => {
+    if (fase !== "custom-editor" || editorTab !== "mijn") return;
+    if (!authUser?.id) { setMijnLevels([]); return; }
+    let cancelled = false;
+    setMijnLevelsLaden(true);
+    supabase
+      .from("obliterator_user_levels")
+      .select("id, naam, maker_naam, obstakels, lengte, plays, publiek, featured, created_at")
+      .eq("maker_user_id", authUser.id)
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (cancelled) return;
+        if (!error && Array.isArray(data)) setMijnLevels(data);
+        setMijnLevelsLaden(false);
+      });
+    return () => { cancelled = true; };
+  }, [fase, editorTab, authUser?.id, levelsReloadTick]);
   // Ghost-state voor PvP: opponent's laatst-bekende positie + score
   const ghostStateRef = useRef({ y: 0, vy: 0, score: 0, alive: true, name: "" });
   // PvP-eindstand (winner + scores) zodra match is afgerond
@@ -7504,7 +7528,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               const handleClear = () => {
                 if (window.confirm("Alles verwijderen?")) setEditorObstakels([]);
               };
-              const handleSave = async () => {
+              const handleSave = async (wilPubliek) => {
+                if (!authUser?.id) {
+                  setEditorOpslaan({ bezig: false, error: "Log in om levels op te slaan", ok: false });
+                  return;
+                }
                 if (editorObstakels.length === 0) {
                   setEditorOpslaan({ bezig: false, error: "Plaats eerst minstens 1 obstakel", ok: false });
                   return;
@@ -7515,17 +7543,44 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     .from("obliterator_user_levels")
                     .insert({
                       maker_naam: (userName || "Anoniem").trim(),
-                      maker_user_id: authUser?.id || null,
+                      maker_user_id: authUser.id,
                       naam: editorLevelNaam.trim() || "Naamloos level",
                       obstakels: editorObstakels,
                       lengte: editorLengte,
-                      publiek: true,
+                      publiek: wilPubliek === true,
                     });
                   if (error) throw error;
                   setEditorOpslaan({ bezig: false, error: null, ok: true });
+                  setLevelsReloadTick((t) => t + 1);
                   setTimeout(() => setEditorOpslaan((s) => ({ ...s, ok: false })), 2500);
                 } catch (e) {
+                  // Trigger-foutmeldingen (max 3 / max 1 publiek) komen ook hier binnen
                   setEditorOpslaan({ bezig: false, error: e?.message || "Opslaan mislukt", ok: false });
+                }
+              };
+              const handleToggleMijnPubliek = async (lv) => {
+                try {
+                  const { error } = await supabase
+                    .from("obliterator_user_levels")
+                    .update({ publiek: !lv.publiek })
+                    .eq("id", lv.id);
+                  if (error) throw error;
+                  setLevelsReloadTick((t) => t + 1);
+                } catch (e) {
+                  alert(e?.message || "Wijzigen mislukt");
+                }
+              };
+              const handleVerwijderMijn = async (lv) => {
+                if (!window.confirm(`"${lv.naam}" definitief verwijderen?`)) return;
+                try {
+                  const { error } = await supabase
+                    .from("obliterator_user_levels")
+                    .delete()
+                    .eq("id", lv.id);
+                  if (error) throw error;
+                  setLevelsReloadTick((t) => t + 1);
+                } catch (e) {
+                  alert(e?.message || "Verwijderen mislukt");
                 }
               };
               return (
@@ -7551,6 +7606,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       🛠️ Maken
                     </button>
                     <button
+                      onClick={() => setEditorTab("mijn")}
+                      style={{ flex: 1, padding: "8px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: editorTab === "mijn" ? "rgba(128,192,255,0.18)" : "rgba(255,255,255,0.04)", color: editorTab === "mijn" ? "#80c0ff" : "rgba(255,255,255,0.6)", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      👤 Mijn
+                    </button>
+                    <button
                       onClick={() => setEditorTab("spelen")}
                       style={{ flex: 1, padding: "8px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: editorTab === "spelen" ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)", color: editorTab === "spelen" ? "#69f0ae" : "rgba(255,255,255,0.6)", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}
                     >
@@ -7560,14 +7621,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   {editorTab === "spelen" ? (
                     <div>
                       <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginBottom: 10 }}>
-                        Levels gemaakt door spelers — tap "Spelen" om mee te doen.
+                        Publieke levels — 🏆 Featured staan bovenaan, daarna populair en recent.
                       </div>
                       {communityLevelsLaden && (
                         <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)" }}>Levels laden…</div>
                       )}
                       {!communityLevelsLaden && communityLevels.length === 0 && (
                         <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)", fontSize: 13 }}>
-                          Nog geen levels — tik op "🛠️ Maken" om de eerste te bouwen!
+                          Nog geen publieke levels — wees de eerste in "🛠️ Maken"!
                         </div>
                       )}
                       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -7577,13 +7638,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             style={{
                               display: "flex", alignItems: "center", gap: 10,
                               padding: "10px 12px", borderRadius: 10,
-                              background: "rgba(255,255,255,0.04)",
-                              border: "1px solid rgba(255,255,255,0.10)",
+                              background: lv.featured ? "rgba(255,200,60,0.08)" : "rgba(255,255,255,0.04)",
+                              border: lv.featured ? "1px solid rgba(255,200,60,0.45)" : "1px solid rgba(255,255,255,0.10)",
                             }}
                           >
                             <div style={{ flex: 1, minWidth: 0 }}>
-                              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-                                {lv.naam}
+                              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 6 }}>
+                                {lv.featured && <span style={{ fontSize: 11, color: "#ffcc40", background: "rgba(255,200,60,0.15)", padding: "2px 6px", borderRadius: 6, fontWeight: 700, letterSpacing: 0.3 }}>🏆 FEATURED</span>}
+                                <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>{lv.naam}</span>
                               </div>
                               <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>
                                 door {lv.maker_naam} · {Array.isArray(lv.obstakels) ? lv.obstakels.length : 0} obstakels · {lv.plays || 0}× gespeeld
@@ -7591,12 +7653,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             </div>
                             <button
                               onClick={() => {
-                                // play-count optimistisch ophogen
-                                supabase
-                                  .from("obliterator_user_levels")
-                                  .update({ plays: (lv.plays || 0) + 1 })
-                                  .eq("id", lv.id)
-                                  .then(() => {});
+                                supabase.rpc("increment_user_level_plays", { level_id: lv.id }).then(() => {});
                                 setActiefCustomLevel({
                                   id: lv.id,
                                   naam: lv.naam,
@@ -7619,6 +7676,102 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                           </div>
                         ))}
                       </div>
+                    </div>
+                  ) : editorTab === "mijn" ? (
+                    <div>
+                      {!authUser?.id ? (
+                        <div style={{ textAlign: "center", padding: "30px 16px", color: "rgba(255,255,255,0.7)", fontSize: 13 }}>
+                          <div style={{ fontSize: 32, marginBottom: 8 }}>🔒</div>
+                          <div style={{ fontWeight: 700, color: "#fff", marginBottom: 6 }}>Log in om je levels te zien</div>
+                          <div>Je eigen levels zijn gekoppeld aan je Studiebol-account.</div>
+                        </div>
+                      ) : (
+                        <>
+                          <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginBottom: 10 }}>
+                            Je eigen levels — max 3, waarvan max 1 publiek gedeeld.
+                          </div>
+                          {mijnLevelsLaden && (
+                            <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)" }}>Laden…</div>
+                          )}
+                          {!mijnLevelsLaden && mijnLevels.length === 0 && (
+                            <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)", fontSize: 13 }}>
+                              Nog geen eigen levels — bouw er een in "🛠️ Maken"!
+                            </div>
+                          )}
+                          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                            {mijnLevels.map((lv) => (
+                              <div
+                                key={lv.id}
+                                style={{
+                                  display: "flex", alignItems: "center", gap: 8,
+                                  padding: "10px 12px", borderRadius: 10,
+                                  background: "rgba(255,255,255,0.04)",
+                                  border: "1px solid rgba(255,255,255,0.10)",
+                                }}
+                              >
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                  <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", display: "flex", alignItems: "center", gap: 6 }}>
+                                    {lv.featured && <span style={{ fontSize: 10, color: "#ffcc40", background: "rgba(255,200,60,0.15)", padding: "2px 6px", borderRadius: 6, fontWeight: 700 }}>🏆</span>}
+                                    <span style={{ fontSize: 10, color: lv.publiek ? "#69f0ae" : "rgba(255,255,255,0.5)", background: lv.publiek ? "rgba(105,240,174,0.12)" : "rgba(255,255,255,0.06)", padding: "2px 6px", borderRadius: 6, fontWeight: 700 }}>
+                                      {lv.publiek ? "🌐 PUBLIEK" : "🔒 PRIVÉ"}
+                                    </span>
+                                    <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>{lv.naam}</span>
+                                  </div>
+                                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>
+                                    {Array.isArray(lv.obstakels) ? lv.obstakels.length : 0} obstakels · {lv.plays || 0}× gespeeld
+                                  </div>
+                                </div>
+                                <button
+                                  onClick={() => {
+                                    setActiefCustomLevel({
+                                      id: lv.id,
+                                      naam: lv.naam,
+                                      obstakels: Array.isArray(lv.obstakels) ? lv.obstakels : [],
+                                      lengte: lv.lengte || 4000,
+                                      maker_naam: lv.maker_naam,
+                                    });
+                                    setFase("spelen");
+                                  }}
+                                  title="Spelen"
+                                  style={{ padding: "8px 10px", borderRadius: 8, border: "none", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#0d1b2e", fontSize: 14, fontWeight: 800, cursor: "pointer" }}
+                                >
+                                  ▶️
+                                </button>
+                                <button
+                                  onClick={() => handleToggleMijnPubliek(lv)}
+                                  title={lv.publiek ? "Op privé zetten" : "Publiek delen (max 1)"}
+                                  style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "#fff", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                                >
+                                  {lv.publiek ? "🔒" : "🌐"}
+                                </button>
+                                <button
+                                  onClick={() => handleVerwijderMijn(lv)}
+                                  title="Verwijderen"
+                                  style={{ padding: "8px 10px", borderRadius: 8, border: "1px solid rgba(255,80,40,0.4)", background: "rgba(255,80,40,0.10)", color: "#ff8060", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                                >
+                                  🗑️
+                                </button>
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  ) : !authUser?.id ? (
+                    <div style={{ textAlign: "center", padding: "30px 16px", color: "rgba(255,255,255,0.85)" }}>
+                      <div style={{ fontSize: 48, marginBottom: 10 }}>🔐</div>
+                      <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 17, fontWeight: 700, color: "#fff", marginBottom: 8 }}>
+                        Log in om levels te bouwen
+                      </div>
+                      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.5, marginBottom: 16, maxWidth: 360, margin: "0 auto 16px" }}>
+                        Je hebt een Studiebol-account nodig om levels te maken, opslaan en delen. Spelen kan zonder account — kies "🎮 Spelen" hierboven.
+                      </div>
+                      <button
+                        onClick={() => onClose?.()}
+                        style={{ padding: "12px 22px", borderRadius: 12, border: "none", background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                      >
+                        Naar Studiebol om in te loggen
+                      </button>
                     </div>
                   ) : (
                   <>
@@ -7764,15 +7917,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       🗑️ Alles wissen
                     </button>
                   </div>
-                  <button
-                    onClick={handleSave}
-                    disabled={editorOpslaan.bezig || editorObstakels.length === 0}
-                    style={{ width: "100%", padding: "12px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 15, fontWeight: 800, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer", opacity: editorObstakels.length === 0 ? 0.5 : 1, marginBottom: 8 }}
-                  >
-                    {editorOpslaan.bezig ? "Opslaan…" : "💾 Opslaan in cloud"}
-                  </button>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", textAlign: "center" }}>
-                    Tap "🎮 Spelen" bovenaan om dit level + andere community-levels te spelen.
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 8 }}>
+                    <button
+                      onClick={() => handleSave(false)}
+                      disabled={editorOpslaan.bezig || editorObstakels.length === 0}
+                      style={{ padding: "12px 8px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "#fff", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer", opacity: editorObstakels.length === 0 ? 0.5 : 1 }}
+                    >
+                      {editorOpslaan.bezig ? "…" : "🔒 Opslaan privé"}
+                    </button>
+                    <button
+                      onClick={() => handleSave(true)}
+                      disabled={editorOpslaan.bezig || editorObstakels.length === 0}
+                      style={{ padding: "12px 8px", borderRadius: 10, border: "none", background: "linear-gradient(135deg, #00c853, #00a040)", color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 800, cursor: editorObstakels.length === 0 ? "not-allowed" : "pointer", opacity: editorObstakels.length === 0 ? 0.5 : 1 }}
+                    >
+                      {editorOpslaan.bezig ? "…" : "🌐 Opslaan & delen"}
+                    </button>
+                  </div>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", textAlign: "center", lineHeight: 1.45 }}>
+                    Max 3 levels per speler · max 1 publiek tegelijk gedeeld.<br />
+                    Bekijk + beheer je levels onder "👤 Mijn".
                   </div>
                   </>
                   )}
