@@ -83,6 +83,7 @@ async function flushPendingScores() {
 
 const SESSIE_KEY_PREFIX = "obliterator-sessies-";
 const BONUS_KEY_PREFIX = "obliterator-bonus-";
+const MUNTEN_KEY_PREFIX = "obliterator-munten-";
 
 // Vaste lijst van admin-spelernamen (lowercase). Het admin-paneel blijft
 // bij deze namen — verandert NIET als iemand het wereld-record verbreekt.
@@ -160,7 +161,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
   const sessieKey = SESSIE_KEY_PREFIX + (userName || "anon");
   const bonusKey = BONUS_KEY_PREFIX + (userName || "anon");
+  const muntenKey = MUNTEN_KEY_PREFIX + (userName || "anon");
   const [bonusLeven, setBonusLeven] = useState(() => leesInt(bonusKey));
+  // Munten = lifetime ring-pickups. Linear: 1 ring = 1 munt.
+  // Wordt later valuta voor custom-level-editor (premium obstakels).
+  const [munten, setMunten] = useState(() => leesInt(muntenKey));
+  const muntenRef = useRef(munten);
+  useEffect(() => { muntenRef.current = munten; }, [munten]);
+  // Bij elke fase-overgang vanuit 'spelen' (dood, vraag, welkom, menu): herlees munten
+  // uit localStorage — de game-loop heeft 'm tijdens spelen geupdate via de ref.
+  useEffect(() => {
+    if (fase !== "spelen") {
+      try {
+        const fresh = leesInt(muntenKey);
+        if (fresh !== munten) setMunten(fresh);
+      } catch {}
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [fase, muntenKey]);
 
   // vraag-state
   const [vraag, setVraag] = useState(null);
@@ -4840,6 +4858,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
           r.opgepakt = true;
           streak++;
+          // Munten: 1 ring = 1 munt, persistent over sessies (voor toekomstige
+          // custom-level-editor). Update via ref + persist op localStorage —
+          // React-state-update doen we lager bij nieuwe waarde.
+          muntenRef.current += 1;
+          try { schrijfInt(muntenKey, muntenRef.current); } catch {}
           const oudeMultiplier = multiplier;
           multiplier = Math.min(5, 1 + Math.floor(streak / 5));
           if (multiplier > oudeMultiplier) {
@@ -6558,8 +6581,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 Jouw record: <strong>{persoonlijkRecord}</strong>
               </p>
             )}
-            <p style={{ color: "#ff8050", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 14 : 6 }}>
+            <p style={{ color: "#ff8050", fontSize: isPortrait ? 14 : 12, marginBottom: 6 }}>
               {Array(3).fill("❤️").join(" ")}
+            </p>
+            <p style={{ color: "#ffd54f", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 14 : 6, fontWeight: 700 }}>
+              💍 {munten} {munten === 1 ? "munt" : "munten"}
+              <span style={{ color: "rgba(255,255,255,0.5)", fontWeight: 500, marginLeft: 6, fontSize: isPortrait ? 11 : 10 }}>
+                (uit gepakte ringen — geef uit in custom-editor)
+              </span>
             </p>
 
             {/* Mini legenda — compact in landscape */}
@@ -6600,6 +6629,40 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
+            {/* Custom Levels-tegel — eigen levels maken (editor komt binnenkort) */}
+            <button
+              onClick={() => alert(
+                `🎨 Custom Levels Editor\n\n` +
+                `Je hebt 💍 ${munten} ${munten === 1 ? "munt" : "munten"} gespaard.\n\n` +
+                `De editor zelf komt in een volgende update — daarin kun je obstakels op je eigen level plaatsen. ` +
+                `Sommige obstakels worden gratis, andere kosten munten (en jij admin's krijgen alles gratis).\n\n` +
+                `Voor nu: blijf ringen pakken om je portemonnee te vullen!`
+              )}
+              style={{
+                width: "100%",
+                padding: "12px 14px",
+                marginBottom: 12,
+                borderRadius: 12,
+                background: "linear-gradient(135deg, #ff9d40, #cc6020)",
+                border: "none",
+                color: "#fff",
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 15, fontWeight: 700,
+                cursor: "pointer",
+                boxShadow: "0 4px 18px rgba(255,157,64,0.4)",
+                letterSpacing: 0.5,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 8,
+              }}
+            >
+              <span>🎨 Custom Levels</span>
+              <span style={{ fontSize: 11, fontWeight: 600, opacity: 0.9, background: "rgba(0,0,0,0.25)", padding: "3px 8px", borderRadius: 999 }}>
+                💍 {munten} · binnenkort
+              </span>
+            </button>
+
             {/* 1v1-uitdaging via WhatsApp — alleen als parent-component dit ondersteunt */}
             {onChallengeFriend && (
               <button
