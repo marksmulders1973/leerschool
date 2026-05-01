@@ -372,6 +372,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let scoreElText = 0;
     const startLevens = 3 + bonusLeven;
     const MAX_LEVENS = 5;
+    // ── HP-systeem (NEW) ──
+    // Per leven krijgt speler 100% hp. Spike-hit = -25% hp. Bij hp ≤ 0 →
+    // 1 leven kwijt + hp reset naar 100. Hartjes/schatkist herstellen +25%
+    // hp eerst, en pas wanneer hp al 100 is geven ze +1 leven.
+    const HP_MAX = 100;
+    const HP_PER_HIT = 25;
+    let hp = HP_MAX;
+    let hpFlashTeller = 0; // visuele flash bij hit
+    // ── Afremmen door blok-obstakel (NEW) ──
+    // Blokken (type 2) doen geen schade meer maar remmen de wereld af.
+    // Voor solo én later co-op (snelheids-modus): tijd-verlies ipv leven-verlies.
+    let afgeremFrames = 0;
+    const AFGEREMD_DUUR = 35;
+    const AFGEREMD_FACTOR = 0.30; // wereld op 30% snelheid tijdens afremmen
+    let blokHitX = -999; // laatste blok-X om dubbele-hit te voorkomen
     let levens = startLevens;
     let streak = 0;
     let multiplier = 1;
@@ -2225,7 +2240,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // anders zou de level-tijd-progressie ook in de war raken). Achtergrond-pattern-offsets blijven op
       // spelSnelheid om visuele jitter bij in/uit-fade te voorkomen.
       const slowMul = slowFrames > 0 ? SLOW_FACTOR : 1;
-      effSnelheid = spelSnelheid * slowMul;
+      // afgeremFrames > 0 = botste tegen blok, wereld op AFGEREMD_FACTOR snelheid
+      const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
+      effSnelheid = spelSnelheid * slowMul * afremMul;
+      if (afgeremFrames > 0) afgeremFrames--;
+      if (hpFlashTeller > 0) hpFlashTeller--;
       // tijdens boss: spelTijd telt niet door (level-progressie pauzeert)
       if (bossActief) frameTeller--;
 
@@ -2351,7 +2370,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= effSnelheid;
-        if (vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) { levenVerlies(); return; }
+        if (vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) {
+          // Type 0/1 = spikes → HP-damage; type 2 = blok → afremmen ipv damage
+          if (o.type === 2) afremTotale(o);
+          else { hitTotale(); if (!spelLoopt) return; }
+        }
         if (!o.gescoord && o.x + o.breedte < speler.x) {
           o.gescoord = true;
           aantalObstakelsTotaal++; // teller voor pickups (niet voor score)
@@ -2703,6 +2726,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!s.opgepakt && !loopActief && botst(sb, kBox)) {
           s.opgepakt = true;
           score += 25;
+          // schatkist herstelt ook 25% hp (water-wereld bonus voelt nu écht waardevol)
+          hp = Math.min(HP_MAX, hp + HP_PER_HIT);
           piep(660, 0.08, "sine", 0.12);
           setTimeout(() => piep(990, 0.08, "sine", 0.10), 60);
           setTimeout(() => piep(1320, 0.10, "sine", 0.10), 130);
@@ -2731,10 +2756,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (!h.opgepakt && dist < (h.grootte + speler.breedte) / 2) {
           h.opgepakt = true;
-          if (levens < MAX_LEVENS) {
+          // Eerst hp herstellen tot 100, daarna pas een leven erbij.
+          // Bij 100 hp én max levens → bonus-punten.
+          if (hp < HP_MAX) {
+            hp = Math.min(HP_MAX, hp + HP_PER_HIT);
+          } else if (levens < MAX_LEVENS) {
             levens++;
           } else {
-            score += 5; // cap bereikt: bonus-punten ipv leven
+            score += 5; // alles vol: bonus-punten ipv leven
           }
           piep(880, 0.06, "sine", 0.15);
           setTimeout(() => piep(1320, 0.08, "sine", 0.12), 50);
@@ -2827,8 +2856,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             && speler.x + m < ps.x + ps.breedte - m
             && speler.y + m < stekelBot
           ) {
-            levenVerlies();
-            return;
+            // plafond-stekel = spike → HP-damage ipv instant kill
+            hitTotale();
+            if (!spelLoopt) return;
           }
         }
         if (ps.x + ps.breedte < -10) plafondStekels.splice(i, 1);
@@ -3212,6 +3242,44 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (heeft) { ctx.shadowBlur = 14; ctx.shadowColor = "#ff4040"; } else { ctx.shadowBlur = 0; }
         ctx.fillText(heeft ? "❤️" : "🖤", 12 + i * 28 * SCHAAL, 78 * SCHAAL);
       }
+      ctx.restore();
+      // HP-balk vlak onder de hartjes — toont schade-buffer voor huidige leven
+      tekenHpBalk();
+    }
+    function tekenHpBalk() {
+      const balkX = 12;
+      const balkY = (78 + 28) * SCHAAL;
+      const balkW = 110 * SCHAAL;
+      const balkH = 8 * SCHAAL;
+      const fractie = Math.max(0, Math.min(1, hp / HP_MAX));
+
+      ctx.save();
+      // achtergrond donker
+      ctx.fillStyle = "rgba(0,0,0,0.55)";
+      ctx.fillRect(balkX - 1, balkY - 1, balkW + 2, balkH + 2);
+      // gevulde gedeelte: groen → geel → rood naarmate hp daalt
+      let kleur;
+      if (fractie > 0.6) kleur = "#69f0ae";
+      else if (fractie > 0.3) kleur = "#ffcc40";
+      else kleur = "#ff5040";
+      // pulserend rood-flits net na hit
+      const flits = hpFlashTeller > 0 ? Math.sin(frameTeller * 0.5) * 0.3 + 0.7 : 1;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = kleur;
+      ctx.fillStyle = kleur;
+      ctx.globalAlpha = flits;
+      ctx.fillRect(balkX, balkY, balkW * fractie, balkH);
+      ctx.globalAlpha = 1;
+      // outline + kleine HP-tekst
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "rgba(255,255,255,0.55)";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(balkX - 0.5, balkY - 0.5, balkW + 1, balkH + 1);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = `bold ${10 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      ctx.fillText(`HP ${Math.round(hp)}`, balkX + balkW + 6, balkY - 1);
       ctx.restore();
     }
 
@@ -3957,6 +4025,33 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       if (spelLoopt) raf = requestAnimationFrame(lus);
     }
+    // Spike-hit: trekt HP_PER_HIT van hp af. Bij hp ≤ 0 → leven kwijt
+    // + hp reset. Korte i-frames via hpFlashTeller voorkomen dat 1 spike
+    // direct meerdere keren raakt.
+    function hitTotale() {
+      if (hpFlashTeller > 0) return; // i-frames actief
+      hp -= HP_PER_HIT;
+      hpFlashTeller = 45; // ~0.75 sec invincibility na hit
+      shakeKracht = Math.max(shakeKracht, 10);
+      // rode hit-burst
+      spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 14, "#ff4040", { spread: 6, opwaarts: 1.5, leven: 22, grootte: 4, glow: 14 });
+      piep(180, 0.10, "triangle", 0.14);
+      if (hp <= 0) {
+        hp = HP_MAX; // reset voor volgende leven
+        levenVerlies();
+      }
+    }
+    // Blok-hit: remt de wereld af, geen damage. Korte cooldown via blokHitX
+    // zodat dezelfde blok-collision niet elke frame hertriggert.
+    function afremTotale(o) {
+      if (blokHitX === o.x) return; // al geraakt deze blok
+      blokHitX = o.x;
+      afgeremFrames = AFGEREMD_DUUR;
+      shakeKracht = Math.max(shakeKracht, 6);
+      spawnParticles(speler.x + speler.breedte, speler.y + speler.hoogte / 2, 10, "#ffcc40", { spread: 4, opwaarts: 1, leven: 18, grootte: 3, glow: 10 });
+      spawnParticles(speler.x + speler.breedte, speler.y + speler.hoogte / 2, 6, "#ffffff", { spread: 3, opwaarts: 1, leven: 14, grootte: 2.5, glow: 8 });
+      piep(140, 0.06, "triangle", 0.10);
+    }
     function levenVerlies() {
       spelLoopt = false;
       shakeKracht = 22;
@@ -4062,6 +4157,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       schatkisten.length = 0;
       bubbels.length = 0;
       schatkistSpawnTeller = 480;
+      hp = HP_MAX;
+      hpFlashTeller = 0;
+      afgeremFrames = 0;
+      blokHitX = -999;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
