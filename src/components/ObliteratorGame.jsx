@@ -962,25 +962,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // grasLicht/grasDonker zijn de twee tinten van de gras-band bovenop de grond.
     const BIOMES = [
       // Level 1 — Grass Hills (Super Mario Land 1-1 vibe)
-      { naam:'GRASS HILLS', stijl:'cheerful', emoji:['🌳','🌻','☁️','🦋','⭐'], bgTop:[120,200,235], bgBot:[170,225,245], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,250,200], schedel:[255,240,200], glow:[255,220,120], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[141,198,63], grasDonker:[79,138,42] },
+      { naam:'GRASS HILLS', stijl:'cheerful', toonsoort:'majeur', bpm:105, emoji:['🌳','🌻','☁️','🦋','⭐'], bgTop:[120,200,235], bgBot:[170,225,245], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,250,200], schedel:[255,240,200], glow:[255,220,120], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[141,198,63], grasDonker:[79,138,42] },
       // Level 2 — Pink Forest
-      { naam:'PINK FOREST', stijl:'cheerful', emoji:['🌸','🌷','🦋','🌳','💖'], bgTop:[180,225,245], bgBot:[245,210,225], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,220,240], schedel:[255,220,240], glow:[255,180,210], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[245,176,207], grasDonker:[230,69,122] },
+      { naam:'PINK FOREST', stijl:'cheerful', toonsoort:'majeur', bpm:110, emoji:['🌸','🌷','🦋','🌳','💖'], bgTop:[180,225,245], bgBot:[245,210,225], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,220,240], schedel:[255,220,240], glow:[255,180,210], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[245,176,207], grasDonker:[230,69,122] },
       // Level 3 — Sky Island (Sonic Hill Top vibe)
-      { naam:'SKY ISLAND', stijl:'cheerful', emoji:['☁️','🪂','🦅','⭐','✨'], bgTop:[170,220,250], bgBot:[210,240,250], bakstenenLicht:[160,110,60], bakstenenDonker:[110,75,40], bakstenenHighlight:[220,170,110], lichtbundel:[255,255,220], schedel:[255,240,200], glow:[180,220,255], grondLicht:[160,110,60], grondDonker:[90,60,30], grasLicht:[160,220,140], grasDonker:[100,170,90] },
+      { naam:'SKY ISLAND', stijl:'cheerful', toonsoort:'majeur', bpm:115, emoji:['☁️','🪂','🦅','⭐','✨'], bgTop:[170,220,250], bgBot:[210,240,250], bakstenenLicht:[160,110,60], bakstenenDonker:[110,75,40], bakstenenHighlight:[220,170,110], lichtbundel:[255,255,220], schedel:[255,240,200], glow:[180,220,255], grondLicht:[160,110,60], grondDonker:[90,60,30], grasLicht:[160,220,140], grasDonker:[100,170,90] },
       // Level 4 — Sunset Beach
-      { naam:'SUNSET BEACH', stijl:'cheerful', emoji:['🌅','🌴','🐚','🦩','⛵'], bgTop:[255,180,140], bgBot:[255,210,180], bakstenenLicht:[210,170,120], bakstenenDonker:[160,125,80], bakstenenHighlight:[245,210,170], lichtbundel:[255,210,150], schedel:[255,230,200], glow:[255,180,120], grondLicht:[210,170,120], grondDonker:[140,105,65], grasLicht:[180,210,120], grasDonker:[120,160,80] },
+      { naam:'SUNSET BEACH', stijl:'cheerful', toonsoort:'majeur', bpm:120, emoji:['🌅','🌴','🐚','🦩','⛵'], bgTop:[255,180,140], bgBot:[255,210,180], bakstenenLicht:[210,170,120], bakstenenDonker:[160,125,80], bakstenenHighlight:[245,210,170], lichtbundel:[255,210,150], schedel:[255,230,200], glow:[255,180,120], grondLicht:[210,170,120], grondDonker:[140,105,65], grasLicht:[180,210,120], grasDonker:[120,160,80] },
       // Level 5 — Desert Oasis
-      { naam:'DESERT OASIS', stijl:'cheerful', emoji:['🌵','☀️','🐪','🌴','🪨'], bgTop:[255,210,140], bgBot:[255,225,175], bakstenenLicht:[210,165,90], bakstenenDonker:[160,120,55], bakstenenHighlight:[245,205,135], lichtbundel:[255,250,180], schedel:[255,240,180], glow:[255,200,80], grondLicht:[210,165,90], grondDonker:[140,100,50], grasLicht:[180,200,90], grasDonker:[110,135,55] },
+      { naam:'DESERT OASIS', stijl:'cheerful', toonsoort:'majeur', bpm:125, emoji:['🌵','☀️','🐪','🌴','🪨'], bgTop:[255,210,140], bgBot:[255,225,175], bakstenenLicht:[210,165,90], bakstenenDonker:[160,120,55], bakstenenHighlight:[245,205,135], lichtbundel:[255,250,180], schedel:[255,240,180], glow:[255,200,80], grondLicht:[210,165,90], grondDonker:[140,100,50], grasLicht:[180,200,90], grasDonker:[110,135,55] },
       // Level 6 — Ice Plateau (cheerful winter, niet sci-fi)
-      { naam:'ICE PLATEAU', stijl:'cheerful', emoji:['❄️','⛄','🐧','🌨️','🧊'], bgTop:[180,220,245], bgBot:[225,240,250], bakstenenLicht:[140,165,195], bakstenenDonker:[100,125,155], bakstenenHighlight:[200,220,240], lichtbundel:[255,255,255], schedel:[230,240,255], glow:[180,220,255], grondLicht:[140,165,195], grondDonker:[90,115,145], grasLicht:[235,245,255], grasDonker:[180,200,225] },
+      { naam:'ICE PLATEAU', stijl:'cheerful', toonsoort:'majeur', bpm:120, emoji:['❄️','⛄','🐧','🌨️','🧊'], bgTop:[180,220,245], bgBot:[225,240,250], bakstenenLicht:[140,165,195], bakstenenDonker:[100,125,155], bakstenenHighlight:[200,220,240], lichtbundel:[255,255,255], schedel:[230,240,255], glow:[180,220,255], grondLicht:[140,165,195], grondDonker:[90,115,145], grasLicht:[235,245,255], grasDonker:[180,200,225] },
       // Level 7 — Alien Meadow (cheerful sci-fi: paarse lucht, cyan gras)
-      { naam:'ALIEN MEADOW', stijl:'cheerful', emoji:['🌌','👽','🛸','🌟','🪐'], bgTop:[180,150,235], bgBot:[220,200,250], bakstenenLicht:[120,90,170], bakstenenDonker:[80,60,120], bakstenenHighlight:[170,140,220], lichtbundel:[200,180,255], schedel:[230,200,255], glow:[180,140,255], grondLicht:[120,90,170], grondDonker:[70,50,110], grasLicht:[140,255,200], grasDonker:[60,180,140] },
+      { naam:'ALIEN MEADOW', stijl:'cheerful', toonsoort:'majeur', bpm:130, emoji:['🌌','👽','🛸','🌟','🪐'], bgTop:[180,150,235], bgBot:[220,200,250], bakstenenLicht:[120,90,170], bakstenenDonker:[80,60,120], bakstenenHighlight:[170,140,220], lichtbundel:[200,180,255], schedel:[230,200,255], glow:[180,140,255], grondLicht:[120,90,170], grondDonker:[70,50,110], grasLicht:[140,255,200], grasDonker:[60,180,140] },
       // Level 8 — Volcano Valley (overgang naar donker — boss-vibes beginnen)
-      { naam:'VOLCANO VALLEY', stijl:'donker', emoji:['🌋','🔥','🪨','⚡','💀'], bgTop:[60,15,15], bgBot:[100,25,15], bakstenenLicht:[90,30,20], bakstenenDonker:[50,15,8], bakstenenHighlight:[180,60,30], lichtbundel:[255,130,40], schedel:[255,180,140], glow:[255,80,30], grondLicht:[90,30,20], grondDonker:[40,12,8], grasLicht:[80,30,20], grasDonker:[40,15,10] },
+      { naam:'VOLCANO VALLEY', stijl:'donker', toonsoort:'mineur', bpm:150, emoji:['🌋','🔥','🪨','⚡','💀'], bgTop:[60,15,15], bgBot:[100,25,15], bakstenenLicht:[90,30,20], bakstenenDonker:[50,15,8], bakstenenHighlight:[180,60,30], lichtbundel:[255,130,40], schedel:[255,180,140], glow:[255,80,30], grondLicht:[90,30,20], grondDonker:[40,12,8], grasLicht:[80,30,20], grasDonker:[40,15,10] },
       // Level 9 — Crystal Cave
-      { naam:'CRYSTAL CAVE', stijl:'donker', emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,40], bgBot:[60,42,80], bakstenenLicht:[110,80,140], bakstenenDonker:[60,42,90], bakstenenHighlight:[200,160,255], lichtbundel:[255,220,255], schedel:[255,240,255], glow:[200,150,255], grondLicht:[80,52,110], grondDonker:[24,14,40], grasLicht:[80,60,90], grasDonker:[40,30,50] },
+      { naam:'CRYSTAL CAVE', stijl:'donker', toonsoort:'mineur', bpm:165, emoji:['💎','✨','⚡','🌟','🔱'], bgTop:[28,18,40], bgBot:[60,42,80], bakstenenLicht:[110,80,140], bakstenenDonker:[60,42,90], bakstenenHighlight:[200,160,255], lichtbundel:[255,220,255], schedel:[255,240,255], glow:[200,150,255], grondLicht:[80,52,110], grondDonker:[24,14,40], grasLicht:[80,60,90], grasDonker:[40,30,50] },
       // Level 10 — Black Hole (eindbaas-arena)
-      { naam:'BLACK HOLE', stijl:'donker', emoji:['🌌','🕳️','🪐','⭐','🛸'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16], grasLicht:[40,20,60], grasDonker:[20,10,30] },
+      { naam:'BLACK HOLE', stijl:'donker', toonsoort:'mineur', bpm:180, emoji:['🌌','🕳️','🪐','⭐','🛸'], bgTop:[6,2,16], bgBot:[18,4,30], bakstenenLicht:[60,20,80], bakstenenDonker:[26,10,40], bakstenenHighlight:[140,60,200], lichtbundel:[200,80,255], schedel:[230,180,255], glow:[180,80,255], grondLicht:[36,12,52], grondDonker:[8,2,16], grasLicht:[40,20,60], grasDonker:[20,10,30] },
     ];
     // 10 bass-tonen + 10 BPM-waarden per level (gradueel sneller bij hoger level)
     const BIOOM_BASSWORTELS = [55, 65, 49, 73, 58, 62, 69, 51, 78, 46];
@@ -1117,16 +1117,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function setBiomeVoorLevel(lvl) {
       const idx = Math.min(BIOMES.length - 1, lvl - 1);
       if (idx === huidigBioom && bioomFade >= 1) return; // al die biome, niets te doen
-      // Crossfade: bewaar de huidige biome in nextBioom (zo blijft 'ie zichtbaar
-      // zolang bioomFade < 1) en zet huidigBioom = idx. checkBioomWissel ramt
-      // bioomFade van 0 naar 1 over BIOOM_FADE_DUUR frames; biomeKleur lerpt
-      // ondertussen van nextBioom (oud) naar huidigBioom (nieuw).
       nextBioom = huidigBioom;
       huidigBioom = idx;
       bioomFade = 0;
       muziek.bassWortel = BIOOM_BASSWORTELS[idx] || 55;
-      muziek.bpm = BPM_PER_LEVEL[idx] || 160;
-      // LEVEL UP flash met nieuwe biome-naam
+      // BPM en toonsoort per biome — cheerful biomes lichter & majeur, donker zwaarder & mineur
+      muziek.bpm = BIOMES[idx]?.bpm || BPM_PER_LEVEL[idx] || 160;
+      muziek.toonsoort = BIOMES[idx]?.toonsoort || "mineur";
       levelUpFlash = LEVEL_UP_DUUR;
       levelUpNaam = BIOMES[idx]?.naam || '';
     }
@@ -1190,7 +1187,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // ---------- HARDCORE MUZIEK ----------
     const muziek = {
       draait: false, bpm: 160, beat: 0, startTijd: 0, masterGain: null, noiseBuffer: null,
-      bassRiff: [0,0,7,0,0,5,0,3,0,0,7,0,10,8,7,5], bassWortel: 55, schedTimer: null
+      bassRiff: [0,0,7,0,0,5,0,3,0,0,7,0,10,8,7,5], bassWortel: 55, schedTimer: null,
+      toonsoort: "mineur",
     };
     function maakNoiseBuffer() {
       if (muziek.noiseBuffer) return muziek.noiseBuffer;
@@ -1296,8 +1294,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     // Eenvoudige 16-stap motief — undefined = stilte. Speelt rustig over de pad.
+    // Mineur (donker biome): kleine terts (3) maakt 'm zwaar/mysterieus.
     const KALM_MOTIEF = [0, undefined, 7, undefined, 12, undefined, 7, undefined,
                          5, undefined, 3, undefined, 0, undefined, undefined, undefined];
+    // Majeur-variant (cheerful biome): grote terts (4) → vrolijk arpeggio.
+    // Zelfde ritme + structuur, alleen de tertonoot verschilt.
+    const KALM_MAJEUR_MOTIEF = [0, undefined, 7, undefined, 12, undefined, 7, undefined,
+                                5, undefined, 4, undefined, 0, undefined, undefined, undefined];
 
     // Intense motief (L50+) — 16 stappen, mineur-getint, snelle arpeggio's.
     // Halve-tonen vanaf bassWortel (transponeerd per biome).
@@ -1337,10 +1340,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const noot = INTENSE_MELODIE[stap];
           if (noot !== undefined) muziekStem(t, noot, tijdPer16 * 1.5);
         } else {
-          // Calm track (L1-49): pad + sparse melodie
+          // Calm track (L1-49): pad + sparse melodie. Toonsoort volgt biome —
+          // cheerful (majeur) biomes klinken vrolijker, donkere blijven mineur.
           if (stap === 0) muziekPad(t, 0, tijdPer16 * 16);
           if (stap === 8) muziekPad(t, 7, tijdPer16 * 8);
-          const noot = KALM_MOTIEF[stap];
+          const motief = muziek.toonsoort === "majeur" ? KALM_MAJEUR_MOTIEF : KALM_MOTIEF;
+          const noot = motief[stap];
           if (noot !== undefined) muziekKalmeNoot(t, noot, tijdPer16 * 3);
         }
 
@@ -1690,13 +1695,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     function tekenGrond() {
       const grondTop = GROND_Y + SPELER_GROOTTE;
-      const grad = ctx.createLinearGradient(0, grondTop, 0, H);
+      const cheerful = cheerfulMix();
+      // Cheerful biomes: aarde is een drijvend platform-band met onderrand.
+      // Donker biomes: aarde loopt door tot canvas-bottom (atmospheric).
+      const bandActief = cheerful > 0.5;
+      const GROND_DIKTE = 80 * SCHAAL;
+      const grondBottom = bandActief ? grondTop + GROND_DIKTE : H;
+      const grad = ctx.createLinearGradient(0, grondTop, 0, grondBottom);
       grad.addColorStop(0, biomeKleur("grondLicht")); grad.addColorStop(1, biomeKleur("grondDonker"));
-      ctx.fillStyle = grad; ctx.fillRect(0, grondTop, W, H - grondTop);
+      ctx.fillStyle = grad; ctx.fillRect(0, grondTop, W, grondBottom - grondTop);
       const offset = (frameTeller * spelSnelheid) % BAKSTEEN_W;
       ctx.save();
       ctx.globalAlpha = 0.5;
-      for (let y = grondTop; y < H; y += BAKSTEEN_H) {
+      for (let y = grondTop; y < grondBottom; y += BAKSTEEN_H) {
         const rij = Math.floor((y - grondTop) / BAKSTEEN_H);
         const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
         for (let x = -BAKSTEEN_W - offset + xOff; x < W + BAKSTEEN_W; x += BAKSTEEN_W) {
@@ -1707,21 +1718,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       ctx.restore();
-      // Gras-band bovenop de aarde — Mario-stijl bobbel-randje. Opacity volgt
-      // cheerfulMix() zodat de band fade-in/out tussen donker ↔ cheerful.
-      const cheerful = cheerfulMix();
+      // Top + onderrand gras-bobbels — opacity via cheerfulMix() voor smooth fade.
       if (cheerful > 0.02) {
         ctx.save();
         ctx.globalAlpha = cheerful;
         const grasH = 14 * SCHAAL;
-        // Donkere gras-strip onderlaag
-        ctx.fillStyle = biomeKleur("grasDonker");
-        ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
-        // Lichte gras met bobbel-rand bovenop
-        ctx.fillStyle = biomeKleur("grasLicht");
         const bobbel = 18 * SCHAAL;
         const bobH = 6 * SCHAAL;
         const grasOff = (frameTeller * spelSnelheid * 0.5) % bobbel;
+        // Top: dunne donker-strip + lichte bobbel naar boven
+        ctx.fillStyle = biomeKleur("grasDonker");
+        ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
+        ctx.fillStyle = biomeKleur("grasLicht");
         ctx.beginPath();
         ctx.moveTo(-grasOff, grondTop);
         for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
@@ -1731,7 +1739,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.lineTo(-grasOff, grondTop + grasH * 0.65);
         ctx.closePath();
         ctx.fill();
+        // Onderrand (alleen bij band-modus): gespiegelde bobbel naar onderen
+        if (bandActief) {
+          ctx.fillStyle = biomeKleur("grasDonker");
+          ctx.fillRect(0, grondBottom - grasH * 0.65, W, grasH + 2 * SCHAAL);
+          ctx.fillStyle = biomeKleur("grasLicht");
+          ctx.beginPath();
+          ctx.moveTo(-grasOff, grondBottom);
+          for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
+            ctx.quadraticCurveTo(xb + bobbel * 0.5, grondBottom + bobH, xb + bobbel, grondBottom);
+          }
+          ctx.lineTo(W + bobbel, grondBottom - grasH * 0.65);
+          ctx.lineTo(-grasOff, grondBottom - grasH * 0.65);
+          ctx.closePath();
+          ctx.fill();
+        }
         ctx.restore();
+      }
+      // Valkuilen: snij gat in de band door sky-gradient over te schilderen,
+      // teken witte spike-cluster onderin. Alleen bij band-modus relevant.
+      if (bandActief && customValkuilen.length > 0) {
+        const skyGrad = ctx.createLinearGradient(0, 0, 0, H);
+        skyGrad.addColorStop(0, biomeKleur("bgTop"));
+        skyGrad.addColorStop(1, biomeKleur("bgBot"));
+        for (const v of customValkuilen) {
+          if (v.x + v.breedte < -10 || v.x > W + 10) continue;
+          // Sky over de hele band-breedte op deze x → gat
+          ctx.fillStyle = skyGrad;
+          ctx.fillRect(v.x, grondTop - 14 * SCHAAL, v.breedte, GROND_DIKTE + 28 * SCHAAL);
+          // 5 witte spikes onderin het gat
+          const spikeCount = 5;
+          const spikeBreedte = v.breedte / spikeCount;
+          const spikeHoogte = 30 * SCHAAL;
+          const spikeY = grondBottom - spikeHoogte - 6 * SCHAAL;
+          for (let i = 0; i < spikeCount; i++) {
+            tekenStenenStekel(v.x + i * spikeBreedte, spikeY, spikeBreedte, spikeHoogte, "white");
+          }
+        }
       }
       // Grond-rand glow (alleen op donkere biomes — cheerful heeft het gras al)
       ctx.save();
@@ -1902,6 +1946,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Custom-level zones — verticale banden waarin physics aangepast wordt zolang
     // de speler erin staat. Elk: { x, breedte, type: "lowgrav"|"boost"|"slow", fase }.
     const customZones = [];
+    // Valkuilen — visueel een gat in de aarde-band (cheerful biomes) met witte
+    // spike-cluster onderin. Speler die erin "valt" (X-overlap) gaat dood.
+    const customValkuilen = [];
+    // Mystery-blokken — Mario-style ?-blok dat random reward spawnt bij hit.
+    // Elk: { x, y, breedte, hoogte, fase, geactiveerd, uitDuur }.
+    const mysteryBlokken = [];
     // Centrale clear-helper voor custom-level-arrays. Wordt gebruikt op alle
     // 6 reset-momenten (boss-clear, bonus, hell, dood, respawn, cutscene).
     // Voeg hier 1× toe als er een nieuwe custom-level-array bijkomt — dan
@@ -1911,6 +1961,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       customDecoraties.length = 0;
       bliksems.length = 0;
       customZones.length = 0;
+      customValkuilen.length = 0;
+      mysteryBlokken.length = 0;
     }
     // Schansen + loopings — bij contact super-jump + safe-zone + arc-pickups.
     // schansen[] = { x, y, breedte, hoogte, type: 'schans'|'loop', geactiveerd }
@@ -2171,7 +2223,76 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           gescoord: false, render: "meteor", valt: true, vy: 0,
         });
       },
+      valkuil: () => {
+        // Visueel gat in de aarde-band met spike-cluster onderin. Speler die
+        // X-overlapt met het gat = dood. Vaste breedte (5 spikes naast elkaar).
+        customValkuilen.push({ x: W, breedte: 150 * SCHAAL });
+      },
+      mystery: (y) => {
+        // Mario-classic ?-blok. Hit van speler = random reward uit loot-tabel.
+        const breedte = 36 * SCHAAL, hoogte = 36 * SCHAAL;
+        mysteryBlokken.push({
+          x: W, y: y != null ? y - hoogte / 2 : 180 * SCHAAL,
+          breedte, hoogte, fase: 0, geactiveerd: false, uitDuur: 60,
+        });
+      },
     };
+    function triggerMysteryBlok(m) {
+      if (m.geactiveerd) return;
+      m.geactiveerd = true;
+      m.uitDuur = 60;
+      // Visuele particle-burst bij het blok
+      const bcx = m.x + m.breedte / 2;
+      const bcy = m.y + m.hoogte / 2;
+      spawnParticles(bcx, bcy, 18, "#ffd54f", { spread: 7, opwaarts: 4, leven: 32, grootte: 5, glow: 18 });
+      spawnParticles(bcx, bcy, 8, "#fff8dc", { spread: 5, opwaarts: 3, leven: 24, grootte: 4, glow: 14 });
+      shakeKracht = Math.max(shakeKracht, 6);
+      // Reward bij de speler — pickup-collision pakt 'm direct op
+      const rx = speler.x + speler.breedte / 2;
+      const ry = speler.y + speler.hoogte / 2;
+      const r = Math.random();
+      if (r < 0.05) {
+        // 5% — niets. Sad-trombone piep, geen pickup.
+        piep(220, 0.18, "triangle", 0.14);
+        setTimeout(() => piep(196, 0.20, "triangle", 0.12), 100);
+      } else if (r < 0.40) {
+        // 35% — 1 ring
+        ringen.push({ x: rx, y: ry, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+        piep(880, 0.10, "sine", 0.14);
+      } else if (r < 0.58) {
+        // 18% — 5-ring boog rondom speler
+        for (let i = 0; i < 5; i++) {
+          ringen.push({
+            x: rx + (i - 2) * 22 * SCHAAL,
+            y: ry - Math.abs(i - 2) * 12 * SCHAAL,
+            fase: i * 0.5, opgepakt: false, grootte: 22 * SCHAAL,
+          });
+        }
+        piep(660, 0.08, "sine", 0.14);
+        setTimeout(() => piep(990, 0.08, "sine", 0.14), 60);
+        setTimeout(() => piep(1320, 0.10, "sine", 0.12), 120);
+      } else if (r < 0.70) {
+        // 12% — hartje
+        bonusHarten.push({ x: rx, y: ry, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+        piep(523, 0.15, "sine", 0.14);
+      } else if (r < 0.80) {
+        // 10% — schild (5s immune)
+        raketten.push({ x: rx, y: ry, grootte: 32 * SCHAAL, fase: 0, opgepakt: false, kortDuur: true });
+        piep(440, 0.20, "sawtooth", 0.16);
+      } else if (r < 0.88) {
+        // 8% — magneet
+        magneetPickups.push({ x: rx, y: ry, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+        piep(700, 0.15, "square", 0.14);
+      } else if (r < 0.95) {
+        // 7% — slow-mo
+        slowMoPickups.push({ x: rx, y: ry, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+        piep(330, 0.20, "triangle", 0.14);
+      } else {
+        // 5% — bom (zeldzaam, screen-clear)
+        bombPickups.push({ x: rx, y: ry, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+        piep(180, 0.25, "sawtooth", 0.18);
+      }
+    }
     function spawnUitCustom(obs) {
       if (!obs?.type) return;
       const yScaled = obs.y != null ? obs.y * SCHAAL : null;
@@ -4715,6 +4836,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         z.fase += 0.08;
         if (z.x + z.breedte < -10) customZones.splice(i, 1);
       }
+      // Valkuilen: scroll + hit-detect via X-overlap. Marge van 10*SCHAAL aan
+      // beide kanten zodat spelers een grace-zone bij de randen hebben.
+      for (let i = customValkuilen.length - 1; i >= 0; i--) {
+        const v = customValkuilen[i];
+        v.x -= effSnelheid;
+        if (!bonusFase && vliegFrames === 0 && flipFrames === 0) {
+          const sx = speler.x, sxR = speler.x + speler.breedte;
+          if (sxR > v.x + 10 * SCHAAL && sx < v.x + v.breedte - 10 * SCHAAL) {
+            hitTotale();
+            if (!spelLoopt) return;
+          }
+        }
+        if (v.x + v.breedte < -10) customValkuilen.splice(i, 1);
+      }
+      // Mystery-blokken: scroll + AABB-collision = trigger random reward.
+      for (let i = mysteryBlokken.length - 1; i >= 0; i--) {
+        const m = mysteryBlokken[i];
+        m.x -= effSnelheid;
+        m.fase += 0.08;
+        if (!m.geactiveerd && !bonusFase && vliegFrames === 0 && flipFrames === 0) {
+          const sb = spelerBots();
+          if (sb.x < m.x + m.breedte && sb.x + sb.breedte > m.x &&
+              sb.y < m.y + m.hoogte && sb.y + sb.hoogte > m.y) {
+            triggerMysteryBlok(m);
+          }
+        }
+        if (m.geactiveerd) {
+          m.uitDuur--;
+          if (m.uitDuur <= 0) { mysteryBlokken.splice(i, 1); continue; }
+        }
+        if (m.x + m.breedte < -10) mysteryBlokken.splice(i, 1);
+      }
       // Bliksems — knipperen 90 frames aan, 90 frames uit. Hit alleen tijdens "aan".
       for (let i = bliksems.length - 1; i >= 0; i--) {
         const bl = bliksems[i];
@@ -6117,6 +6270,47 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
       for (const m of zwevendeMinen) tekenZwevendeMine(m);
+      // Mystery-blokken — gouden ?-blok met pulserende rand. Na trigger wordt
+      // het ❌ voor 60 frames voordat het verdwijnt.
+      for (const m of mysteryBlokken) {
+        if (m.x + m.breedte < 0 || m.x > W) continue;
+        const cx = m.x + m.breedte / 2;
+        const cy = m.y + m.hoogte / 2;
+        const pulse = 0.6 + Math.sin(m.fase) * 0.3;
+        ctx.save();
+        if (!m.geactiveerd) {
+          // Gouden body met dunne donkere rand
+          ctx.shadowBlur = 14; ctx.shadowColor = `rgba(255,200,80,${pulse})`;
+          ctx.fillStyle = "#e8b855";
+          ctx.fillRect(m.x, m.y, m.breedte, m.hoogte);
+          ctx.shadowBlur = 0;
+          // Lichtere highlight bovenaan
+          ctx.fillStyle = "#fce088";
+          ctx.fillRect(m.x + 2, m.y + 2, m.breedte - 4, m.hoogte * 0.35);
+          // Donkere rand
+          ctx.strokeStyle = "#8b5e2a"; ctx.lineWidth = 2;
+          ctx.strokeRect(m.x + 1, m.y + 1, m.breedte - 2, m.hoogte - 2);
+          // ❓ centraal
+          ctx.font = `bold ${m.hoogte * 0.7}px serif`;
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.fillStyle = "#fff";
+          ctx.fillText("?", cx, cy);
+          ctx.strokeStyle = "#8b5e2a"; ctx.lineWidth = 2;
+          ctx.strokeText("?", cx, cy);
+        } else {
+          // Leeg-staat: bruin met X
+          ctx.fillStyle = "#8b5e2a";
+          ctx.fillRect(m.x, m.y, m.breedte, m.hoogte);
+          ctx.strokeStyle = "#5a3a1a"; ctx.lineWidth = 2;
+          ctx.strokeRect(m.x + 1, m.y + 1, m.breedte - 2, m.hoogte - 2);
+          ctx.globalAlpha = m.uitDuur / 60;
+          ctx.font = `bold ${m.hoogte * 0.6}px sans-serif`;
+          ctx.textAlign = "center"; ctx.textBaseline = "middle";
+          ctx.fillStyle = "#fff";
+          ctx.fillText("✕", cx, cy);
+        }
+        ctx.restore();
+      }
       // Bliksems — actieve = volle gele glow, inactieve = 25% opacity warning
       for (const bl of bliksems) {
         const aan = bl.fase < 90;
@@ -7933,6 +8127,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { id: "patrouille",    label: "Patrouille",    emoji: "👻", kost: 8,  uitleg: "Spookje dat heen-en-weer beweegt (~70px range)." },
                 { id: "vallende_steen",label: "Meteoor",       emoji: "☄️", kost: 6,  uitleg: "Valt naar beneden onder zwaartekracht. Wegduiken!" },
                 { id: "bliksem",       label: "Bliksem",       emoji: "⚡", kost: 7,  uitleg: "1.5s aan / 1.5s uit. Timing-puzzel." },
+                { id: "valkuil",       label: "Valkuil",       emoji: "🕳️", kost: 10, uitleg: "Gat in de grond met witte spikes — eroverheen springen of dood." },
+                { id: "mystery",       label: "Mystery-blok",  emoji: "❓", kost: 8,  uitleg: "Hit = random reward (ring/hartje/schild/magneet/etc) of leeg (5%)." },
                 { id: "schild",        label: "Schild",        emoji: "🛡️", kost: 12, uitleg: "Pickup → 5 sec onkwetsbaar (raket = 10 sec)." },
                 { id: "zone_lowgrav",  label: "Low-grav",      emoji: "🪶", kost: 6,  uitleg: "Lichte zwaartekracht — je springt veel hoger en zweeft." },
                 { id: "zone_boost",    label: "Boost",         emoji: "💨", kost: 6,  uitleg: "Wereld scrollt 1.5× sneller. Hou je vast!" },
