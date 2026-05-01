@@ -201,7 +201,7 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
   const [invitedName, setInvitedName] = useState("");
   const url = `${window.location.origin}/duel/${match.id}`;
 
-  // Polling: check elke 3s of er een guest in de DB-rij is verschenen.
+  // Polling: check elke 1.5s of er een guest in de DB-rij is verschenen.
   // Realtime presence is sneller maar pas actief als guest in zelfde channel
   // zit. DB-update gebeurt al bij joinMatch, dus dit geeft eerder signaal.
   useEffect(() => {
@@ -212,9 +212,28 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
         const m = await fetchMatch(match.id);
         if (!cancelled && m?.guest_name) setPolledGuestName(m.guest_name);
       } catch {}
-    }, 3000);
+    }, 1500);
     return () => { cancelled = true; clearInterval(id); };
   }, [match.id, polledGuestName]);
+
+  // Auto-start: zodra guest binnen is, start automatisch een 3-sec countdown
+  // i.p.v. de host te laten wachten op een handmatige knop. Tot kan-canceld.
+  const [autoStartIn, setAutoStartIn] = useState(null);
+  useEffect(() => {
+    const opSeen = polledGuestName || bothPresent;
+    if (!opSeen) return;
+    if (autoStartIn !== null) return; // al gestart
+    setAutoStartIn(3);
+  }, [polledGuestName, bothPresent, autoStartIn]);
+  useEffect(() => {
+    if (autoStartIn === null) return;
+    if (autoStartIn <= 0) {
+      onStart?.();
+      return;
+    }
+    const id = setTimeout(() => setAutoStartIn(autoStartIn - 1), 1000);
+    return () => clearTimeout(id);
+  }, [autoStartIn, onStart]);
 
   // Tikker voor "wacht-tijd" zodat we hint kunnen tonen na 60 sec
   useEffect(() => {
@@ -299,9 +318,13 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
       </div>
 
       <div style={statusStyle}>
-        {opponentSeen ? (
+        {opponentSeen && autoStartIn !== null ? (
+          <span style={{ color: "var(--color-success)", fontFamily: "var(--font-display)", fontSize: 16 }}>
+            ✓ {guestNaam || "Tegenstander"} is binnen — start in {autoStartIn}…
+          </span>
+        ) : opponentSeen ? (
           <span style={{ color: "var(--color-success)", fontFamily: "var(--font-display)" }}>
-            ✓ {guestNaam ? `${guestNaam} is binnen` : "Tegenstander gezien"} — klaar om te starten!
+            ✓ {guestNaam ? `${guestNaam} is binnen` : "Tegenstander gezien"}
           </span>
         ) : waitSeconds > 60 ? (
           <span style={{ color: "var(--color-warning)" }}>
@@ -328,7 +351,7 @@ function HostWaitingPanel({ match, playerName, bothPresent, onStart, onCancel })
           cursor: opponentSeen ? "pointer" : "not-allowed",
         }}
       >
-        ⚔️ START DUEL
+        {autoStartIn !== null && autoStartIn > 0 ? `⚔️ START in ${autoStartIn}…` : "⚔️ START DUEL"}
       </button>
       <button type="button" onClick={onCancel} style={{ ...ghostBtnStyle, marginTop: 8 }}>
         Annuleren
