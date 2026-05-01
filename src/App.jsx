@@ -56,6 +56,7 @@ const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
+const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
@@ -187,9 +188,16 @@ const fonts = `
 `;
 
 export default function App() {
-  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage)
+  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage),
+  // /duel/:code (PvP-uitnodiging via WhatsApp-link)
+  const initialPvpJoinCode = (() => {
+    if (typeof window === "undefined") return null;
+    const m = window.location.pathname.match(/^\/duel\/([a-z0-9]{4,12})/i);
+    return m ? m[1].toLowerCase() : null;
+  })();
   const initialPage = (() => {
     if (typeof window === "undefined") return "home";
+    if (initialPvpJoinCode) return "pvp-lobby";
     try {
       const sp = new URLSearchParams(window.location.search);
       if (sp.get("play") === "obliterator") return "obliteratorDirect";
@@ -224,11 +232,16 @@ export default function App() {
   useEffect(() => {
     if (isFirstRouterRender.current) {
       isFirstRouterRender.current = false;
-      // Eerste render: URL is bron van waarheid (deep link wint)
+      // Eerste render: URL is bron van waarheid (deep link wint).
+      // /duel/:code blijft staan zodat de PvP-lobby de code kan lezen.
+      if (location.pathname.match(/^\/duel\//i)) return;
       const fromUrl = pageForPath(location.pathname);
       if (fromUrl !== page) setPage(fromUrl);
       return;
     }
+    // pvp-lobby/play hebben dynamische URLs (/duel/:code) — niet redirecten,
+    // anders verliest de guest de match-code uit de URL.
+    if (page === "pvp-lobby" || page === "pvp-play") return;
     const expected = pathForPage(page);
     if (expected && expected !== location.pathname) {
       navigate(expected);
@@ -238,6 +251,11 @@ export default function App() {
   // browser back/forward: URL → page
   useEffect(() => {
     if (isFirstRouterRender.current) return;
+    // /duel/:code → PvP-lobby (anders mappen naar "home" en verliezen we de match)
+    if (location.pathname.match(/^\/duel\//i)) {
+      if (page !== "pvp-lobby" && page !== "pvp-play") setPage("pvp-lobby");
+      return;
+    }
     const newPage = pageForPath(location.pathname);
     if (newPage !== page) setPage(newPage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -251,6 +269,10 @@ export default function App() {
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
   // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
   const [meeBezigCategory, setMeeBezigCategory] = useState(null);
+  // PvP duel state — fase 'lobby' = match maken/joinen, 'play' = spel draait
+  const [pvpState, setPvpState] = useState(
+    initialPvpJoinCode ? { phase: "lobby", mode: "guest", code: initialPvpJoinCode } : null
+  );
   const [loading, setLoading] = useState(false);
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
   useEffect(() => {
@@ -760,13 +782,51 @@ export default function App() {
           authUser={authUser}
           wrongQuestions={[]}
           vanDeelLink={true}
+          onChallengeFriend={() => {
+            setPvpState({ phase: "lobby", mode: "host" });
+            setPage("pvp-lobby");
+          }}
           onNaarStudiebol={() => {
-            // ruim query-param op zodat refresh in normale flow start
             try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
             setPage("home");
           }}
           onClose={() => {
             try { window.history.replaceState({}, document.title, window.location.pathname); } catch {}
+            setPage("home");
+          }}
+        />
+      )}
+      {page === "pvp-lobby" && pvpState?.phase === "lobby" && (
+        <Suspense fallback={<PageLoader />}>
+          <PvPLobby
+            playerName={userName || "Speler"}
+            mode={pvpState.mode}
+            code={pvpState.code}
+            onMatchReady={(match, sub, role, startsAt) => {
+              setPvpState({ phase: "play", mode: pvpState.mode, code: match.id, match, sub, role, startsAt });
+              setPage("pvp-play");
+            }}
+            onClose={() => {
+              setPvpState(null);
+              try { window.history.replaceState({}, document.title, "/"); } catch {}
+              setPage("home");
+            }}
+          />
+        </Suspense>
+      )}
+      {page === "pvp-play" && pvpState?.phase === "play" && pvpState.match && (
+        <ObliteratorGame
+          userName={userName || "Speler"}
+          authUser={authUser}
+          wrongQuestions={[]}
+          pvpMatch={pvpState.match}
+          pvpSub={pvpState.sub}
+          pvpRole={pvpState.role}
+          pvpStartsAt={pvpState.startsAt}
+          onClose={() => {
+            try { pvpState.sub?.unsub(); } catch {}
+            setPvpState(null);
+            try { window.history.replaceState({}, document.title, "/"); } catch {}
             setPage("home");
           }}
         />
@@ -777,6 +837,10 @@ export default function App() {
           authUser={authUser}
           wrongQuestions={[]}
           vanDeelLink={false}
+          onChallengeFriend={() => {
+            setPvpState({ phase: "lobby", mode: "host" });
+            setPage("pvp-lobby");
+          }}
           onClose={() => setPage("home")}
         />
       )}

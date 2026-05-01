@@ -89,6 +89,19 @@ const BONUS_KEY_PREFIX = "obliterator-bonus-";
 // Voeg een naam toe om iemand admin te maken.
 const OBLIVION_ADMINS = ["brian"];
 
+// Mulberry32 — deterministische 32-bit RNG. Beide PvP-spelers gebruiken
+// dezelfde seed → identieke obstakel-spawns zonder data uit te wisselen.
+function makeMulberry32(seed) {
+  let a = (seed >>> 0) || 1;
+  return function () {
+    a |= 0; a = (a + 0x6d2b79f5) | 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 // Moeilijkheid-emoji op basis van level (gebruikt in canvas + level-keuze-knoppen).
 function moeilijkheidEmoji(lvl) {
   if (lvl <= 5) return "😊";
@@ -105,7 +118,8 @@ function schrijfInt(key, val) {
   try { localStorage.setItem(key, String(val)); } catch {}
 }
 
-export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose }) {
+export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose, onChallengeFriend, pvpMatch, pvpSub, pvpRole, pvpStartsAt }) {
+  const pvpMode = !!pvpMatch;
   const canvasRef = useRef(null);
   const wrapperRef = useRef(null);
   const springRef = useRef(() => {}); // wordt door game-loop ingevuld
@@ -116,7 +130,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Top-3 namen voor de spandoek-fans op de grond (rouleren door highscores).
   // Default-fallback als Supabase nog niet geladen heeft of leeg is.
   const topSpelersRef = useRef(["Brian", "Anouk", "Mark"]);
-  const [fase, setFase] = useState("menu"); // "menu" | "spelen" | "dood" | "vraag"
+  const [fase, setFase] = useState(pvpMatch ? "spelen" : "menu"); // PvP slaat menu over
+  // Ghost-state voor PvP: opponent's laatst-bekende positie + score
+  const ghostStateRef = useRef({ y: 0, vy: 0, score: 0, alive: true, name: "" });
+  // PvP-eindstand (winner + scores) zodra match is afgerond
+  const [pvpResult, setPvpResult] = useState(null);
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
   const [nieuwRecord, setNieuwRecord] = useState(false);
@@ -517,7 +535,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Levels: 30 sec per level, max 100 levels (= 50 min totaal voor MAX)
     const LEVEL_DUUR_FRAMES = 1800; // 30 sec @ 60fps
     const MAX_LEVEL = 100;
-    let huidigLevel = startLevelRef.current || 1; // start-level uit menu
+    // PvP forceert L1 zodat beide spelers identieke start-condities hebben.
+    let huidigLevel = pvpMatch ? 1 : (startLevelRef.current || 1);
     let levelGehaaldFlash = 0;
     let levelGehaaldNummer = 0;
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
@@ -1231,6 +1250,46 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.lineTo(x + b / 2, yBot);
       ctx.closePath();
       ctx.stroke();
+      ctx.restore();
+    }
+    function tekenGhost() {
+      const g = ghostStateRef.current;
+      if (!g) return;
+      // Ghost iets achter de speler getekend (60px naar links) zodat-ie niet
+      // overlapt. Semi-transparant, blauwgloeiende rand zodat duidelijk is
+      // wie wie is. Naam + score boven de ghost.
+      const cx = speler.basisX - 60 * SCHAAL + speler.breedte / 2;
+      const cy = (g.y || GROND_Y) + speler.hoogte / 2;
+      const r = speler.breedte / 2;
+      ctx.save();
+      ctx.globalAlpha = g.alive ? 0.7 : 0.25;
+      // glow + body
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#42a5f5";
+      const grad = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.3, 2, cx, cy, r);
+      grad.addColorStop(0, "#80c0ff");
+      grad.addColorStop(0.6, "#1976d2");
+      grad.addColorStop(1, "#0d47a1");
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+      // outline
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "rgba(255,255,255,0.85)";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.arc(cx, cy, r - 0.5, 0, Math.PI * 2); ctx.stroke();
+      // naam-pill boven ghost
+      ctx.globalAlpha = 1;
+      ctx.font = `bold ${11 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "bottom";
+      ctx.fillStyle = "rgba(0,0,0,0.65)";
+      const text = `${g.name || "Tegenstander"} · ${g.score || 0}`;
+      const padding = 4 * SCHAAL;
+      const m = ctx.measureText(text);
+      const tw = m.width + padding * 2;
+      const th = 16 * SCHAAL;
+      ctx.fillRect(cx - tw / 2, cy - r - 24 * SCHAAL, tw, th);
+      ctx.fillStyle = "#80c0ff";
+      ctx.fillText(text, cx, cy - r - 24 * SCHAAL + th - 3 * SCHAAL);
       ctx.restore();
     }
     function tekenZwevendeMine(m) {
@@ -5245,6 +5304,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Fans (spandoek met highscore-naam) op achtergrond, vóór speler/obstakels
       for (const f of fans) tekenFanGroep(f);
       tekenSpeler();
+      // PvP ghost — toon tegenstander iets links naast speler in semi-transparant
+      if (pvpMatch) tekenGhost();
       for (const o of obstakels) tekenObstakel(o);
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
@@ -6039,6 +6100,36 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     function eindeSessie() {
+      // PvP-mode: finalize match in DB en broadcast end
+      if (pvpMatch && pvpSub) {
+        const ownScore = score;
+        const opponentScore = ghostStateRef.current.score || 0;
+        const winner = ownScore > opponentScore ? pvpRole
+          : ownScore < opponentScore ? (pvpRole === "host" ? "guest" : "host")
+          : "draw";
+        try {
+          import("../games/obliterator/pvp.js").then(({ finalizeMatch }) => {
+            const hostScore = pvpRole === "host" ? ownScore : opponentScore;
+            const guestScore = pvpRole === "guest" ? ownScore : opponentScore;
+            finalizeMatch({ code: pvpMatch.id, hostScore, guestScore, winner });
+          });
+        } catch {}
+        try {
+          const hostScore = pvpRole === "host" ? ownScore : opponentScore;
+          const guestScore = pvpRole === "guest" ? ownScore : opponentScore;
+          pvpSub.sendEnd(winner, { host: hostScore, guest: guestScore });
+        } catch {}
+        setEindScore(ownScore);
+        setPvpResult({
+          winner,
+          scores: {
+            host: pvpRole === "host" ? ownScore : opponentScore,
+            guest: pvpRole === "guest" ? ownScore : opponentScore,
+          },
+        });
+        setFase("pvp-finished");
+        return;
+      }
       // sla level-records op naar Supabase (alleen voor ingelogde users)
       // huidige level krijgt ook een record (score sinds level-start)
       const scoreInHuidigLevel = score - scoreBijLevelStart;
@@ -6111,9 +6202,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     // Initialiseer biome + muziek voor het start-level (level 1 of hoger)
-    setBiomeVoorLevel(startLevelRef.current);
+    setBiomeVoorLevel(pvpMatch ? 1 : startLevelRef.current);
     levelUpFlash = 0; // we tonen geen "level X gehaald" voor de start zelf
-    if (startLevelRef.current > 1) {
+    if (!pvpMatch && startLevelRef.current > 1) {
       // pre-set frameTeller zodat density-formule meteen op level-niveau zit
       frameTeller = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
       score = startLevelRef.current * 5;
@@ -6156,6 +6247,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Eerste check meteen bij init — admin die start met de knop ziet 'm direct
     checkOblivionTrigger();
 
+    // ── PvP-INTEGRATIE ──
+    // Hook tick/end-handlers en start een 20Hz broadcast-loop met eigen state.
+    let pvpTickInterval = null;
+    if (pvpMatch && pvpSub) {
+      ghostStateRef.current.name = pvpRole === "host" ? pvpMatch.guest_name : pvpMatch.host_name;
+      pvpSub.setHandlers({
+        onTick: (payload) => {
+          if (!payload || payload.from === pvpRole) return;
+          ghostStateRef.current = {
+            y: payload.y || 0,
+            vy: payload.vy || 0,
+            score: payload.score || 0,
+            alive: !!payload.alive,
+            name: ghostStateRef.current.name,
+          };
+        },
+        onEnd: (payload) => {
+          if (!payload) return;
+          setPvpResult({ winner: payload.winner, scores: payload.scores });
+        },
+      });
+      pvpTickInterval = setInterval(() => {
+        try {
+          pvpSub.sendTick({
+            y: speler.y,
+            vy: speler.snelheidY,
+            score,
+            alive: spelLoopt,
+          });
+        } catch {}
+      }, 50); // 20Hz
+    }
+
     raf = requestAnimationFrame(lus);
 
     return () => {
@@ -6171,6 +6295,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       document.body.style.touchAction = origBodyTouchAction;
       document.documentElement.style.overflow = origHtmlOverflow;
       springRef.current = () => {};
+      if (pvpTickInterval) clearInterval(pvpTickInterval);
       try { audioCtx?.close(); } catch {}
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -6356,6 +6481,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
+            {/* 1v1-uitdaging via WhatsApp — alleen als parent-component dit ondersteunt */}
+            {onChallengeFriend && (
+              <button
+                onClick={() => onChallengeFriend()}
+                style={{
+                  width: "100%",
+                  padding: "12px 14px",
+                  marginBottom: 14,
+                  borderRadius: 12,
+                  background: "linear-gradient(135deg, #25d366, #128c7e)",
+                  border: "none",
+                  color: "#fff",
+                  fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 15, fontWeight: 700,
+                  cursor: "pointer",
+                  boxShadow: "0 4px 18px rgba(37,211,102,0.40)",
+                  letterSpacing: 0.5,
+                }}
+              >
+                🥊 Daag een vriend uit (1v1 via WhatsApp)
+              </button>
+            )}
+
             {/* Settings-panel — uitklapbaar */}
             <div style={{ marginBottom: 14 }}>
               <button
@@ -6771,6 +6919,61 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           </div>
         )}
 
+        {fase === "pvp-finished" && pvpResult && (
+          <div style={{ textAlign: "center", padding: isPortrait ? "30px 12px" : "12px" }}>
+            {(() => {
+              const won = pvpResult.winner === pvpRole;
+              const draw = pvpResult.winner === "draw";
+              const ownScore = pvpRole === "host" ? pvpResult.scores.host : pvpResult.scores.guest;
+              const opScore = pvpRole === "host" ? pvpResult.scores.guest : pvpResult.scores.host;
+              const opName = pvpRole === "host" ? pvpMatch.guest_name : pvpMatch.host_name;
+              return (
+                <>
+                  <div style={{ fontSize: isPortrait ? 64 : 42, marginBottom: 8 }}>
+                    {draw ? "🤝" : won ? "🏆" : "💀"}
+                  </div>
+                  <p style={{
+                    fontFamily: "Impact, 'Arial Black', sans-serif",
+                    fontSize: isPortrait ? 30 : 24, letterSpacing: 2.5,
+                    color: draw ? "#ffcc40" : won ? "#69f0ae" : "#ff4040",
+                    marginBottom: 14,
+                    textShadow: `0 0 12px ${draw ? "rgba(255,200,60,0.9)" : won ? "rgba(105,240,174,0.9)" : "rgba(255,60,40,0.9)"}`,
+                  }}>
+                    {draw ? "GELIJKSPEL" : won ? "GEWONNEN!" : "VERLOREN"}
+                  </p>
+                  <div style={{
+                    display: "flex", justifyContent: "center", gap: 16,
+                    marginBottom: 18, fontSize: isPortrait ? 18 : 16,
+                  }}>
+                    <div style={{ background: "rgba(255,255,255,0.06)", padding: "10px 18px", borderRadius: 12 }}>
+                      <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>Jij</div>
+                      <div style={{ color: "#ffcc40", fontSize: 22, fontWeight: 700 }}>{ownScore}</div>
+                    </div>
+                    <div style={{ background: "rgba(255,255,255,0.06)", padding: "10px 18px", borderRadius: 12 }}>
+                      <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>{opName}</div>
+                      <div style={{ color: "#80c0ff", fontSize: 22, fontWeight: 700 }}>{opScore}</div>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => {
+                      try { pvpSub?.unsub(); } catch {}
+                      onClose?.();
+                    }}
+                    style={{
+                      padding: "12px 22px", borderRadius: 12,
+                      background: "linear-gradient(135deg, #25d366, #128c7e)",
+                      border: "none", color: "#fff",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700,
+                      cursor: "pointer",
+                    }}
+                  >
+                    ✓ Klaar — terug naar home
+                  </button>
+                </>
+              );
+            })()}
+          </div>
+        )}
         {fase === "dood" && (
           <div style={{ textAlign: "center", padding: isPortrait ? "20px 12px" : "10px 12px" }}>
             <div style={{ fontSize: isPortrait ? 56 : 36, marginBottom: isPortrait ? 8 : 4 }}>{nieuwRecord ? "🏆" : "👽"}</div>
