@@ -183,6 +183,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const editorScrollRef = useRef(null);
   const [editorScrollPx, setEditorScrollPx] = useState(0);
   const [editorViewportW, setEditorViewportW] = useState(320);
+  // Pointer-down positie voor swipe-vs-tap detectie. Een echte tap is < 8 px
+  // beweging én < 500 ms duur — alles daarboven negeren we (= scroll/long-press).
+  const editorTapStartRef = useRef({ x: 0, y: 0, t: 0, valid: false });
   const [communityLevels, setCommunityLevels] = useState([]);
   const [communityLevelsLaden, setCommunityLevelsLaden] = useState(false);
   const [mijnLevels, setMijnLevels] = useState([]);
@@ -1004,9 +1007,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bossLasers.length = 0;
       spelerLasers.length = 0;
       // clear normale game-elementen (geen botsing tijdens boss)
-      obstakels.length = 0;
-      customDecoraties.length = 0;
-      bliksems.length = 0;
+      clearCustomSpawned();
       ringen.length = 0;
       platforms.length = 0;
       plafondStekels.length = 0;
@@ -1094,10 +1095,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     function setBiomeVoorLevel(lvl) {
       const idx = Math.min(BIOMES.length - 1, lvl - 1);
-      if (idx === huidigBioom) return;
+      if (idx === huidigBioom && bioomFade >= 1) return; // al die biome, niets te doen
+      // Crossfade: bewaar de huidige biome in nextBioom (zo blijft 'ie zichtbaar
+      // zolang bioomFade < 1) en zet huidigBioom = idx. checkBioomWissel ramt
+      // bioomFade van 0 naar 1 over BIOOM_FADE_DUUR frames; biomeKleur lerpt
+      // ondertussen van nextBioom (oud) naar huidigBioom (nieuw).
+      nextBioom = huidigBioom;
       huidigBioom = idx;
-      nextBioom = idx; // beide zelfde -> interpolatie geeft constant deze biome
-      bioomFade = 1;
+      bioomFade = 0;
       muziek.bassWortel = BIOOM_BASSWORTELS[idx] || 55;
       muziek.bpm = BPM_PER_LEVEL[idx] || 160;
       // LEVEL UP flash met nieuwe biome-naam
@@ -1841,6 +1846,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Bliksems — knipperende verticale hazard uit custom-levels. Cyclus 180
     // frames (90 aan / 90 uit). Elk: { x, y, breedte, hoogte, fase }.
     const bliksems = [];
+    // Custom-level zones — verticale banden waarin physics aangepast wordt zolang
+    // de speler erin staat. Elk: { x, breedte, type: "lowgrav"|"boost"|"slow", fase }.
+    const customZones = [];
+    // Centrale clear-helper voor custom-level-arrays. Wordt gebruikt op alle
+    // 6 reset-momenten (boss-clear, bonus, hell, dood, respawn, cutscene).
+    // Voeg hier 1× toe als er een nieuwe custom-level-array bijkomt — dan
+    // pikken alle 6 contexts het automatisch op.
+    function clearCustomSpawned() {
+      obstakels.length = 0;
+      customDecoraties.length = 0;
+      bliksems.length = 0;
+      customZones.length = 0;
+    }
     // Schansen + loopings — bij contact super-jump + safe-zone + arc-pickups.
     // schansen[] = { x, y, breedte, hoogte, type: 'schans'|'loop', geactiveerd }
     const schansen = [];
@@ -1969,82 +1987,118 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function botst(a, b) { return a.x < b.x + b.breedte && a.x + a.breedte > b.x && a.y < b.y + b.hoogte && a.y + a.hoogte > b.y; }
     // Spawn een obstakel uit een custom-level-record. Push naar dezelfde
     // arrays als de random-spawn — bestaande collision/render werkt automatisch.
-    function spawnUitCustom(obs) {
-      if (!obs || !obs.type) return;
-      const yScaled = obs.y != null ? obs.y * SCHAAL : null;
-      if (obs.type === "spike") {
+    // Dispatch-tabel per custom-type. Voeg een nieuwe mechanica toe = 1 entry hier
+    // erbij, geen wijziging aan spawnUitCustom zelf. Elke handler ontvangt yScaled
+    // (of null als de level-maker geen Y heeft gezet) en de raw obs voor extra props.
+    const customSpawnHandlers = {
+      spike: () => {
         const breedte = 24 * SCHAAL, hoogte = 32 * SCHAAL;
         obstakels.push({ type: 0, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
-      } else if (obs.type === "blok") {
+      },
+      blok: () => {
         const breedte = 30 * SCHAAL, hoogte = 50 * SCHAAL;
         obstakels.push({ type: 2, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
-      } else if (obs.type === "ring") {
-        ringen.push({ x: W + 30, y: yScaled || 200 * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
-      } else if (obs.type === "plafondstekel") {
+      },
+      ring: (y) => {
+        ringen.push({ x: W + 30, y: y || 200 * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+      },
+      plafondstekel: () => {
         plafondStekels.push({ x: W + 40, breedte: 26 * SCHAAL, hoogte: 30 * SCHAAL });
-      } else if (obs.type === "mijn") {
+      },
+      mijn: (y) => {
         const r = 20 * SCHAAL;
-        const baseY = yScaled || ((PLAFOND_HOOGTE - 4) + 80 * SCHAAL);
+        const baseY = y || ((PLAFOND_HOOGTE - 4) + 80 * SCHAAL);
         zwevendeMinen.push({ x: W + 60, y: baseY, r, fase: 0, amp: 8 * SCHAAL });
-      } else if (obs.type === "platform") {
+      },
+      platform: () => {
         platforms.push({ x: W + 20, y: PLATFORM_Y, breedte: 200 * SCHAAL });
-      } else if (obs.type === "schans") {
+      },
+      schans: () => {
         const hoogte = 0.25 * H, breedte = 0.36 * H;
-        schansen.push({
-          x: W + 40, y: GROND_Y + SPELER_GROOTTE - hoogte,
-          breedte, hoogte, type: "schans", geactiveerd: false,
-        });
-      } else if (obs.type === "hart") {
-        bonusHarten.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
-      } else if (obs.type === "magneet") {
-        magneetPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-      } else if (obs.type === "bom") {
-        bombPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
-      } else if (obs.type === "spookje") {
-        // Stationaire vliegende spike — zelfde collision als type-0, ander visueel
+        schansen.push({ x: W + 40, y: GROND_Y + SPELER_GROOTTE - hoogte, breedte, hoogte, type: "schans", geactiveerd: false });
+      },
+      hart: (y) => {
+        bonusHarten.push({ x: W + 40, y: y || 220 * SCHAAL, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+      },
+      magneet: (y) => {
+        magneetPickups.push({ x: W + 40, y: y || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+      },
+      bom: (y) => {
+        bombPickups.push({ x: W + 40, y: y || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+      },
+      spookje: (y) => {
+        // Stationaire vliegende spike — collision via type-0, ghost-render
         const breedte = 32 * SCHAAL, hoogte = 32 * SCHAAL;
-        const baseY = yScaled != null ? yScaled - hoogte / 2 : 200 * SCHAAL;
+        const baseY = y != null ? y - hoogte / 2 : 200 * SCHAAL;
         obstakels.push({ type: 0, x: W, breedte, hoogte, y: baseY, gescoord: false, render: "ghost", baseY });
-      } else if (obs.type === "schild") {
-        // Schild = raket-pickup met kortere duur (5s ipv 10s). Hergebruikt render+pickup-logic.
-        raketten.push({
-          x: W + 40,
-          y: yScaled != null ? yScaled : 220 * SCHAAL,
-          grootte: 32 * SCHAAL,
-          fase: 0,
-          opgepakt: false,
-          kortDuur: true,
+      },
+      schild: (y) => {
+        // 5s onkwetsbaar — hergebruikt raket-render via kortDuur-flag
+        raketten.push({ x: W + 40, y: y != null ? y : 220 * SCHAAL, grootte: 32 * SCHAAL, fase: 0, opgepakt: false, kortDuur: true });
+      },
+      trampoline: (y) => {
+        const breedte = 80 * SCHAAL, hoogte = 18 * SCHAAL;
+        const padY = y != null ? y - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
+        schansen.push({ x: W + 40, y: padY, breedte, hoogte, type: "trampoline", geactiveerd: false });
+      },
+      bliksem: (y) => {
+        const breedte = 28 * SCHAAL, hoogte = 70 * SCHAAL;
+        const baseY = y != null ? y - hoogte / 2 : 140 * SCHAAL;
+        bliksems.push({ x: W, y: baseY, breedte, hoogte, fase: Math.floor(Math.random() * 180) });
+      },
+      zone_lowgrav: () => {
+        customZones.push({ x: W, breedte: 260 * SCHAAL, type: "lowgrav", fase: 0 });
+      },
+      zone_boost: () => {
+        customZones.push({ x: W, breedte: 200 * SCHAAL, type: "boost", fase: 0 });
+      },
+      zone_slow: () => {
+        customZones.push({ x: W, breedte: 220 * SCHAAL, type: "slow", fase: 0 });
+      },
+      patrouille: (y) => {
+        // Spookje dat horizontaal patrouilleert. Bewegingsmodel: o.x scrolt mee
+        // met de wereld (effSnelheid), patrol-offset wordt elke frame bovenop
+        // gemodelleerd met sin(fase), zodat collision en render synchroon lopen.
+        const breedte = 32 * SCHAAL, hoogte = 32 * SCHAAL;
+        const baseY = y != null ? y - hoogte / 2 : 180 * SCHAAL;
+        obstakels.push({
+          type: 0, x: W, breedte, hoogte, y: baseY, gescoord: false,
+          render: "ghost", baseY,
+          patrol: { fase: 0, snelheid: 0.04, range: 70 * SCHAAL, last: 0 },
         });
-      } else if (obs.type === "trampoline") {
-        // Stationaire bounce-pad — pusht via schansen[]-array, custom-render in tekenSchans.
-        const breedte = 80 * SCHAAL;
-        const hoogte = 18 * SCHAAL;
-        const padY = yScaled != null ? yScaled - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
-        schansen.push({
-          x: W + 40, y: padY,
-          breedte, hoogte,
-          type: "trampoline", geactiveerd: false,
+      },
+      vallende_steen: (y) => {
+        // Begint hoog (of op gegeven y) en valt onder zwaartekracht. Stopt op
+        // de grond. Render = ☄️-meteor met oranje glow zodat speler 'm ziet.
+        const breedte = 28 * SCHAAL, hoogte = 28 * SCHAAL;
+        obstakels.push({
+          type: 0, x: W, breedte, hoogte,
+          y: y != null ? y - hoogte / 2 : 30 * SCHAAL,
+          gescoord: false, render: "meteor", valt: true, vy: 0,
         });
-      } else if (obs.type === "bliksem") {
-        // Knipperende hazard. Initial-fase random zodat meerdere bliksems
-        // niet allemaal sync flikkeren (tenzij gewenst — dat is dan toeval).
-        const breedte = 28 * SCHAAL;
-        const hoogte = 70 * SCHAAL;
-        const baseY = yScaled != null ? yScaled - hoogte / 2 : 140 * SCHAAL;
-        bliksems.push({
-          x: W,
-          y: baseY,
-          breedte, hoogte,
-          fase: Math.floor(Math.random() * 180),
-        });
-      } else if (typeof obs.type === "string" && obs.type.startsWith("decor_")) {
-        // Visueel-only — geen collisie, scrollt mee met de wereld
+      },
+    };
+    function spawnUitCustom(obs) {
+      if (!obs?.type) return;
+      const yScaled = obs.y != null ? obs.y * SCHAAL : null;
+      const handler = customSpawnHandlers[obs.type];
+      if (handler) {
+        handler(yScaled, obs);
+        return;
+      }
+      // Fallback: alle decor_* types — geen collisie, alleen visueel
+      if (typeof obs.type === "string" && obs.type.startsWith("decor_")) {
         customDecoraties.push({
           x: W + 20,
           y: yScaled != null ? yScaled : 110 * SCHAAL,
           type: obs.type,
           fase: Math.random() * Math.PI * 2,
         });
+        return;
+      }
+      // Onbekend type — silent in productie, warn in dev
+      if (typeof import.meta !== "undefined" && import.meta.env?.DEV) {
+        console.warn("[obliterator] onbekend custom-type genegeerd:", obs.type);
       }
     }
     function maakObstakel() {
@@ -2061,6 +2115,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
     }
     function tekenObstakel(o) {
+      if (o.render === "meteor") {
+        // ☄️ met fel-oranje glow; trail-particles tijdens val
+        const cx = o.x + o.breedte / 2;
+        const cy = o.y + o.hoogte / 2;
+        if (o.valt && Math.random() < 0.5) {
+          spawnParticles(cx, cy + o.hoogte * 0.3, 1, "#ff8040", { spread: 2, opwaarts: -1, leven: 14, grootte: 3, glow: 14 });
+        }
+        ctx.save();
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "rgba(255, 140, 60, 0.95)";
+        ctx.font = `${o.hoogte * 1.1}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("☄️", cx, cy);
+        ctx.restore();
+        return;
+      }
       if (o.render === "ghost") {
         // 👻 met zachte hover-animatie + paarse glow
         const t = performance.now() / 1000;
@@ -2077,11 +2148,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
         return;
       }
+      // Contrast-glow in donkere werelden zodat stenen-obstakels niet wegvallen
+      // tegen de dungeon-water of hell-mist achtergrond.
+      const darkMode = dungeonMode || hellMode;
+      if (darkMode) {
+        ctx.save();
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = hellMode ? "rgba(255,160,80,0.9)" : "rgba(255,220,120,0.85)";
+      }
       if (o.type === 0) tekenStenenStekel(o.x, o.y, o.breedte, o.hoogte);
       else if (o.type === 1) {
         tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
         tekenStenenStekel(o.x + 30 * SCHAAL, o.y, 24 * SCHAAL, o.hoogte);
       } else tekenStenenBlok(o.x, o.y, o.breedte, o.hoogte);
+      if (darkMode) ctx.restore();
     }
     function spawnFanGroep() {
       const namen = topSpelersRef.current && topSpelersRef.current.length > 0
@@ -2399,9 +2479,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       spelerLasers.length = 0;
       // CLEAN SLATE: alles wat damage kan doen of in de weg staat opruimen
       // zodat speler NIET af kan tijdens bonus (Mark: 'nu ging ik af, niet leuk').
-      obstakels.length = 0;
-      customDecoraties.length = 0;
-      bliksems.length = 0;
+      clearCustomSpawned();
       haaien.length = 0;
       plafondStekels.length = 0;
       schansen.length = 0;
@@ -4070,6 +4148,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
       effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
+      // Custom-zones (lowgrav / boost / slow): bepaal eerst welke aanpassingen
+      // actief zijn op basis van waar de speler nu in een zone staat. Toepassen
+      // gebeurt op effSnelheid hier, en op gravity later in de frame.
+      let zoneGravMul = 1;
+      let zoneSpeedMul = 1;
+      if (customZones.length > 0) {
+        const sx = speler.x;
+        const sxR = speler.x + speler.breedte;
+        for (const z of customZones) {
+          if (sxR > z.x && sx < z.x + z.breedte) {
+            if (z.type === "lowgrav") zoneGravMul = Math.min(zoneGravMul, 0.4);
+            else if (z.type === "boost") zoneSpeedMul = Math.max(zoneSpeedMul, 1.5);
+            else if (z.type === "slow") zoneSpeedMul = Math.min(zoneSpeedMul, 0.55);
+          }
+        }
+        effSnelheid *= zoneSpeedMul;
+      }
       if (afgeremFrames > 0) afgeremFrames--;
       if (hpFlashTeller > 0) hpFlashTeller--;
       // Live audio-instellingen toepassen (mute/volume vanuit settings-panel)
@@ -4365,7 +4460,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         bliksemTimer = 800; // reset zodat lager-level geen achterstallige flash uitspuwt
       }
       // gravity: inverteren tijdens FLIP
-      speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
+      speler.snelheidY += (flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT) * zoneGravMul;
       const yVorig = speler.y;
       speler.y += speler.snelheidY;
       // Horizontale push tijdens sprong + drift-terug op grond — geeft jump
@@ -4514,6 +4609,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         d.x -= effSnelheid;
         if (d.x < -80 * SCHAAL) customDecoraties.splice(i, 1);
       }
+      // Custom-zones scrollen ook mee. Effect (lowgrav/boost/slow) is hierboven
+      // al toegepast op basis van speler-overlap; hier alleen positie + cleanup.
+      for (let i = customZones.length - 1; i >= 0; i--) {
+        const z = customZones[i];
+        z.x -= effSnelheid;
+        z.fase += 0.08;
+        if (z.x + z.breedte < -10) customZones.splice(i, 1);
+      }
       // Bliksems — knipperen 90 frames aan, 90 frames uit. Hit alleen tijdens "aan".
       for (let i = bliksems.length - 1; i >= 0; i--) {
         const bl = bliksems[i];
@@ -4535,6 +4638,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= effSnelheid;
+        // Bewegende mechanica — patrouille (horizontale sin) en vallende steen (vy + zwaartekracht)
+        if (o.patrol) {
+          o.patrol.fase += o.patrol.snelheid;
+          const nieuw = Math.sin(o.patrol.fase) * o.patrol.range;
+          o.x += (nieuw - o.patrol.last);
+          o.patrol.last = nieuw;
+        }
+        if (o.valt) {
+          o.vy += ZWAARTEKRACHT * 0.6;
+          o.y += o.vy;
+          const grondTop = GROND_Y + SPELER_GROOTTE - o.hoogte;
+          if (o.y >= grondTop) { o.y = grondTop; o.valt = false; o.vy = 0; }
+        }
         if (!bonusFase && vliegFrames === 0 && flipFrames === 0 && obstRaakt(o)) {
           // Type 0/1 = spikes → HP-damage; type 2 = blok → afremmen ipv damage
           if (o.type === 2) afremTotale(o);
@@ -4770,9 +4886,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               hellFrames = 0;
               hellFadeIn = HELL_FADE;
               // ruim alles op wat niet bij Hell hoort
-              obstakels.length = 0;
-              customDecoraties.length = 0;
-      bliksems.length = 0;
+              clearCustomSpawned();
               plafondStekels.length = 0;
               schansen.length = 0;
               fans.length = 0;
@@ -5466,9 +5580,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             spawnParticles(m.x, cy, 14, "#ff5040", { spread: 9, opwaarts: 2, leven: 38, grootte: 5, zwaartekracht: 0.12, glow: 22 });
             spawnParticles(m.x, cy, 8, "#ffaa40", { spread: 6, opwaarts: 1.5, leven: 28, grootte: 4, zwaartekracht: 0.10, glow: 18 });
           }
-          obstakels.length = 0;
-          customDecoraties.length = 0;
-      bliksems.length = 0;
+          clearCustomSpawned();
           plafondStekels.length = 0;
           zwevendeMinen.length = 0;
           shakeKracht = Math.max(shakeKracht, 10);
@@ -5845,6 +5957,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.strokeStyle = "rgba(255,255,255,0.8)";
         ctx.lineWidth = 1;
         ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, PLATFORM_HOOGTE - 1);
+        ctx.restore();
+      }
+      // Custom-zones — translucente vertical bands op de achtergrond
+      if (customZones.length > 0) {
+        ctx.save();
+        for (const z of customZones) {
+          const pulse = 0.18 + Math.sin(z.fase) * 0.06;
+          let kleur;
+          if (z.type === "lowgrav") kleur = `rgba(140, 100, 255, ${pulse})`;
+          else if (z.type === "boost") kleur = `rgba(80, 220, 120, ${pulse})`;
+          else kleur = `rgba(255, 180, 60, ${pulse})`; // slow
+          ctx.fillStyle = kleur;
+          ctx.fillRect(z.x, 0, z.breedte, H);
+          // Verticale streep-pattern voor herkenbaarheid
+          ctx.strokeStyle = kleur.replace(`${pulse}`, `${pulse * 2.2}`);
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          for (let xi = z.x + 14 * SCHAAL; xi < z.x + z.breedte; xi += 22 * SCHAAL) {
+            ctx.moveTo(xi, 0); ctx.lineTo(xi + 12 * SCHAAL, H);
+          }
+          ctx.stroke();
+          // Label bovenaan
+          ctx.font = `bold ${14 * SCHAAL}px sans-serif`;
+          ctx.fillStyle = `rgba(255,255,255,${0.5 + pulse})`;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "top";
+          const label = z.type === "lowgrav" ? "🪶 LOW GRAVITY" : z.type === "boost" ? "💨 BOOST" : "🐢 SLOW";
+          ctx.fillText(label, z.x + z.breedte / 2, 8 * SCHAAL);
+        }
         ctx.restore();
       }
       // Custom-decoraties — visueel-only background (boom/wolk/etc. uit custom-levels)
@@ -6623,9 +6764,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     function respawn() {
       // clear obstakels + particles + bonusHarten + raketten + flipPickups, reset speler, score blijft
-      obstakels.length = 0;
-      customDecoraties.length = 0;
-      bliksems.length = 0;
+      clearCustomSpawned();
       particles.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
@@ -6829,9 +6968,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         cutsceneFase = "portal";
         cutsceneFrames = 0;
         // ruim alles op zodat cutscene zuiver begint — score blijft staan
-        obstakels.length = 0;
-        customDecoraties.length = 0;
-      bliksems.length = 0;
+        clearCustomSpawned();
         ringen.length = 0;
         platforms.length = 0;
         plafondStekels.length = 0;
@@ -7695,8 +7832,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { id: "magneet",       label: "Magneet",       emoji: "🧲", kost: 10 },
                 { id: "mijn",          label: "Mijn",          emoji: "💣", kost: 10 },
                 { id: "spookje",       label: "Spookje",       emoji: "👻", kost: 5 },
+                { id: "patrouille",    label: "Patrouille",    emoji: "👻", kost: 8 },
+                { id: "vallende_steen",label: "Meteoor",       emoji: "☄️", kost: 6 },
                 { id: "bliksem",       label: "Bliksem",       emoji: "⚡", kost: 7 },
                 { id: "schild",        label: "Schild",        emoji: "🛡️", kost: 12 },
+                { id: "zone_lowgrav",  label: "Low-grav",      emoji: "🪶", kost: 6 },
+                { id: "zone_boost",    label: "Boost",         emoji: "💨", kost: 6 },
+                { id: "zone_slow",     label: "Slow-zone",     emoji: "🐢", kost: 4 },
                 { id: "hart",          label: "Hartje",        emoji: "❤️", kost: 15 },
                 { id: "bom",           label: "Bom",           emoji: "💥", kost: 20 },
               ];
@@ -7742,6 +7884,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 // Vrije Y voor alles — speler bepaalt zelf de hoogte
                 setEditorObstakels((arr) => [...arr, { type: tool.id, x: wereldX, y: wereldY }]);
                 setEditorOpslaan({ bezig: false, error: null, ok: false });
+              };
+              // Pointer-handlers met swipe-vs-tap thresholding (mobile-friendly):
+              //   - down: leg start-positie + tijd vast
+              //   - up: alleen plaats-actie als beweging < 8px én duur < 500ms.
+              // Voorkomt dat panning/lang-drukken per ongeluk obstakels neerzet.
+              const handleCanvasPointerDown = (e) => {
+                editorTapStartRef.current = { x: e.clientX, y: e.clientY, t: Date.now(), valid: true };
+              };
+              const handleCanvasPointerUp = (e) => {
+                const start = editorTapStartRef.current;
+                if (!start.valid) return;
+                editorTapStartRef.current.valid = false;
+                const dx = e.clientX - start.x;
+                const dy = e.clientY - start.y;
+                const dt = Date.now() - start.t;
+                if (Math.abs(dx) > 8 || Math.abs(dy) > 8 || dt > 500) return;
+                handleCanvasTap(e);
               };
               const handleMiniMapTap = (e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
@@ -8100,12 +8259,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     }}
                   >
                     <div
-                      onClick={handleCanvasTap}
+                      onPointerDown={handleCanvasPointerDown}
+                      onPointerUp={handleCanvasPointerUp}
                       style={{
                         position: "relative",
                         width: innerCanvasW,
                         height: TRACK_HOOGTE,
                         cursor: "crosshair",
+                        touchAction: "pan-x",
                       }}
                     >
                       {/* grond-lijn */}
