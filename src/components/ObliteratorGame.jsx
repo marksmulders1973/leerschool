@@ -155,6 +155,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [editorTool, setEditorTool] = useState("spike");
   const [editorLevelNaam, setEditorLevelNaam] = useState("Mijn level");
   const [editorOpslaan, setEditorOpslaan] = useState({ bezig: false, error: null, ok: false });
+  const [editorLengte, setEditorLengte] = useState(4000);
   const [editorTab, setEditorTab] = useState("maken"); // "maken" | "spelen"
   const [communityLevels, setCommunityLevels] = useState([]);
   const [communityLevelsLaden, setCommunityLevelsLaden] = useState(false);
@@ -276,6 +277,64 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   useEffect(() => { skinRef.current = selectedSkin; }, [selectedSkin]);
   // Trigger ref voor admin-activatie van Oblivion Pulse cutscene
   const oblivionTriggerRef = useRef({ trigger: false, lastSeenEventId: 0 });
+  // 2× munten-event (admin-getriggerd, wereldwijd)
+  const muntenMultiplierRef = useRef(1);
+  const [bonusEventEinde, setBonusEventEinde] = useState(null); // ms-timestamp of null
+  const [bonusTik, setBonusTik] = useState(0); // dwingt re-render voor countdown
+  // Initiële fetch: is er nu een actief event?
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data } = await supabase
+          .from("obliterator_bonus_events")
+          .select("event_type, expires_at")
+          .eq("event_type", "munten_2x")
+          .gt("expires_at", new Date().toISOString())
+          .order("expires_at", { ascending: false })
+          .limit(1);
+        if (cancelled || !data || !data[0]) return;
+        const t = new Date(data[0].expires_at).getTime();
+        if (t > Date.now()) {
+          muntenMultiplierRef.current = 2;
+          setBonusEventEinde(t);
+        }
+      } catch {}
+    })();
+    return () => { cancelled = true; };
+  }, []);
+  // Realtime: live picken op nieuwe bonus-events
+  useEffect(() => {
+    const channel = supabase
+      .channel(`bonus-events-${Math.random().toString(36).slice(2, 8)}`)
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "obliterator_bonus_events" },
+        (payload) => {
+          const ev = payload?.new;
+          if (!ev || ev.event_type !== "munten_2x") return;
+          const t = new Date(ev.expires_at).getTime();
+          if (t > Date.now()) {
+            muntenMultiplierRef.current = 2;
+            setBonusEventEinde(t);
+          }
+        }
+      )
+      .subscribe();
+    return () => { try { supabase.removeChannel(channel); } catch {} };
+  }, []);
+  // Per-seconde tik om expiry te checken + countdown te updaten
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (bonusEventEinde && Date.now() >= bonusEventEinde) {
+        muntenMultiplierRef.current = 1;
+        setBonusEventEinde(null);
+      } else if (bonusEventEinde) {
+        setBonusTik((n) => n + 1);
+      }
+    }, 1000);
+    return () => clearInterval(id);
+  }, [bonusEventEinde]);
 
   // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
   // bij iedereen die op dat moment speelt de cutscene triggert.
@@ -4950,10 +5009,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
           r.opgepakt = true;
           streak++;
-          // Munten: 1 ring = 1 munt, persistent over sessies (voor toekomstige
-          // custom-level-editor). Update via ref + persist op localStorage —
-          // React-state-update doen we lager bij nieuwe waarde.
-          muntenRef.current += 1;
+          // Munten: 1 ring = 1 munt (of 2 tijdens een 2×-event), persistent
+          // over sessies. Update via ref + persist op localStorage.
+          muntenRef.current += (muntenMultiplierRef.current || 1);
           try { schrijfInt(muntenKey, muntenRef.current); } catch {}
           const oudeMultiplier = multiplier;
           multiplier = Math.min(5, 1 + Math.floor(streak / 5));
@@ -6676,12 +6734,44 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             <p style={{ color: "#ff8050", fontSize: isPortrait ? 14 : 12, marginBottom: 6 }}>
               {Array(3).fill("❤️").join(" ")}
             </p>
-            <p style={{ color: "#ffd54f", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 14 : 6, fontWeight: 700 }}>
+            <p style={{ color: "#ffd54f", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 8 : 4, fontWeight: 700 }}>
               💍 {munten} {munten === 1 ? "munt" : "munten"}
               <span style={{ color: "rgba(255,255,255,0.5)", fontWeight: 500, marginLeft: 6, fontSize: isPortrait ? 11 : 10 }}>
                 (uit gepakte ringen — geef uit in custom-editor)
               </span>
             </p>
+            {bonusEventEinde && Date.now() < bonusEventEinde && (
+              <div style={{
+                background: "linear-gradient(135deg, rgba(255,213,79,0.25), rgba(249,168,37,0.15))",
+                border: "1px solid #ffd54f",
+                borderRadius: 10,
+                padding: "8px 12px",
+                marginBottom: 12,
+                color: "#ffd54f",
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 13, fontWeight: 700,
+                textAlign: "center",
+                animation: "pulse 1.5s ease-in-out infinite",
+              }}>
+                ✨ 2× MUNTEN EVENT actief — {Math.max(0, Math.ceil((bonusEventEinde - Date.now()) / 60000))} min over
+              </div>
+            )}
+            {/* Logout-waarschuwing */}
+            {!authUser && (
+              <div style={{
+                background: "rgba(255,184,0,0.15)",
+                border: "1px solid rgba(255,184,0,0.45)",
+                borderRadius: 10,
+                padding: "8px 12px",
+                marginBottom: 12,
+                color: "#ffcc40",
+                fontSize: 12, lineHeight: 1.4,
+                textAlign: "left",
+              }}>
+                <strong>⚠️ Niet ingelogd</strong> — je munten + skins worden alleen op deze browser bewaard.
+                Levels die je opslaat worden anoniem opgeslagen. <strong>Log in</strong> via de homepage om alles op je account te bewaren.
+              </div>
+            )}
 
             {/* Mini legenda — compact in landscape */}
             <div style={{
@@ -6939,6 +7029,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   </button>
                   <p style={{ color: "rgba(220,180,255,0.6)", fontSize: 10, marginTop: 6, marginBottom: 0, textAlign: "center" }}>
                     Cutscene → ruimte → black hole → 60 sec overleven = Black Hole skin
+                  </p>
+                  {/* 2× MUNTEN-event */}
+                  <button
+                    onClick={async () => {
+                      const duurMin = 10;
+                      const expires = new Date(Date.now() + duurMin * 60 * 1000).toISOString();
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert({
+                          event_type: "munten_2x",
+                          triggered_by_name: (userName || "Admin").trim(),
+                          expires_at: expires,
+                        });
+                      } catch {}
+                      // lokaal direct activeren
+                      muntenMultiplierRef.current = 2;
+                      setBonusEventEinde(Date.now() + duurMin * 60 * 1000);
+                    }}
+                    disabled={bonusEventEinde && Date.now() < bonusEventEinde}
+                    style={{
+                      width: "100%", marginTop: 8,
+                      padding: "10px 14px", borderRadius: 10,
+                      background: bonusEventEinde && Date.now() < bonusEventEinde
+                        ? "rgba(255,213,79,0.18)"
+                        : "linear-gradient(135deg, #ffd54f, #f9a825)",
+                      border: "none",
+                      color: bonusEventEinde && Date.now() < bonusEventEinde ? "rgba(255,213,79,0.7)" : "#1a0008",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700,
+                      cursor: bonusEventEinde && Date.now() < bonusEventEinde ? "not-allowed" : "pointer",
+                      letterSpacing: 0.4,
+                    }}
+                  >
+                    {bonusEventEinde && Date.now() < bonusEventEinde
+                      ? `✨ 2× MUNTEN actief (${Math.max(0, Math.ceil((bonusEventEinde - Date.now()) / 60000))} min over)`
+                      : "✨ Activeer 2× MUNTEN event (10 min)"}
+                  </button>
+                  <p style={{ color: "rgba(255,213,79,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                    Wereldwijd — alle spelers krijgen 2 munten per ring tijdens dit event
                   </p>
                 </div>
               );
@@ -7202,10 +7329,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { id: "hart",        label: "Hartje",       emoji: "❤️", kost: 15 },
                 { id: "bom",         label: "Bom",          emoji: "💥", kost: 20 },
               ];
-              const LEVEL_LENGTE = 4000;
+              const LEVEL_LENGTE = editorLengte;
               const TRACK_HOOGTE = 220;
-              const trackToScreen = 0.32; // editor toont ~32% van level-breedte
-              const editorBreedte = LEVEL_LENGTE * trackToScreen;
+              // Editor-canvas representeert het hele level — tappen in het midden
+              // = midden van level. Langere levels = meer obstakels passen erin
+              // (kleinere spacing tussen icons).
+              const editorBreedte = LEVEL_LENGTE;
               const tool = TOOLS.find((t) => t.id === editorTool) || TOOLS[0];
               const isAdmin = isObliterAdmin;
               const handleCanvasTap = (e) => {
@@ -7254,7 +7383,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       maker_user_id: authUser?.id || null,
                       naam: editorLevelNaam.trim() || "Naamloos level",
                       obstakels: editorObstakels,
-                      lengte: LEVEL_LENGTE,
+                      lengte: editorLengte,
                       publiek: true,
                     });
                   if (error) throw error;
@@ -7363,8 +7492,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     value={editorLevelNaam}
                     onChange={(e) => setEditorLevelNaam(e.target.value)}
                     placeholder="Naam van je level"
-                    style={{ width: "100%", padding: "8px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(0,0,0,0.3)", color: "#fff", fontSize: 14, marginBottom: 12, boxSizing: "border-box" }}
+                    style={{ width: "100%", padding: "8px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(0,0,0,0.3)", color: "#fff", fontSize: 14, marginBottom: 8, boxSizing: "border-box" }}
                   />
+                  {/* Lengte-keuze */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10, flexWrap: "wrap" }}>
+                    <span style={{ fontSize: 12, color: "rgba(255,255,255,0.6)" }}>📏 Lengte:</span>
+                    {[4000, 6000, 8000, 12000, 20000].map((len) => (
+                      <button
+                        key={len}
+                        onClick={() => setEditorLengte(len)}
+                        style={{
+                          padding: "5px 10px", borderRadius: 7,
+                          border: editorLengte === len ? "2px solid #ff9d40" : "1px solid rgba(255,255,255,0.18)",
+                          background: editorLengte === len ? "rgba(255,157,64,0.15)" : "rgba(255,255,255,0.04)",
+                          color: editorLengte === len ? "#ff9d40" : "rgba(255,255,255,0.65)",
+                          fontFamily: "'Fredoka', sans-serif", fontSize: 11, fontWeight: 700,
+                          cursor: "pointer",
+                        }}
+                      >
+                        {len === 4000 ? "Kort" : len === 6000 ? "Mid" : len === 8000 ? "Lang" : len === 12000 ? "Extra" : "Mega"} · {len}
+                      </button>
+                    ))}
+                  </div>
                   {/* Palet */}
                   <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
                     {TOOLS.map((t) => {
