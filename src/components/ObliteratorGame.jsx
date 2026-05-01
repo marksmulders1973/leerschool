@@ -265,6 +265,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       } catch {}
     })();
+    const myNameLower = (userName || "").trim().toLowerCase();
     const channel = supabase
       .channel(`oblivion-events-${Math.random().toString(36).slice(2, 8)}`)
       .on(
@@ -273,6 +274,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         (payload) => {
           const ev = payload?.new;
           if (!ev || !ev.id) return;
+          // Skip eigen events — admin-knop triggert lokaal, geen realtime-echo
+          // nodig (anders wordt admin telkens uit z'n menu getrokken).
+          const triggererLower = (ev.triggered_by_name || "").trim().toLowerCase();
+          if (myNameLower && triggererLower === myNameLower) {
+            oblivionTriggerRef.current.lastSeenEventId = ev.id;
+            return;
+          }
           // Skip events ouder dan 90 sec (na app-reload niet retroactief triggeren)
           try {
             const t = new Date(ev.triggered_at).getTime();
@@ -284,7 +292,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           oblivionTriggerRef.current.trigger = true;
           // Als de speler op het menu staat: forceer naar spelen-fase zodat
           // de game-loop start en de trigger meteen wordt geconsumeerd.
-          if (faseRef.current === "menu" && !pvpMatch) {
+          // Admins NIET auto-jumpen — die hebben hun eigen knop.
+          if (faseRef.current === "menu" && !pvpMatch && !isObliterAdmin) {
             try { setFase("spelen"); } catch {}
           }
         }
