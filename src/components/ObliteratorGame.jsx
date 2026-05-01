@@ -475,6 +475,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // BOMB-power-up (vernietigt alle obstakels op het scherm)
     const bombPickups = [];
     let bombFlash = 0;
+    // ── BLIKSEM-FLITS (vanaf L50, frequentie ↑ tot L100) ──
+    let bliksemFlash = 0;       // > 0 = flash zichtbaar (frames)
+    let bliksemTimer = 1200;    // countdown tot volgende flits
+    let bliksemBoltPath = null; // gegenereerde zigzag-pad voor de bliksem
     const PLAFOND_NIVEAU = PLAFOND_HOOGTE + 12;
     // gouden ringen — primary score-bron (Sonic-stijl)
     const ringen = [];
@@ -824,25 +828,50 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const KALM_MOTIEF = [0, undefined, 7, undefined, 12, undefined, 7, undefined,
                          5, undefined, 3, undefined, 0, undefined, undefined, undefined];
 
+    // Intense motief (L50+) — 16 stappen, mineur-getint, snelle arpeggio's.
+    // Halve-tonen vanaf bassWortel (transponeerd per biome).
+    const INTENSE_MELODIE = [
+      0, 12, 15, 19, 12, 0, 7, 15,
+      0, 12, 15, 19, 22, 15, 12, 7,
+    ];
+    // Drum-pattern (16 stappen) — kick op 1+9 (4-on-floor halve), snare op 5+13,
+    // hat op alle even stappen.
+    const KICK_HITS = [1,0,0,0, 0,0,0,0, 1,0,0,0, 0,0,0,0];
+    const SNARE_HITS = [0,0,0,0, 1,0,0,0, 0,0,0,0, 1,0,0,0];
+    const HAT_HITS = [1,0,1,0, 1,0,1,0, 1,0,1,0, 1,0,1,0];
+
     function plan() {
       if (!muziek.draait) return;
       const a = aud();
-      // Tempo iets dempen — BPM uit BPM_PER_LEVEL is voor de hardcore versie
-      // (150-180). We nemen 60% daarvan zodat de noten ademen.
-      const effBpm = muziek.bpm * 0.6;
+      // Tempo voor calm: 60% van BPM_PER_LEVEL. Voor intense: 100% (vol BPM).
+      const intens = (typeof huidigLevel !== "undefined") && huidigLevel >= 50;
+      const effBpm = muziek.bpm * (intens ? 1.0 : 0.6);
       const tijdPer16 = 60 / effBpm / 4;
       const lookahead = 0.15;
       while (muziek.startTijd + muziek.beat * tijdPer16 < a.currentTime + lookahead) {
         const t = muziek.startTijd + muziek.beat * tijdPer16;
         const stap = muziek.beat % 16;
 
-        // PAD op stap 0 en 8 — lange aanhoudende klank
-        if (stap === 0) muziekPad(t, 0, tijdPer16 * 16);
-        if (stap === 8) muziekPad(t, 7, tijdPer16 * 8);
-
-        // Sparse melodie volgens motief
-        const noot = KALM_MOTIEF[stap];
-        if (noot !== undefined) muziekKalmeNoot(t, noot, tijdPer16 * 3);
+        if (intens) {
+          // L50+ intense track: drums + bass + arpeggio-melodie.
+          if (KICK_HITS[stap]) muziekKick(t);
+          if (SNARE_HITS[stap]) muziekSnare(t);
+          if (HAT_HITS[stap]) muziekHat(t, stap % 4 === 2);
+          // bass volgt bassRiff op halve-snelheid (elke 2 stappen één noot)
+          if (stap % 2 === 0) {
+            const bRif = muziek.bassRiff[Math.floor(stap / 2) % muziek.bassRiff.length];
+            muziekBass(t, bRif - 12, tijdPer16 * 2 * 0.95);
+          }
+          // arpeggio-melodie: sneller dan calm, octaaf hoger
+          const noot = INTENSE_MELODIE[stap];
+          if (noot !== undefined) muziekStem(t, noot, tijdPer16 * 1.5);
+        } else {
+          // Calm track (L1-49): pad + sparse melodie
+          if (stap === 0) muziekPad(t, 0, tijdPer16 * 16);
+          if (stap === 8) muziekPad(t, 7, tijdPer16 * 8);
+          const noot = KALM_MOTIEF[stap];
+          if (noot !== undefined) muziekKalmeNoot(t, noot, tijdPer16 * 3);
+        }
 
         muziek.beat++;
       }
@@ -3009,6 +3038,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
+      // ── BLIKSEM-FLITS update (vanaf L50, frequentie schaalt naar L100) ──
+      if (bliksemFlash > 0) bliksemFlash--;
+      if (huidigLevel >= 50 && !bonusFase && !bossActief) {
+        bliksemTimer--;
+        if (bliksemTimer <= 0) {
+          // intervallen: L50 = ~1800f (30s) gemiddeld, L100 = ~300f (5s)
+          // flits-duur loopt ook iets op naar hogere levels
+          bliksemFlash = 5 + Math.min(8, Math.floor((huidigLevel - 50) / 8));
+          // genereer zigzag-pad (verticaal van boven naar onder, met willekeurige
+          // takken zijwaarts)
+          const path = [];
+          let x = 60 + Math.random() * (W - 120);
+          let y = 0;
+          path.push({ x, y });
+          while (y < H) {
+            y += 18 + Math.random() * 24;
+            x += (Math.random() - 0.5) * 80;
+            path.push({ x, y });
+          }
+          bliksemBoltPath = path;
+          shakeKracht = Math.max(shakeKracht, 6 + (huidigLevel - 50) * 0.08);
+          // donder-piep: lage rumble + late "krak"
+          piep(70, 0.45, "triangle", 0.16);
+          setTimeout(() => piep(110, 0.30, "triangle", 0.10), 80);
+          setTimeout(() => piep(45, 0.55, "sine", 0.14), 180);
+          // reset timer met scaling
+          const basis = Math.max(300, 1800 - (huidigLevel - 50) * 30);
+          bliksemTimer = Math.floor(basis * (0.5 + Math.random()));
+        }
+      } else {
+        bliksemTimer = 1200; // reset zodat lager-level geen achterstallige flash uitspuwt
+      }
       // gravity: inverteren tijdens FLIP
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
       const yVorig = speler.y;
@@ -4331,6 +4392,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillStyle = `rgba(255,200,100,${alpha * 0.5})`;
         ctx.fillRect(0, 0, W, H);
         ctx.restore();
+      }
+      // BLIKSEM-FLITS: witte flash over hele scherm + zigzag-bolt
+      if (bliksemFlash > 0) {
+        const t = bliksemFlash / 13; // genormaliseerd 0-1
+        // witte flash met blauwe tint
+        ctx.save();
+        ctx.fillStyle = `rgba(220,235,255,${0.55 + t * 0.35})`;
+        ctx.fillRect(0, 0, W, H);
+        ctx.restore();
+        // zigzag-bolt
+        if (bliksemBoltPath && bliksemBoltPath.length > 1) {
+          ctx.save();
+          ctx.shadowBlur = 28;
+          ctx.shadowColor = "#a0d8ff";
+          ctx.strokeStyle = "rgba(255,255,255,0.95)";
+          ctx.lineWidth = 4 * SCHAAL;
+          ctx.beginPath();
+          ctx.moveTo(bliksemBoltPath[0].x, bliksemBoltPath[0].y);
+          for (let i = 1; i < bliksemBoltPath.length; i++) {
+            ctx.lineTo(bliksemBoltPath[i].x, bliksemBoltPath[i].y);
+          }
+          ctx.stroke();
+          // glow-rand eromheen (dikkere transparante lijn)
+          ctx.strokeStyle = "rgba(160,210,255,0.6)";
+          ctx.lineWidth = 12 * SCHAAL;
+          ctx.stroke();
+          ctx.restore();
+        }
       }
 
       for (const p of particles) p.teken();
