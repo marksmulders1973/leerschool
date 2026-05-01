@@ -2181,70 +2181,193 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function tekenLavaGrond() {
-      // animated lava-grond: gradient + horizontale wave + vlammetjes-rand
+      // Geometry-Dash-stijl lava: bright orange-yellow body + zigzag-tanden boven.
       const grondTop = GROND_Y + SPELER_GROOTTE;
-      const grad = ctx.createLinearGradient(0, grondTop - 8 * SCHAAL, 0, H);
-      grad.addColorStop(0, "#fff4a0");
-      grad.addColorStop(0.15, "#ffd040");
-      grad.addColorStop(0.4, "#ff7020");
-      grad.addColorStop(1, "#a01010");
+      const grad = ctx.createLinearGradient(0, grondTop - 6 * SCHAAL, 0, H);
+      grad.addColorStop(0, "#ffe060");
+      grad.addColorStop(0.3, "#ffaa20");
+      grad.addColorStop(0.7, "#ff5010");
+      grad.addColorStop(1, "#7a0408");
       ctx.fillStyle = grad;
-      ctx.fillRect(0, grondTop - 6 * SCHAAL, W, H - grondTop + 6 * SCHAAL);
-      // glow boven de lava
+      ctx.fillRect(0, grondTop, W, H - grondTop);
+      // Zigzag-tanden bovenop de lava (vlammen die naar boven happen)
       ctx.save();
-      ctx.shadowBlur = 28;
-      ctx.shadowColor = "#ff8030";
-      ctx.fillStyle = "rgba(255, 200, 80, 0.5)";
-      ctx.fillRect(0, grondTop - 4 * SCHAAL, W, 4 * SCHAAL);
-      ctx.restore();
-      // wave-rand (vlammetjes-look)
-      ctx.save();
-      ctx.fillStyle = "#ffe080";
-      ctx.shadowBlur = 18;
-      ctx.shadowColor = "#ff5020";
+      ctx.shadowBlur = 22;
+      ctx.shadowColor = "#ffaa30";
+      ctx.fillStyle = "#ffd040";
+      const offset = (frameTeller * 1.4) % 28;
+      const tandB = 14 * SCHAAL;
+      const tandH = 9 * SCHAAL;
       ctx.beginPath();
-      const offset = (frameTeller * 0.6) % 30;
       ctx.moveTo(-30, grondTop);
-      for (let x = -30; x < W + 30; x += 12) {
-        const yWave = grondTop + Math.sin((x + offset) * 0.18) * 3 - 2;
-        ctx.lineTo(x, yWave);
+      for (let x = -30 + offset; x < W + 30; x += tandB) {
+        ctx.lineTo(x + tandB / 2, grondTop - tandH);
+        ctx.lineTo(x + tandB, grondTop);
       }
-      ctx.lineTo(W + 30, grondTop);
+      ctx.lineTo(W + 30, H);
+      ctx.lineTo(-30, H);
       ctx.closePath();
       ctx.fill();
       ctx.restore();
-    }
-    function tekenHellAchtergrond() {
-      // dark-red gradient + parallax-silhouet
-      const bg = ctx.createLinearGradient(0, 0, 0, H);
-      bg.addColorStop(0, "#1a0408");
-      bg.addColorStop(0.5, "#3a0810");
-      bg.addColorStop(1, "#6a1410");
-      ctx.fillStyle = bg;
-      ctx.fillRect(0, 0, W, H);
-      // glow van onderaf (lava-licht weerkaatst op het plafond)
+      // Donkere rotsige onderlaag onder de lava (suggestie van bodem)
       ctx.save();
-      const lavaGlow = ctx.createLinearGradient(0, H * 0.55, 0, H);
-      lavaGlow.addColorStop(0, "rgba(255, 100, 30, 0)");
-      lavaGlow.addColorStop(1, "rgba(255, 140, 50, 0.35)");
-      ctx.fillStyle = lavaGlow;
-      ctx.fillRect(0, H * 0.55, W, H * 0.45);
-      // silhouette-rotsen op de achtergrond (parallax, langzaam)
-      ctx.fillStyle = "rgba(20, 0, 0, 0.6)";
-      const parallaxOff = (frameTeller * 0.4) % 200;
-      for (let i = -1; i < Math.ceil(W / 200) + 1; i++) {
-        const baseX = i * 200 - parallaxOff;
+      ctx.fillStyle = "rgba(60, 4, 8, 0.85)";
+      ctx.fillRect(0, H - 16 * SCHAAL, W, 16 * SCHAAL);
+      // randstreepjes (faceted rock onderaan)
+      ctx.fillStyle = "rgba(30, 0, 4, 0.95)";
+      for (let x = 0; x < W; x += 18 * SCHAAL) {
+        const off = (Math.floor(x * 0.13)) % 4;
         ctx.beginPath();
-        ctx.moveTo(baseX, H);
-        ctx.lineTo(baseX + 30, H * 0.65);
-        ctx.lineTo(baseX + 70, H * 0.78);
-        ctx.lineTo(baseX + 110, H * 0.62);
-        ctx.lineTo(baseX + 160, H * 0.80);
-        ctx.lineTo(baseX + 200, H * 0.70);
-        ctx.lineTo(baseX + 200, H);
+        ctx.moveTo(x, H);
+        ctx.lineTo(x + 9 * SCHAAL + off, H - 12 * SCHAAL);
+        ctx.lineTo(x + 18 * SCHAAL, H);
         ctx.closePath();
         ctx.fill();
       }
+      ctx.restore();
+    }
+    function tekenHellAchtergrond() {
+      // Geometry-Dash hell-look: paars/magenta gradient + cartoon-wolken +
+      // parallax cliffs achterin + spike-towers + hangende toorts-icoontjes.
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, "#3a1452");
+      bg.addColorStop(0.55, "#5a1a6a");
+      bg.addColorStop(1, "#7a1830");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+
+      // Achterste cliff-laag (heel donker paars, langzame parallax)
+      ctx.save();
+      ctx.fillStyle = "rgba(30, 8, 50, 0.9)";
+      const farOff = (frameTeller * 0.25) % 240;
+      for (let i = -1; i < Math.ceil(W / 240) + 1; i++) {
+        const bx = i * 240 - farOff;
+        ctx.beginPath();
+        ctx.moveTo(bx, H);
+        ctx.lineTo(bx + 30, H * 0.55);
+        ctx.lineTo(bx + 80, H * 0.42);
+        ctx.lineTo(bx + 130, H * 0.58);
+        ctx.lineTo(bx + 180, H * 0.45);
+        ctx.lineTo(bx + 220, H * 0.55);
+        ctx.lineTo(bx + 240, H);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+
+      // Cartoon-wolken (parallax langzaam)
+      ctx.save();
+      ctx.fillStyle = "#ffffff";
+      ctx.strokeStyle = "rgba(0,0,0,0.4)";
+      ctx.lineWidth = 2;
+      const wolkenOff = (frameTeller * 0.6) % 320;
+      const wolkPunten = [
+        { x: 40, y: H * 0.18, r: 22 },
+        { x: 180, y: H * 0.12, r: 28 },
+        { x: 380, y: H * 0.22, r: 24 },
+        { x: 560, y: H * 0.15, r: 30 },
+      ];
+      for (let lap = -1; lap < Math.ceil(W / 320) + 1; lap++) {
+        for (const wp of wolkPunten) {
+          const cx = wp.x + lap * 320 - wolkenOff;
+          if (cx < -60 || cx > W + 60) continue;
+          // 3-4 ronde bobbels tegen elkaar voor cartoon-cloud
+          ctx.beginPath();
+          ctx.arc(cx, wp.y, wp.r, 0, Math.PI * 2);
+          ctx.arc(cx + wp.r * 0.7, wp.y - wp.r * 0.2, wp.r * 0.85, 0, Math.PI * 2);
+          ctx.arc(cx + wp.r * 1.4, wp.y, wp.r * 0.9, 0, Math.PI * 2);
+          ctx.arc(cx + wp.r * 0.6, wp.y + wp.r * 0.2, wp.r * 0.8, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+      }
+      ctx.restore();
+
+      // Spike-towers — vertikale rode pilaren met groen-gele spikes (parallax sneller)
+      ctx.save();
+      const towerOff = (frameTeller * 0.9) % 360;
+      const towerPosities = [80, 220, 470, 640]; // x-baseline binnen 360-cycle
+      for (let lap = -1; lap < Math.ceil(W / 360) + 1; lap++) {
+        for (const tx0 of towerPosities) {
+          const tx = tx0 + lap * 360 - towerOff;
+          if (tx < -60 || tx > W + 80) continue;
+          tekenSpikeTower(tx, H * 0.55);
+        }
+      }
+      ctx.restore();
+
+      // Lava-glow van onderaf
+      ctx.save();
+      const lavaGlow = ctx.createLinearGradient(0, H * 0.6, 0, H);
+      lavaGlow.addColorStop(0, "rgba(255, 100, 30, 0)");
+      lavaGlow.addColorStop(1, "rgba(255, 160, 60, 0.45)");
+      ctx.fillStyle = lavaGlow;
+      ctx.fillRect(0, H * 0.6, W, H * 0.4);
+      ctx.restore();
+    }
+    function tekenSpikeTower(x, topY) {
+      // Vertikale rode rotspilaar met groen-gele spikes aan de randen
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const tHoogte = grondTop - topY;
+      const tBreedte = 36 * SCHAAL;
+      ctx.save();
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#ff3060";
+      // body — rode rocky pilaar
+      const grad = ctx.createLinearGradient(x, topY, x + tBreedte, topY);
+      grad.addColorStop(0, "#5a0c1c");
+      grad.addColorStop(0.5, "#8a1830");
+      grad.addColorStop(1, "#3a0410");
+      ctx.fillStyle = grad;
+      ctx.fillRect(x, topY, tBreedte, tHoogte);
+      // faceted rock-pattern — een paar driehoekjes voor 3D-feel
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(255, 80, 110, 0.25)";
+      for (let dy = 8 * SCHAAL; dy < tHoogte - 8; dy += 22 * SCHAAL) {
+        ctx.beginPath();
+        ctx.moveTo(x + 4, topY + dy);
+        ctx.lineTo(x + tBreedte * 0.5, topY + dy + 6 * SCHAAL);
+        ctx.lineTo(x + tBreedte - 4, topY + dy);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+      for (let dy = 18 * SCHAAL; dy < tHoogte - 8; dy += 22 * SCHAAL) {
+        ctx.beginPath();
+        ctx.moveTo(x + 4, topY + dy);
+        ctx.lineTo(x + tBreedte * 0.5, topY + dy + 6 * SCHAAL);
+        ctx.lineTo(x + tBreedte - 4, topY + dy);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // spikes aan de zijkanten (groen-geel, naar buiten wijzend)
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "#a0e040";
+      ctx.fillStyle = "#c0f060";
+      const spikeStap = 16 * SCHAAL;
+      for (let dy = 6 * SCHAAL; dy < tHoogte; dy += spikeStap) {
+        // links naar buiten
+        ctx.beginPath();
+        ctx.moveTo(x, topY + dy);
+        ctx.lineTo(x - 8 * SCHAAL, topY + dy + spikeStap / 2);
+        ctx.lineTo(x, topY + dy + spikeStap);
+        ctx.closePath();
+        ctx.fill();
+        // rechts naar buiten
+        ctx.beginPath();
+        ctx.moveTo(x + tBreedte, topY + dy);
+        ctx.lineTo(x + tBreedte + 8 * SCHAAL, topY + dy + spikeStap / 2);
+        ctx.lineTo(x + tBreedte, topY + dy + spikeStap);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // top-spike (driehoekje bovenop, ook groen)
+      ctx.beginPath();
+      ctx.moveTo(x, topY);
+      ctx.lineTo(x + tBreedte / 2, topY - 18 * SCHAAL);
+      ctx.lineTo(x + tBreedte, topY);
+      ctx.closePath();
+      ctx.fill();
       ctx.restore();
     }
     function tekenVonken() {
@@ -2262,50 +2385,82 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function tekenHellPlatform(p) {
-      // textured rocky red block: paarse-rode keien-pattern + neon edge-glow
-      const h = PLATFORM_HOOGTE;
+      // Geometry-Dash-stijl: groen-gras top + chunky rocky pilaar tot lava-niveau.
+      // Collision-platform is alleen de bovenste PLATFORM_HOOGTE pixels — de rest
+      // is puur visueel (rotspilaar onder die naar lava scrollt).
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const collisionH = PLATFORM_HOOGTE;
+      const pilaarBot = grondTop - 2 * SCHAAL;       // pilaar stopt vlak boven lava
+      const pilaarH = Math.max(collisionH, pilaarBot - p.y);
+      const grasH = 6 * SCHAAL;
       ctx.save();
-      // outer neon glow
-      ctx.shadowBlur = 22;
+      // ─── Pilaar-body: rode gefaceteerde rotsen ───
+      ctx.shadowBlur = 14;
       ctx.shadowColor = "#ff3060";
-      // body — donker-rood gradient
-      const grad = ctx.createLinearGradient(0, p.y, 0, p.y + h);
-      grad.addColorStop(0, "#7a1828");
-      grad.addColorStop(0.5, "#5a0c1c");
-      grad.addColorStop(1, "#2a0408");
+      const grad = ctx.createLinearGradient(p.x, p.y, p.x + p.breedte, p.y);
+      grad.addColorStop(0, "#3a0810");
+      grad.addColorStop(0.5, "#9a1a30");
+      grad.addColorStop(1, "#3a0810");
       ctx.fillStyle = grad;
-      ctx.fillRect(p.x, p.y, p.breedte, h);
-      // pebble-textuur: kleine donkere ronde stippen erin (deterministisch via x)
+      ctx.fillRect(p.x, p.y + grasH, p.breedte, pilaarH - grasH);
+      // Faceted rock-driehoekjes — afwisselend lichter en donkerder voor 3D-feel
       ctx.shadowBlur = 0;
-      ctx.fillStyle = "rgba(40, 4, 8, 0.7)";
-      const pebbleStep = 8 * SCHAAL;
-      for (let dx = 4; dx < p.breedte - 2; dx += pebbleStep) {
-        for (let dy = 2; dy < h - 2; dy += pebbleStep) {
-          // kleine offset voor 'stenig' uiterlijk
-          const ox = ((Math.floor((p.x + dx) * 0.13)) % 5) - 2;
+      const facetB = 14 * SCHAAL;
+      const facetH = 10 * SCHAAL;
+      for (let row = 0; row < 6; row++) {
+        const ry = p.y + grasH + 4 + row * (facetH + 2);
+        if (ry > pilaarBot - 4) break;
+        const rowOff = (row % 2) * (facetB / 2);
+        for (let dx = -facetB; dx < p.breedte + facetB; dx += facetB) {
+          const fx = p.x + dx + rowOff;
+          // licht facet (highlight-zijde)
+          ctx.fillStyle = row % 2 === 0 ? "rgba(255, 90, 120, 0.30)" : "rgba(180, 40, 80, 0.25)";
           ctx.beginPath();
-          ctx.arc(p.x + dx + ox, p.y + dy, 1.2 * SCHAAL, 0, Math.PI * 2);
+          ctx.moveTo(fx, ry);
+          ctx.lineTo(fx + facetB / 2, ry + facetH);
+          ctx.lineTo(fx + facetB, ry);
+          ctx.closePath();
+          ctx.fill();
+          // donker facet (schaduw-zijde)
+          ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
+          ctx.beginPath();
+          ctx.moveTo(fx + facetB / 2, ry + facetH);
+          ctx.lineTo(fx + facetB, ry);
+          ctx.lineTo(fx + facetB + facetB / 2, ry + facetH);
+          ctx.closePath();
           ctx.fill();
         }
       }
-      // top-rand: helder roze-rood neon
-      ctx.shadowBlur = 14;
-      ctx.shadowColor = "#ff80a0";
-      ctx.fillStyle = "#ff5080";
-      ctx.fillRect(p.x, p.y, p.breedte, 2 * SCHAAL);
-      // bovenste highlight-streep (cyaan voor 3D-feel)
-      ctx.shadowBlur = 0;
-      ctx.fillStyle = "rgba(255, 240, 220, 0.85)";
-      ctx.fillRect(p.x + 2, p.y + 2 * SCHAAL, p.breedte - 4, 1);
-      // onder-rand: donkere lijn
-      ctx.fillStyle = "rgba(0,0,0,0.5)";
-      ctx.fillRect(p.x, p.y + h - 2, p.breedte, 2);
       // links/rechts neon outline
-      ctx.shadowBlur = 14;
+      ctx.shadowBlur = 12;
       ctx.shadowColor = "#ff3060";
       ctx.strokeStyle = "#ff5080";
-      ctx.lineWidth = 1.2;
-      ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, h - 1);
+      ctx.lineWidth = 1.4;
+      ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, pilaarH - 1);
+
+      // ─── Groene gras-top met blade-silhouetten ───
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#a0f060";
+      const grasGrad = ctx.createLinearGradient(p.x, p.y, p.x, p.y + grasH);
+      grasGrad.addColorStop(0, "#a0f060");
+      grasGrad.addColorStop(1, "#4a8020");
+      ctx.fillStyle = grasGrad;
+      ctx.fillRect(p.x, p.y, p.breedte, grasH);
+      // grasspriet-driehoekjes bovenop (zigzag-rand)
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "#c0ff70";
+      const sprietB = 9 * SCHAAL;
+      for (let dx = 0; dx < p.breedte; dx += sprietB) {
+        ctx.beginPath();
+        ctx.moveTo(p.x + dx, p.y);
+        ctx.lineTo(p.x + dx + sprietB / 2, p.y - 5 * SCHAAL);
+        ctx.lineTo(p.x + dx + sprietB, p.y);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // dunne donkere lijn onder gras (scheiding gras/rots)
+      ctx.fillStyle = "rgba(0, 30, 0, 0.5)";
+      ctx.fillRect(p.x, p.y + grasH - 1, p.breedte, 1);
       ctx.restore();
     }
     function tekenDungeonOverlay() {
