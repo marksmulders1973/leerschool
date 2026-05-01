@@ -66,6 +66,24 @@ const PATH_THEMES = {
   "passe-compose-frans": { gradient: "linear-gradient(135deg, #1565c0, #b71c1c)", accent: "#90caf9" },
 };
 
+// Mapt het ad-hoc `level`-veld op een leerpad ("klas1-vwo", "havo4-5",
+// "groep4-7", ...) naar een uniforme bucket voor groepering en een
+// kleurenpil. Pakt het LAAGSTE start-niveau zodat een pad bv. "klas1-vwo"
+// in de Klas-1 bucket valt (vanaf-niveau, niet doel-niveau).
+function parseLevel(level) {
+  const fallback = { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
+  if (!level) return fallback;
+  const l = String(level).toLowerCase();
+  if (l.startsWith("groep")) return { bucketKey: "po", bucketSort: 0, bucketLabel: "Basisschool", badge: { text: "PO", bg: "#b9f6ca", fg: "#003d1c" } };
+  if (l.includes("klas1")) return { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
+  if (l.includes("klas2")) return { bucketKey: "klas-2", bucketSort: 2, bucketLabel: "Klas 2", badge: { text: "Klas 2", bg: "#00e676", fg: "#003d1c" } };
+  if (l.includes("klas3") || l.startsWith("havo3")) return { bucketKey: "klas-3", bucketSort: 3, bucketLabel: "Klas 3", badge: { text: "Klas 3", bg: "#ffd54f", fg: "#1a0a00" } };
+  if (l.startsWith("vmbo-gt-4") || l.startsWith("klas4")) return { bucketKey: "klas-4", bucketSort: 4, bucketLabel: "Klas 4 (vmbo)", badge: { text: "Klas 4", bg: "#ff9800", fg: "#1a0a00" } };
+  if (l.startsWith("havo")) return { bucketKey: "bovenbouw", bucketSort: 5, bucketLabel: "Havo 4-5 / VWO", badge: { text: "Havo 4-5", bg: "#ef5350", fg: "#ffffff" } };
+  if (l.includes("vwo") || l.includes("gymnasium")) return { bucketKey: "bovenbouw", bucketSort: 5, bucketLabel: "Havo 4-5 / VWO", badge: { text: "VWO", bg: "#ab47bc", fg: "#ffffff" } };
+  return fallback;
+}
+
 // `filterSubject` (optioneel): leerpad-subject-key zoals "wiskunde" of "taal".
 // Mag ook een array zijn (bv. NaSk = ["biologie","natuurkunde","scheikunde"]).
 // Indien gezet, toont alleen paden + curricula van die vakken.
@@ -107,6 +125,20 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
       cancelled = true;
     };
   }, [player]);
+
+  // Welke vak-secties open staan. Default: eerste vak open (lazy init,
+  // gebruikt allPaths grouping nog vóór `grouped` is opgebouwd hieronder).
+  const [expandedSubjects, setExpandedSubjects] = useState(() => {
+    const firstSubj = (Object.values(ALL_LEARN_PATHS)[0] || {}).subject || "wiskunde";
+    return new Set([firstSubj]);
+  });
+  const toggleSubject = (subj) =>
+    setExpandedSubjects((prev) => {
+      const next = new Set(prev);
+      if (next.has(subj)) next.delete(subj);
+      else next.add(subj);
+      return next;
+    });
 
   const allPaths = Object.values(ALL_LEARN_PATHS);
   // Normaliseer filterSubject tot een array van toegestane subjects (of null = alles).
@@ -312,96 +344,148 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
           <span style={{ fontSize: 20 }}>🎯</span>
           <span>Of kies een los onderwerp</span>
         </div>
-        {Object.entries(grouped).map(([subject, pathList]) => {
-          const meta = SUBJECT_LABELS[subject] || { title: subject, emoji: "📘" };
-          return (
-            <div key={subject} style={{ marginBottom: 20 }}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 8,
-                  padding: "8px 6px 14px",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 16,
-                  color: C.text,
-                  fontWeight: 700,
-                }}
-              >
-                <span style={{ fontSize: 20 }}>{meta.emoji}</span>
-                <span>{meta.title}</span>
-                <span style={{ color: C.muted, fontSize: 12, fontWeight: 500 }}>· {pathList.length} paden</span>
-              </div>
-              <div className="lp-grid">
-                {pathList.map((p) => {
-                  const done = progressByPath[p.id]?.size || 0;
-                  const total = p.steps.length;
-                  const pct = total ? Math.round((done / total) * 100) : 0;
-                  const isStarted = done > 0;
-                  const isComplete = done >= total;
-                  const theme = PATH_THEMES[p.id] || { gradient: `linear-gradient(135deg, ${C.accent}, #2c4d77)`, accent: "#90caf9" };
-                  return (
-                    <button
-                      key={p.id}
-                      onClick={() => onPickPath(p.id)}
-                      style={pathCard(theme, isComplete)}
-                      onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
-                      onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+        {(() => {
+          const subjectKeys = Object.keys(grouped);
+          // Bij 1 vak (vanuit homepage-vak-knop): geen collapse, altijd open.
+          const allowCollapse = subjectKeys.length > 1;
+          return subjectKeys.map((subject) => {
+            const pathList = grouped[subject];
+            const meta = SUBJECT_LABELS[subject] || { title: subject, emoji: "📘" };
+            const subjTotal = pathList.reduce((s, p) => s + p.steps.length, 0);
+            const subjDone = pathList.reduce((s, p) => s + (progressByPath[p.id]?.size || 0), 0);
+            const subjPct = subjTotal ? Math.round((subjDone / subjTotal) * 100) : 0;
+            const isOpen = !allowCollapse || expandedSubjects.has(subject);
+
+            // Groepeer paden binnen dit vak op niveau-bucket
+            const buckets = new Map();
+            pathList.forEach((p) => {
+              const lvl = parseLevel(p.level);
+              if (!buckets.has(lvl.bucketKey)) buckets.set(lvl.bucketKey, { ...lvl, paths: [] });
+              buckets.get(lvl.bucketKey).paths.push(p);
+            });
+            const sortedBuckets = [...buckets.values()].sort((a, b) => a.bucketSort - b.bucketSort);
+            const showBucketHeaders = sortedBuckets.length > 1;
+
+            return (
+              <div key={subject} style={{ marginBottom: 14 }}>
+                <button
+                  onClick={() => allowCollapse && toggleSubject(subject)}
+                  style={subjectHeaderStyle(allowCollapse, isOpen)}
+                  aria-expanded={isOpen}
+                  disabled={!allowCollapse}
+                >
+                  <span style={{ fontSize: 26 }}>{meta.emoji}</span>
+                  <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "var(--color-text-strong)", lineHeight: 1.2 }}>
+                      {meta.title}
+                    </div>
+                    <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>
+                      {pathList.length} pad{pathList.length === 1 ? "" : "en"}
+                      {subjDone > 0 && ` · ${subjPct}% voltooid`}
+                    </div>
+                  </div>
+                  {allowCollapse && (
+                    <span
+                      style={{
+                        fontSize: 22,
+                        color: C.muted,
+                        display: "inline-block",
+                        transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",
+                        transition: "transform 0.2s",
+                      }}
                     >
-                      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                        <div
-                          style={{
-                            width: 48,
-                            height: 48,
-                            borderRadius: 12,
-                            background: theme.gradient,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: 24,
-                            flexShrink: 0,
-                            boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
-                          }}
-                        >
-                          {p.emoji}
-                        </div>
-                        <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-                            <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
-                              {p.title}
-                            </span>
-                            {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
+                      ›
+                    </span>
+                  )}
+                </button>
+
+                {isOpen && (
+                  <div style={{ paddingTop: 10 }}>
+                    {sortedBuckets.map((bucket) => (
+                      <div key={bucket.bucketKey} style={{ marginBottom: 14 }}>
+                        {showBucketHeaders && (
+                          <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "4px 4px 8px" }}>
+                            <span style={bucketChipStyle(bucket.badge)}>{bucket.bucketLabel}</span>
+                            <span style={{ height: 1, flex: 1, background: C.border }} />
                           </div>
-                          <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
-                            {total} stappen · {p.chapters?.length || 0} hoofdstukken
-                          </div>
-                          {isStarted && (
-                            <div>
-                              <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
-                                <div
-                                  style={{
-                                    height: "100%",
-                                    width: `${pct}%`,
-                                    background: theme.gradient,
-                                    transition: "width 0.4s",
-                                  }}
-                                />
-                              </div>
-                              <div style={{ fontSize: 11, color: theme.accent, marginTop: 3, fontWeight: 700 }}>
-                                {done}/{total} · {pct}%
-                              </div>
-                            </div>
-                          )}
+                        )}
+                        <div className="lp-grid">
+                          {bucket.paths.map((p) => {
+                            const done = progressByPath[p.id]?.size || 0;
+                            const total = p.steps.length;
+                            const pct = total ? Math.round((done / total) * 100) : 0;
+                            const isStarted = done > 0;
+                            const isComplete = done >= total;
+                            const theme = PATH_THEMES[p.id] || { gradient: `linear-gradient(135deg, ${C.accent}, #2c4d77)`, accent: "#90caf9" };
+                            const lvl = parseLevel(p.level);
+                            return (
+                              <button
+                                key={p.id}
+                                onClick={() => onPickPath(p.id)}
+                                style={pathCard(theme, isComplete)}
+                                onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
+                                onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                              >
+                                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                                  <div
+                                    style={{
+                                      width: 48,
+                                      height: 48,
+                                      borderRadius: 12,
+                                      background: theme.gradient,
+                                      display: "flex",
+                                      alignItems: "center",
+                                      justifyContent: "center",
+                                      fontSize: 24,
+                                      flexShrink: 0,
+                                      boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                                    }}
+                                  >
+                                    {p.emoji}
+                                  </div>
+                                  <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
+                                      <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
+                                        {p.title}
+                                      </span>
+                                      <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
+                                      {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
+                                    </div>
+                                    <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
+                                      {total} stappen · {p.chapters?.length || 0} hoofdstukken
+                                    </div>
+                                    {isStarted && (
+                                      <div>
+                                        <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                                          <div
+                                            style={{
+                                              height: "100%",
+                                              width: `${pct}%`,
+                                              background: theme.gradient,
+                                              transition: "width 0.4s",
+                                            }}
+                                          />
+                                        </div>
+                                        <div style={{ fontSize: 11, color: theme.accent, marginTop: 3, fontWeight: 700 }}>
+                                          {done}/{total} · {pct}%
+                                        </div>
+                                      </div>
+                                    )}
+                                  </div>
+                                  <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                                </div>
+                              </button>
+                            );
+                          })}
                         </div>
-                        <span style={{ color: C.muted, fontSize: 18 }}>›</span>
                       </div>
-                    </button>
-                  );
-                })}
+                    ))}
+                  </div>
+                )}
               </div>
-            </div>
-          );
-        })}
+            );
+          });
+        })()}
 
         <div style={{ marginTop: 18, padding: "14px 14px", background: "rgba(255,255,255,0.02)", borderRadius: 12, border: `1px dashed ${C.border}`, textAlign: "center" }}>
           <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.5 }}>
@@ -488,6 +572,52 @@ function pathCard(theme, isComplete) {
     transition: "transform 0.2s, border-color 0.2s",
     fontFamily: "var(--font-body)",
     width: "100%",
+  };
+}
+
+function subjectHeaderStyle(allowCollapse, isOpen) {
+  return {
+    width: "100%",
+    display: "flex",
+    alignItems: "center",
+    gap: 14,
+    padding: "14px 14px",
+    minHeight: 60,
+    background: isOpen ? "rgba(40,55,85,0.55)" : "rgba(30,45,70,0.4)",
+    border: `1px solid ${isOpen ? "#3a5273" : C.border}`,
+    borderRadius: 14,
+    cursor: allowCollapse ? "pointer" : "default",
+    color: C.text,
+    fontFamily: "var(--font-body)",
+    transition: "background 0.15s, border-color 0.15s",
+  };
+}
+
+function bucketChipStyle(badge) {
+  return {
+    background: badge.bg,
+    color: badge.fg,
+    fontFamily: "var(--font-display)",
+    fontSize: 12,
+    fontWeight: 700,
+    padding: "3px 12px",
+    borderRadius: 999,
+    letterSpacing: "0.02em",
+    flexShrink: 0,
+  };
+}
+
+function levelPillStyle(badge) {
+  return {
+    background: badge.bg,
+    color: badge.fg,
+    fontFamily: "var(--font-display)",
+    fontSize: 10,
+    fontWeight: 700,
+    padding: "2px 8px",
+    borderRadius: 999,
+    letterSpacing: "0.02em",
+    flexShrink: 0,
   };
 }
 
