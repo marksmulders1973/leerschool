@@ -797,9 +797,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // moet in outer scope staan zodat tekenDecoraties/tekenFakkels/tekenGlasInLood
     // (gedefinieerd buiten update()) erbij kunnen.
     let effSnelheid = START_SNELHEID;
-    // Cumulatieve world-scroll offset — gebruikt voor hill-positie (vloerHoogte)
-    // en voor obstakel-worldX bij spawn. Groeit alleen in normale spel-modus.
-    let worldScrollX = 0;
     let frameTeller = 0;
     let score = 0;
     let spelLoopt = true;
@@ -1014,40 +1011,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const prev = BIOMES[nextBioom]?.stijl === "cheerful" ? 1 : 0;
       // bioomFade 0 = nextBioom volledig zichtbaar, 1 = huidigBioom volledig
       return prev * (1 - bioomFade) + cur * bioomFade;
-    }
-    // ── HILL-PHYSICS (Sonic-rolling) ─────────────────────────────────────
-    // Hills zijn alleen actief in normale spel-modus + cheerful biomes. Custom-
-    // levels, boss-fight, bonus-fase, dungeon en hell blijven plat (anders
-    // breken bestaande designs).
-    function hillsActief() {
-      return !customLevelMode && !bonusFase && !bossActief && !dungeonMode && !hellMode &&
-             SCHAAL > 0 && BIOMES[huidigBioom]?.stijl === "cheerful";
-    }
-    // Hoogte van de vloer boven GROND_Y op gegeven world-x. Positief = heuvel-piek
-    // (grond hoger op canvas = kleinere y). Drie sine-lagen geven natuurlijk-
-    // ogende variatie zonder repetitie. Amplitude schaalt met SCHAAL.
-    function vloerHoogte(worldX) {
-      if (!hillsActief() || !Number.isFinite(worldX)) return 0;
-      const a = 28 * Math.sin(worldX * 0.0085);
-      const b = 14 * Math.sin(worldX * 0.022 + 1.5);
-      const c = 6 * Math.sin(worldX * 0.06 + 0.7);
-      const v = (a + b + c) * SCHAAL;
-      return Number.isFinite(v) ? v : 0;
-    }
-    // Slope = afgeleide van vloerHoogte (eerste-orde finite difference).
-    // > 0 = grond stijgt vooruit (uphill voor speler).
-    // < 0 = grond daalt (downhill).
-    function vloerSlope(worldX) {
-      if (!hillsActief() || !Number.isFinite(worldX) || SCHAAL <= 0) return 0;
-      const dx = 6 * SCHAAL;
-      const sl = (vloerHoogte(worldX + dx) - vloerHoogte(worldX - dx)) / (2 * dx);
-      return Number.isFinite(sl) ? sl : 0;
-    }
-    // Effectieve player-Y wanneer op de grond. Bij vlakke vloer = GROND_Y.
-    // Op een heuvel = lager (kleinere y). In donker biome = GROND_Y altijd.
-    function vloerY(worldX) {
-      const h = vloerHoogte(worldX);
-      return GROND_Y - (Number.isFinite(h) ? h : 0);
     }
     function startBoss(naLevel, naarLevel) {
       bossActief = true;
@@ -1731,58 +1694,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function tekenGrond() {
-      const grondTopFlat = GROND_Y + SPELER_GROOTTE;
+      const grondTop = GROND_Y + SPELER_GROOTTE;
       const cheerful = cheerfulMix();
       // Cheerful biomes: aarde is een drijvend platform-band met onderrand.
       // Donker biomes: aarde loopt door tot canvas-bottom (atmospheric).
       const bandActief = cheerful > 0.5;
       const GROND_DIKTE = 80 * SCHAAL;
-      const grondBottom = bandActief ? grondTopFlat + GROND_DIKTE : H;
-      const hills = hillsActief();
-      // Hill-top points: per ~8px berekening van vloer-y. Hergebruikt voor
-      // aarde-polygon, brick-clip en gras-bobbel zodat alles synchroon loopt.
-      // Alleen berekenen als hills echt actief zijn (en stride > 0 om infinite-loop
-      // te voorkomen bij niet-geïnitialiseerde canvas).
-      const stride = Math.max(2, 10 * SCHAAL);
-      const topPoints = [];
-      if (hills && stride > 0) {
-        for (let sx = -stride; sx <= W + stride; sx += stride) {
-          const wx = worldScrollX + sx;
-          topPoints.push({ x: sx, y: grondTopFlat - vloerHoogte(wx) });
-        }
-      }
-      // Aarde-fill — polygon met wavy top in hill-mode, anders rechthoek
-      const grad = ctx.createLinearGradient(0, grondTopFlat, 0, grondBottom);
+      const grondBottom = bandActief ? grondTop + GROND_DIKTE : H;
+      const grad = ctx.createLinearGradient(0, grondTop, 0, grondBottom);
       grad.addColorStop(0, biomeKleur("grondLicht")); grad.addColorStop(1, biomeKleur("grondDonker"));
-      ctx.fillStyle = grad;
-      if (hills) {
-        ctx.beginPath();
-        ctx.moveTo(topPoints[0].x, topPoints[0].y);
-        for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y);
-        ctx.lineTo(topPoints[topPoints.length - 1].x, grondBottom);
-        ctx.lineTo(topPoints[0].x, grondBottom);
-        ctx.closePath();
-        ctx.fill();
-      } else {
-        ctx.fillRect(0, grondTopFlat, W, grondBottom - grondTopFlat);
-      }
-      // Brick-pattern: clip naar polygon in hill-mode zodat patroon niet boven
-      // de aarde uitsteekt.
+      ctx.fillStyle = grad; ctx.fillRect(0, grondTop, W, grondBottom - grondTop);
       const offset = (frameTeller * spelSnelheid) % BAKSTEEN_W;
       ctx.save();
       ctx.globalAlpha = 0.5;
-      if (hills) {
-        ctx.beginPath();
-        ctx.moveTo(topPoints[0].x, topPoints[0].y);
-        for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y);
-        ctx.lineTo(topPoints[topPoints.length - 1].x, grondBottom);
-        ctx.lineTo(topPoints[0].x, grondBottom);
-        ctx.closePath();
-        ctx.clip();
-      }
-      const brickStartY = hills ? grondTopFlat - 30 * SCHAAL : grondTopFlat;
-      for (let y = brickStartY; y < grondBottom; y += BAKSTEEN_H) {
-        const rij = Math.floor((y - brickStartY) / BAKSTEEN_H);
+      for (let y = grondTop; y < grondBottom; y += BAKSTEEN_H) {
+        const rij = Math.floor((y - grondTop) / BAKSTEEN_H);
         const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
         for (let x = -BAKSTEEN_W - offset + xOff; x < W + BAKSTEEN_W; x += BAKSTEEN_W) {
           ctx.fillStyle = biomeKleur("bakstenenDonker");
@@ -1792,7 +1718,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       ctx.restore();
-      // Top + onderrand gras-bobbels — top volgt hill-curve, opacity via cheerfulMix().
+      // Top + onderrand gras-bobbels — opacity via cheerfulMix() voor smooth fade.
       if (cheerful > 0.02) {
         ctx.save();
         ctx.globalAlpha = cheerful;
@@ -1800,49 +1726,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const bobbel = 18 * SCHAAL;
         const bobH = 6 * SCHAAL;
         const grasOff = (frameTeller * spelSnelheid * 0.5) % bobbel;
-        // Donker-strip onderlaag — volgt hill-curve in hills-mode
+        // Top: dunne donker-strip + lichte bobbel naar boven
         ctx.fillStyle = biomeKleur("grasDonker");
-        if (hills) {
-          ctx.beginPath();
-          ctx.moveTo(topPoints[0].x, topPoints[0].y - 4 * SCHAAL);
-          for (let i = 1; i < topPoints.length; i++) ctx.lineTo(topPoints[i].x, topPoints[i].y - 4 * SCHAAL);
-          for (let i = topPoints.length - 1; i >= 0; i--) ctx.lineTo(topPoints[i].x, topPoints[i].y + grasH);
-          ctx.closePath();
-          ctx.fill();
-        } else {
-          ctx.fillRect(0, grondTopFlat - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
-        }
-        // Lichte gras met bobbel-curve bovenop — volgt hill-curve
+        ctx.fillRect(0, grondTop - 4 * SCHAAL, W, grasH + 4 * SCHAAL);
         ctx.fillStyle = biomeKleur("grasLicht");
         ctx.beginPath();
-        if (hills) {
-          // Bobbel-curve waarvan de baseline de hill-curve is
-          ctx.moveTo(-grasOff, grondTopFlat - vloerHoogte(worldScrollX - grasOff));
-          for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
-            const midX = xb + bobbel * 0.5;
-            const endX = xb + bobbel;
-            const midBaseY = grondTopFlat - vloerHoogte(worldScrollX + midX);
-            const endBaseY = grondTopFlat - vloerHoogte(worldScrollX + endX);
-            ctx.quadraticCurveTo(midX, midBaseY - bobH, endX, endBaseY);
-          }
-          // Sluit aan onderkant: terug langs hill-curve
-          ctx.lineTo(W + bobbel, grondTopFlat - vloerHoogte(worldScrollX + W + bobbel) + grasH * 0.65);
-          for (let i = topPoints.length - 1; i >= 0; i--) {
-            ctx.lineTo(topPoints[i].x, topPoints[i].y + grasH * 0.65);
-          }
-          ctx.closePath();
-        } else {
-          // Geen hills — flat baseline
-          ctx.moveTo(-grasOff, grondTopFlat);
-          for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
-            ctx.quadraticCurveTo(xb + bobbel * 0.5, grondTopFlat - bobH, xb + bobbel, grondTopFlat);
-          }
-          ctx.lineTo(W + bobbel, grondTopFlat + grasH * 0.65);
-          ctx.lineTo(-grasOff, grondTopFlat + grasH * 0.65);
-          ctx.closePath();
+        ctx.moveTo(-grasOff, grondTop);
+        for (let xb = -grasOff; xb < W + bobbel; xb += bobbel) {
+          ctx.quadraticCurveTo(xb + bobbel * 0.5, grondTop - bobH, xb + bobbel, grondTop);
         }
+        ctx.lineTo(W + bobbel, grondTop + grasH * 0.65);
+        ctx.lineTo(-grasOff, grondTop + grasH * 0.65);
+        ctx.closePath();
         ctx.fill();
-        // Onderrand (alleen bij band-modus): gespiegelde bobbel — onderkant blijft flat
+        // Onderrand (alleen bij band-modus): gespiegelde bobbel naar onderen
         if (bandActief) {
           ctx.fillStyle = biomeKleur("grasDonker");
           ctx.fillRect(0, grondBottom - grasH * 0.65, W, grasH + 2 * SCHAAL);
@@ -2242,15 +2139,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const customSpawnHandlers = {
       spike: () => {
         const breedte = 24 * SCHAAL, hoogte = 32 * SCHAAL;
-        const wx = worldScrollX + W;
-        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
-        obstakels.push({ type: 0, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
+        obstakels.push({ type: 0, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
       },
       blok: () => {
         const breedte = 30 * SCHAAL, hoogte = 50 * SCHAAL;
-        const wx = worldScrollX + W;
-        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
-        obstakels.push({ type: 2, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
+        obstakels.push({ type: 2, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
       },
       ring: (y) => {
         ringen.push({ x: W + 30, y: y || 200 * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
@@ -2268,9 +2161,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       },
       schans: () => {
         const hoogte = 0.25 * H, breedte = 0.36 * H;
-        const wx = worldScrollX + W + 40;
-        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
-        schansen.push({ x: W + 40, y: baseY - vloerHoogte(wx), breedte, hoogte, type: "schans", geactiveerd: false, worldX: wx, baseY });
+        schansen.push({ x: W + 40, y: GROND_Y + SPELER_GROOTTE - hoogte, breedte, hoogte, type: "schans", geactiveerd: false });
       },
       hart: (y) => {
         bonusHarten.push({ x: W + 40, y: y || 220 * SCHAAL, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
@@ -2293,9 +2184,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       },
       trampoline: (y) => {
         const breedte = 80 * SCHAAL, hoogte = 18 * SCHAAL;
-        const wx = worldScrollX + W + 40;
-        const baseY = y != null ? y - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
-        schansen.push({ x: W + 40, y: baseY - vloerHoogte(wx), breedte, hoogte, type: "trampoline", geactiveerd: false, worldX: wx, baseY });
+        const padY = y != null ? y - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
+        schansen.push({ x: W + 40, y: padY, breedte, hoogte, type: "trampoline", geactiveerd: false });
       },
       bliksem: (y) => {
         const breedte = 28 * SCHAAL, hoogte = 70 * SCHAAL;
@@ -2437,10 +2327,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (dungeonMode) type = 2;
       const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : 30 * SCHAAL;
       const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
-      // Hill-aware Y: baseY relatief aan platte grond, dan vloer-offset bij spawn-x.
-      const wx = worldScrollX + W;
-      const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
-      obstakels.push({ type, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
+      obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
     }
     function tekenObstakel(o) {
       if (o.render === "meteor") {
@@ -4479,22 +4366,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
-      // Defensive: voorkom NaN-cascade als worldScrollX of speler.y ergens
-      // corrupt zijn geraakt. Reset naar veilige waarde zodat de game niet vastvriest.
-      if (!Number.isFinite(worldScrollX)) worldScrollX = 0;
-      if (!Number.isFinite(speler.y)) speler.y = GROND_Y;
-      if (!Number.isFinite(speler.snelheidY)) speler.snelheidY = 0;
       effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
-      // Hill-rolling speed-modifier (Sonic-stijl): uphill remt af, downhill
-      // versnelt. Slope is afgeleide van vloerHoogte op speler-positie.
-      if (hillsActief()) {
-        const playerWX = worldScrollX + speler.x;
-        const slope = vloerSlope(playerWX);
-        if (Number.isFinite(slope)) {
-          const slopeMul = Math.max(0.65, Math.min(1.35, 1 - slope * 0.55));
-          if (Number.isFinite(slopeMul)) effSnelheid *= slopeMul;
-        }
-      }
       // Custom-zones (lowgrav / boost / slow): bepaal eerst welke aanpassingen
       // actief zijn op basis van waar de speler nu in een zone staat. Toepassen
       // gebeurt op effSnelheid hier, en op gravity later in de frame.
@@ -4512,9 +4384,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
         effSnelheid *= zoneSpeedMul;
       }
-      // Cumulatieve world-scroll incrementeren NA alle modifiers — alle nieuwe
-      // spawns en hill-berekeningen lopen synchroon met deze offset.
-      worldScrollX += effSnelheid;
       if (afgeremFrames > 0) afgeremFrames--;
       if (hpFlashTeller > 0) hpFlashTeller--;
       // Live audio-instellingen toepassen (mute/volume vanuit settings-panel)
@@ -4867,30 +4736,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           speler.y = PLAFOND_NIVEAU; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
         }
         // grond-stop tijdens FLIP: bereik je toch de grond, dan stuit je terug ipv dood
-        const playerWX_flip = worldScrollX + speler.x;
-        const grondY_flip = vloerY(playerWX_flip);
-        if (speler.y >= grondY_flip) {
-          speler.y = grondY_flip;
+        if (speler.y >= GROND_Y) {
+          speler.y = GROND_Y;
           speler.snelheidY = -8 * SCHAAL; // bounce omhoog (richting plafond)
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 16, grootte: 3, zwaartekracht: 0.08, glow: 0 });
         }
       } else {
-        // normale grond-clamp — gebruik vloerY voor hill-aware landing
-        const playerWX = worldScrollX + speler.x;
-        const grondYNu = vloerY(playerWX);
-        if (speler.y >= grondYNu) {
+        // normale grond-clamp
+        if (speler.y >= GROND_Y) {
           if (speler.springt) {
             spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
             spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
           }
-          speler.y = grondYNu; speler.snelheidY = 0; speler.springt = false; speler.sprongTeller = 0;
-          // Player-rotatie volgt slope (Sonic-rolling visueel)
-          if (hillsActief()) {
-            const slope = vloerSlope(playerWX);
-            speler.rotatie = Math.atan(slope) * 0.7;
-          } else {
-            speler.rotatie = 0;
-          }
+          speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
           // HELL-MODE: lava-damage zodra speler op de grond is. hpFlashTeller
           // (45-frame i-frames) regelt de cooldown — geen extra logic nodig.
           if (hellMode && hellFadeIn === 0 && vliegFrames === 0 && flipFrames === 0) {
@@ -4900,12 +4758,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             hitTotale();
             if (!spelLoopt) return;
           }
-        } else if (!speler.springt && hillsActief()) {
-          // Speler staat op grond maar hill daalt — pull-down naar nieuwe vloer
-          // zodat 'ie niet zweeft tijdens snel-dalende stukken.
-          speler.y = grondYNu;
-          speler.snelheidY = 0;
-          speler.rotatie = Math.atan(vloerSlope(playerWX)) * 0.7;
         }
         // plafond-clamp: speler kan niet boven het plafond uit (anders vliegt hij buiten beeld)
         const minY = PLAFOND_HOOGTE + 2;
@@ -5139,17 +4991,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             // speler en omgeving zichtbaar blijven tijdens de loop-rit.
             const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
             const breedte = isLoop ? 0.38 * H : 0.36 * H;
-            const wx_s = worldScrollX + W + 40;
-            const baseY_s = GROND_Y + SPELER_GROOTTE - hoogte;
             schansen.push({
               x: W + 40,
-              y: isLoop ? baseY_s : baseY_s - vloerHoogte(wx_s),
+              y: GROND_Y + SPELER_GROOTTE - hoogte,
               breedte,
               hoogte,
               type: isLoop ? "loop" : "schans",
               geactiveerd: false,
-              worldX: wx_s,
-              baseY: baseY_s,
             });
             // Voorkom dat het volgende obstakel direct ná deze schans spawnt
             // — duwt 'm naar achter zodat de safe-zone na de schans niet
