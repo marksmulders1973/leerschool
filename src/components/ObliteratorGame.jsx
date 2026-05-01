@@ -399,7 +399,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const PERISCOOP_LENS_R = 32;       // hitbox-radius (was 22 — ruimere collision)
     let bonusFase = false;
     let bonusFrames = 0;
-    const BONUS_DUUR = 300; // 5 sec
+    const BONUS_DUUR = 600; // 10 sec
     const bonusRingen = [];
     let bonusRingSpawnTeller = 20;
     let bonusScore = 0;
@@ -2317,10 +2317,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function spring() {
       if (!spelLoopt) return;
       if (loopActief) return; // input genegeerd tijdens loop-animatie
-      // Tijdens bonus-fase: input is SCHIETEN ipv springen
+      // Tijdens bonus-fase: tap = schieten EN springen tegelijk zodat
+      // speler kan rondzweven en hoge ringen kan raken (Mark: 'ik kon
+      // er niet jumpen').
       if (bonusFase) {
         spelerSchiet();
-        return;
+        // niet return — laat ook de jump-logica hieronder lopen
       }
       muziekStart();
       // Tijdens boss: tap = jump + laser tegelijk
@@ -2622,9 +2624,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const yVorig = speler.y;
       speler.y += speler.snelheidY;
       // Horizontale push tijdens sprong + drift-terug op grond — geeft jump
-      // een natuurlijke arc-feel ipv puur statisch op-en-neer (Mark's input).
-      // Niet tijdens loop/bonus-fase (die zetten x zelf).
-      if (!loopActief && !bonusFase) {
+      // een natuurlijke arc-feel ipv puur statisch op-en-neer.
+      // Niet tijdens loop-animatie (die zet x zelf). Tijdens bonus mag
+      // het wel zodat speler kan zweven om ringen te richten.
+      if (!loopActief) {
         speler.x += speler.snelheidX;
         speler.snelheidX *= 0.93; // decay tijdens sprong
         if (!speler.springt && Math.abs(speler.snelheidX) < 0.05) {
@@ -4813,7 +4816,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>💥 <strong style={{ color: "#ff5040" }}>Bom pakken</strong> = ALLE stekels op het scherm vernietigen!</div>
               <div>🐠 <strong style={{ color: "#ffaa30" }}>Vis pakken</strong> = +5 punten + 5 sec bubbel-shield (haaien gaan dood bij contact!)</div>
               <div>💰 <strong style={{ color: "#ffd700" }}>Schatkist pakken</strong> (water-wereld) = +25 punten + 25 HP BONUS!</div>
-              <div>🔭 <strong style={{ color: "#fff8a0" }}>Periscoop</strong> = exact erin springen = 5 sec BONUS-RONDE (klik = laser, ringen schieten = +5 elk!)</div>
+              <div>🔭 <strong style={{ color: "#fff8a0" }}>Periscoop</strong> = exact erin springen = 10 sec BONUS-RONDE (klik = schiet + spring tegelijk, ringen raken = +5 elk!)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
