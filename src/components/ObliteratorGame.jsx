@@ -1029,7 +1029,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const a = 28 * Math.sin(worldX * 0.0085);
       const b = 14 * Math.sin(worldX * 0.022 + 1.5);
       const c = 6 * Math.sin(worldX * 0.06 + 0.7);
-      const v = (a + b + c) * SCHAAL;
+      let v = (a + b + c) * SCHAAL;
+      // Asymmetrische cap: heuvels mogen 30px omhoog, dalen max 14px omlaag.
+      // Voorkomt dat speler in een diep dal onder canvas-bottom valt.
+      v = Math.max(-14 * SCHAAL, Math.min(30 * SCHAAL, v));
       return Number.isFinite(v) ? v : 0;
     }
     function vloerSlope(worldX) {
