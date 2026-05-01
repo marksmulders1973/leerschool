@@ -89,6 +89,24 @@ const BONUS_KEY_PREFIX = "obliterator-bonus-";
 // Voeg een naam toe om iemand admin te maken.
 const OBLIVION_ADMINS = ["brian"];
 
+// Speler-skins. unlockLevel = level dat behaald moet zijn (1 = altijd open,
+// null = via speciale unlock zoals Oblivion Pulse).
+const SKINS = [
+  { id: "default",   label: "Studiebol",  emoji: "🔴", unlockLevel: 1 },
+  { id: "spider",    label: "Spin",       emoji: "🕷️", unlockLevel: 10 },
+  { id: "popje",     label: "Popje",      emoji: "🪆", unlockLevel: 20 },
+  { id: "elephant",  label: "Olifant",    emoji: "🐘", unlockLevel: 30 },
+  { id: "trollface", label: "Trollface",  emoji: "😈", unlockLevel: 40 },
+  { id: "triangle",  label: "Driehoek",   emoji: "🔺", unlockLevel: 50 },
+  { id: "xbox",      label: "Xbox",       emoji: "🎮", unlockLevel: 60 },
+  { id: "gorilla",   label: "Gorilla",    emoji: "🦍", unlockLevel: 70 },
+  { id: "yinyang",   label: "Yin Yang",   emoji: "☯️", unlockLevel: 80 },
+  { id: "eye",       label: "Oog",         emoji: "👁️", unlockLevel: 90 },
+  { id: "lvl100",    label: "Level 100",  emoji: "💎", unlockLevel: 100 },
+  { id: "blackhole", label: "Black Hole", emoji: "🕳️", unlockLevel: null },
+];
+const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
+
 // Mulberry32 — deterministische 32-bit RNG. Beide PvP-spelers gebruiken
 // dezelfde seed → identieke obstakel-spawns zonder data uit te wisselen.
 function makeMulberry32(seed) {
@@ -165,27 +183,49 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   });
   // Settings-panel zichtbaar (uit/aan toggle in menu)
   const [settingsOpen, setSettingsOpen] = useState(false);
-  // Skin-systeem (default cube + andere skins zoals "blackhole" die je
-  // ontgrendelt door Oblivion Pulse uit te spelen).
-  // Admins (vaste lijst, bv. Brian) krijgen Black Hole skin gratis cadeau.
+  // Skin-systeem — 11 skins die je per 10 levels ontgrendelt + Black Hole
+  // (via Oblivion Pulse). Admins (vaste lijst, bv. Brian) krijgen alles
+  // automatisch.
   const isObliterAdmin = OBLIVION_ADMINS.includes(((userName || "").trim().toLowerCase()));
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     try {
       const raw = localStorage.getItem("obliterator-unlocked-skins");
       let arr = raw ? JSON.parse(raw) : ["default"];
       if (!Array.isArray(arr)) arr = ["default"];
-      // Brian (en andere admins) krijgen blackhole automatisch
-      if (isObliterAdmin && !arr.includes("blackhole")) arr = [...arr, "blackhole"];
+      if (!arr.includes("default")) arr = ["default", ...arr];
+      // Admins krijgen ALLES (alle skins inclusief blackhole)
+      if (isObliterAdmin) {
+        for (const s of SKINS) if (!arr.includes(s.id)) arr.push(s.id);
+      }
       return arr;
-    } catch { return isObliterAdmin ? ["default", "blackhole"] : ["default"]; }
+    } catch { return isObliterAdmin ? SKINS.map((s) => s.id) : ["default"]; }
   });
-  // Als userName ná mount alsnog Brian wordt (bv. via login-flow), unlock alsnog
+  // Als userName ná mount alsnog Brian wordt: alles ontgrendelen
   useEffect(() => {
-    if (isObliterAdmin && !unlockedSkins.includes("blackhole")) {
-      setUnlockedSkins((prev) => prev.includes("blackhole") ? prev : [...prev, "blackhole"]);
-    }
+    if (!isObliterAdmin) return;
+    setUnlockedSkins((prev) => {
+      const next = new Set(prev);
+      let changed = false;
+      for (const s of SKINS) if (!next.has(s.id)) { next.add(s.id); changed = true; }
+      return changed ? [...next] : prev;
+    });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isObliterAdmin]);
+  // Retroactief unlocken op basis van max-bereikt level uit records
+  useEffect(() => {
+    const recordKeys = Object.keys(levelRecords).map(Number).filter((n) => !isNaN(n));
+    const recordsMax = recordKeys.length > 0 ? Math.max(...recordKeys) : 0;
+    const maxBereikt = Math.max(anonMaxLevel || 0, recordsMax);
+    if (maxBereikt < 10) return; // niks te unlocken onder L10
+    const eligible = SKINS.filter((s) => s.unlockLevel != null && s.unlockLevel <= maxBereikt);
+    if (eligible.length === 0) return;
+    setUnlockedSkins((prev) => {
+      const next = new Set(prev);
+      let changed = false;
+      for (const s of eligible) if (!next.has(s.id)) { next.add(s.id); changed = true; }
+      return changed ? [...next] : prev;
+    });
+  }, [anonMaxLevel, levelRecords]);
   const [selectedSkin, setSelectedSkin] = useState(() => {
     try { return localStorage.getItem("obliterator-selected-skin") || "default"; } catch { return "default"; }
   });
@@ -1449,7 +1489,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.shadowBlur = vliegFrames > 0 ? 35 : 25;
       ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
 
-      if (skinRef.current === "blackhole") {
+      const skin = skinRef.current;
+      const skinMeta = SKIN_BY_ID[skin];
+      const isEmojiSkin = skin && skin !== "default" && skin !== "blackhole" && !!skinMeta;
+      if (isEmojiSkin) {
+        // Emoji-skin: donkere bol-achtergrond + emoji groot in het midden
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#a040ff";
+        const grad = ctx.createRadialGradient(-r * 0.3, -r * 0.3, 2, 0, 0, r);
+        grad.addColorStop(0, "rgba(60, 60, 80, 0.9)");
+        grad.addColorStop(0.7, "rgba(20, 20, 35, 0.95)");
+        grad.addColorStop(1, "rgba(0, 0, 0, 1)");
+        ctx.fillStyle = grad;
+        ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+        // outline
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(255,255,255,0.85)";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(0, 0, r - 0.5, 0, Math.PI * 2); ctx.stroke();
+        // emoji centraal — gebruik systeem-emoji-font voor consistente render
+        ctx.font = `${r * 1.55}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        // emoji renderen zonder rotatie meeschalend zodat ze niet ondersteboven staan
+        ctx.save();
+        ctx.rotate(-speler.rotatie);
+        ctx.fillText(skinMeta.emoji, 0, r * 0.05);
+        ctx.restore();
+      } else if (skinRef.current === "blackhole") {
         // BLACK HOLE skin: donkere bol + roterende oranje accretion-ring
         ctx.shadowBlur = 28;
         ctx.shadowColor = "#a040ff";
@@ -3829,6 +3896,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
           // confetti
           spawnParticles(W * 0.5, H * 0.3, 24, "#69f0ae", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+          // SKIN UNLOCK: nieuw level bereikt = nieuwe skin?
+          const skinHit = SKINS.find((s) => s.unlockLevel === nieuwLevel);
+          if (skinHit) {
+            try {
+              setUnlockedSkins((prev) => prev.includes(skinHit.id) ? prev : [...prev, skinHit.id]);
+            } catch {}
+            // groot feest: gouden particles + 3-tonen jingle
+            spawnParticles(W * 0.5, H * 0.3, 30, "#ffd54f", { spread: 12, opwaarts: 5, leven: 70, grootte: 6, glow: 22 });
+            spawnParticles(W * 0.5, H * 0.3, 18, "#ff80a0", { spread: 9, opwaarts: 4, leven: 55, grootte: 5, glow: 18 });
+            piep(880, 0.18, "sine", 0.16);
+            setTimeout(() => piep(1320, 0.18, "sine", 0.14), 120);
+            setTimeout(() => piep(1760, 0.22, "sine", 0.13), 260);
+            // banner via levelUpFlash + naam wordt al getoond — voor skin-melding
+            // hangen we 'm aan levelUpNaam
+            levelUpNaam = `🎁 SKIN: ${skinHit.emoji} ${skinHit.label}`;
+            levelUpFlash = 200;
+          }
         }
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
@@ -6587,12 +6671,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   </div>
                   {/* Skin-selector */}
                   <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
-                    <div style={{ color: "#fff", fontSize: 13, marginBottom: 6 }}>👕 Skin</div>
-                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                      {[
-                        { id: "default", label: "Studiebol", emoji: "🔴" },
-                        { id: "blackhole", label: "Black Hole", emoji: "🕳️" },
-                      ].map((s) => {
+                    <div style={{ color: "#fff", fontSize: 13, marginBottom: 6 }}>👕 Skin · ontgrendel elke 10 levels</div>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(78px, 1fr))", gap: 6 }}>
+                      {SKINS.map((s) => {
                         const ontgrendeld = unlockedSkins.includes(s.id);
                         const isActive = selectedSkin === s.id;
                         return (
@@ -6601,27 +6682,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                             onClick={() => ontgrendeld && setSelectedSkin(s.id)}
                             disabled={!ontgrendeld}
                             style={{
-                              padding: "8px 12px", borderRadius: 10,
+                              padding: "6px 4px", borderRadius: 10,
                               border: isActive ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.15)",
                               background: isActive ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)",
                               color: ontgrendeld ? "#fff" : "rgba(255,255,255,0.4)",
-                              fontFamily: "'Fredoka', sans-serif", fontSize: 12,
+                              fontFamily: "'Fredoka', sans-serif", fontSize: 10,
                               cursor: ontgrendeld ? "pointer" : "not-allowed",
-                              minWidth: 90,
+                              filter: ontgrendeld ? "none" : "grayscale(0.85)",
                             }}
+                            title={ontgrendeld ? s.label : `Ontgrendel bij Level ${s.unlockLevel ?? "?"}`}
                           >
-                            <div style={{ fontSize: 20, marginBottom: 2 }}>{s.emoji}</div>
-                            <div>{s.label}</div>
-                            {!ontgrendeld && <div style={{ fontSize: 9, opacity: 0.7, marginTop: 2 }}>🔒 LOCKED</div>}
+                            <div style={{ fontSize: 22, marginBottom: 2 }}>{s.emoji}</div>
+                            <div style={{ fontSize: 9, lineHeight: 1.2 }}>{s.label}</div>
+                            {!ontgrendeld && (
+                              <div style={{ fontSize: 8, opacity: 0.7, marginTop: 2 }}>
+                                🔒 {s.unlockLevel != null ? `L${s.unlockLevel}` : "Oblivion"}
+                              </div>
+                            )}
                           </button>
                         );
                       })}
                     </div>
-                    {!unlockedSkins.includes("blackhole") && (
-                      <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 10, marginTop: 6, marginBottom: 0 }}>
-                        💡 Black Hole skin ontgrendel je via <strong>Oblivion Pulse</strong> (volgt binnenkort)
-                      </p>
-                    )}
                   </div>
                   <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 10, marginTop: 10, marginBottom: 0, textAlign: "center" }}>
                     Taal (NL/EN) volgt later
