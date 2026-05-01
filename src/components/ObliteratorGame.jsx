@@ -427,8 +427,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let shakeKracht = 0;
     let raf;
     let scoreElText = 0;
-    const startLevens = 3 + bonusLeven;
-    const MAX_LEVENS = 5;
+    const startLevens = 3;     // Mark: extra levens weg, altijd 3 om te beginnen.
+    const MAX_LEVENS = 3;      // Cap op 3 — geen extra levens via pickups boven de basis.
     // ── HP-systeem (NEW) ──
     // Per leven krijgt speler 100% hp. Spike-hit = -25% hp. Bij hp ≤ 0 →
     // 1 leven kwijt + hp reset naar 100. Hartjes/schatkist herstellen +25%
@@ -3705,14 +3705,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
-      // ── BLIKSEM-FLITS update (vanaf L50, frequentie + intensiteit schaalt naar L100) ──
+      // ── BLIKSEM-FLITS update (vanaf L50 OF tijdens boss; frequentie schaalt) ──
       if (bliksemFlash > 0) bliksemFlash--;
-      if (huidigLevel >= 50 && !bonusFase && !bossActief) {
+      const bliksemBronAanwezig = (huidigLevel >= 50 || bossActief) && !bonusFase;
+      if (bliksemBronAanwezig) {
         bliksemTimer--;
         if (bliksemTimer <= 0) {
-          // intervallen: L50 = ~900f (15s) gemiddeld, L100 = ~120f (2s)
-          // flash-duur: 8-22 frames (was 5-13)
-          bliksemFlash = 8 + Math.min(14, Math.floor((huidigLevel - 50) / 4));
+          // intervallen:
+          //   L50 = ~900f (15s) gemiddeld, L100 = ~120f (2s)
+          //   BOSS = ~80f (1.3s) — donder ratelt continu
+          // flash-duur: 8-22 frames
+          bliksemFlash = bossActief
+            ? 10 + Math.floor(Math.random() * 8)
+            : 8 + Math.min(14, Math.floor((huidigLevel - 50) / 4));
           // genereer zigzag-pad met meerdere takken
           const path = [];
           let x = 60 + Math.random() * (W - 120);
@@ -3755,13 +3760,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               piep(68, 0.50, "triangle", 0.18);
             }, (6 + Math.random() * 6) * 16);
           }
-          // reset timer met scaling — nu 2x zo vaak als voorheen
-          const basis = Math.max(120, 900 - (huidigLevel - 50) * 16);
+          // reset timer met scaling
+          let basis;
+          if (bossActief) {
+            basis = 80; // BOSS: ~1.3 sec gemiddeld → bijna constant donderen
+          } else {
+            basis = Math.max(120, 900 - (huidigLevel - 50) * 16);
+          }
           bliksemTimer = Math.floor(basis * (0.5 + Math.random()));
         }
-        // Periodieke vuur-eruptie tussen flashes door (alleen L50+)
-        // Grond-vuurspuwers — frequentie schaalt met level
-        if (frameTeller % Math.max(20, 90 - (huidigLevel - 50) * 1.2) === 0) {
+        // Periodieke vuur-eruptie tussen flashes door (alleen L50+, niet tijdens boss)
+        if (huidigLevel >= 50 && !bossActief && frameTeller % Math.max(20, 90 - (huidigLevel - 50) * 1.2) === 0) {
           const fx = 40 + Math.random() * (W - 80);
           const fy = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
           spawnParticles(fx, fy, 6, "#ffaa30", { spread: 4, opwaarts: 3, leven: 32, grootte: 4, zwaartekracht: 0.10, glow: 16 });
@@ -5073,6 +5082,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (oblivionMode) {
         // Oblivion-Pulse mode: ruimte-achtergrond
         tekenRuimteAchtergrond();
+      } else if (bossActief) {
+        // BOSS: pikzwarte bg met donker-rode vignette voor dreiging
+        ctx.fillStyle = "#000";
+        ctx.fillRect(0, 0, W, H);
+        const bossGlow = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.18, W / 2, H / 2, Math.max(W, H) * 0.75);
+        bossGlow.addColorStop(0, "rgba(60, 0, 0, 0)");
+        bossGlow.addColorStop(0.6, "rgba(80, 0, 0, 0.30)");
+        bossGlow.addColorStop(1, "rgba(140, 0, 0, 0.55)");
+        ctx.fillStyle = bossGlow;
+        ctx.fillRect(0, 0, W, H);
+        // grond moet wel zichtbaar — speler heeft 'm nodig
+        tekenGrond();
       } else if (hellMode) {
         // Hell-mode: dark-red bg + parallax-rotsen + lava-grond. Skip de
         // bakstenen-muur, glas-in-lood, lichtbundels, fakkels, plafond.
@@ -6239,8 +6260,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </p>
             )}
             <p style={{ color: "#ff8050", fontSize: isPortrait ? 14 : 12, marginBottom: isPortrait ? 14 : 6 }}>
-              {Array(3 + bonusLeven).fill("❤️").join(" ")}
-              {bonusLeven > 0 && <span style={{ color: "#69f0ae", marginLeft: 8 }}>(+1 bonus!)</span>}
+              {Array(3).fill("❤️").join(" ")}
             </p>
 
             {/* Mini legenda — compact in landscape */}
