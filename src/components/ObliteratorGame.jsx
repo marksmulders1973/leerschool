@@ -485,6 +485,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // plafond-stekels (raakbaar, hangen vanaf plafond) — eigen spawn-teller
     const plafondStekels = [];
     let plafondStekelSpawnTeller = 240; // eerste plafond-stekel na ~4 sec
+
+    // Zwevende mijnen (raakbaar, in de middenzone tussen plafond en grond).
+    // Bedoeld om "blijven zweven om obstakels te skippen" te ontmoedigen —
+    // ze hangen precies in de jump-zone en zwiepen langzaam op-en-neer.
+    const zwevendeMinen = [];
+    let zwevendeMineSpawnTeller = 360; // eerste mijn na ~6 sec
     // Studiebol-logo als subtiele achtergrond-decoratie (af en toe)
     const studiebolLogos = [];
     let logoSpawnTeller = 360; // eerste logo na ~6 sec
@@ -567,6 +573,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ringen.length = 0;
       platforms.length = 0;
       plafondStekels.length = 0;
+      zwevendeMinen.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
       flipPickups.length = 0;
@@ -581,6 +588,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ringSpawnTeller = 999999;
       platformSpawnTeller = 999999;
       plafondStekelSpawnTeller = 999999;
+      zwevendeMineSpawnTeller = 999999;
       logoSpawnTeller = 999999;
       // dramatische intro: piep + confetti
       piep(196, 0.30, "sawtooth", 0.20); // dreigend laag
@@ -1075,6 +1083,58 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.lineTo(x + b, yTop);
       ctx.lineTo(x + b / 2, yBot);
       ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
+    }
+    function tekenZwevendeMine(m) {
+      // donkere bol met 6 spikes + rode pulserende glow
+      const cx = m.x;
+      const cy = m.y + Math.sin(m.fase) * m.amp;
+      const r = m.r;
+      ctx.save();
+      const pulseGlow = 18 + Math.sin(m.fase * 2) * 8;
+      ctx.shadowBlur = pulseGlow;
+      ctx.shadowColor = "#ff3030";
+      // spikes (6 driehoekjes rondom)
+      const spikeLen = r * 0.55;
+      ctx.fillStyle = "#3a2020";
+      for (let i = 0; i < 6; i++) {
+        const a = m.fase * 0.3 + (i * Math.PI) / 3;
+        const x1 = cx + Math.cos(a - 0.15) * r;
+        const y1 = cy + Math.sin(a - 0.15) * r;
+        const x2 = cx + Math.cos(a + 0.15) * r;
+        const y2 = cy + Math.sin(a + 0.15) * r;
+        const xt = cx + Math.cos(a) * (r + spikeLen);
+        const yt = cy + Math.sin(a) * (r + spikeLen);
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(xt, yt);
+        ctx.lineTo(x2, y2);
+        ctx.closePath();
+        ctx.fill();
+      }
+      // bol-body (donker grijs/zwart met radial gradient)
+      const grad = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.3, 1, cx, cy, r);
+      grad.addColorStop(0, "#5a4040");
+      grad.addColorStop(0.7, "#1a0808");
+      grad.addColorStop(1, "#0a0000");
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, Math.PI * 2);
+      ctx.fill();
+      // pulserend rood lampje in het midden
+      ctx.shadowBlur = 12;
+      const blink = 0.5 + Math.sin(m.fase * 4) * 0.5;
+      ctx.fillStyle = `rgba(255, ${40 + blink * 80}, 40, ${0.7 + blink * 0.3})`;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.22, 0, Math.PI * 2);
+      ctx.fill();
+      // ring-outline voor leesbaarheid
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "rgba(255, 80, 80, 0.5)";
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.85, 0, Math.PI * 2);
       ctx.stroke();
       ctx.restore();
     }
@@ -2834,13 +2894,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           volgendObstakelOver = 30;
         } else {
           maakObstakel();
-          // density schaalt nu vooral op level (score-aandeel houdt mooi af bij beginners)
-          // L1  : 80-115 frames (rustig)
-          // L20 : 56-78 frames
-          // L50 : 28-43 frames
-          // L100: 18-28 frames (vrijwel onmogelijk)
-          const minA = Math.max(18, 80 - huidigLevel * 0.65 - score * 0.2);
-          const variatie = Math.max(10, 35 - huidigLevel * 0.30);
+          // Grond-obstakels minder dicht op elkaar — het luchtgevaar
+          // (plafond-stekels + zwevende mijnen) doet nu een groter deel
+          // van het werk. Mark: 'minder obstakels op de vloer'.
+          // L1  : 110-155 frames (rustig)
+          // L20 : 88-118 frames
+          // L50 : 60-86 frames
+          // L100: 26-42 frames
+          const minA = Math.max(26, 110 - huidigLevel * 0.55 - score * 0.18);
+          const variatie = Math.max(14, 45 - huidigLevel * 0.28);
           volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
         }
       }
@@ -3316,8 +3378,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           breedte: 26 * SCHAAL,
           hoogte: (24 + Math.random() * 14) * SCHAAL,
         });
-        // vergelijkbare cadans als grond, lichte variatie
-        plafondStekelSpawnTeller = 90 + Math.floor(Math.random() * 60);
+        // Iets dichter dan voorheen (was 90+60) — meer luchtgevaar zodat
+        // 'blijven zweven' niet langer een gratis safe-strategie is.
+        plafondStekelSpawnTeller = 70 + Math.floor(Math.random() * 50);
       }
 
       // plafond-stekels scrollen + collision
@@ -3339,6 +3402,65 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
         }
         if (ps.x + ps.breedte < -10) plafondStekels.splice(i, 1);
+      }
+
+      // ── ZWEVENDE MIJNEN — middenzone-gevaar tegen 'altijd zweven' ──
+      // Spawn vanaf score >= 5 zodat speler eerst de basis kan oefenen.
+      // Niet tijdens dungeon (haaien doen het werk), niet tijdens schans-
+      // veilig-frames, niet tijdens bonus.
+      if (!bonusFase) zwevendeMineSpawnTeller--;
+      if (
+        zwevendeMineSpawnTeller <= 0
+        && score >= 5
+        && !dungeonMode
+        && !bonusFase
+        && !bossActief
+        && schansVeiligeFrames <= 0
+      ) {
+        const r = (16 + Math.random() * 6) * SCHAAL;
+        // middenzone tussen plafond en grond, met 60px marge boven/onder
+        const yMin = (PLAFOND_HOOGTE - 4) + 60 * SCHAAL + r;
+        const yMax = GROND_Y - 60 * SCHAAL - r;
+        const baseY = yMin + Math.random() * Math.max(1, yMax - yMin);
+        zwevendeMinen.push({
+          x: W + 60,
+          y: baseY,
+          r,
+          fase: Math.random() * Math.PI * 2,
+          amp: (8 + Math.random() * 6) * SCHAAL, // bobbing-amplitude
+        });
+        // L1: 180-260 frames (3-4.3 sec) · L50: 100-160 frames · L100: 60-120
+        const minM = Math.max(60, 180 - huidigLevel * 1.2);
+        const varM = Math.max(40, 80 - huidigLevel * 0.4);
+        zwevendeMineSpawnTeller = Math.floor(minM) + Math.floor(Math.random() * varM);
+      }
+
+      // mijnen scrollen + bobbing + collision
+      for (let i = zwevendeMinen.length - 1; i >= 0; i--) {
+        const m = zwevendeMinen[i];
+        m.x -= effSnelheid;
+        m.fase += 0.08;
+        if (!bonusFase && vliegFrames === 0 && flipFrames === 0) {
+          // bol-vs-rect collision (royaler dan center-distance)
+          const cy = m.y + Math.sin(m.fase) * m.amp;
+          const sb = spelerBots();
+          const closestX = Math.max(sb.x, Math.min(m.x, sb.x + sb.breedte));
+          const closestY = Math.max(sb.y, Math.min(cy, sb.y + sb.hoogte));
+          const dx = m.x - closestX;
+          const dy = cy - closestY;
+          const hitR = m.r * 0.85; // iets genadiger dan visuele radius
+          if (dx * dx + dy * dy < hitR * hitR) {
+            // explodeert — verwijder mijn, spawn rode flits
+            zwevendeMinen.splice(i, 1);
+            spawnParticles(m.x, cy, 18, "#ff5040", { spread: 9, opwaarts: 2, leven: 36, grootte: 5, zwaartekracht: 0.12, glow: 22 });
+            spawnParticles(m.x, cy, 10, "#ffaa40", { spread: 6, opwaarts: 1.5, leven: 28, grootte: 4, zwaartekracht: 0.10, glow: 18 });
+            piep(120, 0.18, "sawtooth", 0.16);
+            hitTotale();
+            if (!spelLoopt) return;
+            continue;
+          }
+        }
+        if (m.x + m.r < -20) zwevendeMinen.splice(i, 1);
       }
 
       // gouden ringen spawn — soms 1, soms een rij
@@ -3580,8 +3702,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             const cy = ps.y + (ps.hoogte || 30) / 2;
             spawnParticles(cx, cy, 10, "#ff5040", { spread: 8, opwaarts: -3, leven: 35, grootte: 5, zwaartekracht: 0.15, glow: 22 });
           }
+          for (const m of zwevendeMinen) {
+            const cy = m.y + Math.sin(m.fase) * m.amp;
+            spawnParticles(m.x, cy, 14, "#ff5040", { spread: 9, opwaarts: 2, leven: 38, grootte: 5, zwaartekracht: 0.12, glow: 22 });
+            spawnParticles(m.x, cy, 8, "#ffaa40", { spread: 6, opwaarts: 1.5, leven: 28, grootte: 4, zwaartekracht: 0.10, glow: 18 });
+          }
           obstakels.length = 0;
           plafondStekels.length = 0;
+          zwevendeMinen.length = 0;
           shakeKracht = Math.max(shakeKracht, 10);
           // explosie-sound: lage rumble + hoge fizz
           piep(80, 0.25, "sawtooth", 0.18);
@@ -3909,6 +4037,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
+      for (const m of zwevendeMinen) tekenZwevendeMine(m);
 
       // ───── BOSS render ─────
       if (bossActief) {
@@ -4578,6 +4707,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         for (const sc of schansen) tekenSchans(sc);
         for (const p of portals) tekenPortal(p);
         for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
+        for (const m of zwevendeMinen) tekenZwevendeMine(m);
         ctx.restore();
         tekenLevens();
         // overlay tekst
@@ -4629,6 +4759,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       platformSpawnTeller = 240;
       plafondStekels.length = 0;
       plafondStekelSpawnTeller = 240;
+      zwevendeMinen.length = 0;
+      zwevendeMineSpawnTeller = 360;
       studiebolLogos.length = 0;
       logoSpawnTeller = 360;
       // boss-state reset zodat je 'm opnieuw kunt verslaan na respawn
