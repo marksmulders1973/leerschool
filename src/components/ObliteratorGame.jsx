@@ -1006,6 +1006,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // clear normale game-elementen (geen botsing tijdens boss)
       obstakels.length = 0;
       customDecoraties.length = 0;
+      bliksems.length = 0;
       ringen.length = 0;
       platforms.length = 0;
       plafondStekels.length = 0;
@@ -1837,6 +1838,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // visueel, geen collisie. Apart van de biome-decoraties (die zijn
     // willekeurig en horen bij het level-bioom).
     const customDecoraties = [];
+    // Bliksems — knipperende verticale hazard uit custom-levels. Cyclus 180
+    // frames (90 aan / 90 uit). Elk: { x, y, breedte, hoogte, fase }.
+    const bliksems = [];
     // Schansen + loopings — bij contact super-jump + safe-zone + arc-pickups.
     // schansen[] = { x, y, breedte, hoogte, type: 'schans'|'loop', geactiveerd }
     const schansen = [];
@@ -2001,6 +2005,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const breedte = 32 * SCHAAL, hoogte = 32 * SCHAAL;
         const baseY = yScaled != null ? yScaled - hoogte / 2 : 200 * SCHAAL;
         obstakels.push({ type: 0, x: W, breedte, hoogte, y: baseY, gescoord: false, render: "ghost", baseY });
+      } else if (obs.type === "schild") {
+        // Schild = raket-pickup met kortere duur (5s ipv 10s). Hergebruikt render+pickup-logic.
+        raketten.push({
+          x: W + 40,
+          y: yScaled != null ? yScaled : 220 * SCHAAL,
+          grootte: 32 * SCHAAL,
+          fase: 0,
+          opgepakt: false,
+          kortDuur: true,
+        });
+      } else if (obs.type === "trampoline") {
+        // Stationaire bounce-pad — pusht via schansen[]-array, custom-render in tekenSchans.
+        const breedte = 80 * SCHAAL;
+        const hoogte = 18 * SCHAAL;
+        const padY = yScaled != null ? yScaled - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
+        schansen.push({
+          x: W + 40, y: padY,
+          breedte, hoogte,
+          type: "trampoline", geactiveerd: false,
+        });
+      } else if (obs.type === "bliksem") {
+        // Knipperende hazard. Initial-fase random zodat meerdere bliksems
+        // niet allemaal sync flikkeren (tenzij gewenst — dat is dan toeval).
+        const breedte = 28 * SCHAAL;
+        const hoogte = 70 * SCHAAL;
+        const baseY = yScaled != null ? yScaled - hoogte / 2 : 140 * SCHAAL;
+        bliksems.push({
+          x: W,
+          y: baseY,
+          breedte, hoogte,
+          fase: Math.floor(Math.random() * 180),
+        });
       } else if (typeof obs.type === "string" && obs.type.startsWith("decor_")) {
         // Visueel-only — geen collisie, scrollt mee met de wereld
         customDecoraties.push({
@@ -2365,6 +2401,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // zodat speler NIET af kan tijdens bonus (Mark: 'nu ging ik af, niet leuk').
       obstakels.length = 0;
       customDecoraties.length = 0;
+      bliksems.length = 0;
       haaien.length = 0;
       plafondStekels.length = 0;
       schansen.length = 0;
@@ -3589,6 +3626,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     function tekenSchans(sc) {
       ctx.save();
+      if (sc.type === "trampoline") {
+        // Plat blauw bounce-pad met witte highlight + 🪤-emoji erboven
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = "rgba(128,160,255,0.9)";
+        ctx.fillStyle = "#3060c0";
+        ctx.fillRect(sc.x, sc.y, sc.breedte, sc.hoogte);
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "rgba(180,210,255,0.9)";
+        ctx.fillRect(sc.x + 2 * SCHAAL, sc.y + 2 * SCHAAL, sc.breedte - 4 * SCHAAL, sc.hoogte * 0.35);
+        ctx.fillStyle = "rgba(20,40,80,0.6)";
+        ctx.fillRect(sc.x, sc.y + sc.hoogte - 3 * SCHAAL, sc.breedte, 3 * SCHAAL);
+        ctx.font = `${sc.hoogte * 1.6}px serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("🪤", sc.x + sc.breedte / 2, sc.y - sc.hoogte * 0.6);
+        ctx.restore();
+        return;
+      }
       if (sc.type === "loop") {
         // Looping als echte race-baan-loop (Carrera-stijl):
         //   - achterste rail (parallax-shift voor 3D)
@@ -4459,6 +4514,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         d.x -= effSnelheid;
         if (d.x < -80 * SCHAAL) customDecoraties.splice(i, 1);
       }
+      // Bliksems — knipperen 90 frames aan, 90 frames uit. Hit alleen tijdens "aan".
+      for (let i = bliksems.length - 1; i >= 0; i--) {
+        const bl = bliksems[i];
+        bl.x -= effSnelheid;
+        bl.fase = (bl.fase + 1) % 180;
+        const aan = bl.fase < 90;
+        if (aan && !bonusFase && vliegFrames === 0 && flipFrames === 0) {
+          const sb = spelerBots();
+          if (
+            sb.x < bl.x + bl.breedte && sb.x + sb.breedte > bl.x &&
+            sb.y < bl.y + bl.hoogte && sb.y + sb.hoogte > bl.y
+          ) {
+            hitTotale();
+            if (!spelLoopt) return;
+          }
+        }
+        if (bl.x + bl.breedte < -10) bliksems.splice(i, 1);
+      }
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= effSnelheid;
@@ -4631,18 +4704,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 });
               }
             } else {
-              // ── SCHANS — super-jump + arc-pickups (originele gedrag) ─────
+              // ── SCHANS / TRAMPOLINE — super-jump + arc-pickups ─────
               sc.geactiveerd = true;
-              const superKracht = SPRING_KRACHT * 1.7;
+              const isTramp = sc.type === "trampoline";
+              const superKracht = SPRING_KRACHT * (isTramp ? 2.4 : 1.7);
               speler.snelheidY = superKracht;
               speler.springt = true;
               speler.sprongTeller = 0;
-              schansVeiligeFrames = 70;
+              // Trampoline geen safe-zone — was bedoeld voor schans-aanloop
+              schansVeiligeFrames = isTramp ? 0 : 70;
               spawnParticles(
                 speler.x + speler.breedte / 2,
                 speler.y + speler.hoogte / 2,
-                16, "#69f0ae",
-                { spread: 6, opwaarts: 4, leven: 30, grootte: 5, zwaartekracht: 0.05, glow: 18 }
+                isTramp ? 22 : 16, isTramp ? "#80a0ff" : "#69f0ae",
+                { spread: isTramp ? 8 : 6, opwaarts: isTramp ? 6 : 4, leven: 30, grootte: 5, zwaartekracht: 0.05, glow: 18 }
               );
               springGeluid();
 
@@ -4697,6 +4772,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               // ruim alles op wat niet bij Hell hoort
               obstakels.length = 0;
               customDecoraties.length = 0;
+      bliksems.length = 0;
               plafondStekels.length = 0;
               schansen.length = 0;
               fans.length = 0;
@@ -5270,7 +5346,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
           r.opgepakt = true;
-          vliegFrames = VLIEG_DUUR;
+          // Custom-level "schild" geeft 5 sec immune; reguliere raket 10 sec.
+          vliegFrames = r.kortDuur ? 300 : VLIEG_DUUR;
           piep(523, 0.08, "sine", 0.14);
           setTimeout(() => piep(784, 0.08, "sine", 0.14), 60);
           setTimeout(() => piep(1047, 0.10, "sine", 0.14), 120);
@@ -5391,6 +5468,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           }
           obstakels.length = 0;
           customDecoraties.length = 0;
+      bliksems.length = 0;
           plafondStekels.length = 0;
           zwevendeMinen.length = 0;
           shakeKracht = Math.max(shakeKracht, 10);
@@ -5800,6 +5878,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
       for (const m of zwevendeMinen) tekenZwevendeMine(m);
+      // Bliksems — actieve = volle gele glow, inactieve = 25% opacity warning
+      for (const bl of bliksems) {
+        const aan = bl.fase < 90;
+        ctx.save();
+        ctx.font = `${bl.hoogte}px serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        if (aan) {
+          ctx.shadowBlur = 22;
+          ctx.shadowColor = "#fff080";
+          // Lichte flikker — sneller bij begin van aan-fase
+          const flikker = 0.85 + Math.sin(bl.fase * 0.4) * 0.15;
+          ctx.globalAlpha = flikker;
+        } else {
+          ctx.globalAlpha = 0.22;
+        }
+        ctx.fillText("⚡", bl.x + bl.breedte / 2, bl.y + bl.hoogte / 2);
+        ctx.restore();
+      }
 
       // ───── BOSS render ─────
       if (bossActief) {
@@ -6528,6 +6625,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // clear obstakels + particles + bonusHarten + raketten + flipPickups, reset speler, score blijft
       obstakels.length = 0;
       customDecoraties.length = 0;
+      bliksems.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
@@ -6733,6 +6831,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // ruim alles op zodat cutscene zuiver begint — score blijft staan
         obstakels.length = 0;
         customDecoraties.length = 0;
+      bliksems.length = 0;
         ringen.length = 0;
         platforms.length = 0;
         plafondStekels.length = 0;
@@ -7592,9 +7691,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { id: "platform",      label: "Platform",      emoji: "🪂", kost: 0 },
                 { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5 },
                 { id: "schans",        label: "Schans",        emoji: "📐", kost: 5 },
+                { id: "trampoline",    label: "Trampoline",    emoji: "🪤", kost: 8 },
                 { id: "magneet",       label: "Magneet",       emoji: "🧲", kost: 10 },
                 { id: "mijn",          label: "Mijn",          emoji: "💣", kost: 10 },
                 { id: "spookje",       label: "Spookje",       emoji: "👻", kost: 5 },
+                { id: "bliksem",       label: "Bliksem",       emoji: "⚡", kost: 7 },
+                { id: "schild",        label: "Schild",        emoji: "🛡️", kost: 12 },
                 { id: "hart",          label: "Hartje",        emoji: "❤️", kost: 15 },
                 { id: "bom",           label: "Bom",           emoji: "💥", kost: 20 },
               ];
