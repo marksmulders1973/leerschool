@@ -731,7 +731,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (muziek.draait) return;
       try {
         const a = aud(); if (a.state === "suspended") a.resume();
-        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.5; muziek.masterGain.connect(a.destination); }
+        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.4; muziek.masterGain.connect(a.destination); }
         muziek.draait = true; muziek.beat = 0; muziek.startTijd = a.currentTime + 0.1;
         plan();
       } catch {}
@@ -740,25 +740,62 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       muziek.draait = false;
       if (muziek.schedTimer) clearTimeout(muziek.schedTimer);
     }
+
+    // Rustige ambient — geen drums, alleen langzame pad + sparse sine-melodie.
+    // Per-biome variatie via muziek.bassWortel (grondtoon) + muziek.bpm (tempo).
+    function muziekPad(t, halveTonen, lengte) {
+      const a = aud();
+      const freq = muziek.bassWortel * Math.pow(2, halveTonen / 12);
+      const osc = a.createOscillator(), gain = a.createGain();
+      const filter = a.createBiquadFilter();
+      filter.type = "lowpass"; filter.frequency.value = 1000;
+      osc.type = "sine"; osc.frequency.setValueAtTime(freq, t);
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.07, t + lengte * 0.3);
+      gain.gain.linearRampToValueAtTime(0.07, t + lengte * 0.7);
+      gain.gain.linearRampToValueAtTime(0.001, t + lengte);
+      osc.connect(filter).connect(gain).connect(muziek.masterGain);
+      osc.start(t); osc.stop(t + lengte + 0.05);
+    }
+    function muziekKalmeNoot(t, halveTonen, lengte) {
+      const a = aud();
+      const freq = muziek.bassWortel * 4 * Math.pow(2, halveTonen / 12);
+      const osc = a.createOscillator(), gain = a.createGain();
+      osc.type = "sine"; osc.frequency.setValueAtTime(freq, t);
+      gain.gain.setValueAtTime(0, t);
+      gain.gain.linearRampToValueAtTime(0.06, t + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + lengte);
+      osc.connect(gain).connect(muziek.masterGain);
+      osc.start(t); osc.stop(t + lengte + 0.05);
+    }
+
+    // Eenvoudige 16-stap motief — undefined = stilte. Speelt rustig over de pad.
+    const KALM_MOTIEF = [0, undefined, 7, undefined, 12, undefined, 7, undefined,
+                         5, undefined, 3, undefined, 0, undefined, undefined, undefined];
+
     function plan() {
       if (!muziek.draait) return;
       const a = aud();
-      const tijdPer16 = 60 / muziek.bpm / 4;
-      const lookahead = 0.12;
+      // Tempo iets dempen — BPM uit BPM_PER_LEVEL is voor de hardcore versie
+      // (150-180). We nemen 60% daarvan zodat de noten ademen.
+      const effBpm = muziek.bpm * 0.6;
+      const tijdPer16 = 60 / effBpm / 4;
+      const lookahead = 0.15;
       while (muziek.startTijd + muziek.beat * tijdPer16 < a.currentTime + lookahead) {
         const t = muziek.startTijd + muziek.beat * tijdPer16;
         const stap = muziek.beat % 16;
-        if (stap % 4 === 0) muziekKick(t);
-        if (stap === 14) muziekKick(t);
-        if (stap === 4 || stap === 12) muziekSnare(t);
-        if (stap % 2 === 1) muziekHat(t, stap === 7 || stap === 15);
-        const bn = muziek.bassRiff[stap];
-        if (bn !== undefined && (stap % 2 === 0 || stap === 7 || stap === 11)) muziekBass(t, bn - 12, tijdPer16 * 1.5);
-        if (stap === 0) muziekStem(t, 0, tijdPer16 * 8);
-        if (stap === 8) muziekStem(t, 7, tijdPer16 * 4);
+
+        // PAD op stap 0 en 8 — lange aanhoudende klank
+        if (stap === 0) muziekPad(t, 0, tijdPer16 * 16);
+        if (stap === 8) muziekPad(t, 7, tijdPer16 * 8);
+
+        // Sparse melodie volgens motief
+        const noot = KALM_MOTIEF[stap];
+        if (noot !== undefined) muziekKalmeNoot(t, noot, tijdPer16 * 3);
+
         muziek.beat++;
       }
-      muziek.schedTimer = setTimeout(plan, 25);
+      muziek.schedTimer = setTimeout(plan, 30);
     }
 
     // ---------- PARTICLES ----------
@@ -3907,10 +3944,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             )}
 
             <div style={{
-              position: "sticky", bottom: 0, marginTop: 8,
+              position: isPortrait ? "sticky" : "static",
+              bottom: 0, marginTop: 8,
               padding: "10px 0 6px",
-              background: "linear-gradient(to top, rgba(10,5,20,0.96) 60%, rgba(10,5,20,0.4) 100%)",
-              zIndex: 5,
+              background: isPortrait
+                ? "linear-gradient(to top, rgba(10,5,20,0.96) 60%, rgba(10,5,20,0.4) 100%)"
+                : "transparent",
+              zIndex: isPortrait ? 5 : "auto",
             }}>
               <button onClick={() => {
                 track("obliterator_started", {
