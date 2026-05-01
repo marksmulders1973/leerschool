@@ -84,6 +84,11 @@ async function flushPendingScores() {
 const SESSIE_KEY_PREFIX = "obliterator-sessies-";
 const BONUS_KEY_PREFIX = "obliterator-bonus-";
 
+// Vaste lijst van admin-spelernamen (lowercase). Het admin-paneel blijft
+// bij deze namen — verandert NIET als iemand het wereld-record verbreekt.
+// Voeg een naam toe om iemand admin te maken.
+const OBLIVION_ADMINS = ["brian"];
+
 // Moeilijkheid-emoji op basis van level (gebruikt in canvas + level-keuze-knoppen).
 function moeilijkheidEmoji(lvl) {
   if (lvl <= 5) return "😊";
@@ -6379,12 +6384,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               )}
             </div>
 
-            {/* Admin-paneel — alleen zichtbaar voor de huidige #1 wereld-record-houder */}
+            {/* Admin-paneel — alleen voor namen in OBLIVION_ADMINS (vast, niet leaderboard-gebonden) */}
             {(() => {
-              const top1 = highscores[0];
               const myName = (userName || "").trim().toLowerCase();
-              const top1Name = (top1?.naam || "").trim().toLowerCase();
-              const isAdmin = top1 && top1.score > 0 && myName.length > 0 && myName === top1Name;
+              const isAdmin = myName.length > 0 && OBLIVION_ADMINS.includes(myName);
               if (!isAdmin) return null;
               return (
                 <div style={{
@@ -6400,7 +6403,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         ADMIN PANEEL
                       </div>
                       <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
-                        Jij bent #1 ({top1.score} punten)
+                        Welkom, {userName}
                       </div>
                     </div>
                   </div>
