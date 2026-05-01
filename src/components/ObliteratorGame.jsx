@@ -2236,11 +2236,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const customSpawnHandlers = {
       spike: () => {
         const breedte = 24 * SCHAAL, hoogte = 32 * SCHAAL;
-        obstakels.push({ type: 0, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+        const wx = worldScrollX + W;
+        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
+        obstakels.push({ type: 0, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
       },
       blok: () => {
         const breedte = 30 * SCHAAL, hoogte = 50 * SCHAAL;
-        obstakels.push({ type: 2, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+        const wx = worldScrollX + W;
+        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
+        obstakels.push({ type: 2, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
       },
       ring: (y) => {
         ringen.push({ x: W + 30, y: y || 200 * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
@@ -2258,7 +2262,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       },
       schans: () => {
         const hoogte = 0.25 * H, breedte = 0.36 * H;
-        schansen.push({ x: W + 40, y: GROND_Y + SPELER_GROOTTE - hoogte, breedte, hoogte, type: "schans", geactiveerd: false });
+        const wx = worldScrollX + W + 40;
+        const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
+        schansen.push({ x: W + 40, y: baseY - vloerHoogte(wx), breedte, hoogte, type: "schans", geactiveerd: false, worldX: wx, baseY });
       },
       hart: (y) => {
         bonusHarten.push({ x: W + 40, y: y || 220 * SCHAAL, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
@@ -2281,8 +2287,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       },
       trampoline: (y) => {
         const breedte = 80 * SCHAAL, hoogte = 18 * SCHAAL;
-        const padY = y != null ? y - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
-        schansen.push({ x: W + 40, y: padY, breedte, hoogte, type: "trampoline", geactiveerd: false });
+        const wx = worldScrollX + W + 40;
+        const baseY = y != null ? y - hoogte : (GROND_Y + SPELER_GROOTTE - hoogte);
+        schansen.push({ x: W + 40, y: baseY - vloerHoogte(wx), breedte, hoogte, type: "trampoline", geactiveerd: false, worldX: wx, baseY });
       },
       bliksem: (y) => {
         const breedte = 28 * SCHAAL, hoogte = 70 * SCHAAL;
@@ -2424,7 +2431,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (dungeonMode) type = 2;
       const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : 30 * SCHAAL;
       const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
-      obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+      const wx = worldScrollX + W;
+      const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
+      obstakels.push({ type, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
     }
     function tekenObstakel(o) {
       if (o.render === "meteor") {
@@ -5104,13 +5113,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             // speler en omgeving zichtbaar blijven tijdens de loop-rit.
             const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
             const breedte = isLoop ? 0.38 * H : 0.36 * H;
+            const wx_s = worldScrollX + W + 40;
+            const baseY_s = GROND_Y + SPELER_GROOTTE - hoogte;
+            // Loop-rails blijven flat (loop-anim verwacht vaste y); schansen
+            // krijgen hill-offset zodat ze op de heuvel staan.
             schansen.push({
               x: W + 40,
-              y: GROND_Y + SPELER_GROOTTE - hoogte,
+              y: isLoop ? baseY_s : baseY_s - vloerHoogte(wx_s),
               breedte,
               hoogte,
               type: isLoop ? "loop" : "schans",
               geactiveerd: false,
+              worldX: wx_s,
+              baseY: baseY_s,
             });
             // Voorkom dat het volgende obstakel direct ná deze schans spawnt
             // — duwt 'm naar achter zodat de safe-zone na de schans niet
