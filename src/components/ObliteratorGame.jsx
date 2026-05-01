@@ -211,21 +211,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isObliterAdmin]);
-  // Retroactief unlocken op basis van max-bereikt level uit records
-  useEffect(() => {
-    const recordKeys = Object.keys(levelRecords).map(Number).filter((n) => !isNaN(n));
-    const recordsMax = recordKeys.length > 0 ? Math.max(...recordKeys) : 0;
-    const maxBereikt = Math.max(anonMaxLevel || 0, recordsMax);
-    if (maxBereikt < 10) return; // niks te unlocken onder L10
-    const eligible = SKINS.filter((s) => s.unlockLevel != null && s.unlockLevel <= maxBereikt);
-    if (eligible.length === 0) return;
-    setUnlockedSkins((prev) => {
-      const next = new Set(prev);
-      let changed = false;
-      for (const s of eligible) if (!next.has(s.id)) { next.add(s.id); changed = true; }
-      return changed ? [...next] : prev;
-    });
-  }, [anonMaxLevel, levelRecords]);
+  // (Retroactief unlocken op basis van max-bereikt level — verplaatst naar
+  // ná de declaraties van anonMaxLevel en levelRecords om TDZ-crash te voorkomen)
   const [selectedSkin, setSelectedSkin] = useState(() => {
     try { return localStorage.getItem("obliterator-selected-skin") || "default"; } catch { return "default"; }
   });
@@ -316,6 +303,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [gekozenStartLevel, setGekozenStartLevel] = useState(1);
   // Hoogste bereikte level voor anonieme spelers (uit obliterator_scores op naam)
   const [anonMaxLevel, setAnonMaxLevel] = useState(1);
+  // Retroactief unlocken: zodra levelRecords/anonMaxLevel laden, ontgrendel
+  // skins waarvan de unlock-level al is bereikt.
+  useEffect(() => {
+    const recordKeys = Object.keys(levelRecords || {}).map(Number).filter((n) => !isNaN(n));
+    const recordsMax = recordKeys.length > 0 ? Math.max(...recordKeys) : 0;
+    const maxBereikt = Math.max(anonMaxLevel || 0, recordsMax);
+    if (maxBereikt < 10) return;
+    const eligible = SKINS.filter((s) => s.unlockLevel != null && s.unlockLevel <= maxBereikt);
+    if (eligible.length === 0) return;
+    setUnlockedSkins((prev) => {
+      const next = new Set(prev);
+      let changed = false;
+      for (const s of eligible) if (!next.has(s.id)) { next.add(s.id); changed = true; }
+      return changed ? [...next] : prev;
+    });
+  }, [anonMaxLevel, levelRecords]);
   const MAX_LEVEL_UI = 100;
   const heeftLogin = !!authUser?.id;
   // hoogste level waar je een record op hebt = "vrijgespeeld tot en met"
