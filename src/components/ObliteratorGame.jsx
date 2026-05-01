@@ -1026,13 +1026,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // natuurlijke variatie, amplitude schaalt met SCHAAL.
     function vloerHoogte(worldX) {
       if (!hillsActief() || !Number.isFinite(worldX)) return 0;
-      const a = 28 * Math.sin(worldX * 0.0085);
-      const b = 14 * Math.sin(worldX * 0.022 + 1.5);
+      // Long-wave (a) sterker zodat soms forse pieken verschijnen, korte
+      // golven (b/c) blijven kleine variatie eroverheen.
+      const a = 38 * Math.sin(worldX * 0.0085);
+      const b = 18 * Math.sin(worldX * 0.022 + 1.5);
       const c = 6 * Math.sin(worldX * 0.06 + 0.7);
       let v = (a + b + c) * SCHAAL;
-      // Asymmetrische cap: heuvels mogen 30px omhoog, dalen max 14px omlaag.
-      // Voorkomt dat speler in een diep dal onder canvas-bottom valt.
-      v = Math.max(-14 * SCHAAL, Math.min(30 * SCHAAL, v));
+      // Asymmetrische cap: heuvels royaal omhoog (45px), dalen ondiep (16px)
+      // zodat speler altijd zichtbaar blijft.
+      v = Math.max(-16 * SCHAAL, Math.min(45 * SCHAAL, v));
       return Number.isFinite(v) ? v : 0;
     }
     function vloerSlope(worldX) {
@@ -1771,7 +1773,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.closePath();
         ctx.clip();
       }
-      const brickStartY = hills ? grondTop - 30 * SCHAAL : grondTop;
+      const brickStartY = hills ? grondTop - 50 * SCHAAL : grondTop;
       for (let y = brickStartY; y < grondBottom; y += BAKSTEEN_H) {
         const rij = Math.floor((y - brickStartY) / BAKSTEEN_H);
         const xOff = rij % 2 === 0 ? 0 : BAKSTEEN_W / 2;
