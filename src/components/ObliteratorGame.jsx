@@ -155,6 +155,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [editorTool, setEditorTool] = useState("spike");
   const [editorLevelNaam, setEditorLevelNaam] = useState("Mijn level");
   const [editorOpslaan, setEditorOpslaan] = useState({ bezig: false, error: null, ok: false });
+  const [editorTab, setEditorTab] = useState("maken"); // "maken" | "spelen"
+  const [communityLevels, setCommunityLevels] = useState([]);
+  const [communityLevelsLaden, setCommunityLevelsLaden] = useState(false);
+  const [actiefCustomLevel, setActiefCustomLevel] = useState(null); // {id, naam, obstakels, lengte, maker_naam}
+  const customLevelRef = useRef(null);
+  useEffect(() => { customLevelRef.current = actiefCustomLevel; }, [actiefCustomLevel]);
+  // Levels laden zodra speler-tab opent
+  useEffect(() => {
+    if (fase !== "custom-editor" || editorTab !== "spelen") return;
+    let cancelled = false;
+    setCommunityLevelsLaden(true);
+    supabase
+      .from("obliterator_user_levels")
+      .select("id, naam, maker_naam, obstakels, lengte, plays, created_at")
+      .eq("publiek", true)
+      .order("created_at", { ascending: false })
+      .limit(50)
+      .then(({ data, error }) => {
+        if (cancelled) return;
+        if (!error && Array.isArray(data)) setCommunityLevels(data);
+        setCommunityLevelsLaden(false);
+      });
+    return () => { cancelled = true; };
+  }, [fase, editorTab]);
   // Ghost-state voor PvP: opponent's laatst-bekende positie + score
   const ghostStateRef = useRef({ y: 0, vy: 0, score: 0, alive: true, name: "" });
   // PvP-eindstand (winner + scores) zodra match is afgerond
@@ -635,6 +659,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const MAX_LEVEL = 100;
     // PvP forceert L1 zodat beide spelers identieke start-condities hebben.
     let huidigLevel = pvpMatch ? 1 : (startLevelRef.current || 1);
+    // ── CUSTOM LEVEL ── speel een door iemand gemaakt level uit DB
+    const customLevel = customLevelRef.current;
+    const customLevelMode = !!customLevel;
+    const customSorted = customLevel ? [...(customLevel.obstakels || [])].sort((a, b) => (a.x || 0) - (b.x || 0)) : [];
+    let customScrollX = 0;
+    let customSpawnIdx = 0;
+    let customLevelEinde = false;
     let levelGehaaldFlash = 0;
     let levelGehaaldNummer = 0;
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
@@ -1744,6 +1775,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function botst(a, b) { return a.x < b.x + b.breedte && a.x + a.breedte > b.x && a.y < b.y + b.hoogte && a.y + a.hoogte > b.y; }
+    // Spawn een obstakel uit een custom-level-record. Push naar dezelfde
+    // arrays als de random-spawn — bestaande collision/render werkt automatisch.
+    function spawnUitCustom(obs) {
+      if (!obs || !obs.type) return;
+      if (obs.type === "spike") {
+        const breedte = 24 * SCHAAL, hoogte = 32 * SCHAAL;
+        obstakels.push({ type: 0, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+      } else if (obs.type === "blok") {
+        const breedte = 30 * SCHAAL, hoogte = 50 * SCHAAL;
+        obstakels.push({ type: 2, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
+      } else if (obs.type === "ring") {
+        ringen.push({ x: W + 30, y: (obs.y || 200) * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+      } else if (obs.type === "plafondstekel") {
+        plafondStekels.push({ x: W + 40, breedte: 26 * SCHAAL, hoogte: 30 * SCHAAL });
+      } else if (obs.type === "mijn") {
+        const r = 20 * SCHAAL;
+        const baseY = (PLAFOND_HOOGTE - 4) + 60 * SCHAAL + r + Math.random() * 40 * SCHAAL;
+        zwevendeMinen.push({ x: W + 60, y: baseY, r, fase: 0, amp: 8 * SCHAAL });
+      }
+    }
     function maakObstakel() {
       const r = Math.random();
       let type = 0;
@@ -3748,7 +3799,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // 'm meteen na een boss-fight of dungeon zien kan i.p.v. nog 25 sec
       // wachten. Spawn zelf gebeurt alleen in 'vrije' state.
       if (!periscoop) periscoopSpawnTeller--;
-      if (!bonusFase && !bossActief && !dungeonMode && !hellMode) {
+      if (!bonusFase && !bossActief && !dungeonMode && !hellMode && !customLevelMode) {
         if (!periscoop && periscoopSpawnTeller <= 0) {
           // Spawn op 0.85 W zodat 'ie binnen de hang-fase bij speler (x=100)
           // aankomt. Te ver rechts (W+30) was te scherpe timing — Mark
@@ -4124,10 +4175,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // wel spawnen). Mark: 'na bonus zie ik veel ringen, dingen dubbel'.
       if (!bonusFase) volgendObstakelOver--;
       if (!bonusFase && volgendObstakelOver <= 0) {
-        if (schansVeiligeFrames > 0 || dungeonMode || hellMode) {
+        if (schansVeiligeFrames > 0 || dungeonMode || hellMode || customLevelMode) {
           // Geen grond-obstakels tijdens vlucht/landing na schans, niet
-          // in dungeon-mode (water op de vloer = blocks onzichtbaar) en niet
-          // in hell-mode (lava = grond zelf is dodelijk).
+          // in dungeon/hell/custom-level mode (custom = saved spawns ipv random).
           volgendObstakelOver = 30;
         } else {
           maakObstakel();
@@ -4140,13 +4190,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // L100: 26-42 frames
           // OBLIVION PULSE: extreme — 30-50 frames vanaf het begin.
           let minA, variatie;
-          if (oblivionMode) {
+          if (customLevelMode) {
+            minA = 999999; variatie = 0; // custom: geen random-spawn
+          } else if (oblivionMode) {
             minA = 30; variatie = 20;
           } else {
             minA = Math.max(26, 110 - huidigLevel * 0.55 - score * 0.18);
             variatie = Math.max(14, 45 - huidigLevel * 0.28);
           }
           volgendObstakelOver = Math.floor(minA) + Math.floor(Math.random() * variatie);
+        }
+      }
+      // ── CUSTOM LEVEL spawn-loop ──
+      if (customLevelMode && !customLevelEinde && !bonusFase) {
+        customScrollX += effSnelheid;
+        while (customSpawnIdx < customSorted.length && customSorted[customSpawnIdx].x <= customScrollX) {
+          spawnUitCustom(customSorted[customSpawnIdx]);
+          customSpawnIdx++;
+        }
+        // Einde: alle obstakels gespawnd én scroll voorbij level-lengte
+        if (customSpawnIdx >= customSorted.length && customScrollX > (customLevel.lengte || 4000) + W) {
+          customLevelEinde = true;
+          // Win-feedback + eindeSessie roept score-flow aan
+          spawnParticles(speler.x + 16 * SCHAAL, speler.y + 16 * SCHAAL, 30, "#ffd54f", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, glow: 22 });
+          piep(660, 0.15, "sine", 0.16);
+          setTimeout(() => piep(990, 0.15, "sine", 0.14), 100);
+          setTimeout(() => piep(1320, 0.18, "sine", 0.12), 220);
+          eindeSessie();
+          return;
         }
       }
       for (let i = obstakels.length - 1; i >= 0; i--) {
@@ -4161,7 +4232,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           o.gescoord = true;
           aantalObstakelsTotaal++; // teller voor pickups (niet voor score)
           // GEEN power-ups in Oblivion Pulse — extreme difficulty, geen schild, geen reddingsboei.
-          if (!oblivionMode) {
+          if (!oblivionMode && !customLevelMode) {
             // bonus-hart spawn (elke ~25 obstakels, 40% kans)
             if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
               const yMin = (200 + Math.random() * 60) * SCHAAL;
@@ -4196,7 +4267,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // PORTAL naar dungeon-wereld — elke ~8 obstakels, 90% kans
           // Niet tijdens boss/flip/loop/dungeon/hell zelf.
           if (
-            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode && !customLevelMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 8 === 0 &&
             Math.random() < 0.9
           ) {
@@ -4213,7 +4284,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // HELL-PORTAAL — zeldzaam, vanaf score 100. Elke ~32 obstakels, 60% kans.
           // Niet tijdens boss/dungeon/hell/flip/loop. Rood + ander effect.
           if (
-            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode && !oblivionMode && !customLevelMode &&
             score >= 100 &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 32 === 0 &&
             Math.random() < 0.6
@@ -4232,7 +4303,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // FLIP en dungeon (super-jump in dungeon = vlieg door plafond-stekels
           // = direct dood).
           if (
-            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode && !oblivionMode &&
+            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode && !oblivionMode && !customLevelMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
             Math.random() < 0.85
           ) {
@@ -4719,7 +4790,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       if (!bonusFase) plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode) && !dungeonMode && !hellMode && !bonusFase) {
+      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode) && !dungeonMode && !hellMode && !bonusFase && !customLevelMode) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -4766,6 +4837,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         && !hellMode
         && !bonusFase
         && !bossActief
+        && !customLevelMode
         && schansVeiligeFrames <= 0
       ) {
         const r = (16 + Math.random() * 6) * SCHAAL;
@@ -4821,8 +4893,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       // gouden ringen spawn — soms 1, soms een rij
-      if (!bonusFase) ringSpawnTeller--;
-      if (!bonusFase && ringSpawnTeller <= 0) {
+      if (!bonusFase && !customLevelMode) ringSpawnTeller--;
+      if (!bonusFase && !customLevelMode && ringSpawnTeller <= 0) {
         const isRij = Math.random() < 0.45;
         const yBase = (170 + Math.random() * 110) * SCHAAL;
         if (isRij) {
@@ -7183,8 +7255,88 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     <div style={{ fontSize: 12, color: "#ffd54f", fontWeight: 700 }}>💍 {munten} {isAdmin && "(admin = gratis)"}</div>
                   </div>
                   <h2 style={{ fontFamily: "Impact, sans-serif", fontSize: 22, color: "#ff9d40", letterSpacing: 1.5, marginBottom: 8 }}>
-                    🎨 LEVEL EDITOR
+                    🎨 CUSTOM LEVELS
                   </h2>
+                  {/* Tabs */}
+                  <div style={{ display: "flex", gap: 4, marginBottom: 12 }}>
+                    <button
+                      onClick={() => setEditorTab("maken")}
+                      style={{ flex: 1, padding: "8px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: editorTab === "maken" ? "rgba(255,157,64,0.18)" : "rgba(255,255,255,0.04)", color: editorTab === "maken" ? "#ff9d40" : "rgba(255,255,255,0.6)", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      🛠️ Maken
+                    </button>
+                    <button
+                      onClick={() => setEditorTab("spelen")}
+                      style={{ flex: 1, padding: "8px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: editorTab === "spelen" ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)", color: editorTab === "spelen" ? "#69f0ae" : "rgba(255,255,255,0.6)", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      🎮 Spelen
+                    </button>
+                  </div>
+                  {editorTab === "spelen" ? (
+                    <div>
+                      <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", marginBottom: 10 }}>
+                        Levels gemaakt door spelers — tap "Spelen" om mee te doen.
+                      </div>
+                      {communityLevelsLaden && (
+                        <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)" }}>Levels laden…</div>
+                      )}
+                      {!communityLevelsLaden && communityLevels.length === 0 && (
+                        <div style={{ textAlign: "center", padding: 20, color: "rgba(255,255,255,0.5)", fontSize: 13 }}>
+                          Nog geen levels — tik op "🛠️ Maken" om de eerste te bouwen!
+                        </div>
+                      )}
+                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        {communityLevels.map((lv) => (
+                          <div
+                            key={lv.id}
+                            style={{
+                              display: "flex", alignItems: "center", gap: 10,
+                              padding: "10px 12px", borderRadius: 10,
+                              background: "rgba(255,255,255,0.04)",
+                              border: "1px solid rgba(255,255,255,0.10)",
+                            }}
+                          >
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                                {lv.naam}
+                              </div>
+                              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>
+                                door {lv.maker_naam} · {Array.isArray(lv.obstakels) ? lv.obstakels.length : 0} obstakels · {lv.plays || 0}× gespeeld
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => {
+                                // play-count optimistisch ophogen
+                                supabase
+                                  .from("obliterator_user_levels")
+                                  .update({ plays: (lv.plays || 0) + 1 })
+                                  .eq("id", lv.id)
+                                  .then(() => {});
+                                setActiefCustomLevel({
+                                  id: lv.id,
+                                  naam: lv.naam,
+                                  obstakels: Array.isArray(lv.obstakels) ? lv.obstakels : [],
+                                  lengte: lv.lengte || 4000,
+                                  maker_naam: lv.maker_naam,
+                                });
+                                setFase("spelen");
+                              }}
+                              style={{
+                                padding: "8px 14px", borderRadius: 8, border: "none",
+                                background: "linear-gradient(135deg, #00c853, #00a040)",
+                                color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif",
+                                fontSize: 12, fontWeight: 800, cursor: "pointer",
+                                whiteSpace: "nowrap",
+                              }}
+                            >
+                              ▶️ Spelen
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                  <>
                   <input
                     type="text"
                     value={editorLevelNaam}
@@ -7313,8 +7465,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     {editorOpslaan.bezig ? "Opslaan…" : "💾 Opslaan in cloud"}
                   </button>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", textAlign: "center" }}>
-                    Speel-engine voor custom levels volgt — voor nu kun je bouwen + opslaan.
+                    Tap "🎮 Spelen" bovenaan om dit level + andere community-levels te spelen.
                   </div>
+                  </>
+                  )}
                 </>
               );
             })()}
