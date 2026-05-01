@@ -417,6 +417,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // vlieg-power-up
     let vliegFrames = 0; // > 0 = immune
     const VLIEG_DUUR = 600; // 10 sec
+    // bubbel-shield (vis-pickup) — vernietigt haaien op contact i.p.v. damage
+    let bubbelFrames = 0;
+    const BUBBEL_DUUR = 300; // 5 sec
     const raketten = []; // pickups in lucht
     // FLIP-power-up (gravity-inversie)
     let flipPending = 0;       // 2-sec countdown na pickup
@@ -1540,12 +1543,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function tekenVis(v) {
       ctx.save();
       ctx.translate(v.x, v.y);
+      const gr = v.grootte;
+      // Pickup-look: pulserend wit aura zodat duidelijk is "pakken!"
+      const pulse = 0.55 + Math.sin(frameTeller * 0.18 + v.fase) * 0.25;
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = `rgba(255, 255, 255, ${pulse * 0.18})`;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, gr * 1.7, gr * 1.0, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = `rgba(255, 255, 255, ${pulse * 0.30})`;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, gr * 1.35, gr * 0.78, 0, 0, Math.PI * 2);
+      ctx.fill();
+
       // Sterke glow zodat vis duidelijk afsteekt tegen donkere dungeon
       ctx.shadowBlur = 22;
       ctx.shadowColor = v.kleur;
 
       // Body — ovaal in volle kleur (geen wit-blend meer — verloor te veel kleur)
-      const gr = v.grootte;
       ctx.fillStyle = v.kleur;
       ctx.beginPath();
       ctx.ellipse(0, 0, gr, gr * 0.55, 0, 0, Math.PI * 2);
@@ -2421,7 +2436,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             kleur: VIS_KLEUREN[Math.floor(Math.random() * VIS_KLEUREN.length)],
             snelheid: 0.6 + Math.random() * 0.6,
           });
-          visSpawnTeller = 25 + Math.floor(Math.random() * 30);
+          visSpawnTeller = 90 + Math.floor(Math.random() * 60);
         }
         // Bij DUNGEON_DUUR: start exit-fade
         if (dungeonFrames === DUNGEON_DUUR) {
@@ -2451,22 +2466,47 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!h.dood && vliegFrames === 0 && flipFrames === 0 && !loopActief) {
           const sb = spelerBots();
           if (botst(sb, { x: h.x, y: h.y, breedte: h.breedte, hoogte: h.hoogte })) {
-            levenVerlies();
-            h.dood = true;
-            spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 16, "#80c0ff", { spread: 6, opwaarts: 2, leven: 24, grootte: 4, glow: 14 });
+            if (bubbelFrames > 0) {
+              // Bubbel-shield vernietigt de haai i.p.v. dat speler damage neemt
+              h.dood = true;
+              piep(440, 0.12, "sine", 0.12);
+              setTimeout(() => piep(880, 0.10, "sine", 0.08), 60);
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 22, "#80e8ff", { spread: 8, opwaarts: 2, leven: 30, grootte: 4, glow: 18 });
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 12, "#ffffff", { spread: 6, opwaarts: 1.5, leven: 22, grootte: 3, glow: 12 });
+            } else {
+              levenVerlies();
+              h.dood = true;
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 16, "#80c0ff", { spread: 6, opwaarts: 2, leven: 24, grootte: 4, glow: 14 });
+            }
           }
         }
         if (h.x + h.breedte < -60 || h.dood) haaien.splice(i, 1);
       }
-      // Beweeg vissen (decoratie — geen botsing met speler)
+      // Beweeg + check pickup voor vissen
       for (let i = vissen.length - 1; i >= 0; i--) {
         const v = vissen[i];
         v.x -= effSnelheid * 0.85 + v.snelheid;
         v.fase += 0.18;
         // lichte op-en-neer wiebel
         v.y += Math.sin(v.fase) * 0.4;
+        // pickup: speler raakt vis -> +5 punten + bubbel-shield
+        const sb = spelerBots();
+        const visBox = { x: v.x - v.grootte, y: v.y - v.grootte * 0.55, breedte: v.grootte * 2, hoogte: v.grootte * 1.1 };
+        if (!loopActief && botst(sb, visBox)) {
+          score += 5;
+          bubbelFrames = BUBBEL_DUUR;
+          piep(880, 0.06, "sine", 0.10);
+          setTimeout(() => piep(1320, 0.06, "sine", 0.08), 50);
+          setTimeout(() => piep(1760, 0.08, "sine", 0.06), 110);
+          spawnParticles(v.x, v.y, 18, v.kleur, { spread: 6, opwaarts: 2, leven: 28, grootte: 4, glow: 16 });
+          spawnParticles(v.x, v.y, 10, "#ffffff", { spread: 4, opwaarts: 1.5, leven: 22, grootte: 3, glow: 12 });
+          vissen.splice(i, 1);
+          continue;
+        }
         if (v.x + v.grootte * 2 < -40) vissen.splice(i, 1);
       }
+      // Bubbel-shield aftellen
+      if (bubbelFrames > 0) bubbelFrames--;
       for (let i = particles.length - 1; i >= 0; i--) {
         particles[i].update();
         if (particles[i].dood) particles.splice(i, 1);
@@ -3657,6 +3697,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Vissen + haaien NA de overlay zodat het water-paneel ze niet grijs tint
       for (const v of vissen) tekenVis(v);
       for (const h of haaien) tekenHaai(h);
+      // Bubbel-shield rond speler (van vis-pickup) — ook na overlay zodat 'ie helder blijft
+      if (bubbelFrames > 0) {
+        const cx = speler.x + speler.breedte / 2;
+        const cy = speler.y + speler.hoogte / 2;
+        const r = speler.breedte * 0.85;
+        const pulse = 1 + Math.sin(frameTeller * 0.18) * 0.06;
+        // laatste 30 frames knipperen om "bijna op" te tonen
+        const knipper = bubbelFrames < 30 && frameTeller % 6 < 3 ? 0.35 : 1;
+        ctx.save();
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#80e8ff";
+        ctx.strokeStyle = `rgba(160, 232, 255, ${0.85 * knipper})`;
+        ctx.lineWidth = 3 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * pulse, 0, Math.PI * 2);
+        ctx.stroke();
+        // binnenste lichte vulling
+        ctx.fillStyle = `rgba(208, 240, 255, ${0.10 * knipper})`;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * pulse, 0, Math.PI * 2);
+        ctx.fill();
+        // hoogtepunt links-boven
+        ctx.fillStyle = `rgba(255, 255, 255, ${0.55 * knipper})`;
+        ctx.beginPath();
+        ctx.arc(cx - r * 0.45, cy - r * 0.45, r * 0.16, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
     }
     // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
     const TARGET_FRAME_MS = 1000 / 60;
@@ -3768,6 +3836,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bossWinAnim = 0;
       BOSS_NA_LEVEL_VLAGGEN.clear();
       vliegFrames = 0;
+      bubbelFrames = 0;
       flipFrames = 0;
       flipPending = 0;
       speler.x = 100 * SCHAAL;
@@ -4049,6 +4118,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>🧲 <strong style={{ color: "#40c0ff" }}>Magneet pakken</strong> = 8 sec lang vliegen alle ringen naar je toe</div>
               <div>🐌 <strong style={{ color: "#a060ff" }}>Slow-mo pakken</strong> = 5 sec wereld in halve snelheid (adempauze!)</div>
               <div>💥 <strong style={{ color: "#ff5040" }}>Bom pakken</strong> = ALLE stekels op het scherm vernietigen!</div>
+              <div>🐠 <strong style={{ color: "#ffaa30" }}>Vis pakken</strong> = +5 punten + 5 sec bubbel-shield (haaien gaan dood bij contact!)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
