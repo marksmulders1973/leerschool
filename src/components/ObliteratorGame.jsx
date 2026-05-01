@@ -205,6 +205,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
   // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
   // bij iedereen die op dat moment speelt de cutscene triggert.
+  // Als de speler op het MENU staat: automatisch in 'spelen' fase springen
+  // zodat de cutscene meteen kan afgaan (anders blijft de trigger zitten
+  // tot de speler zelf op START drukt).
+  const faseRef = useRef("menu");
+  useEffect(() => { faseRef.current = fase; }, [fase]);
   useEffect(() => {
     let mounted = true;
     // Eerst de hoogste bestaande id ophalen zodat we OUDE events niet alsnog triggeren
@@ -221,7 +226,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       } catch {}
     })();
     const channel = supabase
-      .channel("oblivion-events")
+      .channel(`oblivion-events-${Math.random().toString(36).slice(2, 8)}`)
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "oblivion_events" },
@@ -237,6 +242,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (ev.id <= oblivionTriggerRef.current.lastSeenEventId) return;
           oblivionTriggerRef.current.lastSeenEventId = ev.id;
           oblivionTriggerRef.current.trigger = true;
+          // Als de speler op het menu staat: forceer naar spelen-fase zodat
+          // de game-loop start en de trigger meteen wordt geconsumeerd.
+          if (faseRef.current === "menu" && !pvpMatch) {
+            try { setFase("spelen"); } catch {}
+          }
         }
       )
       .subscribe();
@@ -244,6 +254,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       mounted = false;
       try { supabase.removeChannel(channel); } catch {}
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     audioVolumeRef.current = { aan: geluidAan, volume };
