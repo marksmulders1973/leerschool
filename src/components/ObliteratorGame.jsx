@@ -1103,7 +1103,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     // ---------- SPELER ----------
-    const speler = { x: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
+    const speler = { x: 100 * SCHAAL, basisX: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidX: 0, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
     function spelerBots() { const m = 4 * SCHAAL; return { x: speler.x + m, y: speler.y + m, breedte: speler.breedte - m * 2, hoogte: speler.hoogte - m * 2 }; }
     function tekenSpeler() {
       const cx = speler.x + speler.breedte / 2;
@@ -2330,6 +2330,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // tijdens FLIP: omgekeerd (omlaag duiken)
         const richting = flipFrames > 0 ? -1 : 1;
         speler.snelheidY = SPRING_KRACHT * kracht * richting;
+        // Lichte voorwaartse zet bij sprong — minder statisch dan puur op-en-neer.
+        // Decay komt via update; bal drift terug naar basisX als 'ie weer op de grond is.
+        // Cap zodat multi-jumps de bal niet ver buiten beeld duwen.
+        const MAX_VOORWAARTS = 70 * SCHAAL;
+        if (speler.x < speler.basisX + MAX_VOORWAARTS) {
+          speler.snelheidX = Math.max(speler.snelheidX, 2.4 * SCHAAL * kracht);
+        }
         speler.springt = true;
         speler.sprongTeller++;
         springGeluid();
@@ -2406,7 +2413,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // hoog schiet zoals Mark vroeg) + terug naar fixed x=100
           loopActief = false;
           loopRef = null;
-          speler.x = 100 * SCHAAL;
+          speler.x = speler.basisX;
+          speler.snelheidX = 0;
           speler.y = GROND_Y;
           speler.snelheidY = SPRING_KRACHT * 1.0; // omhoog-boost als kicker
           speler.springt = true;
@@ -2611,6 +2619,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
       const yVorig = speler.y;
       speler.y += speler.snelheidY;
+      // Horizontale push tijdens sprong + drift-terug op grond — geeft jump
+      // een natuurlijke arc-feel ipv puur statisch op-en-neer (Mark's input).
+      // Niet tijdens loop/bonus-fase (die zetten x zelf).
+      if (!loopActief && !bonusFase) {
+        speler.x += speler.snelheidX;
+        speler.snelheidX *= 0.93; // decay tijdens sprong
+        if (!speler.springt && Math.abs(speler.snelheidX) < 0.05) {
+          // op de grond — drift terug naar basisX
+          const dx = speler.basisX - speler.x;
+          if (Math.abs(dx) > 0.3) speler.x += dx * 0.05;
+          else speler.x = speler.basisX;
+          speler.snelheidX = 0;
+        }
+      }
       // rotatie: tijdens springen sneller, op grond/plafond constant rollen (logo-bol draait altijd)
       if (speler.springt) {
         speler.rotatie += flipFrames > 0 ? -0.18 : 0.18;
@@ -4507,8 +4529,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bonusRingen.length = 0;
       bonusScore = 0;
       bonusEindFlash = 0;
-      speler.x = 100 * SCHAAL;
+      speler.x = speler.basisX;
       speler.y = GROND_Y;
+      speler.snelheidX = 0;
       speler.snelheidY = 0;
       speler.springt = false;
       speler.rotatie = 0;
