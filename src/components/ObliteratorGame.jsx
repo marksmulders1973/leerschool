@@ -392,7 +392,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // springt, start een 5-sec bonus-fase: wereld bevriest, lasers schieten
     // met spatie/klik, bonus-ringen vliegen voorbij, hits = +5 score elk.
     let periscoop = null; // { x, faseNaam: 'uit'|'hang'|'in', faseFrames }
-    let periscoopSpawnTeller = 1500; // eerste ~25 sec na start
+    let periscoopSpawnTeller = 600; // eerste ~10 sec na start
     const PERISCOOP_UIT_FRAMES = 30;   // zakt uit
     const PERISCOOP_HANG_FRAMES = 360; // 6 sec bereikbaar (was 4 — Mark vond te scherp)
     const PERISCOOP_IN_FRAMES = 30;    // trekt zich terug
@@ -2478,8 +2478,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (bonusEindFlash > 0) bonusEindFlash--;
 
       // ── PERISCOOP: spawn + animatie + collision ──
+      // Teller telt ALTIJD af (ook tijdens boss/dungeon/bonus) zodat je
+      // 'm meteen na een boss-fight of dungeon zien kan i.p.v. nog 25 sec
+      // wachten. Spawn zelf gebeurt alleen in 'vrije' state.
+      if (!periscoop) periscoopSpawnTeller--;
       if (!bonusFase && !bossActief && !dungeonMode) {
-        if (!periscoop) periscoopSpawnTeller--;
         if (!periscoop && periscoopSpawnTeller <= 0) {
           // Spawn op 0.85 W zodat 'ie binnen de hang-fase bij speler (x=100)
           // aankomt. Te ver rechts (W+30) was te scherpe timing — Mark
@@ -2489,7 +2492,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             faseNaam: "uit",
             faseFrames: 0,
           };
-          periscoopSpawnTeller = 1500 + Math.floor(Math.random() * 1200); // 25-45 sec
+          periscoopSpawnTeller = 900 + Math.floor(Math.random() * 600); // 15-25 sec tussen periscoops
           piep(440, 0.20, "sine", 0.10);
           setTimeout(() => piep(660, 0.18, "sine", 0.08), 120);
         }
@@ -4528,7 +4531,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       afgeremFrames = 0;
       blokHitX = -999;
       periscoop = null;
-      periscoopSpawnTeller = 1500;
+      // Bij respawn: korte teller (10 sec) zodat speler 'm na een dood
+      // alsnog snel ziet. Mark: '1300 punten, periscoop nog niet gezien'.
+      periscoopSpawnTeller = 600;
       bonusFase = false;
       bonusFrames = 0;
       bonusRingen.length = 0;
