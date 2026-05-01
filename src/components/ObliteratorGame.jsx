@@ -392,7 +392,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // springt, start een 5-sec bonus-fase: wereld bevriest, lasers schieten
     // met spatie/klik, bonus-ringen vliegen voorbij, hits = +5 score elk.
     let periscoop = null; // { x, faseNaam: 'uit'|'hang'|'in', faseFrames }
-    let periscoopSpawnTeller = 600; // eerste ~10 sec na start
+    let periscoopSpawnTeller = 2400; // eerste ~40 sec na start (Mark: 75% minder vaak)
     const PERISCOOP_UIT_FRAMES = 30;   // zakt uit
     const PERISCOOP_HANG_FRAMES = 360; // 6 sec bereikbaar (was 4 — Mark vond te scherp)
     const PERISCOOP_IN_FRAMES = 30;    // trekt zich terug
@@ -2561,7 +2561,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             faseNaam: "uit",
             faseFrames: 0,
           };
-          periscoopSpawnTeller = 900 + Math.floor(Math.random() * 600); // 15-25 sec tussen periscoops
+          periscoopSpawnTeller = 3600 + Math.floor(Math.random() * 2400); // 60-100 sec tussen periscoops (75% minder vaak dan 15-25 sec)
           piep(440, 0.20, "sine", 0.10);
           setTimeout(() => piep(660, 0.18, "sine", 0.08), 120);
         }
@@ -4649,9 +4649,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       afgeremFrames = 0;
       blokHitX = -999;
       periscoop = null;
-      // Bij respawn: korte teller (10 sec) zodat speler 'm na een dood
-      // alsnog snel ziet. Mark: '1300 punten, periscoop nog niet gezien'.
-      periscoopSpawnTeller = 600;
+      // Bij respawn: ~40 sec teller — periscoop is een zeldzame bonus
+      // (Mark: 75% minder vaak), dus na dood ook niet direct weer in beeld.
+      periscoopSpawnTeller = 2400;
       bonusFase = false;
       bonusFrames = 0;
       bonusIntroFrames = 0;
