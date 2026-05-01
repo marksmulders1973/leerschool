@@ -1,19 +1,19 @@
 import { track } from "../utils.js";
 
-// Bottom-tabs nav (Duolingo-style). Vier tabs: Home, Leren, Oefenen, Kampioenen.
+// Bottom-tabs nav (Duolingo-style). Vier tabs: Home, Leren, Oefenen, Spel.
 // Design-system v1: tokens, tap-target ≥ 44px, glow-indicator op brand-primary.
 
 const TABS = [
-  { id: "home",       label: "Home",       emoji: "🏠", target: "home" },
-  { id: "leren",      label: "Leren",      emoji: "📚", target: "learn-paths-hub" },
-  { id: "oefenen",    label: "Oefenen",    emoji: "🎯", target: "_oefenen" },
-  { id: "kampioenen", label: "Kampioenen", emoji: "🏆", target: "kampioenen" },
+  { id: "home",    label: "Home",    emoji: "🏠", target: "home" },
+  { id: "leren",   label: "Leren",   emoji: "📚", target: "learn-paths-hub" },
+  { id: "oefenen", label: "Oefenen", emoji: "🎯", target: "_oefenen" },
+  { id: "spel",    label: "Spel",    emoji: "👾", target: "obliteratorPlay" },
 ];
 
 function bepaalActieveTab(page) {
   if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
-  if (page === "kampioenen" || page === "leaderboard" || page === "student-progress" || page === "teacher-progress") return "kampioenen";
+  if (page === "obliteratorPlay" || page === "obliteratorDirect") return "spel";
   if ([
     "student-home", "teacher-home", "self-study",
     "textbook", "cito", "tafels", "redactiesommen",
