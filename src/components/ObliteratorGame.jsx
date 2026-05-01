@@ -1779,6 +1779,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // arrays als de random-spawn — bestaande collision/render werkt automatisch.
     function spawnUitCustom(obs) {
       if (!obs || !obs.type) return;
+      const yScaled = obs.y != null ? obs.y * SCHAAL : null;
       if (obs.type === "spike") {
         const breedte = 24 * SCHAAL, hoogte = 32 * SCHAAL;
         obstakels.push({ type: 0, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
@@ -1786,13 +1787,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const breedte = 30 * SCHAAL, hoogte = 50 * SCHAAL;
         obstakels.push({ type: 2, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
       } else if (obs.type === "ring") {
-        ringen.push({ x: W + 30, y: (obs.y || 200) * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+        ringen.push({ x: W + 30, y: yScaled || 200 * SCHAAL, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
       } else if (obs.type === "plafondstekel") {
         plafondStekels.push({ x: W + 40, breedte: 26 * SCHAAL, hoogte: 30 * SCHAAL });
       } else if (obs.type === "mijn") {
         const r = 20 * SCHAAL;
-        const baseY = (PLAFOND_HOOGTE - 4) + 60 * SCHAAL + r + Math.random() * 40 * SCHAAL;
+        const baseY = yScaled || ((PLAFOND_HOOGTE - 4) + 80 * SCHAAL);
         zwevendeMinen.push({ x: W + 60, y: baseY, r, fase: 0, amp: 8 * SCHAAL });
+      } else if (obs.type === "platform") {
+        platforms.push({ x: W + 20, y: PLATFORM_Y, breedte: 200 * SCHAAL });
+      } else if (obs.type === "schans") {
+        const hoogte = 0.25 * H, breedte = 0.36 * H;
+        schansen.push({
+          x: W + 40, y: GROND_Y + SPELER_GROOTTE - hoogte,
+          breedte, hoogte, type: "schans", geactiveerd: false,
+        });
+      } else if (obs.type === "hart") {
+        bonusHarten.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
+      } else if (obs.type === "magneet") {
+        magneetPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+      } else if (obs.type === "bom") {
+        bombPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
       }
     }
     function maakObstakel() {
@@ -7179,8 +7194,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 { id: "spike",       label: "Spike",        emoji: "🔺", kost: 0 },
                 { id: "blok",        label: "Blok",         emoji: "🟦", kost: 0 },
                 { id: "ring",        label: "Ring",         emoji: "💍", kost: 0 },
+                { id: "platform",    label: "Platform",     emoji: "🪂", kost: 0 },
                 { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5 },
+                { id: "schans",      label: "Schans",       emoji: "📐", kost: 5 },
+                { id: "magneet",     label: "Magneet",      emoji: "🧲", kost: 10 },
                 { id: "mijn",        label: "Mijn",         emoji: "💣", kost: 10 },
+                { id: "hart",        label: "Hartje",       emoji: "❤️", kost: 15 },
+                { id: "bom",         label: "Bom",          emoji: "💥", kost: 20 },
               ];
               const LEVEL_LENGTE = 4000;
               const TRACK_HOOGTE = 220;
@@ -7207,9 +7227,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     return nieuw;
                   });
                 }
+                const yKritiekeTypes = ["ring", "magneet", "hart", "bom", "mijn"];
                 setEditorObstakels((arr) => [
                   ...arr,
-                  { type: tool.id, x: wereldX, y: tool.id === "ring" ? wereldY : undefined },
+                  { type: tool.id, x: wereldX, y: yKritiekeTypes.includes(tool.id) ? wereldY : undefined },
                 ]);
                 setEditorOpslaan({ bezig: false, error: null, ok: false });
               };
@@ -7404,8 +7425,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       const x = (o.x / editorBreedte) * 100;
                       let topPercent;
                       if (o.type === "plafondstekel") topPercent = 8;
-                      else if (o.type === "ring") topPercent = ((o.y || 110) / TRACK_HOOGTE) * 100;
-                      else topPercent = 78; // grond-niveau
+                      else if (o.type === "platform") topPercent = 50;
+                      else if (o.type === "ring" || o.type === "magneet" || o.type === "hart" || o.type === "bom" || o.type === "mijn") {
+                        topPercent = ((o.y || 110) / TRACK_HOOGTE) * 100;
+                      } else topPercent = 78; // grond-niveau (spike/blok/schans)
                       return (
                         <div
                           key={i}
