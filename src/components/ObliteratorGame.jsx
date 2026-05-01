@@ -142,8 +142,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   });
   // Settings-panel zichtbaar (uit/aan toggle in menu)
   const [settingsOpen, setSettingsOpen] = useState(false);
+  // Skin-systeem (default cube + andere skins zoals "blackhole" die je
+  // ontgrendelt door Oblivion Pulse uit te spelen).
+  const [unlockedSkins, setUnlockedSkins] = useState(() => {
+    try {
+      const raw = localStorage.getItem("obliterator-unlocked-skins");
+      const arr = raw ? JSON.parse(raw) : ["default"];
+      return Array.isArray(arr) ? arr : ["default"];
+    } catch { return ["default"]; }
+  });
+  const [selectedSkin, setSelectedSkin] = useState(() => {
+    try { return localStorage.getItem("obliterator-selected-skin") || "default"; } catch { return "default"; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-unlocked-skins", JSON.stringify(unlockedSkins)); } catch {}
+  }, [unlockedSkins]);
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-selected-skin", selectedSkin); } catch {}
+  }, [selectedSkin]);
   // Ref naar de audio-master-gain zodat de useEffect-loop volume kan instellen
   const audioVolumeRef = useRef({ aan: true, volume: 0.7 });
+  // Ref naar selected skin zodat de game-loop hem kan lezen zonder remount
+  const skinRef = useRef(selectedSkin);
+  useEffect(() => { skinRef.current = selectedSkin; }, [selectedSkin]);
   useEffect(() => {
     audioVolumeRef.current = { aan: geluidAan, volume };
     try { localStorage.setItem("obliterator-geluid-aan", geluidAan ? "1" : "0"); } catch {}
@@ -1289,7 +1310,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.shadowBlur = vliegFrames > 0 ? 35 : 25;
       ctx.shadowColor = vliegFrames > 0 ? "#ffcc40" : "#ff2030";
 
-      if (logoGeladen) {
+      if (skinRef.current === "blackhole") {
+        // BLACK HOLE skin: donkere bol + roterende oranje accretion-ring
+        ctx.shadowBlur = 28;
+        ctx.shadowColor = "#a040ff";
+        // accretion-disc ring (oranje-paars) — staat onder de bol getekend
+        const ringSpin = frameTeller * 0.08;
+        ctx.save();
+        ctx.rotate(ringSpin);
+        const discGrad = ctx.createRadialGradient(0, 0, r * 0.7, 0, 0, r * 1.5);
+        discGrad.addColorStop(0, "rgba(255, 200, 80, 0)");
+        discGrad.addColorStop(0.5, "rgba(255, 130, 40, 0.85)");
+        discGrad.addColorStop(0.85, "rgba(180, 60, 220, 0.75)");
+        discGrad.addColorStop(1, "rgba(80, 0, 140, 0)");
+        ctx.fillStyle = discGrad;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, r * 1.5, r * 0.55, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+        // event-horizon: pure zwarte bol
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#000";
+        const bhGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, r);
+        bhGrad.addColorStop(0, "#000");
+        bhGrad.addColorStop(0.85, "#0a0010");
+        bhGrad.addColorStop(1, "#1a0030");
+        ctx.fillStyle = bhGrad;
+        ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill();
+        // licht-gebogen randje (gravitational lensing-effect)
+        ctx.shadowBlur = 0;
+        ctx.strokeStyle = "rgba(200, 100, 255, 0.7)";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(0, 0, r - 0.5, 0, Math.PI * 2); ctx.stroke();
+      } else if (logoGeladen) {
         // Studiebol-logo als speler — image binnen cirkel-clip + witte rand
         ctx.save();
         ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.clip();
@@ -2429,71 +2482,103 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const grasH = 6 * SCHAAL;
       ctx.save();
       // ─── Pilaar-body: rode gefaceteerde rotsen ───
-      ctx.shadowBlur = 14;
+      // Driedimensionale-look via diagonale facet-stripes met sterke
+      // licht/donker-contrast en horizontale top-naar-onder donker-fade.
+      ctx.shadowBlur = 16;
       ctx.shadowColor = "#ff3060";
-      const grad = ctx.createLinearGradient(p.x, p.y, p.x + p.breedte, p.y);
-      grad.addColorStop(0, "#3a0810");
-      grad.addColorStop(0.5, "#9a1a30");
-      grad.addColorStop(1, "#3a0810");
-      ctx.fillStyle = grad;
+      // base-fill: verticale gradient (top licht, bodem donker) voor diepte
+      const baseGrad = ctx.createLinearGradient(p.x, p.y + grasH, p.x, p.y + pilaarH);
+      baseGrad.addColorStop(0, "#a02038");
+      baseGrad.addColorStop(0.4, "#7a1828");
+      baseGrad.addColorStop(1, "#1a0408");
+      ctx.fillStyle = baseGrad;
       ctx.fillRect(p.x, p.y + grasH, p.breedte, pilaarH - grasH);
-      // Faceted rock-driehoekjes — afwisselend lichter en donkerder voor 3D-feel
+      // Linker-zijde licht, rechter-zijde donker — geeft cylindrische depth
+      const sideShade = ctx.createLinearGradient(p.x, p.y, p.x + p.breedte, p.y);
+      sideShade.addColorStop(0, "rgba(255, 120, 140, 0.18)");
+      sideShade.addColorStop(0.5, "rgba(255, 80, 110, 0.04)");
+      sideShade.addColorStop(1, "rgba(0, 0, 0, 0.35)");
+      ctx.fillStyle = sideShade;
+      ctx.fillRect(p.x, p.y + grasH, p.breedte, pilaarH - grasH);
+
+      // Diepe rotspatronen: scherpe diagonale facetten als chiseled stenen
       ctx.shadowBlur = 0;
-      const facetB = 14 * SCHAAL;
-      const facetH = 10 * SCHAAL;
-      for (let row = 0; row < 6; row++) {
-        const ry = p.y + grasH + 4 + row * (facetH + 2);
+      const facetW = 22 * SCHAAL;
+      const facetH = 16 * SCHAAL;
+      const stenen = []; // verzamel posities zodat we eerst body, dan rand kunnen tekenen
+      for (let row = 0; row < 8; row++) {
+        const ry = p.y + grasH + 4 + row * (facetH * 0.6);
         if (ry > pilaarBot - 4) break;
-        const rowOff = (row % 2) * (facetB / 2);
-        for (let dx = -facetB; dx < p.breedte + facetB; dx += facetB) {
-          const fx = p.x + dx + rowOff;
-          // licht facet (highlight-zijde)
-          ctx.fillStyle = row % 2 === 0 ? "rgba(255, 90, 120, 0.30)" : "rgba(180, 40, 80, 0.25)";
-          ctx.beginPath();
-          ctx.moveTo(fx, ry);
-          ctx.lineTo(fx + facetB / 2, ry + facetH);
-          ctx.lineTo(fx + facetB, ry);
-          ctx.closePath();
-          ctx.fill();
-          // donker facet (schaduw-zijde)
-          ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
-          ctx.beginPath();
-          ctx.moveTo(fx + facetB / 2, ry + facetH);
-          ctx.lineTo(fx + facetB, ry);
-          ctx.lineTo(fx + facetB + facetB / 2, ry + facetH);
-          ctx.closePath();
-          ctx.fill();
+        const rowOff = (row % 2) * (facetW / 2);
+        for (let dx = -facetW; dx < p.breedte + facetW; dx += facetW) {
+          stenen.push({ x: p.x + dx + rowOff, y: ry, row });
         }
       }
+      // Steen-lichaam: lichte top, donkere bodem (3D shading per steen)
+      for (const s of stenen) {
+        // light-side van steen (boven-links → bovenkant van trapezium)
+        ctx.fillStyle = s.row % 2 === 0 ? "rgba(255, 110, 140, 0.55)" : "rgba(220, 70, 100, 0.50)";
+        ctx.beginPath();
+        ctx.moveTo(s.x + 2, s.y);
+        ctx.lineTo(s.x + facetW * 0.5, s.y + facetH * 0.4);
+        ctx.lineTo(s.x + facetW - 2, s.y);
+        ctx.lineTo(s.x + facetW * 0.85, s.y - 2);
+        ctx.lineTo(s.x + facetW * 0.15, s.y - 2);
+        ctx.closePath();
+        ctx.fill();
+        // dark-side van steen (onder-rechts schaduw)
+        ctx.fillStyle = "rgba(0, 0, 0, 0.55)";
+        ctx.beginPath();
+        ctx.moveTo(s.x + facetW * 0.5, s.y + facetH * 0.4);
+        ctx.lineTo(s.x + facetW - 2, s.y);
+        ctx.lineTo(s.x + facetW + 2, s.y + facetH * 0.6);
+        ctx.lineTo(s.x + facetW * 0.5, s.y + facetH * 0.85);
+        ctx.closePath();
+        ctx.fill();
+        // donkere crevice-lijn onder elke steen
+        ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
+        ctx.fillRect(s.x, s.y + facetH * 0.55, facetW, 1.5);
+      }
+
+      // top-edge: bright pink neon strepen voor 3D-feel (trekken aandacht)
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#ff80a0";
+      ctx.fillStyle = "rgba(255, 130, 170, 0.9)";
+      ctx.fillRect(p.x, p.y + grasH, p.breedte, 2 * SCHAAL);
       // links/rechts neon outline
       ctx.shadowBlur = 12;
       ctx.shadowColor = "#ff3060";
       ctx.strokeStyle = "#ff5080";
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 1.6;
       ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, pilaarH - 1);
 
       // ─── Groene gras-top met blade-silhouetten ───
       ctx.shadowBlur = 14;
       ctx.shadowColor = "#a0f060";
       const grasGrad = ctx.createLinearGradient(p.x, p.y, p.x, p.y + grasH);
-      grasGrad.addColorStop(0, "#a0f060");
-      grasGrad.addColorStop(1, "#4a8020");
+      grasGrad.addColorStop(0, "#b0ff70");
+      grasGrad.addColorStop(0.6, "#60a030");
+      grasGrad.addColorStop(1, "#2a5010");
       ctx.fillStyle = grasGrad;
       ctx.fillRect(p.x, p.y, p.breedte, grasH);
-      // grasspriet-driehoekjes bovenop (zigzag-rand)
+      // top-highlight stripje (cyaan-wit, hint van zon)
       ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(255, 255, 220, 0.65)";
+      ctx.fillRect(p.x + 2, p.y + 1, p.breedte - 4, 1);
+      // grasspriet-driehoekjes bovenop (zigzag-rand)
       ctx.fillStyle = "#c0ff70";
-      const sprietB = 9 * SCHAAL;
+      const sprietB = 8 * SCHAAL;
       for (let dx = 0; dx < p.breedte; dx += sprietB) {
+        const h = 4 * SCHAAL + ((Math.floor((p.x + dx) * 0.13)) % 3) * SCHAAL;
         ctx.beginPath();
         ctx.moveTo(p.x + dx, p.y);
-        ctx.lineTo(p.x + dx + sprietB / 2, p.y - 5 * SCHAAL);
+        ctx.lineTo(p.x + dx + sprietB / 2, p.y - h);
         ctx.lineTo(p.x + dx + sprietB, p.y);
         ctx.closePath();
         ctx.fill();
       }
       // dunne donkere lijn onder gras (scheiding gras/rots)
-      ctx.fillStyle = "rgba(0, 30, 0, 0.5)";
+      ctx.fillStyle = "rgba(0, 30, 0, 0.6)";
       ctx.fillRect(p.x, p.y + grasH - 1, p.breedte, 1);
       ctx.restore();
     }
@@ -5810,12 +5895,92 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       style={{ width: "100%", accentColor: "#69f0ae" }}
                     />
                   </div>
-                  <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 10, marginTop: 8, marginBottom: 0, textAlign: "center" }}>
-                    Skins + taal (NL/EN) volgen later
+                  {/* Skin-selector */}
+                  <div style={{ marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,0.10)" }}>
+                    <div style={{ color: "#fff", fontSize: 13, marginBottom: 6 }}>👕 Skin</div>
+                    <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                      {[
+                        { id: "default", label: "Studiebol", emoji: "🔴" },
+                        { id: "blackhole", label: "Black Hole", emoji: "🕳️" },
+                      ].map((s) => {
+                        const ontgrendeld = unlockedSkins.includes(s.id);
+                        const isActive = selectedSkin === s.id;
+                        return (
+                          <button
+                            key={s.id}
+                            onClick={() => ontgrendeld && setSelectedSkin(s.id)}
+                            disabled={!ontgrendeld}
+                            style={{
+                              padding: "8px 12px", borderRadius: 10,
+                              border: isActive ? "2px solid #69f0ae" : "1px solid rgba(255,255,255,0.15)",
+                              background: isActive ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)",
+                              color: ontgrendeld ? "#fff" : "rgba(255,255,255,0.4)",
+                              fontFamily: "'Fredoka', sans-serif", fontSize: 12,
+                              cursor: ontgrendeld ? "pointer" : "not-allowed",
+                              minWidth: 90,
+                            }}
+                          >
+                            <div style={{ fontSize: 20, marginBottom: 2 }}>{s.emoji}</div>
+                            <div>{s.label}</div>
+                            {!ontgrendeld && <div style={{ fontSize: 9, opacity: 0.7, marginTop: 2 }}>🔒 LOCKED</div>}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {!unlockedSkins.includes("blackhole") && (
+                      <p style={{ color: "rgba(255,255,255,0.45)", fontSize: 10, marginTop: 6, marginBottom: 0 }}>
+                        💡 Black Hole skin ontgrendel je via <strong>Oblivion Pulse</strong> (volgt binnenkort)
+                      </p>
+                    )}
+                  </div>
+                  <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 10, marginTop: 10, marginBottom: 0, textAlign: "center" }}>
+                    Taal (NL/EN) volgt later
                   </p>
                 </div>
               )}
             </div>
+
+            {/* Admin-paneel — alleen zichtbaar voor de huidige #1 wereld-record-houder */}
+            {(() => {
+              const top1 = highscores[0];
+              const myName = (userName || "").trim().toLowerCase();
+              const top1Name = (top1?.naam || "").trim().toLowerCase();
+              const isAdmin = top1 && top1.score > 0 && myName.length > 0 && myName === top1Name;
+              if (!isAdmin) return null;
+              return (
+                <div style={{
+                  marginBottom: 14, padding: "12px 14px", borderRadius: 10,
+                  background: "linear-gradient(135deg, rgba(180,60,220,0.20), rgba(80,20,120,0.15))",
+                  border: "1px solid rgba(180,60,220,0.5)",
+                  boxShadow: "0 0 18px rgba(180,60,220,0.3)",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                    <span style={{ fontSize: 22 }}>👑</span>
+                    <div>
+                      <div style={{ color: "#e0a0ff", fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 13 }}>
+                        ADMIN PANEEL
+                      </div>
+                      <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 11 }}>
+                        Jij bent #1 ({top1.score} punten)
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    disabled
+                    style={{
+                      width: "100%", padding: "10px 14px", borderRadius: 10,
+                      background: "rgba(180,60,220,0.10)",
+                      border: "1px dashed rgba(180,60,220,0.4)",
+                      color: "rgba(220,180,255,0.6)",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13,
+                      cursor: "not-allowed",
+                    }}
+                  >
+                    🌌 Activeer Oblivion Pulse · binnenkort
+                  </button>
+                </div>
+              );
+            })()}
 
             {/* Level-keuze — voor iedereen die iets heeft bereikt boven L1. Records per level alleen voor ingelogd. */}
             {maxKiesbaar > 1 && (
