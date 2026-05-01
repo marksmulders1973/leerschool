@@ -2634,26 +2634,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }
             bonusRingSpawnTeller = 22 + Math.floor(Math.random() * 14);
           }
-          // bonus-ringen bewegen + speler-aanraking telt ook als raak
+          // bonus-ringen bewegen + speler-aanraking telt ook als raak.
+          // Rect-circle collision met volle speler-bounding-box (geen krimp)
+          // en sweep over prev/mid/curr ring-x, zodat snelle ringen niet
+          // doortunnelen en hoeken van speler óók tellen.
           {
-            const sb = spelerBots();
-            const sCx = sb.x + sb.breedte / 2;
-            const sCy = sb.y + sb.hoogte / 2;
-            const sR = Math.min(sb.breedte, sb.hoogte) / 2;
+            const spX = speler.x;
+            const spY = speler.y;
+            const spRight = spX + speler.breedte;
+            const spBottom = spY + speler.hoogte;
             for (let i = bonusRingen.length - 1; i >= 0; i--) {
               const r = bonusRingen[i];
+              const prevX = r.x;
               r.x += r.vx;
               r.fase += 0.18;
               if (!r.opgepakt) {
-                const ringR = r.grootte * 0.85;
-                const dx = r.x - sCx;
-                const dy = r.y - sCy;
-                if (Math.sqrt(dx * dx + dy * dy) < ringR + sR) {
+                const ringR = r.grootte * 1.0; // royaal: visuele radius is 0.5
+                const ringR2 = ringR * ringR;
+                let hit = false;
+                const testXs = [prevX, (prevX + r.x) * 0.5, r.x];
+                for (let t = 0; t < 3; t++) {
+                  const tx = testXs[t];
+                  const cx = tx < spX ? spX : tx > spRight ? spRight : tx;
+                  const cy = r.y < spY ? spY : r.y > spBottom ? spBottom : r.y;
+                  const ddx = tx - cx;
+                  const ddy = r.y - cy;
+                  if (ddx * ddx + ddy * ddy < ringR2) { hit = true; break; }
+                }
+                if (hit) {
                   r.opgepakt = true;
                   bonusScore += 5;
                   score += 5;
-                  spawnParticles(r.x, r.y, 14, "#ffd700", { spread: 6, opwaarts: 1.5, leven: 26, grootte: 4, glow: 18 });
-                  spawnParticles(r.x, r.y, 8, "#ffffff", { spread: 4, opwaarts: 1, leven: 20, grootte: 3, glow: 14 });
+                  spawnParticles(r.x, r.y, 18, "#ffd700", { spread: 7, opwaarts: 1.5, leven: 30, grootte: 5, glow: 22 });
+                  spawnParticles(r.x, r.y, 10, "#ffffff", { spread: 5, opwaarts: 1.2, leven: 22, grootte: 3, glow: 16 });
                   piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
                 }
               }
