@@ -84,6 +84,15 @@ async function flushPendingScores() {
 const SESSIE_KEY_PREFIX = "obliterator-sessies-";
 const BONUS_KEY_PREFIX = "obliterator-bonus-";
 
+// Moeilijkheid-emoji op basis van level (gebruikt in canvas + level-keuze-knoppen).
+function moeilijkheidEmoji(lvl) {
+  if (lvl <= 5) return "😊";
+  if (lvl <= 15) return "🙂";
+  if (lvl <= 30) return "😬";
+  if (lvl <= 50) return "🔥";
+  if (lvl <= 75) return "💀";
+  return "👹";
+}
 function leesInt(key) {
   try { return parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch { return 0; }
 }
@@ -120,6 +129,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // share
   const [linkGekopieerd, setLinkGekopieerd] = useState(false);
   const [shareToast, setShareToast] = useState(null);
+
+  // Audio-instellingen (persist in localStorage)
+  const [geluidAan, setGeluidAan] = useState(() => {
+    try { return localStorage.getItem("obliterator-geluid-aan") !== "0"; } catch { return true; }
+  });
+  const [volume, setVolume] = useState(() => {
+    try {
+      const v = parseFloat(localStorage.getItem("obliterator-volume") || "");
+      return isNaN(v) ? 0.7 : Math.max(0, Math.min(1, v));
+    } catch { return 0.7; }
+  });
+  // Settings-panel zichtbaar (uit/aan toggle in menu)
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  // Ref naar de audio-master-gain zodat de useEffect-loop volume kan instellen
+  const audioVolumeRef = useRef({ aan: true, volume: 0.7 });
+  useEffect(() => {
+    audioVolumeRef.current = { aan: geluidAan, volume };
+    try { localStorage.setItem("obliterator-geluid-aan", geluidAan ? "1" : "0"); } catch {}
+    try { localStorage.setItem("obliterator-volume", String(volume)); } catch {}
+  }, [geluidAan, volume]);
 
   // Levels-state (records per level voor deze speler) — alleen ingelogd
   const [levelRecords, setLevelRecords] = useState({}); // { level: record_score }
@@ -668,6 +697,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // ---------- AUDIO ----------
     let audioCtx = null;
     let masterFilter = null; // lowpass-filter op alle output (haalt hoge harmonics weg)
+    let masterVolume = null; // master-gain die volume-slider + mute-toggle uitvoert
     function aud() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -675,7 +705,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         masterFilter.type = "lowpass";
         masterFilter.frequency.setValueAtTime(2800, audioCtx.currentTime); // cutoff ~2.8 kHz
         masterFilter.Q.setValueAtTime(0.7, audioCtx.currentTime);
-        masterFilter.connect(audioCtx.destination);
+        masterVolume = audioCtx.createGain();
+        const v0 = audioVolumeRef.current || { aan: true, volume: 0.7 };
+        masterVolume.gain.value = v0.aan ? v0.volume : 0;
+        masterFilter.connect(masterVolume);
+        masterVolume.connect(audioCtx.destination);
       }
       return audioCtx;
     }
@@ -786,7 +820,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (muziek.draait) return;
       try {
         const a = aud(); if (a.state === "suspended") a.resume();
-        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.4; muziek.masterGain.connect(a.destination); }
+        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.4; muziek.masterGain.connect(masterVolume || a.destination); }
         muziek.draait = true; muziek.beat = 0; muziek.startTijd = a.currentTime + 0.1;
         plan();
       } catch {}
@@ -3000,6 +3034,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
       if (afgeremFrames > 0) afgeremFrames--;
       if (hpFlashTeller > 0) hpFlashTeller--;
+      // Live audio-instellingen toepassen (mute/volume vanuit settings-panel)
+      if (masterVolume && audioVolumeRef.current) {
+        const v = audioVolumeRef.current;
+        const target = v.aan ? v.volume : 0;
+        if (Math.abs(masterVolume.gain.value - target) > 0.001) {
+          masterVolume.gain.value = target;
+        }
+      }
       if (bonusEindFlash > 0) bonusEindFlash--;
 
       // ── PERISCOOP: spawn + animatie + collision ──
@@ -3193,37 +3235,70 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
-      // ── BLIKSEM-FLITS update (vanaf L50, frequentie schaalt naar L100) ──
+      // ── BLIKSEM-FLITS update (vanaf L50, frequentie + intensiteit schaalt naar L100) ──
       if (bliksemFlash > 0) bliksemFlash--;
       if (huidigLevel >= 50 && !bonusFase && !bossActief) {
         bliksemTimer--;
         if (bliksemTimer <= 0) {
-          // intervallen: L50 = ~1800f (30s) gemiddeld, L100 = ~300f (5s)
-          // flits-duur loopt ook iets op naar hogere levels
-          bliksemFlash = 5 + Math.min(8, Math.floor((huidigLevel - 50) / 8));
-          // genereer zigzag-pad (verticaal van boven naar onder, met willekeurige
-          // takken zijwaarts)
+          // intervallen: L50 = ~900f (15s) gemiddeld, L100 = ~120f (2s)
+          // flash-duur: 8-22 frames (was 5-13)
+          bliksemFlash = 8 + Math.min(14, Math.floor((huidigLevel - 50) / 4));
+          // genereer zigzag-pad met meerdere takken
           const path = [];
           let x = 60 + Math.random() * (W - 120);
           let y = 0;
           path.push({ x, y });
           while (y < H) {
-            y += 18 + Math.random() * 24;
-            x += (Math.random() - 0.5) * 80;
+            y += 14 + Math.random() * 22;
+            x += (Math.random() - 0.5) * 90;
             path.push({ x, y });
           }
           bliksemBoltPath = path;
-          shakeKracht = Math.max(shakeKracht, 6 + (huidigLevel - 50) * 0.08);
-          // donder-piep: lage rumble + late "krak"
-          piep(70, 0.45, "triangle", 0.16);
-          setTimeout(() => piep(110, 0.30, "triangle", 0.10), 80);
-          setTimeout(() => piep(45, 0.55, "sine", 0.14), 180);
-          // reset timer met scaling
-          const basis = Math.max(300, 1800 - (huidigLevel - 50) * 30);
+          shakeKracht = Math.max(shakeKracht, 9 + (huidigLevel - 50) * 0.12);
+          // donder-stack: meer lagen, luider
+          piep(55, 0.65, "triangle", 0.22);
+          setTimeout(() => piep(95, 0.45, "triangle", 0.16), 80);
+          setTimeout(() => piep(40, 0.85, "sine", 0.20), 180);
+          setTimeout(() => piep(75, 0.50, "triangle", 0.14), 320);
+          setTimeout(() => piep(38, 0.45, "sine", 0.13), 480);
+          // vuur-burst op random plek op de grond — visuele klap
+          const fireX = 60 + Math.random() * (W - 120);
+          const fireY = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
+          spawnParticles(fireX, fireY, 22, "#ffaa30", { spread: 9, opwaarts: 5, leven: 50, grootte: 6, zwaartekracht: 0.10, glow: 22 });
+          spawnParticles(fireX, fireY, 14, "#ff5020", { spread: 7, opwaarts: 4, leven: 42, grootte: 5, zwaartekracht: 0.08, glow: 20 });
+          spawnParticles(fireX, fireY, 8, "#fff080", { spread: 5, opwaarts: 3.5, leven: 30, grootte: 4, zwaartekracht: 0.06, glow: 18 });
+          // 40% kans op een double-flash 6-12 frames later
+          if (Math.random() < 0.40) {
+            setTimeout(() => {
+              bliksemFlash = Math.max(bliksemFlash, 8);
+              const path2 = [];
+              let x2 = 60 + Math.random() * (W - 120);
+              let y2 = 0;
+              path2.push({ x: x2, y: y2 });
+              while (y2 < H) {
+                y2 += 14 + Math.random() * 22;
+                x2 += (Math.random() - 0.5) * 90;
+                path2.push({ x: x2, y: y2 });
+              }
+              bliksemBoltPath = path2;
+              shakeKracht = Math.max(shakeKracht, 7);
+              piep(68, 0.50, "triangle", 0.18);
+            }, (6 + Math.random() * 6) * 16);
+          }
+          // reset timer met scaling — nu 2x zo vaak als voorheen
+          const basis = Math.max(120, 900 - (huidigLevel - 50) * 16);
           bliksemTimer = Math.floor(basis * (0.5 + Math.random()));
         }
+        // Periodieke vuur-eruptie tussen flashes door (alleen L50+)
+        // Grond-vuurspuwers — frequentie schaalt met level
+        if (frameTeller % Math.max(20, 90 - (huidigLevel - 50) * 1.2) === 0) {
+          const fx = 40 + Math.random() * (W - 80);
+          const fy = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
+          spawnParticles(fx, fy, 6, "#ffaa30", { spread: 4, opwaarts: 3, leven: 32, grootte: 4, zwaartekracht: 0.10, glow: 16 });
+          spawnParticles(fx, fy, 3, "#ff5020", { spread: 3, opwaarts: 2.5, leven: 26, grootte: 3, zwaartekracht: 0.08, glow: 14 });
+        }
       } else {
-        bliksemTimer = 1200; // reset zodat lager-level geen achterstallige flash uitspuwt
+        bliksemTimer = 800; // reset zodat lager-level geen achterstallige flash uitspuwt
       }
       // gravity: inverteren tijdens FLIP
       speler.snelheidY += flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT;
@@ -4492,7 +4567,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.font = `bold ${17 * SCHAAL}px Impact, Arial Black, sans-serif`;
       ctx.textAlign = "center"; ctx.textBaseline = "top";
       ctx.fillText(
-        `LEVEL ${huidigLevel}${huidigLevel >= MAX_LEVEL ? " (MAX)" : ""}${isBossNext ? " — BOSS NEXT!" : ""}`,
+        `${moeilijkheidEmoji(huidigLevel)} LEVEL ${huidigLevel}${huidigLevel >= MAX_LEVEL ? " (MAX)" : ""}${isBossNext ? " — BOSS NEXT!" : ""}`,
         balkX + balkW / 2,
         balkY + balkH + 4,
       );
@@ -5677,6 +5752,71 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
+            {/* Settings-panel — uitklapbaar */}
+            <div style={{ marginBottom: 14 }}>
+              <button
+                onClick={() => setSettingsOpen((o) => !o)}
+                style={{
+                  width: "100%",
+                  display: "flex", alignItems: "center", justifyContent: "space-between",
+                  padding: "10px 14px",
+                  background: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  borderRadius: 10,
+                  color: "#fff",
+                  fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 14, fontWeight: 700,
+                  cursor: "pointer",
+                }}
+              >
+                <span>⚙️ Instellingen</span>
+                <span style={{ fontSize: 16, transform: settingsOpen ? "rotate(90deg)" : "none", transition: "transform 0.2s" }}>›</span>
+              </button>
+              {settingsOpen && (
+                <div style={{
+                  marginTop: 8, padding: "12px 14px", borderRadius: 10,
+                  background: "rgba(255,255,255,0.04)",
+                  border: "1px solid rgba(255,255,255,0.10)",
+                }}>
+                  {/* Geluid aan/uit */}
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+                    <span style={{ color: "#fff", fontSize: 13 }}>{geluidAan ? "🔊" : "🔇"} Muziek + geluid</span>
+                    <button
+                      onClick={() => setGeluidAan((v) => !v)}
+                      style={{
+                        padding: "5px 14px", borderRadius: 999,
+                        border: "none",
+                        background: geluidAan ? "linear-gradient(135deg, #00c853, #69f0ae)" : "rgba(255,255,255,0.10)",
+                        color: geluidAan ? "#0d1b2e" : "rgba(255,255,255,0.7)",
+                        fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
+                        cursor: "pointer",
+                      }}
+                    >
+                      {geluidAan ? "AAN" : "UIT"}
+                    </button>
+                  </div>
+                  {/* Volume slider */}
+                  <div style={{ opacity: geluidAan ? 1 : 0.4 }}>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+                      <span style={{ color: "#fff", fontSize: 13 }}>🎚️ Volume</span>
+                      <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>{Math.round(volume * 100)}%</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="0" max="100" step="1"
+                      value={Math.round(volume * 100)}
+                      onChange={(e) => setVolume(parseInt(e.target.value, 10) / 100)}
+                      disabled={!geluidAan}
+                      style={{ width: "100%", accentColor: "#69f0ae" }}
+                    />
+                  </div>
+                  <p style={{ color: "rgba(255,255,255,0.4)", fontSize: 10, marginTop: 8, marginBottom: 0, textAlign: "center" }}>
+                    Skins + taal (NL/EN) volgen later
+                  </p>
+                </div>
+              )}
+            </div>
+
             {/* Level-keuze — voor iedereen die iets heeft bereikt boven L1. Records per level alleen voor ingelogd. */}
             {maxKiesbaar > 1 && (
               <div style={{ marginBottom: 14, padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.08)", border: "1px solid rgba(105,240,174,0.3)" }}>
@@ -5704,7 +5844,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         fontFamily: "Impact, 'Arial Black', sans-serif", fontSize: 12, letterSpacing: 0.5,
                         fontWeight: 700, cursor: "pointer", minWidth: 32,
                       }}>
-                        L{lvl}{isBossLvl ? "👹" : ""}{rec ? <span style={{ display: "block", fontSize: 8, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
+                        {moeilijkheidEmoji(lvl)} L{lvl}{isBossLvl ? " ⚔️" : ""}{rec ? <span style={{ display: "block", fontSize: 8, fontWeight: 600, opacity: 0.85 }}>{rec}</span> : null}
                       </button>
                     );
                   })}
