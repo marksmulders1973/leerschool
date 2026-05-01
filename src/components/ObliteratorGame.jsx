@@ -281,7 +281,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const muntenMultiplierRef = useRef(1);
   const [bonusEventEinde, setBonusEventEinde] = useState(null); // ms-timestamp of null
   const [bonusTik, setBonusTik] = useState(0); // dwingt re-render voor countdown
-  // Initiële fetch: is er nu een actief event?
+  // 🌈 Rainbow-event (admin) — 2 min lang heeft elke gespawnde ring 10% kans
+  // op rainbow-vorm = 5 munten per stuk (× actieve multipliers).
+  const rainbowActiefRef = useRef(false);
+  const [rainbowEventEinde, setRainbowEventEinde] = useState(null);
+  // Initiële fetch: is er nu een actief event (2×-munten of rainbow)?
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -289,21 +293,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const { data } = await supabase
           .from("obliterator_bonus_events")
           .select("event_type, expires_at")
-          .eq("event_type", "munten_2x")
+          .in("event_type", ["munten_2x", "rainbow"])
           .gt("expires_at", new Date().toISOString())
-          .order("expires_at", { ascending: false })
-          .limit(1);
-        if (cancelled || !data || !data[0]) return;
-        const t = new Date(data[0].expires_at).getTime();
-        if (t > Date.now()) {
-          muntenMultiplierRef.current = 2;
-          setBonusEventEinde(t);
+          .order("expires_at", { ascending: false });
+        if (cancelled || !data) return;
+        const muntenEv = data.find((e) => e.event_type === "munten_2x");
+        if (muntenEv) {
+          const t = new Date(muntenEv.expires_at).getTime();
+          if (t > Date.now()) {
+            muntenMultiplierRef.current = 2;
+            setBonusEventEinde(t);
+          }
+        }
+        const rainbowEv = data.find((e) => e.event_type === "rainbow");
+        if (rainbowEv) {
+          const t = new Date(rainbowEv.expires_at).getTime();
+          if (t > Date.now()) {
+            rainbowActiefRef.current = true;
+            setRainbowEventEinde(t);
+          }
         }
       } catch {}
     })();
     return () => { cancelled = true; };
   }, []);
-  // Realtime: live picken op nieuwe bonus-events
+  // Realtime: live picken op nieuwe bonus-events (munten-2x én rainbow)
   useEffect(() => {
     const channel = supabase
       .channel(`bonus-events-${Math.random().toString(36).slice(2, 8)}`)
@@ -312,11 +326,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         { event: "INSERT", schema: "public", table: "obliterator_bonus_events" },
         (payload) => {
           const ev = payload?.new;
-          if (!ev || ev.event_type !== "munten_2x") return;
+          if (!ev) return;
           const t = new Date(ev.expires_at).getTime();
-          if (t > Date.now()) {
+          if (!(t > Date.now())) return;
+          if (ev.event_type === "munten_2x") {
             muntenMultiplierRef.current = 2;
             setBonusEventEinde(t);
+          } else if (ev.event_type === "rainbow") {
+            rainbowActiefRef.current = true;
+            setRainbowEventEinde(t);
           }
         }
       )
@@ -326,15 +344,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Per-seconde tik om expiry te checken + countdown te updaten
   useEffect(() => {
     const id = setInterval(() => {
+      let tikje = false;
       if (bonusEventEinde && Date.now() >= bonusEventEinde) {
         muntenMultiplierRef.current = 1;
         setBonusEventEinde(null);
-      } else if (bonusEventEinde) {
-        setBonusTik((n) => n + 1);
-      }
+      } else if (bonusEventEinde) tikje = true;
+      if (rainbowEventEinde && Date.now() >= rainbowEventEinde) {
+        rainbowActiefRef.current = false;
+        setRainbowEventEinde(null);
+      } else if (rainbowEventEinde) tikje = true;
+      if (tikje) setBonusTik((n) => n + 1);
     }, 1000);
     return () => clearInterval(id);
-  }, [bonusEventEinde]);
+  }, [bonusEventEinde, rainbowEventEinde]);
 
   // Realtime: subscribe op oblivion_events zodat een admin-knop wereldwijd
   // bij iedereen die op dat moment speelt de cutscene triggert.
@@ -4978,11 +5000,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const boog = (Math.random() - 0.5) * 0.6; // -0.3 .. 0.3
           for (let i = 0; i < aantal; i++) {
             const yOff = boog * (i - (aantal - 1) / 2) * 30 * SCHAAL;
-            ringen.push({ x: W + 40 + i * tussenruimte, y: yBase + yOff, fase: i * 0.4, opgepakt: false, grootte: 24 * SCHAAL });
+            const rainbow = rainbowActiefRef.current && Math.random() < 0.10;
+            ringen.push({ x: W + 40 + i * tussenruimte, y: yBase + yOff, fase: i * 0.4, opgepakt: false, grootte: 24 * SCHAAL, rainbow });
           }
           ringSpawnTeller = 100 + Math.floor(Math.random() * 60);
         } else {
-          ringen.push({ x: W + 40, y: yBase, fase: 0, opgepakt: false, grootte: 24 * SCHAAL });
+          const rainbow = rainbowActiefRef.current && Math.random() < 0.10;
+          ringen.push({ x: W + 40, y: yBase, fase: 0, opgepakt: false, grootte: 24 * SCHAAL, rainbow });
           ringSpawnTeller = 70 + Math.floor(Math.random() * 50);
         }
       }
@@ -5009,10 +5033,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (!r.opgepakt && dist < (r.grootte + speler.breedte) / 2) {
           r.opgepakt = true;
           streak++;
-          // Munten: 1 ring = 1 munt (of 2 tijdens een 2×-event), persistent
-          // over sessies. Update via ref + persist op localStorage.
-          muntenRef.current += (muntenMultiplierRef.current || 1);
+          // Munten: 1 ring = 1 munt (× 2 tijdens 2×-event, × 5 als rainbow-ring)
+          const ringMunten = (r.rainbow ? 5 : 1) * (muntenMultiplierRef.current || 1);
+          muntenRef.current += ringMunten;
           try { schrijfInt(muntenKey, muntenRef.current); } catch {}
+          if (r.rainbow) {
+            // extra particle-burst voor rainbow
+            const rainbowKleuren = ["#ff5050", "#ffaa30", "#ffe040", "#69f0ae", "#40c0ff", "#a060ff"];
+            for (let k = 0; k < 6; k++) {
+              spawnParticles(r.x, r.y, 4, rainbowKleuren[k], { spread: 7, opwaarts: 3, leven: 40, grootte: 4, glow: 18 });
+            }
+          }
           const oudeMultiplier = multiplier;
           multiplier = Math.min(5, 1 + Math.floor(streak / 5));
           if (multiplier > oudeMultiplier) {
@@ -5749,12 +5780,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
-      // gouden ringen tekenen
+      // gouden ringen tekenen (rainbow-rings krijgen regenboog-stroke)
       for (const r of ringen) {
         const pulse = 0.85 + Math.sin(r.fase * 2) * 0.15;
         ctx.save();
         ctx.translate(r.x, r.y);
         ctx.scale(pulse, 1);
+        if (r.rainbow) {
+          // Rainbow ring — 6 kleur-segmenten + sterke glow
+          ctx.shadowBlur = 28;
+          ctx.shadowColor = "#ff80ff";
+          const kleuren = ["#ff5050", "#ffaa30", "#ffe040", "#69f0ae", "#40c0ff", "#a060ff"];
+          ctx.lineWidth = 5;
+          for (let k = 0; k < 6; k++) {
+            ctx.strokeStyle = kleuren[k];
+            ctx.beginPath();
+            ctx.arc(0, 0, r.grootte * 0.5, (k / 6) * Math.PI * 2 + r.fase, ((k + 1) / 6) * Math.PI * 2 + r.fase);
+            ctx.stroke();
+          }
+          ctx.restore();
+          continue; // skip rest van standaard rendering
+        }
         // Extra dikke glow tijdens dungeon-mode zodat ringen niet wegtinten
         // achter de blauwe water-overlay (Mark's klacht: 'ringen niet helder').
         if (dungeonMode) {
@@ -6746,7 +6792,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 border: "1px solid #ffd54f",
                 borderRadius: 10,
                 padding: "8px 12px",
-                marginBottom: 12,
+                marginBottom: 8,
                 color: "#ffd54f",
                 fontFamily: "'Fredoka', sans-serif",
                 fontSize: 13, fontWeight: 700,
@@ -6754,6 +6800,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 animation: "pulse 1.5s ease-in-out infinite",
               }}>
                 ✨ 2× MUNTEN EVENT actief — {Math.max(0, Math.ceil((bonusEventEinde - Date.now()) / 60000))} min over
+              </div>
+            )}
+            {rainbowEventEinde && Date.now() < rainbowEventEinde && (
+              <div style={{
+                background: "linear-gradient(90deg, rgba(255,80,80,0.25), rgba(255,170,48,0.25), rgba(255,224,64,0.25), rgba(105,240,174,0.25), rgba(64,192,255,0.25), rgba(160,96,255,0.25))",
+                border: "1px solid #ff80ff",
+                borderRadius: 10,
+                padding: "8px 12px",
+                marginBottom: 12,
+                color: "#fff",
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 13, fontWeight: 800,
+                textAlign: "center",
+                textShadow: "0 1px 4px rgba(0,0,0,0.6)",
+                animation: "pulse 1.5s ease-in-out infinite",
+              }}>
+                🌈 RAINBOW EVENT — {Math.max(0, Math.ceil((rainbowEventEinde - Date.now()) / 1000))}s · pak rainbow-ringen voor 5× munten
               </div>
             )}
             {/* Logout-waarschuwing */}
@@ -7066,6 +7129,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   </button>
                   <p style={{ color: "rgba(255,213,79,0.6)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
                     Wereldwijd — alle spelers krijgen 2 munten per ring tijdens dit event
+                  </p>
+                  {/* 🌈 RAINBOW-event */}
+                  <button
+                    onClick={async () => {
+                      const duurMin = 2;
+                      const expires = new Date(Date.now() + duurMin * 60 * 1000).toISOString();
+                      try {
+                        await supabase.from("obliterator_bonus_events").insert({
+                          event_type: "rainbow",
+                          triggered_by_name: (userName || "Admin").trim(),
+                          expires_at: expires,
+                        });
+                      } catch {}
+                      rainbowActiefRef.current = true;
+                      setRainbowEventEinde(Date.now() + duurMin * 60 * 1000);
+                    }}
+                    disabled={rainbowEventEinde && Date.now() < rainbowEventEinde}
+                    style={{
+                      width: "100%", marginTop: 8,
+                      padding: "10px 14px", borderRadius: 10,
+                      background: rainbowEventEinde && Date.now() < rainbowEventEinde
+                        ? "rgba(160,96,255,0.18)"
+                        : "linear-gradient(135deg, #ff5050, #ffaa30, #ffe040, #69f0ae, #40c0ff, #a060ff)",
+                      border: "none",
+                      color: rainbowEventEinde && Date.now() < rainbowEventEinde ? "rgba(255,255,255,0.7)" : "#1a0008",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 800,
+                      cursor: rainbowEventEinde && Date.now() < rainbowEventEinde ? "not-allowed" : "pointer",
+                      letterSpacing: 0.5,
+                      textShadow: rainbowEventEinde && Date.now() < rainbowEventEinde ? "none" : "0 1px 2px rgba(255,255,255,0.45)",
+                    }}
+                  >
+                    {rainbowEventEinde && Date.now() < rainbowEventEinde
+                      ? `🌈 RAINBOW actief (${Math.max(0, Math.ceil((rainbowEventEinde - Date.now()) / 1000))}s over)`
+                      : "🌈 Activeer Rainbow event (2 min)"}
+                  </button>
+                  <p style={{ color: "rgba(220,180,255,0.7)", fontSize: 10, marginTop: 4, marginBottom: 0, textAlign: "center" }}>
+                    10% kans per ring op rainbow-versie = 5× munten elk
                   </p>
                 </div>
               );
