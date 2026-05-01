@@ -341,6 +341,41 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       .subscribe();
     return () => { try { supabase.removeChannel(channel); } catch {} };
   }, []);
+  // Polling-fallback: elke 30s opnieuw checken of er een actief event is.
+  // Vangt het geval op dat de Realtime-websocket gedropt is (mobiel achter-
+  // grond, slechte wifi, sleep/wake) en de INSERT-broadcast gemist is.
+  useEffect(() => {
+    let cancelled = false;
+    const poll = async () => {
+      try {
+        const { data } = await supabase
+          .from("obliterator_bonus_events")
+          .select("event_type, expires_at")
+          .in("event_type", ["munten_2x", "rainbow"])
+          .gt("expires_at", new Date().toISOString())
+          .order("expires_at", { ascending: false });
+        if (cancelled || !data) return;
+        const muntenEv = data.find((e) => e.event_type === "munten_2x");
+        if (muntenEv) {
+          const t = new Date(muntenEv.expires_at).getTime();
+          if (t > Date.now() && muntenMultiplierRef.current !== 2) {
+            muntenMultiplierRef.current = 2;
+            setBonusEventEinde(t);
+          }
+        }
+        const rainbowEv = data.find((e) => e.event_type === "rainbow");
+        if (rainbowEv) {
+          const t = new Date(rainbowEv.expires_at).getTime();
+          if (t > Date.now() && !rainbowActiefRef.current) {
+            rainbowActiefRef.current = true;
+            setRainbowEventEinde(t);
+          }
+        }
+      } catch {}
+    };
+    const id = setInterval(poll, 30000);
+    return () => { cancelled = true; clearInterval(id); };
+  }, []);
   // Per-seconde tik om expiry te checken + countdown te updaten
   useEffect(() => {
     const id = setInterval(() => {
