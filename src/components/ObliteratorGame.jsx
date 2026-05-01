@@ -2644,18 +2644,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // lasers bewegen + raken bonus-ringen?
           for (let li = spelerLasers.length - 1; li >= 0; li--) {
             const l = spelerLasers[li];
-            l.x += SPELER_LASER_SNELHEID;
+            const lPrev = l.x;            // x voor deze frame
+            l.x += SPELER_LASER_SNELHEID; // verplaats
             let raak = false;
             for (const r of bonusRingen) {
               if (r.opgepakt) continue;
-              const dx = l.x - r.x;
+              // Sweep-collision: laser is een lijntje tussen lPrev en l.x.
+              // Pakt rings die ertussen liggen, ook al passeert de laser
+              // ze binnen één frame (12 px verplaatsing per frame is groot
+              // genoeg om kleine ringen te skippen). Hitbox-radius 0.85
+              // van ring-grootte voor genadige collision (was 0.55).
+              const ringR = r.grootte * 0.85;
               const dy = l.y - r.y;
-              if (Math.abs(dx) < r.grootte * 0.55 && Math.abs(dy) < r.grootte * 0.55) {
+              const inX = (r.x + ringR >= lPrev) && (r.x - ringR <= l.x);
+              if (inX && Math.abs(dy) < ringR) {
                 r.opgepakt = true;
                 bonusScore += 5;
                 score += 5;
-                spawnParticles(r.x, r.y, 12, "#ffd700", { spread: 5, opwaarts: 1.5, leven: 22, grootte: 3, glow: 16 });
-                spawnParticles(r.x, r.y, 6, "#ffffff", { spread: 3, opwaarts: 1, leven: 18, grootte: 2, glow: 12 });
+                spawnParticles(r.x, r.y, 14, "#ffd700", { spread: 6, opwaarts: 1.5, leven: 26, grootte: 4, glow: 18 });
+                spawnParticles(r.x, r.y, 8, "#ffffff", { spread: 4, opwaarts: 1, leven: 20, grootte: 3, glow: 14 });
                 piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
                 raak = true;
                 break;
