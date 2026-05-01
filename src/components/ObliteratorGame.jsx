@@ -167,13 +167,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [settingsOpen, setSettingsOpen] = useState(false);
   // Skin-systeem (default cube + andere skins zoals "blackhole" die je
   // ontgrendelt door Oblivion Pulse uit te spelen).
+  // Admins (vaste lijst, bv. Brian) krijgen Black Hole skin gratis cadeau.
+  const isObliterAdmin = OBLIVION_ADMINS.includes(((userName || "").trim().toLowerCase()));
   const [unlockedSkins, setUnlockedSkins] = useState(() => {
     try {
       const raw = localStorage.getItem("obliterator-unlocked-skins");
-      const arr = raw ? JSON.parse(raw) : ["default"];
-      return Array.isArray(arr) ? arr : ["default"];
-    } catch { return ["default"]; }
+      let arr = raw ? JSON.parse(raw) : ["default"];
+      if (!Array.isArray(arr)) arr = ["default"];
+      // Brian (en andere admins) krijgen blackhole automatisch
+      if (isObliterAdmin && !arr.includes("blackhole")) arr = [...arr, "blackhole"];
+      return arr;
+    } catch { return isObliterAdmin ? ["default", "blackhole"] : ["default"]; }
   });
+  // Als userName ná mount alsnog Brian wordt (bv. via login-flow), unlock alsnog
+  useEffect(() => {
+    if (isObliterAdmin && !unlockedSkins.includes("blackhole")) {
+      setUnlockedSkins((prev) => prev.includes("blackhole") ? prev : [...prev, "blackhole"]);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isObliterAdmin]);
   const [selectedSkin, setSelectedSkin] = useState(() => {
     try { return localStorage.getItem("obliterator-selected-skin") || "default"; } catch { return "default"; }
   });
