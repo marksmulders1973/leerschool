@@ -208,17 +208,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     };
   }, [pathId, player]);
 
-  if (!path) {
-    return (
-      <div style={{ padding: 24, color: C.text }}>
-        <p>Leerpad niet gevonden.</p>
-        <button onClick={onHome} style={btnSecondary()}>Terug naar home</button>
-      </div>
-    );
-  }
-
-  const totalSteps = path.steps.length;
-  const step = path.steps[stepIdx];
+  // Hooks (incl. useMemo) MOETEN vóór elke conditional early-return staan,
+  // anders breekt de rules-of-hooks zodra `path` van null naar geladen gaat.
+  const step = path ? path.steps[stepIdx] : null;
   const checks = step?.checks || [];
   const rawCheck = checks[checkIdx];
 
@@ -243,6 +235,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId, stepIdx, checkIdx, rawCheck]);
+
+  if (!path) {
+    return (
+      <div style={{ padding: 24, color: C.text }}>
+        <p>Leerpad niet gevonden.</p>
+        <button onClick={onHome} style={btnSecondary()}>Terug naar home</button>
+      </div>
+    );
+  }
+
+  const totalSteps = path.steps.length;
 
   // Volgende-stap-suggestie bij overview: eerste niet-voltooide
   const firstUnfinishedIdx = (() => {
