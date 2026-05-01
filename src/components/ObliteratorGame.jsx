@@ -394,9 +394,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let periscoop = null; // { x, faseNaam: 'uit'|'hang'|'in', faseFrames }
     let periscoopSpawnTeller = 1500; // eerste ~25 sec na start
     const PERISCOOP_UIT_FRAMES = 30;   // zakt uit
-    const PERISCOOP_HANG_FRAMES = 240; // 4 sec bereikbaar
+    const PERISCOOP_HANG_FRAMES = 360; // 6 sec bereikbaar (was 4 — Mark vond te scherp)
     const PERISCOOP_IN_FRAMES = 30;    // trekt zich terug
-    const PERISCOOP_LENS_R = 22;       // hitbox-radius
+    const PERISCOOP_LENS_R = 32;       // hitbox-radius (was 22 — ruimere collision)
     let bonusFase = false;
     let bonusFrames = 0;
     const BONUS_DUUR = 300; // 5 sec
@@ -1586,7 +1586,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // hangen op vaste hoogte / intrekken)
     function periscoopLensY() {
       if (!periscoop) return 0;
-      const eindY = (PLAFOND_HOOGTE + 80) * SCHAAL;
+      // Lens lager (was +80, nu +140) zodat single-jump-peak 'm kan raken.
+      // Speler-jump bereikt y≈219 vanaf GROND_Y=340; lens nu op y≈200 met
+      // hitbox-radius 32 = ruime overlap.
+      const eindY = (PLAFOND_HOOGTE + 140) * SCHAAL;
       const startY = PLAFOND_HOOGTE * SCHAAL;
       if (periscoop.faseNaam === "uit") {
         const t = periscoop.faseFrames / PERISCOOP_UIT_FRAMES;
@@ -2476,12 +2479,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!bonusFase && !bossActief && !dungeonMode) {
         if (!periscoop) periscoopSpawnTeller--;
         if (!periscoop && periscoopSpawnTeller <= 0) {
-          // Spawn helemaal rechts; periscoop schuift LEFTWARD over de hele
-          // breedte zodat hij gegarandeerd over de speler (x≈100) heen
-          // passeert. Mark's klacht: 'periscoop is rechts, ik links, kom
-          // er niet bij'.
+          // Spawn op 0.85 W zodat 'ie binnen de hang-fase bij speler (x=100)
+          // aankomt. Te ver rechts (W+30) was te scherpe timing — Mark
+          // haalde 'm niet 1x.
           periscoop = {
-            x: W + 30 * SCHAAL,
+            x: W * 0.85,
             faseNaam: "uit",
             faseFrames: 0,
           };
@@ -2493,10 +2495,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (periscoop) {
         periscoop.faseFrames++;
         // Periscoop schuift constant naar links zodat speler (vast op
-        // x=100) gegarandeerd onder de lens komt. Snelheid berekend zodat
-        // 'ie binnen de hang-fase ongeveer 65% van de breedte aflegt —
-        // speler kan 'm zien aankomen en sprong timen.
-        const slideSpeed = (W * 0.7) / (PERISCOOP_HANG_FRAMES + PERISCOOP_UIT_FRAMES);
+        // x=100) gegarandeerd onder de lens komt. Snelheid lager dan
+        // voorheen — Mark vond timing te scherp. Het venster waarin
+        // hitbox overlapt (~76px) duurt nu ~50 frames = 0.83 sec.
+        const slideSpeed = 1.5 * SCHAAL;
         periscoop.x -= slideSpeed;
         if (periscoop.faseNaam === "uit" && periscoop.faseFrames >= PERISCOOP_UIT_FRAMES) {
           periscoop.faseNaam = "hang";
