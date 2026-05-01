@@ -1176,9 +1176,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let loopProgress = 0;          // 0 → 1, fractie van loop-rit
     let loopRadiusX = 0;
     let loopRadiusY = 0;
-    const LOOP_DUUR = 55;          // frames voor de hele loop-rit
-    const LOOP_ENTRY = 0.85 * Math.PI;     // entry-hoek: lower-left
-    const LOOP_SWEEP = 1.5 * Math.PI;      // 270° — over de top, exit lower-right
+    const LOOP_DUUR = 70;          // frames voor de hele loop-rit (was 55, iets dramatischer)
+    // Entry op de bodem (canvas π/2 = 6 o'clock) — exact onder het visuele
+    // gap. Tangent is daar +x = natuurlijke rechtwaartse motion van speler.
+    // Sweep -2π = volledige counter-clockwise revolutie (zoals een achtbaan
+    // omhoog via de RECHTERkant, over de top, neer via LINKS — past bij
+    // links-naar-rechts running). Eindigt op zelfde spot, dan kicker.
+    const LOOP_ENTRY = 0.5 * Math.PI;
+    const LOOP_SWEEP = -2 * Math.PI;
     // ──────── DUNGEON-WERELD (Fase 1) ────────
     // Portal-pickup spawnt af en toe; bij contact gaat speler 25 sec naar
     // 'dungeon-mode' (dark-blue overlay + brick-edges). Bestaande gameplay
@@ -2022,14 +2027,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           );
           springGeluid();
         } else {
-          // Mid-loop: positie volgt LOOP_SWEEP (1.5π = 270°), rotatie altijd
-          // 2π zodat speler visueel een volledige flip maakt en upright eindigt.
+          // Mid-loop: positie volgt LOOP_SWEEP (-2π = 360° CCW), rotatie ook
+          // CCW (= negatief in canvas) zodat hoofd-eerst de loop-richting volgt
+          // en speler upright eindigt na 360°.
           const cx = loopRef.x + loopRef.breedte / 2;
           const cy = loopRef.y + loopRef.hoogte / 2;
           const ang = LOOP_ENTRY + loopProgress * LOOP_SWEEP;
           speler.x = cx + loopRadiusX * Math.cos(ang) - speler.breedte / 2;
           speler.y = cy + loopRadiusY * Math.sin(ang) - speler.hoogte / 2;
-          speler.rotatie = loopProgress * 2 * Math.PI;
+          speler.rotatie = -loopProgress * 2 * Math.PI;
           return; // skip alles — wereld bevroren
         }
       }
