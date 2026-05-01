@@ -387,6 +387,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const AFGEREMD_DUUR = 35;
     const AFGEREMD_FACTOR = 0.30; // wereld op 30% snelheid tijdens afremmen
     let blokHitX = -999; // laatste blok-X om dubbele-hit te voorkomen
+    // ── PERISCOOP + BONUS-MINI-GAME (NEW) ──
+    // Soms zakt er een periscoop uit het plafond. Speler die er precies in
+    // springt, start een 5-sec bonus-fase: wereld bevriest, lasers schieten
+    // met spatie/klik, bonus-ringen vliegen voorbij, hits = +5 score elk.
+    let periscoop = null; // { x, faseNaam: 'uit'|'hang'|'in', faseFrames }
+    let periscoopSpawnTeller = 1500; // eerste ~25 sec na start
+    const PERISCOOP_UIT_FRAMES = 30;   // zakt uit
+    const PERISCOOP_HANG_FRAMES = 240; // 4 sec bereikbaar
+    const PERISCOOP_IN_FRAMES = 30;    // trekt zich terug
+    const PERISCOOP_LENS_R = 22;       // hitbox-radius
+    let bonusFase = false;
+    let bonusFrames = 0;
+    const BONUS_DUUR = 300; // 5 sec
+    const bonusRingen = [];
+    let bonusRingSpawnTeller = 20;
+    let bonusScore = 0;
+    let bonusEindFlash = 0; // toont +totaal na bonus
     let levens = startLevens;
     let streak = 0;
     let multiplier = 1;
@@ -1565,6 +1582,199 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
     }
+    // Y-positie van de periscoop-lens op basis van fase (uitzakken /
+    // hangen op vaste hoogte / intrekken)
+    function periscoopLensY() {
+      if (!periscoop) return 0;
+      const eindY = (PLAFOND_HOOGTE + 80) * SCHAAL;
+      const startY = PLAFOND_HOOGTE * SCHAAL;
+      if (periscoop.faseNaam === "uit") {
+        const t = periscoop.faseFrames / PERISCOOP_UIT_FRAMES;
+        return startY + (eindY - startY) * t;
+      } else if (periscoop.faseNaam === "hang") {
+        // lichte bobbing tijdens hangen
+        return eindY + Math.sin(periscoop.faseFrames * 0.1) * 2 * SCHAAL;
+      } else { // "in"
+        const t = periscoop.faseFrames / PERISCOOP_IN_FRAMES;
+        return eindY + (startY - eindY) * t;
+      }
+    }
+    function startBonusFase() {
+      bonusFase = true;
+      bonusFrames = BONUS_DUUR;
+      bonusScore = 0;
+      bonusRingen.length = 0;
+      bonusRingSpawnTeller = 18;
+      spelerLasers.length = 0;
+      // periscoop trekt zich snel terug
+      if (periscoop) {
+        periscoop.faseNaam = "in";
+        periscoop.faseFrames = PERISCOOP_IN_FRAMES - 8;
+      }
+      // start-fanfare
+      piep(660, 0.10, "sine", 0.14);
+      setTimeout(() => piep(880, 0.10, "sine", 0.14), 80);
+      setTimeout(() => piep(1320, 0.14, "sine", 0.14), 180);
+      setTimeout(() => piep(1760, 0.18, "sine", 0.12), 300);
+      // gouden flash
+      spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 30, "#ffd700", { spread: 10, opwaarts: 2, leven: 40, grootte: 5, glow: 22 });
+      spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 16, "#ffffff", { spread: 6, opwaarts: 1.5, leven: 32, grootte: 3, glow: 16 });
+    }
+    function eindeBonusFase() {
+      bonusFase = false;
+      bonusFrames = 0;
+      bonusEindFlash = 110;
+      bonusRingen.length = 0;
+      spelerLasers.length = 0;
+      // closing-tone
+      piep(990, 0.14, "sine", 0.12);
+      setTimeout(() => piep(660, 0.18, "sine", 0.10), 100);
+    }
+    function tekenPeriscoop() {
+      if (!periscoop) return;
+      const lensY = periscoopLensY();
+      const cxP = periscoop.x;
+      const cilTop = 0;
+      const cilB = 18 * SCHAAL;
+      ctx.save();
+      // verticale lichtbundel naar beneden — extra zichtbaarheid
+      const bundelGrad = ctx.createLinearGradient(0, lensY, 0, H);
+      bundelGrad.addColorStop(0, "rgba(255, 248, 160, 0.45)");
+      bundelGrad.addColorStop(1, "rgba(255, 248, 160, 0)");
+      ctx.fillStyle = bundelGrad;
+      ctx.fillRect(cxP - 28 * SCHAAL, lensY, 56 * SCHAAL, H - lensY);
+      // cilinder (donker metaal met highlight)
+      const cilGrad = ctx.createLinearGradient(cxP - cilB / 2, 0, cxP + cilB / 2, 0);
+      cilGrad.addColorStop(0, "#3a3a48");
+      cilGrad.addColorStop(0.4, "#7a7a90");
+      cilGrad.addColorStop(0.55, "#c0c0d0");
+      cilGrad.addColorStop(0.7, "#7a7a90");
+      cilGrad.addColorStop(1, "#3a3a48");
+      ctx.fillStyle = cilGrad;
+      ctx.fillRect(cxP - cilB / 2, cilTop, cilB, lensY - cilTop);
+      // verticale lijntjes voor metaal-detail
+      ctx.strokeStyle = "rgba(20, 20, 30, 0.6)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(cxP - 4 * SCHAAL, cilTop);
+      ctx.lineTo(cxP - 4 * SCHAAL, lensY);
+      ctx.moveTo(cxP + 4 * SCHAAL, cilTop);
+      ctx.lineTo(cxP + 4 * SCHAAL, lensY);
+      ctx.stroke();
+      // lens (gloeiend gele cirkel)
+      ctx.shadowBlur = 24;
+      ctx.shadowColor = "#fff8a0";
+      const lensGrad = ctx.createRadialGradient(cxP - 4 * SCHAAL, lensY - 4 * SCHAAL, 1, cxP, lensY, PERISCOOP_LENS_R * SCHAAL);
+      lensGrad.addColorStop(0, "#ffffff");
+      lensGrad.addColorStop(0.4, "#ffe060");
+      lensGrad.addColorStop(0.8, "#cc8020");
+      lensGrad.addColorStop(1, "#604010");
+      ctx.fillStyle = lensGrad;
+      ctx.beginPath();
+      ctx.arc(cxP, lensY, PERISCOOP_LENS_R * SCHAAL, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+      // lens-rand donker metaal
+      ctx.strokeStyle = "#1a1a22";
+      ctx.lineWidth = 2.5 * SCHAAL;
+      ctx.beginPath();
+      ctx.arc(cxP, lensY, PERISCOOP_LENS_R * SCHAAL, 0, Math.PI * 2);
+      ctx.stroke();
+      // lens-cross-hair tijdens hang fase (target-feel)
+      if (periscoop.faseNaam === "hang") {
+        ctx.strokeStyle = "rgba(20, 20, 22, 0.8)";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.moveTo(cxP - PERISCOOP_LENS_R * SCHAAL * 0.7, lensY);
+        ctx.lineTo(cxP + PERISCOOP_LENS_R * SCHAAL * 0.7, lensY);
+        ctx.moveTo(cxP, lensY - PERISCOOP_LENS_R * SCHAAL * 0.7);
+        ctx.lineTo(cxP, lensY + PERISCOOP_LENS_R * SCHAAL * 0.7);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+    function tekenBonusFase() {
+      if (!bonusFase) return;
+      ctx.save();
+      // donkere semi-overlay zodat bonus duidelijk apart voelt
+      ctx.fillStyle = "rgba(0, 0, 30, 0.35)";
+      ctx.fillRect(0, 0, W, H);
+      // bonus-ringen
+      for (const r of bonusRingen) {
+        if (r.opgepakt) continue;
+        const pulse = 0.85 + Math.sin(r.fase * 2) * 0.15;
+        ctx.save();
+        ctx.translate(r.x, r.y);
+        ctx.scale(pulse, 1);
+        ctx.shadowBlur = 26;
+        ctx.shadowColor = "#fff8a0";
+        ctx.strokeStyle = "rgba(255, 248, 160, 0.6)";
+        ctx.lineWidth = 8;
+        ctx.beginPath();
+        ctx.arc(0, 0, r.grootte * 0.5, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "#ffd700";
+        ctx.strokeStyle = "#ffd700";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.arc(0, 0, r.grootte * 0.5, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        ctx.fillStyle = "rgba(255,255,200,0.85)";
+        ctx.beginPath();
+        ctx.arc(-r.grootte * 0.18, -r.grootte * 0.18, r.grootte * 0.10, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      // lasers
+      for (const l of spelerLasers) {
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = "#69f0ae";
+        ctx.strokeStyle = "#69f0ae";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(l.x - 14, l.y);
+        ctx.lineTo(l.x + 4, l.y);
+        ctx.stroke();
+      }
+      // tijd-balk + tekst bovenin
+      const balkX = W * 0.2;
+      const balkY = 18;
+      const balkW = W * 0.6;
+      const balkH = 10 * SCHAAL;
+      const fractie = bonusFrames / BONUS_DUUR;
+      ctx.fillStyle = "rgba(0,0,0,0.55)";
+      ctx.fillRect(balkX - 2, balkY - 2, balkW + 4, balkH + 4);
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = "#ffd700";
+      ctx.fillStyle = "#ffd700";
+      ctx.fillRect(balkX, balkY, balkW * fractie, balkH);
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "#fff";
+      ctx.font = `bold ${20 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#ffd700";
+      ctx.fillText(`🎯 BONUS! +${bonusScore}  ·  SCHIET RINGEN!`, W / 2, balkY + balkH + 6);
+      ctx.restore();
+    }
+    function tekenBonusEindFlash() {
+      if (bonusEindFlash <= 0) return;
+      ctx.save();
+      const fade = bonusEindFlash / 110;
+      ctx.fillStyle = `rgba(255, 215, 0, ${0.18 * fade})`;
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = `rgba(255, 255, 255, ${fade})`;
+      ctx.font = `bold ${42 * SCHAAL}px Impact, Arial Black, sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.shadowBlur = 24;
+      ctx.shadowColor = "#ffd700";
+      ctx.fillText(`+${bonusScore} BONUS!`, W / 2, H / 2);
+      ctx.restore();
+    }
     function tekenSchatkist(s) {
       ctx.save();
       const x = s.x;
@@ -2104,6 +2314,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function spring() {
       if (!spelLoopt) return;
       if (loopActief) return; // input genegeerd tijdens loop-animatie
+      // Tijdens bonus-fase: input is SCHIETEN ipv springen
+      if (bonusFase) {
+        spelerSchiet();
+        return;
+      }
       muziekStart();
       // Tijdens boss: tap = jump + laser tegelijk
       if (bossActief) spelerSchiet();
@@ -2242,9 +2457,108 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const slowMul = slowFrames > 0 ? SLOW_FACTOR : 1;
       // afgeremFrames > 0 = botste tegen blok, wereld op AFGEREMD_FACTOR snelheid
       const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
-      effSnelheid = spelSnelheid * slowMul * afremMul;
+      // Tijdens bonus-fase staat de wereld stil
+      const bonusMul = bonusFase ? 0 : 1;
+      effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
       if (afgeremFrames > 0) afgeremFrames--;
       if (hpFlashTeller > 0) hpFlashTeller--;
+      if (bonusEindFlash > 0) bonusEindFlash--;
+
+      // ── PERISCOOP: spawn + animatie + collision ──
+      if (!bonusFase && !bossActief && !dungeonMode) {
+        if (!periscoop) periscoopSpawnTeller--;
+        if (!periscoop && periscoopSpawnTeller <= 0) {
+          // Vermijd center-screen waar speler staat — spawn tussen 0.45 en 0.85 W
+          periscoop = {
+            x: W * (0.45 + Math.random() * 0.4),
+            faseNaam: "uit",
+            faseFrames: 0,
+          };
+          periscoopSpawnTeller = 1500 + Math.floor(Math.random() * 1200); // 25-45 sec
+          piep(440, 0.20, "sine", 0.10);
+          setTimeout(() => piep(660, 0.18, "sine", 0.08), 120);
+        }
+      }
+      if (periscoop) {
+        periscoop.faseFrames++;
+        if (periscoop.faseNaam === "uit" && periscoop.faseFrames >= PERISCOOP_UIT_FRAMES) {
+          periscoop.faseNaam = "hang";
+          periscoop.faseFrames = 0;
+        } else if (periscoop.faseNaam === "hang" && periscoop.faseFrames >= PERISCOOP_HANG_FRAMES) {
+          periscoop.faseNaam = "in";
+          periscoop.faseFrames = 0;
+        } else if (periscoop.faseNaam === "in" && periscoop.faseFrames >= PERISCOOP_IN_FRAMES) {
+          periscoop = null;
+        }
+        // Collision-check tijdens uit/hang fase: lens-cirkel raakt speler-bbox
+        if (periscoop && (periscoop.faseNaam === "uit" || periscoop.faseNaam === "hang")) {
+          const lensY = periscoopLensY();
+          const cxP = periscoop.x;
+          const sb = spelerBots();
+          const sCx = sb.x + sb.breedte / 2;
+          const sCy = sb.y + sb.hoogte / 2;
+          const dx = sCx - cxP;
+          const dy = sCy - lensY;
+          if (Math.sqrt(dx * dx + dy * dy) < PERISCOOP_LENS_R * SCHAAL + sb.breedte / 2) {
+            startBonusFase();
+          }
+        }
+      }
+
+      // ── BONUS-FASE: ringen spawnen + lasers + collision ──
+      if (bonusFase) {
+        bonusFrames--;
+        if (bonusFrames <= 0) {
+          eindeBonusFase();
+        } else {
+          // bonus-ringen spawnen in willekeurige y, vliegen naar links
+          bonusRingSpawnTeller--;
+          if (bonusRingSpawnTeller <= 0) {
+            const aantal = 1 + Math.floor(Math.random() * 3); // 1-3 ringen per wave
+            const startY = (PLAFOND_HOOGTE + 30 + Math.random() * 220) * SCHAAL;
+            for (let i = 0; i < aantal; i++) {
+              bonusRingen.push({
+                x: W + 30 + i * 38 * SCHAAL,
+                y: startY + i * 8 * SCHAAL,
+                grootte: 22 * SCHAAL,
+                fase: i * 0.4,
+                opgepakt: false,
+                vx: -3.5 - Math.random() * 1.2,
+              });
+            }
+            bonusRingSpawnTeller = 22 + Math.floor(Math.random() * 14);
+          }
+          // bonus-ringen bewegen
+          for (let i = bonusRingen.length - 1; i >= 0; i--) {
+            const r = bonusRingen[i];
+            r.x += r.vx;
+            r.fase += 0.18;
+            if (r.x < -40 || r.opgepakt) bonusRingen.splice(i, 1);
+          }
+          // lasers bewegen + raken bonus-ringen?
+          for (let li = spelerLasers.length - 1; li >= 0; li--) {
+            const l = spelerLasers[li];
+            l.x += SPELER_LASER_SNELHEID;
+            let raak = false;
+            for (const r of bonusRingen) {
+              if (r.opgepakt) continue;
+              const dx = l.x - r.x;
+              const dy = l.y - r.y;
+              if (Math.abs(dx) < r.grootte * 0.55 && Math.abs(dy) < r.grootte * 0.55) {
+                r.opgepakt = true;
+                bonusScore += 5;
+                score += 5;
+                spawnParticles(r.x, r.y, 12, "#ffd700", { spread: 5, opwaarts: 1.5, leven: 22, grootte: 3, glow: 16 });
+                spawnParticles(r.x, r.y, 6, "#ffffff", { spread: 3, opwaarts: 1, leven: 18, grootte: 2, glow: 12 });
+                piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
+                raak = true;
+                break;
+              }
+            }
+            if (raak || l.x > W + 20) spelerLasers.splice(li, 1);
+          }
+        }
+      }
       // tijdens boss: spelTijd telt niet door (level-progressie pauzeert)
       if (bossActief) frameTeller--;
 
@@ -3985,6 +4299,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const v of vissen) tekenVis(v);
       for (const h of haaien) tekenHaai(h);
       for (const s of schatkisten) tekenSchatkist(s);
+      // Periscoop + bonus-fase boven alles (incl. dungeon-overlay)
+      tekenPeriscoop();
+      tekenBonusFase();
+      tekenBonusEindFlash();
       // Bubbel-shield rond speler (van vis-pickup) — ook na overlay zodat 'ie helder blijft
       if (bubbelFrames > 0) {
         const cx = speler.x + speler.breedte / 2;
@@ -4161,6 +4479,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       hpFlashTeller = 0;
       afgeremFrames = 0;
       blokHitX = -999;
+      periscoop = null;
+      periscoopSpawnTeller = 1500;
+      bonusFase = false;
+      bonusFrames = 0;
+      bonusRingen.length = 0;
+      bonusScore = 0;
+      bonusEindFlash = 0;
       speler.x = 100 * SCHAAL;
       speler.y = GROND_Y;
       speler.snelheidY = 0;
@@ -4441,7 +4766,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>🐌 <strong style={{ color: "#a060ff" }}>Slow-mo pakken</strong> = 5 sec wereld in halve snelheid (adempauze!)</div>
               <div>💥 <strong style={{ color: "#ff5040" }}>Bom pakken</strong> = ALLE stekels op het scherm vernietigen!</div>
               <div>🐠 <strong style={{ color: "#ffaa30" }}>Vis pakken</strong> = +5 punten + 5 sec bubbel-shield (haaien gaan dood bij contact!)</div>
-              <div>💰 <strong style={{ color: "#ffd700" }}>Schatkist pakken</strong> (water-wereld) = +25 punten BONUS!</div>
+              <div>💰 <strong style={{ color: "#ffd700" }}>Schatkist pakken</strong> (water-wereld) = +25 punten + 25 HP BONUS!</div>
+              <div>🔭 <strong style={{ color: "#fff8a0" }}>Periscoop</strong> = exact erin springen = 5 sec BONUS-RONDE (klik = laser, ringen schieten = +5 elk!)</div>
               <div>🏆 <strong style={{ color: "#69f0ae" }}>5 werelden</strong> ontgrendelen om de 8 punten</div>
             </div>
             {isFullscreen && isPortrait && (
