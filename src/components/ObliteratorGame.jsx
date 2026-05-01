@@ -2595,8 +2595,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       // plafond-stekel spawn (~50/50 met grond-stekels)
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
+      // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && score >= 3) {
+      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
