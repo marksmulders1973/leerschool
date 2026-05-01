@@ -1541,33 +1541,42 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.save();
       ctx.translate(v.x, v.y);
       // Sterke glow zodat vis duidelijk afsteekt tegen donkere dungeon
-      ctx.shadowBlur = 14;
+      ctx.shadowBlur = 22;
       ctx.shadowColor = v.kleur;
 
-      // Body — ovaal, kleur per vis
+      // Body — ovaal in volle kleur (geen wit-blend meer — verloor te veel kleur)
       const gr = v.grootte;
-      const grad = ctx.createLinearGradient(0, -gr * 0.6, 0, gr * 0.6);
-      grad.addColorStop(0, v.kleur);
-      grad.addColorStop(1, "#ffffff");
-      ctx.fillStyle = grad;
+      ctx.fillStyle = v.kleur;
       ctx.beginPath();
       ctx.ellipse(0, 0, gr, gr * 0.55, 0, 0, Math.PI * 2);
       ctx.fill();
-      // Donker outline voor max contrast
+      // Lichte highlight bovenop voor 3D-effect
       ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(255, 255, 255, 0.45)";
+      ctx.beginPath();
+      ctx.ellipse(-gr * 0.1, -gr * 0.2, gr * 0.55, gr * 0.18, 0, 0, Math.PI * 2);
+      ctx.fill();
+      // Stevige donker outline voor max contrast
       ctx.strokeStyle = "#0a1830";
-      ctx.lineWidth = 2 * SCHAAL;
+      ctx.lineWidth = 2.5 * SCHAAL;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, gr, gr * 0.55, 0, 0, Math.PI * 2);
       ctx.stroke();
 
       // Staart — driehoek die met fase wiebelt voor leven
       const swish = Math.sin(v.fase) * 4 * SCHAAL;
+      ctx.shadowBlur = 16;
+      ctx.shadowColor = v.kleur;
       ctx.fillStyle = v.kleur;
       ctx.beginPath();
       ctx.moveTo(gr * 0.85, 0);
-      ctx.lineTo(gr * 1.55, -gr * 0.5 + swish);
-      ctx.lineTo(gr * 1.55, gr * 0.5 + swish);
+      ctx.lineTo(gr * 1.6, -gr * 0.55 + swish);
+      ctx.lineTo(gr * 1.6, gr * 0.55 + swish);
       ctx.closePath();
       ctx.fill();
+      ctx.shadowBlur = 0;
+      ctx.strokeStyle = "#0a1830";
+      ctx.lineWidth = 2 * SCHAAL;
       ctx.stroke();
 
       // Oog — wit met zwart pupil, opvallend
@@ -2406,8 +2415,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           vissen.push({
             x: W + 30 * SCHAAL,
             // Vissen zwemmen in het water-gebied (onder waterTop, boven de bodem)
-            y: waterTop + 10 * SCHAAL + Math.random() * (H - waterTop - 20 * SCHAAL),
-            grootte: (10 + Math.random() * 8) * SCHAAL,
+            y: waterTop + 12 * SCHAAL + Math.random() * (H - waterTop - 24 * SCHAAL),
+            grootte: (16 + Math.random() * 10) * SCHAAL,
             fase: Math.random() * Math.PI * 2,
             kleur: VIS_KLEUREN[Math.floor(Math.random() * VIS_KLEUREN.length)],
             snelheid: 0.6 + Math.random() * 0.6,
@@ -3102,8 +3111,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Fans (spandoek met highscore-naam) op achtergrond, vóór speler/obstakels
       for (const f of fans) tekenFanGroep(f);
-      // Vissen achter de speler/haaien zodat haaien voor blijven (= gevaarlijk = focus)
-      for (const v of vissen) tekenVis(v);
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
       for (const h of haaien) tekenHaai(h);
@@ -3648,6 +3655,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
+      // Vissen NA de overlay zodat het water-paneel ze niet grijs tint
+      for (const v of vissen) tekenVis(v);
     }
     // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
     const TARGET_FRAME_MS = 1000 / 60;
@@ -3694,7 +3703,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (particles[i].dood) particles.splice(i, 1);
         }
         for (const f of fans) tekenFanGroep(f);
-        for (const v of vissen) tekenVis(v);
         for (const o of obstakels) tekenObstakel(o);
         for (const h of haaien) tekenHaai(h);
         for (const sc of schansen) tekenSchans(sc);
