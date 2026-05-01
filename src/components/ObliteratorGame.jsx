@@ -4295,6 +4295,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
+      // Speler NOG EEN KEER tijdens dungeon — anders dekt het ondoorzichtige
+      // water (#0e3c70) de rode bal volledig af (alleen schild-glow steekt
+      // boven water uit). Mark's klacht: 'onder water ben ik onzichtbaar
+      // in gewone staat'. Buiten dungeon overslaan zodat speler niet boven
+      // obstakels komt te staan in normale gameplay.
+      if (dungeonMode || dungeonFadeOut > 0) tekenSpeler();
       // Vissen + haaien + schatkisten NA de overlay zodat ze niet grijs getint worden
       for (const v of vissen) tekenVis(v);
       for (const h of haaien) tekenHaai(h);
