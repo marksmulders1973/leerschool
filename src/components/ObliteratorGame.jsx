@@ -90,6 +90,26 @@ const MUNTEN_KEY_PREFIX = "obliterator-munten-";
 // Voeg een naam toe om iemand admin te maken.
 const OBLIVION_ADMINS = ["brian"];
 
+// Decoratie-catalogus voor de custom-level-editor. Visueel-only, geen collisie.
+// `bob` = optionele auto-animatie (snelheid/amp) voor zwevende elementen.
+const DECOR_CATALOG = [
+  { id: "decor_boom",         label: "Boom",         emoji: "🌳", grootte: 36 },
+  { id: "decor_palm",         label: "Palm",         emoji: "🌴", grootte: 36 },
+  { id: "decor_cactus",       label: "Cactus",       emoji: "🌵", grootte: 30 },
+  { id: "decor_bloem",        label: "Bloem",        emoji: "🌸", grootte: 22 },
+  { id: "decor_tulp",         label: "Tulp",         emoji: "🌷", grootte: 22 },
+  { id: "decor_gras",         label: "Gras",         emoji: "🌾", grootte: 22 },
+  { id: "decor_paddenstoel",  label: "Paddenstoel",  emoji: "🍄", grootte: 24 },
+  { id: "decor_wolk",         label: "Wolk",         emoji: "☁️", grootte: 32, alpha: 0.85, bob: { snelheid: 0.6, amp: 4 } },
+  { id: "decor_maan",         label: "Maan",         emoji: "🌙", grootte: 28, alpha: 0.9 },
+  { id: "decor_ster",         label: "Ster",         emoji: "⭐", grootte: 22, bob: { snelheid: 1.5, amp: 2 } },
+  { id: "decor_vlinder",      label: "Vlinder",      emoji: "🦋", grootte: 24, bob: { snelheid: 4, amp: 6 } },
+  { id: "decor_vogel",        label: "Vogel",        emoji: "🐦", grootte: 24, bob: { snelheid: 3, amp: 5 } },
+  { id: "decor_rots",         label: "Rots",         emoji: "🪨", grootte: 28 },
+  { id: "decor_fakkel",       label: "Fakkel",       emoji: "🔥", grootte: 26, bob: { snelheid: 6, amp: 1.5 } },
+];
+const DECOR_RENDER = Object.fromEntries(DECOR_CATALOG.map((d) => [d.id, d]));
+
 // Speler-skins. unlockLevel = level dat behaald moet zijn (1 = altijd open,
 // null = via speciale unlock zoals Oblivion Pulse).
 const SKINS = [
@@ -157,6 +177,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [editorOpslaan, setEditorOpslaan] = useState({ bezig: false, error: null, ok: false });
   const [editorLengte, setEditorLengte] = useState(4000);
   const [editorTab, setEditorTab] = useState("maken"); // "maken" | "mijn" | "spelen"
+  // Welke palet-categorie open staat in de Maken-editor
+  const [paletCategorie, setPaletCategorie] = useState("mechanica"); // "mechanica" | "decor"
+  // Scrollbare editor-canvas: ref naar de scroll-container + huidige scroll-positie
+  const editorScrollRef = useRef(null);
+  const [editorScrollPx, setEditorScrollPx] = useState(0);
+  const [editorViewportW, setEditorViewportW] = useState(320);
   const [communityLevels, setCommunityLevels] = useState([]);
   const [communityLevelsLaden, setCommunityLevelsLaden] = useState(false);
   const [mijnLevels, setMijnLevels] = useState([]);
@@ -186,6 +212,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       });
     return () => { cancelled = true; };
   }, [fase, editorTab, levelsReloadTick]);
+  // Editor-scroll: meet container-breedte + observeer resizes voor mini-map viewport-rect
+  useEffect(() => {
+    if (fase !== "custom-editor" || editorTab !== "maken") return;
+    const measure = () => {
+      const w = editorScrollRef.current?.clientWidth;
+      if (w && w !== editorViewportW) setEditorViewportW(w);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    const id = setTimeout(measure, 100); // re-meet na render
+    return () => { window.removeEventListener("resize", measure); clearTimeout(id); };
+  }, [fase, editorTab, editorViewportW]);
+  // Reset scroll-positie als level-lengte verandert
+  useEffect(() => {
+    if (editorScrollRef.current) editorScrollRef.current.scrollLeft = 0;
+    setEditorScrollPx(0);
+  }, [editorLengte]);
   // Eigen levels laden zodra "Mijn"-tab opent (vereist login)
   useEffect(() => {
     if (fase !== "custom-editor" || editorTab !== "mijn") return;
@@ -962,6 +1005,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       spelerLasers.length = 0;
       // clear normale game-elementen (geen botsing tijdens boss)
       obstakels.length = 0;
+      customDecoraties.length = 0;
       ringen.length = 0;
       platforms.length = 0;
       plafondStekels.length = 0;
@@ -1789,6 +1833,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
     // ---------- OBSTAKELS ----------
     const obstakels = [];
+    // Custom-level decoraties — boom/wolk/etc. uit user-built levels. Alleen
+    // visueel, geen collisie. Apart van de biome-decoraties (die zijn
+    // willekeurig en horen bij het level-bioom).
+    const customDecoraties = [];
     // Schansen + loopings — bij contact super-jump + safe-zone + arc-pickups.
     // schansen[] = { x, y, breedte, hoogte, type: 'schans'|'loop', geactiveerd }
     const schansen = [];
@@ -1948,6 +1996,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         magneetPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
       } else if (obs.type === "bom") {
         bombPickups.push({ x: W + 40, y: yScaled || 220 * SCHAAL, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+      } else if (obs.type === "spookje") {
+        // Stationaire vliegende spike — zelfde collision als type-0, ander visueel
+        const breedte = 32 * SCHAAL, hoogte = 32 * SCHAAL;
+        const baseY = yScaled != null ? yScaled - hoogte / 2 : 200 * SCHAAL;
+        obstakels.push({ type: 0, x: W, breedte, hoogte, y: baseY, gescoord: false, render: "ghost", baseY });
+      } else if (typeof obs.type === "string" && obs.type.startsWith("decor_")) {
+        // Visueel-only — geen collisie, scrollt mee met de wereld
+        customDecoraties.push({
+          x: W + 20,
+          y: yScaled != null ? yScaled : 110 * SCHAAL,
+          type: obs.type,
+          fase: Math.random() * Math.PI * 2,
+        });
       }
     }
     function maakObstakel() {
@@ -1964,6 +2025,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       obstakels.push({ type, x: W, breedte, hoogte, y: GROND_Y + SPELER_GROOTTE - hoogte, gescoord: false });
     }
     function tekenObstakel(o) {
+      if (o.render === "ghost") {
+        // 👻 met zachte hover-animatie + paarse glow
+        const t = performance.now() / 1000;
+        const hover = Math.sin(t * 3 + (o.x * 0.01)) * 4 * SCHAAL;
+        const cx = o.x + o.breedte / 2;
+        const cy = o.y + o.hoogte / 2 + hover;
+        ctx.save();
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = "rgba(180, 130, 255, 0.85)";
+        ctx.font = `${o.hoogte * 1.05}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("👻", cx, cy);
+        ctx.restore();
+        return;
+      }
       if (o.type === 0) tekenStenenStekel(o.x, o.y, o.breedte, o.hoogte);
       else if (o.type === 1) {
         tekenStenenStekel(o.x, o.y, 24 * SCHAAL, o.hoogte);
@@ -2287,6 +2364,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // CLEAN SLATE: alles wat damage kan doen of in de weg staat opruimen
       // zodat speler NIET af kan tijdens bonus (Mark: 'nu ging ik af, niet leuk').
       obstakels.length = 0;
+      customDecoraties.length = 0;
       haaien.length = 0;
       plafondStekels.length = 0;
       schansen.length = 0;
@@ -4375,6 +4453,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           return;
         }
       }
+      // Custom-decoraties scrollen mee met de wereld — geen collisie, alleen visueel
+      for (let i = customDecoraties.length - 1; i >= 0; i--) {
+        const d = customDecoraties[i];
+        d.x -= effSnelheid;
+        if (d.x < -80 * SCHAAL) customDecoraties.splice(i, 1);
+      }
       for (let i = obstakels.length - 1; i >= 0; i--) {
         const o = obstakels[i];
         o.x -= effSnelheid;
@@ -4612,6 +4696,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               hellFadeIn = HELL_FADE;
               // ruim alles op wat niet bij Hell hoort
               obstakels.length = 0;
+              customDecoraties.length = 0;
               plafondStekels.length = 0;
               schansen.length = 0;
               fans.length = 0;
@@ -5305,6 +5390,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             spawnParticles(m.x, cy, 8, "#ffaa40", { spread: 6, opwaarts: 1.5, leven: 28, grootte: 4, zwaartekracht: 0.10, glow: 18 });
           }
           obstakels.length = 0;
+          customDecoraties.length = 0;
           plafondStekels.length = 0;
           zwevendeMinen.length = 0;
           shakeKracht = Math.max(shakeKracht, 10);
@@ -5681,6 +5767,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.strokeStyle = "rgba(255,255,255,0.8)";
         ctx.lineWidth = 1;
         ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, PLATFORM_HOOGTE - 1);
+        ctx.restore();
+      }
+      // Custom-decoraties — visueel-only background (boom/wolk/etc. uit custom-levels)
+      if (customDecoraties.length > 0) {
+        ctx.save();
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        for (const d of customDecoraties) {
+          const meta = DECOR_RENDER[d.type];
+          if (!meta) continue;
+          const grootte = meta.grootte * SCHAAL;
+          ctx.font = `${grootte}px sans-serif`;
+          // Subtiele bob voor lucht-decor (vlinder/vogel/wolk/maan)
+          let dy = 0;
+          if (meta.bob) {
+            const t = performance.now() / 1000;
+            dy = Math.sin(t * meta.bob.snelheid + (d.fase || 0)) * meta.bob.amp * SCHAAL;
+          }
+          ctx.globalAlpha = meta.alpha != null ? meta.alpha : 1;
+          ctx.fillText(meta.emoji, d.x, d.y + dy);
+        }
         ctx.restore();
       }
       // Fans (spandoek met highscore-naam) op achtergrond, vóór speler/obstakels
@@ -6420,6 +6527,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function respawn() {
       // clear obstakels + particles + bonusHarten + raketten + flipPickups, reset speler, score blijft
       obstakels.length = 0;
+      customDecoraties.length = 0;
       particles.length = 0;
       bonusHarten.length = 0;
       raketten.length = 0;
@@ -6624,6 +6732,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         cutsceneFrames = 0;
         // ruim alles op zodat cutscene zuiver begint — score blijft staan
         obstakels.length = 0;
+        customDecoraties.length = 0;
         ringen.length = 0;
         platforms.length = 0;
         plafondStekels.length = 0;
@@ -7476,51 +7585,69 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         {fase === "custom-editor" && (
           <div style={{ width: "100%", maxWidth: 720, padding: "12px 14px", color: "#fff" }}>
             {(() => {
-              const TOOLS = [
-                { id: "spike",       label: "Spike",        emoji: "🔺", kost: 0 },
-                { id: "blok",        label: "Blok",         emoji: "🟦", kost: 0 },
-                { id: "ring",        label: "Ring",         emoji: "💍", kost: 0 },
-                { id: "platform",    label: "Platform",     emoji: "🪂", kost: 0 },
+              const MECHANICA = [
+                { id: "spike",         label: "Spike",         emoji: "🔺", kost: 0 },
+                { id: "blok",          label: "Blok",          emoji: "🟦", kost: 0 },
+                { id: "ring",          label: "Ring",          emoji: "💍", kost: 0 },
+                { id: "platform",      label: "Platform",      emoji: "🪂", kost: 0 },
                 { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5 },
-                { id: "schans",      label: "Schans",       emoji: "📐", kost: 5 },
-                { id: "magneet",     label: "Magneet",      emoji: "🧲", kost: 10 },
-                { id: "mijn",        label: "Mijn",         emoji: "💣", kost: 10 },
-                { id: "hart",        label: "Hartje",       emoji: "❤️", kost: 15 },
-                { id: "bom",         label: "Bom",          emoji: "💥", kost: 20 },
+                { id: "schans",        label: "Schans",        emoji: "📐", kost: 5 },
+                { id: "magneet",       label: "Magneet",       emoji: "🧲", kost: 10 },
+                { id: "mijn",          label: "Mijn",          emoji: "💣", kost: 10 },
+                { id: "spookje",       label: "Spookje",       emoji: "👻", kost: 5 },
+                { id: "hart",          label: "Hartje",        emoji: "❤️", kost: 15 },
+                { id: "bom",           label: "Bom",           emoji: "💥", kost: 20 },
               ];
+              const DECOR_TOOLS = DECOR_CATALOG.map((d) => ({
+                id: d.id, label: d.label, emoji: d.emoji, kost: 0,
+              }));
+              const ALL_TOOLS = [...MECHANICA, ...DECOR_TOOLS];
+              const TOOLS_HUIDIG = paletCategorie === "decor" ? DECOR_TOOLS : MECHANICA;
               const LEVEL_LENGTE = editorLengte;
               const TRACK_HOOGTE = 220;
-              // Editor-canvas representeert het hele level — tappen in het midden
-              // = midden van level. Langere levels = meer obstakels passen erin
-              // (kleinere spacing tussen icons).
+              // Schaalfactor: hoeveel pixels per game-unit in de editor-canvas.
+              // 0.4 = 1 viewport (~320px) toont ongeveer 1 game-screen-width (~800u).
+              const PIX_PER_UNIT = 0.4;
               const editorBreedte = LEVEL_LENGTE;
-              const tool = TOOLS.find((t) => t.id === editorTool) || TOOLS[0];
+              const innerCanvasW = editorBreedte * PIX_PER_UNIT;
+              const tool = ALL_TOOLS.find((t) => t.id === editorTool) || MECHANICA[0];
               const isAdmin = isObliterAdmin;
+              const handleScroll = () => {
+                const sl = editorScrollRef.current?.scrollLeft || 0;
+                if (sl !== editorScrollPx) setEditorScrollPx(sl);
+              };
               const handleCanvasTap = (e) => {
+                // Tap is op de inner-div (innerCanvasW breed) — getBoundingClientRect
+                // geeft inner bounds, dus tapX is positie in inner-canvas (al inclusief scroll).
                 const rect = e.currentTarget.getBoundingClientRect();
-                const tapX = e.clientX - rect.left;
-                const tapY = e.clientY - rect.top;
-                const wereldX = Math.round((tapX / rect.width) * editorBreedte);
-                const wereldY = Math.round((tapY / rect.height) * TRACK_HOOGTE);
+                const innerX = e.clientX - rect.left;
+                const innerY = e.clientY - rect.top;
+                if (innerX < 0 || innerY < 0 || innerX > rect.width || innerY > rect.height) return;
+                const wereldX = Math.round((innerX / rect.width) * editorBreedte);
+                const wereldY = Math.max(0, Math.min(TRACK_HOOGTE, Math.round((innerY / rect.height) * TRACK_HOOGTE)));
                 // Kost-check (admin negeert)
                 if (!isAdmin && tool.kost > 0 && munten < tool.kost) {
                   setEditorOpslaan({ bezig: false, error: `Niet genoeg munten (${tool.kost} nodig, je hebt er ${munten})`, ok: false });
                   return;
                 }
                 if (!isAdmin && tool.kost > 0) {
-                  // Trek munten af + persist
                   setMunten((m) => {
                     const nieuw = Math.max(0, m - tool.kost);
                     try { schrijfInt(muntenKey, nieuw); } catch {}
                     return nieuw;
                   });
                 }
-                const yKritiekeTypes = ["ring", "magneet", "hart", "bom", "mijn"];
-                setEditorObstakels((arr) => [
-                  ...arr,
-                  { type: tool.id, x: wereldX, y: yKritiekeTypes.includes(tool.id) ? wereldY : undefined },
-                ]);
+                // Vrije Y voor alles — speler bepaalt zelf de hoogte
+                setEditorObstakels((arr) => [...arr, { type: tool.id, x: wereldX, y: wereldY }]);
                 setEditorOpslaan({ bezig: false, error: null, ok: false });
+              };
+              const handleMiniMapTap = (e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                const targetScroll = (ratio * innerCanvasW) - (editorViewportW / 2);
+                if (editorScrollRef.current) {
+                  editorScrollRef.current.scrollTo({ left: Math.max(0, targetScroll), behavior: "smooth" });
+                }
               };
               const handleVerwijderLaatste = () => {
                 setEditorObstakels((arr) => arr.slice(0, -1));
@@ -7802,9 +7929,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       </button>
                     ))}
                   </div>
-                  {/* Palet */}
+                  {/* Palet-categorie */}
+                  <div style={{ display: "flex", gap: 4, marginBottom: 6 }}>
+                    <button
+                      onClick={() => setPaletCategorie("mechanica")}
+                      style={{ flex: 1, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.18)", background: paletCategorie === "mechanica" ? "rgba(255,157,64,0.18)" : "rgba(255,255,255,0.04)", color: paletCategorie === "mechanica" ? "#ff9d40" : "rgba(255,255,255,0.65)", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      🎮 Mechanica
+                    </button>
+                    <button
+                      onClick={() => setPaletCategorie("decor")}
+                      style={{ flex: 1, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.18)", background: paletCategorie === "decor" ? "rgba(105,240,174,0.15)" : "rgba(255,255,255,0.04)", color: paletCategorie === "decor" ? "#69f0ae" : "rgba(255,255,255,0.65)", fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      🌳 Decor
+                    </button>
+                  </div>
+                  {/* Tools voor de actieve categorie */}
                   <div style={{ display: "flex", gap: 6, marginBottom: 8, flexWrap: "wrap" }}>
-                    {TOOLS.map((t) => {
+                    {TOOLS_HUIDIG.map((t) => {
                       const actief = editorTool === t.id;
                       const betaalbaar = isAdmin || t.kost === 0 || munten >= t.kost;
                       return (
@@ -7835,57 +7977,135 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     })}
                   </div>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginBottom: 8 }}>
-                    Tap op het track om <strong>{tool.emoji} {tool.label}</strong> te plaatsen
-                    {!isAdmin && tool.kost > 0 && ` (kost ${tool.kost} munten per stuk)`}
+                    Tap op het track om <strong>{tool.emoji} {tool.label}</strong> te plaatsen — vrije X &amp; Y
+                    {!isAdmin && tool.kost > 0 && ` · kost ${tool.kost} munten`}
                   </div>
-                  {/* Track-canvas (geconcept) */}
+                  {/* Track-canvas — scrollable, inner div is editorBreedte * PIX_PER_UNIT breed */}
                   <div
-                    onClick={handleCanvasTap}
+                    ref={editorScrollRef}
+                    onScroll={handleScroll}
                     style={{
                       position: "relative",
                       width: "100%",
                       height: TRACK_HOOGTE,
+                      overflowX: "auto",
+                      overflowY: "hidden",
+                      WebkitOverflowScrolling: "touch",
                       background: "linear-gradient(180deg, #1a2740 0%, #2a3f5f 100%)",
                       borderRadius: 12,
                       border: "1px solid rgba(255,255,255,0.15)",
-                      cursor: "crosshair",
-                      overflow: "hidden",
-                      marginBottom: 8,
+                      marginBottom: 6,
                     }}
                   >
-                    {/* grond-lijn */}
-                    <div style={{ position: "absolute", left: 0, right: 0, bottom: 30, height: 2, background: "rgba(255,255,255,0.3)" }} />
-                    {/* plafond-lijn */}
-                    <div style={{ position: "absolute", left: 0, right: 0, top: 18, height: 2, background: "rgba(255,255,255,0.2)" }} />
+                    <div
+                      onClick={handleCanvasTap}
+                      style={{
+                        position: "relative",
+                        width: innerCanvasW,
+                        height: TRACK_HOOGTE,
+                        cursor: "crosshair",
+                      }}
+                    >
+                      {/* grond-lijn */}
+                      <div style={{ position: "absolute", left: 0, right: 0, bottom: 30, height: 2, background: "rgba(255,255,255,0.3)", pointerEvents: "none" }} />
+                      {/* plafond-lijn */}
+                      <div style={{ position: "absolute", left: 0, right: 0, top: 18, height: 2, background: "rgba(255,255,255,0.2)", pointerEvents: "none" }} />
+                      {/* Start- en eind-vlaggen */}
+                      <div style={{ position: "absolute", left: 4, top: 4, fontSize: 10, color: "rgba(105,240,174,0.85)", fontWeight: 700, pointerEvents: "none" }}>▶ START</div>
+                      <div style={{ position: "absolute", right: 4, top: 4, fontSize: 10, color: "rgba(255,200,60,0.85)", fontWeight: 700, pointerEvents: "none" }}>FINISH 🏁</div>
+                      {editorObstakels.map((o, i) => {
+                        const meta = ALL_TOOLS.find((tt) => tt.id === o.type);
+                        const isDecor = typeof o.type === "string" && o.type.startsWith("decor_");
+                        const xPct = (o.x / editorBreedte) * 100;
+                        // Vrije Y — gebruik o.y, met fallback voor backward-compat (oude items zonder y)
+                        let yVal = o.y;
+                        if (yVal == null) {
+                          if (o.type === "plafondstekel") yVal = 18;
+                          else if (o.type === "platform") yVal = 110;
+                          else yVal = 175;
+                        }
+                        const yPct = (yVal / TRACK_HOOGTE) * 100;
+                        return (
+                          <div
+                            key={i}
+                            style={{
+                              position: "absolute",
+                              left: `${xPct}%`,
+                              top: `${yPct}%`,
+                              transform: "translate(-50%, -50%)",
+                              fontSize: isDecor ? 18 : 22,
+                              opacity: isDecor ? 0.85 : 1,
+                              pointerEvents: "none",
+                              filter: isDecor ? "drop-shadow(0 1px 2px rgba(0,0,0,0.4))" : "none",
+                            }}
+                          >
+                            {meta?.emoji || "❓"}
+                          </div>
+                        );
+                      })}
+                      {editorObstakels.length === 0 && (
+                        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13, pointerEvents: "none" }}>
+                          Tap hier om {paletCategorie === "decor" ? "decor" : "obstakels"} te plaatsen
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  {/* Mini-map: hele level in vogelvlucht + viewport-rechthoek */}
+                  <div
+                    onClick={handleMiniMapTap}
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: 50,
+                      background: "rgba(0,0,0,0.35)",
+                      borderRadius: 8,
+                      border: "1px solid rgba(255,255,255,0.12)",
+                      overflow: "hidden",
+                      cursor: "pointer",
+                      marginBottom: 8,
+                    }}
+                    title="Tap om naar dit deel van het level te scrollen"
+                  >
+                    {/* Decor + obstakel-dots */}
                     {editorObstakels.map((o, i) => {
-                      const t = TOOLS.find((tt) => tt.id === o.type);
-                      const x = (o.x / editorBreedte) * 100;
-                      let topPercent;
-                      if (o.type === "plafondstekel") topPercent = 8;
-                      else if (o.type === "platform") topPercent = 50;
-                      else if (o.type === "ring" || o.type === "magneet" || o.type === "hart" || o.type === "bom" || o.type === "mijn") {
-                        topPercent = ((o.y || 110) / TRACK_HOOGTE) * 100;
-                      } else topPercent = 78; // grond-niveau (spike/blok/schans)
+                      const isDecor = typeof o.type === "string" && o.type.startsWith("decor_");
+                      const xPct = (o.x / editorBreedte) * 100;
+                      let yVal = o.y;
+                      if (yVal == null) yVal = o.type === "plafondstekel" ? 18 : o.type === "platform" ? 110 : 175;
+                      const yPct = (yVal / TRACK_HOOGTE) * 100;
                       return (
                         <div
                           key={i}
                           style={{
                             position: "absolute",
-                            left: `${x}%`,
-                            top: `${topPercent}%`,
+                            left: `${xPct}%`,
+                            top: `${yPct}%`,
                             transform: "translate(-50%, -50%)",
-                            fontSize: 22,
+                            width: isDecor ? 4 : 5,
+                            height: isDecor ? 4 : 5,
+                            borderRadius: 2,
+                            background: isDecor ? "rgba(105,240,174,0.7)" : "rgba(255,200,60,0.95)",
                             pointerEvents: "none",
                           }}
-                        >
-                          {t?.emoji || "❓"}
-                        </div>
+                        />
                       );
                     })}
-                    {editorObstakels.length === 0 && (
-                      <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.35)", fontSize: 13, pointerEvents: "none" }}>
-                        Tap hier om obstakels te plaatsen
-                      </div>
+                    {/* Viewport-rechthoek */}
+                    {innerCanvasW > 0 && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: `${(editorScrollPx / innerCanvasW) * 100}%`,
+                          width: `${Math.min(100, (editorViewportW / innerCanvasW) * 100)}%`,
+                          height: "100%",
+                          background: "rgba(255,200,60,0.10)",
+                          border: "2px solid rgba(255,200,60,0.6)",
+                          borderRadius: 4,
+                          pointerEvents: "none",
+                          boxSizing: "border-box",
+                        }}
+                      />
                     )}
                   </div>
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 12 }}>
