@@ -4838,13 +4838,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 16, grootte: 3, zwaartekracht: 0.08, glow: 0 });
         }
       } else {
-        // normale grond-clamp
-        if (speler.y >= GROND_Y) {
+        // normale grond-clamp — gebruik vloerY voor hill-aware landing.
+        // Bij vlakke vloer (donker biome / non-hills) vloerY = GROND_Y, dus
+        // gedrag blijft identiek aan voor de rebrand.
+        const playerWX = worldScrollX + speler.x;
+        const grondYNu = vloerY(playerWX);
+        if (speler.y >= grondYNu) {
           if (speler.springt) {
             spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, zwaartekracht: 0.1, glow: 12 });
             spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
           }
-          speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
+          speler.y = grondYNu; speler.snelheidY = 0; speler.springt = false; speler.sprongTeller = 0;
+          // Rotatie volgt slope in hills-mode, anders 0 (vlakke grond)
+          speler.rotatie = hillsActief() ? Math.atan(vloerSlope(playerWX)) * 0.7 : 0;
           // HELL-MODE: lava-damage zodra speler op de grond is. hpFlashTeller
           // (45-frame i-frames) regelt de cooldown — geen extra logic nodig.
           if (hellMode && hellFadeIn === 0 && vliegFrames === 0 && flipFrames === 0) {
@@ -4854,6 +4860,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             hitTotale();
             if (!spelLoopt) return;
           }
+        } else if (!speler.springt && hillsActief()) {
+          // Speler op de grond maar hill daalt vooruit — pull-down naar nieuwe
+          // vloer-y zodat 'ie meerolt ipv te zweven boven dalen.
+          speler.y = grondYNu;
+          speler.snelheidY = 0;
+          speler.rotatie = Math.atan(vloerSlope(playerWX)) * 0.7;
         }
         // plafond-clamp: speler kan niet boven het plafond uit (anders vliegt hij buiten beeld)
         const minY = PLAFOND_HOOGTE + 2;
