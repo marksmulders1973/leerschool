@@ -7822,28 +7822,29 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           <div style={{ width: "100%", maxWidth: 720, padding: "12px 14px", color: "#fff" }}>
             {(() => {
               const MECHANICA = [
-                { id: "spike",         label: "Spike",         emoji: "🔺", kost: 0 },
-                { id: "blok",          label: "Blok",          emoji: "🟦", kost: 0 },
-                { id: "ring",          label: "Ring",          emoji: "💍", kost: 0 },
-                { id: "platform",      label: "Platform",      emoji: "🪂", kost: 0 },
-                { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5 },
-                { id: "schans",        label: "Schans",        emoji: "📐", kost: 5 },
-                { id: "trampoline",    label: "Trampoline",    emoji: "🪤", kost: 8 },
-                { id: "magneet",       label: "Magneet",       emoji: "🧲", kost: 10 },
-                { id: "mijn",          label: "Mijn",          emoji: "💣", kost: 10 },
-                { id: "spookje",       label: "Spookje",       emoji: "👻", kost: 5 },
-                { id: "patrouille",    label: "Patrouille",    emoji: "👻", kost: 8 },
-                { id: "vallende_steen",label: "Meteoor",       emoji: "☄️", kost: 6 },
-                { id: "bliksem",       label: "Bliksem",       emoji: "⚡", kost: 7 },
-                { id: "schild",        label: "Schild",        emoji: "🛡️", kost: 12 },
-                { id: "zone_lowgrav",  label: "Low-grav",      emoji: "🪶", kost: 6 },
-                { id: "zone_boost",    label: "Boost",         emoji: "💨", kost: 6 },
-                { id: "zone_slow",     label: "Slow-zone",     emoji: "🐢", kost: 4 },
-                { id: "hart",          label: "Hartje",        emoji: "❤️", kost: 15 },
-                { id: "bom",           label: "Bom",           emoji: "💥", kost: 20 },
+                { id: "spike",         label: "Spike",         emoji: "🔺", kost: 0,  uitleg: "Hit = af. Spring eroverheen." },
+                { id: "blok",          label: "Blok",          emoji: "🟦", kost: 0,  uitleg: "Botst je af. Geen schade, wel snelheidsverlies." },
+                { id: "ring",          label: "Ring",          emoji: "💍", kost: 0,  uitleg: "+1 munt + streak-multiplier x1→x5." },
+                { id: "platform",      label: "Platform",      emoji: "🪂", kost: 0,  uitleg: "Lichtblauwe plank halverwege — veilige landing." },
+                { id: "plafondstekel", label: "Plafondstekel", emoji: "⬇️", kost: 5,  uitleg: "Hangt aan plafond. Hit = af. Spring niet te hoog." },
+                { id: "schans",        label: "Schans",        emoji: "📐", kost: 5,  uitleg: "Auto super-sprong (1.7× hoger) + ringen in de boog." },
+                { id: "trampoline",    label: "Trampoline",    emoji: "🪤", kost: 8,  uitleg: "Mega-bounce: 2.4× hoger dan schans, geen safe-zone." },
+                { id: "magneet",       label: "Magneet",       emoji: "🧲", kost: 10, uitleg: "Trekt 8 sec lang alle ringen naar je toe." },
+                { id: "mijn",          label: "Mijn",          emoji: "💣", kost: 10, uitleg: "Hangt stil in de lucht. Hit = af." },
+                { id: "spookje",       label: "Spookje",       emoji: "👻", kost: 5,  uitleg: "Zweeft stil op gegeven hoogte. Hit = af." },
+                { id: "patrouille",    label: "Patrouille",    emoji: "👻", kost: 8,  uitleg: "Spookje dat heen-en-weer beweegt (~70px range)." },
+                { id: "vallende_steen",label: "Meteoor",       emoji: "☄️", kost: 6,  uitleg: "Valt naar beneden onder zwaartekracht. Wegduiken!" },
+                { id: "bliksem",       label: "Bliksem",       emoji: "⚡", kost: 7,  uitleg: "1.5s aan / 1.5s uit. Timing-puzzel." },
+                { id: "schild",        label: "Schild",        emoji: "🛡️", kost: 12, uitleg: "Pickup → 5 sec onkwetsbaar (raket = 10 sec)." },
+                { id: "zone_lowgrav",  label: "Low-grav",      emoji: "🪶", kost: 6,  uitleg: "Lichte zwaartekracht — je springt veel hoger en zweeft." },
+                { id: "zone_boost",    label: "Boost",         emoji: "💨", kost: 6,  uitleg: "Wereld scrollt 1.5× sneller. Hou je vast!" },
+                { id: "zone_slow",     label: "Slow-zone",     emoji: "🐢", kost: 4,  uitleg: "Wereld scrollt 0.55× langzamer — makkelijker dodgen." },
+                { id: "hart",          label: "Hartje",        emoji: "❤️", kost: 15, uitleg: "+1 leven (max 5)." },
+                { id: "bom",           label: "Bom",           emoji: "💥", kost: 20, uitleg: "Pickup → vernietigt alle obstakels op het scherm." },
               ];
               const DECOR_TOOLS = DECOR_CATALOG.map((d) => ({
                 id: d.id, label: d.label, emoji: d.emoji, kost: 0,
+                uitleg: "Decoratie — alleen visueel, geen botsing.",
               }));
               const ALL_TOOLS = [...MECHANICA, ...DECOR_TOOLS];
               const TOOLS_HUIDIG = paletCategorie === "decor" ? DECOR_TOOLS : MECHANICA;
@@ -8237,9 +8238,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       );
                     })}
                   </div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginBottom: 8 }}>
-                    Tap op het track om <strong>{tool.emoji} {tool.label}</strong> te plaatsen — vrije X &amp; Y
-                    {!isAdmin && tool.kost > 0 && ` · kost ${tool.kost} munten`}
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.7)", marginBottom: 8, lineHeight: 1.45, padding: "6px 10px", borderRadius: 6, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <strong style={{ color: "#ff9d40" }}>{tool.emoji} {tool.label}</strong>
+                    {tool.uitleg && <span style={{ color: "rgba(255,255,255,0.65)" }}> — {tool.uitleg}</span>}
+                    {!isAdmin && tool.kost > 0 && <span style={{ color: "#ffd54f", marginLeft: 4 }}>· {tool.kost} munten/stuk</span>}
                   </div>
                   {/* Track-canvas — scrollable, inner div is editorBreedte * PIX_PER_UNIT breed */}
                   <div
