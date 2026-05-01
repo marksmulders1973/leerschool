@@ -590,6 +590,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       plafondStekelSpawnTeller = 999999;
       zwevendeMineSpawnTeller = 999999;
       logoSpawnTeller = 999999;
+      // Hell-mode bij boss reset (boss neemt het over)
+      hellMode = false;
+      hellFrames = 0;
+      hellFadeIn = 0;
+      hellFadeOut = 0;
+      vonken.length = 0;
       // dramatische intro: piep + confetti
       piep(196, 0.30, "sawtooth", 0.20); // dreigend laag
       setTimeout(() => piep(220, 0.25, "sawtooth", 0.18), 200);
@@ -1283,13 +1289,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // 'dungeon-mode' (dark-blue overlay + brick-edges). Bestaande gameplay
     // loopt door — alleen het scherm ziet er anders uit. Bij overleven:
     // bonus-hart + score-boost. Dood = normaal life-verlies, geen extra straf.
-    const portals = [];
+    const portals = []; // entries kunnen `type: 'dungeon'` (default) of `type: 'hell'` zijn
     let dungeonMode = false;
     let dungeonFrames = 0;
     let dungeonFadeIn = 0;        // > 0 = aan het inkomen
     let dungeonFadeOut = 0;       // > 0 = aan het uitgaan
     const DUNGEON_DUUR = 1500;    // ~25 sec @ 60fps
     const DUNGEON_FADE = 30;      // frames voor fade-in / fade-out
+
+    // ── HELL-MODE ── Geometry-Dash-stijl block-platformer over lava.
+    // Activeert via een rood hell-portaal (zeldzaam, vanaf score 100).
+    // Tijdens hellMode: vlakke grond = lava (HP-damage bij staan), platforms
+    // spawnen vaker en op meerdere hoogtes — speler MOET van blok naar blok.
+    let hellMode = false;
+    let hellFrames = 0;
+    let hellFadeIn = 0;
+    let hellFadeOut = 0;
+    const HELL_DUUR = 1800;       // ~30 sec
+    const HELL_FADE = 30;
+    let lavaDamageCooldown = 0;   // anti-spam-i-frames bovenop hpFlashTeller
+    const vonken = [];            // opstijgende lava-vonkjes (visueel)
+    let vonkSpawnTeller = 0;
     // Haaien — alleen tijdens dungeon-mode. Zwemmen aan vloerniveau,
     // bij contact: levenVerlies (geen spikes meer in dungeon, water erbij).
     const haaien = [];
@@ -2076,34 +2096,187 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
     }
     function tekenPortal(p) {
-      // Paarse swirl-portal: 3 concentrische ringen die roteren met fase
+      // Hell-portaal: rood-oranje, ruwer en dreigender. Dungeon: paars-swirl.
+      const isHell = p.type === "hell";
       ctx.save();
       const cx = p.x;
       const cy = p.y;
       const r = p.grootte / 2;
-      ctx.shadowBlur = 22;
-      ctx.shadowColor = "#a040ff";
-      // Buitenste ring
-      ctx.strokeStyle = "rgba(160, 64, 255, 0.85)";
-      ctx.lineWidth = 4 * SCHAAL;
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, p.fase, p.fase + Math.PI * 1.7);
-      ctx.stroke();
-      // Middelste ring (tegen-roterend)
-      ctx.strokeStyle = "rgba(220, 140, 255, 0.75)";
-      ctx.lineWidth = 3 * SCHAAL;
-      ctx.beginPath();
-      ctx.arc(cx, cy, r * 0.65, -p.fase * 1.3, -p.fase * 1.3 + Math.PI * 1.7);
-      ctx.stroke();
-      // Centrum-glow
-      ctx.shadowBlur = 0;
-      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 0.4);
-      grad.addColorStop(0, "rgba(255, 200, 255, 0.85)");
-      grad.addColorStop(1, "rgba(120, 40, 200, 0)");
+      if (isHell) {
+        ctx.shadowBlur = 28;
+        ctx.shadowColor = "#ff3020";
+        // buitenste vlam-ring
+        ctx.strokeStyle = "rgba(255, 80, 30, 0.9)";
+        ctx.lineWidth = 5 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, p.fase, p.fase + Math.PI * 1.6);
+        ctx.stroke();
+        // middelste hete ring
+        ctx.strokeStyle = "rgba(255, 200, 80, 0.85)";
+        ctx.lineWidth = 3.5 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 0.65, -p.fase * 1.4, -p.fase * 1.4 + Math.PI * 1.6);
+        ctx.stroke();
+        // centrum-glow
+        ctx.shadowBlur = 0;
+        const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 0.45);
+        grad.addColorStop(0, "rgba(255, 240, 180, 0.95)");
+        grad.addColorStop(0.6, "rgba(255, 100, 30, 0.6)");
+        grad.addColorStop(1, "rgba(120, 20, 0, 0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 0.45, 0, Math.PI * 2);
+        ctx.fill();
+      } else {
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#a040ff";
+        ctx.strokeStyle = "rgba(160, 64, 255, 0.85)";
+        ctx.lineWidth = 4 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, p.fase, p.fase + Math.PI * 1.7);
+        ctx.stroke();
+        ctx.strokeStyle = "rgba(220, 140, 255, 0.75)";
+        ctx.lineWidth = 3 * SCHAAL;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 0.65, -p.fase * 1.3, -p.fase * 1.3 + Math.PI * 1.7);
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+        const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r * 0.4);
+        grad.addColorStop(0, "rgba(255, 200, 255, 0.85)");
+        grad.addColorStop(1, "rgba(120, 40, 200, 0)");
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 0.4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+    function tekenLavaGrond() {
+      // animated lava-grond: gradient + horizontale wave + vlammetjes-rand
+      const grondTop = GROND_Y + SPELER_GROOTTE;
+      const grad = ctx.createLinearGradient(0, grondTop - 8 * SCHAAL, 0, H);
+      grad.addColorStop(0, "#fff4a0");
+      grad.addColorStop(0.15, "#ffd040");
+      grad.addColorStop(0.4, "#ff7020");
+      grad.addColorStop(1, "#a01010");
       ctx.fillStyle = grad;
+      ctx.fillRect(0, grondTop - 6 * SCHAAL, W, H - grondTop + 6 * SCHAAL);
+      // glow boven de lava
+      ctx.save();
+      ctx.shadowBlur = 28;
+      ctx.shadowColor = "#ff8030";
+      ctx.fillStyle = "rgba(255, 200, 80, 0.5)";
+      ctx.fillRect(0, grondTop - 4 * SCHAAL, W, 4 * SCHAAL);
+      ctx.restore();
+      // wave-rand (vlammetjes-look)
+      ctx.save();
+      ctx.fillStyle = "#ffe080";
+      ctx.shadowBlur = 18;
+      ctx.shadowColor = "#ff5020";
       ctx.beginPath();
-      ctx.arc(cx, cy, r * 0.4, 0, Math.PI * 2);
+      const offset = (frameTeller * 0.6) % 30;
+      ctx.moveTo(-30, grondTop);
+      for (let x = -30; x < W + 30; x += 12) {
+        const yWave = grondTop + Math.sin((x + offset) * 0.18) * 3 - 2;
+        ctx.lineTo(x, yWave);
+      }
+      ctx.lineTo(W + 30, grondTop);
+      ctx.closePath();
       ctx.fill();
+      ctx.restore();
+    }
+    function tekenHellAchtergrond() {
+      // dark-red gradient + parallax-silhouet
+      const bg = ctx.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, "#1a0408");
+      bg.addColorStop(0.5, "#3a0810");
+      bg.addColorStop(1, "#6a1410");
+      ctx.fillStyle = bg;
+      ctx.fillRect(0, 0, W, H);
+      // glow van onderaf (lava-licht weerkaatst op het plafond)
+      ctx.save();
+      const lavaGlow = ctx.createLinearGradient(0, H * 0.55, 0, H);
+      lavaGlow.addColorStop(0, "rgba(255, 100, 30, 0)");
+      lavaGlow.addColorStop(1, "rgba(255, 140, 50, 0.35)");
+      ctx.fillStyle = lavaGlow;
+      ctx.fillRect(0, H * 0.55, W, H * 0.45);
+      // silhouette-rotsen op de achtergrond (parallax, langzaam)
+      ctx.fillStyle = "rgba(20, 0, 0, 0.6)";
+      const parallaxOff = (frameTeller * 0.4) % 200;
+      for (let i = -1; i < Math.ceil(W / 200) + 1; i++) {
+        const baseX = i * 200 - parallaxOff;
+        ctx.beginPath();
+        ctx.moveTo(baseX, H);
+        ctx.lineTo(baseX + 30, H * 0.65);
+        ctx.lineTo(baseX + 70, H * 0.78);
+        ctx.lineTo(baseX + 110, H * 0.62);
+        ctx.lineTo(baseX + 160, H * 0.80);
+        ctx.lineTo(baseX + 200, H * 0.70);
+        ctx.lineTo(baseX + 200, H);
+        ctx.closePath();
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+    function tekenVonken() {
+      ctx.save();
+      for (const v of vonken) {
+        const alpha = Math.min(1, v.leven / 30);
+        ctx.globalAlpha = alpha;
+        ctx.shadowBlur = 14;
+        ctx.shadowColor = v.kleur;
+        ctx.fillStyle = v.kleur;
+        ctx.beginPath();
+        ctx.arc(v.x, v.y, v.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+    function tekenHellPlatform(p) {
+      // textured rocky red block: paarse-rode keien-pattern + neon edge-glow
+      const h = PLATFORM_HOOGTE;
+      ctx.save();
+      // outer neon glow
+      ctx.shadowBlur = 22;
+      ctx.shadowColor = "#ff3060";
+      // body — donker-rood gradient
+      const grad = ctx.createLinearGradient(0, p.y, 0, p.y + h);
+      grad.addColorStop(0, "#7a1828");
+      grad.addColorStop(0.5, "#5a0c1c");
+      grad.addColorStop(1, "#2a0408");
+      ctx.fillStyle = grad;
+      ctx.fillRect(p.x, p.y, p.breedte, h);
+      // pebble-textuur: kleine donkere ronde stippen erin (deterministisch via x)
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(40, 4, 8, 0.7)";
+      const pebbleStep = 8 * SCHAAL;
+      for (let dx = 4; dx < p.breedte - 2; dx += pebbleStep) {
+        for (let dy = 2; dy < h - 2; dy += pebbleStep) {
+          // kleine offset voor 'stenig' uiterlijk
+          const ox = ((Math.floor((p.x + dx) * 0.13)) % 5) - 2;
+          ctx.beginPath();
+          ctx.arc(p.x + dx + ox, p.y + dy, 1.2 * SCHAAL, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      // top-rand: helder roze-rood neon
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#ff80a0";
+      ctx.fillStyle = "#ff5080";
+      ctx.fillRect(p.x, p.y, p.breedte, 2 * SCHAAL);
+      // bovenste highlight-streep (cyaan voor 3D-feel)
+      ctx.shadowBlur = 0;
+      ctx.fillStyle = "rgba(255, 240, 220, 0.85)";
+      ctx.fillRect(p.x + 2, p.y + 2 * SCHAAL, p.breedte - 4, 1);
+      // onder-rand: donkere lijn
+      ctx.fillStyle = "rgba(0,0,0,0.5)";
+      ctx.fillRect(p.x, p.y + h - 2, p.breedte, 2);
+      // links/rechts neon outline
+      ctx.shadowBlur = 14;
+      ctx.shadowColor = "#ff3060";
+      ctx.strokeStyle = "#ff5080";
+      ctx.lineWidth = 1.2;
+      ctx.strokeRect(p.x + 0.5, p.y + 0.5, p.breedte - 1, h - 1);
       ctx.restore();
     }
     function tekenDungeonOverlay() {
@@ -2269,6 +2442,45 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (dungeonFadeOut > 0) {
         ctx.fillStyle = `rgba(0,0,0,${((DUNGEON_FADE - dungeonFadeOut) / DUNGEON_FADE) * 0.90})`;
         ctx.fillRect(0, 0, W, H);
+      }
+      ctx.restore();
+    }
+    function tekenHellOverlay() {
+      if (!hellMode && hellFadeOut === 0) return;
+      ctx.save();
+      // vonken (opstijgende lava-spats)
+      tekenVonken();
+      // fade-in: zwart tint dat oplost
+      if (hellFadeIn > 0) {
+        ctx.fillStyle = `rgba(40, 4, 0, ${(hellFadeIn / HELL_FADE) * 0.95})`;
+        ctx.fillRect(0, 0, W, H);
+      }
+      if (hellFadeOut > 0) {
+        ctx.fillStyle = `rgba(40, 4, 0, ${((HELL_FADE - hellFadeOut) / HELL_FADE) * 0.95})`;
+        ctx.fillRect(0, 0, W, H);
+      }
+      // "HELL MODE" banner + tijd-balk bovenaan tijdens actieve mode
+      if (hellMode && hellFadeIn === 0 && hellFadeOut === 0) {
+        const balkX = W * 0.2;
+        const balkY = 38 * SCHAAL;
+        const balkW = W * 0.6;
+        const balkH = 8 * SCHAAL;
+        const fractie = 1 - hellFrames / HELL_DUUR;
+        ctx.shadowBlur = 18;
+        ctx.shadowColor = "#ff5040";
+        ctx.fillStyle = "rgba(20, 0, 0, 0.7)";
+        ctx.fillRect(balkX, balkY, balkW, balkH);
+        const fillGrad = ctx.createLinearGradient(balkX, 0, balkX + balkW, 0);
+        fillGrad.addColorStop(0, "#ff3020");
+        fillGrad.addColorStop(1, "#ffa040");
+        ctx.fillStyle = fillGrad;
+        ctx.fillRect(balkX, balkY, balkW * fractie, balkH);
+        ctx.shadowBlur = 22;
+        ctx.fillStyle = "#ffe080";
+        ctx.font = `bold ${22 * SCHAAL}px Impact, Arial Black, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        ctx.fillText("🔥 HELL MODE — SPRING! 🔥", W / 2, balkY + balkH + 4);
       }
       ctx.restore();
     }
@@ -2611,7 +2823,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // 'm meteen na een boss-fight of dungeon zien kan i.p.v. nog 25 sec
       // wachten. Spawn zelf gebeurt alleen in 'vrije' state.
       if (!periscoop) periscoopSpawnTeller--;
-      if (!bonusFase && !bossActief && !dungeonMode) {
+      if (!bonusFase && !bossActief && !dungeonMode && !hellMode) {
         if (!periscoop && periscoopSpawnTeller <= 0) {
           // Spawn op 0.85 W zodat 'ie binnen de hang-fase bij speler (x=100)
           // aankomt. Te ver rechts (W+30) was te scherpe timing — Mark
@@ -2868,6 +3080,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             spawnParticles(speler.x + 16 * SCHAAL, speler.y + speler.hoogte, 6, "#888888", { spread: 2, opwaarts: 0.5, leven: 20, grootte: 3, zwaartekracht: 0.08, glow: 0 });
           }
           speler.y = GROND_Y; speler.snelheidY = 0; speler.springt = false; speler.rotatie = 0; speler.sprongTeller = 0;
+          // HELL-MODE: lava-damage zodra speler op de grond is. hpFlashTeller
+          // (45-frame i-frames) regelt de cooldown — geen extra logic nodig.
+          if (hellMode && hellFadeIn === 0 && vliegFrames === 0 && flipFrames === 0) {
+            // sissende stoom-particles als hint
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte, 8, "#ffaa30", { spread: 4, opwaarts: 2, leven: 24, grootte: 4, zwaartekracht: -0.05, glow: 14 });
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte, 4, "#ff5040", { spread: 3, opwaarts: 1.5, leven: 18, grootte: 3, zwaartekracht: -0.04, glow: 16 });
+            hitTotale();
+            if (!spelLoopt) return;
+          }
         }
         // plafond-clamp: speler kan niet boven het plafond uit (anders vliegt hij buiten beeld)
         const minY = PLAFOND_HOOGTE + 2;
@@ -2887,10 +3108,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // wel spawnen). Mark: 'na bonus zie ik veel ringen, dingen dubbel'.
       if (!bonusFase) volgendObstakelOver--;
       if (!bonusFase && volgendObstakelOver <= 0) {
-        if (schansVeiligeFrames > 0 || dungeonMode) {
-          // Geen grond-obstakels tijdens vlucht/landing na schans, en niet
-          // in dungeon-mode (water op de vloer maakt blocks onzichtbaar —
-          // dungeon krijgt zijn hazard via haaien).
+        if (schansVeiligeFrames > 0 || dungeonMode || hellMode) {
+          // Geen grond-obstakels tijdens vlucht/landing na schans, niet
+          // in dungeon-mode (water op de vloer = blocks onzichtbaar) en niet
+          // in hell-mode (lava = grond zelf is dodelijk).
           volgendObstakelOver = 30;
         } else {
           maakObstakel();
@@ -2948,9 +3169,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             bombPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
           }
           // PORTAL naar dungeon-wereld — elke ~8 obstakels, 90% kans
-          // Niet tijdens boss/flip/loop/dungeon zelf.
+          // Niet tijdens boss/flip/loop/dungeon/hell zelf.
           if (
-            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode &&
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 8 === 0 &&
             Math.random() < 0.9
           ) {
@@ -2961,13 +3182,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               grootte: 50 * SCHAAL,
               fase: 0,
               opgepakt: false,
+              type: "dungeon",
+            });
+          }
+          // HELL-PORTAAL — zeldzaam, vanaf score 100. Elke ~32 obstakels, 60% kans.
+          // Niet tijdens boss/dungeon/hell/flip/loop. Rood + ander effect.
+          if (
+            !bossActief && flipFrames === 0 && !loopActief && !dungeonMode && !hellMode &&
+            score >= 100 &&
+            aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 32 === 0 &&
+            Math.random() < 0.6
+          ) {
+            const yPos = (170 + Math.random() * 90) * SCHAAL;
+            portals.push({
+              x: W + 40,
+              y: yPos,
+              grootte: 56 * SCHAAL,
+              fase: 0,
+              opgepakt: false,
+              type: "hell",
             });
           }
           // SCHANS / LOOPING — elke ~6 obstakels, 85% kans. Skip tijdens boss,
           // FLIP en dungeon (super-jump in dungeon = vlieg door plafond-stekels
           // = direct dood).
           if (
-            !bossActief && flipFrames === 0 && !dungeonMode &&
+            !bossActief && flipFrames === 0 && !dungeonMode && !hellMode &&
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
             Math.random() < 0.85
           ) {
@@ -3109,19 +3349,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const p = portals[i];
         p.x -= effSnelheid;
         p.fase += 0.10;
-        // Pickup-collision (enkel als niet al in dungeon en geen boss/flip/loop)
-        if (!p.opgepakt && !dungeonMode && !bossActief && flipFrames === 0 && !loopActief) {
+        // Pickup-collision (enkel als niet al in dungeon/hell en geen boss/flip/loop)
+        if (!p.opgepakt && !dungeonMode && !hellMode && !bossActief && flipFrames === 0 && !loopActief) {
           const dx = (speler.x + speler.breedte / 2) - p.x;
           const dy = (speler.y + speler.hoogte / 2) - p.y;
           if (Math.sqrt(dx * dx + dy * dy) < (p.grootte + speler.breedte) / 2) {
             p.opgepakt = true;
-            // Activeer dungeon-mode
-            dungeonMode = true;
-            dungeonFrames = 0;
-            dungeonFadeIn = DUNGEON_FADE;
-            spawnParticles(p.x, p.y, 24, "#a040ff", { spread: 7, opwaarts: 1, leven: 30, grootte: 5, glow: 18 });
-            piep(440, 0.18, "sine", 0.14);
-            setTimeout(() => piep(660, 0.16, "sine", 0.12), 80);
+            if (p.type === "hell") {
+              hellMode = true;
+              hellFrames = 0;
+              hellFadeIn = HELL_FADE;
+              // ruim alles op wat niet bij Hell hoort
+              obstakels.length = 0;
+              plafondStekels.length = 0;
+              schansen.length = 0;
+              fans.length = 0;
+              spawnParticles(p.x, p.y, 30, "#ff4020", { spread: 9, opwaarts: 2, leven: 36, grootte: 6, glow: 24 });
+              spawnParticles(p.x, p.y, 16, "#ffaa30", { spread: 6, opwaarts: 1, leven: 28, grootte: 4, glow: 18 });
+              shakeKracht = Math.max(shakeKracht, 8);
+              piep(110, 0.30, "sawtooth", 0.20);
+              setTimeout(() => piep(85, 0.35, "sawtooth", 0.18), 120);
+            } else {
+              // dungeon (default)
+              dungeonMode = true;
+              dungeonFrames = 0;
+              dungeonFadeIn = DUNGEON_FADE;
+              spawnParticles(p.x, p.y, 24, "#a040ff", { spread: 7, opwaarts: 1, leven: 30, grootte: 5, glow: 18 });
+              piep(440, 0.18, "sine", 0.14);
+              setTimeout(() => piep(660, 0.16, "sine", 0.12), 80);
+            }
           }
         }
         if (p.x + p.grootte < 0 || p.opgepakt) portals.splice(i, 1);
@@ -3129,7 +3385,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // ───── FAN-SPANDOEKEN ─────
       // Periodieke spandoek-spawn met top-3 highscore-namen
       if (!bonusFase) fanSpawnTeller--;
-      if (fanSpawnTeller <= 0 && !bossActief && !dungeonMode) {
+      if (fanSpawnTeller <= 0 && !bossActief && !dungeonMode && !hellMode) {
         spawnFanGroep();
         fanSpawnTeller = FAN_INTERVAL;
       }
@@ -3204,6 +3460,53 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             setTimeout(() => piep(1320, 0.12, "sine", 0.10), 180);
           }
         }
+      }
+      // ───── HELL-MODE-TIMER + lava-vonk-spawn ─────
+      if (hellMode) {
+        hellFrames++;
+        if (hellFadeIn > 0) hellFadeIn--;
+        // opstijgende lava-vonkjes — visueel decor
+        vonkSpawnTeller--;
+        if (vonkSpawnTeller <= 0 && hellFadeIn === 0) {
+          const vx = Math.random() * W;
+          vonken.push({
+            x: vx,
+            y: H - 8 * SCHAAL,
+            vy: -(0.6 + Math.random() * 1.2) * SCHAAL,
+            vx: (Math.random() - 0.5) * 0.4,
+            r: (1.5 + Math.random() * 2) * SCHAAL,
+            leven: 60 + Math.random() * 30,
+            kleur: Math.random() < 0.6 ? "#ffaa30" : "#ff6020",
+          });
+          vonkSpawnTeller = 4 + Math.floor(Math.random() * 6);
+        }
+        // Bij HELL_DUUR: start exit-fade
+        if (hellFrames === HELL_DUUR) {
+          hellFadeOut = HELL_FADE;
+        }
+        if (hellFrames > HELL_DUUR) {
+          hellFadeOut--;
+          if (hellFadeOut <= 0) {
+            // Exit hell — beloning
+            hellMode = false;
+            hellFrames = 0;
+            score += 150;
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 36, "#ffd54f", { spread: 10, opwaarts: 4, leven: 50, grootte: 6, glow: 24 });
+            spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 16, "#ff7040", { spread: 8, opwaarts: 3, leven: 42, grootte: 5, glow: 22 });
+            piep(660, 0.12, "sine", 0.14);
+            setTimeout(() => piep(990, 0.12, "sine", 0.14), 100);
+            setTimeout(() => piep(1320, 0.14, "sine", 0.12), 200);
+          }
+        }
+      }
+      // vonkjes updaten (blijven ook tijdens fade-out leven)
+      for (let i = vonken.length - 1; i >= 0; i--) {
+        const v = vonken[i];
+        v.x += v.vx;
+        v.y += v.vy;
+        v.vy += 0.005;
+        v.leven--;
+        if (v.leven <= 0 || v.y < -10) vonken.splice(i, 1);
       }
       // Beweeg + check collision met haaien (los van dungeonMode-status,
       // bestaande haaien blijven uitscrollen ook na dungeon-end)
@@ -3312,9 +3615,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (h.x < -50 || h.opgepakt) bonusHarten.splice(i, 1);
       }
 
-      // platform spawn — lichtblauwe rust-blokjes halverwege canvas
+      // platform spawn — lichtblauwe rust-blokjes halverwege canvas.
+      // In HELL-MODE: agressievere spawn op 3 hoogtes met gaten ertussen
+      // (lava onder = HP-damage als je staat, dus platforms zijn verplicht).
       if (!bonusFase) platformSpawnTeller--;
-      if (platformSpawnTeller <= 0) {
+      if (hellMode && hellFadeIn === 0 && platformSpawnTeller <= 0) {
+        // 3 hoogte-tiers
+        const LOW_Y = GROND_Y - 60 * SCHAAL;
+        const MID_Y = PLATFORM_Y;
+        const HIGH_Y = PLATFORM_Y - 80 * SCHAAL;
+        const tiers = [LOW_Y, MID_Y, HIGH_Y];
+        const py1 = tiers[Math.floor(Math.random() * 3)];
+        const breedte1 = (110 + Math.random() * 70) * SCHAAL; // smaller dan normaal
+        platforms.push({ x: W + 20, y: py1, breedte: breedte1, hell: true });
+        // ~40% kans: tweede platform op andere hoogte direct erna (stepped)
+        if (Math.random() < 0.40) {
+          const otherTier = tiers.filter((y) => y !== py1)[Math.floor(Math.random() * 2)];
+          const gap = (50 + Math.random() * 60) * SCHAAL;
+          const breedte2 = (90 + Math.random() * 80) * SCHAAL;
+          platforms.push({ x: W + 20 + breedte1 + gap, y: otherTier, breedte: breedte2, hell: true });
+        }
+        platformSpawnTeller = 80 + Math.floor(Math.random() * 50); // 1.3-2.2 sec
+      } else if (!hellMode && platformSpawnTeller <= 0) {
         const breedte = (160 + Math.random() * 140) * SCHAAL; // langer: 160-300
         platforms.push({ x: W + 20, y: PLATFORM_Y, breedte });
         const variant = Math.random();
@@ -3372,7 +3694,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       if (!bonusFase) plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode && !bonusFase) {
+      if (plafondStekelSpawnTeller <= 0 && score >= 3 && !dungeonMode && !hellMode && !bonusFase) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -3413,6 +3735,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         zwevendeMineSpawnTeller <= 0
         && score >= 5
         && !dungeonMode
+        && !hellMode
         && !bonusFase
         && !bossActief
         && schansVeiligeFrames <= 0
@@ -3963,17 +4286,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function teken() {
       ctx.save();
       if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
-      tekenBakstenenMuur(); tekenGlasInLood();
-      // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
-      if (logoGeladen && studiebolLogos.length) {
-        ctx.save();
-        ctx.globalAlpha = 0.42;
-        for (const l of studiebolLogos) {
-          ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
+      if (hellMode) {
+        // Hell-mode: dark-red bg + parallax-rotsen + lava-grond. Skip de
+        // bakstenen-muur, glas-in-lood, lichtbundels, fakkels, plafond.
+        tekenHellAchtergrond();
+        tekenLavaGrond();
+      } else {
+        tekenBakstenenMuur(); tekenGlasInLood();
+        // Studiebol-logo subtiel op de muur (achter lichtbundels en decoratie)
+        if (logoGeladen && studiebolLogos.length) {
+          ctx.save();
+          ctx.globalAlpha = 0.42;
+          for (const l of studiebolLogos) {
+            ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
+          }
+          ctx.restore();
         }
-        ctx.restore();
+        tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
       }
-      tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
 
       // tint tijdens FLIP
       if (flipFrames > 0) {
@@ -4004,8 +4334,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       for (const p of particles) p.teken();
-      // platforms (achter de speler getekend)
+      // platforms (achter de speler getekend) — Hell-stijl tijdens hellMode
       for (const p of platforms) {
+        if (hellMode || p.hell) { tekenHellPlatform(p); continue; }
         ctx.save();
         // glow rondom platform
         ctx.shadowBlur = 18;
@@ -4587,6 +4918,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
+      tekenHellOverlay();
       // Speler NOG EEN KEER tijdens dungeon — anders dekt het ondoorzichtige
       // water (#0e3c70) de rode bal volledig af (alleen schild-glow steekt
       // boven water uit). Mark's klacht: 'onder water ben ik onzichtbaar
@@ -4690,13 +5022,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         teller++;
         ctx.save();
         if (shakeKracht > 0.5) ctx.translate((Math.random() - 0.5) * shakeKracht, (Math.random() - 0.5) * shakeKracht);
-        tekenBakstenenMuur(); tekenGlasInLood();
-        if (logoGeladen && studiebolLogos.length) {
-          ctx.save(); ctx.globalAlpha = 0.42;
-          for (const l of studiebolLogos) ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
-          ctx.restore();
+        if (hellMode) {
+          tekenHellAchtergrond();
+          tekenLavaGrond();
+        } else {
+          tekenBakstenenMuur(); tekenGlasInLood();
+          if (logoGeladen && studiebolLogos.length) {
+            ctx.save(); ctx.globalAlpha = 0.42;
+            for (const l of studiebolLogos) ctx.drawImage(logoImg, l.x, l.y, l.grootte, l.grootte);
+            ctx.restore();
+          }
+          tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
         }
-        tekenLichtbundels(); tekenDecoraties(); tekenFakkels(); tekenPlafond(); tekenGrond(); tekenMist();
         for (let i = particles.length - 1; i >= 0; i--) {
           particles[i].update(); particles[i].teken();
           if (particles[i].dood) particles.splice(i, 1);
@@ -4789,6 +5126,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bonusIntroFrames = 0;
       bonusRingen.length = 0;
       bonusScore = 0;
+      // Hell-mode reset bij respawn
+      hellMode = false;
+      hellFrames = 0;
+      hellFadeIn = 0;
+      hellFadeOut = 0;
+      vonken.length = 0;
       bonusEindFlash = 0;
       speler.x = speler.basisX;
       speler.y = GROND_Y;
