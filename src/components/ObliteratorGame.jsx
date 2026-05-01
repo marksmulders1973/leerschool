@@ -3113,7 +3113,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const f of fans) tekenFanGroep(f);
       tekenSpeler();
       for (const o of obstakels) tekenObstakel(o);
-      for (const h of haaien) tekenHaai(h);
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
       for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
@@ -3655,8 +3654,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // Dungeon-overlay ALS ALLERLAATSTE — boven alles
       tekenDungeonOverlay();
-      // Vissen NA de overlay zodat het water-paneel ze niet grijs tint
+      // Vissen + haaien NA de overlay zodat het water-paneel ze niet grijs tint
       for (const v of vissen) tekenVis(v);
+      for (const h of haaien) tekenHaai(h);
     }
     // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
     const TARGET_FRAME_MS = 1000 / 60;
