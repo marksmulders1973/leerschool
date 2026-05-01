@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
@@ -220,7 +220,29 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const totalSteps = path.steps.length;
   const step = path.steps[stepIdx];
   const checks = step?.checks || [];
-  const currentCheck = checks[checkIdx];
+  const rawCheck = checks[checkIdx];
+
+  // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
+  // de opties (en bijhorende wrongHints) te schudden voorkomen we dat de
+  // speler altijd 'A' kan kiezen. Stabiel binnen één check (memo op
+  // pathId+stepIdx+checkIdx), reshuffle bij volgende check of stap.
+  const currentCheck = useMemo(() => {
+    if (!rawCheck) return null;
+    const opts = rawCheck.options || [];
+    const hints = rawCheck.wrongHints || [];
+    const order = opts.map((_, i) => i);
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+    return {
+      ...rawCheck,
+      options: order.map((idx) => opts[idx]),
+      answer: order.indexOf(rawCheck.answer),
+      wrongHints: order.map((idx) => hints[idx] ?? null),
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathId, stepIdx, checkIdx, rawCheck]);
 
   // Volgende-stap-suggestie bij overview: eerste niet-voltooide
   const firstUnfinishedIdx = (() => {
