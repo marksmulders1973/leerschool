@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import supabase from "./supabase.js";
-import { ensureSession } from "./auth.js";
 import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
@@ -67,6 +66,16 @@ import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/
 import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
+import {
+  buildTextbookKey,
+  fetchPoolQuestions,
+  saveQuestionsToPool,
+  poolRowToQuestion,
+} from "./features/practice/aiPool.js";
+import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
+import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
+import { useAuth } from "./auth/useAuth.js";
+import { useOnline } from "./shared/hooks/useOnline.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
 // Deze constant blijft tijdelijk voor backwards-compat met code die alleen
@@ -93,132 +102,13 @@ const BOTTOMNAV_PAGES = new Set([
 
 const FREE_QUIZ_LIMIT = 20;
 
-// ─── AI question pool helpers ──────────────────────────────────
-// Gegenereerde AI-vragen gaan naar Supabase ai_question_pool zodat de
-// vragenbank groeit en we bij volgende quizzes AI-calls kunnen vermijden.
-const normalizePoolText = (s) => String(s || "").toLowerCase().replace(/\s+/g, " ").trim();
-const computeQHash = (question, subject, level) =>
-  `${subject}|${level}|${normalizePoolText(question)}`.slice(0, 240);
-const buildTextbookKey = (textbook) => {
-  if (!textbook?.bookName) return null;
-  return [textbook.bookName, textbook.chapter || "", textbook.paragraph || textbook.topic || ""]
-    .map(s => String(s || "").trim()).join("|").slice(0, 240);
-};
-const fetchPoolQuestions = async (subject, level, topic, textbookKey, count) => {
-  try {
-    let query = supabase.from("ai_question_pool")
-      .select("question, options, answer, explanation, svg, youtube_url")
-      .eq("subject", subject)
-      .eq("level", level);
-    query = topic ? query.eq("topic", topic) : query.is("topic", null);
-    query = textbookKey ? query.eq("textbook_key", textbookKey) : query.is("textbook_key", null);
-    const { data } = await query.limit(Math.max(count * 5, 30));
-    return data || [];
-  } catch { return []; }
-};
-const saveQuestionsToPool = (qs, subject, level, topic, textbookKey) => {
-  if (!qs?.length) return;
-  const rows = qs
-    .filter(q => q && q.q && Array.isArray(q.options) && q.options.length >= 2 && typeof q.answer === "number")
-    .map(q => ({
-      subject, level,
-      topic: topic || null,
-      textbook_key: textbookKey,
-      question: q.q,
-      options: q.options,
-      answer: q.answer,
-      explanation: q.explanation || null,
-      svg: q.svg || null,
-      youtube_url: q.youtubeUrl || null,
-      q_hash: computeQHash(q.q, subject, level),
-    }));
-  if (!rows.length) return;
-  supabase.from("ai_question_pool")
-    .upsert(rows, { onConflict: "q_hash", ignoreDuplicates: true })
-    .then(() => {})
-    .catch(() => {});
-};
-const poolRowToQuestion = (r) => ({
-  q: r.question,
-  options: r.options,
-  answer: r.answer,
-  explanation: r.explanation || undefined,
-  svg: r.svg || undefined,
-  youtubeUrl: r.youtube_url || undefined,
-});
-
-const TAFEL_VIDEOS = {
-  1:  "https://www.youtube.com/watch?v=1rXBuNLDuM0",
-  2:  "https://www.youtube.com/watch?v=rnHUjxmFYG4",
-  3:  "https://www.youtube.com/watch?v=42Qe8ONZfX0",
-  4:  "https://www.youtube.com/watch?v=aLV9XC0UtC8",
-  5:  "https://www.youtube.com/watch?v=iNaqcwN7cSs",
-  6:  "https://www.youtube.com/watch?v=iAHwxUE4ULk",
-  7:  "https://www.youtube.com/watch?v=rZZzGFhKcas",
-  8:  "https://www.youtube.com/watch?v=10FO_bwGmqE",
-  9:  "https://www.youtube.com/watch?v=5bF7n2hXjd0",
-  10: "https://www.youtube.com/watch?v=szD6nX6fcHg",
-  11: "https://www.youtube.com/results?search_query=tafel+van+11+kinderen",
-  12: "https://www.youtube.com/results?search_query=tafel+van+12+kinderen",
-};
-
-function generateTafelQuestions(tafel, count) {
-  const makePair = (n, t) => {
-    const correct = n * t;
-    const wrongs = new Set();
-    while (wrongs.size < 3) {
-      const steps = Math.floor(Math.random() * 4) + 1;
-      const candidate = Math.random() < 0.5 ? correct + steps * t : Math.max(t, correct - steps * t);
-      if (candidate !== correct && candidate > 0) wrongs.add(candidate);
-    }
-    const opts = [correct, ...wrongs].sort(() => Math.random() - 0.5);
-    return { q: `${n} × ${t} = ?`, options: opts.map(String), answer: opts.indexOf(correct), youtubeUrl: TAFEL_VIDEOS[t] };
-  };
-  if (tafel === "mix") {
-    const pairs = [];
-    for (let t = 1; t <= 12; t++) for (let n = 1; n <= 12; n++) pairs.push([n, t]);
-    return pairs.sort(() => Math.random() - 0.5).slice(0, count).map(([n, t]) => makePair(n, t));
-  }
-  const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  return [...nums].sort(() => Math.random() - 0.5).slice(0, Math.min(count, 12)).map(n => makePair(n, tafel));
-}
-
 const fonts = `
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap');
 `;
 
 export default function App() {
-  // Deeplinks: ?play=obliterator (mini-game), ?go=X (vak vanaf SEO-landingpage),
-  // /duel/:code (PvP-uitnodiging via WhatsApp-link)
-  const initialPvpJoinCode = (() => {
-    if (typeof window === "undefined") return null;
-    const m = window.location.pathname.match(/^\/duel\/([a-z0-9]{4,12})/i);
-    return m ? m[1].toLowerCase() : null;
-  })();
-  const initialPage = (() => {
-    if (typeof window === "undefined") return "home";
-    if (initialPvpJoinCode) return "pvp-lobby";
-    try {
-      const sp = new URLSearchParams(window.location.search);
-      if (sp.get("play") === "obliterator") return "obliteratorDirect";
-      const go = sp.get("go");
-      if (go) {
-        const map = {
-          cito: "cito",
-          tafels: "tafels",
-          spelling: "spelling",
-          woordenschat: "woordenschat",
-          "begrijpend-lezen": "begrijpend-lezen",
-          redactiesommen: "redactiesommen",
-          schoolboeken: "textbook",
-          leerkracht: "teacher-home",
-          scorebord: "leaderboard",
-        };
-        if (map[go]) return map[go];
-      }
-    } catch {}
-    return "home";
-  })();
+  const initialPvpJoinCode = getInitialPvpJoinCode();
+  const initialPage = getInitialPage();
   const [page, setPage] = useState(initialPage);
   // Router-mirror (P1.2): bestaande `page`-state blijft werken, maar URL
   // volgt mee. Hierdoor werken deep links, browser-back en shareable URLs
@@ -274,19 +164,28 @@ export default function App() {
     initialPvpJoinCode ? { phase: "lobby", mode: "guest", code: initialPvpJoinCode } : null
   );
   const [loading, setLoading] = useState(false);
-  const [isOffline, setIsOffline] = useState(!navigator.onLine);
-  useEffect(() => {
-    const on = () => setIsOffline(false);
-    const off = () => setIsOffline(true);
-    window.addEventListener("online", on);
-    window.addEventListener("offline", off);
-    return () => { window.removeEventListener("online", on); window.removeEventListener("offline", off); };
-  }, []);
+  const isOffline = useOnline();
   const [loadingMode, setLoadingMode] = useState("self");
-  const [role, setRole] = useState(null);
-  const [userName, setUserName] = useState("");
-  const [userLevel, setUserLevel] = useState("");
-  const [userSchoolType, setUserSchoolType] = useState("");
+  const {
+    authUser,
+    setAuthUser,
+    role,
+    setRole,
+    userName,
+    setUserName,
+    userLevel,
+    setUserLevel,
+    userSchoolType,
+    setUserSchoolType,
+    streak,
+    setStreak,
+    subscription,
+    setSubscription,
+    schoolLogoUrl,
+    setSchoolLogoUrl,
+    handleGoogleLogin,
+    logout,
+  } = useAuth();
   const [quizzes, setQuizzes] = useState([]);
   const [classes, setClasses] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
@@ -300,78 +199,11 @@ export default function App() {
   const [pendingCode, setPendingCode] = useState("");
   const [pendingFeature, setPendingFeature] = useState(null);
   const abortControllerRef = useRef(null);
-  const [authUser, setAuthUser] = useState(null);
-  const [streak, setStreak] = useState(0);
-  const [subscription, setSubscription] = useState({ tier: "free" });
-  const [schoolLogoUrl, setSchoolLogoUrl] = useState("");
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
 
-  // Auth: bij mount eerst zorgen voor een sessie (anonymous sign-in als
-  // gebruiker nog geen Google-login heeft). Daarna laad de sessie + luister
-  // naar wijzigingen. Hierdoor heeft élke bezoeker een auth.uid() en kan
-  // RLS strikt op user_id worden gezet.
-  useEffect(() => {
-    let cancelled = false;
-    ensureSession().then((session) => {
-      if (cancelled) return;
-      if (session?.user) setAuthUser(session.user);
-    }).catch(() => {});
-    supabase.auth?.getSession?.().then(({ data: { session } = {} } = {}) => {
-      if (session?.user) setAuthUser(session.user);
-    }).catch(() => {});
-    const sub = supabase.auth?.onAuthStateChange?.((_event, session) => {
-      const u = session?.user ?? null;
-      setAuthUser(u);
-      if (u) {
-        supabase.from("subscriptions").select("*").eq("user_id", u.id).single().then(({ data }) => {
-          if (data) setSubscription(data);
-        }).catch(() => {});
-        supabase.from("profiles").select("*").eq("id", u.id).single().then(({ data }) => {
-          if (data?.display_name) setUserName(data.display_name);
-          if (data?.level) setUserLevel(data.level);
-          if (data?.school_type) setUserSchoolType(data.school_type);
-          if (data?.streak_days) setStreak(data.streak_days);
-          if (data?.school_logo_url) setSchoolLogoUrl(data.school_logo_url);
-          // Rol wel laden, maar NIET automatisch wegnavigeren — app blijft op home
-          // (gebruiker kiest zelf of-ie naar dashboard wil via de homepage)
-          if (data?.role) {
-            setRole(data.role);
-          } else {
-            const googleName = u.user_metadata?.full_name || u.user_metadata?.name || "";
-            if (googleName) setUserName(googleName);
-            // Geen Supabase profiel rol — check localStorage (bijv. gebruiker was eerst gast)
-            try {
-              const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
-              if (saved.role && saved.name) {
-                setRole(saved.role);
-                if (saved.level) setUserLevel(saved.level);
-                if (saved.schoolType) setUserSchoolType(saved.schoolType);
-                // Sla rol ook op in Supabase profiel voor volgende keer
-                supabase.from("profiles").upsert({ id: u.id, display_name: saved.name, level: saved.level || "", role: saved.role }).then(() => {}).catch(() => {});
-              }
-            } catch {}
-          }
-        }).catch(() => {});
-      }
-    });
-    return () => {
-      cancelled = true;
-      sub?.data?.subscription?.unsubscribe?.();
-    };
-  }, []);
-
-  const handleGoogleLogin = () => {
-    supabase.auth?.signInWithOAuth?.({ provider: "google", options: { redirectTo: window.location.origin } });
-  };
-
   const handleLogout = () => {
-    supabase.auth?.signOut?.();
-    setAuthUser(null);
-    setUserName("");
-    setUserLevel("");
-    setUserSchoolType("");
-    setRole(null);
+    logout();
     setPage("home");
   };
 
