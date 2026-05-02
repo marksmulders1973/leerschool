@@ -16,8 +16,11 @@
 // `subjectMapping.js` koppelt categorie-id ↔ leerpad-subject (kan een
 // array zijn voor bundles zoals NaSk of PO Natuur).
 
+// Iconen synchroon met TEXTBOOK_CATEGORIES_VO in constants.js — zo zien
+// leerlingen overal hetzelfde icoon voor hetzelfde vak (Oefenen-tab grid +
+// Leren-hub vak-grid + ticker + mastery-banner).
 export const SUBJECTS = {
-  wiskunde: { title: "Wiskunde", emoji: "🧮" },
+  wiskunde: { title: "Wiskunde", emoji: "📐" },
   taal: { title: "Nederlands", emoji: "📖" },
   engels: { title: "Engels", emoji: "🇬🇧" },
   biologie: { title: "Biologie", emoji: "🧬" },
@@ -26,7 +29,7 @@ export const SUBJECTS = {
   natuurkunde: { title: "Natuurkunde", emoji: "⚛️" },
   scheikunde: { title: "Scheikunde", emoji: "🧪" },
   economie: { title: "Economie", emoji: "💶" },
-  beco: { title: "Bedrijfseconomie", emoji: "📊" },
+  beco: { title: "Bedrijfseconomie", emoji: "📈" },
   duits: { title: "Duits", emoji: "🇩🇪" },
   frans: { title: "Frans", emoji: "🇫🇷" },
   maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },

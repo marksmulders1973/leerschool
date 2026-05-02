@@ -34,7 +34,7 @@ describe("SUBJECTS", () => {
 
 describe("subjectMeta", () => {
   it("geeft het juiste object voor bekende subject", () => {
-    expect(subjectMeta("wiskunde")).toEqual({ title: "Wiskunde", emoji: "🧮" });
+    expect(subjectMeta("wiskunde")).toEqual({ title: "Wiskunde", emoji: "📐" });
     expect(subjectMeta("taal").title).toBe("Nederlands");
   });
 
@@ -70,7 +70,7 @@ describe("subjectsLabel", () => {
 
 describe("subjectsEmoji", () => {
   it("één subject → eigen emoji", () => {
-    expect(subjectsEmoji("wiskunde")).toBe("🧮");
+    expect(subjectsEmoji("wiskunde")).toBe("📐");
   });
 
   it("meerdere subjects → bundle-emoji", () => {

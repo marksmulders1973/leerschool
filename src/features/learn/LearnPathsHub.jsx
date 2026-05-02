@@ -126,25 +126,27 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     };
   }, [player]);
 
-  // Welke vak-secties open staan. Default: eerste vak open (lazy init,
-  // gebruikt allPaths grouping nog vóór `grouped` is opgebouwd hieronder).
-  const [expandedSubjects, setExpandedSubjects] = useState(() => {
-    const firstSubj = (Object.values(ALL_LEARN_PATHS)[0] || {}).subject || "wiskunde";
-    return new Set([firstSubj]);
-  });
-  const toggleSubject = (subj) =>
-    setExpandedSubjects((prev) => {
-      const next = new Set(prev);
-      if (next.has(subj)) next.delete(subj);
-      else next.add(subj);
-      return next;
-    });
+  // Vak-grid is het entry-screen (zelfde IA als Oefenen-tab). Klik op tegel →
+  // selectedSubject → toon detail-view met curricula + paden voor dat vak.
+  // Wanneer filterSubject van bovenaf komt (bv. vanuit Oefenen-tab Leren-knop)
+  // skip de grid en spring direct naar de detail-view voor dat vak.
+  const [selectedSubject, setSelectedSubject] = useState(null);
+
+  // Bij wisseling van filterSubject van buitenaf (bv. user kiest ander vak via
+  // bottom-nav of breadcrumb) selectedSubject resetten zodat we niet vasthangen.
+  useEffect(() => {
+    if (filterSubject != null) setSelectedSubject(null);
+  }, [filterSubject]);
 
   const allPaths = Object.values(ALL_LEARN_PATHS);
-  // Normaliseer filterSubject tot een array van toegestane subjects (of null = alles).
-  const filterArr = filterSubject == null
+  // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
+  // state vanuit vak-grid-klik). filterSubject heeft voorrang. Wanneer beide
+  // null zijn: tonen we het vak-grid entry-screen (Oefenen-tab-stijl).
+  const effectiveFilter = filterSubject != null ? filterSubject : selectedSubject;
+  // Normaliseer effectiveFilter tot een array van toegestane subjects (of null = alles).
+  const filterArr = effectiveFilter == null
     ? null
-    : Array.isArray(filterSubject) ? filterSubject : [filterSubject];
+    : Array.isArray(effectiveFilter) ? effectiveFilter : [effectiveFilter];
   const paths = filterArr
     ? allPaths.filter((p) => filterArr.includes(p.subject || "wiskunde"))
     : allPaths;
@@ -164,7 +166,10 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     ? Object.values(CURRICULA).filter((c) => curriculumPrefixes.some((p) => c.id.startsWith(p + "-")))
     : Object.values(CURRICULA);
 
-  let headerTitle = "Leerpaden";
+  // Toont de vak-grid (entry-screen) wanneer geen filter actief is.
+  const showSubjectGrid = filterArr == null;
+
+  let headerTitle = "Leren";
   let headerEmoji = "📚";
   if (filterArr && filterArr.length === 1) {
     const meta = SUBJECT_LABELS[filterArr[0]] || { title: filterArr[0], emoji: "📚" };
@@ -175,6 +180,12 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
     headerTitle = `Leren — ${titles}`;
     headerEmoji = "🔬";
   }
+
+  // Bij detail-view die intern is gekozen (selectedSubject), back-knop terug
+  // naar grid. Bij filter-van-bovenaf: gebruik onBack-prop zoals voorheen.
+  const headerBack = (selectedSubject && !filterSubject)
+    ? () => setSelectedSubject(null)
+    : (onBack || onHome);
 
   // Vind onafgemaakt pad voor "doorgaan"-banner
   const continuePath = (() => {
@@ -190,9 +201,173 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
   const totalCompleted = Object.values(progressByPath).reduce((sum, s) => sum + s.size, 0);
   const totalSteps = paths.reduce((sum, p) => sum + p.steps.length, 0);
 
+  // Vak-grid (entry-screen) — zelfde IA als Oefenen-tab. Elke vak-tegel toont
+  // emoji + label + "X onderwerpen" + voortgangs-pil. Klik → setSelectedSubject
+  // → re-render naar detail-view (curricula + paden alfabetisch).
+  if (showSubjectGrid) {
+    // Reken counts vooraf: per subject het aantal paden + voltooide stappen.
+    const subjectStats = {};
+    allPaths.forEach((p) => {
+      const subj = p.subject || "wiskunde";
+      if (!subjectStats[subj]) subjectStats[subj] = { count: 0, total: 0, done: 0 };
+      subjectStats[subj].count += 1;
+      subjectStats[subj].total += p.steps.length;
+      subjectStats[subj].done += progressByPath[p.id]?.size || 0;
+    });
+    // Sorteer vakken op aantal paden (meest gevulde eerst), met wiskunde+taal
+    // als eerste twee zodat de meest-gebruikte vakken bovenin staan.
+    const orderedSubjects = Object.keys(subjectStats).sort((a, b) => {
+      const aRank = a === "wiskunde" ? -2 : a === "taal" ? -1 : 0;
+      const bRank = b === "wiskunde" ? -2 : b === "taal" ? -1 : 0;
+      if (aRank !== bRank) return aRank - bRank;
+      return subjectStats[b].count - subjectStats[a].count;
+    });
+
+    return (
+      <div style={pageStyle()}>
+        <Header onBack={onBack || onHome} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
+
+        <div style={{ padding: "16px 18px 8px" }}>
+          <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
+            Kies een vak om uitleg op te bouwen — per onderwerp een mini-toets om te checken of de stof zit.
+          </p>
+
+          {loaded && totalCompleted > 0 && (
+            <div style={{ ...cardBase(), marginBottom: 14, padding: "10px 14px" }}>
+              <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>
+                Totaal voortgang
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.text }}>
+                <span>{totalCompleted} van {totalSteps} stappen voltooid</span>
+                <span>{Math.round((totalCompleted / totalSteps) * 100)}%</span>
+              </div>
+              <div style={{ height: 6, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                <div
+                  style={{
+                    height: "100%",
+                    width: `${(totalCompleted / totalSteps) * 100}%`,
+                    background: `linear-gradient(90deg, ${C.good}, ${C.warm})`,
+                    transition: "width 0.4s",
+                  }}
+                />
+              </div>
+            </div>
+          )}
+
+          {loaded && continuePath && (
+            <button
+              onClick={() => onPickPath(continuePath.id)}
+              style={{
+                ...continueBtn(),
+                background: PATH_THEMES[continuePath.id]?.gradient || `linear-gradient(135deg, ${C.good}, #00a040)`,
+              }}
+            >
+              <span style={{ fontSize: 22, marginRight: 8 }}>▶</span>
+              <div style={{ textAlign: "left", flex: 1 }}>
+                <div style={{ fontSize: 12, opacity: 0.85 }}>Doorgaan waar je was</div>
+                <div style={{ fontWeight: 700, fontSize: 15 }}>{continuePath.emoji} {continuePath.title}</div>
+              </div>
+              <span style={{ fontSize: 18 }}>›</span>
+            </button>
+          )}
+        </div>
+
+        <div style={{ padding: "8px 14px 32px" }}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 10,
+          }}>
+            {orderedSubjects.map((subject) => {
+              const meta = SUBJECT_LABELS[subject] || { title: subject, emoji: "📘" };
+              const stats = subjectStats[subject];
+              const pct = stats.total ? Math.round((stats.done / stats.total) * 100) : 0;
+              const hasProgress = stats.done > 0;
+              return (
+                <button
+                  key={subject}
+                  onClick={() => setSelectedSubject(subject)}
+                  style={{
+                    background: C.card,
+                    border: `1px solid ${hasProgress ? "rgba(0,200,83,0.40)" : C.border}`,
+                    borderRadius: 14,
+                    padding: "16px 14px",
+                    cursor: "pointer",
+                    color: C.text,
+                    fontFamily: "var(--font-body)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    gap: 10,
+                    textAlign: "left",
+                    minHeight: 110,
+                    boxShadow: hasProgress
+                      ? "0 1px 2px rgba(0,200,83,0.06), 0 4px 14px rgba(0,200,83,0.10)"
+                      : "0 1px 2px rgba(0,0,0,0.20), 0 4px 14px rgba(0,0,0,0.20)",
+                    transition: "transform 150ms ease, border-color 150ms ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.borderColor = C.good;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.borderColor = hasProgress ? "rgba(0,200,83,0.40)" : C.border;
+                  }}
+                >
+                  <span style={{ fontSize: 32, lineHeight: 1 }} aria-hidden="true">{meta.emoji}</span>
+                  <div style={{ width: "100%", minWidth: 0 }}>
+                    <div style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 15,
+                      fontWeight: 700,
+                      color: "var(--color-text-strong)",
+                      lineHeight: 1.2,
+                      marginBottom: 2,
+                    }}>
+                      {meta.title}
+                    </div>
+                    <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.3 }}>
+                      {stats.count} onderwerp{stats.count === 1 ? "" : "en"}
+                      {hasProgress && ` · ${pct}%`}
+                    </div>
+                    {hasProgress && (
+                      <div style={{
+                        marginTop: 6,
+                        height: 3,
+                        background: "#1a2744",
+                        borderRadius: 999,
+                        overflow: "hidden",
+                      }}>
+                        <div
+                          style={{
+                            height: "100%",
+                            width: `${pct}%`,
+                            background: `linear-gradient(90deg, ${C.good}, ${C.warm})`,
+                          }}
+                        />
+                      </div>
+                    )}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          <div style={{ marginTop: 18, padding: "14px 14px", background: "rgba(255,255,255,0.02)", borderRadius: 12, border: `1px dashed ${C.border}`, textAlign: "center" }}>
+            <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.5 }}>
+              Meer onderwerpen volgen.<br />
+              <span style={{ fontSize: 11 }}>Mis je iets? Geef het door via "Tip aan de maker" op de homepage.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div style={pageStyle()}>
-      <Header onBack={onBack || onHome} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
+      <Header onBack={headerBack} onHome={onHome} title={headerTitle} emoji={headerEmoji} />
 
       <div style={{ padding: "16px 18px 8px" }}>
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
