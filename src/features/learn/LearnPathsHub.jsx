@@ -239,111 +239,12 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
         )}
       </div>
 
-      {onPickCurriculum && visibleCurricula.length > 0 && (
-        <div style={{ padding: "4px 14px 8px" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 8,
-              padding: "8px 4px 12px",
-              fontFamily: "var(--font-display)",
-              fontSize: 16,
-              color: C.text,
-              fontWeight: 700,
-            }}
-          >
-            <span style={{ fontSize: 20 }}>🎓</span>
-            <span>Hele leerlijn — per klas</span>
-          </div>
-          <div className="lp-grid" style={{ marginBottom: 18 }}>
-            {visibleCurricula.map((cur) => {
-              const allPathIds = cur.phases.flatMap((p) => p.pathIds);
-              const total = curriculumTotalSteps(cur.id);
-              const done = allPathIds.reduce(
-                (s, pid) => s + (progressByPath[pid]?.size || 0),
-                0
-              );
-              const pct = total ? Math.round((done / total) * 100) : 0;
-              const isStarted = done > 0;
-              const isComplete = done >= total && total > 0;
-              return (
-                <button
-                  key={cur.id}
-                  onClick={() => onPickCurriculum(cur.id)}
-                  style={curriculumCard(isComplete)}
-                >
-                  <div
-                    style={{
-                      width: 48,
-                      height: 48,
-                      borderRadius: 12,
-                      background: isComplete
-                        ? `linear-gradient(135deg, ${C.good}, #00a040)`
-                        : `linear-gradient(135deg, ${C.warm}, #f9a825)`,
-                      color: isComplete ? "var(--color-text-strong)" : "#1a0008",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 24,
-                      flexShrink: 0,
-                      boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
-                    }}
-                  >
-                    {cur.emoji}
-                  </div>
-                  <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
-                      <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
-                        {cur.title}
-                      </span>
-                      {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
-                    </div>
-                    <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 5 : 0 }}>
-                      {allPathIds.length} leerpaden · {total} stappen totaal
-                    </div>
-                    {isStarted && (
-                      <div>
-                        <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
-                          <div
-                            style={{
-                              height: "100%",
-                              width: `${pct}%`,
-                              background: `linear-gradient(90deg, ${C.warm}, ${C.good})`,
-                              transition: "width 0.4s",
-                            }}
-                          />
-                        </div>
-                        <div style={{ fontSize: 11, color: C.warm, marginTop: 3, fontWeight: 700 }}>
-                          {done}/{total} · {pct}%
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                  <span style={{ color: C.muted, fontSize: 18 }}>›</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
+      {/* Vak is de primaire as. Curricula zijn een SUB-onderdeel van een vak
+          (geen parallel systeem meer): per uitgeklapt vak verschijnen ze
+          bovenaan als geordende-leerlijn-knoppen, daarna alle losse paden
+          alfabetisch. Vermijdt de eerdere verwarring waarbij een leerling
+          dezelfde paden twee keer met verschillende tellingen zag. */}
       <div style={{ padding: "0 14px 32px" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            padding: "8px 4px 12px",
-            fontFamily: "var(--font-display)",
-            fontSize: 16,
-            color: C.text,
-            fontWeight: 700,
-          }}
-        >
-          <span style={{ fontSize: 20 }}>🎯</span>
-          <span>Of kies een los onderwerp</span>
-        </div>
         {(() => {
           const subjectKeys = Object.keys(grouped);
           // Bij 1 vak (vanuit homepage-vak-knop): geen collapse, altijd open.
@@ -356,15 +257,17 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
             const subjPct = subjTotal ? Math.round((subjDone / subjTotal) * 100) : 0;
             const isOpen = !allowCollapse || expandedSubjects.has(subject);
 
-            // Groepeer paden binnen dit vak op niveau-bucket
-            const buckets = new Map();
-            pathList.forEach((p) => {
-              const lvl = parseLevel(p.level);
-              if (!buckets.has(lvl.bucketKey)) buckets.set(lvl.bucketKey, { ...lvl, paths: [] });
-              buckets.get(lvl.bucketKey).paths.push(p);
-            });
-            const sortedBuckets = [...buckets.values()].sort((a, b) => a.bucketSort - b.bucketSort);
-            const showBucketHeaders = sortedBuckets.length > 1;
+            // Curricula van dit specifieke vak (geordende leerlijnen). Mappt
+            // op `subject` van de curriculum-entries — Wiskunde-curricula
+            // hebben subject "wiskunde", Nederlands-curricula "taal", etc.
+            const subjectCurricula = visibleCurricula.filter((c) => c.subject === subject);
+
+            // Paden alfabetisch sorteren (op title) — geen klas-buckets meer.
+            // Klas-niveau staat als pil op de pad-card zelf zodat de leerling
+            // het kan zien zonder dat het de organisatie domineert.
+            const sortedPaths = [...pathList].sort((a, b) =>
+              (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" })
+            );
 
             return (
               <div key={subject} style={{ marginBottom: 14 }}>
@@ -380,7 +283,8 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                       {meta.title}
                     </div>
                     <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>
-                      {pathList.length} pad{pathList.length === 1 ? "" : "en"}
+                      {pathList.length} onderwerp{pathList.length === 1 ? "" : "en"}
+                      {subjectCurricula.length > 0 && ` · ${subjectCurricula.length} leerlijn${subjectCurricula.length === 1 ? "" : "en"}`}
                       {subjDone > 0 && ` · ${subjPct}% voltooid`}
                     </div>
                   </div>
@@ -401,85 +305,187 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
 
                 {isOpen && (
                   <div style={{ paddingTop: 10 }}>
-                    {sortedBuckets.map((bucket) => (
-                      <div key={bucket.bucketKey} style={{ marginBottom: 14 }}>
-                        {showBucketHeaders && (
-                          <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "4px 4px 8px" }}>
-                            <span style={bucketChipStyle(bucket.badge)}>{bucket.bucketLabel}</span>
-                            <span style={{ height: 1, flex: 1, background: C.border }} />
-                          </div>
-                        )}
+                    {/* Leerlijnen voor dit vak (curricula) — geordende routes
+                        bovenaan zodat leerlingen die hulp willen bij volgorde
+                        niet rond hoeven te scrollen. Alleen tonen als er
+                        curricula zijn én onPickCurriculum-handler is. */}
+                    {onPickCurriculum && subjectCurricula.length > 0 && (
+                      <div style={{ marginBottom: 14 }}>
+                        <div style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 8,
+                          padding: "2px 4px 8px",
+                          fontSize: 11,
+                          fontFamily: "var(--font-display)",
+                          fontWeight: 700,
+                          color: C.muted,
+                          letterSpacing: 1.5,
+                          textTransform: "uppercase",
+                        }}>
+                          <span>🎓 Volg een complete leerlijn</span>
+                        </div>
                         <div className="lp-grid">
-                          {bucket.paths.map((p) => {
-                            const done = progressByPath[p.id]?.size || 0;
-                            const total = p.steps.length;
+                          {subjectCurricula.map((cur) => {
+                            const allPathIds = cur.phases.flatMap((p) => p.pathIds);
+                            const total = curriculumTotalSteps(cur.id);
+                            const done = allPathIds.reduce(
+                              (s, pid) => s + (progressByPath[pid]?.size || 0),
+                              0
+                            );
                             const pct = total ? Math.round((done / total) * 100) : 0;
                             const isStarted = done > 0;
-                            const isComplete = done >= total;
-                            const theme = PATH_THEMES[p.id] || { gradient: `linear-gradient(135deg, ${C.accent}, #2c4d77)`, accent: "#90caf9" };
-                            const lvl = parseLevel(p.level);
+                            const isComplete = done >= total && total > 0;
                             return (
                               <button
-                                key={p.id}
-                                onClick={() => onPickPath(p.id)}
-                                style={pathCard(theme, isComplete)}
-                                onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
-                                onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                                key={cur.id}
+                                onClick={() => onPickCurriculum(cur.id)}
+                                style={curriculumCard(isComplete)}
                               >
-                                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                                  <div
-                                    style={{
-                                      width: 48,
-                                      height: 48,
-                                      borderRadius: 12,
-                                      background: theme.gradient,
-                                      display: "flex",
-                                      alignItems: "center",
-                                      justifyContent: "center",
-                                      fontSize: 24,
-                                      flexShrink: 0,
-                                      boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
-                                    }}
-                                  >
-                                    {p.emoji}
-                                  </div>
-                                  <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
-                                    <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
-                                      <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
-                                        {p.title}
-                                      </span>
-                                      <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
-                                      {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
-                                    </div>
-                                    <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
-                                      {total} stappen · {p.chapters?.length || 0} hoofdstukken
-                                    </div>
-                                    {isStarted && (
-                                      <div>
-                                        <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
-                                          <div
-                                            style={{
-                                              height: "100%",
-                                              width: `${pct}%`,
-                                              background: theme.gradient,
-                                              transition: "width 0.4s",
-                                            }}
-                                          />
-                                        </div>
-                                        <div style={{ fontSize: 11, color: theme.accent, marginTop: 3, fontWeight: 700 }}>
-                                          {done}/{total} · {pct}%
-                                        </div>
-                                      </div>
-                                    )}
-                                  </div>
-                                  <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                                <div
+                                  style={{
+                                    width: 44,
+                                    height: 44,
+                                    borderRadius: 12,
+                                    background: isComplete
+                                      ? `linear-gradient(135deg, ${C.good}, #00a040)`
+                                      : `linear-gradient(135deg, ${C.warm}, #f9a825)`,
+                                    color: isComplete ? "var(--color-text-strong)" : "#1a0008",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: 22,
+                                    flexShrink: 0,
+                                    boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                                  }}
+                                >
+                                  {cur.emoji}
                                 </div>
+                                <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
+                                    <span style={{ fontFamily: "var(--font-display)", fontSize: 15, color: "var(--color-text-strong)", fontWeight: 700 }}>
+                                      {cur.title}
+                                    </span>
+                                    {isComplete && <span style={{ fontSize: 13 }}>✅</span>}
+                                  </div>
+                                  <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 4 : 0 }}>
+                                    {allPathIds.length} onderwerpen · {total} stappen
+                                  </div>
+                                  {isStarted && (
+                                    <div>
+                                      <div style={{ height: 3, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                                        <div
+                                          style={{
+                                            height: "100%",
+                                            width: `${pct}%`,
+                                            background: `linear-gradient(90deg, ${C.warm}, ${C.good})`,
+                                            transition: "width 0.4s",
+                                          }}
+                                        />
+                                      </div>
+                                      <div style={{ fontSize: 10, color: C.warm, marginTop: 2, fontWeight: 700 }}>
+                                        {done}/{total} · {pct}%
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
+                                <span style={{ color: C.muted, fontSize: 16 }}>›</span>
                               </button>
                             );
                           })}
                         </div>
                       </div>
-                    ))}
+                    )}
+
+                    {/* Alle losse onderwerpen — alfabetisch, klas-niveau als
+                        secondary-pil op de kaart. Geen aparte klas-buckets
+                        meer (waren de bron van de eerdere verwarring met
+                        curriculum-tellingen). */}
+                    <div style={{ marginBottom: 14 }}>
+                      <div style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 8,
+                        padding: "2px 4px 8px",
+                        fontSize: 11,
+                        fontFamily: "var(--font-display)",
+                        fontWeight: 700,
+                        color: C.muted,
+                        letterSpacing: 1.5,
+                        textTransform: "uppercase",
+                      }}>
+                        <span>🎯 {subjectCurricula.length > 0 ? "Of pak een los onderwerp" : "Onderwerpen"}</span>
+                      </div>
+                      <div className="lp-grid">
+                        {sortedPaths.map((p) => {
+                          const done = progressByPath[p.id]?.size || 0;
+                          const total = p.steps.length;
+                          const pct = total ? Math.round((done / total) * 100) : 0;
+                          const isStarted = done > 0;
+                          const isComplete = done >= total;
+                          const theme = PATH_THEMES[p.id] || { gradient: `linear-gradient(135deg, ${C.accent}, #2c4d77)`, accent: "#90caf9" };
+                          const lvl = parseLevel(p.level);
+                          return (
+                            <button
+                              key={p.id}
+                              onClick={() => onPickPath(p.id)}
+                              style={pathCard(theme, isComplete)}
+                              onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
+                              onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                            >
+                              <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                                <div
+                                  style={{
+                                    width: 48,
+                                    height: 48,
+                                    borderRadius: 12,
+                                    background: theme.gradient,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    fontSize: 24,
+                                    flexShrink: 0,
+                                    boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                                  }}
+                                >
+                                  {p.emoji}
+                                </div>
+                                <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                                  <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
+                                    <span style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)", fontWeight: 700 }}>
+                                      {p.title}
+                                    </span>
+                                    <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
+                                    {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
+                                  </div>
+                                  <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
+                                    {total} stappen · {p.chapters?.length || 0} hoofdstukken
+                                  </div>
+                                  {isStarted && (
+                                    <div>
+                                      <div style={{ height: 4, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                                        <div
+                                          style={{
+                                            height: "100%",
+                                            width: `${pct}%`,
+                                            background: theme.gradient,
+                                            transition: "width 0.4s",
+                                          }}
+                                        />
+                                      </div>
+                                      <div style={{ fontSize: 11, color: theme.accent, marginTop: 3, fontWeight: 700 }}>
+                                        {done}/{total} · {pct}%
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
+                                <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
