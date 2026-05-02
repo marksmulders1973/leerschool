@@ -4505,7 +4505,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
 
       checkBioomWissel();
-      spelSnelheid = START_SNELHEID; // constant — moeilijkheid via obstakel-density
+      spelSnelheid = START_SNELHEID; // basis — moeilijkheid was eerst via obstakel-density
       // SLOW-MO: vermenigvuldig alle scroll-snelheden met deze factor (zonder spelSnelheid zelf te wijzigen,
       // anders zou de level-tijd-progressie ook in de war raken). Achtergrond-pattern-offsets blijven op
       // spelSnelheid om visuele jitter bij in/uit-fade te voorkomen.
@@ -4514,7 +4514,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
-      effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
+      // Geleidelijke moeilijkheidsoploop (Geometry-Dash-stijl): vanaf score 10
+      // loopt de wereldsnelheid lineair op naar 1.5× bij score 30. Beginners
+      // (score < 10) merken niets; ervaren spelers krijgen progressief druk.
+      // Cap op 1.5× om de speel-feel niet onmogelijk te maken voor doelgroep
+      // ~10 jaar.
+      const moeilijkheidsMul = score < 10 ? 1 : Math.min(1.5, 1 + (score - 10) / 40);
+      effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul * moeilijkheidsMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
