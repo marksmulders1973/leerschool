@@ -43,10 +43,10 @@ export default function MasteryCTABanner({ userName, onPickPath, onStartFirst })
 
   if (!player) return null;
   if (records === null) return null;
-  if (!recommended && records.length === 0) {
-    return <FirstTimeNudge userName={player} onStart={onStartFirst} />;
-  }
-  if (!recommended) return null; // alles op goud — geen CTA
+  // Empty-state ("Hoi X — maak je eerste toets") niet meer tonen — voelde leeg
+  // voor terugkerende admin/test-users. Banner verschijnt alleen als er echte
+  // mastery-data is om over te raden.
+  if (!recommended) return null;
 
   return <RecommendedCard player={player} record={recommended} onPickPath={onPickPath} />;
 }

@@ -747,24 +747,33 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {step === "role" && isLaunchPromoActive() && (
-          <div style={{
-            width: "100%", maxWidth: 360, marginBottom: 12,
-            padding: "10px 14px",
-            background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
-            border: "1px solid rgba(105,240,174,0.35)",
-            borderRadius: 14,
-            fontFamily: "var(--font-body)",
-            textAlign: "center"
-          }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
-              {LAUNCH_PROMO_SHORT}
+        {step === "role" && isLaunchPromoActive() && (() => {
+          // LaunchPromo verbergen voor ingelogde users — banner is een groei-
+          // hook voor nieuwe bezoekers, voor terugkerende leerlingen ruis.
+          let hasName = false;
+          try {
+            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          if (hasName) return null;
+          return (
+            <div style={{
+              width: "100%", maxWidth: 360, marginBottom: 12,
+              padding: "10px 14px",
+              background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
+              border: "1px solid rgba(105,240,174,0.35)",
+              borderRadius: 14,
+              fontFamily: "var(--font-body)",
+              textAlign: "center"
+            }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
+                {LAUNCH_PROMO_SHORT}
+              </div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
+                {LAUNCH_PROMO_LONG}
+              </div>
             </div>
-            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
-              {LAUNCH_PROMO_LONG}
-            </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* Mastery-CTA voor terugkerende leerlingen (P1.6).
             Toont één primaire actie op basis van mastery-records. */}
