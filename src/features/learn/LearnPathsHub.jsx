@@ -66,6 +66,18 @@ const PATH_THEMES = {
   "passe-compose-frans": { gradient: "linear-gradient(135deg, #1565c0, #b71c1c)", accent: "#90caf9" },
 };
 
+// Volgorde van klas-buckets — gebruikt voor distance-sortering: hoe verder
+// een pad-bucket van leerling's bucket, hoe lager z'n positie. Een klas-4
+// leerling ziet eerst klas-4 paden, dan klas-3, dan klas-5/bovenbouw, etc.
+const BUCKET_ORDER = ["po", "klas-1", "klas-2", "klas-3", "klas-4", "bovenbouw"];
+
+function bucketDistance(a, b) {
+  const ai = BUCKET_ORDER.indexOf(a);
+  const bi = BUCKET_ORDER.indexOf(b);
+  if (ai === -1 || bi === -1) return 99;
+  return Math.abs(ai - bi);
+}
+
 // Mapt het ad-hoc `level`-veld op een leerpad ("klas1-vwo", "havo4-5",
 // "groep4-7", ...) naar een uniforme bucket voor groepering en een
 // kleurenpil. Pakt het LAAGSTE start-niveau zodat een pad bv. "klas1-vwo"
@@ -92,10 +104,18 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
-export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null }) {
   const player = (userName || "Speler").trim() || "Speler";
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
+  // Klas-filter binnen vak-detail. null = "alle klassen". String = bucketKey
+  // ("klas-1" | "klas-2" | "klas-3" | "klas-4" | "bovenbouw" | "po").
+  // Default: kies de bucket van de leerling's eigen userLevel als die er is.
+  const myBucket = userLevel ? parseLevel(userLevel).bucketKey : null;
+  const [classFilter, setClassFilter] = useState(myBucket);
+  // Reset class-filter naar "mijn klas" wanneer de leerling van vak wisselt.
+  // Anders blijft een vorige keuze hangen die op het nieuwe vak misschien
+  // niets oplevert.
 
   // Voortgang voor alle paden in één query
   useEffect(() => {
@@ -137,6 +157,12 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
   useEffect(() => {
     if (filterSubject != null) setSelectedSubject(null);
   }, [filterSubject]);
+
+  // Bij wisseling van vak: reset class-filter naar leerling's eigen klas
+  // (of "alle" als die niet bekend is).
+  useEffect(() => {
+    setClassFilter(myBucket);
+  }, [selectedSubject, filterSubject, myBucket]);
 
   const allPaths = Object.values(ALL_LEARN_PATHS);
   // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
@@ -437,12 +463,37 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
             // hebben subject "wiskunde", Nederlands-curricula "taal", etc.
             const subjectCurricula = visibleCurricula.filter((c) => c.subject === subject);
 
-            // Paden alfabetisch sorteren (op title) — geen klas-buckets meer.
-            // Klas-niveau staat als pil op de pad-card zelf zodat de leerling
-            // het kan zien zonder dat het de organisatie domineert.
-            const sortedPaths = [...pathList].sort((a, b) =>
-              (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" })
-            );
+            // Beschikbare klas-buckets in dit vak (gesorteerd op BUCKET_ORDER)
+            const availableBuckets = [...new Set(pathList.map((p) => parseLevel(p.level).bucketKey))]
+              .sort((a, b) => BUCKET_ORDER.indexOf(a) - BUCKET_ORDER.indexOf(b));
+
+            // Filter op klas (als classFilter is gezet en bestaat in dit vak),
+            // anders toon alles. Als gekozen filter niet bestaat in dit vak →
+            // val terug op "alles" zodat we geen lege staat hebben zonder reden.
+            const activeFilter = classFilter && availableBuckets.includes(classFilter)
+              ? classFilter
+              : null;
+
+            const filteredPaths = activeFilter
+              ? pathList.filter((p) => parseLevel(p.level).bucketKey === activeFilter)
+              : pathList;
+
+            // Sortering: bij "alle klassen" gesorteerd op nabijheid van
+            // leerling's eigen klas (zelfde klas eerst, dan op afstand).
+            // Bij actieve filter: alfabetisch binnen die klas.
+            const sortedPaths = activeFilter
+              ? [...filteredPaths].sort((a, b) =>
+                  (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" })
+                )
+              : [...filteredPaths].sort((a, b) => {
+                  if (!myBucket) {
+                    return (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" });
+                  }
+                  const da = bucketDistance(parseLevel(a.level).bucketKey, myBucket);
+                  const db = bucketDistance(parseLevel(b.level).bucketKey, myBucket);
+                  if (da !== db) return da - db;
+                  return (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" });
+                });
 
             return (
               <div key={subject} style={{ marginBottom: 14 }}>
@@ -572,10 +623,10 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                       </div>
                     )}
 
-                    {/* Alle losse onderwerpen — alfabetisch, klas-niveau als
-                        secondary-pil op de kaart. Geen aparte klas-buckets
-                        meer (waren de bron van de eerdere verwarring met
-                        curriculum-tellingen). */}
+                    {/* Alle losse onderwerpen — sortering hangt af van
+                        leerling's klas (uit profiel). Pillen-bar erboven om
+                        op klas te filteren. Default: leerling's eigen klas
+                        als die bekend is, anders "alle". */}
                     <div style={{ marginBottom: 14 }}>
                       <div style={{
                         display: "flex",
@@ -591,6 +642,81 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
                       }}>
                         <span>🎯 {subjectCurricula.length > 0 ? "Of pak een los onderwerp" : "Onderwerpen"}</span>
                       </div>
+
+                      {/* Klas-filter pillen — alleen tonen als er meer dan 1
+                          klas-bucket bestaat in dit vak (anders zinloos). */}
+                      {availableBuckets.length > 1 && (
+                        <div style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: 6,
+                          marginBottom: 12,
+                          padding: "0 4px",
+                        }}>
+                          <ClassFilterPill
+                            label="Alle klassen"
+                            active={!classFilter}
+                            onClick={() => setClassFilter(null)}
+                          />
+                          {myBucket && availableBuckets.includes(myBucket) && (
+                            <ClassFilterPill
+                              label={`✦ ${parseLevel(userLevel).bucketLabel} (mijn klas)`}
+                              active={classFilter === myBucket}
+                              accent
+                              onClick={() => setClassFilter(myBucket)}
+                            />
+                          )}
+                          {availableBuckets
+                            .filter((b) => b !== myBucket)
+                            .map((b) => {
+                              const sample = pathList.find((p) => parseLevel(p.level).bucketKey === b);
+                              const lbl = sample ? parseLevel(sample.level).bucketLabel : b;
+                              return (
+                                <ClassFilterPill
+                                  key={b}
+                                  label={lbl}
+                                  active={classFilter === b}
+                                  onClick={() => setClassFilter(b)}
+                                />
+                              );
+                            })}
+                        </div>
+                      )}
+
+                      {/* Empty-state als filter actief is en pad-lijst leeg */}
+                      {sortedPaths.length === 0 && (
+                        <div style={{
+                          padding: "16px 14px",
+                          background: "rgba(255,179,0,0.08)",
+                          border: `1px solid rgba(255,179,0,0.25)`,
+                          borderRadius: 12,
+                          marginBottom: 12,
+                          fontSize: 13,
+                          color: "#ffd54f",
+                          textAlign: "center",
+                          lineHeight: 1.5,
+                        }}>
+                          Voor jouw klas staat er voor dit vak nog niets.
+                          <br />
+                          <button
+                            onClick={() => setClassFilter(null)}
+                            style={{
+                              marginTop: 8,
+                              background: "transparent",
+                              border: `1px solid rgba(255,213,79,0.5)`,
+                              color: "#ffd54f",
+                              padding: "5px 12px",
+                              borderRadius: 999,
+                              fontFamily: "var(--font-body)",
+                              fontSize: 12,
+                              fontWeight: 600,
+                              cursor: "pointer",
+                            }}
+                          >
+                            Toon alle klassen
+                          </button>
+                        </div>
+                      )}
                       <div className="lp-grid">
                         {sortedPaths.map((p) => {
                           const done = progressByPath[p.id]?.size || 0;
@@ -676,6 +802,35 @@ export default function LearnPathsHub({ userName, authUser, onPickPath, onPickCu
         </div>
       </div>
     </div>
+  );
+}
+
+/** Klein knop-pilletje voor klas-filter in vak-detail. Active = donkergroen
+ *  fill, accent = "mijn klas"-versie met cyaan-getinte border. */
+function ClassFilterPill({ label, active, accent = false, onClick }) {
+  const baseBorder = active ? "#00C853" : (accent ? "rgba(0,229,255,0.45)" : C.border);
+  const baseBg = active ? "rgba(0,200,83,0.20)" : "rgba(255,255,255,0.03)";
+  const color = active ? "#69F0AE" : (accent ? "#80deea" : C.muted);
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      style={{
+        background: baseBg,
+        border: `1px solid ${baseBorder}`,
+        color,
+        padding: "5px 11px",
+        borderRadius: 999,
+        fontFamily: "var(--font-body)",
+        fontSize: 12,
+        fontWeight: 600,
+        cursor: "pointer",
+        whiteSpace: "nowrap",
+        transition: "background 150ms ease, border-color 150ms ease",
+      }}
+    >
+      {label}
+    </button>
   );
 }
 

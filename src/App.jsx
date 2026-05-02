@@ -543,6 +543,7 @@ export default function App() {
         <LearnPathsHub
           userName={userName || "Speler"}
           authUser={authUser}
+          userLevel={userLevel}
           filterSubject={learnFilterSubject}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
