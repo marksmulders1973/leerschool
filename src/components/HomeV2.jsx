@@ -220,8 +220,9 @@ export default function HomeV2() {
             maxWidth: 480,
             lineHeight: 1.6,
           }}>
-            Leerpaden met uitleg per stap, gevolgd door directe checks.
-            Geen gokwerk, geen punten-jagen — gewoon zien of de stof zit.
+            Per onderwerp eerst uitleg, dan een vraagje om te checken
+            of het zit. Geen gokwerk, geen punten-jagen — gewoon zien
+            of je het snapt.
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             <button
@@ -281,22 +282,24 @@ export default function HomeV2() {
             overflow: "hidden",
           }}>
             {[
-              { v: "24",   l: "leerpaden" },
-              { v: "340+", l: "stappen" },
-              { v: "100+", l: "schoolboeken" },
+              { v: "12",    l: "vakken" },
+              { v: "100+",  l: "schoolboeken" },
+              { v: "groep 1 → klas 6", l: "alles tot examen" },
             ].map((s) => (
               <div key={s.l} style={{
                 background: T.bgElevated,
-                padding: "20px 16px",
+                padding: "20px 12px",
                 textAlign: "center",
               }}>
                 <div style={{
                   fontFamily: T.fontDisplay,
-                  fontSize: 28,
+                  // "groep 1 → klas 6" is langer dan een getal — kleinere
+                  // basis-size zodat alle drie kolommen even hoog blijven.
+                  fontSize: s.v.length > 6 ? 15 : 28,
                   fontWeight: 600,
                   color: T.text,
                   letterSpacing: -0.5,
-                  lineHeight: 1,
+                  lineHeight: 1.1,
                 }}>
                   {s.v}
                 </div>
@@ -330,7 +333,7 @@ export default function HomeV2() {
             marginBottom: 16,
             fontWeight: 500,
           }}>
-            modules
+            Wat wil je doen
           </div>
           <div style={{
             display: "grid",
