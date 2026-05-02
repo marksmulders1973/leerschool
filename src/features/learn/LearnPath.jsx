@@ -17,10 +17,16 @@ const C = {
 };
 
 function renderInline(text) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  // Ondersteunt zowel **bold** (dubbele asterisks) als *bold* (enkele
+  // asterisks). Voor *...* moeten de asterisks niet-spatie raken zodat
+  // math-uitdrukkingen als "2 * 3" of "n * x" niet per ongeluk vet worden.
+  const parts = text.split(/(\*\*[^*]+\*\*|\*\S[^*]*\S\*|\*\S\*)/g);
   return parts.map((p, i) => {
     if (p.startsWith("**") && p.endsWith("**")) {
       return <strong key={i} style={{ color: "#ffffff" }}>{p.slice(2, -2)}</strong>;
+    }
+    if (p.startsWith("*") && p.endsWith("*") && p.length >= 3 && !p.startsWith("**")) {
+      return <strong key={i} style={{ color: "#ffffff" }}>{p.slice(1, -1)}</strong>;
     }
     return <span key={i}>{p}</span>;
   });
