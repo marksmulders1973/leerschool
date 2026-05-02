@@ -4,6 +4,7 @@ import { ALL_LEARN_PATHS } from "../../learnPaths";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
+import AITutor from "./AITutor.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -190,6 +191,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [loaded, setLoaded] = useState(false);
   const [showMiniQuiz, setShowMiniQuiz] = useState(false);
+  // AI-tutor drawer-state. Sluit niet automatisch bij stap-wissel; tutor leest
+  // pathId+stepIdx zelf uit en herlaadt history.
+  const [showTutor, setShowTutor] = useState(false);
+  // Onthoud laatste fout-poging zodat de tutor weet wat er net mis ging.
+  const [lastWrongAnswer, setLastWrongAnswer] = useState(null);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -283,6 +289,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     if (mode !== "checking") return;
     setSelected(i);
     if (i === currentCheck.answer) {
+      setLastWrongAnswer(null);
       setTimeout(() => {
         if (checkIdx + 1 < checks.length) {
           setCheckIdx(checkIdx + 1);
@@ -293,6 +300,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         }
       }, 900);
     } else {
+      // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
+      // kan reageren als de leerling om hulp vraagt.
+      setLastWrongAnswer(currentCheck.options?.[i] || null);
       setMode("wrong");
     }
   };
@@ -512,7 +522,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               ? <step.illustrationComponent />
               : <SvgFigure svg={step.svg} />}
             <Explanation text={step.explanation} />
-            <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
+              <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
+              <button
+                type="button"
+                onClick={() => setShowTutor(true)}
+                style={tutorButtonStyle()}
+                aria-label="Vraag aan de AI-tutor"
+              >
+                <span style={{ fontSize: 16 }}>💬</span>
+                Vraag aan de tutor
+              </button>
+            </div>
           </>
         )}
 
@@ -566,6 +587,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </div>
             <button onClick={() => setMode("reading")} style={btnSecondary()}>
               📖 Lees uitleg opnieuw
+            </button>
+            <button
+              onClick={() => setShowTutor(true)}
+              style={{ ...btnSecondary(), marginTop: 8 }}
+            >
+              💬 Vraag aan de tutor
             </button>
             <button onClick={tryAgain} style={{ ...btnPrimary(), marginTop: 8 }}>
               🔁 Probeer opnieuw
@@ -634,6 +661,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </div>
           </>
         )}
+
+        <AITutor
+          open={showTutor}
+          onClose={() => setShowTutor(false)}
+          pathTitle={path.title}
+          pathId={pathId}
+          stepTitle={step.title}
+          stepIdx={stepIdx}
+          stepExplanation={step.explanation}
+          currentCheck={currentCheck}
+          lastWrongAnswer={lastWrongAnswer}
+        />
 
         {mode === "stepDone" && showMiniQuiz && (
           <div style={cardStyle(C.good)}>
@@ -1010,6 +1049,29 @@ function btnSecondary() {
     fontSize: 15,
     fontFamily: "var(--font-display)",
     cursor: "pointer",
+  };
+}
+
+/** Knop "Vraag aan de tutor" — naast de YouTube-knop op de step-pagina.
+ *  Visueel onderscheidend (groen-getinte chat-uitstraling) zonder de
+ *  primary-CTA te zijn. */
+function tutorButtonStyle() {
+  return {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 8,
+    marginTop: 12,
+    marginBottom: 6,
+    padding: "9px 14px",
+    background: "linear-gradient(135deg, rgba(0,200,83,0.18), rgba(0,200,83,0.10))",
+    border: "1px solid rgba(0,200,83,0.45)",
+    borderRadius: 12,
+    color: "#69F0AE",
+    fontFamily: "var(--font-display)",
+    fontSize: 13,
+    fontWeight: 700,
+    cursor: "pointer",
+    boxShadow: "0 2px 10px rgba(0,200,83,0.15)",
   };
 }
 
