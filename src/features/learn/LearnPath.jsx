@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
+import MdInline from "../../shared/ui/MdInline.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -461,7 +462,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
-              {currentCheck.q}
+              <MdInline text={currentCheck.q} />
             </div>
             {currentCheck.options.map((opt, i) => {
               const isSelected = selected === i;

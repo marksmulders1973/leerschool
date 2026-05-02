@@ -5,6 +5,7 @@ import { SoundEngine, track } from "../../utils.js";
 import { findLearnPathForQuestion } from "../../learnPaths/index.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
+import MdInline from "../../shared/ui/MdInline.jsx";
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
@@ -340,7 +341,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-          <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}>{question.q}</h2>
+          <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}><MdInline text={question.q} /></h2>
           {questionImage && !question.imageInExplanation && (
             <img
               src={questionImage}
@@ -532,7 +533,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             {/* De vraag */}
             <div style={{ background: "#1e2d45", borderRadius: 14, padding: "14px 16px", marginBottom: 14, border: "1px solid #2a3f5f" }}>
               <div style={{ fontSize: 11, color: "#667788", fontWeight: 700, marginBottom: 6, textTransform: "uppercase", letterSpacing: 1 }}>De vraag</div>
-              <div style={{ fontSize: 15, color: "var(--color-text)", fontWeight: 600, lineHeight: 1.5 }}>{question.q}</div>
+              <div style={{ fontSize: 15, color: "var(--color-text)", fontWeight: 600, lineHeight: 1.5 }}><MdInline text={question.q} /></div>
             </div>
 
             {/* Jouw antwoord vs goed antwoord */}
