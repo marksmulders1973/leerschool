@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import MasteryCTABanner from "../features/mastery/MasteryCTABanner.jsx";
+
+// Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
+// de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
+const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
 
 const TICKER_ITEMS = [
   { icon: "🎯", text: "Cito eindtoets oefenen" },
@@ -711,15 +715,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           />
         </div>
 
-        {/* Lichtkrant ticker — P1.8: verbergen voor ingelogde leerlingen
-            (mastery-CTA neemt de focus). Voor nieuwe bezoekers blijft hij
-            zichtbaar als sociaal bewijs. */}
+        {/* Mini-3D-teaser + lichtkrant — alleen voor nieuwe bezoekers. Mastery-CTA
+            (hieronder) neemt de focus voor terugkerende leerlingen. */}
         {(() => {
           let hasName = false;
           try {
             hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
           } catch {}
-          return !hasName ? <TickerBanner /> : null;
+          if (hasName) return null;
+          return (
+            <>
+              <Suspense fallback={
+                <div style={{
+                  width: "100%", maxWidth: 320, margin: "12px auto 16px",
+                  height: 220, borderRadius: 16,
+                  background: "rgba(255,213,79,0.06)",
+                  border: "1px solid rgba(255,213,79,0.20)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: 12, color: "rgba(224,230,240,0.55)",
+                }}>
+                  3D laadt…
+                </div>
+              }>
+                <Mini3DTeaser onCTA={() => {
+                  if (onPickPath) onPickPath("ruimtemeetkunde");
+                  else if (onLearnPathsHub) onLearnPathsHub();
+                }} />
+              </Suspense>
+              <TickerBanner />
+            </>
+          );
         })()}
 
         {step === "role" && isLaunchPromoActive() && (
