@@ -6,6 +6,7 @@
 // Interactieve 3D-componenten — per check ID (RM-Sx-Qy). Vervangen de standaard
 // multiple-choice check in LearnPath.jsx als step.interactiveComponent gezet is.
 import RmS6Q1 from "../3d/RM-S6-Q1.jsx";
+import RmS8Q1 from "../3d/RM-S8-Q1.jsx";
 import RmS12Q1 from "../3d/RM-S12-Q1.jsx";
 
 const COLORS = {
@@ -346,6 +347,7 @@ const steps = [
   },
   {
     title: "Inhoud van een kubus",
+    interactiveComponent: RmS8Q1, // RM-S8-Q1 — draaibare 5×5×5 kubus met "Tel de blokjes"-animatie
     explanation: "Een **kubus** is een speciale balk waarbij **alle zijden even lang** zijn (zoals een dobbelsteen).\n\nAls de zijde **z** lang is, dan past in de kubus:\n• z langs de lengte\n• z langs de breedte\n• z langs de hoogte\n\nDus het aantal blokjes is **z × z × z = z³**.\n\n**inhoud kubus = z³**\n\nKlinkt bekend? z² is een vierkant in 2D (oppervlakte). z³ is een **kubus** in 3D (inhoud). Daarom heet **'kwadraat'** een vierkant en **'derdemacht'** of **'kubiek'** een kubus.\n\nVoorbeeld: kubus met zijde 4 cm:\ninhoud = 4 × 4 × 4 = **64 cm³**\n\nLet op: zijde 4 cm geeft inhoud in cm³ — drie keer cm vermenigvuldigd.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(80, 40)">
