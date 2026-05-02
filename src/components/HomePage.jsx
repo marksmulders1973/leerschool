@@ -4,6 +4,7 @@ import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import MasteryCTABanner from "../features/mastery/MasteryCTABanner.jsx";
+import DailyChallengeBanner from "../features/mastery/DailyChallengeBanner.jsx";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
@@ -682,10 +683,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        {/* Hero-variant van Mastery-CTA voor terugkerende leerlingen (Prio 2
-            uit competitor-research): "Doorgaan waar je was" als allereerste
-            content, vóór intro-video, zodat de eerste klik altijd verder
-            leidt. Brilliant-pattern. */}
+        {/* Daily challenge + Hero-Mastery-CTA voor terugkerende leerlingen
+            (Prio 2 + Prio 3 uit competitor-research). Daily-banner staat
+            BOVEN de mastery-CTA: streak/dagelijks-signaal eerst (Duolingo/
+            Brilliant-pattern), dan "Doorgaan waar je was" als secondary. */}
         {step === "role" && onPickPath && (() => {
           let savedName = null;
           try {
@@ -694,6 +695,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           if (!savedName) return null;
           return (
             <div style={{ width: "100%", maxWidth: 560, marginBottom: 12 }}>
+              <DailyChallengeBanner
+                userName={savedName}
+                onStart={(pathId) => {
+                  if (pathId && onPickPath) onPickPath(pathId);
+                  else if (onLearnPathsHub) onLearnPathsHub();
+                }}
+              />
               <MasteryCTABanner
                 userName={savedName}
                 onPickPath={onPickPath}
