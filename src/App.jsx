@@ -126,7 +126,19 @@ export default function App() {
       // /duel/:code blijft staan zodat de PvP-lobby de code kan lezen.
       if (location.pathname.match(/^\/duel\//i)) return;
       const fromUrl = pageForPath(location.pathname);
-      if (fromUrl !== page) setPage(fromUrl);
+      if (fromUrl !== page) {
+        // Bij /?go=tafels (of ?play=obliterator) is `page` al door
+        // getInitialPage() uit search-params gezet. fromUrl is dan "home"
+        // omdat pathname "/" is. Niet de page resetten, maar de URL
+        // bijschrijven naar het pad dat bij `page` hoort, zodat deeplinks
+        // van SEO-landingpages de juiste pagina openen.
+        if (fromUrl === "home" && page !== "home") {
+          const expected = pathForPage(page);
+          if (expected) navigate(expected, { replace: true });
+        } else {
+          setPage(fromUrl);
+        }
+      }
       return;
     }
     // pvp-lobby/play hebben dynamische URLs (/duel/:code) — niet redirecten,

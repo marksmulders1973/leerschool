@@ -67,15 +67,15 @@ export default function BottomNav({ currentPage, onNavigate }) {
               onClick={() => { track("bottomnav_click", { tab: tab.id }); onNavigate(tab.target); }}
               style={{
                 flex: 1,
-                minWidth: "var(--tap-target-min)",
-                padding: "var(--space-2) var(--space-1) var(--space-1)",
+                minWidth: 0,
+                padding: "var(--space-2) 2px var(--space-1)",
                 border: "none",
                 background: "transparent",
                 color: tabKleur,
                 fontFamily: "var(--font-display)",
-                fontSize: isBrand ? "11px" : "var(--font-size-xs)",
+                fontSize: isBrand ? "10px" : "var(--font-size-xs)",
                 fontWeight: "var(--font-weight-bold)",
-                letterSpacing: isBrand ? "1.2px" : "normal",
+                letterSpacing: isBrand ? "0.5px" : "normal",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
@@ -84,6 +84,7 @@ export default function BottomNav({ currentPage, onNavigate }) {
                 transition: "color var(--motion-fast) var(--ease-out)",
                 position: "relative",
                 textShadow: isBrand ? "0 0 8px rgba(255, 100, 40, 0.6)" : "none",
+                overflow: "hidden",
               }}
             >
               {isActief && !isBrand && (
@@ -125,12 +126,15 @@ export default function BottomNav({ currentPage, onNavigate }) {
               >
                 {tab.emoji}
               </span>
-              <span style={isBrand ? {
-                background: "linear-gradient(180deg, #fff 0%, #ffcc40 50%, #ff5030 100%)",
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              } : undefined}>{tab.label}</span>
+              <span style={{
+                whiteSpace: "nowrap",
+                ...(isBrand ? {
+                  background: "linear-gradient(180deg, #fff 0%, #ffcc40 50%, #ff5030 100%)",
+                  WebkitBackgroundClip: "text",
+                  backgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                } : {}),
+              }}>{tab.label}</span>
             </button>
           );
         })}
