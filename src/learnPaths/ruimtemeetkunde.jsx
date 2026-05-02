@@ -20,11 +20,82 @@ const RmS12Q1 = make3DInteractiveComponent("RM-S12-Q1");
 // Uitleg-illustraties (3D-preview boven de tekst, vervangt step.svg).
 // Ingesloten als component-fabriek zodat React-renderer ze kan invoken.
 const IllS6 = () => <Vergelijking2Dvs3D />;
-const IllS7 = () => <Shape3DIllustration shape="balk" dimensions={{ lengte: 4, hoogte: 2, breedte: 1 }} labels={[{ text: "4 lang", axis: "x" }, { text: "2 hoog", axis: "y" }, { text: "1 breed", axis: "z" }]} showUnitCubes caption="inhoud = aantal blokjes dat erin past (hier 8)" />;
-const IllS8 = () => <Shape3DIllustration shape="kubus" dimensions={{ zijde: 4 }} labels={[{ text: "z = 4", axis: "x" }, { text: "z", axis: "y" }, { text: "z", axis: "z" }]} caption="inhoud kubus = z × z × z = z³" />;
-const IllS9 = () => <Shape3DIllustration shape="balk" dimensions={{ lengte: 6, hoogte: 3, breedte: 4 }} labels={[{ text: "lengte 6", axis: "x" }, { text: "hoogte 3", axis: "y" }, { text: "breedte 4", axis: "z" }]} caption="inhoud balk = lengte × breedte × hoogte" />;
-const IllS10 = () => <Shape3DIllustration shape="cilinder" dimensions={{ straal: 3, hoogte: 10 }} labels={[{ text: "r = 3", axis: "x" }, { text: "h = 10", axis: "y" }]} caption="inhoud cilinder = π × r² × h" />;
-const IllS12 = () => <Shape3DIllustration shape="piramide" dimensions={{ grondvlakZijde: 6, hoogte: 9 }} labels={[{ text: "6 cm", axis: "x" }, { text: "h = 9", axis: "y" }, { text: "6 cm", axis: "z" }]} caption="inhoud piramide = ⅓ × grondvlak × hoogte" />;
+const IllS7 = () => (
+  <Shape3DIllustration
+    shape="balk"
+    dimensions={{ lengte: 4, hoogte: 2, breedte: 1 }}
+    labels={[{ text: "4 lang", axis: "x" }, { text: "2 hoog", axis: "y" }, { text: "1 breed", axis: "z" }]}
+    showUnitCubes
+    caption="inhoud = aantal blokjes dat erin past (hier 8)"
+  />
+);
+const IllS8 = () => (
+  <Shape3DIllustration
+    shape="kubus"
+    dimensions={{ zijde: 4 }}
+    sliders={[{ key: "zijde", min: 1, max: 8, step: 1, label: "zijde z" }]}
+    labels={(d) => [
+      { text: `${d.zijde}`, axis: "x" },
+      { text: `${d.zijde}`, axis: "y" },
+      { text: `${d.zijde}`, axis: "z" },
+    ]}
+    caption={(d) => `z = ${d.zijde}  →  inhoud = z³ = ${d.zijde} × ${d.zijde} × ${d.zijde} = ${d.zijde ** 3} cm³`}
+  />
+);
+const IllS9 = () => (
+  <Shape3DIllustration
+    shape="balk"
+    dimensions={{ lengte: 6, hoogte: 3, breedte: 4 }}
+    sliders={[
+      { key: "lengte",  min: 1, max: 10, step: 1, label: "lengte" },
+      { key: "breedte", min: 1, max: 10, step: 1, label: "breedte" },
+      { key: "hoogte",  min: 1, max: 10, step: 1, label: "hoogte" },
+    ]}
+    labels={(d) => [
+      { text: `lengte ${d.lengte}`,   axis: "x" },
+      { text: `hoogte ${d.hoogte}`,   axis: "y" },
+      { text: `breedte ${d.breedte}`, axis: "z" },
+    ]}
+    caption={(d) => `${d.lengte} × ${d.breedte} × ${d.hoogte} = ${d.lengte * d.breedte * d.hoogte} cm³`}
+  />
+);
+const IllS10 = () => (
+  <Shape3DIllustration
+    shape="cilinder"
+    dimensions={{ straal: 3, hoogte: 7 }}
+    sliders={[
+      { key: "straal", min: 1, max: 6,  step: 1, label: "straal r" },
+      { key: "hoogte", min: 1, max: 12, step: 1, label: "hoogte h" },
+    ]}
+    labels={(d) => [
+      { text: `r = ${d.straal}`, axis: "x" },
+      { text: `h = ${d.hoogte}`, axis: "y" },
+    ]}
+    caption={(d) => {
+      const v = Math.round(Math.PI * d.straal * d.straal * d.hoogte * 10) / 10;
+      return `π × ${d.straal}² × ${d.hoogte} ≈ ${v} cm³`;
+    }}
+  />
+);
+const IllS12 = () => (
+  <Shape3DIllustration
+    shape="piramide"
+    dimensions={{ grondvlakZijde: 6, hoogte: 9 }}
+    sliders={[
+      { key: "grondvlakZijde", min: 1, max: 10, step: 1, label: "grondvlak" },
+      { key: "hoogte",         min: 1, max: 12, step: 1, label: "hoogte h" },
+    ]}
+    labels={(d) => [
+      { text: `${d.grondvlakZijde} cm`, axis: "x" },
+      { text: `h = ${d.hoogte}`,        axis: "y" },
+      { text: `${d.grondvlakZijde} cm`, axis: "z" },
+    ]}
+    caption={(d) => {
+      const v = Math.round((d.grondvlakZijde * d.grondvlakZijde * d.hoogte) / 3 * 100) / 100;
+      return `⅓ × ${d.grondvlakZijde}² × ${d.hoogte} = ${v} cm³`;
+    }}
+  />
+);
 
 const COLORS = {
   axis: "#e0e6f0",
