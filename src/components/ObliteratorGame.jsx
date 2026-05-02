@@ -8502,13 +8502,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               };
               return (
                 <>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                    <button
-                      onClick={() => setFase("menu")}
-                      style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "#fff", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13 }}
-                    >
-                      ← Menu
-                    </button>
+                  <div style={{
+                    position: "sticky", top: 0, zIndex: 20,
+                    display: "flex", justifyContent: "space-between", alignItems: "center",
+                    marginBottom: 10, padding: "8px 4px",
+                    background: "rgba(13, 27, 46, 0.92)",
+                    backdropFilter: "blur(6px)",
+                    WebkitBackdropFilter: "blur(6px)",
+                    borderRadius: 8,
+                  }}>
+                    <div style={{ display: "flex", gap: 6 }}>
+                      <button
+                        onClick={() => setFase("menu")}
+                        style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "#fff", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13 }}
+                      >
+                        ← Menu
+                      </button>
+                      <button
+                        onClick={() => onClose?.()}
+                        title="Terug naar Studiebol"
+                        style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,80,40,0.4)", background: "rgba(255,80,40,0.10)", color: "#ff8060", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700 }}
+                      >
+                        ✕ Sluit
+                      </button>
+                    </div>
                     <div style={{ fontSize: 12, color: "#ffd54f", fontWeight: 700 }}>💍 {munten} {isAdmin && "(admin = gratis)"}</div>
                   </div>
                   <h2 style={{ fontFamily: "Impact, sans-serif", fontSize: 22, color: "#ff9d40", letterSpacing: 1.5, marginBottom: 8 }}>
