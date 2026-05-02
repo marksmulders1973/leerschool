@@ -3,6 +3,7 @@ import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import { SUBJECTS } from "../../shared/subjects.js";
 
 const C = {
   bg: "#0f1729",
@@ -433,7 +434,75 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       </div>
 
       <div style={{ padding: "10px 18px 28px" }}>
-        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "10px 0 6px" }}>
+        {/* Eyebrow — geeft context (vak · stap-info) zonder lawaai. Patroon
+            geleerd van Khan/BBC Bitesize/Brilliant: kleine caps boven titel. */}
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 8,
+          marginTop: 8,
+          marginBottom: 4,
+        }}>
+          <div style={{
+            fontFamily: "var(--font-display)",
+            fontSize: 11,
+            fontWeight: 700,
+            color: C.good,
+            letterSpacing: 1.6,
+            textTransform: "uppercase",
+          }}>
+            {(SUBJECTS[path.subject]?.title || path.subject || "Studiebol")} · stap {stepIdx + 1} van {totalSteps}
+          </div>
+          {/* Markeer voltooid — agency voor leerling (les leersnel). Alleen
+              tijdens lezen, niet midden in een check. Stap blijft natuurlijk
+              ook automatisch voltooid bij correct antwoord. */}
+          {mode === "reading" && !completedSteps.has(stepIdx) && (
+            <button
+              onClick={completeStep}
+              style={{
+                background: "transparent",
+                border: `1px solid ${C.border}`,
+                color: C.muted,
+                fontFamily: "var(--font-body)",
+                fontSize: 11,
+                fontWeight: 600,
+                padding: "4px 10px",
+                borderRadius: 999,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+                transition: "color 150ms ease, border-color 150ms ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = C.good;
+                e.currentTarget.style.borderColor = C.good;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = C.muted;
+                e.currentTarget.style.borderColor = C.border;
+              }}
+              aria-label="Markeer deze stap als voltooid"
+            >
+              ✓ Markeer voltooid
+            </button>
+          )}
+          {mode === "reading" && completedSteps.has(stepIdx) && (
+            <span style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 11,
+              fontWeight: 600,
+              color: C.good,
+              padding: "4px 10px",
+              borderRadius: 999,
+              background: "rgba(0,200,83,0.12)",
+              border: `1px solid rgba(0,200,83,0.30)`,
+              whiteSpace: "nowrap",
+            }}>
+              ✓ Voltooid
+            </span>
+          )}
+        </div>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
           {stepIdx + 1}. {step.title}
         </h2>
 
@@ -504,52 +573,85 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </div>
         )}
 
-        {mode === "stepDone" && (
-          <div style={cardStyle(C.good)}>
-            <div style={{ fontSize: 18, fontWeight: 700, color: C.good, marginBottom: 8 }}>
-              ✅ Stap {stepIdx + 1} voltooid!
+        {mode === "stepDone" && !showMiniQuiz && (
+          <>
+            {/* Sucess-banner — kort, links uitgelijnd zonder kader-stress */}
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "12px 14px",
+              borderRadius: 12,
+              background: "rgba(0,200,83,0.10)",
+              border: `1px solid rgba(0,200,83,0.30)`,
+              marginTop: 16,
+              marginBottom: 14,
+            }}>
+              <span style={{ fontSize: 18 }}>✅</span>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
+                  Stap {stepIdx + 1} voltooid!
+                </div>
+                <div style={{ fontSize: 13, color: C.text, marginTop: 2 }}>
+                  {stepIdx + 1 < totalSteps
+                    ? "Goed bezig. Wat wil je nu?"
+                    : "Helemaal klaar — laatste stap geweest!"}
+                </div>
+              </div>
             </div>
-            <div style={{ fontSize: 14, color: C.text, marginBottom: 14 }}>
-              {stepIdx + 1 < totalSteps
-                ? `Goed bezig. Door naar stap ${stepIdx + 2}, of test eerst even of het echt is blijven hangen.`
-                : "Helemaal klaar — laatste stap geweest!"}
-            </div>
-            {!showMiniQuiz && (
-              <button
-                onClick={() => setShowMiniQuiz(true)}
-                style={{ ...btnPrimary(), background: `linear-gradient(135deg, ${C.warm}, #f9a825)`, color: "#1a0008", boxShadow: "0 4px 16px rgba(255,213,79,0.35)" }}
-              >
-                📝 Test wat je net leerde
-              </button>
-            )}
-            {stepIdx + 1 < totalSteps && (
-              <button onClick={goNext} style={{ ...btnPrimary(), marginTop: 8 }}>
-                Volgende stap ▶
-              </button>
-            )}
-            <button onClick={() => setMode("overview")} style={{ ...btnSecondary(), marginTop: 8 }}>
-              📋 Terug naar overzicht
-            </button>
 
-            {showMiniQuiz && (
-              <MiniQuiz
-                subject={path.subject || "wiskunde"}
-                level={path.level || "klas1-vwo"}
-                topicLabel={`${path.title} — ${step.title}`}
-                count={3}
-                onClose={() => setShowMiniQuiz(false)}
-                pathId={path.id}
-                playerName={userName}
-                onLessonReturn={() => {
-                  // Drempel niet gehaald → mini-quiz dicht en scroll naar
-                  // de uitleg. Gebruiker leest opnieuw, kan dan opnieuw klikken.
-                  setShowMiniQuiz(false);
-                  if (typeof window !== "undefined") {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }
-                }}
+            {/* Stof begrepen?-eindblok (les van Leersnel) — 3 kaarten met
+                eyebrow-tags ipv 3 stacked buttons. Visuele rolverdeling. */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+              gap: 10,
+            }}>
+              <NextStepCard
+                eyebrow="Zelf testen"
+                title="Mini-toets"
+                hint="3 vragen over deze stap"
+                accent={C.warm}
+                onClick={() => setShowMiniQuiz(true)}
               />
-            )}
+              {stepIdx + 1 < totalSteps && (
+                <NextStepCard
+                  eyebrow="Volgende stap"
+                  title={`${stepIdx + 2}. ${path.steps[stepIdx + 1]?.title || "Verder"}`}
+                  hint="Doorgaan met dit onderwerp"
+                  accent={C.good}
+                  primary
+                  onClick={goNext}
+                />
+              )}
+              <NextStepCard
+                eyebrow="Overzicht"
+                title="Terug naar paden"
+                hint="Andere stap kiezen"
+                accent={C.muted}
+                onClick={() => setMode("overview")}
+              />
+            </div>
+          </>
+        )}
+
+        {mode === "stepDone" && showMiniQuiz && (
+          <div style={cardStyle(C.good)}>
+            <MiniQuiz
+              subject={path.subject || "wiskunde"}
+              level={path.level || "klas1-vwo"}
+              topicLabel={`${path.title} — ${step.title}`}
+              count={3}
+              onClose={() => setShowMiniQuiz(false)}
+              pathId={path.id}
+              playerName={userName}
+              onLessonReturn={() => {
+                setShowMiniQuiz(false);
+                if (typeof window !== "undefined") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+            />
           </div>
         )}
       </div>
@@ -767,6 +869,74 @@ function AllDone({ path, onHome, onBackToOverview }) {
         Terug naar home
       </button>
     </div>
+  );
+}
+
+/** Kaart voor het "Stof begrepen?"-eindblok na een voltooide stap. Drie
+ *  varianten worden naast elkaar getoond met eyebrow-tags zodat de
+ *  rolverdeling (testen / doorgaan / overzicht) meteen zichtbaar is. */
+function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick }) {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        background: primary ? "rgba(0,200,83,0.10)" : "rgba(255,255,255,0.03)",
+        border: `1px solid ${primary ? "rgba(0,200,83,0.40)" : C.border}`,
+        borderRadius: 12,
+        padding: "12px 14px",
+        textAlign: "left",
+        cursor: "pointer",
+        color: C.text,
+        fontFamily: "var(--font-body)",
+        display: "flex",
+        flexDirection: "column",
+        gap: 6,
+        transition: "border-color 150ms ease, transform 150ms ease, background 150ms ease",
+        minHeight: 96,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = accent;
+        e.currentTarget.style.transform = "translateY(-1px)";
+        if (!primary) e.currentTarget.style.background = "rgba(255,255,255,0.05)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = primary ? "rgba(0,200,83,0.40)" : C.border;
+        e.currentTarget.style.transform = "translateY(0)";
+        if (!primary) e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+      }}
+    >
+      <span style={{
+        fontFamily: "var(--font-display)",
+        fontSize: 10,
+        fontWeight: 700,
+        color: accent,
+        letterSpacing: 1.4,
+        textTransform: "uppercase",
+      }}>
+        {eyebrow}
+      </span>
+      <span style={{
+        fontFamily: "var(--font-display)",
+        fontSize: 14,
+        fontWeight: 700,
+        color: "var(--color-text-strong)",
+        lineHeight: 1.25,
+        // Lange volgende-stap-titels niet over heel de pagina laten lopen
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        display: "-webkit-box",
+        WebkitLineClamp: 2,
+        WebkitBoxOrient: "vertical",
+      }}>
+        {title}
+      </span>
+      <span style={{
+        fontSize: 11,
+        color: C.muted,
+      }}>
+        {hint}
+      </span>
+    </button>
   );
 }
 
