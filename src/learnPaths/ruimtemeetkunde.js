@@ -5,9 +5,12 @@
 
 // Interactieve 3D-componenten — per check ID (RM-Sx-Qy). Vervangen de standaard
 // multiple-choice check in LearnPath.jsx als step.interactiveComponent gezet is.
-import RmS6Q1 from "../3d/RM-S6-Q1.jsx";
-import RmS8Q1 from "../3d/RM-S8-Q1.jsx";
-import RmS12Q1 from "../3d/RM-S12-Q1.jsx";
+// RM-S8 + RM-S12 lopen via Shape3D-registry (questions3d.js). RM-S6 is een
+// speciaal geval (vergelijking 4 figuren) en blijft een dedicated component.
+import RmS6Q1 from "../components/learn/3d/RM-S6-Q1.jsx";
+import { make3DInteractiveComponent } from "../components/learn/3d/Question3DRenderer.jsx";
+const RmS8Q1 = make3DInteractiveComponent("RM-S8-Q1");
+const RmS12Q1 = make3DInteractiveComponent("RM-S12-Q1");
 
 const COLORS = {
   axis: "#e0e6f0",
