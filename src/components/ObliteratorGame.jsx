@@ -4136,73 +4136,101 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.fillRect(lFx, footY - footH, footW, 2 * SCHAAL);
         ctx.fillRect(rFx, footY - footH, footW, 2 * SCHAAL);
       } else {
-        // Schans als skate-ramp: gebogen slope (convex, kicker-stijl) +
-        // kort vlak deck bovenop + verticale achterkant. Donker materiaal met
-        // panel-lijnen en witte arrow-grafiek. Speler raakt eerst slope-tip
-        // (links-onder), 'rolt' over de boog naar de deck.
-        const xL = sc.x;                          // linker (slope-tip op grond)
-        const yB = sc.y + sc.hoogte;              // grondniveau
+        // Schans: gebogen slope omhoog naar deck. In cheerful biomes is de
+        // schans van aarde+gras zodat 'ie blendt met de omgeving; in donker
+        // biomes blijft de skate-ramp-look. Bottom-edge volgt hill-curve
+        // zodat de schans niet uitsteekt op een afdaling.
+        const hills = hillsActief();
+        const grondTopFlat = GROND_Y + SPELER_GROOTTE;
+        const xL = sc.x;
+        const xR = sc.x + sc.breedte;
         const yT = sc.y;                          // bovenkant (deck-niveau)
-        const xR = sc.x + sc.breedte;             // rechter (achterkant)
-        // Curve gaat van slope-tip omhoog naar 85% breedte op deck-niveau,
-        // dan kort vlak naar volle breedte. Control point boven straight-line
-        // = convexe bocht (uitstekend, kicker-vorm).
+        // Bottom-Y volgt vloer in hills-mode, anders flat op spawn-baseline
+        const yBL = hills ? grondTopFlat - vloerHoogte(worldScrollX + xL) : sc.y + sc.hoogte;
+        const yBR = hills ? grondTopFlat - vloerHoogte(worldScrollX + xR) : sc.y + sc.hoogte;
+        const yBmid = (yBL + yBR) / 2;
         const xDeckStart = xL + sc.breedte * 0.85;
         const cpx = xL + sc.breedte * 0.55;
-        const cpy = yB - sc.hoogte * 0.92;        // hoog → meer ronding
+        const cpy = yBmid - sc.hoogte * 0.92;     // hoog → meer ronding
 
-        // Body fill — donker grijs gradient
+        // Kleur per biome — aarde+gras voor cheerful, donker materiaal voor donker
+        const cTop = hills ? biomeKleur("grondLicht") : "#3a3a44";
+        const cBot = hills ? biomeKleur("grondDonker") : "#1a1a22";
+
+        // Body fill
         ctx.shadowBlur = 14;
-        ctx.shadowColor = "rgba(0,0,0,0.7)";
-        const grad = ctx.createLinearGradient(0, yT, 0, yB);
-        grad.addColorStop(0, "#3a3a44");
-        grad.addColorStop(1, "#1a1a22");
+        ctx.shadowColor = hills ? "rgba(60,30,10,0.55)" : "rgba(0,0,0,0.7)";
+        const grad = ctx.createLinearGradient(0, yT, 0, yBmid);
+        grad.addColorStop(0, cTop);
+        grad.addColorStop(1, cBot);
         ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.moveTo(xL, yB);
+        ctx.moveTo(xL, yBL);
         ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
         ctx.lineTo(xR, yT);                       // deck
-        ctx.lineTo(xR, yB);                       // achterkant omlaag
+        ctx.lineTo(xR, yBR);                      // achterkant naar hill-rechts
+        // Bottom volgt hill-curve van rechts terug naar links (alleen in hills)
+        if (hills) {
+          const stride = 8 * SCHAAL;
+          for (let x = xR - stride; x > xL; x -= stride) {
+            ctx.lineTo(x, grondTopFlat - vloerHoogte(worldScrollX + x));
+          }
+        }
         ctx.closePath();
         ctx.fill();
         ctx.shadowBlur = 0;
 
-        // Slope-rand accent (witte hoogte-lijn over de boog)
-        ctx.strokeStyle = "rgba(220, 220, 230, 0.65)";
-        ctx.lineWidth = 2 * SCHAAL;
-        ctx.beginPath();
-        ctx.moveTo(xL, yB);
-        ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
-        ctx.lineTo(xR, yT);
-        ctx.stroke();
-
-        // Panel-lijnen — horizontale segmenten zoals op echte skate-ramp
-        ctx.strokeStyle = "rgba(255,255,255,0.10)";
-        ctx.lineWidth = 1 * SCHAAL;
-        for (let frac = 0.2; frac < 1.0; frac += 0.2) {
-          const yPanel = yB - sc.hoogte * frac;
-          // Vind x op de curve voor deze hoogte (approximatie via lineair zoeken)
-          let xPanel = xL;
-          for (let t = 0; t <= 1; t += 0.02) {
-            const cy_t = (1 - t) * (1 - t) * yB + 2 * (1 - t) * t * cpy + t * t * yT;
-            if (cy_t <= yPanel) {
-              const cx_t = (1 - t) * (1 - t) * xL + 2 * (1 - t) * t * cpx + t * t * xDeckStart;
-              xPanel = cx_t;
-              break;
-            }
-          }
+        // Slope-rand: gras-band in cheerful, witte highlight in donker
+        if (hills) {
+          ctx.strokeStyle = biomeKleur("grasDonker");
+          ctx.lineWidth = 7 * SCHAAL;
           ctx.beginPath();
-          ctx.moveTo(xPanel, yPanel);
-          ctx.lineTo(xR, yPanel);
+          ctx.moveTo(xL, yBL);
+          ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+          ctx.lineTo(xR, yT);
           ctx.stroke();
+          ctx.strokeStyle = biomeKleur("grasLicht");
+          ctx.lineWidth = 4 * SCHAAL;
+          ctx.beginPath();
+          ctx.moveTo(xL, yBL);
+          ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+          ctx.lineTo(xR, yT);
+          ctx.stroke();
+        } else {
+          ctx.strokeStyle = "rgba(220, 220, 230, 0.65)";
+          ctx.lineWidth = 2 * SCHAAL;
+          ctx.beginPath();
+          ctx.moveTo(xL, yBL);
+          ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
+          ctx.lineTo(xR, yT);
+          ctx.stroke();
+          // Panel-lijnen — alleen op donkere skate-ramp
+          ctx.strokeStyle = "rgba(255,255,255,0.10)";
+          ctx.lineWidth = 1 * SCHAAL;
+          for (let frac = 0.2; frac < 1.0; frac += 0.2) {
+            const yPanel = yBmid - sc.hoogte * frac;
+            let xPanel = xL;
+            for (let t = 0; t <= 1; t += 0.02) {
+              const cy_t = (1 - t) * (1 - t) * yBmid + 2 * (1 - t) * t * cpy + t * t * yT;
+              if (cy_t <= yPanel) {
+                const cx_t = (1 - t) * (1 - t) * xL + 2 * (1 - t) * t * cpx + t * t * xDeckStart;
+                xPanel = cx_t;
+                break;
+              }
+            }
+            ctx.beginPath();
+            ctx.moveTo(xPanel, yPanel);
+            ctx.lineTo(xR, yPanel);
+            ctx.stroke();
+          }
         }
 
-        // Witte arrow-grafiek (zoals op de echte ramp) midden op de boog
-        ctx.fillStyle = "rgba(220, 230, 240, 0.85)";
+        // Pijl-grafiek midden op de boog — donkerbruin op cheerful, wit op donker
+        ctx.fillStyle = hills ? "rgba(60, 35, 15, 0.85)" : "rgba(220, 230, 240, 0.85)";
         ctx.font = `bold ${Math.floor(sc.hoogte * 0.36)}px sans-serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText("↗", xL + sc.breedte * 0.55, yB - sc.hoogte * 0.45);
+        ctx.fillText("↗", xL + sc.breedte * 0.55, yBmid - sc.hoogte * 0.45);
 
         // Subtiele groene glow-halo om interactiviteit te signaleren
         ctx.save();
@@ -4211,7 +4239,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.strokeStyle = "rgba(105, 240, 174, 0.30)";
         ctx.lineWidth = 3 * SCHAAL;
         ctx.beginPath();
-        ctx.moveTo(xL, yB);
+        ctx.moveTo(xL, yBL);
         ctx.quadraticCurveTo(cpx, cpy, xDeckStart, yT);
         ctx.lineTo(xR, yT);
         ctx.stroke();
