@@ -101,6 +101,7 @@ const Shape3D = forwardRef(function Shape3D(
     showUnitCubes = false,
     showBoundingBox = false,
     theme = "dark-studiebol",
+    height = 360,
   },
   ref
 ) {
@@ -354,7 +355,7 @@ const Shape3D = forwardRef(function Shape3D(
   return (
     <canvas
       ref={canvasRef}
-      style={{ display: "block", width: "100%", height: 360 }}
+      style={{ display: "block", width: "100%", height }}
     />
   );
 });

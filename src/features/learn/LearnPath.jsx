@@ -432,7 +432,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         {(mode === "reading" || mode === "stepDone") && (
           <>
-            <SvgFigure svg={step.svg} />
+            {step.illustrationComponent
+              ? <step.illustrationComponent />
+              : <SvgFigure svg={step.svg} />}
             <Explanation text={step.explanation} />
             <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
           </>

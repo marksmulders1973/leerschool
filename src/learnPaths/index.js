@@ -4,7 +4,7 @@
 //   2. Importeer en registreer hem hieronder
 
 import parabolen from "./parabolen.js";
-import ruimtemeetkunde from "./ruimtemeetkunde.js";
+import ruimtemeetkunde from "./ruimtemeetkunde.jsx";
 import kwadratenWortels from "./kwadratenWortels.js";
 import pythagoras from "./pythagoras.js";
 import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen.js";

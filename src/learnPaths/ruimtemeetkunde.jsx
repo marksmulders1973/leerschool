@@ -9,11 +9,22 @@
 // speciaal geval (vergelijking 4 figuren) en blijft een dedicated component.
 import RmS6Q1 from "../components/learn/3d/RM-S6-Q1.jsx";
 import { make3DInteractiveComponent } from "../components/learn/3d/Question3DRenderer.jsx";
+import Shape3DIllustration from "../components/learn/3d/Shape3DIllustration.jsx";
+import Vergelijking2Dvs3D from "../components/learn/3d/Vergelijking2Dvs3D.jsx";
 const RmS7Q1 = make3DInteractiveComponent("RM-S7-Q1");
 const RmS8Q1 = make3DInteractiveComponent("RM-S8-Q1");
 const RmS9Q1 = make3DInteractiveComponent("RM-S9-Q1");
 const RmS10Q1 = make3DInteractiveComponent("RM-S10-Q1");
 const RmS12Q1 = make3DInteractiveComponent("RM-S12-Q1");
+
+// Uitleg-illustraties (3D-preview boven de tekst, vervangt step.svg).
+// Ingesloten als component-fabriek zodat React-renderer ze kan invoken.
+const IllS6 = () => <Vergelijking2Dvs3D />;
+const IllS7 = () => <Shape3DIllustration shape="balk" dimensions={{ lengte: 4, hoogte: 2, breedte: 1 }} labels={[{ text: "4 lang", axis: "x" }, { text: "2 hoog", axis: "y" }, { text: "1 breed", axis: "z" }]} showUnitCubes caption="inhoud = aantal blokjes dat erin past (hier 8)" />;
+const IllS8 = () => <Shape3DIllustration shape="kubus" dimensions={{ zijde: 4 }} labels={[{ text: "z = 4", axis: "x" }, { text: "z", axis: "y" }, { text: "z", axis: "z" }]} caption="inhoud kubus = z × z × z = z³" />;
+const IllS9 = () => <Shape3DIllustration shape="balk" dimensions={{ lengte: 6, hoogte: 3, breedte: 4 }} labels={[{ text: "lengte 6", axis: "x" }, { text: "hoogte 3", axis: "y" }, { text: "breedte 4", axis: "z" }]} caption="inhoud balk = lengte × breedte × hoogte" />;
+const IllS10 = () => <Shape3DIllustration shape="cilinder" dimensions={{ straal: 3, hoogte: 10 }} labels={[{ text: "r = 3", axis: "x" }, { text: "h = 10", axis: "y" }]} caption="inhoud cilinder = π × r² × h" />;
+const IllS12 = () => <Shape3DIllustration shape="piramide" dimensions={{ grondvlakZijde: 6, hoogte: 9 }} labels={[{ text: "6 cm", axis: "x" }, { text: "h = 9", axis: "y" }, { text: "6 cm", axis: "z" }]} caption="inhoud piramide = ⅓ × grondvlak × hoogte" />;
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -278,6 +289,7 @@ const steps = [
   // ─── C. Inhoud van een balk en kubus (3D) ────────────────────────────
   {
     title: "Van 2D naar 3D",
+    illustrationComponent: IllS6, // 2D rechthoek + 3D balk side-by-side voor contrast
     interactiveComponent: RmS6Q1, // RM-S6-Q1 — interactieve 3D-dobbelsteen ipv multiple-choice
     explanation: "Tot nu praatten we over **platte** figuren: rechthoeken, vierkanten, cirkels. Die zijn **2D** (twee dimensies: lengte en breedte). Ze hebben oppervlakte en omtrek.\n\nNu gaan we naar **3D**-figuren: figuren die ook **diepte** of **hoogte** hebben. Denk aan:\n• Een **kubus** (zoals een dobbelsteen)\n• Een **balk** (zoals een schoenendoos)\n• Een **cilinder** (zoals een blikje)\n• Een **piramide** (zoals in Egypte)\n• Een **kegel** (zoals een ijshoorntje)\n\n3D-figuren hebben naast oppervlakte ook iets nieuws: **inhoud** — hoeveel ruimte er **in** past.",
     svg: `<svg viewBox="0 0 300 200">
@@ -309,6 +321,7 @@ const steps = [
   },
   {
     title: "Wat is inhoud?",
+    illustrationComponent: IllS7, // draaibare 4×2×1 balk met 8 blokjes zichtbaar
     interactiveComponent: RmS7Q1, // RM-S7-Q1 — 4×2×1 balk met "Tel de blokjes" (8 stuks)
     explanation: "**Inhoud** is hoeveel ruimte er **in** een 3D-figuur past. Denk aan:\n• Hoeveel water er in een fles past\n• Hoeveel zand er in een doos past\n• Hoeveel suikerklontjes er in een kistje passen\n\nEenheden voor inhoud:\n• **cm³** (kubieke centimeter)\n• **m³** (kubieke meter)\n• **liter** (1 liter = 1000 cm³ = 1 dm³)\n\nHet kleine **3-tje** slaat op het feit dat je nu in **drie** richtingen meet: lengte, breedte én hoogte.\n\nEen handige manier om over inhoud te denken: tel het aantal **kleine kubusjes** (blokjes) dat in de figuur past. Dat is precies de inhoud.",
     svg: `<svg viewBox="0 0 300 200">
@@ -354,6 +367,7 @@ const steps = [
   },
   {
     title: "Inhoud van een kubus",
+    illustrationComponent: IllS8, // draaibare 4×4×4 kubus
     interactiveComponent: RmS8Q1, // RM-S8-Q1 — draaibare 5×5×5 kubus met "Tel de blokjes"-animatie
     explanation: "Een **kubus** is een speciale balk waarbij **alle zijden even lang** zijn (zoals een dobbelsteen).\n\nAls de zijde **z** lang is, dan past in de kubus:\n• z langs de lengte\n• z langs de breedte\n• z langs de hoogte\n\nDus het aantal blokjes is **z × z × z = z³**.\n\n**inhoud kubus = z³**\n\nKlinkt bekend? z² is een vierkant in 2D (oppervlakte). z³ is een **kubus** in 3D (inhoud). Daarom heet **'kwadraat'** een vierkant en **'derdemacht'** of **'kubiek'** een kubus.\n\nVoorbeeld: kubus met zijde 4 cm:\ninhoud = 4 × 4 × 4 = **64 cm³**\n\nLet op: zijde 4 cm geeft inhoud in cm³ — drie keer cm vermenigvuldigd.",
     svg: `<svg viewBox="0 0 300 200">
@@ -386,6 +400,7 @@ const steps = [
   },
   {
     title: "Inhoud van een balk",
+    illustrationComponent: IllS9, // draaibare balk 6×3×4
     interactiveComponent: RmS9Q1, // RM-S9-Q1 — balk 8×5×2 met blokjes-teller en formule-overlay
     explanation: "Een **balk** is een 3D-figuur met (meestal) drie verschillende zijden: **lengte**, **breedte** en **hoogte**. Denk aan een schoenendoos.\n\n**inhoud balk = lengte × breedte × hoogte**\n\nDe volgorde maakt niet uit — vermenigvuldigen mag in elke volgorde.\n\nVoorbeeld 1: balk van 6 cm × 4 cm × 3 cm:\ninhoud = 6 × 4 × 3 = 24 × 3 = **72 cm³**\n\nVoorbeeld 2: balk van 10 m × 2 m × 5 m (een container?):\ninhoud = 10 × 2 × 5 = **100 m³**\n\n**Tip**: een **kubus** is gewoon een balk waarvan lengte = breedte = hoogte. Die formule (z³) is dus eigenlijk een speciaal geval van 'lengte × breedte × hoogte'.",
     svg: `<svg viewBox="0 0 300 200">
@@ -420,6 +435,7 @@ const steps = [
   // ─── D. Cilinder, piramide, kegel ────────────────────────────
   {
     title: "Inhoud van een cilinder",
+    illustrationComponent: IllS10, // draaibare cilinder r=3, h=10
     interactiveComponent: RmS10Q1, // RM-S10-Q1 — draaibare cilinder r=2, h=5 met formule-overlay
     explanation: "Een **cilinder** ziet eruit als een blikje of een buis. Het heeft:\n• Een ronde **bodem** (een cirkel met straal r)\n• Een ronde **bovenkant** (zelfde cirkel)\n• Een **hoogte** h\n\nDe formule:\n\n**inhoud cilinder = π × r² × h**\n\nWaarom? De bodem is een cirkel met oppervlakte π × r² (komt straks terug bij oppervlakte cirkel). Die oppervlakte vermenigvuldig je met de hoogte — net als bij een balk: grondvlak × hoogte.\n\nVoorbeeld: cilinder met straal 3 cm en hoogte 10 cm (gebruik π ≈ 3,14):\ninhoud = 3,14 × 3² × 10 = 3,14 × 9 × 10 = **282,6 cm³**\n\nVolgorde: eerst r² uitrekenen, dan keer π, dan keer h.",
     svg: `<svg viewBox="0 0 300 200">
@@ -496,6 +512,7 @@ const steps = [
   },
   {
     title: "Inhoud van een piramide",
+    illustrationComponent: IllS12, // draaibare piramide 6×6×9
     interactiveComponent: RmS12Q1, // RM-S12-Q1 — draaibare piramide met toggle "toon omsluitende balk"
     explanation: "Een **piramide** is 3D-figuur met een **plat grondvlak** (vaak een vierkant of rechthoek) en alle zijden lopen omhoog naar één **toppunt**.\n\n**inhoud piramide = ⅓ × oppervlakte grondvlak × hoogte**\n\nWaarom de **⅓**? Een piramide is precies **een derde** van een balk met dezelfde grond en hoogte. Drie piramides passen samen in één balk — bijzonder maar waar.\n\nVoorbeeld: piramide met vierkant grondvlak van 6 × 6 cm en hoogte 9 cm:\n• grondvlak = 6 × 6 = 36 cm²\n• inhoud = ⅓ × 36 × 9 = ⅓ × 324 = **108 cm³**\n\nLet op: 'hoogte' is de **rechte** hoogte van het grondvlak naar de top — niet de schuine zijde van de piramide.",
     svg: `<svg viewBox="0 0 300 200">
