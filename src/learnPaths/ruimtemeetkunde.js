@@ -3,6 +3,10 @@
 // Onderwerpen: oppervlakte, omtrek, inhoud, vergrotingsfactor (k, k², k³)
 // Niveau: alsof tegen iemand die net kan rekenen.
 
+// Interactieve 3D-componenten — per check ID (RM-Sx-Qy). Vervangen de standaard
+// multiple-choice check in LearnPath.jsx als step.interactiveComponent gezet is.
+import RmS6Q1 from "../3d/RM-S6-Q1.jsx";
+
 const COLORS = {
   axis: "#e0e6f0",
   grid: "#2a3f5f",
@@ -266,6 +270,7 @@ const steps = [
   // ─── C. Inhoud van een balk en kubus (3D) ────────────────────────────
   {
     title: "Van 2D naar 3D",
+    interactiveComponent: RmS6Q1, // RM-S6-Q1 — interactieve 3D-dobbelsteen ipv multiple-choice
     explanation: "Tot nu praatten we over **platte** figuren: rechthoeken, vierkanten, cirkels. Die zijn **2D** (twee dimensies: lengte en breedte). Ze hebben oppervlakte en omtrek.\n\nNu gaan we naar **3D**-figuren: figuren die ook **diepte** of **hoogte** hebben. Denk aan:\n• Een **kubus** (zoals een dobbelsteen)\n• Een **balk** (zoals een schoenendoos)\n• Een **cilinder** (zoals een blikje)\n• Een **piramide** (zoals in Egypte)\n• Een **kegel** (zoals een ijshoorntje)\n\n3D-figuren hebben naast oppervlakte ook iets nieuws: **inhoud** — hoeveel ruimte er **in** past.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="30" y="80" width="60" height="40" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>

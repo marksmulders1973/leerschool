@@ -289,6 +289,19 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     }
   };
 
+  // Voor interactieve 3D-componenten (step.interactiveComponent). Component
+  // toont eigen feedback en roept onAnswer(correct, optionId). We mappen
+  // dat op dezelfde flow als handlePick: bij correct → completeStep, bij
+  // fout → attempts ophogen (component houdt de visuele feedback aan).
+  const handleInteractiveAnswer = (correct /*, optionId */) => {
+    if (mode !== "checking") return;
+    if (correct) {
+      setTimeout(() => completeStep(), 1200);
+    } else {
+      setAttempts((a) => a + 1);
+    }
+  };
+
   const tryAgain = () => {
     setSelected(null);
     setAttempts(attempts + 1);
@@ -431,7 +444,16 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </button>
         )}
 
-        {mode === "checking" && currentCheck && (
+        {mode === "checking" && step.interactiveComponent && (
+          <div style={cardStyle()}>
+            <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
+              Interactieve check {attempts > 1 ? `· poging ${attempts}` : ""}
+            </div>
+            <step.interactiveComponent onAnswer={handleInteractiveAnswer} />
+          </div>
+        )}
+
+        {mode === "checking" && !step.interactiveComponent && currentCheck && (
           <div style={cardStyle()}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
