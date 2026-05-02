@@ -115,16 +115,28 @@ const Icon = {
   ),
 };
 
+// Vak-kleurpalet — elk onderwerp eigen accent (BBC-Bitesize-stijl). Lichte
+// tints (#xxxxxx + 8% alpha) voor icon-tiles op wit, vol-kleur voor borders
+// en hover. Studiebol-groen blijft brand-CTA en zit alleen op Leren/Oefenen.
 const VAKKEN = [
-  { id: "leren",     label: "Leren",      sub: "uitleg + vraagje per onderwerp", icon: Icon.book,     primary: true, target: "/leren" },
-  { id: "oefenen",   label: "Oefenen",    sub: "uit je schoolboek",         icon: Icon.target,   primary: true, target: "/oefenen" },
-  { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, badge: "Nieuw", target: "/leren" },
-  { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target, target: "/cito" },
-  { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function, target: "/leren" },
-  { id: "tafels",    label: "Tafels",     sub: "groep 3 t/m 6",             icon: Icon.cube, target: "/tafels" },
-  { id: "taal",      label: "Taal",       sub: "spelling · woordenschat",   icon: Icon.letters, target: "/leren" },
-  { id: "wereld",    label: "Aardrijkskunde", sub: "klimaten · topografie", icon: Icon.globe, target: "/leren" },
+  { id: "leren",     label: "Leren",      sub: "uitleg + vraagje per onderwerp", icon: Icon.book,     accent: "#00C853", primary: true, target: "/leren" },
+  { id: "oefenen",   label: "Oefenen",    sub: "uit je schoolboek",         icon: Icon.target,   accent: "#00C853", primary: true, target: "/oefenen" },
+  { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, accent: "#EC4899", badge: "Nieuw", target: "/leren" },
+  { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target,   accent: "#8B5CF6", target: "/cito" },
+  { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function, accent: "#F97316", target: "/leren" },
+  { id: "tafels",    label: "Tafels",     sub: "groep 3 t/m 6",             icon: Icon.cube,     accent: "#FB7185", target: "/tafels" },
+  { id: "taal",      label: "Taal",       sub: "spelling · woordenschat",   icon: Icon.letters,  accent: "#3B82F6", target: "/leren" },
+  { id: "wereld",    label: "Aardrijkskunde", sub: "klimaten · topografie", icon: Icon.globe,    accent: "#14B8A6", target: "/leren" },
 ];
+
+/** Bouw een rgba(...) string uit een hex-kleur + alpha 0..1. */
+function tint(hex, alpha) {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
 
 export default function HomeV3() {
   const navigate = useNavigate();
@@ -345,7 +357,7 @@ export default function HomeV3() {
                 onClick={() => navigate(v.target)}
                 style={{
                   background: T.bgCard,
-                  border: `1px solid ${v.primary ? T.borderAccent : T.border}`,
+                  border: `1px solid ${v.primary ? tint(v.accent, 0.45) : T.border}`,
                   borderRadius: 14,
                   padding: "18px 16px",
                   textAlign: "left",
@@ -359,16 +371,20 @@ export default function HomeV3() {
                   position: "relative",
                   minHeight: 110,
                   boxShadow: v.primary
-                    ? "0 1px 2px rgba(0,200,83,0.06), 0 4px 14px rgba(0,200,83,0.10)"
+                    ? `0 1px 2px ${tint(v.accent, 0.06)}, 0 4px 14px ${tint(v.accent, 0.12)}`
                     : "0 1px 2px rgba(15,22,35,0.04), 0 4px 14px rgba(15,22,35,0.04)",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = T.accent;
+                  e.currentTarget.style.borderColor = v.accent;
                   e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = `0 2px 4px ${tint(v.accent, 0.10)}, 0 8px 20px ${tint(v.accent, 0.18)}`;
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = v.primary ? T.borderAccent : T.border;
+                  e.currentTarget.style.borderColor = v.primary ? tint(v.accent, 0.45) : T.border;
                   e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = v.primary
+                    ? `0 1px 2px ${tint(v.accent, 0.06)}, 0 4px 14px ${tint(v.accent, 0.12)}`
+                    : "0 1px 2px rgba(15,22,35,0.04), 0 4px 14px rgba(15,22,35,0.04)";
                 }}
               >
                 {v.badge && (
@@ -378,7 +394,7 @@ export default function HomeV3() {
                     fontSize: 10,
                     fontFamily: T.fontBody,
                     color: "#FFFFFF",
-                    background: T.accent,
+                    background: v.accent,
                     padding: "3px 9px",
                     borderRadius: 999,
                     letterSpacing: 0.5,
@@ -389,14 +405,14 @@ export default function HomeV3() {
                   </span>
                 )}
                 <span style={{
-                  color: v.primary ? T.accent : T.textMuted,
+                  color: v.accent,
                   display: "inline-flex",
-                  background: v.primary ? T.accentSoft : T.bgCardSubtle,
-                  padding: 8,
+                  background: tint(v.accent, 0.10),
+                  padding: 9,
                   borderRadius: 10,
                   width: "fit-content",
                 }}>
-                  {v.icon(20, v.primary)}
+                  {v.icon(20, true)}
                 </span>
                 <div>
                   <div style={{
