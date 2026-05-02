@@ -110,9 +110,9 @@ const Icon = {
 };
 
 const VAKKEN = [
-  { id: "leren",     label: "Leren",      sub: "uitleg + checks per stap", icon: Icon.book,     primary: true },
+  { id: "leren",     label: "Leren",      sub: "uitleg + vraagje per onderwerp", icon: Icon.book,     primary: true },
   { id: "oefenen",   label: "Oefenen",    sub: "uit je schoolboek",         icon: Icon.target,   primary: true },
-  { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens nieuw", icon: Icon.spark, badge: "Nieuw" },
+  { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, badge: "Nieuw" },
   { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target },
   { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function },
   { id: "tafels",    label: "Tafels",     sub: "groep 3 t/m 6",             icon: Icon.cube },
@@ -284,7 +284,7 @@ export default function HomeV2() {
             {[
               { v: "12",    l: "vakken" },
               { v: "100+",  l: "schoolboeken" },
-              { v: "groep 1 → klas 6", l: "alles tot examen" },
+              { v: "po+vo", l: "tot examen" },
             ].map((s) => (
               <div key={s.l} style={{
                 background: T.bgElevated,
@@ -293,13 +293,11 @@ export default function HomeV2() {
               }}>
                 <div style={{
                   fontFamily: T.fontDisplay,
-                  // "groep 1 → klas 6" is langer dan een getal — kleinere
-                  // basis-size zodat alle drie kolommen even hoog blijven.
-                  fontSize: s.v.length > 6 ? 15 : 28,
+                  fontSize: 28,
                   fontWeight: 600,
                   color: T.text,
                   letterSpacing: -0.5,
-                  lineHeight: 1.1,
+                  lineHeight: 1,
                 }}>
                   {s.v}
                 </div>
