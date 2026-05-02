@@ -15,6 +15,7 @@ import PageLoader from "./app/PageLoader.jsx";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
+const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
 const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
@@ -688,6 +689,7 @@ export default function App() {
           onClose={() => setPage("home")}
         />
       )}
+      {page === "home-v2" && <HomeV2 />}
       {page === "home" && (
         <HomePage
           onSaveProfile={({ name, level, role, schoolType }) => {

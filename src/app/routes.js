@@ -9,6 +9,7 @@
 
 export const PAGE_TO_PATH = {
   home: "/",
+  "home-v2": "/v2",
   // Leerflow
   "learn-paths-hub": "/leren",
   "learn-path": "/leren/pad",
