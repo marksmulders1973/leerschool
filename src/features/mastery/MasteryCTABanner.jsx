@@ -18,7 +18,7 @@ import { subjectMeta } from "../../shared/subjects.js";
  * Design-system v1: gebruikt brand-tokens. Refresher-CTA krijgt warning-tone
  * (oranje warning, niet game-energy — dit blijft een leer-component).
  */
-export default function MasteryCTABanner({ userName, onPickPath, onStartFirst }) {
+export default function MasteryCTABanner({ userName, onPickPath, onStartFirst, variant = "default" }) {
   const player = (userName || "").trim();
   const [records, setRecords] = useState(null); // null = nog niet geladen
   const [recommended, setRecommended] = useState(null);
@@ -48,7 +48,7 @@ export default function MasteryCTABanner({ userName, onPickPath, onStartFirst })
   // mastery-data is om over te raden.
   if (!recommended) return null;
 
-  return <RecommendedCard player={player} record={recommended} onPickPath={onPickPath} />;
+  return <RecommendedCard player={player} record={recommended} onPickPath={onPickPath} variant={variant} />;
 }
 
 function FirstTimeNudge({ userName, onStart }) {
@@ -87,19 +87,21 @@ function FirstTimeNudge({ userName, onStart }) {
   );
 }
 
-function RecommendedCard({ player, record, onPickPath }) {
+function RecommendedCard({ player, record, onPickPath, variant = "default" }) {
   const path = record.path || ALL_LEARN_PATHS[record.pathId];
   if (!path) return null;
   const meta = MASTERY_LABELS[record.level];
   const subj = subjectMeta(path.subject);
   const pct = record.attempts > 0 ? Math.round((record.correct / record.attempts) * 100) : 0;
   const isRefresher = record.reason === "due";
+  const isHero = variant === "hero";
 
   const handleClick = () => {
     track("home_mastery_cta_click", {
       pathId: record.pathId,
       level: record.level,
       reason: record.reason || "level",
+      variant,
     });
     onPickPath?.(record.pathId);
   };
@@ -111,9 +113,13 @@ function RecommendedCard({ player, record, onPickPath }) {
     : "linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-primary-700))";
   const borderColor = isRefresher ? "#ef6c00" : "var(--color-brand-primary-700)";
 
-  const eyebrow = isRefresher
-    ? `🔁 Tijd voor refresher, ${player}:`
-    : `Vandaag, ${player}:`;
+  // Hero-variant op homepage gebruikt "Doorgaan waar je was" — Brilliant-pattern
+  // (eerste klik voor returning user moet altijd direct verder leiden).
+  const eyebrow = isHero
+    ? `↪ Doorgaan waar je was, ${player}`
+    : isRefresher
+      ? `🔁 Tijd voor refresher, ${player}:`
+      : `Vandaag, ${player}:`;
   const subText = isRefresher
     ? `Eerder ${meta.emoji} ${meta.label}${record.attempts > 0 ? ` — ${pct}% goed` : ""} · opnieuw oefenen`
     : `${meta.emoji} ${meta.label}${record.attempts > 0 ? ` — ${record.correct}/${record.attempts} (${pct}%)` : ""}`;
@@ -124,9 +130,9 @@ function RecommendedCard({ player, record, onPickPath }) {
       onClick={handleClick}
       style={{
         width: "100%",
-        maxWidth: 360,
+        maxWidth: isHero ? "none" : 360,
         marginBottom: "var(--space-4)",
-        padding: "var(--space-4)",
+        padding: isHero ? "var(--space-5) var(--space-5)" : "var(--space-4)",
         borderRadius: "var(--radius-lg)",
         border: `1px solid ${borderColor}`,
         background,
@@ -136,7 +142,7 @@ function RecommendedCard({ player, record, onPickPath }) {
         display: "flex",
         alignItems: "center",
         gap: "var(--space-3)",
-        boxShadow: "var(--shadow-md)",
+        boxShadow: isHero ? "var(--shadow-lg)" : "var(--shadow-md)",
         fontFamily: "var(--font-body)",
         transition: "transform var(--motion-fast) var(--ease-out)",
       }}
@@ -147,13 +153,15 @@ function RecommendedCard({ player, record, onPickPath }) {
         e.currentTarget.style.transform = "translateY(0)";
       }}
     >
-      <span style={{ fontSize: 36 }} aria-hidden="true">{path.emoji || subj.emoji}</span>
+      <span style={{ fontSize: isHero ? 44 : 36 }} aria-hidden="true">{path.emoji || subj.emoji}</span>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div
           style={{
             fontSize: "var(--font-size-xs)",
-            opacity: 0.9,
+            opacity: 0.92,
             marginBottom: 2,
+            fontWeight: isHero ? 600 : 400,
+            letterSpacing: isHero ? 0.4 : 0,
           }}
         >
           {eyebrow}
@@ -161,7 +169,7 @@ function RecommendedCard({ player, record, onPickPath }) {
         <div
           style={{
             fontFamily: "var(--font-display)",
-            fontSize: "var(--font-size-lg)",
+            fontSize: isHero ? "var(--font-size-xl)" : "var(--font-size-lg)",
             fontWeight: "var(--font-weight-bold)",
             lineHeight: "var(--line-height-tight)",
           }}
@@ -178,7 +186,7 @@ function RecommendedCard({ player, record, onPickPath }) {
           {subText}
         </div>
       </div>
-      <span style={{ fontSize: 22, opacity: 0.85 }} aria-hidden="true">›</span>
+      <span style={{ fontSize: isHero ? 28 : 22, opacity: 0.92 }} aria-hidden="true">›</span>
     </button>
   );
 }

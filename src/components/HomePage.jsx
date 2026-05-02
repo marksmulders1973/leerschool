@@ -682,38 +682,71 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        <div style={{
-          position: "relative",
-          width: "80%",
-          maxWidth: 240,
-          marginBottom: 14,
-        }}>
-          <div style={{
-            position: "absolute",
-            inset: -24,
-            background: "radial-gradient(ellipse at center, rgba(30,100,200,0.4) 0%, transparent 70%)",
-            borderRadius: 50,
-            zIndex: 0,
-            pointerEvents: "none",
-          }} />
-          <video
-            src="/intro.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{
-              width: "100%",
-              maxHeight: 180,
-              objectFit: "cover",
-              borderRadius: 16,
-              boxShadow: "0 4px 24px rgba(15,70,180,0.5)",
-              display: "block",
+        {/* Hero-variant van Mastery-CTA voor terugkerende leerlingen (Prio 2
+            uit competitor-research): "Doorgaan waar je was" als allereerste
+            content, vóór intro-video, zodat de eerste klik altijd verder
+            leidt. Brilliant-pattern. */}
+        {step === "role" && onPickPath && (() => {
+          let savedName = null;
+          try {
+            savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          if (!savedName) return null;
+          return (
+            <div style={{ width: "100%", maxWidth: 560, marginBottom: 12 }}>
+              <MasteryCTABanner
+                userName={savedName}
+                onPickPath={onPickPath}
+                onStartFirst={onLearnPathsHub}
+                variant="hero"
+              />
+            </div>
+          );
+        })()}
+
+        {/* Intro-video alleen voor nieuwe bezoekers — terugkerende leerlingen
+            zien meteen hun "Doorgaan waar je was"-CTA hierboven. */}
+        {(() => {
+          let hasName = false;
+          try {
+            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          if (hasName) return null;
+          return (
+            <div style={{
               position: "relative",
-              zIndex: 1,
-            }}
-          />
-        </div>
+              width: "80%",
+              maxWidth: 240,
+              marginBottom: 14,
+            }}>
+              <div style={{
+                position: "absolute",
+                inset: -24,
+                background: "radial-gradient(ellipse at center, rgba(30,100,200,0.4) 0%, transparent 70%)",
+                borderRadius: 50,
+                zIndex: 0,
+                pointerEvents: "none",
+              }} />
+              <video
+                src="/intro.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  width: "100%",
+                  maxHeight: 180,
+                  objectFit: "cover",
+                  borderRadius: 16,
+                  boxShadow: "0 4px 24px rgba(15,70,180,0.5)",
+                  display: "block",
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              />
+            </div>
+          );
+        })()}
 
         {/* Mini-3D-teaser + lichtkrant — alleen voor nieuwe bezoekers. Mastery-CTA
             (hieronder) neemt de focus voor terugkerende leerlingen. */}
@@ -775,22 +808,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Mastery-CTA voor terugkerende leerlingen (P1.6).
-            Toont één primaire actie op basis van mastery-records. */}
-        {step === "role" && onPickPath && (() => {
-          let savedName = null;
-          try {
-            savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          if (!savedName) return null;
-          return (
-            <MasteryCTABanner
-              userName={savedName}
-              onPickPath={onPickPath}
-              onStartFirst={onLearnPathsHub}
-            />
-          );
-        })()}
+        {/* (verplaatst naar boven de hero — Prio 2 uit competitor-research) */}
 
         {/* Primaire CTA's: Leren vs Oefenen — vervangt het versplinterde knoppen-veld onderaan */}
         {step === "role" && (
