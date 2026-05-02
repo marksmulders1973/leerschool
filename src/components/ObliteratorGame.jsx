@@ -4487,6 +4487,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
       effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul;
+      // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
+      // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
+      // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
+      if (hillsActief()) {
+        const playerWX = worldScrollX + speler.x;
+        const slope = vloerSlope(playerWX);
+        if (Number.isFinite(slope)) {
+          const slopeMul = Math.max(0.65, Math.min(1.35, 1 - slope * 0.55));
+          if (Number.isFinite(slopeMul)) effSnelheid *= slopeMul;
+        }
+      }
       // Custom-zones (lowgrav / boost / slow): bepaal eerst welke aanpassingen
       // actief zijn op basis van waar de speler nu in een zone staat. Toepassen
       // gebeurt op effSnelheid hier, en op gravity later in de frame.
