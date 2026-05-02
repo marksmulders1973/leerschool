@@ -6,6 +6,7 @@
 // Interactieve 3D-componenten — per check ID (RM-Sx-Qy). Vervangen de standaard
 // multiple-choice check in LearnPath.jsx als step.interactiveComponent gezet is.
 import RmS6Q1 from "../3d/RM-S6-Q1.jsx";
+import RmS12Q1 from "../3d/RM-S12-Q1.jsx";
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -484,6 +485,7 @@ const steps = [
   },
   {
     title: "Inhoud van een piramide",
+    interactiveComponent: RmS12Q1, // RM-S12-Q1 — draaibare piramide met toggle "toon omsluitende balk"
     explanation: "Een **piramide** is 3D-figuur met een **plat grondvlak** (vaak een vierkant of rechthoek) en alle zijden lopen omhoog naar één **toppunt**.\n\n**inhoud piramide = ⅓ × oppervlakte grondvlak × hoogte**\n\nWaarom de **⅓**? Een piramide is precies **een derde** van een balk met dezelfde grond en hoogte. Drie piramides passen samen in één balk — bijzonder maar waar.\n\nVoorbeeld: piramide met vierkant grondvlak van 6 × 6 cm en hoogte 9 cm:\n• grondvlak = 6 × 6 = 36 cm²\n• inhoud = ⅓ × 36 × 9 = ⅓ × 324 = **108 cm³**\n\nLet op: 'hoogte' is de **rechte** hoogte van het grondvlak naar de top — niet de schuine zijde van de piramide.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(60, 30)">
