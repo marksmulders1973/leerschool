@@ -44,6 +44,7 @@ const SHAPE_COLORS = {
   kubus:    { primary: 0xef9f27, edgeInner: 0xffe082, edgeOuter: 0xffd54f, highlight: 0xffd54f, highlightEmissive: 0x4a3500 },
   balk:     { primary: 0x3a7bd5, edgeInner: 0xa8c8ff, edgeOuter: 0x80c0ff, highlight: 0x80c0ff, highlightEmissive: 0x14305a },
   piramide: { primary: 0xef9f27, edgeInner: 0xffd54f, edgeOuter: 0xffd54f, highlight: 0xffd54f, highlightEmissive: 0x4a3500 },
+  cilinder: { primary: 0x40b8a8, edgeInner: 0x80d8c8, edgeOuter: 0x40b8a8, highlight: 0x60c8b8, highlightEmissive: 0x103028 },
 };
 
 /** Belangrijkste afmeting voor camera-distance-berekening per shape. */
@@ -51,6 +52,7 @@ function maxDim(shape, d) {
   if (shape === "kubus") return d.zijde;
   if (shape === "balk") return Math.max(d.lengte, d.breedte, d.hoogte);
   if (shape === "piramide") return Math.max(d.grondvlakZijde, d.hoogte);
+  if (shape === "cilinder") return Math.max(d.straal * 2, d.hoogte);
   return 5;
 }
 
@@ -187,6 +189,10 @@ const Shape3D = forwardRef(function Shape3D(
       const b = dim.breedte || 3;
       const hh = dim.hoogte || 2;
       buildBoxLikeShape(group, l, hh, b, showUnitCubes, colors, unitMats, disposables);
+    } else if (shape === "cilinder") {
+      const r = dim.straal || 3;
+      const ch = dim.hoogte || 5;
+      buildCilinder(group, r, ch, colors, disposables);
     } else if (shape === "piramide") {
       const gz = dim.grondvlakZijde || 4;
       const ph = dim.hoogte || 6;
@@ -214,9 +220,21 @@ const Shape3D = forwardRef(function Shape3D(
     unitMatsRef.current = unitMats;
 
     // ── Maatlabels via sprites op gegeven assen ────────────────────────────
-    const halfX = (shape === "balk" ? (dim.lengte || 4) : shape === "piramide" ? (dim.grondvlakZijde || 4) : (dim.zijde || 5)) / 2;
-    const halfY = (shape === "balk" ? (dim.hoogte || 2) : shape === "piramide" ? (dim.hoogte || 6) : (dim.zijde || 5)) / 2;
-    const halfZ = (shape === "balk" ? (dim.breedte || 3) : shape === "piramide" ? (dim.grondvlakZijde || 4) : (dim.zijde || 5)) / 2;
+    const halfX =
+      shape === "balk" ? (dim.lengte || 4) / 2
+      : shape === "piramide" ? (dim.grondvlakZijde || 4) / 2
+      : shape === "cilinder" ? (dim.straal || 3)
+      : (dim.zijde || 5) / 2;
+    const halfY =
+      shape === "balk" ? (dim.hoogte || 2) / 2
+      : shape === "piramide" ? (dim.hoogte || 6) / 2
+      : shape === "cilinder" ? (dim.hoogte || 5) / 2
+      : (dim.zijde || 5) / 2;
+    const halfZ =
+      shape === "balk" ? (dim.breedte || 3) / 2
+      : shape === "piramide" ? (dim.grondvlakZijde || 4) / 2
+      : shape === "cilinder" ? (dim.straal || 3)
+      : (dim.zijde || 5) / 2;
     const yMaatOff = shape === "piramide" ? -0.4 : -halfY - 0.4;
 
     for (const lbl of labels) {
@@ -384,6 +402,44 @@ function buildBoxLikeShape(group, l, h, b, showUnitCubes, colors, unitMats, disp
   group.add(new THREE.LineSegments(outerEdges, outerLineMat));
   disposables.push(outerGeo, outerEdges, outerLineMat);
   void halfL; void halfH; void halfB; // unused but reserved for centering tweaks
+}
+
+/** Bouw cilinder met top + bodem cirkels en zij-edges. CylinderGeometry is by-default y-axis aligned. */
+function buildCilinder(group, straal, hoogte, colors, disposables) {
+  const cylGeo = new THREE.CylinderGeometry(straal, straal, hoogte, 48);
+  const cylMat = new THREE.MeshLambertMaterial({
+    color: colors.primary, transparent: true, opacity: 0.7, side: THREE.DoubleSide,
+  });
+  group.add(new THREE.Mesh(cylGeo, cylMat));
+  const cylEdges = new THREE.EdgesGeometry(cylGeo, 0.1);
+  const cylLineMat = new THREE.LineBasicMaterial({ color: colors.edgeOuter });
+  group.add(new THREE.LineSegments(cylEdges, cylLineMat));
+  // Top + bodem cirkel-rings expliciet zodat ze altijd zichtbaar zijn (EdgesGeometry
+  // mist soms de tessellatie-grenzen op smooth-curves).
+  const topRingGeo = new THREE.RingGeometry(straal - 0.005, straal + 0.005, 48);
+  const topRingMat = new THREE.MeshBasicMaterial({ color: colors.edgeOuter, side: THREE.DoubleSide });
+  const topRing = new THREE.Mesh(topRingGeo, topRingMat);
+  topRing.rotation.x = -Math.PI / 2;
+  topRing.position.y = hoogte / 2;
+  group.add(topRing);
+  const bottomRing = new THREE.Mesh(topRingGeo, topRingMat);
+  bottomRing.rotation.x = -Math.PI / 2;
+  bottomRing.position.y = -hoogte / 2;
+  group.add(bottomRing);
+  // Verticale lijnen voor 3D-suggestie (4 stuks rond)
+  const verticalMat = new THREE.LineBasicMaterial({ color: colors.edgeOuter });
+  for (let i = 0; i < 4; i++) {
+    const angle = (i / 4) * Math.PI * 2;
+    const x = Math.cos(angle) * straal;
+    const z = Math.sin(angle) * straal;
+    const lineGeo = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(x, -hoogte / 2, z),
+      new THREE.Vector3(x, hoogte / 2, z),
+    ]);
+    group.add(new THREE.Line(lineGeo, verticalMat));
+    disposables.push(lineGeo);
+  }
+  disposables.push(cylGeo, cylMat, cylEdges, cylLineMat, topRingGeo, topRingMat, verticalMat);
 }
 
 /** Bouw piramide met vierkant grondvlak — 4 zijvlakken + 2 driehoeken voor grondvlak. */

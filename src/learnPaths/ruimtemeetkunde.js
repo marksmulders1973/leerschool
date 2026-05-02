@@ -9,7 +9,10 @@
 // speciaal geval (vergelijking 4 figuren) en blijft een dedicated component.
 import RmS6Q1 from "../components/learn/3d/RM-S6-Q1.jsx";
 import { make3DInteractiveComponent } from "../components/learn/3d/Question3DRenderer.jsx";
+const RmS7Q1 = make3DInteractiveComponent("RM-S7-Q1");
 const RmS8Q1 = make3DInteractiveComponent("RM-S8-Q1");
+const RmS9Q1 = make3DInteractiveComponent("RM-S9-Q1");
+const RmS10Q1 = make3DInteractiveComponent("RM-S10-Q1");
 const RmS12Q1 = make3DInteractiveComponent("RM-S12-Q1");
 
 const COLORS = {
@@ -306,6 +309,7 @@ const steps = [
   },
   {
     title: "Wat is inhoud?",
+    interactiveComponent: RmS7Q1, // RM-S7-Q1 — 4×2×1 balk met "Tel de blokjes" (8 stuks)
     explanation: "**Inhoud** is hoeveel ruimte er **in** een 3D-figuur past. Denk aan:\n• Hoeveel water er in een fles past\n• Hoeveel zand er in een doos past\n• Hoeveel suikerklontjes er in een kistje passen\n\nEenheden voor inhoud:\n• **cm³** (kubieke centimeter)\n• **m³** (kubieke meter)\n• **liter** (1 liter = 1000 cm³ = 1 dm³)\n\nHet kleine **3-tje** slaat op het feit dat je nu in **drie** richtingen meet: lengte, breedte én hoogte.\n\nEen handige manier om over inhoud te denken: tel het aantal **kleine kubusjes** (blokjes) dat in de figuur past. Dat is precies de inhoud.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(50, 50)">
@@ -382,6 +386,7 @@ const steps = [
   },
   {
     title: "Inhoud van een balk",
+    interactiveComponent: RmS9Q1, // RM-S9-Q1 — balk 8×5×2 met blokjes-teller en formule-overlay
     explanation: "Een **balk** is een 3D-figuur met (meestal) drie verschillende zijden: **lengte**, **breedte** en **hoogte**. Denk aan een schoenendoos.\n\n**inhoud balk = lengte × breedte × hoogte**\n\nDe volgorde maakt niet uit — vermenigvuldigen mag in elke volgorde.\n\nVoorbeeld 1: balk van 6 cm × 4 cm × 3 cm:\ninhoud = 6 × 4 × 3 = 24 × 3 = **72 cm³**\n\nVoorbeeld 2: balk van 10 m × 2 m × 5 m (een container?):\ninhoud = 10 × 2 × 5 = **100 m³**\n\n**Tip**: een **kubus** is gewoon een balk waarvan lengte = breedte = hoogte. Die formule (z³) is dus eigenlijk een speciaal geval van 'lengte × breedte × hoogte'.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(50, 50)">
@@ -415,6 +420,7 @@ const steps = [
   // ─── D. Cilinder, piramide, kegel ────────────────────────────
   {
     title: "Inhoud van een cilinder",
+    interactiveComponent: RmS10Q1, // RM-S10-Q1 — draaibare cilinder r=2, h=5 met formule-overlay
     explanation: "Een **cilinder** ziet eruit als een blikje of een buis. Het heeft:\n• Een ronde **bodem** (een cirkel met straal r)\n• Een ronde **bovenkant** (zelfde cirkel)\n• Een **hoogte** h\n\nDe formule:\n\n**inhoud cilinder = π × r² × h**\n\nWaarom? De bodem is een cirkel met oppervlakte π × r² (komt straks terug bij oppervlakte cirkel). Die oppervlakte vermenigvuldig je met de hoogte — net als bij een balk: grondvlak × hoogte.\n\nVoorbeeld: cilinder met straal 3 cm en hoogte 10 cm (gebruik π ≈ 3,14):\ninhoud = 3,14 × 3² × 10 = 3,14 × 9 × 10 = **282,6 cm³**\n\nVolgorde: eerst r² uitrekenen, dan keer π, dan keer h.",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(80, 40)">
