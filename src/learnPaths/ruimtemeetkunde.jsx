@@ -16,6 +16,7 @@ const RmS8Q1 = make3DInteractiveComponent("RM-S8-Q1");
 const RmS9Q1 = make3DInteractiveComponent("RM-S9-Q1");
 const RmS10Q1 = make3DInteractiveComponent("RM-S10-Q1");
 const RmS12Q1 = make3DInteractiveComponent("RM-S12-Q1");
+const RmS13Q1 = make3DInteractiveComponent("RM-S13-Q1");
 
 // Uitleg-illustraties (3D-preview boven de tekst, vervangt step.svg).
 // Ingesloten als component-fabriek zodat React-renderer ze kan invoken.
@@ -93,6 +94,24 @@ const IllS12 = () => (
     caption={(d) => {
       const v = Math.round((d.grondvlakZijde * d.grondvlakZijde * d.hoogte) / 3 * 100) / 100;
       return `⅓ × ${d.grondvlakZijde}² × ${d.hoogte} = ${v} cm³`;
+    }}
+  />
+);
+const IllS13 = () => (
+  <Shape3DIllustration
+    shape="kegel"
+    dimensions={{ straal: 3, hoogte: 7 }}
+    sliders={[
+      { key: "straal", min: 1, max: 6,  step: 1, label: "straal r" },
+      { key: "hoogte", min: 1, max: 12, step: 1, label: "hoogte h" },
+    ]}
+    labels={(d) => [
+      { text: `r = ${d.straal}`, axis: "x" },
+      { text: `h = ${d.hoogte}`, axis: "y" },
+    ]}
+    caption={(d) => {
+      const v = Math.round((Math.PI * d.straal * d.straal * d.hoogte) / 3 * 10) / 10;
+      return `⅓ × π × ${d.straal}² × ${d.hoogte} ≈ ${v} cm³`;
     }}
   />
 );
@@ -616,6 +635,8 @@ const steps = [
   },
   {
     title: "Inhoud van een kegel",
+    illustrationComponent: IllS13, // draaibare kegel r=3, h=7 met sliders
+    interactiveComponent: RmS13Q1, // RM-S13-Q1 — kegel r=6, h=4 met toggle "toon omsluitende cilinder"
     explanation: "Een **kegel** is als een ijshoorntje of een verkeerskegel: een **rond** grondvlak met een **toppunt**.\n\nDe formule lijkt op die van een piramide:\n\n**inhoud kegel = ⅓ × π × r² × h**\n\nUitleg:\n• π × r² is de oppervlakte van het ronde grondvlak (zoals bij een cilinder)\n• Maal de hoogte h\n• En weer dat ⅓ — net als piramide is een kegel een derde van een cilinder met zelfde grond+hoogte\n\nVoorbeeld: kegel met straal 3 cm en hoogte 7 cm (π ≈ 3,14):\ninhoud = ⅓ × 3,14 × 3² × 7\n        = ⅓ × 3,14 × 9 × 7\n        = ⅓ × 197,82\n        ≈ **65,9 cm³**\n\n**Vergelijk:**\n• Cilinder met zelfde maten: π × r² × h ≈ 197,8 cm³\n• Kegel: een **derde** daarvan ≈ 65,9 cm³",
     svg: `<svg viewBox="0 0 300 200">
 <g transform="translate(70, 30)">

@@ -22,7 +22,7 @@ export default function Question3DRenderer({ trackId, onAnswer, theme = "dark-st
   const [tellerZichtbaar, setTellerZichtbaar] = useState(false);
   const [tellerGetal, setTellerGetal] = useState(0);
   const [tellerTotaal, setTellerTotaal] = useState(0);
-  const [toonBalk, setToonBalk] = useState(false);
+  const [toonOmsluiting, setToonOmsluiting] = useState(false);
   const [toonBerekening, setToonBerekening] = useState(false);
   const [gekozen, setGekozen] = useState(null);
 
@@ -36,8 +36,10 @@ export default function Question3DRenderer({ trackId, onAnswer, theme = "dark-st
 
   const features = q.features || [];
   const heeftTelBlokjes = features.includes("telBlokjes");
-  const heeftToonBalk = features.includes("toonBalk");
+  const heeftOmsluiting = features.includes("toonOmsluiting");
   const heeftBerekening = features.includes("toonBerekening");
+  // Bounding-vorm-label volgt de shape: piramide → balk, kegel → cilinder.
+  const omsluitendeVormLabel = q.shape === "kegel" ? "cilinder" : "balk";
 
   const handleTel = () => {
     setTellerZichtbaar(true);
@@ -60,7 +62,7 @@ export default function Question3DRenderer({ trackId, onAnswer, theme = "dark-st
       <p style={{ textAlign: "center", fontSize: 13, color: "rgba(224,230,240,0.7)", margin: "0 0 1rem" }}>
         Sleep om te draaien.
         {heeftTelBlokjes ? " Klik op 'Tel de blokjes' voor de animatie." : ""}
-        {heeftToonBalk ? " Klik op 'Toon omsluitende balk' om de ⅓-relatie te zien." : ""}
+        {heeftOmsluiting ? ` Klik op 'Toon omsluitende ${omsluitendeVormLabel}' om de ⅓-relatie te zien.` : ""}
       </p>
 
       <div style={{
@@ -77,7 +79,7 @@ export default function Question3DRenderer({ trackId, onAnswer, theme = "dark-st
           dimensions={q.dimensions}
           labels={q.labels}
           showUnitCubes={heeftTelBlokjes}
-          showBoundingBox={heeftToonBalk && toonBalk}
+          showBoundingBox={heeftOmsluiting && toonOmsluiting}
           theme={theme}
         />
         {tellerZichtbaar && (
@@ -92,16 +94,16 @@ export default function Question3DRenderer({ trackId, onAnswer, theme = "dark-st
         )}
       </div>
 
-      {(heeftTelBlokjes || heeftToonBalk || heeftBerekening) && (
+      {(heeftTelBlokjes || heeftOmsluiting || heeftBerekening) && (
         <div style={{ display: "flex", gap: 8, marginBottom: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
           {heeftTelBlokjes && (
             <button type="button" onClick={handleTel} style={btnSecondaryStyle}>
               Tel de blokjes
             </button>
           )}
-          {heeftToonBalk && (
-            <button type="button" onClick={() => setToonBalk((v) => !v)} style={btnSecondaryStyle}>
-              {toonBalk ? "Verberg balk" : "Toon omsluitende balk"}
+          {heeftOmsluiting && (
+            <button type="button" onClick={() => setToonOmsluiting((v) => !v)} style={btnSecondaryStyle}>
+              {toonOmsluiting ? `Verberg ${omsluitendeVormLabel}` : `Toon omsluitende ${omsluitendeVormLabel}`}
             </button>
           )}
           {heeftBerekening && (

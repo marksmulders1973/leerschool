@@ -16,7 +16,10 @@
 //   shape          "kubus" | "balk" | "piramide" (zie Shape3D)
 //   dimensions     shape-specifiek object
 //   labels         [{ text, axis: "x"|"y"|"z" }] voor maatlabels in scene
-//   features       array met optionele toggles: "telBlokjes" | "toonBalk" | "toonBerekening"
+//   features       array met optionele toggles: "telBlokjes" | "toonOmsluiting" | "toonBerekening"
+//                  toonOmsluiting toont de omsluitende vorm: balk-wireframe
+//                  rond piramide, cilinder-wireframe rond kegel — visualiseert
+//                  de ⅓-relatie didactisch.
 //   opties         [{ label, correct, uitleg }] — uitleg wordt feedback bij klik
 //   goedFeedback   tekst getoond bij correct antwoord (optioneel — anders gebruikt opties.uitleg)
 //   formuleStappen array van regels voor "Toon berekening"-paneel
@@ -30,10 +33,10 @@
 /** @typedef {{
  *   trackId: string, pathId: string, stepIdx: number, level: string, topicKey: string,
  *   vraag: string,
- *   shape: "kubus"|"balk"|"piramide",
+ *   shape: "kubus"|"balk"|"cilinder"|"piramide"|"kegel",
  *   dimensions: Record<string, number>,
  *   labels: Label3D[],
- *   features?: ("telBlokjes"|"toonBalk"|"toonBerekening")[],
+ *   features?: ("telBlokjes"|"toonOmsluiting"|"toonBerekening")[],
  *   opties: Optie3D[],
  *   goedFeedback?: string,
  *   formuleStappen?: string[]
@@ -159,7 +162,7 @@ export const QUESTIONS_3D = [
       { text: "4 cm", axis: "z" },
       { text: "6 cm", axis: "y" },
     ],
-    features: ["toonBalk", "toonBerekening"],
+    features: ["toonOmsluiting", "toonBerekening"],
     opties: [
       { label: "32 cm³", correct: true,  uitleg: "Een piramide is precies ⅓ van de balk eromheen. 96 ÷ 3 = 32 cm³." },
       { label: "96 cm³", correct: false, uitleg: "Dat is de inhoud van de hele balk eromheen. De piramide is maar ⅓ daarvan." },
@@ -172,6 +175,34 @@ export const QUESTIONS_3D = [
       "= ⅓ × 16 × 6",
       "= ⅓ × 96",
       "= 32 cm³",
+    ],
+  },
+  {
+    trackId: "RM-S13-Q1",
+    pathId: "ruimtemeetkunde",
+    stepIdx: 13,
+    level: "klas-2",
+    topicKey: "WI.meetkunde.ruimte.kegel",
+    vraag: "Kegel met straal 6 cm en hoogte 4 cm (π ≈ 3,14). Wat is de inhoud?",
+    shape: "kegel",
+    dimensions: { straal: 6, hoogte: 4 },
+    labels: [
+      { text: "r = 6", axis: "x" },
+      { text: "h = 4", axis: "y" },
+    ],
+    features: ["toonOmsluiting", "toonBerekening"],
+    opties: [
+      { label: "≈ 150,7 cm³", correct: true,  uitleg: "Een kegel is precies ⅓ van de cilinder eromheen. ⅓ × 3,14 × 36 × 4 ≈ 150,7 cm³." },
+      { label: "≈ 452,2 cm³", correct: false, uitleg: "Dat is de inhoud van de cilinder eromheen (π × r² × h). De kegel is maar ⅓ daarvan — deel nog door 3." },
+      { label: "≈ 75,4 cm³",  correct: false, uitleg: "Je hebt ⅓ × π × r × h gedaan. Maar het is r² — dus 6² = 36, niet 6." },
+      { label: "≈ 24 cm³",    correct: false, uitleg: "Te klein. Reken nog: ⅓ × 3,14 × 6² × 4 = ⅓ × 3,14 × 36 × 4." },
+    ],
+    formuleStappen: [
+      "Inhoud kegel = ⅓ × π × r² × h",
+      "= ⅓ × 3,14 × 6² × 4",
+      "= ⅓ × 3,14 × 36 × 4",
+      "= ⅓ × 452,16",
+      "≈ 150,7 cm³",
     ],
   },
 ];

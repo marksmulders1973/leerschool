@@ -1,13 +1,15 @@
 // ============================================================================
-// Shape3D — gedeelde Three.js renderer voor 3D-vormen (kubus, balk, piramide).
+// Shape3D — gedeelde Three.js renderer voor 3D-vormen.
 // Hergebruikt door Question3DRenderer + alle 3D-checks in de leerpaden.
 //
 // Props:
-//   shape              "kubus" | "balk" | "piramide"
+//   shape              "kubus" | "balk" | "cilinder" | "piramide" | "kegel"
 //   dimensions         shape-specifiek object (zie SHAPE_DIMENSIONS_DOC onder)
 //   labels             [{ text, axis: "x"|"y"|"z" }]  — sprite-labels in scene
 //   showUnitCubes      bool — bouw vorm uit N eenheidskubusjes ipv solid mesh
-//   showBoundingBox    bool — toon doorzichtige omsluitende balk (piramide)
+//   showBoundingBox    bool — toon doorzichtige omsluitende vorm. Auto-pick
+//                      o.b.v. shape: piramide → balk-wireframe, kegel →
+//                      cilinder-wireframe. Voor andere shapes: geen effect.
 //   theme              "dark-studiebol" | "light"
 //
 // Imperatieve API via ref:
@@ -19,8 +21,10 @@
 
 /** @typedef {{ zijde: number }} KubusDims */
 /** @typedef {{ lengte: number, breedte: number, hoogte: number }} BalkDims */
+/** @typedef {{ straal: number, hoogte: number }} CilinderDims */
 /** @typedef {{ grondvlakZijde: number, hoogte: number }} PiramideDims */
-/** @typedef {KubusDims | BalkDims | PiramideDims} ShapeDimensions */
+/** @typedef {{ straal: number, hoogte: number }} KegelDims */
+/** @typedef {KubusDims | BalkDims | CilinderDims | PiramideDims | KegelDims} ShapeDimensions */
 
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import * as THREE from "three";
@@ -45,6 +49,7 @@ const SHAPE_COLORS = {
   balk:     { primary: 0x3a7bd5, edgeInner: 0xa8c8ff, edgeOuter: 0x80c0ff, highlight: 0x80c0ff, highlightEmissive: 0x14305a },
   piramide: { primary: 0xef9f27, edgeInner: 0xffd54f, edgeOuter: 0xffd54f, highlight: 0xffd54f, highlightEmissive: 0x4a3500 },
   cilinder: { primary: 0x40b8a8, edgeInner: 0x80d8c8, edgeOuter: 0x40b8a8, highlight: 0x60c8b8, highlightEmissive: 0x103028 },
+  kegel:    { primary: 0xef6c5b, edgeInner: 0xffab9a, edgeOuter: 0xff8a78, highlight: 0xffab9a, highlightEmissive: 0x4a1010 },
 };
 
 /** Belangrijkste afmeting voor camera-distance-berekening per shape. */
@@ -53,6 +58,7 @@ function maxDim(shape, d) {
   if (shape === "balk") return Math.max(d.lengte, d.breedte, d.hoogte);
   if (shape === "piramide") return Math.max(d.grondvlakZijde, d.hoogte);
   if (shape === "cilinder") return Math.max(d.straal * 2, d.hoogte);
+  if (shape === "kegel") return Math.max(d.straal * 2, d.hoogte);
   return 5;
 }
 
@@ -217,6 +223,30 @@ const Shape3D = forwardRef(function Shape3D(
       boundingBoxRef.current = { mesh: balk, wire: balkWire };
       // Pyramide-grond verticale offset zodat onderkant tegen y=-ph/2 zit
       group.position.y = -ph / 2 + 0.5;
+    } else if (shape === "kegel") {
+      const kr = dim.straal || 3;
+      const kh = dim.hoogte || 5;
+      buildKegel(group, kr, kh, colors, disposables);
+      // Omsluitende cilinder (initieel onzichtbaar; flip via secondary effect).
+      // Mooiste didactisch: zelfde straal + hoogte, want kegel = ⅓ × cilinder.
+      const cilGeo = new THREE.CylinderGeometry(kr, kr, kh, 48);
+      const cilMat = new THREE.MeshLambertMaterial({
+        color: 0x40b8a8, transparent: true, opacity: 0.18, side: THREE.DoubleSide,
+      });
+      const cil = new THREE.Mesh(cilGeo, cilMat);
+      cil.position.y = kh / 2;
+      cil.visible = false;
+      group.add(cil);
+      const cilEdges = new THREE.EdgesGeometry(cilGeo, 0.1);
+      const cilLineMat = new THREE.LineBasicMaterial({ color: 0x60c8b8 });
+      const cilWire = new THREE.LineSegments(cilEdges, cilLineMat);
+      cilWire.position.y = kh / 2;
+      cilWire.visible = false;
+      group.add(cilWire);
+      disposables.push(cilGeo, cilMat, cilEdges, cilLineMat);
+      boundingBoxRef.current = { mesh: cil, wire: cilWire };
+      // Kegel-grond zelfde verticale offset als piramide: onderkant op y=-kh/2
+      group.position.y = -kh / 2 + 0.5;
     }
     unitMatsRef.current = unitMats;
 
@@ -225,18 +255,21 @@ const Shape3D = forwardRef(function Shape3D(
       shape === "balk" ? (dim.lengte || 4) / 2
       : shape === "piramide" ? (dim.grondvlakZijde || 4) / 2
       : shape === "cilinder" ? (dim.straal || 3)
+      : shape === "kegel" ? (dim.straal || 3)
       : (dim.zijde || 5) / 2;
     const halfY =
       shape === "balk" ? (dim.hoogte || 2) / 2
       : shape === "piramide" ? (dim.hoogte || 6) / 2
       : shape === "cilinder" ? (dim.hoogte || 5) / 2
+      : shape === "kegel" ? (dim.hoogte || 5) / 2
       : (dim.zijde || 5) / 2;
     const halfZ =
       shape === "balk" ? (dim.breedte || 3) / 2
       : shape === "piramide" ? (dim.grondvlakZijde || 4) / 2
       : shape === "cilinder" ? (dim.straal || 3)
+      : shape === "kegel" ? (dim.straal || 3)
       : (dim.zijde || 5) / 2;
-    const yMaatOff = shape === "piramide" ? -0.4 : -halfY - 0.4;
+    const yMaatOff = (shape === "piramide" || shape === "kegel") ? -0.4 : -halfY - 0.4;
 
     for (const lbl of labels) {
       const { text, axis } = lbl;
@@ -247,7 +280,7 @@ const Shape3D = forwardRef(function Shape3D(
         streepDir = new THREE.Vector3(0, 1, 0);
         labelPos = new THREE.Vector3(0, yMaatOff - 0.5, halfZ + 0.5);
       } else if (axis === "y") {
-        const yBase = shape === "piramide" ? 0 : -halfY;
+        const yBase = (shape === "piramide" || shape === "kegel") ? 0 : -halfY;
         start = new THREE.Vector3(-halfX - 0.6, yBase, halfZ);
         end = new THREE.Vector3(-halfX - 0.6, yBase + 2 * halfY, halfZ);
         streepDir = new THREE.Vector3(1, 0, 0);
@@ -273,12 +306,13 @@ const Shape3D = forwardRef(function Shape3D(
 
     // ── Camera ──────────────────────────────────────────────────────────────
     const cameraDist = md * 2.2;
-    camera.position.set(cameraDist, md * (shape === "piramide" ? 0.8 : 1.2), cameraDist * 1.2);
+    const isApexShape = shape === "piramide" || shape === "kegel";
+    camera.position.set(cameraDist, md * (isApexShape ? 0.8 : 1.2), cameraDist * 1.2);
     camera.lookAt(0, 0, 0);
 
     // ── Drag-to-rotate (muis + touch) + auto-rotate ─────────────────────────
-    let rotX = shape === "piramide" ? 0.15 : 0.3;
-    let rotY = shape === "piramide" ? 0.4 : 0.5;
+    let rotX = isApexShape ? 0.15 : 0.3;
+    let rotY = isApexShape ? 0.4 : 0.5;
     let dragging = false;
     let prevX = 0;
     let prevY = 0;
@@ -441,6 +475,44 @@ function buildCilinder(group, straal, hoogte, colors, disposables) {
     disposables.push(lineGeo);
   }
   disposables.push(cylGeo, cylMat, cylEdges, cylLineMat, topRingGeo, topRingMat, verticalMat);
+}
+
+/** Bouw kegel — ConeGeometry rust met basis op y=0, top op y=hoogte. Plus
+ *  duidelijke onderrand-cirkel + één verticale lijn voor 3D-hint. */
+function buildKegel(group, straal, hoogte, colors, disposables) {
+  // ConeGeometry centreert op y=0; verschuiven zodat basis op y=0 ligt en
+  // top op y=hoogte. Komt overeen met piramide-conventie.
+  const coneGeo = new THREE.ConeGeometry(straal, hoogte, 48);
+  const coneMat = new THREE.MeshLambertMaterial({
+    color: colors.primary, transparent: true, opacity: 0.75, side: THREE.DoubleSide,
+  });
+  const cone = new THREE.Mesh(coneGeo, coneMat);
+  cone.position.y = hoogte / 2;
+  group.add(cone);
+  const coneEdges = new THREE.EdgesGeometry(coneGeo, 0.1);
+  const coneLineMat = new THREE.LineBasicMaterial({ color: colors.edgeOuter });
+  const coneWire = new THREE.LineSegments(coneEdges, coneLineMat);
+  coneWire.position.y = hoogte / 2;
+  group.add(coneWire);
+  // Onderrand-cirkel expliciet — EdgesGeometry mist soms de smooth-overgang
+  const ringGeo = new THREE.RingGeometry(straal - 0.005, straal + 0.005, 48);
+  const ringMat = new THREE.MeshBasicMaterial({ color: colors.edgeOuter, side: THREE.DoubleSide });
+  const ring = new THREE.Mesh(ringGeo, ringMat);
+  ring.rotation.x = -Math.PI / 2;
+  ring.position.y = 0;
+  group.add(ring);
+  disposables.push(coneGeo, coneMat, coneEdges, coneLineMat, ringGeo, ringMat);
+
+  // Grondvlak-markering (lichtere kleur op de grond, zelfde patroon als piramide)
+  const grondGeo = new THREE.CircleGeometry(straal, 48);
+  grondGeo.rotateX(-Math.PI / 2);
+  const grondMat = new THREE.MeshBasicMaterial({
+    color: 0x8a3017, side: THREE.DoubleSide, transparent: true, opacity: 0.5,
+  });
+  const grond = new THREE.Mesh(grondGeo, grondMat);
+  grond.position.y = 0.01;
+  group.add(grond);
+  disposables.push(grondGeo, grondMat);
 }
 
 /** Bouw piramide met vierkant grondvlak — 4 zijvlakken + 2 driehoeken voor grondvlak. */
