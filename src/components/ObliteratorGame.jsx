@@ -931,6 +931,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const SLOW_DUUR = 300;        // 5 sec
     const SLOW_FACTOR = 0.5;
     const slowMoPickups = [];
+    // SPEED-BOOST-power-up (alleen L75-100, 1-2x per level)
+    let boostFrames = 0;
+    const BOOST_DUUR = 180;       // 3 sec
+    const BOOST_FACTOR = 1.5;
+    const speedBoostPickups = [];
     // BOMB-power-up (vernietigt alle obstakels op het scherm)
     const bombPickups = [];
     let bombFlash = 0;
@@ -1088,6 +1093,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       flipPickups.length = 0;
       magneetPickups.length = 0;
       slowMoPickups.length = 0;
+      speedBoostPickups.length = 0;
+      boostFrames = 0;
       bombPickups.length = 0;
       magneetFrames = 0;
       slowFrames = 0;
@@ -2834,6 +2841,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       flipPickups.length = 0;
       magneetPickups.length = 0;
       slowMoPickups.length = 0;
+      speedBoostPickups.length = 0;
       bombPickups.length = 0;
       // periscoop trekt zich snel terug
       if (periscoop) {
@@ -4511,17 +4519,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // anders zou de level-tijd-progressie ook in de war raken). Achtergrond-pattern-offsets blijven op
       // spelSnelheid om visuele jitter bij in/uit-fade te voorkomen.
       const slowMul = slowFrames > 0 ? SLOW_FACTOR : 1;
+      const boostMul = boostFrames > 0 ? BOOST_FACTOR : 1;
       // afgeremFrames > 0 = botste tegen blok, wereld op AFGEREMD_FACTOR snelheid
       const afremMul = afgeremFrames > 0 ? AFGEREMD_FACTOR : 1;
       // Tijdens bonus-fase staat de wereld stil
       const bonusMul = bonusFase ? 0 : 1;
-      // Geleidelijke moeilijkheidsoploop (Geometry-Dash-stijl): vanaf score 10
-      // loopt de wereldsnelheid lineair op naar 1.5× bij score 30. Beginners
-      // (score < 10) merken niets; ervaren spelers krijgen progressief druk.
-      // Cap op 1.5× om de speel-feel niet onmogelijk te maken voor doelgroep
-      // ~10 jaar.
-      const moeilijkheidsMul = score < 10 ? 1 : Math.min(1.5, 1 + (score - 10) / 40);
-      effSnelheid = spelSnelheid * slowMul * afremMul * bonusMul * moeilijkheidsMul;
+      // Wereldsnelheid is constant over levels — moeilijkheid komt uit
+      // obstakel-density/variatie, niet uit speed-scaling.
+      const moeilijkheidsMul = 1;
+      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
@@ -5119,6 +5125,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               const yPos = (170 + Math.random() * 100) * SCHAAL;
               slowMoPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
             }
+            // SPEED-BOOST-pickup: alleen L75-100, ~elke 35 obstakels (1-2x per level), 70% kans
+            if (huidigLevel >= 75 && huidigLevel <= 100 && aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 35 === 0 && Math.random() < 0.7 && boostFrames === 0) {
+              const yPos = (170 + Math.random() * 100) * SCHAAL;
+              speedBoostPickups.push({ x: W + 40, y: yPos, grootte: 30 * SCHAAL, fase: 0, opgepakt: false });
+            }
             // BOMB-pickup: elke ~40 obstakels, 35% kans (zeldzaam, krachtig effect)
             if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 40 === 0 && Math.random() < 0.35) {
               const yPos = (180 + Math.random() * 80) * SCHAAL;
@@ -5211,17 +5222,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // Collision (alleen één keer + niet tijdens boss/flip/loop-animatie)
         if (!sc.geactiveerd && !bossActief && flipFrames === 0 && !loopActief) {
           const sb = spelerBots();
+          const voet = sb.y + sb.hoogte;
+          const isLoop = sc.type === "loop";
+          // Voor LOOPS: alleen triggeren als voet onder loop-midden zit, anders
+          // teleport je over de loop heen springende speler naar de bottom-entry
+          // (felt als 'naar beneden geteleporteerd'). Schansen/trampolines
+          // mogen wél altijd triggeren — die geven enkel super-jump, geen
+          // teleport.
+          const benaderingOk = isLoop
+            ? voet > sc.y + sc.hoogte / 2
+            : voet > sc.y;
           const overlapt =
             sb.x + sb.breedte > sc.x &&
             sb.x < sc.x + sc.breedte &&
-            sb.y + sb.hoogte > sc.y;
+            benaderingOk;
           if (overlapt) {
-            const isLoop = sc.type === "loop";
-            // Loop triggert direct op AABB-overlap. Speler teleporteert naar
-            // de vaste entry-hoek (0.7π = lower-left van loop) en draait dan
-            // rechtsom door de hele revolutie. Particle-burst verbergt de
-            // teleport. Distance-check zorgde anders dat trigger nooit
-            // afging omdat speler op de grond altijd verder dan rx/2 is.
+            // Loop triggert direct op AABB-overlap (mits voet onder loop-midden,
+            // zie benaderingOk hierboven). Speler teleporteert naar de vaste
+            // entry-hoek (lower-left van loop) en draait dan rechtsom door de
+            // hele revolutie. Particle-burst verbergt de teleport.
 
             if (isLoop) {
               // ── LOOP — speler gaat ECHT door de loop heen ─────
@@ -5721,11 +5740,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           fase: Math.random() * Math.PI * 2,
           amp: (8 + Math.random() * 6) * SCHAAL, // bobbing-amplitude
         });
-        // L1: 180-260 frames (3-4.3 sec) · L50: 100-160 frames · L100: 60-120
+        // L1: 180-260 frames (3-4.3 sec) · L24: 152-222 frames
+        // Vanaf L25 significant dichter midden-veld → L25: 130-190 · L100: 35-67
         // OBLIVION: 35-65 frames — overal mijnen
         let minM, varM;
         if (oblivionMode) {
           minM = 35; varM = 30;
+        } else if (huidigLevel >= 25) {
+          minM = Math.max(35, 130 - (huidigLevel - 25) * 1.1);
+          varM = Math.max(20, 60 - (huidigLevel - 25) * 0.4);
         } else {
           minM = Math.max(60, 180 - huidigLevel * 1.2);
           varM = Math.max(40, 80 - huidigLevel * 0.4);
@@ -5989,6 +6012,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         if (s.x < -50 || s.opgepakt) slowMoPickups.splice(i, 1);
       }
       if (slowFrames > 0) slowFrames--;
+
+      // SPEED-BOOST-pickups (alleen L75-100)
+      for (let i = speedBoostPickups.length - 1; i >= 0; i--) {
+        const s = speedBoostPickups[i];
+        s.x -= effSnelheid;
+        s.fase += 0.10;
+        s.y += Math.sin(s.fase) * 0.4;
+        const dx = (speler.x + speler.breedte / 2) - s.x;
+        const dy = (speler.y + speler.hoogte / 2) - s.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (!s.opgepakt && dist < (s.grootte + speler.breedte) / 2) {
+          s.opgepakt = true;
+          boostFrames = BOOST_DUUR;
+          piep(660, 0.10, "sine", 0.14);
+          setTimeout(() => piep(880, 0.10, "sine", 0.14), 80);
+          setTimeout(() => piep(1320, 0.14, "sine", 0.12), 180);
+          spawnParticles(s.x, s.y, 24, "#ffd54f", { spread: 9, opwaarts: 3, leven: 30, grootte: 5, zwaartekracht: 0.04, glow: 24 });
+          spawnParticles(s.x, s.y, 14, "#ff8030", { spread: 6, opwaarts: 4, leven: 26, grootte: 4, zwaartekracht: 0, glow: 20 });
+        }
+        if (s.x < -50 || s.opgepakt) speedBoostPickups.splice(i, 1);
+      }
+      if (boostFrames > 0) boostFrames--;
 
       // BOMB-pickups
       for (let i = bombPickups.length - 1; i >= 0; i--) {
@@ -6841,6 +6886,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
+      // SPEED-BOOST-pickups tekenen
+      for (const s of speedBoostPickups) {
+        ctx.save();
+        ctx.translate(s.x, s.y);
+        ctx.shadowBlur = 24;
+        ctx.shadowColor = "#ffd54f";
+        ctx.strokeStyle = `rgba(255,213,79,${0.45 + Math.sin(s.fase * 2) * 0.3})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(0, 0, s.grootte * 0.75, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.font = `${s.grootte}px serif`;
+        ctx.textAlign = "center"; ctx.textBaseline = "middle";
+        ctx.fillText("⚡", 0, 0);
+        ctx.restore();
+      }
+
       // BOMB-pickups tekenen
       for (const b of bombPickups) {
         ctx.save();
@@ -7304,6 +7366,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       flipPickups.length = 0;
       magneetPickups.length = 0;
       slowMoPickups.length = 0;
+      speedBoostPickups.length = 0;
+      boostFrames = 0;
       bombPickups.length = 0;
       magneetFrames = 0;
       slowFrames = 0;
