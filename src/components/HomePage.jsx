@@ -771,9 +771,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* 6-tegel hero voor nieuwe bezoekers: alle even grote vierkanten in
-            responsive grid (2×3 op telefoon, 3×2 op tablet/laptop). Volgorde:
-            Probeer-kubus, Leren, Oefenen, Leerling, Student, Leerkracht. */}
+        {/* Hero voor nieuwe bezoekers: kubus-slider-teaser bovenop, daaronder
+            6 even grote tegels in responsive grid (2×3 op telefoon, 3×2 op
+            tablet/laptop). 6e tegel is OBLITERATOR (game) ipv Probeer-dobbel-
+            steen, want de echte slider zit nu boven. Daaronder lichtkrant. */}
         {step === "role" && (() => {
           let hasName = false;
           try {
@@ -781,17 +782,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           } catch {}
           if (hasName) return null;
           const tiles = [
-            {
-              key: "probeer",
-              emoji: "🎲",
-              label: "Probeer",
-              sub: "kubus berekenen",
-              color: "#00d4ff",
-              onClick: () => {
-                if (onPickPath) onPickPath("ruimtemeetkunde");
-                else if (onLearnPathsHub) onLearnPathsHub();
-              },
-            },
             ...(onLearnPathsHub ? [{
               key: "leren",
               emoji: "📚",
@@ -811,9 +801,28 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             { key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff", onClick: () => handleRoleClick("leerling") },
             { key: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
             { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },
+            { key: "obliterator", emoji: "🛸", label: "OBLITERATOR", sub: "mini-spel", color: "#a855f7", onClick: () => onFeatureClick?.("obliterator") },
           ];
           return (
             <>
+              <div style={{ width: "100%", maxWidth: 360, margin: "0 auto 12px" }}>
+                <Suspense fallback={
+                  <div style={{
+                    width: "100%", height: 180, borderRadius: 14,
+                    background: "rgba(255,213,79,0.06)",
+                    border: "1px solid rgba(255,213,79,0.20)",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 12, color: "rgba(224,230,240,0.55)",
+                  }}>
+                    3D laadt…
+                  </div>
+                }>
+                  <Mini3DTeaser onCTA={() => {
+                    if (onPickPath) onPickPath("ruimtemeetkunde");
+                    else if (onLearnPathsHub) onLearnPathsHub();
+                  }} />
+                </Suspense>
+              </div>
               <div className="lk-hero-tiles">
                 {tiles.map(({ key, emoji, label, sub, color, onClick }) => (
                   <button
