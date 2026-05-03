@@ -265,13 +265,19 @@ export default function App() {
 
   // Sync van Supabase leaderboard naar lokale studentProgress: zorgt dat
   // levels/voortgang weer verschijnen na herinstall of domein-migratie
-  // (localStorage is per-origin; Supabase user_id overleeft).
+  // (localStorage is per-origin; Supabase user_id overleeft). Pakt ook
+  // legacy-rijen waar user_id NULL is en player_name de huidige naam is —
+  // voor data van vóór de anonymous-session-rollout (oude studiebol.online).
   useEffect(() => {
     if (!authUser?.id) return;
     let cancelled = false;
+    const naam = (userName || "").trim();
+    const filter = naam.length >= 2
+      ? `user_id.eq.${authUser.id},and(user_id.is.null,player_name.eq."${naam.replace(/"/g, '\\"')}")`
+      : `user_id.eq.${authUser.id}`;
     supabase.from("leaderboard")
       .select("id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at")
-      .eq("user_id", authUser.id)
+      .or(filter)
       .order("completed_at", { ascending: false })
       .limit(500)
       .then(({ data, error }) => {
@@ -304,7 +310,7 @@ export default function App() {
       })
       .catch(() => {});
     return () => { cancelled = true; };
-  }, [authUser?.id]);
+  }, [authUser?.id, userName]);
 
   // Als er een code in de URL staat en die niet lokaal bestaat → haal op uit Supabase en start direct
   useEffect(() => {
