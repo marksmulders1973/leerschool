@@ -686,6 +686,24 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
+        {/* 3D-kubus teaser óók voor returning users — visueel speelse
+            interactie die zelfde "wow"-effect geeft als bij nieuwe bezoekers. */}
+        {step === "role" && (() => {
+          let savedName = null;
+          try {
+            savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          if (!savedName) return null;
+          return (
+            <Suspense fallback={null}>
+              <Mini3DTeaser onCTA={() => {
+                if (onPickPath) onPickPath("ruimtemeetkunde");
+                else if (onLearnPathsHub) onLearnPathsHub();
+              }} />
+            </Suspense>
+          );
+        })()}
+
         {/* Daily challenge + Hero-Mastery-CTA voor terugkerende leerlingen
             (Prio 2 + Prio 3 uit competitor-research). Daily-banner staat
             BOVEN de mastery-CTA: streak/dagelijks-signaal eerst (Duolingo/

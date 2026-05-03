@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v6";
+const CACHE_VERSION = "v7";
 const CACHE_SHELL = `studiebol-shell-${CACHE_VERSION}`;
 const CACHE_ASSETS = `studiebol-assets-${CACHE_VERSION}`;
 
