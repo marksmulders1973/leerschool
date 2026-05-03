@@ -713,8 +713,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero-promo-video alleen voor nieuwe bezoekers — terugkerende leerlingen
-            zien meteen hun "Doorgaan waar je was"-CTA hierboven. */}
+        {/* Hero-intro alleen voor nieuwe bezoekers — terugkerende leerlingen
+            zien meteen hun "Doorgaan waar je was"-CTA hierboven. SVG+CSS-
+            animatie ipv MP4: kwartiercirkel komt op, wordmark, slogan; loop. */}
         {(() => {
           let hasName = false;
           try {
@@ -725,7 +726,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{
               position: "relative",
               width: "80%",
-              maxWidth: 240,
+              maxWidth: 280,
               marginBottom: 14,
             }}>
               <div style={{
@@ -736,23 +737,52 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 zIndex: 0,
                 pointerEvents: "none",
               }} />
-              <video
-                src="/intro.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                style={{
-                  width: "100%",
-                  maxHeight: 180,
-                  objectFit: "cover",
-                  borderRadius: 16,
-                  boxShadow: "0 4px 24px rgba(15,70,180,0.5)",
-                  display: "block",
-                  position: "relative",
-                  zIndex: 1,
-                }}
-              />
+              <div style={{
+                position: "relative",
+                zIndex: 1,
+                width: "100%",
+                aspectRatio: "1 / 1",
+                background: "linear-gradient(160deg, #1a2744 0%, #0f1729 100%)",
+                borderRadius: 20,
+                boxShadow: "0 4px 24px rgba(15,70,180,0.5)",
+                overflow: "hidden",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "5%",
+                padding: "12% 8%",
+              }}>
+                <svg viewBox="0 0 100 100" style={{
+                  width: "32%",
+                  height: "auto",
+                  animation: "lk-intro-circle 6s ease-out infinite",
+                }} aria-hidden="true">
+                  <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
+                </svg>
+                <div style={{
+                  fontFamily: "var(--font-display, -apple-system, sans-serif)",
+                  fontSize: "clamp(16px, 5.2vw, 26px)",
+                  fontWeight: 800,
+                  color: "#fff",
+                  letterSpacing: "-0.02em",
+                  animation: "lk-intro-wordmark 6s ease-out infinite",
+                  opacity: 0,
+                }}>
+                  {BRAND.name}
+                </div>
+                <div style={{
+                  fontFamily: "var(--font-body, -apple-system, sans-serif)",
+                  fontSize: "clamp(10px, 2.8vw, 13px)",
+                  fontWeight: 500,
+                  color: "rgba(255,255,255,0.7)",
+                  letterSpacing: "0.02em",
+                  animation: "lk-intro-slogan 6s ease-out infinite",
+                  opacity: 0,
+                }}>
+                  {BRAND.slogan}
+                </div>
+              </div>
             </div>
           );
         })()}
