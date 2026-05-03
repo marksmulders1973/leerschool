@@ -713,8 +713,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Intro-video alleen voor nieuwe bezoekers — terugkerende leerlingen
-            zien meteen hun "Doorgaan waar je was"-CTA hierboven. */}
+        {/* Hero-logo alleen voor nieuwe bezoekers — terugkerende leerlingen
+            zien meteen hun "Doorgaan waar je was"-CTA hierboven. Tijdelijk
+            statisch logo; nieuwe Leerkwartier-promo-video volgt later. */}
         {(() => {
           let hasName = false;
           try {
@@ -736,12 +737,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 zIndex: 0,
                 pointerEvents: "none",
               }} />
-              <video
-                src="/intro.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
+              <img
+                src="/logo.jpg"
+                alt={BRAND.name}
                 style={{
                   width: "100%",
                   maxHeight: 180,
@@ -751,6 +749,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   display: "block",
                   position: "relative",
                   zIndex: 1,
+                  animation: "lk-hero-pulse 3.5s ease-in-out infinite",
                 }}
               />
             </div>
