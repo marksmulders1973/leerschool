@@ -269,30 +269,40 @@ export default function App() {
   // legacy-rijen waar user_id NULL is en player_name de huidige naam is —
   // voor data van vóór de anonymous-session-rollout (oude studiebol.online).
   useEffect(() => {
-    if (!authUser?.id) return;
     let cancelled = false;
     const naam = (userName || "").trim();
     const cols = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
-    // Twee aparte queries (PostgREST .or() met escape gaf parse-issues bij
-    // strings met speciale chars). Daarna client-side mergen + dedup.
-    const queries = [
-      supabase.from("leaderboard").select(cols).eq("user_id", authUser.id)
-        .order("completed_at", { ascending: false }).limit(500),
-    ];
-    if (naam.length >= 2) {
+    // Twee aparte queries (PostgREST .or() met escape gaf parse-issues).
+    //   1) alle rijen voor authUser.id (recente, ondubbelzinnig)
+    //   2) alle rijen voor player_name (case-insensitive) — vangt legacy
+    //      rijen zonder user_id én rijen die onder een andere session-id
+    //      zijn aangemaakt (anonymous session reset bij domein-migratie).
+    // Dedup op completedAt+subject+level+score+total in setStudentProgress.
+    const queries = [];
+    if (authUser?.id) {
       queries.push(
-        supabase.from("leaderboard").select(cols).is("user_id", null).eq("player_name", naam)
+        supabase.from("leaderboard").select(cols).eq("user_id", authUser.id)
           .order("completed_at", { ascending: false }).limit(500)
       );
     }
+    if (naam.length >= 2) {
+      queries.push(
+        supabase.from("leaderboard").select(cols).ilike("player_name", naam)
+          .order("completed_at", { ascending: false }).limit(500)
+      );
+    }
+    if (queries.length === 0) return;
     Promise.all(queries)
       .then((responses) => {
         if (cancelled) return;
         const data = responses.flatMap((r) => r.data || []);
         if (data.length === 0) return;
+        // player wordt op huidige userName gezet zodat downstream filters
+        // (`p.player === userName`, case-sensitive) altijd matchen — ook als
+        // r.player_name afwijkt in casing.
         const remoteResults = data.map((r) => ({
           id: r.id,
-          player: r.player_name,
+          player: (userName || r.player_name || "").trim() || r.player_name,
           quizId: r.quiz_id,
           subject: r.subject,
           level: r.level,
