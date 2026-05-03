@@ -108,6 +108,7 @@ const Shape3D = forwardRef(function Shape3D(
     showBoundingBox = false,
     theme = "dark-studiebol",
     height = 360,
+    cameraDistanceFactor = 2.2,
   },
   ref
 ) {
@@ -305,7 +306,7 @@ const Shape3D = forwardRef(function Shape3D(
     scene.add(dirLight);
 
     // ── Camera ──────────────────────────────────────────────────────────────
-    const cameraDist = md * 2.2;
+    const cameraDist = md * cameraDistanceFactor;
     const isApexShape = shape === "piramide" || shape === "kegel";
     camera.position.set(cameraDist, md * (isApexShape ? 0.8 : 1.2), cameraDist * 1.2);
     camera.lookAt(0, 0, 0);
@@ -377,7 +378,7 @@ const Shape3D = forwardRef(function Shape3D(
       unitMatsRef.current = [];
       boundingBoxRef.current = { mesh: null, wire: null };
     };
-  }, [shape, JSON.stringify(dimensions), showUnitCubes, JSON.stringify(labels), theme]);
+  }, [shape, JSON.stringify(dimensions), showUnitCubes, JSON.stringify(labels), theme, cameraDistanceFactor]);
 
   // ── Toggle bounding box-zichtbaarheid zonder scene-rebuild ──────────────
   useEffect(() => {
