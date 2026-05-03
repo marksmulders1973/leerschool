@@ -713,9 +713,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Compact brand-mark linksboven — vervangt eerdere grote hero-animatie.
-            Klein, niet-prominent: pictogram + wordmark horizontaal, eenmalige
-            fade-in bij page-load (geen loop). Alleen voor nieuwe bezoekers. */}
+        {/* Brand-mark linksboven + lichtkrant ernaast — alleen nieuwe bezoekers.
+            Pictogram pop't in (scale-rotate), wordmark slide-in van links,
+            beide blijven in eindframe staan (animation-fill-mode: forwards). */}
         {(() => {
           let hasName = false;
           try {
@@ -724,33 +724,45 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           if (hasName) return null;
           return (
             <div style={{
-              alignSelf: "flex-start",
+              alignSelf: "stretch",
               display: "flex",
               alignItems: "center",
-              gap: 8,
+              gap: 12,
               marginBottom: 10,
+              width: "100%",
+              maxWidth: 400,
             }}>
-              <svg viewBox="0 0 100 100" style={{
-                width: 26,
-                height: 26,
+              <div style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
                 flexShrink: 0,
-                opacity: 0,
-                transformOrigin: "50% 50%",
-                animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
-              }} aria-hidden="true">
-                <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
-              </svg>
-              <span style={{
-                fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                fontSize: 16,
-                fontWeight: 700,
-                color: "rgba(255,255,255,0.9)",
-                letterSpacing: "-0.01em",
-                opacity: 0,
-                animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
               }}>
-                {BRAND.name}
-              </span>
+                <svg viewBox="0 0 100 100" style={{
+                  width: 26,
+                  height: 26,
+                  flexShrink: 0,
+                  opacity: 0,
+                  transformOrigin: "50% 50%",
+                  animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
+                }} aria-hidden="true">
+                  <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
+                </svg>
+                <span style={{
+                  fontFamily: "var(--font-display, -apple-system, sans-serif)",
+                  fontSize: 16,
+                  fontWeight: 700,
+                  color: "rgba(255,255,255,0.9)",
+                  letterSpacing: "-0.01em",
+                  opacity: 0,
+                  animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
+                }}>
+                  {BRAND.name}
+                </span>
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <TickerBanner />
+              </div>
             </div>
           );
         })()}
@@ -782,7 +794,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   else if (onLearnPathsHub) onLearnPathsHub();
                 }} />
               </Suspense>
-              <TickerBanner />
             </>
           );
         })()}
