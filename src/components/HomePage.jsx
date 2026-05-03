@@ -12,10 +12,12 @@ import DailyChallengeBanner from "../features/mastery/DailyChallengeBanner.jsx";
 const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
 
 const TICKER_ITEMS = [
+  { icon: "⏱", text: "Elk kwartier slimmer" },
   { icon: "🎯", text: "Cito eindtoets oefenen" },
-  { icon: "📚", text: "100+ echte schoolboeken" },
+  { icon: "📅", text: "15 minuten per dag is voldoende" },
+  { icon: "📚", text: "100+ schoolmethodes" },
   { icon: "🤖", text: "AI-vragen over elk onderwerp" },
-  { icon: "✅", text: "100% gratis" },
+  { icon: "🎮", text: "Eerst leren, dan spelen" },
   { icon: "✖️", text: "Tafels oefenen: groep 3 t/m 6" },
   { icon: "📖", text: "Begrijpend lezen groep 5–8" },
   { icon: "🎒", text: "Groep 1 t/m 8" },
@@ -713,9 +715,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Brand-mark linksboven + lichtkrant ernaast — alleen nieuwe bezoekers.
-            Pictogram pop't in (scale-rotate), wordmark slide-in van links,
-            beide blijven in eindframe staan (animation-fill-mode: forwards). */}
+        {/* Brand-mark linksboven (compact, 2-regels): pictogram + wordmark op regel 1,
+            slogan op regel 2. Speelt 1× bij open en blijft in eindframe staan. */}
         {(() => {
           let hasName = false;
           try {
@@ -724,23 +725,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           if (hasName) return null;
           return (
             <div style={{
-              alignSelf: "stretch",
+              alignSelf: "flex-start",
               display: "flex",
-              alignItems: "center",
-              gap: 12,
-              marginBottom: 10,
-              width: "100%",
-              maxWidth: 400,
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: 1,
+              marginBottom: 14,
             }}>
-              <div style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                flexShrink: 0,
-              }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                 <svg viewBox="0 0 100 100" style={{
-                  width: 26,
-                  height: 26,
+                  width: 24,
+                  height: 24,
                   flexShrink: 0,
                   opacity: 0,
                   transformOrigin: "50% 50%",
@@ -750,9 +745,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </svg>
                 <span style={{
                   fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                  fontSize: 16,
+                  fontSize: 17,
                   fontWeight: 700,
-                  color: "rgba(255,255,255,0.9)",
+                  color: "rgba(255,255,255,0.92)",
                   letterSpacing: "-0.01em",
                   opacity: 0,
                   animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
@@ -760,15 +755,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   {BRAND.name}
                 </span>
               </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <TickerBanner />
-              </div>
+              <span style={{
+                fontFamily: "var(--font-body, -apple-system, sans-serif)",
+                fontSize: 11,
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.45)",
+                letterSpacing: "0.02em",
+                marginLeft: 32,
+                opacity: 0,
+                animation: "lk-mark-slogan 0.7s ease-out 1.05s forwards",
+              }}>
+                {BRAND.slogan}
+              </span>
             </div>
           );
         })()}
 
-        {/* Mini-3D-teaser + lichtkrant — alleen voor nieuwe bezoekers. Mastery-CTA
-            (hieronder) neemt de focus voor terugkerende leerlingen. */}
+        {/* Mini-3D-teaser (kleiner gemaakt, minder prominent) + lichtkrant
+            eronder — alleen voor nieuwe bezoekers. Mastery-CTA (hieronder)
+            neemt de focus voor terugkerende leerlingen. */}
         {(() => {
           let hasName = false;
           try {
@@ -777,23 +782,26 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           if (hasName) return null;
           return (
             <>
-              <Suspense fallback={
-                <div style={{
-                  width: "100%", maxWidth: 320, margin: "12px auto 16px",
-                  height: 220, borderRadius: 16,
-                  background: "rgba(255,213,79,0.06)",
-                  border: "1px solid rgba(255,213,79,0.20)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 12, color: "rgba(224,230,240,0.55)",
-                }}>
-                  3D laadt…
-                </div>
-              }>
-                <Mini3DTeaser onCTA={() => {
-                  if (onPickPath) onPickPath("ruimtemeetkunde");
-                  else if (onLearnPathsHub) onLearnPathsHub();
-                }} />
-              </Suspense>
+              <div style={{ width: "100%", maxWidth: 220, margin: "0 auto" }}>
+                <Suspense fallback={
+                  <div style={{
+                    width: "100%", margin: "12px auto 16px",
+                    height: 160, borderRadius: 14,
+                    background: "rgba(255,213,79,0.06)",
+                    border: "1px solid rgba(255,213,79,0.20)",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 12, color: "rgba(224,230,240,0.55)",
+                  }}>
+                    3D laadt…
+                  </div>
+                }>
+                  <Mini3DTeaser onCTA={() => {
+                    if (onPickPath) onPickPath("ruimtemeetkunde");
+                    else if (onLearnPathsHub) onLearnPathsHub();
+                  }} />
+                </Suspense>
+              </div>
+              <TickerBanner />
             </>
           );
         })()}
