@@ -198,22 +198,10 @@
       @media (min-width: 1024px) {
         .lp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
       }
-      /* Hero-intro animatie — eigen CSS ipv MP4. 6s loop met pauze tussen iteraties. */
-      @keyframes lk-intro-circle {
-        0%        { opacity: 0; transform: scale(0.4) rotate(-20deg); }
-        15%       { opacity: 1; transform: scale(1.08) rotate(0deg); }
-        25%, 90%  { opacity: 1; transform: scale(1) rotate(0deg); }
-        100%      { opacity: 1; transform: scale(1) rotate(0deg); }
-      }
-      @keyframes lk-intro-wordmark {
-        0%, 25%   { opacity: 0; transform: translateY(10px); }
-        45%, 90%  { opacity: 1; transform: translateY(0); }
-        100%      { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes lk-intro-slogan {
-        0%, 50%   { opacity: 0; transform: translateY(8px); }
-        70%, 90%  { opacity: 0.7; transform: translateY(0); }
-        100%      { opacity: 0.7; transform: translateY(0); }
+      /* Compact brand-mark linksboven — eenmalige fade-in bij page-load. */
+      @keyframes lk-mark-fadein {
+        0%   { opacity: 0; transform: translateY(-4px); }
+        100% { opacity: 1; transform: translateY(0); }
       }
     </style>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9399858013370724" crossorigin="anonymous"></script>
