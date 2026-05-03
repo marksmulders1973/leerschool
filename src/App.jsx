@@ -272,16 +272,24 @@ export default function App() {
     if (!authUser?.id) return;
     let cancelled = false;
     const naam = (userName || "").trim();
-    const filter = naam.length >= 2
-      ? `user_id.eq.${authUser.id},and(user_id.is.null,player_name.eq."${naam.replace(/"/g, '\\"')}")`
-      : `user_id.eq.${authUser.id}`;
-    supabase.from("leaderboard")
-      .select("id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at")
-      .or(filter)
-      .order("completed_at", { ascending: false })
-      .limit(500)
-      .then(({ data, error }) => {
-        if (cancelled || error || !data) return;
+    const cols = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
+    // Twee aparte queries (PostgREST .or() met escape gaf parse-issues bij
+    // strings met speciale chars). Daarna client-side mergen + dedup.
+    const queries = [
+      supabase.from("leaderboard").select(cols).eq("user_id", authUser.id)
+        .order("completed_at", { ascending: false }).limit(500),
+    ];
+    if (naam.length >= 2) {
+      queries.push(
+        supabase.from("leaderboard").select(cols).is("user_id", null).eq("player_name", naam)
+          .order("completed_at", { ascending: false }).limit(500)
+      );
+    }
+    Promise.all(queries)
+      .then((responses) => {
+        if (cancelled) return;
+        const data = responses.flatMap((r) => r.data || []);
+        if (data.length === 0) return;
         const remoteResults = data.map((r) => ({
           id: r.id,
           player: r.player_name,
