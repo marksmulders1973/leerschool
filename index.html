@@ -214,6 +214,37 @@
         0%   { opacity: 0; transform: translateY(-3px); }
         100% { opacity: 0.7; transform: translateY(0); }
       }
+      /* Hero-tiles grid: 6 even grote vierkanten, responsive.
+         Telefoon (< 640px): 2 kolommen × 3 rijen.
+         Tablet/laptop (≥ 640px): 3 kolommen × 2 rijen. */
+      .lk-hero-tiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 360px;
+        margin-bottom: 14px;
+        align-self: stretch;
+      }
+      @media (min-width: 640px) {
+        .lk-hero-tiles {
+          grid-template-columns: repeat(3, 1fr);
+          max-width: 480px;
+          gap: 12px;
+        }
+      }
+      .lk-tile {
+        aspect-ratio: 1 / 1;
+        border-radius: 16px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 6px;
+        transition: transform 0.15s ease, background 0.15s ease;
+      }
     </style>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9399858013370724" crossorigin="anonymous"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J72M8CBJ9"></script>

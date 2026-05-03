@@ -771,88 +771,74 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* 2-kolom hero voor nieuwe bezoekers: Mini3DTeaser links onder het
-            brand-mark, Leren + Oefenen rechts gestapeld. Lichtkrant eronder.
-            Voor terugkerende leerlingen: zien zij hieronder de daily-challenge
-            en de bredere primaire CTA's (verderop in de DOM). */}
+        {/* 6-tegel hero voor nieuwe bezoekers: alle even grote vierkanten in
+            responsive grid (2×3 op telefoon, 3×2 op tablet/laptop). Volgorde:
+            Probeer-kubus, Leren, Oefenen, Leerling, Student, Leerkracht. */}
         {step === "role" && (() => {
           let hasName = false;
           try {
             hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
           } catch {}
           if (hasName) return null;
+          const tiles = [
+            {
+              key: "probeer",
+              emoji: "🎲",
+              label: "Probeer",
+              sub: "kubus berekenen",
+              color: "#00d4ff",
+              onClick: () => {
+                if (onPickPath) onPickPath("ruimtemeetkunde");
+                else if (onLearnPathsHub) onLearnPathsHub();
+              },
+            },
+            ...(onLearnPathsHub ? [{
+              key: "leren",
+              emoji: "📚",
+              label: "Leren",
+              sub: "uitleg + checks",
+              color: "#00C853",
+              onClick: handleLerenClick,
+            }] : []),
+            {
+              key: "oefenen",
+              emoji: "🎯",
+              label: "Oefenen",
+              sub: "toetsen · cito",
+              color: "#ff8030",
+              onClick: handleOefenenClick,
+            },
+            { key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff", onClick: () => handleRoleClick("leerling") },
+            { key: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
+            { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },
+          ];
           return (
             <>
-              <div style={{
-                alignSelf: "stretch",
-                width: "100%",
-                maxWidth: 400,
-                marginBottom: 14,
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: 10,
-              }}>
-                {/* Links: 3D-kubus (Probeer-blok) */}
-                <Suspense fallback={
-                  <div style={{
-                    width: "100%", height: "100%", minHeight: 180, borderRadius: 14,
-                    background: "rgba(255,213,79,0.06)",
-                    border: "1px solid rgba(255,213,79,0.20)",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: 12, color: "rgba(224,230,240,0.55)",
-                  }}>
-                    3D laadt…
-                  </div>
-                }>
-                  <Mini3DTeaser onCTA={() => {
-                    if (onPickPath) onPickPath("ruimtemeetkunde");
-                    else if (onLearnPathsHub) onLearnPathsHub();
-                  }} />
-                </Suspense>
-
-                {/* Rechts: Leren + Oefenen verticaal gestapeld */}
-                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                  {onLearnPathsHub && (
-                    <button
-                      onClick={handleLerenClick}
-                      style={{
-                        flex: 1,
-                        background: "linear-gradient(135deg, var(--color-brand-primary), #00897b)",
-                        border: "none", borderRadius: 16, padding: "14px 10px",
-                        color: "var(--color-text-strong)", cursor: "pointer",
-                        display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4,
-                        boxShadow: "0 6px 20px rgba(0,200,83,0.35)",
-                        transition: "transform 0.15s",
-                        minHeight: 0,
-                      }}
-                      onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                      onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
-                    >
-                      <span style={{ fontSize: 28 }}>📚</span>
-                      <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>Leren</div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10, opacity: 0.92 }}>uitleg + checks</div>
-                    </button>
-                  )}
+              <div className="lk-hero-tiles">
+                {tiles.map(({ key, emoji, label, sub, color, onClick }) => (
                   <button
-                    onClick={handleOefenenClick}
+                    key={key}
+                    onClick={onClick}
+                    className="lk-tile"
                     style={{
-                      flex: 1,
-                      background: "linear-gradient(135deg, #ff8030, #ffaa00)",
-                      border: "none", borderRadius: 16, padding: "14px 10px",
-                      color: "#1a0a00", cursor: "pointer",
-                      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4,
-                      boxShadow: "0 6px 20px rgba(255,140,40,0.35)",
-                      transition: "transform 0.15s",
-                      minHeight: 0,
+                      background: `${color}14`,
+                      border: `1.5px solid ${color}55`,
+                      color: "#fff",
                     }}
-                    onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                    onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.transform = "translateY(-2px)";
+                      e.currentTarget.style.background = `${color}28`;
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.background = `${color}14`;
+                    }}
                   >
-                    <span style={{ fontSize: 28 }}>🎯</span>
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>Oefenen</div>
-                    <div style={{ fontFamily: "var(--font-body)", fontSize: 10, opacity: 0.92 }}>toetsen, tafels, cito</div>
+                    <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
                   </button>
-                </div>
+                ))}
               </div>
               <TickerBanner />
             </>
@@ -977,7 +963,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {step === "role" && (
+        {/* Role-buttons (Leerling / Student / Leerkracht) zijn voor nieuwe
+            bezoekers verplaatst naar de 6-tegel hero hierboven. Voor
+            terugkerende leerlingen blijven ze hier, op smalle 3-knops rij. */}
+        {step === "role" && (() => {
+          let hasName = false;
+          try {
+            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          return hasName;
+        })() && (
           <div style={{ width: "100%", maxWidth: 360, marginBottom: 4 }}>
             <div style={{ display: "flex", gap: 10 }}>
               {[
