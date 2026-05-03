@@ -771,10 +771,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Mini-3D-teaser (kleiner gemaakt, minder prominent) + lichtkrant
-            eronder — alleen voor nieuwe bezoekers. Mastery-CTA (hieronder)
-            neemt de focus voor terugkerende leerlingen. */}
-        {(() => {
+        {/* 2-kolom hero voor nieuwe bezoekers: Mini3DTeaser links onder het
+            brand-mark, Leren + Oefenen rechts gestapeld. Lichtkrant eronder.
+            Voor terugkerende leerlingen: zien zij hieronder de daily-challenge
+            en de bredere primaire CTA's (verderop in de DOM). */}
+        {step === "role" && (() => {
           let hasName = false;
           try {
             hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
@@ -782,11 +783,19 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           if (hasName) return null;
           return (
             <>
-              <div style={{ width: "100%", maxWidth: 220, margin: "0 auto" }}>
+              <div style={{
+                alignSelf: "stretch",
+                width: "100%",
+                maxWidth: 400,
+                marginBottom: 14,
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: 10,
+              }}>
+                {/* Links: 3D-kubus (Probeer-blok) */}
                 <Suspense fallback={
                   <div style={{
-                    width: "100%", margin: "12px auto 16px",
-                    height: 160, borderRadius: 14,
+                    width: "100%", height: "100%", minHeight: 180, borderRadius: 14,
                     background: "rgba(255,213,79,0.06)",
                     border: "1px solid rgba(255,213,79,0.20)",
                     display: "flex", alignItems: "center", justifyContent: "center",
@@ -800,6 +809,50 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     else if (onLearnPathsHub) onLearnPathsHub();
                   }} />
                 </Suspense>
+
+                {/* Rechts: Leren + Oefenen verticaal gestapeld */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {onLearnPathsHub && (
+                    <button
+                      onClick={handleLerenClick}
+                      style={{
+                        flex: 1,
+                        background: "linear-gradient(135deg, var(--color-brand-primary), #00897b)",
+                        border: "none", borderRadius: 16, padding: "14px 10px",
+                        color: "var(--color-text-strong)", cursor: "pointer",
+                        display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4,
+                        boxShadow: "0 6px 20px rgba(0,200,83,0.35)",
+                        transition: "transform 0.15s",
+                        minHeight: 0,
+                      }}
+                      onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
+                      onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
+                    >
+                      <span style={{ fontSize: 28 }}>📚</span>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>Leren</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10, opacity: 0.92 }}>uitleg + checks</div>
+                    </button>
+                  )}
+                  <button
+                    onClick={handleOefenenClick}
+                    style={{
+                      flex: 1,
+                      background: "linear-gradient(135deg, #ff8030, #ffaa00)",
+                      border: "none", borderRadius: 16, padding: "14px 10px",
+                      color: "#1a0a00", cursor: "pointer",
+                      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 4,
+                      boxShadow: "0 6px 20px rgba(255,140,40,0.35)",
+                      transition: "transform 0.15s",
+                      minHeight: 0,
+                    }}
+                    onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
+                  >
+                    <span style={{ fontSize: 28 }}>🎯</span>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700 }}>Oefenen</div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 10, opacity: 0.92 }}>toetsen, tafels, cito</div>
+                  </button>
+                </div>
               </div>
               <TickerBanner />
             </>
@@ -836,8 +889,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {/* (verplaatst naar boven de hero — Prio 2 uit competitor-research) */}
 
-        {/* Primaire CTA's: Leren vs Oefenen — vervangt het versplinterde knoppen-veld onderaan */}
-        {step === "role" && (
+        {/* Primaire CTA's: Leren vs Oefenen — alleen voor terugkerende leerlingen.
+            Nieuwe bezoekers zien deze knoppen al gestapeld in de 2-kolom hero
+            naast de 3D-kubus, dus zonder herhaling. */}
+        {step === "role" && (() => {
+          let hasName = false;
+          try {
+            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
+          } catch {}
+          return hasName;
+        })() && (
           <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 10, textAlign: "center", letterSpacing: 0.3 }}>
               Wat wil je doen?
