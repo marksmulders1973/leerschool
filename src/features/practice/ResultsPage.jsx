@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS } from "../../constants.js";
+import { BRAND } from "../../brand.js";
 import { SoundEngine } from "../../utils.js";
 import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import supabase from "../../supabase.js";
@@ -38,7 +39,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   };
   const canShowInstall = !isStandalone && !installed;
 
-  const appShareUrl = "https://www.studiebol.online";
+  const appShareUrl = `https://www.${BRAND.domain}`;
   const appShareText = "Gratis oefenen voor groep 1-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!";
   const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
 
@@ -50,7 +51,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   const handleNativeShare = async () => {
     if (canNativeShare) {
-      try { await navigator.share({ title: "Studiebol", text: appShareText, url: appShareUrl }); logShareEvent("native"); } catch {}
+      try { await navigator.share({ title: BRAND.name, text: appShareText, url: appShareUrl }); logShareEvent("native"); } catch {}
     } else {
       handleCopyLink();
     }
@@ -126,9 +127,9 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
       return w.explanation ? `${base}\n   💡 ${w.explanation}` : base;
     }).join("\n\n") +
     (restCount > 0 ? `\n\n(En nog ${restCount} ${restCount === 1 ? "vraag" : "vragen"} meer.)` : "");
-  const resultText = `📊 studiebol Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Toets: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
+  const resultText = `📊 ${BRAND.shortName} Resultaat\n\n👤 Leerling: ${userName || "Onbekend"}\n📚 Vak: ${subjLabel}\n${quiz?.title ? `📝 Toets: ${quiz.title}\n` : ""}✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ Beoordeling: ${grade}`;
 
-  const shareText = `📊 Studiebol resultaat\n\n👤 ${userName || "Leerling"}\n📚 ${subjLabel}${quiz?.topic ? ` · ${quiz.topic}` : ""}\n✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ ${grade}`;
+  const shareText = `📊 ${BRAND.name} resultaat\n\n👤 ${userName || "Leerling"}\n📚 ${subjLabel}${quiz?.topic ? ` · ${quiz.topic}` : ""}\n✅ Score: ${latest.score}/${latest.total} (${latest.percentage}%)\n❌ Fout: ${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"}\n⭐ ${grade}`;
 
   const sendViaWhatsApp = () => {
     window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, "_blank");
@@ -137,7 +138,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   const sendViaEmail = () => {
     const email = quiz?.teacherEmail || "";
-    const subject = `Studiebol resultaat: ${userName} — ${subjLabel} ${latest.percentage}%`;
+    const subject = `${BRAND.name} resultaat: ${userName} — ${subjLabel} ${latest.percentage}%`;
     window.open(`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(shareText)}`, "_blank");
     setSent(true);
   };
@@ -216,7 +217,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
         {/* Daag vrienden uit (bij goede score) */}
         {latest.percentage >= 80 && (() => {
-          const challengeText = `🏆 Kijk eens! Ik heb ${latest.percentage}% gehaald op Studiebol!\n\n${userName || "Ik"} · ${subjLabel}${latest.timeTaken > 0 ? ` · ${latest.timeTaken < 60 ? latest.timeTaken + "s" : Math.floor(latest.timeTaken / 60) + "m " + (latest.timeTaken % 60) + "s"}` : ""}\n\nKun jij dit ook? Daag mij uit! 🎯\nhttps://studiebol.online`;
+          const challengeText = `🏆 Kijk eens! Ik heb ${latest.percentage}% gehaald op ${BRAND.name}!\n\n${userName || "Ik"} · ${subjLabel}${latest.timeTaken > 0 ? ` · ${latest.timeTaken < 60 ? latest.timeTaken + "s" : Math.floor(latest.timeTaken / 60) + "m " + (latest.timeTaken % 60) + "s"}` : ""}\n\nKun jij dit ook? Daag mij uit! 🎯\nhttps://${BRAND.domain}`;
           return (
             <div style={{ marginTop: 20, padding: 16, borderRadius: 16, background: "linear-gradient(135deg, #1a2a0a, #0f1a06)", border: "2px solid rgba(0,200,83,0.4)" }}>
               <p style={{ fontSize: 14, color: "var(--color-brand-primary-100)", fontWeight: 800, textAlign: "center", margin: "0 0 10px" }}>
@@ -230,7 +231,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   📱 WhatsApp
                 </a>
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
                   style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   👍 Facebook
                 </a>
@@ -292,7 +293,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
               onClick={handleInstallClick}
               style={{ width: "100%", marginTop: 8, padding: "10px 8px", border: "1px solid rgba(0,212,255,0.4)", borderRadius: 12, background: "rgba(0,212,255,0.08)", color: "#00d4ff", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
             >
-              <span style={{ fontSize: 16 }}>📲</span> Zet Studiebol op je telefoon of laptop
+              <span style={{ fontSize: 16 }}>📲</span> Zet {BRAND.name} op je telefoon of laptop
             </button>
           )}
           <p style={{ fontSize: 11, color: "#556677", textAlign: "center", margin: "8px 0 0" }}>
@@ -302,19 +303,19 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {showIosInstall && (
           <div onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
             <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 {BRAND.name} installeren</div>
               {isIOS ? (
                 <>
                   <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
                   <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
-                    <li>Open <strong>studiebol.online</strong> in Safari</li>
+                    <li>Open <strong>{BRAND.domain}</strong> in Safari</li>
                     <li>Tik op het <strong>Deel-icoontje</strong> (vierkant met pijl omhoog)</li>
                     <li>Kies <strong>"Zet op beginscherm"</strong></li>
                   </ol>
                 </>
               ) : (
                 <>
-                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer Studiebol als app:</p>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer {BRAND.name} als app:</p>
                   <ul style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
                     <li><strong>Android/Chrome</strong>: menu (⋮) → "App installeren"</li>
                     <li><strong>Windows/Mac</strong>: klik op het installatie-icoon in de adresbalk</li>
@@ -322,7 +323,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   </ul>
                 </>
               )}
-              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je {BRAND.name} openen als een echte app, ook offline.</p>
               <button onClick={() => setShowIosInstall(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
             </div>
           </div>
@@ -334,14 +335,14 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14 }}>Vraag hulp aan je leerkracht of ouder — niemand hoeft het te weten, jij stuurt het zelf!</div>
             <div style={{ display: "flex", gap: 8 }}>
               <button onClick={() => {
-                const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen? 🙏`;
+                const msg = `Hoi! 👋\n\nIk ben ${userName} en ik heb geoefend op ${BRAND.name}.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen? 🙏`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
               }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 💬 WhatsApp
               </button>
               <button onClick={() => {
-                const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op Studiebol.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen?`;
-                window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft hulp nodig bij " + subjLabel)}&body=${encodeURIComponent(msg)}`, "_blank");
+                const msg = `Hoi!\n\nIk ben ${userName} en ik heb geoefend op ${BRAND.name}.\n\nIk heb moeite met: ${subjLabel}\nMijn score was: ${latest.score}/${latest.total} (${latest.percentage}%)${wrongQuestionsBlock}\n\nKun je me helpen?`;
+                window.open(`mailto:?subject=${encodeURIComponent(`${BRAND.name} - ${userName} heeft hulp nodig bij ${subjLabel}`)}&body=${encodeURIComponent(msg)}`, "_blank");
               }} style={{ flex: 1, padding: "13px 8px", border: "none", borderRadius: 12, background: "#1a73e8", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
                 ✉️ E-mail
               </button>

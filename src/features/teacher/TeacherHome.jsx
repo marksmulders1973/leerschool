@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS } from "../../constants.js";
+import { BRAND } from "../../brand.js";
 import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
@@ -31,7 +32,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `studiebol_${q.title || subj?.label || "quiz"}_${q.code}.csv`;
+    a.download = `${BRAND.shortName}_${q.title || subj?.label || "quiz"}_${q.code}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -237,9 +238,9 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
         {/* ── QR code sectie ── */}
         <div style={{ marginBottom: 20, padding: "16px", background: "#0d1b2a", borderRadius: 16, border: "1px solid #2a3f5f", textAlign: "center" }}>
           <div style={{ fontSize: 13, color: "#8eaadb", fontWeight: 700, marginBottom: 10 }}>📱 Deel de app met je klas</div>
-          <img src="/qrcode.png" alt="QR code studiebol.online" style={{ width: 140, height: 140, borderRadius: 10, display: "block", margin: "0 auto 8px" }} />
+          <img src="/qrcode.png" alt={`QR code ${BRAND.domain}`} style={{ width: 140, height: 140, borderRadius: 10, display: "block", margin: "0 auto 8px" }} />
           <div style={{ fontSize: 11, color: "#556677" }}>Laat leerlingen scannen om de app te openen</div>
-          <div style={{ fontSize: 12, color: "#00e676", fontWeight: 700, marginTop: 4 }}>www.studiebol.online</div>
+          <div style={{ fontSize: 12, color: "#00e676", fontWeight: 700, marginTop: 4 }}>www.{BRAND.domain}</div>
         </div>
 
         {quizzes.length > 0 && (
@@ -307,7 +308,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                         const vak = q.topic || subj?.label || "Vrij onderwerp";
                         const niveau = LEVELS.find(l => l.id === q.level)?.label || "";
                         const deadline = q.deadline ? `\n📅 Deadline: ${formatDate(q.deadline)}` : "";
-                        const text = `🎓 *Studiebol* — Toets klaarstaan!\n\n📚 ${vak}${niveau ? ` · ${niveau}` : ""}${deadline}\n\nKlik op de link en start direct:\n👉 https://www.studiebol.online?code=${q.code}`;
+                        const text = `🎓 *${BRAND.name}* — Toets klaarstaan!\n\n📚 ${vak}${niveau ? ` · ${niveau}` : ""}${deadline}\n\nKlik op de link en start direct:\n👉 https://www.${BRAND.domain}?code=${q.code}`;
                         window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                       }}>💬 Deel</button>
                       {q.classId && (() => {
@@ -322,8 +323,8 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                             const emails = klas.students.map(s => s.email).filter(Boolean).join(",");
                             const vak2 = q.topic || subj?.label || "Toets";
                             const niveau2 = LEVELS.find(l => l.id === q.level)?.label || "";
-                            const subject = encodeURIComponent(`Studiebol toets: ${vak2}`);
-                            const body = encodeURIComponent(`Hallo,\n\nEr staat een toets voor je klaar op Studiebol!\n\n📚 ${vak2}${niveau2 ? ` · ${niveau2}` : ""}\n\nKlik op de link en start direct:\n👉 https://www.studiebol.online?code=${q.code}\n\nGroetjes`);
+                            const subject = encodeURIComponent(`${BRAND.name} toets: ${vak2}`);
+                            const body = encodeURIComponent(`Hallo,\n\nEr staat een toets voor je klaar op ${BRAND.name}!\n\n📚 ${vak2}${niveau2 ? ` · ${niveau2}` : ""}\n\nKlik op de link en start direct:\n👉 https://www.${BRAND.domain}?code=${q.code}\n\nGroetjes`);
                             window.open(`mailto:${emails}?subject=${subject}&body=${body}`, "_blank");
                           }}>📧 Mail klas</button>
                         );
@@ -335,7 +336,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                       {q.deadline && daysUntil(q.deadline) >= 0 && daysUntil(q.deadline) <= 3 && (() => {
                         const klas = classes.find(c => c.id === q.classId);
                         const vak3 = q.topic || subj?.label || "Toets";
-                        const msg = `⏰ *Herinnering* — Studiebol\n\n📚 ${vak3}\n📅 Deadline: ${formatDate(q.deadline)}\n\nHeb je al geoefend? Klik en start:\n👉 https://www.studiebol.online?code=${q.code}`;
+                        const msg = `⏰ *Herinnering* — ${BRAND.name}\n\n📚 ${vak3}\n📅 Deadline: ${formatDate(q.deadline)}\n\nHeb je al geoefend? Klik en start:\n👉 https://www.${BRAND.domain}?code=${q.code}`;
                         const phones = klas?.students?.map(s => s.phone).filter(Boolean) || [];
                         return (
                           <button style={{ ...styles.smallButton, background: "#f57c00", boxShadow: "0 2px 8px rgba(245,124,0,0.3)" }}

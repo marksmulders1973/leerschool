@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
 import { isLaunchPromoActive } from "../constants.js";
+import { BRAND } from "../brand.js";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -108,7 +109,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   };
 
   const sendWhatsApp = () => {
-    const msg = encodeURIComponent(`Hoi! Open Studiebol (studiebol.online) en voer de koppelcode *${inviteCode}* in bij 'Koppel met ouder'. Dan kan ik jouw voortgang zien 😊 (code is 48 uur geldig)`);
+    const msg = encodeURIComponent(`Hoi! Open ${BRAND.name} (${BRAND.domain}) en voer de koppelcode *${inviteCode}* in bij 'Koppel met ouder'. Dan kan ik jouw voortgang zien 😊 (code is 48 uur geldig)`);
     window.open(`https://wa.me/?text=${msg}`, "_blank");
     setInviteSent(true);
   };

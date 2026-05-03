@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import supabase from "../../supabase.js";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS } from "../../constants.js";
+import { BRAND } from "../../brand.js";
 import Header from "../../components/Header.jsx";
 
 export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
@@ -184,7 +185,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
                     </button>
                     <button onClick={() => {
                       const msg = `Hoi!\n\nIk ben ${userName} en ik snap deze vraag niet:\n\n"${q.q}"\n\nHet goede antwoord is: ${q.options?.[q.answer]}\nMaar ik snap nog niet waarom. Kun je het uitleggen?`;
-                      window.open(`mailto:?subject=${encodeURIComponent("Studiebol - " + userName + " heeft een vraag over " + subj?.label)}&body=${encodeURIComponent(msg)}`, "_blank");
+                      window.open(`mailto:?subject=${encodeURIComponent(`${BRAND.name} - ${userName} heeft een vraag over ${subj?.label}`)}&body=${encodeURIComponent(msg)}`, "_blank");
                     }} style={{ flex: 1, padding: "10px 8px", border: "none", borderRadius: 10, background: "#1a73e8", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, cursor: "pointer" }}>
                       ✉️ E-mail
                     </button>
@@ -452,8 +453,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                             {hofEntries.map((e, rank) => {
                               const isMe = e.player === currentUser;
                               const canChallenge = onChallenge && e.questions?.length;
-                              const myShareText = `Ik sta in de Studiebol Hall of Fame!\n\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
-                              const challengeText = `Kun jij ${e.player} verslaan op Studiebol?\n\n${e.player} staat in de Hall of Fame:\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nDoe de uitdaging!\nhttps://studiebol.online`;
+                              const myShareText = `Ik sta in de ${BRAND.name} Hall of Fame!\n\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nKun jij mij verslaan?\nhttps://${BRAND.domain}`;
+                              const challengeText = `Kun jij ${e.player} verslaan op ${BRAND.name}?\n\n${e.player} staat in de Hall of Fame:\n${subj?.label || subjectId} - ${levelLabel} - 100% in ${fmtTime(e.timeTaken)}\n\nDoe de uitdaging!\nhttps://${BRAND.domain}`;
                               return (
                                 <div key={rank} style={{
                                   padding: "10px 14px",
@@ -489,7 +490,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                           style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
                                           📱 WhatsApp
                                         </a>
-                                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
                                           style={{ flex: 1, padding: "5px 4px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 11, textDecoration: "none", textAlign: "center", display: "block" }}>
                                           👍 Facebook
                                         </a>
@@ -561,8 +562,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                       const subjectLabel = subj?.label || entry.subject;
                       const levelLabel = LEVELS.find((l) => l.id === entry.level)?.label || entry.level;
                       const timeTxt = entry.timeTaken ? ` in ${entry.timeTaken < 60 ? entry.timeTaken + "s" : Math.floor(entry.timeTaken / 60) + "m " + (entry.timeTaken % 60) + "s"}` : "";
-                      const myShareText = `🏆 Kijk mijn super resultaat op Studiebol!\n\n${i === 0 ? "Ik sta op #1!" : `Ik sta op #${i + 1}`} — ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 💪\nhttps://studiebol.online`;
-                      const challengeShareText = `Kun jij ${entry.player} verslaan op Studiebol?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging!\nhttps://studiebol.online`;
+                      const myShareText = `🏆 Kijk mijn super resultaat op ${BRAND.name}!\n\n${i === 0 ? "Ik sta op #1!" : `Ik sta op #${i + 1}`} — ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nKun jij mij verslaan? 💪\nhttps://${BRAND.domain}`;
+                      const challengeShareText = `Kun jij ${entry.player} verslaan op ${BRAND.name}?\n\n${entry.player} staat #${i + 1}: ${subjectLabel} - ${levelLabel} - ${entry.percentage}%${timeTxt}\n\nDoe de uitdaging!\nhttps://${BRAND.domain}`;
                       const shareText = isMe ? myShareText : challengeShareText;
                       return (
                         <>
@@ -599,7 +600,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
                                   style={{ padding: "4px 8px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
                                   📱 WhatsApp
                                 </a>
-                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
                                   style={{ padding: "4px 8px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap" }}>
                                   👍 Facebook
                                 </a>
@@ -722,24 +723,24 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
     // URL
     ctx.font = "bold 40px Arial, sans-serif";
     ctx.fillStyle = "#00d4ff";
-    ctx.fillText("studiebol.online", W / 2, 940);
+    ctx.fillText(BRAND.domain, W / 2, 940);
 
     canvas.toBlob(async (blob) => {
-      const file = new File([blob], "studiebol-kampioen.png", { type: "image/png" });
+      const file = new File([blob], `${BRAND.shortName}-kampioen.png`, { type: "image/png" });
       try {
         if (navigator.share && navigator.canShare?.({ files: [file] })) {
-          await navigator.share({ files: [file], text: shareText, title: "Studiebol Kampioen 👑" });
+          await navigator.share({ files: [file], text: shareText, title: `${BRAND.name} Kampioen 👑` });
         } else {
           // Desktop: download afbeelding + open Facebook
           const url = URL.createObjectURL(blob);
-          const a = document.createElement("a"); a.href = url; a.download = "studiebol-kampioen.png"; a.click();
+          const a = document.createElement("a"); a.href = url; a.download = `${BRAND.shortName}-kampioen.png`; a.click();
           setTimeout(() => URL.revokeObjectURL(url), 1000);
-          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}&quote=${encodeURIComponent(shareText)}`, "_blank");
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}&quote=${encodeURIComponent(shareText)}`, "_blank");
         }
       } catch {
         // Fallback: alleen download
         const url = URL.createObjectURL(blob);
-        const a = document.createElement("a"); a.href = url; a.download = "studiebol-kampioen.png"; a.click();
+        const a = document.createElement("a"); a.href = url; a.download = `${BRAND.shortName}-kampioen.png`; a.click();
         setTimeout(() => URL.revokeObjectURL(url), 1000);
       }
       resolve();
@@ -749,10 +750,10 @@ async function deelKampioenKaart({ playerName, subjectIcon, subjectLabel, levelL
 
 export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFame }) {
   const periods = [
-    { id: "dag",   label: "Vandaag",  icon: "☀️",  title: "Studiebol van de dag" },
-    { id: "week",  label: "Week",     icon: "📅",  title: "Studiebol van de week" },
-    { id: "maand", label: "Maand",    icon: "🗓️",  title: "Studiebol van de maand" },
-    { id: "jaar",  label: "Jaar",     icon: "👑",  title: "Studiebol van het jaar" },
+    { id: "dag",   label: "Vandaag",  icon: "☀️",  title: `${BRAND.name} van de dag` },
+    { id: "week",  label: "Week",     icon: "📅",  title: `${BRAND.name} van de week` },
+    { id: "maand", label: "Maand",    icon: "🗓️",  title: `${BRAND.name} van de maand` },
+    { id: "jaar",  label: "Jaar",     icon: "👑",  title: `${BRAND.name} van het jaar` },
     { id: "obliterator", label: "Obliterator", icon: "👽", title: "OBLITERATOR Top 25" },
   ];
   const medals = ["👑", "🥈", "🥉"];
@@ -1186,7 +1187,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
               const hofEntry = globalHof?.[hofKey]?.[0] || hallOfFame?.[hofKey]?.[0];
               const canChallenge = !!hofEntry?.questions?.length && onChallenge;
               const playerName = entry.player_name || entry.player;
-              const shareText = `${i === 0 ? `Ik ben de ${current.title}!` : `Ik sta #${i+1} bij de ${current.title}!`}\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan?\nhttps://studiebol.online`;
+              const shareText = `${i === 0 ? `Ik ben de ${current.title}!` : `Ik sta #${i+1} bij de ${current.title}!`}\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij mij verslaan?\nhttps://${BRAND.domain}`;
 
               return (
                 <div key={i} style={{
@@ -1247,7 +1248,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                                   style={{ padding: "3px 8px", borderRadius: 7, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
                                   📱 Deel
                                 </a>
-                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
                                   style={{ padding: "3px 8px", borderRadius: 7, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none" }}>
                                   👍 Deel
                                 </a>
@@ -1321,7 +1322,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
 
                   {/* Deel-sectie voor #1 als het jij bent */}
                   {i === 0 && isMe && (() => {
-                    const waText = `Jippie! Ik ben ${current.title}!\n\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij dit verslaan?\nhttps://studiebol.online`;
+                    const waText = `Jippie! Ik ben ${current.title}!\n\n${playerName} - ${subj?.label || entry.subject} - ${levelLabel} - ${entry.percentage}%${entry.time_taken ? ` in ${fmtTime(entry.time_taken)}` : ""}\n\nKun jij dit verslaan?\nhttps://${BRAND.domain}`;
                     const cardData = {
                       playerName,
                       subjectIcon: subj?.icon || "📚",
@@ -1515,12 +1516,12 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
                             </div>
                             {isMe && (
                               <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                                <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel} op Studiebol!\n${a.value} ${a.unit} — zo doe ik dat! 💪\nKun jij dit ook? 👉 https://studiebol.online`)}`}
+                                <a href={`https://wa.me/?text=${encodeURIComponent(`${icon} Ik ben de ${title} van de ${periodLabel} op ${BRAND.name}!\n${a.value} ${a.unit} — zo doe ik dat! 💪\nKun jij dit ook? 👉 https://${BRAND.domain}`)}`}
                                   target="_blank" rel="noopener noreferrer"
                                   style={{ padding: "4px 10px", borderRadius: 8, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
                                   📱 WhatsApp
                                 </a>
-                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`} target="_blank" rel="noopener noreferrer"
+                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
                                   style={{ padding: "4px 10px", borderRadius: 8, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 10, textDecoration: "none", whiteSpace: "nowrap", textAlign: "center" }}>
                                   👍 Facebook
                                 </a>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
 import { isLaunchPromoActive } from "../constants.js";
+import { BRAND } from "../brand.js";
 
 const PLANS = [
   {
@@ -147,7 +148,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
 
   return (
     <div style={{ minHeight: "100vh", background: "linear-gradient(160deg, #08101e 0%, #0d1a2e 60%, #120820 100%)" }}>
-      <Header title="Studiebol Pro ✨" subtitle="Meer voor jou, beter voor je kind" onBack={onBack} onHome={onHome} />
+      <Header title={`${BRAND.name} Pro ✨`} subtitle="Meer voor jou, beter voor je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 60px", maxWidth: 500, margin: "0 auto" }}>
 
@@ -157,7 +158,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             {isLaunchPromoActive() ? "🎉 LANCERING — ALLES GRATIS IN 2026" : "1 MAAND GRATIS PROBEREN"}
           </div>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "var(--color-text-strong)", lineHeight: 1.2, marginBottom: 6 }}>
-            {isLaunchPromoActive() ? <>Alle Pro-functies<br />gratis t/m 31 dec 2026</> : <>Studiebol is gratis.<br />Pro maakt het krachtig.</>}
+            {isLaunchPromoActive() ? <>Alle Pro-functies<br />gratis t/m 31 dec 2026</> : <>{BRAND.name} is gratis.<br />Pro maakt het krachtig.</>}
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.45)" }}>
             {isLaunchPromoActive()

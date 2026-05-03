@@ -4,6 +4,7 @@ import { ALL_LEARN_PATHS } from "../../learnPaths";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
+import { BRAND } from "../../brand.js";
 import AITutor from "./AITutor.jsx";
 
 const C = {
@@ -462,7 +463,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             letterSpacing: 1.6,
             textTransform: "uppercase",
           }}>
-            {(SUBJECTS[path.subject]?.title || path.subject || "Studiebol")} · stap {stepIdx + 1} van {totalSteps}
+            {(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · stap {stepIdx + 1} van {totalSteps}
           </div>
           {/* Markeer voltooid — agency voor leerling (les leersnel). Alleen
               tijdens lezen, niet midden in een check. Stap blijft natuurlijk

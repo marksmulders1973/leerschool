@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { BRAND } from "../brand.js";
 
 const TOP_LIMIT = 25;
 
@@ -121,7 +122,7 @@ const DECOR_RENDER = Object.fromEntries(DECOR_CATALOG.map((d) => [d.id, d]));
 // Speler-skins. unlockLevel = level dat behaald moet zijn (1 = altijd open,
 // null = via speciale unlock zoals Oblivion Pulse).
 const SKINS = [
-  { id: "default",   label: "Studiebol",  emoji: "🔴", unlockLevel: 1 },
+  { id: "default",   label: BRAND.name,  emoji: "🔴", unlockLevel: 1 },
   { id: "spider",    label: "Spin",       emoji: "🕷️", unlockLevel: 10 },
   { id: "popje",     label: "Popje",      emoji: "🪆", unlockLevel: 20 },
   { id: "elephant",  label: "Olifant",    emoji: "🐘", unlockLevel: 30 },
@@ -604,11 +605,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   }, [authUser?.id, userName]);
   // update startLevelRef bij elke keuze (game-loop leest ref)
   useEffect(() => { startLevelRef.current = gekozenStartLevel; }, [gekozenStartLevel]);
-  const SHARE_URL = "https://www.studiebol.online?play=obliterator";
+  const SHARE_URL = `https://www.${BRAND.domain}?play=obliterator`;
   const shareTekst = (score) =>
     score > 0
-      ? `🛸 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op Studiebol: ${SHARE_URL}`
-      : `🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 👽 ${SHARE_URL}`;
+      ? `🛸 Ik scoorde ${score} punten bij OBLITERATOR! 🔥 Kun jij me verslaan? Speel gratis op ${BRAND.name}: ${SHARE_URL}`
+      : `🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op ${BRAND.name}! 👽 ${SHARE_URL}`;
 
   const trackShare = (platform) => {
     const naam = (userName || "").trim().slice(0, 60);
@@ -649,7 +650,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const handleNative = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: "OBLITERATOR · Studiebol", text: shareTekst(eindScore), url: SHARE_URL });
+        await navigator.share({ title: `OBLITERATOR · ${BRAND.name}`, text: shareTekst(eindScore), url: SHARE_URL });
         trackShare("native");
       } catch {}
     } else {
@@ -8304,7 +8305,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               fontFamily: "'Fredoka', sans-serif", fontSize: 22, fontWeight: 700,
               color: "#69f0ae", marginBottom: 6,
               textShadow: "0 0 12px rgba(105,240,174,0.5)"
-            }}>Welkom bij Studiebol!</p>
+            }}>Welkom bij {BRAND.name}!</p>
             <p style={{ color: "#ffcc40", fontSize: 16, fontWeight: 700, marginBottom: 14 }}>
               Score: {eindScore}
             </p>
@@ -8319,7 +8320,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 Leuk dat je OBLITERATOR speelt!
               </div>
               <div style={{ marginBottom: 6 }}>
-                Studiebol is de <strong>gratis leer-app</strong> waar dit spel in zit:
+                {BRAND.name} is de <strong>leer-app</strong> waar dit spel in zit:
               </div>
               <div>📚 Cito-eindtoets · spelling · rekenen · wiskunde · talen</div>
               <div>🎓 Voor groep 1-8, MAVO, HAVO, VWO en gymnasium</div>
@@ -8335,7 +8336,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               boxShadow: "0 4px 20px rgba(0,200,83,0.4)",
               marginBottom: 8
             }}>
-              🚀 Ontdek Studiebol
+              🚀 Ontdek {BRAND.name}
             </button>
             <button onClick={() => setFase("menu")} style={{
               width: "100%", padding: "10px 18px",
@@ -8526,7 +8527,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                       </button>
                       <button
                         onClick={() => onClose?.()}
-                        title="Terug naar Studiebol"
+                        title={`Terug naar ${BRAND.name}`}
                         style={{ padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,80,40,0.4)", background: "rgba(255,80,40,0.10)", color: "#ff8060", cursor: "pointer", fontFamily: "'Fredoka', sans-serif", fontSize: 13, fontWeight: 700 }}
                       >
                         ✕ Sluit
@@ -8623,7 +8624,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         <div style={{ textAlign: "center", padding: "30px 16px", color: "rgba(255,255,255,0.7)", fontSize: 13 }}>
                           <div style={{ fontSize: 32, marginBottom: 8 }}>🔒</div>
                           <div style={{ fontWeight: 700, color: "#fff", marginBottom: 6 }}>Log in om je levels te zien</div>
-                          <div>Je eigen levels zijn gekoppeld aan je Studiebol-account.</div>
+                          <div>Je eigen levels zijn gekoppeld aan je {BRAND.name}-account.</div>
                         </div>
                       ) : (
                         <>
@@ -8704,13 +8705,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                         Log in om levels te bouwen
                       </div>
                       <div style={{ fontSize: 13, color: "rgba(255,255,255,0.7)", lineHeight: 1.5, marginBottom: 16, maxWidth: 360, margin: "0 auto 16px" }}>
-                        Je hebt een Studiebol-account nodig om levels te maken, opslaan en delen. Spelen kan zonder account — kies "🎮 Spelen" hierboven.
+                        Je hebt een {BRAND.name}-account nodig om levels te maken, opslaan en delen. Spelen kan zonder account — kies "🎮 Spelen" hierboven.
                       </div>
                       <button
                         onClick={() => onClose?.()}
                         style={{ padding: "12px 22px", borderRadius: 12, border: "none", background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#0d1b2e", fontFamily: "'Fredoka', sans-serif", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
                       >
-                        Naar Studiebol om in te loggen
+                        Naar {BRAND.name} om in te loggen
                       </button>
                     </div>
                   ) : (

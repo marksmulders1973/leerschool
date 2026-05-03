@@ -12,7 +12,7 @@ const json = (data, status = 200) =>
   });
 
 // Light content-filter — voorkomt off-topic / ongepaste prompts.
-// Studiebol-publiek is 8-18 dus we zijn streng.
+// Leerkwartier-publiek is 8-18 dus we zijn streng.
 const BLOCKED = [
   "porno", "porn", "xxx", "fuck", "shit", "kanker",
   "wachtwoord", "password", "credit card", "creditcard",
@@ -29,7 +29,7 @@ function isClean(text) {
 function buildSystemPrompt(ctx = {}) {
   const lines = [];
   lines.push(
-    "Je bent een vriendelijke wiskunde- en taal-tutor voor Studiebol, " +
+    "Je bent een vriendelijke wiskunde- en taal-tutor voor Leerkwartier, " +
       "een Nederlandse leerapp voor leerlingen van 8 tot 18 jaar. " +
       "De leerling werkt nu aan een specifieke uitleg-stap. Help met BEGRIP, " +
       "niet door het antwoord weg te geven."

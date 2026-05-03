@@ -1,7 +1,7 @@
 {
-  "name": "Studiebol",
-  "short_name": "Studiebol",
-  "description": "Oefen met vragen voor school — voor groep 1 t/m klas 4",
+  "name": "Leerkwartier",
+  "short_name": "Leerkwartier",
+  "description": "Elk kwartier slimmer — oefen 15 minuten per dag voor school. Groep 1-8 en voortgezet onderwijs.",
   "id": "/",
   "start_url": "/",
   "display": "standalone",

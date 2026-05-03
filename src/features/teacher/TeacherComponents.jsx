@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL, TEACHER_TOPIC_SUGGESTIONS, EIGEN_TOPIC_SUGGESTIONS } from "../../constants.js";
+import { BRAND } from "../../brand.js";
 import { daysUntil, fetchAIQuestions } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 
@@ -934,15 +935,15 @@ export function Lobby({ quiz, players, isHost, onStart, onBack, onHome }) {
         {isHost && (<>
         <div style={{ margin: "12px 0", textAlign: "center" }}>
           <div style={{ fontSize: 11, color: "#667788", marginBottom: 6 }}>App nog niet? Laat leerlingen scannen:</div>
-          <img src="/qrcode.png" alt="QR code studiebol.online" style={{ width: 100, height: 100, borderRadius: 8, display: "block", margin: "0 auto" }} />
+          <img src="/qrcode.png" alt={`QR code ${BRAND.domain}`} style={{ width: 100, height: 100, borderRadius: 8, display: "block", margin: "0 auto" }} />
         </div>
 
         <button
           style={styles.whatsappButton}
           onClick={() => {
-            const vakOfOnderwerp = quiz?.topic || subj?.label || "Studiebol";
+            const vakOfOnderwerp = quiz?.topic || subj?.label || BRAND.name;
             const niveau = LEVELS.find(l => l.id === quiz?.level)?.label || "";
-            const text = `🎓 *Studiebol* — Toets gestart!\n\n📚 ${vakOfOnderwerp}${niveau ? ` · ${niveau}` : ""}\n\nKlik op de link en doe mee:\n👉 https://www.studiebol.online?code=${quiz?.code}`;
+            const text = `🎓 *${BRAND.name}* — Toets gestart!\n\n📚 ${vakOfOnderwerp}${niveau ? ` · ${niveau}` : ""}\n\nKlik op de link en doe mee:\n👉 https://www.${BRAND.domain}?code=${quiz?.code}`;
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
             onStart();
           }}
