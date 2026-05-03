@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { BRAND } from "../brand.js";
 
 // Fullscreen loading-overlay voor lange AI-calls (toetsvraag-generatie).
 // Niet voor route-overgangen — daar gebruiken we PageLoader (3px shimmer).
@@ -48,7 +49,7 @@ export default function LoadingOverlay({ mode, onCancel }) {
     >
       <img
         src="/logo.jpg"
-        alt="studiebol"
+        alt={BRAND.shortName}
         style={{
           width: "80%",
           maxWidth: 300,

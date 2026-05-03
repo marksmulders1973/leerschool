@@ -17,6 +17,7 @@
 // ============================================================================
 
 import { useNavigate } from "react-router-dom";
+import { BRAND } from "../brand.js";
 
 const FONTS_CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
@@ -175,7 +176,7 @@ export default function HomeV3() {
               width: 10, height: 10, borderRadius: 3,
               background: T.accent,
             }} />
-            studiebol
+            {BRAND.shortName}
           </div>
           <button
             onClick={() => navigate("/")}
@@ -210,7 +211,7 @@ export default function HomeV3() {
             textTransform: "uppercase",
             marginBottom: 16,
           }}>
-            studiebol · v3 design
+            {BRAND.shortName} · v3 design
           </div>
           <h1 style={{
             fontFamily: T.fontDisplay,
@@ -474,13 +475,13 @@ export default function HomeV3() {
             color: T.textDim,
             letterSpacing: 0.3,
           }}>
-            studiebol · gratis · open · in ontwikkeling
+            {BRAND.shortName} · gratis · open · in ontwikkeling
           </div>
         </footer>
 
         {/* ─── Floating WhatsApp helper (les van leersnel) ─── */}
         <a
-          href="https://wa.me/31000000000?text=Hoi%20Studiebol%2C%20ik%20heb%20een%20vraag"
+          href={`https://wa.me/31000000000?text=${encodeURIComponent(`Hoi ${BRAND.name}, ik heb een vraag`)}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Vraag via WhatsApp"

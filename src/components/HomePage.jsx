@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
+import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import MasteryCTABanner from "../features/mastery/MasteryCTABanner.jsx";
@@ -102,7 +103,7 @@ function TickerBanner() {
         }
         setShareItems(unique.map(name => ({
           icon: "💙",
-          text: `Studiebol bedankt ${name} voor het delen van de app!`,
+          text: `${BRAND.name} bedankt ${name} voor het delen van de app!`,
           special: true,
         })));
       }).catch(() => {});
@@ -181,7 +182,7 @@ function TickerBanner() {
   const winnerItems = winners.map(({ icon, label, periode, winner }) => {
     const subj = SUBJECTS.find(s => s.id === winner.subject);
     const vakLabel = winner.title || winner.topic?.split('\n')[0].slice(0, 35) || (subj ? subj.label : winner.subject);
-    return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 Studiebol van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
+    return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 ${BRAND.name} van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
   // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR + Vriendenmaker) tussen gewone items
@@ -267,7 +268,7 @@ const FEATURES_RIGHT = [
   { id: "redactiesommen",  label: "Redactiesommen",  sub: "Rekenen met tekst",          color: "#ea580c", bg: "rgba(234,88,12,0.12)",   border: "rgba(234,88,12,0.2)",   badge: null },
   { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
   { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
-  { id: "pro",             label: "Studiebol Pro",   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: null },
+  { id: "pro",             label: `${BRAND.name} Pro`,   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: null },
 ];
 
 function FeatureShowcase({ onFeatureClick }) {
@@ -356,7 +357,7 @@ function FeatureShowcase({ onFeatureClick }) {
               {renderBadge(f.badge, f.color)}
               {f.id === "pro" ? (
                 <div style={{ lineHeight: 1.2, marginBottom: 2 }}>
-                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>Studiebol</span>
+                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>{BRAND.name}</span>
                   <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 900, color: f.color, background: `${f.color}22`, borderRadius: 4, padding: "0 4px", marginLeft: 2 }}>PRO</span>
                 </div>
               ) : (
@@ -374,7 +375,7 @@ function FeatureShowcase({ onFeatureClick }) {
 
 const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Echte examenvragen, echte boeken", desc: "Echte voorbereiding voor je examen. Geen giswerk, gewoon oefenen wat telt." },
-  { emoji: "🤖", title: "Studiebol maakt vragen voor jou", desc: "Elke quiz is anders, ook over jouw eigen schoolboek" },
+  { emoji: "🤖", title: `${BRAND.name} maakt vragen voor jou`, desc: "Elke quiz is anders, ook over jouw eigen schoolboek" },
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
@@ -962,7 +963,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <span style={{ fontSize: 26, flexShrink: 0 }}>📲</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
-                Zet Studiebol op je telefoon of laptop
+                Zet {BRAND.name} op je telefoon of laptop
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
                 Gratis · werkt ook offline · sneller dan de browser
@@ -975,19 +976,19 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {showInstallHelp && (
           <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
             <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 Studiebol installeren</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 {BRAND.name} installeren</div>
               {isIOS ? (
                 <>
                   <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
                   <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
-                    <li>Open <strong>studiebol.online</strong> in Safari</li>
+                    <li>Open <strong>{BRAND.domain}</strong> in Safari</li>
                     <li>Tik op het <strong>Deel-icoontje</strong> (vierkant met pijl omhoog)</li>
                     <li>Kies <strong>"Zet op beginscherm"</strong></li>
                   </ol>
                 </>
               ) : (
                 <>
-                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer Studiebol als app:</p>
+                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer {BRAND.name} als app:</p>
                   <ul style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
                     <li><strong>Android/Chrome</strong>: menu (⋮) → "App installeren"</li>
                     <li><strong>Windows/Mac</strong>: klik op het installatie-icoon in de adresbalk</li>
@@ -995,7 +996,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   </ul>
                 </>
               )}
-              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je Studiebol openen als een echte app, ook offline.</p>
+              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je {BRAND.name} openen als een echte app, ook offline.</p>
               <button onClick={() => setShowInstallHelp(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
             </div>
           </div>
@@ -1152,7 +1153,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 20, width: "100%",
               }}
               onClick={() => {
-                const text = `Ken je studiebol al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.studiebol.online`;
+                const text = `Ken je ${BRAND.shortName} al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.${BRAND.domain}`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                 trackShare("whatsapp");
               }}
@@ -1170,7 +1171,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 fontSize: 13, fontWeight: 700, cursor: "pointer", marginTop: 8, width: "100%",
               }}
               onClick={() => {
-                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent("https://studiebol.online")}`, "_blank");
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`, "_blank");
                 trackShare("facebook");
               }}
             >
@@ -1190,11 +1191,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 boxShadow: "0 0 12px rgba(255,80,40,0.15)",
               }}
               onClick={async () => {
-                const text = "🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op Studiebol! 👽";
-                const url = "https://www.studiebol.online?play=obliterator";
+                const text = `🛸 Speel OBLITERATOR — gratis Geometry-Dash-stijl mini-game op ${BRAND.name}! 👽`;
+                const url = `https://www.${BRAND.domain}?play=obliterator`;
                 if (navigator.share) {
                   try {
-                    await navigator.share({ title: "OBLITERATOR · Studiebol", text, url });
+                    await navigator.share({ title: `OBLITERATOR · ${BRAND.name}`, text, url });
                     trackShare("obliterator-native");
                     return;
                   } catch {}

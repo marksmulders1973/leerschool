@@ -78,6 +78,7 @@ import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
 import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
+import { BRAND } from "./brand.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
 // Deze constant blijft tijdelijk voor backwards-compat met code die alleen
@@ -1233,7 +1234,7 @@ export default function App() {
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
-      <a href="/over.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Over Studiebol</a>
+      <a href="/over.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Over {BRAND.name}</a>
       ·
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
       · © Smulsoft

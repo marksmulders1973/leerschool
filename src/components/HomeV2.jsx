@@ -15,6 +15,7 @@
 // ============================================================================
 
 import { useNavigate } from "react-router-dom";
+import { BRAND } from "../brand.js";
 
 const FONTS_CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
@@ -163,7 +164,7 @@ export default function HomeV2() {
               background: T.accent,
               boxShadow: `0 0 8px ${T.accent}`,
             }} />
-            studiebol
+            {BRAND.shortName}
           </div>
           <button
             onClick={() => navigate("/")}
@@ -460,7 +461,7 @@ export default function HomeV2() {
             color: T.textDim,
             letterSpacing: 0.5,
           }}>
-            studiebol · gratis · open · in ontwikkeling
+            {BRAND.shortName} · gratis · open · in ontwikkeling
           </div>
         </footer>
       </div>
