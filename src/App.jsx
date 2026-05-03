@@ -263,6 +263,49 @@ export default function App() {
   useEffect(() => { try { localStorage.setItem("ls_leaderboard", JSON.stringify(leaderboard)); } catch {} }, [leaderboard]);
   useEffect(() => { try { localStorage.setItem("ls_classes", JSON.stringify(classes)); } catch {} }, [classes]);
 
+  // Sync van Supabase leaderboard naar lokale studentProgress: zorgt dat
+  // levels/voortgang weer verschijnen na herinstall of domein-migratie
+  // (localStorage is per-origin; Supabase user_id overleeft).
+  useEffect(() => {
+    if (!authUser?.id) return;
+    let cancelled = false;
+    supabase.from("leaderboard")
+      .select("id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at")
+      .eq("user_id", authUser.id)
+      .order("completed_at", { ascending: false })
+      .limit(500)
+      .then(({ data, error }) => {
+        if (cancelled || error || !data) return;
+        const remoteResults = data.map((r) => ({
+          id: r.id,
+          player: r.player_name,
+          quizId: r.quiz_id,
+          subject: r.subject,
+          level: r.level,
+          topic: r.topic || null,
+          title: r.title || null,
+          citoId: r.cito_id || null,
+          citoGroep: r.cito_groep || null,
+          score: r.score,
+          total: r.total,
+          percentage: r.percentage,
+          timeTaken: r.time_taken,
+          answers: [],
+          questions: [],
+          completedAt: r.completed_at,
+        }));
+        setStudentProgress((prev) => {
+          const key = (p) => `${p.completedAt}|${p.subject}|${p.level}|${p.score}|${p.total}`;
+          const seen = new Set(prev.map(key));
+          const additions = remoteResults.filter((r) => !seen.has(key(r)));
+          if (additions.length === 0) return prev;
+          return [...prev, ...additions];
+        });
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [authUser?.id]);
+
   // Als er een code in de URL staat en die niet lokaal bestaat → haal op uit Supabase en start direct
   useEffect(() => {
     if (!pendingCode) return;
@@ -472,7 +515,7 @@ export default function App() {
     // Globaal scorebord — alleen inserten als er een echte naam is (geen lege/whitespace)
     const naamSchoon = (userName || "").trim();
     if (naamSchoon.length >= 2) {
-      supabase.from("leaderboard").insert({ player_name: naamSchoon, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken }).then(() => {}).catch(() => {});
+      supabase.from("leaderboard").insert({ player_name: naamSchoon, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken, cito_id: result.citoId || null, cito_groep: result.citoGroep || null }).then(() => {}).catch(() => {});
     } else {
       track("leaderboard_skipped_no_name", { subject: result.subject, level: result.level });
     }
