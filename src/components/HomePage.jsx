@@ -729,18 +729,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               alignItems: "center",
               gap: 8,
               marginBottom: 10,
-              opacity: 0,
-              animation: "lk-mark-fadein 0.6s ease-out 0.1s forwards",
             }}>
-              <svg viewBox="0 0 100 100" style={{ width: 22, height: 22, flexShrink: 0 }} aria-hidden="true">
+              <svg viewBox="0 0 100 100" style={{
+                width: 26,
+                height: 26,
+                flexShrink: 0,
+                opacity: 0,
+                transformOrigin: "50% 50%",
+                animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
+              }} aria-hidden="true">
                 <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
               </svg>
               <span style={{
                 fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                fontSize: 15,
+                fontSize: 16,
                 fontWeight: 700,
-                color: "rgba(255,255,255,0.85)",
+                color: "rgba(255,255,255,0.9)",
                 letterSpacing: "-0.01em",
+                opacity: 0,
+                animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
               }}>
                 {BRAND.name}
               </span>
