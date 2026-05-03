@@ -46,7 +46,7 @@ export default function Mini3DTeaser({ onCTA }) {
           dimensions={{ zijde: z }}
           labels={[]}
           height={140}
-          cameraDistanceFactor={2.9}
+          cameraDistanceFactor={3.6}
         />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
