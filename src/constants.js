@@ -4683,6 +4683,44 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is het inproduct (scalair product) van a⃗ = (3,4) en b⃗ = (−1,2)?", options: ["−5", "5", "−10", "10"], answer: 1, explanation: "a⃗·b⃗ = 3×(−1) + 4×2 = −3 + 8 = 5. Als het inproduct nul is zijn de vectoren loodrecht op elkaar." },
       { q: "Wat is de limiet van (sin x)/x als x → 0?", options: ["0", "niet gedefinieerd", "oneindig", "1"], answer: 3, explanation: "lim[x→0] sin(x)/x = 1. Dit is een fundamentele limiet in de analyse, bewezen via meetkunde of L'Hopital: d(sin x)/dx / d(x)/dx = cos(0)/1 = 1." },
     ],
+    klas4: [
+      // Algebra + vergelijkingen (8)
+      { q: "Los op: 3x − 7 = 11.", options: ["x = 4", "x = 6", "x = 8", "x = 9"], answer: 1, explanation: "3x = 18, x = 6." },
+      { q: "Los op: 2(x + 3) = 5x − 6.", options: ["x = 3", "x = 4", "x = 5", "x = 6"], answer: 1, explanation: "2x + 6 = 5x − 6 → 12 = 3x → x = 4." },
+      { q: "Los op: x² − 5x + 6 = 0.", options: ["x = 1 of x = 6", "x = 2 of x = 3", "x = −2 of x = −3", "x = 0 of x = 5"], answer: 1, explanation: "Ontbinden: (x−2)(x−3) = 0 → x = 2 of x = 3." },
+      { q: "Los op het stelsel: x + y = 10 ; x − y = 2.", options: ["x = 6, y = 4", "x = 4, y = 6", "x = 5, y = 5", "x = 7, y = 3"], answer: 0, explanation: "Optellen: 2x = 12 → x = 6. Dan y = 10 − 6 = 4." },
+      { q: "Werk uit: (a + b)².", options: ["a² + b²", "a² + 2ab + b²", "a² − 2ab + b²", "a² + ab + b²"], answer: 1, explanation: "Eerste merkwaardig product: (a+b)² = a² + 2ab + b²." },
+      { q: "Werk uit: (x − 4)(x + 4).", options: ["x² − 16", "x² + 16", "x² − 8x + 16", "x² + 8x − 16"], answer: 0, explanation: "Verschil van kwadraten: (a−b)(a+b) = a² − b². Hier: x² − 16." },
+      { q: "Vereenvoudig: (3x²)³.", options: ["3x⁵", "9x⁶", "27x⁵", "27x⁶"], answer: 3, explanation: "(3x²)³ = 3³ × x²ˣ³ = 27x⁶." },
+      { q: "Los op: √(x + 5) = 4.", options: ["x = 1", "x = 9", "x = 11", "x = 21"], answer: 2, explanation: "Kwadrateer beide kanten: x + 5 = 16, x = 11." },
+      // Lineaire functies (5)
+      { q: "Welke richtingscoëfficiënt heeft de lijn y = −3x + 5?", options: ["−3", "5", "3", "−5"], answer: 0, explanation: "In y = ax + b is a = −3 de richtingscoëfficiënt." },
+      { q: "Wat is de y-as-snijpunt van y = 2x − 7?", options: ["(0, 2)", "(0, −7)", "(7, 0)", "(−7, 0)"], answer: 1, explanation: "Y-as-snijpunt: x = 0, dus y = −7. Punt = (0, −7)." },
+      { q: "Door welke punten gaat y = ½x + 3?", options: ["(0,3) en (2,4)", "(0,2) en (1,3)", "(0,3) en (−2,2)", "(0,3) en (4,5)"], answer: 0, explanation: "Bij x=0: y=3 ✓. Bij x=2: y=½×2+3=4 ✓." },
+      { q: "Wat is de helling tussen punten A(2,3) en B(6,11)?", options: ["1", "2", "3", "4"], answer: 1, explanation: "Helling = (11−3)/(6−2) = 8/4 = 2." },
+      { q: "Welke vergelijking past bij een lijn die door (0,5) gaat met richtingscoëfficiënt −2?", options: ["y = 2x − 5", "y = −2x + 5", "y = −2x − 5", "y = 5x − 2"], answer: 1, explanation: "y = ax + b → y = −2x + 5." },
+      // Kwadratische functies (5)
+      { q: "Wat is de top van y = x² − 6x + 8?", options: ["(3, −1)", "(−3, 1)", "(3, 1)", "(6, 8)"], answer: 0, explanation: "x_top = −b/(2a) = 6/2 = 3. y_top = 9 − 18 + 8 = −1." },
+      { q: "Bij welke x-waarden snijdt y = x² − 9 de x-as?", options: ["x = 0", "x = 3", "x = ±3", "x = ±9"], answer: 2, explanation: "x² = 9 → x = 3 of x = −3." },
+      { q: "Wat is de discriminant van x² + 4x + 1 = 0?", options: ["8", "12", "16", "20"], answer: 1, explanation: "D = b² − 4ac = 16 − 4 = 12." },
+      { q: "Hoeveel oplossingen heeft x² − 4x + 5 = 0?", options: ["0", "1", "2", "Oneindig"], answer: 0, explanation: "D = 16 − 20 = −4. D < 0 = geen reële oplossingen." },
+      { q: "Wat zijn de nulpunten van y = (x − 3)(x + 5)?", options: ["x = 3 en x = 5", "x = −3 en x = 5", "x = 3 en x = −5", "x = −3 en x = −5"], answer: 2, explanation: "y = 0 wanneer x − 3 = 0 of x + 5 = 0 → x = 3 of x = −5." },
+      // Meetkunde + Pythagoras (5)
+      { q: "Een rechthoekige driehoek heeft rechthoekszijden 5 en 12. Hoe lang is de hypotenusa?", options: ["13", "15", "17", "169"], answer: 0, explanation: "Pythagoras: 5² + 12² = 25 + 144 = 169 → c = √169 = 13." },
+      { q: "Een ladder van 5 m staat 3 m van een muur. Hoe hoog reikt hij?", options: ["3 m", "4 m", "5 m", "8 m"], answer: 1, explanation: "Hoogte² = 5² − 3² = 25 − 9 = 16 → hoogte = 4 m." },
+      { q: "Wat is de oppervlakte van een cirkel met straal 10? (π ≈ 3,14)", options: ["31,4", "62,8", "100", "314"], answer: 3, explanation: "Oppervlakte = πr² = 3,14 × 100 = 314." },
+      { q: "Een kubus heeft volume 125 cm³. Wat is de ribbe?", options: ["3 cm", "5 cm", "10 cm", "25 cm"], answer: 1, explanation: "Ribbe = ³√125 = 5 cm." },
+      { q: "Wat is de oppervlakte van een trapezium met parallelle zijden 8 en 12 en hoogte 5?", options: ["50", "60", "100", "20"], answer: 0, explanation: "Opp. = ½ × (a+b) × h = ½ × 20 × 5 = 50." },
+      // Procenten + verhoudingen (4)
+      { q: "Een bedrag van €240 stijgt met 12,5%. Wat is het nieuwe bedrag?", options: ["€260", "€265", "€270", "€275"], answer: 2, explanation: "12,5% van 240 = 30. 240 + 30 = €270." },
+      { q: "Een artikel van €60 wordt verkocht met 40% winst. Wat is de verkoopprijs?", options: ["€80", "€84", "€88", "€100"], answer: 1, explanation: "40% van 60 = 24. 60 + 24 = €84." },
+      { q: "Hoeveel procent is 27 van 90?", options: ["20%", "25%", "30%", "33%"], answer: 2, explanation: "27 ÷ 90 = 0,3 = 30%." },
+      { q: "Een schaalmodel is 1:50. Een echte trein is 20 m lang. Hoe lang is het model?", options: ["20 cm", "40 cm", "50 cm", "100 cm"], answer: 1, explanation: "20 m = 2000 cm. 2000 ÷ 50 = 40 cm." },
+      // Statistiek (3)
+      { q: "Bereken het gemiddelde van 4, 6, 8, 10, 12.", options: ["6", "7", "8", "9"], answer: 2, explanation: "Som = 40. 40 ÷ 5 = 8." },
+      { q: "Wat is de mediaan van 3, 5, 7, 8, 11, 14?", options: ["7", "7,5", "8", "8,5"], answer: 1, explanation: "Bij even aantal: gemiddelde van middelste twee = (7+8)/2 = 7,5." },
+      { q: "Wat is de standaardafwijking als alle waarden gelijk zijn?", options: ["0", "1", "Het gemiddelde", "Niet gedefinieerd"], answer: 0, explanation: "Geen variatie = geen afwijking. Standaardafwijking = 0." },
+    ],
   },
   nask: {
     klas1: [
@@ -4897,6 +4935,32 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is een spontane reactie thermodynamisch?", options: ["Een reactie waarbij de Gibbs vrije energie daalt (ΔG < 0)", "Een reactie die exotherm is (ΔH < 0)", "Een reactie waarbij entropie afneemt", "Een reactie die altijd snel verloopt zonder activeringsenergie"], answer: 0, explanation: "Spontaniteit: ΔG = ΔH − T·ΔS < 0. Een reactie kan spontaan zijn bij hoge T (entropiegedreven) of lage T (enthalpiegedreven). ΔG < 0 zegt niets over snelheid." },
       { q: "Wat is de Beer-Lambert wet?", options: ["De reactiviteit van een nucleofiel hangt af van zijn ladingsdichtheid of De verandering in vrije energie bepaalt de evenwichtsconstante", "De verandering in vrije energie bepaalt de evenwichtsconstante", "De absorptie van licht is evenredig met concentratie en padlengte: A = ε·c·l", "De reactiviteit van een nucleofiel hangt af van zijn ladingsdichtheid"], answer: 2, explanation: "Beer-Lambert: A = ε·c·l. A = absorptie, ε = molaire absorptiecoefficient, c = concentratie, l = padlengte. Basis van spectrofotometrie voor concentratiemeting." },
     ],
+    klas4: [
+      // Atoombouw + periodiek systeem (5)
+      { q: "Hoeveel protonen heeft een atoom van element met atoomnummer 17?", options: ["8", "12", "17", "35"], answer: 2, explanation: "Atoomnummer = aantal protonen. Element 17 = chloor (Cl)." },
+      { q: "Wat is een isotoop?", options: ["Een ander element met dezelfde massa", "Een atoom van hetzelfde element met verschillend aantal neutronen", "Een geladen atoom (ion)", "Een molecuul met dezelfde formule"], answer: 1, explanation: "Isotopen: zelfde aantal protonen, ander aantal neutronen. Bv. ¹²C en ¹⁴C." },
+      { q: "Welk element zit in de eerste hoofdgroep én derde periode?", options: ["Lithium (Li)", "Natrium (Na)", "Kalium (K)", "Magnesium (Mg)"], answer: 1, explanation: "Periode 3, hoofdgroep 1 = natrium (Na). Hoofdgroep 1 = alkalimetalen." },
+      { q: "Hoeveel valentie-elektronen heeft koolstof?", options: ["2", "4", "6", "8"], answer: 1, explanation: "Koolstof staat in groep 14 (oude IVA), heeft 4 valentie-elektronen. Daarom 4 bindingen." },
+      { q: "Welk element is een edelgas?", options: ["Stikstof (N)", "Zuurstof (O)", "Argon (Ar)", "IJzer (Fe)"], answer: 2, explanation: "Edelgassen (groep 18): He, Ne, Ar, Kr, Xe, Rn — chemisch inert." },
+      // Bindingen (5)
+      { q: "Wat is een ionbinding?", options: ["Atomen delen elektronen", "Eén atoom geeft elektron(en) af, het andere neemt op", "Atomen vormen een metalen rooster", "Twee atomen delen één elektron"], answer: 1, explanation: "Ionbinding (bv. NaCl): metaal geeft elektron af → kation; niet-metaal neemt op → anion." },
+      { q: "Wat is een covalente binding?", options: ["Atomen delen één of meer elektronenparen", "Eén atoom neemt elektronen weg", "Een binding tussen ionen", "Een binding via watermoleculen"], answer: 0, explanation: "Covalent: atomen delen elektronenparen. Bv. H₂, O₂, H₂O." },
+      { q: "Wat is een polaire binding?", options: ["Een binding waarbij beide atomen dezelfde elektronegativiteit hebben", "Een covalente binding met ongelijke verdeling van elektronen door verschil in elektronegativiteit", "Een ionbinding", "Een binding in een metaalrooster"], answer: 1, explanation: "Polair covalent: bv. H–Cl. Cl trekt elektronen sterker aan → δ⁻ bij Cl, δ⁺ bij H." },
+      { q: "Wat is een waterstofbrug?", options: ["Een covalente binding tussen H en H", "Een sterke aantrekkende kracht tussen waterstof en sterk elektronegatieve atomen (N, O, F) in andere moleculen", "Een ionische binding met water", "Een metaalbinding"], answer: 1, explanation: "Waterstofbruggen verklaren hoge kookpunt water, eiwitstructuur, DNA-strengen samen." },
+      { q: "Wat is een metaalbinding?", options: ["Een binding via waterstofbruggen", "Een vrij-elektronengasmodel waarin metaalionen in een rooster zitten en elektronen vrij bewegen", "Twee covalente bindingen", "Een ionbinding tussen twee metalen"], answer: 1, explanation: "Metalen: positieve ionen in rooster, elektronen vrij beweegbaar → goede geleiding van warmte/stroom." },
+      // Reacties (6)
+      { q: "Wat is een verbrandingsreactie?", options: ["Een reactie waarbij een stof reageert met zuurstof onder warmte/lichtafgifte", "Een reactie waarbij water vrijkomt", "Een reactie waarbij een metaal oplost", "Een reactie zonder zuurstof"], answer: 0, explanation: "Verbranding: brandstof + O₂ → CO₂ + H₂O + energie. Exotherm." },
+      { q: "Welke vergelijking is correct gebalanceerd?", options: ["H₂ + O₂ → H₂O", "2H₂ + O₂ → 2H₂O", "H₂ + 2O → H₂O", "2H + O → 2H₂O"], answer: 1, explanation: "Atomen tellen: links 4H + 2O, rechts 4H + 2O. ✓" },
+      { q: "Wat is een neutralisatiereactie?", options: ["Zuur + base → zout + water", "Zuur + zout → base + zuurstof", "Twee bases reageren", "Een reactie zonder warmte"], answer: 0, explanation: "Neutralisatie: HCl + NaOH → NaCl + H₂O." },
+      { q: "Wat doet een katalysator?", options: ["Verlaagt de activeringsenergie en versnelt de reactie zonder zelf op te raken", "Verhoogt de activeringsenergie", "Wordt zelf verbruikt in de reactie", "Verandert het evenwicht"], answer: 0, explanation: "Katalysatoren bieden een alternatief reactiepad met lagere activeringsenergie. Worden niet verbruikt." },
+      { q: "Wat is een redoxreactie?", options: ["Een reactie zonder elektronenoverdracht", "Een reactie waarbij elektronen worden uitgewisseld (oxidatie + reductie)", "Een reactie tussen twee zuren", "Een reactie waarbij water vrijkomt"], answer: 1, explanation: "Redox: één stof verliest elektronen (oxidatie), andere wint ze (reductie). Bv. roesten van ijzer." },
+      { q: "Wat is de pH van een neutrale oplossing bij 25°C?", options: ["0", "7", "10", "14"], answer: 1, explanation: "Bij neutraal: [H⁺] = [OH⁻] = 10⁻⁷ mol/L → pH = 7." },
+      // Mol + concentratie (4)
+      { q: "Hoeveel atomen zit in 1 mol?", options: ["10²³", "6,02 × 10²³", "10⁻²³", "1.000.000"], answer: 1, explanation: "Het getal van Avogadro: 6,02 × 10²³ deeltjes per mol." },
+      { q: "Wat is de molaire massa van H₂O? (H = 1, O = 16)", options: ["8 g/mol", "14 g/mol", "16 g/mol", "18 g/mol"], answer: 3, explanation: "2 × 1 + 1 × 16 = 18 g/mol." },
+      { q: "Hoeveel mol zit in 36 g water?", options: ["1 mol", "2 mol", "18 mol", "36 mol"], answer: 1, explanation: "n = m / M = 36 / 18 = 2 mol." },
+      { q: "Wat is de concentratie van een oplossing met 0,5 mol opgelost in 2 L?", options: ["0,1 mol/L", "0,25 mol/L", "0,5 mol/L", "1 mol/L"], answer: 1, explanation: "c = n / V = 0,5 / 2 = 0,25 mol/L." },
+    ],
   },
   economie: {
     klas3: [
@@ -4950,6 +5014,32 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is het begrotingsbeleid (fiscaal beleid)?", options: ["Mededingingsbeleid via anti-kartelmaatregelen of Monetair beleid van de centrale bank", "Mededingingsbeleid via anti-kartelmaatregelen", "Monetair beleid van de centrale bank", "Overheidsbeleid via belastingen en uitgaven om de economie te sturen"], answer: 3, explanation: "Fiscaal beleid: overheid gebruikt belastingen (verlagen = vraagstimulus) en uitgaven (verhogen = bestedingsimpuls) om conjunctuur te beinvloeden. Anticyclisch = expansief bij recessie, restrictief bij hoogconjunctuur." },
       { q: "Wat is de betalingsbalans van een land?", options: ["Het overzicht van alle economische transacties tussen een land en de rest van de wereld", "De verhouding tussen import en export van goederen", "Het overzicht van geen economische transacties tussen een land en de rest van de wereld", "De verhouding tussen staatsschuld en BBP"], answer: 0, explanation: "Betalingsbalans: lopende rekening (handel, inkomens), kapitaalrekening (investeringen) en financiele rekening. Tekort op lopende rekening betekent dat een land meer importeert dan exporteert." },
       { q: "Wat is asymmetrische informatie?", options: ["Wanneer een partij bij een transactie meer informatie heeft dan de andere partij", "Wanneer bedrijven onvolledige informatie hebben over productiekosten", "Wanneer een partij bij een transactie minder informatie heeft dan de andere partij", "Wanneer prijsinformatie niet beschikbaar is voor consumenten"], answer: 0, explanation: "Asymmetrische informatie leidt tot marktfalen: adverse selectie (bv. tweedehands auto markt: verkoper weet meer dan koper → lemons problem, Akerlof) en moral hazard (verzekeraar weet minder dan verzekerde)." },
+    ],
+    klas4: [
+      // Vraag, aanbod, marktwerking (6)
+      { q: "Wat gebeurt er met de evenwichtsprijs als de vraag stijgt en het aanbod gelijk blijft?", options: ["De prijs daalt", "De prijs blijft gelijk", "De prijs stijgt", "Niet te zeggen"], answer: 2, explanation: "Meer vraag bij gelijk aanbod = schaarste → prijs stijgt." },
+      { q: "Wanneer is er sprake van een vraagoverschot?", options: ["Aanbod is groter dan vraag", "Vraag is groter dan aanbod bij de huidige prijs", "Vraag = aanbod", "Er is geen markt"], answer: 1, explanation: "Vraagoverschot (tekort): vraag > aanbod. Mogelijke reactie: prijs stijgt." },
+      { q: "Wat is een complementair goed van koffie?", options: ["Thee", "Suikerklontjes", "Sportdrank", "Chocolade"], answer: 1, explanation: "Complementaire goederen worden samen gebruikt: koffie + suiker. Substituten zijn vervangers (koffie ↔ thee)." },
+      { q: "Wat is de prijselasticiteit van de vraag?", options: ["De mate waarin de vraag verandert bij een prijsverandering", "Het verschil tussen vraag en aanbod", "De helling van de aanbodlijn", "Het maximumprijs van een product"], answer: 0, explanation: "Elasticiteit = %∆Q / %∆P. Elastisch = >1, inelastisch = <1." },
+      { q: "Welke markt is volledig concurrerend?", options: ["Veel kopers, veel verkopers, homogeen product, vrije toegang", "Eén verkoper, veel kopers", "Twee grote bedrijven", "Veel kopers, één producent"], answer: 0, explanation: "Volledig concurrerende markt: prijszetters niet mogelijk; iedereen prijsnemer." },
+      { q: "Wat is een monopolie?", options: ["Veel verkopers van hetzelfde product", "Markt met één aanbieder en geen substituten", "Markt waar de overheid de prijs bepaalt", "Markt met twee grote spelers"], answer: 1, explanation: "Monopolie: één bedrijf domineert; geen concurrentie; prijszetter." },
+      // Productie + kosten (4)
+      { q: "Wat zijn vaste kosten?", options: ["Kosten die fluctueren met de productie", "Kosten die onafhankelijk zijn van de hoeveelheid productie", "Kosten voor grondstoffen", "Salarissen die per uur worden uitbetaald"], answer: 1, explanation: "Vaste kosten: huur, machines, vaste salarissen — moeten betaald worden ook als er niets geproduceerd wordt." },
+      { q: "Wat zijn variabele kosten?", options: ["Kosten die niet veranderen met productie", "Kosten die wel veranderen met de hoeveelheid productie (grondstoffen, energie)", "Kosten voor reclame", "Kosten voor het hoofdkantoor"], answer: 1, explanation: "Variabele kosten stijgen met productie. Bv. grondstoffen, verpakking, energie per stuk." },
+      { q: "Wat is het break-even punt?", options: ["Het punt waar winst maximaal is", "Het punt waar omzet gelijk is aan totale kosten (geen winst, geen verlies)", "Het punt waar de productie stopt", "Het punt waar de markt verzadigd is"], answer: 1, explanation: "Break-even: omzet = totale kosten. Boven dit punt: winst. Beneden: verlies." },
+      { q: "Wat is winst?", options: ["De totale omzet", "De kosten van een bedrijf", "Omzet min totale kosten", "De verkoopprijs per stuk"], answer: 2, explanation: "Winst = omzet (P × Q) − totale kosten (vast + variabel)." },
+      // Consument + huishouden (4)
+      { q: "Wat is bruto loon?", options: ["Het loon dat je netto ontvangt", "Het loon vóór belasting en sociale premies", "Het loon na pensioen", "Het loon per uur"], answer: 1, explanation: "Bruto loon: vóór aftrek van inkomstenbelasting en premies. Netto = wat je daadwerkelijk overhoudt." },
+      { q: "Wat is sparen?", options: ["Inkomen dat NIET wordt geconsumeerd in dezelfde periode", "Inkomen uitgeven aan goederen", "Schulden afbetalen", "Inkomen inruilen voor aandelen"], answer: 0, explanation: "Sparen = inkomen − consumptie. Geld wordt apart gezet voor toekomstig gebruik." },
+      { q: "Wat is samengestelde rente?", options: ["Rente op alleen het oorspronkelijke bedrag", "Rente over het oorspronkelijke bedrag + eerder verdiende rente", "Een vast percentage zonder rente", "Rente die alleen aan het einde wordt uitbetaald"], answer: 1, explanation: "Samengestelde rente: rente over rente. Hoe langer je geld vast staat, hoe sterker dit groeit." },
+      { q: "Een spaarrekening met €1.000 en 5% jaarrente. Wat krijg je na 1 jaar?", options: ["€1.005", "€1.025", "€1.050", "€1.500"], answer: 2, explanation: "5% van 1.000 = 50. Saldo na 1 jaar = 1.000 + 50 = €1.050." },
+      // Macro-economie (6)
+      { q: "Wat is bruto binnenlands product (bbp)?", options: ["De som van alle inkomsten in een land", "De totale waarde van alle in een land geproduceerde goederen en diensten in een jaar", "De export van een land", "Het saldo van de overheidsbegroting"], answer: 1, explanation: "BBP meet economische omvang van een land. Veel gebruikt voor groei-percentages." },
+      { q: "Wat is inflatie?", options: ["Daling van het algemeen prijsniveau", "Stijging van het algemeen prijsniveau over tijd", "Stijging van de werkloosheid", "Toename van de import"], answer: 1, explanation: "Inflatie verlaagt koopkracht: voor hetzelfde geld minder kunnen kopen." },
+      { q: "Wat is conjunctuur?", options: ["De langetermijntrend van een economie", "De afwisseling van hoog- en laagconjunctuur (op- en neergang) in de economie", "De omvang van de overheidssector", "De werkloosheidscijfers"], answer: 1, explanation: "Conjunctuur: golfbeweging van hoogconjunctuur (groei) en laagconjunctuur (recessie)." },
+      { q: "Wat is werkloosheid?", options: ["Het percentage mensen zonder inkomen", "Het percentage mensen in de beroepsbevolking dat geen werk heeft maar wel zoekt", "Het percentage mensen in onderwijs", "De arbeidsproductiviteit"], answer: 1, explanation: "Werkloosheidsdefinitie: actief werkzoekend, geen werk. Niet inclusief gepensioneerden of studenten." },
+      { q: "Wat doet een centrale bank bij hoge inflatie?", options: ["De rente verlagen", "De rente verhogen om uitgaven te remmen", "De belasting verlagen", "De staatsschuld verhogen"], answer: 1, explanation: "Bij hoge inflatie: centrale bank verhoogt rente → lenen wordt duurder → consumptie/investering daalt → vraag remt af → inflatie daalt." },
+      { q: "Wat is een handelsoverschot?", options: ["Wanneer een land meer importeert dan exporteert", "Wanneer een land meer exporteert dan importeert", "Wanneer een land geen handel drijft", "Wanneer er geen import en geen export is"], answer: 1, explanation: "Handelsoverschot (positief saldo): export > import. Tekort: import > export." },
     ],
   },
   nederlands: {
