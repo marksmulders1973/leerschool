@@ -693,12 +693,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           } catch {}
           if (!savedName) return null;
           return (
-            <Suspense fallback={null}>
-              <Mini3DTeaser onCTA={() => {
-                if (onPickPath) onPickPath("ruimtemeetkunde");
-                else if (onLearnPathsHub) onLearnPathsHub();
-              }} />
-            </Suspense>
+            <div style={{ width: "100%", maxWidth: 320, marginBottom: 16 }}>
+              <Suspense fallback={null}>
+                <Mini3DTeaser onCTA={() => {
+                  if (onPickPath) onPickPath("ruimtemeetkunde");
+                  else if (onLearnPathsHub) onLearnPathsHub();
+                }} />
+              </Suspense>
+            </div>
           );
         })()}
 

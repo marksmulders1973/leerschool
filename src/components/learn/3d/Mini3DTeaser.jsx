@@ -15,13 +15,16 @@ export default function Mini3DTeaser({ onCTA }) {
   return (
     <div style={{
       width: "100%",
-      maxWidth: 320,
-      margin: "12px auto 16px",
+      height: "100%",
+      margin: 0,
       background: "linear-gradient(135deg, rgba(239,159,39,0.10), rgba(255,213,79,0.06))",
       border: "1px solid rgba(255,213,79,0.30)",
       borderRadius: 16,
-      padding: "12px 14px 14px",
+      padding: "10px 12px 12px",
       boxShadow: "0 4px 20px rgba(255,213,79,0.10)",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
     }}>
       <div style={{
         fontFamily: "var(--font-display)",
