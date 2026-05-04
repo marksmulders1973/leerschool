@@ -209,9 +209,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
           fontSize: 12,
           opacity: 0.92,
           marginTop: 3,
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
+          lineHeight: 1.35,
         }}>
           {v.sub}
         </div>

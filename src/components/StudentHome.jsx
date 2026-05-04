@@ -64,10 +64,12 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
   const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
+  // PO (basisschool) gebruikt "Groep", VO (met schoolType) gebruikt "Klas".
+  const niveauWoord = schoolTypeLabel ? "Klas" : "Groep";
   const profileBadge = userLevel && schoolTypeLabel
     ? `Klas ${userLevel} · ${schoolTypeLabel}`
     : userLevel
-    ? `Klas ${userLevel}`
+    ? `${niveauWoord} ${userLevel}`
     : schoolTypeLabel || null;
 
   return (

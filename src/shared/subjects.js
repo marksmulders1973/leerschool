@@ -22,7 +22,7 @@
 export const SUBJECTS = {
   wiskunde: { title: "Wiskunde", emoji: "📐" },
   taal: { title: "Nederlands", emoji: "📖" },
-  engels: { title: "Engels", emoji: "🇬🇧" },
+  engels: { title: "Engels", emoji: "📕" },
   biologie: { title: "Biologie", emoji: "🧬" },
   geschiedenis: { title: "Geschiedenis", emoji: "🏛️" },
   aardrijkskunde: { title: "Aardrijkskunde", emoji: "🌍" },
@@ -30,8 +30,8 @@ export const SUBJECTS = {
   scheikunde: { title: "Scheikunde", emoji: "🧪" },
   economie: { title: "Economie", emoji: "💶" },
   beco: { title: "Bedrijfseconomie", emoji: "📈" },
-  duits: { title: "Duits", emoji: "🇩🇪" },
-  frans: { title: "Frans", emoji: "🇫🇷" },
+  duits: { title: "Duits", emoji: "📘" },
+  frans: { title: "Frans", emoji: "📗" },
   maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
   natuur: { title: "Natuur (PO)", emoji: "🌿" },
 };
