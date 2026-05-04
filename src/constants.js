@@ -4577,6 +4577,29 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is bioaccumulatie en biomagnificatie?", options: ["Accumulatie van nutrienten in planten; verdunning bij hogere trofische niveaus", "Concentratie van CO2 in de atmosfeer door verbrandingsprocessen", "Accumulatie van nutrienten in planten; verdunning bij hogere trofische niveaus of Concentratie van CO2 in de atmosfeer door verbrandingsprocessen", "Ophoping van toxische stoffen in organismen; concentratie neemt toe bij hogere trofische niveaus"], answer: 3, explanation: "Bioaccumulatie: toxines (DDT, kwik) stapelen op in organismen. Biomagnificatie: concentratie neemt toe bij elk volgend trofisch niveau (top-predators bereiken hoogste niveaus)." },
       { q: "Wat is het verschil tussen K-selectie en r-selectie?", options: ["K-strategen groeien snel en produceren veel nakomelingen; r-strategen weinig of K-selectie komt voor in instabiele omgevingen; r-selectie in stabiele", "K-strategen groeien snel en produceren veel nakomelingen; r-strategen weinig", "K-selectie komt voor in instabiele omgevingen; r-selectie in stabiele", "r-strategen investeren weinig per nakomeling en groeien snel; K-strategen investeren veel per nakomeling en stabiliseren bij draagkracht"], answer: 3, explanation: "r-strategen (muizen, insecten): snelle groei, veel nakomelingen, weinig zorg. K-strategen (olifanten, mensen): trage groei, weinig nakomelingen, veel ouderlijke zorg. Hangt samen met stabiliteit van de omgeving." },
     ],
+    klas4: [
+      // Genetica (5)
+      { q: "Wat is een chromosoom?", options: ["Een verbinding van twee aminozuren", "Een opgerolde streng DNA met genen, in de celkern", "Een eiwit dat helpt bij DNA-replicatie", "Een soort virus"], answer: 1, explanation: "Chromosomen zijn dichtgepakte DNA-strengen. Mens heeft 23 paar (46 totaal)." },
+      { q: "Wat zijn allelen?", options: ["Twee verschillende soorten cellen", "Verschillende varianten van hetzelfde gen", "Eiwitten die genen reguleren", "Hormonen die de groei beïnvloeden"], answer: 1, explanation: "Allelen: varianten van een gen. Bv. oogkleur-gen heeft alleel voor blauw en alleel voor bruin." },
+      { q: "Wat betekent 'homozygoot'?", options: ["Twee verschillende allelen voor een eigenschap", "Twee identieke allelen voor een eigenschap (bv. AA of aa)", "Een dominant allel", "Een mutatie"], answer: 1, explanation: "Homozygoot = twee identieke allelen. Heterozygoot = twee verschillende (Aa)." },
+      { q: "Bij een kruising Aa × Aa, wat is de kans op een homozygoot recessief kind (aa)?", options: ["0%", "25%", "50%", "75%"], answer: 1, explanation: "Punnett-vierkant: AA, Aa, Aa, aa → 1/4 = 25% kans op aa." },
+      { q: "Wat is een mutatie?", options: ["Een veranderende eiwitconcentratie", "Een blijvende verandering in de DNA-sequentie", "Een nieuwe celdeling", "Een combinatie van twee genen"], answer: 1, explanation: "Mutatie: verandering in DNA. Kan neutraal, schadelijk of nuttig zijn (basis voor evolutie)." },
+      // Voortplanting + hormonen (4)
+      { q: "Hoeveel chromosomen zit in een menselijke geslachtscel (zaadcel of eicel)?", options: ["23", "46", "92", "22"], answer: 0, explanation: "Geslachtscellen zijn haploid: 23 chromosomen. Bij bevruchting → 46 (diploid)." },
+      { q: "Wat is de functie van het hormoon insuline?", options: ["Bloeddruk verhogen", "Bloedsuikerspiegel verlagen", "Hartslag versnellen", "Spieren laten groeien"], answer: 1, explanation: "Insuline (uit alvleesklier) zorgt dat cellen suiker uit het bloed opnemen. Tekort = diabetes." },
+      { q: "Welk hormoon regelt de menstruatiecyclus?", options: ["Adrenaline", "Insuline", "Oestrogeen en progesteron", "Testosteron"], answer: 2, explanation: "Oestrogeen en progesteron (eierstokken) regelen de cyclus, samen met FSH/LH (hypofyse)." },
+      { q: "Waar wordt insuline gemaakt?", options: ["In de lever", "In de alvleesklier", "In de nieren", "In de schildklier"], answer: 1, explanation: "Insuline wordt geproduceerd door de β-cellen in de eilandjes van Langerhans in de alvleesklier." },
+      // Ecosystemen (4)
+      { q: "Wat is een producent in een voedselweb?", options: ["Een dier dat planten eet", "Een organisme dat zelf voedsel maakt via fotosynthese (planten, algen)", "Een schimmel die dood materiaal afbreekt", "Een roofdier"], answer: 1, explanation: "Producenten staan onderaan: planten/algen die met zonlicht eigen voedsel maken (autotroof)." },
+      { q: "Wat is een herbivoor?", options: ["Een planteneter", "Een vleeseter", "Een alleseter", "Een afvaleter"], answer: 0, explanation: "Herbivoor: planteneter (koe, schaap, konijn). Carnivoor: vleeseter. Omnivoor: alleseter." },
+      { q: "Wat is de rol van een afbreker (decomposer)?", options: ["Energie opslaan", "Dood organisch materiaal afbreken tot voedingsstoffen", "Planten beschermen tegen ziektes", "Zonlicht omzetten in suiker"], answer: 1, explanation: "Schimmels en bacteriën breken dood materiaal af → mineralen terug in de bodem (kringloop)." },
+      { q: "Wat is biodiversiteit?", options: ["Het aantal mensen op aarde", "De variatie aan levende soorten in een ecosysteem", "De grootte van een bos", "De hoeveelheid CO₂ in de lucht"], answer: 1, explanation: "Biodiversiteit = soortenrijkdom. Hoge biodiversiteit = stabiel, veerkrachtig ecosysteem." },
+      // Cellen + organen (4)
+      { q: "Wat is de functie van mitochondriën?", options: ["Eiwitsynthese", "Energie produceren via celademhaling (ATP)", "DNA opslaan", "Afval afvoeren"], answer: 1, explanation: "Mitochondriën = krachtcentrales van de cel. Verbranden glucose met zuurstof → ATP." },
+      { q: "Wat doet de huid bij de mens?", options: ["Voedsel verteren", "Beschermen + temperatuurregulatie + vitamine D-aanmaak + zintuiglijke informatie", "Bloed pompen", "Geluiden maken"], answer: 1, explanation: "Huid is grootste orgaan: bescherming, thermostaat, vit D-synthese (zonlicht), tastzintuig." },
+      { q: "Welk orgaan filtert het bloed en maakt urine?", options: ["Lever", "Nieren", "Hart", "Longen"], answer: 1, explanation: "Nieren filteren afvalstoffen uit bloed → urine via blaas naar buiten." },
+      { q: "Wat is fotosynthese?", options: ["Verbranding van glucose", "Planten maken glucose en zuurstof uit CO₂ + water + zonlicht", "Cellen delen zich in tweeën", "Dieren ademen zuurstof in"], answer: 1, explanation: "6 CO₂ + 6 H₂O + licht → C₆H₁₂O₆ + 6 O₂. Vindt plaats in chloroplasten van plantencellen." },
+    ],
   },
   wiskunde: {
     klas1: [
@@ -4880,6 +4903,32 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is het verschil tussen inductieve en capacitieve reactantie?", options: ["Beide zijn constant", "capacitief neemt af (Xc = 1/2πfC); Inductief neemt toe met frequentie (XL = 2πfL)", "Capacitief neemt toe", "Inductief neemt toe met frequentie (XL = 2πfL); capacitief neemt af (Xc = 1/2πfC)"], answer: 3, explanation: "Resonantie: XL = Xc → minimale impedantie in een LC-circuit." },
       { q: "Wat is een golffunctie (Ψ) in de kwantummechanica?", options: ["De energie van een deeltje, De locatie van een deeltje en De snelheid van een deeltje geeft om een deeltje te vinden", "De locatie van een deeltje", "Een mathematische functie waarvan het kwadraat de kans geeft om een deeltje te vinden", "De snelheid van een deeltje"], answer: 2, explanation: "|Ψ|² = kansdichtheid. Schrödinger-vergelijking beschrijft hoe Ψ evolueert." },
       { q: "Wat is een gluon?", options: ["Een elektron", "Een elektron, Een foton en Een quark van de sterke kernkracht die quarks samenbindt", "Het uitwisselingsdeeltje van de sterke kernkracht die quarks samenbindt", "Een quark"], answer: 2, explanation: "Gluonen houden quarks samen in protonen en neutronen via de sterke kernkracht (QCD)." },
+    ],
+    klas4: [
+      // Krachten + bewegingen (6)
+      { q: "Wat is de eenheid van kracht?", options: ["Joule", "Newton", "Watt", "Pascal"], answer: 1, explanation: "1 N = 1 kg·m/s² (de kracht die 1 kg met 1 m/s² versnelt)." },
+      { q: "Welke wet beschrijft F = m × a?", options: ["Eerste wet van Newton", "Tweede wet van Newton", "Derde wet van Newton", "Wet van Pascal"], answer: 1, explanation: "Tweede wet van Newton: kracht is product van massa en versnelling." },
+      { q: "Wat zegt de derde wet van Newton?", options: ["Een kracht doet altijd massa stijgen", "Actie = − reactie: bij elke kracht een even grote tegengestelde kracht", "Een voorwerp blijft in rust zonder kracht", "F = m × a"], answer: 1, explanation: "Bij springen duw jij de aarde omlaag met dezelfde kracht waarmee de aarde jou omhoog duwt." },
+      { q: "Een auto heeft een snelheid van 72 km/u. Wat is dat in m/s?", options: ["10 m/s", "15 m/s", "20 m/s", "25 m/s"], answer: 2, explanation: "72 km/u = 72.000 m / 3.600 s = 20 m/s." },
+      { q: "Een steen valt vrij vanuit stilstand. Wat is zijn snelheid na 3 sec? (g = 10 m/s²)", options: ["3 m/s", "10 m/s", "20 m/s", "30 m/s"], answer: 3, explanation: "v = g × t = 10 × 3 = 30 m/s." },
+      { q: "Wat is de zwaartekracht op een massa van 5 kg op aarde? (g = 10 m/s²)", options: ["5 N", "10 N", "50 N", "500 N"], answer: 2, explanation: "F_zw = m × g = 5 × 10 = 50 N." },
+      // Energie + arbeid (5)
+      { q: "Wat is de eenheid van energie?", options: ["Newton", "Joule", "Watt", "Volt"], answer: 1, explanation: "Energie wordt gemeten in Joule (J). Arbeid = kracht × verplaatsing." },
+      { q: "Wat is potentiële energie?", options: ["Energie van beweging", "Energie van positie (bv. hoogte)", "Energie van warmte", "Elektrische energie"], answer: 1, explanation: "E_pot = m·g·h. Hoog op een berg heb je veel zwaarte-energie." },
+      { q: "Wat is kinetische energie?", options: ["Energie van rust", "Energie van beweging (½·m·v²)", "Energie van licht", "Energie van trillingen"], answer: 1, explanation: "E_kin = ½·m·v². Snel bewegende objecten hebben veel kinetische energie." },
+      { q: "Wat is het vermogen?", options: ["Hoeveelheid energie per tijdseenheid (P = E/t)", "Totale energie", "Kracht maal afstand", "Snelheid maal massa"], answer: 0, explanation: "Vermogen P = E/t in Watt (J/s). Gloeilamp 60W = 60 J per seconde." },
+      { q: "Een lift hijst 200 kg over 10 m hoogte. Hoeveel arbeid? (g = 10)", options: ["200 J", "2.000 J", "20.000 J", "100.000 J"], answer: 2, explanation: "W = F·s = m·g·h = 200·10·10 = 20.000 J." },
+      // Elektriciteit (5)
+      { q: "Wat is de wet van Ohm?", options: ["U = I × R", "U = I + R", "U = I − R", "U = I/R"], answer: 0, explanation: "Spanning = stroom × weerstand. Met R in Ω, I in A, U in V." },
+      { q: "Een lamp van 6 V krijgt een stroom van 0,5 A. Wat is de weerstand?", options: ["3 Ω", "6 Ω", "12 Ω", "0,3 Ω"], answer: 2, explanation: "R = U/I = 6/0,5 = 12 Ω." },
+      { q: "Wat is het verschil tussen serie en parallel?", options: ["Serie: alle componenten op één lijn; parallel: meerdere takken naast elkaar", "Geen verschil", "Parallel altijd zonder weerstand", "Serie heeft hogere stroom"], answer: 0, explanation: "Serie: stroom door alle. Parallel: takken delen stroom. Thuis = parallel." },
+      { q: "Hoeveel Watt verbruikt een apparaat met U = 230 V en I = 2 A?", options: ["115 W", "228 W", "230 W", "460 W"], answer: 3, explanation: "P = U × I = 230 × 2 = 460 W." },
+      { q: "Welk metaal geleidt het BEST?", options: ["IJzer", "Koper", "Aluminium", "Zilver"], answer: 3, explanation: "Zilver heeft de hoogste geleidbaarheid, daarna koper en goud. Praktisch wordt koper gebruikt (goedkoper)." },
+      // Geluid + licht (4)
+      { q: "Hoe snel reist geluid in lucht (bij kamertemperatuur)?", options: ["~340 m/s", "~3.000 m/s", "~300.000 m/s", "~0,34 m/s"], answer: 0, explanation: "Geluid: ~340 m/s in lucht (afhankelijk van temperatuur)." },
+      { q: "Hoe snel reist licht in vacuüm?", options: ["340 m/s", "3.000 km/s", "300.000 km/s", "1.000 m/s"], answer: 2, explanation: "Lichtsnelheid c = 300.000 km/s (3 × 10⁸ m/s) — universele bovengrens." },
+      { q: "Wat gebeurt er als wit licht door een prisma gaat?", options: ["Het wordt zwart", "Het splitst zich in alle kleuren van de regenboog (spectrum)", "Het verdwijnt", "Het wordt warmer"], answer: 1, explanation: "Verschillende golflengtes buigen verschillend → spectrum van rood tot violet." },
+      { q: "Wat is de hoogste toon: hoge of lage frequentie?", options: ["Hoge frequentie = hoge toon", "Lage frequentie = hoge toon", "Geen verband", "Hangt af van geluidssterkte"], answer: 0, explanation: "Frequentie (Hz) bepaalt toonhoogte. Pianotoon C4 ≈ 262 Hz, C5 ≈ 524 Hz." },
     ],
   },
   scheikunde: {
