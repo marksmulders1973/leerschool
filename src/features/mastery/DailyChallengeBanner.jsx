@@ -7,7 +7,7 @@
 // Drie states (op volgorde van prioriteit):
 //   - "GEDAAN"  — vandaag al actief geweest, streak veilig
 //   - "ACTIEF"  — heeft streak van >0, vandaag nog niet gedaan, "Niet verbreken!"
-//   - "NIEUW"   — geen streak nog, "Begin je eerste 5 minuten"
+//   - "NIEUW"   — geen streak nog, "Begin je eerste 15 minuten"
 //
 // Klik → onStart() (HomePage routeert naar topic of leerpaden-hub).
 
@@ -90,7 +90,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       title: streakInfo.streak === 1
         ? "Streak gestart 🎉"
         : `${streakInfo.streak} dagen op rij`,
-      sub: "Mooi — je hebt je 5 minuten van vandaag al gedaan.",
+      sub: "Mooi — je hebt je 15 minuten van vandaag al gedaan.",
       cta: null,
     },
     ACTIEF: {
@@ -99,7 +99,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       flame: "#ffd54f",
       eyebrow: "STREAK NIET VERBREKEN",
       eyebrowColor: "#fff",
-      title: `${streakInfo.streak} dagen 🔥 — doe je 5 min`,
+      title: `${streakInfo.streak} dagen 🔥 — doe je 15 min`,
       sub: recommendedPath
         ? `Vandaag: ${recommendedPath.title}`
         : "Een paar vragen om de streak te houden",
@@ -111,7 +111,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       flame: "#ffd54f",
       eyebrow: "DAGELIJKSE UITDAGING",
       eyebrowColor: "rgba(255,255,255,0.85)",
-      title: "5 minuten per dag",
+      title: "15 minuten per dag",
       sub: "Begin je streak — een paar vragen, klein en concreet.",
       cta: "Start vandaag",
     },

@@ -103,6 +103,20 @@ const BOTTOMNAV_PAGES = new Set([
   "ouder-dashboard",
 ]);
 
+// Pagina's waar de 15-min sessie-timer telt. Niet op home (wachtruimte)
+// of OBLITERATOR (spel = pauze, geen leertijd). Wel in alle leer- en
+// oefen-pagina's incl. quiz-play en learn-path-stappen.
+const LEARN_PAGES = new Set([
+  "learn-paths-hub", "learn-path", "curriculum",
+  "learn-meebezig", "my-mastery",
+  "student-home", "self-study", "textbook",
+  "cito", "tafels", "redactiesommen",
+  "spelling", "woordenschat", "begrijpend-lezen",
+  "play", "quiz-preview",
+]);
+
+const KWARTIER_TARGET_MIN = 15;
+
 const FREE_QUIZ_LIMIT = 20;
 
 const fonts = `
@@ -216,6 +230,36 @@ export default function App() {
   const abortControllerRef = useRef(null);
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
+
+  // 15-min sessie-timer: telt actieve seconden zolang user op een leer-pagina
+  // is en de tab zichtbaar is. kwartierMilestone wordt 1× per sessie getoond
+  // bij het bereiken van 15 min — vrolijke toast met optie naar OBLITERATOR
+  // of stoppen voor vandaag.
+  const [sessionSec, setSessionSec] = useState(0);
+  const [showKwartierToast, setShowKwartierToast] = useState(false);
+  const milestoneShownRef = useRef(false);
+  useEffect(() => {
+    let visible = !document.hidden;
+    const onVis = () => { visible = !document.hidden; };
+    document.addEventListener("visibilitychange", onVis);
+    const id = setInterval(() => {
+      if (visible && LEARN_PAGES.has(pageRef.current)) {
+        setSessionSec((s) => s + 1);
+      }
+    }, 1000);
+    return () => {
+      document.removeEventListener("visibilitychange", onVis);
+      clearInterval(id);
+    };
+  }, []);
+  useEffect(() => {
+    if (!milestoneShownRef.current && sessionSec >= KWARTIER_TARGET_MIN * 60) {
+      milestoneShownRef.current = true;
+      setShowKwartierToast(true);
+      track("kwartier_reached", { sessie_min: Math.floor(sessionSec / 60) });
+    }
+  }, [sessionSec]);
+  const sessionMin = Math.floor(sessionSec / 60);
 
   const handleLogout = () => {
     logout();
@@ -933,6 +977,8 @@ export default function App() {
           userLevel={userLevel}
           userSchoolType={userSchoolType}
           quizzes={quizzes}
+          sessionMin={sessionMin}
+          kwartierTarget={KWARTIER_TARGET_MIN}
           progress={studentProgress.filter((p) => p.player === userName)}
           onJoinQuiz={async (code) => {
             const upper = code.toUpperCase();
@@ -1313,6 +1359,96 @@ export default function App() {
     </Suspense>
     {BOTTOMNAV_PAGES.has(page) && (
       <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} />
+    )}
+    {/* 15-min "kwartier zit erop" toast — viert het bereiken van het
+        dag-doel. Bouwt op de slogan "Een kwartier per dag, een leven lang
+        slimmer". Knoppen: doorgaan, OBLITERATOR, klaar. */}
+    {showKwartierToast && (
+      <div
+        role="dialog"
+        aria-live="polite"
+        style={{
+          position: "fixed",
+          left: 12, right: 12,
+          bottom: BOTTOMNAV_PAGES.has(page) ? `calc(var(--bottom-nav-height) + env(safe-area-inset-bottom) + 12px)` : "12px",
+          zIndex: 9999,
+          maxWidth: 520,
+          margin: "0 auto",
+          background: "linear-gradient(135deg, #00c853, #00897b)",
+          borderRadius: 18,
+          padding: "14px 16px",
+          color: "#0d1b2e",
+          boxShadow: "0 12px 32px rgba(0,200,83,0.45)",
+          fontFamily: "var(--font-body)",
+          animation: "slideUp 0.35s ease-out",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <span style={{ fontSize: 32, lineHeight: 1 }}>🎉</span>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800, lineHeight: 1.2 }}>
+              Top — je kwartier zit erop!
+            </div>
+            <div style={{ fontSize: 12, opacity: 0.85, marginTop: 2 }}>
+              {KWARTIER_TARGET_MIN} minuten geoefend. Klaar voor vandaag, of nog even spelen?
+            </div>
+          </div>
+        </div>
+        <div style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
+          <button
+            type="button"
+            onClick={() => { track("kwartier_action", { keuze: "doorgaan" }); setShowKwartierToast(false); }}
+            style={{
+              flex: "1 1 auto", minWidth: 90,
+              padding: "8px 12px",
+              borderRadius: 10,
+              border: "1px solid rgba(13,27,46,0.30)",
+              background: "rgba(255,255,255,0.20)",
+              color: "#0d1b2e",
+              fontFamily: "var(--font-display)",
+              fontSize: 13, fontWeight: 700,
+              cursor: "pointer",
+            }}
+          >
+            Doorgaan
+          </button>
+          <button
+            type="button"
+            onClick={() => { track("kwartier_action", { keuze: "obliterator" }); setShowKwartierToast(false); setPage("obliteratorPlay"); }}
+            style={{
+              flex: "1 1 auto", minWidth: 130,
+              padding: "8px 12px",
+              borderRadius: 10,
+              border: "none",
+              background: "linear-gradient(135deg, #ff5030, #ffaa00)",
+              color: "#1a0008",
+              fontFamily: "var(--font-display)",
+              fontSize: 13, fontWeight: 800,
+              cursor: "pointer",
+              boxShadow: "0 3px 10px rgba(255,80,40,0.35)",
+            }}
+          >
+            🛸 OBLITERATOR
+          </button>
+          <button
+            type="button"
+            onClick={() => { track("kwartier_action", { keuze: "klaar" }); setShowKwartierToast(false); setPage("home"); }}
+            style={{
+              flex: "1 1 auto", minWidth: 90,
+              padding: "8px 12px",
+              borderRadius: 10,
+              border: "1px solid rgba(13,27,46,0.30)",
+              background: "transparent",
+              color: "#0d1b2e",
+              fontFamily: "var(--font-display)",
+              fontSize: 13, fontWeight: 700,
+              cursor: "pointer",
+            }}
+          >
+            Klaar voor vandaag
+          </button>
+        </div>
+      </div>
     )}
     </div>
   );

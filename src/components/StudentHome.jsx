@@ -4,7 +4,7 @@ import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult, onDeleteResult }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult, onDeleteResult }) {
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -91,6 +91,43 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             </span>
           </div>
         )}
+        {/* 15-min sessie-indicator — koppeling met "Een kwartier per dag"
+            slogan. Vult zich realtime; bij overschrijden van target geeft
+            'ie een ✓ en compliment. */}
+        {kwartierTarget > 0 && (() => {
+          const reached = sessionMin >= kwartierTarget;
+          const pct = Math.min(100, Math.round((sessionMin / kwartierTarget) * 100));
+          return (
+            <div style={{
+              marginBottom: 10,
+              padding: "8px 12px",
+              background: reached
+                ? "linear-gradient(135deg, rgba(0,200,83,0.18), rgba(105,240,174,0.10))"
+                : "rgba(255,255,255,0.04)",
+              border: `1px solid ${reached ? "rgba(105,240,174,0.45)" : "rgba(255,255,255,0.10)"}`,
+              borderRadius: 12,
+            }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
+                <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.75)", fontWeight: 600 }}>
+                  {reached ? "✓ Vandaag is je kwartier rond" : "Vandaag oefenen"}
+                </span>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: reached ? "var(--color-brand-primary-100)" : "rgba(255,255,255,0.85)" }}>
+                  {sessionMin} / {kwartierTarget} min
+                </span>
+              </div>
+              <div style={{ height: 5, background: "rgba(0,0,0,0.30)", borderRadius: 999, overflow: "hidden" }}>
+                <div style={{
+                  height: "100%",
+                  width: `${pct}%`,
+                  background: reached
+                    ? "linear-gradient(90deg, #00c853, #69f0ae)"
+                    : "linear-gradient(90deg, #00d4ff, #00c853)",
+                  transition: "width 0.4s ease-out",
+                }} />
+              </div>
+            </div>
+          );
+        })()}
         {streakWarning && (
           <div style={{
             display: "flex", alignItems: "center", gap: 10,
