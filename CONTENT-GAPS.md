@@ -1,7 +1,31 @@
 # Content-gaps inventaris
 
-> Gegenereerd op 2026-05-04. Leeg-cellen = ontbrekende content.
-> Updaten: zie de twee scripts onderaan.
+> Gegenereerd 2026-05-04. Bijgewerkt 2026-05-05 na nachtsessie.
+> Leeg-cellen = ontbrekende content. Updaten: zie scripts onderaan.
+
+## Sessie 2026-05-04/05 — toegevoegd
+
+| (subject, level) | Aantal | Onderwerpen |
+|---|---|---|
+| **cito.groep8** | +26 → 60 | rekenen-uitbreiding, taal, plasticsoep + Venetië, wereld-O |
+| rekenen.groep8 | 34 nieuw | procenten/korting, breuken, verhoudingen, oppervlakte, statistiek |
+| taal.groep8 | 30 nieuw | werkwoordspelling, dt, leenwoorden, stijlfiguren, voornaamwoorden |
+| aardrijkskunde.groep8 | 22 nieuw | NL provincies, Europa, wereld, klimaat |
+| geschiedenis.groep8 | 20 nieuw | NL-historie, WO1+2, Holocaust, maanlanding, Mandela |
+| engels.groep8 | 20 nieuw | vocabulary, present simple, past tense, comparatives |
+| natuur.groep8 | 20 nieuw | lichaam, dieren+planten, ruimte, fotosynthese |
+| wiskunde.klas4 | 30 nieuw | algebra, lineair/kwadratisch, Pythagoras, statistiek |
+| scheikunde.klas4 | 20 nieuw | atoombouw, bindingen, redox, mol/concentratie |
+| economie.klas4 | 20 nieuw | vraag/aanbod, kosten, BBP, inflatie, conjunctuur |
+| biologie.klas4 | 17 nieuw | genetica, hormonen, ecosystemen, organen |
+| natuurkunde.klas4 | 20 nieuw | Newton, energie, Ohm, geluid+licht |
+| maatschappijleer.klas4 | 15 nieuw | rechtsstaat, trias politica, grondrechten, recht |
+| nederlands.klas4 | 14 nieuw | argumentatieleer, drogredenen, tekstanalyse |
+| aardrijkskunde.klas4 | 15 nieuw | klimaat, migratie, NL+Europa, platentektoniek |
+
+**Totaal toegevoegd: ~323 vragen**, vooral in 2 strategische zones:
+- **Eindjaar PO (groep 8)** — kern Cito-doelgroep, was leeg, nu 6 vakken
+- **Schoolexamen-jaar VO (klas 4)** — was leeg, nu 8 vakken
 
 ## 1. Quizvragen per vak × niveau (`SAMPLE_QUESTIONS`)
 
