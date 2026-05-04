@@ -215,8 +215,11 @@
         100% { opacity: 0.7; transform: translateY(0); }
       }
       /* Hero-tiles grid: 6 even grote vierkanten, responsive.
-         Telefoon (< 640px): 2 kolommen × 3 rijen.
-         Tablet/laptop (≥ 640px): 3 kolommen × 2 rijen. */
+         Telefoon (< 640px): 2 kolommen × 3 rijen, smal.
+         Tablet (≥ 640px): 3 kolommen × 2 rijen.
+         Laptop (≥ 1024px): 3 × 2 maar ruimer (max 760).
+         Klassen .lk-content-wide krijgt zelfde max-width zodat lichtkrant,
+         promo-banner en install-banner mee schalen op laptop. */
       .lk-hero-tiles {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -224,13 +227,30 @@
         width: 100%;
         max-width: 360px;
         margin-bottom: 14px;
-        align-self: stretch;
+        align-self: center;
+      }
+      .lk-content-wide {
+        width: 100%;
+        max-width: 360px;
+        align-self: center;
       }
       @media (min-width: 640px) {
         .lk-hero-tiles {
           grid-template-columns: repeat(3, 1fr);
-          max-width: 480px;
+          max-width: 540px;
           gap: 12px;
+        }
+        .lk-content-wide {
+          max-width: 540px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .lk-hero-tiles {
+          max-width: 760px;
+          gap: 16px;
+        }
+        .lk-content-wide {
+          max-width: 760px;
         }
       }
       .lk-tile {
