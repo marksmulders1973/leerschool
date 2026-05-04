@@ -188,9 +188,23 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
   const curriculumPrefixes = filterArr
     ? filterArr.map((s) => SUBJECT_TO_CURRICULUM_PREFIX[s]).filter(Boolean)
     : null;
-  const visibleCurricula = curriculumPrefixes
+  // Filter curricula op user's klas-bucket: PO-leerling ziet geen VO-leerlijnen,
+  // klas-1 ziet klas-1, klas-2 ziet klas-1+2, etc. Geen profiel = alles tonen.
+  const curriculumMatchesBucket = (c) => {
+    if (!myBucket) return true;
+    const id = c.id;
+    if (myBucket === "po") return id.includes("groep") || id.includes("-po");
+    if (myBucket === "klas-1") return id.includes("klas1");
+    if (myBucket === "klas-2") return id.includes("klas1") || id.includes("klas2");
+    if (myBucket === "klas-3") return id.includes("klas1") || id.includes("klas2") || id.includes("klas3");
+    if (myBucket === "klas-4") return id.includes("klas3") || id.includes("klas4");
+    if (myBucket === "bovenbouw") return id.includes("klas3") || id.includes("bovenbouw") || id.includes("havo") || id.includes("vwo");
+    return true;
+  };
+  const visibleCurricula = (curriculumPrefixes
     ? Object.values(CURRICULA).filter((c) => curriculumPrefixes.some((p) => c.id.startsWith(p + "-")))
-    : Object.values(CURRICULA);
+    : Object.values(CURRICULA)
+  ).filter(curriculumMatchesBucket);
 
   // Toont de vak-grid (entry-screen) wanneer geen filter actief is.
   const showSubjectGrid = filterArr == null;

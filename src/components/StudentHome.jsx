@@ -234,6 +234,27 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           </>
         )}
 
+        {/* Empty-state hint wanneer er nog géén voortgang is — vult de witruimte
+            onder de 4 tegels met een vriendelijke duw richting Zelf oefenen. */}
+        {recentProgress.length === 0 && quizzes.filter((q) => q.deadline).length === 0 && (
+          <div style={{
+            background: "linear-gradient(135deg, rgba(0,200,83,0.10), rgba(105,240,174,0.06))",
+            border: "1px dashed rgba(105,240,174,0.40)",
+            borderRadius: 14,
+            padding: "16px 18px",
+            marginTop: 4,
+            textAlign: "center",
+          }}>
+            <div style={{ fontSize: 28, marginBottom: 6 }}>🌱</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 4 }}>
+              Klaar voor je eerste oefening?
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.4 }}>
+              Tik <strong>Zelf oefenen</strong> hierboven en kies een vak — of <strong>Uit je boek</strong> als je een schoolboek hebt.
+            </div>
+          </div>
+        )}
+
         {/* Recent activity */}
         {recentProgress.length > 0 && (
           <>

@@ -611,7 +611,11 @@ export default function App() {
         <LearnPathsHub
           userName={userName || "Speler"}
           authUser={authUser}
-          userLevel={userLevel}
+          userLevel={
+            userLevel && /^\d+$/.test(String(userLevel))
+              ? (userSchoolType ? `klas${userLevel}` : `groep${userLevel}`)
+              : userLevel
+          }
           filterSubject={learnFilterSubject}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
