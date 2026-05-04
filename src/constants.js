@@ -3580,6 +3580,32 @@ export const SAMPLE_QUESTIONS = {
       { q: "Wat is symbiose?", options: ["Een duurzame interactie tussen twee verschillende soorten waarbij minstens een baat heeft", "Het uitbuiten van een gastheersoort door een parasiet", "Concurrentie tussen twee soorten om dezelfde hulpbron", "Het uitbuiten van een gastheersoort door een parasiet of Concurrentie tussen twee soorten om dezelfde hulpbron"], answer: 0, explanation: "Symbiose: mutualisme (beide baat: bij + bloem), commensalisme (een baat, ander neutraal), parasitisme (een baat, ander nadeel: vlo op hond). Vaak evolutionair ontwikkeld." },
       { q: "Wat is het verschil tussen een kernreactie en een chemische reactie?", options: ["Ze zijn identiek, alleen de energievrij-making verschilt", "Chemische reacties zijn altijd exotherm; kernreacties altijd endotherm", "Bij een kernreactie verandert de kern van een atoom; bij een chemische reactie veranderen alleen de elektronenbindingen", "Chemische reacties zijn altijd exotherm; kernreacties altijd endotherm of Ze zijn identiek, alleen de energievrij-making verschilt"], answer: 2, explanation: "Kernreactie: kern van atoom verandert (splitsing of fusie), enorme hoeveelheid energie (E=mc²). Chemische reactie: atomen hergroeperen via elektronenbindingen, minder energie. Kernenergie en atoombommen: kernreacties." },
     ],
+    groep8: [
+      // Het lichaam (6)
+      { q: "Welk orgaan pompt bloed door je lichaam?", options: ["Lever", "Hart", "Nieren", "Longen"], answer: 1, explanation: "Het hart is een spier die bloed rondpompt." },
+      { q: "Welk orgaan filtert afvalstoffen uit je bloed?", options: ["Hart", "Longen", "Nieren", "Maag"], answer: 2, explanation: "Nieren filteren bloed → urine via blaas naar buiten." },
+      { q: "Hoeveel botten heeft een volwassen mens?", options: ["106", "176", "206", "316"], answer: 2, explanation: "Een volwassene heeft 206 botten. Baby's hebben er meer (~270) — sommige groeien aan elkaar." },
+      { q: "Wat doen je longen?", options: ["Voedsel verteren", "Bloed pompen", "Zuurstof opnemen en CO₂ afgeven", "Afval filteren"], answer: 2, explanation: "Bij in­ademen: O₂ in. Bij uit­ademen: CO₂ uit." },
+      { q: "Welke stof zit in tanden en botten en maakt ze sterk?", options: ["IJzer", "Calcium", "Vitamine C", "Eiwit"], answer: 1, explanation: "Calcium zit in zuivel, groene groenten — belangrijk voor stevige botten en tanden." },
+      { q: "Hoeveel hartslagen per minuut heeft een rustend kind ongeveer?", options: ["20", "70", "140", "200"], answer: 1, explanation: "Rusthartslag bij kinderen: 70-100 slagen per minuut. Sport verhoogt het tijdelijk." },
+      // Dieren + planten (5)
+      { q: "Welk dier is een zoogdier?", options: ["Krokodil", "Vlinder", "Walvis", "Slang"], answer: 2, explanation: "Walvissen zijn zoogdieren — ze ademen lucht, baren levende jongen, en hebben warm bloed." },
+      { q: "Wat eten herbivoren?", options: ["Vlees", "Planten", "Schimmels", "Plastic"], answer: 1, explanation: "Herbivoor = planteneter (koe, paard, konijn)." },
+      { q: "Welke groep dieren legt eieren met een harde schaal?", options: ["Vissen", "Vogels", "Zoogdieren", "Insecten"], answer: 1, explanation: "Vogels leggen kalkschaal-eieren. Reptielen ook (lederachtige schaal)." },
+      { q: "Wat is een ecosysteem?", options: ["Een dierentuin", "Het samenspel van planten, dieren en de leefomgeving in een gebied", "Een bos zonder dieren", "Een wereldorganisatie"], answer: 1, explanation: "Ecosysteem: alle levende wezens + niet-levende factoren (water, lucht, bodem) in een gebied." },
+      { q: "Wat doen wormen voor de bodem?", options: ["Niets bijzonders", "Ze maken de bodem losser en vruchtbaarder", "Ze vergiftigen de planten", "Ze eten alle wortels op"], answer: 1, explanation: "Wormen graven gangen, mengen organisch materiaal, en houden de bodem gezond voor planten." },
+      // Aarde + ruimte (5)
+      { q: "Hoeveel planeten draaien er om de zon?", options: ["6", "8", "10", "12"], answer: 1, explanation: "Sinds 2006 (Pluto degradeerde): Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus = 8 planeten." },
+      { q: "Welke planeet staat het dichtst bij de zon?", options: ["Venus", "Mercurius", "Mars", "Jupiter"], answer: 1, explanation: "Mercurius is de eerste planeet — heel heet aan de zonzijde, ijskoud aan de schaduwzijde." },
+      { q: "Hoe heet onze melkweg?", options: ["Andromeda", "Sterrenstof", "De Melkweg", "De Grote Beer"], answer: 2, explanation: "Wij wonen in de Melkweg (Engels: Milky Way) — een spiraal sterrenstelsel met ~100 miljard sterren." },
+      { q: "Wat veroorzaakt eb en vloed?", options: ["De wind", "De aantrekkingskracht van de maan (en deels de zon)", "De rotatie van de aarde alleen", "Aardbevingen"], answer: 1, explanation: "De maan trekt aan het zeewater. Twee keer per dag eb en vloed (ritme van 12,5 uur)." },
+      { q: "Waarom hebben we seizoenen?", options: ["De aarde komt dichter en verder van de zon", "De aardas staat scheef, waardoor zonlicht ongelijk over het jaar valt", "De zon wordt warmer en kouder", "De wind verandert"], answer: 1, explanation: "Aardas staat 23,5° scheef. In de zomer (op het noordelijk halfrond) krijgt onze kant meer en steiler zonlicht." },
+      // Energie + materie (4)
+      { q: "Wat is fotosynthese?", options: ["Wanneer dieren ademhalen", "Planten maken voedsel uit CO₂ + water + licht, en geven zuurstof af", "Cellen delen zich", "Verdamping van water"], answer: 1, explanation: "Bij fotosynthese maakt de plant glucose en zuurstof. Dat is de basis van bijna alle leven op aarde." },
+      { q: "Wat zijn fossiele brandstoffen?", options: ["Hout en stro", "Aardolie, aardgas en steenkool — uit miljoenen jaren oude resten van planten/dieren", "Plastic afval", "Kernsplitsing van uranium"], answer: 1, explanation: "Fossiele brandstoffen ontstonden door eeuwenlang afgebroken plantenresten. Verbranding geeft veel CO₂ — broeikasgas." },
+      { q: "Welke energiebron is hernieuwbaar?", options: ["Steenkool", "Aardgas", "Aardolie", "Zonne-energie"], answer: 3, explanation: "Hernieuwbaar = raakt niet op. Zon, wind, water, biomassa. Fossiele brandstoffen raken op." },
+      { q: "Wat is de drie aggregatietoestanden van water?", options: ["IJs, water, damp", "Vast, vloeibaar, gas", "IJs, regen, sneeuw", "IJs, water, damp + Vast, vloeibaar, gas zijn allebei correct"], answer: 3, explanation: "Beide formuleringen kloppen: vaste vorm (ijs), vloeibaar (water) en gasvormig (waterdamp)." },
+    ],
     klas1: [
       { q: "Wat is DNA?", options: ["Een vitamine", "Een type cel", "Erfelijk materiaal", "Een vitamine of Een type cel"], answer: 2, explanation: "DNA bevat genetische informatie." },
       { q: "Wat is de chemische formule van water?", options: ["O2", "NaCl", "H2O", "CO2"], answer: 2, explanation: "H₂O: twee waterstof, één zuurstof." },
@@ -3789,6 +3815,31 @@ export const SAMPLE_QUESTIONS = {
       { q: "What does 'cynical' mean?", options: ["Wantrouwend/sceptisch over menselijke motieven", "Optimistisch", "Vriendelijk", "Optimistisch, Vriendelijk en Naïef over menselijke motieven"], answer: 0, explanation: "'Cynical' = cynisch, wantrouwend over goede bedoelingen." },
       { q: "What is 'parallelism' in writing?", options: ["Tegenstelling", "Grammaticaal gelijkvormige structuren achter ritme en nadruk", "Grammaticaal gelijkvormige structuren voor ritme en nadruk", "Herhaling van woorden"], answer: 2, explanation: "Parallelism: 'She loves reading, writing, and drawing.' — consistent grammatical structure." },
       { q: "What does 'substantiate' mean?", options: ["Tegenspreken of Samenvatten", "Samenvatten", "Onderbouwen/bewijzen", "Tegenspreken"], answer: 2, explanation: "'Substantiate' = onderbouwen, bewijs leveren voor." },
+    ],
+    groep8: [
+      // Vocabulary (8)
+      { q: "What is the English word for 'huiswerk'?", options: ["housework", "homework", "homeplace", "houseplace"], answer: 1, explanation: "Homework = schoolwerk thuis. Housework = huishoudelijk werk." },
+      { q: "Translate: 'Ik ga naar school.'", options: ["I go at school", "I go to school", "I going school", "I am going at school"], answer: 1, explanation: "'Naar' = 'to'. 'I go to school'." },
+      { q: "What is the opposite of 'always'?", options: ["sometimes", "never", "often", "usually"], answer: 1, explanation: "Always (altijd) ↔ never (nooit)." },
+      { q: "What does 'expensive' mean?", options: ["goedkoop", "duur", "groot", "klein"], answer: 1, explanation: "Expensive = duur. Cheap = goedkoop." },
+      { q: "Choose the correct word: 'I have ___ apple.'", options: ["a", "an", "the", "some"], answer: 1, explanation: "Voor klinker (a, e, i, o, u) gebruik je 'an'." },
+      { q: "What is 'maandag' in English?", options: ["Sunday", "Monday", "Tuesday", "Wednesday"], answer: 1, explanation: "Monday = maandag." },
+      { q: "Translate: 'Hoe heet je?'", options: ["What are you?", "Who are you?", "What is your name?", "How is your name?"], answer: 2, explanation: "Standaardvraag: 'What is your name?'" },
+      { q: "What is the meaning of 'because'?", options: ["maar", "ook", "omdat", "zodat"], answer: 2, explanation: "Because = omdat. Voorbeeld: 'I am happy because the sun shines.'" },
+      // Grammar (8)
+      { q: "Choose the correct verb: 'She ___ to school every day.'", options: ["go", "goes", "going", "gone"], answer: 1, explanation: "Present simple, hij/zij/het: werkwoord + s. 'She goes'." },
+      { q: "Past tense of 'eat'?", options: ["eated", "ate", "eaten", "eating"], answer: 1, explanation: "'Eat' is onregelmatig: eat - ate - eaten." },
+      { q: "What is the past tense of 'go'?", options: ["goed", "went", "gone", "going"], answer: 1, explanation: "Onregelmatig: go - went - gone." },
+      { q: "Choose: 'I have ___ my homework.'", options: ["did", "do", "done", "doing"], answer: 2, explanation: "Present perfect: have + voltooid deelwoord 'done'." },
+      { q: "Choose: 'She ___ a book yesterday.'", options: ["read", "reads", "reading", "is reading"], answer: 0, explanation: "Past simple: 'read' (uitspraak: red). Verleden tijd zonder hulpwerkwoord." },
+      { q: "Question form: 'You speak English.' →", options: ["Speak you English?", "Do you speak English?", "Are you speaking English?", "You speak English?"], answer: 1, explanation: "Vraagvorm present simple: do/does + onderwerp + werkwoord." },
+      { q: "Negation: 'I like coffee.' →", options: ["I no like coffee.", "I not like coffee.", "I don't like coffee.", "I am not like coffee."], answer: 2, explanation: "Negatieve vorm present simple: don't / doesn't + werkwoord." },
+      { q: "Comparative of 'big'?", options: ["bigger", "more big", "biggest", "more bigger"], answer: 0, explanation: "Korte bijvoeglijke naamwoorden: medeklinker verdubbelen + er = 'bigger'." },
+      // Common phrases + reading (4)
+      { q: "What does 'See you later!' mean?", options: ["Tot ziens", "Goedemorgen", "Het spijt me", "Hartelijk dank"], answer: 0, explanation: "'See you later' = informele afscheidsgroet." },
+      { q: "Translate 'Excuse me'", options: ["Pardon / Excuseer mij", "Met excuses", "Tot ziens", "Hartelijk welkom"], answer: 0, explanation: "'Excuse me' = pardon, om aandacht te trekken of voorbij te lopen." },
+      { q: "What does 'hurry up' mean?", options: ["Sta op", "Schiet op / Haast je", "Ga zitten", "Ga slapen"], answer: 1, explanation: "'Hurry up' = haast je, snel." },
+      { q: "What is 'voor altijd' in English?", options: ["forever", "never", "always", "every day"], answer: 0, explanation: "Forever = voor altijd. Always = altijd." },
     ],
     klas1: [
       { q: "What is a synonym for 'happy'?", options: ["Joyful", "Angry", "Angry of Tired", "Tired"], answer: 0, explanation: "'Joyful' = blij, vrolijk." },
