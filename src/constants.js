@@ -2428,6 +2428,50 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welk getal is een priemgetal?", options: ["37", "39", "27", "51"], answer: 0, explanation: "37 is alleen deelbaar door 1 en 37." },
       { q: "Bereken: 2,5 + 3/4.", options: ["3,25", "3,0", "3,75", "3,5"], answer: 0, explanation: "2,5 + 0,75 = 3,25." },
     ],
+    groep8: [
+      // Procenten + korting (8)
+      { q: "Een jas kost €120. Hij is afgeprijsd met 35%. Wat betaal je?", options: ["€72", "€78", "€84", "€90"], answer: 1, explanation: "35% van 120 = 42. 120 − 42 = €78." },
+      { q: "Een laptop van €640 stijgt 5% in prijs. Wat is de nieuwe prijs?", options: ["€664", "€672", "€680", "€688"], answer: 1, explanation: "5% van 640 = 32. 640 + 32 = €672." },
+      { q: "Op een aanbieding van €45 zit nu 1/3 korting. Wat betaal je?", options: ["€15", "€20", "€30", "€35"], answer: 2, explanation: "1/3 van 45 = 15. 45 − 15 = €30." },
+      { q: "Een schoen kostte €80, nu €60. Hoeveel procent korting?", options: ["20%", "25%", "30%", "33%"], answer: 1, explanation: "Korting = 20. 20÷80 × 100 = 25%." },
+      { q: "Bij een fles staat 'inclusief 21% btw'. Het btw-bedrag is €4,20. Wat is de prijs zonder btw?", options: ["€16", "€18", "€20", "€21"], answer: 2, explanation: "21% = €4,20, dus 100% (zonder btw) = 4,20 ÷ 0,21 = €20." },
+      { q: "30% van een klas zijn meisjes. Er zijn 21 jongens. Hoeveel meisjes?", options: ["7", "9", "11", "13"], answer: 1, explanation: "70% = jongens = 21, dus 10% = 3, en 30% = 9 meisjes." },
+      { q: "Een fiets kost €350. Na een korting van 14% wat is de prijs?", options: ["€291", "€301", "€311", "€321"], answer: 1, explanation: "14% van 350 = 49. 350 − 49 = €301." },
+      { q: "Welk percentage is 18 van de 60?", options: ["25%", "30%", "33%", "36%"], answer: 1, explanation: "18 ÷ 60 = 0,3 = 30%." },
+      // Breuken + decimalen (5)
+      { q: "Bereken: 2/3 + 1/4.", options: ["3/7", "11/12", "5/12", "1/12"], answer: 1, explanation: "Gelijke noemer 12: 8/12 + 3/12 = 11/12." },
+      { q: "Welke breuk hoort bij 0,375?", options: ["1/4", "3/8", "1/3", "5/12"], answer: 1, explanation: "0,375 = 375/1000 = 3/8." },
+      { q: "Bereken: 5/6 − 1/3.", options: ["4/6", "1/2", "2/3", "1/3"], answer: 1, explanation: "5/6 − 2/6 = 3/6 = 1/2." },
+      { q: "0,4 × 0,25 = ?", options: ["0,01", "0,1", "1,0", "0,25"], answer: 1, explanation: "0,4 × 0,25 = 0,1." },
+      { q: "Wat is 7/8 als decimaal getal?", options: ["0,75", "0,825", "0,875", "0,75"], answer: 2, explanation: "7 ÷ 8 = 0,875." },
+      // Verhoudingen + recepten (4)
+      { q: "Voor 6 pannenkoeken heb je 240 ml melk nodig. Hoeveel ml voor 9 pannenkoeken?", options: ["320 ml", "340 ml", "360 ml", "380 ml"], answer: 2, explanation: "240 ÷ 6 = 40 ml per pannenkoek. 40 × 9 = 360 ml." },
+      { q: "In een mengsel zit zout en suiker in verhouding 2:5. Bij 14 lepels zout, hoeveel suiker?", options: ["28", "30", "35", "42"], answer: 2, explanation: "2:5 → 14:35. Want 14 ÷ 2 × 5 = 35." },
+      { q: "5 t-shirts kosten €40. Wat kosten 8 t-shirts?", options: ["€56", "€60", "€64", "€72"], answer: 2, explanation: "1 t-shirt = €8. 8 × 8 = €64." },
+      { q: "Een auto rijdt 14 km op 1 liter. Hoeveel liter voor 350 km?", options: ["20", "25", "28", "30"], answer: 1, explanation: "350 ÷ 14 = 25 liter." },
+      // Tijd / afstand / snelheid (4)
+      { q: "Een fietser rijdt 18 km in 3/4 uur. Wat is de snelheid?", options: ["20 km/u", "22 km/u", "24 km/u", "26 km/u"], answer: 2, explanation: "18 ÷ 0,75 = 24 km/u." },
+      { q: "Een bus vertrekt om 9:45 en doet 2 uur 35 minuten over de rit. Hoe laat komt hij aan?", options: ["12:15", "12:20", "12:25", "12:30"], answer: 1, explanation: "9:45 + 2 uur = 11:45. + 35 min = 12:20." },
+      { q: "Een trein rijdt 240 km met snelheid 80 km/u. Hoe lang doet hij erover?", options: ["2 uur", "2,5 uur", "3 uur", "3,5 uur"], answer: 2, explanation: "240 ÷ 80 = 3 uur." },
+      { q: "Hoeveel seconden duren 2 uur en 15 minuten?", options: ["7.500", "8.100", "8.700", "9.000"], answer: 1, explanation: "2u 15min = 135 min = 135 × 60 = 8.100 sec." },
+      // Oppervlakte + omtrek (4)
+      { q: "Een rechthoek heeft een omtrek van 60 cm en lengte van 22 cm. Wat is de breedte?", options: ["6 cm", "8 cm", "10 cm", "12 cm"], answer: 1, explanation: "Omtrek = 2(l+b). 60 = 2(22+b) → 22+b=30 → b=8 cm." },
+      { q: "Een driehoek heeft basis 16 cm en hoogte 9 cm. Wat is de oppervlakte?", options: ["64 cm²", "72 cm²", "80 cm²", "144 cm²"], answer: 1, explanation: "½ × 16 × 9 = 72 cm²." },
+      { q: "Wat is de oppervlakte van een vierkant met zijde 13 cm?", options: ["146 cm²", "156 cm²", "169 cm²", "189 cm²"], answer: 2, explanation: "13 × 13 = 169 cm²." },
+      { q: "De omtrek van een cirkel is 31,4 cm. Wat is de straal? (π ≈ 3,14)", options: ["3 cm", "5 cm", "8 cm", "10 cm"], answer: 1, explanation: "Omtrek = 2πr → 31,4 = 6,28r → r = 5 cm." },
+      // Inhoud (3)
+      { q: "Een aquarium is 80 × 40 × 50 cm. Hoeveel liter water past erin?", options: ["100 L", "120 L", "140 L", "160 L"], answer: 3, explanation: "Volume = 80 × 40 × 50 = 160.000 cm³ = 160 liter." },
+      { q: "Een kubus heeft een ribbe van 7 cm. Wat is het volume?", options: ["294 cm³", "343 cm³", "441 cm³", "549 cm³"], answer: 1, explanation: "7 × 7 × 7 = 343 cm³." },
+      { q: "Een doos van 50 × 20 × 30 cm wordt halfvol gevuld. Hoeveel liter is dat?", options: ["10 L", "15 L", "20 L", "25 L"], answer: 1, explanation: "Volume = 30.000 cm³ = 30 liter. Halfvol = 15 liter." },
+      // Statistiek (3)
+      { q: "De cijfers van Sara: 6, 8, 7, 9, 7, 8, 7. Wat is de modus?", options: ["6", "7", "8", "9"], answer: 1, explanation: "De modus is het cijfer dat het vaakst voorkomt: 7 (3×)." },
+      { q: "Wat is de mediaan van 4, 7, 9, 12, 15?", options: ["7", "9", "12", "9,4"], answer: 1, explanation: "Bij oneven aantal: middelste getal = 9." },
+      { q: "De temperaturen waren: 18, 22, 21, 19, 25°C. Wat is de gemiddelde temperatuur?", options: ["20°C", "21°C", "22°C", "23°C"], answer: 1, explanation: "Som = 105. 105 ÷ 5 = 21°C." },
+      // Negatieve getallen + diversen (3)
+      { q: "Bereken: −12 + 7 − 4.", options: ["−9", "−5", "1", "3"], answer: 0, explanation: "−12 + 7 = −5; −5 − 4 = −9." },
+      { q: "Welk getal komt op de stippeltjes? 4, 9, 19, 39, 79, ___", options: ["119", "139", "159", "179"], answer: 2, explanation: "Patroon: ×2 + 1. 79 × 2 + 1 = 159." },
+      { q: "Wat is het kleinste gemene veelvoud (kgv) van 6 en 8?", options: ["12", "14", "24", "48"], answer: 2, explanation: "Veelvouden van 6: 6,12,18,24. Van 8: 8,16,24. Kleinste samen = 24." },
+    ],
     klas1: [
       { q: "Vereenvoudig: 12/18", options: ["6/9", "4/6", "2/3", "3/4"], answer: 2, explanation: "12/18 = 2/3 (deel door 6)." },
       { q: "Wat is √144?", options: ["11", "13", "14", "12"], answer: 3, explanation: "12 × 12 = 144." },
@@ -2741,6 +2785,45 @@ export const SAMPLE_QUESTIONS = {
       { q: "Welke schrijfwijze is correct?", options: ["hij heeft gescored", "hij heeft gescore", "hij heeft gescoord", "hij heeft scoren"], answer: 2, explanation: "'Gescoord' — het voltooid deelwoord van 'scoren'." },
       { q: "Wat is een epanalepsis?", options: ["Herhaling aan einde en einde van een zin of alinea", "Overdrijving", "Herhaling aan begin en einde van een zin of alinea", "Een vergelijking"], answer: 2, explanation: "Epanalepsis: 'In het begin was het woord, en aan het einde was het woord.' — herhalende structuur." },
       { q: "Welke zin bevat een meewerkend voorwerp?", options: ["Zij geeft haar broer een cadeau.", "Wij lopen naar school. of De hond blaft luid.", "Wij lopen naar school.", "Hij leest een boek."], answer: 0, explanation: "Aan wie geeft zij? → haar broer = meewerkend voorwerp." },
+    ],
+    groep8: [
+      // Werkwoordspelling (8)
+      { q: "Welke schrijfwijze is correct?", options: ["hij wordt", "hij word", "hij wort", "hij werd of wordt"], answer: 0, explanation: "Stam 'word' + t = 'wordt' (hij/zij/het, tegenwoordige tijd)." },
+      { q: "Vul in: 'Gisteren ___ ik naar de markt.'", options: ["fietst", "fietste", "fietsde", "fietsten"], answer: 1, explanation: "Verleden tijd zwak werkwoord: stam 'fiets' + te = 'fietste' (omdat 's' in 't kofschip x' zit)." },
+      { q: "Vul in: 'De brief ___ door de leraar voorgelezen.'", options: ["werd", "werdt", "wordt", "word"], answer: 0, explanation: "Verleden tijd lijdende vorm: 'werd' (geen t, want verleden tijd)." },
+      { q: "Welke zin heeft een dt-fout?", options: ["Hij rijdt naar huis.", "Zij wordt verdrietig.", "De fiets bijdt.", "Zij vindt het leuk."], answer: 2, explanation: "'Bijdt' is fout — moet 'bijt' zijn (stam van bijten + niets, tegenwoordige tijd)." },
+      { q: "Wat is de stam van 'antwoorden'?", options: ["antwoor", "antwoord", "antwoorde", "antwoorden"], answer: 1, explanation: "Stam = ik-vorm = 'antwoord'." },
+      { q: "Welke zin is correct?", options: ["Hij heeft de bal gegooit.", "Hij heeft de bal gegooid.", "Hij heeft de bal gegooi.", "Hij heeft de bal gegoit."], answer: 1, explanation: "Voltooid deelwoord 'gooien' = 'gegooid' (zwak werkwoord eindigt op d, niet t)." },
+      { q: "Vul in: 'De kinderen ___ in het zwembad.'", options: ["zwemt", "zwemmen", "zwommen", "gezwommen"], answer: 1, explanation: "Tegenwoordige tijd, meervoud: 'zwemmen'." },
+      { q: "Welke zin bevat een fout?", options: ["Wij gingen naar het strand.", "Hij heeft een grappig boek.", "Ik wordt vrolijk.", "Zij hebben gewonnen."], answer: 2, explanation: "'Ik wordt' is fout — moet 'Ik word' (stam zonder t bij 'ik')." },
+      // Spelling (6)
+      { q: "Welk woord is correct gespeld?", options: ["alarm", "allarm", "allarrm", "alarrm"], answer: 0, explanation: "'Alarm' — één l, één r, één m." },
+      { q: "Welk woord is correct gespeld?", options: ["realiteit", "realiteid", "realiteit", "realeteit"], answer: 0, explanation: "'Realiteit' — één l, eindigt op -teit." },
+      { q: "Wat is de juiste schrijfwijze?", options: ["chaos", "kaos", "chaoss", "chaaos"], answer: 0, explanation: "'Chaos' — leenwoord uit het Grieks, met 'ch'." },
+      { q: "Hoe schrijf je dit woord?", options: ["enthousiasme", "enthousiaasme", "enthousiasme", "enthousiamse"], answer: 0, explanation: "'Enthousiasme' — let op de volgorde -iasme." },
+      { q: "Welke schrijfwijze is correct?", options: ["aardrijkskunde", "aardrykskunde", "aardrijkskunde", "aardrijkskunden"], answer: 0, explanation: "'Aardrijkskunde' — één samenstelling, geen tussenklanken." },
+      { q: "Welk woord is correct?", options: ["sympathie", "sympatie", "simpatie", "sympatieë"], answer: 0, explanation: "'Sympathie' met 'th' (afkomst Grieks)." },
+      // Synoniem / antoniem / betekenis (5)
+      { q: "Wat is een synoniem van 'opgewekt'?", options: ["verdrietig", "vrolijk", "verveeld", "boos"], answer: 1, explanation: "'Opgewekt' = vrolijk, blij." },
+      { q: "Wat is het antoniem van 'verstandig'?", options: ["dom", "verstandelijk", "wijs", "geleerd"], answer: 0, explanation: "Antoniem (tegendeel) van verstandig is 'dom' of 'onverstandig'." },
+      { q: "Wat betekent 'rivaliteit'?", options: ["Vriendschap", "Wedijver of concurrentie", "Verdriet", "Hulpvaardigheid"], answer: 1, explanation: "Rivaliteit = wedijver tussen rivalen, concurrentie." },
+      { q: "Wat is een synoniem van 'naïef'?", options: ["wantrouwig", "goedgelovig", "agressief", "ervaren"], answer: 1, explanation: "Naïef = goedgelovig, weinig levenservaring." },
+      { q: "Wat betekent 'absurd'?", options: ["Heel erg duur", "Logisch en verstandig", "Volstrekt onlogisch", "Een soort dans"], answer: 2, explanation: "Absurd = volstrekt onlogisch, dwaas." },
+      // Stijlfiguren + betekenis (3)
+      { q: "Wat is een metafoor?", options: ["Een vergelijking met 'als' of 'zoals'", "Een directe vergelijking zonder 'als'", "Een overdrijving", "Een herhaling van klanken"], answer: 1, explanation: "Metafoor = directe vergelijking. Bv: 'Hij is een leeuw' (niet: hij is ALS een leeuw)." },
+      { q: "Welk stijlfiguur is 'broodmagere mensen' (overdrijving)?", options: ["alliteratie", "personificatie", "hyperbool", "metafoor"], answer: 2, explanation: "Hyperbool = overdrijving voor effect." },
+      { q: "Wat is alliteratie?", options: ["Zinnen met dezelfde lengte", "Woorden die rijmen aan het einde", "Beginklank-herhaling: 'wervelwind waaide weg'", "Een woord dat staat voor iets anders"], answer: 2, explanation: "Alliteratie = herhaling van beginmedeklinker." },
+      // Zinsbouw + interpunctie (4)
+      { q: "Welke zin is grammaticaal correct?", options: ["Hij is groter dan ik.", "Hij is groter als ik.", "Hij is meer groot als ik.", "Hij is groter wie ik."], answer: 0, explanation: "Bij vergrotende trap altijd 'dan', nooit 'als'." },
+      { q: "Welk teken hoort op de stippen: 'Pas op___ er ligt een plas!'?", options: [".", ",", ":", "!"], answer: 3, explanation: "Een uitroep krijgt een uitroepteken." },
+      { q: "Welk woord is een voegwoord?", options: ["snel", "groot", "omdat", "lopen"], answer: 2, explanation: "'Omdat' verbindt twee zinnen (een hoofdzin met een bijzin)." },
+      { q: "Welke zin is een vraagzin?", options: ["Het regent vandaag.", "Wat regent het hard.", "Regent het vandaag?", "Regen vandaag!"], answer: 2, explanation: "Vraagzin: persoonsvorm voorop + vraagteken." },
+      // Lidwoord / voornaamwoord (3)
+      { q: "Welk lidwoord hoort bij 'museum'?", options: ["de", "het", "een", "Beide"], answer: 1, explanation: "'Het museum' — museum is een het-woord." },
+      { q: "Welk voornaamwoord past: '___ moeder maakt eten.'", options: ["Hen", "Hun", "Haar", "Zijn"], answer: 2, explanation: "'Haar' (bezittelijk vrouwelijk) of 'Zijn' (bezittelijk mannelijk) — beide kunnen, hier de meest neutrale optie. Strikt: het hangt af van wie 'moeder' bezit." },
+      { q: "Welke zin gebruikt 'die' correct?", options: ["Het boek die ik las.", "De film die ik zag.", "Het kind die speelt.", "De jas die ligt daar."], answer: 1, explanation: "'Die' bij de-woorden (de film). 'Dat' bij het-woorden (het boek, het kind)." },
+      // Spreekwoorden + uitdrukkingen (1)
+      { q: "Wat betekent het spreekwoord 'Het regent pijpenstelen'?", options: ["Het is een grappige dag", "Er vallen pijpen uit de lucht", "Het regent heel hard", "Het is een rare regen"], answer: 2, explanation: "Een Nederlands spreekwoord: 'pijpenstelen' = lange rechte regen = stortregen." },
     ],
     klas1: [
       { q: "Wat is een metafoor?", options: ["bloemens", "bloemjes", "bloemen", "bloems"], answer: 2, explanation: "'Bloemen' is het meervoud van 'bloem'." },
