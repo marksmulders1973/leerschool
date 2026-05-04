@@ -684,25 +684,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        {/* 3D-kubus teaser óók voor returning users — visueel speelse
-            interactie die zelfde "wow"-effect geeft als bij nieuwe bezoekers. */}
-        {step === "role" && (() => {
-          let savedName = null;
-          try {
-            savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          if (!savedName) return null;
-          return (
-            <div style={{ width: "100%", maxWidth: 320, marginBottom: 16 }}>
-              <Suspense fallback={null}>
-                <Mini3DTeaser onCTA={() => {
-                  if (onPickPath) onPickPath("ruimtemeetkunde");
-                  else if (onLearnPathsHub) onLearnPathsHub();
-                }} />
-              </Suspense>
-            </div>
-          );
-        })()}
+        {/* 3D-kubus teaser staat alleen in de nieuwe-bezoeker hero (eerste tegel
+            van de 6). Returning users hebben 'm niet meer nodig — ze zijn
+            al overtuigd; geef ze in plaats daarvan een focus op continue-action. */}
 
         {/* Daily challenge + Hero-Mastery-CTA voor terugkerende leerlingen
             (Prio 2 + Prio 3 uit competitor-research). Daily-banner staat
@@ -989,53 +973,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </button>
               );
             })()}
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 14, textAlign: "center" }}>
-              of kies hieronder een rol ↓
-            </div>
           </div>
         )}
 
-        {/* Role-buttons (Leerling / Student / Leerkracht) zijn voor nieuwe
-            bezoekers verplaatst naar de 6-tegel hero hierboven. Voor
-            terugkerende leerlingen blijven ze hier, op smalle 3-knops rij. */}
-        {step === "role" && (() => {
-          let hasName = false;
-          try {
-            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          return hasName;
-        })() && (
-          <div style={{ width: "100%", maxWidth: 360, marginBottom: 4 }}>
-            <div style={{ display: "flex", gap: 10 }}>
-              {[
-                { role: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff" },
-                { role: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed" },
-                { role: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b" },
-              ].map(({ role, emoji, label, sub, color }) => (
-                <button key={role} onClick={() => handleRoleClick(role)} style={{
-                  flex: 1,
-                  border: `1.5px solid ${color}55`,
-                  padding: "13px 6px",
-                  cursor: "pointer",
-                  borderRadius: 16,
-                  background: `${color}14`,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: 5,
-                  transition: "transform 0.15s ease, background 0.15s ease",
-                }}
-                onMouseEnter={e => { e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.background = `${color}28`; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.background = `${color}14`; }}
-                >
-                  <span style={{ fontSize: 26 }}>{emoji}</span>
-                  <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, color }}>{label}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{sub}</div>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        {/* Rol-tegels (Leerling / Student / Leerkracht) zijn voor nieuwe
+            bezoekers IN de 6-tegel hero. Voor returning users tonen we ze
+            niet — die hebben al een rol gekozen, anders gerichte navigatie
+            via Daily-Challenge → Leren/Oefenen → Mijn voortgang. */}
 
         {/* FeatureShowcase verwijderd — die kaarten horen onder Oefenen-tab,
             niet op de homepage. Hero-tegels zijn al de toegangspoort. */}
