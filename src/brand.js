@@ -9,6 +9,6 @@ export const BRAND = {
   domain: "leerkwartier.app",
   email: "info@smulsoft.nl",
   publisher: "Smulsoft",
-  slogan: "Elk kwartier slimmer.",
+  slogan: "Een kwartier per dag, een leven lang slimmer.",
   payoff: "15 minuten leren. Daarna klaar of spelen.",
 };
