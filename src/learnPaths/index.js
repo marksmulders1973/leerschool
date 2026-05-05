@@ -37,6 +37,7 @@ import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js"
 import onregelmatigeWerkwoordenV2Engels from "./onregelmatigeWerkwoordenV2Engels.js";
 import celBiologie from "./celBiologie.js";
 import voortplantingHormonenBiologie from "./voortplantingHormonenBiologie.js";
+import geneticaErfelijkheidBiologie from "./geneticaErfelijkheidBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
 import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
 import tachtigjarigeOorlogGeschiedenis from "./tachtigjarigeOorlogGeschiedenis.js";
@@ -105,6 +106,7 @@ export const ALL_LEARN_PATHS = {
   // Biologie
   "cel-biologie": celBiologie,
   "voortplanting-hormonen-biologie": voortplantingHormonenBiologie,
+  "genetica-erfelijkheid-biologie": geneticaErfelijkheidBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
