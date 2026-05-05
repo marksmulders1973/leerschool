@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense, Component } from "react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import { BRAND } from "../brand.js";
@@ -8,6 +8,51 @@ import { track } from "../utils.js";
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
 const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
+
+// Error-boundary specifiek rond de 3D-tegel. Als WebGL faalt of three.js
+// crasht (kan voorkomen op zwakkere mobiele GPU's of bij 216 unit-cubes
+// op slechte drivers), valt 'ie terug op een statisch fallback-tile zodat
+// de rest van de home niet zwart wordt.
+class TeaserErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  componentDidCatch(error, info) {
+    try { track("home_3d_teaser_error", { message: String(error?.message || error).slice(0, 200) }); } catch {}
+    // eslint-disable-next-line no-console
+    console.warn("[3D-teaser] crash, fallback geactiveerd:", error, info);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: 12,
+          textAlign: "center",
+          gap: 6,
+        }}>
+          <div style={{ fontSize: 32 }} aria-hidden="true">📦</div>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#ffd54f" }}>
+            Ruimtemeetkunde
+          </div>
+          <div style={{ fontSize: 10, color: "rgba(255,255,255,0.55)" }}>
+            3D-voorbeeld kon niet laden
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 // Mini-illustratie voor de "Leren"-tegel: stapeltje van drie boeken in
 // brand-groen / goud-geel / licht-blauw, met titel-regeltjes op de spines.
@@ -895,20 +940,22 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   padding: 0,
                   overflow: "hidden",
                 }}>
-                  <Suspense fallback={
-                    <div style={{
-                      width: "100%", height: "100%",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 11, color: "rgba(224,230,240,0.55)",
-                    }}>
-                      3D laadt…
-                    </div>
-                  }>
-                    <Mini3DTeaser onCTA={() => {
-                      if (onPickPath) onPickPath("ruimtemeetkunde");
-                      else if (onLearnPathsHub) onLearnPathsHub();
-                    }} />
-                  </Suspense>
+                  <TeaserErrorBoundary>
+                    <Suspense fallback={
+                      <div style={{
+                        width: "100%", height: "100%",
+                        display: "flex", alignItems: "center", justifyContent: "center",
+                        fontSize: 11, color: "rgba(224,230,240,0.55)",
+                      }}>
+                        3D laadt…
+                      </div>
+                    }>
+                      <Mini3DTeaser onCTA={() => {
+                        if (onPickPath) onPickPath("ruimtemeetkunde");
+                        else if (onLearnPathsHub) onLearnPathsHub();
+                      }} />
+                    </Suspense>
+                  </TeaserErrorBoundary>
                 </div>
                 {/* 5 reguliere tegels. Tegels met `icon` (SVG) gebruiken een
                     layout waarbij de illustratie de bovenkant vult en de tekst
