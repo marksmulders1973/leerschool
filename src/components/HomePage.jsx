@@ -13,12 +13,16 @@ const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
 // vraag-tekstregeltjes bovenin en 4 antwoord-rijen, waarvan er 1 als correct
 // gemarkeerd is (groene rand + vinkje). Vervangt het generieke 🎯-emoji
 // zodat de tegel meteen communiceert: meerkeuze-vraag.
-function QuizCardIcon({ size = 40, accent = "#ff8030", correctHex = "#00c853" }) {
+//
+// Default: schaal mee met de container (width/height 100%). Voor losstaande
+// gebruik (bv. tooltips) kun je nog steeds een vaste size meegeven.
+function QuizCardIcon({ size, accent = "#ff8030", correctHex = "#00c853" }) {
+  const dim = size != null ? { width: size, height: size } : { width: "100%", height: "100%" };
   return (
     <svg
       viewBox="0 0 100 100"
-      width={size}
-      height={size}
+      {...dim}
+      preserveAspectRatio="xMidYMid meet"
       aria-hidden="true"
       focusable="false"
       style={{ display: "block" }}
@@ -798,7 +802,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             {
               key: "oefenen",
               emoji: "🎯",
-              icon: <QuizCardIcon size={40} accent="#ff8030" />,
+              icon: <QuizCardIcon accent="#ff8030" />,
               label: "Test je kennis",
               sub: "snelle quiz, in 15 min",
               color: "#ff8030",
@@ -834,7 +838,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     }} />
                   </Suspense>
                 </div>
-                {/* 5 reguliere tegels */}
+                {/* 5 reguliere tegels. Tegels met `icon` (SVG) gebruiken een
+                    layout waarbij de illustratie de bovenkant vult en de tekst
+                    eronder zit; tegels met emoji houden de compacte centrale layout. */}
                 {tiles.map(({ key, emoji, icon, label, sub, color, onClick }) => (
                   <button
                     key={key}
@@ -844,6 +850,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       background: `${color}14`,
                       border: `1.5px solid ${color}55`,
                       color: "#fff",
+                      ...(icon ? { justifyContent: "flex-start", paddingTop: 8 } : {}),
                     }}
                     onMouseEnter={e => {
                       e.currentTarget.style.transform = "translateY(-2px)";
@@ -854,9 +861,19 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       e.currentTarget.style.background = `${color}14`;
                     }}
                   >
-                    {icon
-                      ? <span style={{ display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1 }}>{icon}</span>
-                      : <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>}
+                    {icon ? (
+                      <div style={{
+                        width: "100%",
+                        flex: "1 1 0",
+                        minHeight: 0,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: 4,
+                      }}>{icon}</div>
+                    ) : (
+                      <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
+                    )}
                     <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
                   </button>
