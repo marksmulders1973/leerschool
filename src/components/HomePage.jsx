@@ -539,6 +539,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
   const [installPrompt, setInstallPrompt] = useState(null);
+  const [installBezig, setInstallBezig] = useState(false);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
   const [shareToast, setShareToast] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -1075,14 +1076,54 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* PWA install banner — altijd zichtbaar tot app geïnstalleerd is */}
         {step === "role" && !isStandalone && (
           <button
+            disabled={installBezig}
             onClick={async () => {
-              if (installPrompt) {
-                installPrompt.prompt();
-                const { outcome } = await installPrompt.userChoice;
+              if (installBezig) return;
+              const triggerPrompt = async (px) => {
+                px.prompt();
+                const { outcome } = await px.userChoice;
                 if (outcome === "accepted") setInstallPrompt(null);
-                return;
+              };
+              if (installPrompt) { await triggerPrompt(installPrompt); return; }
+              // Geen prompt-event nog binnengekomen — kan een race zijn (vooral
+              // direct ná uninstall). Wacht tot 2,5s op een binnenkomend
+              // `beforeinstallprompt`-event voordat we de fallback-uitleg tonen.
+              setInstallBezig(true);
+              const waiting = await new Promise((resolve) => {
+                let done = false;
+                const handler = (e) => {
+                  if (done) return;
+                  done = true;
+                  e.preventDefault();
+                  window.removeEventListener("beforeinstallprompt", handler);
+                  resolve(e);
+                };
+                window.addEventListener("beforeinstallprompt", handler);
+                // Check elke 250ms of het globale handler in index.html intussen
+                // het event al heeft opgeslagen.
+                const interval = setInterval(() => {
+                  if (window.__pwaInstallPrompt && !done) {
+                    done = true;
+                    clearInterval(interval);
+                    window.removeEventListener("beforeinstallprompt", handler);
+                    resolve(window.__pwaInstallPrompt);
+                  }
+                }, 250);
+                setTimeout(() => {
+                  if (done) return;
+                  done = true;
+                  clearInterval(interval);
+                  window.removeEventListener("beforeinstallprompt", handler);
+                  resolve(null);
+                }, 2500);
+              });
+              setInstallBezig(false);
+              if (waiting) {
+                setInstallPrompt(waiting);
+                await triggerPrompt(waiting);
+              } else {
+                setShowInstallHelp(true);
               }
-              setShowInstallHelp(true);
             }}
             className="lk-content-wide"
             style={{
@@ -1107,7 +1148,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Gratis · werkt ook offline · sneller dan de browser
               </div>
             </div>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>Installeer →</span>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>
+              {installBezig ? "Een moment…" : "Installeer →"}
+            </span>
           </button>
         )}
 
