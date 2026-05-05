@@ -308,6 +308,12 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
   const [globalHof, setGlobalHof] = useState({});
   const [hofOpen, setHofOpen] = useState(false);
   const [openHofKeys, setOpenHofKeys] = useState(new Set());
+  // Drie aparte scoreboards: 'mijn' = alleen jouw scores, 'world' = top-50
+  // wereldwijd, 'obli' = OBLITERATOR-scores (los van de toetsen). Default
+  // start op 'mijn' als de gebruiker een naam heeft (focus op eigen
+  // progress) — anders 'world' (geen eigen data te tonen).
+  const [view, setView] = useState(() => (currentUser ? "mijn" : "world"));
+  const [obliScores, setObliScores] = useState([]);
   const [challenged, setChallenged] = useState(() => {
     try { return JSON.parse(localStorage.getItem("ls_challenged") || "{}"); } catch { return {}; }
   });
@@ -321,6 +327,13 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
   useEffect(() => {
     supabase.from("leaderboard").select("player_name, subject, level, topic, title, score, total, percentage, time_taken, completed_at").order("percentage", { ascending: false }).order("time_taken", { ascending: true, nullsFirst: false }).order("score", { ascending: false }).limit(50)
       .then(({ data: rows }) => { setGlobalData(rows || []); })
+      .catch(() => {});
+    // OBLITERATOR-scores apart ophalen — top-50 op punten
+    supabase.from("obliterator_scores")
+      .select("player_name, score, level, created_at")
+      .order("score", { ascending: false })
+      .limit(50)
+      .then(({ data: rows }) => { setObliScores(rows || []); })
       .catch(() => {});
     // Hall of Fame van Supabase laden (top 5 per vak/niveau met vragen)
     supabase.from("hall_of_fame").select("subject, level, player_name, time_taken, completed_at, questions").order("time_taken", { ascending: true })
@@ -336,7 +349,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
       }).catch(() => {});
   }, []);
 
-  const entries = (globalData || data).map(e => ({
+  const allEntries = (globalData || data).map(e => ({
     player: e.player_name || e.player,
     subject: e.subject,
     level: e.level,
@@ -348,13 +361,100 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
     topic: e.topic || null,
     title: e.title || null,
   }));
+  // Voor 'mijn'-tab: filter op currentUser. Sorteer op percentage desc, dan
+  // tijd asc — zelfde logica als wereldwijd, maar alleen eigen scores.
+  const myEntries = currentUser
+    ? allEntries.filter((e) => (e.player || "").toLowerCase().trim() === (currentUser || "").toLowerCase().trim())
+    : [];
+  const entries = view === "mijn" ? myEntries : allEntries;
 
   return (
     <div style={styles.page}>
       <style>{`@keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`}</style>
-      <Header title="Scorebord 🏆" subtitle={globalData ? "🌍 Globaal · Top 50" : "Top scores"} onBack={onBack} onHome={onHome} />
+      <Header title="Scorebord 🏆" subtitle={
+        view === "mijn" ? "👤 Mijn scores" :
+        view === "obli" ? "🛸 OBLITERATOR top-50" :
+        (globalData ? "🌐 Wereldwijd · Top 50" : "Top scores")
+      } onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
-        {onKampioenen && (
+        {/* Tab-bar: drie verschillende scoreboards los van elkaar zodat
+            het duidelijk is welk type score je bekijkt. */}
+        <div style={{ display: "flex", gap: 6, marginBottom: 14, padding: 4, borderRadius: 12, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+          {[
+            { id: "mijn", label: "👤 Mijn", disabled: !currentUser },
+            { id: "world", label: "🌐 Wereldwijd" },
+            { id: "obli", label: "🛸 OBLITERATOR" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              disabled={tab.disabled}
+              onClick={() => setView(tab.id)}
+              style={{
+                flex: 1,
+                padding: "10px 6px",
+                borderRadius: 8,
+                border: "none",
+                background: view === tab.id
+                  ? (tab.id === "obli" ? "linear-gradient(135deg, #ff8030, #ffaa00)" : "linear-gradient(135deg, #00c853, #69f0ae)")
+                  : "transparent",
+                color: view === tab.id ? "#0a1525" : (tab.disabled ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.7)"),
+                fontFamily: "var(--font-display)",
+                fontSize: 12,
+                fontWeight: 700,
+                cursor: tab.disabled ? "default" : "pointer",
+                whiteSpace: "nowrap",
+                transition: "all 0.15s",
+              }}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* OBLI-tab heeft volledig eigen content */}
+        {view === "obli" && (
+          <>
+            {obliScores.length === 0 ? (
+              <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🛸</span><p>Nog geen OBLITERATOR-scores. Speel het spel om hier op te komen!</p></div>
+            ) : (
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                {obliScores.map((entry, i) => {
+                  const isMe = (entry.player_name || "").toLowerCase().trim() === (currentUser || "").toLowerCase().trim();
+                  return (
+                    <div key={i} style={{
+                      display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14,
+                      background: isMe ? "linear-gradient(135deg, #fff3cd, #ffe4a0)" : "linear-gradient(135deg, #2a1a08, #3a2410)",
+                      border: isMe ? "2px solid #ff8030" : "1px solid rgba(255,128,48,0.4)",
+                      boxShadow: "0 1px 4px rgba(0,0,0,0.3)",
+                    }}>
+                      <div style={{ width: 40, height: 40, borderRadius: 10, background: "#1a0d00", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                        {i < 3 ? <span style={{ fontSize: 22 }}>{medals[i]}</span> : <span style={{ fontWeight: 800, color: "#ff8030" }}>{i + 1}</span>}
+                      </div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontWeight: 700, fontSize: 14, color: isMe ? "#1a0d00" : "#ffd54f" }}>
+                          {entry.player_name} {isMe && <span style={{ fontSize: 11 }}>(jij)</span>}
+                        </div>
+                        <div style={{ fontSize: 11, color: isMe ? "#5a3010" : "#c8a050", marginTop: 2 }}>
+                          🛸 OBLITERATOR{entry.level ? ` · level ${entry.level}` : ""} · {fmtDate(entry.created_at)}
+                        </div>
+                      </div>
+                      <div style={{
+                        padding: "6px 14px", borderRadius: 10, fontWeight: 800, fontSize: 16,
+                        background: "linear-gradient(135deg, #ffd54f, #ff8030)", color: "#1a0d00",
+                      }}>
+                        {entry.score?.toLocaleString("nl-NL") || 0}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </>
+        )}
+
+        {/* Kampioenen-knop + lichtkrant alleen bij wereldwijd */}
+        {view === "world" && onKampioenen && (
           <>
             <button onClick={onKampioenen} style={{
               width: "100%", padding: "14px", borderRadius: 14, border: "2px solid #ffd700",
@@ -389,8 +489,8 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
             })()}
           </>
         )}
-        {/* ── Hall of Fame sectie ── */}
-        {(() => {
+        {/* ── Hall of Fame sectie — alleen op wereldwijd-tab ── */}
+        {view === "world" && (() => {
           const mergedHof = { ...hallOfFame };
           Object.entries(globalHof).forEach(([key, entries]) => { mergedHof[key] = entries; });
           const hofKeys = Object.keys(mergedHof).filter(k => mergedHof[k]?.length > 0);
@@ -511,8 +611,11 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
           );
         })()}
 
-        {entries.length === 0 ? (
-          <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Doe een toets om op het scorebord te komen.</p></div>
+        {view !== "obli" && (entries.length === 0 ? (
+          <div style={styles.emptyState}>
+            <span style={{ fontSize: 48 }}>🏆</span>
+            <p>{view === "mijn" ? "Je hebt nog geen scores. Doe een toets om hier op te verschijnen!" : "Nog geen scores! Doe een toets om op het scorebord te komen."}</p>
+          </div>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {entries.slice(0, 50).map((entry, i) => {
@@ -615,7 +718,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
               );
             })}
           </div>
-        )}
+        ))}
       </div>
     </div>
   );
