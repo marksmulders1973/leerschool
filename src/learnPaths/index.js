@@ -34,6 +34,7 @@ import schrijfvaardigheid from "./schrijfvaardigheid.js";
 import tekstanalyse from "./tekstanalyse.js";
 import literatuurgeschiedenis from "./literatuurgeschiedenis.js";
 import spelling from "./spelling.js";
+import spellingEiIjAuOu from "./spellingEiIjAuOu.js";
 import zinsontleding from "./zinsontleding.js";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js";
 import onregelmatigeWerkwoordenV2Engels from "./onregelmatigeWerkwoordenV2Engels.js";
@@ -97,6 +98,7 @@ export const ALL_LEARN_PATHS = {
   werkwoordsvervoeging,
   "werkwoordsspelling-dt": werkwoordsspellingDT,
   spelling,
+  "spelling-ei-ij-au-ou": spellingEiIjAuOu,
   zinsontleding,
   argumentatieleer,
   schrijfvaardigheid,
