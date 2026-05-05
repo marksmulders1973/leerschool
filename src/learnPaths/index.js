@@ -10,6 +10,7 @@ import pythagoras from "./pythagoras.js";
 import kwadratischeVergelijkingen from "./kwadratischeVergelijkingen.js";
 import lineaireFormules from "./lineaireFormules.js";
 import rekenenMetLetters from "./rekenenMetLetters.js";
+import volgordeBewerkingen from "./volgordeBewerkingen.js";
 import vlakkeFiguren from "./vlakkeFiguren.js";
 import breuken from "./breuken.js";
 import klokkijken from "./klokkijken.js";
@@ -74,6 +75,7 @@ export const ALL_LEARN_PATHS = {
   verhoudingen,
   // Klas 1-2 algebra-basis
   "rekenen-met-letters": rekenenMetLetters,
+  "volgorde-bewerkingen": volgordeBewerkingen,
   "vergelijkingen-oplossen": vergelijkingenOplossen,
   stelsels,
   "kwadraten-wortels": kwadratenWortels,
