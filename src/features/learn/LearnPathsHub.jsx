@@ -269,7 +269,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
 
         <div style={{ padding: "16px 18px 8px" }}>
           <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
-            Kies een vak om uitleg op te bouwen — per onderwerp een mini-toets om te checken of de stof zit.
+            Kies een vak om te leren — uitleg per stap, met korte vragen om te zien of het is blijven hangen.
           </p>
 
           {loaded && totalCompleted > 0 && (
