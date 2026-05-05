@@ -38,6 +38,7 @@ import celBiologie from "./celBiologie.js";
 import voortplantingHormonenBiologie from "./voortplantingHormonenBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
 import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
+import tachtigjarigeOorlogGeschiedenis from "./tachtigjarigeOorlogGeschiedenis.js";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
@@ -104,6 +105,7 @@ export const ALL_LEARN_PATHS = {
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
+  "tachtigjarige-oorlog-geschiedenis": tachtigjarigeOorlogGeschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
