@@ -303,6 +303,31 @@ export default function App() {
 
   useEffect(() => { pageRef.current = page; }, [page]);
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
+
+  // Cross-device quiz-sync: zodra we weten wie de ingelogde leerkracht is,
+  // halen we al z'n eerder opgeslagen quizzes uit Supabase. Mergen met de
+  // lokale lijst zodat een quiz die op telefoon is gemaakt ook op laptop
+  // verschijnt onder 'Mijn opgeslagen toetsen'. Dedupliceert op id.
+  useEffect(() => {
+    if (!authUser?.id) return;
+    let cancelled = false;
+    supabase.from("quizzes")
+      .select("data")
+      .eq("created_by", authUser.id)
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (cancelled || error || !data?.length) return;
+        const remoteQuizzes = data.map((row) => row.data).filter(Boolean);
+        if (!remoteQuizzes.length) return;
+        setQuizzes((prev) => {
+          const byId = new Map();
+          [...prev, ...remoteQuizzes].forEach((q) => { if (q?.id) byId.set(q.id, q); });
+          return Array.from(byId.values()).sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+        });
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [authUser?.id]);
   useEffect(() => { try { localStorage.setItem("ls_progress", JSON.stringify(studentProgress)); } catch {} }, [studentProgress]);
   useEffect(() => { try { localStorage.setItem("ls_leaderboard", JSON.stringify(leaderboard)); } catch {} }, [leaderboard]);
   useEffect(() => { try { localStorage.setItem("ls_classes", JSON.stringify(classes)); } catch {} }, [classes]);
@@ -417,10 +442,18 @@ export default function App() {
       code: generateCode(),
       createdAt: new Date().toISOString(),
       players: [],
+      ...(authUser?.id ? { createdBy: authUser.id } : {}),
     };
     setQuizzes((prev) => [...prev, newQuiz]);
-    // Sla op in Supabase zodat leerlingen via de link kunnen joinen
-    supabase.from("quizzes").insert({ id: newQuiz.id, code: newQuiz.code, data: newQuiz }).then(({ error }) => {
+    // Sla op in Supabase zodat leerlingen via de link kunnen joinen.
+    // `created_by` koppelt de quiz aan de ingelogde leerkracht zodat 'ie
+    // 'm op andere apparaten kan terugzien onder "Mijn opgeslagen toetsen".
+    supabase.from("quizzes").insert({
+      id: newQuiz.id,
+      code: newQuiz.code,
+      data: newQuiz,
+      ...(authUser?.id ? { created_by: authUser.id } : {}),
+    }).then(({ error }) => {
       if (error) alert(`❌ Quiz opslaan mislukt: ${error.message}\n\nDeel de link nog niet — leerlingen kunnen de quiz dan niet vinden.`);
     });
     return newQuiz;
@@ -891,11 +924,11 @@ export default function App() {
             try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
           }}
           onDuplicateQuiz={(q) => {
-            const copy = { ...q, id: "quiz-" + Date.now(), code: generateCode(), title: (q.title ? q.title + " (kopie)" : undefined), deadline: null, createdAt: new Date().toISOString() };
+            const copy = { ...q, id: "quiz-" + Date.now(), code: generateCode(), title: (q.title ? q.title + " (kopie)" : undefined), deadline: null, createdAt: new Date().toISOString(), ...(authUser?.id ? { createdBy: authUser.id } : {}) };
             const updated = [...quizzes, copy];
             setQuizzes(updated);
             try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
-            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy }).then(() => {}).catch(() => {});
+            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy, ...(authUser?.id ? { created_by: authUser.id } : {}) }).then(() => {}).catch(() => {});
           }}
         />
       )}
