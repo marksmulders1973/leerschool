@@ -14,26 +14,28 @@
 import { useEffect, useState } from "react";
 import Shape3D from "./Shape3D.jsx";
 
-function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor }) {
+function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = false }) {
   return (
     <>
-      <div style={{
-        fontFamily: "var(--font-display)",
-        fontSize: 13,
-        fontWeight: 700,
-        color: "#ffd54f",
-        textAlign: "center",
-        marginBottom: 4,
-        letterSpacing: 0.3,
-      }}>
-        ✨ Probeer: hoe groot wordt een kubus?
-      </div>
+      {!compact && (
+        <div style={{
+          fontFamily: "var(--font-display)",
+          fontSize: 13,
+          fontWeight: 700,
+          color: "#ffd54f",
+          textAlign: "center",
+          marginBottom: 4,
+          letterSpacing: 0.3,
+        }}>
+          ✨ Probeer: hoe groot wordt een kubus?
+        </div>
+      )}
       <div style={{
         background: "rgba(255,255,255,0.04)",
         border: "1px solid rgba(255,255,255,0.08)",
-        borderRadius: 12,
-        padding: 6,
-        marginBottom: 8,
+        borderRadius: compact ? 8 : 12,
+        padding: compact ? 3 : 6,
+        marginBottom: compact ? 4 : 8,
       }}>
         <Shape3D
           shape="kubus"
@@ -46,9 +48,9 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor }) {
           unitCubeColorBy="layer-y"
         />
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
-        <label style={{ fontSize: 12, color: "rgba(224,230,240,0.75)", fontWeight: 600, minWidth: 70 }}>
-          zijde z: <span style={{ color: "#ffd54f" }}>{z}</span>
+      <div style={{ display: "flex", alignItems: "center", gap: compact ? 6 : 10, marginBottom: compact ? 2 : 6 }}>
+        <label style={{ fontSize: compact ? 10 : 12, color: "rgba(224,230,240,0.75)", fontWeight: 600, minWidth: compact ? 50 : 70 }}>
+          z: <span style={{ color: "#ffd54f" }}>{z}</span>
         </label>
         <input
           type="range"
@@ -60,31 +62,32 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor }) {
       </div>
       <p style={{
         textAlign: "center",
-        fontSize: 13,
+        fontSize: compact ? 11 : 13,
         color: "rgba(224,230,240,0.85)",
-        margin: "4px 0 10px",
+        margin: compact ? "2px 0 4px" : "4px 0 10px",
         fontFamily: "var(--font-body)",
       }}>
-        z³ = {z} × {z} × {z} = <strong style={{ color: "#ffd54f", fontSize: 15 }}>{z ** 3} cm³</strong>
+        z³ = <strong style={{ color: "#ffd54f", fontSize: compact ? 13 : 15 }}>{z ** 3} cm³</strong>
       </p>
       {onCTA && (
         <button
           onClick={onCTA}
           style={{
             width: "100%",
-            padding: "10px 14px",
-            borderRadius: 12,
+            padding: compact ? "6px 8px" : "10px 14px",
+            borderRadius: compact ? 8 : 12,
             border: "none",
             background: "linear-gradient(135deg, #00c853, #69f0ae)",
             color: "#0d1b2e",
             fontFamily: "var(--font-display)",
-            fontSize: 14,
+            fontSize: compact ? 11 : 14,
             fontWeight: 700,
             cursor: "pointer",
             boxShadow: "0 4px 14px rgba(0,200,83,0.35)",
+            whiteSpace: "nowrap",
           }}
         >
-          Probeer dit zelf in een leerpad →
+          {compact ? "→ Leerpad" : "Probeer dit zelf in een leerpad →"}
         </button>
       )}
     </>
@@ -150,7 +153,7 @@ export default function Mini3DTeaser({ onCTA }) {
         >
           ⛶
         </button>
-        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={140} cameraDistanceFactor={4.2} />
+        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={95} cameraDistanceFactor={4.2} compact />
       </div>
 
       {expanded && (
