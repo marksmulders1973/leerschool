@@ -36,6 +36,7 @@ import zinsontleding from "./zinsontleding.js";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js";
 import celBiologie from "./celBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
+import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
@@ -98,6 +99,7 @@ export const ALL_LEARN_PATHS = {
   "cel-biologie": celBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
+  "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
   // Natuurkunde
