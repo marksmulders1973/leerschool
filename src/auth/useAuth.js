@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { ensureSession } from "../auth.js";
+import { signInWithGoogleIdToken } from "./googleSignIn.js";
 
 // Auth-state + bootstrap. Élke bezoeker krijgt een sessie (anonymous sign-in
 // als nog geen Google-login), zodat RLS strikt op user_id kan en geen RLS-fails
@@ -91,7 +92,18 @@ export function useAuth() {
     };
   }, []);
 
-  const handleGoogleLogin = () => {
+  const handleGoogleLogin = async () => {
+    // Probeer eerst de GIS-popup-flow (geen 'Doorgaan naar supabase.co'-URL).
+    // Faalt 'ie (third-party cookies geblokt, prompt te vaak gedismissed,
+    // FedCM uitgeschakeld, etc.) → val terug op de oude OAuth-redirect-flow,
+    // dan werkt inloggen in elk geval — wel weer met de Supabase-URL.
+    try {
+      await signInWithGoogleIdToken();
+      return;
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.warn("[google-signin] popup-flow gefaald, val terug op redirect:", e?.message || e);
+    }
     supabase.auth?.signInWithOAuth?.({
       provider: "google",
       options: { redirectTo: window.location.origin },
