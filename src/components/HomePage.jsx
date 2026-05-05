@@ -1031,8 +1031,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       </div>
                     }>
                       <Mini3DTeaser onCTA={() => {
-                        if (onPickPath) onPickPath("ruimtemeetkunde");
-                        else if (onLearnPathsHub) onLearnPathsHub();
+                        // CTA op 3D-tegel → naar Leren-overzicht (alle paden),
+                        // niet direct naar Ruimtemeetkunde. Gebruiker kiest
+                        // zelf welk pad 'ie aanklikt.
+                        if (onLearnPathsHub) onLearnPathsHub();
+                        else if (onPickPath) onPickPath("ruimtemeetkunde");
                       }} />
                     </Suspense>
                   </TeaserErrorBoundary>

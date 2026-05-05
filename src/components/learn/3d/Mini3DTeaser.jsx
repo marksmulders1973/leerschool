@@ -87,7 +87,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
             whiteSpace: "nowrap",
           }}
         >
-          {compact ? "→ Leerpad" : "Probeer dit zelf in een leerpad →"}
+          {compact ? "Zelf proberen →" : "Probeer dit zelf in een leerpad →"}
         </button>
       )}
     </>
