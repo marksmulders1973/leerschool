@@ -28,6 +28,7 @@ import logaritmen from "./logaritmen.js";
 import differentieren from "./differentieren.js";
 import periodiek from "./periodiek.js";
 import werkwoordsvervoeging from "./werkwoordsvervoeging.js";
+import werkwoordsspellingDT from "./werkwoordsspellingDT.js";
 import argumentatieleer from "./argumentatieleer.js";
 import schrijfvaardigheid from "./schrijfvaardigheid.js";
 import tekstanalyse from "./tekstanalyse.js";
@@ -93,6 +94,7 @@ export const ALL_LEARN_PATHS = {
   kansrekening,
   // Nederlands
   werkwoordsvervoeging,
+  "werkwoordsspelling-dt": werkwoordsspellingDT,
   spelling,
   zinsontleding,
   argumentatieleer,
