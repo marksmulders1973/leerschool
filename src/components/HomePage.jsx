@@ -476,7 +476,7 @@ function FeatureShowcase({ onFeatureClick }) {
 
 const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Echte examenvragen, echte boeken", desc: "Echte voorbereiding voor je examen. Geen giswerk, gewoon oefenen wat telt." },
-  { emoji: "🤖", title: `${BRAND.name} maakt vragen voor jou`, desc: "Elke quiz is anders, ook over jouw eigen schoolboek" },
+  { emoji: "🤖", title: `${BRAND.name} maakt vragen voor jou`, desc: "Elke toets is anders, ook over jouw eigen schoolboek" },
   { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
 ];
 
@@ -876,7 +876,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               emoji: "🎯",
               icon: <QuizCardIcon accent="#ff8030" />,
               label: "Test je kennis",
-              sub: "snelle quiz, in 15 min",
+              sub: "snelle toets, in 15 min",
               color: "#ff8030",
               onClick: handleOefenenClick,
             },
@@ -1101,8 +1101,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 padding: "12px 16px", textAlign: "center",
                 border: "1px solid rgba(0,200,83,0.3)",
               }}>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "#00e676" }}>🎯 Quiz gevonden!</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "#aabbcc", marginTop: 4 }}>Vul je naam in en de quiz start meteen</div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 18, color: "#00e676" }}>🎯 Toets gevonden!</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "#aabbcc", marginTop: 4 }}>Vul je naam in en de toets start meteen</div>
               </div>
             ) : (
               <div style={{

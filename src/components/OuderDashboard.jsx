@@ -281,7 +281,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
                   {[
                     { label: "Gemiddeld", value: avgScore !== null ? `${avgScore}%` : "—", color: avgScore >= 70 ? "var(--color-brand-primary-100)" : "#ffb74d" },
-                    { label: "Quizzes", value: childScores.length, color: "#00b0ff" },
+                    { label: "Toetsen", value: childScores.length, color: "#00b0ff" },
                     { label: "Vakken", value: Object.keys(subjectStats).length, color: "#ff6b35" },
                   ].map(({ label, value, color }) => (
                     <div key={label} style={{ borderRadius: 12, border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.03)", padding: "12px 10px", textAlign: "center" }}>

@@ -13,7 +13,7 @@ export function TeacherProgress({ quizzes, progress, onBack, onHome }) {
         {progress.length === 0 ? (
           <div style={styles.emptyState}>
             <span style={{ fontSize: 48 }}>📭</span>
-            <p>Nog geen resultaten. Maak een quiz en deel de code!</p>
+            <p>Nog geen resultaten. Maak een toets en deel de code!</p>
           </div>
         ) : (
           <>
@@ -260,7 +260,7 @@ export function StudentProgressView({ progress, userName, onBack, onHome }) {
             <div style={styles.statsRow}>
               <div style={styles.statCard}>
                 <div style={styles.statValue}>{progress.length}</div>
-                <div style={styles.statLabel}>Quizzen</div>
+                <div style={styles.statLabel}>Toetsen</div>
               </div>
               <div style={styles.statCard}>
                 <div style={styles.statValue}>{Math.round(progress.reduce((a, b) => a + b.percentage, 0) / progress.length)}%</div>
@@ -512,7 +512,7 @@ export function Leaderboard({ data, hallOfFame, currentUser, onBack, onHome, onC
         })()}
 
         {entries.length === 0 ? (
-          <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Speel een quiz om op het scorebord te komen.</p></div>
+          <div style={styles.emptyState}><span style={{ fontSize: 48 }}>🏆</span><p>Nog geen scores! Doe een toets om op het scorebord te komen.</p></div>
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {entries.slice(0, 50).map((entry, i) => {
@@ -1094,7 +1094,7 @@ export function Kampioenen({ currentUser, onBack, onHome, onChallenge, hallOfFam
           ) : obliteratorScores.length === 0 ? (
             <div style={{ textAlign: "center", color: "var(--color-text-muted)", padding: 40 }}>
               <div style={{ fontSize: 48 }}>👽</div>
-              <p>Nog geen OBLITERATOR-scores.<br />Speel het spel na een quiz om de eerste te worden!</p>
+              <p>Nog geen OBLITERATOR-scores.<br />Speel het spel na een toets om de eerste te worden!</p>
             </div>
           ) : (
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
