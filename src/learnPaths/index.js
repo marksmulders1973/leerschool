@@ -35,6 +35,7 @@ import spelling from "./spelling.js";
 import zinsontleding from "./zinsontleding.js";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js";
 import celBiologie from "./celBiologie.js";
+import voortplantingHormonenBiologie from "./voortplantingHormonenBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
 import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
@@ -98,6 +99,7 @@ export const ALL_LEARN_PATHS = {
   "woordenschat-engels": woordenschatEngels,
   // Biologie
   "cel-biologie": celBiologie,
+  "voortplanting-hormonen-biologie": voortplantingHormonenBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
