@@ -9,6 +9,51 @@ import { track } from "../utils.js";
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
 const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
 
+// Mini-illustratie voor de "Test je kennis"-tegel: een quiz-kaartje met
+// vraag-tekstregeltjes bovenin en 4 antwoord-rijen, waarvan er 1 als correct
+// gemarkeerd is (groene rand + vinkje). Vervangt het generieke 🎯-emoji
+// zodat de tegel meteen communiceert: meerkeuze-vraag.
+function QuizCardIcon({ size = 40, accent = "#ff8030", correctHex = "#00c853" }) {
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      width={size}
+      height={size}
+      aria-hidden="true"
+      focusable="false"
+      style={{ display: "block" }}
+    >
+      {/* Kaartje achtergrond */}
+      <rect x="6" y="10" width="88" height="80" rx="8"
+            fill="rgba(255,255,255,0.04)" stroke={`${accent}88`} strokeWidth="1.5"/>
+      {/* Vraag-regels (placeholders) */}
+      <rect x="14" y="20" width="58" height="3.5" rx="1.5" fill="rgba(255,255,255,0.55)"/>
+      <rect x="14" y="27" width="38" height="3.5" rx="1.5" fill="rgba(255,255,255,0.30)"/>
+      {/* Antwoord A — correct: groene rand + vinkje */}
+      <rect x="12" y="40" width="76" height="10" rx="3"
+            fill={`${correctHex}26`} stroke={correctHex} strokeWidth="1.2"/>
+      <circle cx="19" cy="45" r="2.8" fill={correctHex}/>
+      <path d="M17.4 45 L18.6 46.3 L20.8 43.8" stroke="white" strokeWidth="0.9" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect x="25" y="43.5" width="38" height="3" rx="1.2" fill="rgba(255,255,255,0.70)"/>
+      {/* Antwoord B */}
+      <rect x="12" y="53" width="76" height="10" rx="3"
+            fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.20)" strokeWidth="1"/>
+      <circle cx="19" cy="58" r="2.8" fill="none" stroke="rgba(255,255,255,0.40)" strokeWidth="1"/>
+      <rect x="25" y="56.5" width="44" height="3" rx="1.2" fill="rgba(255,255,255,0.35)"/>
+      {/* Antwoord C */}
+      <rect x="12" y="66" width="76" height="10" rx="3"
+            fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.20)" strokeWidth="1"/>
+      <circle cx="19" cy="71" r="2.8" fill="none" stroke="rgba(255,255,255,0.40)" strokeWidth="1"/>
+      <rect x="25" y="69.5" width="32" height="3" rx="1.2" fill="rgba(255,255,255,0.35)"/>
+      {/* Antwoord D */}
+      <rect x="12" y="79" width="76" height="10" rx="3"
+            fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.20)" strokeWidth="1"/>
+      <circle cx="19" cy="84" r="2.8" fill="none" stroke="rgba(255,255,255,0.40)" strokeWidth="1"/>
+      <rect x="25" y="82.5" width="40" height="3" rx="1.2" fill="rgba(255,255,255,0.35)"/>
+    </svg>
+  );
+}
+
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
   { icon: "🎯", text: "Cito eindtoets oefenen" },
@@ -753,6 +798,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             {
               key: "oefenen",
               emoji: "🎯",
+              icon: <QuizCardIcon size={40} accent="#ff8030" />,
               label: "Test je kennis",
               sub: "snelle quiz, in 15 min",
               color: "#ff8030",
@@ -789,7 +835,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   </Suspense>
                 </div>
                 {/* 5 reguliere tegels */}
-                {tiles.map(({ key, emoji, label, sub, color, onClick }) => (
+                {tiles.map(({ key, emoji, icon, label, sub, color, onClick }) => (
                   <button
                     key={key}
                     onClick={onClick}
@@ -808,7 +854,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       e.currentTarget.style.background = `${color}14`;
                     }}
                   >
-                    <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
+                    {icon
+                      ? <span style={{ display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1 }}>{icon}</span>
+                      : <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>}
                     <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
                   </button>
