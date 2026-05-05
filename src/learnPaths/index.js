@@ -12,6 +12,7 @@ import lineaireFormules from "./lineaireFormules.js";
 import rekenenMetLetters from "./rekenenMetLetters.js";
 import vlakkeFiguren from "./vlakkeFiguren.js";
 import breuken from "./breuken.js";
+import klokkijken from "./klokkijken.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -64,6 +65,7 @@ export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
   coordinatenstelsel,
   breuken,
+  klokkijken,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
