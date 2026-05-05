@@ -265,14 +265,9 @@
         padding: 6px;
         transition: transform 0.15s ease, background 0.15s ease;
       }
-      /* 3D-teaser-tegel krijgt extra hoogte t.o.v. de andere tegels (1:1.25
-         i.p.v. 1:1) zodat de 3D-kubus duidelijker zichtbaar is. CSS Grid
-         strekt de hele rij mee, dus de tegels naast 'm worden ook iets hoger
-         — dat geeft visuele uniciteit aan de 3D-tegel + meer ademruimte voor
-         de andere tegels in dezelfde rij. */
-      .lk-tile.lk-tile-teaser {
-        aspect-ratio: 1 / 1.25;
-      }
+      /* (Eerdere experiment met 1:1.25 voor de 3D-tegel teruggedraaid —
+         maakte alleen de eerste rij hoger, niet de andere; gaf ongelijke
+         tegelhoogtes. Alle tegels nu weer uniform 1:1.) */
     </style>
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9399858013370724" crossorigin="anonymous"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-9J72M8CBJ9"></script>
