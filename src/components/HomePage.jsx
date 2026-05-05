@@ -823,15 +823,32 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </div>
               <span style={{
                 fontFamily: "var(--font-body, -apple-system, sans-serif)",
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: 500,
-                color: "rgba(255,255,255,0.45)",
+                color: "rgba(255,255,255,0.80)",
                 letterSpacing: "0.02em",
                 marginLeft: 32,
                 opacity: 0,
+                fontStyle: "italic",
                 animation: "lk-mark-slogan 0.7s ease-out 1.05s forwards",
               }}>
-                {BRAND.slogan}
+                {"„"}
+                <strong style={{
+                  fontWeight: 800,
+                  color: "#69f0ae",
+                  fontStyle: "normal",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.04em",
+                }}>Een</strong>
+                {" kwartier per dag — een "}
+                <strong style={{
+                  fontWeight: 800,
+                  color: "#69f0ae",
+                  fontStyle: "normal",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.04em",
+                }}>leven</strong>
+                {" lang slimmer”"}
               </span>
             </div>
           );
