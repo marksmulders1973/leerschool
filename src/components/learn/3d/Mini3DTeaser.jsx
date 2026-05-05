@@ -42,6 +42,8 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor }) {
           height={height}
           cameraDistanceFactor={cameraDistanceFactor}
           cameraReferenceDim={6}
+          showUnitCubes
+          unitCubeColorBy="layer-y"
         />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>

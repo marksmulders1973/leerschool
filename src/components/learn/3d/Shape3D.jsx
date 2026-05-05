@@ -7,6 +7,12 @@
 //   dimensions         shape-specifiek object (zie SHAPE_DIMENSIONS_DOC onder)
 //   labels             [{ text, axis: "x"|"y"|"z" }]  — sprite-labels in scene
 //   showUnitCubes      bool — bouw vorm uit N eenheidskubusjes ipv solid mesh
+//   unitCubeColorBy    "uniform" (default) | "layer-y" — kleurschema voor
+//                      eenheidskubusjes. "layer-y" geeft elke horizontale laag
+//                      een eigen kleur uit een pastel-rainbow zodat de structuur
+//                      visueel afleesbaar is. Heeft alleen effect met
+//                      showUnitCubes=true; andere bestaande gebruikers blijven
+//                      uniform door de default.
 //   showBoundingBox    bool — toon doorzichtige omsluitende vorm. Auto-pick
 //                      o.b.v. shape: piramide → balk-wireframe, kegel →
 //                      cilinder-wireframe. Voor andere shapes: geen effect.
@@ -43,6 +49,27 @@ const THEMES = {
     border: "1px solid #ddd",
   },
 };
+
+// Pastel rainbow voor "layer-y" kleurschema. Loopt van warm oranje naar koel
+// lavendel — herkenbaar en niet rave. Zes stops dekken alle z-waarden 1..6
+// in de teaser; bij minder lagen pakken we een subset, bij meer lagen wrappen
+// we via modulo (uitzonderlijk geval, zou bij ruimtemeetkunde-balken kunnen).
+const LAYER_RAINBOW = [
+  0xef9f27, // oranje  — bottom layer (matcht huidige kubus-primary)
+  0xffd54f, // goud-geel
+  0x9be069, // limoen-groen
+  0x40b8a8, // teal
+  0x5d9cec, // licht-blauw
+  0xb388ff, // lavendel — top layer
+];
+
+function colorForUnitCube(yi, totalLayers, mode, fallbackHex) {
+  if (mode !== "layer-y" || totalLayers < 2) return fallbackHex;
+  // Pak gelijk verdeelde stops uit de rainbow zodat z=2 → eerste+laatste,
+  // z=3 → eerste+midden+laatste, z=6 → alle 6.
+  const idx = Math.round((yi / (totalLayers - 1)) * (LAYER_RAINBOW.length - 1));
+  return LAYER_RAINBOW[idx];
+}
 
 const SHAPE_COLORS = {
   kubus:    { primary: 0xef9f27, edgeInner: 0xffe082, edgeOuter: 0xffd54f, highlight: 0xffd54f, highlightEmissive: 0x4a3500 },
@@ -105,6 +132,7 @@ const Shape3D = forwardRef(function Shape3D(
     dimensions,
     labels = [],
     showUnitCubes = false,
+    unitCubeColorBy = "uniform",
     showBoundingBox = false,
     theme = "dark-studiebol",
     height = 360,
@@ -192,12 +220,12 @@ const Shape3D = forwardRef(function Shape3D(
     // ── Bouw vorm ──────────────────────────────────────────────────────────
     if (shape === "kubus") {
       const z = dim.zijde || 5;
-      buildBoxLikeShape(group, z, z, z, showUnitCubes, colors, unitMats, disposables);
+      buildBoxLikeShape(group, z, z, z, showUnitCubes, unitCubeColorBy, colors, unitMats, disposables);
     } else if (shape === "balk") {
       const l = dim.lengte || 4;
       const b = dim.breedte || 3;
       const hh = dim.hoogte || 2;
-      buildBoxLikeShape(group, l, hh, b, showUnitCubes, colors, unitMats, disposables);
+      buildBoxLikeShape(group, l, hh, b, showUnitCubes, unitCubeColorBy, colors, unitMats, disposables);
     } else if (shape === "cilinder") {
       const r = dim.straal || 3;
       const ch = dim.hoogte || 5;
@@ -384,7 +412,7 @@ const Shape3D = forwardRef(function Shape3D(
       unitMatsRef.current = [];
       boundingBoxRef.current = { mesh: null, wire: null };
     };
-  }, [shape, JSON.stringify(dimensions), showUnitCubes, JSON.stringify(labels), theme, cameraDistanceFactor, cameraReferenceDim]);
+  }, [shape, JSON.stringify(dimensions), showUnitCubes, unitCubeColorBy, JSON.stringify(labels), theme, cameraDistanceFactor, cameraReferenceDim]);
 
   // ── Toggle bounding box-zichtbaarheid zonder scene-rebuild ──────────────
   useEffect(() => {
@@ -405,8 +433,10 @@ const Shape3D = forwardRef(function Shape3D(
 // Vorm-builders (intern)
 // ──────────────────────────────────────────────────────────────────────────────
 
-/** Bouw kubus of balk uit individuele eenheidskubusjes (showUnitCubes=true) of solid. */
-function buildBoxLikeShape(group, l, h, b, showUnitCubes, colors, unitMats, disposables) {
+/** Bouw kubus of balk uit individuele eenheidskubusjes (showUnitCubes=true) of solid.
+ *  unitCubeColorBy: "uniform" → alle blokjes colors.primary;
+ *                    "layer-y" → kleur per Y-laag uit LAYER_RAINBOW. */
+function buildBoxLikeShape(group, l, h, b, showUnitCubes, unitCubeColorBy, colors, unitMats, disposables) {
   const halfL = l / 2;
   const halfH = h / 2;
   const halfB = b / 2;
@@ -415,8 +445,9 @@ function buildBoxLikeShape(group, l, h, b, showUnitCubes, colors, unitMats, disp
     for (let xi = 0; xi < l; xi++) {
       for (let yi = 0; yi < h; yi++) {
         for (let zi = 0; zi < b; zi++) {
+          const cubeColor = colorForUnitCube(yi, h, unitCubeColorBy, colors.primary);
           const geo = new THREE.BoxGeometry(unitSize, unitSize, unitSize);
-          const mat = new THREE.MeshLambertMaterial({ color: colors.primary, transparent: true, opacity: 0.7 });
+          const mat = new THREE.MeshLambertMaterial({ color: cubeColor, transparent: true, opacity: 0.78 });
           const mesh = new THREE.Mesh(geo, mat);
           mesh.position.set(xi - (l - 1) / 2, yi - (h - 1) / 2, zi - (b - 1) / 2);
           group.add(mesh);
