@@ -839,7 +839,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   fontStyle: "normal",
                   textTransform: "uppercase",
                   letterSpacing: "0.04em",
-                }}>Een</strong>
+                }}>Één</strong>
                 {" kwartier per dag — een "}
                 <strong style={{
                   fontWeight: 800,
@@ -847,7 +847,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   fontStyle: "normal",
                   textTransform: "uppercase",
                   letterSpacing: "0.04em",
-                }}>leven</strong>
+                }}>léven</strong>
                 {" lang slimmer”"}
               </span>
             </div>
