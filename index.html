@@ -365,6 +365,46 @@
       })();
     </script>
     <script>
+      // ─── Service-worker kill-switch ────────────────────────────────────────
+      // De oude SW (CACHE_VERSION v1..v7, vóór 2026-05-05) is op installed-PWAs
+      // op telefoons "vastgeplakt": cache-clear in de browser haalt 'm niet weg
+      // en hij kan stale HTML / bundles serveren waardoor de app blauw blijft.
+      // De nieuwe SW gebruikt een build-timestamp als versie (geen "v"-prefix),
+      // dus we kunnen de oude SW betrouwbaar herkennen aan z'n cache-namen.
+      // Bij detectie: alle SW-registraties weghalen, alle caches legen, en 1×
+      // reloaden. sessionStorage-flag voorkomt loops als de cleanup per ongeluk
+      // niet in één keer doorvalt.
+      (function () {
+        if (!("serviceWorker" in navigator) || !("caches" in window)) return;
+        try {
+          if (sessionStorage.getItem("lk_swkill_done") === "1") {
+            sessionStorage.removeItem("lk_swkill_done");
+            return;
+          }
+        } catch (e) {}
+        caches.keys().then(function (keys) {
+          var hasOldCache = keys.some(function (k) {
+            return /^studiebol-(shell|assets)-v\d+$/.test(k);
+          });
+          if (!hasOldCache) return;
+          try { sessionStorage.setItem("lk_swkill_done", "1"); } catch (e) {}
+          // eslint-disable-next-line no-console
+          console.warn("[lk-killswitch] verouderde service worker gedetecteerd — opruimen en herinstalleren");
+          var unregisterAll = navigator.serviceWorker.getRegistrations()
+            .then(function (regs) {
+              return Promise.all(regs.map(function (r) { return r.unregister(); }));
+            })
+            .catch(function () {});
+          var clearAll = Promise.all(keys.map(function (k) { return caches.delete(k); }))
+            .catch(function () {});
+          Promise.all([unregisterAll, clearAll]).then(function () {
+            // Cache-buster query om te garanderen dat we niet via een eventueel
+            // nog hangende SW alsnog de stale HTML krijgen.
+            window.location.replace(window.location.pathname + "?_lkkill=" + Date.now() + window.location.hash);
+          });
+        }).catch(function () {});
+      })();
+
       if ("serviceWorker" in navigator) {
         // updateViaCache: "none" → browser HTTP-cachet /sw.js niet zelf, dus
         // registration.update() krijgt altijd een verse versie van de server.
