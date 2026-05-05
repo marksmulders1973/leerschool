@@ -1,15 +1,18 @@
 import { track } from "../utils.js";
+import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 
 // Bottom-tabs nav (Duolingo-style). Vijf tabs: Home, Leren, Test, Scorebord,
 // OBLITERATOR. Design-system v1: tokens, tap-target ≥ 44px, glow-indicator
 // op brand-primary. "Test" is de korte vorm van "Test je kennis" (de
-// hero-tegel-titel). OBLITERATOR-tab krijgt altijd de oranje-gold gradient
-// (matcht de START-knop in het spel) zodat 'ie er als feature-tab uitspringt.
+// hero-tegel-titel) en deelt dezelfde QuizCardIcon-illustratie zodat het
+// visueel duidelijk is dat ze hetzelfde doen. OBLITERATOR-tab krijgt altijd
+// de oranje-gold gradient (matcht de START-knop in het spel) zodat 'ie er
+// als feature-tab uitspringt.
 
 const TABS = [
   { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
   { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
-  { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen" },
+  { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
   { id: "score",   label: "Scorebord",   emoji: "🏆", target: "leaderboard" },
   { id: "spel",    label: "OBLITERATOR", emoji: "🛸", target: "obliteratorPlay", brand: true },
 ];
@@ -121,13 +124,18 @@ export default function BottomNav({ currentPage, onNavigate }) {
                 aria-hidden="true"
                 style={{
                   fontSize: 22,
+                  width: tab.iconSvg ? 24 : "auto",
+                  height: tab.iconSvg ? 24 : "auto",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   opacity: isActief ? 1 : (isBrand ? 1 : 0.78),
                   transition: "opacity var(--motion-fast), transform var(--motion-fast) var(--ease-bounce)",
                   transform: isActief ? "scale(1.08)" : "scale(1)",
                   filter: isBrand ? "drop-shadow(0 0 6px rgba(255, 100, 40, 0.7))" : "none",
                 }}
               >
-                {tab.emoji}
+                {tab.iconSvg || tab.emoji}
               </span>
               <span style={{
                 whiteSpace: "nowrap",
