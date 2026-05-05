@@ -61,6 +61,7 @@ import woordsoortenNederlands from "./woordsoortenNederlands.js";
 import woordenschatEngels from "./woordenschatEngels.js";
 import nederlandseStaatMaatschappijleer from "./nederlandseStaatMaatschappijleer.js";
 import dierenSeizoenenNatuur from "./dierenSeizoenenNatuur.js";
+import sterrenPlaneten from "./sterrenPlaneten.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -139,6 +140,7 @@ export const ALL_LEARN_PATHS = {
   "nederlandse-staat-maatschappijleer": nederlandseStaatMaatschappijleer,
   // PO Wereld & Natuur
   "dieren-seizoenen-natuur": dierenSeizoenenNatuur,
+  "sterren-planeten": sterrenPlaneten,
 };
 
 import { QUESTION_PATH_MAP } from "./questionPathMap.generated.js";
