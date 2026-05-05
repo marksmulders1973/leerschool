@@ -366,30 +366,72 @@
     </script>
     <script>
       if ("serviceWorker" in navigator) {
+        // updateViaCache: "none" → browser HTTP-cachet /sw.js niet zelf, dus
+        // registration.update() krijgt altijd een verse versie van de server.
+        // Belangrijkste fix tegen "moet cache wissen om nieuwe versie te zien".
+        const SW_OPTS = { updateViaCache: "none" };
+        let regRef = null;
+        let initialLoad = true;
+
+        const triggerUpdate = (waitingSw, { silent } = { silent: false }) => {
+          if (!waitingSw) return;
+          window.__pendingSw = waitingSw;
+          if (silent) {
+            // Geen banner — direct skipWaiting; controllerchange → reload.
+            try { waitingSw.postMessage({ type: "SKIP_WAITING" }); } catch (e) {}
+          } else {
+            window.dispatchEvent(new CustomEvent("studiebol:update-available"));
+          }
+        };
+
+        const checkForUpdate = () => {
+          if (regRef) regRef.update().catch(() => {});
+        };
+
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/sw.js").then((reg) => {
-            // Detecteer een nieuwe SW die wacht
-            const triggerUpdate = (waitingSw) => {
-              if (!waitingSw) return;
-              window.__pendingSw = waitingSw;
-              window.dispatchEvent(new CustomEvent("studiebol:update-available"));
-            };
-            // Als er al een waiting SW is bij registratie
-            if (reg.waiting && navigator.serviceWorker.controller) triggerUpdate(reg.waiting);
-            // Nieuwe SW gevonden tijdens deze sessie
+          navigator.serviceWorker.register("/sw.js", SW_OPTS).then((reg) => {
+            regRef = reg;
+
+            // Waiting SW al aanwezig bij eerste laad → user heeft de app net
+            // geopend, perfect moment voor een silent auto-update (geen banner).
+            if (reg.waiting && navigator.serviceWorker.controller) {
+              triggerUpdate(reg.waiting, { silent: true });
+            }
+
             reg.addEventListener("updatefound", () => {
               const installing = reg.installing;
               if (!installing) return;
               installing.addEventListener("statechange", () => {
                 if (installing.state === "installed" && navigator.serviceWorker.controller) {
-                  triggerUpdate(reg.waiting || installing);
+                  // Bij eerste open → silent. Tijdens actief gebruik (al voorbij
+                  // initialLoad) → banner zodat user niet midden in een quiz reload krijgt.
+                  triggerUpdate(reg.waiting || installing, { silent: initialLoad });
                 }
               });
             });
-            // Periodiek update-check (elke 60 sec) zodat nieuwe versie snel wordt opgemerkt
-            setInterval(() => { reg.update().catch(() => {}); }, 60_000);
+
+            // Lichte periodieke check als de app lang open blijft (1u i.p.v. 60s
+            // — minder bandwidth, en visibility/focus dekt al het belangrijkste).
+            setInterval(checkForUpdate, 60 * 60 * 1000);
+
+            // Markeer dat eerste-laad-window voorbij is na 5s — daarna geldt
+            // mid-session gedrag (banner) i.p.v. silent reload.
+            setTimeout(() => { initialLoad = false; }, 5000);
           }).catch(() => {});
-          // Bij controllerchange = nieuwe SW heeft overgenomen → 1x reload
+
+          // App-resume triggers: bij PWA op telefoon is dit het moment dat
+          // de user terugkomt na de app gesloten/achtergrond te hebben gehad.
+          // We checken DAN op updates zodat de versie meteen vers is.
+          const onResume = () => {
+            if (document.hidden) return;
+            checkForUpdate();
+          };
+          document.addEventListener("visibilitychange", onResume);
+          window.addEventListener("pageshow", onResume);
+          window.addEventListener("focus", onResume);
+
+          // Controllerchange = nieuwe SW heeft overgenomen → 1x reload zodat
+          // user direct de nieuwe code draait.
           let reloaded = false;
           navigator.serviceWorker.addEventListener("controllerchange", () => {
             if (reloaded) return;

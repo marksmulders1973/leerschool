@@ -1,4 +1,9 @@
-const CACHE_VERSION = "v7";
+// __SW_VERSION__ wordt bij `vite build` vervangen door een build-timestamp
+// (zie vite.config.js → injectSwVersion plugin). In dev mode blijft de
+// placeholder staan; we vallen dan terug op een dev-versie zodat de SW
+// nog werkt zonder dat we de browser-cache moeten resetten.
+const RAW_VERSION = "__SW_VERSION__";
+const CACHE_VERSION = RAW_VERSION.startsWith("__") ? "dev-" + Date.now() : RAW_VERSION;
 const CACHE_SHELL = `studiebol-shell-${CACHE_VERSION}`;
 const CACHE_ASSETS = `studiebol-assets-${CACHE_VERSION}`;
 
