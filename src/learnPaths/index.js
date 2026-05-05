@@ -38,6 +38,7 @@ import celBiologie from "./celBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
 import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
+import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
 import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
@@ -102,6 +103,7 @@ export const ALL_LEARN_PATHS = {
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
+  "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
   // Scheikunde
