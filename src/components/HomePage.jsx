@@ -9,6 +9,60 @@ import { track } from "../utils.js";
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
 const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
 
+// Mini-illustratie voor de "Leren"-tegel: stapeltje van drie boeken in
+// brand-groen / goud-geel / licht-blauw, met titel-regeltjes op de spines.
+// Communiceert "veel onderwerpen om te leren" — past bij de brede dekking
+// van leerpaden in de app.
+function BookStackIcon({ size, primary = "#00c853", accent = "#ffd54f", complement = "#5d9cec" }) {
+  const dim = size != null ? { width: size, height: size } : { width: "100%", height: "100%" };
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      {...dim}
+      preserveAspectRatio="xMidYMid meet"
+      aria-hidden="true"
+      focusable="false"
+      style={{ display: "block" }}
+    >
+      {/* Onderste boek (lichtblauw) — breedst, ligt plat. */}
+      <g transform="translate(0,0)">
+        <rect x="14" y="74" width="72" height="14" rx="2" fill={complement} opacity="0.85"/>
+        <rect x="14" y="74" width="6" height="14" fill={complement}/>
+        <rect x="22" y="78" width="34" height="1.6" fill="rgba(255,255,255,0.55)"/>
+        <rect x="22" y="82" width="22" height="1.6" fill="rgba(255,255,255,0.35)"/>
+      </g>
+      {/* Middelste boek (goud-geel) — iets smaller, licht verschoven naar links. */}
+      <g transform="translate(0,0)">
+        <rect x="10" y="56" width="68" height="14" rx="2" fill={accent} opacity="0.9"/>
+        <rect x="10" y="56" width="6" height="14" fill={accent}/>
+        <rect x="18" y="60" width="38" height="1.6" fill="rgba(40,30,0,0.45)"/>
+        <rect x="18" y="64" width="24" height="1.6" fill="rgba(40,30,0,0.30)"/>
+      </g>
+      {/* Bovenste boek (brand-groen, opengeslagen) — toont 2 pagina's met regels. */}
+      <g transform="translate(0,0)">
+        {/* Linker pagina */}
+        <path d="M16 28 L48 24 L48 50 L16 54 Z" fill="rgba(255,255,255,0.95)" stroke={primary} strokeWidth="1.4" strokeLinejoin="round"/>
+        {/* Rechter pagina */}
+        <path d="M52 24 L84 28 L84 54 L52 50 Z" fill="rgba(255,255,255,0.95)" stroke={primary} strokeWidth="1.4" strokeLinejoin="round"/>
+        {/* Tekstregeltjes links */}
+        <line x1="22" y1="32" x2="44" y2="29" stroke="rgba(0,0,0,0.45)" strokeWidth="1"/>
+        <line x1="22" y1="36" x2="42" y2="33" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        <line x1="22" y1="40" x2="40" y2="37" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        <line x1="22" y1="44" x2="38" y2="41" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        {/* Tekstregeltjes rechts */}
+        <line x1="56" y1="29" x2="78" y2="32" stroke="rgba(0,0,0,0.45)" strokeWidth="1"/>
+        <line x1="56" y1="33" x2="76" y2="36" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        <line x1="56" y1="37" x2="74" y2="40" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        <line x1="56" y1="41" x2="72" y2="44" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
+        {/* Boek-rug in het midden (verbinding tussen pagina's) */}
+        <path d="M48 24 L52 24 L52 50 L48 50 Z" fill={primary} opacity="0.85"/>
+        {/* Bladwijzer-lintje hangt uit boven boek */}
+        <path d="M62 24 L62 18 L66 21 L70 18 L70 24 Z" fill="#ef6c5b"/>
+      </g>
+    </svg>
+  );
+}
+
 // Mini-illustratie voor de "Test je kennis"-tegel: een quiz-kaartje met
 // vraag-tekstregeltjes bovenin en 4 antwoord-rijen, waarvan er 1 als correct
 // gemarkeerd is (groene rand + vinkje). Vervangt het generieke 🎯-emoji
@@ -794,6 +848,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             ...(onLearnPathsHub ? [{
               key: "leren",
               emoji: "📚",
+              icon: <BookStackIcon primary="#00C853" />,
               label: "Leren",
               sub: "uitleg in delen van 15 min",
               color: "#00C853",
