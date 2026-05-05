@@ -1004,30 +1004,114 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {step === "role" && isLaunchPromoActive() && (() => {
-          // LaunchPromo verbergen voor ingelogde users — banner is een groei-
-          // hook voor nieuwe bezoekers, voor terugkerende leerlingen ruis.
+        {/* Lancering-promo (75%) + Installeer-app-blokje (25%), naast elkaar
+            als beide zichtbaar zijn. Eén van beide alleen → vult de hele rij.
+            Promo verbergt voor ingelogde gebruikers (alleen wervings-tool voor
+            nieuwe bezoekers); install verbergt als app al als PWA draait. */}
+        {step === "role" && (() => {
           let hasName = false;
           try {
             hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
           } catch {}
-          if (hasName) return null;
+          const showPromo = isLaunchPromoActive() && !hasName;
+          const showInstall = !isStandalone;
+          if (!showPromo && !showInstall) return null;
+          const handleInstall = async () => {
+            if (installBezig) return;
+            const triggerPrompt = async (px) => {
+              px.prompt();
+              const { outcome } = await px.userChoice;
+              if (outcome === "accepted") setInstallPrompt(null);
+            };
+            if (installPrompt) { await triggerPrompt(installPrompt); return; }
+            setInstallBezig(true);
+            const waiting = await new Promise((resolve) => {
+              let done = false;
+              const handler = (e) => {
+                if (done) return;
+                done = true;
+                e.preventDefault();
+                window.removeEventListener("beforeinstallprompt", handler);
+                resolve(e);
+              };
+              window.addEventListener("beforeinstallprompt", handler);
+              const interval = setInterval(() => {
+                if (window.__pwaInstallPrompt && !done) {
+                  done = true;
+                  clearInterval(interval);
+                  window.removeEventListener("beforeinstallprompt", handler);
+                  resolve(window.__pwaInstallPrompt);
+                }
+              }, 250);
+              setTimeout(() => {
+                if (done) return;
+                done = true;
+                clearInterval(interval);
+                window.removeEventListener("beforeinstallprompt", handler);
+                resolve(null);
+              }, 2500);
+            });
+            setInstallBezig(false);
+            if (waiting) {
+              setInstallPrompt(waiting);
+              await triggerPrompt(waiting);
+            } else {
+              setShowInstallHelp(true);
+            }
+          };
           return (
             <div className="lk-content-wide" style={{
+              display: "flex",
+              gap: 8,
               marginBottom: 12,
-              padding: "10px 14px",
-              background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
-              border: "1px solid rgba(105,240,174,0.35)",
-              borderRadius: 14,
-              fontFamily: "var(--font-body)",
-              textAlign: "center"
+              alignItems: "stretch",
             }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
-                {LAUNCH_PROMO_SHORT}
-              </div>
-              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
-                {LAUNCH_PROMO_LONG}
-              </div>
+              {showPromo && (
+                <div style={{
+                  flex: showInstall ? 3 : 1,
+                  padding: "10px 14px",
+                  background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
+                  border: "1px solid rgba(105,240,174,0.35)",
+                  borderRadius: 14,
+                  fontFamily: "var(--font-body)",
+                  textAlign: "center",
+                }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
+                    {LAUNCH_PROMO_SHORT}
+                  </div>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
+                    {LAUNCH_PROMO_LONG}
+                  </div>
+                </div>
+              )}
+              {showInstall && (
+                <button
+                  type="button"
+                  disabled={installBezig}
+                  onClick={handleInstall}
+                  style={{
+                    flex: showPromo ? 1 : 1,
+                    background: "linear-gradient(135deg, rgba(0,72,200,0.20), rgba(0,212,255,0.12))",
+                    border: "1px solid rgba(0,212,255,0.40)",
+                    borderRadius: 14,
+                    padding: "8px 6px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 2,
+                    cursor: installBezig ? "default" : "pointer",
+                    fontFamily: "var(--font-body)",
+                    color: "#fff",
+                    minWidth: 0,
+                  }}
+                >
+                  <span style={{ fontSize: 22, lineHeight: 1 }} aria-hidden="true">📲</span>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: "#00d4ff", textAlign: "center", lineHeight: 1.15 }}>
+                    {installBezig ? "Een moment…" : "Installeer app"}
+                  </div>
+                </button>
+              )}
             </div>
           );
         })()}
@@ -1073,86 +1157,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* FeatureShowcase verwijderd — die kaarten horen onder Oefenen-tab,
             niet op de homepage. Hero-tegels zijn al de toegangspoort. */}
 
-        {/* PWA install banner — altijd zichtbaar tot app geïnstalleerd is */}
-        {step === "role" && !isStandalone && (
-          <button
-            disabled={installBezig}
-            onClick={async () => {
-              if (installBezig) return;
-              const triggerPrompt = async (px) => {
-                px.prompt();
-                const { outcome } = await px.userChoice;
-                if (outcome === "accepted") setInstallPrompt(null);
-              };
-              if (installPrompt) { await triggerPrompt(installPrompt); return; }
-              // Geen prompt-event nog binnengekomen — kan een race zijn (vooral
-              // direct ná uninstall). Wacht tot 2,5s op een binnenkomend
-              // `beforeinstallprompt`-event voordat we de fallback-uitleg tonen.
-              setInstallBezig(true);
-              const waiting = await new Promise((resolve) => {
-                let done = false;
-                const handler = (e) => {
-                  if (done) return;
-                  done = true;
-                  e.preventDefault();
-                  window.removeEventListener("beforeinstallprompt", handler);
-                  resolve(e);
-                };
-                window.addEventListener("beforeinstallprompt", handler);
-                // Check elke 250ms of het globale handler in index.html intussen
-                // het event al heeft opgeslagen.
-                const interval = setInterval(() => {
-                  if (window.__pwaInstallPrompt && !done) {
-                    done = true;
-                    clearInterval(interval);
-                    window.removeEventListener("beforeinstallprompt", handler);
-                    resolve(window.__pwaInstallPrompt);
-                  }
-                }, 250);
-                setTimeout(() => {
-                  if (done) return;
-                  done = true;
-                  clearInterval(interval);
-                  window.removeEventListener("beforeinstallprompt", handler);
-                  resolve(null);
-                }, 2500);
-              });
-              setInstallBezig(false);
-              if (waiting) {
-                setInstallPrompt(waiting);
-                await triggerPrompt(waiting);
-              } else {
-                setShowInstallHelp(true);
-              }
-            }}
-            className="lk-content-wide"
-            style={{
-              background: "linear-gradient(135deg, rgba(0,72,200,0.18), rgba(0,212,255,0.10))",
-              border: "1px solid rgba(0,212,255,0.3)",
-              borderRadius: 14,
-              padding: "12px 14px",
-              display: "flex",
-              alignItems: "center",
-              gap: 12,
-              marginBottom: 16,
-              cursor: "pointer",
-              fontFamily: "var(--font-body)",
-              textAlign: "left",
-            }}>
-            <span style={{ fontSize: 26, flexShrink: 0 }}>📲</span>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00d4ff", lineHeight: 1.2 }}>
-                Zet {BRAND.name} op je telefoon of laptop
-              </div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                Gratis · werkt ook offline · sneller dan de browser
-              </div>
-            </div>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#00d4ff", flexShrink: 0 }}>
-              {installBezig ? "Een moment…" : "Installeer →"}
-            </span>
-          </button>
-        )}
+        {/* (Install-knop verplaatst naar de promo-rij hierboven; valt 25%
+            naast de promo-banner of vult de hele rij als de promo niet
+            zichtbaar is voor returning users.) */}
 
         {showInstallHelp && (
           <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
