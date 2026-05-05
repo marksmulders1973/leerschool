@@ -1178,7 +1178,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </>
               )}
               <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je {BRAND.name} openen als een echte app, ook offline.</p>
-              <button onClick={() => setShowInstallHelp(false)} style={{ width: "100%", padding: 10, border: "none", borderRadius: 10, background: "#00d4ff", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>Oké, duidelijk</button>
+              {/* Als Chrome het beforeinstallprompt-event alsnog levert terwijl
+                  deze modal openstaat (gebeurt soms na een paar tellen op de
+                  pagina), tonen we een echte 'Nu installeren'-knop. Sluit-knop
+                  blijft altijd staan zodat de modal weg kan. */}
+              <div style={{ display: "flex", gap: 10 }}>
+                {installPrompt && (
+                  <button
+                    onClick={async () => {
+                      installPrompt.prompt();
+                      const { outcome } = await installPrompt.userChoice;
+                      if (outcome === "accepted") setInstallPrompt(null);
+                      setShowInstallHelp(false);
+                    }}
+                    style={{ flex: 2, padding: 10, border: "none", borderRadius: 10, background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                  >
+                    🚀 Nu installeren
+                  </button>
+                )}
+                <button
+                  onClick={() => setShowInstallHelp(false)}
+                  style={{ flex: 1, padding: 10, border: installPrompt ? "1px solid rgba(255,255,255,0.20)" : "none", borderRadius: 10, background: installPrompt ? "transparent" : "#00d4ff", color: installPrompt ? "var(--color-text)" : "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                >
+                  {installPrompt ? "Sluit" : "Oké, duidelijk"}
+                </button>
+              </div>
             </div>
           </div>
         )}
