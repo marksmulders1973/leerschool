@@ -881,7 +881,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               onClick: handleOefenenClick,
             },
             { key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff", onClick: () => handleRoleClick("leerling") },
-            { key: "student",  emoji: "🎓", label: "Student",  sub: "klas 1–6",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
+            { key: "student",  emoji: "🎓", label: "Student",  sub: "vmbo · havo · vwo",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
             { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },
           ];
           return (
