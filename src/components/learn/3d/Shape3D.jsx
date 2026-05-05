@@ -109,6 +109,7 @@ const Shape3D = forwardRef(function Shape3D(
     theme = "dark-studiebol",
     height = 360,
     cameraDistanceFactor = 2.2,
+    cameraReferenceDim,
   },
   ref
 ) {
@@ -306,9 +307,14 @@ const Shape3D = forwardRef(function Shape3D(
     scene.add(dirLight);
 
     // ── Camera ──────────────────────────────────────────────────────────────
-    const cameraDist = md * cameraDistanceFactor;
+    // cameraReferenceDim: vaste referentiemaat voor camera-afstand. Default = md
+    // (camera schaalt met vorm zodat hij altijd even groot lijkt). Zet expliciet
+    // om de camera vast te zetten zodat de vorm écht groter/kleiner wordt op
+    // het scherm (bv. teaser-slider).
+    const refDim = cameraReferenceDim ?? md;
+    const cameraDist = refDim * cameraDistanceFactor;
     const isApexShape = shape === "piramide" || shape === "kegel";
-    camera.position.set(cameraDist, md * (isApexShape ? 0.8 : 1.2), cameraDist * 1.2);
+    camera.position.set(cameraDist, refDim * (isApexShape ? 0.8 : 1.2), cameraDist * 1.2);
     camera.lookAt(0, 0, 0);
 
     // ── Drag-to-rotate (muis + touch) + auto-rotate ─────────────────────────
@@ -378,7 +384,7 @@ const Shape3D = forwardRef(function Shape3D(
       unitMatsRef.current = [];
       boundingBoxRef.current = { mesh: null, wire: null };
     };
-  }, [shape, JSON.stringify(dimensions), showUnitCubes, JSON.stringify(labels), theme, cameraDistanceFactor]);
+  }, [shape, JSON.stringify(dimensions), showUnitCubes, JSON.stringify(labels), theme, cameraDistanceFactor, cameraReferenceDim]);
 
   // ── Toggle bounding box-zichtbaarheid zonder scene-rebuild ──────────────
   useEffect(() => {

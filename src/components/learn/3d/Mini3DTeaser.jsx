@@ -41,6 +41,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor }) {
           labels={[]}
           height={height}
           cameraDistanceFactor={cameraDistanceFactor}
+          cameraReferenceDim={6}
         />
       </div>
       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
