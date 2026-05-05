@@ -41,6 +41,7 @@ import wereldoorlog2Geschiedenis from "./wereldoorlog2Geschiedenis.js";
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
+import elektriciteitNatuurkunde from "./elektriciteitNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
 import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
 import balansBeco from "./balansBeco.js";
@@ -108,6 +109,7 @@ export const ALL_LEARN_PATHS = {
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
+  "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
   // Economie
