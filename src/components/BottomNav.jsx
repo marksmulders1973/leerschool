@@ -1,22 +1,23 @@
 import { track } from "../utils.js";
 
-// Bottom-tabs nav (Duolingo-style). Vier tabs: Home, Leren, Test, OBLITERATOR.
-// Design-system v1: tokens, tap-target ≥ 44px, glow-indicator op brand-primary.
-// "Test" is de korte vorm van "Test je kennis" (de hero-tegel-titel) — in de
-// nav is "Test" leesbaarder zonder dat het de andere labels krapt.
-// OBLITERATOR-tab krijgt altijd de oranje-gold gradient (matcht de
-// START-knop in het spel) zodat 'ie er als feature-tab uitspringt.
+// Bottom-tabs nav (Duolingo-style). Vijf tabs: Home, Leren, Test, Scorebord,
+// OBLITERATOR. Design-system v1: tokens, tap-target ≥ 44px, glow-indicator
+// op brand-primary. "Test" is de korte vorm van "Test je kennis" (de
+// hero-tegel-titel). OBLITERATOR-tab krijgt altijd de oranje-gold gradient
+// (matcht de START-knop in het spel) zodat 'ie er als feature-tab uitspringt.
 
 const TABS = [
   { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
   { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
   { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen" },
+  { id: "score",   label: "Scorebord",   emoji: "🏆", target: "leaderboard" },
   { id: "spel",    label: "OBLITERATOR", emoji: "🛸", target: "obliteratorPlay", brand: true },
 ];
 
 function bepaalActieveTab(page) {
   if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
+  if (page === "leaderboard") return "score";
   if (page === "obliteratorPlay" || page === "obliteratorDirect") return "spel";
   if ([
     "student-home", "teacher-home", "self-study",
