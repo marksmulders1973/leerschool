@@ -773,16 +773,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero voor nieuwe bezoekers: 6 even grote vierkante tegels in
-            responsive grid (2×3 op telefoon, 3×2 op tablet/laptop). 1e tegel
-            bevat de echte Mini3DTeaser slider (kubus-z³-berekening); de
-            andere 5 zijn reguliere actie-buttons. Daaronder lichtkrant. */}
+        {/* Hero — 6 even grote vierkante tegels in responsive grid (2×3 op
+            telefoon, 3×2 op tablet/laptop). 1e tegel bevat de echte
+            Mini3DTeaser slider (kubus-z³-berekening); de andere 5 zijn
+            reguliere actie-buttons. Toonbaar voor zowel nieuwe als
+            terugkerende gebruikers — de 3D-kubus is een herkenningspunt
+            voor de home-pagina. */}
         {step === "role" && (() => {
-          let hasName = false;
-          try {
-            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          if (hasName) return null;
           const tiles = [
             ...(onLearnPathsHub ? [{
               key: "leren",
@@ -891,90 +888,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {/* (verplaatst naar boven de hero — Prio 2 uit competitor-research) */}
 
-        {/* Primaire CTA's: Leren vs Oefenen — alleen voor terugkerende leerlingen.
-            Nieuwe bezoekers zien deze knoppen al gestapeld in de 2-kolom hero
-            naast de 3D-kubus, dus zonder herhaling. */}
-        {step === "role" && (() => {
-          let hasName = false;
-          try {
-            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          return hasName;
-        })() && (
-          <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 10, textAlign: "center", letterSpacing: 0.3 }}>
-              Wat wil je doen?
-            </div>
-            <div style={{ display: "flex", gap: 12 }}>
-              {onLearnPathsHub && (
-                <button
-                  onClick={handleLerenClick}
-                  style={{
-                    flex: 1,
-                    background: "linear-gradient(135deg, var(--color-brand-primary), #00897b)",
-                    border: "none", borderRadius: 18, padding: "18px 10px",
-                    color: "var(--color-text-strong)", cursor: "pointer",
-                    display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
-                    boxShadow: "0 6px 20px rgba(0,200,83,0.35)",
-                    transition: "transform 0.15s",
-                  }}
-                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                  onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
-                >
-                  <span style={{ fontSize: 34 }}>📚</span>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700 }}>Leren</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, opacity: 0.92 }}>uitleg + checks per stap</div>
-                </button>
-              )}
+        {/* Mijn voortgang — alleen voor terugkerende leerlingen.
+            Leren + Oefenen staan voor iedereen al in de hero-tegels hierboven,
+            dus die hoeven we hier niet te herhalen. */}
+        {step === "role" && onMyMastery && (() => {
+          let savedName = null;
+          try { savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim(); } catch {}
+          if (!savedName) return null;
+          return (
+            <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
               <button
-                onClick={handleOefenenClick}
+                onClick={() => { track("home_cta_mastery"); onMyMastery(); }}
                 style={{
-                  flex: 1,
-                  background: "linear-gradient(135deg, #ff8030, #ffaa00)",
-                  border: "none", borderRadius: 18, padding: "18px 10px",
-                  color: "#1a0a00", cursor: "pointer",
-                  display: "flex", flexDirection: "column", alignItems: "center", gap: 4,
-                  boxShadow: "0 6px 20px rgba(255,140,40,0.35)",
-                  transition: "transform 0.15s",
+                  width: "100%",
+                  padding: "12px 14px",
+                  borderRadius: 14,
+                  border: "1px solid rgba(0,200,83,0.40)",
+                  background: "rgba(0,200,83,0.10)",
+                  color: "var(--color-brand-primary-100)",
+                  fontFamily: "var(--font-display)",
+                  fontSize: 14, fontWeight: 700,
+                  cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 }}
-                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; }}
               >
-                <span style={{ fontSize: 34 }}>🎯</span>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700 }}>Oefenen</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, opacity: 0.92 }}>toetsen, tafels, cito</div>
+                <span style={{ fontSize: 18 }}>📈</span>
+                <span>Mijn voortgang — {savedName}</span>
               </button>
             </div>
-            {onMyMastery && (() => {
-              // Toon de "Mijn voortgang"-knop alleen voor terugkerende leerlingen
-              // (= naam in localStorage). Voor nieuwe bezoekers heeft het geen
-              // betekenis nog en zou het de keuze versnipperen.
-              let savedName = null;
-              try { savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim(); } catch {}
-              if (!savedName) return null;
-              return (
-                <button
-                  onClick={() => { track("home_cta_mastery"); onMyMastery(); }}
-                  style={{
-                    width: "100%", marginTop: 12,
-                    padding: "12px 14px",
-                    borderRadius: 14,
-                    border: "1px solid rgba(0,200,83,0.40)",
-                    background: "rgba(0,200,83,0.10)",
-                    color: "var(--color-brand-primary-100)",
-                    fontFamily: "var(--font-display)",
-                    fontSize: 14, fontWeight: 700,
-                    cursor: "pointer",
-                    display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                  }}
-                >
-                  <span style={{ fontSize: 18 }}>📈</span>
-                  <span>Mijn voortgang — {savedName}</span>
-                </button>
-              );
-            })()}
-          </div>
-        )}
+          );
+        })()}
 
         {/* Rol-tegels (Leerling / Student / Leerkracht) zijn voor nieuwe
             bezoekers IN de 6-tegel hero. Voor returning users tonen we ze
