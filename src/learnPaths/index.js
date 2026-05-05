@@ -34,6 +34,7 @@ import literatuurgeschiedenis from "./literatuurgeschiedenis.js";
 import spelling from "./spelling.js";
 import zinsontleding from "./zinsontleding.js";
 import onregelmatigeWerkwoordenEngels from "./onregelmatigeWerkwoordenEngels.js";
+import onregelmatigeWerkwoordenV2Engels from "./onregelmatigeWerkwoordenV2Engels.js";
 import celBiologie from "./celBiologie.js";
 import voortplantingHormonenBiologie from "./voortplantingHormonenBiologie.js";
 import tijdvakkenGeschiedenis from "./tijdvakkenGeschiedenis.js";
@@ -97,6 +98,7 @@ export const ALL_LEARN_PATHS = {
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
   "onregelmatige-werkwoorden-engels": onregelmatigeWerkwoordenEngels,
+  "onregelmatige-werkwoorden-v2-engels": onregelmatigeWerkwoordenV2Engels,
   "present-tenses-engels": presentTensesEngels,
   "past-tenses-engels": pastTensesEngels,
   "woordenschat-engels": woordenschatEngels,
