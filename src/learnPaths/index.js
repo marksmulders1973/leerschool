@@ -44,6 +44,7 @@ import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import elektriciteitNatuurkunde from "./elektriciteitNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
+import chemischeReactiesScheikunde from "./chemischeReactiesScheikunde.js";
 import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
 import balansBeco from "./balansBeco.js";
 import pincodeEconomieVmboGt4 from "./pincodeEconomieVmboGt4.js";
@@ -114,6 +115,7 @@ export const ALL_LEARN_PATHS = {
   "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
+  "chemische-reacties-scheikunde": chemischeReactiesScheikunde,
   // Economie
   "vraag-aanbod-economie": vraagAanbodEconomie,
   "pincode-economie-vmbo-gt-4": pincodeEconomieVmboGt4,
