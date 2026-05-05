@@ -180,6 +180,10 @@ function TickerBanner() {
   const [shareItems, setShareItems] = useState([]);
   const [obliteratorItems, setObliteratorItems] = useState([]);
   const [vriendenmakerItem, setVriendenmakerItem] = useState(null);
+  // Algemene shoutouts voor élke speler die deze week actief was — niet alleen
+  // de winnaars. Doel: iedereen voelt zich gezien op de homepage, vergroot de
+  // kans dat ze de app delen ('hé, mijn naam staat erop, kijk!').
+  const [shoutoutItems, setShoutoutItems] = useState([]);
 
   useEffect(() => {
     // Vriendenmaker van de week (meeste shares)
@@ -290,6 +294,64 @@ function TickerBanner() {
   }, []);
 
   useEffect(() => {
+    // Algemene shoutouts: voor élke speler die deze week >= 1 toets deed,
+    // toon een persoonlijke ticker-regel. Sluit Mark zelf uit (meet 'm niet
+    // omdat hij de bouwer is en eigen tests doet). Random rotatie van
+    // berichten zodat het niet altijd hetzelfde voelt.
+    const now = new Date();
+    const startOfWeek = new Date(now);
+    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
+    startOfWeek.setHours(0, 0, 0, 0);
+    const endOfWeek = new Date(startOfWeek);
+    endOfWeek.setDate(startOfWeek.getDate() + 6);
+    endOfWeek.setHours(23, 59, 59, 999);
+
+    supabase.from("leaderboard")
+      .select("player_name, subject, percentage, completed_at")
+      .gte("completed_at", startOfWeek.toISOString())
+      .lte("completed_at", endOfWeek.toISOString())
+      .then(({ data }) => {
+        if (!data?.length) return;
+        // Groepeer per speler, sluit Mark + lege namen uit
+        const stats = {};
+        const skipNames = new Set(["mark", "mark smulders", "audit", "test", "tester", ""]);
+        for (const e of data) {
+          const n = (e.player_name || "").trim();
+          if (!n || skipNames.has(n.toLowerCase())) continue;
+          if (!stats[n]) stats[n] = { name: n, count: 0, subjects: new Set(), avgPct: 0, scores: [] };
+          stats[n].count += 1;
+          stats[n].subjects.add(e.subject);
+          stats[n].scores.push(e.percentage || 0);
+        }
+        const players = Object.values(stats).map((p) => ({
+          ...p,
+          uniqueSubjects: p.subjects.size,
+          avgPct: Math.round(p.scores.reduce((s, x) => s + x, 0) / p.scores.length),
+        }));
+        // Pak top 8 op aantal toetsen, varieer berichten per persoon
+        const top = players.sort((a, b) => b.count - a.count).slice(0, 8);
+        const items = top.map((p, i) => {
+          const variants = [
+            { icon: "🌟", text: `${p.name} is bezig — ${p.count} ${p.count === 1 ? "toets" : "toetsen"} deze week!` },
+            { icon: "🚀", text: `${p.name} pakt ${p.uniqueSubjects} ${p.uniqueSubjects === 1 ? "vak" : "vakken"} aan deze week!` },
+            { icon: "💫", text: `${p.name} scoort gemiddeld ${p.avgPct}% — knap!` },
+            { icon: "🎯", text: `${p.name} oefent door — ${p.count} ${p.count === 1 ? "toets" : "toetsen"} gedaan!` },
+            { icon: "👏", text: `Goed bezig ${p.name}! Al ${p.count} ${p.count === 1 ? "toets" : "toetsen"} gemaakt deze week.` },
+          ];
+          // Kies variant op basis van eigenschappen — gepersonaliseerd
+          let variant;
+          if (p.avgPct >= 80) variant = variants[2];
+          else if (p.uniqueSubjects >= 3) variant = variants[1];
+          else if (p.count >= 3) variant = variants[0];
+          else variant = variants[i % variants.length];
+          return { icon: variant.icon, text: variant.text, special: true };
+        });
+        setShoutoutItems(items);
+      })
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
     const now = new Date();
     const fmtShort = (d) => d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
 
@@ -333,8 +395,25 @@ function TickerBanner() {
     return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 ${BRAND.name} van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
   });
 
-  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR + Vriendenmaker) tussen gewone items
-  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems, ...(vriendenmakerItem ? [vriendenmakerItem] : [])];
+  // Filter shoutouts: namen die al als winnaar/award genoemd zijn slaan we
+  // over om dubbele aandacht te voorkomen — die hebben al hun moment.
+  const namesAlreadyMentioned = new Set();
+  winnerItems.forEach((w) => {
+    const m = w.text.match(/Gefeliciteerd\s+([^!]+)!/);
+    if (m) namesAlreadyMentioned.add(m[1].trim().toLowerCase());
+  });
+  awardItems.forEach((a) => {
+    const m = a.text.match(/(?:Knap!|Wauw!|Super!)\s+([^\s]+)/);
+    if (m) namesAlreadyMentioned.add(m[1].trim().toLowerCase());
+  });
+  const filteredShoutouts = shoutoutItems.filter((s) => {
+    const m = s.text.match(/^(?:[^a-zA-Z]+)?([A-Za-zÀ-ž][A-Za-zÀ-ž\-]*)/) || s.text.match(/Goed bezig\s+([^!]+)!/);
+    if (!m) return true;
+    return !namesAlreadyMentioned.has(m[1].trim().toLowerCase());
+  });
+
+  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR + Vriendenmaker + shoutouts) tussen gewone items
+  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems, ...(vriendenmakerItem ? [vriendenmakerItem] : []), ...filteredShoutouts];
   const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {
