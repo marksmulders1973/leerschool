@@ -120,7 +120,7 @@ export default function Mini3DTeaser({ onCTA }) {
         background: "linear-gradient(135deg, rgba(239,159,39,0.10), rgba(255,213,79,0.06))",
         border: "1px solid rgba(255,213,79,0.30)",
         borderRadius: 16,
-        padding: "10px 12px 12px",
+        padding: "6px 8px 8px",
         boxShadow: "0 4px 20px rgba(255,213,79,0.10)",
         display: "flex",
         flexDirection: "column",
@@ -153,7 +153,7 @@ export default function Mini3DTeaser({ onCTA }) {
         >
           ⛶
         </button>
-        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={95} cameraDistanceFactor={4.2} compact />
+        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={70} cameraDistanceFactor={4.2} compact />
       </div>
 
       {expanded && (
