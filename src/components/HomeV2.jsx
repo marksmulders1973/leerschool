@@ -111,8 +111,8 @@ const Icon = {
 };
 
 const VAKKEN = [
-  { id: "leren",     label: "Leren",      sub: "uitleg + vraagje per onderwerp", icon: Icon.book,     primary: true },
-  { id: "oefenen",   label: "Oefenen",    sub: "uit je schoolboek",         icon: Icon.target,   primary: true },
+  { id: "leren",     label: "Leren",      sub: "uitleg in delen van 15 min", icon: Icon.book,     primary: true },
+  { id: "oefenen",   label: "Test je kennis", sub: "snelle quiz, in 15 min", icon: Icon.target,   primary: true },
   { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, badge: "Nieuw" },
   { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target },
   { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function },

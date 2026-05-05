@@ -1018,7 +1018,7 @@ export default function App() {
               questionCount: config.questionCount,
               timePerQuestion: config.timePerQuestion,
               topic: config.topic || null,
-              title: `${SUBJECTS.find((s) => s.id === config.subject)?.label}${topicLabel} - Zelf oefenen`,
+              title: `${SUBJECTS.find((s) => s.id === config.subject)?.label}${topicLabel} - Test je kennis`,
             };
             setCurrentQuiz(quiz);
             startGame(quiz, "self");

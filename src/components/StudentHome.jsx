@@ -207,7 +207,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
             <span style={{ fontSize: 24 }}>📖</span>
-            <span style={{ fontWeight: 700, fontSize: 13 }}>Zelf oefenen</span>
+            <span style={{ fontWeight: 700, fontSize: 13 }}>Test je kennis</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #FF6B35, #e55039)" }} onClick={() => { SoundEngine.play("click"); onTextbook(); }}>
             <span style={{ fontSize: 24 }}>📕</span>
@@ -287,7 +287,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               Klaar voor je eerste oefening?
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.4 }}>
-              Tik <strong>Zelf oefenen</strong> hierboven en kies een vak — of <strong>Uit je boek</strong> als je een schoolboek hebt.
+              Tik <strong>Test je kennis</strong> hierboven en kies een vak — of <strong>Uit je boek</strong> als je een schoolboek hebt.
             </div>
           </div>
         )}

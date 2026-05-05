@@ -72,7 +72,7 @@ export default function SelfStudy({ onStart, onBack, onHome, userLevel, userRole
 
   return (
     <div style={styles.page}>
-      <Header title="Zelf oefenen 📖" subtitle="Kies je vak en niveau" onBack={onBack} onHome={onHome} />
+      <Header title="Test je kennis 🎯" subtitle="Kies je vak en niveau" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!initLevel && (
           <>
