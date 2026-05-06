@@ -541,7 +541,103 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
-  // Volgende: argus-clou + blink (natuur-alternatieven).
+  // ── Argus Clou — wereldoriëntatie groep 5-8 (alternatief Naut) ──────
+  // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten, 2=Dieren,
+  // 3=Natuur en milieu, 4=Weer en klimaat, 5=Aarde en ruimte,
+  // 6=Techniek en energie.
+  "argus-clou": {
+    0: [
+      { q: "Welk orgaan zit in je BUIK en verteert eten?", options: ["Maag", "Hart", "Long", "Hersenen"], answer: 0, explanation: "Maag = orgaan in je buik dat eten kneedt en met maagsap verteert." },
+      { q: "Hoeveel uur slaap heeft een kind van 10 jaar gemiddeld nodig?", options: ["9-11 uur", "5-6 uur", "12-14 uur", "3-4 uur"], answer: 0, explanation: "Kinderen 6-12 jaar hebben 9-11 uur slaap nodig voor groei en herstel. Te weinig slaap = moe, slechte concentratie." },
+      { q: "Wat doet je SKELET?", options: ["Houdt je lichaam rechtop", "Verteert eten", "Maakt zuurstof", "Slaapt"], answer: 0, explanation: "Skelet (botten) = stevigheid + bescherming (bv. ribben beschermen hart en longen)." },
+      { q: "Welke spier werkt zonder dat je eraan denkt?", options: ["Hart", "Bovenarm", "Vinger", "Knie"], answer: 0, explanation: "Hartspier (en darmspieren) werken automatisch — je hoeft er niet aan te denken." },
+    ],
+    1: [
+      { q: "Welk deel van een plant zit ONDER de grond?", options: ["Wortels", "Bladeren", "Bloemen", "Stengel-top"], answer: 0, explanation: "Wortels groeien naar beneden, halen water en voeding uit de grond." },
+      { q: "Wat is een ZAAD?", options: ["Beginnetje van een nieuwe plant", "Klein blaadje", "Vrucht", "Steel"], answer: 0, explanation: "In een zaad zit alles om een nieuwe plant te laten ontkiemen — bv. zonnebloemzaad → zonnebloemplant." },
+      { q: "Welke plant maakt jaarlijks NIEUWE bladeren in de lente?", options: ["Loofboom (eik, beuk)", "Naaldboom (den, spar)", "Cactus", "Mos"], answer: 0, explanation: "Loofbomen verliezen bladeren in herfst en krijgen nieuwe in lente. Naaldbomen zijn vaak groenblijvend." },
+      { q: "Wat is een KAS?", options: ["Een glazen gebouw waar planten groeien", "Een soort plant", "Een bos", "Een bloemenzaak"], answer: 0, explanation: "Kas = warm glazen gebouw waar tomaten/komkommers/bloemen groeien — ook in winter." },
+    ],
+    2: [
+      { q: "Welk dier is een ROOFDIER?", options: ["Leeuw", "Konijn", "Koe", "Schaap"], answer: 0, explanation: "Roofdier = jaagt op andere dieren voor voedsel. Leeuw jaagt op antilopen. Koe/schaap eten gras (planteneters)." },
+      { q: "Hoe haalt een vis ZUURSTOF binnen?", options: ["Via kieuwen", "Via longen", "Via huid", "Via bek"], answer: 0, explanation: "Vissen hebben kieuwen die zuurstof uit het water filteren. Zoogdieren hebben longen voor zuurstof uit lucht." },
+      { q: "Wat doen vogels in de winter VAAK?", options: ["Trekken naar warmere landen", "Slapen continu", "Eieren leggen", "Niets bijzonders"], answer: 0, explanation: "Trekvogels (zwaluwen, ooievaars) vliegen naar warm Afrika omdat hier weinig voedsel is. Sommige vogels (mussen) blijven." },
+      { q: "Welk dier legt EIEREN met een harde schaal?", options: ["Vogel", "Hond", "Vis", "Konijn"], answer: 0, explanation: "Vogels leggen eieren met kalkschaal. Vissen leggen eieren in water (zacht). Hond/konijn = zoogdier (levende jongen)." },
+    ],
+    3: [
+      { q: "Wat betekent BIODIVERSITEIT?", options: ["Variatie aan planten en dieren", "Soort milieu-camera", "Type huis", "Een ziekte"], answer: 0, explanation: "Biodiversiteit = hoeveel verschillende soorten leven er. Hoe meer biodiversiteit, hoe gezonder de natuur." },
+      { q: "Wat is een NATUURGEBIED?", options: ["Beschermd stuk natuur waar planten en dieren leven", "Stadspark", "Camping", "Speeltuin"], answer: 0, explanation: "Natuurgebied = beschermd terrein waar mens niet alles mag (geen huizen, weinig wegen) — bv. Veluwe, Biesbosch." },
+      { q: "Wat is RECYCLEN?", options: ["Materiaal hergebruiken (afval → nieuwe spullen)", "Iets weggooien", "Iets nieuws kopen", "Tellen"], answer: 0, explanation: "Recyclen: oud papier → nieuw papier; oude petfles → nieuwe petfles. Spaart grondstoffen." },
+      { q: "Welke energie is GROEN (duurzaam)?", options: ["Zonneenergie", "Aardgas", "Steenkool", "Aardolie"], answer: 0, explanation: "Zonneenergie raakt nooit op en geeft geen CO₂. Gas/kolen/olie zijn fossiel (raken op + opwarming)." },
+    ],
+    4: [
+      { q: "Wat veroorzaakt WIND?", options: ["Verschillen in luchtdruk", "Bomen die bewegen", "Wolken die voorbij gaan", "Vogels die vliegen"], answer: 0, explanation: "Wind = lucht stroomt van hogedruk naar lagedruk. Onstaat door temperatuur-verschillen op aarde." },
+      { q: "Wat is HAGEL?", options: ["IJsbolletjes uit een wolk", "Sneeuwvlokken", "Vorst op gras", "Ijsbergen"], answer: 0, explanation: "Hagel = ijsbolletjes die in wolken steeds groter groeien tot ze te zwaar worden en vallen." },
+      { q: "Welk klimaat heeft Nederland?", options: ["Gematigd zeeklimaat", "Tropisch", "Woestijn", "Poolgebied"], answer: 0, explanation: "Gematigd zeeklimaat: niet te heet, niet te koud, regelmatig regen door nabijheid Noordzee." },
+      { q: "Wat doet een WEERSTATION?", options: ["Meet temperatuur, regen, wind", "Maakt het weer", "Vangt wolken", "Schiet bliksem"], answer: 0, explanation: "Weerstation = instrumenten die het weer meten. KNMI gebruikt die data voor de weersvoorspelling." },
+    ],
+    5: [
+      { q: "Welke planeet wordt 'de rode planeet' genoemd?", options: ["Mars", "Mercurius", "Saturnus", "Neptunus"], answer: 0, explanation: "Mars heeft een rode/oranje kleur door ijzeroxide (roest) op het oppervlak. Vandaar bijnaam 'rode planeet'." },
+      { q: "Hoeveel planeten heeft ons zonnestelsel?", options: ["8", "9", "7", "10"], answer: 0, explanation: "Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus = 8. (Pluto telt niet meer als planeet sinds 2006.)" },
+      { q: "Wat is een ZONSVERDUISTERING?", options: ["De maan staat tussen zon en aarde", "Wolken bedekken de zon", "Het wordt avond", "De zon gaat uit"], answer: 0, explanation: "Bij zonsverduistering staat de maan precies tussen zon en aarde. De maanschaduw maakt het overdag tijdelijk donker." },
+      { q: "Hoeveel uur duurt één dag op AARDE?", options: ["24 uur", "12 uur", "48 uur", "365 uur"], answer: 0, explanation: "Aarde draait in 24 uur om eigen as = 1 dag. 365 dagen = 1 jaar (rondje om de zon)." },
+    ],
+    6: [
+      { q: "Wat is een EENVOUDIGE machine?", options: ["Hefboom of katrol", "Computer", "Auto", "Robot"], answer: 0, explanation: "Eenvoudige machines zijn basisuitvindingen: hefboom, katrol, hellend vlak, schroef, wig — versterken kracht." },
+      { q: "Hoe wordt elektriciteit OPgewekt in een windmolen?", options: ["Wind draait wieken die een dynamo aandrijven", "Wind blaast op zonnepanelen", "Wind zelf is elektrisch", "Door warmte"], answer: 0, explanation: "Wieken draaien → as draait → dynamo zet draaibeweging om in elektriciteit." },
+      { q: "Welk materiaal geleidt elektriciteit GOED?", options: ["Koper", "Hout", "Plastic", "Glas"], answer: 0, explanation: "Metalen (vooral koper) zijn goede geleiders. Hout, plastic, glas zijn isolatoren." },
+      { q: "Wat is een SOLAR PANEEL?", options: ["Vangt zonlicht en maakt er elektriciteit van", "Verwarmt water", "Beschermt tegen zon", "Reflecteert licht"], answer: 0, explanation: "Solar (= zon) paneel zet zonlicht direct om in elektriciteit. Op steeds meer Nederlandse daken te zien." },
+    ],
+  },
+
+  // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
+  // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
+  // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
+  // 5=Techniek, 6=Nederland en de wereld.
+  "blink": {
+    0: [
+      { q: "Welk orgaan beheert je beweging en denken?", options: ["Hersenen", "Hart", "Maag", "Lever"], answer: 0, explanation: "Hersenen sturen alle bewuste én onbewuste acties: bewegen, denken, zien, horen." },
+      { q: "Hoe heet het rode in je bloed?", options: ["Rode bloedcellen", "Witte bloedcellen", "Bloedplaatjes", "Lever"], answer: 0, explanation: "Rode bloedcellen zorgen voor zuurstof-transport. Witte = afweer (immuunsysteem). Bloedplaatjes = stollen bij wondje." },
+      { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Gehoor", "Tast"], answer: 0, explanation: "Smaakpapillen op je tong proeven zoet, zout, zuur, bitter, umami." },
+      { q: "Wat doet de huid VOORAL?", options: ["Beschermt tegen ziektekiemen + reguleert temperatuur", "Maakt voedsel", "Pompt bloed", "Filtreert lucht"], answer: 0, explanation: "Huid = grootste orgaan: barrière tegen bacteriën, regelt warmte (zweten = afkoelen), voelt aanraking." },
+    ],
+    1: [
+      { q: "Wat doen INSECTEN voor planten?", options: ["Bestuiven (pollen verspreiden)", "Eten ze op", "Slapen erin", "Niets bijzonders"], answer: 0, explanation: "Bijen, vlinders dragen stuifmeel van bloem naar bloem → vrucht/zaad. Zonder bestuivers: geen appel, aardbei." },
+      { q: "Welk dier slaapt een WINTERSLAAP?", options: ["Egel", "Mens", "Olifant", "Vis"], answer: 0, explanation: "Egels (en eekhoorns, beren) overwinteren met lage stofwisseling. Spaart energie wanneer voedsel schaars is." },
+      { q: "Welke voedselketen klopt?", options: ["Gras → Konijn → Vos", "Vos → Konijn → Gras", "Vlees → Plant → Mens", "Mens → Vis → Boom"], answer: 0, explanation: "Plant (gras) wordt gegeten door planteneter (konijn), dat wordt gegeten door vleeseter (vos)." },
+      { q: "Hoe noem je een dier dat ALLES eet (planten + vlees)?", options: ["Alleseter", "Vleeseter", "Planteneter", "Aaseter"], answer: 0, explanation: "Alleseter (omnivoor): mens, varken, beer. Eten zowel planten als dieren." },
+    ],
+    2: [
+      { q: "Wat is duurzaamheid?", options: ["Goed omgaan met de aarde voor de toekomst", "Lang houdbare houten meubels", "Snel iets nieuws kopen", "Een soort fiets"], answer: 0, explanation: "Duurzaam = zorgen dat we de aarde niet uitputten — gebruik niet meer dan we kunnen aanvullen." },
+      { q: "Welke verpakking is HET MEEST duurzaam?", options: ["Glas (te hergebruiken)", "Plastic eenmalig", "Aluminium folie", "Karton met plastic erin"], answer: 0, explanation: "Glas kan oneindig hergebruikt worden zonder kwaliteitsverlies. Plastic vaak maar 1× recyclebaar." },
+      { q: "Wat is FAIR TRADE?", options: ["Boeren krijgen eerlijke prijs", "Producten zijn gratis", "Producten worden snel geleverd", "Een merk koffie"], answer: 0, explanation: "Fair trade = eerlijke handel: boeren in arme landen krijgen genoeg betaald om goed te leven." },
+      { q: "Welke acties verlagen je CO₂-VOETAFDRUK?", options: ["Minder vlees + lokaal kopen + fiets", "Vaker vliegen + nieuwe spullen", "Lange auto-ritten", "Verwarming hoger zetten"], answer: 0, explanation: "Vliegen + auto + vlees + import-spullen geven veel CO₂. Fiets, plant-based, lokaal = lagere voetafdruk." },
+    ],
+    3: [
+      { q: "Wat is het verschil tussen WEER en KLIMAAT?", options: ["Weer = nu, klimaat = jaar/decennia", "Weer = lang, klimaat = kort", "Weer = warm, klimaat = koud", "Geen verschil"], answer: 0, explanation: "Weer = wat nu/vandaag gebeurt. Klimaat = gemiddelde over langere tijd (30+ jaar)." },
+      { q: "Welk land heeft een TROPISCH klimaat?", options: ["Brazilië", "IJsland", "Groenland", "Noorwegen"], answer: 0, explanation: "Tropisch = dichtbij evenaar, warm jaar-rond. Brazilië, Indonesië, Centraal-Afrika. IJsland/Groenland = polair." },
+      { q: "Wat is een ORKAAN?", options: ["Een hele zware tropische storm", "Hele zware regen", "Een aardbeving", "Een vulkaan"], answer: 0, explanation: "Orkaan (cycloon, tyfoon) = tropische storm met windsnelheden >118 km/u. Verwoestende kracht." },
+      { q: "Waarom wordt de aarde STEEDS WARMER?", options: ["Mensen stoten meer CO₂ uit", "De zon brandt feller", "Bomen geven warmte", "Het is normaal"], answer: 0, explanation: "Verbranding van fossiele brandstoffen (auto's, fabrieken) → CO₂ in lucht → vasthouden warmte → opwarming." },
+    ],
+    4: [
+      { q: "Welke planeet heeft DE MEESTE manen?", options: ["Saturnus (~80+)", "Aarde (1)", "Mars (2)", "Mercurius (0)"], answer: 0, explanation: "Saturnus heeft 80+ ontdekte manen. Jupiter ook veel. Aarde maar 1, Mercurius 0." },
+      { q: "Hoe heet ons sterrenstelsel?", options: ["Melkweg", "Andromeda", "Plejaden", "Orion"], answer: 0, explanation: "Onze melkweg (Engels: Milky Way) — bestaat uit ~200 miljard sterren waaronder onze zon." },
+      { q: "Wat is een KOMEET?", options: ["IJs- en stofbal in de ruimte met staart", "Een planeet", "Een ster", "Een raket"], answer: 0, explanation: "Komeet = bevroren bal van ijs+stof. Bij nadering van zon smelt iets → karakteristieke staart." },
+      { q: "Hoeveel jaar duurt het voor licht van de zon naar aarde te komen?", options: ["Ongeveer 8 minuten", "1 seconde", "1 jaar", "Direct"], answer: 0, explanation: "Lichtsnelheid = 300.000 km/sec. Zon-aarde = ~150 miljoen km. Reis = ~8 minuten." },
+    ],
+    5: [
+      { q: "Wat is INTERNET?", options: ["Wereldwijd computernetwerk", "Een soort tv", "Een tijdschrift", "Een telefoon-app"], answer: 0, explanation: "Internet = miljoenen computers wereldwijd verbonden. Apps en websites maken er gebruik van." },
+      { q: "Wat doet een 3D-PRINTER?", options: ["Maakt voorwerpen door laagje voor laagje plastic op te bouwen", "Print foto's in 3D", "Print bewegende beelden", "Maakt geluiden 3D"], answer: 0, explanation: "3D-printer bouwt object op door duizenden dunne laagjes plastic (of ander materiaal) te printen." },
+      { q: "Wat is een ROBOT?", options: ["Een machine die zelf taken kan uitvoeren", "Een speelgoedauto", "Een soort computerspel", "Een wasmachine"], answer: 0, explanation: "Robot = machine die zelf programmeerbare taken doet — bv. lasrobots in autofabriek, robotstofzuigers." },
+      { q: "Wat is KUNSTMATIGE intelligentie (AI)?", options: ["Computer die zelf leert + beslist", "Een soort schilderij", "Een hele snelle computer", "Internet"], answer: 0, explanation: "AI = software die patronen leert uit data en daarmee beslissingen kan nemen. Bv. ChatGPT, vertaalsoftware." },
+    ],
+    6: [
+      { q: "Welk is GEEN provincie van Nederland?", options: ["Vlaanderen", "Limburg", "Zeeland", "Friesland"], answer: 0, explanation: "Vlaanderen is een regio in België. NL heeft 12 provincies — Limburg, Zeeland, Friesland horen erbij." },
+      { q: "Welke zee ligt bij NEDERLAND?", options: ["Noordzee", "Middellandse Zee", "Zwarte Zee", "Oostzee"], answer: 0, explanation: "Noordzee ligt aan de westkant van NL — strand en haven (Rotterdam: grootste haven van Europa)." },
+      { q: "Welk werelddeel ligt onder Europa?", options: ["Afrika", "Azië", "Amerika", "Antarctica"], answer: 0, explanation: "Op de wereldkaart: Europa boven, Afrika eronder (over de Middellandse Zee). Azië = oosten, Amerika = westen." },
+      { q: "Welk continent heeft de MEESTE inwoners?", options: ["Azië", "Afrika", "Europa", "Amerika"], answer: 0, explanation: "Azië heeft ~4,7 miljard inwoners (China + India samen al 2,8 miljard). Wereldwijd 8 miljard mensen." },
+    ],
+  },
 };
 
 /**
