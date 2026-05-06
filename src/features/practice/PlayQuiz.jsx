@@ -437,7 +437,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               } else if (i === selected && !gameState.answers[gameState.answers.length - 1]?.isCorrect) {
                 bg = "#3a1a1a"; border = "#dc3545"; textColor = "#f08080";
                 anim = "wrongShake 0.5s ease";
-              } else { bg = "#162033"; border = "#2a3f5f"; textColor = "#667788"; }
+              } else { bg = "#162033"; border = "#2a3f5f"; textColor = "var(--color-text-muted)"; }
             }
 
             const dimmed = !showResult && !canAnswer;
@@ -560,7 +560,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               target="_blank" rel="noopener noreferrer"
               style={{
                 width: "100%", padding: "12px", border: "1px solid #445566", borderRadius: 12,
-                background: "#111e2e", color: "#556677",
+                background: "#111e2e", color: "var(--color-text-muted)",
                 fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 600, cursor: "pointer",
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
                 textDecoration: "none", boxSizing: "border-box",
@@ -568,7 +568,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             >
               <span>🚩</span> Fout melden
             </a>
-            <div style={{ fontSize: 11, color: "#556677", textAlign: "center", marginTop: 6 }}>
+            <div style={{ fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", marginTop: 6 }}>
               ↩️ Kom terug via de <strong style={{ color: "var(--color-text-muted)" }}>← terug-knop</strong> van je browser
             </div>
           </div>
@@ -595,7 +595,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
             {/* De vraag */}
             <div style={{ background: "#1e2d45", borderRadius: 14, padding: "14px 16px", marginBottom: 14, border: "1px solid #2a3f5f" }}>
-              <div style={{ fontSize: 11, color: "#667788", fontWeight: 700, marginBottom: 6, textTransform: "uppercase", letterSpacing: 1 }}>De vraag</div>
+              <div style={{ fontSize: 11, color: "var(--color-text-muted)", fontWeight: 700, marginBottom: 6, textTransform: "uppercase", letterSpacing: 1 }}>De vraag</div>
               <div style={{ fontSize: 15, color: "var(--color-text)", fontWeight: 600, lineHeight: 1.5 }}><MdInline text={question.q} /></div>
             </div>
 
@@ -639,7 +639,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 <div style={{ fontSize: 12, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 4 }}>
                   {(question.explanation && String(question.explanation).trim() !== "") ? "Tip om het te onthouden" : "Geen uitleg beschikbaar"}
                 </div>
-                <div style={{ fontSize: 13, color: "#90c0a0", lineHeight: 1.5 }}>
+                <div style={{ fontSize: 13, color: "var(--color-text)", lineHeight: 1.5 }}>
                   {(() => {
                     const heeftUitleg = question.explanation && String(question.explanation).trim() !== "";
                     const s = gameState.quiz.subject;
@@ -668,7 +668,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             <a
               href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
               target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "#556677", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
+              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "var(--color-text-muted)", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
             >
               🚩 Fout melden
             </a>
