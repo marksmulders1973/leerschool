@@ -56,6 +56,13 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [timedOut, setTimedOut] = useState(false);
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   const [questionImage, setQuestionImage] = useState(null);
+  const [zoomedImage, setZoomedImage] = useState(null); // ⛶-vergroot-overlay
+  useEffect(() => {
+    if (!zoomedImage) return undefined;
+    const onKey = (e) => { if (e.key === "Escape") setZoomedImage(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [zoomedImage]);
   const [elapsed, setElapsed] = useState(0);
   // Anti-game: knoppen 1.5 sec disabled na elke nieuwe vraag.
   const [canAnswer, setCanAnswer] = useState(false);
@@ -397,11 +404,26 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
           <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}><MdInline text={question.q} /></h2>
           {questionImage && !question.imageInExplanation && (
-            <img
-              src={questionImage}
-              alt=""
-              style={{ width: question.imageUrl ? 130 : 90, height: question.imageUrl ? 100 : 70, objectFit: "cover", borderRadius: 10, flexShrink: 0, boxShadow: "0 2px 10px rgba(0,0,0,0.4)" }}
-            />
+            <button
+              type="button"
+              onClick={() => setZoomedImage(questionImage)}
+              aria-label="Vergroot afbeelding"
+              title="Tik om te vergroten"
+              style={{ position: "relative", padding: 0, border: 0, background: "transparent", cursor: "zoom-in", flexShrink: 0 }}
+            >
+              <img
+                src={questionImage}
+                alt=""
+                style={{ width: question.imageUrl ? 130 : 90, height: question.imageUrl ? 100 : 70, objectFit: "cover", borderRadius: 10, boxShadow: "0 2px 10px rgba(0,0,0,0.4)", display: "block" }}
+              />
+              <span aria-hidden="true" style={{
+                position: "absolute", top: 4, right: 4,
+                width: 22, height: 22, borderRadius: 6,
+                background: "rgba(0,0,0,0.55)",
+                color: "#fff", fontSize: 12, lineHeight: "22px",
+                textAlign: "center", pointerEvents: "none",
+              }}>⛶</span>
+            </button>
           )}
         </div>
 
@@ -524,7 +546,22 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               <div style={{ fontWeight: 800, marginBottom: 6, color: "#00e676", fontSize: 14 }}>💡 Uitleg</div>
               <div style={{ fontSize: 14, lineHeight: 1.6, color: "#c0d0e0", marginBottom: (question.source || (question.imageInExplanation && questionImage)) ? 8 : 0, whiteSpace: "pre-line" }}>{question.explanation}</div>
               {question.imageInExplanation && questionImage && (
-                <img src={questionImage} alt="" style={{ width: "100%", maxHeight: 140, objectFit: "contain", borderRadius: 10, marginBottom: question.source ? 8 : 0, background: "#0f1729" }} />
+                <button
+                  type="button"
+                  onClick={() => setZoomedImage(questionImage)}
+                  aria-label="Vergroot afbeelding"
+                  title="Tik om te vergroten"
+                  style={{ position: "relative", width: "100%", padding: 0, border: 0, background: "transparent", cursor: "zoom-in", marginBottom: question.source ? 8 : 0, display: "block" }}
+                >
+                  <img src={questionImage} alt="" style={{ width: "100%", maxHeight: 140, objectFit: "contain", borderRadius: 10, background: "#0f1729", display: "block" }} />
+                  <span aria-hidden="true" style={{
+                    position: "absolute", top: 6, right: 6,
+                    width: 26, height: 26, borderRadius: 6,
+                    background: "rgba(0,0,0,0.55)",
+                    color: "#fff", fontSize: 14, lineHeight: "26px",
+                    textAlign: "center", pointerEvents: "none",
+                  }}>⛶</span>
+                </button>
               )}
               {question.source && <div style={{ fontSize: 11, color: "var(--color-text-muted)", fontStyle: "italic" }}>📚 {question.source}</div>}
             </div>
@@ -732,6 +769,56 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         </div>
         );
       })()}
+
+      {/* Zoom-overlay voor quiz-plaatjes (Mark's wens 2026-05-06): zelfde
+          patroon als Mini3DTeaser ⛶-knop. Klik buiten of op × sluit. */}
+      {zoomedImage && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Vergrote afbeelding"
+          onClick={() => setZoomedImage(null)}
+          style={{
+            position: "fixed", inset: 0,
+            background: "rgba(0,0,0,0.85)",
+            backdropFilter: "blur(6px)",
+            WebkitBackdropFilter: "blur(6px)",
+            zIndex: 10000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 16,
+            cursor: "zoom-out",
+          }}
+        >
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setZoomedImage(null); }}
+            aria-label="Sluiten"
+            style={{
+              position: "absolute", top: 16, right: 16,
+              width: 40, height: 40, borderRadius: 999,
+              border: "none",
+              background: "rgba(255,255,255,0.12)",
+              color: "#fff", fontSize: 24, lineHeight: 1,
+              cursor: "pointer", zIndex: 2,
+            }}
+          >×</button>
+          <img
+            src={zoomedImage}
+            alt=""
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "100%",
+              maxHeight: "100%",
+              objectFit: "contain",
+              borderRadius: 12,
+              boxShadow: "0 20px 60px rgba(0,0,0,0.6)",
+              cursor: "default",
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 }
