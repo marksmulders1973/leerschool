@@ -785,6 +785,184 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Feniks — geschiedenis VO (10 tijdvakken) ─────────────────────────
+  "feniks": {
+    0: [
+      // Tijd van jagers en boeren (tot 3000 v.Chr.)
+      { q: "Wanneer leefden de eerste mensen vooral als JAGER-VERZAMELAAR?", options: ["Vóór ~10.000 jaar geleden", "100 jaar geleden", "1000 jaar geleden", "Sinds 1500"], answer: 0, explanation: "Tot ~10.000 jaar geleden trokken mensen rond op zoek naar eten. Daarna landbouw → vaste woonplaatsen." },
+      { q: "Wat veranderde door de uitvinding van LANDBOUW?", options: ["Mensen gingen vast wonen + dieren houden", "Mensen leerden zwemmen", "Het werd warmer", "Mensen begonnen met handel"], answer: 0, explanation: "Landbouwrevolutie: graan zaaien + dieren temmen → vaste dorpen, voorraden, meer mensen mogelijk." },
+      { q: "Wat is een KENMERK van het neolithicum (jonge steentijd)?", options: ["Geslepen stenen werktuigen + landbouw", "IJzeren wapens", "Steden met rioleringen", "Geschreven geschiedenis"], answer: 0, explanation: "Neolithicum: betere stenen werktuigen + begin landbouw + permanent wonen." },
+    ],
+    1: [
+      // Tijd van Grieken en Romeinen (3000 v.Chr. - 500 n.Chr.)
+      { q: "In welke stad ontstond de eerste DEMOCRATIE?", options: ["Athene", "Rome", "Sparta", "Alexandrië"], answer: 0, explanation: "Athene rond 500 v.Chr. = eerste vorm van directe democratie (alleen voor vrije mannen). Rome had een republiek." },
+      { q: "Wie was Julius Caesar?", options: ["Romeinse veldheer en heerser", "Griekse filosoof", "Egyptische farao", "Bijbelse koning"], answer: 0, explanation: "Caesar (100-44 v.Chr.) was Romeins generaal die later dictator werd. Vermoord op de Ides van maart." },
+      { q: "Welke taal kwam van de Romeinen?", options: ["Latijn", "Grieks", "Arabisch", "Hebreeuws"], answer: 0, explanation: "Latijn = taal van Romeinse Rijk. Tegenwoordige talen Italiaans/Spaans/Frans/Roemeens komen ervan af." },
+    ],
+    2: [
+      // Tijd van monniken en ridders (500-1000)
+      { q: "Wat is een KLOOSTER?", options: ["Gemeenschap van monniken die werken en bidden", "Een burcht", "Een marktplein", "Een leger"], answer: 0, explanation: "Klooster = woon- en werkplek van monniken/nonnen. Belangrijk voor onderwijs en handschriften in middeleeuwen." },
+      { q: "Wat deed een RIDDER?", options: ["Vechten voor zijn heer en land beschermen", "Kerk leiden", "Markt beheren", "Schepen bouwen"], answer: 0, explanation: "Ridder = militaire dienstman te paard. Eed van trouw aan zijn heer (feodaal stelsel)." },
+      { q: "Karel de Grote werd in welk jaar GEKROOND tot keizer?", options: ["800", "1066", "1492", "1500"], answer: 0, explanation: "Karel de Grote → keizer van het Frankische Rijk in 800 (kerstdag) door Paus Leo III in Rome." },
+    ],
+    3: [
+      // Tijd van steden en staten (1000-1500)
+      { q: "Welke uitvinding versnelde verspreiding van kennis (~1450)?", options: ["Boekdrukkunst (Gutenberg)", "Stoommachine", "Telefoon", "Computer"], answer: 0, explanation: "Gutenberg ~1450 = boekdrukkunst met losse letters. Boeken werden goedkoper → meer geletterdheid → ideeën verspreiden." },
+      { q: "Wat is GILDEN?", options: ["Beroepsverenigingen in middeleeuwse steden", "Soort kerk", "Boerderij", "Stadsmuur"], answer: 0, explanation: "Gilden: verenigingen van bv. bakkers, smeden — bewaakten kwaliteit + opleiding (leerling-knecht-meester)." },
+      { q: "Wat is de PEST (zwarte dood) in 1347-1352?", options: ["Plaag die ⅓ van Europa doodde", "Een godsdienstoorlog", "Een hongersnood", "Een vulkaanuitbarsting"], answer: 0, explanation: "Builenpest verspreid via vlooien op ratten. ~25 miljoen Europeanen overleden — diepe sociale gevolgen." },
+    ],
+    4: [
+      // Tijd van ontdekkers en hervormers (1500-1600)
+      { q: "Wie ontdekte Amerika in 1492?", options: ["Columbus", "Marco Polo", "Vasco da Gama", "Magellaan"], answer: 0, explanation: "Christoffel Columbus zeilde namens Spanje westwaarts om Indië te bereiken — kwam aan in Caribisch gebied." },
+      { q: "Wat startte Maarten Luther in 1517?", options: ["Protestantse Reformatie", "Eerste kruistocht", "Wetenschappelijke revolutie", "Honderdjarige Oorlog"], answer: 0, explanation: "Luther's 95 stellingen aan de kerkdeur in Wittenberg → splitste de Westerse christenheid (rooms vs protestants)." },
+      { q: "Wie was Erasmus?", options: ["Nederlandse humanist + denker", "Spaanse koning", "Vlaamse schilder", "Duitse keizer"], answer: 0, explanation: "Desiderius Erasmus van Rotterdam = beroemd humanist. Schreef o.a. 'Lof der zotheid'. Voor verdraagzaamheid." },
+    ],
+    5: [
+      // Tijd van regenten en vorsten (1600-1700)
+      { q: "Wanneer was de NEDERLANDSE Gouden Eeuw?", options: ["~1600-1700", "Middeleeuwen", "1900", "Recent"], answer: 0, explanation: "Bloeiperiode 17e eeuw: VOC, schilderkunst (Rembrandt, Vermeer), wetenschap (Huygens), handel." },
+      { q: "Wat was de VOC?", options: ["Vereenigde Oostindische Compagnie — handel met Azië", "Een leger", "Een religie", "Een muziekvereniging"], answer: 0, explanation: "VOC (1602): eerste multinational ter wereld. Specerijen-handel met o.a. Indonesië. Ook bezetting + slavernij." },
+      { q: "Welke schilder maakte 'De Nachtwacht'?", options: ["Rembrandt", "Vermeer", "Van Gogh", "Frans Hals"], answer: 0, explanation: "Rembrandt van Rijn (1606-1669) — De Nachtwacht (1642) hangt in het Rijksmuseum." },
+    ],
+    6: [
+      // Tijd van pruiken en revoluties (1700-1800)
+      { q: "Wat begon in 1789?", options: ["Franse Revolutie", "Eerste Wereldoorlog", "Reformatie", "Industriële Revolutie"], answer: 0, explanation: "Bestorming Bastille 14 juli 1789 → einde absolute monarchie → 'vrijheid, gelijkheid, broederschap'." },
+      { q: "Wat is VERLICHTING?", options: ["18e-eeuwse stroming: rede + vrijheid + gelijkheid", "Een vorm van religie", "Een soort kunst", "Stadsverlichting"], answer: 0, explanation: "Verlichting: filosofen (Voltaire, Rousseau, Kant) bepleiten redelijk denken, rechten van de mens, kritiek op kerk/koning." },
+      { q: "Wat ontstond na de Amerikaanse Revolutie (1776)?", options: ["Verenigde Staten van Amerika", "Canada", "Cuba", "Mexico"], answer: 0, explanation: "13 koloniën verklaarden zich onafhankelijk van Engeland → Verenigde Staten met grondwet (1789)." },
+    ],
+    7: [
+      // Tijd van burgers en stoommachines (1800-1900)
+      { q: "Wat startte de INDUSTRIËLE Revolutie?", options: ["Stoommachines + fabrieken (~1750-1850)", "Vliegtuigen", "Computers", "Internet"], answer: 0, explanation: "Industriële revolutie begon in Engeland: stoomkracht → fabrieken → massaproductie → grote sociale veranderingen." },
+      { q: "Wat is KOLONIALISME?", options: ["Europese landen bezetten gebieden buiten Europa", "Reizen voor plezier", "Boerderijen", "Stadsuitbreiding"], answer: 0, explanation: "19e eeuw: Engeland, Frankrijk, Nederland etc. bezetten Afrika, Azië voor grondstoffen + arbeidskracht. Vaak gedwongen (slavernij)." },
+      { q: "Wanneer werd slavernij in Nederlandse koloniën AFGESCHAFT?", options: ["1863", "1500", "1700", "1945"], answer: 0, explanation: "1 juli 1863 (in Suriname effectief 1873 na 10 jaar 'Staatstoezicht'). Veel later dan VS (1865 = einde Civil War)." },
+    ],
+    8: [
+      // Tijd van de wereldoorlogen (1900-1950)
+      { q: "Wanneer was de Eerste Wereldoorlog?", options: ["1914-1918", "1939-1945", "1900-1910", "1950-1953"], answer: 0, explanation: "WO1: 1914 (moord op Aartshertog Ferdinand) tot 1918 (wapenstilstand 11 november). 17 miljoen doden." },
+      { q: "Wie was de leider van Nazi-Duitsland?", options: ["Hitler", "Stalin", "Roosevelt", "Churchill"], answer: 0, explanation: "Adolf Hitler werd Rijkskanselier in 1933 en bouwde een dictatuur. WO2 begon met inval Polen (1 sept 1939)." },
+      { q: "Wat is de HOLOCAUST?", options: ["Massamoord op ~6 miljoen joden door Nazi's", "Een vorm van blitzkrieg", "Een wapen", "Een stad in Duitsland"], answer: 0, explanation: "Sjoa/holocaust: systematische moord op joden + Roma + andere minderheden door nazi-regime in concentratiekampen." },
+    ],
+    9: [
+      // Tijd van televisie en computers (1950-nu)
+      { q: "Wat was de KOUDE Oorlog?", options: ["Spanning tussen VS (kapitalisme) en Sovjet-Unie (communisme), 1947-1991", "Een ijstijd", "Oorlog tussen NL en België", "Een oorlog in poolgebied"], answer: 0, explanation: "Geen direct militair conflict, maar wereldwijde wedstrijd: wapenrace, ruimterace, proxy-oorlogen. Eindigde met val Sovjet-Unie." },
+      { q: "Wanneer viel de Berlijnse Muur?", options: ["1989", "1945", "1961", "2000"], answer: 0, explanation: "9 november 1989. Leidde tot hereniging Duitsland (1990) en eind Koude Oorlog." },
+      { q: "Wat is GLOBALISERING?", options: ["Wereldwijde verbinding van economie, cultuur, communicatie", "Reizen rond de wereld", "Een soort milieubeleid", "Een muziekstijl"], answer: 0, explanation: "Sinds ~1990: snelle uitbreiding internationale handel + internet → wereld 'kleiner' (goederen + ideeën sneller wereldwijd)." },
+    ],
+  },
+
+  // ── De Geo — aardrijkskunde VO ──────────────────────────────────────
+  "de-geo": {
+    0: [
+      { q: "Iran ligt in welk werelddeel?", options: ["Azië", "Afrika", "Europa", "Amerika"], answer: 0, explanation: "Iran ligt in West-Azië (Midden-Oosten). Hoofdstad: Teheran." },
+      { q: "Welk klimaat is typisch voor het binnenland van Iran?", options: ["Droog (woestijn/steppe)", "Tropisch", "Polair", "Gematigd zee"], answer: 0, explanation: "Iran heeft groot binnenland met droge woestijnen (Dasht-e Kavir) en steppen. Bergen rond. Weinig regen." },
+      { q: "Welke godsdienst is dominant in Iran?", options: ["Islam (sjiitisch)", "Christendom", "Hindoeïsme", "Boeddhisme"], answer: 0, explanation: "Iran is sjiitisch islamitisch (~90%). Verschilt van soennitische meerderheid in veel buurlanden (Irak, SA)." },
+    ],
+    1: [
+      { q: "Wat is een NATUURLANDSCHAP?", options: ["Gebied dat door natuurkrachten is gevormd", "Park in een stad", "Akker", "Tuin"], answer: 0, explanation: "Natuurlandschap = gevormd door erosie, tektoniek, klimaat — bv. Grand Canyon, regenwoud, gebergte." },
+      { q: "Welk is een WOESTIJNGEBIED?", options: ["Sahara (Afrika)", "Amazone", "Alpen", "Noordzee"], answer: 0, explanation: "Sahara: grootste hete woestijn (Noord-Afrika). Amazone = regenwoud. Alpen = gebergte." },
+    ],
+    2: [
+      { q: "Gambia is een land in?", options: ["West-Afrika", "Azië", "Zuid-Amerika", "Oost-Europa"], answer: 0, explanation: "Gambia = klein West-Afrikaans land langs de Gambia-rivier, omsloten door Senegal." },
+      { q: "Welke economische sector is GROOT in Gambia?", options: ["Landbouw + toerisme", "Auto-industrie", "Hightech", "Olie"], answer: 0, explanation: "Gambia is een ontwikkelingsland met landbouw (pinda's) en toerisme (stranden) als belangrijkste sectoren." },
+    ],
+    3: [
+      { q: "Welke natuurramp is COMMON in Japan?", options: ["Aardbevingen + tsunami's", "Sneeuwstormen", "Tornado's (zoals VS)", "Sahara-zandstormen"], answer: 0, explanation: "Japan ligt op de 'Ring of Fire': aardbevingsgordel rond Pacific. Plaatgrenzen → bevingen + tsunami's + vulkanen." },
+      { q: "Wat is een TSUNAMI?", options: ["Reusachtige golf na onderzeese aardbeving", "Een soort orkaan", "Vulkanische as", "Sneeuw-storm"], answer: 0, explanation: "Onderzeese aardbeving verplaatst water → golf reist met >700 km/u over oceaan, groeit nabij kust tot meters hoog." },
+    ],
+    4: [
+      { q: "Indonesië ligt in?", options: ["Zuidoost-Azië", "Zuid-Amerika", "Afrika", "Oceanië"], answer: 0, explanation: "Indonesië = eilandengroep in Zuidoost-Azië, ~17.000 eilanden. Hoofdstad: Jakarta. Vroeger Nederlandse kolonie." },
+      { q: "Welk is een BELANGRIJK eiland van Indonesië?", options: ["Java", "Madagascar", "Bali (klopt ook!)", "Madagascar"], answer: 0, explanation: "Java is meest dichtbevolkte eiland (>140 mln). Bali is ook van Indonesië maar kleiner. Madagascar ligt bij Afrika." },
+    ],
+    5: [
+      { q: "Welk klimaat heeft Zuid-Spanje?", options: ["Mediterraan (mild + droge zomer)", "Tropisch", "Polair", "Continentaal"], answer: 0, explanation: "Mediterraan klimaat: warme droge zomers, milde natte winters. Typisch Middellandse Zee-gebied." },
+      { q: "Welk type landschap kom je tegen in Scandinavië?", options: ["Fjorden + bossen + bergen", "Zandwoestijnen", "Tropisch regenwoud", "Vlak akkerland"], answer: 0, explanation: "Noorwegen, Zweden: door ijstijd uitgesleten dalen die nu fjorden zijn (zee-arm), naaldbossen, bergen." },
+    ],
+    6: [
+      { q: "Wat is een TOPOGRAFISCHE kaart?", options: ["Kaart met hoogteverschillen + landschapsdetails", "Politieke landen-kaart", "Klimaat-overzicht", "Sterrenkaart"], answer: 0, explanation: "Topografische kaart toont reliëf (hoogtelijnen), wegen, rivieren, gebouwen — gedetailleerd lokaal." },
+      { q: "Wat is SCHAAL op een kaart?", options: ["Verhouding tussen kaart-afstand en werkelijke afstand", "Aantal kleuren", "Grootte van kaart", "Type papier"], answer: 0, explanation: "Schaal 1:50.000 betekent: 1 cm op kaart = 50.000 cm = 500 m in werkelijkheid. Kleinere schaal = groter gebied minder detail." },
+    ],
+    7: [
+      { q: "Welk klimaat heeft het Amazonegebied (Brazilië)?", options: ["Tropisch regenwoud", "Mediterraan", "Polair", "Woestijn"], answer: 0, explanation: "Amazone = grootste tropisch regenwoud ter wereld. Hoge temp jaarrond + veel regen." },
+      { q: "Wat is een belangrijk MILIEUPROBLEEM in Brazilië?", options: ["Ontbossing van Amazonegebied", "IJskap-smelt", "Zandverstuivingen", "Olielekken"], answer: 0, explanation: "Veel ontbossing voor sojaboeren + veehouderij → biodiversiteitsverlies + meer CO₂. Mondiaal probleem." },
+    ],
+  },
+
+  // ── Overal NaSk — natuurkunde + scheikunde onderbouw ────────────────
+  "overal-nask": {
+    0: [
+      // Stoffen en materialen
+      { q: "Wat is een STOF?", options: ["Materiaal met eigen kenmerken (zoals water, ijzer)", "Schoolvak", "Een gas alleen", "Een soort verf"], answer: 0, explanation: "In nask: stof = materie met eigen eigenschappen (smeltpunt, dichtheid). Water, koper, zuurstof zijn stoffen." },
+      { q: "Welke is een EDELE metaal?", options: ["Goud", "IJzer", "Aluminium", "Koper"], answer: 0, explanation: "Edele metalen (goud, zilver, platina) reageren weinig en roesten niet. IJzer roest wel." },
+      { q: "Wat is de DICHTHEID van water?", options: ["1 g/cm³ (= 1 kg/liter)", "10 g/cm³", "0,1 g/cm³", "100 g/cm³"], answer: 0, explanation: "Bij 4°C: water heeft dichtheid precies 1 g/cm³. Voorwerp dichter dan water zinkt; minder dicht drijft." },
+    ],
+    1: [
+      { q: "Welk is GEEN kracht?", options: ["Snelheid", "Zwaartekracht", "Wrijving", "Veerkracht"], answer: 0, explanation: "Snelheid is een grootheid (m/s), géén kracht. Zwaartekracht/wrijving/veerkracht zijn krachten." },
+      { q: "Wat is de eenheid van kracht?", options: ["Newton (N)", "Meter (m)", "Watt (W)", "Joule (J)"], answer: 0, explanation: "Kracht in Newton, vernoemd naar Isaac Newton. 1 N ≈ kracht om 100 g op te tillen." },
+      { q: "Wat gebeurt bij STILSTAND?", options: ["Som van krachten = 0", "Geen wrijving", "Geen zwaartekracht", "Niets"], answer: 0, explanation: "Eerste wet van Newton: zonder netto kracht beweegt voorwerp niet (of door met constante snelheid)." },
+    ],
+    2: [
+      { q: "Welke vorm van energie heeft een opgeladen veer?", options: ["Veerenergie / elastische energie", "Kinetische energie", "Warmteenergie", "Chemische energie"], answer: 0, explanation: "Een opgespannen veer of strakgespannen elastiek heeft elastische (potentiële) energie." },
+      { q: "Welke eenheid heeft energie?", options: ["Joule (J)", "Newton (N)", "Watt (W)", "Volt (V)"], answer: 0, explanation: "Energie wordt gemeten in joules. 1 J = 1 N·m = 1 W·s." },
+      { q: "Hoe stroomt warmte?", options: ["Van warm naar koud", "Van koud naar warm", "Niet, blijft staan", "Random"], answer: 0, explanation: "Warmte stroomt altijd van een warmer naar een kouder voorwerp tot ze even warm zijn." },
+    ],
+    3: [
+      { q: "Hoe snel beweegt LICHT in vacuüm?", options: ["~300.000 km/s", "300 km/s", "30 km/s", "3 km/s"], answer: 0, explanation: "Lichtsnelheid c ≈ 299.792 km/s. Niets in het universum kan sneller bewegen." },
+      { q: "Wat is REFLECTIE?", options: ["Licht weerkaatst van een oppervlak", "Licht buigt af", "Licht wordt opgenomen", "Licht wordt warm"], answer: 0, explanation: "Reflectie = terugkaatsen. Spiegel reflecteert bijna 100%. Hoek van inval = hoek van uitval." },
+      { q: "Welke kleur heeft de KORTSTE golflengte?", options: ["Violet", "Rood", "Geel", "Groen"], answer: 0, explanation: "Zichtbaar licht: rood (langste golf) → oranje → geel → groen → blauw → violet (kortste golf)." },
+    ],
+    4: [
+      { q: "Wat is geluid?", options: ["Trillingen die door lucht reizen", "Licht", "Warmte", "Magneetkracht"], answer: 0, explanation: "Geluid = drukgolven (trillingen) door lucht/water/vaste stof. Reist niet door vacuüm (geen lucht)." },
+      { q: "Welke eenheid is FREQUENTIE?", options: ["Hertz (Hz)", "Decibel (dB)", "Newton", "Volt"], answer: 0, explanation: "Frequentie (aantal trillingen per seconde) in Hertz. Mensen horen ~20 Hz tot 20.000 Hz." },
+    ],
+    5: [
+      { q: "Welk apparaat meet ELEKTRISCHE STROOM?", options: ["Ampèremeter", "Voltmeter", "Ohm-meter", "Thermometer"], answer: 0, explanation: "Stroomsterkte (I) in ampère, gemeten met ampèremeter. Voltmeter = spanning (V), ohm-meter = weerstand (Ω)." },
+      { q: "Wet van Ohm: U = ?", options: ["I × R", "I + R", "I − R", "I / R"], answer: 0, explanation: "Spanning = stroom × weerstand. Bv. bij 2 A en 5 Ω: U = 2 × 5 = 10 V." },
+      { q: "Welk materiaal geleidt stroom GOED?", options: ["Koper", "Hout", "Plastic", "Glas"], answer: 0, explanation: "Metalen (vooral koper) zijn goede geleiders. Hout/plastic/glas zijn isolatoren — gebruikt voor isolatie van draden." },
+    ],
+    6: [
+      { q: "Wat is een SCHEIKUNDIGE reactie?", options: ["Stoffen worden omgezet in andere stoffen", "Beweging van een voorwerp", "Vorm verandert (bv. ijs → water)", "Niks"], answer: 0, explanation: "Reactie: chemische bindingen breken/vormen → nieuwe stoffen. IJs → water is alleen aggregatietoestand (fase), geen reactie." },
+      { q: "Wat ontstaat bij VERBRANDING van hout?", options: ["CO₂ + waterdamp + as", "Alleen rook", "IJs", "Niets, het verdwijnt"], answer: 0, explanation: "Verbranding (snelle oxidatie): hout + zuurstof → CO₂ + H₂O + warmte + kleine restanten (as)." },
+    ],
+    7: [
+      { q: "Wat is een ATOOM?", options: ["Kleinste deeltje van een element", "Een molecuul", "Een soort cel", "Een hagelsteen"], answer: 0, explanation: "Atoom (Grieks 'ondeelbaar') = bouwsteen van materie. Bestaat uit kern (protonen+neutronen) + elektronen." },
+      { q: "Wat is een MOLECUUL?", options: ["Twee of meer atomen aan elkaar", "Eén atoom", "Een vloeistof", "Een mineraal"], answer: 0, explanation: "Molecuul = atomen verbonden. Bv. H₂O = 2 waterstof + 1 zuurstof. O₂ = 2 zuurstofatomen." },
+    ],
+  },
+
+  // ── Biologie voor Jou Havo/vwo 1 — biologie klas 1 ──────────────────
+  "bvj-havo-vwo-1": {
+    0: [
+      { q: "Wat is BIOLOGIE?", options: ["Studie van leven (planten, dieren, mensen)", "Studie van rotsen", "Studie van sterren", "Studie van talen"], answer: 0, explanation: "Bio (leven) + logos (kennis) → wetenschap van levende organismen." },
+      { q: "Welke kenmerken hebben LEVENDE organismen?", options: ["Groei + ademhaling + voortplanting", "Alleen bewegen", "Alleen kleur", "Alleen geluid"], answer: 0, explanation: "Leven kenmerken: stofwisseling, groei, prikkelbaarheid, voortplanting, ontwikkeling." },
+      { q: "Wat is een MICROSCOOP?", options: ["Apparaat dat kleine dingen vergroot", "Soort telescoop", "Computer", "Klok"], answer: 0, explanation: "Microscoop vergroot heel kleine objecten (cellen, bacteriën). Tele-scoop = grote afstanden." },
+    ],
+    1: [
+      { q: "Welk plantendeel haalt water uit de grond?", options: ["Wortels", "Bladeren", "Bloemen", "Stengel"], answer: 0, explanation: "Wortels nemen water + voedingsstoffen op uit aarde. Stengel transporteert. Bladeren = fotosynthese." },
+      { q: "Wat is FOTOSYNTHESE?", options: ["Plant maakt suiker met zonlicht + CO₂ + water", "Plant slaapt 's nachts", "Bloeien", "Fruit dragen"], answer: 0, explanation: "6 CO₂ + 6 H₂O + zonlicht → glucose (C₆H₁₂O₆) + 6 O₂. Gebeurt vooral in bladeren (chlorofyl)." },
+      { q: "Welke plant heeft GEEN bloemen?", options: ["Mos", "Roos", "Paardenbloem", "Tulp"], answer: 0, explanation: "Mossen + varens hebben geen bloemen of zaden — ze planten zich voort via sporen." },
+    ],
+    2: [
+      { q: "Wat is de basiseenheid van leven?", options: ["Cel", "Atoom", "Molecuul", "Orgaan"], answer: 0, explanation: "Cel = kleinste levenseenheid die zelfstandig kan leven. Mens heeft ~37 biljoen cellen." },
+      { q: "Welk orgaan FILTREERT bloed?", options: ["Nieren", "Hart", "Long", "Maag"], answer: 0, explanation: "Nieren filteren afval uit bloed → urine. Hart pompt bloed, longen geven zuurstof." },
+      { q: "Wat zijn ORGANEN?", options: ["Onderdelen met specifieke taak (hart, lever)", "Soort cellen", "Spieren alleen", "Botten alleen"], answer: 0, explanation: "Organen = groepen weefsels met taak. Hart pompt, lever zuivert, ogen zien." },
+    ],
+    3: [
+      { q: "Welk koninkrijk hoort bij MENSEN?", options: ["Dieren (Animalia)", "Planten", "Schimmels", "Bacteriën"], answer: 0, explanation: "Mens is een zoogdier in koninkrijk Dieren. We delen veel met chimpansees (~98% DNA)." },
+      { q: "Welke is een schimmel?", options: ["Paddenstoel", "Mos", "Vis", "Bacterie"], answer: 0, explanation: "Schimmels (paddenstoelen, gist, schimmel op brood) vormen eigen rijk. Geen plant want geen fotosynthese." },
+    ],
+    4: [
+      { q: "Wat doet een SKELET?", options: ["Steun + bescherming + bewegingssteun", "Verteren", "Filteren", "Pompen"], answer: 0, explanation: "Skelet (botten) houdt lichaam stevig, beschermt organen (schedel ↔ hersenen, ribben ↔ hart), spieren hechten eraan." },
+      { q: "Welke spier-type werkt zonder dat je eraan denkt?", options: ["Hartspier (onwillekeurig)", "Bicep", "Knie-strekker", "Kuit"], answer: 0, explanation: "Hartspier + gladde spieren (darmen, bloedvaten) werken automatisch. Skeletspieren zijn willekeurig." },
+    ],
+    5: [
+      { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Tast", "Gehoor"], answer: 0, explanation: "Smaakpapillen op tong → zoet/zout/zuur/bitter/umami. Reuk = neus." },
+      { q: "Wat doen HORMONEN?", options: ["Boodschapper-stoffen die organen aansturen", "Spieren maken", "Botten bouwen", "Niets"], answer: 0, explanation: "Hormonen (insuline, adrenaline, oestrogeen) regelen processen via bloed. Bv. groei, vertering, stress." },
+    ],
+    6: [
+      { q: "Hoe planten BLOEMPLANTEN zich voort?", options: ["Bestuiving + bevruchting → zaad", "Door verdeling", "Via wortels", "Niet"], answer: 0, explanation: "Stuifmeel (man) → stempel (vrouw) → bevruchting van eicel → zaad → nieuwe plant." },
+      { q: "Wie produceert zaad-cellen bij dieren?", options: ["Mannetje", "Vrouwtje", "Beide gelijk", "Niemand"], answer: 0, explanation: "Mannetjes maken zaadcellen (ovary cellen → spermatozoa). Vrouwtjes maken eicellen. Bevruchting = samenkomen." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
