@@ -89,12 +89,12 @@ const steps = [
 <rect x="160" y="62" width="105" height="50" rx="8" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="212" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">LANG</text>
 <text x="212" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">één klinker</text>
-<text x="35" y "138" fill="${COLORS.text}" font-size="11" font-family="Arial">kam → kam<tspan fill="${COLORS.alt}" font-weight="bold">m</tspan>en</text>
-<text x="160" y "138" fill="${COLORS.text}" font-size="11" font-family="Arial">maan → m<tspan fill="${COLORS.good}" font-weight="bold">a</tspan>nen</text>
-<text x="35" y "158" fill="${COLORS.text}" font-size="11" font-family="Arial">pop → pop<tspan fill="${COLORS.alt}" font-weight="bold">p</tspan>en</text>
-<text x="160" y "158" fill="${COLORS.text}" font-size="11" font-family="Arial">boom → b<tspan fill="${COLORS.good}" font-weight="bold">o</tspan>men</text>
-<text x="35" y "178" fill="${COLORS.text}" font-size="11" font-family="Arial">bus → bus<tspan fill="${COLORS.alt}" font-weight="bold">s</tspan>en</text>
-<text x="160" y "178" fill="${COLORS.text}" font-size="11" font-family="Arial">vuur → v<tspan fill="${COLORS.good}" font-weight="bold">u</tspan>ren</text>
+<text x="35" y="138" fill="${COLORS.text}" font-size="11" font-family="Arial">kam → kam<tspan fill="${COLORS.alt}" font-weight="bold">m</tspan>en</text>
+<text x="160" y="138" fill="${COLORS.text}" font-size="11" font-family="Arial">maan → m<tspan fill="${COLORS.good}" font-weight="bold">a</tspan>nen</text>
+<text x="35" y="158" fill="${COLORS.text}" font-size="11" font-family="Arial">pop → pop<tspan fill="${COLORS.alt}" font-weight="bold">p</tspan>en</text>
+<text x="160" y="158" fill="${COLORS.text}" font-size="11" font-family="Arial">boom → b<tspan fill="${COLORS.good}" font-weight="bold">o</tspan>men</text>
+<text x="35" y="178" fill="${COLORS.text}" font-size="11" font-family="Arial">bus → bus<tspan fill="${COLORS.alt}" font-weight="bold">s</tspan>en</text>
+<text x="160" y="178" fill="${COLORS.text}" font-size="11" font-family="Arial">vuur → v<tspan fill="${COLORS.good}" font-weight="bold">u</tspan>ren</text>
 </svg>`,
     checks: [
       {
@@ -128,11 +128,11 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">truc: verleng het woord</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="Arial">hond (klinkt 'hont') → hon<tspan fill="${COLORS.good}" font-weight="bold">d</tspan>en → schrijf d</text>
-<text x="35" y "98" fill="${COLORS.text}" font-size="12" font-family="Arial">lief → lie<tspan fill="${COLORS.good}" font-weight="bold">v</tspan>e → schrijf f (lief)</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="12" font-family="Arial">huis → hui<tspan fill="${COLORS.good}" font-weight="bold">z</tspan>en → schrijf s (huis)</text>
-<text x="35" y "142" fill="${COLORS.text}" font-size="12" font-family="Arial">paard (klinkt 'paart') → paar<tspan fill="${COLORS.good}" font-weight="bold">d</tspan>en</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">verleng + luister naar de medeklinker</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="Arial">hond (klinkt 'hont') → hon<tspan fill="${COLORS.good}" font-weight="bold">d</tspan>en → schrijf d</text>
+<text x="35" y="98" fill="${COLORS.text}" font-size="12" font-family="Arial">lief → lie<tspan fill="${COLORS.good}" font-weight="bold">v</tspan>e → schrijf f (lief)</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="12" font-family="Arial">huis → hui<tspan fill="${COLORS.good}" font-weight="bold">z</tspan>en → schrijf s (huis)</text>
+<text x="35" y="142" fill="${COLORS.text}" font-size="12" font-family="Arial">paard (klinkt 'paart') → paar<tspan fill="${COLORS.good}" font-weight="bold">d</tspan>en</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">verleng + luister naar de medeklinker</text>
 </svg>`,
     checks: [
       {
@@ -171,14 +171,14 @@ const steps = [
 <rect x="35" y="62" width="105" height="56" rx="8" fill="rgba(255,112,67,0.15)" stroke="${COLORS.alt}" stroke-width="2"/>
 <text x="87" y="82" text-anchor="middle" fill="${COLORS.alt}" font-size="13" font-family="Arial" font-weight="bold">ei (kort)</text>
 <text x="87" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">trein, plein,</text>
-<text x="87" y "114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">klein, fontein</text>
+<text x="87" y="114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">klein, fontein</text>
 <rect x="160" y="62" width="105" height="56" rx="8" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="212" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">ij (lang)</text>
 <text x="212" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">vrijheid, krijgen,</text>
-<text x="212" y "114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">schrijven, blij</text>
-<text x="150" y "142" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">geen logische regel — woordbeeld leren</text>
-<text x="150" y "160" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">vaak lezen = beste oefening</text>
-<text x="150" y "178" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: bij twijfel — ij komt vaker voor</text>
+<text x="212" y="114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">schrijven, blij</text>
+<text x="150" y="142" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">geen logische regel — woordbeeld leren</text>
+<text x="150" y="160" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">vaak lezen = beste oefening</text>
+<text x="150" y="178" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: bij twijfel — ij komt vaker voor</text>
 </svg>`,
     checks: [
       {
@@ -214,15 +214,15 @@ const steps = [
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <rect x="35" y="62" width="105" height="56" rx="8" fill="rgba(255,213,79,0.15)" stroke="${COLORS.warm}" stroke-width="2"/>
 <text x="87" y="82" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">au (zeldzaam)</text>
-<text x="87" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">auto, blauw, paus,</text>
-<text x="87" y "114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">augustus, saus</text>
+<text x="87" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">auto, blauw, paus,</text>
+<text x="87" y="114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">augustus, saus</text>
 <rect x="160" y="62" width="105" height="56" rx="8" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="212" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">ou (vaker)</text>
-<text x="212" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">oud, vrouw, hout,</text>
-<text x="212" y "114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">koud, bouwen</text>
-<text x="150" y "142" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">familie-truc: oud, ouder, oudheid (al ou)</text>
-<text x="150" y "162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">bij twijfel: schrijf het op + kijk</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ou komt vaker voor — gokken? ou.</text>
+<text x="212" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">oud, vrouw, hout,</text>
+<text x="212" y="114" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">koud, bouwen</text>
+<text x="150" y="142" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">familie-truc: oud, ouder, oudheid (al ou)</text>
+<text x="150" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">bij twijfel: schrijf het op + kijk</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ou komt vaker voor — gokken? ou.</text>
 </svg>`,
     checks: [
       {
@@ -256,15 +256,15 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ch vs g — vuistregels</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">begin woord:</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">begin woord:</text>
 <text x="135" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">meestal g (gaan, groot)</text>
-<text x="35" y "92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">eind woord:</text>
-<text x="135" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">meestal g (berg, dag)</text>
-<text x="35" y "110" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">vóór -t-:</text>
-<text x="135" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">meestal cht (lucht)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">tussen klinkers: meestal g (regen)</text>
-<text x="150" y "162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">truc: t-klank ná de g/ch?</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">→ vrijwel altijd cht</text>
+<text x="35" y="92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">eind woord:</text>
+<text x="135" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">meestal g (berg, dag)</text>
+<text x="35" y="110" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">vóór -t-:</text>
+<text x="135" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">meestal cht (lucht)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">tussen klinkers: meestal g (regen)</text>
+<text x="150" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">truc: t-klank ná de g/ch?</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">→ vrijwel altijd cht</text>
 </svg>`,
     checks: [
       {
@@ -289,13 +289,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">samenstellingen → aan elkaar</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ schoolboek (niet "school boek")</text>
-<text x="35" y "92" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ zomervakantie</text>
-<text x="35" y "110" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ wereldkampioenschap</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ schoolboek (niet "school boek")</text>
+<text x="35" y="92" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ zomervakantie</text>
+<text x="35" y="110" fill="${COLORS.good}" font-size="12" font-family="Arial">✓ wereldkampioenschap</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">koppelteken bij:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="11" font-family="Arial">• klinker-botsing (zee-egel, na-apen)</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="11" font-family="Arial">• cijfers (50-jarige, 5-stappenplan)</text>
+<text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">koppelteken bij:</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="11" font-family="Arial">• klinker-botsing (zee-egel, na-apen)</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="11" font-family="Arial">• cijfers (50-jarige, 5-stappenplan)</text>
 </svg>`,
     checks: [
       {
@@ -329,13 +329,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tussen-n: regel sinds 2005</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">tussen-n als eerste deel</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">een meervoud op -en heeft</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">tussen-n als eerste deel</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">een meervoud op -en heeft</text>
 <line x1="30" y1="105" x2="270" y2="105" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "124" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ paddenstoel (pad → padden)</text>
-<text x="35" y "142" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ pannenkoek (pan → pannen)</text>
-<text x="35" y "160" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ boekenkast (boek → boeken)</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">bij twijfel — gebruik spellingchecker</text>
+<text x="35" y="124" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ paddenstoel (pad → padden)</text>
+<text x="35" y="142" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ pannenkoek (pan → pannen)</text>
+<text x="35" y="160" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ boekenkast (boek → boeken)</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">bij twijfel — gebruik spellingchecker</text>
 </svg>`,
     checks: [
       {
@@ -358,14 +358,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tussen-s — geen vaste regel</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: spreek uit — hoor je een s?</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: spreek uit — hoor je een s?</text>
 <line x1="30" y1="88" x2="270" y2="88" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "108" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ verkeer<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>licht</text>
-<text x="35" y "126" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ liefde<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verklaring</text>
-<text x="35" y "144" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ mening<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verschil</text>
-<text x="160" y "108" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ school+feest = schoolfeest</text>
-<text x="160" y "126" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ zomer+avond = zomeravond</text>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geen vaste regel — woordbeeld + uitspraak</text>
+<text x="35" y="108" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ verkeer<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>licht</text>
+<text x="35" y="126" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ liefde<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verklaring</text>
+<text x="35" y="144" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ mening<tspan fill="${COLORS.warm}" font-weight="bold">s</tspan>verschil</text>
+<text x="160" y="108" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ school+feest = schoolfeest</text>
+<text x="160" y="126" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ zomer+avond = zomeravond</text>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geen vaste regel — woordbeeld + uitspraak</text>
 </svg>`,
     checks: [
       {
@@ -390,14 +390,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">hoofdletters in NL</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "72" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">WEL hoofdletter:</text>
-<text x="35" y "88" fill="${COLORS.text}" font-size="11" font-family="Arial">• begin zin · eigennamen</text>
-<text x="35" y "104" fill="${COLORS.text}" font-size="11" font-family="Arial">• landen, plaatsen, instanties</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="11" font-family="Arial">• talen + volken (Engels, Duitser)</text>
+<text x="35" y="72" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">WEL hoofdletter:</text>
+<text x="35" y="88" fill="${COLORS.text}" font-size="11" font-family="Arial">• begin zin · eigennamen</text>
+<text x="35" y="104" fill="${COLORS.text}" font-size="11" font-family="Arial">• landen, plaatsen, instanties</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="11" font-family="Arial">• talen + volken (Engels, Duitser)</text>
 <line x1="30" y1="132" x2="270" y2="132" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "150" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">NIET (let op!):</text>
-<text x="35" y "166" fill="${COLORS.text}" font-size="11" font-family="Arial">• maandag, december (anders dan EN)</text>
-<text x="35" y "182" fill="${COLORS.text}" font-size="11" font-family="Arial">• zomer, herfst · functies (minister)</text>
+<text x="35" y="150" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">NIET (let op!):</text>
+<text x="35" y="166" fill="${COLORS.text}" font-size="11" font-family="Arial">• maandag, december (anders dan EN)</text>
+<text x="35" y="182" fill="${COLORS.text}" font-size="11" font-family="Arial">• zomer, herfst · functies (minister)</text>
 </svg>`,
     checks: [
       {
@@ -425,12 +425,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">verkleinwoorden — kies je achtervoegsel</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">-je    na b/d/k/p/s/t (boekje)</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">-tje   na klinker / n / l / r (autootje)</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">-pje   na -m (boompje, filmpje)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">-kje   na -ing (koninkje)</text>
-<text x="35" y "146" fill="${COLORS.text}" font-size="11" font-family="Arial">-etje  na korte klank (mannetje)</text>
-<text x="150" y "176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">spreek het uit — welk uiteinde voelt natuurlijk?</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">-je    na b/d/k/p/s/t (boekje)</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">-tje   na klinker / n / l / r (autootje)</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">-pje   na -m (boompje, filmpje)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">-kje   na -ing (koninkje)</text>
+<text x="35" y="146" fill="${COLORS.text}" font-size="11" font-family="Arial">-etje  na korte klank (mannetje)</text>
+<text x="150" y="176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">spreek het uit — welk uiteinde voelt natuurlijk?</text>
 </svg>`,
     checks: [
       {
@@ -464,13 +464,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">apostrof — wanneer?</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">meervoud na a/i/o/u/y:</text>
-<text x="35" y "90" fill="${COLORS.text}" font-size="11" font-family="Arial">auto's, taxi's, baby's, foto's</text>
-<text x="35" y "112" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">bezit (eigennaam):</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">Anna's auto, Marko's huis</text>
-<text x="35" y "150" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">weglating (informeel):</text>
-<text x="35" y "166" fill="${COLORS.text}" font-size="11" font-family="Arial">'k weet, 'n hond, 's morgens</text>
-<text x="150" y "186" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geen apostrof: Marks huis (niet Mark's)</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">meervoud na a/i/o/u/y:</text>
+<text x="35" y="90" fill="${COLORS.text}" font-size="11" font-family="Arial">auto's, taxi's, baby's, foto's</text>
+<text x="35" y="112" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">bezit (eigennaam):</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">Anna's auto, Marko's huis</text>
+<text x="35" y="150" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">weglating (informeel):</text>
+<text x="35" y="166" fill="${COLORS.text}" font-size="11" font-family="Arial">'k weet, 'n hond, 's morgens</text>
+<text x="150" y="186" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geen apostrof: Marks huis (niet Mark's)</text>
 </svg>`,
     checks: [
       {

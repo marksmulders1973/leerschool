@@ -162,16 +162,16 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">f(x) → f'(x) — afgeleide</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">f(x) = x²</text>
-<text x="155" y "76" fill="${COLORS.alt}" font-size="13" font-family="monospace">→</text>
-<text x="180" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">f'(x) = 2x</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">f(x) = x³</text>
-<text x="155" y "94" fill="${COLORS.alt}" font-size="13" font-family="monospace">→</text>
-<text x="180" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">f'(x) = 3x²</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">f(x) = x²</text>
+<text x="155" y="76" fill="${COLORS.alt}" font-size="13" font-family="monospace">→</text>
+<text x="180" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">f'(x) = 2x</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">f(x) = x³</text>
+<text x="155" y="94" fill="${COLORS.alt}" font-size="13" font-family="monospace">→</text>
+<text x="180" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">f'(x) = 3x²</text>
 <line x1="30" y1="105" x2="270" y2="105" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "126" fill="${COLORS.muted}" font-size="11" font-family="Arial">f(3) = 9 → y-waarde</text>
-<text x="35" y "144" fill="${COLORS.muted}" font-size="11" font-family="Arial">f'(3) = 6 → helling daar</text>
-<text x="35" y "168" fill="${COLORS.text}" font-size="10" font-family="Arial" font-style="italic">notatie ook: dy/dx</text>
+<text x="35" y="126" fill="${COLORS.muted}" font-size="11" font-family="Arial">f(3) = 9 → y-waarde</text>
+<text x="35" y="144" fill="${COLORS.muted}" font-size="11" font-family="Arial">f'(3) = 6 → helling daar</text>
+<text x="35" y="168" fill="${COLORS.text}" font-size="10" font-family="Arial" font-style="italic">notatie ook: dy/dx</text>
 </svg>`,
     checks: [
       {
@@ -194,15 +194,15 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">f(x) = x^n → f'(x) = n·x^(n-1)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">x¹  → 1</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="12" font-family="monospace">x²  → 2x</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="12" font-family="monospace">x³  → 3x²</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="monospace">x⁵  → 5x⁴</text>
-<text x="155" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">7   → 0</text>
-<text x="155" y "92" fill="${COLORS.muted}" font-size="11" font-family="Arial">7x  → 7</text>
-<text x="155" y "110" fill="${COLORS.muted}" font-size="11" font-family="Arial">x⁻¹ → -x⁻²</text>
-<text x="155" y "128" fill="${COLORS.muted}" font-size="11" font-family="Arial">√x  → 1/(2√x)</text>
-<text x="150" y "166" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">verlaag exponent · zet oude vooraan</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">x¹  → 1</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="12" font-family="monospace">x²  → 2x</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="12" font-family="monospace">x³  → 3x²</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="monospace">x⁵  → 5x⁴</text>
+<text x="155" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">7   → 0</text>
+<text x="155" y="92" fill="${COLORS.muted}" font-size="11" font-family="Arial">7x  → 7</text>
+<text x="155" y="110" fill="${COLORS.muted}" font-size="11" font-family="Arial">x⁻¹ → -x⁻²</text>
+<text x="155" y="128" fill="${COLORS.muted}" font-size="11" font-family="Arial">√x  → 1/(2√x)</text>
+<text x="150" y="166" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">verlaag exponent · zet oude vooraan</text>
 </svg>`,
     checks: [
       {
@@ -236,12 +236,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">f(x) = a·x^n → f'(x) = a·n·x^(n-1)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">5x³  → 15x²</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="12" font-family="monospace">7x²  → 14x</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="12" font-family="monospace">3x   → 3</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="monospace">-2x⁴ → -8x³</text>
-<text x="35" y "146" fill="${COLORS.text}" font-size="12" font-family="monospace">½x²  → x</text>
-<text x="150" y "176" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">vergeet coëfficiënt nooit!</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">5x³  → 15x²</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="12" font-family="monospace">7x²  → 14x</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="12" font-family="monospace">3x   → 3</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="monospace">-2x⁴ → -8x³</text>
+<text x="35" y="146" fill="${COLORS.text}" font-size="12" font-family="monospace">½x²  → x</text>
+<text x="150" y="176" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">vergeet coëfficiënt nooit!</text>
 </svg>`,
     checks: [
       {
@@ -266,13 +266,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">som-regel: (f + g)' = f' + g'</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x³ + 5x² − 7x + 2</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x³ + 5x² − 7x + 2</text>
 <line x1="35" y1="86" x2="245" y2="86" stroke="${COLORS.muted}" stroke-width="0.5"/>
-<text x="35" y "104" fill="${COLORS.alt}" font-size="11" font-family="monospace">x³  → 3x²</text>
-<text x="35" y "120" fill="${COLORS.alt}" font-size="11" font-family="monospace">5x² → 10x</text>
-<text x="35" y "136" fill="${COLORS.alt}" font-size="11" font-family="monospace">-7x → -7</text>
-<text x="35" y "152" fill="${COLORS.alt}" font-size="11" font-family="monospace">2   → 0</text>
-<text x="35" y "172" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">f'(x) = 3x² + 10x − 7</text>
+<text x="35" y="104" fill="${COLORS.alt}" font-size="11" font-family="monospace">x³  → 3x²</text>
+<text x="35" y="120" fill="${COLORS.alt}" font-size="11" font-family="monospace">5x² → 10x</text>
+<text x="35" y="136" fill="${COLORS.alt}" font-size="11" font-family="monospace">-7x → -7</text>
+<text x="35" y="152" fill="${COLORS.alt}" font-size="11" font-family="monospace">2   → 0</text>
+<text x="35" y="172" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">f'(x) = 3x² + 10x − 7</text>
 </svg>`,
     checks: [
       {
@@ -295,14 +295,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">stap voor stap differentiëren</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = 2x⁴ − 3x³ + 5x² − 6x + 8</text>
-<text x="35" y "94" fill="${COLORS.alt}" font-size="11" font-family="monospace">2x⁴ → 8x³</text>
-<text x="35" y "108" fill="${COLORS.alt}" font-size="11" font-family="monospace">-3x³ → -9x²</text>
-<text x="35" y "122" fill="${COLORS.alt}" font-size="11" font-family="monospace">5x² → 10x</text>
-<text x="35" y "136" fill="${COLORS.alt}" font-size="11" font-family="monospace">-6x → -6</text>
-<text x="35" y "150" fill="${COLORS.alt}" font-size="11" font-family="monospace">8 → 0</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = 2x⁴ − 3x³ + 5x² − 6x + 8</text>
+<text x="35" y="94" fill="${COLORS.alt}" font-size="11" font-family="monospace">2x⁴ → 8x³</text>
+<text x="35" y="108" fill="${COLORS.alt}" font-size="11" font-family="monospace">-3x³ → -9x²</text>
+<text x="35" y="122" fill="${COLORS.alt}" font-size="11" font-family="monospace">5x² → 10x</text>
+<text x="35" y="136" fill="${COLORS.alt}" font-size="11" font-family="monospace">-6x → -6</text>
+<text x="35" y="150" fill="${COLORS.alt}" font-size="11" font-family="monospace">8 → 0</text>
 <line x1="30" y1="158" x2="270" y2="158" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "178" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">f'(x) = 8x³ − 9x² + 10x − 6</text>
+<text x="35" y="178" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">f'(x) = 8x³ − 9x² + 10x − 6</text>
 </svg>`,
     checks: [
       {
@@ -330,12 +330,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">helling in een punt: f'(x_0)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x³ − 2x</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="monospace">f'(x) = 3x² − 2</text>
-<text x="35" y "112" fill="${COLORS.alt}" font-size="11" font-family="monospace">f'(2) = 3·4 − 2 = 10</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x³ − 2x</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="monospace">f'(x) = 3x² − 2</text>
+<text x="35" y="112" fill="${COLORS.alt}" font-size="11" font-family="monospace">f'(2) = 3·4 − 2 = 10</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">Voor top: zet f'(x) = 0</text>
-<text x="35" y "164" fill="${COLORS.muted}" font-size="11" font-family="Arial">Voor max raket: h'(t) = 0</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">Voor top: zet f'(x) = 0</text>
+<text x="35" y="164" fill="${COLORS.muted}" font-size="11" font-family="Arial">Voor max raket: h'(t) = 0</text>
 </svg>`,
     checks: [
       {
@@ -360,13 +360,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">extreme waarden — f'(x) = 0</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = -x² + 6x − 5</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="monospace">f'(x) = -2x + 6 = 0</text>
-<text x="35" y "108" fill="${COLORS.alt}" font-size="11" font-family="monospace">→ x = 3</text>
-<text x="35" y "126" fill="${COLORS.alt}" font-size="11" font-family="monospace">f(3) = 4 → top (3, 4)</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = -x² + 6x − 5</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="monospace">f'(x) = -2x + 6 = 0</text>
+<text x="35" y="108" fill="${COLORS.alt}" font-size="11" font-family="monospace">→ x = 3</text>
+<text x="35" y="126" fill="${COLORS.alt}" font-size="11" font-family="monospace">f(3) = 4 → top (3, 4)</text>
 <line x1="30" y1="138" x2="270" y2="138" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "158" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">maximum bij (3, 4)</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">a < 0 → bergparabool → top is max</text>
+<text x="35" y="158" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">maximum bij (3, 4)</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">a < 0 → bergparabool → top is max</text>
 </svg>`,
     checks: [
       {
@@ -389,13 +389,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">raaklijn: y = ax + b</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x², punt (2, 4)</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="monospace">a = f'(2) = 4</text>
-<text x="35" y "108" fill="${COLORS.alt}" font-size="11" font-family="monospace">y = 4x + b</text>
-<text x="35" y "124" fill="${COLORS.alt}" font-size="11" font-family="monospace">door (2,4): 4 = 8 + b</text>
-<text x="35" y "140" fill="${COLORS.alt}" font-size="11" font-family="monospace">→ b = -4</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">f(x) = x², punt (2, 4)</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="monospace">a = f'(2) = 4</text>
+<text x="35" y="108" fill="${COLORS.alt}" font-size="11" font-family="monospace">y = 4x + b</text>
+<text x="35" y="124" fill="${COLORS.alt}" font-size="11" font-family="monospace">door (2,4): 4 = 8 + b</text>
+<text x="35" y="140" fill="${COLORS.alt}" font-size="11" font-family="monospace">→ b = -4</text>
 <line x1="30" y1="150" x2="270" y2="150" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "170" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">y = 4x − 4</text>
+<text x="35" y="170" fill="${COLORS.good}" font-size="12" font-family="monospace" font-weight="bold">y = 4x − 4</text>
 </svg>`,
     checks: [
       {

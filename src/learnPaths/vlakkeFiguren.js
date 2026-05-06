@@ -187,7 +187,7 @@ const steps = [
 <circle cx="150" cy="118" r="4" fill="${COLORS.curveAlt}"/>
 <text x="158" y="115" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">M</text>
 <text x="40" y="35" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">omgeschreven cirkel</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">|MA| = |MB| = |MC|</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">|MA| = |MB| = |MC|</text>
 </svg>`,
     checks: [
       {
@@ -223,7 +223,7 @@ const steps = [
 <path d="M 87 132 A 35 35 0 0 0 80 110" fill="none" stroke="${COLORS.curve2}" stroke-width="1.5"/>
 <text x="78" y="125" fill="${COLORS.curve2}" font-size="10" font-family="Arial">α</text>
 <text x="190" y="115" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">bissectrice</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">deelt de hoek in twee gelijke delen</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">deelt de hoek in twee gelijke delen</text>
 </svg>`,
     checks: [
       {
@@ -256,9 +256,9 @@ const steps = [
 <line x1="160" y1="125" x2="160" y2="160" stroke="${COLORS.curve2}" stroke-width="1.5" stroke-dasharray="3 2"/>
 <rect x="153" y="153" width="10" height="10" fill="none" stroke="${COLORS.curve2}" stroke-width="1"/>
 <line x1="160" y1="125" x2="135" y2="92" stroke="${COLORS.curve2}" stroke-width="1.5" stroke-dasharray="3 2"/>
-<text x="155" y "148" fill="${COLORS.curve2}" font-size="10" font-family="Arial">d</text>
-<text x="138" y "118" fill="${COLORS.curve2}" font-size="10" font-family="Arial">d</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">|PF₁| = |PF₂|  (gelijke afstanden)</text>
+<text x="155" y="148" fill="${COLORS.curve2}" font-size="10" font-family="Arial">d</text>
+<text x="138" y="118" fill="${COLORS.curve2}" font-size="10" font-family="Arial">d</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">|PF₁| = |PF₂|  (gelijke afstanden)</text>
 </svg>`,
     checks: [
       {
@@ -291,7 +291,7 @@ const steps = [
 <text x="245" y="190" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">B</text>
 <text x="146" y="32" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">C</text>
 <text x="35" y="35" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">ingeschreven cirkel</text>
-<text x="150" y "195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">raakt alle 3 de zijden net</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">raakt alle 3 de zijden net</text>
 </svg>`,
     checks: [
       {
@@ -324,9 +324,9 @@ const steps = [
 <line x1="150" y1="40" x2="150" y2="160" stroke="${COLORS.curveAlt}" stroke-width="2.5" stroke-dasharray="5 3"/>
 <text x="50" y="180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">A</text>
 <text x="245" y="180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">B</text>
-<text x="146" y "32" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">C</text>
-<text x="160" y "100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">zwaartelijn</text>
-<text x="150" y "195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">van hoek C naar midden van AB</text>
+<text x="146" y="32" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">C</text>
+<text x="160" y="100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">zwaartelijn</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">van hoek C naar midden van AB</text>
 </svg>`,
     checks: [
       {
@@ -356,12 +356,12 @@ const steps = [
 <line x1="60" y1="160" x2="195" y2="100" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="4 3"/>
 <line x1="240" y1="160" x2="105" y2="100" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="4 3"/>
 <circle cx="150" cy="120" r="6" fill="${COLORS.point}"/>
-<text x="160" y "118" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">Z</text>
-<text x="158" y "133" fill="${COLORS.muted}" font-size="9" font-family="Arial">zwaartepunt</text>
-<text x="50" y "180" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">A</text>
-<text x="245" y "180" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">B</text>
-<text x="146" y "32" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">C</text>
-<text x="150" y "195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">balanseert hier op je vinger</text>
+<text x="160" y="118" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">Z</text>
+<text x="158" y="133" fill="${COLORS.muted}" font-size="9" font-family="Arial">zwaartepunt</text>
+<text x="50" y="180" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">A</text>
+<text x="245" y="180" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">B</text>
+<text x="146" y="32" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">C</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">balanseert hier op je vinger</text>
 </svg>`,
     checks: [
       {
@@ -389,12 +389,12 @@ const steps = [
 <polygon points="60,160 240,160 110,40" fill="rgba(0,200,83,0.08)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="110" y1="40" x2="110" y2="160" stroke="${COLORS.curveAlt}" stroke-width="2.5" stroke-dasharray="5 3"/>
 <rect x="110" y="146" width="14" height="14" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
-<text x="50" y "180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">A</text>
-<text x="245" y "180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">B</text>
-<text x="105" y "32" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">C</text>
-<text x="120" y "100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">hoogtelijn</text>
-<text x="115" y "175" fill="${COLORS.curveAlt}" font-size="9" font-family="Arial">90°</text>
-<text x="150" y "195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vanaf hoek loodrecht op overstaande zijde</text>
+<text x="50" y="180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">A</text>
+<text x="245" y="180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">B</text>
+<text x="105" y="32" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">C</text>
+<text x="120" y="100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">hoogtelijn</text>
+<text x="115" y="175" fill="${COLORS.curveAlt}" font-size="9" font-family="Arial">90°</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vanaf hoek loodrecht op overstaande zijde</text>
 </svg>`,
     checks: [
       {
@@ -425,9 +425,9 @@ const steps = [
 <line x1="60" y1="140" x2="60" y2="60" stroke="${COLORS.curveAlt}" stroke-width="2" stroke-dasharray="4 3"/>
 <rect x="60" y="124" width="16" height="16" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
 <text x="35" y="105" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">h</text>
-<text x="140" y "160" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">basis</text>
-<rect x="60" y "60" width="160" height="80" fill="rgba(255,213,79,0.10)" stroke="${COLORS.point}" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">opp = basis × hoogte</text>
+<text x="140" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial">basis</text>
+<rect x="60" y="60" width="160" height="80" fill="rgba(255,213,79,0.10)" stroke="${COLORS.point}" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">opp = basis × hoogte</text>
 </svg>`,
     checks: [
       {
@@ -450,10 +450,10 @@ const steps = [
 <polygon points="150,40 240,100 150,160 60,100" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="60" y1="100" x2="240" y2="100" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="4 3"/>
 <line x1="150" y1="40" x2="150" y2="160" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="4 3"/>
-<rect x="143" y "100" width="14" height="14" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1"/>
-<text x="115" y "98" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">d₁</text>
-<text x="155" y "85" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">d₂</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">opp = ½ × d₁ × d₂</text>
+<rect x="143" y="100" width="14" height="14" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1"/>
+<text x="115" y="98" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">d₁</text>
+<text x="155" y="85" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">d₂</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">opp = ½ × d₁ × d₂</text>
 </svg>`,
     checks: [
       {
@@ -474,13 +474,13 @@ const steps = [
     explanation: "Een **trapezium** is een vierhoek met **één paar evenwijdige zijden** (en de andere twee zijden niet noodzakelijk parallel).\n\nDe twee evenwijdige zijden heten **a** en **b** (vaak verschillend lang). De **hoogte h** is de loodrechte afstand tussen ze.\n\n**Oppervlakte trapezium = ½ × (a + b) × h**\n\nIn woorden: gemiddelde van de twee evenwijdige zijden, keer de hoogte.\n\n**Voorbeeld**: trapezium met evenwijdige zijden 4 cm en 8 cm, hoogte 5 cm.\n• Oppervlakte = ½ × (4 + 8) × 5 = ½ × 12 × 5 = ½ × 60 = **30 cm²**\n\n**Waarom werkt dit?** Stel je twee identieke trapezia naast elkaar zodanig dat ze samen een parallellogram vormen. Die parallellogram heeft basis (a + b) en hoogte h. Oppervlakte parallellogram = (a+b)·h. Dus trapezium = de helft = ½·(a+b)·h.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="80,150 220,150 180,60 120,60" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="150" y "170" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">b</text>
-<text x="150" y "55" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">a</text>
+<text x="150" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">b</text>
+<text x="150" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">a</text>
 <line x1="240" y1="150" x2="240" y2="60" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="4 3"/>
 <line x1="220" y1="150" x2="240" y2="150" stroke="${COLORS.curveAlt}" stroke-width="0.7"/>
 <line x1="180" y1="60" x2="240" y2="60" stroke="${COLORS.curveAlt}" stroke-width="0.7"/>
-<text x="248" y "108" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">h</text>
-<text x="150" y "195" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">opp = ½ × (a + b) × h</text>
+<text x="248" y="108" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">h</text>
+<text x="150" y="195" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">opp = ½ × (a + b) × h</text>
 </svg>`,
     checks: [
       {
@@ -502,18 +502,18 @@ const steps = [
     title: "Eindopdracht 1: middelpunten",
     explanation: "**Drie korte conceptvragen**:\n\n**A**: Hoe vind je het **middelpunt van de omgeschreven cirkel** van een driehoek?\n→ Snijpunt van de drie **middelloodlijnen**.\n\n**B**: Hoe vind je het **middelpunt van de ingeschreven cirkel**?\n→ Snijpunt van de drie **bissectrices**.\n\n**C**: Hoe vind je het **zwaartepunt** van een driehoek?\n→ Snijpunt van de drie **zwaartelijnen**.\n\n**Onthoudtruc**:\n• **omgeschreven** (rond hoeken) ↔ **middelloodlijnen** (over zijden)\n• **ingeschreven** (rond zijden) ↔ **bissectrices** (over hoeken)\n• **zwaartepunt** (balans) ↔ **zwaartelijnen** (van hoek naar midden)\n\n**Wat hoogtelijnen geven**: snijpunt heet 'hoogtelijnpunt' — wordt minder vaak gevraagd, gebruik je als je de hoogte (en daarmee oppervlakte) wilt berekenen.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "30" fill="${COLORS.text}" font-size="12" font-family="Arial">middelpunt cirkels:</text>
-<text x="55" y "55" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">omgeschreven</text>
-<text x="180" y "55" fill="${COLORS.point}" font-size="11" font-family="Arial">middelloodlijnen</text>
-<text x="55" y "78" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">ingeschreven</text>
-<text x="180" y "78" fill="${COLORS.point}" font-size="11" font-family="Arial">bissectrices</text>
+<text x="55" y="30" fill="${COLORS.text}" font-size="12" font-family="Arial">middelpunt cirkels:</text>
+<text x="55" y="55" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">omgeschreven</text>
+<text x="180" y="55" fill="${COLORS.point}" font-size="11" font-family="Arial">middelloodlijnen</text>
+<text x="55" y="78" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">ingeschreven</text>
+<text x="180" y="78" fill="${COLORS.point}" font-size="11" font-family="Arial">bissectrices</text>
 <line x1="40" y1="92" x2="260" y2="92" stroke="${COLORS.curve}" stroke-width="0.7" opacity="0.4"/>
-<text x="55" y "115" fill="${COLORS.text}" font-size="12" font-family="Arial">andere snijpunten:</text>
-<text x="55" y "138" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">zwaartepunt</text>
-<text x="180" y "138" fill="${COLORS.point}" font-size="11" font-family="Arial">zwaartelijnen</text>
-<text x="55" y "161" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">hoogtelijnpunt</text>
-<text x="180" y "161" fill="${COLORS.point}" font-size="11" font-family="Arial">hoogtelijnen</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">elk type lijn → eigen snijpunt</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="12" font-family="Arial">andere snijpunten:</text>
+<text x="55" y="138" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">zwaartepunt</text>
+<text x="180" y="138" fill="${COLORS.point}" font-size="11" font-family="Arial">zwaartelijnen</text>
+<text x="55" y="161" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">hoogtelijnpunt</text>
+<text x="180" y="161" fill="${COLORS.point}" font-size="11" font-family="Arial">hoogtelijnen</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">elk type lijn → eigen snijpunt</text>
 </svg>`,
     checks: [
       {
@@ -541,19 +541,19 @@ const steps = [
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="160" y1="20" x2="160" y2="190" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="100" y "36" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">figuur</text>
-<text x="210" y "36" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">formule</text>
-<text x="100" y "63" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">driehoek</text>
-<text x="210" y "63" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · b · h</text>
-<text x="100" y "85" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">rechthoek</text>
-<text x="210" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">l · b</text>
-<text x="100" y "107" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">parallellogram</text>
-<text x="210" y "107" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">b · h</text>
-<text x="100" y "129" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">ruit</text>
-<text x="210" y "129" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · d₁ · d₂</text>
-<text x="100" y "151" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">trapezium</text>
-<text x="210" y "151" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · (a+b) · h</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">hoogte is altijd loodrecht</text>
+<text x="100" y="36" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">figuur</text>
+<text x="210" y="36" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">formule</text>
+<text x="100" y="63" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">driehoek</text>
+<text x="210" y="63" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · b · h</text>
+<text x="100" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">rechthoek</text>
+<text x="210" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">l · b</text>
+<text x="100" y="107" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">parallellogram</text>
+<text x="210" y="107" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">b · h</text>
+<text x="100" y="129" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">ruit</text>
+<text x="210" y="129" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · d₁ · d₂</text>
+<text x="100" y="151" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">trapezium</text>
+<text x="210" y="151" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">½ · (a+b) · h</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">hoogte is altijd loodrecht</text>
 </svg>`,
     checks: [
       {

@@ -151,7 +151,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="150" y="55" text-anchor="middle" fill="${COLORS.good}" font-size="16" font-family="Arial" font-weight="bold">ik = stam</text>
 <text x="150" y="73" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">geen t toevoegen</text>
 <text x="40" y="110" fill="${COLORS.text}" font-size="13" font-family="Arial">ik werk</text>
-<text x="40" y "130" fill="${COLORS.text}" font-size="13" font-family="Arial">ik fiets</text>
+<text x="40" y="130" fill="${COLORS.text}" font-size="13" font-family="Arial">ik fiets</text>
 <text x="40" y="150" fill="${COLORS.text}" font-size="13" font-family="Arial">ik antwoord</text>
 <text x="40" y="170" fill="${COLORS.text}" font-size="13" font-family="Arial">ik vind</text>
 <text x="180" y="110" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: werk</text>
@@ -264,14 +264,14 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">werken → werkte</text>
 <text x="35" y="111" fill="${COLORS.text}" font-size="11" font-family="Arial">horen → hoorde</text>
 <text x="35" y="130" fill="${COLORS.text}" font-size="11" font-family="Arial">spelen → speelde</text>
-<text x="35" y "149" fill="${COLORS.text}" font-size="11" font-family="Arial">fietsen → fietste</text>
+<text x="35" y="149" fill="${COLORS.text}" font-size="11" font-family="Arial">fietsen → fietste</text>
 <rect x="155" y="30" width="125" height="140" rx="8" fill="rgba(255,112,67,0.10)" stroke="${COLORS.alt}" stroke-width="2"/>
 <text x="217" y="50" text-anchor="middle" fill="${COLORS.alt}" font-size="13" font-family="Arial" font-weight="bold">STERK</text>
 <text x="217" y="68" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">klinker verandert</text>
 <text x="170" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">lopen → liep</text>
 <text x="170" y="111" fill="${COLORS.text}" font-size="11" font-family="Arial">zingen → zong</text>
 <text x="170" y="130" fill="${COLORS.text}" font-size="11" font-family="Arial">eten → at</text>
-<text x="170" y "149" fill="${COLORS.text}" font-size="11" font-family="Arial">zien → zag</text>
+<text x="170" y="149" fill="${COLORS.text}" font-size="11" font-family="Arial">zien → zag</text>
 </svg>`,
     checks: [
       {
@@ -295,9 +295,9 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="150" y="45" text-anchor="middle" fill="${COLORS.warm}" font-size="20" font-family="Arial" font-weight="bold">'t  k  o  f  s  ch  p</text>
 <text x="150" y="62" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ stam eindigt op één hiervan? → +te</text>
 <text x="35" y="100" fill="${COLORS.text}" font-size="12" font-family="Arial">werken → wer<tspan fill="${COLORS.good}" font-weight="bold">k</tspan> → werk<tspan fill="${COLORS.good}" font-weight="bold">te</tspan></text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="12" font-family="Arial">fietsen → fiet<tspan fill="${COLORS.good}" font-weight="bold">s</tspan> → fiets<tspan fill="${COLORS.good}" font-weight="bold">te</tspan></text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="12" font-family="Arial">fietsen → fiet<tspan fill="${COLORS.good}" font-weight="bold">s</tspan> → fiets<tspan fill="${COLORS.good}" font-weight="bold">te</tspan></text>
 <text x="35" y="140" fill="${COLORS.text}" font-size="12" font-family="Arial">horen → hoo<tspan fill="${COLORS.alt}" font-weight="bold">r</tspan> → hoor<tspan fill="${COLORS.alt}" font-weight="bold">de</tspan></text>
-<text x="35" y "160" fill="${COLORS.text}" font-size="12" font-family="Arial">spelen → spee<tspan fill="${COLORS.alt}" font-weight="bold">l</tspan> → speel<tspan fill="${COLORS.alt}" font-weight="bold">de</tspan></text>
+<text x="35" y="160" fill="${COLORS.text}" font-size="12" font-family="Arial">spelen → spee<tspan fill="${COLORS.alt}" font-weight="bold">l</tspan> → speel<tspan fill="${COLORS.alt}" font-weight="bold">de</tspan></text>
 <text x="150" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">letter in kofschip → te · niet erin → de</text>
 </svg>`,
     checks: [
@@ -350,12 +350,12 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="120" y="110" fill="${COLORS.muted}" font-size="12" font-family="Arial">→ ge + hoor + </text>
 <text x="220" y="110" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">d</text>
 <text x="240" y="110" fill="${COLORS.muted}" font-size="12" font-family="Arial">(r)</text>
-<text x="40" y "135" fill="${COLORS.text}" font-size="12" font-family="Arial">maken</text>
-<text x="120" y "135" fill="${COLORS.muted}" font-size="12" font-family="Arial">→ ge + maak + </text>
+<text x="40" y="135" fill="${COLORS.text}" font-size="12" font-family="Arial">maken</text>
+<text x="120" y="135" fill="${COLORS.muted}" font-size="12" font-family="Arial">→ ge + maak + </text>
 <text x="220" y="135" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">t</text>
 <text x="240" y="135" fill="${COLORS.muted}" font-size="12" font-family="Arial">(k!)</text>
-<text x="40" y "160" fill="${COLORS.text}" font-size="12" font-family="Arial">spelen</text>
-<text x="120" y "160" fill="${COLORS.muted}" font-size="12" font-family="Arial">→ ge + speel + </text>
+<text x="40" y="160" fill="${COLORS.text}" font-size="12" font-family="Arial">spelen</text>
+<text x="120" y="160" fill="${COLORS.muted}" font-size="12" font-family="Arial">→ ge + speel + </text>
 <text x="220" y="160" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">d</text>
 <text x="240" y="160" fill="${COLORS.muted}" font-size="12" font-family="Arial">(l)</text>
 <text x="150" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">altijd: stam-eindletter ↔ kofschip</text>
@@ -396,11 +396,11 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="150" y="55" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">loop = word · loopt = wordt</text>
 <text x="40" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">ik loop  →  ik </text>
 <text x="160" y="90" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">word</text>
-<text x="40" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">jij loopt → jij </text>
+<text x="40" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">jij loopt → jij </text>
 <text x="160" y="115" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">wordt</text>
 <text x="40" y="140" fill="${COLORS.text}" font-size="13" font-family="Arial">hij loopt → hij </text>
 <text x="160" y="140" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">wordt</text>
-<text x="40" y "165" fill="${COLORS.text}" font-size="13" font-family="Arial">loop ik? → </text>
+<text x="40" y="165" fill="${COLORS.text}" font-size="13" font-family="Arial">loop ik? → </text>
 <text x="160" y="165" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">word</text>
 <text x="200" y="165" fill="${COLORS.text}" font-size="13" font-family="Arial"> ik?</text>
 </svg>`,
@@ -434,15 +434,15 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
     explanation: "**gebeurt** en **gebeurd** klinken hetzelfde, maar betekenen iets anders.\n\n**gebeurt** (met -t) = tegenwoordige tijd, hij/zij/het + stam + t.\n• Stam = gebeur. \"hij/het gebeurt\".\n• Het **gebeurt** elke dag.\n• Wat **gebeurt** er?\n\n**gebeurd** (met -d) = voltooid deelwoord. Komt na een vorm van **zijn** (niet hebben).\n• Het is **gebeurd**.\n• Er is iets ergs **gebeurd**.\n\n**Hoe kies je?** Vervang \"gebeurt/gebeurd\" tijdelijk door **werkt / gewerkt**:\n• \"Wat gebeurt er?\" → \"Wat werkt er?\" → tegenwoordige tijd → **gebeurt** ✓\n• \"Het is gebeurd.\" → \"Het is gewerkt.\" → voltooid → **gebeurd** ✓\n\nHetzelfde geldt voor:\n• **vindt** vs **gevonden** — vindt = pv tt, gevonden = voltooid\n• **antwoordt** vs **geantwoord** — antwoordt = pv tt, geantwoord = voltooid\n• **gebeurt** vs **gebeurd**\n\n**Belangrijk**: een voltooid deelwoord staat **bijna altijd** na een vorm van *hebben*, *zijn* of *worden*. Geen hulpwerkwoord in de buurt? Dan is het meestal de pv (tegenwoordige tijd).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="125" height="55" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="82" y "44" text-anchor="middle" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">gebeurt</text>
+<text x="82" y="44" text-anchor="middle" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">gebeurt</text>
 <text x="82" y="60" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegenw. tijd</text>
-<text x="82" y "73" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">het + stam + t</text>
+<text x="82" y="73" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">het + stam + t</text>
 <rect x="155" y="22" width="125" height="55" rx="8" fill="rgba(255,112,67,0.10)" stroke="${COLORS.alt}" stroke-width="2"/>
 <text x="217" y="44" text-anchor="middle" fill="${COLORS.alt}" font-size="14" font-family="Arial" font-weight="bold">gebeurd</text>
-<text x="217" y "60" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">voltooid deelw.</text>
+<text x="217" y="60" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">voltooid deelw.</text>
 <text x="217" y="73" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">na is/heeft</text>
-<text x="20" y "100" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: vervang door werkt / gewerkt</text>
-<text x="20" y "125" fill="${COLORS.text}" font-size="11" font-family="Arial">"Het ___ vaak."   →   het werkt → gebeurt</text>
+<text x="20" y="100" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: vervang door werkt / gewerkt</text>
+<text x="20" y="125" fill="${COLORS.text}" font-size="11" font-family="Arial">"Het ___ vaak."   →   het werkt → gebeurt</text>
 <text x="20" y="145" fill="${COLORS.text}" font-size="11" font-family="Arial">"Het is ___."     →   het is gewerkt → gebeurd</text>
 <text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">na is/heeft → voltooid (-d)</text>
 </svg>`,
@@ -482,7 +482,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="180" y="76" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">vind</text>
 <text x="40" y="98" fill="${COLORS.text}" font-size="12" font-family="Arial">jij / hij / zij</text>
 <text x="180" y="98" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">vindt</text>
-<text x="40" y "120" fill="${COLORS.text}" font-size="12" font-family="Arial">wij / jullie / zij</text>
+<text x="40" y="120" fill="${COLORS.text}" font-size="12" font-family="Arial">wij / jullie / zij</text>
 <text x="180" y="120" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">vinden</text>
 <text x="40" y="142" fill="${COLORS.text}" font-size="12" font-family="Arial">verleden tijd</text>
 <text x="180" y="142" fill="${COLORS.alt}" font-size="12" font-family="Arial" font-weight="bold">vond</text>
@@ -535,10 +535,10 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">samenvatting d/t</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="Arial">tt: ik (stam) / jij·hij (stam+t) / wij (heel)</text>
-<text x="35" y "98" fill="${COLORS.text}" font-size="11" font-family="Arial">vt zwak: stam + te / de (kofschip)</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="11" font-family="Arial">voltooid: ge- + stam + t / d (kofschip)</text>
-<text x="35" y "142" fill="${COLORS.text}" font-size="11" font-family="Arial">sterk: leer los (gegeten, gevonden...)</text>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">altijd: lopen-test bij twijfel</text>
+<text x="35" y="98" fill="${COLORS.text}" font-size="11" font-family="Arial">vt zwak: stam + te / de (kofschip)</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="11" font-family="Arial">voltooid: ge- + stam + t / d (kofschip)</text>
+<text x="35" y="142" fill="${COLORS.text}" font-size="11" font-family="Arial">sterk: leer los (gegeten, gevonden...)</text>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">altijd: lopen-test bij twijfel</text>
 </svg>`,
     checks: [
       {

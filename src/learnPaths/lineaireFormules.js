@@ -155,7 +155,7 @@ ${baseAxes}
 <text x="220" y="118" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">(start-waarde)</text>
 <text x="60" y="155" fill="${COLORS.text}" font-size="12" font-family="Arial">y = 3x + 2 →</text>
 <text x="200" y="155" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">a=3, b=2</text>
-<text x="60" y "180" fill="${COLORS.text}" font-size="12" font-family="Arial">y = ½x − 4 →</text>
+<text x="60" y="180" fill="${COLORS.text}" font-size="12" font-family="Arial">y = ½x − 4 →</text>
 <text x="200" y="180" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">a=½, b=−4</text>
 </svg>`,
     checks: [
@@ -359,7 +359,7 @@ ${baseAxes}
 <line x1="55" y1="85" x2="220" y2="85" stroke="${COLORS.curve}" stroke-width="0.7"/>
 <rect x="55" y="100" width="100" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
 <text x="105" y="124" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x = 4</text>
-<text x="55" y "165" fill="${COLORS.curve}" font-size="11" font-family="Arial">check: 3·4 + 5 = 17 ✓</text>
+<text x="55" y="165" fill="${COLORS.curve}" font-size="11" font-family="Arial">check: 3·4 + 5 = 17 ✓</text>
 <text x="180" y="115" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">altijd</text>
 <text x="180" y="128" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">beide kanten</text>
 <text x="180" y="141" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tegelijk</text>
@@ -384,13 +384,13 @@ ${baseAxes}
     svg: `<svg viewBox="0 0 300 200">
 <text x="55" y="38" fill="${COLORS.text}" font-size="13" font-family="Arial">5x + 2 = 2x + 11</text>
 <text x="220" y="38" fill="${COLORS.muted}" font-size="11" font-family="Arial">| − 2x</text>
-<text x="55" y "63" fill="${COLORS.text}" font-size="13" font-family="Arial">3x + 2 = 11</text>
+<text x="55" y="63" fill="${COLORS.text}" font-size="13" font-family="Arial">3x + 2 = 11</text>
 <text x="220" y="63" fill="${COLORS.muted}" font-size="11" font-family="Arial">| − 2</text>
 <text x="55" y="88" fill="${COLORS.text}" font-size="13" font-family="Arial">3x = 9</text>
 <text x="220" y="88" fill="${COLORS.muted}" font-size="11" font-family="Arial">| ÷ 3</text>
 <rect x="55" y="105" width="100" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
 <text x="105" y="129" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x = 3</text>
-<text x="55" y "170" fill="${COLORS.curve}" font-size="11" font-family="Arial">check: 5·3 + 2 = 17  ·  2·3 + 11 = 17 ✓</text>
+<text x="55" y="170" fill="${COLORS.curve}" font-size="11" font-family="Arial">check: 5·3 + 2 = 17  ·  2·3 + 11 = 17 ✓</text>
 </svg>`,
     checks: [
       {
@@ -418,7 +418,7 @@ ${baseAxes}
 <text x="220" y="88" fill="${COLORS.muted}" font-size="11" font-family="Arial">| ÷ 2</text>
 <rect x="55" y="105" width="100" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
 <text x="105" y="129" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x = 4</text>
-<text x="55" y "175" fill="${COLORS.curve}" font-size="11" font-family="Arial">a·(b + c) = a·b + a·c</text>
+<text x="55" y="175" fill="${COLORS.curve}" font-size="11" font-family="Arial">a·(b + c) = a·b + a·c</text>
 </svg>`,
     checks: [
       {
@@ -503,12 +503,12 @@ ${baseAxes}
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <text x="55" y="42" fill="${COLORS.text}" font-size="12" font-family="Arial">4(x − 1) = 2x + 6</text>
-<text x="55" y "62" fill="${COLORS.text}" font-size="12" font-family="Arial">4x − 4 = 2x + 6</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="12" font-family="Arial">2x − 4 = 6</text>
-<text x="55" y "102" fill="${COLORS.text}" font-size="12" font-family="Arial">2x = 10</text>
+<text x="55" y="62" fill="${COLORS.text}" font-size="12" font-family="Arial">4x − 4 = 2x + 6</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="12" font-family="Arial">2x − 4 = 6</text>
+<text x="55" y="102" fill="${COLORS.text}" font-size="12" font-family="Arial">2x = 10</text>
 <rect x="55" y="115" width="100" height="32" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="105" y "137" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">x = 5</text>
-<text x="55" y "170" fill="${COLORS.curve}" font-size="11" font-family="Arial">4·4 = 16  ·  2·5+6 = 16 ✓</text>
+<text x="105" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">x = 5</text>
+<text x="55" y="170" fill="${COLORS.curve}" font-size="11" font-family="Arial">4·4 = 16  ·  2·5+6 = 16 ✓</text>
 </svg>`,
     checks: [
       {
@@ -535,7 +535,7 @@ ${baseAxes}
 <circle cx="220" cy="48" r="5" fill="${COLORS.point}"/>
 <text x="195" y="42" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">(3, 13)</text>
 <rect x="55" y="170" width="190" height="22" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="150" y "186" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">y = 3x + 4</text>
+<text x="150" y="186" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">y = 3x + 4</text>
 </svg>`,
     checks: [
       {

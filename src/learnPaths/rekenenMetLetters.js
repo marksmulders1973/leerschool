@@ -35,14 +35,14 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="44" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="68" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">3x + 2y − 5</text>
-<text x="73" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 1</text>
-<text x="148" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 2</text>
-<text x="220" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 3</text>
+<text x="73" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 1</text>
+<text x="148" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 2</text>
+<text x="220" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">term 3</text>
 <line x1="55" y1="84" x2="100" y2="100" stroke="${COLORS.point}" stroke-width="1"/>
 <line x1="130" y1="84" x2="148" y2="100" stroke="${COLORS.point}" stroke-width="1"/>
 <line x1="195" y1="84" x2="220" y2="100" stroke="${COLORS.point}" stroke-width="1"/>
-<text x="150" y "150" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">3 = coëfficiënt    ·    x = variabele</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">termen worden gescheiden door + of −</text>
+<text x="150" y="150" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">3 = coëfficiënt    ·    x = variabele</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">termen worden gescheiden door + of −</text>
 </svg>`,
     checks: [
       {
@@ -71,8 +71,8 @@ const steps = [
 <text x="220" y="65" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">3x  en  2y</text>
 <text x="220" y="90" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">x  en  x²</text>
 <text x="220" y="115" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">5  en  3x</text>
-<text x="150" y "165" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">3x + 7x = 10x</text>
-<text x="150" y "182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">alleen coëfficiënten optellen, letter blijft</text>
+<text x="150" y="165" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">3x + 7x = 10x</text>
+<text x="150" y="182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">alleen coëfficiënten optellen, letter blijft</text>
 </svg>`,
     checks: [
       {
@@ -93,13 +93,13 @@ const steps = [
     explanation: "**Herleiden** = een uitdrukking zo eenvoudig mogelijk schrijven door **soortgelijke termen samen te trekken**.\n\n**Voorbeeld 1**: 3x + 5x − 2x\n• Allemaal x-termen → optellen/aftrekken: 3 + 5 − 2 = **6**\n• Resultaat: **6x**\n\n**Voorbeeld 2**: 2x + 5y − 3x + 2y\n• x-termen: 2x − 3x = **−x**\n• y-termen: 5y + 2y = **7y**\n• Resultaat: **−x + 7y**\n\n**Voorbeeld 3**: 4a + 6 − 2a − 9\n• a-termen: 4a − 2a = **2a**\n• constanten: 6 − 9 = **−3**\n• Resultaat: **2a − 3**\n\n**Stappenplan**:\n1. Groepeer soortgelijke termen (mentaal of op papier)\n2. Tel/trek de coëfficiënten op/af\n3. Schrijf het resultaat netjes",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="36" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "44" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">2x + 5y − 3x + 2y</text>
-<text x="65" y "80" fill="${COLORS.text}" font-size="11" font-family="Arial">x: 2x − 3x = −x</text>
-<text x="65" y "100" fill="${COLORS.text}" font-size="11" font-family="Arial">y: 5y + 2y = 7y</text>
+<text x="150" y="44" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">2x + 5y − 3x + 2y</text>
+<text x="65" y="80" fill="${COLORS.text}" font-size="11" font-family="Arial">x: 2x − 3x = −x</text>
+<text x="65" y="100" fill="${COLORS.text}" font-size="11" font-family="Arial">y: 5y + 2y = 7y</text>
 <line x1="50" y1="115" x2="200" y2="115" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<rect x="55" y "130" width="180" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="145" y "154" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">−x + 7y</text>
-<text x="150" y "186" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">soortgelijke termen samen trekken</text>
+<rect x="55" y="130" width="180" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="145" y="154" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">−x + 7y</text>
+<text x="150" y="186" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">soortgelijke termen samen trekken</text>
 </svg>`,
     checks: [
       {
@@ -127,14 +127,14 @@ const steps = [
     explanation: "**Haakjes wegwerken** = een uitdrukking met haakjes ompschrijven naar één zonder haakjes.\n\n**Hoofdregel**: a · (b + c) = a·b + a·c\n\nIn woorden: vermenigvuldig **elk** ding binnen de haakjes met wat ervoor staat.\n\n**Voorbeelden**:\n• 3(x + 5) = 3·x + 3·5 = **3x + 15**\n• 4(2y − 3) = 4·2y − 4·3 = **8y − 12**\n• 5(a + b) = **5a + 5b**\n• x(x + 4) = x·x + x·4 = **x² + 4x**\n\n**Tip**: vergeet **niet** de tweede vermenigvuldiging. Veel leerlingen schrijven 3(x + 5) = 3x + 5 (fout). Je moet 3 ook keer 5 doen!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="50" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="8"/>
-<text x="80" y "73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">3</text>
-<text x="115" y "73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">·</text>
-<text x="180" y "73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">(x + 5)</text>
+<text x="80" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">3</text>
+<text x="115" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">·</text>
+<text x="180" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">(x + 5)</text>
 <line x1="80" y1="84" x2="155" y2="105" stroke="${COLORS.point}" stroke-width="1.5"/>
 <line x1="80" y1="84" x2="220" y2="105" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="150" y "130" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">= 3·x + 3·5</text>
-<rect x="80" y "150" width="140" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">= 3x + 15</text>
+<text x="150" y="130" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">= 3·x + 3·5</text>
+<rect x="80" y="150" width="140" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">= 3x + 15</text>
 </svg>`,
     checks: [
       {
@@ -166,13 +166,13 @@ const steps = [
     explanation: "Pas op als er een **minteken** vóór de haakjes staat. Dan **draaien alle tekens** binnen de haakjes om.\n\n**Voorbeeld**: −(x + 5)\n\nDit is hetzelfde als −1 · (x + 5):\n• −1 · x = −x\n• −1 · 5 = −5\n• Totaal: **−x − 5**\n\nDus: −(x + 5) = **−x − 5** (allebei minteken).\n\n**Voorbeeld 2**: −(3y − 4)\n• −1 · 3y = −3y\n• −1 · (−4) = +4 (min × min = plus!)\n• Totaal: **−3y + 4**\n\n**Vuistregel**: bij min vóór de haakjes verandert élk teken binnen:\n• plus wordt min\n• min wordt plus\n\nVeelgemaakte fout: alleen de eerste term draaien en de tweede vergeten. Pas op!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="30" width="220" height="40" fill="rgba(255,112,67,0.15)" stroke="${COLORS.curveAlt}" stroke-width="2" rx="6"/>
-<text x="150" y "57" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">−(3y − 4)</text>
-<text x="55" y "100" fill="${COLORS.text}" font-size="13" font-family="Arial">−1 · 3y = −3y</text>
-<text x="55" y "125" fill="${COLORS.text}" font-size="13" font-family="Arial">−1 · (−4) = +4</text>
-<text x="200" y "115" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">(min × min)</text>
-<rect x="55" y "140" width="180" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="145" y "164" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">−3y + 4</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">alle tekens draaien om</text>
+<text x="150" y="57" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">−(3y − 4)</text>
+<text x="55" y="100" fill="${COLORS.text}" font-size="13" font-family="Arial">−1 · 3y = −3y</text>
+<text x="55" y="125" fill="${COLORS.text}" font-size="13" font-family="Arial">−1 · (−4) = +4</text>
+<text x="200" y="115" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">(min × min)</text>
+<rect x="55" y="140" width="180" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="145" y="164" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">−3y + 4</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">alle tekens draaien om</text>
 </svg>`,
     checks: [
       {
@@ -192,14 +192,14 @@ const steps = [
     title: "Combineren: haakjes + soortgelijke termen",
     explanation: "Vaak zijn de twee technieken samen nodig: eerst haakjes weg, dan herleiden.\n\n**Voorbeeld**: 3(x + 2) + 2(x − 1)\n\n**Stap 1**: haakjes wegwerken:\n• 3(x + 2) = 3x + 6\n• 2(x − 1) = 2x − 2\n• Totaal: **3x + 6 + 2x − 2**\n\n**Stap 2**: soortgelijke termen samentrekken:\n• x-termen: 3x + 2x = 5x\n• constanten: 6 − 2 = 4\n• Resultaat: **5x + 4**\n\n**Voorbeeld 2**: 4(a + 3) − 2(a + 5)\n• 4(a + 3) = 4a + 12\n• −2(a + 5) = −2a − 10 (let op: minteken!)\n• Som: 4a + 12 − 2a − 10 = (4a − 2a) + (12 − 10) = **2a + 2**\n\nAltijd: **eerst haakjes, dan herleiden**.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial">3(x + 2) + 2(x − 1)</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial">3(x + 2) + 2(x − 1)</text>
 <line x1="50" y1="42" x2="220" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 1: haakjes</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="13" font-family="Arial">3x + 6 + 2x − 2</text>
-<text x="55" y "108" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 2: soortgelijke</text>
-<text x="55" y "130" fill="${COLORS.text}" font-size="13" font-family="Arial">5x + 4</text>
-<rect x="55" y "144" width="120" height="34" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="115" y "167" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">5x + 4</text>
+<text x="55" y="60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 1: haakjes</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="13" font-family="Arial">3x + 6 + 2x − 2</text>
+<text x="55" y="108" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 2: soortgelijke</text>
+<text x="55" y="130" fill="${COLORS.text}" font-size="13" font-family="Arial">5x + 4</text>
+<rect x="55" y="144" width="120" height="34" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="115" y="167" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">5x + 4</text>
 </svg>`,
     checks: [
       {
@@ -222,12 +222,12 @@ const steps = [
     explanation: "Een speciaal geval: **(a + b)²** = (a + b)(a + b) — een uitdrukking in het kwadraat.\n\n**Hoe werk je dit uit?**\n\n(a + b)² = (a + b) · (a + b)\n         = a·a + a·b + b·a + b·b\n         = a² + 2ab + b²\n\n**De regel**:\n\n**(a + b)² = a² + 2ab + b²**\n\nDit heet een **merkwaardig product**.\n\n**Voorbeelden**:\n• (x + 3)² = x² + 2·x·3 + 3² = **x² + 6x + 9**\n• (y + 5)² = y² + 10y + 25\n• (2x + 1)² = (2x)² + 2·2x·1 + 1² = **4x² + 4x + 1**\n\n**Veelgemaakte fout**: denken dat (a + b)² = a² + b². **Fout!** De middelste term **2ab** vergeten — niet doen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)² = a² + 2ab + b²</text>
-<text x="55" y "90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x + 3)² = x² + 6x + 9</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y + 5)² = y² + 10y + 25</text>
-<rect x="40" y "135" width="220" height="40" fill="rgba(255,112,67,0.15)" stroke="${COLORS.curveAlt}" stroke-width="1.5" rx="6"/>
-<text x="150" y "152" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">veelgemaakt: (a+b)² ≠ a² + b²</text>
-<text x="150" y "168" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vergeet de middelste term 2ab niet!</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)² = a² + 2ab + b²</text>
+<text x="55" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x + 3)² = x² + 6x + 9</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y + 5)² = y² + 10y + 25</text>
+<rect x="40" y="135" width="220" height="40" fill="rgba(255,112,67,0.15)" stroke="${COLORS.curveAlt}" stroke-width="1.5" rx="6"/>
+<text x="150" y="152" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">veelgemaakt: (a+b)² ≠ a² + b²</text>
+<text x="150" y="168" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vergeet de middelste term 2ab niet!</text>
 </svg>`,
     checks: [
       {
@@ -253,11 +253,11 @@ const steps = [
     explanation: "Bij **(a − b)²** verandert er weinig — alleen de middelste term wordt **min**:\n\n**(a − b)² = a² − 2ab + b²**\n\nWaarom blijft b² positief? Omdat (−b)² = b² (kwadraat van een negatief is positief, zie H5).\n\n**Voorbeelden**:\n• (x − 3)² = x² − 6x + 9\n• (y − 5)² = y² − 10y + 25\n• (2x − 1)² = 4x² − 4x + 1\n\n**Schema** voor zowel + als −:\n• Eerste term² (a²)\n• ± middelste term (2ab) — teken volgt de ± in de haakjes\n• Tweede term² (b²) — altijd plus\n\n**Tip**: schrijf altijd alle drie de termen op. Vergeet de middelste niet.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a − b)² = a² − 2ab + b²</text>
-<text x="55" y "90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x − 3)² = x² − 6x + 9</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y − 5)² = y² − 10y + 25</text>
-<text x="55" y "150" fill="${COLORS.muted}" font-size="11" font-family="Arial">middelste term volgt het teken (− bij −b)</text>
-<text x="55" y "170" fill="${COLORS.muted}" font-size="11" font-family="Arial">b² blijft altijd positief (kwadraat!)</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a − b)² = a² − 2ab + b²</text>
+<text x="55" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x − 3)² = x² − 6x + 9</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y − 5)² = y² − 10y + 25</text>
+<text x="55" y="150" fill="${COLORS.muted}" font-size="11" font-family="Arial">middelste term volgt het teken (− bij −b)</text>
+<text x="55" y="170" fill="${COLORS.muted}" font-size="11" font-family="Arial">b² blijft altijd positief (kwadraat!)</text>
 </svg>`,
     checks: [
       {
@@ -283,12 +283,12 @@ const steps = [
     explanation: "Een derde merkwaardig product: **plus en min combineren**.\n\n**(a + b)(a − b) = a² − b²**\n\nDit is verrassend simpel — alleen twee termen, geen middelste term.\n\n**Waarom?** Werk uit:\n(a + b)(a − b) = a·a + a·(−b) + b·a + b·(−b)\n               = a² − ab + ba − b²\n               = a² − b² (de middelste termen heffen elkaar op!)\n\n**Voorbeelden**:\n• (x + 3)(x − 3) = x² − 9\n• (y + 7)(y − 7) = y² − 49\n• (2x + 5)(2x − 5) = 4x² − 25\n\nDeze regel is heel handig — soms kun je 'm omkeerd gebruiken om snel een uitdrukking te factoriseren:\n\n• x² − 16 = (x + 4)(x − 4)\n• x² − 100 = (x + 10)(x − 10)\n\nDat heet **factoriseren met merkwaardige producten**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)(a − b) = a² − b²</text>
-<text x="55" y "90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x + 3)(x − 3) = x² − 9</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y + 7)(y − 7) = y² − 49</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)(a − b) = a² − b²</text>
+<text x="55" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">(x + 3)(x − 3) = x² − 9</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">(y + 7)(y − 7) = y² − 49</text>
 <line x1="40" y1="135" x2="260" y2="135" stroke="${COLORS.curve}" stroke-width="0.7" opacity="0.5"/>
-<text x="55" y "155" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">andersom (factoriseren):</text>
-<text x="55" y "175" fill="${COLORS.text}" font-size="13" font-family="Arial">x² − 16 = (x + 4)(x − 4)</text>
+<text x="55" y="155" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">andersom (factoriseren):</text>
+<text x="55" y="175" fill="${COLORS.text}" font-size="13" font-family="Arial">x² − 16 = (x + 4)(x − 4)</text>
 </svg>`,
     checks: [
       {
@@ -311,14 +311,14 @@ const steps = [
     explanation: "Bij **vermenigvuldigen** van machten met **dezelfde basis** (zelfde letter): **exponenten optellen**.\n\n**Regel**: xⁿ · xᵐ = x^(n+m)\n\n**Voorbeelden**:\n• x³ · x² = x^(3+2) = **x⁵**\n• x⁴ · x = x⁴ · x¹ = **x⁵**\n• y² · y⁵ = **y⁷**\n• a · a · a = a³\n\n**Waarom?** Bekijk eens:\n• x³ = x·x·x (3 keer x)\n• x² = x·x (2 keer x)\n• x³ · x² = (x·x·x)·(x·x) = x·x·x·x·x = x⁵ (5 keer x totaal)\n\n**Pas op**: dit werkt **alleen** met dezelfde basis. x³ · y² blijft gewoon x³y² — niet samen te voegen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ · xᵐ = x^(n+m)</text>
-<text x="55" y "90" fill="${COLORS.text}" font-size="13" font-family="Arial">x³ · x² = x⁵</text>
-<text x="180" y "90" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3 + 2 = 5)</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">y · y⁴ = y⁵</text>
-<text x="180" y "115" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 + 4 = 5)</text>
-<text x="55" y "140" fill="${COLORS.text}" font-size="13" font-family="Arial">a² · a³ · a = a⁶</text>
-<text x="180" y "140" fill="${COLORS.muted}" font-size="11" font-family="Arial">(2+3+1 = 6)</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">alleen bij gelijke basis (zelfde letter)</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ · xᵐ = x^(n+m)</text>
+<text x="55" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">x³ · x² = x⁵</text>
+<text x="180" y="90" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3 + 2 = 5)</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">y · y⁴ = y⁵</text>
+<text x="180" y="115" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 + 4 = 5)</text>
+<text x="55" y="140" fill="${COLORS.text}" font-size="13" font-family="Arial">a² · a³ · a = a⁶</text>
+<text x="180" y="140" fill="${COLORS.muted}" font-size="11" font-family="Arial">(2+3+1 = 6)</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">alleen bij gelijke basis (zelfde letter)</text>
 </svg>`,
     checks: [
       {
@@ -339,13 +339,13 @@ const steps = [
     explanation: "Bij **delen** van machten met **dezelfde basis**: **exponenten aftrekken**.\n\n**Regel**: xⁿ / xᵐ = x^(n−m)\n\n**Voorbeelden**:\n• x⁵ / x² = x^(5−2) = **x³**\n• y⁷ / y³ = **y⁴**\n• a⁶ / a = a⁶ / a¹ = **a⁵**\n\n**Waarom?** \n• x⁵ / x² = (x·x·x·x·x) / (x·x) = x·x·x = x³ (twee x'en wegstrepen tegen die in de noemer)\n\n**Bijzondere gevallen**:\n• x⁴ / x⁴ = x⁰ = **1** (alles delen door zichzelf is 1)\n• x³ / x⁵ = x^(3−5) = x⁻² = **1/x²** (komt later in andere hoofdstukken)\n\nVoor nu: gewoon de exponent in de teller min de exponent in de noemer.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ / xᵐ = x^(n−m)</text>
-<text x="55" y "90" fill="${COLORS.text}" font-size="13" font-family="Arial">x⁵ / x² = x³</text>
-<text x="180" y "90" fill="${COLORS.muted}" font-size="11" font-family="Arial">(5 − 2 = 3)</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="13" font-family="Arial">y⁷ / y³ = y⁴</text>
-<text x="180" y "115" fill="${COLORS.muted}" font-size="11" font-family="Arial">(7 − 3 = 4)</text>
-<text x="55" y "140" fill="${COLORS.text}" font-size="13" font-family="Arial">a⁴ / a⁴ = a⁰ = 1</text>
-<text x="55" y "175" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">x⁰ = 1 (elk getal tot de macht 0 = 1)</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">xⁿ / xᵐ = x^(n−m)</text>
+<text x="55" y="90" fill="${COLORS.text}" font-size="13" font-family="Arial">x⁵ / x² = x³</text>
+<text x="180" y="90" fill="${COLORS.muted}" font-size="11" font-family="Arial">(5 − 2 = 3)</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="13" font-family="Arial">y⁷ / y³ = y⁴</text>
+<text x="180" y="115" fill="${COLORS.muted}" font-size="11" font-family="Arial">(7 − 3 = 4)</text>
+<text x="55" y="140" fill="${COLORS.text}" font-size="13" font-family="Arial">a⁴ / a⁴ = a⁰ = 1</text>
+<text x="55" y="175" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-style="italic">x⁰ = 1 (elk getal tot de macht 0 = 1)</text>
 </svg>`,
     checks: [
       {
@@ -366,15 +366,15 @@ const steps = [
     explanation: "Wat als je een macht **nogmaals** kwadrateert (of tot een andere macht verheft)? Dan **vermenigvuldig** je de exponenten:\n\n**Regel**: (xⁿ)ᵐ = x^(n·m)\n\n**Voorbeelden**:\n• (x²)³ = x^(2·3) = **x⁶**\n• (y³)⁴ = y¹²\n• (a⁵)² = a¹⁰\n\n**Waarom?**\n(x²)³ = x² · x² · x² (drie keer x² met elkaar vermenigvuldigen)\n      = x^(2+2+2) = x⁶\n\n**Samenvatting van de drie regels**:\n• xⁿ · xᵐ = x^(n+m) — vermenigvuldigen → optellen\n• xⁿ / xᵐ = x^(n−m) — delen → aftrekken\n• (xⁿ)ᵐ = x^(n·m) — macht van macht → vermenigvuldigen\n\n**Pas op**: deze regels werken alleen met dezelfde basis. Voor verschillende bases (x³ en y²) gelden ze niet.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(xⁿ)ᵐ = x^(n·m)</text>
-<text x="55" y "85" fill="${COLORS.text}" font-size="13" font-family="Arial">(x²)³ = x⁶</text>
-<text x="180" y "85" fill="${COLORS.muted}" font-size="11" font-family="Arial">(2·3 = 6)</text>
-<text x="55" y "108" fill="${COLORS.text}" font-size="13" font-family="Arial">(y³)⁴ = y¹²</text>
-<text x="180" y "108" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3·4 = 12)</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(xⁿ)ᵐ = x^(n·m)</text>
+<text x="55" y="85" fill="${COLORS.text}" font-size="13" font-family="Arial">(x²)³ = x⁶</text>
+<text x="180" y="85" fill="${COLORS.muted}" font-size="11" font-family="Arial">(2·3 = 6)</text>
+<text x="55" y="108" fill="${COLORS.text}" font-size="13" font-family="Arial">(y³)⁴ = y¹²</text>
+<text x="180" y="108" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3·4 = 12)</text>
 <line x1="40" y1="125" x2="260" y2="125" stroke="${COLORS.curve}" stroke-width="0.7" opacity="0.5"/>
-<text x="55" y "145" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">3 regels samen:</text>
-<text x="55" y "163" fill="${COLORS.text}" font-size="11" font-family="Arial">·  vermenigvuldigen → +</text>
-<text x="55" y "180" fill="${COLORS.text}" font-size="11" font-family="Arial">·  delen → −  ·  macht van macht → ×</text>
+<text x="55" y="145" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">3 regels samen:</text>
+<text x="55" y="163" fill="${COLORS.text}" font-size="11" font-family="Arial">·  vermenigvuldigen → +</text>
+<text x="55" y="180" fill="${COLORS.text}" font-size="11" font-family="Arial">·  delen → −  ·  macht van macht → ×</text>
 </svg>`,
     checks: [
       {
@@ -396,13 +396,13 @@ const steps = [
     title: "Vereenvoudig een hele uitdrukking",
     explanation: "**Mengelmoes**: vaak combineer je alle technieken in één opgave.\n\n**Voorbeeld**: 3x · 2x² + 5x³\n\n**Stap 1**: vermenigvuldiging eerst (machten + coëfficiënten):\n• 3x · 2x² = 3·2 · x · x² = 6 · x^(1+2) = 6x³\n\n**Stap 2**: nu staat er 6x³ + 5x³. Soortgelijk → samen: **11x³**\n\nResultaat: **11x³**.\n\n**Voorbeeld 2**: (2a)³ \n• = 2³ · a³ = **8a³** (de macht werkt op zowel het getal als de letter)\n\n**Voorbeeld 3**: 2x²·3x − 4x²·x\n• 2x² · 3x = 6x³\n• 4x² · x = 4x³\n• 6x³ − 4x³ = **2x³**\n\n**Stappenplan voor algemene vereenvoudiging**:\n1. Haakjes wegwerken (binnenste eerst)\n2. Machten en vermenigvuldigingen uitwerken\n3. Soortgelijke termen samentrekken",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial">3x · 2x² + 5x³</text>
-<text x="55" y "60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 1: vermenigvuldiging</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="13" font-family="Arial">6x³ + 5x³</text>
-<text x="55" y "108" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 2: soortgelijke samen</text>
-<rect x="55" y "125" width="100" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="105" y "149" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">11x³</text>
-<text x="55" y "180" fill="${COLORS.muted}" font-size="10" font-family="Arial">altijd: machten → soortgelijken</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial">3x · 2x² + 5x³</text>
+<text x="55" y="60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 1: vermenigvuldiging</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="13" font-family="Arial">6x³ + 5x³</text>
+<text x="55" y="108" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">stap 2: soortgelijke samen</text>
+<rect x="55" y="125" width="100" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="105" y="149" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">11x³</text>
+<text x="55" y="180" fill="${COLORS.muted}" font-size="10" font-family="Arial">altijd: machten → soortgelijken</text>
 </svg>`,
     checks: [
       {
@@ -427,14 +427,14 @@ const steps = [
     title: "Eindopdracht 1",
     explanation: "**Vraag**: vereenvoudig 2(x + 3) − (x − 5).\n\n**Stappen**:\n\n1. Haakjes wegwerken:\n   • 2(x + 3) = 2x + 6\n   • −(x − 5) = −x + 5 (let op: minteken draait beide tekens)\n\n2. Bij elkaar:\n   • 2x + 6 − x + 5\n\n3. Soortgelijke termen samen:\n   • x-termen: 2x − x = **x**\n   • constanten: 6 + 5 = **11**\n\n**Antwoord**: x + 11.\n\n**Check** met x = 2:\n• Origineel: 2(2+3) − (2−5) = 10 − (−3) = 13\n• Vereenvoudigd: 2 + 11 = 13 ✓\n\n**Algemene tips**:\n- Werk altijd binnenste haakjes eerst.\n- Pas op met mintekens — zet ze er meteen bij elke term.\n- Schrijf elke stap netjes onder elkaar.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial">2(x + 3) − (x − 5)</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial">2(x + 3) − (x − 5)</text>
 <line x1="50" y1="42" x2="220" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "62" fill="${COLORS.text}" font-size="13" font-family="Arial">2x + 6 − x + 5</text>
-<text x="55" y "85" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">x: 2x − x = x</text>
-<text x="55" y "105" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">constanten: 6 + 5 = 11</text>
-<rect x="55" y "120" width="120" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="115" y "144" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">x + 11</text>
-<text x="55" y "175" fill="${COLORS.curve}" font-size="11" font-family="Arial">check x=2: 13 ✓</text>
+<text x="55" y="62" fill="${COLORS.text}" font-size="13" font-family="Arial">2x + 6 − x + 5</text>
+<text x="55" y="85" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">x: 2x − x = x</text>
+<text x="55" y="105" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">constanten: 6 + 5 = 11</text>
+<rect x="55" y="120" width="120" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="115" y="144" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">x + 11</text>
+<text x="55" y="175" fill="${COLORS.curve}" font-size="11" font-family="Arial">check x=2: 13 ✓</text>
 </svg>`,
     checks: [
       {
@@ -459,14 +459,14 @@ const steps = [
     title: "Eindopdracht 2: merkwaardig product",
     explanation: "**Vraag**: werk uit (2x + 3)² − (x − 1)(x + 1).\n\n**Stappen**:\n\n**Eerste deel** — (2x + 3)² is (a + b)²:\n• a = 2x, b = 3\n• (2x)² = 4x²\n• 2·2x·3 = 12x\n• 3² = 9\n• Resultaat: **4x² + 12x + 9**\n\n**Tweede deel** — (x − 1)(x + 1) is (a − b)(a + b):\n• Resultaat: x² − 1² = **x² − 1**\n\n**Bij elkaar**:\n• (4x² + 12x + 9) − (x² − 1)\n• = 4x² + 12x + 9 − x² + 1 (let op: minteken draait beide termen!)\n• = 3x² + 12x + 10\n\n**Antwoord**: 3x² + 12x + 10.\n\nHiermee heb je alle technieken in één opgave gebruikt:\n• Merkwaardige producten ✓\n• Haakjes wegwerken ✓\n• Min vóór haakjes ✓\n• Soortgelijke termen samentrekken ✓\n\nGoed gedaan — je hebt het algebra-basis-leerpad doorlopen!",
     svg: `<svg viewBox="0 0 300 200">
-<text x="150" y "30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">(2x + 3)² − (x − 1)(x + 1)</text>
+<text x="150" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">(2x + 3)² − (x − 1)(x + 1)</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "62" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">(2x+3)² = 4x² + 12x + 9</text>
-<text x="55" y "82" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">(x−1)(x+1) = x² − 1</text>
-<text x="55" y "108" fill="${COLORS.text}" font-size="13" font-family="Arial">4x² + 12x + 9 − x² + 1</text>
-<rect x="55" y "130" width="200" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="155" y "154" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">3x² + 12x + 10</text>
-<text x="150" y "188" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">algebra-basis: gehaald 🏆</text>
+<text x="55" y="62" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">(2x+3)² = 4x² + 12x + 9</text>
+<text x="55" y="82" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">(x−1)(x+1) = x² − 1</text>
+<text x="55" y="108" fill="${COLORS.text}" font-size="13" font-family="Arial">4x² + 12x + 9 − x² + 1</text>
+<rect x="55" y="130" width="200" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="155" y="154" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">3x² + 12x + 10</text>
+<text x="150" y="188" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">algebra-basis: gehaald 🏆</text>
 </svg>`,
     checks: [
       {

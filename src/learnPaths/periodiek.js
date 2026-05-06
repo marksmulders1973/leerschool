@@ -342,13 +342,13 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">sinusoïden in echt leven</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="11" font-family="Arial">🔊 geluid (toonhoogte = freq)</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌊 getij (~12.5h periode)</text>
-<text x="35" y "108" fill="${COLORS.text}" font-size="11" font-family="Arial">⏰ slinger (T = 2π·√(L/g))</text>
-<text x="35" y "124" fill="${COLORS.text}" font-size="11" font-family="Arial">⚡ stopcontact (50Hz)</text>
-<text x="35" y "140" fill="${COLORS.text}" font-size="11" font-family="Arial">❤️ hartslag, slaap-cyclus</text>
-<text x="35" y "156" fill="${COLORS.text}" font-size="11" font-family="Arial">🌡️ seizoenen-temperatuur</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">overal waar iets periodiek herhaalt</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="Arial">🔊 geluid (toonhoogte = freq)</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌊 getij (~12.5h periode)</text>
+<text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="Arial">⏰ slinger (T = 2π·√(L/g))</text>
+<text x="35" y="124" fill="${COLORS.text}" font-size="11" font-family="Arial">⚡ stopcontact (50Hz)</text>
+<text x="35" y="140" fill="${COLORS.text}" font-size="11" font-family="Arial">❤️ hartslag, slaap-cyclus</text>
+<text x="35" y="156" fill="${COLORS.text}" font-size="11" font-family="Arial">🌡️ seizoenen-temperatuur</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">overal waar iets periodiek herhaalt</text>
 </svg>`,
     checks: [
       {

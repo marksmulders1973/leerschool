@@ -217,7 +217,7 @@ const steps = [
 <text x="35" y="124" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">top-werk:</text>
 <text x="35" y="142" fill="${COLORS.text}" font-size="10" font-family="Arial">• Wolff & Deken — Sara Burgerhart</text>
 <text x="35" y="158" fill="${COLORS.text}" font-size="10" font-family="Arial">  (1782, eerste NL briefroman)</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">verstand boven gevoel</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">verstand boven gevoel</text>
 </svg>`,
     checks: [
       {
@@ -252,8 +252,8 @@ const steps = [
 <text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">⚖️ aanklacht tegen onrecht</text>
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">top-werken:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Multatuli — Max Havelaar (1860)</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="10" font-family="Arial">• Hildebrand — Camera Obscura (1839)</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Multatuli — Max Havelaar (1860)</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="10" font-family="Arial">• Hildebrand — Camera Obscura (1839)</text>
 </svg>`,
     checks: [
       {
@@ -287,7 +287,7 @@ const steps = [
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="142" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">Tachtigers (poëzie):</text>
 <text x="35" y="158" fill="${COLORS.text}" font-size="10" font-family="Arial">• Gorter — Mei · Kloos · Perk · Verwey</text>
-<text x="35" y "174" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">proza: Couperus — Eline Vere</text>
+<text x="35" y="174" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">proza: Couperus — Eline Vere</text>
 </svg>`,
     checks: [
       {
@@ -336,8 +336,8 @@ const steps = [
 <text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">🧠 innerlijke beleving (stream of cons.)</text>
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">top-werken:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Nijhoff — Awater (1934, gedicht)</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="10" font-family="Arial">• Vestdijk — Terug tot Ina Damman</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Nijhoff — Awater (1934, gedicht)</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="10" font-family="Arial">• Vestdijk — Terug tot Ina Damman</text>
 </svg>`,
     checks: [
       {
@@ -372,8 +372,8 @@ const steps = [
 <text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">🎨 verbonden met Cobra-kunst</text>
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">kerngroep:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="10" font-family="Arial">Lucebert · Kouwenaar · Andreus</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="10" font-family="Arial">Vinkenoog · Schierbeek · Campert</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="10" font-family="Arial">Lucebert · Kouwenaar · Andreus</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="10" font-family="Arial">Vinkenoog · Schierbeek · Campert</text>
 </svg>`,
     checks: [
       {
@@ -405,9 +405,9 @@ const steps = [
 <text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">⚰️ dood/oorlog-thema · pessimisme</text>
 <text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">🎭 onbetrouwbare verteller · twijfel</text>
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">Grote Drie:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Hermans · Mulisch · Reve</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="10" font-family="Arial">  + Wolkers · Claus · Haasse</text>
+<text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">Grote Drie:</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="10" font-family="Arial">• Hermans · Mulisch · Reve</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="10" font-family="Arial">  + Wolkers · Claus · Haasse</text>
 </svg>`,
     checks: [
       {
@@ -451,13 +451,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Eigentijds ~2000-nu</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">📱 autofictie · maatschappelijk thema</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌍 multicultureel · migratie</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">📚 genre-vermenging · diversiteit</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">📱 autofictie · maatschappelijk thema</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌍 multicultureel · migratie</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">📚 genre-vermenging · diversiteit</text>
 <line x1="30" y1="123" x2="270" y2="123" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">vaak op leesdossier:</text>
-<text x="35" y "159" fill="${COLORS.text}" font-size="10" font-family="Arial">Grunberg · Verhulst · Pfeijffer</text>
-<text x="35" y "175" fill="${COLORS.text}" font-size="10" font-family="Arial">Wieringa · Benali · Palmen</text>
+<text x="35" y="143" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">vaak op leesdossier:</text>
+<text x="35" y="159" fill="${COLORS.text}" font-size="10" font-family="Arial">Grunberg · Verhulst · Pfeijffer</text>
+<text x="35" y="175" fill="${COLORS.text}" font-size="10" font-family="Arial">Wieringa · Benali · Palmen</text>
 </svg>`,
     checks: [
       {
@@ -487,15 +487,15 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">vier vertelperspectieven</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">1. ik-perspectief</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">1. ik-perspectief</text>
 <text x="155" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">"ik liep, ik zag"</text>
-<text x="35" y "92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">2. personaal</text>
+<text x="35" y="92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">2. personaal</text>
 <text x="125" y="92" fill="${COLORS.muted}" font-size="11" font-family="Arial">hij + alleen zijn gedachten</text>
-<text x="35" y "110" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">3. auctorieel</text>
+<text x="35" y="110" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">3. auctorieel</text>
 <text x="125" y="110" fill="${COLORS.muted}" font-size="11" font-family="Arial">alwetende verteller</text>
-<text x="35" y "128" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">4. wisselend</text>
+<text x="35" y="128" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">4. wisselend</text>
 <text x="125" y="128" fill="${COLORS.muted}" font-size="11" font-family="Arial">per hoofdstuk ander pers.</text>
-<text x="150" y "162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">truc: in wiens hoofd zit de verteller?</text>
+<text x="150" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">truc: in wiens hoofd zit de verteller?</text>
 </svg>`,
     checks: [
       {
@@ -523,14 +523,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">stijlfiguren — top 12</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "72" fill="${COLORS.text}" font-size="10" font-family="Arial">metafoor · vergelijking · personificatie</text>
-<text x="35" y "88" fill="${COLORS.text}" font-size="10" font-family="Arial">symbool · ironie · hyperbool</text>
-<text x="35" y "104" fill="${COLORS.text}" font-size="10" font-family="Arial">litotes · eufemisme · pleonasme</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="10" font-family="Arial">tautologie · antithese · climax</text>
+<text x="35" y="72" fill="${COLORS.text}" font-size="10" font-family="Arial">metafoor · vergelijking · personificatie</text>
+<text x="35" y="88" fill="${COLORS.text}" font-size="10" font-family="Arial">symbool · ironie · hyperbool</text>
+<text x="35" y="104" fill="${COLORS.text}" font-size="10" font-family="Arial">litotes · eufemisme · pleonasme</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="10" font-family="Arial">tautologie · antithese · climax</text>
 <line x1="30" y1="132" x2="270" y2="132" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "150" fill="${COLORS.muted}" font-size="10" font-family="Arial">"als/zoals" → vergelijking</text>
-<text x="35" y "166" fill="${COLORS.muted}" font-size="10" font-family="Arial">overdrijving → hyperbool</text>
-<text x="35" y "182" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegenstelling in zin → antithese</text>
+<text x="35" y="150" fill="${COLORS.muted}" font-size="10" font-family="Arial">"als/zoals" → vergelijking</text>
+<text x="35" y="166" fill="${COLORS.muted}" font-size="10" font-family="Arial">overdrijving → hyperbool</text>
+<text x="35" y="182" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegenstelling in zin → antithese</text>
 </svg>`,
     checks: [
       {

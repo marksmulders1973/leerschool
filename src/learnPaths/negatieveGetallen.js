@@ -26,12 +26,12 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <rect x="50" y="40" width="40" height="120" fill="rgba(0,168,200,0.15)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="50" y1="100" x2="90" y2="100" stroke="${COLORS.point}" stroke-width="2"/>
-<text x="100" y "104" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0°C</text>
+<text x="100" y="104" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0°C</text>
 <line x1="50" y1="60" x2="90" y2="60" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
-<text x="100" y "64" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial">+30°C ☀️</text>
+<text x="100" y="64" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial">+30°C ☀️</text>
 <line x1="50" y1="140" x2="90" y2="140" stroke="${COLORS.curve}" stroke-width="1.5"/>
-<text x="100" y "144" fill="${COLORS.curve}" font-size="12" font-family="Arial">−10°C ❄️</text>
-<text x="150" y "190" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">negatieve getallen: lager dan nul</text>
+<text x="100" y="144" fill="${COLORS.curve}" font-size="12" font-family="Arial">−10°C ❄️</text>
+<text x="150" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">negatieve getallen: lager dan nul</text>
 </svg>`,
     checks: [
       {
@@ -55,18 +55,18 @@ const steps = [
 <polygon points="270,95 280,100 270,105" fill="${COLORS.text}"/>
 <polygon points="30,95 20,100 30,105" fill="${COLORS.text}"/>
 <line x1="50" y1="95" x2="50" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="50" y "120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−5</text>
+<text x="50" y="120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−5</text>
 <line x1="100" y1="95" x2="100" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="100" y "120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−2</text>
+<text x="100" y="120" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−2</text>
 <line x1="150" y1="95" x2="150" y2="105" stroke="${COLORS.text}" stroke-width="3"/>
-<text x="150" y "125" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">0</text>
+<text x="150" y="125" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">0</text>
 <line x1="200" y1="95" x2="200" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="200" y "120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">2</text>
+<text x="200" y="120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">2</text>
 <line x1="250" y1="95" x2="250" y2="105" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="250" y "120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5</text>
-<text x="60" y "70" fill="${COLORS.curve}" font-size="11" font-family="Arial">← kleiner</text>
-<text x="220" y "70" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">groter →</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">links = kleiner, rechts = groter</text>
+<text x="250" y="120" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5</text>
+<text x="60" y="70" fill="${COLORS.curve}" font-size="11" font-family="Arial">← kleiner</text>
+<text x="220" y="70" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">groter →</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">links = kleiner, rechts = groter</text>
 </svg>`,
     checks: [
       {
@@ -88,12 +88,12 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
 <line x1="150" y1="40" x2="150" y2="160" stroke="${COLORS.point}" stroke-width="1" stroke-dasharray="3 3"/>
-<text x="150" y "35" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">spiegel</text>
+<text x="150" y="35" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">spiegel</text>
 <circle cx="80" cy="100" r="6" fill="${COLORS.curve}"/>
-<text x="80" y "125" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−4</text>
+<text x="80" y="125" text-anchor="middle" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−4</text>
 <circle cx="220" cy="100" r="6" fill="${COLORS.curveAlt}"/>
-<text x="220" y "125" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">4</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">−4 + 4 = 0</text>
+<text x="220" y="125" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">−4 + 4 = 0</text>
 </svg>`,
     checks: [
       {
@@ -114,17 +114,17 @@ const steps = [
     explanation: "**+ negatief getal** = aftrekken.\n\n**Voorbeelden**:\n• 5 + (−3) = 5 − 3 = **2**\n• 8 + (−10) = 8 − 10 = **−2**\n• 4 + (−4) = **0**\n\n**Regel**: een plus en een min naast elkaar werkt als één **min**.\n\n**Visualisatie op de getallenlijn**: bij +3 ga je 3 stappen naar **rechts**. Bij +(−3) ga je 3 stappen naar **links**.\n\n**Negatief + negatief** geeft een nóg meer negatief getal:\n• −3 + (−5) = −8 (twee minnen samen → 8 stappen naar links vanaf 0)\n\n**Trucje**: bij + (−x) doe je gewoon − x. Schrap de + en de haakjes.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
-<text x="50" y "120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−4</text>
-<text x="100" y "120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−2</text>
-<text x="150" y "120" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0</text>
-<text x="200" y "120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">2</text>
-<text x="250" y "120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4</text>
+<text x="50" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−4</text>
+<text x="100" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−2</text>
+<text x="150" y="120" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">0</text>
+<text x="200" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">2</text>
+<text x="250" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4</text>
 <circle cx="200" cy="100" r="5" fill="${COLORS.curveAlt}"/>
 <line x1="200" y1="80" x2="125" y2="80" stroke="${COLORS.curve}" stroke-width="2"/>
 <polygon points="125,75 115,80 125,85" fill="${COLORS.curve}"/>
-<text x="160" y "70" text-anchor="middle" fill="${COLORS.curve}" font-size="11" font-family="Arial">+ (−3)</text>
+<text x="160" y="70" text-anchor="middle" fill="${COLORS.curve}" font-size="11" font-family="Arial">+ (−3)</text>
 <circle cx="125" cy="100" r="5" fill="${COLORS.point}"/>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">2 + (−3) = −1</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">2 + (−3) = −1</text>
 </svg>`,
     checks: [
       {
@@ -145,11 +145,11 @@ const steps = [
     explanation: "**− negatief getal** = optellen!\n\n**Voorbeelden**:\n• 5 − (−3) = 5 + 3 = **8**\n• −2 − (−7) = −2 + 7 = **5**\n• 0 − (−4) = 0 + 4 = **4**\n\n**Regel**: twee minnen naast elkaar worden een **plus**.\n\n**Truc**: − (−x) = + x. Schrap allebei de mintekens, dan staat er een plus.\n\n**Waarom?** 'Het tegenovergestelde van iets aftrekken' = 'iets toevoegen'.\n\n**Voorbeeld in het echt**: schuld van −5 minder hebben = 5 erbij in je portemonnee.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial" font-weight="bold">a − (−b) = a + b</text>
-<text x="55" y "85" fill="${COLORS.text}" font-size="13" font-family="Arial">5 − (−3) = 5 + 3 = 8</text>
-<text x="55" y "108" fill="${COLORS.text}" font-size="13" font-family="Arial">−2 − (−7) = −2 + 7 = 5</text>
-<text x="55" y "131" fill="${COLORS.text}" font-size="13" font-family="Arial">0 − (−4) = 0 + 4 = 4</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">twee minnen → plus</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial" font-weight="bold">a − (−b) = a + b</text>
+<text x="55" y="85" fill="${COLORS.text}" font-size="13" font-family="Arial">5 − (−3) = 5 + 3 = 8</text>
+<text x="55" y="108" fill="${COLORS.text}" font-size="13" font-family="Arial">−2 − (−7) = −2 + 7 = 5</text>
+<text x="55" y="131" fill="${COLORS.text}" font-size="13" font-family="Arial">0 − (−4) = 0 + 4 = 4</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">twee minnen → plus</text>
 </svg>`,
     checks: [
       {
@@ -172,16 +172,16 @@ const steps = [
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="150" y1="20" x2="150" y2="190" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="95" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">tekens</text>
-<text x="205" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">wordt</text>
-<text x="95" y "75" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">+ +</text>
-<text x="205" y "75" text-anchor="middle" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">+</text>
-<text x="95" y "110" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">+ −</text>
-<text x="205" y "110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="20" font-family="Arial" font-weight="bold">−</text>
-<text x="95" y "145" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">− +</text>
-<text x="205" y "145" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="20" font-family="Arial" font-weight="bold">−</text>
-<text x="95" y "180" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">− −</text>
-<text x="205" y "180" text-anchor="middle" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">+</text>
+<text x="95" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">tekens</text>
+<text x="205" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">wordt</text>
+<text x="95" y="75" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">+ +</text>
+<text x="205" y="75" text-anchor="middle" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">+</text>
+<text x="95" y="110" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">+ −</text>
+<text x="205" y="110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="20" font-family="Arial" font-weight="bold">−</text>
+<text x="95" y="145" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">− +</text>
+<text x="205" y="145" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="20" font-family="Arial" font-weight="bold">−</text>
+<text x="95" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">− −</text>
+<text x="205" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">+</text>
 </svg>`,
     checks: [
       {
@@ -204,16 +204,16 @@ const steps = [
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="150" y1="20" x2="150" y2="190" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="95" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">×</text>
-<text x="205" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">resultaat</text>
-<text x="95" y "75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">+  ×  +</text>
-<text x="205" y "75" text-anchor="middle" fill="${COLORS.point}" font-size="18" font-family="Arial" font-weight="bold">+</text>
-<text x="95" y "110" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">+  ×  −</text>
-<text x="205" y "110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="18" font-family="Arial" font-weight="bold">−</text>
-<text x="95" y "145" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">−  ×  +</text>
-<text x="205" y "145" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="18" font-family="Arial" font-weight="bold">−</text>
-<text x="95" y "180" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">−  ×  −</text>
-<text x="205" y "180" text-anchor="middle" fill="${COLORS.point}" font-size="18" font-family="Arial" font-weight="bold">+</text>
+<text x="95" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">×</text>
+<text x="205" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">resultaat</text>
+<text x="95" y="75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">+  ×  +</text>
+<text x="205" y="75" text-anchor="middle" fill="${COLORS.point}" font-size="18" font-family="Arial" font-weight="bold">+</text>
+<text x="95" y="110" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">+  ×  −</text>
+<text x="205" y="110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="18" font-family="Arial" font-weight="bold">−</text>
+<text x="95" y="145" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">−  ×  +</text>
+<text x="205" y="145" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="18" font-family="Arial" font-weight="bold">−</text>
+<text x="95" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">−  ×  −</text>
+<text x="205" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="18" font-family="Arial" font-weight="bold">+</text>
 </svg>`,
     checks: [
       {
@@ -233,13 +233,13 @@ const steps = [
     title: "Delen — zelfde regels als vermenigvuldigen",
     explanation: "**Delen** met negatieve getallen gaat hetzelfde als vermenigvuldigen:\n\n• **plus ÷ plus = plus**\n• **plus ÷ min = min**\n• **min ÷ plus = min**\n• **min ÷ min = plus**\n\n**Voorbeelden**:\n• 12 ÷ 4 = **3**\n• 12 ÷ (−4) = **−3**\n• (−12) ÷ 4 = **−3**\n• (−12) ÷ (−4) = **3** ← min ÷ min = plus\n\n**Onthoud**: verschillende tekens → min. Gelijke tekens → plus.\n\nDit geldt ook voor **breuken** met negatieve tekens:\n• −⁶⁄₂ = −3 (min boven, plus onder → min)\n• ⁻¹⁰⁄−₅ = 2 (min boven, min onder → plus)",
     svg: `<svg viewBox="0 0 300 200">
-<text x="150" y "30" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">delen werkt net als vermenigvuldigen</text>
+<text x="150" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">delen werkt net als vermenigvuldigen</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "70" fill="${COLORS.text}" font-size="13" font-family="Arial">12 ÷ 4 = 3</text>
-<text x="55" y "92" fill="${COLORS.text}" font-size="13" font-family="Arial">12 ÷ (−4) = −3</text>
-<text x="55" y "114" fill="${COLORS.text}" font-size="13" font-family="Arial">(−12) ÷ 4 = −3</text>
-<text x="55" y "136" fill="${COLORS.text}" font-size="13" font-family="Arial">(−12) ÷ (−4) = 3</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">gelijke tekens → +  ·  verschillende → −</text>
+<text x="55" y="70" fill="${COLORS.text}" font-size="13" font-family="Arial">12 ÷ 4 = 3</text>
+<text x="55" y="92" fill="${COLORS.text}" font-size="13" font-family="Arial">12 ÷ (−4) = −3</text>
+<text x="55" y="114" fill="${COLORS.text}" font-size="13" font-family="Arial">(−12) ÷ 4 = −3</text>
+<text x="55" y="136" fill="${COLORS.text}" font-size="13" font-family="Arial">(−12) ÷ (−4) = 3</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">gelijke tekens → +  ·  verschillende → −</text>
 </svg>`,
     checks: [
       {
@@ -261,13 +261,13 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <rect x="100" y="40" width="40" height="120" fill="rgba(0,168,200,0.15)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="100" y1="80" x2="140" y2="80" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<text x="150" y "84" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5°C ← middag</text>
+<text x="150" y="84" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">5°C ← middag</text>
 <line x1="100" y1="140" x2="140" y2="140" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="150" y "144" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−8°C ← ochtend</text>
+<text x="150" y="144" fill="${COLORS.curve}" font-size="13" font-family="Arial" font-weight="bold">−8°C ← ochtend</text>
 <line x1="80" y1="80" x2="80" y2="140" stroke="${COLORS.point}" stroke-width="2"/>
 <polygon points="75,85 80,75 85,85" fill="${COLORS.point}"/>
-<text x="55" y "115" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">+13</text>
-<text x="150" y "190" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">−8 + 13 = 5°C</text>
+<text x="55" y="115" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">+13</text>
+<text x="150" y="190" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">−8 + 13 = 5°C</text>
 </svg>`,
     checks: [
       {
@@ -287,16 +287,16 @@ const steps = [
     title: "Eindopdracht: gemengd",
     explanation: "**Drie korte vragen** die alles bij elkaar zetten:\n\n**A**: Reken uit: −5 + 8 − (−3).\n• Stap 1: −5 + 8 = 3\n• Stap 2: 3 − (−3) = 3 + 3 = **6**\n\n**B**: Reken uit: (−6) × 2 ÷ (−4).\n• Stap 1: (−6) × 2 = −12\n• Stap 2: −12 ÷ (−4) = **3** (min ÷ min = plus)\n\n**C**: Een duiker is op −18 m. Hij stijgt 12 m, dan zakt hij weer 7 m. Op welke diepte zit hij nu?\n• −18 + 12 − 7 = −6 + −7 = **−13 m** (dus 13 m onder zeeniveau).\n\nGoed gedaan — je hebt het negatieve-getallen-leerpad doorlopen!",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. −5 + 8 − (−3) =</text>
-<rect x="200" y "18" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "37" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">6</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. (−6)×2÷(−4) =</text>
-<rect x="200" y "68" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "87" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">3</text>
-<text x="55" y "132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. duiker eindigt op</text>
-<rect x="200" y "118" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "137" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">−13 m</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">negatieve getallen onder de knie 🏆</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. −5 + 8 − (−3) =</text>
+<rect x="200" y="18" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="37" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">6</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. (−6)×2÷(−4) =</text>
+<rect x="200" y="68" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="87" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">3</text>
+<text x="55" y="132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. duiker eindigt op</text>
+<rect x="200" y="118" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">−13 m</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">negatieve getallen onder de knie 🏆</text>
 </svg>`,
     checks: [
       {

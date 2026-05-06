@@ -26,11 +26,11 @@ const steps = [
     explanation: "**Statistiek** is het bestuderen van **gegevens** (data). Je verzamelt cijfers, ordent ze, en trekt conclusies.\n\n**Voorbeelden waar je statistiek tegenkomt**:\n• Gemiddelde cijfer in een toets\n• Aantal regenbuien per maand\n• Hoogste, laagste en gemiddelde temperatuur\n• Populairste sport in een klas\n• Aantal stemmen op een kandidaat\n\n**Twee fasen**:\n1. **Verzamelen + ordenen** (frequentietabel, staafdiagram)\n2. **Beschrijven** (gemiddelde, modus, mediaan)\n\n**Voorbeeld**: in een klas vragen we de schoenmaten:\n38, 40, 38, 42, 39, 38, 41, 40, 39, 38\n\nVan deze 10 getallen kunnen we van alles uitrekenen — daar gaan de volgende stappen over.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
-<text x="150" y "62" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">schoenmaten klas</text>
-<text x="150" y "85" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">38, 40, 38, 42, 39, 38</text>
-<text x="150" y "105" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">41, 40, 39, 38</text>
-<text x="150" y "135" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">10 getallen</text>
-<text x="150" y "150" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">uit chaos: orde + conclusies</text>
+<text x="150" y="62" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">schoenmaten klas</text>
+<text x="150" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">38, 40, 38, 42, 39, 38</text>
+<text x="150" y="105" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">41, 40, 39, 38</text>
+<text x="150" y="135" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">10 getallen</text>
+<text x="150" y="150" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">uit chaos: orde + conclusies</text>
 </svg>`,
     checks: [
       {
@@ -53,18 +53,18 @@ const steps = [
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="150" y1="20" x2="150" y2="190" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="95" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">maat</text>
-<text x="205" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">freq</text>
-<text x="95" y "75" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">38</text>
-<text x="205" y "75" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
-<text x="95" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">39</text>
-<text x="205" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">2</text>
-<text x="95" y "125" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">40</text>
-<text x="205" y "125" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">2</text>
-<text x="95" y "150" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">41</text>
-<text x="205" y "150" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">1</text>
-<text x="95" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">42</text>
-<text x="205" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">1</text>
+<text x="95" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">maat</text>
+<text x="205" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">freq</text>
+<text x="95" y="75" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">38</text>
+<text x="205" y="75" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="95" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">39</text>
+<text x="205" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">2</text>
+<text x="95" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">40</text>
+<text x="205" y="125" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">2</text>
+<text x="95" y="150" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">41</text>
+<text x="205" y="150" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">1</text>
+<text x="95" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial">42</text>
+<text x="205" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">1</text>
 </svg>`,
     checks: [
       {
@@ -87,21 +87,21 @@ const steps = [
 <line x1="40" y1="160" x2="280" y2="160" stroke="${COLORS.text}" stroke-width="1"/>
 <line x1="40" y1="160" x2="40" y2="40" stroke="${COLORS.text}" stroke-width="1"/>
 <rect x="55" y="60" width="35" height="100" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="72" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">38</text>
-<text x="72" y "55" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
+<text x="72" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">38</text>
+<text x="72" y="55" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
 <rect x="100" y="110" width="35" height="50" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="117" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">39</text>
-<text x="117" y "105" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">2</text>
+<text x="117" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">39</text>
+<text x="117" y="105" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">2</text>
 <rect x="145" y="110" width="35" height="50" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="162" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">40</text>
-<text x="162" y "105" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">2</text>
+<text x="162" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">40</text>
+<text x="162" y="105" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">2</text>
 <rect x="190" y="135" width="35" height="25" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="207" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">41</text>
-<text x="207" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
+<text x="207" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">41</text>
+<text x="207" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
 <rect x="235" y="135" width="35" height="25" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="252" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">42</text>
-<text x="252" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
-<text x="20" y "100" fill="${COLORS.muted}" font-size="10" font-family="Arial">freq</text>
+<text x="252" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">42</text>
+<text x="252" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">1</text>
+<text x="20" y="100" fill="${COLORS.muted}" font-size="10" font-family="Arial">freq</text>
 </svg>`,
     checks: [
       {
@@ -117,12 +117,12 @@ const steps = [
     explanation: "Het **gemiddelde** (ook 'rekenkundig gemiddelde') is misschien de meest gebruikte statistiek.\n\n**Formule**:\n\n**gemiddelde = som van alle waarden ÷ aantal waarden**\n\n**Voorbeeld**: cijfers 6, 7, 8, 5, 9.\n• Som: 6 + 7 + 8 + 5 + 9 = 35\n• Aantal: 5\n• Gemiddelde: 35 ÷ 5 = **7**\n\n**Voorbeeld 2**: schoenmaten 38, 40, 38, 42, 39, 38, 41, 40, 39, 38.\n• Som: 38+40+38+42+39+38+41+40+39+38 = 393\n• Aantal: 10\n• Gemiddelde: 393 ÷ 10 = **39,3**\n\nHet gemiddelde geeft een 'middelste waarde' van alle data. Maar pas op: bij **uitschieters** kan het gemiddelde misleidend zijn (zie volgende stappen).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
-<text x="150" y "47" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">gem = som ÷ aantal</text>
-<text x="55" y "85" fill="${COLORS.text}" font-size="13" font-family="Arial">cijfers: 6, 7, 8, 5, 9</text>
-<text x="55" y "108" fill="${COLORS.text}" font-size="13" font-family="Arial">som = 35</text>
-<text x="55" y "131" fill="${COLORS.text}" font-size="13" font-family="Arial">aantal = 5</text>
-<rect x="55" y "143" width="120" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="115" y "166" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">35 ÷ 5 = 7</text>
+<text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">gem = som ÷ aantal</text>
+<text x="55" y="85" fill="${COLORS.text}" font-size="13" font-family="Arial">cijfers: 6, 7, 8, 5, 9</text>
+<text x="55" y="108" fill="${COLORS.text}" font-size="13" font-family="Arial">som = 35</text>
+<text x="55" y="131" fill="${COLORS.text}" font-size="13" font-family="Arial">aantal = 5</text>
+<rect x="55" y="143" width="120" height="36" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="115" y="166" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">35 ÷ 5 = 7</text>
 </svg>`,
     checks: [
       {
@@ -140,15 +140,15 @@ const steps = [
 <line x1="40" y1="160" x2="280" y2="160" stroke="${COLORS.text}" stroke-width="1"/>
 <rect x="55" y="60" width="35" height="100" fill="${COLORS.point}" opacity="0.85"/>
 <rect x="55" y="60" width="35" height="100" fill="none" stroke="${COLORS.point}" stroke-width="3"/>
-<text x="72" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">38</text>
-<text x="72" y "55" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4 ★</text>
+<text x="72" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">38</text>
+<text x="72" y="55" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4 ★</text>
 <rect x="100" y="110" width="35" height="50" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="117" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">39</text>
+<text x="117" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">39</text>
 <rect x="145" y="110" width="35" height="50" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="162" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">40</text>
+<text x="162" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">40</text>
 <rect x="190" y="135" width="35" height="25" fill="${COLORS.curve}" opacity="0.85"/>
-<text x="207" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">41</text>
-<text x="150" y "30" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">modus = 38 (hoogste staaf)</text>
+<text x="207" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">41</text>
+<text x="150" y="30" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">modus = 38 (hoogste staaf)</text>
 </svg>`,
     checks: [
       {
@@ -163,17 +163,17 @@ const steps = [
     title: "De mediaan",
     explanation: "De **mediaan** is de **middelste** waarde als je alle getallen op volgorde zet.\n\n**Stappenplan**:\n1. Zet alle getallen op volgorde van klein naar groot.\n2. Pak het middelste getal.\n\n**Voorbeeld**: 3, 7, 5, 1, 9.\n• Sorteer: 1, 3, 5, 7, 9\n• Middelste: **5** (er zijn 5 getallen, de derde is het midden).\n\n**Bij een even aantal**: gemiddelde van de twee middelste.\n• 1, 3, 5, 7 → middelste twee zijn 3 en 5 → mediaan = (3+5)/2 = **4**.\n\n**Wanneer is mediaan nuttig?**\nVooral bij **uitschieters**. Stel je inkomens: 20, 25, 22, 23, 1000.\n• Gemiddelde: (20+25+22+23+1000)/5 = 218 (misleidend door uitschieter!)\n• Mediaan: gesorteerd 20, 22, 23, 25, 1000 → middelste is **23** (veel realistischer)",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "35" fill="${COLORS.text}" font-size="13" font-family="Arial">data: 3, 7, 5, 1, 9</text>
-<text x="55" y "60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">sorteren:</text>
-<text x="60" y "90" fill="${COLORS.text}" font-size="14" font-family="Arial">1</text>
-<text x="100" y "90" fill="${COLORS.text}" font-size="14" font-family="Arial">3</text>
-<text x="140" y "90" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">5</text>
-<text x="180" y "90" fill="${COLORS.text}" font-size="14" font-family="Arial">7</text>
-<text x="220" y "90" fill="${COLORS.text}" font-size="14" font-family="Arial">9</text>
+<text x="55" y="35" fill="${COLORS.text}" font-size="13" font-family="Arial">data: 3, 7, 5, 1, 9</text>
+<text x="55" y="60" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">sorteren:</text>
+<text x="60" y="90" fill="${COLORS.text}" font-size="14" font-family="Arial">1</text>
+<text x="100" y="90" fill="${COLORS.text}" font-size="14" font-family="Arial">3</text>
+<text x="140" y="90" fill="${COLORS.point}" font-size="20" font-family="Arial" font-weight="bold">5</text>
+<text x="180" y="90" fill="${COLORS.text}" font-size="14" font-family="Arial">7</text>
+<text x="220" y="90" fill="${COLORS.text}" font-size="14" font-family="Arial">9</text>
 <line x1="140" y1="100" x2="148" y2="115" stroke="${COLORS.point}" stroke-width="2"/>
-<text x="150" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">middelste</text>
-<rect x="100" y "150" width="100" height="32" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">mediaan = 5</text>
+<text x="150" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">middelste</text>
+<rect x="100" y="150" width="100" height="32" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">mediaan = 5</text>
 </svg>`,
     checks: [
       {
@@ -188,15 +188,15 @@ const steps = [
     title: "Gemiddelde, modus, mediaan vergelijken",
     explanation: "Drie centrum-maten — wanneer gebruik je welke?\n\n**Gemiddelde**: standaard, snel, gevoelig voor uitschieters.\n• Gebruik bij 'normale' data zonder extreme waardes.\n• Voorbeeld: gemiddeld cijfer in een toets.\n\n**Modus**: meest voorkomende waarde.\n• Gebruik bij categorieën (kleuren, sporten) of als je 'meest populair' wil weten.\n• Voorbeeld: meest verkochte schoenmaat.\n\n**Mediaan**: middelste, ongevoelig voor uitschieters.\n• Gebruik bij scheve verdelingen of uitschieters (inkomens, huizenprijzen).\n• Voorbeeld: gemiddeld inkomen in NL ≠ mediaan inkomen.\n\n**Voorbeeld**: data 4, 5, 6, 6, 100.\n• Gemiddelde: 24,2 (door uitschieter 100)\n• Modus: 6\n• Mediaan: 6\n\nIn dit geval geven modus en mediaan een **realistischer beeld**.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="80" y "35" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">data: 4, 5, 6, 6, 100</text>
+<text x="80" y="35" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">data: 4, 5, 6, 6, 100</text>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "75" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde:</text>
-<text x="180" y "75" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">24,2 (vertekend)</text>
-<text x="55" y "100" fill="${COLORS.text}" font-size="12" font-family="Arial">modus:</text>
-<text x="180" y "100" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
-<text x="55" y "125" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan:</text>
-<text x="180" y "125" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">bij uitschieters: gebruik mediaan</text>
+<text x="55" y="75" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde:</text>
+<text x="180" y="75" fill="${COLORS.curveAlt}" font-size="13" font-family="Arial" font-weight="bold">24,2 (vertekend)</text>
+<text x="55" y="100" fill="${COLORS.text}" font-size="12" font-family="Arial">modus:</text>
+<text x="180" y="100" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
+<text x="55" y="125" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan:</text>
+<text x="180" y="125" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">bij uitschieters: gebruik mediaan</text>
 </svg>`,
     checks: [
       {
@@ -213,18 +213,18 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
 <circle cx="60" cy="100" r="6" fill="${COLORS.point}"/>
-<text x="60" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
-<text x="60" y "125" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">kleinste</text>
+<text x="60" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">4</text>
+<text x="60" y="125" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">kleinste</text>
 <circle cx="100" cy="100" r="4" fill="${COLORS.curve}"/>
 <circle cx="140" cy="100" r="4" fill="${COLORS.curve}"/>
 <circle cx="200" cy="100" r="4" fill="${COLORS.curve}"/>
 <circle cx="240" cy="100" r="6" fill="${COLORS.point}"/>
-<text x="240" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">12</text>
-<text x="240" y "125" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">grootste</text>
+<text x="240" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">12</text>
+<text x="240" y="125" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">grootste</text>
 <line x1="60" y1="155" x2="240" y2="155" stroke="${COLORS.point}" stroke-width="2"/>
 <polygon points="60,150 50,155 60,160" fill="${COLORS.point}"/>
 <polygon points="240,150 250,155 240,160" fill="${COLORS.point}"/>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">bereik = 12 − 4 = 8</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">bereik = 12 − 4 = 8</text>
 </svg>`,
     checks: [
       {
@@ -240,22 +240,22 @@ const steps = [
     explanation: "Een vergelijking met **bereik en gemiddelde** samen:\n\nKlas A scoort op een toets: 6, 6, 7, 7, 8\nKlas B scoort: 3, 5, 7, 9, 10\n\n**Allebei**:\n• Gemiddelde: (6+6+7+7+8)/5 = 6,8 vs (3+5+7+9+10)/5 = 6,8 → **gelijk**!\n• Mediaan: 7 vs 7 → **gelijk**\n\n**Maar bereik**:\n• Klas A: 8 − 6 = **2** (compact, leerlingen presteren ongeveer gelijk)\n• Klas B: 10 − 3 = **7** (groot verschil tussen leerlingen)\n\nHetzelfde gemiddelde, hele andere verdeling. Daarom is bereik (en andere spreidingsmaten) belangrijk om naast het gemiddelde te zetten.\n\n**Tip in een opgave**: noem altijd minstens **één centrummaat** (gem./med./mod.) én **één spreidingsmaat** (bereik) om de data goed te beschrijven.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="40" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="1"/>
-<text x="155" y "30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">zelfde gemiddelde, ander bereik</text>
+<text x="155" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">zelfde gemiddelde, ander bereik</text>
 <circle cx="120" cy="60" r="4" fill="${COLORS.curve}"/>
 <circle cx="120" cy="60" r="4" fill="${COLORS.curve}"/>
 <circle cx="140" cy="60" r="4" fill="${COLORS.curve}"/>
 <circle cx="140" cy="60" r="4" fill="${COLORS.curve}"/>
 <circle cx="160" cy="60" r="4" fill="${COLORS.curve}"/>
-<text x="55" y "65" fill="${COLORS.curve}" font-size="11" font-family="Arial" font-weight="bold">klas A:</text>
-<text x="220" y "65" fill="${COLORS.muted}" font-size="10" font-family="Arial">bereik 2</text>
+<text x="55" y="65" fill="${COLORS.curve}" font-size="11" font-family="Arial" font-weight="bold">klas A:</text>
+<text x="220" y="65" fill="${COLORS.muted}" font-size="10" font-family="Arial">bereik 2</text>
 <circle cx="60" cy="140" r="4" fill="${COLORS.curveAlt}"/>
 <circle cx="100" cy="140" r="4" fill="${COLORS.curveAlt}"/>
 <circle cx="140" cy="140" r="4" fill="${COLORS.curveAlt}"/>
 <circle cx="180" cy="140" r="4" fill="${COLORS.curveAlt}"/>
 <circle cx="220" cy="140" r="4" fill="${COLORS.curveAlt}"/>
-<text x="40" y "160" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">klas B:</text>
-<text x="225" y "160" fill="${COLORS.muted}" font-size="10" font-family="Arial">bereik 7</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">verspreiding zegt veel</text>
+<text x="40" y="160" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">klas B:</text>
+<text x="225" y="160" fill="${COLORS.muted}" font-size="10" font-family="Arial">bereik 7</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">verspreiding zegt veel</text>
 </svg>`,
     checks: [
       {
@@ -275,19 +275,19 @@ const steps = [
     title: "Toepassing: cijferreeks",
     explanation: "Een typische opgave: jouw 5 toetsen waren 6, 7, 5, 8, 9.\n\n**A** — Gemiddelde:\n(6+7+5+8+9)/5 = 35/5 = **7**\n\n**B** — Modus: alle getallen verschillend → **geen modus**.\n\n**C** — Mediaan: sorteer 5, 6, 7, 8, 9 → middelste = **7**.\n\n**D** — Bereik: 9 − 5 = **4**.\n\n**E** — Wat moet je halen op de **6e toets** om het gemiddelde naar **7,5** te krijgen?\n• Som tot nu: 35.\n• Gewenst: 6 toetsen × 7,5 = 45.\n• Nodig: 45 − 35 = **10** (perfect).\n\nDit type 'wat moet ik nog halen?'-vraagstuk komt vaak voor in de praktijk.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">cijfers: 6, 7, 5, 8, 9</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">cijfers: 6, 7, 5, 8, 9</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "62" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde: </text>
-<text x="180" y "62" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">7</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="12" font-family="Arial">modus: </text>
-<text x="180" y "82" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">geen</text>
-<text x="55" y "102" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan: </text>
-<text x="180" y "102" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">7</text>
-<text x="55" y "122" fill="${COLORS.text}" font-size="12" font-family="Arial">bereik: </text>
-<text x="180" y "122" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
-<text x="55" y "150" fill="${COLORS.text}" font-size="12" font-family="Arial">6e toets voor gem 7,5: </text>
-<text x="195" y "150" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">10</text>
-<text x="150" y "185" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">som = aantal × gemiddelde</text>
+<text x="55" y="62" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde: </text>
+<text x="180" y="62" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">7</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="12" font-family="Arial">modus: </text>
+<text x="180" y="82" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">geen</text>
+<text x="55" y="102" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan: </text>
+<text x="180" y="102" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">7</text>
+<text x="55" y="122" fill="${COLORS.text}" font-size="12" font-family="Arial">bereik: </text>
+<text x="180" y="122" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="55" y="150" fill="${COLORS.text}" font-size="12" font-family="Arial">6e toets voor gem 7,5: </text>
+<text x="195" y="150" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">10</text>
+<text x="150" y="185" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">som = aantal × gemiddelde</text>
 </svg>`,
     checks: [
       {
@@ -302,17 +302,17 @@ const steps = [
     title: "Eindopdracht",
     explanation: "**Vragen** over deze data: 4, 8, 6, 7, 4, 9, 5, 6, 4.\n\n**A — Bereken alle 4 maten**:\n• Sorteren: 4, 4, 4, 5, 6, 6, 7, 8, 9 (9 getallen)\n• **Gemiddelde**: 53 / 9 ≈ **5,9**\n• **Modus**: 4 (komt 3× voor)\n• **Mediaan**: middelste van 9 = 5e = **6**\n• **Bereik**: 9 − 4 = **5**\n\n**B — Frequentietabel maken**:\n\n| waarde | freq |\n|--------|------|\n| 4 | 3 |\n| 5 | 1 |\n| 6 | 2 |\n| 7 | 1 |\n| 8 | 1 |\n| 9 | 1 |\n\nGoed gedaan — je hebt het statistiek-leerpad doorlopen!\n\n**Recap**:\n- Frequentietabel + staafdiagram = data ordenen\n- Gemiddelde / modus / mediaan = drie centrummaten\n- Bereik = spreiding\n- Bij uitschieters: kies mediaan boven gemiddelde",
     svg: `<svg viewBox="0 0 300 200">
-<text x="150" y "32" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">data: 4,8,6,7,4,9,5,6,4</text>
+<text x="150" y="32" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">data: 4,8,6,7,4,9,5,6,4</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "65" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde:</text>
-<text x="180" y "65" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">5,9</text>
-<text x="55" y "88" fill="${COLORS.text}" font-size="12" font-family="Arial">modus:</text>
-<text x="180" y "88" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
-<text x="55" y "111" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan:</text>
-<text x="180" y "111" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
-<text x="55" y "134" fill="${COLORS.text}" font-size="12" font-family="Arial">bereik:</text>
-<text x="180" y "134" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">5</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">statistiek onder de knie 🏆</text>
+<text x="55" y="65" fill="${COLORS.text}" font-size="12" font-family="Arial">gemiddelde:</text>
+<text x="180" y="65" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">5,9</text>
+<text x="55" y="88" fill="${COLORS.text}" font-size="12" font-family="Arial">modus:</text>
+<text x="180" y="88" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="55" y="111" fill="${COLORS.text}" font-size="12" font-family="Arial">mediaan:</text>
+<text x="180" y="111" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">6</text>
+<text x="55" y="134" fill="${COLORS.text}" font-size="12" font-family="Arial">bereik:</text>
+<text x="180" y="134" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">5</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">statistiek onder de knie 🏆</text>
 </svg>`,
     checks: [
       {

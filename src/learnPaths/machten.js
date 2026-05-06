@@ -40,12 +40,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a^n = a · a · ... · a (n keer)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="80" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="42" font-family="Arial" font-weight="bold">3<tspan font-size="24" baseline-shift="super">2</tspan></text>
-<text x="155" y "100" text-anchor="middle" fill="${COLORS.alt}" font-size="22" font-family="Arial">=</text>
-<text x="220" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial">3 · 3 = 9</text>
-<text x="80" y "130" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">grondtal · exponent</text>
+<text x="80" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="42" font-family="Arial" font-weight="bold">3<tspan font-size="24" baseline-shift="super">2</tspan></text>
+<text x="155" y="100" text-anchor="middle" fill="${COLORS.alt}" font-size="22" font-family="Arial">=</text>
+<text x="220" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial">3 · 3 = 9</text>
+<text x="80" y="130" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">grondtal · exponent</text>
 <line x1="30" y1="148" x2="270" y2="148" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "170" fill="${COLORS.text}" font-size="11" font-family="Arial">2³ = 8 · 5⁴ = 625 · 10⁵ = 100.000</text>
+<text x="35" y="170" fill="${COLORS.text}" font-size="11" font-family="Arial">2³ = 8 · 5⁴ = 625 · 10⁵ = 100.000</text>
 </svg>`,
     checks: [
       {
@@ -84,14 +84,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">speciale exponenten</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">a⁰ = 1</text>
-<text x="120" y "78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(elke a ≠ 0)</text>
-<text x="35" y "100" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">a¹ = a</text>
-<text x="120" y "100" fill="${COLORS.muted}" font-size="11" font-family="Arial">(zichzelf)</text>
+<text x="35" y="78" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">a⁰ = 1</text>
+<text x="120" y="78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(elke a ≠ 0)</text>
+<text x="35" y="100" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">a¹ = a</text>
+<text x="120" y="100" fill="${COLORS.muted}" font-size="11" font-family="Arial">(zichzelf)</text>
 <line x1="30" y1="115" x2="270" y2="115" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "138" fill="${COLORS.text}" font-size="11" font-family="Arial">(-2)² = +4 (even = +)</text>
-<text x="35" y "156" fill="${COLORS.text}" font-size="11" font-family="Arial">(-2)³ = -8 (oneven = teken)</text>
-<text x="35" y "176" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">-2² = -4 ≠ (-2)² = +4</text>
+<text x="35" y="138" fill="${COLORS.text}" font-size="11" font-family="Arial">(-2)² = +4 (even = +)</text>
+<text x="35" y="156" fill="${COLORS.text}" font-size="11" font-family="Arial">(-2)³ = -8 (oneven = teken)</text>
+<text x="35" y="176" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">-2² = -4 ≠ (-2)² = +4</text>
 </svg>`,
     checks: [
       {
@@ -125,13 +125,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">volgorde van bewerkingen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Haakjes</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">2. Machten ←</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">3. × en ÷</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">4. + en −</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Haakjes</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">2. Machten ←</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">3. × en ÷</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">4. + en −</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="11" font-family="Arial">3 + 2² · 5 = 3 + 4 · 5 = 23</text>
-<text x="35" y "180" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3 + 2)² = 5² = 25</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">3 + 2² · 5 = 3 + 4 · 5 = 23</text>
+<text x="35" y="180" fill="${COLORS.muted}" font-size="11" font-family="Arial">(3 + 2)² = 5² = 25</text>
 </svg>`,
     checks: [
       {
@@ -167,13 +167,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a^m · a^n = a^(m+n)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">2² · 2³ = 2⁵</text>
-<text x="160" y "78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 2+3=5)</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">x³ · x⁵ = x⁸</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="13" font-family="monospace">5 · 5⁷ = 5⁸</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">2² · 2³ = 2⁵</text>
+<text x="160" y="78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 2+3=5)</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">x³ · x⁵ = x⁸</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">5 · 5⁷ = 5⁸</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.alt}" font-size="11" font-family="Arial">⚠ alleen bij ZELFDE grondtal:</text>
-<text x="35" y "174" fill="${COLORS.alt}" font-size="11" font-family="Arial">2² · 3² ≠ 5² (regel werkt niet hier)</text>
+<text x="35" y="156" fill="${COLORS.alt}" font-size="11" font-family="Arial">⚠ alleen bij ZELFDE grondtal:</text>
+<text x="35" y="174" fill="${COLORS.alt}" font-size="11" font-family="Arial">2² · 3² ≠ 5² (regel werkt niet hier)</text>
 </svg>`,
     checks: [
       {
@@ -196,13 +196,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a^m / a^n = a^(m−n)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁵ / 2³ = 2²</text>
-<text x="160" y "78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 5-3=2)</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">x⁹ / x⁴ = x⁵</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="13" font-family="monospace">5³ / 5³ = 5⁰ = 1</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁵ / 2³ = 2²</text>
+<text x="160" y="78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 5-3=2)</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">x⁹ / x⁴ = x⁵</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">5³ / 5³ = 5⁰ = 1</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.alt}" font-size="11" font-family="Arial">m &lt; n → negatieve exponent</text>
-<text x="35" y "174" fill="${COLORS.muted}" font-size="11" font-family="Arial">5² / 5⁵ = 5⁻³ = 1/125</text>
+<text x="35" y="156" fill="${COLORS.alt}" font-size="11" font-family="Arial">m &lt; n → negatieve exponent</text>
+<text x="35" y="174" fill="${COLORS.muted}" font-size="11" font-family="Arial">5² / 5⁵ = 5⁻³ = 1/125</text>
 </svg>`,
     checks: [
       {
@@ -225,13 +225,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">(a^m)^n = a^(m·n)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2³)² = 2⁶</text>
-<text x="155" y "78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 3·2=6)</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">(x⁴)⁵ = x²⁰</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2³)² = 2⁶</text>
+<text x="155" y="78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(want 3·2=6)</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">(x⁴)⁵ = x²⁰</text>
 <line x1="30" y1="115" x2="270" y2="115" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "138" fill="${COLORS.good}" font-size="11" font-family="Arial">samenvatting:</text>
-<text x="35" y "156" fill="${COLORS.text}" font-size="11" font-family="Arial">· : exp + ·  / : exp − ·  ()^ : exp ·</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="11" font-family="Arial">a^m·a^n / a^m÷a^n / (a^m)^n</text>
+<text x="35" y="138" fill="${COLORS.good}" font-size="11" font-family="Arial">samenvatting:</text>
+<text x="35" y="156" fill="${COLORS.text}" font-size="11" font-family="Arial">· : exp + ·  / : exp − ·  ()^ : exp ·</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="11" font-family="Arial">a^m·a^n / a^m÷a^n / (a^m)^n</text>
 </svg>`,
     checks: [
       {
@@ -267,12 +267,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">(a·b)^n = a^n · b^n</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2·3)² = 2²·3² = 4·9 = 36</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">(2x)³ = 8x³</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="13" font-family="monospace">(5a)² = 25a²</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2·3)² = 2²·3² = 4·9 = 36</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">(2x)³ = 8x³</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">(5a)² = 25a²</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ NIET bij +/-:</text>
-<text x="35" y "174" fill="${COLORS.alt}" font-size="11" font-family="Arial">(a+b)² ≠ a² + b² (= a²+2ab+b²)</text>
+<text x="35" y="156" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ NIET bij +/-:</text>
+<text x="35" y="174" fill="${COLORS.alt}" font-size="11" font-family="Arial">(a+b)² ≠ a² + b² (= a²+2ab+b²)</text>
 </svg>`,
     checks: [
       {
@@ -295,12 +295,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">(a/b)^n = a^n / b^n</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2/3)² = 4/9</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">(x/5)³ = x³/125</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="13" font-family="monospace">(2x/3y)² = 4x²/9y²</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">(2/3)² = 4/9</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">(x/5)³ = x³/125</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">(2x/3y)² = 4x²/9y²</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.muted}" font-size="11" font-family="Arial">kans 3x kop: (1/2)³ = 1/8</text>
-<text x="35" y "174" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">handig in kansrekening + exp. groei</text>
+<text x="35" y="156" fill="${COLORS.muted}" font-size="11" font-family="Arial">kans 3x kop: (1/2)³ = 1/8</text>
+<text x="35" y="174" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">handig in kansrekening + exp. groei</text>
 </svg>`,
     checks: [
       {
@@ -323,12 +323,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a⁻ⁿ = 1 / aⁿ</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁻¹ = 1/2 = 0.5</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="13" font-family="monospace">5⁻² = 1/25 = 0.04</text>
-<text x="35" y "120" fill="${COLORS.text}" font-size="13" font-family="monospace">10⁻³ = 0.001</text>
-<text x="35" y "140" fill="${COLORS.text}" font-size="13" font-family="monospace">x⁻⁴ = 1/x⁴</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁻¹ = 1/2 = 0.5</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">5⁻² = 1/25 = 0.04</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">10⁻³ = 0.001</text>
+<text x="35" y="140" fill="${COLORS.text}" font-size="13" font-family="monospace">x⁻⁴ = 1/x⁴</text>
 <line x1="30" y1="155" x2="270" y2="155" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="150" y "178" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">minteken = de macht naar andere kant van breuk</text>
+<text x="150" y="178" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">minteken = de macht naar andere kant van breuk</text>
 </svg>`,
     checks: [
       {
@@ -364,19 +364,19 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">machten van 10</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="monospace">10³ = 1.000</text>
-<text x="155" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">(kilo)</text>
-<text x="35" y "92" fill="${COLORS.good}" font-size="11" font-family="monospace">10⁶ = 1.000.000</text>
-<text x="155" y "92" fill="${COLORS.muted}" font-size="11" font-family="Arial">(mega)</text>
-<text x="35" y "110" fill="${COLORS.good}" font-size="11" font-family="monospace">10⁹ = 1.000.000.000</text>
-<text x="180" y "110" fill="${COLORS.muted}" font-size="11" font-family="Arial">(giga)</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="monospace">10³ = 1.000</text>
+<text x="155" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">(kilo)</text>
+<text x="35" y="92" fill="${COLORS.good}" font-size="11" font-family="monospace">10⁶ = 1.000.000</text>
+<text x="155" y="92" fill="${COLORS.muted}" font-size="11" font-family="Arial">(mega)</text>
+<text x="35" y="110" fill="${COLORS.good}" font-size="11" font-family="monospace">10⁹ = 1.000.000.000</text>
+<text x="180" y="110" fill="${COLORS.muted}" font-size="11" font-family="Arial">(giga)</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "144" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻³ = 0,001</text>
-<text x="155" y "144" fill="${COLORS.muted}" font-size="11" font-family="Arial">(milli)</text>
-<text x="35" y "162" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁶ = 0,000001</text>
-<text x="170" y "162" fill="${COLORS.muted}" font-size="11" font-family="Arial">(micro)</text>
-<text x="35" y "180" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁹</text>
-<text x="100" y "180" fill="${COLORS.muted}" font-size="11" font-family="Arial">(nano)</text>
+<text x="35" y="144" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻³ = 0,001</text>
+<text x="155" y="144" fill="${COLORS.muted}" font-size="11" font-family="Arial">(milli)</text>
+<text x="35" y="162" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁶ = 0,000001</text>
+<text x="170" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">(micro)</text>
+<text x="35" y="180" fill="${COLORS.alt}" font-size="11" font-family="monospace">10⁻⁹</text>
+<text x="100" y="180" fill="${COLORS.muted}" font-size="11" font-family="Arial">(nano)</text>
 </svg>`,
     checks: [
       {
@@ -399,13 +399,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">wetenschappelijke notatie: a · 10^n</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="11" font-family="monospace">326.000 = 3,26 · 10⁵</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="11" font-family="monospace">7.500 = 7,5 · 10³</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="11" font-family="monospace">0,005 = 5 · 10⁻³</text>
-<text x="35" y "130" fill="${COLORS.text}" font-size="11" font-family="monospace">0,000042 = 4,2 · 10⁻⁵</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="monospace">326.000 = 3,26 · 10⁵</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="11" font-family="monospace">7.500 = 7,5 · 10³</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="11" font-family="monospace">0,005 = 5 · 10⁻³</text>
+<text x="35" y="130" fill="${COLORS.text}" font-size="11" font-family="monospace">0,000042 = 4,2 · 10⁻⁵</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="10" font-family="Arial">verschuif komma naar 1-9 vóór komma</text>
-<text x="35" y "178" fill="${COLORS.muted}" font-size="10" font-family="Arial">links→ + exp · rechts → - exp</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="10" font-family="Arial">verschuif komma naar 1-9 vóór komma</text>
+<text x="35" y="178" fill="${COLORS.muted}" font-size="10" font-family="Arial">links→ + exp · rechts → - exp</text>
 </svg>`,
     checks: [
       {

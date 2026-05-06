@@ -158,13 +158,13 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">groeifactor g</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 2  → verdubbelen</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 1.05 → 5% groei</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 0.9 → 10% afname</text>
-<text x="35" y "130" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 0.5 → halveren</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 2  → verdubbelen</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 1.05 → 5% groei</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 0.9 → 10% afname</text>
+<text x="35" y="130" fill="${COLORS.text}" font-size="11" font-family="monospace">g = 0.5 → halveren</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="11" font-family="Arial">vind g: deel waarde door vorige</text>
-<text x="35" y "178" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">g > 1 = groei · g < 1 = afname</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">vind g: deel waarde door vorige</text>
+<text x="35" y="178" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">g > 1 = groei · g < 1 = afname</text>
 </svg>`,
     checks: [
       {
@@ -187,13 +187,13 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">% → groeifactor</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">groei: g = 1 + p</text>
-<text x="35" y "92" fill="${COLORS.muted}" font-size="11" font-family="Arial">5% → 1.05 · 8% → 1.08 · 100% → 2</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">groei: g = 1 + p</text>
+<text x="35" y="92" fill="${COLORS.muted}" font-size="11" font-family="Arial">5% → 1.05 · 8% → 1.08 · 100% → 2</text>
 <line x1="30" y1="106" x2="270" y2="106" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "128" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">afname: g = 1 − p</text>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">5% af → 0.95 · 10% af → 0.90</text>
-<text x="35" y "164" fill="${COLORS.muted}" font-size="11" font-family="Arial">50% af → 0.5 (halveren)</text>
-<text x="35" y "180" fill="${COLORS.text}" font-size="10" font-family="Arial" font-style="italic">% per dezelfde periode als de stap</text>
+<text x="35" y="128" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">afname: g = 1 − p</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">5% af → 0.95 · 10% af → 0.90</text>
+<text x="35" y="164" fill="${COLORS.muted}" font-size="11" font-family="Arial">50% af → 0.5 (halveren)</text>
+<text x="35" y="180" fill="${COLORS.text}" font-size="10" font-family="Arial" font-style="italic">% per dezelfde periode als de stap</text>
 </svg>`,
     checks: [
       {
@@ -227,13 +227,13 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">g → %</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">groei (g > 1):</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="monospace">1.05 → 5% · 1.20 → 20%</text>
-<text x="35" y "108" fill="${COLORS.text}" font-size="11" font-family="monospace">2.00 → 100% (verdubbelen)</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">groei (g > 1):</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="monospace">1.05 → 5% · 1.20 → 20%</text>
+<text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="monospace">2.00 → 100% (verdubbelen)</text>
 <line x1="30" y1="120" x2="270" y2="120" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "142" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">afname (g < 1):</text>
-<text x="35" y "160" fill="${COLORS.text}" font-size="11" font-family="monospace">0.95 → 5% af · 0.80 → 20% af</text>
-<text x="35" y "176" fill="${COLORS.text}" font-size="11" font-family="monospace">0.50 → 50% af (halveren)</text>
+<text x="35" y="142" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">afname (g < 1):</text>
+<text x="35" y="160" fill="${COLORS.text}" font-size="11" font-family="monospace">0.95 → 5% af · 0.80 → 20% af</text>
+<text x="35" y="176" fill="${COLORS.text}" font-size="11" font-family="monospace">0.50 → 50% af (halveren)</text>
 </svg>`,
     checks: [
       {
@@ -258,13 +258,13 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">N(t) = b · g^t</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">b = beginhoeveelheid (t=0)</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">g = groeifactor</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">t = aantal stappen</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">b = beginhoeveelheid (t=0)</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">g = groeifactor</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">t = aantal stappen</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">50 bacteriën · ×2 elk uur:</text>
-<text x="35" y "164" fill="${COLORS.text}" font-size="12" font-family="monospace" font-weight="bold">N(t) = 50 · 2^t</text>
-<text x="35" y "180" fill="${COLORS.muted}" font-size="10" font-family="Arial">N(4) = 50·16 = 800</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">50 bacteriën · ×2 elk uur:</text>
+<text x="35" y="164" fill="${COLORS.text}" font-size="12" font-family="monospace" font-weight="bold">N(t) = 50 · 2^t</text>
+<text x="35" y="180" fill="${COLORS.muted}" font-size="10" font-family="Arial">N(4) = 50·16 = 800</text>
 </svg>`,
     checks: [
       {
@@ -287,12 +287,12 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">toepassingen exponentieel</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">🌍 bevolking ~1% per jaar (g=1.01)</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">💰 rente — spaarrekening</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">🦠 virusverspreiding (R-factor)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">📈 inflatie (~3% per jaar)</text>
-<text x="35" y "146" fill="${COLORS.text}" font-size="11" font-family="Arial">☢️ radioactief verval (afname)</text>
-<text x="150" y "176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: schrijf b, g, t apart op</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">🌍 bevolking ~1% per jaar (g=1.01)</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">💰 rente — spaarrekening</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">🦠 virusverspreiding (R-factor)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">📈 inflatie (~3% per jaar)</text>
+<text x="35" y="146" fill="${COLORS.text}" font-size="11" font-family="Arial">☢️ radioactief verval (afname)</text>
+<text x="150" y="176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: schrijf b, g, t apart op</text>
 </svg>`,
     checks: [
       {
@@ -315,14 +315,14 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tabel maken: N(t) = 80 · 0.9^t</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="40" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">t  |  N(t)</text>
-<text x="40" y "90" fill="${COLORS.text}" font-size="11" font-family="monospace">0  |  80</text>
-<text x="40" y "104" fill="${COLORS.text}" font-size="11" font-family="monospace">1  |  72</text>
-<text x="40" y "118" fill="${COLORS.text}" font-size="11" font-family="monospace">2  |  64.8</text>
-<text x="40" y "132" fill="${COLORS.text}" font-size="11" font-family="monospace">5  |  47.24</text>
-<text x="40" y "146" fill="${COLORS.text}" font-size="11" font-family="monospace">10 |  27.89</text>
+<text x="40" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">t  |  N(t)</text>
+<text x="40" y="90" fill="${COLORS.text}" font-size="11" font-family="monospace">0  |  80</text>
+<text x="40" y="104" fill="${COLORS.text}" font-size="11" font-family="monospace">1  |  72</text>
+<text x="40" y="118" fill="${COLORS.text}" font-size="11" font-family="monospace">2  |  64.8</text>
+<text x="40" y="132" fill="${COLORS.text}" font-size="11" font-family="monospace">5  |  47.24</text>
+<text x="40" y="146" fill="${COLORS.text}" font-size="11" font-family="monospace">10 |  27.89</text>
 <line x1="30" y1="158" x2="270" y2="158" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">rekenmachine: ^ of x^y · niet eerder afronden</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">rekenmachine: ^ of x^y · niet eerder afronden</text>
 </svg>`,
     checks: [
       {

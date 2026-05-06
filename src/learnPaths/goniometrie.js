@@ -26,12 +26,12 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
-<text x="50" y "180" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">A</text>
-<text x="225" y "180" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">B</text>
-<text x="55" y "32" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">C</text>
+<text x="50" y="180" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">A</text>
+<text x="225" y="180" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">B</text>
+<text x="55" y="32" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">C</text>
 <path d="M 200 160 A 25 25 0 0 0 188 145" fill="none" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="190" y "152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">α</text>
-<text x="150" y "190" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">we kijken vanuit hoek α (niet de rechte hoek)</text>
+<text x="190" y="152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">α</text>
+<text x="150" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">we kijken vanuit hoek α (niet de rechte hoek)</text>
 </svg>`,
     checks: [
       {
@@ -47,13 +47,13 @@ const steps = [
     explanation: "Vanuit een **gekozen hoek α** krijgen de drie zijden eigen namen:\n\n• **Schuine zijde** (hypotenusa) — tegenover de rechte hoek. Altijd dezelfde, ongeacht welke α je kiest.\n• **Tegenoverstaand** — de rechthoekszijde **tegenover** hoek α (niet aanrakend).\n• **Aanliggend** — de rechthoekszijde die **bij** hoek α ligt (raakt α aan, **niet** de schuine zijde).\n\n**Truc**: kijk vanuit α. Welke zijde 'kijkt α aan' (raakt 'm aan)? = aanliggend. Welke zit aan de overkant? = tegenoverstaand. De derde (langste) is schuine zijde.\n\nWissel je van hoek (van α naar de andere niet-rechte hoek), dan wisselen aanliggend en tegenoverstaand om!",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2.5"/>
-<rect x="60" y "142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
+<rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
 <path d="M 200 160 A 25 25 0 0 0 188 145" fill="none" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="190" y "152" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">α</text>
-<text x="140" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">aanliggend</text>
-<text x="35" y "100" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegen-</text>
-<text x="35" y "115" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">overstaand</text>
-<text x="155" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">schuine zijde</text>
+<text x="190" y="152" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">α</text>
+<text x="140" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">aanliggend</text>
+<text x="35" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegen-</text>
+<text x="35" y="115" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">overstaand</text>
+<text x="155" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">schuine zijde</text>
 </svg>`,
     checks: [
       {
@@ -69,15 +69,15 @@ const steps = [
     explanation: "Goniometrie definieert drie **verhoudingen** vanuit hoek α:\n\n**sin α = tegenoverstaand / schuine zijde**\n**cos α = aanliggend / schuine zijde**\n**tan α = tegenoverstaand / aanliggend**\n\nDeze waardes zijn voor élke α tussen 0° en 90° **vast** — onafhankelijk van hoe groot de driehoek is. Een grote 30°-driehoek heeft dezelfde sin/cos/tan als een kleine 30°-driehoek.\n\n**Onthoudtruc**: **SOS-CAS-TOA**\n• **S**in = **O**verstaand / **S**chuin\n• **C**os = **A**anliggend / **S**chuin\n• **T**an = **O**verstaand / **A**anliggend\n\n(Of in het Engels: SOH-CAH-TOA met **H**ypotenuse).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="20" width="260" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
-<text x="150" y "45" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">SOS - CAS - TOA</text>
+<text x="150" y="45" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">SOS - CAS - TOA</text>
 <line x1="20" y1="55" x2="280" y2="55" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="40" y "80" fill="${COLORS.text}" font-size="13" font-family="Arial">sin α =</text>
-<text x="160" y "80" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tegenover / schuin</text>
-<text x="40" y "110" fill="${COLORS.text}" font-size="13" font-family="Arial">cos α =</text>
-<text x="160" y "110" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">aanliggend / schuin</text>
-<text x="40" y "140" fill="${COLORS.text}" font-size="13" font-family="Arial">tan α =</text>
-<text x="160" y "140" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tegenover / aanliggend</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">onafhankelijk van grootte van de driehoek</text>
+<text x="40" y="80" fill="${COLORS.text}" font-size="13" font-family="Arial">sin α =</text>
+<text x="160" y="80" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tegenover / schuin</text>
+<text x="40" y="110" fill="${COLORS.text}" font-size="13" font-family="Arial">cos α =</text>
+<text x="160" y="110" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">aanliggend / schuin</text>
+<text x="40" y="140" fill="${COLORS.text}" font-size="13" font-family="Arial">tan α =</text>
+<text x="160" y="140" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tegenover / aanliggend</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">onafhankelijk van grootte van de driehoek</text>
 </svg>`,
     checks: [
       {
@@ -102,30 +102,30 @@ const steps = [
 <line x1="100" y1="20" x2="100" y2="190" stroke="${COLORS.curve}" stroke-width="0.7"/>
 <line x1="160" y1="20" x2="160" y2="190" stroke="${COLORS.curve}" stroke-width="0.7"/>
 <line x1="220" y1="20" x2="220" y2="190" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="70" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">α</text>
-<text x="130" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">sin</text>
-<text x="190" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">cos</text>
-<text x="240" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">tan</text>
-<text x="70" y "70" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">0°</text>
-<text x="130" y "70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
-<text x="190" y "70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
-<text x="240" y "70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
-<text x="70" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">30°</text>
-<text x="130" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,5</text>
-<text x="190" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,87</text>
-<text x="240" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,58</text>
-<text x="70" y "130" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">45°</text>
-<text x="130" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,71</text>
-<text x="190" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,71</text>
-<text x="240" y "130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
-<text x="70" y "160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">60°</text>
-<text x="130" y "160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,87</text>
-<text x="190" y "160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,5</text>
-<text x="240" y "160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1,73</text>
-<text x="70" y "183" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">90°</text>
-<text x="130" y "183" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
-<text x="190" y "183" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
-<text x="240" y "183" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">—</text>
+<text x="70" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">α</text>
+<text x="130" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">sin</text>
+<text x="190" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">cos</text>
+<text x="240" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="11" font-family="Arial">tan</text>
+<text x="70" y="70" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">0°</text>
+<text x="130" y="70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
+<text x="190" y="70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
+<text x="240" y="70" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
+<text x="70" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">30°</text>
+<text x="130" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,5</text>
+<text x="190" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,87</text>
+<text x="240" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,58</text>
+<text x="70" y="130" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">45°</text>
+<text x="130" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,71</text>
+<text x="190" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,71</text>
+<text x="240" y="130" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
+<text x="70" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">60°</text>
+<text x="130" y="160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,87</text>
+<text x="190" y="160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0,5</text>
+<text x="240" y="160" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1,73</text>
+<text x="70" y="183" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">90°</text>
+<text x="130" y="183" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">1</text>
+<text x="190" y="183" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial">0</text>
+<text x="240" y="183" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">—</text>
 </svg>`,
     checks: [
       {
@@ -141,16 +141,16 @@ const steps = [
     explanation: "Met **sin α** kun je een **zijde** uitrekenen als je de hoek én de schuine zijde kent.\n\n**Voorbeeld**: rechthoekige driehoek met α = 30° en schuine zijde = 10 cm. Hoe lang is de tegenoverstaande zijde?\n\nFormule: **sin α = tegenover / schuin**\n→ tegenover = sin α × schuin\n→ tegenover = sin 30° × 10 = 0,5 × 10 = **5 cm**\n\n**Stappenplan**:\n1. Kijk welke zijden je hebt en zoekt.\n2. Kies juiste verhouding (sin/cos/tan).\n3. Schrijf formule op, vul in.\n4. Reken uit.\n\n**Trucje voor zijde**: vermenigvuldig de verhouding met de bekende zijde.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
-<rect x="60" y "142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
+<rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
 <path d="M 200 160 A 25 25 0 0 0 188 145" fill="none" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="190" y "152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">30°</text>
-<text x="155" y "100" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">10</text>
-<text x="40" y "100" text-anchor="middle" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">?</text>
-<text x="55" y "32" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegenover</text>
-<text x="240" y "70" fill="${COLORS.text}" font-size="11" font-family="Arial">sin 30° = ?/10</text>
-<text x="240" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">0,5 = ?/10</text>
-<rect x="220" y "108" width="60" height="32" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="250" y "128" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">5 cm</text>
+<text x="190" y="152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">30°</text>
+<text x="155" y="100" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">10</text>
+<text x="40" y="100" text-anchor="middle" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">?</text>
+<text x="55" y="32" fill="${COLORS.muted}" font-size="10" font-family="Arial">tegenover</text>
+<text x="240" y="70" fill="${COLORS.text}" font-size="11" font-family="Arial">sin 30° = ?/10</text>
+<text x="240" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">0,5 = ?/10</text>
+<rect x="220" y="108" width="60" height="32" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="250" y="128" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">5 cm</text>
 </svg>`,
     checks: [
       {
@@ -166,13 +166,13 @@ const steps = [
     explanation: "Welke van sin / cos / tan kies je? Hangt af van **welke twee zijden** je hebt of zoekt:\n\n• Heb je tegenover + schuin? → **sin**\n• Heb je aanliggend + schuine zijde? → **cos**\n• Heb je tegenover + aanliggend (geen schuine)? → **tan**\n\n**Stap voor stap**:\n1. Identificeer welke twee zijden in het probleem voorkomen.\n2. Kies de verhouding die exact die twee zijden gebruikt.\n3. Vul in en los op.\n\n**Voorbeeld**: hoek α = 40°, **aanliggend** = 8 cm, schuine zijde **gezocht**.\n• Beide zijden: aanliggend + schuin → **cos**.\n• cos 40° = 8 / schuin\n• schuin = 8 / cos 40° = 8 / 0,766 ≈ **10,4**",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5"/>
-<text x="55" y "50" fill="${COLORS.text}" font-size="13" font-family="Arial">tegenover + schuin</text>
-<text x="220" y "50" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ sin</text>
-<text x="55" y "85" fill="${COLORS.text}" font-size="13" font-family="Arial">aanliggend + schuin</text>
-<text x="220" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ cos</text>
-<text x="55" y "120" fill="${COLORS.text}" font-size="13" font-family="Arial">tegenover + aanliggend</text>
-<text x="220" y "120" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ tan</text>
-<text x="150" y "165" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">welke twee zijden? = welke verhouding</text>
+<text x="55" y="50" fill="${COLORS.text}" font-size="13" font-family="Arial">tegenover + schuin</text>
+<text x="220" y="50" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ sin</text>
+<text x="55" y="85" fill="${COLORS.text}" font-size="13" font-family="Arial">aanliggend + schuin</text>
+<text x="220" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ cos</text>
+<text x="55" y="120" fill="${COLORS.text}" font-size="13" font-family="Arial">tegenover + aanliggend</text>
+<text x="220" y="120" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">→ tan</text>
+<text x="150" y="165" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">welke twee zijden? = welke verhouding</text>
 </svg>`,
     checks: [
       {
@@ -188,15 +188,15 @@ const steps = [
     explanation: "Andersom: heb je twee **zijden** en zoek je de **hoek**? Gebruik de **inverse** functies.\n\nOp je rekenmachine: **sin⁻¹** (of 'arcsin'), **cos⁻¹**, **tan⁻¹** (vaak met SHIFT-toets).\n\n**Voorbeeld**: rechthoekige driehoek met tegenover = 5, schuine = 10. Hoeveel graden is α?\n• sin α = 5 / 10 = 0,5\n• α = sin⁻¹(0,5) = **30°**\n\n**Stappenplan**:\n1. Bereken de verhouding: deel een zijde door een ander.\n2. Pas inverse toe op je rekenmachine.\n3. Lees de hoek af.\n\n**Voorbeeld 2**: aanliggend = 4, tegenover = 4 (gelijk). Welke α?\n• tan α = 4 / 4 = 1\n• α = tan⁻¹(1) = **45°**",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
-<rect x="60" y "142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
+<rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
 <path d="M 200 160 A 25 25 0 0 0 188 145" fill="none" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="190" y "152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">α=?</text>
-<text x="155" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">10</text>
-<text x="42" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">5</text>
-<text x="240" y "60" fill="${COLORS.text}" font-size="11" font-family="Arial">sin α = 5/10 = 0,5</text>
-<text x="240" y "85" fill="${COLORS.text}" font-size="11" font-family="Arial">α = sin⁻¹(0,5)</text>
-<rect x="220" y "100" width="70" height="34" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="255" y "121" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">α = 30°</text>
+<text x="190" y="152" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">α=?</text>
+<text x="155" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">10</text>
+<text x="42" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">5</text>
+<text x="240" y="60" fill="${COLORS.text}" font-size="11" font-family="Arial">sin α = 5/10 = 0,5</text>
+<text x="240" y="85" fill="${COLORS.text}" font-size="11" font-family="Arial">α = sin⁻¹(0,5)</text>
+<rect x="220" y="100" width="70" height="34" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="255" y="121" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">α = 30°</text>
 </svg>`,
     checks: [
       {
@@ -212,15 +212,15 @@ const steps = [
     explanation: "**Hoek zoeken** vs **zijde zoeken** — verschillend recept:\n\n**Zijde zoeken**:\n1. Hoek + 1 zijde gegeven.\n2. Kies sin/cos/tan op basis van welke zijden.\n3. Formule: zijde_zoek = sin/cos/tan(α) × bekende_zijde, of bekende / sin/cos/tan(α).\n4. Reken met sin/cos/tan-knop.\n\n**Hoek zoeken**:\n1. 2 zijden gegeven (geen hoek).\n2. Kies sin/cos/tan op basis van welke zijden.\n3. Formule: verhouding = zijde1 / zijde2.\n4. α = sin⁻¹/cos⁻¹/tan⁻¹(verhouding) — gebruik inverse-knop.\n\n**Trucje**: kijk altijd naar wat je weet en zoekt — van daar kies je formule.\n\nVoor wiskundetoetsen: schrijf formule áltijd op vóór je rekent. Voorkomt fouten.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
-<text x="150" y "42" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">stappenplan</text>
+<text x="150" y="42" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">stappenplan</text>
 <line x1="40" y1="55" x2="260" y2="55" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "78" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">zijde zoeken:</text>
-<text x="55" y "98" fill="${COLORS.text}" font-size="11" font-family="Arial">hoek + 1 zijde gegeven</text>
-<text x="55" y "115" fill="${COLORS.text}" font-size="11" font-family="Arial">→ gebruik sin/cos/tan</text>
+<text x="55" y="78" fill="${COLORS.curve}" font-size="12" font-family="Arial" font-weight="bold">zijde zoeken:</text>
+<text x="55" y="98" fill="${COLORS.text}" font-size="11" font-family="Arial">hoek + 1 zijde gegeven</text>
+<text x="55" y="115" fill="${COLORS.text}" font-size="11" font-family="Arial">→ gebruik sin/cos/tan</text>
 <line x1="40" y1="130" x2="260" y2="130" stroke="${COLORS.curve}" stroke-width="0.5" opacity="0.5"/>
-<text x="55" y "150" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial" font-weight="bold">hoek zoeken:</text>
-<text x="55" y "170" fill="${COLORS.text}" font-size="11" font-family="Arial">2 zijden gegeven</text>
-<text x="55" y "187" fill="${COLORS.text}" font-size="11" font-family="Arial">→ gebruik sin⁻¹/cos⁻¹/tan⁻¹</text>
+<text x="55" y="150" fill="${COLORS.curveAlt}" font-size="12" font-family="Arial" font-weight="bold">hoek zoeken:</text>
+<text x="55" y="170" fill="${COLORS.text}" font-size="11" font-family="Arial">2 zijden gegeven</text>
+<text x="55" y="187" fill="${COLORS.text}" font-size="11" font-family="Arial">→ gebruik sin⁻¹/cos⁻¹/tan⁻¹</text>
 </svg>`,
     checks: [
       {
@@ -237,15 +237,15 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <line x1="40" y1="160" x2="260" y2="160" stroke="${COLORS.text}" stroke-width="1"/>
 <line x1="220" y1="160" x2="220" y2="50" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<text x="232" y "100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">h = ?</text>
+<text x="232" y="100" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial">h = ?</text>
 <line x1="60" y1="160" x2="220" y2="50" stroke="${COLORS.point}" stroke-width="2"/>
 <rect x="208" y="148" width="12" height="12" fill="none" stroke="${COLORS.text}" stroke-width="1"/>
 <path d="M 100 160 A 30 30 0 0 0 95 140" fill="none" stroke="${COLORS.point}" stroke-width="1.5"/>
-<text x="105" y "150" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">35°</text>
-<text x="140" y "175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">20 m</text>
-<text x="50" y "175" fill="${COLORS.muted}" font-size="11" font-family="Arial">👤</text>
-<text x="225" y "45" fill="${COLORS.muted}" font-size="14" font-family="Arial">🏢</text>
-<text x="150" y "192" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tan 35° × 20 ≈ 14 m</text>
+<text x="105" y="150" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">35°</text>
+<text x="140" y="175" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">20 m</text>
+<text x="50" y="175" fill="${COLORS.muted}" font-size="11" font-family="Arial">👤</text>
+<text x="225" y="45" fill="${COLORS.muted}" font-size="14" font-family="Arial">🏢</text>
+<text x="150" y="192" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">tan 35° × 20 ≈ 14 m</text>
 </svg>`,
     checks: [
       {
@@ -260,16 +260,16 @@ const steps = [
     title: "Eindopdracht",
     explanation: "**Drie korte vragen**:\n\n**A**: rechthoekige driehoek, α = 60°, schuine zijde 12. Tegenover = ?\n• sin 60° = 0,87\n• tegenover = sin 60° × 12 = 0,87 × 12 ≈ **10,4**\n\n**B**: aanliggend = 6, tegenover = 8. Hoek α = ?\n• tan α = 8/6 ≈ 1,33\n• α = tan⁻¹(1,33) ≈ **53°**\n\n**C**: schuine zijde = 13, aanliggend = 12. cos α = ?\n• cos α = 12 / 13 ≈ 0,923\n• α ≈ **23°**\n\n**Recap**:\n- SOS-CAS-TOA → kies de juiste verhouding\n- Zijde zoeken: hoek + 1 zijde + sin/cos/tan\n- Hoek zoeken: 2 zijden + sin⁻¹/cos⁻¹/tan⁻¹\n- Reken in graden (DEG-modus)\n\nGoed gedaan — je hebt het goniometrie-leerpad doorlopen!",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. tegenover = sin 60° × 12 =</text>
-<rect x="200" y "18" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="240" y "37" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 10,4</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. α = tan⁻¹(8/6) =</text>
-<rect x="200" y "68" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="240" y "87" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 53°</text>
-<text x="55" y "132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. α = cos⁻¹(12/13) =</text>
-<rect x="200" y "118" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="240" y "137" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 23°</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">goniometrie onder de knie 🏆</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. tegenover = sin 60° × 12 =</text>
+<rect x="200" y="18" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="240" y="37" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 10,4</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. α = tan⁻¹(8/6) =</text>
+<rect x="200" y="68" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="240" y="87" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 53°</text>
+<text x="55" y="132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. α = cos⁻¹(12/13) =</text>
+<rect x="200" y="118" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="240" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">≈ 23°</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">goniometrie onder de knie 🏆</text>
 </svg>`,
     checks: [
       {

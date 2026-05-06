@@ -42,12 +42,12 @@ const steps = [
 <rect x="35" y="62" width="105" height="56" rx="8" fill="rgba(0,200,83,0.12)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="87" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">uitdrukking</text>
 <text x="87" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">3x + 5</text>
-<text x="87" y "116" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">geen =</text>
+<text x="87" y="116" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">geen =</text>
 <rect x="160" y="62" width="105" height="56" rx="8" fill="rgba(255,213,79,0.12)" stroke="${COLORS.warm}" stroke-width="2"/>
 <text x="212" y="82" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">vergelijking</text>
 <text x="212" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">3x + 5 = 14</text>
-<text x="212" y "116" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vind x</text>
-<text x="150" y "168" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">vergelijking = uitdrukking = uitdrukking</text>
+<text x="212" y="116" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vind x</text>
+<text x="150" y="168" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">vergelijking = uitdrukking = uitdrukking</text>
 </svg>`,
     checks: [
       {
@@ -75,11 +75,11 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">x + 3 = 7</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 1: 1 + 3 = 4 ≠ 7 ✗</text>
-<text x="35" y "94" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 2: 2 + 3 = 5 ≠ 7 ✗</text>
-<text x="35" y "112" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 3: 3 + 3 = 6 ≠ 7 ✗</text>
-<text x="35" y "130" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">x = 4: 4 + 3 = 7 ✓</text>
-<text x="150" y "165" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">oplossing: x = 4</text>
+<text x="35" y="76" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 1: 1 + 3 = 4 ≠ 7 ✗</text>
+<text x="35" y="94" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 2: 2 + 3 = 5 ≠ 7 ✗</text>
+<text x="35" y="112" fill="${COLORS.alt}" font-size="11" font-family="Arial">x = 3: 3 + 3 = 6 ≠ 7 ✗</text>
+<text x="35" y="130" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">x = 4: 4 + 3 = 7 ✓</text>
+<text x="150" y="165" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">oplossing: x = 4</text>
 </svg>`,
     checks: [
       {
@@ -109,7 +109,7 @@ const steps = [
 <text x="100" y="125" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">x + 3</text>
 <rect x="170" y="105" width="60" height="30" rx="4" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="1.5"/>
 <text x="200" y="125" text-anchor="middle" fill="${COLORS.good}" font-size="13" font-family="Arial" font-weight="bold">7</text>
-<text x="150" y "165" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">altijd HETZELFDE doen aan links en rechts</text>
+<text x="150" y="165" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">altijd HETZELFDE doen aan links en rechts</text>
 </svg>`,
     checks: [
       {
@@ -139,13 +139,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">+ wegwerken: aftrekken</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">x + 5 = 12</text>
-<text x="180" y "78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| -5</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">x + 5 = 12</text>
+<text x="180" y="78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| -5</text>
 <line x1="35" y1="88" x2="220" y2="88" stroke="${COLORS.muted}" stroke-width="0.5"/>
-<text x="35" y "108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
+<text x="35" y="108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "148" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: 7 + 5 = 12 ✓</text>
-<text x="35" y "168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">altijd controleren!</text>
+<text x="35" y="148" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: 7 + 5 = 12 ✓</text>
+<text x="35" y="168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">altijd controleren!</text>
 </svg>`,
     checks: [
       {
@@ -179,13 +179,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">× wegwerken: delen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">3x = 21</text>
-<text x="160" y "78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| :3</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">3x = 21</text>
+<text x="160" y="78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| :3</text>
 <line x1="35" y1="88" x2="200" y2="88" stroke="${COLORS.muted}" stroke-width="0.5"/>
-<text x="35" y "108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
+<text x="35" y="108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "148" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: 3 · 7 = 21 ✓</text>
-<text x="35" y "168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">delen door negatief: x kan negatief worden</text>
+<text x="35" y="148" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: 3 · 7 = 21 ✓</text>
+<text x="35" y="168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">delen door negatief: x kan negatief worden</text>
 </svg>`,
     checks: [
       {
@@ -208,14 +208,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">÷ wegwerken: vermenigvuldigen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="14" font-family="monospace">x / 4 = 5</text>
-<text x="160" y "78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| · 4</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">x / 4 = 5</text>
+<text x="160" y="78" fill="${COLORS.alt}" font-size="13" font-family="monospace">| · 4</text>
 <line x1="35" y1="88" x2="200" y2="88" stroke="${COLORS.muted}" stroke-width="0.5"/>
-<text x="35" y "108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 20</text>
+<text x="35" y="108" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 20</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">combinatie: x/3 + 2 = 7</text>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ -2 eerst → x/3 = 5</text>
-<text x="35" y "178" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ ·3 daarna → x = 15</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">combinatie: x/3 + 2 = 7</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ -2 eerst → x/3 = 5</text>
+<text x="35" y="178" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ ·3 daarna → x = 15</text>
 </svg>`,
     checks: [
       {
@@ -240,14 +240,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">x aan beide kanten</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="13" font-family="monospace">5x = 2x + 12</text>
-<text x="180" y "76" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -2x</text>
-<text x="35" y "98" fill="${COLORS.text}" font-size="13" font-family="monospace">3x = 12</text>
-<text x="180" y "98" fill="${COLORS.alt}" font-size="11" font-family="monospace">| :3</text>
-<text x="35" y "120" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 4</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="13" font-family="monospace">5x = 2x + 12</text>
+<text x="180" y="76" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -2x</text>
+<text x="35" y="98" fill="${COLORS.text}" font-size="13" font-family="monospace">3x = 12</text>
+<text x="180" y="98" fill="${COLORS.alt}" font-size="11" font-family="monospace">| :3</text>
+<text x="35" y="120" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 4</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.muted}" font-size="11" font-family="Arial">controle: 5·4 = 20, 2·4+12 = 20 ✓</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: haal x'en naar de kant waar ze al groter zijn</text>
+<text x="35" y="156" fill="${COLORS.muted}" font-size="11" font-family="Arial">controle: 5·4 = 20, 2·4+12 = 20 ✓</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: haal x'en naar de kant waar ze al groter zijn</text>
 </svg>`,
     checks: [
       {
@@ -270,15 +270,15 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">getallen + x aan beide kanten</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">4x + 3 = x + 18</text>
-<text x="200" y "74" fill="${COLORS.alt}" font-size="10" font-family="monospace">| -x</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">3x + 3 = 18</text>
-<text x="200" y "94" fill="${COLORS.alt}" font-size="10" font-family="monospace">| -3</text>
-<text x="35" y "114" fill="${COLORS.text}" font-size="12" font-family="monospace">3x = 15</text>
-<text x="200" y "114" fill="${COLORS.alt}" font-size="10" font-family="monospace">| :3</text>
-<text x="35" y "134" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 5</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">4x + 3 = x + 18</text>
+<text x="200" y="74" fill="${COLORS.alt}" font-size="10" font-family="monospace">| -x</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">3x + 3 = 18</text>
+<text x="200" y="94" fill="${COLORS.alt}" font-size="10" font-family="monospace">| -3</text>
+<text x="35" y="114" fill="${COLORS.text}" font-size="12" font-family="monospace">3x = 15</text>
+<text x="200" y="114" fill="${COLORS.alt}" font-size="10" font-family="monospace">| :3</text>
+<text x="35" y="134" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 5</text>
 <line x1="30" y1="148" x2="270" y2="148" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "170" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">eerst x'en, dan getallen, dan delen</text>
+<text x="35" y="170" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">eerst x'en, dan getallen, dan delen</text>
 </svg>`,
     checks: [
       {
@@ -301,12 +301,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">strategie — 5 stappen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">1. haakjes openen</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">2. x verzamelen aan 1 kant</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">3. getallen aan andere kant</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">4. delen door getal vóór x</text>
-<text x="35" y "146" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">5. controleer altijd!</text>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">schrijf elke stap met actie in de marge</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">1. haakjes openen</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">2. x verzamelen aan 1 kant</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">3. getallen aan andere kant</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">4. delen door getal vóór x</text>
+<text x="35" y="146" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">5. controleer altijd!</text>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">schrijf elke stap met actie in de marge</text>
 </svg>`,
     checks: [
       {
@@ -336,13 +336,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">haakjes openen: a(b+c) = ab + ac</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="13" font-family="monospace">2(x + 3) = 14</text>
-<text x="35" y "96" fill="${COLORS.text}" font-size="13" font-family="monospace">2x + 6 = 14</text>
-<text x="200" y "96" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -6</text>
-<text x="35" y "116" fill="${COLORS.text}" font-size="13" font-family="monospace">2x = 8</text>
-<text x="200" y "116" fill="${COLORS.alt}" font-size="11" font-family="monospace">| :2</text>
-<text x="35" y "136" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 4</text>
-<text x="35" y "168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">let op: -(x+3) = -x − 3 (alle tekens om)</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="13" font-family="monospace">2(x + 3) = 14</text>
+<text x="35" y="96" fill="${COLORS.text}" font-size="13" font-family="monospace">2x + 6 = 14</text>
+<text x="200" y="96" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -6</text>
+<text x="35" y="116" fill="${COLORS.text}" font-size="13" font-family="monospace">2x = 8</text>
+<text x="200" y="116" fill="${COLORS.alt}" font-size="11" font-family="monospace">| :2</text>
+<text x="35" y="136" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 4</text>
+<text x="35" y="168" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">let op: -(x+3) = -x − 3 (alle tekens om)</text>
 </svg>`,
     checks: [
       {
@@ -365,14 +365,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">breuken: vermenigvuldig met noemer</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="13" font-family="monospace">x/3 + 1 = 5</text>
-<text x="200" y "76" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -1</text>
-<text x="35" y "96" fill="${COLORS.text}" font-size="13" font-family="monospace">x/3 = 4</text>
-<text x="200" y "96" fill="${COLORS.alt}" font-size="11" font-family="monospace">| ·3</text>
-<text x="35" y "116" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 12</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="13" font-family="monospace">x/3 + 1 = 5</text>
+<text x="200" y="76" fill="${COLORS.alt}" font-size="11" font-family="monospace">| -1</text>
+<text x="35" y="96" fill="${COLORS.text}" font-size="13" font-family="monospace">x/3 = 4</text>
+<text x="200" y="96" fill="${COLORS.alt}" font-size="11" font-family="monospace">| ·3</text>
+<text x="35" y="116" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 12</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "155" fill="${COLORS.muted}" font-size="10" font-family="Arial">breuk = breuk → kruisproduct werkt:</text>
-<text x="35" y "172" fill="${COLORS.muted}" font-size="10" font-family="Arial">a/b = c/d → ad = bc</text>
+<text x="35" y="155" fill="${COLORS.muted}" font-size="10" font-family="Arial">breuk = breuk → kruisproduct werkt:</text>
+<text x="35" y="172" fill="${COLORS.muted}" font-size="10" font-family="Arial">a/b = c/d → ad = bc</text>
 </svg>`,
     checks: [
       {
@@ -395,12 +395,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">woord → formule → oplossing</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">"3 keer een getal + 5 = 26"</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="Arial">↓ vertaling</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="13" font-family="monospace">3x + 5 = 26</text>
-<text x="35" y "132" fill="${COLORS.alt}" font-size="11" font-family="Arial">↓ oplossen</text>
-<text x="35" y "152" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">'is gelijk aan' / 'wordt' / 'resultaat is' = →</text>
+<text x="35" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">"3 keer een getal + 5 = 26"</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="Arial">↓ vertaling</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="13" font-family="monospace">3x + 5 = 26</text>
+<text x="35" y="132" fill="${COLORS.alt}" font-size="11" font-family="Arial">↓ oplossen</text>
+<text x="35" y="152" fill="${COLORS.good}" font-size="14" font-family="monospace" font-weight="bold">x = 7</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">'is gelijk aan' / 'wordt' / 'resultaat is' = →</text>
 </svg>`,
     checks: [
       {

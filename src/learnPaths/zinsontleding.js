@@ -44,13 +44,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">persoonsvorm = vervoegd werkwoord</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">3 trucs:</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">1. zin → vraag (pv naar voren)</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">2. tijd veranderen (pv verandert)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">3. getal veranderen (pv verandert)</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">3 trucs:</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">1. zin → vraag (pv naar voren)</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">2. tijd veranderen (pv verandert)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">3. getal veranderen (pv verandert)</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">heeft</tspan> het boek <tspan fill="${COLORS.muted}">gelezen</tspan>."</text>
-<text x="35" y "180" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">heeft = pv · gelezen = werkwoordelijk restdeel</text>
+<text x="35" y="162" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">heeft</tspan> het boek <tspan fill="${COLORS.muted}">gelezen</tspan>."</text>
+<text x="35" y="180" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">heeft = pv · gelezen = werkwoordelijk restdeel</text>
 </svg>`,
     checks: [
       {
@@ -84,12 +84,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">onderwerp = wie/wat + pv</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">Sara</tspan> <tspan fill="${COLORS.good}" font-weight="bold">leest</tspan> een boek."</text>
-<text x="35" y "94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wie leest? Sara = onderwerp</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">Sara</tspan> <tspan fill="${COLORS.good}" font-weight="bold">leest</tspan> een boek."</text>
+<text x="35" y="94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wie leest? Sara = onderwerp</text>
 <line x1="30" y1="108" x2="270" y2="108" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">De hond</tspan> <tspan fill="${COLORS.good}" font-weight="bold">rent</tspan>."</text>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wie rent? De hond = onderwerp</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">controle: pv en onderwerp passen qua getal</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">De hond</tspan> <tspan fill="${COLORS.good}" font-weight="bold">rent</tspan>."</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wie rent? De hond = onderwerp</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">controle: pv en onderwerp passen qua getal</text>
 </svg>`,
     checks: [
       {
@@ -123,13 +123,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">pv + onderwerp = zelfde getal</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ De jongen <tspan font-weight="bold">rent</tspan>. (1 + enkelv.)</text>
-<text x="35" y "94" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ De jongens <tspan font-weight="bold">rennen</tspan>. (meer)</text>
-<text x="35" y "112" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ De jongens rent. (mismatch)</text>
+<text x="35" y="76" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ De jongen <tspan font-weight="bold">rent</tspan>. (1 + enkelv.)</text>
+<text x="35" y="94" fill="${COLORS.good}" font-size="11" font-family="Arial">✓ De jongens <tspan font-weight="bold">rennen</tspan>. (meer)</text>
+<text x="35" y="112" fill="${COLORS.alt}" font-size="11" font-family="Arial">✗ De jongens rent. (mismatch)</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "144" fill="${COLORS.text}" font-size="11" font-family="Arial">"Een groep leerlingen <tspan fill="${COLORS.good}" font-weight="bold">gaat</tspan>..."</text>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ groep is enkelvoud (al staat er 'leerlingen')</text>
-<text x="150" y "182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel d/t-fouten ontstaan hier: verkeerde koppeling</text>
+<text x="35" y="144" fill="${COLORS.text}" font-size="11" font-family="Arial">"Een groep leerlingen <tspan fill="${COLORS.good}" font-weight="bold">gaat</tspan>..."</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ groep is enkelvoud (al staat er 'leerlingen')</text>
+<text x="150" y="182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel d/t-fouten ontstaan hier: verkeerde koppeling</text>
 </svg>`,
     checks: [
       {
@@ -159,11 +159,11 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">werkwoordelijk gezegde = alle ww samen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">heeft</tspan> het boek <tspan fill="${COLORS.good}" font-weight="bold">gelezen</tspan>."</text>
-<text x="35" y "94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ gezegde: heeft gelezen</text>
-<text x="35" y "118" fill="${COLORS.text}" font-size="12" font-family="Arial">"Wij <tspan fill="${COLORS.good}" font-weight="bold">zullen</tspan> morgen <tspan fill="${COLORS.good}" font-weight="bold">gaan winkelen</tspan>."</text>
-<text x="35" y "136" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ gezegde: zullen gaan winkelen</text>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">streep alle werkwoorden — die vormen samen het gezegde</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">heeft</tspan> het boek <tspan fill="${COLORS.good}" font-weight="bold">gelezen</tspan>."</text>
+<text x="35" y="94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ gezegde: heeft gelezen</text>
+<text x="35" y="118" fill="${COLORS.text}" font-size="12" font-family="Arial">"Wij <tspan fill="${COLORS.good}" font-weight="bold">zullen</tspan> morgen <tspan fill="${COLORS.good}" font-weight="bold">gaan winkelen</tspan>."</text>
+<text x="35" y="136" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ gezegde: zullen gaan winkelen</text>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">streep alle werkwoorden — die vormen samen het gezegde</text>
 </svg>`,
     checks: [
       {
@@ -191,13 +191,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">naamwoordelijk gezegde</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">koppelwerkwoord + naamwoordelijk deel</text>
-<text x="35" y "92" fill="${COLORS.muted}" font-size="10" font-family="Arial">koppelww: zijn, worden, blijven, blijken,</text>
-<text x="35" y "108" fill="${COLORS.muted}" font-size="10" font-family="Arial">lijken, heten, schijnen, voorkomen</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">koppelwerkwoord + naamwoordelijk deel</text>
+<text x="35" y="92" fill="${COLORS.muted}" font-size="10" font-family="Arial">koppelww: zijn, worden, blijven, blijken,</text>
+<text x="35" y="108" fill="${COLORS.muted}" font-size="10" font-family="Arial">lijken, heten, schijnen, voorkomen</text>
 <line x1="30" y1="120" x2="270" y2="120" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "140" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.warm}" font-weight="bold">moe</tspan>." (naamwoordelijk)</text>
-<text x="35" y "158" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.muted}" font-weight="bold">gevallen</tspan>." (werkwoordelijk)</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">na koppelww: bijv. naamw. of zelfst. naamw. = naamw. gezegde</text>
+<text x="35" y="140" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.warm}" font-weight="bold">moe</tspan>." (naamwoordelijk)</text>
+<text x="35" y="158" fill="${COLORS.text}" font-size="11" font-family="Arial">"Hij <tspan fill="${COLORS.good}" font-weight="bold">is</tspan> <tspan fill="${COLORS.muted}" font-weight="bold">gevallen</tspan>." (werkwoordelijk)</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">na koppelww: bijv. naamw. of zelfst. naamw. = naamw. gezegde</text>
 </svg>`,
     checks: [
       {
@@ -226,16 +226,16 @@ const steps = [
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">werkwoordelijk vs naamwoordelijk</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <rect x="35" y="62" width="105" height="60" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="87" y "82" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">werkwoordelijk</text>
-<text x="87" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">actie</text>
-<text x="87" y "115" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">"Hij rent."</text>
+<text x="87" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">werkwoordelijk</text>
+<text x="87" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">actie</text>
+<text x="87" y="115" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">"Hij rent."</text>
 <rect x="160" y="62" width="105" height="60" rx="8" fill="rgba(160,96,255,0.10)" stroke="${COLORS.paars}" stroke-width="2"/>
-<text x="212" y "82" text-anchor="middle" fill="${COLORS.paars}" font-size="12" font-family="Arial" font-weight="bold">naamwoordelijk</text>
-<text x="212" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">eigenschap</text>
-<text x="212" y "115" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">"Hij is moe."</text>
-<text x="35" y "148" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: is pv koppelww (zijn/worden...)?</text>
-<text x="35" y "166" fill="${COLORS.text}" font-size="11" font-family="Arial">+ naamwoord erna → naamwoordelijk</text>
-<text x="35" y "184" fill="${COLORS.text}" font-size="11" font-family="Arial">+ tweede werkwoord erna → werkwoordelijk</text>
+<text x="212" y="82" text-anchor="middle" fill="${COLORS.paars}" font-size="12" font-family="Arial" font-weight="bold">naamwoordelijk</text>
+<text x="212" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">eigenschap</text>
+<text x="212" y="115" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">"Hij is moe."</text>
+<text x="35" y="148" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: is pv koppelww (zijn/worden...)?</text>
+<text x="35" y="166" fill="${COLORS.text}" font-size="11" font-family="Arial">+ naamwoord erna → naamwoordelijk</text>
+<text x="35" y="184" fill="${COLORS.text}" font-size="11" font-family="Arial">+ tweede werkwoord erna → werkwoordelijk</text>
 </svg>`,
     checks: [
       {
@@ -265,13 +265,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">lijdend voorwerp = wat onderaat actie</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">Sara</tspan> <tspan fill="${COLORS.good}" font-weight="bold">leest</tspan> <tspan fill="${COLORS.alt}" font-weight="bold">een boek</tspan>."</text>
-<text x="35" y "94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wat leest Sara? een boek = lv</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">Sara</tspan> <tspan fill="${COLORS.good}" font-weight="bold">leest</tspan> <tspan fill="${COLORS.alt}" font-weight="bold">een boek</tspan>."</text>
+<text x="35" y="94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wat leest Sara? een boek = lv</text>
 <line x1="30" y1="108" x2="270" y2="108" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: vraag "wie/wat + onderw + pv?"</text>
-<text x="35" y "146" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: zin in lijdende vorm zetten</text>
-<text x="35" y "166" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ "een boek wordt door Sara gelezen"</text>
-<text x="150" y "184" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">niet elke zin heeft een lv (rennen/slapen niet)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: vraag "wie/wat + onderw + pv?"</text>
+<text x="35" y="146" fill="${COLORS.text}" font-size="11" font-family="Arial">controle: zin in lijdende vorm zetten</text>
+<text x="35" y="166" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ "een boek wordt door Sara gelezen"</text>
+<text x="150" y="184" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">niet elke zin heeft een lv (rennen/slapen niet)</text>
 </svg>`,
     checks: [
       {
@@ -315,13 +315,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">meewerkend voorwerp = aan/voor wie</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="11" font-family="Arial">"Ik <tspan fill="${COLORS.good}" font-weight="bold">geef</tspan> <tspan fill="${COLORS.warm}" font-weight="bold">mijn zus</tspan> <tspan fill="${COLORS.alt}" font-weight="bold">een cadeau</tspan>."</text>
-<text x="35" y "100" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ aan wie geef ik een cadeau? mijn zus = mv</text>
-<text x="35" y "118" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ wat geef ik? een cadeau = lv</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="11" font-family="Arial">"Ik <tspan fill="${COLORS.good}" font-weight="bold">geef</tspan> <tspan fill="${COLORS.warm}" font-weight="bold">mijn zus</tspan> <tspan fill="${COLORS.alt}" font-weight="bold">een cadeau</tspan>."</text>
+<text x="35" y="100" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ aan wie geef ik een cadeau? mijn zus = mv</text>
+<text x="35" y="118" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ wat geef ik? een cadeau = lv</text>
 <line x1="30" y1="132" x2="270" y2="132" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "152" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: 'aan/voor + persoon' is mv-vorm</text>
-<text x="35" y "170" fill="${COLORS.text}" font-size="11" font-family="Arial">"Ik geef een cadeau aan mijn zus."</text>
-<text x="150" y "188" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">mv staat vaak vóór lv in NL</text>
+<text x="35" y="152" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: 'aan/voor + persoon' is mv-vorm</text>
+<text x="35" y="170" fill="${COLORS.text}" font-size="11" font-family="Arial">"Ik geef een cadeau aan mijn zus."</text>
+<text x="150" y="188" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">mv staat vaak vóór lv in NL</text>
 </svg>`,
     checks: [
       {
@@ -349,13 +349,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">lv ↔ mv — herken het verschil</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">lijdend voorwerp:</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="10" font-family="Arial">"wat?" of "wie ondergaat?"</text>
-<text x="35" y "112" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">meewerkend voorwerp:</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="10" font-family="Arial">"aan wie?" of "voor wie?"</text>
+<text x="35" y="76" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">lijdend voorwerp:</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="10" font-family="Arial">"wat?" of "wie ondergaat?"</text>
+<text x="35" y="112" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">meewerkend voorwerp:</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="10" font-family="Arial">"aan wie?" of "voor wie?"</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "160" fill="${COLORS.text}" font-size="10" font-family="Arial">volgorde: onderw — pv — mv — lv — bep</text>
-<text x="150" y "182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">"De juf vertelt ons een verhaal."</text>
+<text x="35" y="160" fill="${COLORS.text}" font-size="10" font-family="Arial">volgorde: onderw — pv — mv — lv — bep</text>
+<text x="150" y="182" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">"De juf vertelt ons een verhaal."</text>
 </svg>`,
     checks: [
       {
@@ -401,17 +401,17 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bepalingen — extra informatie</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">plaats:</text>
-<text x="105" y "74" fill="${COLORS.text}" font-size="11" font-family="Arial">waar? "in de tuin"</text>
-<text x="35" y "92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">tijd:</text>
-<text x="105" y "92" fill="${COLORS.text}" font-size="11" font-family="Arial">wanneer? "morgen"</text>
-<text x="35" y "110" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">wijze:</text>
-<text x="105" y "110" fill="${COLORS.text}" font-size="11" font-family="Arial">hoe? "snel", "prachtig"</text>
-<text x="35" y "128" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">reden:</text>
-<text x="105" y "128" fill="${COLORS.text}" font-size="11" font-family="Arial">waarom? "omdat..."</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">plaats:</text>
+<text x="105" y="74" fill="${COLORS.text}" font-size="11" font-family="Arial">waar? "in de tuin"</text>
+<text x="35" y="92" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">tijd:</text>
+<text x="105" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">wanneer? "morgen"</text>
+<text x="35" y="110" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">wijze:</text>
+<text x="105" y="110" fill="${COLORS.text}" font-size="11" font-family="Arial">hoe? "snel", "prachtig"</text>
+<text x="35" y="128" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">reden:</text>
+<text x="105" y="128" fill="${COLORS.text}" font-size="11" font-family="Arial">waarom? "omdat..."</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "160" fill="${COLORS.text}" font-size="10" font-family="Arial">"Hij zit <tspan fill="${COLORS.good}" font-weight="bold">in de tuin</tspan>" → bep. plaats</text>
-<text x="35" y "176" fill="${COLORS.text}" font-size="10" font-family="Arial">"Hij rent <tspan fill="${COLORS.good}" font-weight="bold">snel</tspan>" → bep. wijze</text>
+<text x="35" y="160" fill="${COLORS.text}" font-size="10" font-family="Arial">"Hij zit <tspan fill="${COLORS.good}" font-weight="bold">in de tuin</tspan>" → bep. plaats</text>
+<text x="35" y="176" fill="${COLORS.text}" font-size="10" font-family="Arial">"Hij rent <tspan fill="${COLORS.good}" font-weight="bold">snel</tspan>" → bep. wijze</text>
 </svg>`,
     checks: [
       {
@@ -440,16 +440,16 @@ const steps = [
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bijvoeglijk naamw. ↔ bijwoord</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <rect x="35" y="62" width="105" height="56" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
-<text x="87" y "82" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">bnw</text>
-<text x="87" y "100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bij zelfst. naamw.</text>
-<text x="87" y "114" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">een snelle auto</text>
+<text x="87" y="82" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">bnw</text>
+<text x="87" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bij zelfst. naamw.</text>
+<text x="87" y="114" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">een snelle auto</text>
 <rect x="160" y="62" width="105" height="56" rx="8" fill="rgba(160,96,255,0.10)" stroke="${COLORS.paars}" stroke-width="2"/>
-<text x="212" y "82" text-anchor="middle" fill="${COLORS.paars}" font-size="12" font-family="Arial" font-weight="bold">bw</text>
-<text x="212" y "100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bij werkwoord</text>
-<text x="212" y "114" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">hij rijdt snel</text>
-<text x="35" y "144" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: kijk naar wat erop volgt</text>
-<text x="35" y "162" fill="${COLORS.text}" font-size="11" font-family="Arial">→ zelfst. naamw. = bnw (vaak -e)</text>
-<text x="35" y "180" fill="${COLORS.text}" font-size="11" font-family="Arial">→ werkwoord/bnw = bw (geen -e)</text>
+<text x="212" y="82" text-anchor="middle" fill="${COLORS.paars}" font-size="12" font-family="Arial" font-weight="bold">bw</text>
+<text x="212" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bij werkwoord</text>
+<text x="212" y="114" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">hij rijdt snel</text>
+<text x="35" y="144" fill="${COLORS.text}" font-size="11" font-family="Arial">truc: kijk naar wat erop volgt</text>
+<text x="35" y="162" fill="${COLORS.text}" font-size="11" font-family="Arial">→ zelfst. naamw. = bnw (vaak -e)</text>
+<text x="35" y="180" fill="${COLORS.text}" font-size="11" font-family="Arial">→ werkwoord/bnw = bw (geen -e)</text>
 </svg>`,
     checks: [
       {

@@ -42,14 +42,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">P = gunstig / totaal</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "78" fill="${COLORS.text}" font-size="12" font-family="Arial">🎲 P(6) = 1/6</text>
-<text x="155" y "78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 van 6)</text>
-<text x="35" y "98" fill="${COLORS.text}" font-size="12" font-family="Arial">🪙 P(kop) = 1/2</text>
-<text x="155" y "98" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 van 2)</text>
-<text x="35" y "118" fill="${COLORS.text}" font-size="12" font-family="Arial">🃏 P(harten) = 13/52 = 1/4</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="12" font-family="Arial">🎲 P(6) = 1/6</text>
+<text x="155" y="78" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 van 6)</text>
+<text x="35" y="98" fill="${COLORS.text}" font-size="12" font-family="Arial">🪙 P(kop) = 1/2</text>
+<text x="155" y="98" fill="${COLORS.muted}" font-size="11" font-family="Arial">(1 van 2)</text>
+<text x="35" y="118" fill="${COLORS.text}" font-size="12" font-family="Arial">🃏 P(harten) = 13/52 = 1/4</text>
 <line x1="30" y1="132" x2="270" y2="132" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "152" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">0 ≤ P ≤ 1</text>
-<text x="35" y "170" fill="${COLORS.muted}" font-size="10" font-family="Arial">0 = onmogelijk · 1 = zeker</text>
+<text x="35" y="152" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">0 ≤ P ≤ 1</text>
+<text x="35" y="170" fill="${COLORS.muted}" font-size="10" font-family="Arial">0 = onmogelijk · 1 = zeker</text>
 </svg>`,
     checks: [
       {
@@ -83,13 +83,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">notatie P(A)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(6) = 1/6</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(even) = 3/6 = 1/2</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="12" font-family="monospace">P(kop) = 1/2 = 0.5 = 50%</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(6) = 1/6</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(even) = 3/6 = 1/2</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="12" font-family="monospace">P(kop) = 1/2 = 0.5 = 50%</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.muted}" font-size="11" font-family="Arial">drie vormen voor zelfde kans:</text>
-<text x="35" y "164" fill="${COLORS.text}" font-size="11" font-family="Arial">breuk · decimaal · percentage</text>
-<text x="35" y "180" fill="${COLORS.alt}" font-size="10" font-family="Arial" font-style="italic">examen: vereenvoudig altijd (13/52 → 1/4)</text>
+<text x="35" y="146" fill="${COLORS.muted}" font-size="11" font-family="Arial">drie vormen voor zelfde kans:</text>
+<text x="35" y="164" fill="${COLORS.text}" font-size="11" font-family="Arial">breuk · decimaal · percentage</text>
+<text x="35" y="180" fill="${COLORS.alt}" font-size="10" font-family="Arial" font-style="italic">examen: vereenvoudig altijd (13/52 → 1/4)</text>
 </svg>`,
     checks: [
       {
@@ -114,13 +114,13 @@ const steps = [
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <line x1="40" y1="100" x2="260" y2="100" stroke="${COLORS.muted}" stroke-width="2"/>
 <circle cx="40" cy="100" r="5" fill="${COLORS.alt}"/>
-<text x="40" y "120" fill="${COLORS.alt}" font-size="11" font-family="Arial" text-anchor="middle">0 (nooit)</text>
+<text x="40" y="120" fill="${COLORS.alt}" font-size="11" font-family="Arial" text-anchor="middle">0 (nooit)</text>
 <circle cx="150" cy="100" r="5" fill="${COLORS.warm}"/>
-<text x="150" y "120" fill="${COLORS.warm}" font-size="11" font-family="Arial" text-anchor="middle">1/2 (50/50)</text>
+<text x="150" y="120" fill="${COLORS.warm}" font-size="11" font-family="Arial" text-anchor="middle">1/2 (50/50)</text>
 <circle cx="260" cy="100" r="5" fill="${COLORS.good}"/>
-<text x="260" y "120" fill="${COLORS.good}" font-size="11" font-family="Arial" text-anchor="middle">1 (zeker)</text>
-<text x="150" y "85" fill="${COLORS.muted}" font-size="10" font-family="Arial" text-anchor="middle">→ groter = waarschijnlijker →</text>
-<text x="150" y "160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">1/4 = 25% · 1/3 ≈ 33% · 1/8 = 12.5%</text>
+<text x="260" y="120" fill="${COLORS.good}" font-size="11" font-family="Arial" text-anchor="middle">1 (zeker)</text>
+<text x="150" y="85" fill="${COLORS.muted}" font-size="10" font-family="Arial" text-anchor="middle">→ groter = waarschijnlijker →</text>
+<text x="150" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">1/4 = 25% · 1/3 ≈ 33% · 1/8 = 12.5%</text>
 </svg>`,
     checks: [
       {
@@ -161,12 +161,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">dobbelsteen — kansen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(3)         = 1/6</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(even)      = 3/6 = 1/2</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="12" font-family="monospace">P(>4)        = 2/6 = 1/3</text>
-<text x="35" y "130" fill="${COLORS.text}" font-size="12" font-family="monospace">P(deelb. 3)  = 2/6 = 1/3</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(3)         = 1/6</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(even)      = 3/6 = 1/2</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="12" font-family="monospace">P(>4)        = 2/6 = 1/3</text>
+<text x="35" y="130" fill="${COLORS.text}" font-size="12" font-family="monospace">P(deelb. 3)  = 2/6 = 1/3</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.alt}" font-size="11" font-family="Arial">P(7) = 0    P(getal 1-6) = 1</text>
+<text x="35" y="162" fill="${COLORS.alt}" font-size="11" font-family="Arial">P(7) = 0    P(getal 1-6) = 1</text>
 </svg>`,
     checks: [
       {
@@ -189,12 +189,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">munt — 2 uitkomsten</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">1 worp:  P(K) = 1/2</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">2 worpen: 4 uitkomsten</text>
-<text x="35" y "112" fill="${COLORS.muted}" font-size="11" font-family="Arial">  KK, KM, MK, MM (elk 1/4)</text>
-<text x="35" y "130" fill="${COLORS.text}" font-size="11" font-family="monospace">P(2× K) = 1/4</text>
-<text x="35" y "148" fill="${COLORS.text}" font-size="11" font-family="monospace">P(min. 1× K) = 3/4</text>
-<text x="35" y "172" fill="${COLORS.alt}" font-size="11" font-family="Arial">n worpen → 2^n uitkomsten</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">1 worp:  P(K) = 1/2</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">2 worpen: 4 uitkomsten</text>
+<text x="35" y="112" fill="${COLORS.muted}" font-size="11" font-family="Arial">  KK, KM, MK, MM (elk 1/4)</text>
+<text x="35" y="130" fill="${COLORS.text}" font-size="11" font-family="monospace">P(2× K) = 1/4</text>
+<text x="35" y="148" fill="${COLORS.text}" font-size="11" font-family="monospace">P(min. 1× K) = 3/4</text>
+<text x="35" y="172" fill="${COLORS.alt}" font-size="11" font-family="Arial">n worpen → 2^n uitkomsten</text>
 </svg>`,
     checks: [
       {
@@ -217,13 +217,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">grotere groepen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">zak: 5 rood + 8 blauw + 7 geel = 20</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood) = 5/20 = 1/4</text>
-<text x="35" y "108" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood of blauw) = 13/20</text>
+<text x="35" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">zak: 5 rood + 8 blauw + 7 geel = 20</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood) = 5/20 = 1/4</text>
+<text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood of blauw) = 13/20</text>
 <line x1="30" y1="120" x2="270" y2="120" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "140" fill="${COLORS.muted}" font-size="11" font-family="Arial">52 kaarten, 4 kleuren à 13:</text>
-<text x="35" y "156" fill="${COLORS.text}" font-size="11" font-family="monospace">P(harten) = 13/52 = 1/4</text>
-<text x="35" y "172" fill="${COLORS.text}" font-size="11" font-family="monospace">P(aas) = 4/52 = 1/13</text>
+<text x="35" y="140" fill="${COLORS.muted}" font-size="11" font-family="Arial">52 kaarten, 4 kleuren à 13:</text>
+<text x="35" y="156" fill="${COLORS.text}" font-size="11" font-family="monospace">P(harten) = 13/52 = 1/4</text>
+<text x="35" y="172" fill="${COLORS.text}" font-size="11" font-family="monospace">P(aas) = 4/52 = 1/13</text>
 </svg>`,
     checks: [
       {
@@ -249,16 +249,16 @@ const steps = [
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">kansboom — 2× munt</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <circle cx="80" cy="100" r="6" fill="${COLORS.warm}"/>
-<text x="80" y "120" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">start</text>
+<text x="80" y="120" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">start</text>
 <line x1="86" y1="100" x2="140" y2="75" stroke="${COLORS.muted}"/>
 <line x1="86" y1="100" x2="140" y2="125" stroke="${COLORS.muted}"/>
-<text x="105" y "85" fill="${COLORS.good}" font-size="9" font-family="Arial">K (½)</text>
-<text x="105" y "120" fill="${COLORS.alt}" font-size="9" font-family="Arial">M (½)</text>
-<text x="148" y "75" fill="${COLORS.text}" font-size="11" font-family="monospace">K → KK (1/4)</text>
-<text x="148" y "95" fill="${COLORS.text}" font-size="11" font-family="monospace">M → KM (1/4)</text>
-<text x="148" y "120" fill="${COLORS.text}" font-size="11" font-family="monospace">K → MK (1/4)</text>
-<text x="148" y "140" fill="${COLORS.text}" font-size="11" font-family="monospace">M → MM (1/4)</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vermenigvuldig kansen langs het pad</text>
+<text x="105" y="85" fill="${COLORS.good}" font-size="9" font-family="Arial">K (½)</text>
+<text x="105" y="120" fill="${COLORS.alt}" font-size="9" font-family="Arial">M (½)</text>
+<text x="148" y="75" fill="${COLORS.text}" font-size="11" font-family="monospace">K → KK (1/4)</text>
+<text x="148" y="95" fill="${COLORS.text}" font-size="11" font-family="monospace">M → KM (1/4)</text>
+<text x="148" y="120" fill="${COLORS.text}" font-size="11" font-family="monospace">K → MK (1/4)</text>
+<text x="148" y="140" fill="${COLORS.text}" font-size="11" font-family="monospace">M → MM (1/4)</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vermenigvuldig kansen langs het pad</text>
 </svg>`,
     checks: [
       {
@@ -286,13 +286,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">P(A en B) = P(A) · P(B)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">(bij onafhankelijke gebeurtenissen)</text>
-<text x="35" y "96" fill="${COLORS.text}" font-size="11" font-family="monospace">2× kop: 1/2 · 1/2 = 1/4</text>
-<text x="35" y "114" fill="${COLORS.text}" font-size="11" font-family="monospace">2× 6:   1/6 · 1/6 = 1/36</text>
-<text x="35" y "132" fill="${COLORS.text}" font-size="11" font-family="monospace">3× kop: (1/2)³ = 1/8</text>
+<text x="35" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">(bij onafhankelijke gebeurtenissen)</text>
+<text x="35" y="96" fill="${COLORS.text}" font-size="11" font-family="monospace">2× kop: 1/2 · 1/2 = 1/4</text>
+<text x="35" y="114" fill="${COLORS.text}" font-size="11" font-family="monospace">2× 6:   1/6 · 1/6 = 1/36</text>
+<text x="35" y="132" fill="${COLORS.text}" font-size="11" font-family="monospace">3× kop: (1/2)³ = 1/8</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.alt}" font-size="11" font-family="Arial">zonder terugleggen → afhankelijk</text>
-<text x="35" y "178" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ 2e kans aanpassen op rest</text>
+<text x="35" y="162" fill="${COLORS.alt}" font-size="11" font-family="Arial">zonder terugleggen → afhankelijk</text>
+<text x="35" y="178" fill="${COLORS.muted}" font-size="10" font-family="Arial">→ 2e kans aanpassen op rest</text>
 </svg>`,
     checks: [
       {
@@ -326,13 +326,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">meerdere paden → optellen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.muted}" font-size="11" font-family="Arial">3 muntworpen — 'precies 2× K':</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="11" font-family="monospace">KKM: 1/8</text>
-<text x="35" y "108" fill="${COLORS.text}" font-size="11" font-family="monospace">KMK: 1/8</text>
-<text x="35" y "124" fill="${COLORS.text}" font-size="11" font-family="monospace">MKK: 1/8</text>
+<text x="35" y="74" fill="${COLORS.muted}" font-size="11" font-family="Arial">3 muntworpen — 'precies 2× K':</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="monospace">KKM: 1/8</text>
+<text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="monospace">KMK: 1/8</text>
+<text x="35" y="124" fill="${COLORS.text}" font-size="11" font-family="monospace">MKK: 1/8</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">→ 3 · 1/8 = 3/8</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tel pad-kansen op</text>
+<text x="35" y="156" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">→ 3 · 1/8 = 3/8</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tel pad-kansen op</text>
 </svg>`,
     checks: [
       {
@@ -356,14 +356,14 @@ const steps = [
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">P(A of B) = P(A) + P(B)</text>
-<text x="150" y "60" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">(bij uitsluitende gebeurtenissen)</text>
+<text x="150" y="60" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">(bij uitsluitende gebeurtenissen)</text>
 <line x1="30" y1="68" x2="270" y2="68" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "90" fill="${COLORS.text}" font-size="11" font-family="monospace">P(3 of 5) = 1/6 + 1/6 = 2/6</text>
-<text x="35" y "108" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood of blauw) = 3/15+7/15</text>
+<text x="35" y="90" fill="${COLORS.text}" font-size="11" font-family="monospace">P(3 of 5) = 1/6 + 1/6 = 2/6</text>
+<text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="monospace">P(rood of blauw) = 3/15+7/15</text>
 <line x1="30" y1="120" x2="270" y2="120" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "140" fill="${COLORS.alt}" font-size="11" font-family="Arial">bij overlap (niet uitsluitend):</text>
-<text x="35" y "158" fill="${COLORS.text}" font-size="11" font-family="monospace">P(A of B) = P(A)+P(B)−P(A en B)</text>
-<text x="35" y "178" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">aftrekken om dubbel-telling te voorkomen</text>
+<text x="35" y="140" fill="${COLORS.alt}" font-size="11" font-family="Arial">bij overlap (niet uitsluitend):</text>
+<text x="35" y="158" fill="${COLORS.text}" font-size="11" font-family="monospace">P(A of B) = P(A)+P(B)−P(A en B)</text>
+<text x="35" y="178" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">aftrekken om dubbel-telling te voorkomen</text>
 </svg>`,
     checks: [
       {
@@ -386,13 +386,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">P(niet A) = 1 − P(A)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(6) = 1/6</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(niet 6) = 5/6</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">P(6) = 1/6</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">P(niet 6) = 5/6</text>
 <line x1="30" y1="106" x2="270" y2="106" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "128" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">truc: 'minstens 1' → complement!</text>
-<text x="35" y "148" fill="${COLORS.text}" font-size="11" font-family="monospace">P(min. 1× K, 4 worpen) =</text>
-<text x="35" y "164" fill="${COLORS.text}" font-size="11" font-family="monospace">1 − P(0× K) = 1 − 1/16 = 15/16</text>
-<text x="35" y "182" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel sneller dan alle 15 paden!</text>
+<text x="35" y="128" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">truc: 'minstens 1' → complement!</text>
+<text x="35" y="148" fill="${COLORS.text}" font-size="11" font-family="monospace">P(min. 1× K, 4 worpen) =</text>
+<text x="35" y="164" fill="${COLORS.text}" font-size="11" font-family="monospace">1 − P(0× K) = 1 − 1/16 = 15/16</text>
+<text x="35" y="182" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">veel sneller dan alle 15 paden!</text>
 </svg>`,
     checks: [
       {

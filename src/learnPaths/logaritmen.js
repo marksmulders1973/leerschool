@@ -42,14 +42,14 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log = omkering van macht</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="13" font-family="monospace">2⁵ = 32</text>
-<text x="155" y "76" fill="${COLORS.alt}" font-size="13" font-family="monospace">↔</text>
-<text x="180" y "76" fill="${COLORS.text}" font-size="13" font-family="monospace">log₂(32) = 5</text>
-<text x="35" y "100" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(8) = 3 (2³ = 8)</text>
-<text x="35" y "118" fill="${COLORS.text}" font-size="12" font-family="monospace">log₃(27) = 3 (3³ = 27)</text>
-<text x="35" y "136" fill="${COLORS.text}" font-size="12" font-family="monospace">log₁₀(100) = 2</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="13" font-family="monospace">2⁵ = 32</text>
+<text x="155" y="76" fill="${COLORS.alt}" font-size="13" font-family="monospace">↔</text>
+<text x="180" y="76" fill="${COLORS.text}" font-size="13" font-family="monospace">log₂(32) = 5</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(8) = 3 (2³ = 8)</text>
+<text x="35" y="118" fill="${COLORS.text}" font-size="12" font-family="monospace">log₃(27) = 3 (3³ = 27)</text>
+<text x="35" y="136" fill="${COLORS.text}" font-size="12" font-family="monospace">log₁₀(100) = 2</text>
 <line x1="30" y1="148" x2="270" y2="148" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="150" y "172" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">log_a(b) = c ↔ a^c = b</text>
+<text x="150" y="172" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">log_a(b) = c ↔ a^c = b</text>
 </svg>`,
     checks: [
       {
@@ -88,16 +88,16 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">drie veelvoorkomende grondtallen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">log(x)</text>
-<text x="115" y "76" fill="${COLORS.muted}" font-size="11" font-family="Arial">= log₁₀(x) — basis 10</text>
-<text x="35" y "94" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">ln(x)</text>
-<text x="115" y "94" fill="${COLORS.muted}" font-size="11" font-family="Arial">= log_e(x) — natuurlijk</text>
-<text x="35" y "112" fill="${COLORS.blue}" font-size="11" font-family="Arial" font-weight="bold">log₂(x)</text>
-<text x="115" y "112" fill="${COLORS.muted}" font-size="11" font-family="Arial">— informatica (bits)</text>
+<text x="35" y="76" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">log(x)</text>
+<text x="115" y="76" fill="${COLORS.muted}" font-size="11" font-family="Arial">= log₁₀(x) — basis 10</text>
+<text x="35" y="94" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">ln(x)</text>
+<text x="115" y="94" fill="${COLORS.muted}" font-size="11" font-family="Arial">= log_e(x) — natuurlijk</text>
+<text x="35" y="112" fill="${COLORS.blue}" font-size="11" font-family="Arial" font-weight="bold">log₂(x)</text>
+<text x="115" y="112" fill="${COLORS.muted}" font-size="11" font-family="Arial">— informatica (bits)</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(1) = 0</text>
-<text x="35" y "164" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(a) = 1</text>
-<text x="35" y "180" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(a^n) = n</text>
+<text x="35" y="146" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(1) = 0</text>
+<text x="35" y="164" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(a) = 1</text>
+<text x="35" y="180" fill="${COLORS.text}" font-size="11" font-family="monospace">log_a(a^n) = n</text>
 </svg>`,
     checks: [
       {
@@ -173,13 +173,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">logs uit het hoofd</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(64) = 6</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="12" font-family="monospace">log₃(81) = 4</text>
-<text x="35" y "110" fill="${COLORS.text}" font-size="12" font-family="monospace">log₅(125) = 3</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="monospace">log(10000) = 4</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(64) = 6</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="12" font-family="monospace">log₃(81) = 4</text>
+<text x="35" y="110" fill="${COLORS.text}" font-size="12" font-family="monospace">log₅(125) = 3</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="monospace">log(10000) = 4</text>
 <line x1="30" y1="138" x2="270" y2="138" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "158" fill="${COLORS.alt}" font-size="11" font-family="monospace">log₂(1/8) = -3</text>
-<text x="35" y "176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: schrijf b als a^iets</text>
+<text x="35" y="158" fill="${COLORS.alt}" font-size="11" font-family="monospace">log₂(1/8) = -3</text>
+<text x="35" y="176" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">tip: schrijf b als a^iets</text>
 </svg>`,
     checks: [
       {
@@ -202,15 +202,15 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log op rekenmachine</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">log-knop:</text>
-<text x="115" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">log(50) ≈ 1.699</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">ln-knop:</text>
-<text x="115" y "92" fill="${COLORS.text}" font-size="11" font-family="monospace">ln(50) ≈ 3.912</text>
+<text x="35" y="74" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">log-knop:</text>
+<text x="115" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">log(50) ≈ 1.699</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">ln-knop:</text>
+<text x="115" y="92" fill="${COLORS.text}" font-size="11" font-family="monospace">ln(50) ≈ 3.912</text>
 <line x1="30" y1="105" x2="270" y2="105" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "126" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">grondtal-omschakeling:</text>
-<text x="35" y "144" fill="${COLORS.text}" font-size="12" font-family="monospace">log_a(b) = log(b) / log(a)</text>
-<text x="35" y "164" fill="${COLORS.muted}" font-size="11" font-family="monospace">log₂(50) = log(50)/log(2)</text>
-<text x="35" y "180" fill="${COLORS.muted}" font-size="11" font-family="monospace">≈ 1.699 / 0.301 ≈ 5.643</text>
+<text x="35" y="126" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">grondtal-omschakeling:</text>
+<text x="35" y="144" fill="${COLORS.text}" font-size="12" font-family="monospace">log_a(b) = log(b) / log(a)</text>
+<text x="35" y="164" fill="${COLORS.muted}" font-size="11" font-family="monospace">log₂(50) = log(50)/log(2)</text>
+<text x="35" y="180" fill="${COLORS.muted}" font-size="11" font-family="monospace">≈ 1.699 / 0.301 ≈ 5.643</text>
 </svg>`,
     checks: [
       {
@@ -238,12 +238,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">drie speciale waarden</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(1) = 0</text>
-<text x="35" y "98" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(a) = 1</text>
-<text x="35" y "120" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(a^n) = n</text>
+<text x="35" y="76" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(1) = 0</text>
+<text x="35" y="98" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(a) = 1</text>
+<text x="35" y="120" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">log_a(a^n) = n</text>
 <line x1="30" y1="135" x2="270" y2="135" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "156" fill="${COLORS.muted}" font-size="11" font-family="monospace">log(1) = 0  · ln(e) = 1</text>
-<text x="35" y "172" fill="${COLORS.muted}" font-size="11" font-family="monospace">log₂(2⁵) = 5 · log(10⁴) = 4</text>
+<text x="35" y="156" fill="${COLORS.muted}" font-size="11" font-family="monospace">log(1) = 0  · ln(e) = 1</text>
+<text x="35" y="172" fill="${COLORS.muted}" font-size="11" font-family="monospace">log₂(2⁵) = 5 · log(10⁴) = 4</text>
 </svg>`,
     checks: [
       {
@@ -279,12 +279,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log(ab) = log(a) + log(b)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2·5) = log(2) + log(5)</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(8·4) = log₂(8) + log₂(4)</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="12" font-family="monospace">       = 3 + 2 = 5</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2·5) = log(2) + log(5)</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(8·4) = log₂(8) + log₂(4)</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="12" font-family="monospace">       = 3 + 2 = 5</text>
 <line x1="30" y1="125" x2="270" y2="125" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "146" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ alleen voor PRODUCT, niet som:</text>
-<text x="35" y "164" fill="${COLORS.alt}" font-size="11" font-family="monospace">log(a + b) ≠ log(a) + log(b)</text>
+<text x="35" y="146" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ alleen voor PRODUCT, niet som:</text>
+<text x="35" y="164" fill="${COLORS.alt}" font-size="11" font-family="monospace">log(a + b) ≠ log(a) + log(b)</text>
 </svg>`,
     checks: [
       {
@@ -312,13 +312,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log(a/b) = log(a) − log(b)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(100/10) = 2 − 1 = 1</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(32/4) = 5 − 2 = 3</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="12" font-family="monospace">log(0.5) = log(1) − log(2)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="monospace">       = -log(2)</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(100/10) = 2 − 1 = 1</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">log₂(32/4) = 5 − 2 = 3</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="12" font-family="monospace">log(0.5) = log(1) − log(2)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="monospace">       = -log(2)</text>
 <line x1="30" y1="140" x2="270" y2="140" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "160" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ alleen voor DELING:</text>
-<text x="35" y "176" fill="${COLORS.alt}" font-size="11" font-family="monospace">log(a − b) ≠ log(a) − log(b)</text>
+<text x="35" y="160" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">⚠ alleen voor DELING:</text>
+<text x="35" y="176" fill="${COLORS.alt}" font-size="11" font-family="monospace">log(a − b) ≠ log(a) − log(b)</text>
 </svg>`,
     checks: [
       {
@@ -346,13 +346,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log(a^n) = n · log(a)</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2³) = 3 · log(2)</text>
-<text x="35" y "94" fill="${COLORS.text}" font-size="12" font-family="monospace">log(1000) = 3 · log(10) = 3</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="12" font-family="monospace">log(36) = 2 · log(6)</text>
+<text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2³) = 3 · log(2)</text>
+<text x="35" y="94" fill="${COLORS.text}" font-size="12" font-family="monospace">log(1000) = 3 · log(10) = 3</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="12" font-family="monospace">log(36) = 2 · log(6)</text>
 <line x1="30" y1="124" x2="270" y2="124" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "144" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">cruciaal voor:</text>
-<text x="35" y "162" fill="${COLORS.muted}" font-size="11" font-family="monospace">2^x = 50 → x · log(2) = log(50)</text>
-<text x="35" y "178" fill="${COLORS.muted}" font-size="11" font-family="monospace">→ x = log(50)/log(2) ≈ 5.64</text>
+<text x="35" y="144" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">cruciaal voor:</text>
+<text x="35" y="162" fill="${COLORS.muted}" font-size="11" font-family="monospace">2^x = 50 → x · log(2) = log(50)</text>
+<text x="35" y="178" fill="${COLORS.muted}" font-size="11" font-family="monospace">→ x = log(50)/log(2) ≈ 5.64</text>
 </svg>`,
     checks: [
       {
@@ -382,12 +382,12 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">2^x = 100 oplossen</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="12" font-family="monospace">2^x = 100         | log</text>
-<text x="35" y "92" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2^x) = log(100)</text>
-<text x="35" y "110" fill="${COLORS.alt}" font-size="12" font-family="monospace">x · log(2) = log(100)</text>
-<text x="35" y "128" fill="${COLORS.text}" font-size="12" font-family="monospace">x = log(100)/log(2)</text>
-<text x="35" y "146" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">x ≈ 6.644</text>
-<text x="150" y "176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">controleer: 2^6.644 ≈ 100 ✓</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="12" font-family="monospace">2^x = 100         | log</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="12" font-family="monospace">log(2^x) = log(100)</text>
+<text x="35" y="110" fill="${COLORS.alt}" font-size="12" font-family="monospace">x · log(2) = log(100)</text>
+<text x="35" y="128" fill="${COLORS.text}" font-size="12" font-family="monospace">x = log(100)/log(2)</text>
+<text x="35" y="146" fill="${COLORS.good}" font-size="13" font-family="monospace" font-weight="bold">x ≈ 6.644</text>
+<text x="150" y="176" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">controleer: 2^6.644 ≈ 100 ✓</text>
 </svg>`,
     checks: [
       {
@@ -415,13 +415,13 @@ const steps = [
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">verdubbelings- / halveringstijd</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "74" fill="${COLORS.text}" font-size="11" font-family="monospace">groei 5%/jaar → verdubbelt:</text>
-<text x="35" y "92" fill="${COLORS.alt}" font-size="11" font-family="monospace">1.05^T = 2 → T ≈ 14.2 jaar</text>
-<text x="35" y "112" fill="${COLORS.text}" font-size="11" font-family="monospace">afname 3%/jaar → halveert:</text>
-<text x="35" y "130" fill="${COLORS.alt}" font-size="11" font-family="monospace">0.97^T = ½ → T ≈ 22.8 jaar</text>
+<text x="35" y="74" fill="${COLORS.text}" font-size="11" font-family="monospace">groei 5%/jaar → verdubbelt:</text>
+<text x="35" y="92" fill="${COLORS.alt}" font-size="11" font-family="monospace">1.05^T = 2 → T ≈ 14.2 jaar</text>
+<text x="35" y="112" fill="${COLORS.text}" font-size="11" font-family="monospace">afname 3%/jaar → halveert:</text>
+<text x="35" y="130" fill="${COLORS.alt}" font-size="11" font-family="monospace">0.97^T = ½ → T ≈ 22.8 jaar</text>
 <line x1="30" y1="142" x2="270" y2="142" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y "162" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">vuistregel van 70:</text>
-<text x="35" y "180" fill="${COLORS.muted}" font-size="11" font-family="monospace">verdubbelingstijd ≈ 70 / r%</text>
+<text x="35" y="162" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">vuistregel van 70:</text>
+<text x="35" y="180" fill="${COLORS.muted}" font-size="11" font-family="monospace">verdubbelingstijd ≈ 70 / r%</text>
 </svg>`,
     checks: [
       {

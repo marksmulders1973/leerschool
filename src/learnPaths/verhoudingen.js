@@ -25,13 +25,13 @@ const steps = [
     explanation: "Een **verhouding** zegt hoe twee (of meer) hoeveelheden zich tot elkaar verhouden. **Niet** de absolute getallen, maar de **verhouding** ertussen.\n\n**Voorbeelden**:\n• Een kan limonadesiroop: **1 deel siroop op 4 delen water**. Verhouding: **1 : 4**.\n• In een klas: **8 jongens en 12 meisjes**. Verhouding: **8 : 12** (kun je vereenvoudigen tot 2 : 3).\n• Maatbeker meel/water: **3 : 2** (3 maatjes meel op 2 maatjes water).\n\n**Notatie**: we schrijven verhoudingen met een **dubbelpunt**: **a : b** (lees: 'a tot b').\n\n**Verschil met breuk**: \n• ⅖ = 2 deel van een totaal van 5 (breuk).\n• 2 : 3 = 2 deel naast 3 deel (verhouding) — totaal 5 delen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="60" width="50" height="80" fill="rgba(255,213,79,0.40)" stroke="${COLORS.point}" stroke-width="2"/>
-<text x="65" y "108" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">1</text>
-<text x="65" y "160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">siroop</text>
-<text x="105" y "108" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial" font-weight="bold">:</text>
+<text x="65" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">1</text>
+<text x="65" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">siroop</text>
+<text x="105" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial" font-weight="bold">:</text>
 <rect x="120" y="60" width="140" height="80" fill="rgba(0,168,200,0.25)" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="190" y "108" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">4</text>
-<text x="190" y "160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">water</text>
-<text x="150" y "190" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">verhouding 1 : 4</text>
+<text x="190" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">4</text>
+<text x="190" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">water</text>
+<text x="150" y="190" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">verhouding 1 : 4</text>
 </svg>`,
     checks: [
       {
@@ -51,13 +51,13 @@ const steps = [
     title: "Verhoudingen vereenvoudigen",
     explanation: "Net als breuken kun je een verhouding **vereenvoudigen** door beide getallen door **hetzelfde getal** te delen.\n\n**Voorbeelden**:\n• 6 : 9 = (÷3) **2 : 3**\n• 10 : 15 = (÷5) **2 : 3**\n• 20 : 30 = (÷10) **2 : 3**\n• 4 : 6 : 8 = (÷2) **2 : 3 : 4** (kan ook met meer delen)\n\nDe vereenvoudigde vorm zegt **dezelfde** verhouding — alleen met kleinere getallen.\n\n**Volledig vereenvoudigd** als de getallen geen gemeenschappelijke deler meer hebben.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="80" y "55" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial" font-weight="bold">6 : 9</text>
-<text x="150" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial">↓ ÷ 3</text>
-<text x="80" y "120" text-anchor="middle" fill="${COLORS.point}" font-size="22" font-family="Arial" font-weight="bold">2 : 3</text>
-<text x="200" y "100" fill="${COLORS.text}" font-size="13" font-family="Arial">10 : 15 = 2 : 3</text>
-<text x="200" y "125" fill="${COLORS.text}" font-size="13" font-family="Arial">20 : 30 = 2 : 3</text>
-<text x="200" y "150" fill="${COLORS.text}" font-size="13" font-family="Arial">8 : 12 = 2 : 3</text>
-<text x="150" y "185" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">allemaal dezelfde verhouding</text>
+<text x="80" y="55" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial" font-weight="bold">6 : 9</text>
+<text x="150" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial">↓ ÷ 3</text>
+<text x="80" y="120" text-anchor="middle" fill="${COLORS.point}" font-size="22" font-family="Arial" font-weight="bold">2 : 3</text>
+<text x="200" y="100" fill="${COLORS.text}" font-size="13" font-family="Arial">10 : 15 = 2 : 3</text>
+<text x="200" y="125" fill="${COLORS.text}" font-size="13" font-family="Arial">20 : 30 = 2 : 3</text>
+<text x="200" y="150" fill="${COLORS.text}" font-size="13" font-family="Arial">8 : 12 = 2 : 3</text>
+<text x="150" y="185" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">allemaal dezelfde verhouding</text>
 </svg>`,
     checks: [
       {
@@ -78,12 +78,12 @@ const steps = [
     explanation: "Een verhouding kun je omschrijven naar een **breuk** of **percentage**.\n\n**Voorbeeld**: 3 jongens : 7 meisjes (totaal 10 leerlingen).\n• Jongens-deel als breuk: **³⁄₁₀** = 0,3 = **30%**\n• Meisjes-deel: **⁷⁄₁₀** = 0,7 = **70%**\n\n**Truc**: tel eerst de **delen samen** (= het totaal). Dan is elk deel een **breuk** van dat totaal.\n\n**Voorbeeld 2**: verhouding suiker:meel:boter = 1 : 3 : 4.\n• Totaal: 1 + 3 + 4 = 8 delen.\n• Suiker: ⅛ = 12,5%\n• Meel: ⅜ = 37,5%\n• Boter: ⁴⁄₈ = 50%",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="60" width="60" height="60" fill="rgba(0,200,83,0.40)" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="70" y "95" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">3</text>
+<text x="70" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">3</text>
 <rect x="100" y="60" width="140" height="60" fill="rgba(255,112,67,0.30)" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<text x="170" y "95" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">7</text>
-<text x="70" y "140" text-anchor="middle" fill="${COLORS.curve}" font-size="11" font-family="Arial" font-weight="bold">³⁄₁₀ = 30%</text>
-<text x="170" y "140" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">⁷⁄₁₀ = 70%</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">3 : 7 (totaal 10 delen)</text>
+<text x="170" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">7</text>
+<text x="70" y="140" text-anchor="middle" fill="${COLORS.curve}" font-size="11" font-family="Arial" font-weight="bold">³⁄₁₀ = 30%</text>
+<text x="170" y="140" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">⁷⁄₁₀ = 70%</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">3 : 7 (totaal 10 delen)</text>
 </svg>`,
     checks: [
       {
@@ -106,16 +106,16 @@ const steps = [
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5"/>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="150" y1="20" x2="150" y2="190" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="95" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">appels</text>
-<text x="205" y "40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">euro</text>
-<text x="95" y "75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">3</text>
-<text x="205" y "75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">1,50</text>
-<text x="95" y "110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="14" font-family="Arial">1</text>
-<text x="205" y "110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="14" font-family="Arial">0,50</text>
-<text x="95" y "155" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">7</text>
-<text x="205" y "155" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">3,50</text>
-<text x="270" y "75" fill="${COLORS.muted}" font-size="9" font-family="Arial">÷3</text>
-<text x="270" y "110" fill="${COLORS.muted}" font-size="9" font-family="Arial">×7</text>
+<text x="95" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">appels</text>
+<text x="205" y="40" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="12" font-family="Arial">euro</text>
+<text x="95" y="75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">3</text>
+<text x="205" y="75" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">1,50</text>
+<text x="95" y="110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="14" font-family="Arial">1</text>
+<text x="205" y="110" text-anchor="middle" fill="${COLORS.curveAlt}" font-size="14" font-family="Arial">0,50</text>
+<text x="95" y="155" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">7</text>
+<text x="205" y="155" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">3,50</text>
+<text x="270" y="75" fill="${COLORS.muted}" font-size="9" font-family="Arial">÷3</text>
+<text x="270" y="110" fill="${COLORS.muted}" font-size="9" font-family="Arial">×7</text>
 </svg>`,
     checks: [
       {
@@ -138,13 +138,13 @@ const steps = [
 <rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5"/>
 <line x1="40" y1="80" x2="260" y2="80" stroke="${COLORS.curve}" stroke-width="1"/>
 <line x1="150" y1="40" x2="150" y2="160" stroke="${COLORS.curve}" stroke-width="1"/>
-<text x="95" y "70" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">4</text>
-<text x="205" y "70" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">3</text>
-<text x="95" y "120" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">10</text>
-<text x="205" y "120" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x</text>
+<text x="95" y="70" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">4</text>
+<text x="205" y="70" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">3</text>
+<text x="95" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="16" font-family="Arial">10</text>
+<text x="205" y="120" text-anchor="middle" fill="${COLORS.point}" font-size="16" font-family="Arial" font-weight="bold">x</text>
 <line x1="80" y1="60" x2="220" y2="130" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="3 3"/>
 <line x1="220" y1="60" x2="80" y2="130" stroke="${COLORS.curveAlt}" stroke-width="1.5" stroke-dasharray="3 3"/>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4 · x = 10 · 3 → x = 7,50</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">4 · x = 10 · 3 → x = 7,50</text>
 </svg>`,
     checks: [
       {
@@ -164,17 +164,17 @@ const steps = [
     title: "Recept verhouden",
     explanation: "**Praktisch voorbeeld**: een recept voor pannenkoeken voor 4 personen heeft:\n• 200 g meel\n• 500 ml melk\n• 2 eieren\n\nVoor **6 personen** moet je het recept met factor **6/4 = 1,5** vermenigvuldigen:\n• Meel: 200 × 1,5 = **300 g**\n• Melk: 500 × 1,5 = **750 ml**\n• Eieren: 2 × 1,5 = **3 eieren**\n\nVoor **10 personen** factor 10/4 = 2,5:\n• Meel: 500 g\n• Melk: 1250 ml\n• Eieren: 5\n\n**Truc**: bereken eerst voor 1 persoon (deel door oorspronkelijk aantal), dan vermenigvuldig met nieuw aantal.",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">recept × factor 1,5</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">recept × factor 1,5</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "65" fill="${COLORS.text}" font-size="12" font-family="Arial">4 pers:</text>
-<text x="120" y "65" fill="${COLORS.text}" font-size="12" font-family="Arial">200 g meel</text>
-<text x="55" y "85" fill="${COLORS.text}" font-size="12" font-family="Arial">6 pers:</text>
-<text x="120" y "85" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">300 g meel</text>
-<text x="55" y "118" fill="${COLORS.text}" font-size="12" font-family="Arial">4 pers:</text>
-<text x="120" y "118" fill="${COLORS.text}" font-size="12" font-family="Arial">500 ml melk</text>
-<text x="55" y "138" fill="${COLORS.text}" font-size="12" font-family="Arial">6 pers:</text>
-<text x="120" y "138" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">750 ml melk</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">factor: nieuw / oud = 6/4 = 1,5</text>
+<text x="55" y="65" fill="${COLORS.text}" font-size="12" font-family="Arial">4 pers:</text>
+<text x="120" y="65" fill="${COLORS.text}" font-size="12" font-family="Arial">200 g meel</text>
+<text x="55" y="85" fill="${COLORS.text}" font-size="12" font-family="Arial">6 pers:</text>
+<text x="120" y="85" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">300 g meel</text>
+<text x="55" y="118" fill="${COLORS.text}" font-size="12" font-family="Arial">4 pers:</text>
+<text x="120" y="118" fill="${COLORS.text}" font-size="12" font-family="Arial">500 ml melk</text>
+<text x="55" y="138" fill="${COLORS.text}" font-size="12" font-family="Arial">6 pers:</text>
+<text x="120" y="138" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">750 ml melk</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">factor: nieuw / oud = 6/4 = 1,5</text>
 </svg>`,
     checks: [
       {
@@ -195,14 +195,14 @@ const steps = [
     explanation: "Een **schaal** is een verhouding tussen **afbeelding** en **werkelijkheid**.\n\n**Voorbeelden**:\n• Schaal **1 : 100** → 1 cm op kaart = 100 cm in echt = 1 m.\n• Schaal **1 : 50** → 1 cm op tekening = 50 cm in echt.\n• Schaal **2 : 1** → afbeelding is 2× zo groot als werkelijk (vergroting).\n\n**Notatie**: links = afbeelding, rechts = werkelijkheid.\n\n**Voorbeeld**: een plattegrond op schaal 1 : 200. Een kamer is 4 cm op de plattegrond. Hoeveel meter in het echt?\n• 1 cm op plattegrond = 200 cm in echt\n• 4 cm op plattegrond = 4 × 200 = 800 cm = **8 meter**\n\n**Andersom**: in het echt 12 m, hoe groot op kaart 1:200?\n• 12 m = 1200 cm\n• 1200 ÷ 200 = **6 cm** op de kaart",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="60" width="60" height="40" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
-<text x="70" y "85" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4 cm</text>
-<text x="70" y "120" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">plattegrond</text>
-<text x="120" y "85" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">×200</text>
+<text x="70" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">4 cm</text>
+<text x="70" y="120" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">plattegrond</text>
+<text x="120" y="85" text-anchor="middle" fill="${COLORS.point}" font-size="14" font-family="Arial" font-weight="bold">×200</text>
 <rect x="150" y="40" width="120" height="80" fill="rgba(255,112,67,0.18)" stroke="${COLORS.curveAlt}" stroke-width="2"/>
-<text x="210" y "85" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">800 cm</text>
-<text x="210" y "100" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">= 8 m</text>
-<text x="210" y "140" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">werkelijk</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">schaal 1 : 200</text>
+<text x="210" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">800 cm</text>
+<text x="210" y="100" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">= 8 m</text>
+<text x="210" y="140" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">werkelijk</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">schaal 1 : 200</text>
 </svg>`,
     checks: [
       {
@@ -222,13 +222,13 @@ const steps = [
     title: "Schaal toepassingen",
     explanation: "**Veel voorkomende schalen**:\n• **Wegenkaart**: 1 : 100 000 of 1 : 200 000 (1 cm = 1 of 2 km).\n• **Stadsplattegrond**: 1 : 10 000 (1 cm = 100 m).\n• **Bouwtekening**: 1 : 50 of 1 : 100.\n• **Maquette**: 1 : 87 (modelspoor) of 1 : 50.\n\n**Trucs**:\n• Bij schaal 1 : 100 000 → 1 cm = 100 000 cm = **1 km**.\n• Bij schaal 1 : 1 000 000 → 1 cm = 10 km.\n\n**Vergrotende schaal** (eerste getal > tweede):\n• Schaal 5 : 1 → afbeelding 5× groter dan werkelijk (microscoop, mier-tekening).\n\n**Algemene formule**:\n• werkelijke afstand = afstand op kaart × schaalfactor\n• afstand op kaart = werkelijke afstand ÷ schaalfactor",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "35" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">schaal-typen</text>
+<text x="55" y="35" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">schaal-typen</text>
 <line x1="40" y1="45" x2="260" y2="45" stroke="${COLORS.curve}" stroke-width="0.7"/>
-<text x="55" y "65" fill="${COLORS.text}" font-size="11" font-family="Arial">wegenkaart   1 : 100 000  → 1 cm = 1 km</text>
-<text x="55" y "88" fill="${COLORS.text}" font-size="11" font-family="Arial">plattegrond  1 : 10 000  → 1 cm = 100 m</text>
-<text x="55" y "111" fill="${COLORS.text}" font-size="11" font-family="Arial">bouwtekening 1 : 50      → 1 cm = 50 cm</text>
-<text x="55" y "134" fill="${COLORS.text}" font-size="11" font-family="Arial">microscoop   100 : 1     → 100× vergroot</text>
-<text x="150" y "175" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">werkelijk = kaart × schaal</text>
+<text x="55" y="65" fill="${COLORS.text}" font-size="11" font-family="Arial">wegenkaart   1 : 100 000  → 1 cm = 1 km</text>
+<text x="55" y="88" fill="${COLORS.text}" font-size="11" font-family="Arial">plattegrond  1 : 10 000  → 1 cm = 100 m</text>
+<text x="55" y="111" fill="${COLORS.text}" font-size="11" font-family="Arial">bouwtekening 1 : 50      → 1 cm = 50 cm</text>
+<text x="55" y="134" fill="${COLORS.text}" font-size="11" font-family="Arial">microscoop   100 : 1     → 100× vergroot</text>
+<text x="150" y="175" text-anchor="middle" fill="${COLORS.point}" font-size="11" font-family="Arial" font-weight="bold">werkelijk = kaart × schaal</text>
 </svg>`,
     checks: [
       {
@@ -248,16 +248,16 @@ const steps = [
     title: "Eindopdracht: gemengd",
     explanation: "**Drie korte vragen**:\n\n**A**: Vereenvoudig 24 : 36.\n• Beide deelbaar door 12: **2 : 3**\n\n**B**: 4 boekjes kosten €18. Hoeveel kosten 7 boekjes?\n• Per boekje: 18 ÷ 4 = €4,50\n• 7 × 4,50 = **€31,50**\n\n**C**: Schaal 1 : 25 000. Op de kaart 8 cm tussen twee dorpen. Werkelijke afstand?\n• 8 × 25 000 = 200 000 cm = 2000 m = **2 km**\n\n**Recap**:\n- Verhouding = a : b\n- Vereenvoudigen door beide te delen\n- Tabel of kruisproduct voor onbekende\n- Schaal = verhouding kaart : werkelijk\n\nGoed gedaan!",
     svg: `<svg viewBox="0 0 300 200">
-<text x="55" y "32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. 24 : 36 vereenvoudigd</text>
-<rect x="200" y "18" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "37" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">2 : 3</text>
-<text x="55" y "82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. 7 boekjes kosten</text>
-<rect x="200" y "68" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "87" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">€31,50</text>
-<text x="55" y "132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. werkelijke afstand</text>
-<rect x="200" y "118" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
-<text x="230" y "137" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">2 km</text>
-<text x="150" y "180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">verhoudingen onder de knie 🏆</text>
+<text x="55" y="32" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. 24 : 36 vereenvoudigd</text>
+<rect x="200" y="18" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="37" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">2 : 3</text>
+<text x="55" y="82" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">B. 7 boekjes kosten</text>
+<rect x="200" y="68" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="87" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">€31,50</text>
+<text x="55" y="132" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">C. werkelijke afstand</text>
+<rect x="200" y="118" width="60" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
+<text x="230" y="137" text-anchor="middle" fill="${COLORS.point}" font-size="12" font-family="Arial" font-weight="bold">2 km</text>
+<text x="150" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">verhoudingen onder de knie 🏆</text>
 </svg>`,
     checks: [
       {
