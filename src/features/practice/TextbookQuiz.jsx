@@ -858,6 +858,8 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                   timePerQuestion,
                   textbook: {
                     bookName,
+                    bookId: selectedBook?.id || null,
+                    chapterNum: chapterNum || null,
                     edition: deel || null,
                     chapter,
                     topic: null,

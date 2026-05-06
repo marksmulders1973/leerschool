@@ -75,6 +75,7 @@ import {
 } from "./features/practice/aiPool.js";
 import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
 import { buildHerhaalPool } from "./features/mastery/herhaalQuiz.js";
+import { getTextbookQuestions } from "./data/textbookQuestions.js";
 import { loadQuizzesByCreator, saveQuiz, findQuizByCode } from "./data/repos/quizzesRepo.js";
 import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/leaderboardRepo.js";
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
@@ -448,6 +449,20 @@ export default function App() {
         const poolCount = quiz.questionCount || 8;
         const topicKey = quiz.topic || null;
         const textbookKey = buildTextbookKey(quiz.textbook);
+
+        // Stap 0: handgeschreven schoolboek-vragen (audit 2 — Mark wenste
+        // hardcoded vragen per PO-boek/hoofdstuk). Cascade vóór de AI-pool:
+        // als er ≥ poolCount/2 hardcoded vragen voor dit boek+hoofdstuk
+        // zijn → gebruik die. Geen AI-call, geen pool-roundtrip.
+        const handgeschreven = getTextbookQuestions({
+          bookId: quiz.textbook?.bookId,
+          chapterIdx: quiz.textbook?.chapterNum,
+          count: poolCount,
+        });
+        if (handgeschreven.length >= Math.max(3, Math.ceil(poolCount / 2))) {
+          questions = handgeschreven;
+        } else {
+
         // Stap 1: probeer eerst de gedeelde vragenbank (eerder gegenereerde
         // AI-vragen). Scheelt een AI-call als er genoeg variatie in pool zit.
         const poolRows = await fetchPoolQuestions(quiz.subject, quiz.level, topicKey, textbookKey, poolCount);
@@ -495,6 +510,7 @@ export default function App() {
           setLoading(false);
           if (abortControllerRef.current?.signal.aborted) return;
         }
+        } // einde else-branch handgeschreven-fallback
       }
 
       if (questions.length === 0) {
