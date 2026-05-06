@@ -1013,6 +1013,11 @@ export default function App() {
           }}
           onSelfStudy={() => setPage("self-study")}
           onTextbook={() => setPage("textbook")}
+          onPickPathsForSubject={(subjectId) => {
+            // M2 audit 2: vakkenkeuze → LearnPathsHub gefilterd op vak
+            setLearnFilterSubject(subjectId);
+            setPage("learn-paths-hub");
+          }}
           onBack={() => setPage("home")}
           onHome={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}

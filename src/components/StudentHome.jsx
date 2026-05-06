@@ -1,11 +1,54 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import { loadDueTopics } from "../features/mastery/mastery.js";
+import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, pendingCode, streak, onViewResult, onDeleteResult }) {
+// Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
+// 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
+// voor het kind. Subject-id verwijst naar SUBJECTS in constants.js.
+const VAKKEN_PO = [
+  { id: "rekenen" },
+  { id: "taal" },
+  { id: "spelling" },
+  { id: "begrijpend-lezen" },
+  { id: "natuur", labelOverride: "Wereld & Natuur" },
+  { id: "engels" },
+  { id: "geschiedenis" },
+  { id: "aardrijkskunde" },
+];
+const VAKKEN_VO = [
+  { id: "wiskunde" },
+  { id: "nederlands" },
+  { id: "engels" },
+  { id: "aardrijkskunde" },
+  { id: "geschiedenis" },
+  { id: "biologie" },
+  { id: "natuurkunde" },
+  { id: "scheikunde" },
+  { id: "economie" },
+  { id: "frans" },
+];
+
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult }) {
+  // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
+  // anders PO. Gebruiker kan handmatig switchen.
+  const [vakModus, setVakModus] = useState(userSchoolType ? "vo" : "po");
+  const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
+  // Tel paden per subject voor het juiste niveau (PO=groep*, VO=klas*).
+  const padenPerVak = useMemo(() => {
+    const prefix = vakModus === "vo" ? "klas" : "groep";
+    const counts = {};
+    Object.values(ALL_LEARN_PATHS).forEach(p => {
+      if (!p?.subject) return;
+      const lvl = (p.level || "").toLowerCase();
+      if (!lvl.startsWith(prefix)) return;
+      counts[p.subject] = (counts[p.subject] || 0) + 1;
+    });
+    return counts;
+  }, [vakModus]);
   // Due-onderwerpen voor de mixed-herhaal-quiz (P3a deel 2). Laden in
   // achtergrond — als 0 toont de card niet, en de Self-Study + Boek + Voortgang
   // + Scorebord-grid neemt de hele bovenste rij in.
@@ -104,6 +147,136 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             </span>
           </div>
         )}
+
+        {/* PO/VO-toggle + vakkenkeuze-grid (audit 2 M2 — Mark's screenshot 2):
+            kind landt eerst op concrete vakkeuze ipv abstracte "Test je kennis".
+            Pim's klacht "ik wil REKENEN zien" wordt hiermee opgelost. Daarna
+            volgt de bestaande StudentHome-content (kwartier, streak, weakest,
+            herhaal, opdrachten, recent) voor wie doorscrollt — twee vliegen
+            in één pagina. */}
+        <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+          {[
+            { id: "po", label: "Basisschool", desc: "groep 1-8", emoji: "🎒" },
+            { id: "vo", label: "Voortgezet", desc: "klas 1-6", emoji: "🎓" },
+          ].map(t => {
+            const sel = vakModus === t.id;
+            return (
+              <button
+                key={t.id}
+                onClick={() => { SoundEngine.play("click"); setVakModus(t.id); }}
+                style={{
+                  flex: 1,
+                  padding: "10px 12px",
+                  borderRadius: 12,
+                  border: sel ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.12)",
+                  background: sel ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
+                  color: sel ? "#00d4ff" : "rgba(255,255,255,0.6)",
+                  fontFamily: "var(--font-display)",
+                  fontSize: 13,
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 6,
+                }}
+              >
+                <span style={{ fontSize: 16 }} aria-hidden="true">{t.emoji}</span>
+                <span>{t.label}</span>
+                <span style={{ opacity: 0.7, fontWeight: 500, fontSize: 11 }}>{t.desc}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        <h3 style={{ ...styles.sectionTitle, marginTop: 0, marginBottom: 10 }}>
+          Kies je vak — leren of oefenen?
+        </h3>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
+          {vakkenLijst.map((vak) => {
+            const subj = SUBJECTS.find(s => s.id === vak.id);
+            if (!subj) return null;
+            const label = vak.labelOverride || subj.label;
+            const aantalPaden = padenPerVak[vak.id] || 0;
+            const heeftPaden = aantalPaden > 0;
+            return (
+              <div
+                key={vak.id}
+                style={{
+                  borderRadius: 14,
+                  border: "1px solid rgba(255,255,255,0.10)",
+                  background: "rgba(255,255,255,0.04)",
+                  padding: "12px 12px 10px",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 22 }} aria-hidden="true">{subj.icon}</span>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: subj.color, lineHeight: 1.2 }}>
+                    {label}
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: 6 }}>
+                  <button
+                    disabled={!heeftPaden || !onPickPathsForSubject}
+                    onClick={() => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id); } }}
+                    style={{
+                      flex: 1,
+                      padding: "7px 6px",
+                      borderRadius: 8,
+                      border: "none",
+                      background: heeftPaden ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.04)",
+                      color: heeftPaden ? "#00e676" : "rgba(255,255,255,0.35)",
+                      fontFamily: "var(--font-display)",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      cursor: heeftPaden ? "pointer" : "default",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 1,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    <span>📚 Leren</span>
+                    <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 10, opacity: 0.85 }}>
+                      {heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "binnenkort"}
+                    </span>
+                  </button>
+                  <button
+                    onClick={() => { SoundEngine.play("click"); onTextbook && onTextbook(); }}
+                    style={{
+                      flex: 1,
+                      padding: "7px 6px",
+                      borderRadius: 8,
+                      border: "none",
+                      background: "rgba(255,107,53,0.15)",
+                      color: "#ff8c42",
+                      fontFamily: "var(--font-display)",
+                      fontSize: 11,
+                      fontWeight: 700,
+                      cursor: "pointer",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 1,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    <span>🎯 Oefenen</span>
+                    <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 10, opacity: 0.85 }}>
+                      uit je boek
+                    </span>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         {/* 15-min sessie-indicator — koppeling met "Een kwartier per dag"
             slogan. Vult zich realtime; bij overschrijden van target geeft
             'ie een ✓ en compliment. */}
