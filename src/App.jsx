@@ -75,6 +75,7 @@ import {
   poolRowToQuestion,
 } from "./features/practice/aiPool.js";
 import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
+import { buildHerhaalPool } from "./features/mastery/herhaalQuiz.js";
 import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
@@ -1032,6 +1033,24 @@ export default function App() {
           onLeaderboard={() => setPage("leaderboard")}
           onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}
           onDeleteResult={(id) => setStudentProgress(prev => prev.filter(p => p.id !== id))}
+          onHerhaalQuiz={async () => {
+            // Mixed-due-quiz: spaced-repetition zichtbaar maken als feature
+            // (P3a deel 2). Pool wordt server-side opgebouwd uit topic_mastery
+            // (next_due_at <= now), gemixed over alle due-onderwerpen.
+            const { pool, sources } = await buildHerhaalPool(userName, { maxQuestions: 10 });
+            if (!pool.length) return;
+            const quiz = {
+              id: "herhaal-" + Date.now(),
+              subject: "herhaal",
+              level: userLevel ? (userSchoolType ? `klas${userLevel}` : `groep${userLevel}`) : "gemengd",
+              questionCount: pool.length,
+              timePerQuestion: 0,
+              preGeneratedQuestions: pool,
+              title: `Herhaling — ${sources.slice(0, 3).join(", ")}${sources.length > 3 ? "…" : ""}`,
+            };
+            setCurrentQuiz(quiz);
+            startGame(quiz, "self");
+          }}
           streak={streak}
           pendingCode={pendingCode}
         />

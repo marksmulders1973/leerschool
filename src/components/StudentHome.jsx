@@ -2,9 +2,22 @@ import { useState, useEffect } from "react";
 import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
+import { loadDueTopics } from "../features/mastery/mastery.js";
 import Header from "./Header.jsx";
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, pendingCode, streak, onViewResult, onDeleteResult }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, pendingCode, streak, onViewResult, onDeleteResult }) {
+  // Due-onderwerpen voor de mixed-herhaal-quiz (P3a deel 2). Laden in
+  // achtergrond — als 0 toont de card niet, en de Self-Study + Boek + Voortgang
+  // + Scorebord-grid neemt de hele bovenste rij in.
+  const [dueCount, setDueCount] = useState(0);
+  useEffect(() => {
+    let cancelled = false;
+    if (!userName) return;
+    loadDueTopics(userName)
+      .then(list => { if (!cancelled) setDueCount(Array.isArray(list) ? list.length : 0); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [userName]);
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
@@ -179,6 +192,44 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             </button>
           </div>
         )}
+        {/* Mixed-herhaal-quiz: alleen tonen als spaced repetition iets klaar
+            heeft staan voor vandaag. Maakt het abstracte "due_at" concreet
+            voor de leerling — één klik en je oefent precies wat herhaling
+            nodig heeft, gemixed over je hele profiel. */}
+        {dueCount > 0 && onHerhaalQuiz && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onHerhaalQuiz(); }}
+            style={{
+              width: "100%",
+              padding: "14px 16px",
+              marginBottom: 6,
+              borderRadius: 14,
+              border: "1px solid rgba(124,77,255,0.5)",
+              background: "linear-gradient(135deg, rgba(124,77,255,0.18), rgba(167,139,250,0.10))",
+              color: "var(--color-text)",
+              fontFamily: "var(--font-body)",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              textAlign: "left",
+            }}
+          >
+            <span style={{ fontSize: 26 }} aria-hidden="true">🔄</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa" }}>
+                Herhaling — {dueCount} {dueCount === 1 ? "onderwerp" : "onderwerpen"} klaar
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                Vragen gemixed uit alles wat je herhaling nodig heeft (~5 min)
+              </div>
+            </div>
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#a78bfa", background: "rgba(124,77,255,0.25)", borderRadius: 999, padding: "5px 11px", whiteSpace: "nowrap" }}>
+              Start →
+            </span>
+          </button>
+        )}
+
         <div style={{ textAlign: "center", marginBottom: 8 }}>
           <button
             onClick={() => { setShowCode(v => !v); setError(""); setCode(""); }}
