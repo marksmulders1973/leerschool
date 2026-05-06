@@ -57,60 +57,8 @@ class TeaserErrorBoundary extends Component {
 
 // Mini-illustratie voor de "Leren"-tegel: stapeltje van drie boeken in
 // brand-groen / goud-geel / licht-blauw, met titel-regeltjes op de spines.
-// Communiceert "veel onderwerpen om te leren" — past bij de brede dekking
-// van leerpaden in de app.
-function BookStackIcon({ size, primary = "#00c853", accent = "#ffd54f", complement = "#5d9cec" }) {
-  const dim = size != null ? { width: size, height: size } : { width: "100%", height: "100%" };
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      {...dim}
-      preserveAspectRatio="xMidYMid meet"
-      aria-hidden="true"
-      focusable="false"
-      style={{ display: "block" }}
-    >
-      {/* Onderste boek (lichtblauw) — breedst, ligt plat. */}
-      <g transform="translate(0,0)">
-        <rect x="14" y="74" width="72" height="14" rx="2" fill={complement} opacity="0.85"/>
-        <rect x="14" y="74" width="6" height="14" fill={complement}/>
-        <rect x="22" y="78" width="34" height="1.6" fill="rgba(255,255,255,0.55)"/>
-        <rect x="22" y="82" width="22" height="1.6" fill="rgba(255,255,255,0.35)"/>
-      </g>
-      {/* Middelste boek (goud-geel) — iets smaller, licht verschoven naar links. */}
-      <g transform="translate(0,0)">
-        <rect x="10" y="56" width="68" height="14" rx="2" fill={accent} opacity="0.9"/>
-        <rect x="10" y="56" width="6" height="14" fill={accent}/>
-        <rect x="18" y="60" width="38" height="1.6" fill="rgba(40,30,0,0.45)"/>
-        <rect x="18" y="64" width="24" height="1.6" fill="rgba(40,30,0,0.30)"/>
-      </g>
-      {/* Bovenste boek (brand-groen, opengeslagen) — toont 2 pagina's met regels. */}
-      <g transform="translate(0,0)">
-        {/* Linker pagina */}
-        <path d="M16 28 L48 24 L48 50 L16 54 Z" fill="rgba(255,255,255,0.95)" stroke={primary} strokeWidth="1.4" strokeLinejoin="round"/>
-        {/* Rechter pagina */}
-        <path d="M52 24 L84 28 L84 54 L52 50 Z" fill="rgba(255,255,255,0.95)" stroke={primary} strokeWidth="1.4" strokeLinejoin="round"/>
-        {/* Tekstregeltjes links */}
-        <line x1="22" y1="32" x2="44" y2="29" stroke="rgba(0,0,0,0.45)" strokeWidth="1"/>
-        <line x1="22" y1="36" x2="42" y2="33" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        <line x1="22" y1="40" x2="40" y2="37" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        <line x1="22" y1="44" x2="38" y2="41" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        {/* Tekstregeltjes rechts */}
-        <line x1="56" y1="29" x2="78" y2="32" stroke="rgba(0,0,0,0.45)" strokeWidth="1"/>
-        <line x1="56" y1="33" x2="76" y2="36" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        <line x1="56" y1="37" x2="74" y2="40" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        <line x1="56" y1="41" x2="72" y2="44" stroke="rgba(0,0,0,0.30)" strokeWidth="1"/>
-        {/* Boek-rug in het midden (verbinding tussen pagina's) */}
-        <path d="M48 24 L52 24 L52 50 L48 50 Z" fill={primary} opacity="0.85"/>
-        {/* Bladwijzer-lintje hangt uit boven boek */}
-        <path d="M62 24 L62 18 L66 21 L70 18 L70 24 Z" fill="#ef6c5b"/>
-      </g>
-    </svg>
-  );
-}
-
-// QuizCardIcon — gedeeld in src/shared/ui/QuizCardIcon.jsx (gebruikt op
-// home-tegel "Test je kennis" en bottom-nav "Test"-tab).
+// QuizCardIcon — gedeeld in src/shared/ui/QuizCardIcon.jsx (gebruikt in de
+// bottom-nav "Test"-tab; uit hero-tegels gehaald bij de homepage-snoei).
 
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
@@ -431,125 +379,6 @@ function TickerBanner() {
         </div>
       </div>
     </>
-  );
-}
-
-const FEATURES_LEFT = [
-  { id: "cito",      icon: "🎯", label: "Cito oefenen", sub: "Oefen de eindtoets",  color: "#ff6b35", bg: "rgba(255,107,53,0.12)", border: "rgba(255,107,53,0.25)", badge: null, vakken: ["🔢 Rekenen", "📝 Taal", "📖 Lezen", "🌍 Wereld", "📊 Studievaardigh."] },
-  { id: "eindexamen",icon: "🎓", label: "Eindexamen",   sub: "VMBO · HAVO · VWO",   color: "#7c4dff", bg: "rgba(124,77,255,0.12)", border: "rgba(124,77,255,0.2)",  badge: null },
-];
-const FEATURES_RIGHT = [
-  { id: "schoolboeken",    label: "Schoolboeken",    sub: "100+ echte boeken",          color: "#0072ff", bg: "rgba(0,114,255,0.12)",   border: "rgba(0,114,255,0.2)",   badge: null },
-  { id: "ai-vragen",       label: "AI-vragen",       sub: "Elk onderwerp",              color: "#7c3aed", bg: "rgba(124,58,237,0.12)",  border: "rgba(124,58,237,0.2)",  badge: "Nieuw" },
-  { id: "tafels",           label: "Tafels oefenen",  sub: "Groep 3 t/m 6",             color: "#059669", bg: "rgba(5,150,105,0.12)",   border: "rgba(5,150,105,0.2)",   badge: null },
-  { id: "begrijpend-lezen",label: "Begrijpend lezen",sub: "Groep 5–8",                  color: "#d97706", bg: "rgba(217,119,6,0.12)",   border: "rgba(217,119,6,0.2)",   badge: null },
-  { id: "spelling",        label: "Spelling",        sub: "dt-regels & werkwoorden",    color: "#f43f5e", bg: "rgba(244,63,94,0.12)",   border: "rgba(244,63,94,0.2)",   badge: null },
-  { id: "woordenschat",    label: "Woordenschat",    sub: "Synoniemen & betekenissen",  color: "#0891b2", bg: "rgba(8,145,178,0.12)",   border: "rgba(8,145,178,0.2)",   badge: null },
-  { id: "redactiesommen",  label: "Redactiesommen",  sub: "Rekenen met tekst",          color: "#ea580c", bg: "rgba(234,88,12,0.12)",   border: "rgba(234,88,12,0.2)",   badge: null },
-  { id: "scorebord",       label: "Scorebord",       sub: "Strijd om de top",           color: "#e11d48", bg: "rgba(225,29,72,0.12)",   border: "rgba(225,29,72,0.2)",   badge: null },
-  { id: "leerkrachten",    label: "Leerkrachten",    sub: "Kennistest voor uw klas",    color: "#00897b", bg: "rgba(0,137,123,0.12)",   border: "rgba(0,137,123,0.2)",   badge: null },
-  { id: "pro",             label: `${BRAND.name} Pro`,   sub: "Voor ouders & leerkrachten", color: "#a855f7", bg: "rgba(168,85,247,0.10)",  border: "rgba(168,85,247,0.35)", badge: null },
-];
-
-function FeatureShowcase({ onFeatureClick }) {
-  const cardBase = {
-    borderRadius: 14,
-    border: "1px solid",
-    cursor: "pointer",
-    transition: "transform 0.15s ease, box-shadow 0.15s ease",
-    position: "relative",
-    overflow: "hidden",
-  };
-
-  const hover = (color) => ({
-    onMouseEnter: e => { e.currentTarget.style.transform = "scale(1.03)"; e.currentTarget.style.boxShadow = `0 4px 18px ${color}55`; },
-    onMouseLeave: e => { e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.boxShadow = "none"; },
-  });
-
-  const renderBadge = (badge, color) => badge ? (
-    <div style={{
-      position: "absolute", top: 6, right: 6,
-      background: color, color: "var(--color-text-strong)",
-      fontSize: 9, fontWeight: 800,
-      fontFamily: "var(--font-display)",
-      padding: "2px 6px", borderRadius: 20,
-    }}>{badge}</div>
-  ) : null;
-
-  return (
-    <div style={{ width: "100%", maxWidth: 360, marginBottom: 24 }}>
-      <div style={{
-        fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
-        color: "rgba(255,255,255,0.4)", letterSpacing: 1,
-        textTransform: "uppercase", marginBottom: 10, textAlign: "center",
-      }}>Ontdek wat je allemaal kunt oefenen!</div>
-
-      <div style={{ display: "flex", gap: 8 }}>
-
-        {/* Linkerkolom: Cito + Eindexamen */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 8, flex: "1.15 0 0" }}>
-          {FEATURES_LEFT.map(f => (
-            <div key={f.id}
-              onClick={() => onFeatureClick?.(f.id)}
-              {...hover(f.color)}
-              style={{
-                ...cardBase,
-                flex: 1,
-                background: f.bg,
-                borderColor: f.border,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
-                padding: "12px 12px 14px",
-                minHeight: 90,
-              }}>
-              {renderBadge(f.badge, f.color)}
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: f.vakken ? 6 : 2 }}>{f.label}</div>
-              {f.vakken ? (
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-                  {f.vakken.map(v => (
-                    <span key={v} style={{ fontFamily: "var(--font-body)", fontSize: 9, color: "rgba(255,255,255,0.6)", background: "rgba(255,255,255,0.07)", borderRadius: 4, padding: "2px 5px", whiteSpace: "nowrap" }}>{v}</span>
-                  ))}
-                </div>
-              ) : (
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{f.sub}</div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Rechterkolom: 6 blokken zonder icoon, 2×3 grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, flex: "2 0 0" }}>
-          {FEATURES_RIGHT.map(f => (
-            <div key={f.id}
-              onClick={() => onFeatureClick?.(f.id)}
-              {...hover(f.color)}
-              style={{
-                ...cardBase,
-                background: f.bg,
-                borderColor: f.border,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                padding: "10px 10px",
-                minHeight: 58,
-              }}>
-              {renderBadge(f.badge, f.color)}
-              {f.id === "pro" ? (
-                <div style={{ lineHeight: 1.2, marginBottom: 2 }}>
-                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)" }}>{BRAND.name}</span>
-                  <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 900, color: f.color, background: `${f.color}22`, borderRadius: 4, padding: "0 4px", marginLeft: 2 }}>PRO</span>
-                </div>
-              ) : (
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: f.color, lineHeight: 1.2, marginBottom: 2 }}>{f.label}</div>
-              )}
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.45)" }}>{f.sub}</div>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </div>
   );
 }
 
@@ -934,32 +763,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero — 6 even grote vierkante tegels in responsive grid (2×3 op
-            telefoon, 3×2 op tablet/laptop). 1e tegel bevat de echte
-            Mini3DTeaser slider (kubus-z³-berekening); de andere 5 zijn
-            reguliere actie-buttons. Toonbaar voor zowel nieuwe als
-            terugkerende gebruikers — de 3D-kubus is een herkenningspunt
-            voor de home-pagina. */}
+        {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
+            als blikvanger en 3 rol-tegels (Leerling / Student / Leerkracht).
+            Bewust géén "Leren" / "Test" tegels: die concurreerden met de rol-
+            keuze en gaven first-time-users keuze-paralyse (audit 2026-05-06).
+            Na rolkeuze verschijnen Leren + Test vanzelf in de bottom-nav. */}
         {step === "role" && (() => {
           const tiles = [
-            ...(onLearnPathsHub ? [{
-              key: "leren",
-              emoji: "📚",
-              icon: <BookStackIcon primary="#00C853" />,
-              label: "Leren",
-              sub: "uitleg in delen van 15 min",
-              color: "#00C853",
-              onClick: handleLerenClick,
-            }] : []),
-            {
-              key: "oefenen",
-              emoji: "🎯",
-              icon: <QuizCardIcon accent="#ff8030" />,
-              label: "Test je kennis",
-              sub: "snelle toets, in 15 min",
-              color: "#ff8030",
-              onClick: handleOefenenClick,
-            },
             { key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff", onClick: () => handleRoleClick("leerling") },
             { key: "student",  emoji: "🎓", label: "Student",  sub: "vmbo · havo · vwo",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
             { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },

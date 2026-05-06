@@ -3,56 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacybeleid — Studiebol</title>
+  <title>Privacybeleid — Leerkwartier</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background: #0a1220;
       color: #c8d8f0;
-      max-width: 680px;
+      max-width: 720px;
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 40px 24px 80px;
       line-height: 1.7;
     }
     h1 { color: #00e676; font-size: 28px; margin-bottom: 8px; }
     h2 { color: #69f0ae; font-size: 18px; margin-top: 32px; margin-bottom: 8px; }
+    h3 { color: #c8d8f0; font-size: 15px; margin-top: 18px; margin-bottom: 4px; }
     p { margin-bottom: 12px; }
+    ul { margin: 0 0 12px 20px; }
+    li { margin-bottom: 6px; }
     a { color: #00e676; }
     .meta { color: #667788; font-size: 13px; margin-bottom: 32px; }
+    .callout { background: rgba(0, 230, 118, 0.06); border-left: 3px solid #00e676; padding: 12px 16px; border-radius: 4px; margin: 16px 0; }
+    code { background: rgba(255,255,255,0.06); padding: 1px 6px; border-radius: 3px; font-size: 13px; }
   </style>
 </head>
 <body>
 
   <h1>Privacybeleid</h1>
-  <p class="meta">Studiebol — Smulsoft &nbsp;|&nbsp; Laatst bijgewerkt: april 2026</p>
+  <p class="meta">Leerkwartier — Smulsoft &nbsp;|&nbsp; Laatst bijgewerkt: 6 mei 2026</p>
 
-  <p>Studiebol is een educatieve quiz-app voor basisschool en voortgezet onderwijs. De privacy van onze gebruikers — met name kinderen — staat voorop.</p>
+  <p>Leerkwartier is een educatieve oefen-app voor basisschool (groep 1–8) en voortgezet onderwijs. We werken volgens het principe van <em>dataminimalisatie</em>: we verzamelen zo min mogelijk gegevens, en alleen wat nodig is om de app te laten werken.</p>
 
-  <h2>Welke gegevens verzamelen we?</h2>
-  <p>Studiebol vraagt alleen om een <strong>voornaam</strong> om quizzen te kunnen spelen. Deze naam wordt alleen lokaal opgeslagen op het apparaat (via <code>localStorage</code>) en wordt <strong>niet</strong> naar onze servers verstuurd.</p>
-  <p>Quizscores en voortgang worden eveneens alleen lokaal op het apparaat opgeslagen en zijn niet zichtbaar voor derden.</p>
+  <div class="callout">
+    <strong>Korte samenvatting:</strong> we slaan een voornaam, voortgang en spel-scores op via onze backend (Supabase). We tonen <strong>geen advertenties</strong>, gebruiken <strong>geen tracking-cookies</strong> en delen <strong>geen gegevens</strong> met derden voor marketing.
+  </div>
 
-  <h2>Geen accounts of wachtwoorden</h2>
-  <p>Studiebol vereist geen accountregistratie, geen e-mailadres en geen wachtwoord. Er worden geen persoonlijke profielen aangemaakt of bewaard.</p>
+  <h2>Wie is verwerkingsverantwoordelijke?</h2>
+  <p>Smulsoft (eenmanszaak van Mark Smulders), Nederland. Contact: <a href="mailto:marksmulders1973@gmail.com">marksmulders1973@gmail.com</a>.</p>
 
-  <h2>AI-gegenereerde vragen</h2>
-  <p>Studiebol maakt gebruik van de Anthropic Claude API om quizvragen te genereren. Hierbij wordt het gekozen vak en niveau doorgestuurd, maar <strong>nooit</strong> persoonlijke gegevens van de leerling. Zie ook het <a href="https://www.anthropic.com/privacy" target="_blank">privacybeleid van Anthropic</a>.</p>
+  <h2>Welke gegevens verwerken we?</h2>
+
+  <h3>Bij gebruik zonder login (standaard)</h3>
+  <ul>
+    <li><strong>Voornaam</strong> die je zelf invult (verplicht voor het scorebord; mag een bijnaam zijn).</li>
+    <li><strong>Anonieme gebruikers-ID</strong> (UUID) — niet herleidbaar naar persoon.</li>
+    <li><strong>Quiz-resultaten en voortgang</strong> per onderwerp (bv. "groep 6 — breuken — 7/10").</li>
+    <li><strong>Klas/niveau-keuze</strong> (bv. "groep 6" of "klas 2 havo"), om de juiste content te tonen.</li>
+  </ul>
+
+  <h3>Bij optioneel inloggen met Google</h3>
+  <ul>
+    <li>Je <strong>e-mailadres</strong> en <strong>volledige naam</strong> uit je Google-account.</li>
+    <li>Hiermee kun je je voortgang op meerdere apparaten gebruiken en als leerkracht een Pro-account beheren.</li>
+    <li>Je hoeft <strong>niet</strong> in te loggen om Leerkwartier te gebruiken — anoniem werkt volledig.</li>
+  </ul>
+
+  <h3>Wat we <em>niet</em> verzamelen</h3>
+  <ul>
+    <li>Geen GPS-locatie, telefoonnummer, adres, geboortedatum.</li>
+    <li>Geen gespreksopname, microfoon- of cameratoegang.</li>
+    <li>Geen device-fingerprinting of advertentie-ID.</li>
+  </ul>
+
+  <h2>Waarom verwerken we deze gegevens? (verwerkingsgrondslag)</h2>
+  <ul>
+    <li><strong>Uitvoering van de dienst</strong> (AVG art. 6.1.b): voortgang, scorebord en gepersonaliseerde leerpaden.</li>
+    <li><strong>Gerechtvaardigd belang</strong> (AVG art. 6.1.f): technische logging om bugs op te lossen (geen persoonsdata).</li>
+    <li><strong>Toestemming</strong> (AVG art. 6.1.a): bij optionele Google-login.</li>
+  </ul>
+
+  <h2>Kinderen onder de 16 jaar</h2>
+  <p>Leerkwartier is bedoeld voor leerlingen vanaf groep 1 (circa 4 jaar). Onder de Nederlandse uitvoering van AVG art. 8 is voor kinderen onder de 16 jaar <strong>ouderlijke toestemming</strong> nodig voor verwerking op basis van toestemming.</p>
+  <p>Wij vragen daarom als praktische maatregel:</p>
+  <ul>
+    <li>Bij kinderen onder de 16: Leerkwartier <strong>uitsluitend onder begeleiding van een ouder of leerkracht</strong> gebruiken.</li>
+    <li>Geen Google-login voor leerlingen onder de 16 zonder ouder ernaast.</li>
+    <li>Alleen een <strong>voornaam of bijnaam</strong> in het scorebord — geen achternaam, geen schoolnaam, geen klas in herleidbare vorm.</li>
+  </ul>
+  <p>Ouders kunnen op elk moment alle gegevens van hun kind laten verwijderen — zie verderop.</p>
+
+  <h2>Met wie delen we gegevens? (verwerkers)</h2>
+  <ul>
+    <li><strong>Supabase Inc.</strong> (database + authenticatie) — gegevens worden in de EU opgeslagen. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacybeleid Supabase</a>.</li>
+    <li><strong>Vercel Inc.</strong> (hosting) — host alleen de app-code; data zelf staat niet bij Vercel. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Privacybeleid Vercel</a>.</li>
+    <li><strong>Google LLC</strong> (alleen bij optionele Google Sign-In). <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacybeleid Google</a>.</li>
+    <li><strong>Anthropic Inc.</strong> (Claude AI, voor AI-gegenereerde quizvragen) — verstuurt alleen vak/onderwerp, <strong>geen</strong> persoonsdata. <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Privacybeleid Anthropic</a>.</li>
+  </ul>
 
   <h2>Cookies en tracking</h2>
-  <p>Studiebol gebruikt Google Analytics (anoniem) om het gebruik van de app te meten, zodat we de app kunnen verbeteren. Er worden geen advertenties getoond en er vindt geen profilering van gebruikers plaats.</p>
+  <p>Leerkwartier gebruikt <strong>geen tracking-cookies, geen Google Analytics, geen advertentie-pixels</strong>. We tonen geen advertenties in de app.</p>
+  <p>De app slaat wel <em>functionele</em> gegevens op je apparaat op (via <code>localStorage</code>), bijvoorbeeld je laatst gekozen klas of de banner-status. Daar is geen toestemming voor nodig (functionele opslag, ePrivacy art. 11.7a).</p>
 
-  <h2>Kinderen</h2>
-  <p>Studiebol is gericht op kinderen van 4 tot 18 jaar. We verzamelen bewust zo min mogelijk gegevens en slaan nooit persoonlijke informatie op buiten het apparaat van de gebruiker. Ouders of verzorgers kunnen op elk moment alle lokale gegevens wissen via de browserinstellingen.</p>
+  <h2>Hoe lang bewaren we gegevens?</h2>
+  <ul>
+    <li>Anonieme spelersdata: zolang je het account gebruikt. Inactief &gt; 12 maanden → automatisch te verwijderen op verzoek.</li>
+    <li>Google-account-data: zolang je inlogt; bij opzeggen direct verwijderbaar.</li>
+    <li>Foutmeldingen ("Fout melden"-knop): maximaal 12 maanden voor analyse.</li>
+  </ul>
 
-  <h2>Gebruik & kosten</h2>
-  <p>Studiebol is <strong>gratis te gebruiken</strong> voor leerlingen. Voor ouders, leerkrachten en scholen zijn er optionele Pro-features tegen betaling. Leerlingen kunnen altijd gratis gebruik maken van de basisfuncties.</p>
+  <h2>Jouw rechten (AVG)</h2>
+  <p>Je hebt onder de AVG het recht op:</p>
+  <ul>
+    <li><strong>Inzage</strong> in je gegevens (art. 15).</li>
+    <li><strong>Correctie</strong> van onjuiste gegevens (art. 16).</li>
+    <li><strong>Verwijdering</strong> van je gegevens — "recht op vergetelheid" (art. 17).</li>
+    <li><strong>Dataportabiliteit</strong> — je gegevens in een leesbaar bestand opvragen (art. 20).</li>
+    <li><strong>Bezwaar</strong> tegen verwerking (art. 21).</li>
+  </ul>
+  <p>Stuur een mail naar <a href="mailto:marksmulders1973@gmail.com">marksmulders1973@gmail.com</a> met je voornaam (zoals in de app) of de spelers-ID; binnen 30 dagen krijg je antwoord. Voor kinderen: ouder of voogd kan dit verzoek namens het kind doen.</p>
 
-  <h2>Disclaimer</h2>
-  <p>Studiebol is een app in actieve ontwikkeling. Ondanks zorgvuldige controle kunnen vragen of antwoorden fouten bevatten. Gevonden een fout? Gebruik de "Fout melden" knop in de app of stuur een mail naar <a href="mailto:marksmulders1973@gmail.com">marksmulders1973@gmail.com</a>.</p>
+  <p>Als je vindt dat we je rechten schenden, kun je een klacht indienen bij de Autoriteit Persoonsgegevens: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
+
+  <h2>Beveiliging</h2>
+  <p>Verbindingen lopen versleuteld via HTTPS. Data bij Supabase is versleuteld in rust. Wachtwoorden bewaren we niet (alleen Google-OAuth tokens als je inlogt).</p>
+
+  <h2>AI-gegenereerde inhoud</h2>
+  <p>Sommige quizvragen worden gegenereerd door de Anthropic Claude API. We sturen alleen het vak en niveau door (bv. "wiskunde, klas 2 havo, onderwerp parabolen") — <strong>nooit</strong> persoonlijke gegevens van de leerling. Zie het <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">privacybeleid van Anthropic</a>.</p>
+
+  <h2>Wijzigingen</h2>
+  <p>Bij wezenlijke wijzigingen van dit beleid wordt de datum bovenaan deze pagina bijgewerkt. Bij ingrijpende veranderingen wordt actief geïnformeerd in de app.</p>
 
   <h2>Contact</h2>
-  <p>Vragen over dit privacybeleid? Neem contact op via:<br/>
+  <p>Vragen, klachten of verzoeken? Neem contact op via:<br/>
   <a href="mailto:marksmulders1973@gmail.com">marksmulders1973@gmail.com</a></p>
+
+  <p style="margin-top: 40px; font-size: 13px; color: #667788;">
+    <a href="/" style="color: #667788;">← Terug naar Leerkwartier</a>
+  </p>
 
 </body>
 </html>

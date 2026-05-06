@@ -352,6 +352,24 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         <div style={{ ...styles.scoreDisplay, animation: scoreAnim ? "scoreFloat 0.6s ease" : "none" }}>⭐ {gameState.score}</div>
       </div>
 
+      {/* A11y: screenreader-only status-region. Kondigt antwoord-feedback aan
+          (correct/fout/timeout) zodat blinde of dyslectische gebruikers met
+          TTS niet alleen op kleur+emoji hoeven te vertrouwen. */}
+      <div
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap", border: 0 }}
+      >
+        {showResult && (
+          timedOut
+            ? `Tijd om. Het juiste antwoord was ${question.options[question.answer]}.`
+            : (selected === question.answer
+              ? `Goed beantwoord. ${question.options[question.answer]}.`
+              : `Helaas, niet goed. Het juiste antwoord was ${question.options[question.answer]}.`)
+        )}
+      </div>
+
       {quizLabel && (
         <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 4, letterSpacing: 0.3 }}>
           {quizLabel}
@@ -423,10 +441,14 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             }
 
             const dimmed = !showResult && !canAnswer;
+            const letter = String.fromCharCode(65 + i);
+            const optLabel = `Optie ${letter}: ${opt}${showResult && i === question.answer ? " — juiste antwoord" : (showResult && i === selected && i !== question.answer ? " — jouw fout antwoord" : "")}`;
             return (
               <button
                 key={i}
                 disabled={dimmed}
+                aria-label={optLabel}
+                aria-pressed={showResult && i === selected ? true : undefined}
                 style={{
                   ...styles.optionButton,
                   background: bg,
@@ -439,10 +461,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 }}
                 onClick={() => !showResult && canAnswer && handleAnswer(i)}
               >
-                <span style={styles.optionLetter}>{String.fromCharCode(65 + i)}</span>
+                <span style={styles.optionLetter} aria-hidden="true">{letter}</span>
                 <span style={{ flex: 1 }}>{opt}</span>
-                {showResult && i === question.answer && <span style={{ fontSize: 18 }}>✅</span>}
-                {showResult && i === selected && i !== question.answer && <span style={{ fontSize: 18 }}>❌</span>}
+                {showResult && i === question.answer && <span style={{ fontSize: 18 }} aria-hidden="true">✅</span>}
+                {showResult && i === selected && i !== question.answer && <span style={{ fontSize: 18 }} aria-hidden="true">❌</span>}
               </button>
             );
           })}
@@ -555,13 +577,18 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       {/* ── Fout antwoord: uitleg overlay ─────────────────── */}
       {showWrongOverlay && (
-        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.93)", zIndex: 150, overflowY: "auto", animation: "fadeBg 0.3s ease", display: "flex", flexDirection: "column", alignItems: "center", padding: "24px 20px 32px" }}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="wrong-overlay-title"
+          style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.93)", zIndex: 150, overflowY: "auto", animation: "fadeBg 0.3s ease", display: "flex", flexDirection: "column", alignItems: "center", padding: "24px 20px 32px" }}
+        >
           <div style={{ maxWidth: 480, width: "100%" }}>
 
             {/* Emoji + titel */}
             <div style={{ textAlign: "center", marginBottom: 22 }}>
-              <div style={{ fontSize: 56, marginBottom: 6 }}>😕</div>
-              <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "#ff8a65", margin: 0 }}>
+              <div style={{ fontSize: 56, marginBottom: 6 }} aria-hidden="true">😕</div>
+              <h2 id="wrong-overlay-title" style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "#ff8a65", margin: 0 }}>
                 Waarom had ik dit niet goed?
               </h2>
             </div>
@@ -663,10 +690,15 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         const stopAllowed = stopSubject ? categoryToLearnSubjects(stopSubject) : null;
         const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed) : null;
         return (
-        <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, animation: "fadeBg 0.2s ease" }}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="quit-confirm-title"
+          style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, animation: "fadeBg 0.2s ease" }}
+        >
           <div style={{ background: "#1e2d45", borderRadius: 24, padding: "28px 24px", maxWidth: 340, width: "90%", textAlign: "center", animation: "popIn 0.3s ease" }}>
-            <span style={{ fontSize: 48 }}>🛑</span>
-            <h3 style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
+            <span style={{ fontSize: 48 }} aria-hidden="true">🛑</span>
+            <h3 id="quit-confirm-title" style={{ fontFamily: "Fredoka", fontSize: 20, margin: "12px 0 8px" }}>Stoppen met oefenen?</h3>
             <p style={{ color: "var(--color-text-muted)", fontSize: 14, marginBottom: 20 }}>
               Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
               {gameState.score > 0 && ` Score: ${gameState.score} goed!`}

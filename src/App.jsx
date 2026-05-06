@@ -1063,6 +1063,12 @@ export default function App() {
       {page === "cito" && (
         <CitoPage
           citoProgress={studentProgress.filter(r => r.player === userName && r.citoId)}
+          onPickPath={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("cito");
+            setPage("learn-path");
+          }}
           onStart={(config) => {
             const topicKey = config.groep === "8" ? `cito groep8-${config.citoId}` : `cito ${config.citoId}`;
             const pool = TOPIC_QUESTIONS[topicKey] || [];
