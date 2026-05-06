@@ -1323,6 +1323,109 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── KERN Wiskunde Havo/vwo 1A — alt GR HV1 ──────────────────────────
+  "kern-wis-hv1a": {
+    0: [
+      { q: "Wat is 24 + 36?", options: ["60", "50", "70", "54"], answer: 0, explanation: "24 + 36 = 60. Of: 25 + 35 = 60 (slim verschuiven)." },
+      { q: "Wat is 100 - 37?", options: ["63", "73", "53", "67"], answer: 0, explanation: "100 - 37: 100 - 40 + 3 = 60 + 3 = 63." },
+    ],
+    1: [
+      { q: "5 appels kosten €2,50. Wat kost 1 appel?", options: ["€0,50", "€1,25", "€2,50", "€5"], answer: 0, explanation: "Verhouding 5:€2,50 → 1:€0,50. Deel beide door 5." },
+      { q: "Verhouding 3:6 vereenvoudig je tot?", options: ["1:2", "3:6", "1:3", "2:3"], answer: 0, explanation: "Deel beide getallen door 3 → 1:2. Vereenvoudigen = grootste gemene deler." },
+    ],
+    2: [
+      { q: "Hoek 90° heet?", options: ["Rechte hoek", "Stompe hoek", "Scherpe hoek", "Gestrekte hoek"], answer: 0, explanation: "90° = recht. <90° = scherp, >90° (en <180°) = stomp, 180° = gestrekt." },
+      { q: "Som hoeken in een vierkant?", options: ["360°", "180°", "90°", "720°"], answer: 0, explanation: "4 hoeken × 90° = 360°. Dezelfde regel: alle vierhoeken hebben hoekensom 360°." },
+    ],
+    3: [
+      { q: "Vereenvoudig: 4a + 3a", options: ["7a", "12a", "7", "a²"], answer: 0, explanation: "Optellen van gelijksoortige termen: (4+3)a = 7a." },
+      { q: "Los op: x − 7 = 12", options: ["x = 19", "x = 5", "x = -19", "x = 84"], answer: 0, explanation: "x = 12 + 7 = 19. Beweeg de -7 naar de andere kant → +7." },
+    ],
+    4: [
+      { q: "Som van 3, 5, 7, 9?", options: ["24", "20", "26", "16"], answer: 0, explanation: "3+5+7+9 = 24. Slim: 3+9=12, 5+7=12, 12+12=24." },
+      { q: "Welke is mediaan van 1, 3, 5, 7, 9?", options: ["5", "1", "9", "3"], answer: 0, explanation: "Middelste van geordende rij van 5 → positie 3 = 5." },
+    ],
+  },
+
+  // ── KERN Nederlands Havo/vwo 1 — alt NN HV1 ─────────────────────────
+  "kern-nl-hv1": {
+    0: [
+      { q: "Wat is GOED LUISTEREN?", options: ["Aandachtig + niet onderbreken", "Door de spreker heen praten", "Op je telefoon kijken", "Wegrennen"], answer: 0, explanation: "Actief luisteren: lichaam openstellen, oogcontact, samenvatten, vragen stellen." },
+      { q: "Welke zin past bij PRESENTATIE-OPENING?", options: ["'Vandaag vertel ik over honden.'", "'Eh, ik weet het niet.'", "'Stil!'", "'Hoi.'"], answer: 0, explanation: "Goede opening: directe aankondiging onderwerp + uitnodigend." },
+    ],
+    1: [
+      { q: "Wat is HOOFDGEDACHTE van een tekst?", options: ["Belangrijkste boodschap in 1 zin", "De titel", "Een grappig detail", "De auteur"], answer: 0, explanation: "Hoofdgedachte = essentie, kort samengevat. Vaak in inleiding/conclusie of door schrijver beklemtoond." },
+      { q: "Welke leesstrategie is SKIMMEN?", options: ["Snel doorlezen voor hoofdpunt", "Hardop voorlezen", "Letter voor letter", "Alleen plaatjes"], answer: 0, explanation: "Skimmen = oog over tekst zonder details lezen. Eerst zinnen, eerste/laatste alinea, kopjes." },
+    ],
+    2: [
+      { q: "Hoe begin je een GOEDE alinea?", options: ["Met een kernzin die het onderwerp aankondigt", "Met een vraag", "Met de naam van de schrijver", "Met cijfers"], answer: 0, explanation: "Kernzin (topic sentence) opent: vat samen wat in alinea komt. Daarna voorbeelden + uitwerking." },
+      { q: "Welk woord is een SIGNAAL voor TEGENSTELLING?", options: ["Echter", "Bovendien", "Daarom", "Omdat"], answer: 0, explanation: "Echter / hoewel / daarentegen → tegenstelling. Bovendien = opsomming, daarom = gevolg." },
+    ],
+    3: [
+      { q: "Welke is GOED gespeld?", options: ["restaurant", "ristaurant", "restaurant", "restourant"], answer: 0, explanation: "Restaurant — Frans leenwoord met die exacte spelling. Onthouden of opzoeken." },
+      { q: "Hij ___ 't hard. (verleden tijd, regelmatig)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
+    ],
+    4: [
+      { q: "Wat betekent 'genereus'?", options: ["Vrijgevig", "Gierig", "Snel", "Slim"], answer: 0, explanation: "Genereus (uit Latijn 'genus' = adel) → mild, gul, ruimhartig. Tegenovergesteld: gierig." },
+      { q: "Welke is het ANTONIEM van 'optimistisch'?", options: ["Pessimistisch", "Realistisch", "Vrolijk", "Zorgeloos"], answer: 0, explanation: "Optimistisch (positief verwachten) ↔ pessimistisch (negatief). Realistisch is neutraal/middel." },
+    ],
+    5: [
+      { q: "Welke woord is een ZELFSTANDIG NAAMWOORD?", options: ["Tafel", "Lopen", "Snel", "Naar"], answer: 0, explanation: "Znw = ding, persoon, plaats, idee. Tafel = ding. Lopen = ww, snel = bnw, naar = vz." },
+      { q: "Welke zin staat in TEGENWOORDIGE tijd?", options: ["Ik loop naar school.", "Ik liep gisteren.", "Ik zal lopen.", "Ik heb gelopen."], answer: 0, explanation: "Tegenwoordig: nu/hier. Verleden: liep/heb gelopen. Toekomst: zal lopen." },
+    ],
+    6: [
+      { q: "Wat is een METAFOOR?", options: ["Vergelijking ZONDER 'als' (bv. 'hij is een leeuw')", "Vergelijking met 'als'", "Een rijm", "Een uitroep"], answer: 0, explanation: "Metafoor = directe overdracht: 'hij is een leeuw' = moedig. Vergelijking gebruikt 'als': 'hij is moedig als een leeuw'." },
+    ],
+  },
+
+  // ── All Right! — Engels alt Stepping Stones ─────────────────────────
+  "all-right": {
+    0: [
+      { q: "How do you say 'hallo' in Engels?", options: ["Hello", "Hola", "Hallo", "Bonjour"], answer: 0, explanation: "Hello (UK/US). Hi is informeler. Hola = Spaans, Bonjour = Frans." },
+      { q: "'I ___ a student.'", options: ["am", "is", "are", "be"], answer: 0, explanation: "I + am. He/she/it + is. You/we/they + are. 'Be' is infinitief." },
+    ],
+    1: [
+      { q: "Wat betekent 'home'?", options: ["Thuis / huis", "Hut", "Hotel", "Tent"], answer: 0, explanation: "Home = thuis (waar je woont, ook gevoel). House = fysiek huis. Subtiel verschil." },
+      { q: "'Where do you ___?' (wonen)", options: ["live", "lives", "living", "lived"], answer: 0, explanation: "I/you/we/they + live. He/she/it + lives. Vraagvorm: 'where do you live?'" },
+    ],
+    2: [
+      { q: "Wat is 'breakfast'?", options: ["Ontbijt", "Lunch", "Diner", "Snack"], answer: 0, explanation: "Break + fast = je 'verbreekt het vasten' van de nacht → ontbijt. Lunch (middag), dinner (avond)." },
+      { q: "'I usually ___ at 7 am.'", options: ["wake up", "wakes up", "waking up", "woke up"], answer: 0, explanation: "I + werkwoord-stam. Voor he/she/it + 's' (wakes up). Verleden: woke up." },
+    ],
+    3: [
+      { q: "Wat betekent 'reading'?", options: ["Lezen (-ing vorm)", "Een stad in UK", "Beide!", "Kijken"], answer: 0, explanation: "Reading = lezen (verbgerundium). Ook stadje in Engeland. Hier: lezen-werkwoord." },
+      { q: "Welke hobby is 'gaming'?", options: ["Computerspelletjes", "Tuinieren", "Koken", "Fietsen"], answer: 0, explanation: "Gaming = video- of computerspelletjes spelen. Populaire moderne hobby." },
+    ],
+    4: [
+      { q: "What's the OPPOSITE of 'cheap'?", options: ["Expensive", "Big", "Cold", "New"], answer: 0, explanation: "Cheap (goedkoop) ↔ expensive (duur). Big↔small, cold↔hot, new↔old." },
+      { q: "Hoe vraag je 'Wat kost het?'", options: ["How much is it?", "What is it?", "Where is it?", "When is it?"], answer: 0, explanation: "How much (hoeveel) + is it. Bij meerdere: 'how much are these?'" },
+    ],
+  },
+
+  // ── Biologie voor Jou Havo/vwo 2 ────────────────────────────────────
+  "bvj-havo-vwo-2": {
+    0: [
+      { q: "Wat doe je bij INADEMING?", options: ["Zuurstof opnemen + CO₂ afgeven (in longen)", "Voedsel verteren", "Bloed pompen", "Slapen"], answer: 0, explanation: "Inademing → diafragma omlaag → longen vullen met lucht → zuurstof in bloed, CO₂ uit bloed." },
+      { q: "Wat is VERBRANDING in cellen?", options: ["Glucose + zuurstof → CO₂ + H₂O + energie (ATP)", "Vuur in de cel", "Vergiftiging", "Niets"], answer: 0, explanation: "Cel-ademhaling: brandstof (glucose) + O₂ → CO₂ + water + ATP (energie). In mitochondriën." },
+    ],
+    1: [
+      { q: "Welke voedingsstoffen verteren we het traagst?", options: ["Vetten", "Suikers", "Eiwitten", "Water"], answer: 0, explanation: "Vetten verteren langzaam (uren in dunne darm). Suikers binnen min. Eiwitten medium snelheid." },
+      { q: "Wat doet de TONG bij vertering?", options: ["Mengt voedsel met speeksel + smaakt", "Verteren", "Zuigen", "Slikken alleen"], answer: 0, explanation: "Tong: kneedt voedsel + speeksel (bevat enzymen). Smaakpapillen voor smaakwaarneming. Slikken = automatisch reflex." },
+    ],
+    2: [
+      { q: "Welke bloedvaten LOPEN naar het hart toe?", options: ["Aderen / venen", "Slagaders", "Haarvaten", "Lymfevaten"], answer: 0, explanation: "Aderen → naar hart. Slagaders ← van hart. Lymfevaten = ander systeem (afweer)." },
+      { q: "Wat doen WITTE bloedcellen?", options: ["Afweer tegen ziektekiemen", "Zuurstof transport", "Bloed stollen", "Niets"], answer: 0, explanation: "Witte bloedcellen (leukocyten) = immuunsysteem: detecteren + vernietigen bacteriën, virussen." },
+    ],
+    3: [
+      { q: "Wat is een GEN?", options: ["Stuk DNA met code voor één eigenschap", "Hele DNA-streng", "Cel-soort", "Een vitamine"], answer: 0, explanation: "Gen = eenheid van erfelijkheid. Codeert voor eiwit dat eigenschap bepaalt (oogkleur, lengte, etc.)." },
+      { q: "Wie ontdekte de genetica wetten?", options: ["Gregor Mendel (~1865)", "Charles Darwin", "Isaac Newton", "Marie Curie"], answer: 0, explanation: "Mendel deed proeven met erwten → ontdekte basisregels van overerving (dominant/recessief)." },
+    ],
+    4: [
+      { q: "Wat is ECOLOGIE?", options: ["Studie van organismen + omgeving + interacties", "Studie van rotsen", "Studie van milieu-ramp", "Een soort vakantie"], answer: 0, explanation: "Eco-logie = leef-leer. Hoe planten/dieren samenleven in ecosystemen. Voedselketens, kringlopen." },
+      { q: "Wat is BIODIVERSITEIT?", options: ["Variatie aan soorten in een gebied", "Aantal mensen", "Soort vis", "Een ziekte"], answer: 0, explanation: "Biodiversiteit = aantal verschillende soorten + variatie binnen soorten + ecosystemen. Hoog = stabieler." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
