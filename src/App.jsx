@@ -530,6 +530,12 @@ export default function App() {
       }
     }
     // Shuffle antwoordopties zodat het correcte antwoord willekeurig verdeeld is over A/B/C/D
+    //
+    // Audit 3 QA bug #2: vragen met positie-refererende opties ('all of the
+    // above', 'alle bovenstaande', 'geen van bovenstaande', 'beide' etc.)
+    // mogen NIET geshuffled worden — als 'alle bovenstaande' optie A wordt,
+    // verwijst de tekst naar niets en is de vraag logisch onmogelijk.
+    const REFERS_TO_POSITION = /\b(?:above|below|bovenstaand|onderstaand|vorige opties?|alle vorige|none of the above|all of the above|geen van bovenst|alle bovenst|beide bovenstaande)\b/i;
     questions = questions.map((q) => {
       if (!q.options || q.options.length < 2) return q;
       const correctText = q.options[q.answer];
@@ -541,12 +547,32 @@ export default function App() {
         seen.add(key);
         return true;
       });
+      // QA bug #4 (audit 3): correct antwoord kan zijn weggededupliceerd.
+      // Detecteer + log; we kunnen er weinig aan doen behalve oorspronkelijke
+      // volgorde behouden zodat de vraag tenminste consistent blijft.
+      const correctStillThere = deduped.some(
+        (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+      );
+      if (!correctStillThere) {
+        // eslint-disable-next-line no-console
+        console.warn("[quiz] correct antwoord verdween door dedupe:", q.q);
+        return q; // gebruik origineel, niet geshuffled
+      }
+      // QA bug #2: skip shuffle bij positie-refererende opties.
+      const heeftPositieReferentie = deduped.some((opt) => REFERS_TO_POSITION.test(String(opt)));
+      if (heeftPositieReferentie) {
+        return { ...q, options: deduped, answer: deduped.findIndex(
+          (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+        ) };
+      }
       const shuffled = [...deduped];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      return { ...q, options: shuffled, answer: shuffled.indexOf(correctText) };
+      return { ...q, options: shuffled, answer: shuffled.findIndex(
+        (opt) => String(opt).trim().toLowerCase() === String(correctText).trim().toLowerCase()
+      ) };
     });
     const prevCount = parseInt(localStorage.getItem(`played_${quiz.subject}_${quiz.level}`) || "0", 10);
     localStorage.setItem(`played_${quiz.subject}_${quiz.level}`, String(prevCount + 1));
