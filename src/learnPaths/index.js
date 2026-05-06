@@ -49,6 +49,7 @@ import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import topografieNederland from "./topografieNederland.js";
 import citoStrategieenGroep8 from "./citoStrategieenGroep8.js";
+import begrijpendLezenStrategie from "./begrijpendLezenStrategie.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import elektriciteitNatuurkunde from "./elektriciteitNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
@@ -127,6 +128,7 @@ export const ALL_LEARN_PATHS = {
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   "topografie-nederland": topografieNederland,
   "cito-strategieen-groep8": citoStrategieenGroep8,
+  "begrijpend-lezen-strategie": begrijpendLezenStrategie,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
   "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
