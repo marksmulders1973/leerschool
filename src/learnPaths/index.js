@@ -48,6 +48,7 @@ import tachtigjarigeOorlogGeschiedenis from "./tachtigjarigeOorlogGeschiedenis.j
 import klimatenAardrijkskunde from "./klimatenAardrijkskunde.js";
 import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import topografieNederland from "./topografieNederland.js";
+import citoStrategieenGroep8 from "./citoStrategieenGroep8.js";
 import krachtenNatuurkunde from "./krachtenNatuurkunde.js";
 import elektriciteitNatuurkunde from "./elektriciteitNatuurkunde.js";
 import atoombouwScheikunde from "./atoombouwScheikunde.js";
@@ -125,6 +126,7 @@ export const ALL_LEARN_PATHS = {
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   "topografie-nederland": topografieNederland,
+  "cito-strategieen-groep8": citoStrategieenGroep8,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
   "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
