@@ -170,6 +170,66 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           <div style={styles.scoreNumber}>{latest.percentage}%</div>
           <div style={styles.scoreDetail}>{grade}</div>
         </div>
+
+        {/* Cito-eindtoets-simulatie advies-banner: bij ≥50 vragen op
+            cito-onderwerp tonen we een richt-advies vmbo/havo/vwo gebaseerd op
+            score. NIET officieel — alleen indicatie. Echte advies komt van
+            leerkracht + officiële Cito-uitslag. */}
+        {(() => {
+          const isSimulatie = (quiz?.subject === "cito" || latest.subject === "cito") && latest.total >= 50;
+          if (!isSimulatie) return null;
+          const pct = latest.percentage;
+          let advies, kleur, emoji, uitleg;
+          if (pct >= 85) {
+            advies = "vwo / gymnasium";
+            kleur = "#7c3aed";
+            emoji = "🎓";
+            uitleg = "Sterke score op alle onderdelen — een goede aanwijzing voor vwo-niveau.";
+          } else if (pct >= 70) {
+            advies = "havo";
+            kleur = "#1976d2";
+            emoji = "📚";
+            uitleg = "Goede score — past bij havo-niveau. Met extra oefenen kan vwo ook lukken.";
+          } else if (pct >= 55) {
+            advies = "vmbo-tl (mavo)";
+            kleur = "#00897b";
+            emoji = "📖";
+            uitleg = "Voldoende — past bij vmbo-tl. Sterk in sommige delen, andere kunnen nog beter.";
+          } else if (pct >= 35) {
+            advies = "vmbo-kb / vmbo-bb";
+            kleur = "#ef6c00";
+            emoji = "💪";
+            uitleg = "Basis aanwezig — past bij vmbo-bb of kb. Blijven oefenen helpt om hoger uit te komen.";
+          } else {
+            advies = "extra oefenen aanbevolen";
+            kleur = "#ef5350";
+            emoji = "🌱";
+            uitleg = "Score is nog laag — geen probleem, dat betekent dat er veel ruimte is om te groeien!";
+          }
+          return (
+            <div style={{
+              marginBottom: 14,
+              padding: "14px 16px",
+              borderRadius: 14,
+              background: `linear-gradient(135deg, ${kleur}30, ${kleur}10)`,
+              border: `1px solid ${kleur}60`,
+            }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 4, letterSpacing: 0.3 }}>
+                CITO-SIMULATIE · INDICATIE
+              </div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: kleur, marginBottom: 6 }}>
+                {emoji} Richting {advies}
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.5, marginBottom: 8 }}>
+                {uitleg}
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
+                ⚠ Dit is een ruwe indicatie op basis van je oefenscore. Het officiële schooladvies krijg je van je leerkracht; de echte Cito-toets bepaalt of je advies omhoog kan.
+              </div>
+            </div>
+          );
+        })()}
+
         {latest.timeTaken > 0 && (
           <div style={{ textAlign: "center", fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-muted)", marginBottom: 8 }}>
             ⏱ {latest.timeTaken < 60 ? `${latest.timeTaken}s` : `${Math.floor(latest.timeTaken / 60)}m ${latest.timeTaken % 60}s`}
