@@ -188,11 +188,13 @@ describe("nextSpacedRepetitionState", () => {
     expect(r.nextDueAt.toISOString()).toBe(expected.toISOString());
   });
 
-  it("fout antwoord met hoge streak resets naar 1 dag (zonder prevInterval)", () => {
+  it("fout antwoord halveert effectief vorig interval (afgeleid uit streak)", () => {
     const fixed = new Date("2026-04-29T10:00:00Z");
+    // prevStreak 4 → effectief vorig interval REVIEW_INTERVALS_DAYS[4]=60
+    // → halveer naar 30 dagen (zachte reset, audit 2 M1).
     const r = nextSpacedRepetitionState({ prevStreak: 4, isCorrect: false, now: fixed });
     expect(r.streak).toBe(0);
-    expect(r.intervalDays).toBe(1);
+    expect(r.intervalDays).toBe(30);
   });
 });
 
@@ -239,5 +241,27 @@ describe("nextSpacedRepetitionState — easeFactor (audit 2 M1)", () => {
     expect(r.intervalDays).toBe(30); // 60 * 0.5
     // ease verlaagd: 1.5 * 0.85 = 1.275
     expect(r.easeFactor).toBeCloseTo(1.275, 3);
+  });
+
+  it("zachte fout-reset werkt OOK voor bestaande rijen zonder prevIntervalDays (QA bug #7)", () => {
+    // Pre-deploy mastery-rij: streak=4, geen interval_days kolom-data.
+    // Verwachte fix: leid effectief vorig interval af uit prevStreak (4 → 60 dagen
+    // volgens REVIEW_INTERVALS_DAYS) en halveer.
+    const r = nextSpacedRepetitionState({
+      prevStreak: 4,
+      prevEaseFactor: 1.0,
+      // prevIntervalDays NIET meegegeven (null/undefined)
+      isCorrect: false,
+    });
+    expect(r.streak).toBe(0);
+    expect(r.intervalDays).toBe(30); // 60 (afgeleid uit streak 4) * 0.5 = 30
+  });
+
+  it("fout met prevStreak=0 en geen prevInterval: nieuwe interval is gewoon 1", () => {
+    const r = nextSpacedRepetitionState({
+      prevStreak: 0,
+      isCorrect: false,
+    });
+    expect(r.intervalDays).toBe(1); // 1 (afgeleid streak 0) * 0.5 → max(1, 0.5) = 1
   });
 });

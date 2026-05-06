@@ -96,11 +96,18 @@ export function nextSpacedRepetitionState({
   if (isCorrect) {
     // Standaard: streak-gebaseerd, geschaald met easeFactor
     days = Math.max(1, Math.round(nextReviewIntervalDays(streak, true) * easeFactor));
-  } else if (prevIntervalDays && prevIntervalDays > 1) {
-    // Zachte reset: halveer vorige interval ipv terug naar 1 dag
-    days = Math.max(1, Math.round(prevIntervalDays * 0.5));
   } else {
-    days = REVIEW_INTERVALS_DAYS[0];
+    // Zachte fout-reset: halveer het vorige interval ipv harde reset naar 1 dag.
+    // Bestaande mastery-rijen (vóór audit 2 M1) hebben prevIntervalDays = null —
+    // dan leiden we het effectieve vorige interval af uit prevStreak via dezelfde
+    // tabel die ze tot nu toe gebruikten. Voorkomt didactische regressie waarbij
+    // een streak-10-leerling alsnog een harde reset naar 1 dag krijgt bij de
+    // eerste fout na de M1-deploy. (QA-audit 2026-05-06 bug #7.)
+    const effectiefVorigInterval =
+      prevIntervalDays && prevIntervalDays > 0
+        ? prevIntervalDays
+        : nextReviewIntervalDays(prevStreak, true);
+    days = Math.max(1, Math.round(effectiefVorigInterval * 0.5));
   }
 
   const nextDueAt = new Date(now);
