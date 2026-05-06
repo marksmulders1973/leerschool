@@ -1111,6 +1111,118 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Talent Havo/vwo 1 — Nederlands alt ──────────────────────────────
+  "talent-hv1": {
+    0: [
+      { q: "Wat hoort thuis bij FAMILIE?", options: ["Vader, moeder, broer, zus", "Klasgenoten", "Buurman", "Sportclub"], answer: 0, explanation: "Familie = directe gezins- en bloedverwanten. Klasgenoten/buurman/club zijn andere relaties." },
+      { q: "Welke is een KERNFAMILIE?", options: ["Ouders + kinderen samen", "Allen die jouw achternaam dragen", "Mensen die je kent", "Hele dorp"], answer: 0, explanation: "Kerngezin = ouders + minderjarige kinderen. Bredere familie = ooms, tantes, neven, nichten." },
+    ],
+    1: [
+      { q: "Wat hoort bij EEN GOEDE VRIEND?", options: ["Luisteren + eerlijk + behulpzaam", "Altijd gelijk hebben", "Stil zijn", "Ver weg blijven"], answer: 0, explanation: "Vriendschap: wederzijds vertrouwen, betrouwbaarheid, plezier, steun bij moeilijkheden." },
+      { q: "Wat is een DAGBOEK?", options: ["Persoonlijke aantekeningen per dag", "Een schoolrooster", "Foto-album", "Receptenboek"], answer: 0, explanation: "Dagboek = log van eigen ervaringen, gevoelens, gedachten. Privé en persoonlijk." },
+    ],
+    2: [
+      { q: "Welk is een SPORT?", options: ["Hockey", "Lezen", "Tekenen", "Slapen"], answer: 0, explanation: "Sport = lichamelijke activiteit met regels (vaak competitief). Lezen/tekenen = kunst/cultuur, slapen = rust." },
+      { q: "Wat is een HOBBY?", options: ["Vrije-tijdsbesteding voor plezier", "Een baan", "Verplichting", "Schoolopdracht"], answer: 0, explanation: "Hobby = wat je in vrije tijd doet voor je plezier. Niet voor geld of verplicht." },
+    ],
+    3: [
+      { q: "Welke voedingsstof is een EIWIT?", options: ["Vlees, vis, kaas, bonen", "Suiker", "Olie", "Water"], answer: 0, explanation: "Eiwitten zitten in vlees, vis, ei, zuivel, peulvruchten. Bouwstof voor spieren + organen." },
+      { q: "Wat is GEZOND ontbijt?", options: ["Volkoren brood + ei + fruit", "Koek + fris", "Niets", "Alleen koffie"], answer: 0, explanation: "Goed ontbijt: complexe koolhydraten + eiwit + vitaminen → langzame energie de hele ochtend." },
+    ],
+    4: [
+      { q: "Wat is een ROADTRIP?", options: ["Reis met auto/camper langs verschillende plekken", "Reis met vliegtuig", "Wandeltocht", "Schoolreisje"], answer: 0, explanation: "Roadtrip: lange autoreis met meerdere stops. Populair in VS, Australië." },
+      { q: "Welk dagdeel is BEST om te reizen?", options: ["Vroeg in ochtend (minder druk)", "Spits-uur", "Middernacht in mist", "Zo laat mogelijk"], answer: 0, explanation: "'s Ochtends vroeg = minder verkeer, koeler in zomer, meer zonlicht." },
+    ],
+    5: [
+      { q: "Wat is FAKE NEWS?", options: ["Misleidend of verzonnen 'nieuws'", "Echt nieuws", "Reclame", "Sportverslag"], answer: 0, explanation: "Onjuiste informatie gepresenteerd als nieuws — soms voor verkoop, politiek, of pesten." },
+      { q: "Wat is een PODCAST?", options: ["Audio-show online te beluisteren", "Een soort tv", "Krantenartikel", "Tijdschrift"], answer: 0, explanation: "Podcast = geluidsopname (interview, verhaal, kennis) gepubliceerd online. Luister waar/wanneer je wil." },
+    ],
+  },
+
+  // ── New Interface — Engels alt Stepping Stones ──────────────────────
+  "new-interface": {
+    0: [
+      { q: "How do you GREET a stranger formally?", options: ["Good morning / good afternoon", "Yo!", "What's up?", "Hi mate"], answer: 0, explanation: "Formal: good morning/afternoon/evening + Sir/Madam. Yo + What's up = informeel/jongerentaal." },
+      { q: "'Where ___ you from?'", options: ["are", "is", "am", "be"], answer: 0, explanation: "Vraag in tegenwoordige tijd: 'where ARE you from?' Bij you/we/they → are." },
+    ],
+    1: [
+      { q: "Wat is meervoud van 'man'?", options: ["men", "mans", "manes", "men's"], answer: 0, explanation: "Onregelmatig: man → men, woman → women, child → children, foot → feet." },
+      { q: "'I have ___ pets at home.' (3 huisdieren)", options: ["three", "third", "trio", "triple"], answer: 0, explanation: "Hoofdtelwoorden voor aantal: one, two, three. Rangtelwoorden voor volgorde: first, second, third." },
+    ],
+    2: [
+      { q: "Wat is 'afval' (papier, plastic) in Engels?", options: ["waste / rubbish / trash", "litter (alleen op straat)", "garbage", "all of the above"], answer: 3, explanation: "Veel synoniemen: waste = algemeen, rubbish = UK, trash/garbage = US, litter = zwerfafval. Allemaal afval." },
+      { q: "'My job ___ interesting.'", options: ["is", "are", "am", "was"], answer: 0, explanation: "Enkelvoud (my job) + tegenwoordige tijd → IS. 'Are' bij meervoud (jobs are)." },
+    ],
+    3: [
+      { q: "'I love ___ tennis.' (tennis spelen)", options: ["playing", "play", "to play", "played"], answer: 0, explanation: "Na werkwoorden als love/like/enjoy/hate → -ing vorm: playing, eating, watching." },
+      { q: "Welke sport heet 'football' in UK + 'soccer' in US?", options: ["Voetbal", "American football", "Rugby", "Hockey"], answer: 0, explanation: "Voetbal = football (UK) / soccer (US, omdat football daar = American football)." },
+    ],
+    4: [
+      { q: "'I ___ pizza for dinner yesterday.'", options: ["had", "have", "having", "has"], answer: 0, explanation: "Verleden tijd 'have' (eten/gehad) = had. 'Yesterday' = signaal verleden tijd." },
+      { q: "Welk drankje is 'tea'?", options: ["Thee", "Koffie", "Cola", "Sap"], answer: 0, explanation: "Tea = thee. Coffee = koffie, juice = sap. Brits: 'a cup of tea' is een instituut." },
+    ],
+    5: [
+      { q: "'How long ___ you stay in Spain?' (toekomst)", options: ["will", "did", "have", "are"], answer: 0, explanation: "Toekomst: will + werkwoord. 'How long will you stay?' = hoelang ga je blijven." },
+      { q: "Wat zijn 'souvenirs'?", options: ["Aandenken aan vakantie", "Stadse buurten", "Soort gebak", "Reisgidsen"], answer: 0, explanation: "Souvenir (Frans-Engels leenwoord): voorwerp dat je meeneemt om vakantie te onthouden." },
+    ],
+  },
+
+  // ── Sprekend Verleden — geschiedenis alt Feniks ─────────────────────
+  "sprekend-verleden": {
+    0: [
+      { q: "Wat is PREHISTORIE?", options: ["Tijd vóór schrift werd uitgevonden", "Eerste filmtijdperk", "Tijd vóór 1900", "Neanderthalers alleen"], answer: 0, explanation: "Pre-historie = vóór geschreven bronnen. Daarna: 'historische tijd' (vanaf ~3000 v.Chr. in Mesopotamië/Egypte)." },
+      { q: "Wat aten EERSTE mensen?", options: ["Wat de natuur bood: noten, bessen, vlees", "Brood + pasta", "Aardappels", "Rijst"], answer: 0, explanation: "Vóór landbouw: jagen op dieren + verzamelen plantaardig voedsel. Aardappel kwam pas na 1500 (uit Amerika)." },
+    ],
+    1: [
+      { q: "Hoe heette de Atheense regeringsvorm?", options: ["Democratie", "Monarchie", "Tirannie", "Oligarchie"], answer: 0, explanation: "Athene ~500 v.Chr.: 'demos' (volk) + 'kratos' (macht) — directe democratie voor vrije mannen." },
+      { q: "Wat was het CIRCUS Maximus?", options: ["Wagenrennen-stadion in Rome", "Romeins theater", "Tempel", "School"], answer: 0, explanation: "Grootste stadion van Rome (250.000 toeschouwers!). Voor wagenrennen + spelen. 'Brood en spelen' politiek." },
+    ],
+    2: [
+      { q: "Wat is een KASTEEL?", options: ["Versterkt verblijf van een edelman", "Boerderij", "Stadhuis", "Kerk"], answer: 0, explanation: "Middeleeuws kasteel: woon + verdedigingscentrum. Met muur, gracht, donjon (toren)." },
+      { q: "Wat waren MONNIKEN?", options: ["Mannen die in klooster bidden, werken, schrijven", "Soldaten", "Boeren", "Handelaren"], answer: 0, explanation: "Monniken volgden kloosterregel (bv. Benedictijns). Cruciaal voor bewaren + kopiëren van kennis tijdens MA." },
+    ],
+    3: [
+      { q: "Wat was de RENAISSANCE?", options: ["Wedergeboorte van klassieke kunst en kennis (~1400-1600)", "Een veldslag", "Religieuze beweging alleen", "Italië-vakantie"], answer: 0, explanation: "Italiaanse oorsprong: hernieuwde belangstelling voor Grieks-Romeinse erfgoed + nieuwe wetenschap + kunst (Da Vinci, Michelangelo)." },
+      { q: "Wie was Christoffel COLUMBUS (1492)?", options: ["Italiaanse zeevaarder die Amerika 'ontdekte' voor Spanje", "Italiaanse koning", "Schrijver", "Schilder"], answer: 0, explanation: "Columbus zeilde westwaarts naar 'Indië', kwam aan in Bahama's. Begin Europese kolonisatie Amerika." },
+    ],
+    4: [
+      { q: "Wat is een REVOLUTIE?", options: ["Snelle, ingrijpende verandering van politiek/maatschappij", "Slechte oogst", "Verkiezing", "Toetsing"], answer: 0, explanation: "Revolutie = omwenteling van het bestaande systeem. Vaak met geweld en grote sociale gevolgen." },
+      { q: "Wanneer was de FRANSE Revolutie?", options: ["1789-1799", "1870-1880", "1700", "1900"], answer: 0, explanation: "1789 (Bastille) → 1799 (Napoleon's coup). Mijlpaal voor democratie/rechten. Inspireerde wereldwijd." },
+    ],
+    5: [
+      { q: "Wat veroorzaakte de INDUSTRIËLE Revolutie?", options: ["Stoommachine + fabrieken", "Vliegtuigen", "Computers", "Atoomenergie"], answer: 0, explanation: "Engeland ~1750: stoom → kolenmijnen → spoorwegen → fabrieken. Massaproductie + grote sociale verandering." },
+      { q: "Welke nieuwe sociale klasse ontstond?", options: ["Industriële arbeiders (proletariaat)", "Boeren", "Adel", "Geestelijken"], answer: 0, explanation: "Fabrieksarbeiders trokken naar steden — werkten 12+ uur/dag onder slechte omstandigheden. Marx schreef erover." },
+    ],
+    6: [
+      { q: "Wat is KOLONIALISME?", options: ["Een land bezit en beheerst een ander gebied", "Vrije handel", "Vakantie", "Migratie alleen"], answer: 0, explanation: "Vooral 19e eeuw: Europa bezet Afrika/Azië voor grondstoffen + arbeid. Lokale bevolking onderdrukt." },
+      { q: "Wat is NATIONALISME?", options: ["Sterke trots/loyaliteit aan eigen land", "Internationale samenwerking", "Anti-religie", "Een sport"], answer: 0, explanation: "Nationalisme: identificatie met eigen volk + staat. Kan positief (saamhorigheid) of negatief (uitsluiten anderen) uitvallen." },
+    ],
+  },
+
+  // ── BuiteNLand — aardrijkskunde alt De Geo ──────────────────────────
+  "buitenland": {
+    0: [
+      { q: "Wat is PLATENTEKTONIEK?", options: ["Theorie dat aardkorst-platen bewegen", "Een soort steen", "Klimaat-fenomeen", "Vulkaan-soort"], answer: 0, explanation: "Aarde: ~12 grote platen drijven op vloeibare mantel. Botsen, schuiven, separeren → bevingen, vulkanen, gebergten." },
+      { q: "Wat veroorzaakt aardbevingen?", options: ["Schuiven van aardkorst-platen", "Vallen van meteorieten", "Donder", "Wind"], answer: 0, explanation: "Plaatgrenzen + breuken: wanneer spanning plotseling vrijkomt → schokgolven. Schaal van Richter meet zwaarte." },
+    ],
+    1: [
+      { q: "Wat is BEVOLKINGSDICHTHEID?", options: ["Aantal mensen per km²", "Hoeveelheid mensen totaal", "Hoeveel voedsel per persoon", "Een statistiek over koeien"], answer: 0, explanation: "Bv. Nederland ~500 mensen/km² (zeer dicht). Australië ~3/km². Dichtheid = bewoonbaarheid + grootte." },
+      { q: "Wat is CULTUUR?", options: ["Manier van leven, taal, kunst, gebruiken van een groep", "Een museum", "Een ras", "Een tijdperk"], answer: 0, explanation: "Cultuur = alles dat mensen leren delen: taal, eten, religie, kunst, normen. Verandert in tijd." },
+    ],
+    2: [
+      { q: "Welke factor bepaalt KLIMAAT vooral?", options: ["Breedtegraad (afstand tot evenaar)", "Tijd van de dag", "Aantal mensen", "Soort flora alleen"], answer: 0, explanation: "Verder van evenaar → kouder. Ook hoogte (bergen kouder) en zee-invloed (gematigder bij kust)." },
+      { q: "Wat is KOSMOSCH klimaat-effect (Coriolis)?", options: ["Aarde-rotatie buigt wind/water af", "Lichteffect", "Smelten van ijs", "Wolkvorming"], answer: 0, explanation: "Door rotatie aarde buigen luchtmassa's af (rechts op noordhalfrond). Verklaart heersende winden + zee-stromingen." },
+    ],
+    3: [
+      { q: "Wat is een ONTWIKKELINGSLAND?", options: ["Land met lager inkomen + minder voorzieningen", "Onlangs gestichte staat", "Land in oorlog", "Land zonder regering"], answer: 0, explanation: "Ontwikkelingsland: groeiend BBP per hoofd, vaak landbouw-gericht, infrastructuur in ontwikkeling. Bv. Indonesië, Nigeria." },
+      { q: "Wat doet de WERELDBANK?", options: ["Geeft leningen aan landen voor ontwikkeling", "Drukt geld", "Maakt valuta-koersen", "Beheert wereldmunten"], answer: 0, explanation: "Wereldbank (1944): leent geld aan armere landen voor projecten (wegen, scholen). Doel: armoede verminderen." },
+    ],
+    4: [
+      { q: "Welke is een EU-instelling?", options: ["Europees Parlement", "VN", "NAVO", "G20"], answer: 0, explanation: "Europees Parlement zit in Brussel/Straatsburg. EU-leden kiezen leden om EU-wetten te maken." },
+      { q: "Welke landen waren EERSTE EU-leden?", options: ["België, Duitsland, Frankrijk, Italië, Luxemburg, Nederland (1957)", "Alleen Frankrijk", "Alle Europese landen tegelijk", "UK + IE + DK"], answer: 0, explanation: "Verdrag van Rome 1957 (EEG → EU): 6 oprichters. Daarna 22 keer uitbreiding tot huidige 27 landen." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
