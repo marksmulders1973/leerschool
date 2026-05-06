@@ -35,6 +35,28 @@ export default defineConfig({
     // uit het kritieke main-pad zodat de eerste laad sneller is en er beter
     // kan worden gecachet (een nieuwe data-batch invalideert niet de hele
     // vendor-bundle).
+    //
+    // Audit 3 (perf-engineer): Vite voegt automatisch `<link rel="modulepreload">`
+    // toe voor ALLE chunks waarvan een lazy-route afhankelijk is — inclusief
+    // dikke data-chunks (data-learnpaths 591 kB, data-questions 254 kB,
+    // vendor-three 129 kB). De browser laadt die ongevraagd op page-load →
+    // LCP blijft 9-13s ondanks de splitsing. Fix: resolveDependencies filtert
+    // de zware chunks uit de preload-lijst, zodat ze pas geladen worden
+    // wanneer een lazy-route ze écht nodig heeft.
+    modulePreload: {
+      polyfill: false,
+      resolveDependencies: (_filename, deps) =>
+        deps.filter((d) =>
+          !d.includes('data-learnpaths') &&
+          !d.includes('data-questions') &&
+          !d.includes('data-topics') &&
+          !d.includes('data-textbooks') &&
+          !d.includes('data-curricula') &&
+          !d.includes('vendor-three') &&
+          !d.includes('vendor-supabase') &&
+          !d.includes('ObliteratorGame')
+        ),
+    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
