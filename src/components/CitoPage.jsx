@@ -228,17 +228,27 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [] })
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>
             Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span>
           </div>
-          <div style={{ display: "flex", gap: 6 }}>
-            {[5, 10, 15, 20].map(n => (
+          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+            {[5, 10, 15, 20, 50].map(n => (
               <button key={n} onClick={() => setQuestionCount(n)} style={{
-                flex: 1, padding: "8px 0", borderRadius: 10, cursor: "pointer",
+                flex: n === 50 ? "0 0 100%" : "1 1 0",
+                padding: "8px 0", borderRadius: 10, cursor: "pointer",
                 border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
-                background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
+                background: questionCount === n
+                  ? (n === 50 ? "linear-gradient(135deg, rgba(255,107,53,0.25), rgba(255,140,66,0.15))" : "rgba(255,107,53,0.15)")
+                  : "rgba(255,255,255,0.05)",
                 color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)",
                 fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
-              }}>{n}</button>
+              }}>
+                {n === 50 ? "🎯 50 — eindtoets-simulatie" : n}
+              </button>
             ))}
           </div>
+          {questionCount === 50 && (
+            <div style={{ marginTop: 8, fontSize: 11, color: "rgba(255,255,255,0.55)", fontFamily: "var(--font-body)", lineHeight: 1.4 }}>
+              50 vragen — net zoveel als één onderdeel van de echte Cito-toets. Reken op ~45–60 minuten focus. Tip: kies <strong style={{ color: "#ff6b35" }}>"Alles gemengd"</strong> voor een realistische ervaring.
+            </div>
+          )}
         </div>
 
         {/* Start knop */}
