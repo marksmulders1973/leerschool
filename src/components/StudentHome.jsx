@@ -428,15 +428,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           )}
         </div>
 
+        {/* Sinds M2 (vakkenkeuze-grid bovenaan) zijn 'Test je kennis' en
+            'Uit je boek' dubbelop met de Leren/Oefenen-knoppen per vak.
+            Hou alleen de unieke shortcuts: Voortgang + Scorebord. */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={() => { SoundEngine.play("click"); onSelfStudy(); }}>
-            <span style={{ fontSize: 24 }}>📖</span>
-            <span style={{ fontWeight: 700, fontSize: 13 }}>Test je kennis</span>
-          </button>
-          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #FF6B35, #e55039)" }} onClick={() => { SoundEngine.play("click"); onTextbook(); }}>
-            <span style={{ fontSize: 24 }}>📕</span>
-            <span style={{ fontWeight: 700, fontSize: 13 }}>Uit je boek</span>
-          </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #36537e)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 24 }}>📊</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
@@ -511,7 +506,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               Klaar voor je eerste oefening?
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.4 }}>
-              Tik <strong>Test je kennis</strong> hierboven en kies een vak — of <strong>Uit je boek</strong> als je een schoolboek hebt.
+              Kies bovenaan een vak en tik <strong>📚 Leren</strong> voor uitleg of <strong>🎯 Oefenen</strong> voor vragen uit je boek.
             </div>
           </div>
         )}
