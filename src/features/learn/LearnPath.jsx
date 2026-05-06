@@ -705,6 +705,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
   // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
   const examStepIdx = path.steps.findIndex(s => /examen/i.test(s.title));
   const hasExamShortcut = examStepIdx >= 0;
+  const examChecks = hasExamShortcut ? (path.steps[examStepIdx]?.checks?.length || 0) : 0;
 
   return (
     <div style={pageStyle()}>
@@ -730,13 +731,47 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
           />
         </div>
 
+        {/* Sneltrack-knop voor leerlingen met morgen toets — bóven de
+            'Doorgaan'-knop omdat de 14-jr-havo-doelgroep daar het eerst
+            naar zoekt (audit 2 Q3). Toont concrete vraag-aantal-belofte. */}
+        {hasExamShortcut && (
+          <button
+            onClick={() => onPickStep(examStepIdx)}
+            style={{
+              width: "100%",
+              padding: "14px 16px",
+              marginBottom: 12,
+              borderRadius: 14,
+              border: "2px solid rgba(255,140,66,0.55)",
+              background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.08))",
+              color: "#ff8c42",
+              fontFamily: "var(--font-display)",
+              fontWeight: 700,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              textAlign: "left",
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">⏱️</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 15 }}>Toets morgen? Spring direct naar examenstijl</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(255,140,66,0.85)", marginTop: 2 }}>
+                {examChecks > 0 ? `${examChecks} ${examChecks === 1 ? "examenvraag" : "examenvragen"} · ~5 min` : "~5 min"}
+              </div>
+            </div>
+            <span style={{ fontSize: 18, color: "rgba(255,140,66,0.7)" }}>›</span>
+          </button>
+        )}
+
         {loaded && firstUnfinishedIdx !== null && (
           <button
             onClick={() => onPickStep(firstUnfinishedIdx)}
             style={{
               ...btnPrimary(),
               marginTop: 0,
-              marginBottom: hasExamShortcut ? 10 : 18,
+              marginBottom: 18,
               padding: "16px 18px",
               fontSize: 15,
             }}
@@ -744,34 +779,6 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             {completedSteps.size === 0
               ? `🚀 Begin bij stap 1`
               : `▶ Doorgaan: stap ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
-          </button>
-        )}
-
-        {/* Sneltrack-knop voor leerlingen met morgen toets. Springt direct
-            naar de examenstijl-stap zonder de uitleg-stappen ervoor. */}
-        {hasExamShortcut && (
-          <button
-            onClick={() => onPickStep(examStepIdx)}
-            style={{
-              width: "100%",
-              padding: "12px 14px",
-              marginBottom: 18,
-              borderRadius: 12,
-              border: "1px solid rgba(255,140,66,0.45)",
-              background: "linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,140,66,0.05))",
-              color: "#ff8c42",
-              fontFamily: "var(--font-display)",
-              fontSize: 13,
-              fontWeight: 700,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 8,
-            }}
-          >
-            <span style={{ fontSize: 16 }} aria-hidden="true">⏱️</span>
-            <span>Toets morgen? Spring direct naar examenstijl (~5 min)</span>
           </button>
         )}
         {loaded && firstUnfinishedIdx === null && (
