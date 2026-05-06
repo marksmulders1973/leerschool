@@ -1426,6 +1426,130 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Getal & Ruimte Havo/vwo 2 — wiskunde klas 2 ────────────────────
+  "gr-hv2": {
+    0: [
+      { q: "Vereenvoudig: 5a + 3a − 2a", options: ["6a", "10a", "8a", "30a"], answer: 0, explanation: "5+3−2 = 6, dus 6a. Optellen + aftrekken van gelijksoortige termen." },
+      { q: "Wat is 7 × 8 + 6?", options: ["62", "98", "70", "56"], answer: 0, explanation: "Eerst ×: 7×8=56. + 6 = 62. Volgorde: ×÷ vóór +−." },
+    ],
+    1: [
+      { q: "Oppervlakte vierkant met zijde 9 cm?", options: ["81 cm²", "36 cm²", "18 cm²", "27 cm²"], answer: 0, explanation: "A = z² = 9 × 9 = 81 cm²." },
+      { q: "Inhoud kubus met ribbe 5?", options: ["125", "75", "25", "15"], answer: 0, explanation: "V = z³ = 5 × 5 × 5 = 125." },
+    ],
+    2: [
+      { q: "Bij y = 3x + 2: y als x = 4?", options: ["14", "12", "9", "5"], answer: 0, explanation: "y = 3 × 4 + 2 = 12 + 2 = 14." },
+      { q: "Los op: 2x + 5 = 17", options: ["x = 6", "x = 11", "x = 8", "x = 12"], answer: 0, explanation: "2x = 17 − 5 = 12. x = 12 / 2 = 6." },
+    ],
+    3: [
+      { q: "Wat is 25% van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25% = ¼. 80 / 4 = 20." },
+      { q: "Een trui is van €60 → €45. Hoeveel % korting?", options: ["25%", "15%", "75%", "30%"], answer: 0, explanation: "Verschil = 15. Korting% = 15/60 × 100 = 25%." },
+    ],
+    4: [
+      { q: "Wat is 8²?", options: ["64", "16", "256", "32"], answer: 0, explanation: "8² = 8 × 8 = 64. Notatie: 'twee' boven (kwadraat)." },
+      { q: "Wat is √49?", options: ["7", "8", "6", "49"], answer: 0, explanation: "Wortel van 49: welk getal × zichzelf = 49? 7 × 7 = 49." },
+    ],
+    5: [
+      { q: "Pythagoras: in driehoek met rechthoekszijden 3 en 4 — schuine zijde?", options: ["5", "7", "12", "25"], answer: 0, explanation: "a² + b² = c². 9 + 16 = 25. c = √25 = 5. Klassiek 3-4-5 driehoek." },
+      { q: "Welke driehoek heeft een rechte hoek?", options: ["Rechthoekige driehoek", "Gelijkzijdige driehoek", "Stompe driehoek", "Geen"], answer: 0, explanation: "Rechthoekige (rechte) driehoek = één hoek 90°. Pythagoras werkt alleen bij rechthoekige driehoeken." },
+    ],
+    6: [
+      { q: "Los op: x² = 25", options: ["x = 5 of x = -5", "x = 5", "x = 25", "x = 12,5"], answer: 0, explanation: "Kwadratische vergelijkingen hebben vaak 2 oplossingen: ±√25 = ±5." },
+      { q: "Wat is x² + 3x = x(x+3)?", options: ["Klopt — uitfactoreren x", "Klopt niet", "Alleen voor x>0", "Alleen voor x<0"], answer: 0, explanation: "Distributiewet: x × x + x × 3 = x² + 3x. Klopt voor alle x." },
+    ],
+    7: [
+      { q: "Inhoud cilinder met straal 3 en hoogte 10?", options: ["~283 (= π × 9 × 10)", "30", "60", "90"], answer: 0, explanation: "V = π × r² × h = π × 9 × 10 ≈ 283. (Met π ≈ 3,14.)" },
+    ],
+  },
+
+  // ── Getal & Ruimte Havo/vwo 3 — wiskunde klas 3 ────────────────────
+  "gr-hv3": {
+    0: [
+      { q: "Welke is een LINEAIRE formule?", options: ["y = 2x + 3", "y = x²", "y = √x", "y = 1/x"], answer: 0, explanation: "Lineair = grafiek is rechte lijn. Vorm y = ax + b. Andere zijn niet-lineair." },
+      { q: "Bij y = 4x − 6, wat is y als x = 3?", options: ["6", "12", "−2", "10"], answer: 0, explanation: "y = 4 × 3 − 6 = 12 − 6 = 6." },
+    ],
+    1: [
+      { q: "Wat is GELIJKVORMIGHEID in figuren?", options: ["Zelfde vorm, verschillende grootte", "Identiek", "Spiegelbeeld alleen", "Volledig anders"], answer: 0, explanation: "Gelijkvormig: hoeken gelijk, zijden in dezelfde verhouding. Bv. een grote en kleine driehoek met dezelfde vorm." },
+      { q: "Bij gelijkvormige driehoeken: zijden 3,4,5 en 9,12,?", options: ["15", "10", "20", "12"], answer: 0, explanation: "Verhouding 3 (9/3=3, 12/4=3). Dus 5 × 3 = 15." },
+    ],
+    2: [
+      { q: "Wat is een PARABOOL?", options: ["Grafiek van y = ax² + bx + c", "Een rechte lijn", "Een cirkel", "Een sinusgolf"], answer: 0, explanation: "Parabool = symmetrische U-vorm. Komt uit kwadratische functie. Bovenkant = top, snijpunten met x-as = nulpunten." },
+      { q: "Bij y = x² − 4: nulpunten?", options: ["x = 2 en x = -2", "x = 4", "x = 0", "Geen"], answer: 0, explanation: "x² − 4 = 0 → x² = 4 → x = ±2. Verschil van kwadraten." },
+    ],
+    3: [
+      { q: "Wat is GEMIDDELDE van 4, 8, 12?", options: ["8", "12", "4", "24"], answer: 0, explanation: "Som / aantal = (4+8+12)/3 = 24/3 = 8." },
+      { q: "Welk percentage is 15 van de 60?", options: ["25%", "15%", "20%", "75%"], answer: 0, explanation: "15/60 × 100% = 25%. Of: 15/60 = 1/4 = 25%." },
+    ],
+    4: [
+      { q: "Vereenvoudig: (x²)³", options: ["x⁶", "x⁵", "x³", "x⁹"], answer: 0, explanation: "Macht-van-een-macht: vermenigvuldig exponenten. (x²)³ = x^(2×3) = x⁶." },
+      { q: "Wat is x⁵ × x³?", options: ["x⁸", "x¹⁵", "x²", "2x⁸"], answer: 0, explanation: "Vermenigvuldigen met zelfde grondtal: tel exponenten. 5 + 3 = 8. → x⁸." },
+    ],
+    5: [
+      { q: "Los op: 2x² − 8 = 0", options: ["x = 2 of x = -2", "x = 4", "x = ±√8", "x = 8"], answer: 0, explanation: "2x² = 8. x² = 4. x = ±2." },
+    ],
+    6: [
+      { q: "Bij rechthoekige driehoek: tegenover = 3, naast = 4. Wat is tan(α)?", options: ["3/4 = 0,75", "4/3", "5/3", "5/4"], answer: 0, explanation: "tan = tegenover / naast = 3/4 = 0,75. SOSCASTOA: T(angent) = T(egen)/A(an)." },
+      { q: "sin(30°) = ?", options: ["½ = 0,5", "1", "0", "√2/2"], answer: 0, explanation: "Standaard waarde: sin 30° = 0,5. Onthouden voor examen!" },
+    ],
+    7: [
+      { q: "Welke verband bestaat ER tussen omtrek + diameter cirkel?", options: ["O = π × d", "O = π × r", "O = 2r", "O = r²"], answer: 0, explanation: "Omtrek = π × diameter, of 2π × straal. Diameter = 2r." },
+    ],
+    8: [
+      { q: "Hoeveel mogelijkheden heeft 3-cijferige PIN met 0-9?", options: ["1000 (10³)", "30", "100", "999"], answer: 0, explanation: "Per cijfer 10 keuzes, 3 cijfers → 10×10×10 = 10³ = 1000. Inclusief 000." },
+    ],
+  },
+
+  // ── Paso Adelante 1 — Spaans klas 1 ─────────────────────────────────
+  "paso-adelante-1": {
+    0: [
+      { q: "Wat betekent 'Hola'?", options: ["Hallo", "Doei", "Bedankt", "Sorry"], answer: 0, explanation: "Hola = hallo. Adiós = doei, gracias = bedankt, perdón = sorry." },
+      { q: "'Yo me ___ Sara.' (mijn naam is)", options: ["llamo", "llama", "llamas", "llaman"], answer: 0, explanation: "Wederkerig werkwoord 'llamarse' (zich noemen). Yo + me + llamo. Tu + te + llamas." },
+    ],
+    1: [
+      { q: "Wat is 'casa' in Spaans?", options: ["Huis", "School", "Auto", "Familie"], answer: 0, explanation: "Casa = huis. Escuela = school, coche = auto, familia = familie." },
+      { q: "Hoe zeg je 'mijn moeder' in Spaans?", options: ["mi madre", "tu madre", "su madre", "mio madre"], answer: 0, explanation: "Mi (mijn) + madre (moeder). 'Tu' = jouw, 'su' = zijn/haar/uw." },
+    ],
+    2: [
+      { q: "Wat is 'instituto'?", options: ["Middelbare school", "Boek", "Klas", "Lerar"], answer: 0, explanation: "Instituto = middelbare school in Spanje. Profesor = leraar, libro = boek, clase = klas." },
+      { q: "'Estudio español.' (ik studeer ___)", options: ["Spaans", "Engels", "Frans", "Duits"], answer: 0, explanation: "Español = Spaans. Inglés = Engels, francés = Frans, alemán = Duits." },
+    ],
+    3: [
+      { q: "Wat is 'tienda' in Spaans?", options: ["Winkel", "Boom", "Vakantie", "Stem"], answer: 0, explanation: "Tienda = winkel. Árbol = boom, vacaciones = vakantie, voz = stem." },
+      { q: "'¿Cuánto cuesta?' betekent?", options: ["Hoeveel kost het?", "Waar is het?", "Wat is dit?", "Wanneer komt het?"], answer: 0, explanation: "Cuánto cuesta = hoeveel kost. Vraag voor prijs in winkel/markt." },
+    ],
+    4: [
+      { q: "Wat is 'verano'?", options: ["Zomer", "Winter", "Lente", "Herfst"], answer: 0, explanation: "Verano = zomer. Invierno = winter, primavera = lente, otoño = herfst." },
+      { q: "'Cádiz' is een stad in?", options: ["Spanje (Andalusië)", "Frankrijk", "Italië", "Mexico"], answer: 0, explanation: "Cádiz = oude Spaanse havenstad in Andalusië, kuststad aan Atlantische Oceaan." },
+    ],
+  },
+
+  // ── Op Niveau Havo 4/5 — Nederlands bovenbouw ───────────────────────
+  "op-niveau-havo45": {
+    0: [
+      { q: "Wat is een AANNAME in een betoog?", options: ["Iets dat voor waar wordt aangenomen zonder bewijs", "Bewijs", "Conclusie", "Citaat"], answer: 0, explanation: "Aanname (premisse) = uitgangspunt waarop redenering rust. Goede betogen maken aannames expliciet." },
+      { q: "Welke leesstrategie gebruik je voor SAMENVATTEN?", options: ["Studerend lezen + selectief noteren", "Skimmen", "Hardop voorlezen", "Negeren"], answer: 0, explanation: "Voor samenvatting: lees nauwkeurig, markeer kernzin per alinea, herschrijf in eigen woorden." },
+    ],
+    1: [
+      { q: "Welk soort is een ZAKELIJKE brief?", options: ["Formeel + duidelijk + zonder emoties", "Persoonlijk + verhalend", "Gedicht", "Sms"], answer: 0, explanation: "Zakelijke brief: aanhef, doel, kort, beleefd, slot. Bv. naar bedrijf, gemeente, school." },
+      { q: "Welke is GOED format?", options: ["Geachte heer/mevrouw,...Met vriendelijke groet,", "Hoi! ... Doei", "Beste, ... Tot straks", "Hé! ... Yo"], answer: 0, explanation: "Formele aanhef + slot. Bij naam bekend: 'Geachte mevrouw De Vries,'." },
+    ],
+    2: [
+      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuwruzie", "Gepraat", "Toets"], answer: 0, explanation: "Debat: pro/contra, beurt-systeem, jury, tijdslimiet. Engels gebaseerd op Brits parlement." },
+    ],
+    3: [
+      { q: "Wat is een ROMAN?", options: ["Lang verhalend prozawerk (fictie)", "Kort verhaal", "Gedicht", "Toneelstuk"], answer: 0, explanation: "Roman: 100+ pagina's, fictief verhaal met meerdere personages + plot. Vs. novelle (korter), short story." },
+      { q: "Welk literair element is een FLASHBACK?", options: ["Terugblik naar eerder moment in verhaal", "Vooruitblik", "Beschrijving", "Climax"], answer: 0, explanation: "Flashback (analepsis): scene uit verleden tussengevoegd. Verheldert achtergrond personage." },
+    ],
+    4: [
+      { q: "Welke spellingfout: 'Hij wordt boos.' is wel/niet correct?", options: ["Correct", "Moet 'word' zijn", "Moet 'wort' zijn", "Beide goed"], answer: 0, explanation: "Stam (word) + t voor 3e persoon enkelvoud → wordt. 't kofschip-regel: 'd' niet in 't kof-(s)c-hip dus +t." },
+    ],
+    5: [
+      { q: "Wat is een DROGREDEN?", options: ["Schijn-argument dat logisch onjuist is", "Goede onderbouwing", "Bron-citaat", "Vraag"], answer: 0, explanation: "Drogredenen: ad hominem (op persoon), populum (iedereen vindt), stroman, etc. Vaak misleidend gebruikt." },
+    ],
+    6: [
+      { q: "Welk type tekst krijg je vaak op CSE?", options: ["Beschouwende of betogende artikelen", "Gedichten alleen", "Toneelstukken", "Dagboekfragmenten"], answer: 0, explanation: "Centraal Schriftelijk Examen Nederlands: 4-5 teksten + open vragen + samenvatting. Vaak NRC/Volkskrant-niveau." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
