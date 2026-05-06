@@ -278,59 +278,11 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
         {/* Stap 2-content: oefen per onderdeel */}
         {mode === "oefenen" && (
           <>
-            {/* Featured card: gemengd */}
-            {(() => {
-              const f = ONDERDELEN[0];
-              const sel = selected?.id === f.id;
-              const best = getBestScore(f.id);
-              return (
-                <div onClick={() => { setSelected(sel ? null : f); SoundEngine.play("click"); }}
-                  style={{
-                    borderRadius: 18,
-                    border: `2px solid ${sel ? f.color : f.border}`,
-                    background: sel ? f.bg : "rgba(255,255,255,0.03)",
-                    padding: "18px 20px",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 16,
-                    transition: "all 0.15s ease",
-                    boxShadow: sel ? `0 0 20px ${f.bg}` : "none",
-                  }}
-                  onMouseEnter={e => { if (!sel) e.currentTarget.style.background = f.bg; }}
-                  onMouseLeave={e => { if (!sel) e.currentTarget.style.background = "rgba(255,255,255,0.03)"; }}
-                >
-                  <span style={{ fontSize: 36 }}>{f.icon}</span>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 19, fontWeight: 700, color: f.color }}>{f.label}</div>
-                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>{f.sub}</div>
-                    {best !== null && (
-                      <div style={{ marginTop: 4, display: "inline-block", padding: "2px 8px", borderRadius: 8, background: best >= 80 ? "rgba(0,200,83,0.2)" : "rgba(255,152,0,0.2)", border: `1px solid ${best >= 80 ? "rgba(0,200,83,0.4)" : "rgba(255,152,0,0.4)"}`, fontFamily: "var(--font-display)", fontSize: 12, color: best >= 80 ? "var(--color-brand-primary-100)" : "#ffb74d", fontWeight: 700 }}>
-                        beste score: {best}%
-                      </div>
-                    )}
-                  </div>
-                  <div style={{
-                    width: 24, height: 24, borderRadius: "50%",
-                    border: `2px solid ${sel ? f.color : "rgba(255,255,255,0.2)"}`,
-                    background: sel ? f.color : "transparent",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: 14, color: "var(--color-text-strong)", flexShrink: 0,
-                  }}>
-                    {sel ? "✓" : ""}
-                  </div>
-                </div>
-              );
-            })()}
-
-            {/* Divider */}
-            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.07)" }} />
-              <span style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5 }}>
-                of kies een onderdeel
-              </span>
-              <div style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.07)" }} />
-            </div>
+            {/* "Alles gemengd"-featured-tegel verwijderd uit Stap 2 (audit 2,
+                leerkracht-feedback): ondermijnde de 3-staps-logica omdat
+                ongeduldige leerlingen direct doorklikten zonder een specifiek
+                onderdeel te oefenen. Mengen kan nu via Stap 3 (eindtoets-
+                simulatie) — link onderaan deze sectie. */}
 
             {/* Onderdelen-grid */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
