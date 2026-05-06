@@ -18,15 +18,17 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   return false;
 };
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn }) {
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, prefilledCategory }) {
   const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
   const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
   const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
   const groepBuckets = {"1":"groep12","2":"groep12","3":"groep3","4":"groep3","5":"groep5","6":"groep5","7":"groep7","8":"groep7"};
   const klasBuckets  = {"1":"klas1","2":"klas1","3":"klas3","4":"klas3","5":"klas5","6":"klas6"};
   const initLevel = userRole === "leerling" ? (groepBuckets[userLevel] || "") : userRole === "student" ? (klasBuckets[userLevel] || "") : "";
-  const [step, setStep] = useState(1);
-  const [category, setCategory] = useState("");
+  // Audit 2 QA bug #2: prefilledCategory uit StudentHome-vakkenkeuze. Skipt
+  // direct naar stap 2 (boekkeuze) als de gebruiker al een vak gekozen heeft.
+  const [step, setStep] = useState(prefilledCategory ? 2 : 1);
+  const [category, setCategory] = useState(prefilledCategory || "");
   const [selectedBook, setSelectedBook] = useState(null);
   const [customBook, setCustomBook] = useState("");
   const [showCustomInput, setShowCustomInput] = useState(false);

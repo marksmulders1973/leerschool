@@ -233,6 +233,9 @@ export default function App() {
   const [pendingQuizData, setPendingQuizData] = useState(null);
   const [pendingCode, setPendingCode] = useState("");
   const [pendingFeature, setPendingFeature] = useState(null);
+  // Audit 2 QA bug #2: Oefenen-knop op StudentHome-vakkenkeuze geeft nu vak-id
+  // mee zodat TextbookQuiz de juiste category vooraf selecteert.
+  const [pendingTextbookSubject, setPendingTextbookSubject] = useState(null);
   const abortControllerRef = useRef(null);
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
@@ -1028,7 +1031,11 @@ export default function App() {
             startGame(remote, "self");
           }}
           onSelfStudy={() => setPage("self-study")}
-          onTextbook={() => setPage("textbook")}
+          onTextbook={(subjectId) => {
+            // Audit 2 QA bug #2: vak-context van vakkenkeuze-grid doorgeven
+            if (subjectId) setPendingTextbookSubject(subjectId);
+            setPage("textbook");
+          }}
           onPickPathsForSubject={(subjectId) => {
             // M2 audit 2: vakkenkeuze → LearnPathsHub gefilterd op vak
             setLearnFilterSubject(subjectId);
@@ -1121,6 +1128,7 @@ export default function App() {
       )}
       {page === "textbook" && (
         <TextbookQuiz
+          prefilledCategory={pendingTextbookSubject}
           onStart={(config) => {
             const quiz = {
               id: "book-" + Date.now(),

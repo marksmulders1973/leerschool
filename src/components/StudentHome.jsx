@@ -119,7 +119,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   })();
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
-  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
+  // Fallback hier expliciet hex (niet de token) want elders worden
+  // template-suffixen gebruikt zoals `${schoolTypeColor}18` voor opacity —
+  // CSS-variables ondersteunen dat niet.
+  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#3B82F6";
   // PO (basisschool) gebruikt "Groep", VO (met schoolType) gebruikt "Klas".
   const niveauWoord = schoolTypeLabel ? "Klas" : "Groep";
   const profileBadge = userLevel && schoolTypeLabel
@@ -170,7 +173,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   borderRadius: 12,
                   border: sel ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.12)",
                   background: sel ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
-                  color: sel ? "#00d4ff" : "rgba(255,255,255,0.6)",
+                  color: sel ? "var(--color-brand-secondary)" : "rgba(255,255,255,0.6)",
                   fontFamily: "var(--font-display)",
                   fontSize: 13,
                   fontWeight: 700,
@@ -211,11 +214,13 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   display: "flex",
                   flexDirection: "column",
                   gap: 8,
+                  minWidth: 0,    // <360px: voorkomt grid-overflow (QA bug #3)
+                  overflow: "hidden",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontSize: 22 }} aria-hidden="true">{subj.icon}</span>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: subj.color, lineHeight: 1.2 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
+                  <span style={{ fontSize: 22, flexShrink: 0 }} aria-hidden="true">{subj.icon}</span>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: subj.color, lineHeight: 1.2, minWidth: 0, wordBreak: "break-word" }}>
                     {label}
                   </div>
                 </div>
@@ -247,7 +252,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                     </span>
                   </button>
                   <button
-                    onClick={() => { SoundEngine.play("click"); onTextbook && onTextbook(); }}
+                    onClick={() => { SoundEngine.play("click"); onTextbook && onTextbook(vak.id); }}
                     style={{
                       flex: 1,
                       padding: "7px 6px",

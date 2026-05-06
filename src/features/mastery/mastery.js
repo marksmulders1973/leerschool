@@ -200,14 +200,43 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
       row.interval_days = sr.intervalDays;
     }
 
-    const { error } = await supabase
-      .from("topic_mastery")
-      .upsert(row, { onConflict: "player_name,path_id" });
-    if (error) return null;
+    const result = await safeUpsertMastery(row);
+    if (!result.ok) return null;
     return { pathId, attempts, correct, level: getMasteryLevel(attempts, correct) };
   } catch {
     return null;
   }
+}
+
+/**
+ * Defensieve upsert (audit 2 QA bug #5): bij failure die specifiek de
+ * ease_factor/interval_days-kolommen betreft, retry zonder die velden.
+ * Voorkomt silent data-loss van streak+correct-tellers wanneer een
+ * RLS-policy of schema-mismatch ease-writes blokkeert.
+ */
+async function safeUpsertMastery(row) {
+  const { error } = await supabase
+    .from("topic_mastery")
+    .upsert(row, { onConflict: "player_name,path_id" });
+  if (!error) return { ok: true };
+
+  // Retry zonder ease-velden als de fout met die kolommen te maken kan hebben.
+  if (row.ease_factor !== undefined || row.interval_days !== undefined) {
+    // eslint-disable-next-line no-console
+    console.warn("[mastery] ease-write faalde, retry zonder ease-velden:", error.message);
+    _easeColumnSupported = false; // future-calls schrijven 'em niet meer
+    const { ease_factor, interval_days, ...stripped } = row;
+    const { error: error2 } = await supabase
+      .from("topic_mastery")
+      .upsert(stripped, { onConflict: "player_name,path_id" });
+    if (!error2) return { ok: true };
+    // eslint-disable-next-line no-console
+    console.warn("[mastery] retry zonder ease faalde ook:", error2.message);
+  } else {
+    // eslint-disable-next-line no-console
+    console.warn("[mastery] upsert faalde:", error.message);
+  }
+  return { ok: false };
 }
 
 /**
@@ -259,10 +288,8 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
       row.interval_days = sr.intervalDays;
     }
 
-    const { error } = await supabase
-      .from("topic_mastery")
-      .upsert(row, { onConflict: "player_name,path_id" });
-    if (error) return null;
+    const result = await safeUpsertMastery(row);
+    if (!result.ok) return null;
     return { pathId, attempts, correct, level: getMasteryLevel(attempts, correct) };
   } catch {
     return null;
