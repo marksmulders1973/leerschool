@@ -770,7 +770,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             Na rolkeuze verschijnen Leren + Test vanzelf in de bottom-nav. */}
         {step === "role" && (() => {
           const tiles = [
-            { key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8", color: "#0072ff", onClick: () => handleRoleClick("leerling") },
+            // Leerling: bezorgde-Cito-ouder ICP. Extra CTA onderaan rolt direct
+            // naar /cito als shortcut — ouder die specifiek voor Cito komt
+            // hoeft niet eerst rol → vakkenkeuze → cito te klikken.
+            {
+              key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8",
+              color: "#0072ff", onClick: () => handleRoleClick("leerling"),
+              cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
+            },
             { key: "student",  emoji: "🎓", label: "Student",  sub: "vmbo · havo · vwo",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
             { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },
           ];
@@ -807,44 +814,105 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 </div>
                 {/* 5 reguliere tegels. Tegels met `icon` (SVG) gebruiken een
                     layout waarbij de illustratie de bovenkant vult en de tekst
-                    eronder zit; tegels met emoji houden de compacte centrale layout. */}
-                {tiles.map(({ key, emoji, icon, label, sub, color, onClick }) => (
-                  <button
-                    key={key}
-                    onClick={onClick}
-                    className="lk-tile"
-                    style={{
-                      background: `${color}14`,
-                      border: `1.5px solid ${color}55`,
-                      color: "#fff",
-                      ...(icon ? { justifyContent: "flex-start", paddingTop: 8 } : {}),
-                    }}
-                    onMouseEnter={e => {
-                      e.currentTarget.style.transform = "translateY(-2px)";
-                      e.currentTarget.style.background = `${color}28`;
-                    }}
-                    onMouseLeave={e => {
-                      e.currentTarget.style.transform = "translateY(0)";
-                      e.currentTarget.style.background = `${color}14`;
-                    }}
-                  >
-                    {icon ? (
-                      <div style={{
-                        width: "100%",
-                        flex: "1 1 0",
-                        minHeight: 0,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        marginBottom: 4,
-                      }}>{icon}</div>
-                    ) : (
-                      <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
-                    )}
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
-                    <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
-                  </button>
-                ))}
+                    eronder zit; tegels met emoji houden de compacte centrale layout.
+                    Tegels met `cta` worden gerenderd als <div> met embedded CTA-knop
+                    onderaan (button-in-button is invalid HTML). */}
+                {tiles.map(({ key, emoji, icon, label, sub, color, onClick, cta }) => {
+                  const tileBackground = `${color}14`;
+                  const tileBackgroundHover = `${color}28`;
+                  const innerContent = (
+                    <>
+                      {icon ? (
+                        <div style={{
+                          width: "100%",
+                          flex: "1 1 0",
+                          minHeight: 0,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          marginBottom: 4,
+                        }}>{icon}</div>
+                      ) : (
+                        <span style={{ fontSize: cta ? 26 : 30, lineHeight: 1 }}>{emoji}</span>
+                      )}
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
+                    </>
+                  );
+                  if (cta) {
+                    return (
+                      <div
+                        key={key}
+                        onClick={onClick}
+                        className="lk-tile"
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onClick(); }}
+                        style={{
+                          background: tileBackground,
+                          border: `1.5px solid ${color}55`,
+                          color: "#fff",
+                          paddingBottom: 4, // ruimte voor cta-strip
+                          justifyContent: "flex-start",
+                          paddingTop: 12,
+                          gap: 4,
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.transform = "translateY(-2px)";
+                          e.currentTarget.style.background = tileBackgroundHover;
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.transform = "translateY(0)";
+                          e.currentTarget.style.background = tileBackground;
+                        }}
+                      >
+                        {innerContent}
+                        <button
+                          onClick={(e) => { e.stopPropagation(); cta.onClick(); }}
+                          style={{
+                            marginTop: "auto",
+                            width: "100%",
+                            padding: "5px 6px",
+                            borderRadius: 8,
+                            border: "none",
+                            background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
+                            color: "#fff",
+                            fontFamily: "var(--font-display)",
+                            fontSize: 11,
+                            fontWeight: 700,
+                            cursor: "pointer",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {cta.label}
+                        </button>
+                      </div>
+                    );
+                  }
+                  return (
+                    <button
+                      key={key}
+                      onClick={onClick}
+                      className="lk-tile"
+                      style={{
+                        background: tileBackground,
+                        border: `1.5px solid ${color}55`,
+                        color: "#fff",
+                        ...(icon ? { justifyContent: "flex-start", paddingTop: 8 } : {}),
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.background = tileBackgroundHover;
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.background = tileBackground;
+                      }}
+                    >
+                      {innerContent}
+                    </button>
+                  );
+                })}
               </div>
               {/* Rustige ouder-link direct onder de rol-tegels (audit 2 Q4):
                   ouders willen vóór de drukke ticker/scoreborden weten wat
