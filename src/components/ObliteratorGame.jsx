@@ -2,169 +2,27 @@ import { useEffect, useRef, useState } from "react";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { BRAND } from "../brand.js";
-
-const TOP_LIMIT = 25;
-
-async function laadTopScores() {
-  try {
-    const { data, error } = await supabase
-      .from("obliterator_scores")
-      .select("player_name, score, level, created_at")
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: true })
-      .limit(TOP_LIMIT);
-    if (error) return [];
-    return (data || []).map(d => ({ naam: d.player_name, score: d.score, level: d.level || null, datum: d.created_at?.slice(0, 10) }));
-  } catch { return []; }
-}
-
-// Pending high-scores die nog niet naar Supabase zijn gepusht (offline gespeeld).
-// Wordt geflusht bij component-mount en bij 'online' event.
-const PENDING_SCORES_KEY = "obliterator-pending-scores";
-
-function leesPendingScores() {
-  try {
-    const raw = localStorage.getItem(PENDING_SCORES_KEY);
-    return raw ? JSON.parse(raw) : [];
-  } catch { return []; }
-}
-function schrijfPendingScores(arr) {
-  try { localStorage.setItem(PENDING_SCORES_KEY, JSON.stringify(arr || [])); } catch {}
-}
-function pushNaarPendingQueue(payload) {
-  const queue = leesPendingScores();
-  queue.push({ ...payload, _gespeeld_op: Date.now() });
-  // cap op 50 om localStorage-bloat te voorkomen
-  if (queue.length > 50) queue.splice(0, queue.length - 50);
-  schrijfPendingScores(queue);
-}
-
-async function schrijfScore(naam, userId, score, level) {
-  if (!score || score <= 0) return;
-  const payload = {
-    player_name: (naam || "Speler").slice(0, 30),
-    user_id: userId || null,
-    score,
-    level: level || null,
-  };
-  // Direct queue-en zodra offline; vermijdt onnodige network-call die zeker faalt.
-  if (typeof navigator !== "undefined" && navigator.onLine === false) {
-    pushNaarPendingQueue(payload);
-    return;
-  }
-  try {
-    const { error } = await supabase.from("obliterator_scores").insert(payload);
-    if (error) throw error;
-  } catch {
-    // Network-failure of API-fout: bewaar lokaal en flush bij volgende online-moment.
-    pushNaarPendingQueue(payload);
-  }
-}
-
-async function flushPendingScores() {
-  if (typeof navigator !== "undefined" && navigator.onLine === false) return;
-  const queue = leesPendingScores();
-  if (!queue.length) return;
-  const overgebleven = [];
-  for (const item of queue) {
-    try {
-      const { error } = await supabase.from("obliterator_scores").insert({
-        player_name: item.player_name,
-        user_id: item.user_id,
-        score: item.score,
-        level: item.level,
-      });
-      if (error) overgebleven.push(item);
-    } catch {
-      overgebleven.push(item);
-    }
-  }
-  schrijfPendingScores(overgebleven);
-}
-
-const SESSIE_KEY_PREFIX = "obliterator-sessies-";
-const BONUS_KEY_PREFIX = "obliterator-bonus-";
-const MUNTEN_KEY_PREFIX = "obliterator-munten-";
-
-// Vaste lijst van admin-spelernamen (lowercase). Het admin-paneel blijft
-// bij deze namen — verandert NIET als iemand het wereld-record verbreekt.
-// Voeg een naam toe om iemand admin te maken.
-const OBLIVION_ADMINS = ["brian"];
-
-// Decoratie-catalogus voor de custom-level-editor. Visueel-only, geen collisie.
-// `bob` = optionele auto-animatie (snelheid/amp) voor zwevende elementen.
-const DECOR_CATALOG = [
-  { id: "decor_boom",         label: "Boom",         emoji: "🌳", grootte: 36 },
-  { id: "decor_palm",         label: "Palm",         emoji: "🌴", grootte: 36 },
-  { id: "decor_cactus",       label: "Cactus",       emoji: "🌵", grootte: 30 },
-  { id: "decor_bloem",        label: "Bloem",        emoji: "🌸", grootte: 22 },
-  { id: "decor_tulp",         label: "Tulp",         emoji: "🌷", grootte: 22 },
-  { id: "decor_gras",         label: "Gras",         emoji: "🌾", grootte: 22 },
-  { id: "decor_paddenstoel",  label: "Paddenstoel",  emoji: "🍄", grootte: 24 },
-  { id: "decor_wolk",         label: "Wolk",         emoji: "☁️", grootte: 32, alpha: 0.85, bob: { snelheid: 0.6, amp: 4 } },
-  { id: "decor_maan",         label: "Maan",         emoji: "🌙", grootte: 28, alpha: 0.9 },
-  { id: "decor_ster",         label: "Ster",         emoji: "⭐", grootte: 22, bob: { snelheid: 1.5, amp: 2 } },
-  { id: "decor_vlinder",      label: "Vlinder",      emoji: "🦋", grootte: 24, bob: { snelheid: 4, amp: 6 } },
-  { id: "decor_vogel",        label: "Vogel",        emoji: "🐦", grootte: 24, bob: { snelheid: 3, amp: 5 } },
-  { id: "decor_rots",         label: "Rots",         emoji: "🪨", grootte: 28 },
-  { id: "decor_fakkel",       label: "Fakkel",       emoji: "🔥", grootte: 26, bob: { snelheid: 6, amp: 1.5 } },
-  // Cheerful platformer-decor (Mario-vibe)
-  { id: "decor_zonnebloem",   label: "Zonnebloem",   emoji: "🌻", grootte: 32 },
-  { id: "decor_bord",         label: "Bordje",       emoji: "🪧", grootte: 28 },
-  { id: "decor_pijp",         label: "Pijp",         emoji: "🟢", grootte: 34 },
-  { id: "decor_mystery",      label: "Mystery-blok", emoji: "❓", grootte: 28, bob: { snelheid: 2, amp: 2 } },
-  { id: "decor_krat",         label: "Krat (decor)", emoji: "📦", grootte: 30 },
-  { id: "decor_ladder",       label: "Ladder",       emoji: "🪜", grootte: 36 },
-  { id: "decor_sprankel",     label: "Sprankel",     emoji: "✨", grootte: 22, bob: { snelheid: 5, amp: 3 } },
-];
-const DECOR_RENDER = Object.fromEntries(DECOR_CATALOG.map((d) => [d.id, d]));
-
-// Speler-skins. unlockLevel = level dat behaald moet zijn (1 = altijd open,
-// null = via speciale unlock zoals Oblivion Pulse).
-const SKINS = [
-  { id: "default",   label: BRAND.name,  emoji: "🔴", unlockLevel: 1 },
-  { id: "spider",    label: "Spin",       emoji: "🕷️", unlockLevel: 10 },
-  { id: "popje",     label: "Popje",      emoji: "🪆", unlockLevel: 20 },
-  { id: "elephant",  label: "Olifant",    emoji: "🐘", unlockLevel: 30 },
-  { id: "trollface", label: "Trollface",  emoji: "😈", unlockLevel: 40 },
-  { id: "triangle",  label: "Driehoek",   emoji: "🔺", unlockLevel: 50 },
-  { id: "xbox",      label: "Xbox",       emoji: "🎮", unlockLevel: 60 },
-  { id: "gorilla",   label: "Gorilla",    emoji: "🦍", unlockLevel: 70 },
-  { id: "yinyang",   label: "Yin Yang",   emoji: "☯️", unlockLevel: 80 },
-  { id: "eye",       label: "Oog",         emoji: "👁️", unlockLevel: 90 },
-  { id: "lvl100",    label: "Level 100",  emoji: "💎", unlockLevel: 100 },
-  { id: "blackhole", label: "Black Hole", emoji: "🕳️", unlockLevel: null },
-];
-const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
-
-// Mulberry32 — deterministische 32-bit RNG. Beide PvP-spelers gebruiken
-// dezelfde seed → identieke obstakel-spawns zonder data uit te wisselen.
-function makeMulberry32(seed) {
-  let a = (seed >>> 0) || 1;
-  return function () {
-    a |= 0; a = (a + 0x6d2b79f5) | 0;
-    let t = a;
-    t = Math.imul(t ^ (t >>> 15), t | 1);
-    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-}
-
-// Moeilijkheid-emoji op basis van level (gebruikt in canvas + level-keuze-knoppen).
-function moeilijkheidEmoji(lvl) {
-  if (lvl <= 5) return "😊";
-  if (lvl <= 15) return "🙂";
-  if (lvl <= 30) return "😬";
-  if (lvl <= 50) return "🔥";
-  if (lvl <= 75) return "💀";
-  return "👹";
-}
-function leesInt(key) {
-  try { return parseInt(localStorage.getItem(key) || "0", 10) || 0; } catch { return 0; }
-}
-function schrijfInt(key, val) {
-  try { localStorage.setItem(key, String(val)); } catch {}
-}
+import {
+  TOP_LIMIT,
+  PENDING_SCORES_KEY,
+  SESSIE_KEY_PREFIX,
+  BONUS_KEY_PREFIX,
+  MUNTEN_KEY_PREFIX,
+  OBLIVION_ADMINS,
+  DECOR_CATALOG,
+  DECOR_RENDER,
+  SKINS,
+  SKIN_BY_ID,
+} from "../games/obliterator/constants.js";
+import {
+  leesInt,
+  schrijfInt,
+  leesPendingScores,
+  schrijfPendingScores,
+  pushNaarPendingQueue,
+} from "../games/obliterator/storage.js";
+import { laadTopScores, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
+import { makeMulberry32, moeilijkheidEmoji } from "../games/obliterator/rng.js";
 
 export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose, onChallengeFriend, pvpMatch, pvpSub, pvpRole, pvpStartsAt }) {
   const pvpMode = !!pvpMatch;
