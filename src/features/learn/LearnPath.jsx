@@ -700,6 +700,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 }
 
 function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded }) {
+  // Sneltrack: detecteer een examenstijl-stap zodat leerlingen die morgen
+  // toets hebben direct naar de kern kunnen springen (audit 2026-05-06,
+  // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
+  const examStepIdx = path.steps.findIndex(s => /examen/i.test(s.title));
+  const hasExamShortcut = examStepIdx >= 0;
+
   return (
     <div style={pageStyle()}>
       <Header onBack={onBack} onHome={onHome} title={path.title} emoji={path.emoji} />
@@ -730,7 +736,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             style={{
               ...btnPrimary(),
               marginTop: 0,
-              marginBottom: 18,
+              marginBottom: hasExamShortcut ? 10 : 18,
               padding: "16px 18px",
               fontSize: 15,
             }}
@@ -738,6 +744,34 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             {completedSteps.size === 0
               ? `🚀 Begin bij stap 1`
               : `▶ Doorgaan: stap ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
+          </button>
+        )}
+
+        {/* Sneltrack-knop voor leerlingen met morgen toets. Springt direct
+            naar de examenstijl-stap zonder de uitleg-stappen ervoor. */}
+        {hasExamShortcut && (
+          <button
+            onClick={() => onPickStep(examStepIdx)}
+            style={{
+              width: "100%",
+              padding: "12px 14px",
+              marginBottom: 18,
+              borderRadius: 12,
+              border: "1px solid rgba(255,140,66,0.45)",
+              background: "linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,140,66,0.05))",
+              color: "#ff8c42",
+              fontFamily: "var(--font-display)",
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+            }}
+          >
+            <span style={{ fontSize: 16 }} aria-hidden="true">⏱️</span>
+            <span>Toets morgen? Spring direct naar examenstijl (~5 min)</span>
           </button>
         )}
         {loaded && firstUnfinishedIdx === null && (

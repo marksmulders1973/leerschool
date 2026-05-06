@@ -12,7 +12,7 @@
 // Klik → onStart() (HomePage routeert naar topic of leerpaden-hub).
 
 import { useEffect, useState } from "react";
-import { loadMasteryForPlayer, recommendNextTopic } from "./mastery.js";
+import { loadMasteryForPlayer, recommendNextTopic, loadDueTopics } from "./mastery.js";
 import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
 import { track } from "../../utils.js";
 
@@ -43,19 +43,28 @@ export default function DailyChallengeBanner({ userName, onStart }) {
   const player = (userName || "").trim();
   const [streakInfo, setStreakInfo] = useState(() => readLocalStreak());
   const [recommended, setRecommended] = useState(null);
+  const [dueCount, setDueCount] = useState(0);
 
-  // Mastery-aanbeveling laden zodat we weten welke pad/onderwerp we openen
-  // bij klik. Niet-blocking: als deze nog leeg is, valt klik terug op hub.
+  // Mastery-aanbeveling + aantal due topics laden. dueCount maakt voor de
+  // leerling expliciet zichtbaar dat de app onthoudt wat herhaald moet worden
+  // (audit 2026-05-06: spaced-rep was niet zichtbaar voor de gebruiker).
   useEffect(() => {
     let cancelled = false;
     if (!player) return;
     (async () => {
       try {
-        const data = await loadMasteryForPlayer(player);
+        const [masteryData, dueData] = await Promise.all([
+          loadMasteryForPlayer(player),
+          loadDueTopics(player),
+        ]);
         if (cancelled) return;
-        setRecommended(recommendNextTopic(data) || null);
+        setRecommended(recommendNextTopic(masteryData) || null);
+        setDueCount(dueData.length);
       } catch {
-        if (!cancelled) setRecommended(null);
+        if (!cancelled) {
+          setRecommended(null);
+          setDueCount(0);
+        }
       }
     })();
     return () => {
@@ -100,9 +109,11 @@ export default function DailyChallengeBanner({ userName, onStart }) {
       eyebrow: "STREAK NIET VERBREKEN",
       eyebrowColor: "#fff",
       title: `${streakInfo.streak} dagen 🔥 — doe je 15 min`,
-      sub: recommendedPath
-        ? `Vandaag: ${recommendedPath.title}`
-        : "Een paar vragen om de streak te houden",
+      sub: dueCount > 0
+        ? `${dueCount} ${dueCount === 1 ? "onderwerp" : "onderwerpen"} klaar om te herhalen${recommendedPath ? ` — start met ${recommendedPath.title}` : ""}`
+        : (recommendedPath
+          ? `Vandaag: ${recommendedPath.title}`
+          : "Een paar vragen om de streak te houden"),
       cta: "Start nu",
     },
     NIEUW: {
