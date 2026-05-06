@@ -439,8 +439,109 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
-  // Volgende boeken: groep-3 lees-methodes (lichter materiaal) + natuur-alternatieven.
-  // Prioriteit: nieuw-nl-junior, vll, lijn3, argus-clou, blink.
+  // ── Nieuw Nederlands Junior — taal groep 5-8 ────────────────────────
+  // Hoofdstukken: 0=Luisteren, 1=Spreken, 2=Lezen, 3=Schrijven,
+  // 4=Spelling, 5=Woordenschat.
+  "nieuw-nl-junior": {
+    0: [
+      { q: "Wat doe je goed bij LUISTEREN?", options: ["Stil zijn en aandacht geven", "Praten door de spreker heen", "Naar je telefoon kijken", "Ergens anders gaan zitten"], answer: 0, explanation: "Goed luisteren = stil + aandacht + de spreker aankijken." },
+      { q: "Welk geluid hoor je in een rijtje 'm-a-n'?", options: ["man", "mam", "mn", "ma"], answer: 0, explanation: "Plak de letters samen: m + a + n = man." },
+      { q: "Welk woord rijmt op 'kat'?", options: ["mat", "boom", "tafel", "auto"], answer: 0, explanation: "Rijmen = zelfde eindklank. Kat-mat hebben dezelfde -at klank." },
+    ],
+    1: [
+      { q: "Hoe begin je een KORT VERHAAL?", options: ["Met wie + waar + wanneer", "Met de naam van de schrijver", "Met het einde", "Met een lied"], answer: 0, explanation: "Een verhaal begint vaak met de hoofdpersoon, plek en tijd: 'Op zaterdag liep Sara in het park.'" },
+      { q: "Wat doe je als je je VOORSTELT in de klas?", options: ["Naam zeggen + iets over jezelf", "Heel hard schreeuwen", "Wegrennen", "Niets doen"], answer: 0, explanation: "Voorstellen: 'Ik ben Sara, ik ben 8 en ik hou van honden.'" },
+      { q: "Welke zin is een VRAAG?", options: ["Hoe heet jij?", "Ik ben Tom.", "Loop snel.", "Wat een leuke dag!"], answer: 0, explanation: "Een vraag begint met vraagwoord (hoe/wat/wanneer) en eindigt met '?'." },
+    ],
+    2: [
+      { q: "Wat doe je vóór je een tekst leest?", options: ["Naar de titel en plaatjes kijken", "Direct beginnen", "De laatste zin lezen", "Het boek dichtdoen"], answer: 0, explanation: "Titel + plaatjes geven je een idee waar het over gaat — dan lees je beter." },
+      { q: "Wie is de HOOFDPERSOON in het verhaal 'Roodkapje'?", options: ["Roodkapje", "De wolf", "Oma", "De jager"], answer: 0, explanation: "Hoofdpersoon = wie het verhaal over gaat. Roodkapje is de naam van het meisje en het verhaal." },
+      { q: "Wat is de BOODSCHAP van een verhaal?", options: ["Wat het verhaal je wil leren", "De titel", "De schrijver", "Het aantal pagina's"], answer: 0, explanation: "Boodschap = de les of moraal. Bv. bij Roodkapje: 'praat niet met vreemden'." },
+    ],
+    3: [
+      { q: "Wat schrijf je BOVENaan een brief?", options: ["Datum en aanhef ('Beste oma')", "Het einde", "Een tekening", "Niets"], answer: 0, explanation: "Brieven beginnen met datum + aanhef. Daarna de inhoud, en aan het eind je naam." },
+      { q: "Hoe begin je een ZIN?", options: ["Met een hoofdletter", "Met een kleine letter", "Met een cijfer", "Met een !"], answer: 0, explanation: "Elke nieuwe zin begint met een hoofdletter. Eindigen kan met '.', '?' of '!'." },
+      { q: "Welke ZIN is goed?", options: ["Ik loop naar school.", "ik loop naar school", "Ik LOOP naar school.", "Ik loop naar school"], answer: 0, explanation: "Hoofdletter aan begin (✓ Ik) + punt aan eind (✓ school.). Dat is de juiste vorm." },
+    ],
+    4: [
+      { q: "Welk is GOED gespeld?", options: ["bal", "bahl", "ball", "bel"], answer: 0, explanation: "'Bal' = drie letters: b-a-l. Korte 'a' klank, korte 'l'." },
+      { q: "Welke is goed: 'huis' of 'huiz'?", options: ["huis", "huiz", "Beide", "Geen van beide"], answer: 0, explanation: "Eenvoud: 'huis' eindigt op -s (een woord met s). De z hoort bij 'huizen' (meervoud)." },
+      { q: "Hoe schrijf je het meervoud van 'kat'?", options: ["katten", "katen", "katz", "kats"], answer: 0, explanation: "Korte klinker 'a' → de medeklinker erna verdubbelt: kat → katten." },
+    ],
+    5: [
+      { q: "Wat is een SYNONIEM van 'blij'?", options: ["vrolijk", "boos", "verdrietig", "moe"], answer: 0, explanation: "Synoniem = (bijna) hetzelfde betekenend woord. Blij = vrolijk." },
+      { q: "Wat betekent 'hard rennen'?", options: ["heel snel rennen", "luid rennen", "zwaar rennen", "ver rennen"], answer: 0, explanation: "Hier is 'hard' een bijwoord van snelheid: heel snel. (Ander gebruik: 'hard hout' = stevig.)" },
+      { q: "Welk woord hoort NIET bij eten?", options: ["fiets", "brood", "appel", "kaas"], answer: 0, explanation: "Brood, appel, kaas zijn voedsel. Fiets is een vervoersmiddel." },
+    ],
+  },
+
+  // ── Veilig Leren Lezen — groep 3 (eerste leesonderwijs) ─────────────
+  // Hoofdstukken: 0=Letters en klanken, 1=Woorden lezen, 2=Zinnen lezen,
+  // 3=Teksten lezen, 4=Schrijven, 5=Spelling.
+  "vll": {
+    0: [
+      { q: "Welke letter hoor je in 'maan'?", options: ["m", "n", "f", "k"], answer: 0, explanation: "Maan begint met de klank 'm'. Luister: m-aa-n." },
+      { q: "Welke 2 letters samen klinken als 'oo'?", options: ["oo", "ao", "uo", "io"], answer: 0, explanation: "Twee o's samen = lange 'oo' klank. Bv. boom, mooi." },
+      { q: "Welk woord begint met de klank 'b'?", options: ["bal", "appel", "olifant", "uil"], answer: 0, explanation: "Bal begint met b (b-a-l). De andere beginnen met andere klanken." },
+    ],
+    1: [
+      { q: "Welke letters maken samen 'kat'?", options: ["k-a-t", "k-a-d", "g-a-t", "k-e-t"], answer: 0, explanation: "Kat = k + a + t. Drie aparte klanken aan elkaar." },
+      { q: "Welk woord LIJKT op 'maan'?", options: ["man", "miel", "kaal", "duik"], answer: 0, explanation: "Maan en man klinken bijna gelijk — alleen aa (lang) tegenover a (kort)." },
+      { q: "Welk woord eindigt op de klank 'oek'?", options: ["boek", "poel", "boom", "kooi"], answer: 0, explanation: "Boek = b + oe + k. Eindigt op 'oek'." },
+    ],
+    2: [
+      { q: "Welke is een ZIN?", options: ["De man loopt.", "lopen huis", "Snel.", "kat"], answer: 0, explanation: "Een zin heeft minstens een onderwerp + werkwoord. 'De man loopt.' = wie + wat doet." },
+      { q: "Welke zin past bij plaatje van een rennende hond?", options: ["De hond rent.", "De hond slaapt.", "De hond eet.", "De hond zwemt."], answer: 0, explanation: "Rent = bij rennen-plaatje. Andere acties bij andere plaatjes." },
+      { q: "Hoe eindigt een ZIN meestal?", options: ["Met een punt", "Met een streep", "Met een spatie", "Met een woord"], answer: 0, explanation: "Een gewone zin eindigt met '.'. Een vraag met '?', een uitroep met '!'." },
+    ],
+    3: [
+      { q: "Wat is de TITEL van een verhaal?", options: ["De naam bovenaan", "De laatste zin", "De schrijver", "Het einde"], answer: 0, explanation: "Titel = de naam van het verhaal, staat bovenaan en geeft een hint waar het over gaat." },
+      { q: "Wat doe je als je een woord NIET kent in een tekst?", options: ["Aan de juf vragen", "Het overslaan en hopen", "Het boek weggooien", "Stoppen met lezen"], answer: 0, explanation: "Vraag het of zoek het op — zo leer je nieuwe woorden." },
+      { q: "Wie zijn de PERSONAGES in een verhaal?", options: ["De mensen of dieren in het verhaal", "De schrijvers", "De lezers", "De plaatjes"], answer: 0, explanation: "Personages = wie er voorkomen in het verhaal. Bv. Roodkapje, de wolf en oma." },
+    ],
+    4: [
+      { q: "Hoe schrijf je 'huis'?", options: ["h-u-i-s", "h-u-s", "h-i-s", "h-u-i-z"], answer: 0, explanation: "Huis = h + u + i + s. Vier letters." },
+      { q: "Welk woord schrijf je MET een hoofdletter aan het begin?", options: ["Sara", "fiets", "boom", "rood"], answer: 0, explanation: "Sara is een naam (eigennaam) → hoofdletter. De andere zijn gewone woorden." },
+      { q: "Welk getal schrijf je als 'drie'?", options: ["3", "30", "13", "33"], answer: 0, explanation: "'Drie' = 3 (cijfer). 30 = dertig, 13 = dertien." },
+    ],
+    5: [
+      { q: "Welke is goed gespeld?", options: ["zon", "son", "zonn", "zhon"], answer: 0, explanation: "Zon = z + o + n. Korte o, geen dubbele letters." },
+      { q: "Hoe schrijf je het MEERVOUD van 'man'?", options: ["mannen", "manen", "manz", "mans"], answer: 0, explanation: "Korte klinker (a) → medeklinker erna verdubbelt: man → mannen." },
+      { q: "Welk leesteken zet je achter 'Hoe heet jij'?", options: ["?", ".", "!", ","], answer: 0, explanation: "Een vraag eindigt met '?'. Hier vraag je iemand iets, dus vraagteken." },
+    ],
+  },
+
+  // ── Lijn 3 — groep 3 (alternatief leesonderwijs) ────────────────────
+  // Hoofdstukken: 0=Letters en klanken, 1=Woorden, 2=Zinnen, 3=Teksten,
+  // 4=Schrijven.
+  "lijn3": {
+    0: [
+      { q: "Welke is een KLINKER?", options: ["a", "b", "k", "t"], answer: 0, explanation: "Klinkers: a, e, i, o, u (en y soms). Medeklinkers: alle andere letters zoals b, k, t." },
+      { q: "Welke klank hoor je in 'eet'?", options: ["ee", "e", "et", "t"], answer: 0, explanation: "Eet heeft de lange 'ee' klank (twee e's klinken als één lange klank)." },
+      { q: "Welk woord rijmt op 'pen'?", options: ["ven", "pop", "tand", "huis"], answer: 0, explanation: "Pen-ven hebben dezelfde -en klank → rijmen." },
+    ],
+    1: [
+      { q: "Plak deze klanken: 'd-r-o-p'.", options: ["drop", "dorp", "draaip", "drep"], answer: 0, explanation: "d + r + o + p = drop. Letters in volgorde aan elkaar." },
+      { q: "Welk woord betekent 'iets om mee te schrijven'?", options: ["pen", "boom", "fiets", "bal"], answer: 0, explanation: "Pen = schrijfgereedschap. De andere zijn andere voorwerpen." },
+      { q: "Welk woord heeft 4 letters?", options: ["boek", "bal", "kat", "ja"], answer: 0, explanation: "Boek = b-o-e-k = 4 letters. Bal = 3, kat = 3, ja = 2." },
+    ],
+    2: [
+      { q: "Welke is een goede zin?", options: ["De zon schijnt.", "schijnt zon de", "zon de schijnt", "schijnt"], answer: 0, explanation: "Een zin heeft een logische volgorde. 'De zon schijnt' = onderwerp + werkwoord." },
+      { q: "Wat ontbreekt in: 'De hond ___'", options: ["een werkwoord (loopt, blaft)", "een hoofdletter", "een nieuwe naam", "niks"], answer: 0, explanation: "Een zin moet een werkwoord hebben. 'De hond loopt' / 'De hond blaft'." },
+    ],
+    3: [
+      { q: "Wat doe je als je iets in een tekst NIET begrijpt?", options: ["Het opnieuw lezen", "Boek dichtdoen", "Iemand anders erop wijzen", "Negeren"], answer: 0, explanation: "Opnieuw lezen helpt vaak. Of vraag het aan iemand." },
+      { q: "Welk soort tekst is 'Het regent vandaag'?", options: ["Een mededeling", "Een vraag", "Een uitroep", "Een gedicht"], answer: 0, explanation: "Mededeling = je vertelt iets. Eindigt met '.'." },
+      { q: "Wat is een GEDICHT?", options: ["Een tekst met regels die vaak rijmen", "Een lange roman", "Een instructie", "Een lijstje"], answer: 0, explanation: "Gedicht = korte tekst met ritme/rijm. Vaak op een mooie manier iets vertellen." },
+    ],
+    4: [
+      { q: "Hoe schrijf je een ZIN goed op?", options: ["Hoofdletter + spatie tussen woorden + punt", "Alles aan elkaar zonder spaties", "Alleen kleine letters", "Met cijfers"], answer: 0, explanation: "Hoofdletter (begin), spaties (tussen woorden), punt (einde). Bv. 'De auto rijdt.'" },
+      { q: "Welk woord schrijf je voluit met letters?", options: ["acht", "8", "VIII", "oochd"], answer: 0, explanation: "'Acht' = letterwoord voor het cijfer 8. Bij schrijven kun je beide gebruiken." },
+      { q: "Welke letters in 'zon' zijn klinkers?", options: ["o", "z", "n", "z en n"], answer: 0, explanation: "Z en N zijn medeklinkers. O is de enige klinker in 'zon'." },
+    ],
+  },
+
+  // Volgende: argus-clou + blink (natuur-alternatieven).
 };
 
 /**
