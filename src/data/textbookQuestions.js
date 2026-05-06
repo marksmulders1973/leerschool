@@ -150,13 +150,67 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Taal Actief — taal groep 5-8 (eerste taal-boek 2026-05-06) ──────
+  // Hoofdstukken: 0=Luisteren en spreken, 1=Lezen, 2=Schrijven,
+  // 3=Spelling, 4=Woordenschat, 5=Taalbeschouwing.
+  "taal-actief": {
+    0: [
+      // Luisteren en spreken
+      { q: "Wat doe je vooral als je actief LUISTERT?", options: ["Aankijken, knikken en samenvatten", "Door de spreker heen praten", "Iets anders gaan doen op je telefoon", "Je eigen verhaal voorbereiden"], answer: 0, explanation: "Actief luisteren = aandacht geven, oogcontact maken, knikken, en de spreker tonen dat je hem volgt — bv. door af en toe samen te vatten." },
+      { q: "Welke zin hoort bij een PRESENTATIE?", options: ["'Vandaag wil ik vertellen over honden.'", "'Ik weet het niet, doe maar wat.'", "'Wacht, ik moet even denken…'", "'Ja hoor, prima.'"], answer: 0, explanation: "Een presentatie heeft een duidelijk onderwerp en aankondiging. De andere zinnen horen bij een gesprek of aarzeling." },
+      { q: "Wat is een GOED begin van een spreekbeurt?", options: ["Een vraag stellen aan de klas", "Direct alle feiten opsommen", "Excuses aanbieden voor je voorbereiding", "Heel zacht praten"], answer: 0, explanation: "Een vraag pakt de aandacht en betrekt de klas. Bv. 'Wie heeft er weleens een spin gezien?'" },
+      { q: "Welk woord helpt bij het ORDENEN van wat je vertelt?", options: ["Eerst", "Lekker", "Misschien", "Soort"], answer: 0, explanation: "'Eerst' (en 'daarna', 'tenslotte') zijn signaalwoorden die volgorde aangeven — handig in presentaties of uitleg." },
+      { q: "Waarom kijk je het publiek aan tijdens een spreekbeurt?", options: ["Om te checken of ze meeluisteren", "Om je papier niet te zien", "Omdat de juf het zegt", "Het maakt niet uit"], answer: 0, explanation: "Oogcontact houdt de aandacht vast en geeft jou feedback (snappen ze het? lachen ze?). Het maakt je verhaal sterker." },
+    ],
+    1: [
+      // Lezen
+      { q: "Wat is de HOOFDGEDACHTE van een tekst?", options: ["De belangrijkste boodschap", "De eerste zin", "Een grappig detail", "Het langste woord"], answer: 0, explanation: "De hoofdgedachte is wat de schrijver vooral wil zeggen — een korte samenvatting van het verhaal in één zin." },
+      { q: "Welke tekstsoort is een NIEUWSBERICHT?", options: ["Informatief", "Verhalend", "Betogend", "Instructief"], answer: 0, explanation: "Een nieuwsbericht geeft feiten — informatief. Verhalend = verhaal, betogend = mening, instructief = stappen-uitleg." },
+      { q: "Wat doe je als je een tekst SKIMT?", options: ["Snel doorlezen voor het hoofdonderwerp", "Elke zin nauwkeurig lezen", "Hardop voorlezen", "De tekst overschrijven"], answer: 0, explanation: "Skimmen = snel scannen, zonder details, om snel te weten waar de tekst over gaat." },
+      { q: "Welk woord laat zien dat er een GEVOLG komt?", options: ["Daardoor", "Hoewel", "Bovendien", "Toen"], answer: 0, explanation: "'Daardoor' (en 'dus', 'omdat') zijn signaalwoorden voor oorzaak-gevolg. 'Hoewel' is tegenstelling, 'bovendien' opsomming, 'toen' tijd." },
+      { q: "Waarom heeft een tekst een TITEL?", options: ["Om de lezer te laten zien waar de tekst over gaat", "Om de tekst langer te maken", "Voor de verkoop", "Het is verplicht"], answer: 0, explanation: "De titel geeft een eerste hint van het onderwerp en trekt de lezer aan." },
+    ],
+    2: [
+      // Schrijven
+      { q: "Welke onderdelen heeft een goede TEKST altijd?", options: ["Inleiding, kern, slot", "Alleen een titel", "Een tekening", "Tien zinnen"], answer: 0, explanation: "Een goed gestructureerde tekst heeft een inleiding (waar gaat het over?), kern (uitleg/argumenten) en slot (afronding/conclusie)." },
+      { q: "Welke zin is een GOEDE openingszin van een verhaal?", options: ["Het begon allemaal op een regenachtige zaterdag.", "Hier is mijn verhaal.", "Lees verder.", "Ik weet niet wat ik moet schrijven."], answer: 0, explanation: "Een goede openingszin geeft tijd of plek + zet meteen de toon. De andere zijn neutraal of leeg." },
+      { q: "Wat doe je in de inleiding van een betoog?", options: ["Je standpunt aankondigen", "Direct het einde vertellen", "Een grap maken", "Je naam herhalen"], answer: 0, explanation: "In de inleiding maak je duidelijk wat je standpunt is en waarom de lezer verder moet lezen." },
+      { q: "Welk signaalwoord gebruik je om een ARGUMENT toe te voegen?", options: ["Bovendien", "Daarentegen", "Hoewel", "Vroeger"], answer: 0, explanation: "'Bovendien' (en 'ook', 'daarnaast') voegen iets toe. 'Daarentegen'/'hoewel' zetten iets tegenover, 'vroeger' is tijd." },
+      { q: "Hoe maak je een tekst LEVENDIG?", options: ["Met voorbeelden en details", "Met heel veel uitroeptekens!!!", "Met alleen feiten", "Door alles in één lange zin"], answer: 0, explanation: "Concrete voorbeelden en zintuiglijke details (geluiden, kleuren) maken een tekst beeldend. Uitroeptekens vervangen geen inhoud." },
+    ],
+    3: [
+      // Spelling
+      { q: "Welke is GOED gespeld?", options: ["Wijze man", "Weize man", "Wyze man", "Waize man"], answer: 0, explanation: "'Wijze' krijgt 'ij' (lange ij). Truc: bij twijfel ei/ij — denk aan een ander woord met dezelfde klank in dezelfde stam ('wijsheid' → ij)." },
+      { q: "Hoe schrijf je het werkwoord 'hij ____' (voltooid: gefietst)?", options: ["fietst", "fietsd", "fietz", "fiest"], answer: 0, explanation: "Tegenwoordige tijd, hij/zij + werkwoord-stam (fiets) + t = 'fietst'. 't kofschip → werkwoorden eindigend op klank uit ' 't kof-(s)c-hip' krijgen -t in voltooid." },
+      { q: "Wanneer gebruik je een HOOFDLETTER?", options: ["Aan het begin van een zin en bij namen", "Alleen als het mooi staat", "Bij elk werkwoord", "Nooit aan het begin"], answer: 0, explanation: "Hoofdletters horen aan het begin van een zin, bij eigennamen (Sara, Amsterdam), en bij sommige titels." },
+      { q: "Welk leesteken sluit een VRAAGZIN af?", options: ["?", ".", "!", ","], answer: 0, explanation: "Een vraag eindigt met een vraagteken (?). Punt = mededeling, uitroepteken = uitroep, komma = pauze in zin." },
+      { q: "Welke is GOED?", options: ["Hij wordt boos.", "Hij word boos.", "Hij wort boos.", "Hij wordd boos."], answer: 0, explanation: "Hij wordt — stam (word) + t (3e persoon enkelvoud), dus 'wordt'. Bij ik/jij staat na het ww + 't kofschip-regel." },
+    ],
+    4: [
+      // Woordenschat
+      { q: "Wat is een SYNONIEM van 'snel'?", options: ["Vlug", "Langzaam", "Hoog", "Klein"], answer: 0, explanation: "Synoniem = woord met (bijna) dezelfde betekenis. 'Snel' = 'vlug'. 'Langzaam' is het tegenovergestelde (antoniem)." },
+      { q: "Wat betekent 'GUL'?", options: ["Iemand die graag deelt", "Iemand die altijd boos is", "Iemand die snel rent", "Iemand die ziek is"], answer: 0, explanation: "Gul = vrijgevig, ruimhartig. Iemand die makkelijk geeft of deelt." },
+      { q: "Welk woord betekent het TEGENOVERGESTELDE van 'moedig'?", options: ["Bang", "Sterk", "Snel", "Slim"], answer: 0, explanation: "Antoniem van moedig (durf hebben) = bang/laf. 'Sterk' is geen tegenstelling van 'moedig'." },
+      { q: "Wat betekent 'in zijn hemd staan'?", options: ["Belachelijk gemaakt zijn", "Letterlijk in een hemd staan", "Heel snel zijn", "Verdwaald zijn"], answer: 0, explanation: "Uitdrukking: 'in je hemd staan' = beschaamd zijn, niets meer hebben om mee te verdedigen." },
+      { q: "Welk woord past in de zin: 'Ze keek me ____ aan: ze kon haar lachen niet houden.'?", options: ["spottend", "boos", "ziek", "moe"], answer: 0, explanation: "Context: ze kan haar lachen niet houden → ze plaagt of bespot. 'Spottend' past." },
+    ],
+    5: [
+      // Taalbeschouwing
+      { q: "Wat voor woord is 'snel' in de zin 'Hij rent snel'?", options: ["Bijwoord", "Zelfstandig naamwoord", "Werkwoord", "Lidwoord"], answer: 0, explanation: "'Snel' zegt iets over het werkwoord 'rent' (HOE rent hij?) → bijwoord. Bijvoeglijk naamwoord zou bij een zelfstandig naamwoord horen." },
+      { q: "Welk woord is een WERKWOORD?", options: ["Lopen", "Hond", "Rood", "Snel"], answer: 0, explanation: "Werkwoord beschrijft een actie of toestand. 'Lopen' is een actie. 'Hond' = znw, 'rood' = bnw, 'snel' = bw." },
+      { q: "Wat is het ONDERWERP van 'De hond blaft hard'?", options: ["De hond", "blaft", "hard", "De"], answer: 0, explanation: "Onderwerp = wie/wat doet de actie? Vraag: wie blaft? → De hond." },
+      { q: "Welk LIDWOORD past bij 'huis'?", options: ["het", "de", "een (alleen)", "geen"], answer: 0, explanation: "'Het' huis. Sommige zelfstandige naamwoorden krijgen 'het' (onzijdig), andere 'de' (mannelijk/vrouwelijk). Onthouden of opzoeken." },
+      { q: "Welke zin staat in de VERLEDEN tijd?", options: ["Ik liep naar school.", "Ik loop naar school.", "Ik zal naar school lopen.", "Ik wil naar school lopen."], answer: 0, explanation: "Verleden tijd = al gebeurd. 'Liep' is verleden tijd van 'lopen'. De andere zinnen zijn tegenwoordig of toekomst." },
+    ],
+  },
+
   // Volgende boeken hieronder toevoegen volgens hetzelfde patroon.
   // Tip: kopieer een bestaand blok en pas de hoofdstuk-titels in commentaar
   // aan op basis van CHAPTER_TITLES[bookId] uit src/data/textbooks.js.
   //
   // Prioriteit-volgorde voor uitbreiding (audit 2 + Mark's content-roadmap):
   //   1. ✅ wereld-in-getallen — done 2026-05-06
-  //   2. taal-actief        (taal, populaire methode)
+  //   2. ✅ taal-actief        — done 2026-05-06
   //   3. staal              (taal, alternatief)
   //   4. naut-meander-brandaan (natuur)
   //   5. gr-junior          (rekenen)
