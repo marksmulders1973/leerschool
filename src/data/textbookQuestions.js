@@ -1550,6 +1550,91 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── M&O Havo — Bedrijfseconomie klas 3+ ─────────────────────────────
+  "mo-havo": {
+    0: [
+      { q: "Wat is BEDRIJFSECONOMIE?", options: ["Hoe een bedrijf efficient werkt + winst maakt", "Studie van banken alleen", "Wiskunde", "Boekhouden alleen"], answer: 0, explanation: "Bedrijfseconomie = strategie + financiën + marketing van een individueel bedrijf. Onderscheid: macroeconomie = land/wereld." },
+      { q: "Wat is een ONDERNEMING?", options: ["Bedrijf met als doel winst maken", "Vereniging zonder winst", "Overheidsinstelling", "Een wet"], answer: 0, explanation: "Onderneming/bedrijf: rechtspersoon (eenmanszaak, BV, NV) met commercieel doel." },
+    ],
+    1: [
+      { q: "Wat zijn VARIABELE kosten?", options: ["Veranderen met productieaantal (bv. grondstof per stuk)", "Vast (bv. huur)", "Eenmalig", "Niet bestaand"], answer: 0, explanation: "Variabel: per geproduceerde eenheid. Vast: per periode (huur, salaris). Beide samen = totale kosten." },
+      { q: "Wat is BREAK-EVEN?", options: ["Punt waar totale kosten = totale opbrengsten (geen winst, geen verlies)", "Maximale winst", "Faillissement", "Bedrijf-start"], answer: 0, explanation: "Bij break-even draait je bedrijf 'kostendekkend'. Bij meer omzet = winst, minder = verlies." },
+    ],
+    2: [
+      { q: "Wat is JIT (just in time)?", options: ["Voorraad pas inkopen wanneer nodig", "Eens per jaar inkopen", "Te veel hebben", "Niets inkopen"], answer: 0, explanation: "JIT = Toyota-methode. Minimaliseert voorraadkosten. Risico: leveringsproblemen → productiestop." },
+    ],
+    3: [
+      { q: "Wat is een ARBEIDSCONTRACT?", options: ["Schriftelijke overeenkomst werknemer-werkgever", "Een verzekering", "Loonstrook", "Pensioen"], answer: 0, explanation: "Bevat afspraken over functie, loon, uren, opzegtermijn. Verplicht in NL bij vast werk." },
+    ],
+    4: [
+      { q: "Wat zijn de 4 P's van marketing?", options: ["Product, Prijs, Plaats, Promotie", "People, Place, Profit, Promotion", "Plan, Plot, Price, Promotion", "alleen Product en Prijs"], answer: 0, explanation: "Klassieke marketing-mix (McCarthy 1960): Product (wat), Prijs (hoeveel), Plaats (waar), Promotie (hoe communiceer je)." },
+      { q: "Welke is een KORTING-strategie?", options: ["10% korting bij 2e product", "Hogere prijs", "Geen verkoop", "Magische prijs"], answer: 0, explanation: "Bv. 'twee voor één', staffelkorting, seizoenskorting. Doel: meer verkopen of voorraad opruimen." },
+    ],
+    5: [
+      { q: "Wat is EIGEN VERMOGEN?", options: ["Geld van de eigenaren in het bedrijf", "Geleend geld", "Voorraden", "Schulden"], answer: 0, explanation: "Eigen vermogen = wat de eigenaars erin stoppen + behaalde winsten. Vreemd vermogen = leningen van buitenaf." },
+      { q: "Wat is een LENING?", options: ["Geld van bank/derden dat moet worden terugbetaald (met rente)", "Cadeau", "Subsidie", "Inkomen"], answer: 0, explanation: "Lening = vreemd vermogen. Te betalen volgens contract: rente + aflossing in termijnen." },
+    ],
+    6: [
+      { q: "Wat is LIQUIDITEIT?", options: ["Vermogen om kort-termijn-betalingen te kunnen doen", "Winst", "Omzet", "Activa"], answer: 0, explanation: "Heb je cash om rekeningen, salaris, huur te betalen? Slechte liquiditeit → faillissement-risico, ook al ben je winstgevend op papier." },
+    ],
+  },
+
+  // ── Prima Nova — Latijn klas 1 ──────────────────────────────────────
+  "prima-nova": {
+    0: [
+      { q: "Wat is 'amare' in Latijn?", options: ["Liefhebben / houden van", "Lopen", "Slapen", "Schrijven"], answer: 0, explanation: "Amare = liefhebben (vandaar 'amour' in Frans, 'amor' in Spaans). Romeinen: amor = liefde." },
+      { q: "Hoe vertaal je 'puella'?", options: ["Meisje", "Jongen", "Vrouw", "Boek"], answer: 0, explanation: "Puella = meisje. Puer = jongen. Femina = vrouw. Liber = boek." },
+    ],
+    1: [
+      { q: "Wat is een NAAMVAL?", options: ["Vorm van zelfst.nw die functie in zin aangeeft", "Een hoofdletter", "Een meervoud", "Een werkwoordsvorm"], answer: 0, explanation: "Latijn heeft 6 naamvallen: nominativus, genitivus, dativus, accusativus, vocativus, ablativus. Elke heeft eigen uitgang." },
+      { q: "Welke naamval geeft de DOENER aan?", options: ["Nominativus", "Accusativus", "Genitivus", "Dativus"], answer: 0, explanation: "Nominativus = onderwerp (doener). Accusativus = lijdend voorwerp. Genitivus = bezit." },
+    ],
+    2: [
+      { q: "Wat betekent 'Veni, vidi, vici'?", options: ["Ik kwam, ik zag, ik overwon", "Vrede zij met u", "Tot ziens", "Heil de keizer"], answer: 0, explanation: "Beroemde uitspraak van Julius Caesar (47 v.Chr.) na snelle overwinning op koning Pharnaces II." },
+      { q: "Welk volk schreef Latijn?", options: ["Romeinen", "Grieken", "Egyptenaren", "Perzen"], answer: 0, explanation: "Romeinse Rijk (~750 v.Chr. − 476 n.Chr.). Latijn werd lingua franca van Europa tot ~1700." },
+    ],
+    3: [
+      { q: "Hoe heet de Romeinse hoofdstad?", options: ["Roma", "Athene", "Alexandria", "Carthago"], answer: 0, explanation: "Roma = Rome. Romulus en Remus stichtten 753 v.Chr. volgens legende." },
+    ],
+  },
+
+  // ── Hellas — Grieks klas 3+ ─────────────────────────────────────────
+  "hellas": {
+    0: [
+      { q: "Hoe heet het Griekse alfabet?", options: ["Alfabet (van alfa + beta)", "Hebreeuws", "Cyrillisch", "Latijns"], answer: 0, explanation: "Grieks: α (alfa), β (beta), γ (gamma)... 24 letters. Basis voor Latijn én Cyrillisch." },
+      { q: "Wat betekent 'philosophia'?", options: ["Liefde voor wijsheid", "Wetenschap", "Religie", "Politiek"], answer: 0, explanation: "Philos (vriend/liefde) + sophia (wijsheid). Filosofie = vakgebied gestart door Grieken (Sokrates, Plato, Aristoteles)." },
+    ],
+    1: [
+      { q: "Wie was Sokrates?", options: ["Filosoof, leraar van Plato", "Veldheer", "Koning", "Schrijver"], answer: 0, explanation: "Sokrates (~470-399 v.Chr.): leerde via vragen ('socratische methode'). Veroordeeld tot drinken van scheerling." },
+      { q: "Hoe heet het hoogste Griekse berg?", options: ["Olympos", "Sinaï", "Etna", "Vesuvius"], answer: 0, explanation: "Olympos: woonplaats van de Griekse goden volgens mythologie. Hoogste berg in Griekenland." },
+    ],
+    2: [
+      { q: "Wat is 'agora' in oude Grieken?", options: ["Marktplein + politiek centrum", "Tempel", "Theater", "School"], answer: 0, explanation: "Agora = openbare plein van Griekse stad. Hier werd handel gedreven, gesproken, gestemd." },
+    ],
+    3: [
+      { q: "Wie schreef de Ilias en Odyssee?", options: ["Homerus", "Hesiodos", "Sophokles", "Plato"], answer: 0, explanation: "Homerus (~8e eeuw v.Chr., bestaan onzeker). Twee epische gedichten over Trojaanse oorlog en thuisreis Odysseus." },
+    ],
+  },
+
+  // ── Zingeving — Levensbeschouwing klas 1+ ───────────────────────────
+  "zingeving": {
+    0: [
+      { q: "Wat is een LEVENSVRAAG?", options: ["Vraag over zin van leven, dood, geluk, etc.", "Wiskundige vraag", "Sportvraag", "Toetsvraag"], answer: 0, explanation: "Levensvragen: 'waarom besta ik?', 'wat is goed?', 'wat na de dood?'. Religies + filosofie zoeken antwoorden." },
+      { q: "Welk is een WERELDGODSDIENST?", options: ["Christendom", "Voetbal", "Politiek", "Schaak"], answer: 0, explanation: "5 grote: christendom, islam, hindoeïsme, boeddhisme, jodendom. Plus traditionele/inheemse religies." },
+    ],
+    1: [
+      { q: "Wat is ETHIEK?", options: ["Studie van goed en kwaad / morele keuzes", "Studie van planten", "Studie van kunst", "Studie van geld"], answer: 0, explanation: "Ethiek (van Grieks 'ethos'): wat is juist gedrag? Kant, Mill, Aristoteles. Ook in beroep: medische, business ethiek." },
+      { q: "Welke religie heeft de KORAN als heilig boek?", options: ["Islam", "Christendom", "Boeddhisme", "Hindoeïsme"], answer: 0, explanation: "Koran = heilig boek van moslims, geopenbaard aan profeet Mohammed (~610-632 n.Chr.). In Arabisch geschreven." },
+    ],
+    2: [
+      { q: "Wat is RESPECT?", options: ["Waardering en achting voor anderen", "Liefde", "Angst", "Bewondering alleen"], answer: 0, explanation: "Respect = erkenning + waardigheid voor andere mensen, ongeacht verschillen. Basis voor samenleven." },
+      { q: "Welke is een DEUGD volgens Aristoteles?", options: ["Moed", "Luiheid", "Gulzigheid", "Hebzucht"], answer: 0, explanation: "Aristoteles: deugden = ethische middens. Moed = midden tussen lafheid en roekeloosheid. Andere: matigheid, rechtvaardigheid, wijsheid." },
+    ],
+    3: [
+      { q: "Wat is MEDITATIE?", options: ["Bewuste oefening voor mentale rust + focus", "Slapen", "Lezen", "Sporten"], answer: 0, explanation: "Mediteren komt uit boeddhistische/hindoeïstische tradities. Wetenschap: vermindert stress, verbetert concentratie." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
