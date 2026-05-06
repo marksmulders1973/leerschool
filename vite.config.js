@@ -29,6 +29,34 @@ function injectSwVersion() {
 
 export default defineConfig({
   plugins: [react(), injectSwVersion()],
+  build: {
+    // QA mini-audit 2026-05-06: hoofd-bundle was 1.2 MB gzip → 9-13s LCP op
+    // school-wifi. Manual chunks splitsen zware vendor-libs en data-blokken
+    // uit het kritieke main-pad zodat de eerste laad sneller is en er beter
+    // kan worden gecachet (een nieuwe data-batch invalideert niet de hele
+    // vendor-bundle).
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('three')) return 'vendor-three';
+            if (id.includes('@supabase')) return 'vendor-supabase';
+            if (id.includes('react-router')) return 'vendor-react-router';
+            if (id.includes('react-dom') || id.includes('/react/')) return 'vendor-react';
+          }
+          // Eigen data-blokken — grote arrays met vragen/boeken/topics
+          if (id.includes('src/data/sampleQuestions')) return 'data-questions';
+          if (id.includes('src/data/topics')) return 'data-topics';
+          if (id.includes('src/data/textbooks')) return 'data-textbooks';
+          // Leerpaden — grote bundel JSX/MD met SVG; één pad per file maar
+          // alle paden samen ~64 files. Hou ze in één lazy chunk zodat de
+          // hoofd-bundle vrij blijft van leerpaad-data totdat user 'em opent.
+          if (id.includes('src/learnPaths/')) return 'data-learnpaths';
+          if (id.includes('src/curricula/')) return 'data-curricula';
+        },
+      },
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',
