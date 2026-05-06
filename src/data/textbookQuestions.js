@@ -391,21 +391,56 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
-  // Volgende boeken hieronder toevoegen volgens hetzelfde patroon.
-  // Tip: kopieer een bestaand blok en pas de hoofdstuk-titels in commentaar
-  // aan op basis van CHAPTER_TITLES[bookId] uit src/data/textbooks.js.
-  //
-  // Prioriteit-volgorde voor uitbreiding (audit 2 + Mark's content-roadmap):
-  //   1. ✅ wereld-in-getallen   — done 2026-05-06
-  //   2. ✅ taal-actief          — done 2026-05-06
-  //   3. ✅ naut-meander-brandaan — done 2026-05-06
-  //   4. ✅ gr-junior            — done 2026-05-06
-  //   5. ✅ wizwijs              — done 2026-05-06
-  //   6. ✅ alles-telt           — done 2026-05-06
-  //   7. staal              (taal, alternatief Taal Actief)
-  //   8. nieuw-nl-junior + vll + lijn3 (groep 3 lees-methodes)
-  //   9. argus-clou + blink (natuur-alternatieven)
-  //   …
+  // ── Staal — taal groep 5-8 (alternatief Taal Actief) ────────────────
+  // Hoofdstukken: 0=Luisteren en spreken, 1=Lezen, 2=Schrijven,
+  // 3=Spelling, 4=Woordenschat, 5=Grammatica.
+  "staal": {
+    0: [
+      { q: "Wat is BELANGRIJK bij een goede presentatie?", options: ["Duidelijke uitspraak en oogcontact", "Snel praten zodat het kort is", "Zonder pauze door te gaan", "Alles voorlezen van papier"], answer: 0, explanation: "Duidelijke uitspraak + oogcontact maken je verhaal verstaanbaar en levendig. Voorlezen klinkt monotoon." },
+      { q: "Wanneer interrumpeer je iemand WEL?", options: ["Als de spreker het je expliciet vraagt", "Als je het saai vindt", "Bij elke pauze", "Nooit"], answer: 0, explanation: "Interrumpeer alleen als de spreker uitnodigt of bij iets urgents. Anders verstoor je het gesprek." },
+      { q: "Welke zin past bij EEN MENING?", options: ["Ik denk dat honden de leukste huisdieren zijn", "Honden bestaan in veel rassen", "Honden zijn zoogdieren", "Honden hebben een staart"], answer: 0, explanation: "'Ik denk dat...' geeft een mening. De andere zijn feiten." },
+      { q: "Wat doe je als je iets NIET begrijpt in een gesprek?", options: ["Vragen of de spreker het wil herhalen", "Doen alsof je het snapt", "Het gesprek beëindigen", "Boos worden"], answer: 0, explanation: "Een vraag stellen toont aandacht én helpt jou verder. Doen alsof leidt tot misverstanden." },
+      { q: "Een DIALOOG bestaat uit?", options: ["Twee of meer mensen die met elkaar praten", "Eén persoon die spreekt", "Een geschreven verhaal", "Een lied"], answer: 0, explanation: "Dialoog = gesprek tussen ≥2 personen. Monoloog = één spreker." },
+    ],
+    1: [
+      { q: "Wat is het VERSCHIL tussen feit en mening?", options: ["Een feit kun je controleren, een mening niet", "Een feit is altijd belangrijker", "Een mening is langer", "Niet veel"], answer: 0, explanation: "Feit = controleerbaar (waar of niet). Mening = persoonlijk standpunt." },
+      { q: "Welke leesmanier gebruik je om SNEL te zien waar een tekst over gaat?", options: ["Skimmen", "Studerend lezen", "Hardop lezen", "Letterlijk vertalen"], answer: 0, explanation: "Skimmen = snel overheen lezen, op zoek naar hoofdpunten. Studerend lezen = nauwkeurig." },
+      { q: "Wat staat meestal in de INLEIDING van een tekst?", options: ["Waar de tekst over gaat + waarom dat boeit", "De conclusie", "Een grap", "Het einde van het verhaal"], answer: 0, explanation: "Inleiding kondigt het onderwerp aan en geeft de lezer een reden om door te lezen." },
+      { q: "Welk woord is een SIGNAAL voor TEGENSTELLING?", options: ["Maar", "En", "Ook", "Dus"], answer: 0, explanation: "'Maar' (en 'echter', 'daarentegen') zetten iets tegenover. 'En' = opsomming, 'dus' = gevolg." },
+      { q: "Een tekst over 'Hoe je een fietsband plakt' is welke soort?", options: ["Instructief", "Informatief", "Verhalend", "Betogend"], answer: 0, explanation: "Stappen-uitleg = instructief. Informatief = feiten, verhalend = verhaal, betogend = mening." },
+    ],
+    2: [
+      { q: "Welk onderdeel komt eerst in een betoog?", options: ["Inleiding met standpunt", "De conclusie", "Argumenten", "Verhalen"], answer: 0, explanation: "Eerst standpunt (waar je voor pleit), dan argumenten, dan conclusie." },
+      { q: "Hoe maak je een tekst LEESBAAR?", options: ["Met witregels en korte alinea's", "Heel veel cursief en vet", "Alle zinnen gelijk lang", "Zonder leestekens"], answer: 0, explanation: "Witregels en alinea's geven het oog rust. Vet/cursief in moderate dosering." },
+      { q: "Welk woord is een SIGNAAL voor VOORBEELD?", options: ["Bijvoorbeeld", "Echter", "Maar", "Toch"], answer: 0, explanation: "'Bijvoorbeeld' (of 'zoals', 'denk aan') leidt een illustratie in." },
+      { q: "Welk type tekst probeert je te OVERTUIGEN?", options: ["Betogend", "Verhalend", "Instructief", "Informatief"], answer: 0, explanation: "Betogend = de schrijver pleit voor of tegen iets en geeft argumenten." },
+      { q: "Welke zin werkt het beste als CONCLUSIE?", options: ["Daarom denk ik dat we minder plastic moeten gebruiken.", "Plastic is een soort kunststof.", "Tot snel!", "Ik weet het niet."], answer: 0, explanation: "Conclusie sluit af met de hoofdgedachte. 'Daarom denk ik...' rondt een betoog af." },
+    ],
+    3: [
+      { q: "Hoe schrijf je 'Hij ____' (verleden tijd: leerde)?", options: ["leerde", "leert", "leeerde", "leerd"], answer: 0, explanation: "Leren in de verleden tijd: stam (leer) + de = leerde. 't kofschip → 'r' niet in het kofschip → -de." },
+      { q: "Welke is GOED?", options: ["pijn doet", "pyn doet", "peijn doet", "pien doet"], answer: 0, explanation: "Pijn = lange ij. Truc: bij twijfel kijk naar de stam — 'pijn' heeft altijd ij." },
+      { q: "Welke is GOED gespeld?", options: ["accommodatie", "akommodatie", "accomodatie", "akkommodatie"], answer: 0, explanation: "Accommodatie heeft TWEE c's én TWEE m's. Officieel woordenboek-spelling." },
+      { q: "Welk werkwoord eindigt op '-T' in 'Jij ___'?", options: ["jij werkt", "jij werk", "jij werkd", "jij werkte"], answer: 0, explanation: "Jij + tegenwoordige tijd: stam + t. Jij werkt. (Bij ik: alleen stam: ik werk.)" },
+      { q: "Welke heeft een HOOFDLETTER nodig?", options: ["amsterdam", "huis", "boom", "rood"], answer: 0, explanation: "'Amsterdam' is een eigennaam (plaats) → hoofdletter. De andere zijn gewone zelfstandige naamwoorden / bijvoeglijk naamwoord." },
+    ],
+    4: [
+      { q: "Wat is een ANTONIEM?", options: ["Tegenovergesteld woord", "Hetzelfde woord", "Een grap", "Een werkwoord"], answer: 0, explanation: "Antoniem = woord met tegenovergestelde betekenis (zwart ↔ wit). Synoniem = (bijna) hetzelfde." },
+      { q: "Wat betekent 'INTEGER'?", options: ["Eerlijk en betrouwbaar", "Vermoeid", "Boos", "Slim"], answer: 0, explanation: "Integer = eerlijk, betrouwbaar, met principes. Vaak gebruikt voor karakter ('integere politicus')." },
+      { q: "Wat betekent 'BAGATELLISEREN'?", options: ["Iets onbelangrijk maken/doen lijken", "Belangrijk maken", "Vergeten", "Onthouden"], answer: 0, explanation: "Bagatel = klein onderdeel. Bagatelliseren = doen alsof iets onbelangrijk is — vaak negatief gebruikt." },
+      { q: "Welk woord past in 'Het ____ stortregende, dus we bleven thuis.'?", options: ["pijp-en", "uit-en", "in-en", "om-en"], answer: 0, explanation: "Uitdrukking 'het regent pijpenstelen'. 'Pijp-en' (op zoek naar 'pijpenstelen') past." },
+      { q: "Een SAMENGESTELD WOORD bestaat uit?", options: ["Twee of meer woorden samen", "Eén lang woord", "Een werkwoord", "Een buitenlands woord"], answer: 0, explanation: "Bv. 'huis-deur' = huis + deur = samengesteld. 'Voetbalveld' = voetbal + veld + (extra: bal+veld)." },
+    ],
+    5: [
+      { q: "Wat is een BIJVOEGLIJK NAAMWOORD?", options: ["Woord dat een eigenschap geeft (zoals 'rood', 'groot')", "Een werkwoord", "Een lidwoord", "Een uitroep"], answer: 0, explanation: "Bnw geeft een eigenschap of kenmerk: 'de RODE bal', 'een GROTE hond'." },
+      { q: "Welk is een PERSOONLIJK VOORNAAMWOORD?", options: ["Hij", "Boom", "Lopen", "Snel"], answer: 0, explanation: "Persoonlijke vnw: ik, jij, hij/zij/het, wij, jullie, zij. 'Hij' verwijst naar persoon." },
+      { q: "Wat is het GEZEGDE in: 'Sara loopt naar school.'?", options: ["loopt", "Sara", "naar school", "school"], answer: 0, explanation: "Gezegde = wat het onderwerp doet/is. Hier: 'loopt' (werkwoord-deel)." },
+      { q: "Welke zin staat in de TOEKOMENDE TIJD?", options: ["Morgen ga ik zwemmen.", "Gisteren zwom ik.", "Ik zwem nu.", "Ik kan zwemmen."], answer: 0, explanation: "Toekomende tijd: 'morgen ga ik' / 'ik zal'. 'Gisteren zwom' = verleden, 'ik zwem' = tegenwoordig, 'ik kan' = mogelijkheid." },
+      { q: "Hoe heet de basis-vorm van een werkwoord (zoals 'lopen', 'eten', 'zien')?", options: ["Infinitief", "Voltooid deelwoord", "Gebiedende wijs", "Zelfstandig naamwoord"], answer: 0, explanation: "Infinitief = onbepaalde wijs: 'lopen', 'zien'. Eindigt vaak op -en in NL." },
+    ],
+  },
+
+  // Volgende boeken: groep-3 lees-methodes (lichter materiaal) + natuur-alternatieven.
+  // Prioriteit: nieuw-nl-junior, vll, lijn3, argus-clou, blink.
 };
 
 /**
