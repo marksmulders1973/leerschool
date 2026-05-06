@@ -1223,6 +1223,106 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Na Klar! — Duits klas 1 ────────────────────────────────────────
+  "na-klar": {
+    0: [
+      { q: "Wat betekent 'Hallo' in Duits?", options: ["Hallo (gelijk aan NL)", "Doei", "Bedankt", "Sorry"], answer: 0, explanation: "Hallo = hetzelfde in NL en DE. 'Tschüss' = doei." },
+      { q: "'Ich ___ Sara.'", options: ["heiße", "heißt", "heißen", "heisse"], answer: 0, explanation: "Ich + ww-stam (heiß) + e = ich heiße. 'heißt' bij du/er. ('Heisse' = oud/zonder ß)." },
+    ],
+    1: [
+      { q: "Wat is 'Familie' in NL?", options: ["Familie", "School", "Werk", "Vakantie"], answer: 0, explanation: "Familie = familie (cognaat: bijna identiek). Andere woorden: Schule, Arbeit, Urlaub." },
+      { q: "Hoe zeg je 'mijn moeder' in Duits?", options: ["meine Mutter", "mein Mutter", "meiner Mutter", "meinen Mutter"], answer: 0, explanation: "Mutter is vrouwelijk → meine. Bij mannelijk: mein (mein Vater). De/het-onderscheid in Duits is 3-deling: der/die/das." },
+    ],
+    2: [
+      { q: "Wat is 'Schule'?", options: ["School", "Vakantie", "Tuin", "Kantoor"], answer: 0, explanation: "Schule = school (cognaat). Urlaub = vakantie, Garten = tuin, Büro = kantoor." },
+      { q: "Hoe zeg je 'ik leer Duits' in Duits?", options: ["Ich lerne Deutsch.", "Ich liebe Deutsch.", "Ich lese Deutsch.", "Ich lebe Deutsch."], answer: 0, explanation: "Ich + lerne (= leer) + Deutsch (= Duits). Lieben = houden van, lesen = lezen, leben = leven." },
+    ],
+    3: [
+      { q: "Wat is 'Brot'?", options: ["Brood", "Boter", "Bruin", "Vlees"], answer: 0, explanation: "Brot = brood (cognaat). Butter = boter, braun = bruin, Fleisch = vlees." },
+      { q: "Hoe zeg je 'water' in Duits?", options: ["Wasser", "Wein", "Welt", "Wann"], answer: 0, explanation: "Wasser = water. Wein = wijn, Welt = wereld, wann = wanneer." },
+    ],
+    4: [
+      { q: "Wat is 'Auto' in Duits?", options: ["Auto", "Fiets", "Trein", "Vliegtuig"], answer: 0, explanation: "Auto = auto (gelijk aan NL/EN). Fahrrad = fiets, Zug = trein, Flugzeug = vliegtuig." },
+      { q: "Hoe zeg je 'Goedendag' in Duits?", options: ["Guten Tag", "Gute Nacht", "Auf Wiedersehen", "Danke schön"], answer: 0, explanation: "Guten Tag = goedendag. Gute Nacht = goedenacht, Auf Wiedersehen = tot ziens, Danke = bedankt." },
+    ],
+  },
+
+  // ── Grandes Lignes — Frans klas 1 ───────────────────────────────────
+  "grandes-lignes": {
+    0: [
+      { q: "Wat betekent 'Bonjour'?", options: ["Goedendag", "Doei", "Bedankt", "Sorry"], answer: 0, explanation: "Bonjour = goedendag. Au revoir = tot ziens, merci = bedankt, pardon = sorry." },
+      { q: "'Je ___ Sara.' (mijn naam is)", options: ["m'appelle", "appelle", "suis appelle", "mes appelle"], answer: 0, explanation: "Je m'appelle = letterlijk 'ik noem mij'. Wederkerig werkwoord: je + me + appelle." },
+    ],
+    1: [
+      { q: "Wat is 'frère' in Frans?", options: ["Broer", "Zus", "Moeder", "Oom"], answer: 0, explanation: "Frère = broer. Sœur = zus, mère = moeder, oncle = oom." },
+      { q: "Hoe zeg je 'mijn vader' in Frans?", options: ["mon père", "ma père", "mes père", "le père"], answer: 0, explanation: "Père is mannelijk → mon. Vrouwelijk: ma (ma mère). Meervoud: mes." },
+    ],
+    2: [
+      { q: "Wat is 'l'école'?", options: ["School", "Boek", "Leraar", "Klas"], answer: 0, explanation: "L'école = de school. Livre = boek, professeur = leraar, classe = klas." },
+      { q: "'J'apprends ___ français.' (Frans)", options: ["le", "la", "l'", "les"], answer: 0, explanation: "Apprendre + bepaald lidwoord. Français is mannelijk → le. ('L' alleen vóór klinker.)" },
+    ],
+    3: [
+      { q: "Wat is 'jouer' in Frans?", options: ["Spelen", "Lopen", "Eten", "Slapen"], answer: 0, explanation: "Jouer = spelen. Manger = eten, dormir = slapen, courir = rennen." },
+      { q: "Welk woord betekent 'voetbal' in Frans?", options: ["football", "tennis", "natation", "danse"], answer: 0, explanation: "Football = voetbal (Engels leenwoord, ook gebruikt in Frans)." },
+    ],
+    4: [
+      { q: "Wat is 'pain' in Frans?", options: ["Brood", "Wijn", "Pijn", "Pet"], answer: 0, explanation: "Pain = brood (let op: NIET 'pijn'!). Vin = wijn, douleur = pijn." },
+      { q: "Hoe zeg je 'Ik wil graag een croissant'?", options: ["Je voudrais un croissant", "Je voudrais une croissant", "J'ai un croissant", "Je suis croissant"], answer: 0, explanation: "Je voudrais = ik zou willen (beleefd). Croissant is mannelijk → un (niet une)." },
+    ],
+  },
+
+  // ── Pincode — economie klas 3+ ──────────────────────────────────────
+  "pincode": {
+    0: [
+      { q: "Wat is ECONOMIE?", options: ["Studie van schaarste + keuzes maken", "Wiskunde over geld alleen", "Boekhouden", "Reklame maken"], answer: 0, explanation: "Economie = hoe mensen + organisaties + landen omgaan met beperkte middelen (geld, tijd, grondstoffen)." },
+      { q: "Wat is BEHOEFTE?", options: ["Iets dat je nodig hebt of wilt", "Een baan", "Een product", "Geld"], answer: 0, explanation: "Behoefte = de wens om iets te hebben/doen. Schaars middel + behoefte → schaarste = economisch probleem." },
+    ],
+    1: [
+      { q: "Wat gebeurt bij hoge VRAAG en lage AANBOD?", options: ["Prijs stijgt", "Prijs daalt", "Niets", "Vraag verdwijnt"], answer: 0, explanation: "Wet van vraag/aanbod: schaarste → prijs stijgt. Bv. tijdens corona toiletpapier-tekort → hogere prijs." },
+      { q: "Wat is een MARKT?", options: ["Plek of mechanisme waar vraag en aanbod elkaar ontmoeten", "Alleen een plein in stad", "Een winkel", "Een bedrijf"], answer: 0, explanation: "Markt = ruil-mechanisme: kopers + verkopers ontmoeten (fysiek of online). Niet alleen marktplein." },
+    ],
+    2: [
+      { q: "Wat is INFLATIE?", options: ["Prijzen stijgen, geld wordt minder waard", "Sparen", "Werkloosheid", "Beurs-stijging"], answer: 0, explanation: "Inflatie = algehele prijsstijging. Bij 5% inflatie kost je boodschappenlijst volgend jaar 5% meer." },
+      { q: "Wat is RENTE?", options: ["Vergoeding voor lenen of sparen van geld", "Schuld", "Inkomen uit werk", "Belasting"], answer: 0, explanation: "Rente: % vergoeding op geld. Banken geven sparen-rente, vragen leen-rente. Verschil = winst voor bank." },
+    ],
+    3: [
+      { q: "Wat is BRUTO loon?", options: ["Loon vóór belastingen", "Loon na belastingen", "Bonus", "Pensioen"], answer: 0, explanation: "Bruto: wat je 'verdient' op papier. Netto: wat op rekening komt na belasting + premies." },
+      { q: "Wat is een VAKBOND?", options: ["Vereniging van werknemers voor betere voorwaarden", "Bedrijf", "Overheid", "Bank"], answer: 0, explanation: "Vakbonden (FNV, CNV) onderhandelen namens werknemers met werkgevers over loon, werkomstandigheden, CAO's." },
+    ],
+    4: [
+      { q: "Wat is BELASTING?", options: ["Verplichte bijdrage aan overheid", "Vrijwillige donatie", "Boete", "Pensioen-premie"], answer: 0, explanation: "Belasting (inkomstenbelasting, BTW etc.) financiert overheidstaken: zorg, onderwijs, infrastructuur." },
+      { q: "Wat is VERZORGINGSSTAAT?", options: ["Land waar overheid zorgt voor sociale zekerheid", "Land zonder overheid", "Land in oorlog", "Pensioenstelsel alleen"], answer: 0, explanation: "Nederland: AOW, bijstand, kinderbijslag, gezondheidszorg, onderwijs — overheid biedt vangnet." },
+    ],
+    5: [
+      { q: "Wat is INTERNATIONALE handel?", options: ["Goederen + diensten ruilen tussen landen", "Toerisme", "Diplomatie", "Migratie alleen"], answer: 0, explanation: "Import (in NL) + export (NL → buitenland). Specialisatie + ruil → meer welvaart voor allebei." },
+      { q: "Wat is de EURO?", options: ["Gezamenlijke munt van 20 EU-landen", "Engelse munt", "Wereldmunt", "Bitcoin-variant"], answer: 0, explanation: "Euro (€) sinds 2002 fysiek. Eurozone = NL, DE, FR, IT, etc. Vereenvoudigt handel binnen EU." },
+    ],
+  },
+
+  // ── Thema's Maatschappijleer — klas 3+ ──────────────────────────────
+  "themas-maatschappijleer": {
+    0: [
+      { q: "Wat is MAATSCHAPPIJLEER?", options: ["Studie van NL-samenleving + politiek + recht", "Sport-vak", "Wiskunde", "Geschiedenis alleen"], answer: 0, explanation: "Maatschappijleer behandelt: democratie, recht, media, multiculturele samenleving, verzorgingsstaat." },
+      { q: "Wat is een NORM?", options: ["Regel hoe mensen zich (zouden moeten) gedragen", "Maatstaf alleen", "Wet", "Mode"], answer: 0, explanation: "Norm = sociale verwachting (geen wet, geen straf). Bv. 'niet door rood lopen' = norm. 'Niet stelen' = norm én wet." },
+    ],
+    1: [
+      { q: "Wat is een RECHTSSTAAT?", options: ["Land waar wet boven willekeur staat + onafhankelijke rechter", "Land met veel rechtbanken", "Land zonder regering", "Communistisch land"], answer: 0, explanation: "Rechtsstaat-principes: scheiding der machten, onafhankelijke rechter, gelijkheid voor wet, grondrechten." },
+      { q: "Wat is een GRONDRECHT?", options: ["Recht voor iedere burger (in Grondwet)", "Boerderij-recht", "Recht op huis", "Recht op auto"], answer: 0, explanation: "Grondrechten in NL: vrije meningsuiting, godsdienst, kiesrecht, gelijkheid (art. 1), privacy, eerlijk proces." },
+    ],
+    2: [
+      { q: "Wat is PARLEMENTAIRE democratie?", options: ["Volk kiest vertegenwoordigers (Tweede Kamer) die wetten maken", "Eén leider beslist", "Geen verkiezingen", "Een religieuze staat"], answer: 0, explanation: "Volk → 2e Kamer → kabinet (premier + ministers). 1e Kamer keurt af/goed. Onafhankelijke rechtspraak." },
+      { q: "Wat is COALITIE?", options: ["Samenwerking tussen partijen om regering te vormen", "Een politieke partij", "Een religie", "Een militair bondgenootschap"], answer: 0, explanation: "In NL nooit één partij meerderheid → onderhandelen over regeerakkoord (bv. PVV+VVD+NSC+BBB)." },
+    ],
+    3: [
+      { q: "Wat is PLURIFORME samenleving?", options: ["Samenleving met veel culturen, religies, leefstijlen", "Iedereen hetzelfde", "Eén religie alleen", "Een wijk"], answer: 0, explanation: "NL: ~17 mln inwoners met diverse achtergronden, religies, talen. Voordelen + uitdagingen (integratie, sociale cohesie)." },
+      { q: "Wat is DISCRIMINATIE?", options: ["Iemand achterstellen op basis van afkomst, geslacht, etc.", "Een keuze", "Een opmerking", "Een protest"], answer: 0, explanation: "Discriminatie verboden in art. 1 Grondwet. Soms moeilijk aan te tonen, vaak structureel (institutionele discr.)." },
+    ],
+    4: [
+      { q: "Wat is de VERZORGINGSSTAAT?", options: ["Stelsel van sociale zekerheid (AOW, bijstand, zorg)", "Een soort verzekering", "Een ministerie", "Een gebouw"], answer: 0, explanation: "NL VZS sinds ~1950: collectieve voorzieningen voor wie kan niet (ziek, oud, werkloos). Gefinancierd via belasting + premies." },
+      { q: "Wat doet de SOCIALE Verzekeringsbank (SVB)?", options: ["Beheert AOW, kinderbijslag, etc.", "Leent geld aan landen", "Maakt beleid", "Verzekert auto's"], answer: 0, explanation: "SVB voert sociale uitkeringen uit. Belastingdienst int belasting; SVB betaalt AOW etc." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
