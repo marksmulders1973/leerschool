@@ -68,6 +68,16 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const isLast = gameState.currentQ === gameState.questions.length - 1;
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
+  // Cito-eindtoets-simulatie: 50 vragen op cito-flow → 60 min countdown.
+  // Geeft echte eindtoets-tijdsdruk-ervaring. Banner toont resterende tijd
+  // bovenaan, kleurt rood bij laatste 5 min. Bij 0:00 → automatisch finish.
+  const isCitoSimulation = gameState.quiz?.subject === "cito" && gameState.questions.length >= 50;
+  const simulationTotalSec = isCitoSimulation ? 60 * 60 : 0;
+  const simRemaining = isCitoSimulation ? Math.max(0, simulationTotalSec - elapsed) : 0;
+  const simMinutes = Math.floor(simRemaining / 60);
+  const simSeconds = simRemaining % 60;
+  const simWarning = isCitoSimulation && simRemaining < 300; // laatste 5 min
+
   const SUBJECT_VIDEOS = {
     rekenen:           "https://www.youtube.com/watch?v=3tDBiUBiUQs",
     taal:              "https://www.youtube.com/watch?v=7cQC6l__Olk",
@@ -218,6 +228,16 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     return () => clearInterval(elapsedRef.current);
   }, [gameState.startedAt]);
 
+  // Cito-simulatie auto-finish: als de 60 min countdown afloopt, de quiz
+  // wordt automatisch beëindigd op de huidige stand. Net als de echte Cito.
+  useEffect(() => {
+    if (!isCitoSimulation) return;
+    if (simRemaining > 0) return;
+    // Tijd is op — finish met huidige state
+    onFinish({ ...gameState, simulationTimedOut: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [simRemaining, isCitoSimulation]);
+
   useEffect(() => {
     if (showResult || noTimer) return;
     timerRef.current = setInterval(() => {
@@ -309,9 +329,25 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         </button>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
           <div style={styles.qCounter}>{gameState.currentQ + 1} / {gameState.questions.length}</div>
-          <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "var(--color-text-muted)" }}>
-            ⏱ {elapsed < 60 ? `${elapsed}s` : `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`}
-          </div>
+          {isCitoSimulation ? (
+            <div style={{
+              fontFamily: "var(--font-display)",
+              fontSize: 14,
+              fontWeight: 700,
+              color: simWarning ? "#ef5350" : "#ff8030",
+              padding: "2px 10px",
+              borderRadius: 6,
+              background: simWarning ? "rgba(239,83,80,0.15)" : "rgba(255,128,48,0.15)",
+              border: `1px solid ${simWarning ? "rgba(239,83,80,0.5)" : "rgba(255,128,48,0.4)"}`,
+              animation: simWarning ? "timerPulse 1s ease infinite" : "none",
+            }} title="Cito-eindtoets-simulatie: nog over">
+              ⏱ {simMinutes}:{String(simSeconds).padStart(2, "0")}
+            </div>
+          ) : (
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "var(--color-text-muted)" }}>
+              ⏱ {elapsed < 60 ? `${elapsed}s` : `${Math.floor(elapsed / 60)}m ${elapsed % 60}s`}
+            </div>
+          )}
         </div>
         <div style={{ ...styles.scoreDisplay, animation: scoreAnim ? "scoreFloat 0.6s ease" : "none" }}>⭐ {gameState.score}</div>
       </div>
