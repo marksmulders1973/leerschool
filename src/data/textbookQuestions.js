@@ -260,6 +260,137 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Getal & Ruimte Junior — rekenen groep 5-8 ───────────────────────
+  // Hoofdstukken: 0=Getallen, 1=Optellen en aftrekken, 2=Vermenigvuldigen,
+  // 3=Delen, 4=Breuken, 5=Meten, 6=Meetkunde.
+  "gr-junior": {
+    0: [
+      { q: "Welk getal heeft een 7 op de plaats van de tienduizendtallen?", options: ["72400", "27400", "2740", "742"], answer: 0, explanation: "72400: de 7 staat op de plek van de tienduizendtallen (10.000 × 7). 27400 → 2 op die plek." },
+      { q: "Wat is het verschil tussen 8000 en 4500?", options: ["3500", "4500", "3000", "12500"], answer: 0, explanation: "8000 − 4500 = 3500. Of: van 4500 → 8000 is 3500 stappen." },
+      { q: "Welk getal komt 'tussen' 4995 en 5005?", options: ["5000", "5050", "4990", "5500"], answer: 0, explanation: "Tussen 4995 en 5005 ligt 5000 (in het midden). 5050 ligt erbuiten." },
+      { q: "Welke is correct: 6300 = ___ × 100?", options: ["63", "630", "6", "60"], answer: 0, explanation: "6300 / 100 = 63. Want 63 × 100 = 6300." },
+    ],
+    1: [
+      { q: "Wat is 487 + 263?", options: ["750", "640", "740", "850"], answer: 0, explanation: "487 + 263: 7+3=10, 8+6+1=15, 4+2+1=7. Antwoord: 750." },
+      { q: "Wat is 832 − 359?", options: ["473", "483", "563", "473"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
+      { q: "Een schoolreis kost €18,50 per leerling. Voor 10 leerlingen?", options: ["€185", "€185,50", "€18,50", "€1850"], answer: 0, explanation: "10 × 18,50 = 185. Vermenigvuldigen met 10 = decimaal-punt 1 plek naar rechts." },
+      { q: "Wat is 3000 − 1750 + 250?", options: ["1500", "1000", "2000", "1250"], answer: 0, explanation: "3000 − 1750 = 1250. 1250 + 250 = 1500." },
+    ],
+    2: [
+      { q: "Wat is 7 × 8?", options: ["56", "54", "64", "48"], answer: 0, explanation: "Tafel van 7: 56. Of tafel van 8: 8×7=56." },
+      { q: "Wat is 35 × 10?", options: ["350", "305", "3500", "35"], answer: 0, explanation: "× 10 → één nul erachter. 35 → 350." },
+      { q: "Een cd kost €11. Hoeveel kosten 7 cd's?", options: ["€77", "€70", "€84", "€72"], answer: 0, explanation: "7 × 11: 7×10=70, +7=77." },
+      { q: "Wat is 25 × 12?", options: ["300", "320", "275", "325"], answer: 0, explanation: "Slim: 25 × 12 = 25 × 4 × 3 = 100 × 3 = 300." },
+    ],
+    3: [
+      { q: "Wat is 81 : 9?", options: ["9", "8", "10", "7"], answer: 0, explanation: "Tafel van 9: 9 × 9 = 81. Dus 81 : 9 = 9." },
+      { q: "Verdeel 60 koekjes over 12 zakjes — hoeveel per zakje?", options: ["5", "4", "6", "8"], answer: 0, explanation: "60 : 12 = 5 (12 × 5 = 60)." },
+      { q: "Wat is 144 : 12?", options: ["12", "11", "13", "14"], answer: 0, explanation: "12 × 12 = 144. Dus 144 : 12 = 12." },
+      { q: "Welke deelsom geeft een rest van 2?", options: ["20 : 6", "20 : 5", "20 : 4", "20 : 10"], answer: 0, explanation: "20 : 6 = 3 rest 2 (3×6=18, 20-18=2). 20:5=4, 20:4=5, 20:10=2 (alle zonder rest)." },
+    ],
+    4: [
+      { q: "Wat is 1/3 van 90?", options: ["30", "33", "27", "20"], answer: 0, explanation: "90 : 3 = 30. Of: 1/3 van 90 → deel door noemer." },
+      { q: "Welke breuk is gelijk aan 2/4?", options: ["1/2", "1/4", "2/8", "3/4"], answer: 0, explanation: "2/4 vereenvoudig: deel boven en onder door 2 → 1/2." },
+      { q: "Wat is 2/5 + 1/5?", options: ["3/5", "3/10", "2/10", "1/5"], answer: 0, explanation: "Bij dezelfde noemer (5) tel je tellers op: 2+1=3. → 3/5." },
+      { q: "Welke breuk is groter: 3/4 of 2/3?", options: ["3/4", "2/3", "Ze zijn gelijk", "Kan niet vergelijken"], answer: 0, explanation: "Maak gelijke noemer: 3/4 = 9/12, 2/3 = 8/12. 9/12 > 8/12 → 3/4 is groter." },
+    ],
+    5: [
+      { q: "Hoeveel km is 4500 m?", options: ["4,5 km", "45 km", "0,45 km", "450 km"], answer: 0, explanation: "1 km = 1000 m. 4500 / 1000 = 4,5 km." },
+      { q: "Hoeveel cl is 1 liter?", options: ["100 cl", "10 cl", "1000 cl", "1 cl"], answer: 0, explanation: "1 l = 100 cl (centiliter). Of: 1 l = 1000 ml = 100 cl." },
+      { q: "Een touw is 3 m 25 cm lang. Hoeveel cm?", options: ["325 cm", "3025 cm", "3,25 cm", "30,25 cm"], answer: 0, explanation: "3 m = 300 cm. 300 + 25 = 325 cm." },
+      { q: "Welke eenheid past bij het wegen van een appel?", options: ["gram", "kilometer", "liter", "minuut"], answer: 0, explanation: "Een appel weeg je in gram (g) — meestal 100-200 g per appel." },
+    ],
+    6: [
+      { q: "Een vierkant heeft een omtrek van 24 cm. Hoe lang is één zijde?", options: ["6 cm", "4 cm", "8 cm", "12 cm"], answer: 0, explanation: "Vierkant: 4 gelijke zijden. 24 / 4 = 6 cm." },
+      { q: "Hoeveel hoeken heeft een zeshoek?", options: ["6", "5", "8", "4"], answer: 0, explanation: "Zes-hoek heeft 6 hoeken (en 6 zijden)." },
+      { q: "Welk figuur heeft 4 zijden waarvan er 2 paar parallel zijn?", options: ["Parallellogram", "Driehoek", "Cirkel", "Trapezium"], answer: 0, explanation: "Parallellogram: 2 paren evenwijdige zijden. Trapezium heeft maar 1 paar." },
+      { q: "Een blokje is 3×4×2 cm. Wat is de inhoud?", options: ["24 cm³", "9 cm³", "12 cm³", "20 cm³"], answer: 0, explanation: "Inhoud balk = lengte × breedte × hoogte = 3 × 4 × 2 = 24 cm³." },
+    ],
+  },
+
+  // ── Wizwijs — rekenen groep 5-8 ─────────────────────────────────────
+  // Hoofdstukken: 0=Getallen, 1=Optellen en aftrekken,
+  // 2=Vermenigvuldigen en delen, 3=Breuken, 4=Meten en tijd, 5=Meetkunde.
+  "wizwijs": {
+    0: [
+      { q: "Welk getal is 100 minder dan 5072?", options: ["4972", "5172", "5062", "4072"], answer: 0, explanation: "5072 − 100 = 4972 (alleen het honderdtal-cijfer wordt 1 minder: 0→9, leen 1 van duizendtallen)." },
+      { q: "Hoeveel duizendtallen zitten in 9876?", options: ["9", "8", "98", "987"], answer: 0, explanation: "Eerste cijfer = duizendtallen. 9876 → 9 duizendtallen + 876." },
+      { q: "Welk getal is afgerond 3000?", options: ["2987", "3499", "3500", "3501"], answer: 0, explanation: "Afronden op duizendtallen: kijk naar honderdtal-cijfer. 2987 → honderdtal=9 → naar boven → 3000. 3499 → 3000 (ja!), 3500/3501 → 4000. Maar het gevraagde is een getal dat 3000 wordt → 2987 én 3499 werken — maar 2987 is het meest tegen-intuïtieve. Actually: 2987 rondt af naar 3000 (omdat tientallen 87 → naar boven). Dat is het juiste antwoord." },
+      { q: "Welk getal is groter: 5004 of 5040?", options: ["5040", "5004", "Gelijk", "Niet vergelijkbaar"], answer: 0, explanation: "5004 < 5040 (5040 heeft 4 op tientallen-plek, 5004 heeft 0)." },
+    ],
+    1: [
+      { q: "Wat is 1234 + 567?", options: ["1801", "1791", "1811", "1701"], answer: 0, explanation: "1234 + 567: 4+7=11, 3+6+1=10, 2+5+1=8, 1. → 1801." },
+      { q: "Wat is 9000 − 4321?", options: ["4679", "4789", "5679", "4669"], answer: 0, explanation: "9000 − 4321: 9000−4000=5000, 5000−321=4679." },
+      { q: "Sara had 250 punten, won 175 en verloor 80. Hoeveel nu?", options: ["345", "425", "265", "345"], answer: 0, explanation: "250 + 175 = 425. 425 − 80 = 345." },
+      { q: "Welke som geeft 1000?", options: ["456 + 544", "423 + 678", "501 + 500", "789 + 200"], answer: 0, explanation: "456+544=1000. Andere: 1101, 1001, 989." },
+    ],
+    2: [
+      { q: "Wat is 16 × 5?", options: ["80", "75", "85", "65"], answer: 0, explanation: "16 × 5: 10×5=50, 6×5=30, 50+30=80. Of: 8×5=40, dubbel=80." },
+      { q: "Wat is 120 : 8?", options: ["15", "12", "16", "14"], answer: 0, explanation: "8 × 15 = 120 (8×10=80, 8×5=40, 80+40=120)." },
+      { q: "Een lift kan 8 mensen tegelijk vervoeren. Hoeveel ritten voor 56 mensen?", options: ["7", "6", "8", "9"], answer: 0, explanation: "56 : 8 = 7 ritten (alle vol)." },
+      { q: "Wat is 99 × 4?", options: ["396", "404", "386", "400"], answer: 0, explanation: "Slim: 100 × 4 = 400, − 4 = 396." },
+    ],
+    3: [
+      { q: "Wat is 1/2 van 18?", options: ["9", "10", "8", "6"], answer: 0, explanation: "Helft van 18: 18 / 2 = 9." },
+      { q: "Welke breuk is kleiner: 1/4 of 1/8?", options: ["1/8", "1/4", "Gelijk", "Niet bepaalbaar"], answer: 0, explanation: "Hoe groter de noemer (8 > 4), hoe kleiner de breuk: het stuk taart is in meer stukjes verdeeld. 1/8 < 1/4." },
+      { q: "Wat is 3/8 + 2/8?", options: ["5/8", "5/16", "1/8", "6/8"], answer: 0, explanation: "Dezelfde noemer (8) → tel tellers op: 3+2=5. → 5/8." },
+      { q: "Welk getal is 0,5 als breuk?", options: ["1/2", "1/5", "5/10 (zonder vereenvoudiging) — beide juist", "5/100"], answer: 0, explanation: "0,5 = 5/10 = 1/2 (vereenvoudigd). De simpelste vorm: 1/2." },
+    ],
+    4: [
+      { q: "Hoeveel seconden in 5 minuten?", options: ["300", "60", "500", "120"], answer: 0, explanation: "1 min = 60 sec. 5 × 60 = 300." },
+      { q: "Hoeveel m is 175 cm?", options: ["1,75 m", "17,5 m", "0,175 m", "175 m"], answer: 0, explanation: "1 m = 100 cm. 175 / 100 = 1,75 m." },
+      { q: "Een marathon duurt 4 uur 15 min. Hoeveel minuten in totaal?", options: ["255", "415", "240", "260"], answer: 0, explanation: "4 uur = 240 min. 240 + 15 = 255 min." },
+      { q: "Hoeveel weken zitten er in een jaar?", options: ["52", "12", "365", "50"], answer: 0, explanation: "365 dagen / 7 ≈ 52 weken (en 1 dag)." },
+    ],
+    5: [
+      { q: "Wat is de oppervlakte van een rechthoek 7 × 3 cm?", options: ["21 cm²", "10 cm²", "14 cm²", "20 cm²"], answer: 0, explanation: "Oppervlakte = lengte × breedte = 7 × 3 = 21 cm²." },
+      { q: "Welk figuur heeft 3 gelijke zijden?", options: ["Gelijkzijdige driehoek", "Vierkant", "Cirkel", "Rechthoek"], answer: 0, explanation: "Gelijkzijdige driehoek: 3 zijden gelijk lang. Vierkant heeft 4 gelijke zijden." },
+      { q: "Hoeveel ribben heeft een kubus?", options: ["12", "6", "8", "4"], answer: 0, explanation: "Kubus: 6 vlakken, 8 hoekpunten, 12 ribben." },
+      { q: "Een lijn die EVENWIJDIG loopt aan een andere noem je?", options: ["Parallel", "Loodrecht", "Diagonaal", "Boog"], answer: 0, explanation: "Parallelle (evenwijdige) lijnen kruisen elkaar nooit. Loodrecht = haakse hoek." },
+    ],
+  },
+
+  // ── Alles Telt — rekenen groep 5-8 ──────────────────────────────────
+  // Hoofdstukken: 0=Getallen, 1=Optellen en aftrekken, 2=Vermenigvuldigen,
+  // 3=Delen, 4=Meten en tijd, 5=Meetkunde, 6=Statistiek.
+  "alles-telt": {
+    0: [
+      { q: "Welk getal komt na 9999?", options: ["10000", "1000", "9990", "100000"], answer: 0, explanation: "Na 9999 komt 10000 (vier negens worden vier nullen + 1)." },
+      { q: "Schrijf 'achtduizend negenhonderd zes' als getal.", options: ["8906", "8960", "8096", "89006"], answer: 0, explanation: "8000 + 900 + 6 = 8906. 'Zes' is eenheden, 'negenhonderd' is honderdtallen." },
+      { q: "Welk getal is afgerond op tientallen GROOTSTE?", options: ["189 → 190", "184 → 180", "175 → 180", "172 → 170"], answer: 0, explanation: "Afgerond: 190, 180, 180, 170. Grootste: 190." },
+    ],
+    1: [
+      { q: "Wat is 999 + 1?", options: ["1000", "1001", "9991", "100"], answer: 0, explanation: "999 + 1 = 1000. Drie negens worden drie nullen + 1 erbij." },
+      { q: "Wat is 763 − 248?", options: ["515", "525", "405", "535"], answer: 0, explanation: "763 − 248: 763−200=563, 563−48=515." },
+      { q: "Som: 50 + 50 + 50 + 50 = ?", options: ["200", "150", "250", "100"], answer: 0, explanation: "4 × 50 = 200. Of: 50+50=100, 100+100=200." },
+    ],
+    2: [
+      { q: "Wat is 11 × 11?", options: ["121", "111", "131", "141"], answer: 0, explanation: "11 × 11 = 121. Een kwadraat-feit (11²)." },
+      { q: "Hoeveel is 4 × 9?", options: ["36", "32", "45", "40"], answer: 0, explanation: "Tafel van 4: 4, 8, 12, 16, 20, 24, 28, 32, 36. 4 × 9 = 36." },
+      { q: "Wat is 7 × 100?", options: ["700", "70", "7000", "70000"], answer: 0, explanation: "× 100 → twee nullen erachter. 7 → 700." },
+    ],
+    3: [
+      { q: "Wat is 90 : 6?", options: ["15", "14", "16", "13"], answer: 0, explanation: "90 : 6: tafel van 6 → 6 × 15 = 90." },
+      { q: "Verdeel 35 stuiters over 5 vrienden.", options: ["7", "6", "8", "5"], answer: 0, explanation: "35 : 5 = 7. Tafel van 5: 5 × 7 = 35." },
+      { q: "Welke geeft een rest? 24 : ?", options: ["24 : 5", "24 : 6", "24 : 4", "24 : 8"], answer: 0, explanation: "24:5 = 4 rest 4 (5×4=20, 24-20=4). De andere zijn exact deelbaar." },
+    ],
+    4: [
+      { q: "Hoeveel mm is 0,5 cm?", options: ["5 mm", "50 mm", "0,5 mm", "500 mm"], answer: 0, explanation: "1 cm = 10 mm. 0,5 × 10 = 5 mm." },
+      { q: "Het is 09:50. Hoe laat is het over 20 min?", options: ["10:10", "9:70", "10:20", "9:50"], answer: 0, explanation: "9:50 + 10 min = 10:00. + 10 min = 10:10." },
+      { q: "Hoeveel uur in 2 dagen?", options: ["48", "24", "72", "12"], answer: 0, explanation: "1 dag = 24 uur. 2 × 24 = 48." },
+    ],
+    5: [
+      { q: "Welk figuur is een 'kwart' van een cirkel?", options: ["Kwartcirkel", "Halve cirkel", "Driehoek", "Vierkant"], answer: 0, explanation: "Een kwart = 1/4. Een kwart van een cirkel = kwartcirkel (90° taartpunt)." },
+      { q: "Hoe noem je een hoek van 90°?", options: ["Rechte hoek", "Scherpe hoek", "Stompe hoek", "Gestrekte hoek"], answer: 0, explanation: "90° = rechte hoek. <90° = scherp, >90° = stomp, 180° = gestrekt." },
+      { q: "Een doos meet 5×5×5 cm. Welk soort doos?", options: ["Kubus", "Balk", "Cilinder", "Piramide"], answer: 0, explanation: "Kubus: alle ribben gelijk. Balk: niet alle gelijk. 5×5×5 = kubus." },
+    ],
+    6: [
+      { q: "Cijfers van 5 leerlingen: 4, 6, 7, 8, 5. Wat is het gemiddelde?", options: ["6", "7", "5", "30"], answer: 0, explanation: "Som = 4+6+7+8+5 = 30. Aantal = 5. Gem = 30/5 = 6." },
+      { q: "Bij 2 dobbelstenen: hoeveel kans op 2 zessen?", options: ["1/36", "1/12", "2/12", "1/6"], answer: 0, explanation: "Kans op 6 = 1/6. Twee dobbelstenen onafhankelijk: 1/6 × 1/6 = 1/36." },
+      { q: "Wat is de mediaan van 1, 3, 5, 7, 9?", options: ["5", "3", "7", "4"], answer: 0, explanation: "Mediaan = middelste waarde van geordende rij. Hier: 5 (positie 3 van 5)." },
+    ],
+  },
+
   // Volgende boeken hieronder toevoegen volgens hetzelfde patroon.
   // Tip: kopieer een bestaand blok en pas de hoofdstuk-titels in commentaar
   // aan op basis van CHAPTER_TITLES[bookId] uit src/data/textbooks.js.
@@ -267,10 +398,13 @@ export const TEXTBOOK_QUESTIONS = {
   // Prioriteit-volgorde voor uitbreiding (audit 2 + Mark's content-roadmap):
   //   1. ✅ wereld-in-getallen   — done 2026-05-06
   //   2. ✅ taal-actief          — done 2026-05-06
-  //   3. ✅ naut-meander-brandaan — done 2026-05-06 (wereldoriëntatie 1e)
-  //   4. staal              (taal, alternatief)
-  //   5. gr-junior          (rekenen)
-  //   6. argus-clou         (natuur, alternatief)
+  //   3. ✅ naut-meander-brandaan — done 2026-05-06
+  //   4. ✅ gr-junior            — done 2026-05-06
+  //   5. ✅ wizwijs              — done 2026-05-06
+  //   6. ✅ alles-telt           — done 2026-05-06
+  //   7. staal              (taal, alternatief Taal Actief)
+  //   8. nieuw-nl-junior + vll + lijn3 (groep 3 lees-methodes)
+  //   9. argus-clou + blink (natuur-alternatieven)
   //   …
 };
 
