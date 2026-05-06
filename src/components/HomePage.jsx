@@ -846,6 +846,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   </button>
                 ))}
               </div>
+              {/* Rustige ouder-link direct onder de rol-tegels (audit 2 Q4):
+                  ouders willen vóór de drukke ticker/scoreborden weten wat
+                  Leerkwartier doet en wat met data gebeurt. Subtiele knop,
+                  geen brand-kleur — niet bedoeld als hoofdactie maar als
+                  ouder-anchor op een drukke pagina. */}
+              <a
+                href="/privacy.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lk-content-wide"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  padding: "10px 14px",
+                  marginBottom: 12,
+                  borderRadius: 12,
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  background: "rgba(255,255,255,0.04)",
+                  color: "rgba(255,255,255,0.75)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  textDecoration: "none",
+                }}
+              >
+                <span style={{ fontSize: 16 }} aria-hidden="true">👨‍👩‍👧</span>
+                <span>Voor ouders — zo werkt het + privacy in 1 minuut</span>
+              </a>
               <TickerBanner />
             </>
           );
