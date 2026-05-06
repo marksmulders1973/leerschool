@@ -204,16 +204,73 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Naut / Meander / Brandaan — wereldoriëntatie groep 5-8 ──────────
+  // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
+  // 2=Natuur en milieu, 3=Weer en seizoenen, 4=Aarde en ruimte,
+  // 5=Techniek, 6=Nederland en de wereld.
+  "naut-meander-brandaan": {
+    0: [
+      // Het menselijk lichaam
+      { q: "Welk orgaan pompt het bloed door je lichaam?", options: ["Hart", "Longen", "Maag", "Lever"], answer: 0, explanation: "Het hart is een spier die bloed door je hele lichaam pompt — ongeveer 100.000 keer per dag." },
+      { q: "Wat doen je longen?", options: ["Zuurstof in je bloed brengen", "Voedsel verteren", "Bloed pompen", "Afval uit je lichaam halen"], answer: 0, explanation: "Longen halen zuurstof uit ingeademde lucht en geven dat aan het bloed. Maag = verteren, hart = pompen, nieren = afval." },
+      { q: "Hoeveel botten heeft een volwassen mens ongeveer?", options: ["206", "100", "500", "50"], answer: 0, explanation: "Een volwassene heeft ongeveer 206 botten. Baby's hebben er meer (~270) — sommige groeien aan elkaar." },
+      { q: "Welk deel van je lichaam vangt geluid op?", options: ["Oren", "Ogen", "Neus", "Huid"], answer: 0, explanation: "Oren vangen geluidsgolven op en zetten ze om in signalen voor je hersenen." },
+    ],
+    1: [
+      // Planten en dieren
+      { q: "Wat hebben planten nodig om te groeien?", options: ["Water, licht en lucht", "Alleen water", "Alleen licht", "Alleen aarde"], answer: 0, explanation: "Planten hebben water (uit de bodem), licht (zon) en lucht (CO₂) nodig. Met fotosynthese maken ze hun eigen voedsel." },
+      { q: "Welk dier is een ZOOGDIER?", options: ["Hond", "Vis", "Slang", "Vogel"], answer: 0, explanation: "Zoogdieren krijgen levende jongen en geven melk. Honden zijn zoogdieren. Vissen leggen eieren in water, vogels leggen eieren met schaal." },
+      { q: "Hoeveel poten heeft een insect?", options: ["6", "4", "8", "10"], answer: 0, explanation: "Insecten hebben altijd 6 poten (en vaak vleugels + voelsprieten). Spinnen hebben 8 poten — die zijn dus géén insecten." },
+      { q: "Wat is fotosynthese?", options: ["Hoe planten energie maken uit zonlicht", "Het verkleuren van bladeren in de herfst", "Hoe dieren slapen", "De groei van wortels"], answer: 0, explanation: "Fotosynthese: bladeren gebruiken zonlicht + CO₂ + water om suiker (energie) te maken en zuurstof af te geven." },
+    ],
+    2: [
+      // Natuur en milieu
+      { q: "Wat is een ecosysteem?", options: ["Planten en dieren samen met hun omgeving", "Alleen planten", "Alleen dieren", "Een soort milieu-machine"], answer: 0, explanation: "Een ecosysteem is een gebied waarin planten, dieren en hun omgeving op elkaar reageren — bv. een vijver, bos of woestijn." },
+      { q: "Welk gas zorgt voor opwarming van de aarde?", options: ["CO₂ (koolstofdioxide)", "Zuurstof (O₂)", "Stikstof (N₂)", "Helium"], answer: 0, explanation: "CO₂ houdt warmte vast in de atmosfeer. Door uitlaatgassen + fabrieken stijgt CO₂ → aarde warmt op." },
+      { q: "Wat is afval scheiden goed voor?", options: ["Zo kunnen we materialen hergebruiken", "Het is verplicht door de buurman", "Het scheelt geld voor de winkel", "Niets, het maakt geen verschil"], answer: 0, explanation: "Door afval te scheiden (papier, plastic, glas, GFT) kunnen materialen worden hergebruikt → minder nieuwe grondstoffen nodig." },
+      { q: "Wat zijn duurzame energiebronnen?", options: ["Zon en wind", "Olie en gas", "Steenkool", "Kernenergie"], answer: 0, explanation: "Zon en wind zijn duurzaam (raken nooit op). Olie/gas/steenkool zijn fossiel (raken op + geven CO₂). Kernenergie is niet fossiel maar geeft afval." },
+    ],
+    3: [
+      // Weer en seizoenen
+      { q: "Welke seizoen is het in december in Nederland?", options: ["Winter", "Lente", "Zomer", "Herfst"], answer: 0, explanation: "December = winter (21 dec t/m 20 maart). Lente = mrt-jun, zomer = jun-sep, herfst = sep-dec." },
+      { q: "Wat veroorzaakt regen?", options: ["Waterdamp die afkoelt en condenseert", "Bomen die water afgeven", "Wolken die scheuren", "De zon"], answer: 0, explanation: "Water verdampt door zonnewarmte → stijgt op → koelt af op hoogte → condenseert tot druppels in wolken → wordt te zwaar → regent." },
+      { q: "Waarom zijn dagen korter in de winter?", options: ["De aarde staat scheef ten opzichte van de zon", "De zon is verder weg", "Wolken houden de zon tegen", "Het is gewoon zo"], answer: 0, explanation: "De aarde staat scheef. In de winter ligt het noordelijk halfrond verder van de zon → kortere dagen, lagere zon, kouder." },
+      { q: "Hoeveel graden Celsius is water bevroren?", options: ["0 °C", "10 °C", "100 °C", "−100 °C"], answer: 0, explanation: "Water bevriest bij 0 °C (vriespunt) en kookt bij 100 °C (kookpunt). Onder 0 → ijs, boven 100 → damp." },
+    ],
+    4: [
+      // Aarde en ruimte
+      { q: "Welke planeet is het dichtstbij de zon?", options: ["Mercurius", "Venus", "Aarde", "Mars"], answer: 0, explanation: "Volgorde vanaf de zon: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus." },
+      { q: "Hoe lang doet de aarde over één rondje om de zon?", options: ["1 jaar", "1 dag", "1 maand", "10 jaar"], answer: 0, explanation: "Eén rondje om de zon = 1 jaar (365 dagen). Eén rondje om eigen as = 1 dag." },
+      { q: "Wat is de maan?", options: ["Een natuurlijke satelliet van de aarde", "Een kleine planeet", "Een ster", "Een wolk"], answer: 0, explanation: "De maan is een satelliet — een hemellichaam dat om de aarde draait. Sterren maken eigen licht; de maan reflecteert zonlicht." },
+      { q: "Wat is een melkweg?", options: ["Een verzameling van miljarden sterren", "Een soort wolk", "Een planeet", "Een ster"], answer: 0, explanation: "Onze Melkweg is een verzameling van ~200 miljard sterren, met onze zon erin. Er zijn miljarden andere melkwegstelsels in het heelal." },
+    ],
+    5: [
+      // Techniek
+      { q: "Wat is een hefboom?", options: ["Een staaf om iets zwaars makkelijker te tillen", "Een soort hek", "Een schroef", "Een knop op een radio"], answer: 0, explanation: "Een hefboom (bv. een wip, een breekijzer) gebruikt een draaipunt om met minder kracht iets zwaars te bewegen." },
+      { q: "Welke kracht trekt voorwerpen naar de aarde?", options: ["Zwaartekracht", "Magneetkracht", "Wrijving", "Spankracht"], answer: 0, explanation: "Zwaartekracht trekt alles naar het middelpunt van de aarde. Daarom valt een appel naar beneden." },
+      { q: "Hoe noem je het materiaal waarvan computer-chips gemaakt zijn?", options: ["Silicium", "IJzer", "Plastic", "Goud"], answer: 0, explanation: "Computer-chips zijn van silicium (een element uit zand). 'Silicon Valley' is naar dit materiaal vernoemd." },
+      { q: "Wat doet een dynamo op een fiets?", options: ["Beweging omzetten in elektriciteit", "Licht omzetten in beweging", "Kracht omzetten in geluid", "Bandjes opwarmen"], answer: 0, explanation: "Een dynamo gebruikt het draaien van het wiel om elektriciteit op te wekken voor de fietslamp." },
+    ],
+    6: [
+      // Nederland en de wereld
+      { q: "Wat is de hoofdstad van Nederland?", options: ["Amsterdam", "Den Haag", "Rotterdam", "Utrecht"], answer: 0, explanation: "Amsterdam is officieel hoofdstad. Den Haag is regeringszetel — daar werken ministers en parlement." },
+      { q: "Welk werelddeel is het grootst?", options: ["Azië", "Afrika", "Europa", "Amerika"], answer: 0, explanation: "Azië is het grootste werelddeel — bevat o.a. China, India, Rusland." },
+      { q: "Welk land grenst aan Nederland?", options: ["België", "Frankrijk", "Spanje", "Polen"], answer: 0, explanation: "Nederland grenst aan België (zuid) en Duitsland (oost). Frankrijk grenst aan België, niet aan ons." },
+      { q: "Wat is de grootste rivier van Nederland?", options: ["De Rijn", "De Maas", "De IJssel", "De Vecht"], answer: 0, explanation: "De Rijn (en zijn vertakkingen Waal/Lek) is de grootste rivier van Nederland — komt uit Zwitserland en gaat naar de Noordzee." },
+    ],
+  },
+
   // Volgende boeken hieronder toevoegen volgens hetzelfde patroon.
   // Tip: kopieer een bestaand blok en pas de hoofdstuk-titels in commentaar
   // aan op basis van CHAPTER_TITLES[bookId] uit src/data/textbooks.js.
   //
   // Prioriteit-volgorde voor uitbreiding (audit 2 + Mark's content-roadmap):
-  //   1. ✅ wereld-in-getallen — done 2026-05-06
-  //   2. ✅ taal-actief        — done 2026-05-06
-  //   3. staal              (taal, alternatief)
-  //   4. naut-meander-brandaan (natuur)
+  //   1. ✅ wereld-in-getallen   — done 2026-05-06
+  //   2. ✅ taal-actief          — done 2026-05-06
+  //   3. ✅ naut-meander-brandaan — done 2026-05-06 (wereldoriëntatie 1e)
+  //   4. staal              (taal, alternatief)
   //   5. gr-junior          (rekenen)
+  //   6. argus-clou         (natuur, alternatief)
   //   …
 };
 
