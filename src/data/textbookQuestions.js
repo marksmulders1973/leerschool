@@ -590,6 +590,201 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ╔═══════════════════════════════════════════════════════════════╗
+  // ║  VOORTGEZET ONDERWIJS                                          ║
+  // ╚═══════════════════════════════════════════════════════════════╝
+
+  // ── Getal & Ruimte Havo/vwo 1 Deel 1 — wiskunde klas 1 ──────────────
+  // Hoofdstukken: 0=Figuren, 1=Getallen en formules, 2=Assenstelsel en
+  // grafieken, 3=Hoeken en symmetrie, 4=Reken.
+  "gr-hv1-deel1": {
+    0: [
+      { q: "Wat is de oppervlakte van een rechthoek 12 × 5?", options: ["60", "34", "17", "120"], answer: 0, explanation: "A = lengte × breedte = 12 × 5 = 60. (34 is de omtrek.)" },
+      { q: "Een driehoek heeft hoeken 50° en 80°. De derde?", options: ["50°", "60°", "70°", "80°"], answer: 0, explanation: "Hoekensom driehoek = 180°. 180 − 50 − 80 = 50°." },
+      { q: "Welke figuur heeft 4 even lange zijden én 4 rechte hoeken?", options: ["Vierkant", "Ruit", "Rechthoek", "Parallellogram"], answer: 0, explanation: "Vierkant = 4 gelijke zijden + 4 rechte hoeken. Ruit heeft niet altijd rechte hoeken." },
+      { q: "Hoeveel ribben heeft een kubus?", options: ["12", "6", "8", "4"], answer: 0, explanation: "6 vlakken, 8 hoekpunten, 12 ribben." },
+    ],
+    1: [
+      { q: "Vereenvoudig: 3 × (4 + 5)", options: ["27", "17", "21", "60"], answer: 0, explanation: "Eerst tussen haakjes: 4+5=9. Dan 3 × 9 = 27. Volgorde: haakjes → ×/÷ → +/−." },
+      { q: "Vul in: 7 × ___ = 56", options: ["8", "7", "9", "6"], answer: 0, explanation: "56 / 7 = 8. Tafel van 7: 7×8=56." },
+      { q: "De formule p = 2 × a + 3. Wat is p als a = 5?", options: ["13", "10", "8", "16"], answer: 0, explanation: "p = 2 × 5 + 3 = 10 + 3 = 13." },
+      { q: "Bereken: 100 − 3 × 20", options: ["40", "94", "1940", "60"], answer: 0, explanation: "Eerst ×: 3×20=60. Daarna −: 100−60=40." },
+    ],
+    2: [
+      { q: "Het punt (3, 5) ligt waar?", options: ["Rechts en boven het origineel", "Links en boven", "Rechts en onder", "In het origineel"], answer: 0, explanation: "Eerste coördinaat (x=3) → 3 naar rechts. Tweede (y=5) → 5 omhoog." },
+      { q: "Welke vormt een GRAFIEK?", options: ["Tabel met x en y omgezet naar punten", "Een tekening van een huis", "Een formule alleen", "Een getal"], answer: 0, explanation: "Grafiek = visuele weergave van paren (x, y) als punten of lijn in een assenstelsel." },
+      { q: "Bij y = 2x: wat is y als x = 4?", options: ["8", "6", "2", "10"], answer: 0, explanation: "y = 2 × 4 = 8. Vervang x door 4 in de formule." },
+      { q: "De x-as is meestal welke richting?", options: ["Horizontaal (links-rechts)", "Verticaal", "Diagonaal", "Cirkelvormig"], answer: 0, explanation: "x-as = horizontaal, y-as = verticaal. Snijpunt = oorsprong (0,0)." },
+    ],
+    3: [
+      { q: "Een rechte hoek is hoeveel graden?", options: ["90°", "180°", "45°", "360°"], answer: 0, explanation: "Rechte hoek = 90° (kwart cirkel). Gestrekt = 180°, vol = 360°." },
+      { q: "Een spiegel-as in een vierkant gaat door?", options: ["Twee tegenoverliggende zijden", "Eén hoekpunt", "Het midden van een zijde", "Geen, een vierkant heeft er geen"], answer: 0, explanation: "Een vierkant heeft 4 spiegel-assen: 2 door midden van zijden, 2 langs diagonalen." },
+      { q: "Welke hoek is STOMP?", options: ["110°", "60°", "90°", "30°"], answer: 0, explanation: "Stomp = tussen 90° en 180°. 110° valt erbinnen. 60°/30° = scherp, 90° = recht." },
+      { q: "Hoeveel symmetrie-assen heeft een gelijkzijdige driehoek?", options: ["3", "1", "2", "6"], answer: 0, explanation: "3 spiegel-assen: één per hoekpunt naar het midden van de overstaande zijde." },
+    ],
+    4: [
+      { q: "Wat is 25 % van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25 % = ¼. Eén vierde van 80 = 20." },
+      { q: "Wat is 0,25 als breuk?", options: ["¼", "¾", "½", "⅕"], answer: 0, explanation: "0,25 = 25/100 = 1/4 (vereenvoudigd)." },
+      { q: "Reken uit: 12,5 + 7,75", options: ["20,25", "19,25", "20,75", "20"], answer: 0, explanation: "12,50 + 7,75 = 20,25 (decimaal kommas onder elkaar)." },
+      { q: "Een trui kost €40 met 20% korting. Wat betaal je?", options: ["€32", "€20", "€8", "€48"], answer: 0, explanation: "20% van 40 = 8. Korting = 8. Prijs: 40 − 8 = €32." },
+    ],
+  },
+
+  // ── Moderne Wiskunde Havo/vwo 1A — wiskunde klas 1 ──────────────────
+  // Hoofdstukken: 0=Rekenen, 1=Negatieve getallen, 2=Formules en
+  // vergelijkingen, 3=Oppervlakte en inhoud, 4=Rekenen met variabelen,
+  // 5=Vlakke figuren.
+  "mw-hv1a": {
+    0: [
+      { q: "Reken: 7 × 8 + 4", options: ["60", "84", "56", "108"], answer: 0, explanation: "Eerst ×: 56. + 4 = 60." },
+      { q: "Schrijf 3/4 als decimaal getal.", options: ["0,75", "0,34", "0,43", "1,33"], answer: 0, explanation: "3 / 4 = 0,75. Of: 3/4 × 100 = 75 → 0,75." },
+      { q: "Wat is 2³?", options: ["8", "6", "9", "5"], answer: 0, explanation: "2³ = 2 × 2 × 2 = 8." },
+      { q: "30% van 200 = ?", options: ["60", "30", "200", "70"], answer: 0, explanation: "30/100 × 200 = 60. Of: 0,3 × 200 = 60." },
+    ],
+    1: [
+      { q: "Wat is −5 + 8?", options: ["3", "−3", "13", "−13"], answer: 0, explanation: "−5 + 8 = 3 (8 stappen omhoog vanaf −5)." },
+      { q: "Wat is 4 − 7?", options: ["−3", "3", "−11", "11"], answer: 0, explanation: "4 − 7: ga 7 naar links vanaf 4 → −3." },
+      { q: "Wat is −3 × 4?", options: ["−12", "12", "−7", "7"], answer: 0, explanation: "negatief × positief = negatief. 3 × 4 = 12 → −12." },
+      { q: "Wat is −6 × −2?", options: ["12", "−12", "8", "−8"], answer: 0, explanation: "negatief × negatief = positief. 6 × 2 = 12 → +12." },
+    ],
+    2: [
+      { q: "Los op: x + 5 = 12", options: ["x = 7", "x = 17", "x = 5", "x = 60"], answer: 0, explanation: "x = 12 − 5 = 7. Trek 5 van beide kanten af." },
+      { q: "Los op: 3x = 21", options: ["x = 7", "x = 18", "x = 24", "x = 63"], answer: 0, explanation: "Deel beide kanten door 3: x = 21/3 = 7." },
+      { q: "Bij p = 5 + 2t, t = 4. Bereken p.", options: ["13", "11", "20", "9"], answer: 0, explanation: "p = 5 + 2 × 4 = 5 + 8 = 13." },
+      { q: "Los op: 2x − 3 = 11", options: ["x = 7", "x = 4", "x = 14", "x = 8"], answer: 0, explanation: "2x = 11 + 3 = 14. x = 14 / 2 = 7." },
+    ],
+    3: [
+      { q: "Oppervlakte van een vierkant met zijde 6 cm?", options: ["36 cm²", "24 cm²", "12 cm²", "18 cm²"], answer: 0, explanation: "A = z² = 6 × 6 = 36 cm²." },
+      { q: "Inhoud kubus met ribbe 4 cm?", options: ["64 cm³", "16 cm³", "12 cm³", "48 cm³"], answer: 0, explanation: "V = z³ = 4 × 4 × 4 = 64 cm³." },
+      { q: "Driehoek met basis 8 en hoogte 5. Oppervlakte?", options: ["20", "40", "13", "26"], answer: 0, explanation: "A = ½ × b × h = ½ × 8 × 5 = 20." },
+      { q: "Hoeveel ml in 1 liter?", options: ["1000", "100", "10", "10000"], answer: 0, explanation: "1 l = 1000 ml = 1000 cm³ (kubieke cm)." },
+    ],
+    4: [
+      { q: "Vereenvoudig: 3a + 5a", options: ["8a", "15a", "8", "8a²"], answer: 0, explanation: "Gelijksoortige termen optellen: 3a + 5a = (3+5)a = 8a." },
+      { q: "Vereenvoudig: 4x − x", options: ["3x", "4", "5x", "−4x²"], answer: 0, explanation: "4x − 1x = 3x. Eén variabele zonder coëfficiënt = 1×variabele." },
+      { q: "Wat is 2a × 3?", options: ["6a", "5a", "23a", "6a²"], answer: 0, explanation: "Coëfficiënten vermenigvuldigen: 2 × 3 = 6, variabele blijft a → 6a." },
+      { q: "Vereenvoudig: 5x + 2y − 2x + 3y", options: ["3x + 5y", "5x + 5y", "8xy", "3x + y"], answer: 0, explanation: "x-termen: 5x − 2x = 3x. y-termen: 2y + 3y = 5y. Antwoord: 3x + 5y." },
+    ],
+    5: [
+      { q: "Een rechthoek heeft zijden 6 en 4. Omtrek?", options: ["20", "24", "10", "14"], answer: 0, explanation: "P = 2(l + b) = 2 × (6 + 4) = 20." },
+      { q: "Een cirkel met straal 5. Diameter?", options: ["10", "5", "25", "2,5"], answer: 0, explanation: "Diameter = 2 × straal = 2 × 5 = 10." },
+      { q: "Welke figuur heeft 6 zijden?", options: ["Zeshoek", "Vijfhoek", "Achthoek", "Driehoek"], answer: 0, explanation: "Zeshoek (hexagoon) = 6 zijden. Vijfhoek = 5, achthoek = 8." },
+      { q: "Som van hoeken in een vierkant?", options: ["360°", "180°", "90°", "720°"], answer: 0, explanation: "Vierkant heeft 4 hoeken van 90° → 4 × 90 = 360°." },
+    ],
+  },
+
+  // ── Nieuw Nederlands Havo/vwo 1 — Nederlands klas 1 ─────────────────
+  // 12 hoofdstukken (thema-gestuurd), 3 vragen per thema voor totaal ~36.
+  "nn-hv1": {
+    0: [
+      { q: "Hoe stel je jezelf voor in een formele situatie?", options: ["'Hallo, ik ben Sara Jansen.'", "'Yo!'", "'Hoi.'", "'Wat moet je?'"], answer: 0, explanation: "Formeel = volledige naam + nette begroeting. Yo/hoi = informeel onder vrienden." },
+      { q: "Wat is een eigennaam?", options: ["Naam van een persoon, plaats of merk", "Een gewone naam zoals 'tafel'", "Een werkwoord", "Een lidwoord"], answer: 0, explanation: "Eigennamen krijgen hoofdletter: Sara, Amsterdam, Coca-Cola. Soortnamen niet: tafel, stad, drank." },
+      { q: "Welke uitspraak past bij EEN GESPREK?", options: ["Open vraag stellen + actief luisteren", "Alleen jezelf laten horen", "Door iemand heen praten", "Nooit knikken"], answer: 0, explanation: "Goede gespreksvaardigheid = vragen stellen, luisteren, reageren — geen monoloog." },
+    ],
+    1: [
+      { q: "Welk woord beschrijft een GEZINSLID?", options: ["Broer", "Buurman", "Klasgenoot", "Vriend"], answer: 0, explanation: "Broer = familie/gezin. Buurman, klasgenoot, vriend = ander soort relatie." },
+      { q: "Wat is een BIJVOEGLIJK NAAMWOORD bij 'mijn vriendin'?", options: ["aardige (mijn aardige vriendin)", "Sara", "lopen", "snel"], answer: 0, explanation: "Bnw geeft eigenschap aan het zelfstandig naamwoord. 'Aardige' beschrijft de vriendin." },
+      { q: "Welk persoonlijk voornaamwoord past: 'Hij belde naar ___ moeder.'", options: ["zijn", "zijn (bezittelijk)", "hij", "hem"], answer: 0, explanation: "'Zijn' is het bezittelijk voornaamwoord van 'hij' — verwijst naar wiens moeder. Hier is hij = bezitter." },
+    ],
+    2: [
+      { q: "Wat is een SCHOOLREGEL?", options: ["Afspraak hoe iedereen zich gedraagt", "Formule wiskunde", "Toets", "Rooster"], answer: 0, explanation: "Schoolregels zijn gedragsafspraken: niet rennen op de gang, telefoon weg, etc." },
+      { q: "Welk werkwoord past in: 'In de pauze ___ wij naar buiten.'", options: ["gaan", "gaat", "ga", "gaand"], answer: 0, explanation: "Wij + werkwoord 'gaan' → wij gaan. Bij 'wij' krijgt het ww de meervoudsvorm." },
+      { q: "Een HOBBY is?", options: ["Iets wat je in je vrije tijd doet voor plezier", "Een schoolvak", "Werk", "Slapen"], answer: 0, explanation: "Hobby = vrijetijdsbesteding voor het plezier — bv. tekenen, voetballen, lezen." },
+    ],
+    3: [
+      { q: "Wat zijn KOOLHYDRATEN?", options: ["Suikers en zetmeel — energiebron", "Vitaminen", "Vetten", "Water"], answer: 0, explanation: "Koolhydraten (in brood, aardappel, rijst) leveren snel energie. Eiwitten = bouwstoffen, vetten = reserve-energie." },
+      { q: "Welk lidwoord: '___ appel'?", options: ["de", "het", "een (alleen)", "geen"], answer: 0, explanation: "'De' appel (mannelijk/vrouwelijk). 'Het' wordt gebruikt voor onzijdige woorden zoals 'het boek', 'het kind'." },
+      { q: "Welke is GOED gespeld?", options: ["bouillon", "boullion", "buillon", "bouilon"], answer: 0, explanation: "Bouillon — Frans leenwoord, met 'illon'. Vaak fout gespeld; onthouden of opzoeken." },
+    ],
+    4: [
+      { q: "Welke is een vraagwoord-zin?", options: ["Waar zit je hotel?", "Het hotel is mooi.", "Loop snel.", "Wat een leuke reis!"], answer: 0, explanation: "Vraagwoord-zin begint met w-woord (wie/wat/waar/wanneer/waarom/welke/hoe). 'Waar' = vraag." },
+      { q: "Wat is een SAMENVATTING?", options: ["Korte versie van het belangrijkste", "Een lange uitleg", "Een verhaal", "Een lijst"], answer: 0, explanation: "Samenvatting = de hoofdpunten in eigen woorden, korter. Geen details." },
+      { q: "'Ik bezocht musea' — verleden tijd van?", options: ["bezoeken", "bezitten", "beklimmen", "besteden"], answer: 0, explanation: "Bezocht = verleden tijd onregelmatig werkwoord 'bezoeken'. (Stam bezoek + vt-uitgang -te / -de + onregelmatigheid → bezocht.)" },
+    ],
+    5: [
+      { q: "Welk type tekst is een KRANTEN-ARTIKEL?", options: ["Informatief / nieuws", "Verhalend", "Betogend", "Instructief"], answer: 0, explanation: "Krantenartikel = feiten over actuele gebeurtenissen → informatief." },
+      { q: "Wat is FAKE NEWS?", options: ["Nepnieuws — verzonnen of misleidend", "Echt nieuws", "Sportverslag", "Reclame"], answer: 0, explanation: "Fake news = bewust onjuist of misleidend nieuws. Belangrijk om bron en feiten te checken." },
+      { q: "Wat doe je bij FACT-CHECKEN?", options: ["Controleren of iets waar is via betrouwbare bronnen", "Snel doorklikken", "Geloven wat er staat", "Niets"], answer: 0, explanation: "Fact-check: kijk of meerdere onafhankelijke bronnen hetzelfde zeggen, en of het een betrouwbare bron is." },
+    ],
+    6: [
+      { q: "Hoeveel water moet je per dag drinken (advies)?", options: ["Ongeveer 1,5 liter", "10 liter", "0,2 liter", "5 liter"], answer: 0, explanation: "Voedingscentrum-advies: ~1,5 liter water/vocht per dag voor volwassenen, iets minder voor kinderen." },
+      { q: "Welke sport is een TEAMSPORT?", options: ["Voetbal", "Tennis enkel", "Hardlopen", "Schaken"], answer: 0, explanation: "Teamsport = met meerdere spelers samen, één tegen ander team. Voetbal, hockey, basketbal." },
+      { q: "Wat is GEZONDE LEVENSSTIJL?", options: ["Combinatie van bewegen, gezond eten, voldoende slaap", "Alleen sporten", "Alleen niet roken", "Alleen vroeg slapen"], answer: 0, explanation: "Gezonde leefstijl = balans tussen voeding, beweging, slaap, en mentale rust." },
+    ],
+    7: [
+      { q: "Wat is BIODIVERSITEIT?", options: ["Variatie aan levensvormen op aarde", "Een plant", "Een land", "Een ziekte"], answer: 0, explanation: "Biodiversiteit = soortenrijkdom — alle planten, dieren, micro-organismen samen. Hoge biodiversiteit = gezond ecosysteem." },
+      { q: "Welk is een GEVOLG van klimaatverandering?", options: ["Stijgende zeespiegel", "Meer fietsen", "Lagere temperaturen", "Geen veranderingen"], answer: 0, explanation: "Klimaatverandering: gemiddelde temperatuur stijgt → ijskappen smelten → zeespiegel stijgt → kustlanden in gevaar." },
+      { q: "Wat is RECYCLING?", options: ["Materialen hergebruiken", "Iets weggooien", "Iets nieuws kopen", "Tellen"], answer: 0, explanation: "Recycling: oud → nieuw via fabriek (bv. petfles → nieuwe petfles)." },
+    ],
+    8: [
+      { q: "Wat is een CV (curriculum vitae)?", options: ["Levensloop voor sollicitatie", "Een soort scooter", "Schoolboek", "Verzekering"], answer: 0, explanation: "CV = overzicht van opleiding, werk, ervaring — bedrijven vragen 'm bij sollicitatie." },
+      { q: "Welk werk is dienstverlenend?", options: ["Verpleegkundige", "Productie-medewerker", "Boer", "Bouwvakker"], answer: 0, explanation: "Dienstverlening = werken vóór mensen (zorg, horeca, kapper). Productie/landbouw/bouw maken iets fysieks." },
+      { q: "Welke vaardigheid is BELANGRIJK voor een toekomst-baan?", options: ["Communiceren + samenwerken + leren", "Alleen één ding goed kunnen", "Veel praten", "Hard werken zonder pauze"], answer: 0, explanation: "Soft skills (samenwerken, communicatie, flexibiliteit) plus blijven leren = essentieel in elke toekomstige baan." },
+    ],
+    9: [
+      { q: "Wat is DEMOCRATIE?", options: ["Regering door het volk via verkiezingen", "Eén leider beslist alles", "Een soort koningshuis", "Een land zonder regels"], answer: 0, explanation: "Democratie: volk kiest vertegenwoordigers (parlement) die wetten maken. Tegenovergesteld: dictatuur." },
+      { q: "Welk is een MENSENRECHT?", options: ["Recht op vrije meningsuiting", "Recht op gratis ijs", "Recht om altijd te winnen", "Recht op luxe auto's"], answer: 0, explanation: "Universele Verklaring van de Rechten van de Mens (1948): vrije meningsuiting, gelijkheid, leven, etc." },
+      { q: "Wat is DISCRIMINATIE?", options: ["Iemand achterstellen om afkomst, geslacht, religie etc.", "Iemand helpen", "Een keuze maken", "Een opmerking"], answer: 0, explanation: "Discriminatie = ongelijke behandeling op basis van persoonlijke kenmerken. In Nederland verboden (artikel 1 Grondwet)." },
+    ],
+    10: [
+      { q: "Wat is een ROMAN?", options: ["Lang verhalend boek met fictie", "Een biografie", "Een gedicht", "Een toneelstuk"], answer: 0, explanation: "Roman = uitgebreid verhaal, meestal verzonnen, vaak honderden pagina's. Verschilt van novelle (korter) of poëzie." },
+      { q: "Welke literaire stijlfiguur is 'Hij rent als een raket'?", options: ["Vergelijking", "Personificatie", "Hyperbool", "Metafoor"], answer: 0, explanation: "Vergelijking gebruikt 'als' of 'zoals' (zoals raket). Metafoor zegt direct: 'hij is een raket'." },
+      { q: "Wat is RIJM?", options: ["Woorden met dezelfde eindklank", "Een soort gedicht", "Een lange tekst", "Een zin"], answer: 0, explanation: "Rijm: kat-mat, hond-mond, boek-doek hebben dezelfde eind-klank. Vaak in poëzie." },
+    ],
+    11: [
+      { q: "Wat is een ARGUMENT?", options: ["Reden om iets te onderbouwen", "Een ruzie", "Een mening zonder reden", "Een vraag"], answer: 0, explanation: "Argument = bewijs of reden waarom je standpunt klopt. Mening + onderbouwing = argument." },
+      { q: "Welke is een SLECHTE argumentatie?", options: ["'Iedereen vindt het, dus is het waar'", "'Onderzoek toont aan dat...'", "'Volgens de wet geldt...'", "'Twee bronnen bevestigen...'"], answer: 0, explanation: "Drogreden 'argument ad populum' (iedereen vindt) is logische fout. Goede argumenten gebruiken bewijs/bron." },
+      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuw-ruzie", "Toespraak", "Toets"], answer: 0, explanation: "Debat: voor- en tegenstanders argumenteren beurtelings volgens regels. Vaak met jury die wint bepaalt." },
+    ],
+  },
+
+  // ── Stepping Stones — Engels klas 1-6 ───────────────────────────────
+  // Hoofdstukken: 0=Getting started, 1=Family and friends, 2=School life,
+  // 3=Free time, 4=Food and health, 5=Travel and holidays,
+  // 6=Technology and media, 7=Nature and environment.
+  "stepping-stones": {
+    0: [
+      { q: "How do you say 'hallo' in English?", options: ["Hello", "Hola", "Bonjour", "Ciao"], answer: 0, explanation: "Hello = Engels. Hola = Spaans, Bonjour = Frans, Ciao = Italiaans." },
+      { q: "'My name ___ Sara.'", options: ["is", "are", "am", "be"], answer: 0, explanation: "Derde persoon enkelvoud: he/she/it + IS. 'My name is Sara'." },
+      { q: "Wat betekent 'How are you?'", options: ["Hoe gaat het met je?", "Wie ben je?", "Waar woon je?", "Hoe oud ben je?"], answer: 0, explanation: "How are you = standaard begroeting 'hoe gaat het'. Antwoord: 'I'm fine, thanks.'" },
+    ],
+    1: [
+      { q: "Wat betekent 'sister'?", options: ["Zus", "Broer", "Moeder", "Tante"], answer: 0, explanation: "Sister = zus. Brother = broer, mother = moeder, aunt = tante." },
+      { q: "'I have ___ brother.' (1 broer)", options: ["a", "an", "one", "the"], answer: 0, explanation: "Onbepaald lidwoord 'a' voor medeklinker (b van brother). 'An' voor klinker (an apple)." },
+      { q: "Wat is meervoud van 'child'?", options: ["children", "childs", "childes", "child"], answer: 0, explanation: "Onregelmatig meervoud: child → children. (Niet childs.)" },
+    ],
+    2: [
+      { q: "Wat is 'desk' in het Nederlands?", options: ["Bureau / lessenaar", "Stoel", "Bord", "Tas"], answer: 0, explanation: "Desk = bureau (waar je achter zit op school of werk)." },
+      { q: "'I ___ to school by bike.'", options: ["go", "goes", "going", "went"], answer: 0, explanation: "I + go (basisvorm). 'Goes' is voor he/she/it. 'Went' is verleden tijd." },
+      { q: "Hoe vraag je 'Wanneer begint de les?'", options: ["When does the lesson start?", "Where does the lesson start?", "Why does the lesson start?", "Who does the lesson start?"], answer: 0, explanation: "When = wanneer. Where = waar, why = waarom, who = wie." },
+    ],
+    3: [
+      { q: "Wat betekent 'hobby'?", options: ["Hobby / vrije tijdsbesteding", "Werk", "Vakantie", "Eten"], answer: 0, explanation: "Hobby = hobby. Engels en NL gebruiken hetzelfde leenwoord." },
+      { q: "'I ___ playing football.' (ik vind het leuk)", options: ["like", "likes", "liking", "liked"], answer: 0, explanation: "I + like + ing-vorm. 'Likes' alleen voor he/she/it." },
+      { q: "Welke sport is 'swimming'?", options: ["Zwemmen", "Lopen", "Springen", "Klimmen"], answer: 0, explanation: "Swimming = zwemmen (van 'swim'). Running = lopen, jumping = springen." },
+    ],
+    4: [
+      { q: "Wat is 'breakfast'?", options: ["Ontbijt", "Lunch", "Diner", "Snack"], answer: 0, explanation: "Breakfast = ontbijt (eerste maaltijd). Lunch = middag, dinner = avondeten." },
+      { q: "Welk woord betekent NIET een groente?", options: ["Apple", "Carrot", "Onion", "Potato"], answer: 0, explanation: "Apple = appel = fruit. Carrot/onion/potato = wortel/ui/aardappel = groenten." },
+      { q: "'I am ___' (honger)", options: ["hungry", "thirsty", "tired", "happy"], answer: 0, explanation: "Hungry = hongerig. Thirsty = dorstig, tired = moe, happy = blij." },
+    ],
+    5: [
+      { q: "Wat betekent 'holiday'?", options: ["Vakantie / feestdag", "Werkdag", "Weekend", "School"], answer: 0, explanation: "Holiday = vakantie of feestdag. UK: holiday, US: vacation." },
+      { q: "'Last year I ___ to Spain.'", options: ["went", "go", "going", "goes"], answer: 0, explanation: "Verleden tijd van 'go' = went. Onregelmatig werkwoord. 'Last year' = signaal voor verleden tijd." },
+      { q: "Welk vervoer is 'plane'?", options: ["Vliegtuig", "Trein", "Boot", "Auto"], answer: 0, explanation: "Plane / airplane = vliegtuig. Train, boat, car = trein, boot, auto." },
+    ],
+    6: [
+      { q: "Wat is 'website'?", options: ["Webpagina / website", "Vissersnet", "Spinnenweb", "Telefoon"], answer: 0, explanation: "Website = digitaal adres (URL) op het internet. Bv. www.google.com." },
+      { q: "'I ___ a phone.' (ik bezit)", options: ["have", "am", "has", "has got"], answer: 0, explanation: "I + have. (He/she/it + has.) 'Has got' is alternatief: 'I have got a phone'." },
+      { q: "Welk apparaat is 'computer'?", options: ["Computer", "Telefoon", "Auto", "Klok"], answer: 0, explanation: "Computer = computer (dezelfde benaming in NL en EN, leenwoord)." },
+    ],
+    7: [
+      { q: "Wat is 'tree'?", options: ["Boom", "Bloem", "Gras", "Vogel"], answer: 0, explanation: "Tree = boom. Flower = bloem, grass = gras, bird = vogel." },
+      { q: "Welk woord past bij milieu (environment)?", options: ["Pollution", "Music", "School", "Family"], answer: 0, explanation: "Pollution = vervuiling — milieuthema. Music/school/family zijn andere thema's." },
+      { q: "'We must ___ the planet.' (beschermen)", options: ["protect", "destroy", "ignore", "buy"], answer: 0, explanation: "Protect = beschermen. Destroy = vernietigen, ignore = negeren." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
