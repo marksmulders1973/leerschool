@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import supabase from "./supabase.js";
 import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
@@ -76,6 +75,11 @@ import {
 } from "./features/practice/aiPool.js";
 import { generateTafelQuestions } from "./features/practice/tafelQuestions.js";
 import { buildHerhaalPool } from "./features/mastery/herhaalQuiz.js";
+import { loadQuizzesByCreator, saveQuiz, findQuizByCode } from "./data/repos/quizzesRepo.js";
+import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/leaderboardRepo.js";
+import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
+import { insertProgress } from "./data/repos/progressRepo.js";
+import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
 import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
@@ -312,21 +316,14 @@ export default function App() {
   useEffect(() => {
     if (!authUser?.id) return;
     let cancelled = false;
-    supabase.from("quizzes")
-      .select("data")
-      .eq("created_by", authUser.id)
-      .order("created_at", { ascending: false })
-      .then(({ data, error }) => {
-        if (cancelled || error || !data?.length) return;
-        const remoteQuizzes = data.map((row) => row.data).filter(Boolean);
-        if (!remoteQuizzes.length) return;
-        setQuizzes((prev) => {
-          const byId = new Map();
-          [...prev, ...remoteQuizzes].forEach((q) => { if (q?.id) byId.set(q.id, q); });
-          return Array.from(byId.values()).sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
-        });
-      })
-      .catch(() => {});
+    loadQuizzesByCreator(authUser.id).then((remoteQuizzes) => {
+      if (cancelled || !remoteQuizzes.length) return;
+      setQuizzes((prev) => {
+        const byId = new Map();
+        [...prev, ...remoteQuizzes].forEach((q) => { if (q?.id) byId.set(q.id, q); });
+        return Array.from(byId.values()).sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+      });
+    });
     return () => { cancelled = true; };
   }, [authUser?.id]);
   useEffect(() => { try { localStorage.setItem("ls_progress", JSON.stringify(studentProgress)); } catch {} }, [studentProgress]);
@@ -341,31 +338,10 @@ export default function App() {
   useEffect(() => {
     let cancelled = false;
     const naam = (userName || "").trim();
-    const cols = "id, player_name, subject, level, topic, title, score, total, percentage, time_taken, quiz_id, cito_id, cito_groep, completed_at";
-    // Twee aparte queries (PostgREST .or() met escape gaf parse-issues).
-    //   1) alle rijen voor authUser.id (recente, ondubbelzinnig)
-    //   2) alle rijen voor player_name (case-insensitive) — vangt legacy
-    //      rijen zonder user_id én rijen die onder een andere session-id
-    //      zijn aangemaakt (anonymous session reset bij domein-migratie).
-    // Dedup op completedAt+subject+level+score+total in setStudentProgress.
-    const queries = [];
-    if (authUser?.id) {
-      queries.push(
-        supabase.from("leaderboard").select(cols).eq("user_id", authUser.id)
-          .order("completed_at", { ascending: false }).limit(500)
-      );
-    }
-    if (naam.length >= 2) {
-      queries.push(
-        supabase.from("leaderboard").select(cols).ilike("player_name", naam)
-          .order("completed_at", { ascending: false }).limit(500)
-      );
-    }
-    if (queries.length === 0) return;
-    Promise.all(queries)
-      .then((responses) => {
+    if (!authUser?.id && naam.length < 2) return;
+    loadLeaderboardForPlayer({ userId: authUser?.id, playerName: naam, limit: 500 })
+      .then((data) => {
         if (cancelled) return;
-        const data = responses.flatMap((r) => r.data || []);
         if (data.length === 0) return;
         // player wordt op huidige userName gezet zodat downstream filters
         // (`p.player === userName`, case-sensitive) altijd matchen — ook als
@@ -405,25 +381,19 @@ export default function App() {
     if (!pendingCode) return;
     const localQuiz = quizzes.find((q) => q.code.toUpperCase() === pendingCode.toUpperCase());
     if (localQuiz) return; // al lokaal aanwezig
-    supabase
-      .from("quizzes")
-      .select("data")
-      .eq("code", pendingCode.toUpperCase())
-      .single()
-      .then(({ data, error }) => {
-        if (error || !data) {
-          alert(`❌ Toets met code "${pendingCode}" niet gevonden.\n\nVraag de leerkracht om een nieuwe link te sturen.`);
-          setPendingCode("");
-          return;
-        }
-        const quiz = data.data;
-        setCurrentQuiz(quiz);
+    findQuizByCode(pendingCode).then((quiz) => {
+      if (!quiz) {
+        alert(`❌ Toets met code "${pendingCode}" niet gevonden.\n\nVraag de leerkracht om een nieuwe link te sturen.`);
         setPendingCode("");
-        // Lees naam direct uit localStorage om stale closure te vermijden
-        let hasUser = false;
-        try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); hasUser = !!d.name; } } catch {}
-        setPage("home"); // altijd eerst homepage tonen, niet automatisch starten
-      });
+        return;
+      }
+      setCurrentQuiz(quiz);
+      setPendingCode("");
+      // Lees naam direct uit localStorage om stale closure te vermijden
+      let hasUser = false;
+      try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); hasUser = !!d.name; } } catch {}
+      setPage("home"); // altijd eerst homepage tonen, niet automatisch starten
+    });
   }, [pendingCode, quizzes]);
 
   const trialDaysLeft = (() => {
@@ -449,12 +419,7 @@ export default function App() {
     // Sla op in Supabase zodat leerlingen via de link kunnen joinen.
     // `created_by` koppelt de quiz aan de ingelogde leerkracht zodat 'ie
     // 'm op andere apparaten kan terugzien onder "Mijn opgeslagen toetsen".
-    supabase.from("quizzes").insert({
-      id: newQuiz.id,
-      code: newQuiz.code,
-      data: newQuiz,
-      ...(authUser?.id ? { created_by: authUser.id } : {}),
-    }).then(({ error }) => {
+    saveQuiz({ id: newQuiz.id, code: newQuiz.code, quiz: newQuiz, userId: authUser?.id }).then(({ error }) => {
       if (error) alert(`❌ Quiz opslaan mislukt: ${error.message}\n\nDeel de link nog niet — leerlingen kunnen de quiz dan niet vinden.`);
     });
     return newQuiz;
@@ -604,20 +569,34 @@ export default function App() {
         setHallOfFame({ ...hof });
       } catch {}
       // Supabase opslaan + top 5 bewaken
-      supabase.from("hall_of_fame").insert({ subject: result.subject, level: result.level, player_name: userName, time_taken: result.timeTaken, percentage: 100, completed_at: result.completedAt, questions: result.questions })
-        .then(() => supabase.from("hall_of_fame").select("id, time_taken").eq("subject", result.subject).eq("level", result.level).order("time_taken", { ascending: true }))
-        .then(({ data: rows }) => {
-          if (rows && rows.length > 5) {
-            const toDelete = rows.slice(5).map(r => r.id);
-            supabase.from("hall_of_fame").delete().in("id", toDelete).then(() => {}).catch(() => {});
-          }
-        }).catch(() => {});
+      recordPerfectScore({
+        subject: result.subject,
+        level: result.level,
+        playerName: userName,
+        timeTaken: result.timeTaken,
+        completedAt: result.completedAt,
+        questions: result.questions,
+      });
     }
     track("quiz_completed", { subject: result.subject, level: result.level, score_pct: result.percentage, score: result.score, total: result.total, duration_sec: result.timeTaken });
     // Globaal scorebord — alleen inserten als er een echte naam is (geen lege/whitespace)
     const naamSchoon = (userName || "").trim();
     if (naamSchoon.length >= 2) {
-      supabase.from("leaderboard").insert({ player_name: naamSchoon, user_id: authUser?.id || null, subject: result.subject, level: result.level, topic: result.topic || null, title: result.title || null, score: result.score, total: result.total, percentage: result.percentage, quiz_id: result.quizId || null, time_taken: result.timeTaken, cito_id: result.citoId || null, cito_groep: result.citoGroep || null }).then(() => {}).catch(() => {});
+      insertLeaderboardEntry({
+        player_name: naamSchoon,
+        user_id: authUser?.id || null,
+        subject: result.subject,
+        level: result.level,
+        topic: result.topic || null,
+        title: result.title || null,
+        score: result.score,
+        total: result.total,
+        percentage: result.percentage,
+        quiz_id: result.quizId || null,
+        time_taken: result.timeTaken,
+        cito_id: result.citoId || null,
+        cito_groep: result.citoGroep || null,
+      });
     } else {
       track("leaderboard_skipped_no_name", { subject: result.subject, level: result.level });
     }
@@ -626,12 +605,19 @@ export default function App() {
     const today = new Date().toISOString().split("T")[0];
     const yesterday = new Date(Date.now() - 86400000).toISOString().split("T")[0];
     if (authUser) {
-      supabase.from("progress").insert({ user_id: authUser.id, subject: result.subject, level: result.level, score: result.score, total: result.total, percentage: result.percentage }).then(() => {}).catch(() => {});
-      supabase.from("profiles").select("streak_days, last_played_date").eq("id", authUser.id).single().then(({ data: pd }) => {
+      insertProgress({
+        userId: authUser.id,
+        subject: result.subject,
+        level: result.level,
+        score: result.score,
+        total: result.total,
+        percentage: result.percentage,
+      });
+      getStreakInfo(authUser.id).then((pd) => {
         const newStreak = pd?.last_played_date === today ? (pd.streak_days || 1) : pd?.last_played_date === yesterday ? (pd.streak_days || 0) + 1 : 1;
         setStreak(newStreak);
-        supabase.from("profiles").update({ streak_days: newStreak, last_played_date: today }).eq("id", authUser.id).then(() => {}).catch(() => {});
-      }).catch(() => {});
+        updateStreak({ userId: authUser.id, streak: newStreak, date: today });
+      });
     } else {
       try {
         const saved = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}');
@@ -847,7 +833,7 @@ export default function App() {
         <HomePage
           onSaveProfile={({ name, level, role, schoolType }) => {
             if (authUser) {
-              supabase.from("profiles").upsert({ id: authUser.id, display_name: name, level, role, school_type: schoolType || "" }).then(() => {}).catch(() => {});
+              upsertProfile({ userId: authUser.id, displayName: name, level, role, schoolType });
             }
           }}
           authUser={authUser}
@@ -916,7 +902,7 @@ export default function App() {
           schoolLogoUrl={schoolLogoUrl}
           onLogoUpdate={(url) => {
             setSchoolLogoUrl(url);
-            if (authUser) supabase.from("profiles").update({ school_logo_url: url }).eq("id", authUser.id).then(() => {}).catch(() => {});
+            if (authUser) updateSchoolLogo({ userId: authUser.id, logoUrl: url });
           }}
           onStartQuiz={(q) => { setCurrentQuiz(q); startGame(q, "host"); }}
           onDeleteQuiz={(id) => {
@@ -929,7 +915,7 @@ export default function App() {
             const updated = [...quizzes, copy];
             setQuizzes(updated);
             try { localStorage.setItem("ls_quizzes", JSON.stringify(updated)); } catch {}
-            supabase.from("quizzes").insert({ id: copy.id, code: copy.code, data: copy, ...(authUser?.id ? { created_by: authUser.id } : {}) }).then(() => {}).catch(() => {});
+            saveQuiz({ id: copy.id, code: copy.code, quiz: copy, userId: authUser?.id });
           }}
         />
       )}
@@ -1019,11 +1005,11 @@ export default function App() {
             const local = quizzes.find((q) => q.code.toUpperCase() === upper);
             if (local) { setCurrentQuiz(local); setPendingCode(""); startGame(local, "self"); return; }
             // Niet lokaal → zoek in Supabase
-            const { data, error } = await supabase.from("quizzes").select("data").eq("code", upper).single();
-            if (error || !data) return "not_found";
-            setCurrentQuiz(data.data);
+            const remote = await findQuizByCode(upper);
+            if (!remote) return "not_found";
+            setCurrentQuiz(remote);
             setPendingCode("");
-            startGame(data.data, "self");
+            startGame(remote, "self");
           }}
           onSelfStudy={() => setPage("self-study")}
           onTextbook={() => setPage("textbook")}
