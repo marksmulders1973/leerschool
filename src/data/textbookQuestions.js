@@ -963,6 +963,154 @@ export const TEXTBOOK_QUESTIONS = {
     ],
   },
 
+  // ── Geschiedeniswerkplaats — geschiedenis VO (alt Feniks) ───────────
+  "geschiedeniswerkplaats": {
+    0: [
+      { q: "Wat aten jagers-verzamelaars vooral?", options: ["Wild + bessen + noten", "Brood", "Pasta", "Rijst"], answer: 0, explanation: "Vóór landbouw: wat in de natuur te vinden was. Wisselend per seizoen." },
+      { q: "Wat is een KENMERK van het neolithicum?", options: ["Vaste woonplek + landbouw + huisdieren", "Stoommachines", "Schepen", "Geld"], answer: 0, explanation: "Jong-steentijd: mens stopt rondtrekken, gaat boer worden, temt geiten/koeien." },
+    ],
+    1: [
+      { q: "In welk jaar VIEL het West-Romeinse Rijk?", options: ["476", "1066", "1492", "1500"], answer: 0, explanation: "476 n.Chr.: laatste keizer Romulus Augustulus afgezet door Germaan Odoaker." },
+      { q: "Welke stad was 'eeuwige stad' van Romeinen?", options: ["Rome", "Athene", "Sparta", "Carthago"], answer: 0, explanation: "Rome — gesticht volgens legende 753 v.Chr. door Romulus + Remus." },
+    ],
+    2: [
+      { q: "Wat is FEODALISME?", options: ["Stelsel: heer geeft land in ruil voor trouw + hulp", "Een bedevaart", "Soort kerk", "Een wapen"], answer: 0, explanation: "Middeleeuws: koning → leenmannen (graven, ridders) → onderworpen boeren. Hiërarchie van trouw." },
+      { q: "Wat was de KRUISTOCHT?", options: ["Christelijke veldtocht naar Jeruzalem", "Een bouwwerk", "Een ceremonie", "Een toets"], answer: 0, explanation: "Vanaf 1096 reeks militaire pogingen om Heilig Land te heroveren van moslims. Vaak met religieuze + economische motieven." },
+    ],
+    3: [
+      { q: "Wat is een HANZESTAD?", options: ["Lid van middeleeuws handelsverbond rond Noord-/Oostzee", "Hoofdstad", "Vissersdorp", "Hoofdstad van Hanze"], answer: 0, explanation: "Hanze = bond van handelssteden (Hamburg, Bremen, Lübeck, ook Deventer, Zwolle). Bloei 13e-15e eeuw." },
+      { q: "Welke ziekte trof Europa in 1347-1352?", options: ["Pest (zwarte dood)", "Pokken", "Cholera", "Tuberculose"], answer: 0, explanation: "Builenpest van Aziatische schepen → Italië → hele Europa. ~⅓ bevolking gestorven." },
+    ],
+    4: [
+      { q: "Wie spijkerde in 1517 95 STELLINGEN aan een kerkdeur?", options: ["Maarten Luther", "Calvijn", "Erasmus", "Hendrik VIII"], answer: 0, explanation: "Luther in Wittenberg → start Reformatie → splitsing Westerse kerk." },
+      { q: "Wat was de TACHTIGJARIGE Oorlog (1568-1648)?", options: ["NL vrijheidsstrijd tegen Spanje", "WO0", "Een godsdienstoorlog tussen kerken", "Een Engelse oorlog"], answer: 0, explanation: "Onafhankelijkheidsoorlog Nederland (Willem van Oranje) tegen Filips II van Spanje. Eindigde met Vrede van Münster 1648." },
+    ],
+    5: [
+      { q: "Wat is een REGENT (17e eeuw NL)?", options: ["Lid van rijke koopmansfamilie die stad bestuurt", "Een ridder", "Een soldaat", "Een geestelijke"], answer: 0, explanation: "Regenten = patriciërs die schepenen, burgemeesters, VOC-bestuurders waren. Zelfbenoemd, niet gekozen." },
+      { q: "Wat was de bijnaam van NL in 17e eeuw?", options: ["Republiek der Zeven Verenigde Provinciën", "Koninkrijk", "Hertogdom", "Bondsstaat"], answer: 0, explanation: "Republiek (geen koning), 7 provincies (Holland, Zeeland, Utrecht, Gelderland, Overijssel, Friesland, Groningen)." },
+    ],
+    6: [
+      { q: "Wie schreef 'Du Contrat Social' (1762)?", options: ["Jean-Jacques Rousseau", "Voltaire", "Immanuel Kant", "Adam Smith"], answer: 0, explanation: "Rousseau: maatschappelijk verdrag tussen burgers en overheid. Inspireerde Franse Revolutie." },
+      { q: "Welke leus stamt uit Franse Revolutie?", options: ["Liberté, Égalité, Fraternité", "Veni Vidi Vici", "All for one, one for all", "E pluribus unum"], answer: 0, explanation: "Vrijheid, Gelijkheid, Broederschap — nog steeds motto van Frankrijk." },
+    ],
+    7: [
+      { q: "Welke uitvinding versnelde de INDUSTRIËLE revolutie?", options: ["Stoommachine (James Watt)", "Computer", "Auto", "Telefoon"], answer: 0, explanation: "Watt verbeterde stoommachine ~1769 → fabrieken + treinen + schepen → massaproductie." },
+      { q: "Wat is een ARBEIDER (19e-eeuws)?", options: ["Persoon die in fabriek werkt voor loon", "Boer", "Ambtenaar", "Adel"], answer: 0, explanation: "Industriële revolutie creëerde nieuwe sociale klasse: arbeiders in fabrieken, vaak slechte omstandigheden + lange uren." },
+    ],
+    8: [
+      { q: "Wat startte de Eerste Wereldoorlog?", options: ["Moord op Aartshertog Frans Ferdinand 1914", "Pearl Harbor", "Reformatie", "Vrede van Versailles"], answer: 0, explanation: "28 juni 1914 in Sarajevo. Door allianties verspreidde conflict zich snel over Europa." },
+      { q: "Wat was de HOLOCAUST?", options: ["Systematische moord op ~6 miljoen joden door nazi's", "Een veldslag", "Een bombardement", "Een verdrag"], answer: 0, explanation: "Sjoa: nazi-Duitsland 1941-1945 vermoordde joden + Roma + andere groepen in concentratie- en vernietigingskampen." },
+    ],
+    9: [
+      { q: "Wanneer eindigde de Koude Oorlog?", options: ["~1989-1991 (val Berlijnse Muur + uiteenvallen Sovjet-Unie)", "1945", "1962", "2001"], answer: 0, explanation: "Berlijnse Muur viel 1989, Sovjet-Unie uiteen 1991. Rusland werd weer kapitalistisch." },
+      { q: "Wat is GLOBALISERING?", options: ["Wereldwijde verbinding van economie + cultuur", "Reis-eindje", "Een soort verdrag", "Een ramp"], answer: 0, explanation: "Sinds ~1990: snelle uitbreiding internationale handel + internet + multinationals. Wereld wordt 'kleiner'." },
+    ],
+  },
+
+  // ── Op Niveau Havo/vwo 1 — Nederlands (alt Nieuw Nederlands) ────────
+  "op-niveau-hv1": {
+    0: [
+      { q: "Hoe stel je je voor in een nieuwe klas?", options: ["Naam + waar je vandaan komt + iets persoonlijks", "Alleen je naam", "Niets zeggen", "Heel hard schreeuwen"], answer: 0, explanation: "Goed kennismaken: naam + achtergrond + interesse → mensen onthouden je beter." },
+      { q: "Wat is een MONOLOOG?", options: ["Eén persoon spreekt", "Twee mensen praten", "Schreeuwen", "Stilte"], answer: 0, explanation: "Mono (één) + log (woord). Tegenstelling: dialoog (gesprek tussen 2+)." },
+    ],
+    1: [
+      { q: "Hoe schrijf je 'mijn vaders auto' (bezitsvorm)?", options: ["mijn vaders auto (zonder apostrof)", "mijn vader's auto", "mijn vaders' auto", "mijn vader auto"], answer: 0, explanation: "In NL géén apostrof bij bezitsvorm: 'mijn vaders auto'. Apostrof alleen bij namen op klinker (Sara's auto)." },
+      { q: "Welke is bezittelijk voornaamwoord?", options: ["mijn", "ik", "lopen", "snel"], answer: 0, explanation: "Bezittelijke vnw: mijn, jouw, zijn, haar, ons, jullie, hun." },
+    ],
+    2: [
+      { q: "Wat is een SCHOOLREGEL?", options: ["Afspraak hoe iedereen zich gedraagt", "Een vak", "Toets", "Pauze"], answer: 0, explanation: "Schoolregels = afspraken voor veiligheid + sfeer. Bv. 'niet rennen op gang', 'mobiel uit'." },
+      { q: "Welk type tekst is een SCHOOLREGLEMENT?", options: ["Informatief / regulerend", "Verhalend", "Lyrisch", "Reclame"], answer: 0, explanation: "Reglement = lijst regels — informatief en bindend (regulerend)." },
+    ],
+    3: [
+      { q: "Welk hobby past bij MUZIEK?", options: ["Gitaar spelen", "Voetballen", "Lezen", "Schaken"], answer: 0, explanation: "Gitaar spelen = muziek-hobby. Andere passen bij sport / lezen / strategie." },
+      { q: "Wat is BLOG?", options: ["Persoonlijk dagboek of artikel online", "Een soort fiets", "Wifi-signaal", "Schoolboek"], answer: 0, explanation: "Blog = web-log: online dagboek of regelmatig artikel. Vaak persoonlijk geschreven." },
+    ],
+    4: [
+      { q: "Welke voedingsstof geeft snelle energie?", options: ["Koolhydraten (suiker, brood)", "Vetten alleen", "Eiwitten alleen", "Vitamines"], answer: 0, explanation: "Koolhydraten worden snel omgezet in glucose → directe energie. Eiwitten = bouwstof, vetten = reserve." },
+      { q: "Wat is een GEZONDE maaltijd?", options: ["Combinatie groente + eiwit + vezels + matig vet", "Alleen vlees", "Alleen brood", "Alleen sla"], answer: 0, explanation: "Schijf van Vijf: variatie. Groente + zetmeel/granen + eiwit + zuivel + olie/vet." },
+    ],
+    5: [
+      { q: "Wat is een DAGTRIP?", options: ["Reis van één dag, terug op dezelfde dag", "Maandlange vakantie", "Een treinreis", "Een soort camping"], answer: 0, explanation: "Dagtrip / dagje weg: 's ochtends weg, 's avonds thuis. Geen overnachting." },
+      { q: "Welk werelddeel ligt onder Europa?", options: ["Afrika", "Azië", "Antarctica", "Amerika"], answer: 0, explanation: "Op de wereldkaart: Afrika ligt direct onder Europa, gescheiden door Middellandse Zee." },
+    ],
+    6: [
+      { q: "Wat is SOCIAL MEDIA?", options: ["Online platform om contacten en content te delen", "Een soort krant", "Een tv-zender", "Een radiostation"], answer: 0, explanation: "Bv. Instagram, TikTok, Snapchat, Facebook. Gebruikers delen + reageren onderling." },
+      { q: "Wat is een MEME?", options: ["Visueel grapje dat zich snel verspreid online", "Een type toets", "Wachtwoord", "Een app"], answer: 0, explanation: "Meme = idee/grap die viraal gaat. Vaak plaatje + tekst, kopiëren + variëren is essentieel." },
+    ],
+    7: [
+      { q: "Wat is OPWARMING van de aarde?", options: ["Klimaatverandering door teveel CO₂", "Hete zomer", "Vulkaan", "Een zonnewende"], answer: 0, explanation: "Mensen stoten CO₂ uit → broeikaseffect → wereldwijd warmer worden. Gevolgen: ijs smelt, weer extremer." },
+      { q: "Wat doet een ZONNEPANEEL?", options: ["Zet zonlicht om in elektriciteit", "Verwarmt water", "Reflecteert zon", "Houdt zon tegen"], answer: 0, explanation: "Photovoltaïsch effect: licht raakt cel → elektronen verplaatsen → stroom. Duurzame energie!" },
+    ],
+  },
+
+  // ── Newton NaSk — natuurkunde alt Overal NaSk ───────────────────────
+  "newton-nask": {
+    0: [
+      { q: "Wat is NaSk?", options: ["Natuur- en scheikunde samen (onderbouw)", "Geschiedenis", "Talen", "Wiskunde"], answer: 0, explanation: "NaSk = combinatie van natuurkunde + scheikunde, samen onderwezen in onderbouw VO." },
+      { q: "Welk experiment is VEILIG?", options: ["Met veiligheidsbril en uit de buurt van anderen", "Met ogen dicht", "Zonder uitleg", "Bij open vlam zonder toezicht"], answer: 0, explanation: "Lab-veiligheid: bril, schort, weet wat je doet, brandblusser nabij. Geen kort haar in vlam." },
+    ],
+    1: [
+      { q: "Welke kleur heeft langste GOLFLENGTE?", options: ["Rood", "Violet", "Blauw", "Groen"], answer: 0, explanation: "Zichtbaar licht: rood = lange golf (~700 nm), violet = korte (~400 nm)." },
+      { q: "Wat is een LENS?", options: ["Doorzichtig glas/kunststof dat licht buigt", "Een spiegel", "Filter", "Lamp"], answer: 0, explanation: "Lens (bol of hol) buigt lichtstralen → vergroten/verkleinen. Bril, microscoop, telescoop." },
+    ],
+    2: [
+      { q: "Wat is een MAGNEET?", options: ["Voorwerp dat ijzer aantrekt", "Soort plastic", "Energie-bron", "Type batterij"], answer: 0, explanation: "Magneten hebben N + Z polen. Trekken ferromagnetische metalen (ijzer, nikkel, kobalt) aan." },
+      { q: "Welke twee polen STOTEN elkaar af?", options: ["Twee N of twee Z", "N en Z", "N en aarde", "Geen"], answer: 0, explanation: "Gelijke polen stoten af, ongelijke trekken aan. N+N → afstoting." },
+    ],
+    3: [
+      { q: "Wat is WARMTE?", options: ["Energie die overgaat van warm naar koud", "Soort licht", "Een gas", "Geluid"], answer: 0, explanation: "Warmte = energie-overgang door temperatuurverschil. Stroomt altijd warm → koud." },
+      { q: "Welke eenheid is TEMPERATUUR?", options: ["Celsius (°C) of Kelvin (K)", "Joule", "Newton", "Volt"], answer: 0, explanation: "Temperatuur in °C (water bevriest 0, kookt 100) of K (absoluut nul = -273°C = 0 K)." },
+    ],
+    4: [
+      { q: "Wat is GRAVITATIE?", options: ["Aantrekkingskracht tussen massa's", "Magnetisme", "Wrijving", "Veerkracht"], answer: 0, explanation: "Newton: alle massa's trekken elkaar aan. Aarde trekt jou aan = jouw gewicht." },
+      { q: "Een fiets remt — wat gebeurt?", options: ["Wrijving zet bewegingsenergie om in warmte", "Energie verdwijnt", "Snelheid blijft gelijk", "De fiets wordt zwaarder"], answer: 0, explanation: "Remblokken op velg → wrijving → kinetische energie → warmte. Daarom worden remmen heet." },
+    ],
+    5: [
+      { q: "Wat is GELUID?", options: ["Trillingen door lucht/water", "Licht", "Kleur", "Warmte"], answer: 0, explanation: "Geluid = drukgolven. Hoorbaar tussen ~20 Hz en 20.000 Hz voor mensen." },
+      { q: "Hoe komt geluid in je oor?", options: ["Trommelvlies trilt → gehoorbeentjes → slakkenhuis", "Door huid", "Via mond", "Via ogen"], answer: 0, explanation: "Geluidsgolven → buitenoor → trommelvlies trilt → 3 botjes versterken → vloeistof in slakkenhuis → gehoorzenuw → hersenen." },
+    ],
+    6: [
+      { q: "Wat zijn ATOMEN?", options: ["Bouwstenen van materie", "Soort moleculen", "Cellen", "Bacteriën"], answer: 0, explanation: "Atoom = kleinste deeltje dat nog kenmerken van een element heeft. Onzichtbaar klein." },
+      { q: "Welke aggregatietoestanden zijn er?", options: ["Vast, vloeibaar, gas (en plasma)", "Alleen vast en vloeibaar", "Alleen gas", "Drie soorten ijs"], answer: 0, explanation: "Drie hoofdfasen + plasma (4e). Verandering = smelten/stollen, verdampen/condenseren, sublimeren." },
+    ],
+  },
+
+  // ── Chemie Overal — scheikunde bovenbouw ────────────────────────────
+  "chemie-overal": {
+    0: [
+      { q: "Hoe scheid je zout van water?", options: ["Indampen / verdampen", "Filtreren", "Magneet", "Niets, ze blijven samen"], answer: 0, explanation: "Zoutoplossing: water verdampen, zout blijft over. Filtreren werkt niet (zout opgelost)." },
+      { q: "Wat is een ZUIVERE stof?", options: ["Bestaat uit één soort moleculen", "Mengsel", "Mengsel met veel water", "Lucht"], answer: 0, explanation: "Zuiver = één component (bv. zuiver water = alleen H₂O). Geen mengsel." },
+    ],
+    1: [
+      { q: "Hoe heten de POSITIEVE deeltjes in atoomkern?", options: ["Protonen", "Neutronen", "Elektronen", "Quarks"], answer: 0, explanation: "Kern: protonen (+) + neutronen (0). Elektronen (-) eromheen in schillen." },
+      { q: "Wat is een ELEMENT?", options: ["Stof bestaande uit één atoomsoort", "Mengsel", "Soort vloeistof", "Een gas"], answer: 0, explanation: "Element = pure atoomsoort: zuurstof (O), goud (Au), waterstof (H)... 118 bekend." },
+    ],
+    2: [
+      { q: "Wat is een SCHEIKUNDIGE reactie?", options: ["Atomen herschikken → nieuwe stoffen", "Vorm verandert", "Beweging", "Hitte"], answer: 0, explanation: "Reactie: bindingen breken + nieuwe vormen. Bv. H₂ + O₂ → H₂O (verbranding waterstof)." },
+      { q: "Welk teken in vergelijking betekent 'reageert tot'?", options: ["→ (pijl)", "= (gelijkteken)", "+ (plus)", "× (maal)"], answer: 0, explanation: "Pijl scheidt reactanten van producten. CH₄ + 2 O₂ → CO₂ + 2 H₂O." },
+    ],
+    3: [
+      { q: "Welke binding zit in H₂O?", options: ["Covalente / atoombinding", "Ionbinding", "Metaalbinding", "Geen binding"], answer: 0, explanation: "Niet-metaal + niet-metaal: covalent (delen elektronen). H + O = covalent bindend." },
+      { q: "Welk molecuul is POLAIR?", options: ["H₂O (water)", "O₂", "N₂", "CO₂"], answer: 0, explanation: "Water heeft hoek-vorm + verschil tussen H en O → permanent dipool. Daarom zo'n goed oplosmiddel." },
+    ],
+    4: [
+      { q: "Wat is een ZOUT?", options: ["Verbinding van metaal-ion + zuurrest-ion", "Soort suiker", "Vetzuur", "Eiwit"], answer: 0, explanation: "Zout = ionverbinding. Bv. NaCl = Na⁺ + Cl⁻. Smelt op bij koken in water." },
+      { q: "Wat gebeurt bij OPLOSSEN van zout in water?", options: ["Ionen verspreiden zich tussen watermoleculen", "Niets", "Het zout verdwijnt voor altijd", "Gas ontstaat"], answer: 0, explanation: "Water polair → trekt ionen los uit kristal. Bij indampen vormt kristal weer." },
+    ],
+    5: [
+      { q: "Wat is OOK een naam voor KOOLSTOFCHEMIE?", options: ["Organische chemie", "Anorganische chemie", "Fysiek-chemie", "Bio-chemie alleen"], answer: 0, explanation: "Koolstofverbindingen = organische chemie. Levensbasis (eiwitten, suikers, vetten zijn allemaal koolstof-gebaseerd)." },
+      { q: "Welk is GEEN aardolie-product?", options: ["Water", "Benzine", "Plastic", "Diesel"], answer: 0, explanation: "Aardolie wordt geraffineerd tot brandstoffen (benzine, diesel) en grondstoffen (plastic). Water is geen aardolie-product." },
+    ],
+    6: [
+      { q: "Wat is de pH van een ZUUR?", options: ["Lager dan 7", "Hoger dan 7", "Precies 7", "Maakt niet uit"], answer: 0, explanation: "pH-schaal 0-14. <7 = zuur (citroensap pH 2), 7 = neutraal (water), >7 = base (zeep pH 9)." },
+      { q: "Wat is een voorbeeld van een ZUUR?", options: ["Azijn", "Soda", "Zout", "Water"], answer: 0, explanation: "Azijn (azijnzuur) = pH ~2-3. Soda + zeep = base. Zout = neutraal zout. Water = pH 7." },
+    ],
+    7: [
+      { q: "Wat is een base?", options: ["Stof met pH > 7 die zuren neutraliseert", "Stof met pH < 7", "Een metaal", "Gas"], answer: 0, explanation: "Bases (alkalisch): pH > 7. Bv. NaOH (natriumloog), ammonia. Neutraliseren zuren tot zout + water." },
+      { q: "Bij ZUUR + BASE ontstaat...", options: ["Zout + water", "Niets", "Vuur", "Gas alleen"], answer: 0, explanation: "Neutralisatie: HCl + NaOH → NaCl + H₂O. Klassiek scheikunde-experiment." },
+    ],
+  },
+
   // ── Blink Wereld — wereldoriëntatie (alternatief Naut + Argus Clou) ─
   // Hoofdstukken: 0=Het menselijk lichaam, 1=Planten en dieren,
   // 2=Natuur en duurzaamheid, 3=Klimaat en weer, 4=Aarde en ruimte,
