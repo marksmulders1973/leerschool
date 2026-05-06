@@ -33,13 +33,22 @@ export const MASTERY_LABELS = {
   gold: { label: "Goud", emoji: "🥇", color: "#ffd700" },
 };
 
-// ─── Spaced repetition (P1.10) ──────────────────────────────────────────
-// Leitner-light: bij goed antwoord verlengt het interval, bij fout reset
-// het naar 1 dag. Zo komen onderwerpen periodiek terug zolang ze nog
-// niet zijn vastgezet, en blijven 'goud' onderwerpen lang weg.
+// ─── Spaced repetition (P1.10 + audit 2 M1) ─────────────────────────────
+// Leitner-light met SM-2-style easeFactor (audit 2 didacticus):
+// - Streak bepaalt basis-interval volgens REVIEW_INTERVALS_DAYS
+// - easeFactor (0.5-2.5, default 1.0) schaalt het interval per onderwerp:
+//   bij correct: ease += 0.1 (cap 2.5), bij fout: ease *= 0.85 (floor 0.5)
+// - Bij fout antwoord: interval = vorige_interval × 0.5 (floor 1 dag) ipv
+//   harde reset naar 1 dag — voorkomt dat één tikfout 120 dagen aan
+//   investering wist. Demotiverend voor 10-jarigen.
 //
 // Intervallen in dagen, op basis van streak (aantal opeenvolgende correct).
 const REVIEW_INTERVALS_DAYS = [1, 3, 7, 21, 60, 120];
+const EASE_DEFAULT = 1.0;
+const EASE_MIN = 0.5;
+const EASE_MAX = 2.5;
+const EASE_INCREMENT = 0.1;
+const EASE_DECREMENT_FACTOR = 0.85;
 
 /**
  * Bereken hoeveel dagen tot het onderwerp opnieuw geoefend moet worden,
@@ -54,15 +63,69 @@ export function nextReviewIntervalDays(streak, isCorrect) {
 }
 
 /**
- * Compute new streak waarde + next_due_at op basis van vorige streak en
- * uitkomst. Handig om tests rondom dit onafhankelijk van Supabase te draaien.
+ * Compute new streak waarde + next_due_at + easeFactor op basis van
+ * vorige state en uitkomst. Pure functie zodat tests onafhankelijk
+ * van Supabase draaien.
+ *
+ * @param {object} args
+ * @param {number} args.prevStreak       — voorgaande streak (default 0)
+ * @param {number} args.prevEaseFactor   — voorgaande ease (default 1.0)
+ * @param {number} args.prevIntervalDays — voorgaand interval voor zachte fout-reset (optioneel)
+ * @param {boolean} args.isCorrect       — uitkomst
+ * @param {Date}   args.now              — referentietijd
  */
-export function nextSpacedRepetitionState({ prevStreak = 0, isCorrect, now = new Date() }) {
+export function nextSpacedRepetitionState({
+  prevStreak = 0,
+  prevEaseFactor = EASE_DEFAULT,
+  prevIntervalDays = null,
+  isCorrect,
+  now = new Date(),
+}) {
   const streak = isCorrect ? prevStreak + 1 : 0;
-  const days = nextReviewIntervalDays(streak, isCorrect);
+
+  // EaseFactor update
+  let easeFactor;
+  if (isCorrect) {
+    easeFactor = Math.min(EASE_MAX, prevEaseFactor + EASE_INCREMENT);
+  } else {
+    easeFactor = Math.max(EASE_MIN, prevEaseFactor * EASE_DECREMENT_FACTOR);
+  }
+
+  // Interval-bepaling
+  let days;
+  if (isCorrect) {
+    // Standaard: streak-gebaseerd, geschaald met easeFactor
+    days = Math.max(1, Math.round(nextReviewIntervalDays(streak, true) * easeFactor));
+  } else if (prevIntervalDays && prevIntervalDays > 1) {
+    // Zachte reset: halveer vorige interval ipv terug naar 1 dag
+    days = Math.max(1, Math.round(prevIntervalDays * 0.5));
+  } else {
+    days = REVIEW_INTERVALS_DAYS[0];
+  }
+
   const nextDueAt = new Date(now);
   nextDueAt.setDate(nextDueAt.getDate() + days);
-  return { streak, nextDueAt, intervalDays: days };
+  return { streak, easeFactor, nextDueAt, intervalDays: days };
+}
+
+// Probe: detecteer of de Supabase `topic_mastery`-tabel een `ease_factor`-
+// kolom heeft. Gecached op module-niveau zodat de check maar 1× per sessie
+// wordt gedaan. Werkt graceful: bij ontbrekende kolom blijft de oude pure-
+// Leitner-flow werken; pas wanneer Mark de kolom toevoegt aan Supabase
+// wordt de easeFactor automatisch geschreven en gelezen.
+let _easeColumnSupported = null;
+async function supportsEaseColumn() {
+  if (_easeColumnSupported !== null) return _easeColumnSupported;
+  try {
+    const { error } = await supabase
+      .from("topic_mastery")
+      .select("ease_factor")
+      .limit(1);
+    _easeColumnSupported = !error;
+  } catch {
+    _easeColumnSupported = false;
+  }
+  return _easeColumnSupported;
 }
 
 // Zoek pathId voor een vraag-tekst (uit pre-getagde map).
@@ -95,11 +158,13 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
   const resolvedUserId = userId || (await getCurrentUserId());
 
   try {
-    // Eerst lezen, dan upsert. Niet ideaal qua atomiciteit maar
-    // wel simpel + voldoende voor één-leerling-per-sessie.
+    const easeOk = await supportsEaseColumn();
+    const selectCols = easeOk
+      ? "attempts, correct, streak, ease_factor, interval_days"
+      : "attempts, correct, streak";
     const { data: existing } = await supabase
       .from("topic_mastery")
-      .select("attempts, correct, streak")
+      .select(selectCols)
       .eq("player_name", player)
       .eq("path_id", pathId)
       .maybeSingle();
@@ -108,6 +173,8 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
     const sr = nextSpacedRepetitionState({
       prevStreak: existing?.streak || 0,
+      prevEaseFactor: existing?.ease_factor ?? EASE_DEFAULT,
+      prevIntervalDays: existing?.interval_days ?? null,
       isCorrect,
     });
 
@@ -121,6 +188,10 @@ export async function recordAnswer({ playerName, questionText, isCorrect, userId
       last_seen: new Date().toISOString(),
     };
     if (resolvedUserId) row.user_id = resolvedUserId;
+    if (easeOk) {
+      row.ease_factor = sr.easeFactor;
+      row.interval_days = sr.intervalDays;
+    }
 
     const { error } = await supabase
       .from("topic_mastery")
@@ -146,9 +217,13 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
   const resolvedUserId = userId || (await getCurrentUserId());
 
   try {
+    const easeOk = await supportsEaseColumn();
+    const selectCols = easeOk
+      ? "attempts, correct, streak, ease_factor, interval_days"
+      : "attempts, correct, streak";
     const { data: existing } = await supabase
       .from("topic_mastery")
-      .select("attempts, correct, streak")
+      .select(selectCols)
       .eq("player_name", player)
       .eq("path_id", pathId)
       .maybeSingle();
@@ -157,6 +232,8 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
     const correct = (existing?.correct || 0) + (isCorrect ? 1 : 0);
     const sr = nextSpacedRepetitionState({
       prevStreak: existing?.streak || 0,
+      prevEaseFactor: existing?.ease_factor ?? EASE_DEFAULT,
+      prevIntervalDays: existing?.interval_days ?? null,
       isCorrect,
     });
 
@@ -170,6 +247,10 @@ export async function recordAnswerForPath({ playerName, pathId, isCorrect, userI
       last_seen: new Date().toISOString(),
     };
     if (resolvedUserId) row.user_id = resolvedUserId;
+    if (easeOk) {
+      row.ease_factor = sr.easeFactor;
+      row.interval_days = sr.intervalDays;
+    }
 
     const { error } = await supabase
       .from("topic_mastery")

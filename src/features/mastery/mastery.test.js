@@ -188,10 +188,56 @@ describe("nextSpacedRepetitionState", () => {
     expect(r.nextDueAt.toISOString()).toBe(expected.toISOString());
   });
 
-  it("fout antwoord met hoge streak resets naar 1 dag", () => {
+  it("fout antwoord met hoge streak resets naar 1 dag (zonder prevInterval)", () => {
     const fixed = new Date("2026-04-29T10:00:00Z");
     const r = nextSpacedRepetitionState({ prevStreak: 4, isCorrect: false, now: fixed });
     expect(r.streak).toBe(0);
     expect(r.intervalDays).toBe(1);
+  });
+});
+
+describe("nextSpacedRepetitionState — easeFactor (audit 2 M1)", () => {
+  it("default easeFactor is 1.0 als niet meegegeven", () => {
+    const r = nextSpacedRepetitionState({ isCorrect: true });
+    // prevEase 1.0 + 0.1 = 1.1
+    expect(r.easeFactor).toBeCloseTo(1.1, 5);
+  });
+
+  it("correct antwoord verhoogt easeFactor met +0.1, cap op 2.5", () => {
+    const r1 = nextSpacedRepetitionState({ prevEaseFactor: 1.5, isCorrect: true });
+    expect(r1.easeFactor).toBeCloseTo(1.6, 5);
+    const r2 = nextSpacedRepetitionState({ prevEaseFactor: 2.5, isCorrect: true });
+    expect(r2.easeFactor).toBeCloseTo(2.5, 5); // cap
+    const r3 = nextSpacedRepetitionState({ prevEaseFactor: 2.45, isCorrect: true });
+    expect(r3.easeFactor).toBeCloseTo(2.5, 5); // cap (want 2.45+0.1=2.55 → 2.5)
+  });
+
+  it("fout antwoord verlaagt easeFactor met ×0.85, floor op 0.5", () => {
+    const r1 = nextSpacedRepetitionState({ prevEaseFactor: 1.0, isCorrect: false });
+    expect(r1.easeFactor).toBeCloseTo(0.85, 5);
+    const r2 = nextSpacedRepetitionState({ prevEaseFactor: 0.5, isCorrect: false });
+    expect(r2.easeFactor).toBeCloseTo(0.5, 5); // floor
+    const r3 = nextSpacedRepetitionState({ prevEaseFactor: 0.55, isCorrect: false });
+    expect(r3.easeFactor).toBeCloseTo(0.5, 5); // floor (0.55*0.85=0.4675 → 0.5)
+  });
+
+  it("interval schaalt met easeFactor bij correct antwoord", () => {
+    // prevStreak 0 + correct → nieuwe streak 1 → base interval 3 dagen
+    // ease 2.0 → 3*2 = 6 dagen
+    const r = nextSpacedRepetitionState({ prevStreak: 0, prevEaseFactor: 2.0, isCorrect: true });
+    expect(r.intervalDays).toBe(6);
+  });
+
+  it("zachte fout-reset: bij prevIntervalDays > 1 wordt het gehalveerd ipv terug naar 1", () => {
+    const r = nextSpacedRepetitionState({
+      prevStreak: 4,
+      prevEaseFactor: 1.5,
+      prevIntervalDays: 60,
+      isCorrect: false,
+    });
+    expect(r.streak).toBe(0);
+    expect(r.intervalDays).toBe(30); // 60 * 0.5
+    // ease verlaagd: 1.5 * 0.85 = 1.275
+    expect(r.easeFactor).toBeCloseTo(1.275, 3);
   });
 });
