@@ -805,14 +805,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Basisschool", sub: "groep 1 t/m 8",
+              label: "Ik ben leerling", sub: "basisschool · groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
             },
-            // ⚠️ LOCKED-CONFIG: Student-tegel met brand-foto (Mark akkoord
-            // 2026-05-07). Foto + crop + label/sub zijn definitief — NIET
-            // aanpassen zonder Mark's expliciete vraag. objectPosition "center 25%"
-            // houdt het gezicht + shirtlogo zichtbaar in de vierkante tegel.
+            // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
+            // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
+            // in de vierkante tegel. Label/sub naar first-person op 2026-05-07
+            // (avond) — parallel met Leerling/Leerkracht.
             {
               key: "student",
               icon: (
@@ -831,7 +831,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Student", sub: "vmbo · havo · vwo",
+              label: "Ik ben student", sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
             },
             // Brand-foto voor Leerkracht-tegel (man met bril in klaslokaal,
@@ -855,7 +855,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Leerkracht", sub: "kennistest",
+              label: "Ik ben leerkracht", sub: "kennistest",
               color: "#00897b", onClick: () => handleRoleClick("teacher"),
             },
           ];
