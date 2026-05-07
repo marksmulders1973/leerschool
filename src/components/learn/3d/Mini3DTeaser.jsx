@@ -36,6 +36,10 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
         borderRadius: compact ? 8 : 12,
         padding: compact ? 3 : 6,
         marginBottom: compact ? 4 : 8,
+        // Compact-modus: kubus vult alle resterende verticale ruimte tussen
+        // de tegel-top en de slider+knop onderaan. flex:1 geeft 'em groei,
+        // minHeight:0 voorkomt dat flexbox 'em laat overlopen.
+        ...(compact ? { flex: 1, minHeight: 0, display: "flex", alignItems: "center", justifyContent: "center" } : {}),
       }}>
         <Shape3D
           shape="kubus"
@@ -48,27 +52,51 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
           unitCubeColorBy="layer-y"
         />
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: compact ? 6 : 10, marginBottom: compact ? 2 : 6 }}>
-        <label style={{ fontSize: compact ? 10 : 12, color: "rgba(224,230,240,0.75)", fontWeight: 600, minWidth: compact ? 50 : 70 }}>
-          z: <span style={{ color: "#ffd54f" }}>{z}</span>
-        </label>
-        <input
-          type="range"
-          min={1} max={6} step={1}
-          value={z}
-          onChange={(e) => setZ(Number(e.target.value))}
-          style={{ flex: 1, accentColor: "#ffd54f" }}
-        />
-      </div>
-      <p style={{
-        textAlign: "center",
-        fontSize: compact ? 11 : 13,
-        color: "rgba(224,230,240,0.85)",
-        margin: compact ? "2px 0 4px" : "4px 0 10px",
-        fontFamily: "var(--font-body)",
-      }}>
-        z³ = <strong style={{ color: "#ffd54f", fontSize: compact ? 13 : 15 }}>{z ** 3} cm³</strong>
-      </p>
+      {/* Compact-modus: slider + formule op ÉÉN regel naast elkaar
+          (Mark's wens 2026-05-07) zodat de kubus erboven al de ruimte krijgt
+          en de "Zelf proberen"-knop onderaan blijft. Niet-compact (fullscreen)
+          houdt de oorspronkelijke twee-regelige layout. */}
+      {compact ? (
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+          <span style={{ fontSize: 10, color: "rgba(224,230,240,0.75)", fontWeight: 600, whiteSpace: "nowrap" }}>
+            z: <span style={{ color: "#ffd54f" }}>{z}</span>
+          </span>
+          <input
+            type="range"
+            min={1} max={6} step={1}
+            value={z}
+            onChange={(e) => setZ(Number(e.target.value))}
+            style={{ flex: 1, accentColor: "#ffd54f", minWidth: 0 }}
+          />
+          <span style={{ fontSize: 11, color: "rgba(224,230,240,0.85)", fontFamily: "var(--font-body)", whiteSpace: "nowrap" }}>
+            z³ = <strong style={{ color: "#ffd54f" }}>{z ** 3}</strong>
+          </span>
+        </div>
+      ) : (
+        <>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+            <label style={{ fontSize: 12, color: "rgba(224,230,240,0.75)", fontWeight: 600, minWidth: 70 }}>
+              z: <span style={{ color: "#ffd54f" }}>{z}</span>
+            </label>
+            <input
+              type="range"
+              min={1} max={6} step={1}
+              value={z}
+              onChange={(e) => setZ(Number(e.target.value))}
+              style={{ flex: 1, accentColor: "#ffd54f" }}
+            />
+          </div>
+          <p style={{
+            textAlign: "center",
+            fontSize: 13,
+            color: "rgba(224,230,240,0.85)",
+            margin: "4px 0 10px",
+            fontFamily: "var(--font-body)",
+          }}>
+            z³ = <strong style={{ color: "#ffd54f", fontSize: 15 }}>{z ** 3} cm³</strong>
+          </p>
+        </>
+      )}
       {onCTA && (
         <button
           onClick={onCTA}
@@ -153,7 +181,7 @@ export default function Mini3DTeaser({ onCTA }) {
         >
           ⛶
         </button>
-        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={82} cameraDistanceFactor={1.6} compact />
+        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height="100%" cameraDistanceFactor={1.85} compact />
       </div>
 
       {expanded && (
