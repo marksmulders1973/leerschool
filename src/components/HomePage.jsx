@@ -834,9 +834,27 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               label: "Student", sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
             },
+            // Brand-foto voor Leerkracht-tegel (man met bril in klaslokaal,
+            // schoolbord met sommen + groetjes) — Mark's wens 2026-05-07,
+            // parallel met Basisschool/Student-tegels.
             {
               key: "teacher",
-              icon: <Presentation size={40} strokeWidth={1.75} color="#00897b" aria-hidden="true" />,
+              icon: (
+                <img
+                  src="/model-leerkracht.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center 18%",
+                    borderRadius: 10,
+                    display: "block",
+                  }}
+                />
+              ),
               label: "Leerkracht", sub: "kennistest",
               color: "#00897b", onClick: () => handleRoleClick("teacher"),
             },
