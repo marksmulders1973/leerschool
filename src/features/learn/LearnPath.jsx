@@ -529,10 +529,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 type="button"
                 onClick={() => setShowTutor(true)}
                 style={tutorButtonStyle()}
-                aria-label="Vraag aan de AI-tutor"
+                aria-label="Vraag aan de AI-leerbegeleider"
               >
                 <span style={{ fontSize: 16 }}>💬</span>
-                Vraag aan de tutor
+                Vraag aan de leerbegeleider
               </button>
             </div>
           </>
@@ -593,7 +593,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               onClick={() => setShowTutor(true)}
               style={{ ...btnSecondary(), marginTop: 8 }}
             >
-              💬 Vraag aan de tutor
+              💬 Vraag aan de leerbegeleider
             </button>
             <button onClick={tryAgain} style={{ ...btnPrimary(), marginTop: 8 }}>
               🔁 Probeer opnieuw

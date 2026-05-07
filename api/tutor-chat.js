@@ -29,7 +29,7 @@ function isClean(text) {
 function buildSystemPrompt(ctx = {}) {
   const lines = [];
   lines.push(
-    "Je bent een vriendelijke wiskunde- en taal-tutor voor Leerkwartier, " +
+    "Je bent een vriendelijke wiskunde- en taal-leerbegeleider voor Leerkwartier, " +
       "een Nederlandse leerapp voor leerlingen van 8 tot 18 jaar. " +
       "De leerling werkt nu aan een specifieke uitleg-stap. Help met BEGRIP, " +
       "niet door het antwoord weg te geven."

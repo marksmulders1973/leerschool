@@ -113,7 +113,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   return (
     <div
       role="dialog"
-      aria-label="AI-tutor"
+      aria-label="AI-leerbegeleider"
       style={{
         position: "fixed",
         inset: 0,
@@ -158,7 +158,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             }} />
             <div style={{ minWidth: 0 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
-                AI-tutor
+                AI-leerbegeleider
               </div>
               <div style={{
                 fontSize: 11,
@@ -173,7 +173,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
           </div>
           <button
             onClick={onClose}
-            aria-label="Sluit tutor"
+            aria-label="Sluit leerbegeleider"
             style={{
               background: "transparent",
               border: "1px solid rgba(255,255,255,0.12)",
@@ -238,7 +238,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               color: "rgba(255,255,255,0.55)",
               padding: "6px 12px",
             }}>
-              Tutor denkt na…
+              Leerbegeleider denkt na…
             </div>
           )}
           {error && (
