@@ -787,8 +787,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               key: "leerling",
               // Brand-foto (jongen + meisje met Leerkwartier-shirt) ipv line-icon —
               // Mark's wens 2026-05-07: "menselijke poot" voor de Basisschool-tegel.
-              // objectPosition "center 30%" toont gezichten + shirt-logo in de
-              // beperkte verticale ruimte boven de Cito-CTA-strip.
+              // Bron is vierkant gecropped (600x600, 50 kB) tot gezichten +
+              // shirt-logo bij elkaar; objectFit cover + center is dus voldoende.
               icon: (
                 <img
                   src="/model-leerling.jpg"
@@ -799,7 +799,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    objectPosition: "center 30%",
+                    objectPosition: "center",
                     borderRadius: 10,
                     display: "block",
                   }}
@@ -809,12 +809,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
             },
+            // ⚠️ LOCKED-CONFIG: Student-tegel met brand-foto (Mark akkoord
+            // 2026-05-07). Foto + crop + label/sub zijn definitief — NIET
+            // aanpassen zonder Mark's expliciete vraag. objectPosition "center 25%"
+            // houdt het gezicht + shirtlogo zichtbaar in de vierkante tegel.
             {
               key: "student",
-              // Brand-foto (model met Leerkwartier-shirt) ipv line-icon — Mark
-              // wil deze tile als "menselijke poot" tegenover de gestileerde
-              // Backpack/Presentation-iconen. objectFit cover crop't horizontaal,
-              // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar.
               icon: (
                 <img
                   src="/model-student.jpg"
