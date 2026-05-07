@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy, Suspense, Component } from "react";
-import { Backpack, GraduationCap, Presentation } from "lucide-react";
+import { Backpack, Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
@@ -792,7 +792,26 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             },
             {
               key: "student",
-              icon: <GraduationCap size={40} strokeWidth={1.75} color="#7c3aed" aria-hidden="true" />,
+              // Brand-foto (model met Leerkwartier-shirt) ipv line-icon — Mark
+              // wil deze tile als "menselijke poot" tegenover de gestileerde
+              // Backpack/Presentation-iconen. objectFit cover crop't horizontaal,
+              // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar.
+              icon: (
+                <img
+                  src="/model-student.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center 25%",
+                    borderRadius: 10,
+                    display: "block",
+                  }}
+                />
+              ),
               label: "Student", sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
             },
