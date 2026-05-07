@@ -855,8 +855,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Ik ben leerkracht", sub: "kennistest",
+              label: "Ik ben leerkracht", sub: "toetsen voor uw klas",
               color: "#00897b", onClick: () => handleRoleClick("teacher"),
+              cta: { label: "📝 Toets maken", onClick: () => handleFeatureClick("leerkrachten") },
             },
           ];
           return (
