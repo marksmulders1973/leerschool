@@ -9,6 +9,19 @@
 // alleen ~280px breed is.
 //
 // Lazy-geladen vanuit HomePage.jsx zodat three.js niet in de main-bundle zit.
+//
+// ⚠️ LOCKED-CONFIG (Mark akkoord 2026-05-07, na 7 iteraties).
+// NIET aanpassen zonder expliciete vraag van Mark. De huidige waarden zijn:
+//   - useState(6)               → kubus start op z=6 (max), maximale visuele impact
+//   - height "100%"              → canvas vult resterende ruimte via flex:1
+//   - cameraDistanceFactor 1.85  → kubus vult ~70-75% van tegel
+//   - justifyContent space-between op container → tekst onderaan
+//   - slider + label + formule op ÉÉN regel (compact-mode) → bespaart verticale ruimte
+//   - "Zelf proberen →" knop helemaal onderaan, volledig zichtbaar
+// Eerdere iteraties (height 70/120/140/95/82) en cameraDistanceFactor (4.2/2.8/
+// 2.0/2.4/2.2/1.6) hebben Mark elk gevalideerd als suboptimaal — de huidige
+// waardes zijn het uitkomst-compromis tussen "kubus groot" en "alle elementen
+// passen". Niet wijzigen tenzij hij erom vraagt.
 // ============================================================================
 
 import { useEffect, useState } from "react";
@@ -69,7 +82,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
             style={{ flex: 1, accentColor: "#ffd54f", minWidth: 0 }}
           />
           <span style={{ fontSize: 11, color: "rgba(224,230,240,0.85)", fontFamily: "var(--font-body)", whiteSpace: "nowrap" }}>
-            z³ = <strong style={{ color: "#ffd54f" }}>{z ** 3}</strong>
+            z³ = <strong style={{ color: "#ffd54f" }}>{z ** 3} cm³</strong>
           </span>
         </div>
       ) : (
