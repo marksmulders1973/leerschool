@@ -1109,6 +1109,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bassRiff: [0,0,7,0,0,5,0,3,0,0,7,0,10,8,7,5], bassWortel: 55, schedTimer: null,
       toonsoort: "mineur",
     };
+    // Custom-level biome-forceren: presets kunnen `bioom` (index in BIOMES) zetten
+    // om biome + muziek-tempo + bass-toon vanaf frame 0 vast te zetten. Geen
+    // fade-in flash zoals de gewone level-overgang — start meteen in sfeer.
+    if (customLevelMode && customLevel?.bioom != null) {
+      const idx = Math.min(BIOMES.length - 1, Math.max(0, customLevel.bioom));
+      huidigBioom = idx;
+      nextBioom = idx;
+      bioomFade = 1;
+      muziek.bassWortel = BIOOM_BASSWORTELS[idx] || 55;
+      muziek.bpm = BIOMES[idx]?.bpm || 160;
+      muziek.toonsoort = BIOMES[idx]?.toonsoort || "mineur";
+    }
     function maakNoiseBuffer() {
       if (muziek.noiseBuffer) return muziek.noiseBuffer;
       const a = aud();
@@ -4643,18 +4655,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       if (levelGehaaldFlash > 0) levelGehaaldFlash--;
       // ── BLIKSEM-FLITS update (vanaf L50 OF tijdens boss; frequentie schaalt) ──
+      // Custom-levels met intenseAmbiance forceren bliksem aan op L70-equivalent.
       if (bliksemFlash > 0) bliksemFlash--;
-      const bliksemBronAanwezig = (huidigLevel >= 50 || bossActief) && !bonusFase;
+      const intensCustomNu = customLevelMode && customLevel?.intenseAmbiance;
+      const effLevelVoorIntens = intensCustomNu ? 70 : huidigLevel;
+      const bliksemBronAanwezig = (effLevelVoorIntens >= 50 || bossActief) && !bonusFase;
       if (bliksemBronAanwezig) {
         bliksemTimer--;
         if (bliksemTimer <= 0) {
           // intervallen:
           //   L50 = ~900f (15s) gemiddeld, L100 = ~120f (2s)
           //   BOSS = ~80f (1.3s) — donder ratelt continu
+          //   custom-intense = ~580f (~10s) gemiddeld
           // flash-duur: 8-22 frames
           bliksemFlash = bossActief
             ? 10 + Math.floor(Math.random() * 8)
-            : 8 + Math.min(14, Math.floor((huidigLevel - 50) / 4));
+            : 8 + Math.min(14, Math.floor((effLevelVoorIntens - 50) / 4));
           // genereer zigzag-pad met meerdere takken
           const path = [];
           let x = 60 + Math.random() * (W - 120);
@@ -4666,7 +4682,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             path.push({ x, y });
           }
           bliksemBoltPath = path;
-          shakeKracht = Math.max(shakeKracht, 9 + (huidigLevel - 50) * 0.12);
+          shakeKracht = Math.max(shakeKracht, 9 + (effLevelVoorIntens - 50) * 0.12);
           // donder-stack: meer lagen, luider
           piep(55, 0.65, "triangle", 0.22);
           setTimeout(() => piep(95, 0.45, "triangle", 0.16), 80);
@@ -4702,12 +4718,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           if (bossActief) {
             basis = 80; // BOSS: ~1.3 sec gemiddeld → bijna constant donderen
           } else {
-            basis = Math.max(120, 900 - (huidigLevel - 50) * 16);
+            basis = Math.max(120, 900 - (effLevelVoorIntens - 50) * 16);
           }
           bliksemTimer = Math.floor(basis * (0.5 + Math.random()));
         }
-        // Periodieke vuur-eruptie tussen flashes door (alleen L50+, niet tijdens boss)
-        if (huidigLevel >= 50 && !bossActief && frameTeller % Math.max(20, 90 - (huidigLevel - 50) * 1.2) === 0) {
+        // Periodieke vuur-eruptie tussen flashes door (alleen L50+ of custom-intense, niet tijdens boss)
+        if (effLevelVoorIntens >= 50 && !bossActief && frameTeller % Math.max(20, 90 - (effLevelVoorIntens - 50) * 1.2) === 0) {
           const fx = 40 + Math.random() * (W - 80);
           const fy = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
           spawnParticles(fx, fy, 6, "#ffaa30", { spread: 4, opwaarts: 3, leven: 32, grootte: 4, zwaartekracht: 0.10, glow: 16 });
@@ -7740,7 +7756,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
-            {/* Vaste preset-levels — Skeletal Shenanigans e.a. boven de editor */}
+            {/* Vaste preset-levels — pulserend bloedrood, demon-arena vibe */}
             {PRESET_LEVELS.map((preset) => (
               <button
                 key={preset.id}
@@ -7751,22 +7767,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     obstakels: preset.obstakels,
                     lengte: preset.lengte,
                     maker_naam: preset.maker_naam,
+                    bioom: preset.bioom,
+                    intenseAmbiance: preset.intenseAmbiance,
                   });
                   setFase("spelen");
                 }}
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
+                  padding: "14px 16px",
                   marginBottom: 12,
                   borderRadius: 12,
-                  background: "linear-gradient(135deg, #ff5252, #b71c1c)",
-                  border: "1px solid rgba(255, 138, 80, 0.55)",
+                  background: "radial-gradient(circle at 30% 30%, #ff2030 0%, #8b0000 50%, #2a0000 100%)",
+                  border: "1px solid rgba(255, 80, 60, 0.75)",
                   color: "#fff",
-                  fontFamily: "'Fredoka', sans-serif",
-                  fontSize: 15, fontWeight: 700,
+                  fontFamily: "Impact, 'Arial Black', sans-serif",
+                  fontSize: 16, fontWeight: 800,
                   cursor: "pointer",
-                  boxShadow: "0 4px 18px rgba(220,60,30,0.45)",
-                  letterSpacing: 0.5,
+                  boxShadow: "0 4px 26px rgba(255,40,40,0.55), inset 0 0 22px rgba(140,0,0,0.55)",
+                  letterSpacing: 1.2,
+                  textTransform: "uppercase",
+                  textShadow: "0 0 12px rgba(255,60,40,0.85), 0 2px 4px rgba(0,0,0,0.6)",
+                  animation: "pulse 1.5s ease-in-out infinite",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
@@ -7774,8 +7795,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 }}
               >
                 <span>{preset.naam}</span>
-                <span style={{ fontSize: 11, fontWeight: 600, opacity: 0.9, background: "rgba(0,0,0,0.30)", padding: "3px 8px", borderRadius: 999 }}>
-                  💀 demon
+                <span style={{ fontSize: 11, fontWeight: 800, opacity: 0.95, background: "rgba(0,0,0,0.55)", padding: "4px 10px", borderRadius: 999, letterSpacing: 1.5, border: "1px solid rgba(255,80,60,0.5)" }}>
+                  ☠ DEMON
                 </span>
               </button>
             ))}
