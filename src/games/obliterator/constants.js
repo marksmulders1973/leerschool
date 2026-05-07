@@ -50,13 +50,15 @@ export const DECOR_RENDER = Object.fromEntries(DECOR_CATALOG.map((d) => [d.id, d
 // zodat ze door dezelfde custom-level-runner gespeeld worden.
 export const PRESET_LEVELS = [
   {
-    id: "preset-skeletal-shenanigans",
-    naam: "💀 Skeletal Shenanigans",
+    id: "preset-demon-rit",
+    naam: "🎢 Demon Rit",
     maker_naam: BRAND.name,
     lengte: 12000,
-    // Demon-pacing, skelet/halloween-vibe — geïnspireerd op de gelijknamige
-    // Geometry Dash demon-level (YoReid & Airzyy). Niet 1-op-1, wel dezelfde
-    // dichtheid: spike-clusters, ghost-gauntlets, falling-stones, valkuilen.
+    // Demon-difficulty pacing in Leerkwartier-stijl (cheerful biomes geven
+    // witte spikes + houten kratten — geen skeletten/halloween). Geïnspireerd
+    // op de Geometry Dash demon-level "Skeletal Shenanigans" qua dichtheid,
+    // niet qua thema. Combinaties: spike-clusters, plafond-pinches, valkuilen,
+    // zwevende mijnen, vallende stenen, bliksem.
     obstakels: [
       // 1 — Warming up
       { type: "spike", x: 600 },
@@ -64,7 +66,7 @@ export const PRESET_LEVELS = [
       { type: "spike", x: 1000 },
       { type: "spike", x: 1100 },
       { type: "ring", x: 1300 },
-      // 2 — Skelet lopen
+      // 2 — Opbouw
       { type: "spike", x: 1600 },
       { type: "spike", x: 1700 },
       { type: "plafondstekel", x: 1900 },
@@ -75,18 +77,19 @@ export const PRESET_LEVELS = [
       { type: "spike", x: 2700 },
       { type: "spike", x: 2780 },
       { type: "ring", x: 2900 },
-      // 3 — Spook gauntlet
-      { type: "spookje", x: 3050 },
+      // 3 — Mijnenveld
+      { type: "mijn", x: 3050, y: 200 },
       { type: "spike", x: 3200 },
-      { type: "spookje", x: 3400, y: 180 },
-      { type: "spookje", x: 3500, y: 280 },
+      { type: "mijn", x: 3400, y: 180 },
+      { type: "vallende_steen", x: 3500 },
       { type: "ring", x: 3650 },
-      { type: "patrouille", x: 3800 },
+      { type: "spike", x: 3800 },
+      { type: "plafondstekel", x: 3850 },
       { type: "blok", x: 4000 },
       { type: "plafondstekel", x: 4150 },
       { type: "spike", x: 4250 },
       { type: "hart", x: 4400 },
-      // 4 — Botten-regen
+      // 4 — Stenen-regen
       { type: "schild", x: 4500 },
       { type: "vallende_steen", x: 4700 },
       { type: "spike", x: 4850 },
@@ -108,7 +111,7 @@ export const PRESET_LEVELS = [
       { type: "valkuil", x: 6900 },
       { type: "spike", x: 7100 },
       { type: "schans", x: 7250 },
-      { type: "spookje", x: 7400 },
+      { type: "mijn", x: 7400, y: 200 },
       { type: "spike", x: 7550 },
       { type: "blok", x: 7700 },
       { type: "plafondstekel", x: 7850 },
@@ -116,7 +119,7 @@ export const PRESET_LEVELS = [
       { type: "valkuil", x: 8100 },
       { type: "ring", x: 8300 },
       { type: "spike", x: 8400 },
-      // 6 — Bone storm
+      // 6 — Storm
       { type: "magneet", x: 8550 },
       { type: "spike", x: 8650 },
       { type: "spike", x: 8730 },
@@ -124,16 +127,16 @@ export const PRESET_LEVELS = [
       { type: "ring", x: 8850 },
       { type: "ring", x: 8900 },
       { type: "plafondstekel", x: 9000 },
-      { type: "spookje", x: 9100, y: 240 },
+      { type: "vallende_steen", x: 9100 },
       { type: "blok", x: 9250 },
       { type: "spike", x: 9400 },
       { type: "spike", x: 9480 },
-      { type: "patrouille", x: 9650 },
+      { type: "bliksem", x: 9650, y: 200 },
       { type: "ring", x: 9800 },
       { type: "plafondstekel", x: 9900 },
       { type: "spike", x: 10000 },
       { type: "blok", x: 10150 },
-      { type: "spookje", x: 10300 },
+      { type: "mijn", x: 10300, y: 200 },
       // 7 — Final sprint
       { type: "bom", x: 10500 },
       { type: "spike", x: 10700 },
@@ -141,7 +144,7 @@ export const PRESET_LEVELS = [
       { type: "plafondstekel", x: 10900 },
       { type: "spike", x: 11000 },
       { type: "blok", x: 11150 },
-      { type: "spookje", x: 11300 },
+      { type: "mijn", x: 11300, y: 200 },
       { type: "spike", x: 11450 },
       { type: "valkuil", x: 11600 },
       { type: "ring", x: 11800 },
