@@ -4798,9 +4798,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             hitTotale();
             if (!spelLoopt) return;
           }
-        } else if (!speler.springt && hillsActief()) {
+        } else if (!speler.springt && hillsActief() && (grondYNu - yVorig) < 60 * SCHAAL) {
           // Speler op de grond maar hill daalt vooruit — pull-down naar nieuwe
-          // vloer-y zodat 'ie meerolt ipv te zweven boven dalen.
+          // vloer-y zodat 'ie meerolt ipv te zweven boven dalen. De 60-px
+          // drempel voorkomt dat een speler die van een platform valt (gap
+          // ~162 px) in één frame naar de grond wordt geteleporteerd — die
+          // moet via zwaartekracht omlaag.
           speler.y = grondYNu;
           speler.snelheidY = 0;
           speler.rotatie = Math.atan(vloerSlope(playerWX)) * 0.7;
