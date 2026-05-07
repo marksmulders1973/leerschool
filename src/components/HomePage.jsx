@@ -770,9 +770,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             Na rolkeuze verschijnen Leren + Test vanzelf in de bottom-nav. */}
         {step === "role" && (() => {
           const tiles = [
-            // Leerling: bezorgde-Cito-ouder ICP. Extra CTA onderaan rolt direct
-            // naar /cito als shortcut — ouder die specifiek voor Cito komt
-            // hoeft niet eerst rol → vakkenkeuze → cito te klikken.
+            // ⚠️ LOCKED-CONFIG: Cito-CTA onder Leerling-tegel (Mark akkoord
+            // 2026-05-07). Rationale: bezorgde-Cito-ouder ICP — ouder die
+            // specifiek voor Cito komt klikt direct naar /cito ipv via rol →
+            // vakkenkeuze → cito. NIET aanpassen aan deze CTA-config zonder
+            // Mark's expliciete vraag (label, kleur via gradient #ff6b35→#ff8c42,
+            // onClick → handleFeatureClick("cito")).
+            // Het rugzakje + label + sub HIERONDER mogen wel verbeterd worden.
             {
               key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
