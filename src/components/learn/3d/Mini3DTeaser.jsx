@@ -95,7 +95,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
 }
 
 export default function Mini3DTeaser({ onCTA }) {
-  const [z, setZ] = useState(4);
+  const [z, setZ] = useState(6);
   const [expanded, setExpanded] = useState(false);
 
   // ESC sluit overlay; lock body-scroll terwijl open
@@ -124,7 +124,7 @@ export default function Mini3DTeaser({ onCTA }) {
         boxShadow: "0 4px 20px rgba(255,213,79,0.10)",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         position: "relative",
       }}>
         <button
@@ -153,7 +153,7 @@ export default function Mini3DTeaser({ onCTA }) {
         >
           ⛶
         </button>
-        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={78} cameraDistanceFactor={2.4} compact />
+        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={95} cameraDistanceFactor={1.85} compact />
       </div>
 
       {expanded && (
