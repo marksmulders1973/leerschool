@@ -153,7 +153,7 @@ export default function Mini3DTeaser({ onCTA }) {
         >
           ⛶
         </button>
-        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={95} cameraDistanceFactor={1.85} compact />
+        <TeaserBody z={z} setZ={setZ} onCTA={onCTA} height={82} cameraDistanceFactor={1.6} compact />
       </div>
 
       {expanded && (
