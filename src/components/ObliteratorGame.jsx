@@ -13,6 +13,7 @@ import {
   DECOR_RENDER,
   SKINS,
   SKIN_BY_ID,
+  PRESET_LEVELS,
 } from "../games/obliterator/constants.js";
 import {
   leesInt,
@@ -7739,6 +7740,46 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 </p>
               </div>
             )}
+            {/* Vaste preset-levels — Skeletal Shenanigans e.a. boven de editor */}
+            {PRESET_LEVELS.map((preset) => (
+              <button
+                key={preset.id}
+                onClick={() => {
+                  setActiefCustomLevel({
+                    id: preset.id,
+                    naam: preset.naam,
+                    obstakels: preset.obstakels,
+                    lengte: preset.lengte,
+                    maker_naam: preset.maker_naam,
+                  });
+                  setFase("spelen");
+                }}
+                style={{
+                  width: "100%",
+                  padding: "12px 14px",
+                  marginBottom: 12,
+                  borderRadius: 12,
+                  background: "linear-gradient(135deg, #6a1b9a, #311b6e)",
+                  border: "1px solid rgba(192, 96, 255, 0.55)",
+                  color: "#fff",
+                  fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 15, fontWeight: 700,
+                  cursor: "pointer",
+                  boxShadow: "0 4px 18px rgba(120,60,200,0.45)",
+                  letterSpacing: 0.5,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 8,
+                }}
+              >
+                <span>{preset.naam}</span>
+                <span style={{ fontSize: 11, fontWeight: 600, opacity: 0.9, background: "rgba(0,0,0,0.30)", padding: "3px 8px", borderRadius: 999 }}>
+                  💀 demon
+                </span>
+              </button>
+            ))}
+
             {/* Custom Levels-tegel — opent de editor */}
             <button
               onClick={() => {
