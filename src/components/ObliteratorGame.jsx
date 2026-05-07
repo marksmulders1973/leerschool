@@ -425,9 +425,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Ingelogd: max(record_level)+1 uit obliterator_levels.
   // Anoniem: max(level) uit obliterator_scores op naam (mag weer starten op hoogste level dat hij bereikte).
   const maxVrijgespeeld = Math.max(1, Math.max(...Object.keys(levelRecords).map(k => parseInt(k, 10) + 1), 1));
-  const maxKiesbaar = heeftLogin
-    ? Math.min(MAX_LEVEL_UI, maxVrijgespeeld)
-    : Math.min(MAX_LEVEL_UI, anonMaxLevel);
+  // Admins (Brian e.a.) krijgen alle levels meteen — net als skins.
+  const maxKiesbaar = isObliterAdmin
+    ? MAX_LEVEL_UI
+    : heeftLogin
+      ? Math.min(MAX_LEVEL_UI, maxVrijgespeeld)
+      : Math.min(MAX_LEVEL_UI, anonMaxLevel);
   useEffect(() => {
     if (!authUser?.id) { setLevelRecords({}); return; }
     supabase.from("obliterator_levels")
