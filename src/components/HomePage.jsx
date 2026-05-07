@@ -799,7 +799,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    objectPosition: "center",
+                    objectPosition: "center 22%",
                     borderRadius: 10,
                     display: "block",
                   }}
