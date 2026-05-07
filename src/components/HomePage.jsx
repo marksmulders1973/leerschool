@@ -787,11 +787,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               key: "leerling",
               // Brand-foto (jongen + meisje met Leerkwartier-shirt) ipv line-icon —
               // Mark's wens 2026-05-07: "menselijke poot" voor de Basisschool-tegel.
-              // Bron is vierkant gecropped (600x600, 50 kB) tot gezichten +
-              // shirt-logo bij elkaar; objectFit cover + center is dus voldoende.
+              // Vervangen 2026-05-07 (avond): nieuwe brand-foto in klaslokaal-setting.
+              // objectFit cover + center crop houdt gezichten + shirt-logo zichtbaar.
               icon: (
                 <img
-                  src="/model-leerling.jpg"
+                  src="/model-leerling.png"
                   alt=""
                   aria-hidden="true"
                   loading="lazy"
