@@ -1,5 +1,5 @@
 import { useState, useEffect, lazy, Suspense, Component } from "react";
-import { Backpack, Presentation } from "lucide-react";
+import { Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
@@ -785,7 +785,26 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             //   - sub fontSize 10→11, opacity 0.55→0.7 (leesbaarheid)
             {
               key: "leerling",
-              icon: <Backpack size={36} strokeWidth={1.75} color="#0072ff" aria-hidden="true" />,
+              // Brand-foto (jongen + meisje met Leerkwartier-shirt) ipv line-icon —
+              // Mark's wens 2026-05-07: "menselijke poot" voor de Basisschool-tegel.
+              // objectPosition "center 30%" toont gezichten + shirt-logo in de
+              // beperkte verticale ruimte boven de Cito-CTA-strip.
+              icon: (
+                <img
+                  src="/model-leerling.jpg"
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center 30%",
+                    borderRadius: 10,
+                    display: "block",
+                  }}
+                />
+              ),
               label: "Basisschool", sub: "groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
