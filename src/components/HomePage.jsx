@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense, Component } from "react";
+import { Backpack, GraduationCap, Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
@@ -776,14 +777,31 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             // vakkenkeuze → cito. NIET aanpassen aan deze CTA-config zonder
             // Mark's expliciete vraag (label, kleur via gradient #ff6b35→#ff8c42,
             // onClick → handleFeatureClick("cito")).
-            // Het rugzakje + label + sub HIERONDER mogen wel verbeterd worden.
+            //
+            // Iconen + copy upgrade 2026-05-07 (4-agents review, optie B):
+            //   - Lucide line-icons ipv emoji's (OS-onafhankelijk, brand-consistent)
+            //   - "Leerling" → "Basisschool" (parallel met "Student / vmbo · havo · vwo")
+            //   - "groep 1–8" → "groep 1 t/m 8" (geen en-dash-ambiguïteit)
+            //   - sub fontSize 10→11, opacity 0.55→0.7 (leesbaarheid)
             {
-              key: "leerling", emoji: "🎒", label: "Leerling", sub: "groep 1–8",
+              key: "leerling",
+              icon: <Backpack size={36} strokeWidth={1.75} color="#0072ff" aria-hidden="true" />,
+              label: "Basisschool", sub: "groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
             },
-            { key: "student",  emoji: "🎓", label: "Student",  sub: "vmbo · havo · vwo",  color: "#7c3aed", onClick: () => handleRoleClick("student") },
-            { key: "teacher",  emoji: "📋", label: "Leerkracht", sub: "kennistest", color: "#00897b", onClick: () => handleRoleClick("teacher") },
+            {
+              key: "student",
+              icon: <GraduationCap size={40} strokeWidth={1.75} color="#7c3aed" aria-hidden="true" />,
+              label: "Student", sub: "vmbo · havo · vwo",
+              color: "#7c3aed", onClick: () => handleRoleClick("student"),
+            },
+            {
+              key: "teacher",
+              icon: <Presentation size={40} strokeWidth={1.75} color="#00897b" aria-hidden="true" />,
+              label: "Leerkracht", sub: "kennistest",
+              color: "#00897b", onClick: () => handleRoleClick("teacher"),
+            },
           ];
           return (
             <>
@@ -840,7 +858,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         <span style={{ fontSize: cta ? 26 : 30, lineHeight: 1 }}>{emoji}</span>
                       )}
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.55)" }}>{sub}</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.7)" }}>{sub}</div>
                     </>
                   );
                   if (cta) {
