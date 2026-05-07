@@ -17,7 +17,7 @@
 //   - cameraDistanceFactor 1.85  → kubus vult ~70-75% van tegel
 //   - justifyContent space-between op container → tekst onderaan
 //   - slider + label + formule op ÉÉN regel (compact-mode) → bespaart verticale ruimte
-//   - "Zelf proberen →" knop helemaal onderaan, volledig zichtbaar
+//   - "Verder met kubussen →" knop helemaal onderaan, volledig zichtbaar
 // Eerdere iteraties (height 70/120/140/95/82) en cameraDistanceFactor (4.2/2.8/
 // 2.0/2.4/2.2/1.6) hebben Mark elk gevalideerd als suboptimaal — de huidige
 // waardes zijn het uitkomst-compromis tussen "kubus groot" en "alle elementen
@@ -67,7 +67,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
       </div>
       {/* Compact-modus: slider + formule op ÉÉN regel naast elkaar
           (Mark's wens 2026-05-07) zodat de kubus erboven al de ruimte krijgt
-          en de "Zelf proberen"-knop onderaan blijft. Niet-compact (fullscreen)
+          en de CTA-knop onderaan blijft. Niet-compact (fullscreen)
           houdt de oorspronkelijke twee-regelige layout. */}
       {compact ? (
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
@@ -128,7 +128,7 @@ function TeaserBody({ z, setZ, onCTA, height, cameraDistanceFactor, compact = fa
             whiteSpace: "nowrap",
           }}
         >
-          {compact ? "Zelf proberen →" : "Probeer dit zelf in een leerpad →"}
+          Verder met kubussen →
         </button>
       )}
     </>

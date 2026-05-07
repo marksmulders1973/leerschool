@@ -882,11 +882,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       </div>
                     }>
                       <Mini3DTeaser onCTA={() => {
-                        // CTA op 3D-tegel → naar Leren-overzicht (alle paden),
-                        // niet direct naar Ruimtemeetkunde. Gebruiker kiest
-                        // zelf welk pad 'ie aanklikt.
-                        if (onLearnPathsHub) onLearnPathsHub();
-                        else if (onPickPath) onPickPath("ruimtemeetkunde");
+                        // CTA op 3D-tegel → direct het Ruimtemeetkunde-pad
+                        // openen. Bezoeker heeft net met de kubus gespeeld;
+                        // doorsturen naar het algemene vak-grid breekt die
+                        // context. Wie alle vakken wil zien klikt op de
+                        // Leren-tab in de bottom-nav.
+                        if (onPickPath) onPickPath("ruimtemeetkunde");
+                        else if (onLearnPathsHub) onLearnPathsHub();
                       }} />
                     </Suspense>
                   </TeaserErrorBoundary>
