@@ -2,6 +2,8 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Header from "./Header.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import MdInline from "../shared/ui/MdInline.jsx";
+import { shuffleOptions } from "../shared/shuffleOptions.js";
+import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -31,12 +33,6 @@ const PIJLER_COLOR = {
   studievaardigheden: "#e040fb",
 };
 
-function formatTime(secs) {
-  const m = Math.floor(secs / 60);
-  const s = secs % 60;
-  return `${m}:${String(s).padStart(2, "0")}`;
-}
-
 export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
@@ -65,20 +61,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
 
   const start = () => {
     const qs = sampleCitoMix(config.count);
-    // Schud opties per vraag zodat antwoord 0 niet altijd correct is.
-    const shuffled = qs.map((q) => {
-      const order = q.options.map((_, i) => i);
-      for (let i = order.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [order[i], order[j]] = [order[j], order[i]];
-      }
-      return {
-        ...q,
-        options: order.map((i) => q.options[i]),
-        answer: order.indexOf(q.answer),
-        wrongHints: order.map((i) => q.wrongHints?.[i] ?? null),
-      };
-    });
+    // Shuffle opties per vraag zodat antwoord 0 niet altijd correct is.
+    const shuffled = qs.map((q) => shuffleOptions(q));
     setQuestions(shuffled);
     setAnswers(new Array(shuffled.length).fill(null));
     setIdx(0);
@@ -499,7 +483,5 @@ function pillStyle(active) {
   };
 }
 function scoreColor(pct) {
-  if (pct >= 80) return C.good;
-  if (pct >= 60) return C.warm;
-  return C.bad;
+  return fmtScoreColor(pct, { good: C.good, warm: C.warm, bad: C.bad });
 }

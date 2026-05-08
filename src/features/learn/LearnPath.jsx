@@ -14,6 +14,7 @@ import {
   pathWrongMap as adaptPathWrongMap,
 } from "../../shared/adaptiveStore.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
+import { shuffleOptions } from "../../shared/shuffleOptions.js";
 
 const C = {
   bg: "#0f1729",
@@ -254,19 +255,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // pathId+stepIdx+checkIdx), reshuffle bij volgende check of stap.
   const currentCheck = useMemo(() => {
     if (!rawCheck) return null;
-    const opts = rawCheck.options || [];
-    const hints = rawCheck.wrongHints || [];
-    const order = opts.map((_, i) => i);
-    for (let i = order.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [order[i], order[j]] = [order[j], order[i]];
-    }
-    return {
-      ...rawCheck,
-      options: order.map((idx) => opts[idx]),
-      answer: order.indexOf(rawCheck.answer),
-      wrongHints: order.map((idx) => hints[idx] ?? null),
-    };
+    return shuffleOptions(rawCheck);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId, stepIdx, checkIdx, rawCheck]);
 
