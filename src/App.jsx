@@ -65,7 +65,7 @@ const Curriculum = lazy(() => import("./features/learn/Curriculum.jsx"));
 const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
-import { ALL_LEARN_PATHS } from "./learnPaths/index.js";
+import { ALL_LEARN_PATHS, levelsCompatible } from "./learnPaths/index.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 import {
@@ -770,9 +770,18 @@ export default function App() {
         const cat = allCats.find((c) => c.id === meeBezigCategory) || { id: meeBezigCategory, label: meeBezigCategory, icon: "📚" };
         const fromQuiz = learnPathReturnPage === "play" && gameState;
         const relatedSubjects = categoryToLearnSubjects(meeBezigCategory);
-        const relatedCount = relatedSubjects.length > 0
-          ? Object.values(ALL_LEARN_PATHS).filter((p) => relatedSubjects.includes(p.subject)).length
-          : 0;
+        // Niveau-filter (audit-3 vervolg op M1): voor een groep-4 leerling
+        // moeten we niet alle 23 wiskunde-paden voorstellen — die zijn meestal
+        // klas1-vwo. Filter op niveau-bucket compatibel met quiz-niveau OF
+        // gebruikersprofiel-niveau.
+        const meeBezigLevel = (fromQuiz ? gameState?.quiz?.level : null) || userLevel;
+        const relatedPaths = relatedSubjects.length > 0
+          ? Object.values(ALL_LEARN_PATHS).filter((p) =>
+              relatedSubjects.includes(p.subject)
+              && (!meeBezigLevel || levelsCompatible(meeBezigLevel, p.level))
+            )
+          : [];
+        const relatedCount = relatedPaths.length;
         const relatedLabel = relatedSubjects.length > 0
           ? relatedSubjects.map((s) => SUBJECT_LABELS_FOR_HUB[s] || s).join(" + ")
           : null;
