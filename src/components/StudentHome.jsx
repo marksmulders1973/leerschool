@@ -20,6 +20,22 @@ const VAKKEN_PO = [
   { id: "geschiedenis" },
   { id: "aardrijkskunde" },
 ];
+
+// PO-vakken die op Cito-eindtoets / doorstroomtoets voorkomen — krijgen
+// een derde knop "Cito oefenen" naast Leren + Oefenen. Mark UX-keuze
+// 2026-05-08: cirkel-rond per onderdeel + ICP-prominentie.
+const CITO_VAKKEN_PO = new Set(["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur"]);
+
+// Vak-id → Cito-pijler voor sampleCitoMix subjectFilter.
+// Spelling/begrijpend-lezen zitten in pijler "taal", natuur in
+// "studievaardigheden" (zie shared/citoMixVragen.js).
+const VAK_TO_CITO_PIJLER = {
+  "rekenen": "rekenen",
+  "taal": "taal",
+  "spelling": "taal",
+  "begrijpend-lezen": "taal",
+  "natuur": "studievaardigheden",
+};
 const VAKKEN_VO = [
   { id: "wiskunde" },
   { id: "nederlands" },
@@ -33,7 +49,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   const [vakModus, setVakModus] = useState(userSchoolType ? "vo" : "po");
@@ -226,59 +242,97 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                     {label}
                   </div>
                 </div>
-                <div style={{ display: "flex", gap: 6 }}>
-                  <button
-                    disabled={!heeftPaden || !onPickPathsForSubject}
-                    onClick={() => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id); } }}
-                    style={{
-                      flex: 1,
-                      padding: "7px 6px",
-                      borderRadius: 8,
-                      border: "none",
-                      background: heeftPaden ? "rgba(0,200,83,0.18)" : "rgba(255,255,255,0.04)",
-                      color: heeftPaden ? "#00e676" : "rgba(255,255,255,0.35)",
-                      fontFamily: "var(--font-display)",
-                      fontSize: 11,
-                      fontWeight: 700,
-                      cursor: heeftPaden ? "pointer" : "default",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: 1,
-                      lineHeight: 1.2,
-                    }}
-                  >
-                    <span>📚 Leren</span>
-                    <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 10, opacity: 0.85 }}>
-                      {heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "binnenkort"}
-                    </span>
-                  </button>
-                  <button
-                    onClick={() => { SoundEngine.play("click"); onTextbook && onTextbook(vak.id); }}
-                    style={{
-                      flex: 1,
-                      padding: "7px 6px",
-                      borderRadius: 8,
-                      border: "none",
-                      background: "rgba(255,107,53,0.15)",
-                      color: "#ff8c42",
-                      fontFamily: "var(--font-display)",
-                      fontSize: 11,
-                      fontWeight: 700,
-                      cursor: "pointer",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      gap: 1,
-                      lineHeight: 1.2,
-                    }}
-                  >
-                    <span>🎯 Oefenen</span>
-                    <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 10, opacity: 0.85 }}>
-                      uit je boek
-                    </span>
-                  </button>
-                </div>
+                {(() => {
+                  // Bouw acties-lijst voor deze tegel.
+                  const isCitoVak = vakModus === "po" && CITO_VAKKEN_PO.has(vak.id);
+                  const acties = [
+                    {
+                      key: "leren",
+                      enabled: heeftPaden && !!onPickPathsForSubject,
+                      label: "📚 Leren",
+                      sub: heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "binnenkort",
+                      onClick: () => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id); } },
+                      colorOn: "#00e676",
+                      bgOn: "rgba(0,200,83,0.18)",
+                      bgPrimary: "rgba(0,200,83,0.30)",
+                    },
+                    {
+                      key: "oefenen",
+                      enabled: !!onTextbook,
+                      label: "🎯 Oefenen",
+                      sub: "uit je boek",
+                      onClick: () => { SoundEngine.play("click"); onTextbook && onTextbook(vak.id); },
+                      colorOn: "#ff8c42",
+                      bgOn: "rgba(255,107,53,0.15)",
+                      bgPrimary: "rgba(255,107,53,0.28)",
+                    },
+                  ];
+                  if (isCitoVak && onCitoOefenenSubject) {
+                    acties.push({
+                      key: "cito",
+                      enabled: true,
+                      label: "🎯 Cito",
+                      sub: "echte stijl",
+                      onClick: () => {
+                        SoundEngine.play("click");
+                        onCitoOefenenSubject(VAK_TO_CITO_PIJLER[vak.id], label);
+                      },
+                      colorOn: "#ffd54f",
+                      bgOn: "rgba(255,213,79,0.15)",
+                      bgPrimary: "rgba(255,213,79,0.30)",
+                    });
+                  }
+                  // Volgorde-logica obv entryContext (Mark UX 2026-05-08):
+                  // de actie waarmee de gebruiker binnenkwam komt bovenaan
+                  // (krijgt 'primair' kleur). Cirkel-rond UX.
+                  const orderMap = {
+                    cito: ["cito", "leren", "oefenen"],
+                    leren: ["leren", "oefenen", "cito"],
+                    oefenen: ["oefenen", "leren", "cito"],
+                  };
+                  const order = orderMap[entryContext] || ["leren", "oefenen", "cito"];
+                  const sorted = [...acties].sort((a, b) => order.indexOf(a.key) - order.indexOf(b.key));
+                  const primary = sorted[0]?.key;
+                  return (
+                    <div style={{ display: "flex", gap: 6 }}>
+                      {sorted.map((a) => {
+                        const isPrimary = a.key === primary;
+                        return (
+                          <button
+                            key={a.key}
+                            disabled={!a.enabled}
+                            onClick={a.onClick}
+                            style={{
+                              flex: 1,
+                              padding: "7px 4px",
+                              borderRadius: 8,
+                              border: isPrimary ? `1px solid ${a.colorOn}` : "none",
+                              background: !a.enabled
+                                ? "rgba(255,255,255,0.04)"
+                                : isPrimary ? a.bgPrimary : a.bgOn,
+                              color: a.enabled ? a.colorOn : "rgba(255,255,255,0.35)",
+                              fontFamily: "var(--font-display)",
+                              fontSize: 11,
+                              fontWeight: 700,
+                              cursor: a.enabled ? "pointer" : "default",
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              gap: 1,
+                              lineHeight: 1.2,
+                              opacity: a.enabled ? 1 : 0.6,
+                            }}
+                          >
+                            <span>{a.label}</span>
+                            <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 9, opacity: 0.85 }}>
+                              {a.sub}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  );
+                })()}
               </div>
             );
           })}

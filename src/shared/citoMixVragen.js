@@ -102,9 +102,19 @@ function annotateWithWrongHistory(checks) {
 // adaptive (default true): tot 30% van de sample krijgt voorrang aan vragen
 // die eerder fout zijn gegaan (uit adaptiveStore). Resterende ~70% volgt de
 // normale pijler-mix. Geeft een spaced-rep-achtig effect zonder DB-werk.
+//
+// opts.subjectFilter: indien gezet ("rekenen" / "taal" / "studievaardigheden"
+// of een array daarvan) wordt de pool beperkt tot die pijler(s) — gebruikt
+// voor vak-specifieke Cito-oefen-knop op StudentHome.
 export function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
   const adaptive = opts.adaptive !== false;
-  const all = gatherPoChecks();
+  let all = gatherPoChecks();
+  if (opts.subjectFilter) {
+    const allowed = new Set(
+      Array.isArray(opts.subjectFilter) ? opts.subjectFilter : [opts.subjectFilter]
+    );
+    all = all.filter((v) => allowed.has(v.subject));
+  }
   const ratios = mix || { rekenen: 0.5, taal: 0.35, studievaardigheden: 0.15 };
   const targetN = Math.max(1, Math.floor(count));
 

@@ -33,7 +33,7 @@ const PIJLER_COLOR = {
   studievaardigheden: "#e040fb",
 };
 
-export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
+export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFilter, subjectLabel }) {
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
   const [config, setConfig] = useState({ count: 15, minutes: 15 });
@@ -60,7 +60,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
   }, [mode]);
 
   const start = () => {
-    const qs = sampleCitoMix(config.count);
+    const qs = sampleCitoMix(config.count, null, Math.random, { subjectFilter });
     // Shuffle opties per vraag zodat antwoord 0 niet altijd correct is.
     const shuffled = qs.map((q) => shuffleOptions(q));
     setQuestions(shuffled);
@@ -100,7 +100,12 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
   if (mode === "intro") {
     return (
       <div style={pageStyle()}>
-        <Header title="Oefen-Cito 🎯" subtitle={`${config.count} vragen uit Leerkwartier-paden`} onBack={onBack} onHome={onHome} />
+        <Header
+          title={subjectFilter ? `Cito ${subjectLabel || subjectFilter} 🎯` : "Oefen-Cito 🎯"}
+          subtitle={`${config.count} vragen uit Leerkwartier-paden`}
+          onBack={onBack}
+          onHome={onHome}
+        />
         <div style={{ padding: "16px 18px 32px", color: C.text }}>
           <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 18 }}>
             Een echte oefen-toets met vragen uit de leerpaden die je hier op Leerkwartier hebt gedaan.

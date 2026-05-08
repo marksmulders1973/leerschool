@@ -193,6 +193,15 @@ export default function App() {
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);
+  // Mark UX-keuze (2026-05-08): vak-tegels op StudentHome krijgen 3 acties
+  // (Leren / Oefenen / Cito oefenen) voor Cito-relevante vakken; volgorde
+  // afhankelijk van entryContext zodat de actie waarmee je binnen kwam
+  // bovenaan komt. "Cirkel rond"-UX.
+  const [entryContext, setEntryContext] = useState(null); // null | "leren" | "oefenen" | "cito"
+  // Vak-filter voor de Cito-oefen-toets (wanneer leerling klikt op "Cito
+  // oefenen" op een vak-tegel). Pijler-id zoals "rekenen"/"taal".
+  const [citoToetsSubject, setCitoToetsSubject] = useState(null);
+  const [citoToetsSubjectLabel, setCitoToetsSubjectLabel] = useState(null);
   // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
   // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
@@ -939,7 +948,7 @@ export default function App() {
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
-          onLearnPathsHub={() => setPage("learn-paths-hub")}
+          onLearnPathsHub={() => { setEntryContext("leren"); setPage("learn-paths-hub"); }}
           onMyMastery={() => setPage("my-mastery")}
           onPickPath={(id) => {
             // P1.6: vanaf homepage mastery-CTA direct naar leerpad-stap.
@@ -956,7 +965,7 @@ export default function App() {
             if (feature === "schoolboeken") { setPage("textbook"); return; }
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
-            if (feature === "cito") { setPage("cito"); return; }
+            if (feature === "cito") { setEntryContext("cito"); setPage("cito"); return; }
             if (feature === "tafels") { setPage("tafels"); return; }
             if (feature === "redactiesommen") { setPage("redactiesommen"); return; }
             if (feature === "begrijpend-lezen") { setPage("begrijpend-lezen"); return; }
@@ -1142,6 +1151,12 @@ export default function App() {
           }}
           streak={streak}
           pendingCode={pendingCode}
+          entryContext={entryContext}
+          onCitoOefenenSubject={(subjectId, label) => {
+            setCitoToetsSubject(subjectId);
+            setCitoToetsSubjectLabel(label);
+            setPage("cito-leerpad-toets");
+          }}
         />
       )}
       {page === "self-study" && (
@@ -1170,12 +1185,23 @@ export default function App() {
       )}
       {page === "cito-leerpad-toets" && (
         <CitoLeerpadToets
-          onBack={() => setPage("cito")}
-          onHome={() => setPage("home")}
+          subjectFilter={citoToetsSubject}
+          subjectLabel={citoToetsSubjectLabel}
+          onBack={() => {
+            setCitoToetsSubject(null);
+            setCitoToetsSubjectLabel(null);
+            // Terug naar entry-page (cito-hub of student-home)
+            setPage(citoToetsSubject ? "student-home" : "cito");
+          }}
+          onHome={() => {
+            setCitoToetsSubject(null);
+            setCitoToetsSubjectLabel(null);
+            setPage("home");
+          }}
           onPickPath={(id, stepIdx) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
-            setLearnPathReturnPage("cito");
+            setLearnPathReturnPage(citoToetsSubject ? "student-home" : "cito");
             setPage("learn-path");
           }}
         />

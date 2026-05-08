@@ -75,6 +75,18 @@ describe("sampleCitoMix", () => {
     expect(fromWrong.length).toBe(3);
   });
 
+  it("subjectFilter beperkt pool tot één pijler", () => {
+    const sample = sampleCitoMix(15, null, Math.random, { subjectFilter: "rekenen", adaptive: false });
+    expect(sample.length).toBe(15);
+    expect(sample.every((v) => v.subject === "rekenen")).toBe(true);
+  });
+
+  it("subjectFilter accepteert array van pijlers", () => {
+    const sample = sampleCitoMix(15, null, Math.random, { subjectFilter: ["taal", "studievaardigheden"], adaptive: false });
+    expect(sample.length).toBe(15);
+    expect(sample.every((v) => ["taal", "studievaardigheden"].includes(v.subject))).toBe(true);
+  });
+
   it("adaptive mode kan worden uitgeschakeld via opts", () => {
     recordWrong("procenten-po", 0, 0);
     recordWrong("procenten-po", 0, 1);
