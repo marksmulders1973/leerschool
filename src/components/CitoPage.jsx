@@ -395,101 +395,164 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               })}
             </div>
 
-            {/* Leerpaden bij geselecteerd onderdeel — meerdere paden mogelijk
-                (audit-2 v2: begrijpend-lezen heeft strategie + oefenteksten). */}
-            {selected?.leerpaden && onPickPath && (
-              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 2 }}>
-                  Beschikbare leerpaden
+            {/* Hint zodra geen onderdeel gekozen is */}
+            {!selected && (
+              <div style={{
+                padding: "16px 18px",
+                background: "rgba(255,255,255,0.03)",
+                border: "1px dashed rgba(255,255,255,0.12)",
+                borderRadius: 14,
+                textAlign: "center",
+                color: "rgba(255,255,255,0.5)",
+                fontFamily: "var(--font-body)",
+                fontSize: 13,
+                lineHeight: 1.5,
+              }}>
+                👆 Tik een onderdeel hierboven aan — dan zie je per onderdeel<br/>
+                <strong style={{ color: "#fbbf24" }}>📚 leren</strong> en <strong style={{ color: "#ff8c42" }}>🎯 oefenen</strong>.
+              </div>
+            )}
+
+            {/* ── 📚 LEREN-blok ─────────────────────────────────────
+                Alleen wanneer onderdeel geselecteerd én leerpaden beschikbaar.
+                Audit-2 v2 + Mark's UX-feedback (2026-05-08): consistente
+                leren↔oefenen-splitsing zoals in StudentHome. */}
+            {selected && (selected.leerpaden || selected.leerpadId) && onPickPath && (
+              <div style={{
+                padding: "14px 16px",
+                borderRadius: 16,
+                background: "linear-gradient(135deg, rgba(245,158,11,0.10), rgba(245,158,11,0.04))",
+                border: "1px solid rgba(245,158,11,0.3)",
+              }}>
+                <div style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: 13, fontWeight: 700,
+                  color: "#fbbf24",
+                  textTransform: "uppercase",
+                  letterSpacing: 0.8,
+                  marginBottom: 4,
+                  display: "flex", alignItems: "center", gap: 8,
+                }}>
+                  <span style={{ fontSize: 16 }}>📚</span> Leren — Kies een leerpad
                 </div>
-                {selected.leerpaden.map((p, idx) => (
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginBottom: 10, fontFamily: "var(--font-body)" }}>
+                  Eerst de stof oppakken voor je gaat oefenen.
+                </div>
+
+                {selected.leerpaden && (
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    {selected.leerpaden.map((p, idx) => (
+                      <button
+                        key={p.id}
+                        onClick={() => { SoundEngine.play("click"); onPickPath(p.id); }}
+                        style={{
+                          borderRadius: 10,
+                          border: idx === 0 ? "2px solid rgba(245,158,11,0.55)" : "1px solid rgba(245,158,11,0.25)",
+                          background: idx === 0 ? "rgba(245,158,11,0.14)" : "rgba(245,158,11,0.04)",
+                          padding: "10px 12px",
+                          cursor: "pointer",
+                          fontFamily: "var(--font-body)",
+                          fontSize: 13,
+                          color: "#fbbf24",
+                          textAlign: "left",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          gap: 10,
+                        }}
+                      >
+                        <span style={{ fontWeight: idx === 0 ? 700 : 500 }}>{p.label}</span>
+                        <span style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{p.dur} ›</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Backwards-compat: single leerpadId */}
+                {selected.leerpadId && !selected.leerpaden && (
                   <button
-                    key={p.id}
-                    onClick={() => { SoundEngine.play("click"); onPickPath(p.id); }}
+                    onClick={() => { SoundEngine.play("click"); onPickPath(selected.leerpadId); }}
                     style={{
-                      borderRadius: 12,
-                      border: idx === 0 ? "2px solid rgba(245,158,11,0.5)" : "1px dashed rgba(245,158,11,0.35)",
-                      background: idx === 0 ? "rgba(245,158,11,0.12)" : "rgba(245,158,11,0.05)",
-                      padding: "11px 14px",
+                      width: "100%",
+                      borderRadius: 10,
+                      border: "1px solid rgba(245,158,11,0.35)",
+                      background: "rgba(245,158,11,0.08)",
+                      padding: "10px 12px",
                       cursor: "pointer",
                       fontFamily: "var(--font-body)",
                       fontSize: 13,
                       color: "#fbbf24",
                       textAlign: "left",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
-                      gap: 10,
                     }}
                   >
-                    <span style={{ fontWeight: idx === 0 ? 700 : 500 }}>{p.label}</span>
-                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{p.dur} ›</span>
+                    Open leerpad ›
                   </button>
-                ))}
+                )}
               </div>
             )}
-            {/* Backwards-compat: andere onderdelen kunnen nog `leerpadId` gebruiken. */}
-            {selected?.leerpadId && !selected?.leerpaden && onPickPath && (
-              <button
-                onClick={() => { SoundEngine.play("click"); onPickPath(selected.leerpadId); }}
-                style={{
-                  borderRadius: 12,
-                  border: "1px dashed rgba(245,158,11,0.4)",
-                  background: "rgba(245,158,11,0.07)",
-                  padding: "10px 14px",
-                  cursor: "pointer",
-                  fontFamily: "var(--font-body)",
-                  fontSize: 12,
-                  color: "#fbbf24",
-                  textAlign: "left",
-                }}
-              >
-                💡 Tip: leer eerst de <strong>aanpak</strong> via het leerpad
-              </button>
+
+            {/* ── 🎯 OEFENEN-blok ─────────────────────────────────── */}
+            {selected && (
+              <div style={{
+                padding: "14px 16px",
+                borderRadius: 16,
+                background: "linear-gradient(135deg, rgba(255,107,53,0.12), rgba(255,107,53,0.04))",
+                border: "1px solid rgba(255,107,53,0.35)",
+              }}>
+                <div style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: 13, fontWeight: 700,
+                  color: "#ff8c42",
+                  textTransform: "uppercase",
+                  letterSpacing: 0.8,
+                  marginBottom: 4,
+                  display: "flex", alignItems: "center", gap: 8,
+                }}>
+                  <span style={{ fontSize: 16 }}>🎯</span> Oefenen — Test je kennis
+                </div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginBottom: 10, fontFamily: "var(--font-body)" }}>
+                  Cito-stijl meerkeuzevragen voor {selected.label.toLowerCase()}.
+                </div>
+
+                <div style={{ marginBottom: 10 }}>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", fontWeight: 700, marginBottom: 6 }}>
+                    Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span>
+                  </div>
+                  <div style={{ display: "flex", gap: 6 }}>
+                    {[5, 10, 15, 20].map(n => (
+                      <button key={n} onClick={() => setQuestionCount(n)} style={{
+                        flex: 1,
+                        padding: "8px 0", borderRadius: 10, cursor: "pointer",
+                        border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
+                        background: questionCount === n ? "rgba(255,107,53,0.18)" : "rgba(255,255,255,0.04)",
+                        color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)",
+                        fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
+                      }}>
+                        {n}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleStart}
+                  style={{
+                    width: "100%", padding: "14px", borderRadius: 12, border: "none",
+                    background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
+                    color: "var(--color-text-strong)",
+                    fontFamily: "var(--font-display)",
+                    fontSize: 16, fontWeight: 700, cursor: "pointer",
+                    boxShadow: "0 4px 16px rgba(255,107,53,0.35)",
+                  }}
+                >
+                  🚀 Start {questionCount} vragen
+                </button>
+
+                <div style={{ marginTop: 8, fontSize: 11, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-body)", lineHeight: 1.4, textAlign: "center" }}>
+                  Voor de 50-vragen-simulatie met countdown: ga terug en kies <strong style={{ color: "#ff6b35" }}>Stap 3</strong>.
+                </div>
+              </div>
             )}
-
-            {/* Aantal vragen — alleen als geen 50, want simulatie zit in Stap 3 */}
-            <div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700, marginBottom: 8 }}>
-                Aantal vragen: <span style={{ color: "var(--color-text-strong)" }}>{questionCount}</span>
-              </div>
-              <div style={{ display: "flex", gap: 6 }}>
-                {[5, 10, 15, 20].map(n => (
-                  <button key={n} onClick={() => setQuestionCount(n)} style={{
-                    flex: 1,
-                    padding: "8px 0", borderRadius: 10, cursor: "pointer",
-                    border: questionCount === n ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
-                    background: questionCount === n ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
-                    color: questionCount === n ? "#ff6b35" : "rgba(255,255,255,0.55)",
-                    fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
-                  }}>
-                    {n}
-                  </button>
-                ))}
-              </div>
-              <div style={{ marginTop: 6, fontSize: 11, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-body)", lineHeight: 1.4 }}>
-                Voor de echte 50-vragen-simulatie met countdown: ga terug naar het hoofdscherm en kies <strong style={{ color: "#ff6b35" }}>Stap 3</strong>.
-              </div>
-            </div>
-
-            {/* Start knop */}
-            <button
-              onClick={handleStart}
-              disabled={!selected}
-              style={{
-                width: "100%", padding: "16px", borderRadius: 16, border: "none",
-                background: selected
-                  ? "linear-gradient(135deg, #ff6b35, #ff8c42)"
-                  : "rgba(255,255,255,0.08)",
-                color: selected ? "var(--color-text-strong)" : "rgba(255,255,255,0.3)",
-                fontFamily: "var(--font-display)",
-                fontSize: 18, fontWeight: 700, cursor: selected ? "pointer" : "default",
-                boxShadow: selected ? "0 4px 20px rgba(255,107,53,0.4)" : "none",
-                transition: "all 0.2s ease",
-              }}
-            >
-              {selected ? `🚀 Start ${selected.label}` : "Kies een onderdeel om te starten"}
-            </button>
           </>
         )}
 
