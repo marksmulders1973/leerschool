@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL, TEACHER_TOPIC_SUGGESTIONS, EIGEN_TOPIC_SUGGESTIONS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
@@ -357,6 +357,28 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const totalSteps = (eigenMode || tafelMode) ? 3 : 4;
   // eigenMode/tafelMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
   const displayStep = (eigenMode || tafelMode) && step === 4 ? 3 : step;
+
+  // Auto-titel op basis van gekozen onderwerp/tafel/vak — leerkracht kan altijd overschrijven.
+  const suggestedTitle = useMemo(() => {
+    if (tafelMode) {
+      if (selectedTafel === "mix") return "Alle tafels mix";
+      if (selectedTafel > 0) return `Tafel van ${selectedTafel}`;
+      return "";
+    }
+    if (eigenMode) return topic.trim();
+    if (topic.trim()) return topic.trim();
+    if (subject) return SUBJECTS.find((s) => s.id === subject)?.label || "";
+    return "";
+  }, [tafelMode, selectedTafel, eigenMode, topic, subject]);
+
+  const lastAutoTitleRef = useRef("");
+  useEffect(() => {
+    // Vul automatisch in als veld leeg is óf nog gelijk is aan onze vorige auto-suggestie
+    if (title === "" || title === lastAutoTitleRef.current) {
+      setTitle(suggestedTitle);
+      lastAutoTitleRef.current = suggestedTitle;
+    }
+  }, [suggestedTitle]);
 
   const fetchTopicPreview = async () => {
     if (!topic.trim()) return;
