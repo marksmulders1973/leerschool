@@ -1455,6 +1455,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       ctx.restore();
+      // Parallax-wolken in cheerful biomes (Mario/Flappy Bird-vibe).
+      // Volgt cheerfulMix zodat ze smooth in/uit-faden bij biome-overgang.
+      if (cheerful > 0.05) {
+        ctx.save();
+        ctx.globalAlpha = 0.85 * cheerful;
+        ctx.fillStyle = "#ffffff";
+        ctx.strokeStyle = "rgba(60,80,100,0.35)";
+        ctx.lineWidth = 1.5;
+        const wolkScale = SCHAAL;
+        const wolkenOff = (frameTeller * 0.6) % (320 * wolkScale);
+        const wolkPunten = [
+          { x: 40 * wolkScale,  y: H * 0.16, r: 22 * wolkScale },
+          { x: 180 * wolkScale, y: H * 0.10, r: 28 * wolkScale },
+          { x: 380 * wolkScale, y: H * 0.20, r: 24 * wolkScale },
+          { x: 560 * wolkScale, y: H * 0.13, r: 30 * wolkScale },
+        ];
+        const cyc = 320 * wolkScale;
+        for (let lap = -1; lap < Math.ceil(W / cyc) + 1; lap++) {
+          for (const wp of wolkPunten) {
+            const cx = wp.x + lap * cyc - wolkenOff;
+            if (cx < -80 * wolkScale || cx > W + 80 * wolkScale) continue;
+            ctx.beginPath();
+            ctx.arc(cx, wp.y, wp.r, 0, Math.PI * 2);
+            ctx.arc(cx + wp.r * 0.7, wp.y - wp.r * 0.2, wp.r * 0.85, 0, Math.PI * 2);
+            ctx.arc(cx + wp.r * 1.4, wp.y, wp.r * 0.9, 0, Math.PI * 2);
+            ctx.arc(cx + wp.r * 0.6, wp.y + wp.r * 0.2, wp.r * 0.8, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+          }
+        }
+        ctx.restore();
+      }
     }
     function tekenLichtbundels() {
       ctx.save();
@@ -2321,15 +2353,41 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       let type = 0;
       if (score > 2 && r < 0.30) type = 1;
       else if (score > 6 && r < 0.50) type = 2;
+      // L1 showcase: alle 3 types vanaf score 0 zodat speler alle variatie ziet
+      if (huidigLevel === 1 && !dungeonMode) {
+        const r2 = Math.random();
+        if (r2 < 0.40) type = 2;       // 40% lange/normale blokken
+        else if (r2 < 0.65) type = 1;  // 25% dubbele spike
+        else type = 0;                  // 35% enkele spike
+      }
       // Tijdens dungeon-modus: geen spikes (water op de vloer maakt ze
       // onzichtbaar). In plaats daarvan altijd block-type + haaien als
       // hazard.
       if (dungeonMode) type = 2;
-      const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : 30 * SCHAAL;
+      // L1 showcase: blokken krijgen variabele breedte zodat speler echt
+      // moet jumpen. Lengtes [60,90,120,160] = van klein hupje tot lange sprong.
+      let blokBreedte = 30 * SCHAAL;
+      if (type === 2 && huidigLevel === 1) {
+        const lengtes = [60, 90, 120, 160];
+        blokBreedte = lengtes[Math.floor(Math.random() * lengtes.length)] * SCHAAL;
+      }
+      const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : blokBreedte;
       const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
       const wx = worldScrollX + W;
       const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
       obstakels.push({ type, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
+      // L1 showcase: tunnel-combo — blok op grond + plafondstekel boven, speler
+      // moet er tussendoor (niet eroverheen). 35% kans bij blok-spawn.
+      if (
+        type === 2 && huidigLevel === 1 && Math.random() < 0.35
+        && !dungeonMode && !hellMode && !customLevelMode && !bossActief
+      ) {
+        plafondStekels.push({
+          x: W + blokBreedte * 0.35,
+          breedte: 26 * SCHAAL,
+          hoogte: 30 * SCHAAL,
+        });
+      }
     }
     function tekenObstakel(o) {
       if (o.render === "meteor") {
@@ -4659,17 +4717,22 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (bliksemFlash > 0) bliksemFlash--;
       const intensCustomNu = customLevelMode && customLevel?.intenseAmbiance;
       const effLevelVoorIntens = intensCustomNu ? 70 : huidigLevel;
-      const bliksemBronAanwezig = (effLevelVoorIntens >= 50 || bossActief) && !bonusFase;
+      // L1 ambient: zachte sfeer-bliksem (zeldzaam, korte flash, geen lava-erupties).
+      const lichtAmbient = huidigLevel === 1 && !bossActief && !customLevelMode;
+      const bliksemBronAanwezig = (effLevelVoorIntens >= 50 || bossActief || lichtAmbient) && !bonusFase;
       if (bliksemBronAanwezig) {
         bliksemTimer--;
         if (bliksemTimer <= 0) {
           // intervallen:
+          //   L1 ambient = ~1200f (20s) — zeldzame sfeer-flits
           //   L50 = ~900f (15s) gemiddeld, L100 = ~120f (2s)
           //   BOSS = ~80f (1.3s) — donder ratelt continu
           //   custom-intense = ~580f (~10s) gemiddeld
-          // flash-duur: 8-22 frames
+          // flash-duur: 6-22 frames
           bliksemFlash = bossActief
             ? 10 + Math.floor(Math.random() * 8)
+            : lichtAmbient
+            ? 6 + Math.floor(Math.random() * 4)
             : 8 + Math.min(14, Math.floor((effLevelVoorIntens - 50) / 4));
           // genereer zigzag-pad met meerdere takken
           const path = [];
@@ -4682,21 +4745,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             path.push({ x, y });
           }
           bliksemBoltPath = path;
-          shakeKracht = Math.max(shakeKracht, 9 + (effLevelVoorIntens - 50) * 0.12);
-          // donder-stack: meer lagen, luider
-          piep(55, 0.65, "triangle", 0.22);
-          setTimeout(() => piep(95, 0.45, "triangle", 0.16), 80);
-          setTimeout(() => piep(40, 0.85, "sine", 0.20), 180);
-          setTimeout(() => piep(75, 0.50, "triangle", 0.14), 320);
-          setTimeout(() => piep(38, 0.45, "sine", 0.13), 480);
-          // vuur-burst op random plek op de grond — visuele klap
-          const fireX = 60 + Math.random() * (W - 120);
-          const fireY = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
-          spawnParticles(fireX, fireY, 22, "#ffaa30", { spread: 9, opwaarts: 5, leven: 50, grootte: 6, zwaartekracht: 0.10, glow: 22 });
-          spawnParticles(fireX, fireY, 14, "#ff5020", { spread: 7, opwaarts: 4, leven: 42, grootte: 5, zwaartekracht: 0.08, glow: 20 });
-          spawnParticles(fireX, fireY, 8, "#fff080", { spread: 5, opwaarts: 3.5, leven: 30, grootte: 4, zwaartekracht: 0.06, glow: 18 });
-          // 40% kans op een double-flash 6-12 frames later
-          if (Math.random() < 0.40) {
+          shakeKracht = Math.max(shakeKracht, lichtAmbient ? 3 : 9 + (effLevelVoorIntens - 50) * 0.12);
+          // donder-stack: meer lagen, luider. L1 ambient = ~50% volume, geen vuur-burst.
+          const dV = lichtAmbient ? 0.5 : 1;
+          piep(55, 0.65, "triangle", 0.22 * dV);
+          setTimeout(() => piep(95, 0.45, "triangle", 0.16 * dV), 80);
+          setTimeout(() => piep(40, 0.85, "sine", 0.20 * dV), 180);
+          setTimeout(() => piep(75, 0.50, "triangle", 0.14 * dV), 320);
+          setTimeout(() => piep(38, 0.45, "sine", 0.13 * dV), 480);
+          if (!lichtAmbient) {
+            // vuur-burst op random plek op de grond — visuele klap (skip op L1 gras)
+            const fireX = 60 + Math.random() * (W - 120);
+            const fireY = GROND_Y + SPELER_GROOTTE - 4 * SCHAAL;
+            spawnParticles(fireX, fireY, 22, "#ffaa30", { spread: 9, opwaarts: 5, leven: 50, grootte: 6, zwaartekracht: 0.10, glow: 22 });
+            spawnParticles(fireX, fireY, 14, "#ff5020", { spread: 7, opwaarts: 4, leven: 42, grootte: 5, zwaartekracht: 0.08, glow: 20 });
+            spawnParticles(fireX, fireY, 8, "#fff080", { spread: 5, opwaarts: 3.5, leven: 30, grootte: 4, zwaartekracht: 0.06, glow: 18 });
+          }
+          // 40% kans op double-flash (15% op L1 ambient — zachter ritme)
+          if (Math.random() < (lichtAmbient ? 0.15 : 0.40)) {
             setTimeout(() => {
               bliksemFlash = Math.max(bliksemFlash, 8);
               const path2 = [];
@@ -4717,6 +4783,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           let basis;
           if (bossActief) {
             basis = 80; // BOSS: ~1.3 sec gemiddeld → bijna constant donderen
+          } else if (lichtAmbient) {
+            basis = 1200; // L1 ambient: ~20 sec gemiddeld → zeldzame sfeer-flits
           } else {
             basis = Math.max(120, 900 - (effLevelVoorIntens - 50) * 16);
           }
@@ -5559,7 +5627,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       if (!bonusFase) plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode) && !dungeonMode && !hellMode && !bonusFase && !customLevelMode) {
+      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode || huidigLevel === 1) && !dungeonMode && !hellMode && !bonusFase && !customLevelMode) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -5601,7 +5669,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!bonusFase) zwevendeMineSpawnTeller--;
       if (
         zwevendeMineSpawnTeller <= 0
-        && (score >= 5 || oblivionMode)
+        && (score >= 5 || oblivionMode || huidigLevel === 1)
         && !dungeonMode
         && !hellMode
         && !bonusFase
