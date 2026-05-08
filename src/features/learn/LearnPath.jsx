@@ -13,6 +13,7 @@ import {
   buildCheckOrder as adaptBuildOrder,
   pathWrongMap as adaptPathWrongMap,
 } from "../../shared/adaptiveStore.js";
+import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 
 const C = {
   bg: "#0f1729",
@@ -144,7 +145,7 @@ function SvgFigure({ svg }) {
         padding: 14,
         margin: "16px 0",
       }}
-      dangerouslySetInnerHTML={{ __html: sized }}
+      dangerouslySetInnerHTML={{ __html: sanitizeSvg(sized) }}
     />
   );
 }
@@ -923,7 +924,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   >
                     <div
                       style={{ height: "100%", display: "flex", alignItems: "center" }}
-                      dangerouslySetInnerHTML={{ __html: sizedSvg }}
+                      dangerouslySetInnerHTML={{ __html: sanitizeSvg(sizedSvg) }}
                     />
                   </div>
                 );

@@ -7,6 +7,7 @@ import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
+import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
@@ -443,7 +444,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           <div
             style={{ display: "flex", justifyContent: "center", alignItems: "center", marginBottom: 20, marginTop: 16, padding: 16, background: "#162033", borderRadius: 14, minHeight: 220 }}
             dangerouslySetInnerHTML={{
-              __html: question.svg.replace(
+              __html: sanitizeSvg(question.svg.replace(
                 /<svg\b([^>]*)>/i,
                 (m, attrs) => {
                   const cleaned = attrs
@@ -451,7 +452,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                     .replace(/\sstyle=("[^"]*"|'[^']*')/gi, "");
                   return `<svg${cleaned} style="width:100%;max-width:460px;height:auto;display:block;">`;
                 }
-              )
+              ))
             }}
           />
         )}

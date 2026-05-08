@@ -146,6 +146,44 @@
   --bottom-nav-height:  64px;
 }
 
+/* WCAG 2.4.7 — Focus visible globally.
+   Audit-2 v2 (2026-05-08): a11y-agent identificeerde dat veel inputs/buttons
+   `outline: none` hebben zonder vervanger. Deze global :focus-visible-rule
+   geeft elk interactief element een zichtbare focus-ring tijdens toetsenbord-
+   navigatie, zonder muisklik-flits. */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip-to-content link — alleen zichtbaar tijdens keyboard-tab.
+   Verplaatst de focus naar <main id="main-content"> voor screen-readers
+   en toetsenbord-gebruikers die de header-navigatie willen overslaan. */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 10000;
+  padding: 12px 18px;
+  background: var(--color-brand-primary);
+  color: var(--color-text-strong);
+  font-family: var(--font-display, sans-serif);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+}
+
 /* Reduced-motion: respecteer system-preference (G3b sprint-3 2026-05-08).
    Inline-style animation-properties van React-componenten worden óók
    gedeactiveerd via !important — anders blijven pulse/slideUp/wrongShake

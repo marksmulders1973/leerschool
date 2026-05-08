@@ -702,6 +702,12 @@ export default function App() {
     >
       <style>{fonts}</style>
 
+      {/* WCAG 2.4.1: skip-link voor toetsenbord-/screenreader-gebruikers
+          (audit-2 v2 a11y-agent). Verschijnt alleen tijdens Tab-focus. */}
+      <a href="#main-content" className="skip-link">
+        Spring naar hoofdinhoud
+      </a>
+
       {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}
       <UpdateBanner />
 
@@ -728,7 +734,9 @@ export default function App() {
       {/* Suspense voor lazy-loaded pages (P1.4 — bundle splitsen).
           PageLoader is een subtiele dunne balk bovenaan; eerder gebruikten
           we LoadingOverlay (fullscreen zwart) wat eruitzag als crash bij
-          elke korte chunk-fetch. */}
+          elke korte chunk-fetch.
+          <main> + tabIndex=-1 voor skip-link landing (a11y-audit). */}
+      <main id="main-content" tabIndex={-1} style={{ outline: "none" }}>
       <Suspense fallback={<PageLoader />}>
       {page === "learn-path" && activeLearnPathId && (
         <LearnPath
@@ -1510,6 +1518,7 @@ export default function App() {
       · © Smulsoft
     </footer>
     </Suspense>
+    </main>
     {BOTTOMNAV_PAGES.has(page) && (
       <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} />
     )}
