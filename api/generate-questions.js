@@ -1,3 +1,5 @@
+import { guardRequest } from './_guard.js';
+
 export const config = { runtime: 'edge', maxDuration: 60 };
 
 const json = (data, status = 200) => new Response(JSON.stringify(data), {
@@ -9,6 +11,9 @@ export default async function handler(req) {
   if (req.method !== 'POST') {
     return json({ error: 'Method not allowed' }, 405);
   }
+
+  const blocked = guardRequest(req);
+  if (blocked) return blocked;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
