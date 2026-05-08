@@ -8,6 +8,10 @@ import { ALL_LEARN_PATHS } from "./index.js";
 
 // Categorie-id (TextbookQuiz) → leerpad-subject (zoals in pad-files)
 const CATEGORY_TO_LEARN_SUBJECT = {
+  // PO-rekenen → wiskunde-paden (groep 4-8 valt hieronder; zonder deze
+  // mapping leverde "Leg uit" op een groep-4 rekensom een ongerelateerd
+  // leerpad op via toevallige keyword-match, bv. Verhoudingen).
+  rekenen: "wiskunde",
   wiskunde: "wiskunde",
   "wiskunde-a": "wiskunde",
   "wiskunde-b": "wiskunde",
