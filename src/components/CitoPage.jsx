@@ -33,6 +33,14 @@ const ONDERDELEN = [
     border: "rgba(0,200,83,0.25)",
     subject: "rekenen",
     topic: "Cito eindtoets rekenen en wiskunde groep 7-8: breuken, decimalen, meten, verbanden, meetkunde",
+    leerpaden: [
+      { id: "redactiesommen-pad", label: "🧮 Redactiesommen — Cito-stijl", dur: "~15 min" },
+      { id: "procenten-po", label: "% Procenten", dur: "~12 min" },
+      { id: "breuken-po", label: "🍕 Breuken", dur: "~12 min" },
+      { id: "verhoudingen-po", label: "⚖️ Verhoudingen", dur: "~12 min" },
+      { id: "maten-eenheden", label: "📏 Maten & eenheden", dur: "~15 min" },
+      { id: "cijferend-rekenen", label: "✏️ Cijferend rekenen", dur: "~12 min" },
+    ],
   },
   {
     id: "taal",
@@ -44,6 +52,12 @@ const ONDERDELEN = [
     border: "rgba(0,176,255,0.25)",
     subject: "taal",
     topic: "Cito eindtoets taal groep 7-8: spelling, werkwoorden, grammatica, woordenschat",
+    leerpaden: [
+      { id: "werkwoord-tijden-po", label: "🕐 Werkwoord-tijden", dur: "~12 min" },
+      { id: "spelling-overige-po", label: "✒️ Spelling — leestekens & samenstellingen", dur: "~12 min" },
+      { id: "woordsoorten-po", label: "🔤 Woordsoorten herkennen", dur: "~12 min" },
+      { id: "woordenschat-po", label: "📚 Woordenschat", dur: "~12 min" },
+    ],
   },
   {
     id: "begrijpend-lezen",
@@ -73,6 +87,11 @@ const ONDERDELEN = [
     border: "rgba(43,189,126,0.25)",
     subject: "aardrijkskunde",
     topic: "Cito eindtoets wereld oriëntatie groep 7-8: aardrijkskunde, geschiedenis, natuur & techniek",
+    leerpaden: [
+      { id: "topografie-nederland", label: "🇳🇱 Topografie Nederland", dur: "~15 min" },
+      { id: "sterren-planeten", label: "🪐 Zonnestelsel & planeten", dur: "~12 min" },
+      { id: "dieren-seizoenen-natuur", label: "🌿 Dieren & seizoenen", dur: "~15 min" },
+    ],
   },
   {
     id: "studievaardigheden",
@@ -84,6 +103,12 @@ const ONDERDELEN = [
     border: "rgba(224,64,251,0.25)",
     subject: "studievaardigheden",
     topic: "Cito eindtoets studievaardigheden groep 7-8: tabellen lezen, grafieken interpreteren, tijdlijnen, kaarten",
+    leerpaden: [
+      { id: "samenvatten-hoofdgedachte-po", label: "💭 Samenvatten & hoofdgedachte", dur: "~12 min" },
+      { id: "kaartlezen-po", label: "🗺️ Kaartlezen — kompas, schaal, legenda", dur: "~12 min" },
+      { id: "schemas-stappenplannen-po", label: "📋 Schema's & stappenplannen", dur: "~12 min" },
+      { id: "tabellen-grafieken", label: "📊 Tabellen & grafieken", dur: "~12 min" },
+    ],
   },
 ];
 
