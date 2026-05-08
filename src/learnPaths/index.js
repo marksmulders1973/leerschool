@@ -16,6 +16,10 @@ import breuken from "./breuken.js";
 import klokkijken from "./klokkijken.js";
 import matenEenheden from "./matenEenheden.js";
 import procentenPo from "./procentenPo.js";
+import verhoudingenPo from "./verhoudingenPo.js";
+import breukenPo from "./breukenPo.js";
+import cijferendRekenen from "./cijferendRekenen.js";
+import tabellenGrafieken from "./tabellenGrafieken.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -75,7 +79,11 @@ export const ALL_LEARN_PATHS = {
   breuken,
   klokkijken,
   "maten-eenheden": matenEenheden,
+  "cijferend-rekenen": cijferendRekenen,
+  "tabellen-grafieken": tabellenGrafieken,
   "procenten-po": procentenPo,
+  "verhoudingen-po": verhoudingenPo,
+  "breuken-po": breukenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
