@@ -8401,7 +8401,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             width={canvasW}
             height={canvasH}
             role="img"
-            aria-label={`OBLITERATOR-spel — score ${score}, ${levens} ${levens === 1 ? "leven" : "levens"}, level ${eindLevelRef.current || 1}. Tik of druk op spatie om te springen.`}
+            aria-label="OBLITERATOR mini-game — Geometry Dash-stijl. Tik op het scherm of druk op de spatiebalk om te springen. Vermijd stekels en blokken."
             tabIndex={0}
             style={{ display: "block", borderRadius: 8, touchAction: "none", width: canvasW, height: canvasH, background: "#0a0a0e" }}
           />
