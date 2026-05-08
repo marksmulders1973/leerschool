@@ -180,9 +180,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "16 = f(4) = 4² (de y-waarde, niet de helling).",
-          "4 is de x-waarde. De helling in dat punt is f'(4) = 2·4 = 8.",
-          "12 is geen logische berekening hier.",
+          "Dat is f(4) — de y-waarde — niet de helling.",
+          "Dat is alleen de x-waarde. Vul x = 4 in de afgeleide-formule in.",
+          "Geen logische uitkomst — schrijf eerst f'(x) op, dan x = 4 invullen.",
         ],
       },
     ],

@@ -281,9 +281,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "6x² = 2·3·x² (verkeerde berekening). Het grondtal 3 wordt ook gekwadrateerd.",
-          "3x² zou 3 · x² zijn (geen haakjes om de 3). Maar (3x)² heeft haakjes.",
-          "Vergeet de macht op de x niet — die wordt ook gekwadrateerd.",
+          "Niet vermenigvuldigen met 2 — bij (3x)² wordt zowel de 3 als de x gekwadrateerd.",
+          "De haakjes zorgen ervoor dat ALLES binnen de haakjes het kwadraat krijgt — niet alleen de x.",
+          "Vergeet niet dat de macht óp ALLES in de haakjes werkt, dus ook op de 3.",
         ],
       },
     ],

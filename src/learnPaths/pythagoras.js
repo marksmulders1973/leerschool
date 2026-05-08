@@ -303,9 +303,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 6 + 8 gedaan. Maar Pythagoras: kwadrateer eerst.",
-          "100 is c² (= 36 + 64). Je moet nog √ toepassen om c te vinden.",
-          "Je hebt 6 · 8 gedaan. Het is a² + b², geen vermenigvuldigen.",
+          "Niet zomaar optellen — Pythagoras gebruikt + tussen kwadraten. Wat doe je eerst?",
+          "Bijna — dat is c² (het kwadraat). Welke laatste stap mis je nog om c te vinden?",
+          "Niet vermenigvuldigen. De stelling gebruikt + tussen kwadraten, niet ×.",
         ],
       },
     ],

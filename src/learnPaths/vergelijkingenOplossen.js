@@ -224,9 +224,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1.5 = 9/6 (verkeerd om). Hier moet je vermenigvuldigen.",
-          "15 = 9 + 6 (optellen). Hier moet je vermenigvuldigen met 6.",
-          "Check: 3 / 6 = 0.5, niet 9.",
+          "Verkeerde richting — om x alleen over te houden moet je delen ondoen. Welke bewerking is dat?",
+          "Niet optellen — x/6 betekent x gedeeld door 6. Welke tegenhanger?",
+          "Vul je antwoord in: deel het door 6 — krijg je 9?",
         ],
       },
     ],
