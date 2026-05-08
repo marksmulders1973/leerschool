@@ -92,9 +92,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "sin(0°) = 0, niet sin(90°).",
-          "sin(270°) = -1, niet sin(90°).",
-          "Sin geeft een getal tussen -1 en 1, niet 90 zelf.",
+          "Bij welke hoek is de sinus nul — bij 0° of 90°? Denk aan de grafiek-vorm.",
+          "Bij welke hoek bereikt sin z'n minimum — niet bij 90°. Pak de grafiek erbij.",
+          "De sinus geeft altijd een getal tussen -1 en 1 — niet de hoek zelf.",
         ],
       },
     ],

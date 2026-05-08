@@ -203,9 +203,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "x = 3 (positief) = rechts, niet links.",
-          "Verkeerde volgorde — x = 3 (eerste = horizontaal).",
-          "y = -2 (negatief) = omlaag, niet omhoog.",
+          "Welk teken heeft x — positief of negatief? En welk kant gaat dat op?",
+          "Welke is de eerste coördinaat (horizontaal) — x of y?",
+          "Welk teken heeft y? Een negatieve y gaat de andere richting op.",
         ],
       },
     ],

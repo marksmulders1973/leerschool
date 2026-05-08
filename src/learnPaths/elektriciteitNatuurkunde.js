@@ -382,9 +382,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "U × I, dat is vermogen — geen weerstand.",
-          "U + I — de wet werkt met delen.",
-          "Te groot — controleer met U = I × R = 2 × 1.150 = 2.300, klopt niet.",
+          "U × I geeft vermogen, niet weerstand. Welke formule begint met U = ...?",
+          "Wet van Ohm gebruikt geen optellen. Welke bewerking heeft delen tussen U en I?",
+          "Te groot — vul je antwoord terug in en check of U = I × R klopt.",
         ],
       },
     ],

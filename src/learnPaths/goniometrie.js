@@ -38,7 +38,7 @@ const steps = [
         q: "Hoeveel rechte hoeken heeft een rechthoekige driehoek?",
         options: ["1", "2", "3", "0"],
         answer: 0,
-        wrongHints: [null, "Twee rechte hoeken = 180°, geen ruimte voor derde.", "Drie rechte = 270°, te veel.", "Definitie: 1 rechte hoek."],
+        wrongHints: [null, "Wat is de hoekensom in een driehoek? Past dat bij twee rechte hoeken?", "Past dat bij de hoekensom van een driehoek?", "Een 'rechthoekige driehoek' heeft per definitie hoeveel rechte hoeken in z'n naam zitten?"],
       },
     ],
   },

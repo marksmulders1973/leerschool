@@ -237,9 +237,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dan zou de bissectrice de hoek niet delen — maar hetzelfde laten.",
-          "180° is een rechte lijn — geen hoekdeel. Klopt niet.",
-          "20+60=80, maar bissectrice deelt in **gelijke** stukken: 40 en 40.",
+          "Wat doet een bissectrice? Bekijk de definitie: hij deelt een hoek in welke verhouding?",
+          "180° is een rechte lijn — past dat bij een hoek-deler?",
+          "Bissectrice deelt de hoek in **gelijke** stukken — niet ongelijk. Welke twee getallen zijn dan logisch?",
         ],
       },
     ],

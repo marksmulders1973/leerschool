@@ -177,7 +177,7 @@ const steps = [
         q: "Hoeveel minuten zitten tussen **2 cijfers** op de klok?",
         options: ["5","10","12","15"],
         answer: 0,
-        wrongHints: [null,"Te veel — denk: 60 minuten ÷ 12 cijfers.","12 = aantal cijfers, niet minuten.","15 minuten = 3 cijfers verder (een kwartier)."],
+        wrongHints: [null,"Te veel — er zijn 60 minuten op de hele klok en 12 cijfers. Wat krijg je dan per cijfer?","12 is hoeveel cijfers er staan, niet minuten. Hoeveel minuten ZIJN er totaal?","Dat is een kwartier. Hoeveel cijfers verder is een kwartier?"],
       },
       {
         q: "Als de grote wijzer op **2** staat: hoeveel minuten over heel uur?",
