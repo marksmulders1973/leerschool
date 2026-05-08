@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { gameVisibleForUser } from "./featureFlags.js";
+import { gameVisibleForUser, teacherFeaturesVisibleForUser } from "./featureFlags.js";
 
 describe("gameVisibleForUser", () => {
   const ORIGINAL_ENV = { ...import.meta.env };
@@ -38,5 +38,36 @@ describe("gameVisibleForUser", () => {
     expect(gameVisibleForUser(null)).toBe(false);
     import.meta.env.VITE_HIDE_GAME_FOR_GUESTS = "0";
     expect(gameVisibleForUser(null)).toBe(true);
+  });
+});
+
+describe("teacherFeaturesVisibleForUser", () => {
+  afterEach(() => {
+    delete import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS;
+  });
+
+  it("flag uit: zichtbaar voor iedereen (huidig gedrag)", () => {
+    delete import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS;
+    expect(teacherFeaturesVisibleForUser(null)).toBe(true);
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, "leerling")).toBe(true);
+  });
+
+  it("flag aan + teacher-rol: zichtbaar", () => {
+    import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS = "true";
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, "teacher")).toBe(true);
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, "leerkracht")).toBe(true);
+  });
+
+  it("flag aan + niet-teacher: verborgen", () => {
+    import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS = "true";
+    expect(teacherFeaturesVisibleForUser(null)).toBe(false);
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, "leerling")).toBe(false);
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, "ouder")).toBe(false);
+    expect(teacherFeaturesVisibleForUser({ id: "x" }, null)).toBe(false);
+  });
+
+  it("admin (Mark) altijd zichtbaar zelfs met flag aan", () => {
+    import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS = "true";
+    expect(teacherFeaturesVisibleForUser({ email: "Mark-smulders@hotmail.com" })).toBe(true);
   });
 });

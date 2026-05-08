@@ -66,7 +66,7 @@ const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS, levelsCompatible } from "./learnPaths/index.js";
-import { gameVisibleForUser, urlHasGameDeepLink } from "./shared/featureFlags.js";
+import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 import {
@@ -296,6 +296,22 @@ export default function App() {
     // Geen opgeslagen naam → eerst naar home voor onboarding
     setPage("home");
   };
+
+  // S2 sprint-5 (audit-3): teacher-route-guard. Bij flag-aan + non-teacher
+  // op een /leerkracht/*-pagina → redirect naar home. Geen blocker — een
+  // gebruiker kan via HomePage 'Ik ben leerkracht'-tegel alsnog teacher
+  // worden (homepage = heilig per Mark).
+  const TEACHER_PAGES = new Set([
+    "teacher-home", "create-quiz", "quiz-preview",
+    "class-manager", "teacher-progress", "lobby",
+  ]);
+  useEffect(() => {
+    if (!TEACHER_PAGES.has(page)) return;
+    if (!teacherFeaturesVisibleForUser(authUser, role)) {
+      track("teacher_route_blocked", { page });
+      setPage("home");
+    }
+  }, [page, authUser, role]);
 
   // Load stored data + check URL voor directe quiz-code
   useEffect(() => {

@@ -46,6 +46,34 @@ export function urlHasGameDeepLink() {
   return false;
 }
 
+/**
+ * Mag een gebruiker leerkracht-features zien (TeacherHome, CreateQuiz,
+ * StudentProgress voor leerkracht, ClassManager)?
+ *
+ * Per audit-3 S2: leerkracht-flow is een B2B-koop-cyclus (maanden,
+ * pilots) terwijl Cito-ouder-ICP individueel + direct koopt. Tot
+ * post-PMF blijven teacher-features achter feature-flag voor non-teacher.
+ *
+ * Regels:
+ *   - Admin (Mark): altijd ja.
+ *   - Flag UIT: ja (huidig gedrag — anyone can see).
+ *   - Flag AAN + authUser met role 'teacher' (of email-domain school): ja.
+ *   - Flag AAN + andere: NEE.
+ *
+ * @param {object|null} authUser — Supabase auth-user
+ * @param {string|null} [userRole] — gebruikers-rol uit profiel ('leerling' | 'teacher' | 'ouder' | etc.)
+ * @returns {boolean}
+ */
+export function teacherFeaturesVisibleForUser(authUser, userRole = null) {
+  // Admin altijd zichtbaar
+  if (authUser?.email?.toLowerCase() === "mark-smulders@hotmail.com") return true;
+  const flagAan = readBoolEnv("VITE_HIDE_TEACHER_FOR_NON_TEACHERS", false);
+  if (!flagAan) return true; // huidig gedrag
+  // Flag aan: alleen voor expliciete teacher-rol
+  if (userRole === "teacher" || userRole === "leerkracht") return true;
+  return false;
+}
+
 function readBoolEnv(key, fallback) {
   try {
     const v = (import.meta.env?.[key] ?? "").toString().toLowerCase().trim();
