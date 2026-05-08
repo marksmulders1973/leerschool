@@ -143,9 +143,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je bent de 4 vergeten te vermenigvuldigen met 7. 4·7 = 28.",
-          "Je hebt alleen de + 7 overgenomen. Maar je moet ook 4·x = 4x doen.",
-          "11x = 4 + 7 keer x. Maar haakjes wegwerken: 4·x én 4·7 apart.",
+          "Bij haakjes wegwerken: vermenigvuldig de 4 met BEIDE termen — niet alleen met x.",
+          "Heb je 4 ook met x vermenigvuldigd? Allebei de termen krijgen de 4.",
+          "Niet eerst optellen — eerst de 4 verdelen over BEIDE termen, dan pas resultaten samenvoegen.",
         ],
       },
       {

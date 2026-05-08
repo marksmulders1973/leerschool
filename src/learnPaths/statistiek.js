@@ -129,7 +129,7 @@ const steps = [
         q: "Bereken gemiddelde van: 4, 6, 8, 10.",
         options: ["7", "8", "28", "6"],
         answer: 0,
-        wrongHints: [null, "Te hoog. Reken: 4+6+8+10 = 28, ÷ 4 = 7.", "28 is de som. Deel nog door 4 (aantal getallen).", "Niet de mediaan. Som = 28, ÷ 4 = 7."],
+        wrongHints: [null, "Te hoog — heb je gedeeld door het aantal getallen?", "Dat is alleen de som. Welke stap mis je nog voor het gemiddelde?", "Dat is een ander getalskenmerk. Wat doe je voor het gemiddelde — som verdelen over hoeveel?"],
       },
     ],
   },

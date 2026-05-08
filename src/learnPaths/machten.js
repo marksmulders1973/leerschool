@@ -100,9 +100,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Iets tot de macht 0 is altijd 1 (behalve 0⁰).",
-          "7¹ = 7. Maar 7⁰ = 1.",
-          "0⁰ is onbepaald, maar 7⁰ = 1.",
+          "Iets tot de macht 0 — wat is de regel daarvoor (behalve 0⁰)?",
+          "7¹ heeft een andere exponent. Welke regel geldt voor exponent 0?",
+          "0⁰ is een uitzondering. Voor andere getallen geldt een vaste regel bij exponent 0.",
         ],
       },
       {

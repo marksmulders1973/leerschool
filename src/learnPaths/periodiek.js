@@ -118,9 +118,9 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.good })}
         answer: 0,
         wrongHints: [
           null,
-          "sin(0°) = 0 — beginpunt, niet maximum.",
-          "sin(180°) = 0 — terug op nul-lijn.",
-          "sin(360°) = 0 — weer terug op nul.",
+          "Bij 0° is de sinus nul — niet z'n maximum. Waar bereikt de sinus z'n top?",
+          "Bij 180° kruist de sinus opnieuw de nul-lijn. Niet het maximum.",
+          "Bij 360° is de cyclus rond — sinus weer op nul. Niet het maximum.",
         ],
       },
     ],

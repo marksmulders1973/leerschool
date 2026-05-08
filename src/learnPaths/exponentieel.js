@@ -202,9 +202,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "0.07 is de fractie van de groei. Maar de factor = 1 + p = 1.07.",
-          "0.93 = afname van 7%. Hier juist groei.",
-          "7 zou 600% groei zijn (verzeven-en-een-halfvuldigen). Te groot.",
+          "Dat is alleen het groei-percentage. De FACTOR voegt het 'oude' deel ook mee: 1 + procent.",
+          "Dat is de factor voor afname (krimpen). Hier juist groei — welke kant op gaat de factor?",
+          "Veel te groot — dan zou alles per jaar 7× verveelvoudigen. Welke factor past bij +7%?",
         ],
       },
       {
