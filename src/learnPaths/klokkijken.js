@@ -290,6 +290,10 @@ const klokkijken = {
   emoji: "🕒",
   level: "groep3-5",
   subject: "rekenen",
+  // SLO-referentieniveau (sprint-4 G4a 2026-05-08): rekenen-leerlijn
+  // 'Meten en meetkunde — tijd'. Klokkijken hoort bij 1F (einde groep 8).
+  referentieNiveau: "1F",
+  sloThema: "Meten en meetkunde",
   intro:
     "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
   triggerKeywords: [

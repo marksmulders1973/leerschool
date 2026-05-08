@@ -259,6 +259,10 @@ const begrijpendLezenStrategie = {
   emoji: "📖",
   level: "groep5-8",
   subject: "begrijpend-lezen",
+  // SLO-referentieniveau (sprint-4 G4a): 1F + 1S leesvaardigheid.
+  // 1F = einde basisschool minimum; 1S = streef voor havo/vwo-bound.
+  referentieNiveau: "1F/1S",
+  sloThema: "Lezen — zakelijke teksten",
   intro:
     "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten met aparte aanpakken. Cito-relevant.",
   triggerKeywords: [

@@ -54,9 +54,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "12 = 4 · 3 (vermenigvuldigen). Maar 4³ = 4 · 4 · 4.",
-          "81 = 3⁴ (verkeerd om — grondtal en exponent verwisseld).",
-          "16 = 4² = 4 · 4. Maar 4³ heeft nog één 4 erbij.",
+          "Niet vermenigvuldigen — een macht is herhaald vermenigvuldigen. Hoe vaak schrijf je 4 op?",
+          "Heb je grondtal en exponent verwisseld? Welk getal staat onder en welk boven?",
+          "Bijna — bij 4³ heb je één extra factor 4. Hoeveel keer 4 vermenigvuldig je?",
         ],
       },
       {

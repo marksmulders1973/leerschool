@@ -58,9 +58,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "4/6 zou betekenen 4 gunstige uitkomsten. Maar een 4 is maar 1 gunstige uitkomst.",
-          "1/4 = 25% — geen logische kans bij een dobbelsteen met 6 vlakken.",
-          "1/2 zou betekenen 50% — maar er zijn 6 mogelijke uitkomsten, niet 2.",
+          "Hoeveel keer komt de '4' voor op de dobbelsteen? Dat is je teller.",
+          "Hoeveel vlakken heeft een dobbelsteen? Dat is je noemer.",
+          "Kans is gunstig÷totaal. Hoeveel mogelijkheden zijn er in totaal?",
         ],
       },
       {
@@ -69,9 +69,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "7/10 is de kans op blauw — niet rood.",
-          "1/3 = 33% — gevormd door 3 rode te delen door alleen 7 + 3? Nee — totaal is 10.",
-          "3/7 zou ratio rood:blauw zijn. Kans = gunstig/totaal = 3/10.",
+          "Welke kleur vroeg de vraag — rood of blauw? Lees nog eens.",
+          "Welk getal is je totaal: alleen blauwe, alleen rode, of beide samen?",
+          "Verhouding is iets anders dan kans. Kans = gunstig ÷ totaal-aantal-knikkers.",
         ],
       },
     ],

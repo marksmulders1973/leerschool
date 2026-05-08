@@ -422,6 +422,11 @@ const dierenSeizoenenNatuur = {
   emoji: "🌿",
   level: "groep4-7",
   subject: "natuur",
+  // SLO-kerndoelen (sprint-4 G4a): 39-42 (oriëntatie op jezelf en de wereld
+  // — natuur en techniek, milieu, levenscyclus). Geen referentieniveau-
+  // schaal voor natuur (1F/1S geldt alleen voor taal+rekenen).
+  sloKerndoelen: [39, 40, 41, 42],
+  sloThema: "Natuur & Techniek",
   intro:
     "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, en voedselketens.",
   triggerKeywords: [

@@ -263,6 +263,10 @@ const citoStrategieenGroep8 = {
   emoji: "🎯",
   level: "groep8",
   subject: "cito",
+  // SLO-referentieniveau (sprint-4 G4a): omvat 1F + 1S in lezen + rekenen
+  // — een meta-pad over álle eind-basisschool-domeinen.
+  referentieNiveau: "1F/1S",
+  sloThema: "Eindtoets — alle domeinen",
   intro:
     "Hoe je slim met de Cito-toets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
   triggerKeywords: [

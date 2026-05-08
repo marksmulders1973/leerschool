@@ -277,6 +277,10 @@ const volgordeBewerkingen = {
   emoji: "🧮",
   level: "groep5-7",
   subject: "rekenen",
+  // SLO-referentieniveau (sprint-4 G4a): 1F kerndoel rekenen einde basis;
+  // 1S = streef voor havo/vwo-bound leerlingen.
+  referentieNiveau: "1F/1S",
+  sloThema: "Getallen",
   intro:
     "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. Cito-relevant voor groep 5-7.",
   triggerKeywords: [

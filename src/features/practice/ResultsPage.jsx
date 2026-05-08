@@ -5,6 +5,7 @@ import { BRAND } from "../../brand.js";
 import { SoundEngine } from "../../utils.js";
 import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import supabase from "../../supabase.js";
+import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
   const latest = results[results.length - 1];
@@ -20,6 +21,11 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   // M2 audit-3: 'Deel de app'-sectie default ingeklapt om ResultsPage-clutter
   // weg te halen. Gebruiker die wil delen klikt zelf de toggle open.
   const [showDeelApp, setShowDeelApp] = useState(false);
+  // H6 audit-3 sprint-4: Cito-indicatie default ingeklapt om vertrouwens-
+  // breuk te voorkomen ('Richting vmbo-bb' direct lezen na 1 score = paniek).
+  const [showCitoIndicatie, setShowCitoIndicatie] = useState(false);
+  // Focus-trap voor iOS-install modal (G3a sprint-3 vervolg sprint-4)
+  const iosInstallRef = useFocusTrap(showIosInstall, { onEsc: () => setShowIosInstall(false) });
   const isIOS = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
   const isStandalone = typeof window !== "undefined" && (window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone);
 
@@ -210,25 +216,55 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             uitleg = "Score is nog laag — geen probleem, dat betekent dat er veel ruimte is om te groeien!";
           }
           return (
-            <div style={{
-              marginBottom: 14,
-              padding: "14px 16px",
-              borderRadius: 14,
-              background: `linear-gradient(135deg, ${kleur}30, ${kleur}10)`,
-              border: `1px solid ${kleur}60`,
-            }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 4, letterSpacing: 0.3 }}>
-                CITO-SIMULATIE · INDICATIE
-              </div>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: kleur, marginBottom: 6 }}>
-                {emoji} Richting {advies}
-              </div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.5, marginBottom: 8 }}>
-                {uitleg}
-              </div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
-                ⚠ Dit is een ruwe indicatie op basis van je oefenscore. Het officiële schooladvies krijg je van je leerkracht; de echte Cito-toets bepaalt of je advies omhoog kan.
-              </div>
+            <div style={{ marginBottom: 14 }}>
+              {!showCitoIndicatie ? (
+                <button
+                  onClick={() => setShowCitoIndicatie(true)}
+                  aria-expanded={false}
+                  style={{
+                    width: "100%",
+                    padding: "12px 14px",
+                    borderRadius: 14,
+                    border: "1px dashed rgba(255,255,255,0.25)",
+                    background: "rgba(255,255,255,0.03)",
+                    color: "rgba(255,255,255,0.7)",
+                    fontFamily: "var(--font-body)",
+                    fontSize: 13,
+                    cursor: "pointer",
+                    textAlign: "left",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    gap: 8,
+                  }}
+                >
+                  <span>🔍 Wil je een ruwe richting zien op basis van deze ene oefening?</span>
+                  <span aria-hidden="true">▼</span>
+                </button>
+              ) : (
+                <div style={{
+                  padding: "14px 16px",
+                  borderRadius: 14,
+                  background: `linear-gradient(135deg, ${kleur}30, ${kleur}10)`,
+                  border: `1px solid ${kleur}60`,
+                }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.6)", marginBottom: 4, letterSpacing: 0.3 }}>
+                    CITO-SIMULATIE · RUWE INDICATIE (1 OEFENING)
+                  </div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800, color: kleur, marginBottom: 6 }}>
+                    {emoji} Past nu bij {advies}
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.8)", lineHeight: 1.5, marginBottom: 10 }}>
+                    {uitleg}
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,200,77,0.85)", lineHeight: 1.45, padding: "8px 10px", borderRadius: 8, background: "rgba(255,200,77,0.06)", border: "1px solid rgba(255,200,77,0.20)", marginBottom: 8 }}>
+                    ⚠ <strong>Dit is geen advies — het is één oefenscore.</strong> Doe minstens 3 simulaties verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan zomaar 20% verschil maken.
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
+                    Het officiële schooladvies krijg je van je leerkracht; de echte Cito-toets bepaalt of je advies omhoog kan.
+                  </div>
+                </div>
+              )}
             </div>
           );
         })()}
@@ -371,7 +407,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         </div>
         )}
         {showIosInstall && (
-          <div onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+          <div ref={iosInstallRef} role="dialog" aria-modal="true" aria-label={`${BRAND.name} installeren`} onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
             <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 {BRAND.name} installeren</div>
               {isIOS ? (

@@ -88,9 +88,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Check: 3 - 5 = -2, niet 8. Probeer iets groters.",
-          "Check: -3 - 5 = -8, niet 8.",
-          "Check: 40 - 5 = 35, niet 8. Te groot.",
+          "Te klein — wat moet je optellen om bij 8 uit te komen, na 5 ervan af?",
+          "Te ver onder nul — denk aan: x verminderd met 5 móét bij 8 uitkomen.",
+          "Veel te groot — vul je antwoord in en kijk of x − 5 echt 8 oplevert.",
         ],
       },
     ],
