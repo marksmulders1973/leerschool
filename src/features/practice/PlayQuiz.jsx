@@ -394,9 +394,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         </>
       )}
 
-      {noTimer && (
+      {noTimer && !isCitoSimulation && (
         <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#00e676", marginBottom: 12 }}>
-          ⏸️ Geen tijdslimiet — neem de tijd!
+          ⏸️ Geen tijdslimiet per vraag — neem de tijd!
         </div>
       )}
 
@@ -496,8 +496,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           <button
             onClick={() => {
               const subject = gameState?.quiz?.subject;
+              const quizLevel = gameState?.quiz?.level;
               const allowedSubjects = subject ? categoryToLearnSubjects(subject) : null;
-              const matched = findLearnPathForQuestion(question?.q, allowedSubjects);
+              const matched = findLearnPathForQuestion(question?.q, allowedSubjects, quizLevel);
               track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
               clearInterval(timerRef.current);
               clearTimeout(wrongOverlayTimerRef.current);
@@ -678,19 +679,21 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                 </div>
                 <div style={{ fontSize: 13, color: "var(--color-text)", lineHeight: 1.5 }}>
                   {(() => {
+                    // Tip mag het antwoord NIET letterlijk verklappen — het juiste antwoord
+                    // staat al groen-aangevinkt in de opties hierboven. Tip = denkprikkel die
+                    // helpt onthouden of de aanpak vertelt (regel uit feedback_didactic_hints).
                     const heeftUitleg = question.explanation && String(question.explanation).trim() !== "";
                     const s = gameState.quiz.subject;
-                    const antwoord = <em style={{ color: "#b0d8b8" }}>"{question.options[question.answer]}"</em>;
                     if (!heeftUitleg) {
-                      return <>Bij deze vraag staat (nog) geen uitleg in de database. Bekijk de <strong>YouTube-knop</strong> hieronder voor een korte uitleg, of meld de vraag via <strong>Fout melden</strong> zodat we 'm beter kunnen maken. Het goede antwoord is {antwoord}.</>;
+                      return <>Bij deze vraag staat (nog) geen uitleg in de database. Bekijk de <strong>YouTube-knop</strong> hieronder voor een korte uitleg, of meld de vraag via <strong>Fout melden</strong> zodat we 'm beter kunnen maken.</>;
                     }
                     if (s === "rekenen" || s === "wiskunde")
-                      return <>Schrijf de som nog een keer op en los hem stap voor stap op. Het goede antwoord is {antwoord}.</>;
+                      return <>Schrijf de som nog een keer op en los hem stap voor stap op — kijk pas aan het einde of je er uitkomt.</>;
                     if (s === "taal" || s === "nederlands")
-                      return <>Maak zelf een zin met het goede antwoord {antwoord} — zo onthoudt je het beter.</>;
+                      return <>Maak zelf een zin met het juiste antwoord — zo onthoud je het beter.</>;
                     if (s === "engels" || s === "duits" || s === "frans")
-                      return <>Zeg {antwoord} drie keer hardop en schrijf het op. Taal leer je door herhaling!</>;
-                    return <>Herhaal het goede antwoord hardop: {antwoord}. Koppel het aan iets wat je al weet.</>;
+                      return <>Zeg het juiste antwoord drie keer hardop en schrijf het op. Taal leer je door herhaling!</>;
+                    return <>Herhaal het juiste antwoord hardop en koppel het aan iets wat je al weet.</>;
                   })()}
                 </div>
               </div>
@@ -724,8 +727,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (() => {
         const stopSubject = gameState?.quiz?.subject;
+        const stopLevel = gameState?.quiz?.level;
         const stopAllowed = stopSubject ? categoryToLearnSubjects(stopSubject) : null;
-        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed) : null;
+        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed, stopLevel) : null;
         return (
         <div
           role="dialog"
@@ -740,9 +744,21 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               Je hebt {gameState.currentQ} van {gameState.questions.length} vragen beantwoord.
               {gameState.score > 0 && ` Score: ${gameState.score} goed!`}
             </p>
+            {/* Doorgaan = duidelijke primary (groen, eerste in volgorde) zodat
+                een gebruiker die per ongeluk ✕ raakt veilig terug naar de quiz
+                gaat. Stoppen daaronder als secundair rood. Leg-uit als blauwe
+                tertiair zodat de "wegkomen"-flow niet verwart met de
+                "uitleg"-flow (UX-bevinding audit-2026-05-08). */}
+            <button
+              style={{ width: "100%", background: "linear-gradient(135deg, var(--color-brand-primary), #00a040)", color: "var(--color-text-strong)", border: "none", borderRadius: 14, padding: "14px", fontWeight: 800, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 15, marginBottom: 10, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
+              onClick={() => setShowQuitConfirm(false)}
+              autoFocus
+            >
+              ▶️ Doorgaan met oefenen
+            </button>
             {matched && (
               <button
-                style={{ width: "100%", background: "linear-gradient(135deg, var(--color-brand-primary), #00a040)", color: "var(--color-text-strong)", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14, marginBottom: 12, boxShadow: "0 4px 16px rgba(0,200,83,0.3)" }}
+                style={{ width: "100%", background: "rgba(0,212,255,0.10)", color: "#80deea", border: "1px solid rgba(0,212,255,0.40)", borderRadius: 14, padding: "12px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 13, marginBottom: 10 }}
                 onClick={() => {
                   clearInterval(timerRef.current);
                   clearTimeout(wrongOverlayTimerRef.current);
@@ -750,21 +766,19 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
                   onLearnPathRequest(matched);
                 }}
               >
-                📐 Snap ik niet — leg stap-voor-stap uit
+                🤔 Snap ik niet — leg stap-voor-stap uit
               </button>
             )}
-            <div style={{ display: "flex", gap: 10 }}>
-              <button style={{ flex: 1, background: "#162033", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14, color: "var(--color-text-strong)" }} onClick={() => setShowQuitConfirm(false)}>
-                Doorgaan
-              </button>
-              <button style={{ flex: 1, background: "linear-gradient(135deg, #ff5252, #c62828)", color: "var(--color-text-strong)", border: "none", borderRadius: 14, padding: "14px", fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 14 }} onClick={() => {
+            <button
+              style={{ width: "100%", background: "transparent", color: "#ff8a80", border: "1px solid rgba(255,82,82,0.4)", borderRadius: 14, padding: "10px", fontWeight: 600, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 13 }}
+              onClick={() => {
                 clearInterval(timerRef.current);
                 clearTimeout(wrongOverlayTimerRef.current);
                 onQuit();
-              }}>
-                Stoppen
-              </button>
-            </div>
+              }}
+            >
+              ✕ Toch stoppen
+            </button>
           </div>
         </div>
         );

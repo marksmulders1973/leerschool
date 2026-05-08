@@ -38,7 +38,9 @@ export const PAGE_TO_PATH = {
   // Quiz / spel
   play: "/quiz",
   results: "/resultaat",
-  obliterator: "/obliterator",
+  // /obliterator deeplink → de play-versie (niet de "Direct"-conversie-flow,
+  // die werkt alleen via ?play=obliterator query met onboarding na 3 deaths).
+  obliteratorPlay: "/obliterator",
   // Leerkracht
   "create-quiz": "/leerkracht/toets-maken",
   "quiz-preview": "/leerkracht/toets-preview",

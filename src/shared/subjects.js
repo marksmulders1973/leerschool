@@ -34,6 +34,13 @@ export const SUBJECTS = {
   frans: { title: "Frans", emoji: "📗" },
   maatschappijleer: { title: "Maatschappijleer", emoji: "🏛️" },
   natuur: { title: "Natuur (PO)", emoji: "🌿" },
+  // PO-specifieke subject-keys (gebruikt door 4 paden: klokkijken,
+  // volgordeBewerkingen, begrijpendLezenStrategie, citoStrategieenGroep8).
+  // Zonder deze entries vielen ze terug op slug-naam ("rekenen" naast
+  // "Wiskunde") — dev-jargon in UI.
+  rekenen: { title: "Rekenen", emoji: "🔢" },
+  "begrijpend-lezen": { title: "Begrijpend Lezen", emoji: "📚" },
+  cito: { title: "Cito", emoji: "🎯" },
 };
 
 /**

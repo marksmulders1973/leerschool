@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { ALL_LEARN_PATHS, findLearnPathForQuestion } from "./index.js";
+import { ALL_LEARN_PATHS, findLearnPathForQuestion, levelToBucket, levelsCompatible } from "./index.js";
 
 describe("ALL_LEARN_PATHS", () => {
   it("heeft minstens 25 leerpaden", () => {
@@ -68,5 +68,61 @@ describe("findLearnPathForQuestion", () => {
       expect(result).toHaveProperty("stepIdx");
       expect(typeof result.stepIdx).toBe("number");
     }
+  });
+
+  it("blokkeert PO-quiz van VO-pad via niveau-filter", () => {
+    // Groep 4 leerling met rekenvraag over verhoudingen mag NIET in
+    // verhoudingen-pad (level: klas1-vwo) belanden — dat is de bug van
+    // 2026-05-08 die we hier voorkomen.
+    const result = findLearnPathForQuestion(
+      "Wat is een goede verhouding van siroop en water?",
+      ["wiskunde"],
+      "groep4",
+    );
+    if (result) {
+      const path = ALL_LEARN_PATHS[result.pathId];
+      // Pad mag niet vo-niveau hebben
+      expect(levelToBucket(path.level)).not.toBe("vo-onder");
+      expect(levelToBucket(path.level)).not.toBe("vo-boven");
+    }
+  });
+});
+
+describe("levelToBucket", () => {
+  it("groep* → po", () => {
+    expect(levelToBucket("groep4")).toBe("po");
+    expect(levelToBucket("groep5-7")).toBe("po");
+    expect(levelToBucket("groep8")).toBe("po");
+  });
+  it("klas1-3 / klas1-vwo → vo-onder", () => {
+    expect(levelToBucket("klas1-vwo")).toBe("vo-onder");
+    expect(levelToBucket("klas2-3")).toBe("vo-onder");
+    expect(levelToBucket("klas3")).toBe("vo-onder");
+  });
+  it("havo4-5 / vwo5-6 / vmbo-gt-4 → vo-boven", () => {
+    expect(levelToBucket("havo4-5")).toBe("vo-boven");
+    expect(levelToBucket("havo4-5-vwo")).toBe("vo-boven");
+    expect(levelToBucket("vmbo-gt-4")).toBe("vo-boven");
+  });
+  it("nvt of leeg → null", () => {
+    expect(levelToBucket("nvt")).toBeNull();
+    expect(levelToBucket("")).toBeNull();
+    expect(levelToBucket(null)).toBeNull();
+  });
+});
+
+describe("levelsCompatible", () => {
+  it("zelfde bucket → compatible", () => {
+    expect(levelsCompatible("groep4", "groep5-7")).toBe(true);
+    expect(levelsCompatible("klas1", "klas2-3")).toBe(true);
+    expect(levelsCompatible("havo4", "vwo5")).toBe(true);
+  });
+  it("verschillende bucket → niet compatible", () => {
+    expect(levelsCompatible("groep4", "klas1-vwo")).toBe(false);
+    expect(levelsCompatible("klas1", "havo4-5")).toBe(false);
+  });
+  it("onbekende kant → fallback compatible", () => {
+    expect(levelsCompatible(null, "klas1")).toBe(true);
+    expect(levelsCompatible("groep4", null)).toBe(true);
   });
 });

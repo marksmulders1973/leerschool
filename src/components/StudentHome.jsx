@@ -160,7 +160,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
           {[
             { id: "po", label: "Basisschool", desc: "groep 1-8", emoji: "🎒" },
-            { id: "vo", label: "Voortgezet", desc: "klas 1-6", emoji: "🎓" },
+            { id: "vo", label: "Middelbaar", desc: "klas 1-6", emoji: "🎓" },
           ].map(t => {
             const sel = vakModus === t.id;
             return (

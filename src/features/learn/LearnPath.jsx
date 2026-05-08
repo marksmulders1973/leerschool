@@ -392,7 +392,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       {/* Mini-info: stap nummer + voortgangsbalk + prev/next-navigatie */}
       <div style={{ padding: "12px 18px 6px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
-          <span>Stap {stepIdx + 1} van {totalSteps}</span>
+          <span>
+            Stap {stepIdx + 1} van {totalSteps}
+            <span style={{ marginLeft: 8, color: C.warm, fontWeight: 700 }}>
+              ≈ {Math.max(1, Math.round(0.7 + (path.steps[stepIdx]?.checks?.length || 1) * 0.5))} min
+            </span>
+          </span>
           <span>{progressPct}% voltooid</span>
         </div>
         <div style={{ height: 8, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>

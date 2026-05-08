@@ -167,8 +167,38 @@ import { QUESTION_PATH_MAP } from "./questionPathMap.generated.js";
 // 2. Bij geen entry — runtime keyword-fallback (voor AI-gegenereerde
 //    vragen of vragen die niet in de map staan).
 //
+// Bucket-mapping zodat een PO-quiz niet in een VO-pad belandt en omgekeerd.
+// Drie buckets: "po" (groep 1-8), "vo-onder" (klas 1-3), "vo-boven" (klas 4-6,
+// havo4-5, vwo5-6, vmbo-gt-4). Onbekende strings → null = niet-filteren.
+export function levelToBucket(lvl) {
+  if (!lvl) return null;
+  const s = String(lvl).toLowerCase();
+  if (s === "nvt") return null;
+  if (s.startsWith("groep")) return "po";
+  if (
+    s.includes("havo4") || s.includes("havo5") ||
+    s.includes("vwo4") || s.includes("vwo5") || s.includes("vwo6") ||
+    s.includes("klas4") || s.includes("klas5") || s.includes("klas6") ||
+    s.includes("vmbo-gt-4") || s.includes("vmbo-bb-4") || s.includes("vmbo-kb-4")
+  ) return "vo-boven";
+  if (s.startsWith("klas") || s.includes("vmbo") || s.includes("havo") || s.includes("vwo") || s.includes("gym")) return "vo-onder";
+  return null;
+}
+
+// Niveau-compatibiliteit tussen quiz-niveau en pad-niveau.
+// PO-quiz mag alleen PO-paden, VO-quiz mag alleen VO-paden van eigen bucket.
+// Onbekende kant → toelaten (anders raken we te veel paden kwijt).
+export function levelsCompatible(quizLevel, pathLevel) {
+  const q = levelToBucket(quizLevel);
+  const p = levelToBucket(pathLevel);
+  if (!q || !p) return true;
+  return q === p;
+}
+
 // Returnt { pathId, stepIdx } of null als er geen match is.
-export function findLearnPathForQuestion(questionText, allowedSubjects = null) {
+// `quizLevel` (optioneel): quiz-niveau-string ("groep4", "klas2-vwo" etc.) zodat
+// een groep-4 vraag niet in een klas1-vwo-pad kan landen via keyword-match.
+export function findLearnPathForQuestion(questionText, allowedSubjects = null, quizLevel = null) {
   if (!questionText) return null;
 
   const allowedSet = Array.isArray(allowedSubjects) && allowedSubjects.length > 0
@@ -178,10 +208,11 @@ export function findLearnPathForQuestion(questionText, allowedSubjects = null) {
   // Stap 1: exact lookup in pre-gegenereerde map
   const exact = QUESTION_PATH_MAP[questionText];
   if (exact) {
-    if (!allowedSet) return exact;
     const taggedPath = ALL_LEARN_PATHS[exact.pathId];
-    if (taggedPath && allowedSet.has(taggedPath.subject)) return exact;
-    // Vak-mismatch: val terug op runtime-zoek hieronder
+    const subjectOk = !allowedSet || (taggedPath && allowedSet.has(taggedPath.subject));
+    const levelOk = !quizLevel || !taggedPath || levelsCompatible(quizLevel, taggedPath.level);
+    if (subjectOk && levelOk) return exact;
+    // Subject- of niveau-mismatch: val terug op runtime-zoek
   }
 
   // Stap 2: runtime keyword-fallback
@@ -194,6 +225,7 @@ export function findLearnPathForQuestion(questionText, allowedSubjects = null) {
 
   for (const path of Object.values(ALL_LEARN_PATHS)) {
     if (allowedSet && !allowedSet.has(path.subject)) continue;
+    if (quizLevel && !levelsCompatible(quizLevel, path.level)) continue;
     const padMatcht = path.triggerKeywords?.some((kw) => lower.includes(kw.toLowerCase()));
     if (!padMatcht) continue;
 

@@ -162,7 +162,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
               ✨ Ouder Pro — €1,95/maand
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
-              Volg de voortgang van je kind, zie scores per vak en bereid de Cito-toets voor. Je kunt het nu al instellen — betaling volgt binnenkort.
+              Volg de voortgang van je kind, zie scores per vak en bereid de Cito-toets voor.
             </div>
             <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#00b0ff", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
               Meer info & aanmelden →
