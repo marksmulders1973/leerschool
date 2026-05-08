@@ -5184,7 +5184,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 6 === 0 &&
             Math.random() < 0.85
           ) {
-            const isLoop = Math.random() < 0.3;
+            const isLoop = Math.random() < 0.55;
             // Schans: ~25% van scherm-hoogte. Looping: ~40% — kleiner zodat
             // speler en omgeving zichtbaar blijven tijdens de loop-rit.
             const hoogte  = isLoop ? 0.40 * H : 0.25 * H;
