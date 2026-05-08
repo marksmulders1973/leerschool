@@ -847,10 +847,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const BIOMES = [
       // Level 1 — Grass Hills (Super Mario Land 1-1 vibe)
       { naam:'GRASS HILLS', stijl:'cheerful', toonsoort:'majeur', bpm:105, emoji:['🌳','🌻','☁️','🦋','⭐'], bgTop:[120,200,235], bgBot:[170,225,245], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,250,200], schedel:[255,240,200], glow:[255,220,120], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[141,198,63], grasDonker:[79,138,42] },
-      // Level 2 — Pink Forest
-      { naam:'PINK FOREST', stijl:'cheerful', toonsoort:'majeur', bpm:110, emoji:['🌸','🌷','🦋','🌳','💖'], bgTop:[180,225,245], bgBot:[245,210,225], bakstenenLicht:[155,90,42], bakstenenDonker:[107,62,31], bakstenenHighlight:[210,150,90], lichtbundel:[255,220,240], schedel:[255,220,240], glow:[255,180,210], grondLicht:[155,90,42], grondDonker:[80,46,22], grasLicht:[245,176,207], grasDonker:[230,69,122] },
-      // Level 3 — Sky Island (Sonic Hill Top vibe)
-      { naam:'SKY ISLAND', stijl:'cheerful', toonsoort:'majeur', bpm:115, emoji:['☁️','🪂','🦅','⭐','✨'], bgTop:[170,220,250], bgBot:[210,240,250], bakstenenLicht:[160,110,60], bakstenenDonker:[110,75,40], bakstenenHighlight:[220,170,110], lichtbundel:[255,255,220], schedel:[255,240,200], glow:[180,220,255], grondLicht:[160,110,60], grondDonker:[90,60,30], grasLicht:[160,220,140], grasDonker:[100,170,90] },
+      // Level 2 — Nightfall (schemering: donker paars boven, oranje horizon)
+      { naam:'NIGHTFALL', stijl:'cheerful', toonsoort:'majeur', bpm:108, emoji:['🌅','🌆','🦇','⭐','🌙'], bgTop:[60,30,90], bgBot:[220,110,80], bakstenenLicht:[120,70,42], bakstenenDonker:[80,50,30], bakstenenHighlight:[200,130,80], lichtbundel:[255,200,140], schedel:[255,220,180], glow:[255,160,100], grondLicht:[120,70,42], grondDonker:[60,30,20], grasLicht:[100,140,60], grasDonker:[60,90,40] },
+      // Level 3 — Thunder Night (zwarte hemel, hevige bliksem ambient)
+      { naam:'THUNDER NIGHT', stijl:'donker', toonsoort:'mineur', bpm:118, nachtMode:true, emoji:['🌙','⭐','⚡','☁️','🦉'], bgTop:[5,5,15], bgBot:[20,15,35], bakstenenLicht:[40,40,55], bakstenenDonker:[20,20,35], bakstenenHighlight:[80,80,110], lichtbundel:[200,220,255], schedel:[230,230,255], glow:[180,200,255], grondLicht:[40,40,55], grondDonker:[15,15,25], grasLicht:[50,55,75], grasDonker:[25,30,45] },
       // Level 4 — Sunset Beach
       { naam:'SUNSET BEACH', stijl:'cheerful', toonsoort:'majeur', bpm:120, emoji:['🌅','🌴','🐚','🦩','⛵'], bgTop:[255,180,140], bgBot:[255,210,180], bakstenenLicht:[210,170,120], bakstenenDonker:[160,125,80], bakstenenHighlight:[245,210,170], lichtbundel:[255,210,150], schedel:[255,230,200], glow:[255,180,120], grondLicht:[210,170,120], grondDonker:[140,105,65], grasLicht:[180,210,120], grasDonker:[120,160,80] },
       // Level 5 — Desert Oasis
@@ -1517,10 +1517,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.fillRect(0, PLAFOND_HOOGTE - 6, W, 2);
       ctx.restore();
     }
-    function tekenPlafondStekel(x, b, h) {
+    function tekenPlafondStekel(x, b, h, vorm) {
       // omgedraaide stekel: basis bovenaan tegen plafond, punt naar beneden
       const yTop = PLAFOND_HOOGTE - 4;
       const yBot = yTop + h;
+      // Pipe-pair-blok: rechthoekig blok hangend aan plafond, zelfde stijl
+      // als grond-blok zodat ze visueel matchen tot een pipe-pair.
+      if (vorm === "blok") {
+        const cheerful = !dungeonMode && !hellMode && BIOMES[huidigBioom]?.stijl === "cheerful";
+        tekenStenenBlok(x, yTop, b, h, cheerful ? "crate" : "stone");
+        return;
+      }
       ctx.save();
       ctx.shadowBlur = 14;
       ctx.shadowColor = "rgba(255,200,200,0.5)";
@@ -2349,41 +2356,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
     }
     function maakObstakel() {
-      const r = Math.random();
-      let type = 0;
-      if (score > 2 && r < 0.30) type = 1;
-      else if (score > 6 && r < 0.50) type = 2;
-      // L1 showcase: alle 3 types vanaf score 0 zodat speler alle variatie ziet
-      if (huidigLevel === 1 && !dungeonMode) {
+      // Type-distributie: spike / dubbele spike / pipe-blok. Showcase op alle
+      // levels zodat speler vroeg variatie ziet. Dungeon = altijd blok (haaien).
+      let type;
+      if (dungeonMode) {
+        type = 2;
+      } else {
         const r2 = Math.random();
-        if (r2 < 0.40) type = 2;       // 40% lange/normale blokken
+        if (r2 < 0.40) type = 2;       // 40% pipe-blok (waarvan deel pipe-pair)
         else if (r2 < 0.65) type = 1;  // 25% dubbele spike
         else type = 0;                  // 35% enkele spike
       }
-      // Tijdens dungeon-modus: geen spikes (water op de vloer maakt ze
-      // onzichtbaar). In plaats daarvan altijd block-type + haaien als
-      // hazard.
-      if (dungeonMode) type = 2;
-      // L1 showcase: smal & lang ipv breed & laag — Flappy Bird pipe-stijl.
-      // Pipe-breedte vast (38), variabele hoogte zodat speler verschillend
-      // moet hoogspringen. Pipe-paar (combo) zet de gap op wisselende hoogte.
-      let blokBreedte = 30 * SCHAAL;
-      let blokHoogte = 50 * SCHAAL;
-      if (type === 2 && huidigLevel === 1) {
-        blokBreedte = 38 * SCHAAL;
-        const hoogtes = [60, 90, 130, 170];
-        blokHoogte = hoogtes[Math.floor(Math.random() * hoogtes.length)] * SCHAAL;
-      }
+      // Flappy Bird pipe-stijl: smal (38), variabele hoogte voor wisselende
+      // gap-positie. Geldt voor alle levels — pipe-pair combo (40%) hangt een
+      // verticaal aligned plafondblok erboven met dynamische hoogte zodat de
+      // gap consistent ~120 px blijft.
+      let blokBreedte = 38 * SCHAAL;
+      const hoogtes = [60, 90, 130, 170];
+      let blokHoogte = hoogtes[Math.floor(Math.random() * hoogtes.length)] * SCHAAL;
       const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : blokBreedte;
       const hoogte = type === 2 ? blokHoogte : 32 * SCHAAL;
       const wx = worldScrollX + W;
       const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
       obstakels.push({ type, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
-      // L1 showcase: pipe-pair tunnel — verticaal aligned plafondstekel met
-      // ~120px gap. Plafondstekel-hoogte uit beschikbare ruimte berekend zodat
-      // gap-POSITIE varieert met blokhoogte (laag blok → gap hoog, omgekeerd).
+      // Pipe-pair tunnel — werkt op alle normale levels. vorm:"blok" zorgt
+      // dat plafondstekel als rechthoekig blok rendert (ipv driehoekige spits)
+      // zodat 't visueel matcht met 't grondblok.
       if (
-        type === 2 && huidigLevel === 1 && Math.random() < 0.40
+        type === 2 && Math.random() < 0.40
         && !dungeonMode && !hellMode && !customLevelMode && !bossActief
       ) {
         const totaalH = (GROND_Y + SPELER_GROOTTE) - (PLAFOND_HOOGTE - 4);
@@ -2394,6 +2394,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             x: W,
             breedte: blokBreedte,
             hoogte: psHoogte,
+            vorm: "blok",
           });
         }
       }
@@ -4725,10 +4726,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Custom-levels met intenseAmbiance forceren bliksem aan op L70-equivalent.
       if (bliksemFlash > 0) bliksemFlash--;
       const intensCustomNu = customLevelMode && customLevel?.intenseAmbiance;
-      const effLevelVoorIntens = intensCustomNu ? 70 : huidigLevel;
-      // L1 ambient: zachte sfeer-bliksem (zeldzaam, korte flash, geen lava-erupties).
-      const lichtAmbient = huidigLevel === 1 && !bossActief && !customLevelMode;
-      const bliksemBronAanwezig = (effLevelVoorIntens >= 50 || bossActief || lichtAmbient) && !bonusFase;
+      // THUNDER NIGHT (BIOMES[2]) heeft nachtMode → forceer dramatische storm
+      // (zwarte hemel, vaak donder, hoge intensiteit alsof L80).
+      const nachtBioomActief = !customLevelMode && !bossActief && BIOMES[huidigBioom]?.nachtMode === true;
+      const effLevelVoorIntens = intensCustomNu ? 70 : nachtBioomActief ? 80 : huidigLevel;
+      // Cheerful biome (L1-L7 + sommige bovenste): zachte sfeer-bliksem zodat
+      // 't atmosferisch is zonder de Mario-vibe te verpesten.
+      const lichtAmbient = !nachtBioomActief && BIOMES[huidigBioom]?.stijl === "cheerful"
+        && huidigLevel < 50 && !bossActief && !customLevelMode;
+      const bliksemBronAanwezig = (effLevelVoorIntens >= 50 || bossActief || lichtAmbient || nachtBioomActief) && !bonusFase;
       if (bliksemBronAanwezig) {
         bliksemTimer--;
         if (bliksemTimer <= 0) {
@@ -5636,7 +5642,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // start vanaf score 3 zodat speler eerst veilig kan inkomen
       // niet tijdens dungeon-mode (= onderwater, plafond-stekels onlogisch)
       if (!bonusFase) plafondStekelSpawnTeller--;
-      if (plafondStekelSpawnTeller <= 0 && (score >= 3 || oblivionMode || huidigLevel === 1) && !dungeonMode && !hellMode && !bonusFase && !customLevelMode) {
+      if (plafondStekelSpawnTeller <= 0 && !dungeonMode && !hellMode && !bonusFase && !customLevelMode) {
         plafondStekels.push({
           x: W + 40,
           breedte: 26 * SCHAAL,
@@ -5678,7 +5684,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (!bonusFase) zwevendeMineSpawnTeller--;
       if (
         zwevendeMineSpawnTeller <= 0
-        && (score >= 5 || oblivionMode || huidigLevel === 1)
         && !dungeonMode
         && !hellMode
         && !bonusFase
@@ -6469,7 +6474,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       for (const o of obstakels) tekenObstakel(o);
       for (const sc of schansen) tekenSchans(sc);
       for (const p of portals) tekenPortal(p);
-      for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
+      for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte, ps.vorm);
       for (const m of zwevendeMinen) tekenZwevendeMine(m);
       // Mystery-blokken — gouden ?-blok met pulserende rand. Na trigger wordt
       // het ❌ voor 60 frames voordat het verdwijnt.
@@ -7281,7 +7286,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         for (const h of haaien) tekenHaai(h);
         for (const sc of schansen) tekenSchans(sc);
         for (const p of portals) tekenPortal(p);
-        for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte);
+        for (const ps of plafondStekels) tekenPlafondStekel(ps.x, ps.breedte, ps.hoogte, ps.vorm);
         for (const m of zwevendeMinen) tekenZwevendeMine(m);
         ctx.restore();
         tekenLevens();
