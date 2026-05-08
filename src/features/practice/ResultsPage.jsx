@@ -39,7 +39,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   };
   const canShowInstall = !isStandalone && !installed;
 
-  const appShareUrl = `https://www.${BRAND.domain}`;
+  const appShareUrl = `https://${BRAND.domain}/welkom.html`;
   const appShareText = "Gratis oefenen voor groep 1-8 en klas 1-6 (MAVO, HAVO, VWO, gymnasium). Alles gratis t/m eind 2026!";
   const canNativeShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
 

@@ -1492,7 +1492,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               type="button"
               style={{ background: "none", border: "none", color: "#25D366", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
               onClick={() => {
-                const text = `Ken je ${BRAND.shortName} al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Open de app: https://www.${BRAND.domain}`;
+                const text = `Ken je ${BRAND.shortName} al?\n\nSamen slim worden met leuke vragen! Oefenen voor school was nog nooit zo leuk.\n\n👉 Bekijk de intro: https://${BRAND.domain}/welkom.html`;
                 window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
                 trackShare("whatsapp");
               }}
@@ -1506,7 +1506,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               type="button"
               style={{ background: "none", border: "none", color: "#1877F2", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
               onClick={() => {
-                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`, "_blank");
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}/welkom.html`)}`, "_blank");
                 trackShare("facebook");
               }}
             >
