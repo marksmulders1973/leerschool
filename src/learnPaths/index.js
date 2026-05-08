@@ -25,6 +25,13 @@ import schattenAfronden from "./schattenAfronden.js";
 import redactiesommen from "./redactiesommen.js";
 import vlakkeFigurenPo from "./vlakkeFigurenPo.js";
 import negatieveGetallenPo from "./negatieveGetallenPo.js";
+import werkwoordTijdenPo from "./werkwoordTijdenPo.js";
+import woordenschatPo from "./woordenschatPo.js";
+import spellingOverigePo from "./spellingOverigePo.js";
+import woordsoortenPo from "./woordsoortenPo.js";
+import schemasStappenplannenPo from "./schemasStappenplannenPo.js";
+import kaartlezenPo from "./kaartlezenPo.js";
+import samenvattenHoofdgedachtePo from "./samenvattenHoofdgedachtePo.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -94,6 +101,13 @@ export const ALL_LEARN_PATHS = {
   "redactiesommen-pad": redactiesommen,
   "vlakke-figuren-po": vlakkeFigurenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
+  "werkwoord-tijden-po": werkwoordTijdenPo,
+  "woordenschat-po": woordenschatPo,
+  "spelling-overige-po": spellingOverigePo,
+  "woordsoorten-po": woordsoortenPo,
+  "schemas-stappenplannen-po": schemasStappenplannenPo,
+  "kaartlezen-po": kaartlezenPo,
+  "samenvatten-hoofdgedachte-po": samenvattenHoofdgedachtePo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
