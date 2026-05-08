@@ -728,6 +728,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let customLevelEinde = false;
     let levelGehaaldFlash = 0;
     let levelGehaaldNummer = 0;
+    // Demo-flag: forceer 1 loop bij entry van level 2 zodat Mark de nieuwe
+    // ramp+gradient-render kan verifiëren zonder op RNG te wachten.
+    let forceLoopL2Gedaan = false;
     const sessieLevelRecords = {}; // { level: maxScore behaald in dat level } voor opslag bij eindeSessie
     let scoreBijLevelStart = 0;
     // Boss-fights — na elk 5e level (5, 10, 15 ... 95)
@@ -4743,6 +4746,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
           // confetti
           spawnParticles(W * 0.5, H * 0.3, 24, "#69f0ae", { spread: 10, opwaarts: 4, leven: 60, grootte: 5, zwaartekracht: 0.18, glow: 18 });
+          // Demo: forceer 1 loop bij entry L2 zodat Mark 'm zeker ziet
+          if (nieuwLevel === 2 && !forceLoopL2Gedaan && !customLevelMode && !bossActief) {
+            forceLoopL2Gedaan = true;
+            const hoogte_l = 0.40 * H;
+            const breedte_l = 0.38 * H;
+            const wx_l = worldScrollX + W + 200 * SCHAAL;
+            const baseY_l = GROND_Y + SPELER_GROOTTE - hoogte_l;
+            schansen.push({
+              x: W + 200 * SCHAAL,
+              y: baseY_l,
+              breedte: breedte_l,
+              hoogte: hoogte_l,
+              type: "loop",
+              geactiveerd: false,
+              worldX: wx_l,
+              baseY: baseY_l,
+            });
+          }
           // SKIN UNLOCK: nieuw level bereikt = nieuwe skin?
           const skinHit = SKINS.find((s) => s.unlockLevel === nieuwLevel);
           if (skinHit) {
