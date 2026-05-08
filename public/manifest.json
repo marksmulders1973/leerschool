@@ -4,12 +4,15 @@
   "description": "Een kwartier per dag, een leven lang slimmer — oefen voor school. Groep 1-8 en voortgezet onderwijs.",
   "id": "/",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
   "background_color": "#0a1220",
   "theme_color": "#00c853",
   "lang": "nl",
+  "dir": "ltr",
+  "prefer_related_applications": false,
   "categories": ["education", "kids"],
   "icons": [
     {

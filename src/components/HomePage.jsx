@@ -6,6 +6,7 @@ import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import usePwaInstall from "../shared/usePwaInstall.js";
 
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
@@ -412,8 +413,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     try { track("welcome_video_closed"); } catch {}
     setShowWelcomeVideo(false);
   };
-  const [installPrompt, setInstallPrompt] = useState(null);
-  const [installBezig, setInstallBezig] = useState(false);
+  // PWA-install via gedeelde hook (audit-2 v2 + Mark feedback 2026-05-08).
+  const pwa = usePwaInstall();
   const [showInstallHelp, setShowInstallHelp] = useState(false);
   const [shareToast, setShareToast] = useState(null);
   const [showFeedback, setShowFeedback] = useState(false);
@@ -510,15 +511,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     setShareToast(naam ? "🌟 Bedankt! Je staat in de Hall of Fame voor delers" : "🌟 Bedankt voor het delen!");
     setTimeout(() => setShareToast(null), 3500);
   };
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
-
-  useEffect(() => {
-    if (window.__pwaInstallPrompt) setInstallPrompt(window.__pwaInstallPrompt);
-    const handler = (e) => { e.preventDefault(); setInstallPrompt(e); };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
-  }, []);
+  // isIOS / isStandalone komen nu uit de hook (`pwa.platform`, `pwa.standalone`).
 
   const finishOnboarding = () => {
     try { localStorage.setItem("ls_onboarded", "1"); } catch {}
@@ -1138,48 +1131,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
           } catch {}
           const showPromo = isLaunchPromoActive() && !hasName;
-          const showInstall = !isStandalone;
+          const showInstall = pwa.canShow;
           if (!showPromo && !showInstall) return null;
           const handleInstall = async () => {
-            if (installBezig) return;
-            const triggerPrompt = async (px) => {
-              px.prompt();
-              const { outcome } = await px.userChoice;
-              if (outcome === "accepted") setInstallPrompt(null);
-            };
-            if (installPrompt) { await triggerPrompt(installPrompt); return; }
-            setInstallBezig(true);
-            const waiting = await new Promise((resolve) => {
-              let done = false;
-              const handler = (e) => {
-                if (done) return;
-                done = true;
-                e.preventDefault();
-                window.removeEventListener("beforeinstallprompt", handler);
-                resolve(e);
-              };
-              window.addEventListener("beforeinstallprompt", handler);
-              const interval = setInterval(() => {
-                if (window.__pwaInstallPrompt && !done) {
-                  done = true;
-                  clearInterval(interval);
-                  window.removeEventListener("beforeinstallprompt", handler);
-                  resolve(window.__pwaInstallPrompt);
-                }
-              }, 250);
-              setTimeout(() => {
-                if (done) return;
-                done = true;
-                clearInterval(interval);
-                window.removeEventListener("beforeinstallprompt", handler);
-                resolve(null);
-              }, 2500);
-            });
-            setInstallBezig(false);
-            if (waiting) {
-              setInstallPrompt(waiting);
-              await triggerPrompt(waiting);
-            } else {
+            const r = await pwa.promptInstall();
+            // Geen native prompt mogelijk (iOS, of Chrome heeft 'm nog
+            // niet beschikbaar gemaakt) → toon instructie-modal met de
+            // platform-specifieke stappen uit de hook.
+            if (r.result === "no-prompt") {
               setShowInstallHelp(true);
             }
           };
@@ -1211,7 +1170,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {showInstall && (
                 <button
                   type="button"
-                  disabled={installBezig}
+                  disabled={pwa.installing}
                   onClick={handleInstall}
                   style={{
                     flex: showPromo ? 1 : 1,
@@ -1224,7 +1183,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     alignItems: "center",
                     justifyContent: "center",
                     gap: 2,
-                    cursor: installBezig ? "default" : "pointer",
+                    cursor: pwa.installing ? "default" : "pointer",
                     fontFamily: "var(--font-body)",
                     color: "#fff",
                     minWidth: 0,
@@ -1232,7 +1191,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 >
                   <span style={{ fontSize: 22, lineHeight: 1 }} aria-hidden="true">📲</span>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: "#00d4ff", textAlign: "center", lineHeight: 1.15 }}>
-                    {installBezig ? "Een moment…" : "Installeer app"}
+                    {pwa.installing ? "Een moment…" : "Installeer app"}
                   </div>
                 </button>
               )}
@@ -1285,58 +1244,42 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             naast de promo-banner of vult de hele rij als de promo niet
             zichtbaar is voor returning users.) */}
 
-        {showInstallHelp && (
-          <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
-            <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 {BRAND.name} installeren</div>
-              {isIOS ? (
-                <>
-                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Op iPhone/iPad:</p>
-                  <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
-                    <li>Open <strong>{BRAND.domain}</strong> in Safari</li>
-                    <li>Tik op het <strong>Deel-icoontje</strong> (vierkant met pijl omhoog)</li>
-                    <li>Kies <strong>"Zet op beginscherm"</strong></li>
-                  </ol>
-                </>
-              ) : (
-                <>
-                  <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px" }}>Installeer {BRAND.name} als app:</p>
-                  <ul style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
-                    <li><strong>Android/Chrome</strong>: menu (⋮) → "App installeren"</li>
-                    <li><strong>Windows/Mac</strong>: klik op het installatie-icoon in de adresbalk</li>
-                    <li><strong>Edge</strong>: menu → "Apps" → "Deze site installeren"</li>
-                  </ul>
-                </>
-              )}
-              <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>Daarna kun je {BRAND.name} openen als een echte app, ook offline.</p>
-              {/* Als Chrome het beforeinstallprompt-event alsnog levert terwijl
-                  deze modal openstaat (gebeurt soms na een paar tellen op de
-                  pagina), tonen we een echte 'Nu installeren'-knop. Sluit-knop
-                  blijft altijd staan zodat de modal weg kan. */}
-              <div style={{ display: "flex", gap: 10 }}>
-                {installPrompt && (
+        {showInstallHelp && (() => {
+          const ins = pwa.getManualInstructions();
+          return (
+            <div onClick={() => setShowInstallHelp(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+              <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#00d4ff", marginBottom: 10 }}>📲 {BRAND.name} installeren</div>
+                <p style={{ fontSize: 14, lineHeight: 1.45, margin: "0 0 10px", color: "var(--color-text-muted)" }}>{ins.title}</p>
+                <ol style={{ fontSize: 14, lineHeight: 1.6, paddingLeft: 20, margin: "0 0 12px" }}>
+                  {ins.steps.map((s, i) => <li key={i} style={{ marginBottom: 4 }}>{s}</li>)}
+                </ol>
+                <p style={{ fontSize: 12, color: "var(--color-text-muted)", margin: "0 0 14px" }}>
+                  Daarna kun je {BRAND.name} openen als een echte app, ook offline. Browser detected: <strong style={{ color: "#00d4ff" }}>{pwa.browser}</strong> op <strong style={{ color: "#00d4ff" }}>{pwa.platform}</strong>.
+                </p>
+                <div style={{ display: "flex", gap: 10 }}>
+                  {pwa.canPromptNatively && (
+                    <button
+                      onClick={async () => {
+                        await pwa.promptInstall();
+                        setShowInstallHelp(false);
+                      }}
+                      style={{ flex: 2, padding: 10, border: "none", borderRadius: 10, background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                    >
+                      🚀 Nu installeren
+                    </button>
+                  )}
                   <button
-                    onClick={async () => {
-                      installPrompt.prompt();
-                      const { outcome } = await installPrompt.userChoice;
-                      if (outcome === "accepted") setInstallPrompt(null);
-                      setShowInstallHelp(false);
-                    }}
-                    style={{ flex: 2, padding: 10, border: "none", borderRadius: 10, background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+                    onClick={() => setShowInstallHelp(false)}
+                    style={{ flex: 1, padding: 10, border: pwa.canPromptNatively ? "1px solid rgba(255,255,255,0.20)" : "none", borderRadius: 10, background: pwa.canPromptNatively ? "transparent" : "#00d4ff", color: pwa.canPromptNatively ? "var(--color-text)" : "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
                   >
-                    🚀 Nu installeren
+                    {pwa.canPromptNatively ? "Sluit" : "Oké, duidelijk"}
                   </button>
-                )}
-                <button
-                  onClick={() => setShowInstallHelp(false)}
-                  style={{ flex: 1, padding: 10, border: installPrompt ? "1px solid rgba(255,255,255,0.20)" : "none", borderRadius: 10, background: installPrompt ? "transparent" : "#00d4ff", color: installPrompt ? "var(--color-text)" : "#0a1525", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
-                >
-                  {installPrompt ? "Sluit" : "Oké, duidelijk"}
-                </button>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {step === "name" && (
           <div style={{ width: "100%", maxWidth: 360, display: "flex", flexDirection: "column", gap: 12 }}>
