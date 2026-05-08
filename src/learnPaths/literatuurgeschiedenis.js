@@ -653,6 +653,9 @@ const literatuurgeschiedenis = {
   emoji: "📚",
   level: "havo4-5",
   subject: "taal",
+  // SLO-niveau (G4c): 3F/3S — literatuur is havo/vwo-examenstof.
+  referentieNiveau: "3F/3S",
+  sloThema: "Literatuur — geschiedenis",
   intro:
     "Examenstof havo 4-5 literatuur Nederlands: 9 stromingen op de tijdlijn (Middeleeuwen tot nu) met kenmerken, top-schrijvers en bekendste werken. Plus literaire begrippen (vertelperspectief, stijlfiguren) voor leesdossier-bespreking.",
   triggerKeywords: [

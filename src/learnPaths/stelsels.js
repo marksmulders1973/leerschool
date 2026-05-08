@@ -85,9 +85,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Check beide: 5 + 2 = 7 ✓, en 2·5 − 2 = 8 ✓. Beide kloppen.",
-          "Check beide: 5 + 2 = 7 ✓, en 2·5 − 2 = 8 ✓. Beide kloppen.",
-          "Beide kloppen wel — controleer rustig: 5+2=7 en 2·5-2=10-2=8.",
+          "Vul (5, 2) in BEIDE vergelijkingen — kloppen ze allebei?",
+          "Heb je beide vergelijkingen los gecheckt? Eén klopt niet automatisch betekent 'beide niet'.",
+          "Reken rustig na: vul x=5 en y=2 in elke vergelijking. Wat zie je?",
         ],
       },
     ],

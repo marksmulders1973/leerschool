@@ -58,9 +58,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "8 = 2³, niet 2⁴. Vraag: tot welke macht moet 2 om 16 te worden?",
-          "2 = log₂(4), want 2² = 4. Hier zoeken we voor 16.",
-          "16 zelf is het argument, niet het antwoord. Het antwoord is de exponent.",
+          "Tot welke macht moet 2 om 16 te worden? 2 keer met zichzelf vermenigvuldigen — hoe vaak?",
+          "Dat is een lagere macht — kijk hoeveel keer 2 met zichzelf moet om 16 te bereiken.",
+          "Niet het argument zelf — log vraagt naar de exponent, niet naar het getal in de log.",
         ],
       },
       {

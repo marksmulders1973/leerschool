@@ -642,6 +642,9 @@ const werkwoordsvervoeging = {
   emoji: "📝",
   level: "klas1-vmbo-vwo",
   subject: "taal",
+  // SLO-niveau (G4c): 2F basis. d/t-regels = klassiek vmbo-eindterm.
+  referentieNiveau: "2F",
+  sloThema: "Taalverzorging — werkwoordsspelling",
   intro:
     "De d/t-regels van het Nederlands — vanaf de stam tot voltooid deelwoord. Met 't kofschip, de lopen-test en de beruchte instinkers (worden/wordt, gebeurt/gebeurd, vindt/gevonden).",
   triggerKeywords: [

@@ -566,6 +566,9 @@ const tekstanalyse = {
   emoji: "🔍",
   level: "havo4-5",
   subject: "taal",
+  // SLO-niveau (G4c): 3F havo / 3S vwo. Tekstanalyse = kern centraal examen.
+  referentieNiveau: "3F/3S",
+  sloThema: "Lezen — tekstanalyse",
   intro:
     "Examenstof havo 4-5 leesvaardigheid: tekstdoel + doelgroep herkennen, hoofdgedachte/hoofdvraag/deelvragen vinden, alinea-functies en verbanden analyseren, feit ↔ mening onderscheiden, bron-strategie en objectiviteit beoordelen. Complementair aan argumentatieleer (= argumenten + drogredenen) en schrijfvaardigheid (= produceren).",
   triggerKeywords: [

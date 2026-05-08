@@ -73,9 +73,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is alleen maat 38. Tel ook maat 39 erbij: 4 + 2 = 6.",
-          "Dat is alleen maat 39. Tel ook 38 erbij.",
-          "10 is iedereen. We zoeken alleen 38 en 39.",
+          "Heb je beide maten meegenomen — of alleen één?",
+          "Niet alleen 39 — er zijn twee maten relevant. Tel ze samen.",
+          "Dat is iedereen totaal. We zoeken alleen de twee specifieke maten.",
         ],
       },
     ],

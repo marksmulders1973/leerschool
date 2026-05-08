@@ -644,6 +644,9 @@ const kwadratenWortels = {
   emoji: "²",
   level: "klas1-vwo",
   subject: "wiskunde",
+  // SLO-niveau (G4b): 2F basis. Kwadrateren + worteltrekken = vmbo-onderbouw.
+  referentieNiveau: "2F",
+  sloThema: "Getallen — machten en wortels",
   topics: ["WI.algebra.kwadraten"],
   intro: "H5 uit Wiskunde Flex deel 2: vanaf het kwadraat (3² = 9) tot wortels (√), rekenen met wortels, x² = c oplossen, en de soorten getallen (rationaal, irrationaal). Op basisniveau opgebouwd.",
   triggerKeywords: ["kwadraat", "kwadraten", "wortel", "wortels", "√", "x²", "irrationaal", "rationaal", "soorten getallen"],

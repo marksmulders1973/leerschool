@@ -339,6 +339,10 @@ const verhoudingen = {
   emoji: "⚖️",
   level: "klas1-vwo",
   subject: "wiskunde",
+  // SLO-niveau (G4b): 2F basis. Verhoudingen-tabellen + schaal staan
+  // in eindterm vmbo-bb/kb. Recepten/schaal/kruisproduct = praktisch.
+  referentieNiveau: "2F",
+  sloThema: "Verhoudingen",
   topics: ["WI.rekenen.verhoudingen"],
   intro: "Verhoudingen vergelijken hoeveelheden — bij recepten, schaalmodellen, kortingen, mengen. Hier leer je: notatie a : b, vereenvoudigen, verhoudingstabellen, kruisproduct, schaalmodellen en recepten omrekenen.",
   triggerKeywords: ["verhouding", "verhoudingen", "evenredig", "kruisproduct", "verhoudingstabel"],

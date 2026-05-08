@@ -472,6 +472,9 @@ const procenten = {
   emoji: "💯",
   level: "klas1-vwo",
   subject: "wiskunde",
+  // SLO-niveau (G4b): 2F basis-vmbo, 2S streef. Cito-onderdeel.
+  referentieNiveau: "2F",
+  sloThema: "Verhoudingen — procenten",
   topics: ["WI.rekenen.procenten"],
   intro: "Procenten kom je overal tegen — in de winkel, op je rekening, in nieuwsbericht. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, korting, toename en BTW.",
   triggerKeywords: ["procent", "procenten", "korting", "btw", "toename", "stijging", "afname"],

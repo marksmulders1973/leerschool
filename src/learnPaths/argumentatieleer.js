@@ -655,6 +655,9 @@ const argumentatieleer = {
   emoji: "💬",
   level: "havo4-5",
   subject: "taal",
+  // SLO-niveau (G4c): 3F havo, 3S vwo. Argumentatie = examenstof havo/vwo.
+  referentieNiveau: "3F/3S",
+  sloThema: "Lezen — argumentatie",
   intro:
     "Examenstof havo 4-5 leesvaardigheid: standpunt en argumenten herkennen, vijf argumentatieschema's toepassen, structuur van argumentatie analyseren, en de vier veelvoorkomende drogredenen herkennen. Met eigen oefenvragen — geen tekst uit een specifieke methode.",
   triggerKeywords: [

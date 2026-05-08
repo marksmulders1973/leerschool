@@ -694,6 +694,10 @@ const zinsontleding = {
   emoji: "🧩",
   level: "klas1-vmbo-vwo",
   subject: "taal",
+  // SLO-niveau (G4c sprint-5): 2F basis. Onderwerp/lijdend voorwerp/persoonsvorm
+  // = einde-vmbo basisterm taalbeschouwing.
+  referentieNiveau: "2F",
+  sloThema: "Taalbeschouwing — zinsontleding",
   intro:
     "Zinnen ontleden voor klas 1-2: persoonsvorm + onderwerp + gezegde (werkwoordelijk vs naamwoordelijk) + lijdend voorwerp + meewerkend voorwerp + bepalingen (plaats, tijd, wijze, reden) + verschil bijwoord/bijvoeglijk naamwoord. Met trucjes om elk zinsdeel snel te vinden.",
   triggerKeywords: [

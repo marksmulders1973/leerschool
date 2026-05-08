@@ -113,9 +113,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt alle getallen en x'en als één gegroepeerd. Maar x-termen en constanten zijn niet soortgelijk.",
-          "Je bent vergeten 2x af te trekken: 5x − 2x = 3x.",
-          "Je hebt alles bij elkaar opgeteld zonder rekening te houden met de letters.",
+          "Welke termen mag je samentrekken — alles, of alleen termen met dezelfde letter?",
+          "Heb je beide x-termen meegenomen? Tel óf trek de coëfficiënten van x-en bij elkaar op.",
+          "Niet alles in 1 hoop — getallen apart, x-en apart, x²-termen apart.",
         ],
       },
     ],
@@ -497,6 +497,9 @@ const rekenenMetLetters = {
   emoji: "🔤",
   level: "klas1-vwo",
   subject: "wiskunde",
+  // SLO-niveau (G4b): 2F → 2S. Algebra-basis hoort bij streefniveau havo.
+  referentieNiveau: "2F/2S",
+  sloThema: "Verbanden — algebra",
   topics: ["WI.algebra.basis"],
   intro: "Algebra-basis: hoe reken je met letters? Termen herleiden, haakjes wegwerken, merkwaardige producten ((a+b)², (a−b)², (a+b)(a−b)) en rekenen met machten. Fundament voor élke wiskunde later.",
   triggerKeywords: ["herleiden", "haakjes wegwerken", "merkwaardig product", "machten", "termen", "soortgelijke termen", "(a+b)²"],

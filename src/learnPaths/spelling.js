@@ -620,6 +620,9 @@ const spelling = {
   emoji: "🔤",
   level: "klas1-vmbo-vwo",
   subject: "taal",
+  // SLO-niveau (G4c): 2F basis. Spellingsregels einde basisschool / vmbo.
+  referentieNiveau: "2F",
+  sloThema: "Taalverzorging — spelling",
   intro:
     "De basis van Nederlandse spelling voor klas 1-2: open/gesloten lettergrepen, korte/lange klinkers, ei/ij + au/ou (woordbeeld), ch/g, samenstellingen (aaneen + tussen-n + tussen-s), hoofdletters, verkleinwoorden, apostrof. Geen werkwoordsspelling — die zit al in 'werkwoordsvervoeging'.",
   triggerKeywords: [

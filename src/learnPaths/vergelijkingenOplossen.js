@@ -561,6 +561,9 @@ const vergelijkingenOplossen = {
   emoji: "⚖️",
   level: "klas2-vmbo-vwo",
   subject: "wiskunde",
+  // SLO-niveau (G4b): 2F → 2S. Vergelijkingen oplossen = onderbouw VO.
+  referentieNiveau: "2F/2S",
+  sloThema: "Verbanden — vergelijkingen",
   topics: ["WI.algebra.vergelijking"],
   intro:
     "Lineaire vergelijkingen oplossen met de balans-methode: van eenvoudige x + a = b, via vergelijkingen met x aan beide kanten en haakjes/breuken, tot woordvergelijkingen. Voorbereiding op alle latere algebra (lineaire formules, kwadratische vergelijkingen, stelsels).",

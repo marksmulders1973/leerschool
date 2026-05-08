@@ -771,6 +771,21 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                       {p.title}
                                     </span>
                                     <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
+                                    {p.referentieNiveau && (
+                                      <span title={`SLO-referentieniveau ${p.referentieNiveau}${p.sloThema ? ` · ${p.sloThema}` : ""}`} style={{
+                                        fontFamily: "var(--font-body)",
+                                        fontSize: 10,
+                                        fontWeight: 700,
+                                        padding: "1px 6px",
+                                        borderRadius: 999,
+                                        background: "rgba(105,178,255,0.10)",
+                                        border: "1px solid rgba(105,178,255,0.30)",
+                                        color: "#69b2ff",
+                                        letterSpacing: 0.3,
+                                      }}>
+                                        {p.referentieNiveau}
+                                      </span>
+                                    )}
                                     {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
                                   </div>
                                   <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
