@@ -151,6 +151,46 @@ function SvgFigure({ svg }) {
   );
 }
 
+// Quote-card met de tekst-passage waar het antwoord op staat.
+// Gebruikt door wrong-overlay en correctEvidence-mode bij begrijpend-lezen-
+// vragen. Mark feedback 2026-05-08: didactisch waardevol om te tonen WAAR
+// in de tekst het antwoord stond, niet alleen WAT het was.
+function EvidenceQuote({ text, label = "📍 In de tekst staat" }) {
+  if (!text) return null;
+  return (
+    <div style={{
+      padding: "10px 12px 10px 14px",
+      marginTop: 10,
+      borderRadius: 10,
+      background: "rgba(255,213,79,0.10)",
+      border: "1px solid rgba(255,213,79,0.35)",
+      borderLeft: "4px solid #ffd54f",
+    }}>
+      <div style={{
+        fontFamily: "var(--font-display)",
+        fontSize: 11,
+        fontWeight: 700,
+        color: "#ffd54f",
+        textTransform: "uppercase",
+        letterSpacing: 0.6,
+        marginBottom: 6,
+      }}>
+        {label}
+      </div>
+      <div style={{ fontSize: 13.5, color: C.text, fontStyle: "italic", lineHeight: 1.5 }}>
+        <span aria-hidden="true">"</span>
+        <mark style={{
+          background: "rgba(255,213,79,0.35)",
+          color: C.text,
+          padding: "1px 4px",
+          borderRadius: 3,
+        }}>{text}</mark>
+        <span aria-hidden="true">"</span>
+      </div>
+    </div>
+  );
+}
+
 // Knop die een YouTube-zoekopdracht opent voor de huidige stap.
 // Gebruik bewust een search-URL ipv vaste video-URL: dan is de
 // inhoud altijd actueel en is er geen onderhoud aan dode links.
@@ -192,7 +232,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const startMode = typeof initialStepIdx === "number" ? "reading" : "overview";
   const startStep = typeof initialStepIdx === "number" ? initialStepIdx : 0;
 
-  // mode: overview | reading | checking | wrong | stepDone | allDone
+  // mode: overview | reading | checking | wrong | correctEvidence | stepDone | allDone
+  // correctEvidence = pauze na correct antwoord op begrijpend-lezen-vraag
+  // om de aanwijzing in de tekst te tonen (Mark feedback 2026-05-08).
   const [mode, setMode] = useState(startMode);
   const [stepIdx, setStepIdx] = useState(startStep);
   const [checkIdx, setCheckIdx] = useState(0);
@@ -303,6 +345,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // Bij herhaalde poging (attempts > 1) is de check al fout geregistreerd
       // via setMode("wrong"); blijft op de herhaal-lijst tot een schone ronde.
       if (attempts === 1) adaptRecordRight(pathId, stepIdx, realCheckIdx);
+      // Bij begrijpend-lezen-vragen met `evidence`: pauzeer en toon aan de
+      // leerling waar in de tekst het antwoord stond (didactiek-feedback Mark).
+      if (currentCheck.evidence) {
+        setMode("correctEvidence");
+        return;
+      }
       setTimeout(() => {
         if (checkIdx + 1 < checks.length) {
           setCheckIdx(checkIdx + 1);
@@ -318,6 +366,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       setLastWrongAnswer(currentCheck.options?.[i] || null);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
       setMode("wrong");
+    }
+  };
+
+  // Doorgaan-handler na correctEvidence-pauze.
+  const advanceAfterEvidence = () => {
+    if (checkIdx + 1 < checks.length) {
+      setCheckIdx(checkIdx + 1);
+      setSelected(null);
+      setAttempts(1);
+      setMode("checking");
+    } else {
+      completeStep();
     }
   };
 
@@ -623,10 +683,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
               ❌ Nog niet helemaal
             </div>
-            <div style={{ fontSize: 14, color: C.text, marginBottom: 14, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
               {currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}
             </div>
-            <button onClick={() => setMode("reading")} style={btnSecondary()}>
+            {/* Begrijpend-lezen: laat de plek in de tekst zien waar het
+                antwoord vandaan komt (Mark feedback 2026-05-08). */}
+            <EvidenceQuote text={currentCheck.evidence} label="💡 Hint — kijk hier in de tekst" />
+            <button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
               📖 Lees uitleg opnieuw
             </button>
             <button
@@ -637,6 +700,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </button>
             <button onClick={tryAgain} style={{ ...btnPrimary(), marginTop: 8 }}>
               🔁 Probeer opnieuw
+            </button>
+          </div>
+        )}
+
+        {mode === "correctEvidence" && currentCheck && (
+          <div style={cardStyle(C.good)}>
+            <div style={{ fontSize: 18, fontWeight: 700, color: C.good, marginBottom: 8 }}>
+              ✅ Goed!
+            </div>
+            <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
+              Je vond het juiste antwoord. Hier stond de aanwijzing in de tekst:
+            </div>
+            <EvidenceQuote text={currentCheck.evidence} label="📍 Hier vond je het" />
+            <button onClick={advanceAfterEvidence} style={{ ...btnPrimary(), marginTop: 14 }}>
+              {checkIdx + 1 < checks.length ? "Volgende vraag ▶" : "Klaar met deze stap ✓"}
             </button>
           </div>
         )}

@@ -87,6 +87,7 @@ const steps = [
         q: "In welk jaar werd de eerste fiets uitgevonden?",
         options: ["1817", "1860", "1885", "1900"],
         answer: 0,
+        evidence: "De eerste fiets werd in 1817 uitgevonden door de Duitse uitvinder Karl von Drais.",
         wrongHints: [
           null,
           "Toen werden pedalen toegevoegd — de fiets bestond toen al. Zoek het allereerste jaartal.",
@@ -104,6 +105,7 @@ const steps = [
           "Omdat de pedalen op het achterwiel zaten",
         ],
         answer: 0,
+        evidence: "Door de grote omtrek van het wiel ging één pedaalomwenteling gepaard met meer afstand.",
         wrongHints: [
           null,
           "Tekst zegt niets over kosten of materiaalbesparing — let op de zin over snelheid.",
@@ -121,6 +123,7 @@ const steps = [
           "Een onderdeel van de remmen",
         ],
         answer: 0,
+        evidence: "ging één pedaalomwenteling gepaard met meer afstand",
         wrongHints: [
           null,
           "Banden komen niet voor in dit stuk. Lees terug: 'pedaal' + 'omwenteling'.",
@@ -163,6 +166,7 @@ const steps = [
           "Een armband en wat touw",
         ],
         answer: 0,
+        evidence: "Je hebt nodig: ongeveer twintig metalen paperclips, een stukje touw, en een schaar.",
         wrongHints: [
           null,
           "Geen naald in de tekst — lees terug welke drie dingen genoemd worden.",
@@ -180,6 +184,7 @@ const steps = [
           "Omdat je anders teveel paperclips gebruikt",
         ],
         answer: 0,
+        evidence: "Werk rustig — als je gehaast bent, gaan de clips uit elkaar.",
         wrongHints: [
           null,
           "Vingers worden niet genoemd in de tekst.",
@@ -197,6 +202,7 @@ const steps = [
           "De schaar in twee delen knippen",
         ],
         answer: 0,
+        evidence: "Meet het door de keten om je pols te leggen.",
         wrongHints: [
           null,
           "Verven gebeurt VOORDAT je begint, niet vlak voor de sluiting.",
@@ -239,6 +245,7 @@ const steps = [
           "Schoolregels moeten strenger worden",
         ],
         answer: 0,
+        evidence: "Ik ben van mening dat dit een slecht idee is. Telefoons horen niet thuis op de basisschool.",
         wrongHints: [
           null,
           "Ouders worden alleen genoemd als context — geen standpunt.",
@@ -273,6 +280,7 @@ const steps = [
           "De schrijver beweert dat kinderen het al kunnen",
         ],
         answer: 0,
+        evidence: "Tegenstanders zeggen dat kinderen moeten leren omgaan met technologie. Dat klopt, maar dat hoeft niet op school. Thuis kunnen ouders het rustig begeleiden.",
         wrongHints: [
           null,
           "Het tegenargument staat WEL in de tekst — vierde alinea.",
@@ -315,6 +323,7 @@ const steps = [
           "Haar pen"
         ],
         answer: 0,
+        evidence: "Verbaasd voelde ze in haar rugzak — geen lunchtrommel.",
         wrongHints: [
           null,
           "Geen agenda in dit verhaal — lees terug, het gaat om eten.",
@@ -349,6 +358,7 @@ const steps = [
           "Hij weet niet wat hij anders moet zeggen",
         ],
         answer: 0,
+        evidence: "Tom legde de boterham gewoon op haar tafel en draaide zich om naar zijn eigen lunch. Hij maakte er geen punt van.",
         wrongHints: [
           null,
           "Tom eet juist zelf zijn eigen lunch — hij heeft wel honger.",
