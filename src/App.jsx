@@ -66,6 +66,7 @@ const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { ALL_LEARN_PATHS, levelsCompatible } from "./learnPaths/index.js";
+import { gameVisibleForUser, urlHasGameDeepLink } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
 import {
@@ -875,17 +876,25 @@ export default function App() {
         />
       )}
       {page === "obliteratorPlay" && (
-        <ObliteratorGame
-          userName={userName || "Speler"}
-          authUser={authUser}
-          wrongQuestions={[]}
-          vanDeelLink={false}
-          onChallengeFriend={() => {
-            setPvpState({ phase: "lobby", mode: "host" });
-            setPage("pvp-lobby");
-          }}
-          onClose={() => setPage("home")}
-        />
+        // S1: niet-ingelogd + flag aan → game verbergen voor Cito-ouder-ICP.
+        // Deeplink-bezoekers (via ?play=obliterator) komen via 'obliteratorDirect'
+        // route binnen, niet 'obliteratorPlay'. Guest die direct naar
+        // /obliterator gaat → redirect home met login-suggestie.
+        gameVisibleForUser(authUser, urlHasGameDeepLink()) ? (
+          <ObliteratorGame
+            userName={userName || "Speler"}
+            authUser={authUser}
+            wrongQuestions={[]}
+            vanDeelLink={false}
+            onChallengeFriend={() => {
+              setPvpState({ phase: "lobby", mode: "host" });
+              setPage("pvp-lobby");
+            }}
+            onClose={() => setPage("home")}
+          />
+        ) : (
+          (() => { setPage("home"); return null; })()
+        )
       )}
       {page === "home-v2" && <HomeV2 />}
       {page === "home-v3" && <HomeV3 />}
@@ -1472,7 +1481,7 @@ export default function App() {
     </footer>
     </Suspense>
     {BOTTOMNAV_PAGES.has(page) && (
-      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} />
+      <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} />
     )}
     {/* 15-min "kwartier zit erop" toast — viert het bereiken van het
         dag-doel. Bouwt op de slogan "Een kwartier per dag, een leven lang
@@ -1526,24 +1535,26 @@ export default function App() {
           >
             Doorgaan
           </button>
-          <button
-            type="button"
-            onClick={() => { track("kwartier_action", { keuze: "obliterator" }); setShowKwartierToast(false); setPage("obliteratorPlay"); }}
-            style={{
-              flex: "1 1 auto", minWidth: 130,
-              padding: "8px 12px",
-              borderRadius: 10,
-              border: "none",
-              background: "linear-gradient(135deg, #ff5030, #ffaa00)",
-              color: "#1a0008",
-              fontFamily: "var(--font-display)",
-              fontSize: 13, fontWeight: 800,
-              cursor: "pointer",
-              boxShadow: "0 3px 10px rgba(255,80,40,0.35)",
-            }}
-          >
-            🛸 OBLITERATOR
-          </button>
+          {gameVisibleForUser(authUser, urlHasGameDeepLink()) && (
+            <button
+              type="button"
+              onClick={() => { track("kwartier_action", { keuze: "obliterator" }); setShowKwartierToast(false); setPage("obliteratorPlay"); }}
+              style={{
+                flex: "1 1 auto", minWidth: 130,
+                padding: "8px 12px",
+                borderRadius: 10,
+                border: "none",
+                background: "linear-gradient(135deg, #ff5030, #ffaa00)",
+                color: "#1a0008",
+                fontFamily: "var(--font-display)",
+                fontSize: 13, fontWeight: 800,
+                cursor: "pointer",
+                boxShadow: "0 3px 10px rgba(255,80,40,0.35)",
+              }}
+            >
+              🛸 OBLITERATOR
+            </button>
+          )}
           <button
             type="button"
             onClick={() => { track("kwartier_action", { keuze: "klaar" }); setShowKwartierToast(false); setPage("home"); }}

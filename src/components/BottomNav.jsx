@@ -1,20 +1,25 @@
 import { track } from "../utils.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
+import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
 
-// Bottom-tabs nav (Duolingo-style). Vijf tabs: Home, Leren, Test, Scorebord,
+// Bottom-tabs nav (Duolingo-style). Tot 5 tabs: Home, Leren, Test, Scorebord,
 // OBLITERATOR. Design-system v1: tokens, tap-target ≥ 44px, glow-indicator
 // op brand-primary. "Test" is de korte vorm van "Test je kennis" (de
 // hero-tegel-titel) en deelt dezelfde QuizCardIcon-illustratie zodat het
 // visueel duidelijk is dat ze hetzelfde doen. OBLITERATOR-tab krijgt altijd
 // de oranje-gold gradient (matcht de START-knop in het spel) zodat 'ie er
 // als feature-tab uitspringt.
+//
+// S1 sprint-5 (audit-3): Scorebord + OBLITERATOR-tabs verbergen voor
+// niet-ingelogde bezoekers als VITE_HIDE_GAME_FOR_GUESTS=true. Cito-ouder
+// ICP ziet zo geen 'spelletje' bij eerste bezoek.
 
-const TABS = [
+const ALL_TABS = [
   { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
   { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
   { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
-  { id: "score",   label: "Scorebord",   emoji: "🏆", target: "leaderboard" },
-  { id: "spel",    label: "OBLITERATOR", emoji: "🛸", target: "obliteratorPlay", brand: true },
+  { id: "score",   label: "Scorebord",   emoji: "🏆", target: "leaderboard", gameRelated: true },
+  { id: "spel",    label: "OBLITERATOR", emoji: "🛸", target: "obliteratorPlay", brand: true, gameRelated: true },
 ];
 
 function bepaalActieveTab(page) {
@@ -31,8 +36,11 @@ function bepaalActieveTab(page) {
   return null;
 }
 
-export default function BottomNav({ currentPage, onNavigate }) {
+export default function BottomNav({ currentPage, onNavigate, authUser }) {
   const actief = bepaalActieveTab(currentPage);
+  // Filter game-related tabs voor niet-ingelogden als feature-flag aanstaat
+  const gameZichtbaar = gameVisibleForUser(authUser, urlHasGameDeepLink());
+  const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);
   return (
     <nav
       aria-label="Hoofdnavigatie"

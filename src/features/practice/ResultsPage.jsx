@@ -6,6 +6,7 @@ import { SoundEngine } from "../../utils.js";
 import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import supabase from "../../supabase.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
+import { gameVisibleForUser, urlHasGameDeepLink } from "../../shared/featureFlags.js";
 
 export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
   const latest = results[results.length - 1];
@@ -457,7 +458,24 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         )}
 
         <div style={{ marginTop: 20, animation: "popIn 0.6s ease 0.3s both" }}>
-          {latest.percentage >= 50 ? (
+          {!gameVisibleForUser(authUser, urlHasGameDeepLink()) ? (
+            // S1: niet-ingelogd + flag aan → game-CTA verbergen voor Cito-ouder-ICP.
+            // Toon login-prompt in plaats daarvan zodat speler kan opt-in.
+            onLogin && (
+              <button
+                onClick={onLogin}
+                style={{
+                  width: "100%", padding: "12px 16px", borderRadius: 14,
+                  border: "1px solid rgba(255,150,40,0.4)",
+                  background: "rgba(255,150,40,0.08)",
+                  color: "#ffcc40", fontFamily: "var(--font-display)",
+                  fontSize: 14, fontWeight: 700, cursor: "pointer",
+                }}
+              >
+                🔓 Log in om mini-game te spelen
+              </button>
+            )
+          ) : latest.percentage >= 50 ? (
             <>
               <button
                 onClick={() => setShowGame(true)}
