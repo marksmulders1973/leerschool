@@ -140,9 +140,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "25 = 5² = (2+3)². Maar zonder haakjes: eerst macht, dan optellen.",
-          "Onjuist. Bereken eerst 3² = 9, dan 2 + 9.",
-          "Onjuist. Eerst 3² = 9 berekenen, dan 2 erbij.",
+          "Je hebt eerst opgeteld, daarna gekwadrateerd — maar zonder haakjes is de volgorde anders.",
+          "Bijna — welke bewerking gaat eerst, kwadraat of optellen? (Volgorde-regel).",
+          "Welke volgorde geldt zonder haakjes — kwadraat of plus eerst?",
         ],
       },
       {

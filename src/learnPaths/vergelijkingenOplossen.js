@@ -165,9 +165,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Check: 7 + 12 = 19, niet 5. Hier moet x negatief zijn.",
-          "17 = 12 + 5 (verkeerd om). Trek 12 af van 5: 5 - 12 = -7.",
-          "Te negatief. Reken: 5 - 12 = -7.",
+          "Vul je antwoord in en check: levert x + 12 echt 5 op? Welk teken moet x dan hebben?",
+          "Verkeerde richting — om x alleen over te houden trek je de 12 af van beide kanten.",
+          "Te ver onder nul. Reken het rustig na: hoeveel moet je van 12 wegtrekken om bij 5 te komen?",
         ],
       },
     ],

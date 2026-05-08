@@ -176,9 +176,9 @@ ${baseAxes}
         answer: 0,
         wrongHints: [
           null,
-          "4 is a (helling). Er is geen los getal — dus b = 0.",
-          "x is geen getal. b is een getal.",
-          "Niet 1. Als er geen los getal staat, is b = 0 (de lijn gaat dan door de oorsprong).",
+          "Dat is de helling, niet b. Welke letter is het y-snijpunt in y = ax + b?",
+          "x is een variabele, geen getal. b moet een getal zijn.",
+          "Wat is b als er geen los getal achter de x staat? Door welk punt gaat de lijn dan?",
         ],
       },
     ],

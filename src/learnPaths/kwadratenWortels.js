@@ -161,9 +161,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 16 ÷ 2 gedaan. Maar de wortel zoekt: welk getal **in het kwadraat** geeft 16?",
-          "16 staat ónder de wortel. De vraag is: welk getal · zichzelf geeft 16?",
-          "256 = 16². Dat is juist het tegenovergestelde — kwadrateren in plaats van wortel.",
+          "Niet delen door 2 — de wortel zoekt: welk getal in het kwadraat geeft het getal onder de wortel?",
+          "16 staat ónder de wortel. Zoek: welk getal × zichzelf = 16?",
+          "Dat is het tegenovergestelde van wortel. Welke bewerking ondoet kwadrateren?",
         ],
       },
     ],

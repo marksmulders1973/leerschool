@@ -180,7 +180,7 @@ const steps = [
         q: "Mediaan van 8, 3, 6, 1, 9, 2, 7?",
         options: ["6", "5", "8", "3"],
         answer: 0,
-        wrongHints: [null, "Te laag. Sorteer: 1, 2, 3, **6**, 7, 8, 9. Middelste = 6.", "Te hoog. Het middelste van 7 getallen.", "Te laag. Sorteer eerst, dan middelste."],
+        wrongHints: [null, "Heb je gesorteerd voor je het middelste pakt?", "Te hoog — bij 7 getallen is welke positie de mediaan?", "Te laag — sorteer eerst van klein naar groot, daarna pak je het middelste."],
       },
     ],
   },

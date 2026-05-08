@@ -117,9 +117,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerd. ln(e) = 1, maar ln(1) = 0.",
-          "Geen logische uitkomst.",
-          "ln(1) is wel bepaald: 0. ln(0) zou onbepaald (of -oneindig) zijn.",
+          "Dat is ln(e), niet ln(1). Welke exponent hoort bij e^? = 1?",
+          "Geen logische uitkomst — log van 1 in willekeurige basis is altijd hetzelfde getal.",
+          "ln(1) is wél bepaald — ln(0) zou onbepaald zijn. Welke exponent geeft 1?",
         ],
       },
     ],

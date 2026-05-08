@@ -242,9 +242,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "1.15% is g zelf als procent — onjuist. Trek eerst 1 af: (1.15 − 1) · 100 = 15%.",
-          "115% zou betekenen méér dan verdubbelen. g = 2.15 zou 115% zijn, niet 1.15.",
-          "1.5% zou g = 1.015 zijn. Hier g = 1.15 → 15%.",
+          "De groeifactor zelf is niet het percentage. Welk deel van g is de 'oude waarde' en welk de groei?",
+          "Veel te groot — 115% groei zou méér dan verdubbelen betekenen. Past dat bij g=1.15?",
+          "Te klein — controleer: welk deel van 1.15 is de echte groei?",
         ],
       },
     ],

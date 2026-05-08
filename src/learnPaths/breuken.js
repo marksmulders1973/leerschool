@@ -261,9 +261,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt iets anders gedaan. Maak gelijknamig (noemer 4): ¼ + ²⁄₄ = ¾.",
-          "Je hebt tellers en noemers apart opgeteld (1+1=2, 4+2=6). Maar de regel werkt anders — gelijknamig maken eerst.",
-          "Klopt niet. ¼ + ½ = ¼ + ²⁄₄ = ¾.",
+          "De noemers zijn niet gelijk. Welke stap doe je eerst voor je tellers gaat optellen?",
+          "Niet beide los optellen — eerst gelijknamig maken (zelfde noemer) en daarna pas tellers samenvoegen.",
+          "De truc: zoek een gemeenschappelijke noemer voor je optelt. Welke past bij 4 én 2?",
         ],
       },
     ],
