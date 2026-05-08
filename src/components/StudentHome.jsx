@@ -5,6 +5,7 @@ import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import { loadDueTopics } from "../features/mastery/mastery.js";
 import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
 import Header from "./Header.jsx";
+import KindAcceptBanner from "./KindAcceptBanner.jsx";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -136,6 +137,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
       <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        <KindAcceptBanner userName={userName} />
         {profileBadge && (
           <div style={{
             display: "inline-flex", alignItems: "center", gap: 6,
