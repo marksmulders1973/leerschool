@@ -132,9 +132,9 @@ ${baseAxes}
         answer: 0,
         wrongHints: [
           null,
-          "Verdubbeling is exponentieel, niet lineair. Bij lineair zijn de sprongen telkens **gelijk**.",
-          "Bij lineair zijn alle sprongen even groot. 0→1→4→9 heeft sprongen +1, +3, +5 — niet gelijk.",
-          "Geen verandering is een speciaal geval (y = constant). Wel lineair, maar het 'gewone' antwoord met sprong +3 is duidelijker.",
+          "Verdubbeling is exponentieel — bij lineair zijn de sprongen telkens **gelijk**, niet groter en groter.",
+          "Bij lineair zijn alle sprongen even groot. Reken de verschillen tussen opeenvolgende getallen — zijn ze gelijk?",
+          "'Geen verandering' is een speciaal geval (y = constant). Lineair betekent gewoonlijk een constante stijging of daling.",
         ],
       },
     ],

@@ -70,9 +70,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "3 is het y-snijpunt (waar de lijn de y-as snijdt), niet de helling.",
-          "10 = 7 + 3 — geen logische berekening voor helling.",
-          "1/7 zou de helling van de loodrechte lijn zijn.",
+          "Dat is het y-snijpunt (b in y=ax+b). Welke letter is de helling — a of b?",
+          "Niet zomaar optellen — de helling staat als coëfficiënt vóór x.",
+          "Dat zou de loodrechte lijn zijn (omgekeerde-en-tegengesteld-truc).",
         ],
       },
     ],

@@ -140,9 +140,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "7 klopt, maar er is ook een **negatieve**: (−7)² = 49 ook. Dus twee oplossingen.",
-          "Je hebt 49 zelf overgenomen. Pas √ toe: √49 = 7 (en −7).",
-          "24,5 = 49 / 2. Maar bij x² = c gebruik je √c.",
+          "Bijna — een kwadraat-vergelijking heeft TWEE oplossingen. Welke andere x voldoet ook?",
+          "Pas √ toe op beide kanten — niet de waarde zelf overschrijven.",
+          "Niet delen door 2. Bij x² = c gebruik je de wortel-bewerking, niet halveren.",
         ],
       },
     ],

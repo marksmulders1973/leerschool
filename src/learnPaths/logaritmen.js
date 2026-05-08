@@ -106,9 +106,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "10 is het argument, niet het antwoord. Vraag: 10 tot welke macht is 10?",
-          "log(1) = 0. Maar log(10) = 1.",
-          "Bij log(100) = 2. Hier hebben we 10, niet 100.",
+          "10 is het argument, niet het antwoord. Welke exponent vraag je?",
+          "Dat is log(1). Hier vraag je naar log(10) — andere waarde.",
+          "Dat klopt voor log(100). Maar hier is het argument 10, niet 100.",
         ],
       },
       {

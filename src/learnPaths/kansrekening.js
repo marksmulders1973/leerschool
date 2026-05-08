@@ -98,9 +98,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1/3 = 2/6 — maar er zijn 3 even getallen (2, 4, 6), niet 2.",
-          "2/3 = 4/6 — maar er zijn 3 even getallen, niet 4.",
-          "1/6 zou kans op één specifiek getal zijn, niet alle even.",
+          "Hoeveel even getallen staan er op een dobbelsteen? Tel ze: 2, 4, 6...",
+          "Tel rustig: welke vlakken zijn even? Niet meer dan dat.",
+          "Dat is de kans op één specifiek vlak — maar je vraagt naar áLLE even getallen samen.",
         ],
       },
     ],

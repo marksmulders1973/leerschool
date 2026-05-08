@@ -61,9 +61,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 7 + 7 gedaan. Maar bij kwadraat **vermenigvuldig** je met zichzelf.",
-          "Hoe kom je aan 9? Reken: 7 keer 7.",
-          "Niet de cijfers naast elkaar plakken. 7² = 7 · 7.",
+          "Niet optellen — bij kwadraat **vermenigvuldig** je het getal met zichzelf.",
+          "Welke bewerking zit er in een kwadraat? Doe je + of ×?",
+          "Niet de cijfers naast elkaar plakken — een kwadraat is geen samenstelling. Wat is de bewerking?",
         ],
       },
     ],
