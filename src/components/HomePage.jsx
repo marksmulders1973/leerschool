@@ -402,6 +402,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [showOnboarding, setShowOnboarding] = useState(() => {
     try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
   });
+  // First-visit reclame-video — alleen 1× per browser, voor onboarding uit
+  const [showWelcomeVideo, setShowWelcomeVideo] = useState(() => {
+    try { return !localStorage.getItem("lk_zag_intro_video"); } catch { return false; }
+  });
+  const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(true);
+  const closeWelcomeVideo = () => {
+    try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
+    try { track("welcome_video_closed"); } catch {}
+    setShowWelcomeVideo(false);
+  };
   const [installPrompt, setInstallPrompt] = useState(null);
   const [installBezig, setInstallBezig] = useState(false);
   const [showInstallHelp, setShowInstallHelp] = useState(false);
@@ -616,6 +626,88 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           {shareToast}
         </div>
       )}
+      {showWelcomeVideo && (
+        <div
+          onClick={closeWelcomeVideo}
+          style={{
+            position: "fixed", inset: 0, zIndex: 10000,
+            background: "rgba(0,0,0,0.92)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: 16,
+          }}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              position: "relative",
+              width: "100%",
+              maxWidth: 480,
+              borderRadius: 20,
+              overflow: "hidden",
+              boxShadow: "0 12px 60px rgba(0,0,0,0.7)",
+              background: "#000",
+            }}
+          >
+            <video
+              src="/reclame.mp4"
+              autoPlay
+              loop
+              muted={welcomeVideoMuted}
+              playsInline
+              onClick={() => setWelcomeVideoMuted((m) => !m)}
+              style={{ width: "100%", display: "block", cursor: "pointer" }}
+            />
+            <button
+              onClick={closeWelcomeVideo}
+              aria-label="Sluiten"
+              style={{
+                position: "absolute", top: 10, right: 10,
+                width: 36, height: 36, borderRadius: "50%",
+                border: "none", background: "rgba(0,0,0,0.7)",
+                color: "#fff", fontSize: 18, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                lineHeight: 1,
+              }}
+            >
+              ✕
+            </button>
+            <button
+              onClick={() => setWelcomeVideoMuted((m) => !m)}
+              aria-label={welcomeVideoMuted ? "Geluid aan" : "Geluid uit"}
+              style={{
+                position: "absolute", top: 10, left: 10,
+                padding: "8px 14px", borderRadius: 999,
+                border: "none", background: "rgba(0,0,0,0.7)",
+                color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer",
+                fontFamily: "var(--font-display, sans-serif)",
+              }}
+            >
+              {welcomeVideoMuted ? "🔇 Geluid aan" : "🔊 Geluid uit"}
+            </button>
+            <div style={{
+              padding: "16px 20px 20px",
+              background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.85) 30%)",
+              position: "absolute", left: 0, right: 0, bottom: 0,
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 10,
+            }}>
+              <button
+                onClick={closeWelcomeVideo}
+                style={{
+                  padding: "13px 32px", borderRadius: 999,
+                  border: "none",
+                  background: "linear-gradient(135deg, #00C853, #00e676)",
+                  color: "#fff", fontFamily: "var(--font-display, sans-serif)",
+                  fontSize: 16, fontWeight: 800, cursor: "pointer",
+                  boxShadow: "0 6px 20px rgba(0,200,83,0.45)",
+                  letterSpacing: "0.01em",
+                }}
+              >
+                Probeer gratis →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       {showOnboarding && (
         <div style={{
           position: "fixed", inset: 0, zIndex: 9999,
@@ -809,18 +901,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
             },
-            // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
-            // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
-            // in de vierkante tegel. Label/sub naar first-person op 2026-05-07
-            // (avond) — parallel met Leerling/Leerkracht.
+            // Student-tegel met reclame-video (Mark 2026-05-08): zelfde
+            // model als model-student.jpg maar nu als 6-sec autoplay-loop.
+            // Beweging trekt aandacht naar deze tegel zonder geluid (verplicht
+            // muted voor mobile autoplay). Volledige reclame met geluid komt
+            // in de first-visit welkomst-modal.
             {
               key: "student",
               icon: (
-                <img
-                  src="/model-student.jpg"
-                  alt=""
+                <video
+                  src="/reclame.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster="/model-student.jpg"
                   aria-hidden="true"
-                  loading="lazy"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -828,6 +925,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     objectPosition: "center 25%",
                     borderRadius: 10,
                     display: "block",
+                    pointerEvents: "none",
                   }}
                 />
               ),
