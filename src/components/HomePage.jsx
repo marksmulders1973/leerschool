@@ -465,12 +465,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     if (feedbackQuotaReached()) { setFeedbackError("Je hebt vandaag al 3 berichten gestuurd. Probeer morgen weer."); return; }
     setFeedbackBusy(true); setFeedbackError("");
     try {
+      // Sprint-2 privacy-fix (G2a): bewaar OOK het path zodat admin signed URL
+      // kan gebruiken zodra bucket privatified is. publicUrl blijft als fallback
+      // voor backwards-compat met bestaande rijen.
       let screenshotUrl = null;
+      let screenshotPath = null;
       if (feedbackImage) {
         const ext = (feedbackImage.name.split(".").pop() || "png").toLowerCase().slice(0, 5);
         const path = `${new Date().toISOString().slice(0, 10)}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
         const { error: upErr } = await supabase.storage.from("feedback-screenshots").upload(path, feedbackImage, { contentType: feedbackImage.type, upsert: false });
         if (upErr) throw upErr;
+        screenshotPath = path;
         const { data } = supabase.storage.from("feedback-screenshots").getPublicUrl(path);
         screenshotUrl = data?.publicUrl || null;
       }
@@ -481,6 +486,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         page_url: typeof window !== "undefined" ? window.location.href.slice(0, 500) : null,
         user_agent: typeof navigator !== "undefined" ? (navigator.userAgent || "").slice(0, 300) : null,
         screenshot_url: screenshotUrl,
+        screenshot_path: screenshotPath,
       });
       if (error) throw error;
       incrementFeedbackQuota();

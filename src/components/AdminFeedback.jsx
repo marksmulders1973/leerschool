@@ -5,6 +5,7 @@ export default function AdminFeedback({ onBack, onHome }) {
   const [items, setItems] = useState(null);
   const [filter, setFilter] = useState("open");
   const [busy, setBusy] = useState({});
+  const [signedUrls, setSignedUrls] = useState({});
 
   const laad = async () => {
     let q = supabase.from("feedback").select("*").order("created_at", { ascending: false }).limit(200);
@@ -13,6 +14,16 @@ export default function AdminFeedback({ onBack, onHome }) {
     if (filter === "blocked") q = q.eq("blocked", true);
     const { data } = await q;
     setItems(data || []);
+    // Sprint-2 G2a: voor rijen met screenshot_path → signed URL ophalen.
+    // Bestaande rijen zonder path vallen terug op publicUrl in render.
+    const urlMap = {};
+    if (data) {
+      await Promise.all(data.filter(r => r.screenshot_path).map(async (r) => {
+        const { data: signed } = await supabase.storage.from("feedback-screenshots").createSignedUrl(r.screenshot_path, 600);
+        if (signed?.signedUrl) urlMap[r.id] = signed.signedUrl;
+      }));
+    }
+    setSignedUrls(urlMap);
   };
   useEffect(() => { laad(); }, [filter]);
 
@@ -76,9 +87,9 @@ export default function AdminFeedback({ onBack, onHome }) {
                 <div style={{ fontSize: 14, color: item.resolved ? "rgba(255,255,255,0.55)" : "var(--color-text-strong)", whiteSpace: "pre-wrap", lineHeight: 1.4, marginBottom: 8 }}>
                   {item.message}
                 </div>
-                {item.screenshot_url && (
-                  <a href={item.screenshot_url} target="_blank" rel="noreferrer" style={{ display: "inline-block", marginBottom: 8 }}>
-                    <img src={item.screenshot_url} alt="screenshot" style={{ maxWidth: "100%", maxHeight: 240, borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)" }} />
+                {(signedUrls[item.id] || item.screenshot_url) && (
+                  <a href={signedUrls[item.id] || item.screenshot_url} target="_blank" rel="noreferrer" style={{ display: "inline-block", marginBottom: 8 }}>
+                    <img src={signedUrls[item.id] || item.screenshot_url} alt="screenshot" style={{ maxWidth: "100%", maxHeight: 240, borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)" }} />
                   </a>
                 )}
                 {item.page_url && (

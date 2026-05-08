@@ -51,9 +51,21 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       });
   }, [authUser]);
 
-  // Laad scores voor geselecteerd kind
+  // Privacy: alleen scores tonen voor kinderen waarvan de koppeling
+  // bevestigd is. parent_child_links.verified moet expliciet TRUE zijn —
+  // anders kan elke ouder via naam-rade willekeurig kind volgen
+  // (audit-3 K6 / 2026-05-08).
+  const selectedChildVerified = children.find(
+    (c) => c.child_name === selectedChild && c.verified === true
+  );
+
+  // Laad scores voor geselecteerd kind — alleen bij verified link
   useEffect(() => {
-    if (!selectedChild) return;
+    if (!selectedChild || !selectedChildVerified) {
+      setChildScores([]);
+      setScoresLoading(false);
+      return;
+    }
     setScoresLoading(true);
     supabase.from("leaderboard")
       .select("subject, level, score, total, percentage, time_taken, created_at")
@@ -64,24 +76,29 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         setChildScores(data || []);
         setScoresLoading(false);
       });
-  }, [selectedChild]);
+  }, [selectedChild, selectedChildVerified]);
 
-  // Cito scores apart
+  // Cito scores apart — alleen bij verified link
   useEffect(() => {
-    if (!selectedChild) return;
+    if (!selectedChild || !selectedChildVerified) {
+      setCitoScores([]);
+      return;
+    }
     supabase.from("leaderboard")
       .select("subject, level, percentage, created_at")
       .eq("player_name", selectedChild)
       .eq("subject", "cito")
       .order("created_at", { ascending: false })
       .then(({ data }) => setCitoScores(data || []));
-  }, [selectedChild]);
+  }, [selectedChild, selectedChildVerified]);
 
   const addChild = async () => {
     if (!newChildName.trim() || !authUser) return;
     setLoading(true);
+    // Insert met verified=false — kind moet via koppelcode in StudentHome
+    // bevestigen (RLS-policy schrijft dan verified=true).
     const { data } = await supabase.from("parent_child_links")
-      .insert({ parent_user_id: authUser.id, child_name: newChildName.trim() })
+      .insert({ parent_user_id: authUser.id, child_name: newChildName.trim(), verified: false })
       .select().single();
     if (data) {
       setChildren(prev => [...prev, data]);
@@ -95,6 +112,50 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     await supabase.from("parent_child_links").delete().eq("id", id);
     setChildren(prev => prev.filter(c => c.id !== id));
     setSelectedChild(prev => children.find(c => c.id !== id)?.child_name || null);
+  };
+
+  // K6/AVG art. 17 (sprint-2 2026-05-08): self-service "Verwijder al mijn data".
+  // Werkt op alle tabellen waar user_id = auth.uid OF parent_user_id = auth.uid.
+  // Anonieme rijen op player_name laat dit ongemoeid (kan niet veilig matchen
+  // zonder eigenaar-bewijs). Voor volledige verwijdering moet leerling-account
+  // ook ingelogd zijn — toekomstige feature.
+  const [deletingMyData, setDeletingMyData] = useState(false);
+  const [deleteDone, setDeleteDone] = useState(false);
+  const deleteAllMyData = async () => {
+    if (!authUser) return;
+    if (!window.confirm(
+      "Weet je het zeker?\n\nDit verwijdert al je gekoppelde data:\n" +
+      "• je gekoppelde kinderen\n" +
+      "• je voortgang en scores (waar je ingelogd was)\n" +
+      "• je feedback-berichten\n\n" +
+      "Anonieme spelers-data (zonder login) blijft staan tot je 'm via e-mail verwijdert.\n\n" +
+      "Doorgaan?"
+    )) return;
+    setDeletingMyData(true);
+    const uid = authUser.id;
+    // Bestaande tabellen volgens schema; ontbreken stillzwijgend negeren.
+    const tables = [
+      "parent_child_links", "link_codes", "school_parent_links",
+      "progress", "leaderboard", "hall_of_fame",
+      "topic_mastery", "learn_progress",
+      "obliterator_scores", "obliterator_levels", "obliterator_user_levels",
+      "obliterator_bonus_events", "oblivion_events",
+      "share_events", "kudos", "feedback", "subscriptions",
+    ];
+    for (const t of tables) {
+      try {
+        // Probeer eerst user_id, val terug op parent_user_id
+        await supabase.from(t).delete().eq("user_id", uid);
+      } catch {}
+    }
+    // parent_user_id-kolom-tabellen apart
+    for (const t of ["parent_child_links", "link_codes", "school_parent_links"]) {
+      try { await supabase.from(t).delete().eq("parent_user_id", uid); } catch {}
+    }
+    setDeletingMyData(false);
+    setDeleteDone(true);
+    setChildren([]);
+    setSelectedChild(null);
   };
 
   const generateInvite = async () => {
@@ -184,8 +245,13 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
               background: selectedChild === c.child_name ? "rgba(0,176,255,0.15)" : "rgba(255,255,255,0.04)",
               border: selectedChild === c.child_name ? "1px solid rgba(0,176,255,0.35)" : "1px solid rgba(255,255,255,0.07)",
             }}>
-              <span style={{ fontFamily: "var(--font-display)", fontSize: 15, color: selectedChild === c.child_name ? "#00b0ff" : "rgba(255,255,255,0.7)" }}>
+              <span style={{ fontFamily: "var(--font-display)", fontSize: 15, color: selectedChild === c.child_name ? "#00b0ff" : "rgba(255,255,255,0.7)", display: "flex", alignItems: "center", gap: 8 }}>
                 👦 {c.child_name}
+                {!c.verified && (
+                  <span title="Wacht op bevestiging van je kind in de app" style={{ fontSize: 11, color: "#ffb74d", fontWeight: 700 }}>
+                    🔐 niet bevestigd
+                  </span>
+                )}
               </span>
               <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
             </div>
@@ -265,7 +331,20 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
         </div>
 
         {/* Dashboard inhoud — alleen als kind geselecteerd */}
-        {selectedChild && (
+        {selectedChild && !selectedChildVerified && (
+          <div style={{ borderRadius: 14, border: "1px solid #ffb74d", background: "rgba(255,183,77,0.10)", padding: 20, textAlign: "center" }}>
+            <div style={{ fontSize: 36, marginBottom: 8 }}>🔐</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "#ffb74d", marginBottom: 6, fontWeight: 700 }}>
+              Nog niet bevestigd door {selectedChild}
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.65)", lineHeight: 1.5, maxWidth: 320, margin: "0 auto" }}>
+              Voor de privacy van je kind zie je pas scores zodra je kind de
+              koppeling bevestigt. Stuur de koppelcode (hieronder) en laat 'm
+              die in de app invoeren bij <strong>Instellingen → Koppel met ouder</strong>.
+            </div>
+          </div>
+        )}
+        {selectedChild && selectedChildVerified && (
           <>
             {scoresLoading ? (
               <div style={{ textAlign: "center", padding: 24, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-display)" }}>Laden...</div>
@@ -377,6 +456,38 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
               </>
             )}
           </>
+        )}
+
+        {/* AVG art. 17 — recht op verwijdering. Self-service, alleen voor
+            ingelogde gebruikers (anders kunnen we eigenaar niet verifiëren). */}
+        {authUser && (
+          <div style={{ marginTop: 24, padding: 16, borderRadius: 14, border: "1px solid rgba(255,82,82,0.25)", background: "rgba(255,82,82,0.04)" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#ff8a80", marginBottom: 6 }}>
+              🗑️ Mijn data verwijderen
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginBottom: 12, lineHeight: 1.5 }}>
+              Onder de AVG (art. 17) heb je recht op vergetelheid. Met deze knop
+              wis je alle data die aan je Google-account gekoppeld is.
+            </div>
+            {deleteDone ? (
+              <div style={{ padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.12)", border: "1px solid rgba(105,240,174,0.4)", color: "var(--color-brand-primary-100)", fontSize: 12, fontWeight: 700 }}>
+                ✅ Verwijderd. Log uit om de browser-state te wissen.
+              </div>
+            ) : (
+              <button
+                onClick={deleteAllMyData}
+                disabled={deletingMyData}
+                style={{
+                  padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,82,82,0.6)",
+                  background: deletingMyData ? "rgba(255,82,82,0.15)" : "transparent",
+                  color: "#ff8a80", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700,
+                  cursor: deletingMyData ? "default" : "pointer",
+                }}
+              >
+                {deletingMyData ? "Bezig met wissen…" : "Verwijder al mijn data"}
+              </button>
+            )}
+          </div>
         )}
       </div>
     </div>

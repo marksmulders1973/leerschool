@@ -11,6 +11,7 @@ import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
+import AgeGate from "./components/AgeGate.jsx";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
@@ -685,6 +686,11 @@ export default function App() {
 
       {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}
       <UpdateBanner />
+
+      {/* AVG art. 8 age-gate (sprint-2 G1): first-visit modal die leeftijd
+          + ouder-aanwezig-bevestiging vraagt. Rendert null zodra consent
+          gegeven (localStorage flag lk_age_consent_v1). */}
+      <AgeGate />
 
       {/* Offline banner */}
       {isOffline && (
