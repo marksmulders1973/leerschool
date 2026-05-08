@@ -20,6 +20,11 @@ import verhoudingenPo from "./verhoudingenPo.js";
 import breukenPo from "./breukenPo.js";
 import cijferendRekenen from "./cijferendRekenen.js";
 import tabellenGrafieken from "./tabellenGrafieken.js";
+import geldRekenen from "./geldRekenen.js";
+import schattenAfronden from "./schattenAfronden.js";
+import redactiesommen from "./redactiesommen.js";
+import vlakkeFigurenPo from "./vlakkeFigurenPo.js";
+import negatieveGetallenPo from "./negatieveGetallenPo.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -84,6 +89,11 @@ export const ALL_LEARN_PATHS = {
   "procenten-po": procentenPo,
   "verhoudingen-po": verhoudingenPo,
   "breuken-po": breukenPo,
+  "geld-rekenen": geldRekenen,
+  "schatten-afronden": schattenAfronden,
+  "redactiesommen-pad": redactiesommen,
+  "vlakke-figuren-po": vlakkeFigurenPo,
+  "negatieve-getallen-po": negatieveGetallenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
