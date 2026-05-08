@@ -2364,29 +2364,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // onzichtbaar). In plaats daarvan altijd block-type + haaien als
       // hazard.
       if (dungeonMode) type = 2;
-      // L1 showcase: blokken krijgen variabele breedte zodat speler echt
-      // moet jumpen. Lengtes [60,90,120,160] = van klein hupje tot lange sprong.
+      // L1 showcase: smal & lang ipv breed & laag — Flappy Bird pipe-stijl.
+      // Pipe-breedte vast (38), variabele hoogte zodat speler verschillend
+      // moet hoogspringen. Pipe-paar (combo) zet de gap op wisselende hoogte.
       let blokBreedte = 30 * SCHAAL;
+      let blokHoogte = 50 * SCHAAL;
       if (type === 2 && huidigLevel === 1) {
-        const lengtes = [60, 90, 120, 160];
-        blokBreedte = lengtes[Math.floor(Math.random() * lengtes.length)] * SCHAAL;
+        blokBreedte = 38 * SCHAAL;
+        const hoogtes = [60, 90, 130, 170];
+        blokHoogte = hoogtes[Math.floor(Math.random() * hoogtes.length)] * SCHAAL;
       }
       const breedte = type === 0 ? 24 * SCHAAL : type === 1 ? 54 * SCHAAL : blokBreedte;
-      const hoogte = type === 2 ? 50 * SCHAAL : 32 * SCHAAL;
+      const hoogte = type === 2 ? blokHoogte : 32 * SCHAAL;
       const wx = worldScrollX + W;
       const baseY = GROND_Y + SPELER_GROOTTE - hoogte;
       obstakels.push({ type, x: W, breedte, hoogte, y: baseY - vloerHoogte(wx), worldX: wx, baseY, gescoord: false });
-      // L1 showcase: tunnel-combo — blok op grond + plafondstekel boven, speler
-      // moet er tussendoor (niet eroverheen). 35% kans bij blok-spawn.
+      // L1 showcase: pipe-pair tunnel — verticaal aligned plafondstekel met
+      // ~120px gap. Plafondstekel-hoogte uit beschikbare ruimte berekend zodat
+      // gap-POSITIE varieert met blokhoogte (laag blok → gap hoog, omgekeerd).
       if (
-        type === 2 && huidigLevel === 1 && Math.random() < 0.35
+        type === 2 && huidigLevel === 1 && Math.random() < 0.40
         && !dungeonMode && !hellMode && !customLevelMode && !bossActief
       ) {
-        plafondStekels.push({
-          x: W + blokBreedte * 0.35,
-          breedte: 26 * SCHAAL,
-          hoogte: 30 * SCHAAL,
-        });
+        const totaalH = (GROND_Y + SPELER_GROOTTE) - (PLAFOND_HOOGTE - 4);
+        const gap = 120 * SCHAAL;
+        const psHoogte = totaalH - blokHoogte - gap;
+        if (psHoogte >= 30 * SCHAAL) {
+          plafondStekels.push({
+            x: W,
+            breedte: blokBreedte,
+            hoogte: psHoogte,
+          });
+        }
       }
     }
     function tekenObstakel(o) {
