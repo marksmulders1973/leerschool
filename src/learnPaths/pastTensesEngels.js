@@ -323,6 +323,9 @@ const pastTensesEngels = {
   emoji: "⏰",
   level: "klas2-3",
   subject: "engels",
+  // SLO-niveau (G4 batch 3): 2F → 2S, A2/B1 ERK Engels.
+  referentieNiveau: "2F/2S",
+  sloThema: "Engels — verleden tijden",
   intro:
     "De twee verleden tijden van het Engels: past simple (afgesloten verleden, vast tijdstip) en present perfect (have/has + V3, link met nu). Met spelling, signaalwoorden, top 5 fouten en het verschil since vs for.",
   triggerKeywords: [

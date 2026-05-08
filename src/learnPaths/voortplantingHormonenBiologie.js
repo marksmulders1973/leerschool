@@ -698,6 +698,10 @@ const voortplantingHormonenBiologie = {
   emoji: "🧬",
   level: "klas2-3",
   subject: "biologie",
+  // SLO-kerndoelen biologie (G4 batch 3): voortplanting + endocriene stelsel.
+  referentieNiveau: "2F",
+  sloKerndoelen: [33, 34],
+  sloThema: "Biologie — voortplanting & hormonen",
   intro:
     "Hoe het hormoonstelsel werkt en hoe het voortplantingssysteem in elkaar zit. Van wat hormonen zijn tot de menstruatiecyclus, bevruchting, zwangerschap en puberteit. Plus belangrijke andere hormonen zoals insuline, adrenaline en schildklierhormoon, en wat er gebeurt als ze fout gaan. Examenstof biologie CSE.",
   triggerKeywords: [

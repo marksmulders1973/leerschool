@@ -370,6 +370,9 @@ const krachtenNatuurkunde = {
   title: "Krachten en bewegen",
   emoji: "💪",
   level: "klas2-3",
+  // SLO-niveau (G4 batch 3): 2F vmbo-onderbouw natuurkunde.
+  referentieNiveau: "2F",
+  sloThema: "Natuurkunde — krachten",
   subject: "natuurkunde",
   intro:
     "De basis van krachten en beweging — kracht als pijl, massa vs gewicht, soorten krachten (zwaartekracht, wrijving, veerkracht), de drie wetten van Newton. Eerste pad natuurkunde onderbouw.",

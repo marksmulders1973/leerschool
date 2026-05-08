@@ -361,6 +361,10 @@ const klimatenAardrijkskunde = {
   emoji: "🌍",
   level: "klas1-3",
   subject: "aardrijkskunde",
+  // SLO-kerndoelen aardrijkskunde (G4 batch 3): klimaten, weer, klimaatverandering.
+  referentieNiveau: "2F",
+  sloKerndoelen: [42, 43],
+  sloThema: "Aardrijkskunde — klimaten",
   intro:
     "Het verschil tussen weer en klimaat, hoe klimaatzones ontstaan door zon en zee, de 5 hoofdklimaten (A-E) plus hoogteklimaat, met klimaatverandering tot slot. Eerste pad aardrijkskunde onderbouw.",
   triggerKeywords: [

@@ -394,6 +394,9 @@ const atoombouwScheikunde = {
   title: "Atoombouw en periodiek systeem",
   emoji: "🧪",
   level: "klas3-4",
+  // SLO-kerndoelen scheikunde (G4 batch 3): atoombouw + periodiek systeem.
+  referentieNiveau: "2F/3F",
+  sloThema: "Scheikunde — atoombouw",
   subject: "scheikunde",
   intro:
     "De bouw van atomen — kern (proton + neutron) + elektronen in schillen, atoomnummer en massagetal, isotopen, ionen, het periodiek systeem (metaal/niet-metaal/edelgas), moleculen en chemische reacties met behoud van atomen. Eerste pad scheikunde onderbouw.",

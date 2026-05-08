@@ -322,6 +322,9 @@ const presentTensesEngels = {
   emoji: "📘",
   level: "klas1-3",
   subject: "engels",
+  // SLO-niveau (G4 batch 3): 2F vmbo-onderbouw / A2-B1 ERK voor Engels.
+  referentieNiveau: "2F",
+  sloThema: "Engels — werkwoordstijden",
   intro:
     "De twee belangrijkste tegenwoordige tijden in het Engels: present simple (altijd, gewoonte) en present continuous (nu bezig). Met de -s-regel, do/does, am/is/are + V-ing, signaalwoorden en state verbs.",
   triggerKeywords: [

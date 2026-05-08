@@ -516,6 +516,10 @@ const tijdvakkenGeschiedenis = {
   emoji: "📜",
   level: "klas1-3",
   subject: "geschiedenis",
+  // SLO-kerndoelen geschiedenis (G4 batch 3): 10 tijdvakken-canon, kerndoel 47.
+  referentieNiveau: "2F",
+  sloKerndoelen: [47],
+  sloThema: "Geschiedenis — 10 tijdvakken",
   intro:
     "Het skelet van Nederlandse geschiedenis: 10 tijdvakken van Jagers en boeren tot Televisie en computer. Per tijdvak de belangrijkste mensen, gebeurtenissen en uitvindingen — basis voor alle geschiedenisexamens.",
   triggerKeywords: [
