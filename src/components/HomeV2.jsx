@@ -127,7 +127,7 @@ export default function HomeV2() {
     <>
       <style>{FONTS_CSS}</style>
       <div style={{
-        minHeight: "100vh",
+        minHeight: "100dvh",
         background: T.bg,
         color: T.text,
         fontFamily: T.fontBody,

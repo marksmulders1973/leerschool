@@ -59,7 +59,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 100%)" }}>
+    <div style={{ minHeight: "100dvh", background: "linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 100%)" }}>
       <Header title={`${BRAND.name} Pro ✨`} subtitle={`Meer uit ${BRAND.name} halen`} onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "20px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>

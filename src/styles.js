@@ -1,14 +1,14 @@
 const styles = {
   app: {
     fontFamily: "var(--font-body)",
-    minHeight: "100vh",
+    minHeight: "100dvh",
     background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     // max-width + margin staan nu in .app-shell (index.html) voor responsive breakpoints:
     // <600px: 480 · 600-1024: 560 · >1024: 800
     position: "relative",
   },
   page: {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     display: "flex",
     flexDirection: "column",
   },

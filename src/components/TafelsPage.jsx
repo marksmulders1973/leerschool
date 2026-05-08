@@ -30,7 +30,7 @@ export default function TafelsPage({ userName, studentProgress = [], onStart, on
   const done  = Array.from({ length: total }, (_, i) => getTafelStatus(i + 1)).filter(s => s === "green").length;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
+    <div style={{ minHeight: "100dvh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
       <Header title="Tafels oefenen" subtitle="Groep 3 t/m 6" onBack={onBack} onHome={onHome} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 16px 32px" }}>
 

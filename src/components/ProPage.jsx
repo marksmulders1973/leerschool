@@ -147,7 +147,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(160deg, #08101e 0%, #0d1a2e 60%, #120820 100%)" }}>
+    <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg, #08101e 0%, #0d1a2e 60%, #120820 100%)" }}>
       <Header title={`${BRAND.name} Pro ✨`} subtitle="Meer voor jou, beter voor je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 60px", maxWidth: 500, margin: "0 auto" }}>

@@ -417,7 +417,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       <div style={{ padding: "12px 18px 6px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
           <span>
-            Stap {stepIdx + 1} van {totalSteps}
+            Deel {stepIdx + 1} / {totalSteps}
             <span style={{ marginLeft: 8, color: C.warm, fontWeight: 700 }}>
               ≈ {Math.max(1, Math.round(0.7 + (path.steps[stepIdx]?.checks?.length || 1) * 0.5))} min
             </span>
@@ -451,7 +451,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 transition: "background 0.15s",
               }}
             >
-              ← Vorige stap
+              ← Vorig deel
             </button>
             <button
               onClick={() => stepIdx + 1 < totalSteps && goToStep(stepIdx + 1)}
@@ -467,7 +467,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 transition: "background 0.15s",
               }}
             >
-              Volgende stap →
+              Volgend deel →
             </button>
           </div>
         )}
@@ -492,7 +492,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             letterSpacing: 1.6,
             textTransform: "uppercase",
           }}>
-            {(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · stap {stepIdx + 1} van {totalSteps}
+            {(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · deel {stepIdx + 1} / {totalSteps}
           </div>
           {/* Markeer voltooid — agency voor leerling (les leersnel). Alleen
               tijdens lezen, niet midden in een check. Stap blijft natuurlijk
@@ -569,7 +569,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         {mode === "reading" && (
           <button onClick={startCheck} style={btnPrimary()}>
-            {checks.length > 0 ? "Naar de check ▶" : "Volgende stap ▶"}
+            {checks.length > 0 ? "Naar de check ▶" : "Volgend deel ▶"}
           </button>
         )}
 
@@ -694,7 +694,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               />
               {stepIdx + 1 < totalSteps && (
                 <NextStepCard
-                  eyebrow="Volgende stap"
+                  eyebrow="Volgend deel"
                   title={`${stepIdx + 2}. ${path.steps[stepIdx + 1]?.title || "Verder"}`}
                   hint="Doorgaan met dit onderwerp"
                   accent={C.good}
@@ -767,7 +767,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
         </p>
 
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
-          <span>{completedSteps.size} van {path.steps.length} stappen voltooid</span>
+          <span>{completedSteps.size} van {path.steps.length} delen voltooid</span>
           <span>{progressPct}%</span>
         </div>
         <div style={{ height: 10, background: "#1a2744", borderRadius: 999, overflow: "hidden", marginBottom: 16 }}>
@@ -827,8 +827,8 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             }}
           >
             {completedSteps.size === 0
-              ? `🚀 Begin bij stap 1`
-              : `▶ Doorgaan: stap ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
+              ? `🚀 Begin bij deel 1`
+              : `▶ Doorgaan: deel ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
           </button>
         )}
         {loaded && firstUnfinishedIdx === null && (
@@ -891,7 +891,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     {ch.emoji} {ch.title}
                   </div>
                   <div style={{ fontSize: 12, color: C.muted }}>
-                    {doneCount}/{stepsInCh.length} stappen{allDone ? " — voltooid" : ""}
+                    {doneCount}/{stepsInCh.length} delen{allDone ? " — voltooid" : ""}
                   </div>
                 </div>
               </div>
@@ -1113,7 +1113,7 @@ function Header({ onBack, onHome, title, emoji, backLabel }) {
 // ─── stijlen ─────────────────────────────────────────
 function pageStyle() {
   return {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     color: C.text,
     fontFamily: "var(--font-body)",

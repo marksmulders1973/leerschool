@@ -281,9 +281,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Differentiëer beide termen: x³ → 3x², 4x² → 4·2x = 8x.",
-          "Vergeet de coëfficiënt 4 niet — 4x² → 4·2x = 8x, niet 8x zonder de 8.",
-          "Verlaag de exponenten in plaats van te verhogen.",
+          "Differentiëer elke term apart. Regel: bij xⁿ → n·xⁿ⁻¹. Vergeet de coëfficiënt 4 niet bij term 2.",
+          "Heb je de coëfficiënt 4 meegenomen bij term 2? Bij c·xⁿ → c·n·xⁿ⁻¹.",
+          "Bij differentiëren *verlaag* je de exponent met 1 (niet verhogen).",
         ],
       },
     ],

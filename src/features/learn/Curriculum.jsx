@@ -371,7 +371,7 @@ function findFirstUnfinished(path, doneSet) {
 
 // ─── styling ──────────────────────────────────────────
 const pageStyle = {
-  minHeight: "100vh",
+  minHeight: "100dvh",
   background:
     "linear-gradient(160deg, var(--color-bg-base), var(--color-bg-surface) 50%, var(--color-bg-elevated))",
   color: "var(--color-text)",

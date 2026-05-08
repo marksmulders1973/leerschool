@@ -273,9 +273,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "Dat is 200 · 3 (lineair). Maar exponentieel: 200 · 2³ = 200 · 8 = 1600.",
-          "1200 = 200 + 1000? Geen logische berekening. Reken: 200 · 2 · 2 · 2.",
-          "Dat is 200 · 4 = 200 · 2². Maar t = 3 → 200 · 2³ = 1600.",
+          "Dat zou *lineair* zijn (200·3). Bij verdubbelen vermenigvuldig je elke uur opnieuw met 2 — hoe vaak doe je dat bij t=3?",
+          "Lijkt geen logische berekening. Tip: 200 vermenigvuldigen met 2, drie keer achter elkaar.",
+          "Dat zou kloppen voor t=2. Maar de vraag is t=3 — één keer extra met 2 vermenigvuldigen.",
         ],
       },
     ],

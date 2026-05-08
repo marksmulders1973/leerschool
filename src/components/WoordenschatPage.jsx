@@ -29,7 +29,7 @@ export default function WoordenschatPage({ userName, studentProgress = [], onSta
   const done  = CATEGORIES.filter(c => getStatus(c.id) === "green").length;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
+    <div style={{ minHeight: "100dvh", background: "#0d1f3c", fontFamily: "var(--font-body)" }}>
       <Header title="Woordenschat" subtitle="Groep 5–8" onBack={onBack} onHome={onHome} />
       <div style={{ maxWidth: 480, margin: "0 auto", padding: "0 16px 32px" }}>
 

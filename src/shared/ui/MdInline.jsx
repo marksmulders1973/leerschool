@@ -1,11 +1,13 @@
 // Inline-markdown renderer voor vraagtekst en uitleg in leerpaden + quiz.
-// Ondersteunt alleen `*bold*` (asterisken raken niet-spatie aan beide kanten),
-// zodat math-content als "2 * 3" of "n*x" niet per ongeluk wordt vetgedrukt.
+// Ondersteunt zowel `**bold**` (standaard markdown) als `*bold*` (enkele
+// asterisken raken niet-spatie aan beide kanten), zodat math-content als
+// "2 * 3" of "n*x" niet per ongeluk wordt vetgedrukt.
 //
 // Gebruik:
 //   <MdInline text={currentCheck.q} />
 
-const BOLD_RX = /\*(\S(?:[^*]*\S)?)\*/g;
+// Match eerst dubbele **...**, dan enkele *...* met niet-spatie-grenzen.
+const BOLD_RX = /\*\*([^*]+)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
 
 export default function MdInline({ text }) {
   if (text == null) return null;
@@ -19,7 +21,8 @@ export default function MdInline({ text }) {
   let match;
   while ((match = BOLD_RX.exec(s)) !== null) {
     if (match.index > lastIdx) parts.push(s.slice(lastIdx, match.index));
-    parts.push(<strong key={key++}>{match[1]}</strong>);
+    const inner = match[1] != null ? match[1] : match[2];
+    parts.push(<strong key={key++}>{inner}</strong>);
     lastIdx = match.index + match[0].length;
   }
   if (lastIdx < s.length) parts.push(s.slice(lastIdx));

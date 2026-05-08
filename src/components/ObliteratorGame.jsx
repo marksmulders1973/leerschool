@@ -7829,7 +7829,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
       <div ref={wrapperRef} style={{
         width: isFullscreen ? "100vw" : canvasW,
-        height: isFullscreen ? "100vh" : "auto",
+        height: isFullscreen ? "100dvh" : "auto",
         padding: isFullscreen ? 16 : 10,
         borderRadius: isFullscreen ? 0 : 12,
         background: isFullscreen

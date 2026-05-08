@@ -40,7 +40,7 @@ export default function AdminFeedback({ onBack, onHome }) {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0a0e1a", padding: "20px 16px 60px", color: "var(--color-text-strong)", fontFamily: "'Nunito', sans-serif" }}>
+    <div style={{ minHeight: "100dvh", background: "#0a0e1a", padding: "20px 16px 60px", color: "var(--color-text-strong)", fontFamily: "'Nunito', sans-serif" }}>
       <div style={{ maxWidth: 720, margin: "0 auto" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
           <h1 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 22, color: "#ffcc40", margin: 0 }}>💡 Tips & Feedback</h1>

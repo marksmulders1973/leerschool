@@ -117,7 +117,7 @@ const steps = [
         q: "**8 − (−3)** = ?",
         options: ["11","5","−11","−5"],
         answer: 0,
-        wrongHints: [null,"Min een minus = plus. 8 + 3 = 11.","Niet 8 − 3 — kijk naar het minteken in de haakjes.","Andersom — twee minnen heffen op.","Niet aftrekken — twee minnen heffen op."],
+        wrongHints: [null,"Twee minnen achter elkaar — wat doen die samen? Optellen of aftrekken?","Niet 8 − 3 — let goed op het minteken in de haakjes.","Andersom — twee minnen heffen elkaar op.","Niet aftrekken — twee minnen heffen elkaar op."],
       },
       {
         q: "**−4 + (−6)** = ?",

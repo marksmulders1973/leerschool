@@ -48,4 +48,18 @@ describe("MdInline", () => {
     expect(container.textContent).toBe("* niet vet *");
     expect(container.querySelector("strong")).toBeNull();
   });
+
+  it("ondersteunt standaard markdown **bold** (dubbele asterisken)", () => {
+    const { container } = render(<MdInline text="Verleden tijd van **fietsen**:" />);
+    expect(container.querySelector("strong")?.textContent).toBe("fietsen");
+    expect(container.textContent).toBe("Verleden tijd van fietsen:");
+  });
+
+  it("mengt **dubbel** en *enkel* in één zin", () => {
+    const { container } = render(<MdInline text="**Cito-vraag**: kies *de juiste* optie" />);
+    const strongs = container.querySelectorAll("strong");
+    expect(strongs.length).toBe(2);
+    expect(strongs[0].textContent).toBe("Cito-vraag");
+    expect(strongs[1].textContent).toBe("de juiste");
+  });
 });

@@ -895,7 +895,7 @@ function Header({ onBack, onHome, title, emoji }) {
 // ─── stijlen ─────────────────────────────────────────
 function pageStyle() {
   return {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
     color: C.text,
     fontFamily: "var(--font-body)",

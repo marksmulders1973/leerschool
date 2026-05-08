@@ -456,9 +456,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Optellen elimineert y: 3x = 15 → x = 5, niet 10.",
-          "Onjuist — 7.5 = 15/2, maar je deelt door 3.",
-          "Onjuist — geen ingewikkelde breuk hier.",
+          "Optellen elimineert y. Wat krijg je dan voor 3x — en deel je dat door 3?",
+          "Hoe komt 7,5 eruit? Even nagaan welk getal je deelt en door wat.",
+          "Geen ingewikkelde breuk hier — je krijgt een mooi heel getal als je correct deelt.",
         ],
       },
       {
@@ -467,7 +467,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Substitutie: 2x + (3x−4) = 6 → 5x = 10 → x = 2.",
+          "Substitueer y in vgl 2. Hoe combineer je dan de x-termen — wat wordt je nieuwe vgl?",
           "Check: y = 3·1 - 4 = -1, en 2·1 + (-1) = 1 ≠ 6.",
           "Check: y = 3·3 - 4 = 5, en 2·3 + 5 = 11 ≠ 6.",
         ],

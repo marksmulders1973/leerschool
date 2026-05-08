@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import Header from "./Header.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
+import MdInline from "../shared/ui/MdInline.jsx";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -39,7 +40,7 @@ function formatTime(secs) {
 export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
-  const [config, setConfig] = useState({ count: 30, minutes: 30 });
+  const [config, setConfig] = useState({ count: 15, minutes: 15 });
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -115,7 +116,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
   if (mode === "intro") {
     return (
       <div style={pageStyle()}>
-        <Header title="Oefen-Cito 🎯" subtitle="30 vragen uit Leerkwartier-paden" onBack={onBack} onHome={onHome} />
+        <Header title="Oefen-Cito 🎯" subtitle={`${config.count} vragen uit Leerkwartier-paden`} onBack={onBack} onHome={onHome} />
         <div style={{ padding: "16px 18px 32px", color: C.text }}>
           <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 18 }}>
             Een echte oefen-toets met vragen uit de leerpaden die je hier op Leerkwartier hebt gedaan.
@@ -252,17 +253,17 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
                   }}
                 >
                   <div style={{ fontSize: 13, marginBottom: 6, lineHeight: 1.4 }}>
-                    {q.question}
+                    <MdInline text={q.question} />
                   </div>
                   <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>
                     {givenLabel === null ? (
                       <span style={{ color: "#ffb74d" }}>Niet beantwoord</span>
                     ) : (
-                      <>Jouw antwoord: <span style={{ color: C.bad }}>{givenLabel}</span></>
+                      <>Jouw antwoord: <span style={{ color: C.bad }}><MdInline text={givenLabel} /></span></>
                     )}
                   </div>
                   <div style={{ fontSize: 12, color: C.muted, marginBottom: hint ? 6 : 4 }}>
-                    Goede antwoord: <span style={{ color: C.good, fontWeight: 700 }}>{correctLabel}</span>
+                    Goede antwoord: <span style={{ color: C.good, fontWeight: 700 }}><MdInline text={correctLabel} /></span>
                   </div>
                   {hint && (
                     <div
@@ -277,7 +278,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
                         lineHeight: 1.5,
                       }}
                     >
-                      💡 {hint}
+                      💡 <MdInline text={hint} />
                     </div>
                   )}
                   {onPickPath && (
@@ -378,7 +379,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
             color: "var(--color-text-strong)",
           }}
         >
-          {q.question}
+          <MdInline text={q.question} />
         </div>
 
         {q.options.map((opt, i) => {
@@ -406,7 +407,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
               <span style={{ fontWeight: 700, color: isSelected ? C.good : C.muted, marginRight: 10 }}>
                 {String.fromCharCode(65 + i)}.
               </span>
-              {opt}
+              <MdInline text={opt} />
             </button>
           );
         })}
@@ -442,7 +443,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
 // ── styles ──
 function pageStyle() {
   return {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     background: C.bg,
     fontFamily: "var(--font-body)",
     color: C.text,

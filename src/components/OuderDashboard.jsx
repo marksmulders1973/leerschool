@@ -142,6 +142,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       "obliterator_scores", "obliterator_levels", "obliterator_user_levels",
       "obliterator_bonus_events", "oblivion_events",
       "share_events", "kudos", "feedback", "subscriptions",
+      // Audit-2 v2 (2026-05-08): aangevuld op privacy-agent feedback —
+      // dekking voor "verwijder al mijn data"-belofte.
+      "profiles", "quizzes", "upgrade_waitlist", "learn_path_waitlist",
     ];
     for (const t of tables) {
       try {
@@ -193,7 +196,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
   if (!authUser) {
     return (
-      <div style={{ minHeight: "100vh", background: "#0a0f1e" }}>
+      <div style={{ minHeight: "100dvh", background: "#0a0f1e" }}>
         <Header title="Ouder Dashboard 👨‍👩‍👧" onBack={onBack} onHome={onHome} />
         <div style={{ padding: 32, textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
           <div style={{ fontSize: 56 }}>👨‍👩‍👧</div>
@@ -214,7 +217,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   }
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 100%)" }}>
+    <div style={{ minHeight: "100dvh", background: "linear-gradient(135deg, #0a0f1e 0%, #0d1a2e 100%)" }}>
       <Header title="Ouder Dashboard 👨‍👩‍👧" subtitle="Volg de voortgang van je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
