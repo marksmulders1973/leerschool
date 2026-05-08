@@ -5,7 +5,7 @@ import {
   VAK_LABELS,
   NIVEAU_LABELS,
   getExamenUrl,
-  examensPerVak,
+  getCorrectieUrl,
 } from "../data/examens.js";
 
 // Examens-bibliotheek (Mark idee 2026-05-08): leerling kan oude
@@ -137,47 +137,77 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    {lijst.map((e) => (
-                      <a
-                        key={e.id}
-                        href={getExamenUrl(e.id)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 12,
-                          padding: "12px 14px",
-                          background: C.card,
-                          border: `1px solid ${C.border}`,
-                          borderRadius: 12,
-                          color: C.text,
-                          textDecoration: "none",
-                          transition: "background 0.15s",
-                        }}
-                        onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(40,60,90,0.8)"}
-                        onMouseOut={(ev) => ev.currentTarget.style.background = C.card}
-                      >
-                        <span style={{ fontSize: 20 }} aria-hidden="true">📜</span>
-                        <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 14, marginBottom: 2 }}>
-                            {e.titel}
-                          </div>
-                          <div style={{ fontSize: 11, color: C.muted, display: "flex", flexWrap: "wrap", gap: 8 }}>
-                            <span>{NIVEAU_LABELS[e.niveau] || e.niveau}</span>
-                            <span aria-hidden="true">·</span>
-                            <span>{e.jaar}{e.tijdvak ? ` — tijdvak ${e.tijdvak}` : ""}</span>
-                            {e.bron && (
-                              <>
+                    {lijst.map((e) => {
+                      const opgaveUrl = getExamenUrl(e);
+                      const correctieUrl = getCorrectieUrl(e);
+                      const isExtern = !!e.externalUrl;
+                      return (
+                        <div
+                          key={e.id}
+                          style={{
+                            background: C.card,
+                            border: `1px solid ${C.border}`,
+                            borderRadius: 12,
+                          }}
+                        >
+                          <a
+                            href={opgaveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 12,
+                              padding: "12px 14px",
+                              color: C.text,
+                              textDecoration: "none",
+                            }}
+                            onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(40,60,90,0.8)"}
+                            onMouseOut={(ev) => ev.currentTarget.style.background = "transparent"}
+                          >
+                            <span style={{ fontSize: 20 }} aria-hidden="true">📜</span>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 14, marginBottom: 2 }}>
+                                {e.titel}
+                              </div>
+                              <div style={{ fontSize: 11, color: C.muted, display: "flex", flexWrap: "wrap", gap: 8 }}>
+                                <span>{NIVEAU_LABELS[e.niveau] || e.niveau}</span>
                                 <span aria-hidden="true">·</span>
-                                <span style={{ opacity: 0.7 }}>{e.bron}</span>
-                              </>
-                            )}
-                          </div>
+                                <span>{e.jaar}{e.tijdvak ? ` — tijdvak ${e.tijdvak}` : ""}</span>
+                                {e.bron && (
+                                  <>
+                                    <span aria-hidden="true">·</span>
+                                    <span style={{ opacity: 0.7 }}>{e.bron}{isExtern ? " ↗" : ""}</span>
+                                  </>
+                                )}
+                              </div>
+                            </div>
+                            <span style={{ fontSize: 14, color: C.muted }} aria-hidden="true">↗</span>
+                          </a>
+                          {correctieUrl && (
+                            <a
+                              href={correctieUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 8,
+                                padding: "8px 14px 10px 46px",
+                                color: C.muted,
+                                fontSize: 11,
+                                textDecoration: "none",
+                                borderTop: `1px dashed ${C.border}`,
+                              }}
+                              onMouseOver={(ev) => ev.currentTarget.style.color = C.warm}
+                              onMouseOut={(ev) => ev.currentTarget.style.color = C.muted}
+                            >
+                              ✅ Correctievoorschrift (antwoorden) ↗
+                            </a>
+                          )}
                         </div>
-                        <span style={{ fontSize: 14, color: C.muted }} aria-hidden="true">↗</span>
-                      </a>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
               );
