@@ -36,72 +36,69 @@ function eb(jaar, tijdvak, niveauPad, vakCode, niveauPrefix, type) {
   return `https://www.examenblad.nl/${jaar}/${niveauPad}/documenten/cse-${tijdvak}/${niveauPrefix}-${vakCode}-a-${yy}-${tijdvak}-${type}`;
 }
 
-// Vaste codes per (vak, niveau) — bron: examenblad.nl URL-patronen.
-const W_VMBO_GLTL = { vakCode: "0153", niveauPad: "vmbo-gl", niveauPrefix: "gt" };
+// Vaste codes per (vak, niveau) — bron: examenblad.nl URL-patronen
+// (zie reference_examenblad_urls.md in memory voor het patroon).
+const NIVEAU_VMBO_GLTL = { niveauPad: "vmbo-gl", niveauPrefix: "gt" };
 
-export const EXAMENS = [
-  // ── Lokale PDF (Mark's dochter heeft 't gemaakt 2026-05-08) ──────
-  {
-    id: "wiskunde-vmbo-gltl-2024-tijdvak1",
-    vak: "wiskunde",
+// Vakcode-tabel — geverifieerd via curl (alle URLs HTTP 200 in 2026-05-08).
+const VAKCODES_VMBO_GLTL = {
+  wiskunde:        { code: "0153", titel: "Wiskunde — VMBO GL/TL" },
+  nederlands:      { code: "0011", titel: "Nederlands — VMBO GL/TL" },
+  engels:          { code: "0071", titel: "Engels — VMBO GL/TL" },
+  biologie:        { code: "0191", titel: "Biologie — VMBO GL/TL" },
+  economie:        { code: "0233", titel: "Economie — VMBO GL/TL" },
+  geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL" },
+  aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL" },
+};
+
+// Helper: genereer entries voor 1 vak × meerdere jaren × 2 tijdvakken.
+function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren }) {
+  const out = [];
+  for (const jaar of jaren) {
+    for (const tijdvak of [1, 2]) {
+      out.push({
+        id: `${vak}-${niveau}-${jaar}-tijdvak${tijdvak}`,
+        vak,
+        niveau,
+        jaar,
+        tijdvak,
+        titel,
+        bron: "examenblad.nl",
+        externalUrl: eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "o"),
+        correctieUrl: eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "c"),
+      });
+    }
+  }
+  return out;
+}
+
+// Bouw alle examens-entries via genereer-helper.
+const VMBO_GLTL_JAREN = [2025, 2024, 2023, 2022];
+
+const _vmboGltlExterneEntries = Object.entries(VAKCODES_VMBO_GLTL).flatMap(
+  ([vak, info]) => genVakSet({
+    vak,
     niveau: "vmbo-gltl",
-    jaar: 2024,
-    tijdvak: 1,
-    titel: "Wiskunde — VMBO GL/TL",
-    bron: "examenblad.nl",
-    correctieUrl: eb(2024, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  // ── Externe links 2025-2021 (5 jaar, beide tijdvakken) ──────────
-  {
-    id: "wiskunde-vmbo-gltl-2025-tijdvak1",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2025, tijdvak: 1,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2025, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2025, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2025-tijdvak2",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2025, tijdvak: 2,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2025, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2025, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2024-tijdvak2",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2024, tijdvak: 2,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2024, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2024, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2023-tijdvak1",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2023, tijdvak: 1,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2023, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2023, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2023-tijdvak2",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2023, tijdvak: 2,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2023, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2023, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2022-tijdvak1",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2022, tijdvak: 1,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2022, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2022, 1, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-  {
-    id: "wiskunde-vmbo-gltl-2022-tijdvak2",
-    vak: "wiskunde", niveau: "vmbo-gltl", jaar: 2022, tijdvak: 2,
-    titel: "Wiskunde — VMBO GL/TL", bron: "examenblad.nl",
-    externalUrl: eb(2022, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "o"),
-    correctieUrl: eb(2022, 2, W_VMBO_GLTL.niveauPad, W_VMBO_GLTL.vakCode, W_VMBO_GLTL.niveauPrefix, "c"),
-  },
-];
+    niveauInfo: NIVEAU_VMBO_GLTL,
+    vakCode: info.code,
+    titel: info.titel,
+    jaren: VMBO_GLTL_JAREN,
+  })
+);
+
+// Lokale PDF van wiskunde-vmbo-gltl-2024-tijdvak1 — Mark's dochter heeft
+// 'm fysiek thuis. Vervang de externe entry voor diezelfde id door de
+// lokale variant zodat de PDF in public/examens/ ipv extern wordt
+// geserveerd (mocht offline gebruik nodig zijn).
+const _vmboGltlEntries = _vmboGltlExterneEntries.map((e) => {
+  if (e.id === "wiskunde-vmbo-gltl-2024-tijdvak1") {
+    const { externalUrl: _drop, ...rest } = e;
+    return rest; // geen externalUrl → valt terug op lokale PDF
+  }
+  return e;
+});
+
+export const EXAMENS = _vmboGltlEntries;
 
 // Vak-labels (voor UI). Gebruik dezelfde keys als `vak` in EXAMENS.
 export const VAK_LABELS = {
