@@ -4013,21 +4013,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return;
       }
       if (sc.type === "loop") {
-        // Looping als echte race-baan-loop (Carrera-stijl):
-        //   - achterste rail (parallax-shift voor 3D)
-        //   - voorste rail met highlight bovenaan
-        //   - radiale track-segmenten (rails-detail)
-        //   - montage-voetjes onderaan op de grond
-        //   - subtiele oranje glow-halo om interactiviteit te signaleren
-        // Gat aan de onderkant = entry/exit (hoeken 0.4π t/m 0.6π skip).
+        // Looping in 3 stukken: aanloop-ramp links → cirkel → uitloop-ramp rechts.
+        // Lit-from-above kleurverloop op voorste rail + ramps voor 3D-effect.
+        // Achterste rail krijgt parallax-shift voor diepte. Glow-halo signaleert
+        // interactiviteit. Gat aan onderkant (0.4π-0.6π) = entry/exit.
         const cx = sc.x + sc.breedte / 2;
         const cy = sc.y + sc.hoogte / 2;
         const rx = sc.breedte / 2;
         const ry = sc.hoogte / 2;
         const startAng = 0.6 * Math.PI;
         const endAng   = 2.4 * Math.PI;
+        const footY = sc.y + sc.hoogte;
 
-        // 1. Glow-halo (interactief signaal)
+        // Anker-punten waar de ramps tangentieel de loop raken
+        const lEntryX = cx + rx * Math.cos(0.6 * Math.PI);
+        const lEntryY = cy + ry * Math.sin(0.6 * Math.PI);
+        const rEntryX = cx + rx * Math.cos(0.4 * Math.PI);
+        const rEntryY = cy + ry * Math.sin(0.4 * Math.PI);
+
+        // Linear gradient voor 3D: lit-from-above (lichter top, donker bot)
+        const trackGrad = ctx.createLinearGradient(0, sc.y - 4 * SCHAAL, 0, footY + 4 * SCHAAL);
+        trackGrad.addColorStop(0,    "#7a7a88");
+        trackGrad.addColorStop(0.45, "#3a3a44");
+        trackGrad.addColorStop(1,    "#15151c");
+
+        // 1. Glow-halo (oranje signaal, alleen om de cirkel)
         ctx.save();
         ctx.shadowBlur = 22;
         ctx.shadowColor = "#ffaa20";
@@ -4038,28 +4048,61 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.stroke();
         ctx.restore();
 
-        // 2. Achterste rail (parallax shift naar links-boven voor diepte)
+        // 2. Aanloop-ramp links + uitloop-ramp rechts. Twee passes: donkere
+        // schaduw-laag + lichtere voorgrond met gradient zodat ze 3D ogen.
+        const rampLen = 60 * SCHAAL;
+        ctx.lineCap = "round";
+        // Schaduw-laag (achterkant)
+        ctx.strokeStyle = "#10101a";
+        ctx.lineWidth = 13 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(sc.x - rampLen, footY);
+        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY + 2 * SCHAAL, lEntryX, lEntryY);
+        ctx.moveTo(sc.x + sc.breedte + rampLen, footY);
+        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY + 2 * SCHAAL, rEntryX, rEntryY);
+        ctx.stroke();
+        // Voorgrond met gradient
+        ctx.strokeStyle = trackGrad;
+        ctx.lineWidth = 10 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(sc.x - rampLen, footY);
+        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY, lEntryX, lEntryY);
+        ctx.moveTo(sc.x + sc.breedte + rampLen, footY);
+        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY, rEntryX, rEntryY);
+        ctx.stroke();
+        // Witte highlight bovenop ramp-curves voor extra reflectie
+        ctx.strokeStyle = "rgba(220, 220, 235, 0.45)";
+        ctx.lineWidth = 1.5 * SCHAAL;
+        ctx.beginPath();
+        ctx.moveTo(sc.x - rampLen, footY - 4 * SCHAAL);
+        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY - 4 * SCHAAL, lEntryX - 1 * SCHAAL, lEntryY + 2 * SCHAAL);
+        ctx.moveTo(sc.x + sc.breedte + rampLen, footY - 4 * SCHAAL);
+        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY - 4 * SCHAAL, rEntryX + 1 * SCHAAL, rEntryY + 2 * SCHAAL);
+        ctx.stroke();
+        ctx.lineCap = "butt"; // reset
+
+        // 3. Achterste rail (parallax shift naar links-boven voor diepte)
         ctx.strokeStyle = "#15151c";
         ctx.lineWidth = 10 * SCHAAL;
         ctx.beginPath();
         ctx.ellipse(cx - 7 * SCHAAL, cy - 5 * SCHAAL, rx, ry, 0, startAng, endAng, false);
         ctx.stroke();
 
-        // 3. Voorste rail (hoofdloop)
-        ctx.strokeStyle = "#2c2c36";
+        // 4. Voorste rail (hoofdloop) met linear gradient = lit-from-above 3D
+        ctx.strokeStyle = trackGrad;
         ctx.lineWidth = 11 * SCHAAL;
         ctx.beginPath();
         ctx.ellipse(cx, cy, rx, ry, 0, startAng, endAng, false);
         ctx.stroke();
 
-        // 4. Highlight bovenaan voorste rail (metaal-reflectie)
-        ctx.strokeStyle = "rgba(180, 180, 200, 0.55)";
+        // 5. Highlight bovenaan voorste rail (metaal-reflectie)
+        ctx.strokeStyle = "rgba(220, 220, 235, 0.65)";
         ctx.lineWidth = 2 * SCHAAL;
         ctx.beginPath();
         ctx.ellipse(cx, cy - 2 * SCHAAL, rx + 1 * SCHAAL, ry + 1 * SCHAAL, 0, 1.15 * Math.PI, 1.85 * Math.PI, false);
         ctx.stroke();
 
-        // 5. Track-segmenten (radiale dashes voor rails-detail)
+        // 6. Track-segmenten (radiale dashes voor rails-detail)
         ctx.strokeStyle = "rgba(110, 110, 125, 0.65)";
         ctx.lineWidth = 1.5 * SCHAAL;
         for (let a = 0.66 * Math.PI; a <= 2.34 * Math.PI; a += Math.PI * 0.10) {
@@ -4072,20 +4115,6 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           ctx.lineTo(x2, y2);
           ctx.stroke();
         }
-
-        // 6. Montage-voetjes onderaan (verbinding met grond)
-        const footH = 10 * SCHAAL;
-        const footW = 18 * SCHAAL;
-        const footY = sc.y + sc.hoogte;
-        const lFx = cx + rx * Math.cos(0.6 * Math.PI) - footW / 2;
-        const rFx = cx + rx * Math.cos(0.4 * Math.PI) - footW / 2;
-        ctx.fillStyle = "#15151c";
-        ctx.fillRect(lFx, footY - footH, footW, footH);
-        ctx.fillRect(rFx, footY - footH, footW, footH);
-        // bovenkant-highlight op voetjes
-        ctx.fillStyle = "rgba(140, 140, 160, 0.45)";
-        ctx.fillRect(lFx, footY - footH, footW, 2 * SCHAAL);
-        ctx.fillRect(rFx, footY - footH, footW, 2 * SCHAAL);
       } else {
         // Schans: gebogen slope omhoog naar deck. In cheerful biomes is de
         // schans van aarde+gras zodat 'ie blendt met de omgeving; in donker
