@@ -194,9 +194,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "35 = 42 - 7 (aftrekken). Hier moet je delen, niet aftrekken.",
-          "49 = 42 + 7 (optellen). Hier moet je delen.",
-          "Check: 7 · 7 = 49, niet 42.",
+          "Niet aftrekken — 7x is een vermenigvuldiging. Welke bewerking heft × op?",
+          "Niet optellen — 7x betekent 7 keer x, niet 7 plus x. Welke tegenhanger?",
+          "Vul je antwoord in en check: 7 keer jouw x — krijg je 42?",
         ],
       },
     ],

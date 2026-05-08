@@ -211,9 +211,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij DELEN trekken we af (8-3=5), niet optellen (8+3=11).",
-          "Geen correcte uitkomst. Trek de exponenten af: 8 − 3 = 5.",
-          "y²⁴ = (y⁸)³ — dat is machtsmacht. Hier delen we, dus aftrekken.",
+          "Bij delen van machten met dezelfde basis — wat doe je met de exponenten?",
+          "Geen correcte uitkomst. Welke bewerking met exponenten geldt bij delen?",
+          "Dat is machtsmacht (³ keer toepassen). Hier delen we — andere regel.",
         ],
       },
     ],

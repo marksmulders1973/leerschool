@@ -145,9 +145,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "5% = 1/20, niet 1/5.",
-          "15% = 3/20, niet 1/5.",
-          "25% = 1/4, niet 1/5.",
+          "Welke breuk is 1/5 — kleiner of groter dan 5%? Reken: 100 ÷ 5 = ?",
+          "Niet 15% — denk: hoeveel keer past 5 in 100?",
+          "25% is een andere breuk (1/4). Hoeveel keer past 5 in 100?",
         ],
       },
     ],

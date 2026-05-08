@@ -154,9 +154,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt de 5 niet keer 3 gedaan. 5·3 = 15.",
-          "Je hebt de 2 niet meegenomen. 5·2x = 10x.",
-          "Je hebt de 5 niet vermenigvuldigd met 2x. Het is 5·2x = 10x.",
+          "Heb je de 5 met BEIDE termen vermenigvuldigd — 2x én 3?",
+          "Heb je de 2 binnen de haakjes meegenomen? 5 keer 2x is niet hetzelfde als 5x.",
+          "Allebei de termen krijgen de 5 — niet alleen de 3 of de 2.",
         ],
       },
     ],

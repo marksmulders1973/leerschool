@@ -489,9 +489,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt ½ × 10 × 4 gedaan? Vergeet niet de 6: ½ × (6 + 10) × 4 = ½ × 16 × 4 = 32.",
-          "60 = (6+10) × ? — je bent de ½ vergeten. ½ × 16 × 4 = 32.",
-          "Je hebt 10 × 4 gedaan. Maar het is ½ × **(6 + 10)** × 4.",
+          "Heb je BEIDE evenwijdige zijden meegenomen — 6 én 10?",
+          "Heb je de ½ in de formule meegenomen? Anders krijg je het dubbele.",
+          "Niet alleen één zijde — een trapezium gebruikt het GEMIDDELDE van beide evenwijdige zijden.",
         ],
       },
     ],
