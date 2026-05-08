@@ -151,6 +151,55 @@ function SvgFigure({ svg }) {
   );
 }
 
+// Tussen-scherm na correct antwoord met evidence: auto-advance na ~2.8s
+// (flow behouden voor 10-jarige in ritme), skip-knop voor wie sneller wil.
+// Visuele progress-bar laat zien dat 't kort is.
+function CorrectEvidenceCard({ evidence, isLast, onAdvance }) {
+  const AUTO_MS = 2800;
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const start = Date.now();
+    let raf;
+    const tick = () => {
+      const elapsed = Date.now() - start;
+      const p = Math.min(100, (elapsed / AUTO_MS) * 100);
+      setProgress(p);
+      if (elapsed >= AUTO_MS) {
+        onAdvance();
+        return;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  return (
+    <div style={cardStyle(C.good)}>
+      <div style={{ fontSize: 18, fontWeight: 700, color: C.good, marginBottom: 8 }}>
+        ✅ Goed!
+      </div>
+      <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
+        Je vond het juiste antwoord. Hier stond de aanwijzing:
+      </div>
+      <EvidenceQuote text={evidence} label="📍 Hier vond je het" />
+      <div style={{ marginTop: 14 }}>
+        <div style={{ height: 4, background: "rgba(0,200,83,0.18)", borderRadius: 2, overflow: "hidden", marginBottom: 8 }}>
+          <div style={{
+            width: `${progress}%`,
+            height: "100%",
+            background: C.good,
+            transition: "width 60ms linear",
+          }} />
+        </div>
+        <button onClick={onAdvance} style={btnSecondary()}>
+          {isLast ? "Klaar met deze stap ✓" : "Sneller door ▶"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 // Quote-card met de tekst-passage waar het antwoord op staat.
 // Gebruikt door wrong-overlay en correctEvidence-mode bij begrijpend-lezen-
 // vragen. Mark feedback 2026-05-08: didactisch waardevol om te tonen WAAR
@@ -705,18 +754,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
 
         {mode === "correctEvidence" && currentCheck && (
-          <div style={cardStyle(C.good)}>
-            <div style={{ fontSize: 18, fontWeight: 700, color: C.good, marginBottom: 8 }}>
-              ✅ Goed!
-            </div>
-            <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
-              Je vond het juiste antwoord. Hier stond de aanwijzing in de tekst:
-            </div>
-            <EvidenceQuote text={currentCheck.evidence} label="📍 Hier vond je het" />
-            <button onClick={advanceAfterEvidence} style={{ ...btnPrimary(), marginTop: 14 }}>
-              {checkIdx + 1 < checks.length ? "Volgende vraag ▶" : "Klaar met deze stap ✓"}
-            </button>
-          </div>
+          <CorrectEvidenceCard
+            evidence={currentCheck.evidence}
+            isLast={checkIdx + 1 >= checks.length}
+            onAdvance={advanceAfterEvidence}
+          />
         )}
 
         {mode === "stepDone" && !showMiniQuiz && (
