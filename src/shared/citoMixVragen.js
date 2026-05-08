@@ -9,6 +9,7 @@
 //   { id, question, options, answer, wrongHints, subject, pathTitle, stepTitle }
 
 import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
+import { getWrongChecks } from "./adaptiveStore.js";
 
 // Welke `subject`-keys horen bij welk Cito-onderdeel.
 // Schema's-stappenplannen + samenvatten zijn als `subject: "taal"`
@@ -77,23 +78,60 @@ function shuffle(arr, rng = Math.random) {
   return a;
 }
 
+// Markeer welke vragen eerder fout zijn gegaan op basis van adaptiveStore.
+// Returnt nieuwe array (geen mutatie). Vragen krijgen extra `wrongBefore: true`.
+function annotateWithWrongHistory(checks) {
+  // Cache wrongChecks-lookup per pad+stap zodat we niet voor elke vraag
+  // localStorage hitten.
+  const cache = new Map();
+  return checks.map((c) => {
+    const k = `${c.pathId}::${c.stepIdx}`;
+    if (!cache.has(k)) cache.set(k, new Set(getWrongChecks(c.pathId, c.stepIdx)));
+    const wrongSet = cache.get(k);
+    // c.id format = `${pathId}::${stepIdx}::${checkIdx}`
+    const checkIdx = Number(c.id.split("::")[2]);
+    return { ...c, wrongBefore: wrongSet.has(checkIdx) };
+  });
+}
+
 // Sample N vragen met een mix-verdeling.
 // mix = { rekenen: 0.5, taal: 0.35, studievaardigheden: 0.15 } (default Cito-achtig).
 // Als een pijler te weinig vragen heeft wordt het tekort uit de andere pijlers
 // aangevuld zodat je altijd `count` vragen krijgt.
-export function sampleCitoMix(count, mix, rng = Math.random) {
+//
+// adaptive (default true): tot 30% van de sample krijgt voorrang aan vragen
+// die eerder fout zijn gegaan (uit adaptiveStore). Resterende ~70% volgt de
+// normale pijler-mix. Geeft een spaced-rep-achtig effect zonder DB-werk.
+export function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
+  const adaptive = opts.adaptive !== false;
   const all = gatherPoChecks();
   const ratios = mix || { rekenen: 0.5, taal: 0.35, studievaardigheden: 0.15 };
   const targetN = Math.max(1, Math.floor(count));
 
+  const picked = [];
+  const used = new Set();
+
+  // 0. Adaptive-pool: eerder-foute vragen krijgen voorrang (max 30% van target).
+  if (adaptive) {
+    const annotated = annotateWithWrongHistory(all);
+    const wrongPool = shuffle(annotated.filter((v) => v.wrongBefore), rng);
+    const adaptiveSlots = Math.min(
+      Math.floor(targetN * 0.3),
+      wrongPool.length
+    );
+    for (let i = 0; i < adaptiveSlots; i++) {
+      const v = wrongPool[i];
+      picked.push(v);
+      used.add(v.id);
+    }
+  }
+
   const byPijler = {};
   for (const v of all) {
+    if (used.has(v.id)) continue;
     if (!byPijler[v.subject]) byPijler[v.subject] = [];
     byPijler[v.subject].push(v);
   }
-
-  const picked = [];
-  const used = new Set();
 
   // Eerste ronde: pak per pijler floor(ratio * count) vragen
   for (const [pijler, ratio] of Object.entries(ratios)) {

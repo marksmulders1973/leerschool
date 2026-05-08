@@ -231,30 +231,72 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath }) {
             {questions.map((q, i) => {
               const wrong = answers[i] !== q.answer;
               if (!wrong) return null;
+              const givenIdx = answers[i];
+              const givenLabel = givenIdx !== null && givenIdx !== undefined
+                ? q.options[givenIdx]
+                : null;
+              const correctLabel = q.options[q.answer];
+              const hint = givenIdx !== null && givenIdx !== undefined
+                ? q.wrongHints?.[givenIdx]
+                : null;
               return (
-                <button
+                <div
                   key={q.id}
-                  onClick={() => onPickPath && onPickPath(q.pathId, q.stepIdx)}
                   style={{
-                    display: "block",
-                    width: "100%",
-                    textAlign: "left",
-                    padding: "10px 12px",
-                    marginBottom: 6,
+                    padding: "12px 14px",
+                    marginBottom: 8,
                     background: "rgba(255,82,82,0.06)",
                     border: "1px solid rgba(255,82,82,0.2)",
                     borderRadius: 10,
                     color: C.text,
-                    cursor: onPickPath ? "pointer" : "default",
                   }}
                 >
-                  <div style={{ fontSize: 13, marginBottom: 4 }}>
-                    {q.question.length > 100 ? q.question.slice(0, 100) + "…" : q.question}
+                  <div style={{ fontSize: 13, marginBottom: 6, lineHeight: 1.4 }}>
+                    {q.question}
                   </div>
-                  <div style={{ fontSize: 11, color: C.muted }}>
-                    📖 {q.pathTitle} · stap {q.stepIdx + 1} ›
+                  <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>
+                    {givenLabel === null ? (
+                      <span style={{ color: "#ffb74d" }}>Niet beantwoord</span>
+                    ) : (
+                      <>Jouw antwoord: <span style={{ color: C.bad }}>{givenLabel}</span></>
+                    )}
                   </div>
-                </button>
+                  <div style={{ fontSize: 12, color: C.muted, marginBottom: hint ? 6 : 4 }}>
+                    Goede antwoord: <span style={{ color: C.good, fontWeight: 700 }}>{correctLabel}</span>
+                  </div>
+                  {hint && (
+                    <div
+                      style={{
+                        fontSize: 12,
+                        background: "rgba(255,213,79,0.08)",
+                        border: "1px solid rgba(255,213,79,0.25)",
+                        borderRadius: 8,
+                        padding: "8px 10px",
+                        marginBottom: 6,
+                        color: "#ffd54f",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      💡 {hint}
+                    </div>
+                  )}
+                  {onPickPath && (
+                    <button
+                      onClick={() => onPickPath(q.pathId, q.stepIdx)}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: C.muted,
+                        fontSize: 11,
+                        cursor: "pointer",
+                        padding: 0,
+                        textAlign: "left",
+                      }}
+                    >
+                      📖 {q.pathTitle} · stap {q.stepIdx + 1} ›
+                    </button>
+                  )}
+                </div>
               );
             })}
           </div>

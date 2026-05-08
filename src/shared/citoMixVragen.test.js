@@ -1,5 +1,10 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, beforeEach } from "vitest";
 import { gatherPoChecks, sampleCitoMix, scoreCitoMix } from "./citoMixVragen.js";
+import { recordWrong, clearAll } from "./adaptiveStore.js";
+
+beforeEach(() => {
+  clearAll();
+});
 
 describe("gatherPoChecks", () => {
   it("retourneert alleen PO-vragen met geldige meerkeuze-structuur", () => {
@@ -54,6 +59,40 @@ describe("sampleCitoMix", () => {
     const sample = sampleCitoMix(30);
     const ids = new Set(sample.map((v) => v.id));
     expect(ids.size).toBe(sample.length);
+  });
+
+  it("adaptive mode geeft voorrang aan eerder-foute vragen", () => {
+    // Markeer 3 specifieke checks als fout
+    recordWrong("procenten-po", 0, 0);
+    recordWrong("procenten-po", 0, 1);
+    recordWrong("procenten-po", 0, 2);
+    const sample = sampleCitoMix(10);
+    const fromWrong = sample.filter(
+      (v) => v.pathId === "procenten-po" && v.stepIdx === 0
+        && [0, 1, 2].includes(Number(v.id.split("::")[2]))
+    );
+    // 30% van 10 = 3 — alle 3 foute moeten in sample zitten
+    expect(fromWrong.length).toBe(3);
+  });
+
+  it("adaptive mode kan worden uitgeschakeld via opts", () => {
+    recordWrong("procenten-po", 0, 0);
+    recordWrong("procenten-po", 0, 1);
+    recordWrong("procenten-po", 0, 2);
+    const samples = [];
+    for (let i = 0; i < 5; i++) {
+      samples.push(sampleCitoMix(10, null, Math.random, { adaptive: false }));
+    }
+    // Met adaptive=false is het GROTENDEELS toeval; minstens één van 5 samples
+    // mag de 3 markedchecks niet allemaal hebben.
+    const someSampleMistFout = samples.some((s) => {
+      const fromWrong = s.filter(
+        (v) => v.pathId === "procenten-po" && v.stepIdx === 0
+          && [0, 1, 2].includes(Number(v.id.split("::")[2]))
+      );
+      return fromWrong.length < 3;
+    });
+    expect(someSampleMistFout).toBe(true);
   });
 });
 
