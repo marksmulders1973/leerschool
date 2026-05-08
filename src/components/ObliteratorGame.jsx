@@ -808,6 +808,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let bliksemFlash = 0;       // > 0 = flash zichtbaar (frames)
     let bliksemTimer = 1200;    // countdown tot volgende flits
     let bliksemBoltPath = null; // gegenereerde zigzag-pad voor de bliksem
+    // Vuurbal-state: speler getroffen door bliksem → 3 sec brandend
+    let vuurbalFrames = 0;
+    const VUURBAL_DUUR = 180;
     const PLAFOND_NIVEAU = PLAFOND_HOOGTE + 12;
     // gouden ringen — primary score-bron (Sonic-stijl)
     const ringen = [];
@@ -1828,6 +1831,35 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const cx = speler.x + speler.breedte / 2;
       const cy = speler.y + speler.hoogte / 2;
       const r = speler.breedte / 2;
+
+      // Vuurbal-state: speler getroffen door bliksem → 3 sec brandende emoji
+      // ipv normale skin. Knipperende laatste 0.5s zodat speler weet dat 't bijna voorbij is.
+      if (vuurbalFrames > 0) {
+        const knipper = vuurbalFrames < 30 ? (Math.floor(vuurbalFrames / 4) % 2 === 0 ? 1 : 0.4) : 1;
+        ctx.save();
+        ctx.globalAlpha = knipper;
+        // Vlam-aura
+        const pulse = 0.65 + Math.sin(frameTeller * 0.45) * 0.3;
+        ctx.shadowBlur = 30;
+        ctx.shadowColor = "#ff6020";
+        ctx.fillStyle = `rgba(255, 140, 30, ${0.45 * pulse})`;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 1.55, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = `rgba(255, 220, 80, ${0.55 * pulse})`;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r * 1.05, 0, Math.PI * 2);
+        ctx.fill();
+        // Vuurbal-emoji
+        ctx.shadowBlur = 22;
+        ctx.shadowColor = "#ffaa20";
+        ctx.font = `${speler.breedte * 1.25}px sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("🔥", cx, cy);
+        ctx.restore();
+        return;
+      }
 
       // Tijdens vliegen: speler groeit naar 2.5x — grow eerste 30f, shrink laatste 30f
       let vliegSchaal = 1;
@@ -4534,6 +4566,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // andere code — alleen tracker voor latere hill-positie-berekeningen.
       worldScrollX += effSnelheid;
       if (!Number.isFinite(worldScrollX)) worldScrollX = 0;
+      // Vuurbal-state countdown + brandende trail-particles per frame.
+      if (vuurbalFrames > 0) {
+        vuurbalFrames--;
+        if (frameTeller % 2 === 0) {
+          const cx = speler.x + speler.breedte / 2;
+          const cy = speler.y + speler.hoogte / 2;
+          spawnParticles(cx, cy, 2, "#ffaa30", { spread: 4, opwaarts: 1, leven: 18, grootte: 3, glow: 14 });
+          spawnParticles(cx, cy, 1, "#ff5020", { spread: 3, opwaarts: 1, leven: 16, grootte: 3, glow: 12 });
+        }
+      }
       if (afgeremFrames > 0) {
         afgeremFrames--;
         // HP drain tijdens blok-vertraging (~14 HP over 35 frames). Niet
@@ -4822,6 +4864,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             path.push({ x, y });
           }
           bliksemBoltPath = path;
+          if (bliksemTreftSpeler(path)) ontvlamDoorBliksem();
           shakeKracht = Math.max(shakeKracht, lichtAmbient ? 3 : 9 + (effLevelVoorIntens - 50) * 0.12);
           // donder-stack: meer lagen, luider. L1 ambient = ~50% volume, geen vuur-burst.
           const dV = lichtAmbient ? 0.5 : 1;
@@ -4852,6 +4895,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 path2.push({ x: x2, y: y2 });
               }
               bliksemBoltPath = path2;
+              if (bliksemTreftSpeler(path2)) ontvlamDoorBliksem();
               shakeKracht = Math.max(shakeKracht, 7);
               piep(68, 0.50, "triangle", 0.18);
             }, (6 + Math.random() * 6) * 16);
@@ -7278,6 +7322,37 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       if (spelLoopt) raf = requestAnimationFrame(lus);
     }
+    // Bliksem-bolt vs speler-bbox: any path-point binnen de bbox = hit.
+    // Skip tijdens i-frames / vlieg / flip / bonus / al brandend.
+    function bliksemTreftSpeler(path) {
+      if (!path || path.length === 0) return false;
+      if (vuurbalFrames > 0 || hpFlashTeller > 0) return false;
+      if (bonusFase || vliegFrames > 0 || flipFrames > 0) return false;
+      const sb = spelerBots();
+      for (let i = 0; i < path.length; i++) {
+        const p = path[i];
+        if (p.x >= sb.x && p.x <= sb.x + sb.breedte
+          && p.y >= sb.y && p.y <= sb.y + sb.hoogte) return true;
+      }
+      return false;
+    }
+    function ontvlamDoorBliksem() {
+      vuurbalFrames = VUURBAL_DUUR;
+      hp -= 15;
+      hpFlashTeller = 30;
+      shakeKracht = Math.max(shakeKracht, 14);
+      const cx = speler.x + speler.breedte / 2;
+      const cy = speler.y + speler.hoogte / 2;
+      spawnParticles(cx, cy, 24, "#ffee40", { spread: 8, opwaarts: 0, leven: 30, grootte: 5, glow: 22 });
+      spawnParticles(cx, cy, 18, "#ff7020", { spread: 7, opwaarts: 0, leven: 36, grootte: 5, glow: 20 });
+      spawnParticles(cx, cy, 12, "#ff3010", { spread: 5, opwaarts: 0, leven: 26, grootte: 4, glow: 18 });
+      piep(880, 0.10, "triangle", 0.16);
+      setTimeout(() => piep(440, 0.20, "triangle", 0.14), 80);
+      if (hp <= 0) {
+        hp = HP_MAX;
+        levenVerlies();
+      }
+    }
     // Spike-hit: trekt HP_PER_HIT van hp af. Bij hp ≤ 0 → leven kwijt
     // + hp reset. Korte i-frames via hpFlashTeller voorkomen dat 1 spike
     // direct meerdere keren raakt.
@@ -7417,6 +7492,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bubbelFrames = 0;
       flipFrames = 0;
       flipPending = 0;
+      vuurbalFrames = 0;
       schatkisten.length = 0;
       bubbels.length = 0;
       schatkistSpawnTeller = 480;
