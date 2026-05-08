@@ -265,7 +265,7 @@ const steps = [
         q: "Een blok van 4 kg krijgt een kracht van 12 N. Wat is de versnelling?",
         options: ["3 m/s²", "48 m/s²", "16 m/s²", "0,3 m/s²"],
         answer: 0,
-        wrongHints: [null, "Vermenigvuldigd i.p.v. gedeeld.", "Optellen niet doen — je moet F door m delen.", "Decimaal verkeerd. 12/4 = 3."],
+        wrongHints: [null, "Niet vermenigvuldigen. Welke bewerking zit er in F=ma? Schrijf het anders: a=?", "Niet optellen. F en m hebben een delings-relatie volgens Newton 2.", "Decimale komma verkeerd geplaatst — vul je antwoord terug in F=ma en kijk of 't klopt."],
       },
       {
         q: "Wat klopt over Newton 2?",

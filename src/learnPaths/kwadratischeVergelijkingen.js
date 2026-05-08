@@ -196,9 +196,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is geen factoriseren — gewoon vermenigvuldigen geeft niet x² + 4x.",
-          "(x+2)² = x² + 4x + 4. Het extra +4 hoort hier niet.",
-          "Werk uit: 4x(x+1) = 4x² + 4x. Dat heeft 4x², niet x².",
+          "Dat is geen factoriseren. Welke gemeenschappelijke factor zit IN beide termen?",
+          "Werk je antwoord uit — krijg je dan x² + 4x terug? Wat hoort er extra niet bij?",
+          "Werk je antwoord uit — past het kwadraat-coëfficiënt bij wat in de vraag staat?",
         ],
       },
     ],

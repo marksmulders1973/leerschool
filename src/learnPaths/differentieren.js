@@ -146,9 +146,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "9 is de y-waarde van het punt, niet de helling.",
-          "3 is de x-waarde, maar de helling is 2x = 2·3 = 6.",
-          "Helling 0 is alleen op de top (x = 0).",
+          "Dat is de y-waarde, niet de helling. Welke formule geeft de helling?",
+          "Dat is de x-waarde — vul die nog in de hellings-formule in.",
+          "Helling = 0 alleen op de top — kijk naar de x-coördinaat van dit punt.",
         ],
       },
     ],

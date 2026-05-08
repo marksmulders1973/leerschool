@@ -134,9 +134,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Kans 1 betekent zeker. Kans 0 zou 'nooit' zijn.",
-          "50% = 1/2, niet 1.",
-          "Kans 1 is een duidelijke waarde: zeker.",
+          "Welke kans betekent 'zeker' — 0 of 1?",
+          "50% komt overeen met welke breuk? Niet hetzelfde als 'zeker'.",
+          "Kans 1 = altijd. Past dat bij wat de vraag stelt?",
         ],
       },
       {
