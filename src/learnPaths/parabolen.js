@@ -354,9 +354,9 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Vergeet niet de oorsprong: x = 0 is ook een punt. Tel ze allemaal.",
-          "Reken na: -3, -2, -1, 0, 1, 2, 3. Hoeveel waardes zijn dat?",
-          "Je hebt alleen de positieve x-en geteld. De negatieve tellen ook mee.",
+          "Heb je x = 0 meegeteld? De oorsprong is ook een punt.",
+          "Schrijf ze allemaal op: -3, -2, -1, 0, 1, 2, 3 — en tel.",
+          "Heb je alleen de positieve gepakt? De negatieve tellen óók mee.",
         ],
       },
     ],

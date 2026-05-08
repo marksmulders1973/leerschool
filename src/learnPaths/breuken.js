@@ -200,9 +200,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "7 = 3 + 4 (optellen). Maar voor noemer zoek je een getal waar **beide** in passen.",
-          "6 is wel deelbaar door 3, maar niet door 4. Probeer een groter getal — bv. 3 × 4 = 12.",
-          "3 is alleen de eerste noemer. Je zoekt een getal waar zowel 3 als 4 in passen.",
+          "Niet optellen — je zoekt een getal waar BEIDE noemers in passen. Welke bewerking past daarbij?",
+          "Past de 4 in dat getal? Probeer een groter getal waar zowel 3 als 4 een geheel-aantal-keer in passen.",
+          "Dat is alleen de eerste noemer. Je zoekt een getal dat door BEIDE deelbaar is.",
         ],
       },
     ],

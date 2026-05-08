@@ -240,9 +240,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 6 + 8 = 14 gedaan. Maar Pythagoras zegt: a² + b² (eerst kwadrateren).",
-          "Je hebt 6 · 8 = 48 gedaan. Maar het is a² + b², niet a · b.",
-          "Te groot. Reken: 6² + 8² = 36 + 64 = ?",
+          "Niet zomaar optellen. Wat zegt de stelling: doe je eerst + of eerst kwadrateren?",
+          "Niet vermenigvuldigen. De stelling gebruikt + en kwadraten, geen ×.",
+          "Te groot — kwadrateer beide getallen apart en tel die samen.",
         ],
       },
     ],

@@ -222,9 +222,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Check: x + 2x = 9 → 3x = 9 → x = 3, niet 9.",
-          "6 = 2·3 (dat zou y zijn). Niet x.",
-          "Niet zo'n breuk — invul levert 3x = 9, dus x is geheel.",
+          "Vervang y door 2x in de tweede vergelijking. Wat krijg je dan voor x in z'n eentje?",
+          "Dat zou de y-waarde kunnen zijn, niet de x. Welke variabele vraagt de vraag?",
+          "Geen breuk — substitueer y=2x en kijk wat je overhoudt. Geheel getal of niet?",
         ],
       },
     ],

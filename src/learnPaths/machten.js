@@ -70,9 +70,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Andersom — grondtal komt eerst. 2⁵ zou 'twee tot de vijfde' zijn.",
-          "Vijf maal twee = 10. Maar 5² = 25.",
-          "Onzin-uitspraak. 5² = 5 · 5 = 25.",
+          "Andersom — welk getal staat onder en welk boven in 5²? Welke spreek je eerst uit?",
+          "Niet vermenigvuldigen — 5² is geen 5 keer 2. Wat doet het kwadraat?",
+          "Niet zinnig opgeschreven. Hoe spreek je een macht ECHT uit? Denk aan 'kwadraat'.",
         ],
       },
     ],

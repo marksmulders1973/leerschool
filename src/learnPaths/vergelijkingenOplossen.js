@@ -123,9 +123,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken zou geen werk doen — 8x staat er niet als 8 + x.",
-          "Optellen helpt niet om de 8 weg te krijgen die met x vermenigvuldigt wordt.",
-          "Vermenigvuldigen maakt het juist groter (64x = 192). Je wil delen.",
+          "8x is een vermenigvuldiging, geen optelling. Welke bewerking is de tegenhanger van keer-doen?",
+          "Welke bewerking heft de 'keer 8' op? Optellen werkt niet bij vermenigvuldiging.",
+          "Vermenigvuldigen maakt het groter, jij wil x alleen overhouden. Welke bewerking doet dat?",
         ],
       },
     ],

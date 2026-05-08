@@ -173,9 +173,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "g = 1.25 zou 80/100 = 1.25 zijn. Maar 80 < 100, dus deel andersom: 80/100 = 0.8.",
-          "Groeifactor is altijd positief (geen min). -20 zou een verschil aangeven, niet de factor.",
-          "g = 0.2 zou alle waardes door 5 maken. 100·0.2 = 20, niet 80.",
+          "Welk getal deel je door welk om de groeifactor te krijgen — nieuw door oud, of oud door nieuw?",
+          "Een groeifactor is altijd positief — een minteken slaat op een verschil, niet op een factor.",
+          "Als je groeifactor klopt, moet 100 · g uitkomen op de volgende waarde. Klopt dat met jouw factor?",
         ],
       },
     ],
