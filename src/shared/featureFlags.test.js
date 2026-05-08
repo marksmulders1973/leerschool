@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { gameVisibleForUser, teacherFeaturesVisibleForUser } from "./featureFlags.js";
+import { gameVisibleForUser, teacherFeaturesVisibleForUser, interactive3DEnabled } from "./featureFlags.js";
 
 describe("gameVisibleForUser", () => {
   const ORIGINAL_ENV = { ...import.meta.env };
@@ -69,5 +69,26 @@ describe("teacherFeaturesVisibleForUser", () => {
   it("admin (Mark) altijd zichtbaar zelfs met flag aan", () => {
     import.meta.env.VITE_HIDE_TEACHER_FOR_NON_TEACHERS = "true";
     expect(teacherFeaturesVisibleForUser({ email: "Mark-smulders@hotmail.com" })).toBe(true);
+  });
+});
+
+describe("interactive3DEnabled", () => {
+  afterEach(() => {
+    delete import.meta.env.VITE_HIDE_3D_IN_PATHS;
+  });
+
+  it("default: 3D aan (huidig gedrag)", () => {
+    delete import.meta.env.VITE_HIDE_3D_IN_PATHS;
+    expect(interactive3DEnabled()).toBe(true);
+  });
+
+  it("flag aan: 3D uit", () => {
+    import.meta.env.VITE_HIDE_3D_IN_PATHS = "true";
+    expect(interactive3DEnabled()).toBe(false);
+  });
+
+  it("flag false expliciet: 3D aan", () => {
+    import.meta.env.VITE_HIDE_3D_IN_PATHS = "false";
+    expect(interactive3DEnabled()).toBe(true);
   });
 });

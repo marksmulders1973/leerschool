@@ -74,6 +74,25 @@ export function teacherFeaturesVisibleForUser(authUser, userRole = null) {
   return false;
 }
 
+/**
+ * Mogen interactieve 3D-componenten in leerpad-stappen renderen?
+ *
+ * Per audit-3 S3: 3D-modellen kosten veel ontwikkeltijd (Claude.ai TSX-
+ * workflow per model) maar bedienen alleen VO-onderbouw (klas 1-3
+ * meetkunde). Voor Cito-ouder-ICP (groep 6-8) = nul ROI. Beslissing:
+ * geen NIEUWE 3D-modellen tot post-PMF; bestaande blijven werken,
+ * maar via deze flag kan Mark ze tijdelijk dichtschakelen voor
+ * performance/data-besparing op trage netwerken.
+ *
+ * Default true (huidig gedrag — 3D aan).
+ *
+ * @returns {boolean}
+ */
+export function interactive3DEnabled() {
+  const hide = readBoolEnv("VITE_HIDE_3D_IN_PATHS", false);
+  return !hide;
+}
+
 function readBoolEnv(key, fallback) {
   try {
     const v = (import.meta.env?.[key] ?? "").toString().toLowerCase().trim();

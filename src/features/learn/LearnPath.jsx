@@ -5,6 +5,7 @@ import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
 import { BRAND } from "../../brand.js";
+import { interactive3DEnabled } from "../../shared/featureFlags.js";
 import AITutor from "./AITutor.jsx";
 
 const C = {
@@ -549,12 +550,33 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </button>
         )}
 
-        {mode === "checking" && step.interactiveComponent && (
+        {mode === "checking" && step.interactiveComponent && interactive3DEnabled() && (
           <div style={cardStyle()}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
               Interactieve check {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <step.interactiveComponent onAnswer={handleInteractiveAnswer} />
+          </div>
+        )}
+
+        {/* S3 audit-3: bij flag VITE_HIDE_3D_IN_PATHS=true skipt 3D-render
+            naar de standaard-check (currentCheck). Bestaande modellen blijven
+            in code maar renderen niet — bespaart Three.js-bundle voor PO. */}
+        {mode === "checking" && step.interactiveComponent && !interactive3DEnabled() && !currentCheck && (
+          <div style={cardStyle()}>
+            <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
+              Interactieve 3D-check
+            </div>
+            <div style={{ padding: "12px 14px", borderRadius: 10, background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.30)", color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.5 }}>
+              ⏸ De interactieve 3D-versie van deze check staat tijdelijk uit.
+              Lees de uitleg van de stap nog eens en klik dan 'Stap voltooid' onderin.
+            </div>
+            <button
+              onClick={() => handleInteractiveAnswer(true)}
+              style={{ marginTop: 12, padding: "10px 16px", borderRadius: 10, border: "none", background: C.good, color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+            >
+              ✓ Stap voltooid
+            </button>
           </div>
         )}
 
