@@ -143,7 +143,7 @@ ${Array.from({ length: 30 }, (_, i) => {
         q: "Hoeveel zetels heeft de Tweede Kamer?",
         options: ["150", "75", "100", "200"],
         answer: 0,
-        wrongHints: [null, "Eerste Kamer = 75.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Dit is het aantal van de Eerste Kamer — niet de Tweede.", "Te weinig — dit zou geen evenwichtige verhouding zijn.", "Te veel — dit aantal komt nergens in NL voor."],
       },
       {
         q: "Wat is een **coalitie**?",
@@ -244,7 +244,7 @@ ${Array.from({ length: 30 }, (_, i) => {
         q: "Wie schreef de moderne Nederlandse grondwet?",
         options: ["Thorbecke (1848)", "Willem van Oranje", "Napoleon", "Wilhelmina"],
         answer: 0,
-        wrongHints: [null, "Willem van Oranje = 1500s.", "Napoleon = ~1800.", "Wilhelmina = koningin in 20e eeuw."],
+        wrongHints: [null, "Bekend als 'vader des vaderlands' uit de 16e eeuw — toen bestond de moderne grondwet nog niet.", "Bezette Nederland rond 1800; daarvoor en daarna golden andere regels.", "Was koningin in de 20e eeuw, ruim na de grondwet-herziening."],
       },
       {
         q: "Wat zegt **artikel 1** van de Grondwet?",

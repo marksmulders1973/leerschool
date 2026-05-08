@@ -165,7 +165,7 @@ const steps = [
         q: "Schaal 1:25.000. **1 cm** = ___ m.",
         options: ["250 m","25 m","2.500 m","2,5 km"],
         answer: 0,
-        wrongHints: [null,"Te klein.","Te groot.","2,5 km = 2.500 m, klopt qua getal maar fout uitgedrukt — 250 m is correct."],
+        wrongHints: [null,"Reken opnieuw — 1 cm op kaart × 25.000 = ?","Te groot — kijk welke eenheid de vraag wil.","Klopt qua afstand maar fout uitgedrukt — let op of het antwoord in m of km moet."],
       },
       {
         q: "Op een kaart staat **N-pijl** naar links. Wat betekent dat?",
