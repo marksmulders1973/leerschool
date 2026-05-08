@@ -190,7 +190,7 @@ const spellingOverigePo = {
   title: "Spelling overige — Cito groep 5-8",
   emoji: "✒️",
   level: "groep5-8",
-  subject: "taal",
+  subject: "spelling",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — spelling overig",
   intro:

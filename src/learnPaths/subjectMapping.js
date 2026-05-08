@@ -17,7 +17,7 @@ const CATEGORY_TO_LEARN_SUBJECT = {
   "wiskunde-b": "wiskunde",
   nederlands: "taal",
   taal: "taal",
-  spelling: "taal",
+  spelling: ["spelling", "taal"],
   "begrijpend-lezen": "taal",
   engels: "engels",
   "engels-po": "engels",

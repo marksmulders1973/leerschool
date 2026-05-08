@@ -305,7 +305,7 @@ const werkwoordsspellingDT = {
   title: "Werkwoordsspelling — d/t en 't kofschip",
   emoji: "✍️",
   level: "groep5-7",
-  subject: "taal",
+  subject: "spelling",
   referentieNiveau: "1F/1S",
   sloThema: "Taalverzorging — werkwoordsspelling d/t",
   intro:

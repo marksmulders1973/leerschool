@@ -19,6 +19,7 @@ const SUBJECT_TO_PIJLER = {
   rekenen: "rekenen",
   wiskunde: "rekenen",
   taal: "taal",
+  spelling: "taal",
   "begrijpend-lezen": "taal",
   engels: "taal",
   aardrijkskunde: "studievaardigheden",

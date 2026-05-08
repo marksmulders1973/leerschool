@@ -33,6 +33,7 @@ import schemasStappenplannenPo from "./schemasStappenplannenPo.js";
 import kaartlezenPo from "./kaartlezenPo.js";
 import samenvattenHoofdgedachtePo from "./samenvattenHoofdgedachtePo.js";
 import begrijpendLezenTekstenPo from "./begrijpendLezenTekstenPo.js";
+import tijdvakkenNederlandPo from "./tijdvakkenNederlandPo.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -110,6 +111,7 @@ export const ALL_LEARN_PATHS = {
   "kaartlezen-po": kaartlezenPo,
   "samenvatten-hoofdgedachte-po": samenvattenHoofdgedachtePo,
   "begrijpend-lezen-teksten-po": begrijpendLezenTekstenPo,
+  "tijdvakken-nederland-po": tijdvakkenNederlandPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,

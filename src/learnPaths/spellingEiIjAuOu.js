@@ -297,7 +297,7 @@ const spellingEiIjAuOu = {
   title: "Spelling — ei vs ij + au vs ou",
   emoji: "📝",
   level: "groep4-6",
-  subject: "taal",
+  subject: "spelling",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — spelling ei/ij & au/ou",
   intro:
