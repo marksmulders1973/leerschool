@@ -331,9 +331,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "23 = 8 + 15. Maar je moet kwadrateren: 8² + 15² = 64 + 225.",
-          "120 = 8 · 15. Pythagoras zegt a² + b², niet a · b.",
-          "529 = 23². Maar de echte berekening is 8² + 15² = 64 + 225 = 289.",
+          "Niet eerst optellen — kwadrateer eerst beide getallen, tel dan pas op.",
+          "Niet vermenigvuldigen. De stelling gebruikt + tussen kwadraten, geen ×.",
+          "Bijna goed pad — maar je hebt de SOM gekwadrateerd, niet de termen apart. Welke volgorde klopt?",
         ],
       },
       {

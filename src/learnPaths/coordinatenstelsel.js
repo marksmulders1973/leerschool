@@ -356,9 +356,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Kwadrant I vereist een positieve x. Hier is x = 0 → het punt ligt op de y-as.",
-          "Kwadrant II vereist een negatieve x. Hier is x = 0.",
-          "De oorsprong is (0, 0). Hier is y = 5.",
+          "Welke kwadrant heeft een positieve x? Bekijk de x-coördinaat van dit punt.",
+          "Kwadrant II vereist een NEGATIEVE x. Klopt dat hier?",
+          "De oorsprong is (0, 0). Wat is hier y? Past dat bij 'oorsprong'?",
         ],
       },
     ],

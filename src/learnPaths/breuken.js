@@ -235,9 +235,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt ook de noemers opgeteld. Maar de noemer blijft hetzelfde — alleen tellers optellen.",
-          "Hoe kom je aan ⅕? Bij optellen van breuken met zelfde noemer: tellers optellen, noemer blijft.",
-          "Niet vermenigvuldigen. Tellers optellen: 2 + 3 = 5. Noemer blijft 7.",
+          "Bij optellen met zelfde noemer: wat doe je met de tellers, en wat met de noemers?",
+          "Niet beide optellen — alleen tellers veranderen, de noemer blijft hetzelfde.",
+          "Niet vermenigvuldigen. Bij optellen tel je de tellers samen, de noemer blijft.",
         ],
       },
     ],

@@ -190,9 +190,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt opgeteld. Maar − + = −, dus 4 − 6 = −2.",
-          "Klopt niet — 4 − 6 = −2 (4 < 6, dus negatief).",
-          "Te negatief. Reken: − + = −, dus 4 − 6 = −2.",
+          "Niet optellen — wat is de regel voor min plus plus?",
+          "Welk getal is groter — 4 of 6? Wat zegt dat over het teken?",
+          "Te ver onder nul. Reken op je vingers af: trek 6 af van 4 — hoe ver kom je onder nul?",
         ],
       },
     ],

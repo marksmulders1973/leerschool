@@ -78,7 +78,7 @@ const steps = [
         q: "**2 + 3 × 4** = ?",
         options: ["14","20","11","24"],
         answer: 0,
-        wrongHints: [null,"Vergeet niet: × eerst — 3×4=12, dan 2+12=14.","Te weinig.","Te veel."],
+        wrongHints: [null,"Welke bewerking gaat eerst — × of +? Probeer in die volgorde.","Te weinig — heb je de × wel meegenomen?","Te veel — kijk of je niet eerst optelt voor je vermenigvuldigt."],
       },
       {
         q: "Wat doe je **eerst** als er + en × in een som staan?",
