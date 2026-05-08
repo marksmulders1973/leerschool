@@ -111,9 +111,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij even exponent wordt het positief. (-3) · (-3) = +9.",
-          "-6 = -3 · 2 (vermenigvuldigen). Maar (-3)² = (-3) · (-3) = +9.",
-          "6 = 3 · 2 (vermenigvuldigen). Maar machten = herhaaldelijk vermenigvuldigen met zichzelf.",
+          "Wat gebeurt er bij EVEN exponent met een minteken? Plus of min?",
+          "Niet vermenigvuldigen met 2 — een macht is herhaald vermenigvuldigen met zichzelf.",
+          "Het minteken telt mee bij het kwadrateren. Wat is min × min?",
         ],
       },
     ],

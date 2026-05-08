@@ -94,9 +94,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 8 + 8 gedaan. Reken nog: 8 keer 8.",
-          "Niet de cijfers achter elkaar zetten. 8² = 8 · 8.",
-          "Hoe kom je aan 48? Probeer: 8 · 8 = ?",
+          "Niet optellen — een kwadraat is een vermenigvuldiging met zichzelf.",
+          "Niet samenstellen — een kwadraat is geen nieuw getal opbouwen, het is een bewerking.",
+          "Welke bewerking zit er in een kwadraat? Doe je + of ×, en met welk ander getal?",
         ],
       },
     ],

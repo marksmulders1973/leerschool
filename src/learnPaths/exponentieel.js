@@ -213,9 +213,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "1.04 = 4% groei. Hier juist afname.",
-          "0.04 zou 96% afname betekenen. Onlogisch.",
-          "Groeifactor is altijd positief.",
+          "Dat is de factor voor groei. Hier juist afname — welke kant moet de factor op?",
+          "Zo'n kleine factor zou betekenen dat de prijs bijna verdwijnt. Past dat bij 4%?",
+          "Een groeifactor is altijd positief — geen min-tekens. Hoe noteer je een afname dan?",
         ],
       },
     ],

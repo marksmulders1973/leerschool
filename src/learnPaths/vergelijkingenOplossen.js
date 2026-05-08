@@ -154,9 +154,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "23 = 15 + 8 (verkeerd om). Trek 8 af van 15, niet bij elkaar op.",
-          "Check: 8 + 8 = 16, niet 15. Probeer iets kleiner.",
-          "Negatief klopt niet hier — 15 is groter dan 8 dus x is positief.",
+          "Verkeerde richting — om x alleen over te houden moet je de +8 wegwerken. Welke bewerking is de tegenhanger?",
+          "Vul je antwoord terug in en check: levert x + 8 echt 15 op?",
+          "Een negatieve x past hier niet — kijk welk getal groter is, 8 of 15.",
         ],
       },
       {
