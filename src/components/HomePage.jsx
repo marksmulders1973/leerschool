@@ -901,23 +901,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
             },
-            // Student-tegel met reclame-video (Mark 2026-05-08): zelfde
-            // model als model-student.jpg maar nu als 6-sec autoplay-loop.
-            // Beweging trekt aandacht naar deze tegel zonder geluid (verplicht
-            // muted voor mobile autoplay). Volledige reclame met geluid komt
-            // in de first-visit welkomst-modal.
+            // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
+            // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
+            // in de vierkante tegel. Label/sub naar first-person op 2026-05-07
+            // (avond) — parallel met Leerling/Leerkracht.
             {
               key: "student",
               icon: (
-                <video
-                  src="/reclame.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  poster="/model-student.jpg"
+                <img
+                  src="/model-student.jpg"
+                  alt=""
                   aria-hidden="true"
+                  loading="lazy"
                   style={{
                     width: "100%",
                     height: "100%",
@@ -925,7 +920,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     objectPosition: "center 25%",
                     borderRadius: 10,
                     display: "block",
-                    pointerEvents: "none",
                   }}
                 />
               ),
