@@ -21,6 +21,7 @@ const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
 const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
 const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
+const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"));
 const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
 const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
@@ -1159,9 +1160,22 @@ export default function App() {
           onHome={() => { setPendingFeature(null); setPage("home"); }}
         />
       )}
+      {page === "cito-leerpad-toets" && (
+        <CitoLeerpadToets
+          onBack={() => setPage("cito")}
+          onHome={() => setPage("home")}
+          onPickPath={(id, stepIdx) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : null);
+            setLearnPathReturnPage("cito");
+            setPage("learn-path");
+          }}
+        />
+      )}
       {page === "cito" && (
         <CitoPage
           citoProgress={studentProgress.filter(r => r.player === userName && r.citoId)}
+          onStartLeerpadToets={() => setPage("cito-leerpad-toets")}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);

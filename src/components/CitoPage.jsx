@@ -81,7 +81,7 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets }) {
   const [groep, setGroep] = useState("8");
   const [mode, setMode] = useState("kies"); // "kies" | "oefenen"
   const [selected, setSelected] = useState(null);
@@ -256,6 +256,39 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               </div>
               <span style={{ fontSize: 20, color: "rgba(255,107,53,0.6)" }}>›</span>
             </button>
+
+            {/* Bonus: oefen-Cito uit eigen leerpad-checks (sprint C 2026-05-08) */}
+            {onStartLeerpadToets && (
+              <button
+                onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(); }}
+                style={{
+                  textAlign: "left",
+                  borderRadius: 18,
+                  border: "2px solid rgba(255,213,79,0.4)",
+                  background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,179,0,0.06))",
+                  padding: "18px 20px",
+                  cursor: "pointer",
+                  color: "var(--color-text)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 16,
+                }}
+              >
+                <span style={{ fontSize: 36 }}>✨</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,213,79,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>
+                    Bonus
+                  </div>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: "#ffd54f" }}>
+                    Mini-eindtoets uit leerpaden
+                  </div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                    30 vragen uit Leerkwartier-paden · countdown · score per onderdeel
+                  </div>
+                </div>
+                <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
+              </button>
+            )}
 
             {/* Info-blokje */}
             <div style={{
