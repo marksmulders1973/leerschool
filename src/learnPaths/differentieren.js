@@ -578,6 +578,8 @@ const differentieren = {
   emoji: "📐",
   level: "havo4-5-vwo",
   subject: "wiskunde",
+  referentieNiveau: "HAVO/VWO wiskunde A/B",
+  sloThema: "Verbanden — differentiëren",
   topics: ["WI.algebra.machten"],
   intro:
     "Differentiëren voor havo 4-5: helling-concept, raaklijn, afgeleide functie f'(x), regels voor machten, som-regel, en toepassingen — extreme waarden vinden en raaklijn-vergelijkingen opstellen. Examenstof havo wis A en B.",

@@ -378,6 +378,8 @@ const vraagAanbodEconomie = {
   emoji: "📈",
   level: "klas3-havo4",
   subject: "economie",
+  referentieNiveau: "VO-onderbouw/HAVO",
+  sloThema: "Economie — vraag & aanbod, marktevenwicht",
   intro:
     "De motor van elke markt: vraag en aanbod. Vraagwet, aanbodwet, marktevenwicht, vraag- en aanbodverschuivingen, met praktische voorbeelden van uitverkoop tot concertkaartjes. Eerste pad economie.",
   triggerKeywords: [

@@ -577,6 +577,8 @@ const exponentieel = {
   emoji: "📈",
   level: "klas3-vmbo-vwo",
   subject: "wiskunde",
+  referentieNiveau: "3F",
+  sloThema: "Verbanden — exponentiële groei & afname",
   topics: ["WI.algebra.machten"],
   intro:
     "Exponentiële groei en afname voor klas 3: lineair vs exponentieel, groeifactor + percentage, formule N(t) = b·g^t, halveringstijd. Voorbereiding op havo wiskunde A (logaritmen, financiële wiskunde) met praktische toepassingen: rente, bevolking, radioactief verval, virusverspreiding.",

@@ -595,6 +595,8 @@ const stelsels = {
   emoji: "🔗",
   level: "klas2-3-vmbo-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F/3F",
+  sloThema: "Verbanden — stelsels vergelijkingen",
   topics: ["WI.algebra.vergelijking"],
   intro:
     "Twee vergelijkingen, twee onbekenden — oplossen met substitutie of optellen/aftrekken (eliminatie). Plus woordvragen waarin je zelf het stelsel moet opstellen. Vervolg op vergelijkingen-oplossen.",

@@ -613,6 +613,8 @@ const lineaireFormules = {
   emoji: "📈",
   level: "klas1-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F",
+  sloThema: "Verbanden — lineaire formules",
   topics: ["WI.algebra.lineair"],
   intro: "Lineaire formules — de meest gebruikte wiskundige basis. y = ax + b is overal: bij taxi-tarieven, spaarrekeningen, telefoonabonnementen, plantengroei. Hier leer je wat de getallen a en b doen, hoe je de grafiek tekent, formules opstelt en lineaire vergelijkingen oplost via de balansmethode.",
   triggerKeywords: ["lineair", "lineaire formule", "y = ax", "helling", "richtingscoëfficiënt", "balansmethode", "rechte lijn"],

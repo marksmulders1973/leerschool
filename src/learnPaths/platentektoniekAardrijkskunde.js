@@ -681,6 +681,8 @@ const platentektoniekAardrijkskunde = {
   emoji: "🌋",
   level: "klas2-3",
   subject: "aardrijkskunde",
+  referentieNiveau: "VO-onderbouw",
+  sloThema: "Aardrijkskunde — aarde & platentektoniek",
   intro:
     "Hoe de aardlagen zijn opgebouwd, hoe tektonische platen bewegen langs de drie grenstypen (uit elkaar / tegen elkaar / langs elkaar) en wat dat oplevert: bergen, oceanen, aardbevingen en vulkanen. Met beroemde voorbeelden zoals de Himalaya, Andes, IJsland, San Andreas en de Ring of Fire. CSE-relevant onderbouw.",
   triggerKeywords: [

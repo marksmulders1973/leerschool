@@ -333,6 +333,8 @@ const woordenschatEngels = {
   emoji: "📖",
   level: "klas1-2",
   subject: "engels",
+  referentieNiveau: "A1/A2",
+  sloThema: "Engels — basiswoordenschat per thema",
   intro:
     "~80 basiswoorden in 8 thema's: eten, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen, tijd en standaarduitdrukkingen. Genoeg voor dagelijks Engels.",
   triggerKeywords: [

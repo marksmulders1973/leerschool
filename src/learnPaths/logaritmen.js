@@ -619,6 +619,8 @@ const logaritmen = {
   emoji: "🔁",
   level: "havo4-5-vwo",
   subject: "wiskunde",
+  referentieNiveau: "HAVO/VWO wiskunde A/B",
+  sloThema: "Verbanden — logaritmen",
   topics: ["WI.algebra.machten"],
   intro:
     "Logaritmen voor havo 4-5: log als omkering van macht, log/ln-notatie, drie eigenschappen (log(ab)=log(a)+log(b), log(a/b)=log(a)−log(b), log(aⁿ)=n·log(a)), exponentiële vergelijkingen oplossen, halverings-/verdubbelingstijd. Voorbouw op machten + exponentieel.",

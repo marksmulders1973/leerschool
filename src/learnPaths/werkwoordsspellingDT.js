@@ -306,6 +306,8 @@ const werkwoordsspellingDT = {
   emoji: "✍️",
   level: "groep5-7",
   subject: "taal",
+  referentieNiveau: "1F/1S",
+  sloThema: "Taalverzorging — werkwoordsspelling d/t",
   intro:
     "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t,k,f,s,ch,h,p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5-7 — examenstof.",
   triggerKeywords: [

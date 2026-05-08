@@ -342,6 +342,8 @@ const passeComposeFrans = {
   emoji: "🇫🇷",
   level: "klas2-3",
   subject: "frans",
+  referentieNiveau: "A2",
+  sloThema: "Frans — passé composé",
   intro:
     "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onderwerp bij être, vragen en ontkenningen. Eerste pad Frans onderbouw.",
   triggerKeywords: [

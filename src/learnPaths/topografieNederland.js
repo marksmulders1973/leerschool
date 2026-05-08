@@ -414,6 +414,8 @@ const topografieNederland = {
   emoji: "🇳🇱",
   level: "groep6-8",
   subject: "aardrijkskunde",
+  referentieNiveau: "1F",
+  sloThema: "Aardrijkskunde — topografie Nederland",
   intro:
     "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. Cito-relevant voor groep 7-8.",
   triggerKeywords: [

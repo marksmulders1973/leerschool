@@ -345,6 +345,8 @@ const sterrenPlaneten = {
   emoji: "🪐",
   level: "groep5-8",
   subject: "natuur",
+  referentieNiveau: "1F",
+  sloThema: "Wereldoriëntatie — heelal, zon & planeten",
   intro:
     "De zon, 8 planeten van Mercurius tot Neptunus, manen, dwergplaneten, asteroïden en kometen. Inclusief verschil tussen aardse rotsplaneten en gasreuzen, eb en vloed, en de Maan-landingen. Voor groep 5-8.",
   triggerKeywords: [

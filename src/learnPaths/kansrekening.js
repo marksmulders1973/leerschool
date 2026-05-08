@@ -642,6 +642,8 @@ const kansrekening = {
   emoji: "🎲",
   level: "klas2-3-vmbo-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F/2S",
+  sloThema: "Statistiek — kansrekening",
   topics: ["WI.statistiek.beschrijven"],
   intro:
     "Basis van kansrekening voor klas 2-3: kans als breuk/percentage, dobbelsteen + munt + knikker, kansboom voor opeenvolgende gebeurtenissen, vermenigvuldigen bij onafhankelijk en optellen bij uitsluitend, plus de complement-truc voor 'minstens'-vragen. Voorbereiding op havo wiskunde A.",

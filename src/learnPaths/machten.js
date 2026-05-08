@@ -545,6 +545,8 @@ const machten = {
   emoji: "🔢",
   level: "klas2-3-vmbo-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F/2S",
+  sloThema: "Getallen — machten & exponenten",
   topics: ["WI.algebra.machten"],
   intro:
     "Machten in wiskunde — van notatie (a^n) tot de drie machtsregels (·, /, ()ⁿ), via macht-van-product en negatieve exponenten, naar machten van 10 en wetenschappelijke notatie. Voorbereiding op exponentiële functies (komt later) en heel veel praktische toepassingen.",

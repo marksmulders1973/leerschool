@@ -726,6 +726,8 @@ const wereldoorlog2Geschiedenis = {
   emoji: "🕊️",
   level: "klas3-4",
   subject: "geschiedenis",
+  referentieNiveau: "VO-onderbouw/bovenbouw",
+  sloThema: "Geschiedenis — Tijd van Wereldoorlogen (WO II)",
   intro:
     "Van het Verdrag van Versailles tot de bevrijding van Nederland en de Koude Oorlog. De drie hoofdoorzaken, het verloop van de oorlog in Europa en in Nederland, de Holocaust, en de gevolgen die de moderne wereld vormden. Examenstof CSE Geschiedenis.",
   triggerKeywords: [

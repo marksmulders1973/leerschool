@@ -541,6 +541,8 @@ const periodiek = {
   emoji: "🌊",
   level: "havo4-5-vwo",
   subject: "wiskunde",
+  referentieNiveau: "HAVO/VWO wiskunde B",
+  sloThema: "Verbanden — periodieke functies",
   topics: ["WI.meetkunde.gonio"],
   intro:
     "Sinusoïden voor havo 4-5: sin/cos uit eenheidscirkel, grafiek-vorm, periode + amplitude + evenwicht + faseverschuiving, algemene vorm y = a·sin(b·(x-d)) + c, met praktische toepassingen — geluid, getij, slinger, wisselspanning, biologische cycli. Voorbouw op goniometrie. Examenstof havo wis B en deels wis A.",

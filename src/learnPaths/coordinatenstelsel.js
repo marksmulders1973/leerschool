@@ -579,6 +579,8 @@ const coordinatenstelsel = {
   emoji: "📐",
   level: "klas1-vmbo-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F",
+  sloThema: "Verbanden — assenstelsel & coördinaten",
   topics: ["WI.basis.coordinaten"],
   intro:
     "Het assenstelsel — de basis voor alle grafieken in wiskunde. x-as, y-as, oorsprong, schaal, kwadranten, punten plotten en herkennen of punten op een rechte lijn liggen. Voorbereiding op lineaire formules en parabolen.",

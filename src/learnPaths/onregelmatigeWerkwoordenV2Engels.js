@@ -453,6 +453,8 @@ const onregelmatigeWerkwoordenV2Engels = {
   emoji: "📖",
   level: "klas2",
   subject: "engels",
+  referentieNiveau: "A2/B1",
+  sloThema: "Engels — onregelmatige werkwoorden (uitbreiding)",
   intro:
     "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-aught en de i-a-u shift. Met voorbeeldzinnen en eindopdracht waarbij je de juiste vorm kiest in zinnen.",
   triggerKeywords: [

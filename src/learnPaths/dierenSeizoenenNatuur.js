@@ -426,7 +426,8 @@ const dierenSeizoenenNatuur = {
   // — natuur en techniek, milieu, levenscyclus). Geen referentieniveau-
   // schaal voor natuur (1F/1S geldt alleen voor taal+rekenen).
   sloKerndoelen: [39, 40, 41, 42],
-  sloThema: "Natuur & Techniek",
+  sloThema: "Wereldoriëntatie — natuur, dieren & seizoenen",
+  referentieNiveau: "PO-kerndoel",
   intro:
     "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, en voedselketens.",
   triggerKeywords: [

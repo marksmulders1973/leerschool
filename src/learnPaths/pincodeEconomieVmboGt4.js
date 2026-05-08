@@ -788,6 +788,8 @@ const pincodeEconomieVmboGt4 = {
   emoji: "💶",
   level: "vmbo-gt-4",
   subject: "economie",
+  referentieNiveau: "VMBO-GT eindexamen",
+  sloThema: "Economie — Pincode VMBO-GT klas 4 (volledig)",
   intro:
     "Compleet leerpad voor Pincode 7e editie vmbo-gt klas 4. 8 hoofdstukken: van inkomen en welvaart, geld, ondernemen en werk, tot overheid, belasting, internationale handel en ontwikkelingslanden. Per hoofdstuk drie kernstappen.",
   triggerKeywords: [

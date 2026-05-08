@@ -1119,6 +1119,8 @@ const ruimtemeetkunde = {
   emoji: "📦",
   level: "klas1-vwo",
   subject: "wiskunde",
+  referentieNiveau: "2F",
+  sloThema: "Meetkunde — inhoud & ruimtemeetkunde",
   topics: ["WI.meetkunde.ruimte"],
   intro: "Ruimtemeetkunde gaat over 2D- en 3D-figuren. We beginnen bij het begin (oppervlakte van een rechthoek) en bouwen op naar inhoud van balken, cilinders, piramides en kegels — en eindigen met de vergrotingsfactor (de magische k, k², k³ regel). Past bij H8 'Inhoud en vergroten' uit Getal & Ruimte FLEX deel 2.",
   triggerKeywords: ["inhoud", "vergrotingsfactor", "oppervlakte", "omtrek", "kubus", "balk", "cilinder", "kegel", "piramide", "ruimtemeetkunde", "vergroten"],

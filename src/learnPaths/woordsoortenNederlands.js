@@ -346,6 +346,8 @@ const woordsoortenNederlands = {
   emoji: "📚",
   level: "klas1-2",
   subject: "taal",
+  referentieNiveau: "2F",
+  sloThema: "Taalverzorging — woordsoorten",
   intro:
     "De 8 woordsoorten van het Nederlands: zelfstandig nw, werkwoord, bijvoeglijk nw, lidwoord, voornaamwoord (persoonlijk + bezittelijk), voorzetsel, voegwoord, bijwoord. Per soort herkenningstrucs en oefeningen.",
   triggerKeywords: [

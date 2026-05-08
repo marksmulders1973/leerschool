@@ -592,6 +592,8 @@ const onregelmatigeWerkwoordenEngels = {
   emoji: "🇬🇧",
   level: "klas1-3",
   subject: "engels",
+  referentieNiveau: "A2/B1",
+  sloThema: "Engels — onregelmatige werkwoorden V1/V2/V3",
   intro:
     "De Engelse onregelmatige werkwoorden — V1/V2/V3, gegroepeerd per klankpatroon. Van de gelijk-blijvers (cut/cut/cut) tot de must-knows (be/have/do/go). Met toepassing in past simple en present perfect.",
   triggerKeywords: [
