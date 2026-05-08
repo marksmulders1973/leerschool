@@ -4502,7 +4502,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // andere code — alleen tracker voor latere hill-positie-berekeningen.
       worldScrollX += effSnelheid;
       if (!Number.isFinite(worldScrollX)) worldScrollX = 0;
-      if (afgeremFrames > 0) afgeremFrames--;
+      if (afgeremFrames > 0) {
+        afgeremFrames--;
+        // HP drain tijdens blok-vertraging (~14 HP over 35 frames). Niet
+        // tijdens bonus/raket/flip — daarin ben je sowieso onkwetsbaar.
+        if (!bonusFase && vliegFrames === 0 && flipFrames === 0) {
+          hp -= 0.4;
+          if (hp <= 0) {
+            hp = HP_MAX;
+            levenVerlies();
+            return;
+          }
+        }
+      }
       if (hpFlashTeller > 0) hpFlashTeller--;
       // Live audio-instellingen toepassen (mute/volume vanuit settings-panel)
       if (masterVolume && audioVolumeRef.current) {
