@@ -1075,7 +1075,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-geschiedenis",
     "stepIdx": 7
   },
-  "Wat was de rol van de VSA in WO1?": {
+  "Wat was de rol van de VS in WO1?": {
     "pathId": "logaritmen",
     "stepIdx": 0
   },
