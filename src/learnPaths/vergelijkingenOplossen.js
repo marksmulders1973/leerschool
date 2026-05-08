@@ -450,9 +450,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Check: 3·(11/3) - 5 = 11 - 5 = 6, niet 16. Vergeet niet eerst de -5 weg te halen.",
-          "Niet zo'n breuk. Doe eerst +5 aan beide kanten: 3x = 21. Daarna :3.",
-          "21 zou pas correct zijn als de stap '+5' gedaan is, maar dan delen door 3 nog vergeten.",
+          "Welke stap haalt eerst de losse term weg, en welke stap haalt de coëfficiënt voor x weg?",
+          "Niet meteen delen — eerst de losse term (de −5) aan beide kanten weghalen.",
+          "Bijna goed — heb je beide stappen gedaan? Eerst losse term weg, dán delen.",
         ],
       },
       {

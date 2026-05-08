@@ -6,6 +6,7 @@ import { findLearnPathForQuestion } from "../../learnPaths/index.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 
 // Anti-game: minimaal aantal ms tussen tonen vraag en eerste klik op antwoord.
 // Voorkomt zinloos doorklikken voor leaderboard-snelheid; verstoort echt
@@ -55,6 +56,17 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [waitingForUser, setWaitingForUser] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
+  // M4 audit-3: wrong-overlay default ingeklapt — uitleg/tip/yt/fout-melden
+  // achter 'Meer uitleg ▼'-toggle. 10jr-leerling-feedback: 6+ vakken muur was
+  // te overweldigend, leerling klikte gewoon door zonder te lezen.
+  const [showMoreExplanation, setShowMoreExplanation] = useState(false);
+  // G3a focus-trap refs voor wrong-overlay + quit-confirm modals
+  const wrongOverlayRef = useFocusTrap(showWrongOverlay, {
+    onEsc: () => { setShowWrongOverlay(false); }
+  });
+  const quitConfirmRef = useFocusTrap(showQuitConfirm, {
+    onEsc: () => setShowQuitConfirm(false)
+  });
   const [questionImage, setQuestionImage] = useState(null);
   const [zoomedImage, setZoomedImage] = useState(null); // ⛶-vergroot-overlay
   useEffect(() => {
@@ -616,6 +628,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       {/* ── Fout antwoord: uitleg overlay ─────────────────── */}
       {showWrongOverlay && (
         <div
+          ref={wrongOverlayRef}
           role="dialog"
           aria-modal="true"
           aria-labelledby="wrong-overlay-title"
@@ -653,6 +666,33 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               </div>
             </div>
 
+            {/* M4: 'Meer uitleg ▼'-toggle — default ingeklapt zodat overlay
+                kort en overzichtelijk blijft (vraag + antwoord-vergelijk + 1 knop). */}
+            <button
+              onClick={() => setShowMoreExplanation((v) => !v)}
+              aria-expanded={showMoreExplanation}
+              style={{
+                width: "100%",
+                padding: "10px 14px",
+                marginBottom: 14,
+                background: "rgba(105,178,255,0.08)",
+                border: "1px solid rgba(105,178,255,0.30)",
+                borderRadius: 12,
+                color: "#69b2ff",
+                fontFamily: "var(--font-body)",
+                fontSize: 13,
+                fontWeight: 700,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <span>📖 {showMoreExplanation ? "Minder uitleg" : "Meer uitleg, tips & YouTube"}</span>
+              <span aria-hidden="true">{showMoreExplanation ? "▲" : "▼"}</span>
+            </button>
+
+            {showMoreExplanation && (<>
             {/* Uitleg — alleen tonen als er ook echt uitleg is */}
             {question.explanation && String(question.explanation).trim() !== "" && (
               <div style={{ background: "linear-gradient(135deg, #1a2535, #162030)", borderRadius: 16, padding: 20, marginBottom: 14, border: "1px solid #2a4060" }}>
@@ -712,6 +752,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             >
               🚩 Fout melden
             </a>
+            </>)}
 
             {/* Terug knop */}
             <button
@@ -732,6 +773,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed, stopLevel) : null;
         return (
         <div
+          ref={quitConfirmRef}
           role="dialog"
           aria-modal="true"
           aria-labelledby="quit-confirm-title"

@@ -8400,6 +8400,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             ref={canvasRef}
             width={canvasW}
             height={canvasH}
+            role="img"
+            aria-label={`OBLITERATOR-spel — score ${score}, ${levens} ${levens === 1 ? "leven" : "levens"}, level ${eindLevelRef.current || 1}. Tik of druk op spatie om te springen.`}
+            tabIndex={0}
             style={{ display: "block", borderRadius: 8, touchAction: "none", width: canvasW, height: canvasH, background: "#0a0a0e" }}
           />
         )}

@@ -420,9 +420,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bijna. Reken: −5t² + 20t = 0 → t(−5t + 20) = 0 → −5t + 20 = 0 → t = 4.",
-          "Veel te laat. Bal valt na 4 sec terug.",
-          "Wat omhoog gaat komt naar beneden. Vind t door h = 0 te stellen.",
+          "Bijna — wat geldt er voor h als de bal de grond raakt? Stel h = 0 en factoriseer.",
+          "Veel te laat — denk na: hoe lang duurt zo'n worp ongeveer in seconden?",
+          "Wat omhoog gaat komt naar beneden. Stel h = 0 en zoek t.",
         ],
       },
       {

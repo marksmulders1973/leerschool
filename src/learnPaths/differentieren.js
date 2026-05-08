@@ -344,9 +344,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "f'(x) = 2x + 3. Vul x = 1 in: 2·1 + 3 = 5, niet 4.",
-          "Dat is x zelf, niet f'(x).",
-          "Dat is de constante 3 in f'(x), maar je moet de hele 2x + 3 invullen voor x = 1.",
+          "Welke regel gebruik je voor x²? En welke voor 3x? Schrijf eerst f'(x) op vóór je x = 1 invult.",
+          "Dat is x zelf, niet de helling in dat punt. Bereken eerst f'(x).",
+          "Heb je de hele afgeleide ingevuld of alleen de constante? Vul x = 1 in álle termen in.",
         ],
       },
     ],

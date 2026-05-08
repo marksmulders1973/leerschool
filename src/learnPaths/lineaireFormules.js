@@ -596,9 +596,9 @@ ${baseAxes}
         answer: 0,
         wrongHints: [
           null,
-          "Je bent het startbedrag vergeten af te trekken. 31 − 4 = 27, dan 27 / 1,80 = 15.",
-          "Je hebt direct 31 / 1,80 ≈ 17 gedaan zonder de €4 af te trekken.",
-          "Net niet. Reken: (31 − 4) / 1,80 = 27 / 1,80 = 15.",
+          "Welk bedrag betaal je sowieso, los van de afstand? Trek dat eerst af voor je deelt.",
+          "Heb je het startbedrag al meegenomen? Eerst aftrekken, dán delen.",
+          "Bijna — heb je het juiste startbedrag afgetrokken voor je gaat delen?",
         ],
       },
     ],

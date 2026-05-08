@@ -146,11 +146,24 @@
   --bottom-nav-height:  64px;
 }
 
-/* Reduced-motion: respecteer system-preference */
+/* Reduced-motion: respecteer system-preference (G3b sprint-3 2026-05-08).
+   Inline-style animation-properties van React-componenten worden óók
+   gedeactiveerd via !important — anders blijven pulse/slideUp/wrongShake
+   draaien op tokens-onafhankelijke animations. */
 @media (prefers-reduced-motion: reduce) {
   :root {
     --motion-fast: 0ms;
     --motion-base: 0ms;
     --motion-slow: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
   }
 }

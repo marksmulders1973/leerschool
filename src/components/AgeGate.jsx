@@ -13,6 +13,7 @@
 import { useEffect, useState } from "react";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
+import useFocusTrap from "../shared/hooks/useFocusTrap.js";
 
 const KEY = "lk_age_consent_v1";
 
@@ -37,6 +38,9 @@ export default function AgeGate() {
   useEffect(() => {
     if (!hasConsent()) setShow(true);
   }, []);
+
+  // Focus-trap: AgeGate is non-dismissible (geen Esc) — gebruiker MOET kiezen.
+  const trapRef = useFocusTrap(show);
 
   if (!show) return null;
 
@@ -68,6 +72,7 @@ export default function AgeGate() {
 
   return (
     <div
+      ref={trapRef}
       role="dialog"
       aria-modal="true"
       aria-labelledby="age-gate-title"

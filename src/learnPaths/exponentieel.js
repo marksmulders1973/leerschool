@@ -398,9 +398,9 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is lineair (100 - 3·8 = 76). Exponentieel: 24/8 = 3 halveringen → 100/2/2/2 = 12.5.",
-          "Dat is na 1 halveringstijd (8 jaar). Na 24 jaar zijn dat 3 halveringen.",
-          "Dat is willekeurig. Reken: 24 jaar = 3 halveringstijden → 100·(1/2)³ = 12.5.",
+          "Niet lineair aftrekken — bij halveringstijd HALVEER je telkens. Hoeveel halveringen passen er in 24 jaar?",
+          "Dat is na 1 halveringstijd. Hoeveel halveringen passen er in 24 jaar?",
+          "Hoeveel halveringen passen er in 24 jaar? Splits het op in stappen.",
         ],
       },
     ],

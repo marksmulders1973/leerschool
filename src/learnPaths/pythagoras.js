@@ -497,9 +497,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt 10 − 6 = 4 gedaan. Maar Pythagoras: h² = 10² − 6² = 100 − 36 = 64, dus h = 8.",
-          "16 = 100 − 64 + 80 of zoiets vreemd. Reken: h² = 100 − 36 = 64, dus h = √64 = 8.",
-          "Dat is groter dan de ladder zelf — onmogelijk. Reken: 10² − 6² = 64, h = √64 = 8.",
+          "Welke twee zijden ken je, en welke tegenover? Schuine zijde minus rechthoekszijde mag NIET zomaar afgetrokken — kwadrateer eerst.",
+          "Een hoogte kan niet groter zijn dan de ladder zelf — kwadrateer en trek af, niet andersom.",
+          "Dat is groter dan de ladder zelf — onmogelijk. Welke zijde is de schuine en welke kort?",
         ],
       },
     ],

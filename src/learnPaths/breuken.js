@@ -113,9 +113,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt de cijfers naast elkaar gezet. Maar ¾ is een deling: 3 ÷ 4.",
-          "Je hebt 4 ÷ 3 gedaan (de breuk omgedraaid). Maar de teller is 3, dus 3 ÷ 4.",
-          "Reken: 3 ÷ 4 = 0,75. Niet 0,43.",
+          "Niet de cijfers naast elkaar — een breuk is een deling. Welk getal staat boven, welk onder?",
+          "Je hebt de breuk omgedraaid: welke is de teller (boven), welk de noemer (onder)?",
+          "Welk getal deel je door welk? Boven door onder, niet andersom.",
         ],
       },
     ],

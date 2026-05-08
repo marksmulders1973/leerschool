@@ -101,7 +101,7 @@ const steps = [
         q: "**5 × 4 + 3** = ?",
         options: ["23","35","27","19"],
         answer: 0,
-        wrongHints: [null,"Eerst ×: 5×4=20, dan +3 = 23. Niet (5×4+3) all-eens.","Te veel.","Te weinig."],
+        wrongHints: [null,"Welke bewerking gaat eerst — × of +? Pak die eerst, dan de rest.","Te veel — heb je de × eerst gedaan?","Te weinig — heb je de × wel meegenomen?"],
       },
       {
         q: "**12 − 6 ÷ 3** = ?",
@@ -113,7 +113,7 @@ const steps = [
         q: "**6 × 2 + 4 × 3** = ?",
         options: ["24","36","48","20"],
         answer: 0,
-        wrongHints: [null,"Beide × eerst: 12+12=24.","Niet (6×2+4)×3.","Veel te veel.","Te weinig."],
+        wrongHints: [null,"Welke twee onderdelen pak je eerst — beide ×? Doe ze los van elkaar.","Niet (6×2+4)×3 — × bindt sterker dan + zonder haakjes.","Te veel — je rekent waarschijnlijk haakjes om de hele som.","Te weinig — heb je beide × meegenomen?"],
       },
     ],
   },
@@ -136,7 +136,7 @@ const steps = [
         q: "**3 × (4 + 2) − 1** = ?",
         options: ["17","11","9","21"],
         answer: 0,
-        wrongHints: [null,"(4+2)=6, 3×6=18, 18-1=17.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Werk van binnen naar buiten: doe eerst de haakjes, dan ×, dan −.","Heb je de haakjes als eerste gedaan?","Heb je de × en − in de juiste volgorde gedaan?","Niet zo — werk van binnen naar buiten."],
       },
       {
         q: "Wat doe je bij **haakjes binnen haakjes**?",

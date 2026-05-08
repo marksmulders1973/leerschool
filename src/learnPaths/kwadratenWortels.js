@@ -264,9 +264,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "121 = 11². Maar je begint hier met √11 en kwadrateert dat — dan ondoen ze elkaar.",
-          "Het kwadraat heft de wortel op. Je krijgt het getal **onder** de wortel terug.",
-          "Je hebt 11 + 11 gedaan. Maar √ en ² zijn omgekeerden — ze geven elkaar's invoer terug.",
+          "Wat gebeurt er als je √ en ² na elkaar toepast op hetzelfde getal? Doen ze iets, of heffen ze elkaar op?",
+          "Het kwadraat heft de wortel op. Welk getal krijg je dan terug?",
+          "Niet optellen — √ en ² zijn omgekeerden, geen optelling.",
         ],
       },
     ],
