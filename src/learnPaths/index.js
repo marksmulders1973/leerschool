@@ -15,6 +15,7 @@ import vlakkeFiguren from "./vlakkeFiguren.js";
 import breuken from "./breuken.js";
 import klokkijken from "./klokkijken.js";
 import matenEenheden from "./matenEenheden.js";
+import procentenPo from "./procentenPo.js";
 import procenten from "./procenten.js";
 import negatieveGetallen from "./negatieveGetallen.js";
 import verhoudingen from "./verhoudingen.js";
@@ -74,6 +75,7 @@ export const ALL_LEARN_PATHS = {
   breuken,
   klokkijken,
   "maten-eenheden": matenEenheden,
+  "procenten-po": procentenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
