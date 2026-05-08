@@ -3,6 +3,7 @@ import supabase from "../supabase.js";
 import Header from "./Header.jsx";
 import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
+import { clearAll as clearAdaptive } from "../shared/adaptiveStore.js";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -152,6 +153,8 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
     for (const t of ["parent_child_links", "link_codes", "school_parent_links"]) {
       try { await supabase.from(t).delete().eq("parent_user_id", uid); } catch {}
     }
+    // Adaptieve leer-state (per-vraag fout-tracker, browser-only).
+    try { clearAdaptive(); } catch {}
     setDeletingMyData(false);
     setDeleteDone(true);
     setChildren([]);

@@ -7,6 +7,12 @@ import { SUBJECTS } from "../../shared/subjects.js";
 import { BRAND } from "../../brand.js";
 import { interactive3DEnabled } from "../../shared/featureFlags.js";
 import AITutor from "./AITutor.jsx";
+import {
+  recordWrong as adaptRecordWrong,
+  recordRight as adaptRecordRight,
+  buildCheckOrder as adaptBuildOrder,
+  pathWrongMap as adaptPathWrongMap,
+} from "../../shared/adaptiveStore.js";
 
 const C = {
   bg: "#0f1729",
@@ -228,7 +234,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // anders breekt de rules-of-hooks zodra `path` van null naar geladen gaat.
   const step = path ? path.steps[stepIdx] : null;
   const checks = step?.checks || [];
-  const rawCheck = checks[checkIdx];
+
+  // Adaptief: foute checks van vorige bezoek eerst herhalen.
+  // checkOrder is een mapping van weergavevolgorde → originele checkIdx.
+  const checkOrder = useMemo(
+    () => adaptBuildOrder(pathId, stepIdx, checks.length),
+    [pathId, stepIdx, checks.length]
+  );
+  const realCheckIdx = checkOrder[checkIdx] ?? checkIdx;
+  const rawCheck = checks[realCheckIdx];
+
+  // Voortgangs-badge per stap voor Overview (vol = geheel beheerst).
+  const wrongPerStep = useMemo(() => adaptPathWrongMap(pathId), [pathId, stepIdx, mode, attempts]);
 
   // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
   // de opties (en bijhorende wrongHints) te schudden voorkomen we dat de
@@ -292,6 +309,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setSelected(i);
     if (i === currentCheck.answer) {
       setLastWrongAnswer(null);
+      // Eerste-poging-correct telt als beheerst → adaptive-store wist deze check.
+      // Bij herhaalde poging (attempts > 1) is de check al fout geregistreerd
+      // via setMode("wrong"); blijft op de herhaal-lijst tot een schone ronde.
+      if (attempts === 1) adaptRecordRight(pathId, stepIdx, realCheckIdx);
       setTimeout(() => {
         if (checkIdx + 1 < checks.length) {
           setCheckIdx(checkIdx + 1);
@@ -305,6 +326,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
       // kan reageren als de leerling om hulp vraagt.
       setLastWrongAnswer(currentCheck.options?.[i] || null);
+      adaptRecordWrong(pathId, stepIdx, realCheckIdx);
       setMode("wrong");
     }
   };
@@ -371,6 +393,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         onBack={onBack}
         onHome={onHome}
         loaded={loaded}
+        wrongPerStep={wrongPerStep}
       />
     );
   }
@@ -726,7 +749,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   );
 }
 
-function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded }) {
+function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep }) {
   // Sneltrack: detecteer een examenstijl-stap zodat leerlingen die morgen
   // toets hebben direct naar de kern kunnen springen (audit 2026-05-06,
   // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
@@ -910,6 +933,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   const s = path.steps[idx];
                   const done = completedSteps.has(idx);
                   const isNext = idx === firstUnfinishedIdx;
+                  const wrongCount = wrongPerStep?.[idx] || 0;
                   return (
                     <button
                       key={idx}
@@ -942,6 +966,23 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                       <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext ? 700 : 500 }}>
                         {s.title}
                       </span>
+                      {wrongCount > 0 && (
+                        <span
+                          title={`${wrongCount} ${wrongCount === 1 ? "vraag" : "vragen"} om te herhalen`}
+                          style={{
+                            fontSize: 11,
+                            fontWeight: 700,
+                            padding: "3px 8px",
+                            borderRadius: 999,
+                            background: "rgba(255,140,66,0.18)",
+                            color: "#ffb074",
+                            border: "1px solid rgba(255,140,66,0.4)",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          🔁 {wrongCount}
+                        </span>
+                      )}
                       {s.emoji && (
                         <span style={{ fontSize: 16, marginLeft: 4, opacity: done ? 0.55 : 0.95 }}>
                           {s.emoji}
