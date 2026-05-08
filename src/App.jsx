@@ -22,6 +22,7 @@ const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
 const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
 const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
 const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"));
+const ExamensPage = lazy(() => import("./components/ExamensPage.jsx"));
 const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
 const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
@@ -1157,6 +1158,7 @@ export default function App() {
             setCitoToetsSubjectLabel(label);
             setPage("cito-leerpad-toets");
           }}
+          onExamens={() => setPage("examens")}
         />
       )}
       {page === "self-study" && (
@@ -1181,6 +1183,12 @@ export default function App() {
           }}
           onBack={() => { setPendingFeature(null); setPage("student-home"); }}
           onHome={() => { setPendingFeature(null); setPage("home"); }}
+        />
+      )}
+      {page === "examens" && (
+        <ExamensPage
+          onBack={() => setPage("student-home")}
+          onHome={() => setPage("home")}
         />
       )}
       {page === "cito-leerpad-toets" && (

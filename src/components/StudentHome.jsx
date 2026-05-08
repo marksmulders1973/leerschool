@@ -49,7 +49,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   const [vakModus, setVakModus] = useState(userSchoolType ? "vo" : "po");
@@ -337,6 +337,40 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             );
           })}
         </div>
+
+        {/* Oude examens-bibliotheek (Mark idee 2026-05-08) — link onder de
+            vakken-grid. Werkt voor alle vakken, niet alleen Cito. */}
+        {onExamens && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onExamens(); }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              width: "100%",
+              padding: "12px 14px",
+              marginBottom: 16,
+              background: "linear-gradient(135deg, rgba(167,139,250,0.13), rgba(167,139,250,0.05))",
+              border: "1px solid rgba(167,139,250,0.35)",
+              borderRadius: 12,
+              cursor: "pointer",
+              color: "#e0e6f0",
+              textAlign: "left",
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">📜</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa" }}>
+                Oude examens
+              </div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                Echte eindexamens als PDF — bekijken en uitwerken
+              </div>
+            </div>
+            <span style={{ fontSize: 16, color: "rgba(167,139,250,0.65)" }} aria-hidden="true">›</span>
+          </button>
+        )}
 
         {/* 15-min sessie-indicator — koppeling met "Een kwartier per dag"
             slogan. Vult zich realtime; bij overschrijden van target geeft
