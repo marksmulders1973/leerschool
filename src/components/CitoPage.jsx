@@ -55,7 +55,13 @@ const ONDERDELEN = [
     border: "rgba(245,158,11,0.25)",
     subject: "begrijpend-lezen",
     topic: "Cito eindtoets begrijpend lezen groep 7-8: informatie opzoeken, hoofdgedachte, samenvatten",
-    leerpadId: "begrijpend-lezen-strategie",
+    // Twee leerpaden voor begrijpend lezen: oefenteksten (primair, ~12 min)
+    // en strategie-pad (secundair, ~5 min). Audit-2 v2 cito-content-agent
+    // wees uit dat alleen strategie te dun was voor Cito-prep.
+    leerpaden: [
+      { id: "begrijpend-lezen-teksten-po", label: "📚 Oefen met 4 echte teksten", dur: "~15 min" },
+      { id: "begrijpend-lezen-strategie", label: "🧠 Leer eerst de aanpak", dur: "~5 min" },
+    ],
   },
   {
     id: "wereldorientatie",
@@ -364,8 +370,41 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               })}
             </div>
 
-            {/* Tip-link naar begrijpend-lezen-leerpad als dat onderdeel is gekozen */}
-            {selected?.leerpadId && onPickPath && (
+            {/* Leerpaden bij geselecteerd onderdeel — meerdere paden mogelijk
+                (audit-2 v2: begrijpend-lezen heeft strategie + oefenteksten). */}
+            {selected?.leerpaden && onPickPath && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 2 }}>
+                  Beschikbare leerpaden
+                </div>
+                {selected.leerpaden.map((p, idx) => (
+                  <button
+                    key={p.id}
+                    onClick={() => { SoundEngine.play("click"); onPickPath(p.id); }}
+                    style={{
+                      borderRadius: 12,
+                      border: idx === 0 ? "2px solid rgba(245,158,11,0.5)" : "1px dashed rgba(245,158,11,0.35)",
+                      background: idx === 0 ? "rgba(245,158,11,0.12)" : "rgba(245,158,11,0.05)",
+                      padding: "11px 14px",
+                      cursor: "pointer",
+                      fontFamily: "var(--font-body)",
+                      fontSize: 13,
+                      color: "#fbbf24",
+                      textAlign: "left",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      gap: 10,
+                    }}
+                  >
+                    <span style={{ fontWeight: idx === 0 ? 700 : 500 }}>{p.label}</span>
+                    <span style={{ fontSize: 11, color: "rgba(255,255,255,0.5)" }}>{p.dur} ›</span>
+                  </button>
+                ))}
+              </div>
+            )}
+            {/* Backwards-compat: andere onderdelen kunnen nog `leerpadId` gebruiken. */}
+            {selected?.leerpadId && !selected?.leerpaden && onPickPath && (
               <button
                 onClick={() => { SoundEngine.play("click"); onPickPath(selected.leerpadId); }}
                 style={{
@@ -380,7 +419,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
                   textAlign: "left",
                 }}
               >
-                💡 Tip: leer eerst de <strong>aanpak voor begrijpend lezen</strong> (5 min)
+                💡 Tip: leer eerst de <strong>aanpak</strong> via het leerpad
               </button>
             )}
 
