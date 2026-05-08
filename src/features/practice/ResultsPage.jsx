@@ -17,6 +17,9 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const [showIosInstall, setShowIosInstall] = useState(false);
   const [installed, setInstalled] = useState(false);
   const [copied, setCopied] = useState(false);
+  // M2 audit-3: 'Deel de app'-sectie default ingeklapt om ResultsPage-clutter
+  // weg te halen. Gebruiker die wil delen klikt zelf de toggle open.
+  const [showDeelApp, setShowDeelApp] = useState(false);
   const isIOS = typeof navigator !== "undefined" && /iphone|ipad|ipod/i.test(navigator.userAgent);
   const isStandalone = typeof window !== "undefined" && (window.matchMedia?.("(display-mode: standalone)").matches || window.navigator.standalone);
 
@@ -316,11 +319,17 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           {sent && <p style={{ fontSize: 12, color: "var(--color-brand-primary-100)", textAlign: "center", marginTop: 8, marginBottom: 0 }}>✅ Verstuurd!</p>}
         </div>
 
-        {/* Deel de app */}
-        <div style={{ marginTop: 12, padding: 16, background: "linear-gradient(135deg, #0d1f3c, #0a1525)", borderRadius: 16, border: "1px solid rgba(24,119,242,0.35)" }}>
-          <p style={{ fontSize: 13, color: "var(--color-text-muted)", fontWeight: 700, margin: "0 0 10px", textAlign: "center" }}>
-            📣 Ken jij ook kinderen die dit leuk vinden?
-          </p>
+        {/* Deel de app — default ingeklapt (audit-3 M2). Gebruiker klikt om te openen. */}
+        <button
+          onClick={() => setShowDeelApp((s) => !s)}
+          aria-expanded={showDeelApp}
+          style={{ width: "100%", marginTop: 12, padding: "12px 14px", border: "1px solid rgba(24,119,242,0.35)", borderRadius: 14, background: "rgba(24,119,242,0.08)", color: "var(--color-text)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}
+        >
+          <span>📣 Vertel anderen over Leerkwartier</span>
+          <span aria-hidden="true">{showDeelApp ? "▲" : "▼"}</span>
+        </button>
+        {showDeelApp && (
+        <div style={{ marginTop: 8, padding: 16, background: "linear-gradient(135deg, #0d1f3c, #0a1525)", borderRadius: 16, border: "1px solid rgba(24,119,242,0.35)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
             <button
               onClick={handleFacebookShareApp}
@@ -360,6 +369,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
             Gratis oefenplatform — help andere ouders het te ontdekken!
           </p>
         </div>
+        )}
         {showIosInstall && (
           <div onClick={() => setShowIosInstall(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.75)", zIndex: 9999, display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
             <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 380, width: "100%", background: "#162033", border: "1px solid rgba(0,212,255,0.3)", borderRadius: 18, padding: 22, color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
@@ -421,7 +431,8 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                   color: "#1a0008", fontFamily: "Impact, 'Arial Black', sans-serif",
                   fontSize: 20, letterSpacing: 3, fontWeight: 700, cursor: "pointer",
                   boxShadow: "0 4px 20px rgba(255,80,40,0.5)",
-                  animation: "pulse 2s infinite",
+                  // pulse-animatie weggehaald (audit-3 M2): trok te veel
+                  // aandacht weg van het primaire pad ("verder leren").
                 }}
               >
                 👽 SPEEL OBLITERATOR 🛸
