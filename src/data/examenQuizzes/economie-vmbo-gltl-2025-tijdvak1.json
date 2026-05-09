@@ -6,7 +6,63 @@
     "jaar": 2025,
     "tijdvak": 1
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "economische gegevens van Sint-Maarten 2010,",
+      "body": "2016 en 2017, omgerekend in euro's\n\nnationaal inkomen (in miljoen)        2010      2016          2017\nre'le nationaal inkomen (in miljoen)       798       960           934\nwaarde export van goederen en              746       840          798\ndiensten (in miljoen)                      854                    835\nwaarde import van goederen en                     1.046\ndiensten (in miljoen)\naantal verblijfstoeristen             847       1.014         921\naantal cruisetoeristen ( 1.000)\nbevolking Sint-Maarten                443.136   528.150   402.092\n                                         1.513     1.669     1.238\n\n                                       34.496    39.410    40.535",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "de hulp van het Nederlandse Rode Kruis aan",
+      "body": "Sint-Maarten\n\n fase 1\n Wat als je plotseling geen dak meer boven het hoofd hebt? Of geen keuken\n om in te koken? In de eerste maanden na de ramp was het belangrijk om\n direct in actie te komen. Daarom bood het Rode Kruis:\n  tenten\n  drinkwater en voedselpakketten\n  medische voorzieningen\n\n fase 2\n De schade van een orkaan is niet binnen een paar maanden hersteld.\n Nederland stelt daarom geld beschikbaar voor bijvoorbeeld:\n  het verbeteren van de infrastructuur\n  het opleiden en inhuren van bouwvakkers\n\n De gemeente",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "aantal huishoudens en hun gemiddelde vermogen",
+      "body": "aantal huishoudens  gemeente Rijkwijk  gemeente Armere\n                    6.433              174.765\ngemiddeld vermogen   230.000            18.000\nper huishouden\n\n(Be)leg het opzij voor later",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "levensloop, het inkomen en de consumptie",
+      "body": "Dog4fun",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "vraaglijn Dog4fun",
+      "body": "",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "informatie concurrent Dogrunner",
+      "body": "Wij halen uw hond bij u thuis op met een van onze speciaal ingerichte\nverwarmde bussen en nemen uw hond mee naar ons eigen ruime en\nomheinde uitlaatterrein in de duinen. Uw hond kan zo'n twee uur lekker\nrennen, spelen en dollen met soortgenoten onder deskundig toezicht van\ntwee Wibevo-gecertificeerde hondenbegeleiders. Wij zorgen ook voor\npremium kwaliteit hondenbrokken. U kiest zelf de uitlaatdagen.\n\ntarieven abonnement (per hond per week)\n\n3 maal per week         29\n\n4 maal per week         37\n\n5 maal per week         47,50\n\n De staatsschuld stijgt",
+      "soort": "informatiebron"
+    },
+    "7": {
+      "titel": "de staatsschuld, het nationaal inkomen en de",
+      "body": "staatsschuldquote in vijf jaren tussen 2013-2026\n\njaar              staatsschuld     nationaal inkomen  de staatsschuldquote1)\n                  in miljard euro  in miljard euro\n2014              457              672                68%\n2018              426              775                55%\n2020              408              850                48%\n2021              450              765                59%\n20252)            510              850                60%\n\nnoot 1 staatsschuldquote =  staatsschuld        100%\n\n                            nationaal inkomen\n\nnoot 2 De bedragen voor 2025 zijn verwachtingen.\n\nExportboeren",
+      "soort": "informatiebron"
+    },
+    "8": {
+      "titel": "agrarische import en export van Nederland",
+      "body": "in 2018 naar regio\n\n Een huis zonder gas",
+      "soort": "informatiebron"
+    },
+    "9": {
+      "titel": "verantwoorde woonlasten, volgens Nibud",
+      "body": "inkomen per maand    maximaal verantwoorde woonlasten\n 1.500 -  3.000      25%\n 3.000 -  4.500      30%\n 4.500 -  6.000      33%\n 6.000 en meer       35%",
+      "soort": "informatiebron"
+    },
+    "10": {
+      "titel": "offerte persoonlijke lening",
+      "body": "leenbedrag        looptijd     maandbedrag\n 50.000           120 maanden   500\n\nDoorwerken",
+      "soort": "informatiebron"
+    },
+    "11": {
+      "titel": "de AOW-uitkering",
+      "body": "uw AOW en woonsituatie\n       Hoeveel AOW u krijgt hangt af van uw woonsituatie. Als alleenstaande\n       krijgt u een netto-uitkering van  1.201 per maand. Bent u getrouwd of\n       samenwonend, dan krijgt u 50% van het minimumloon.\n\n       volledige AOW opbouwen\n       U krijgt een volledige AOW-uitkering als u 50 jaar achter elkaar in\n       Nederland heeft gewoond voordat uw AOW-uitkering ingaat.\n       Voor elk jaar dat u minder in Nederland heeft gewoond wordt de\n       AOW-uitkering verlaagd met 2%.\n\nGT-0233-a-25-1-b     6/6                                 lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "Welke bewering over de export en import van Sint-Maarten is juist?",
@@ -146,7 +202,7 @@
         "inzet melkrobot  3  1  2  hogere afzet F inzet melkrobot  3  2  1  hogere afzet Een huis zonder gas Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en 10 in de bijlage. In Nederland is een groot tekort aan huurwoningen. Daardoor gaan mensen op zoek naar een koopwoning. Germaine is al twee jaar op zoek naar een koopwoning. Zij is niet de enige. De vraag naar koopwoningen stijgt, maar het aanbod blijft vrijwel gelijk. vraag en aanbod op de koopwoningmarkt Gebruik de grafiek."
       ],
       "answer": 0,
-      "explanation": "Het juiste antwoord is A.",
+      "explanation": "Vraag Antwoord                                                                  Scores\n\n   Een huis zonder gas                                                             1\n                                                                                   1",
       "tekstNr": null,
       "vraagNr": 32
     },

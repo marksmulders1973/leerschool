@@ -723,6 +723,30 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 {currentCheck.examenBron}
               </div>
             )}
+            {currentCheck.bronTekst && (
+              <div style={{
+                background: "rgba(255,107,53,0.06)",
+                border: "1px solid rgba(255,107,53,0.30)",
+                borderRadius: 10,
+                marginBottom: 12,
+                padding: "10px 12px",
+              }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
+                  📑 Bron — {currentCheck.bronTekst.titel || "informatiebron"}
+                </div>
+                <div style={{
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  color: "var(--color-text)",
+                  whiteSpace: "pre-wrap",
+                  maxHeight: "30vh",
+                  overflowY: "auto",
+                  fontFamily: "monospace",
+                }}>
+                  {currentCheck.bronTekst.body}
+                </div>
+              </div>
+            )}
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>
@@ -758,6 +782,37 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <span aria-hidden="true">✅</span>
                 <span>Dat is juist!</span>
               </div>
+            )}
+            {selected !== null && currentCheck.examenBron && currentCheck.explanation && (
+              <details style={{ marginTop: 10 }}>
+                <summary style={{
+                  cursor: "pointer",
+                  padding: "8px 12px",
+                  background: "rgba(255,213,79,0.10)",
+                  border: "1px solid rgba(255,213,79,0.35)",
+                  borderRadius: 8,
+                  color: "#ffd54f",
+                  fontWeight: 700,
+                  fontSize: 13,
+                  fontFamily: "var(--font-display)",
+                  listStyle: "none",
+                }}>
+                  📖 Leg uit (officiële uitleg uit correctievoorschrift)
+                </summary>
+                <div style={{
+                  marginTop: 8,
+                  padding: "10px 14px",
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,213,79,0.20)",
+                  borderRadius: 8,
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  whiteSpace: "pre-wrap",
+                  color: "var(--color-text)",
+                }}>
+                  {currentCheck.explanation}
+                </div>
+              </details>
             )}
           </div>
         )}

@@ -84,6 +84,7 @@ import pincodeOverheid from "./pincodeOverheid.js";
 import pincodeBelasting from "./pincodeBelasting.js";
 import pincodeBuitenlandEu from "./pincodeBuitenlandEu.js";
 import pincodeOntwikkelingslanden from "./pincodeOntwikkelingslanden.js";
+import examenEconomie2025T1 from "./examenEconomie2025T1.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
@@ -192,6 +193,7 @@ export const ALL_LEARN_PATHS = {
   "pincode-belasting": pincodeBelasting,
   "pincode-buitenland-eu": pincodeBuitenlandEu,
   "pincode-ontwikkelingslanden": pincodeOntwikkelingslanden,
+  "examen-economie-2025-t1": examenEconomie2025T1,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
   // Duits
