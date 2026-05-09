@@ -199,14 +199,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Werkgever-equivalent is lock-out.", "Overheid stakt niet.", "Geen actiemiddel van Belastingdienst."],
       },
-    
-      {
-        q: "🎓 Examen 2025-T2 V8: Wanneer is een werkgever bereid om de lonen van werknemers te verhogen?",
-        options: ["Als de arbeidsproductiviteit meer stijgt dan de lonen.", "Als de lonen meer stijgen dan de arbeidsproductiviteit.", "Als de lonen meer stijgen dan het aantal arbeidsjaren.", "Als het aantal arbeidsjaren meer stijgt dan de arbeidsproductiviteit."],
-        answer: 0,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Examen 2025-T2 V8:",
-      },
     ],
   },
   // ─── Stap 4: Vraag/aanbod arbeid (extra context) ──────
@@ -321,14 +313,6 @@ const steps = [
         options: ["Mensen die wel willen werken maar geen vertrouwen meer hebben en niet zoeken", "Mensen met een tweede baan", "Buitenlanders zonder verblijfsstatus", "Pensioenbeleid"],
         answer: 0,
         wrongHints: [null, "Tweede baan = wel werken.", "Vergaande politieke vraag, niet definitie.", "Pensioenbeleid is ander onderwerp."],
-      },
-    
-      {
-        q: "🎓 Examen 2024-T1 V41: Welke soort werkloosheid ontstaat er door het verdwijnen van bedrijven naar het buitenland?",
-        options: ["conjuncturele werkloosheid, het is de aanbodkant van de economie", "conjuncturele werkloosheid, het is de vraagkant van de economie", "structurele werkloosheid, het is de aanbodkant van de economie", "structurele werkloosheid, het is de vraagkant van de economie"],
-        answer: 2,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Examen 2024-T1 V41:",
       },
     ],
   },

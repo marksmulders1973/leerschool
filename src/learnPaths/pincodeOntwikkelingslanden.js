@@ -385,22 +385,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Metafoor.", "Wel betekenis.", "Wel betekenis."],
       },
-    
-      {
-        q: "🎓 Examen 2024-T2 V28: De inkoop en verkoop van fairtrade producten is een vorm van particuliere ontwikkelingshulp. Hoe noemen we deze hulp?",
-        options: ["bilaterale hulp", "noodhulp", "structurele hulp"],
-        answer: 2,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Examen 2024-T2 V28:",
-      },
-    
-      {
-        q: "🎓 Examen 2024-T2 V32: Marcia gaat ook fairtrade koffie verkopen. Marcia: \"Als alle restaurants hier fairtrade koffie zouden verkopen, is dat echt een bijdrage aan een meer eerlijke verdeling van de inkomens in de wereld.\" Hieronder staan vijf economische verschijnselen. 1 de koffieboer krijgt een eerlijke prijs 2 de koffieboeren kunnen meer investeren 3 er ontstaat meer werkgelegenheid 4 de werknemers ontvangen meer inkomen 5 de inkomens in de wereld worden gelijkmatiger verdeeld In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
-        options: ["12345", "12435", "13245", "13425", "14235 F 14325 Rijken worden rijker De familie Boot is blij. Tijdens de kredietcrisis in 2008 was hun vermogen gedaald, maar gelukkig stijgt dankzij economische groei hun vermogen weer langzaam. Je ber"],
-        answer: 0,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Examen 2024-T2 V32:",
-      },
     ],
   },
   // ─── Stap 7: Toekomst ─────────────────────────
