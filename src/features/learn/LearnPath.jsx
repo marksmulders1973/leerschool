@@ -734,7 +734,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
                   📑 Bron — {currentCheck.bronTekst.titel || "informatiebron"}
                 </div>
-                {currentCheck.bronTekst.tableData && (
+                {currentCheck.bronTekst.tableData?.rows && (
                   <div style={{ overflowX: "auto", marginBottom: 8 }}>
                     <table style={{
                       borderCollapse: "collapse",

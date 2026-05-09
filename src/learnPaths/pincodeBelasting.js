@@ -84,14 +84,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te laag.", "Te hoog.", "Veel te hoog."],
       },
-    
-      {
-        q: "Spaargeld levert nauwelijks rente op. Tegelijkertijd moeten huishoudens met veel spaargeld belasting betalen over dit spaargeld. Hoe noemen we deze belasting?",
-        options: ["belasting toegevoegde waarde", "loonheffing", "onroerendezaakbelasting", "vermogensrendementsheffing"],
-        answer: 3,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 36",
-      },
     ],
   },
   // ─── Stap 2: BTW en accijns ──────────────────────────────
@@ -211,14 +203,6 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Werk = Box 1.", "Ab = Box 2.", "Erfbelasting is apart."],
       },
-    
-      {
-        q: "Adriaan moet de WOZ-waarde ook invullen in de aangifte inkomstenbelasting. Waarvoor wordt de WOZ-waarde gebruikt bij de aangifte inkomstenbelasting?",
-        options: ["om de hoogte van de aftrekposten te bepalen", "om de hoogte van de heffingskortingen te bepalen", "om de hypotheekrenteaftrek te bepalen", "om het eigenwoningforfait te bepalen Adriaan rekent uit wat hij moet betalen aan OZB. Zijn Poolse vriendin Alicja woont in Breda en betaalt  305,87 OZB voor een woning met dezelfde WOZ-waarde. Gebruik"],
-        answer: 3,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 14",
-      },
     ],
   },
   // ─── Stap 4: Heffingskortingen detail ────────────────────
@@ -279,14 +263,6 @@ const steps = [
         options: ["Door arbeidskorting is netto-effect van werken positief", "Iedereen verdient hetzelfde", "Werk is verplicht", "Werk is altijd zwaar"],
         answer: 0,
         wrongHints: [null, "Niet iedereen.", "Niet verplicht.", "Niet wat de term betekent."],
-      },
-    
-      {
-        q: "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van de inkomensverdeling in een land?",
-        options: ["Tot denivellering: het verandert in het voordeel van de hoge inkomens.", "Tot denivellering: het verandert in het voordeel van de lage inkomens.", "Tot nivellering: het verandert in het voordeel van de hoge inkomens.", "Tot nivellering: het verandert in het voordeel van de lage inkomens. De hulp op de juiste plek Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 2 in de bi"],
-        answer: 3,
-        wrongHints: [null, null, null, null],
-        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 16",
       },
     ],
   },

@@ -77,9 +77,9 @@ const chapters = [
 ];
 
 const steps = [
-  // ─── V1 — Sint-Maarten — handel ────────────────────────
+  // ─── Vraag 1 — Sint-Maarten — handel ────────────────────────
   {
-    title: "V1 — Sint-Maarten — handel",
+    title: "Vraag 1 — Sint-Maarten — handel",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 1. Lees eerst informatiebron 1 (de tabel). Doorklik na de vraag voor diepere uitleg in het Pincode-leerpad **Nederland en het buitenland**.",
     emoji: "🎓",
     checks: [
@@ -105,9 +105,9 @@ const steps = [
       },
     ],
   },
-  // ─── V2 — Sint-Maarten — welvaart ──────────────────────
+  // ─── Vraag 2 — Sint-Maarten — welvaart ──────────────────────
   {
-    title: "V2 — reëel nationaal inkomen",
+    title: "Vraag 2 — reëel nationaal inkomen",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 2. Doorklik na de vraag voor diepere uitleg in het Pincode-leerpad **Inkomen en welvaart**.",
     emoji: "🎓",
     checks: [
@@ -133,9 +133,9 @@ const steps = [
       },
     ],
   },
-  // ─── V4 — Sint-Maarten — toerisme ──────────────────────
+  // ─── Vraag 4 — Sint-Maarten — toerisme ──────────────────────
   {
-    title: "V4 — uitgaven van toeristen",
+    title: "Vraag 4 — uitgaven van toeristen",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 4. Doorklik na de vraag voor diepere uitleg in het Pincode-leerpad **Nederland en het buitenland**.",
     emoji: "🎓",
     checks: [
@@ -161,9 +161,9 @@ const steps = [
       },
     ],
   },
-  // ─── V8 — Gemeente — taken ─────────────────────────────
+  // ─── Vraag 8 — Gemeente — taken ─────────────────────────────
   {
-    title: "V8 — taken van de gemeente",
+    title: "Vraag 8 — taken van de gemeente",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 8. Doorklik voor de Pincode-uitleg in **De overheid**.",
     emoji: "🎓",
     checks: [
@@ -189,9 +189,9 @@ const steps = [
       },
     ],
   },
-  // ─── V9 — Gemeente — belasting ─────────────────────────
+  // ─── Vraag 9 — Gemeente — belasting ─────────────────────────
   {
-    title: "V9 — gemeentelijke belasting",
+    title: "Vraag 9 — gemeentelijke belasting",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 9. Doorklik voor de Pincode-uitleg in **De overheid**.",
     emoji: "🎓",
     checks: [
@@ -217,9 +217,9 @@ const steps = [
       },
     ],
   },
-  // ─── V14 — Inkomen jongeren ────────────────────────────
+  // ─── Vraag 14 — Inkomen jongeren ────────────────────────────
   {
-    title: "V14 — overdrachtsinkomen jongeren",
+    title: "Vraag 14 — overdrachtsinkomen jongeren",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 14. Doorklik voor de Pincode-uitleg in **Inkomen en welvaart**.",
     emoji: "🎓",
     checks: [
@@ -240,9 +240,9 @@ const steps = [
       },
     ],
   },
-  // ─── V17 — Dog4fun rechtsvorm ──────────────────────────
+  // ─── Vraag 17 — Dog4fun rechtsvorm ──────────────────────────
   {
-    title: "V17 — ondernemingsvorm Dog4fun",
+    title: "Vraag 17 — ondernemingsvorm Dog4fun",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 17. Doorklik voor de Pincode-uitleg in **Ondernemen**.",
     emoji: "🎓",
     checks: [
@@ -268,9 +268,9 @@ const steps = [
       },
     ],
   },
-  // ─── V29 — Handelsoverschot ────────────────────────────
+  // ─── Vraag 29 — Handelsoverschot ────────────────────────────
   {
-    title: "V29 — handelsoverschot agrarisch",
+    title: "Vraag 29 — handelsoverschot agrarisch",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 29. Doorklik voor de Pincode-uitleg in **Nederland en het buitenland**.",
     emoji: "🎓",
     checks: [
@@ -296,9 +296,9 @@ const steps = [
       },
     ],
   },
-  // ─── V32 — Concurrentie zuivelboeren ──────────────────
+  // ─── Vraag 32 — Concurrentie zuivelboeren ──────────────────
   {
-    title: "V32 — melkrobot en concurrentie",
+    title: "Vraag 32 — melkrobot en concurrentie",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 32. Doorklik voor de Pincode-uitleg in **Ondernemen**.",
     emoji: "🎓",
     checks: [
@@ -324,9 +324,9 @@ const steps = [
       },
     ],
   },
-  // ─── V37 — Sparen of beleggen ──────────────────────────
+  // ─── Vraag 37 — Sparen of beleggen ──────────────────────────
   {
-    title: "V37 — investeren in warmtepomp",
+    title: "Vraag 37 — investeren in warmtepomp",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 37. Doorklik voor de Pincode-uitleg in **Geld, sparen en lenen** (stap 'Sparen of beleggen').",
     emoji: "🎓",
     checks: [
