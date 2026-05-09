@@ -1,6 +1,6 @@
-// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk B
-// Gesplitst uit pincodeEconomieVmboGt4.js (2026-05-09): 1 hoofdstuk = 1 leerpad,
-// past bij Leerkwartier 15-min-chunks en de UI-logica "1 pad = 1 thema".
+// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk 2 (Geld genoeg?)
+// Uitgebreide versie 2026-05-09: 7 stappen voor compleet examen-blok.
+// Concrete voorbeelden uit de leefwereld van een 15-16-jarige.
 
 const COLORS = {
   text: "#e0e6f0",
@@ -16,154 +16,432 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["💱", "🏦", "💳"];
+const stepEmojis = ["💰", "💳", "🏦", "📉", "📊", "💸", "🏠"];
 
 const chapters = [
-  { letter: "B", title: "Geld genoeg?", emoji: "💱", from: 0, to: 2 },
+  { letter: "A", title: "Wat is geld?", emoji: "💰", from: 0, to: 1 },
+  { letter: "B", title: "Sparen", emoji: "🏦", from: 2, to: 3 },
+  { letter: "C", title: "Begroten", emoji: "📊", from: 4, to: 4 },
+  { letter: "D", title: "Lenen", emoji: "💸", from: 5, to: 6 },
 ];
 
 const steps = [
-
+  // ─── Stap 1: Functies en soorten geld ──────────────────────
   {
-    title: "Functies van geld",
-    explanation: "Vroeger ruilden mensen direct (**ruilhandel**): jij geeft een schaap, ik geef brood. Nadelen: misschien wil ik geen schaap, en hoeveel brood is een schaap waard?\n\nGeld lost dit op. Het heeft **drie functies**:\n\n**1. Ruilmiddel**: je betaalt met geld, geen ingewikkelde ruil meer nodig.\n\n**2. Rekenmiddel**: alles heeft een prijs in euro's, dus je kunt makkelijk vergelijken (€20 vs €15).\n\n**3. Spaarmiddel (oppotmiddel)**: je kunt geld bewaren voor later — een schaap zou doodgaan, geld niet.\n\n**Soorten geld**:\n• **Chartaal geld**: munten en bankbiljetten\n• **Giraal geld**: tegoed op een rekening (bijna alle betalingen tegenwoordig)",
-    svg: `<svg viewBox="0 0 300 180">
-<rect x="30" y="40" width="80" height="60" rx="8" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
-<text x="70" y="62" text-anchor="middle" fill="${COLORS.geld}" font-size="22" font-family="Arial">💱</text>
-<text x="70" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">ruilmiddel</text>
-<rect x="115" y="40" width="80" height="60" rx="8" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="155" y="62" text-anchor="middle" fill="${COLORS.warm}" font-size="22" font-family="Arial">🧮</text>
-<text x="155" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">rekenmiddel</text>
-<rect x="200" y="40" width="80" height="60" rx="8" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
-<text x="240" y="62" text-anchor="middle" fill="${COLORS.vraag}" font-size="22" font-family="Arial">🐷</text>
-<text x="240" y="85" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">spaarmiddel</text>
-<text x="150" y="140" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">chartaal: munten/biljetten · giraal: op de bank</text>
+    title: "Wat is geld eigenlijk?",
+    explanation: "Vroeger ruilden mensen direct (**ruilhandel**): jij geeft een schaap, ik geef brood. Nadelen: misschien wil de bakker geen schaap, en hoeveel brood is een schaap waard?\n\nGeld lost dit op. Het heeft **drie functies**:\n\n**1. Ruilmiddel**: je betaalt met geld, geen ingewikkelde ruil meer.\n**2. Rekenmiddel**: alles heeft een prijs in euro's, dus je kunt makkelijk vergelijken (€20 vs €15).\n**3. Spaarmiddel (oppotmiddel)**: je kunt geld bewaren voor later — een schaap zou doodgaan, geld niet.\n\n**Soorten geld**:\n• **Chartaal geld**: munten en bankbiljetten — geld dat je kunt vasthouden.\n• **Giraal geld**: tegoed op een rekening — bijna alle betalingen tegenwoordig (pinnen, overschrijven, Tikkie).\n\n**Eigenschappen van goed geld**:\n• Algemeen geaccepteerd (iedereen wil het aannemen)\n• Schaars (anders wordt het niets waard)\n• Duurzaam (gaat niet snel kapot)\n• Deelbaar (kun je in stukken verdelen — €1 is 100 cent)",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">3 FUNCTIES VAN GELD</text>
+<rect x="20" y="40" width="90" height="68" rx="8" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="65" y="68" text-anchor="middle" fill="${COLORS.geld}" font-size="22" font-family="Arial">💱</text>
+<text x="65" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">ruilmiddel</text>
+<text x="65" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">betalen</text>
+<rect x="115" y="40" width="90" height="68" rx="8" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="160" y="68" text-anchor="middle" fill="${COLORS.warm}" font-size="22" font-family="Arial">🧮</text>
+<text x="160" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">rekenmiddel</text>
+<text x="160" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vergelijken</text>
+<rect x="210" y="40" width="90" height="68" rx="8" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="255" y="68" text-anchor="middle" fill="${COLORS.vraag}" font-size="22" font-family="Arial">🐷</text>
+<text x="255" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">spaarmiddel</text>
+<text x="255" y="100" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bewaren</text>
+<text x="160" y="135" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Soorten:</text>
+<text x="100" y="155" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">CHARTAAL</text>
+<text x="100" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">munten + biljetten</text>
+<text x="220" y="155" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">GIRAAL</text>
+<text x="220" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">op de rekening</text>
 </svg>`,
     checks: [
       {
-        q: "Welke functie van geld gebruik je als je een prijs in een folder vergelijkt?",
+        q: "Je vergelijkt een nieuwe sneaker van €110 met een ander paar van €85. Welke functie van geld gebruik je hier?",
         options: ["Rekenmiddel", "Ruilmiddel", "Spaarmiddel", "Productiemiddel"],
         answer: 0,
-        wrongHints: [null, "Ruilmiddel gebruik je tijdens het betalen, niet bij vergelijken.", "Sparen is iets opzijzetten — niet vergelijken.", "Productiemiddel is geen geldfunctie."],
+        wrongHints: [null, "Ruilen doe je bij de kassa, niet bij vergelijken.", "Sparen = bewaren voor later.", "Productiemiddel is geen geldfunctie."],
       },
       {
         q: "Wat is **giraal geld**?",
-        options: ["Geld op je bankrekening", "Munten in je portemonnee", "Gouden baren", "Geld dat je hebt verdiend met werken"],
+        options: ["Geld op je bankrekening", "Munten en biljetten", "Goud", "Een lening"],
         answer: 0,
-        wrongHints: [null, "Dat is chartaal.", "Goud is een waardeobject, geen modern betaalmiddel.", "Dat zegt iets over hoe je het kreeg, niet over de soort geld."],
-      },
-    
-      {
-        q: "Een prijskaartje van €12,50 op een T-shirt — welke functie van geld?",
-        options: ["Rekenmiddel", "Ruilmiddel", "Spaarmiddel", "Productiemiddel"],
-        answer: 0,
-        wrongHints: [null, "Ruilen doe je bij de kassa, niet bij het lezen van een prijskaartje.", "Sparen = bewaren voor later — niet vergelijken.", "Productiemiddel is geen geldfunctie."],
-      },
-      {
-        q: "Wat is **chartaal geld**?",
-        options: ["Munten en bankbiljetten", "Geld op een bankrekening", "Een bankoverschrijving", "Geld dat je hebt verdiend"],
-        answer: 0,
-        wrongHints: [null, "Dat heet giraal geld.", "Een overschrijving is een handeling, geen geldsoort.", "Inkomen zegt iets over hoe je het kreeg, niet over de soort."],
+        wrongHints: [null, "Dat is chartaal.", "Goud is een waardeobject, geen modern geld.", "Een lening is een product, geen soort geld."],
       },
       {
         q: "Waarom is **ruilhandel** lastig?",
-        options: ["Je moet iemand vinden die jouw spullen wil EN heeft wat jij wilt", "Het is verboden", "Goederen zijn te duur", "Je hebt internet nodig"],
+        options: ["Je moet iemand vinden die jouw spullen wil EN heeft wat jij wilt", "Het is verboden", "Spullen zijn duur", "Internet is nodig"],
         answer: 0,
-        wrongHints: [null, "Ruilhandel is niet verboden, alleen onhandig.", "Prijs heeft niets met het ruil-mechaniek te maken.", "Ruilhandel was er ver vóór internet."],
+        wrongHints: [null, "Niet verboden, alleen onhandig.", "Prijs heeft niets met ruilen te maken.", "Ruilhandel was er ver vóór internet."],
+      },
+      {
+        q: "Welke eigenschap moet **goed geld** zeker hebben?",
+        options: ["Algemeen geaccepteerd zijn", "Heel mooi zijn", "Goud bevatten", "Door één persoon gemaakt zijn"],
+        answer: 0,
+        wrongHints: [null, "Uiterlijk maakt geld niet bruikbaar als betaalmiddel.", "Vroeger wel, nu niet meer (chartaal geld is fiat).", "Tegenovergesteld — moet door iedereen geaccepteerd."],
+      },
+      {
+        q: "Een Tikkie is een voorbeeld van **welk type geld**?",
+        options: ["Giraal", "Chartaal", "Ruilhandel", "Spaargeld"],
+        answer: 0,
+        wrongHints: [null, "Chartaal = munten/biljetten, Tikkie is digitaal.", "Tikkie is geen ruilhandel — gewoon een betaling.", "Spaargeld is een doel, geen vorm."],
       },
     ],
   },
+  // ─── Stap 2: Betaalmiddelen anno nu ──────────────────────────
   {
-    title: "Banken — sparen en rente",
-    explanation: "**Banken** doen drie dingen:\n1. **Geld bewaren** (betaal- en spaarrekening)\n2. **Geld lenen** (hypotheek, persoonlijke lening)\n3. **Betalingen regelen** (overschrijvingen, pinnen)\n\n**Sparen**: je geeft de bank tijdelijk je geld. De bank betaalt je **rente** als beloning.\n\nVoorbeeld: je zet €1000 op een spaarrekening met 2% rente per jaar.\n• Na 1 jaar: €1000 × 1,02 = **€1020**\n• Na 2 jaar: €1020 × 1,02 = **€1040,40**\n\nDe rente over rente heet **samengestelde rente** — het wordt elk jaar groter.\n\n**Reden om te sparen**: voor onverwachte uitgaven, een doel (auto, vakantie), of voor later (pensioen).",
-    svg: `<svg viewBox="0 0 300 180">
-<rect x="50" y="40" width="200" height="40" rx="8" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
-<text x="150" y="64" text-anchor="middle" fill="${COLORS.geld}" font-size="14" font-family="Arial" font-weight="bold">€1000 op spaarrekening</text>
-<text x="150" y="100" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial">+ 2% rente per jaar</text>
-<text x="150" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">€1020 → €1040,40 → €1061,20</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">samengestelde rente — groeit ieder jaar</text>
+    title: "Hoe betaal je in 2026? Pin, contactloos en achteraf",
+    explanation: "**Pinnen**: kaart in apparaat, pincode invoeren — geld gaat direct van jouw rekening af.\n**Contactloos**: kaart of telefoon (Apple Pay, Google Pay) tegen het apparaat. Onder €50 meestal zonder pincode.\n**Creditcard**: je betaalt nu, geld wordt 1 keer per maand van je rekening gehaald. **Risico**: je kunt makkelijk meer uitgeven dan je hebt.\n**Achteraf betalen (Klarna, Afterpay, in3)**: nu kopen, later betalen. **Lijkt gratis**, maar als je te laat betaalt komen er hoge boetes en kosten bij. Veel jongeren komen zo in de schulden.\n\n**Voor- en nadelen**:\n• **Pin**: veilig, direct, geen extra kosten\n• **Contactloos**: snel, maar makkelijk per ongeluk te dubbel-tikken\n• **Creditcard**: handig in buitenland/online, maar zonder controle gevaarlijk\n• **Achteraf**: lijkt gratis maar vaak schuld-instinker\n\n**Belangrijk voor jou**: alles wat je 'achteraf' betaalt is een lening. Stel jezelf altijd de vraag: **kan ik dit nu betalen?** Zo niet → niet kopen.",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BETAALMIDDELEN</text>
+<rect x="20" y="40" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="35" y="60" fill="${COLORS.geld}" font-size="16" font-family="Arial">📲</text>
+<text x="60" y="58" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">CONTACTLOOS</text>
+<text x="60" y="73" fill="${COLORS.text}" font-size="9" font-family="Arial">snel, &lt;€50 vrij</text>
+<rect x="165" y="40" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="180" y="60" fill="${COLORS.vraag}" font-size="16" font-family="Arial">💳</text>
+<text x="205" y="58" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">PIN</text>
+<text x="205" y="73" fill="${COLORS.text}" font-size="9" font-family="Arial">veilig, direct</text>
+<rect x="20" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.oranje}" stroke-width="1.2"/>
+<text x="35" y="110" fill="${COLORS.oranje}" font-size="16" font-family="Arial">💰</text>
+<text x="60" y="108" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">CREDITCARD</text>
+<text x="60" y="123" fill="${COLORS.text}" font-size="9" font-family="Arial">1x/maand afgeschr.</text>
+<rect x="165" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.rood}" stroke-width="1.2"/>
+<text x="180" y="110" fill="${COLORS.rood}" font-size="16" font-family="Arial">⚠️</text>
+<text x="205" y="108" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">ACHTERAF</text>
+<text x="205" y="123" fill="${COLORS.text}" font-size="9" font-family="Arial">Klarna, Afterpay</text>
+<rect x="20" y="148" width="280" height="55" rx="6" fill="rgba(255,82,82,0.10)" stroke="${COLORS.rood}" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="160" y="167" text-anchor="middle" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">⚠ ACHTERAF = LENING</text>
+<text x="160" y="183" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">Vraag jezelf altijd: kan ik dit NU betalen?</text>
+<text x="160" y="197" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">Zo niet → niet kopen.</text>
 </svg>`,
     checks: [
       {
-        q: "Je zet €500 op een spaarrekening met **3% rente** per jaar. Hoeveel staat er na 1 jaar?",
+        q: "Je koopt een hoodie van €60 via **Klarna 'achteraf betalen'**. Wat gebeurt er economisch gezien?",
+        options: ["Je hebt een lening van €60 die je over 14-30 dagen moet terugbetalen", "Je krijgt korting", "Je hoeft nooit meer te betalen", "Klarna betaalt het voor je als cadeau"],
+        answer: 0,
+        wrongHints: [null, "Korting krijg je niet — alleen uitstel.", "Niet betalen = boete, deurwaarder, BKR-registratie.", "Klarna verdient eraan, dat is geen cadeau."],
+      },
+      {
+        q: "Welke betaalwijze is **direct** geld van je rekening af?",
+        options: ["Pinnen", "Creditcard", "Achteraf betalen", "Geen van deze"],
+        answer: 0,
+        wrongHints: [null, "Creditcard wordt pas later afgeschreven.", "Achteraf is letterlijk later betalen.", "Pinnen is meteen — controleer je app."],
+      },
+      {
+        q: "Waarom is contactloos onder €50 'gevaarlijker' dan pinnen?",
+        options: ["Geen pincode nodig — bij verlies kan iemand makkelijk uitgeven", "Het werkt niet altijd", "Het is duurder", "Je bent verplicht extra fooi te geven"],
+        answer: 0,
+        wrongHints: [null, "Werkt juist heel betrouwbaar.", "Zelfde prijs als pinnen.", "Fooi is geen onderdeel van de betaling."],
+      },
+      {
+        q: "Wanneer kun je een creditcard echt nuttig vinden?",
+        options: ["Online of in het buitenland — extra zekerheid en aankoop-bescherming", "Voor dagelijkse boodschappen want het is veiliger", "Als je geen pinpas hebt", "Om gratis geld te krijgen"],
+        answer: 0,
+        wrongHints: [null, "Voor dagelijks gebruik is pin veiliger en goedkoper.", "Iedereen heeft wel een pinpas via je bank.", "Creditcard geeft GEEN gratis geld — je betaalt het terug."],
+      },
+      {
+        q: "Marie ziet een €200 jas en denkt: 'oh, met Klarna betaal ik pas later.' Wat is het beste financiële advies?",
+        options: ["Vraag jezelf af: kan ik €200 nu missen? Zo niet, niet kopen.", "Altijd Klarna gebruiken want het is gratis", "Drie keer Klarna nemen, dan is het pas €600 over een jaar", "Het maakt niet uit, alles loopt los"],
+        answer: 0,
+        wrongHints: [null, "Klarna lijkt gratis maar als je te laat bent komen er kosten bij.", "Drie leningen tegelijk = drie keer schuld + drie keer risico.", "Zo komen veel jongeren in de schulden."],
+      },
+    ],
+  },
+  // ─── Stap 3: Banken — sparen en rente ─────────────────────────
+  {
+    title: "Sparen en rente — laat je geld werken",
+    explanation: "**Banken** doen drie dingen:\n1. **Geld bewaren** (betaal- en spaarrekening)\n2. **Geld lenen** (hypotheek, persoonlijke lening)\n3. **Betalingen regelen** (overschrijvingen, pinnen)\n\n**Sparen**: je geeft de bank tijdelijk je geld. De bank betaalt je **rente** als beloning, omdat zij het geld weer kan uitlenen aan anderen.\n\n**Voorbeeld**: je zet €1000 op een spaarrekening met 2% rente per jaar.\n• Na 1 jaar: €1000 × 1,02 = **€1020** (€20 rente)\n• Na 2 jaar: €1020 × 1,02 = **€1040,40** (€20,40 rente)\n• Na 5 jaar: ongeveer **€1104**\n\nDe rente over rente heet **samengestelde rente** — het wordt elk jaar groter. Je 'verdient over je verdiensten'.\n\n**Reden om te sparen**:\n• **Buffer** voor onverwachte uitgaven (telefoon stuk, fiets gestolen)\n• **Doel**: rijbewijs (~€2.500), reis (~€1.500), eerste auto, uit huis\n• **Pensioen** later in je leven\n\n**Spaarrekening** vs **betaalrekening**:\n• Betaalrekening: dagelijkse uitgaven, vaak geen rente\n• Spaarrekening: opzij zetten, beetje rente",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">SAMENGESTELDE RENTE</text>
+<line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<text x="20" y="50" fill="${COLORS.text}" font-size="9" font-family="Arial">€</text>
+<text x="270" y="175" fill="${COLORS.text}" font-size="9" font-family="Arial">jaar</text>
+<text x="55" y="175" fill="${COLORS.muted}" font-size="9" font-family="Arial">0</text>
+<text x="155" y="175" fill="${COLORS.muted}" font-size="9" font-family="Arial">5</text>
+<text x="255" y="175" fill="${COLORS.muted}" font-size="9" font-family="Arial">10</text>
+<polyline points="55,140 80,135 105,128 130,121 155,113 180,105 205,96 230,87 255,77 280,67" fill="none" stroke="${COLORS.geld}" stroke-width="3"/>
+<circle cx="55" cy="140" r="4" fill="${COLORS.warm}"/>
+<text x="55" y="135" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial">€1000</text>
+<circle cx="155" cy="113" r="4" fill="${COLORS.warm}"/>
+<text x="160" y="108" fill="${COLORS.warm}" font-size="9" font-family="Arial">€1104</text>
+<circle cx="280" cy="67" r="4" fill="${COLORS.warm}"/>
+<text x="265" y="62" fill="${COLORS.warm}" font-size="9" font-family="Arial">€1219</text>
+<text x="160" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">€1000 sparen, 2% rente per jaar</text>
+</svg>`,
+    checks: [
+      {
+        q: "Je zet **€500** op een spaarrekening met **3% rente** per jaar. Hoeveel staat er na 1 jaar?",
         options: ["€515", "€503", "€530", "€553"],
         answer: 0,
-        wrongHints: [null, "3% van €500 is geen 3 euro — dat is 0,6%.", "Dat zou 6% rente zijn, niet 3%.", "Dat is ongeveer 10% — veel te veel."],
+        wrongHints: [null, "3% van €500 = €15, niet €3.", "Dat zou 6% rente zijn.", "Te veel — controleer 3% × €500."],
       },
       {
         q: "Wat is **samengestelde rente**?",
-        options: ["Rente die je ook over de eerder ontvangen rente krijgt", "Een speciaal soort lening", "Hogere rente bij een zakelijke rekening", "Belasting op spaargeld"],
+        options: ["Rente over de eerder ontvangen rente", "Een speciaal soort lening", "Hogere rente voor zakelijke klanten", "Belasting op spaargeld"],
         answer: 0,
-        wrongHints: [null, "Lening en spaarrekening zijn verschillende producten.", "Niet specifiek aan zakelijk gebonden.", "Dat is vermogensbelasting, een ander concept."],
-      },
-    
-      {
-        q: "Je zet **€2.000** op een spaarrekening met **1,5% rente** per jaar. Hoeveel staat er na 1 jaar?",
-        options: ["€2.030", "€2.015", "€2.300", "€2.150"],
-        answer: 0,
-        wrongHints: [null, "1,5% van €2.000 is €30, niet €15.", "Te veel — dat zou 15% rente zijn.", "Ook te veel — 7,5% rente is onrealistisch hoog."],
+        wrongHints: [null, "Lening is een ander product.", "Niet specifiek aan zakelijk gebonden.", "Dat is vermogensbelasting."],
       },
       {
-        q: "Waarom betaalt de bank jou **rente** op je spaargeld?",
-        options: ["Omdat de bank jouw geld weer kan uitlenen aan anderen", "Uit dankbaarheid", "Verplicht door de overheid", "Omdat geld duurder wordt"],
+        q: "Waarom betaalt een bank jou rente op je spaargeld?",
+        options: ["De bank kan jouw geld weer uitlenen aan anderen, daar verdient zij aan", "Uit dankbaarheid", "Het is verplicht door de wet", "Geld is duurder geworden"],
         answer: 0,
-        wrongHints: [null, "Banken doen het uit eigenbelang, niet uit dankbaarheid.", "Rente-percentage is geen overheidsregel.", "Geld 'duurder worden' is geen reden — bank verdient aan uitlenen."],
+        wrongHints: [null, "Bank doet het uit eigenbelang.", "Hoogte van rente is geen wettelijke plicht.", "Geld 'duurder worden' is geen reden — bank verdient aan uitlenen."],
       },
       {
-        q: "Wat is een **betaalrekening** (anders dan een spaarrekening)?",
-        options: ["Een rekening voor dagelijkse betalingen, met meestal weinig of geen rente", "Een rekening waar je niet bij kan", "Hetzelfde als een spaarrekening", "Alleen voor bedrijven"],
+        q: "Anna spaart **€2.500 voor haar rijbewijs**. Welk type rekening is geschikt?",
+        options: ["Een spaarrekening — ze haalt het er pas later af", "Een hypotheekrekening", "Een creditcard-rekening", "Een doorlopend krediet"],
         answer: 0,
-        wrongHints: [null, "Bij een betaalrekening kun je juist altijd geld halen.", "Verschil zit in het doel: dagelijks vs. opzij zetten.", "Iedereen heeft een betaalrekening, niet alleen bedrijven."],
+        wrongHints: [null, "Hypotheek is voor een huis kopen.", "Creditcard is voor uitgeven, niet sparen.", "Doorlopend krediet is een lening, niet een spaarrekening."],
+      },
+      {
+        q: "Een bank biedt een spaarrekening met **0% rente**. Waarom is sparen dan nóg steeds zinvol?",
+        options: ["Je houdt geld apart voor doelen of buffers", "Het is verplicht", "Je krijgt korting in winkels", "Het levert toch geld op"],
+        answer: 0,
+        wrongHints: [null, "Sparen is geen plicht.", "Geen winkelvoordeel verbonden aan sparen.", "Bij 0% levert het juist niets op — maar gestructureerd sparen helpt wel."],
+      },
+      {
+        q: "Wat gebeurt er bij een **negatieve rente** op je spaargeld?",
+        options: ["Je betaalt de bank in plaats van andersom", "Je krijgt extra geld", "De bank gaat failliet", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Negatief = bank krijgt iets van jou.", "Betekent dat de bank failliet gaat is iets anders (DGS).", "Het heeft wel impact op je tegoed."],
       },
     ],
   },
+  // ─── Stap 4: Inflatie en koopkracht ─────────────────────────
   {
-    title: "Lenen — kredietvormen en risico",
-    explanation: "**Lenen** is geld krijgen dat je **later moet terugbetalen**, vaak met **rente**.\n\n**Soorten leningen**:\n\n**Hypotheek**: lange lening om een huis te kopen. Looptijd vaak 20-30 jaar. Rente lager omdat het huis als onderpand dient.\n\n**Persoonlijke lening**: vast bedrag, vaste maandlasten over een paar jaar (bv. €5000 over 4 jaar).\n\n**Doorlopend krediet**: kredietruimte tot een limiet — flexibel, maar vaak hoge rente.\n\n**Rood staan**: tijdelijk negatief op je betaalrekening. Hoge rente.\n\n**Risico**: kun je het terugbetalen? Banken kijken naar:\n• Inkomen (kun je de maandlasten betalen?)\n• Bestaande schulden (BKR-toets)\n• Onderpand bij grote leningen\n\n**Vuistregel**: leen niet meer dan ~30% van je netto-inkomen aan vaste maandlasten.",
-    svg: `<svg viewBox="0 0 300 200">
-<text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENEN — soorten</text>
-<rect x="20" y="40" width="120" height="34" rx="5" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
-<text x="80" y="61" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">hypotheek</text>
-<rect x="160" y="40" width="120" height="34" rx="5" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
-<text x="220" y="61" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">persoonlijke lening</text>
-<rect x="20" y="84" width="120" height="34" rx="5" fill="${COLORS.paper}" stroke="${COLORS.oranje}" stroke-width="1.2"/>
-<text x="80" y="105" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">doorlopend krediet</text>
-<rect x="160" y="84" width="120" height="34" rx="5" fill="${COLORS.paper}" stroke="${COLORS.rood}" stroke-width="1.2"/>
-<text x="220" y="105" text-anchor="middle" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">rood staan</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">vuistregel: max ~30% netto-inkomen</text>
-<text x="150" y="175" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">aan vaste maandlasten</text>
+    title: "Inflatie — waarom geld minder waard wordt",
+    explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PRIJS VAN EEN BROOD</text>
+<rect x="50" y="40" width="40" height="100" fill="${COLORS.geld}" opacity="0.5"/>
+<text x="70" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2010</text>
+<text x="70" y="170" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">€1,50</text>
+<rect x="120" y="55" width="40" height="85" fill="${COLORS.warm}" opacity="0.5"/>
+<text x="140" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2018</text>
+<text x="140" y="170" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">€2,00</text>
+<rect x="190" y="65" width="40" height="75" fill="${COLORS.oranje}" opacity="0.5"/>
+<text x="210" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2023</text>
+<text x="210" y="170" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">€2,50</text>
+<rect x="260" y="55" width="40" height="85" fill="${COLORS.aanbod}" opacity="0.6"/>
+<text x="280" y="155" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2026</text>
+<text x="280" y="170" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">€2,80</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">+87% in 16 jaar — dat is inflatie</text>
 </svg>`,
     checks: [
       {
-        q: "Welke leenvorm heeft een huis als **onderpand**?",
-        options: ["Hypotheek", "Persoonlijke lening", "Rood staan", "Studielening"],
+        q: "**CPI 2025 = 108** (basis 2023 = 100). Hoeveel zijn de prijzen gestegen sinds 2023?",
+        options: ["8%", "108%", "0,8%", "1,08%"],
         answer: 0,
-        wrongHints: [null, "Persoonlijke lening heeft meestal geen onderpand — daarom hogere rente.", "Rood staan is voor kortdurend tekort op je rekening.", "Studielening is bij DUO; geen huis als onderpand."],
+        wrongHints: [null, "Dat zou betekenen dat een brood van €1 nu €2,08 kost — te veel.", "Te klein.", "Dat is de factor (1,08) niet het percentage."],
       },
       {
-        q: "Waarom heeft **rood staan** vaak een hoge rente?",
-        options: ["Het is geen lange-termijn-lening en de bank loopt risico", "Banken willen klanten straffen", "Het is illegaal", "Omdat de overheid dat verplicht"],
+        q: "Je loon stijgt **2%**, prijzen stijgen **5%**. Wat gebeurt met je koopkracht?",
+        options: ["Daalt met ongeveer 3%", "Stijgt met 2%", "Stijgt met 7%", "Blijft gelijk"],
         answer: 0,
-        wrongHints: [null, "Niet om te 'straffen' — het is gewoon prijszetting voor risico.", "Rood staan is wel legaal (binnen je limiet).", "De rente wordt door de bank bepaald, niet door de overheid."],
+        wrongHints: [null, "Loon stijgt wel, maar prijzen sneller.", "Niet optellen.", "Alleen gelijk als beide percentages gelijk zijn."],
       },
-    
       {
-        q: "Welke leenvorm heeft meestal de **hoogste rente**?",
-        options: ["Rood staan", "Hypotheek", "Studielening DUO", "Persoonlijke lening"],
+        q: "Je krijgt **1% rente** op spaargeld, inflatie is **3%**. Wat doet je koopkracht?",
+        options: ["Daalt met ongeveer 2% per jaar", "Stijgt met 1%", "Blijft precies gelijk", "Stijgt met 4%"],
         answer: 0,
-        wrongHints: [null, "Hypotheek heeft juist lage rente (huis als onderpand).", "DUO heeft een gunstig laag tarief.", "Persoonlijke lening is hoger dan hypotheek, maar rood staan is nog hoger."],
+        wrongHints: [null, "Rente alleen is geen winst — vergelijk met inflatie.", "Inflatie is hoger dan rente, dus daling.", "Niet optellen — vergelijk."],
+      },
+      {
+        q: "Wat zou inflatie kunnen **veroorzaken**?",
+        options: ["Energieprijzen stijgen sterk (gas, olie)", "Iedereen krijgt meer salaris", "Belastingen worden afgeschaft", "Het regent veel"],
+        answer: 0,
+        wrongHints: [null, "Hogere lonen kunnen inflatie wel versterken, maar zijn het gevolg eerder dan oorzaak.", "Belasting heeft directer effect via kosten.", "Weer is geen economische factor."],
+      },
+      {
+        q: "Wat is **hyperinflatie**?",
+        options: ["Prijzen verdubbelen extreem snel — bv. elke maand", "Prijzen dalen", "Lonen verdubbelen", "Geen inflatie"],
+        answer: 0,
+        wrongHints: [null, "Tegenovergesteld — dat is deflatie.", "Lonen kunnen ook stijgen maar nooit zo snel als hyperinflatie-prijzen.", "Hyper = veel meer dan normaal."],
+      },
+    ],
+  },
+  // ─── Stap 5: Begroten ──────────────────────────────────────────
+  {
+    title: "Begroten — heb ik geld over aan het einde van de maand?",
+    explanation: "Een **begroting** = overzicht van wat erin komt en uit gaat per maand. Dat helpt je doelen halen (rijbewijs, vakantie) en voorkomen dat je rood staat.\n\n**Inkomsten**: alles wat binnenkomt.\n• Zakgeld\n• Bijbaan-loon (bv. vakkenvuller €60-€200/mnd)\n• Studiefinanciering (later)\n• Toeslagen\n\n**Uitgaven**: opgesplitst in **vast** en **variabel**.\n\n**Vaste uitgaven** (komen elke maand terug):\n• Telefoon abonnement (€10-€25)\n• Streamingdiensten (Spotify, Netflix)\n• Sport-abonnement\n• Verzekeringen\n\n**Variabele uitgaven** (anders elke maand):\n• Boodschappen, uit eten\n• Kleding\n• Uitgaan, bioscoop\n• Vervoer (OV-chipkaart, benzine)\n\n**Sparen** = zet apart vóórdat je uitgeeft (de '50/30/20-regel'):\n• 50% noodzaak\n• 30% leuke dingen\n• 20% sparen\n\n**Voorbeeld**: bijbaan-loon €240/mnd.\n• 50% = €120 → telefoon, OV, basis\n• 30% = €72 → uitgaan, kleding\n• 20% = €48 → sparen voor rijbewijs\n\n**Overschot/tekort**:\n• Inkomsten &gt; uitgaven → **overschot** (kan sparen)\n• Inkomsten &lt; uitgaven → **tekort** (rood staan, schulden)",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BEGROTEN — €240/mnd bijbaan</text>
+<rect x="40" y="40" width="240" height="40" rx="6" fill="${COLORS.geld}" opacity="0.3" stroke="${COLORS.geld}"/>
+<text x="160" y="65" text-anchor="middle" fill="${COLORS.geld}" font-size="14" font-family="Arial" font-weight="bold">INKOMSTEN €240</text>
+<rect x="40" y="100" width="120" height="35" rx="6" fill="${COLORS.vraag}" opacity="0.3" stroke="${COLORS.vraag}"/>
+<text x="100" y="118" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">50% NOODZAAK</text>
+<text x="100" y="131" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€120</text>
+<rect x="170" y="100" width="72" height="35" rx="6" fill="${COLORS.warm}" opacity="0.3" stroke="${COLORS.warm}"/>
+<text x="206" y="118" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">30% LEUK</text>
+<text x="206" y="131" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€72</text>
+<rect x="252" y="100" width="48" height="35" rx="6" fill="${COLORS.alt}" opacity="0.3" stroke="${COLORS.alt}"/>
+<text x="276" y="118" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">20% SPAAR</text>
+<text x="276" y="131" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€48</text>
+<text x="160" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€48 × 12 mnd = €576/jaar</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">In 4 jaar: rijbewijs! 🚗</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">de 50/30/20-regel</text>
+</svg>`,
+    checks: [
+      {
+        q: "Welke uitgave is een **vaste uitgave**?",
+        options: ["Spotify-abonnement (elke maand zelfde bedrag)", "Boodschappen", "Een nieuwe broek", "Bioscoop-bezoek"],
+        answer: 0,
+        wrongHints: [null, "Boodschappen wisselen per maand → variabel.", "Een broek is incidenteel, niet maandelijks.", "Bioscoop wisselt — niet elke maand precies hetzelfde."],
+      },
+      {
+        q: "Inkomsten **€350**, uitgaven **€420** in een maand. Wat is je situatie?",
+        options: ["Tekort van €70 — je teert in op spaargeld of staat rood", "Overschot van €70", "Het maakt niet uit", "Je krijgt €70 toeslag"],
+        answer: 0,
+        wrongHints: [null, "Andersom — uitgaven zijn hoger.", "Het maakt heel veel uit — kan tot schulden leiden.", "Toeslagen krijg je niet automatisch bij tekort."],
+      },
+      {
+        q: "Volgens de **50/30/20-regel**: bij €400 inkomsten — hoeveel sparen?",
+        options: ["€80", "€200", "€120", "€40"],
+        answer: 0,
+        wrongHints: [null, "Dat is 50% — noodzaak.", "Dat is 30% — leuke dingen.", "Dat is 10% — wel sparen, maar minder dan de regel."],
+      },
+      {
+        q: "Waarom is **eerst sparen, dan uitgeven** beter dan andersom?",
+        options: ["Anders blijft er aan het einde van de maand niets over", "Sparen kost belasting", "Spaarrente is altijd 0%", "Banken sluiten je rekening anders"],
+        answer: 0,
+        wrongHints: [null, "Sparen kost niet meer belasting.", "Rente kan ook hoger zijn dan 0%.", "Banken sluiten geen rekeningen omdat je niet spaart."],
+      },
+      {
+        q: "Anna heeft **€60 zakgeld** + **€80 bijbaan**. Streaming **€10**, telefoon **€15**, OV **€20**, uitgaan **€60**. Hoeveel kan zij sparen?",
+        options: ["€35", "€10", "€60", "€105"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — tel inkomsten + trek uitgaven af.", "Dat zou alleen uitgaan zijn.", "Te veel — uitgaven niet vergeten."],
+      },
+      {
+        q: "Wat is een **buffer** op je spaarrekening?",
+        options: ["Geld voor onverwachte uitgaven (telefoon stuk, fiets gestolen)", "Verplicht door de bank", "Een soort lening", "Cashback van Klarna"],
+        answer: 0,
+        wrongHints: [null, "Niet verplicht maar verstandig.", "Geen lening — eigen geld.", "Geen cadeau — spaargeld is van jou."],
+      },
+    ],
+  },
+  // ─── Stap 6: Lenen — kredietvormen ─────────────────────────
+  {
+    title: "Lenen — wanneer wel, wanneer niet",
+    explanation: "**Lenen** = geld krijgen dat je **later moet terugbetalen**, vaak met **rente**. De bank verdient aan rente.\n\n**Soorten leningen** (van laag naar hoog risico voor jou):\n\n**1. Hypotheek** — voor een huis (looptijd 20-30 jaar). Het huis is **onderpand**: kun je niet betalen, dan wordt het huis verkocht. Lage rente want de bank loopt weinig risico.\n\n**2. Studielening (DUO)** — voor studenten. Lage rente, terugbetalen pas als je verdient. Geen BKR-registratie.\n\n**3. Persoonlijke lening** — vast bedrag, vaste maandlasten over 1-5 jaar. Voor bv. auto, verbouwing.\n\n**4. Doorlopend krediet** — kredietruimte tot een limiet. Flexibel, maar **hoge rente** en risico op groeiende schuld.\n\n**5. Rood staan** — tijdelijk negatief op je betaalrekening. **Heel hoge rente** (10-15%/jaar).\n\n**6. Achteraf betalen / Klarna** — populair maar bij niet betalen: hoge boetes, deurwaarder, BKR-registratie. Je staat dan jaren bekend als 'wanbetaler' en krijgt later geen hypotheek.\n\n**Voor leningen kijkt de bank naar**:\n• **Inkomen**: kun je het terugbetalen?\n• **BKR-registratie**: heb je nu al schulden?\n• **Onderpand**: huis, auto?\n\n**Vuistregel**: je vaste maandlasten (huur + leningen) moeten **maximaal 30% van je netto-inkomen** zijn.\n\n**Wanneer is lenen OK?**\n• Voor iets dat **lang meegaat** (huis, opleiding) en/of geld oplevert.\n\n**Wanneer NIET?**\n• Voor een vakantie, kleren, telefoon → eerst sparen.",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENINGEN — RENTE-NIVEAU</text>
+<rect x="20" y="40" width="280" height="22" rx="4" fill="${COLORS.geld}" opacity="0.3"/>
+<text x="30" y="56" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">HYPOTHEEK</text>
+<text x="270" y="56" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">~4%</text>
+<rect x="20" y="65" width="280" height="22" rx="4" fill="${COLORS.geld}" opacity="0.3"/>
+<text x="30" y="81" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">STUDIELENING</text>
+<text x="270" y="81" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">~3%</text>
+<rect x="20" y="90" width="280" height="22" rx="4" fill="${COLORS.warm}" opacity="0.3"/>
+<text x="30" y="106" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">PERSOONLIJK</text>
+<text x="270" y="106" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">~7%</text>
+<rect x="20" y="115" width="280" height="22" rx="4" fill="${COLORS.oranje}" opacity="0.3"/>
+<text x="30" y="131" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">DOORLOPEND</text>
+<text x="270" y="131" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">~10%</text>
+<rect x="20" y="140" width="280" height="22" rx="4" fill="${COLORS.aanbod}" opacity="0.3"/>
+<text x="30" y="156" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">ROOD STAAN</text>
+<text x="270" y="156" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">~12%</text>
+<rect x="20" y="165" width="280" height="22" rx="4" fill="${COLORS.rood}" opacity="0.4"/>
+<text x="30" y="181" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">KLARNA TE LAAT</text>
+<text x="270" y="181" text-anchor="end" fill="${COLORS.text}" font-size="11" font-family="Arial">+ boetes!</text>
+<text x="160" y="208" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vuistregel: max 30% netto-inkomen aan lasten</text>
+</svg>`,
+    checks: [
+      {
+        q: "Welke lening heeft een **huis als onderpand**?",
+        options: ["Hypotheek", "Persoonlijke lening", "Rood staan", "Doorlopend krediet"],
+        answer: 0,
+        wrongHints: [null, "Geen onderpand — daarom hogere rente.", "Voor kortdurend tekort, geen onderpand.", "Geen vast onderpand."],
+      },
+      {
+        q: "Waarom heeft **rood staan** een hoge rente?",
+        options: ["Geen onderpand, kort termijn — bank loopt risico", "Banken willen klanten straffen", "Het is illegaal", "Door de overheid bepaald"],
+        answer: 0,
+        wrongHints: [null, "Niet om te straffen — risico-prijs.", "Rood staan is wel legaal binnen je limiet.", "Rente bepaalt de bank."],
       },
       {
         q: "Wat is een **BKR-toets**?",
-        options: ["Check of je al andere schulden hebt of betalingsproblemen", "Examen voor bankmedewerkers", "Belastingaanslag", "Spaarrekening met bonus"],
+        options: ["Check of je al andere schulden of betalingsproblemen hebt", "Examen voor bankmedewerkers", "Belastingaanslag", "Spaarrekening met bonus"],
         answer: 0,
-        wrongHints: [null, "BKR is geen opleiding maar een register.", "Niets met belasting — BKR is van Bureau Krediet Registratie.", "Geen spaarproduct — het is een controle bij lenen."],
+        wrongHints: [null, "BKR is een register, geen opleiding.", "Niets met belasting.", "Geen spaarproduct."],
       },
       {
-        q: "Vuistregel: max **30% van netto-inkomen** aan vaste maandlasten. Bij netto €2.000 — wat is je maximum?",
+        q: "Bij netto inkomen **€2.000/mnd**: welk maximum aan vaste maandlasten volgt uit de 30%-regel?",
         options: ["€600", "€2.000", "€300", "€1.000"],
         answer: 0,
-        wrongHints: [null, "Dat zou je hele inkomen zijn — niet duurzaam.", "Te weinig — dat is 15%.", "Net te veel — dat is 50%, dubbel zoveel als de regel."],
+        wrongHints: [null, "Dat zou je hele inkomen zijn.", "Te weinig — dat is 15%.", "Net te veel — dat is 50%."],
+      },
+      {
+        q: "Wanneer is lenen meestal **zinvol**?",
+        options: ["Voor een huis of opleiding (lang meegaan, leveren waarde op)", "Voor een vakantie", "Voor een nieuwe telefoon", "Voor kleren"],
+        answer: 0,
+        wrongHints: [null, "Vakantie levert geen geld op — eerst sparen.", "Telefoon: spaar liever.", "Kleren: niet lenen."],
+      },
+      {
+        q: "Wat gebeurt er als je **Klarna 'achteraf' niet op tijd betaalt**?",
+        options: ["Hoge boetes, daarna deurwaarder + BKR-registratie", "Klarna scheldt het kwijt", "Je krijgt extra tijd zonder kosten", "Klarna betaalt het zelf"],
+        answer: 0,
+        wrongHints: [null, "Klarna scheldt niets kwijt — schuld blijft bestaan.", "Extra tijd kost geld — boetes lopen op.", "Klarna verdient eraan, betaalt niets zelf."],
+      },
+    ],
+  },
+  // ─── Stap 7: Hypotheek in detail ───────────────────────────
+  {
+    title: "Hypotheek — een huis kopen",
+    explanation: "Een **hypotheek** is een lange lening om een huis te kopen. Je leent vaak het overgrote deel van de huisprijs van een bank. Het huis is **onderpand** — kun je niet betalen, dan verkoopt de bank het huis.\n\n**Looptijd**: meestal **30 jaar**.\n\n**Twee veelvoorkomende vormen**:\n\n**1. Annuïteitenhypotheek**\n• **Vaste maandlast** elk jaar (gemiddeld over de looptijd).\n• Eerst betaal je veel rente, weinig aflossing.\n• Aan het eind: weinig rente, veel aflossing.\n• Populair bij starters.\n\n**2. Lineaire hypotheek**\n• **Vaste aflossing** elke maand.\n• Eerst hoge maandlast (rente over hele bedrag).\n• Wordt elk jaar lager.\n• Goedkoper over de hele looptijd, maar in begin hoger.\n\n**Voorbeeld**: huis kost €350.000.\n• Eigen geld: €30.000.\n• Hypotheek: €320.000 over 30 jaar.\n• Rente 4% → maandlast ongeveer **€1.530**.\n\n**Maximale hypotheek** = afhankelijk van je inkomen (bruto). Vuistregel: ongeveer 4-5× je bruto jaarsalaris.\n\n**Bijkomende kosten** (komen bovenop de huisprijs):\n• **Overdrachtsbelasting** (2% voor starters tot 35 jaar: 0%)\n• **Notaris** (~€2.000)\n• **Taxatie** (~€500)\n• **Hypotheekadvies** (~€2.500)\n\n**Aandachtspunten**:\n• Werkloos worden = inkomen weg = hypotheek niet betalen = huis kwijt\n• Daarom **buffer** op spaarrekening (minimaal 3-6 maanden lasten)\n• Verzekering: arbeidsongeschiktheid, overlijdensrisico",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">HYPOTHEEK €320.000 / 30 jr / 4%</text>
+<text x="160" y="42" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">maandlast ongeveer €1.530</text>
+<rect x="20" y="60" width="135" height="80" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="87" y="78" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">ANNUÏTEIT</text>
+<text x="87" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vaste maandlast</text>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">veel rente eerst</text>
+<text x="87" y="121" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">weinig aflossing</text>
+<text x="87" y="134" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">populair bij starters</text>
+<rect x="165" y="60" width="135" height="80" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="232" y="78" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">LINEAIR</text>
+<text x="232" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vaste aflossing</text>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">hoog begin</text>
+<text x="232" y="121" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">daalt elk jaar</text>
+<text x="232" y="134" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">goedkoper totaal</text>
+<rect x="40" y="155" width="240" height="50" rx="6" fill="rgba(255,213,79,0.10)" stroke="${COLORS.warm}" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="160" y="173" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">+ EXTRA KOSTEN</text>
+<text x="160" y="187" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">notaris €2.000 · taxatie €500</text>
+<text x="160" y="199" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">advies €2.500 · overdrachtsbel.</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is het belangrijkste verschil tussen **annuïteit** en **lineaire** hypotheek?",
+        options: ["Annuïteit heeft vaste maandlast, lineair heeft vaste aflossing", "Annuïteit is voor huurders", "Lineair is alleen voor BV's", "Geen verschil"],
+        answer: 0,
+        wrongHints: [null, "Hypotheek is altijd voor kopers, niet huurders.", "Niet bedrijfs-specifiek.", "Echte verschillen in maandlast en totale kosten."],
+      },
+      {
+        q: "Wat is **onderpand** bij een hypotheek?",
+        options: ["Het huis — bij niet betalen verkoopt de bank het", "Een spaarrekening", "Een verzekering", "Een toeslag"],
+        answer: 0,
+        wrongHints: [null, "Spaarrekening is iets anders.", "Verzekering kan helpen, maar onderpand = het huis zelf.", "Toeslagen hebben hier niets mee te maken."],
+      },
+      {
+        q: "Een huis kost **€350.000**, je hebt **€30.000** eigen geld. Hoeveel hypotheek heb je nodig?",
+        options: ["€320.000", "€380.000", "€350.000", "€30.000"],
+        answer: 0,
+        wrongHints: [null, "Eigen geld haal je af, niet erbij.", "Je hebt eigen geld — minder lenen.", "Dat is alleen je eigen inbreng, niet de lening."],
+      },
+      {
+        q: "Maximale hypotheek hangt vooral af van:",
+        options: ["Je bruto-inkomen", "Je leeftijd alleen", "De prijs van het huis alleen", "Hoe blij je bent"],
+        answer: 0,
+        wrongHints: [null, "Leeftijd speelt mee, maar inkomen is hoofdfactor.", "Hoge prijs ≠ automatisch grote hypotheek mogelijk.", "Geen economische factor."],
+      },
+      {
+        q: "Welke kosten komen **bovenop** de huisprijs bij koop?",
+        options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Alleen extra rente", "Niets", "Een huis-cadeau"],
+        answer: 0,
+        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk €5.000 startersregel.", "Geen cadeau — koop is duur."],
+      },
+      {
+        q: "Waarom is een **buffer** op de spaarrekening nuttig als je een hypotheek hebt?",
+        options: ["Bij werkloosheid of ziekte kun je nog enkele maanden de hypotheek betalen", "Banken eisen het", "Spaargeld levert hypotheek-korting op", "Het is verboden om geen buffer te hebben"],
+        answer: 0,
+        wrongHints: [null, "Banken adviseren het wel, eisen meestal niet.", "Geen automatische korting.", "Geen verbod, wel verstandig."],
       },
     ],
   },
@@ -178,9 +456,9 @@ const pincodeGeldSparenLenen = {
   level: "vmbo-gt-4",
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
-  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk B",
+  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 2",
   intro:
-    "Functies van geld, banken, samengestelde rente en kredietvormen met hun risico's. Hoofdstuk B van Pincode VMBO-GT klas 4.",
+    "Hoofdstuk 2 van Pincode 7e ed. VMBO-GT 4: van betaalmiddelen en sparen tot inflatie, begroten, lenen en hypotheek. 7 stappen, met concrete voorbeelden uit de leefwereld van een tiener. Examen-voorbereiding compleet.",
   triggerKeywords: [
     "geld",
     "ruilhandel",
@@ -189,18 +467,43 @@ const pincodeGeldSparenLenen = {
     "spaarmiddel",
     "chartaal",
     "giraal",
+    "betaalmiddel",
+    "pin",
+    "contactloos",
+    "creditcard",
+    "klarna",
+    "afterpay",
+    "achteraf betalen",
     "bank",
     "sparen",
     "rente",
     "samengestelde rente",
+    "spaarrekening",
+    "betaalrekening",
+    "inflatie",
+    "koopkracht",
+    "cpi",
+    "consumentenprijsindex",
+    "hyperinflatie",
+    "begroten",
+    "begroting",
+    "vaste uitgaven",
+    "variabele uitgaven",
+    "50/30/20",
+    "buffer",
     "lenen",
     "krediet",
     "hypotheek",
+    "annuiteit",
+    "lineaire hypotheek",
     "persoonlijke lening",
     "doorlopend krediet",
     "rood staan",
     "bkr",
     "onderpand",
+    "studielening",
+    "duo",
+    "pincode hoofdstuk 2",
     "pincode hoofdstuk b",
   ],
   chapters,

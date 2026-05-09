@@ -1,6 +1,6 @@
-// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk C
-// Gesplitst uit pincodeEconomieVmboGt4.js (2026-05-09): 1 hoofdstuk = 1 leerpad,
-// past bij Leerkwartier 15-min-chunks en de UI-logica "1 pad = 1 thema".
+// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk 3 (Ben jij ondernemend?)
+// Uitgebreide versie 2026-05-09: 7 stappen voor compleet examen-blok.
+// Concrete voorbeelden: foodtruck, webshop, bijles geven.
 
 const COLORS = {
   text: "#e0e6f0",
@@ -16,168 +16,473 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["🚀", "📊", "🏪"];
+const stepEmojis = ["🚀", "🔍", "🎯", "📈", "⚖️", "🧾", "⚠️"];
 
 const chapters = [
-  { letter: "C", title: "Ben jij ondernemend?", emoji: "🚀", from: 0, to: 2 },
+  { letter: "A", title: "Starten", emoji: "🚀", from: 0, to: 2 },
+  { letter: "B", title: "Geldzaken", emoji: "📈", from: 3, to: 5 },
+  { letter: "C", title: "Risico", emoji: "⚠️", from: 6, to: 6 },
 ];
 
 const steps = [
-
+  // ─── Stap 1: Wat is ondernemen ────────────────────────────
   {
-    title: "Wat is ondernemen?",
-    explanation: "**Ondernemen** = met eigen middelen en risico iets produceren of verkopen om **winst** te maken.\n\nKenmerken van een ondernemer:\n• Ziet **kansen** in de markt\n• Neemt **risico** (kan ook verlies maken)\n• Is **zelfstandig** (geen baas)\n• Investeert eigen geld of leent\n\n**Idee → plan → uitvoering**:\n1. **Marktonderzoek**: is er vraag naar?\n2. **Ondernemingsplan**: wat ga je doen, wat kost het, wat verdien je?\n3. **Inschrijven** bij KvK (Kamer van Koophandel)\n4. **Starten**: producten kopen, marketing, klanten werven\n\n**Soorten ondernemingen**:\n• **Productie**: maakt iets (bakker, fabriek)\n• **Handel**: koopt en verkoopt door (winkel)\n• **Diensten**: levert iets onstoffelijks (kapper, IT-bedrijf)",
-    svg: `<svg viewBox="0 0 300 180">
-<text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ONDERNEMEN</text>
-<text x="60" y="55" text-anchor="middle" fill="${COLORS.geld}" font-size="22" font-family="Arial">💡</text>
-<text x="60" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">idee</text>
-<text x="100" y="60" fill="${COLORS.muted}" font-size="14" font-family="Arial">→</text>
-<text x="150" y="55" text-anchor="middle" fill="${COLORS.vraag}" font-size="22" font-family="Arial">📋</text>
-<text x="150" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">plan</text>
-<text x="190" y="60" fill="${COLORS.muted}" font-size="14" font-family="Arial">→</text>
-<text x="240" y="55" text-anchor="middle" fill="${COLORS.warm}" font-size="22" font-family="Arial">🚀</text>
-<text x="240" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">starten</text>
-<text x="150" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">eigen risico → kans op winst of verlies</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">productie · handel · diensten</text>
+    title: "Wat is ondernemen? — kansen, risico en winst",
+    explanation: "**Ondernemen** = met eigen middelen en risico iets produceren of verkopen om **winst** te maken.\n\n**Een ondernemer**:\n• Ziet **kansen** in de markt (wat hebben mensen nodig?)\n• Neemt **risico** (kan ook verlies maken)\n• Is **zelfstandig** (geen baas)\n• Investeert eigen geld of leent\n\n**Soorten ondernemingen** (op basis wat je doet):\n• **Productie**: maakt iets nieuws (bakker, kledingmerk, foodtruck eigenaar)\n• **Handel**: koopt en verkoopt door (winkel, webshop, supermarkt)\n• **Diensten**: levert iets onstoffelijks (kapper, IT-bedrijf, bijles geven)\n\n**Stappen voor het starten van een bedrijf**:\n1. **Idee** — wat ga je doen?\n2. **Marktonderzoek** — is er vraag naar? (volgende stap)\n3. **Ondernemingsplan** — wat ga je verkopen, voor welke prijs, wat zijn de kosten?\n4. **Inschrijven bij KvK** (Kamer van Koophandel) — verplicht\n5. **BTW-nummer** krijgen via Belastingdienst\n6. **Starten** — producten/dienst leveren, klanten werven\n\n**Voorbeeld 'Foodtruck Funky Fries' van Sam (19)**:\n• Idee: Belgische friet op evenementen\n• Marktonderzoek: praat met festival-organisatoren, kijk concurrenten\n• Plan: investering €15.000 (truck + apparatuur + voorraad)\n• KvK-inschrijving: €80\n• Eerste festival: omzet €2.400 over 2 dagen, kosten €1.600 → winst €800\n\n**Risico** = je kunt al je geïnvesteerde geld verliezen als het niet werkt.",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">START EEN BEDRIJF</text>
+<text x="50" y="55" text-anchor="middle" fill="${COLORS.geld}" font-size="22" font-family="Arial">💡</text>
+<text x="50" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">idee</text>
+<text x="85" y="60" fill="${COLORS.muted}" font-size="14" font-family="Arial">→</text>
+<text x="120" y="55" text-anchor="middle" fill="${COLORS.vraag}" font-size="22" font-family="Arial">🔍</text>
+<text x="120" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">onderzoek</text>
+<text x="160" y="60" fill="${COLORS.muted}" font-size="14" font-family="Arial">→</text>
+<text x="200" y="55" text-anchor="middle" fill="${COLORS.warm}" font-size="22" font-family="Arial">📋</text>
+<text x="200" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">plan</text>
+<text x="232" y="60" fill="${COLORS.muted}" font-size="14" font-family="Arial">→</text>
+<text x="265" y="55" text-anchor="middle" fill="${COLORS.alt}" font-size="22" font-family="Arial">🚀</text>
+<text x="265" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">starten</text>
+<text x="160" y="115" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">3 soorten ondernemingen:</text>
+<rect x="20" y="130" width="85" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="62" y="148" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">PRODUCTIE</text>
+<text x="62" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">bakker, foodtruck</text>
+<rect x="118" y="130" width="85" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="160" y="148" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">HANDEL</text>
+<text x="160" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">winkel, webshop</text>
+<rect x="216" y="130" width="85" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="258" y="148" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">DIENST</text>
+<text x="258" y="162" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">kapper, bijles</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">eigen risico → kans op winst of verlies</text>
 </svg>`,
     checks: [
       {
-        q: "Wat is een **dienst**?",
-        options: ["Iets wat je levert zonder dat het tastbaar is, zoals een kapper-knipbeurt", "Een product in een fabriek", "Een gratis goed", "Een lening van de bank"],
-        answer: 0,
-        wrongHints: [null, "Dat is productie.", "Diensten zijn niet gratis — je betaalt voor de arbeid.", "Een lening is een financieel product, geen dienst in deze context."],
-      },
-      {
-        q: "Welke instantie schrijft je in als nieuwe ondernemer?",
-        options: ["Kamer van Koophandel (KvK)", "De gemeente", "De Belastingdienst alleen", "DUO"],
-        answer: 0,
-        wrongHints: [null, "De gemeente niet — daar regel je eventueel een vergunning.", "De KvK schrijft in; de Belastingdienst krijgt vanuit daar info.", "DUO regelt studie-zaken."],
-      },
-    
-      {
-        q: "Welke 3 stappen volgen meestal als je een eigen bedrijf wilt starten?",
-        options: ["Marktonderzoek → ondernemingsplan → inschrijven KvK", "Reclame maken → product maken → klanten zoeken", "Geld lenen → personeel werven → kantoor huren", "Belasting betalen → BV oprichten → vakantie"],
-        answer: 0,
-        wrongHints: [null, "Reclame komt later — eerst weten wat de markt wil.", "Geld lenen kan, maar je begint met onderzoek/plan.", "Belasting komt pas als je iets verdient."],
-      },
-      {
-        q: "Een webshop in handgemaakte sieraden — welk type onderneming?",
-        options: ["Productie (je maakt zelf)", "Handel (alleen kopen en doorverkopen)", "Diensten", "Geen van deze"],
+        q: "Een **webshop in handgemaakte sieraden** — welk type onderneming?",
+        options: ["Productie (je maakt zelf)", "Handel", "Diensten", "Geen van deze"],
         answer: 0,
         wrongHints: [null, "Handel = inkopen en doorverkopen zonder zelf te maken.", "Diensten = iets ongrijpbaars (kapsel, advies).", "Het past wel — sieraden maken is productie."],
       },
       {
-        q: "Een ondernemer **neemt risico**. Wat betekent dat?",
-        options: ["Hij kan zijn investering kwijtraken als het bedrijf verliest", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
+        q: "**Bijles wiskunde geven** is welk type?",
+        options: ["Diensten", "Productie", "Handel", "Geen van deze"],
         answer: 0,
-        wrongHints: [null, "Als er garantie was, was het geen risico.", "Ondernemers betalen wél belasting (IB of VPB).", "Ondernemers werken meestal hard, juist door het risico."],
+        wrongHints: [null, "Je maakt geen tastbaar product.", "Je verkoopt geen ingekochte spullen door.", "Het is wel duidelijk een type — denk: tastbaar of niet?"],
+      },
+      {
+        q: "Welke instantie schrijft je in als nieuwe ondernemer?",
+        options: ["Kamer van Koophandel (KvK)", "De gemeente", "DUO", "De school"],
+        answer: 0,
+        wrongHints: [null, "Gemeente regelt soms vergunningen, geen inschrijving.", "DUO is voor studie.", "School heeft hier geen rol in."],
+      },
+      {
+        q: "Een ondernemer **neemt risico**. Wat betekent dat?",
+        options: ["Hij kan zijn investering verliezen als het bedrijf verliesgevend is", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
+        answer: 0,
+        wrongHints: [null, "Geen garantie — anders was het geen risico.", "Ondernemers betalen wél belasting.", "Ondernemers werken vaak heel hard juist door risico."],
+      },
+      {
+        q: "Sam start de Foodtruck Funky Fries. Welke stap komt VÓÓR het ondernemingsplan?",
+        options: ["Marktonderzoek", "Inschrijving KvK", "Starten van verkoop", "BTW-aangifte doen"],
+        answer: 0,
+        wrongHints: [null, "Inschrijving komt nadat je weet wat je gaat doen.", "Verkoop is de laatste stap.", "BTW-aangifte volgt na inschrijving."],
+      },
+      {
+        q: "Welk kenmerk hoort er NIET bij een ondernemer?",
+        options: ["Heeft een baas die het werk uitdeelt", "Ziet kansen", "Investeert eigen geld of leent", "Neemt risico"],
+        answer: 0,
+        wrongHints: [null, "Klopt — kansen zien is kern.", "Klopt — geld is altijd nodig.", "Klopt — risico is essentieel kenmerk."],
       },
     ],
   },
+  // ─── Stap 2: Marktonderzoek ─────────────────────────────────
   {
-    title: "Omzet, kosten en winst",
-    explanation: "Drie kernbegrippen voor elke ondernemer:\n\n**Omzet** = aantal × prijs.\nVoorbeeld: 500 broden × €3 = **€1500 omzet** per dag.\n\n**Kosten** = wat het de ondernemer kost om te produceren.\n• **Constante kosten (vaste kosten)**: blijven hetzelfde bij meer of minder productie (huur, verzekering)\n• **Variabele kosten**: hangen af van hoeveel je maakt (grondstoffen, energie)\n• **Totale kosten** = constante + variabele\n\n**Winst** = omzet − totale kosten.\n• Omzet > kosten → **winst** ✓\n• Omzet < kosten → **verlies** ✗\n\nVoorbeeld bakker:\n• Omzet €1500\n• Constante kosten €400 (huur)\n• Variabele kosten €700 (meel, energie)\n• Winst = 1500 − 400 − 700 = **€400**\n\n**Break-even-punt**: hoeveel moet je verkopen om quitte te draaien (omzet = kosten)?",
-    svg: `<svg viewBox="0 0 300 180">
-<rect x="30" y="40" width="60" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
-<text x="60" y="62" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">OMZET</text>
-<text x="60" y="84" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">€1500</text>
-<text x="105" y="75" fill="${COLORS.muted}" font-size="20" font-family="Arial">−</text>
-<rect x="125" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.5"/>
-<text x="165" y="58" text-anchor="middle" fill="${COLORS.aanbod}" font-size="10" font-family="Arial" font-weight="bold">KOSTEN</text>
-<text x="165" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€400 vast</text>
-<text x="165" y="92" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€700 var.</text>
-<text x="220" y="75" fill="${COLORS.muted}" font-size="20" font-family="Arial">=</text>
-<rect x="240" y="40" width="50" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
-<text x="265" y="62" text-anchor="middle" fill="${COLORS.geld}" font-size="10" font-family="Arial" font-weight="bold">WINST</text>
-<text x="265" y="84" text-anchor="middle" fill="${COLORS.geld}" font-size="13" font-family="Arial" font-weight="bold">€400</text>
-<text x="150" y="140" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">break-even = omzet = totale kosten</text>
+    title: "Marktonderzoek — is er vraag naar mijn idee?",
+    explanation: "Voor je start: weet je dat er **vraag** is naar wat je wilt verkopen? Anders investeer je geld zonder klanten te krijgen.\n\n**Marktonderzoek** = systematisch uitzoeken: zijn er klanten, wat willen ze, wat betalen ze, wie zijn concurrenten?\n\n**Twee hoofdvormen**:\n\n**1. Deskresearch (online)**\n• Google: zoeken concurrenten\n• Sociale media: zien wat mensen zeggen\n• CBS, brancheorganisaties: cijfers\n• **Goedkoop maar algemeen**\n\n**2. Veldonderzoek (zelf doen)**\n• **Enquête**: vragenlijst aan potentiële klanten\n• **Interview**: diepgaand met enkele klanten\n• **Observatie**: kijken hoe mensen zich gedragen\n• **Test**: probeer met een klein groepje\n• **Duurder maar specifiek**\n\n**Voorbeeld Foodtruck Funky Fries**:\nSam vraagt 30 festival-bezoekers via Instagram-poll: 'Zou je €5 betalen voor verse Belgische friet op een festival?'\n• 22 zeggen ja → goede kans\n• 5 zeggen nee → te duur\n• 3 zeggen ja, maar liever €4 → prijspunt onderzoeken\n\n**Wat onderzoek je**?\n• **Doelgroep**: wie is je klant? (leeftijd, locatie, koopkracht)\n• **Concurrenten**: wat bieden zij? (prijs, kwaliteit)\n• **Trends**: groeit de markt? (bv. bezorgmarkt boomde door corona)\n• **Prijsbereidheid**: wat willen klanten betalen?\n\n**SWOT-analyse** — vat alles samen:\n• **S**trengths (sterk): wat doe ik beter?\n• **W**eaknesses (zwak): wat kan beter?\n• **O**pportunities (kansen): wat kan ik benutten?\n• **T**hreats (bedreigingen): wat kan misgaan?",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MARKTONDERZOEK</text>
+<rect x="20" y="40" width="135" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">DESK 💻</text>
+<text x="87" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">online · cijfers · concurrenten</text>
+<text x="87" y="85" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">goedkoop, algemeen</text>
+<rect x="165" y="40" width="135" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">VELD 🚶</text>
+<text x="232" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">enquête · interview · test</text>
+<text x="232" y="85" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">duurder, specifiek</text>
+<text x="160" y="115" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">SWOT-ANALYSE</text>
+<rect x="40" y="125" width="115" height="35" rx="4" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="97" y="142" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">S sterk</text>
+<text x="97" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">wat doe ik beter</text>
+<rect x="165" y="125" width="115" height="35" rx="4" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="222" y="142" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">W zwak</text>
+<text x="222" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">wat kan beter</text>
+<rect x="40" y="165" width="115" height="35" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="97" y="182" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">O kansen</text>
+<text x="97" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">wat kan ik benutten</text>
+<rect x="165" y="165" width="115" height="35" rx="4" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="222" y="182" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">T bedreig.</text>
+<text x="222" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">wat kan misgaan</text>
 </svg>`,
     checks: [
       {
-        q: "Een ondernemer heeft omzet **€2000**, vaste kosten **€500**, variabele kosten **€800**. Wat is de winst?",
-        options: ["€700", "€1500", "€1200", "€500"],
+        q: "Wat is **deskresearch**?",
+        options: ["Onderzoek vanachter je computer (Google, CBS, sociale media)", "Onderzoek door interviews op straat", "Een soort meubel", "Een verplichte enquête"],
+        answer: 0,
+        wrongHints: [null, "Dat is veldonderzoek.", "Geen meubelvraag.", "Niet verplicht — een methode."],
+      },
+      {
+        q: "Sam zet een Instagram-poll uit. Welk type onderzoek is dat?",
+        options: ["Veldonderzoek (enquête)", "Deskresearch", "SWOT-analyse", "Boekhouding"],
+        answer: 0,
+        wrongHints: [null, "Desk = bestaande info verzamelen.", "SWOT = analyse-methode, geen onderzoek-type.", "Boekhouding = administratie."],
+      },
+      {
+        q: "Wat staat de **W** voor in een SWOT-analyse?",
+        options: ["Weaknesses (zwakke punten)", "Wins", "Wishes", "Workers"],
+        answer: 0,
+        wrongHints: [null, "Niet wat het betekent.", "Niet de afkorting.", "Workers heeft niets met SWOT te maken."],
+      },
+      {
+        q: "Wat zou een **bedreiging** (T) zijn voor een nieuwe foodtruck?",
+        options: ["Een grote concurrent komt op hetzelfde festival", "Een trouwe klantenkring", "Lage huur voor parkeerplek", "Goede recensies"],
+        answer: 0,
+        wrongHints: [null, "Trouwe klanten = sterk punt.", "Lage huur = kans.", "Goede recensies = sterk punt."],
+      },
+      {
+        q: "Waarom is **veldonderzoek** vaak nuttiger dan deskresearch alleen?",
+        options: ["Je krijgt antwoorden van JOUW potentiële klanten, niet algemene cijfers", "Het is gratis", "Het is altijd sneller", "Het is verplicht"],
+        answer: 0,
+        wrongHints: [null, "Veldonderzoek kost juist meer.", "Tegendeel — interviews kosten tijd.", "Niet verplicht."],
+      },
+      {
+        q: "Welk kenmerk hoort bij **deskresearch**?",
+        options: ["Goedkoop, snel toegankelijke informatie", "Specifiek voor jouw doelgroep", "Vereist veel persoonlijke gesprekken", "Levert altijd nieuwe inzichten"],
+        answer: 0,
+        wrongHints: [null, "Specifiek = juist veldonderzoek.", "Persoonlijke gesprekken = veld.", "Desk = algemeen, soms al bekend."],
+      },
+    ],
+  },
+  // ─── Stap 3: Doelgroep en marketing ──────────────────────
+  {
+    title: "Doelgroep en marketing — wie zijn je klanten?",
+    explanation: "**Doelgroep** = de mensen voor wie jouw product/dienst bedoeld is. Hoe specifieker, hoe beter je marketing werkt.\n\n**Doelgroep beschrijven** — denk aan:\n• **Demografisch**: leeftijd, geslacht, opleiding, inkomen\n• **Geografisch**: waar wonen ze (stad, dorp, regio)?\n• **Levensstijl**: wat doen ze, wat vinden ze leuk?\n• **Koopgedrag**: kopen ze online, in winkel, vaak/zelden?\n\n**Voorbeeld Foodtruck Funky Fries**:\nDoelgroep = bezoekers van outdoor festivals (16-35), willen snel lekker eten, betalen graag iets extra voor kwaliteit, delen graag op Instagram.\n\n**Marketing-mix (4 P's)** — hoe bereik je je doelgroep?\n\n**1. Product** — wat verkoop je?\n• Belgische friet, vegan saus, biologische ingrediënten\n\n**2. Prijs** — wat vraag je ervoor?\n• €5 medium, €7 large, combo's\n• Hoog = exclusief, laag = volume\n\n**3. Plaats** — waar verkoop je?\n• Festivals, weekendmarkten, bedrijfskantines\n• Geen vaste plek = lage huurkosten\n\n**4. Promotie** — hoe maak je het bekend?\n• Instagram + TikTok (waar doelgroep is)\n• Sticker op truck, gratis proefjes\n• Reviews stimuleren\n\n**USP (Unique Selling Point)** = wat maakt jou ANDERS dan de rest?\nVoor Funky Fries: 'enige foodtruck met 100% Belgische dubbel gefrituurde aardappel + glutenvrije sauzen.'\n\n**Klantenwerving** kost geld. Vuistregel: nieuwe klant kost 5× meer dan bestaande klant tevreden houden.",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MARKETING-MIX (4 P's)</text>
+<rect x="20" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">PRODUCT 🍟</text>
+<text x="87" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">wat verkoop je</text>
+<text x="87" y="86" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">kwaliteit, variatie</text>
+<rect x="165" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">PRIJS 💰</text>
+<text x="232" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">wat vraag je</text>
+<text x="232" y="86" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">hoog of laag</text>
+<rect x="20" y="100" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="87" y="118" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">PLAATS 📍</text>
+<text x="87" y="134" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">waar verkoop je</text>
+<text x="87" y="146" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">festival, online</text>
+<rect x="165" y="100" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.alt}" stroke-width="1.2"/>
+<text x="232" y="118" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">PROMOTIE 📣</text>
+<text x="232" y="134" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">hoe bekend maken</text>
+<text x="232" y="146" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">socials, reviews</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">USP = wat maakt JOU anders?</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is een **doelgroep**?",
+        options: ["De mensen voor wie jouw product bedoeld is", "Het personeel", "Concurrenten", "Leveranciers"],
+        answer: 0,
+        wrongHints: [null, "Personeel = jouw mensen, geen klanten.", "Concurrenten zijn andere bedrijven.", "Leveranciers leveren AAN jou."],
+      },
+      {
+        q: "De **4 P's** van marketing zijn:",
+        options: ["Product, Prijs, Plaats, Promotie", "Personeel, Productiviteit, Promotie, Pensioen", "Plan, Profit, Patent, People", "Print, Pop, Pin, Product"],
+        answer: 0,
+        wrongHints: [null, "Personeel hoort bij personeelsbeleid.", "Internationale termen die niet in Pincode staan.", "Geen marketing-categorieën."],
+      },
+      {
+        q: "Wat is een **USP**?",
+        options: ["Unique Selling Point — wat maakt jou anders dan de rest", "Een soort BTW", "Een marktanalyse", "Een type lening"],
+        answer: 0,
+        wrongHints: [null, "USP heeft niets met BTW te maken.", "Een marktanalyse is iets breders.", "Geen lening-vorm."],
+      },
+      {
+        q: "Een **hoge prijs** (€8 voor friet) past bij welke marketing-strategie?",
+        options: ["Exclusieve, kwaliteit-uitstraling — kleinere doelgroep", "Massa-verkoop", "Doelgroep met laag inkomen", "Laagste-prijs-strategie"],
+        answer: 0,
+        wrongHints: [null, "Massa = lage prijs, hoge volume.", "Lage inkomens kunnen hoge prijs niet vaak betalen.", "Tegenovergesteld."],
+      },
+      {
+        q: "**Vuistregel klantenwerving**:",
+        options: ["Nieuwe klant kost ~5× meer dan bestaande klant tevreden houden", "Nieuwe klanten zijn altijd gratis", "Bestaande klanten kosten meer", "Alle klanten kosten hetzelfde"],
+        answer: 0,
+        wrongHints: [null, "Reclame en moeite kosten geld.", "Tegenovergesteld.", "Verschil is groot."],
+      },
+      {
+        q: "Sam wil mensen op een festival bereiken. Welk promotie-kanaal werkt het beste?",
+        options: ["Instagram + TikTok — daar zit de doelgroep (16-35)", "Krantenadvertentie", "Telefoongids", "Brieven sturen"],
+        answer: 0,
+        wrongHints: [null, "Festival-bezoekers lezen geen kranten gericht.", "Niet meer in gebruik.", "Vaak ongelezen, hoge kosten."],
+      },
+    ],
+  },
+  // ─── Stap 4: Omzet, kosten en winst ────────────────────────
+  {
+    title: "Omzet, kosten en winst — kan ik ermee verdienen?",
+    explanation: "Drie kernbegrippen voor elke ondernemer:\n\n**Omzet** = aantal × prijs.\nVoorbeeld: 200 frieten × €5 = **€1.000 omzet** per festivaldag.\n\n**Kosten** = wat het de ondernemer kost om te produceren:\n\n**Constante kosten (vaste kosten)**\n• Blijven hetzelfde, ongeacht hoeveel je verkoopt\n• Voorbeelden: huur, verzekering, abonnementen, salaris vaste medewerkers\n\n**Variabele kosten**\n• Veranderen MET het aantal stuks\n• Voorbeelden: aardappelen, olie, sauzen, verpakking, gas\n\n**Totale kosten** = constante + variabele\n\n**Winst** = omzet − totale kosten\n• Omzet > kosten → **winst** ✓\n• Omzet < kosten → **verlies** ✗\n• Omzet = kosten → **break-even** (quitte)\n\n**Voorbeeld foodtruck-dag**:\n• Omzet: 200 friet × €5 = €1.000\n• Constante kosten (per dag): truck-afschrijving €100, verzekering €20, telefoon €5 = €125\n• Variabele kosten: ingrediënten €1,50 × 200 = €300\n• Totale kosten: €125 + €300 = **€425**\n• Winst: €1.000 - €425 = **€575** per dag 🎉\n\n**Break-even-punt** (BEP):\nHoeveel moet je verkopen om quitte te draaien?\n• Bij prijs €5, variabele kosten per stuk €1,50, vaste kosten €125 per dag\n• Per friet hou je over: €5 - €1,50 = **€3,50** (dekkingsbijdrage)\n• Vaste kosten dekken: €125 / €3,50 = **36 frieten** = break-even\n• Alles boven 36 frieten = **winst**\n\n**Brutowinstmarge** = (verkoopprijs − inkoopprijs) / verkoopprijs × 100%\nVoor friet: (€5 - €1,50) / €5 = 70%",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">FOODTRUCK 1 DAG</text>
+<rect x="20" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="60" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">OMZET</text>
+<text x="60" y="80" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">€1000</text>
+<text x="60" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="8" font-family="Arial">200×€5</text>
+<text x="108" y="76" fill="${COLORS.muted}" font-size="20" font-family="Arial">−</text>
+<rect x="125" y="40" width="100" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.5"/>
+<text x="175" y="58" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">KOSTEN</text>
+<text x="175" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">€125 vast</text>
+<text x="175" y="88" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">€300 variabel</text>
+<text x="232" y="76" fill="${COLORS.muted}" font-size="20" font-family="Arial">=</text>
+<rect x="250" y="40" width="60" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="280" y="60" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">WINST</text>
+<text x="280" y="80" text-anchor="middle" fill="${COLORS.geld}" font-size="13" font-family="Arial" font-weight="bold">€575</text>
+<text x="160" y="125" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">BREAK-EVEN-PUNT</text>
+<line x1="40" y1="135" x2="40" y2="200" stroke="${COLORS.text}" stroke-width="1"/>
+<line x1="40" y1="200" x2="290" y2="200" stroke="${COLORS.text}" stroke-width="1"/>
+<line x1="40" y1="180" x2="290" y2="155" stroke="${COLORS.geld}" stroke-width="2"/>
+<text x="295" y="155" fill="${COLORS.geld}" font-size="9" font-family="Arial">omzet</text>
+<line x1="40" y1="190" x2="290" y2="170" stroke="${COLORS.aanbod}" stroke-width="2"/>
+<text x="295" y="170" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">kosten</text>
+<circle cx="118" cy="184" r="4" fill="${COLORS.warm}"/>
+<text x="118" y="218" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial">36 stuks</text>
+</svg>`,
+    checks: [
+      {
+        q: "Een ondernemer heeft omzet **€2.000**, vaste kosten **€500**, variabele kosten **€800**. Wat is de winst?",
+        options: ["€700", "€1.500", "€1.200", "€500"],
         answer: 0,
         wrongHints: [null, "Vergeet niet ALLE kosten af te trekken.", "Variabele kosten ook aftrekken.", "Niet alle vaste kosten zijn afgetrokken."],
       },
       {
-        q: "Welk type kosten verandert NIET als je meer produceert?",
-        options: ["Constante kosten (huur)", "Variabele kosten (grondstoffen)", "Totale kosten", "Inkoopkosten"],
+        q: "Welke kost is **VARIABEL** voor een foodtruck?",
+        options: ["Aardappelen en olie", "Huur kraampje", "Verzekering", "Telefoon-abo"],
         answer: 0,
-        wrongHints: [null, "Variabel verandert juist — meer produceren = meer grondstof.", "Totale kosten = constante + variabele, dus die wijzigen wel.", "Inkoopkosten zijn variabel."],
-      },
-    
-      {
-        q: "Een ondernemer verkoopt 200 stuks à €5. De kosten zijn €600. Wat is de **winst**?",
-        options: ["€400", "€1.000", "€600", "€200"],
-        answer: 0,
-        wrongHints: [null, "Dat is de omzet — vergeet niet de kosten af te trekken.", "Kosten zijn input, geen winst.", "Reken: 200 × 5 = €1.000 omzet; minus €600 kosten."],
+        wrongHints: [null, "Huur is vast.", "Verzekering is vast.", "Telefoon is vast."],
       },
       {
-        q: "Welke kosten **veranderen niet** als je meer maakt?",
-        options: ["Constante (vaste) kosten zoals huur", "Variabele kosten zoals grondstof", "Totale kosten", "Inkoopkosten"],
+        q: "Het **break-even-punt** is wanneer:",
+        options: ["Omzet = totale kosten (geen winst, geen verlies)", "Winst maximaal", "Verkoop maximaal", "De ondernemer stopt"],
         answer: 0,
-        wrongHints: [null, "Variabele kosten gaan omhoog bij meer productie — meer grondstof nodig.", "Totaal = vast + variabel, dus die wijzigt wel.", "Inkoop is variabel — meer inkopen voor meer producten."],
+        wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Aantal zegt niets — break-even gaat over geld.", "Stoppen is geen economisch begrip."],
       },
       {
-        q: "Het **break-even-punt** is het punt waar:",
-        options: ["Omzet precies gelijk is aan totale kosten (geen winst, geen verlies)", "De winst maximaal is", "Je het meest verkoopt", "De ondernemer stopt"],
+        q: "Sam verkoopt friet voor €5. Variabele kosten **€1,50** per friet. Vaste kosten **€140** per dag. **Hoeveel friet moet hij verkopen om break-even** te draaien?",
+        options: ["40 friet", "28 friet", "94 friet", "100 friet"],
         answer: 0,
-        wrongHints: [null, "Maximale winst zit later, niet bij quitte draaien.", "Aantal zegt niets — break-even gaat over geld.", "Stoppen is geen economisch begrip."],
+        wrongHints: [null, "Te weinig — €5-€1,50 = €3,50 dekking per friet, dus €140/€3,50.", "Te veel — controleer de berekening.", "Te veel — €140/€3,50 = 40."],
+      },
+      {
+        q: "**Brutowinstmarge** voor een friet van €5 met inkoop €1,50?",
+        options: ["70%", "30%", "350%", "100%"],
+        answer: 0,
+        wrongHints: [null, "Dat is de inkoop-percentage van prijs.", "Dat is de prijs als percentage van inkoop.", "Verkoopprijs zelf is niet de marge."],
+      },
+      {
+        q: "Wat is **omzet**?",
+        options: ["Aantal × prijs (totaal verkoopbedrag)", "Winst min belasting", "Wat de ondernemer overhoudt", "De vaste kosten"],
+        answer: 0,
+        wrongHints: [null, "Winst is iets anders.", "Dat is netto winst, niet omzet.", "Vaste kosten zijn input, geen omzet."],
       },
     ],
   },
+  // ─── Stap 5: Rechtsvormen ─────────────────────────────────
   {
-    title: "Rechtsvormen — eenmanszaak, vof, bv",
-    explanation: "**Rechtsvorm** = de juridische opzet van een bedrijf. Belangrijk voor:\n• Wie is **aansprakelijk** voor schulden?\n• Hoeveel **belasting** betaal je?\n• Heb je **kapitaal** nodig om te starten?\n\n**Eenmanszaak** (1 ondernemer):\n• Makkelijk te starten, weinig kapitaal nodig\n• Eigenaar is **privé aansprakelijk** — als het bedrijf failliet gaat, zijn ook je huis/spaargeld in gevaar\n• Betaalt **inkomstenbelasting**\n\n**VOF — Vennootschap onder Firma** (2+ ondernemers samen):\n• Net als eenmanszaak, maar met meerdere eigenaars (vennoten)\n• Iedereen privé aansprakelijk — ook voor schulden van de andere vennoot!\n\n**BV — Besloten Vennootschap**:\n• Apart juridisch lichaam (rechtspersoon)\n• Eigenaars zijn **niet privé aansprakelijk** (alleen tot ingelegd kapitaal)\n• Notaris nodig om op te richten\n• Betaalt **vennootschapsbelasting**",
-    svg: `<svg viewBox="0 0 300 200">
-<rect x="20" y="40" width="80" height="120" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
-<text x="60" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">EENMANSZAAK</text>
-<text x="60" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">1 eigenaar</text>
-<text x="60" y="92" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">privé aansprak.</text>
-<text x="60" y="106" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">IB-belasting</text>
-<rect x="110" y="40" width="80" height="120" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
-<text x="150" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">VOF</text>
-<text x="150" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2+ vennoten</text>
-<text x="150" y="92" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">privé aansprak.</text>
-<text x="150" y="106" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">IB per persoon</text>
-<rect x="200" y="40" width="80" height="120" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="240" y="58" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">BV</text>
-<text x="240" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">rechtspersoon</text>
-<text x="240" y="92" text-anchor="middle" fill="${COLORS.geld}" font-size="9" font-family="Arial">NIET privé</text>
-<text x="240" y="106" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">VPB-belasting</text>
-<text x="150" y="185" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">aansprakelijkheid + belasting verschillen</text>
+    title: "Rechtsvormen — eenmanszaak, VOF of BV?",
+    explanation: "**Rechtsvorm** = de juridische opzet van een bedrijf. Belangrijk voor:\n• Wie is **aansprakelijk** voor schulden?\n• Hoeveel **belasting** betaal je?\n• Heb je **kapitaal** nodig om te starten?\n\n**Eenmanszaak** (1 ondernemer)\n• ✓ Makkelijk te starten via KvK (~€80)\n• ✓ Geen minimumkapitaal\n• ✓ Belastingvoordelen voor starters (zelfstandigenaftrek)\n• ✗ **Privé aansprakelijk**: bedrijf failliet = je huis/spaargeld in gevaar\n• Belasting: **inkomstenbelasting (IB)** over winst\n\n**VOF — Vennootschap onder Firma** (2+ ondernemers samen)\n• Net als eenmanszaak, maar met meerdere eigenaars (vennoten)\n• ✗ Iedereen privé aansprakelijk — ook voor schulden van de andere vennoot!\n• Belasting: elk apart IB over zijn winstdeel\n\n**BV — Besloten Vennootschap**\n• Apart juridisch lichaam (rechtspersoon, met aandelen)\n• ✓ **Niet privé aansprakelijk** (alleen tot ingelegd kapitaal)\n• ✗ Notaris nodig om op te richten (~€500-€1.500)\n• ✗ Apart financiele administratie + jaarverslag\n• Belasting: **vennootschapsbelasting (VPB)** over winst, en als jij loon krijgt uit de BV ook IB\n\n**Wanneer welke rechtsvorm**?\n• **Eenmanszaak**: kleinschalig starten, weinig risico (bv. bijles geven)\n• **VOF**: samen met 1-2 vrienden, vertrouwen onderling (bv. samen kapsalon)\n• **BV**: als omzet/winst groot wordt, of veel risico (bv. €100k+ omzet, juridisch riskante markt)\n\n**Vuistregel**: tot ~€100.000 winst is eenmanszaak fiscaal voordeliger. Erboven wordt BV interessanter.",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">3 RECHTSVORMEN</text>
+<rect x="15" y="40" width="95" height="135" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="62" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">EENMANSZAAK</text>
+<text x="62" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">1 eigenaar</text>
+<text x="62" y="93" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial" font-weight="bold">⚠ privé aansprak.</text>
+<text x="62" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">betaalt IB</text>
+<text x="62" y="123" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">starters-aftrek</text>
+<text x="62" y="138" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">€80 KvK</text>
+<text x="62" y="160" text-anchor="middle" fill="${COLORS.geld}" font-size="9" font-family="Arial" font-weight="bold">klein/start</text>
+<rect x="115" y="40" width="95" height="135" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="162" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">VOF</text>
+<text x="162" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">2+ vennoten</text>
+<text x="162" y="93" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial" font-weight="bold">⚠⚠ allen aansprak.</text>
+<text x="162" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">IB per persoon</text>
+<text x="162" y="123" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vennootschap</text>
+<text x="162" y="138" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">contract slim!</text>
+<text x="162" y="160" text-anchor="middle" fill="${COLORS.geld}" font-size="9" font-family="Arial" font-weight="bold">samen klein</text>
+<rect x="215" y="40" width="95" height="135" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="262" y="58" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">BV</text>
+<text x="262" y="76" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">rechtspersoon</text>
+<text x="262" y="93" text-anchor="middle" fill="${COLORS.geld}" font-size="9" font-family="Arial" font-weight="bold">✓ NIET privé</text>
+<text x="262" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">betaalt VPB</text>
+<text x="262" y="123" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">notaris nodig</text>
+<text x="262" y="138" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">jaarverslag</text>
+<text x="262" y="160" text-anchor="middle" fill="${COLORS.geld}" font-size="9" font-family="Arial" font-weight="bold">groot/risico</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">~€100k winst: eenmanszaak fiscaal voordeliger</text>
 </svg>`,
     checks: [
       {
-        q: "Bij welke rechtsvorm is de eigenaar **NIET privé aansprakelijk** voor schulden?",
-        options: ["BV", "Eenmanszaak", "VOF", "Stichting (in deze context)"],
+        q: "Bij welke rechtsvorm is de eigenaar **NIET privé aansprakelijk**?",
+        options: ["BV", "Eenmanszaak", "VOF", "Allemaal"],
         answer: 0,
-        wrongHints: [null, "Eenmanszaak: eigenaar wel privé aansprakelijk.", "VOF: alle vennoten privé aansprakelijk.", "Stichting heeft een ander doel — niet primair winst."],
+        wrongHints: [null, "Eenmanszaak: privé wel aansprakelijk.", "VOF: nog erger — ook voor de andere vennoot.", "Niet allemaal — alleen BV."],
+      },
+      {
+        q: "Twee vrienden starten een **VOF** voor hun foodtruck. Wat is het belangrijkste risico?",
+        options: ["Beide vennoten zijn privé aansprakelijk — ook voor schulden van de ander", "Ze mogen geen winst maken", "Ze betalen dubbele belasting", "Ze hebben een notaris nodig"],
+        answer: 0,
+        wrongHints: [null, "Winst maken is juist het doel.", "Bij VOF betaalt elk apart IB.", "Notaris is voor BV, niet VOF."],
       },
       {
         q: "Welke belasting betaalt een **BV**?",
-        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting", "BTW alleen", "Loonbelasting"],
+        options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting", "Alleen BTW", "Geen"],
         answer: 0,
-        wrongHints: [null, "Eigenaars BV betalen IB over hun loon, maar de BV zelf VPB.", "BTW betalen alle ondernemingen, niet alleen BV.", "Loonbelasting wordt afgedragen door werkgever, niet specifiek BV-belasting."],
-      },
-    
-      {
-        q: "Twee vrienden starten samen een **VOF**. Wat is het belangrijkste risico?",
-        options: ["Beide vennoten zijn privé aansprakelijk — ook voor schulden van de ander", "Ze mogen geen winst maken", "Ze betalen dubbele belasting", "Ze moeten een notaris bezoeken"],
-        answer: 0,
-        wrongHints: [null, "Winst maken mag — dat is juist het doel.", "Bij VOF betaalt elk apart IB over zijn deel — geen dubbele belasting.", "Notaris is verplicht bij BV, niet bij VOF."],
+        wrongHints: [null, "Eigenaars BV betalen IB over loon, BV zelf VPB.", "BTW betalen alle ondernemingen.", "BV's betalen wél belasting."],
       },
       {
-        q: "Wat is verplicht bij het oprichten van een **BV**?",
-        options: ["Een notaris (oprichtingsakte)", "Twee oprichters", "Een eigen pand", "Vooraf €100.000 omzet"],
+        q: "Sam wil zelfstandig starten met **lage start-kosten**. Welke rechtsvorm is meest geschikt?",
+        options: ["Eenmanszaak (~€80 KvK, geen notaris)", "BV (notaris vereist)", "VOF (2 vennoten nodig)", "Stichting"],
         answer: 0,
-        wrongHints: [null, "Een BV kan ook met 1 oprichter.", "Geen pand verplicht — BV mag thuis zitten.", "Geen omzet-eis — je begint juist vanaf nul."],
+        wrongHints: [null, "BV heeft notariskosten van €500-€1.500.", "VOF heeft 2 personen nodig — hij wil alleen.", "Stichting is voor non-profit, niet ondernemen."],
       },
       {
-        q: "Je wilt zelfstandig ondernemen, klein, met **zo min mogelijk risico** voor je privé-geld. Welke rechtsvorm?",
-        options: ["BV (geen privé aansprakelijkheid)", "Eenmanszaak (privé aansprakelijk)", "VOF (privé aansprakelijk)", "Stichting"],
+        q: "Bij welk winst-niveau wordt een **BV vaak interessanter** dan eenmanszaak?",
+        options: ["Boven ongeveer €100.000 winst per jaar", "Vanaf €1 winst", "Pas bij €1 miljoen", "Nooit"],
         answer: 0,
-        wrongHints: [null, "Bij eenmanszaak is je privégeld juist wel aansprakelijk.", "VOF erger nog — ook voor de andere vennoot.", "Stichting is voor non-profit doelen, niet voor winst."],
+        wrongHints: [null, "Onder €100k is eenmanszaak (met aftrek) voordeliger.", "Te hoog — al ruim voor €1 miljoen omslagpunt.", "BV kan zeker voordeliger worden."],
+      },
+      {
+        q: "Wat is een **rechtspersoon**?",
+        options: ["Een bedrijf dat juridisch een aparte 'persoon' is — zoals een BV", "Een advocaat", "Een ondernemer met een diploma", "Een werknemer"],
+        answer: 0,
+        wrongHints: [null, "Advocaat is een beroep, niet rechtsvorm.", "Niet diplomastatus.", "Werknemer = geen rechtspersoon."],
+      },
+    ],
+  },
+  // ─── Stap 6: BTW en facturen ───────────────────────────────
+  {
+    title: "BTW, facturen en boekhouden — basics",
+    explanation: "Als ondernemer moet je BTW (omzetbelasting) **innen voor de overheid** en **administratie** bijhouden.\n\n**BTW (Belasting Toegevoegde Waarde)**:\n• Je rekent BTW bovenop je prijs aan klanten\n• Je houdt deze BTW apart\n• Je drukt af en toe (per kwartaal) op je belastingdienst\n\n**3 BTW-tarieven in NL**:\n• **21%** — algemeen tarief (kleding, elektronica, restaurant, koeriersdienst)\n• **9%** — laag tarief (boodschappen, water, boeken, kapper, OV)\n• **0%** — export en sommige zorg\n\n**Voorbeeld friet €5 inclusief 9% BTW**:\n• Excl BTW: €5 / 1,09 = **€4,59** voor jou\n• BTW: **€0,41** voor de Belastingdienst\n\n**Factuur** = officieel document voor zakelijke verkoop. Verplichte items:\n• **Jouw** naam, adres, KvK-nummer, BTW-nummer\n• **Klant** naam en adres\n• **Datum** + uniek factuurnummer\n• **Omschrijving** dienst/product\n• **Prijs** (excl BTW), BTW-bedrag, totaal\n\n**Boekhouding** = administratie van inkomsten en uitgaven:\n• **Bonnetjes bewaren** — verplicht 7 jaar!\n• **Bankafschriften** koppelen aan facturen\n• **BTW-aangifte** (elk kwartaal voor de meesten)\n• **Aangifte inkomstenbelasting** (eind van het jaar)\n\n**Boekhoudprogramma's** maken het makkelijker:\n• MoneyMonk, e-Boekhouden, Exact Online\n• Vanaf €10/maand\n\n**Vuistregel zelfstandige**:\nHoud **ongeveer 30%** van je omzet apart voor belasting + BTW. Anders sta je later voor een verrassing!",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BTW-TARIEVEN</text>
+<rect x="35" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="75" y="62" text-anchor="middle" fill="${COLORS.vraag}" font-size="18" font-family="Arial" font-weight="bold">21%</text>
+<text x="75" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">algemeen</text>
+<text x="75" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">restaurant, kleding</text>
+<rect x="120" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="160" y="62" text-anchor="middle" fill="${COLORS.geld}" font-size="18" font-family="Arial" font-weight="bold">9%</text>
+<text x="160" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">laag</text>
+<text x="160" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">eten, kapper, ov</text>
+<rect x="205" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="245" y="62" text-anchor="middle" fill="${COLORS.warm}" font-size="18" font-family="Arial" font-weight="bold">0%</text>
+<text x="245" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">special</text>
+<text x="245" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">export, zorg</text>
+<rect x="20" y="120" width="280" height="40" rx="6" fill="rgba(255,213,79,0.10)" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="160" y="138" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">FACTUUR — verplichte items</text>
+<text x="160" y="153" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">jouw + klant gegevens · datum · nr · prijs · BTW · totaal</text>
+<rect x="20" y="170" width="280" height="40" rx="6" fill="rgba(255,82,82,0.10)" stroke="${COLORS.rood}" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="160" y="188" text-anchor="middle" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">⚠ HOUD ~30% OMZET APART</text>
+<text x="160" y="202" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">voor belasting + BTW — anders verrassing!</text>
+</svg>`,
+    checks: [
+      {
+        q: "Welk **BTW-tarief** geldt voor boodschappen (eten/drinken)?",
+        options: ["9% (laag)", "21% (algemeen)", "0%", "25%"],
+        answer: 0,
+        wrongHints: [null, "21% is voor andere dingen.", "0% is alleen voor specifieke gevallen.", "25% bestaat niet als NL-tarief."],
+      },
+      {
+        q: "Een product kost **€100 zonder BTW**. Wat is de prijs **inclusief 21% BTW**?",
+        options: ["€121", "€100", "€79", "€21"],
+        answer: 0,
+        wrongHints: [null, "Inclusief BTW is meer dan zonder.", "Dat zou aftrek zijn.", "Dat is alleen het BTW-bedrag."],
+      },
+      {
+        q: "Hoeveel BTW zit in een product van **€121 inclusief 21% BTW**?",
+        options: ["€21", "€25,41", "€121", "€100"],
+        answer: 0,
+        wrongHints: [null, "Niet 21% van €121 — dat is fout. Reken: €121/1,21 = €100, dus €21 BTW.", "Dat is de hele prijs.", "Dat is exclusief BTW."],
+      },
+      {
+        q: "Wat is verplicht op een **factuur**?",
+        options: ["KvK-nummer, BTW-nummer, datum, factuurnummer, prijs + BTW", "Alleen het bedrag", "Alleen jouw naam", "Niets — vrije keuze"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — wettelijk verplichte items.", "Te weinig.", "Wel verplichte items."],
+      },
+      {
+        q: "Hoe lang moet je **bonnen en administratie bewaren**?",
+        options: ["7 jaar (wettelijke bewaarplicht)", "1 jaar", "Tot het volgende boekjaar", "Niet"],
+        answer: 0,
+        wrongHints: [null, "Veel te kort.", "Wettelijke termijn is langer.", "Wel verplicht."],
+      },
+      {
+        q: "Sam ontvangt **€1.000 omzet inclusief 9% BTW** op een dag. Hoeveel houdt hij apart voor BTW?",
+        options: ["Ongeveer €83", "€90", "€100", "€9"],
+        answer: 0,
+        wrongHints: [null, "Niet 9% van €1000 — dat is incl. BTW. Reken: €1000 - €1000/1,09.", "Te veel.", "Te weinig."],
+      },
+    ],
+  },
+  // ─── Stap 7: Risico, verlies en faillissement ────────────
+  {
+    title: "Risico, verlies en faillissement — wat als het misgaat?",
+    explanation: "Niet alle bedrijven slagen. **Statistiek**: ongeveer **40% van de starters** stopt binnen 5 jaar. Dat hoort bij ondernemerschap.\n\n**Soorten risico**:\n\n**1. Marktrisico**\n• Geen vraag naar je product (verkeerd ingeschat)\n• Trends veranderen (TikTok-rage voorbij)\n• Crisis (corona, recessie)\n\n**2. Concurrentierisico**\n• Grote speler komt op jouw markt (Albert Heijn opent in jouw straat)\n• Goedkopere alternatieven\n\n**3. Kostenrisico**\n• Grondstoffen worden duurder (gas, olie)\n• Personeelskosten stijgen\n• Onverwachte uitgaven (machine kapot)\n\n**4. Financieel risico**\n• Klanten betalen niet of te laat (debiteurenrisico)\n• Lening kun je niet aflossen\n• Belastingschuld groeit\n\n**5. Persoonlijk risico**\n• Ziekte of burn-out → geen omzet\n• Bij eenmanszaak/VOF: privé-vermogen in gevaar\n\n**Wat is een faillissement?**\nJe kunt je schulden niet meer betalen. Een rechter benoemt een **curator** die:\n• Bedrijfs-bezittingen verkoopt\n• Geld eerlijk verdeelt onder schuldeisers\n• Het bedrijf opheft\n\n**Bij eenmanszaak/VOF**: ook privé-bezittingen kunnen worden verkocht (huis, auto). Bij **BV**: alleen het bedrijfs-vermogen.\n\n**Hoe risico beperken?**\n• **Buffer** (3-6 mnd kosten op spaarrekening)\n• **Verzekeringen** (arbeidsongeschiktheid, aansprakelijkheid)\n• **Diversificatie** (niet 1 grote klant maar 10 kleine)\n• **Realistische cashflow-planning**\n• **Niet te snel groeien** (niet meteen 10 medewerkers aannemen)\n\n**WSNP** (Wet Schuldsanering Natuurlijke Personen): laatste redmiddel voor particulieren in nood. Strenge regels, maar na 3 jaar 'schoon'.",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">RISICO BIJ ONDERNEMEN</text>
+<text x="160" y="42" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial">~40% stopt binnen 5 jaar</text>
+<rect x="20" y="55" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="87" y="75" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial">marktrisico</text>
+<rect x="165" y="55" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="232" y="75" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial">concurrentie</text>
+<rect x="20" y="92" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.oranje}" stroke-width="1.2"/>
+<text x="87" y="112" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial">kosten ↑</text>
+<rect x="165" y="92" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.oranje}" stroke-width="1.2"/>
+<text x="232" y="112" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial">debiteuren</text>
+<rect x="20" y="129" width="280" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.rood}" stroke-width="1.2"/>
+<text x="160" y="149" text-anchor="middle" fill="${COLORS.rood}" font-size="11" font-family="Arial" font-weight="bold">persoonlijk: ziekte / burn-out</text>
+<rect x="20" y="170" width="280" height="40" rx="4" fill="rgba(105,240,174,0.10)" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="160" y="188" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">RISICO BEPERKEN</text>
+<text x="160" y="202" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">buffer · verzekering · spreiding · realistisch</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is **debiteurenrisico**?",
+        options: ["Klanten betalen niet of te laat", "Belastingdienst stuurt brief", "Concurrenten worden goedkoper", "Personeel wordt ziek"],
+        answer: 0,
+        wrongHints: [null, "Belasting is een ander risico-type.", "Concurrentie-risico.", "Persoonlijk risico."],
+      },
+      {
+        q: "Bij een **faillissement van een eenmanszaak**, wat is het belangrijkste verschil met een BV?",
+        options: ["Ook privé-bezittingen (huis, auto) kunnen verkocht worden", "Geen verschil", "Bij eenmanszaak gebeurt niets", "BV is altijd erger"],
+        answer: 0,
+        wrongHints: [null, "Wel groot verschil — aansprakelijkheid.", "Curator komt ook bij eenmanszaak.", "BV beschermt juist meer."],
+      },
+      {
+        q: "Wie wordt aangesteld bij een faillissement?",
+        options: ["Een curator (door de rechter)", "Een nieuwe ondernemer", "De accountant", "De Belastingdienst"],
+        answer: 0,
+        wrongHints: [null, "Bedrijf wordt vaak gestopt, geen overname.", "Accountant is administratief.", "Belastingdienst is wel schuldeiser, niet curator."],
+      },
+      {
+        q: "Welke maatregel beperkt **risico** voor een ondernemer?",
+        options: ["Een buffer van 3-6 maanden kosten op spaarrekening", "Snel veel personeel aannemen", "Alleen 1 hele grote klant", "Geen verzekering nemen"],
+        answer: 0,
+        wrongHints: [null, "Snel groeien = juist meer risico.", "1 grote klant = afhankelijk = risico.", "Geen verzekering = blootgesteld."],
+      },
+      {
+        q: "Wat betekent **diversificatie van klanten**?",
+        options: ["Veel verschillende klanten, niet afhankelijk van 1 grote", "Alleen 1 type klant", "Klanten verschillende prijzen geven", "Veel in advertenties investeren"],
+        answer: 0,
+        wrongHints: [null, "Tegenovergesteld — afhankelijk van 1 = risico.", "Prijsverschil heeft niets met diversificatie te maken.", "Reclame is iets anders."],
+      },
+      {
+        q: "Wat is een belangrijk **persoonlijk risico** voor een eenmanszaak-eigenaar?",
+        options: ["Ziekte of burn-out → geen omzet meer", "BTW-aangifte vergeten", "Te weinig advertentie", "Geen logo hebben"],
+        answer: 0,
+        wrongHints: [null, "Vergeten BTW is operationeel, niet persoonlijk.", "Marketing-issue, niet persoonlijk risico.", "Logo's zijn cosmetisch, geen risico."],
       },
     ],
   },
@@ -192,15 +497,28 @@ const pincodeOndernemen = {
   level: "vmbo-gt-4",
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
-  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk C",
+  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 3",
   intro:
-    "Wat is een ondernemer, omzet/kosten/winst en de rechtsvormen eenmanszaak, VOF en BV. Hoofdstuk C van Pincode VMBO-GT klas 4.",
+    "Hoofdstuk 3 van Pincode 7e ed. VMBO-GT 4: van wat-is-ondernemen tot marktonderzoek, marketing-mix, omzet/kosten/winst, rechtsvormen, BTW + facturen en risicobeperking. 7 stappen, met concrete voorbeelden (foodtruck, webshop, bijles). Examen-voorbereiding compleet.",
   triggerKeywords: [
     "ondernemen",
     "ondernemer",
     "kvk",
     "kamer van koophandel",
     "marktonderzoek",
+    "deskresearch",
+    "veldonderzoek",
+    "enquete",
+    "swot",
+    "doelgroep",
+    "marketing",
+    "marketing-mix",
+    "4 p's",
+    "product",
+    "prijs",
+    "plaats",
+    "promotie",
+    "usp",
     "ondernemingsplan",
     "productie",
     "handel",
@@ -214,15 +532,29 @@ const pincodeOndernemen = {
     "variabele kosten",
     "totale kosten",
     "break-even",
+    "brutowinstmarge",
     "rechtsvorm",
     "eenmanszaak",
     "vof",
     "vennootschap onder firma",
     "bv",
     "besloten vennootschap",
+    "rechtspersoon",
     "aansprakelijk",
     "vpb",
     "vennootschapsbelasting",
+    "btw",
+    "factuur",
+    "boekhouden",
+    "boekhouding",
+    "bewaarplicht",
+    "faillissement",
+    "curator",
+    "wsnp",
+    "debiteurenrisico",
+    "buffer",
+    "diversificatie",
+    "pincode hoofdstuk 3",
     "pincode hoofdstuk c",
   ],
   chapters,
