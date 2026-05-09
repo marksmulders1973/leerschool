@@ -16,13 +16,13 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["💰", "💳", "🏦", "📈", "📉", "📊", "💸", "🏠"];
+const stepEmojis = ["💰", "💳", "🏦", "📈", "🔄", "📉", "📊", "💸", "🏠"];
 
 const chapters = [
   { letter: "A", title: "Wat is geld?", emoji: "💰", from: 0, to: 1 },
   { letter: "B", title: "Sparen of beleggen?", emoji: "🏦", from: 2, to: 3 },
-  { letter: "C", title: "Inflatie + begroten", emoji: "📊", from: 4, to: 5 },
-  { letter: "D", title: "Lenen", emoji: "💸", from: 6, to: 7 },
+  { letter: "C", title: "Geld rolt + inflatie + begroten", emoji: "🔄", from: 4, to: 6 },
+  { letter: "D", title: "Lenen", emoji: "💸", from: 7, to: 8 },
 ];
 
 const steps = [
@@ -274,7 +274,77 @@ const steps = [
     ],
   },
 
-  // ─── Stap 5: Inflatie en koopkracht ─────────────────────────
+  // ─── Stap 5: Geld moet rollen — circulatie en banken ──────
+  {
+    title: "Geld moet rollen — hoe geld door de economie stroomt",
+    explanation: "**Pincode 2.4: Geld moet rollen!** Geld dat stilstaat doet niets. Pas als het rondgaat — van consument naar bedrijf naar werknemer naar consument — komt de economie in beweging.\n\n**De geldkringloop**:\nJij koopt brood (€2,50) → bakker betaalt zijn werknemer (loon) → werknemer koopt zijn boodschappen → en zo verder. **Hetzelfde geld** wisselt vele keren van eigenaar.\n\n**Welke rol spelen banken hierin?**\n\n**1. Geld bewaren** — betaal- en spaarrekening\n**2. Geld lenen aan anderen** — uit jouw spaargeld\n**3. Betalingen regelen** — Tikkie, overschrijven, pinnen\n\n**Dit is het belangrijkste stuk** — banken zijn niet alleen 'kluis voor jouw geld'. Zij **lenen jouw spaargeld uit** aan iemand anders die het wil lenen voor een hypotheek of bedrijfslening.\n\n**Voorbeeld**: jij stort €1.000 op je spaarrekening.\n• De bank houdt een klein deel achter (kasreserve, ~5% — €50)\n• De rest (€950) leent ze uit aan iemand anders\n• Die persoon betaalt ermee (bv. fiets) → fietsenwinkel stort dat geld op háár bank\n• Die bank houdt 5% achter en leent de rest weer uit\n• → Het geld 'vermenigvuldigt' zich door de economie\n\nDit heet **geldschepping door banken**. Het is veilig zolang banken niet allemaal tegelijk geld nodig hebben.\n\n**Wat als veel mensen tegelijk geld willen?**\n• Heet **bank run** — paniek\n• Bank heeft niet genoeg cash → kan failliet gaan\n• Voorbeeld: SVB-bank USA 2023, 1 dag €40 mrd opgenomen\n• Daarom: **DGS** (Depositogarantiestelsel) — €100k per spaarder gegarandeerd\n\n**Geldhoeveelheid**:\n• **M0** — alleen contant geld (chartaal)\n• **M1** — M0 + direct beschikbaar girale geld (betaalrekeningen)\n• **M2** — M1 + spaarrekeningen\n• **M3** — M2 + langer vastliggende deposito's\n\n**Voor jou belangrijk**:\n• Door uitlenen wordt elke euro 'meer waard' voor de economie\n• Centrale banken (ECB) bewaken hoe snel dit gaat — anders inflatie\n• Vertrouwen is cruciaal — daarom regelgeving DNB op banken\n\n**Geld 'rolt' ook via**:\n• **Belasting** — overheid pakt deel, geeft uit aan zorg/onderwijs/uitkeringen\n• **Sparen + beleggen** — geld helpt bedrijven groeien\n• **Internationale handel** — geld stroomt over grenzen\n\n**Snelheid van rollen** = hoe snel hetzelfde geld van eigenaar wisselt.\n• Hoge snelheid = veel activiteit, economie groeit\n• Lage snelheid = mensen sparen + geven niet uit, recessie\n\n**Quote economen**: 'Geld is als bloed in een lichaam — niet hoeveel je hebt is belangrijk, maar hoe het stroomt.'",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">GELDKRINGLOOP</text>
+<circle cx="80" cy="80" r="28" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="80" y="76" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">JIJ</text>
+<text x="80" y="89" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">koopt brood</text>
+<circle cx="240" cy="80" r="28" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="240" y="76" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">BAKKER</text>
+<text x="240" y="89" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">krijgt €2,50</text>
+<line x1="110" y1="75" x2="210" y2="75" stroke="${COLORS.warm}" stroke-width="2" marker-end="url(#a)"/>
+<line x1="210" y1="90" x2="110" y2="90" stroke="${COLORS.aanbod}" stroke-width="2" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="${COLORS.warm}"/></marker></defs>
+<text x="160" y="68" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial">€</text>
+<text x="160" y="103" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">brood</text>
+<circle cx="160" cy="155" r="28" fill="${COLORS.paper}" stroke="${COLORS.alt}" stroke-width="1.5"/>
+<text x="160" y="151" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">WERKNEMER</text>
+<text x="160" y="164" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">krijgt loon</text>
+<line x1="225" y1="105" x2="180" y2="135" stroke="${COLORS.warm}" stroke-width="2" marker-end="url(#a)"/>
+<line x1="135" y1="135" x2="100" y2="105" stroke="${COLORS.warm}" stroke-width="2" marker-end="url(#a)"/>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geld blijft rollen — banken lenen ook uit</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat doet een bank met **jouw spaargeld**?",
+        options: ["Klein deel houdt ze in kas, rest leent ze uit aan anderen", "Bewaart het in een kluis", "Geeft het terug bij vraag", "Belegt alles in aandelen"],
+        answer: 0,
+        wrongHints: [null, "Niet meer in kluis — modern bankieren leent uit.", "Klein deel ja, niet alles.", "Banken beleggen sommig wel, maar voornamelijk uitlenen."],
+      },
+      {
+        q: "Wat is **geldschepping door banken**?",
+        options: ["Door uitlenen + opnieuw storten neemt geldhoeveelheid in economie toe", "Banken drukken geld bij", "Belastingdienst maakt geld", "Niemand kan geld scheppen"],
+        answer: 0,
+        wrongHints: [null, "Drukt ECB, niet commerciële banken.", "Belastingdienst int.", "Centrale + commerciële banken kunnen dat wel."],
+      },
+      {
+        q: "Wat is een **bank run**?",
+        options: ["Veel klanten halen tegelijk hun geld op — bank kan failliet gaan", "Bank organiseert een hardloopevenement", "Bank heeft promotie", "Klanten lopen weg uit boosheid"],
+        answer: 0,
+        wrongHints: [null, "Letterlijke betekenis is verkeerd hier.", "Geen reclame.", "Niet figuurlijk weglopen — geld weghalen."],
+      },
+      {
+        q: "Hoeveel garandeert het **DGS** per spaarder per bank?",
+        options: ["€100.000", "€10.000", "€1 miljoen", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Te laag.", "Te veel.", "Wel garantie."],
+      },
+      {
+        q: "Wat is **M1** geldhoeveelheid?",
+        options: ["Contant geld (M0) + giraal geld op betaalrekeningen", "Alleen contant geld", "Alle spaargeld + beleggingen", "Buitenlandse munten"],
+        answer: 0,
+        wrongHints: [null, "Dat is M0.", "Dat is M2/M3.", "Niet relevant hier."],
+      },
+      {
+        q: "Wanneer **'rolt' geld snel** door de economie?",
+        options: ["Bij hoogconjunctuur — mensen geven uit, bedrijven investeren", "Bij recessie", "Wanneer geen geld bestaat", "Altijd even snel"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Onzin.", "Verschilt per economie."],
+      },
+      {
+        q: "Stort jij **€1.000** op de bank. Wat gebeurt er ongeveer?",
+        options: ["Bank houdt ~5% (€50) als reserve, leent ~€950 uit", "Geld blijft op jouw rekening, niets gebeurt", "Bank betaalt je vraagprijs", "Bank kan jouw geld nooit aanraken"],
+        answer: 0,
+        wrongHints: [null, "Niet 'niets' — bank verdient eraan.", "Geen vraagprijs.", "Bank gebruikt het wel — dat is hun businessmodel."],
+      },
+    ],
+  },
+
+  // ─── Stap 6: Inflatie en koopkracht ─────────────────────────
   {
     title: "Inflatie — waarom geld minder waard wordt",
     explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
@@ -327,7 +397,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 6: Begroten ──────────────────────────────────────────
+  // ─── Stap 7: Begroten ──────────────────────────────────────────
   {
     title: "Begroten — heb ik geld over aan het einde van de maand?",
     explanation: "Een **begroting** = overzicht van wat erin komt en uit gaat per maand. Dat helpt je doelen halen (rijbewijs, vakantie) en voorkomen dat je rood staat.\n\n**Inkomsten**: alles wat binnenkomt.\n• Zakgeld\n• Bijbaan-loon (bv. vakkenvuller €60-€200/mnd)\n• Studiefinanciering (later)\n• Toeslagen\n\n**Uitgaven**: opgesplitst in **vast** en **variabel**.\n\n**Vaste uitgaven** (komen elke maand terug):\n• Telefoon abonnement (€10-€25)\n• Streamingdiensten (Spotify, Netflix)\n• Sport-abonnement\n• Verzekeringen\n\n**Variabele uitgaven** (anders elke maand):\n• Boodschappen, uit eten\n• Kleding\n• Uitgaan, bioscoop\n• Vervoer (OV-chipkaart, benzine)\n\n**Sparen** = zet apart vóórdat je uitgeeft (de '50/30/20-regel'):\n• 50% noodzaak\n• 30% leuke dingen\n• 20% sparen\n\n**Voorbeeld**: bijbaan-loon €240/mnd.\n• 50% = €120 → telefoon, OV, basis\n• 30% = €72 → uitgaan, kleding\n• 20% = €48 → sparen voor rijbewijs\n\n**Overschot/tekort**:\n• Inkomsten &gt; uitgaven → **overschot** (kan sparen)\n• Inkomsten &lt; uitgaven → **tekort** (rood staan, schulden)",
@@ -387,7 +457,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 7: Lenen — kredietvormen ─────────────────────────
+  // ─── Stap 8: Lenen — kredietvormen ─────────────────────────
   {
     title: "Lenen — wanneer wel, wanneer niet",
     explanation: "**Lenen** = geld krijgen dat je **later moet terugbetalen**, vaak met **rente**. De bank verdient aan rente.\n\n**Soorten leningen** (van laag naar hoog risico voor jou):\n\n**1. Hypotheek** — voor een huis (looptijd 20-30 jaar). Het huis is **onderpand**: kun je niet betalen, dan wordt het huis verkocht. Lage rente want de bank loopt weinig risico.\n\n**2. Studielening (DUO)** — voor studenten. Lage rente, terugbetalen pas als je verdient. Geen BKR-registratie.\n\n**3. Persoonlijke lening** — vast bedrag, vaste maandlasten over 1-5 jaar. Voor bv. auto, verbouwing.\n\n**4. Doorlopend krediet** — kredietruimte tot een limiet. Flexibel, maar **hoge rente** en risico op groeiende schuld.\n\n**5. Rood staan** — tijdelijk negatief op je betaalrekening. **Heel hoge rente** (10-15%/jaar).\n\n**6. Achteraf betalen / Klarna** — populair maar bij niet betalen: hoge boetes, deurwaarder, BKR-registratie. Je staat dan jaren bekend als 'wanbetaler' en krijgt later geen hypotheek.\n\n**Voor leningen kijkt de bank naar**:\n• **Inkomen**: kun je het terugbetalen?\n• **BKR-registratie**: heb je nu al schulden?\n• **Onderpand**: huis, auto?\n\n**Vuistregel**: je vaste maandlasten (huur + leningen) moeten **maximaal 30% van je netto-inkomen** zijn.\n\n**Wanneer is lenen OK?**\n• Voor iets dat **lang meegaat** (huis, opleiding) en/of geld oplevert.\n\n**Wanneer NIET?**\n• Voor een vakantie, kleren, telefoon → eerst sparen.",
@@ -452,7 +522,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 8: Hypotheek in detail ───────────────────────────
+  // ─── Stap 9: Hypotheek in detail ───────────────────────────
   {
     title: "Hypotheek — een huis kopen",
     explanation: "Een **hypotheek** is een lange lening om een huis te kopen. Je leent vaak het overgrote deel van de huisprijs van een bank. Het huis is **onderpand** — kun je niet betalen, dan verkoopt de bank het huis.\n\n**Looptijd**: meestal **30 jaar**.\n\n**Twee veelvoorkomende vormen**:\n\n**1. Annuïteitenhypotheek**\n• **Vaste maandlast** elk jaar (gemiddeld over de looptijd).\n• Eerst betaal je veel rente, weinig aflossing.\n• Aan het eind: weinig rente, veel aflossing.\n• Populair bij starters.\n\n**2. Lineaire hypotheek**\n• **Vaste aflossing** elke maand.\n• Eerst hoge maandlast (rente over hele bedrag).\n• Wordt elk jaar lager.\n• Goedkoper over de hele looptijd, maar in begin hoger.\n\n**Voorbeeld**: huis kost €350.000.\n• Eigen geld: €30.000.\n• Hypotheek: €320.000 over 30 jaar.\n• Rente 4% → maandlast ongeveer **€1.530**.\n\n**Maximale hypotheek** = afhankelijk van je inkomen (bruto). Vuistregel: ongeveer 4-5× je bruto jaarsalaris.\n\n**Bijkomende kosten** (komen bovenop de huisprijs):\n• **Overdrachtsbelasting** (2% voor starters tot 35 jaar: 0%)\n• **Notaris** (~€2.000)\n• **Taxatie** (~€500)\n• **Hypotheekadvies** (~€2.500)\n\n**Aandachtspunten**:\n• Werkloos worden = inkomen weg = hypotheek niet betalen = huis kwijt\n• Daarom **buffer** op spaarrekening (minimaal 3-6 maanden lasten)\n• Verzekering: arbeidsongeschiktheid, overlijdensrisico",
@@ -528,7 +598,7 @@ const pincodeGeldSparenLenen = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 2",
   intro:
-    "Hoofdstuk 2 van Pincode 7e ed. VMBO-GT 4: van betaalmiddelen en sparen tot inflatie, begroten, lenen en hypotheek. 7 stappen, met concrete voorbeelden uit de leefwereld van een tiener. Examen-voorbereiding compleet.",
+    "Hoofdstuk 2 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): geld + betaalmiddelen, sparen of beleggen, geldcirculatie, inflatie, begroten, lenen + hypotheek. 9 stappen, concrete voorbeelden voor tieners. Volledige Pincode-paragraaf 2.1-2.4 dekking + examen-voorbereiding compleet.",
   triggerKeywords: [
     "geld",
     "ruilhandel",
@@ -570,6 +640,17 @@ const pincodeGeldSparenLenen = {
     "beurs",
     "degiro",
     "sparen of beleggen",
+    "geld moet rollen",
+    "geldcirculatie",
+    "geldkringloop",
+    "geldschepping",
+    "geldhoeveelheid",
+    "m0", "m1", "m2", "m3",
+    "kasreserve",
+    "bank run",
+    "dgs",
+    "depositogarantiestelsel",
+    "kringloop",
     "inflatie",
     "koopkracht",
     "cpi",

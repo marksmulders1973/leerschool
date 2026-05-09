@@ -16,12 +16,13 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["🚀", "🔍", "🎯", "📈", "⚖️", "🧾", "⚠️"];
+const stepEmojis = ["🚀", "🔍", "🎯", "📈", "📊", "🏆", "⚖️", "🧾", "⚠️"];
 
 const chapters = [
   { letter: "A", title: "Starten", emoji: "🚀", from: 0, to: 2 },
-  { letter: "B", title: "Geldzaken", emoji: "📈", from: 3, to: 5 },
-  { letter: "C", title: "Risico", emoji: "⚠️", from: 6, to: 6 },
+  { letter: "B", title: "Markt", emoji: "📊", from: 3, to: 5 },
+  { letter: "C", title: "Bedrijf inrichten", emoji: "⚖️", from: 6, to: 7 },
+  { letter: "D", title: "Risico", emoji: "⚠️", from: 8, to: 8 },
 ];
 
 const steps = [
@@ -291,7 +292,128 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 5: Rechtsvormen ─────────────────────────────────
+  // ─── Stap 5: Vraag en aanbod ──────────────────────────────
+  {
+    title: "Vraag en aanbod — hoe komt de prijs tot stand?",
+    explanation: "**Pincode 3.3: Vraag en aanbod.** De **prijs** van een product ontstaat door wat kopers willen betalen + wat verkopers willen aanbieden.\n\n**De vraag**: hoeveel willen kopers van iets bij verschillende prijzen?\n• **Wet van de vraag**: hoe **hoger** de prijs, hoe **minder** mensen willen kopen\n• Voorbeeld appels: €3/kg → 100 kg vraag, €1/kg → 400 kg vraag\n\n**Vraagcurve**: lijn die loopt van linksboven naar rechtsbeneden (hogere prijs = minder vraag).\n\n**Het aanbod**: hoeveel willen verkopers leveren bij verschillende prijzen?\n• **Wet van het aanbod**: hoe **hoger** de prijs, hoe **meer** verkopers willen leveren\n• Voorbeeld appels: €1/kg → boer levert weinig (lage winst), €3/kg → boer levert veel (winstgevend)\n\n**Aanbodcurve**: lijn die loopt van linksbeneden naar rechtsboven (hogere prijs = meer aanbod).\n\n**Evenwichtsprijs**: punt waar vraag = aanbod. Hier 'klikt' de markt.\n\n**Voorbeeld concert-tickets**:\n• Vraag: 50.000 mensen willen naar Taylor Swift\n• Aanbod: 35.000 zitplaatsen\n• → Officiele prijs €120, maar zwarte markt €500+ (hoge vraag, laag aanbod)\n\n**Wat als vraag of aanbod verandert?**\n\n**Vraag stijgt** (meer mensen willen het):\n• Bv. trend, reclame, hoger inkomen\n• Curve schuift naar rechts\n• Nieuwe evenwichtsprijs HOGER\n• Voorbeeld: hype rond AirPods Max → prijs blijft hoog\n\n**Vraag daalt**:\n• Bv. recessie, ander product populairder\n• Curve schuift naar links\n• Nieuwe prijs LAGER\n• Voorbeeld: handgels na corona-piek\n\n**Aanbod stijgt** (meer leveranciers):\n• Bv. nieuwe technologie, meer concurrenten\n• Curve schuift naar rechts\n• Prijs LAGER\n• Voorbeeld: zonnepanelen — China produceert massa, prijs gehalveerd\n\n**Aanbod daalt**:\n• Bv. oogst mislukt, fabriek dicht\n• Curve schuift naar links\n• Prijs HOGER\n• Voorbeeld: olieprijs steeg na sancties Rusland\n\n**Voor je dagelijks leven**:\n• Sneakers in sale: aanbod > vraag (te veel, weg ermee)\n• Festival-ticket vlak voor evenement: vraag > aanbod = prijs stijgt\n• Restaurant slechte recensie: vraag daalt, prijs zou moeten dalen of hij gaat dicht\n\n**Substituut en complement**:\n• **Substituten**: vervangbaar (Pepsi vs Coca-Cola). Prijs Coca stijgt → meer Pepsi-vraag.\n• **Complement**: hoort bij elkaar (printer + cartridge). Printer goedkoop → meer cartridges nodig.\n\n**Nuttige formule**:\n• Bij prijs P → bekijk Q_vraag en Q_aanbod\n• Als Q_vraag > Q_aanbod: prijs gaat omhoog (krapte)\n• Als Q_vraag < Q_aanbod: prijs gaat omlaag (overschot)",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">VRAAG &amp; AANBOD — APPELS</text>
+<line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<text x="20" y="50" fill="${COLORS.text}" font-size="11" font-family="Arial">prijs</text>
+<text x="240" y="175" fill="${COLORS.text}" font-size="11" font-family="Arial">aantal kg</text>
+<line x1="60" y1="50" x2="280" y2="155" stroke="${COLORS.aanbod}" stroke-width="2.5"/>
+<line x1="60" y1="155" x2="280" y2="50" stroke="${COLORS.vraag}" stroke-width="2.5"/>
+<text x="240" y="58" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">aanbod</text>
+<text x="240" y="135" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">vraag</text>
+<circle cx="170" cy="100" r="6" fill="${COLORS.geld}"/>
+<text x="180" y="92" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">evenwicht €2/kg</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">prijs ontstaat waar vraag = aanbod</text>
+</svg>`,
+    checks: [
+      {
+        q: "**Wet van de vraag**: bij hogere prijs willen kopers...",
+        options: ["Minder kopen", "Meer kopen", "Hetzelfde kopen", "Sneller kopen"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel — duurder = minder kopen.", "Wel verandering.", "Niet relevant."],
+      },
+      {
+        q: "**Wet van het aanbod**: bij hogere prijs willen verkopers...",
+        options: ["Meer leveren", "Minder leveren", "Hetzelfde", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel — hogere winst = meer leveren.", "Wel verandering.", "Wel reactie."],
+      },
+      {
+        q: "**Evenwichtsprijs** is:",
+        options: ["Prijs waar vraag = aanbod", "Hoogste prijs", "Laagste prijs", "Gemiddelde prijs"],
+        answer: 0,
+        wrongHints: [null, "Niet automatisch.", "Niet automatisch.", "Niet definitie."],
+      },
+      {
+        q: "Veel **vraag**, weinig aanbod → prijs gaat:",
+        options: ["Omhoog", "Omlaag", "Blijft gelijk", "Naar 0"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Wel beweging.", "Onmogelijk in normale markt."],
+      },
+      {
+        q: "**Substituten** zijn:",
+        options: ["Producten die elkaar kunnen vervangen (Pepsi vs Coca-Cola)", "Producten die bij elkaar horen", "Gratis producten", "Belastingvrije producten"],
+        answer: 0,
+        wrongHints: [null, "Dat zijn complementen.", "Niet relevant.", "Niet relevant."],
+      },
+      {
+        q: "Bij €3 per kg vragen kopers 100 kg, bij €1 vragen ze 400 kg. Wat heet dit?",
+        options: ["Wet van de vraag — hogere prijs, minder vraag", "Wet van het aanbod", "Inflatie", "Recessie"],
+        answer: 0,
+        wrongHints: [null, "Verkeerde wet.", "Inflatie is iets anders.", "Recessie is iets anders."],
+      },
+    ],
+  },
+  // ─── Stap 6: Macht op de markt — marktvormen ──────────────
+  {
+    title: "Macht op de markt — wie bepaalt de prijs?",
+    explanation: "**Pincode 3.4: Macht op de markt.** Niet elke markt werkt hetzelfde. Hoeveel **concurrentie** er is bepaalt wie de prijs vaststelt.\n\n**4 marktvormen** (van veel naar weinig concurrentie):\n\n**1. Volkomen concurrentie**\n• **Veel** aanbieders + **veel** vragers\n• **Identiek** product (geen verschil tussen leveranciers)\n• Niemand bepaalt prijs — markt doet dat\n• Voorbeeld: tarwe, aardappel, basis-grondstoffen\n• Voor consument: laagst mogelijke prijs, weinig keuze in 'merk'\n\n**2. Monopolistische concurrentie**\n• **Veel** aanbieders\n• **Verschillende** producten (gedifferentieerd door merk, kwaliteit, design)\n• Beetje invloed op prijs door uniek karakter\n• Voorbeeld: kledingmerken (Nike vs Adidas vs Puma), restaurants, kappers\n• Voor consument: veel keuze, prijs varieert per merk\n\n**3. Oligopolie**\n• **Weinig grote** aanbieders (3-10)\n• Strategisch met elkaar — wat doet concurrent?\n• Risico: prijsafspraken (illegaal!)\n• Voorbeeld: telecom (KPN, Vodafone, T-Mobile, Odido), banken (ING, Rabo, ABN, SNS), supermarkten (AH, Jumbo, Lidl, Aldi)\n• Voor consument: beperkte keuze, prijzen vaak hoog\n\n**4. Monopolie**\n• **1** aanbieder\n• Volledige macht over prijs\n• Vaak via patenten, schaarse grondstoffen, of overheidsregulering\n• Voorbeeld: NS (treinen op de meeste lijnen), Schiphol (luchthaven Amsterdam), regionale waterleidingbedrijven\n• Voor consument: hoge prijzen, geen keuze\n\n**Vergelijking prijs en winst**:\n| Marktvorm | Prijs | Winst aanbieder |\n|---|---|---|\n| Volkomen concurr. | Laag | Klein |\n| Monopol. concurr. | Middel | Middel |\n| Oligopolie | Hoog | Hoog |\n| Monopolie | Hoogst | Hoogst |\n\n**Waarom mag een monopolie soms?**\n• Niet meer concurrenten haalbaar (treinrails dubbel aanleggen onpraktisch)\n• Onderzoek + ontwikkeling kost veel (medicijnen-patent voor 20 jaar)\n• Maar: met **prijsregulering** (overheid bepaalt max-prijs)\n\n**Wat doet de ACM (Autoriteit Consument & Markt)?**\n• Voorkomt **kartels** (prijsafspraken tussen oligopolie-spelers)\n• Goedkeuring van fusies (anders monopolie)\n• Voorbeeld: Heineken-Vrumona-fusie geblokkeerd in 2020\n• ACM legt boetes op (Apple App Store, Google)\n\n**Marktmacht en consument**:\n• Hoe meer concurrentie, hoe **beter voor de consument** (lagere prijs, meer keuze)\n• Maar: bedrijven hebben minder winst → minder R&D, minder banen?\n• Spanning tussen efficiëntie en innovatie\n\n**Voorbeelden uit het echte leven**:\n• **Volkomen concurrentie**: weekmarkt-aardappelen — alle boeren leveren ongeveer dezelfde prijs\n• **Monopolistische concurrentie**: 50 cafés in stad, elk eigen sfeer/locatie/menu\n• **Oligopolie**: Nederlandse benzine (Shell, BP, Esso, Total — vergelijkbare prijzen!)\n• **Monopolie**: gemeentelijke watermaatschappij — geen alternatief\n\n**Voor jou**:\n• Bij **volkomen concurrentie** loont vergelijken minst (alle prijzen ongeveer gelijk)\n• Bij **monopolistische concurrentie** loont MERKEN-onderzoek (kwaliteit verschilt)\n• Bij **oligopolie** loont vergelijken (kleine verschillen kunnen €100/jaar schelen — telecom!)\n• Bij **monopolie**: weinig keuze, accepteren of niet kopen",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">4 MARKTVORMEN</text>
+<rect x="20" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">VOLKOMEN</text>
+<text x="87" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">veel + veel · ident.</text>
+<text x="87" y="86" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">tarwe, aardappel</text>
+<rect x="165" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">MONO. CONC.</text>
+<text x="232" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">veel · gediff.</text>
+<text x="232" y="86" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Nike, Adidas, café</text>
+<rect x="20" y="105" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="87" y="123" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">OLIGOPOLIE</text>
+<text x="87" y="139" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">3-10 grote</text>
+<text x="87" y="151" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">telecom, banken</text>
+<rect x="165" y="105" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.5"/>
+<text x="232" y="123" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">MONOPOLIE</text>
+<text x="232" y="139" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">1 aanbieder</text>
+<text x="232" y="151" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">NS, Schiphol</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">meer concurrentie → lagere prijs</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ACM bewaakt eerlijke markt</text>
+</svg>`,
+    checks: [
+      {
+        q: "Hoeveel **aanbieders** bij volkomen concurrentie?",
+        options: ["Veel", "Weinig (3-10)", "1", "Geen"],
+        answer: 0,
+        wrongHints: [null, "Dat is oligopolie.", "Dat is monopolie.", "Dan geen markt."],
+      },
+      {
+        q: "**Telecom** (KPN/Vodafone/T-Mobile/Odido) is welke marktvorm?",
+        options: ["Oligopolie (weinig grote)", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
+        answer: 0,
+        wrongHints: [null, "Te weinig spelers voor 'volkomen'.", "Niet 1, maar 4.", "Niet 'veel' aanbieders."],
+      },
+      {
+        q: "**Monopolie** kenmerk:",
+        options: ["1 aanbieder bepaalt prijs", "Veel aanbieders", "Alleen consumenten", "Lage prijs"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Onzin.", "Tegendeel — meestal hoog."],
+      },
+      {
+        q: "Wat doet de **ACM**?",
+        options: ["Voorkomt kartels + bewaakt eerlijke concurrentie", "Maakt wetten", "Int belasting", "Subsidies"],
+        answer: 0,
+        wrongHints: [null, "Wetten = parlement.", "Belastingdienst.", "Niet ACM."],
+      },
+      {
+        q: "**Veel** kledingmerken (Nike, Adidas, Puma, ...): welke marktvorm?",
+        options: ["Monopolistische concurrentie (veel + gedifferentieerd)", "Volkomen concurrentie", "Oligopolie", "Monopolie"],
+        answer: 0,
+        wrongHints: [null, "Producten verschillen wel.", "Te veel spelers.", "Veel meer dan 1."],
+      },
+      {
+        q: "Bij welke marktvorm is **vergelijken** het meest waardevol?",
+        options: ["Oligopolie — kleine verschillen kunnen €100/jr schelen", "Volkomen concurrentie", "Monopolie", "Iedere is gelijk"],
+        answer: 0,
+        wrongHints: [null, "Bij volkomen alles gelijke prijs.", "Geen alternatief.", "Wel verschil."],
+      },
+    ],
+  },
+  // ─── Stap 7: Rechtsvormen ─────────────────────────────────
   {
     title: "Rechtsvormen — eenmanszaak, VOF of BV?",
     explanation: "**Rechtsvorm** = de juridische opzet van een bedrijf. Belangrijk voor:\n• Wie is **aansprakelijk** voor schulden?\n• Hoeveel **belasting** betaal je?\n• Heb je **kapitaal** nodig om te starten?\n\n**Eenmanszaak** (1 ondernemer)\n• ✓ Makkelijk te starten via KvK (~€80)\n• ✓ Geen minimumkapitaal\n• ✓ Belastingvoordelen voor starters (zelfstandigenaftrek)\n• ✗ **Privé aansprakelijk**: bedrijf failliet = je huis/spaargeld in gevaar\n• Belasting: **inkomstenbelasting (IB)** over winst\n\n**VOF — Vennootschap onder Firma** (2+ ondernemers samen)\n• Net als eenmanszaak, maar met meerdere eigenaars (vennoten)\n• ✗ Iedereen privé aansprakelijk — ook voor schulden van de andere vennoot!\n• Belasting: elk apart IB over zijn winstdeel\n\n**BV — Besloten Vennootschap**\n• Apart juridisch lichaam (rechtspersoon, met aandelen)\n• ✓ **Niet privé aansprakelijk** (alleen tot ingelegd kapitaal)\n• ✗ Notaris nodig om op te richten (~€500-€1.500)\n• ✗ Apart financiele administratie + jaarverslag\n• Belasting: **vennootschapsbelasting (VPB)** over winst, en als jij loon krijgt uit de BV ook IB\n\n**Wanneer welke rechtsvorm**?\n• **Eenmanszaak**: kleinschalig starten, weinig risico (bv. bijles geven)\n• **VOF**: samen met 1-2 vrienden, vertrouwen onderling (bv. samen kapsalon)\n• **BV**: als omzet/winst groot wordt, of veel risico (bv. €100k+ omzet, juridisch riskante markt)\n\n**Vuistregel**: tot ~€100.000 winst is eenmanszaak fiscaal voordeliger. Erboven wordt BV interessanter.",
@@ -362,7 +484,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 6: BTW en facturen ───────────────────────────────
+  // ─── Stap 8: BTW en facturen ───────────────────────────────
   {
     title: "BTW, facturen en boekhouden — basics",
     explanation: "Als ondernemer moet je BTW (omzetbelasting) **innen voor de overheid** en **administratie** bijhouden.\n\n**BTW (Belasting Toegevoegde Waarde)**:\n• Je rekent BTW bovenop je prijs aan klanten\n• Je houdt deze BTW apart\n• Je drukt af en toe (per kwartaal) op je belastingdienst\n\n**3 BTW-tarieven in NL**:\n• **21%** — algemeen tarief (kleding, elektronica, restaurant, koeriersdienst)\n• **9%** — laag tarief (boodschappen, water, boeken, kapper, OV)\n• **0%** — export en sommige zorg\n\n**Voorbeeld friet €5 inclusief 9% BTW**:\n• Excl BTW: €5 / 1,09 = **€4,59** voor jou\n• BTW: **€0,41** voor de Belastingdienst\n\n**Factuur** = officieel document voor zakelijke verkoop. Verplichte items:\n• **Jouw** naam, adres, KvK-nummer, BTW-nummer\n• **Klant** naam en adres\n• **Datum** + uniek factuurnummer\n• **Omschrijving** dienst/product\n• **Prijs** (excl BTW), BTW-bedrag, totaal\n\n**Boekhouding** = administratie van inkomsten en uitgaven:\n• **Bonnetjes bewaren** — verplicht 7 jaar!\n• **Bankafschriften** koppelen aan facturen\n• **BTW-aangifte** (elk kwartaal voor de meesten)\n• **Aangifte inkomstenbelasting** (eind van het jaar)\n\n**Boekhoudprogramma's** maken het makkelijker:\n• MoneyMonk, e-Boekhouden, Exact Online\n• Vanaf €10/maand\n\n**Vuistregel zelfstandige**:\nHoud **ongeveer 30%** van je omzet apart voor belasting + BTW. Anders sta je later voor een verrassing!",
@@ -426,7 +548,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 7: Risico, verlies en faillissement ────────────
+  // ─── Stap 9: Risico, verlies en faillissement ────────────
   {
     title: "Risico, verlies en faillissement — wat als het misgaat?",
     explanation: "Niet alle bedrijven slagen. **Statistiek**: ongeveer **40% van de starters** stopt binnen 5 jaar. Dat hoort bij ondernemerschap.\n\n**Soorten risico**:\n\n**1. Marktrisico**\n• Geen vraag naar je product (verkeerd ingeschat)\n• Trends veranderen (TikTok-rage voorbij)\n• Crisis (corona, recessie)\n\n**2. Concurrentierisico**\n• Grote speler komt op jouw markt (Albert Heijn opent in jouw straat)\n• Goedkopere alternatieven\n\n**3. Kostenrisico**\n• Grondstoffen worden duurder (gas, olie)\n• Personeelskosten stijgen\n• Onverwachte uitgaven (machine kapot)\n\n**4. Financieel risico**\n• Klanten betalen niet of te laat (debiteurenrisico)\n• Lening kun je niet aflossen\n• Belastingschuld groeit\n\n**5. Persoonlijk risico**\n• Ziekte of burn-out → geen omzet\n• Bij eenmanszaak/VOF: privé-vermogen in gevaar\n\n**Wat is een faillissement?**\nJe kunt je schulden niet meer betalen. Een rechter benoemt een **curator** die:\n• Bedrijfs-bezittingen verkoopt\n• Geld eerlijk verdeelt onder schuldeisers\n• Het bedrijf opheft\n\n**Bij eenmanszaak/VOF**: ook privé-bezittingen kunnen worden verkocht (huis, auto). Bij **BV**: alleen het bedrijfs-vermogen.\n\n**Hoe risico beperken?**\n• **Buffer** (3-6 mnd kosten op spaarrekening)\n• **Verzekeringen** (arbeidsongeschiktheid, aansprakelijkheid)\n• **Diversificatie** (niet 1 grote klant maar 10 kleine)\n• **Realistische cashflow-planning**\n• **Niet te snel groeien** (niet meteen 10 medewerkers aannemen)\n\n**WSNP** (Wet Schuldsanering Natuurlijke Personen): laatste redmiddel voor particulieren in nood. Strenge regels, maar na 3 jaar 'schoon'.",
@@ -499,7 +621,7 @@ const pincodeOndernemen = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 3",
   intro:
-    "Hoofdstuk 3 van Pincode 7e ed. VMBO-GT 4: van wat-is-ondernemen tot marktonderzoek, marketing-mix, omzet/kosten/winst, rechtsvormen, BTW + facturen en risicobeperking. 7 stappen, met concrete voorbeelden (foodtruck, webshop, bijles). Examen-voorbereiding compleet.",
+    "Hoofdstuk 3 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): ondernemen, marktonderzoek, marketing, kosten/omzet/winst, vraag en aanbod, marktvormen, rechtsvormen, BTW + facturen, risico. 9 stappen, voorbeelden uit jongerenleven. Volledige Pincode 3.1-3.4 dekking.",
   triggerKeywords: [
     "ondernemen",
     "ondernemer",
@@ -533,6 +655,13 @@ const pincodeOndernemen = {
     "totale kosten",
     "break-even",
     "brutowinstmarge",
+    "vraag", "aanbod", "vraag en aanbod", "vraagcurve", "aanbodcurve",
+    "evenwichtsprijs", "marktevenwicht", "wet van de vraag", "wet van het aanbod",
+    "substituut", "complement", "verschuiving",
+    "marktvorm", "marktvormen", "concurrentie",
+    "volkomen concurrentie", "monopolistische concurrentie",
+    "oligopolie", "monopolie", "kartel", "marktmacht",
+    "acm", "autoriteit consument en markt",
     "rechtsvorm",
     "eenmanszaak",
     "vof",
