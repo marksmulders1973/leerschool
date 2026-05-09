@@ -150,24 +150,11 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                             background: C.card,
                             border: `1px solid ${C.border}`,
                             borderRadius: 12,
+                            padding: "12px 14px",
                           }}
                         >
-                          <a
-                            href={opgaveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              display: "flex",
-                              alignItems: "center",
-                              gap: 12,
-                              padding: "12px 14px",
-                              color: C.text,
-                              textDecoration: "none",
-                            }}
-                            onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(40,60,90,0.8)"}
-                            onMouseOut={(ev) => ev.currentTarget.style.background = "transparent"}
-                          >
-                            <span style={{ fontSize: 20 }} aria-hidden="true">📜</span>
+                          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
+                            <span style={{ fontSize: 18 }} aria-hidden="true">📚</span>
                             <div style={{ flex: 1, minWidth: 0 }}>
                               <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 14, marginBottom: 2 }}>
                                 {e.titel}
@@ -184,51 +171,40 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                                 )}
                               </div>
                             </div>
-                            <span style={{ fontSize: 14, color: C.muted }} aria-hidden="true">↗</span>
-                          </a>
-                          {bijlageUrl && (
-                            <a
-                              href={bijlageUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 8,
-                                padding: "8px 14px 10px 46px",
-                                color: C.accent,
-                                fontSize: 12,
-                                fontWeight: 600,
-                                textDecoration: "none",
-                                borderTop: `1px dashed ${C.border}`,
-                              }}
-                              onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(255,107,53,0.1)"}
-                              onMouseOut={(ev) => ev.currentTarget.style.background = "transparent"}
-                            >
-                              📑 Bijlage (teksten/bronnen — nodig voor de opgaven) ↗
-                            </a>
-                          )}
-                          {correctieUrl && (
-                            <a
-                              href={correctieUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 8,
-                                padding: "8px 14px 10px 46px",
-                                color: C.muted,
-                                fontSize: 11,
-                                textDecoration: "none",
-                                borderTop: `1px dashed ${C.border}`,
-                              }}
-                              onMouseOver={(ev) => ev.currentTarget.style.color = C.warm}
-                              onMouseOut={(ev) => ev.currentTarget.style.color = C.muted}
-                            >
-                              ✅ Correctievoorschrift (antwoorden) ↗
-                            </a>
-                          )}
+                          </div>
+                          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                            <PdfKnop
+                              href={opgaveUrl}
+                              icon="📜"
+                              label="Opgaven"
+                              sublabel="vragen"
+                              kleur={C.text}
+                              border={C.border}
+                              hoverBg="rgba(255,255,255,0.06)"
+                            />
+                            {bijlageUrl && (
+                              <PdfKnop
+                                href={bijlageUrl}
+                                icon="📑"
+                                label="Bijlage"
+                                sublabel="teksten/bronnen"
+                                kleur={C.accent}
+                                border="rgba(255,107,53,0.5)"
+                                hoverBg="rgba(255,107,53,0.12)"
+                              />
+                            )}
+                            {correctieUrl && (
+                              <PdfKnop
+                                href={correctieUrl}
+                                icon="✅"
+                                label="Antwoorden"
+                                sublabel="correctievoorschrift"
+                                kleur={C.muted}
+                                border={C.border}
+                                hoverBg="rgba(255,213,79,0.1)"
+                              />
+                            )}
+                          </div>
                         </div>
                       );
                     })}
@@ -290,6 +266,38 @@ function FilterRij({ label, opties, value, onChange, renderLabel }) {
         })}
       </div>
     </div>
+  );
+}
+
+function PdfKnop({ href, icon, label, sublabel, kleur, border, hoverBg }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        flex: "1 1 0",
+        minWidth: 90,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 2,
+        padding: "10px 8px",
+        borderRadius: 8,
+        border: `1px solid ${border}`,
+        background: "rgba(255,255,255,0.03)",
+        color: kleur,
+        textDecoration: "none",
+        textAlign: "center",
+        transition: "background 0.15s",
+      }}
+      onMouseOver={(ev) => ev.currentTarget.style.background = hoverBg}
+      onMouseOut={(ev) => ev.currentTarget.style.background = "rgba(255,255,255,0.03)"}
+    >
+      <span style={{ fontSize: 18 }} aria-hidden="true">{icon}</span>
+      <span style={{ fontSize: 12, fontWeight: 700 }}>{label}</span>
+      <span style={{ fontSize: 10, opacity: 0.7 }}>{sublabel}</span>
+    </a>
   );
 }
 
