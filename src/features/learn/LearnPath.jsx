@@ -273,7 +273,7 @@ function YoutubeZoekKnop({ pathTitle, stepTitle, subject }) {
   );
 }
 
-export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome }) {
+export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome, onPickPath }) {
   const path = ALL_LEARN_PATHS[pathId];
   const player = (userName || "Speler").trim() || "Speler";
 
@@ -734,22 +734,114 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
                   📑 Bron — {currentCheck.bronTekst.titel || "informatiebron"}
                 </div>
-                <div style={{
-                  fontSize: 13,
-                  lineHeight: 1.5,
-                  color: "var(--color-text)",
-                  whiteSpace: "pre-wrap",
-                  maxHeight: "30vh",
-                  overflowY: "auto",
-                  fontFamily: "monospace",
-                }}>
-                  {currentCheck.bronTekst.body}
-                </div>
+                {currentCheck.bronTekst.tableData && (
+                  <div style={{ overflowX: "auto", marginBottom: 8 }}>
+                    <table style={{
+                      borderCollapse: "collapse",
+                      width: "100%",
+                      fontSize: 12,
+                      color: "var(--color-text)",
+                    }}>
+                      {currentCheck.bronTekst.tableData.headers && (
+                        <thead>
+                          <tr>
+                            {currentCheck.bronTekst.tableData.headers.map((h, i) => (
+                              <th key={i} style={{
+                                border: "1px solid rgba(255,107,53,0.35)",
+                                padding: "6px 10px",
+                                background: "rgba(255,107,53,0.12)",
+                                fontWeight: 700,
+                                textAlign: i === 0 ? "left" : "right",
+                              }}>{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                      )}
+                      <tbody>
+                        {currentCheck.bronTekst.tableData.rows.map((row, ri) => (
+                          <tr key={ri}>
+                            {row.map((cell, ci) => (
+                              <td key={ci} style={{
+                                border: "1px solid rgba(255,107,53,0.25)",
+                                padding: "5px 10px",
+                                textAlign: ci === 0 ? "left" : "right",
+                                fontWeight: ci === 0 ? 600 : 400,
+                                background: ri % 2 ? "rgba(255,107,53,0.03)" : "transparent",
+                              }}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {currentCheck.bronTekst.body && (
+                  <div style={{
+                    fontSize: 13,
+                    lineHeight: 1.5,
+                    color: "var(--color-text)",
+                    whiteSpace: "pre-wrap",
+                    maxHeight: "30vh",
+                    overflowY: "auto",
+                  }}>
+                    {currentCheck.bronTekst.body}
+                  </div>
+                )}
               </div>
             )}
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>
+            {currentCheck.leerpadLink && selected === null && (
+              <details style={{ marginBottom: 14 }}>
+                <summary style={{
+                  cursor: "pointer",
+                  padding: "8px 12px",
+                  background: "rgba(66,165,245,0.10)",
+                  border: "1px dashed rgba(66,165,245,0.45)",
+                  borderRadius: 8,
+                  color: "#5db3ff",
+                  fontWeight: 600,
+                  fontSize: 13,
+                  fontFamily: "var(--font-display)",
+                  listStyle: "none",
+                }}>
+                  ❓ Ik begrijp de vraag niet — help mij
+                </summary>
+                <div style={{
+                  marginTop: 8,
+                  padding: "10px 14px",
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(66,165,245,0.20)",
+                  borderRadius: 8,
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  color: "var(--color-text)",
+                }}>
+                  <div style={{ marginBottom: 10 }}>
+                    Niet duidelijk? In het leerpad <strong>{currentCheck.leerpadLink.title}</strong> wordt dit onderwerp uitgelegd.
+                  </div>
+                  {onPickPath && (
+                    <button
+                      onClick={() => onPickPath(currentCheck.leerpadLink.id)}
+                      style={{
+                        padding: "8px 14px",
+                        background: "#42a5f5",
+                        color: "#0f1729",
+                        border: 0,
+                        borderRadius: 8,
+                        fontWeight: 700,
+                        fontFamily: "var(--font-display)",
+                        cursor: "pointer",
+                        fontSize: 13,
+                      }}
+                    >
+                      📚 Open leerpad: {currentCheck.leerpadLink.title}
+                    </button>
+                  )}
+                </div>
+              </details>
+            )}
             {currentCheck.options.map((opt, i) => {
               const isSelected = selected === i;
               const isCorrect = selected !== null && i === currentCheck.answer;

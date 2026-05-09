@@ -782,6 +782,10 @@ export default function App() {
           authUser={authUser}
           onBack={() => setPage(learnPathReturnPage || "home")}
           onHome={() => setPage("home")}
+          onPickPath={(id) => {
+            setActiveLearnPathId(id);
+            setActiveLearnStepIdx(0);
+          }}
         />
       )}
       {page === "learn-paths-hub" && (
