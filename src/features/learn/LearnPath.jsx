@@ -408,7 +408,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         } else {
           completeStep();
         }
-      }, 900);
+      }, 1100);
     } else {
       // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
       // kan reageren als de leerling om hulp vraagt.
@@ -724,6 +724,25 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 </button>
               );
             })}
+            {selected !== null && selected === currentCheck.answer && (
+              <div style={{
+                marginTop: 14,
+                padding: "10px 14px",
+                borderRadius: 10,
+                background: "rgba(0,200,83,0.14)",
+                border: "1px solid rgba(0,200,83,0.45)",
+                color: "#2ecc71",
+                fontWeight: 700,
+                fontSize: 15,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                animation: "slideUp 0.2s ease",
+              }}>
+                <span aria-hidden="true">✅</span>
+                <span>Dat is juist!</span>
+              </div>
+            )}
           </div>
         )}
 
