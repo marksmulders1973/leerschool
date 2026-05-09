@@ -142,6 +142,30 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wel veel media-aandacht.", "Rijk gaf juist los.", "Vaak juist duurder en moeilijker."],
       },
+    
+      {
+        q: "🎓 Examen 2023-T2 V12: De OZB is een belangrijke inkomstenbron van een gemeente. Welke inkomstenbron heeft een gemeente nog meer?",
+        options: ["afvalstoffenheffing", "belasting toegevoegde waarde (btw)", "loonheffing", "vennootschapsbelasting De WOZ-waarde van alle 7,5 miljoen woningen in Nederland wordt elk jaar door onafhankelijke woningtaxateurs voor de gemeente getaxeerd."],
+        answer: 0,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2023-T2 V12:",
+      },
+    
+      {
+        q: "🎓 Examen 2025-T1 V8: Welke overheidstaken voert de gemeente uit?",
+        options: ["Het onderhoud aan dijken, kanalen en waterwegen.", "Het uitgeven van een paspoort, identiteitskaart en rijbewijs.", "Het verstrekken van huur- en zorgtoeslag.", "Het verstrekken van uitkeringen, zoals de AOW."],
+        answer: 1,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2025-T1 V8:",
+      },
+    
+      {
+        q: "🎓 Examen 2025-T1 V9: Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
+        options: ["accijns", "motorrijtuigenbelasting", "onroerendezaakbelasting", "vennootschapsbelasting Het aantal gemeenten in Nederland daalt omdat veel kleine gemeenten worden samengevoegd tot nieuwe, grotere gemeenten. De gemeente Rijkwijk en de gemeente Armere worden samengev"],
+        answer: 2,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2025-T1 V9:",
+      },
     ],
   },
   // ─── Stap 3: Rijksbegroting ──────────────────────────────
@@ -206,6 +230,14 @@ const steps = [
         answer: 0,
         wrongHints: [null, "De koning ondertekent ceremonieel maar parlement beslist.", "Hij/zij stelt voor, parlement beslist.", "Belastingdienst voert uit."],
       },
+    
+      {
+        q: "🎓 Examen 2024-T1 V27: De Nederlandse bevolking is op Prinsjesdag vooral benieuwd wat de plannen van de regering betekenen voor hun koopkracht. Wat wordt verstaan onder koopkracht?",
+        options: ["het bruto-inkomen", "het netto-inkomen", "het nominaal inkomen", "het re'el inkomen"],
+        answer: 3,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2024-T1 V27:",
+      },
     ],
   },
   // ─── Stap 4: Staatsschuld ────────────────────────────────
@@ -260,6 +292,14 @@ const steps = [
         options: ["Veel rente betalen → minder geld voor onderwijs/zorg", "Iedereen krijgt korting", "Niemand merkt iets", "Burgers krijgen rente"],
         answer: 0,
         wrongHints: [null, "Geen automatische korting.", "Indirect wel via belastingdruk.", "Burgers betalen, niet ontvangen."],
+      },
+    
+      {
+        q: "🎓 Examen 2024-T1 V30: Wat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
+        options: ["De inkomsten van de Italiaanse overheid zijn groter dan de uitgaven van de overheid.", "De inkomsten van de Italiaanse overheid zijn kleiner dan de uitgaven van de overheid.", "De inkomsten van de Italiaanse overheid zijn gestegen en de uitgaven gelijk gebleven."],
+        answer: 1,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2024-T1 V30:",
       },
     ],
   },

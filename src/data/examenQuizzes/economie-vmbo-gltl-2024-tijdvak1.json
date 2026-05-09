@@ -1,0 +1,286 @@
+{
+  "id": "economie-vmbo-gltl-2024-tijdvak1",
+  "meta": {
+    "vak": "economie",
+    "niveau": "vmbo-gltl",
+    "jaar": 2024,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Is Zweden ook lid van de Europese Monetaire Unie (EMU)?",
+      "options": [
+        "Ja, er wordt betaald met de euro.",
+        "Ja, naast de Zweedse kroon is ook de euro een wettig betaalmiddel.",
+        "Nee, er wordt betaald met de Zweedse kroon.",
+        "Nee, naast de euro is ook de Zweedse kroon een wettig betaalmiddel. In landen buiten de EU zijn de prijzen van dezelfde artikelen per land verschillend. Gebruik informatiebron 1 en 2."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 2
+    },
+    {
+      "q": "IKEI gebruikt grondstoffen uit Ethiopi' en Oeganda. De vraag naar deze grondstoffen heeft een gunstig effect op de economie van beide landen. Hier staan vijf economische verschijnselen. 1 toename van de vraag naar grondstoffen 2 toename van de werkgelegenheid 3 toename van de totale binnenlandse vraag 4 toename van de koopkracht 5 toename van de economische groei In welke regel staan deze verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "options": [
+        "12345",
+        "12435",
+        "13245",
+        "13425",
+        "14235 F 14325"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 5
+    },
+    {
+      "q": "Van welke marktvorm is er sprake bij de publieke omroepen?",
+      "options": [
+        "van monopolie",
+        "van monopolistische concurrentie",
+        "van oligopolie",
+        "van volkomen concurrentie"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 7
+    },
+    {
+      "q": "Na welk jaar is er een blijvende daling van direct tv kijken?",
+      "options": [
+        "na 2006",
+        "na 2007",
+        "na 2014",
+        "na 2018 In 2008 werd voor het eerst gemeten hoeveel er uitgesteld werd gekeken, toen ging het om gemiddeld 2 minuten per dag. Gebruik informatiebron 3."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 9
+    },
+    {
+      "q": "Hier staan drie economische verschijnselen: 1 de consumenten kunnen meer besteden 2 de productie stijgt 3 de vraag naar goederen stijgt In welke regel staan deze verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "options": [
+        "helikoptergeld  1  2  3  werkgelegenheid stijgt",
+        "helikoptergeld  1  3  2  werkgelegenheid stijgt",
+        "helikoptergeld  2  1  3  werkgelegenheid stijgt",
+        "helikoptergeld  2  3  1  werkgelegenheid stijgt",
+        "helikoptergeld  3  1  2  werkgelegenheid stijgt F helikoptergeld  3  2  1  werkgelegenheid stijgt Uit zijn onderzoek bleek echter dat slechts 25% van de huishoudens het helikoptergeld zou besteden, de andere huishoudens zouden het bedrag sparen."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 15
+    },
+    {
+      "q": "De Nederlandse bevolking is op Prinsjesdag vooral benieuwd wat de plannen van de regering betekenen voor hun koopkracht. Wat wordt verstaan onder koopkracht?",
+      "options": [
+        "het bruto-inkomen",
+        "het netto-inkomen",
+        "het nominaal inkomen",
+        "het re'el inkomen"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 27
+    },
+    {
+      "q": "Wat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
+      "options": [
+        "De inkomsten van de Italiaanse overheid zijn groter dan de uitgaven van de overheid.",
+        "De inkomsten van de Italiaanse overheid zijn kleiner dan de uitgaven van de overheid.",
+        "De inkomsten van de Italiaanse overheid zijn gestegen en de uitgaven gelijk gebleven."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 30
+    },
+    {
+      "q": "Studenten blijken hun uitgaven te onderschatten. Het Nibud schrijft: \"Dat is niet vreemd, want niet alle uitgaven, zoals reparatie van de fiets, komen maandelijks terug. Kleinere uitgaven, zoals het kopen van lunch of koffie, worden meestal ook onderschat.\" Welke uitgaven worden volgens het Nibud meestal onderschat?",
+      "options": [
+        "alleen dagelijkse huishoudelijke uitgaven",
+        "incidentele uitgaven en dagelijkse huishoudelijke uitgaven",
+        "vaste lasten en dagelijkse huishoudelijke uitgaven",
+        "vaste lasten en incidentele uitgaven"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 36
+    },
+    {
+      "q": "Welke soort werkloosheid ontstaat er door het verdwijnen van bedrijven naar het buitenland?",
+      "options": [
+        "conjuncturele werkloosheid, het is de aanbodkant van de economie",
+        "conjuncturele werkloosheid, het is de vraagkant van de economie",
+        "structurele werkloosheid, het is de aanbodkant van de economie",
+        "structurele werkloosheid, het is de vraagkant van de economie"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 41
+    },
+    {
+      "q": "REWIN verbindt bedrijven in de regio met elkaar, zodat er innovatie kan ontstaan. Als er in die samenwerking een bedrijf ontbreekt, dan probeert REWIN zo'n bedrijf naar de regio te halen. Dit kan op termijn leiden tot een lagere werkloosheid. Hier staan vijf economische verschijnselen: 1 REWIN zorgt voor verbinding en innovatie tussen de bedrijven. 2 De afzet van bedrijven in de regio West-Brabant kan stijgen. 3 De concurrentiepositie van bedrijven in West-Brabant kan verbeteren. 4 De werkgelegenheid in de regio West-Brabant kan stijgen. 5 De werkloosheid in de regio West-Brabant kan dalen. In welke regel staan deze verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "options": [
+        "12345",
+        "12435",
+        "13245",
+        "13425",
+        "14235 F 14325"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 44
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 26,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 28,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 34,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 39,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 42,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 45,
+      "reden": "open/complex"
+    }
+  ]
+}

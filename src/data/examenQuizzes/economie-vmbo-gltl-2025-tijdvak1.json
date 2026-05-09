@@ -1,0 +1,293 @@
+{
+  "id": "economie-vmbo-gltl-2025-tijdvak1",
+  "meta": {
+    "vak": "economie",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Welke bewering over de export en import van Sint-Maarten is juist?",
+      "options": [
+        "In 2010 was de waarde van de export lager dan de waarde van de import.",
+        "In 2016 was de waarde van de export lager dan de waarde van de import.",
+        "In 2017 was de waarde van de export lager dan de waarde van de import.",
+        "In alle jaren was de waarde van de export lager dan de waarde van de import."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 1
+    },
+    {
+      "q": "De welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent?",
+      "options": [
+        "de belastingen",
+        "de inkomensverdeling",
+        "de veranderde prijzen",
+        "zelfvoorziening Gebruik informatiebron 1."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 2
+    },
+    {
+      "q": "Waartoe behoren de uitgaven van de toeristen, die een souvenir kopen op Sint-Maarten?",
+      "options": [
+        "Tot de export van diensten door Sint-Maarten.",
+        "Tot de export van goederen door Sint-Maarten.",
+        "Tot de import van diensten door Sint-Maarten.",
+        "Tot de import van goederen door Sint-Maarten. Gebruik informatiebron 1."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 4
+    },
+    {
+      "q": "Welke overheidstaken voert de gemeente uit?",
+      "options": [
+        "Het onderhoud aan dijken, kanalen en waterwegen.",
+        "Het uitgeven van een paspoort, identiteitskaart en rijbewijs.",
+        "Het verstrekken van huur- en zorgtoeslag.",
+        "Het verstrekken van uitkeringen, zoals de AOW."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 8
+    },
+    {
+      "q": "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
+      "options": [
+        "accijns",
+        "motorrijtuigenbelasting",
+        "onroerendezaakbelasting",
+        "vennootschapsbelasting Het aantal gemeenten in Nederland daalt omdat veel kleine gemeenten worden samengevoegd tot nieuwe, grotere gemeenten. De gemeente Rijkwijk en de gemeente Armere worden samengevoegd tot de gemeente Rijkmere. Gebruik informatiebron 3."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 9
+    },
+    {
+      "q": "Welke oppervlakte geeft het bedrag aan dat je kunt sparen van je inkomen?",
+      "options": [
+        "oppervlakte a",
+        "oppervlakte b",
+        "oppervlakte c Nour vindt het verstandig om nu te sparen voor later, want het is bijna zeker dat hij in de toekomst meer gaat consumeren."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 12
+    },
+    {
+      "q": "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan. Voor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals een overdrachtsinkomen. Wat is een voorbeeld van een overdrachtsinkomen?",
+      "options": [
+        "loon",
+        "rente",
+        "winst",
+        "zakgeld Nour zoekt informatie over rentepercentages op de site van zijn ABC-bank. ABC-bank          spaarrekening: jongeren 2,1% rente ouder dan 21 jaar 1,5% rente betaalrekening: jongeren 1,1% rente ouder dan 21 jaar 0% rente"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 14
+    },
+    {
+      "q": "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
+      "options": [
+        "besloten vennootschap (bv)",
+        "eenmanszaak",
+        "naamloze vennootschap (nv)",
+        "vennootschap onder firma (vof) De klas doet eerst marktonderzoek in de wijk. Elke hondenbezitter heeft 1 hond. een vraag uit het onderzoek: Wij komen op woensdag-, vrijdag- en zaterdagmiddag langs uw huis en halen uw hond op om deze uit te laten op een omheind terrein. Twee uur later brengen we uw hond terug. Wij zorgen voor hondenbrokken. Hoeveel euro per week bent u bereid maximaal te betalen voor het uitlaten van uw hond op deze drie dagen? De resultaten staan in deze tabel. maximaal bedrag   aantal hondenbezitters 20                       0 18                       2 16                       4 14                       6 12                       8 10 8                       10 12 Ilja zet de resultaten van het marktonderzoek in een grafiek. Gebruik informatiebron 5."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 17
+    },
+    {
+      "q": "In deze tabel staat winst genoemd. Gaat het om de nettowinst of de brutowinst?",
+      "options": [
+        "De brutowinst, de bedrijfskosten zijn bij de omzet opgeteld.",
+        "De brutowinst, de bedrijfskosten zijn van de omzet afgehaald.",
+        "De nettowinst, de bedrijfskosten zijn bij de brutowinst opgeteld.",
+        "De nettowinst, de bedrijfskosten zijn van de brutowinst afgehaald. Gebruik bovenstaande tabel."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 19
+    },
+    {
+      "q": "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn?",
+      "options": [
+        "Het prijspeil van de export is minder gestegen dan het prijspeil van de import.",
+        "Het prijspeil van de export is meer gestegen dan het prijspeil van de import.",
+        "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid. Duitsland, Belgi' en het Verenigd Koninkrijk (VK) zijn de belangrijkste exportlanden voor Nederland. De export naar Duitsland en Belgi' laat al jaren een groei zien."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 29
+    },
+    {
+      "q": "Volgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een hogere afzet. Hier staan drie economische verschijnselen: 1 hogere arbeidsproductiviteit 2 lagere kosten per product 3 betere concurrentiepositie van Nederlandse zuivelboeren In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "options": [
+        "inzet melkrobot  1  2  3  hogere afzet",
+        "inzet melkrobot  1  3  2  hogere afzet",
+        "inzet melkrobot  2  1  3  hogere afzet",
+        "inzet melkrobot  2  3  1  hogere afzet",
+        "inzet melkrobot  3  1  2  hogere afzet F inzet melkrobot  3  2  1  hogere afzet Een huis zonder gas Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en 10 in de bijlage. In Nederland is een groot tekort aan huurwoningen. Daardoor gaan mensen op zoek naar een koopwoning. Germaine is al twee jaar op zoek naar een koopwoning. Zij is niet de enige. De vraag naar koopwoningen stijgt, maar het aanbod blijft vrijwel gelijk. vraag en aanbod op de koopwoningmarkt Gebruik de grafiek."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 32
+    },
+    {
+      "q": "Germaine: \"Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.\" Wat is een juiste samenvatting van Germaines bewering?",
+      "options": [
+        "De besparing op energiekosten is hoger dan de te ontvangen rente.",
+        "De besparing op energiekosten is lager dan de te ontvangen rente.",
+        "Geld lenen is goedkoper dan de investering in een warmtepomp.",
+        "Geld lenen is duurder dan de investering in een warmtepomp."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 37
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 26,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 27,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 28,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 30,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 34,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 36,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 39,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 42,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    }
+  ]
+}

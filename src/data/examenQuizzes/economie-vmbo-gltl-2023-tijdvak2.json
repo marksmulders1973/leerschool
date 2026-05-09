@@ -1,0 +1,306 @@
+{
+  "id": "economie-vmbo-gltl-2023-tijdvak2",
+  "meta": {
+    "vak": "economie",
+    "niveau": "vmbo-gltl",
+    "jaar": 2023,
+    "tijdvak": 2
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "De katoenboeren in de VS ontvingen overheidssubsidie. De katoenboeren uit Burkina Faso, die geen overheidssubsidie ontvingen, konden daardoor slecht concurreren met de katoenboeren uit de VS op de wereldmarkt. Welke grafiek geeft het gevolg van deze overheidssubsidie in de VS op de wereldmarktprijs juist weer?",
+      "options": [
+        "grafiek a",
+        "grafiek b",
+        "grafiek c",
+        "grafiek d"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 7
+    },
+    {
+      "q": "Katoenboeren in Burkina Faso verdienen te weinig om te kunnen investeren in technische hulpmiddelen. Zo ontstaat er een vicieuze cirkel in Burkina Faso en kunnen de katoenboeren niet concurreren op de wereldmarkt. Hieronder staan vijf economische verschijnselen: 1 gebrek aan technische hulpmiddelen 2 weinig winst voor katoenboeren 3 hoge loonkosten per kilogram katoen 4 lage arbeidsproductiviteit 5 weinig investeringen in technische hulpmiddelen Welke van onderstaande vicieuze cirkels laat de gevolgen zien van het gebrek aan technische hulpmiddelen in de landbouw?",
+      "options": [
+        "cirkel I",
+        "cirkel II",
+        "cirkel III",
+        "cirkel IV Katoenplanten hebben erg veel water nodig en er wordt veel gebruik gemaakt van bestrijdingsmiddelen. De Verenigde Naties (VN) stimuleren katoenboeren om duurzaam te gaan verbouwen. Duurzame verbouw kost veel minder water. Tegelijkertijd is er meer water beschikbaar voor de inwoners van Burkina Faso. Gebruik informatiebron 3."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 9
+    },
+    {
+      "q": "De OZB is een belangrijke inkomstenbron van een gemeente. Welke inkomstenbron heeft een gemeente nog meer?",
+      "options": [
+        "afvalstoffenheffing",
+        "belasting toegevoegde waarde (btw)",
+        "loonheffing",
+        "vennootschapsbelasting De WOZ-waarde van alle 7,5 miljoen woningen in Nederland wordt elk jaar door onafhankelijke woningtaxateurs voor de gemeente getaxeerd."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 12
+    },
+    {
+      "q": "Adriaan moet de WOZ-waarde ook invullen in de aangifte inkomstenbelasting. Waarvoor wordt de WOZ-waarde gebruikt bij de aangifte inkomstenbelasting?",
+      "options": [
+        "om de hoogte van de aftrekposten te bepalen",
+        "om de hoogte van de heffingskortingen te bepalen",
+        "om de hypotheekrenteaftrek te bepalen",
+        "om het eigenwoningforfait te bepalen Adriaan rekent uit wat hij moet betalen aan OZB. Zijn Poolse vriendin Alicja woont in Breda en betaalt  305,87 OZB voor een woning met dezelfde WOZ-waarde. Gebruik informatiebron 4 en 5."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 14
+    },
+    {
+      "q": "De mbo-opleidingen met de hoogste baanzekerheid en het hoogste bruto- maandinkomen zijn:",
+      "options": [
+        "mode/kleding en groothandel/distributie",
+        "operationele techniek en machinebouw",
+        "procestechniek en scheepvaart",
+        "toerisme en bedrijfsadministratie Laila zit in het laatste jaar van het mbo en twijfelt tussen werken in de gezondheidszorg of doorstuderen op het hbo. Ze bekijkt de tabel met de top vijf van de hbo-opleidingen met het hoogste startsalaris. Haar eerste keus is verloskunde. Gebruik informatiebron 7."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 18
+    },
+    {
+      "q": "Inflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen ten opzichte van het vorige jaar?",
+      "options": [
+        "als de nominale loondaling in procenten hoger is dan de inflatie",
+        "als de nominale loonstijging in procenten hoger is dan de inflatie",
+        "als de nominale loonstijging in procenten lager is dan de inflatie"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 26
+    },
+    {
+      "q": "De ECB is niet van plan om het rentebeleid aan te passen. Er zijn echter nog andere maatregelen om de koopkracht van burgers op peil te houden. Met welk van onderstaande maatregelen kan de koopkracht op peil gehouden worden?",
+      "options": [
+        "vergroting van de winstmarges door bedrijven",
+        "verhoging van de btw",
+        "verlaging van de heffingskortingen",
+        "volledige prijscompensatie in de lonen Handelsoorlog Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 in de bijlage. In de Verenigde Staten (VS) worden veel Chinese grondstoffen en halffabricaten, zoals aluminium en staal, gebruikt bij de productie van goederen. De president van de VS is in 2017 gestart met het heffen van invoerrechten op Chinees staal en aluminium."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 27
+    },
+    {
+      "q": "Wat is een gevolg voor bedrijven in de VS als er invoerrechten geheven worden op Chinees staal?",
+      "options": [
+        "Bedrijven in de VS kopen meer staal uit eigen land, omdat de importprijzen van Chinees staal dalen.",
+        "Bedrijven in de VS kopen meer staal uit eigen land, omdat de importprijzen van Chinees staal stijgen.",
+        "Bedrijven in de VS kopen minder staal uit eigen land, omdat de importprijzen van Chinees staal dalen.",
+        "Bedrijven in de VS kopen minder staal uit eigen land, omdat de importprijzen van Chinees staal stijgen."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 28
+    },
+    {
+      "q": "Wat gebeurt er met de koers van de dollar als China in grote hoeveelheden dollars opkoopt?",
+      "options": [
+        "Door de grote Chinese vraag naar dollars daalt de koers van de dollar.",
+        "Door de grote Chinese vraag naar dollars stijgt de koers van de dollar.",
+        "Door het grote Chinese aanbod van dollars daalt de koers van de dollar.",
+        "Door het grote Chinese aanbod van dollars stijgt de koers van de dollar."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 30
+    },
+    {
+      "q": "In welke regel staan de juiste benamingen van de geldstromen (1), (2) en (3) in het schema?",
+      "options": [
+        "(1) belastingen (2) consumptieve bestedingen (3) rente",
+        "(1) belastingen (2) investeringen (3) rente",
+        "(1) uitkeringen (2) consumptieve bestedingen (3) rente",
+        "(1) uitkeringen (2) investeringen (3) rente"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 34
+    },
+    {
+      "q": "Spaargeld levert nauwelijks rente op. Tegelijkertijd moeten huishoudens met veel spaargeld belasting betalen over dit spaargeld. Hoe noemen we deze belasting?",
+      "options": [
+        "belasting toegevoegde waarde",
+        "loonheffing",
+        "onroerendezaakbelasting",
+        "vermogensrendementsheffing"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 36
+    },
+    {
+      "q": "Hieronder staan vijf economische verschijnselen: 1 Meer mensen hebben betaald werk. 2 De bestedingen van consumenten nemen toe. 3 De investering van ondernemingen nemen toe. 4 De inkomsten bij ondernemingen nemen toe. 5 Het nationaal inkomen van het land groeit. In welke cirkel staan deze verschijnselen zo dat het positieve effect van een hoge arbeidsparticipatie juist wordt weergegeven?",
+      "options": [
+        "cirkel I",
+        "cirkel II",
+        "cirkel III",
+        "cirkel IV In het Europees onderzoek naar de arbeidsmarkt staat dat 63% van de Nederlandse vrouwen werkt."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 39
+    },
+    {
+      "q": "Welke conclusie is juist?",
+      "options": [
+        "De gemiddelde vmbo-er is ouder dan de gemiddelde havo- of vwo- leerling.",
+        "Havo-scholieren hebben relatief vaker een bijbaan dan vwo-ers en vmbo-ers.",
+        "In 2018 is de arbeidsparticipatie van scholieren toegenomen ten opzichte van voorgaande jaren.",
+        "Jongens hebben vaker betaald werk dan meisjes."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 42
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 44,
+      "reden": "open/complex"
+    }
+  ]
+}

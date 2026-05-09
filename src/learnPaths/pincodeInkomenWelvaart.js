@@ -207,6 +207,14 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wel verschil.", "Bruto is altijd MEER.", "Geldt voor iedereen."],
       },
+    
+      {
+        q: "🎓 Examen 2023-T1 V4: De gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen door huishoudens. Hoe worden deze subsidies die de huishoudens van de gemeente ontvangen genoemd?",
+        options: ["inkomen uit arbeid", "inkomen uit bezit", "inkomen uit overdrachten", "inkomen uit vermogen Volgens de informatiebrochure van de gemeente is er een regeling omtrent asbestdaken en zonnepanelen. De familie De Gaaijer uit Zonhoven wil het oude asbestdak van 300 m2 vervange"],
+        answer: 2,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2023-T1 V4:",
+      },
     ],
   },
   // ─── Stap 4: Inkomensverdeling ───────────────────────────
@@ -261,6 +269,14 @@ const steps = [
         options: ["Gemiddelde wordt door enkele extremen omhoog getrokken", "Geen verschil", "Mediaan is altijd hoger", "Gemiddelde is voor mannen, mediaan voor vrouwen"],
         answer: 0,
         wrongHints: [null, "Wel verschil.", "Gemiddelde is meestal hoger.", "Geen geslacht-onderscheid."],
+      },
+    
+      {
+        q: "🎓 Examen 2025-T2 V39: Wat wordt bedoelt met het begrip modaal inkomen?",
+        options: ["Het afgesproken minimum inkomen als je werkt in loondienst.", "Het gemiddelde inkomen in Nederland.", "Het inkomen dat in Nederland het meeste voorkomt.", "Het netto inkomen dat je verdient als je werkt in loondienst. Jan en zijn gezin stonden symbool voor de `gewone burger'. Veel burgers konden zich hierin herkennen en begrepen de informatie daardoor be"],
+        answer: 2,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2025-T2 V39:",
       },
     ],
   },
@@ -320,6 +336,30 @@ const steps = [
         options: ["Reëel = nominale stijging min inflatie (echte koopkracht)", "Geen verschil", "Nominaal is altijd hoger dan reëel", "Reëel is voor mannen"],
         answer: 0,
         wrongHints: [null, "Wel verschil.", "Nominaal kan ook lager zijn (bij hoge inflatie).", "Geen geslacht-onderscheid."],
+      },
+    
+      {
+        q: "🎓 Examen 2023-T2 V26: Inflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen ten opzichte van het vorige jaar?",
+        options: ["als de nominale loondaling in procenten hoger is dan de inflatie", "als de nominale loonstijging in procenten hoger is dan de inflatie", "als de nominale loonstijging in procenten lager is dan de inflatie"],
+        answer: 1,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2023-T2 V26:",
+      },
+    
+      {
+        q: "🎓 Examen 2025-T1 V2: De welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent?",
+        options: ["de belastingen", "de inkomensverdeling", "de veranderde prijzen", "zelfvoorziening Gebruik informatiebron 1."],
+        answer: 2,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2025-T1 V2:",
+      },
+    
+      {
+        q: "🎓 Examen 2025-T2 V43: Het modale inkomen wordt nog vaak gebruikt om de koopkracht te onderzoeken. Waar moet rekening mee gehouden worden bij het bepalen van de koopkracht?",
+        options: ["De inflatie van het land.", "De inkomensverdeling in het land.", "De oppervlakte van het land.", "Het aantal inwoners in het land."],
+        answer: 0,
+        wrongHints: [null, null, null, null],
+        examenBron: "🎓 Examen 2025-T2 V43:",
       },
     ],
   },

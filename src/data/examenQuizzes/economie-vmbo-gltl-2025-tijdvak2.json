@@ -1,0 +1,254 @@
+{
+  "id": "economie-vmbo-gltl-2025-tijdvak2",
+  "meta": {
+    "vak": "economie",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 2
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Begroten leidt tot afname van geldstress. Wat is een begroting?",
+      "options": [
+        "Het maken van een plan hoe je meer inkomsten kunt ontvangen.",
+        "Het maken van een plan hoe je op de uitgaven kunt bezuinigen.",
+        "Je huidige bezittingen en schulden op een rijtje zetten.",
+        "Je verwachte inkomsten en uitgaven op een rijtje zetten. In 2022 is er een campagne begonnen om jonge mensen bewuster te maken van hun financi'le activiteiten. Uit onderzoek zijn nu de volgende conclusies getrokken: 1 Jonge mensen zijn een financi'le administratie bijhouden belangrijker gaan vinden. 2 Jonge mensen zijn sparen belangrijker gaan vinden. 3 Jonge mensen zijn in 2024 budgetteren belangrijker gaan vinden. Gebruik informatiebron 1."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 3
+    },
+    {
+      "q": "Wanneer is een werkgever bereid om de lonen van werknemers te verhogen?",
+      "options": [
+        "Als de arbeidsproductiviteit meer stijgt dan de lonen.",
+        "Als de lonen meer stijgen dan de arbeidsproductiviteit.",
+        "Als de lonen meer stijgen dan het aantal arbeidsjaren.",
+        "Als het aantal arbeidsjaren meer stijgt dan de arbeidsproductiviteit."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 8
+    },
+    {
+      "q": "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van de inkomensverdeling in een land?",
+      "options": [
+        "Tot denivellering: het verandert in het voordeel van de hoge inkomens.",
+        "Tot denivellering: het verandert in het voordeel van de lage inkomens.",
+        "Tot nivellering: het verandert in het voordeel van de hoge inkomens.",
+        "Tot nivellering: het verandert in het voordeel van de lage inkomens. De hulp op de juiste plek Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 2 in de bijlage. Ha'ti is een ontwikkelingsland in Noord-Amerika. Ha'ti wordt regelmatig getroffen door aardbevingen en overstromingen. Ha'ti probeert elke keer weer te herstellen na een ramp. Bij dit herstel is Ha'ti vaak afhankelijk van hulp."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 16
+    },
+    {
+      "q": "In welke Lorenzcurve wordt bovenstaande bewering juist weergegeven?",
+      "options": [
+        "Lorenzcurve a",
+        "Lorenzcurve b",
+        "Lorenzcurve c",
+        "Lorenzcurve d"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 20
+    },
+    {
+      "q": "Hier staan vier economische verschijnselen. 1 Meer ondernemers ontdekken de buitenlandse dropmarkt. 2 De verkoopprijzen worden lager. 3 De concurrentie wordt groter. 4 DuoMix zal bij gelijkblijvende afzet minder winst behalen. In welke regel staan deze verschijnselen zo, dat een logische gedachtegang ontstaat?",
+      "options": [
+        "1234",
+        "1243",
+        "1324",
+        "1342",
+        "1432 F 1423"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 26
+    },
+    {
+      "q": "Wat wordt bedoelt met het begrip modaal inkomen?",
+      "options": [
+        "Het afgesproken minimum inkomen als je werkt in loondienst.",
+        "Het gemiddelde inkomen in Nederland.",
+        "Het inkomen dat in Nederland het meeste voorkomt.",
+        "Het netto inkomen dat je verdient als je werkt in loondienst. Jan en zijn gezin stonden symbool voor de `gewone burger'. Veel burgers konden zich hierin herkennen en begrepen de informatie daardoor beter. Gebruik informatiebron 5."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 39
+    },
+    {
+      "q": "Het modale inkomen wordt nog vaak gebruikt om de koopkracht te onderzoeken. Waar moet rekening mee gehouden worden bij het bepalen van de koopkracht?",
+      "options": [
+        "De inflatie van het land.",
+        "De inkomensverdeling in het land.",
+        "De oppervlakte van het land.",
+        "Het aantal inwoners in het land."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 43
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 27,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 28,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 30,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 34,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 36,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 42,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 44,
+      "reden": "open/complex"
+    }
+  ]
+}
