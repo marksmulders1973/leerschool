@@ -44,36 +44,15 @@ const bronDog4fun = {
   body: "Wij halen uw hond bij u thuis op met een van onze speciaal ingerichte verwarmde bussen en nemen uw hond mee naar ons eigen ruime en omheinde uitlaatterrein in de duinen. Uw hond kan zo'n twee uur lekker rennen, spelen en dollen met soortgenoten onder deskundig toezicht van twee Wibevo-gecertificeerde hondenbegeleiders.\n\nTarieven abonnement (per hond per week):\n• 3 maal per week: € 29\n• 4 maal per week: € 37\n• 5 maal per week: € 47,50",
 };
 
-const bronExport = {
-  titel: "informatiebron 8 — handel Nederland met buitenland (waarde × miljard)",
-  tableData: {
-    headers: ["", "2010", "2018", "2022"],
-    rows: [
-      ["import agrarische producten", "37,8", "63,5", "80,2"],
-      ["export agrarische producten", "65,4", "94,5", "122,3"],
-      ["totaal handelsoverschot agro", "27,6", "31,0", "42,1"],
-    ],
-  },
-  body: "(Indicatieve cijfers — voor exact getallen zie de officiële PDF)",
-};
-
-const bronZuivel = {
-  titel: "Concurrentie zuivelboeren — uitleg melkrobot",
-  body: "Volgens Bram kunnen Nederlandse zuivelboeren dankzij de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot:\n• verlaagt arbeidskosten per liter melk\n• verhoogt productiviteit\n• maakt 24/7 melken mogelijk zonder personeel\n• verhoogt dierwelzijn (koe bepaalt zelf wanneer)",
-};
-
-const bronSparenBeleggen = {
-  titel: "Sparen vs beleggen — Germaine's overweging",
-  body: "Germaine zegt: \"Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat is op den duur slimmer.\"\n\nFeiten:\n• Spaarrente bank: ~1-2%/jaar\n• Inflatie: ~3%/jaar → koopkracht-verlies bij sparen\n• Warmtepomp: hoge investering (~€10.000), bespaart ~€500-1.500/jaar gas\n• Terugverdientijd: 7-15 jaar\n• Financiering: lening of eigen middelen",
-};
+// Geen verzonnen bronnen — V29 + V37 zijn conceptueel oplosbaar zonder bijlage
 
 const chapters = [
   { letter: "A", title: "Sint-Maarten — economie", emoji: "🏝️", from: 0, to: 2 },
   { letter: "B", title: "De gemeente", emoji: "🏛️", from: 3, to: 4 },
   { letter: "C", title: "Inkomen jongeren", emoji: "💰", from: 5, to: 5 },
   { letter: "D", title: "Dog4fun ondernemen", emoji: "🐕", from: 6, to: 6 },
-  { letter: "E", title: "Buitenland", emoji: "🌍", from: 7, to: 8 },
-  { letter: "F", title: "Sparen of beleggen", emoji: "💸", from: 9, to: 9 },
+  { letter: "E", title: "Buitenland", emoji: "🌍", from: 7, to: 7 },
+  { letter: "F", title: "Sparen of beleggen", emoji: "💸", from: 8, to: 8 },
 ];
 
 const steps = [
@@ -289,39 +268,13 @@ const steps = [
         ],
         explanation: "Hoewel het AANTAL geïmporteerd sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
-        bronTekst: bronExport,
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
       },
     ],
   },
-  // ─── Vraag 32 — Concurrentie zuivelboeren ──────────────────
-  {
-    title: "Vraag 32 — melkrobot en concurrentie",
-    explanation: "Echte examenvraag uit VMBO-GL/TL economie 2025 tijdvak 1, vraag 32. Doorklik voor de Pincode-uitleg in **Ondernemen**.",
-    emoji: "🎓",
-    checks: [
-      {
-        q: "Volgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een lagere kostprijs per liter melk. Hoe komt dat?",
-        options: [
-          "De melkrobot vergroot de afzetmarkt van de Nederlandse zuivelboeren.",
-          "De melkrobot verhoogt de productiviteit per zuivelboer.",
-          "De melkrobot verlaagt de variabele kosten van een liter melk.",
-          "De melkrobot zorgt voor een hogere kwaliteit melk.",
-        ],
-        answer: 1,
-        wrongHints: [
-          "Afzetmarkt is iets anders dan kostprijs per liter.",
-          null,
-          "Variabele kosten kunnen ook gelijk blijven; productiviteit is wat hier telt.",
-          "Kwaliteit beïnvloedt prijs, niet primair de kostprijs per liter.",
-        ],
-        explanation: "Een melkrobot zorgt dat één boer méér koeien kan beheren in dezelfde tijd. Hogere productiviteit (meer output per uur arbeid) → lagere kostprijs per liter → beter kunnen concurreren.",
-        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 32",
-        bronTekst: bronZuivel,
-        leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
-      },
-    ],
-  },
+  // ─── Vraag 32 GESKIPT: was volgorde-vraag (1-2-3 in juiste volgorde, 6 opties A-F),
+  // niet een 4-MC vraag. Parser pakte het verkeerd. Voor zuivelboeren-onderwerp
+  // verwijst leerling naar Pincode 'Ondernemen' stap 'Vraag en aanbod'.
   // ─── Vraag 37 — Sparen of beleggen ──────────────────────────
   {
     title: "Vraag 37 — investeren in warmtepomp",
@@ -329,23 +282,22 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Germaine: 'Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat is op den duur slimmer.' Welke economische redenering past het beste bij Germaine's stelling?",
+        q: "Germaine: 'Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.' Wat is een juiste samenvatting van Germaines bewering?",
         options: [
-          "De rente op een lening is hoger dan de rente op een spaarrekening.",
-          "Een investering in een warmtepomp levert meer rendement op dan sparen.",
-          "Sparen wordt aantrekkelijker bij hoge inflatie.",
-          "Spaargeld levert door inflatie geen koopkracht op.",
+          "De besparing op energiekosten is hoger dan de te ontvangen rente.",
+          "De besparing op energiekosten is lager dan de te ontvangen rente.",
+          "Geld lenen is goedkoper dan de investering in een warmtepomp.",
+          "Geld lenen is duurder dan de investering in een warmtepomp.",
         ],
-        answer: 1,
+        answer: 0,
         wrongHints: [
-          "Klopt feitelijk vaak, maar Germaine's punt is over slim INVESTEREN.",
           null,
-          "Tegendeel — bij hoge inflatie verliest sparen koopkracht.",
-          "Klopt feitelijk maar is meer een aanvullend argument; kern is rendement van warmtepomp.",
+          "Tegendeel — als besparing lager was dan rente, zou sparen juist beter zijn.",
+          "Germaine zegt iets over het terugverdienen via energie-besparing, niet vergelijking lening vs warmtepomp-prijs.",
+          "Idem als C — niet de kern van Germaine's redenering.",
         ],
-        explanation: "Als een investering (warmtepomp) jaarlijks meer bespaart dan de rente op spaargeld oplevert, is het rendementsmatig slimmer om te investeren. Dat is precies Germaine's redenering.",
+        explanation: "Germaine's redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
-        bronTekst: bronSparenBeleggen,
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
       },
     ],
