@@ -76,7 +76,14 @@ import atoombouwScheikunde from "./atoombouwScheikunde.js";
 import chemischeReactiesScheikunde from "./chemischeReactiesScheikunde.js";
 import vraagAanbodEconomie from "./vraagAanbodEconomie.js";
 import balansBeco from "./balansBeco.js";
-import pincodeEconomieVmboGt4 from "./pincodeEconomieVmboGt4.js";
+import pincodeInkomenWelvaart from "./pincodeInkomenWelvaart.js";
+import pincodeGeldSparenLenen from "./pincodeGeldSparenLenen.js";
+import pincodeOndernemen from "./pincodeOndernemen.js";
+import pincodeWerkArbeidsmarkt from "./pincodeWerkArbeidsmarkt.js";
+import pincodeOverheid from "./pincodeOverheid.js";
+import pincodeBelasting from "./pincodeBelasting.js";
+import pincodeBuitenlandEu from "./pincodeBuitenlandEu.js";
+import pincodeOntwikkelingslanden from "./pincodeOntwikkelingslanden.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
@@ -177,7 +184,14 @@ export const ALL_LEARN_PATHS = {
   "chemische-reacties-scheikunde": chemischeReactiesScheikunde,
   // Economie
   "vraag-aanbod-economie": vraagAanbodEconomie,
-  "pincode-economie-vmbo-gt-4": pincodeEconomieVmboGt4,
+  "pincode-inkomen-welvaart": pincodeInkomenWelvaart,
+  "pincode-geld-sparen-lenen": pincodeGeldSparenLenen,
+  "pincode-ondernemen": pincodeOndernemen,
+  "pincode-werk-arbeidsmarkt": pincodeWerkArbeidsmarkt,
+  "pincode-overheid": pincodeOverheid,
+  "pincode-belasting": pincodeBelasting,
+  "pincode-buitenland-eu": pincodeBuitenlandEu,
+  "pincode-ontwikkelingslanden": pincodeOntwikkelingslanden,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
   // Duits
