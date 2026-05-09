@@ -54,14 +54,20 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // anders PO. Gebruiker kan handmatig switchen.
   const [vakModus, setVakModus] = useState(userSchoolType ? "vo" : "po");
   const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
-  // Tel paden per subject voor het juiste niveau (PO=groep*, VO=klas*).
+  // Tel paden per subject voor het juiste niveau.
+  // PO = level start met "groep".
+  // VO = level start met "klas", "vmbo", "havo", "vwo" of "mavo" — zo vallen
+  // paden als "vmbo-gt-4" (Pincode-hoofdstukken) en "havo4-5" ook in de
+  // VO-telling, niet alleen "klas3-havo4"-stijl labels.
   const padenPerVak = useMemo(() => {
-    const prefix = vakModus === "vo" ? "klas" : "groep";
+    const isPo = vakModus === "po";
+    const isVoLevel = (lvl) => /^(klas|vmbo|mavo|havo|vwo)/.test(lvl);
     const counts = {};
     Object.values(ALL_LEARN_PATHS).forEach(p => {
       if (!p?.subject) return;
       const lvl = (p.level || "").toLowerCase();
-      if (!lvl.startsWith(prefix)) return;
+      const matches = isPo ? lvl.startsWith("groep") : isVoLevel(lvl);
+      if (!matches) return;
       counts[p.subject] = (counts[p.subject] || 0) + 1;
     });
     return counts;
