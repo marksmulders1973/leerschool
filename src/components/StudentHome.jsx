@@ -52,7 +52,14 @@ const VAKKEN_VO = [
 export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
-  const [vakModus, setVakModus] = useState(userSchoolType ? "vo" : "po");
+  // Detecteer of de leerling al een niveau heeft gekozen — dan is de
+  // PO/VO-toggle dubbel werk en verbergen we 'm. Ouders met meerdere
+  // kinderen kunnen via Instellingen alsnog wisselen.
+  const isVoLevel = (lvl) => /^(klas|vmbo|mavo|havo|vwo)/.test(String(lvl || "").toLowerCase());
+  const isPoLevel = (lvl) => /^groep/.test(String(lvl || "").toLowerCase());
+  const niveauVastgelegd = !!(userSchoolType || isVoLevel(userLevel) || isPoLevel(userLevel));
+  const initieleVakModus = userSchoolType || isVoLevel(userLevel) ? "vo" : "po";
+  const [vakModus, setVakModus] = useState(initieleVakModus);
   const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
   // Tel paden per subject voor het juiste niveau.
   // PO = level start met "groep".
@@ -175,46 +182,48 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           </div>
         )}
 
-        {/* PO/VO-toggle + vakkenkeuze-grid (audit 2 M2 — Mark's screenshot 2):
-            kind landt eerst op concrete vakkeuze ipv abstracte "Test je kennis".
-            Pim's klacht "ik wil REKENEN zien" wordt hiermee opgelost. Daarna
-            volgt de bestaande StudentHome-content (kwartier, streak, weakest,
-            herhaal, opdrachten, recent) voor wie doorscrollt — twee vliegen
-            in één pagina. */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-          {[
-            { id: "po", label: "Basisschool", desc: "groep 1-8", emoji: "🎒" },
-            { id: "vo", label: "Middelbaar", desc: "klas 1-6", emoji: "🎓" },
-          ].map(t => {
-            const sel = vakModus === t.id;
-            return (
-              <button
-                key={t.id}
-                onClick={() => { SoundEngine.play("click"); setVakModus(t.id); }}
-                style={{
-                  flex: 1,
-                  padding: "10px 12px",
-                  borderRadius: 12,
-                  border: sel ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.12)",
-                  background: sel ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
-                  color: sel ? "var(--color-brand-secondary)" : "rgba(255,255,255,0.6)",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 13,
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 6,
-                }}
-              >
-                <span style={{ fontSize: 16 }} aria-hidden="true">{t.emoji}</span>
-                <span>{t.label}</span>
-                <span style={{ opacity: 0.7, fontWeight: 500, fontSize: 11 }}>{t.desc}</span>
-              </button>
-            );
-          })}
-        </div>
+        {/* PO/VO-toggle + vakkenkeuze-grid (audit 2 M2):
+            Toggle is alleen prominent zichtbaar als de leerling nog GEEN
+            niveau heeft gekozen. Heeft hij dat wel (userLevel/userSchoolType
+            bekend), dan tonen we onderaan een kleine "andere niveau? wissel"
+            link voor het edge-geval (broertje/zusje, verkennen). Voorkomt dat
+            een leerling die net "Groep 4" koos opnieuw moet beslissen. */}
+        {!niveauVastgelegd && (
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            {[
+              { id: "po", label: "Basisschool", desc: "groep 1-8", emoji: "🎒" },
+              { id: "vo", label: "Middelbaar", desc: "klas 1-6", emoji: "🎓" },
+            ].map(t => {
+              const sel = vakModus === t.id;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => { SoundEngine.play("click"); setVakModus(t.id); }}
+                  style={{
+                    flex: 1,
+                    padding: "10px 12px",
+                    borderRadius: 12,
+                    border: sel ? "2px solid #00d4ff" : "1px solid rgba(255,255,255,0.12)",
+                    background: sel ? "rgba(0,212,255,0.12)" : "rgba(255,255,255,0.04)",
+                    color: sel ? "var(--color-brand-secondary)" : "rgba(255,255,255,0.6)",
+                    fontFamily: "var(--font-display)",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 6,
+                  }}
+                >
+                  <span style={{ fontSize: 16 }} aria-hidden="true">{t.emoji}</span>
+                  <span>{t.label}</span>
+                  <span style={{ opacity: 0.7, fontWeight: 500, fontSize: 11 }}>{t.desc}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
 
         <h3 style={{ ...styles.sectionTitle, marginTop: 0, marginBottom: 10 }}>
           Kies je vak — leren of oefenen?
@@ -343,6 +352,32 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             );
           })}
         </div>
+
+        {/* Subtiele wissel-link voor leerlingen waarbij niveau al vast staat
+            (broertje/zusje, verkennen). Klik = toon de toggle weer + wissel. */}
+        {niveauVastgelegd && (
+          <div style={{ textAlign: "center", marginTop: 4, marginBottom: 14 }}>
+            <button
+              onClick={() => {
+                SoundEngine.play("click");
+                setVakModus(vakModus === "po" ? "vo" : "po");
+              }}
+              style={{
+                background: "none",
+                border: "none",
+                color: "rgba(255,255,255,0.4)",
+                fontSize: 11,
+                cursor: "pointer",
+                textDecoration: "underline",
+                padding: "4px 8px",
+              }}
+            >
+              {vakModus === "po"
+                ? "Andere niveau? Bekijk middelbaar →"
+                : "Andere niveau? Bekijk basisschool →"}
+            </button>
+          </div>
+        )}
 
         {/* Oude examens-bibliotheek (Mark idee 2026-05-08) — link onder de
             vakken-grid. Werkt voor alle vakken, niet alleen Cito. */}
