@@ -273,11 +273,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 37_\n\nGermaine: \"Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.\" Wat is een juiste samenvatting van Germaines bewering?",
+        q: "Germaine: \"Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.\" Wat is een juiste samenvatting van Germaines bewering?",
         options: ["De besparing op energiekosten is hoger dan de te ontvangen rente.", "De besparing op energiekosten is lager dan de te ontvangen rente.", "Geld lenen is goedkoper dan de investering in een warmtepomp.", "Geld lenen is duurder dan de investering in een warmtepomp."],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 37_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
       },
     ],
   },
@@ -465,11 +465,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 3_\n\nBegroten leidt tot afname van geldstress. Wat is een begroting?",
+        q: "Begroten leidt tot afname van geldstress. Wat is een begroting?",
         options: ["Het maken van een plan hoe je meer inkomsten kunt ontvangen.", "Het maken van een plan hoe je op de uitgaven kunt bezuinigen.", "Je huidige bezittingen en schulden op een rijtje zetten.", "Je verwachte inkomsten en uitgaven op een rijtje zetten. In 2022 is er een campagne begonnen om jonge mensen bewuster te maken van hun financi'le activiteiten. Uit onderzoek zijn nu de volgende conclu"],
         answer: 3,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 3_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 3",
       },
     ],
   },

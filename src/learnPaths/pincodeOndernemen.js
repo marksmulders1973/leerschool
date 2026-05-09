@@ -224,11 +224,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 36_\n\nVolgers van influencers hebben het gevoel dat zij een intieme band hebben met de influencers die zij volgen, een soortgelijke band als met een vriend of familielid. De be'nvloeding van influencers noemen we sociale be'nvloeding. Is er ook sprake van commerci'le be'nvloeding?",
+        q: "Volgers van influencers hebben het gevoel dat zij een intieme band hebben met de influencers die zij volgen, een soortgelijke band als met een vriend of familielid. De be'nvloeding van influencers noemen we sociale be'nvloeding. Is er ook sprake van commerci'le be'nvloeding?",
         options: ["Ja, het is be'nvloeding door consumenten met winstoogmerk.", "Ja, het is be'nvloeding door producenten met winstoogmerk.", "Nee, het is be'nvloeding door consumenten zonder winstoogmerk.", "Nee, het is be'nvloeding door producenten zonder winstoogmerk. Uitbreiden? Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 12 en 13 in de bijlage. Kaj en"],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 36_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 36",
       },
     ],
   },
@@ -300,11 +300,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 42_\n\nKaj vervolgt: \"Bovendien blijft de vraag naar onze producten stijgen, dus het is wijs om de verkoopprijs na productie-uitbreiding gelijk te houden.\" Welk gevolg voor de winstmarge van K2 bv heeft het gelijk houden van de verkoopprijs na de productie-uitbreiding?",
+        q: "Kaj vervolgt: \"Bovendien blijft de vraag naar onze producten stijgen, dus het is wijs om de verkoopprijs na productie-uitbreiding gelijk te houden.\" Welk gevolg voor de winstmarge van K2 bv heeft het gelijk houden van de verkoopprijs na de productie-uitbreiding?",
         options: ["De winstmarge daalt.", "De winstmarge stijgt.", "De winstmarge blijft gelijk. Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift. GT-0"],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 42_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 42",
       },
     ],
   },
@@ -429,19 +429,19 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 38_\n\nK2 bv biedt heterogene producten aan en er zijn veel concurrenten op de markt. Van welke marktvorm is hier sprake?",
+        q: "K2 bv biedt heterogene producten aan en er zijn veel concurrenten op de markt. Van welke marktvorm is hier sprake?",
         options: ["monopolie", "monopolistische concurrentie", "oligopolie", "volkomen concurrentie Ondanks de concurrentie blijft de vraag naar de producten van K2 bv stijgen. Kaj en Koen denken dat, als de verkoopprijzen gelijk blijven, binnenkort de productiecapaciteit volle"],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 38_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 38",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 7_\n\nVan welke marktvorm is er sprake bij de publieke omroepen?",
+        q: "Van welke marktvorm is er sprake bij de publieke omroepen?",
         options: ["van monopolie", "van monopolistische concurrentie", "van oligopolie", "van volkomen concurrentie"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 7_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 7",
       },
     ],
   },
@@ -516,19 +516,19 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 17_\n\nEen eigenaar van een bedrijf moet een ondernemingsvorm kiezen. Welke ondernemingsvorm moet Arjun kiezen, zodat hij niet hoofdelijk aansprakelijk is voor de schulden van het bedrijf?",
+        q: "Een eigenaar van een bedrijf moet een ondernemingsvorm kiezen. Welke ondernemingsvorm moet Arjun kiezen, zodat hij niet hoofdelijk aansprakelijk is voor de schulden van het bedrijf?",
         options: ["bv (besloten vennootschap)", "eenmanszaak", "vof (vennootschap onder firma)"],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 17_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 17",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 17_\n\nDe leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
+        q: "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
         options: ["besloten vennootschap (bv)", "eenmanszaak", "naamloze vennootschap (nv)", "vennootschap onder firma (vof) De klas doet eerst marktonderzoek in de wijk. Elke hondenbezitter heeft 1 hond. een vraag uit het onderzoek: Wij komen op woensdag-, vrijdag- en zaterdagmiddag langs uw "],
         answer: 3,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 17_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 17",
       },
     ],
   },

@@ -144,27 +144,27 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 12_\n\nDe OZB is een belangrijke inkomstenbron van een gemeente. Welke inkomstenbron heeft een gemeente nog meer?",
+        q: "De OZB is een belangrijke inkomstenbron van een gemeente. Welke inkomstenbron heeft een gemeente nog meer?",
         options: ["afvalstoffenheffing", "belasting toegevoegde waarde (btw)", "loonheffing", "vennootschapsbelasting De WOZ-waarde van alle 7,5 miljoen woningen in Nederland wordt elk jaar door onafhankelijke woningtaxateurs voor de gemeente getaxeerd."],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 12_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 12",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 8_\n\nWelke overheidstaken voert de gemeente uit?",
+        q: "Welke overheidstaken voert de gemeente uit?",
         options: ["Het onderhoud aan dijken, kanalen en waterwegen.", "Het uitgeven van een paspoort, identiteitskaart en rijbewijs.", "Het verstrekken van huur- en zorgtoeslag.", "Het verstrekken van uitkeringen, zoals de AOW."],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 8_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 8",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 9_\n\nEen gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
+        q: "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
         options: ["accijns", "motorrijtuigenbelasting", "onroerendezaakbelasting", "vennootschapsbelasting Het aantal gemeenten in Nederland daalt omdat veel kleine gemeenten worden samengevoegd tot nieuwe, grotere gemeenten. De gemeente Rijkwijk en de gemeente Armere worden samengev"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 9_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9",
       },
     ],
   },
@@ -232,11 +232,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 27_\n\nDe Nederlandse bevolking is op Prinsjesdag vooral benieuwd wat de plannen van de regering betekenen voor hun koopkracht. Wat wordt verstaan onder koopkracht?",
+        q: "De Nederlandse bevolking is op Prinsjesdag vooral benieuwd wat de plannen van de regering betekenen voor hun koopkracht. Wat wordt verstaan onder koopkracht?",
         options: ["het bruto-inkomen", "het netto-inkomen", "het nominaal inkomen", "het re'el inkomen"],
         answer: 3,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 27_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 27",
       },
     ],
   },
@@ -295,11 +295,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 30_\n\nWat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
+        q: "Wat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
         options: ["De inkomsten van de Italiaanse overheid zijn groter dan de uitgaven van de overheid.", "De inkomsten van de Italiaanse overheid zijn kleiner dan de uitgaven van de overheid.", "De inkomsten van de Italiaanse overheid zijn gestegen en de uitgaven gelijk gebleven."],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 30_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30",
       },
     ],
   },

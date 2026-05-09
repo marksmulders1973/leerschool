@@ -209,11 +209,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 4_\n\nDe gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen door huishoudens. Hoe worden deze subsidies die de huishoudens van de gemeente ontvangen genoemd?",
+        q: "De gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen door huishoudens. Hoe worden deze subsidies die de huishoudens van de gemeente ontvangen genoemd?",
         options: ["inkomen uit arbeid", "inkomen uit bezit", "inkomen uit overdrachten", "inkomen uit vermogen Volgens de informatiebrochure van de gemeente is er een regeling omtrent asbestdaken en zonnepanelen. De familie De Gaaijer uit Zonhoven wil het oude asbestdak van 300 m2 vervange"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 4_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 4",
       },
     ],
   },
@@ -272,11 +272,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 39_\n\nWat wordt bedoelt met het begrip modaal inkomen?",
+        q: "Wat wordt bedoelt met het begrip modaal inkomen?",
         options: ["Het afgesproken minimum inkomen als je werkt in loondienst.", "Het gemiddelde inkomen in Nederland.", "Het inkomen dat in Nederland het meeste voorkomt.", "Het netto inkomen dat je verdient als je werkt in loondienst. Jan en zijn gezin stonden symbool voor de `gewone burger'. Veel burgers konden zich hierin herkennen en begrepen de informatie daardoor be"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 39_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 39",
       },
     ],
   },
@@ -339,27 +339,27 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 26_\n\nInflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen ten opzichte van het vorige jaar?",
+        q: "Inflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen ten opzichte van het vorige jaar?",
         options: ["als de nominale loondaling in procenten hoger is dan de inflatie", "als de nominale loonstijging in procenten hoger is dan de inflatie", "als de nominale loonstijging in procenten lager is dan de inflatie"],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 26_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 26",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 2_\n\nDe welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent?",
+        q: "De welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent?",
         options: ["de belastingen", "de inkomensverdeling", "de veranderde prijzen", "zelfvoorziening Gebruik informatiebron 1."],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 2_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 2",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 43_\n\nHet modale inkomen wordt nog vaak gebruikt om de koopkracht te onderzoeken. Waar moet rekening mee gehouden worden bij het bepalen van de koopkracht?",
+        q: "Het modale inkomen wordt nog vaak gebruikt om de koopkracht te onderzoeken. Waar moet rekening mee gehouden worden bij het bepalen van de koopkracht?",
         options: ["De inflatie van het land.", "De inkomensverdeling in het land.", "De oppervlakte van het land.", "Het aantal inwoners in het land."],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 43_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 43",
       },
     ],
   },

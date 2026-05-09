@@ -707,6 +707,22 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
+            {currentCheck.examenBron && (
+              <div style={{
+                display: "inline-block",
+                padding: "4px 10px",
+                marginBottom: 10,
+                background: "rgba(255,213,79,0.15)",
+                border: "1px solid rgba(255,213,79,0.45)",
+                borderRadius: 999,
+                fontSize: 11,
+                fontWeight: 700,
+                color: "#ffd54f",
+                fontFamily: "var(--font-body)",
+              }}>
+                {currentCheck.examenBron}
+              </div>
+            )}
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>

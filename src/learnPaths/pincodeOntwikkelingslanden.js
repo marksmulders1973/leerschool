@@ -387,19 +387,19 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 28_\n\nDe inkoop en verkoop van fairtrade producten is een vorm van particuliere ontwikkelingshulp. Hoe noemen we deze hulp?",
+        q: "De inkoop en verkoop van fairtrade producten is een vorm van particuliere ontwikkelingshulp. Hoe noemen we deze hulp?",
         options: ["bilaterale hulp", "noodhulp", "structurele hulp"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 28_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 28",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 32_\n\nMarcia gaat ook fairtrade koffie verkopen. Marcia: \"Als alle restaurants hier fairtrade koffie zouden verkopen, is dat echt een bijdrage aan een meer eerlijke verdeling van de inkomens in de wereld.\" Hieronder staan vijf economische verschijnselen. 1 de koffieboer krijgt een eerlijke prijs 2 de koffieboeren kunnen meer investeren 3 er ontstaat meer werkgelegenheid 4 de werknemers ontvangen meer inkomen 5 de inkomens in de wereld worden gelijkmatiger verdeeld In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+        q: "Marcia gaat ook fairtrade koffie verkopen. Marcia: \"Als alle restaurants hier fairtrade koffie zouden verkopen, is dat echt een bijdrage aan een meer eerlijke verdeling van de inkomens in de wereld.\" Hieronder staan vijf economische verschijnselen. 1 de koffieboer krijgt een eerlijke prijs 2 de koffieboeren kunnen meer investeren 3 er ontstaat meer werkgelegenheid 4 de werknemers ontvangen meer inkomen 5 de inkomens in de wereld worden gelijkmatiger verdeeld In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
         options: ["12345", "12435", "13245", "13425", "14235 F 14325 Rijken worden rijker De familie Boot is blij. Tijdens de kredietcrisis in 2008 was hun vermogen gedaald, maar gelukkig stijgt dankzij economische groei hun vermogen weer langzaam. Je ber"],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 2, vraag 32_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 32",
       },
     ],
   },

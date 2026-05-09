@@ -201,11 +201,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 8_\n\nWanneer is een werkgever bereid om de lonen van werknemers te verhogen?",
+        q: "Wanneer is een werkgever bereid om de lonen van werknemers te verhogen?",
         options: ["Als de arbeidsproductiviteit meer stijgt dan de lonen.", "Als de lonen meer stijgen dan de arbeidsproductiviteit.", "Als de lonen meer stijgen dan het aantal arbeidsjaren.", "Als het aantal arbeidsjaren meer stijgt dan de arbeidsproductiviteit."],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 2, vraag 8_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 8",
       },
     ],
   },
@@ -324,11 +324,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 41_\n\nWelke soort werkloosheid ontstaat er door het verdwijnen van bedrijven naar het buitenland?",
+        q: "Welke soort werkloosheid ontstaat er door het verdwijnen van bedrijven naar het buitenland?",
         options: ["conjuncturele werkloosheid, het is de aanbodkant van de economie", "conjuncturele werkloosheid, het is de vraagkant van de economie", "structurele werkloosheid, het is de aanbodkant van de economie", "structurele werkloosheid, het is de vraagkant van de economie"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 41_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41",
       },
     ],
   },

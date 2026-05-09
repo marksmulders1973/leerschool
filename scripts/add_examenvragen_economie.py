@@ -93,22 +93,17 @@ def load_all_examenvragen():
 
 
 def render_check(vraag, label):
-    """Genereer een check-object als JS-string met examen-label bovenaan
-    de vraag (markdown-style, witregel ervoor zodat het visueel los
-    boven de echte vraag staat).
-
-    label is bv: '🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 6_'
-    Resultaat in q: '<label>\\n\\n<originele vraag>'
+    """Genereer een check-object als JS-string. Bron-info komt in
+    examenBron-veld; LearnPath.jsx rendert dat als gele badge BOVEN de
+    vraag. Q bevat alleen de schone vraagtekst.
     """
     q_clean = vraag["q"].replace('"', '\\"').replace("\n", " ").strip()
-    # Markdown: label boven, witregel, dan vraag
-    q_with_label = f"{label}\\n\\n{q_clean}"
     options_clean = [o.replace('"', '\\"').replace("\n", " ").strip() for o in vraag["options"]]
     options_clean = [o[:200] for o in options_clean]
     options_str = ", ".join([f'"{o}"' for o in options_clean])
     return (
         '      {\n'
-        f'        q: "{q_with_label}",\n'
+        f'        q: "{q_clean}",\n'
         f'        options: [{options_str}],\n'
         f'        answer: {vraag["answer"]},\n'
         '        wrongHints: [null, null, null, null],\n'
@@ -189,7 +184,7 @@ def main():
             # Bron-label per Mark feedback 2026-05-09: niveau + jaar + tijdvak + vraagnr
             # zodat de leerling ziet dat dit ECHT examenmateriaal is en
             # zelf het examen erbij kan pakken om te verifiëren.
-            label = f"🎓 _Echt examen VMBO-GL en TL {v['jaar']} tijdvak {v['tv']}, vraag {v['nr']}_"
+            label = f"🎓 Echt examen VMBO-GL/TL {v['jaar']} tijdvak {v['tv']}, vraag {v['nr']}"
             check_js = render_check(v, label)
             dedupe_key = f'examenBron: "{label}"'
             text, status = inject_into_step(text, step_title, check_js, dedupe_key)

@@ -84,27 +84,27 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 4_\n\nWaartoe behoren de uitgaven van de toeristen, die een souvenir kopen op Sint-Maarten?",
+        q: "Waartoe behoren de uitgaven van de toeristen, die een souvenir kopen op Sint-Maarten?",
         options: ["Tot de export van diensten door Sint-Maarten.", "Tot de export van goederen door Sint-Maarten.", "Tot de import van diensten door Sint-Maarten.", "Tot de import van goederen door Sint-Maarten. Gebruik informatiebron 1."],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 4_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 4",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 29_\n\nDe import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn?",
+        q: "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn?",
         options: ["Het prijspeil van de export is minder gestegen dan het prijspeil van de import.", "Het prijspeil van de export is meer gestegen dan het prijspeil van de import.", "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid. Duitsland, Belgi' en het Verenigd Koninkrijk (VK) zijn de belangrijkste exportlanden voor Nederland. De export naar Du"],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 29_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 32_\n\nVolgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een hogere afzet. Hier staan drie economische verschijnselen: 1 hogere arbeidsproductiviteit 2 lagere kosten per product 3 betere concurrentiepositie van Nederlandse zuivelboeren In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+        q: "Volgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een hogere afzet. Hier staan drie economische verschijnselen: 1 hogere arbeidsproductiviteit 2 lagere kosten per product 3 betere concurrentiepositie van Nederlandse zuivelboeren In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
         options: ["inzet melkrobot  1  2  3  hogere afzet", "inzet melkrobot  1  3  2  hogere afzet", "inzet melkrobot  2  1  3  hogere afzet", "inzet melkrobot  2  3  1  hogere afzet", "inzet melkrobot  3  1  2  hogere afzet F inzet melkrobot  3  2  1  hogere afzet Een huis zonder gas Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en "],
         answer: 0,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 32_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 32",
       },
     ],
   },
@@ -168,19 +168,19 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 13_\n\nWie betaalde de importheffing eerst en aan wie werd de importheffing uiteindelijk doorberekend?",
+        q: "Wie betaalde de importheffing eerst en aan wie werd de importheffing uiteindelijk doorberekend?",
         options: ["De importheffing werd eerst betaald door de Nederlandse overheid, daarna werd de heffing doorberekend aan de Nederlandse consumenten.", "De importheffing werd eerst betaald door de Nederlandse overheid, daarna werd de heffing doorberekend aan de Belgische consumenten.", "De importheffing werd eerst betaald door de Belgische importeurs, daarna werd de heffing doorberekend aan de Nederlandse consumenten.", "De importheffing werd eerst betaald door de Belgische importeurs, daarna werd de heffing doorberekend aan de Belgische consumenten. Met de oprichting van de Europese Economische Gemeenschap (EEG) in 1"],
         answer: 3,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 1, vraag 13_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 13",
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 28_\n\nWat is een gevolg voor bedrijven in de VS als er invoerrechten geheven worden op Chinees staal?",
+        q: "Wat is een gevolg voor bedrijven in de VS als er invoerrechten geheven worden op Chinees staal?",
         options: ["Bedrijven in de VS kopen meer staal uit eigen land, omdat de importprijzen van Chinees staal dalen.", "Bedrijven in de VS kopen meer staal uit eigen land, omdat de importprijzen van Chinees staal stijgen.", "Bedrijven in de VS kopen minder staal uit eigen land, omdat de importprijzen van Chinees staal dalen.", "Bedrijven in de VS kopen minder staal uit eigen land, omdat de importprijzen van Chinees staal stijgen."],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 28_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 28",
       },
     ],
   },
@@ -238,11 +238,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 2_\n\nIs Zweden ook lid van de Europese Monetaire Unie (EMU)?",
+        q: "Is Zweden ook lid van de Europese Monetaire Unie (EMU)?",
         options: ["Ja, er wordt betaald met de euro.", "Ja, naast de Zweedse kroon is ook de euro een wettig betaalmiddel.", "Nee, er wordt betaald met de Zweedse kroon.", "Nee, naast de euro is ook de Zweedse kroon een wettig betaalmiddel. In landen buiten de EU zijn de prijzen van dezelfde artikelen per land verschillend. Gebruik informatiebron 1 en 2."],
         answer: 2,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2024 tijdvak 1, vraag 2_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2",
       },
     ],
   },
@@ -302,11 +302,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 30_\n\nWat gebeurt er met de koers van de dollar als China in grote hoeveelheden dollars opkoopt?",
+        q: "Wat gebeurt er met de koers van de dollar als China in grote hoeveelheden dollars opkoopt?",
         options: ["Door de grote Chinese vraag naar dollars daalt de koers van de dollar.", "Door de grote Chinese vraag naar dollars stijgt de koers van de dollar.", "Door het grote Chinese aanbod van dollars daalt de koers van de dollar.", "Door het grote Chinese aanbod van dollars stijgt de koers van de dollar."],
         answer: 1,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 30_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 30",
       },
     ],
   },
@@ -483,11 +483,11 @@ const steps = [
       },
     
       {
-        q: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 27_\n\nDe ECB is niet van plan om het rentebeleid aan te passen. Er zijn echter nog andere maatregelen om de koopkracht van burgers op peil te houden. Met welk van onderstaande maatregelen kan de koopkracht op peil gehouden worden?",
+        q: "De ECB is niet van plan om het rentebeleid aan te passen. Er zijn echter nog andere maatregelen om de koopkracht van burgers op peil te houden. Met welk van onderstaande maatregelen kan de koopkracht op peil gehouden worden?",
         options: ["vergroting van de winstmarges door bedrijven", "verhoging van de btw", "verlaging van de heffingskortingen", "volledige prijscompensatie in de lonen Handelsoorlog Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 in de bijlage. In de Verenigde Staten (VS) worden "],
         answer: 3,
         wrongHints: [null, null, null, null],
-        examenBron: "🎓 _Echt examen VMBO-GL en TL 2023 tijdvak 2, vraag 27_",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 27",
       },
     ],
   },
