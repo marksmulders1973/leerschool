@@ -3,6 +3,7 @@ import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
+import LeerpadBot from "./LeerpadBot.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -272,6 +273,12 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
             Kies een vak om te leren — uitleg per stap, met korte vragen om te zien of het is blijven hangen.
           </p>
 
+          <LeerpadBot
+            paths={ALL_LEARN_PATHS}
+            subject={null}
+            onPickPath={(path) => onPickPath(path.id)}
+          />
+
           {loaded && totalCompleted > 0 && (
             <div style={{ ...cardBase(), marginBottom: 14, padding: "10px 14px" }}>
               <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>
@@ -413,6 +420,12 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
         <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
           Kies een onderwerp om vanaf de basis op te bouwen — uitleg, plaatjes en mini-toetsen per stap. Je voortgang blijft bewaard.
         </p>
+
+        <LeerpadBot
+          paths={ALL_LEARN_PATHS}
+          subject={effectiveFilter}
+          onPickPath={(path) => onPickPath(path.id)}
+        />
 
         {loaded && totalCompleted > 0 && (
           <div style={{ ...cardBase(), marginBottom: 14, padding: "10px 14px" }}>
