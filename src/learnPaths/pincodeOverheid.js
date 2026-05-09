@@ -1,6 +1,5 @@
-// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk E
-// Gesplitst uit pincodeEconomieVmboGt4.js (2026-05-09): 1 hoofdstuk = 1 leerpad,
-// past bij Leerkwartier 15-min-chunks en de UI-logica "1 pad = 1 thema".
+// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk 5 (Hoe werkt de overheid?)
+// Uitgebreide versie 2026-05-09: 7 stappen voor compleet examen-blok.
 
 const COLORS = {
   text: "#e0e6f0",
@@ -16,155 +15,425 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["🏛️", "📑", "💰"];
+const stepEmojis = ["🏛️", "🏘️", "📑", "💰", "📈", "⚖️", "🗳️"];
 
 const chapters = [
-  { letter: "E", title: "Hoe werkt de overheid?", emoji: "🏛️", from: 0, to: 2 },
+  { letter: "A", title: "Wat doet de overheid?", emoji: "🏛️", from: 0, to: 1 },
+  { letter: "B", title: "Geld van de overheid", emoji: "💰", from: 2, to: 3 },
+  { letter: "C", title: "Sturing en regels", emoji: "⚖️", from: 4, to: 5 },
+  { letter: "D", title: "Politiek", emoji: "🗳️", from: 6, to: 6 },
 ];
 
 const steps = [
-
+  // ─── Stap 1: Taken van de overheid ──────────────────────
   {
     title: "Taken van de overheid",
-    explanation: "De **overheid** doet dingen die de markt niet (goed) doet:\n\n**1. Wetten en orde**: politie, rechters, defensie. Veiligheid voor iedereen.\n\n**2. Openbare voorzieningen**: wegen, openbaar vervoer, parken. Iedereen profiteert ervan, niemand wil het privé betalen.\n\n**3. Onderwijs en zorg**: betaalbaar voor iedereen, niet alleen voor rijken.\n\n**4. Sociale zekerheid**: uitkeringen voor mensen die (tijdelijk) niet kunnen werken.\n\n**5. Inkomensverdeling**: belasting heffen om verschillen tussen arm en rijk te verkleinen.\n\n**6. Marktregels**: concurrentie eerlijk houden, consumenten beschermen, milieu bewaken.\n\n**Verschillende lagen**:\n• **Rijksoverheid**: nationaal (wetten, defensie, AOW)\n• **Provincie**: regionaal (wegen, natuur)\n• **Gemeente**: lokaal (vuilnis, bibliotheken, bijstand)",
-    svg: `<svg viewBox="0 0 300 180">
-<rect x="40" y="40" width="220" height="40" rx="8" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="150" y="64" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">RIJKSOVERHEID</text>
-<rect x="60" y="90" width="80" height="32" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
-<text x="100" y="110" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial">provincie</text>
-<rect x="160" y="90" width="80" height="32" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
-<text x="200" y="110" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial">gemeente</text>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">orde · openbaar · onderwijs · zorg · sociaal</text>
+    explanation: "De **overheid** doet dingen die de markt niet (goed) doet:\n\n**1. Wetten en orde** — politie, rechters, defensie. Veiligheid voor iedereen.\n\n**2. Openbare voorzieningen** — wegen, openbaar vervoer, parken, dijken. Iedereen profiteert ervan; te duur of onlogisch om privé te regelen.\n\n**3. Onderwijs en zorg** — betaalbaar voor iedereen, niet alleen voor rijken. Scholen, universiteiten, ziekenhuizen.\n\n**4. Sociale zekerheid** — uitkeringen voor mensen die (tijdelijk) niet kunnen werken (AOW, WW, bijstand).\n\n**5. Inkomensverdeling** — belasting heffen om verschillen tussen arm en rijk te verkleinen (progressieve belasting + toeslagen).\n\n**6. Marktordening** — concurrentie eerlijk houden, consumenten beschermen, milieu bewaken (komt uitgebreid in stap 6).\n\n**Waarom DOET de overheid dit, niet de markt?**\n• **Collectieve goederen**: niemand wil voor een dijk apart betalen, terwijl iedereen ervan profiteert (free-rider-probleem)\n• **Externe effecten**: vervuiling raakt iedereen, niet alleen de vervuiler. Markt corrigeert dat zelf niet\n• **Ongelijkheid**: zonder overheid worden de allerarmsten niet geholpen\n• **Informatie-ongelijkheid**: consument weet vaak niet alles (denk aan voedselveiligheid)\n\n**'Maar het kost wel veel'**:\n• Begroting Nederland: ~€350-400 miljard/jaar\n• Per Nederlander: ~€20.000/jaar overheid-uitgaven\n• Wordt betaald uit belasting + sociale premies\n\n**Verschillen tussen landen**:\n• **Verzorgingsstaat** (NL, Scandinavië): overheid doet veel, hoge belasting\n• **Liberaal** (VS): overheid doet minder, lage belasting maar veel zelf regelen (zorg, onderwijs)",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">6 TAKEN VAN DE OVERHEID</text>
+<rect x="20" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="87" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="10" font-family="Arial">wetten + orde</text>
+<rect x="165" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="232" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="10" font-family="Arial">openbare voorzieningen</text>
+<rect x="20" y="80" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="87" y="100" text-anchor="middle" fill="${COLORS.geld}" font-size="10" font-family="Arial">onderwijs + zorg</text>
+<rect x="165" y="80" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="232" y="100" text-anchor="middle" fill="${COLORS.geld}" font-size="10" font-family="Arial">sociale zekerheid</text>
+<rect x="20" y="120" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="87" y="140" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial">inkomensverdeling</text>
+<rect x="165" y="120" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="232" y="140" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial">marktordening</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">~€350-400 miljard/jaar</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">betaald uit belasting + sociale premies</text>
 </svg>`,
     checks: [
       {
         q: "Wie regelt het ophalen van **vuilnis**?",
         options: ["De gemeente", "Het Rijk", "De provincie", "De Belastingdienst"],
         answer: 0,
-        wrongHints: [null, "Het Rijk maakt landelijke wetten; vuilnis is lokaal.", "Provincie regelt grotere zaken zoals provinciale wegen en natuur.", "De Belastingdienst int belasting, niet vuilnis."],
+        wrongHints: [null, "Rijk maakt landelijke wetten.", "Provincie regelt grotere zaken (provinciale wegen, natuur).", "Belastingdienst int belasting."],
       },
       {
         q: "Welke taak van de overheid is **inkomensverdeling**?",
-        options: ["Belasting heffen om verschil arm/rijk te verkleinen", "Loon verhogen voor iedereen", "Alle banen verdelen", "Spaargeld verdelen"],
+        options: ["Belasting heffen om verschil arm/rijk te verkleinen", "Loon verhogen voor iedereen", "Banen verdelen", "Spaargeld verdelen"],
         answer: 0,
-        wrongHints: [null, "Loon wordt op de markt bepaald, niet door overheid (behalve minimumloon).", "Banen verdelen doet de markt — overheid stimuleert hooguit.", "Spaargeld blijft van jou; overheid verdeelt geen spaargeld."],
+        wrongHints: [null, "Loon wordt op de markt bepaald (behalve minimumloon).", "Banen verdelen doet de markt.", "Spaargeld blijft van de spaarder."],
       },
-    
       {
-        q: "**Politie** valt onder welke overheidstaak?",
+        q: "Wat is een **collectief goed**?",
+        options: ["Goed waar iedereen van profiteert (dijk, lantarenpaal) — markt levert het niet", "Een goed dat collectief in de winkel staat", "Een gratis goed", "Iets met een collectief contract"],
+        answer: 0,
+        wrongHints: [null, "Geen winkelterm.", "Vrij goed is iets anders (lucht).", "Geen contract-term."],
+      },
+      {
+        q: "**Defensie** valt onder welke overheidstaak?",
         options: ["Wetten en orde (veiligheid)", "Onderwijs", "Sociale zekerheid", "Inkomensverdeling"],
         answer: 0,
-        wrongHints: [null, "Onderwijs gaat over scholen.", "Sociale zekerheid = uitkeringen.", "Inkomensverdeling = belasting heffen om verschillen te verkleinen."],
+        wrongHints: [null, "Onderwijs gaat over scholen.", "Sociale zekerheid = uitkeringen.", "Inkomensverdeling = belasting heffen."],
       },
       {
-        q: "**Subsidie voor een hogeschool** — onder welke overheidstaak?",
-        options: ["Onderwijs en zorg betaalbaar maken voor iedereen", "Marktregels", "Wetten en orde", "Defensie"],
+        q: "Wat is een **verzorgingsstaat**?",
+        options: ["Land waar de overheid veel sociale taken vervult, gefinancierd door hoge belasting", "Land zonder overheid", "Land met alleen private zorg", "Land met dictatuur"],
         answer: 0,
-        wrongHints: [null, "Marktregels = eerlijke concurrentie bewaken.", "Wetten en orde = politie/rechters.", "Defensie = leger, niet onderwijs."],
+        wrongHints: [null, "Zonder overheid bestaat niet.", "Tegendeel — verzorgingsstaat heeft publieke zorg.", "Politiek systeem is iets anders."],
       },
       {
-        q: "Wat doet de **provincie** vooral?",
-        options: ["Regionale zaken zoals provinciale wegen en natuur", "Wetten maken voor heel Nederland", "Vuilnis ophalen", "Belasting innen"],
+        q: "Een **extern effect** is bv:",
+        options: ["Een fabriek vervuilt rivier; niet de fabriek maar omwonenden lijden eronder", "Belastingverlaging", "Hogere lonen", "Spaargeld"],
         answer: 0,
-        wrongHints: [null, "Landelijke wetten maakt het Rijk.", "Vuilnis is een gemeente-taak.", "Belasting innen doet vooral de Belastingdienst."],
+        wrongHints: [null, "Beleidsmaatregel, geen extern effect.", "Loon is interne uitkomst.", "Spaargeld is privé."],
       },
     ],
   },
+  // ─── Stap 2: Overheidslagen ──────────────────────────────
   {
-    title: "De Rijksbegroting",
-    explanation: "De **Rijksbegroting** is het 'huishoudboekje' van de overheid: hoeveel geld komt er binnen, hoeveel gaat eruit?\n\nWordt elk jaar op **Prinsjesdag** (3e dinsdag van september) gepresenteerd in de **Miljoenennota**.\n\n**Inkomsten** van de Rijksoverheid (~€350-400 miljard/jaar):\n• Belastingen (inkomstenbel, BTW, vennootschapsbel — verreweg het grootste deel)\n• Sociale premies (AOW, WW)\n• Aardgasbaten (steeds minder belangrijk)\n\n**Uitgaven**:\n• Sociale zekerheid (AOW, WW, bijstand)\n• Zorg\n• Onderwijs\n• Defensie\n• Infrastructuur\n• Rente op de staatsschuld\n\n**Begrotingsoverschot**: meer inkomsten dan uitgaven → schuld kan af.\n**Begrotingstekort**: meer uitgaven dan inkomsten → er moet bij geleend worden → staatsschuld groeit.",
-    svg: `<svg viewBox="0 0 300 180">
-<text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">RIJKSBEGROTING</text>
-<rect x="30" y="42" width="110" height="100" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
-<text x="85" y="60" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">INKOMSTEN</text>
-<text x="85" y="80" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">belastingen</text>
-<text x="85" y="94" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">sociale premies</text>
-<text x="85" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">aardgas</text>
-<rect x="160" y="42" width="110" height="100" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.5"/>
-<text x="215" y="60" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">UITGAVEN</text>
-<text x="215" y="80" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">sociale zekerheid</text>
-<text x="215" y="94" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">zorg · onderwijs</text>
-<text x="215" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">defensie · rente</text>
-<text x="150" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Prinsjesdag — 3e dinsdag van september</text>
+    title: "Overheidslagen — Rijk, provincie, gemeente",
+    explanation: "Nederland heeft **drie overheidslagen**, elk met eigen taken en geldstromen.\n\n**1. Rijksoverheid (nationaal)**\n• Tweede Kamer, Eerste Kamer, regering, ministers\n• Wetten voor heel NL\n• Defensie, buitenlands beleid, AOW, justitie, belastingstelsel\n• Begroting: ~€350 miljard/jaar\n\n**2. Provincie (12 in NL)**\n• Provinciale Staten + Gedeputeerde Staten + Commissaris van de Koning\n• Provinciale wegen, openbaar vervoer (regio), natuur, ruimtelijke ordening (waar mag je bouwen?)\n• Begroting: ~€500 miljoen-€1 miljard per provincie\n\n**3. Gemeente (~340 in NL)**\n• Gemeenteraad + College van B&W + Burgemeester\n• Vuilnis, paspoorten, bibliotheken, jeugdzorg, bijstand, lokale wegen, gemeentebelasting\n• Veel gemeente-services raken je dagelijks: parkeren, hondenbelasting, OZB-belasting op je huis\n\n**Geldstromen**:\n• Rijksoverheid haalt geld op via belastingen + premies\n• Geeft door aan provincies en gemeenten via het **Gemeentefonds** en **Provinciefonds**\n• Gemeenten heffen ook eigen belastingen (OZB, hondenbelasting, toeristenbelasting)\n\n**Decentralisaties** (sinds 2015):\n• Veel taken zijn van Rijk → gemeente verschoven (jeugdzorg, WMO)\n• Idee: gemeente is dichter bij burger\n• Probleem: gemeente kreeg minder geld dan nodig → bezuinigingen\n\n**Bijzonder**:\n• **Waterschappen** — vierde overheidslaag specifiek voor water (dijken, sloten, waterkwaliteit). 21 waterschappen in NL. Heffen waterschapsbelasting.\n\n**Provincie** vs **gemeente**:\n• Provincie = bovenliggend niveau (regio, vaak meerdere gemeenten)\n• Gemeente = lokaal, dichtstbij burger",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">DRIE OVERHEIDSLAGEN</text>
+<rect x="40" y="40" width="240" height="40" rx="8" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="160" y="62" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">RIJKSOVERHEID</text>
+<text x="160" y="76" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">Tweede Kamer · regering · ministers</text>
+<rect x="60" y="95" width="80" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="100" y="115" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">PROVINCIE</text>
+<text x="100" y="128" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">12 in NL</text>
+<rect x="180" y="95" width="80" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="220" y="115" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">GEMEENTE</text>
+<text x="220" y="128" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">~340 in NL</text>
+<rect x="60" y="148" width="200" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.alt}" stroke-width="1.2" stroke-dasharray="3 2"/>
+<text x="160" y="167" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">WATERSCHAPPEN</text>
+<text x="160" y="178" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">21 — water/dijken</text>
+<text x="160" y="205" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">geld via Gemeentefonds/Provinciefonds + eigen belastingen</text>
+</svg>`,
+    checks: [
+      {
+        q: "Hoeveel **provincies** heeft Nederland?",
+        options: ["12", "10", "21", "340"],
+        answer: 0,
+        wrongHints: [null, "Was vroeger lager, nu 12.", "21 = waterschappen.", "340 = gemeenten."],
+      },
+      {
+        q: "Wie verzorgt **jeugdzorg** (sinds 2015)?",
+        options: ["De gemeente", "De Rijksoverheid", "De provincie", "Niemand"],
+        answer: 0,
+        wrongHints: [null, "Was vroeger Rijk, sinds 2015 gedecentraliseerd.", "Provincie heeft andere taken.", "Wel verzorgd."],
+      },
+      {
+        q: "Wat is **OZB**?",
+        options: ["Onroerendezaakbelasting — gemeentebelasting op je huis", "Een Rijksbelasting", "Provinciale belasting", "Belasting op brandstof"],
+        answer: 0,
+        wrongHints: [null, "Niet Rijk.", "Niet provincie.", "Brandstof = accijns."],
+      },
+      {
+        q: "Een **waterschap** zorgt voor:",
+        options: ["Dijken, sloten en waterkwaliteit", "Onderwijs", "Politie", "Parkeren"],
+        answer: 0,
+        wrongHints: [null, "Onderwijs is gemeente/Rijk.", "Politie is Rijk.", "Parkeren is gemeente."],
+      },
+      {
+        q: "Welke instantie maakt **landelijke wetten**?",
+        options: ["Rijksoverheid (Tweede + Eerste Kamer)", "Gemeenteraad", "Provinciale Staten", "ACM"],
+        answer: 0,
+        wrongHints: [null, "Gemeente maakt verordeningen, geen wetten.", "Provincie maakt geen wetten.", "ACM is een toezichthouder."],
+      },
+      {
+        q: "Wat ging er mis bij de **decentralisatie van jeugdzorg** (2015)?",
+        options: ["Gemeenten kregen meer taken maar minder geld dan nodig", "Niemand merkte iets", "Rijk nam alles terug", "Het werd goedkoper en beter"],
+        answer: 0,
+        wrongHints: [null, "Wel veel media-aandacht.", "Rijk gaf juist los.", "Vaak juist duurder en moeilijker."],
+      },
+    ],
+  },
+  // ─── Stap 3: Rijksbegroting ──────────────────────────────
+  {
+    title: "De Rijksbegroting — het huishoudboekje van NL",
+    explanation: "De **Rijksbegroting** is het 'huishoudboekje' van de overheid: hoeveel geld komt erin, hoeveel gaat eruit?\n\n**Wordt elk jaar op Prinsjesdag** (3e dinsdag van september) gepresenteerd in de **Miljoenennota**.\nDe **Troonrede** (toespraak koning) geeft de hoofdlijnen.\n\n**Inkomsten** (~€350-400 miljard/jaar):\n• **Belastingen** (verreweg grootste): IB, BTW, VPB, accijns\n• **Sociale premies** (AOW, WW)\n• **Aardgasbaten** (steeds kleiner — Groningen-veld dicht)\n• **Dividend** uit staatsbedrijven (NS, Schiphol, BNG)\n• **Boetes**\n\n**Uitgaven**:\n• **Sociale zekerheid** (~30% — AOW, WW, bijstand): grootste post\n• **Zorg** (~20%)\n• **Onderwijs** (~10%)\n• **Defensie**\n• **Infrastructuur** (wegen, OV)\n• **Rente op de staatsschuld** — verplichte uitgave\n• **EU-afdracht** (~€8 miljard)\n• **Ontwikkelingshulp**\n\n**Begrotingsoverschot**: meer inkomsten dan uitgaven\n• Schuld kan af, of geld in een 'spaarpot' (nu eigenlijk geen)\n\n**Begrotingstekort**: meer uitgaven dan inkomsten\n• Er moet bij geleend worden\n• Staatsschuld groeit\n\n**Cyclisch begroten**:\n• Bij economische groei: belasting komt vanzelf binnen → overschot\n• Bij recessie: minder belasting + meer uitkeringen → tekort\n• Overheid kan met begroting de economie stimuleren of afremmen\n\n**Vaste uitgaven** (kan overheid moeilijk aanpassen):\n• Pensioenen (AOW)\n• Rente op schuld\n• Verdragen (EU, NAVO)\n→ Slechts ~30% van de begroting is écht 'vrij' beïnvloedbaar\n\n**Wie maakt de begroting?**\n• Minister van Financiën stelt voor\n• Tweede Kamer keurt goed (kan amenderen)\n• Eerste Kamer keurt goed (kan alleen ja/nee)",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">RIJKSBEGROTING</text>
+<rect x="20" y="40" width="135" height="120" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">INKOMSTEN</text>
+<text x="87" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">~€370 miljard</text>
+<text x="87" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">belastingen (groot)</text>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">sociale premies</text>
+<text x="87" y="121" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">aardgas (klein)</text>
+<text x="87" y="134" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">dividend NS/Schiphol</text>
+<text x="87" y="147" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">boetes</text>
+<rect x="165" y="40" width="135" height="120" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.5"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">UITGAVEN</text>
+<text x="232" y="78" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">~€370 miljard</text>
+<text x="232" y="95" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">sociale zek. 30%</text>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">zorg 20%</text>
+<text x="232" y="121" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">onderwijs · defensie</text>
+<text x="232" y="134" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">infra · EU · rente</text>
+<text x="232" y="147" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">ontwikkelingshulp</text>
+<text x="160" y="185" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">PRINSJESDAG — 3e dinsdag sept.</text>
+<text x="160" y="203" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Miljoenennota + Troonrede</text>
 </svg>`,
     checks: [
       {
         q: "Wanneer wordt de Rijksbegroting gepresenteerd?",
         options: ["Op Prinsjesdag — 3e dinsdag van september", "Op Koningsdag", "1 januari", "Elke maand"],
         answer: 0,
-        wrongHints: [null, "Koningsdag is een feestdag, geen begrotingsdag.", "Het begrotingsjaar start wel rond 1 januari maar de presentatie is daarvoor.", "Begroting is jaarlijks, niet maandelijks."],
+        wrongHints: [null, "Koningsdag is een feestdag.", "Begrotingsjaar start dan, presentatie eerder.", "Begroting is jaarlijks."],
       },
-      {
-        q: "Wat gebeurt er bij een **begrotingstekort**?",
-        options: ["Er moet bij geleend worden, staatsschuld groeit", "Belasting wordt teruggegeven", "Iedereen krijgt een toeslag", "De begroting wordt afgeschaft"],
-        answer: 0,
-        wrongHints: [null, "Bij overschot kan de overheid soms teruggeven, niet bij tekort.", "Toeslagen zijn geen oplossing voor tekort.", "De begroting blijft bestaan — er moet alleen extra geld bij."],
-      },
-    
       {
         q: "Wat is verreweg de **grootste inkomstenbron** van de Rijksoverheid?",
-        options: ["Belastingen", "Aardgasbaten", "Gemeenten", "Loterijen"],
+        options: ["Belastingen", "Aardgasbaten", "Boetes", "Dividend NS"],
         answer: 0,
-        wrongHints: [null, "Aardgasbaten worden steeds kleiner.", "Gemeenten krijgen juist GELD van het Rijk, geven het niet.", "Loterijen leveren wat op, maar niet veel in vergelijking."],
+        wrongHints: [null, "Aardgasbaten zijn klein geworden.", "Boetes zijn marginaal.", "NS-dividend is gering."],
       },
       {
         q: "Wat is de **Miljoenennota**?",
-        options: ["Het document met de plannen voor de Rijksbegroting van het komende jaar", "Een toespraak van de koning", "Een rekening voor 1 miljoen", "Een Europese richtlijn"],
+        options: ["Document met de plannen voor de Rijksbegroting", "Een toespraak van de koning", "Een rekening voor 1 miljoen", "Europese richtlijn"],
         answer: 0,
-        wrongHints: [null, "De Troonrede is de toespraak; de Miljoenennota is het cijferdocument.", "De NAAM komt van de bedragen, het is geen rekening.", "Het is puur Nederlands, geen Europees stuk."],
+        wrongHints: [null, "Troonrede is de toespraak.", "Geen rekening — naam komt van miljarden bedragen.", "Puur Nederlands document."],
       },
       {
-        q: "Een **begrotingsoverschot** — wat kan de overheid daarmee?",
-        options: ["De staatsschuld aflossen of geld reserveren", "Niets — geld is niet van de overheid", "Verplicht uitgeven", "Aan inwoners terugbetalen elke maand"],
+        q: "Wat is de **grootste uitgavenpost** van de Rijksoverheid?",
+        options: ["Sociale zekerheid (~30%)", "Defensie", "Onderwijs", "Cultuur"],
         answer: 0,
-        wrongHints: [null, "Een overschot is wel beschikbaar — daar kan iets mee gebeuren.", "Verplicht uitgeven is geen regel — het kan ook gespaard.", "Maandelijks terugbetalen is geen praktijk in NL."],
+        wrongHints: [null, "Defensie is veel kleiner (~3%).", "Onderwijs ~10%.", "Cultuur is klein."],
+      },
+      {
+        q: "Een **begrotingstekort** betekent:",
+        options: ["Meer uitgaven dan inkomsten — staatsschuld groeit", "Belasting wordt teruggegeven", "Geen begroting", "Iedereen krijgt extra toeslag"],
+        answer: 0,
+        wrongHints: [null, "Bij overschot soms wel.", "Begroting bestaat sowieso.", "Geen automatische toeslag."],
+      },
+      {
+        q: "Wie keurt de begroting **definitief goed**?",
+        options: ["Tweede Kamer + Eerste Kamer", "De koning", "De minister van Financiën", "De Belastingdienst"],
+        answer: 0,
+        wrongHints: [null, "De koning ondertekent ceremonieel maar parlement beslist.", "Hij/zij stelt voor, parlement beslist.", "Belastingdienst voert uit."],
       },
     ],
   },
+  // ─── Stap 4: Staatsschuld ────────────────────────────────
   {
-    title: "Staatsschuld",
-    explanation: "**Staatsschuld**: alle schulden die de overheid in de loop der jaren heeft opgebouwd.\n\nNederland heeft een schuld van honderden miljarden euro. Geleend bij banken, pensioenfondsen en investeerders (via staatsobligaties).\n\nWaarom is staatsschuld een probleem?\n• **Rente** moet elk jaar betaald worden — dat geld kan niet aan onderwijs of zorg besteed worden.\n• Schuld stijgt jaar op jaar als er begrotingstekort blijft.\n• **EMU-norm**: EU-landen mogen schuld max 60% van het BBP zijn (afspraak in het Stabiliteits- en Groeipact).\n\nWaarom is sommige schuld OK?\n• Als de overheid leent voor **investeringen** die later geld opleveren (bv. snelweg, hoger onderwijs).\n• Tijdens **crisissen** (corona, financiële crisis) is bijlenen normaal om de economie draaiende te houden.\n\n**BBP (Bruto Binnenlands Product)** = alles wat in NL in 1 jaar wordt geproduceerd. Maatstaf voor de welvaart van een land.\n\nSchuld als % van BBP zegt meer dan absoluut bedrag — een arm land met €100 miljard schuld is erger dan een rijk land met €500 miljard schuld.",
-    svg: `<svg viewBox="0 0 300 180">
-<line x1="40" y1="20" x2="40" y2="155" stroke="${COLORS.text}" stroke-width="1.5"/>
-<line x1="40" y1="155" x2="280" y2="155" stroke="${COLORS.text}" stroke-width="1.5"/>
-<text x="20" y="30" fill="${COLORS.text}" font-size="10" font-family="Arial">% BBP</text>
-<text x="240" y="170" fill="${COLORS.text}" font-size="10" font-family="Arial">jaar</text>
-<line x1="40" y1="80" x2="280" y2="80" stroke="${COLORS.aanbod}" stroke-width="1.5" stroke-dasharray="4 3"/>
-<text x="240" y="74" fill="${COLORS.aanbod}" font-size="10" font-family="Arial" font-weight="bold">EMU-norm 60%</text>
+    title: "Staatsschuld — wat als er steeds bij wordt geleend?",
+    explanation: "**Staatsschuld** = alle schulden die de overheid in de loop der jaren heeft opgebouwd.\n\nNederland heeft een schuld van **~€500 miljard** (eind 2024). Geleend bij banken, pensioenfondsen en investeerders (via **staatsobligaties**).\n\n**Staatsobligatie**: lening-papiertje van de overheid. Investeerder leent de staat geld voor X jaar tegen Y% rente.\n\n**Waarom is staatsschuld een probleem?**\n• **Rente** moet elk jaar betaald worden — geld dat NIET aan onderwijs of zorg kan\n• Schuld stijgt jaar op jaar bij begrotingstekort\n• **EMU-norm** (EU): schuld max 60% van het BBP\n\n**EMU = Economische en Monetaire Unie**:\n• Stabiliteits- en Groeipact (1997)\n• EU-landen mogen schuld max **60% BBP** + tekort max **3% BBP**\n• Bij overschrijding: 'buitensporig tekort' procedure\n• In praktijk: regel is vaak overschreden (Italië, Frankrijk, ook NL tijdens corona)\n\n**Waarom is sommige schuld OK?**\n• Voor **investeringen** die later geld opleveren (snelweg, hoger onderwijs)\n• Tijdens **crisissen** (corona, financiële crisis 2008) is bijlenen normaal — economie draaiende houden\n• Een land is geen huishouden: kan in principe altijd herfinancieren\n\n**BBP (Bruto Binnenlands Product)** = alles wat in NL in 1 jaar wordt geproduceerd.\nNL BBP ~€1.000 miljard/jaar.\n\nSchuld als % van BBP zegt MEER dan absoluut bedrag:\n• Een arm land met €100 miljard schuld is erger dan een rijk land met €500 miljard schuld\n• Vergelijk: Japan schuld ~250% BBP, USA ~120%, NL ~50%\n\n**Wat als rente stijgt?**\n• 1% rentestijging op €500 mrd schuld = €5 mrd EXTRA per jaar\n• Concurrentie met andere uitgaven\n• Drukt regeringen tot bezuinigingen\n\n**Schuldsanering in andere landen**:\n• **Inflatie**: schuld in vaste euro's wordt minder waard (verkapte vorm)\n• **Hoge belasting + bezuinigen** (Griekenland 2010)\n• Soms **schuldkwijtschelding** (na crisis)\n\n**Belangrijk**: schuld OPLOSSEN duurt decennia. Voorkomen is makkelijker.",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">STAATSSCHULD NL ~€500 mrd</text>
+<line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<text x="20" y="50" fill="${COLORS.text}" font-size="9" font-family="Arial">% BBP</text>
+<text x="240" y="175" fill="${COLORS.text}" font-size="9" font-family="Arial">jaar</text>
+<line x1="40" y1="80" x2="290" y2="80" stroke="${COLORS.aanbod}" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="240" y="74" fill="${COLORS.aanbod}" font-size="10" font-family="Arial" font-weight="bold">EMU 60%</text>
 <polyline points="60,100 100,90 140,95 180,75 220,85 260,90" fill="none" stroke="${COLORS.geld}" stroke-width="2.5"/>
-<text x="60" y="125" fill="${COLORS.geld}" font-size="10" font-family="Arial">staatsschuld NL</text>
+<text x="60" y="125" fill="${COLORS.geld}" font-size="10" font-family="Arial">NL ~50%</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vergelijk: Japan ~250% · USA ~120%</text>
 </svg>`,
     checks: [
       {
         q: "Wat is de **EMU-norm** voor staatsschuld?",
-        options: ["Maximaal 60% van het BBP", "Altijd onder €100 miljard", "Geen schuld toegestaan", "Maximaal 100% van het BBP"],
+        options: ["Maximaal 60% van het BBP", "Altijd onder €100 miljard", "Geen schuld toegestaan", "100% BBP"],
         answer: 0,
-        wrongHints: [null, "Bedragen verschillen per land — daarom is een percentage logischer.", "Schuld is wel toegestaan; het is een limiet.", "Dat is te hoog — economen zouden alarm slaan."],
+        wrongHints: [null, "Bedragen verschillen per land.", "Schuld is wel toegestaan.", "Te ruim — economen alarm."],
       },
       {
-        q: "Waarom kan **lenen** soms zinvol zijn voor de overheid?",
-        options: ["Voor investeringen die later geld opleveren (bv. infrastructuur)", "Om belasting te kunnen verlagen", "Om uitkeringen extra hoog te maken", "Lenen is altijd slecht"],
+        q: "Waarom kan **lenen soms zinvol** zijn voor de overheid?",
+        options: ["Voor investeringen die later geld opleveren (infra, onderwijs)", "Belasting verlagen", "Uitkeringen extra hoog maken", "Lenen is altijd slecht"],
         answer: 0,
-        wrongHints: [null, "Belasting verlagen via lenen verschuift het probleem alleen naar later.", "Uitkeringen extra hoog maken via lenen is niet duurzaam.", "Lenen is niet altijd slecht — voor investeringen kan het rendement opleveren."],
-      },
-    
-      {
-        q: "Wat is **BBP**?",
-        options: ["De totale productie in Nederland in 1 jaar", "Belasting op binnenlandse producten", "Bonus voor parttime werkers", "Beroepsbevolking als percentage"],
-        answer: 0,
-        wrongHints: [null, "Niet specifiek belasting — het is alle productie samen.", "Geen werknemer-bonus — pure economische maatstaf.", "Beroepsbevolking is iets anders (= mensen die werken/willen werken)."],
+        wrongHints: [null, "Verschuift probleem naar later.", "Niet duurzaam.", "Soms is lenen rationeel."],
       },
       {
-        q: "Een land heeft staatsschuld van **80% van het BBP**. Wat zegt de EMU-norm?",
-        options: ["Het is hoger dan de afgesproken 60%-grens", "Het is precies goed", "Het is veel te laag", "EMU-norm bestaat niet"],
+        q: "Wat is een **staatsobligatie**?",
+        options: ["Lening-papiertje van de staat aan investeerder, met rente", "Een staatsbedrijf", "Belasting op staatsbezit", "Subsidie aan investeerders"],
         answer: 0,
-        wrongHints: [null, "60% is de grens, 80% zit erboven.", "Schuld kan altijd lager — 0% is geen norm.", "EMU-norm bestaat — afspraak in Stabiliteits- en Groeipact."],
+        wrongHints: [null, "Niet een bedrijf.", "Geen belasting.", "Tegendeel — investeerder krijgt rente."],
       },
       {
-        q: "Waarom kost staatsschuld geld?",
-        options: ["Er moet jaarlijks rente betaald worden", "De schuld vermindert vanzelf", "Er wordt belasting over geheven", "De schuld groeit door erfenissen"],
+        q: "Bij **1% rentestijging op €500 mrd schuld** = ... extra rente per jaar?",
+        options: ["€5 miljard", "€500 miljoen", "€500 miljard", "€50 miljoen"],
         answer: 0,
-        wrongHints: [null, "Een schuld lost niet vanzelf op — moet juist afgelost.", "Belasting over schuld bestaat niet — wel rente.", "Erfenissen hebben hier niets mee te maken."],
+        wrongHints: [null, "Te weinig — 1% van 500 mrd.", "Veel te veel — geen verdubbeling.", "Veel te weinig."],
+      },
+      {
+        q: "**Japan staatsschuld** is ongeveer:",
+        options: ["~250% van BBP (extreem hoog)", "0%", "30%", "1000%"],
+        answer: 0,
+        wrongHints: [null, "Geen land heeft 0%.", "Veel landen lager — Japan is uitzonderlijk hoog.", "Onmogelijk hoog."],
+      },
+      {
+        q: "Hoe **drukt een hoge staatsschuld de samenleving**?",
+        options: ["Veel rente betalen → minder geld voor onderwijs/zorg", "Iedereen krijgt korting", "Niemand merkt iets", "Burgers krijgen rente"],
+        answer: 0,
+        wrongHints: [null, "Geen automatische korting.", "Indirect wel via belastingdruk.", "Burgers betalen, niet ontvangen."],
+      },
+    ],
+  },
+  // ─── Stap 5: Conjunctuur ────────────────────────────────
+  {
+    title: "Conjunctuur — economische op-en-neer",
+    explanation: "De economie groeit niet altijd gelijkmatig. Er zijn **schommelingen** rond een lange-termijn-trend. Dit heet **conjunctuur**.\n\n**Conjunctuurcyclus** — fasen:\n\n**1. Hoogconjunctuur (boom)**\n• Hoge groei BBP\n• Lage werkloosheid → krapte\n• Bedrijven maken winst\n• Lonen stijgen\n• Risico: hoge inflatie\n\n**2. Recessie**\n• 2 kwartalen op rij krimp BBP\n• Werkloosheid stijgt\n• Bedrijven minder winst, soms failliet\n• Consumenten besteden minder\n• Negatieve sfeer\n\n**3. Depressie**\n• Lange, diepe recessie (jaren)\n• Bv. 1930-1935 (Great Depression)\n\n**4. Herstel**\n• Bodem bereikt, voorzichtig groeien\n• Werkloosheid daalt langzaam\n\n**Wat veroorzaakt conjunctuur?**\n• **Vertrouwen**: consumenten/bedrijven optimistisch → kopen meer → groei\n• **Externe schokken**: oorlog, pandemie, energieprijs (1973, 2008, 2020, 2022)\n• **Cycle van investeringen** (Kondratieff: ~50 jaar)\n• **Krediet**: makkelijk lenen → meer activiteit; schuldcrisis → krimp\n\n**Wat doet de overheid bij recessie?**\n• **Belasting verlagen** → meer besteedbaar inkomen\n• **Investeren** in infrastructuur (banen) → directe stimulans\n• **Uitkeringen verhogen** of verlengen → koopkracht\n• Heet **anticyclisch begroten**: tegen de cyclus in werken\n• Probleem: tekort groeit\n\n**Wat doet de overheid bij hoogconjunctuur?**\n• **Begrotingsoverschot** opbouwen\n• Belasting NIET verlagen (oververhitting voorkomen)\n• Sparen voor de volgende recessie\n\n**Politiek lastig**: kiezers willen belastingverlaging als het goed gaat, niet wanneer overheid moet bezuinigen.\n\n**Recente recessies in NL**:\n• 2008-2009 (financiële crisis)\n• 2012-2014 (eurocrisis)\n• 2020 (corona — kort maar heftig)\n\n**Coronacrisis 2020**:\n• BBP daalde 3,7% in 1 jaar\n• Overheid pompte ~€80 mrd in NOW (steun werkgevers), TOZO (zzp), TVL (vaste lasten)\n• Schuld steeg, maar economie veerde sneller op dan verwacht",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">CONJUNCTUURCYCLUS</text>
+<line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="40" y1="160" x2="290" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
+<line x1="40" y1="100" x2="290" y2="100" stroke="${COLORS.muted}" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="295" y="103" fill="${COLORS.muted}" font-size="9" font-family="Arial">trend</text>
+<path d="M 50,100 Q 80,60 110,100 T 170,100 T 230,100 T 290,100" fill="none" stroke="${COLORS.geld}" stroke-width="2.5"/>
+<text x="80" y="55" fill="${COLORS.geld}" font-size="9" font-family="Arial">boom</text>
+<text x="140" y="135" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">recessie</text>
+<text x="200" y="55" fill="${COLORS.geld}" font-size="9" font-family="Arial">boom</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">recessie = 2 kwartalen krimp</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is een **recessie**?",
+        options: ["Twee kwartalen op rij krimp van het BBP", "Eén dag minder verkoop", "Een belasting verlaging", "Een nieuwe wet"],
+        answer: 0,
+        wrongHints: [null, "Eén dag is geen recessie.", "Niet hetzelfde.", "Beleidsmaatregel, geen toestand."],
+      },
+      {
+        q: "Wat doet een overheid **anticyclisch** in een recessie?",
+        options: ["Belasting verlagen + meer uitgeven om vraag te stimuleren", "Belasting verhogen + bezuinigen", "Niets doen", "De crisis afkondigen"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel — versterkt recessie.", "Past niet bij anticyclisch.", "Symbolisch, geen beleid."],
+      },
+      {
+        q: "Tijdens **hoogconjunctuur**:",
+        options: ["Hoge groei + lage werkloosheid + lonen stijgen", "Recessie", "Krimp van BBP", "Veel werkloosheid"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Tegendeel.", "Tegendeel."],
+      },
+      {
+        q: "Wat veroorzaakt vaak een recessie?",
+        options: ["Externe schokken (pandemie, energieprijs, schuldcrisis)", "Een verkiezing", "Een Koningsdag", "Goede zomer"],
+        answer: 0,
+        wrongHints: [null, "Verkiezing is geen oorzaak.", "Feestdag heeft geen impact.", "Weer is niet maatschappelijk."],
+      },
+      {
+        q: "Hoe groot was de daling NL-BBP in **2020 (corona)**?",
+        options: ["~3,7%", "0%", "30%", "70%"],
+        answer: 0,
+        wrongHints: [null, "Daling was wel significant.", "Geen totale ineenstorting.", "Niet zo extreem."],
+      },
+      {
+        q: "Wat is een **depressie**?",
+        options: ["Lange, diepe recessie van jaren (bv. 1930-1935)", "Korte tegenslag", "Hoge inflatie", "Snelle groei"],
+        answer: 0,
+        wrongHints: [null, "Te kort.", "Iets anders (hyperinflatie).", "Tegendeel."],
+      },
+    ],
+  },
+  // ─── Stap 6: Marktordening ────────────────────────────
+  {
+    title: "Marktordening — overheid bewaakt de markt",
+    explanation: "De markt werkt alleen goed als er **regels** zijn. Anders ontstaat misbruik, monopolie, oneerlijke concurrentie. **Marktordening** = de overheid stelt + handhaaft deze regels.\n\n**Belangrijke onderwerpen**:\n\n**1. Mededingingsbeleid (concurrentie)**\n• Voorkomt **kartels** (afspraken over prijzen tussen bedrijven)\n• Voorkomt **monopolie-misbruik** (alleen-aanbieder die hoge prijzen vraagt)\n• Verbiedt fusies die concurrentie schaden\n• Toezichthouder: **ACM** (Autoriteit Consument & Markt)\n\n**2. Consumentenbescherming**\n• Garantie op producten (2 jaar wettelijk)\n• Recht op herroeping (online: 14 dagen bedenktijd)\n• Eerlijke voorwaarden, geen verborgen kosten\n• ACM + Reclame Code Commissie\n\n**3. Productveiligheid**\n• NVWA (Nederlandse Voedsel- en Warenautoriteit) — voor voedsel\n• Strenge eisen: speelgoed, medicijnen, auto's\n\n**4. Milieuregels**\n• Vervuiling beperken (uitstoot, afval)\n• CO2-belasting + emissieheffingen\n• Zonder regels: tragedy of the commons (iedereen verspilt natuur)\n\n**5. Arbeidsmarkt**\n• Minimumloon (bewaakt door SZW + Inspectie SZW)\n• Veiligheid op werkplek (arbo-wet)\n• Anti-discriminatie (College Rechten van Mens)\n\n**6. Financiële markten**\n• Banken-toezicht (DNB, AFM)\n• Beschermen spaarders (DGS = Depositogarantiestelsel — €100k garantie per spaarder per bank)\n• Voorkomen woekerwinsten en misleiding\n\n**Bekende ACM-zaken**:\n• Bouwfraude 2002 (kartels in wegenbouw)\n• Apple App Store boetes (misbruik macht)\n• Ahold Delhaize-fusie (toegestaan met voorwaarden)\n\n**Internationaal**:\n• EU heeft eigen mededingingsbeleid (DG Competition)\n• Boetes Google, Apple, Meta — miljarden euro's\n• Beïnvloedt wereldwijd",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MARKTORDENING</text>
+<rect x="20" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="87" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="10" font-family="Arial">mededinging</text>
+<rect x="165" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="232" y="60" text-anchor="middle" fill="${COLORS.vraag}" font-size="10" font-family="Arial">consumenten</text>
+<rect x="20" y="80" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="87" y="100" text-anchor="middle" fill="${COLORS.geld}" font-size="10" font-family="Arial">veiligheid</text>
+<rect x="165" y="80" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="232" y="100" text-anchor="middle" fill="${COLORS.geld}" font-size="10" font-family="Arial">milieu</text>
+<rect x="20" y="120" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="87" y="140" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial">arbeidsmarkt</text>
+<rect x="165" y="120" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="232" y="140" text-anchor="middle" fill="${COLORS.warm}" font-size="10" font-family="Arial">financiële markt</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">ACM · NVWA · DNB · AFM</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">toezichthouders bewaken markten</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat doet de **ACM**?",
+        options: ["Bewaakt eerlijke concurrentie + consumentenrechten", "Maakt nieuwe wetten", "Int belasting", "Geeft scholen subsidie"],
+        answer: 0,
+        wrongHints: [null, "Wetten = parlement.", "Belasting = Belastingdienst.", "Onderwijs is iets anders."],
+      },
+      {
+        q: "Een **kartel** is:",
+        options: ["Geheime afspraak tussen bedrijven over prijzen of markten", "Goedkeuring overheid", "Een soort consumentenvereniging", "Reclame"],
+        answer: 0,
+        wrongHints: [null, "Geen overheidsproduct.", "Tegendeel — kartel werkt tegen consument.", "Reclame is publiek."],
+      },
+      {
+        q: "Hoeveel garantie heb je op een product (in NL)?",
+        options: ["Wettelijk 2 jaar (consumentenkoop)", "1 maand", "Geen", "5 jaar"],
+        answer: 0,
+        wrongHints: [null, "Te kort.", "Wel garantie.", "Niet de wettelijke standaard."],
+      },
+      {
+        q: "Wat is **DGS**?",
+        options: ["Depositogarantiestelsel — €100k per spaarder per bank gegarandeerd", "Een belasting", "Een soort lening", "Vakbond"],
+        answer: 0,
+        wrongHints: [null, "Geen belasting.", "Geen lening.", "DGS is bank-bescherming."],
+      },
+      {
+        q: "Welke organisatie controleert **voedselveiligheid**?",
+        options: ["NVWA", "ACM", "DNB", "DUO"],
+        answer: 0,
+        wrongHints: [null, "ACM = consument + concurrentie.", "DNB = banken.", "DUO = studie."],
+      },
+      {
+        q: "Online aankoop — hoe lang **bedenktijd**?",
+        options: ["14 dagen", "1 dag", "Geen bedenktijd", "1 jaar"],
+        answer: 0,
+        wrongHints: [null, "Te kort.", "Wel bedenktijd.", "Te lang."],
+      },
+    ],
+  },
+  // ─── Stap 7: Politiek systeem ────────────────────────
+  {
+    title: "Politiek systeem — wie maakt de wetten?",
+    explanation: "Nederland is een **parlementaire democratie + constitutionele monarchie**.\n\n**Trias politica** (machtenscheiding):\n• **Wetgevende macht**: maakt wetten — Tweede + Eerste Kamer + regering\n• **Uitvoerende macht**: voert wetten uit — regering (premier + ministers)\n• **Rechtsprekende macht**: toetst wetten — onafhankelijke rechters\n\n**Tweede Kamer (150 leden)**:\n• Direct gekozen door volk (1× per 4 jaar)\n• Maakt + amendeert wetten\n• Controleert de regering\n• Kan minister wegsturen (motie van wantrouwen)\n\n**Eerste Kamer (75 leden)**:\n• Gekozen door Provinciale Staten\n• Toetst wetten op kwaliteit\n• Kan alleen ja/nee zeggen, geen amendement\n• 'Senaat' of 'Chambre de réflexion'\n\n**Regering**:\n• **Minister-president (premier)** + ministers + staatssecretarissen\n• Komt voort uit verkiezingen + coalitievorming\n• Voert beleid uit\n• Legt verantwoording af aan Tweede Kamer\n\n**De koning**:\n• Constitutioneel (niet politiek)\n• Tekent wetten ceremonieel\n• Geeft Troonrede\n• 'Reigns but does not rule'\n\n**Verkiezingen Tweede Kamer**:\n• Stemt op partij (PvdA, VVD, NSC, D66, GL-PvdA, etc.)\n• Evenredige vertegenwoordiging — geen kiesdrempel (alleen 1/150e zetelnorm)\n• Vaak coalities nodig (geen partij krijgt meerderheid)\n• Coalitievorming: maand of meer onderhandelen\n\n**Politieke partijen** + economisch profiel:\n• **VVD/NSC**: minder overheid, lage belasting voor bedrijven, marktwerking\n• **PvdA/GL/SP**: meer overheid, hogere belasting voor herverdeling, sociaal vangnet\n• **D66**: progressief, gemengde aanpak\n• **CDA/CU**: verzorgingsstaat met christelijke solidariteit\n• **PVV/FVD**: minder migratie, lager belasting\n\n**Coalitie-akkoord**:\n• Document met afspraken voor 4 jaar\n• Compromis tussen partijen\n• Wordt in Tweede Kamer steun gegeven\n\n**Provinciale + gemeenteraad-verkiezingen**:\n• Provincie: kiest ook indirect Eerste Kamer\n• Gemeente: lokale partijen + landelijke afdelingen\n\n**Belangrijk economisch**:\n• Beleid Tweede Kamer en regering bepaalt **belasting, uitgaven, regels** — direct effect op iedereen\n• Bij verkiezingen: kijk naar economische standpunten partijen\n• VOOR jou over een paar jaar relevant — eerste keer stemmen vanaf 18!",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PARLEMENTAIRE DEMOCRATIE</text>
+<rect x="20" y="40" width="280" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="160" y="58" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">VOLK STEMT (1× per 4 jaar)</text>
+<text x="160" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vanaf 18 jaar — Tweede Kamer</text>
+<rect x="20" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">TWEEDE KAMER</text>
+<text x="87" y="121" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">150 leden · maakt wetten</text>
+<rect x="165" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">EERSTE KAMER</text>
+<text x="232" y="121" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">75 leden · toetst wetten</text>
+<rect x="60" y="138" width="200" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.alt}" stroke-width="1.5"/>
+<text x="160" y="156" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">REGERING</text>
+<text x="160" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">premier + ministers — voert uit</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">trias politica: wetgever · uitvoerder · rechter</text>
+</svg>`,
+    checks: [
+      {
+        q: "Hoeveel zetels heeft de **Tweede Kamer**?",
+        options: ["150", "75", "100", "200"],
+        answer: 0,
+        wrongHints: [null, "75 = Eerste Kamer.", "Niet correct.", "Niet correct."],
+      },
+      {
+        q: "Wat is **trias politica**?",
+        options: ["Machtenscheiding: wetgever, uitvoerder, rechter", "Drie politieke partijen", "Drie verkiezingen", "Driedaagse zitting"],
+        answer: 0,
+        wrongHints: [null, "Niet specifiek partijen.", "Niet drie verkiezingen.", "Geen tijdsduur."],
+      },
+      {
+        q: "Wie kiest de **Tweede Kamer**?",
+        options: ["Het volk, direct (verkiezingen 1× per 4 jaar)", "Provinciale Staten", "De koning", "De regering"],
+        answer: 0,
+        wrongHints: [null, "Provinciale Staten kiezen Eerste Kamer.", "Koning is ceremonieel.", "Regering komt voort uit verkiezingen, niet andersom."],
+      },
+      {
+        q: "Wat doet de **regering**?",
+        options: ["Voert wetten uit en bepaalt beleid", "Maakt wetten zelfstandig", "Rechtspraak", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Wetten maken doet ze samen met parlement.", "Rechtspraak is gescheiden.", "Wel actief."],
+      },
+      {
+        q: "Wat is een **coalitie**?",
+        options: ["Samenwerking van meerdere partijen om meerderheid te vormen", "Een type wet", "De koning + regering", "Een verkiezing"],
+        answer: 0,
+        wrongHints: [null, "Geen wet.", "Niet politieke samenwerking met koning.", "Coalitie komt na verkiezing."],
+      },
+      {
+        q: "Vanaf welke leeftijd mag je **stemmen** in NL?",
+        options: ["18 jaar", "16 jaar", "21 jaar", "25 jaar"],
+        answer: 0,
+        wrongHints: [null, "Wel mag je vroeger andere dingen.", "Was vroeger zo.", "Te oud."],
       },
     ],
   },
@@ -179,29 +448,25 @@ const pincodeOverheid = {
   level: "vmbo-gt-4",
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
-  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk E",
+  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 5",
   intro:
-    "Taken van de overheid, de Rijksbegroting (Prinsjesdag) en de staatsschuld + EMU-norm. Hoofdstuk E van Pincode VMBO-GT klas 4.",
+    "Hoofdstuk 5 van Pincode 7e ed. VMBO-GT 4: taken overheid, drie overheidslagen, Rijksbegroting, staatsschuld, conjunctuur, marktordening (ACM/NVWA/DNB), en politiek systeem. 7 stappen examenvoorbereiding.",
   triggerKeywords: [
-    "overheid",
-    "rijksoverheid",
-    "provincie",
-    "gemeente",
-    "openbare voorzieningen",
-    "sociale zekerheid",
-    "inkomensverdeling",
-    "rijksbegroting",
-    "miljoenennota",
-    "prinsjesdag",
-    "begrotingstekort",
-    "begrotingsoverschot",
-    "staatsschuld",
-    "emu-norm",
-    "stabiliteits- en groeipact",
-    "bbp",
-    "bruto binnenlands product",
-    "staatsobligatie",
-    "pincode hoofdstuk e",
+    "overheid", "rijksoverheid", "rijk", "provincie", "gemeente", "waterschap",
+    "openbare voorzieningen", "sociale zekerheid", "inkomensverdeling",
+    "collectief goed", "extern effect", "free rider", "verzorgingsstaat",
+    "rijksbegroting", "miljoenennota", "prinsjesdag", "troonrede",
+    "begrotingstekort", "begrotingsoverschot", "anticyclisch",
+    "staatsschuld", "staatsobligatie", "emu-norm", "stabiliteits- en groeipact",
+    "bbp", "bruto binnenlands product",
+    "conjunctuur", "recessie", "depressie", "hoogconjunctuur", "boom", "herstel",
+    "marktordening", "mededinging", "kartel", "monopolie", "consumentenbescherming",
+    "acm", "autoriteit consument en markt", "nvwa", "dnb", "afm", "dgs",
+    "ozb", "gemeentefonds", "decentralisatie", "jeugdzorg", "wmo",
+    "trias politica", "wetgevende macht", "uitvoerende macht", "rechtsprekende macht",
+    "tweede kamer", "eerste kamer", "regering", "premier", "minister",
+    "verkiezingen", "coalitie", "kabinet",
+    "pincode hoofdstuk 5", "pincode hoofdstuk e",
   ],
   chapters,
   steps,

@@ -16,13 +16,13 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["💰", "💳", "🏦", "📉", "📊", "💸", "🏠"];
+const stepEmojis = ["💰", "💳", "🏦", "📈", "📉", "📊", "💸", "🏠"];
 
 const chapters = [
   { letter: "A", title: "Wat is geld?", emoji: "💰", from: 0, to: 1 },
-  { letter: "B", title: "Sparen", emoji: "🏦", from: 2, to: 3 },
-  { letter: "C", title: "Begroten", emoji: "📊", from: 4, to: 4 },
-  { letter: "D", title: "Lenen", emoji: "💸", from: 5, to: 6 },
+  { letter: "B", title: "Sparen of beleggen?", emoji: "🏦", from: 2, to: 3 },
+  { letter: "C", title: "Inflatie + begroten", emoji: "📊", from: 4, to: 5 },
+  { letter: "D", title: "Lenen", emoji: "💸", from: 6, to: 7 },
 ];
 
 const steps = [
@@ -204,7 +204,77 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 4: Inflatie en koopkracht ─────────────────────────
+  // ─── Stap 4: Sparen of beleggen ───────────────────────────
+  {
+    title: "Sparen of beleggen — risico vs rendement",
+    explanation: "Sparen geeft weinig rente maar je geld is veilig. **Beleggen** kan meer opleveren — maar je kunt ook verlies maken. Dit is de kern van Pincode H2.2.\n\n**Sparen** (stap 3 herhaling):\n• Geld op de bank, lage rente (~1-2%)\n• Veilig: gegarandeerd tot €100.000 per bank (DGS)\n• Snel beschikbaar\n• Bij hoge inflatie verlies je toch koopkracht\n\n**Beleggen** = je geld in iets stoppen dat (hopelijk) in waarde stijgt.\n\n**Belangrijkste vormen**:\n\n**1. Aandelen**\n• Stukje eigendom in een bedrijf (Shell, ASML, Apple)\n• Verdien je via: koerswinst (waarde stijgt) + dividend (winstuitkering)\n• Kan ook DALEN — soms tot €0 (bedrijf failliet)\n• Lange termijn: ~7%/jaar gemiddeld\n\n**2. Obligaties**\n• Lening AAN een bedrijf of overheid\n• Krijg je rente over (bv. 3-4%/jaar)\n• Veiliger dan aandelen, lager rendement\n\n**3. Beleggingsfondsen / ETF's**\n• Verzameling van veel aandelen tegelijk (bv. 'wereld-ETF')\n• Spreiding = minder risico (1 bedrijf failliet → fonds heeft nog 499 anderen)\n• Voor beginners: vaak beste keuze\n\n**4. Vastgoed**\n• Huis kopen om te verhuren\n• Veel kapitaal nodig, niet snel verkoopbaar\n\n**5. Crypto**\n• Bitcoin, Ethereum etc.\n• Heel risicovol, kan 50-90% in een jaar dalen of stijgen\n• Geen onderliggende waarde, geen DGS-garantie\n• Niet voor sparen of pensioen\n\n**Risico-rendement-curve**:\n• Hoog rendement = hoog risico (altijd)\n• Wie 'gegarandeerd hoog rendement' belooft → **OPLICHTING**\n\n**Vuistregels**:\n• **Spaar eerst** een buffer (3-6 mnd lasten)\n• **Beleg pas** met geld dat je 5+ jaar kunt missen\n• **Spreid** over verschillende beleggingen\n• **Lange termijn**: aandelen leveren historisch ~7%/jaar (nominaal)\n• **Korte termijn** (< 3 jaar): te risico-vol — kies sparen\n\n**Voorbeeld 'effect van rendement'**:\n• €1.000, 30 jaar, 2% rente (sparen) → €1.811\n• €1.000, 30 jaar, 7% rendement (aandelen) → €7.612\n• Verschil door samengestelde rente — wordt enorm op lange termijn\n\n**Risico's bij beleggen**:\n• **Marktrisico**: beurs daalt (corona 2020: -30%)\n• **Bedrijfsrisico**: 1 bedrijf failliet\n• **Inflatierisico**: rendement < inflatie = verlies in koopkracht\n• **Liquiditeitsrisico**: je geld zit vast, kun je niet snel weghalen\n\n**Belasting op vermogen**:\n• Box 3: spaargeld + beleggingen boven ~€57.000 (vrijstelling 2024)\n• Belasting wordt geschat op fictief rendement → regels veranderen vaak\n\n**Voor jou als 16-jarige**:\n• Beginnen kan vanaf 18 (rekening) of jonger met ouders\n• Kleine bedragen via DEGIRO, BUX, eToro\n• **Eerst leren** — niet meteen veel inleggen\n• Lange termijn = jouw voordeel (decennia tijd voor compounding)",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">SPAREN vs BELEGGEN</text>
+<rect x="20" y="40" width="135" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">SPAREN</text>
+<text x="87" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">~1-2% rente</text>
+<text x="87" y="86" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">veilig (DGS €100k)</text>
+<text x="87" y="98" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">snel beschikbaar</text>
+<rect x="165" y="40" width="135" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.alt}" stroke-width="1.5"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">BELEGGEN</text>
+<text x="232" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">~7% gemiddeld</text>
+<text x="232" y="86" text-anchor="middle" fill="${COLORS.aanbod}" font-size="9" font-family="Arial">⚠ kan dalen</text>
+<text x="232" y="98" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">lange termijn 5+ jr</text>
+<text x="160" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€1.000, 30 jaar:</text>
+<text x="87" y="148" text-anchor="middle" fill="${COLORS.geld}" font-size="13" font-family="Arial" font-weight="bold">€1.811</text>
+<text x="87" y="160" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">2% sparen</text>
+<text x="232" y="148" text-anchor="middle" fill="${COLORS.alt}" font-size="13" font-family="Arial" font-weight="bold">€7.612</text>
+<text x="232" y="160" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">7% beleggen</text>
+<text x="160" y="185" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">aandelen · obligaties · ETF · vastgoed</text>
+<text x="160" y="205" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">eerst spaarbuffer, daarna beleggen</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is een **aandeel**?",
+        options: ["Stukje eigendom in een bedrijf", "Een lening aan een bedrijf", "Een spaarrekening", "Een soort BTW"],
+        answer: 0,
+        wrongHints: [null, "Dat is een obligatie.", "Spaarrekening = bank.", "Geen belasting."],
+      },
+      {
+        q: "Wat is het **verschil tussen sparen en beleggen**?",
+        options: ["Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies", "Geen verschil", "Beleggen is altijd veiliger", "Sparen levert altijd verlies"],
+        answer: 0,
+        wrongHints: [null, "Wel groot verschil.", "Tegendeel.", "Sparen is veilig."],
+      },
+      {
+        q: "Bij **hoog rendement** hoort meestal:",
+        options: ["Hoog risico", "Geen risico", "Gegarandeerd geld", "Kortere wachttijd"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Garanties bestaan zelden bij hoge rendementen.", "Niets met tijd."],
+      },
+      {
+        q: "Iemand belooft **gegarandeerd 30% rendement per jaar**. Wat denk je?",
+        options: ["Vrijwel zeker oplichting — bestaat niet", "Geweldig, meteen instappen", "Standaard rendement", "Dat hoort bij de bank"],
+        answer: 0,
+        wrongHints: [null, "Klassieke fraude-tactiek.", "Niet gemiddeld.", "Banken bieden veel lager."],
+      },
+      {
+        q: "Wat is een **ETF** (beleggingsfonds)?",
+        options: ["Verzameling van veel aandelen tegelijk → spreiding", "Een spaarrekening", "Een hypotheek", "Een belasting"],
+        answer: 0,
+        wrongHints: [null, "Beleggingsproduct, geen spaar.", "Niet hetzelfde.", "Geen belasting."],
+      },
+      {
+        q: "**Vuistregel** voordat je gaat beleggen:",
+        options: ["Eerst een buffer sparen (3-6 mnd lasten)", "Direct alles inleggen", "Crypto is altijd eerst", "Lenen om te beleggen"],
+        answer: 0,
+        wrongHints: [null, "Te risicovol zonder buffer.", "Crypto is hoog risico.", "Heel risicovol — beter niet."],
+      },
+      {
+        q: "**Crypto** als belegging:",
+        options: ["Heel hoog risico, kan 50-90% dalen, geen DGS-garantie", "Veilig en gegarandeerd", "Levert vast 10% per jaar", "Wettelijk verzekerd"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel — heel volatiel.", "Geen garantie.", "Geen verzekering."],
+      },
+    ],
+  },
+
+  // ─── Stap 5: Inflatie en koopkracht ─────────────────────────
   {
     title: "Inflatie — waarom geld minder waard wordt",
     explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
@@ -257,7 +327,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 5: Begroten ──────────────────────────────────────────
+  // ─── Stap 6: Begroten ──────────────────────────────────────────
   {
     title: "Begroten — heb ik geld over aan het einde van de maand?",
     explanation: "Een **begroting** = overzicht van wat erin komt en uit gaat per maand. Dat helpt je doelen halen (rijbewijs, vakantie) en voorkomen dat je rood staat.\n\n**Inkomsten**: alles wat binnenkomt.\n• Zakgeld\n• Bijbaan-loon (bv. vakkenvuller €60-€200/mnd)\n• Studiefinanciering (later)\n• Toeslagen\n\n**Uitgaven**: opgesplitst in **vast** en **variabel**.\n\n**Vaste uitgaven** (komen elke maand terug):\n• Telefoon abonnement (€10-€25)\n• Streamingdiensten (Spotify, Netflix)\n• Sport-abonnement\n• Verzekeringen\n\n**Variabele uitgaven** (anders elke maand):\n• Boodschappen, uit eten\n• Kleding\n• Uitgaan, bioscoop\n• Vervoer (OV-chipkaart, benzine)\n\n**Sparen** = zet apart vóórdat je uitgeeft (de '50/30/20-regel'):\n• 50% noodzaak\n• 30% leuke dingen\n• 20% sparen\n\n**Voorbeeld**: bijbaan-loon €240/mnd.\n• 50% = €120 → telefoon, OV, basis\n• 30% = €72 → uitgaan, kleding\n• 20% = €48 → sparen voor rijbewijs\n\n**Overschot/tekort**:\n• Inkomsten &gt; uitgaven → **overschot** (kan sparen)\n• Inkomsten &lt; uitgaven → **tekort** (rood staan, schulden)",
@@ -317,7 +387,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 6: Lenen — kredietvormen ─────────────────────────
+  // ─── Stap 7: Lenen — kredietvormen ─────────────────────────
   {
     title: "Lenen — wanneer wel, wanneer niet",
     explanation: "**Lenen** = geld krijgen dat je **later moet terugbetalen**, vaak met **rente**. De bank verdient aan rente.\n\n**Soorten leningen** (van laag naar hoog risico voor jou):\n\n**1. Hypotheek** — voor een huis (looptijd 20-30 jaar). Het huis is **onderpand**: kun je niet betalen, dan wordt het huis verkocht. Lage rente want de bank loopt weinig risico.\n\n**2. Studielening (DUO)** — voor studenten. Lage rente, terugbetalen pas als je verdient. Geen BKR-registratie.\n\n**3. Persoonlijke lening** — vast bedrag, vaste maandlasten over 1-5 jaar. Voor bv. auto, verbouwing.\n\n**4. Doorlopend krediet** — kredietruimte tot een limiet. Flexibel, maar **hoge rente** en risico op groeiende schuld.\n\n**5. Rood staan** — tijdelijk negatief op je betaalrekening. **Heel hoge rente** (10-15%/jaar).\n\n**6. Achteraf betalen / Klarna** — populair maar bij niet betalen: hoge boetes, deurwaarder, BKR-registratie. Je staat dan jaren bekend als 'wanbetaler' en krijgt later geen hypotheek.\n\n**Voor leningen kijkt de bank naar**:\n• **Inkomen**: kun je het terugbetalen?\n• **BKR-registratie**: heb je nu al schulden?\n• **Onderpand**: huis, auto?\n\n**Vuistregel**: je vaste maandlasten (huur + leningen) moeten **maximaal 30% van je netto-inkomen** zijn.\n\n**Wanneer is lenen OK?**\n• Voor iets dat **lang meegaat** (huis, opleiding) en/of geld oplevert.\n\n**Wanneer NIET?**\n• Voor een vakantie, kleren, telefoon → eerst sparen.",
@@ -382,7 +452,7 @@ const steps = [
       },
     ],
   },
-  // ─── Stap 7: Hypotheek in detail ───────────────────────────
+  // ─── Stap 8: Hypotheek in detail ───────────────────────────
   {
     title: "Hypotheek — een huis kopen",
     explanation: "Een **hypotheek** is een lange lening om een huis te kopen. Je leent vaak het overgrote deel van de huisprijs van een bank. Het huis is **onderpand** — kun je niet betalen, dan verkoopt de bank het huis.\n\n**Looptijd**: meestal **30 jaar**.\n\n**Twee veelvoorkomende vormen**:\n\n**1. Annuïteitenhypotheek**\n• **Vaste maandlast** elk jaar (gemiddeld over de looptijd).\n• Eerst betaal je veel rente, weinig aflossing.\n• Aan het eind: weinig rente, veel aflossing.\n• Populair bij starters.\n\n**2. Lineaire hypotheek**\n• **Vaste aflossing** elke maand.\n• Eerst hoge maandlast (rente over hele bedrag).\n• Wordt elk jaar lager.\n• Goedkoper over de hele looptijd, maar in begin hoger.\n\n**Voorbeeld**: huis kost €350.000.\n• Eigen geld: €30.000.\n• Hypotheek: €320.000 over 30 jaar.\n• Rente 4% → maandlast ongeveer **€1.530**.\n\n**Maximale hypotheek** = afhankelijk van je inkomen (bruto). Vuistregel: ongeveer 4-5× je bruto jaarsalaris.\n\n**Bijkomende kosten** (komen bovenop de huisprijs):\n• **Overdrachtsbelasting** (2% voor starters tot 35 jaar: 0%)\n• **Notaris** (~€2.000)\n• **Taxatie** (~€500)\n• **Hypotheekadvies** (~€2.500)\n\n**Aandachtspunten**:\n• Werkloos worden = inkomen weg = hypotheek niet betalen = huis kwijt\n• Daarom **buffer** op spaarrekening (minimaal 3-6 maanden lasten)\n• Verzekering: arbeidsongeschiktheid, overlijdensrisico",
@@ -480,6 +550,26 @@ const pincodeGeldSparenLenen = {
     "samengestelde rente",
     "spaarrekening",
     "betaalrekening",
+    "beleggen",
+    "belegging",
+    "aandeel",
+    "aandelen",
+    "obligatie",
+    "obligaties",
+    "etf",
+    "beleggingsfonds",
+    "rendement",
+    "risico",
+    "spreiden",
+    "spreiding",
+    "vastgoed",
+    "crypto",
+    "bitcoin",
+    "dividend",
+    "koerswinst",
+    "beurs",
+    "degiro",
+    "sparen of beleggen",
     "inflatie",
     "koopkracht",
     "cpi",

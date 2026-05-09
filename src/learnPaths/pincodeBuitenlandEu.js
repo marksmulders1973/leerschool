@@ -1,6 +1,5 @@
-// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk G
-// Gesplitst uit pincodeEconomieVmboGt4.js (2026-05-09): 1 hoofdstuk = 1 leerpad,
-// past bij Leerkwartier 15-min-chunks en de UI-logica "1 pad = 1 thema".
+// Leerpad: Pincode 7e ed. VMBO-GT klas 4 - hoofdstuk 7 (Nederland en het buitenland)
+// Uitgebreide versie 2026-05-09: 7 stappen voor compleet examen-blok.
 
 const COLORS = {
   text: "#e0e6f0",
@@ -16,114 +15,195 @@ const COLORS = {
   grijs: "#90a4ae",
 };
 
-const stepEmojis = ["🌍", "🇪🇺", "💶"];
+const stepEmojis = ["🚢", "🤝", "🇪🇺", "💶", "🌐", "🛡️", "🏦"];
 
 const chapters = [
-  { letter: "G", title: "Nederland en het buitenland", emoji: "🌍", from: 0, to: 2 },
+  { letter: "A", title: "Internationale handel", emoji: "🚢", from: 0, to: 1 },
+  { letter: "B", title: "Europese Unie", emoji: "🇪🇺", from: 2, to: 3 },
+  { letter: "C", title: "Globalisering", emoji: "🌐", from: 4, to: 5 },
+  { letter: "D", title: "Centrale bank", emoji: "🏦", from: 6, to: 6 },
 ];
 
 const steps = [
-
+  // ─── Stap 1: Internationale handel ───────────────────────
   {
     title: "Internationale handel — import en export",
-    explanation: "**Internationale handel**: landen kopen en verkopen aan elkaar.\n\n**Export**: NL verkoopt iets aan het buitenland (bv. paprika's, machines, kaas).\n**Import**: NL koopt iets uit het buitenland (bv. olie, koffie, smartphones).\n\n**Handelsbalans** = export − import.\n• **Overschot**: meer export dan import (NL heeft dit meestal — handelsland).\n• **Tekort**: meer import dan export.\n\nWaarom handelen?\n• **Comparatief voordeel**: elk land is goed in iets anders. Wij kunnen kaas maken, Saoedi-Arabië olie pompen. Handel maakt ons allebei rijker.\n• **Schaalvoordelen**: meer afzet = lagere kosten per stuk.\n• **Variatie**: zonder import geen koffie of bananen in NL.\n\nNederland is een **handelsland**:\n• Rotterdam = grootste haven van Europa.\n• Schiphol = belangrijke vrachtluchthaven.\n• Veel re-export: spullen komen binnen, gaan via NL door naar Duitsland of UK.",
-    svg: `<svg viewBox="0 0 300 180">
-<rect x="100" y="60" width="100" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="150" y="92" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">🇳🇱 NL</text>
+    explanation: "**Internationale handel**: landen kopen en verkopen aan elkaar.\n\n**Export**: NL verkoopt iets aan het buitenland (paprika's, machines, kaas, ASML-chips, Heineken)\n**Import**: NL koopt iets uit het buitenland (olie, koffie, smartphones, fruit uit Spanje)\n\n**Handelsbalans** = export − import\n• **Overschot**: meer export dan import (NL heeft dit meestal)\n• **Tekort**: meer import dan export\n\n**Cijfers NL 2023**:\n• Export: ~€700 miljard\n• Import: ~€650 miljard\n• Handelsoverschot ~€50 miljard\n• 60-70% van export gaat naar EU-landen\n\n**Waarom handelen?**\n\n**Comparatief voordeel** (kern-economie!): elk land is goed in iets anders. Wij kunnen kaas maken, Saoedi-Arabië olie pompen. **Door te ruilen worden we ALLEBEI rijker** — zelfs als 1 land 'beter' is in alles (Ricardo, 1817).\n\n**Schaalvoordelen**: meer afzet = lagere kosten per stuk. Een ASML-machine van €200 mln is alleen rendabel met wereldwijde markt.\n\n**Variatie**: zonder import geen koffie, banaan, avocado in NL. Onze keuken is dankzij import.\n\n**Specialisatie**: NL is super in zuivel, hightech, agro-tech, water-management.\n\n**Nederland als handelsland**:\n• **Rotterdam** = grootste haven van Europa (~470 mln ton goederen/jaar)\n• **Schiphol** = belangrijke vrachtluchthaven (Europa's #4)\n• **Re-export**: spullen komen NL binnen, gaan via NL door naar Duitsland of UK (~50% van NL-export!)\n• Geografisch midden Europa = logistiek voordeel\n\n**Voor- en nadelen handel**:\n• ✓ Goedkopere producten voor consumenten\n• ✓ Meer keuze\n• ✓ Banen in export-sectoren\n• ✗ Banen verloren in sectoren die niet kunnen concurreren\n• ✗ Afhankelijkheid (corona toonde aan: medicijnen uit India, chips uit Taiwan)\n• ✗ Milieu-impact transport\n\n**Belangrijk recent**:\n• China werd grote producent → veel westerse banen verdwenen\n• Nu: 'reshoring' (productie terughalen) wegens afhankelijkheid\n• Geopolitiek (China, Rusland, USA) verstoort handel",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">NL HANDEL</text>
+<rect x="100" y="50" width="120" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="160" y="82" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">🇳🇱 NL</text>
 <text x="40" y="60" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">IMPORT</text>
-<text x="40" y="80" fill="${COLORS.text}" font-size="9" font-family="Arial">olie · koffie</text>
-<line x1="60" y1="85" x2="100" y2="85" stroke="${COLORS.geld}" stroke-width="2" marker-end="url(#a)"/>
-<defs><marker id="a" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="${COLORS.geld}"/></marker></defs>
-<text x="220" y="60" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">EXPORT</text>
-<text x="220" y="80" fill="${COLORS.text}" font-size="9" font-family="Arial">kaas · paprika</text>
-<line x1="200" y1="85" x2="240" y2="85" stroke="${COLORS.aanbod}" stroke-width="2" marker-end="url(#b)"/>
-<defs><marker id="b" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="${COLORS.aanbod}"/></marker></defs>
-<text x="150" y="155" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">handelsbalans = export − import</text>
+<text x="40" y="78" fill="${COLORS.text}" font-size="9" font-family="Arial">olie · koffie</text>
+<text x="40" y="90" fill="${COLORS.text}" font-size="9" font-family="Arial">~€650 mrd</text>
+<text x="60" y="105" fill="${COLORS.geld}" font-size="14" font-family="Arial">→</text>
+<text x="240" y="60" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">EXPORT</text>
+<text x="240" y="78" fill="${COLORS.text}" font-size="9" font-family="Arial">kaas · chips</text>
+<text x="240" y="90" fill="${COLORS.text}" font-size="9" font-family="Arial">~€700 mrd</text>
+<text x="220" y="105" fill="${COLORS.aanbod}" font-size="14" font-family="Arial">→</text>
+<text x="160" y="135" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">handelsoverschot ~€50 mrd</text>
+<text x="160" y="158" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">Rotterdam · Schiphol · re-export</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">comparatief voordeel maakt iedereen rijker</text>
 </svg>`,
     checks: [
       {
         q: "Wat is **export** voor Nederland?",
-        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Toeristen die naar NL komen", "Een Nederlands bedrijf in Duitsland"],
+        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Toeristen die naar NL komen", "Een NL bedrijf in Duitsland"],
         answer: 0,
-        wrongHints: [null, "Dat is import — andersom.", "Toerisme is wel een vorm van export van diensten, maar de basisbetekenis is breder.", "Vestiging in andere land = directe investering, geen 'export' in standaardzin."],
+        wrongHints: [null, "Dat is import.", "Toerisme is wel een vorm export van diensten.", "Vestiging = directe investering."],
       },
       {
         q: "Wat is een **comparatief voordeel**?",
-        options: ["Elk land is relatief goed in iets anders, dus handel loont", "Een land heeft meer mensen", "Een land heeft de goedkoopste producten", "Een land heeft de beste hoogleraren"],
+        options: ["Elk land is RELATIEF goed in iets — handel loont", "Een land heeft meer mensen", "Goedkoopste producten", "Beste hoogleraren"],
         answer: 0,
-        wrongHints: [null, "Bevolking is geen comparatief voordeel — productiviteit per persoon wel.", "Goedkoopste = absoluut voordeel; comparatief is relatief.", "Onderwijsniveau is een factor, maar geen definitie van comparatief voordeel."],
+        wrongHints: [null, "Bevolking ≠ comparatief voordeel.", "Goedkoopste = absoluut voordeel.", "Onderwijs is factor, geen definitie."],
       },
-    
       {
         q: "Een land heeft een **handelsoverschot**. Wat betekent dat?",
-        options: ["De export is groter dan de import", "De import is groter dan de export", "Schulden zijn afgelost", "Er is recessie"],
+        options: ["Export is groter dan import", "Import groter dan export", "Schulden afgelost", "Recessie"],
         answer: 0,
-        wrongHints: [null, "Dat is juist een handelsTEKORT.", "Schulden zijn iets anders dan handelsbalans.", "Recessie = economische krimp; los van handel."],
+        wrongHints: [null, "Dat is tekort.", "Niet hetzelfde.", "Recessie is iets anders."],
       },
       {
-        q: "Waarom is Nederland een uitgesproken **handelsland**?",
-        options: ["Grote havens (Rotterdam) + Schiphol + ligging in Europa", "Veel goud in de bodem", "Lage belastingen wereldwijd het laagst", "Geen import nodig"],
+        q: "Waarom is NL een uitgesproken **handelsland**?",
+        options: ["Grote havens (Rotterdam) + Schiphol + ligging Europa", "Veel goud", "Laagste belasting wereldwijd", "Geen import nodig"],
         answer: 0,
-        wrongHints: [null, "NL heeft geen goud van betekenis.", "NL-belasting is normaal, niet wereldwijd het laagst.", "NL importeert juist heel veel (bv. olie)."],
+        wrongHints: [null, "Geen goud van betekenis.", "Belasting is normaal.", "NL importeert juist heel veel (olie!)."],
       },
       {
         q: "Wat is **re-export**?",
-        options: ["Goederen komen Nederland binnen en gaan via NL door naar een ander land", "Twee keer hetzelfde product exporteren", "Export naar landen buiten Europa", "Een soort belastingvoordeel"],
+        options: ["Goederen komen NL binnen + gaan door naar ander land", "2x exporteren hetzelfde", "Export buiten Europa", "Belastingvoordeel"],
         answer: 0,
-        wrongHints: [null, "Niet 'twee keer' — wel doorvoer via NL.", "Niet beperkt tot buiten Europa — meeste re-export gaat juist naar EU-landen.", "Geen belasting — een handelsstroom."],
+        wrongHints: [null, "Niet '2x' — wel doorvoer.", "Niet beperkt buiten EU.", "Geen belasting — handelsstroom."],
+      },
+      {
+        q: "Welk **risico** brengt internationale afhankelijkheid?",
+        options: ["Bij verstoring (corona, oorlog): tekort aan essentiële goederen (medicijnen, chips)", "Geen risico", "Lagere prijzen", "Meer toeristen"],
+        answer: 0,
+        wrongHints: [null, "Wel reëel risico.", "Onzeker.", "Niet relevant voor handel."],
       },
     ],
   },
+  // ─── Stap 2: Beschermingsmaatregelen ────────────────────
   {
-    title: "De Europese Unie",
-    explanation: "**Europese Unie (EU)**: 27 Europese landen die samenwerken op gebied van handel, wetgeving en politiek.\n\n**Belangrijkste afspraken**:\n• **Vrije handel**: geen invoerheffingen tussen lidstaten — een Belgische pizza in NL kost niet meer dan in België.\n• **Vrij verkeer**: mensen, goederen, diensten en kapitaal mogen vrij over grenzen.\n• **Eén markt**: alsof EU-landen één land zijn voor handel.\n• **Gezamenlijke wetten**: bv. milieu, voedselveiligheid, consumentenbescherming.\n\n**De Eurozone**: 20 landen die de **euro** gebruiken (NL, DE, FR, IT, ES, ...). Niet alle EU-landen hebben euro (bv. Polen, Zweden, Denemarken).\n\n**Voordelen voor NL**:\n• 60-70% van NL-export gaat naar EU-landen.\n• Geen wisselkosten of -risico binnen eurozone.\n• Nederlands bedrijf kan in heel Europa verkopen.\n\n**Nadelen**:\n• Minder eigen zeggenschap (Brussels-regels).\n• Bijdrage aan de EU-begroting (~€8 mrd/jaar).\n• Bij crisis in andere landen (Griekenland) draagt NL mee.",
-    svg: `<svg viewBox="0 0 300 180">
-<circle cx="150" cy="90" r="60" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="2"/>
-<text x="150" y="80" text-anchor="middle" fill="${COLORS.vraag}" font-size="14" font-family="Arial" font-weight="bold">EU</text>
-<text x="150" y="98" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">27 landen</text>
-<text x="150" y="111" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vrije handel</text>
-<circle cx="150" cy="90" r="30" fill="none" stroke="${COLORS.warm}" stroke-width="1.5" stroke-dasharray="3 2"/>
-<text x="150" y="55" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">€ eurozone (20)</text>
-<text x="150" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vrij verkeer mensen · goederen · diensten · kapitaal</text>
+    title: "Beschermingsmaatregelen — protectionisme",
+    explanation: "Niet alle handel is volledig vrij. Landen gebruiken **beschermingsmaatregelen** om eigen industrie te beschermen.\n\n**Vier hoofdvormen**:\n\n**1. Invoerheffing (importheffing/-tarief)**\n• Belasting bij grens op importproducten\n• Maakt buitenlandse producten duurder → eigen producten relatief goedkoper\n• Bv. EU-heffing op Chinese elektrische auto's (45%, 2024)\n\n**2. Quotum**\n• Maximum AANTAL dat je mag importeren\n• Bv. 'max 10.000 Chinese kledingstukken/jaar'\n• Boven dat: niet toegestaan of veel duurder\n\n**3. Subsidies**\n• Eigen bedrijven krijgen geld van overheid\n• Maakt hun producten goedkoper, internationaal concurrerender\n• Bv. EU geeft veel subsidies aan boeren (GLB)\n\n**4. Niet-tarifaire belemmeringen**\n• Strenge regels (technisch, milieu, gezondheid) die buitenlandse producten moeilijk maken\n• Bv. EU verbiedt importchemicaliën die in EU verboden zijn\n• Etikettering, productveiligheid, dier-welzijn\n\n**Voor- en nadelen protectionisme**:\n• ✓ Eigen industrie beschermd → banen behouden\n• ✓ Strategische sectoren niet afhankelijk van buitenland\n• ✓ Reactie op oneerlijke concurrentie (kinderarbeid, dumping)\n• ✗ Duurder voor consument\n• ✗ Verlies efficiëntie (geen comparatief voordeel)\n• ✗ Ander land kan terugslag (handelsoorlog)\n\n**Vrijhandel** vs **protectionisme**:\n• **Vrijhandel** (Adam Smith, Ricardo): geen barrières, iedereen wint\n• **Protectionisme**: bescherming, eigen industrie eerst\n• EU = vrijhandel intern, protectionisme extern\n\n**Internationaal**:\n• **WTO** (World Trade Organization): regelt globale handel, beslecht geschillen\n• **Vrijhandelsverdragen**: bijvoorbeeld EU-Canada (CETA), EU-Japan\n• **Sancties**: bewuste handelsbeperking als straf (bv. Rusland 2022)\n\n**Recente trends**:\n• Trump (2018-2020): forse importheffingen op China, EU-staal\n• China-EU spanning over EV's (2024)\n• 'Reshoring': productie terug naar eigen continent\n• Klimaat: import-CO2-heffing (CBAM) op koolstof-intensieve producten",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROTECTIONISME</text>
+<rect x="20" y="40" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="87" y="58" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">INVOERHEFFING</text>
+<text x="87" y="72" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">belasting aan grens</text>
+<rect x="165" y="40" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.oranje}" stroke-width="1.2"/>
+<text x="232" y="58" text-anchor="middle" fill="${COLORS.oranje}" font-size="11" font-family="Arial" font-weight="bold">QUOTUM</text>
+<text x="232" y="72" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">max aantal toegestaan</text>
+<rect x="20" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">SUBSIDIE</text>
+<text x="87" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">eigen bedrijf goedkoper</text>
+<rect x="165" y="90" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.2"/>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">REGELS</text>
+<text x="232" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">technisch · milieu</text>
+<text x="160" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">WTO regelt globaal</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vrijhandel ↔ protectionisme</text>
 </svg>`,
     checks: [
       {
-        q: "Hoeveel landen zitten er in de EU?",
-        options: ["27", "20", "50", "12"],
+        q: "Wat is een **invoerheffing**?",
+        options: ["Belasting op importproducten aan de grens", "Een soort BTW", "Loonbelasting", "Subsidie"],
         answer: 0,
-        wrongHints: [null, "20 = aantal eurozone-landen, niet alle EU-leden.", "Te veel — het zijn 27, niet 50.", "Begin van de EEG was rond dat aantal, nu veel meer."],
+        wrongHints: [null, "Vergelijkbaar maar specifiek voor import.", "Niets met loon.", "Tegendeel."],
       },
       {
-        q: "Welk land gebruikt de **euro** NIET?",
-        options: ["Polen", "Frankrijk", "Spanje", "Duitsland"],
+        q: "Wat is een **quotum**?",
+        options: ["Maximum aantal dat geïmporteerd mag worden", "Importbelasting", "Kwaliteitslabel", "Een handelsverdrag"],
         answer: 0,
-        wrongHints: [null, "Frankrijk gebruikt wel de euro.", "Spanje gebruikt de euro.", "Duitsland is een van de grootste eurolanden."],
-      },
-    
-      {
-        q: "**Eén markt** in de EU — wat betekent dat voor handel?",
-        options: ["Geen invoerheffingen tussen EU-landen, vrij handelen alsof het 1 land is", "Iedereen heeft dezelfde munteenheid", "Alle prijzen zijn gelijk", "Geen import van buiten Europa toegestaan"],
-        answer: 0,
-        wrongHints: [null, "Niet alle EU-landen hebben de euro — denk aan Zweden of Polen.", "Prijzen verschillen, maar er zijn geen invoerheffingen tussen EU-landen.", "Import van buiten mag wel — alleen met heffingen."],
+        wrongHints: [null, "Quotum = aantal, heffing = geld.", "Niet kwaliteit.", "Niet verdrag."],
       },
       {
-        q: "**Brexit** was:",
-        options: ["Het Verenigd Koninkrijk dat de EU verliet (2020)", "Een nieuw EU-lid", "Een Europese munteenheid", "Een handelsverdrag met de VS"],
+        q: "Een **subsidie** voor eigen bedrijven:",
+        options: ["Maakt hun producten goedkoper, internationaal concurrerender", "Maakt ze duurder", "Heeft geen effect", "Verboden door WTO altijd"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — UK ging er juist uit.", "Brexit = 'Britain exit', dus geen valuta.", "Brexit ging tussen UK en EU, niet tussen EU en VS."],
+        wrongHints: [null, "Tegendeel.", "Wel groot effect.", "Niet altijd verboden — vaak geregeld."],
       },
       {
-        q: "Voordeel van de **euro** voor een Nederlandse toerist die in Spanje is?",
-        options: ["Geen wisselkosten of -koersrisico — euro is overal hetzelfde", "Hogere prijzen in Spanje", "Lagere belasting", "Gratis hotelkamer"],
+        q: "Welke organisatie regelt globale handelsregels?",
+        options: ["WTO (World Trade Organization)", "EU", "VN", "ECB"],
         answer: 0,
-        wrongHints: [null, "Prijzen zijn niet hoger door de euro.", "Belasting in andere land verandert niet door jouw munteenheid.", "Vakantie kost gewoon geld."],
+        wrongHints: [null, "EU = regionaal.", "VN = breder, niet handel-specifiek.", "ECB = euro."],
+      },
+      {
+        q: "**Reshoring** is:",
+        options: ["Productie terughalen naar eigen continent", "Toerisme stimuleren", "Belasting verlagen", "Vrijhandel uitbreiden"],
+        answer: 0,
+        wrongHints: [null, "Geen toerisme.", "Niet belasting.", "Tegendeel — minder vrijhandel."],
+      },
+      {
+        q: "Voor- en nadeel protectionisme:",
+        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "Alleen voordelen", "Alleen nadelen", "Geen effect"],
+        answer: 0,
+        wrongHints: [null, "Beide kanten zijn er.", "Beide kanten zijn er.", "Wel groot effect."],
       },
     ],
   },
+  // ─── Stap 3: Europese Unie ──────────────────────────────
   {
-    title: "Wisselkoersen en de euro",
-    explanation: "**Wisselkoers**: de prijs van de ene valuta in de andere. Voorbeeld: €1 = $1,10.\n\nWisselkoersen veranderen elke dag op de **valutamarkt**. Door:\n• Vraag en aanbod naar valuta\n• Rente-verschillen tussen landen\n• Politieke onzekerheid\n• Economische groei\n\n**Sterke euro** (€1 = $1,30):\n• **Importeren wordt goedkoper** (een Amerikaanse iPhone betaal je in dollar — minder euro nodig).\n• **Exporteren wordt duurder** (Amerikaanse klanten moeten meer dollar betalen voor onze kaas).\n\n**Zwakke euro** (€1 = $1,00):\n• Andersom: import duur, export aantrekkelijk.\n\n**Voordeel van de euro** voor NL:\n• Geen wisselkosten in eurozone (Belgisch bier kost in NL gewoon de Belgische prijs in euro).\n• Geen wisselkoersrisico tussen euro-landen.\n• Prijzen makkelijk vergelijkbaar tussen landen.\n\n**ECB (Europese Centrale Bank)** in Frankfurt regelt de euro: bepaalt rente, drukt geld bij, houdt inflatie laag (doel ~2%).",
-    svg: `<svg viewBox="0 0 300 180">
+    title: "De Europese Unie — 27 landen, 1 markt",
+    explanation: "**EU** = 27 Europese landen die samenwerken op handel, wetgeving en politiek.\n\n**Belangrijkste afspraken**:\n\n**1. Vrije handel**: geen invoerheffingen tussen lidstaten — een Belgische pizza in NL kost niet meer dan in België.\n\n**2. Vrij verkeer (4 vrijheden)**:\n• **Goederen** — geen grenscontrole\n• **Personen** — werken/wonen waar je wilt\n• **Diensten** — bedrijf in andere EU-land openen\n• **Kapitaal** — geld vrij verplaatsen\n\n**3. Eén markt**: alsof EU-landen 1 land zijn voor handel.\n\n**4. Gezamenlijke wetten**: milieu, voedselveiligheid, consumentenbescherming, mededinging.\n\n**De Eurozone** (= subset van EU):\n• 20 landen die de euro gebruiken (NL, DE, FR, IT, ES, BE, etc.)\n• NIET alle EU-landen: Polen, Zweden, Denemarken hebben eigen valuta\n• UK was lid → Brexit 2020\n\n**Structuur EU**:\n• **Europees Parlement**: direct gekozen, 705 leden\n• **Raad van de EU**: ministers uit lidstaten\n• **Europese Commissie**: 'regering', maakt voorstellen\n• **Hof van Justitie EU**: rechtspraak\n• **ECB** (zie stap 7)\n\n**Voordelen voor NL**:\n• 60-70% van NL-export gaat naar EU-landen\n• Geen wisselkosten of -risico binnen eurozone\n• NL bedrijf kan in heel EU verkopen zonder grenzen\n• EU onderhandelt sterker dan 27 losse landen\n\n**Nadelen**:\n• Minder eigen zeggenschap (Brusselse regels)\n• Bijdrage aan EU-begroting (~€8 mrd/jaar netto bijdrager)\n• Bij crisis in andere landen draagt NL mee (Griekse staatsschuld)\n• Snel groeiende regelgeving (regulering uit Brussel)\n\n**Brexit (2016-2020)**:\n• UK wilde controle terug over wetten + grenzen\n• Resultaat: minder handel met EU, problemen logistiek (Noord-Ierland), economie geleden\n• Lessen: vertrek-uit-EU is complex, dure\n\n**Recente discussies**:\n• Migratie (asielbeleid)\n• Klimaatbeleid (Green Deal)\n• China-strategie\n• Uitbreiding (Oekraïne, Westelijke Balkan)\n• Macht ECB",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">EUROPESE UNIE</text>
+<circle cx="160" cy="105" r="65" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="2"/>
+<text x="160" y="92" text-anchor="middle" fill="${COLORS.vraag}" font-size="14" font-family="Arial" font-weight="bold">EU</text>
+<text x="160" y="110" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">27 landen</text>
+<text x="160" y="125" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">1 markt</text>
+<text x="160" y="138" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">vrij verkeer</text>
+<circle cx="160" cy="105" r="32" fill="none" stroke="${COLORS.warm}" stroke-width="1.5" stroke-dasharray="3 2"/>
+<text x="160" y="65" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial" font-weight="bold">€ eurozone (20)</text>
+<text x="160" y="190" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">vrije: goederen · personen · diensten · kapitaal</text>
+</svg>`,
+    checks: [
+      {
+        q: "Hoeveel landen zitten in de EU?",
+        options: ["27", "20", "50", "12"],
+        answer: 0,
+        wrongHints: [null, "20 = eurozone-landen.", "Te veel.", "Begin EEG, nu 27."],
+      },
+      {
+        q: "Welk land gebruikt de **euro NIET**?",
+        options: ["Polen", "Frankrijk", "Spanje", "Duitsland"],
+        answer: 0,
+        wrongHints: [null, "Wel.", "Wel.", "Wel — grootste eurozone-economie."],
+      },
+      {
+        q: "Wat zijn de **4 vrijheden** EU?",
+        options: ["Goederen, personen, diensten, kapitaal", "Eten, drinken, slapen, werken", "Lucht, water, vuur, aarde", "Stem, religie, pers, vereniging"],
+        answer: 0,
+        wrongHints: [null, "Onzin.", "Niet economische termen.", "Mensenrechten — andere context."],
+      },
+      {
+        q: "Wat is de **Europese Commissie**?",
+        options: ["'Regering' van de EU — maakt voorstellen, voert beleid uit", "Het parlement", "De rechter", "De centrale bank"],
+        answer: 0,
+        wrongHints: [null, "Parlement is iets anders.", "Hof van Justitie.", "ECB is centrale bank."],
+      },
+      {
+        q: "Wat was **Brexit**?",
+        options: ["UK verliet de EU (2020)", "UK trad toe", "Een nieuw land in EU", "Een handelsverdrag"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Niet nieuw land.", "Geen verdrag — vertrek."],
+      },
+      {
+        q: "Voordeel **euro voor toerist**:",
+        options: ["Geen wisselkosten of -koersrisico in eurozone", "Hogere prijzen in andere landen", "Lagere belasting", "Gratis hotelkamer"],
+        answer: 0,
+        wrongHints: [null, "Niet door euro.", "Niet door munteenheid.", "Vakantie kost geld."],
+      },
+    ],
+  },
+  // ─── Stap 4: Wisselkoersen en de euro ─────────────────
+  {
+    title: "Wisselkoersen — wat is jouw euro waard?",
+    explanation: "**Wisselkoers** = de prijs van de ene valuta in de andere. Voorbeeld: €1 = $1,10 = ¥160.\n\nWisselkoersen veranderen elke dag (en seconde) op de **valutamarkt**. Door:\n• Vraag en aanbod naar valuta\n• Rente-verschillen tussen landen (hogere rente trekt geld aan)\n• Politieke onzekerheid (oorlog, verkiezingen)\n• Economische groei\n• Inflatieverschillen\n\n**Sterke euro** (€1 = $1,30):\n• **Importeren wordt goedkoper** (Amerikaanse iPhone kost minder euro)\n• **Exporteren wordt duurder** (Amerikaanse klanten moeten meer dollar)\n• Toerisme NL → VS goedkoper\n\n**Zwakke euro** (€1 = $1,00):\n• Andersom: import duur, export aantrekkelijk\n• Toerisme NL → VS duur\n\n**Voor jou als toerist**:\n• Vlucht naar Bangkok: blijf op huidige koers letten\n• Geld wisselen op luchthaven = duur (slechte koers + commissie)\n• Beter: pinnen ter plaatse met je gewone bankpas\n\n**Waarom euro voor 20 landen één is**:\n• Geen wisselkoersrisico binnen eurozone\n• Geen wisselkosten\n• Prijzen makkelijk vergelijkbaar\n• ECB bewaakt euro-koers (zie stap 7)\n\n**Belangrijke valuta**:\n• **USD** (US dollar) — wereldreservevaluta\n• **EUR** (euro) — 20 landen\n• **GBP** (Brits pond) — UK\n• **JPY** (Japanse yen) — Japan\n• **CNY** (Chinese yuan) — China, deels gereguleerd\n• **CHF** (Zwitserse frank) — Zwitserland, 'safe haven'\n\n**Wisselkoers-systemen**:\n• **Vrije zwevende koers**: markt bepaalt (USD, EUR, JPY)\n• **Gereguleerde koers**: overheid controleert (CNY deels)\n• **Vaste koers**: overheid garandeert (Hong Kong dollar aan USD)\n\n**Effect inflatie op wisselkoers**:\n• Hoge inflatie in NL → euro daalt vs valuta met lage inflatie\n• Mensen verkiezen sterke valuta\n\n**Speculatie**:\n• Grote handelaren (banken, hedge funds) verdienen aan kleine bewegingen\n• Soms aanvallen op zwakke valuta (Soros vs Brits pond, 1992)\n\n**Voorbeeld vakantie**:\n• Reis Bali, kost 5 mln Indonesische rupiah\n• Bij koers 16.000 IDR per euro = €312\n• Bij koers 18.000 IDR per euro = €278\n→ Verschil €34, soms verschil zit gewoon in 'wanneer je gaat'.",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">WISSELKOERS € ↔ $</text>
 <rect x="40" y="40" width="80" height="50" rx="8" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
 <text x="80" y="62" text-anchor="middle" fill="${COLORS.vraag}" font-size="20" font-family="Arial">€1</text>
 <text x="80" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">euro</text>
@@ -131,41 +211,219 @@ const steps = [
 <rect x="180" y="40" width="80" height="50" rx="8" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
 <text x="220" y="62" text-anchor="middle" fill="${COLORS.geld}" font-size="20" font-family="Arial">$1.10</text>
 <text x="220" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">dollar</text>
-<text x="150" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">sterke € → goedkoop importeren</text>
-<text x="150" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">zwakke € → goedkoop exporteren</text>
-<text x="150" y="165" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ECB Frankfurt — doel inflatie ~2%</text>
+<text x="160" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">sterke € → goedkoop importeren</text>
+<text x="160" y="140" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">zwakke € → goedkoop exporteren</text>
+<text x="160" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">USD · EUR · GBP · JPY · CNY · CHF</text>
 </svg>`,
     checks: [
       {
-        q: "De euro is **sterk** geworden tegenover de dollar. Wat is het effect voor een NL-exporteur?",
-        options: ["Exporteren naar de VS wordt duurder voor Amerikaanse klanten", "Exporteren wordt goedkoper", "Geen effect", "De fabriek moet sluiten"],
+        q: "Koers **€1 = $1,10**. Je wilt **$220** kopen. Hoeveel euro nodig?",
+        options: ["€200", "€220", "€242", "€110"],
         answer: 0,
-        wrongHints: [null, "Andersom — sterke euro maakt exporteren juist lastiger.", "Wisselkoers heeft wel degelijk invloed op handel.", "Fabriek sluiten is een te extreme conclusie van een wisselkoers-verandering."],
+        wrongHints: [null, "1 euro = $1,10. Reken $220 / 1,10.", "Te veel.", "Onjuist."],
       },
+      {
+        q: "De euro is **sterk** geworden. Effect voor NL-exporteur?",
+        options: ["Exporteren naar VS wordt duurder voor Amerikanen", "Goedkoper", "Geen effect", "Fabriek sluiten"],
+        answer: 0,
+        wrongHints: [null, "Andersom.", "Wel effect.", "Te extreme conclusie."],
+      },
+      {
+        q: "Wat veroorzaakt **wisselkoers-verandering**?",
+        options: ["Vraag/aanbod, rente, politiek, inflatie", "Alleen het weer", "Alleen verkiezingen", "Alleen toerisme"],
+        answer: 0,
+        wrongHints: [null, "Geen factor.", "Te beperkt.", "Te beperkt."],
+      },
+      {
+        q: "Wat is een **'safe haven'-valuta**?",
+        options: ["Valuta waar mensen naar vluchten in onzekere tijden (CHF, USD)", "Goedkoopste valuta", "Nieuwste valuta", "Crypto-valuta"],
+        answer: 0,
+        wrongHints: [null, "Niet over prijs.", "Niet over leeftijd.", "Crypto is iets anders."],
+      },
+      {
+        q: "Voor een **toerist**: waar wisselen meestal slechtste koers?",
+        options: ["Op de luchthaven (commissie + slechte koers)", "Bij pinnen ter plaatse", "Bij eigen bank vooraf", "Online"],
+        answer: 0,
+        wrongHints: [null, "Pinnen geeft betere koers.", "Eigen bank ook redelijk.", "Online vaak goed."],
+      },
+      {
+        q: "Wat is een **vrije zwevende koers**?",
+        options: ["Markt bepaalt — overheid grijpt niet in", "Overheid bepaalt vast", "Geen koers", "Crypto"],
+        answer: 0,
+        wrongHints: [null, "Dat is gereguleerd.", "Wel een koers.", "Iets anders."],
+      },
+    ],
+  },
+  // ─── Stap 5: Globalisering ──────────────────────────────
+  {
+    title: "Globalisering — de wereld als één markt",
+    explanation: "**Globalisering** = wereld wordt steeds meer verbonden — handel, communicatie, reizen.\n\n**Hoe is het zo gekomen?**\n• Goedkoper transport (vrachtschepen, vliegtuigen)\n• Internet (snel info uitwisselen, online winkelen)\n• Containers (gestandaardiseerd → veel goederen tegelijk)\n• Vrijhandelsverdragen\n• Engels als wereldtaal\n• Gevallen muren (Berlijn 1989, China economisch open)\n\n**Multinationals** (mondiale bedrijven):\n• **Hollands** voorbeeld: Shell (olie/energie), ASML (chipmachines), Heineken (bier), Unilever (consumentengoederen)\n• **Wereldwijd**: Apple, Amazon, Google, Toyota, Samsung, McDonald's\n• Hebben vestigingen in 10+ landen, kunnen winst verschuiven (belastingontwijking)\n\n**Voor- en nadelen globalisering**:\n\n**Winnaars**:\n• Consumenten (goedkope producten, meer keuze)\n• Multinationals\n• Productie-arbeiders in arme landen (banen)\n• Westerse hoogopgeleiden (kunnen wereldwijd werken)\n\n**Verliezers**:\n• Westerse fabrieksarbeiders (banen weg naar lage-loon-landen)\n• Lokaal MKB (concurrentie wereldwijd)\n• Milieu (transport CO2, vervuiling)\n\n**Anti-globalisering**:\n• Mensen voelen zich vergeten\n• Politieke groei van protectionisme (Trump, Brexit, RN)\n• Zorgen over identiteit, cultuur\n\n**Globalisering en arme landen**:\n• Veel banen in textiel, elektronica gemaakt in China, Bangladesh, Vietnam\n• Lonen daar zijn laag (per westerse standaard) maar hoger dan landbouw\n• Bv. Bangladesh-textielfabriek: $200/maand vs landbouw $50\n• → Mensen trekken naar steden, ontwikkeling\n• Risico's: slechte arbeidsomstandigheden (Rana Plaza-ramp 2013, 1.134 doden)\n\n**Klimaat en globalisering**:\n• Productie verplaatst → CO2 in productiegebied (China)\n• Consumptie blijft in westen — wie 'verantwoordelijk'?\n• Transport zelf veel CO2 (containerschepen, luchtvracht)\n• Opkomende beweging: 'koop lokaal'\n\n**Nieuwe trends**:\n• **Digitale globalisering**: Netflix, Spotify, social media wereldwijd\n• **Reshoring/nearshoring**: kritieke productie terug naar eigen continent\n• **Supply chain risico** (corona toonde aan)\n• **Geopolitieke spanningen** (China-VS, Rusland)",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">GLOBALISERING</text>
+<circle cx="160" cy="100" r="55" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="2"/>
+<text x="160" y="105" text-anchor="middle" fill="${COLORS.vraag}" font-size="22" font-family="Arial">🌐</text>
+<text x="60" y="60" fill="${COLORS.geld}" font-size="10" font-family="Arial" font-weight="bold">+ winnaars</text>
+<text x="60" y="74" fill="${COLORS.muted}" font-size="9" font-family="Arial">consumenten</text>
+<text x="60" y="86" fill="${COLORS.muted}" font-size="9" font-family="Arial">multinationals</text>
+<text x="60" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">arme landen werk</text>
+<text x="245" y="60" fill="${COLORS.aanbod}" font-size="10" font-family="Arial" font-weight="bold">− verliezers</text>
+<text x="245" y="74" fill="${COLORS.muted}" font-size="9" font-family="Arial">fabrieksarbeiders</text>
+<text x="245" y="86" fill="${COLORS.muted}" font-size="9" font-family="Arial">lokaal MKB</text>
+<text x="245" y="98" fill="${COLORS.muted}" font-size="9" font-family="Arial">milieu</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">multinationals · containers · internet · reshoring</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is **globalisering**?",
+        options: ["Wereld wordt steeds meer verbonden — handel, communicatie, reizen", "Een handelsverdrag", "Belasting wereldwijd", "Eén regering"],
+        answer: 0,
+        wrongHints: [null, "Specifieker dan dat.", "Niet specifiek belasting.", "Niet 1 regering."],
+      },
+      {
+        q: "Een Nederlandse **multinational** is bv:",
+        options: ["Shell, ASML, Heineken, Unilever", "Albert Heijn alleen", "Bakker bij jou op de hoek", "Provinciale overheid"],
+        answer: 0,
+        wrongHints: [null, "AH is binnenlands.", "Niet internationaal.", "Geen bedrijf."],
+      },
+      {
+        q: "Wie is een **verliezer** van globalisering?",
+        options: ["Westerse fabrieksarbeider — banen weg naar lage-loon-landen", "Multinationals", "Consument", "Hoogopgeleide werkers"],
+        answer: 0,
+        wrongHints: [null, "Winnaar.", "Winnaar (goedkope producten).", "Vaak winnaar."],
+      },
+      {
+        q: "**Reshoring** is:",
+        options: ["Productie terug naar eigen continent halen", "Buitenland uitbreiden", "Toerisme bevorderen", "Importtarief"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Niet toerisme.", "Niet hetzelfde."],
+      },
+      {
+        q: "**Containers** waren cruciaal voor globalisering omdat:",
+        options: ["Gestandaardiseerd → veel goederen snel + goedkoop transporteren", "Mooi", "Goedkoop", "Verboden"],
+        answer: 0,
+        wrongHints: [null, "Standaardisatie is de sleutel.", "Te beperkt.", "Niet verboden."],
+      },
+      {
+        q: "Klimaat en globalisering:",
+        options: ["Veel CO2 door transport + productie verplaatst naar landen met lakse regels", "Geen effect", "Globalisering helpt klimaat altijd", "Klimaat is geen issue"],
+        answer: 0,
+        wrongHints: [null, "Wel groot effect.", "Vaak negatief.", "Wel issue."],
+      },
+    ],
+  },
+  // ─── Stap 6: Multinationals + arme landen ─────────────
+  {
+    title: "Multinationals en hun impact",
+    explanation: "**Multinational** = bedrijf met vestigingen in meerdere landen. Vaak groot — Apple is meer waard dan veel landen-BBPs samen.\n\n**Wereld-multinationals**:\n• **USA**: Apple, Amazon, Google, Microsoft, Coca-Cola\n• **NL**: Shell, ASML, Unilever, Heineken, ING, Philips\n• **DE**: Volkswagen, BMW, SAP, Siemens, Bayer\n• **CN**: Alibaba, Tencent, Huawei\n• **JP**: Toyota, Sony, Honda\n• **KR**: Samsung, Hyundai\n\n**Hoe wordt een bedrijf multinational?**\n• Begint vaak in 1 land\n• Groeit, opent kantoren in andere landen\n• Bv. McDonald's: 1955 1e restaurant USA → nu 40.000 in 100+ landen\n\n**Voor- en nadelen multinationals**:\n\n**Voordelen voor Nederland**:\n• Banen (Shell heeft duizenden NL-medewerkers)\n• Belastingopbrengst\n• Innovatie + R&D\n• Trots ('Made in Holland')\n\n**Nadelen voor Nederland**:\n• Belastingontwijking via internationale structuren (vroeger 'Dutch sandwich')\n• Macht over politiek (lobby)\n• Bij vertrek: veel banen weg\n\n**Voor arme landen**:\n• Banen + loon vaak hoger dan lokale alternatieven\n• Technologietransfer\n• Maar: slechte arbeidsomstandigheden, milieuvervuiling\n• Cultuurverandering ('McDonaldisering')\n\n**Beroemde voorbeelden goed/slecht**:\n• ✓ Apple in China: hoge eisen, betere fabrieken dan lokaal\n• ✗ Shell in Nigeria: olielekken, decennia rechtszaken\n• ✗ Foxconn in China: zelfmoorden bij iPhone-fabriek (2010)\n• ✓ Unilever 'Sustainable Living Plan' (klimaat-doelen)\n\n**Macht van multinationals**:\n• Apple-marktwaarde > NL-BBP\n• Lobby in Washington, Brussel, Den Haag\n• Kunnen landen 'tegen elkaar uitspelen' (waar laagste belasting?)\n\n**Hoe bewaak je ze?**\n• EU-mededingingsbeleid (boetes Google, Apple)\n• Internationale belastingafspraken (OESO BEPS, minimumtarief 15% VPB)\n• ESG-criteria (Environmental, Social, Governance)\n• Activisten + media\n\n**Nederlandse 'kampioenen'**:\n• **ASML** (Veldhoven) — chipmachines, monopolie op EUV-techniek\n• **Shell** — energie, hoofdkantoor naar UK 2022 (politieke kwestie)\n• **Heineken** — wereldwijd bier, #2 brouwer ter wereld\n• **Unilever** — Knorr, Magnum, Lipton, Dove\n\n**Is groot altijd slecht?**\nNee, soms efficiënt. Maar zonder check ontstaat oligopolie of monopolie. Daarom toezicht.",
+    svg: `<svg viewBox="0 0 320 200">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MULTINATIONALS</text>
+<rect x="20" y="40" width="280" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
+<text x="160" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">NL: Shell · ASML · Heineken · Unilever</text>
+<text x="160" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vestigingen in 10+ landen</text>
+<rect x="20" y="90" width="135" height="40" rx="6" fill="rgba(105,240,174,0.10)" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">+ VOORDELEN</text>
+<text x="87" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">banen · belasting · innovatie</text>
+<rect x="165" y="90" width="135" height="40" rx="6" fill="rgba(255,82,82,0.10)" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">− NADELEN</text>
+<text x="232" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">ontwijking · macht · vervuiling</text>
+<text x="160" y="160" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">toezicht: EU + OESO + ESG</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ASML &gt; NL-BBP qua waarde</text>
+</svg>`,
+    checks: [
+      {
+        q: "Wat is een **multinational**?",
+        options: ["Bedrijf met vestigingen in meerdere landen", "Een soort belasting", "Een land", "Een vakbond"],
+        answer: 0,
+        wrongHints: [null, "Niet belasting.", "Niet land.", "Niet vakbond."],
+      },
+      {
+        q: "Welke is een **Nederlandse multinational**?",
+        options: ["Shell", "Apple", "Toyota", "McDonald's"],
+        answer: 0,
+        wrongHints: [null, "Amerikaans.", "Japans.", "Amerikaans."],
+      },
+      {
+        q: "Een **voordeel** van multinationals voor NL:",
+        options: ["Banen + belastingopbrengst + innovatie", "Geen voordeel", "Alleen voor rijken", "Alleen voor arme landen"],
+        answer: 0,
+        wrongHints: [null, "Wel voordelen.", "Banen voor iedereen.", "Voor NL ook."],
+      },
+      {
+        q: "Een **nadeel** van multinationals:",
+        options: ["Belastingontwijking via internationale structuren", "Te veel banen", "Te veel innovatie", "Geen nadeel"],
+        answer: 0,
+        wrongHints: [null, "Banen zijn goed.", "Innovatie is goed.", "Wel nadelen."],
+      },
+      {
+        q: "**ASML** is bekend om:",
+        options: ["Chipmachines (monopolie EUV-technologie)", "Auto's", "Bier", "Voedsel"],
+        answer: 0,
+        wrongHints: [null, "Niet auto's.", "Heineken = bier.", "Unilever = voedsel."],
+      },
+      {
+        q: "Internationaal **toezicht** op multinationals via:",
+        options: ["EU + OESO + ESG-criteria", "Niemand", "Alleen vakbonden", "Alleen consumenten"],
+        answer: 0,
+        wrongHints: [null, "Wel toezicht.", "Vakbonden zijn 1 partij.", "Consumenten zijn 1 partij."],
+      },
+    ],
+  },
+  // ─── Stap 7: ECB en monetair beleid ──────────────────
+  {
+    title: "ECB en monetair beleid — beheerder van de euro",
+    explanation: "De **ECB (Europese Centrale Bank)** in Frankfurt regelt de euro voor 20 eurozone-landen.\n\n**Belangrijkste taak**: stabiele prijzen — inflatiedoel ~2%/jaar.\n\n**Wat doet de ECB?**\n\n**1. Rente bepalen**\n• 'Rente van de centrale bank' = wat banken moeten betalen om geld te lenen van ECB\n• Beïnvloedt alle andere rentes (hypotheek, spaarrente)\n\n**2. Geld in omloop reguleren**\n• Ze drukken/maken digitaal geld bij of verkleinen geldhoeveelheid\n• 'Quantitative Easing' (QE) = veel geld bijdrukken om economie te helpen\n\n**3. Banken-toezicht**\n• Op grote eurozone-banken\n• Voorkomen bank-faillissementen\n\n**4. Wisselkoers bewaken**\n• Niet 'vastleggen', maar wel monitoren\n\n**Hoe werkt rentebeleid?**\n\n**Rente VERHOGEN** (bij hoge inflatie):\n• Lenen wordt duurder\n• Mensen geven minder uit\n• Bedrijven investeren minder\n• Vraag daalt → prijzen dalen → inflatie omlaag\n• MAAR: ook minder economische groei, soms recessie\n\n**Rente VERLAGEN** (bij recessie):\n• Lenen goedkoper\n• Mensen geven meer uit\n• Bedrijven investeren meer\n• Economie groeit\n• MAAR: kan inflatie veroorzaken\n\n**Recente geschiedenis**:\n• 2008-2022: rente bijna 0% (om economie te helpen)\n• 2022-2024: rente snel omhoog (om hoge inflatie te bestrijden)\n• 2024-2025: rente weer naar beneden\n\n**Voor jouw spaarrekening**:\n• ECB-rente hoog → bank betaalt jou meer rente op spaargeld\n• ECB-rente laag → ook jij weinig rente\n\n**Voor jouw hypotheek**:\n• Variabele hypotheek: maandlast verandert mee\n• Vaste hypotheek (10-30 jr): pas bij vernieuwing\n\n**Onafhankelijkheid ECB**:\n• ECB beslist zelfstandig, niet door politici\n• Idee: politici willen graag rente verlagen voor verkiezingen, ten koste van inflatie\n• Daarom onafhankelijke instelling (zoals de NL DNB voor euro-tijdperk)\n\n**Spanning**:\n• Sommige landen willen lage rente (Italië, Spanje — hoge schuld)\n• Andere willen hoge rente (DE, NL — bang voor inflatie)\n• ECB kiest 1 beleid voor allen\n\n**Andere centrale banken**:\n• **Federal Reserve (Fed)** — VS\n• **Bank of England** — UK\n• **Bank of Japan** — Japan\n• **People's Bank of China** — China\n\n**Toekomst**:\n• Digitale euro (CBDC) — ECB-uitgegeven digitaal geld\n• Klimaat-criteria in monetair beleid\n• Reactie op crypto",
+    svg: `<svg viewBox="0 0 320 220">
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ECB MONETAIR BELEID</text>
+<rect x="40" y="40" width="240" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
+<text x="160" y="58" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">ECB Frankfurt</text>
+<text x="160" y="72" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">doel inflatie ~2%</text>
+<rect x="20" y="90" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
+<text x="87" y="108" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">RENTE ↑</text>
+<text x="87" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">bij hoge inflatie</text>
+<text x="87" y="135" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">→ minder vraag</text>
+<rect x="165" y="90" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
+<text x="232" y="108" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">RENTE ↓</text>
+<text x="232" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">bij recessie</text>
+<text x="232" y="135" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">→ economie helpen</text>
+<text x="160" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">QE: geld bijdrukken</text>
+<text x="160" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Fed (USA) · BoE (UK) · BoJ (Japan)</text>
+</svg>`,
+    checks: [
       {
         q: "Wat doet de **ECB**?",
-        options: ["Beheert de euro: rente, geldhoeveelheid, inflatie", "Int belasting", "Schrijft Nederlandse wetten", "Helpt arme landen"],
+        options: ["Beheert de euro: rente, geldhoeveelheid, inflatie", "Belasting innen", "Wetten maken", "Ontwikkelingshulp"],
         answer: 0,
-        wrongHints: [null, "Belasting innen doet de Belastingdienst, niet de centrale bank.", "Wetten worden in NL gemaakt door regering + parlement.", "Ontwikkelingshulp komt vooral via aparte organisaties (Wereldbank, ngo's)."],
-      },
-    
-      {
-        q: "Koers €1 = $1,10. Je wilt **$220 dollar** kopen. Hoeveel euro heb je nodig?",
-        options: ["€200", "€220", "€242", "€242"],
-        answer: 0,
-        wrongHints: [null, "1 euro = $1,10, niet $1. Reken: 220 / 1,10.", "Te veel betaald — dat is alsof je 220 keer 1,10 doet.", "Reken in plaats van schat."],
+        wrongHints: [null, "Belastingdienst.", "Parlement.", "Andere organisaties."],
       },
       {
         q: "Wat is het **inflatiedoel** van de ECB?",
-        options: ["Ongeveer 2%", "0%", "5%", "10%"],
+        options: ["~2%", "0%", "5%", "10%"],
         answer: 0,
-        wrongHints: [null, "0% is te krap — beetje inflatie helpt de economie.", "5% is te hoog — koopkracht zou snel dalen.", "10% is hyperinflatie-niveau."],
+        wrongHints: [null, "Te krap.", "Te hoog.", "Hyperinflatie-niveau."],
       },
       {
-        q: "Waardoor stijgt de **wisselkoers** van de euro tegenover de dollar?",
-        options: ["Veel vraag naar euro's (bv. door hogere rente in EU)", "Veel inflatie in EU", "EU verkoopt minder", "Brand op een schip"],
+        q: "ECB **verhoogt rente**. Wat is meestal de reden?",
+        options: ["Hoge inflatie bestrijden", "Recessie", "Toerisme bevorderen", "Verkiezingen"],
         answer: 0,
-        wrongHints: [null, "Hoge inflatie verzwakt juist een munt.", "Minder export = minder vraag naar euro's = zwakker.", "Een incident heeft geen blijvende invloed."],
+        wrongHints: [null, "Tegendeel — bij recessie verlaagt.", "Niets met toerisme.", "ECB is onafhankelijk van verkiezingen."],
+      },
+      {
+        q: "Wat is **QE (Quantitative Easing)**?",
+        options: ["Veel geld bijdrukken om economie te helpen", "Belasting verhogen", "Banken sluiten", "Spaargeld in beslag"],
+        answer: 0,
+        wrongHints: [null, "Geen belasting.", "Tegendeel.", "Niet wat het is."],
+      },
+      {
+        q: "Effect ECB-rente OMHOOG voor jouw **spaarrekening**:",
+        options: ["Bank betaalt jou meestal meer rente", "Minder rente", "Geen effect", "Spaargeld weg"],
+        answer: 0,
+        wrongHints: [null, "Tegendeel.", "Wel effect.", "Niet 'weg'."],
+      },
+      {
+        q: "Waarom is de ECB **onafhankelijk** van politici?",
+        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "ECB hoort dat zo", "Toeval", "Politici weten te veel"],
+        answer: 0,
+        wrongHints: [null, "Wel een reden.", "Geen toeval.", "Onzin."],
       },
     ],
   },
@@ -180,32 +438,30 @@ const pincodeBuitenlandEu = {
   level: "vmbo-gt-4",
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
-  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk G",
+  sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 7",
   intro:
-    "Internationale handel (import/export), de Europese Unie en wisselkoersen + de rol van de ECB. Hoofdstuk G van Pincode VMBO-GT klas 4.",
+    "Hoofdstuk 7 van Pincode 7e ed. VMBO-GT 4: import/export, comparatief voordeel, beschermingsmaatregelen, Europese Unie + 4 vrijheden, wisselkoersen, globalisering + multinationals, ECB monetair beleid. 7 stappen examenvoorbereiding.",
   triggerKeywords: [
-    "import",
-    "export",
-    "handelsbalans",
-    "comparatief voordeel",
-    "schaalvoordelen",
-    "rotterdam",
-    "schiphol",
-    "re-export",
-    "handelsland",
-    "europese unie",
-    "eu",
-    "vrije handel",
-    "vrij verkeer",
-    "eurozone",
-    "euro",
-    "ecb",
-    "europese centrale bank",
-    "wisselkoers",
-    "valutamarkt",
-    "sterke euro",
-    "zwakke euro",
-    "pincode hoofdstuk g",
+    "import", "export", "handelsbalans", "handelsoverschot", "handelstekort",
+    "comparatief voordeel", "schaalvoordelen", "specialisatie",
+    "rotterdam", "schiphol", "re-export", "handelsland",
+    "protectionisme", "vrijhandel", "invoerheffing", "importtarief", "quotum",
+    "subsidie", "wto", "vrijhandelsverdrag", "ceta", "sancties", "reshoring",
+    "europese unie", "eu", "vrije handel", "vrij verkeer",
+    "4 vrijheden", "eurozone", "euro",
+    "europees parlement", "europese commissie", "raad van de eu", "hof van justitie",
+    "brexit", "uk", "uitbreiding eu",
+    "wisselkoers", "valutamarkt", "sterke euro", "zwakke euro",
+    "usd", "dollar", "gbp", "pond", "jpy", "yen", "cny", "yuan", "chf", "frank",
+    "vrije zwevende koers", "gereguleerde koers", "vaste koers",
+    "globalisering", "containers", "supply chain",
+    "multinational", "shell", "asml", "heineken", "unilever", "philips",
+    "apple", "google", "amazon", "samsung", "toyota",
+    "esg", "oeso", "beps",
+    "ecb", "europese centrale bank", "monetair beleid", "rente", "qe",
+    "fed", "federal reserve", "boe", "boj",
+    "digitale euro", "cbdc",
+    "pincode hoofdstuk 7", "pincode hoofdstuk g",
   ],
   chapters,
   steps,
