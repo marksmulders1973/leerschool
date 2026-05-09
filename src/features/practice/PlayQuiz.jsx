@@ -83,6 +83,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const timerRef = useRef(null);
   const wrongOverlayTimerRef = useRef(null);
   const elapsedRef = useRef(null);
+  // Bron-tekst panel open/dicht (alleen relevant voor examen-quiz met bronTekst).
+  // Default open zodat leerling de tekst direct ziet bij elke nieuwe vraag.
+  const [bronTekstOpen, setBronTekstOpen] = useState(true);
+  useEffect(() => { setBronTekstOpen(true); }, [gameState.currentQ]);
 
   const question = gameState.questions[gameState.currentQ];
   const isLast = gameState.currentQ === gameState.questions.length - 1;
@@ -410,6 +414,47 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
       {noTimer && !isCitoSimulation && (
         <div style={{ textAlign: "center", fontFamily: "Fredoka", fontSize: 14, fontWeight: 600, color: "#00e676", marginBottom: 12 }}>
           ⏸️ Geen tijdslimiet per vraag — neem de tijd!
+        </div>
+      )}
+
+      {question.bronTekst && (
+        <div style={{
+          background: "rgba(255,107,53,0.06)",
+          border: "1px solid rgba(255,107,53,0.35)",
+          borderRadius: 12,
+          marginBottom: 12,
+          overflow: "hidden",
+        }}>
+          <button
+            type="button"
+            onClick={() => setBronTekstOpen((v) => !v)}
+            aria-expanded={bronTekstOpen}
+            style={{
+              width: "100%", display: "flex", alignItems: "center", gap: 10,
+              padding: "10px 14px", border: 0, background: "transparent",
+              color: "#ff8c5a", fontWeight: 700, fontFamily: "var(--font-display)",
+              fontSize: 14, cursor: "pointer", textAlign: "left",
+            }}
+          >
+            <span aria-hidden="true">📑</span>
+            <span style={{ flex: 1 }}>Tekst {question.bronTekst.nr} — {question.bronTekst.titel}</span>
+            <span aria-hidden="true">{bronTekstOpen ? "▲" : "▼"}</span>
+          </button>
+          {bronTekstOpen && (
+            <div style={{
+              padding: "0 14px 14px",
+              fontSize: 14,
+              lineHeight: 1.55,
+              color: "var(--color-text)",
+              whiteSpace: "pre-wrap",
+              maxHeight: "40vh",
+              overflowY: "auto",
+              borderTop: "1px dashed rgba(255,107,53,0.25)",
+              paddingTop: 10,
+            }}>
+              {question.bronTekst.body}
+            </div>
+          )}
         </div>
       )}
 

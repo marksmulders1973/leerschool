@@ -610,6 +610,32 @@ export default function App() {
     setPage("play");
   };
 
+  // Start een geparseerd oud examen als interactieve quiz. Vragen krijgen
+  // een 'bronTekst' veld als ze refereren naar een tekst in de bijlage,
+  // zodat PlayQuiz die boven de vraag kan tonen.
+  const startExamenQuiz = async (examen) => {
+    const { prepareExamenQuestions, getExamenQuiz } = await import("./data/examenQuizzes/index.js");
+    const questions = prepareExamenQuestions(examen.id);
+    const quizMeta = getExamenQuiz(examen.id);
+    if (!questions || questions.length === 0) {
+      alert("⚠️ Dit examen is nog niet als speelbare quiz beschikbaar.");
+      return;
+    }
+    track("examen_quiz_started", { examen_id: examen.id, vak: examen.vak, jaar: examen.jaar, questions_count: questions.length });
+    const quiz = {
+      id: `examen-${examen.id}`,
+      subject: examen.vak,
+      level: examen.niveau,
+      title: `${examen.titel} - tijdvak ${examen.tijdvak} ${examen.jaar}`,
+      timePerQuestion: 0, // geen tijdsdruk: dit zijn lees-vragen
+      examenSource: examen.id,
+      mcCount: questions.length,
+      totalCount: (quizMeta?.questions?.length || 0) + (quizMeta?.skipped?.length || 0),
+    };
+    setGameState({ quiz, mode: "examen", questions, currentQ: 0, score: 0, answers: [], timePerQuestion: 0, startedAt: Date.now() });
+    setPage("play");
+  };
+
   const finishGame = (finalState) => {
     SoundEngine.play("celebrate");
     const result = {
@@ -1189,6 +1215,7 @@ export default function App() {
         <ExamensPage
           onBack={() => setPage("student-home")}
           onHome={() => setPage("home")}
+          onPlayExamen={startExamenQuiz}
         />
       )}
       {page === "cito-leerpad-toets" && (

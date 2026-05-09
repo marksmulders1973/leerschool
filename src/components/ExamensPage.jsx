@@ -8,6 +8,7 @@ import {
   getCorrectieUrl,
   getBijlageUrl,
 } from "../data/examens.js";
+import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
 
 // Examens-bibliotheek (Mark idee 2026-05-08): leerling kan oude
 // (eind)examens inzien als PDF. Gegroepeerd per vak met filter-pillen
@@ -23,7 +24,7 @@ const C = {
   accent: "#ff6b35",
 };
 
-export default function ExamensPage({ onBack, onHome, prefilterVak }) {
+export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen }) {
   const [niveauFilter, setNiveauFilter] = useState("alle");
   const [vakFilter, setVakFilter] = useState(prefilterVak || "alle");
 
@@ -142,6 +143,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                       const opgaveUrl = getExamenUrl(e);
                       const correctieUrl = getCorrectieUrl(e);
                       const bijlageUrl = getBijlageUrl(e);
+                      const speelbaar = isExamenSpeelbaar(e.id);
                       const isExtern = !!e.externalUrl;
                       return (
                         <div
@@ -172,6 +174,33 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                               </div>
                             </div>
                           </div>
+                          {speelbaar && onPlayExamen && (
+                            <button
+                              onClick={() => onPlayExamen(e)}
+                              style={{
+                                width: "100%",
+                                marginBottom: 8,
+                                padding: "12px 14px",
+                                borderRadius: 10,
+                                border: `1.5px solid ${C.warm}`,
+                                background: "rgba(255,213,79,0.15)",
+                                color: C.warm,
+                                fontFamily: "var(--font-display)",
+                                fontSize: 14,
+                                fontWeight: 700,
+                                cursor: "pointer",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                gap: 8,
+                                transition: "all 0.15s",
+                              }}
+                              onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(255,213,79,0.28)"}
+                              onMouseOut={(ev) => ev.currentTarget.style.background = "rgba(255,213,79,0.15)"}
+                            >
+                              ▶ Speel in de app (oefenmodus)
+                            </button>
+                          )}
                           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                             <PdfKnop
                               href={opgaveUrl}
