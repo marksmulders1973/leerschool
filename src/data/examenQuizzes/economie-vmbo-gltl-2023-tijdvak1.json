@@ -6,7 +6,73 @@
     "jaar": 2023,
     "tijdvak": 1
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "regeling inzake asbest en zonnepanelen",
+      "body": "Ligt er nog een asbestdak op uw huis? En wilt u deze vervangen voor een\n     dak met zonnepanelen, dan is er een subsidiemogelijkheid. Voldoet u aan\n     de voorwaarden dan bedraagt de subsidie  4,50 per m2.\n     De voorwaarden:\n      minimaal 250 m2 dak\n      minimaal voor 5.000 kWh zonnepanelen installeren en plaatsen\n\n Leden der Staten-Generaal",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "begrotingssaldo in % van het nationaal inkomen",
+      "body": "in Nederland 2011-2018",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "ontwikkeling koopkracht voor en na het",
+      "body": "koopkrachtpakket in 2018\n\n Andere tijden en de onze",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "pungelaars",
+      "body": "In het pikkedonker slopen kleine groepjes mannen van Nederland naar\n     Belgi'.\n     De boter zat in een rugzak, een pungel, waar 25 kilo in ging.\n     Oud-douanebeambte Johan Baak: \"Gemiddeld 4% van de gesmokkelde\n     boter namen we in beslag.\"",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "subsidie op boter in Nederland",
+      "body": "Door subsidie van de overheid aan de Nederlandse zuivelbedrijven werd\n     de prijs van boter in Nederland kunstmatig laag gehouden. Bedoeling was\n     om de binnenlandse consumptie van boter te verhogen en om de export\n     van de zuivelbedrijven te stimuleren.\n\nEen spannende arbeidsmarkt",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "het aantal vacatures per werkloze",
+      "body": "De spanning is nog niet zo groot als 10 jaar geleden.\nIn 2018 zijn er 0,7 vacatures per werkloze.",
+      "soort": "informatiebron"
+    },
+    "7": {
+      "titel": "verandering van arbeidsmarktposities1)",
+      "body": "in het tweede kwartaal van 2018\n\nnoot 1 De arbeidsmarktpositie is een indeling van de bevolking in:\n           werkzame beroepsbevolking,\n           werkloze beroepsbevolking,\n           niet-beroepsbevolking.\n\n        uitleg:\n        Bij a: 193.000 mensen zijn gestopt met werken, bijvoorbeeld vanwege\n\n                 pensioen.\n        Bij f: 205.000 mensen zijn gestart met werken, bijvoorbeeld jongeren die\n\n                 net van school een baan hebben aangenomen.\n\n Het broodfonds",
+      "soort": "informatiebron"
+    },
+    "8": {
+      "titel": "zzp-ers met een verzekering tegen",
+      "body": "inkomensverlies (VTI), in procenten van het totaal\n                            aantal zzp-ers\n\n2014              zzp-ers met VTI\n2015              20,3%\n2016              19,5%\n                  19%\n\nbron: www.cbs.nl",
+      "soort": "informatiebron"
+    },
+    "9": {
+      "titel": "maandelijkse inleg broodfonds en maandelijkse",
+      "body": "netto uitbetaling in geval van ziekte\n\nmaandelijkse inleg       maandelijkse netto uitbetaling in geval van ziekte\n 33,75                    750,00\n 45,00                    1.000,00\n 56,25                    1.250,00\n 67,50                    1.500,00\n 78,75                    1.750,00\n 80,00                    2.000,00\n 101,25                   2.250,00\n 112,50                   2.500,00\n\nbron: www.broodfonds.nl\n\n Costa Rica",
+      "soort": "informatiebron"
+    },
+    "10": {
+      "titel": "economische gegevens Costa Rica in 2017",
+      "body": "totale exportwaarde                    9.400.000.000\ntotale exportwaarde naar Nederland     526.000.000\ntotale importwaarde                    14.000.000.000\ntotale importwaarde vanuit Nederland   127.000.000\nnationaal inkomen Costa Rica           57.000.000.000",
+      "soort": "informatiebron"
+    },
+    "11": {
+      "titel": "Lorenzcurve van Costa Rica in 2017",
+      "body": "Uitbreiden?                                            5.000.000\n                                                       6.000.000",
+      "soort": "informatiebron"
+    },
+    "12": {
+      "titel": "financi'le gegevens K2 bv",
+      "body": "200\n       omzet\n       maximaal te behalen omzet op basis van\n       productiecapaciteit, bij huidige bedrijfstijd\n       verkoopprijs product",
+      "soort": "informatiebron"
+    },
+    "13": {
+      "titel": "productie gegevens K2 bv",
+      "body": "vaste kosten                  voor uitbreiding        na uitbreiding\nvariabele kosten per product   900.000                 1.350.000\naantal producten              3                       daling van 10%\n                              25.000                  45.000\n\nGT-0233-a-23-1-b              8/8                     lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "De gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen door huishoudens. Hoe worden deze subsidies die de huishoudens van de gemeente ontvangen genoemd?",
@@ -70,7 +136,7 @@
         "14235 F 14325 Online consumptie In 2017 kochten veel Nederlandse consumenten een of meer producten via internet. In 2017 waren er 200 miljoen online aankopen met een totale waarde van  22,5 miljard. online consumentenbesteding Nederland in miljarden euro's"
       ],
       "answer": 4,
-      "explanation": "Het juiste antwoord is E.",
+      "explanation": "Vraag Antwoord                                                               Scores\n\n   Online consumptie                                                            1\n                                                                                1",
       "tekstNr": null,
       "vraagNr": 31
     },
@@ -97,7 +163,7 @@
         "Nee, het is be'nvloeding door producenten zonder winstoogmerk. Uitbreiden? Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 12 en 13 in de bijlage. Kaj en Koen zijn eigenaar van het bedrijf K2 bv, dat kunststof producten maakt. Kaj en Koen hebben twee jaar geleden hun bedrijf omgezet van een vennootschap onder firma (vof) naar een besloten vennootschap (bv)."
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "Vraag Antwoord                                                         Scores\n\n   Uitbreiden?                                                            1\n                                                                          0",
       "tekstNr": null,
       "vraagNr": 36
     },
@@ -122,7 +188,7 @@
         "De winstmarge blijft gelijk. Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift. GT-0233-a-23-1-o  18 / 18  lees verdeer inde"
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "5",
       "tekstNr": null,
       "vraagNr": 42
     }

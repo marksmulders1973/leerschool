@@ -6,7 +6,68 @@
     "jaar": 2024,
     "tijdvak": 1
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "prijs van een Willy-boekenkast in:",
+      "body": "Marokko            India         Zuid-Korea\n\nMAD 699,-          INR 4.990,-   KRW 109.000,-",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "koers van de Marokkaanse dirham (MAD),",
+      "body": "de Indiase roepie (INR) en de Zuid-Koreaanse won\n                            (KRW) ten opzichte van de euro ()\n\n1 MAD              0,092\n1 INR              0,012\n1 KRW              0,00075\n\n Tv-generatiekloof",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "tv-kijken, gemiddeld aantal minuten direct,",
+      "body": "uitgesteld en `overig' per dag",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "tv-kijktijd in minuten per leeftijdsgroep,",
+      "body": "2003-2018\n\n Helikoptergeld",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "verdeling nationaal inkomen in vijf groepen",
+      "body": "gemiddeld inkomen\n\n1ste 20%- 2de 20%- 3de 20%-     4de 20%-  5de 20%-  totaal\n                                groep     groep\ngroep             groep  groep\n\n 19.000  25.000  32.000  39.000  55.000  170.000",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "de econoom Milton Friedman",
+      "body": "Friedman bedacht het idee van helikoptergeld: \"Stel je voor dat op een\n dag een helikopter over het land zou vliegen en eenmalig bankbiljetten\n van  1.000 naar beneden zou gooien. Welk effect heeft dat op de\n economie?\"\n\nWaar zet ik mijn strandtent?",
+      "soort": "informatiebron"
+    },
+    "7": {
+      "titel": "totale dagelijkse vraag naar ijsjes bij",
+      "body": "20 en 25 graden\n\n Goede tijden",
+      "soort": "informatiebron"
+    },
+    "8": {
+      "titel": "de staatsschuld in % van het nationaal inkomen",
+      "body": "Toelichting:\nDe horizontale lijn van 60% is de EMU-norm.\n\nItali' failliet?",
+      "soort": "informatiebron"
+    },
+    "9": {
+      "titel": "totaal van leningen van rijkere EMU-landen aan",
+      "body": "armere EMU-landen\n\nland                             in miljarden euro's\nDuitsland                          841\nLuxemburg                          200\nNederland                          124\noverige rijkere EMU-landen           75\ntotaal\n                                 1.240\n\n 18 en op kamers",
+      "soort": "informatiebron"
+    },
+    "10": {
+      "titel": "overzicht persoonlijke inkomsten en uitgaven van",
+      "body": "Sasja en de gemiddelde uitgaven van uitwonende\n                            mbo-studenten\n\ninkomsten         Sasja       uitgaven            Sasja        gemiddeld\n                   per maand                       per maand    per maand\nbasisbeurs                    lesgeld\naanvullende           277     studieboeken                 98            98\nbeurs                     0                                57          127\nstudielening\nbijbaan               124     zorgverzekering       106          100\nbijdrage              374     huur                  366          413\nouders                150     dagelijkse            323          295\n                              huishoudelijke\nzorgtoeslag           99      uitgaven              160          147\n                  1.024       vrijetijdsuitgaven  1.110        1.180\ntotaal                        totaal uitgaven\ninkomsten",
+      "soort": "informatiebron"
+    },
+    "11": {
+      "titel": "een studieschuld en een hypotheek",
+      "body": "Een studieschuld, wat scheelt\n                                             dat op je maximale hypotheek?\n\nSTUDIELENING TOTALE STUDIELENING MAXIMALE HYPOTHEEK\n\nwat je per maand wat je na vier jaar       bij een brutosalaris van\n                                            2.800 per maand\nleent             geleend hebt\n\n0                 0                         170.000\n 100               4.800                    164.500\n 200               9.600                    158.500\n 300               14.400                   152.500\n 400               19.200                   146.500\n 500               24.000                   140.500\n\nstudieschuld hypotheek\nDe hypotheekverstrekker gaat bij het berekenen van je maximale\nhypotheek altijd uit van je oorspronkelijke studieschuld. Alleen als je\nextra aflost, mag de geldverstrekker uitgaan van de oorspronkelijke\nstudieschuld minus het extra afgeloste bedrag.\n\nToelichting:\nAls je voor je studie niet geleend hebt, kun je een hypotheek krijgen van\nmaximaal  170.000.\n\nMaak 't in West-Brabant",
+      "soort": "informatiebron"
+    },
+    "12": {
+      "titel": "de hoogte van de transitievergoeding",
+      "body": "bruto maandsalaris Bas      2.500\naantal dienstjaren         20 jaar\n\nhoofdregel berekening transitievergoeding\n\neerste 10 jaar    voor ieder gewerkt half jaar  16% van het bruto\n                  maandsalaris\n\nna 10 jaar        voor ieder gewerkt half jaar  25% van het bruto\n                  maandsalaris\n\nGT-0233-a-24-1-b           8/8                          lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "Is Zweden ook lid van de Europese Monetaire Unie (EMU)?",
@@ -31,7 +92,7 @@
         "14235 F 14325"
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "Vraag Antwoord                                                      Scores",
       "tekstNr": null,
       "vraagNr": 5
     },
@@ -96,7 +157,7 @@
         "De inkomsten van de Italiaanse overheid zijn gestegen en de uitgaven gelijk gebleven."
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "1",
       "tekstNr": null,
       "vraagNr": 30
     },

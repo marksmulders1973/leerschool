@@ -6,7 +6,63 @@
     "jaar": 2024,
     "tijdvak": 2
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "gemeentelijke belastingtarieven De Bilt per jaar",
+      "body": "tarieven onroerendezaakbelasting (OZB)\n\n OZB woningen\n eigenarenbelasting 0,1028% van de WOZ-waarde\n\n OZB bedrijfswoningen\n gebruikersbelasting 0,2292% van de WOZ-waarde\n eigenarenbelasting 0,2865% van de WOZ-waarde\n\ntarieven afvalstoffenheffing\n\nDe belasting bedraagt voor een eenpersoonshuishouden per maand\n 11,75.\nVoor een huishouden met meerdere personen is dit per maand  22,75.\n\ntarieven rioolheffing            175\n                                 240\nbij een watergebruik van:        335\n 1-50 m3                         427\n 51-150 m3                       854\n 151-300 m3\n 301-500 m3\n 501-1.000 m3",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "woonlasten van zes gemeenten in de provincie",
+      "body": "Utrecht\n\ngemeenten\n\n                  1 Bunnik       966\n                  2 Bunschoten   612\n                  3 De Bilt      964\n                  4 Leusden      648\n                  5 Lopik        951\n                  6 Veenendaal   587\n\n Minder inkomen voor ouders",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "verandering in inkomen voor en na geboorte",
+      "body": "eerste kind (jaar 0)",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "kinderopvangtoeslag in 2020",
+      "body": "De hoogte van de kinderopvangtoeslag is afhankelijk van het inkomen.\nHoe hoger je inkomen, hoe minder tegemoetkoming voor de kosten voor\nkinderopvang.\n\n(gezamenlijk) inkomen in euro's  tegemoetkoming Rijk als % van\n                                 de kosten van kinderopvang\n\nvan               tot            eerste kind  volgend kind\n0                 25.188\n25.189            26.512         96,0%        96,0%\n26.513            27.836\n27.837            29.156         95,6%        95,7%\n29.157            30.581\n30.582            32.004         94,5%        95,5%\n32.005            33.430\n33.431            34.853         93,5%        95,3%\n34.854            36.280\n36.281            37.704         92,6%        95,1%\n37.705            39.161\n39.162            40.622         92,0%        95,0%\n40.623            42.082\n42.083            43.542         91,0%        94,8%\n43.543            45.004\n                                 90,5%        94,6%\n\n                                 89,7%        94,6%\n\n                                 88,9%        94,6%\n\n                                 88,3%        94,6%\n\n                                 87,5%        94,6%\n\n                                 86,8%        94,6%\n\n                                 86,1%        94,6%\n\n                                 85,2%        94,6%\n\n Glamping Het roer om",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "verwachte bezettingsgraad en de prijs van",
+      "body": "een plaats\n\nmaanden           januari tot  april tot en  juli tot en  november\n                  en met       met juni en   met          tot en met\naantal dagen      maart        oktober       september    december\nbezettingsgraad\nprijs per nacht   90 dagen     122 dagen     92 dagen     61 dagen\n                               40%           80%\n                  0%            40            60          0%\n\n De bezettingsgraad geeft weer hoeveel procent van de totale plaatsen\n     is bezet.\n\n Er zijn 150 campingplaatsen.",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "verwachting financi'le gegevens",
+      "body": "Het roer om (exclusief btw)\n\nomzet glamping en horeca                      1.050.000\nbrutowinstmarge op de inkoopwaarde           275%\nbedrijfskosten                                400.000\n\n Sociaal verzekerd",
+      "soort": "informatiebron"
+    },
+    "7": {
+      "titel": "duur van de WW-uitkering",
+      "body": "kortdurende WW-uitkering: wekeneis\n       Je hebt recht op een kortdurende WW-uitkering als je minimaal 26 weken\n       hebt gewerkt in de 36 weken voor de week dat je werkloos werd.\n       Je hebt dan recht op een WW-uitkering van 3 maanden.\n       langdurende WW-uitkering: jareneis\n       Je hebt langer recht op een WW-uitkering als je voldoet aan de jareneis.\n       Je moet dan minimaal 4 kalenderjaren hebben gewerkt in de\n       5 kalenderjaren voor het kalenderjaar waarin je werkloos werd.",
+      "soort": "informatiebron"
+    },
+    "8": {
+      "titel": "hoogte van de WW-uitkering",
+      "body": "De hoogte van je WW-uitkering hangt af van je loon. Je WW-uitkering is de\n       eerste 2 maanden 75% van het laatstverdiende loon. Na deze 2 maanden\n       daalt de uitkering naar 70%.\n\n Fairtrade gemeenten",
+      "soort": "informatiebron"
+    },
+    "9": {
+      "titel": "principes van fairtrade",
+      "body": "btw                                gewone koffie  fairtrade koffie\nkosten, marge, transport, branden  9%             9%\nen distributie                     80%            65%\nkosten van verwerking\ninkomsten voor koffieboer          10%            9%\n                                   10%            26%",
+      "soort": "informatiebron"
+    },
+    "10": {
+      "titel": "prijzen inclusief btw van een kopje gewone koffie",
+      "body": "en fairtrade koffie\n\ngewone koffie         0,26\nfairtrade koffie      0,39\n\n De beroepsbevolking verandert",
+      "soort": "informatiebron"
+    },
+    "11": {
+      "titel": "veranderingen van de beroepsbevolking in",
+      "body": "personen in het derde kwartaal ten opzichte van\n                            het tweede kwartaal\n\n                                                    werkzame\n                                              beroepsbevolking\n\n                   worden                        vinden\n                  werkloos                       een baan\n\nstoppen met                       werkloze deel             treden toe\n   werken en                   beroepsbevolking             en vinden\n verlaten de                                                direct\n\narbeidsmarkt                                                een baan\n\n                    zijn niet                    gaan op\n                   meer op                       zoek naar\n                  zoek naar                      werk\n\n                        werk\n\n                                        niet-\n                               beroepsbevolking\n\nGT-0233-a-24-2-b               7/7                          lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "Als we landen met elkaar vergelijken, kijken we naar het nationaal inkomen van een land. In welke regel staat een economisch verschijnsel waardoor het nationaal inkomen in Kameroen stijgt?",
@@ -67,7 +123,7 @@
         "onder productbeleid Sociaal verzekerd Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 7 en 8 in de bijlage. Nederland is een verzorgingsstaat. Met het stelsel van sociale zekerheid wordt aan alle inwoners een bestaanszekerheid verschaft."
       ],
       "answer": 3,
-      "explanation": "Het juiste antwoord is D.",
+      "explanation": "Vraag Antwoord                                              Scores\n\n   Sociaal verzekerd                                           2\n                                                               1",
       "tekstNr": null,
       "vraagNr": 21
     },
@@ -92,7 +148,7 @@
         "neemt de betaalbaarheid van de sociale uitkeringen toe Fairtrade gemeenten Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en 10 in de bijlage. Stichting Fairtrade Gemeente Nederland werkt samen met gemeenten waar winkels, horeca en andere bedrijven zich inzetten voor meer eerlijke handel in de wereld. De producenten in de ontwikkelingslanden krijgen een eerlijke (hogere) prijs voor hun fairtrade producten. De stichting streeft naar het vergroten van de vraag naar en het aanbod van fairtrade producten uit ontwikkelingslanden."
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "Vraag Antwoord                                                 Scores\n\n   Fairtrade gemeenten                                            1\n                                                                  0",
       "tekstNr": null,
       "vraagNr": 27
     },
@@ -104,7 +160,7 @@
         "structurele hulp"
       ],
       "answer": 2,
-      "explanation": "Het juiste antwoord is C.",
+      "explanation": "1",
       "tekstNr": null,
       "vraagNr": 28
     },
@@ -118,7 +174,7 @@
         "14235 F 14325 Rijken worden rijker De familie Boot is blij. Tijdens de kredietcrisis in 2008 was hun vermogen gedaald, maar gelukkig stijgt dankzij economische groei hun vermogen weer langzaam. Je berekent het vermogen door de bezittingen te verminderen met de schulden. waarde vermogen  waarde bezittingen  waarde schulden"
       ],
       "answer": 0,
-      "explanation": "Het juiste antwoord is A.",
+      "explanation": "Vraag Antwoord                                                                Scores\n\n   Rijken worden rijker",
       "tekstNr": null,
       "vraagNr": 32
     },
@@ -144,7 +200,7 @@
         "14235 F 14325 Bronvermelding Een opsomming van de in dit examen gebruikte bronnen, zoals teksten en afbeeldingen, is te vinden in het bij dit examen behorende correctievoorschrift. GT-0233-a-24-2-o  16 / 16  lees verdeer inde"
       ],
       "answer": 1,
-      "explanation": "Het juiste antwoord is B.",
+      "explanation": "5",
       "tekstNr": null,
       "vraagNr": 43
     }

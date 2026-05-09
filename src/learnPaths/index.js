@@ -85,6 +85,10 @@ import pincodeBelasting from "./pincodeBelasting.js";
 import pincodeBuitenlandEu from "./pincodeBuitenlandEu.js";
 import pincodeOntwikkelingslanden from "./pincodeOntwikkelingslanden.js";
 import examenEconomie2025T1 from "./examenEconomie2025T1.js";
+import examenEconomie2024T1 from "./examenEconomie2024T1.js";
+import examenEconomie2024T2 from "./examenEconomie2024T2.js";
+import examenEconomie2023T1 from "./examenEconomie2023T1.js";
+import examenEconomie2023T2 from "./examenEconomie2023T2.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
@@ -194,6 +198,10 @@ export const ALL_LEARN_PATHS = {
   "pincode-buitenland-eu": pincodeBuitenlandEu,
   "pincode-ontwikkelingslanden": pincodeOntwikkelingslanden,
   "examen-economie-2025-t1": examenEconomie2025T1,
+  "examen-economie-2024-t1": examenEconomie2024T1,
+  "examen-economie-2024-t2": examenEconomie2024T2,
+  "examen-economie-2023-t1": examenEconomie2023T1,
+  "examen-economie-2023-t2": examenEconomie2023T2,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
   // Duits

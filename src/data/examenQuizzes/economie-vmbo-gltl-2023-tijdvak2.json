@@ -6,7 +6,58 @@
     "jaar": 2023,
     "tijdvak": 2
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "Welke uitgaven doen jongeren zelf?",
+      "body": "geven zelf eigen geld uit  gemiddelde uitgaven\n                  in %                       per jaar in \n\n                  jongens  meisjes           jongens  meisjes\n\nkleding           29       56                516      460\nrecreatie\nuitgaan           45       54                132      132\neten en drinken\n                  64       73                216      168\n\n                  77       77                156      108\n\nToelichting:\nUit het onderzoek blijkt dat 77% van de jongens en 77% van de meisjes\nhun eigen geld uitgeven aan eten en drinken.\n\nbron: NIBUD scholierenonderzoek 2019 (bewerkt)\n\n Weinig poen voor katoen",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "vraag en aanbod van katoen op de wereldmarkt",
+      "body": "",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "gegevens katoenproductie en water in",
+      "body": "Burkina Faso\n\n voor 1 spijkerbroek is 1 kilogram katoen nodig\n\ntotale productie katoen per jaar          250.000 kilogram\nniet-duurzaam geproduceerde spijkerbroek  8.000 liter water\nduurzaam geproduceerde spijkerbroek       1.500 liter water\naantal inwoners                           19.000.000\n\n Onroerende zaak",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "tarief OZB 2019 gemeente Sittard-Geleen",
+      "body": "onroerendezaakbelasting       van de WOZ-waarde\neigendom woning 0,2102%",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "WOZ-beschikking Adriaan",
+      "body": "A.K. Jansen\nNobellaan 22\n4321 AA Sittard\n\nWAARDEBESCHIKKING\nWOZ tijdvak: 1-1-2019 / 1-1-2020\n\nonroerende zaak        vastgestelde waarde in \nNobellaan 22, Sittard  365.000\n\n Waarde van je opleiding",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "inkomen versus baanzekerheid",
+      "body": "Wat verdien je na je opleiding en hoe zeker ben je van een baan?",
+      "soort": "informatiebron"
+    },
+    "7": {
+      "titel": "top vijf van de hbo-opleidingen met het hoogste",
+      "body": "startsalaris\n\nhbo 2012           hbo 2022\n1 verloskunde      1 maritiem officier\n2 mondzorgkunde    2 leraar Nederlands\n3 leraar biologie  3 leraar Engels\n4 leraar wiskunde  4 mondzorgkunde\n5 leraar Engels    5 bestuurskunde\n\n                  bron: SEO Economisch Onderzoek en Elsevier bewerkt\n\n Zorgen om inflatie",
+      "soort": "informatiebron"
+    },
+    "8": {
+      "titel": "CPI november 2021",
+      "body": "uitgave-categorie   weging gemiddeld weging familie         prijzen in\n                                                            indexcijfers1)\n1 diensten          gezin                        Sitalsing  103\n2 energie                                                   127\n3 voeding en                           50%       38%        103\n\n     dranken                           7%        22%\n4 overig\ntotaal                                 16%       13%\nCPI\n                     27%                         27%        105\n                    100%\n                    105,22                       100%\n\n                                                 ...\n\nnoot 1 november 2020 is het basisjaar\n\nHandelsoorlog",
+      "soort": "informatiebron"
+    },
+    "9": {
+      "titel": "groei nationaal inkomen per land na extra import",
+      "body": "door de VS en China\n\n Nederland werkt",
+      "soort": "informatiebron"
+    },
+    "10": {
+      "titel": "scholieren met werk in procenten van de",
+      "body": "15- tot 20-jarigen in het voortgezet onderwijs\n\n          bron: CBS bewerkt\n\nGT-0233-a-23-2-b  7/7  lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "De katoenboeren in de VS ontvingen overheidssubsidie. De katoenboeren uit Burkina Faso, die geen overheidssubsidie ontvingen, konden daardoor slecht concurreren met de katoenboeren uit de VS op de wereldmarkt. Welke grafiek geeft het gevolg van deze overheidssubsidie in de VS op de wereldmarktprijs juist weer?",
@@ -94,7 +145,7 @@
         "volledige prijscompensatie in de lonen Handelsoorlog Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 in de bijlage. In de Verenigde Staten (VS) worden veel Chinese grondstoffen en halffabricaten, zoals aluminium en staal, gebruikt bij de productie van goederen. De president van de VS is in 2017 gestart met het heffen van invoerrechten op Chinees staal en aluminium."
       ],
       "answer": 3,
-      "explanation": "Het juiste antwoord is D.",
+      "explanation": "Vraag Antwoord                                                                 Scores\n\n   Handelsoorlog",
       "tekstNr": null,
       "vraagNr": 27
     },
