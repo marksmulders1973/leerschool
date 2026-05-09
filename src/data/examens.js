@@ -41,22 +41,25 @@ function eb(jaar, tijdvak, niveauPad, vakCode, niveauPrefix, type) {
 const NIVEAU_VMBO_GLTL = { niveauPad: "vmbo-gl", niveauPrefix: "gt" };
 
 // Vakcode-tabel — geverifieerd via curl (alle URLs HTTP 200 in 2026-05-08).
+// heeftBijlage: of er een apart bijlage-PDF (-b) bestaat met teksten/bronnen.
+// Geverifieerd 2026-05-09 voor 2022-2025, beide tijdvakken — talen + zaakvakken
+// hebben bijlage; wiskunde/biologie/aardrijkskunde hebben bronnen in opgaven zelf.
 const VAKCODES_VMBO_GLTL = {
-  wiskunde:        { code: "0153", titel: "Wiskunde — VMBO GL/TL" },
-  nederlands:      { code: "0011", titel: "Nederlands — VMBO GL/TL" },
-  engels:          { code: "0071", titel: "Engels — VMBO GL/TL" },
-  biologie:        { code: "0191", titel: "Biologie — VMBO GL/TL" },
-  economie:        { code: "0233", titel: "Economie — VMBO GL/TL" },
-  geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL" },
-  aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL" },
+  wiskunde:        { code: "0153", titel: "Wiskunde — VMBO GL/TL",       heeftBijlage: false },
+  nederlands:      { code: "0011", titel: "Nederlands — VMBO GL/TL",     heeftBijlage: true  },
+  engels:          { code: "0071", titel: "Engels — VMBO GL/TL",         heeftBijlage: true  },
+  biologie:        { code: "0191", titel: "Biologie — VMBO GL/TL",       heeftBijlage: false },
+  economie:        { code: "0233", titel: "Economie — VMBO GL/TL",       heeftBijlage: true  },
+  geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL",   heeftBijlage: true  },
+  aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL", heeftBijlage: false },
 };
 
 // Helper: genereer entries voor 1 vak × meerdere jaren × 2 tijdvakken.
-function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren }) {
+function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren, heeftBijlage }) {
   const out = [];
   for (const jaar of jaren) {
     for (const tijdvak of [1, 2]) {
-      out.push({
+      const entry = {
         id: `${vak}-${niveau}-${jaar}-tijdvak${tijdvak}`,
         vak,
         niveau,
@@ -66,7 +69,11 @@ function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren }) {
         bron: "examenblad.nl",
         externalUrl: eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "o"),
         correctieUrl: eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "c"),
-      });
+      };
+      if (heeftBijlage) {
+        entry.bijlageUrl = eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "b");
+      }
+      out.push(entry);
     }
   }
   return out;
@@ -83,6 +90,7 @@ const _vmboGltlExterneEntries = Object.entries(VAKCODES_VMBO_GLTL).flatMap(
     vakCode: info.code,
     titel: info.titel,
     jaren: VMBO_GLTL_JAREN,
+    heeftBijlage: info.heeftBijlage,
   })
 );
 
@@ -136,6 +144,14 @@ export function getExamenUrl(examen) {
 // Correctievoorschrift-URL (alleen extern beschikbaar voor nu).
 export function getCorrectieUrl(examen) {
   return examen?.correctieUrl || null;
+}
+
+// Bijlage-URL — bevat de teksten/bronnen die bij de opgaven horen.
+// Talen (Nederlands, Engels) en zaakvakken (economie, geschiedenis) hebben
+// een aparte bijlage; wiskunde/biologie/aardrijkskunde hebben bronnen in
+// het opgavenboekje zelf en geven hier null terug.
+export function getBijlageUrl(examen) {
+  return examen?.bijlageUrl || null;
 }
 
 // Helpers voor filtering/sortering (gebruikt door ExamensPage).

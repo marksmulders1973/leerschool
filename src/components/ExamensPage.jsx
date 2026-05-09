@@ -6,6 +6,7 @@ import {
   NIVEAU_LABELS,
   getExamenUrl,
   getCorrectieUrl,
+  getBijlageUrl,
 } from "../data/examens.js";
 
 // Examens-bibliotheek (Mark idee 2026-05-08): leerling kan oude
@@ -140,6 +141,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                     {lijst.map((e) => {
                       const opgaveUrl = getExamenUrl(e);
                       const correctieUrl = getCorrectieUrl(e);
+                      const bijlageUrl = getBijlageUrl(e);
                       const isExtern = !!e.externalUrl;
                       return (
                         <div
@@ -184,6 +186,28 @@ export default function ExamensPage({ onBack, onHome, prefilterVak }) {
                             </div>
                             <span style={{ fontSize: 14, color: C.muted }} aria-hidden="true">↗</span>
                           </a>
+                          {bijlageUrl && (
+                            <a
+                              href={bijlageUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 8,
+                                padding: "8px 14px 10px 46px",
+                                color: C.accent,
+                                fontSize: 12,
+                                fontWeight: 600,
+                                textDecoration: "none",
+                                borderTop: `1px dashed ${C.border}`,
+                              }}
+                              onMouseOver={(ev) => ev.currentTarget.style.background = "rgba(255,107,53,0.1)"}
+                              onMouseOut={(ev) => ev.currentTarget.style.background = "transparent"}
+                            >
+                              📑 Bijlage (teksten/bronnen — nodig voor de opgaven) ↗
+                            </a>
+                          )}
                           {correctieUrl && (
                             <a
                               href={correctieUrl}
