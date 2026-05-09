@@ -93,11 +93,17 @@ def load_all_examenvragen():
 
 
 def render_check(vraag, label):
-    """Genereer een check-object als JS-string met examen-label vooraf."""
+    """Genereer een check-object als JS-string met examen-label bovenaan
+    de vraag (markdown-style, witregel ervoor zodat het visueel los
+    boven de echte vraag staat).
+
+    label is bv: '🎓 _Echt examen VMBO-GL en TL 2025 tijdvak 1, vraag 6_'
+    Resultaat in q: '<label>\\n\\n<originele vraag>'
+    """
     q_clean = vraag["q"].replace('"', '\\"').replace("\n", " ").strip()
-    q_with_label = f"{label} {q_clean}"
+    # Markdown: label boven, witregel, dan vraag
+    q_with_label = f"{label}\\n\\n{q_clean}"
     options_clean = [o.replace('"', '\\"').replace("\n", " ").strip() for o in vraag["options"]]
-    # Filter te lange opties (meestal afgekapt door parser of bevatten extra context)
     options_clean = [o[:200] for o in options_clean]
     options_str = ", ".join([f'"{o}"' for o in options_clean])
     return (
@@ -180,7 +186,10 @@ def main():
         added = 0
         skipped = 0
         for step_title, v in lijst:
-            label = f"🎓 Examen {v['jaar']}-T{v['tv']} V{v['nr']}:"
+            # Bron-label per Mark feedback 2026-05-09: niveau + jaar + tijdvak + vraagnr
+            # zodat de leerling ziet dat dit ECHT examenmateriaal is en
+            # zelf het examen erbij kan pakken om te verifiëren.
+            label = f"🎓 _Echt examen VMBO-GL en TL {v['jaar']} tijdvak {v['tv']}, vraag {v['nr']}_"
             check_js = render_check(v, label)
             dedupe_key = f'examenBron: "{label}"'
             text, status = inject_into_step(text, step_title, check_js, dedupe_key)
