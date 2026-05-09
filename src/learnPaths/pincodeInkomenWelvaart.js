@@ -52,6 +52,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is kapitaal.", "Dat valt onder natuur.", "Dat is ondernemerschap — een aparte productiefactor."],
       },
+    
+      {
+        q: "Een nieuwe smartphone — voor een 16-jarige is dat een **primaire** of **secundaire** behoefte?",
+        options: ["Secundaire behoefte", "Primaire behoefte", "Vrije behoefte", "Geen behoefte"],
+        answer: 0,
+        wrongHints: [null, "Primaire = nodig om te leven (eten, drinken, onderdak). Een telefoon hoort daar niet bij.", "'Vrij' is een type goed (lucht), geen type behoefte.", "Een leerling wil de telefoon wel — dus is er behoefte."],
+      },
+      {
+        q: "Een fabriekshal waar koekjes worden gebakken is een voorbeeld van een **kapitaalgoed**. Welke productiefactor levert hem?",
+        options: ["Kapitaal", "Arbeid", "Natuur", "Ondernemerschap"],
+        answer: 0,
+        wrongHints: [null, "Arbeid = werk dat mensen leveren, niet de hal zelf.", "Natuur = grondstoffen, niet een gebouw.", "Ondernemerschap = het idee + risico, niet het gebouw."],
+      },
+      {
+        q: "Brood dat je in de winkel koopt om vandaag op te eten — welk soort goed?",
+        options: ["Consumptiegoed", "Kapitaalgoed", "Vrij goed", "Productiegoed"],
+        answer: 0,
+        wrongHints: [null, "Kapitaalgoed = waarmee je iets anders maakt (oven, machine).", "Brood is niet gratis of in overvloed.", "Productiegoed bestaat niet als categorie — denk consumptie/kapitaal."],
+      },
     ],
   },
   {
@@ -78,6 +97,25 @@ const steps = [
         options: ["Je hoeft geen productiefactor te leveren om het te ontvangen", "Het is minder belangrijk", "Het wordt later betaald", "Het is een vorm van loon"],
         answer: 0,
         wrongHints: [null, "Niet 'minder belangrijk' — secundair betekent technisch iets anders.", "Tijdsorde is niet de definitie.", "Loon is primair (verdiend met arbeid)."],
+      },
+    
+      {
+        q: "Iemand verhuurt een appartement en ontvangt €1200 huur per maand. Welk soort inkomen is dat?",
+        options: ["Primair inkomen (uit kapitaal/natuur)", "Secundair inkomen", "Brutoloon", "Toeslag"],
+        answer: 0,
+        wrongHints: [null, "Secundair = zonder een productiefactor te leveren. Verhuren = je biedt natuur/kapitaal aan.", "Loon krijg je voor arbeid, niet voor verhuur.", "Toeslagen krijg je van de overheid, niet van een huurder."],
+      },
+      {
+        q: "Bij wie hoort de **zorgtoeslag** thuis?",
+        options: ["Secundair inkomen — zonder productiefactor te leveren", "Primair inkomen — voor je werk", "Loon", "Winst"],
+        answer: 0,
+        wrongHints: [null, "Voor de zorgtoeslag werk je niet — die krijg je van de overheid.", "Loon is voor arbeid, toeslag niet.", "Winst is voor ondernemers, geen overheidsbijdrage."],
+      },
+      {
+        q: "Brutoloon €3.000, loonheffing en premies samen €750. Wat is het **nettoloon**?",
+        options: ["€2.250", "€3.750", "€2.750", "€2.000"],
+        answer: 0,
+        wrongHints: [null, "Bij netto haal je inhoudingen ER AF, niet op.", "Net niet — alle €750 moet eraf.", "Te veel afgetrokken — controleer 3000 - 750."],
       },
     ],
   },
@@ -110,6 +148,25 @@ const steps = [
         options: ["De gemiddelde prijsstijging van consumentengoederen", "De koopkracht per persoon", "Het totaal inkomen in Nederland", "Hoeveel mensen werk hebben"],
         answer: 0,
         wrongHints: [null, "Koopkracht is een gevolg van CPI + inkomen, niet wat CPI zelf meet.", "Dat is het BBP / nationaal inkomen.", "Dat is werkloosheidscijfer, andere statistiek."],
+      },
+    
+      {
+        q: "Het CBS meet voor 2025 een **CPI van 108** (basis 2023 = 100). Hoeveel zijn de prijzen sinds 2023 gestegen?",
+        options: ["8%", "108%", "0,8%", "1,08%"],
+        answer: 0,
+        wrongHints: [null, "Dat zou betekenen dat een brood van €1 nu €2,08 kost — te veel.", "Te klein — CPI gaat in hele procenten.", "Dat is de factor (1,08) niet het percentage."],
+      },
+      {
+        q: "Je loon stijgt 4%, prijzen stijgen ook 4%. Wat gebeurt er met je **koopkracht**?",
+        options: ["Blijft ongeveer gelijk", "Stijgt met 4%", "Daalt met 8%", "Stijgt met 8%"],
+        answer: 0,
+        wrongHints: [null, "Loon en prijzen stijgen even hard — dan kun je niet meer kopen.", "Niet de twee percentages optellen.", "Stijging zou betekenen dat je netto meer kunt kopen."],
+      },
+      {
+        q: "**Welvaart in ruime zin** omvat naast inkomen ook:",
+        options: ["Gezondheid, milieu, vrije tijd, veiligheid", "Alleen spaargeld", "Alleen inkomen per maand", "Alleen vakanties"],
+        answer: 0,
+        wrongHints: [null, "Spaargeld is wel materieel — dat valt onder enge zin.", "Inkomen alleen = welvaart in enge zin.", "Vrije tijd is een onderdeel maar niet alles."],
       },
     ],
   },

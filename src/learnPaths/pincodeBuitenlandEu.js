@@ -53,6 +53,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bevolking is geen comparatief voordeel — productiviteit per persoon wel.", "Goedkoopste = absoluut voordeel; comparatief is relatief.", "Onderwijsniveau is een factor, maar geen definitie van comparatief voordeel."],
       },
+    
+      {
+        q: "Een land heeft een **handelsoverschot**. Wat betekent dat?",
+        options: ["De export is groter dan de import", "De import is groter dan de export", "Schulden zijn afgelost", "Er is recessie"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist een handelsTEKORT.", "Schulden zijn iets anders dan handelsbalans.", "Recessie = economische krimp; los van handel."],
+      },
+      {
+        q: "Waarom is Nederland een uitgesproken **handelsland**?",
+        options: ["Grote havens (Rotterdam) + Schiphol + ligging in Europa", "Veel goud in de bodem", "Lage belastingen wereldwijd het laagst", "Geen import nodig"],
+        answer: 0,
+        wrongHints: [null, "NL heeft geen goud van betekenis.", "NL-belasting is normaal, niet wereldwijd het laagst.", "NL importeert juist heel veel (bv. olie)."],
+      },
+      {
+        q: "Wat is **re-export**?",
+        options: ["Goederen komen Nederland binnen en gaan via NL door naar een ander land", "Twee keer hetzelfde product exporteren", "Export naar landen buiten Europa", "Een soort belastingvoordeel"],
+        answer: 0,
+        wrongHints: [null, "Niet 'twee keer' — wel doorvoer via NL.", "Niet beperkt tot buiten Europa — meeste re-export gaat juist naar EU-landen.", "Geen belasting — een handelsstroom."],
+      },
     ],
   },
   {
@@ -79,6 +98,25 @@ const steps = [
         options: ["Polen", "Frankrijk", "Spanje", "Duitsland"],
         answer: 0,
         wrongHints: [null, "Frankrijk gebruikt wel de euro.", "Spanje gebruikt de euro.", "Duitsland is een van de grootste eurolanden."],
+      },
+    
+      {
+        q: "**Eén markt** in de EU — wat betekent dat voor handel?",
+        options: ["Geen invoerheffingen tussen EU-landen, vrij handelen alsof het 1 land is", "Iedereen heeft dezelfde munteenheid", "Alle prijzen zijn gelijk", "Geen import van buiten Europa toegestaan"],
+        answer: 0,
+        wrongHints: [null, "Niet alle EU-landen hebben de euro — denk aan Zweden of Polen.", "Prijzen verschillen, maar er zijn geen invoerheffingen tussen EU-landen.", "Import van buiten mag wel — alleen met heffingen."],
+      },
+      {
+        q: "**Brexit** was:",
+        options: ["Het Verenigd Koninkrijk dat de EU verliet (2020)", "Een nieuw EU-lid", "Een Europese munteenheid", "Een handelsverdrag met de VS"],
+        answer: 0,
+        wrongHints: [null, "Tegenovergesteld — UK ging er juist uit.", "Brexit = 'Britain exit', dus geen valuta.", "Brexit ging tussen UK en EU, niet tussen EU en VS."],
+      },
+      {
+        q: "Voordeel van de **euro** voor een Nederlandse toerist die in Spanje is?",
+        options: ["Geen wisselkosten of -koersrisico — euro is overal hetzelfde", "Hogere prijzen in Spanje", "Lagere belasting", "Gratis hotelkamer"],
+        answer: 0,
+        wrongHints: [null, "Prijzen zijn niet hoger door de euro.", "Belasting in andere land verandert niet door jouw munteenheid.", "Vakantie kost gewoon geld."],
       },
     ],
   },
@@ -109,6 +147,25 @@ const steps = [
         options: ["Beheert de euro: rente, geldhoeveelheid, inflatie", "Int belasting", "Schrijft Nederlandse wetten", "Helpt arme landen"],
         answer: 0,
         wrongHints: [null, "Belasting innen doet de Belastingdienst, niet de centrale bank.", "Wetten worden in NL gemaakt door regering + parlement.", "Ontwikkelingshulp komt vooral via aparte organisaties (Wereldbank, ngo's)."],
+      },
+    
+      {
+        q: "Koers €1 = $1,10. Je wilt **$220 dollar** kopen. Hoeveel euro heb je nodig?",
+        options: ["€200", "€220", "€242", "€242"],
+        answer: 0,
+        wrongHints: [null, "1 euro = $1,10, niet $1. Reken: 220 / 1,10.", "Te veel betaald — dat is alsof je 220 keer 1,10 doet.", "Reken in plaats van schat."],
+      },
+      {
+        q: "Wat is het **inflatiedoel** van de ECB?",
+        options: ["Ongeveer 2%", "0%", "5%", "10%"],
+        answer: 0,
+        wrongHints: [null, "0% is te krap — beetje inflatie helpt de economie.", "5% is te hoog — koopkracht zou snel dalen.", "10% is hyperinflatie-niveau."],
+      },
+      {
+        q: "Waardoor stijgt de **wisselkoers** van de euro tegenover de dollar?",
+        options: ["Veel vraag naar euro's (bv. door hogere rente in EU)", "Veel inflatie in EU", "EU verkoopt minder", "Brand op een schip"],
+        answer: 0,
+        wrongHints: [null, "Hoge inflatie verzwakt juist een munt.", "Minder export = minder vraag naar euro's = zwakker.", "Een incident heeft geen blijvende invloed."],
       },
     ],
   },

@@ -54,6 +54,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Hoogte verschilt per regeling, geen vaste verhouding.", "Iedereen betaalt belasting (BTW bij aankoop bijvoorbeeld).", "Er is wel verschil — qua doel en wat je terugkrijgt."],
       },
+    
+      {
+        q: "**AOW-premie** — is dit een belasting of een premie?",
+        options: ["Premie — voor een specifiek doel (latere AOW-uitkering)", "Belasting — gaat naar algemene pot", "Allebei tegelijk", "Geen van beide"],
+        answer: 0,
+        wrongHints: [null, "Voor de AOW is het juist gekoppeld aan een specifiek doel.", "Het is een duidelijke premie, geen mengvorm.", "Het bestaat wel — staat op je loonstrookje."],
+      },
+      {
+        q: "**Erfbelasting** — direct of indirect?",
+        options: ["Direct (op basis van wat je krijgt)", "Indirect (zit in een prijs)", "Premie", "Geen van beide"],
+        answer: 0,
+        wrongHints: [null, "Erfbelasting zit niet in de prijs van iets.", "Geen specifiek doel — algemene belasting.", "Het bestaat zeker als belasting."],
+      },
+      {
+        q: "**BTW** — direct of indirect?",
+        options: ["Indirect — verstopt in de prijs", "Direct — op je inkomen", "Premie", "Geen belasting"],
+        answer: 0,
+        wrongHints: [null, "BTW betaal je niet over je inkomen, maar bij elke aankoop.", "Geen premie — geen specifiek doel als terugkrijgen.", "BTW is wél belasting — staat op elke kassabon."],
+      },
     ],
   },
   {
@@ -85,6 +104,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Belonen voor schadelijk gedrag is onlogisch — accijns is ontmoediging.", "Productiekosten zijn relatief laag; accijns is een politieke keuze.", "Accijns geldt voor alle merken in NL, ongeacht herkomst."],
       },
+    
+      {
+        q: "Welk **BTW-tarief** geldt voor boodschappen (eten/drinken)?",
+        options: ["9% (laag tarief)", "21% (algemeen tarief)", "0%", "25%"],
+        answer: 0,
+        wrongHints: [null, "21% is voor andere dingen (kleding, elektronica).", "0% is voor specifieke gevallen (export, sommige zorg).", "25% bestaat niet als NL-tarief."],
+      },
+      {
+        q: "Een product kost **€100 zonder BTW**. Wat is de prijs **inclusief 21% BTW**?",
+        options: ["€121", "€100", "€79", "€79"],
+        answer: 0,
+        wrongHints: [null, "Inclusief BTW is meer dan zonder.", "Dat zou aftrek zijn, niet bijtelling.", "Reken: €100 × 1,21."],
+      },
+      {
+        q: "Waarom heft de overheid **hoge accijns op brandstof**?",
+        options: ["Inkomsten + ontmoediging vanwege milieu/CO2", "Brandstof is duur om te produceren", "Internationale verplichting", "Om automakers te helpen"],
+        answer: 0,
+        wrongHints: [null, "Productiekosten zijn relatief laag, accijns zit erbovenop.", "Geen verplichting van bovenaf — eigen keuze NL.", "Eerder andersom — accijns ontmoedigt rijden."],
+      },
     ],
   },
   {
@@ -114,6 +152,25 @@ const steps = [
         options: ["Bedrag dat van je te betalen belasting wordt afgehaald", "Korting in de winkel met een speciale pas", "Een soort spaarrekening", "De rente die je krijgt op spaargeld"],
         answer: 0,
         wrongHints: [null, "Niets met winkels — pure belastingterm.", "Spaarrekening is bankproduct, geen belasting.", "Rente is iets anders dan een korting op belasting."],
+      },
+    
+      {
+        q: "Wie houdt **loonheffing** in op je salaris?",
+        options: ["De werkgever", "De werknemer zelf", "De Belastingdienst direct", "De vakbond"],
+        answer: 0,
+        wrongHints: [null, "Werknemers krijgen het netto bedrag — werkgever doet de inhouding.", "Belastingdienst krijgt het via de werkgever.", "Vakbond doet aan onderhandelingen, geen inhouding."],
+      },
+      {
+        q: "Persoon A verdient €30.000, persoon B €100.000. Door **progressieve belasting** betaalt:",
+        options: ["Persoon B verhoudingsgewijs een hoger percentage", "Beide hetzelfde percentage", "Persoon A meer percentage", "Allebei vrijgesteld"],
+        answer: 0,
+        wrongHints: [null, "Bij vlaktaks is dat zo, maar NL heeft schijven.", "Tegenovergesteld — zwakkere schouders dragen lichter.", "Niemand boven minimum is helemaal vrijgesteld."],
+      },
+      {
+        q: "**Arbeidskorting** krijg je als:",
+        options: ["Je een baan hebt en arbeidsinkomen verdient", "Je geen werk hebt", "Je gepensioneerd bent", "Je zelfstandige bent zonder personeel"],
+        answer: 0,
+        wrongHints: [null, "Arbeids = werken — geen werk, geen arbeidskorting.", "Pensioen is geen arbeidsinkomen.", "Zzp'ers krijgen wel arbeidskorting — als ze winst maken uit arbeid."],
       },
     ],
   },

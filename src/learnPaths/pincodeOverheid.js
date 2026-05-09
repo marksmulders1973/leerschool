@@ -49,6 +49,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Loon wordt op de markt bepaald, niet door overheid (behalve minimumloon).", "Banen verdelen doet de markt — overheid stimuleert hooguit.", "Spaargeld blijft van jou; overheid verdeelt geen spaargeld."],
       },
+    
+      {
+        q: "**Politie** valt onder welke overheidstaak?",
+        options: ["Wetten en orde (veiligheid)", "Onderwijs", "Sociale zekerheid", "Inkomensverdeling"],
+        answer: 0,
+        wrongHints: [null, "Onderwijs gaat over scholen.", "Sociale zekerheid = uitkeringen.", "Inkomensverdeling = belasting heffen om verschillen te verkleinen."],
+      },
+      {
+        q: "**Subsidie voor een hogeschool** — onder welke overheidstaak?",
+        options: ["Onderwijs en zorg betaalbaar maken voor iedereen", "Marktregels", "Wetten en orde", "Defensie"],
+        answer: 0,
+        wrongHints: [null, "Marktregels = eerlijke concurrentie bewaken.", "Wetten en orde = politie/rechters.", "Defensie = leger, niet onderwijs."],
+      },
+      {
+        q: "Wat doet de **provincie** vooral?",
+        options: ["Regionale zaken zoals provinciale wegen en natuur", "Wetten maken voor heel Nederland", "Vuilnis ophalen", "Belasting innen"],
+        answer: 0,
+        wrongHints: [null, "Landelijke wetten maakt het Rijk.", "Vuilnis is een gemeente-taak.", "Belasting innen doet vooral de Belastingdienst."],
+      },
     ],
   },
   {
@@ -81,6 +100,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bij overschot kan de overheid soms teruggeven, niet bij tekort.", "Toeslagen zijn geen oplossing voor tekort.", "De begroting blijft bestaan — er moet alleen extra geld bij."],
       },
+    
+      {
+        q: "Wat is verreweg de **grootste inkomstenbron** van de Rijksoverheid?",
+        options: ["Belastingen", "Aardgasbaten", "Gemeenten", "Loterijen"],
+        answer: 0,
+        wrongHints: [null, "Aardgasbaten worden steeds kleiner.", "Gemeenten krijgen juist GELD van het Rijk, geven het niet.", "Loterijen leveren wat op, maar niet veel in vergelijking."],
+      },
+      {
+        q: "Wat is de **Miljoenennota**?",
+        options: ["Het document met de plannen voor de Rijksbegroting van het komende jaar", "Een toespraak van de koning", "Een rekening voor 1 miljoen", "Een Europese richtlijn"],
+        answer: 0,
+        wrongHints: [null, "De Troonrede is de toespraak; de Miljoenennota is het cijferdocument.", "De NAAM komt van de bedragen, het is geen rekening.", "Het is puur Nederlands, geen Europees stuk."],
+      },
+      {
+        q: "Een **begrotingsoverschot** — wat kan de overheid daarmee?",
+        options: ["De staatsschuld aflossen of geld reserveren", "Niets — geld is niet van de overheid", "Verplicht uitgeven", "Aan inwoners terugbetalen elke maand"],
+        answer: 0,
+        wrongHints: [null, "Een overschot is wel beschikbaar — daar kan iets mee gebeuren.", "Verplicht uitgeven is geen regel — het kan ook gespaard.", "Maandelijks terugbetalen is geen praktijk in NL."],
+      },
     ],
   },
   {
@@ -108,6 +146,25 @@ const steps = [
         options: ["Voor investeringen die later geld opleveren (bv. infrastructuur)", "Om belasting te kunnen verlagen", "Om uitkeringen extra hoog te maken", "Lenen is altijd slecht"],
         answer: 0,
         wrongHints: [null, "Belasting verlagen via lenen verschuift het probleem alleen naar later.", "Uitkeringen extra hoog maken via lenen is niet duurzaam.", "Lenen is niet altijd slecht — voor investeringen kan het rendement opleveren."],
+      },
+    
+      {
+        q: "Wat is **BBP**?",
+        options: ["De totale productie in Nederland in 1 jaar", "Belasting op binnenlandse producten", "Bonus voor parttime werkers", "Beroepsbevolking als percentage"],
+        answer: 0,
+        wrongHints: [null, "Niet specifiek belasting — het is alle productie samen.", "Geen werknemer-bonus — pure economische maatstaf.", "Beroepsbevolking is iets anders (= mensen die werken/willen werken)."],
+      },
+      {
+        q: "Een land heeft staatsschuld van **80% van het BBP**. Wat zegt de EMU-norm?",
+        options: ["Het is hoger dan de afgesproken 60%-grens", "Het is precies goed", "Het is veel te laag", "EMU-norm bestaat niet"],
+        answer: 0,
+        wrongHints: [null, "60% is de grens, 80% zit erboven.", "Schuld kan altijd lager — 0% is geen norm.", "EMU-norm bestaat — afspraak in Stabiliteits- en Groeipact."],
+      },
+      {
+        q: "Waarom kost staatsschuld geld?",
+        options: ["Er moet jaarlijks rente betaald worden", "De schuld vermindert vanzelf", "Er wordt belasting over geheven", "De schuld groeit door erfenissen"],
+        answer: 0,
+        wrongHints: [null, "Een schuld lost niet vanzelf op — moet juist afgelost.", "Belasting over schuld bestaat niet — wel rente.", "Erfenissen hebben hier niets mee te maken."],
       },
     ],
   },

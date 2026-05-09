@@ -53,6 +53,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "De gemeente niet — daar regel je eventueel een vergunning.", "De KvK schrijft in; de Belastingdienst krijgt vanuit daar info.", "DUO regelt studie-zaken."],
       },
+    
+      {
+        q: "Welke 3 stappen volgen meestal als je een eigen bedrijf wilt starten?",
+        options: ["Marktonderzoek → ondernemingsplan → inschrijven KvK", "Reclame maken → product maken → klanten zoeken", "Geld lenen → personeel werven → kantoor huren", "Belasting betalen → BV oprichten → vakantie"],
+        answer: 0,
+        wrongHints: [null, "Reclame komt later — eerst weten wat de markt wil.", "Geld lenen kan, maar je begint met onderzoek/plan.", "Belasting komt pas als je iets verdient."],
+      },
+      {
+        q: "Een webshop in handgemaakte sieraden — welk type onderneming?",
+        options: ["Productie (je maakt zelf)", "Handel (alleen kopen en doorverkopen)", "Diensten", "Geen van deze"],
+        answer: 0,
+        wrongHints: [null, "Handel = inkopen en doorverkopen zonder zelf te maken.", "Diensten = iets ongrijpbaars (kapsel, advies).", "Het past wel — sieraden maken is productie."],
+      },
+      {
+        q: "Een ondernemer **neemt risico**. Wat betekent dat?",
+        options: ["Hij kan zijn investering kwijtraken als het bedrijf verliest", "Hij krijgt altijd zijn geld terug", "Hij betaalt geen belasting", "Hij hoeft niet te werken"],
+        answer: 0,
+        wrongHints: [null, "Als er garantie was, was het geen risico.", "Ondernemers betalen wél belasting (IB of VPB).", "Ondernemers werken meestal hard, juist door het risico."],
+      },
     ],
   },
   {
@@ -85,6 +104,25 @@ const steps = [
         options: ["Constante kosten (huur)", "Variabele kosten (grondstoffen)", "Totale kosten", "Inkoopkosten"],
         answer: 0,
         wrongHints: [null, "Variabel verandert juist — meer produceren = meer grondstof.", "Totale kosten = constante + variabele, dus die wijzigen wel.", "Inkoopkosten zijn variabel."],
+      },
+    
+      {
+        q: "Een ondernemer verkoopt 200 stuks à €5. De kosten zijn €600. Wat is de **winst**?",
+        options: ["€400", "€1.000", "€600", "€200"],
+        answer: 0,
+        wrongHints: [null, "Dat is de omzet — vergeet niet de kosten af te trekken.", "Kosten zijn input, geen winst.", "Reken: 200 × 5 = €1.000 omzet; minus €600 kosten."],
+      },
+      {
+        q: "Welke kosten **veranderen niet** als je meer maakt?",
+        options: ["Constante (vaste) kosten zoals huur", "Variabele kosten zoals grondstof", "Totale kosten", "Inkoopkosten"],
+        answer: 0,
+        wrongHints: [null, "Variabele kosten gaan omhoog bij meer productie — meer grondstof nodig.", "Totaal = vast + variabel, dus die wijzigt wel.", "Inkoop is variabel — meer inkopen voor meer producten."],
+      },
+      {
+        q: "Het **break-even-punt** is het punt waar:",
+        options: ["Omzet precies gelijk is aan totale kosten (geen winst, geen verlies)", "De winst maximaal is", "Je het meest verkoopt", "De ondernemer stopt"],
+        answer: 0,
+        wrongHints: [null, "Maximale winst zit later, niet bij quitte draaien.", "Aantal zegt niets — break-even gaat over geld.", "Stoppen is geen economisch begrip."],
       },
     ],
   },
@@ -121,6 +159,25 @@ const steps = [
         options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting", "BTW alleen", "Loonbelasting"],
         answer: 0,
         wrongHints: [null, "Eigenaars BV betalen IB over hun loon, maar de BV zelf VPB.", "BTW betalen alle ondernemingen, niet alleen BV.", "Loonbelasting wordt afgedragen door werkgever, niet specifiek BV-belasting."],
+      },
+    
+      {
+        q: "Twee vrienden starten samen een **VOF**. Wat is het belangrijkste risico?",
+        options: ["Beide vennoten zijn privé aansprakelijk — ook voor schulden van de ander", "Ze mogen geen winst maken", "Ze betalen dubbele belasting", "Ze moeten een notaris bezoeken"],
+        answer: 0,
+        wrongHints: [null, "Winst maken mag — dat is juist het doel.", "Bij VOF betaalt elk apart IB over zijn deel — geen dubbele belasting.", "Notaris is verplicht bij BV, niet bij VOF."],
+      },
+      {
+        q: "Wat is verplicht bij het oprichten van een **BV**?",
+        options: ["Een notaris (oprichtingsakte)", "Twee oprichters", "Een eigen pand", "Vooraf €100.000 omzet"],
+        answer: 0,
+        wrongHints: [null, "Een BV kan ook met 1 oprichter.", "Geen pand verplicht — BV mag thuis zitten.", "Geen omzet-eis — je begint juist vanaf nul."],
+      },
+      {
+        q: "Je wilt zelfstandig ondernemen, klein, met **zo min mogelijk risico** voor je privé-geld. Welke rechtsvorm?",
+        options: ["BV (geen privé aansprakelijkheid)", "Eenmanszaak (privé aansprakelijk)", "VOF (privé aansprakelijk)", "Stichting"],
+        answer: 0,
+        wrongHints: [null, "Bij eenmanszaak is je privégeld juist wel aansprakelijk.", "VOF erger nog — ook voor de andere vennoot.", "Stichting is voor non-profit doelen, niet voor winst."],
       },
     ],
   },

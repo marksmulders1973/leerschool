@@ -52,6 +52,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Vast dienstverband = werknemer.", "Uitzendwerk valt onder uitzendbureau, niet zzp.", "Nuluren-contract is wel een werknemer-vorm, ander dan zzp."],
       },
+    
+      {
+        q: "Hoe lang mag een **proeftijd** maximaal duren?",
+        options: ["1 of 2 maanden, afhankelijk van het contract", "1 jaar", "Onbeperkt", "1 week"],
+        answer: 0,
+        wrongHints: [null, "Proeftijd is bewust kort.", "Onbeperkt zou werknemers geen zekerheid geven.", "Te kort om elkaar te leren kennen."],
+      },
+      {
+        q: "Welk contract geeft een werknemer de **meeste zekerheid**?",
+        options: ["Vast contract (onbepaalde tijd)", "Oproepcontract", "Uitzendcontract", "Tijdelijk contract van 6 maanden"],
+        answer: 0,
+        wrongHints: [null, "Oproep = werken alleen als baas je belt — onzeker.", "Uitzend = werk via bureau, snel klaar.", "Tijdelijk eindigt na 6 maanden — minder zeker dan vast."],
+      },
+      {
+        q: "Belangrijk verschil **zzp'er vs werknemer**?",
+        options: ["Zzp'er werkt voor opdrachtgevers, regelt zelf belasting + verzekeringen", "Zzp'er hoeft niet te werken", "Zzp'er heeft altijd een vast loon", "Werknemer regelt zelf zijn belasting"],
+        answer: 0,
+        wrongHints: [null, "Zzp'er moet juist hard werken om opdrachten te vinden.", "Zzp-inkomen is wisselend, niet vast.", "Voor werknemers houdt de werkgever loonheffing in."],
+      },
     ],
   },
   {
@@ -82,6 +101,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bijna iedereen werk = volledige werkgelegenheid; krapte gaat om de vraag/aanbod-verhouding.", "Bij krapte stijgen lonen meestal.", "Dat is een ruime arbeidsmarkt, niet krap."],
       },
+    
+      {
+        q: "Veel openstaande vacatures, weinig werklozen. Wat noem je deze situatie?",
+        options: ["Krapte op de arbeidsmarkt", "Ruime arbeidsmarkt", "Recessie", "Evenwicht"],
+        answer: 0,
+        wrongHints: [null, "Ruim = juist veel zoekers, weinig werk.", "Recessie = slechte economie; veel werkloosheid.", "Evenwicht is precies passend, niet 'tekort aan werkers'."],
+      },
+      {
+        q: "Voor wie geldt een CAO?",
+        options: ["Voor iedereen in een hele sector (bv. alle horecamedewerkers)", "Alleen voor leden van een vakbond", "Alleen voor werkgevers", "Alleen voor parttimers"],
+        answer: 0,
+        wrongHints: [null, "Niet alleen leden — geldt sector-breed.", "Werkgevers zitten erbij, maar werknemers ook.", "Geen onderscheid parttime/fulltime."],
+      },
+      {
+        q: "Wat is een **vakbond**?",
+        options: ["Organisatie die opkomt voor de belangen van werknemers", "Een groep werkgevers", "Een uitzendbureau", "Een afdeling van de Belastingdienst"],
+        answer: 0,
+        wrongHints: [null, "Werkgevers hebben hun eigen organisaties (VNO-NCW etc).", "Uitzendbureau zoekt mensen voor werk, geen belangenbehartiger.", "Vakbonden zijn los van de overheid."],
+      },
     ],
   },
   {
@@ -111,6 +149,25 @@ const steps = [
         options: ["Mensen van 15-75 die willen + kunnen werken (werkend + werkloos zoekend)", "Alle inwoners van Nederland", "Alleen mensen met een baan", "Alleen werklozen"],
         answer: 0,
         wrongHints: [null, "Niet alle inwoners — kinderen en wie niet wil/kan werken vallen erbuiten.", "Werklozen die zoeken horen er ook bij.", "Werkenden horen er ook bij — sterker zelfs, dat is de meerderheid."],
+      },
+    
+      {
+        q: "Door een recessie zijn er minder banen. Welke werkloosheid?",
+        options: ["Conjuncturele werkloosheid", "Frictie", "Structureel", "Seizoens"],
+        answer: 0,
+        wrongHints: [null, "Frictie = kort, tussen twee banen — niet door recessie.", "Structureel = vaardigheden mismatch met markt.", "Seizoens = afhankelijk van het jaar (ijscoman)."],
+      },
+      {
+        q: "**100.000 werklozen**, beroepsbevolking **5.000.000**. Wat is het werkloosheidspercentage?",
+        options: ["2%", "20%", "0,2%", "5%"],
+        answer: 0,
+        wrongHints: [null, "Veel te hoog — controleer 100.000 / 5.000.000.", "Te laag met factor 10.", "Reken: 100.000 / 5.000.000 = 0,02 = 2%."],
+      },
+      {
+        q: "Wat verhoogt de **productiviteit**?",
+        options: ["Betere machines en betere opleiding", "Minder vakantiedagen", "Hogere belasting", "Meer werknemers in dienst"],
+        answer: 0,
+        wrongHints: [null, "Minder vakantie = meer uren, niet productiever per uur.", "Belasting heeft niets met productie per uur te maken.", "Meer werknemers = totaal meer output, niet per persoon."],
       },
     ],
   },

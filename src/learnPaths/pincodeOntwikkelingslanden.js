@@ -58,6 +58,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Alleen rijkdom = welvaart in enge zin.", "Geluk is wel een onderdeel maar niet de hele definitie.", "Tv-zenders zijn niet relevant voor welvaarts-statistieken."],
       },
+    
+      {
+        q: "Welk land scoort verwacht het **hoogst** op HDI?",
+        options: ["Nederland", "Mali", "Bangladesh", "Niger"],
+        answer: 0,
+        wrongHints: [null, "Mali heeft een lage HDI (lage levensverwachting + onderwijs).", "Bangladesh middeninkomen, lager dan NL.", "Niger staat heel laag op HDI-lijsten."],
+      },
+      {
+        q: "**Levensverwachting** in een arm land ligt vaak rond:",
+        options: ["~60 jaar", "~80 jaar", "~100 jaar", "~40 jaar"],
+        answer: 0,
+        wrongHints: [null, "~80 is het rijke-landen-niveau (NL).", "100 jaar is erg uitzonderlijk — geen gemiddelde.", "~40 is extreem laag, dat is meer middeleeuws."],
+      },
+      {
+        q: "**Welvaart in enge zin** = ?",
+        options: ["Alleen materiële zaken (geld, spullen)", "Alleen geluk", "Alleen gezondheid", "Alles wat met natuur te maken heeft"],
+        answer: 0,
+        wrongHints: [null, "Geluk valt onder welvaart in ruime zin.", "Gezondheid valt onder welvaart in ruime zin.", "Natuur is een element van ruime zin, geen aparte definitie."],
+      },
     ],
   },
   {
@@ -92,6 +111,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Sommige grondstoffen zijn juist overvloedig — schaarste wisselt.", "Veel grondstof-exporterende landen hebben goed havens.", "Vervuiling kan een issue zijn, maar dat is niet de hoofdreden voor armoede."],
       },
+    
+      {
+        q: "Waarom is een **vicieuze cirkel van armoede** moeilijk te doorbreken?",
+        options: ["Elk probleem versterkt het volgende — geen geld voor scholen, geen opgeleid personeel, geen industrie", "Mensen willen niet werken", "Het is altijd kortstondig", "De cirkel breekt vanzelf"],
+        answer: 0,
+        wrongHints: [null, "Wil om te werken is meestal aanwezig — kansen ontbreken.", "Vicieuze cirkels duren juist lang.", "Vanzelf breken is het tegendeel — daarom heet het vicieus."],
+      },
+      {
+        q: "**Kolonisatie-erfenis** als oorzaak van armoede betekent:",
+        options: ["Grenzen door koloniale machten getrokken zonder oog voor volkeren → conflicten + economie afhankelijk van 1 product", "Te veel kolonies", "Een soort belasting", "Niet relevant in de moderne tijd"],
+        answer: 0,
+        wrongHints: [null, "Het gaat niet om aantal, maar om de gevolgen voor latere staten.", "Geen belasting — historisch erfgoed.", "Wel relevant — sommige conflicten zijn nog steeds koloniaal-historisch."],
+      },
+      {
+        q: "Waarom zijn **schulden** zo slecht voor arme landen?",
+        options: ["Rente eet jaarlijks geld op dat anders naar onderwijs/zorg kon", "Schulden zijn altijd te groot om af te lossen", "De rente is altijd 0%", "Schulden komen nooit voor"],
+        answer: 0,
+        wrongHints: [null, "Soms zijn schulden wel haalbaar — het probleem is welke uitgave je opoffert.", "Rente is juist hoog voor arme landen (hoger risico).", "Veel arme landen hebben juist hoge schulden."],
+      },
     ],
   },
   {
@@ -121,6 +159,25 @@ const steps = [
         options: ["Lokale producenten kunnen niet concurreren met gratis goederen", "Gratis dingen zijn altijd nutteloos", "Mensen zijn ondankbaar", "Het is niet duurzaam voor het klimaat"],
         answer: 0,
         wrongHints: [null, "Soms is gratis hulp essentieel (noodhulp). Het probleem is structurele afhankelijkheid.", "Dankbaarheid heeft niets met economie te maken.", "Klimaat is een aparte zorg, niet de hoofdkritiek op gratis hulp."],
+      },
+    
+      {
+        q: "**Fair Trade** zorgt ervoor dat:",
+        options: ["Boeren in arme landen een eerlijke prijs krijgen, niet de laagst mogelijke", "Producten gratis worden", "Geen handel meer plaatsvindt", "Alleen rijke landen erbij verdienen"],
+        answer: 0,
+        wrongHints: [null, "Producten worden juist iets duurder in de winkel.", "Fair Trade is JUIST handel — eerlijker.", "Tegenovergesteld — boeren in arme landen krijgen meer."],
+      },
+      {
+        q: "**SDG** staat voor:",
+        options: ["Sustainable Development Goals — 17 VN-doelen voor 2030", "Sociale Druk Geld", "Schoolse Doelen Groep", "Specifieke Donatie Geld"],
+        answer: 0,
+        wrongHints: [null, "SDG is een internationale afkorting (Engels).", "Niet onderwijs-specifiek — de 17 doelen zijn breed.", "Geen donaties — het zijn doelstellingen voor landen."],
+      },
+      {
+        q: "**Microkrediet** werkt vooral goed voor:",
+        options: ["Beginnende kleine ondernemers in arme landen", "Internationale grote bedrijven", "Studenten in NL", "Hele dorpen tegelijk"],
+        answer: 0,
+        wrongHints: [null, "Grote bedrijven hebben gewone bankleningen, geen 'micro'.", "Studenten in NL gaan naar DUO.", "Microkrediet is per persoon, niet per dorp."],
       },
     ],
   },

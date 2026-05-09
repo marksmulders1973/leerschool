@@ -52,6 +52,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is chartaal.", "Goud is een waardeobject, geen modern betaalmiddel.", "Dat zegt iets over hoe je het kreeg, niet over de soort geld."],
       },
+    
+      {
+        q: "Een prijskaartje van €12,50 op een T-shirt — welke functie van geld?",
+        options: ["Rekenmiddel", "Ruilmiddel", "Spaarmiddel", "Productiemiddel"],
+        answer: 0,
+        wrongHints: [null, "Ruilen doe je bij de kassa, niet bij het lezen van een prijskaartje.", "Sparen = bewaren voor later — niet vergelijken.", "Productiemiddel is geen geldfunctie."],
+      },
+      {
+        q: "Wat is **chartaal geld**?",
+        options: ["Munten en bankbiljetten", "Geld op een bankrekening", "Een bankoverschrijving", "Geld dat je hebt verdiend"],
+        answer: 0,
+        wrongHints: [null, "Dat heet giraal geld.", "Een overschrijving is een handeling, geen geldsoort.", "Inkomen zegt iets over hoe je het kreeg, niet over de soort."],
+      },
+      {
+        q: "Waarom is **ruilhandel** lastig?",
+        options: ["Je moet iemand vinden die jouw spullen wil EN heeft wat jij wilt", "Het is verboden", "Goederen zijn te duur", "Je hebt internet nodig"],
+        answer: 0,
+        wrongHints: [null, "Ruilhandel is niet verboden, alleen onhandig.", "Prijs heeft niets met het ruil-mechaniek te maken.", "Ruilhandel was er ver vóór internet."],
+      },
     ],
   },
   {
@@ -76,6 +95,25 @@ const steps = [
         options: ["Rente die je ook over de eerder ontvangen rente krijgt", "Een speciaal soort lening", "Hogere rente bij een zakelijke rekening", "Belasting op spaargeld"],
         answer: 0,
         wrongHints: [null, "Lening en spaarrekening zijn verschillende producten.", "Niet specifiek aan zakelijk gebonden.", "Dat is vermogensbelasting, een ander concept."],
+      },
+    
+      {
+        q: "Je zet **€2.000** op een spaarrekening met **1,5% rente** per jaar. Hoeveel staat er na 1 jaar?",
+        options: ["€2.030", "€2.015", "€2.300", "€2.150"],
+        answer: 0,
+        wrongHints: [null, "1,5% van €2.000 is €30, niet €15.", "Te veel — dat zou 15% rente zijn.", "Ook te veel — 7,5% rente is onrealistisch hoog."],
+      },
+      {
+        q: "Waarom betaalt de bank jou **rente** op je spaargeld?",
+        options: ["Omdat de bank jouw geld weer kan uitlenen aan anderen", "Uit dankbaarheid", "Verplicht door de overheid", "Omdat geld duurder wordt"],
+        answer: 0,
+        wrongHints: [null, "Banken doen het uit eigenbelang, niet uit dankbaarheid.", "Rente-percentage is geen overheidsregel.", "Geld 'duurder worden' is geen reden — bank verdient aan uitlenen."],
+      },
+      {
+        q: "Wat is een **betaalrekening** (anders dan een spaarrekening)?",
+        options: ["Een rekening voor dagelijkse betalingen, met meestal weinig of geen rente", "Een rekening waar je niet bij kan", "Hetzelfde als een spaarrekening", "Alleen voor bedrijven"],
+        answer: 0,
+        wrongHints: [null, "Bij een betaalrekening kun je juist altijd geld halen.", "Verschil zit in het doel: dagelijks vs. opzij zetten.", "Iedereen heeft een betaalrekening, niet alleen bedrijven."],
       },
     ],
   },
@@ -107,6 +145,25 @@ const steps = [
         options: ["Het is geen lange-termijn-lening en de bank loopt risico", "Banken willen klanten straffen", "Het is illegaal", "Omdat de overheid dat verplicht"],
         answer: 0,
         wrongHints: [null, "Niet om te 'straffen' — het is gewoon prijszetting voor risico.", "Rood staan is wel legaal (binnen je limiet).", "De rente wordt door de bank bepaald, niet door de overheid."],
+      },
+    
+      {
+        q: "Welke leenvorm heeft meestal de **hoogste rente**?",
+        options: ["Rood staan", "Hypotheek", "Studielening DUO", "Persoonlijke lening"],
+        answer: 0,
+        wrongHints: [null, "Hypotheek heeft juist lage rente (huis als onderpand).", "DUO heeft een gunstig laag tarief.", "Persoonlijke lening is hoger dan hypotheek, maar rood staan is nog hoger."],
+      },
+      {
+        q: "Wat is een **BKR-toets**?",
+        options: ["Check of je al andere schulden hebt of betalingsproblemen", "Examen voor bankmedewerkers", "Belastingaanslag", "Spaarrekening met bonus"],
+        answer: 0,
+        wrongHints: [null, "BKR is geen opleiding maar een register.", "Niets met belasting — BKR is van Bureau Krediet Registratie.", "Geen spaarproduct — het is een controle bij lenen."],
+      },
+      {
+        q: "Vuistregel: max **30% van netto-inkomen** aan vaste maandlasten. Bij netto €2.000 — wat is je maximum?",
+        options: ["€600", "€2.000", "€300", "€1.000"],
+        answer: 0,
+        wrongHints: [null, "Dat zou je hele inkomen zijn — niet duurzaam.", "Te weinig — dat is 15%.", "Net te veel — dat is 50%, dubbel zoveel als de regel."],
       },
     ],
   },
