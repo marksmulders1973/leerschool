@@ -10,6 +10,15 @@ Cito + examens versterken. Drie type werk:
 2. **Authentieke examen-vragen toevoegen** (alleen als bron-PDF beschikbaar via `examenblad.nl`)
 3. **Nieuwe Cito-leerpaden** voor onderwerpen die nog ontbreken
 
+**Leidend principe** (zie CLAUDE.md → "Kern-flow"): examen-vraag → "begrijp je dit?" → uitlegPad → leerpad a-z → terug naar vraag. Elke nieuwe content moet deze loop dichten — geen losse leerpaden zonder examen-anker, geen examen-vragen zonder leerpad-link.
+
+## Prioriteit 0 — Loop-audit (terugkerend, elke 5 paden)
+
+Voordat je nieuwe paden bouwt:
+- [ ] Run `grep -rh "leerpadLink:" src/learnPaths/examen*.js` → verzamel alle `id`-waardes.
+- [ ] Check per id: bestaat `src/learnPaths/<id>.js`? Zo nee → log in backlog als "ontbrekend pad voor examen-link".
+- [ ] Voor elk leerpad in lijst Prio 1: bestaan er examenvragen die ernaar linken? Zo ja → `examenLookup.js` regenereren als nodig en uitlegPad-prioriteit verhogen.
+
 ---
 
 ## Prioriteit 1 — uitlegPad voor bestaande paden zonder

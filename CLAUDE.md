@@ -97,11 +97,40 @@ npx vite                 # dev server
 - Geen test-suite die routinematig draait — bouw + handmatige browser-check is de norm.
 - Playwright via MCP voor visuele verificatie van live productie.
 
+## Kern-flow: examen → begrip → leerpad → terug
+
+Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
+
+1. **Echte examen-vraag** is de basis. Authentiek (Cito-eindtoets / examenblad.nl), nooit verzonnen.
+2. Leerling/ouder ziet de vraag, probeert antwoord. Bij fout: **"Begrijp je dit?"** — niet alleen het antwoord tonen.
+3. Bij "nee, leg uit": uitlegPad opent (3 niveaus: basis/simpeler/nogSimpeler) → daarna doorklik naar **leerpad** (a tot z) over het onderliggende concept.
+4. Leerpad sluit de loop terug: aan het einde **terug-link** naar de oorspronkelijke examen-vraag — "snap je 'm nu wel?".
+
+### Concrete implementatie-regels
+
+- **Elke examen-check** moet hebben:
+  - `examenBron` (string met "🎓 Echt examen ... jaar tijdvak T, vraag N")
+  - `bronTekst` (de oorspronkelijke leestekst/bron, indien tekst-vraag)
+  - `leerpadLink: { id, title }` — pointer naar het concept-leerpad
+  - `uitlegPad` (3-niveau didactische uitleg)
+  - `wrongHints` (denkprikkels, geen antwoord)
+  - `explanation` (volledige uitleg na fout)
+- **`examenLookup.js` doet reverse-lookup**: gegeven een leerpad-id → welke examenvragen verwijzen ernaar. Gebruikt bij AllDone-scherm van leerpad ("oefen nu deze examenvragen").
+- **Nieuwe leerpaden** moeten een ID krijgen die matcht met `leerpadLink.id` van bestaande examenvragen. Anders blijft de loop kapot.
+- **Examen-modus vs oefen-modus splitsen**: examen-modus = authentiek (geen hints, tijdsdruk, geen leerpad-link tijdens). Oefen-modus = didactisch (hints, uitlegPad, leerpad-link altijd zichtbaar).
+
+### Wat dit betekent voor backlog
+
+- **uitlegPad toevoegen** is goed, maar **leerpadLink zonder bestaand leerpad = kapotte loop**. Check altijd dat het pad bestaat waar je naar linkt.
+- **Nieuwe leerpaden** krijgen prioriteit als er een examenvraag op wacht (lookup omgekeerd: welke `leerpadLink.id` verwijst naar een nog-niet-bestaand pad?).
+- **Authentiek-eis is heilig**: niet 1 examenvraag verzinnen. Skip liever en log in backlog dat de bron ontbreekt.
+
 ## Architectuur
 
 - **Leerpaden**: `src/learnPaths/<id>.js` — elk een `subject + chapters + steps + checks`.
 - **uitlegPad-pattern** (3 niveaus): elke check krijgt `uitlegPad: { stappen, woorden, theorie, voorbeelden, basiskennis, niveaus: { basis, simpeler, nogSimpeler } }`. Bij ≥2 fouten opent VraagUitlegPad automatisch op `simpeler`.
 - **Examenvragen**: MOETEN authentiek zijn (geen paraphrase). Audit/fix-scripts in `scripts/`. Zie `docs/` voor bron-policy.
+- **examenLookup.js**: reverse-index van leerpad-id → linkende examenvragen. Build-time gegenereerd.
 - **Adaptive store + spaced repetition**: localStorage + Supabase voor cross-device.
 - **3D-modellen**: workflow Claude.ai TSX → `src/3d/{ID}.jsx` → `step.interactiveComponent`.
 - **PWA**: Service Worker pijnpunt — bij cache-issues `Ctrl+Shift+R` of tab heropenen (Mark's `?v=` querystring breekt `file://`).
