@@ -87,6 +87,45 @@ const steps = [
         explanation: "Sociale beïnvloeding = via een persoonlijke band (vriend, familie, idool). Commerciële beïnvloeding = met een verkoop-doel, betaald door een producent (bedrijf), met winstoogmerk. Influencers vallen onder ALLEBEI: volgers ervaren een sociale band, MAAR het bedrijf betaalt de influencer om te verkopen → producent + winstoogmerk = ook commerciële beïnvloeding.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 36",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        // Pilot 2026-05-10: dynamisch uitlegpad — Mark wens (blauwdruk economie)
+        uitlegPad: {
+          // STAP 1 — Stap-voor-stap door de vraag
+          stappen: [
+            { titel: "Lees de vraag rustig", tekst: "De vraag begint met een voorbeeld over influencers. Lees eerst dat voorbeeld voor je naar de antwoord-opties kijkt." },
+            { titel: "Wat WORDT al verteld?", tekst: "De vraag vertelt jou al dat de invloed van influencers SOCIALE beïnvloeding heet (omdat volgers een persoonlijke band ervaren). Dat hoef je niet zelf te bedenken." },
+            { titel: "Wat MOET je beantwoorden?", tekst: "De vraag is: is er ÓÓK sprake van COMMERCIËLE beïnvloeding? Een ja/nee met de juiste reden eronder." },
+            { titel: "Welke 4 opties zijn er?", tekst: "Elke optie heeft 2 keuzes: (1) ja of nee, en (2) wie beïnvloedt en met of zonder winstoogmerk. Kies eerst ja/nee, dan wordt het kiezen makkelijker." },
+            { titel: "Denk aan: wie betaalt de influencer?", tekst: "Een influencer krijgt geld van bedrijven om producten aan te prijzen. Bedrijven (producenten) willen meer verkopen → dat is winst maken → dus winstoogmerk." },
+          ],
+          // STAP 2 — Moeilijke woorden
+          woorden: [
+            { woord: "intieme band", uitleg: "Een gevoel van persoonlijke nabijheid, zoals met een vriend." },
+            { woord: "sociale beïnvloeding", uitleg: "Iemand beïnvloedt jouw mening via een persoonlijke band: een vriend, familielid of idool dat je vertrouwt. Geen verkoop-doel." },
+            { woord: "commerciële beïnvloeding", uitleg: "Iemand probeert je iets te laten KOPEN. Een bedrijf (producent) betaalt voor reclame, en wil daarmee winst maken. = met winstoogmerk." },
+            { woord: "winstoogmerk", uitleg: "Het doel om er GELD aan te verdienen. Een bakker bakt brood met winstoogmerk; je moeder bakt voor jou ZONDER winstoogmerk." },
+            { woord: "producent", uitleg: "Een bedrijf of persoon die iets MAAKT om te verkopen. Bv. Coca-Cola, Nike, een boer." },
+            { woord: "consument", uitleg: "Iemand die iets KOOPT en gebruikt. Jij bent consument als je een blikje cola koopt." },
+          ],
+          // STAP 3 — Theorie achter de vraag
+          theorie: "**Twee soorten beïnvloeding in economie:**\n\n• **Sociale beïnvloeding** = invloed via een persoonlijke band. Geen winstoogmerk. Voorbeeld: je vriend zegt 'kijk deze film'.\n\n• **Commerciële beïnvloeding** = invloed met een verkoop-doel. Wel winstoogmerk. Voorbeeld: een TV-spotje voor cola.\n\n**Bij influencers gebeuren ze ALLEBEI tegelijk:**\n• Volgers VOELEN een sociale band ('zij is mijn online-vriendin')\n• MAAR: het bedrijf BETAALT de influencer om producten aan te prijzen → dat is commercieel\n\nDus: het kan ÓÓK commerciële beïnvloeding zijn, terwijl het tegelijk sociale beïnvloeding is.",
+          // STAP 4 — Eenvoudige voorbeelden
+          voorbeelden: [
+            { type: "sociaal", tekst: "Je zus zegt: 'Dit boek is super!' → sociale beïnvloeding (geen geld erbij betrokken)." },
+            { type: "commercieel", tekst: "Een radio-reclame zegt: 'Koop nu Pepsi!' → commerciële beïnvloeding (Pepsi betaalt om jou te overtuigen)." },
+            { type: "beide", tekst: "Een influencer drinkt op video een blikje energy drink — gesponsord. Volgers denken: 'mijn favoriete YouTuber drinkt het' (sociaal). Maar de YouTuber krijgt €5.000 van het merk (commercieel)." },
+          ],
+          // STAP 5 — Basiskennis (wat moet je al weten?)
+          basiskennis: [
+            { onderwerp: "Wie is wie in de markt?", uitleg: "Producent maakt + verkoopt. Consument koopt + gebruikt. De influencer hoort hier bij de PRODUCENT-kant — hij/zij helpt het bedrijf verkopen." },
+            { onderwerp: "Wat betekent 'met winstoogmerk'?", uitleg: "Met de bedoeling er geld mee te verdienen. Een bedrijf werkt ALTIJD met winstoogmerk. Vrienden/familie helpen je meestal ZONDER winstoogmerk." },
+          ],
+          // STAP 6 — 3 niveaus van uitleg
+          niveaus: {
+            basis: "Influencers worden BETAALD door bedrijven (producenten) om producten aan te prijzen. Bedrijven willen meer verkopen = winst. Dus: het IS ook commerciële beïnvloeding (door producenten, met winstoogmerk) → antwoord B.",
+            simpeler: "Stel: een YouTuber maakt een video over een blikje energy drink. Volgers vertrouwen die YouTuber (= sociaal). MAAR het merk heeft de YouTuber betaald om dat blikje te tonen (= commercieel). Allebei tegelijk! De YouTuber werkt voor het merk = doet PRODUCENT-werk. Het merk verdient eraan = WINSTOOGMERK. Antwoord B: 'Ja, beïnvloeding door producenten met winstoogmerk'.",
+            nogSimpeler: "Heel kort: bedrijf betaalt influencer → influencer = werkt voor bedrijf = producent-kant. Bedrijf wil verkoop = winst. Dus: JA + producenten + winstoogmerk = optie B.",
+          },
+        },
       },
     ],
   },

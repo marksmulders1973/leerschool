@@ -15,6 +15,7 @@ import {
 } from "../../shared/adaptiveStore.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
+import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -297,6 +298,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [showTutor, setShowTutor] = useState(false);
   // Onthoud laatste fout-poging zodat de tutor weet wat er net mis ging.
   const [lastWrongAnswer, setLastWrongAnswer] = useState(null);
+  // Pilot 2026-05-10: dynamisch uitleg-paneel per vraag (Mark blauwdruk economie).
+  const [showUitlegPad, setShowUitlegPad] = useState(false);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -374,6 +377,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setCheckIdx(0);
     setSelected(null);
     setAttempts(1);
+    setShowUitlegPad(false);
     setMode("reading");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -414,6 +418,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // kan reageren als de leerling om hulp vraagt.
       setLastWrongAnswer(currentCheck.options?.[i] || null);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
+      // Pilot 2026-05-10: tel fout per vraag voor adaptief uitlegpad-niveau.
+      if (currentCheck.uitlegPad && currentCheck.examenBron) {
+        bumpVraagFouten(`${pathId}__${stepIdx}__${realCheckIdx}`);
+      }
       setMode("wrong");
     }
   };
@@ -792,55 +800,70 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>
-            {currentCheck.leerpadLink && selected === null && (
-              <details style={{ marginBottom: 14 }}>
-                <summary style={{
-                  cursor: "pointer",
-                  padding: "8px 12px",
-                  background: "rgba(66,165,245,0.10)",
-                  border: "1px dashed rgba(66,165,245,0.45)",
-                  borderRadius: 8,
-                  color: "#5db3ff",
-                  fontWeight: 600,
-                  fontSize: 13,
-                  fontFamily: "var(--font-display)",
-                  listStyle: "none",
-                }}>
-                  ❓ Ik begrijp de vraag niet — help mij
-                </summary>
-                <div style={{
-                  marginTop: 8,
-                  padding: "10px 14px",
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(66,165,245,0.20)",
-                  borderRadius: 8,
-                  fontSize: 13,
-                  lineHeight: 1.5,
-                  color: "var(--color-text)",
-                }}>
-                  <div style={{ marginBottom: 10 }}>
-                    Niet duidelijk? In het leerpad <strong>{currentCheck.leerpadLink.title}</strong> wordt dit onderwerp uitgelegd.
+            {selected === null && (currentCheck.uitlegPad || currentCheck.leerpadLink) && (
+              <div style={{ marginBottom: 14 }}>
+                {!showUitlegPad && (
+                  <button
+                    onClick={() => setShowUitlegPad(true)}
+                    style={{
+                      padding: "10px 14px",
+                      background: "rgba(66,165,245,0.10)",
+                      border: "1px dashed rgba(66,165,245,0.45)",
+                      borderRadius: 8,
+                      color: "#5db3ff",
+                      fontWeight: 600,
+                      fontSize: 13,
+                      fontFamily: "var(--font-display)",
+                      cursor: "pointer",
+                      width: "100%",
+                      textAlign: "left",
+                    }}
+                  >
+                    ❓ Ik begrijp de vraag niet — help mij
+                  </button>
+                )}
+                {showUitlegPad && currentCheck.uitlegPad && (
+                  <VraagUitlegPad
+                    uitlegPad={currentCheck.uitlegPad}
+                    vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
+                    onClose={() => setShowUitlegPad(false)}
+                  />
+                )}
+                {showUitlegPad && !currentCheck.uitlegPad && currentCheck.leerpadLink && (
+                  <div style={{
+                    marginTop: 8,
+                    padding: "10px 14px",
+                    background: "rgba(255,255,255,0.03)",
+                    border: "1px solid rgba(66,165,245,0.20)",
+                    borderRadius: 8,
+                    fontSize: 13,
+                    lineHeight: 1.5,
+                    color: "var(--color-text)",
+                  }}>
+                    <div style={{ marginBottom: 10 }}>
+                      In het leerpad <strong>{currentCheck.leerpadLink.title}</strong> wordt dit onderwerp uitgelegd.
+                    </div>
+                    {onPickPath && (
+                      <button
+                        onClick={() => onPickPath(currentCheck.leerpadLink.id)}
+                        style={{
+                          padding: "8px 14px",
+                          background: "#42a5f5",
+                          color: "#0f1729",
+                          border: 0,
+                          borderRadius: 8,
+                          fontWeight: 700,
+                          fontFamily: "var(--font-display)",
+                          cursor: "pointer",
+                          fontSize: 13,
+                        }}
+                      >
+                        📚 Open leerpad: {currentCheck.leerpadLink.title}
+                      </button>
+                    )}
                   </div>
-                  {onPickPath && (
-                    <button
-                      onClick={() => onPickPath(currentCheck.leerpadLink.id)}
-                      style={{
-                        padding: "8px 14px",
-                        background: "#42a5f5",
-                        color: "#0f1729",
-                        border: 0,
-                        borderRadius: 8,
-                        fontWeight: 700,
-                        fontFamily: "var(--font-display)",
-                        cursor: "pointer",
-                        fontSize: 13,
-                      }}
-                    >
-                      📚 Open leerpad: {currentCheck.leerpadLink.title}
-                    </button>
-                  )}
-                </div>
-              </details>
+                )}
+              </div>
             )}
             {currentCheck.options.map((opt, i) => {
               const isSelected = selected === i;
@@ -920,6 +943,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {/* Begrijpend-lezen: laat de plek in de tekst zien waar het
                 antwoord vandaan komt (Mark feedback 2026-05-08). */}
             <EvidenceQuote text={currentCheck.evidence} label="💡 Hint — kijk hier in de tekst" />
+            {currentCheck.uitlegPad && !showUitlegPad && (
+              <button
+                onClick={() => setShowUitlegPad(true)}
+                style={{ ...btnPrimary(), marginTop: 14 }}
+              >
+                📚 Hier is de uitleg
+              </button>
+            )}
+            {currentCheck.uitlegPad && showUitlegPad && (
+              <VraagUitlegPad
+                uitlegPad={currentCheck.uitlegPad}
+                vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
+                onClose={() => setShowUitlegPad(false)}
+              />
+            )}
             <button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
               📖 Lees uitleg opnieuw
             </button>
