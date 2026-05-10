@@ -384,10 +384,11 @@ function TickerBanner() {
   );
 }
 
+// Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal is uitgezet
+// (showOnboarding default false). Examen/scorebord-jargon paste niet bij Cito-ouder ICP.
+// Stappen behouden voor mogelijke toekomstige rondleiding-knop.
 const ONBOARDING_STEPS = [
-  { emoji: "📚", title: "Echte examenvragen, echte boeken", desc: "Echte voorbereiding voor je examen. Geen giswerk, gewoon oefenen wat telt." },
-  { emoji: "🤖", title: `${BRAND.name} maakt vragen voor jou`, desc: "Elke toets is anders, ook over jouw eigen schoolboek" },
-  { emoji: "🏆", title: "Verdien je plek op het scorebord", desc: "Speel elke dag voor een langere streak" },
+  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
 
 export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
@@ -400,13 +401,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [level, setLevel] = useState("");
   const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
-  const [showOnboarding, setShowOnboarding] = useState(() => {
-    try { return !localStorage.getItem("ls_onboarded"); } catch { return false; }
-  });
-  // First-visit reclame-video — alleen 1× per browser, voor onboarding uit
-  const [showWelcomeVideo, setShowWelcomeVideo] = useState(() => {
-    try { return !localStorage.getItem("lk_zag_intro_video"); } catch { return false; }
-  });
+  // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal en welkom-video
+  // standaard UIT. Eerste-bezoek-overload (3 modals op elkaar) verwarde ICP-ouder.
+  // State + code blijft voor mogelijke "rondleiding"-knop later.
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showWelcomeVideo, setShowWelcomeVideo] = useState(false);
   const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(true);
   const closeWelcomeVideo = () => {
     try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
@@ -925,31 +924,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               label: "Ik ben student", sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
             },
-            // Brand-foto voor Leerkracht-tegel (man met bril in klaslokaal,
-            // schoolbord met sommen + groetjes) — Mark's wens 2026-05-07,
-            // parallel met Basisschool/Student-tegels.
-            {
-              key: "teacher",
-              icon: (
-                <img
-                  src="/model-leerkracht.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center 18%",
-                    borderRadius: 10,
-                    display: "block",
-                  }}
-                />
-              ),
-              label: "Ik ben leerkracht", sub: "",
-              color: "#00897b", onClick: () => handleRoleClick("teacher"),
-              cta: { label: "📝 Toets maken", onClick: () => handleFeatureClick("leerkrachten") },
-            },
+            // Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-tegel UIT hero.
+            // Niet ICP. Code/route bestaat nog — link nu in footer-section onderaan.
+            // Origineel object-blok behouden in git history voor toekomstige rollback.
           ];
           return (
             <>
@@ -1465,6 +1442,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             >
               <span>💡</span>
               Tip aan de maker
+            </button>
+            {/* Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-link verplaatst
+                van hero-tegel naar footer. Niet ICP, maar route blijft bereikbaar. */}
+            <button
+              type="button"
+              style={{ background: "none", border: "none", color: "#00897b", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+              onClick={() => handleRoleClick("teacher")}
+            >
+              <span>👩‍🏫</span>
+              Voor leerkrachten
             </button>
             {isAdmin && onAdminFeedback && (
               <button
