@@ -70,8 +70,9 @@ def parse_bijlage(text):
     text = strip_page_footers(text)
     teksten = {}
     # Pattern: 'Tekst N' OF 'informatiebron N' op eigen regel
+    # Pattern: 'Tekst N' / 'informatiebron N' / 'bron N' (geschiedenis) op eigen regel
     pattern = re.compile(
-        r"^\s*(?:(Tekst)\s+(\d+)\s*$|(informatiebron)\s+(\d+)\b)",
+        r"^\s*(?:(Tekst)\s+(\d+)\s*$|(informatiebron|bron)\s+(\d+)\b)",
         re.MULTILINE | re.IGNORECASE,
     )
     matches = list(pattern.finditer(text))
@@ -182,8 +183,8 @@ def parse_opgaven(text):
     # Track de "laatste tekst-header" of 'informatiebron N' zodat vragen
     # weten naar welke bijlage-bron ze refereren. Zaakvakken vermelden vaak
     # in de vraagtekst zelf 'Gebruik informatiebron 3' — dan pakken we ook DAT.
-    tekst_header_re = re.compile(r"^\s*(?:Tekst|informatiebron)\s+(\d+)\b", re.IGNORECASE)
-    bron_in_vraag_re = re.compile(r"informatiebron\s+(\d+)", re.IGNORECASE)
+    tekst_header_re = re.compile(r"^\s*(?:Tekst|informatiebron|bron)\s+(\d+)\b", re.IGNORECASE)
+    bron_in_vraag_re = re.compile(r"(?:informatiebron|bron)\s+(\d+)", re.IGNORECASE)
     vraag_start_re = re.compile(r"^\s*(\d+)p\s+(\d+)\s+(.*)$")
     optie_re = re.compile(r"^\s+([A-E])\s+(.+)$")
 
