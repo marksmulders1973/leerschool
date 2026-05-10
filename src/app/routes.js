@@ -52,6 +52,17 @@ export const PAGE_TO_PATH = {
   "admin-feedback": "/admin/feedback",
 };
 
+// Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links
+// die NIET de canonical PAGE_TO_PATH overschrijven (canonical blijft de waarde
+// van PAGE_TO_PATH zodat setPage("X") naar de canonical URL gaat).
+//
+// /spel — alias voor /obliterator. Visie-bewaker maand 1 (2026-05-10):
+// OBLITERATOR uit hoofd-nav, maar zoon kan via /spel direct naar het spel
+// (vriendelijker dan /obliterator).
+const PATH_ALIASES = {
+  "/spel": "obliteratorPlay",
+};
+
 // Reverse-lookup: pad → page-key. Lange paden eerst zodat /leren/pad
 // niet geclashed wordt met /leren.
 export const PATH_TO_PAGE = (() => {
@@ -60,6 +71,10 @@ export const PATH_TO_PAGE = (() => {
   entries.sort((a, b) => b[1].length - a[1].length);
   const map = new Map();
   for (const [page, path] of entries) {
+    if (!map.has(path)) map.set(path, page);
+  }
+  // Aliassen toevoegen — overschrijft NIET de canonical entries.
+  for (const [path, page] of Object.entries(PATH_ALIASES)) {
     if (!map.has(path)) map.set(path, page);
   }
   return map;

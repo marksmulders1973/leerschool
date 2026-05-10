@@ -932,36 +932,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           return (
             <>
               <div className="lk-hero-tiles">
-                {/* 1e tegel: interactieve 3D-kubus slider, vult exact één vierkant */}
-                <div className="lk-tile lk-tile-teaser" style={{
-                  background: "rgba(255,213,79,0.06)",
-                  border: "1.5px solid rgba(255,213,79,0.25)",
-                  cursor: "default",
-                  padding: 0,
-                  overflow: "hidden",
-                }}>
-                  <TeaserErrorBoundary>
-                    <Suspense fallback={
-                      <div style={{
-                        width: "100%", height: "100%",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        fontSize: 11, color: "rgba(224,230,240,0.55)",
-                      }}>
-                        3D laadt…
-                      </div>
-                    }>
-                      <Mini3DTeaser onCTA={() => {
-                        // CTA op 3D-tegel → direct het Ruimtemeetkunde-pad
-                        // openen. Bezoeker heeft net met de kubus gespeeld;
-                        // doorsturen naar het algemene vak-grid breekt die
-                        // context. Wie alle vakken wil zien klikt op de
-                        // Leren-tab in de bottom-nav.
-                        if (onPickPath) onPickPath("ruimtemeetkunde");
-                        else if (onLearnPathsHub) onLearnPathsHub();
-                      }} />
-                    </Suspense>
-                  </TeaserErrorBoundary>
-                </div>
+                {/* Maand 1 snoei (visie-bewaker 2026-05-10): 3D-kubus teaser
+                    UIT hero. Reden: flits-feature, geen direct begripsdoel.
+                    Past niet bij identiteit "rustige bijlesdocent". 3D-modellen
+                    blijven beschikbaar BINNEN wiskunde-leerpaden waar het
+                    didactisch past (Ruimtemeetkunde stap 6 etc.) — alleen
+                    geen marketing-teaser meer op homepage.
+                    Mini3DTeaser-import + TeaserErrorBoundary blijven bestaan
+                    voor in-pad gebruik. */}
                 {/* 5 reguliere tegels. Tegels met `icon` (SVG) gebruiken een
                     layout waarbij de illustratie de bovenkant vult en de tekst
                     eronder zit; tegels met emoji houden de compacte centrale layout.
