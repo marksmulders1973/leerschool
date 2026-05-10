@@ -40,16 +40,16 @@
   },
   "questions": [
     {
-      "q": "Begroten leidt tot afname van geldstress. Wat is een begroting?",
+      "q": "Begroten leidt tot afname van geldstress. Wat is een begroting? In 2022 is er een campagne begonnen om jonge mensen bewuster te maken van hun financi'le activiteiten. Uit onderzoek zijn nu de volgende conclusies getrokken: 1 Jonge mensen zijn een financi'le administratie bijhouden belangrijker gaan vinden. 2 Jonge mensen zijn sparen belangrijker gaan vinden. 3 Jonge mensen zijn in 2024 budgetteren belangrijker gaan vinden. Gebruik informatiebron 1.",
       "options": [
         "Het maken van een plan hoe je meer inkomsten kunt ontvangen.",
         "Het maken van een plan hoe je op de uitgaven kunt bezuinigen.",
         "Je huidige bezittingen en schulden op een rijtje zetten.",
-        "Je verwachte inkomsten en uitgaven op een rijtje zetten. In 2022 is er een campagne begonnen om jonge mensen bewuster te maken van hun financi'le activiteiten. Uit onderzoek zijn nu de volgende conclusies getrokken: 1 Jonge mensen zijn een financi'le administratie bijhouden belangrijker gaan vinden. 2 Jonge mensen zijn sparen belangrijker gaan vinden. 3 Jonge mensen zijn in 2024 budgetteren belangrijker gaan vinden. Gebruik informatiebron 1."
+        "Je verwachte inkomsten en uitgaven op een rijtje zetten."
       ],
       "answer": 3,
       "explanation": "Vraag Antwoord                                                                          Scores",
-      "tekstNr": null,
+      "tekstNr": 1,
       "vraagNr": 3
     },
     {
@@ -66,16 +66,16 @@
       "vraagNr": 8
     },
     {
-      "q": "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van de inkomensverdeling in een land?",
+      "q": "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van de inkomensverdeling in een land? De hulp op de juiste plek Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 2 in de bijlage. Ha'ti is een ontwikkelingsland in Noord-Amerika. Ha'ti wordt regelmatig getroffen door aardbevingen en overstromingen. Ha'ti probeert elke keer weer te herstellen na een ramp. Bij dit herstel is Ha'ti vaak afhankelijk van hulp.",
       "options": [
         "Tot denivellering: het verandert in het voordeel van de hoge inkomens.",
         "Tot denivellering: het verandert in het voordeel van de lage inkomens.",
         "Tot nivellering: het verandert in het voordeel van de hoge inkomens.",
-        "Tot nivellering: het verandert in het voordeel van de lage inkomens. De hulp op de juiste plek Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 2 in de bijlage. Ha'ti is een ontwikkelingsland in Noord-Amerika. Ha'ti wordt regelmatig getroffen door aardbevingen en overstromingen. Ha'ti probeert elke keer weer te herstellen na een ramp. Bij dit herstel is Ha'ti vaak afhankelijk van hulp."
+        "Tot nivellering: het verandert in het voordeel van de lage inkomens."
       ],
       "answer": 3,
       "explanation": "Vraag Antwoord                                                                     Scores\n\n   De hulp op de juiste plek",
-      "tekstNr": null,
+      "tekstNr": 2,
       "vraagNr": 16
     },
     {
@@ -106,16 +106,16 @@
       "vraagNr": 26
     },
     {
-      "q": "Wat wordt bedoelt met het begrip modaal inkomen?",
+      "q": "Wat wordt bedoelt met het begrip modaal inkomen? Jan en zijn gezin stonden symbool voor de `gewone burger'. Veel burgers konden zich hierin herkennen en begrepen de informatie daardoor beter. Gebruik informatiebron 5.",
       "options": [
         "Het afgesproken minimum inkomen als je werkt in loondienst.",
         "Het gemiddelde inkomen in Nederland.",
         "Het inkomen dat in Nederland het meeste voorkomt.",
-        "Het netto inkomen dat je verdient als je werkt in loondienst. Jan en zijn gezin stonden symbool voor de `gewone burger'. Veel burgers konden zich hierin herkennen en begrepen de informatie daardoor beter. Gebruik informatiebron 5."
+        "Het netto inkomen dat je verdient als je werkt in loondienst."
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
+      "tekstNr": 5,
       "vraagNr": 39
     },
     {

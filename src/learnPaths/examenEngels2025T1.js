@@ -36,7 +36,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat wordt duidelijk uit tekst 1? Je hebt de grootste kans om een 'vliegende schotel' te zien als je...",
+        q: "Wat wordt duidelijk uit tekst 1?",
         options: [
           "bij de herdenking in Roswell bent.",
           "ergens bent waar weinig kunstlicht is.",
@@ -146,7 +146,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Kies bij [7] in alinea 5 het juiste antwoord uit de gegeven mogelijkheden.",
+        q: "Kies bij 7 in alinea 5 het juiste antwoord uit de gegeven mogelijkheden.",
         options: [
           "For example",
           "Meanwhile",
@@ -234,9 +234,9 @@ const steps = [
       {
         q: "Which of the following quotes explains why researching microplastics is so difficult?",
         options: [
-          "\"Plastic is in the environment, and it's a very complicated situation because there are many different types of plastics.\"",
+          "\"Plastic is in the environment, and it's a very complicated situation because there are many different types of plastics, and it's further changed in the environment through weathering.\"",
           "\"humans are exposed to particles, and our great challenge is to find out what effect that is having on us.\"",
-          "\"It's a huge message in itself, which says just how far this plastic pollution has reached.\"",
+          "\"It's a huge message in itself, which says just how far this plastic pollution has reached, not only across the planet, but into our bodies.\"",
         ],
         answer: 0,
         wrongHints: [

@@ -70,7 +70,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van inkomens?",
+        q: "De algemene heffingskorting is hoger voor mensen met een lager inkomen. Leidt de algemene heffingskorting tot een nivellering of een denivellering van de inkomensverdeling in een land?",
         options: [
           "Tot denivellering: het verandert in het voordeel van de hoge inkomens.",
           "Tot denivellering: het verandert in het voordeel van de lage inkomens.",
@@ -97,7 +97,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat wordt bedoeld met het begrip modaal inkomen?",
+        q: "Wat wordt bedoelt met het begrip modaal inkomen?",
         options: [
           "Het afgesproken minimum inkomen als je werkt in loondienst.",
           "Het gemiddelde inkomen in Nederland.",

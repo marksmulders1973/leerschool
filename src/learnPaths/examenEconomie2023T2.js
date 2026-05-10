@@ -16,7 +16,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De OZB is een belangrijke inkomstenbron van een gemeente. Welke andere inkomstenbron heeft een gemeente?",
+        q: "De OZB is een belangrijke inkomstenbron van een gemeente. Welke inkomstenbron heeft een gemeente nog meer?",
         options: [
           "afvalstoffenheffing",
           "belasting toegevoegde waarde (btw)",
@@ -43,7 +43,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Adriaan moet de WOZ-waarde ook invullen in de aangifte inkomstenbelasting. Waarvoor wordt de WOZ-waarde gebruikt bij de aangifte IB?",
+        q: "Adriaan moet de WOZ-waarde ook invullen in de aangifte inkomstenbelasting. Waarvoor wordt de WOZ-waarde gebruikt bij de aangifte inkomstenbelasting?",
         options: [
           "om de hoogte van de aftrekposten te bepalen",
           "om de hoogte van de heffingskortingen te bepalen",
@@ -70,11 +70,11 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Spaargeld levert nauwelijks rente op. Tegelijkertijd moeten huishoudens met veel spaargeld belasting betalen over dit spaargeld. Hoe heet deze belasting?",
+        q: "Spaargeld levert nauwelijks rente op. Tegelijkertijd moeten huishoudens met veel spaargeld belasting betalen over dit spaargeld. Hoe noemen we deze belasting?",
         options: [
-          "belasting toegevoegde waarde (btw)",
+          "belasting toegevoegde waarde",
           "loonheffing",
-          "onroerendezaakbelasting (OZB)",
+          "onroerendezaakbelasting",
           "vermogensrendementsheffing",
         ],
         answer: 3,
@@ -97,7 +97,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Inflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen?",
+        q: "Inflatie kan ook gevolgen hebben voor de koopkracht van de familie Sitalsing. In welke situatie zal de koopkracht van de familie Sitalsing stijgen ten opzichte van het vorige jaar?",
         options: [
           "als de nominale loondaling in procenten hoger is dan de inflatie",
           "als de nominale loonstijging in procenten hoger is dan de inflatie",
@@ -122,7 +122,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De ECB is niet van plan om het rentebeleid aan te passen. Er zijn echter nog andere maatregelen om de koopkracht van burgers op peil te houden. Welke maatregel doet dat?",
+        q: "De ECB is niet van plan om het rentebeleid aan te passen. Er zijn echter nog andere maatregelen om de koopkracht van burgers op peil te houden. Met welk van onderstaande maatregelen kan de koopkracht op peil gehouden worden?",
         options: [
           "vergroting van de winstmarges door bedrijven",
           "verhoging van de btw",

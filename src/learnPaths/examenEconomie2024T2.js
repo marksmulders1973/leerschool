@@ -17,12 +17,11 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Als we landen met elkaar vergelijken, kijken we naar het nationaal inkomen van een land. In welke regel staat een verschijnsel waarbij geld uit Nederland naar Kameroen stroomt?",
+        q: "Als we landen met elkaar vergelijken, kijken we naar het nationaal inkomen van een land. In welke regel staat een economisch verschijnsel waardoor het nationaal inkomen in Kameroen stijgt?",
         options: [
           "De overheid van Kameroen koopt Nederlandse helikopters.",
           "In Kameroen verbouwen veel mensen hun eigen groenten.",
           "Nederlandse toeristen gaan op vakantie naar Kameroen.",
-          "Nederlanders kopen koffie uit Kameroen.",
         ],
         answer: 2,
         wrongHints: [
@@ -44,7 +43,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Een eigenaar van een bedrijf moet een ondernemingsvorm kiezen. Welke ondernemingsvorm moet Arjun kiezen, zodat hij NIET hoofdelijk aansprakelijk is voor de schulden van zijn bedrijf?",
+        q: "Een eigenaar van een bedrijf moet een ondernemingsvorm kiezen. Welke ondernemingsvorm moet Arjun kiezen, zodat hij niet hoofdelijk aansprakelijk is voor de schulden van het bedrijf?",
         options: [
           "bv (besloten vennootschap)",
           "eenmanszaak",
@@ -69,7 +68,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Veel campinggasten willen tegenwoordig een luxe, trendy campingplaats met eigen sanitair en luxe keuken. Arjun wil hierin investeren, zodat hij meer luxe campingplaatsen kan aanbieden. Onder welk onderdeel van de marketingmix valt deze beslissing?",
+        q: "Veel campinggasten willen tegenwoordig een luxe, trendy campingplaats met eigen sanitair en luxe keuken. Arjun wil hierin investeren, zodat er een glamping ontstaat. Onder welk marketinginstrument vallen de aanpassingen van de campingplaatsen?",
         options: [
           "onder personeelsbeleid",
           "onder plaatsbeleid",
@@ -96,7 +95,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De i/a-ratio is de verhouding tussen het aantal inactieven (mensen met een uitkering) en actieven (werkenden). Als de i/a-ratio stijgt:",
+        q: "Als de i/a-ratio stijgt: Fairtrade gemeenten",
         options: [
           "blijft de betaalbaarheid van de sociale uitkeringen gelijk",
           "neemt de betaalbaarheid van de sociale uitkeringen af",
@@ -146,7 +145,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De waarde van de bezittingen van de familie Boot bedraagt €100.000 en de waarde van de schulden is €20.000. In welke situatie kan het vermogen van de familie Boot toenemen?",
+        q: "De waarde van de bezittingen van de familie Boot bedraagt 100.000 en de waarde van schulden is 20.000. In welke situatie kan het vermogen van dit huishouden stijgen?",
         options: [
           "als de bezittingen dalen met 4% en de schulden stijgen met 4%",
           "als de bezittingen dalen met 4% en de schulden dalen met 6%",

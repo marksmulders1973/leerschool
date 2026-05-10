@@ -105,12 +105,12 @@
   },
   "questions": [
     {
-      "q": "In 1918 werd Suze Groeneweg als eerste vrouw gekozen tot lid van de Tweede Kamer. Van welk kiesrecht maakte Suze Groeneweg in 1918 gebruik?",
+      "q": "In 1918 werd Suze Groeneweg als eerste vrouw gekozen tot lid van de Tweede Kamer. Van welk kiesrecht maakte Suze Groeneweg in 1918 gebruik? Het Interbellum (1918-1939)",
       "options": [
         "actief kiesrecht",
         "algemeen vrouwenkiesrecht",
         "censuskiesrecht",
-        "passief kiesrecht Het Interbellum (1918-1939)"
+        "passief kiesrecht"
       ],
       "answer": 3,
       "explanation": "Het Interbellum (1918-1939)",
@@ -118,9 +118,9 @@
       "vraagNr": 11
     },
     {
-      "q": "De democratische leiders zijn door de tekenaar afgebeeld als laf. Welk argument voor deze mening is in de tekening te herkennen?",
+      "q": "De democratische leiders zijn door de tekenaar afgebeeld als laf. Welk argument voor deze mening is in de tekening te herkennen? erkend.",
       "options": [
-        "De leiders hebben de communistische regering van de Sovjet-Unie erkend.",
+        "De leiders hebben de communistische regering van de Sovjet-Unie",
         "De leiders hebben de Vrede van Versailles getekend.",
         "De leiders verzetten zich niet tegen Hitlers machtsuitbreiding.",
         "De leiders zijn economisch afhankelijk van Duitsland."
@@ -157,29 +157,29 @@
       "vraagNr": 23
     },
     {
-      "q": "Welk begrip hoort bij de poster?",
+      "q": "Welk begrip hoort bij de poster? Gebruik bron 12.",
       "options": [
         "capitulatie",
         "collaboratie",
         "demilitarisatie",
-        "tweefrontenoorlog Gebruik bron 12."
+        "tweefrontenoorlog"
       ],
       "answer": 1,
       "explanation": "Het juiste antwoord is B.",
-      "tekstNr": null,
+      "tekstNr": 12,
       "vraagNr": 25
     },
     {
-      "q": "Voor welke ontwikkeling geeft de bron een verklaring?",
+      "q": "Voor welke ontwikkeling geeft de bron een verklaring? Indonesi' onafhankelijk te maken Japanse bezetting Gebruik bron 13.",
       "options": [
         "voor het ontstaan van het Indonesisch verzet tegen de Japanse overheersing",
         "voor het ontstaan van het Nederlandse modern imperialisme",
-        "voor het toenemen van de buitenlandse druk op Nederland om Indonesi' onafhankelijk te maken",
-        "voor het toenemen van het Indonesische nationalisme tijdens de Japanse bezetting Gebruik bron 13."
+        "voor het toenemen van de buitenlandse druk op Nederland om",
+        "voor het toenemen van het Indonesische nationalisme tijdens de"
       ],
       "answer": 3,
       "explanation": "Het juiste antwoord is D.",
-      "tekstNr": null,
+      "tekstNr": 13,
       "vraagNr": 26
     },
     {
@@ -209,29 +209,29 @@
       "vraagNr": 35
     },
     {
-      "q": "Een gebeurtenis in 1962 bracht de hele wereld in gevaar, omdat een kernoorlog tussen de Verenigde Staten en de Sovjet-Unie nog nooit zo dichtbij was als toen. Welke gebeurtenis wordt bedoeld?",
+      "q": "Een gebeurtenis in 1962 bracht de hele wereld in gevaar, omdat een kernoorlog tussen de Verenigde Staten en de Sovjet-Unie nog nooit zo dichtbij was als toen. Welke gebeurtenis wordt bedoeld? Gebruik bron 17.",
       "options": [
         "de bouw van de Berlijnse Muur",
         "de Cubacrisis",
         "de Praagse Lente",
-        "de stichting van de DDR Gebruik bron 17."
+        "de stichting van de DDR"
       ],
       "answer": 1,
       "explanation": "Het juiste antwoord is B.",
-      "tekstNr": null,
+      "tekstNr": 17,
       "vraagNr": 39
     },
     {
-      "q": "Welke twee begrippen passen bij de bron?",
+      "q": "Welke twee begrippen passen bij de bron? Gebruik nogmaals bron 17.",
       "options": [
         "amerikanisering + consumptiemaatschappij",
         "amerikanisering + secularisatie",
         "secularisatie + verzorgingsstaat",
-        "verzorgingsstaat + consumptiemaatschappij Gebruik nogmaals bron 17."
+        "verzorgingsstaat + consumptiemaatschappij"
       ],
       "answer": 0,
       "explanation": "Het juiste antwoord is A.",
-      "tekstNr": null,
+      "tekstNr": 17,
       "vraagNr": 40
     }
   ],

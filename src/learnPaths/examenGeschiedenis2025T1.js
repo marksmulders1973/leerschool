@@ -20,7 +20,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "In 1918 werd Suze Groeneweg als eerste vrouw gekozen tot lid van de Tweede Kamer. Van welk recht maakte zij hierbij gebruik?",
+        q: "In 1918 werd Suze Groeneweg als eerste vrouw gekozen tot lid van de Tweede Kamer. Van welk kiesrecht maakte Suze Groeneweg in 1918 gebruik?",
         options: [
           "actief kiesrecht",
           "algemeen vrouwenkiesrecht",
@@ -47,9 +47,9 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De democratische leiders zijn door de tekenaar afgebeeld als laf. Welk argument voor deze afbeelding past het beste bij de inhoud van de bron?",
+        q: "De democratische leiders zijn door de tekenaar afgebeeld als laf. Welk argument voor deze mening is in de tekening te herkennen?",
         options: [
-          "De leiders hebben de communistische regering van de Sovjet-Unie erkend.",
+          "De leiders hebben de communistische regering van de Sovjet-Unie",
           "De leiders hebben de Vrede van Versailles getekend.",
           "De leiders verzetten zich niet tegen Hitlers machtsuitbreiding.",
           "De leiders zijn economisch afhankelijk van Duitsland.",
@@ -75,12 +75,12 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Tijdens de Conferentie van München (1938) werd een akkoord gesloten tussen Hitler, Mussolini, Chamberlain (UK) en Daladier (FR). Wat was de belangrijkste reden voor dit akkoord vanuit het oogpunt van Groot-Brittannië en Frankrijk?",
+        q: "Tijdens de Conferentie van M'nchen werd een akkoord gesloten tussen Hitler, als leider van nazi-Duitsland, en Chamberlain, de minister-president van Groot-Brittanni'. Wat was voor Chamberlain de reden om het akkoord met Hitler te sluiten?",
         options: [
           "De Duitse politiek voor meer Lebensraum moest een succes worden.",
           "Duitsland wilde lid worden van de Volkenbond.",
           "Een nieuwe oorlog met Duitsland moest voorkomen worden.",
-          "Groot-Brittannië wilde dat Duitsland het Verdrag van Versailles tekende.",
+          "Groot-Brittanni' wilde dat Duitsland het Verdrag van Versailles tekende.",
         ],
         answer: 2,
         wrongHints: [
@@ -102,7 +102,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Onder het bewind van Stalin werden veel mensen vermoord en werden politieke tegenstanders naar werkkampen gestuurd. Toch werd Stalin in de Sovjet-Unie ook bewonderd, omdat onder zijn bewind...",
+        q: "Onder het bewind van Stalin werden veel mensen vermoord en werden politieke tegenstanders vervolgd. Toch was er in de Sovjet-Unie veel waardering voor Stalin. Wat is een belangrijke reden voor deze waardering?",
         options: [
           "kregen boeren en arbeiders steeds meer politieke macht.",
           "kwam er een einde aan de wapenwedloop met de Verenigde Staten.",
@@ -129,12 +129,12 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De Franse minister Robert Schuman stelde in 1950 voor om een organisatie op te richten die de productie van kolen en staal in West-Europa onder gezamenlijk toezicht zou plaatsen. Welke organisatie is naar dit voorstel opgericht?",
+        q: "De Franse minister stelt voor om een organisatie op te richten. Welke organisatie is naar aanleiding van het voorstel opgericht?",
         options: [
-          "EEG (Europese Economische Gemeenschap)",
-          "EGKS (Europese Gemeenschap voor Kolen en Staal)",
-          "NAVO (Noord-Atlantische Verdragsorganisatie)",
-          "VN (Verenigde Naties)",
+          "EEG",
+          "EGKS",
+          "NAVO",
+          "VN",
         ],
         answer: 1,
         wrongHints: [
@@ -156,7 +156,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Een gebeurtenis in 1962 bracht de hele wereld in gevaar, omdat een kernoorlog tussen de Verenigde Staten en de Sovjet-Unie heel dichtbij kwam. Welke gebeurtenis is dit?",
+        q: "Een gebeurtenis in 1962 bracht de hele wereld in gevaar, omdat een kernoorlog tussen de Verenigde Staten en de Sovjet-Unie nog nooit zo dichtbij was als toen. Welke gebeurtenis wordt bedoeld?",
         options: [
           "de bouw van de Berlijnse Muur",
           "de Cubacrisis",

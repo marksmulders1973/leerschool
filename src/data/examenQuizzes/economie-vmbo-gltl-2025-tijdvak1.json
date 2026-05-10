@@ -78,29 +78,29 @@
       "vraagNr": 1
     },
     {
-      "q": "De welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent?",
+      "q": "De welvaart van een land kan worden gemeten door het nationaal inkomen te berekenen. Waarmee moet je rekening houden als je het re'le nationale inkomen berekent? Gebruik informatiebron 1.",
       "options": [
         "de belastingen",
         "de inkomensverdeling",
         "de veranderde prijzen",
-        "zelfvoorziening Gebruik informatiebron 1."
+        "zelfvoorziening"
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
+      "tekstNr": 1,
       "vraagNr": 2
     },
     {
-      "q": "Waartoe behoren de uitgaven van de toeristen, die een souvenir kopen op Sint-Maarten?",
+      "q": "Waartoe behoren de uitgaven van de toeristen, die een souvenir kopen op Sint-Maarten? Gebruik informatiebron 1.",
       "options": [
         "Tot de export van diensten door Sint-Maarten.",
         "Tot de export van goederen door Sint-Maarten.",
         "Tot de import van diensten door Sint-Maarten.",
-        "Tot de import van goederen door Sint-Maarten. Gebruik informatiebron 1."
+        "Tot de import van goederen door Sint-Maarten."
       ],
       "answer": 1,
       "explanation": "Het juiste antwoord is B.",
-      "tekstNr": null,
+      "tekstNr": 1,
       "vraagNr": 4
     },
     {
@@ -117,24 +117,24 @@
       "vraagNr": 8
     },
     {
-      "q": "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
+      "q": "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente? Het aantal gemeenten in Nederland daalt omdat veel kleine gemeenten worden samengevoegd tot nieuwe, grotere gemeenten. De gemeente Rijkwijk en de gemeente Armere worden samengevoegd tot de gemeente Rijkmere. Gebruik informatiebron 3.",
       "options": [
         "accijns",
         "motorrijtuigenbelasting",
         "onroerendezaakbelasting",
-        "vennootschapsbelasting Het aantal gemeenten in Nederland daalt omdat veel kleine gemeenten worden samengevoegd tot nieuwe, grotere gemeenten. De gemeente Rijkwijk en de gemeente Armere worden samengevoegd tot de gemeente Rijkmere. Gebruik informatiebron 3."
+        "vennootschapsbelasting"
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
+      "tekstNr": 3,
       "vraagNr": 9
     },
     {
-      "q": "Welke oppervlakte geeft het bedrag aan dat je kunt sparen van je inkomen?",
+      "q": "Welke oppervlakte geeft het bedrag aan dat je kunt sparen van je inkomen? Nour vindt het verstandig om nu te sparen voor later, want het is bijna zeker dat hij in de toekomst meer gaat consumeren.",
       "options": [
         "oppervlakte a",
         "oppervlakte b",
-        "oppervlakte c Nour vindt het verstandig om nu te sparen voor later, want het is bijna zeker dat hij in de toekomst meer gaat consumeren."
+        "oppervlakte c"
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
@@ -142,12 +142,12 @@
       "vraagNr": 12
     },
     {
-      "q": "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan. Voor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals een overdrachtsinkomen. Wat is een voorbeeld van een overdrachtsinkomen?",
+      "q": "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan. Voor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals een overdrachtsinkomen. Wat is een voorbeeld van een overdrachtsinkomen? Nour zoekt informatie over rentepercentages op de site van zijn ABC-bank. ABC-bank          spaarrekening: jongeren 2,1% rente ouder dan 21 jaar 1,5% rente betaalrekening: jongeren 1,1% rente ouder dan 21 jaar 0% rente",
       "options": [
         "loon",
         "rente",
         "winst",
-        "zakgeld Nour zoekt informatie over rentepercentages op de site van zijn ABC-bank. ABC-bank          spaarrekening: jongeren 2,1% rente ouder dan 21 jaar 1,5% rente betaalrekening: jongeren 1,1% rente ouder dan 21 jaar 0% rente"
+        "zakgeld"
       ],
       "answer": 3,
       "explanation": "Het juiste antwoord is D.",
@@ -155,25 +155,25 @@
       "vraagNr": 14
     },
     {
-      "q": "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
+      "q": "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun? De klas doet eerst marktonderzoek in de wijk. Elke hondenbezitter heeft 1 hond. een vraag uit het onderzoek: Wij komen op woensdag-, vrijdag- en zaterdagmiddag langs uw huis en halen uw hond op om deze uit te laten op een omheind terrein. Twee uur later brengen we uw hond terug. Wij zorgen voor hondenbrokken. Hoeveel euro per week bent u bereid maximaal te betalen voor het uitlaten van uw hond op deze drie dagen? De resultaten staan in deze tabel. maximaal bedrag   aantal hondenbezitters 20                       0 18                       2 16                       4 14                       6 12                       8 10 8                       10 12 Ilja zet de resultaten van het marktonderzoek in een grafiek. Gebruik informatiebron 5.",
       "options": [
         "besloten vennootschap (bv)",
         "eenmanszaak",
         "naamloze vennootschap (nv)",
-        "vennootschap onder firma (vof) De klas doet eerst marktonderzoek in de wijk. Elke hondenbezitter heeft 1 hond. een vraag uit het onderzoek: Wij komen op woensdag-, vrijdag- en zaterdagmiddag langs uw huis en halen uw hond op om deze uit te laten op een omheind terrein. Twee uur later brengen we uw hond terug. Wij zorgen voor hondenbrokken. Hoeveel euro per week bent u bereid maximaal te betalen voor het uitlaten van uw hond op deze drie dagen? De resultaten staan in deze tabel. maximaal bedrag   aantal hondenbezitters 20                       0 18                       2 16                       4 14                       6 12                       8 10 8                       10 12 Ilja zet de resultaten van het marktonderzoek in een grafiek. Gebruik informatiebron 5."
+        "vennootschap onder firma (vof)"
       ],
       "answer": 3,
       "explanation": "Het juiste antwoord is D.",
-      "tekstNr": null,
+      "tekstNr": 5,
       "vraagNr": 17
     },
     {
-      "q": "In deze tabel staat winst genoemd. Gaat het om de nettowinst of de brutowinst?",
+      "q": "In deze tabel staat winst genoemd. Gaat het om de nettowinst of de brutowinst? Gebruik bovenstaande tabel.",
       "options": [
         "De brutowinst, de bedrijfskosten zijn bij de omzet opgeteld.",
         "De brutowinst, de bedrijfskosten zijn van de omzet afgehaald.",
         "De nettowinst, de bedrijfskosten zijn bij de brutowinst opgeteld.",
-        "De nettowinst, de bedrijfskosten zijn van de brutowinst afgehaald. Gebruik bovenstaande tabel."
+        "De nettowinst, de bedrijfskosten zijn van de brutowinst afgehaald."
       ],
       "answer": 3,
       "explanation": "Het juiste antwoord is D.",
@@ -181,11 +181,11 @@
       "vraagNr": 19
     },
     {
-      "q": "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn?",
+      "q": "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn? Duitsland, Belgi' en het Verenigd Koninkrijk (VK) zijn de belangrijkste exportlanden voor Nederland. De export naar Duitsland en Belgi' laat al jaren een groei zien.",
       "options": [
         "Het prijspeil van de export is minder gestegen dan het prijspeil van de import.",
         "Het prijspeil van de export is meer gestegen dan het prijspeil van de import.",
-        "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid. Duitsland, Belgi' en het Verenigd Koninkrijk (VK) zijn de belangrijkste exportlanden voor Nederland. De export naar Duitsland en Belgi' laat al jaren een groei zien."
+        "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid."
       ],
       "answer": 1,
       "explanation": "Het juiste antwoord is B.",
@@ -193,17 +193,17 @@
       "vraagNr": 29
     },
     {
-      "q": "Volgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een hogere afzet. Hier staan drie economische verschijnselen: 1 hogere arbeidsproductiviteit 2 lagere kosten per product 3 betere concurrentiepositie van Nederlandse zuivelboeren In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "q": "Volgens Bram kunnen Nederlandse zuivelboeren door de melkrobot de concurrentie met buitenlandse zuivelboeren beter aan. De melkrobot kan leiden tot een hogere afzet. Hier staan drie economische verschijnselen: 1 hogere arbeidsproductiviteit 2 lagere kosten per product 3 betere concurrentiepositie van Nederlandse zuivelboeren In welke regel staan de verschijnselen zo, dat er een logische gedachtegang ontstaat? Een huis zonder gas Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en 10 in de bijlage. In Nederland is een groot tekort aan huurwoningen. Daardoor gaan mensen op zoek naar een koopwoning. Germaine is al twee jaar op zoek naar een koopwoning. Zij is niet de enige. De vraag naar koopwoningen stijgt, maar het aanbod blijft vrijwel gelijk. vraag en aanbod op de koopwoningmarkt Gebruik de grafiek.",
       "options": [
         "inzet melkrobot  1  2  3  hogere afzet",
         "inzet melkrobot  1  3  2  hogere afzet",
         "inzet melkrobot  2  1  3  hogere afzet",
         "inzet melkrobot  2  3  1  hogere afzet",
-        "inzet melkrobot  3  1  2  hogere afzet F inzet melkrobot  3  2  1  hogere afzet Een huis zonder gas Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 9 en 10 in de bijlage. In Nederland is een groot tekort aan huurwoningen. Daardoor gaan mensen op zoek naar een koopwoning. Germaine is al twee jaar op zoek naar een koopwoning. Zij is niet de enige. De vraag naar koopwoningen stijgt, maar het aanbod blijft vrijwel gelijk. vraag en aanbod op de koopwoningmarkt Gebruik de grafiek."
+        "inzet melkrobot  3  1  2  hogere afzet F inzet melkrobot  3  2  1  hogere afzet"
       ],
       "answer": 0,
       "explanation": "Vraag Antwoord                                                                  Scores\n\n   Een huis zonder gas                                                             1\n                                                                                   1",
-      "tekstNr": null,
+      "tekstNr": 9,
       "vraagNr": 32
     },
     {

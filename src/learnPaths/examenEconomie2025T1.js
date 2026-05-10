@@ -174,11 +174,11 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en heffingen. Welke belasting betalen de inwoners aan de gemeente?",
+        q: "Een gemeente ontvangt inkomsten vanuit de gemeentelijke belastingen en gemeentelijke heffingen. Welke belasting betalen de inwoners aan de gemeente?",
         options: [
           "accijns",
           "motorrijtuigenbelasting",
-          "onroerendezaakbelasting (OZB)",
+          "onroerendezaakbelasting",
           "vennootschapsbelasting",
         ],
         answer: 2,
@@ -201,8 +201,13 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat is een voorbeeld van een overdrachtsinkomen voor een jongere?",
-        options: ["loon", "rente", "winst", "zakgeld"],
+        q: "Gemiddeld beginnen jongeren op 21-jarige leeftijd met een (volledige) baan. Voor die tijd hebben jongeren meestal verschillende bronnen van inkomen, zoals een overdrachtsinkomen. Wat is een voorbeeld van een overdrachtsinkomen?",
+        options: [
+          "loon",
+          "rente",
+          "winst",
+          "zakgeld",
+        ],
         answer: 3,
         wrongHints: [
           "Loon = primair inkomen (uit arbeid).",
@@ -224,7 +229,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De leerlingen van de klas doen allemaal mee. Ze zijn allen privé aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
+        q: "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
         options: [
           "besloten vennootschap (bv)",
           "eenmanszaak",
@@ -252,12 +257,11 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de agrarische handel toegenomen. Wat kan daarvan de reden zijn?",
+        q: "De import van agrarische producten is procentueel sterker gegroeid dan de export. Toch is het Nederlandse handelsoverschot van de handel toegenomen. Wat kan daarvan de reden zijn?",
         options: [
           "Het prijspeil van de export is minder gestegen dan het prijspeil van de import.",
           "Het prijspeil van de export is meer gestegen dan het prijspeil van de import.",
-          "De geëxporteerde hoeveelheid is minder gestegen dan de geïmporteerde hoeveelheid.",
-          "De geëxporteerde hoeveelheid is meer gestegen dan de geïmporteerde hoeveelheid.",
+          "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid.",
         ],
         answer: 1,
         wrongHints: [
@@ -282,7 +286,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Germaine: 'Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.' Wat is een juiste samenvatting van Germaines bewering?",
+        q: "Germaine: \"Tegenwoordig levert sparen weinig op en is geld lenen goedkoop. Spaarders kunnen beter het geld investeren in een warmtepomp, dat levert op termijn meer op.\" Wat is een juiste samenvatting van Germaines bewering?",
         options: [
           "De besparing op energiekosten is hoger dan de te ontvangen rente.",
           "De besparing op energiekosten is lager dan de te ontvangen rente.",

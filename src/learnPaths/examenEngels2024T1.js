@@ -30,7 +30,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat heeft de 'Golden Gate Bridge' met een muziekalbum te maken, volgens deze tekst?",
+        q: "Wat heeft de `Golden Gate Bridge' met een muziekalbum te maken, volgens deze tekst?",
         options: [
           "De liedteksten op het album gaan over de brug.",
           "Het album zal op de brug gepresenteerd worden.",
@@ -57,7 +57,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "What becomes clear about the album 'Duets / Golden Gate Bridge' from this text?",
+        q: "What becomes clear about the album Duets / Golden Gate Bridge from this text?",
         options: [
           "It features both techno-beats and traditional rhythms.",
           "It has quite a relaxed, dreamlike and otherworldly sound.",
@@ -82,7 +82,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "What becomes clear in paragraph 1 of text 3?",
+        q: "What becomes clear in paragraph 1?",
         options: [
           "A group of workers came across something quite unforeseen.",
           "A researcher stumbled upon a hidden entrance to a historic location.",
@@ -163,7 +163,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "What is the function of paragraph 2 in text 4?",
+        q: "What is the function of paragraph 2?",
         options: [
           "to explain the consequences of the change in pay",
           "to illustrate how the change in pay was received",
@@ -188,7 +188,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Kies bij [12] in alinea 4 het juiste antwoord uit de gegeven mogelijkheden.",
+        q: "Kies bij 12 in alinea 4 het juiste antwoord uit de gegeven mogelijkheden.",
         options: [
           "a highly controversial step on the way to",
           "demanded by other nations in favour of",
@@ -213,7 +213,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Kies bij [13] in alinea 5 het juiste antwoord uit de gegeven mogelijkheden.",
+        q: "Kies bij 13 in alinea 5 het juiste antwoord uit de gegeven mogelijkheden.",
         options: [
           "Consequently",
           "However",

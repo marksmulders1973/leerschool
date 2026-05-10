@@ -70,16 +70,16 @@
   },
   "questions": [
     {
-      "q": "Is Zweden ook lid van de Europese Monetaire Unie (EMU)?",
+      "q": "Is Zweden ook lid van de Europese Monetaire Unie (EMU)? In landen buiten de EU zijn de prijzen van dezelfde artikelen per land verschillend. Gebruik informatiebron 1 en 2.",
       "options": [
         "Ja, er wordt betaald met de euro.",
         "Ja, naast de Zweedse kroon is ook de euro een wettig betaalmiddel.",
         "Nee, er wordt betaald met de Zweedse kroon.",
-        "Nee, naast de euro is ook de Zweedse kroon een wettig betaalmiddel. In landen buiten de EU zijn de prijzen van dezelfde artikelen per land verschillend. Gebruik informatiebron 1 en 2."
+        "Nee, naast de euro is ook de Zweedse kroon een wettig betaalmiddel."
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
+      "tekstNr": 1,
       "vraagNr": 2
     },
     {
@@ -110,26 +110,26 @@
       "vraagNr": 7
     },
     {
-      "q": "Na welk jaar is er een blijvende daling van direct tv kijken?",
+      "q": "Na welk jaar is er een blijvende daling van direct tv kijken? In 2008 werd voor het eerst gemeten hoeveel er uitgesteld werd gekeken, toen ging het om gemiddeld 2 minuten per dag. Gebruik informatiebron 3.",
       "options": [
         "na 2006",
         "na 2007",
         "na 2014",
-        "na 2018 In 2008 werd voor het eerst gemeten hoeveel er uitgesteld werd gekeken, toen ging het om gemiddeld 2 minuten per dag. Gebruik informatiebron 3."
+        "na 2018"
       ],
       "answer": 2,
       "explanation": "Het juiste antwoord is C.",
-      "tekstNr": null,
+      "tekstNr": 3,
       "vraagNr": 9
     },
     {
-      "q": "Hier staan drie economische verschijnselen: 1 de consumenten kunnen meer besteden 2 de productie stijgt 3 de vraag naar goederen stijgt In welke regel staan deze verschijnselen zo, dat er een logische gedachtegang ontstaat?",
+      "q": "Hier staan drie economische verschijnselen: 1 de consumenten kunnen meer besteden 2 de productie stijgt 3 de vraag naar goederen stijgt In welke regel staan deze verschijnselen zo, dat er een logische gedachtegang ontstaat? Uit zijn onderzoek bleek echter dat slechts 25% van de huishoudens het helikoptergeld zou besteden, de andere huishoudens zouden het bedrag sparen.",
       "options": [
         "helikoptergeld  1  2  3  werkgelegenheid stijgt",
         "helikoptergeld  1  3  2  werkgelegenheid stijgt",
         "helikoptergeld  2  1  3  werkgelegenheid stijgt",
         "helikoptergeld  2  3  1  werkgelegenheid stijgt",
-        "helikoptergeld  3  1  2  werkgelegenheid stijgt F helikoptergeld  3  2  1  werkgelegenheid stijgt Uit zijn onderzoek bleek echter dat slechts 25% van de huishoudens het helikoptergeld zou besteden, de andere huishoudens zouden het bedrag sparen."
+        "helikoptergeld  3  1  2  werkgelegenheid stijgt F helikoptergeld  3  2  1  werkgelegenheid stijgt"
       ],
       "answer": 1,
       "explanation": "Het juiste antwoord is B.",

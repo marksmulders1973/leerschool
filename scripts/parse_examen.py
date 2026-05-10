@@ -216,13 +216,27 @@ def parse_opgaven(text):
                     optie_text = m_opt.group(2).strip()
                     # volgende regels die geen nieuwe optie/vraag/tekst zijn = vervolg
                     k = j + 1
+                    blank_count = 0
                     while k < n:
                         lnk = lines[k]
                         if (vraag_start_re.match(lnk) or tekst_header_re.match(lnk)
                                 or optie_re.match(lnk)):
                             break
-                        if lnk.strip():
-                            optie_text += " " + lnk.strip()
+                        if not lnk.strip():
+                            # Lege regel = scheiding tussen vraag-blok en volgende sectie.
+                            # Stop optie-vervolg bij eerste lege regel, anders pakken we
+                            # 'Gebruik informatiebron 7' en opgave-context erbij.
+                            blank_count += 1
+                            if blank_count >= 1:
+                                break
+                            k += 1
+                            continue
+                        # Heuristiek: vervolg-regel moet sterk geïndenteerd zijn (>= 8 spaties).
+                        # Anders is het waarschijnlijk al de volgende opgave-context.
+                        leading_ws = len(lnk) - len(lnk.lstrip())
+                        if leading_ws < 6:
+                            break
+                        optie_text += " " + lnk.strip()
                         k += 1
                     opties.append((letter, optie_text))
                     j = k

@@ -16,7 +16,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen. Tot welk type inkomen behoort de subsidie voor de gemeente-inwoners?",
+        q: "De gemeente Zonhoven wil het gebruik van zonne-energie stimuleren en verleent subsidies op de aanschaf van zonnepanelen door huishoudens. Hoe worden deze subsidies die de huishoudens van de gemeente ontvangen genoemd?",
         options: [
           "inkomen uit arbeid",
           "inkomen uit bezit",
@@ -43,12 +43,12 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "België hief in de jaren '50 een importheffing op Nederlandse boter. Wie betaalde de importheffing eerst en aan wie werd de importheffing uiteindelijk doorberekend?",
+        q: "Wie betaalde de importheffing eerst en aan wie werd de importheffing uiteindelijk doorberekend?",
         options: [
-          "De importheffing werd eerst betaald door de Nederlandse overheid, daarna doorberekend aan de Nederlandse consumenten.",
-          "De importheffing werd eerst betaald door de Nederlandse overheid, daarna doorberekend aan de Belgische consumenten.",
-          "De importheffing werd eerst betaald door de Belgische importeurs, daarna doorberekend aan de Nederlandse consumenten.",
-          "De importheffing werd eerst betaald door de Belgische importeurs, daarna doorberekend aan de Belgische consumenten.",
+          "De importheffing werd eerst betaald door de Nederlandse overheid, daarna werd de heffing doorberekend aan de Nederlandse consumenten.",
+          "De importheffing werd eerst betaald door de Nederlandse overheid, daarna werd de heffing doorberekend aan de Belgische consumenten.",
+          "De importheffing werd eerst betaald door de Belgische importeurs, daarna werd de heffing doorberekend aan de Nederlandse consumenten.",
+          "De importheffing werd eerst betaald door de Belgische importeurs, daarna werd de heffing doorberekend aan de Belgische consumenten.",
         ],
         answer: 3,
         wrongHints: [
@@ -124,7 +124,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Kaj zegt: 'Bovendien blijft de vraag naar onze producten stijgen, dus het is wijs om de verkoopprijs na productie-uitbreiding gelijk te houden.' Welk gevolg voor de winstmarge van K2 bv heeft het gelijk houden van de verkoopprijs na de productie-uitbreiding?",
+        q: "Kaj vervolgt: \"Bovendien blijft de vraag naar onze producten stijgen, dus het is wijs om de verkoopprijs na productie-uitbreiding gelijk te houden.\" Welk gevolg voor de winstmarge van K2 bv heeft het gelijk houden van de verkoopprijs na de productie-uitbreiding?",
         options: [
           "De winstmarge daalt.",
           "De winstmarge stijgt.",

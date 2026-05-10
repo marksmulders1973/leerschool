@@ -123,12 +123,11 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat kan een reden zijn dat de staatsschuld van Italië blijft stijgen?",
+        q: "Wat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
         options: [
           "De inkomsten van de Italiaanse overheid zijn groter dan de uitgaven van de overheid.",
           "De inkomsten van de Italiaanse overheid zijn kleiner dan de uitgaven van de overheid.",
           "De inkomsten van de Italiaanse overheid zijn gestegen en de uitgaven gelijk gebleven.",
-          "De inkomsten van de Italiaanse overheid zijn gelijk gebleven en de uitgaven zijn gedaald.",
         ],
         answer: 1,
         wrongHints: [
@@ -150,7 +149,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Studenten blijken hun uitgaven te onderschatten. Het Nibud schrijft: 'Dat is niet vreemd, want niet alle uitgaven, zoals reparatie van de fiets, worden meegenomen in de begroting.' Welke uitgaven nemen studenten vaak niet mee in hun begroting?",
+        q: "Studenten blijken hun uitgaven te onderschatten. Het Nibud schrijft: \"Dat is niet vreemd, want niet alle uitgaven, zoals reparatie van de fiets, komen maandelijks terug. Kleinere uitgaven, zoals het kopen van lunch of koffie, worden meestal ook onderschat.\" Welke uitgaven worden volgens het Nibud meestal onderschat?",
         options: [
           "alleen dagelijkse huishoudelijke uitgaven",
           "incidentele uitgaven en dagelijkse huishoudelijke uitgaven",
