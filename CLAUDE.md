@@ -19,6 +19,46 @@
 - **Bij vage bug-melding**: eerst 1-2 gerichte reproductie-vragen, niet blind fixen.
 - **30-sec autonomie-regel**: als Mark 30 seconden niet reageert op een vraag, doorgaan zonder hem tot tokens op zijn.
 
+## Autonome modus (actief t/m 2026-05-24)
+
+Mark heeft Claude Code 2 weken **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken.
+
+### Doel
+Cito-toets + examens versterken: meer leerpaden, meer authentieke examen-vragen, alle vragen voorzien van uitlegPad.
+
+### Hoe werken
+1. **Lees eerst** `docs/AUTONOOM-BACKLOG.md` — daar staat de prioriteits-volgorde + status van vorige sessies.
+2. **Pak de bovenste niet-afgevinkte taak.** Geen mening vragen welke.
+3. **Werk tot tokens op** of tot een natuurlijke stop (build groen, commit gepusht, taak afgevinkt).
+4. **Update aan eind van sessie** de backlog: vink af wat klaar is, schrijf in 1 regel wat je deed, voeg eventueel nieuwe sub-taken toe.
+5. **Geen klaar-voor-gebruik tussendoor** — alleen aan het einde van de hele sessie.
+
+### Doorgaan, niet vragen
+- Niet vragen welke prioriteit, welk pad, welke vakken.
+- Niet vragen of een aanpak goed is — gebruik bestaande patronen (uitlegPad-format, build → commit → push).
+- Wel doorgaan na elke chunk zonder pauze; geen tussentijdse "wil je dat ik doorga?".
+
+### Hard-stops (HIER WEL VRAGEN)
+Stop en vraag Mark expliciet bij:
+- **Examen-vragen verzinnen** — als de bron-PDF niet beschikbaar is, NIET zelf vragen verzinnen. Skip dat examen, ga door met volgend pad. Authentiek-eis is heilig.
+- **Architectuur-veranderingen** (nieuwe routes, nieuwe componenten in `src/components/`, schema-changes Supabase, nieuwe dependencies).
+- **Bestaande content overschrijven of verwijderen** — alleen toevoegen, nooit vervangen.
+- **Productie-afhankelijke acties** — Vercel env-vars, Supabase secrets, A12 setup, kosten-betalingen.
+- **STOPLIST-grijs gebied** — als iets twijfelachtig in een verboden categorie valt.
+- **Externe API-keys nodig** — geen calls naar Anthropic/Gemini buiten wat al draait.
+
+### Stop-conditie
+Mark stopt expliciet met **"STOP"** of **"PAUZE"**. Anders doorgaan tot tokens op.
+
+### Per sessie
+- Build na elke chunk: `npx vite build`. Faalt = fixen voordat je verder gaat.
+- Commit per pad (niet 3 paden in 1 commit).
+- Push elke commit direct.
+- Eind van sessie: 1 regel toevoegen aan `docs/AUTONOOM-BACKLOG.md` onder "Sessie-log".
+
+### Eind-datum
+2026-05-24. Daarna evalueert Mark of de modus verlengd wordt.
+
 ## Build & test
 
 ```bash
