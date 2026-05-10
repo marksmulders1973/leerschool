@@ -1042,7 +1042,6 @@ export default function App() {
           onManageClasses={() => setPage("class-manager")}
           onUpgrade={() => setPage("pro")}
           onBack={() => setPage("home")}
-          onHome={goHome}
           schoolLogoUrl={schoolLogoUrl}
           onLogoUpdate={(url) => {
             setSchoolLogoUrl(url);
@@ -1167,7 +1166,6 @@ export default function App() {
             setPage("learn-paths-hub");
           }}
           onBack={() => setPage("home")}
-          onHome={goHome}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
           onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}
