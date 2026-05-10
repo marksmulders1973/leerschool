@@ -121,18 +121,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const lastActivity = recentProgress[0] || null;
   // A10: examen-trainer alleen voor VMBO-mavo klas 4 (Mark's primaire dochter-use-case).
   const isVmboGt4 = userSchoolType === "mavo" && String(userLevel || "") === "4";
-  // A11: spaced-repetition due-counter op CHECK-niveau (parallel aan topic-niveau dueCount).
-  const [srDueCount, setSrDueCount] = useState(0);
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const { countDue } = await import("../shared/spacedRepetition.js");
-        if (!cancelled) setSrDueCount(countDue());
-      } catch {}
-    })();
-    return () => { cancelled = true; };
-  }, []);
+  // A11-snoei (visie-bewaker maand 1): srDueCount banner verwijderd.
+  // Bestaande topic-niveau dueCount + DailyChallengeBanner-flow heeft al
+  // echte quiz-trigger (onHerhaalQuiz). Twee banners = verwarring (STOPLIST §5).
+  // spacedRepetition.js store BLIJFT achter de schermen — toekomst-ready.
 
   // A12 (10-agent circulariteit-review 2026-05-10): web push opt-in.
   // permState: "unsupported" | "default" | "granted" | "denied"
@@ -316,28 +308,6 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               color: "var(--color-text-soft)", fontSize: 11, cursor: "pointer",
               textDecoration: "underline",
             }}>uitzetten</button>
-          </div>
-        )}
-
-        {/* A11 (10-agent didactiek 2026-05-10): herhaling-due banner per CHECK.
-            Toont aantal individuele vragen die vandaag herhaling nodig hebben. */}
-        {srDueCount > 0 && lastActivity && (
-          <div style={{
-            marginBottom: 12,
-            padding: "10px 14px",
-            background: "rgba(255,213,79,0.08)",
-            border: "1px solid rgba(255,213,79,0.40)",
-            borderRadius: 10,
-            color: "var(--color-text-strong)",
-            fontSize: 13,
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-          }}>
-            <span style={{ fontSize: 22 }}>🔄</span>
-            <span style={{ flex: 1 }}>
-              <strong>{srDueCount}</strong> {srDueCount === 1 ? "vraag wacht" : "vragen wachten"} op herhaling
-            </span>
           </div>
         )}
 

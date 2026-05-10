@@ -2,24 +2,22 @@ import { track } from "../utils.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
 
-// Bottom-tabs nav (Duolingo-style). Tot 5 tabs: Home, Leren, Test, Scorebord,
-// OBLITERATOR. Design-system v1: tokens, tap-target ≥ 44px, glow-indicator
-// op brand-primary. "Test" is de korte vorm van "Test je kennis" (de
-// hero-tegel-titel) en deelt dezelfde QuizCardIcon-illustratie zodat het
-// visueel duidelijk is dat ze hetzelfde doen. OBLITERATOR-tab krijgt altijd
-// de oranje-gold gradient (matcht de START-knop in het spel) zodat 'ie er
-// als feature-tab uitspringt.
+// Bottom-tabs nav (Duolingo-style). Maand 1 snoei (visie-bewaker 2026-05-10):
+// alleen 3 tabs zichtbaar — Home, Leren, Test. Scorebord en OBLITERATOR
+// zijn weggehaald uit de standaard-flow.
 //
-// S1 sprint-5 (audit-3): Scorebord + OBLITERATOR-tabs verbergen voor
-// niet-ingelogde bezoekers als VITE_HIDE_GAME_FOR_GUESTS=true. Cito-ouder
-// ICP ziet zo geen 'spelletje' bij eerste bezoek.
+// Reden Scorebord (Hall of Fame): Cito-doelgroep is faalangst-gevoelig;
+// vergelijking met klasgenoten = anti-leren. Component+route blijven
+// bestaan (`leaderboard` page rendert nog), maar geen entry-point in nav.
+//
+// Reden OBLITERATOR: niet onderdeel van Leerkwartier-product-flow.
+// Eigen route `/spel` (obliteratorPlay) blijft werken voor Mark's zoon
+// die er met AI aan bouwt. Geen tab in hoofd-nav.
 
 const ALL_TABS = [
   { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
   { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
   { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
-  { id: "score",   label: "Scorebord",   emoji: "🏆", target: "leaderboard", gameRelated: true },
-  { id: "spel",    label: "OBLITERATOR", emoji: "🛸", target: "obliteratorPlay", brand: true, gameRelated: true },
 ];
 
 function bepaalActieveTab(page) {
