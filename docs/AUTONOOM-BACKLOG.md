@@ -111,4 +111,10 @@ Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
 
 Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 
-- 2026-05-10 — Backlog opgesteld door Claude. CLAUDE.md uitgebreid met autonome-modus regels. Commit pending.
+- 2026-05-10 — Backlog opgesteld door Claude. CLAUDE.md uitgebreid met autonome-modus regels + peer-review cadens. Commit pending.
+
+## Peer-review log
+
+Cadens: elke 5 taken, elke 2e sessie, of na nieuw pad. Format: datum — taken-sinds-vorige — agent A oordeel — agent B oordeel — beslissing.
+
+- (nog geen reviews)

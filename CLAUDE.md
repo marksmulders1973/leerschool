@@ -50,6 +50,34 @@ Stop en vraag Mark expliciet bij:
 ### Stop-conditie
 Mark stopt expliciet met **"STOP"** of **"PAUZE"**. Anders doorgaan tot tokens op.
 
+### Peer-review checks (visueel + inhoudelijk)
+
+Om te voorkomen dat 2 weken werk de verkeerde kant op gaat: regelmatig **agents elkaar laten beoordelen**.
+
+**Wanneer**:
+- Elke 5e afgewerkte taak in de backlog, OF
+- Elke 2e sessie (wat eerder komt), OF
+- Aan het eind van een sessie waarin een nieuw pad is gemaakt (geen alleen-uitlegPad-werk).
+
+**Stappen**:
+1. **Playwright-screenshots** van live productie via MCP (`mcp__playwright__browser_navigate` + `browser_take_screenshot`):
+   - `/` (home)
+   - `/leerpaden` of student-home (overzicht)
+   - 1 willekeurig nieuw/aangepast leerpad — open een check, trigger fout, screenshot uitlegPad in `simpeler` modus.
+2. **Twee reviewer-agents in parallel** (`Agent` tool, `subagent_type: "general-purpose"`):
+   - **Agent A — visueel & UX**: krijgt de screenshots + STOPLIST + Leerkwartier-test. Vraag: "Helpt dit een 10-jarige om Cito-stof beter te begrijpen? Zie je iets dat tegen STOPLIST of jargon-regel ingaat?"
+   - **Agent B — inhoudelijk & strategie**: krijgt de laatste 5 commits + huidige backlog + visie. Vraag: "Past deze richting bij ICP (Cito-ouder groep 6-8)? Gaat de prioriteits-volgorde nog kloppen?"
+3. **Vergelijk de twee oordelen**:
+   - **Beide eens (positief)** → log "✅ peer-review akkoord" in backlog, ga door.
+   - **Beide eens (negatief)** → log "⚠️ peer-review zegt bijsturen + reden", **stop autonome modus** en vraag Mark expliciet wat te doen.
+   - **Oneens met elkaar** → log beide oordelen + samenvatting verschil, vraag Mark om de knoop door te hakken.
+4. **Verifieer claims** voordat je escaleert — agents kunnen onterecht alarm slaan. Check zelf even: bestaat het bestand dat ze noemen? Klopt de regel die ze citeren? Pas escaleren naar Mark als de zorg standhoudt.
+
+**Niet doen**:
+- Geen review-loop op elke commit — dat verspilt tijd en tokens.
+- Geen reviewer-agent vragen "wat zou je anders doen?" — alleen ja/nee + reden. Die agent gaat niet zelf bouwen.
+- Reviewers krijgen geen schrijftoegang tot code (gewoon `general-purpose` met Read-rechten — nooit hun eigen aanbevelingen direct toepassen).
+
 ### Per sessie
 - Build na elke chunk: `npx vite build`. Faalt = fixen voordat je verder gaat.
 - Commit per pad (niet 3 paden in 1 commit).
