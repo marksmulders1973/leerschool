@@ -769,6 +769,20 @@ const steps = [
           "De extra o is overbodig — Nederlands kent geen 'oo' aan het eind van een woord op deze manier.",
           "Een koppelteken hoort niet bij meervoudsvorming. Apostrof + s is de juiste vorm.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Apostrof bij a/i/o/u/y", tekst: "Auto eindigt op O. Meervoud = apostrof + s, om de lange klank te bewaren: auto's." },
+          ],
+          woorden: [{ woord: "apostrof", uitleg: "Schuin streepje ' — gebruikt voor weglatingen of meervouden bij a/i/o/u/y." }],
+          theorie: "Meervoud-met-apostrof: woorden eindigend op a/i/o/u/y krijgen 's. Anders zou 'autos' kort klinken (au-tos i.p.v. au-to's).",
+          voorbeelden: [{ type: "apostrof", tekst: "auto's, foto's, baby's, taxi's, menu's." }],
+          basiskennis: [{ onderwerp: "Eindigt op klinker?", uitleg: "Check de laatste letter. Klinker = apostrof. Medeklinker (woord op b,d,k,p enz.) = gewoon -s of -en." }],
+          niveaus: {
+            basis: "Auto eindigt op o → auto's. A.",
+            simpeler: "Stel: 'autos' zonder apostrof. Lijkt 'au-tos' (kort). Met apostrof: 'au-to-s' (lange o). Daarom: auto's. = A.",
+            nogSimpeler: "O + ' + s = A.",
+          },
+        },
       },
     ],
   },
@@ -794,6 +808,20 @@ const steps = [
           "Samenstellingen schrijf je aaneen, geen spatie.",
           "Geen koppelteken — geen klinker-botsing.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tussen-n-regel", tekst: "Pad → meervoud padden (op -en) → samenstelling met tussen-n: paddenstoel." },
+          ],
+          woorden: [{ woord: "tussen-n", uitleg: "Extra letters 'en' tussen 2 woorden in samenstelling." }],
+          theorie: "Pad heeft korte a → in meervoud verdubbel d → padden. Samenstelling = padd + en + stoel = paddenstoel.",
+          voorbeelden: [{ type: "tussen-n", tekst: "pad → paddenstoel, pan → pannenkoek, boek → boekenkast." }],
+          basiskennis: [{ onderwerp: "Aaneen", uitleg: "Geen spatie of streepje in samenstellingen." }],
+          niveaus: {
+            basis: "Pad → padden → paddenstoel. A.",
+            simpeler: "Wat is meervoud van pad? Padden. Dus samenstelling = padden + stoel = paddenstoel. = A.",
+            nogSimpeler: "Padden + stoel = A.",
+          },
+        },
       },
       {
         q: "*Welke spelling is correct?*",
@@ -805,6 +833,23 @@ const steps = [
           "Geen Nederlands meervoud eindigt op -ens.",
           "Het Nederlandse meervoud eindigt op -en, niet -e. Plus: vanwege korte klank moet medeklinker verdubbeld.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welk meervoud?", tekst: "Vraag = meervoud van 'man' (mens). Korte a → verdubbel n → mannen." },
+            { titel: "Manen ≠ mannen", tekst: "Manen = meervoud van maan (lange aa). Mannen = meervoud van man (korte a)." },
+          ],
+          woorden: [
+            { woord: "verdubbel-regel", uitleg: "Korte klinker + meervoud op -en → medeklinker verdubbelen." },
+          ],
+          theorie: "Man (kort) → mannen (verdubbel). Maan (lang) → manen (1 a). Verschillende woorden, verschillende meervoud.",
+          voorbeelden: [{ type: "kort vs lang", tekst: "man → mannen, maan → manen. Hond → honden, hond gaat anders (lange klank in honden? nee, honden korte o → hondden zou je verwachten maar wegens d-stam wordt het 'honden')." }],
+          basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Mèn (kort) of maan (lang)? Bepaalt de spelling." }],
+          niveaus: {
+            basis: "Man (kort) → mannen (verdubbel). A.",
+            simpeler: "Korte a in 'man' → bij meervoud verdubbel je de n: mannen. (Manen = meervoud van maan, ander woord). = A.",
+            nogSimpeler: "Kort = dubbel = A.",
+          },
+        },
       },
       {
         q: "*Hoofdletters: \"In de zomer ga ik op vakantie naar frankrijk in Augustus.\" — Welke fouten?*",
@@ -821,6 +866,23 @@ const steps = [
           "Frankrijk is ook fout — landnaam, dus juist met hoofdletter.",
           "Andersom: frankrijk moet juist een hoofdletter krijgen (eigennaam).",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "2 fouten zoeken", tekst: "Frankrijk = land = hoofdletter NODIG (was klein, fout). Augustus = maand = klein NODIG (was hoofdletter, fout)." },
+            { titel: "Zomer + vakantie?", tekst: "Zomer = seizoen = klein OK. Vakantie = gewoon woord = klein OK. Geen fouten daar." },
+          ],
+          woorden: [
+            { woord: "eigennaam", uitleg: "Specifieke naam: Frankrijk, Anna, Albert Heijn = hoofdletter." },
+          ],
+          theorie: "**NL hoofdletters:** eigennamen (Frankrijk, Nederland) WEL. Maandnamen + seizoenen NIET (in tegenstelling tot Engels).",
+          voorbeelden: [{ type: "fix", tekst: "Goed: 'In de zomer ga ik op vakantie naar Frankrijk in augustus.'" }],
+          basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: December, August. In NL: december, augustus." }],
+          niveaus: {
+            basis: "Frankrijk = hoofd, augustus = klein. A.",
+            simpeler: "Loop de zin langs: zomer (klein OK), vakantie (klein OK), frankrijk (FOUT — moet hoofdletter want land), Augustus (FOUT — moet klein want maand). Antwoord A noemt deze 2. = A.",
+            nogSimpeler: "Frankrijk + augustus = A.",
+          },
+        },
       },
       {
         q: "*Welke spelling is correct?*",
@@ -832,6 +894,20 @@ const steps = [
           "Geen extra o nodig vóór de apostrof.",
           "Niet logisch — apostrofs's bestaat niet.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "O eindigt → 's", tekst: "Foto eindigt op o. Meervoud krijgt apostrof + s om lange klank te bewaren: foto's." },
+          ],
+          woorden: [{ woord: "apostrof bij meervoud", uitleg: "' (schuin streepje) bij a/i/o/u/y aan eind van woord." }],
+          theorie: "Meervoud-met-apostrof: foto, auto, baby, menu, taxi → +'s. Anders zou klank kort worden.",
+          voorbeelden: [{ type: "apostrof", tekst: "foto's, auto's, baby's, taxi's, menu's." }],
+          basiskennis: [{ onderwerp: "Geen extra o", uitleg: "Geen 'fotoo's' — gewoon 1 o + apostrof + s." }],
+          niveaus: {
+            basis: "O + meervoud = 's → foto's. A.",
+            simpeler: "Foto eindigt op o. Meervoud = foto's (met apostrof). Net als auto's, baby's. = A.",
+            nogSimpeler: "Foto's = A.",
+          },
+        },
       },
     ],
   },
@@ -860,6 +936,21 @@ const steps = [
           "Audi is een merk, oud is een woord. 'Aud' bestaat in dit verband niet.",
           "Wind = met d (niet wint). Verleng: winden — d klinkt.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Check elk woord", tekst: "Koude (ou ✓), wind (eindigt op d, verleng winden = d ✓), oude (ou ✓), bomen (lang in open lettergreep = 1 o ✓)." },
+            { titel: "Vergelijk fouten", tekst: "B: kaude (au ✗) + boomen (2 o's ✗). C: aude (au ✗). D: wint (verleng winden = d niet t)." },
+          ],
+          woorden: [{ woord: "verleng-truc", uitleg: "Maak woord langer (meervoud / werkwoordvorm) om echte eindletter te horen." }],
+          theorie: "Mix-vraag: combineer ou-regel + verleng-truc + lange-klinker-regel. Loop elk woord systematisch langs.",
+          voorbeelden: [{ type: "regels", tekst: "Wind → winden = D. Koud = ou-woord. Bomen = open lettergreep, 1 o." }],
+          basiskennis: [{ onderwerp: "Systematisch lezen", uitleg: "Bij zinnen: check elk woord apart, niet in 1 oogopslag." }],
+          niveaus: {
+            basis: "Alle 4 woorden in A correct. A.",
+            simpeler: "Lees A langs: koude ✓ (ou), wind ✓ (d), oude ✓ (ou), bomen ✓ (1 o). Andere opties hebben ergens een fout. = A.",
+            nogSimpeler: "Allemaal goed = A.",
+          },
+        },
       },
       {
         q: "*Welke spelling is correct voor het meervoud van 'baby'?*",
@@ -871,6 +962,21 @@ const steps = [
           "Babies is Engels. In Nederlands: baby's.",
           "Geen koppelteken voor meervoud — apostrof.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Y aan eind = 's", tekst: "Baby eindigt op y. Meervoud krijgt apostrof + s: baby's. (Net als auto, foto.)" },
+            { titel: "Niet 'babies'", tekst: "Babies = Engelse meervoudsvorm. NL gebruikt 'baby's' met apostrof." },
+          ],
+          woorden: [{ woord: "leenwoord", uitleg: "Woord uit andere taal (baby = Engels). NL spelt eigen meervoud." }],
+          theorie: "Meervoud-met-apostrof bij a/i/o/u/y. Y krijgt 's net als de andere klinkers. Niet de Engelse -ies.",
+          voorbeelden: [{ type: "apostrof-y", tekst: "baby → baby's, lady → lady's, hobby → hobby's." }],
+          basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels: babies. NL: baby's. Schrijf wat NL voorschrijft." }],
+          niveaus: {
+            basis: "Y + meervoud = 's → baby's. A.",
+            simpeler: "Baby eindigt op y. Meervoud krijgt apostrof + s, net als auto's en foto's. Dus: baby's. (Niet 'babies' — dat is Engels.) = A.",
+            nogSimpeler: "Baby's = A.",
+          },
+        },
       },
       {
         q: "*Welk verkleinwoord van 'koning' is correct?*",
@@ -882,6 +988,20 @@ const steps = [
           "De g wordt vervangen door k bij verkleinwoorden eindigend op -ing.",
           "-je past niet direct na -ing. De spelling wordt aangepast tot -kje.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "-ing wordt -kje", tekst: "Bij woorden op -ing: g vervalt, k komt erin: koning → koninkje (niet koningje)." },
+          ],
+          woorden: [{ woord: "-kje achtervoegsel", uitleg: "Speciaal verkleinwoord-uitgang voor -ing-woorden." }],
+          theorie: "**Verkleinwoord-regel-ing:** -ing → -inkje. De g 'verandert' in k, dan + je.",
+          voorbeelden: [{ type: "ing-kje", tekst: "koning → koninkje, ketting → kettinkje, haring → harinkje, ring → rinkje." }],
+          basiskennis: [{ onderwerp: "Klank verandert", uitleg: "Spreek 'koningje' uit — voelt onnatuurlijk. 'Koninkje' is wat je hoort." }],
+          niveaus: {
+            basis: "-ing → -kje → koninkje. A.",
+            simpeler: "Bij woorden die eindigen op -ing krijg je verkleinwoord met -kje (g eruit, k erin). Koning + kje = koninkje. = A.",
+            nogSimpeler: "-ing → -kje = A.",
+          },
+        },
       },
       {
         q: "*Welk woord is met 'cht' geschreven?*",
@@ -893,6 +1013,20 @@ const steps = [
           "cgt bestaat niet als combinatie in het Nederlands.",
           "gt bestaat ook niet als deze klank — het is altijd cht.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cht-regel", tekst: "Hoor je 'g/ch'-klank gevolgd door t? Schrijf altijd 'cht'. Lucht = lu + cht." },
+          ],
+          woorden: [{ woord: "cht-combinatie", uitleg: "Vaste NL-spelling voor g/ch-klank + t-klank." }],
+          theorie: "Andere combinaties (ct, cgt, gt) bestaan niet voor deze klank. Alleen cht.",
+          voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht." }],
+          basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Geen uitzonderingen." }],
+          niveaus: {
+            basis: "Lucht = cht. A.",
+            simpeler: "Hoor je in 'lucht' een 'ch'-klank gevolgd door 't'? Ja. Dan altijd 'cht'. Lucht. = A.",
+            nogSimpeler: "Cht = A.",
+          },
+        },
       },
     ],
   },
