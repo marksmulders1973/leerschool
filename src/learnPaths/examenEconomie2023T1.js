@@ -65,12 +65,12 @@ const steps = [
   },
   // ─── Vraag 36 — Influencer-beïnvloeding ─────────────────
   {
-    title: "Vraag 36 — influencers en beïnvloeding",
+    title: "Vraag 36 — sociale vs commerciële beïnvloeding",
     explanation: "Echte examenvraag uit VMBO-GL/TL economie 2023 tijdvak 1, vraag 36. Doorklik voor de Pincode-uitleg in **Ondernemen** (stap 'Doelgroep en marketing').",
     emoji: "🎓",
     checks: [
       {
-        q: "Volgers van influencers hebben het gevoel dat zij een intieme band hebben met de influencers die zij volgen, een soort vriendschap. Influencers worden door bedrijven betaald om producten aan te prijzen. Is dat een vorm van marketing-beïnvloeding?",
+        q: "Volgers van influencers hebben het gevoel dat zij een intieme band hebben met de influencers die zij volgen, een soortgelijke band als met een vriend of familielid. De beïnvloeding van influencers noemen we sociale beïnvloeding. Is er ook sprake van commerciële beïnvloeding?",
         options: [
           "Ja, het is beïnvloeding door consumenten met winstoogmerk.",
           "Ja, het is beïnvloeding door producenten met winstoogmerk.",
@@ -79,12 +79,12 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "De influencer wordt betaald door een bedrijf — niet door consumenten.",
+          "Wie betaalt de influencer — een consument of een bedrijf?",
           null,
-          "Wel beïnvloeding — anders zou het bedrijf niet betalen.",
-          "Wel winstoogmerk — bedrijf wil meer verkopen, influencer verdient eraan.",
+          "Als bedrijven ervoor BETALEN, is er dan geen winstoogmerk?",
+          "Waarom zou een bedrijf een influencer betalen als er niets te winnen viel?",
         ],
-        explanation: "De influencer is hier eigenlijk een verlengstuk van de PRODUCENT (het bedrijf dat het product wil verkopen). Bedrijf betaalt → influencer prijst aan → volgers kopen. Het winstoogmerk zit zowel bij het bedrijf (méér verkoop) als bij de influencer (betaling). Dat is per definitie reclame met winstoogmerk door producenten.",
+        explanation: "Sociale beïnvloeding = via een persoonlijke band (vriend, familie, idool). Commerciële beïnvloeding = met een verkoop-doel, betaald door een producent (bedrijf), met winstoogmerk. Influencers vallen onder ALLEBEI: volgers ervaren een sociale band, MAAR het bedrijf betaalt de influencer om te verkopen → producent + winstoogmerk = ook commerciële beïnvloeding.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 36",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
       },
