@@ -498,6 +498,20 @@ const steps = [
           "Tussen-n moet, want pan heeft een meervoud op -en (pannen).",
           "Geen koppelteken nodig — geen klinker-botsing.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tussen-n-regel (sinds 2005)", tekst: "Eerste woord meervoud op -en? Tussen-n. Pan → pannen → pannenkoek." },
+          ],
+          woorden: [{ woord: "tussen-n", uitleg: "Extra n tussen 2 woorden in samenstelling — als eerste woord meervoud op -en heeft." }],
+          theorie: "Pan heeft meervoud 'pannen' (op -en). Dus samenstelling = pann + en + koek = pannenkoek. Vergelijk: 'paardenstal' (paard → paarden), 'kindertekening' (kind → kinderen).",
+          voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paardenstal, kindertekening, hondenbak — allemaal met tussen-n." }],
+          basiskennis: [{ onderwerp: "Geen koppelteken", uitleg: "Pan-koek bestaat niet. Samenstellingen schrijf je aaneen, geen streepje (tenzij klinker-botsing)." }],
+          niveaus: {
+            basis: "Pan → pannen → pannenkoek. A.",
+            simpeler: "Wat is meervoud van 'pan'? Pannen. Dus samenstelling = pannen + koek = pannenkoek. = A.",
+            nogSimpeler: "Pannen + koek = A.",
+          },
+        },
       },
     ],
   },
@@ -528,6 +542,20 @@ const steps = [
           "Geen koppelteken nodig — geen klinker-botsing.",
           "Samenstellingen aaneen, geen spatie.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Spreek uit", tekst: "Zeg 'meningsverschil' hardop. Hoor je de S in het midden? Ja → tussen-s." },
+          ],
+          woorden: [{ woord: "tussen-s", uitleg: "Extra s tussen 2 woorden — geen vaste regel, alleen uitspraak-truc." }],
+          theorie: "Tussen-s heeft GEEN vaste regel. Truc: spreek het woord hardop uit. Hoor je een S in het midden? Schrijf 'm. Hoor je hem niet? Geen tussen-s.",
+          voorbeelden: [{ type: "wel-tussen-s", tekst: "verkeer**s**licht, staat**s**bezoek, liefde**s**verklaring — overal hoorbaar." }],
+          basiskennis: [{ onderwerp: "Aaneen", uitleg: "Samenstellingen schrijf je aaneen. Geen spatie of streepje (behalve bij botsing)." }],
+          niveaus: {
+            basis: "Hoor je 's' tussen → schrijf 'm. Meningsverschil. A.",
+            simpeler: "Zeg het hardop: 'mening-S-verschil'. Hoor je die S? Ja. Dus schrijf 'm: meningsverschil. = A.",
+            nogSimpeler: "S hoorbaar = schrijf 'm = A.",
+          },
+        },
       },
     ],
   },
@@ -565,6 +593,24 @@ const steps = [
           "Vader is geen eigennaam (gewoon zelfstandig naamwoord). Vakantie is een gewoon woord. December heeft geen hoofdletter in NL.",
           "De zin moet beginnen met een hoofdletter (\"Mijn\").",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 hoofdletter-checks", tekst: "(1) Begin van zin: hoofdletter. (2) Eigennaam (Nederland): hoofdletter. (3) Maand (december): GEEN hoofdletter in NL." },
+            { titel: "Loop A langs", tekst: "Mijn (begin zin ✓) vader (gewoon zn ✓) december (maand ✓) Nederland (eigennaam ✓). A is correct." },
+          ],
+          woorden: [
+            { woord: "eigennaam", uitleg: "Naam van persoon, plaats, instantie — krijgt hoofdletter (Mark, Amsterdam, AH)." },
+            { woord: "zelfstandig naamwoord", uitleg: "Gewone-woord-naam (vader, school, boek) — geen hoofdletter." },
+          ],
+          theorie: "**NL hoofdletters:** begin zin + eigennamen + talen/volken. NIET: maanden, dagen, seizoenen, gewone woorden, functies.\n\n**Verschil met Engels:** in Engels Maand+Dag wel hoofdletter ('December', 'Monday'), in NL niet.",
+          voorbeelden: [{ type: "NL", tekst: "december, maandag, zomer, leerling = klein. Nederland, Anna, Engels = hoofdletter." }],
+          basiskennis: [{ onderwerp: "Begin altijd hoofdletter", uitleg: "Eerste woord van zin = ALTIJD hoofdletter, ook als het 'mijn' is." }],
+          niveaus: {
+            basis: "Begin (Mijn) + Nederland hoofdletter. December klein. A.",
+            simpeler: "In NL: maandnamen klein (december). Eigennamen hoofdletter (Nederland). Begin van zin altijd hoofdletter (Mijn). Optie A heeft alle 3 goed. = A.",
+            nogSimpeler: "NL: maand klein, land hoofdletter = A.",
+          },
+        },
       },
     ],
   },
@@ -593,6 +639,20 @@ const steps = [
           "-petje bestaat niet als achtervoegsel.",
           "-je past niet na -m. Spreek uit: 'boom-je' klinkt onnatuurlijk.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eindigt op M = -pje", tekst: "Boom eindigt op m. Na -m gebruik je verkleinwoord -pje (niet -tje, niet -je)." },
+          ],
+          woorden: [{ woord: "verkleinwoord", uitleg: "Kleine versie van een woord: boom → boompje, kat → katje." }],
+          theorie: "Verkleinwoord-regel: -je / -tje / -pje / -kje / -etje afhankelijk van laatste letter.\n• Eindigt op b/d/k/p/s/t → -je (boekje)\n• Eindigt op klinker / n / l / r → -tje (autootje, stoeltje)\n• Eindigt op M → -pje (boompje, raampje, filmpje)",
+          voorbeelden: [{ type: "m-pje", tekst: "boom → boompje, raam → raampje, film → filmpje, arm → armpje." }],
+          basiskennis: [{ onderwerp: "Spreek-truc", uitleg: "Zeg het hardop: 'boom-je' klinkt vreemd. 'Boom-pje' klinkt natuurlijk." }],
+          niveaus: {
+            basis: "Eindigt op m → -pje → boompje. A.",
+            simpeler: "Boom eindigt op M. Bij M gebruik je -pje als verkleinwoord. Dus boom + pje = boompje. = A.",
+            nogSimpeler: "M = pje = A.",
+          },
+        },
       },
       {
         q: "*Wat is het verkleinwoord van 'auto'?*",
@@ -604,6 +664,23 @@ const steps = [
           "Na een klinker komt geen -je maar -tje. Plus: er is een extra letter nodig vóór -tje.",
           "-tjepje bestaat niet — combinatie van twee uitgangen.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eindigt op klinker = -tje", tekst: "Auto eindigt op o. Na klinker = -tje." },
+            { titel: "Klank-bewaring", tekst: "'Auto-tje' zou 'autotje' worden = onnatuurlijk. Daarom EXTRA o toegevoegd: auto-o-tje = autootje." },
+          ],
+          woorden: [
+            { woord: "klinker-verdubbeling", uitleg: "Bij verkleinwoord van woord op klinker: extra klinker invoegen om klank te bewaren." },
+          ],
+          theorie: "Bij woord op KLINKER + verkleinwoord: extra klinker invoegen vóór -tje. auto → autootje, jaar → jaartje, baby → baby'tje (ander pad).",
+          voorbeelden: [{ type: "klinker", tekst: "auto → autootje, foto → fotootje, taxi → taxi'tje (apostrof)." }],
+          basiskennis: [{ onderwerp: "Spreek-truc", uitleg: "Zeg 'autootje' — voelt natuurlijk. 'Autotje' niet." }],
+          niveaus: {
+            basis: "Auto + tje + extra o = autootje. A.",
+            simpeler: "Auto eindigt op o (klinker). Bij verkleinwoord komt -tje, maar de o moet 'lang' blijven. Daarom extra o: a-u-t-o-o-tje. = A.",
+            nogSimpeler: "Autootje = A.",
+          },
+        },
       },
     ],
   },
