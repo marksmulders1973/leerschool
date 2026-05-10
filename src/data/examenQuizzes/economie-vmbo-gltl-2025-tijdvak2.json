@@ -6,7 +6,38 @@
     "jaar": 2025,
     "tijdvak": 2
   },
-  "teksten": {},
+  "teksten": {
+    "1": {
+      "titel": "onderzoek naar hoe belangrijk jonge mensen de",
+      "body": "financi'le activiteiten vinden\n\nGemiddelde scores van financi'le activiteiten op een schaal van\n1  helemaal niet belangrijk, tot 5  heel belangrijk.\n\nfinancieel gedrag                               2022  2023          2024\nsparen                                          3.96  3.98          4.04\nbijhouden financi'le administratie              3.99  3.98          3.96\nbudgetteren                                     3.31  3.31          3.40\nlenen voor uitgaven                             4.56  4.51          4.50\nterughoudendheid met uitgaven                   3.58  3.52          3.69\n\nDe hulp op de juiste plek",
+      "soort": "informatiebron"
+    },
+    "2": {
+      "titel": "`verloren geld' in Ha'ti in dollars",
+      "body": "jaar ontwikkelingshulp                   `verloren' geld in % indexcijfer\n                                                                         ontwikkelingshulp\n\n2021              888,96 miljoen dollar  0,41%        ...\n2022              936,88 miljoen dollar\n2023              969,63 miljoen dollar  0,42%        100\n\n                                         0,36%        103,5\n\nKwetsbaarheid van een open economie",
+      "soort": "informatiebron"
+    },
+    "3": {
+      "titel": "overzicht internationale handel Nederland in 2023",
+      "body": "exportwaarde goederen                                  483 miljard\nexportwaarde diensten                                  230 miljard\nimportwaarde goederen                                  424 miljard\nimportwaarde diensten                                  209 miljard\nnationaal inkomen Nederland                            790 miljard\n\n Salma timmert aan de weg",
+      "soort": "informatiebron"
+    },
+    "4": {
+      "titel": "zelfstandigenaftrek",
+      "body": "zelfstandigenaftrek\n\n       Elke zelfstandige krijgt in 2023 een vast bedrag van  5.030 als\n       zelfstandigenaftrek. De zelfstandigenaftrek wordt verhoogd met een\n       startersaftrek van  2.123 per jaar als u beginnend ondernemer bent.\n\nJan Modaal bestaat niet",
+      "soort": "informatiebron"
+    },
+    "5": {
+      "titel": "krantenkoppen met Jan Modaal",
+      "body": "krantenkop 1      Jan Modaal heeft steeds vaker recht op huur- en zorgtoeslag\nkrantenkop 2      Jan Modaal ziet rente-inkomsten verdampen\nkrantenkop 3      Veel zzp'ers verdienen het dubbele van Jan Modaal",
+      "soort": "informatiebron"
+    },
+    "6": {
+      "titel": "modaal inkomen in de periode 1970-2023",
+      "body": "jaar              indexcijfer  modaal inkomen\n1970              22            5.500\n2010              130           32.500\n2023              160          ...\n\nGT-0233-a-25-2-b               3/3                       lees verdeer inde",
+      "soort": "informatiebron"
+    }
+  },
   "questions": [
     {
       "q": "Begroten leidt tot afname van geldstress. Wat is een begroting?",
@@ -17,7 +48,7 @@
         "Je verwachte inkomsten en uitgaven op een rijtje zetten. In 2022 is er een campagne begonnen om jonge mensen bewuster te maken van hun financi'le activiteiten. Uit onderzoek zijn nu de volgende conclusies getrokken: 1 Jonge mensen zijn een financi'le administratie bijhouden belangrijker gaan vinden. 2 Jonge mensen zijn sparen belangrijker gaan vinden. 3 Jonge mensen zijn in 2024 budgetteren belangrijker gaan vinden. Gebruik informatiebron 1."
       ],
       "answer": 3,
-      "explanation": "Het juiste antwoord is D.",
+      "explanation": "Vraag Antwoord                                                                          Scores",
       "tekstNr": null,
       "vraagNr": 3
     },
@@ -43,7 +74,7 @@
         "Tot nivellering: het verandert in het voordeel van de lage inkomens. De hulp op de juiste plek Bij de beantwoording van de vragen in deze opgave moet je soms gebruikmaken van informatiebron 2 in de bijlage. Ha'ti is een ontwikkelingsland in Noord-Amerika. Ha'ti wordt regelmatig getroffen door aardbevingen en overstromingen. Ha'ti probeert elke keer weer te herstellen na een ramp. Bij dit herstel is Ha'ti vaak afhankelijk van hulp."
       ],
       "answer": 3,
-      "explanation": "Het juiste antwoord is D.",
+      "explanation": "Vraag Antwoord                                                                     Scores\n\n   De hulp op de juiste plek",
       "tekstNr": null,
       "vraagNr": 16
     },

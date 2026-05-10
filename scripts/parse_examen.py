@@ -295,11 +295,16 @@ def main():
 
     print(f"[1/4] PDF -> text...")
     opg_text = pdf_to_text(opg_pdf)
-    bij_text = pdf_to_text(bij_pdf)
     cor_text = pdf_to_text(cor_pdf)
+    # Bijlage is optioneel (wiskunde heeft er geen — download geeft dan 404 HTML)
+    try:
+        bij_text = pdf_to_text(bij_pdf)
+    except RuntimeError as e:
+        print(f"      [info] bijlage niet leesbaar — geen bronnen: {e}")
+        bij_text = ""
 
     print(f"[2/4] Parse bijlage...")
-    teksten = parse_bijlage(bij_text)
+    teksten = parse_bijlage(bij_text) if bij_text else {}
     print(f"      {len(teksten)} teksten gevonden: {sorted(teksten.keys())}")
 
     print(f"[3/4] Parse correctievoorschrift...")

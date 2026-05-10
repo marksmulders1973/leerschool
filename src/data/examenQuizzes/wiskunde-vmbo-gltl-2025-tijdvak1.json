@@ -1,0 +1,97 @@
+{
+  "id": "wiskunde-vmbo-gltl-2025-tijdvak1",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    }
+  ]
+}
