@@ -450,18 +450,72 @@ const steps = [
         options: ["Het antwoord dat ECHT NIET in de tekst staat","Het antwoord dat WEL in de tekst staat","Een random gok","Geen antwoord"],
         answer: 0,
         wrongHints: [null,"Vraagt 'NIET' juist het tegenovergestelde, of het normale antwoord?","Levert leeg laten je punten op? En leveren strafpunten op voor fouten?","Wat win je met geen antwoord — punten, of niks?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "NIET-vraag herkennen", tekst: "Het woordje 'NIET' verandert ALLES. Onderlijn het in je hoofd of op papier." },
+            { titel: "Wat zoek je?", tekst: "Bij 'wat staat NIET in de tekst': zoek het ENE antwoord dat NIET in de tekst voorkomt." },
+          ],
+          woorden: [
+            { woord: "NIET-vraag", uitleg: "Vraag waarin 'NIET' staat — vraagt het tegenovergestelde van een normale vraag." },
+          ],
+          theorie: "Bij een NIET-vraag: 3 antwoorden komen WEL in tekst voor (vink af). 1 komt NIET voor. Die ene is het juiste antwoord.",
+          voorbeelden: [{ type: "checklist", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' Loop alle 4 opties langs in tekst → 3 staan er, 1 niet → die niet-staande is je antwoord." }],
+          basiskennis: [{ onderwerp: "Lees vragen 2x", uitleg: "Vooral bij NIET — anders kies je het tegenovergestelde antwoord." }],
+          niveaus: {
+            basis: "NIET-vraag = zoek wat NIET in tekst staat. A.",
+            simpeler: "Stel: 'Welk dier zit NIET in deze dierentuin?'. Je kijkt welk dier in de tekst voorkomt en welk niet. Het ENE dier dat niet genoemd is = jouw antwoord. = A.",
+            nogSimpeler: "NIET = zoek de 1 die er niet is = A.",
+          },
+        },
       },
       {
         q: "Hoe vind je antwoord op een **inferentie-vraag** (tussen de regels)?",
         options: ["Letten op emoties en signaalwoorden in tekst","Letterlijk woord opzoeken","Gokken","Niet beantwoorden"],
         answer: 0,
         wrongHints: [null,"Staat het antwoord van een 'tussen-de-regels' vraag letterlijk in de tekst?","Werkt gokken zonder de tekst te bekijken bij dit soort vragen?","Levert een leeg antwoord punten op?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is inferentie?", tekst: "Het antwoord staat NIET letterlijk in de tekst. Je moet het AFLEIDEN uit hints." },
+            { titel: "Welke hints?", tekst: "Emotionele woorden, signaalwoorden (omdat, daarom), beschrijvingen van personages — die geven samen het antwoord." },
+          ],
+          woorden: [
+            { woord: "inferentie", uitleg: "Iets afleiden uit wat er staat — niet wat letterlijk staat." },
+            { woord: "tussen de regels lezen", uitleg: "De boodschap snappen ook al staat ze niet letterlijk." },
+          ],
+          theorie: "Bij inferentie-vragen ('waarom?' / 'wat denkt schrijver?' / 'hoe voelt personage?'): zoek HINTS in de tekst, niet letterlijke antwoorden. Letterlijk zoeken werkt niet.",
+          voorbeelden: [{ type: "afleiden", tekst: "Tekst: 'Sara liet haar hoofd hangen.' = inferentie: Sara is verdrietig. Niet letterlijk gezegd, wel duidelijk." }],
+          basiskennis: [{ onderwerp: "Letterlijk vs inferentie", uitleg: "Letterlijk = woord-voor-woord vinden. Inferentie = puzzelstukjes verbinden." }],
+          niveaus: {
+            basis: "Inferentie = let op emoties + signaalwoorden. A.",
+            simpeler: "Stel iemand zucht en kijkt op de klok. Zegt hij 'ik verveel me'? Nee — maar je SNAPT het wel. Dat is tussen de regels lezen. Bij inferentie-vragen werkt het zo. = A.",
+            nogSimpeler: "Hints zoeken = A.",
+          },
+        },
       },
       {
         q: "Wat is een **strikvraag**?",
         options: ["Bedoeld om je af te leiden van het juiste antwoord","Een grappige vraag","Een korte vraag","Een vraag in dialect"],
         answer: 0,
         wrongHints: [null,"Is een strikvraag bedoeld om je te laten lachen, of om je in de val te lokken?","Heeft een strikvraag iets met de lengte te maken, of met de inhoud?","Hoort dialect bij een strikvraag, of is het iets anders?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een strik?", tekst: "Een val die je vangt. Een strikvraag is bedoeld om je in de VAL te lokken — verleiden om het verkeerde antwoord te kiezen." },
+            { titel: "Hoe herken je 'm?", tekst: "Verwarrende formulering, NIET-woord verstopt, twee bijna-gelijke opties, of woorden uit tekst in foute volgorde." },
+          ],
+          woorden: [
+            { woord: "strikvraag", uitleg: "Vraag bedoeld om je te misleiden — je in een val te lokken." },
+            { woord: "afleiden", uitleg: "Iemand zijn aandacht ergens anders krijgen." },
+            { woord: "dialect", uitleg: "Streektaal — bv. Limburgs of Brabants." },
+          ],
+          theorie: "Veel-voorkomende strikken bij Cito:\n- 'NIET' verstopt in vraag\n- 2 antwoordopties bijna gelijk\n- Foute optie gebruikt LETTERLIJKE woorden uit tekst\n- Vraag draait om jouw mening (gebruik tekst-mening, niet eigen)",
+          voorbeelden: [{ type: "strik", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' — als je 'NIET' mist, kies je het verkeerde antwoord." }],
+          basiskennis: [{ onderwerp: "Lees zorgvuldig", uitleg: "Bij Cito: liever 30 sec extra lezen dan strik missen." }],
+          niveaus: {
+            basis: "Strikvraag = bedoeld om je af te leiden. A.",
+            simpeler: "Stel: een vraag is zo geformuleerd dat je het verkeerde antwoord kiest. Dat heet strikvraag. Niet om je te plagen — om te testen of je goed leest. = A.",
+            nogSimpeler: "Misleidend = strik = A.",
+          },
+        },
       },
     ],
   },
@@ -475,30 +529,115 @@ const steps = [
         options: ["doordat","echter","bijvoorbeeld","kortom"],
         answer: 0,
         wrongHints: [null,"Drukt 'echter' een oorzaak uit, of zet het iets tegenover iets anders?","Geeft 'bijvoorbeeld' een oorzaak, of een illustratie?","Sluit 'kortom' af, of geeft het een reden?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Synoniemen van 'omdat'", tekst: "'Doordat' is het meest direct synoniem. Allebei: oorzaak aanwijzen." },
+            { titel: "Andere opties", tekst: "Echter = tegenstelling, bijvoorbeeld = illustratie, kortom = samenvatten. Niet hetzelfde als 'omdat'." },
+          ],
+          woorden: [
+            { woord: "doordat", uitleg: "Wijst aan: door wat? = de oorzaak. Synoniem van 'omdat'." },
+          ],
+          theorie: "Oorzaak-signaalwoorden: omdat, doordat, want, vanwege, aangezien. Allemaal wijzen ze op de REDEN.",
+          voorbeelden: [{ type: "synoniem", tekst: "'Hij ging naar bed OMDAT hij moe was' = 'Hij ging naar bed DOORDAT hij moe was'." }],
+          basiskennis: [{ onderwerp: "Synoniemen kennen", uitleg: "Verschillende woorden voor hetzelfde — handig om te herkennen." }],
+          niveaus: {
+            basis: "'Doordat' = synoniem van 'omdat'. A.",
+            simpeler: "'Omdat' en 'doordat' betekenen praktisch hetzelfde: ze geven de REDEN aan. = A.",
+            nogSimpeler: "Doordat = omdat = A.",
+          },
+        },
       },
       {
         q: "Welke vraag is een **hoofdgedachte-vraag**?",
         options: ["Wat is de boodschap van de tekst?","Hoeveel kinderen zijn er in de klas?","Welk woord betekent X?","Wat staat er in regel 4?"],
         answer: 0,
         wrongHints: [null,"Gaat 'hoeveel kinderen' over de hele tekst, of over één klein feit?","Vraagt 'wat betekent X' naar de hele boodschap, of naar één woord?","Wijst 'regel 4' naar de boodschap van de tekst, of naar één plek?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoofdgedachte = boodschap", tekst: "Hoofdgedachte-vragen vragen naar de HELE tekst, niet één deel." },
+            { titel: "Welke optie past?", tekst: "'Boodschap van tekst' = over alles. Andere zijn details: aantal, woord, regel." },
+          ],
+          woorden: [
+            { woord: "boodschap", uitleg: "De grote betekenis van een tekst — wat de schrijver wil overbrengen." },
+          ],
+          theorie: "Hoofdgedachte-vragen herken je aan: 'boodschap', 'kerngedachte', 'wat is het belangrijkste', 'wat wil schrijver zeggen'. Allemaal gaan ze over de HELE tekst.",
+          voorbeelden: [{ type: "boodschap", tekst: "'Wat is de boodschap van het verhaal?' = hoofdgedachte. 'Hoe oud is Sara?' = detail." }],
+          basiskennis: [{ onderwerp: "Boodschap vs detail", uitleg: "Boodschap = hele tekst. Detail = klein deel." }],
+          niveaus: {
+            basis: "'Boodschap' = hoofdgedachte. A.",
+            simpeler: "Welke vraag gaat over de HELE tekst en niet één klein feit? 'Wat is de boodschap?' Andere vragen gaan over kleine details. = A.",
+            nogSimpeler: "Boodschap = hoofdgedachte = A.",
+          },
+        },
       },
       {
         q: "Wat doe je **EERST** bij een tekst met vragen?",
         options: ["Skimmen + vragen doorlezen","Hele tekst woord-voor-woord","Antwoorden gokken","Tekst overslaan"],
         answer: 0,
         wrongHints: [null,"Hoeveel tijd kost het om elke zin uit te pluizen — heb je dat?","Kun je antwoord geven zonder iets gelezen te hebben?","Krijg je punten als je geen antwoord geeft?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "EERST overzicht", tekst: "Niet meteen woord-voor-woord lezen. Eerst SKIM (snel overzicht) + lees de vragen." },
+            { titel: "Waarom?", tekst: "Als je weet wat je moet zoeken, lees je gerichter. Tijdsbesparing." },
+          ],
+          woorden: [
+            { woord: "skimmen", uitleg: "Snel overzicht, titels + eerste zinnen." },
+          ],
+          theorie: "Slimme leesvolgorde: 1) skim tekst, 2) lees vragen, 3) scan voor antwoorden. Zo werk je gericht ipv blind.",
+          voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen 30 sec = 1 min. Daarna scan je per vraag. Totaal sneller dan alles woord-voor-woord." }],
+          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft strakke tijd per onderdeel. Strategie wint." }],
+          niveaus: {
+            basis: "Skim + vragen lezen = eerste stap. A.",
+            simpeler: "Stel je krijgt een lange tekst. Begin je woord-voor-woord? Nee — eerst even snel scannen wat erin staat (skim) + bekijk de vragen. Daarna gericht zoeken. = A.",
+            nogSimpeler: "Skim eerst = A.",
+          },
+        },
       },
       {
         q: "Hoeveel tijd heb je ongeveer per tekst (3-5 vragen) op Cito?",
         options: ["~5-7 minuten","30 seconden","30 minuten","1 uur"],
         answer: 0,
         wrongHints: [null,"Lukt het je in een halve minuut om een tekst én 3-5 vragen te doen?","Krijg je echt 30 minuten voor maar één tekst?","Is een uur per tekst realistisch — of moet er meer mee in dat uur?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cito-tijd per tekst", tekst: "Bij begrijpend lezen krijg je ~5-7 minuten per tekst-met-vragen. Niet meer, niet minder." },
+            { titel: "Hoe verdeel je dat?", tekst: "~30 sec skim + ~30 sec vragen lezen + ~1 min per vraag voor scannen = past in 5-7 min." },
+          ],
+          woorden: [
+            { woord: "tijdsdruk", uitleg: "Het gevoel dat je moet opschieten om alle vragen op tijd te beantwoorden." },
+          ],
+          theorie: "Cito-eindtoets is timed. Begrijpend lezen heeft ~50 vragen totaal in ~75 min. Per vraag ~1.5 min — bij 5 vragen per tekst = 7.5 min per tekst.",
+          voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
+          basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
+          niveaus: {
+            basis: "5-7 min per tekst. A.",
+            simpeler: "Bij Cito: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Moet je strak op tijd werken. = A.",
+            nogSimpeler: "5-7 min = A.",
+          },
+        },
       },
       {
         q: "Wat helpt bij een NIET-vraag?",
         options: ["Onderlijn of markeer 'NIET'","Skip 'm","Antwoord zonder lezen","Vraag toelichting"],
         answer: 0,
         wrongHints: [null,"Verlies je punten als je 'm overslaat? Wat kan je zelf doen om de NIET niet te missen?","Werkt antwoorden zonder de tekst echt?","Mag dat tijdens een toets, en helpt het je verder?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Het probleem met 'NIET'", tekst: "'NIET' is klein, makkelijk te missen. Mis je 'm = kies je het tegenovergestelde antwoord = fout." },
+            { titel: "Oplossing", tekst: "Onderlijn of markeer 'NIET' direct als je het ziet — zo blijf je je bewust dat je het tegenovergestelde zoekt." },
+          ],
+          woorden: [
+            { woord: "markeren", uitleg: "Met potlood/pen omcirkelen of onderstrepen — om aandacht op iets te vestigen." },
+          ],
+          theorie: "Strategie bij NIET-vragen: (1) markeer 'NIET' (2) loop ALLE 4 opties langs in tekst (3) 3 staan er, 1 niet, die ene = antwoord.",
+          voorbeelden: [{ type: "markeren", tekst: "Vraag: 'Welk dier zit __NIET__ in de dierentuin?' Onderlijnen helpt je herinneren: ik zoek het ene dat MIST." }],
+          basiskennis: [{ onderwerp: "Tijdens toets schrijven mag", uitleg: "Bij Cito mag je het examenboekje markeren met potlood." }],
+          niveaus: {
+            basis: "Onderlijn 'NIET'. A.",
+            simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderlijn 'm — dan vergeet je niet dat je het TEGENOVERGESTELDE zoekt. = A.",
+            nogSimpeler: "Markeer NIET = A.",
+          },
+        },
       },
     ],
   },
