@@ -222,6 +222,20 @@ const steps = [
           "td-combinatie staat niet aan het eind van een Nederlands zelfstandig naamwoord.",
           "dt is een werkwoordsuitgang (zoals bij vindt). Bij een gewoon woord komt er één letter.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verleng-truc", tekst: "'Paard' eindigt met t-klank. Maak meervoud: 'paarden' — daar hoor je een D. Dus enkelvoud = D." },
+          ],
+          woorden: [{ woord: "verleng-truc", uitleg: "Maak woord langer (meervoud / lange vorm). De echte letter wordt dan hoorbaar." }],
+          theorie: "**Eind-letter-truc:** veel NL-woorden eindigen op stille D of T. Verleng het woord (meervoud / werkwoordvorm) — dan hoor je welke letter het echt is.\n• Paard → paarden = D\n• Hand → handen = D\n• Hond → honden = D\n• Krat → kratten = T",
+          voorbeelden: [{ type: "verlengen", tekst: "'Hond' klinkt als 'hont'. Maar verleng: 'honden' = D. Dus hond eindigt op D." }],
+          basiskennis: [{ onderwerp: "Niet 'td' of 'dt'", uitleg: "Bij gewone zelfstandige naamwoorden 1 letter, niet combinaties." }],
+          niveaus: {
+            basis: "Paard verleng = paarden = D. A.",
+            simpeler: "Hoor je 'paart' aan het eind? Maak 'm langer: 'paarden'. Daar hoor je duidelijk een D. Dus paard eindigt op D. = A.",
+            nogSimpeler: "Paarden = D = A.",
+          },
+        },
       },
       {
         q: "*Welke laatste letter heeft 'lief'?*",
@@ -233,6 +247,20 @@ const steps = [
           "Dubbele f is bij geen enkele lange vorm hier nodig.",
           "vt is geen normale eindcombinatie in het Nederlands.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "V wordt F aan het eind", tekst: "Lieve (lange vorm) heeft V. Maar AAN HET EIND van een woord wordt V → F. Dus 'lief'." },
+          ],
+          woorden: [{ woord: "v→f-regel", uitleg: "Aan het eind van een NL-woord wordt v als f geschreven. Z wordt s." }],
+          theorie: "**Eind-letter-regels:**\n• v wordt f: lieve → lief, brieven → brief\n• z wordt s: lezen → las (preteritum), vertel → vertelt\n\nBij verlengen kom je de echte letter weer tegen.",
+          voorbeelden: [{ type: "v→f", tekst: "Lieve → lief. Brieven → brief. Halve → half." }],
+          basiskennis: [{ onderwerp: "Verleng om te checken", uitleg: "Twijfel je? Maak 'm langer: 'lieve' = v. Aan het eind: f." }],
+          niveaus: {
+            basis: "V aan eind = F. Lief. A.",
+            simpeler: "'Lieve' (lange vorm) heeft V. Maar aan het eind van een woord wordt V altijd F. Dus 'lief'. = A.",
+            nogSimpeler: "Lieve → lief = A.",
+          },
+        },
       },
     ],
   },
@@ -458,6 +486,20 @@ const steps = [
           "Geen koppelteken nodig: er is geen klinker-botsing of andere reden.",
           "CamelCase wordt in het Nederlands niet gebruikt voor samenstellingen.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "NL = aaneen", tekst: "Samenstellingen in NL: ALTIJD aan elkaar. Geen spatie, geen koppelteken (tenzij klinker-botsing)." },
+          ],
+          woorden: [{ woord: "samenstelling", uitleg: "2 woorden samen tot 1 nieuw woord: zomer + vakantie = zomervakantie." }],
+          theorie: "**Hoofdregel NL:** samenstellingen aaneen. Verschil met Engels (where 'school book' los is). NL: schoolboek, fietsenrek, zomervakantie.",
+          voorbeelden: [{ type: "aaneen", tekst: "schoolboek, telefoonabonnement, wereldkampioenschap — allemaal 1 woord." }],
+          basiskennis: [{ onderwerp: "Engels ≠ NL", uitleg: "In Engels: spaties OK. In NL: NEE. Lange woorden zijn normaal." }],
+          niveaus: {
+            basis: "NL = aaneen → zomervakantie. A.",
+            simpeler: "Twee woorden samen = 1 woord in NL. Zomer + vakantie = zomervakantie. Geen spatie. = A.",
+            nogSimpeler: "Aaneen = A.",
+          },
+        },
       },
       {
         q: "*Hoe spel je het samengestelde woord voor 'eieren van een zee-dier' (klinker-botsing kan optreden)?*",
@@ -469,6 +511,23 @@ const steps = [
           "Een trema (¨) gebruik je niet bij samenstellingen, alleen bij gewone woorden zoals 'reëel'.",
           "Samenstellingen schrijf je aaneen, geen spatie. Maar bij klinker-botsing: koppelteken.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Klinker-botsing", tekst: "Zee + egel = 'zeeegel' = 3 e's achter elkaar = onleesbaar. Daarom: koppelteken." },
+          ],
+          woorden: [
+            { woord: "klinker-botsing", uitleg: "Wanneer 2 woorden samengevoegd 3+ klinkers naast elkaar krijgen." },
+            { woord: "trema", uitleg: "Twee puntjes (¨) op klinker. Alleen bij GEWONE woorden (reëel), niet bij samenstellingen." },
+          ],
+          theorie: "**Koppelteken-regel:** mag bij klinker-botsing in samenstellingen. Bv. zee-egel, na-apen, auto-onderdeel. Niet bij gewone woorden — daar gebruik je trema.",
+          voorbeelden: [{ type: "koppel", tekst: "zee-egel ✓, na-apen ✓, auto-ongeluk ✓ — bij samenstellingen met klinker-botsing." }],
+          basiskennis: [{ onderwerp: "Trema vs koppelteken", uitleg: "Trema = ¨ binnen woord (reëel). Koppelteken = - tussen woorden (zee-egel)." }],
+          niveaus: {
+            basis: "Klinker-botsing → koppelteken → zee-egel. A.",
+            simpeler: "Zee + egel = 3 e's = lastig lezen. Daarom plak je koppelteken: zee-egel. Geen trema (die is voor andere woorden). = A.",
+            nogSimpeler: "Botsing = - = A.",
+          },
+        },
       },
     ],
   },
