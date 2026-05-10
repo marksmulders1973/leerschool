@@ -543,11 +543,78 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           </div>
         )}
 
-        {/* Maand 1 snoei (visie-bewaker 2026-05-10): "Oude examens"-knop weg.
-            Twee parallelle examen-systemen (PDF + speelbaar) verwarren leerling
-            (10-agent Lens 3+8). Examen-paden blijven bereikbaar via de
-            Leren-tab + LearnPathsHub gefilterd. /examens-route blijft als
-            deep-link bestaan voor wie er bewust naartoe wil. */}
+        {/* Mark wens 2026-05-10: rol-specifieke direct-ingang.
+            PO (basisschool) → "🎯 Cito oefenen" (alle Cito-relevante vakken)
+            VO (middelbaar) → "🎓 Examen oefenen" (PDF-bibliotheek + speelbare examens)
+            Eén balk tegelijk per leerling-type. */}
+        {vakModus === "po" && onCitoOefenenSubject && (
+          <button
+            onClick={() => {
+              SoundEngine.play("click");
+              // Open Cito-toets met alle pijlers gemixt (geen filter)
+              onCitoOefenenSubject(null, "Alle Cito-vakken");
+            }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              width: "100%",
+              padding: "12px 14px",
+              marginBottom: 16,
+              background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,160,0,0.08))",
+              border: "1.5px solid rgba(255,213,79,0.50)",
+              borderRadius: 12,
+              cursor: "pointer",
+              color: "var(--color-text-strong)",
+              textAlign: "left",
+              fontFamily: "var(--font-body)",
+              minHeight: 44,
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">🎯</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffd54f" }}>
+                Cito oefenen
+              </div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
+                Cito-stijl vragen — alle vakken gemixt
+              </div>
+            </div>
+            <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
+          </button>
+        )}
+        {vakModus === "vo" && onExamens && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onExamens(); }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              width: "100%",
+              padding: "12px 14px",
+              marginBottom: 16,
+              background: "linear-gradient(135deg, rgba(167,139,250,0.13), rgba(167,139,250,0.05))",
+              border: "1px solid rgba(167,139,250,0.45)",
+              borderRadius: 12,
+              cursor: "pointer",
+              color: "var(--color-text-strong)",
+              textAlign: "left",
+              fontFamily: "var(--font-body)",
+              minHeight: 44,
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">🎓</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa" }}>
+                Examen oefenen
+              </div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
+                Echte VMBO/HAVO-examens — PDF en speelbaar
+              </div>
+            </div>
+            <span style={{ fontSize: 16, color: "rgba(167,139,250,0.75)" }} aria-hidden="true">›</span>
+          </button>
+        )}
 
         {/* 15-min sessie-indicator — koppeling met "Een kwartier per dag"
             slogan. Vult zich realtime; bij overschrijden van target geeft

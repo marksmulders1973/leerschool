@@ -78,12 +78,47 @@ const steps = [
         options: ["Hardop lezen","Echt snappen wat de tekst zegt en bedoelt","Snel lezen","Spelling oefenen"],
         answer: 1,
         wrongHints: [null,"Snap je een tekst beter als je 'm hardop leest, of als je nadenkt over de inhoud?","Gaat lezen om hoe snel je bent, of om wat je ervan begrijpt?","Heeft spelling te maken met begrijpen of met goed schrijven?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is het verschil?", tekst: "Hardop lezen, snel lezen, spelling — dat zijn ANDERE vaardigheden. Begrijpend lezen gaat om SNAPPEN." },
+            { titel: "Het kernwoord", tekst: "'Begrijpend' = van 'begrijpen' = snappen. Dus: lezen + snappen wat er staat." },
+          ],
+          woorden: [
+            { woord: "begrijpen", uitleg: "Snappen, doorhebben wat iets betekent." },
+            { woord: "vaardigheid", uitleg: "Iets dat je kunt door te oefenen." },
+          ],
+          theorie: "Drie soorten lezen: TECHNISCH (woorden ontcijferen), BEGRIJPEND (snappen wat er staat), STUDEREND (onthouden + toepassen). Bij Cito wordt vooral begrijpend getoetst.",
+          voorbeelden: [{ type: "kern", tekst: "Tekst lezen + er een vraag over kunnen beantwoorden = begrijpend gelezen." }],
+          basiskennis: [{ onderwerp: "Lezen ≠ snappen", uitleg: "Je kunt woorden hardop voorlezen zonder te snappen wat er staat." }],
+          niveaus: {
+            basis: "Begrijpend = snappen. Antwoord B.",
+            simpeler: "Het woord zegt het al: 'begrijpend' = begrijpen. Lezen + snappen wat er staat. = B.",
+            nogSimpeler: "Snappen = B.",
+          },
+        },
       },
       {
         q: "Op de Cito-toets — hoe wordt begrijpend lezen getest?",
         options: ["Korte zinnen","3-5 lange teksten + vragen erover","Alleen 1 woord per vraag","Liedjes zingen"],
         answer: 1,
         wrongHints: [null,"Test een toets begrijpend lezen met losse zinnen, of met echte teksten?","Kun je begrijpend lezen testen met maar één woord per vraag?","Hoort zingen bij begrijpend lezen — of bij iets anders?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zit op de Cito?", tekst: "Bij begrijpend lezen krijg je echte LEESTEKSTEN (200-300 woorden) met vragen erover. Niet losse zinnen." },
+            { titel: "Hoeveel?", tekst: "Meestal 3-5 teksten per onderdeel, 3-5 vragen per tekst." },
+          ],
+          woorden: [
+            { woord: "Cito-toets", uitleg: "Landelijke eindtoets in groep 8 — meet wat je in 8 jaar basisschool hebt geleerd." },
+          ],
+          theorie: "Cito test of je een ECHTE tekst kunt begrijpen — dus geen losse zinnetjes maar verhalen, krantenartikelen, instructies.",
+          voorbeelden: [{ type: "Cito-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
+          basiskennis: [{ onderwerp: "Cito = breed", uitleg: "Cito test rekenen, taal, studievaardigheden — niet alleen lezen." }],
+          niveaus: {
+            basis: "Cito = lange teksten + vragen. B.",
+            simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat Cito doet bij begrijpend lezen. = B.",
+            nogSimpeler: "Lange teksten + vragen = B.",
+          },
+        },
       },
     ],
   },
@@ -97,18 +132,73 @@ const steps = [
         options: ["Informatief","Betogend","Verhalend","Beschrijvend"],
         answer: 1,
         wrongHints: [null,"Wil een tekst met alleen feiten je iets laten geloven, of vooral iets weten?","Probeert een verhaal je te overtuigen, of wil het je vooral meenemen in een gebeurtenis?","Geeft 'beschrijven' een mening, of vooral details?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is overtuigen?", tekst: "Iemand zo praten dat hij JOUW MENING gaat geloven." },
+            { titel: "Welke tekst doet dat?", tekst: "Een BETOGENDE tekst — geeft een mening en argumenten." },
+          ],
+          woorden: [
+            { woord: "betogend", uitleg: "Een tekst met een mening + argumenten. Wil je overtuigen." },
+            { woord: "informatief", uitleg: "Geeft alleen feiten, geen mening." },
+            { woord: "verhalend", uitleg: "Vertelt een verhaal, wil je vermaken." },
+          ],
+          theorie: "3 tekstdoelen: informeren (feiten), betogen (mening), vertellen (verhaal). Alleen betogen wil je overtuigen.",
+          voorbeelden: [{ type: "betogen", tekst: "Opiniestuk in de krant 'Iedereen moet meer fruit eten omdat...' = betogend." }],
+          basiskennis: [{ onderwerp: "Doel van tekst", uitleg: "Elke tekst heeft een doel — weten, overtuigen of vermaken." }],
+          niveaus: {
+            basis: "Overtuigen = betogend. B.",
+            simpeler: "Stel je voor: iemand wil je laten geloven dat zonnepanelen goed zijn. Hij schrijft een tekst MET argumenten. Dat heet betogen. = B.",
+            nogSimpeler: "Mening + overtuigen = betogend = B.",
+          },
+        },
       },
       {
         q: "Wat is een typische **informatieve** tekst?",
         options: ["Een sprookje","Een krantenartikel met feiten","Een opiniestuk","Een liedjestekst"],
         answer: 1,
         wrongHints: [null,"Wat doet een sprookje vooral: feiten geven of een verhaal vertellen?","Geeft een opiniestuk vooral feiten, of probeert het je iets te laten denken?","Wat doet een liedjestekst vaak — informeren, overtuigen of een verhaal vertellen?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is informatief?", tekst: "Een tekst die FEITEN geeft. Geen mening, geen verhaal." },
+            { titel: "Welke optie past?", tekst: "Krantenartikel met feiten = pure informatie. Sprookje = verhalend. Opiniestuk = betogend. Liedjestekst = vaak verhalend." },
+          ],
+          woorden: [
+            { woord: "informatief", uitleg: "Geeft feiten + uitleg. Geen mening. Bv. encyclopedie, schoolboek, krantenartikel." },
+            { woord: "feit", uitleg: "Iets dat WAAR is, te bewijzen. Bv. 'Brussel is de hoofdstad van België'." },
+          ],
+          theorie: "Informatieve teksten herken je aan: veel feiten + cijfers + namen, geen 'ik vind', geen verhaal-personages.",
+          voorbeelden: [{ type: "informatief", tekst: "'De Eiffeltoren is 330 m hoog en werd in 1889 gebouwd.' = pure feiten = informatief." }],
+          basiskennis: [{ onderwerp: "Feit vs mening", uitleg: "Feit = bewijsbaar. Mening = iemands opvatting." }],
+          niveaus: {
+            basis: "Krantenartikel met feiten = informatief = B.",
+            simpeler: "Wat geeft alleen FEITEN? Krantenartikel. Sprookje = verhaal. Opiniestuk = mening. Liedje = vaak verhaal. = B.",
+            nogSimpeler: "Feiten = informatief = B.",
+          },
+        },
       },
       {
         q: "Welk woord helpt herkennen dat een tekst **betogend** is?",
         options: ["bijvoorbeeld","'fantastisch' of 'verschrikkelijk'","gisteren","de man"],
         answer: 1,
         wrongHints: [null,"Komt 'bijvoorbeeld' alleen voor als iemand je wil overtuigen, of ook bij gewone uitleg?","Wijst 'gisteren' naar een mening, of vooral naar wanneer iets gebeurde?","Vertelt 'de man' iets over de toon van een tekst, of is het neutraal?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoe herken je betogend?", tekst: "Door EMOTIONELE woorden — woorden die een mening uitdrukken." },
+            { titel: "Welke optie?", tekst: "'fantastisch' of 'verschrikkelijk' = sterke emotionele kleuring = mening = betogend. Andere opties zijn neutraal." },
+          ],
+          woorden: [
+            { woord: "emotioneel woord", uitleg: "Woord dat een gevoel of mening uitdrukt. Bv. 'fantastisch', 'vreselijk', 'geweldig'." },
+            { woord: "neutraal", uitleg: "Zonder mening of gevoel. Bv. 'gisteren', 'de man', 'het huis'." },
+          ],
+          theorie: "Bij betogende teksten kiest de schrijver bewust kleurrijke, emotionele woorden om JOU emotioneel mee te krijgen. Neutrale woorden geven geen mening.",
+          voorbeelden: [{ type: "emotioneel", tekst: "'Het is FANTASTISCH om te helpen' = mening (positief) → betogend." }],
+          basiskennis: [{ onderwerp: "Toon = signaal", uitleg: "Hoe een schrijver woorden kiest, vertelt vaak meer dan WAT hij zegt." }],
+          niveaus: {
+            basis: "Emotioneel woord = mening = betogend. B.",
+            simpeler: "Welk woord laat een GEVOEL zien? 'Fantastisch' (super positief) of 'verschrikkelijk' (super negatief). Die woorden gebruikt iemand alleen als hij een mening heeft. Dus = betogend. = B.",
+            nogSimpeler: "Emotie = mening = B.",
+          },
+        },
       },
     ],
   },
