@@ -926,6 +926,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ),
               label: "Ik ben student", sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
+              cta: { label: "🎓 Examen oefenen", onClick: () => handleFeatureClick("examens") },
             },
             // Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-tegel UIT hero.
             // Niet ICP. Code/route bestaat nog — link nu in footer-section onderaan.

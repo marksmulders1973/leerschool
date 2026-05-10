@@ -88,12 +88,48 @@ const steps = [
         options: ["Een toets aan het einde van groep 8 die advies geeft voor VO","Een toets om groep 8 over te doen","Een wereldwijd examen","Een huiswerktoets"],
         answer: 0,
         wrongHints: [null,"Wat denk je: zakt iemand voor de Cito, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat doet de toets?", tekst: "Geeft een ADVIES voor je vervolg-school (vmbo/havo/vwo). Niet om groep 8 over te doen." },
+            { titel: "Wanneer + voor wie?", tekst: "Februari, na schooladvies. Iedereen op de basisschool. Geen 'zakken'." },
+          ],
+          woorden: [
+            { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Vroeger 'Cito-eindtoets'. Geeft advies voor VO." },
+            { woord: "VO", uitleg: "Voortgezet Onderwijs — middelbare school." },
+          ],
+          theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA Cito (februari). Toets kan advies HOGER bijstellen, niet lager.",
+          voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + Cito havo → school MOET heroverwegen. Andersom (advies havo + Cito vmbo) → advies blijft havo." }],
+          basiskennis: [{ onderwerp: "Geen zakken", uitleg: "Iedereen mag door naar VO. Geen examen-stress." }],
+          niveaus: {
+            basis: "Cito = toets in groep 8 + advies VO. A.",
+            simpeler: "Aan het einde van groep 8 maak je een grote toets. Die helpt te bepalen welk soort middelbaar (vmbo/havo/vwo) bij jou past. = A.",
+            nogSimpeler: "Toets + VO-advies = A.",
+          },
+        },
       },
       {
         q: "Wat is **leidend** voor je vervolg-niveau?",
         options: ["Het schooladvies van je leerkracht","De Cito-toets","Je rapportcijfers","Je eigen voorkeur"],
         answer: 0,
         wrongHints: [null,"Wie kent jou al jaren en kijkt naar veel meer dan één toets?","Tellen losse cijfers zwaarder dan het oordeel van iemand die je al jaren ziet?","Mag jij zelf bepalen naar welk niveau je gaat, of denkt iemand met je mee?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is leidend?", tekst: "Het SCHOOLADVIES van je leerkracht is de basis. Die kent je al 8 jaar." },
+            { titel: "Cito-rol", tekst: "Cito kan het advies HOGER duwen, niet lager. Het is een check, geen overrule." },
+          ],
+          woorden: [
+            { woord: "leidend", uitleg: "De belangrijkste, doorslaggevende. Wat de basis is." },
+            { woord: "schooladvies", uitleg: "De juffrouw/meester adviseert welk niveau bij jou past — vmbo/havo/vwo." },
+          ],
+          theorie: "Sinds 2024: schooladvies leidend, Cito-toets als HEROVERWEGINGSMOGELIJKHEID bij hoger resultaat.",
+          voorbeelden: [{ type: "leidend", tekst: "Schooladvies = vmbo-tl. Cito = havo. School heroverweegt → advies meestal omhoog naar havo." }],
+          basiskennis: [{ onderwerp: "Vertrouw je leerkracht", uitleg: "8 jaar observatie weegt zwaarder dan 1 toets." }],
+          niveaus: {
+            basis: "Schooladvies = leidend. A.",
+            simpeler: "Wie weet het beste wat bij jou past? Iemand die je 1 dag toetst, of iemand die je al jaren elke dag ziet? Dat is je leerkracht. = A.",
+            nogSimpeler: "Schooladvies = A.",
+          },
+        },
       },
     ],
   },

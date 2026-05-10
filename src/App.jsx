@@ -1007,6 +1007,7 @@ export default function App() {
             if (feature === "scorebord") { setPage("leaderboard"); return; }
             if (feature === "leerkrachten") { setPage("teacher-home"); return; }
             if (feature === "cito") { setEntryContext("cito"); setPage("cito"); return; }
+            if (feature === "examens") { setPage("examens"); return; }
             if (feature === "tafels") { setPage("tafels"); return; }
             if (feature === "redactiesommen") { setPage("redactiesommen"); return; }
             if (feature === "begrijpend-lezen") { setPage("begrijpend-lezen"); return; }
