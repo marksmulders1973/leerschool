@@ -62,6 +62,25 @@ const steps = [
           "Eén letter kan geen lettergreep zijn — er moet minstens een klinker bij.",
           "Lopen heeft 2 lettergrepen, niet 1. Klap mee: lo - pen.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Klap-truc", tekst: "Klap mee bij elke klinker-klank: 'lo-pen' = 2 keer klappen = 2 lettergrepen." },
+            { titel: "Open of gesloten?", tekst: "De 'o' is LANG (lo-o-pen). Lange klank = open lettergreep = eindigt op klinker. Dus 'lo-' niet 'lop-'." },
+          ],
+          woorden: [
+            { woord: "lettergreep", uitleg: "Stukje van een woord dat je in 1 hap zegt." },
+            { woord: "open lettergreep", uitleg: "Eindigt op klinker (a/e/i/o/u). Klinker is dan LANG." },
+            { woord: "gesloten lettergreep", uitleg: "Eindigt op medeklinker. Klinker daarvoor is KORT." },
+          ],
+          theorie: "Open = klinker LANG (lo-pen, ma-nen). Gesloten = klinker KORT (kam-men, hop-pen). Bij 'lopen' = lange o = open lettergreep = lo-pen.",
+          voorbeelden: [{ type: "open", tekst: "ma-nen, ho-pen, vu-ren — allemaal lange klinker, 1 medeklinker erna." }],
+          basiskennis: [{ onderwerp: "Klinkers", uitleg: "a, e, i, o, u — de 5 klinkers. Rest = medeklinkers." }],
+          niveaus: {
+            basis: "Lange o → open lettergreep → lo-pen. A.",
+            simpeler: "Klap mee: 'lo - pen' = 2 keer. Eerst stuk 'lo' eindigt op de o (klinker, lang) → open lettergreep. = A.",
+            nogSimpeler: "lo-pen = A.",
+          },
+        },
       },
       {
         q: "*In het woord 'kammen' (= het meervoud van kam): is de eerste lettergreep 'kam' open of gesloten?*",
@@ -73,6 +92,23 @@ const steps = [
           "Halfopen bestaat niet als spellingbegrip.",
           "Eén van beide moet kloppen. Loop het rijtje: eindigt 'kam-' op een klinker of een medeklinker?",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verdeel 'kammen'", tekst: "kam-men. Eerste lettergreep = 'kam'." },
+            { titel: "Eindigt op?", tekst: "'kam' eindigt op de letter 'm'. M = medeklinker (geen klinker). Dus = gesloten." },
+          ],
+          woorden: [
+            { woord: "medeklinker", uitleg: "Alle letters behalve a, e, i, o, u (= klinkers)." },
+          ],
+          theorie: "Truc: kijk naar LAATSTE letter van de lettergreep. Klinker (aeiou) = open. Medeklinker = gesloten.",
+          voorbeelden: [{ type: "gesloten", tekst: "kam-men, hop-pen, bus-sen — alle eerste lettergreep eindigt op medeklinker = gesloten = korte klank ervoor." }],
+          basiskennis: [{ onderwerp: "Halfopen bestaat niet", uitleg: "In spelling: alleen 'open' of 'gesloten'. Niets ertussen." }],
+          niveaus: {
+            basis: "'kam' eindigt op m (medeklinker) = gesloten. A.",
+            simpeler: "Stel: 'kam-men'. Eerste stuk = 'kam'. Laatste letter = 'm'. M is geen klinker, dus medeklinker. Lettergreep eindigt op medeklinker = gesloten. = A.",
+            nogSimpeler: "Eindigt op m = gesloten = A.",
+          },
+        },
       },
     ],
   },
@@ -107,6 +143,27 @@ const steps = [
           "Het Nederlandse meervoud van 'pen' eindigt op -en, niet op -s.",
           "Niet bestaand woord. Meervoud = stam + en + verdubbeling van de eindmedeklinker bij een korte klank.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke klank?", tekst: "'pen' heeft KORTE e (zeg 't: 'pèn', niet 'peen'). Korte klank = medeklinker erna verdubbelen." },
+            { titel: "Pas de regel toe", tekst: "pen + verdubbel n + en = pen-n-en = pennen." },
+          ],
+          woorden: [
+            { woord: "korte klinker", uitleg: "Klank duurt kort: a (kat), e (pen), i (pit), o (pop), u (bus)." },
+            { woord: "lange klinker", uitleg: "Klank duurt lang: aa (kaas), ee (zee), oo (boom), uu (vuur)." },
+          ],
+          theorie: "**Verdubbel-regel:** korte klinker + meervoud op -en → verdubbel laatste medeklinker. Anders zou de klinker LANG worden ('penen' = pee-nen, klinkt anders).",
+          voorbeelden: [
+            { type: "kort+verdubbel", tekst: "kat → katten, bus → bussen, pop → poppen." },
+            { type: "lang", tekst: "kaas → kazen, boom → bomen — geen verdubbel, want klank is al lang." },
+          ],
+          basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord hardop. Klinkt de klinker kort (kèt) of lang (kaas)?" }],
+          niveaus: {
+            basis: "Pen = korte e → verdubbel n → pennen. A.",
+            simpeler: "Hoor je 'pen' (kort) of 'peen' (lang)? Kort. Bij kort: medeklinker dubbel. dus pen + n + en = pennen. = A.",
+            nogSimpeler: "Kort = dubbel = pennen = A.",
+          },
+        },
       },
       {
         q: "*Wat is het meervoud van 'boom'?*",
@@ -118,6 +175,26 @@ const steps = [
           "Bommen = van 'bom' (korte o). Dat is iets anders dan een boom!",
           "Het Nederlandse meervoud eindigt op -en, niet -s.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke klank?", tekst: "'boom' heeft LANGE oo. Lange klinker = 1 klinker is genoeg in open lettergreep." },
+            { titel: "Pas regel toe", tekst: "boom → bo-men: open lettergreep, 1 o is genoeg, geen dubbele oo." },
+          ],
+          woorden: [
+            { woord: "open lettergreep", uitleg: "Eindigt op klinker. Daar is 1 klinker genoeg voor lange klank." },
+          ],
+          theorie: "**Lange-klinker-regel:** in open lettergreep is 1 klinker genoeg. Dus 'boom' (gesloten, dubbele oo nodig) → 'bo-men' (open, 1 o genoeg).",
+          voorbeelden: [
+            { type: "lang", tekst: "boom → bomen, kaas → kazen, vuur → vuren — bij meervoud daalt de dubbele klinker naar 1." },
+          ],
+          basiskennis: [{ onderwerp: "Bom vs boom", uitleg: "Verschillende woorden! 'Bom' (korte o) → bommen. 'Boom' (lange oo) → bomen." }],
+          niveaus: {
+            basis: "Boom = lange oo → bo-men → 1 o = bomen. A.",
+            simpeler: "Boom heeft lange oo. Bij meervoud: bo-men. De eerste lettergreep 'bo-' eindigt op klinker (open) en daar is 1 o genoeg om lang te klinken. = A.",
+            nogSimpeler: "Lang = 1 = bomen = A.",
+          },
+        },
+
       },
     ],
   },
@@ -191,6 +268,20 @@ const steps = [
           "'Mijlk' bestaat ook niet. Melk is een gewoon woord met e.",
           "Klopt — geen instinker met ei/ij hier. Melk schrijf je gewoon zo.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Strikvraag", tekst: "De vraag suggereert ei/ij maar 'melk' heeft GEEN ei/ij. Gewoon korte 'e' (mèlk). Antwoord A: 'melk — geen ei/ij'." },
+          ],
+          woorden: [{ woord: "korte e", uitleg: "Klank zoals in 'pen' of 'mèlk' — niet de lange 'ee' van zee." }],
+          theorie: "Niet elk woord met e-klank heeft ei/ij. Lees zorgvuldig wat het woord ECHT is.",
+          voorbeelden: [{ type: "korte-e", tekst: "melk, hek, weg, heg, ster — allemaal korte e zonder ei/ij." }],
+          basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord. Hoor je 'mei' (ei-klank) of 'mè' (korte e)?" }],
+          niveaus: {
+            basis: "Melk = korte e, geen ei/ij. A.",
+            simpeler: "Strikvraag! De vraag noemt 'plein' (ei) maar het echte woord 'melk' heeft alleen een korte e. Geen ei, geen ij. = A.",
+            nogSimpeler: "Melk = gewoon e = A.",
+          },
+        },
       },
       {
         q: "*Welk woord is correct gespeld?*",
@@ -202,6 +293,21 @@ const steps = [
           "De y wordt in modern Nederlands niet meer gebruikt voor deze klank — wel ij.",
           "De combinatie 'ey' bestaat niet in het Nederlands.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "ij of ei?", tekst: "Vrijheid hoort tot de 'ij'-familie: vrij, vrije, vrijheid, bevrijden — allemaal ij." },
+            { titel: "Y of ey?", tekst: "In modern Nederlands: NOOIT y of ey voor deze klank. Alleen ij of ei." },
+          ],
+          woorden: [{ woord: "woordfamilie", uitleg: "Woorden die bij elkaar horen: vrij/vrije/vrijheid — allemaal dezelfde spelling." }],
+          theorie: "Vuistregel: kijk naar woordfamilie. 'Vrij' is bekend ij-woord → vrijheid ook ij.",
+          voorbeelden: [{ type: "familie", tekst: "blij → blijheid, klein → kleinheid, wijs → wijsheid — familie houdt zelfde spelling." }],
+          basiskennis: [{ onderwerp: "y bestaat haast niet", uitleg: "In modern Nederlands gebruiken we y bijna nooit. Alleen in leenwoorden (yoghurt, baby)." }],
+          niveaus: {
+            basis: "Vrijheid = ij. A.",
+            simpeler: "Familie van vrij/vrije/vrijgevig — allemaal IJ. Dus vrijheid ook IJ. = A.",
+            nogSimpeler: "Vrij = ij = A.",
+          },
+        },
       },
     ],
   },
@@ -235,6 +341,20 @@ const steps = [
           "Ouwto bestaat niet — geen 'w' in dit woord.",
           "Auwto bestaat ook niet. Het is gewoon: au + to.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bekend au-woord", tekst: "Auto is een van de meest gebruikte au-woorden. Onthouden! Geen w erin." },
+          ],
+          woorden: [{ woord: "leenwoord", uitleg: "Woord uit andere taal (auto = automobiel, Latijn). Vaak met au." }],
+          theorie: "Veel au-woorden komen uit Latijn/Frans: auto, augustus, paus, restaurant, applaus. Anders meestal ou.",
+          voorbeelden: [{ type: "au-woord", tekst: "auto, augustus, paus, applaus, blauw, saus — leren als rijtje." }],
+          basiskennis: [{ onderwerp: "Geen W", tekst: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'.", uitleg: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'." }],
+          niveaus: {
+            basis: "Auto = au-woord. A.",
+            simpeler: "Auto is een woord dat je VAAK ziet — gewoon onthouden: a-u-t-o. Geen w, geen ou. = A.",
+            nogSimpeler: "Auto = A.",
+          },
+        },
       },
       {
         q: "*Welke spelling klopt voor het tegenovergestelde van warm?*",
@@ -246,6 +366,22 @@ const steps = [
           "Kowd bestaat niet in Nederlands. We gebruiken 'ou' voor deze klank.",
           "Cowd is Engels (cold). Nederlands schrijft het anders.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Familie-truc", tekst: "Koud, kouder, koudst, koude — allemaal OU. Bekend rijtje." },
+          ],
+          woorden: [
+            { woord: "ou-woord", uitleg: "Veel-voorkomende NL-woorden met ou-klank." },
+          ],
+          theorie: "OU komt vaker voor in NL dan AU. Kerngroep: oud, koud, vrouw, hout, mouw, jou, nou. Bij twijfel: kies ou.",
+          voorbeelden: [{ type: "familie", tekst: "koud → kouder, koudst, koude — alles ou." }],
+          basiskennis: [{ onderwerp: "Engels ≠ Nederlands", uitleg: "Engelse cold (cowd) is niet de Nederlandse spelling." }],
+          niveaus: {
+            basis: "Koud = ou-woord. A.",
+            simpeler: "Tegengesteld van warm = koud. Bekend NL-woord met ou. Familie: koud, kouder, koudst — allemaal OU. = A.",
+            nogSimpeler: "Koud = A.",
+          },
+        },
       },
     ],
   },
@@ -277,6 +413,20 @@ const steps = [
           "Dubbele g + t bestaat niet in het Nederlands.",
           "Grakt zou met k zijn — maar de klank is een 'g/ch'-klank, geen k.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "T-truc", tekst: "G/ch-klank gevolgd door t-klank? Bijna altijd CHT. Gracht = gra + cht." },
+          ],
+          woorden: [{ woord: "cht-combinatie", uitleg: "g/ch + t-klank wordt geschreven als 'cht'. Vast." }],
+          theorie: "Vuistregel: hoor je een g/ch-klank gevolgd door t? Schrijf 'cht'. Voorbeelden: gracht, lucht, slecht, recht, vrucht, dochter.",
+          voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht voor t-klank." }],
+          basiskennis: [{ onderwerp: "Niet kt, niet ggt", uitleg: "De klank lijkt soms op k (grakt) of dubbele g (graggt) maar die spelling bestaat niet." }],
+          niveaus: {
+            basis: "G/ch + t-klank = cht → gracht. A.",
+            simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je altijd 'cht'. Gracht hoort daarbij. = A.",
+            nogSimpeler: "Cht = A.",
+          },
+        },
       },
     ],
   },
