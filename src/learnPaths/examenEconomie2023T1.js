@@ -33,6 +33,11 @@ const steps = [
         explanation: "Een subsidie van de gemeente is een **overdracht** van overheid naar burger zonder dat de burger er een productiefactor (arbeid, kapitaal, natuur, ondernemerschap) tegenover hoeft te stellen. Daarom heet het overdrachtsinkomen — net als kinderbijslag, AOW, of zorgtoeslag.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 4",
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'subsidie', 'overdracht', 'productiefactor'" },
+          { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3", why: "wat doet de overheid: belasting heffen + uitkeren via subsidie" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-4", why: "vier inkomenssoorten — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat krijgt het huishouden?", tekst: "De gemeente geeft GELD aan huishoudens die zonnepanelen kopen. Dat heet een subsidie." },
@@ -87,6 +92,11 @@ const steps = [
         explanation: "Importheffing geheven door BE → wordt betaald door BE-importeur (die haalt boter uit NL). Die importeur rekent de heffing door in zijn verkoopprijs aan de uiteindelijke BE-consument. Dus: Belgische importeur betaalt eerst, BE-consument betaalt indirect via hogere boterprijs. De Nederlandse overheid heeft hier niets mee te maken.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 13",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'importheffing', 'doorberekenen', 'beschermingsmaatregel'" },
+          { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F", why: "weten waar NL en BE liggen + landgrens-concept" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "import/export + heffingen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wie heft de importheffing?", tekst: "België — om de eigen Belgische boterboeren te beschermen tegen goedkope Nederlandse boter." },
@@ -140,6 +150,11 @@ const steps = [
         explanation: "Sociale beïnvloeding = via een persoonlijke band (vriend, familie, idool). Commerciële beïnvloeding = met een verkoop-doel, betaald door een producent (bedrijf), met winstoogmerk. Influencers vallen onder ALLEBEI: volgers ervaren een sociale band, MAAR het bedrijf betaalt de influencer om te verkopen → producent + winstoogmerk = ook commerciële beïnvloeding.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 36",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'intieme band', 'winstoogmerk', 'producent', 'consument'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "vraag-met-voorbeeld lezen + de echte vraag eruit halen" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "marketing/beïnvloeding/producent-rol — kern van deze examenvraag" },
+        ],
         // Pilot 2026-05-10: dynamisch uitlegpad — Mark wens (blauwdruk economie)
         uitlegPad: {
           // STAP 1 — Stap-voor-stap door de vraag
@@ -206,6 +221,10 @@ const steps = [
         explanation: "**Monopolistische concurrentie** = veel aanbieders + HETEROGENE producten (verschillende merken, kwaliteiten, design). Bv. kledingmerken, kappers, restaurants. Elke aanbieder heeft een 'klein monopolie' op zijn unieke product, maar concurreert met vele anderen. Past precies bij K2 bv.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 38",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'heterogeen', 'homogeen', 'concurrent', 'marktvorm'" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "4 marktvormen + macht op de markt — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat staat er over K2 bv?", tekst: "Twee feiten: (1) heterogene producten = elk product is anders, (2) veel concurrenten op de markt." },
@@ -259,6 +278,12 @@ const steps = [
         explanation: "Bij productie-uitbreiding ontstaan vaak SCHAALVOORDELEN: vaste kosten verdeeld over meer producten = lagere kostprijs per stuk. Als de verkoopprijs gelijk blijft maar de kostprijs daalt, stijgt de winstmarge per product (verkoopprijs − kostprijs).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 42",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F", why: "delen + vermenigvuldigen om kostprijs per stuk te berekenen" },
+          { id: "breuken-po", title: "Breuken", niveau: "po-1F", why: "vaste kosten ÷ aantal stuks (breuk-berekening)" },
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'winstmarge', 'kostprijs', 'schaalvoordeel'" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "omzet/kosten/winst + schaalvoordelen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat verandert er voor K2?", tekst: "K2 gaat MEER produceren (uitbreiding) en houdt de verkoopprijs GELIJK." },

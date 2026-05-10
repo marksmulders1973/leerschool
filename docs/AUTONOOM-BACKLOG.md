@@ -21,12 +21,25 @@ Voordat je nieuwe paden bouwt:
 
 ## Prioriteit 0.5 — Optie-C kennisgraaf (lopend, hoogste prio)
 
-### Fase 1 — Data-laag (start hier)
-- [ ] `scripts/auditKennisgraaf.js` schrijven — leest alle leerpaden + examen-paden, rapporteert: ontbrekende paden, broken `leerpadLink`, paden zonder `prerequisites`, examen-checks zonder `voorkennisKeten`.
-- [ ] Schema beslissing: `prerequisites: [{ id, title, niveau }]` als veld in leerpad-data (groep-niveau in `niveau`).
-- [ ] Schema beslissing: `voorkennisKeten: [{ id, title, niveau, why }]` als veld in elke examen-check.
-- [ ] Economie 8 examen-paden (2023-T1, T2, 2024-T1, T2, 2025-T1, T2) — voorkennis-keten invullen voor elke vraag.
-- [ ] Loggen welke voorkennis-paden ontbreken (= nieuwe paden voor backlog).
+### Fase 1 — Data-laag (in uitvoering)
+- [x] `scripts/auditKennisgraaf.mjs` geschreven — rapporteert broken links, ontbrekend voorkennisKeten, paden zonder prerequisites, examen-referenced paden zonder uitlegPad.
+- [x] Schema vastgelegd: `voorkennisKeten: [{ id, title, niveau, why }]` per examen-check.
+- [x] Economie 2023-T1 (5 vragen) voorzien van voorkennisKeten.
+- [ ] Economie 2023-T2 (?? vragen) — voorkennisKeten
+- [ ] Economie 2024-T1 — voorkennisKeten
+- [ ] Economie 2024-T2 — voorkennisKeten
+- [ ] Economie 2025-T1 — voorkennisKeten
+- [ ] Economie 2025-T2 — voorkennisKeten
+- [ ] Engels 2024-T1 (8 vragen) — voorkennisKeten
+- [ ] Engels 2025-T1 (9 vragen) — voorkennisKeten
+- [ ] Geschiedenis 2025-T1 (6 vragen) — voorkennisKeten
+- [ ] `prerequisites: [{ id, title, niveau }]` als veld in leerpad-data — toevoegen aan paden waar examen-vragen op leunen (top 10 uit audit).
+- [ ] Loggen welke voorkennis-paden ontbreken voor nieuwe paden in backlog.
+
+**Audit-bevindingen 2026-05-10**:
+- 9 examen-paden, 61 leerpadLink-verwijzingen, **0 broken loops** ✓
+- Top 3 meest-gerefereerde paden zonder uitlegPad: `pincode-buitenland-eu` (9×), `pincode-inkomen-welvaart` (7×), `pincode-ondernemen` (7×). Deze pincode-paden krijgen voorrang boven de PO-paden uit Prio 1.
+- Alle 90 leerpaden missen `prerequisites`-veld.
 
 ### Fase 2 — UI proof-of-concept
 - [ ] `src/components/VoorkennisKeten.jsx` minimale variant.
@@ -148,6 +161,7 @@ Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
 Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 
 - 2026-05-10 — Backlog opgesteld door Claude. CLAUDE.md uitgebreid met autonome-modus regels + peer-review cadens. Commit pending.
+- 2026-05-10 — Optie-C plan geformaliseerd (3 fases) + self-test-regels. Audit-script `scripts/auditKennisgraaf.mjs` werkt. Economie 2023-T1 (5 vragen) voorzien van `voorkennisKeten`. Audit-bevinding: pincode-paden zijn meest-referenced zonder uitlegPad — prio bijgesteld.
 
 ## Peer-review log
 
