@@ -212,7 +212,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
   return (
     <div style={styles.page}>
-      <Header title={`Hey ${userName}! 🌟`} subtitle="Klaar om te leren?" onBack={onBack} onHome={onHome} />
+      <Header title={`Hoi ${userName}`} subtitle="Welk kwartier wordt het vandaag?" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
         <KindAcceptBanner userName={userName} />
