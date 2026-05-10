@@ -103,9 +103,9 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         </div>
       )}
 
-      {/* NIVEAU-UITLEG (eerst — directe hulp) */}
+      {/* NIVEAU-UITLEG (eerst — directe hulp, default open) */}
       {niveauTekst && (
-        <Section title="💡 Korte uitleg">
+        <Section title="💡 Korte uitleg" defaultOpen={true}>
           <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
             <MdInline text={niveauTekst} />
           </div>
@@ -205,26 +205,37 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
   );
 }
 
-function Section({ title, children }) {
+function Section({ title, children, defaultOpen = false }) {
+  // A4 (10-agent mobile 2026-05-10): elke sectie collapsible. Bespaart ~70%
+  // scroll op mobile zonder inhoud te verliezen.
   return (
-    <div style={{
-      marginBottom: 14,
-      padding: "10px 14px",
-      background: "rgba(255,255,255,0.03)",
-      border: "1px solid rgba(255,255,255,0.06)",
-      borderRadius: 8,
-    }}>
-      <div style={{
+    <details
+      open={defaultOpen}
+      style={{
+        marginBottom: 14,
+        padding: "10px 14px",
+        background: "rgba(255,255,255,0.03)",
+        border: "1px solid rgba(255,255,255,0.06)",
+        borderRadius: 8,
+      }}
+    >
+      <summary style={{
         fontSize: 13,
         fontWeight: 700,
         color: "var(--color-text-strong)",
-        marginBottom: 8,
         fontFamily: "var(--font-display)",
+        cursor: "pointer",
+        listStyle: "none",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        minHeight: 32,
       }}>
-        {title}
-      </div>
-      <div style={{ fontSize: 14 }}>{children}</div>
-    </div>
+        <span>{title}</span>
+        <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>tik om te openen</span>
+      </summary>
+      <div style={{ fontSize: 14, marginTop: 10 }}>{children}</div>
+    </details>
   );
 }
 

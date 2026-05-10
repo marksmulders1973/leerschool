@@ -288,6 +288,16 @@ export default function App() {
     setPage("home");
   };
 
+  // A1 (10-agent circulariteit-review 2026-05-10): 🏠-knop moet ingelogde
+  // leerling/leerkracht naar hun PERSOONLIJKE hub sturen, niet naar de
+  // marketing-page. Lens 5: HomePage = landing/marketing, StudentHome = echte hub.
+  // Gast/uitgelogd → wel terug naar home (onboarding).
+  const goHome = () => {
+    if (userName && role === "teacher") { setPage("teacher-home"); return; }
+    if (userName && role) { setPage("student-home"); return; }
+    setPage("home");
+  };
+
   // Bottom-nav navigatie. "_oefenen" = special: skipt naam-step voor terugkerende
   // gebruikers en gaat naar student-home of teacher-home afhankelijk van rol.
   const handleBottomNavNavigate = (target) => {
@@ -781,7 +791,7 @@ export default function App() {
           userName={userName || "Speler"}
           authUser={authUser}
           onBack={() => setPage(learnPathReturnPage || "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(0);
@@ -809,7 +819,7 @@ export default function App() {
             setPage("curriculum");
           }}
           onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
-          onHome={() => { setLearnFilterSubject(null); setPage("home"); }}
+          onHome={() => { setLearnFilterSubject(null); goHome(); }}
         />
       )}
       {page === "my-mastery" && (() => {
@@ -827,7 +837,7 @@ export default function App() {
               setPage("learn-path");
             }}
             onBack={() => setPage("home")}
-            onHome={() => setPage("home")}
+            onHome={goHome}
           />
         );
       })()}
@@ -859,7 +869,7 @@ export default function App() {
             subjectIcon={cat.icon}
             userName={userName}
             onBack={() => { setMeeBezigCategory(null); setPage(backTarget); }}
-            onHome={() => { setMeeBezigCategory(null); setLearnPathReturnPage("home"); setPage("home"); }}
+            onHome={() => { setMeeBezigCategory(null); setLearnPathReturnPage("home"); goHome(); }}
             onGoOefenen={() => { setMeeBezigCategory(null); setPage("textbook"); }}
             relatedHubCount={relatedCount}
             relatedHubLabel={relatedLabel}
@@ -882,7 +892,7 @@ export default function App() {
             setPage("learn-path");
           }}
           onBack={() => setPage("learn-paths-hub")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "obliteratorDirect" && (
@@ -1032,7 +1042,7 @@ export default function App() {
           onManageClasses={() => setPage("class-manager")}
           onUpgrade={() => setPage("pro")}
           onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           schoolLogoUrl={schoolLogoUrl}
           onLogoUpdate={(url) => {
             setSchoolLogoUrl(url);
@@ -1058,7 +1068,7 @@ export default function App() {
           classes={classes}
           onSave={(updated) => setClasses(updated)}
           onBack={() => setPage("teacher-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "create-quiz" && (
@@ -1100,7 +1110,7 @@ export default function App() {
             setPage("quiz-preview");
           }}
           onBack={() => setPage("teacher-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "quiz-preview" && pendingQuizData && (
@@ -1112,7 +1122,7 @@ export default function App() {
             setPage("teacher-home");
           }}
           onBack={() => setPage("create-quiz")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "lobby" && (
@@ -1122,7 +1132,7 @@ export default function App() {
           isHost={role === "teacher"}
           onStart={() => startGame(currentQuiz, "multi")}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "student-home" && (
@@ -1157,7 +1167,7 @@ export default function App() {
             setPage("learn-paths-hub");
           }}
           onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}
           onViewResult={(r) => { setResults([r]); setCurrentQuiz(null); setPage("results"); }}
@@ -1212,13 +1222,13 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => { setPendingFeature(null); setPage("student-home"); }}
-          onHome={() => { setPendingFeature(null); setPage("home"); }}
+          onHome={() => { setPendingFeature(null); goHome(); }}
         />
       )}
       {page === "examens" && (
         <ExamensPage
           onBack={() => setPage("student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onPlayExamen={startExamenQuiz}
         />
       )}
@@ -1276,7 +1286,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage("student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "textbook" && (
@@ -1310,7 +1320,7 @@ export default function App() {
             }
           }}
           onBack={() => setPage("student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "play" && gameState && (
@@ -1320,7 +1330,7 @@ export default function App() {
           setGameState={setGameState}
           onFinish={finishGame}
           onQuit={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score }); const wasTafels = gameState?.quiz?.id?.startsWith("self-tafels"); const wasRedactie = gameState?.quiz?.id?.startsWith("self-redactie"); const wasBl = gameState?.quiz?.id?.startsWith("self-bl-"); const wasWs = gameState?.quiz?.id?.startsWith("self-ws-"); const wasSp = gameState?.quiz?.id?.startsWith("self-sp-"); const wasCito = gameState?.quiz?.id?.startsWith("cito-"); setGameState(null); setCurrentQuiz(null); setPage(wasTafels ? "tafels" : wasRedactie ? "redactiesommen" : wasBl ? "begrijpend-lezen" : wasWs ? "woordenschat" : wasSp ? "spelling" : wasCito ? "cito" : role === "teacher" ? "teacher-home" : "student-home"); }}
-          onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); setPage("home"); }}
+          onHome={() => { track("quiz_quit", { subject: gameState?.quiz?.subject, level: gameState?.quiz?.level, at_question: (gameState?.currentQ ?? 0) + 1, total_questions: gameState?.questions?.length, score_so_far: gameState?.score, via: "home" }); setGameState(null); setCurrentQuiz(null); goHome(); }}
           onLearnPathRequest={(req) => {
             // Geen specifieke leerpad-match voor deze vraag → "Mee bezig"-pagina
             // ("komt eraan / wordt aan gewerkt"). De pagina toont eventueel een
@@ -1360,7 +1370,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage(role ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "redactiesommen" && (
@@ -1384,7 +1394,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage(role ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "spelling" && (
@@ -1408,7 +1418,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage(role ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "woordenschat" && (
@@ -1432,7 +1442,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage(role ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "begrijpend-lezen" && (
@@ -1456,7 +1466,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onBack={() => setPage(role ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "results" && (
@@ -1477,7 +1487,7 @@ export default function App() {
             else if (currentQuiz?.id?.startsWith("book-")) setPage("textbook");
             else setPage(role === "teacher" ? "teacher-home" : "student-home");
           }}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onRetry={() => {
             track("quiz_retried", { subject: currentQuiz?.subject, level: currentQuiz?.level });
             if (currentQuiz) startGame(currentQuiz, "self");
@@ -1509,7 +1519,7 @@ export default function App() {
           quizzes={quizzes}
           progress={studentProgress}
           onBack={() => setPage("teacher-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "student-progress" && (
@@ -1517,7 +1527,7 @@ export default function App() {
           progress={studentProgress.filter((p) => p.player === userName)}
           userName={userName}
           onBack={() => setPage("student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
       {page === "leaderboard" && (
@@ -1526,7 +1536,7 @@ export default function App() {
           hallOfFame={hallOfFame}
           currentUser={userName}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onKampioenen={() => setPage("kampioenen")}
           onChallenge={(entry, questions) => {
             const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
@@ -1539,7 +1549,7 @@ export default function App() {
           currentUser={userName}
           hallOfFame={hallOfFame}
           onBack={() => setPage("leaderboard")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onChallenge={(entry, questions) => {
             const quiz = { id: "self-" + Date.now(), subject: entry.subject, level: entry.level, questionCount: questions.length, timePerQuestion: 0, topic: entry.topic || null, title: null, preGeneratedQuestions: questions };
             startGame(quiz, "self");
@@ -1551,7 +1561,7 @@ export default function App() {
           authUser={authUser}
           defaultPlan={role === "teacher" ? "teacher_pro" : "parent_pro"}
           onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           subscription={subscription}
           onLogin={handleGoogleLogin}
           onTrialStarted={(sub) => {
@@ -1565,7 +1575,7 @@ export default function App() {
           authUser={authUser}
           subscription={subscription}
           onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
           onUpgrade={() => setPage("pro")}
           onLogin={handleGoogleLogin}
         />
@@ -1573,7 +1583,7 @@ export default function App() {
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}
-          onHome={() => setPage("home")}
+          onHome={goHome}
         />
       )}
     <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>

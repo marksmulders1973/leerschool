@@ -16,6 +16,7 @@ import {
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
+import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 
 const C = {
   bg: "#0f1729",
@@ -394,10 +395,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setSelected(i);
     if (i === currentCheck.answer) {
       setLastWrongAnswer(null);
-      // Eerste-poging-correct telt als beheerst → adaptive-store wist deze check.
-      // Bij herhaalde poging (attempts > 1) is de check al fout geregistreerd
-      // via setMode("wrong"); blijft op de herhaal-lijst tot een schone ronde.
-      if (attempts === 1) adaptRecordRight(pathId, stepIdx, realCheckIdx);
+      // A2 (10-agent didactiek 2026-05-10): elke correcte poging telt als
+      // beheerst — ook ná wrongHint + uitlegpad + retry. Anders straft het
+      // systeem leerlingen die wel ECHT bijleren via de uitleg.
+      adaptRecordRight(pathId, stepIdx, realCheckIdx);
       // Bij begrijpend-lezen-vragen met `evidence`: pauzeer en toon aan de
       // leerling waar in de tekst het antwoord stond (didactiek-feedback Mark).
       if (currentCheck.evidence) {
@@ -506,11 +507,33 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   }
 
   if (mode === "allDone") {
+    // A6 (10-agent circulariteit 2026-05-10): score + volgend-pad-suggestie.
+    const totalChecks = (path.steps || []).reduce((n, s) => n + (s.checks?.length || 0), 0);
+    const wrongCount = Object.values(wrongPerStep || {}).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
+    const correctCount = Math.max(0, totalChecks - wrongCount);
+    // Volgende pad: zelfde subject + level, eerstvolgende met hogere id (alfa).
+    const nextPath = (() => {
+      const all = Object.values(ALL_LEARN_PATHS || {})
+        .filter((p) => p && p.id !== path.id && p.subject === path.subject && p.level === path.level)
+        .sort((a, b) => (a.id || "").localeCompare(b.id || ""));
+      const idx = all.findIndex((p) => (p.id || "") > (path.id || ""));
+      return idx >= 0 ? all[idx] : all[0] || null;
+    })();
+    // A9: voor Pincode/leer-paden — toon examen-vragen die hiernaar verwijzen.
+    const examRefs = (path.id || "").startsWith("examen-") ? [] : getExamRefsForPath(path.id);
     return (
       <div style={pageStyle()}>
         <Header onBack={() => setMode("overview")} onHome={onHome} title={path.title} emoji={path.emoji} />
         <div style={{ padding: "10px 18px 28px" }}>
-          <AllDone path={path} onHome={onHome} onBackToOverview={() => setMode("overview")} />
+          <AllDone
+            path={path}
+            onHome={onHome}
+            onBackToOverview={() => setMode("overview")}
+            score={{ correct: correctCount, total: totalChecks }}
+            nextPath={nextPath}
+            onPickPath={onPickPath}
+            examRefs={examRefs}
+          />
         </div>
       </div>
     );
@@ -970,6 +993,16 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             <button onClick={tryAgain} style={{ ...btnPrimary(), marginTop: 8 }}>
               🔁 Probeer opnieuw
             </button>
+            {/* A3 (10-agent circulariteit 2026-05-10): leerpadLink altijd zichtbaar
+                in wrong-mode — niet verstopt achter "Ik begrijp niet"-knop. */}
+            {currentCheck.leerpadLink && onPickPath && (
+              <button
+                onClick={() => onPickPath(currentCheck.leerpadLink.id)}
+                style={{ ...btnSecondary(), marginTop: 8 }}
+              >
+                📚 Open leerpad: {currentCheck.leerpadLink.title}
+              </button>
+            )}
           </div>
         )}
 
@@ -1331,21 +1364,89 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
   );
 }
 
-function AllDone({ path, onHome, onBackToOverview }) {
+function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs }) {
+  // A6: toon score + suggestie volgend examen-/leerpad.
+  const pct = score?.total > 0 ? Math.round((score.correct / score.total) * 100) : null;
+  const isExamen = (path.id || "").startsWith("examen-");
   return (
     <div style={{ textAlign: "center", padding: "30px 12px" }}>
       <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
       <h2 style={{ fontFamily: "var(--font-display)", fontSize: 26, color: "var(--color-text-strong)", marginBottom: 8 }}>
         Knap gedaan!
       </h2>
-      <div style={{ color: C.text, fontSize: 16, marginBottom: 24, lineHeight: 1.5 }}>
+      <div style={{ color: C.text, fontSize: 16, marginBottom: 16, lineHeight: 1.5 }}>
         Je hebt het hele leerpad <strong>{path.title}</strong> doorlopen.
       </div>
-      <button onClick={onBackToOverview} style={btnSecondary()}>
+      {score && score.total > 0 && (
+        <div style={{
+          marginBottom: 20,
+          padding: "12px 16px",
+          background: pct >= 70 ? "rgba(0,200,83,0.10)" : "rgba(255,213,79,0.10)",
+          border: `1px solid ${pct >= 70 ? "rgba(0,200,83,0.40)" : "rgba(255,213,79,0.40)"}`,
+          borderRadius: 12,
+          color: "var(--color-text-strong)",
+          fontSize: 15,
+          fontWeight: 700,
+        }}>
+          Je had <span style={{ fontSize: 20 }}>{score.correct}</span> van de {score.total} vragen meteen goed
+          <span style={{ display: "block", fontSize: 12, fontWeight: 500, marginTop: 2, color: C.muted }}>
+            {pct}% — {pct >= 90 ? "uitstekend" : pct >= 70 ? "goed bezig" : "blijf herhalen"}
+          </span>
+        </div>
+      )}
+      {nextPath && onPickPath && (
+        <button
+          onClick={() => onPickPath(nextPath.id)}
+          style={{ ...btnPrimary(), marginBottom: 8, width: "100%" }}
+        >
+          {isExamen ? "🎓 Volgend examen ▶" : "📚 Volgend leerpad ▶"} {nextPath.title}
+        </button>
+      )}
+      {/* A9: voor Pincode/leer-paden — toon examen-vragen die naar dit pad linken. */}
+      {Array.isArray(examRefs) && examRefs.length > 0 && onPickPath && (
+        <div style={{
+          marginTop: 14,
+          padding: "12px 14px",
+          background: "rgba(255,213,79,0.08)",
+          border: "1px solid rgba(255,213,79,0.40)",
+          borderRadius: 12,
+          textAlign: "left",
+        }}>
+          <div style={{ fontSize: 13, fontWeight: 700, color: "#ffd54f", marginBottom: 8, fontFamily: "var(--font-display)" }}>
+            🎓 {examRefs.length} echte examenvra{examRefs.length === 1 ? "ag" : "gen"} over deze stof
+          </div>
+          {Array.from(new Set(examRefs.map((r) => r.examPathId))).slice(0, 3).map((examPathId) => {
+            const ref = examRefs.find((r) => r.examPathId === examPathId);
+            const count = examRefs.filter((r) => r.examPathId === examPathId).length;
+            return (
+              <button
+                key={examPathId}
+                onClick={() => onPickPath(examPathId)}
+                style={{
+                  width: "100%",
+                  marginTop: 6,
+                  padding: "8px 12px",
+                  background: "rgba(255,213,79,0.12)",
+                  border: "1px solid rgba(255,213,79,0.30)",
+                  borderRadius: 8,
+                  color: "var(--color-text-strong)",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  textAlign: "left",
+                  cursor: "pointer",
+                }}
+              >
+                ▶ {ref.examPathTitle} ({count} {count === 1 ? "vraag" : "vragen"})
+              </button>
+            );
+          })}
+        </div>
+      )}
+      <button onClick={onBackToOverview} style={{ ...btnSecondary(), width: "100%" }}>
         📋 Terug naar overzicht
       </button>
-      <button onClick={onHome} style={{ ...btnPrimary(), marginTop: 8 }}>
-        Terug naar home
+      <button onClick={onHome} style={{ ...btnSecondary(), marginTop: 8, width: "100%" }}>
+        🏠 Naar mijn hub
       </button>
     </div>
   );
