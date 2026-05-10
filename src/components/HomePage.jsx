@@ -402,11 +402,13 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [level, setLevel] = useState("");
   const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
-  // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal en welkom-video
-  // standaard UIT. Eerste-bezoek-overload (3 modals op elkaar) verwarde ICP-ouder.
-  // State + code blijft voor mogelijke "rondleiding"-knop later.
+  // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal UIT.
+  // Welkom-video TERUG (Mark wens) — alleen 1× bij allereerste bezoek
+  // via localStorage `lk_zag_intro_video`. Daarna nooit meer.
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const [showWelcomeVideo, setShowWelcomeVideo] = useState(false);
+  const [showWelcomeVideo, setShowWelcomeVideo] = useState(() => {
+    try { return !localStorage.getItem("lk_zag_intro_video"); } catch { return false; }
+  });
   const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(true);
   const closeWelcomeVideo = () => {
     try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
