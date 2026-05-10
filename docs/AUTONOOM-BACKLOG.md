@@ -19,6 +19,33 @@ Voordat je nieuwe paden bouwt:
 - [ ] Check per id: bestaat `src/learnPaths/<id>.js`? Zo nee → log in backlog als "ontbrekend pad voor examen-link".
 - [ ] Voor elk leerpad in lijst Prio 1: bestaan er examenvragen die ernaar linken? Zo ja → `examenLookup.js` regenereren als nodig en uitlegPad-prioriteit verhogen.
 
+## Prioriteit 0.5 — Optie-C kennisgraaf (lopend, hoogste prio)
+
+### Fase 1 — Data-laag (start hier)
+- [ ] `scripts/auditKennisgraaf.js` schrijven — leest alle leerpaden + examen-paden, rapporteert: ontbrekende paden, broken `leerpadLink`, paden zonder `prerequisites`, examen-checks zonder `voorkennisKeten`.
+- [ ] Schema beslissing: `prerequisites: [{ id, title, niveau }]` als veld in leerpad-data (groep-niveau in `niveau`).
+- [ ] Schema beslissing: `voorkennisKeten: [{ id, title, niveau, why }]` als veld in elke examen-check.
+- [ ] Economie 8 examen-paden (2023-T1, T2, 2024-T1, T2, 2025-T1, T2) — voorkennis-keten invullen voor elke vraag.
+- [ ] Loggen welke voorkennis-paden ontbreken (= nieuwe paden voor backlog).
+
+### Fase 2 — UI proof-of-concept
+- [ ] `src/components/VoorkennisKeten.jsx` minimale variant.
+- [ ] Inbouwen in 1 examenvraag (V36 economie 2023-T1).
+- [ ] Self-test + Playwright screenshot.
+- [ ] **Stop hier — wacht op Mark + reviewer-agents akkoord voor fase 3.**
+
+### Fase 3 — Volledig (alleen na groen licht)
+- [ ] UI uitrollen naar alle examenvragen (start: rest van economie).
+- [ ] Adaptieve `zwakstePadDetector.js` — bij fout op check zoekt laagste pad waar gebruiker nog scoort.
+- [ ] **Examen-modus check**: VoorkennisKeten alleen renderen als `mode === "oefen"`.
+- [ ] Engels examenvragen (3 paden) voorzien.
+- [ ] Geschiedenis examenvragen (1 pad) voorzien.
+
+### Open vragen aan Mark (niet blokkerend voor fase 1)
+- [ ] Antwoordmodel/correctievoorschrift per examen scrapen of handmatig? (nodig voor exacte deelvaardigheids-mapping)
+- [ ] Voorkennis-data persistent in Supabase of localStorage? (privacy-impact)
+- [ ] Demotivatie-framing voor kind: "X gaps" vs "nog Y stappen"?
+
 ---
 
 ## Prioriteit 1 — uitlegPad voor bestaande paden zonder

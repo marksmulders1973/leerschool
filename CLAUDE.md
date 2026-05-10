@@ -24,7 +24,35 @@
 Mark heeft Claude Code 2 weken **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken.
 
 ### Doel
-Cito-toets + examens versterken: meer leerpaden, meer authentieke examen-vragen, alle vragen voorzien van uitlegPad.
+Cito-toets + examens versterken via **kennisgraaf** (zie "Kern-flow"). Concreet: optie-C-implementatie (data + UI) van voorkennis-keten. Daarnaast doorgaan met uitlegPad-werk.
+
+### Optie-C plan (kennisgraaf data + UI)
+
+**Fase 1 — Data-laag (~2-3 sessies)**
+- Nieuw veld `prerequisites: [{ id, title, niveau }]` in leerpad-data
+- Nieuw veld `voorkennisKeten: [{ id, title, niveau, why }]` in examen-check (lijst van basis → top)
+- Audit-script `scripts/auditKennisgraaf.js` — toont gaps (linken naar niet-bestaand pad)
+- Per vak (start: economie) alle examen-vragen voorzien van voorkennis-keten
+
+**Fase 2 — UI proof-of-concept (~1 sessie)**
+- `VoorkennisKeten.jsx` component op 1 examenvraag (V36 economie 2023-T1)
+- Toont keten visueel onder/naast de vraag
+- Niet adaptief — gewoon zichtbaar maken
+- Self-test + screenshot
+- Stop voor reviewer-agents akkoord
+
+**Fase 3 — Volledig (~2-3 sessies)**
+- UI uitrollen naar alle examenvragen
+- Adaptieve "zwakste-pad-detector" — bij fout op check stuurt systeem naar laagste pad waar gebruiker nog wél scoort
+- **Examen-modus respecteren**: voorkennis-keten alleen tonen in oefen-modus, NIET in examen-modus
+
+### Self-test tussen taken (verplicht)
+Na elke afgewerkte taak voor je verder gaat:
+1. **Build groen**: `npx vite build` faalt = stoppen + fixen.
+2. **Eigen review**: open random vraag uit wat je net wijzigde. Maak hem expliciet fout. Gaat de uitlegPad-flow open zoals bedoeld?
+3. **Bij UI-wijziging**: Playwright screenshot van de nieuwe staat + zelf bekijken of het past bij STOPLIST + Leerkwartier-test.
+4. **Bij data-wijziging**: audit-script run (`scripts/auditKennisgraaf.js` zodra die bestaat) — geen broken `leerpadLink` of `prerequisites`.
+5. **Backlog bijwerken**: vink af + 1-regel sessie-log.
 
 ### Hoe werken
 1. **Lees eerst** `docs/AUTONOOM-BACKLOG.md` — daar staat de prioriteits-volgorde + status van vorige sessies.
