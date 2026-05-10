@@ -81,6 +81,31 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 1",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat moet je vergelijken?", tekst: "In de tabel: 'waarde export' vs 'waarde import' per jaar (2010, 2016, 2017)." },
+            { titel: "Reken per jaar", tekst: "2010: export 854 vs import 847 → export HOGER. 2016: 1.046 vs 1.014 → export HOGER. 2017: 835 vs 921 → import HOGER." },
+            { titel: "Welke optie past?", tekst: "Optie C zegt 'in 2017 export lager dan import' = correct ✓. Andere opties spreken de tabel tegen." },
+          ],
+          woorden: [
+            { woord: "export", uitleg: "Goederen + diensten die een land VERKOOPT aan buitenland → geld komt binnen." },
+            { woord: "import", uitleg: "Goederen + diensten die een land KOOPT in buitenland → geld gaat eruit." },
+            { woord: "handelsbalans", uitleg: "Verschil export − import. Positief = overschot, negatief = tekort." },
+            { woord: "miljoen (mln)", uitleg: "1.000.000. In de tabel: 854 = €854 miljoen." },
+          ],
+          theorie: "**Hoe lees je een jaar-vergelijkings-tabel?**\n\n1. Vind kolommen voor de jaren\n2. Vind rij voor de gevraagde data (export, import)\n3. Lees waarde per jaar\n4. Vergelijk per jaar (export vs import)\n\nIn dit examen: 2017 was een tegenvaller voor Sint-Maarten (Irma-orkaan trof eilanden 2017) → minder toerisme → minder export.",
+          voorbeelden: [
+            { type: "berekening", tekst: "2010: export 854 − import 847 = +7 (overschot). 2017: export 835 − import 921 = −86 (tekort)." },
+          ],
+          basiskennis: [
+            { onderwerp: "Tabel-lezen", uitleg: "Bovenste rij = kolom-koppen (jaren). Linker kolom = rij-titels. Snijpunt = de waarde." },
+          ],
+          niveaus: {
+            basis: "2017: export 835 < import 921 → C.",
+            simpeler: "Vergelijk in elk jaar export en import. 2017 is het enige jaar waar import hoger was — daar valt Sint-Maarten in een tekort.",
+            nogSimpeler: "Alleen 2017: export < import = C.",
+          },
+        },
       },
     ],
   },
@@ -109,6 +134,31 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 2",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is reëel inkomen?", tekst: "Inkomen GECORRIGEERD voor inflatie. Vertelt je niet hoeveel euro, maar wat dat geld waard is qua koopkracht." },
+            { titel: "Wat moet je dus aftrekken?", tekst: "De prijsstijging — dus 'de veranderde prijzen' (= inflatie)." },
+            { titel: "Andere opties?", tekst: "Belasting (over netto), inkomensverdeling (Lorenz/Gini) en zelfvoorziening hebben niets te maken met reëel vs nominaal." },
+          ],
+          woorden: [
+            { woord: "nominaal inkomen", uitleg: "Inkomen in EURO'S. Wat je op je rekening krijgt." },
+            { woord: "reëel inkomen", uitleg: "Nominaal inkomen MIN inflatie. Vertelt wat je echt kan kopen — = koopkracht." },
+            { woord: "inflatie", uitleg: "Gemiddelde prijsstijging per jaar. CPI = consumentenprijsindex." },
+            { woord: "nationaal inkomen", uitleg: "Totale verdiende inkomen van alle inwoners + bedrijven van een land per jaar." },
+          ],
+          theorie: "**Reëel = nominaal − inflatie**\n\nVoorbeeld:\n• Nominaal inkomen vorig jaar: €40.000\n• Nominaal inkomen dit jaar: €42.000 (+5%)\n• Inflatie: 4%\n• Reëel: ~+1% (groei)\n\nWil je INTERnationaal of over jaren vergelijken? Gebruik REËEL — anders worden cijfers door inflatie misleidend.",
+          voorbeelden: [
+            { type: "Sint-Maarten", tekst: "Nominaal inkomen 2010: 798 mln. 2017: 934 mln. Lijkt groei. Maar reëel: 746 → 798 mln. Veel kleinere groei dan nominaal suggereert." },
+          ],
+          basiskennis: [
+            { onderwerp: "Indexcijfers", uitleg: "Manier om verandering in % uit te drukken. CPI = 100 in basisjaar; CPI = 105 = 5% prijsstijging." },
+          ],
+          niveaus: {
+            basis: "Reëel = gecorrigeerd voor PRIJZEN (inflatie). Antwoord C.",
+            simpeler: "Stel: jij verdiende €1.000, nu €1.050 (+5%). Maar boodschappen zijn 4% duurder. Reëel: je hebt 1% méér koopkracht. We trekken 'veranderde prijzen' eraf om reëel te krijgen.",
+            nogSimpeler: "Reëel = nominaal − inflatie = veranderde prijzen = C.",
+          },
+        },
       },
     ],
   },
@@ -137,6 +187,33 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 4",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie KOOPT?", tekst: "De toerist (buitenlander) — geld komt vanuit het buitenland." },
+            { titel: "Waar wordt gekocht?", tekst: "Op Sint-Maarten — bij een lokaal bedrijf." },
+            { titel: "Goed of dienst?", tekst: "Een SOUVENIR = tastbaar voorwerp = goed. Niet een dienst (=ervaring)." },
+            { titel: "Export of import voor Sint-Maarten?", tekst: "Geld komt SX BINNEN → EXPORT van goederen DOOR Sint-Maarten. Antwoord B." },
+          ],
+          woorden: [
+            { woord: "goed", uitleg: "Tastbaar voorwerp dat je vast kunt pakken: souvenir, kleding, eten." },
+            { woord: "dienst", uitleg: "Niet-tastbaar: hotelovernachting, kapper, vervoer, advies." },
+            { woord: "export van goederen", uitleg: "Een land verkoopt voorwerpen aan buitenlandse kopers. Hier: SX-bedrijf verkoopt souvenir aan NL-toerist." },
+            { woord: "export van diensten", uitleg: "Een land verkoopt diensten (toerisme, transport) aan buitenland. Bv. NL-toerist die in een SX-hotel slaapt." },
+          ],
+          theorie: "**Vier combinaties: export/import × goed/dienst:**\n\n• Toerist koopt souvenir = export van GOED door SX\n• Toerist boekt hotel = export van DIENST door SX\n• SX-bedrijf koopt cement uit NL = import van GOED door SX\n• SX-bedrijf huurt NL-consultant = import van DIENST door SX\n\nKijk altijd: 1) wie KOOPT (buitenlander = export voor verkoopland), 2) tastbaar of niet (goed/dienst).",
+          voorbeelden: [
+            { type: "souvenir", tekst: "NL-toerist Lisa koopt SX-mok (€8). SX-bedrijf krijgt €8 van NL-geld. Voor SX = export van goederen." },
+            { type: "hotelovernachting", tekst: "Lisa slaapt 5 nachten in SX-hotel (€500). Voor SX = export van DIENSTEN." },
+          ],
+          basiskennis: [
+            { onderwerp: "Vanuit wiens kant?", uitleg: "Bij export/import-vragen: bedenk altijd OF je vanuit het verkoopland of koopland kijkt. De vraag specificeert vaak 'door land X'." },
+          ],
+          niveaus: {
+            basis: "Souvenir = goed. Toerist koopt in SX = SX verkoopt = export goed door SX. Antwoord B.",
+            simpeler: "Een souvenir kun je vasthouden (= goed, niet dienst). De toerist KOOPT van een SX-winkel → SX VERKOOPT aan buitenland → dat heet export. Dus: export van goederen.",
+            nogSimpeler: "Souvenir = goed + verkocht aan buitenlander = export goed = B.",
+          },
+        },
       },
     ],
   },
@@ -164,6 +241,33 @@ const steps = [
         explanation: "De gemeente verzorgt o.a. paspoorten, ID-kaarten en rijbewijzen — dat zijn lokale burger­zaken. Dijken = waterschap, toeslagen = Belastingdienst, AOW = SVB/Rijksoverheid.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 8",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke overheidslagen zijn er?", tekst: "Rijk (Den Haag), provincie, gemeente, waterschap. Elke laag heeft eigen taken." },
+            { titel: "Wat doet de gemeente?", tekst: "Lokale burgerzaken: paspoorten, ID-kaarten, rijbewijzen, vergunningen, OZB innen, vuilnisophalen, jeugdzorg." },
+            { titel: "Loop opties langs", tekst: "Dijken = waterschap ✗. Paspoort/ID/rijbewijs = gemeente ✓. Toeslagen = Belastingdienst (Rijk) ✗. AOW = SVB (Rijk) ✗." },
+          ],
+          woorden: [
+            { woord: "Rijksoverheid", uitleg: "Centrale overheid in Den Haag. Doet AOW, defensie, onderwijs (deels), belastingen." },
+            { woord: "gemeente", uitleg: "Lokale overheid (~340 in NL). Doet paspoorten, ID, rijbewijzen, jeugdzorg, OZB, vuilnis." },
+            { woord: "waterschap", uitleg: "Speciale overheid voor water (~21 in NL). Dijken, sluizen, kanalen, waterkwaliteit." },
+            { woord: "SVB", uitleg: "Sociale Verzekeringsbank — voert AOW + kinderbijslag uit namens het Rijk." },
+            { woord: "Belastingdienst", uitleg: "Rijksdienst die belastingen + toeslagen (huur-, zorg-, kinderopvang-) regelt." },
+          ],
+          theorie: "**Wie doet wat?**\n\n| Taak | Wie? |\n|---|---|\n| Paspoort, ID, rijbewijs | gemeente |\n| OZB, vuilnis, jeugdzorg | gemeente |\n| Dijken, sluizen | waterschap |\n| AOW, kinderbijslag | SVB (Rijk) |\n| Toeslagen | Belastingdienst (Rijk) |\n| Defensie, justitie | Rijk |\n| Onderwijs (deels) | Rijk + gemeente |\n\nGemeente = lokaal, dichtbij burger. Rijk = landelijk.",
+          voorbeelden: [
+            { type: "gemeente", tekst: "Je gaat 18 worden → paspoort vernieuwen → naar het GEMEENTEHUIS." },
+            { type: "rijk", tekst: "Je opa wordt 67 → krijgt AOW van de SVB (Rijksdienst), niet van de gemeente." },
+          ],
+          basiskennis: [
+            { onderwerp: "Decentralisatie", uitleg: "Sinds 2015 doen gemeenten meer (jeugdzorg, WMO) — bedoeld om zorg dichter bij burger te brengen." },
+          ],
+          niveaus: {
+            basis: "Paspoort/ID/rijbewijs = burgerzaken = gemeente. Antwoord B.",
+            simpeler: "Waar haal jij je paspoort? Niet bij de premier in Den Haag, niet bij het waterschap — bij het GEMEENTEHUIS in jouw woonplaats. Dat is gemeentelijke taak.",
+            nogSimpeler: "Paspoort = gemeente = B.",
+          },
+        },
       },
     ],
   },
@@ -191,6 +295,31 @@ const steps = [
         explanation: "OZB (onroerendezaakbelasting) is de belangrijkste gemeentelijke belasting voor inwoners. Het wordt geheven over het bezit van een woning of bedrijfspand binnen de gemeente.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke 4 belastingen worden opgegeven?", tekst: "Accijns, motorrijtuigenbelasting, OZB, vennootschapsbelasting. Welke zijn voor de GEMEENTE?" },
+            { titel: "Loop ze langs", tekst: "Accijns (alcohol/brandstof) = Rijk ✗. Motorrijtuigenbelasting = Rijk + provincie ✗. OZB = gemeente ✓. VPB (BV winst) = Rijk ✗." },
+            { titel: "Waarom OZB?", tekst: "OZB = belasting op huis/pand-EIGENDOM in de gemeente. Heffing en inning gebeurt door GEMEENTE." },
+          ],
+          woorden: [
+            { woord: "OZB", uitleg: "Onroerendezaakbelasting — gemeentelijke belasting voor eigenaren van een woning of bedrijfspand. Berekend op WOZ-waarde." },
+            { woord: "accijns", uitleg: "Rijksbelasting op alcohol, tabak, brandstof, frisdrank. Geheven om consumptie te ontmoedigen + extra inkomsten Rijk." },
+            { woord: "motorrijtuigenbelasting", uitleg: "Rijksbelasting (+ provinciale opcenten) voor het BEZIT van een auto/motor." },
+            { woord: "vennootschapsbelasting", uitleg: "Rijksbelasting voor BV's en NV's over hun winst." },
+          ],
+          theorie: "**Wie heft welke belasting?**\n\n| Belasting | Wie heft |\n|---|---|\n| OZB | gemeente |\n| Afvalstoffenheffing | gemeente |\n| Hondenbelasting | gemeente |\n| Toeristenbelasting | gemeente |\n| BTW | Rijk |\n| Inkomstenbelasting | Rijk |\n| Loonheffing | Rijk |\n| VPB | Rijk |\n| Accijns | Rijk |\n| Motorrijtuigenbelasting | Rijk + provincie |\n\nGemeentebelastingen zijn relatief klein in totaal — meeste belastinggeld stroomt naar het Rijk.",
+          voorbeelden: [
+            { type: "gemeente", tekst: "Familie heeft huis WOZ €350.000. OZB ~0,1% = €350/jaar. Wordt op gemeentelijke aanslag bij vuilnis + rioolheffing opgeteld." },
+          ],
+          basiskennis: [
+            { onderwerp: "WOZ-waarde", uitleg: "Geschatte marktwaarde van je huis door de gemeente. Basis voor OZB en eigenwoningforfait IB." },
+          ],
+          niveaus: {
+            basis: "OZB = gemeente. Antwoord C.",
+            simpeler: "OZB betekent letterlijk 'Onroerendezaakbelasting' — belasting op je huis. Die wordt door de GEMEENTE geheven (zij innen het, gebruiken het voor lokale voorzieningen). De andere drie zijn allemaal Rijksbelastingen.",
+            nogSimpeler: "OZB = gemeente = C.",
+          },
+        },
       },
     ],
   },
@@ -219,6 +348,33 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 14",
         bronTekst: bronJongerenInkomen,
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een overdrachtsinkomen?", tekst: "Geld dat je krijgt ZONDER er een productiefactor (arbeid, kapitaal, natuur, ondernemerschap) tegenover te zetten. Vaak van overheid of familie." },
+            { titel: "Wat is GEEN overdrachtsinkomen?", tekst: "Loon (= arbeid). Rente (= kapitaal/spaargeld). Winst (= ondernemerschap). Allemaal primair inkomen." },
+            { titel: "Welke optie past?", tekst: "Zakgeld krijg je van ouders zonder productiefactor → overdrachtsinkomen. Antwoord D." },
+          ],
+          woorden: [
+            { woord: "primair inkomen", uitleg: "Inkomen dat je verdient MET een productiefactor: loon (arbeid), rente (kapitaal), huur (natuur), winst (ondernemerschap)." },
+            { woord: "overdrachtsinkomen", uitleg: "Inkomen ZONDER tegenprestatie: kinderbijslag, AOW, bijstand, zakgeld, subsidie." },
+            { woord: "zakgeld", uitleg: "Geld dat ouders aan kinderen geven zonder dat kind ervoor werkt. = overdracht." },
+            { woord: "productiefactor", uitleg: "Iets dat je inzet om te produceren: arbeid, kapitaal, natuur, ondernemerschap." },
+          ],
+          theorie: "**Inkomenssoorten:**\n\n• **Primair** (= verdiend met productiefactor): loon, rente, huur, winst, dividend\n• **Secundair / overdrachten** (= ZONDER tegenprestatie): bijstand, AOW, kinderbijslag, zorgtoeslag, zakgeld\n\nVoor jongeren komt het inkomen vaak gemixt: bijbaan-loon (primair) + zakgeld van ouders (overdracht) + studiefinanciering (overdracht).",
+          voorbeelden: [
+            { type: "primair", tekst: "Bijbaan AH = loon = primair (uit arbeid)." },
+            { type: "overdracht", tekst: "Zakgeld €15/week van ouders = overdrachtsinkomen." },
+            { type: "overdracht", tekst: "Zorgtoeslag voor 18+ student = overdrachtsinkomen (van overheid)." },
+          ],
+          basiskennis: [
+            { onderwerp: "Loon vs zakgeld", uitleg: "Loon krijg je voor WERK. Zakgeld krijg je gewoon, zonder dat je iets terug levert. Daarom is loon primair en zakgeld overdracht." },
+          ],
+          niveaus: {
+            basis: "Zakgeld = krijg je zonder tegenprestatie = overdrachtsinkomen. Antwoord D.",
+            simpeler: "Vraag jezelf bij elke optie: 'lever ik er iets voor?' Loon = ja (werk). Rente = ja (geld op de bank). Winst = ja (ondernemerschap). Zakgeld = nee, krijg je gewoon. Dat 'gewoon krijgen' = overdrachtsinkomen.",
+            nogSimpeler: "Niets gedaan + krijg geld = overdracht = zakgeld = D.",
+          },
+        },
       },
     ],
   },
@@ -229,7 +385,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "De leerlingen van de klas doen allemaal mee. Ze zijn allen priv' aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
+        q: "De leerlingen van de klas doen allemaal mee. Ze zijn allen privé aansprakelijk voor de eventuele schulden van Dog4fun. Welke ondernemingsvorm heeft Dog4fun?",
         options: [
           "besloten vennootschap (bv)",
           "eenmanszaak",
@@ -247,6 +403,33 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 17",
         bronTekst: bronDog4fun,
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoeveel eigenaren?", tekst: "ALLE leerlingen van de klas = meerdere personen. Dus geen eenmanszaak (= 1 persoon)." },
+            { titel: "Hoofdelijk aansprakelijk?", tekst: "Allen PRIVÉ aansprakelijk = ja, hoofdelijk. Dus geen BV of NV (= rechtspersoon, juist NIET privé aansprakelijk)." },
+            { titel: "Welke ondernemingsvorm dan?", tekst: "Meerdere eigenaren + allen privé aansprakelijk = VOF (vennootschap onder firma). Antwoord D." },
+          ],
+          woorden: [
+            { woord: "VOF", uitleg: "Vennootschap onder firma — 2+ personen samen ondernemen, allen hoofdelijk aansprakelijk." },
+            { woord: "BV", uitleg: "Besloten Vennootschap — rechtspersoon. Eigenaars NIET privé aansprakelijk." },
+            { woord: "NV", uitleg: "Naamloze Vennootschap — grote rechtspersoon, aandelen vrij verhandelbaar (op beurs). Eigenaars NIET privé aansprakelijk." },
+            { woord: "eenmanszaak", uitleg: "1 eigenaar, privé aansprakelijk." },
+            { woord: "hoofdelijk aansprakelijk", uitleg: "Met je PRIVÉ-vermogen verantwoordelijk voor schulden. Bij VOF: ook voor schulden van de ander!" },
+          ],
+          theorie: "**Beslisboom ondernemingsvorm:**\n\n1. Hoeveel eigenaren? → 1 = eenmanszaak / 2+ = vennootschap\n2. Privé aansprakelijk? → ja = VOF (of eenmanszaak) / nee = BV / NV (rechtspersoon)\n\n| | 1 persoon | 2+ personen |\n|---|---|---|\n| Privé aansprakelijk | eenmanszaak | VOF |\n| Beschermd | BV (eigen) | BV / NV |\n\nDog4fun = klas (veel mensen) + allen privé = VOF.",
+          voorbeelden: [
+            { type: "VOF", tekst: "2 vriendinnen openen samen een kapsalon zonder BV op te richten = VOF. Allebei privé aansprakelijk." },
+            { type: "VOF in les", tekst: "Klas richt mini-onderneming op voor schoolproject. Geen formele BV. = VOF (of vergelijkbaar)." },
+          ],
+          basiskennis: [
+            { onderwerp: "Rechtspersoon", uitleg: "BV/NV is juridisch een aparte 'persoon'. Heeft eigen vermogen, kan failliet gaan zonder eigenaar mee te trekken." },
+          ],
+          niveaus: {
+            basis: "Meerdere personen + allen privé aansprakelijk = VOF. Antwoord D.",
+            simpeler: "De klas is GEEN BV opgericht (= geen rechtspersoon). Met meerdere mensen samen ondernemen + privé aansprakelijk → VOF.",
+            nogSimpeler: "Veel + privé = VOF = D.",
+          },
+        },
       },
     ],
   },
@@ -261,7 +444,7 @@ const steps = [
         options: [
           "Het prijspeil van de export is minder gestegen dan het prijspeil van de import.",
           "Het prijspeil van de export is meer gestegen dan het prijspeil van de import.",
-          "De ge'xporteerde hoeveelheid is minder gestegen dan de ge'mporteerde hoeveelheid.",
+          "De geëxporteerde hoeveelheid is minder gestegen dan de geïmporteerde hoeveelheid.",
         ],
         answer: 1,
         wrongHints: [
@@ -273,6 +456,31 @@ const steps = [
         explanation: "Hoewel het AANTAL geïmporteerd sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn 2 dingen aan handelsoverschot?", tekst: "AANTAL (volume = hoeveelheid) en PRIJS. WAARDE = aantal × prijs. Het 'overschot in geld' kijkt naar WAARDE." },
+            { titel: "Wat zegt de vraag?", tekst: "Import is procentueel STERKER gegroeid in volume. Toch werd het overschot GROTER. Hoe kan dat?" },
+            { titel: "Conclusie", tekst: "Alleen mogelijk als de PRIJS van export harder is gestegen dan prijs van import. Dan compenseert hogere prijs het lagere volume → overschot in geld groeit." },
+          ],
+          woorden: [
+            { woord: "handelsoverschot", uitleg: "Verschil export − import in WAARDE (€). Positief = exporteer meer dan importeer." },
+            { woord: "prijspeil", uitleg: "Gemiddelde prijs in een sector/categorie. Stijgt = inflatie." },
+            { woord: "volume", uitleg: "AANTAL of hoeveelheid (kilo's, stuks). Niet de waarde." },
+            { woord: "waarde", uitleg: "Volume × prijs. Wat het in EURO's opbrengt of kost." },
+          ],
+          theorie: "**Waarde = volume × prijs**\n\nAls je waarde wilt verklaren, kijk naar:\n• Volume-verandering (aantal eenheden)\n• Prijs-verandering (€ per eenheid)\n\n**Hier:**\n• Import-volume groeit harder dan export-volume → in volume gaat NL achteruit\n• Maar overschot in WAARDE groeit → de prijzen moeten dat compenseren\n• Dus: export-prijs is harder gestegen dan import-prijs (NL exporteert duurdere producten)",
+          voorbeelden: [
+            { type: "rekenvoorbeeld", tekst: "Export volume +5%, prijs +20% → waarde +26%. Import volume +10%, prijs +5% → waarde +15,5%. Waarde-overschot stijgt ondanks dat import volume harder groeit." },
+          ],
+          basiskennis: [
+            { onderwerp: "Verschil volume en waarde", uitleg: "Volume = aantal stuks. Waarde = aantal × prijs. Bij prijsstijging blijft volume gelijk maar groeit waarde." },
+          ],
+          niveaus: {
+            basis: "Overschot in € groeit ondanks meer import-volume → exportprijs moet harder zijn gestegen dan importprijs. Antwoord B.",
+            simpeler: "Stel: NL verkoopt 10 ton bloemen voor €100/kg = €1.000.000. Dit jaar 8 ton voor €200/kg = €1.600.000. Volume DAALT maar waarde STIJGT door prijs. Hetzelfde principe hier: prijs export ↑ harder dan prijs import → waarde-overschot ↑.",
+            nogSimpeler: "Volume export laag, waarde stijgt → exportprijs ↑ meer = B.",
+          },
+        },
       },
     ],
   },
@@ -303,6 +511,31 @@ const steps = [
         explanation: "Germaine's redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zegt Germaine?", tekst: "1. Spaarrente is laag. 2. Investeer geld in warmtepomp. 3. Dat levert meer op." },
+            { titel: "Hoe levert een warmtepomp 'op'?", tekst: "Door BESPARING op energiekosten elk jaar. Geen rente, maar minder uitgaven." },
+            { titel: "Wat is dus de samenvatting?", tekst: "BESPARING op energie > rente op spaargeld → warmtepomp is beter dan sparen. Antwoord A." },
+          ],
+          woorden: [
+            { woord: "spaarrente", uitleg: "Vergoeding die de bank betaalt over je spaargeld. In 2024-2025 erg laag (0-2%)." },
+            { woord: "investeren", uitleg: "Geld vastleggen in iets dat later opbrengst geeft (huis, machine, warmtepomp, aandelen)." },
+            { woord: "warmtepomp", uitleg: "Apparaat dat warmte uit lucht/grond haalt voor verwarming. Vervangt CV-ketel. Bespaart energiekosten." },
+            { woord: "rendement", uitleg: "Wat een investering OPLEVERT in % per jaar. Sparen: rente. Warmtepomp: besparing op energie." },
+          ],
+          theorie: "**Sparen vs investeren — vergelijken op rendement:**\n\nSpaarrente = 1% → €10.000 sparen geeft €100/jaar\n\nWarmtepomp = €10.000 → bespaart €1.500/jaar op gas\n→ rendement 15% — VEEL beter dan sparen\n\nVuistregel: investering loont als opbrengst (besparing of inkomsten) > rente die je anders zou krijgen.",
+          voorbeelden: [
+            { type: "rendement", tekst: "€20.000 op spaarrekening 2% = €400/jaar. €20.000 in zonnepanelen die €1.200/jaar besparen = 6% effectief rendement → veel beter." },
+          ],
+          basiskennis: [
+            { onderwerp: "Tijdsvoorkeur", uitleg: "Geld nu vs later. Investeringen vragen geld nu maar leveren later structureel op. Als opbrengst > rente, loont het." },
+          ],
+          niveaus: {
+            basis: "Germaine zegt: warmtepomp-besparing > spaarrente → investeren loont. Antwoord A.",
+            simpeler: "Germaine vergelijkt 2 opties: 1) sparen (krijg je rente, weinig). 2) warmtepomp kopen (bespaar je energiekosten, veel). Optie 2 is beter omdat besparing > rente. Antwoord A.",
+            nogSimpeler: "Energie-besparing > rente = warmtepomp wint = A.",
+          },
+        },
       },
     ],
   },
