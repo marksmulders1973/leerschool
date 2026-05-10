@@ -62,21 +62,22 @@ class TeaserErrorBoundary extends Component {
 // QuizCardIcon — gedeeld in src/shared/ui/QuizCardIcon.jsx (gebruikt in de
 // bottom-nav "Test"-tab; uit hero-tegels gehaald bij de homepage-snoei).
 
+// Maand 1 snoei (visie-bewaker 2026-05-10): ticker rustig + Cito-vriendelijk.
+// Verwijderd: "scorebord — strijd om de top" (faalangst-trigger), "eerst leren
+// dan spelen" (game-suggestie), "leerkrachten" (niet ICP), VMBO-jargon (niet
+// primaire doelgroep). Behouden + uitgebreid: 15-min belofte, Cito, rustig
+// leren, rekenen/taal-onderwerpen die Cito-ouder herkent.
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
   { icon: "🎯", text: "Cito eindtoets oefenen" },
-  { icon: "📅", text: "15 minuten per dag is voldoende" },
-  { icon: "📚", text: "100+ schoolmethodes" },
-  { icon: "🤖", text: "AI-vragen over elk onderwerp" },
-  { icon: "🎮", text: "Eerst leren, dan spelen" },
-  { icon: "✖️", text: "Tafels oefenen: groep 3 t/m 6" },
-  { icon: "📖", text: "Begrijpend lezen groep 5–8" },
+  { icon: "📅", text: "15 minuten per dag is genoeg" },
+  { icon: "🧠", text: "Een rustige bijlesdocent in je broekzak" },
+  { icon: "📖", text: "Begrijpend lezen groep 5 t/m 8" },
+  { icon: "✖️", text: "Tafels oefenen groep 3 t/m 6" },
+  { icon: "📐", text: "Rekenen, taal, spelling" },
+  { icon: "💬", text: "Uitleg op jouw niveau — bij elke vraag" },
   { icon: "🎒", text: "Groep 1 t/m 8" },
-  { icon: "🎓", text: "VMBO-TL · HAVO · VWO · Gymnasium" },
-  { icon: "🏆", text: "Scorebord — strijd om de top" },
-  { icon: "📋", text: "Leerkrachten: maak een kennistest voor uw klas" },
-  { icon: "🔢", text: "Rekenen, taal, wiskunde en meer" },
-  { icon: "⚡", text: "Vragen altijd anders door AI" },
+  { icon: "✨", text: "Snap je iets niet? Wij leggen het anders uit" },
 ];
 
 function TickerBanner() {
