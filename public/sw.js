@@ -99,3 +99,37 @@ self.addEventListener("fetch", (e) => {
 self.addEventListener("message", (e) => {
   if (e.data?.type === "SKIP_WAITING") self.skipWaiting();
 });
+
+// A12 (10-agent circulariteit-review 2026-05-10) — Web Push voor over-dagen.
+// Notification payload (JSON): { title, body, url?, icon?, tag? }
+self.addEventListener("push", (e) => {
+  let data = {};
+  try { data = e.data ? e.data.json() : {}; } catch {}
+  const title = data.title || "Leerkwartier";
+  const options = {
+    body: data.body || "Tijd om te oefenen!",
+    icon: data.icon || "/icons/icon.svg",
+    badge: data.badge || "/icons/icon.svg",
+    data: { url: data.url || "/" },
+    tag: data.tag || "leerkwartier-reminder",
+    renotify: false,
+  };
+  e.waitUntil(self.registration.showNotification(title, options));
+});
+
+// Klik op de notificatie opent of focust de app op de juiste URL.
+self.addEventListener("notificationclick", (e) => {
+  e.notification.close();
+  const target = e.notification.data?.url || "/";
+  e.waitUntil((async () => {
+    const clientsList = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
+    for (const c of clientsList) {
+      if (c.url.includes(self.location.origin)) {
+        c.focus();
+        try { c.navigate(target); } catch {}
+        return;
+      }
+    }
+    await self.clients.openWindow(target);
+  })());
+});

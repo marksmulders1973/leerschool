@@ -134,6 +134,47 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     return () => { cancelled = true; };
   }, []);
 
+  // A12 (10-agent circulariteit-review 2026-05-10): web push opt-in.
+  // permState: "unsupported" | "default" | "granted" | "denied"
+  // hasSub: of er actieve subscription is.
+  const [pushPerm, setPushPerm] = useState("default");
+  const [hasPushSub, setHasPushSub] = useState(false);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { getPermissionState, hasActiveSubscription } = await import("../shared/pushSubscription.js");
+        if (!cancelled) {
+          setPushPerm(getPermissionState());
+          setHasPushSub(await hasActiveSubscription());
+        }
+      } catch {}
+    })();
+    return () => { cancelled = true; };
+  }, []);
+  const handleEnablePush = async () => {
+    try {
+      const { enablePush } = await import("../shared/pushSubscription.js");
+      const r = await enablePush({ playerName: userName });
+      if (r.ok) {
+        setPushPerm("granted");
+        setHasPushSub(true);
+      } else if (r.reason === "no-vapid-key") {
+        alert("Herinneringen zijn nog niet ingesteld door de beheerder. Probeer later opnieuw.");
+      } else if (r.reason === "denied") {
+        setPushPerm("denied");
+        alert("Geen toestemming gegeven. Je kunt dit later wijzigen via je browser-instellingen.");
+      }
+    } catch {}
+  };
+  const handleDisablePush = async () => {
+    try {
+      const { disablePush } = await import("../shared/pushSubscription.js");
+      await disablePush({ playerName: userName });
+      setHasPushSub(false);
+    } catch {}
+  };
+
   // Streak protection: check if today has been played
   const streakWarning = (() => {
     if (!streak || streak <= 0) return null;
@@ -227,6 +268,55 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             </span>
             <span style={{ fontSize: 18, color: "var(--color-brand-secondary)" }}>→</span>
           </button>
+        )}
+
+        {/* A12 (10-agent circulariteit 2026-05-10): web push opt-in.
+            Toont 1x bij eerste bezoek na minimaal 1 activiteit; verbergt na keuze.
+            "denied" verbergt — leerling heeft het al expliciet afgewezen. */}
+        {pushPerm === "default" && lastActivity && (
+          <button
+            onClick={handleEnablePush}
+            style={{
+              width: "100%",
+              marginBottom: 12,
+              padding: "12px 14px",
+              background: "rgba(155,77,224,0.10)",
+              border: "1px solid rgba(155,77,224,0.45)",
+              borderRadius: 12,
+              color: "var(--color-text-strong)",
+              fontSize: 13,
+              cursor: "pointer",
+              textAlign: "left",
+              minHeight: 44,
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+            }}
+          >
+            <span style={{ fontSize: 22 }}>🔔</span>
+            <span style={{ flex: 1, lineHeight: 1.35 }}>
+              <strong>Herinneringen aanzetten?</strong>
+              <br />
+              <span style={{ fontSize: 12, color: "var(--color-text)" }}>
+                We sturen elke dag een seintje als je vragen klaar hebt staan.
+              </span>
+            </span>
+          </button>
+        )}
+        {pushPerm === "granted" && hasPushSub && (
+          <div style={{
+            display: "flex", alignItems: "center", gap: 6, marginBottom: 8,
+            padding: "4px 10px", background: "rgba(0,200,83,0.08)",
+            border: "1px solid rgba(0,200,83,0.30)", borderRadius: 8,
+            fontSize: 11, color: "#2ecc71",
+          }}>
+            <span>🔔 herinneringen aan</span>
+            <button onClick={handleDisablePush} style={{
+              marginLeft: "auto", background: "transparent", border: 0,
+              color: "var(--color-text-soft)", fontSize: 11, cursor: "pointer",
+              textDecoration: "underline",
+            }}>uitzetten</button>
+          </div>
         )}
 
         {/* A11 (10-agent didactiek 2026-05-10): herhaling-due banner per CHECK.
