@@ -544,10 +544,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         )}
 
         {/* Mark wens 2026-05-10: rol-specifieke direct-ingang.
-            PO (basisschool) → "🎯 Cito oefenen" (alle Cito-relevante vakken)
-            VO (middelbaar) → "🎓 Examen oefenen" (PDF-bibliotheek + speelbare examens)
-            Eén balk tegelijk per leerling-type. */}
-        {vakModus === "po" && onCitoOefenenSubject && (
+            BEIDE balken altijd tonen — leerling kan zelf kiezen.
+            (Eerdere vakModus-conditie verborg examens-balk in PO-modus,
+            wat Mark niet wilde.) */}
+        {onCitoOefenenSubject && (
           <button
             onClick={() => {
               SoundEngine.play("click");
@@ -583,7 +583,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
           </button>
         )}
-        {vakModus === "vo" && onExamens && (
+        {onExamens && (
           <button
             onClick={() => { SoundEngine.play("click"); onExamens(); }}
             style={{

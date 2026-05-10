@@ -212,18 +212,73 @@ const steps = [
         options: ["maar","daardoor","bijvoorbeeld","ten slotte"],
         answer: 1,
         wrongHints: [null,"Wat doet 'maar' — laat het zien dat iets veroorzaakt wordt, of zet het iets tegenover elkaar?","Volgt na 'bijvoorbeeld' een gevolg, of een illustratie?","Komt 'ten slotte' aan het begin of aan het eind van een rijtje?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is oorzaak/gevolg?", tekst: "Iets gebeurt OMDAT iets anders gebeurde. Bv: 'Het regende DAARDOOR werd de wedstrijd afgelast.'" },
+            { titel: "Welk woord wijst dat aan?", tekst: "'Daardoor' = 'door dat' = gevolg. 'Maar' = tegenstelling, 'bijvoorbeeld' = illustratie, 'ten slotte' = volgorde-tijd. Alleen B." },
+          ],
+          woorden: [
+            { woord: "oorzaak", uitleg: "Wat ergens VAN komt — de reden." },
+            { woord: "gevolg", uitleg: "Wat ERUIT komt — het resultaat." },
+            { woord: "signaalwoord", uitleg: "Klein woordje dat aangeeft hoe zinnen verbonden zijn." },
+          ],
+          theorie: "Oorzaak/gevolg-signaalwoorden: omdat, doordat, daardoor, dus, daarom, vandaar. Allemaal koppelen oorzaak ↔ gevolg.",
+          voorbeelden: [{ type: "gevolg", tekst: "'Hij at te veel snoep, DAARDOOR werd hij ziek.' = oorzaak (snoep) → gevolg (ziek)." }],
+          basiskennis: [{ onderwerp: "6 signaalgroepen", uitleg: "Tijd / Oorzaak/gevolg / Opsomming / Tegenstelling / Voorbeeld / Conclusie." }],
+          niveaus: {
+            basis: "'Daardoor' = oorzaak/gevolg. B.",
+            simpeler: "Stel: 'Het regende, DAARDOOR werd het modderig.' → regen = oorzaak, modder = gevolg. 'Daardoor' wijst dat verband aan. = B.",
+            nogSimpeler: "Daardoor = gevolg = B.",
+          },
+        },
       },
       {
         q: "Welk signaalwoord introduceert een **tegenstelling**?",
         options: ["dus","echter","ook","bijvoorbeeld"],
         answer: 1,
         wrongHints: [null,"Trekt 'dus' een conclusie, of zet het iets tegenover iets anders?","Voegt 'ook' iets toe aan een rij, of laat het een tegenstelling zien?","Geeft 'bijvoorbeeld' een tegenstelling of een illustratie?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een tegenstelling?", tekst: "Iets ONVERWACHTS of TEGENOVERGESTELDS van wat eraan voorafging. 'Het regent — ECHTER, we gaan toch buiten spelen.'" },
+            { titel: "Welk woord wijst dat aan?", tekst: "'Echter' = klassiek tegenstelling-signaal. 'Dus' = conclusie, 'ook' = opsomming, 'bijvoorbeeld' = illustratie. Alleen B." },
+          ],
+          woorden: [
+            { woord: "tegenstelling", uitleg: "Iets dat TEGENOVERGESTELD is van wat ervoor stond." },
+            { woord: "echter", uitleg: "Formele variant van 'maar'. Wijst op een tegenstelling." },
+          ],
+          theorie: "Tegenstelling-signaalwoorden: maar, echter, toch, hoewel, desondanks, daarentegen, in tegenstelling tot.",
+          voorbeelden: [{ type: "tegenstelling", tekst: "'Hij studeerde hard. ECHTER, hij zakte voor de toets.' = onverwacht / tegenovergesteld." }],
+          basiskennis: [{ onderwerp: "Synoniemen tegenstelling", uitleg: "'Maar' (informeel) = 'echter' (formeel). Beide signaleren tegenstelling." }],
+          niveaus: {
+            basis: "'Echter' = tegenstelling. B.",
+            simpeler: "Stel: 'Het is koud. ECHTER, ik ga zwemmen.' Het tweede is ONVERWACHT (je verwacht dat hij niet gaat). 'Echter' wijst dat aan. = B.",
+            nogSimpeler: "Echter = tegen = B.",
+          },
+        },
       },
       {
         q: "Welk woord vat samen / sluit af?",
         options: ["kortom","ten eerste","echter","gisteren"],
         answer: 0,
         wrongHints: [null,"Komt 'ten eerste' aan het begin of aan het einde?","Sluit 'echter' iets af, of zet het iets tegenover iets anders?","Geeft 'gisteren' een conclusie, of zegt het iets over wanneer iets gebeurde?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat doet samenvatten?", tekst: "Aan het EINDE van een tekst de belangrijkste punten kort herhalen." },
+            { titel: "Welk woord wijst dat aan?", tekst: "'Kortom' = klassiek samenvatting-signaal. 'Ten eerste' = begin, 'echter' = tegenstelling, 'gisteren' = tijd. Alleen A." },
+          ],
+          woorden: [
+            { woord: "kortom", uitleg: "Samenvattend, in het kort. Sluit een tekst of betoog af." },
+            { woord: "conclusie", uitleg: "De eindslot — wat je uit het hele verhaal kunt opmaken." },
+          ],
+          theorie: "Samenvatting/conclusie-signaalwoorden: kortom, dus, samenvattend, concluderend, tot slot.",
+          voorbeelden: [{ type: "samenvatten", tekst: "'Argument 1, argument 2, argument 3. KORTOM: ik vind dat iedereen meer moet sporten.' = afsluiten + samenvatten." }],
+          basiskennis: [{ onderwerp: "Slot van tekst", uitleg: "De laatste alinea heeft vaak 'kortom' of 'tot slot' om af te ronden." }],
+          niveaus: {
+            basis: "'Kortom' = samenvatten. A.",
+            simpeler: "Stel je vertelt 3 dingen aan een vriend, en wil ze samen optellen tot 1 conclusie. 'KORTOM:...' Dat is samenvatten. = A.",
+            nogSimpeler: "Kortom = samenvatten = A.",
+          },
+        },
       },
     ],
   },
@@ -237,18 +292,73 @@ const steps = [
         options: ["De grote kernboodschap van de tekst","De eerste zin","Een random detail","De titel"],
         answer: 0,
         wrongHints: [null,"Past de boodschap van een hele tekst altijd in alleen die eerste zin?","Is een klein feit hetzelfde als de boodschap van de hele tekst?","Geeft de titel altijd de hele boodschap, of is het meer een hint?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is hoofdgedachte?", tekst: "De ENE belangrijkste boodschap van de hele tekst. Niet 1 zin, niet 1 detail, niet de titel." },
+            { titel: "Verschil met andere opties", tekst: "Eerste zin = vaak inleiding-feit, niet altijd boodschap. Detail = klein onderdeel. Titel = hint maar te kort." },
+          ],
+          woorden: [
+            { woord: "kernboodschap", uitleg: "De belangrijkste BOODSCHAP — wat moet je onthouden van de hele tekst." },
+            { woord: "detail", uitleg: "Een KLEIN feit, niet het hoofdpunt." },
+          ],
+          theorie: "Hoofdgedachte = wat in ELKE alinea op een of andere manier terugkomt. De rode draad van het hele stuk.",
+          voorbeelden: [{ type: "rode draad", tekst: "Tekst over fiets door 4 alinea's = rode draad VERANDERING. Hoofdgedachte = 'fiets is in 200 jaar veranderd'." }],
+          basiskennis: [{ onderwerp: "1 boodschap per tekst", uitleg: "Een tekst heeft 1 hoofdgedachte. Alle alinea's ondersteunen die." }],
+          niveaus: {
+            basis: "Hoofdgedachte = grote kernboodschap. A.",
+            simpeler: "Stel je een vriend vraagt 'waar gaat dat artikel over?'. Jij antwoordt in 1 zin = de hoofdgedachte. = A.",
+            nogSimpeler: "Hele boodschap = A.",
+          },
+        },
       },
       {
         q: "Waar staat de **hoofdgedachte** vaak?",
         options: ["In de inleiding of conclusie","Helemaal in het midden","In een voetnoot","In de spelling van moeilijke woorden"],
         answer: 0,
         wrongHints: [null,"Waar lees jij meestal eerst en laatst — in het midden of aan begin/eind?","Staat de kern van een verhaal vaak weggestopt in een voetnoot?","Heeft moeilijke spelling iets te maken met de boodschap van een tekst?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar zoek je eerst?", tekst: "Begin (inleiding) of einde (conclusie). Daar zet de schrijver vaak zijn boodschap." },
+            { titel: "Waarom?", tekst: "Schrijvers willen je VAST PAKKEN met de boodschap (begin) of HERHALEN dat je het onthoudt (einde)." },
+          ],
+          woorden: [
+            { woord: "inleiding", uitleg: "Eerste alinea — introduceert het onderwerp." },
+            { woord: "conclusie", uitleg: "Laatste alinea — vat samen of trekt slot-beslissing." },
+            { woord: "voetnoot", uitleg: "Klein-tekstje onderaan een pagina met extra info. Niet de hoofdboodschap." },
+          ],
+          theorie: "**Standaard tekstopbouw**: inleiding → kern → slot. Hoofdgedachte vaak in 1e of laatste alinea, soms in titel.",
+          voorbeelden: [{ type: "begin+eind", tekst: "Tekst opent: 'Drinken is belangrijk.' Sluit af: 'Kortom: drink genoeg water.' Hoofdgedachte = drinken belangrijk." }],
+          basiskennis: [{ onderwerp: "Eerste + laatste tip", uitleg: "Lees eerste én laatste alinea bij hoofdgedachte-vragen. Dat scheelt heel veel tijd." }],
+          niveaus: {
+            basis: "Begin of eind van tekst. A.",
+            simpeler: "Bij een verhaal of artikel komt het belangrijkste vaak BIJ HET BEGIN of HET EIND. Niet midden in. = A.",
+            nogSimpeler: "Begin/eind = A.",
+          },
+        },
       },
       {
         q: "Hoe vind je snel de hoofdgedachte?",
         options: ["Lees eerste + laatste zin van elke alinea","Lees alleen de moeilijkste woorden","Sla alle alinea's over","Kijk alleen naar de titel"],
         answer: 0,
         wrongHints: [null,"Snap je een tekst als je alleen de moeilijke woorden bekijkt?","Kun je de boodschap vinden zonder de tekst te bekijken?","Is een titel altijd genoeg, of moet je ook in de tekst kijken?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Strategie", tekst: "Niet de hele tekst woord-voor-woord. Pak de eerste + laatste zin van ELKE alinea — daar staat het belangrijkste." },
+            { titel: "Waarom werkt dit?", tekst: "Schrijvers zetten hun KERNBOODSCHAP vaak in de eerste zin van een alinea (= 'topic sentence') en herhalen 'm aan het einde." },
+          ],
+          woorden: [
+            { woord: "skimmen", uitleg: "Snel-overzicht-techniek: lees alleen titels, eerste zinnen, dik-gedrukt." },
+            { woord: "topic sentence", uitleg: "Eerste zin van een alinea — geeft vaak het mini-onderwerp aan." },
+          ],
+          theorie: "Snelle hoofdgedachte-vind-strategie:\n1. Lees titel\n2. Lees eerste zin van elke alinea\n3. Lees laatste zin van laatste alinea\n4. Schrijf in 1 zin: 'Deze tekst gaat over...'",
+          voorbeelden: [{ type: "skim", tekst: "4 alinea's? 4 eerste zinnen + 1 laatste = 5 zinnen lezen. In 30 sec heb je de boodschap." }],
+          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft 5-7 min per tekst. Skimmen = sneller, niet minder grondig." }],
+          niveaus: {
+            basis: "Eerste + laatste zin per alinea. A.",
+            simpeler: "Niet alle 200 woorden lezen. Lees alleen de eerste zin van elke alinea — daar staat meestal de hoofdpunt. Plus de laatste zin (die vat vaak samen). = A.",
+            nogSimpeler: "Skim eerste/laatste zinnen = A.",
+          },
+        },
       },
     ],
   },
@@ -262,18 +372,71 @@ const steps = [
         options: ["Snel overzicht krijgen door titels en eerste zinnen","Heel langzaam woord-voor-woord","Tekst overslaan","Gokken op vragen"],
         answer: 0,
         wrongHints: [null,"Hoort 'snel overzicht' bij langzaam alles lezen of bij iets anders?","Sla je bij skimmen alles over, of pak je juist de hoofdpunten?","Heeft skimmen te maken met lezen of met kansberekening?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is skimmen?", tekst: "Engels woord voor 'snel overvliegen'. Je leest alleen de KERN — titels, eerste zinnen, vetgedrukt." },
+            { titel: "Wat het NIET is", tekst: "Geen langzaam woord-voor-woord. Geen overslaan. Geen gokken. Het is gericht-snel-lezen." },
+          ],
+          woorden: [
+            { woord: "skimmen", uitleg: "Snel overzicht krijgen — 30 sec voor een hele tekst." },
+            { woord: "scannen", uitleg: "Gericht zoeken — heel ander iets dan skimmen." },
+          ],
+          theorie: "Skimmen = water-skiën-vergelijking. Je gaat licht over het water (de tekst) — niet duiken. Pakt alleen het OPPERVLAKKIGE.",
+          voorbeelden: [{ type: "skim", tekst: "Krantenartikel met 8 alinea's. Skim: titel + eerste zin elke alinea = je weet het onderwerp in 30 sec." }],
+          basiskennis: [{ onderwerp: "Snelle vs grondige", uitleg: "Skimmen = snel oppervlakkig. Diep lezen = grondig. Beide hebben hun moment." }],
+          niveaus: {
+            basis: "Skimmen = snel overzicht via titels + eerste zinnen. A.",
+            simpeler: "Stel je hebt geen tijd om een artikel helemaal te lezen. Wat doe je? Titel kijken + eerste zinnen scannen. Dat is skimmen. = A.",
+            nogSimpeler: "Skim = snel overzicht = A.",
+          },
+        },
       },
       {
         q: "Wat is **scannen**?",
         options: ["Gericht zoeken naar een specifiek antwoord","Langzaam herlezen","De tekst kopiëren","Iemand anders laten lezen"],
         answer: 0,
         wrongHints: [null,"Pak je bij scannen alles weer op, of zoek je iets specifieks?","Hoort kopiëren bij scannen, of bij iets heel anders?","Mag iemand anders jouw werk doen tijdens een toets — en is dat scannen?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is scannen?", tekst: "Gericht ZOEKEN naar 1 specifiek antwoord. Net als bij een supermarkt-scanner: zoek de barcode, niet alles." },
+            { titel: "Hoe?", tekst: "Je weet de vraag al. Loop met je oog door de tekst, zoek het kernwoord. Lees alleen DIE zin." },
+          ],
+          woorden: [
+            { woord: "scannen", uitleg: "Gericht zoeken naar een specifiek antwoord in een tekst." },
+            { woord: "kernwoord", uitleg: "Het belangrijkste woord uit de vraag — wat je in de tekst gaat zoeken." },
+          ],
+          theorie: "Verschil skim vs scan: Skim = ALL, oppervlakkig. Scan = ÉÉN ding, gericht. Beide zijn snel.",
+          voorbeelden: [{ type: "scannen", tekst: "Vraag: 'Hoeveel mensen wonen in Brussel?' Scan tekst voor 'Brussel' of een aantal-cijfer. Lees die zin. Klaar." }],
+          basiskennis: [{ onderwerp: "Wanneer wat?", uitleg: "Skim BIJ START. Scan PER VRAAG. Niet alles tegelijk." }],
+          niveaus: {
+            basis: "Scannen = gericht zoeken. A.",
+            simpeler: "Stel je zoekt jouw naam in een ledenlijst van 100 namen. Lees je alle 100? Nee — je SCANT, je oog springt naar 'M' en daar zoek je verder. Dat is scannen. = A.",
+            nogSimpeler: "Scan = gericht zoeken = A.",
+          },
+        },
       },
       {
         q: "Welke is de **ideale** leesvolgorde voor Cito?",
         options: ["Skim → vragen lezen → scannen voor antwoord","Hele tekst woord-voor-woord, dan vragen","Vragen eerst gokken, dan tekst lezen","Alleen vragen lezen, geen tekst"],
         answer: 0,
         wrongHints: [null,"Lukt het je in de tijd om elke zin woord-voor-woord te lezen?","Kun je vragen goed beantwoorden zónder de tekst te bekijken?","Heb je genoeg aan alleen de vragen, of moet de tekst er ook bij?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 stappen voor Cito", tekst: "1. SKIM tekst (30 sec) — wat is onderwerp? 2. Lees alle vragen — wat moet je weten? 3. SCAN voor elk antwoord." },
+            { titel: "Waarom in deze volgorde?", tekst: "Tekst eerst woord-voor-woord = TE TRAAG. Vragen gokken = onbetrouwbaar. Alleen vragen lezen = niet genoeg info." },
+          ],
+          woorden: [
+            { woord: "leesvolgorde", uitleg: "De stappen waarin je een tekst + vragen aanpakt." },
+          ],
+          theorie: "Tijd op Cito: ~5-7 min per tekst met 3-5 vragen. Volgorde skim→vragen→scan past in die tijd. Anders loop je achter.",
+          voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen lezen 30 sec + scannen ~3 min = ~4 min. Je hebt 1-3 min over voor twijfelvragen." }],
+          basiskennis: [{ onderwerp: "Strategie wint van snelheid", uitleg: "Slim aanpakken > snel lezen. Een goede strategie scheelt minuten." }],
+          niveaus: {
+            basis: "Skim → vragen → scan. A.",
+            simpeler: "Stappen voor Cito: (1) snel overzicht tekst (skim), (2) lees wat je moet vinden (vragen), (3) zoek elk antwoord gericht (scan). Dat is de slimste volgorde. = A.",
+            nogSimpeler: "Skim → vragen → scan = A.",
+          },
+        },
       },
     ],
   },
