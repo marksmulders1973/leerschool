@@ -799,6 +799,26 @@ const steps = [
           "De laatste zin geeft juist dat aantal aan.",
           "Geen specifieke stad — de tekst spreekt over heel Nederland.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stelling-vraag", tekst: "Een stelling staat in de vraag — jij moet checken: KLOPT die volgens de tekst?" },
+            { titel: "Zoek aantallen in tekst 1", tekst: "Laatste alinea: 'Er zijn meer fietsen dan inwoners. Dat is uniek in de wereld.' Klopt + alleen NL." },
+          ],
+          woorden: [
+            { woord: "stelling", uitleg: "Een uitspraak die juist of fout kan zijn. Vaak in de vorm: 'X is zo'." },
+            { woord: "uniek", uitleg: "Niet ergens anders zo — alleen op deze plek." },
+          ],
+          theorie: "Bij stelling-vragen: zoek de zin in de tekst die de stelling bevestigt of weerlegt. Hier: 'uniek in de wereld' = alleen NL → optie A.",
+          voorbeelden: [
+            { type: "match", tekst: "Tekst noemt EXACT 'meer fietsen dan inwoners' + 'uniek in de wereld'. Dat past bij A." },
+          ],
+          basiskennis: [{ onderwerp: "Lees de tekst nogmaals", uitleg: "Bij een mix-quiz mag je teruglezen. Doe dat ook." }],
+          niveaus: {
+            basis: "Tekst zegt 'uniek in de wereld' = alleen NL. A.",
+            simpeler: "Lees de laatste alinea van tekst 1. Daar staat: 'er zijn meer fietsen dan inwoners' + 'uniek in de wereld'. Dus stelling klopt + alleen NL = A.",
+            nogSimpeler: "Klopt + alleen NL = A.",
+          },
+        },
       },
       {
         // van tekst 2 — instructie
@@ -816,6 +836,26 @@ const steps = [
           "Geluid speelt geen rol in deze instructie.",
           "Vingerveiligheid komt niet expliciet voor — gaat om de keten.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom-vraag op detail", tekst: "Tekst gebruikt 'lichtjes' als TIP. Waarom zou je niet hard trekken?" },
+            { titel: "Eerdere context", tekst: "Tekst zei al: 'als je gehaast bent gaan de clips uit elkaar.' Hard trekken = clip openbuigen = stuk. → A." },
+          ],
+          woorden: [
+            { woord: "lichtjes", uitleg: "Met weinig kracht — voorzichtig." },
+            { woord: "controleren", uitleg: "Checken of iets goed is gegaan." },
+          ],
+          theorie: "Bij instructies: TIPS hebben altijd een reden. Vaak gaat het om iets KAPOT GAAN (paperclips uit elkaar) of MISLOPEN (verkeerde maat).",
+          voorbeelden: [
+            { type: "verbinden", tekst: "'Lichtjes trekken om te controleren' + eerder 'gehaast = clips uit elkaar' = je test of het stevig is, ZONDER het kapot te trekken. = A." },
+          ],
+          basiskennis: [{ onderwerp: "Tekst-context", uitleg: "Wat eerder in de tekst stond, helpt vaak om latere zinnen te begrijpen." }],
+          niveaus: {
+            basis: "Hard trekken = clips uit elkaar (eerder genoemd). Lichtjes = niet kapot. A.",
+            simpeler: "Stel: jij hebt een ketting van paperclips. Trek je hard? Dan trek je 'm uit elkaar. Dus 'lichtjes' = om de ketting niet te breken. A.",
+            nogSimpeler: "Lichtjes = niet kapot = A.",
+          },
+        },
       },
       {
         // van tekst 3 — betoog
@@ -833,6 +873,26 @@ const steps = [
           "Algemeen waar maar niet ondersteunend voor het standpunt.",
           "Niet relevant voor het betoog over telefoons in de klas.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een argument?", tekst: "Een REDEN die het standpunt OPLOSSING ondersteunt. Bij betoog 'telefoons niet op school' = redenen waarom dat WAAR is." },
+            { titel: "Toets opties", tekst: "A: 'notificaties = afleiding (onderzoek)' = ja, ondersteunt standpunt. B/C/D = wel feiten/meningen, MAAR niet over telefoons-in-klas." },
+          ],
+          woorden: [
+            { woord: "argument", uitleg: "Reden die je mening OPLOSSING bewijst." },
+            { woord: "ondersteunen", uitleg: "Steunen, helpen onderbouwen." },
+          ],
+          theorie: "Een goed argument: (1) ondersteunt het standpunt + (2) is door tekst onderbouwd (bij voorkeur met onderzoek of feiten). Vaag-aandoende uitspraken ('iedereen heeft een mening') zijn GEEN argument.",
+          voorbeelden: [
+            { type: "argument", tekst: "Standpunt: 'telefoons niet op school'. Argument: 'notificaties leiden af (onderzoek toont)' = ondersteunt + onderbouwd. A." },
+          ],
+          basiskennis: [{ onderwerp: "Argument vs feit", uitleg: "Een feit kan WAAR zijn maar geen argument zijn — als het niets te maken heeft met het standpunt." }],
+          niveaus: {
+            basis: "Argument = onderbouwt standpunt + heeft bewijs. A heeft 'onderzoek toont'. = A.",
+            simpeler: "Welke reden helpt om het standpunt 'telefoons niet op school' te bewijzen? 'Notificaties leiden af tijdens de les' helpt. Andere opties zijn niet over school of niet over telefoons. A.",
+            nogSimpeler: "Met onderzoek + over school = A.",
+          },
+        },
       },
       {
         // van tekst 4 — verhaal
@@ -850,6 +910,26 @@ const steps = [
           "Geen boosheid in het verhaal — moeder reageert juist warm.",
           "Niet het hoofdpunt — moeder kent Tom niet en wil 'm niet ontmoeten in dit verhaal.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Symboliek-vraag", tekst: "Een briefje + hartje = SYMBOOL. Wat betekenen die hier?" },
+            { titel: "Wat doet moeder?", tekst: "Sara vertelt dat Tom haar boterham gaf. Moeder schrijft 'Bedankt!' met hartje. = ze wil DANKBAARHEID overbrengen aan Tom." },
+          ],
+          woorden: [
+            { woord: "symboliek", uitleg: "Een teken dat IETS ANDERS betekent. Hartje = liefde of dankbaarheid (afhankelijk van context)." },
+            { woord: "dankbaarheid", uitleg: "Het gevoel: 'wat lief dat je dit deed, ik waardeer het'." },
+          ],
+          theorie: "Een hartje kan VEEL betekenen — afhankelijk van context: liefde (verliefdheid), dankbaarheid (waardering), vriendschap. Lees de context om te kiezen. Hier: na een vriendelijke daad → dankbaarheid.",
+          voorbeelden: [
+            { type: "context", tekst: "Sara: 'Tom gaf me brood'. Moeder: '(briefje + hartje) Bedankt!' → context = vriendelijke daad waarvoor je bedankt. Hartje = dankbaarheid. A." },
+          ],
+          basiskennis: [{ onderwerp: "Hartje is niet altijd liefde", uitleg: "Symbolen veranderen van betekenis afhankelijk van situatie. Lees de hele scene." }],
+          niveaus: {
+            basis: "Hartje + 'bedankt' na vriendelijke daad = dankbaarheid. A.",
+            simpeler: "Wat doet je moeder met dat briefje? Ze schrijft 'bedankt' + hartje. Voor wie? Voor Tom die brood deelde. Dat is bedanken voor zijn aardigheid. = A.",
+            nogSimpeler: "Bedankt + hartje = dankbaarheid = A.",
+          },
+        },
       },
       {
         // tekst-soort herkennen
@@ -867,6 +947,28 @@ const steps = [
           "Dat is instructief — uitleg van een proces, geen mening.",
           "Dat is verhalend — een verhaaltje met personages, geen mening.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "4 tekstsoorten", tekst: "Informatief (feiten), Instructief (stappen), Betogend (mening), Verhalend (verhaal)." },
+            { titel: "Welke geeft een MENING?", tekst: "'Telefoons horen niet thuis op de basisschool' = duidelijke mening. = betogend = A." },
+          ],
+          woorden: [
+            { woord: "betogend", uitleg: "Een tekst die een mening verdedigt met argumenten." },
+            { woord: "informatief", uitleg: "Een tekst die feiten geeft, geen mening." },
+            { woord: "instructief", uitleg: "Een tekst die uitlegt HOE je iets doet (stappen)." },
+            { woord: "verhalend", uitleg: "Een tekst die een verhaal vertelt (met personages, gebeurtenissen)." },
+          ],
+          theorie: "**Snelle check tekstsoort:**\n- Heeft de tekst een MENING? → betogend\n- Geeft het FEITEN zonder mening? → informatief\n- Geeft het STAPPEN voor iets maken/doen? → instructief\n- Heeft het PERSONAGES + gebeurtenissen? → verhalend",
+          voorbeelden: [
+            { type: "betoog-signaal", tekst: "Tekst 3: 'Ik ben van mening', 'Daarom: laat de telefoon thuis'. = mening + argumenten = betogend." },
+          ],
+          basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "Cito-vragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
+          niveaus: {
+            basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat. A.",
+            simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara). = A.",
+            nogSimpeler: "Mening = betoog = A.",
+          },
+        },
       },
       {
         // strategie-vraag
@@ -884,6 +986,26 @@ const steps = [
           "Bij Cito mag dat inderdaad niet — context is je beste vriend.",
           "Beter een gok dan leeg — geen punten af voor fout.",
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Strategie-vraag", tekst: "Niet over een tekst, maar over HOE je toetsen aanpakt. Goede strategieën onthouden = punten halen." },
+            { titel: "Beste strategie bij onbekend woord", tekst: "Lees de zin ervoor en erna — context geeft hints. Splits het woord in delen. Maak een goede gok." },
+          ],
+          woorden: [
+            { woord: "context", uitleg: "De woorden RONDOM een onbekend woord — geven vaak een hint over de betekenis." },
+            { woord: "strategie", uitleg: "Een slimme manier om iets aan te pakken." },
+          ],
+          theorie: "**Bij Cito en andere toetsen: NOOIT leeg laten.** Geen woordenboek, geen overslaan. Strategie:\n1. Splits onbekend woord in delen.\n2. Lees zin ervoor + erna.\n3. Maak een redelijke gok op basis van context.\n4. Vul het beste antwoord in (gok-kans 25%, leeg = 0%).",
+          voorbeelden: [
+            { type: "context", tekst: "'De vogel maakt een prachtig krakend geluid.' Onbekend woord 'krakend'? Context: vogel + geluid → een soort vogelgeluid." },
+          ],
+          basiskennis: [{ onderwerp: "Toets-tactiek", uitleg: "Een gok = 25% kans op punt. Leeg = 0%. Altijd invullen!" }],
+          niveaus: {
+            basis: "Context lezen = beste strategie. A.",
+            simpeler: "Stel je leest een woord dat je niet kent. Wat doe je? Niet overslaan. Geen woordenboek (mag niet). Lees de zinnen eromheen — die helpen je het te raden. = A.",
+            nogSimpeler: "Context lezen = A.",
+          },
+        },
       },
     ],
   },
