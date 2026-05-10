@@ -73,13 +73,15 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
           <button
             onClick={onClose}
             style={{
-              padding: "4px 10px",
+              padding: "10px 14px",
               background: "transparent",
               color: "var(--color-text-soft)",
               border: "1px solid var(--color-border)",
-              borderRadius: 6,
+              borderRadius: 8,
               cursor: "pointer",
               fontSize: 12,
+              minHeight: 44, // A5: tap-target
+              minWidth: 60,
             }}
           >
             sluit
@@ -244,15 +246,16 @@ function NiveauKnop({ label, actief, onClick }) {
     <button
       onClick={onClick}
       style={{
-        padding: "6px 12px",
+        padding: "10px 14px",
         background: actief ? "#42a5f5" : "transparent",
         color: actief ? "#0f1729" : "#5db3ff",
         border: "1px solid #42a5f5",
-        borderRadius: 6,
+        borderRadius: 8,
         cursor: "pointer",
-        fontSize: 12,
+        fontSize: 13,
         fontWeight: 700,
         fontFamily: "var(--font-display)",
+        minHeight: 44, // A5: tap-target floor
       }}
     >
       {label}

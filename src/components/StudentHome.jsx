@@ -117,6 +117,22 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   };
 
   const recentProgress = progress.slice(-5).reverse();
+  // A8 (10-agent circulariteit-review 2026-05-10): laatste activiteit voor "verder waar je was"-card.
+  const lastActivity = recentProgress[0] || null;
+  // A10: examen-trainer alleen voor VMBO-mavo klas 4 (Mark's primaire dochter-use-case).
+  const isVmboGt4 = userSchoolType === "mavo" && String(userLevel || "") === "4";
+  // A11: spaced-repetition due-counter op CHECK-niveau (parallel aan topic-niveau dueCount).
+  const [srDueCount, setSrDueCount] = useState(0);
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const { countDue } = await import("../shared/spacedRepetition.js");
+        if (!cancelled) setSrDueCount(countDue());
+      } catch {}
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
   // Streak protection: check if today has been played
   const streakWarning = (() => {
@@ -180,6 +196,94 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               {profileBadge}
             </span>
           </div>
+        )}
+
+        {/* A8 (10-agent circulariteit 2026-05-10): "Verder waar je was"-card.
+            Toont laatste activiteit met directe knop naar bijbehorend vak. */}
+        {lastActivity && onPickPathsForSubject && (
+          <button
+            onClick={() => onPickPathsForSubject(lastActivity.subject, lastActivity.level)}
+            style={{
+              width: "100%",
+              marginBottom: 12,
+              padding: "12px 14px",
+              background: "rgba(0,212,255,0.10)",
+              border: "1px solid rgba(0,212,255,0.40)",
+              borderRadius: 12,
+              color: "var(--color-text-strong)",
+              cursor: "pointer",
+              textAlign: "left",
+              minHeight: 44,
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">▶</span>
+            <span style={{ flex: 1, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.3 }}>
+              <span style={{ fontWeight: 700, color: "var(--color-brand-secondary)", fontSize: 12, textTransform: "uppercase" }}>Verder waar je was</span>
+              <br />
+              <span>{(SUBJECTS.find(s => s.id === lastActivity.subject)?.label) || lastActivity.subject} — {lastActivity.percentage != null ? `score ${lastActivity.percentage}%` : "open"}</span>
+            </span>
+            <span style={{ fontSize: 18, color: "var(--color-brand-secondary)" }}>→</span>
+          </button>
+        )}
+
+        {/* A11 (10-agent didactiek 2026-05-10): herhaling-due banner per CHECK.
+            Toont aantal individuele vragen die vandaag herhaling nodig hebben. */}
+        {srDueCount > 0 && lastActivity && (
+          <div style={{
+            marginBottom: 12,
+            padding: "10px 14px",
+            background: "rgba(255,213,79,0.08)",
+            border: "1px solid rgba(255,213,79,0.40)",
+            borderRadius: 10,
+            color: "var(--color-text-strong)",
+            fontSize: 13,
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+          }}>
+            <span style={{ fontSize: 22 }}>🔄</span>
+            <span style={{ flex: 1 }}>
+              <strong>{srDueCount}</strong> {srDueCount === 1 ? "vraag wacht" : "vragen wachten"} op herhaling
+            </span>
+          </div>
+        )}
+
+        {/* A10 (10-agent circulariteit 2026-05-10): examen-trainer voor VMBO-GT 4.
+            Directe ingang naar de 6 economie-examen-paden met 38 echte vragen. */}
+        {isVmboGt4 && onPickPathsForSubject && (
+          <button
+            onClick={() => onPickPathsForSubject("economie", userLevel)}
+            style={{
+              width: "100%",
+              marginBottom: 12,
+              padding: "14px 16px",
+              background: "linear-gradient(135deg, rgba(255,213,79,0.15), rgba(255,160,0,0.10))",
+              border: "1.5px solid rgba(255,213,79,0.55)",
+              borderRadius: 14,
+              color: "var(--color-text-strong)",
+              cursor: "pointer",
+              textAlign: "left",
+              minHeight: 60,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <span style={{ fontSize: 28 }} aria-hidden="true">🎓</span>
+            <span style={{ flex: 1, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.35 }}>
+              <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, color: "#ffd54f" }}>
+                Examen-trainer Economie
+              </span>
+              <br />
+              <span style={{ fontSize: 13, color: "var(--color-text)" }}>
+                6 echte VMBO-examens · 38 vragen met uitleg · gratis oefenen
+              </span>
+            </span>
+            <span style={{ fontSize: 20, color: "#ffd54f" }}>▶</span>
+          </button>
         )}
 
         {/* PO/VO-toggle + vakkenkeuze-grid (audit 2 M2):

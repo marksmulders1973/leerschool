@@ -13,6 +13,7 @@ import {
   buildCheckOrder as adaptBuildOrder,
   pathWrongMap as adaptPathWrongMap,
 } from "../../shared/adaptiveStore.js";
+import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
@@ -399,6 +400,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // beheerst — ook ná wrongHint + uitlegpad + retry. Anders straft het
       // systeem leerlingen die wel ECHT bijleren via de uitleg.
       adaptRecordRight(pathId, stepIdx, realCheckIdx);
+      // A11: spaced repetition — schuif interval-stap (correct na fout = consolideren).
+      srRecordSeen(pathId, stepIdx, realCheckIdx, true, attempts);
       // Bij begrijpend-lezen-vragen met `evidence`: pauzeer en toon aan de
       // leerling waar in de tekst het antwoord stond (didactiek-feedback Mark).
       if (currentCheck.evidence) {
@@ -419,6 +422,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // kan reageren als de leerling om hulp vraagt.
       setLastWrongAnswer(currentCheck.options?.[i] || null);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
+      // A11: spaced repetition — fout = reset naar morgen.
+      srRecordSeen(pathId, stepIdx, realCheckIdx, false, attempts);
       // Pilot 2026-05-10: tel fout per vraag voor adaptief uitlegpad-niveau.
       if (currentCheck.uitlegPad && currentCheck.examenBron) {
         bumpVraagFouten(`${pathId}__${stepIdx}__${realCheckIdx}`);
@@ -1590,6 +1595,7 @@ function btnSecondary() {
     fontSize: 15,
     fontFamily: "var(--font-display)",
     cursor: "pointer",
+    minHeight: 44,  // A5: Apple HIG tap-target floor
   };
 }
 
