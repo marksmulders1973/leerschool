@@ -33,6 +33,11 @@ const steps = [
         explanation: "Een begroting is een overzicht van wat je verwacht binnen te krijgen (inkomsten) en wat je verwacht uit te geven (uitgaven) — meestal per maand of per jaar. Door dat naast elkaar te zetten zie je vooraf of je geld overhoudt of tekortkomt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 3",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'begroting', 'inkomsten', 'uitgaven', 'vermogen', 'geldstress'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "elke optie meten tegen de definitie — eliminatie van te-beperkte en off-topic definities" },
+          { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen", niveau: "vmbo-3", why: "begroten + inkomsten/uitgaven plannen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat doet een begroting?", tekst: "Een PLAN VOORAF voor je geld. Helpt om te zien of je rondkomt, voor je in de problemen zit." },
@@ -86,6 +91,11 @@ const steps = [
         explanation: "Een werkgever wil winst maken. Hij kan het zich permitteren om lonen te verhogen als zijn werknemers méér produceren (productiviteitstijging). Stijgt de productiviteit met 5% en de loonkosten met 3%? Dan blijft er winstmarge over. Andersom (loonstijging > productiviteit) krimpt de winst.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 8",
         leerpadLink: { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'arbeidsproductiviteit', 'lonen', 'winstmarge'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "% productiviteit hoger dan % lonen → werkgever houdt winstmarge over — 2 % vergelijken" },
+          { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt", niveau: "vmbo-4", why: "loonvorming + arbeidsproductiviteit — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wanneer wil een werkgever loon verhogen?", tekst: "Als hij het kan BETALEN. Dat kan als de werknemer méér gaat opleveren — dus als de productiviteit stijgt." },
@@ -138,6 +148,11 @@ const steps = [
         explanation: "**Nivellering** = inkomensverschillen worden KLEINER. **Denivellering** = inkomensverschillen worden GROTER. Een hogere korting voor lage inkomens = lage inkomens houden relatief meer over = verschil tussen arm en rijk wordt kleiner = NIVELLERING in voordeel van lage inkomens.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 16",
         leerpadLink: { id: "pincode-belasting", title: "Belasting" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'heffingskorting', 'nivellering', 'denivellering', 'inkomensverdeling'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "2 dimensies tegelijk: nivellering/denivellering EN voordeel hoog/laag — eliminatie" },
+          { id: "pincode-belasting", title: "Belasting", niveau: "vmbo-3", why: "heffingskortingen + IB-systematiek + herverdeling — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat doet de heffingskorting?", tekst: "Korting op te betalen IB. HOGER voor lage inkomens, LAGER voor hoge inkomens." },
@@ -192,6 +207,11 @@ const steps = [
         explanation: "Modaal inkomen = het inkomen dat het MEEST voorkomt in Nederland (modus uit de statistiek). Niet hetzelfde als gemiddelde (= alle inkomens opgeteld / aantal mensen) of mediaan (= middelste inkomen). Modaal NL ~€44.000 bruto/jaar (2024) — dat is wat een 'modaal gezin' typisch verdient.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 39",
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'modaal', 'modus', 'gemiddelde', 'mediaan', 'minimumloon'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "modaal ≠ minimum ≠ gemiddelde — elke optie afpassen tegen de juiste betekenis" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "inkomensbegrippen + 'modaal' als referentie — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent modaal?", tekst: "Modus = wat het MEESTE voorkomt. Modaal inkomen = inkomen dat het MEEST verdiend wordt in NL." },
@@ -244,6 +264,11 @@ const steps = [
         explanation: "Koopkracht = wat je werkelijk kunt kopen voor je inkomen. Daarvoor moet je nominaal inkomen corrigeren voor INFLATIE (prijsstijgingen). Stijgt je modaal inkomen met 3% terwijl prijzen 5% stijgen → koopkracht daalt 2%. Inflatie is de KERN-correctie voor koopkracht.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 43",
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'koopkracht', 'inflatie', 'inkomensverdeling', 'modaal inkomen'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "inflatie als % aftrekken van loonstijging % voor reële verandering" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "koopkracht-formule + inflatiecorrectie — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is koopkracht?", tekst: "Hoeveel je werkelijk KAN KOPEN voor je inkomen. Niet euro's, maar boodschappen-equivalent." },
