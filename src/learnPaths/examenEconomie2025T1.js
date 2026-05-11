@@ -81,6 +81,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 1",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'export', 'import', 'handelsbalans', 'mln'" },
+          { id: "tabellen-grafieken", title: "Tabellen en grafieken", niveau: "po-1F", why: "uit een jaar-vergelijkings-tabel waarden aflezen + 2 kolommen per rij vergelijken" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "export vs import + handelsbalans — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat moet je vergelijken?", tekst: "In de tabel: 'waarde export' vs 'waarde import' per jaar (2010, 2016, 2017)." },
@@ -134,6 +139,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 2",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'nationaal inkomen', 'reëel', 'nominaal', 'inflatie'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "% prijsstijging aftrekken van % loonstijging om reëel te bepalen" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "reëel vs nominaal inkomen + inflatiecorrectie — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is reëel inkomen?", tekst: "Inkomen GECORRIGEERD voor inflatie. Vertelt je niet hoeveel euro, maar wat dat geld waard is qua koopkracht." },
@@ -187,6 +197,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 4",
         bronTekst: bronSintMaarten,
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen verschil 'goed' (tastbaar) vs 'dienst' (niet-tastbaar) + 'export' vs 'import'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "vraag-stap-voor-stap: wie koopt + waar + tastbaar of niet" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "4 categorieën export/import × goed/dienst — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wie KOOPT?", tekst: "De toerist (buitenlander) — geld komt vanuit het buitenland." },
@@ -241,6 +256,11 @@ const steps = [
         explanation: "De gemeente verzorgt o.a. paspoorten, ID-kaarten en rijbewijzen — dat zijn lokale burger­zaken. Dijken = waterschap, toeslagen = Belastingdienst, AOW = SVB/Rijksoverheid.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 8",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'Rijk', 'gemeente', 'waterschap', 'SVB', 'Belastingdienst'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "elke optie tegen de juiste overheidslaag passen — eliminatie" },
+          { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3", why: "overheidslagen + welke laag welke taak doet — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Welke overheidslagen zijn er?", tekst: "Rijk (Den Haag), provincie, gemeente, waterschap. Elke laag heeft eigen taken." },
@@ -295,6 +315,11 @@ const steps = [
         explanation: "OZB (onroerendezaakbelasting) is de belangrijkste gemeentelijke belasting voor inwoners. Het wordt geheven over het bezit van een woning of bedrijfspand binnen de gemeente.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'OZB', 'accijns', 'motorrijtuigenbelasting', 'VPB'" },
+          { id: "pincode-belasting", title: "Belasting", niveau: "vmbo-3", why: "soorten belastingen + welke laag heft welk — voorkennis om opties te plaatsen" },
+          { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3", why: "gemeentelijke inkomsten + OZB als gemeente-belasting — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Welke 4 belastingen worden opgegeven?", tekst: "Accijns, motorrijtuigenbelasting, OZB, vennootschapsbelasting. Welke zijn voor de GEMEENTE?" },
@@ -348,6 +373,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 14",
         bronTekst: bronJongerenInkomen,
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'primair inkomen', 'overdrachtsinkomen', 'productiefactor', 'zakgeld'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "bij elke optie vragen: 'lever ik er iets voor?' — eliminatie naar de echte overdracht" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "inkomensbronnen + primair vs overdracht — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een overdrachtsinkomen?", tekst: "Geld dat je krijgt ZONDER er een productiefactor (arbeid, kapitaal, natuur, ondernemerschap) tegenover te zetten. Vaak van overheid of familie." },
@@ -403,6 +433,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 17",
         bronTekst: bronDog4fun,
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'eenmanszaak', 'VOF', 'BV', 'NV', 'hoofdelijk aansprakelijk', 'rechtspersoon'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "kernfeiten uit de tekst halen: hoeveel eigenaren + allen privé aansprakelijk" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "ondernemingsvormen + beslisboom aansprakelijkheid — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel eigenaren?", tekst: "ALLE leerlingen van de klas = meerdere personen. Dus geen eenmanszaak (= 1 persoon)." },
@@ -456,6 +491,11 @@ const steps = [
         explanation: "Hoewel het AANTAL geïmporteerd sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'handelsoverschot', 'prijspeil', 'volume', 'waarde'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "waarde = volume × prijs — wat doet een % verandering met de totale waarde" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "handelsbalans + waarde- vs volume-analyse — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn 2 dingen aan handelsoverschot?", tekst: "AANTAL (volume = hoeveelheid) en PRIJS. WAARDE = aantal × prijs. Het 'overschot in geld' kijkt naar WAARDE." },
@@ -511,6 +551,11 @@ const steps = [
         explanation: "Germaine's redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'spaarrente', 'investeren', 'rendement', 'warmtepomp'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "Germaine's argument in 3 stappen lezen → welk antwoord is de samenvatting" },
+          { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen", niveau: "vmbo-3", why: "sparen vs investeren + opbrengst-vergelijking — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat zegt Germaine?", tekst: "1. Spaarrente is laag. 2. Investeer geld in warmtepomp. 3. Dat levert meer op." },
