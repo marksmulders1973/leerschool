@@ -42,7 +42,7 @@ export function useAuth() {
           .from("subscriptions")
           .select("*")
           .eq("user_id", u.id)
-          .single()
+          .maybeSingle()
           .then(({ data }) => {
             if (data) setSubscription(data);
           })
@@ -51,7 +51,7 @@ export function useAuth() {
           .from("profiles")
           .select("*")
           .eq("id", u.id)
-          .single()
+          .maybeSingle()
           .then(({ data }) => {
             if (data?.display_name) setUserName(data.display_name);
             if (data?.level) setUserLevel(data.level);

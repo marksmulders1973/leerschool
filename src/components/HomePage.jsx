@@ -81,10 +81,13 @@ const TICKER_ITEMS = [
 ];
 
 function TickerBanner() {
-  const [winners, setWinners] = useState([]);
+  // Maand-1 snoei follow-up (2026-05-11): HoF-winners ("Leerkwartier van de
+  // maand/jaar — Sahasra") en obliteratorItems ("OBLITERATOR-kampioen Brian")
+  // uit ticker gehaald — game/scorebord-jargon past niet bij Cito-ouder-ICP.
+  // awardItems (Doorzetter/Hardwerker) en shoutouts blijven: leerinspanning,
+  // niet rangorde.
   const [awardItems, setAwardItems] = useState([]);
   const [shareItems, setShareItems] = useState([]);
-  const [obliteratorItems, setObliteratorItems] = useState([]);
   const [vriendenmakerItem, setVriendenmakerItem] = useState(null);
   // Algemene shoutouts voor élke speler die deze week actief was — niet alleen
   // de winnaars. Doel: iedereen voelt zich gezien op de homepage, vergroot de
@@ -119,25 +122,6 @@ function TickerBanner() {
           });
         }
       }).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    supabase.from("obliterator_scores")
-      .select("player_name, score")
-      .order("score", { ascending: false })
-      .order("created_at", { ascending: true })
-      .limit(2)
-      .then(({ data }) => {
-        if (!data?.length) return;
-        setObliteratorItems(data.map((h, i) => ({
-          icon: i === 0 ? "👽" : "🛸",
-          text: i === 0
-            ? `OBLITERATOR-kampioen: ${h.player_name} — ${h.score} punten!`
-            : `OBLITERATOR top: ${h.player_name} kraakte ${h.score} punten!`,
-          special: true,
-        })));
-      })
-      .catch(() => {});
   }, []);
 
   useEffect(() => {
@@ -257,57 +241,9 @@ function TickerBanner() {
       .catch(() => {});
   }, []);
 
-  useEffect(() => {
-    const now = new Date();
-    const fmtShort = (d) => d.toLocaleDateString("nl-NL", { day: "numeric", month: "short" });
-
-    const startOfDay = new Date(now); startOfDay.setHours(0, 0, 0, 0);
-    const endOfDay = new Date(now); endOfDay.setHours(23, 59, 59, 999);
-
-    const startOfWeek = new Date(now);
-    startOfWeek.setDate(now.getDate() - (now.getDay() === 0 ? 6 : now.getDay() - 1));
-    startOfWeek.setHours(0, 0, 0, 0);
-    const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 6); endOfWeek.setHours(23, 59, 59, 999);
-
-    const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
-    const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
-
-    const startOfYear = new Date(now.getFullYear(), 0, 1);
-    const endOfYear = new Date(now.getFullYear(), 11, 31, 23, 59, 59, 999);
-
-    const periods = [
-      { icon: "☀️", label: "dag",   periode: fmtShort(startOfDay),                                    from: startOfDay,   to: endOfDay   },
-      { icon: "📅", label: "week",  periode: `${fmtShort(startOfWeek)}–${fmtShort(endOfWeek)}`,        from: startOfWeek,  to: endOfWeek  },
-      { icon: "🗓️", label: "maand", periode: now.toLocaleDateString("nl-NL", { month: "long" }),        from: startOfMonth, to: endOfMonth },
-      { icon: "👑", label: "jaar",  periode: String(now.getFullYear()),                                  from: startOfYear,  to: endOfYear  },
-    ];
-
-    Promise.all(periods.map(p =>
-      supabase.from("leaderboard")
-        .select("player_name, subject, level, title, topic, percentage, time_taken")
-        .gte("completed_at", p.from.toISOString())
-        .lte("completed_at", p.to.toISOString())
-        .order("percentage", { ascending: false })
-        .order("time_taken", { ascending: true, nullsFirst: false })
-        .limit(1)
-        .then(({ data }) => data?.[0] ? { ...p, winner: data[0] } : null)
-        .catch(() => null)
-    )).then(results => setWinners(results.filter(Boolean)));
-  }, []);
-
-  const winnerItems = winners.map(({ icon, label, periode, winner }) => {
-    const subj = SUBJECTS.find(s => s.id === winner.subject);
-    const vakLabel = winner.title || winner.topic?.split('\n')[0].slice(0, 35) || (subj ? subj.label : winner.subject);
-    return { icon, text: `Gefeliciteerd ${winner.player_name}! 🎉 ${BRAND.name} van de ${label} (${periode}) — ${vakLabel} · ${winner.percentage}%`, special: true };
-  });
-
-  // Filter shoutouts: namen die al als winnaar/award genoemd zijn slaan we
+  // Filter shoutouts: namen die al als award-winnaar genoemd zijn slaan we
   // over om dubbele aandacht te voorkomen — die hebben al hun moment.
   const namesAlreadyMentioned = new Set();
-  winnerItems.forEach((w) => {
-    const m = w.text.match(/Gefeliciteerd\s+([^!]+)!/);
-    if (m) namesAlreadyMentioned.add(m[1].trim().toLowerCase());
-  });
   awardItems.forEach((a) => {
     const m = a.text.match(/(?:Knap!|Wauw!|Super!)\s+([^\s]+)/);
     if (m) namesAlreadyMentioned.add(m[1].trim().toLowerCase());
@@ -318,8 +254,8 @@ function TickerBanner() {
     return !namesAlreadyMentioned.has(m[1].trim().toLowerCase());
   });
 
-  // Verspreid alle speciale items (kampioenen + awards + share-bedankjes + OBLITERATOR + Vriendenmaker + shoutouts) tussen gewone items
-  const allSpecial = [...winnerItems, ...awardItems, ...shareItems, ...obliteratorItems, ...(vriendenmakerItem ? [vriendenmakerItem] : []), ...filteredShoutouts];
+  // Verspreid alle speciale items (awards + share-bedankjes + Vriendenmaker + shoutouts) tussen gewone items
+  const allSpecial = [...awardItems, ...shareItems, ...(vriendenmakerItem ? [vriendenmakerItem] : []), ...filteredShoutouts];
   const half = Math.ceil(TICKER_ITEMS.length / Math.max(allSpecial.length, 1));
   const combined = [];
   TICKER_ITEMS.forEach((item, i) => {

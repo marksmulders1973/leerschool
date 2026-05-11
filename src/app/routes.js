@@ -59,8 +59,11 @@ export const PAGE_TO_PATH = {
 // /spel — alias voor /obliterator. Visie-bewaker maand 1 (2026-05-10):
 // OBLITERATOR uit hoofd-nav, maar zoon kan via /spel direct naar het spel
 // (vriendelijker dan /obliterator).
+// /leaderboard — Engelse alias voor /scorebord (canonical = NL). Backward-compat
+// voor oude deeplinks en testchecklists (2026-05-11).
 const PATH_ALIASES = {
   "/spel": "obliteratorPlay",
+  "/leaderboard": "leaderboard",
 };
 
 // Reverse-lookup: pad → page-key. Lange paden eerst zodat /leren/pad
