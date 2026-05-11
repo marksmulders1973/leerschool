@@ -84,17 +84,17 @@ Check eerst met `Grep` welke paden geen `uitlegPad:` hebben. Pak Cito-relevante 
 
 VMBO-wiskunde (na Cito-content):
 - [ ] `parabolen.js` (32 stappen, doe in meerdere sessies)
-- [ ] `kwadratischeVergelijkingen.js`
+- [x] `kwadratischeVergelijkingen.js` — 15 checks (2026-05-11, commit 5a0dca6)
 - [ ] `kwadratenWortels.js`
 - [ ] `lineaireFormules.js`
-- [ ] `coordinatenstelsel.js`
+- [x] `coordinatenstelsel.js` — 18 checks (2026-05-11, commit 2e7aa67)
 - [ ] `vergelijkingenOplossen.js`
 - [ ] `verhoudingen.js` (VMBO-versie)
 - [ ] `breuken.js` (VMBO-versie)
 - [ ] `negatieveGetallen.js` (VMBO-versie)
 - [ ] `vlakkeFiguren.js` (VMBO-versie, met Pythagoras)
 - [ ] `kansrekening.js`
-- [ ] `statistiek.js`
+- [x] `statistiek.js` — 14 checks (2026-05-11, commit 4f7d795)
 - [ ] `stelsels.js`
 - [ ] `machten.js`
 - [ ] `exponentieel.js`
@@ -181,6 +181,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 — UX fix ExamensPage SectieKop (Mark): was te knop-achtig (rand-frame met kleur), nu hoofdstuk-stijl met onderlijn. Tekst PDF-sectie verduidelijkt naar "Hieronder kun je hele examens inzien (PDF)". Commit 769675b.
 - 2026-05-11 — **pincodeWerkArbeidsmarkt VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): werkgever/werknemer+contracten, arbeidsovereenkomst+proeftijd, CAO+krapte+vakbond, vraag-aanbod arbeid+evenwichtsloon, werkloosheid 4 soorten+verborgen, productiviteit+paradox, sociale zekerheid+WW+AOW+bijstand. Was #6 op audit-lijst (3 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit b83d00f. 🎉 ALLE 6 PINCODE-ECONOMIE-PADEN COMPLEET. Samen 275 checks.
 - 2026-05-11 (later) — MEGA-SESSIE: kennisgraaf 100% gesloten. uitlegPad toegevoegd aan: tijdvakkenGeschiedenis (26 checks, commit 4dab886), wereldoorlog2Geschiedenis (31, 5b0f1de), pincode-ontwikkelingslanden (42, f57f3a5), tabellenGrafieken (24, bc2540d), topografieNederland (28, b036055), nederlandseStaatMaatschappijleer (24, 552d019), klimatenAardrijkskunde (22, 5e42679), tachtigjarigeOorlogGeschiedenis (26, a0cef47). Totaal 223 uitlegPad-checks. PLUS: 2 bug-fixes (kaartlezen+matenEenheden, 5fe8699), naming Cito-eindtoets → Doorstroomtoets in user-facing copy (11 files, 6db6082), nieuw pilot-pad doorstroomtoetsRekenenG8 (20 vragen, 2674ce9), memory + CLAUDE.md updates (Doorstroomtoets-naming + copyright-policy + memory-raadplegen-regel + C-taak klas 1-3 onderbouw VO opgeslagen). Audit: 0 examen-referenced paden zonder uitlegPad.
+- 2026-05-11 (verder) — VMBO-wiskunde uitlegPad-batch: statistiek (14 checks, commit 4f7d795), kwadratischeVergelijkingen (15, 5a0dca6), coordinatenstelsel (18, 2e7aa67). Totaal 47 extra checks. Bovenste niet-afgevinkte taak (parabolen 41 checks) overgeslagen: backlog-annotatie 'doe in meerdere sessies' — voor losse sessie.
 
 ## Peer-review log
 
