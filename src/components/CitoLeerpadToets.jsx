@@ -158,7 +158,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           </div>
 
           <button onClick={start} style={btnPrimary()}>
-            🚀 Start oefen-Cito
+            🚀 Start oefen-Doorstroomtoets
           </button>
         </div>
       </div>
@@ -170,7 +170,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     const answered = answers.filter((a) => a !== null).length;
     return (
       <div style={pageStyle()}>
-        <Header title="Klaar! 🎉" subtitle="Je oefen-Cito-uitslag" onBack={onBack} onHome={onHome} />
+        <Header title="Klaar! 🎉" subtitle="Je oefen-Doorstroomtoets-uitslag" onBack={onBack} onHome={onHome} />
         <div style={{ padding: "16px 18px 40px", color: C.text }}>
           <div style={{ ...cardStyle(), textAlign: "center", marginBottom: 18 }}>
             <div style={{ fontSize: 56, fontFamily: "var(--font-display)", fontWeight: 800, color: scoreColor(score?.total?.pct) }}>
@@ -294,7 +294,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
 
           <div style={{ display: "flex", gap: 10 }}>
             <button onClick={() => setMode("intro")} style={btnSecondary()}>
-              🔄 Nieuwe oefen-Cito
+              🔄 Nieuwe oefen-Doorstroomtoets
             </button>
             <button onClick={onHome} style={btnPrimary()}>
               🏠 Naar home
