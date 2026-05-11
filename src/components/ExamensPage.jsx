@@ -194,7 +194,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
           <SectieKop
             icon="📄"
             kleur="#a78bfa"
-            titel="Hele examens inzien (PDF)"
+            titel="Hieronder kun je hele examens inzien (PDF)"
             subtitel="Volledige examens + correctievoorschrift — handig voor zelfstudie op papier"
           />
         </div>
@@ -470,20 +470,25 @@ function cardStyle() {
   };
 }
 
+// SectieKop = puur visuele scheiding tussen secties op ExamensPage.
+// Mark feedback 2026-05-11: oorspronkelijk had het een rand-frame met
+// gekleurde border — leek klikbaar maar was het niet. Aangepast naar
+// hoofdstuk-stijl: icon + tekst + onderlijn. Geen knop-look.
 function SectieKop({ icon, kleur, titel, subtitel }) {
   return (
     <div style={{
-      display: "flex", alignItems: "center", gap: 12,
-      padding: "12px 14px", marginBottom: 12,
-      background: "rgba(255,255,255,0.03)",
-      border: `1.5px solid ${kleur}`, borderRadius: 12,
+      display: "flex", alignItems: "flex-start", gap: 12,
+      padding: "16px 4px 12px",
+      marginBottom: 12,
+      borderBottom: `1px solid ${kleur}`,
     }}>
-      <span style={{ fontSize: 28 }} aria-hidden="true">{icon}</span>
+      <span style={{ fontSize: 28, lineHeight: 1 }} aria-hidden="true">{icon}</span>
       <div style={{ flex: 1 }}>
-        <div style={{
-          fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: kleur,
-        }}>{titel}</div>
-        <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>{subtitel}</div>
+        <h3 style={{
+          fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 700, color: kleur,
+          margin: 0,
+        }}>{titel}</h3>
+        <div style={{ fontSize: 12, color: C.muted, marginTop: 4, lineHeight: 1.4 }}>{subtitel}</div>
       </div>
     </div>
   );
