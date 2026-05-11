@@ -99,7 +99,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `machten.js` — 24 checks (2026-05-11, commit f0bb4d2)
 - [x] `exponentieel.js` — 21 checks (2026-05-11, commit a121ea0)
 - [x] `goniometrie.js` — 13 checks (2026-05-11, commit d6597fd)
-- [ ] `logaritmen.js`
+- [x] `logaritmen.js` — 23 checks (2026-05-11, commit 151fb8c)
 - [ ] `differentieren.js`
 
 Talen (lager prio):
