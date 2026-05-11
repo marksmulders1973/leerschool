@@ -68,9 +68,9 @@ Check eerst met `Grep` welke paden geen `uitlegPad:` hebben. Pak Cito-relevante 
 
 - [ ] `tabellenGrafieken.js` — Cito groep 7-8 studievaardigheden
 - [ ] `pincodeBelasting.js` — economie, Pincode-koppeling
-- [ ] `pincodeBuitenlandEu.js`
+- [x] `pincodeBuitenlandEu.js` — commit 450b8f5 (2026-05-11)
 - [ ] `pincodeGeldSparenLenen.js`
-- [ ] `pincodeInkomenWelvaart.js`
+- [x] `pincodeInkomenWelvaart.js` — 42 checks (7 stappen) — commit 7f1c16c (2026-05-11)
 - [ ] `nederlandseStaatMaatschappijleer.js` — geschiedenis-koppeling
 - [ ] `topografieNederland.js` — aardrijkskunde Cito-relevant
 - [ ] `tijdvakkenGeschiedenis.js` — VMBO, hoort bij examen
@@ -168,6 +168,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 — voorkennisKeten Fase 1 DATA-laag VOLLEDIG: alle 9 examen-paden voorzien (Economie T1-T2 2023-2025 + Engels 2024-T1 + Engels 2025-T1 + Geschiedenis 2025-T1). 61 examen-checks × 3 voorkennis-stappen. Audit: 0 broken loops, 0 ontbrekende voorkennisKeten. Patroon: woordenschat-po + begrijpend-lezen-strategie + specifiek vakpad. Eindcommit 83762e1.
 - 2026-05-11 — Prerequisites op top-10 examen-referenced paden (woordenschat-engels 17×, pincode-* 9-3×, tijdvakken/wo2-geschiedenis 3×). Patroon: NL-basis (woordenschat-po) + skill (procenten/begrijpend-lezen/kaartlezen) + soms een mid-level pincode-pad. Commit b0a2221. Fase 1 praktisch compleet — UI-fase 2 wacht op Mark's go (zie CLAUDE.md hard-stop).
 - 2026-05-11 — Prerequisites op 6 Cito-PO-paden (ICP groep 6-8): tabellen-grafieken, redactiesommen, procenten-po, verhoudingen-po, breuken-po, geld-rekenen. 16/90 paden voorzien. PO-fundering zelf blijft zonder prereqs. Commit 735cc82.
+- 2026-05-11 — **pincodeInkomenWelvaart VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): schaarste/behoeften, productiefactoren, inkomenstypen, verdeling/Gini, welvaart/inflatie/koopkracht, BBP/HDI, inkomensbeleid. Was #1 op lijst examen-referenced paden zonder uitlegPad (7 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit 7f1c16c.
 
 ## Peer-review log
 
