@@ -91,7 +91,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `vergelijkingenOplossen.js` — 22 checks (2026-05-11, commit 92cce28)
 - [x] `verhoudingen.js` — 12 checks (2026-05-11, commit 4eecd5d)
 - [x] `breuken.js` — 15 checks (2026-05-11, commit 2697a39)
-- [ ] `negatieveGetallen.js` (VMBO-versie)
+- [x] `negatieveGetallen.js` — 10 checks (2026-05-11, commit 7f0ab0d)
 - [ ] `vlakkeFiguren.js` (VMBO-versie, met Pythagoras)
 - [ ] `kansrekening.js`
 - [x] `statistiek.js` — 14 checks (2026-05-11, commit 4f7d795)
