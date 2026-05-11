@@ -572,7 +572,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               minHeight: 44,
             }}
           >
-            <DoorstroomtoetsLogo size={26} />
+            <DoorstroomtoetsLogo size={36} />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffd54f" }}>
                 Doorstroomtoets oefenen

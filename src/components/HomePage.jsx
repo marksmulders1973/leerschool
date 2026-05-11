@@ -840,7 +840,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               cta: {
                 label: (
                   <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    <DoorstroomtoetsLogo size={18} /> Doorstroomtoets oefenen
+                    <DoorstroomtoetsLogo size={26} /> Doorstroomtoets oefenen
                   </span>
                 ),
                 onClick: () => handleFeatureClick("cito"),

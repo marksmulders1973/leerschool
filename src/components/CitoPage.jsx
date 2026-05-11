@@ -161,7 +161,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
   return (
     <div style={styles.page}>
       <Header
-        title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Doorstroomtoets oefenen <DoorstroomtoetsLogo size={24} /></span>}
+        title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Doorstroomtoets oefenen <DoorstroomtoetsLogo size={32} /></span>}
         subtitle={mode === "oefenen" ? `Voorbereiding eindtoets groep ${groep}` : "Kies hoe je wilt oefenen"}
         onBack={mode === "oefenen" ? () => setMode("kies") : onBack}
         onHome={onHome}
