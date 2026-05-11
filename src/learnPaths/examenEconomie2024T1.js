@@ -59,6 +59,11 @@ const steps = [
         explanation: "Zweden is wel lid van de EU, maar NIET van de eurozone (EMU). Het land betaalt met de Zweedse kroon (SEK). Andere EU-landen zonder euro zijn bv. Denemarken, Polen, Tsjechië en Hongarije.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'EU', 'EMU', 'eurozone', 'wettig betaalmiddel'" },
+          { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F", why: "weten waar Zweden ligt + welk land bij welke unie hoort" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "EU vs EMU + welke 20 landen de euro gebruiken — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "EU ≠ EMU", tekst: "Niet elk EU-land heeft de euro. EU-lidmaatschap betekent vrij verkeer; EMU = eurozone (gemeenschappelijke munt)." },
@@ -114,6 +119,11 @@ const steps = [
         explanation: "Publieke omroepen (NPO/AVROTROS/BNNVARA/KRO-NCRV/etc.) zijn een paar grote spelers op dezelfde markt — dat is per definitie een oligopolie. Ze hebben gedifferentieerde programmering maar weinig concurrenten.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 7",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'monopolie', 'oligopolie', 'monopolistische concurrentie', 'volkomen concurrentie'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "kernvraag eruit halen: hoeveel aanbieders + welk product → welk type markt" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "4 marktvormen + macht op de markt — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel publieke omroepen zijn er?", tekst: "Een paar grote: AVROTROS, BNNVARA, KRO-NCRV, EO, MAX, NTR, NPO. Niet 1, niet duizenden — een handvol." },
@@ -168,6 +178,11 @@ const steps = [
         explanation: "Koopkracht = je reëel inkomen = nominaal inkomen gecorrigeerd voor inflatie. Dat zegt hoeveel je werkelijk kunt kopen. Bij hoge inflatie kan je nominaal inkomen stijgen, terwijl je reëel inkomen daalt — dat voelt iedereen op Prinsjesdag.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 27",
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'bruto', 'netto', 'nominaal', 'reëel' inkomen" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "inflatie als percentage — wat trekt nominaal omlaag naar reëel" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "koopkracht = reëel inkomen na inflatiecorrectie — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is koopkracht?", tekst: "Hoeveel je MET je geld kan KOPEN. Niet de euro's zelf, maar wat ze waard zijn aan boodschappen." },
@@ -221,6 +236,11 @@ const steps = [
         explanation: "Staatsschuld stijgt als de overheid jaar na jaar méér uitgeeft dan ze binnenkrijgt (begrotingstekort). Dat tekort moet bijgeleend worden — dus de schuld groeit. Italië heeft al jaren een groot tekort + hoge schuld (~140% BBP, ver boven de EMU-norm van 60%).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'staatsschuld', 'begrotingstekort', 'overschot', 'EMU-norm'" },
+          { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F", why: "uitgaven > inkomsten = tekort = bijlenen — vergelijken van 2 getallen" },
+          { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3", why: "begroting + staatsschuld + tekort — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is staatsschuld?", tekst: "Het totaal aan geld dat de overheid GELEEND heeft en nog moet terugbetalen." },
@@ -275,6 +295,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36",
         bronTekst: bronSasja,
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'vaste lasten', 'incidentele uitgaven', 'dagelijkse huishoudelijke uitgaven', 'begroting'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "Nibud-citaat scannen: welke voorbeelden hoor je terug in welke optie" },
+          { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen", niveau: "vmbo-3", why: "begroten + uitgaven-categorieën — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Welke 3 soorten uitgaven onderscheiden we?", tekst: "(1) Vaste lasten = elke maand hetzelfde (huur, abo's). (2) Dagelijkse huishoudelijke = wisselend per dag (boodschappen). (3) Incidenteel = onverwacht (fiets kapot, dokter)." },
@@ -328,6 +353,11 @@ const steps = [
         explanation: "Bedrijven verplaatsen naar het buitenland = de werkgelegenheid verdwijnt structureel — dat is structurele werkloosheid (niet conjunctureel = tijdelijke recessie). Het is de aanbodkant: er wordt minder arbeid in Nederland aangeboden door werkgevers.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41",
         leerpadLink: { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'structureel', 'conjunctureel', 'aanbodkant', 'verplaatsing'" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "waarom verplaatsen bedrijven naar buitenland (lagere lonen, regels)" },
+          { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt", niveau: "vmbo-4", why: "soorten werkloosheid + arbeidsmarkt — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Welke 2 hoofdsoorten werkloosheid zijn er?", tekst: "(1) Conjuncturele = door ECONOMISCHE situatie (recessie, mindere vraag). Tijdelijk. (2) Structurele = door langdurige veranderingen (techniek, verplaatsing, ander beroep gevraagd)." },
