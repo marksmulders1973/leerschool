@@ -8535,7 +8535,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div style={{ marginBottom: 6 }}>
                 {BRAND.name} is de <strong>leer-app</strong> waar dit spel in zit:
               </div>
-              <div>📚 Cito-eindtoets · spelling · rekenen · wiskunde · talen</div>
+              <div>📚 Doorstroomtoets · spelling · rekenen · wiskunde · talen</div>
               <div>🎓 Voor groep 1-8, MAVO, HAVO, VWO en gymnasium</div>
               <div>🏆 Verdien medailles, kom in de Hall of Fame</div>
               <div>💯 Alles gratis — geen advertenties, geen abonnement</div>

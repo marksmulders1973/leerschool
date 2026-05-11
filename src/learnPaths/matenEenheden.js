@@ -596,7 +596,7 @@ const matenEenheden = {
   referentieNiveau: "1F",
   sloThema: "Meten en meetkunde — maten en eenheden",
   intro:
-    "Maten en eenheden voor Cito-eindtoets groep 7-8: lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito-stijl. ~15 min per deel.",
+    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
   triggerKeywords: [
     "maten","eenheden","kilometer","meter","centimeter","millimeter",
     "kilogram","gram","milligram","ton","liter","milliliter","deciliter",

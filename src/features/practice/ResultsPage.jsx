@@ -262,7 +262,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                     ⚠ <strong>Dit is geen advies — het is één oefenscore.</strong> Doe minstens 3 simulaties verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan zomaar 20% verschil maken.
                   </div>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
-                    Het officiële schooladvies krijg je van je leerkracht; de echte Cito-toets bepaalt of je advies omhoog kan.
+                    Het officiële schooladvies krijg je van je leerkracht; de echte Doorstroomtoets bepaalt of je advies omhoog kan.
                   </div>
                 </div>
               )}

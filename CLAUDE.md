@@ -6,7 +6,7 @@
 
 **Leerkwartier** = "een kwartier per dag, écht begrijpen wat je leert." Voorheen Studiebol.
 
-- **ICP (primair)**: bezorgde Cito-ouder groep 6-8. Alle product/content/marketing-keuzes hier op richten.
+- **ICP (primair)**: bezorgde **Doorstroomtoets-ouder** groep 6-8 (voorheen "Cito-ouder" — sinds 2024 heet de toets officieel Doorstroomtoets). Alle product/content/marketing-keuzes hier op richten.
 - **Secundair / persoonlijk**: VMBO-dochter — geen marketing-doelgroep.
 - **Leerkwartier-test** bij elke nieuwe feature: "Helpt dit een 10-jarige om iets BETER te BEGRIJPEN?" Zo nee → niet bouwen.
 - **STOPLIST**: zie `docs/STOPLIST.md` — 6 verboden categorieën + OBLITERATOR-uitzondering (Mark's zoon).
@@ -18,6 +18,7 @@
 - **Klaar-voor-gebruik signaal**: bij langer werk altijd "klaar voor gebruik" als afsluiting, zodat Mark weet wanneer hij kan testen.
 - **Bij vage bug-melding**: eerst 1-2 gerichte reproductie-vragen, niet blind fixen.
 - **30-sec autonomie-regel**: als Mark 30 seconden niet reageert op een vraag, doorgaan zonder hem tot tokens op zijn.
+- **Memory raadplegen voor openstaande taken**: niet alle taken staan in `docs/AUTONOOM-BACKLOG.md`. Sommige sessie-overstijgende projecten + strategische beslissingen staan in `memory/project_*.md`. Bij sessie-start of vage instructie ook memory-index scannen op `project_*` items + zoeken op "TODO/later/uitgesteld/C-taak/open" in memory-files. Behandel memory als TWEEDE backlog.
 
 ## Autonome modus (actief t/m 2026-05-24)
 
@@ -133,7 +134,7 @@ npx vite                 # dev server
 
 Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 
-1. **Echte examen-vraag** is de basis. Authentiek (Cito-eindtoets / examenblad.nl), nooit verzonnen.
+1. **Echte examen-vraag** is de basis. Authentiek (VMBO-examens via examenblad.nl = wettelijk openbaar), nooit verzonnen. Voor Doorstroomtoets: zie copyright-policy hieronder — eigen vragen "in stijl van" + externe link naar officiële PDF.
 2. Leerling/ouder ziet de vraag, probeert antwoord. Bij fout: **"Begrijp je dit?"** — niet alleen het antwoord tonen.
 3. Bij "nee, leg uit": uitlegPad opent (3 niveaus: basis/simpeler/nogSimpeler) → daarna doorklik naar **leerpad** (a tot z) over het onderliggende concept.
 4. Leerpad sluit de loop terug: aan het einde **terug-link** naar de oorspronkelijke examen-vraag — "snap je 'm nu wel?".
@@ -162,6 +163,7 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - **Leerpaden**: `src/learnPaths/<id>.js` — elk een `subject + chapters + steps + checks`.
 - **uitlegPad-pattern** (3 niveaus): elke check krijgt `uitlegPad: { stappen, woorden, theorie, voorbeelden, basiskennis, niveaus: { basis, simpeler, nogSimpeler } }`. Bij ≥2 fouten opent VraagUitlegPad automatisch op `simpeler`.
 - **Examenvragen**: MOETEN authentiek zijn (geen paraphrase). Audit/fix-scripts in `scripts/`. Zie `docs/` voor bron-policy.
+- **Doorstroomtoets-content** ≠ VMBO-examens juridisch. Alle 5 aanbieders (Cito/IEP/Route 8/Dia/AMN) zijn **private partijen**, geen overheid. Cito-disclaimer verbiedt commercieel gebruik letterlijk. **NOOIT** vragen kopiëren uit voorbeeld-PDFs. WEL: eigen vragen "in stijl van" + externe link naar officiële Cito-PDF tonen. Zie `feedback_doorstroomtoets_copyright` in memory.
 - **examenLookup.js**: reverse-index van leerpad-id → linkende examenvragen. Build-time gegenereerd.
 - **Adaptive store + spaced repetition**: localStorage + Supabase voor cross-device.
 - **3D-modellen**: workflow Claude.ai TSX → `src/3d/{ID}.jsx` → `step.interactiveComponent`.
@@ -177,7 +179,8 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 
 ### Copy / UI
 - **Geen dev-jargon in user-facing copy**: "leerpad", "stap", "module", "trackId" e.d. nooit in UI. Gebruik woorden die ouders/leerlingen kennen.
-- **Geen AI-poster-art bij Cito-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
+- **Geen AI-poster-art bij Doorstroomtoets-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
+- **Naming Cito vs Doorstroomtoets**: in copy/UI gebruik "Doorstroomtoets" (schoolrealiteit sinds 2024). Filenames + zoek-keywords blijven "cito" voor SEO. Zie `feedback_doorstroomtoets_naming` in memory.
 - **1 primary per scherm** (design-system).
 - **Game ↔ leer strikt scheiden** in design-system.
 
@@ -210,5 +213,5 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
   - StudentHome heeft 2 aparte balken. `ExamensPage` toont beide secties; `initialMode` bepaalt scroll-target. Werk dat een mode WEGZET = afkeuren.
 
 - **Maand-1 snoei**: gebeurt — welkomstvideo terug, leerkracht naar footer, 3-tab bottom-nav, 3D-kubus weg uit hero, dual balken op StudentHome.
-- **Maand-2 plan**: 1 vak Cito compleet met uitlegPad — uitgegroeid tot 27 paden × 575 vragen voorzien (taal + rekenen + wereld + examens). Zie `docs/MAAND-2-PLAN.md`.
+- **Maand-2 plan**: 1 vak Doorstroomtoets compleet met uitlegPad — uitgegroeid tot 27 paden × 575 vragen voorzien (taal + rekenen + wereld + examens). Zie `docs/MAAND-2-PLAN.md`.
 - **A12 Web Push**: code gebouwd, wacht op Mark's 6 setup-stappen (VAPID-keys, Vercel env, Supabase secrets, migration, edge function deploy, cron) — zie `project_studiebol_a12_webpush_todo` in memory.

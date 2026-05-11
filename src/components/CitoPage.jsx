@@ -21,7 +21,7 @@ const ONDERDELEN = [
     border: "rgba(255,107,53,0.3)",
     featured: true,
     subject: "cito",
-    topic: "Cito eindtoets: gemengde vragen over rekenen, taal, begrijpend lezen en wereld oriëntatie (aardrijkskunde, geschiedenis, natuur)",
+    topic: "Doorstroomtoets: gemengde vragen over rekenen, taal, begrijpend lezen en wereld oriëntatie (aardrijkskunde, geschiedenis, natuur)",
   },
   {
     id: "rekenen",
@@ -32,7 +32,7 @@ const ONDERDELEN = [
     bg: "rgba(0,200,83,0.1)",
     border: "rgba(0,200,83,0.25)",
     subject: "rekenen",
-    topic: "Cito eindtoets rekenen en wiskunde groep 7-8: breuken, decimalen, meten, verbanden, meetkunde",
+    topic: "Doorstroomtoets rekenen en wiskunde groep 7-8: breuken, decimalen, meten, verbanden, meetkunde",
     leerpaden: [
       { id: "redactiesommen-pad", label: "🧮 Redactiesommen — Cito-stijl", dur: "~15 min" },
       { id: "procenten-po", label: "% Procenten", dur: "~12 min" },
@@ -51,7 +51,7 @@ const ONDERDELEN = [
     bg: "rgba(0,176,255,0.1)",
     border: "rgba(0,176,255,0.25)",
     subject: "taal",
-    topic: "Cito eindtoets taal groep 7-8: spelling, werkwoorden, grammatica, woordenschat",
+    topic: "Doorstroomtoets taal groep 7-8: spelling, werkwoorden, grammatica, woordenschat",
     leerpaden: [
       { id: "werkwoord-tijden-po", label: "🕐 Werkwoord-tijden", dur: "~12 min" },
       { id: "spelling-overige-po", label: "✒️ Spelling — leestekens & samenstellingen", dur: "~12 min" },
@@ -68,7 +68,7 @@ const ONDERDELEN = [
     bg: "rgba(245,158,11,0.1)",
     border: "rgba(245,158,11,0.25)",
     subject: "begrijpend-lezen",
-    topic: "Cito eindtoets begrijpend lezen groep 7-8: informatie opzoeken, hoofdgedachte, samenvatten",
+    topic: "Doorstroomtoets begrijpend lezen groep 7-8: informatie opzoeken, hoofdgedachte, samenvatten",
     // Twee leerpaden voor begrijpend lezen: oefenteksten (primair, ~12 min)
     // en strategie-pad (secundair, ~5 min). Audit-2 v2 cito-content-agent
     // wees uit dat alleen strategie te dun was voor Cito-prep.
@@ -86,7 +86,7 @@ const ONDERDELEN = [
     bg: "rgba(43,189,126,0.1)",
     border: "rgba(43,189,126,0.25)",
     subject: "aardrijkskunde",
-    topic: "Cito eindtoets wereld oriëntatie groep 7-8: aardrijkskunde, geschiedenis, natuur & techniek",
+    topic: "Doorstroomtoets wereld oriëntatie groep 7-8: aardrijkskunde, geschiedenis, natuur & techniek",
     leerpaden: [
       { id: "topografie-nederland", label: "🇳🇱 Topografie Nederland", dur: "~15 min" },
       { id: "sterren-planeten", label: "🪐 Zonnestelsel & planeten", dur: "~12 min" },
@@ -102,7 +102,7 @@ const ONDERDELEN = [
     bg: "rgba(224,64,251,0.08)",
     border: "rgba(224,64,251,0.25)",
     subject: "studievaardigheden",
-    topic: "Cito eindtoets studievaardigheden groep 7-8: tabellen lezen, grafieken interpreteren, tijdlijnen, kaarten",
+    topic: "Doorstroomtoets studievaardigheden groep 7-8: tabellen lezen, grafieken interpreteren, tijdlijnen, kaarten",
     leerpaden: [
       { id: "samenvatten-hoofdgedachte-po", label: "💭 Samenvatten & hoofdgedachte", dur: "~12 min" },
       { id: "kaartlezen-po", label: "🗺️ Kaartlezen — kompas, schaal, legenda", dur: "~12 min" },
@@ -160,7 +160,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
   return (
     <div style={styles.page}>
       <Header
-        title="Cito Oefenen 🎯"
+        title="Doorstroomtoets oefenen 🎯"
         subtitle={mode === "oefenen" ? `Voorbereiding eindtoets groep ${groep}` : "Kies hoe je wilt oefenen"}
         onBack={mode === "oefenen" ? () => setMode("kies") : onBack}
         onHome={onHome}
@@ -190,7 +190,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
         {mode === "kies" && (
           <>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.5, marginTop: 4 }}>
-              Doe deze drie stappen op volgorde voor de beste voorbereiding op de Cito-eindtoets.
+              Doe deze drie stappen op volgorde voor de beste voorbereiding op de Doorstroomtoets (voorheen Cito-eindtoets).
             </div>
 
             {/* Optie 1: leer de aanpak */}
@@ -330,10 +330,10 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               marginTop: 4,
             }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "rgba(255,107,53,0.9)", marginBottom: 4 }}>
-                💡 Over de Cito-eindtoets
+                💡 Over de Doorstroomtoets
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
-                De eindtoets wordt gemaakt in groep 8. De vragen zijn op IEP/Cito-stijl: meerkeuze over rekenen, taal, begrijpend lezen en wereldoriëntatie. Vragen komen uit een vaste vragenbank van 141+ items.
+                De Doorstroomtoets (sinds 2024 — vroeger Cito-eindtoets) wordt gemaakt in groep 8 (begin februari). De vragen zijn op Cito/IEP/Route 8-stijl: meerkeuze over rekenen, taal, begrijpend lezen en wereldoriëntatie. Vragen komen uit een vaste vragenbank van 141+ items.
               </div>
             </div>
           </>

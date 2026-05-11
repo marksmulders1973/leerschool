@@ -364,7 +364,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               background: simWarning ? "rgba(239,83,80,0.15)" : "rgba(255,128,48,0.15)",
               border: `1px solid ${simWarning ? "rgba(239,83,80,0.5)" : "rgba(255,128,48,0.4)"}`,
               animation: simWarning ? "timerPulse 1s ease infinite" : "none",
-            }} title="Cito-eindtoets-simulatie: nog over">
+            }} title="Doorstroomtoets-simulatie: nog over">
               ⏱ {simMinutes}:{String(simSeconds).padStart(2, "0")}
             </div>
           ) : (

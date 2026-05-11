@@ -98,20 +98,20 @@ const steps = [
         },
       },
       {
-        q: "Op de Cito-toets — hoe wordt begrijpend lezen getest?",
+        q: "Op de Doorstroomtoets — hoe wordt begrijpend lezen getest?",
         options: ["Korte zinnen","3-5 lange teksten + vragen erover","Alleen 1 woord per vraag","Liedjes zingen"],
         answer: 1,
         wrongHints: [null,"Test een toets begrijpend lezen met losse zinnen, of met echte teksten?","Kun je begrijpend lezen testen met maar één woord per vraag?","Hoort zingen bij begrijpend lezen — of bij iets anders?"],
         uitlegPad: {
           stappen: [
-            { titel: "Wat zit op de Cito?", tekst: "Bij begrijpend lezen krijg je echte LEESTEKSTEN (200-300 woorden) met vragen erover. Niet losse zinnen." },
+            { titel: "Wat zit op de Doorstroomtoets?", tekst: "Bij begrijpend lezen krijg je echte LEESTEKSTEN (200-300 woorden) met vragen erover. Niet losse zinnen." },
             { titel: "Hoeveel?", tekst: "Meestal 3-5 teksten per onderdeel, 3-5 vragen per tekst." },
           ],
           woorden: [
-            { woord: "Cito-toets", uitleg: "Landelijke eindtoets in groep 8 — meet wat je in 8 jaar basisschool hebt geleerd." },
+            { woord: "Doorstroomtoets", uitleg: "Landelijke eindtoets in groep 8 (sinds 2024, voorheen Cito-eindtoets) — meet wat je in 8 jaar basisschool hebt geleerd." },
           ],
-          theorie: "Cito test of je een ECHTE tekst kunt begrijpen — dus geen losse zinnetjes maar verhalen, krantenartikelen, instructies.",
-          voorbeelden: [{ type: "Cito-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
+          theorie: "Doorstroomtoets test of je een ECHTE tekst kunt begrijpen — dus geen losse zinnetjes maar verhalen, krantenartikelen, instructies.",
+          voorbeelden: [{ type: "Toets-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
           basiskennis: [{ onderwerp: "Cito = breed", uitleg: "Cito test rekenen, taal, studievaardigheden — niet alleen lezen." }],
           niveaus: {
             basis: "Cito = lange teksten + vragen. B.",
@@ -606,7 +606,7 @@ const steps = [
           woorden: [
             { woord: "tijdsdruk", uitleg: "Het gevoel dat je moet opschieten om alle vragen op tijd te beantwoorden." },
           ],
-          theorie: "Cito-eindtoets is timed. Begrijpend lezen heeft ~50 vragen totaal in ~75 min. Per vraag ~1.5 min — bij 5 vragen per tekst = 7.5 min per tekst.",
+          theorie: "Doorstroomtoets is timed. Begrijpend lezen heeft ~50 vragen totaal in ~75 min. Per vraag ~1.5 min — bij 5 vragen per tekst = 7.5 min per tekst.",
           voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {

@@ -19,7 +19,7 @@ const COLORS = {
 const stepEmojis = ["🎯","📋","⏱","✅","📖","🧮","🏆"];
 
 const chapters = [
-  { letter: "A", title: "Wat is de Cito-toets?", emoji: "🎯", from: 0, to: 1 },
+  { letter: "A", title: "Wat is de Doorstroomtoets?", emoji: "🎯", from: 0, to: 1 },
   { letter: "B", title: "Tijd + meerkeuze-strategie", emoji: "⏱", from: 2, to: 3 },
   { letter: "C", title: "Per onderdeel", emoji: "📖", from: 4, to: 5 },
   { letter: "D", title: "Eindopdracht", emoji: "🏆", from: 6, to: 6 },
@@ -94,7 +94,7 @@ const steps = [
             { titel: "Wanneer + voor wie?", tekst: "Februari, na schooladvies. Iedereen op de basisschool. Geen 'zakken'." },
           ],
           woorden: [
-            { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Vroeger 'Cito-eindtoets'. Geeft advies voor VO." },
+            { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Vroeger 'Doorstroomtoets'. Geeft advies voor VO." },
             { woord: "VO", uitleg: "Voortgezet Onderwijs — middelbare school." },
           ],
           theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA Cito (februari). Toets kan advies HOGER bijstellen, niet lager.",
@@ -109,7 +109,7 @@ const steps = [
       },
       {
         q: "Wat is **leidend** voor je vervolg-niveau?",
-        options: ["Het schooladvies van je leerkracht","De Cito-toets","Je rapportcijfers","Je eigen voorkeur"],
+        options: ["Het schooladvies van je leerkracht","De Doorstroomtoets","Je rapportcijfers","Je eigen voorkeur"],
         answer: 0,
         wrongHints: [null,"Wie kent jou al jaren en kijkt naar veel meer dan één toets?","Tellen losse cijfers zwaarder dan het oordeel van iemand die je al jaren ziet?","Mag jij zelf bepalen naar welk niveau je gaat, of denkt iemand met je mee?"],
         uitlegPad: {
@@ -121,7 +121,7 @@ const steps = [
             { woord: "leidend", uitleg: "De belangrijkste, doorslaggevende. Wat de basis is." },
             { woord: "schooladvies", uitleg: "De juffrouw/meester adviseert welk niveau bij jou past — vmbo/havo/vwo." },
           ],
-          theorie: "Sinds 2024: schooladvies leidend, Cito-toets als HEROVERWEGINGSMOGELIJKHEID bij hoger resultaat.",
+          theorie: "Sinds 2024: schooladvies leidend, Doorstroomtoets als HEROVERWEGINGSMOGELIJKHEID bij hoger resultaat.",
           voorbeelden: [{ type: "leidend", tekst: "Schooladvies = vmbo-tl. Cito = havo. School heroverweegt → advies meestal omhoog naar havo." }],
           basiskennis: [{ onderwerp: "Vertrouw je leerkracht", uitleg: "8 jaar observatie weegt zwaarder dan 1 toets." }],
           niveaus: {
@@ -135,11 +135,11 @@ const steps = [
   },
   {
     title: "Welke onderdelen zitten erin?",
-    explanation: "De Cito-toets heeft **3 hoofdonderdelen**:\n\n**1. Rekenen** *(~50 vragen)*\nWat verwacht je:\n• Optellen, aftrekken, vermenigvuldigen, delen — soms met grote getallen.\n• **Breuken**: optellen, vergelijken, vereenvoudigen.\n• **Procenten**: korting, btw, percentage van.\n• **Verhoudingen** + schaal: 'op een kaart 1:50.000...'\n• **Meten**: oppervlakte, omtrek, volume, gewicht, tijd.\n• **Snelheid**: km/u uitrekenen.\n• **Geld**: euro's en centen, kortingen, uitgaven.\n• **Patronen**: getallenrijen voortzetten.\n\n**2. Taal** *(~50 vragen)*\nWat verwacht je:\n• **Spelling**: d/t-regels, ei/ij, au/ou, hoofdletters, leestekens.\n• **Werkwoordsvormen**: hij wordt, ze loopt, jij werkt.\n• **Grammatica**: persoonlijk vnw (jij/jou/jouw), bijvoeglijk nw, lijdend voorwerp.\n• **Woordenschat**: synoniemen, antoniemen, betekenis van woorden.\n• **Begrijpend lezen**: lange teksten + vragen wat de tekst zegt of bedoelt.\n• **Stijlfiguren**: metafoor, personificatie, vergelijking.\n\n**3. Studievaardigheden** *(~25 vragen)*\nDe minst bekende onderdeel — gaat over **handige skills**:\n• **Woordenboek** of **register** zoeken (waar staat 'X' alfabetisch?).\n• **Kaart** of **grafiek** aflezen.\n• **Tabel** interpreteren.\n• **Inhoudsopgave** of **agenda** gebruiken.\n• **Zoektermen** kiezen voor internet.\n\n**4. (Optioneel) Wereldoriëntatie** *(~25 vragen)*\nNiet alle scholen doen dit, maar handig om te kennen:\n• **Aardrijkskunde**: NL provincies, EU, werelddelen, klimaat.\n• **Geschiedenis**: tijdvakken, WO2, oorlogen, oudheid, Renaissance.\n• **Natuur**: lichaam, dieren, planten, weer, ruimte.\n• **Burgerschap**: democratie, mensenrechten.\n\nIn totaal ~**125 vragen**, gespreid over **3 dagen**. Per dag dus ~40-45 vragen.",
+    explanation: "De Doorstroomtoets heeft **3 hoofdonderdelen**:\n\n**1. Rekenen** *(~50 vragen)*\nWat verwacht je:\n• Optellen, aftrekken, vermenigvuldigen, delen — soms met grote getallen.\n• **Breuken**: optellen, vergelijken, vereenvoudigen.\n• **Procenten**: korting, btw, percentage van.\n• **Verhoudingen** + schaal: 'op een kaart 1:50.000...'\n• **Meten**: oppervlakte, omtrek, volume, gewicht, tijd.\n• **Snelheid**: km/u uitrekenen.\n• **Geld**: euro's en centen, kortingen, uitgaven.\n• **Patronen**: getallenrijen voortzetten.\n\n**2. Taal** *(~50 vragen)*\nWat verwacht je:\n• **Spelling**: d/t-regels, ei/ij, au/ou, hoofdletters, leestekens.\n• **Werkwoordsvormen**: hij wordt, ze loopt, jij werkt.\n• **Grammatica**: persoonlijk vnw (jij/jou/jouw), bijvoeglijk nw, lijdend voorwerp.\n• **Woordenschat**: synoniemen, antoniemen, betekenis van woorden.\n• **Begrijpend lezen**: lange teksten + vragen wat de tekst zegt of bedoelt.\n• **Stijlfiguren**: metafoor, personificatie, vergelijking.\n\n**3. Studievaardigheden** *(~25 vragen)*\nDe minst bekende onderdeel — gaat over **handige skills**:\n• **Woordenboek** of **register** zoeken (waar staat 'X' alfabetisch?).\n• **Kaart** of **grafiek** aflezen.\n• **Tabel** interpreteren.\n• **Inhoudsopgave** of **agenda** gebruiken.\n• **Zoektermen** kiezen voor internet.\n\n**4. (Optioneel) Wereldoriëntatie** *(~25 vragen)*\nNiet alle scholen doen dit, maar handig om te kennen:\n• **Aardrijkskunde**: NL provincies, EU, werelddelen, klimaat.\n• **Geschiedenis**: tijdvakken, WO2, oorlogen, oudheid, Renaissance.\n• **Natuur**: lichaam, dieren, planten, weer, ruimte.\n• **Burgerschap**: democratie, mensenrechten.\n\nIn totaal ~**125 vragen**, gespreid over **3 dagen**. Per dag dus ~40-45 vragen.",
     svg: onderdelenSvg(),
     checks: [
       {
-        q: "Hoeveel hoofdonderdelen heeft de Cito-toets meestal?",
+        q: "Hoeveel hoofdonderdelen heeft de Doorstroomtoets meestal?",
         options: ["3 (rekenen, taal, studievaardigheden)","1 (allemaal samen)","5","2"],
         answer: 0,
         wrongHints: [null,"Worden rekenen en taal echt samen op één blaadje gezet, of apart?","Tel eens de hoofdvakken: rekenen, taal, en wat is dat derde ook alweer?","Er is meer dan alleen rekenen + taal — wat hoort daar nog bij?"],
@@ -154,7 +154,7 @@ const steps = [
   },
   {
     title: "Tijd-management — pacing",
-    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **te snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Cito-toetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de markeerd vragen. Vaak weet je het tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij Cito krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
+    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **te snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Doorstroomtoetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de markeerd vragen. Vaak weet je het tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij Cito krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
     svg: tijdSvg(),
     checks: [
       {
@@ -474,7 +474,7 @@ const steps = [
         },
       },
       {
-        q: "Welke houding is **goed** voor de Cito-toets?",
+        q: "Welke houding is **goed** voor de Doorstroomtoets?",
         options: ["Gewoon mijn best doen, ik ben voorbereid","Stress & paniek — er is veel afhankelijk","Alles vergeten en raden","Iemand anders laten meedoen"],
         answer: 0,
         wrongHints: [null,"Wat doet stress met je hoofd: helpt het je denken of juist niet?","Werkt raden zonder iets uit het hoofd op te halen écht in jouw voordeel?","Mag iemand anders jouw toets maken? En wat zou dat zelfs als het mocht opleveren?"],
@@ -489,13 +489,13 @@ const steps = [
           basiskennis: [{ onderwerp: "Cito ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waar je voor zakt." }],
           niveaus: {
             basis: "Rustig + best doen. A.",
-            simpeler: "Cito-toets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' Cito (geen zakken). Doe gewoon je best. = A.",
+            simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' Cito (geen zakken). Doe gewoon je best. = A.",
             nogSimpeler: "Rustig + best = A.",
           },
         },
       },
       {
-        q: "Cito-toets: wat krijg je als resultaat?",
+        q: "Doorstroomtoets: wat krijg je als resultaat?",
         options: ["Advies voor vervolg-niveau (vmbo/havo/vwo)","Een eindcijfer als 7,5","Een tijdsregistratie","Niets"],
         answer: 0,
         wrongHints: [null,"Krijg je bij Cito hetzelfde soort cijfer als op je rapport?","Telt hoe snel je was, of vooral wat je antwoordde?","Krijg je echt niets terug, of wel een soort uitkomst?"],
@@ -505,7 +505,7 @@ const steps = [
             { titel: "Wat doe je ermee?", tekst: "Het advies wordt vergeleken met schooladvies. Hoger? School heroverweegt. Lager? Schooladvies blijft." },
           ],
           woorden: [
-            { woord: "toetsadvies", uitleg: "Het advies dat de Cito-toets geeft over je vervolg-niveau." },
+            { woord: "toetsadvies", uitleg: "Het advies dat de Doorstroomtoets geeft over je vervolg-niveau." },
             { woord: "schooladvies", uitleg: "Het advies van je leerkracht (gegeven in januari)." },
           ],
           theorie: "Cito-resultaat is GEEN rapportcijfer. Geen 7,5. Het is een ADVIES: 'past best bij vmbo-tl' of 'past best bij havo'. Komt medio maart binnen.",
@@ -525,7 +525,7 @@ const steps = [
         wrongHints: [null,"Wat is jaren leerkracht-observatie waard versus één toetsdag?","Welk advies krijg je het eerst in groep 8?","Wat zou er gebeuren als één toets meer telt dan jouw hele schoolervaring?"],
         uitlegPad: {
           stappen: [
-            { titel: "Volgorde sinds 2024", tekst: "1. Schooladvies (januari) eerst. 2. Cito-toets februari. 3. Toetsadvies maart." },
+            { titel: "Volgorde sinds 2024", tekst: "1. Schooladvies (januari) eerst. 2. Doorstroomtoets februari. 3. Toetsadvies maart." },
             { titel: "Wat is leidend?", tekst: "Schooladvies is leidend. Toetsadvies = check + heroverwegingsmogelijkheid bij hoger." },
           ],
           woorden: [
@@ -580,7 +580,7 @@ const citoStrategieenGroep8 = {
   referentieNiveau: "1F/1S",
   sloThema: "Eindtoets — alle domeinen",
   intro:
-    "Hoe je slim met de Cito-toets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
+    "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
   triggerKeywords: [
     "cito","cito doorstroomtoets","cito groep 8","eindtoets",
     "tijd-management toets","skip strategie","eliminatie meerkeuze",

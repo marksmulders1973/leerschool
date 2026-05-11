@@ -1022,7 +1022,7 @@ const begrijpendLezenTekstenPo = {
   referentieNiveau: "1F/1S",
   sloThema: "Lezen — zakelijke, instructieve, betogende, verhalende teksten",
   intro:
-    "Vier echte oefenteksten van ~200 woorden + 4 Cito-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Cito-eindtoets begrijpend lezen.",
+    "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Cito-eindtoets) begrijpend lezen.",
   triggerKeywords: [
     "begrijpend lezen", "tekst lezen", "leesvaardigheid",
     "zakelijke tekst", "instructieve tekst", "betogende tekst", "verhalende tekst",

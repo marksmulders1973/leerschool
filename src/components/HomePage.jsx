@@ -69,7 +69,7 @@ class TeaserErrorBoundary extends Component {
 // leren, rekenen/taal-onderwerpen die Cito-ouder herkent.
 const TICKER_ITEMS = [
   { icon: "⏱", text: "Elk kwartier slimmer" },
-  { icon: "🎯", text: "Cito eindtoets oefenen" },
+  { icon: "🎯", text: "Doorstroomtoets oefenen (voorheen Cito-eindtoets)" },
   { icon: "📅", text: "15 minuten per dag is genoeg" },
   { icon: "🧠", text: "Een rustige bijlesdocent in je broekzak" },
   { icon: "📖", text: "Begrijpend lezen groep 5 t/m 8" },
