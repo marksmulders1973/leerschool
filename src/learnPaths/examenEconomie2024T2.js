@@ -33,6 +33,11 @@ const steps = [
         explanation: "Nederlandse toeristen op vakantie in Kameroen geven daar geld uit (hotel, eten, souvenirs). Dat is geld dat van NL naar Kameroen stroomt — voor Kameroen is het export van diensten. Voor NL is het import.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 1",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'nationaal inkomen', 'export', 'import', 'export van diensten'" },
+          { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F", why: "Kameroen op de kaart + geldstroom-richting tussen 2 landen visualiseren" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "import vs export + effect op nationaal inkomen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is nationaal inkomen?", tekst: "Het totaal aan inkomen van iedereen in een land in 1 jaar. Stijgt als er meer geld het land binnen komt dan eruit gaat." },
@@ -85,6 +90,11 @@ const steps = [
         explanation: "Een BV (besloten vennootschap) is een rechtspersoon. Dat betekent dat het bedrijf juridisch een aparte 'persoon' is. De eigenaar is daardoor niet privé aansprakelijk voor schulden — alleen het bedrijfsvermogen kan worden verkocht bij faillissement. Dat is precies waarom Arjun een BV moet kiezen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 17",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'eenmanszaak', 'VOF', 'BV', 'hoofdelijk aansprakelijk', 'rechtspersoon'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "kernwoord 'hoofdelijk' uit de vraag halen + linken aan welke vorm WEL/NIET" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "ondernemingsvormen + aansprakelijkheid bij faillissement — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is hoofdelijk aansprakelijk?", tekst: "Aansprakelijk = je moet het terugbetalen. Hoofdelijk = met je PRIVÉ-vermogen (eigen huis, auto, spaargeld). Dus: het bedrijf gaat failliet → schuldeisers kunnen JOUW spullen pakken." },
@@ -138,6 +148,11 @@ const steps = [
         explanation: "De luxe campingplaats met eigen sanitair en keuken is het PRODUCT zelf — wat Arjun verkoopt. Productbeleid gaat over wat je biedt aan klanten (kwaliteit, kenmerken, variatie). De 4 P's van marketing: Product, Prijs, Plaats, Promotie.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 21",
         leerpadLink: { id: "pincode-ondernemen", title: "Ondernemen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'marketinginstrument' + de P's: product, prijs, plaats, promotie, personeel, presentatie" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "uit de vraag halen WAT Arjun verandert (luxe-aanbod) en welke P daarbij hoort" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "marketing-mix + 4/6 P's — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn marketing-instrumenten (P's)?", tekst: "Klassiek 4: Product, Prijs, Plaats, Promotie. Pincode noemt vaak 5: Personeel + Presentatie. Allemaal 'wat kun je veranderen om beter te verkopen'." },
@@ -192,6 +207,11 @@ const steps = [
         explanation: "i/a-ratio stijgt = meer mensen met uitkering t.o.v. werkenden. De werkenden moeten via belasting/premies de uitkeringen betalen — als er minder werkenden per uitkering zijn, wordt het MOEILIJKER om uitkeringen te financieren. Vergrijzing is een grote drijver van een stijgende i/a-ratio.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 27",
         leerpadLink: { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'i/a-ratio', 'sociale uitkering', 'premies', 'betaalbaarheid'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "verhouding inactieven/actieven — wat betekent stijging voor lasten per werkende" },
+          { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt", niveau: "vmbo-4", why: "sociale zekerheid + vergrijzing + betaalbaarheid — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is i/a-ratio?", tekst: "Verhouding INACTIEVEN (mensen met uitkering: werkloos, AOW, WIA) tegen ACTIEVEN (werkenden). Bv. 80 inactieven per 100 actieven = i/a 0,80." },
@@ -243,6 +263,11 @@ const steps = [
         explanation: "Fairtrade biedt boeren in ontwikkelingslanden een eerlijke prijs voor hun producten — over jaren heen. Dat is structurele hulp: gericht op duurzame verbetering van inkomens. Tegenover noodhulp (acuut, kortlopend) staat structurele hulp (lange termijn, op de oorzaken van armoede gericht).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 28",
         leerpadLink: { id: "pincode-ontwikkelingslanden", title: "Ontwikkelingslanden" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'bilateraal', 'noodhulp', 'structurele hulp', 'particulier', 'fairtrade'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "fairtrade = langdurig + via consument — welk label past daarbij" },
+          { id: "pincode-ontwikkelingslanden", title: "Ontwikkelingslanden", niveau: "vmbo-4", why: "ontwikkelingshulp-types + eerlijke handel — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is fairtrade?", tekst: "Boeren in ontwikkelingslanden krijgen EERLIJKE PRIJS voor producten (cacao, koffie, bananen) — over jaren heen, niet 1x." },
@@ -295,6 +320,11 @@ const steps = [
         explanation: "Vermogen = bezittingen − schulden = €100.000 − €20.000 = €80.000.\n\nOptie C: bezittingen +2% = +€2.000 (nu €102.000), schulden +6% = +€1.200 (nu €21.200). Nieuw vermogen = €102.000 − €21.200 = €80.800. Toename van €800. ✓\n\nOptie A en B leiden allebei tot een vermogen-DALING.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 33",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'vermogen', 'bezittingen', 'schulden'" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "% van een bedrag berekenen (-4% van €100k, +6% van €20k) en optellen/aftrekken" },
+          { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen", niveau: "vmbo-3", why: "vermogen-formule (bezit − schuld) + huishoudfinanciën — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is vermogen?", tekst: "Vermogen = BEZITTINGEN − SCHULDEN. Boot heeft €100k bezittingen + €20k schulden → vermogen €80.000." },
