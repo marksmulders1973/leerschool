@@ -54,6 +54,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 1",
         bronTekst: tekst1,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "NL-strategie 'sleutelzin → conclusie': UFO's mijden licht → donkere plek" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "strikvragen herkennen: Roswell wordt historisch genoemd, niet als huidige UFO-plek" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'shun', 'thinly populated', 'seldom disturb' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Shun cities = donker", tekst: "'UFOs shun big cities (lots of lights)' + 'thinly populated northern part' → UFO's gaan naar donkere plekken. → optie B." }],
           woorden: [{ woord: "shun", uitleg: "Mijden, vermijden." }, { woord: "thinly populated", uitleg: "Dunbevolkt." }],
@@ -90,6 +95,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 3",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "alinea-1-functie: introductie = thema-belofte (populair / afford / vergelijken / kritiek)" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "alleen wat letterlijk in alinea 1 staat telt — geen aannames over wat later komt" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'share', 'revenue', 'cost effectiveness' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Largest share = popular", tekst: "'Largest share of revenue was in e-scooter sales' = grootste verkoop = populair product. → B." }],
           woorden: [{ woord: "share", uitleg: "Aandeel, deel van iets." }, { woord: "revenue", uitleg: "Omzet (verkoopopbrengst)." }],
@@ -124,6 +134,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 5",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "conclusie uit een alinea: wat is veiliger/onveiliger volgens tekst — eliminatie van onbewezen claims" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "alleen wat de tekst LETTERLIJK zegt is conclusie-materiaal; opties die dat niet doen vallen af" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'recharge', 'outdoors', 'fragility', 'rough conditions' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Binnen risk → buiten safer", tekst: "Tekst: binnen opladen = brand spreidt. Conclusie: BUITEN opladen is veiliger. → A." }],
           woorden: [{ woord: "spreading", uitleg: "Verspreiden (van vuur)." }, { woord: "stored", uitleg: "Opgeslagen, bewaard." }],
@@ -160,6 +175,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 6",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "alinea-functie: beschrijven / mening geven / vergelijken / waarschuwen — welk past bij alinea 4" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "alinea's typeren op basis van wat ze DOEN, niet wat ze zeggen" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab + alinea-signaalwoorden — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Mechanisme = technisch", tekst: "Alinea 4: cellen → hitte → buurcellen → kettingreactie → explosie. Pure mechaniek-uitleg. → A (technical explanation)." }],
           woorden: [{ woord: "thermal runaway", uitleg: "Op hol slaande hitte-reactie." }, { woord: "malfunction", uitleg: "Slecht functioneren, defect raken." }],
@@ -196,6 +216,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 7",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "verbanden tussen 2 zinnen: tegelijk / voorbeeld / contrast / zelfde manier" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "twee parallelle acties herkennen (brandweer + waakhond) — geen contrast, geen voorbeeld" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-connectieven: For example, Meanwhile, On the other hand, Similarly — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Twee parallelle acties", tekst: "Fire Dept adviseert + watchdog onderzoekt = TEGELIJK actie. → Meanwhile (ondertussen)." }],
           woorden: [{ woord: "Meanwhile", uitleg: "Ondertussen, tegelijkertijd (parallelle acties)." }, { woord: "watchdog", uitleg: "Toezichthouder." }],
@@ -232,6 +257,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 8",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "doel van een onderzoek: bewijzen / onderzoeken / vinden / oorsprong — verschil in werkwoorden" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "doel-zin in alinea 1 herkennen via 'we are trying to' / 'find out' / 'quantify'" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'impact', 'study', 'quantify', 'exposure', 'harmful' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Find out exactly how harmful = study impact", tekst: "Tekst alinea 1: 'find out exactly how harmful microplastics are' = onderzoeken impact op mensen. → D." }],
           woorden: [{ woord: "impact", uitleg: "Effect, gevolg." }, { woord: "study", uitleg: "Onderzoeken." }, { woord: "quantify", uitleg: "Meten in cijfers." }],
@@ -270,6 +300,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 10",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "alinea-functie: beschrijven wat onderzocht wordt vs. argumenteren waarom belangrijk" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "alinea typeren: toekomstige projecten = wat wordt onderzocht; niet resultaten of funding" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'investigate', 'ready to go', 'projects' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Twee projecten = wat onderzocht wordt", tekst: "Alinea 3 noemt 2 projecten (microplastic-niveau meten + gedrag onderzoeken). → B (explain what will be studied)." }],
           woorden: [{ woord: "ready to go", uitleg: "Klaar om te starten." }, { woord: "investigate", uitleg: "Onderzoeken." }],
@@ -304,6 +339,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 12",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "3 citaten vergelijken: welk citaat antwoordt op WAAROM-MOEILIJK-vraag" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "complexity-words herkennen ('many types', 'weathering') als sleutel voor moeilijkheid" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'weathering', 'complicated', 'exposed', 'particles' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Citaat A = complexity", tekst: "Citaat A noemt: many different plastics + weathering = COMPLEXITEIT. Vraag wil 'why difficult'. → A." }],
           woorden: [{ woord: "weathering", uitleg: "Verwering (door weer + tijd)." }, { woord: "complexity", uitleg: "Complexiteit, ingewikkeldheid." }],
@@ -340,6 +380,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 13",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "tekstdoel-types herkennen: bewustwording / overtuigen / informeren / waarschuwen" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "toon van de WHOLE tekst inschatten — nieuwsbericht over startend onderzoek = update/informatie" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'update', 'examination', 'awareness', 'persuade', 'warn' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Tekst = nieuwsbericht", tekst: "Hele tekst = nieuws over nieuw lab + onderzoek. Toon = informatief. → C (update people)." }],
           woorden: [{ woord: "update", uitleg: "Op de hoogte brengen, nieuwe info geven." }, { woord: "examination", uitleg: "Onderzoek." }],
