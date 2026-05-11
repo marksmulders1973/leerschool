@@ -113,7 +113,7 @@ Talen (lager prio):
 - [x] `tekstanalyse.js` — 18 checks (2026-05-11, commit c3dae14)
 - [x] `zinsontleding.js` — 26 checks (2026-05-11, commit afed8ba)
 - [x] `woordsoortenNederlands.js` — 24 checks (2026-05-11, commit 77730f3)
-- [ ] `literatuurgeschiedenis.js`
+- [x] `literatuurgeschiedenis.js` — 21 checks (2026-05-11, commit 3b21e95)
 
 Beta-vakken:
 - [ ] `atoombouwScheikunde.js`
@@ -184,6 +184,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 (verder) — VMBO-wiskunde uitlegPad-batch: statistiek (14 checks, commit 4f7d795), kwadratischeVergelijkingen (15, 5a0dca6), coordinatenstelsel (18, 2e7aa67). Totaal 47 extra checks. Bovenste niet-afgevinkte taak (parabolen 41 checks) overgeslagen: backlog-annotatie 'doe in meerdere sessies' — voor losse sessie.
 - 2026-05-11 (verder) — uitlegPad-vervolg: kwadratenWortels (20, 2957d51), lineaireFormules (21, b00bbef), vergelijkingenOplossen (22, 92cce28), stelsels (20, 3a3acb0), machten (24, f0bb4d2), exponentieel (21, a121ea0). Totaal 128 extra checks. Backlog stale checkboxes opgeschoond.
 - 2026-05-11 (nóg verder) — VMBO-wis afgemaakt + talen begonnen: verhoudingen (12, 4eecd5d), breuken (15, 2697a39), negatieveGetallen (10, 7f0ab0d), vlakkeFiguren (19, 6174c85), kansrekening (26, b40cf7e), goniometrie (13, d6597fd), logaritmen (23, 151fb8c), differentieren (21, 66d89fa), passeComposeFrans (22, 8ee78a0), pastTensesEngels (23, d08cbb1). Totaal 184 extra checks. Hele wiskunde-blok klaar (behalve parabolen — meerdere sessies). Talen onderweg.
+- 2026-05-11 (mega-sessie afsluiting talen) — Hele talen-blok klaar: naamvallenDuits (20, 79c30db), werkwoordsvervoeging (30, 78ca142), onregelmatigeWerkwoordenEngels (28, d4f7103), onregelmatigeWerkwoordenV2Engels (23, 135c09d), argumentatieleer (22, 0518758), tekstanalyse (18, c3dae14), zinsontleding (26, afed8ba), woordsoortenNederlands (24, 77730f3), literatuurgeschiedenis (21, 3b21e95). Totaal 212 extra checks. Hele Prio-1 talen-blok afgerond. Volgende: beta-vakken.
 
 ## Peer-review log
 
