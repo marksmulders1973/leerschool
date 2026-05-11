@@ -119,7 +119,7 @@ Beta-vakken:
 - [x] `atoombouwScheikunde.js` — 22 checks (2026-05-11, commit dcfc5b3)
 - [x] `chemischeReactiesScheikunde.js` — 21 checks (2026-05-11, commit b5263ff)
 - [x] `periodiek.js` — 20 checks (2026-05-11, commit 74d343e)
-- [ ] `celBiologie.js`
+- [x] `celBiologie.js` — 24 checks (2026-05-11, commit acf7992)
 - [ ] `geneticaErfelijkheidBiologie.js`
 - [ ] `voortplantingHormonenBiologie.js`
 - [ ] `elektriciteitNatuurkunde.js`
