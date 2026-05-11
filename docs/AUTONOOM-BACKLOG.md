@@ -109,7 +109,7 @@ Talen (lager prio):
 - [x] `werkwoordsvervoeging.js` — 30 checks (2026-05-11, commit 78ca142)
 - [x] `onregelmatigeWerkwoordenEngels.js` — 28 checks (2026-05-11, commit d4f7103)
 - [x] `onregelmatigeWerkwoordenV2Engels.js` — 23 checks (2026-05-11, commit 135c09d)
-- [ ] `argumentatieleer.js`
+- [x] `argumentatieleer.js` — 22 checks (2026-05-11, commit 0518758)
 - [ ] `tekstanalyse.js`
 - [ ] `zinsontleding.js`
 - [ ] `woordsoortenNederlands.js` (VMBO-versie)
