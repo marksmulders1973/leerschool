@@ -444,6 +444,10 @@ const pincodeWerkArbeidsmarkt = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 4",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdstuk 4 van Pincode 7e ed. VMBO-GT 4: werkgever/werknemer, contracten + arbeidsovereenkomst, arbeidsmarkt + CAO, vraag/aanbod arbeid, werkloosheid, productiviteit en sociale zekerheid. 7 stappen examenvoorbereiding.",
   triggerKeywords: [

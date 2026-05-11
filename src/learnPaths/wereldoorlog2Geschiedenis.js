@@ -728,6 +728,11 @@ const wereldoorlog2Geschiedenis = {
   subject: "geschiedenis",
   referentieNiveau: "VO-onderbouw/bovenbouw",
   sloThema: "Geschiedenis — Tijd van Wereldoorlogen (WO II)",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+    { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "po-1F" },
+  ],
   intro:
     "Van het Verdrag van Versailles tot de bevrijding van Nederland en de Koude Oorlog. De drie hoofdoorzaken, het verloop van de oorlog in Europa en in Nederland, de Holocaust, en de gevolgen die de moderne wereld vormden. Examenstof CSE Geschiedenis.",
   triggerKeywords: [

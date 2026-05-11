@@ -543,6 +543,10 @@ const woordenschatEngels = {
   subject: "engels",
   referentieNiveau: "A1/A2",
   sloThema: "Engels — basiswoordenschat per thema",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+  ],
   intro:
     "~80 basiswoorden in 8 thema's: eten, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen, tijd en standaarduitdrukkingen. Genoeg voor dagelijks Engels.",
   triggerKeywords: [

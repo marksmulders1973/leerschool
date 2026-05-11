@@ -775,6 +775,11 @@ const pincodeBuitenlandEu = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 7",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F" },
+    { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3" },
+  ],
   intro:
     "Hoofdstuk 7 van Pincode 7e ed. VMBO-GT 4: import/export, comparatief voordeel, beschermingsmaatregelen, Europese Unie + 4 vrijheden, wisselkoersen, globalisering + multinationals, ECB monetair beleid. 7 stappen examenvoorbereiding.",
   triggerKeywords: [

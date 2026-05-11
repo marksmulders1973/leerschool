@@ -597,6 +597,11 @@ const pincodeGeldSparenLenen = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 2",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdstuk 2 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): geld + betaalmiddelen, sparen of beleggen, geldcirculatie, inflatie, begroten, lenen + hypotheek. 9 stappen, concrete voorbeelden voor tieners. Volledige Pincode-paragraaf 2.1-2.4 dekking + examen-voorbereiding compleet.",
   triggerKeywords: [

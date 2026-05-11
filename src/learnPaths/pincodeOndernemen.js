@@ -620,6 +620,11 @@ const pincodeOndernemen = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 3",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdstuk 3 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): ondernemen, marktonderzoek, marketing, kosten/omzet/winst, vraag en aanbod, marktvormen, rechtsvormen, BTW + facturen, risico. 9 stappen, voorbeelden uit jongerenleven. Volledige Pincode 3.1-3.4 dekking.",
   triggerKeywords: [

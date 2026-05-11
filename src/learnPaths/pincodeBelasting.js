@@ -459,6 +459,11 @@ const pincodeBelasting = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 6",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+    { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3" },
+  ],
   intro:
     "Hoofdstuk 6 van Pincode 7e ed. VMBO-GT 4: directe + indirecte belastingen, BTW + accijns, IB + schijven + boxen, heffingskortingen, toeslagen, belastingmoraal, de Belastingdienst. 7 stappen examenvoorbereiding.",
   triggerKeywords: [

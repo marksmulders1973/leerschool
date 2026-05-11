@@ -454,6 +454,11 @@ const pincodeInkomenWelvaart = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 1",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdstuk 1 van Pincode 7e ed. VMBO-GT 4: schaarste, productiefactoren, inkomen, inkomensverdeling, welvaart/inflatie, BBP, en inkomensbeleid (minimumloon/toeslagen/AOW). 7 stappen examenvoorbereiding.",
   triggerKeywords: [

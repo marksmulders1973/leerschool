@@ -449,6 +449,10 @@ const pincodeOverheid = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 5",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdstuk 5 van Pincode 7e ed. VMBO-GT 4: taken overheid, drie overheidslagen, Rijksbegroting, staatsschuld, conjunctuur, marktordening (ACM/NVWA/DNB), en politiek systeem. 7 stappen examenvoorbereiding.",
   triggerKeywords: [

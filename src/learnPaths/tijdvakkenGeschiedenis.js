@@ -520,6 +520,10 @@ const tijdvakkenGeschiedenis = {
   referentieNiveau: "2F",
   sloKerndoelen: [47],
   sloThema: "Geschiedenis — 10 tijdvakken",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+  ],
   intro:
     "Het skelet van Nederlandse geschiedenis: 10 tijdvakken van Jagers en boeren tot Televisie en computer. Per tijdvak de belangrijkste mensen, gebeurtenissen en uitvindingen — basis voor alle geschiedenisexamens.",
   triggerKeywords: [
