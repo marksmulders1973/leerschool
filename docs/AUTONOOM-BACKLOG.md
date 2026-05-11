@@ -112,7 +112,7 @@ Talen (lager prio):
 - [x] `argumentatieleer.js` — 22 checks (2026-05-11, commit 0518758)
 - [x] `tekstanalyse.js` — 18 checks (2026-05-11, commit c3dae14)
 - [x] `zinsontleding.js` — 26 checks (2026-05-11, commit afed8ba)
-- [ ] `woordsoortenNederlands.js` (VMBO-versie)
+- [x] `woordsoortenNederlands.js` — 24 checks (2026-05-11, commit 77730f3)
 - [ ] `literatuurgeschiedenis.js`
 
 Beta-vakken:
