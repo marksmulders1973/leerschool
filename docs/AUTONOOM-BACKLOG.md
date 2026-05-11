@@ -77,6 +77,8 @@ Check eerst met `Grep` welke paden geen `uitlegPad:` hebben. Pak Cito-relevante 
 - [ ] `topografieNederland.js` — aardrijkskunde Cito-relevant
 - [ ] `tijdvakkenGeschiedenis.js` — VMBO, hoort bij examen
 - [ ] `wereldoorlog2Geschiedenis.js`
+
+**Pincode-economie status**: alle 6 paden compleet (inkomen-welvaart, ondernemen, overheid, geld-sparen-lenen, belasting, werk-arbeidsmarkt + buitenland-eu). Volgende vakgebied open: geschiedenis-paden.
 - [ ] `tachtigjarigeOorlogGeschiedenis.js`
 - [ ] `klimatenAardrijkskunde.js`
 
@@ -176,6 +178,8 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 — ExamensPage refactor (Mark feedback): twee gelijkwaardige modi — 🎯 oefenen-met-uitleg (examen-leerpaden bovenaan, USP zichtbaar) en 📄 PDF-inzien (bestaand, krijgt eigen kop). StudentHome 1→2 balken. CLAUDE.md + memory geüpdatet. Commit 32441d2.
 - 2026-05-11 — **pincodeGeldSparenLenen VOLLEDIG voorzien van uitlegPad** (53 checks, 9 stappen): geld 3-functies, betaalmiddelen+Klarna-risico, sparen+rente, sparen-vs-beleggen+crypto, geldkringloop+DGS, inflatie+koopkracht, begroten+50/30/20, lenen+BKR, hypotheek-detail. Was #4 op audit-lijst (4 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit f30a1e5.
 - 2026-05-11 — **pincodeBelasting VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): soorten+premies, BTW+accijns, IB+schijven+boxen, heffingskortingen+werk-loont, toeslagen+toeslagenaffaire, belastingmoraal+Panama Papers, Belastingdienst+DigiD+sancties. Was #5 op audit-lijst (3 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit 37a9cc9.
+- 2026-05-11 — UX fix ExamensPage SectieKop (Mark): was te knop-achtig (rand-frame met kleur), nu hoofdstuk-stijl met onderlijn. Tekst PDF-sectie verduidelijkt naar "Hieronder kun je hele examens inzien (PDF)". Commit 769675b.
+- 2026-05-11 — **pincodeWerkArbeidsmarkt VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): werkgever/werknemer+contracten, arbeidsovereenkomst+proeftijd, CAO+krapte+vakbond, vraag-aanbod arbeid+evenwichtsloon, werkloosheid 4 soorten+verborgen, productiviteit+paradox, sociale zekerheid+WW+AOW+bijstand. Was #6 op audit-lijst (3 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit b83d00f. 🎉 ALLE 6 PINCODE-ECONOMIE-PADEN COMPLEET. Samen 275 checks.
 
 ## Peer-review log
 
