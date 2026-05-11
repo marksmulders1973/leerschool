@@ -25,14 +25,14 @@ Voordat je nieuwe paden bouwt:
 - [x] `scripts/auditKennisgraaf.mjs` geschreven — rapporteert broken links, ontbrekend voorkennisKeten, paden zonder prerequisites, examen-referenced paden zonder uitlegPad.
 - [x] Schema vastgelegd: `voorkennisKeten: [{ id, title, niveau, why }]` per examen-check.
 - [x] Economie 2023-T1 (5 vragen) voorzien van voorkennisKeten.
-- [ ] Economie 2023-T2 (?? vragen) — voorkennisKeten
-- [ ] Economie 2024-T1 — voorkennisKeten
-- [ ] Economie 2024-T2 — voorkennisKeten
-- [ ] Economie 2025-T1 — voorkennisKeten
-- [ ] Economie 2025-T2 — voorkennisKeten
-- [ ] Engels 2024-T1 (8 vragen) — voorkennisKeten
-- [ ] Engels 2025-T1 (9 vragen) — voorkennisKeten
-- [ ] Geschiedenis 2025-T1 (6 vragen) — voorkennisKeten
+- [x] Economie 2023-T2 (7 vragen) voorzien van voorkennisKeten — commit 63c6cf1.
+- [x] Economie 2024-T1 (6 vragen) voorzien van voorkennisKeten — commit 09f72f5.
+- [x] Economie 2024-T2 (6 vragen) voorzien van voorkennisKeten — commit b869f23.
+- [x] Economie 2025-T1 (9 vragen) voorzien van voorkennisKeten — commit e163486.
+- [x] Economie 2025-T2 (5 vragen) voorzien van voorkennisKeten — commit 7a48310.
+- [x] Engels 2024-T1 (8 vragen) — voorkennisKeten — commit c188375.
+- [x] Engels 2025-T1 (9 vragen) — voorkennisKeten — commit 4c56476.
+- [x] Geschiedenis 2025-T1 (6 vragen) — voorkennisKeten — commit 83762e1.
 - [ ] `prerequisites: [{ id, title, niveau }]` als veld in leerpad-data — toevoegen aan paden waar examen-vragen op leunen (top 10 uit audit).
 - [ ] Loggen welke voorkennis-paden ontbreken voor nieuwe paden in backlog.
 
@@ -164,6 +164,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-10 — Optie-C plan geformaliseerd (3 fases) + self-test-regels. Audit-script `scripts/auditKennisgraaf.mjs` werkt. Economie 2023-T1 (5 vragen) voorzien van `voorkennisKeten`. Audit-bevinding: pincode-paden zijn meest-referenced zonder uitlegPad — prio bijgesteld.
 - 2026-05-11 — pincodeBuitenlandEu (42 vragen, 7 stappen) volledig voorzien van uitlegPad. Was meest-gerefereerd door examen-vragen (9×). Build + audit groen. Volgende: pincodeInkomenWelvaart (7 examen-refs). Commit 450b8f5.
 - 2026-05-11 — Playwright-testronde Maand-1 testchecklist (8 items, 6 PASS / 1 FAIL / 1 PARTIAL) + 4 follow-up fixes: ticker game/HoF-jargon weg (HomePage.jsx), /leaderboard alias toegevoegd (routes.js), CSP wss://*.supabase.co toegestaan (vercel.json), subscriptions/profiles `.single → .maybeSingle` (useAuth.js) tegen 406. Commit a543377.
+- 2026-05-11 — voorkennisKeten Fase 1 DATA-laag VOLLEDIG: alle 9 examen-paden voorzien (Economie T1-T2 2023-2025 + Engels 2024-T1 + Engels 2025-T1 + Geschiedenis 2025-T1). 61 examen-checks × 3 voorkennis-stappen. Audit: 0 broken loops, 0 ontbrekende voorkennisKeten. Patroon: woordenschat-po + begrijpend-lezen-strategie + specifiek vakpad. Eindcommit 83762e1. Volgende: prerequisites-veld op top 10 paden uit audit.
 
 ## Peer-review log
 

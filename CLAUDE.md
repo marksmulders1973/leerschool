@@ -65,6 +65,8 @@ Na elke afgewerkte taak voor je verder gaat:
 - Niet vragen welke prioriteit, welk pad, welke vakken.
 - Niet vragen of een aanpak goed is — gebruik bestaande patronen (uitlegPad-format, build → commit → push).
 - Wel doorgaan na elke chunk zonder pauze; geen tussentijdse "wil je dat ik doorga?".
+- **Bij vage instructies van Mark** ("ga verder", "verder", "door", "ga door", "vervolg"): direct bovenste niet-afgevinkte taak uit `docs/AUTONOOM-BACKLOG.md` pakken. **GEEN keuze-menu**, **GEEN "wat wil je doen"-vraag**, **GEEN testchecklist-aanbod**. Mark heeft de prioriteit al vastgelegd in de backlog — gewoon uitvoeren. Een opening met 4 opties verspilt zijn tijd.
+- Mark herhaalt nooit "alles autonoom" of "ja ga maar" — dat staat al hier. Twijfel je? Doorgaan. De enige uitzonderingen staan in "Hard-stops" hieronder.
 
 ### Hard-stops (HIER WEL VRAGEN)
 Stop en vraag Mark expliciet bij:
