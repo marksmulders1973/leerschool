@@ -126,7 +126,7 @@ Beta-vakken:
 - [x] `krachtenNatuurkunde.js` — 22 checks (2026-05-11, commit f17c8d7)
 - [x] `sterrenPlaneten.js` — 29 checks (2026-05-11, commit 36dbe40)
 - [x] `balansBeco.js` (economie VMBO) — 22 checks (2026-05-11, commit 245c0c1)
-- [ ] `vraagAanbodEconomie.js`
+- [x] `vraagAanbodEconomie.js` — 20 checks (2026-05-11, commit 1601f73)
 
 ## Prioriteit 2 — Examen-paden uitbreiden
 
@@ -185,6 +185,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 (verder) — uitlegPad-vervolg: kwadratenWortels (20, 2957d51), lineaireFormules (21, b00bbef), vergelijkingenOplossen (22, 92cce28), stelsels (20, 3a3acb0), machten (24, f0bb4d2), exponentieel (21, a121ea0). Totaal 128 extra checks. Backlog stale checkboxes opgeschoond.
 - 2026-05-11 (nóg verder) — VMBO-wis afgemaakt + talen begonnen: verhoudingen (12, 4eecd5d), breuken (15, 2697a39), negatieveGetallen (10, 7f0ab0d), vlakkeFiguren (19, 6174c85), kansrekening (26, b40cf7e), goniometrie (13, d6597fd), logaritmen (23, 151fb8c), differentieren (21, 66d89fa), passeComposeFrans (22, 8ee78a0), pastTensesEngels (23, d08cbb1). Totaal 184 extra checks. Hele wiskunde-blok klaar (behalve parabolen — meerdere sessies). Talen onderweg.
 - 2026-05-11 (mega-sessie afsluiting talen) — Hele talen-blok klaar: naamvallenDuits (20, 79c30db), werkwoordsvervoeging (30, 78ca142), onregelmatigeWerkwoordenEngels (28, d4f7103), onregelmatigeWerkwoordenV2Engels (23, 135c09d), argumentatieleer (22, 0518758), tekstanalyse (18, c3dae14), zinsontleding (26, afed8ba), woordsoortenNederlands (24, 77730f3), literatuurgeschiedenis (21, 3b21e95). Totaal 212 extra checks. Hele Prio-1 talen-blok afgerond. Volgende: beta-vakken.
+- 2026-05-11 (beta-blok COMPLEET) — Alle 10 beta-vakken voorzien van uitlegPad: chemischeReactiesScheikunde (21, b5263ff), periodiek (20, 74d343e), celBiologie (24, acf7992), geneticaErfelijkheidBiologie (22, 85566b9), voortplantingHormonenBiologie (28, 0f1456d), elektriciteitNatuurkunde (26, 6402d15), krachtenNatuurkunde (22, f17c8d7), sterrenPlaneten (29, 36dbe40), balansBeco (22, 245c0c1), vraagAanbodEconomie (20, 1601f73). **234 nieuwe uitlegPad-checks**. Daarnaast 2 UI-fixes voor Mark: examenBron-pill upgrade naar gouden banner met examenblad.nl-link (a292a96), welkom-video geluid standaard AAN met autoplay-fallback (5f1c1ee). Hele Prio-1 uitlegPad-werk klaar behalve parabolen.js (32 stappen, separate sessie).
 
 ## Peer-review log
 
