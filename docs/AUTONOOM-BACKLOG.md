@@ -95,7 +95,7 @@ VMBO-wiskunde (na Cito-content):
 - [ ] `vlakkeFiguren.js` (VMBO-versie, met Pythagoras)
 - [ ] `kansrekening.js`
 - [x] `statistiek.js` — 14 checks (2026-05-11, commit 4f7d795)
-- [ ] `stelsels.js`
+- [x] `stelsels.js` — 20 checks (2026-05-11, commit 3a3acb0)
 - [ ] `machten.js`
 - [ ] `exponentieel.js`
 - [ ] `goniometrie.js`
