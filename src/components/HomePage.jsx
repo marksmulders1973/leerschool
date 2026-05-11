@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense, Component } from "react";
+import { useState, useEffect, useRef, lazy, Suspense, Component } from "react";
 import { Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
@@ -346,7 +346,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [showWelcomeVideo, setShowWelcomeVideo] = useState(() => {
     try { return !localStorage.getItem("lk_zag_intro_video"); } catch { return false; }
   });
-  const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(true);
+  // Mark wens 2026-05-11: standaard geluid AAN.
+  // Browser kan autoplay-met-geluid blokkeren — dan vangen we via videoRef
+  // de play()-rejection af en schakelen alsnog muted in.
+  const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(false);
+  const welcomeVideoRef = useRef(null);
+  useEffect(() => {
+    if (!showWelcomeVideo || !welcomeVideoRef.current) return;
+    const el = welcomeVideoRef.current;
+    const tryPlay = el.play();
+    if (tryPlay && typeof tryPlay.catch === "function") {
+      tryPlay.catch(() => {
+        // Autoplay-met-geluid geblokkeerd → fallback naar muted + retry.
+        setWelcomeVideoMuted(true);
+        setTimeout(() => { try { el.play(); } catch {} }, 50);
+      });
+    }
+  }, [showWelcomeVideo]);
   const closeWelcomeVideo = () => {
     try { localStorage.setItem("lk_zag_intro_video", "1"); } catch {}
     try { track("welcome_video_closed"); } catch {}
@@ -587,6 +603,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             }}
           >
             <video
+              ref={welcomeVideoRef}
               src="/reclame.mp4"
               autoPlay
               loop
