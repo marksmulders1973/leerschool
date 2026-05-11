@@ -93,7 +93,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `breuken.js` — 15 checks (2026-05-11, commit 2697a39)
 - [x] `negatieveGetallen.js` — 10 checks (2026-05-11, commit 7f0ab0d)
 - [x] `vlakkeFiguren.js` — 19 checks (2026-05-11, commit 6174c85)
-- [ ] `kansrekening.js`
+- [x] `kansrekening.js` — 26 checks (2026-05-11, commit b40cf7e)
 - [x] `statistiek.js` — 14 checks (2026-05-11, commit 4f7d795)
 - [x] `stelsels.js` — 20 checks (2026-05-11, commit 3a3acb0)
 - [x] `machten.js` — 24 checks (2026-05-11, commit f0bb4d2)
