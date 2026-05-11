@@ -98,7 +98,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `stelsels.js` — 20 checks (2026-05-11, commit 3a3acb0)
 - [x] `machten.js` — 24 checks (2026-05-11, commit f0bb4d2)
 - [x] `exponentieel.js` — 21 checks (2026-05-11, commit a121ea0)
-- [ ] `goniometrie.js`
+- [x] `goniometrie.js` — 13 checks (2026-05-11, commit d6597fd)
 - [ ] `logaritmen.js`
 - [ ] `differentieren.js`
 
