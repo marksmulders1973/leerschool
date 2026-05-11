@@ -85,7 +85,7 @@ Check eerst met `Grep` welke paden geen `uitlegPad:` hebben. Pak Cito-relevante 
 VMBO-wiskunde (na Cito-content):
 - [ ] `parabolen.js` (32 stappen, doe in meerdere sessies)
 - [x] `kwadratischeVergelijkingen.js` — 15 checks (2026-05-11, commit 5a0dca6)
-- [ ] `kwadratenWortels.js`
+- [x] `kwadratenWortels.js` — 20 checks (2026-05-11, commit 2957d51)
 - [ ] `lineaireFormules.js`
 - [x] `coordinatenstelsel.js` — 18 checks (2026-05-11, commit 2e7aa67)
 - [ ] `vergelijkingenOplossen.js`
