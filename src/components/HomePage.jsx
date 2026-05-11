@@ -836,7 +836,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ),
               label: "Ik ben leerling", sub: "basisschool · groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
-              cta: { label: "🎯 Cito oefenen", onClick: () => handleFeatureClick("cito") },
+              cta: { label: "🎯 Doorstroomtoets oefenen", onClick: () => handleFeatureClick("cito") },
             },
             // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
             // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar

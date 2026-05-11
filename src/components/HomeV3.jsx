@@ -123,7 +123,7 @@ const VAKKEN = [
   { id: "leren",     label: "Leren",      sub: "uitleg in delen van 15 min", icon: Icon.book,     accent: "#00C853", primary: true, target: "/leren" },
   { id: "oefenen",   label: "Test je kennis", sub: "snelle toets, in 15 min", icon: Icon.target,   accent: "#00C853", primary: true, target: "/oefenen" },
   { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, accent: "#EC4899", badge: "Nieuw", target: "/leren" },
-  { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target,   accent: "#8B5CF6", target: "/cito" },
+  { id: "cito",      label: "Doorstroomtoets", sub: "rekenen · taal · wereld",   icon: Icon.target,   accent: "#8B5CF6", target: "/cito" },
   { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function, accent: "#F97316", target: "/leren" },
   { id: "tafels",    label: "Tafels",     sub: "groep 3 t/m 6",             icon: Icon.cube,     accent: "#FB7185", target: "/tafels" },
   { id: "taal",      label: "Taal",       sub: "spelling · woordenschat",   icon: Icon.letters,  accent: "#3B82F6", target: "/leren" },

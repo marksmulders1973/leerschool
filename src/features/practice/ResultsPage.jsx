@@ -522,7 +522,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {quiz?.citoId && (() => {
           const pct = latest.percentage;
           const onderdelen = { gemengd: "Alles gemengd", rekenen: "Rekenen & Wiskunde", taal: "Taal", "begrijpend-lezen": "Begrijpend Lezen", wereldorientatie: "Wereld Oriëntatie" };
-          const label = onderdelen[quiz.citoId] || "Cito";
+          const label = onderdelen[quiz.citoId] || "Doorstroomtoets";
           const nextSuggestions = { rekenen: "Taal", taal: "Begrijpend Lezen", "begrijpend-lezen": "Wereld Oriëntatie", wereldorientatie: "Alles gemengd", gemengd: null };
           const next = nextSuggestions[quiz.citoId];
           return (

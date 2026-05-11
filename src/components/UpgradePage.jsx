@@ -130,7 +130,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
           ] : [
             ["Kind volgen", "✗", "✓"],
             ["Scores per vak", "✗", "✓"],
-            ["Cito overzicht", "✗", "✓"],
+            ["Doorstroomtoets overzicht", "✗", "✓"],
             ["Wekelijks rapport", "✗", "✓"],
           ]).map(([feat, free, pro], i) => (
             <div key={i} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", borderTop: "1px solid rgba(255,255,255,0.05)" }}>

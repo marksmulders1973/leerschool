@@ -116,7 +116,7 @@ Talen (lager prio):
 - [x] `literatuurgeschiedenis.js` — 21 checks (2026-05-11, commit 3b21e95)
 
 Beta-vakken:
-- [ ] `atoombouwScheikunde.js`
+- [x] `atoombouwScheikunde.js` — 22 checks (2026-05-11, commit dcfc5b3)
 - [ ] `chemischeReactiesScheikunde.js`
 - [ ] `periodiek.js`
 - [ ] `celBiologie.js`

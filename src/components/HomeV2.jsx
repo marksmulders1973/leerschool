@@ -114,7 +114,7 @@ const VAKKEN = [
   { id: "leren",     label: "Leren",      sub: "uitleg in delen van 15 min", icon: Icon.book,     primary: true },
   { id: "oefenen",   label: "Test je kennis", sub: "snelle toets, in 15 min", icon: Icon.target,   primary: true },
   { id: "ai",        label: "AI-vragen",  sub: "elk onderwerp, telkens anders", icon: Icon.spark, badge: "Nieuw" },
-  { id: "cito",      label: "Cito",       sub: "rekenen · taal · wereld",   icon: Icon.target },
+  { id: "cito",      label: "Doorstroomtoets", sub: "rekenen · taal · wereld",   icon: Icon.target },
   { id: "wiskunde",  label: "Wiskunde",   sub: "klas 1 t/m 4",              icon: Icon.function },
   { id: "tafels",    label: "Tafels",     sub: "groep 3 t/m 6",             icon: Icon.cube },
   { id: "taal",      label: "Taal",       sub: "spelling · woordenschat",   icon: Icon.letters },

@@ -574,10 +574,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 22 }} aria-hidden="true">🎯</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffd54f" }}>
-                Cito oefenen
+                Doorstroomtoets oefenen
               </div>
               <div style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
-                Cito-stijl vragen — alle vakken gemixt
+                Doorstroomtoets-stijl vragen — alle vakken gemixt
               </div>
             </div>
             <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>

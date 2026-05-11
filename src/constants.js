@@ -40,7 +40,7 @@ export const SUBJECTS = [
   { id: "spelling",          label: "Spelling",          icon: "🔡", color: "#00e676" },
   { id: "begrijpend-lezen",  label: "Begrijpend Lezen",  icon: "📖", color: "#69f0ae" },
   { id: "verkeer",           label: "Verkeer",           icon: "🚦", color: "#f9a825" },
-  { id: "cito",              label: "Cito Oefenen",      icon: "🎯", color: "#ff6d00", citoMode: true },
+  { id: "cito",              label: "Doorstroomtoets Oefenen", icon: "🎯", color: "#ff6d00", citoMode: true },
 ];
 
 export const LEVELS = [

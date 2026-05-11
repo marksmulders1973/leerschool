@@ -18,7 +18,7 @@ const PLANS = [
     features: [
       { text: "Kind koppelen via veilige code", pro: true },
       { text: "Scores & voortgang per vak", pro: true },
-      { text: "Cito-verwachting op basis van scores", pro: true },
+      { text: "Doorstroomtoets-verwachting op basis van scores", pro: true },
       { text: "Wekelijks rapport per e-mail", pro: true },
       { text: "Meerdere kinderen volgen", pro: true },
       { text: "AI-vragen onbeperkt", pro: true },
@@ -109,7 +109,7 @@ const FREE_FEATURES = [
   "✓ Alle vakken & niveaus",
   "✓ Scorebord & Hall of Fame",
   `✓ 5 AI-quizzes per dag`,
-  "✓ Cito oefenen (groep 7 & 8)",
+  "✓ Doorstroomtoets oefenen (groep 7 & 8)",
   "✓ Tot 20 toetsen aanmaken (leerkracht)",
 ];
 

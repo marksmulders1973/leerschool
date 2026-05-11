@@ -9,7 +9,7 @@ const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
   geschiedenis: "Geschiedenis", natuur: "Natuur", engels: "Engels",
   spelling: "Spelling", "begrijpend-lezen": "Begrijpend Lezen",
-  cito: "Cito", wiskunde: "Wiskunde", biologie: "Biologie",
+  cito: "Doorstroomtoets", wiskunde: "Wiskunde", biologie: "Biologie",
 };
 
 function ScoreBadge({ pct }) {
