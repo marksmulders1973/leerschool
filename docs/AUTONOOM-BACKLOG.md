@@ -88,7 +88,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `kwadratenWortels.js` — 20 checks (2026-05-11, commit 2957d51)
 - [x] `lineaireFormules.js` — 21 checks (2026-05-11, commit b00bbef)
 - [x] `coordinatenstelsel.js` — 18 checks (2026-05-11, commit 2e7aa67)
-- [ ] `vergelijkingenOplossen.js`
+- [x] `vergelijkingenOplossen.js` — 22 checks (2026-05-11, commit 92cce28)
 - [ ] `verhoudingen.js` (VMBO-versie)
 - [ ] `breuken.js` (VMBO-versie)
 - [ ] `negatieveGetallen.js` (VMBO-versie)
