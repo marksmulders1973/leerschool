@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "../styles.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 
 // 3-staps flow voor Cito-voorbereiding (audit 2026-05-06):
 //   1. Leer de aanpak  → opent het strategieën-leerpad
@@ -160,7 +161,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
   return (
     <div style={styles.page}>
       <Header
-        title="Doorstroomtoets oefenen 🎯"
+        title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>Doorstroomtoets oefenen <DoorstroomtoetsLogo size={24} /></span>}
         subtitle={mode === "oefenen" ? `Voorbereiding eindtoets groep ${groep}` : "Kies hoe je wilt oefenen"}
         onBack={mode === "oefenen" ? () => setMode("kies") : onBack}
         onHome={onHome}
@@ -242,7 +243,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
                 gap: 16,
               }}
             >
-              <span style={{ fontSize: 36 }}>🎯</span>
+              <DoorstroomtoetsLogo size={40} />
               <div style={{ flex: 1 }}>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(0,200,83,0.85)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>
                   Stap 2

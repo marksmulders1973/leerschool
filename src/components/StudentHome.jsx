@@ -451,7 +451,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                     acties.push({
                       key: "cito",
                       enabled: true,
-                      label: "🎯 Cito",
+                      label: <span style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><DoorstroomtoetsLogo size={14} /> Doorstroomtoets</span>,
                       sub: "echte stijl",
                       onClick: () => {
                         SoundEngine.play("click");

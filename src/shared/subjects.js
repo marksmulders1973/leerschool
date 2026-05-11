@@ -40,7 +40,7 @@ export const SUBJECTS = {
   // "Wiskunde") — dev-jargon in UI.
   rekenen: { title: "Rekenen", emoji: "🔢" },
   "begrijpend-lezen": { title: "Begrijpend Lezen", emoji: "📚" },
-  cito: { title: "Cito", emoji: "🎯" },
+  cito: { title: "Doorstroomtoets", emoji: "🎯" },
 };
 
 /**

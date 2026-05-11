@@ -2,6 +2,7 @@ import { useState } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
 import { BRAND } from "../brand.js";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 
 export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPlan = null }) {
   const [plan, setPlan] = useState(defaultPlan || "parent_pro");
@@ -22,7 +23,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
       features: [
         "📊 Voortgang van je kind volgen",
         "📚 Scores per vak & niveau",
-        "🎯 Cito-voorbereiding per onderdeel",
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><DoorstroomtoetsLogo size={14} /> Doorstroomtoets-voorbereiding per onderdeel</span>,
         "📅 Wekelijks overzicht",
         "🔔 Melding bij nieuwe scores",
       ],

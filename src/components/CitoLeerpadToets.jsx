@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import Header from "./Header.jsx";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import MdInline from "../shared/ui/MdInline.jsx";
 import { shuffleOptions } from "../shared/shuffleOptions.js";
@@ -101,7 +102,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return (
       <div style={pageStyle()}>
         <Header
-          title={subjectFilter ? `Cito ${subjectLabel || subjectFilter} 🎯` : "Oefen-Cito 🎯"}
+          title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>{subjectFilter ? `Doorstroomtoets ${subjectLabel || subjectFilter}` : "Oefen-Doorstroomtoets"} <DoorstroomtoetsLogo size={22} /></span>}
           subtitle={`${config.count} vragen uit Leerkwartier-paden`}
           onBack={onBack}
           onHome={onHome}

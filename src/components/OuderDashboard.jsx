@@ -4,6 +4,7 @@ import Header from "./Header.jsx";
 import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
 import { clearAll as clearAdaptive } from "../shared/adaptiveStore.js";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -424,7 +425,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 {/* Cito sectie */}
                 {citoScores.length > 0 && (
                   <div style={{ borderRadius: 16, border: "1px solid rgba(255,107,53,0.25)", background: "rgba(255,107,53,0.06)", padding: "14px 16px" }}>
-                    <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42", marginBottom: 10 }}>🎯 Cito voortgang</div>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42", marginBottom: 10, display: "flex", alignItems: "center", gap: 6 }}><DoorstroomtoetsLogo size={18} /> Doorstroomtoets voortgang</div>
                     {citoScores.slice(0, 5).map((s, i) => (
                       <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
                         <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>
