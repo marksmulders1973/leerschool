@@ -33,6 +33,11 @@ const steps = [
         explanation: "De afvalstoffenheffing wordt door de gemeente geheven om de kosten van vuilnisophalen + verwerking te dekken. Andere gemeentebelastingen zijn OZB (onroerendezaakbelasting), hondenbelasting en toeristenbelasting. BTW, loonheffing en VPB zijn Rijksbelastingen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 12",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'afvalstoffenheffing', 'OZB', 'BTW', 'loonheffing', 'VPB' — anders kun je de opties niet plaatsen" },
+          { id: "pincode-belasting", title: "Belasting", niveau: "vmbo-3", why: "weten dat er verschillende soorten belastingen zijn (directe vs indirecte, gemeente vs Rijk)" },
+          { id: "pincode-overheid", title: "Taken van de overheid", niveau: "vmbo-3", why: "Rijk/provincie/gemeente — welke laag heft welke belasting — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Welke 3 overheidslagen heffen belasting?", tekst: "Rijk (= heel NL), provincie en gemeente. Elke laag heeft eigen belastingen." },
@@ -88,6 +93,11 @@ const steps = [
         explanation: "Eigenaren van een huis betalen IB over een fictief 'eigenwoningforfait' — een percentage van de WOZ-waarde dat wordt opgeteld bij het inkomen. WOZ-waarde × ~0,35% (2024) = bedrag dat als inkomen geldt voor IB-berekening.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 14",
         leerpadLink: { id: "pincode-belasting", title: "Belasting" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'WOZ-waarde', 'eigenwoningforfait', 'hypotheekrenteaftrek', 'aftrekpost'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "vraag scant op kernwoord 'aangifte IB' — welk WOZ-onderdeel hoort daar wél bij" },
+          { id: "pincode-belasting", title: "Belasting", niveau: "vmbo-3", why: "Box 1 inkomstenbelasting + eigen woning — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is WOZ-waarde?", tekst: "Geschatte waarde van je woning, vastgesteld door de gemeente. Wordt elk jaar opnieuw bepaald." },
@@ -141,6 +151,11 @@ const steps = [
         explanation: "De vermogensrendementsheffing (Box 3 IB) heft belasting over je vermogen (spaargeld + beleggingen) boven de vrijstelling (~€57.000 in 2024). De Belastingdienst gaat uit van een fictief rendement, los van de werkelijke rente.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 36",
         leerpadLink: { id: "pincode-belasting", title: "Belasting" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'vermogen', 'rendement', 'vermogensrendementsheffing', 'fictief rendement'" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "verschil tussen INKOMEN (loon) en VERMOGEN (spaargeld+bezit) — sleutel om de juiste belasting te kiezen" },
+          { id: "pincode-belasting", title: "Belasting", niveau: "vmbo-3", why: "soorten belastingen + Box 3 vermogen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de situatie?", tekst: "Je hebt veel spaargeld op de bank. De rente is laag (bijna 0%) maar de overheid wil tóch belasting hebben." },
@@ -192,6 +207,11 @@ const steps = [
         explanation: "Koopkracht stijgt als je loon meer toeneemt dan de prijzen. Bv. loon +5%, inflatie +3% → reële koopkracht-toename van ~2%. Als loon stijgt maar minder dan inflatie, gaat je koopkracht juist achteruit.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 26",
         leerpadLink: { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'koopkracht', 'nominaal loon', 'inflatie' — anders blijven de antwoordopties wartaal" },
+          { id: "procenten-po", title: "Procenten", niveau: "po-1F", why: "twee percentages (loonstijging vs inflatie) vergelijken — welke is groter" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "koopkracht-formule (reëel ≈ nominaal − inflatie) — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat is koopkracht?", tekst: "Hoeveel je met je loon KAN KOPEN. Stijgt = je kunt meer kopen. Daalt = je kunt minder kopen." },
@@ -245,6 +265,11 @@ const steps = [
         explanation: "Volledige prijscompensatie betekent dat lonen automatisch meegroeien met de inflatie — koopkracht blijft daardoor op peil. Vakbonden onderhandelen hier vaak over in CAO's. De andere maatregelen verlagen koopkracht juist.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 27",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'prijscompensatie', 'heffingskorting', 'winstmarge', 'BTW'" },
+          { id: "pincode-inkomen-welvaart", title: "Inkomen en welvaart", niveau: "vmbo-3", why: "koopkracht-basis: wat verlaagt koopkracht en wat houdt 'm op peil" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "ECB-rentebeleid + macro-instrumenten — context van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat moet er bewaard blijven?", tekst: "De KOOPKRACHT van burgers — dat ze niet minder kunnen kopen door inflatie." },
@@ -298,6 +323,11 @@ const steps = [
         explanation: "Invoerrechten op Chinees staal = Chinees staal wordt duurder (importprijs stijgt door heffing). Amerikaanse bedrijven gaan dan kopen bij eigen Amerikaanse staalproducenten — die zijn relatief goedkoper geworden. Dat is precies het doel van protectionisme: eigen industrie beschermen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 28",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'invoerrecht', 'importprijs', 'protectionisme', 'vrijhandel'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "redenering volgen: A maakt B duurder → C kiest D — meerdere stappen in 1 zin" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "internationale handel + beschermingsmaatregelen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wie heft het invoerrecht?", tekst: "De VS heft een belasting op Chinees staal dat de VS binnenkomt." },
@@ -352,6 +382,11 @@ const steps = [
         explanation: "Wet van vraag en aanbod werkt ook voor valuta. Veel vraag naar dollars (China koopt) → koers dollar stijgt. Net zoals bij elke andere markt: hoge vraag + onveranderd aanbod = hogere prijs.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 30",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'wisselkoers', 'vraag', 'aanbod', 'valuta'" },
+          { id: "pincode-ondernemen", title: "Ondernemen", niveau: "vmbo-4", why: "wet van vraag en aanbod — basisprincipe dat ook voor valuta geldt" },
+          { id: "pincode-buitenland-eu", title: "Nederland en het buitenland", niveau: "vmbo-4", why: "wisselkoersen + valutamarkt — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [
             { titel: "Wat doet China?", tekst: "China KOOPT in grote hoeveelheden dollars. Kopen = vraag." },
