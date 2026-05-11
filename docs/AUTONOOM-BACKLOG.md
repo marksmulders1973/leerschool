@@ -111,7 +111,7 @@ Talen (lager prio):
 - [x] `onregelmatigeWerkwoordenV2Engels.js` — 23 checks (2026-05-11, commit 135c09d)
 - [x] `argumentatieleer.js` — 22 checks (2026-05-11, commit 0518758)
 - [x] `tekstanalyse.js` — 18 checks (2026-05-11, commit c3dae14)
-- [ ] `zinsontleding.js`
+- [x] `zinsontleding.js` — 26 checks (2026-05-11, commit afed8ba)
 - [ ] `woordsoortenNederlands.js` (VMBO-versie)
 - [ ] `literatuurgeschiedenis.js`
 
