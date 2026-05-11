@@ -48,6 +48,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 1",
         bronTekst: tekst1,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "NL-strategie 'sleutelwoord matchen' — herken welk woord uit de tekst (hum, landmark) past bij welk antwoord" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "uitsluiten van afleiders (lyrics, presentatie, hoes) — alleen wat letterlijk in tekst staat klopt" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'hum', 'feature', 'landmark', 'improvisations' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Sleutelzin zoeken", tekst: "'Features droning guitar improvisations over the eerie hum of the Bay Area landmark' = brug-geluid is basis. → optie C." }],
           woorden: [{ woord: "hum", uitleg: "Brommend/zoemend geluid." }, { woord: "feature", uitleg: "Bevatten, met als hoofdrol." }, { woord: "landmark", uitleg: "Beroemd herkenpunt (de brug)." }],
@@ -81,6 +86,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 2",
         bronTekst: tekst1,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "NL-strategie 'letterlijke match' — woorden uit tekst (relaxed, dreamlike) terugvinden in antwoord" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "afleiders herkennen: techno-beats en covers staan niet in tekst — eliminatie" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'otherworldly', 'dreamlike', 'meditative' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Letterlijke citaat-match", tekst: "Tekst: 'otherworldly: relaxed, dreamlike, almost meditative'. Optie B = letterlijk relaxed + dreamlike + otherworldly. → B." }],
           woorden: [{ woord: "otherworldly", uitleg: "Bovenaards, niet van deze wereld." }, { woord: "dreamlike", uitleg: "Droomachtig." }, { woord: "meditative", uitleg: "Mediterend, rustgevend." }],
@@ -116,6 +126,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 6",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "NL-strategie 'synoniem matchen' — 'crews' = workers, 'surprising' = unforeseen" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "afleider 'researcher' versus tekst 'crews' — letterlijk lezen, niet aannemen" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'crews', 'unforeseen', 'yielded', 'unearthed' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Crews + surprising = unforeseen", tekst: "'Crews unearthed something surprising' = werkers vonden iets onverwachts → optie A (group of workers, unforeseen)." }],
           woorden: [{ woord: "crews", uitleg: "Werkploegen." }, { woord: "unforeseen", uitleg: "Onvoorzien, onverwacht." }, { woord: "yielded", uitleg: "Opleverde." }],
@@ -151,6 +166,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 7",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrip 'functie van een alinea' — beschrijven/uitleggen/vergelijken/details geven" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "alinea-functie herkennen aan inhoud: citaat + concrete details = feitelijke uitwerking" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab + alinea-signaalwoorden — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Quote = details", tekst: "Alinea 2 quote Allyn Gore + opening → chamber → tunnel = details over wat gevonden werd. → D (facts in detail)." }],
           woorden: [{ woord: "elaboration", uitleg: "Uitwerking met meer details." }, { woord: "presents", uitleg: "Geeft, presenteert." }],
@@ -186,6 +206,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 9",
         bronTekst: tekst3,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "conclusie uit een alinea trekken — wat zegt de tekst LETTERLIJK over het object" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "synoniem-koppeling: 'mysterious age + purpose' = 'unclear when + why'" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'mysterious', 'purpose', 'excavation', 'unclear' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Mysterious = onbekend", tekst: "Alinea 4: 'age and purpose remain mysterious' = leeftijd én doel zijn nog onbekend. → B (still unclear when or why)." }],
           woorden: [{ woord: "mysterious", uitleg: "Onbekend, mysterieus." }, { woord: "purpose", uitleg: "Doel, reden." }, { woord: "unclear", uitleg: "Niet duidelijk." }],
@@ -219,6 +244,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 11",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "alinea-functie: citaten + reacties = how something is received" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "verschil tussen 'gevolgen', 'reactie', 'waarom nodig' — eliminatie via inhoud alinea" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'received', 'praised', 'historic' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Reactie van mensen", tekst: "Alinea 2: Marta-citaat (joy/historic) + fans applaudisseren = REACTIES op het besluit. → B (how received)." }],
           woorden: [{ woord: "received", uitleg: "Hoe iets ontvangen wordt door publiek." }, { woord: "praised", uitleg: "Geprezen." }],
@@ -252,6 +282,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 12",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "toon van een tekst herkennen (positief/negatief/neutraal) — basis voor invul-vraag" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "cloze-vraag: kies fragment dat past bij de TOON van de omringende tekst, niet bij losse betekenis" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'controversial', 'transformation', 'demanded' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Toon = positief", tekst: "Alinea 4 + president-citaat zijn positief over verandering. Optie C ('journey of transformation') past = positieve formulering." }],
           woorden: [{ woord: "transformation", uitleg: "Verandering, transformatie." }, { woord: "controversial", uitleg: "Omstreden, met discussie." }],
@@ -289,6 +324,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 13",
         bronTekst: tekst4,
         leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "signaalwoorden in een tekst: contrast (echter/maar), gevolg (dus/daarom), opsomming (bovendien)" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "verband tussen 2 zinnen herkennen: tegenstelling, oorzaak-gevolg of toevoeging" },
+          { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-connectieven: However (contrast), Therefore (gevolg), In addition (opsomming), Consequently (gevolg), In conclusion (samenvatting)" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling", tekst: "Alinea 4 = positief (verandering!). Alinea 5 = 'not all equal yet' = MAAR. → 'However' (tegenstelling-woord)." }],
           woorden: [{ woord: "However", uitleg: "Maar, echter (tegenstelling)." }, { woord: "Consequently", uitleg: "Daarom, gevolg (geen tegenstelling)." }, { woord: "In addition", uitleg: "Bovendien (zelfde richting)." }],
