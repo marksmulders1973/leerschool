@@ -169,6 +169,11 @@ const redactiesommen = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Verbanden — verhalen-sommen",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Redactiesommen voor groep 5-8: hoe lees je een rekensom in een verhaal, signaal-woorden voor +/-/×/÷, één-stap- en twee-stap-sommen, eindopdracht. ~12 min.",
   triggerKeywords: [

@@ -456,6 +456,9 @@ const breukenPo = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Getallen — breuken",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Cito-stijl praktijksommen. ~15 min.",
   triggerKeywords: [

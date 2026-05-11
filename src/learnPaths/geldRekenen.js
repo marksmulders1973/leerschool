@@ -340,6 +340,10 @@ const geldRekenen = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Getallen — geld",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+  ],
   intro:
     "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Cito-stijl praktijksommen. ~12 min.",
   triggerKeywords: [

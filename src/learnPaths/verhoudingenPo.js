@@ -390,6 +390,10 @@ const verhoudingenPo = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Verhoudingen — recepten en schaal",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "breuken-po", title: "Breuken", niveau: "po-1F" },
+  ],
   intro:
     "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Cito-stijl praktijksommen. ~15 min.",
   triggerKeywords: [

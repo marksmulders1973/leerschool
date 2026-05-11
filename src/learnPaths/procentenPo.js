@@ -304,6 +304,10 @@ const procentenPo = {
   // verhoudingen + procenten in praktijkcontext.
   referentieNiveau: "1F",
   sloThema: "Verhoudingen — procenten",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "breuken-po", title: "Breuken", niveau: "po-1F" },
+  ],
   intro:
     "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Cito-stijl praktijksommen. ~15 min.",
   triggerKeywords: [

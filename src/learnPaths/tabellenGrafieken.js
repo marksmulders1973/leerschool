@@ -349,6 +349,11 @@ const tabellenGrafieken = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Verbanden — data interpreteren",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
+  ],
   intro:
     "Tabellen en grafieken voor Cito groep 6-8: tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdracht. ~15 min.",
   triggerKeywords: [
