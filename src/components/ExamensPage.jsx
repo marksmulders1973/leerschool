@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "./Header.jsx";
 import {
   EXAMENS,
@@ -9,10 +9,16 @@ import {
   getBijlageUrl,
 } from "../data/examens.js";
 import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
+import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
 
-// Examens-bibliotheek (Mark idee 2026-05-08): leerling kan oude
-// (eind)examens inzien als PDF. Gegroepeerd per vak met filter-pillen
-// op niveau. Klik = open PDF in nieuwe tab.
+// Examens-pagina (Mark idee 2026-05-08, herzien 2026-05-11):
+// TWEE gelijkwaardige modi (beide kern-feature, geen mag worden weggemoffeld):
+// 1. 🎯 OEFENEN MET UITLEG — examen-leerpaden (id startsWith "examen-"). Echte
+//    examenvragen mét voorkennisKeten + uitlegPad + leerpad-link. USP van NL.
+// 2. 📄 INZIEN ALS PDF — hele eindexamens (EXAMENS) + correctievoorschrift.
+//    Voor zelfstudie/printen/oefenen-op-papier.
+// Prop `initialMode` ("leren" | "pdf") bepaalt naar welke sectie de pagina
+// bij mount scrolt. Beide secties zijn altijd zichtbaar.
 
 const C = {
   bg: "#0f1729",
@@ -24,9 +30,39 @@ const C = {
   accent: "#ff6b35",
 };
 
-export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen }) {
+export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen, onPickPath, initialMode = "leren" }) {
   const [niveauFilter, setNiveauFilter] = useState("alle");
   const [vakFilter, setVakFilter] = useState(prefilterVak || "alle");
+  const lerenSectionRef = useRef(null);
+  const pdfSectionRef = useRef(null);
+
+  // Examen-leerpaden (id startsWith "examen-") — onze "echt leren"-modus.
+  // Gegroepeerd per subject voor visuele indeling.
+  const examenLeerpaden = useMemo(() => {
+    return Object.values(ALL_LEARN_PATHS).filter((p) => p.id && p.id.startsWith("examen-"));
+  }, []);
+
+  const examenPathsBySubject = useMemo(() => {
+    const out = {};
+    for (const p of examenLeerpaden) {
+      const subj = p.subject || "overig";
+      if (!out[subj]) out[subj] = [];
+      out[subj].push(p);
+    }
+    // Sorteer per vak op id (jaar+tijdvak natuurlijk gesorteerd via ID)
+    for (const k of Object.keys(out)) out[k].sort((a, b) => a.id.localeCompare(b.id));
+    return out;
+  }, [examenLeerpaden]);
+
+  // Scroll naar gevraagde sectie bij mount (en wanneer Mark de pagina opnieuw
+  // opent met andere mode). Beide secties blijven zichtbaar — alleen scroll-positie.
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const target = initialMode === "pdf" ? pdfSectionRef.current : lerenSectionRef.current;
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 100);
+    return () => clearTimeout(t);
+  }, [initialMode]);
 
   const niveaus = useMemo(() => {
     const set = new Set(EXAMENS.map((e) => e.niveau));
@@ -61,13 +97,108 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
   return (
     <div style={{ minHeight: "100dvh", background: C.bg, color: C.text, fontFamily: "var(--font-body)" }}>
       <Header
-        title="Oude examens 📜"
-        subtitle="Bekijk echte eindexamens als PDF"
+        title="Examens 🎓"
+        subtitle="Oefenen met uitleg óf inzien als PDF"
         onBack={onBack}
         onHome={onHome}
       />
 
       <div style={{ padding: "16px 18px 32px" }}>
+        {/* ─── SECTIE 1: OEFENEN MET UITLEG (examen-leerpaden) ─── */}
+        <div ref={lerenSectionRef} style={{ scrollMarginTop: 16 }}>
+          <SectieKop
+            icon="🎯"
+            kleur={C.warm}
+            titel="Oefenen met uitleg"
+            subtitel={`${examenLeerpaden.length} examens — echte vragen + waarom het antwoord klopt + doorklik naar leerpad`}
+          />
+          {examenLeerpaden.length === 0 && (
+            <div style={{ ...cardStyle(), textAlign: "center", padding: "20px 14px", color: C.muted }}>
+              Nog geen interactieve examen-paden.
+            </div>
+          )}
+          {Object.entries(examenPathsBySubject).map(([vak, lijst]) => {
+            const vakInfo = VAK_LABELS[vak] || { label: vak, icon: "📄", color: C.warm };
+            return (
+              <div key={vak} style={{ marginBottom: 18 }}>
+                <div style={{
+                  display: "flex", alignItems: "center", gap: 10, marginBottom: 8,
+                  paddingBottom: 4, borderBottom: `1px solid ${C.border}`,
+                }}>
+                  <span style={{ fontSize: 20 }} aria-hidden="true">{vakInfo.icon}</span>
+                  <h4 style={{
+                    fontFamily: "var(--font-display)", fontSize: 16, color: vakInfo.color, margin: 0,
+                  }}>{vakInfo.label}</h4>
+                  <span style={{ marginLeft: "auto", fontSize: 11, color: C.muted }}>
+                    {lijst.length} {lijst.length === 1 ? "pad" : "paden"}
+                  </span>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
+                  {lijst.map((p) => {
+                    const aantalVragen = (p.steps || []).reduce((s, st) => s + (st.checks?.length || 0), 0);
+                    return (
+                      <button
+                        key={p.id}
+                        onClick={() => onPickPath && onPickPath(p.id)}
+                        disabled={!onPickPath}
+                        style={{
+                          textAlign: "left",
+                          background: "rgba(255,213,79,0.08)",
+                          border: `1.5px solid rgba(255,213,79,0.45)`,
+                          borderRadius: 12,
+                          padding: "12px 14px",
+                          color: C.text,
+                          cursor: onPickPath ? "pointer" : "default",
+                          fontFamily: "var(--font-body)",
+                          minHeight: 44,
+                          transition: "background 0.15s",
+                        }}
+                        onMouseOver={(ev) => { if (onPickPath) ev.currentTarget.style.background = "rgba(255,213,79,0.15)"; }}
+                        onMouseOut={(ev) => { ev.currentTarget.style.background = "rgba(255,213,79,0.08)"; }}
+                      >
+                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <span style={{ fontSize: 22 }} aria-hidden="true">{p.emoji || "🎓"}</span>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: C.warm, marginBottom: 2 }}>
+                              {p.title || p.id}
+                            </div>
+                            <div style={{ fontSize: 11, color: C.muted }}>
+                              {aantalVragen > 0 ? `${aantalVragen} vragen · ` : ""}met uitleg waarom het juiste antwoord klopt
+                            </div>
+                          </div>
+                          <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+
+          <div style={{
+            marginTop: 8, marginBottom: 24,
+            padding: "10px 14px",
+            background: "rgba(255,213,79,0.06)",
+            border: "1px dashed rgba(255,213,79,0.25)",
+            borderRadius: 12,
+            fontSize: 12, color: C.muted, lineHeight: 1.5,
+          }}>
+            💡 <strong style={{ color: C.warm }}>Tip</strong>: bij een fout antwoord opent de uitleg ('begrijp je dit?').
+            Klik door naar het leerpad over het onderwerp en kom terug bij de vraag.
+          </div>
+        </div>
+
+        {/* ─── SECTIE 2: HELE EXAMENS ALS PDF ─── */}
+        <div ref={pdfSectionRef} style={{ scrollMarginTop: 16 }}>
+          <SectieKop
+            icon="📄"
+            kleur="#a78bfa"
+            titel="Hele examens inzien (PDF)"
+            subtitel="Volledige examens + correctievoorschrift — handig voor zelfstudie op papier"
+          />
+        </div>
+
         {EXAMENS.length === 0 && (
           <div style={{ ...cardStyle(), textAlign: "center", padding: "30px 14px" }}>
             <div style={{ fontSize: 36, marginBottom: 8 }}>📚</div>
@@ -337,4 +468,23 @@ function cardStyle() {
     borderRadius: 14,
     padding: "14px 16px",
   };
+}
+
+function SectieKop({ icon, kleur, titel, subtitel }) {
+  return (
+    <div style={{
+      display: "flex", alignItems: "center", gap: 12,
+      padding: "12px 14px", marginBottom: 12,
+      background: "rgba(255,255,255,0.03)",
+      border: `1.5px solid ${kleur}`, borderRadius: 12,
+    }}>
+      <span style={{ fontSize: 28 }} aria-hidden="true">{icon}</span>
+      <div style={{ flex: 1 }}>
+        <div style={{
+          fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: kleur,
+        }}>{titel}</div>
+        <div style={{ fontSize: 12, color: C.muted, marginTop: 2 }}>{subtitel}</div>
+      </div>
+    </div>
+  );
 }

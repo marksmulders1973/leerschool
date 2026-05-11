@@ -202,6 +202,11 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 
 ## Strategie
 
+- **Examens = twee gelijkwaardige modi** (Mark 2026-05-11). Mag NOOIT weggemoffeld worden:
+  1. **🎯 Oefenen met uitleg** = examen-leerpaden (`src/learnPaths/examen*.js`) met `voorkennisKeten` + `uitlegPad` + `leerpadLink`. Onze **USP** (echte uitleg waarom — examenblad.nl heeft dit niet).
+  2. **📄 Inzien als PDF** = `ExamensPage` PDF-archief. Niet weggemoffeld omdat: handig voor zelfstudie/papier, ouders die meekijken, examen met correctievoorschrift.
+  - StudentHome heeft 2 aparte balken. `ExamensPage` toont beide secties; `initialMode` bepaalt scroll-target. Werk dat een mode WEGZET = afkeuren.
+
 - **Maand-1 snoei**: gebeurt — welkomstvideo terug, leerkracht naar footer, 3-tab bottom-nav, 3D-kubus weg uit hero, dual balken op StudentHome.
 - **Maand-2 plan**: 1 vak Cito compleet met uitlegPad — uitgegroeid tot 27 paden × 575 vragen voorzien (taal + rekenen + wereld + examens). Zie `docs/MAAND-2-PLAN.md`.
 - **A12 Web Push**: code gebouwd, wacht op Mark's 6 setup-stappen (VAPID-keys, Vercel env, Supabase secrets, migration, edge function deploy, cron) — zie `project_studiebol_a12_webpush_todo` in memory.

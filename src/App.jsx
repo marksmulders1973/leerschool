@@ -203,6 +203,7 @@ export default function App() {
   // oefenen" op een vak-tegel). Pijler-id zoals "rekenen"/"taal".
   const [citoToetsSubject, setCitoToetsSubject] = useState(null);
   const [citoToetsSubjectLabel, setCitoToetsSubjectLabel] = useState(null);
+  const [examenInitialMode, setExamenInitialMode] = useState("leren");
   // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
   // Voor 'Mee bezig'-pagina: welke categorie heeft de leerling gekozen.
@@ -1197,7 +1198,12 @@ export default function App() {
             setCitoToetsSubjectLabel(label);
             setPage("cito-leerpad-toets");
           }}
-          onExamens={() => setPage("examens")}
+          onExamens={(mode) => {
+            // Twee modi (Mark feedback 2026-05-11): "leren" = examen-leerpaden,
+            // "pdf" = inzien. ExamensPage toont beide secties; mode bepaalt scroll-target.
+            setExamenInitialMode(mode === "pdf" ? "pdf" : "leren");
+            setPage("examens");
+          }}
         />
       )}
       {page === "self-study" && (
@@ -1229,6 +1235,13 @@ export default function App() {
           onBack={() => setPage("student-home")}
           onHome={goHome}
           onPlayExamen={startExamenQuiz}
+          initialMode={examenInitialMode}
+          onPickPath={(pathId) => {
+            setActiveLearnPathId(pathId);
+            setActiveLearnStepIdx(null);
+            setLearnPathReturnPage("examens");
+            setPage("learn-path");
+          }}
         />
       )}
       {page === "cito-leerpad-toets" && (

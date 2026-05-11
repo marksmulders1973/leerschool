@@ -583,9 +583,46 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
           </button>
         )}
+        {/* Twee examen-balken (Mark feedback 2026-05-11):
+            (1) USP — interactief oefenen mét uitleg waarom (examen-leerpaden).
+            (2) Bibliotheek — hele PDF-examens inzien (overal beschikbaar, maar
+                in onze app netjes geordend + correctievoorschrift erbij).
+            Beide modi zijn gelijkwaardig sterk, niet één boven de ander. */}
         {onExamens && (
           <button
-            onClick={() => { SoundEngine.play("click"); onExamens(); }}
+            onClick={() => { SoundEngine.play("click"); onExamens("leren"); }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              width: "100%",
+              padding: "12px 14px",
+              marginBottom: 10,
+              background: "linear-gradient(135deg, rgba(255,213,79,0.18), rgba(255,107,53,0.08))",
+              border: "1.5px solid rgba(255,213,79,0.55)",
+              borderRadius: 12,
+              cursor: "pointer",
+              color: "var(--color-text-strong)",
+              textAlign: "left",
+              fontFamily: "var(--font-body)",
+              minHeight: 44,
+            }}
+          >
+            <span style={{ fontSize: 22 }} aria-hidden="true">🎯</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffd54f" }}>
+                Examen-vragen oefenen
+              </div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
+                Echte vragen + uitleg waarom het juiste antwoord klopt
+              </div>
+            </div>
+            <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
+          </button>
+        )}
+        {onExamens && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onExamens("pdf"); }}
             style={{
               display: "flex",
               alignItems: "center",
@@ -603,13 +640,13 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               minHeight: 44,
             }}
           >
-            <span style={{ fontSize: 22 }} aria-hidden="true">🎓</span>
+            <span style={{ fontSize: 22 }} aria-hidden="true">📄</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa" }}>
-                Examen oefenen
+                Oude examens inzien (PDF)
               </div>
               <div style={{ fontSize: 11, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>
-                Echte VMBO/HAVO-examens — PDF en speelbaar
+                Hele eindexamens + correctievoorschrift — handig op papier
               </div>
             </div>
             <span style={{ fontSize: 16, color: "rgba(167,139,250,0.75)" }} aria-hidden="true">›</span>
