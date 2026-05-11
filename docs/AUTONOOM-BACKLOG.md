@@ -103,7 +103,7 @@ VMBO-wiskunde (na Cito-content):
 - [x] `differentieren.js` — 21 checks (2026-05-11, commit 66d89fa)
 
 Talen (lager prio):
-- [ ] `passeComposeFrans.js`
+- [x] `passeComposeFrans.js` — 22 checks (2026-05-11, commit 8ee78a0)
 - [ ] `pastTensesEngels.js`
 - [ ] `naamvallenDuits.js`
 - [ ] `werkwoordsvervoeging.js`
