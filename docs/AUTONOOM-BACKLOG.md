@@ -72,6 +72,7 @@ Check eerst met `Grep` welke paden geen `uitlegPad:` hebben. Pak Cito-relevante 
 - [ ] `pincodeGeldSparenLenen.js`
 - [x] `pincodeInkomenWelvaart.js` — 42 checks (7 stappen) — commit 7f1c16c (2026-05-11)
 - [x] `pincodeOndernemen.js` — 54 checks (9 stappen) — commit 9fd18e8 (2026-05-11)
+- [x] `pincodeOverheid.js` — 42 checks (7 stappen) — commit 8a8f16c (2026-05-11)
 - [ ] `nederlandseStaatMaatschappijleer.js` — geschiedenis-koppeling
 - [ ] `topografieNederland.js` — aardrijkskunde Cito-relevant
 - [ ] `tijdvakkenGeschiedenis.js` — VMBO, hoort bij examen
@@ -171,6 +172,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 — Prerequisites op 6 Cito-PO-paden (ICP groep 6-8): tabellen-grafieken, redactiesommen, procenten-po, verhoudingen-po, breuken-po, geld-rekenen. 16/90 paden voorzien. PO-fundering zelf blijft zonder prereqs. Commit 735cc82.
 - 2026-05-11 — **pincodeInkomenWelvaart VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): schaarste/behoeften, productiefactoren, inkomenstypen, verdeling/Gini, welvaart/inflatie/koopkracht, BBP/HDI, inkomensbeleid. Was #1 op lijst examen-referenced paden zonder uitlegPad (7 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit 7f1c16c.
 - 2026-05-11 — **pincodeOndernemen VOLLEDIG voorzien van uitlegPad** (54 checks, 9 stappen): ondernemen-types, marktonderzoek/SWOT, doelgroep+4P's, omzet/kosten/winst+BEP, vraag-aanbod, 4 marktvormen, rechtsvormen, BTW+facturen, risico/faillissement. Was #2 op audit-lijst (7 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit 9fd18e8.
+- 2026-05-11 — **pincodeOverheid VOLLEDIG voorzien van uitlegPad** (42 checks, 7 stappen): overheidstaken/collectief goed/extern effect, overheidslagen+jeugdzorg, Rijksbegroting/Prinsjesdag, staatsschuld/EMU/obligatie, conjunctuur/recessie/depressie, marktordening/ACM/kartel, politiek systeem/Tweede Kamer/coalitie. Was #3 op audit-lijst (4 examen-refs). Audit nu ✓ uitlegPad ✓ prereq. Commit 8a8f16c.
 
 ## Peer-review log
 
