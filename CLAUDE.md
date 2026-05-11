@@ -182,6 +182,7 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - **Geen AI-poster-art bij Doorstroomtoets-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
 - **Naming Cito vs Doorstroomtoets**: in copy/UI gebruik "Doorstroomtoets" (schoolrealiteit sinds 2024). Filenames + zoek-keywords blijven "cito" voor SEO. Zie `feedback_doorstroomtoets_naming` in memory.
 - **Doorstroomtoets-logo**: overal waar "Doorstroomtoets" in user-facing UI staat (knoppen/tegels/headers), gebruik `<DoorstroomtoetsLogo size={N} />` uit `src/components/DoorstroomtoetsLogo.jsx` in plaats van het 🎯-emoji. Geldt ook voor toekomstige leerkracht-features waarbij een leerkracht zelf een Doorstroomtoets samenstelt. PNG ligt in `public/logo-doorstroomtoets.png`. Zie `reference_doorstroomtoets_logo` in memory.
+- **examenBron-banner prominent**: bij elke check met `examenBron`-veld moet het label visueel sterk opvallen — gele/gouden banner, vergroot, met "Officiële examen-vraag"-tag en link naar `examenblad.nl`. Geïmplementeerd in `src/features/learn/LearnPath.jsx` (~line 746). Toekomstige examen-componenten (`ExamenLeerpadToets`, examen-modus UI) hanteren hetzelfde format. Reden: authentieke examenvragen zijn een USP van Leerkwartier — moet zichtbaar in UI, niet onopvallend. Zie `feedback_examen_bron_prominent` in memory.
 - **1 primary per scherm** (design-system).
 - **Game ↔ leer strikt scheiden** in design-system.
 

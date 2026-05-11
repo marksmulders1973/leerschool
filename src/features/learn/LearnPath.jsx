@@ -745,18 +745,46 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </div>
             {currentCheck.examenBron && (
               <div style={{
-                display: "inline-block",
-                padding: "4px 10px",
-                marginBottom: 10,
-                background: "rgba(255,213,79,0.15)",
-                border: "1px solid rgba(255,213,79,0.45)",
-                borderRadius: 999,
-                fontSize: 11,
-                fontWeight: 700,
-                color: "#ffd54f",
+                display: "block",
+                padding: "14px 16px",
+                marginBottom: 14,
+                background: "linear-gradient(135deg, rgba(255,213,79,0.30), rgba(255,193,7,0.18))",
+                border: "2px solid rgba(255,213,79,0.65)",
+                borderRadius: 12,
                 fontFamily: "var(--font-body)",
+                color: "#ffe082",
+                boxShadow: "0 2px 12px rgba(255,213,79,0.18)",
               }}>
-                {currentCheck.examenBron}
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span aria-hidden="true" style={{ fontSize: 28, lineHeight: 1 }}>🎓</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{
+                      fontSize: 11,
+                      fontWeight: 800,
+                      letterSpacing: 1.2,
+                      textTransform: "uppercase",
+                      opacity: 0.9,
+                      color: "#fff8c2",
+                    }}>
+                      Officiële examen-vraag
+                    </div>
+                    <div style={{ fontSize: 15, fontWeight: 800, marginTop: 3, lineHeight: 1.3 }}>
+                      {currentCheck.examenBron.replace(/^🎓\s*Echt examen\s*/i, "").replace(/^🎓\s*/, "")}
+                    </div>
+                  </div>
+                </div>
+                <div style={{ fontSize: 11.5, marginTop: 8, opacity: 0.85, lineHeight: 1.5 }}>
+                  Letterlijk overgenomen uit het Cito-examenboekje. Gratis te downloaden bij{" "}
+                  <a
+                    href="https://www.examenblad.nl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#ffd54f", textDecoration: "underline", fontWeight: 700 }}
+                  >
+                    examenblad.nl
+                  </a>
+                  .
+                </div>
               </div>
             )}
             {currentCheck.bronTekst && (
