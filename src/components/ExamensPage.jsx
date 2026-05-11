@@ -64,6 +64,28 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
     return () => clearTimeout(t);
   }, [initialMode]);
 
+  // Mark feedback 2026-05-11: vakken in beide secties standaard INGEKLAPT
+  // tonen, klik op vak-header klapt uit. Compact overzicht bij meerdere vakken.
+  // Twee aparte sets: één per sectie (leren / PDF) zodat ze onafhankelijk
+  // open/dicht kunnen staan.
+  const [openLerenVakken, setOpenLerenVakken] = useState(() => new Set());
+  const [openPdfVakken, setOpenPdfVakken] = useState(() => new Set());
+
+  const toggleLerenVak = (vak) => {
+    setOpenLerenVakken((prev) => {
+      const next = new Set(prev);
+      if (next.has(vak)) next.delete(vak); else next.add(vak);
+      return next;
+    });
+  };
+  const togglePdfVak = (vak) => {
+    setOpenPdfVakken((prev) => {
+      const next = new Set(prev);
+      if (next.has(vak)) next.delete(vak); else next.add(vak);
+      return next;
+    });
+  };
+
   const niveaus = useMemo(() => {
     const set = new Set(EXAMENS.map((e) => e.niveau));
     return ["alle", ...Array.from(set)];
@@ -119,20 +141,35 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
           )}
           {Object.entries(examenPathsBySubject).map(([vak, lijst]) => {
             const vakInfo = VAK_LABELS[vak] || { label: vak, icon: "📄", color: C.warm };
+            const isOpen = openLerenVakken.has(vak);
             return (
-              <div key={vak} style={{ marginBottom: 18 }}>
-                <div style={{
-                  display: "flex", alignItems: "center", gap: 10, marginBottom: 8,
-                  paddingBottom: 4, borderBottom: `1px solid ${C.border}`,
-                }}>
+              <div key={vak} style={{ marginBottom: 12 }}>
+                <button
+                  onClick={() => toggleLerenVak(vak)}
+                  aria-expanded={isOpen}
+                  style={{
+                    display: "flex", alignItems: "center", gap: 10, width: "100%",
+                    padding: "10px 12px", marginBottom: isOpen ? 8 : 0,
+                    background: isOpen ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.02)",
+                    border: `1px solid ${C.border}`,
+                    borderRadius: 10,
+                    cursor: "pointer", color: C.text, fontFamily: "var(--font-body)",
+                    textAlign: "left", minHeight: 44,
+                    transition: "background 0.15s",
+                  }}
+                  onMouseOver={(ev) => { ev.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+                  onMouseOut={(ev) => { ev.currentTarget.style.background = isOpen ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.02)"; }}
+                >
                   <span style={{ fontSize: 20 }} aria-hidden="true">{vakInfo.icon}</span>
-                  <h4 style={{
-                    fontFamily: "var(--font-display)", fontSize: 16, color: vakInfo.color, margin: 0,
-                  }}>{vakInfo.label}</h4>
+                  <span style={{
+                    fontFamily: "var(--font-display)", fontSize: 16, color: vakInfo.color, fontWeight: 700,
+                  }}>{vakInfo.label}</span>
                   <span style={{ marginLeft: "auto", fontSize: 11, color: C.muted }}>
                     {lijst.length} {lijst.length === 1 ? "pad" : "paden"}
                   </span>
-                </div>
+                  <span style={{ fontSize: 14, color: C.muted, transition: "transform 0.15s", display: "inline-block", transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }} aria-hidden="true">›</span>
+                </button>
+                {isOpen && (
                 <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
                   {lijst.map((p) => {
                     const aantalVragen = (p.steps || []).reduce((s, st) => s + (st.checks?.length || 0), 0);
@@ -172,6 +209,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                     );
                   })}
                 </div>
+                )}
               </div>
             );
           })}
@@ -245,30 +283,35 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
 
             {Object.entries(grouped).map(([vak, lijst]) => {
               const vakInfo = VAK_LABELS[vak] || { label: vak, icon: "📄", color: C.warm };
+              const isOpen = openPdfVakken.has(vak);
               return (
-                <div key={vak} style={{ marginBottom: 22 }}>
-                  <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10,
-                    marginBottom: 10,
-                    paddingBottom: 6,
-                    borderBottom: `1px solid ${C.border}`,
-                  }}>
-                    <span style={{ fontSize: 22 }} aria-hidden="true">{vakInfo.icon}</span>
-                    <h3 style={{
-                      fontFamily: "var(--font-display)",
-                      fontSize: 18,
-                      color: vakInfo.color,
-                      margin: 0,
-                    }}>
-                      {vakInfo.label}
-                    </h3>
-                    <span style={{ marginLeft: "auto", fontSize: 12, color: C.muted }}>
+                <div key={vak} style={{ marginBottom: 12 }}>
+                  <button
+                    onClick={() => togglePdfVak(vak)}
+                    aria-expanded={isOpen}
+                    style={{
+                      display: "flex", alignItems: "center", gap: 10, width: "100%",
+                      padding: "10px 12px", marginBottom: isOpen ? 8 : 0,
+                      background: isOpen ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.02)",
+                      border: `1px solid ${C.border}`,
+                      borderRadius: 10,
+                      cursor: "pointer", color: C.text, fontFamily: "var(--font-body)",
+                      textAlign: "left", minHeight: 44,
+                      transition: "background 0.15s",
+                    }}
+                    onMouseOver={(ev) => { ev.currentTarget.style.background = "rgba(255,255,255,0.06)"; }}
+                    onMouseOut={(ev) => { ev.currentTarget.style.background = isOpen ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.02)"; }}
+                  >
+                    <span style={{ fontSize: 20 }} aria-hidden="true">{vakInfo.icon}</span>
+                    <span style={{
+                      fontFamily: "var(--font-display)", fontSize: 16, color: vakInfo.color, fontWeight: 700,
+                    }}>{vakInfo.label}</span>
+                    <span style={{ marginLeft: "auto", fontSize: 11, color: C.muted }}>
                       {lijst.length} examen{lijst.length === 1 ? "" : "s"}
                     </span>
-                  </div>
-
+                    <span style={{ fontSize: 14, color: C.muted, transition: "transform 0.15s", display: "inline-block", transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }} aria-hidden="true">›</span>
+                  </button>
+                  {isOpen && (
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {lijst.map((e) => {
                       const opgaveUrl = getExamenUrl(e);
@@ -369,6 +412,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                       );
                     })}
                   </div>
+                  )}
                 </div>
               );
             })}
