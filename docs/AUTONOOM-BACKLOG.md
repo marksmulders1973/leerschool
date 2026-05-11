@@ -105,7 +105,7 @@ VMBO-wiskunde (na Cito-content):
 Talen (lager prio):
 - [x] `passeComposeFrans.js` — 22 checks (2026-05-11, commit 8ee78a0)
 - [x] `pastTensesEngels.js` — 23 checks (2026-05-11, commit d08cbb1)
-- [ ] `naamvallenDuits.js`
+- [x] `naamvallenDuits.js` — 20 checks (2026-05-11, commit 79c30db)
 - [ ] `werkwoordsvervoeging.js`
 - [ ] `onregelmatigeWerkwoordenEngels.js`
 - [ ] `onregelmatigeWerkwoordenV2Engels.js`
