@@ -6,6 +6,7 @@ import { loadDueTopics } from "../features/mastery/mastery.js";
 import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
 import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -571,7 +572,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               minHeight: 44,
             }}
           >
-            <span style={{ fontSize: 22 }} aria-hidden="true">🎯</span>
+            <DoorstroomtoetsLogo size={26} />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ffd54f" }}>
                 Doorstroomtoets oefenen

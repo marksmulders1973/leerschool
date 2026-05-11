@@ -3,6 +3,7 @@ import { Presentation } from "lucide-react";
 import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
@@ -836,7 +837,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ),
               label: "Ik ben leerling", sub: "basisschool · groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
-              cta: { label: "🎯 Doorstroomtoets oefenen", onClick: () => handleFeatureClick("cito") },
+              cta: {
+                label: (
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                    <DoorstroomtoetsLogo size={18} /> Doorstroomtoets oefenen
+                  </span>
+                ),
+                onClick: () => handleFeatureClick("cito"),
+              },
             },
             // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
             // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
