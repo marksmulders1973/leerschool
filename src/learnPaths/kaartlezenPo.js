@@ -201,17 +201,17 @@ const steps = [
     explanation: "**Legenda** = uitleg van de **symbolen en kleuren** op de kaart.\n\n**Standaard-symbolen**:\n• **Blauwe lijn** = rivier of beek\n• **Blauwe vlek** = meer of zee\n• **Rode lijn** = hoofdweg / snelweg\n• **Zwarte lijn** = spoorlijn (vaak met streepjes)\n• **Stippeltjes** = wandelpad of fietspad\n• **Driehoekje** = berg of camping\n• **Vierkantje** = gebouw of station\n• **Cirkel** = stad (groter = grotere stad)\n• **Boom-tekentje** = bos\n• **Kerk-tekentje** = kerk\n• **Vliegtuig** = vliegveld\n• **Anker** = haven\n\n**Op atlas-kaarten** (politieke):\n• **Lijn met stippen** = landgrens.\n• **Dubbele lijn** = provincie-grens.\n• **Ster** = hoofdstad.\n• **Punt** = gewone stad.\n\n**Cito-vraag-typen**:\n• 'Wat betekent dit symbool?' → kijk in legenda.\n• 'Hoeveel campings staan er op de kaart?' → tel driehoekjes.\n• 'Welke kaart-symbool staat voor X?' → matchen.\n\n**Cito-tip**:\nLegenda staat meestal in een **hoek** of langs de **rand** van de kaart. Als je een symbool niet herkent, **eerst legenda checken**, niet gokken.\n\n**Voorbeeld-vraag**:\n*'Op de kaart staat 5 keer een kerk-tekentje. Hoeveel kerken staan er in dit gebied?'*\n→ 5 (gewoon tellen).",
     checks: [
       {
-        q: "Symbool **driehoekje met streepje** betekent vaak:",
-        options: ["camping","kerk","station","brug"],
+        q: "Welke vorm hoort meestal bij het kaart-symbool voor een **camping**?",
+        options: ["Een driehoekje (tent-vorm)","Een kruisje","Een rechthoek","Een anker"],
         answer: 0,
-        wrongHints: [null,"Heeft kruis-symbool.","Heeft station-rechthoek.","Heeft een ander symbool."],
+        wrongHints: [null,"Kruisje hoort bij kerk.","Rechthoek hoort bij station/gebouw.","Anker hoort bij haven."],
         uitlegPad: {
-          stappen: [{ titel: "Driehoek = tent", tekst: "Driehoekje lijkt op tent → camping." }],
+          stappen: [{ titel: "Driehoek = tent", tekst: "Op een kaart wordt een camping aangeduid met een driehoekje — het lijkt op een tent. Symbool en betekenis komen overeen met de vorm van het ding zelf." }],
           woorden: [{ woord: "kaart-symbool", uitleg: "Tekentje voor punt op de kaart (camping, kerk, station)." }],
-          theorie: "Standaard: driehoekje (tent-vorm) = camping. Kerk = kruisje. Station = rechthoek.",
-          voorbeelden: [{ type: "tabel", tekst: "🏕️ camping = driehoek. ⛪ kerk = kruis. 🚉 station = rechthoek." }],
+          theorie: "Standaard: driehoekje (tent-vorm) = camping. Kerk = kruisje. Station/gebouw = rechthoek. Anker = haven.",
+          voorbeelden: [{ type: "tabel", tekst: "🏕️ camping = driehoek. ⛪ kerk = kruis. 🚉 station = rechthoek. ⚓ haven = anker." }],
           basiskennis: [{ onderwerp: "Visuele logica", uitleg: "Symbolen zijn vereenvoudigde tekening van het ding." }],
-          niveaus: { basis: "Camping. A.", simpeler: "Driehoek = tent-vorm = camping. Kerk heeft kruis, station een rechthoek. = A.", nogSimpeler: "Camping = A." },
+          niveaus: { basis: "Driehoekje. A.", simpeler: "Camping = driehoekje (tent-vorm). Kruisje is kerk, rechthoek is station. = A.", nogSimpeler: "Driehoekje = A." },
         },
       },
       {

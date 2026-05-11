@@ -419,8 +419,8 @@ const steps = [
         },
       },
       {
-        q: "**4500 mm** in **m**?",
-        options: ["4,5","45","450","0,45"],
+        q: "Reken **4500 mm** om naar **meter**. Hoeveel m is dat?",
+        options: ["4,5 m","45 m","450 m","0,45 m"],
         answer: 0,
         wrongHints: [null,"Te veel — heb je maar 2 plekken verschoven? mm → m is 3 stappen.","Veel te veel — heb je überhaupt verschoven?","Te weinig — heb je 4 stappen verschoven?"],
         uitlegPad: {
