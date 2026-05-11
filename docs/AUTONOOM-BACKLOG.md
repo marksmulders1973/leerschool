@@ -167,6 +167,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 — Playwright-testronde Maand-1 testchecklist (8 items, 6 PASS / 1 FAIL / 1 PARTIAL) + 4 follow-up fixes: ticker game/HoF-jargon weg (HomePage.jsx), /leaderboard alias toegevoegd (routes.js), CSP wss://*.supabase.co toegestaan (vercel.json), subscriptions/profiles `.single → .maybeSingle` (useAuth.js) tegen 406. Commit a543377.
 - 2026-05-11 — voorkennisKeten Fase 1 DATA-laag VOLLEDIG: alle 9 examen-paden voorzien (Economie T1-T2 2023-2025 + Engels 2024-T1 + Engels 2025-T1 + Geschiedenis 2025-T1). 61 examen-checks × 3 voorkennis-stappen. Audit: 0 broken loops, 0 ontbrekende voorkennisKeten. Patroon: woordenschat-po + begrijpend-lezen-strategie + specifiek vakpad. Eindcommit 83762e1.
 - 2026-05-11 — Prerequisites op top-10 examen-referenced paden (woordenschat-engels 17×, pincode-* 9-3×, tijdvakken/wo2-geschiedenis 3×). Patroon: NL-basis (woordenschat-po) + skill (procenten/begrijpend-lezen/kaartlezen) + soms een mid-level pincode-pad. Commit b0a2221. Fase 1 praktisch compleet — UI-fase 2 wacht op Mark's go (zie CLAUDE.md hard-stop).
+- 2026-05-11 — Prerequisites op 6 Cito-PO-paden (ICP groep 6-8): tabellen-grafieken, redactiesommen, procenten-po, verhoudingen-po, breuken-po, geld-rekenen. 16/90 paden voorzien. PO-fundering zelf blijft zonder prereqs. Commit 735cc82.
 
 ## Peer-review log
 
