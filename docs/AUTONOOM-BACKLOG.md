@@ -107,7 +107,7 @@ Talen (lager prio):
 - [x] `pastTensesEngels.js` — 23 checks (2026-05-11, commit d08cbb1)
 - [x] `naamvallenDuits.js` — 20 checks (2026-05-11, commit 79c30db)
 - [x] `werkwoordsvervoeging.js` — 30 checks (2026-05-11, commit 78ca142)
-- [ ] `onregelmatigeWerkwoordenEngels.js`
+- [x] `onregelmatigeWerkwoordenEngels.js` — 28 checks (2026-05-11, commit d4f7103)
 - [ ] `onregelmatigeWerkwoordenV2Engels.js`
 - [ ] `argumentatieleer.js`
 - [ ] `tekstanalyse.js`
