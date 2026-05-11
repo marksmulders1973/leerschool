@@ -86,7 +86,7 @@ VMBO-wiskunde (na Cito-content):
 - [ ] `parabolen.js` (32 stappen, doe in meerdere sessies)
 - [x] `kwadratischeVergelijkingen.js` — 15 checks (2026-05-11, commit 5a0dca6)
 - [x] `kwadratenWortels.js` — 20 checks (2026-05-11, commit 2957d51)
-- [ ] `lineaireFormules.js`
+- [x] `lineaireFormules.js` — 21 checks (2026-05-11, commit b00bbef)
 - [x] `coordinatenstelsel.js` — 18 checks (2026-05-11, commit 2e7aa67)
 - [ ] `vergelijkingenOplossen.js`
 - [ ] `verhoudingen.js` (VMBO-versie)
