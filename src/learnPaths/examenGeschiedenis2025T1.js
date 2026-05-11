@@ -37,6 +37,11 @@ const steps = [
         explanation: "Passief kiesrecht = het recht om gekozen te WORDEN (kandidaat zijn). Vrouwen kregen dit in NL al in 1917 — vóór het actief kiesrecht (mogen stemmen) in 1919. Daardoor kon Suze in 1918 gekozen worden, terwijl vrouwen nog niet zelf konden stemmen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 11",
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'kiesrecht', 'actief', 'passief', 'censuskiesrecht'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "verschil 'mogen stemmen' (actief) vs 'gekozen worden' (passief) uit de vraagtekst halen" },
+          { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "kiesrecht-uitbreiding NL: 1917 passief vrouwen, 1919 actief vrouwen — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Gekozen worden = passief", tekst: "Suze werd gekozen → kandidaat → passief kiesrecht. Actief = zelf stemmen." }],
           woorden: [{ woord: "actief kiesrecht", uitleg: "Recht om zelf te stemmen." }, { woord: "passief kiesrecht", uitleg: "Recht om gekozen te worden (=kandidaat zijn)." }],
@@ -73,6 +78,11 @@ const steps = [
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 15",
         bronTekst: bron5,
         leerpadLink: { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'appeasement', 'machtsuitbreiding', 'laf', 'democratische leiders'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "cartoon-symboliek lezen: wie staat waarop, wat betekent dat — koppel aan opties" },
+          { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "interbellum + opkomst Hitler + appeasement-beleid UK/FR — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Cartoon = appeasement-kritiek", tekst: "Stapel laffe leiders + Hitler bovenop = leiders verzetten zich NIET tegen Hitler's groei. → optie C." }],
           woorden: [{ woord: "appeasement", uitleg: "Beleid: Hitler tegemoetkomen om oorlog te vermijden." }, { woord: "machtsuitbreiding", uitleg: "Gebied/macht groter maken." }],
@@ -108,6 +118,11 @@ const steps = [
         explanation: "Chamberlain (UK) en Daladier (FR) gaven Hitler het Sudetenland (deel Tsjechoslowakije) om een nieuwe wereldoorlog te voorkomen. Dit was de top van het APPEASEMENT-beleid: 'peace for our time'. Een jaar later begon Hitler WO2 alsnog — bewijs dat appeasement niet werkte.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 16",
         leerpadLink: { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'Conferentie van München', 'appeasement', 'Lebensraum', 'Volkenbond', 'Versailles'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "vraag scant op MOTIEF Chamberlain — eliminatie van anti-appeasement-opties" },
+          { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "voorgeschiedenis WO2: München 1938 + Sudetenland + 'peace for our time' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "München = oorlog voorkomen", tekst: "Chamberlain wilde geen NIEUWE WO1. Akkoord = Sudetenland aan Hitler om vrede te kopen. → C." }],
           woorden: [{ woord: "Conferentie van München", uitleg: "1938 akkoord: UK+FR+Italie+Duitsland over Sudetenland." }, { woord: "appeasement", uitleg: "Tegemoet komen om vrede te bewaren." }],
@@ -143,6 +158,11 @@ const steps = [
         explanation: "Onder Stalin won de Sovjet-Unie WO2 tegen nazi-Duitsland (op een hoge prijs van ~27 miljoen Russische doden). Dat 'overwinningsverhaal' werd in de Sovjet-Unie eindeloos herhaald — daardoor bleef Stalin's reputatie hoog ondanks zijn miljoenen slachtoffers in de Goelag.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 35",
         leerpadLink: { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'Stalin', 'Goelag', 'collectivisatie', 'wapenwedloop', 'bewind'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "vraag scant op REDEN voor waardering — ondanks slachtoffers; eliminatie van foute claims" },
+          { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "Sovjet-Unie in WO2 + Stalingrad + Stalin als 'redder van het moederland' — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Stalin = WO2-winnaar", tekst: "Sovjets versloegen Hitler (Stalingrad, Berlijn 1945). Dat 'overwinning' bleef Stalin's reputatie. → D." }],
           woorden: [{ woord: "Stalingrad", uitleg: "Beslissende slag (1942-1943). Sovjet-overwinning keerde WO2." }],
@@ -178,6 +198,11 @@ const steps = [
         explanation: "EGKS (Europese Gemeenschap voor Kolen en Staal, 1951) was de directe uitwerking van het Schuman-plan. Door kolen + staal (oorlogs-grondstoffen) onder gezamenlijk toezicht te zetten, werd nieuwe oorlog tussen FR en DE bemoeilijkt. EGKS was de KIEM van de huidige EU.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 34",
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "afkortingen: EGKS, EEG, NAVO, VN — waar staan ze voor en waarvoor dienden ze" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "Schuman = FR + kolen/staal — koppel deze 2 kerntermen direct aan de juiste organisatie" },
+          { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "tijdvak naoorlogs: Europese samenwerking 1951 EGKS → 1957 EEG → 1993 EU — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "Schuman = EGKS", tekst: "Schuman-plan (1950) → EGKS (1951). Franse plan voor Europese kolen+staal samenwerking. → B." }],
           woorden: [{ woord: "EGKS", uitleg: "Europese Gemeenschap voor Kolen en Staal (1951). Voorloper EU." }],
@@ -213,6 +238,11 @@ const steps = [
         explanation: "Cubacrisis (oktober 1962): de Sovjet-Unie plaatste kernraketten op Cuba (vlak bij VS-grens). President Kennedy zette een marine-blokkade in. 13 dagen lang stond de wereld op rand kernoorlog. Pas na onderhandelingen trokken USSR (Cuba-raketten weg) + VS (Turkije-raketten weg) zich terug.",
         examenBron: "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 39",
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'Cubacrisis', 'Berlijnse Muur', 'Praagse Lente', 'DDR', 'kernoorlog'" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "jaartal 1962 + kernoorlog-bijzin → koppel direct aan juiste gebeurtenis (datum-truc)" },
+          { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "Koude Oorlog tijdlijn: 1949 DDR/NAVO, 1961 Muur, 1962 Cubacrisis, 1968 Praag — kern van deze examenvraag" },
+        ],
         uitlegPad: {
           stappen: [{ titel: "1962 + kernoorlog = Cubacrisis", tekst: "Sleuteljaar 1962 + kernoorlog-risico → Cubacrisis. → B." }],
           woorden: [{ woord: "Cubacrisis", uitleg: "Oktober 1962. Sovjet-kernraketten op Cuba → 13 dagen op rand kernoorlog." }],
