@@ -96,7 +96,7 @@ VMBO-wiskunde (na Cito-content):
 - [ ] `kansrekening.js`
 - [x] `statistiek.js` — 14 checks (2026-05-11, commit 4f7d795)
 - [x] `stelsels.js` — 20 checks (2026-05-11, commit 3a3acb0)
-- [ ] `machten.js`
+- [x] `machten.js` — 24 checks (2026-05-11, commit f0bb4d2)
 - [ ] `exponentieel.js`
 - [ ] `goniometrie.js`
 - [ ] `logaritmen.js`
