@@ -124,7 +124,7 @@ Beta-vakken:
 - [x] `voortplantingHormonenBiologie.js` — 28 checks (2026-05-11, commit 0f1456d)
 - [x] `elektriciteitNatuurkunde.js` — 26 checks (2026-05-11, commit 6402d15)
 - [x] `krachtenNatuurkunde.js` — 22 checks (2026-05-11, commit f17c8d7)
-- [ ] `sterrenPlaneten.js`
+- [x] `sterrenPlaneten.js` — 29 checks (2026-05-11, commit 36dbe40)
 - [ ] `balansBeco.js` (economie VMBO)
 - [ ] `vraagAanbodEconomie.js`
 
