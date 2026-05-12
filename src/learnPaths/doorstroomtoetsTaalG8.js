@@ -194,6 +194,38 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te specifiek — niet de hoofdgedachte.", "Klopt maar niet de hoofdgedachte over honden.", "Te algemeen — niet specifiek over honden."],
       },
+      {
+        q: "*Tekst: 'In de Sahara valt **bijna nooit** regen. Toch leven er kamelen.'* Welke **signaalwoord** geeft een **tegenstelling**?",
+        options: ["Toch", "In", "Er", "Leven"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'toch' wijst op 'maar/echter'.", "Plaats, niet tegenstelling.", "Verwijst naar Sahara.", "Werkwoord."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Signaalwoorden", tekst: "Tegenstelling-woorden geven aan dat er iets verrassends komt: **maar / toch / hoewel / echter / desondanks**." },
+          ],
+          woorden: [{ woord: "signaalwoord", uitleg: "Woord dat een verband aangeeft in een tekst (oorzaak, gevolg, tegenstelling, opsomming)." }],
+          theorie: "Cito-vraag-type: signaalwoorden herkennen helpt verbanden te zien in de tekst. 'Toch' = tegenstelling.",
+          voorbeelden: [{ type: "stap", tekst: "Soorten: oorzaak/gevolg (omdat, daardoor), tegenstelling (maar, toch), opsomming (en, ook)." }],
+          basiskennis: [{ onderwerp: "Verbanden", uitleg: "Snel signaalwoorden vinden = snel verbanden begrijpen = sneller Cito-tekst-vragen oplossen." }],
+          niveaus: {
+            basis: "Toch. A.",
+            simpeler: "'Toch' betekent 'maar' — geeft een tegenstelling aan. In de Sahara valt geen regen, MAAR (toch) leven er kamelen. = A.",
+            nogSimpeler: "Toch = tegenstelling = A.",
+          },
+        },
+      },
+      {
+        q: "*Tekst: 'Tom oefende elke dag 1 uur. **Daarom** won hij de wedstrijd.'* Wat geeft **'daarom'** aan?",
+        options: ["Gevolg / reden", "Tegenstelling", "Opsomming", "Plek"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gevolg-signaalwoord.", "Geen tegenstelling.", "Niet opsommend.", "Niet plaats."],
+      },
+      {
+        q: "*'De auteur wil je **vooral overtuigen**'* — wat is dan de **bedoeling** van de tekst?",
+        options: ["Overhalen om iets te doen of denken", "Informeren met feiten", "Amuseren met grappen", "Beschrijven hoe iets is"],
+        answer: 0,
+        wrongHints: [null, "Klopt — overtuigen = mening laten delen.", "Informeren is doel #2 maar niet 'overtuigen'.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
+      },
     ],
   },
 
