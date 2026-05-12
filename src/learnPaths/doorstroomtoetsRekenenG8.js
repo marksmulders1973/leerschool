@@ -310,6 +310,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 20/100 × 30 = 6.", "Net te weinig.", "Dat zou 33% zijn.", "Dat is 50%."],
       },
+      {
+        q: "Een schoen van **€60 wordt verhoogd met 10%**. Nieuwe prijs?",
+        options: ["€66", "€70", "€54", "€600"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 10% van €60 = €6. €60 + €6 = €66.", "Te veel.", "Dat zou korting zijn.", "Veel te veel — komma vergeten?"],
+      },
+      {
+        q: "Verhouding **rood : blauw = 2:3**. 15 blauwe knikkers — hoeveel rode?",
+        options: ["10", "5", "15", "6"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 15÷3 = 5 per deel, 2 delen rood = 10.", "Dat is 1 deel.", "Dezelfde aantal als blauw — niet.", "Verkeerd berekend."],
+      },
+      {
+        q: "**Wat is 50% van 1/2**?",
+        options: ["1/4", "1/2", "1", "0"],
+        answer: 0,
+        wrongHints: [null, "Klopt — helft van een helft = kwart.", "Niet halveert.", "Dat is dubbel.", "Niet nul."],
+      },
     ],
   },
 
