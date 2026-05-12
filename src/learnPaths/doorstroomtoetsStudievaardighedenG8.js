@@ -146,6 +146,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — noord-oost.", "ZO.", "NW.", "ZW."],
       },
+      {
+        q: "Schaal **1:10.000** is **groter of kleiner** dan 1:100.000?",
+        options: ["Groter (kleiner getal = meer detail)", "Kleiner", "Gelijk", "Niet te vergelijken"],
+        answer: 0,
+        wrongHints: [null, "Klopt — hoe kleiner schaalgetal, hoe meer detail.", "Niet — 1:10.000 = stadsplattegrond met meer detail.", "Niet gelijk.", "Wel vergelijkbaar."],
+      },
+      {
+        q: "Op kaart: **groene vlek** betekent meestal?",
+        options: ["Bos / park", "Stad", "Water", "Berg"],
+        answer: 0,
+        wrongHints: [null, "Klopt — groen = vegetatie.", "Stad = grijs/oranje.", "Water = blauw.", "Berg = bruin."],
+      },
+      {
+        q: "Welk kaart-element vertelt **hoe lang 1 cm in echt** is?",
+        options: ["Schaal-balk", "Legenda", "Kompas", "Titel"],
+        answer: 0,
+        wrongHints: [null, "Klopt — schaalbalk geeft schaal visueel weer.", "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
+      },
     ],
   },
 
