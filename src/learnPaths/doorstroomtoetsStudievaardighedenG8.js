@@ -781,6 +781,24 @@ const steps = [
         options: ["Afrika", "Azië", "Europa", "Amerika"],
         answer: 0,
         wrongHints: [null, "Klopt — Noord-Afrika.", "Wel grens-buur via Sinaï maar Egypte = Afrika.", "Te ver.", "Te ver."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Egypte op kaart", tekst: "Egypte ligt in het **noordoosten van Afrika**, met de Nijl-rivier en de Middellandse Zee als noordgrens." },
+            { titel: "Sinaï-misverstand", tekst: "Het kleine Sinaï-schiereiland van Egypte raakt geografisch aan Azië, maar Egypte als land wordt tot **Afrika** gerekend." },
+          ],
+          woorden: [
+            { woord: "werelddeel", uitleg: "Een van de 7 grote continenten: Afrika/Azië/Europa/Noord-Amerika/Zuid-Amerika/Oceanië/Antarctica." },
+            { woord: "Sinaï", uitleg: "Schiereiland van Egypte dat oostelijk van het Suezkanaal ligt — geografisch Azië." },
+          ],
+          theorie: "Cito-aardrijkskunde-truc: lees vraag goed. 'In welk werelddeel ligt land X?' = primair werelddeel.",
+          voorbeelden: [{ type: "stap", tekst: "Turkije: deels Azië, deels Europa, primair Azië. Rusland: deels Europa, deels Azië, vaak beide genoemd." }],
+          basiskennis: [{ onderwerp: "Buurlanden Egypte", uitleg: "Egypte grenst aan: Libië (W), Sudan (Z), Israël (NO). Plus Middellandse Zee + Rode Zee." }],
+          niveaus: {
+            basis: "Afrika. A.",
+            simpeler: "Egypte ligt in Noord-Afrika met de Nijl. = A.",
+            nogSimpeler: "Afrika = A.",
+          },
+        },
       },
       {
         q: "Schaal **1:75.000**. Op kaart **4 cm**. In het echt (in km)?",

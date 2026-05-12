@@ -230,6 +230,21 @@ const steps = [
         options: ["Dapper, niet bang", "Bang", "Snel", "Sterk"],
         answer: 0,
         wrongHints: [null, "Klopt — gerelateerd aan 'moed' (durven).", "Tegenovergesteld.", "Andere eigenschap.", "Wel een kwaliteit maar niet primair 'moedig'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stam 'moed'", tekst: "Moedig komt van 'moed' = durven, niet bang zijn. Iemand met moed durft iets gevaarlijks." },
+            { titel: "Context", tekst: "Soldaat redde 3 mensen → dat vraagt moed (gevaar trotseren)." },
+          ],
+          woorden: [{ woord: "moedig", uitleg: "Dapper, durft iets gevaarlijks, niet bang." }],
+          theorie: "Cito-strategie bij woord met '-ig' achtervoegsel: kijk naar de stam vóór '-ig'. Moed-ig = met moed. Speel-s = met speel.",
+          voorbeelden: [{ type: "stap", tekst: "Soortgelijke woorden: dapper, heldhaftig, onverschrokken — alle met-moed-doen." }],
+          basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Moedig ↔ bang/laf/vreesachtig." }],
+          niveaus: {
+            basis: "Dapper, niet bang. A.",
+            simpeler: "Moedig = met moed = durft = niet bang. = A.",
+            nogSimpeler: "Dapper = A.",
+          },
+        },
       },
       {
         q: "*'De koningin sprak **plechtig**.'* Wat betekent plechtig?",
