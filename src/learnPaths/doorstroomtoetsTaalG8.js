@@ -109,6 +109,38 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een toelichting is niet negatief.", "Een toelichting is geen activiteit.", "Een boek is geen toelichting (kan er wel één bevatten)."],
       },
+      {
+        q: "*'Zij was **onverstoorbaar** tijdens de toets.'* Wat betekent onverstoorbaar?",
+        options: ["Rustig en niet snel uit balans", "Boos", "Verdwaald", "Onhandig"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'on' + 'verstoren' = niet gestoord worden.", "Niet de juiste richting.", "Geen verband.", "Ander gevoel."],
+      },
+      {
+        q: "Welk woord is een **tegenstelling** van **'genereus'**?",
+        options: ["Gierig", "Vriendelijk", "Groot", "Snel"],
+        answer: 0,
+        wrongHints: [null, "Klopt — genereus = gul, gierig = juist niet.", "Lijkt op genereus.", "Niet over geven/karakter.", "Andere dimensie."],
+      },
+      {
+        q: "*'De situatie was uiterst **precair**.'* Wat betekent precair?",
+        options: ["Onzeker / gevaarlijk", "Saai", "Vrolijk", "Druk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — formeel woord voor wankel/riskant.", "Tegenovergesteld.", "Tegenovergesteld.", "Andere richting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Moeilijk woord", tekst: "'Precair' is een formeel woord. Komt uit het Latijn (precarius = afhankelijk van gunst). In NL: onzeker, riskant, gevaarlijk." },
+          ],
+          woorden: [{ woord: "precair", uitleg: "Onzeker, riskant, kwetsbaar — situatie die snel kan misgaan." }],
+          theorie: "Cito-tip: bij onbekend woord, kijk naar de context. 'Uiterst' geeft aan dat het sterk is — pakt geen 'saai' of 'vrolijk'.",
+          voorbeelden: [{ type: "stap", tekst: "'De zieke baby's gezondheid was precair' = ernstige zorg. Daarom 'onzeker/gevaarlijk' = A." }],
+          basiskennis: [{ onderwerp: "Context-hint", uitleg: "'Uiterst precair' = heel onzeker. 'Uiterst' versterkt = niet positief." }],
+          niveaus: {
+            basis: "Onzeker / gevaarlijk. A.",
+            simpeler: "Precair = riskant. Een precaire situatie = situatie waar snel iets mis kan gaan. = A.",
+            nogSimpeler: "Onzeker = A.",
+          },
+        },
+      },
     ],
   },
 
