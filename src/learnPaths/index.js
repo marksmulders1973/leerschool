@@ -175,6 +175,7 @@ import emotiesSocialePo from "./emotiesSocialePo.js";
 import koudeOorlogModernPo from "./koudeOorlogModernPo.js";
 import eetcultuurNederlandPo from "./eetcultuurNederlandPo.js";
 import kritischDenkenPo from "./kritischDenkenPo.js";
+import oudheidEgyptiansGriekenPo from "./oudheidEgyptiansGriekenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -245,6 +246,7 @@ export const ALL_LEARN_PATHS = {
   "koude-oorlog-modern-po": koudeOorlogModernPo,
   "eetcultuur-nederland-po": eetcultuurNederlandPo,
   "kritisch-denken-po": kritischDenkenPo,
+  "oudheid-egyptenaren-grieken-romeinen-po": oudheidEgyptiansGriekenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
