@@ -107,7 +107,7 @@ const steps = [
         q: "*'De docent gaf een **toelichting** bij de som.'* Wat is een toelichting?",
         options: ["Een uitleg", "Een straf", "Een spel", "Een boek"],
         answer: 0,
-        wrongHints: [null, "Een toelichting is niet negatief.", "Een toelichting is geen activiteit.", "Een boek kan toelichting bevatten, maar zelf is het een uitleg."],
+        wrongHints: [null, "Een toelichting is niet negatief.", "Een toelichting is geen activiteit.", "Een boek is geen toelichting (kan er wel één bevatten)."],
       },
     ],
   },
@@ -198,10 +198,10 @@ const steps = [
         },
       },
       {
-        q: "Welk woord is **fout gespeld**?",
-        options: ["paardenstaart  →  paarden staart", "fietsenstalling", "schooltas", "computerscherm"],
+        q: "Welke schrijfwijze is **fout**?",
+        options: ["paarden staart", "paardenstaart", "fietsenstalling", "computerscherm"],
         answer: 0,
-        wrongHints: [null, "Klopt — paardenstaart is 1 woord.", "Dit is wel goed gespeld.", "Dit is wel goed gespeld.", "Dit is wel goed gespeld."],
+        wrongHints: [null, "Klopt — moet aan elkaar: paardenstaart (1 woord).", "Dat is juist — paardenstaart is 1 samenstelling.", "Dit is goed gespeld (1 woord).", "Dit is goed gespeld (1 woord)."],
       },
       {
         q: "Wanneer schrijf je een **hoofdletter**?",

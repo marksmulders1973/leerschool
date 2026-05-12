@@ -119,7 +119,7 @@ const steps = [
   {
     title: "Spieren en bloed",
     explanation:
-      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Tong** — sterkste spier per gewicht.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 kamers: 2 boezems + 2 kamers.\n\n**Cito-vraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
+      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Kaakspier (masseter)** — de sterkste spier in verhouding tot zijn grootte.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 kamers: 2 boezems + 2 kamers.\n\n**Cito-vraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
     checks: [
       {
         q: "Hoeveel spieren heeft een mens ongeveer?",
@@ -140,10 +140,10 @@ const steps = [
         wrongHints: [null, "Klopt.", "Niet de hoofdtaak.", "Plasma doet dat.", "Wel iets — zuurstof."],
       },
       {
-        q: "Welke spier is **sterkste per gewicht**?",
-        options: ["Tong", "Biceps", "Hartspier", "Kuitspier"],
+        q: "Welke spier is de **sterkste in verhouding tot grootte**?",
+        options: ["Kaakspier (masseter)", "Biceps", "Hartspier", "Kuitspier"],
         answer: 0,
-        wrongHints: [null, "Klopt — verrassend!", "Sterk maar niet per gewicht sterkste.", "Sterk, maar tong wint per gewicht.", "Sterk maar niet sterkste."],
+        wrongHints: [null, "Klopt — kaakspier kan enorm hard bijten.", "Biceps is sterk maar niet recordhouder per gewicht.", "Hartspier werkt continu maar is anders ontworpen.", "Kuit is groot maar niet recordhouder."],
       },
     ],
   },

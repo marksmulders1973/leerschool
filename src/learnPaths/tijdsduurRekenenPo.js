@@ -187,7 +187,7 @@ const steps = [
         q: "**1 uur 40 min + 50 min** = ?",
         options: ["2 uur 30 min", "1 uur 90 min", "2 uur 20 min", "1 uur 50 min"],
         answer: 0,
-        wrongHints: [null, "Niet 90 min — netjes: 40 + 50 = 90 = 1 uur 30 min. Totaal 2 uur 30 min.", "Te weinig — controleer 40 + 50.", "Te weinig — 40 + 50 = 90, niet 50."],
+        wrongHints: [null, "Bij tijd schrijven we minuten ≥ 60 niet zo — denk: 90 min is hoeveel uur + hoeveel minuten?", "Te weinig — controleer hoeveel 40 + 50 minuten zijn.", "Te weinig — niet alleen 50 erbij, ook de 40 meetellen."],
       },
       {
         q: "Film begint **19:30** en duurt **1 uur 50 min**. **Eindtijd**?",
@@ -241,7 +241,7 @@ const steps = [
         q: "Vlucht vertrekt **10:40**, duurt **3 uur 25 min**. **Aankomst**?",
         options: ["14:05", "13:65", "13:05", "14:25"],
         answer: 0,
-        wrongHints: [null, "Niet :65 — netjes: 10:40 + 3u = 13:40. 13:40 + 25 = 14:05.", "Te weinig — heb je het laatste stukje vergeten?", "Te veel — controleer."],
+        wrongHints: [null, "Bij tijd bestaat geen :65 — over de 60 = uur erbij. Reken opnieuw vanaf 13:40.", "Te weinig — heb je het laatste stukje minuten vergeten?", "Te veel — controleer."],
       },
       {
         q: "Programma **20:30 → 22:15**. Tijdsduur?",

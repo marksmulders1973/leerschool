@@ -178,7 +178,7 @@ const steps = [
         wrongHints: [null, "Klopt.", "Komt later.", "Slachtoffer revolutie.", "Filosoof, niet politicus."],
       },
       {
-        q: "Hoeveel mensen werden ongeveer **geguillotineerd** tijdens Terreur (in Parijs)?",
+        q: "Hoeveel mensen werden ongeveer **geguillotineerd** tijdens de Terreur (in heel Frankrijk)?",
         options: ["~17.000", "~100", "~1 miljoen", "~500"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Veel meer.", "Te veel.", "Te weinig."],

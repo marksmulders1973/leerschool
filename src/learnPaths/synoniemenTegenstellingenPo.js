@@ -76,7 +76,7 @@ const steps = [
   {
     title: "Veel-gebruikte synoniemen-paren",
     explanation:
-      "Hier zijn **synoniem-paren** die je vaak op Cito ziet *(uit je hoofd!)*:\n\n**Gevoelens**:\n• blij = vrolijk / gelukkig\n• boos = kwaad / nijdig\n• bang = angstig / bezorgd\n• verdrietig = bedroefd\n• verbaasd = stomverbaasd / verrast\n\n**Grootte**:\n• groot = enorm / reusachtig\n• klein = miniscuul / piepklein\n• veel = talloos / massa's\n• weinig = schaars / beperkt\n\n**Snelheid**:\n• snel = vlug / gauw / rap\n• langzaam = traag / stilaan\n\n**Eigenschappen**:\n• mooi = prachtig / schitterend / oogverblindend\n• lelijk = onaantrekkelijk\n• slim = intelligent / pienter / knap (bij denken)\n• dom = stom / onnozel\n• gemeen = vals / hatelijk\n• aardig = vriendelijk / lief\n\n**Werkwoorden**:\n• zien = aanschouwen / opmerken\n• zeggen = vertellen / spreken\n• lopen = wandelen / gaan\n• rennen = sprinten / hollen\n• eten = nuttigen / opeten / verorberen\n• maken = creëren / vervaardigen\n\n**Plekken**:\n• huis = woning / verblijf\n• school = leerinstelling / onderwijsplek\n• tuin = perkje / hofje\n\n**Tijd**:\n• vandaag = heden\n• gisteren = de dag ervoor\n• morgen = de dag erna\n\n**Cito-truc** — kies de optie die het **dichtst** bij de oorspronkelijke betekenis ligt. Bij twijfel: probeer in een zin in te vullen.",
+      "Hier zijn **synoniem-paren** die je vaak op Cito ziet *(uit je hoofd!)*:\n\n**Gevoelens**:\n• blij = vrolijk / gelukkig\n• boos = kwaad / nijdig\n• bang = angstig\n• verdrietig = bedroefd\n• verbaasd = stomverbaasd / verrast\n\n**Grootte**:\n• groot = enorm / reusachtig\n• klein = minuscuul / piepklein\n• veel = talloos / massa's\n• weinig = schaars / beperkt\n\n**Snelheid**:\n• snel = vlug / gauw / rap\n• langzaam = traag / sloom\n\n**Eigenschappen**:\n• mooi = prachtig / schitterend / oogverblindend\n• lelijk = onaantrekkelijk\n• slim = intelligent / pienter / knap (bij denken)\n• dom = stom / onnozel\n• gemeen = vals / hatelijk\n• aardig = vriendelijk / lief\n\n**Werkwoorden**:\n• zien = aanschouwen / opmerken\n• zeggen = vertellen / spreken\n• lopen = wandelen / gaan\n• rennen = sprinten / hollen\n• eten = nuttigen / opeten / verorberen\n• maken = creëren / vervaardigen\n\n**Plekken**:\n• huis = woning / verblijf\n• school = leerinstelling / onderwijsplek\n• tuin = hof\n\n**Tijd**:\n• vandaag = heden\n• gisteren = de dag ervoor\n• morgen = de dag erna\n\n**Cito-truc** — kies de optie die het **dichtst** bij de oorspronkelijke betekenis ligt. Bij twijfel: probeer in een zin in te vullen.",
     checks: [
       {
         q: "Synoniem van **'snel'**?",
@@ -145,7 +145,7 @@ const steps = [
       },
       {
         q: "Welk paar zijn **tegenstellingen**?",
-        options: ["jong + oud", "klein + miniscuul", "blij + vrolijk", "snel + vlug"],
+        options: ["jong + oud", "klein + minuscuul", "blij + vrolijk", "snel + vlug"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Synoniemen.", "Synoniemen.", "Synoniemen."],
       },

@@ -276,7 +276,7 @@ const steps = [
         q: "In welke voedselketen klopt **alleen** *gras → konijn → vos*?",
         options: ["Gras → konijn → vos", "Vos → konijn → gras", "Gras → vos → konijn", "Konijn → vos → gras"],
         answer: 0,
-        wrongHints: [null, "Klopt — gras eet konijn, konijn eet vos? Nee — konijn eet gras, vos eet konijn.", "Verkeerde richting — vos eet konijn, niet konijn eet vos.", "Vos eet geen gras direct.", "Konijn eet geen vos."],
+        wrongHints: [null, "Klopt — konijn eet gras, vos eet konijn.", "Verkeerde richting — vos eet konijn, niet andersom.", "Vos eet geen gras direct.", "Konijn eet geen vos."],
       },
       {
         q: "**Welke is GEEN zoogdier**?",
