@@ -20,9 +20,9 @@
 - **30-sec autonomie-regel**: als Mark 30 seconden niet reageert op een vraag, doorgaan zonder hem tot tokens op zijn.
 - **Memory raadplegen voor openstaande taken**: niet alle taken staan in `docs/AUTONOOM-BACKLOG.md`. Sommige sessie-overstijgende projecten + strategische beslissingen staan in `memory/project_*.md`. Bij sessie-start of vage instructie ook memory-index scannen op `project_*` items + zoeken op "TODO/later/uitgesteld/C-taak/open" in memory-files. Behandel memory als TWEEDE backlog.
 
-## Autonome modus (actief t/m 2026-05-24)
+## Autonome modus (actief tot app gevuld — geen einddatum)
 
-Mark heeft Claude Code 2 weken **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken.
+Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken. Doel: app helemaal vullen met paden + vragen vóór fine-tuning. Mark wil **maximaal-lang autonoom werk per sessie**, zelfs als hij offline is — dus nooit pauzeren om input te vragen als er nog andere taken zijn die wél kunnen.
 
 ### Doel
 Cito-toets + examens versterken via **kennisgraaf** (zie "Kern-flow"). Concreet: optie-C-implementatie (data + UI) van voorkennis-keten. Daarnaast doorgaan met uitlegPad-werk.
@@ -71,17 +71,30 @@ Na elke afgewerkte taak voor je verder gaat:
 - **Niet wachten tussen paden** (Mark feedback 2026-05-11: "ik wil niet steeds 'ga verder' drukken"). Direct na commit + push van pad X → pak pad X+1 uit backlog. Geen tussentijdse uitgebreide samenvatting. Hooguit 1 regel "X klaar, door naar Y." Doorwerken tot tokens op of expliciete STOP/PAUZE van Mark.
 - **Korte tussenupdates**: een lange tabel of trots-bericht na elk pad → NEE. Mark scrollt het toch voorbij. Houd updates super-kort (1-2 zinnen max) en ga door.
 
-### Hard-stops (HIER WEL VRAGEN)
-Stop en vraag Mark expliciet bij:
-- **Examen-vragen verzinnen** — als de bron-PDF niet beschikbaar is, NIET zelf vragen verzinnen. Skip dat examen, ga door met volgend pad. Authentiek-eis is heilig.
-- **Architectuur-veranderingen** (nieuwe routes, nieuwe componenten in `src/components/`, schema-changes Supabase, nieuwe dependencies).
-- **Bestaande content overschrijven of verwijderen** — alleen toevoegen, nooit vervangen.
-- **Productie-afhankelijke acties** — Vercel env-vars, Supabase secrets, A12 setup, kosten-betalingen.
-- **STOPLIST-grijs gebied** — als iets twijfelachtig in een verboden categorie valt.
-- **Externe API-keys nodig** — geen calls naar Anthropic/Gemini buiten wat al draait.
+### Skip-and-continue (NIET vragen — pak ander werk)
+Bij elk van onderstaande gevallen: **log de blokker in backlog en pak het volgende item dat WEL kan**. Mark zit vaak niet achter de chat — wachten verspilt tijd.
+
+- **Examen-vragen verzinnen zonder bron** — skip dat examen, pak een ander pad uit Prio 1/3.
+- **Architectuur-veranderingen** (nieuwe routes, nieuwe componenten in `src/components/`, schema-changes Supabase, nieuwe dependencies) — log als "🟡 wacht op Mark" en pak content-werk dat wél binnen bestaande architectuur valt.
+- **Bestaande content overschrijven/verwijderen** — voeg toe ipv vervangen.
+- **Productie-afhankelijke acties** (Vercel env-vars, Supabase secrets, A12 setup, betalingen) — log + pak ander werk.
+- **STOPLIST-grijs gebied** — log + skip die feature.
+- **Externe API-keys nodig** — geen nieuwe calls, pak iets anders.
+
+### "Wat kan ik ALTIJD doen zonder Mark" — fallback-lijst
+Als alle Prio-1-tot-3 items uit backlog gedaan/geblokkeerd zijn, ga door met (volgorde = prioriteit):
+1. **Nieuwe Cito-paden bouwen** voor groep 6-8 onderwerpen die nog ontbreken (zie `project_studiebol_content_roadmap.md`).
+2. **Klas 1-3 onderbouw VO paden** (zie `project_continuum_klas_1_3_onderbouw.md`) — Mark's visie "doorlopend curriculum".
+3. **Extra vragen toevoegen** aan bestaande paden met <10 checks per stap.
+4. **uitlegPad uitbreiden** met meer voorbeelden in bestaande paden.
+5. **Audit-scripts draaien + bevindingen opvolgen**: `scripts/auditKennisgraaf.mjs`, `scripts/audit-units.mjs`, `scripts/lint-wronghints.mjs`. Fix wat eenvoudig is, log res in backlog.
+6. **Self-test rondes**: bestaande paden doorlopen, fouten oefenen, kijken of uitlegPad-flow klopt. Log verbeterpunten.
+7. **Memory-index doornemen** op `project_*` items met openstaande TODO's — pak iets op.
+
+Pas wanneer ALLE bovenstaande ook geblokkeerd zijn (zeer onwaarschijnlijk), schrijf 1 samenvatting in sessie-log + stop.
 
 ### Stop-conditie
-Mark stopt expliciet met **"STOP"** of **"PAUZE"**. Anders doorgaan tot tokens op.
+Mark stopt expliciet met **"STOP"** of **"PAUZE"**. Anders doorgaan tot tokens op. **Nooit zelf stoppen omdat een keuze "te groot" voelt** — pak iets kleiners en ga door.
 
 ### Peer-review checks (visueel + inhoudelijk)
 

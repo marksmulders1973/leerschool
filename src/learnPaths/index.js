@@ -103,6 +103,7 @@ import woordenschatEngels from "./woordenschatEngels.js";
 import nederlandseStaatMaatschappijleer from "./nederlandseStaatMaatschappijleer.js";
 import dierenSeizoenenNatuur from "./dierenSeizoenenNatuur.js";
 import sterrenPlaneten from "./sterrenPlaneten.js";
+import meetkundeBouwsels from "./meetkundeBouwsels.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -119,6 +120,7 @@ export const ALL_LEARN_PATHS = {
   "schatten-afronden": schattenAfronden,
   "redactiesommen-pad": redactiesommen,
   "vlakke-figuren-po": vlakkeFigurenPo,
+  "meetkunde-bouwsels": meetkundeBouwsels,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
