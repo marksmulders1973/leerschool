@@ -151,6 +151,7 @@ import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
 import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
 import politiekDemocratiePo from "./politiekDemocratiePo.js";
 import dichtenPoezieRijmenPo from "./dichtenPoezieRijmenPo.js";
+import godsdienstenCulturenPo from "./godsdienstenCulturenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -197,6 +198,7 @@ export const ALL_LEARN_PATHS = {
   "tijdvakken-nederland-po": tijdvakkenNederlandPo,
   "industriele-revolutie-po": industrieleRevolutiePo,
   "politiek-democratie-po": politiekDemocratiePo,
+  "godsdiensten-culturen-po": godsdienstenCulturenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
