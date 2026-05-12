@@ -134,6 +134,7 @@ import cseLeesvaardigheidEngels from "./cseLeesvaardigheidEngels.js";
 import stoffenMengselsScheikunde from "./stoffenMengselsScheikunde.js";
 import lichtGeluidNatuurkunde from "./lichtGeluidNatuurkunde.js";
 import mensenrechtenMaatschappijleer from "./mensenrechtenMaatschappijleer.js";
+import bewegingenSnelheidNatuurkunde from "./bewegingenSnelheidNatuurkunde.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -250,6 +251,7 @@ export const ALL_LEARN_PATHS = {
   "krachten-natuurkunde": krachtenNatuurkunde,
   "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
   "licht-geluid-natuurkunde": lichtGeluidNatuurkunde,
+  "bewegingen-snelheid-natuurkunde": bewegingenSnelheidNatuurkunde,
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
   "chemische-reacties-scheikunde": chemischeReactiesScheikunde,
