@@ -148,6 +148,7 @@ import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
 import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
 import energiebronnenPo from "./energiebronnenPo.js";
 import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
+import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -191,6 +192,7 @@ export const ALL_LEARN_PATHS = {
   "samenvatten-hoofdgedachte-po": samenvattenHoofdgedachtePo,
   "begrijpend-lezen-teksten-po": begrijpendLezenTekstenPo,
   "tijdvakken-nederland-po": tijdvakkenNederlandPo,
+  "industriele-revolutie-po": industrieleRevolutiePo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
