@@ -106,6 +106,7 @@ import sterrenPlaneten from "./sterrenPlaneten.js";
 import meetkundeBouwsels from "./meetkundeBouwsels.js";
 import grafiekenLezenPo from "./grafiekenLezenPo.js";
 import gemiddeldenStatistiekPo from "./gemiddeldenStatistiekPo.js";
+import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -192,6 +193,7 @@ export const ALL_LEARN_PATHS = {
   "topografie-nederland": topografieNederland,
   "cito-strategieen-groep8": citoStrategieenGroep8,
   "doorstroomtoets-rekenen-g8": doorstroomtoetsRekenenG8,
+  "doorstroomtoets-taal-g8": doorstroomtoetsTaalG8,
   "begrijpend-lezen-strategie": begrijpendLezenStrategie,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
