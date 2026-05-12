@@ -156,6 +156,7 @@ import bekendeWetenschappersPo from "./bekendeWetenschappersPo.js";
 import beroepenWerkPo from "./beroepenWerkPo.js";
 import verkeersregelsVeiligheidPo from "./verkeersregelsVeiligheidPo.js";
 import nederlandseKunstenaarsPo from "./nederlandseKunstenaarsPo.js";
+import olympischeSpelenPo from "./olympischeSpelenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -207,6 +208,7 @@ export const ALL_LEARN_PATHS = {
   "beroepen-werk-po": beroepenWerkPo,
   "verkeersregels-veiligheid-po": verkeersregelsVeiligheidPo,
   "nederlandse-kunstenaars-po": nederlandseKunstenaarsPo,
+  "olympische-spelen-po": olympischeSpelenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
