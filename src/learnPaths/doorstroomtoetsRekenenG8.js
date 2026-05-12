@@ -382,6 +382,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 80/100 × 50 = 40.", "Te weinig.", "Te weinig.", "Te veel."],
       },
+      {
+        q: "**150% van 20** is?",
+        options: ["30", "20", "15", "150"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 150/100 × 20 = 30 (groter dan 100%).", "Dat is 100%.", "Te weinig.", "Niet."],
+      },
+      {
+        q: "Verhouding **jongens:meisjes = 3:2**. Totaal 25 leerlingen. Aantal jongens?",
+        options: ["15", "10", "12", "5"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 25÷5 = 5/deel, jongens = 3×5 = 15.", "Dat is meisjes.", "Verkeerd.", "1 deel."],
+      },
+      {
+        q: "Een product was **€50, nu €30**. **% korting**?",
+        options: ["40%", "20%", "60%", "30%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €20 ÷ €50 = 40%.", "Te weinig.", "Te veel.", "Dat is wat je betaalt %."],
+      },
     ],
   },
 
