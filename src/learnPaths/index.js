@@ -138,6 +138,7 @@ import bewegingenSnelheidNatuurkunde from "./bewegingenSnelheidNatuurkunde.js";
 import werkwoordsvervoegingDuits from "./werkwoordsvervoegingDuits.js";
 import werkwoordsvervoegingFrans from "./werkwoordsvervoegingFrans.js";
 import cseLeesvaardigheidNederlands from "./cseLeesvaardigheidNederlands.js";
+import cseWiskundeStrategieVmbo from "./cseWiskundeStrategieVmbo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -215,6 +216,7 @@ export const ALL_LEARN_PATHS = {
   schrijfvaardigheid,
   tekstanalyse,
   "cse-leesvaardigheid-nederlands": cseLeesvaardigheidNederlands,
+  "cse-wiskunde-strategie-vmbo": cseWiskundeStrategieVmbo,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
