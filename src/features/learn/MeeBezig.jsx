@@ -4,6 +4,7 @@ import styles from "../../styles.js";
 import Header from "../../components/Header.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import Button from "../../shared/ui/Button.jsx";
+import DoorstroomtoetsLogo from "../../components/DoorstroomtoetsLogo.jsx";
 import { track } from "../../utils.js";
 
 // Pagina voor vakken die wél in 'Oefenen' bestaan, maar nog géén leerpaden hebben.
@@ -81,7 +82,12 @@ export default function MeeBezig({
   return (
     <div style={styles.page}>
       <Header
-        title={`${subjectIcon || "📚"} ${subjectLabel || subjectId}`}
+        title={subjectId === "cito" ? (
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+            <DoorstroomtoetsLogo size={28} />
+            {subjectLabel || subjectId}
+          </span>
+        ) : `${subjectIcon || "📚"} ${subjectLabel || subjectId}`}
         subtitle="Leren — komt eraan!"
         onBack={onBack}
         onHome={onHome}

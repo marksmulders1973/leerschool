@@ -3,6 +3,7 @@ import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, TEXTBOOKS, ALL_KNOWN_BOOKS, CHAPTER_TITLES, PARAGRAPH_TITLES, TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "../../constants.js";
 import { SoundEngine } from "../../utils.js";
 import Header from "../../components/Header.jsx";
+import DoorstroomtoetsLogo from "../../components/DoorstroomtoetsLogo.jsx";
 import { hasLearnPathsForCategory, countLearnPathsForCategory } from "../../learnPaths/subjectMapping.js";
 
 const schoolTypeMatchesBook = (bookName, schoolType) => {
@@ -477,7 +478,9 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                           padding: "10px 12px 6px",
                           color: "#1f2a44",
                         }}>
-                          <span style={{ fontSize: 22 }}>{cat.icon}</span>
+                          {cat.id === "cito"
+                            ? <DoorstroomtoetsLogo size={22} />
+                            : <span style={{ fontSize: 22 }}>{cat.icon}</span>}
                           <strong style={{ fontSize: 13, lineHeight: 1.2 }}>{cat.label}</strong>
                         </div>
                         <div style={{
