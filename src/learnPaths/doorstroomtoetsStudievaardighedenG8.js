@@ -289,6 +289,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
       },
+      {
+        q: "**Mediaan** van 5,7,7,8,10?",
+        options: ["7", "8", "5", "37"],
+        answer: 0,
+        wrongHints: [null, "Klopt — middelste na sorteren.", "Niet middelste.", "Laagste.", "Som."],
+      },
+      {
+        q: "Tabel: bedrag €10/€20/€30/€40/€50. **Som**?",
+        options: ["€150", "€100", "€50", "€30"],
+        answer: 0,
+        wrongHints: [null, "Klopt — alles optellen.", "Te weinig.", "Iets.", "Gemiddelde."],
+      },
+      {
+        q: "Cirkeldiagram heeft **3 secties van 33%**. Klopt dat?",
+        options: ["Bijna (99%)", "Ja precies", "Nee onmogelijk", "100%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — exact 33,33% nodig voor 100%.", "Niet exact.", "Wel mogelijk.", "Te weinig."],
+      },
     ],
   },
 
