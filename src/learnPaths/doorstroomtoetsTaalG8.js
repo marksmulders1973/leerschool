@@ -115,7 +115,21 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'tevreden'**?",
         options: ["Blij met de situatie", "Boos", "Verbaasd", "Bang"],
         answer: 0,
-        wrongHints: [null, "Boos is het tegenovergestelde.", "Verbaasd ≠ tevreden.", "Bang ≠ tevreden."],
+        wrongHints: [null, "Klopt — gevoel van rust + akkoord.", "Tegenovergesteld.", "Ander gevoel.", "Ander gevoel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 'tevreden'?", tekst: "Tevreden = blij met hoe iets gegaan is. Geen klacht. Voorbeeld: tevreden met je rapport." },
+          ],
+          woorden: [{ woord: "tevreden", uitleg: "Blij met situatie, geen klacht, akkoord." }],
+          theorie: "Bij synoniem-vraag: kijk welke optie hetzelfde gevoel/idee uitdrukt. Tevreden is positief = uitsluit negatieve woorden zoals boos/bang.",
+          voorbeelden: [{ type: "stap", tekst: "tevreden ↔ ontevreden. blij ↔ verdrietig. rustig ↔ druk." }],
+          basiskennis: [{ onderwerp: "Positief vs negatief", uitleg: "Sorteer eerst opties: welke zijn positief? Tevreden is positief, dus zoek positief synoniem." }],
+          niveaus: {
+            basis: "Blij met situatie. A.",
+            simpeler: "Tevreden = blij + akkoord. Optie A 'Blij met situatie' = juist. = A.",
+            nogSimpeler: "Blij = A.",
+          },
+        },
       },
       {
         q: "*'De docent gaf een **toelichting** bij de som.'* Wat is een toelichting?",

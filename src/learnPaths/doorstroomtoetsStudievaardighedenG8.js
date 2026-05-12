@@ -660,7 +660,22 @@ const steps = [
         q: "Schaal **1:25.000**. Op kaart **8 cm**. Werkelijkheid?",
         options: ["2 km", "200 m", "20 m", "200 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 8 × 25.000 = 200.000 cm = 2 km.", "Te weinig.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Klopt — 8 × 25.000 = 200.000 cm = 2 km.", "Te weinig — controleer cm→km omzetting.", "Veel te weinig.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vermenigvuldigen", tekst: "8 cm × 25.000 (schaalgetal) = 200.000 cm in werkelijkheid." },
+            { titel: "Omzetten naar km", tekst: "200.000 cm = 2.000 m = 2 km. (cm ÷ 100 = m, m ÷ 1000 = km)." },
+          ],
+          woorden: [{ woord: "1:25.000", uitleg: "Wandelkaart-schaal. 1 cm op kaart = 25.000 cm = 250 m in het echt." }],
+          theorie: "Cito-schaal-2-stappen: (1) afstand × schaalgetal = cm werkelijk. (2) cm → m → km.",
+          voorbeelden: [{ type: "stap", tekst: "1:25.000 = 1 cm = 250 m. 8 cm = 8 × 250 m = 2000 m = 2 km." }],
+          basiskennis: [{ onderwerp: "Onthoud", uitleg: "1:25.000 = wandelkaart. 1:50.000 = ANWB-kaart. 1:1.000.000 = atlas." }],
+          niveaus: {
+            basis: "2 km. A.",
+            simpeler: "8 cm × 25.000 = 200.000 cm. 200.000 cm = 2 km. = A.",
+            nogSimpeler: "2 km = A.",
+          },
+        },
       },
       {
         q: "Welk woord staat **eerder** in het woordenboek?",
