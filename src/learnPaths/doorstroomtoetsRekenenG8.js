@@ -263,6 +263,35 @@ const steps = [
           niveaus: { basis: "30 km/u (×2 want 30 min). A.", simpeler: "30 min = half uur. 15 km in half uur = 30 km in een heel uur. = A.", nogSimpeler: "30 = A." },
         },
       },
+      {
+        q: "Een jas kost €80. Met **25% korting** — wat betaal je?",
+        options: ["€60", "€55", "€20", "€105"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 25% van €80 = €20 korting. €80 − €20 = €60.", "Verkeerde aftrek.", "Dat is het kortingsbedrag, niet de eindprijs.", "Korting verlaagt prijs."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Korting berekenen", tekst: "25% van €80 = (25/100) × 80 = €20. Korting = €20." },
+            { titel: "Aftrekken", tekst: "Eindprijs = €80 − €20 = €60." },
+          ],
+          woorden: [{ woord: "korting", uitleg: "Bedrag dat van de prijs af gaat." }, { woord: "procent", uitleg: "Per honderd. 25% = 25 van de 100 = 1/4." }],
+          theorie: "Eindprijs = oude prijs × (1 − percentage/100). 80 × (1 − 0,25) = 80 × 0,75 = €60.",
+          voorbeelden: [{ type: "snelle-truc", tekst: "25% korting = ¾ overhouden. 80 × ¾ = 60." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "€60 < €80 (klopt: korting), en €60 > €40 (niet half af). ✓" }],
+          niveaus: { basis: "€60 (€80 − 25%). A.", simpeler: "25% van €80 = €20. €80 − €20 = €60. = A.", nogSimpeler: "€60 = A." },
+        },
+      },
+      {
+        q: "**40% van 200** is?",
+        options: ["80", "60", "100", "240"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 40/100 × 200 = 80.", "Te weinig.", "Dat is 50%.", "Niet — wel onder 200."],
+      },
+      {
+        q: "In een klas van 30: **20% is ziek**. Hoeveel kinderen?",
+        options: ["6", "5", "10", "15"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 20/100 × 30 = 6.", "Net te weinig.", "Dat zou 33% zijn.", "Dat is 50%."],
+      },
     ],
   },
 
