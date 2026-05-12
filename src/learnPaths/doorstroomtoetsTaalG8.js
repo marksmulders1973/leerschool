@@ -352,6 +352,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — skimmen voor structuur.", "Te traag.", "Niet zinvol.", "Wel — globaal."],
       },
+      {
+        q: "*Tekst: 'Veel kinderen sporten weinig. **Toch** is sporten heel gezond.'* Wat is de **conclusie** van de schrijver?",
+        options: ["Kinderen moeten meer sporten", "Sport is gezond, dus stop kinderen", "Kinderen mogen niet sporten", "Onbekend"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'toch sporten gezond' = boodschap.", "Tegenovergesteld.", "Niet.", "Wel te bepalen."],
+      },
+      {
+        q: "Wat is een **detail-vraag** bij Cito?",
+        options: ["'Wat staat er in alinea 2?'", "'Wat vind jij?'", "'Wat is de mening?'", "'Welk plaatje?'"],
+        answer: 0,
+        wrongHints: [null, "Klopt — specifieke info.", "Niet — eigen mening.", "Niet primair.", "Niet."],
+      },
+      {
+        q: "Hoeveel **leestips** voordat je vraag beantwoordt? Cito-strategie?",
+        options: ["Lees vraag → zoek terug in tekst", "Lees vraag → gok", "Lees alleen tekst", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Klopt — vraag eerst, dan zoeken.", "Niet — slim zoeken.", "Onefficiënt.", "Wel — strategie."],
+      },
     ],
   },
 
