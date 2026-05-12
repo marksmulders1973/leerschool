@@ -163,6 +163,7 @@ import waterkringloopPo from "./waterkringloopPo.js";
 import bekendeBoekenLiteratuurPo from "./bekendeBoekenLiteratuurPo.js";
 import pubertijdGroeiPo from "./pubertijdGroeiPo.js";
 import weersvoorspellingPo from "./weersvoorspellingPo.js";
+import digitaleGeletterdheidPo from "./digitaleGeletterdheidPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -221,6 +222,7 @@ export const ALL_LEARN_PATHS = {
   "bekende-boeken-literatuur-po": bekendeBoekenLiteratuurPo,
   "pubertijd-groei-po": pubertijdGroeiPo,
   "weersvoorspelling-po": weersvoorspellingPo,
+  "digitale-geletterdheid-po": digitaleGeletterdheidPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
