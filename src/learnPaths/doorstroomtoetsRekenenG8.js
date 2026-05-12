@@ -418,6 +418,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — €20 ÷ €50 = 40%.", "Te weinig.", "Te veel.", "Dat is wat je betaalt %."],
       },
+      {
+        q: "**10% van 350** is?",
+        options: ["35", "30", "40", "350"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 10% = ÷10.", "Niet zo.", "Niet zo.", "100%."],
+      },
+      {
+        q: "Verhouding **1:3** in **percentages**?",
+        options: ["25% : 75%", "33% : 67%", "10% : 90%", "50% : 50%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 op 4 totaal = 25%.", "Niet juist.", "Niet — 1:3.", "Niet."],
+      },
+      {
+        q: "BTW **21% op €100** prijs zonder BTW. Eindprijs?",
+        options: ["€121", "€79", "€100", "€21"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €100 + €21.", "Dat is min BTW.", "Zonder BTW.", "Alleen BTW-bedrag."],
+      },
     ],
   },
 
