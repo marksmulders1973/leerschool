@@ -547,6 +547,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 4 × 75.000 = 300.000 cm = 3 km.", "Te weinig — controleer cm→km.", "Te veel.", "Te weinig."],
       },
+      {
+        q: "Welk werelddeel: **Rusland**?",
+        options: ["Europa + Azië (beide)", "Alleen Azië", "Alleen Europa", "Amerika"],
+        answer: 0,
+        wrongHints: [null, "Klopt — grootste deel Azië, westelijk Europa.", "Niet alleen.", "Niet alleen.", "Niet."],
+      },
+      {
+        q: "Inhoudsopgave staat **voorin** of **achterin** boek?",
+        options: ["Voorin", "Achterin", "Midden", "Beide"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Index = achterin.", "Niet.", "Twee aparte dingen."],
+      },
+      {
+        q: "Schaal **1:500.000**. Op kaart **6 cm**. Werkelijk?",
+        options: ["30 km", "300 m", "3 km", "30 m"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 6 × 500.000 = 3 mln cm = 30 km.", "Veel te weinig.", "Te weinig.", "Veel te weinig."],
+      },
     ],
   },
 ];
