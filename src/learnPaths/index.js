@@ -117,6 +117,7 @@ import synoniemenTegenstellingenPo from "./synoniemenTegenstellingenPo.js";
 import waterErfgoedNederlandPo from "./waterErfgoedNederlandPo.js";
 import tafelsPo from "./tafelsPo.js";
 import delenPo from "./delenPo.js";
+import toestandStoffenPo from "./toestandStoffenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -146,6 +147,7 @@ export const ALL_LEARN_PATHS = {
   "water-erfgoed-nederland-po": waterErfgoedNederlandPo,
   "tafels-po": tafelsPo,
   "delen-po": delenPo,
+  "toestand-stoffen-po": toestandStoffenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
