@@ -152,6 +152,7 @@ import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
 import politiekDemocratiePo from "./politiekDemocratiePo.js";
 import dichtenPoezieRijmenPo from "./dichtenPoezieRijmenPo.js";
 import godsdienstenCulturenPo from "./godsdienstenCulturenPo.js";
+import bekendeWetenschappersPo from "./bekendeWetenschappersPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -199,6 +200,7 @@ export const ALL_LEARN_PATHS = {
   "industriele-revolutie-po": industrieleRevolutiePo,
   "politiek-democratie-po": politiekDemocratiePo,
   "godsdiensten-culturen-po": godsdienstenCulturenPo,
+  "bekende-wetenschappers-po": bekendeWetenschappersPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
