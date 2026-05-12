@@ -1,0 +1,464 @@
+// Leerpad: Grafieken lezen — staaf, lijn, cirkel — groep 6-8.
+// Cito-onderdeel verwerken van informatie. Referentieniveau 1F.
+// 6 stappen met uitlegPad en SVG-visualisaties.
+
+const COLORS = {
+  curve: "#00c853",
+  curve2: "#69f0ae",
+  bar: "#69f0ae",
+  bar2: "#80cbc4",
+  bar3: "#ffd54f",
+  bar4: "#ff8a65",
+  text: "#e0e6f0",
+  muted: "#8899aa",
+  paper: "rgba(255,255,255,0.04)",
+  grid: "rgba(255,255,255,0.10)",
+};
+
+const stepEmojis = ["📊", "📏", "📈", "🥧", "🔁", "🏆"];
+
+const chapters = [
+  { letter: "A", title: "Wat is een grafiek?", emoji: "📊", from: 0, to: 0 },
+  { letter: "B", title: "Staafdiagram", emoji: "📏", from: 1, to: 1 },
+  { letter: "C", title: "Lijngrafiek", emoji: "📈", from: 2, to: 2 },
+  { letter: "D", title: "Cirkeldiagram", emoji: "🥧", from: 3, to: 3 },
+  { letter: "E", title: "Tabel ↔ grafiek", emoji: "🔁", from: 4, to: 4 },
+  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+];
+
+function staafSvg(data, title) {
+  const w = 300, h = 200, padL = 40, padB = 30, padT = 30;
+  const max = Math.max(...data.map((d) => d.v));
+  const barW = (w - padL - 20) / data.length - 8;
+  let bars = "";
+  data.forEach((d, i) => {
+    const bh = ((h - padT - padB) * d.v) / max;
+    const x = padL + i * (barW + 8) + 4;
+    const y = h - padB - bh;
+    bars += `<rect x="${x}" y="${y}" width="${barW}" height="${bh}" fill="${d.c || COLORS.bar}" stroke="${COLORS.curve}" stroke-width="0.5"/>`;
+    bars += `<text x="${x + barW / 2}" y="${y - 4}" text-anchor="middle" fill="${COLORS.highlight || COLORS.curve2}" font-size="11" font-family="Arial" font-weight="bold">${d.v}</text>`;
+    bars += `<text x="${x + barW / 2}" y="${h - padB + 14}" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">${d.l}</text>`;
+  });
+  // y-axis labels
+  let yAx = "";
+  for (let i = 0; i <= 5; i++) {
+    const y = h - padB - ((h - padT - padB) * i) / 5;
+    const val = Math.round((max * i) / 5);
+    yAx += `<line x1="${padL}" y1="${y}" x2="${w - 10}" y2="${y}" stroke="${COLORS.grid}" stroke-width="0.5"/>`;
+    yAx += `<text x="${padL - 6}" y="${y + 4}" text-anchor="end" fill="${COLORS.muted}" font-size="10" font-family="Arial">${val}</text>`;
+  }
+  return `<svg viewBox="0 0 ${w} ${h}">
+<rect x="0" y="0" width="${w}" height="${h}" fill="${COLORS.paper}"/>
+<text x="${w / 2}" y="18" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">${title}</text>
+${yAx}
+${bars}
+<line x1="${padL}" y1="${h - padB}" x2="${w - 10}" y2="${h - padB}" stroke="${COLORS.curve}" stroke-width="1.2"/>
+<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${h - padB}" stroke="${COLORS.curve}" stroke-width="1.2"/>
+</svg>`;
+}
+
+function lijnSvg(points, title) {
+  const w = 300, h = 200, padL = 40, padB = 30, padT = 30;
+  const maxY = Math.max(...points.map((p) => p.y));
+  const pts = points
+    .map((p, i) => {
+      const x = padL + (i * (w - padL - 20)) / (points.length - 1);
+      const y = h - padB - ((h - padT - padB) * p.y) / maxY;
+      return `${x},${y}`;
+    })
+    .join(" ");
+  let dots = "";
+  let labels = "";
+  points.forEach((p, i) => {
+    const x = padL + (i * (w - padL - 20)) / (points.length - 1);
+    const y = h - padB - ((h - padT - padB) * p.y) / maxY;
+    dots += `<circle cx="${x}" cy="${y}" r="3.5" fill="${COLORS.bar3}" stroke="${COLORS.curve}" stroke-width="1"/>`;
+    dots += `<text x="${x}" y="${y - 8}" text-anchor="middle" fill="${COLORS.bar3}" font-size="11" font-family="Arial" font-weight="bold">${p.y}</text>`;
+    labels += `<text x="${x}" y="${h - padB + 14}" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">${p.x}</text>`;
+  });
+  let yAx = "";
+  for (let i = 0; i <= 5; i++) {
+    const y = h - padB - ((h - padT - padB) * i) / 5;
+    const val = Math.round((maxY * i) / 5);
+    yAx += `<line x1="${padL}" y1="${y}" x2="${w - 10}" y2="${y}" stroke="${COLORS.grid}" stroke-width="0.5"/>`;
+    yAx += `<text x="${padL - 6}" y="${y + 4}" text-anchor="end" fill="${COLORS.muted}" font-size="10" font-family="Arial">${val}</text>`;
+  }
+  return `<svg viewBox="0 0 ${w} ${h}">
+<rect x="0" y="0" width="${w}" height="${h}" fill="${COLORS.paper}"/>
+<text x="${w / 2}" y="18" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">${title}</text>
+${yAx}
+<polyline points="${pts}" fill="none" stroke="${COLORS.curve2}" stroke-width="2"/>
+${dots}
+${labels}
+<line x1="${padL}" y1="${h - padB}" x2="${w - 10}" y2="${h - padB}" stroke="${COLORS.curve}" stroke-width="1.2"/>
+<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${h - padB}" stroke="${COLORS.curve}" stroke-width="1.2"/>
+</svg>`;
+}
+
+function cirkelSvg(data, title) {
+  const cx = 150, cy = 120, r = 70;
+  let cur = -Math.PI / 2;
+  const total = data.reduce((s, d) => s + d.v, 0);
+  let slices = "";
+  let legend = "";
+  data.forEach((d, i) => {
+    const angle = (d.v / total) * Math.PI * 2;
+    const x1 = cx + r * Math.cos(cur);
+    const y1 = cy + r * Math.sin(cur);
+    const x2 = cx + r * Math.cos(cur + angle);
+    const y2 = cy + r * Math.sin(cur + angle);
+    const large = angle > Math.PI ? 1 : 0;
+    slices += `<path d="M${cx} ${cy} L${x1} ${y1} A${r} ${r} 0 ${large} 1 ${x2} ${y2} Z" fill="${d.c}" stroke="${COLORS.paper}" stroke-width="1.5"/>`;
+    // label binnen taart
+    const lx = cx + (r * 0.6) * Math.cos(cur + angle / 2);
+    const ly = cy + (r * 0.6) * Math.sin(cur + angle / 2);
+    const pct = Math.round((d.v / total) * 100);
+    if (pct >= 5) {
+      slices += `<text x="${lx}" y="${ly}" text-anchor="middle" fill="#0e1014" font-size="11" font-family="Arial" font-weight="bold">${pct}%</text>`;
+    }
+    legend += `<rect x="225" y="${50 + i * 22}" width="14" height="14" fill="${d.c}"/>`;
+    legend += `<text x="245" y="${62 + i * 22}" fill="${COLORS.text}" font-size="11" font-family="Arial">${d.l}</text>`;
+    cur += angle;
+  });
+  return `<svg viewBox="0 0 320 240">
+<rect x="0" y="0" width="320" height="240" fill="${COLORS.paper}"/>
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">${title}</text>
+${slices}
+${legend}
+</svg>`;
+}
+
+const steps = [
+  // STAP 1: Wat is een grafiek?
+  {
+    title: "Wat is een grafiek?",
+    explanation:
+      "Een **grafiek** is een **plaatje van getallen**. Het laat snel zien hoeveel iets is, of hoe iets verandert.\n\n**3 soorten die je vaak ziet bij Cito**:\n• **Staafdiagram** — balkjes die laten zien hoe veel ergens van is.\n• **Lijngrafiek** — een lijn die laat zien hoe iets verandert (bv. door de tijd).\n• **Cirkeldiagram** *(ook wel taartdiagram)* — taart-stukjes die laten zien welke groep hoe groot is.\n\n**Wat je altijd moet lezen voor je iets afleest**:\n1. **Titel** — waar gaat de grafiek over?\n2. **Eenheid** — gaat het over aantallen, procenten, euro's, graden?\n3. **Assen** — wat staat onderaan (x-as), wat staat aan de zijkant (y-as)?\n4. **Legenda** — als er meerdere kleuren zijn, wat betekent welke kleur?\n\n**Voorbeeld**: een grafiek heet *'Aantal kinderen per klas'*. De getallen op de zijkant gaan van 0 tot 30. Onderaan staan klas 1, 2, 3, 4. Dan weet je: het gaat om hoeveel kinderen per klas.",
+    svg: staafSvg(
+      [
+        { l: "klas 1", v: 25, c: COLORS.bar },
+        { l: "klas 2", v: 28, c: COLORS.bar2 },
+        { l: "klas 3", v: 22, c: COLORS.bar3 },
+        { l: "klas 4", v: 27, c: COLORS.bar4 },
+      ],
+      "Aantal kinderen per klas",
+    ),
+    checks: [
+      {
+        q: "Wat moet je **altijd eerst lezen** bij een grafiek?",
+        options: ["Titel + assen + eenheid", "Alleen het hoogste getal", "De kleuren", "Het laagste punt"],
+        answer: 0,
+        wrongHints: [null, "Te beperkt — je moet weten waar de grafiek over gaat.", "Kleuren zijn handig, maar context is belangrijker.", "Een punt geeft geen overzicht."],
+      },
+      {
+        q: "Welke grafiek toont **hoe iets verandert door de tijd**?",
+        options: ["Lijngrafiek", "Cirkeldiagram", "Staafdiagram", "Tabel"],
+        answer: 0,
+        wrongHints: [null, "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen, niet tijdsverloop. Lijn is beter voor 'door de tijd'.", "Tabel is getallen, geen plaatje van verandering."],
+      },
+      {
+        q: "Welke grafiek laat goed zien **welk deel van het totaal** iets is?",
+        options: ["Cirkeldiagram", "Lijngrafiek", "Staafdiagram", "Tijdlijn"],
+        answer: 0,
+        wrongHints: [null, "Lijn toont verandering, geen verdeling.", "Staaf kan ook, maar cirkel toont **deel-van-geheel** het duidelijkst.", "Tijdlijn is voor jaartallen, geen verdeling."],
+      },
+    ],
+  },
+
+  // STAP 2: Staafdiagram lezen
+  {
+    title: "Staafdiagram lezen",
+    explanation:
+      "Een **staafdiagram** heeft balken naast elkaar. Elke balk is een groep. De hoogte van de balk vertelt het aantal of de hoeveelheid.\n\n**Stappenplan**:\n1. Zoek de balk waar de vraag over gaat *(bv. 'maandag')*.\n2. Kijk hoe hoog die balk is.\n3. Lees het getal aan de y-as (de zijkant) af.\n4. Schrijf het op + eenheid *(bv. '12 kinderen', '€20', '30 °C')*.\n\n**Voorbeeld**: een staafdiagram van regen-millimeters per maand. De balk voor **maart** komt tot bij **40 mm**.\n→ Antwoord: in maart viel **40 mm regen**.\n\n**Verschil aflezen — 2 balken**:\n*'Hoeveel meer kinderen op donderdag dan op maandag?'*\n• Donderdag: 30 kinderen.\n• Maandag: 22 kinderen.\n• Verschil: 30 − 22 = **8 kinderen**.\n\n**Cito-truc**:\n• Bij vragen 'hoeveel meer' / 'hoeveel minder' → **aftrekken**.\n• Bij vragen 'in totaal' → **optellen**.\n• Bij 'hoeveel keer zo veel' → **delen**.",
+    svg: staafSvg(
+      [
+        { l: "ma", v: 22, c: COLORS.bar },
+        { l: "di", v: 18, c: COLORS.bar2 },
+        { l: "wo", v: 26, c: COLORS.bar3 },
+        { l: "do", v: 30, c: COLORS.bar4 },
+        { l: "vr", v: 24, c: COLORS.bar },
+      ],
+      "Aantal kinderen op overblijf",
+    ),
+    checks: [
+      {
+        q: "Staafdiagram regen-mm: jan 60, feb 50, mrt 40, apr 70. Hoeveel mm in **maart**?",
+        options: ["40 mm", "60 mm", "50 mm", "70 mm"],
+        answer: 0,
+        wrongHints: [null, "Dat is januari — kijk goed naar de maart-balk.", "Dat is februari.", "Dat is april."],
+      },
+      {
+        q: "Klas: ma 22, di 18, wo 26, do 30, vr 24 kinderen. **Hoeveel kinderen meer** op **donderdag** dan op **dinsdag**?",
+        options: ["12 kinderen", "6 kinderen", "8 kinderen", "48 kinderen"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — dat is do − wo. Pak do − di.", "Te weinig — dat is do − ma. Pak do − di.", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil = aftrekken", tekst: "Donderdag 30 kinderen − dinsdag 18 kinderen = 12 kinderen meer." },
+          ],
+          woorden: [{ woord: "verschil", uitleg: "Hoeveel meer of minder de ene balk is dan de andere." }],
+          theorie: "'Hoeveel meer' bij Cito = altijd aftrekken (groot − klein).",
+          voorbeelden: [{ type: "stap", tekst: "Donderdag = 30, dinsdag = 18. 30 − 18 = 12. Dus 12 kinderen meer." }],
+          basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft 'totaal'. Aftrekken geeft 'verschil'." }],
+          niveaus: {
+            basis: "30 − 18 = 12 kinderen. A.",
+            simpeler: "Vergelijk donderdag (30) met dinsdag (18). Verschil = 30 − 18 = 12. = A.",
+            nogSimpeler: "12 kinderen = A.",
+          },
+        },
+      },
+      {
+        q: "Zelfde klas. **Totaal aantal kinderen** in de hele week?",
+        options: ["120 kinderen", "100 kinderen", "30 kinderen", "150 kinderen"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Te veel — controleer optelling."],
+      },
+      {
+        q: "Zelfde klas. **Op welke dag** waren er **de meeste kinderen**?",
+        options: ["Donderdag", "Maandag", "Woensdag", "Vrijdag"],
+        answer: 0,
+        wrongHints: [null, "Dat is 22 — zoek het hoogste getal.", "Dat is 26 — hoger bestaat nog.", "Dat is 24 — hoger bestaat nog."],
+      },
+    ],
+  },
+
+  // STAP 3: Lijngrafiek lezen
+  {
+    title: "Lijngrafiek lezen",
+    explanation:
+      "Een **lijngrafiek** laat zien hoe iets verandert. Bijvoorbeeld: temperatuur over de dag, of het gewicht van een baby per maand.\n\n**Wat je leest**:\n• **x-as** (onderaan) = de tijd — uur, dag, week, jaar.\n• **y-as** (zijkant) = de waarde — temperatuur, aantal, prijs, gewicht.\n• **De lijn** verbindt de meetpunten.\n\n**Stijgen of dalen?**:\n• Lijn gaat **omhoog** → iets wordt **meer/hoger**.\n• Lijn gaat **omlaag** → iets wordt **minder/lager**.\n• Lijn blijft **gelijk** → er verandert **niets**.\n\n**Voorbeeld**: een grafiek van de temperatuur van 's morgens tot 's avonds.\n• Om 8 uur: 12 °C.\n• Om 14 uur: 22 °C.\n• Om 20 uur: 16 °C.\n→ Tussen 8 en 14 uur: lijn stijgt → het werd **warmer**.\n→ Tussen 14 en 20 uur: lijn daalt → het werd **kouder**.\n\n**Cito-truc — Wanneer was het meest / minst?**:\n• Zoek het **hoogste punt** = wanneer was het MEEST.\n• Zoek het **laagste punt** = wanneer was het MINST.\n• **Steilste stijging** = grootste toename.",
+    svg: lijnSvg(
+      [
+        { x: "08:00", y: 12 },
+        { x: "11:00", y: 18 },
+        { x: "14:00", y: 22 },
+        { x: "17:00", y: 20 },
+        { x: "20:00", y: 16 },
+      ],
+      "Temperatuur op een zomerdag (°C)",
+    ),
+    checks: [
+      {
+        q: "Temperatuur: 8u → 12°C, 14u → 22°C, 20u → 16°C. **Wanneer warmst**?",
+        options: ["14u", "8u", "20u", "11u"],
+        answer: 0,
+        wrongHints: [null, "Dat is het koudst, niet het warmst.", "Niet het warmst — kijk naar het hoogste punt.", "Niet gegeven in de vraag."],
+      },
+      {
+        q: "Zelfde grafiek. Hoeveel **graden warmer** om 14u dan om 8u?",
+        options: ["10 °C", "12 °C", "22 °C", "8 °C"],
+        answer: 0,
+        wrongHints: [null, "Te veel — dat is alleen 8u. Pak 22 − 12.", "Te veel — dat is alleen 14u. Pak verschil.", "Te weinig — controleer 22 − 12."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil = aftrekken", tekst: "14u = 22 °C. 8u = 12 °C. Verschil = 22 − 12 = 10 °C." },
+          ],
+          woorden: [{ woord: "°C", uitleg: "Graden Celsius — de eenheid voor temperatuur." }],
+          theorie: "Bij Cito-temperatuur-vragen: pak de 2 waardes en trek af.",
+          voorbeelden: [{ type: "stap", tekst: "22 °C − 12 °C = 10 °C warmer." }],
+          basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Schrijf °C bij het antwoord." }],
+          niveaus: {
+            basis: "22 − 12 = 10 °C. A.",
+            simpeler: "Om 14u is het 22 °C, om 8u is het 12 °C. 22 − 12 = 10 °C warmer. = A.",
+            nogSimpeler: "10 °C = A.",
+          },
+        },
+      },
+      {
+        q: "Een lijn die de hele dag **vlak** blijft betekent ... ?",
+        options: ["Er verandert niets", "Het wordt warmer", "Het wordt kouder", "De grafiek is fout"],
+        answer: 0,
+        wrongHints: [null, "Warmer = lijn omhoog. Vlak ≠ omhoog.", "Kouder = lijn omlaag. Vlak ≠ omlaag.", "Vlak is een normale uitkomst — 'geen verandering'."],
+      },
+      {
+        q: "Wat lees je af aan **de y-as** (zijkant)?",
+        options: ["De waarde / hoeveelheid", "De tijd / de dag", "De legenda", "De titel"],
+        answer: 0,
+        wrongHints: [null, "Tijd staat op de x-as (onderaan), niet de zijkant.", "Legenda is apart.", "Titel staat bovenaan."],
+      },
+    ],
+  },
+
+  // STAP 4: Cirkeldiagram lezen
+  {
+    title: "Cirkeldiagram (taartdiagram) lezen",
+    explanation:
+      "Een **cirkeldiagram** is een **taart**. De hele taart = **100%** = alles. Elk stuk is een groep en heeft een **percentage**.\n\n**Voorbeeld**: een klas van 20 leerlingen — hun favoriete sport.\n• Voetbal: 50% van de leerlingen = 10 leerlingen.\n• Hockey: 25% = 5 leerlingen.\n• Zwemmen: 15% = 3 leerlingen.\n• Anders: 10% = 2 leerlingen.\n\n**Cito-stappenplan**:\n1. Zoek het stuk dat de vraag bedoelt *(via kleur of label)*.\n2. Lees het **percentage** af *(of meet hoe groot het stuk is)*.\n3. **Reken om naar aantal** als nodig: percentage × totaal ÷ 100.\n\n**Slimme percentage-trucs voor 8-jarigen**:\n• 50% = de helft (÷ 2).\n• 25% = een kwart (÷ 4).\n• 10% = een tiende (÷ 10).\n• 75% = drie kwart.\n\n**Voorbeeld omrekenen**:\n*'Van 40 leerlingen kiest 25% voor zwemmen. Hoeveel zwemmers?'*\n• 25% = ¼.\n• ¼ van 40 = 40 ÷ 4 = **10 zwemmers**.\n\n**Check**: alle stukken van de taart **samen = 100%** altijd! Als de getallen niet kloppen, heb je iets gemist.",
+    svg: cirkelSvg(
+      [
+        { l: "Voetbal 50%", v: 50, c: "#69f0ae" },
+        { l: "Hockey 25%", v: 25, c: "#ffd54f" },
+        { l: "Zwemmen 15%", v: 15, c: "#80cbc4" },
+        { l: "Anders 10%", v: 10, c: "#ff8a65" },
+      ],
+      "Favoriete sport — 20 leerlingen",
+    ),
+    checks: [
+      {
+        q: "Taart: voetbal 50%, hockey 25%, zwemmen 15%, anders 10%. **Welke sport is grootst**?",
+        options: ["Voetbal", "Hockey", "Zwemmen", "Anders"],
+        answer: 0,
+        wrongHints: [null, "Hockey is 25%, voetbal is 50%. Welke is groter?", "Zwemmen is maar 15%.", "Anders is maar 10%."],
+      },
+      {
+        q: "Zelfde taart, klas van **20** kinderen. Hoeveel kiezen **voetbal**?",
+        options: ["10 kinderen", "50 kinderen", "5 kinderen", "20 kinderen"],
+        answer: 0,
+        wrongHints: [null, "Te veel — 50 kinderen kan niet in een klas van 20. 50% is de helft.", "Te weinig — dat is een kwart (25%), niet de helft.", "Te veel — dat is alle kinderen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "50% = de helft", tekst: "50% van 20 = 20 ÷ 2 = 10 kinderen." },
+          ],
+          woorden: [{ woord: "%", uitleg: "Per honderd. 50% = 50 per 100 = de helft." }],
+          theorie: "Procent × totaal ÷ 100. Of voor mooie getallen: 50% = ÷ 2, 25% = ÷ 4, 10% = ÷ 10.",
+          voorbeelden: [{ type: "stap", tekst: "50% van 20 kinderen = 10 kinderen voetbal." }],
+          basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij Cito: schrijf 'kinderen' of de juiste eenheid bij het getal." }],
+          niveaus: {
+            basis: "50% × 20 = 10 kinderen. A.",
+            simpeler: "50% is de helft. De helft van 20 = 10. Dus 10 kinderen kiezen voetbal. = A.",
+            nogSimpeler: "10 kinderen = A.",
+          },
+        },
+      },
+      {
+        q: "Zelfde taart, klas van **20**. Hoeveel kiezen **hockey** (25%)?",
+        options: ["5 kinderen", "10 kinderen", "25 kinderen", "4 kinderen"],
+        answer: 0,
+        wrongHints: [null, "Te veel — dat is voetbal (50%), niet hockey (25%).", "Te veel — 25 kinderen kan niet in klas van 20.", "Te weinig — 25% van 20 is iets meer dan dat."],
+      },
+      {
+        q: "**Tellen alle stukken** van een taartdiagram bij elkaar samen op tot ... ?",
+        options: ["100%", "50%", "1000%", "Het hangt af van de grafiek"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — alle stukken samen vormen de hele taart.", "Te veel — 100% = het maximum, alles wat er is.", "Niet juist — een hele taart is altijd 100%, ongeacht de grafiek."],
+      },
+    ],
+  },
+
+  // STAP 5: Tabel ↔ grafiek
+  {
+    title: "Van tabel naar grafiek (en terug)",
+    explanation:
+      "Een **tabel** is gewoon **getallen in rijen en kolommen**. Een grafiek is hetzelfde — maar dan als plaatje.\n\nVoorbeeld:\n\n| Dag | Aantal ijsjes verkocht |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\nIn een **staafdiagram** zou maandag een balk van 12 worden, vrijdag een balk van 30, etc.\n\n**Cito-vraag-type 1**: *'Welke dag is het laagst in de tabel?'*\n• Zoek het kleinste getal: 8 (dinsdag).\n\n**Cito-vraag-type 2**: *'Hoeveel ijsjes in de hele week?'*\n• Tel alle dagen op: 12 + 8 + 18 + 22 + 30 = **90 ijsjes**.\n\n**Cito-vraag-type 3**: *'Hoeveel meer op vrijdag dan op maandag?'*\n• Verschil: 30 − 12 = **18 ijsjes meer**.\n\n**Cito-tip — tabel vs grafiek**:\n• **Exact getal** = tabel makkelijker.\n• **Patroon zien** (stijgt het? daalt het?) = grafiek makkelijker.\n• Bij twijfel: maak even snel een staafje per dag op kladpapier.",
+    checks: [
+      {
+        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30 ijsjes. **Op welke dag minst** verkocht?",
+        options: ["Dinsdag", "Maandag", "Woensdag", "Vrijdag"],
+        answer: 0,
+        wrongHints: [null, "Maandag is 12 — dinsdag is lager.", "Woensdag is 18 — hoger dan dinsdag.", "Vrijdag is 30 — de meest, niet minst."],
+      },
+      {
+        q: "Zelfde tabel. **Totaal ijsjes** hele week?",
+        options: ["90 ijsjes", "70 ijsjes", "60 ijsjes", "100 ijsjes"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Te veel — controleer."],
+      },
+      {
+        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Hoeveel meer** op vr dan ma?",
+        options: ["18 ijsjes", "42 ijsjes", "12 ijsjes", "30 ijsjes"],
+        answer: 0,
+        wrongHints: [null, "Te veel — dat is opgeteld. 'Meer' = aftrekken.", "Te weinig — dat is maandag zelf.", "Te veel — dat is vrijdag zelf."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil = groot − klein", tekst: "Vrijdag (30 ijsjes) − maandag (12 ijsjes) = 18 ijsjes meer." },
+          ],
+          woorden: [{ woord: "verschil", uitleg: "Hoeveel meer/minder een waarde is dan een andere." }],
+          theorie: "'Hoeveel meer' = altijd aftrekken.",
+          voorbeelden: [{ type: "stap", tekst: "30 − 12 = 18. Dus 18 ijsjes meer op vrijdag." }],
+          basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft totaal. Aftrekken geeft verschil." }],
+          niveaus: {
+            basis: "30 − 12 = 18 ijsjes. A.",
+            simpeler: "Vrijdag = 30. Maandag = 12. Verschil = 30 − 12 = 18 ijsjes meer. = A.",
+            nogSimpeler: "18 ijsjes = A.",
+          },
+        },
+      },
+    ],
+  },
+
+  // STAP 6: Cito-mix
+  {
+    title: "Cito-eindopdracht — grafieken-mix",
+    explanation:
+      "Mix-toets in Cito-stijl. Verschillende grafiek-types door elkaar. **Lees altijd eerst**: titel, eenheid, x-as, y-as. Dan pas de vraag beantwoorden.\n\nVeel succes!",
+    checks: [
+      {
+        q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
+        options: ["230 mm", "180 mm", "210 mm", "190 mm"],
+        answer: 0,
+        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — controleer optelling.", "Te weinig — komma 1 verkeerd."],
+      },
+      {
+        q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. **Hoeveel kg aangekomen**?",
+        options: ["3 kg", "6 kg", "9 kg", "2 kg"],
+        answer: 0,
+        wrongHints: [null, "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — controleer 6 − 3."],
+      },
+      {
+        q: "Taart: rood 25%, blauw 50%, geel 25%. Klas van **40** kinderen — hoeveel **blauw**?",
+        options: ["20 kinderen", "50 kinderen", "10 kinderen", "40 kinderen"],
+        answer: 0,
+        wrongHints: [null, "Te veel — kan niet meer dan klas-totaal.", "Te weinig — 50% is de helft. Helft van 40 = ?", "Te veel — dat is alle kinderen."],
+      },
+      {
+        q: "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",
+        options: ["Vogel", "Hond", "Kat", "Vis"],
+        answer: 0,
+        wrongHints: [null, "Hond is 12 — kijk wie de minste heeft.", "Kat is 18 — dat is de meeste, niet de minste.", "Vis is 6 — vogel is met 4 nog minder."],
+      },
+      {
+        q: "Lijngrafiek temperatuur. Bij Cito staat een **stijgende** lijn. Wat betekent dat?",
+        options: ["Het wordt warmer", "Het wordt kouder", "Niets verandert", "De thermometer is stuk"],
+        answer: 0,
+        wrongHints: [null, "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Niet zonder reden te zeggen — neem aan dat de grafiek klopt."],
+      },
+      {
+        q: "Tabel verkoop koekjes ma-vr: 5, 7, 9, 11, 13. **Patroon**?",
+        options: ["Elke dag 2 meer", "Elke dag 3 meer", "Het neemt af", "Wisselt willekeurig"],
+        answer: 0,
+        wrongHints: [null, "Te veel — kijk: 5→7 is +2, 7→9 is +2, etc. Controleer.", "Het stijgt juist, niet daalt.", "Er zit een vast verschil — kijk goed."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil per stap", tekst: "Ma → di: 7 − 5 = 2. Di → wo: 9 − 7 = 2. Telkens +2." },
+          ],
+          woorden: [{ woord: "patroon", uitleg: "Een vaste regel waarop getallen elkaar opvolgen." }],
+          theorie: "Bij patroon-vragen altijd het verschil tussen 2 opeenvolgende getallen pakken.",
+          voorbeelden: [{ type: "stap", tekst: "5, 7, 9, 11, 13 — telkens +2." }],
+          basiskennis: [{ onderwerp: "Vast verschil", uitleg: "Als telkens hetzelfde getal erbij komt, is dat het patroon." }],
+          niveaus: {
+            basis: "Elke dag 2 meer. A.",
+            simpeler: "Verschil tussen elke 2 dagen = 2. Dus elke dag 2 koekjes meer. = A.",
+            nogSimpeler: "+2 per dag = A.",
+          },
+        },
+      },
+    ],
+  },
+];
+
+steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
+
+const grafiekenLezenPo = {
+  id: "grafieken-lezen-po",
+  title: "Grafieken lezen — staaf, lijn, taart (groep 6-8)",
+  emoji: "📊",
+  level: "groep6-8",
+  subject: "rekenen",
+  referentieNiveau: "1F",
+  sloThema: "Verwerken van informatie — tabellen en grafieken",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+  ],
+  intro:
+    "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Cito-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
+  triggerKeywords: [
+    "grafiek", "staaf", "lijn", "cirkel", "taart", "diagram",
+    "tabel", "aflezen", "verschil", "temperatuur",
+    "procent", "totaal", "patroon",
+  ],
+  chapters,
+  steps,
+};
+
+export default grafiekenLezenPo;

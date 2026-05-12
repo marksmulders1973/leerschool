@@ -104,6 +104,7 @@ import nederlandseStaatMaatschappijleer from "./nederlandseStaatMaatschappijleer
 import dierenSeizoenenNatuur from "./dierenSeizoenenNatuur.js";
 import sterrenPlaneten from "./sterrenPlaneten.js";
 import meetkundeBouwsels from "./meetkundeBouwsels.js";
+import grafiekenLezenPo from "./grafiekenLezenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -121,6 +122,7 @@ export const ALL_LEARN_PATHS = {
   "redactiesommen-pad": redactiesommen,
   "vlakke-figuren-po": vlakkeFigurenPo,
   "meetkunde-bouwsels": meetkundeBouwsels,
+  "grafieken-lezen-po": grafiekenLezenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
