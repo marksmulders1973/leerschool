@@ -159,6 +159,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — gerelateerd aan 'moed' (durven).", "Tegenovergesteld.", "Andere eigenschap.", "Wel een kwaliteit maar niet primair 'moedig'."],
       },
+      {
+        q: "*'De koningin sprak **plechtig**.'* Wat betekent plechtig?",
+        options: ["Met respect / serieus", "Snel", "Boos", "Gefluisterd"],
+        answer: 0,
+        wrongHints: [null, "Klopt — formeel + waardig.", "Niet.", "Tegenovergesteld.", "Niet — plechtig = duidelijk hoorbaar."],
+      },
+      {
+        q: "Welk woord is een **tegenstelling** van **'verlies'**?",
+        options: ["Winst", "Resultaat", "Spel", "Cijfer"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Te algemeen.", "Niet primair tegenstelling.", "Niet."],
+      },
+      {
+        q: "*'De jongen liep **kreupel**.'* Wat betekent kreupel?",
+        options: ["Met moeite / mankend", "Snel", "Boos", "Vrolijk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gewond aan voet/been.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+      },
     ],
   },
 
