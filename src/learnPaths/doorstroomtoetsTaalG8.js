@@ -195,6 +195,20 @@ const steps = [
         options: ["Snel + gestrest", "Rustig", "Verveeld", "Voldoening"],
         answer: 0,
         wrongHints: [null, "Klopt — onder tijdsdruk.", "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stam herkennen", tekst: "Gehaast komt van 'haast' = grote spoed/snel-doen-druk." },
+          ],
+          woorden: [{ woord: "gehaast", uitleg: "Onder tijdsdruk, snel-snel, gestrest." }],
+          theorie: "Tijdsdruk-woorden in NL: gehaast / overhaast / haastig / met spoed. Alle = niet rustig.",
+          voorbeelden: [{ type: "stap", tekst: "'Hij liep gehaast naar de tram' = hij rende bijna omdat hij laat was." }],
+          basiskennis: [{ onderwerp: "Tegenstellingen", uitleg: "Gehaast ↔ rustig / kalm / op je gemak." }],
+          niveaus: {
+            basis: "Snel + gestrest. A.",
+            simpeler: "Gehaast = haast hebben = snel + gestrest. = A.",
+            nogSimpeler: "Snel = A.",
+          },
+        },
       },
       {
         q: "*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?",

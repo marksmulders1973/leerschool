@@ -411,6 +411,22 @@ const steps = [
         options: ["15", "10", "12", "5"],
         answer: 0,
         wrongHints: [null, "Klopt — 25÷5 = 5/deel, jongens = 3×5 = 15.", "Dat is meisjes.", "Verkeerd.", "1 deel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel delen op", tekst: "3 + 2 = 5 delen totaal." },
+            { titel: "Bepaal grootte per deel", tekst: "25 leerlingen ÷ 5 delen = 5 leerlingen per deel." },
+            { titel: "Bereken jongens", tekst: "Jongens = 3 delen × 5 = 15." },
+          ],
+          woorden: [{ woord: "verhouding 3:2", uitleg: "Voor elke 3 jongens zijn er 2 meisjes. Totale delen = 3+2 = 5." }],
+          theorie: "Verhouding-formule: (totaal ÷ som-delen) × deel-jij-wilt = antwoord. Werkt voor alle verhouding-vragen.",
+          voorbeelden: [{ type: "stap", tekst: "Verhouding 1:4 totaal 20 → 20÷5 = 4 per deel. 1 deel = 4, 4 delen = 16." }],
+          basiskennis: [{ onderwerp: "Check", uitleg: "15 jongens + 10 meisjes = 25 ✓. Verhouding 15:10 = 3:2 ✓." }],
+          niveaus: {
+            basis: "15 (3×5). A.",
+            simpeler: "3+2=5 delen, 25÷5=5 per deel, jongens 3×5=15. = A.",
+            nogSimpeler: "15 = A.",
+          },
+        },
       },
       {
         q: "Een product was **€50, nu €30**. **% korting**?",
