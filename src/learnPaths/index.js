@@ -139,6 +139,7 @@ import werkwoordsvervoegingDuits from "./werkwoordsvervoegingDuits.js";
 import werkwoordsvervoegingFrans from "./werkwoordsvervoegingFrans.js";
 import cseLeesvaardigheidNederlands from "./cseLeesvaardigheidNederlands.js";
 import cseWiskundeStrategieVmbo from "./cseWiskundeStrategieVmbo.js";
+import cseSchrijfvaardigheidEngels from "./cseSchrijfvaardigheidEngels.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -217,6 +218,7 @@ export const ALL_LEARN_PATHS = {
   tekstanalyse,
   "cse-leesvaardigheid-nederlands": cseLeesvaardigheidNederlands,
   "cse-wiskunde-strategie-vmbo": cseWiskundeStrategieVmbo,
+  "cse-schrijfvaardigheid-engels": cseSchrijfvaardigheidEngels,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
