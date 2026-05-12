@@ -508,6 +508,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — eigennamen krijgen hoofdletter.", "Weekdag = klein.", "Zelfstandig nw = klein in NL.", "Werkwoord = klein."],
       },
+      {
+        q: "Welke zin heeft **goede aanhalingstekens**?",
+        options: ["Hij zei: 'Hallo.'", "Hij zei Hallo.", "Hij zei: Hallo", "'Hij zei Hallo'"],
+        answer: 0,
+        wrongHints: [null, "Klopt — dubbele punt + aanhalingstekens + punt binnen.", "Geen aanhalingstekens.", "Mist aanhalingstekens.", "Hele zin tussen aanhalingstekens = fout."],
+      },
+      {
+        q: "Wat is het **onderwerp** in 'De kat slaapt'?",
+        options: ["De kat", "Slaapt", "De", "Slaapt de kat"],
+        answer: 0,
+        wrongHints: [null, "Klopt — wie/wat doet de actie?", "Dat is het werkwoord.", "Lidwoord alleen.", "Niet."],
+      },
+      {
+        q: "Wat is het **werkwoord** in 'Lisa rent hard'?",
+        options: ["rent", "Lisa", "hard", "Geen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — actie-woord.", "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
+      },
     ],
   },
 ];
