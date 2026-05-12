@@ -316,6 +316,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — let goed op 'niet'!", "Niet — heel belangrijk.", "Wel — gewoon goed lezen.", "Random kiezen werkt niet."],
       },
+      {
+        q: "Signaalwoord **'omdat'** introduceert?",
+        options: ["Reden / oorzaak", "Gevolg", "Tegenstelling", "Voorbeeld"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Gevolg = 'daardoor'.", "Tegenstelling = 'maar'.", "Voorbeeld = 'bijvoorbeeld'."],
+      },
+      {
+        q: "Signaalwoord **'daardoor'** introduceert?",
+        options: ["Gevolg", "Reden", "Voorbeeld", "Tegenstelling"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Reden = 'omdat'.", "Niet.", "Niet."],
+      },
+      {
+        q: "*Cito-tip*: een **lange tekst** lees je **eerst** ...?",
+        options: ["Globaal (titel + alinea-koppen)", "Heel langzaam", "Achteruit", "Niet"],
+        answer: 0,
+        wrongHints: [null, "Klopt — skimmen voor structuur.", "Te traag.", "Niet zinvol.", "Wel — globaal."],
+      },
     ],
   },
 
