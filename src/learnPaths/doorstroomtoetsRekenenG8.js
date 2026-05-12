@@ -451,6 +451,24 @@ const steps = [
         options: ["€121", "€79", "€100", "€21"],
         answer: 0,
         wrongHints: [null, "Klopt — €100 + €21.", "Dat is min BTW.", "Zonder BTW.", "Alleen BTW-bedrag."],
+        uitlegPad: {
+          stappen: [
+            { titel: "BTW berekenen", tekst: "21% van €100 = 21/100 × 100 = €21." },
+            { titel: "Optellen bij prijs", tekst: "Eindprijs = €100 (basis) + €21 (BTW) = €121." },
+          ],
+          woorden: [
+            { woord: "BTW", uitleg: "Belasting Toegevoegde Waarde. Overheidsheffing op verkoop (21% standaard in NL, 9% laag tarief)." },
+            { woord: "eindprijs", uitleg: "Wat de klant betaalt: basisprijs + BTW." },
+          ],
+          theorie: "BTW-formule: eindprijs = basisprijs × (1 + BTW%/100). Voor 21%: × 1,21.",
+          voorbeelden: [{ type: "stap", tekst: "Voor €50: 50 × 1,21 = €60,50." }],
+          basiskennis: [{ onderwerp: "Soorten BTW", uitleg: "21% = meeste goederen. 9% = voedsel, boeken, kapper. 0% = export." }],
+          niveaus: {
+            basis: "€121. A.",
+            simpeler: "21% van €100 = €21. €100 + €21 = €121. = A.",
+            nogSimpeler: "€121 = A.",
+          },
+        },
       },
     ],
   },

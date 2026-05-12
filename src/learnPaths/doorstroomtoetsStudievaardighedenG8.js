@@ -703,6 +703,21 @@ const steps = [
         options: ["10%", "5%", "15%", "25%"],
         answer: 0,
         wrongHints: [null, "Klopt — 100−90.", "Te weinig.", "Te veel.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel bekende stukken", tekst: "rood 40 + blauw 30 + geel 20 = 90%." },
+            { titel: "Trek van 100% af", tekst: "100% − 90% = 10% rest." },
+          ],
+          woorden: [{ woord: "cirkeldiagram-100%", uitleg: "Alle stukken samen vormen altijd 100% — de hele cirkel." }],
+          theorie: "Cito-truc: bij missende waarde in cirkeldiagram = (100% − som bekende waarden).",
+          voorbeelden: [{ type: "stap", tekst: "20 + 35 + ? = 100 → ? = 45." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Het kleinste stuk is meestal 'de rest'. Hier: 10% past." }],
+          niveaus: {
+            basis: "10% (100 − 90). A.",
+            simpeler: "40+30+20=90. 100−90=10. = A.",
+            nogSimpeler: "10% = A.",
+          },
+        },
       },
       {
         q: "Waar zoek je **uitleg over een onderwerp** in een non-fictie boek?",
