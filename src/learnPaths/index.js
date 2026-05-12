@@ -116,6 +116,7 @@ import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
 import synoniemenTegenstellingenPo from "./synoniemenTegenstellingenPo.js";
 import waterErfgoedNederlandPo from "./waterErfgoedNederlandPo.js";
 import tafelsPo from "./tafelsPo.js";
+import delenPo from "./delenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -144,6 +145,7 @@ export const ALL_LEARN_PATHS = {
   "synoniemen-tegenstellingen-po": synoniemenTegenstellingenPo,
   "water-erfgoed-nederland-po": waterErfgoedNederlandPo,
   "tafels-po": tafelsPo,
+  "delen-po": delenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
