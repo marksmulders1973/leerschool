@@ -128,6 +128,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — bruin = hoog (berg/heuvel).", "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
       },
+      {
+        q: "Schaal **1:200.000**. Op kaart **5 cm**. Werkelijkheid in **km**?",
+        options: ["10 km", "1 km", "100 km", "5 km"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 5 × 200.000 = 1.000.000 cm = 10 km.", "Veel te weinig.", "Veel te veel.", "Verkeerde berekening."],
+      },
+      {
+        q: "Op kompas: **ZW** ligt tussen welke twee?",
+        options: ["Z en W", "N en W", "N en O", "Z en O"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Dat is NW.", "Dat is NO.", "Dat is ZO."],
+      },
+      {
+        q: "Tussen welke richtingen ligt **NO**?",
+        options: ["N en O", "Z en O", "N en W", "Z en W"],
+        answer: 0,
+        wrongHints: [null, "Klopt — noord-oost.", "ZO.", "NW.", "ZW."],
+      },
     ],
   },
 
