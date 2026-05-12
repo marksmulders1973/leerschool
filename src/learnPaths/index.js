@@ -135,6 +135,7 @@ import stoffenMengselsScheikunde from "./stoffenMengselsScheikunde.js";
 import lichtGeluidNatuurkunde from "./lichtGeluidNatuurkunde.js";
 import mensenrechtenMaatschappijleer from "./mensenrechtenMaatschappijleer.js";
 import bewegingenSnelheidNatuurkunde from "./bewegingenSnelheidNatuurkunde.js";
+import werkwoordsvervoegingDuits from "./werkwoordsvervoegingDuits.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -279,6 +280,7 @@ export const ALL_LEARN_PATHS = {
   "balans-beco": balansBeco,
   // Duits
   "naamvallen-duits": naamvallenDuits,
+  "werkwoordsvervoeging-duits": werkwoordsvervoegingDuits,
   // Frans
   "passe-compose-frans": passeComposeFrans,
   // Maatschappijleer
