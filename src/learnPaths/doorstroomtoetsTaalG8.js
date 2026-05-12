@@ -156,7 +156,22 @@ const steps = [
         q: "*'Zij was **onverstoorbaar** tijdens de toets.'* Wat betekent onverstoorbaar?",
         options: ["Rustig en niet snel uit balans", "Boos", "Verdwaald", "Onhandig"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'on' + 'verstoren' = niet gestoord worden.", "Niet de juiste richting.", "Geen verband.", "Ander gevoel."],
+        wrongHints: [null, "Klopt — 'on' + 'verstoorbaar'.", "Niet de juiste richting.", "Geen verband.", "Ander gevoel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Voorvoegsel 'on-'", tekst: "'On-' voor een woord betekent meestal 'niet'. Onverstoorbaar = NIET verstoorbaar = niet uit balans te brengen." },
+            { titel: "Stam 'verstoren'", tekst: "Verstoren = onderbreken/uit-orde-brengen. Onverstoorbaar = kan niet onderbroken worden." },
+          ],
+          woorden: [{ woord: "onverstoorbaar", uitleg: "Rustig en stabiel, niet uit balans door geluid of stress." }],
+          theorie: "Cito-truc 'on-' voorvoegsel: ontkenning. Bekwaam → onbekwaam. Mogelijk → onmogelijk. Verstoorbaar → onverstoorbaar.",
+          voorbeelden: [{ type: "stap", tekst: "'De kapitein bleef onverstoorbaar tijdens de storm' = hij bleef kalm onder zware omstandigheden." }],
+          basiskennis: [{ onderwerp: "Toets-context", uitleg: "'Tijdens de toets' = stresssituatie. Onverstoorbaar past = rustig blijven." }],
+          niveaus: {
+            basis: "Rustig en niet uit balans. A.",
+            simpeler: "On- = niet. Niet-verstoorbaar = niet uit balans. = A.",
+            nogSimpeler: "Rustig = A.",
+          },
+        },
       },
       {
         q: "Welk woord is een **tegenstelling** van **'genereus'**?",

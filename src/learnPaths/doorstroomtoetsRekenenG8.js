@@ -826,6 +826,20 @@ const steps = [
         options: ["€12", "€18", "€9", "€11"],
         answer: 0,
         wrongHints: [null, "Klopt — €36 ÷ 3.", "Dat is helft.", "Niet juist.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Deelsom", tekst: "Per stuk = totaal ÷ aantal. €36 ÷ 3 = €12 per boek." },
+          ],
+          woorden: [{ woord: "per stuk", uitleg: "Wat 1 ding kost — total delen door aantal." }],
+          theorie: "Redactiesom-truc: 'kost ... samen' + 'per X' = deelsom. Totaal ÷ aantal = prijs per item.",
+          voorbeelden: [{ type: "stap", tekst: "5 ijsjes voor €10 → per ijsje €2. 4 boeken €24 → per boek €6." }],
+          basiskennis: [{ onderwerp: "Check", uitleg: "€12 × 3 = €36 ✓. Realiteit-check helpt fouten vinden." }],
+          niveaus: {
+            basis: "€12 (€36÷3). A.",
+            simpeler: "Drie boeken samen €36 → één boek = €36÷3 = €12. = A.",
+            nogSimpeler: "€12 = A.",
+          },
+        },
       },
       {
         q: "Een receptenboek kost **€25**. Met **20% korting**?",
