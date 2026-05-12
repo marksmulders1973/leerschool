@@ -23,7 +23,7 @@ const steps = [
         wrongHints: [null, "Klopt.", "Niet primair.", "Wel — recept = algoritme.", "Wel."],
       },
       {
-        q: "Wat doet **GPS-app**?",
+        q: "Wat doet **GPS** *(Global Positioning System — plaats-bepaling via satellieten)*-app?",
         options: ["Kortste pad-algoritme (Dijkstra)", "Sportscore", "Gewicht", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."],
