@@ -679,6 +679,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 240 ÷ 80 = 3.", "Te kort.", "Te lang.", "Absurd."],
       },
+      {
+        q: "Een klas van 24 doet **mee aan toets**. **18 halen voldoende**. % voldoendes?",
+        options: ["75%", "60%", "80%", "70%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 18÷24 = 0,75 = 75%.", "Verkeerd.", "Iets te veel.", "Iets te weinig."],
+      },
+      {
+        q: "Een fles **1,5 L**. Glas houdt **250 mL**. Hoeveel glazen?",
+        options: ["6", "4", "5", "10"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1500÷250 = 6.", "Te weinig.", "Iets te weinig.", "Te veel."],
+      },
+      {
+        q: "Tom werkt **3 uur** voor **€18**. **Uurloon**?",
+        options: ["€6", "€21", "€54", "€9"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €18 ÷ 3 = €6.", "Optellen werkt niet.", "Vermenigvuldigen werkt niet.", "Verkeerd berekend."],
+      },
     ],
   },
 ];
