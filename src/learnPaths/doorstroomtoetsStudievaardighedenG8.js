@@ -253,6 +253,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — lijn = trend over tijd.", "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
       },
+      {
+        q: "Tabel: 100/200/300/400/500. Gemiddelde?",
+        options: ["300", "250", "350", "1500"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1500 ÷ 5.", "Verkeerd berekend.", "Niet juist.", "Dat is totaal."],
+      },
+      {
+        q: "Cirkeldiagram: blauw 25%, geel 25%, **rest** = ?",
+        options: ["50%", "25%", "100%", "75%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 100-50.", "Niet helft.", "Niet alles.", "Te veel."],
+      },
+      {
+        q: "Staafdiagram: hoogste staaf = ?",
+        options: ["Grootste waarde", "Kleinste waarde", "Niets", "Gemiddelde"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
+      },
     ],
   },
 
