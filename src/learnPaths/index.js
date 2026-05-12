@@ -127,6 +127,7 @@ import comparativesEngels from "./comparativesEngels.js";
 import doorstroomtoetsStudievaardighedenG8 from "./doorstroomtoetsStudievaardighedenG8.js";
 import romeinenGeschiedenis from "./romeinenGeschiedenis.js";
 import wereldoorlog1Geschiedenis from "./wereldoorlog1Geschiedenis.js";
+import ecosystemenBiologie from "./ecosystemenBiologie.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -216,6 +217,7 @@ export const ALL_LEARN_PATHS = {
   "cel-biologie": celBiologie,
   "voortplanting-hormonen-biologie": voortplantingHormonenBiologie,
   "fotosynthese-biologie": fotosyntheseBiologie,
+  "ecosystemen-biologie": ecosystemenBiologie,
   "genetica-erfelijkheid-biologie": geneticaErfelijkheidBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
