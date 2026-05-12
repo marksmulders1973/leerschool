@@ -132,6 +132,7 @@ import conditionalsEngels from "./conditionalsEngels.js";
 import bevolkingMigratieAardrijkskunde from "./bevolkingMigratieAardrijkskunde.js";
 import cseLeesvaardigheidEngels from "./cseLeesvaardigheidEngels.js";
 import stoffenMengselsScheikunde from "./stoffenMengselsScheikunde.js";
+import lichtGeluidNatuurkunde from "./lichtGeluidNatuurkunde.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -247,6 +248,7 @@ export const ALL_LEARN_PATHS = {
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
   "elektriciteit-natuurkunde": elektriciteitNatuurkunde,
+  "licht-geluid-natuurkunde": lichtGeluidNatuurkunde,
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
   "chemische-reacties-scheikunde": chemischeReactiesScheikunde,
