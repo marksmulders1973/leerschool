@@ -268,7 +268,24 @@ const steps = [
         q: "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
         options: ["Niet-waar verhaal", "Geheim", "Grap", "Verhaal"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Iets anders.", "Soms wel, niet primair.", "Te algemeen."],
+        wrongHints: [null, "Klopt — bewust niet-waar.", "Geheim = wel waar maar niet verteld.", "Grap = niet bedoeld te misleiden.", "Verhaal kan waar of niet waar zijn."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Context-hint", tekst: "'Verzon' = bedenken zonder dat het waar is. Dus 'leugen' = iets bedacht/niet waar." },
+          ],
+          woorden: [
+            { woord: "leugen", uitleg: "Iets vertellen dat niet waar is — bewust misleiden." },
+            { woord: "geheim", uitleg: "Iets WAAR dat je niet vertelt — verschilt van leugen." },
+          ],
+          theorie: "Cito-truc: lees context-werkwoord ('verzon') → wijst naar 'niet echt' = leugen.",
+          voorbeelden: [{ type: "stap", tekst: "'Hij vertelde een leugen over zijn rapport' = hij gaf een verkeerd cijfer door bewust." }],
+          basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Leugen = bewust niet-waar. Vergissing = niet-waar maar niet bewust. Geheim = waar maar achtergehouden." }],
+          niveaus: {
+            basis: "Niet-waar verhaal. A.",
+            simpeler: "Verzon = bedacht. Leugen = niet waar. = A.",
+            nogSimpeler: "Niet-waar = A.",
+          },
+        },
       },
     ],
   },

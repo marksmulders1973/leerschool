@@ -361,7 +361,22 @@ const steps = [
         q: "Tabel: bedrag €10/€20/€30/€40/€50. **Som**?",
         options: ["€150", "€100", "€50", "€30"],
         answer: 0,
-        wrongHints: [null, "Klopt — alles optellen.", "Te weinig.", "Iets.", "Gemiddelde."],
+        wrongHints: [null, "Klopt — alles optellen.", "Te weinig.", "Halve som.", "Gemiddelde."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Slim optellen", tekst: "Combineer paartjes: 10+50=60, 20+40=60, 30 over. Som = 60+60+30 = 150." },
+            { titel: "Of rechtdoor", tekst: "10+20=30, +30=60, +40=100, +50=150." },
+          ],
+          woorden: [{ woord: "som", uitleg: "Resultaat van optellen — alles bij elkaar." }],
+          theorie: "Cito-truc: paartjes-techniek werkt bij rijen met regelmatige toename (10/20/30...). Tel eindpunten: 10+50 = laatste+eerste.",
+          voorbeelden: [{ type: "stap", tekst: "Som 1+2+3+4+5 = (1+5)+(2+4)+3 = 6+6+3 = 15." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Som groter dan grootste term (50) — klopt." }],
+          niveaus: {
+            basis: "€150. A.",
+            simpeler: "10+20+30+40+50 = 150. = A.",
+            nogSimpeler: "150 = A.",
+          },
+        },
       },
       {
         q: "Cirkeldiagram heeft **3 secties van 33%**. Klopt dat?",
