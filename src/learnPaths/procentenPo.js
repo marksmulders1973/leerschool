@@ -166,13 +166,13 @@ const steps = [
   // STAP 4: Vier-stap-sommen winkel
   {
     title: "% in de winkel — slimme tactiek",
-    explanation: "In de winkel zie je vaak korting-bordjes. Bijvoorbeeld:\n\n*'Spijkerbroek normaal € 60. Nu 25% korting.'*\n\n**Vraag**: hoeveel betaal je nu?\n\n**Slimme aanpak — 2 manieren**:\n\n**Manier 1 — bereken korting, trek af**:\n• Korting = 25% van € 60 = ¼ × 60 = **€ 15**\n• Nieuwe prijs = 60 − 15 = **€ 45**\n\n**Manier 2 — direct het overgebleven deel** *(sneller!)*:\n• Als je 25% korting krijgt, betaal je nog **75%** *(want 100% − 25% = 75%)*.\n• 75% van € 60 = ¾ × 60 = **€ 45**.\n\nManier 2 is **één stap sneller** — je hoeft niet eerst korting te berekenen + dan af te trekken.\n\n**Cito-trucs voor populaire kortingen**:\n• **50% korting** → betaal je de helft\n• **25% korting** → betaal je 75% (drie kwart)\n• **10% korting** → betaal je 90%\n• **75% korting** → betaal je 25% (een kwart)\n\n**Voorbeeldsom**:\n*'Een telefoon van € 400 heeft 30% korting. Wat betaal je?'*\n\n**Manier 2 (snelst)**:\n• Je betaalt 100 − 30 = 70%.\n• 10% van 400 = 40.\n• 70% = 7 × 40 = **€ 280**.",
+    explanation: "In de winkel zie je vaak korting-bordjes. Bijvoorbeeld:\n\n*'Spijkerbroek normaal € 60. Nu 25% korting.'*\n\n**Vraag**: hoeveel betaal je nu?\n\n**Slimme aanpak — 2 manieren**:\n\n**Manier 1 — bereken korting, trek af**:\n• Korting = 25% van €60 = ¼ × €60 = **€15**\n• Nieuwe prijs = €60 − €15 = **€45**\n\n**Manier 2 — direct het overgebleven deel** *(sneller!)*:\n• Als je 25% korting krijgt, betaal je nog **75%** *(want 100% − 25% = 75%)*.\n• 75% van €60 = ¾ × €60 = **€45**.\n\nManier 2 is **één stap sneller** — je hoeft niet eerst korting te berekenen + dan af te trekken.\n\n**Cito-trucs voor populaire kortingen**:\n• **50% korting** → betaal je de helft\n• **25% korting** → betaal je 75% (drie kwart)\n• **10% korting** → betaal je 90%\n• **75% korting** → betaal je 25% (een kwart)\n\n**Voorbeeldsom**:\n*'Een telefoon van € 400 heeft 30% korting. Wat betaal je?'*\n\n**Manier 2 (snelst)**:\n• Je betaalt 100% − 30% = **70%** van de prijs.\n• 10% van €400 = €40.\n• 70% van €400 = 7 × €40 = **€280**.",
     checks: [
       {
         q: "Een schoen normaal **€ 80**, met **25% korting**. Hoeveel **betaal je**?",
         options: ["€ 60","€ 20","€ 40","€ 75"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van 80.","Te weinig — 25% van 80 = 20, dus je betaalt 80 − 20.","Te veel — heb je überhaupt korting gepakt?"],
+        wrongHints: [null,"Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.","Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.","Te veel — heb je überhaupt korting gepakt?"],
       },
       {
         q: "Een tas van **€ 50** heeft **50% korting**. Wat **betaal** je?",
@@ -218,7 +218,7 @@ const steps = [
   // STAP 6: Korting in de winkel - meer praktijk
   {
     title: "Praktijk-sommen — winkel + sport",
-    explanation: "Tijd voor mix-sommen in Cito-stijl. **Lees rustig en onderstreep getallen + percentages**.\n\n**Stappenplan voor elke %-som**:\n1. **Wat ken ik?** Het totaal of het deel?\n2. **Wat zoek ik?** Het andere deel, of het percentage?\n3. **Welke aanpak?** 1%-truc, 10%-truc, of breuken-truc?\n4. **Schrijf op** en reken in stapjes.\n\n**Voorbeeld — sport**:\n*'Marc speelt 50 wedstrijden basketbal. Hij won 30. Welk percentage gewonnen?'*\n• 30/50 = 3/5 = 60%.\n\n**Voorbeeld — winkel**:\n*'Een bagagetas was € 60. Met 40% korting?'*\n• Snel: betaal je 60% → 60% van 60 = 6 × 6 = € 36.\n\n**Voorbeeld — combinatie**:\n*'Anna bespaart € 15 op een truitje van € 60. Welk korting-percentage?'*\n• 15/60 = 1/4 = **25% korting**.\n\n**Veel-voorkomende val**:\n• 'Welk percentage MEER?' vraagt iets anders dan 'Welk percentage IS het?'. Lees rustig.\n• 'Korting' = aftrek. 'Toename' = optel.",
+    explanation: "Tijd voor mix-sommen in Cito-stijl. **Lees rustig en onderstreep getallen + percentages**.\n\n**Stappenplan voor elke %-som**:\n1. **Wat ken ik?** Het totaal of het deel?\n2. **Wat zoek ik?** Het andere deel, of het percentage?\n3. **Welke aanpak?** 1%-truc, 10%-truc, of breuken-truc?\n4. **Schrijf op** en reken in stapjes.\n\n**Voorbeeld — sport**:\n*'Marc speelt 50 wedstrijden basketbal. Hij won 30. Welk percentage gewonnen?'*\n• 30/50 = 3/5 = 60%.\n\n**Voorbeeld — winkel**:\n*'Een bagagetas was € 60. Met 40% korting?'*\n• Snel: je betaalt 100% − 40% = **60%** van de prijs.\n• 10% van €60 = €6, dus 60% = 6 × €6 = **€36**.\n\n**Voorbeeld — combinatie**:\n*'Anna bespaart € 15 op een truitje van € 60. Welk korting-percentage?'*\n• €15 van €60 = 15/60 = 1/4 = **25% korting**.\n\n**Veel-voorkomende val**:\n• 'Welk percentage MEER?' vraagt iets anders dan 'Welk percentage IS het?'. Lees rustig.\n• 'Korting' = aftrek. 'Toename' = optel.",
     checks: [
       {
         q: "Een hoodie van **€ 80** heeft **40% korting**. Wat **betaal** je?",
@@ -236,7 +236,7 @@ const steps = [
         q: "Een laptop kost **€ 800**. Anna betaalt **€ 720**. Welk **kortings-percentage**?",
         options: ["10%","20%","80%","8%"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je 800 − 720 = 80 niet vergelijken met de oorspronkelijke prijs?","Te veel — wat is € 800 − € 720? Vergelijk met € 800.","Klopt niet — dat zou betekenen € 720 korting, niet € 80.","Klopt niet — vergelijk € 80 op € 800."],
+        wrongHints: [null,"Te veel — heb je €800 − €720 = €80 niet vergelijken met de oorspronkelijke prijs?","Te veel — wat is €800 − €720? Vergelijk met €800.","Klopt niet — dat zou betekenen €720 korting, niet €80.","Klopt niet — vergelijk €80 op €800."],
       },
       {
         q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is melk-chocolade**. Hoeveel zijn dat?",
@@ -265,8 +265,8 @@ const steps = [
         wrongHints: [null,"Te weinig — 20% korting is niet halveren.","Veel te weinig — dat is alleen het korting-bedrag.","Te veel — 20% korting is meer dan 10%."],
       },
       {
-        q: "Op school halen **80% van 50 leerlingen** een voldoende. Hoeveel zijn dat?",
-        options: ["40","30","45","8"],
+        q: "Op school halen **80% van 50 leerlingen** een voldoende. Hoeveel leerlingen zijn dat?",
+        options: ["40 leerlingen","30 leerlingen","45 leerlingen","8 leerlingen"],
         answer: 0,
         wrongHints: [null,"Te weinig — 80% is veel meer dan de helft.","Te veel — dat zou 90% zijn.","Veel te weinig — heb je per ongeluk 80% genomen als '8 leerlingen op 50'?"],
       },
@@ -283,8 +283,8 @@ const steps = [
         wrongHints: [null,"Te weinig — 50% korting is de halve prijs.","Klopt niet — dat is alles, je krijgt geen 100% korting.","Te weinig — 50% van 300 is meer dan 100."],
       },
       {
-        q: "Een waterfles bevat **2 L**. Je drinkt **75%**. Hoeveel **L** drink je?",
-        options: ["1,5","0,5","2","1"],
+        q: "Een waterfles bevat **2 liter**. Je drinkt **75%**. Hoeveel **liter** drink je?",
+        options: ["1,5 liter","0,5 liter","2 liter","1 liter"],
         answer: 0,
         wrongHints: [null,"Te weinig — 75% is meer dan de helft.","Klopt niet — heb je 75% gedronken? Dan blijft maar weinig over.","Te weinig — dat is 50%, niet 75%."],
       },
