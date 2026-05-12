@@ -244,6 +244,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — overtuigen = mening laten delen.", "Informeren is doel #2 maar niet 'overtuigen'.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
       },
+      {
+        q: "*Tekst: 'Eerst moet je de fles open. **Vervolgens** schenk je het water.'* Wat geeft **'vervolgens'** aan?",
+        options: ["Volgorde / opeenvolging", "Tegenstelling", "Reden", "Doel"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'vervolgens' = daarna.", "Geen tegenstelling.", "Geen reden.", "Geen doel."],
+      },
+      {
+        q: "*'Het boek is **niet** alleen spannend.'* Welke vraagtype: dit antwoord testen — welke is **fout**?",
+        options: ["Het boek is alleen spannend (NIET klopt)", "Het boek is ook leerzaam (zou kunnen)", "Het boek is een roman (mogelijk)", "Niet te zeggen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — tekst zegt 'niet alleen' = ook ander iets.", "Mogelijk waar.", "Mogelijk waar.", "Wel te zeggen — let op 'niet alleen'."],
+      },
+      {
+        q: "*Hoofdgedachte* van tekst — meestal te vinden in:",
+        options: ["Eerste of laatste alinea", "Middelste alinea", "Plaatje", "Voetnoot"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Cito-tip.", "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
+      },
     ],
   },
 
