@@ -145,6 +145,7 @@ import cseSchrijfvaardigheidNederlands from "./cseSchrijfvaardigheidNederlands.j
 import financieleVormingPo from "./financieleVormingPo.js";
 import brugklasOrientatie from "./brugklasOrientatie.js";
 import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
+import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -257,6 +258,7 @@ export const ALL_LEARN_PATHS = {
   "romeinen-geschiedenis": romeinenGeschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
+  "klimaatverandering-aardrijkskunde": klimaatveranderingAardrijkskunde,
   "bevolking-migratie-aardrijkskunde": bevolkingMigratieAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   "topografie-nederland": topografieNederland,
