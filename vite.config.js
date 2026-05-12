@@ -47,6 +47,9 @@ export default defineConfig({
       polyfill: false,
       resolveDependencies: (_filename, deps) =>
         deps.filter((d) =>
+          // data-learnpaths-* (alle subject-chunks) niet preloaden — pas bij
+          // route-bezoek laden. 'data-learnpaths' string vangt ook de
+          // sub-chunks (data-learnpaths-po, -wereld, -examens, etc.).
           !d.includes('data-learnpaths') &&
           !d.includes('data-questions') &&
           !d.includes('data-topics') &&
@@ -70,10 +73,29 @@ export default defineConfig({
           if (id.includes('src/data/sampleQuestions')) return 'data-questions';
           if (id.includes('src/data/topics')) return 'data-topics';
           if (id.includes('src/data/textbooks')) return 'data-textbooks';
-          // Leerpaden — grote bundel JSX/MD met SVG; één pad per file maar
-          // alle paden samen ~64 files. Hou ze in één lazy chunk zodat de
-          // hoofd-bundle vrij blijft van leerpaad-data totdat user 'em opent.
-          if (id.includes('src/learnPaths/')) return 'data-learnpaths';
+          // Leerpaden — 165+ files. Bundel was 5,4 MB → mobiel-pijn.
+          // Splits per subject zodat parallel HTTP/2-streams winnen + browser
+          // niet hoeft te decoderen wat hij niet nodig heeft.
+          //
+          // Strategie: examens + pincode apart (zwaar), talen apart, wereld
+          // (geschiedenis/aardrijkskunde) apart, nask apart (biologie/scheikunde/
+          // natuurkunde/economie), PO-paden apart (alle bestanden met "Po.js"-
+          // suffix), rest = core (wiskunde + algemeen).
+          if (id.includes('src/learnPaths/')) {
+            const fname = id.split(/[/\\]src[/\\]learnPaths[/\\]/).pop() || '';
+            if (fname.startsWith('examen')) return 'data-learnpaths-examens';
+            if (fname.startsWith('pincode')) return 'data-learnpaths-pincode';
+            if (/Po\.js$/.test(fname)) return 'data-learnpaths-po';
+            if (/(Engels|Frans|Duits)\.js$/.test(fname)) return 'data-learnpaths-talen';
+            if (/(Geschiedenis|Aardrijkskunde)\.js$/.test(fname)) return 'data-learnpaths-wereld';
+            if (/(Biologie|Natuurkunde|Scheikunde|Economie|Beco)\.js$/.test(fname)) return 'data-learnpaths-nask';
+            // Nederlands-paden (taal, spelling, woordsoorten, etc.)
+            if (/(^spelling|^woordsoorten|^zinsontleding|^werkwoord|^argument|^tekstanalyse|^schrijfvaardigheid|^literatuur|^begrijpend|^onregelmatigeWerkwoorden|^presentTenses|^pastTenses|woordenschatEngels|naamvallen|passeCompose)/.test(fname)) {
+              return 'data-learnpaths-nederlands';
+            }
+            // Rest = wiskunde/algebra + algemene paden (vakken VO bovenbouw)
+            return 'data-learnpaths-wiskunde';
+          }
           if (id.includes('src/curricula/')) return 'data-curricula';
         },
       },
