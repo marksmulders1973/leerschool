@@ -128,6 +128,7 @@ import doorstroomtoetsStudievaardighedenG8 from "./doorstroomtoetsStudievaardigh
 import romeinenGeschiedenis from "./romeinenGeschiedenis.js";
 import wereldoorlog1Geschiedenis from "./wereldoorlog1Geschiedenis.js";
 import ecosystemenBiologie from "./ecosystemenBiologie.js";
+import conditionalsEngels from "./conditionalsEngels.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -212,6 +213,7 @@ export const ALL_LEARN_PATHS = {
   "present-tenses-engels": presentTensesEngels,
   "past-tenses-engels": pastTensesEngels,
   "comparatives-engels": comparativesEngels,
+  "conditionals-engels": conditionalsEngels,
   "woordenschat-engels": woordenschatEngels,
   // Biologie
   "cel-biologie": celBiologie,
