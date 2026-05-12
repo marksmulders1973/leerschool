@@ -457,6 +457,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — directe sprong naar pagina.", "Veel te lang.", "Niet effectief.", "Niet als je specifiek zoekt."],
       },
+      {
+        q: "Tabel: bezoekers maandag-zondag: 20/25/22/30/45/60/40. Welke dag **piek**?",
+        options: ["zaterdag", "vrijdag", "zondag", "donderdag"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 60 hoogst.", "45, niet hoogst.", "40.", "30."],
+      },
+      {
+        q: "**Atlas**-vraag: in welk **werelddeel** ligt Egypte?",
+        options: ["Afrika", "Azië", "Europa", "Amerika"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Noord-Afrika.", "Wel grens-buur via Sinaï maar Egypte = Afrika.", "Te ver.", "Te ver."],
+      },
+      {
+        q: "Schaal **1:75.000**. Op kaart **4 cm**. In het echt (in km)?",
+        options: ["3 km", "300 m", "30 km", "0,3 km"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 4 × 75.000 = 300.000 cm = 3 km.", "Te weinig — controleer cm→km.", "Te veel.", "Te weinig."],
+      },
     ],
   },
 ];
