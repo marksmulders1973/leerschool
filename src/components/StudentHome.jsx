@@ -584,6 +584,53 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
           </button>
         )}
+        {/* Cito-pijler-chips (P0b vindbaarheid 2026-05-12): direct-toegang
+            tot één van de 4 Doorstroomtoets-onderdelen ipv eerst 'alles gemixt'. */}
+        {onCitoOefenenSubject && (
+          <div style={{
+            display: "flex",
+            gap: 6,
+            marginTop: -10,
+            marginBottom: 16,
+            flexWrap: "wrap",
+          }}>
+            {[
+              { id: "rekenen", icon: "🔢", label: "Rekenen" },
+              { id: "taal", icon: "📝", label: "Taal" },
+              { id: "begrijpend-lezen", icon: "📖", label: "Lezen" },
+              { id: "wereldorientatie", icon: "🌍", label: "Wereld" },
+            ].map((pijler) => (
+              <button
+                key={pijler.id}
+                onClick={() => {
+                  SoundEngine.play("click");
+                  onCitoOefenenSubject(pijler.id, `Doorstroomtoets — ${pijler.label}`);
+                }}
+                style={{
+                  flex: "1 1 calc(50% - 3px)",
+                  minWidth: 0,
+                  padding: "8px 10px",
+                  background: "rgba(255,213,79,0.08)",
+                  border: "1px solid rgba(255,213,79,0.3)",
+                  borderRadius: 8,
+                  cursor: "pointer",
+                  color: "var(--color-text-strong)",
+                  fontSize: 12,
+                  fontFamily: "var(--font-body)",
+                  fontWeight: 600,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 4,
+                  minHeight: 36,
+                }}
+              >
+                <span aria-hidden="true">{pijler.icon}</span>
+                <span>{pijler.label}</span>
+              </button>
+            ))}
+          </div>
+        )}
         {/* Twee examen-balken (Mark feedback 2026-05-11):
             (1) USP — interactief oefenen mét uitleg waarom (examen-leerpaden).
             (2) Bibliotheek — hele PDF-examens inzien (overal beschikbaar, maar
