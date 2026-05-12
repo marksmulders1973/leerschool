@@ -580,6 +580,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — actie-woord.", "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
       },
+      {
+        q: "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
+        options: ["een appel", "Ik", "eet", "Geen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — waarop actie gericht.", "Onderwerp.", "Werkwoord.", "Wel."],
+      },
+      {
+        q: "Welke zin heeft een **bijvoeglijk naamwoord**?",
+        options: ["De rode auto.", "De auto rijdt.", "Auto staat.", "Auto auto."],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'rode' beschrijft de auto.", "Geen beschrijving.", "Geen beschrijving.", "Geen NL."],
+      },
+      {
+        q: "Welke is een **persoonlijk voornaamwoord**?",
+        options: ["ik", "auto", "snel", "boos"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ook: jij/hij/zij/wij/jullie.", "Zelfst nw.", "Bijvoeglijk nw.", "Bijvoeglijk nw."],
+      },
     ],
   },
 ];
