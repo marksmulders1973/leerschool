@@ -231,6 +231,21 @@ const steps = [
         options: ["90", "70", "100", "60"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te weinig — controleer optelling.", "Te veel.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Optellen", tekst: "12 + 8 + 18 + 22 + 30 = 90." },
+            { titel: "Per stap", tekst: "12+8=20, +18=38, +22=60, +30=90." },
+          ],
+          woorden: [{ woord: "totaal", uitleg: "Som van alle getallen — alles optellen." }],
+          theorie: "Bij tabel-totaal: tel ALLE getallen in kolom of rij op. Schrijf tussenstap als getallen groot zijn.",
+          voorbeelden: [{ type: "stap", tekst: "10+20+30 = (10+20)+30 = 30+30 = 60. Tussenstappen helpen fouten voorkomen." }],
+          basiskennis: [{ onderwerp: "Schat", uitleg: "Schat eerst: ~10+10+20+20+30 = ~90. Past." }],
+          niveaus: {
+            basis: "90 (alles optellen). A.",
+            simpeler: "12+8=20, +18=38, +22=60, +30=90. = A.",
+            nogSimpeler: "90 = A.",
+          },
+        },
       },
       {
         q: "Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, **rest** = ?",
