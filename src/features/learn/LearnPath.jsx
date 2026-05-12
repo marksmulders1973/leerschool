@@ -19,6 +19,7 @@ import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
+import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -1117,9 +1118,15 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
       <Header onBack={onBack} onHome={onHome} title={path.title} emoji={path.emoji} />
 
       <div style={{ padding: "16px 18px 8px" }}>
-        <p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
-          {path.intro}
-        </p>
+        {/* Mark feedback 2026-05-12: pad-intro bij examen-paden moet
+            'gele-markeerstift-look' krijgen. Detecteer aan id-prefix. */}
+        {path.id && path.id.startsWith("examen-") ? (
+          <ExamenPadBanner intro={path.intro} padTitle={path.title} />
+        ) : (
+          <p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
+            {path.intro}
+          </p>
+        )}
 
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
           <span>{completedSteps.size} van {path.steps.length} delen voltooid</span>

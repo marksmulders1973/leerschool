@@ -195,7 +195,11 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - **Geen AI-poster-art bij Doorstroomtoets-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
 - **Naming Cito vs Doorstroomtoets**: in copy/UI gebruik "Doorstroomtoets" (schoolrealiteit sinds 2024). Filenames + zoek-keywords blijven "cito" voor SEO. Zie `feedback_doorstroomtoets_naming` in memory.
 - **Doorstroomtoets-logo**: overal waar "Doorstroomtoets" in user-facing UI staat (knoppen/tegels/headers), gebruik `<DoorstroomtoetsLogo size={N} />` uit `src/components/DoorstroomtoetsLogo.jsx` in plaats van het 🎯-emoji. Geldt ook voor toekomstige leerkracht-features waarbij een leerkracht zelf een Doorstroomtoets samenstelt. PNG ligt in `public/logo-doorstroomtoets.png`. Zie `reference_doorstroomtoets_logo` in memory.
-- **examenBron-banner prominent + overal consistent**: bij elke check met `examenBron`-veld toon je de **gouden banner met 'Officiële examen-vraag' + bron + link naar examenblad.nl**. Gebruik **altijd** de shared component `<ExamenBronBanner examenBron={...} />` uit `src/shared/ui/ExamenBronBanner.jsx`. Compact-variant *(`compact` prop)* voor lijst-context (CitoLeerpadToets fout-vragen-uitklap). Reden: authentieke examenvragen zijn een USP — moet **overal** zichtbaar zijn, niet alleen in LearnPath. Reeds gebruikt in: LearnPath (vraag-modus), CitoLeerpadToets (running + fout-uitklap). **Voor toekomstige UI-componenten**: zie je `examenBron`, dan de banner. Zie `feedback_examen_bron_prominent` in memory.
+- **examenBron-banner prominent + overal consistent**: gouden 'markeerstift'-look voor alles wat met echte examenvragen te maken heeft. Twee shared componenten:
+  - `<ExamenBronBanner examenBron={...} />` (`src/shared/ui/ExamenBronBanner.jsx`) — **per check** (1 examenvraag). Compact-variant voor lijsten *(CitoLeerpadToets fout-uitklap, ResultsPage)*.
+  - `<ExamenPadBanner intro={...} padTitle={...} />` (`src/shared/ui/ExamenPadBanner.jsx`) — **pad-intro** *(Overview-scherm van examen-paden, automatisch via `path.id.startsWith("examen-")`-detectie)*.
+
+  Reden: authentieke examenvragen zijn een USP — moet **overal** zichtbaar zijn. **Voor toekomstige UI-plekken**: zie je `examenBron` of een examen-pad-intro? → banner-component erbij. Geen inline-stijl meer kopiëren. Bij Doorstroomtoets-content (private, geen examenblad-link) een aparte variant toevoegen. Zie `feedback_examen_bron_prominent` in memory.
 - **1 primary per scherm** (design-system).
 - **Game ↔ leer strikt scheiden** in design-system.
 
