@@ -174,6 +174,7 @@ import algoritmenProgrammerenPo from "./algoritmenProgrammerenPo.js";
 import emotiesSocialePo from "./emotiesSocialePo.js";
 import koudeOorlogModernPo from "./koudeOorlogModernPo.js";
 import eetcultuurNederlandPo from "./eetcultuurNederlandPo.js";
+import kritischDenkenPo from "./kritischDenkenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -243,6 +244,7 @@ export const ALL_LEARN_PATHS = {
   "emoties-sociaal-po": emotiesSocialePo,
   "koude-oorlog-modern-po": koudeOorlogModernPo,
   "eetcultuur-nederland-po": eetcultuurNederlandPo,
+  "kritisch-denken-po": kritischDenkenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
