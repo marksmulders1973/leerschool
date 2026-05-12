@@ -149,6 +149,7 @@ import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde
 import energiebronnenPo from "./energiebronnenPo.js";
 import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
 import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
+import politiekDemocratiePo from "./politiekDemocratiePo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -193,6 +194,7 @@ export const ALL_LEARN_PATHS = {
   "begrijpend-lezen-teksten-po": begrijpendLezenTekstenPo,
   "tijdvakken-nederland-po": tijdvakkenNederlandPo,
   "industriele-revolutie-po": industrieleRevolutiePo,
+  "politiek-democratie-po": politiekDemocratiePo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
