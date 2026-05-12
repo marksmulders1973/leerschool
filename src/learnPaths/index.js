@@ -125,6 +125,7 @@ import middeleeuwenGeschiedenis from "./middeleeuwenGeschiedenis.js";
 import franseRevolutieGeschiedenis from "./franseRevolutieGeschiedenis.js";
 import comparativesEngels from "./comparativesEngels.js";
 import doorstroomtoetsStudievaardighedenG8 from "./doorstroomtoetsStudievaardighedenG8.js";
+import romeinenGeschiedenis from "./romeinenGeschiedenis.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -222,6 +223,7 @@ export const ALL_LEARN_PATHS = {
   "gouden-eeuw-geschiedenis": goudenEeuwGeschiedenis,
   "middeleeuwen-geschiedenis": middeleeuwenGeschiedenis,
   "franse-revolutie-geschiedenis": franseRevolutieGeschiedenis,
+  "romeinen-geschiedenis": romeinenGeschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
