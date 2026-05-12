@@ -1,0 +1,149 @@
+// Leerpad: Gezonde voeding - groep 6-8 wereldoriëntatie/gezondheid.
+// Cito-relevant. 1F. 4 stappen.
+
+const stepEmojis = ["🍎", "🥦", "🧂", "🏆"];
+
+const chapters = [
+  { letter: "A", title: "Waarom eten?", emoji: "🍎", from: 0, to: 0 },
+  { letter: "B", title: "Schijf van Vijf", emoji: "🥦", from: 1, to: 1 },
+  { letter: "C", title: "Wat te beperken", emoji: "🧂", from: 2, to: 2 },
+  { letter: "D", title: "Eind-toets", emoji: "🏆", from: 3, to: 3 },
+];
+
+const steps = [
+  {
+    title: "Waarom + wat eten we?",
+    explanation:
+      "Eten = **brandstof** voor je lichaam. Net als een auto benzine nodig heeft.\n\n**Waarom moet je eten?**\n• **Energie** *(om te lopen, leren, sporten)*.\n• **Groei** *(als kind groei je nog)*.\n• **Reparatie** *(cellen vervangen)*.\n• **Bescherming** *(immuunsysteem)*.\n• **Hersenen** *(20% van je energie gaat naar hersenen)*.\n\n**Voedingsstoffen** = wat in eten zit:\n\n**1. Koolhydraten** *(suikers + zetmeel)* 🍞:\n• **Snelle energie**.\n• Zit in: brood, pasta, rijst, aardappelen, granen, fruit.\n• Hoeveel: ~50-60% van je voeding.\n• **Vezels** *(koolhydraat die je niet verteert)*: zit in volkoren + groente. Goed voor darmen.\n\n**2. Eiwitten** *(proteïne)* 🍗:\n• Voor **groei + spieropbouw + reparatie**.\n• Zit in: vlees, vis, eieren, melk, kaas, peulvruchten *(bonen, linzen)*, noten, soja, tofoe.\n• Hoeveel: ~15% van voeding.\n• Veganistische bron: bonen + linzen + tofoe + quinoa.\n\n**3. Vetten** 🥑:\n• **Brandstof** + bouwsteen voor cellen + hormonen.\n• **Goede vetten**: olijfolie, noten, avocado, vette vis.\n• **Slechte vetten**: koek, frituur, vet vlees, palmolie *(vermijden)*.\n• Hoeveel: ~30% van voeding.\n\n**4. Vitamines** 💊:\n• **Mini-stoffen** maar essentieel.\n• **Vitamine A**: zien, huid *(wortels, vis)*.\n• **B-vitamines**: energie, zenuwen *(vlees, granen)*.\n• **Vitamine C**: immuunsysteem *(sinaasappel, paprika)*.\n• **Vitamine D**: botten *(zon, vis)* — in NL vaak supplement nodig in winter.\n• **Vitamine E + K** ook.\n\n**5. Mineralen**:\n• **Calcium**: botten *(melk, kaas)*.\n• **IJzer**: bloed *(vlees, spinazie)*.\n• **Magnesium, zink, jood** ook belangrijk.\n\n**6. Water** 💧:\n• Lichaam = **60% water**!\n• Drink **1,5-2 liter per dag**.\n• Verlies via plassen, zweten, ademen.\n• Te weinig = dorst + hoofdpijn.\n\n**Hoeveel eten per dag?**\n• Kind 6-13 jaar: ~1800-2200 kcal/dag.\n• Volwassen: 2000-2500 kcal.\n• Sporters: meer.\n\n**Drie maaltijden + 2-3 tussendoortjes** = aanbevolen.\n\n**Cito-feitje**:\n**1 kilo lichaamsvet** = ongeveer **7700 kcal**. Om af te vallen moet je 7700 kcal minder eten of meer bewegen. Daarom werkt 'snel afvallen' bijna nooit op lange termijn.",
+    checks: [
+      {
+        q: "Waarvoor zijn **eiwitten** vooral?",
+        options: ["Groei + spieren + reparatie", "Energie", "Vitamines", "Water"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Koolhydraten/vetten.", "Niet eiwit.", "Niet voeding."],
+      },
+      {
+        q: "Hoeveel **water** per dag drinken?",
+        options: ["1,5-2 liter", "Geen", "5 liter", "100 ml"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Wel nodig.", "Te veel.", "Te weinig."],
+      },
+      {
+        q: "Wat heeft **vezels**?",
+        options: ["Volkoren + groente", "Snoep", "Frisdrank", "Boter"],
+        answer: 0,
+        wrongHints: [null, "Klopt — voor darmen.", "Geen.", "Geen.", "Geen."],
+      },
+      {
+        q: "Welke vitamine vooral uit **zon**?",
+        options: ["Vitamine D", "C", "A", "K"],
+        answer: 0,
+        wrongHints: [null, "Klopt — in NL winter supplement.", "Sinaasappel.", "Wortel.", "Greens."],
+      },
+    ],
+  },
+  {
+    title: "Schijf van Vijf",
+    explanation:
+      "**Schijf van Vijf** = NL-richtlijn voor gezond eten. Door **Voedingscentrum**.\n\nVerdeeld in **5 vakken**:\n\n**Vak 1: Groente + fruit** 🥕🍎\n• **250 gram groente** per dag *(2 stukken)*.\n• **2 stuks fruit** per dag *(1 = 80 g).*\n• Liefst **variatie** in kleuren *(kleurrijke borden = veel vitamines)*.\n• Vers > diepvries > blik.\n\n**Vak 2: Brood + ontbijtgranen + aardappel + rijst + pasta + peulvruchten** 🍞🥔\n• Liefst **volkoren** *(meer vezels)*.\n• Aantal: ~4-6 sneetjes brood + 1 keer warm met aardappel/pasta/rijst per dag.\n\n**Vak 3: Zuivel + noten + soja** 🥛🥜\n• Melk, yoghurt, kwark, kaas.\n• 2-3 porties per dag.\n• Bevat calcium + eiwit + B12.\n\n**Vak 4: Vlees + vis + ei + plantaardige eiwit** 🐟🥚\n• 1-2 keer per dag.\n• 1 x **vis per week** *(omega-3)*.\n• Plantaardige alternatieven *(peulvruchten, tofu)*.\n• Limiet vlees: max 500 g per week *(daarvan max 300 g rood vlees)*.\n\n**Vak 5: Vetten + olie** 🌻\n• Liefst **plantaardige** olie *(olijfolie, zonnebloemolie)*.\n• Minder boter/margarine.\n• Beperkt — kleinste vak.\n\n**Buiten de schijf**:\n• Snoep, frisdrank, koek, frituur, chips, alcohol.\n• Niet **schadelijk in kleine hoeveelheden** maar bevatten weinig goede stoffen.\n\n**Visuele tips**:\n• **Helft bord** = groente + fruit.\n• **Kwart bord** = volkoren-koolhydraten.\n• **Kwart bord** = eiwit *(vis/vlees/peul)*.\n• Beetje **gezond vet**.\n\n**3 maaltijden + tussendoortjes**:\n\n**Ontbijt** 🍳:\n• Volkoren brood + kaas + tomaat.\n• Of: havermout met fruit + yoghurt.\n• **Belangrijkste maaltijd** *(energie voor school)*.\n• Niet overslaan!\n\n**Lunch** 🥪:\n• Volkoren brood + beleg *(vis, kaas, vlees, hummus)*.\n• + 1 stuk fruit.\n• + glas melk/water.\n\n**Avondeten** 🍝:\n• Aardappel/rijst/pasta + groente + vis/vlees/peulvrucht.\n• Variatie in kleuren.\n• Eet langzaam = beter verzadigd.\n\n**Tussendoortjes** 🍎:\n• Fruit *(altijd goed)*.\n• Handvol noten.\n• Glas melk.\n• Volkoren-koek af en toe.\n• **Niet**: zak chips, candy, frisdrank.\n\n**Veganistisch / vegetarisch**:\n• **Vegetarisch** = geen vlees + vis, wel zuivel + ei.\n• **Veganistisch** = geen dierlijke producten.\n• Kan gezond als gevarieerd.\n• Let op: B12, ijzer, calcium *(soms supplement)*.\n\n**Cito-feitje**:\n**Vegetarische eten** bespaart **veel CO₂** + water. Een kilo rundvlees produceren kost ongeveer **15.000 liter water** + **20-50 kg CO₂**. Een kilo bonen kost ~4.000 liter water + 1-2 kg CO₂. Vandaar 'minder vlees' = klimaattip.",
+    checks: [
+      {
+        q: "Hoeveel **groente** per dag?",
+        options: ["250 gram", "1 kilo", "10 gram", "Geen aanbeveling"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Te veel.", "Te weinig.", "Wel."],
+      },
+      {
+        q: "Hoeveel **vis per week**?",
+        options: ["1 keer (omega-3)", "Elke dag", "Nooit", "Maandelijks"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Te veel.", "Wel goed.", "Te weinig."],
+      },
+      {
+        q: "**Belangrijkste maaltijd**?",
+        options: ["Ontbijt (energie voor school)", "Lunch", "Diner", "Snack"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Ook belangrijk maar specifiek dit.", "Niet eerst.", "Niet hoofdmaal."],
+      },
+      {
+        q: "Wat is **vegetarisch**?",
+        options: ["Geen vlees + vis (wel zuivel + ei)", "Geen alles", "Alleen brood", "Niet bestaand"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Veganist.", "Niet specifiek.", "Wel."],
+      },
+    ],
+  },
+  {
+    title: "Wat te beperken — suiker + zout + frituur",
+    explanation:
+      "Sommige dingen lekker, maar **te veel = niet gezond**.\n\n**SUIKER** 🍬:\n• **Maximaal 25 g** suiker per dag *(WHO-advies kind)*.\n• 1 glas frisdrank = ~30 g suiker = al boven.\n• 1 Mars-reep = ~30 g.\n• 1 ijsje = ~20 g.\n• Snel **op** maar daarna **moe** *('sugar crash')*.\n• Veroorzaakt: **gaatjes** in tanden, **overgewicht**, **diabetes-risico**.\n• Verborgen suikers: ketchup, brood, zuivel met smaak, ontbijtgranen.\n• Lees **etiket** — 'koolhydraten waarvan suikers'.\n\n**ZOUT** 🧂:\n• **Maximaal 5 g** zout per dag *(kind 6-12: 4 g)*.\n• 1 zakje chips kan al 1-2 g hebben.\n• Te veel = **hoge bloeddruk** + hart-vat-ziektes.\n• Verborgen zout: kant-en-klaar maaltijden, kaas, soep, brood.\n\n**TRANSVET / VERZADIGD VET** 🍔:\n• In frituur, koek, chips, gefrituurde snacks.\n• Verhoogt slecht cholesterol.\n• Veroorzaakt hart-vatziektes.\n• Vervangen door **olijfolie + noten** = beter.\n\n**ALCOHOL** 🍷:\n• Onder 18 jaar: **0,0** *(verboden)*.\n• Volwassenen: max 1 glas per dag.\n• Geen-alcohol-aanbeveling is beter *(WHO 2023)*.\n• Schadelijk voor lever + hersenen.\n• Bij kinderen kan al 1 glas hersenen beschadigen.\n\n**FRISDRANK + ENERGIEDRANKEN** 🥤:\n• Veel suiker + soms cafeïne.\n• 1 blikje cola = 7 suikerklontjes.\n• Energiedrankjes: cafeïne + suiker — niet voor kinderen onder 18.\n\n**KANT-EN-KLAAR EN FAST FOOD** 🍕:\n• Vaak veel zout + vet + suiker.\n• Conserveermiddelen + smaakversterkers (E-nummers).\n• Niet 'fout' maar liever beperkt.\n\n**Wat te eten als je trek hebt?**\n• In plaats van chips → handvol noten.\n• In plaats van frisdrank → water + citroen.\n• In plaats van snoep → fruit.\n• In plaats van koek → volkoren-cracker met humus.\n\n**Eten + emoties**:\n• Eten bij stress = vaak ongezond.\n• Eet **bewust** — wat heb je echt nodig?\n• Eten is sociaal *(samen eten met familie)* — niet alleen.\n\n**Overgewicht** *(NL kids)*:\n• ~14% van NL-kinderen *(2024)* heeft overgewicht.\n• Risico's: diabetes, hartziekte, depressie.\n• Belangrijk: **gezond eten + bewegen** *(beweegnorm 1 uur per dag)*.\n\n**Hulp nodig?**\n• Praat met ouder, schoolarts, huisarts.\n• Niet je vergelijken met sociale media-influencers — die laten 'ideaal' zien dat vaak nep is.\n\n**Cito-feitje**:\n**Ultraprocessed food** *(zwaar bewerkt voedsel — koek, chips, zoete cereal, kant-en-klaar)*: ~30% van wat NL-kinderen eten. Onderzoekers waarschuwen — minder = beter. Vers + zelf koken = altijd beter.",
+    checks: [
+      {
+        q: "Hoeveel **suiker** max per dag (WHO kind)?",
+        options: ["25 g", "100 g", "0 g", "1 kilo"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 frisdrank = al boven.", "Te veel.", "Te streng.", "Onmogelijk."],
+      },
+      {
+        q: "Hoeveel **alcohol** onder 18?",
+        options: ["0,0 (verboden)", "1 glas", "Veel", "Geen regel"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."],
+      },
+      {
+        q: "1 glas frisdrank = **hoeveel suikerklontjes**?",
+        options: ["~7", "1", "0", "100"],
+        answer: 0,
+        wrongHints: [null, "Klopt — veel.", "Te weinig.", "Wel suiker.", "Te veel."],
+      },
+      {
+        q: "**Beweegnorm** kind per dag?",
+        options: ["1 uur bewegen", "Niets", "8 uur", "5 minuten"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Slecht.", "Te veel.", "Te weinig."],
+      },
+    ],
+  },
+  {
+    title: "Eind-toets — voeding mix",
+    explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
+    checks: [
+      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
+      { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Klopt.", "Wel.", "Te veel.", "Te weinig."] },
+      { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klopt.", "Klein.", "Buiten schijf.", "Buiten schijf."] },
+      { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Vegetariër.", "Tegenovergesteld.", "Wel."] },
+      { q: "Wat is **goed vet**?", options: ["Olijfolie + noten + avocado", "Frituur", "Boter alleen", "Geen vet"], answer: 0, wrongHints: [null, "Klopt.", "Slecht.", "Niet alleen.", "Wel nodig."] },
+      { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Klopt.", "Koolhydraat.", "Niet.", "Niet."] },
+    ],
+  },
+];
+
+steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
+
+const gezondeVoedingPo = {
+  id: "gezonde-voeding-po",
+  title: "Gezonde voeding (Cito groep 6-8)",
+  emoji: "🍎",
+  level: "groep6-8",
+  subject: "wereldorientatie",
+  referentieNiveau: "1F",
+  sloThema: "Wereldoriëntatie — natuur & techniek / gezondheid",
+  prerequisites: [
+    { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid", niveau: "1F" },
+  ],
+  intro:
+    "Gezonde voeding voor Cito groep 6-8 — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout max 5g, alcohol 0,0 onder 18) + vegetarisch/veganistisch. Sluit op lichaam-gezondheid. ~15 min.",
+  triggerKeywords: [
+    "voeding", "eten", "gezond eten",
+    "Schijf van Vijf", "Voedingscentrum",
+    "koolhydraten", "eiwit", "vet",
+    "vitamine", "mineraal",
+    "suiker", "zout", "alcohol",
+    "vegetarisch", "veganistisch",
+    "overgewicht", "beweegnorm",
+  ],
+  chapters,
+  steps,
+};
+
+export default gezondeVoedingPo;
