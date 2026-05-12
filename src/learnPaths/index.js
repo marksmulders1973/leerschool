@@ -136,6 +136,7 @@ import lichtGeluidNatuurkunde from "./lichtGeluidNatuurkunde.js";
 import mensenrechtenMaatschappijleer from "./mensenrechtenMaatschappijleer.js";
 import bewegingenSnelheidNatuurkunde from "./bewegingenSnelheidNatuurkunde.js";
 import werkwoordsvervoegingDuits from "./werkwoordsvervoegingDuits.js";
+import werkwoordsvervoegingFrans from "./werkwoordsvervoegingFrans.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -283,6 +284,7 @@ export const ALL_LEARN_PATHS = {
   "werkwoordsvervoeging-duits": werkwoordsvervoegingDuits,
   // Frans
   "passe-compose-frans": passeComposeFrans,
+  "werkwoordsvervoeging-frans": werkwoordsvervoegingFrans,
   // Maatschappijleer
   "nederlandse-staat-maatschappijleer": nederlandseStaatMaatschappijleer,
   "mensenrechten-maatschappijleer": mensenrechtenMaatschappijleer,
