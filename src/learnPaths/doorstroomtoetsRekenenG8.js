@@ -751,6 +751,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — €18 ÷ 3 = €6.", "Optellen werkt niet.", "Vermenigvuldigen werkt niet.", "Verkeerd berekend."],
       },
+      {
+        q: "**3 boeken** kosten **€36 samen**. Per boek?",
+        options: ["€12", "€18", "€9", "€11"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €36 ÷ 3.", "Dat is helft.", "Niet juist.", "Niet."],
+      },
+      {
+        q: "Een receptenboek kost **€25**. Met **20% korting**?",
+        options: ["€20", "€5", "€30", "€22"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 20% van €25 = €5, dus €25−€5 = €20.", "Dat is korting-bedrag.", "Dat is verhoging.", "Verkeerd."],
+      },
+      {
+        q: "**Reis 60 km** met **45 km/u**. Tijd?",
+        options: ["1u20 (1,33 u)", "1 uur", "2 uur", "45 min"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 60÷45 ≈ 1,33 uur = 1u20.", "Te kort — zou 45 km zijn.", "Te lang.", "Te kort."],
+      },
     ],
   },
 ];
