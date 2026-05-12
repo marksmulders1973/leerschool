@@ -105,6 +105,7 @@ import dierenSeizoenenNatuur from "./dierenSeizoenenNatuur.js";
 import sterrenPlaneten from "./sterrenPlaneten.js";
 import meetkundeBouwsels from "./meetkundeBouwsels.js";
 import grafiekenLezenPo from "./grafiekenLezenPo.js";
+import gemiddeldenStatistiekPo from "./gemiddeldenStatistiekPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -123,6 +124,7 @@ export const ALL_LEARN_PATHS = {
   "vlakke-figuren-po": vlakkeFigurenPo,
   "meetkunde-bouwsels": meetkundeBouwsels,
   "grafieken-lezen-po": grafiekenLezenPo,
+  "gemiddelden-statistiek-po": gemiddeldenStatistiekPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
