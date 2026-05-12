@@ -153,6 +153,7 @@ import politiekDemocratiePo from "./politiekDemocratiePo.js";
 import dichtenPoezieRijmenPo from "./dichtenPoezieRijmenPo.js";
 import godsdienstenCulturenPo from "./godsdienstenCulturenPo.js";
 import bekendeWetenschappersPo from "./bekendeWetenschappersPo.js";
+import beroepenWerkPo from "./beroepenWerkPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -201,6 +202,7 @@ export const ALL_LEARN_PATHS = {
   "politiek-democratie-po": politiekDemocratiePo,
   "godsdiensten-culturen-po": godsdienstenCulturenPo,
   "bekende-wetenschappers-po": bekendeWetenschappersPo,
+  "beroepen-werk-po": beroepenWerkPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
