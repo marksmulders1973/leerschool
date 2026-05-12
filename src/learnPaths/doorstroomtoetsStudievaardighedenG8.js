@@ -69,13 +69,42 @@ const steps = [
         q: "Schaal **1:100.000**. **3 cm** op kaart = ... in werkelijkheid?",
         options: ["3 km", "300 m", "30 m", "30 km"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 cm = 1 km bij deze schaal.", "Te weinig.", "Te veel — controleer 3 × 1 km."],
+        wrongHints: [null, "Klopt — 1 cm = 1 km bij 1:100.000.", "Te weinig — controleer omrekening.", "Veel te weinig.", "Verkeerde berekening."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Onthoud truc 1:100.000", tekst: "Bij schaal 1:100.000 is 1 cm op kaart = 100.000 cm = 1.000 m = 1 km in het echt." },
+            { titel: "Vermenigvuldig", tekst: "3 cm × 1 km/cm = 3 km." },
+          ],
+          woorden: [{ woord: "schaalgetal", uitleg: "Het getal achter '1:' geeft aan hoeveel cm in werkelijkheid 1 cm op kaart vertegenwoordigt." }],
+          theorie: "Cito-truc: bij 1:100.000 hoef je niet te rekenen — 1 cm = 1 km direct.",
+          voorbeelden: [{ type: "stap", tekst: "1:25.000 → 1 cm = 250 m. 1:50.000 → 1 cm = 500 m. 1:200.000 → 1 cm = 2 km." }],
+          basiskennis: [{ onderwerp: "Omrekening", uitleg: "100.000 cm = 1.000 m = 1 km. Onthoud deze stap." }],
+          niveaus: {
+            basis: "3 km. A.",
+            simpeler: "1:100.000 betekent 1 cm = 1 km. Dus 3 cm = 3 km. = A.",
+            nogSimpeler: "3 = A.",
+          },
+        },
       },
       {
         q: "Wat staat in de **legenda** van een kaart?",
         options: ["Uitleg van de symbolen + kleuren", "De schaal", "Hoeveelheid plaatsen", "De maker"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Schaal staat meestal apart.", "Niet legenda.", "Soms in colofon, niet legenda."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een legenda?", tekst: "Een legenda is het 'verklaring-blok' op de kaart waarin staat wat elk symbool of kleur betekent." },
+          ],
+          woorden: [{ woord: "legenda", uitleg: "Verklaring van symbolen en kleuren op een kaart." }],
+          theorie: "Elke kaart heeft een legenda om symbolen te begrijpen. Zonder legenda weet je niet of een groene vlek bos of weiland is.",
+          voorbeelden: [{ type: "stap", tekst: "Bv: blauw = water, groen = bos, bruin = berg/heuvel." }],
+          basiskennis: [{ onderwerp: "Plek op kaart", uitleg: "Vaak in een hoekje van de kaart of apart kader." }],
+          niveaus: {
+            basis: "Uitleg van symbolen + kleuren. A.",
+            simpeler: "Legenda = wat-betekent-wat-tabel naast de kaart. = A.",
+            nogSimpeler: "Symbolen-uitleg = A.",
+          },
+        },
       },
       {
         q: "Schaal **1:50.000**. Op kaart **4 cm**. In het echt?",
