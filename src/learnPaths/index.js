@@ -172,6 +172,7 @@ import recyclenAfvalPo from "./recyclenAfvalPo.js";
 import evolutieMensPo from "./evolutieMensPo.js";
 import algoritmenProgrammerenPo from "./algoritmenProgrammerenPo.js";
 import emotiesSocialePo from "./emotiesSocialePo.js";
+import koudeOorlogModernPo from "./koudeOorlogModernPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -239,6 +240,7 @@ export const ALL_LEARN_PATHS = {
   "evolutie-mens-po": evolutieMensPo,
   "algoritmen-programmeren-po": algoritmenProgrammerenPo,
   "emoties-sociaal-po": emotiesSocialePo,
+  "koude-oorlog-modern-po": koudeOorlogModernPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
