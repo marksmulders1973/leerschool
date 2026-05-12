@@ -146,10 +146,14 @@ Nieuwe examenjaren toevoegen. **Alleen als de PDF-bron daadwerkelijk verifieerba
 ## Prioriteit 3 — Cito-content uitbreiden voor groep 6-8
 
 Alleen ICP-relevant (groep 6-8 ouder die Cito wil oefenen):
-- [ ] `meetkundeBouwsels` — kubus + balk (volume) groep 6-8 — **nieuw pad**
-- [ ] `procentenPo` — % berekenen (1F-niveau) — **nieuw pad**
-- [ ] `grafiekenLezenPo` — staaf/lijn/cirkel-grafiek interpreteren — **nieuw pad**
-- [ ] `gemiddeldenStatistiekPo` — gemiddelde/modus/mediaan groep 7-8 — **nieuw pad**
+- [x] `meetkundeBouwsels` — kubus + balk (volume) groep 6-8 — commit 7b8cd72 (2026-05-12)
+- [x] `procentenPo` — bestaat al; eenheden-bug gefixt commit c93bc84 (2026-05-12)
+- [x] `grafiekenLezenPo` — staaf/lijn/cirkel-grafiek interpreteren — commit 67e023e (2026-05-12)
+- [x] `gemiddeldenStatistiekPo` — gemiddelde/modus/mediaan groep 7-8 — commit 18e3f46 (2026-05-12)
+- [x] `doorstroomtoetsTaalG8` — pilot taal-onderdeel Doorstroomtoets — commit 9d2605e (2026-05-12)
+- [x] `kommagetallenPo` — decimalen groep 6-8 — commit db22c51 (2026-05-12)
+- [x] `tijdsduurRekenenPo` — tijd uitrekenen groep 6-8 — commit 429f526 (2026-05-12)
+- [x] `interpunctiePo` — leestekens + hoofdletters groep 5-7 — commit abc526a (2026-05-12)
 
 ## Wat NIET doen
 
@@ -187,6 +191,7 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 - 2026-05-11 (mega-sessie afsluiting talen) — Hele talen-blok klaar: naamvallenDuits (20, 79c30db), werkwoordsvervoeging (30, 78ca142), onregelmatigeWerkwoordenEngels (28, d4f7103), onregelmatigeWerkwoordenV2Engels (23, 135c09d), argumentatieleer (22, 0518758), tekstanalyse (18, c3dae14), zinsontleding (26, afed8ba), woordsoortenNederlands (24, 77730f3), literatuurgeschiedenis (21, 3b21e95). Totaal 212 extra checks. Hele Prio-1 talen-blok afgerond. Volgende: beta-vakken.
 - 2026-05-11 (beta-blok COMPLEET) — Alle 10 beta-vakken voorzien van uitlegPad: chemischeReactiesScheikunde (21, b5263ff), periodiek (20, 74d343e), celBiologie (24, acf7992), geneticaErfelijkheidBiologie (22, 85566b9), voortplantingHormonenBiologie (28, 0f1456d), elektriciteitNatuurkunde (26, 6402d15), krachtenNatuurkunde (22, f17c8d7), sterrenPlaneten (29, 36dbe40), balansBeco (22, 245c0c1), vraagAanbodEconomie (20, 1601f73). **234 nieuwe uitlegPad-checks**. Daarnaast 2 UI-fixes voor Mark: examenBron-pill upgrade naar gouden banner met examenblad.nl-link (a292a96), welkom-video geluid standaard AAN met autoplay-fallback (5f1c1ee). Hele Prio-1 uitlegPad-werk klaar behalve parabolen.js (32 stappen, separate sessie).
 - 2026-05-11 (parabolen toegevoegd) — Hele parabolen.js (41 checks, commit c73b95a) voorzien van uitlegPad. **Prio-1 uitlegPad-blok COMPLEET.** Alle paden in backlog Prio 1 hebben nu didactische 3-niveau-uitleg.
+- 2026-05-12 — Mega-sessie eenheden-audit + 7 NIEUWE PADEN: bug-fix procentenPo (Mark-melding "100−30=70" zonder %/€), audit-units lint script, fixes geldRekenen + redactiesommen + schattenAfronden + tabellenGrafieken. 7 nieuwe paden: meetkundeBouwsels (volume gr 6-8, 22 checks), grafiekenLezenPo (24), gemiddeldenStatistiekPo (22), doorstroomtoetsTaalG8 (20), kommagetallenPo (26), tijdsduurRekenenPo (24), interpunctiePo (22). ~160 nieuwe checks. Daarnaast CLAUDE.md autonome-modus aangescherpt: nooit pauzeren, skip-and-continue fallback-lijst. Memory feedback_max_autonoom toegevoegd. Hele Prio-3 Cito-content lijst afgevinkt.
 
 ## Peer-review log
 
