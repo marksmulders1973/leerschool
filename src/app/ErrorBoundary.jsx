@@ -5,17 +5,73 @@ import { Component } from "react";
  *
  * Wraps de hele app op het hoogste niveau. Bij een crash:
  * - Logt de error in de console (zodat we 'm zien).
- * - Toont een nette fallback met een "Opnieuw laden"-knop.
- * - Toont de error-message zodat de gebruiker hem kan delen.
+ * - **Chunk-load-error** (na deploy: oude SW serveert oude HTML die naar
+ *   nieuwe-niet-bestaande chunks verwijst) → eenmalig automatisch hard
+ *   reloaden om PWA-cache te bypassen. Counter in sessionStorage tegen
+ *   infinite loop.
+ * - Anders: nette fallback met "Opnieuw laden"-knop + error-message.
  *
  * React error boundaries vangen alleen errors in render / lifecycle —
- * niet async errors of event handlers. Voor die gevallen is ergens
- * anders error-handling nodig (try/catch).
+ * niet async errors of event handlers. Voor async (dynamic imports!)
+ * draait een window 'unhandledrejection'-listener in main.jsx.
  */
+
+// Detecteer chunk-load-errors (Vite/Webpack/Rollup geven net andere msg).
+export function isChunkLoadError(error) {
+  if (!error) return false;
+  const msg = (error.message || String(error)).toLowerCase();
+  return (
+    msg.includes("failed to fetch dynamically imported module") ||
+    msg.includes("loading chunk") ||
+    msg.includes("loading css chunk") ||
+    msg.includes("chunkloaderror") ||
+    msg.includes("importing a module script failed") ||
+    // Safari-variant
+    msg.includes("module specifier")
+  );
+}
+
+// Recovery: clear SW + cache, dan hard reload met cache-buster.
+// Houdt counter bij in sessionStorage om infinite loop te voorkomen
+// (als ook na reload nog steeds chunk-fout = écht stuk, toon fallback).
+const RELOAD_KEY = "lk_chunk_reload_count";
+const MAX_AUTO_RELOAD = 2;
+
+export async function recoverFromChunkError() {
+  try {
+    const count = parseInt(sessionStorage.getItem(RELOAD_KEY) || "0", 10);
+    if (count >= MAX_AUTO_RELOAD) {
+      // Al meermalen geprobeerd — toon fallback, gebruiker doet hard reload.
+      return false;
+    }
+    sessionStorage.setItem(RELOAD_KEY, String(count + 1));
+
+    // 1. Service worker afkoppelen zodat hij niet meer oude HTML serveert.
+    if ("serviceWorker" in navigator) {
+      const regs = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map((r) => r.unregister()));
+    }
+    // 2. Cache Storage leegmaken.
+    if ("caches" in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.map((k) => caches.delete(k)));
+    }
+  } catch (e) {
+    // Negeer fouten in cleanup — gewoon doorgaan met reload.
+    // eslint-disable-next-line no-console
+    console.warn("[ErrorBoundary] cache cleanup error:", e);
+  }
+  // 3. Hard reload met cache-buster query.
+  const url = new URL(window.location.href);
+  url.searchParams.set("_cb", Date.now().toString());
+  window.location.replace(url.toString());
+  return true;
+}
+
 export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false, error: null };
+    this.state = { hasError: false, error: null, recovering: false };
   }
 
   static getDerivedStateFromError(error) {
@@ -25,11 +81,22 @@ export default class ErrorBoundary extends Component {
   componentDidCatch(error, errorInfo) {
     // eslint-disable-next-line no-console
     console.error("[ErrorBoundary] caught:", error, errorInfo);
+    if (isChunkLoadError(error)) {
+      // Probeer automatisch te herstellen (SW + cache wipe + reload).
+      this.setState({ recovering: true });
+      recoverFromChunkError().then((started) => {
+        if (!started) {
+          // Auto-recovery limiet bereikt — laat normale fallback zien.
+          this.setState({ recovering: false });
+        }
+      });
+    }
   }
 
   handleReload = () => {
     if (typeof window !== "undefined") {
-      window.location.reload();
+      // Force hard reload zodat oude SW geen oude HTML meer serveert.
+      recoverFromChunkError().catch(() => window.location.reload());
     }
   };
 
@@ -40,6 +107,33 @@ export default class ErrorBoundary extends Component {
   };
 
   render() {
+    if (this.state.recovering) {
+      return (
+        <div
+          style={{
+            minHeight: "100dvh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 24,
+            background: "linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%)",
+            color: "#e0e6f0",
+            fontFamily: "'Nunito', sans-serif",
+            textAlign: "center",
+          }}
+        >
+          <div style={{ maxWidth: 360 }}>
+            <div style={{ fontSize: 40, marginBottom: 12 }}>♻️</div>
+            <h2 style={{ fontFamily: "'Fredoka', sans-serif", fontSize: 20, margin: "0 0 8px" }}>
+              Nieuwe versie gevonden
+            </h2>
+            <p style={{ fontSize: 14, color: "#bcd", margin: 0 }}>
+              We laden de nieuwste versie van Leerkwartier...
+            </p>
+          </div>
+        </div>
+      );
+    }
     if (this.state.hasError) {
       const msg = this.state.error?.message || String(this.state.error || "Onbekende fout");
       return (
