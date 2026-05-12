@@ -133,6 +133,7 @@ import bevolkingMigratieAardrijkskunde from "./bevolkingMigratieAardrijkskunde.j
 import cseLeesvaardigheidEngels from "./cseLeesvaardigheidEngels.js";
 import stoffenMengselsScheikunde from "./stoffenMengselsScheikunde.js";
 import lichtGeluidNatuurkunde from "./lichtGeluidNatuurkunde.js";
+import mensenrechtenMaatschappijleer from "./mensenrechtenMaatschappijleer.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -280,6 +281,7 @@ export const ALL_LEARN_PATHS = {
   "passe-compose-frans": passeComposeFrans,
   // Maatschappijleer
   "nederlandse-staat-maatschappijleer": nederlandseStaatMaatschappijleer,
+  "mensenrechten-maatschappijleer": mensenrechtenMaatschappijleer,
   // PO Wereld & Natuur
   "dieren-seizoenen-natuur": dierenSeizoenenNatuur,
   "sterren-planeten": sterrenPlaneten,
