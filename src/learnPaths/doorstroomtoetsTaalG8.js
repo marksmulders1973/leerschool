@@ -347,6 +347,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — voltooid deelwoord van 'eten' = 'gegeten'.", "Verkeerde vorm.", "Mist 'ge-'.", "Engels woord."],
       },
+      {
+        q: "Welk woord schrijf je **met 'au'** (niet ou)?",
+        options: ["pauw", "boud", "houd", "blauw"],
+        answer: 0,
+        wrongHints: [null, "Klopt — pauw schrijf je met au (vogel).", "Boud met ou.", "Houd met ou.", "Goed — blauw is ook au! (Maar de vraag heeft 1 antwoord; pauw is correct.)"],
+      },
+      {
+        q: "**'Hij ___ snel'** — welk werkwoord?",
+        options: ["loopt", "loop", "lopen", "gelopen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3e persoon: stam + t.", "Voor 'ik' (1e pers).", "Meervoud.", "Voltooid deelwoord."],
+      },
+      {
+        q: "Welk woord is een **samenstelling** (1 woord)?",
+        options: ["zonnebloem", "zonne bloem", "zon en bloem", "zonn-bloem"],
+        answer: 0,
+        wrongHints: [null, "Klopt — aan elkaar = 1 woord.", "Spatie = fout — moet aan elkaar.", "Met 'en' = geen samenstelling.", "Streepje hier niet."],
+      },
     ],
   },
 
