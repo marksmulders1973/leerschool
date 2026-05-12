@@ -455,6 +455,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — wijn = met ij.", "trein = ei.", "klein = ei.", "Geen NL-woord."],
       },
+      {
+        q: "**Tegenwoordige tijd** van 'lopen' bij 'wij'?",
+        options: ["wij lopen", "wij loopt", "wij looptn", "wij loop"],
+        answer: 0,
+        wrongHints: [null, "Klopt — meervoud = infinitief.", "Enkelvoud-vorm.", "Geen NL.", "Stam zonder uitgang."],
+      },
+      {
+        q: "Welk woord is **goed gespeld**?",
+        options: ["beschuit", "beschuid", "beshuit", "beschwit"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Eindigt op t, niet d.", "Mist c.", "Geen NL."],
+      },
+      {
+        q: "**'Het kind ___ blij'** — welk werkwoord (tegenwoordige tijd)?",
+        options: ["is", "zijn", "was", "ben"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3e persoon enkelvoud.", "Meervoud.", "Verleden tijd.", "1e persoon."],
+      },
     ],
   },
 
