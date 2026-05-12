@@ -110,6 +110,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — letter is kolom, cijfer is rij.", "Niet die zelfde betekenis.", "Niet over afstand.", "Niet over volgorde."],
       },
+      {
+        q: "Tussen **N en O** op kompas: welke windrichting?",
+        options: ["NO (noord-oost)", "ZO", "NW", "ZW"],
+        answer: 0,
+        wrongHints: [null, "Klopt — tussen noord en oost.", "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
+      },
+      {
+        q: "Schaal **1:25.000**. Op kaart **2 cm**. In het echt?",
+        options: ["500 m", "5 km", "50 m", "2,5 km"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 2 × 25.000 = 50.000 cm = 500 m.", "Veel te veel.", "Te weinig — controleer cm→m.", "Verkeerde berekening."],
+      },
+      {
+        q: "Op een kaart staat een **bruine vlek**. Wat betekent dat meestal?",
+        options: ["Berg of heuvel", "Rivier", "Bos", "Stad"],
+        answer: 0,
+        wrongHints: [null, "Klopt — bruin = hoog (berg/heuvel).", "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
+      },
     ],
   },
 
