@@ -307,6 +307,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — alfabetisch zoekregister.", "Inhoud zit voorin.", "Auteurs op pakket of voorpagina.", "Niet primair."],
       },
+      {
+        q: "Welk woord staat **eerder** in woordenboek: 'school' of 'sport'?",
+        options: ["school", "sport", "Beide gelijk", "Niet te zeggen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — s-c komt vóór s-p (c voor p in alfabet).", "s-p komt later.", "Niet gelijk.", "Wel — alfabetisch."],
+      },
+      {
+        q: "**Hoofdwoorden** op pagina-bovenkant van woordenboek — wat zijn ze?",
+        options: ["Eerste + laatste woord op die pagina", "Alle woorden", "Alleen de titel", "Een lijst"],
+        answer: 0,
+        wrongHints: [null, "Klopt — handig bij snel zoeken.", "Niet alle.", "Geen titel.", "Niet primair."],
+      },
+      {
+        q: "Welke is de **eerste letter** in alfabet?",
+        options: ["A", "B", "Z", "Geen volgorde"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tweede.", "Laatste.", "Wel volgorde."],
+      },
     ],
   },
 
