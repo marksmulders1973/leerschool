@@ -163,6 +163,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 30 − 18.", "Verkeerde 2 dagen vergeleken.", "Verkeerde 2 dagen.", "Optelling, geen verschil."],
       },
+      {
+        q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Gemiddeld per dag**?",
+        options: ["18", "20", "15", "90"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 90 ÷ 5 = 18.", "Te veel.", "Te weinig.", "Dat is totaal."],
+      },
+      {
+        q: "Staafdiagram laat zien dat **3e klas** 25 leerlingen heeft, **4e klas** 30. Welk type grafiek **vergelijkt het beste**?",
+        options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tijdlijn"],
+        answer: 0,
+        wrongHints: [null, "Klopt — staaf = vergelijken groepen.", "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
+      },
+      {
+        q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",
+        options: ["37,5%", "30%", "50%", "60%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 30/80 × 100 = 37,5%.", "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
+      },
     ],
   },
 
