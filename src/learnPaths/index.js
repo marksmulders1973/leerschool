@@ -170,6 +170,7 @@ import bekendeNederlandersPo from "./bekendeNederlandersPo.js";
 import werelddelenLandenPo from "./werelddelenLandenPo.js";
 import recyclenAfvalPo from "./recyclenAfvalPo.js";
 import evolutieMensPo from "./evolutieMensPo.js";
+import algoritmenProgrammerenPo from "./algoritmenProgrammerenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -235,6 +236,7 @@ export const ALL_LEARN_PATHS = {
   "werelddelen-landen-po": werelddelenLandenPo,
   "recyclen-afval-po": recyclenAfvalPo,
   "evolutie-mens-po": evolutieMensPo,
+  "algoritmen-programmeren-po": algoritmenProgrammerenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
