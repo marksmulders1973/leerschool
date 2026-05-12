@@ -109,6 +109,7 @@ import gemiddeldenStatistiekPo from "./gemiddeldenStatistiekPo.js";
 import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
 import kommagetallenPo from "./kommagetallenPo.js";
 import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
+import interpunctiePo from "./interpunctiePo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -130,6 +131,7 @@ export const ALL_LEARN_PATHS = {
   "gemiddelden-statistiek-po": gemiddeldenStatistiekPo,
   "kommagetallen-po": kommagetallenPo,
   "tijdsduur-rekenen-po": tijdsduurRekenenPo,
+  "interpunctie-po": interpunctiePo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
