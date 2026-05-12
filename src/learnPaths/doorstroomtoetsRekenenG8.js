@@ -607,6 +607,24 @@ const steps = [
           niveaus: { basis: "2,8 kg (0,8 + 2). A.", simpeler: "800 g = 0,8 kg. 0,8 + 2 = 2,8 kg. = A.", nogSimpeler: "2,8 = A." },
         },
       },
+      {
+        q: "Anne spaart **€5 per week** voor een fiets van **€60**. Hoeveel weken?",
+        options: ["12 weken", "10 weken", "6 weken", "300 weken"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €60 ÷ €5 = 12.", "Verkeerd gedeeld.", "Te kort.", "Veel te lang."],
+      },
+      {
+        q: "Een trein vertrekt **08:45** en rijdt **2u15**. Aankomst?",
+        options: ["11:00", "10:45", "11:30", "10:00"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 08:45 + 2u = 10:45 + 15 min = 11:00.", "Slechts 2 uur opgeteld.", "Te lang.", "Te kort."],
+      },
+      {
+        q: "**240 km** met snelheid **80 km/u** — reistijd?",
+        options: ["3 uur", "2 uur", "4 uur", "240 uur"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 240 ÷ 80 = 3.", "Te kort.", "Te lang.", "Absurd."],
+      },
     ],
   },
 ];
