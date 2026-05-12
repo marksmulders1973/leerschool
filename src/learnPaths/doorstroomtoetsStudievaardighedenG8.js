@@ -367,6 +367,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — komt vóór 'klaar'.", "'Klaar' is het einde.", "Niet noodzakelijk keuze.", "Wel duidelijk."],
       },
+      {
+        q: "Op een kompas: tussen **W en Z** ligt welke richting?",
+        options: ["ZW (zuid-west)", "NW", "NO", "ZO"],
+        answer: 0,
+        wrongHints: [null, "Klopt — tussen west en zuid.", "Tussen N en W.", "Tussen N en O.", "Tussen Z en O."],
+      },
+      {
+        q: "Lijngrafiek: bezoek dierentuin **stijgt** van 100 naar 250 in 3 jaar. Per jaar gemiddeld?",
+        options: ["50", "150", "75", "350"],
+        answer: 0,
+        wrongHints: [null, "Klopt — (250-100)÷3 = 50 stijging per jaar.", "Dat is totale stijging.", "Niet juist berekend.", "Dat is som."],
+      },
+      {
+        q: "Wat doe je **eerst** als je een onderwerp in een dik boek wilt vinden?",
+        options: ["Index achterin checken op onderwerp", "Boek hele lezen", "Plaatjes bekijken", "Eerste hoofdstuk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — directe sprong naar pagina.", "Veel te lang.", "Niet effectief.", "Niet als je specifiek zoekt."],
+      },
     ],
   },
 ];
