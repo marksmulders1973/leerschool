@@ -167,6 +167,7 @@ import digitaleGeletterdheidPo from "./digitaleGeletterdheidPo.js";
 import ruimtevaartPo from "./ruimtevaartPo.js";
 import klassiekeMuziekPo from "./klassiekeMuziekPo.js";
 import bekendeNederlandersPo from "./bekendeNederlandersPo.js";
+import werelddelenLandenPo from "./werelddelenLandenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -229,6 +230,7 @@ export const ALL_LEARN_PATHS = {
   "ruimtevaart-po": ruimtevaartPo,
   "klassieke-muziek-po": klassiekeMuziekPo,
   "bekende-nederlanders-po": bekendeNederlandersPo,
+  "werelddelen-landen-po": werelddelenLandenPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,

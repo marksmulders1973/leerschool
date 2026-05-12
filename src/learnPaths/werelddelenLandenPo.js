@@ -1,0 +1,151 @@
+// Leerpad: Werelddelen + landen - groep 6-8 aardrijkskunde.
+// Cito-relevant topografie. 1F. 4 stappen.
+
+const stepEmojis = ["🌍", "🌏", "🗺️", "🏆"];
+
+const chapters = [
+  { letter: "A", title: "7 werelddelen", emoji: "🌍", from: 0, to: 0 },
+  { letter: "B", title: "Europa + Azië", emoji: "🌏", from: 1, to: 1 },
+  { letter: "C", title: "Andere werelddelen", emoji: "🗺️", from: 2, to: 2 },
+  { letter: "D", title: "Eind-toets", emoji: "🏆", from: 3, to: 3 },
+];
+
+const steps = [
+  {
+    title: "7 werelddelen + 5 oceanen",
+    explanation:
+      "**Werelddelen / continenten** = grote landmassa's op aarde.\n\nDe **7 werelddelen** *(in volgorde van groot naar klein)*:\n\n**1. Azië** *(44 mln km², 60% wereldbevolking)*:\n• Grootste werelddeel.\n• ~4,8 miljard mensen.\n• Land: Mount Everest *(hoogste berg)*, woestijnen, regenwouden.\n• Beroemde landen: China, India, Japan, Indonesië.\n\n**2. Afrika** *(30 mln km², 1,4 miljard mensen)*:\n• Wieg van mensheid *(oudste mens-fossielen)*.\n• Sahara *(grootste woestijn)*.\n• Nijl *(langste rivier)*.\n• 54 landen.\n\n**3. Noord-Amerika** *(24 mln km², 580 mln mensen)*:\n• Vooral VS + Canada + Mexico.\n• Grote rotsbergen, Niagara, woestijnen, prairies.\n\n**4. Zuid-Amerika** *(18 mln km², 430 mln mensen)*:\n• Amazone-regenwoud *(grootste ter wereld)*.\n• Andes-bergen *(2e hoogste keten)*.\n• Brazilië, Argentinië, Chili.\n\n**5. Antarctica** *(14 mln km², geen permanente bewoners)*:\n• Bevroren land om Zuidpool.\n• -89°C koud.\n• Geen landen *(wetenschap-stations)*.\n• 90% van wereld-zoetwater *(in ijs)*.\n\n**6. Europa** *(10 mln km², 750 mln mensen)*:\n• Kleinste continent *(behalve Australië)*.\n• 50 landen.\n• Vele talen + culturen.\n• EU *(27 landen)*.\n\n**7. Oceanië / Australië** *(9 mln km², 45 mln mensen)*:\n• Kleinste werelddeel.\n• Australië + Nieuw-Zeeland + eilanden Pacifc.\n\n**Geheugenezel** *(volgorde grootte)*:\nAap, Aap, Niets, Zwart, Apenhuis, Ezels, Onkruid → A-A-N-Z-A-E-O? Nee, beter:\n*A-A-N-Z-A-E-O* = Azië-Afrika-NoordAmerika-ZuidAmerika-Antarctica-Europa-Oceanië.\n\n**5 oceanen** *(in volgorde van groot)*:\n\n**1. Stille Oceaan / Pacific** *(165 mln km²)*: tussen Azië + Amerika. Grootste!\n**2. Atlantische Oceaan** *(106 mln km²)*: tussen Amerika + Europa/Afrika.\n**3. Indische Oceaan** *(75 mln km²)*: tussen Afrika + Azië + Australië.\n**4. Zuidelijke Oceaan** *(20 mln km²)*: rond Antarctica.\n**5. Noordelijke IJszee / Arctische Oceaan** *(14 mln km²)*: rond Noordpool.\n\n**Vergelijken**:\n• Land: 30% van aardoppervlak.\n• Water: 70%.\n• Stille Oceaan alleen al groter dan alle land samen!\n\n**Verschil tussen continent + land**:\n• **Continent** = grote landmassa.\n• **Land** = politieke eenheid met grenzen + regering.\n• 1 continent kan vele landen hebben.\n• Bv. Europa = 50 landen.\n\n**Wereldbevolking**:\n• **8,1 miljard** mensen *(2024)*.\n• Groeit nog steeds — maar trager.\n• Verwacht piek rond **10 miljard** *(2080)*.\n• Daarna langzame daling *(minder geboorten)*.\n\n**Cito-feitje**:\n**Rusland** = grootste land ter wereld qua oppervlak *(17 mln km²)*. Strekt over **11 tijdzones** — als het 12 uur 's middags is in Moskou, is het al 8 uur 's avonds in Vladivostok.",
+    checks: [
+      {
+        q: "Hoeveel **werelddelen**?",
+        options: ["7", "5", "10", "3"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."],
+      },
+      {
+        q: "**Grootste werelddeel**?",
+        options: ["Azië", "Afrika", "Europa", "Antarctica"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tweede.", "Klein.", "Wel groot maar niet grootst."],
+      },
+      {
+        q: "**Grootste oceaan**?",
+        options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 165 mln km².", "Tweede.", "Derde.", "Vijfde."],
+      },
+      {
+        q: "Hoeveel **wereldbevolking** 2024?",
+        options: ["~8 miljard", "1 miljard", "100 miljard", "500 miljoen"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Veel minder.", "Onmogelijk.", "Te weinig."],
+      },
+    ],
+  },
+  {
+    title: "Europa + Azië",
+    explanation:
+      "**EUROPA** 🇪🇺:\n\nNL ligt hier. **50 landen** + ~750 miljoen mensen.\n\n**EU (Europese Unie)**:\n• Sinds **1957** *(toen EEG)*.\n• **27 landen** lid *(2024)*.\n• Open grenzen *(Schengen)*.\n• **Euro** *(€)* sinds 2002.\n• Brussel = hoofdkwartier.\n\n**Grote Europese landen + hoofdsteden**:\n• **Frankrijk** *(Parijs)* — 65 mln mensen.\n• **Duitsland** *(Berlijn)* — 84 mln, grootste EU-land.\n• **Italië** *(Rome)* — 59 mln.\n• **Spanje** *(Madrid)* — 47 mln.\n• **Polen** *(Warschau)* — 38 mln.\n• **Verenigd Koninkrijk** *(Londen)* — 67 mln *(geen EU sinds Brexit 2020)*.\n• **Nederland** *(Amsterdam — hoofdstad, Den Haag — regering)* — 17,9 mln.\n• **België** *(Brussel)* — 11,7 mln.\n• **Rusland** *(Moskou)* — grootste land, deels Europa-deels Azië.\n\n**Skandinavië**:\n• **Noorwegen** *(Oslo)*, **Zweden** *(Stockholm)*, **Denemarken** *(Kopenhagen)*, **Finland** *(Helsinki)*, **IJsland** *(Reykjavik)*.\n• Welvarende landen, koud, sociaal.\n\n**Andere**:\n• Portugal, Griekenland, Ierland, Oostenrijk, Zwitserland *(buiten EU)*, Tsjechië, Hongarije, Roemenië, etc.\n\n**Bekende meren + rivieren**:\n• **Donau** *(2.860 km, door 10 landen)*.\n• **Volga** *(3.530 km, in Rusland, langste Europa)*.\n• **Rijn** *(door NL en 5 landen)*.\n• **Theems** *(Engeland)*.\n• **Seine** *(Frankrijk)*.\n\n**Bekende bergen**:\n• **Alpen** *(Italië/Zwitserland/Oostenrijk)*: **Mont Blanc** 4810 m hoogste.\n• **Pyreneeën** *(Spanje/Frankrijk)*.\n• **Karpaten** *(Oost-Europa)*.\n• **Kaukasus** *(Rusland/Georgië)*: Elbrus 5642 m, Europa's hoogste berg.\n\n**AZIË** 🌏:\n\n**~4,8 miljard** mensen *(60% wereldbevolking!)* + 48 landen.\n\n**Grote Aziatische landen + hoofdsteden**:\n• **China** *(Beijing)* — 1,41 miljard mensen, 2e van wereld.\n• **India** *(New Delhi)* — 1,43 miljard, grootste land qua mensen *(sinds 2023)*.\n• **Indonesië** *(Jakarta)* — 280 mln, NL-oude kolonie.\n• **Pakistan** *(Islamabad)*, **Bangladesh** *(Dhaka)*.\n• **Japan** *(Tokio)* — 125 mln, eilanden.\n• **Filipijnen** *(Manila)*.\n• **Vietnam, Thailand, Maleisië**.\n• **Rusland** *(deels)*.\n\n**Midden-Oosten** *(Azië)*:\n• **Saoedi-Arabië** *(Riyad)* — Mekka + Medina.\n• **Iran** *(Teheran)*.\n• **Israël** *(Jeruzalem)*, **Palestina**.\n• **Turkije** *(Ankara)* — deels Azië-deels Europa.\n• **Verenigde Arabische Emiraten** *(Abu Dhabi, Dubai)*.\n\n**Beroemde plekken**:\n• **Mount Everest** *(8.849 m, Nepal/Tibet)* — hoogste berg.\n• **Dood Zee** *(Israël)* — laagste punt op aarde *(-430 m)*.\n• **Gobi-woestijn** *(China/Mongolië)*.\n• **Yangtze** *(China)* — 3e langste rivier wereldwijd.\n• **Taj Mahal** *(India, 17e eeuw)*.\n• **Grote Muur China** *(20.000+ km)*.\n\n**Religies in Azië**:\n• Boeddhisme, hindoeïsme, islam, christendom, jodendom — allemaal **ontstaan** in Azië!\n\n**Cito-feitje**:\nDe **Stille Oceaan** *(Pacific)* is zo groot dat alle continenten samen er in zouden passen — met nog ruimte over. Genoemd '**stille**' door Magellan in 1520 omdat hij rustig water vond — vaak is hij juist niet stil.",
+    checks: [
+      {
+        q: "Hoofdstad van **Frankrijk**?",
+        options: ["Parijs", "Lyon", "Marseille", "Bordeaux"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Steden niet hoofdstad.", "Niet.", "Niet."],
+      },
+      {
+        q: "**Grootste land** qua bevolking 2024?",
+        options: ["India (~1,43 miljard)", "China", "VS", "Rusland"],
+        answer: 0,
+        wrongHints: [null, "Klopt — passeerde China 2023.", "Recent niet meer.", "Veel minder.", "Veel minder."],
+      },
+      {
+        q: "**Hoogste berg** ter wereld?",
+        options: ["Mount Everest (Nepal)", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 8849 m.", "Europa.", "Afrika.", "Zuid-Amerika."],
+      },
+      {
+        q: "Hoeveel **landen in EU** (2024)?",
+        options: ["27", "50", "10", "100"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Brexit 2020.", "Heel Europa.", "Te weinig.", "Te veel."],
+      },
+    ],
+  },
+  {
+    title: "Amerika + Afrika + Oceanië",
+    explanation:
+      "**NOORD-AMERIKA** 🌎:\n\n**Verenigde Staten (VS)** *(Washington D.C.)*:\n• 333 miljoen mensen.\n• 50 staten *(California, Texas, Florida, New York, etc.)*.\n• Beroemd: Statue of Liberty, Grand Canyon, Hollywood, NASA, Disney.\n• Vlag = 'Stars and Stripes' *(50 sterren + 13 strepen)*.\n\n**Canada** *(Ottawa)*:\n• 2e grootste land in **oppervlak** *(9,98 mln km²)*.\n• Maar weinig bevolking *(40 mln)* — vooral natuur.\n• Toronto, Vancouver, Montreal.\n• Talen: Engels + Frans.\n\n**Mexico** *(Mexico-Stad)*:\n• 130 mln mensen.\n• Spaans-talig.\n• Maya + Azteken-erfgoed.\n• Cancun, Tulum *(toerisme)*.\n\n**Caribisch gebied**:\n• **Cuba** *(Havana)*, **Jamaica**, **Haïti**, **Dominicaanse Republiek**.\n• **Aruba, Curaçao, Bonaire, St. Maarten, Saba, St. Eustatius** = NL-Caribisch *(deel van Koninkrijk NL)*.\n\n**ZUID-AMERIKA** 🌎:\n\n**Brazilië** *(Brasília)*:\n• Grootste ZA-land.\n• 215 mln mensen.\n• Portugees-talig *(rest van ZA: Spaans)*.\n• Amazone-regenwoud — grootste regenwoud ter wereld.\n• Rio de Janeiro met **Christus de Verlosser**-standbeeld.\n• Beroemde carnaval.\n• Voetbal-grootmacht.\n\n**Argentinië** *(Buenos Aires)*:\n• Tango + tango.\n• Voetbal *(Messi)*.\n• Pampas *(grasvlakten)*.\n• Patagonië *(zuidpunt)*.\n\n**Chili** *(Santiago)*:\n• Lange smalle vorm langs Andes.\n• Atacama-woestijn *(droogste).*\n\n**Peru** *(Lima)*:\n• Machu Picchu *(Inca-stad)*.\n• Andes.\n\n**Andere**: Colombia, Venezuela, Ecuador, Bolivia, Paraguay, Uruguay, Guyana, Suriname *(NL-kolonie tot 1975, NL-talig)*.\n\n**AFRIKA** 🌍:\n\n**54 landen**! Veel verscheidenheid.\n\n**Noord-Afrika** *(Arabisch + islam vooral)*:\n• **Egypte** *(Cairo)*: piramides, Nijl-rivier, Sphinx.\n• **Marokko** *(Rabat)*: Sahara, Berberse cultuur.\n• **Algerije, Tunesië, Libië**.\n\n**West-Afrika**:\n• **Nigeria** *(Abuja)*: grootste land Afrika qua bevolking *(220 mln)*, Lagos-megastad.\n• **Senegal, Ghana, Ivoorkust, Mali**.\n\n**Oost-Afrika**:\n• **Ethiopië** *(Addis Abeba)*: oudste mens-fossielen.\n• **Kenia** *(Nairobi)*: safari + Masai.\n• **Tanzania** *(Dodoma)*: Kilimanjaro, Serengeti.\n\n**Zuid-Afrika** *(Pretoria/Kaapstad/Bloemfontein — 3 hoofdsteden)*:\n• 60 mln.\n• Nelson Mandela.\n• Apartheid-verleden tot 1994.\n• Afrikaans-taal *(uit Nederlands)*.\n• Tafelberg.\n\n**Sahara**: grootste hete woestijn *(9 mln km²)*.\n**Nijl**: langste rivier ter wereld *(6.650 km)*.\n**Victoria-meer**: groot meer Oost-Afrika.\n**Kilimanjaro** *(Tanzania)*: 5895 m, hoogste Afrika.\n\n**Dieren-erfgoed**:\nGiraffes, olifanten, leeuwen, neushoorns, gorilla's, chimpansees, zebra's, krokodillen.\n\n**OCEANIË / AUSTRALIË** 🇦🇺:\n\n**Australië** *(Canberra)*:\n• 26 mln mensen.\n• Eiland-continent.\n• Bekende plekken: Sydney *(Opera House)*, Great Barrier Reef, Uluru *(Ayers Rock)*.\n• Dieren: kangoeroe, koala, vogelbekdier, krokodil.\n• Bevolking: 80% **aan kust** *(binnenland = woestijn 'outback')*.\n\n**Nieuw-Zeeland** *(Wellington)*:\n• 2 grote eilanden.\n• Lord of the Rings-filmlocaties.\n• Schapen-grootmacht *(meer schapen dan mensen)*.\n• Maori-cultuur.\n\n**Eilanden Pacific**:\n• **Papoea-Nieuw-Guinea, Fiji, Samoa, Tonga, Vanuatu**.\n• Klein vele eilanden.\n\n**Hawaï** *(VS-staat)*: vulkanische eilanden in Pacific.\n\n**Antarctica** ❄️:\n• Geen vaste bewoners.\n• 70 onderzoeksstations van verschillende landen.\n• Bevroren land.\n• Pinguïns, zeehonden.\n• 30 miljoen jaar geleden was er bos!\n• Klimaatverandering = ijs smelt.\n\n**Cito-feitje**:\nIn **Australië** rij je **links** op de weg *(zoals UK, Japan, India, Zuid-Afrika)*. In meeste landen rechts. Historisch *(Romeinen + ridders met zwaard rechts → links rijden)*. Helft van wereld rijdt links, helft rechts.",
+    checks: [
+      {
+        q: "Hoofdstad van **Brazilië**?",
+        options: ["Brasília", "Rio de Janeiro", "São Paulo", "Buenos Aires"],
+        answer: 0,
+        wrongHints: [null, "Klopt — niet Rio!.", "Bekend maar niet hoofdstad.", "Bekend maar niet hoofdstad.", "Argentinië."],
+      },
+      {
+        q: "**Langste rivier** ter wereld?",
+        options: ["Nijl (Egypte, 6650 km)", "Amazone", "Yangtze", "Mississippi"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tweede.", "Derde.", "Vierde."],
+      },
+      {
+        q: "Welk land heeft **Tafelberg** + Mandela?",
+        options: ["Zuid-Afrika", "Nigeria", "Egypte", "Brazilie"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Andere.", "Andere.", "Niet."],
+      },
+      {
+        q: "Welk dier is **typisch Australië**?",
+        options: ["Kangoeroe", "Leeuw", "Tijger", "Olifant"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Afrika.", "Azië.", "Afrika/Azië."],
+      },
+    ],
+  },
+  {
+    title: "Eind-toets — wereld mix",
+    explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
+    checks: [
+      { q: "Hoeveel **werelddelen**?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."] },
+      { q: "**Grootste** werelddeel?", options: ["Azië", "Afrika", "Europa", "Australie"], answer: 0, wrongHints: [null, "Klopt.", "Tweede.", "Klein.", "Kleinst."] },
+      { q: "**Hoogste berg** ter wereld?", options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"], answer: 0, wrongHints: [null, "Klopt — Nepal.", "Europa.", "Afrika.", "Zuid-Amerika."] },
+      { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Duitsland.", "Spanje."] },
+      { q: "**Hoofdstad** Brazilië?", options: ["Brasília", "Rio", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Klopt.", "Stad maar geen hoofdstad.", "Argentinië.", "Peru."] },
+      { q: "**Grootste oceaan**?", options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"], answer: 0, wrongHints: [null, "Klopt.", "Tweede.", "Derde.", "Klein."] },
+    ],
+  },
+];
+
+steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
+
+const werelddelenLandenPo = {
+  id: "werelddelen-landen-po",
+  title: "Werelddelen + landen (Cito groep 6-8)",
+  emoji: "🌍",
+  level: "groep6-8",
+  subject: "wereldorientatie",
+  referentieNiveau: "1F",
+  sloThema: "Wereldoriëntatie — aardrijkskunde / topografie",
+  prerequisites: [
+    { id: "continenten-wereld-po", title: "Continenten wereld", niveau: "1F" },
+    { id: "topografie-nederland", title: "Topografie NL", niveau: "1F" },
+  ],
+  intro:
+    "Werelddelen + landen voor Cito groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazone, Great Wall, Christ Verlosser, Taj Mahal) + Antarctica. ~15 min.",
+  triggerKeywords: [
+    "werelddeel", "continent",
+    "Azië", "Afrika", "Europa",
+    "Noord-Amerika", "Zuid-Amerika",
+    "Australië", "Oceanië", "Antarctica",
+    "oceaan", "Pacific", "Atlantisch",
+    "hoofdstad", "land",
+    "Everest", "Nijl", "Sahara", "Amazone",
+    "Brazilië", "China", "India", "VS",
+  ],
+  chapters,
+  steps,
+};
+
+export default werelddelenLandenPo;
