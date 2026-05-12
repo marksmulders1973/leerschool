@@ -169,22 +169,38 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
 
       <div style={{ padding: "16px 20px 40px", display: "flex", flexDirection: "column", gap: 16 }}>
 
-        {/* Groep selector — altijd zichtbaar */}
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700 }}>
-            Welke groep?
-          </span>
-          {["7", "8"].map(g => (
-            <button key={g} onClick={() => setGroep(g)} style={{
-              padding: "6px 18px", borderRadius: 10, cursor: "pointer",
-              border: groep === g ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
-              background: groep === g ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
-              color: groep === g ? "#ff6b35" : "rgba(255,255,255,0.55)",
-              fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700,
-            }}>
-              Groep {g}
-            </button>
-          ))}
+        {/* Groep selector — altijd zichtbaar. Mark 2026-05-12: hint-zin
+            erbij omdat onduidelijk was wat groep 7 vs groep 8 voor
+            verschil maakt. De Doorstroomtoets is officieel in groep 8;
+            groep 7 = vroege voorbereiding (een jaar vooruit oefenen). */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", fontWeight: 700 }}>
+              Welke groep?
+            </span>
+            {["7", "8"].map(g => (
+              <button key={g} onClick={() => setGroep(g)} style={{
+                padding: "6px 18px", borderRadius: 10, cursor: "pointer",
+                border: groep === g ? "2px solid #ff6b35" : "1px solid rgba(255,255,255,0.15)",
+                background: groep === g ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.05)",
+                color: groep === g ? "#ff6b35" : "rgba(255,255,255,0.55)",
+                fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700,
+              }}>
+                Groep {g}
+              </button>
+            ))}
+          </div>
+          <div style={{
+            fontFamily: "var(--font-body)",
+            fontSize: 11.5,
+            color: "rgba(255,255,255,0.45)",
+            lineHeight: 1.4,
+            paddingLeft: 2,
+          }}>
+            {groep === "7"
+              ? "📅 Groep 7 = vroege voorbereiding. Je gaat de Doorstroomtoets pas in groep 8 maken — nu vast oefenen helpt."
+              : "📅 Groep 8 = dit jaar Doorstroomtoets, begin februari. Je vooruitgang per groep wordt apart bijgehouden."}
+          </div>
         </div>
 
         {/* Stap 1: kies wat je wilt doen */}
