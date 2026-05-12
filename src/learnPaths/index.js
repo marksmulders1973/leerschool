@@ -119,6 +119,7 @@ import tafelsPo from "./tafelsPo.js";
 import delenPo from "./delenPo.js";
 import toestandStoffenPo from "./toestandStoffenPo.js";
 import dierenklassenPo from "./dierenklassenPo.js";
+import fotosyntheseBiologie from "./fotosyntheseBiologie.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -206,6 +207,7 @@ export const ALL_LEARN_PATHS = {
   // Biologie
   "cel-biologie": celBiologie,
   "voortplanting-hormonen-biologie": voortplantingHormonenBiologie,
+  "fotosynthese-biologie": fotosyntheseBiologie,
   "genetica-erfelijkheid-biologie": geneticaErfelijkheidBiologie,
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
