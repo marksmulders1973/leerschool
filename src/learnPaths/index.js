@@ -143,6 +143,7 @@ import cseSchrijfvaardigheidEngels from "./cseSchrijfvaardigheidEngels.js";
 import bbpConjunctuurEconomie from "./bbpConjunctuurEconomie.js";
 import cseSchrijfvaardigheidNederlands from "./cseSchrijfvaardigheidNederlands.js";
 import financieleVormingPo from "./financieleVormingPo.js";
+import brugklasOrientatie from "./brugklasOrientatie.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -225,6 +226,7 @@ export const ALL_LEARN_PATHS = {
   "bbp-conjunctuur-economie": bbpConjunctuurEconomie,
   "cse-schrijfvaardigheid-nederlands": cseSchrijfvaardigheidNederlands,
   "financiele-vorming-po": financieleVormingPo,
+  "brugklas-orientatie": brugklasOrientatie,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
