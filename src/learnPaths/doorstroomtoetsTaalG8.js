@@ -177,6 +177,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — gewond aan voet/been.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
       },
+      {
+        q: "Welk woord is een **synoniem** voor **'beginnen'**?",
+        options: ["Starten", "Eindigen", "Stoppen", "Wachten"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Tegenovergesteld.", "Niet primair."],
+      },
+      {
+        q: "*'Het was een **uitzonderlijke** prestatie.'* Wat betekent uitzonderlijk?",
+        options: ["Bijzonder / zeldzaam", "Slecht", "Snel", "Saai"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'uit-zondering' = niet normaal.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+      },
+      {
+        q: "Welk woord betekent **hetzelfde als** **'mooi'**?",
+        options: ["Prachtig", "Lelijk", "Snel", "Klein"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet.", "Niet primair."],
+      },
     ],
   },
 
