@@ -198,6 +198,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 0,8 ÷ 2 = 0,4.", "Dat is 2× zo veel.", "10x te weinig.", "Helft van 1."],
       },
+      {
+        q: "Welk getal is **kleiner**: 0,25 of 1/3?",
+        options: ["0,25", "1/3", "Even groot", "Niet te bepalen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1/3 ≈ 0,33, dus 0,25 < 0,33.", "Niet — kleiner zoeken.", "Niet.", "Wel."],
+      },
+      {
+        q: "**Vereenvoudig 12/16**.",
+        options: ["3/4", "6/8", "1/2", "12/16"],
+        answer: 0,
+        wrongHints: [null, "Klopt — beide ÷4.", "Klopt waarde maar niet helemaal vereenvoudigd.", "Niet — die is kleiner.", "Niet vereenvoudigd."],
+      },
+      {
+        q: "Hoeveel is **3/4 van 20**?",
+        options: ["15", "5", "12", "60"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 20÷4×3 = 15.", "Dat is 1/4.", "Verkeerd berekend.", "Veel te veel."],
+      },
     ],
   },
 
