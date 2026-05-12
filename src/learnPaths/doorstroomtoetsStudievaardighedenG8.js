@@ -269,6 +269,24 @@ const steps = [
       },
       {
         q: "Lijngrafiek temperatuur: 18, 22, 25, 23, 19 °C *(over 5 dagen)*. Wat is het **patroon**?",
+        uitlegPad: {
+          stappen: [
+            { titel: "Kijk per stap", tekst: "18 → 22 (stijgt), 22 → 25 (stijgt), 25 → 23 (daalt), 23 → 19 (daalt)." },
+            { titel: "Patroon herkennen", tekst: "Eerst 2× stijgen tot 25 (top), daarna 2× dalen. Patroon: piek in midden." },
+          ],
+          woorden: [
+            { woord: "lijngrafiek", uitleg: "Grafiek met punten verbonden door een lijn — toont verandering door tijd." },
+            { woord: "patroon", uitleg: "Vorm of trend die je herkent." },
+          ],
+          theorie: "Lijngrafiek-patronen: 'steeds stijgend' / 'steeds dalend' / 'eerst stijgen dan dalen' (piek) / 'eerst dalen dan stijgen' (dal) / 'wisselend'.",
+          voorbeelden: [{ type: "stap", tekst: "Temperatuur door dag: vroeg laag, midden hoog, avond weer laag → klassiek 'piek'-patroon." }],
+          basiskennis: [{ onderwerp: "Top of dal", uitleg: "Top = hoogste punt midden in. Dal = laagste punt midden in." }],
+          niveaus: {
+            basis: "Eerst stijgen, dan dalen (piek in midden). A.",
+            simpeler: "Tot dag 3 omhoog (25 = piek), daarna omlaag. = A.",
+            nogSimpeler: "Op-neer = A.",
+          },
+        },
         options: ["Eerst stijgen, dan dalen", "Steeds stijgen", "Steeds dalen", "Geen patroon"],
         answer: 0,
         wrongHints: [null, "Klopt — top op dag 3, daarna omlaag.", "Niet — daalt na 25.", "Niet — stijgt eerst.", "Wel patroon zichtbaar."],
@@ -491,6 +509,23 @@ const steps = [
         options: ["Stappen met pijlen", "Een tabel", "Een kaart", "Een grafiek"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Geen stappen-volgorde.", "Geen kaart.", "Niet schema."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stroomdiagram visueel", tekst: "Een stroomdiagram (flowchart) toont een proces met blokken (stappen) en pijlen (volgorde). Bv. start → 'water koken' → 'thee zetten' → klaar." },
+          ],
+          woorden: [
+            { woord: "stroomdiagram", uitleg: "Schema met stappen, pijlen en eventueel keuzes (ruiten)." },
+            { woord: "pijl", uitleg: "Geeft de richting/volgorde aan tussen stappen." },
+          ],
+          theorie: "Stroomdiagram = visueel stappenplan. Verschilt van tabel (rij/kolom), kaart (geografisch), grafiek (data-vergelijking).",
+          voorbeelden: [{ type: "stap", tekst: "Telefoonboom: 'Vraag X? ja → A / nee → B'. Met ruiten voor de vraag." }],
+          basiskennis: [{ onderwerp: "Vormen", uitleg: "Rechthoek = stap, ruit = keuze, ovaal/cirkel = start/eind, pijl = verbinding." }],
+          niveaus: {
+            basis: "Stappen met pijlen. A.",
+            simpeler: "Een schema dat 'wat-eerst, wat-daarna' aangeeft met pijlen. = A.",
+            nogSimpeler: "Stappen + pijlen = A.",
+          },
+        },
       },
       {
         q: "Bij **'taart bakken'** — wat doe je **eerst**?",
