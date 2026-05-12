@@ -455,6 +455,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — omtrek = 2 × (5+8) = 26 m.", "Dat is oppervlakte, niet omtrek.", "Halve omtrek.", "Niet."],
       },
+      {
+        q: "**3,5 kg** in **gram**?",
+        options: ["3500 g", "350 g", "35 g", "35.000 g"],
+        answer: 0,
+        wrongHints: [null, "Klopt — kg × 1000.", "Te weinig.", "Te weinig.", "Te veel."],
+      },
+      {
+        q: "Schaal **1:1.000.000** (atlas). **3 cm** op kaart = ?",
+        options: ["30 km", "3 km", "300 m", "300 km"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3 × 1.000.000 cm = 30.000 m = 30 km.", "Te weinig.", "Veel te weinig.", "Te veel."],
+      },
+      {
+        q: "Een driehoek heeft **basis 6 cm** en **hoogte 4 cm**. Oppervlakte?",
+        options: ["12 cm²", "24 cm²", "10 cm²", "6 cm²"],
+        answer: 0,
+        wrongHints: [null, "Klopt — opp = ½ × basis × hoogte = ½ × 6 × 4 = 12.", "Vergeten ½ — dat is rechthoek-opp.", "Optellen werkt niet.", "Halve hoogte."],
+      },
     ],
   },
 
