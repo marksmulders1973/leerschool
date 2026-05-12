@@ -124,6 +124,7 @@ import goudenEeuwGeschiedenis from "./goudenEeuwGeschiedenis.js";
 import middeleeuwenGeschiedenis from "./middeleeuwenGeschiedenis.js";
 import franseRevolutieGeschiedenis from "./franseRevolutieGeschiedenis.js";
 import comparativesEngels from "./comparativesEngels.js";
+import doorstroomtoetsStudievaardighedenG8 from "./doorstroomtoetsStudievaardighedenG8.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -228,6 +229,7 @@ export const ALL_LEARN_PATHS = {
   "cito-strategieen-groep8": citoStrategieenGroep8,
   "doorstroomtoets-rekenen-g8": doorstroomtoetsRekenenG8,
   "doorstroomtoets-taal-g8": doorstroomtoetsTaalG8,
+  "doorstroomtoets-studievaardigheden-g8": doorstroomtoetsStudievaardighedenG8,
   "begrijpend-lezen-strategie": begrijpendLezenStrategie,
   // Natuurkunde
   "krachten-natuurkunde": krachtenNatuurkunde,
