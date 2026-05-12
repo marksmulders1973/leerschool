@@ -448,6 +448,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — ruit = keuze.", "Rechthoek = gewone stap.", "Cirkel = start/eind.", "Pijl = verbinding."],
       },
+      {
+        q: "In stroomdiagram: welke vorm voor **start of einde**?",
+        options: ["Cirkel of ovaal", "Ruit", "Rechthoek", "Driehoek"],
+        answer: 0,
+        wrongHints: [null, "Klopt — afgerond = start/eind.", "Keuze.", "Stap.", "Niet."],
+      },
+      {
+        q: "Wat is het **voordeel** van schema's?",
+        options: ["Veel informatie kort + duidelijk", "Mooi om naar te kijken", "Saai", "Verplicht door school"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Niet primair.", "Tegenovergesteld.", "Niet."],
+      },
+      {
+        q: "Bij **conflict-oplossen** is welke vorm handig?",
+        options: ["Stappenplan (volgorde acties)", "Cirkeldiagram", "Atlas", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Voor verhoudingen.", "Voor plaatsen.", "Wel iets."],
+      },
     ],
   },
 
