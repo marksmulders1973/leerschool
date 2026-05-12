@@ -114,6 +114,9 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
   // Default: kies de bucket van de leerling's eigen userLevel als die er is.
   const myBucket = userLevel ? parseLevel(userLevel).bucketKey : null;
   const [classFilter, setClassFilter] = useState(myBucket);
+  // Zoekbalk-state (P0b vindbaarheid bij 67+ PO-paden, audit 2026-05-12).
+  // Filtert paden op title + triggerKeywords + subject.
+  const [searchQuery, setSearchQuery] = useState("");
   // Reset class-filter naar "mijn klas" wanneer de leerling van vak wisselt.
   // Anders blijft een vorige keuze hangen die op het nieuwe vak misschien
   // niets oplevert.
@@ -421,6 +424,56 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
           Kies een onderwerp om vanaf de basis op te bouwen — uitleg, plaatjes en mini-toetsen per stap. Je voortgang blijft bewaard.
         </p>
 
+        {/* Zoekbalk (P0b — vindbaarheid 60+ paden, audit 2026-05-12) */}
+        <div style={{ position: "relative", marginBottom: 14 }}>
+          <input
+            type="search"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Zoek een onderwerp — bijv. 'breuken' of 'puberteit'"
+            style={{
+              width: "100%",
+              padding: "11px 38px 11px 38px",
+              borderRadius: 10,
+              border: `1px solid ${C.border}`,
+              background: "rgba(20,30,50,0.6)",
+              color: C.text,
+              fontSize: 14,
+              fontFamily: "var(--font-body)",
+              outline: "none",
+              boxSizing: "border-box",
+            }}
+            aria-label="Zoek een leeronderwerp"
+          />
+          <span style={{
+            position: "absolute",
+            left: 12,
+            top: "50%",
+            transform: "translateY(-50%)",
+            color: C.muted,
+            fontSize: 16,
+            pointerEvents: "none",
+          }}>🔍</span>
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              style={{
+                position: "absolute",
+                right: 8,
+                top: "50%",
+                transform: "translateY(-50%)",
+                background: "transparent",
+                border: "none",
+                color: C.muted,
+                cursor: "pointer",
+                padding: "4px 8px",
+                fontSize: 16,
+              }}
+              aria-label="Zoekopdracht wissen"
+            >✕</button>
+          )}
+        </div>
+
         <LeerpadBot
           paths={ALL_LEARN_PATHS}
           subject={effectiveFilter}
@@ -501,9 +554,24 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
               ? classFilter
               : null;
 
-            const filteredPaths = activeFilter
+            const classFilteredPaths = activeFilter
               ? pathList.filter((p) => parseLevel(p.level).bucketKey === activeFilter)
               : pathList;
+
+            // Search-filter: title + triggerKeywords + subject + intro.
+            const q = searchQuery.trim().toLowerCase();
+            const filteredPaths = q
+              ? classFilteredPaths.filter((p) => {
+                  const hay = [
+                    p.title,
+                    p.intro,
+                    p.subject,
+                    p.sloThema,
+                    ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
+                  ].filter(Boolean).join(" ").toLowerCase();
+                  return hay.includes(q);
+                })
+              : classFilteredPaths;
 
             // Sortering: bij "alle klassen" gesorteerd op nabijheid van
             // leerling's eigen klas (zelfde klas eerst, dan op afstand).
