@@ -112,6 +112,7 @@ import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
 import interpunctiePo from "./interpunctiePo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
+import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -136,6 +137,7 @@ export const ALL_LEARN_PATHS = {
   "interpunctie-po": interpunctiePo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
+  "lichaam-gezondheid-po": lichaamGezondheidPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
