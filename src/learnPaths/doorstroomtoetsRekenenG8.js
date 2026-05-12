@@ -563,6 +563,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 1 ton = 1000 kg, half = 500.", "Te weinig.", "Te veel.", "Veel te weinig."],
       },
+      {
+        q: "**1500 mm** in **m**?",
+        options: ["1,5 m", "15 m", "0,15 m", "150 m"],
+        answer: 0,
+        wrongHints: [null, "Klopt — mm ÷ 1000 = m.", "Te veel.", "Te weinig.", "Te veel."],
+      },
+      {
+        q: "Een **kubus** met zijde **5 cm** — volume?",
+        options: ["125 cm³", "25 cm³", "15 cm³", "75 cm³"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 5³ = 5×5×5 = 125.", "Dat is opp 1 zijde.", "Optelsom — niet.", "Verkeerd berekend."],
+      },
+      {
+        q: "**Omtrek cirkel** met diameter 10 cm? *(π ≈ 3,14)*",
+        options: ["31,4 cm", "78,5 cm", "10 cm", "100 cm"],
+        answer: 0,
+        wrongHints: [null, "Klopt — omtrek = π × d = 3,14 × 10.", "Dat is opp niet omtrek.", "Diameter zelf.", "Te veel."],
+      },
     ],
   },
 
