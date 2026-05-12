@@ -216,6 +216,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 20÷4×3 = 15.", "Dat is 1/4.", "Verkeerd berekend.", "Veel te veel."],
       },
+      {
+        q: "Wat is **5/6 − 1/2**?",
+        options: ["1/3", "4/4", "1/6", "2/3"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 5/6 − 3/6 = 2/6 = 1/3.", "Niet zo.", "Te klein.", "Te groot."],
+      },
+      {
+        q: "Schrijf **2 1/2 als onechte breuk** (teller groter).",
+        options: ["5/2", "21/2", "2/2", "3/2"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 2×2+1 = 5.", "Niet — getal aan elkaar = fout.", "Dat is 1.", "Dat is 1 1/2."],
+      },
+      {
+        q: "**4 × 0,25** is?",
+        options: ["1", "0,1", "10", "4,25"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 4 × 1/4 = 1.", "10x te weinig.", "10x te veel.", "Optellen, niet."],
+      },
     ],
   },
 
