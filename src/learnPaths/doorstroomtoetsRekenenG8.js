@@ -346,6 +346,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — helft van een helft = kwart.", "Niet halveert.", "Dat is dubbel.", "Niet nul."],
       },
+      {
+        q: "Een artikel van **€120 is in de uitverkoop voor €90**. **% korting**?",
+        options: ["25%", "30%", "75%", "33%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — €30 ÷ €120 = 25%.", "Verkeerde berekening.", "Niet — dat is wat je betaalt.", "Iets te veel."],
+      },
+      {
+        q: "Verhouding **2:5** opnieuw uitdrukken als breuk **van de kleinste in totaal**?",
+        options: ["2/7", "2/5", "5/7", "1/3"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 2 delen op totaal 7 delen (2+5).", "Niet — dat is 2 op 5, niet totaal 7.", "Andere deel.", "Verkeerd."],
+      },
+      {
+        q: "**80% van 50** is?",
+        options: ["40", "30", "20", "100"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 80/100 × 50 = 40.", "Te weinig.", "Te weinig.", "Te veel."],
+      },
     ],
   },
 
