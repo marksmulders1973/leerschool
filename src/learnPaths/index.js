@@ -150,6 +150,7 @@ import energiebronnenPo from "./energiebronnenPo.js";
 import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
 import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
 import politiekDemocratiePo from "./politiekDemocratiePo.js";
+import dichtenPoezieRijmenPo from "./dichtenPoezieRijmenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -177,6 +178,7 @@ export const ALL_LEARN_PATHS = {
   "lichaam-gezondheid-po": lichaamGezondheidPo,
   "synoniemen-tegenstellingen-po": synoniemenTegenstellingenPo,
   "spreekwoorden-uitdrukkingen-po": spreekwoordenUitdrukkingenPo,
+  "dichten-poezie-rijmen-po": dichtenPoezieRijmenPo,
   "water-erfgoed-nederland-po": waterErfgoedNederlandPo,
   "tafels-po": tafelsPo,
   "delen-po": delenPo,
