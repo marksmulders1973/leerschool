@@ -382,7 +382,22 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["'appel' (vóór 'auto')", "'auto' (vóór 'appel')", "Beide gelijk", "Niet uit te leggen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'a-p-p' staat vóór 'a-u-t'.", "Andersom.", "Niet — appel eerst.", "Wel uit te leggen — alfabetisch."],
+        wrongHints: [null, "Klopt — 'a-p-p' staat vóór 'a-u-t'.", "Andersom — kijk naar 2e letter.", "Verschillende woorden.", "Wel — alfabetisch."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vergelijk letter voor letter", tekst: "Beide woorden beginnen met 'a'. Dan: 'appel' = a-p, 'auto' = a-u. In alfabet: p (16e letter) komt vóór u (21e letter)." },
+            { titel: "Conclusie", tekst: "Dus 'appel' staat eerder in woordenboek dan 'auto'." },
+          ],
+          woorden: [{ woord: "alfabetisch sorteren", uitleg: "Woorden ordenen op letter-volgorde A→Z, eerst 1e letter, dan 2e, etc." }],
+          theorie: "Standaard woordenboek-volgorde: vergelijk letter voor letter van links naar rechts. Bij gelijke prefix: kortere woord eerst.",
+          voorbeelden: [{ type: "stap", tekst: "boek → bos → brood (b-o-e vs b-o-s vs b-r-o, eerst o-e, dan o-s, dan r)." }],
+          basiskennis: [{ onderwerp: "Alfabet-volgorde", uitleg: "A-B-C-D-...-P-Q-R-S-T-U-V-W-X-Y-Z. P komt vóór U." }],
+          niveaus: {
+            basis: "appel. A.",
+            simpeler: "a-p (appel) komt vóór a-u (auto) in alfabet. = A.",
+            nogSimpeler: "appel = A.",
+          },
+        },
       },
       {
         q: "Waar zoek je een **plaatsnaam** in een atlas?",
