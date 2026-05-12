@@ -421,7 +421,7 @@ const steps = [
         q: "Welk woord schrijf je **met 'ei'**?",
         options: ["trein", "vlijtig", "lijden", "blijven"],
         answer: 0,
-        wrongHints: [null, "Klopt — trein schrijf je met ei.", "Vlijtig schrijf je met ij.", "Lijden schrijf je met ij.", "Blijven schrijf je met ij."],
+        wrongHints: [null, "Klopt — denk aan 'reis met de trein'.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
       },
       {
         q: "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
@@ -457,9 +457,9 @@ const steps = [
       },
       {
         q: "Welk woord schrijf je **met 'au'** (niet ou)?",
-        options: ["pauw", "boud", "houd", "blauw"],
+        options: ["pauw", "boud", "houd", "stout"],
         answer: 0,
-        wrongHints: [null, "Klopt — pauw schrijf je met au (vogel).", "Boud met ou.", "Houd met ou.", "Goed — blauw is ook au! (Maar de vraag heeft 1 antwoord; pauw is correct.)"],
+        wrongHints: [null, "Klopt — denk aan de vogel.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
       },
       {
         q: "**'Hij ___ snel'** — welk werkwoord?",
@@ -489,7 +489,7 @@ const steps = [
         q: "Welk woord schrijf je met **'ij'** (niet ei)?",
         options: ["wijn", "trein", "klein", "stein"],
         answer: 0,
-        wrongHints: [null, "Klopt — wijn = met ij.", "trein = ei.", "klein = ei.", "Geen NL-woord."],
+        wrongHints: [null, "Klopt — denk aan 'wijn drinken'.", "Andere spellingvariant.", "Andere spellingvariant.", "Niet uit Nederlands."],
       },
       {
         q: "**Tegenwoordige tijd** van 'lopen' bij 'wij'?",
@@ -596,7 +596,7 @@ const steps = [
         q: "Welk woord krijgt **een hoofdletter**?",
         options: ["Amsterdam (plaatsnaam)", "maandag (weekdag)", "boek (zelfstandig naamwoord)", "rennen (werkwoord)"],
         answer: 0,
-        wrongHints: [null, "Klopt — eigennamen krijgen hoofdletter.", "Weekdag = klein.", "Zelfstandig nw = klein in NL.", "Werkwoord = klein."],
+        wrongHints: [null, "Klopt — eigennamen krijgen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter."],
       },
       {
         q: "Welke zin heeft **goede aanhalingstekens**?",
@@ -632,7 +632,7 @@ const steps = [
         q: "Welke is een **persoonlijk voornaamwoord**?",
         options: ["ik", "auto", "snel", "boos"],
         answer: 0,
-        wrongHints: [null, "Klopt — ook: jij/hij/zij/wij/jullie.", "Zelfst nw.", "Bijvoeglijk nw.", "Bijvoeglijk nw."],
+        wrongHints: [null, "Klopt — verwijst naar persoon.", "Andere woordsoort.", "Andere woordsoort.", "Andere woordsoort."],
       },
     ],
   },
