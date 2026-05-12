@@ -390,6 +390,35 @@ const steps = [
           niveaus: { basis: "24 m². A.", simpeler: "6 m × 4 m = 24 m². = A.", nogSimpeler: "24 = A." },
         },
       },
+      {
+        q: "Hoeveel **cm** is **1,2 m**?",
+        options: ["120 cm", "12 cm", "12.000 cm", "1200 cm"],
+        answer: 0,
+        wrongHints: [null, "Klopt — m × 100 = cm. 1,2 × 100 = 120.", "Te weinig — 12 cm is een gum.", "Veel te veel.", "Te veel — komma 1 plek te ver."],
+      },
+      {
+        q: "Een doos is **10 cm × 10 cm × 10 cm**. **Inhoud** (volume)?",
+        options: ["1000 cm³", "100 cm³", "30 cm³", "300 cm³"],
+        answer: 0,
+        wrongHints: [null, "Klopt — kubus: zijde × zijde × zijde = 10×10×10 = 1000 cm³.", "Te weinig — dat is oppervlakte 1 zijde.", "Dat is omtrek-achtig (10+10+10).", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Volume formule", tekst: "Kubus: V = z × z × z = z³. Voor 10 cm: 10 × 10 × 10 = 1000." },
+            { titel: "Eenheid", tekst: "Volume = cm³ (kubieke cm). 1000 cm³ = 1 liter." },
+          ],
+          woorden: [{ woord: "volume", uitleg: "Hoeveel ruimte iets inneemt (in 3D)." }, { woord: "cm³", uitleg: "Kubieke centimeter = 1 cm × 1 cm × 1 cm kubusje." }],
+          theorie: "Kubus: V = z³. Rechthoekig blok: V = l × b × h. Inhoud altijd in 'kubieke' eenheden.",
+          voorbeelden: [{ type: "alledaags", tekst: "1000 cm³ = 1 liter = pak melk." }],
+          basiskennis: [{ onderwerp: "3 dimensies", uitleg: "Oppervlakte = 2D (m²), volume = 3D (m³ of cm³)." }],
+          niveaus: { basis: "1000 cm³ (10³). A.", simpeler: "10 × 10 × 10 = 1000. Eenheid is cm³. = A.", nogSimpeler: "1000 = A." },
+        },
+      },
+      {
+        q: "Een tuin is **5 m × 8 m**. Hoeveel meter **hek** is nodig (omtrek)?",
+        options: ["26 m", "40 m", "13 m", "20 m"],
+        answer: 0,
+        wrongHints: [null, "Klopt — omtrek = 2 × (5+8) = 26 m.", "Dat is oppervlakte, niet omtrek.", "Halve omtrek.", "Niet."],
+      },
     ],
   },
 
