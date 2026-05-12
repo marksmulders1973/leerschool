@@ -524,6 +524,35 @@ const steps = [
           niveaus: { basis: "7 onvoldoendes (25% × 28). A.", simpeler: "75% voldoende = 25% onvoldoende. 25% × 28 = 7. = A.", nogSimpeler: "7 = A." },
         },
       },
+      {
+        q: "Een glas frisdrank kost €1,80. Hoeveel betaal je voor **5 glazen**?",
+        options: ["€9,00", "€7,20", "€10,00", "€1,80"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 5 × €1,80 = €9,00.", "Dat is 4 × €1,80.", "Te veel — komma vergeten?", "Dat is 1 glas."],
+      },
+      {
+        q: "Tom legt om de **15 minuten** een nieuwe pot bloemen. Hoeveel **per uur**?",
+        options: ["4 potten", "15 potten", "60 potten", "1 pot"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 60 min ÷ 15 = 4.", "Niet — 15 was tijdsinterval.", "Veel te veel.", "Te weinig — minder dan 15 min/pot."],
+      },
+      {
+        q: "Een fietstas weegt **leeg 800 g**. Met **2 kg** boodschappen erin — totaal?",
+        options: ["2,8 kg", "2,2 kg", "10 kg", "2,08 kg"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.", "Verkeerd opgeteld.", "Veel te veel.", "Te weinig — 800 g ≠ 0,08 kg."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eenheid gelijk", tekst: "Voor optellen: zet beide in zelfde eenheid. 800 g = 0,8 kg." },
+            { titel: "Optellen", tekst: "0,8 kg + 2 kg = 2,8 kg." },
+          ],
+          woorden: [{ woord: "g ↔ kg", uitleg: "1 kg = 1000 g. 800 g = 0,8 kg." }],
+          theorie: "Hoofdregel rekenen met gemengde eenheden: ALTIJD eerst gelijke eenheid maken. Dan pas optellen/aftrekken.",
+          voorbeelden: [{ type: "alledaags", tekst: "Tas met boodschappen + kg-pak: alles in kg → optellen." }],
+          basiskennis: [{ onderwerp: "Valkuil", uitleg: "Veel mensen doen 800 + 2 = 802. Fout — eenheden niet gelijk!" }],
+          niveaus: { basis: "2,8 kg (0,8 + 2). A.", simpeler: "800 g = 0,8 kg. 0,8 + 2 = 2,8 kg. = A.", nogSimpeler: "2,8 = A." },
+        },
+      },
     ],
   },
 ];
