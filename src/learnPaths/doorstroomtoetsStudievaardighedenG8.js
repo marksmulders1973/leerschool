@@ -361,6 +361,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt.", "Tweede.", "Laatste.", "Wel volgorde."],
       },
+      {
+        q: "Welk staat **eerder**: 'rood' of 'paars'?",
+        options: ["paars", "rood", "Beide gelijk", "Niet alfabetisch"],
+        answer: 0,
+        wrongHints: [null, "Klopt — p vóór r.", "Niet — r komt later.", "Niet gelijk.", "Wel."],
+      },
+      {
+        q: "Wat is een **woordenboek** voor?",
+        options: ["Betekenis + spelling van woorden", "Geschiedenis", "Kaart", "Recept"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Niet.", "Atlas.", "Kookboek."],
+      },
+      {
+        q: "Bij **Van Dale** vind je info over Nederlandse woorden. Dat is een?",
+        options: ["Woordenboek", "Atlas", "Encyclopedie", "Roman"],
+        answer: 0,
+        wrongHints: [null, "Klopt — beroemd NL-woordenboek.", "Kaarten.", "Algemene kennis.", "Verhaal."],
+      },
     ],
   },
 
