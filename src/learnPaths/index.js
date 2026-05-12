@@ -118,6 +118,7 @@ import waterErfgoedNederlandPo from "./waterErfgoedNederlandPo.js";
 import tafelsPo from "./tafelsPo.js";
 import delenPo from "./delenPo.js";
 import toestandStoffenPo from "./toestandStoffenPo.js";
+import dierenklassenPo from "./dierenklassenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -148,6 +149,7 @@ export const ALL_LEARN_PATHS = {
   "tafels-po": tafelsPo,
   "delen-po": delenPo,
   "toestand-stoffen-po": toestandStoffenPo,
+  "dierenklassen-po": dierenklassenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
