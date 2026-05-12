@@ -121,6 +121,7 @@ import toestandStoffenPo from "./toestandStoffenPo.js";
 import dierenklassenPo from "./dierenklassenPo.js";
 import fotosyntheseBiologie from "./fotosyntheseBiologie.js";
 import goudenEeuwGeschiedenis from "./goudenEeuwGeschiedenis.js";
+import middeleeuwenGeschiedenis from "./middeleeuwenGeschiedenis.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -215,6 +216,7 @@ export const ALL_LEARN_PATHS = {
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
   "tachtigjarige-oorlog-geschiedenis": tachtigjarigeOorlogGeschiedenis,
   "gouden-eeuw-geschiedenis": goudenEeuwGeschiedenis,
+  "middeleeuwen-geschiedenis": middeleeuwenGeschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
