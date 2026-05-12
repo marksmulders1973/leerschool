@@ -304,6 +304,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — beide.", "Niet alleen overeenkomsten.", "Niet alleen verschillen.", "Niet plaatjes."],
       },
+      {
+        q: "In een **boomdiagram** met 'Dieren → Zoogdieren / Vogels' — wat is **Hond**?",
+        options: ["Onder Zoogdieren", "Onder Vogels", "Geen plaats", "Bovenaan"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Hond = zoogdier.", "Hond is geen vogel.", "Wel plaats.", "Bovenaan staat 'Dieren'."],
+      },
+      {
+        q: "In een **ja/nee-schema** staat **ruit** — wat betekent dat?",
+        options: ["Keuze-vraag", "Stap zonder keuze", "Eindpunt", "Pijl"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ruit = vraag met ja/nee-uitkomsten.", "Stap zonder keuze = kader.", "Eindpunt = afgeronde vorm.", "Pijl = pijl, niet ruit."],
+      },
+      {
+        q: "Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. **Welke stap is fout**?",
+        options: ["Volgorde 1+2 omgedraaid (recept eerst)", "Stap 4 fout", "Niets fout", "Stap 3"],
+        answer: 0,
+        wrongHints: [null, "Klopt — recept lezen vóór ingrediënten kopen.", "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
+      },
     ],
   },
 
