@@ -180,6 +180,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 3/4 = 0,75 > 0,7.", "0,7 = 0,70. Kleiner dan 0,75.", "Niet — verschillende waarden.", "Wel — decimaliseer."],
       },
+      {
+        q: "Wat is **2/5 + 1/10**?",
+        options: ["1/2", "3/15", "3/10", "1/7"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 4/10 + 1/10 = 5/10 = 1/2.", "Tellers + noemers samen — fout.", "Niet vereenvoudigd.", "Niet."],
+      },
+      {
+        q: "**1,25 als breuk** (eenvoudigst)?",
+        options: ["5/4", "1 1/4", "125/100", "12,5/10"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1,25 = 125/100 = 5/4.", "Klopt ook (gemengd), maar 5/4 is breuk.", "Niet vereenvoudigd.", "Niet eens een breuk."],
+      },
+      {
+        q: "**Helft van 0,8**?",
+        options: ["0,4", "1,6", "0,08", "0,5"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 0,8 ÷ 2 = 0,4.", "Dat is 2× zo veel.", "10x te weinig.", "Helft van 1."],
+      },
     ],
   },
 
