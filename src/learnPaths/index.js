@@ -107,6 +107,7 @@ import meetkundeBouwsels from "./meetkundeBouwsels.js";
 import grafiekenLezenPo from "./grafiekenLezenPo.js";
 import gemiddeldenStatistiekPo from "./gemiddeldenStatistiekPo.js";
 import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
+import kommagetallenPo from "./kommagetallenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -126,6 +127,7 @@ export const ALL_LEARN_PATHS = {
   "meetkunde-bouwsels": meetkundeBouwsels,
   "grafieken-lezen-po": grafiekenLezenPo,
   "gemiddelden-statistiek-po": gemiddeldenStatistiekPo,
+  "kommagetallen-po": kommagetallenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
