@@ -280,6 +280,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — Cito-tip.", "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
       },
+      {
+        q: "Wat is **alinea**?",
+        options: ["Groep zinnen over één onderwerp", "Eén zin", "Hele tekst", "Plaatje"],
+        answer: 0,
+        wrongHints: [null, "Klopt — paragraaf met witregel ervoor.", "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
+      },
+      {
+        q: "Signaalwoord **'bijvoorbeeld'** introduceert?",
+        options: ["Een voorbeeld", "Tegenstelling", "Gevolg", "Conclusie"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'b.v.' = voorbeeld geven.", "Niet.", "Niet.", "Niet primair."],
+      },
+      {
+        q: "Cito-strik: een vraag heeft **'NIET'** in. Wat doe je?",
+        options: ["Zoek de fout / uitzondering", "Negeer dat woord", "Onmogelijk te beantwoorden", "Kies eerste optie"],
+        answer: 0,
+        wrongHints: [null, "Klopt — let goed op 'niet'!", "Niet — heel belangrijk.", "Wel — gewoon goed lezen.", "Random kiezen werkt niet."],
+      },
     ],
   },
 
