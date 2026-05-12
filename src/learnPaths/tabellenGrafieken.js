@@ -424,7 +424,7 @@ const steps = [
         q: "Staafdiagram: **kat 12, hond 18, vis 6, vogel 4** uit een klas van **40**. Welk **percentage** koos hond?",
         options: ["45%","18%","40%","30%"],
         answer: 0,
-        wrongHints: [null,"Niet het aantal — bereken percentage.","Niet het totaal — bereken percentage.","Te weinig — controleer 18 ÷ 40 × 100."],
+        wrongHints: [null,"Niet het aantal honden — bereken het percentage.","Niet het totaal aantal leerlingen — bereken het percentage.","Te weinig — bereken het percentage met de formule deel ÷ geheel × 100."],
         uitlegPad: {
           stappen: [
             { titel: "Deel ÷ geheel × 100", tekst: "% = (deel / geheel) × 100. Hond = 18 / 40 = 0,45. × 100 = 45%." },
