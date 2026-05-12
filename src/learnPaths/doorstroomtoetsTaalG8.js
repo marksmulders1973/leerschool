@@ -364,6 +364,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 'maar' geeft tegenstelling: regent toch ga ik.", "'Omdat' = reden. Dan ga je juist NIET naar buiten vanwege regen — vreemd zonder context.", "'En' is opsommend, mist het tegenstelling-gevoel.", "'Als' geeft voorwaarde, maar de zin is meer een tegenstelling."],
       },
+      {
+        q: "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
+        options: ["dubbele punt :", "punt .", "komma ,", "uitroepteken !"],
+        answer: 0,
+        wrongHints: [null, "Klopt — directe rede begint met dubbele punt, daarna aanhalingstekens.", "Een punt sluit een zin af, niet introduceert.", "Komma kan ook maar dubbele punt is correcter bij directe rede.", "Geen sterke emotie hier."],
+      },
+      {
+        q: "Welk zin heeft een **fout** met komma's?",
+        options: ["Ik wandel, en ik fiets.", "Ik wandel en ik fiets.", "Ik wandel, omdat het mooi weer is.", "Ik wandel, maar ik fiets niet."],
+        answer: 0,
+        wrongHints: [null, "Klopt — geen komma vóór 'en' tussen 2 hoofdzinnen zonder andere reden.", "Goed — geen komma nodig.", "Goed — komma vóór 'omdat' (samengestelde zin).", "Goed — komma vóór 'maar' (tegenstelling)."],
+      },
+      {
+        q: "Welk zin is **goed**?",
+        options: ["Jan, Piet en Klaas spelen.", "Jan Piet en Klaas spelen.", "Jan, Piet, en Klaas spelen.", "Jan, Piet en, Klaas spelen."],
+        answer: 0,
+        wrongHints: [null, "Klopt — komma's tussen items, geen komma vóór 'en'.", "Geen komma's — moeilijk te lezen.", "Komma vóór 'en' = fout in NL-opsomming.", "Komma op verkeerde plek."],
+      },
     ],
   },
 ];
