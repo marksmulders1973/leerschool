@@ -509,6 +509,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — opp = ½ × basis × hoogte = ½ × 6 × 4 = 12.", "Vergeten ½ — dat is rechthoek-opp.", "Optellen werkt niet.", "Halve hoogte."],
       },
+      {
+        q: "Hoeveel **mL** in een **halve liter**?",
+        options: ["500 mL", "50 mL", "5 mL", "5000 mL"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 L = 1000 mL, helft = 500.", "Veel te weinig.", "Veel te weinig.", "Te veel."],
+      },
+      {
+        q: "Een vierkant heeft **omtrek 24 cm**. Wat is **zijde**?",
+        options: ["6 cm", "12 cm", "24 cm", "4 cm"],
+        answer: 0,
+        wrongHints: [null, "Klopt — vierkant heeft 4 zijden, 24÷4 = 6.", "Niet — dat is halve omtrek.", "Hele omtrek.", "Te weinig."],
+      },
+      {
+        q: "**0,5 ton** in **kg**?",
+        options: ["500 kg", "50 kg", "5000 kg", "5 kg"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 ton = 1000 kg, half = 500.", "Te weinig.", "Te veel.", "Veel te weinig."],
+      },
     ],
   },
 
