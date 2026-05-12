@@ -130,6 +130,7 @@ import wereldoorlog1Geschiedenis from "./wereldoorlog1Geschiedenis.js";
 import ecosystemenBiologie from "./ecosystemenBiologie.js";
 import conditionalsEngels from "./conditionalsEngels.js";
 import bevolkingMigratieAardrijkskunde from "./bevolkingMigratieAardrijkskunde.js";
+import cseLeesvaardigheidEngels from "./cseLeesvaardigheidEngels.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -215,6 +216,7 @@ export const ALL_LEARN_PATHS = {
   "past-tenses-engels": pastTensesEngels,
   "comparatives-engels": comparativesEngels,
   "conditionals-engels": conditionalsEngels,
+  "cse-leesvaardigheid-engels": cseLeesvaardigheidEngels,
   "woordenschat-engels": woordenschatEngels,
   // Biologie
   "cel-biologie": celBiologie,
