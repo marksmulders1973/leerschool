@@ -108,6 +108,7 @@ import grafiekenLezenPo from "./grafiekenLezenPo.js";
 import gemiddeldenStatistiekPo from "./gemiddeldenStatistiekPo.js";
 import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
 import kommagetallenPo from "./kommagetallenPo.js";
+import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -128,6 +129,7 @@ export const ALL_LEARN_PATHS = {
   "grafieken-lezen-po": grafiekenLezenPo,
   "gemiddelden-statistiek-po": gemiddeldenStatistiekPo,
   "kommagetallen-po": kommagetallenPo,
+  "tijdsduur-rekenen-po": tijdsduurRekenenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
