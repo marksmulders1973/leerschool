@@ -235,6 +235,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt.", "Daarvoor: index.", "Niet inhoudsopgave.", "Niet doel."],
       },
+      {
+        q: "In een **atlas** zoek je 'Amsterdam' in de **index**: 'Amsterdam ... 22 D5'. Waar kijk je?",
+        options: ["Bladzijde 22, vak D5", "Bladzijde 5, vak D22", "Vak 22 op pagina D5", "Vak A22 op pagina D"],
+        answer: 0,
+        wrongHints: [null, "Klopt — eerst paginanummer, dan vak (kolom-letter + rij-cijfer).", "Niet — paginanummer eerst.", "Vakcode = letter+cijfer.", "Vak heet niet zo."],
+      },
+      {
+        q: "Welk woord staat **eerder** in woordenboek: 'piano' of 'plant'?",
+        options: ["piano", "plant", "Beide gelijk", "Niet te zeggen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — p-i komt vóór p-l (i komt voor l in alfabet).", "p-l komt later.", "Verschillende woorden.", "Wel te zeggen — alfabetisch."],
+      },
+      {
+        q: "Waarvoor is een **register / index** achter in boek?",
+        options: ["Onderwerpen op alfabet met paginanummers", "Inhoudsopgave", "Auteursnamen", "Plaatjes"],
+        answer: 0,
+        wrongHints: [null, "Klopt — alfabetisch zoekregister.", "Inhoud zit voorin.", "Auteurs op pakket of voorpagina.", "Niet primair."],
+      },
     ],
   },
 
