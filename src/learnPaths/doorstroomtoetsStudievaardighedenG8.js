@@ -164,6 +164,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — schaalbalk geeft schaal visueel weer.", "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
       },
+      {
+        q: "Op kompas: **tussen N en W** ligt?",
+        options: ["NW (noord-west)", "ZW", "NO", "ZO"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "ZW = tussen Z+W.", "NO = tussen N+O.", "ZO = tussen Z+O."],
+      },
+      {
+        q: "Een **fietsroute** op kaart staat aangegeven met?",
+        options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Vlek"],
+        answer: 0,
+        wrongHints: [null, "Klopt — fiets/wandel = stippel.", "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Vlek = vlak."],
+      },
+      {
+        q: "Schaal **1:2.500** stadsplattegrond. Op kaart **2 cm**. Werkelijk?",
+        options: ["50 m", "500 m", "2,5 km", "50 cm"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 2 × 2500 = 5000 cm = 50 m.", "Te veel.", "Veel te veel.", "Te weinig."],
+      },
     ],
   },
 
