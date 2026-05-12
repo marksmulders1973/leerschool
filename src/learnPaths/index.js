@@ -166,6 +166,7 @@ import weersvoorspellingPo from "./weersvoorspellingPo.js";
 import digitaleGeletterdheidPo from "./digitaleGeletterdheidPo.js";
 import ruimtevaartPo from "./ruimtevaartPo.js";
 import klassiekeMuziekPo from "./klassiekeMuziekPo.js";
+import bekendeNederlandersPo from "./bekendeNederlandersPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -227,6 +228,7 @@ export const ALL_LEARN_PATHS = {
   "digitale-geletterdheid-po": digitaleGeletterdheidPo,
   "ruimtevaart-po": ruimtevaartPo,
   "klassieke-muziek-po": klassiekeMuziekPo,
+  "bekende-nederlanders-po": bekendeNederlandersPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
