@@ -123,6 +123,7 @@ import fotosyntheseBiologie from "./fotosyntheseBiologie.js";
 import goudenEeuwGeschiedenis from "./goudenEeuwGeschiedenis.js";
 import middeleeuwenGeschiedenis from "./middeleeuwenGeschiedenis.js";
 import franseRevolutieGeschiedenis from "./franseRevolutieGeschiedenis.js";
+import comparativesEngels from "./comparativesEngels.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -206,6 +207,7 @@ export const ALL_LEARN_PATHS = {
   "onregelmatige-werkwoorden-v2-engels": onregelmatigeWerkwoordenV2Engels,
   "present-tenses-engels": presentTensesEngels,
   "past-tenses-engels": pastTensesEngels,
+  "comparatives-engels": comparativesEngels,
   "woordenschat-engels": woordenschatEngels,
   // Biologie
   "cel-biologie": celBiologie,
