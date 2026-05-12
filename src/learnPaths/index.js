@@ -129,6 +129,7 @@ import romeinenGeschiedenis from "./romeinenGeschiedenis.js";
 import wereldoorlog1Geschiedenis from "./wereldoorlog1Geschiedenis.js";
 import ecosystemenBiologie from "./ecosystemenBiologie.js";
 import conditionalsEngels from "./conditionalsEngels.js";
+import bevolkingMigratieAardrijkskunde from "./bevolkingMigratieAardrijkskunde.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -232,6 +233,7 @@ export const ALL_LEARN_PATHS = {
   "romeinen-geschiedenis": romeinenGeschiedenis,
   // Aardrijkskunde
   "klimaten-aardrijkskunde": klimatenAardrijkskunde,
+  "bevolking-migratie-aardrijkskunde": bevolkingMigratieAardrijkskunde,
   "platentektoniek-aardrijkskunde": platentektoniekAardrijkskunde,
   "topografie-nederland": topografieNederland,
   "cito-strategieen-groep8": citoStrategieenGroep8,
