@@ -279,6 +279,38 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — trein schrijf je met ei.", "Vlijtig schrijf je met ij.", "Lijden schrijf je met ij.", "Blijven schrijf je met ij."],
       },
+      {
+        q: "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
+        options: ["las", "lees", "laste", "lazen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — verleden tijd 'lezen' (onregelmatig: las).", "Tegenwoordige tijd.", "Geen werkwoord.", "Meervoud — vraag is 'ik' (enkelvoud)."],
+      },
+      {
+        q: "Welk woord is **goed** geschreven?",
+        options: ["dinsdag", "Dinsdag", "DInsdag", "din sdag"],
+        answer: 0,
+        wrongHints: [null, "Klopt — weekdagen krijgen in NL geen hoofdletter.", "Hoofdletter is fout midden in zin.", "Tweede letter mag niet groot.", "Aan elkaar."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Weekdagen klein", tekst: "In Nederlands schrijven we weekdagen + maanden + jaargetijden met **kleine letter**. Anders dan in Engels!" },
+          ],
+          woorden: [{ woord: "hoofdletter-regel NL", uitleg: "Hoofdletter alleen bij: begin zin, namen (mensen/plaatsen/landen), eigennaam (Cito, Coca-Cola)." }],
+          theorie: "Hoofdletter-regel NL: weekdagen + maanden + jaargetijden krijgen GEEN hoofdletter (anders dan Engels).",
+          voorbeelden: [{ type: "stap", tekst: "EN: 'Monday in March' (beide hoofdletters). NL: 'maandag in maart' (beide klein)." }],
+          basiskennis: [{ onderwerp: "Verschil EN-NL", uitleg: "Engels gebruikt veel meer hoofdletters dan Nederlands. Daarom letten op." }],
+          niveaus: {
+            basis: "dinsdag (klein). A.",
+            simpeler: "Weekdagen in NL krijgen GEEN hoofdletter. Dus 'dinsdag', niet 'Dinsdag'. = A.",
+            nogSimpeler: "dinsdag = A.",
+          },
+        },
+      },
+      {
+        q: "Wat is **goed**?",
+        options: ["Hij heeft gegeten.", "Hij heeft geet.", "Hij heeft eet.", "Hij heeft eaten."],
+        answer: 0,
+        wrongHints: [null, "Klopt — voltooid deelwoord van 'eten' = 'gegeten'.", "Verkeerde vorm.", "Mist 'ge-'.", "Engels woord."],
+      },
     ],
   },
 
