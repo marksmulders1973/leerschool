@@ -376,6 +376,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — recept lezen vóór ingrediënten kopen.", "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
       },
+      {
+        q: "In boomdiagram 'Vervoer → Auto / Trein / Fiets' — wat **mist**?",
+        options: ["Lopen + bus + boot", "Auto's-merken", "Wegen", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ook andere vervoermiddelen.", "Subcategorie van auto.", "Niet vervoersmiddel.", "Wel iets — onvolledig."],
+      },
+      {
+        q: "Wat is het **doel** van een stappenplan?",
+        options: ["Doel halen door volgorde te volgen", "Mooie tekening maken", "Tijd doden", "Geen doel"],
+        answer: 0,
+        wrongHints: [null, "Klopt — efficiënt werken.", "Niet primair.", "Tegenovergesteld.", "Wel doel."],
+      },
+      {
+        q: "Schema 'Vraag → ja → X / nee → Y'. Welke vorm gebruik je voor **'Vraag'**?",
+        options: ["Ruit", "Rechthoek", "Cirkel", "Pijl"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ruit = keuze.", "Rechthoek = gewone stap.", "Cirkel = start/eind.", "Pijl = verbinding."],
+      },
     ],
   },
 
