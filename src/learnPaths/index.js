@@ -110,6 +110,7 @@ import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
 import kommagetallenPo from "./kommagetallenPo.js";
 import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
 import interpunctiePo from "./interpunctiePo.js";
+import kalenderRekenenPo from "./kalenderRekenenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -132,6 +133,7 @@ export const ALL_LEARN_PATHS = {
   "kommagetallen-po": kommagetallenPo,
   "tijdsduur-rekenen-po": tijdsduurRekenenPo,
   "interpunctie-po": interpunctiePo,
+  "kalender-rekenen-po": kalenderRekenenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
