@@ -131,6 +131,7 @@ import ecosystemenBiologie from "./ecosystemenBiologie.js";
 import conditionalsEngels from "./conditionalsEngels.js";
 import bevolkingMigratieAardrijkskunde from "./bevolkingMigratieAardrijkskunde.js";
 import cseLeesvaardigheidEngels from "./cseLeesvaardigheidEngels.js";
+import stoffenMengselsScheikunde from "./stoffenMengselsScheikunde.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -249,6 +250,7 @@ export const ALL_LEARN_PATHS = {
   // Scheikunde
   "atoombouw-scheikunde": atoombouwScheikunde,
   "chemische-reacties-scheikunde": chemischeReactiesScheikunde,
+  "stoffen-mengsels-scheikunde": stoffenMengselsScheikunde,
   // Economie
   "vraag-aanbod-economie": vraagAanbodEconomie,
   "pincode-inkomen-welvaart": pincodeInkomenWelvaart,
