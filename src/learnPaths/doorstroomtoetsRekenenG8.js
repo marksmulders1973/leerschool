@@ -136,6 +136,32 @@ const steps = [
           niveaus: { basis: "2/3 (door 3 delen). A.", simpeler: "6 en 9 delen beide door 3. 6/9 = 2/3. = A.", nogSimpeler: "2/3 = A." },
         },
       },
+      {
+        q: "Welke breuk is **groter**: 3/5 of 2/3?",
+        options: ["2/3", "3/5", "Even groot", "Niet te bepalen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 2/3 ≈ 0,67 en 3/5 = 0,60.", "Kleiner dan 2/3.", "Niet — verschillende waarden.", "Wel — maak gelijknamig of decimaal."],
+        uitlegPad: {
+          stappen: [{ titel: "Gelijknamig maken", tekst: "Maak gelijke noemer. KGN van 5 en 3 = 15. 3/5 = 9/15. 2/3 = 10/15. Dus 2/3 > 3/5." }],
+          woorden: [{ woord: "KGN", uitleg: "Kleinste Gemeenschappelijke Noemer — kleinste getal waar beide noemers in passen." }],
+          theorie: "Truc: zet beide breuken in decimaal. 3/5 = 0,60. 2/3 = 0,666... Groter = 2/3.",
+          voorbeelden: [{ type: "stap", tekst: "0,60 < 0,67 → 3/5 < 2/3 → groter is 2/3." }],
+          basiskennis: [{ onderwerp: "Vergelijkingstruc", uitleg: "Bij twee breuken vergelijken: decimaal omzetten of gelijknamig maken." }],
+          niveaus: { basis: "2/3 is groter. A.", simpeler: "3/5 = 0,60. 2/3 ≈ 0,67. 0,67 > 0,60. = A.", nogSimpeler: "2/3 = A." },
+        },
+      },
+      {
+        q: "Hoeveel is **1/4 in decimalen**?",
+        options: ["0,25", "0,14", "0,4", "0,75"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 ÷ 4 = 0,25.", "Niet — 1/4 is een kwart.", "Niet — dat is 4/10.", "Dat is 3/4."],
+      },
+      {
+        q: "Wat is **0,5 + 1/4**?",
+        options: ["0,75", "0,55", "1,5", "1/8"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 0,5 + 0,25 = 0,75 (of 1/2 + 1/4 = 3/4).", "Verkeerd opgeteld.", "Te groot.", "Niet — 1/8 is helft van 1/4."],
+      },
     ],
   },
 
