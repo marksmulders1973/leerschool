@@ -126,6 +126,7 @@ import franseRevolutieGeschiedenis from "./franseRevolutieGeschiedenis.js";
 import comparativesEngels from "./comparativesEngels.js";
 import doorstroomtoetsStudievaardighedenG8 from "./doorstroomtoetsStudievaardighedenG8.js";
 import romeinenGeschiedenis from "./romeinenGeschiedenis.js";
+import wereldoorlog1Geschiedenis from "./wereldoorlog1Geschiedenis.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -219,6 +220,7 @@ export const ALL_LEARN_PATHS = {
   // Geschiedenis
   "tijdvakken-geschiedenis": tijdvakkenGeschiedenis,
   "wereldoorlog2-geschiedenis": wereldoorlog2Geschiedenis,
+  "wereldoorlog1-geschiedenis": wereldoorlog1Geschiedenis,
   "tachtigjarige-oorlog-geschiedenis": tachtigjarigeOorlogGeschiedenis,
   "gouden-eeuw-geschiedenis": goudenEeuwGeschiedenis,
   "middeleeuwen-geschiedenis": middeleeuwenGeschiedenis,
