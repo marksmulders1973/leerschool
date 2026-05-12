@@ -135,7 +135,22 @@ const steps = [
         q: "*'De docent gaf een **toelichting** bij de som.'* Wat is een toelichting?",
         options: ["Een uitleg", "Een straf", "Een spel", "Een boek"],
         answer: 0,
-        wrongHints: [null, "Een toelichting is niet negatief.", "Een toelichting is geen activiteit.", "Een boek is geen toelichting (kan er wel één bevatten)."],
+        wrongHints: [null, "Klopt — denk aan 'toelichten' = uitleg geven.", "Niet — toelichting is positief/neutraal.", "Geen activiteit.", "Geen boek."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Woordfamilie", tekst: "Toelichting komt van 'toelichten' = licht werpen op iets, helderder maken." },
+            { titel: "Context-hint", tekst: "'De docent gaf een toelichting bij de som' = de docent legde de som uit. Klopt met 'uitleg'." },
+          ],
+          woorden: [{ woord: "toelichting", uitleg: "Een uitleg of verduidelijking — extra info om iets beter te begrijpen." }],
+          theorie: "Cito-truc bij moeilijke woorden: kijk naar stam ('licht' van 'verlichten') en context (wat past in de zin?).",
+          voorbeelden: [{ type: "stap", tekst: "'Hij gaf een toelichting bij zijn keuze' = hij legde uit waarom hij koos." }],
+          basiskennis: [{ onderwerp: "Stam: licht", uitleg: "'Licht' kan ook 'helder/duidelijk' betekenen. Toelichten = duidelijk maken." }],
+          niveaus: {
+            basis: "Een uitleg. A.",
+            simpeler: "Toelichting = uitleg. De docent gaf uitleg bij de som. = A.",
+            nogSimpeler: "Uitleg = A.",
+          },
+        },
       },
       {
         q: "*'Zij was **onverstoorbaar** tijdens de toets.'* Wat betekent onverstoorbaar?",

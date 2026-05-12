@@ -681,7 +681,22 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["bal", "balk", "balkon", "ballon"],
         answer: 0,
-        wrongHints: [null, "Klopt — kortst bij gelijke prefix.", "Te lang.", "Te lang.", "Te lang."],
+        wrongHints: [null, "Klopt — kortst bij gelijke prefix.", "Andere letter na 'bal'.", "Andere letter na 'bal'.", "Andere letter na 'bal'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Alle 4 beginnen met 'bal'", tekst: "Vergelijk wat erna komt: bal (niets), balk (k), balkon (k-o-n), ballon (l-o-n)." },
+            { titel: "Kortste eerst", tekst: "'bal' stopt direct, geen 4e letter. Bij gelijke prefix staat het kortere woord eerder." },
+          ],
+          woorden: [{ woord: "prefix", uitleg: "Het stuk waarmee meerdere woorden hetzelfde beginnen (hier: 'bal')." }],
+          theorie: "Woordenboek-regel: bij gelijke beginletters wint het korte woord. 'bal' < 'balk' < 'balkon' < 'ballon'.",
+          voorbeelden: [{ type: "stap", tekst: "Tussen 'balk' en 'ballon': 'balk' = b-a-l-k, 'ballon' = b-a-l-l. K (11e) vs L (12e). Dus 'balk' eerst." }],
+          basiskennis: [{ onderwerp: "Volgorde compleet", uitleg: "bal → balk → balkon → ballon." }],
+          niveaus: {
+            basis: "bal. A.",
+            simpeler: "Alle 4 beginnen met 'bal'. 'bal' is het kortst — staat dus eerst. = A.",
+            nogSimpeler: "bal = A.",
+          },
+        },
       },
       {
         q: "Cirkeldiagram: rood 40%, blauw 30%, geel 20%. **Rest** = ?",
