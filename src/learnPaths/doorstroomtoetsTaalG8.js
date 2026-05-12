@@ -436,6 +436,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — komma's tussen items, geen komma vóór 'en'.", "Geen komma's — moeilijk te lezen.", "Komma vóór 'en' = fout in NL-opsomming.", "Komma op verkeerde plek."],
       },
+      {
+        q: "Welke zin heeft een **vraagteken** nodig?",
+        options: ["Waar is mijn jas", "De jas is rood", "Een jas in de kast", "Mijn jas is hier"],
+        answer: 0,
+        wrongHints: [null, "Klopt — beginnen met 'Waar' = vraag.", "Mededelende zin → punt.", "Geen werkwoord — niet eens hele zin.", "Mededelend."],
+      },
+      {
+        q: "Welke is een **complete zin**?",
+        options: ["De kat slaapt.", "Slapende kat.", "Op de bank.", "De rode kat."],
+        answer: 0,
+        wrongHints: [null, "Klopt — onderwerp (kat) + werkwoord (slaapt).", "Geen werkwoord.", "Geen onderwerp + werkwoord.", "Geen werkwoord."],
+      },
+      {
+        q: "Welk woord krijgt **een hoofdletter**?",
+        options: ["Amsterdam (plaatsnaam)", "maandag (weekdag)", "boek (zelfstandig naamwoord)", "rennen (werkwoord)"],
+        answer: 0,
+        wrongHints: [null, "Klopt — eigennamen krijgen hoofdletter.", "Weekdag = klein.", "Zelfstandig nw = klein in NL.", "Werkwoord = klein."],
+      },
     ],
   },
 ];
