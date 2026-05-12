@@ -160,6 +160,7 @@ import olympischeSpelenPo from "./olympischeSpelenPo.js";
 import gezondeVoedingPo from "./gezondeVoedingPo.js";
 import ontdekkingsreizenPo from "./ontdekkingsreizenPo.js";
 import waterkringloopPo from "./waterkringloopPo.js";
+import bekendeBoekenLiteratuurPo from "./bekendeBoekenLiteratuurPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -215,6 +216,7 @@ export const ALL_LEARN_PATHS = {
   "gezonde-voeding-po": gezondeVoedingPo,
   "ontdekkingsreizen-po": ontdekkingsreizenPo,
   "waterkringloop-po": waterkringloopPo,
+  "bekende-boeken-literatuur-po": bekendeBoekenLiteratuurPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
