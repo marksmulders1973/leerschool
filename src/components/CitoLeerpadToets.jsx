@@ -5,6 +5,7 @@ import { sampleCitoMix, scoreCitoMix } from "../shared/citoMixVragen.js";
 import MdInline from "../shared/ui/MdInline.jsx";
 import { shuffleOptions } from "../shared/shuffleOptions.js";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
+import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -43,6 +44,16 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   const [idx, setIdx] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const tickRef = useRef(null);
+  // Per foute vraag: uitklap-staat van het uitleg-blok + uitlegPad-staat.
+  // Twee aparte sets zodat de gebruiker eerst de korte uitleg ziet en pas
+  // dan het volledige uitlegPad opent (consistent met LearnPath-flow).
+  const [expandedWrong, setExpandedWrong] = useState(() => new Set());
+  const [showUitlegFor, setShowUitlegFor] = useState(() => new Set());
+  const toggleSet = (setter, id) => setter((prev) => {
+    const next = new Set(prev);
+    if (next.has(id)) next.delete(id); else next.add(id);
+    return next;
+  });
 
   // Countdown
   useEffect(() => {
@@ -217,7 +228,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               📚 Vragen die fout gingen
             </div>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 10 }}>
-              Klik op een vraag om naar het bijbehorende leerpad te springen.
+              Per fout zie je de hint. Klik op <strong style={{ color: "#5db3ff" }}>"▼ Meer uitleg & leerpad"</strong> voor de volledige uitleg + naar het leerpad.
             </div>
             {questions.map((q, i) => {
               const wrong = answers[i] !== q.answer;
@@ -230,6 +241,11 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               const hint = givenIdx !== null && givenIdx !== undefined
                 ? q.wrongHints?.[givenIdx]
                 : null;
+              const isExpanded = expandedWrong.has(q.id);
+              const isUitlegOpen = showUitlegFor.has(q.id);
+              const hasUitlegPad = !!q.uitlegPad;
+              const hasExplanation = !!q.explanation;
+              const hasMore = hasUitlegPad || hasExplanation || !!onPickPath;
               return (
                 <div
                   key={q.id}
@@ -271,21 +287,99 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                       💡 <MdInline text={hint} />
                     </div>
                   )}
-                  {onPickPath && (
+                  {hasMore && (
                     <button
-                      onClick={() => onPickPath(q.pathId, q.stepIdx)}
+                      onClick={() => toggleSet(setExpandedWrong, q.id)}
                       style={{
-                        background: "none",
-                        border: "none",
-                        color: C.muted,
-                        fontSize: 11,
+                        background: "rgba(66,165,245,0.10)",
+                        border: "1px solid rgba(66,165,245,0.35)",
+                        color: "#5db3ff",
+                        fontFamily: "var(--font-display)",
+                        fontWeight: 700,
+                        fontSize: 12,
                         cursor: "pointer",
-                        padding: 0,
+                        padding: "8px 12px",
+                        borderRadius: 8,
+                        minHeight: 36,
+                        width: "100%",
                         textAlign: "left",
+                        marginTop: 4,
                       }}
+                      aria-expanded={isExpanded}
                     >
-                      📖 {q.pathTitle} · stap {q.stepIdx + 1} ›
+                      {isExpanded ? "▲ Verberg uitleg" : "▼ Meer uitleg & leerpad"}
                     </button>
+                  )}
+                  {isExpanded && (
+                    <div style={{ marginTop: 10 }}>
+                      {hasExplanation && (
+                        <div
+                          style={{
+                            fontSize: 13,
+                            lineHeight: 1.55,
+                            background: "rgba(255,255,255,0.03)",
+                            border: "1px solid rgba(255,255,255,0.08)",
+                            borderRadius: 8,
+                            padding: "10px 12px",
+                            marginBottom: 10,
+                            color: C.text,
+                          }}
+                        >
+                          <div style={{ fontWeight: 700, color: "#5db3ff", marginBottom: 4, fontSize: 12 }}>📘 Uitleg</div>
+                          <MdInline text={q.explanation} />
+                        </div>
+                      )}
+                      {hasUitlegPad && !isUitlegOpen && (
+                        <button
+                          onClick={() => toggleSet(setShowUitlegFor, q.id)}
+                          style={{
+                            background: "linear-gradient(135deg, #42a5f5, #5db3ff)",
+                            border: "none",
+                            color: "#fff",
+                            fontFamily: "var(--font-display)",
+                            fontWeight: 700,
+                            fontSize: 13,
+                            cursor: "pointer",
+                            padding: "10px 14px",
+                            borderRadius: 10,
+                            minHeight: 44,
+                            width: "100%",
+                            marginBottom: 8,
+                          }}
+                        >
+                          📚 Bekijk het uitlegpad
+                        </button>
+                      )}
+                      {hasUitlegPad && isUitlegOpen && (
+                        <VraagUitlegPad
+                          uitlegPad={q.uitlegPad}
+                          vraagId={`${q.pathId}__${q.stepIdx}__${q.checkIdx ?? 0}`}
+                          onClose={() => toggleSet(setShowUitlegFor, q.id)}
+                        />
+                      )}
+                      {onPickPath && (
+                        <button
+                          onClick={() => onPickPath(q.pathId, q.stepIdx)}
+                          style={{
+                            background: "rgba(255,255,255,0.06)",
+                            border: `1px solid ${C.border}`,
+                            color: C.text,
+                            fontFamily: "var(--font-display)",
+                            fontWeight: 600,
+                            fontSize: 13,
+                            cursor: "pointer",
+                            padding: "10px 14px",
+                            borderRadius: 10,
+                            minHeight: 44,
+                            width: "100%",
+                            marginTop: hasUitlegPad ? 0 : 0,
+                            textAlign: "left",
+                          }}
+                        >
+                          📖 Naar het leerpad: <strong>{q.pathTitle}</strong> · stap {q.stepIdx + 1} ›
+                        </button>
+                      )}
+                    </div>
                   )}
                 </div>
               );

@@ -58,6 +58,11 @@ export function gatherPoChecks() {
           options: c.options.slice(),
           answer: c.answer,
           wrongHints: Array.isArray(c.wrongHints) ? c.wrongHints.slice() : [],
+          // Voor resultatenscherm na fout: volledige uitleg-vragen-flow.
+          // uitlegPad (3-niveau didactisch) + explanation (volledige tekst).
+          uitlegPad: c.uitlegPad || null,
+          explanation: c.explanation || "",
+          checkIdx,
           subject: pijler,
           pathId,
           pathTitle: path.title,
