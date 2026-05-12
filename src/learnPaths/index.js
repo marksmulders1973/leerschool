@@ -137,6 +137,7 @@ import mensenrechtenMaatschappijleer from "./mensenrechtenMaatschappijleer.js";
 import bewegingenSnelheidNatuurkunde from "./bewegingenSnelheidNatuurkunde.js";
 import werkwoordsvervoegingDuits from "./werkwoordsvervoegingDuits.js";
 import werkwoordsvervoegingFrans from "./werkwoordsvervoegingFrans.js";
+import cseLeesvaardigheidNederlands from "./cseLeesvaardigheidNederlands.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -213,6 +214,7 @@ export const ALL_LEARN_PATHS = {
   argumentatieleer,
   schrijfvaardigheid,
   tekstanalyse,
+  "cse-leesvaardigheid-nederlands": cseLeesvaardigheidNederlands,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
