@@ -146,6 +146,7 @@ import financieleVormingPo from "./financieleVormingPo.js";
 import brugklasOrientatie from "./brugklasOrientatie.js";
 import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
 import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
+import energiebronnenPo from "./energiebronnenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -177,6 +178,7 @@ export const ALL_LEARN_PATHS = {
   "delen-po": delenPo,
   "toestand-stoffen-po": toestandStoffenPo,
   "dierenklassen-po": dierenklassenPo,
+  "energiebronnen-po": energiebronnenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
