@@ -409,7 +409,25 @@ const steps = [
         q: "In een **atlas** zoek je 'Amsterdam' in de **index**: 'Amsterdam ... 22 D5'. Waar kijk je?",
         options: ["Bladzijde 22, vak D5", "Bladzijde 5, vak D22", "Vak 22 op pagina D5", "Vak A22 op pagina D"],
         answer: 0,
-        wrongHints: [null, "Klopt — eerst paginanummer, dan vak (kolom-letter + rij-cijfer).", "Niet — paginanummer eerst.", "Vakcode = letter+cijfer.", "Vak heet niet zo."],
+        wrongHints: [null, "Klopt.", "Andere volgorde.", "Andere volgorde.", "Andere combinatie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de index", tekst: "Atlas-index toont: '[plaatsnaam] [paginanummer] [vakcode]'. Vakcode = letter (kolom) + cijfer (rij)." },
+            { titel: "Ga naar pagina", tekst: "'22 D5' = ga naar bladzijde 22, zoek dan kolom D, rij 5." },
+          ],
+          woorden: [
+            { woord: "atlas-index", uitleg: "Alfabetische lijst achterin atlas met plaatsnaam + paginanummer + kaart-vak." },
+            { woord: "vakcode", uitleg: "Letter+cijfer combinatie (bv D5) om snel een plek op een kaart te vinden." },
+          ],
+          theorie: "Volgorde in atlas-index: plaatsnaam, dan pagina, dan vakcode. Eerste cijfer = bladzijde.",
+          voorbeelden: [{ type: "stap", tekst: "'Rotterdam ... 14 B3' = blz 14, vak B3 (kolom B, rij 3)." }],
+          basiskennis: [{ onderwerp: "Letter vs cijfer", uitleg: "Letter is altijd kolom (horizontaal), cijfer is rij (verticaal)." }],
+          niveaus: {
+            basis: "Bladzijde 22, vak D5. A.",
+            simpeler: "Eerste getal = bladzijde (22). Daarna staat de vakcode (D5). = A.",
+            nogSimpeler: "blz 22, vak D5 = A.",
+          },
+        },
       },
       {
         q: "Welk woord staat **eerder** in woordenboek: 'piano' of 'plant'?",
@@ -479,6 +497,21 @@ const steps = [
         options: ["Recept lezen", "Bakken", "Mengen", "Eten"],
         answer: 0,
         wrongHints: [null, "Klopt — zonder recept weet je niets.", "Pas later.", "Pas na ingrediënten.", "Helemaal aan het einde."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stappenplan-logica", tekst: "Voor elk stappenplan: vraag jezelf 'wat moet ik weten/hebben voor ik kan beginnen?'." },
+            { titel: "Recept eerst", tekst: "Zonder recept weet je niet welke ingrediënten, hoeveelheden, of stappen nodig zijn." },
+          ],
+          woorden: [{ woord: "stappenplan", tekst: "Volgorde van handelingen om een doel te bereiken." }],
+          theorie: "Cito-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER het volgende stap?' — kan je bakken zonder recept? Nee.",
+          voorbeelden: [{ type: "stap", tekst: "Volgorde taart: 1. Recept lezen → 2. Ingrediënten verzamelen → 3. Mengen → 4. Bakken → 5. Afkoelen → 6. Eten." }],
+          basiskennis: [{ onderwerp: "Logica eerst", uitleg: "Stappen die NIETS weten over volgende = beginstappen." }],
+          niveaus: {
+            basis: "Recept lezen. A.",
+            simpeler: "Eerste stap = wat moet ik weten? = Recept lezen. = A.",
+            nogSimpeler: "Recept = A.",
+          },
+        },
       },
       {
         q: "Schema: 'A → B → C → D'. Welke stap komt **na B**?",
