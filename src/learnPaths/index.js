@@ -147,6 +147,7 @@ import brugklasOrientatie from "./brugklasOrientatie.js";
 import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
 import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
 import energiebronnenPo from "./energiebronnenPo.js";
+import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -173,6 +174,7 @@ export const ALL_LEARN_PATHS = {
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
   "synoniemen-tegenstellingen-po": synoniemenTegenstellingenPo,
+  "spreekwoorden-uitdrukkingen-po": spreekwoordenUitdrukkingenPo,
   "water-erfgoed-nederland-po": waterErfgoedNederlandPo,
   "tafels-po": tafelsPo,
   "delen-po": delenPo,
