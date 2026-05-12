@@ -466,6 +466,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt.", "Voor verhoudingen.", "Voor plaatsen.", "Wel iets."],
       },
+      {
+        q: "Schema 'A → ja → B / A → nee → C'. Wat is **A**?",
+        options: ["Keuze-vraag", "Eindpunt", "Gewone stap", "Niets"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ruit met ja/nee.", "Niet.", "Geen keuze.", "Wel iets."],
+      },
+      {
+        q: "Stappenplan voor **brand** in huis. Wat **eerst**?",
+        options: ["Vluchten + 112 bellen", "Spullen pakken", "Foto's maken", "Niet bewegen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — veiligheid eerst.", "Te risicovol.", "Verspil geen tijd.", "Onveilig."],
+      },
+      {
+        q: "Boomdiagram: 'Sport → Voetbal / Tennis / Hockey'. Hoeveel **takken**?",
+        options: ["3", "1", "4", "0"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3 sporten.", "Te weinig.", "Te veel.", "Niet."],
+      },
     ],
   },
 
