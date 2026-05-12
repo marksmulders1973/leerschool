@@ -63,9 +63,9 @@ const steps = [
       },
       {
         q: "Hoeveel **landen** gebruiken de euro?",
-        options: ["20 (eurozone)", "5", "27 (alle EU)", "50"],
+        options: ["20 (eurozone)", "5", "27 (alle EU = Europese Unie)", "50"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te weinig.", "EU heeft 27, eurozone 20.", "Veel te veel."],
+        wrongHints: [null, "Klopt — niet elk EU-land heeft euro.", "Te weinig.", "EU = 27 landen, eurozone = 20 met euro.", "Veel te veel."],
       },
       {
         q: "**Vóór de euro** in Nederland?",
