@@ -217,6 +217,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 30/80 × 100 = 37,5%.", "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
       },
+      {
+        q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. **Rest**?",
+        options: ["15%", "20%", "10%", "25%"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 100−35−25−25 = 15.", "Niet juist.", "Te weinig.", "Te veel."],
+      },
+      {
+        q: "Tabel-rij ma=5 di=10 wo=8 do=15 vr=12. **Mediaan** (middelste)?",
+        options: ["10", "8", "15", "12"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gesorteerd 5,8,10,12,15 → midden = 10.", "Tweede laagst.", "Hoogst.", "Tweede hoogst."],
+      },
+      {
+        q: "Welk type grafiek voor **verandering door tijd** (bv. temperatuur over week)?",
+        options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Geen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — lijn = trend over tijd.", "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
+      },
     ],
   },
 
