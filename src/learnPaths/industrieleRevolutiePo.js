@@ -128,7 +128,7 @@ const steps = [
         q: "Wie schreef '**Het Kapitaal**'?",
         options: ["Karl Marx", "James Watt", "Napoleon", "Edison"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Stoom-uitvinder.", "Politicus.", "Gloeilamp."],
+        wrongHints: [null, "Klopt — Duitse denker over arbeid.", "Verkeerd vakgebied.", "Verkeerd vakgebied.", "Verkeerd vakgebied."],
       },
       {
         q: "Wanneer **vrouwenkiesrecht** in NL (actief)?",

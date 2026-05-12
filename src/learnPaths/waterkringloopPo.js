@@ -109,7 +109,7 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Verdamping** = ?", options: ["Vloeibaar → damp", "Damp → vloeibaar", "Bevriezen", "Smelten"], answer: 0, wrongHints: [null, "Klopt.", "Condensatie.", "Niet.", "Niet."] },
-      { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Klopt.", "Hoog.", "Lage laag.", "Middelhoog."] },
+      { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Klopt — enorme stapelwolk.", "Geen onweer.", "Geen onweer.", "Geen onweer."] },
       { q: "Hoeveel **zoet water** op aarde?", options: ["~3%", "50%", "100%", "97%"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Wel water maar zout.", "Zout."] },
       { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."] },
       { q: "Wanneer **Afsluitdijk**?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Klopt — werd IJsselmeer.", "Watersnood.", "Te vroeg.", "Wel."] },

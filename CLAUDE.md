@@ -24,6 +24,33 @@
 
 Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken. Doel: app helemaal vullen met paden + vragen vóór fine-tuning. Mark wil **maximaal-lang autonoom werk per sessie**, zelfs als hij offline is — dus nooit pauzeren om input te vragen als er nog andere taken zijn die wél kunnen.
 
+### Prioriteit-stelsel — bijgesteld 2026-05-12 na 12-agent-review
+
+**12-agent-review constateerde scope-creep**: 12 van 32 nieuwe paden vielen buiten Cito-kern groep 6-8 (puberteit/emoties/Olympische/koude-oorlog/eetcultuur/etc.). Bovendien: paden gemiddeld 22-32 min ipv kwartier-belofte, bundle 5,4 MB, geen zoekbalk bij 67+ PO-paden. **Strategie-advies**: stop scope-creep, kies diepte boven breedte.
+
+**Nieuwe prio-volgorde (volg STRENG)**:
+
+**P0 — Tech-debt blokkers** *(eerst, want raakt elke gebruiker)*:
+- **Bundle splitsen**: `data-learnpaths` 5,4 MB → per-pad lazy import. Doel: main-chunk < 500 kB.
+- **Zoekbalk + Cito-pijler-filter + groep-niveau-filter** op StudentHome/LearnPathsHub.
+
+**P1 — Maand-2-plan diepte** *(strategische ICP-focus)*:
+- **Begrijpend lezen-flow uitbouwen**: 1 vak Doorstroomtoets compleet ipv breed.
+- **VoorkennisKeten UI fase 2**: POC op V36 economie 2023-T1, dan uitrollen.
+- **Doorstroomtoets-trio uitdiepen** tot 60+ vragen per onderdeel (taal/rekenen/studievaardigheden).
+
+**P2 — Bestaande paden opfris** *(quality-of-life)*:
+- **15-min check** op alle paden > 4 stappen: splitsen of explanations halveren.
+- **wrongHints-leak fixen**: geen categorie-labels op alle foute opties (zie review).
+- **Afkortingen uitleggen** bij eerste gebruik (MBO/HBO/WO/CAO/AOW/ZZP/NAVO/USSR/AVG/HTTPS/EU/VS).
+- **Examen-modus split schoon**: `examenEconomie2025T1` heeft hints — beslis split of opschonen.
+
+**P3 — Pas DAARNA nieuwe paden** + alleen als ze in Cito-core vallen *(taal/rekenen/studievaardigheden/wereldoriëntatie groep 6-8)*:
+- Geen ruimtevaart/Olympische/eetcultuur/koude-oorlog meer.
+- Bij twijfel: Leerkwartier-test ("helpt 10-jarige Cito-vraag beter begrijpen?") strikt toepassen.
+
+**STOP** met klas 1-3 onderbouw VO-uitbreiding (C-taak in `project_continuum_klas_1_3_onderbouw`) tot P0/P1/P2 op groen staan.
+
 ### Doel
 Cito-toets + examens versterken via **kennisgraaf** (zie "Kern-flow"). Concreet: optie-C-implementatie (data + UI) van voorkennis-keten. Daarnaast doorgaan met uitlegPad-werk.
 
@@ -186,12 +213,14 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 
 ### Didactiek
 - **wrongHints geven richting, geen antwoord** — schrijf als denkprikkel/vraag, nooit het juiste antwoord weggeven.
+- **wrongHints-eliminatie-leak vermijden** *(toegevoegd 2026-05-12 na review)*: in een 4-opties-vraag mag niet **elke** foute optie een unieke categorie-hint krijgen waardoor het juiste antwoord per uitsluiting bekend wordt. Bv. `[null, "Vrouw.", "Vrouw.", "Vrouw."]` bij vraag "wie is eerste man-koning?" → geeft antwoord weg. Gebruik vagere richtingen of laat sommige wrongHints `null`/leeg.
 - **Examen-modus vs Oefen-modus splitsen**: examen = authentiek/tijdsdruk/geen hints. Oefen = didactisch/hints/leerpad-link.
-- **15-min chunks (handelsmerk)**: splits elk pad in genummerde delen van ~15 min met expliciete tijdsindicatie.
+- **15-min chunks (handelsmerk)**: splits elk pad in genummerde delen van ~15 min met expliciete tijdsindicatie. **Concrete grens** *(toegevoegd 2026-05-12)*: max 4-5 stappen × ~250 woorden explanation. Boven dat: splitsen in deel 1/deel 2 of explanations halveren.
 - **Universele leerconcepten boven boek-specifieke hoofdstukken** (parabolen/pythagoras, niet "boek X hoofdstuk 3").
 
 ### Copy / UI
 - **Geen dev-jargon in user-facing copy**: "leerpad", "stap", "module", "trackId" e.d. nooit in UI. Gebruik woorden die ouders/leerlingen kennen.
+- **Afkortingen voluit bij eerste gebruik** *(toegevoegd 2026-05-12 na review)*: kinderen van 10 kennen MBO/HBO/WO/CAO/AOW/ZZP/NAVO/USSR/AVG/HTTPS/EU/VS/UK niet automatisch. Patroon: `**NAVO** (Noord-Atlantische Verdragsorganisatie — westers leger-bondgenootschap)` bij eerste vermelding, daarna afkorting OK. Geldt ook voor "VO" → al eerder vervangen door "middelbare school".
 - **Geen AI-poster-art bij Doorstroomtoets-content**: sobere bronnen (foto/kaart/tabel). Geen sfeer-illustraties met antwoord-verklap.
 - **Naming Cito vs Doorstroomtoets**: in copy/UI gebruik "Doorstroomtoets" (schoolrealiteit sinds 2024). Filenames + zoek-keywords blijven "cito" voor SEO. Zie `feedback_doorstroomtoets_naming` in memory.
 - **Doorstroomtoets-logo**: overal waar "Doorstroomtoets" in user-facing UI staat (knoppen/tegels/headers), gebruik `<DoorstroomtoetsLogo size={N} />` uit `src/components/DoorstroomtoetsLogo.jsx` in plaats van het 🎯-emoji. Geldt ook voor toekomstige leerkracht-features waarbij een leerkracht zelf een Doorstroomtoets samenstelt. PNG ligt in `public/logo-doorstroomtoets.png`. Zie `reference_doorstroomtoets_logo` in memory.
@@ -214,6 +243,8 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - Geen mocks in DB-tests.
 - Geen alarmistische taal over AVG-boetes — solo-builder = vrijwel nul boete-risico, eerste AP-actie = brief.
 - Geen feature-bloat — Leerkwartier-test bij elke feature toepassen.
+- **Geen nieuwe paden buiten Cito-kern groep 6-8** *(toegevoegd 2026-05-12)* tot P0/P1/P2 op groen. Bij twijfel: niet bouwen. Geen ruimtevaart/Olympische/eetcultuur/koude-oorlog/kunstenaars/godsdiensten-detail meer in deze sprint.
+- **Geen paden > 5 stappen** *(toegevoegd 2026-05-12)* — anders breekt kwartier-belofte.
 - Geen documentatie/README's aanmaken tenzij Mark expliciet vraagt.
 
 ## Externe resources

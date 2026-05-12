@@ -115,7 +115,7 @@ const steps = [
         q: "**Haiku** heeft welke vorm?",
         options: ["5-7-5 lettergrepen, 3 regels", "AABBA", "14 regels", "Geen vorm"],
         answer: 0,
-        wrongHints: [null, "Klopt — Japans.", "Limerick.", "Sonnet.", "Vrije vers."],
+        wrongHints: [null, "Klopt — Japans, natuur-thema.", "Andere dichtvorm.", "Veel langer.", "Wel vaste vorm."],
       },
       {
         q: "Wat is een **limerick**?",

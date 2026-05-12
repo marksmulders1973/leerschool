@@ -109,11 +109,11 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "Wie was **Vader des Vaderlands**?", options: ["Willem van Oranje", "Erasmus", "Cruijff", "Rutte"], answer: 0, wrongHints: [null, "Klopt — 1533-1584.", "Humanist.", "Voetbal.", "Modern."] },
-      { q: "Wie maakte **microscoop** als eerste?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Klopt.", "Astronoom.", "Planetarium.", "Niet."] },
+      { q: "Wie maakte **microscoop** als eerste?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Klopt — Delft, 17e eeuw.", "Andere wetenschap.", "Andere wetenschap.", "Niet."] },
       { q: "**Grootste voetballer** NL ooit?", options: ["Johan Cruijff", "Verstappen", "Rutte", "Erasmus"], answer: 0, wrongHints: [null, "Klopt.", "F1.", "Politiek.", "Filosoof."] },
       { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte (langste ooit)", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Klopt.", "Eerder.", "Eerder.", "Eerder."] },
       { q: "Wie ontwierp **Fokker-vliegtuigen**?", options: ["Anthony Fokker", "Slat", "Cruijff", "Verstappen"], answer: 0, wrongHints: [null, "Klopt.", "Ocean Cleanup.", "Voetbal.", "F1."] },
-      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Klopt.", "Vrouw.", "Vrouw.", "Vrouw."] },
+      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Klopt — vóór hem ~123 jaar koninginnen.", "Te recent gekroond.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
     ],
   },
 ];
