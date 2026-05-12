@@ -401,6 +401,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — aan elkaar = 1 woord.", "Spatie = fout — moet aan elkaar.", "Met 'en' = geen samenstelling.", "Streepje hier niet."],
       },
+      {
+        q: "Welke zin is **goed**?",
+        options: ["Ik antwoordde 'ja'.", "Ik antwoorde 'ja'.", "Ik anwoordde 'ja'.", "Ik antwoorden 'ja'."],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'antwoorden'-stam = 'antwoord' (op d). Voor verleden tijd niet in 't kofschip → -de = antwoordde.", "Spelfout: dubbele d nodig.", "Spelfout in stam.", "Plural — vraag is ik (enkelvoud)."],
+      },
+      {
+        q: "**'gisteren ___ ik thuis'** — werkwoord?",
+        options: ["was", "is", "ben", "zijn"],
+        answer: 0,
+        wrongHints: [null, "Klopt — verleden tijd 'zijn' enkelvoud = was.", "Tegenwoordige tijd 3e pers.", "Tegenwoordige tijd 1e pers.", "Infinitief / meervoud."],
+      },
+      {
+        q: "Welk woord schrijf je met **'ij'** (niet ei)?",
+        options: ["wijn", "trein", "klein", "stein"],
+        answer: 0,
+        wrongHints: [null, "Klopt — wijn = met ij.", "trein = ei.", "klein = ei.", "Geen NL-woord."],
+      },
     ],
   },
 
