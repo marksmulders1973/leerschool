@@ -141,6 +141,7 @@ import cseLeesvaardigheidNederlands from "./cseLeesvaardigheidNederlands.js";
 import cseWiskundeStrategieVmbo from "./cseWiskundeStrategieVmbo.js";
 import cseSchrijfvaardigheidEngels from "./cseSchrijfvaardigheidEngels.js";
 import bbpConjunctuurEconomie from "./bbpConjunctuurEconomie.js";
+import cseSchrijfvaardigheidNederlands from "./cseSchrijfvaardigheidNederlands.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -221,6 +222,7 @@ export const ALL_LEARN_PATHS = {
   "cse-wiskunde-strategie-vmbo": cseWiskundeStrategieVmbo,
   "cse-schrijfvaardigheid-engels": cseSchrijfvaardigheidEngels,
   "bbp-conjunctuur-economie": bbpConjunctuurEconomie,
+  "cse-schrijfvaardigheid-nederlands": cseSchrijfvaardigheidNederlands,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
   // Engels
