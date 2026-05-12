@@ -16,7 +16,7 @@ const COLORS = {
 const stepEmojis = ["🎒", "📅", "🧠", "👨‍🏫", "😌", "🏆"];
 
 const chapters = [
-  { letter: "A", title: "Verschil PO ↔ VO", emoji: "🎒", from: 0, to: 0 },
+  { letter: "A", title: "Verschil basisschool ↔ middelbare school", emoji: "🎒", from: 0, to: 0 },
   { letter: "B", title: "Agenda + plannen", emoji: "📅", from: 1, to: 1 },
   { letter: "C", title: "Leren-leren", emoji: "🧠", from: 2, to: 2 },
   { letter: "D", title: "Veel docenten + vakken", emoji: "👨‍🏫", from: 3, to: 3 },
@@ -27,16 +27,16 @@ const chapters = [
 function vergelijkSvg() {
   return `<svg viewBox="0 0 320 180">
 <rect x="0" y="0" width="320" height="180" fill="${COLORS.paper}"/>
-<text x="160" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">PO (groep 1-8) vs VO (klas 1+)</text>
+<text x="160" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="12" font-family="Arial" font-weight="bold">Basisschool (gr 1-8) vs middelbare school (klas 1+)</text>
 <rect x="15" y="40" width="140" height="115" rx="8" fill="rgba(128,203,196,0.15)" stroke="${COLORS.po}" stroke-width="1.5"/>
-<text x="85" y="60" text-anchor="middle" fill="${COLORS.po}" font-size="12" font-family="Arial" font-weight="bold">PO</text>
+<text x="85" y="60" text-anchor="middle" fill="${COLORS.po}" font-size="11" font-family="Arial" font-weight="bold">Basisschool</text>
 <text x="22" y="82" fill="${COLORS.text}" font-size="10" font-family="Arial">• 1 juf/meester</text>
 <text x="22" y="98" fill="${COLORS.text}" font-size="10" font-family="Arial">• 1 lokaal</text>
 <text x="22" y="114" fill="${COLORS.text}" font-size="10" font-family="Arial">• weinig huiswerk</text>
 <text x="22" y="130" fill="${COLORS.text}" font-size="10" font-family="Arial">• ~25-30 leerlingen</text>
 <text x="22" y="146" fill="${COLORS.text}" font-size="10" font-family="Arial">• 1 jaar = 1 klas</text>
 <rect x="165" y="40" width="140" height="115" rx="8" fill="rgba(255,213,79,0.15)" stroke="${COLORS.vo}" stroke-width="1.5"/>
-<text x="235" y="60" text-anchor="middle" fill="${COLORS.vo}" font-size="12" font-family="Arial" font-weight="bold">VO</text>
+<text x="235" y="60" text-anchor="middle" fill="${COLORS.vo}" font-size="11" font-family="Arial" font-weight="bold">Middelbare school</text>
 <text x="172" y="82" fill="${COLORS.text}" font-size="10" font-family="Arial">• 10-15 docenten</text>
 <text x="172" y="98" fill="${COLORS.text}" font-size="10" font-family="Arial">• elk vak ander lokaal</text>
 <text x="172" y="114" fill="${COLORS.text}" font-size="10" font-family="Arial">• veel huiswerk</text>
@@ -47,25 +47,25 @@ function vergelijkSvg() {
 
 const steps = [
   {
-    title: "Verschil PO ↔ VO — wat verandert?",
+    title: "Verschil basisschool ↔ middelbare school — wat verandert?",
     explanation:
-      "Van **groep 8** (basisschool) naar **klas 1** (voortgezet onderwijs) is groot. Wat verandert?\n\n**1. Meer docenten**\n• PO: 1 vaste juf/meester + 1-2 vakdocenten.\n• VO: **10-15 verschillende docenten** — 1 per vak.\n• Elke docent eigen regels + manier.\n\n**2. Verplaatsen tussen lokalen**\n• PO: meestal 1 lokaal hele dag.\n• VO: elk uur ander lokaal — **rooster volgen**.\n\n**3. Veel meer huiswerk**\n• PO: ~30 min/dag of niet eens.\n• VO klas 1: ~1-2 uur/dag.\n• Klas 4+: tot 2-3 uur.\n\n**4. Meer vakken**\n• PO: rekenen, taal, wereldoriëntatie.\n• VO: 13-15 vakken — bv. wiskunde, Nederlands, Engels, Frans, Duits, biologie, aardrijkskunde, geschiedenis, gym, tekenen, muziek, godsdienst, levensbeschouwing.\n\n**5. Toetsen + cijfers**\n• PO: paar toetsen, woordrapport.\n• VO: regelmatige toetsen, **cijfers van 1-10** *(6,0 = voldoende, 5,5 = onvoldoende)*.\n• Rapport elk **kwartaal** of **trimester** *(3-4 per jaar)*.\n\n**6. Niveau-groep**\n• Vmbo (bb/kb/gt), havo, vwo *(gymnasium = vwo + Latijn/Grieks)*.\n• In klas 1-2 vaak nog **brug-niveau** *(mengeling)*.\n• Vanaf klas 3 echte niveau-keuze.\n\n**7. Profiel-keuze**\n• Klas 3 vmbo: **richting** kiezen *(techniek, economie, zorg+welzijn, etc.)*.\n• Klas 3 havo/vwo: **profiel** *(N&T, N&G, E&M, C&M)*.\n\n**Eerste paar weken — overlevingstips**:\n• Loop de school door — waar zijn alle lokalen?\n• Schrijf rooster duidelijk op.\n• Vraag aan oudere leerlingen.\n• Eerste cijfer slecht? Niet panikeren — wennen kost tijd.\n• Vriendjes maken — eet samen, doe samen sport.\n\n**Cito-feitje**:\nVeel scholen hebben een **'meet & greet'** of **brugklaskamp** in eerste week — om vrienden te maken + school te leren kennen.",
+      "Van **groep 8** (basisschool) naar **klas 1** (middelbare school) is groot. Wat verandert?\n\n**1. Meer docenten**\n• Basisschool: 1 vaste juf/meester + 1-2 vakdocenten.\n• Middelbare school: **10-15 verschillende docenten** — 1 per vak.\n• Elke docent eigen regels + manier.\n\n**2. Verplaatsen tussen lokalen**\n• Basisschool: meestal 1 lokaal hele dag.\n• Middelbare school: elk uur ander lokaal — **rooster volgen**.\n\n**3. Veel meer huiswerk**\n• Basisschool: ~30 min/dag of niet eens.\n• Middelbare school klas 1: ~1-2 uur/dag.\n• Klas 4+: tot 2-3 uur.\n\n**4. Meer vakken**\n• Basisschool: rekenen, taal, wereldoriëntatie.\n• Middelbare school: 13-15 vakken — bv. wiskunde, Nederlands, Engels, Frans, Duits, biologie, aardrijkskunde, geschiedenis, gym, tekenen, muziek, godsdienst, levensbeschouwing.\n\n**5. Toetsen + cijfers**\n• PO: paar toetsen, woordrapport.\n• VO: regelmatige toetsen, **cijfers van 1-10** *(6,0 = voldoende, 5,5 = onvoldoende)*.\n• Rapport elk **kwartaal** of **trimester** *(3-4 per jaar)*.\n\n**6. Niveau-groep**\n• Vmbo (bb/kb/gt), havo, vwo *(gymnasium = vwo + Latijn/Grieks)*.\n• In klas 1-2 vaak nog **brug-niveau** *(mengeling)*.\n• Vanaf klas 3 echte niveau-keuze.\n\n**7. Profiel-keuze**\n• Klas 3 vmbo: **richting** kiezen *(techniek, economie, zorg+welzijn, etc.)*.\n• Klas 3 havo/vwo: **profiel** *(N&T, N&G, E&M, C&M)*.\n\n**Eerste paar weken — overlevingstips**:\n• Loop de school door — waar zijn alle lokalen?\n• Schrijf rooster duidelijk op.\n• Vraag aan oudere leerlingen.\n• Eerste cijfer slecht? Niet panikeren — wennen kost tijd.\n• Vriendjes maken — eet samen, doe samen sport.\n\n**Cito-feitje**:\nVeel scholen hebben een **'meet & greet'** of **brugklaskamp** in eerste week — om vrienden te maken + school te leren kennen.",
     svg: vergelijkSvg(),
     checks: [
       {
-        q: "Hoeveel **docenten** in VO klas 1 ongeveer?",
+        q: "Hoeveel **docenten** op middelbare school klas 1 ongeveer?",
         options: ["10-15", "1-2", "5", "30"],
         answer: 0,
         wrongHints: [null, "Klopt — per vak een ander.", "PO.", "Te weinig.", "Te veel."],
       },
       {
-        q: "**Voldoende cijfer** in VO?",
+        q: "**Voldoende cijfer** op middelbare school?",
         options: ["6,0 of hoger", "5,0 of hoger", "4,0 of hoger", "10"],
         answer: 0,
         wrongHints: [null, "Klopt.", "5,5 is onvoldoende.", "Te laag.", "Maximum, niet ondergrens."],
       },
       {
-        q: "Hoeveel **rapporten** per jaar in VO?",
+        q: "Hoeveel **rapporten** per jaar op middelbare school?",
         options: ["3-4", "1", "10", "0"],
         answer: 0,
         wrongHints: [null, "Klopt — per trimester.", "Te weinig.", "Te veel.", "Wel rapporten."],
@@ -81,7 +81,7 @@ const steps = [
   {
     title: "Agenda + plannen",
     explanation:
-      "**Agenda bijhouden** is de #1 vaardigheid in VO.\n\n**Soorten agenda**:\n• **Papier-agenda** *(traditioneel, scholen geven vaak gratis)*.\n• **Digitaal** *(Google Calendar, Magister, Zermelo)*.\n• **Combinatie** — beide gebruiken.\n\n**Wat opschrijven**:\n• **Huiswerk per vak**: 'Wiskunde §2.3 t/m 2.5 voor donderdag'.\n• **Toetsen**: 'Engels toets 20 sep, hfst 1-3'.\n• **Werkstukken** + deadlines.\n• **Praktische dingen**: bril mee, gym-spullen, gym-vrije.\n• **Activiteiten** *(school, sport, vrienden)*.\n\n**Plannen** *(voor langere taken)*:\n\n**Stap 1 — Achterwaarts plannen**:\n• Deadline noteren.\n• Tel terug: hoeveel dagen heb je?\n• Verdeel werk over die dagen.\n\nVoorbeeld werkstuk over Spanje, deadline 30 sep:\n• 30 sep: inleveren.\n• 29 sep: laatste check.\n• 27-28: schrijven.\n• 24-26: zoeken + uitwerken.\n• 23: onderwerp bedacht.\n\n**Stap 2 — Niet alles tegelijk**:\n• Wiskunde maandag, niet alle vakken zelfde dag.\n• Spreid huiswerk.\n\n**Stap 3 — Concentratieblokken**:\n• 25-30 min werken + 5 min pauze *(Pomodoro)*.\n• Niet 3 uur achter elkaar.\n\n**Magister / SOMtoday**:\nDe meeste scholen gebruiken **Magister** of **SOMtoday** voor:\n• Rooster.\n• Huiswerk *(zet docent erin)*.\n• Cijfers.\n• Berichten.\n\nLeer dit als eerste!\n\n**Cito-tips**:\n• Schrijf huiswerk op **bij het noteren** — niet 's avonds proberen herinneren.\n• Check je agenda **'s ochtends + 's middags + 's avonds**.\n• Maak op zondag een **week-overzicht** voor jezelf.",
+      "**Agenda bijhouden** is de #1 vaardigheid op de middelbare school.\n\n**Soorten agenda**:\n• **Papier-agenda** *(traditioneel, scholen geven vaak gratis)*.\n• **Digitaal** *(Google Calendar, Magister, Zermelo)*.\n• **Combinatie** — beide gebruiken.\n\n**Wat opschrijven**:\n• **Huiswerk per vak**: 'Wiskunde §2.3 t/m 2.5 voor donderdag'.\n• **Toetsen**: 'Engels toets 20 sep, hfst 1-3'.\n• **Werkstukken** + deadlines.\n• **Praktische dingen**: bril mee, gym-spullen, gym-vrije.\n• **Activiteiten** *(school, sport, vrienden)*.\n\n**Plannen** *(voor langere taken)*:\n\n**Stap 1 — Achterwaarts plannen**:\n• Deadline noteren.\n• Tel terug: hoeveel dagen heb je?\n• Verdeel werk over die dagen.\n\nVoorbeeld werkstuk over Spanje, deadline 30 sep:\n• 30 sep: inleveren.\n• 29 sep: laatste check.\n• 27-28: schrijven.\n• 24-26: zoeken + uitwerken.\n• 23: onderwerp bedacht.\n\n**Stap 2 — Niet alles tegelijk**:\n• Wiskunde maandag, niet alle vakken zelfde dag.\n• Spreid huiswerk.\n\n**Stap 3 — Concentratieblokken**:\n• 25-30 min werken + 5 min pauze *(Pomodoro)*.\n• Niet 3 uur achter elkaar.\n\n**Magister / SOMtoday**:\nDe meeste scholen gebruiken **Magister** of **SOMtoday** voor:\n• Rooster.\n• Huiswerk *(zet docent erin)*.\n• Cijfers.\n• Berichten.\n\nLeer dit als eerste!\n\n**Cito-tips**:\n• Schrijf huiswerk op **bij het noteren** — niet 's avonds proberen herinneren.\n• Check je agenda **'s ochtends + 's middags + 's avonds**.\n• Maak op zondag een **week-overzicht** voor jezelf.",
     checks: [
       {
         q: "Wat is **achterwaarts plannen**?",
@@ -143,7 +143,7 @@ const steps = [
   {
     title: "Omgaan met veel docenten + vakken",
     explanation:
-      "In VO heb je **10-15 docenten** — elk met eigen stijl.\n\n**Hoe ga je daarmee om?**\n\n**1. Respecteer verschillen**:\n• Docent A is strikt, docent B is grappig — beide oké.\n• Pas je houding aan per les *(niet brutaal bij strikte docent)*.\n\n**2. Onthoud namen + vakken**:\n• Eerste 2 weken — lijst aanleggen:\n```\n• meneer Jansen — wiskunde\n• mevrouw De Vries — Nederlands\n• meneer Smit — gym\n• ...\n```\n\n**3. Vraag stellen**:\n• Goede vraag = **specifiek**. Bv. 'Ik snap blz 23 niet, kunt u stap 3 uitleggen?'.\n• Slechte vraag = vaag. 'Ik snap niets'.\n• Bang om dom over te komen? **Anderen hebben dezelfde vraag**.\n\n**4. Bij conflict — niet panieken**:\n• Praat met docent rustig.\n• Als nodig: **mentor** *(je vaste contactpersoon)*.\n• Daarna eventueel team-leider of leerlingbegeleider.\n• Pas in noodgeval: ouders erbij.\n\n**5. Mentor**:\n• Eén docent is jouw **mentor** voor klas-1.\n• Komt vaak persoonlijk bij je terug *(mentor-uur, 1× per week)*.\n• Help-loket voor: roosterprobleem, ruzie, stress, alles.\n\n**Tips per vak-type**:\n\n**Taal-vakken** *(NL, Engels, Frans, Duits)*:\n• **Veel woordjes** — kleine pakjes per dag *(15 min/dag)*.\n• Lezen ook in vrije tijd helpt.\n\n**Exact** *(wiskunde, natuurkunde, scheikunde, biologie)*:\n• **Oefenen** — niet alleen lezen.\n• Werkboek + opgaven maken.\n• Achterstand niet ophalen op laatste moment.\n\n**Wereldoriëntatie** *(geschiedenis, aardrijkskunde)*:\n• **Begrippen** in eigen woorden.\n• Tijdlijnen maken voor geschiedenis.\n\n**Creatief** *(tekenen, muziek, drama)*:\n• Probeer dingen — niet alleen 'goed/fout'.\n• Eigen stijl ontwikkelen.\n\n**Gym + sport**:\n• Niet bang zijn — niet iedereen is goed.\n• Spullen mee! Vergeten = vaak straf.\n\n**Cito-feitje**:\nVolgens onderzoek voelt **1 op 3 brugklassers** zich overweldigd in eerste maanden. **Normaal**. Praten met mentor of ouders helpt.",
+      "Op de middelbare school heb je **10-15 docenten** — elk met eigen stijl.\n\n**Hoe ga je daarmee om?**\n\n**1. Respecteer verschillen**:\n• Docent A is strikt, docent B is grappig — beide oké.\n• Pas je houding aan per les *(niet brutaal bij strikte docent)*.\n\n**2. Onthoud namen + vakken**:\n• Eerste 2 weken — lijst aanleggen:\n```\n• meneer Jansen — wiskunde\n• mevrouw De Vries — Nederlands\n• meneer Smit — gym\n• ...\n```\n\n**3. Vraag stellen**:\n• Goede vraag = **specifiek**. Bv. 'Ik snap blz 23 niet, kunt u stap 3 uitleggen?'.\n• Slechte vraag = vaag. 'Ik snap niets'.\n• Bang om dom over te komen? **Anderen hebben dezelfde vraag**.\n\n**4. Bij conflict — niet panieken**:\n• Praat met docent rustig.\n• Als nodig: **mentor** *(je vaste contactpersoon)*.\n• Daarna eventueel team-leider of leerlingbegeleider.\n• Pas in noodgeval: ouders erbij.\n\n**5. Mentor**:\n• Eén docent is jouw **mentor** voor klas-1.\n• Komt vaak persoonlijk bij je terug *(mentor-uur, 1× per week)*.\n• Help-loket voor: roosterprobleem, ruzie, stress, alles.\n\n**Tips per vak-type**:\n\n**Taal-vakken** *(NL, Engels, Frans, Duits)*:\n• **Veel woordjes** — kleine pakjes per dag *(15 min/dag)*.\n• Lezen ook in vrije tijd helpt.\n\n**Exact** *(wiskunde, natuurkunde, scheikunde, biologie)*:\n• **Oefenen** — niet alleen lezen.\n• Werkboek + opgaven maken.\n• Achterstand niet ophalen op laatste moment.\n\n**Wereldoriëntatie** *(geschiedenis, aardrijkskunde)*:\n• **Begrippen** in eigen woorden.\n• Tijdlijnen maken voor geschiedenis.\n\n**Creatief** *(tekenen, muziek, drama)*:\n• Probeer dingen — niet alleen 'goed/fout'.\n• Eigen stijl ontwikkelen.\n\n**Gym + sport**:\n• Niet bang zijn — niet iedereen is goed.\n• Spullen mee! Vergeten = vaak straf.\n\n**Cito-feitje**:\nVolgens onderzoek voelt **1 op 3 brugklassers** zich overweldigd in eerste maanden. **Normaal**. Praten met mentor of ouders helpt.",
     checks: [
       {
         q: "Wie is je **mentor**?",
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Klopt.", "Maakt erger.", "Maakt erger.", "Niet alleen oplossing."],
       },
       {
-        q: "Hoeveel docenten ongeveer in VO klas 1?",
+        q: "Hoeveel docenten ongeveer in klas 1 middelbare school?",
         options: ["10-15", "1", "5", "30"],
         answer: 0,
         wrongHints: [null, "Klopt.", "PO.", "Te weinig.", "Te veel."],
@@ -251,19 +251,19 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const brugklasOrientatie = {
   id: "brugklas-orientatie",
-  title: "Brugklas-tips — overgang naar VO (groep 8 → klas 1)",
+  title: "Brugklas-tips — overgang naar middelbare school (groep 8 → klas 1)",
   emoji: "🎒",
   level: "groep8",
   subject: "rekenen",
   referentieNiveau: "1F",
-  sloThema: "Studievaardigheden — overgang PO naar VO",
+  sloThema: "Studievaardigheden — overgang basisschool naar middelbare school",
   prerequisites: [
     { id: "cito-strategieen-groep8", title: "Cito-strategieen groep 8", niveau: "po-1F" },
   ],
   intro:
-    "Brugklas-overgang voor groep 8 → klas 1 — verschil PO/VO (10-15 docenten, cijfers 1-10, profiel-keuze), agenda + Magister, leren-leren (spaced repetition, Feynman, Pomodoro), stress + tijd-management (Eisenhower, eet de kikker), top-10 tips. ~15 min.",
+    "Brugklas-overgang voor groep 8 → klas 1 — verschil basisschool/middelbare school (10-15 docenten, cijfers 1-10, profiel-keuze), agenda + Magister, leren-leren (spaced repetition, Feynman, Pomodoro), stress + tijd-management (Eisenhower, eet de kikker), top-10 tips. ~15 min.",
   triggerKeywords: [
-    "brugklas", "VO", "overgang groep 8",
+    "brugklas", "VO", "voortgezet onderwijs", "middelbare school", "overgang groep 8",
     "Magister", "SOMtoday", "agenda",
     "leren leren", "Pomodoro", "spaced repetition",
     "stress school", "tijd management",

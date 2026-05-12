@@ -683,7 +683,7 @@ const geneticaErfelijkheidBiologie = {
   emoji: "🧬",
   level: "klas3",
   subject: "biologie",
-  referentieNiveau: "VO-onderbouw",
+  referentieNiveau: "onderbouw",
   sloThema: "Biologie — genetica & erfelijkheid",
   intro:
     "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendel's wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, stambomen, erfelijke ziektes en moderne technieken (DNA-tests, gentherapie, CRISPR). Examenstof biologie CSE.",

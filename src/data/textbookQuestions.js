@@ -1046,7 +1046,7 @@ export const TEXTBOOK_QUESTIONS = {
   // ── Newton NaSk — natuurkunde alt Overal NaSk ───────────────────────
   "newton-nask": {
     0: [
-      { q: "Wat is NaSk?", options: ["Natuur- en scheikunde samen (onderbouw)", "Geschiedenis", "Talen", "Wiskunde"], answer: 0, explanation: "NaSk = combinatie van natuurkunde + scheikunde, samen onderwezen in onderbouw VO." },
+      { q: "Wat is NaSk?", options: ["Natuur- en scheikunde samen (onderbouw)", "Geschiedenis", "Talen", "Wiskunde"], answer: 0, explanation: "NaSk = combinatie van natuurkunde + scheikunde, samen onderwezen in de onderbouw van de middelbare school." },
       { q: "Welk experiment is VEILIG?", options: ["Met veiligheidsbril en uit de buurt van anderen", "Met ogen dicht", "Zonder uitleg", "Bij open vlam zonder toezicht"], answer: 0, explanation: "Lab-veiligheid: bril, schort, weet wat je doet, brandblusser nabij. Geen kort haar in vlam." },
     ],
     1: [

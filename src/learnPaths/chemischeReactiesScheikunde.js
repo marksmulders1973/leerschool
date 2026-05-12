@@ -653,7 +653,7 @@ const chemischeReactiesScheikunde = {
   emoji: "⚗️",
   level: "klas3",
   subject: "scheikunde",
-  referentieNiveau: "VO-onderbouw",
+  referentieNiveau: "onderbouw",
   sloThema: "Scheikunde — chemische reacties",
   intro:
     "Hoe je reactievergelijkingen schrijft en kloppend maakt: van molecuulformules en de Wet van Behoud van Massa, via balanceren stap-voor-stap, tot de zes hoofdtypen reacties (synthese, ontleding, verbranding, verdringing, dubbele verdringing, zuur-base) en het verschil tussen exotherm en endotherm. CSE-stof scheikunde.",

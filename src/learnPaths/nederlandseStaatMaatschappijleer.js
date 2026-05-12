@@ -566,7 +566,7 @@ const nederlandseStaatMaatschappijleer = {
   emoji: "🏛️",
   level: "klas3-4",
   subject: "maatschappijleer",
-  referentieNiveau: "VO-onderbouw",
+  referentieNiveau: "onderbouw",
   sloThema: "Maatschappijleer — Nederlandse staatsinrichting",
   intro:
     "Hoe werkt onze democratie? Tweede Kamer, Eerste Kamer, regering, Koning, Trias Politica, Grondwet en grondrechten, rechtsstaat, stemrecht, plus NL in EU/VN/NAVO. Eerste pad maatschappijleer.",

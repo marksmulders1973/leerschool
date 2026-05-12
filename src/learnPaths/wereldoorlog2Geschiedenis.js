@@ -699,7 +699,7 @@ const wereldoorlog2Geschiedenis = {
   emoji: "🕊️",
   level: "klas3-4",
   subject: "geschiedenis",
-  referentieNiveau: "VO-onderbouw/bovenbouw",
+  referentieNiveau: "onderbouw/bovenbouw",
   sloThema: "Geschiedenis — Tijd van Wereldoorlogen (WO II)",
   prerequisites: [
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },

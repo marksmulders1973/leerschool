@@ -85,7 +85,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de Cito Doorstroomtoets?",
-        options: ["Een toets aan het einde van groep 8 die advies geeft voor VO","Een toets om groep 8 over te doen","Een wereldwijd examen","Een huiswerktoets"],
+        options: ["Een toets aan het einde van groep 8 die advies geeft voor de middelbare school","Een toets om groep 8 over te doen","Een wereldwijd examen","Een huiswerktoets"],
         answer: 0,
         wrongHints: [null,"Wat denk je: zakt iemand voor de Cito, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
         uitlegPad: {
@@ -94,16 +94,16 @@ const steps = [
             { titel: "Wanneer + voor wie?", tekst: "Februari, na schooladvies. Iedereen op de basisschool. Geen 'zakken'." },
           ],
           woorden: [
-            { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Vroeger 'Doorstroomtoets'. Geeft advies voor VO." },
-            { woord: "VO", uitleg: "Voortgezet Onderwijs — middelbare school." },
+            { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Geeft advies voor middelbare school." },
+            { woord: "Voortgezet onderwijs (VO)", uitleg: "Officiele naam voor middelbare school." },
           ],
           theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA Cito (februari). Toets kan advies HOGER bijstellen, niet lager.",
           voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + Cito havo → school MOET heroverwegen. Andersom (advies havo + Cito vmbo) → advies blijft havo." }],
-          basiskennis: [{ onderwerp: "Geen zakken", uitleg: "Iedereen mag door naar VO. Geen examen-stress." }],
+          basiskennis: [{ onderwerp: "Geen zakken", uitleg: "Iedereen mag door naar de middelbare school. Geen examen-stress." }],
           niveaus: {
-            basis: "Cito = toets in groep 8 + advies VO. A.",
-            simpeler: "Aan het einde van groep 8 maak je een grote toets. Die helpt te bepalen welk soort middelbaar (vmbo/havo/vwo) bij jou past. = A.",
-            nogSimpeler: "Toets + VO-advies = A.",
+            basis: "Cito = toets in groep 8 + advies middelbare school. A.",
+            simpeler: "Aan het einde van groep 8 maak je een grote toets. Die helpt te bepalen welk soort middelbare school (vmbo/havo/vwo) bij jou past. = A.",
+            nogSimpeler: "Toets + advies middelbare school = A.",
           },
         },
       },
