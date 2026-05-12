@@ -1,5 +1,5 @@
 // Leerpad: Doorstroomtoets — studievaardigheden groep 8 (pilot).
-// 5 stappen van ~15 min met eigen oefenvragen "in stijl van" Cito/IEP.
+// 5 stappen van ~20 min met eigen oefenvragen "in stijl van" Cito/IEP.
 // Géén letterlijk overgenomen vragen — auteursrechtelijke schoonheid.
 // Externe link naar Cito's gratis voorbeeldopgavenboekje.
 // Parallel met doorstroomtoetsRekenenG8.js + doorstroomtoetsTaalG8.js.
@@ -60,7 +60,7 @@ const examenLink = "[Cito's gratis voorbeeldopgavenboekje](https://cito.nl/media
 const steps = [
   // STAP 1: Kaart + schaal
   {
-    title: "Kaart + schaal lezen — ~15 min",
+    title: "Kaart + schaal lezen — ~20 min",
     explanation:
       "**Studievaardigheden bij Cito** test of je informatie kunt **opzoeken en gebruiken**. Dat kan op een kaart, in een tabel, in een atlas, of via een schema.\n\n**Kaarten lezen — wat moet je kennen?**\n\n**1. Schaal**\n• **1 : 100.000** = 1 cm op kaart = 100.000 cm in het echt = 1 km.\n• **1 : 50.000** = 1 cm = 500 m = 0,5 km.\n• **1 : 25.000** = 1 cm = 250 m = 0,25 km.\n\n**Truc**: schaal omrekenen → deel door 100 *(cm → m)*. Dan door 1000 *(m → km)*.\n\n**Voorbeeld**:\n*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.\n\n**2. Windrichting**\n• Op de **kompasroos** zie je N(oord), O(ost), Z(uid), W(est).\n• **NO** = noord-oost (tussen N en O).\n• Veel kaarten: noord boven, oost rechts, zuid onder, west links.\n\n**3. Legenda**\nElke kaart heeft een **legenda** *(tekst-box met symbolen-uitleg)*:\n• Blauwe lijn = rivier of weg met water.\n• Bruine vlek = berg of heuvel.\n• Groene vlek = bos of park.\n• Stippellijn = wandelpad of grens.\n• Driehoek met getal = hoogtepunt *(bv. 312 m boven NAP)*.\n\n**4. Coördinaten**\nKaarten in atlas hebben vakken zoals **A4** of **C2**:\n• Letter = horizontale kolom *(boven)*.\n• Cijfer = verticale rij *(opzij)*.\n\n**Voorbeeld Cito-vraag**:\n*'In welk vak ligt de stad Groningen?'* → kijk in legend + tel kolommen/rijen.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     svg: overzichtSvg(),
@@ -187,7 +187,7 @@ const steps = [
 
   // STAP 2: Tabel + grafiek
   {
-    title: "Tabel + grafiek lezen — ~15 min",
+    title: "Tabel + grafiek lezen — ~20 min",
     explanation:
       "Bij studievaardigheden krijg je vaak een **tabel** of een **grafiek** en moet je daar informatie uit halen.\n\n**Cito-stappen**:\n1. **Lees titel + assen** — waar gaat het over?\n2. **Welke eenheid** — euro's, mensen, °C, mm?\n3. **Zoek de vraag-cel/balk** — onderaan staat meestal categorieën (dagen, klassen), zijkant staat hoeveelheid.\n4. **Lees af + schrijf met eenheid**.\n\n**Tabel-vraag-typen**:\n• **Aflezen**: 'Hoeveel kinderen op woensdag?'\n• **Verschil**: 'Hoeveel meer op vrijdag dan op maandag?'\n• **Totaal**: 'Totaal aantal kinderen in week?'\n• **Patroon**: 'Welke dag is een stijging te zien?'\n• **Gemiddelde**: 'Gemiddeld aantal per dag?'\n\n**Voorbeeld-tabel — Aantal ijsjes verkocht per dag**:\n\n| Dag | Aantal |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\n**Cito-vragen**:\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.\n\n**Grafiek-typen**:\n• **Staafdiagram** = vergelijken van groepen.\n• **Lijngrafiek** = verandering door tijd.\n• **Cirkeldiagram (taart)** = verdeling van geheel (100%).\n\n**Cito-truc — cirkeldiagram**:\nGroepen tellen samen op tot **100%**. Als 3 groepen 25%, 35% en x zijn, dan x = 100 − 25 − 35 = **40%**.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
@@ -312,7 +312,7 @@ const steps = [
 
   // STAP 3: Woordenboek + atlas + index
   {
-    title: "Woordenboek, atlas + index — ~15 min",
+    title: "Woordenboek, atlas + index — ~20 min",
     explanation:
       "Cito test of je weet hoe je **dingen opzoekt** in een boek of atlas.\n\n**Woordenboek**:\nAlle woorden staan **op alfabet** *(A → Z)*.\n• Eerst kijken naar **eerste letter**.\n• Bij gelijke eerste letter → **tweede letter** vergelijken.\n• Etc.\n\n**Voorbeeld — welk woord staat eerder?**\n• **'beest'** staat vóór **'beker'** *(b-e-e- staat vóór b-e-k-)*.\n• **'kat'** staat vóór **'kater'** *(kortere komt eerst als begin gelijk)*.\n• **'tafel'** staat na **'paard'** *(p staat voor t)*.\n\n**Truc** — gebruik **hoofdwoord** boven aan de pagina:\nLinker pagina-hoofdwoord = **eerste** woord op die pagina.\nRechter pagina-hoofdwoord = **laatste** woord op die pagina.\nZit je gezochte woord daartussen? → op deze 2 pagina's.\n\n**Atlas**:\nEen atlas heeft:\n• **Inhoudsopgave** voorin — waar staat welke kaart?\n• **Index** achterin — waar staat welke stad/rivier?\n\n**Voorbeeld — index gebruiken**:\n*'Waar staat Rotterdam?'*\nIndex: \"Rotterdam ... 14 B3\"\n→ Ga naar **bladzijde 14**, vak **B3**.\n\n**Bibliotheek-systeem**:\n• Boeken op alfabet op auteur achternaam.\n• Of op onderwerp-nummer (Dewey, bv. 500 = natuurwetenschappen).\n\n**Inhoudsopgave gebruiken**:\nVoorin een boek/atlas staat een lijst van **hoofdstukken + bladzijde-nummers**:\n• Hoofdstuk 1 — Klimaat — blz 5\n• Hoofdstuk 2 — Bevolking — blz 12\n• etc.\n\n**Index gebruiken**:\nAchterin een boek staat een lijst van **onderwerpen op alfabet** met paginanummers:\n• atoom ... 23, 45\n• bacterie ... 67\n• cel ... 12, 34, 89\n\nZo zoek je snel een onderwerp.\n\n**Cito-vragen**:\n*'Wat doet de index van een atlas?'*\n→ Geeft je het bladzijde-nummer + kaart-vak voor een plaatsnaam.\n\n*'Wat staat in de inhoudsopgave?'*\n→ Een lijst van hoofdstukken met bladzijde-nummers.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
@@ -420,7 +420,7 @@ const steps = [
 
   // STAP 4: Schema's + stappenplan
   {
-    title: "Schema's + stappenplan — ~15 min",
+    title: "Schema's + stappenplan — ~20 min",
     explanation:
       "Een **schema** geeft veel informatie kort weer met **kaders, pijlen en woorden**.\n\n**Typen schema's**:\n\n**1. Stroomdiagram / stappenplan**\nLaat een **volgorde van stappen** zien.\n• Met **pijlen** tussen kaders.\n• Vaak met **ja/nee-keuzes** *(ruitvorm)*.\n\nVoorbeeld koffie-zetten:\n```\nstart → water koken → koffie in filter → giet water erop → koffie klaar\n```\n\n**2. Boomdiagram**\nLaat een **verdeling van groepen** zien:\n```\nDieren\n├── Zoogdieren\n│   ├── Hond\n│   └── Kat\n└── Vogels\n    ├── Mus\n    └── Adelaar\n```\n\n**3. Vergelijkings-tabel**\nLaat zien wat **overeenkomt en verschilt** tussen 2+ dingen.\n• Bv. fiets vs auto: snelheid, kosten, milieu.\n\n**Cito-truc — schema lezen**:\n• **Volg de pijlen** in de richting waar ze wijzen.\n• Bij **ja/nee**: lees de vraag in de ruit, kies de pijl.\n• **Tel de stappen**.\n\n**Voorbeeld Cito-vraag**:\nSchema toont: 'Stap 1 (water koken) → Stap 2 (filter inzetten) → Stap 3 (koffie scheppen) → Stap 4 (water gieten) → klaar'.\n*'Welke stap komt na 'filter inzetten'?'*\n→ Koffie scheppen *(stap 3)*.\n\n**Stappenplan zelf maken**:\nVoor een doel — bv. 'taart bakken':\n1. Lees recept.\n2. Verzamel ingrediënten.\n3. Meng + kneed.\n4. Bak in oven.\n5. Laat afkoelen.\n\n**Voorbeeld Cito-vraag**:\n*'Welke stap moet eerst?'* → recept lezen. Anders weet je niet wat je nodig hebt.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
@@ -639,7 +639,7 @@ const doorstroomtoetsStudievaardighedenG8 = {
     { id: "schemas-stappenplannen-po", title: "Schema's en stappenplannen", niveau: "po-1F" },
   ],
   intro:
-    "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~75 min (5× ~15 min).",
+    "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~100 min totaal (5× ~20 min) — splits gerust in 5 dagelijkse kwartier-sessies.",
   triggerKeywords: [
     "doorstroomtoets", "cito", "groep 8", "studievaardigheden",
     "schaal", "kaartlezen", "atlas", "index", "inhoudsopgave",

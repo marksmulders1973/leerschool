@@ -1,5 +1,5 @@
 // Leerpad: Doorstroomtoets — rekenen groep 8 (pilot)
-// 4 stappen van ~15 min, 20 eigen vragen "in stijl van" Cito/IEP Doorstroomtoets.
+// 4 stappen van ~20 min, 20 eigen vragen "in stijl van" Cito/IEP Doorstroomtoets.
 // Géén letterlijk overgenomen vragen — auteursrechtelijke schoonheid.
 // Externe link naar Cito's gratis voorbeeldopgavenboekje voor "echte" oefenstof.
 
@@ -56,7 +56,7 @@ function overzichtSvg() {
 const steps = [
   // ─── Stap 1: Breuken & decimalen ──────────────────
   {
-    title: "Breuken & decimalen — ~15 min",
+    title: "Breuken & decimalen — ~20 min",
     explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie [Cito's gratis voorbeeldopgavenboekje](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
@@ -239,7 +239,7 @@ const steps = [
 
   // ─── Stap 2: Procenten & verhoudingen ──────────────────
   {
-    title: "Procenten & verhoudingen — ~15 min",
+    title: "Procenten & verhoudingen — ~20 min",
     explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële Cito-voorbeelden in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROCENT-TRUCS</text>
@@ -441,7 +441,7 @@ const steps = [
 
   // ─── Stap 3: Meten & schaal ──────────────────
   {
-    title: "Meten & schaal — ~15 min",
+    title: "Meten & schaal — ~20 min",
     explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zit 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: [Cito's gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENGTE-TRAPJE</text>
@@ -622,7 +622,7 @@ const steps = [
 
   // ─── Stap 4: Redactie-eindopdracht ──────────────────
   {
-    title: "Redactiesommen — eindopdracht ~15 min",
+    title: "Redactiesommen — eindopdracht ~20 min",
     explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. Cito geeft alleen punten voor goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: [Cito's gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">REDACTIE-AANPAK</text>
@@ -828,7 +828,7 @@ const doorstroomtoetsRekenenG8 = {
     { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
   ],
   intro:
-    "20 oefenvragen rekenen in stijl van Cito/IEP Doorstroomtoets — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. Vier delen van ~15 min.",
+    "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
   triggerKeywords: [
     "doorstroomtoets", "doorstroom", "doorstroomtoets rekenen",
     "cito", "cito-eindtoets", "cito eindtoets", "cito rekenen", "cito groep 8",

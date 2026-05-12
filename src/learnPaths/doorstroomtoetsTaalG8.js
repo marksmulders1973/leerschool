@@ -1,5 +1,5 @@
 // Leerpad: Doorstroomtoets — taal groep 8 (pilot).
-// 4 stappen van ~15 min met eigen vragen "in stijl van" Cito/IEP. Géén
+// 4 stappen van ~20 min met eigen vragen "in stijl van" Cito/IEP. Géén
 // letterlijk overgenomen vragen — auteursrechtelijke schoonheid.
 // Externe link naar Cito's gratis voorbeeldopgavenboekje voor "echte"
 // oefenstof.
@@ -58,9 +58,9 @@ function overzichtSvg() {
 const examenLink = "[Cito's gratis voorbeeldopgavenboekje](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf)";
 
 const steps = [
-  // STAP 1: Woordenschat (~15 min)
+  // STAP 1: Woordenschat (~20 min)
   {
-    title: "Woordenschat — ~15 min",
+    title: "Woordenschat — ~20 min",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nBij taal krijg je vaak 10-15 woordenschatvragen. De toets test:\n\n• **Wat betekent een moeilijk woord**? *(bv. 'verlamd' — kan zich niet bewegen)*\n• **Welke uitspraak hoort bij een woord** in een tekst? *(context-vraag)*\n• **Welk woord past in een zin** (synoniem-vraag)? *(bv. 'opvallend' = 'in het oog springend')*\n\n**Cito-truc 1 — context geeft de hint**:\nLees het hele zinnetje, niet alleen het woord. Vaak staat de betekenis vlak vóór of na het woord.\n\nVoorbeeld: *'Iedereen was **stomverbaasd** toen de poes het deurtje opende.'*\n→ Stomverbaasd = heel erg verbaasd, want het was iets bijzonders.\n\n**Cito-truc 2 — eliminatie**:\nBij 4 keuzes: streep 2 antwoorden door die zeker fout zijn. Dan heb je 50% kans, dat is veel beter dan gokken.\n\n**Cito-truc 3 — woordfamilies**:\n• 'verlamd' lijkt op 'lam' = niet kunnen bewegen.\n• 'onbarmhartig' = 'on' + 'barmhartig' (vriendelijk-meelevend) = niet meelevend, hard.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
@@ -216,9 +216,9 @@ const steps = [
     ],
   },
 
-  // STAP 2: Begrijpend lezen (~15 min)
+  // STAP 2: Begrijpend lezen (~20 min)
   {
-    title: "Begrijpend lezen — ~15 min",
+    title: "Begrijpend lezen — ~20 min",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nBegrijpend lezen is de **grootste taal-onderdeel**: 20-30 vragen na een paar teksten.\n\n**De Cito-vraagsoorten** *(uit je hoofd!)*:\n• **Hoofdgedachte**: 'Waar gaat de hele tekst over?' → meestal in de eerste of laatste alinea.\n• **Detail**: 'Wat staat er in alinea 2?' → zoek in alinea 2.\n• **Verband**: 'Waarom?' / 'Wat is het gevolg?' → zoek signaalwoorden zoals 'omdat', 'daardoor'.\n• **Bedoeling**: 'Waarom schreef de schrijver?' → informeren / overtuigen / amuseren.\n\n**Stappenplan**:\n1. **Skim** de tekst — lees titel + eerste/laatste zin van elke alinea.\n2. **Lees de vraag** voordat je de hele tekst leest.\n3. **Zoek terug** in de tekst — leg je vinger bij de juiste alinea.\n4. **Check** dat het antwoord echt in de tekst staat, niet je eigen mening.\n\n**Cito-strikvraag** — let op deze 3:\n• *'Welke zin klopt **niet**?'* — het juiste antwoord is degene die fout is.\n• Antwoorden die 'lijken te kloppen' maar net niet zo in de tekst staan.\n• 'Altijd' / 'nooit' in antwoorden — vaak fout (te absoluut).\n\n**Voorbeeld-tekst**:\n*'In Nederland slapen vleermuizen meestal overdag. Ze hangen onderste-boven aan een tak. 's Avonds vliegen ze uit om insecten te vangen.'*\n\n**Vraag**: Wanneer vliegen vleermuizen?\n• Antwoord: 's avonds *(staat letterlijk in de tekst)*.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
@@ -373,9 +373,9 @@ const steps = [
     ],
   },
 
-  // STAP 3: Spelling (~15 min)
+  // STAP 3: Spelling (~20 min)
   {
-    title: "Spelling — ~15 min",
+    title: "Spelling — ~20 min",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\n5-10 spelling-vragen — vaak meerkeuze: 'welk woord is **goed gespeld**?'\n\n**De top-5 valkuilen**:\n• **d/t/dt** — *'wordt'* (hij wordt = stam + t) vs *'word'* (ik word = alleen stam).\n• **ei vs ij** — hier helpt geen regel, je moet ze **uit je hoofd kennen** (zie [spelling-ei-ij-au-ou pad]).\n• **au vs ou** — zelfde verhaal, uit je hoofd.\n• **Samengestelde woorden**: 'paardenstaart' is één woord, 'paard staart' niet.\n• **Hoofdletters**: alleen aan begin van zin, of bij namen.\n\n**'t kofschip-truc voor werkwoord-spelling** *(verleden tijd!)*:\n• Stam eindigt op **'t kofschip-letter** (t, k, f, s, ch, p) → **+ te** of **+ ten**.\n• Anders → **+ de** of **+ den**.\n\nVoorbeelden:\n• 'praten' → 'praat' (stam) → eindigt op 't' → 't kofschip → 'praatte' (verleden tijd).\n• 'wandelen' → 'wandel' → eindigt op 'l' (niet 't kofschip) → 'wandelde'.\n\n**Cito-truc — 'wordt' of 'word'?**\n• 'Ik **word** ziek' *(ik + stam, geen t)*.\n• 'Hij **wordt** ziek' *(hij + stam + t)*.\n• Vervang door 'lopen': loop / loopt. Hetzelfde patroon.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
@@ -512,9 +512,9 @@ const steps = [
     ],
   },
 
-  // STAP 4: Taalverzorging — mix (~15 min)
+  // STAP 4: Taalverzorging — mix (~20 min)
   {
-    title: "Taalverzorging — interpunctie & zinnen — ~15 min",
+    title: "Taalverzorging — interpunctie & zinnen — ~20 min",
     explanation:
       "**Wat verwacht je op de Doorstroomtoets?**\n\nTaalverzorging = **leestekens + zinsbouw**. 5-10 vragen.\n\n**Top-4 onderwerpen**:\n• **Punt of vraagteken?** Een vraag eindigt op **'?'**. Een zin op **'.'**\n• **Komma's** — bij opsommingen (appel, peer, druif **en** banaan) en tussen 2 zinnen met *omdat / maar / als*.\n• **Aanhalingstekens** *''*\\* — bij wat iemand zegt.\n• **Hoofdletter aan begin** — altijd.\n\n**Cito-truc 1 — opsomming**:\n• 'Ik kocht appels, peren, druiven **en** bananen.'\n• Tussen de laatste 2 staat **'en'** (geen komma).\n\n**Cito-truc 2 — zinnen verbinden**:\n• 'Ik ben moe, **omdat** ik laat opbleef.' *(één zin met 2 delen)*\n• Geen punt midden in — de komma scheidt de delen.\n\n**Cito-truc 3 — directe rede**:\n• Mama zei: '**Ga je tanden poetsen.**'\n• Aanhalingstekens om wat ze zegt + dubbele punt ervoor.\n\n**Cito-truc 4 — zin vs deelzin**:\nEen volledige zin heeft een **onderwerp** (wie?) + **werkwoord** (doet wat?). Anders is het geen complete zin.\n• ✓ 'De hond rent.' *(hond = onderwerp, rent = werkwoord)*\n• ✗ 'De rennende hond.' *(geen werkwoord — geen zin)*\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
@@ -654,7 +654,7 @@ const doorstroomtoetsTaalG8 = {
     { id: "werkwoordsspelling-dt", title: "Werkwoordsspelling d/t", niveau: "po-1F" },
   ],
   intro:
-    "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorbeeldopgavenboekje. ~60 min (4× ~15 min).",
+    "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorbeeldopgavenboekje. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
   triggerKeywords: [
     "doorstroomtoets", "cito", "groep 8", "taal",
     "woordenschat", "begrijpend lezen", "spelling", "taalverzorging",
