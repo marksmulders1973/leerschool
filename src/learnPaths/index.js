@@ -164,6 +164,7 @@ import bekendeBoekenLiteratuurPo from "./bekendeBoekenLiteratuurPo.js";
 import pubertijdGroeiPo from "./pubertijdGroeiPo.js";
 import weersvoorspellingPo from "./weersvoorspellingPo.js";
 import digitaleGeletterdheidPo from "./digitaleGeletterdheidPo.js";
+import ruimtevaartPo from "./ruimtevaartPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -223,6 +224,7 @@ export const ALL_LEARN_PATHS = {
   "pubertijd-groei-po": pubertijdGroeiPo,
   "weersvoorspelling-po": weersvoorspellingPo,
   "digitale-geletterdheid-po": digitaleGeletterdheidPo,
+  "ruimtevaart-po": ruimtevaartPo,
   procenten,
   "negatieve-getallen": negatieveGetallen,
   verhoudingen,
