@@ -141,6 +141,24 @@ const steps = [
           },
         },
       },
+      {
+        q: "*'De vergadering werd door zijn **inmenging** verstoord.'* Wat is inmenging?",
+        options: ["Bemoeien met iets dat je niet aangaat", "Hulp bieden", "Op tijd komen", "Vrolijk zijn"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'in' + 'menging' = ergens in mengen.", "Wel kan, maar 'inmenging' is meer negatief.", "Geen verband.", "Geen verband."],
+      },
+      {
+        q: "Welk woord betekent **hetzelfde als** **'gehaast'**?",
+        options: ["Snel + gestrest", "Rustig", "Verveeld", "Voldoening"],
+        answer: 0,
+        wrongHints: [null, "Klopt — onder tijdsdruk.", "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
+      },
+      {
+        q: "*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?",
+        options: ["Dapper, niet bang", "Bang", "Snel", "Sterk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gerelateerd aan 'moed' (durven).", "Tegenovergesteld.", "Andere eigenschap.", "Wel een kwaliteit maar niet primair 'moedig'."],
+      },
     ],
   },
 
