@@ -62,6 +62,11 @@ export function gatherPoChecks() {
           // uitlegPad (3-niveau didactisch) + explanation (volledige tekst).
           uitlegPad: c.uitlegPad || null,
           explanation: c.explanation || "",
+          // Mark 2026-05-12: examenBron + bronTekst overal door zodat de
+          // gouden banner ('Officiële examen-vraag') ook in CitoLeerpadToets
+          // zichtbaar is als een check uit een echt examen komt.
+          examenBron: c.examenBron || null,
+          bronTekst: c.bronTekst || null,
           checkIdx,
           subject: pijler,
           pathId,

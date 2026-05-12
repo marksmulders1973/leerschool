@@ -6,6 +6,7 @@ import MdInline from "../shared/ui/MdInline.jsx";
 import { shuffleOptions } from "../shared/shuffleOptions.js";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
 import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
+import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
 
 // Sprint C v1 (2026-05-08): oefen-Cito op basis van onze eigen leerpad-checks.
 // 30 vragen · 30 min countdown · score per onderdeel.
@@ -258,6 +259,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                     color: C.text,
                   }}
                 >
+                  {q.examenBron && <ExamenBronBanner examenBron={q.examenBron} compact />}
                   <div style={{ fontSize: 13, marginBottom: 6, lineHeight: 1.4 }}>
                     <MdInline text={q.question} />
                   </div>
@@ -463,6 +465,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
             color: "var(--color-text-strong)",
           }}
         >
+          {q.examenBron && <ExamenBronBanner examenBron={q.examenBron} />}
           <MdInline text={q.question} />
         </div>
 
