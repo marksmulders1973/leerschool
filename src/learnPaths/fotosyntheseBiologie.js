@@ -28,34 +28,61 @@ const chapters = [
 ];
 
 function fotosyntheseSvg() {
-  return `<svg viewBox="0 0 320 220">
-<rect x="0" y="0" width="320" height="220" fill="${COLORS.paper}"/>
-<text x="160" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">Fotosynthese — de plant als fabriek</text>
-<!-- Zon -->
-<circle cx="55" cy="50" r="22" fill="${COLORS.zon}"/>
-<text x="55" y="55" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">zon</text>
-<!-- Zonlicht-pijl -->
-<line x1="75" y1="65" x2="125" y2="105" stroke="${COLORS.zon}" stroke-width="2"/>
-<polygon points="120,100 130,100 125,110" fill="${COLORS.zon}"/>
-<text x="100" y="85" fill="${COLORS.zon}" font-size="10" font-family="Arial">zonlicht</text>
-<!-- Plant -->
-<rect x="140" y="115" width="6" height="60" fill="#5d4037"/>
-<ellipse cx="143" cy="120" rx="35" ry="15" fill="${COLORS.blad}"/>
-<text x="143" y="124" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">blad</text>
-<!-- CO2 in -->
-<text x="220" y="125" fill="${COLORS.co2}" font-size="12" font-family="Arial" font-weight="bold">CO₂ ←</text>
-<text x="220" y="140" fill="${COLORS.muted}" font-size="9" font-family="Arial">(uit lucht)</text>
-<!-- Water uit grond -->
-<rect x="100" y="175" width="100" height="25" fill="#5d4037" opacity="0.5"/>
-<text x="150" y="192" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">grond</text>
-<line x1="143" y1="175" x2="143" y2="200" stroke="${COLORS.water}" stroke-width="2"/>
-<text x="60" y="195" fill="${COLORS.water}" font-size="11" font-family="Arial" font-weight="bold">water ↑</text>
-<!-- O2 uit -->
-<text x="60" y="125" fill="${COLORS.o2}" font-size="12" font-family="Arial" font-weight="bold">→ O₂</text>
-<text x="60" y="140" fill="${COLORS.muted}" font-size="9" font-family="Arial">(zuurstof)</text>
-<!-- Suiker -->
-<text x="220" y="170" fill="${COLORS.highlight}" font-size="11" font-family="Arial" font-weight="bold">+ suiker</text>
-<text x="220" y="185" fill="${COLORS.muted}" font-size="9" font-family="Arial">(voor groei)</text>
+  // ICP groep 6-8 / klas 1-2: duidelijk onderscheid IN-de-plant vs UIT-de-plant.
+  // Mark feedback 2026-05-12: oude SVG had verwarrende pijl-richtingen.
+  // - Pijlen die NAAR het blad wijzen = INPUT (zonlicht, CO2 uit lucht).
+  // - Pijl OMHOOG uit grond = INPUT (water via wortels).
+  // - Pijl die WEG van het blad wijst = OUTPUT (O2 naar de lucht).
+  // - Suiker blijft in de plant — geen pijl naar buiten, label binnen plant.
+  // Plus labels boven en onder de plant: "ERIN" en "ERUIT".
+  const bladX = 170, bladY = 115;
+  return `<svg viewBox="0 0 340 240">
+<rect x="0" y="0" width="340" height="240" fill="${COLORS.paper}"/>
+<text x="170" y="22" text-anchor="middle" fill="${COLORS.curve2}" font-size="13" font-family="Arial" font-weight="bold">Fotosynthese — wat gaat erin, wat komt eruit?</text>
+
+<!-- KOPJES boven -->
+<text x="70" y="42" text-anchor="middle" fill="${COLORS.o2}" font-size="11" font-family="Arial" font-weight="bold">↑ ERUIT</text>
+<text x="270" y="42" text-anchor="middle" fill="${COLORS.curve2}" font-size="11" font-family="Arial" font-weight="bold">↓ ERIN</text>
+
+<!-- Zon (rechts boven, voor INPUT) -->
+<circle cx="285" cy="68" r="18" fill="${COLORS.zon}"/>
+<text x="285" y="72" text-anchor="middle" fill="#0e1014" font-size="10" font-family="Arial" font-weight="bold">zon</text>
+
+<!-- INPUT 1: Zonlicht pijl van zon naar blad -->
+<line x1="270" y1="80" x2="${bladX + 25}" y2="${bladY - 6}" stroke="${COLORS.zon}" stroke-width="2.5"/>
+<polygon points="${bladX + 22},${bladY - 12} ${bladX + 30},${bladY - 6} ${bladX + 18},${bladY - 4}" fill="${COLORS.zon}"/>
+<text x="245" y="105" text-anchor="end" fill="${COLORS.zon}" font-size="11" font-family="Arial" font-weight="bold">zonlicht →</text>
+
+<!-- INPUT 2: CO2 pijl van rechts naar blad -->
+<line x1="305" y1="${bladY}" x2="${bladX + 28}" y2="${bladY}" stroke="${COLORS.co2}" stroke-width="2.5"/>
+<polygon points="${bladX + 30},${bladY - 5} ${bladX + 22},${bladY} ${bladX + 30},${bladY + 5}" fill="${COLORS.co2}"/>
+<text x="310" y="${bladY - 4}" fill="${COLORS.co2}" font-size="12" font-family="Arial" font-weight="bold">CO₂</text>
+<text x="310" y="${bladY + 12}" fill="${COLORS.muted}" font-size="9" font-family="Arial">uit lucht</text>
+
+<!-- Plant: stam + blad in midden -->
+<rect x="${bladX - 3}" y="${bladY + 10}" width="6" height="65" fill="#5d4037"/>
+<ellipse cx="${bladX}" cy="${bladY}" rx="32" ry="14" fill="${COLORS.blad}"/>
+<text x="${bladX}" y="${bladY + 4}" text-anchor="middle" fill="#0e1014" font-size="11" font-family="Arial" font-weight="bold">blad</text>
+
+<!-- OUTPUT: O2 pijl van blad naar links omhoog (weg) -->
+<line x1="${bladX - 28}" y1="${bladY - 3}" x2="50" y2="${bladY - 25}" stroke="${COLORS.o2}" stroke-width="2.5"/>
+<polygon points="55,${bladY - 30} 45,${bladY - 27} 53,${bladY - 19}" fill="${COLORS.o2}"/>
+<text x="30" y="${bladY - 32}" fill="${COLORS.o2}" font-size="12" font-family="Arial" font-weight="bold">O₂ →</text>
+<text x="30" y="${bladY - 18}" fill="${COLORS.muted}" font-size="9" font-family="Arial">zuurstof</text>
+
+<!-- Suiker (BLIJFT in plant — geen pijl) -->
+<text x="${bladX}" y="${bladY + 26}" text-anchor="middle" fill="${COLORS.highlight}" font-size="11" font-family="Arial" font-weight="bold">+ suiker</text>
+<text x="${bladX}" y="${bladY + 38}" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial" font-style="italic">(blijft in plant — voor groei)</text>
+
+<!-- Grond -->
+<rect x="100" y="200" width="160" height="28" fill="#5d4037" opacity="0.5"/>
+<text x="180" y="219" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">grond</text>
+
+<!-- INPUT 3: Water pijl OMHOOG door wortel/stam naar blad -->
+<line x1="${bladX}" y1="225" x2="${bladX}" y2="${bladY + 12}" stroke="${COLORS.water}" stroke-width="3"/>
+<polygon points="${bladX - 5},${bladY + 14} ${bladX + 5},${bladY + 14} ${bladX},${bladY + 6}" fill="${COLORS.water}"/>
+<text x="${bladX + 18}" y="218" fill="${COLORS.water}" font-size="11" font-family="Arial" font-weight="bold">↑ water</text>
+<text x="${bladX + 18}" y="230" fill="${COLORS.muted}" font-size="9" font-family="Arial">uit grond</text>
 </svg>`;
 }
 
