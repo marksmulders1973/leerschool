@@ -131,7 +131,7 @@ const steps = [
 
   {
     title: "Wisselgeld berekenen",
-    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• 5,00 − 1,80 = **€ 3,20**.\n\n**Cito-truc — terug-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• € 1,80 → 0,20 erbij → € 2,00 *(20 cent)*\n• € 2,00 → 3 erbij → € 5,00 *(€ 3)*\n• Totaal terug: **€ 3 + 20 cent = € 3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75 betaalt met biljet van € 10:\n• 3 × 2,75 = 8,25.\n• 10 − 8,25 = **€ 1,75 wisselgeld**.\n\n**Cito-tip**:\nReken altijd met de **gevolgde cijfers** *(maak biljet ipv 5,00 lees als € 5)*. Schrijf netjes op.",
+    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• €5,00 − €1,80 = **€3,20**.\n\n**Cito-truc — terug-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• €1,80 → €0,20 erbij → €2,00 *(20 cent)*\n• €2,00 → €3 erbij → €5,00 *(3 euro)*\n• Totaal terug: **€3 + €0,20 = €3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75 betaalt met biljet van € 10:\n• 3 × €2,75 = €8,25.\n• €10 − €8,25 = **€1,75 wisselgeld**.\n\n**Cito-tip**:\nReken altijd met de **gevolgde cijfers** *(een biljet van 5,00 lees je als € 5)*. Schrijf netjes op.",
     checks: [
       {
         q: "Een tas kost **€ 24,50**. Je betaalt met **€ 50**. Wisselgeld?",
@@ -140,20 +140,20 @@ const steps = [
         wrongHints: [null,"Dat is de prijs — je hebt aftrekking nodig.","Te veel — heb je 50 wel meegenomen?","Veel te veel — controleer met schatting."],
         uitlegPad: {
           stappen: [
-            { titel: "Wisselgeld = betaald − prijs", tekst: "50 − 24,50 = 25,50. Vooruit-tellen: van 24,50 → 25 = 0,50. Van 25 → 50 = 25. Totaal 25,50." },
+            { titel: "Wisselgeld = betaald − prijs", tekst: "€50 − €24,50 = €25,50. Vooruit-tellen: van €24,50 → €25 = €0,50 erbij. Van €25 → €50 = €25 erbij. Totaal €25,50." },
           ],
           woorden: [{ woord: "wisselgeld", uitleg: "Wat je TERUGKRIJGT als je meer betaalt dan de prijs." }],
           theorie: "Wisselgeld = betaald − prijs. Vooruit-tellen vanaf prijs is vaak sneller dan cijferen.",
           voorbeelden: [{ type: "wisselgeld", tekst: "Prijs €24,50, biljet €50: 50−24,50 = 25,50. Of vooruit-tellen vanaf 24,50." }],
           basiskennis: [{ onderwerp: "Niet de prijs!", uitleg: "Verwar wisselgeld niet met de prijs zelf." }],
-          niveaus: { basis: "50−24,50=€25,50. A.", simpeler: "Vooruit-tellen: 24,50 → 25 = +0,50. 25 → 50 = +25. Totaal wisselgeld €25,50. = A.", nogSimpeler: "€25,50 = A." },
+          niveaus: { basis: "€50 − €24,50 = €25,50. A.", simpeler: "Vooruit-tellen: €24,50 → €25 = +€0,50. €25 → €50 = +€25. Totaal wisselgeld €25,50. = A.", nogSimpeler: "€25,50 = A." },
         },
       },
       {
         q: "**3 koeken van € 1,25** met een **€ 5-biljet**. Wisselgeld?",
         options: ["€ 1,25","€ 0,75","€ 2,25","€ 3,75"],
         answer: 0,
-        wrongHints: [null,"Te weinig — controleer: 3 × 1,25 = 3,75. 5 − 3,75 = ?","Te veel — kontroleer som van koeken.","Dat is wat de koeken kosten, niet wisselgeld."],
+        wrongHints: [null,"Te weinig — controleer: 3 × €1,25 = €3,75. €5 − €3,75 = ?","Te veel — controleer som van koeken.","Dat is wat de koeken kosten, niet wisselgeld."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: kosten", tekst: "3 × €1,25 = €3,75 (totaal koeken)." },
@@ -161,9 +161,9 @@ const steps = [
           ],
           woorden: [{ woord: "totaalkosten", uitleg: "Aantal × prijs per stuk = totaal." }],
           theorie: "Bij 'meerdere stuks + wisselgeld' = 2 stappen: eerst kosten berekenen, dan aftrekken.",
-          voorbeelden: [{ type: "2-stappen", tekst: "3 × 1,25 = 3,75. 5 − 3,75 = 1,25 wisselgeld." }],
+          voorbeelden: [{ type: "2-stappen", tekst: "3 × €1,25 = €3,75. €5 − €3,75 = €1,25 wisselgeld." }],
           basiskennis: [{ onderwerp: "Niet 1 stap", uitleg: "Vergeet niet de aantallen mee te nemen." }],
-          niveaus: { basis: "3×1,25=3,75. 5−3,75=€1,25. A.", simpeler: "Eerst kosten: 3 koeken × €1,25 = €3,75. Dan: €5 − €3,75 = €1,25. = A.", nogSimpeler: "€1,25 = A." },
+          niveaus: { basis: "3 × €1,25 = €3,75. €5 − €3,75 = €1,25. A.", simpeler: "Eerst kosten: 3 koeken × €1,25 = €3,75. Dan: €5 − €3,75 = €1,25. = A.", nogSimpeler: "€1,25 = A." },
         },
       },
       {

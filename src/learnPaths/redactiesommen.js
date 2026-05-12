@@ -98,25 +98,25 @@ const steps = [
 
   {
     title: "Twee-stap-sommen — eerst dit, dan dat",
-    explanation: "**Twee-stap-sommen** vereisen meerdere bewerkingen. Doe ze in **stappen**.\n\n**Voorbeeld 1 — winkel**:\n*'Mam koopt 3 broden van € 2,80 en betaalt met € 10. Wisselgeld?'*\n\n• **Stap 1**: 3 × 2,80 = **€ 8,40** *(prijs van broden)*.\n• **Stap 2**: 10,00 − 8,40 = **€ 1,60 wisselgeld**.\n\n**Voorbeeld 2 — verdelen**:\n*'48 koekjes worden over 6 zakken verdeeld. Per zak gaan er 2 weg. Hoeveel zit er nu in elke zak?'*\n\n• Stap 1: 48 ÷ 6 = **8 per zak**.\n• Stap 2: 8 − 2 = **6 koekjes per zak**.\n\n**Voorbeeld 3 — combinatie**:\n*'In een doos zitten 12 rode + 18 blauwe + 20 groene knikkers. Hoeveel zijn rood of blauw?'*\n\n• Stap 1: tel rood + blauw: 12 + 18 = 30.\n• Stap 2: 20 (groen) is niet gevraagd, **30 is het antwoord**.\n\n**Cito-tip**:\n• **Schrijf elke stap apart op**. Niet alles in 1 keer in je hoofd.\n• **Gebruik de uitkomst van stap 1** in stap 2.\n• **Vergeet de eenheid** niet bij het eindantwoord.\n\n**Veel-voorkomende fout**:\nDirect proberen 1 grote berekening te maken. Twee stapjes zijn betrouwbaarder dan 1 lange.",
+    explanation: "**Twee-stap-sommen** vereisen meerdere bewerkingen. Doe ze in **stappen**.\n\n**Voorbeeld 1 — winkel**:\n*'Mam koopt 3 broden van € 2,80 en betaalt met € 10. Wisselgeld?'*\n\n• **Stap 1**: 3 × €2,80 = **€8,40** *(prijs van broden)*.\n• **Stap 2**: €10,00 − €8,40 = **€1,60 wisselgeld**.\n\n**Voorbeeld 2 — verdelen**:\n*'48 koekjes worden over 6 zakken verdeeld. Per zak gaan er 2 weg. Hoeveel zit er nu in elke zak?'*\n\n• Stap 1: 48 koekjes ÷ 6 zakken = **8 koekjes per zak**.\n• Stap 2: 8 koekjes − 2 koekjes = **6 koekjes per zak**.\n\n**Voorbeeld 3 — combinatie**:\n*'In een doos zitten 12 rode + 18 blauwe + 20 groene knikkers. Hoeveel zijn rood of blauw?'*\n\n• Stap 1: tel rood + blauw: 12 + 18 = **30 knikkers**.\n• Stap 2: 20 groene knikkers zijn niet gevraagd, **30 knikkers is het antwoord**.\n\n**Cito-tip**:\n• **Schrijf elke stap apart op**. Niet alles in 1 keer in je hoofd.\n• **Gebruik de uitkomst van stap 1** in stap 2.\n• **Vergeet de eenheid** niet bij het eindantwoord.\n\n**Veel-voorkomende fout**:\nDirect proberen 1 grote berekening te maken. Twee stapjes zijn betrouwbaarder dan 1 lange.",
     checks: [
       {
         q: "*'Een fles 1,5 L kost € 2,10. Hoe duur per glas van 250 mL?'*",
         options: ["€ 0,35","€ 0,30","€ 0,40","€ 1,40"],
         answer: 0,
-        wrongHints: [null,"Te weinig — eerst aantal glazen: 1500 ÷ 250 = 6. Dan 2,10 ÷ 6.","Te veel — controleer aantal glazen.","Veel te veel — heb je per liter gerekend?"],
+        wrongHints: [null,"Te weinig — eerst aantal glazen: 1500 ml ÷ 250 ml = 6 glazen. Dan €2,10 ÷ 6.","Te veel — controleer aantal glazen.","Veel te veel — heb je per liter gerekend?"],
       },
       {
         q: "*'Een klas heeft € 200. Ze kopen 12 boeken van € 14,50. Hoeveel over?'*",
         options: ["€ 26","€ 174","€ 14,50","€ 200"],
         answer: 0,
-        wrongHints: [null,"Te veel — eerst 12 × 14,50 = 174. Dan 200 − 174.","Dat is wat ze betalen, niet wat over is.","Verkeerd — dat is prijs per boek.","Niets afgetrokken."],
+        wrongHints: [null,"Te veel — eerst 12 × €14,50 = €174. Dan €200 − €174.","Dat is wat ze betalen, niet wat over is.","Verkeerd — dat is prijs per boek.","Niets afgetrokken."],
       },
       {
         q: "*'30 leerlingen verdelen € 90 evenwichtig. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
         options: ["€ 1,50","€ 3","€ 0","€ 4,50"],
         answer: 0,
-        wrongHints: [null,"Te veel — eerst per kind: 90 ÷ 30 = 3. Dan 3 − 1,50.","Niet 0 — er blijft wat over per kind.","Klopt niet — dat is per-kind-totaal vóór ijsje, niet 'over'."],
+        wrongHints: [null,"Te veel — eerst per kind: €90 ÷ 30 = €3. Dan €3 − €1,50.","Niet 0 — er blijft wat over per kind.","Klopt niet — dat is per-kind-totaal vóór ijsje, niet 'over'."],
       },
     ],
   },
