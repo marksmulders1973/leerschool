@@ -369,6 +369,21 @@ const steps = [
         options: ["€66", "€70", "€54", "€600"],
         answer: 0,
         wrongHints: [null, "Klopt — 10% van €60 = €6. €60 + €6 = €66.", "Te veel.", "Dat zou korting zijn.", "Veel te veel — komma vergeten?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bereken verhoging", tekst: "10% van €60 = (10/100) × 60 = €6 verhoging." },
+            { titel: "Tel op", tekst: "Nieuwe prijs = €60 + €6 = €66." },
+          ],
+          woorden: [{ woord: "verhoging", uitleg: "Toename in prijs — optellen bij basisprijs." }],
+          theorie: "Truc 10% snel: deel door 10. €60 ÷ 10 = €6. Toepassen op verhoging of korting.",
+          voorbeelden: [{ type: "stap", tekst: "10% van €80 = €8. Verhoogd: €80+€8=€88. Korting: €80−€8=€72." }],
+          basiskennis: [{ onderwerp: "Verhoging vs korting", uitleg: "Verhoging = + (groter). Korting = − (kleiner). Beide gebruiken hetzelfde % maar tegenovergesteld." }],
+          niveaus: {
+            basis: "€66 (€60 + 10%). A.",
+            simpeler: "10% van €60 = €6. €60 + €6 = €66. = A.",
+            nogSimpeler: "€66 = A.",
+          },
+        },
       },
       {
         q: "Verhouding **rood : blauw = 2:3**. 15 blauwe knikkers — hoeveel rode?",

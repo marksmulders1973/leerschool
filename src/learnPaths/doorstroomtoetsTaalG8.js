@@ -272,6 +272,21 @@ const steps = [
         options: ["Heel moe", "Hongerig", "Boos", "Verbaasd"],
         answer: 0,
         wrongHints: [null, "Klopt — geen energie meer.", "Niet primair.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Letterlijk: leeg", tekst: "Uitgeput = energie 'uit' + 'put' = leeg van energie. Lijkt op een leeggepompte waterput." },
+            { titel: "Context-hint", tekst: "'Na de race' = na lichamelijke inspanning → moe past." },
+          ],
+          woorden: [{ woord: "uitgeput", uitleg: "Helemaal op, geen energie meer." }],
+          theorie: "Cito-truc: bij moeilijk woord, kijk naar context-zin. 'Na de race' = na sport → vermoeidheid past.",
+          voorbeelden: [{ type: "stap", tekst: "Uitgeput ↔ uitgerust. Beide met 'uit-' maar tegengesteld." }],
+          basiskennis: [{ onderwerp: "Letterlijke/figuurlijke betekenis", uitleg: "Een put kan ook 'uitgeput' zijn = leeg = geen water meer. Zelfde idee voor mensen: geen energie." }],
+          niveaus: {
+            basis: "Heel moe. A.",
+            simpeler: "Uitgeput = leeg van energie = heel moe. = A.",
+            nogSimpeler: "Moe = A.",
+          },
+        },
       },
       {
         q: "**Tegenstelling** van **'voorzichtig'**?",
