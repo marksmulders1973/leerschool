@@ -114,6 +114,7 @@ import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
 import synoniemenTegenstellingenPo from "./synoniemenTegenstellingenPo.js";
+import waterErfgoedNederlandPo from "./waterErfgoedNederlandPo.js";
 
 export const ALL_LEARN_PATHS = {
   // Klas 1 basis (komen het eerst aan bod)
@@ -140,6 +141,7 @@ export const ALL_LEARN_PATHS = {
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
   "synoniemen-tegenstellingen-po": synoniemenTegenstellingenPo,
+  "water-erfgoed-nederland-po": waterErfgoedNederlandPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,
