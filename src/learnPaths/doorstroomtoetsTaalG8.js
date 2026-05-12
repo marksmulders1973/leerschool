@@ -75,7 +75,21 @@ const steps = [
         q: "Welk woord is een **synoniem** van **'enorm'**?",
         options: ["Heel groot", "Beetje klein", "Snel", "Stil"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Snelheid is iets anders dan grootte.", "Geluid is iets anders dan grootte."],
+        wrongHints: [null, "Klopt — synoniem.", "Tegenovergesteld.", "Andere dimensie.", "Andere dimensie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Synoniem = zelfde betekenis", tekst: "Een synoniem is een ander woord met (bijna) dezelfde betekenis. 'Enorm' = heel groot." },
+          ],
+          woorden: [{ woord: "synoniem", uitleg: "Woord dat (bijna) hetzelfde betekent als een ander woord." }],
+          theorie: "Synoniemen zijn handig voor afwisseling in tekst. Cito vraagt vaak: 'welk woord is hetzelfde als X?'",
+          voorbeelden: [{ type: "stap", tekst: "blij = vrolijk. snel = vlug. mooi = prachtig. boos = woedend." }],
+          basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Het tegenovergestelde van een synoniem is een 'antoniem' — woord met juist andere betekenis." }],
+          niveaus: {
+            basis: "Heel groot. A.",
+            simpeler: "Enorm betekent zelfde als 'heel groot'. = A.",
+            nogSimpeler: "Heel groot = A.",
+          },
+        },
       },
       {
         q: "*'Het **verlamde** dier kon niet meer lopen.'* Wat betekent verlamd?",
