@@ -162,6 +162,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — 0,5 + 0,25 = 0,75 (of 1/2 + 1/4 = 3/4).", "Verkeerd opgeteld.", "Te groot.", "Niet — 1/8 is helft van 1/4."],
       },
+      {
+        q: "Wat is **2/3 − 1/6**?",
+        options: ["1/2", "1/3", "1/6", "2/6"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 4/6 − 1/6 = 3/6 = 1/2.", "Te weinig.", "Te weinig.", "Niet vereenvoudigd."],
+      },
+      {
+        q: "Schrijf **0,8 als breuk** in eenvoudigste vorm.",
+        options: ["4/5", "8/10", "0,8", "5/4"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 8/10 ÷ 2 = 4/5.", "Klopt qua waarde maar niet vereenvoudigd.", "Dat is decimaal, niet breuk.", "Groter dan 1 — verkeerd."],
+      },
+      {
+        q: "Welk getal is **groter**: **0,7** of **3/4**?",
+        options: ["3/4", "0,7", "Even groot", "Niet te bepalen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3/4 = 0,75 > 0,7.", "0,7 = 0,70. Kleiner dan 0,75.", "Niet — verschillende waarden.", "Wel — decimaliseer."],
+      },
     ],
   },
 
