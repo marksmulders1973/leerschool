@@ -195,6 +195,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet.", "Niet primair."],
       },
+      {
+        q: "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
+        options: ["Heel moe", "Hongerig", "Boos", "Verbaasd"],
+        answer: 0,
+        wrongHints: [null, "Klopt — geen energie meer.", "Niet primair.", "Niet.", "Niet."],
+      },
+      {
+        q: "**Tegenstelling** van **'voorzichtig'**?",
+        options: ["Roekeloos", "Snel", "Klein", "Stom"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Niet primair.", "Niet primair.", "Te algemeen."],
+      },
+      {
+        q: "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
+        options: ["Niet-waar verhaal", "Geheim", "Grap", "Verhaal"],
+        answer: 0,
+        wrongHints: [null, "Klopt.", "Iets anders.", "Soms wel, niet primair.", "Te algemeen."],
+      },
     ],
   },
 
