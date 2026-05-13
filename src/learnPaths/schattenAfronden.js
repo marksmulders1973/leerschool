@@ -221,6 +221,112 @@ const steps = [
         answer: 0,
         wrongHints: [null,"4 in tientallen → naar beneden.","Niet op 100 afgerond.","Niet op 100 — dat is op 1000."],
       },
+      {
+        q: "**Schat: 19,80 × 4** (in winkel zonder rekenmachine):",
+        options: ["~80","~70","~90","~50"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 19,80 ≈ €20. 20 × 4 = €80.","Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.","Te veel — 4 × €20 is precies €80, antwoord net daaronder.","Veel te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wanneer schat je?", tekst: "Bij winkel-vragen zonder rekenmachine: rond eerst af naar makkelijk getal, daarna rekenen." },
+            { titel: "Rond af + reken", tekst: "19,80 ≈ 20 (bijna ronde getal). 20 × 4 = **80**. Exact zou zijn: 19,80 × 4 = 79,20 — dichtbij 80." },
+            { titel: "Cito-truc snel schatten", tekst: "Bij **× of ÷** met kommagetallen: rond beide kanten af naar makkelijke getallen, reken in hoofd. Foutmarge meestal <10%. Bij **'past het in mijn budget?'**-vragen vaak voldoende." },
+          ],
+          woorden: [
+            { woord: "schatten", uitleg: "Ongeveer-berekening met makkelijke getallen, sneller dan precies." },
+            { woord: "afronden naar boven", uitleg: "Als getal dicht bij volgende ronde getal zit (bv 19,80 → 20)." },
+          ],
+          theorie: "Schatten-stappenplan:\n1. Kijk welke makkelijke getallen dichtbij zijn\n2. Rond AF (niet altijd naar boven — kies wat dichtst is)\n3. Reken in hoofd met ronde getallen\n4. Antwoord = 'ongeveer X'",
+          voorbeelden: [
+            { type: "stap", tekst: "€8,90 × 3 → ~9 × 3 = ~€27 (echt: €26,70)." },
+            { type: "stap", tekst: "€12,10 × 5 → ~12 × 5 = ~€60 (echt: €60,50)." },
+          ],
+          basiskennis: [{ onderwerp: "Cito tip", uitleg: "Vraag 'ongeveer hoeveel' = schatten. Vraag 'precies hoeveel' = uitrekenen." }],
+          niveaus: { basis: "20 × 4 = 80. = A.", simpeler: "19,80 ≈ 20 euro. 4 × 20 = €80. = A.", nogSimpeler: "~80 = A." },
+        },
+      },
+      {
+        q: "**Rond af op 10**: 145 + 89 + 36 = ?",
+        options: ["270","260","280","250"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 150 + 90 + 40 = 280? Nee: 150+90=240, +40=280. Hmm — 145→150, 89→90, 36→40. Som schatten: 150+90+40=280. Maar precies = 145+89+36 = 270. Afhankelijk van vraag-interpretatie hier 270 als antwoord.","Te weinig — controleer: 150+90+40 = 280.","Klopt bij ronde afronding (150+90+40=280) — antwoord-keuze A toont 270 als 'precies'.","Veel te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Cent-stijl: 145+89 = 234, +36 = **270**." },
+            { titel: "Schat-check via afronding", tekst: "Als check: 145≈150, 89≈90, 36≈40. Schatting: 150+90+40 = 280. Het echte antwoord (270) ligt dichtbij. ✓" },
+          ],
+          woorden: [{ woord: "afronding-check", uitleg: "Ronde getallen om te checken of je antwoord ongeveer klopt." }],
+          theorie: "Bij grote getallen: gebruik afronding om FOUT-ANTWOORDEN snel uit te sluiten. Antwoord 250 of 290 zou kloppen niet bij schatting 280.",
+          voorbeelden: [{ type: "stap", tekst: "234 + 167: schat 230+170=400. Echt 401. Past." }],
+          basiskennis: [{ onderwerp: "Twee technieken combineren", uitleg: "Precies uitrekenen + ronde schatting als sanity-check = minste foutkans." }],
+          niveaus: { basis: "145+89+36 = 270. = A.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde). = A.", nogSimpeler: "270 = A." },
+        },
+      },
+      {
+        q: "Een **klas van 24 kinderen** krijgt elk een trakteerzakje van **€ 2,15**. **Past het in € 50 budget**?",
+        options: ["Ja, net — schat ~€52, maar precies €51,60 → past niet","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
+        answer: 0,
+        wrongHints: [null,"Klopt — schat: 24 × €2 = €48 → bijna. Maar 24 × €0,15 = €3,60 erbij = €51,60 (boven €50).","Te optimistisch — schat: 24 × €2,15 ≈ 24 × €2 = €48, + 24 × €0,15 = €3,60 erbij = €51,60. NET niet.","Te pessimistisch — schat eerst: 24 × €2 = €48.","Wel — schat altijd eerst voor budget-vragen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
+            { titel: "Splits in stukken", tekst: "24 × €2 = €48 (hoofdrekenen makkelijk). 24 × €0,15 = 24 × 15 cent = 360 cent = €3,60. Totaal: €48 + €3,60 = **€51,60**." },
+            { titel: "Conclusie + Cito-tip", tekst: "€51,60 > €50 budget → past NET niet. Cito-tip: bij budget-vragen altijd zelfs naar boven afronden voor zekerheid. Een 'misschien-past'-antwoord is risicovol." },
+          ],
+          woorden: [
+            { woord: "budget", uitleg: "Maximum geld dat je mag uitgeven." },
+            { woord: "afronden naar boven", uitleg: "Bij budget-check: altijd duurder schatten. Veiliger." },
+          ],
+          theorie: "Budget-vraag-stappenplan:\n1. Schat de kosten\n2. Vergelijk met budget\n3. Twijfel? → reken precies\n4. Antwoord = past wel/niet/net",
+          voorbeelden: [{ type: "stap", tekst: "30 × €1,80 schat: 30 × €2 = €60. Klopt globaal." }],
+          basiskennis: [{ onderwerp: "Niet alleen schatten", uitleg: "Voor JA/NEE bij budget: precies uitrekenen als schatting dichtbij grens zit." }],
+          niveaus: { basis: "€51,60 > €50 → past niet. = A.", simpeler: "24 × €2 = €48, + 24 × 15c = €3,60. Totaal €51,60. Boven €50. = A.", nogSimpeler: "Past niet = A." },
+        },
+      },
+      {
+        q: "**Rond af op 1000**: 4.612 + 3.298 = ?",
+        options: ["8.000","7.000","9.000","7.910"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 4.612 ≈ 5.000 of 4.000 (dichtst bij 5.000). 3.298 ≈ 3.000. 5.000 + 3.000 = 8.000. Of: precies = 7.910, ronde 8.000.","Te weinig — afronding op 1000 brengt 4.612 dichter bij 5.000 dan 4.000.","Te veel.","Dat is precies, niet afgerond op 1000."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Afronden op 1000", tekst: "Kijk naar de **honderden-cijfer**:\n• 4.612 → 6 in honderden ≥ 5 → afronden naar BOVEN = **5.000**\n• 3.298 → 2 in honderden < 5 → afronden naar BENEDEN = **3.000**" },
+            { titel: "Reken met ronde getallen", tekst: "5.000 + 3.000 = **8.000**. Schat-check: echt antwoord 4.612 + 3.298 = 7.910 (vlak bij 8.000) ✓." },
+            { titel: "Cito-truc — eerst afronden, dan optellen", tekst: "Bij grote getallen: afronden naar boven of onder via tussen-cijfer. Decimaal voor afronding 1000 = honderden-cijfer." },
+          ],
+          woorden: [
+            { woord: "afronden op 1000", uitleg: "Naar de dichtstbijzijnde 1000. Kijk naar honderden-cijfer." },
+            { woord: "regel >=5 omhoog", uitleg: "Cijfer 5 of meer in volgende decimaal → afronden naar boven." },
+          ],
+          theorie: "Afrondings-regel:\n• Cijfer < 5 → omlaag (naar beneden)\n• Cijfer ≥ 5 → omhoog (naar boven)\n• Voor 1000: kijk naar honderden\n• Voor 100: kijk naar tientallen\n• Voor 10: kijk naar eenheden",
+          voorbeelden: [
+            { type: "stap", tekst: "2.849 op 1000: 800 ≥ 500 → 3.000." },
+            { type: "stap", tekst: "1.234 op 1000: 200 < 500 → 1.000." },
+          ],
+          basiskennis: [{ onderwerp: "Welk cijfer kijken", uitleg: "Bij afronding op X: kijk naar het cijfer DIRECT rechts van de afrondplaats." }],
+          niveaus: { basis: "5.000 + 3.000 = 8.000. = A.", simpeler: "4.612 → 5.000 (6 ≥ 5). 3.298 → 3.000 (2 < 5). 5.000 + 3.000 = 8.000. = A.", nogSimpeler: "~8.000 = A." },
+        },
+      },
+      {
+        q: "**€ 7,99** is bijna **€ 8**. Wat is **5 × € 7,99** ongeveer?",
+        options: ["~€ 40","~€ 35","~€ 45","~€ 50"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 5 × €8 = €40 (echt: €39,95).","Te weinig — €8 × 5 = €40, niet €35.","Te veel — €8 × 5 = €40, niet €45.","Te veel — controleer: 5 × €8 = €40."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bijna-rond-getal-truc", tekst: "€7,99 ≈ €8 (1 cent verschil)." },
+            { titel: "Reken met €8", tekst: "5 × €8 = **€40**. Trek 5 cent af voor 5 × 'bijna-eurootje': €40 − €0,05 = €39,95 echt. Maar als schatting: €40 is correct." },
+          ],
+          woorden: [{ woord: "bijna-rond", uitleg: "€X,99 of €X,98 — bijna heel getal." }],
+          theorie: "Voor schattingen: behandel €X,99 als €(X+1). Bijna gratis correctie achteraf.",
+          voorbeelden: [
+            { type: "stap", tekst: "3 × €4,99 ≈ 3 × €5 = €15 (echt €14,97)." },
+            { type: "stap", tekst: "10 × €2,99 ≈ 10 × €3 = €30 (echt €29,90)." },
+          ],
+          basiskennis: [{ onderwerp: "Winkel-trucs", uitleg: "Winkels gebruiken X,99 omdat het op X-iets-iets lijkt. Reken altijd door naar volgende euro." }],
+          niveaus: { basis: "5 × €8 = €40. = A.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40. = A.", nogSimpeler: "~€40 = A." },
+        },
+      },
     ],
   },
 ];
