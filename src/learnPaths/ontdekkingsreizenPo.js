@@ -21,6 +21,28 @@ const steps = [
         options: ["Specerijen + goud + handel", "Toerisme", "Vakantie", "Niets"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Bestond nog niet.", "Niet.", "Wel reden."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat waren specerijen?", tekst: "**Specerijen** zoals peper, kruidnagel, kaneel, nootmuskaat kwamen uit Azië (vooral Indonesië). In 1500 waren ze ENORM duur in Europa — voor smaak én om voedsel langer te bewaren (vóór koelkasten)." },
+            { titel: "Goud + zilver", tekst: "Europese landen waren arm aan edelmetalen. Ze hoopten goud + zilver te vinden in onbekende landen. Spanje vond enorme hoeveelheden in Zuid-Amerika." },
+            { titel: "Handel = macht", tekst: "Wie de handel met Azië controleerde, werd rijk. Daarom investeerden koningen + steden in dure expedities. Eerst land-route (Zijderoute) via Turkije — toen die werd geblokkeerd, ZEE-route bedacht." },
+          ],
+          woorden: [
+            { woord: "specerijen", uitleg: "Dure kruiden uit Azië (peper, kaneel, kruidnagel)." },
+            { woord: "Zijderoute", uitleg: "Land-handelsroute tussen Europa en Azië." },
+          ],
+          theorie: "Cito-feit: 1453 viel Constantinopel (huidig Istanbul) in handen van Turken. Daardoor was Zijderoute moeilijk → ZEE-route via Afrika was nieuwe doel. Vasco da Gama lukte het in 1498.",
+          voorbeelden: [
+            { type: "stap", tekst: "1 pond peper in 1500 = soms 1 maand-loon waard. Daarom 'peperduur'." },
+            { type: "stap", tekst: "VOC (NL Oost-Indische Compagnie, 1602) verdiende fortuin met specerijen-handel uit Indonesië." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Drie motieven: specerijen (smaak/bewaring), goud (rijkdom), handel (economische macht)." }],
+          niveaus: {
+            basis: "Europeanen wilden specerijen, goud, en handel met Azië.",
+            simpeler: "Kruiden uit Azië = duur in Europa = zoeken naar zee-route.",
+            nogSimpeler: "Peper = duur.",
+          },
+        },
       },
       {
         q: "Wat is een **astrolabium**?",
@@ -52,6 +74,28 @@ const steps = [
         options: ["1492", "1500", "1300", "1700"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Iets later.", "Te vroeg.", "Te laat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Columbus?", tekst: "**Christoffel Columbus** (1451-1506) was een Italiaanse zeevaarder in Spaanse dienst. Hij wilde naar Azië varen via het WESTEN — dacht dat dit korter was." },
+            { titel: "1492: aankomst in 'Amerika'", tekst: "Op **12 oktober 1492** kwam Columbus aan op een eiland in de Bahama's. Dacht dat hij in India was — daarom heten inheemse Amerikanen 'indianen' (verkeerde naam, eigenlijk geen India)." },
+            { titel: "Belangrijk jaartal", tekst: "**1492** wordt gezien als START van het 'Ontdekkings'-tijdperk (vanuit Europees perspectief). Begint kolonisatie van Amerika door Spanje. Heeft enorme gevolgen voor inheemse volken." },
+          ],
+          woorden: [
+            { woord: "Columbus", uitleg: "Zeevaarder die 1492 in Amerika kwam (dacht: India)." },
+            { woord: "1492", uitleg: "Belangrijke jaartal — start Europese 'ontdekking' Amerika." },
+          ],
+          theorie: "Cito-feit: 1492 = vaak gezien als overgang van Middeleeuwen naar Nieuwe Tijd. Maar opgepast — 'ontdekken' is Europees perspectief. Indianen waren er al duizenden jaren. Tegenwoordig vinden veel mensen 'ontdekking' geen goed woord — beter: 'contact'.",
+          voorbeelden: [
+            { type: "stap", tekst: "Columbus maakte 4 reizen (1492, 1493, 1498, 1502). Stierf in armoede in 1506." },
+            { type: "stap", tekst: "Aankomstdag 12 oktober = vroeger 'Columbusdag' in VS. Nu vaak vervangen door Inheemse Volkerendag." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "1492 = vaak het begin van moderne wereldgeschiedenis (vanuit Europees oogpunt)." }],
+          niveaus: {
+            basis: "Columbus kwam in 1492 in Amerika (dacht: India).",
+            simpeler: "1492: westwaarts van Spanje → kwam in Caraïben aan.",
+            nogSimpeler: "1492.",
+          },
+        },
       },
       {
         q: "Wie ging **rond Afrika naar India**?",
@@ -70,6 +114,28 @@ const steps = [
         options: ["1863", "1700", "1492", "2022"],
         answer: 0,
         wrongHints: [null, "Klopt — Keti Koti.", "Veel later.", "Begon kort daarna.", "Excuses, geen afschaffing."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is slavernij?", tekst: "**Slavernij** = mensen worden GEDWONGEN gehouden als 'eigendom' en moeten zonder loon werken. Mocht je niet gewoon stoppen. Werd vooral toegepast op Afrikanen in koloniën." },
+            { titel: "Afschaffing 1863", tekst: "Nederland schafte slavernij af op **1 juli 1863**. Dit gebeurde vooral in de NL-koloniën (Suriname + Caraïben). Maar — slaven moesten nog 10 jaar 'staatstoezicht' werken voordat ze écht vrij waren (tot 1873)." },
+            { titel: "Keti Koti = 'kettingen losgemaakt'", tekst: "**1 juli** wordt nu gevierd als **Keti Koti** (Surinaams voor 'kettingen losgemaakt'). Officiële herdenking. In 2022 boden NL premier Rutte + koning Willem-Alexander excuses aan voor het slavernij-verleden." },
+          ],
+          woorden: [
+            { woord: "slavernij", uitleg: "Mensen gedwongen als eigendom houden — verboden." },
+            { woord: "Keti Koti", uitleg: "Vieringdag afschaffing slavernij (1 juli 1863)." },
+          ],
+          theorie: "Cito-feit: NL kwam relatief LAAT met afschaffing. UK: 1833. Frankrijk: 1848. VS: 1865 (na burgeroorlog). NL was 1863. Daarvoor 200+ jaar deelnemer aan trans-Atlantische slavenhandel.",
+          voorbeelden: [
+            { type: "stap", tekst: "NL-koopvaardij vervoerde geschat ~600.000 Afrikanen als slaven (1600-1863)." },
+            { type: "stap", tekst: "Afschaffing 1863 gebeurde mede door internationale druk + economische redenen, niet alleen moraal." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "1863 = 1 juli = Keti Koti = afschaffing slavernij in NL-koloniën." }],
+          niveaus: {
+            basis: "Slavernij in NL afgeschaft op 1 juli 1863.",
+            simpeler: "1863 = Keti Koti = bevrijding slaven NL-koloniën.",
+            nogSimpeler: "1863.",
+          },
+        },
       },
     ],
   },
