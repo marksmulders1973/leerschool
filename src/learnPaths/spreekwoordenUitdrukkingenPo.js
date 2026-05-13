@@ -24,6 +24,28 @@ const steps = [
         options: ["Woorden betekenen iets anders dan letterlijk", "Letterlijk", "Beeld in boek", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel een soort.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee manieren om iets te zeggen", tekst: "Bij **letterlijk** taalgebruik betekenen de woorden EXACT wat er staat. Bij **figuurlijk** taalgebruik bedoel je iets ANDERS — een soort woordbeeld." },
+            { titel: "Voorbeeld letterlijk", tekst: "'Ik eet een appel' = letterlijk. Je eet écht een appel, geen beeld, geen verzinsel. Gewoon eten." },
+            { titel: "Voorbeeld figuurlijk", tekst: "'Het regent pijpenstelen' = figuurlijk. Er vallen geen ECHTE pijpen uit de lucht. Je bedoelt: het regent heel hard. Het is een SOORT plaatje in taal." },
+          ],
+          woorden: [
+            { woord: "letterlijk", uitleg: "Woorden betekenen precies wat er staat." },
+            { woord: "figuurlijk", uitleg: "Woorden betekenen iets anders (beeldspraak)." },
+          ],
+          theorie: "Cito-vraag-type: 'Wat betekent uitdrukking X?' De letterlijke betekenis is bijna altijd FOUT. Je moet de FIGUURLIJKE betekenis weten. Daarom uitdrukkingen leren.",
+          voorbeelden: [
+            { type: "stap", tekst: "'De kat uit de boom kijken' = figuurlijk = afwachten. Letterlijk zou raar zijn." },
+            { type: "stap", tekst: "'Boter op het hoofd hebben' = figuurlijk = schuldig zijn. Letterlijk zou vies zijn." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Klinkt het raar als je het letterlijk neemt? Dan is het figuurlijk. Zoek de bedoelde betekenis." }],
+          niveaus: {
+            basis: "Figuurlijk = woorden betekenen iets anders dan letterlijk (beeldspraak).",
+            simpeler: "Niet letterlijk waar, maar een beeld in taal.",
+            nogSimpeler: "Figuurlijk = ander betekenis.",
+          },
+        },
       },
       {
         q: "*'Het regent pijpenstelen'* — wat betekent?",
@@ -42,6 +64,29 @@ const steps = [
         options: ["Metafoor", "Spreekwoord", "Letterlijk", "Vergelijking"],
         answer: 0,
         wrongHints: [null, "Klopt — geen 'als'.", "Niet kort genoeg.", "Geen mens-engel.", "Geen 'als'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een metafoor?", tekst: "Een **metafoor** is een korte beeldspraak waarbij je iets IS iets anders, zonder 'als'. Je vergelijkt direct." },
+            { titel: "Verschil met vergelijking", tekst: "**Vergelijking**: 'Ze is ZO LIEF ALS een engel' (met 'als'). **Metafoor**: 'Ze IS een engel' (zonder 'als', direct). De metafoor is sterker, meer direct." },
+            { titel: "Past in zin", tekst: "Bij 'Ze is een engel' bedoel je niet letterlijk dat ze vleugels heeft. Je bedoelt: ze is heel lief. Metafoor maakt taal levendiger." },
+          ],
+          woorden: [
+            { woord: "metafoor", uitleg: "Korte beeldspraak: A IS B (zonder 'als')." },
+            { woord: "vergelijking", uitleg: "A is zo X ALS B (met 'als')." },
+          ],
+          theorie: "Cito-tip beeldspraak: zoek 'als' in de zin. Heeft het 'als'? → vergelijking. Heeft het geen 'als' maar wel iets-is-iets-anders? → metafoor.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Hij vecht ALS een leeuw' = vergelijking (met 'als')." },
+            { type: "stap", tekst: "'Hij is een leeuw' = metafoor (zonder 'als')." },
+            { type: "stap", tekst: "'De wereld is een toneel' (Shakespeare) = beroemde metafoor." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Test op 'als'. Met 'als' = vergelijking. Zonder = metafoor." }],
+          niveaus: {
+            basis: "Metafoor = beeldspraak zonder 'als' (A IS B).",
+            simpeler: "Zonder 'als' = metafoor. Met 'als' = vergelijking.",
+            nogSimpeler: "Geen 'als' = metafoor.",
+          },
+        },
       },
     ],
   },
@@ -55,6 +100,28 @@ const steps = [
         options: ["Iets uit te praten", "Appel eten", "Boos zijn", "Niet weten"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Letterlijk = nee.", "Wel iets in die richting.", "Probeer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Letterlijk = onmogelijk", tekst: "Letterlijk een appel schillen met iemand kan natuurlijk wel, maar zou raar zijn als uitdrukking. Dus: figuurlijk!" },
+            { titel: "Figuurlijke betekenis", tekst: "Deze uitdrukking betekent: iets uit te PRATEN hebben met iemand, een ONGENOEGEN bespreken. Vaak licht boos." },
+            { titel: "Voorbeeld", tekst: "'Ik heb nog een appeltje met je te schillen over die fiets die je niet had teruggebracht!' = ik wil dit met je bespreken." },
+          ],
+          woorden: [
+            { woord: "een appeltje schillen", uitleg: "Figuurlijk: iets uit te praten hebben." },
+            { woord: "ongenoegen", uitleg: "Iets dat je niet zint, irritatie." },
+          ],
+          theorie: "Cito-tip: bij uitdrukkingen-vragen denk je: 'wat is het FIGUURLIJK?' Letterlijke betekenis is bijna altijd FOUT. Onthoud de top-30 vaak-voorkomende uitdrukkingen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Andere lichaams-uitdrukkingen: 'voet bij stuk houden' = niet toegeven. 'Hart vasthouden' = zorgen maken." },
+            { type: "stap", tekst: "Andere eten-uitdrukkingen: 'koekje van eigen deeg' = iemand zijn eigen behandeling teruggeven." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Maak een uitdrukkingen-lijst. Leer er 5-10 per week. Op Cito komen 2-4 vragen erover." }],
+          niveaus: {
+            basis: "Een appeltje met iemand schillen = iets uit te praten.",
+            simpeler: "Iets bespreken, vaak met lichte irritatie.",
+            nogSimpeler: "Iets uit te praten.",
+          },
+        },
       },
       {
         q: "*'In de rooie staan'* — wat?",
