@@ -54,18 +54,86 @@ const steps = [
         options: ["Woorden eindigen hetzelfde", "Beginnen hetzelfde", "Klemtoon", "Lengte gelijk"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Alliteratie.", "Ritme.", "Versmaat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is eindrijm?", tekst: "Bij eindrijm eindigen 2 (of meer) woorden met dezelfde klank. Het is de bekendste vorm van rijm." },
+            { titel: "Voorbeeld", tekst: "'kat – pad' rijmt (beide eindigen op -at klank). 'zon – kon' rijmt (beide op -on). 'boom – room' rijmt (beide op -oom)." },
+            { titel: "Niet hetzelfde geschreven, maar gehoord", tekst: "Rijm gaat om de KLANK, niet de spelling. 'kou – jou' rijmen (ou-klank gelijk), ook al spel je ze anders." },
+          ],
+          woorden: [
+            { woord: "eindrijm", uitleg: "Klank-overeenkomst aan einde van regels." },
+            { woord: "alliteratie", uitleg: "Anders: woorden BEGINNEN gelijk (mooie Mette mocht)." },
+          ],
+          theorie: "Cito-tip rijm: spreek de woorden HARDOP uit. Klinken ze hetzelfde aan het eind? Dan rijmt het. Niet kijken naar spelling.",
+          voorbeelden: [
+            { type: "stap", tekst: "'huis – muis' = eindrijm (-uis)." },
+            { type: "stap", tekst: "'spelen – delen' = eindrijm (-elen)." },
+            { type: "stap", tekst: "'water – kater' = eindrijm (-ater)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eindrijm = klank aan EIND. Alliteratie = letter aan BEGIN. Verschillende dingen." }],
+          niveaus: {
+            basis: "Eindrijm = woorden klinken hetzelfde aan eind (kat-pad).",
+            simpeler: "Hardop lezen — zelfde klank? = rijm.",
+            nogSimpeler: "Eind-klank gelijk = rijm.",
+          },
+        },
       },
       {
         q: "Wat is **alliteratie**?",
         options: ["Woorden beginnen met zelfde letter", "Woorden rijmen aan eind", "Zelfde betekenis", "Ritme"],
         answer: 0,
         wrongHints: [null, "Klopt — Mooie Mette.", "Eindrijm.", "Synoniem.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is alliteratie?", tekst: "Alliteratie is wanneer meerdere woorden achter elkaar BEGINNEN met dezelfde letter (of klank)." },
+            { titel: "Voorbeeld: Mooie Mette mocht mee", tekst: "M - M - M - M. Vier woorden, allemaal beginnend met M. Dat is alliteratie." },
+            { titel: "Waarom gebruikt men het?", tekst: "Alliteratie geeft EXTRA ritme of nadruk. Reclames gebruiken het veel: 'Calvé pindakaas perfect'." },
+          ],
+          woorden: [
+            { woord: "alliteratie", uitleg: "Zelfde BEGIN-letter bij meerdere woorden." },
+            { woord: "eindrijm", uitleg: "Anders: zelfde EIND-klank." },
+          ],
+          theorie: "Cito-tip: alliteratie = BEGIN-rijm (begin-letter gelijk). Eindrijm = EIND-rijm (eind-klank gelijk). Twee verschillende vormen van rijm.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Sappige sinaasappel sap' = S-S-S = alliteratie." },
+            { type: "stap", tekst: "'Brullende beer' = B-B = alliteratie (al maar 2 woorden, telt al)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Alliteratie = AAN het begin. Eindrijm = aan het einde. Vergeet dat niet." }],
+          niveaus: {
+            basis: "Alliteratie = woorden BEGINNEN met zelfde letter.",
+            simpeler: "Mooie Mette: M-M-M. Begin-rijm.",
+            nogSimpeler: "Begin-letter gelijk = alliteratie.",
+          },
+        },
       },
       {
         q: "**AABB** is welk rijmschema?",
         options: ["Paarrijm (per 2)", "Gekruist", "Omarmend", "Geen rijm"],
         answer: 0,
         wrongHints: [null, "Klopt.", "ABAB.", "ABBA.", "Wel rijm."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een rijmschema?", tekst: "Een rijmschema laat zien welke regels op elkaar rijmen. Je geeft elke rijm-klank een letter (A, B, C)." },
+            { titel: "AABB = paarrijm", tekst: "AABB betekent: regel 1 + 2 rijmen samen (A), en regel 3 + 4 ook samen (B). Per 2 regels = PAAR-rijm." },
+            { titel: "Verschil met ABAB/ABBA", tekst: "ABAB = GEKRUIST (kruislings). ABBA = OMARMEND (binnenste 2 rijmen, buitenste 2 rijmen). AABB = direct na elkaar = paarrijm." },
+          ],
+          woorden: [
+            { woord: "paarrijm (AABB)", uitleg: "Twee regels achter elkaar rijmen." },
+            { woord: "gekruist (ABAB)", uitleg: "Regel 1 met 3, regel 2 met 4." },
+            { woord: "omarmend (ABBA)", uitleg: "Regel 1 met 4, regel 2 met 3." },
+          ],
+          theorie: "Cito-truc: lees gedicht hardop. Markeer welke regels op elkaar rijmen. Eerste rijm = A. Nieuwe klank = B. Daarna kun je het schema zien.",
+          voorbeelden: [
+            { type: "stap", tekst: "Paarrijm AABB: 'Kat (A) / pad (A) / muur (B) / vuur (B)'." },
+            { type: "stap", tekst: "Gekruist ABAB: 'Kat (A) / muur (B) / pad (A) / vuur (B)'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zelfde letter = die regels rijmen met elkaar. Verschillende letters = ze rijmen NIET met elkaar." }],
+          niveaus: {
+            basis: "AABB = paarrijm (regel 1+2 rijmen, regel 3+4 rijmen).",
+            simpeler: "Direct na elkaar rijmen = paarrijm = AABB.",
+            nogSimpeler: "Paren rijmen = AABB.",
+          },
+        },
       },
       {
         q: "Wat is **versmaat**?",
