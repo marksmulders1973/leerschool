@@ -21,6 +21,28 @@ const steps = [
         options: ["Goed nadenken voor je iets gelooft", "Negatief zijn", "Alles afwijzen", "Alles geloven"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet hetzelfde.", "Niet.", "Tegenovergesteld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is kritisch denken?", tekst: "Kritisch denken = **goed NADENKEN voordat je iets gelooft**. Niet alles meteen aannemen, maar vragen stellen: 'klopt dit?', 'wie zegt dit?', 'wat is bewijs?'." },
+            { titel: "Niet hetzelfde als negatief", tekst: "Kritisch betekent NIET 'altijd negatief' of 'alles afwijzen'. Het betekent: gezond wantrouwen, vragen stellen, controleren. Daarna kun je iets WEL geloven — maar pas na controle." },
+            { titel: "Belangrijk in tijd van social media", tekst: "Op internet staat veel info, niet alle juist. Nepnieuws, deepfakes, manipulatieve filmpjes. Kritisch denken = nuttig wapen ertegen." },
+          ],
+          woorden: [
+            { woord: "kritisch denken", uitleg: "Goed nadenken + controleren voor je iets gelooft." },
+            { woord: "bronnenkritiek", uitleg: "Onderzoeken WIE iets zegt en of dat betrouwbaar is." },
+          ],
+          theorie: "Cito-feit: kritisch denken hoort bij **mediawijsheid** + **digitale geletterdheid**. Belangrijk voor school + later leven. Niet alles op TikTok klopt!",
+          voorbeelden: [
+            { type: "stap", tekst: "Tip: 'Drink azijn elke ochtend voor afvallen'. Kritisch: wie zegt dit? Wetenschapper of influencer? Welke bron?" },
+            { type: "stap", tekst: "Kop: 'Schokkende ontdekking!' = vaak click-bait. Wees kritisch — vaak overdreven." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "5 W's: Wie zegt dit? Wat zegt hij? Waar staat het? Wanneer? Waarom?" }],
+          niveaus: {
+            basis: "Kritisch denken = goed nadenken voor je iets gelooft.",
+            simpeler: "Vragen stellen voor je iets aanneemt.",
+            nogSimpeler: "Eerst denken, dan geloven.",
+          },
+        },
       },
       {
         q: "Wat doe je bij **info van internet**?",
@@ -52,6 +74,28 @@ const steps = [
         options: ["Zoeken naar info die je idee bevestigt", "Twijfelen", "Niets", "Logica"],
         answer: 0,
         wrongHints: [null, "Klopt — open zijn helpt.", "Tegenovergesteld.", "Wel.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is bevestigingsbias?", tekst: "**Bevestigingsbias** (Engels: confirmation bias) is een denkfout: we ZOEKEN naar info die ons IDEE BEVESTIGT, en negeren info die het tegenspreekt." },
+            { titel: "Voorbeeld", tekst: "Iemand denkt: 'roken is niet zo erg'. Leest alleen artikelen die dit BEVESTIGEN ('mijn opa rookte 90 jaar oud!'). Negeert alle wetenschap die anders zegt." },
+            { titel: "Iedereen heeft het", tekst: "Niet alleen 'domme' mensen — IEDEREEN heeft last van deze bias. Ons brein wil graag bevestiging. Bewustzijn helpt om eraan te ontsnappen." },
+          ],
+          woorden: [
+            { woord: "bevestigingsbias", uitleg: "Voorkeur voor info die je idee bevestigt." },
+            { woord: "denkfout / bias", uitleg: "Systematische manier waarop ons brein fout zit." },
+          ],
+          theorie: "Cito-tip kritisch denken: weet dat je BIAS hebt. Vraag bewust: 'wat is de andere kant? Wie spreekt mij tegen?' Lees ook bronnen die NIET met je eens zijn — dan denk je breder.",
+          voorbeelden: [
+            { type: "stap", tekst: "Voetbal-fan denkt: 'mijn team is beste!' → leest alleen positief nieuws over team." },
+            { type: "stap", tekst: "Iemand gelooft in homeopathie → leest succes-verhalen, negeert wetenschap die zegt 'placebo-effect'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lees BEWUST de tegenovergestelde mening soms. Je leert er meer van dan van bevestiging." }],
+          niveaus: {
+            basis: "Bevestigingsbias = zoeken naar info die je idee bevestigt.",
+            simpeler: "Alleen lezen wat met je idee EENS is = bias.",
+            nogSimpeler: "Lees ook andere kant.",
+          },
+        },
       },
       {
         q: "Wat is **sunk cost fallacy**?",
@@ -64,6 +108,28 @@ const steps = [
         options: ["Oordeel over groep ipv individu", "Geen tijd voor", "Mag wel", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt — oneerlijk.", "Geen excuus.", "Niet.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is stereotypering?", tekst: "**Stereotypering** = een oordeel maken over een HELE GROEP mensen, op basis van een vooroordeel. Bv: 'alle oude mensen zijn langzaam', 'alle voetballers zijn dom'." },
+            { titel: "Waarom fout?", tekst: "Het is oneerlijk: je behandelt een persoon niet als individu maar als 'lid van groep X'. Elk mens is uniek. Veel ouderen zijn snel; veel voetballers zijn slim. Generalisatie klopt nooit voor iedereen." },
+            { titel: "Vooroordelen leiden tot discriminatie", tekst: "Stereotypes kunnen leiden tot discriminatie: mensen krijgen geen baan, kans of vriendschap omdat ze tot 'verkeerde groep' worden gerekend. Wettelijk verboden in NL." },
+          ],
+          woorden: [
+            { woord: "stereotype", uitleg: "Vast beeld over groep mensen (vaak negatief)." },
+            { woord: "discriminatie", uitleg: "Ongelijk behandelen op basis van groep, niet individu." },
+          ],
+          theorie: "Cito-tip: stereotypering is altijd PROBLEMATISCH. Behandel mensen individueel, niet als lid van groep. Cito en grondwet beschermen tegen discriminatie.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Meisjes kunnen niet goed wiskundigen worden' = stereotype = fout (veel meiden TOP in wiskunde)." },
+            { type: "stap", tekst: "'Mensen uit X-land zijn lui' = stereotype = fout + racistisch." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'Is dit echt voor IEDEREEN waar?' Bijna altijd: nee, want elk mens is uniek." }],
+          niveaus: {
+            basis: "Stereotypering = oordeel over hele groep = oneerlijk (niet elk individu hetzelfde).",
+            simpeler: "Behandel mensen los van groep — elk is uniek.",
+            nogSimpeler: "Individueel beoordelen.",
+          },
+        },
       },
       {
         q: "Wie won **Nobelprijs voor denkfouten-onderzoek**?",
