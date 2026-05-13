@@ -195,6 +195,24 @@ const steps = [
         options: ["Groter (kleiner getal = meer detail)", "Kleiner", "Gelijk", "Niet te vergelijken"],
         answer: 0,
         wrongHints: [null, "Klopt — hoe kleiner schaalgetal, hoe meer detail.", "Niet — 1:10.000 = stadsplattegrond met meer detail.", "Niet gelijk.", "Wel vergelijkbaar."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Schaal verklaard", tekst: "1:10.000 betekent: 1 cm op kaart = 10.000 cm = 100 m in het echt. Veel detail!" },
+            { titel: "Vergelijk", tekst: "1:100.000 = 1 cm = 1 km. Veel minder detail per cm — overzicht-kaart." },
+          ],
+          woorden: [
+            { woord: "grote schaal", uitleg: "Kleiner schaalgetal (bv 1:10.000) = kleine gebied, veel detail." },
+            { woord: "kleine schaal", uitleg: "Groter schaalgetal (bv 1:1.000.000) = groot gebied, weinig detail." },
+          ],
+          theorie: "Verwarrend: 'grote schaal' = grootste detail-niveau = klein schaalgetal. 1:10.000 > 1:100.000 (qua detail)!",
+          voorbeelden: [{ type: "stap", tekst: "1:1.000 = bouwtekening (1 cm = 10 m). 1:25.000 = wandelkaart. 1:1.000.000 = wereldatlas." }],
+          basiskennis: [{ onderwerp: "Onthoud", uitleg: "Hoe kleiner het getal achter ':' hoe meer je ziet per cm. Vice versa." }],
+          niveaus: {
+            basis: "Groter (kleiner schaalgetal = meer detail). A.",
+            simpeler: "1:10.000 = stadsplattegrond. 1:100.000 = streekkaart met minder detail. Eerste is 'groter'. = A.",
+            nogSimpeler: "Groter = A.",
+          },
+        },
       },
       {
         q: "Op kaart: **groene vlek** betekent meestal?",

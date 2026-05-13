@@ -574,6 +574,24 @@ const steps = [
         options: ["trein", "vlijtig", "lijden", "blijven"],
         answer: 0,
         wrongHints: [null, "Klopt — denk aan 'reis met de trein'.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Geen regel, uit hoofd", tekst: "Voor ei/ij bestaat geen makkelijke regel — woorden moet je uit hoofd kennen." },
+            { titel: "Truc: rijmwoorden", tekst: "'Trein' rijmt met 'pijn' (ij) — maar trein is ei. Onthoud de uitzonderingen!" },
+          ],
+          woorden: [
+            { woord: "ei (korte ei)", uitleg: "Klassieke ei: trein, mei, klein, klein, etc." },
+            { woord: "ij (lange ij)", uitleg: "Klassieke ij: vlijtig, lijden, blijven, pijn." },
+          ],
+          theorie: "Cito-spelling 'ei/ij': leer de meest-voorkomende woorden uit hoofd. Bij twijfel: spreek hardop en raden — vaak voel je 't.",
+          voorbeelden: [{ type: "stap", tekst: "Met ei: trein/reis/mei/zei/klein. Met ij: blij/wijn/lijden/pijn/krijgen." }],
+          basiskennis: [{ onderwerp: "Tip", uitleg: "Veel met ij: werkwoorden (krijgen, blijven, lijken). Veel met ei: korte concrete dingen (trein, mei, zei, klein)." }],
+          niveaus: {
+            basis: "trein. A.",
+            simpeler: "Trein = ei. Vlijtig/lijden/blijven = ij. = A.",
+            nogSimpeler: "trein = A.",
+          },
+        },
       },
       {
         q: "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
