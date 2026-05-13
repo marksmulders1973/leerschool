@@ -304,6 +304,10 @@ const werkwoordTijdenPo = {
   subject: "taal",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — werkwoordsvervoeging",
+  prerequisites: [
+    { id: "woordsoorten-po", title: "Woordsoorten", niveau: "po-1F" },
+    { id: "spelling-overige-po", title: "Spelling — basisregels", niveau: "po-1F" },
+  ],
   intro:
     "Werkwoordsvervoeging voor groep 5-8: tegenwoordige tijd, kofschip-regel, sterke werkwoorden in verleden tijd. ~12 min.",
   triggerKeywords: [

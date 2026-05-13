@@ -334,6 +334,10 @@ const vlakkeFigurenPo = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Meten en meetkunde — omtrek en oppervlakte",
+  prerequisites: [
+    { id: "meetkunde-bouwsels", title: "Meetkunde — volume + bouwsels", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Omtrek en oppervlakte voor groep 5-8: vierkant, rechthoek, driehoek (basis × hoogte ÷ 2), praktijksommen met hek/verf/gras/tegels. ~12 min.",
   triggerKeywords: [

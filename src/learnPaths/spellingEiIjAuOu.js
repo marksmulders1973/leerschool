@@ -540,6 +540,9 @@ const spellingEiIjAuOu = {
   subject: "spelling",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — spelling ei/ij & au/ou",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+  ],
   intro:
     "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reis vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voor groep 4-6.",
   triggerKeywords: [

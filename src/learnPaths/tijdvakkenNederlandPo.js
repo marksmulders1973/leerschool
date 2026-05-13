@@ -391,6 +391,9 @@ const tijdvakkenNederlandPo = {
   subject: "geschiedenis",
   referentieNiveau: "PO-kerndoel",
   sloThema: "Wereldoriëntatie — geschiedenis Nederland",
+  prerequisites: [
+    { id: "bekende-nederlanders-po", title: "Historische Nederlanders", niveau: "po-1F" },
+  ],
   intro:
     "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Cito-doorstroomtoets-stof wil dekken.",
   triggerKeywords: [

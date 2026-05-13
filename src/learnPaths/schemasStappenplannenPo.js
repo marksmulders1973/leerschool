@@ -241,6 +241,10 @@ const schemasStappenplannenPo = {
   subject: "taal",
   referentieNiveau: "1F",
   sloThema: "Studievaardigheden — informatiebronnen lezen",
+  prerequisites: [
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategieën", niveau: "po-1F/1S" },
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+  ],
   intro:
     "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Cito-stijl. ~12 min.",
   triggerKeywords: [

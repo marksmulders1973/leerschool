@@ -343,6 +343,9 @@ const negatieveGetallenPo = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Getallen — negatieve getallen",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Negatieve getallen voor groep 5-8: wat is een negatief getal, getalslijn lopen, min-een-minus = plus, praktijk met temperatuur en geld. ~12 min.",
   triggerKeywords: [

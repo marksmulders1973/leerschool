@@ -640,6 +640,10 @@ const topografieNederland = {
   subject: "aardrijkskunde",
   referentieNiveau: "1F",
   sloThema: "Aardrijkskunde — topografie Nederland",
+  prerequisites: [
+    { id: "werelddelen-landen-po", title: "Werelddelen + landen", niveau: "po-1F" },
+    { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F" },
+  ],
   intro:
     "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. Cito-relevant voor groep 7-8.",
   triggerKeywords: [

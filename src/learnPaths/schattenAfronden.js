@@ -235,6 +235,10 @@ const schattenAfronden = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Getallen — schatten en afronden",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "kommagetallen-po", title: "Kommagetallen", niveau: "po-1F" },
+  ],
   intro:
     "Schatten en afronden voor groep 5-8: wanneer schatten, afronden op 10/100/1000, schatten van sommen, praktijk met kassabon en tijden. ~12 min.",
   triggerKeywords: [
