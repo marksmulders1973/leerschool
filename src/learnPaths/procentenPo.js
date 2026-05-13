@@ -88,6 +88,29 @@ const steps = [
         options: ["40 per 100","40 keer iets","40 + 100","40 jaar"],
         answer: 0,
         wrongHints: [null,"Procent betekent niet 'keer'. Wat zou 'per' betekenen?","Niet optellen. Procent is een verhouding.","Procent gaat niet over leeftijd of jaren."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent procent?", tekst: "Het woord **procent** komt van het Latijnse 'per centum' = 'per honderd'. Dus 40% betekent letterlijk: **40 per 100**." },
+            { titel: "Voorbeeld", tekst: "Als 40% van de klas een meisje is, dan zou je in een klas van 100 leerlingen 40 meisjes hebben. In een klas van 20: ook 40% = 8 meisjes (40 per 100 = 8 per 20)." },
+            { titel: "Verhouding, geen aantal", tekst: "% is een **verhouding**, geen vast aantal. 40% van 10 = 4. 40% van 1.000 = 400. Het GETAL verandert, de VERHOUDING blijft." },
+          ],
+          woorden: [
+            { woord: "procent (%)", uitleg: "Per honderd (per centum, Latijns)." },
+            { woord: "verhouding", uitleg: "Hoeveel van het ene tegenover hoeveel van het andere." },
+          ],
+          theorie: "Cito-tip: lees het symbool % als 'per 100' of 'van 100'. Dan begrijp je elk procent-vraagstuk. 25% = 25 per 100 = een kwart.",
+          voorbeelden: [
+            { type: "stap", tekst: "100% = 100 per 100 = ALLES." },
+            { type: "stap", tekst: "50% = 50 per 100 = de HELFT." },
+            { type: "stap", tekst: "10% = 10 per 100 = een TIENDE." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "% = per 100. Onthoud dat en je begrijpt elke procent-vraag." }],
+          niveaus: {
+            basis: "Procent (%) = per 100. 40% = 40 per 100.",
+            simpeler: "Als je 100 dingen hebt en 40 zijn rood = 40%.",
+            nogSimpeler: "% = per 100.",
+          },
+        },
       },
       {
         q: "**100%** — wat betekent dat?",
@@ -115,6 +138,28 @@ const steps = [
         options: ["¾","½","⅓","⅖"],
         answer: 0,
         wrongHints: [null,"½ = 50%. 75% is meer dan de helft.","⅓ ≈ 33%. Te weinig.","Past niet bij de standaard-percentages."],
+        uitlegPad: {
+          stappen: [
+            { titel: "% omzetten naar breuk", tekst: "75% = 75 per 100 = breuk 75/100. Vereenvoudig: deel teller en noemer door 25. 75÷25 = 3, 100÷25 = 4. Dus 75/100 = **3/4** = ¾." },
+            { titel: "4 sleutel-percentages onthouden", tekst: "Onthoud deze 4: 25% = ¼. 50% = ½. **75% = ¾**. 100% = 1 (alles). Met deze 4 kun je heel veel doen!" },
+            { titel: "Visueel", tekst: "Stel je een pizza voor in 4 stukken. 1 stuk = ¼ = 25%. 2 stukken = ½ = 50%. 3 stukken = ¾ = 75%. 4 stukken = 100%." },
+          ],
+          woorden: [
+            { woord: "breuk", uitleg: "Teller / noemer (3/4 = 3 boven, 4 onder)." },
+            { woord: "vereenvoudigen", uitleg: "Delen door gemeenschappelijke deler." },
+          ],
+          theorie: "Cito-vuistregel: 25% = ¼. 50% = ½. 75% = ¾. Dit zijn de meest gebruikte. Onthoud ze uit het hoofd!",
+          voorbeelden: [
+            { type: "stap", tekst: "75% van 20 = ¾ van 20 = 20÷4×3 = 5×3 = 15." },
+            { type: "stap", tekst: "75% van 100 = 75. Hele klas? 75 van 100 leerlingen — 3 op de 4." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "25-50-75: trapje van 3 stappen, breuken ¼-½-¾." }],
+          niveaus: {
+            basis: "75% = ¾ (drie kwart).",
+            simpeler: "Pizza van 4 stukken: 3 stukken op = 75%.",
+            nogSimpeler: "75% = ¾.",
+          },
+        },
       },
       {
         q: "**0,25** als percentage?",
@@ -153,6 +198,28 @@ const steps = [
         options: ["€ 50","€ 25","€ 75","€ 175"],
         answer: 0,
         wrongHints: [null,"Te weinig — 25% is een vierde. Wat is een vierde van € 200?","Te veel — dat zou 37,5% zijn.","Klopt niet — dat is wat de fiets nu KOST, niet wat je bespaart. Lees de vraag."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de vraag goed", tekst: "Wat wordt gevraagd? **Hoeveel bespaar je?** (= hoeveel KORTING). Niet: 'wat is de nieuwe prijs?' Pas op — die staat ook tussen de antwoorden om je te misleiden!" },
+            { titel: "Bereken 25% van €200", tekst: "25% = ¼ (een kwart). Een kwart van €200 = 200 ÷ 4 = **€50**." },
+            { titel: "Of via 10%-truc", tekst: "10% van €200 = €20. 25% = 2×10% + ½×10% = €20 + €20 + €10 = **€50**. Zelfde antwoord, langer rekenwerk." },
+          ],
+          woorden: [
+            { woord: "korting", uitleg: "Bedrag dat van de prijs af gaat." },
+            { woord: "besparing", uitleg: "Synoniem van korting — wat je niet hoeft te betalen." },
+          ],
+          theorie: "Cito-strik: vraag naar 'bespaar' of 'korting' = je rekent het kortings-BEDRAG. Bij 'nieuwe prijs' reken je het bedrag NA aftrek (€200 − €50 = €150).",
+          voorbeelden: [
+            { type: "stap", tekst: "Korting €50 = bespaar je. Nieuwe prijs = €200 − €50 = €150." },
+            { type: "stap", tekst: "20% korting op €80? → 20% van €80 = €16 bespaard, betaal €64." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lees of vraag is: KORTING (=besparing) OF NIEUWE PRIJS. Anders verkeerd antwoord." }],
+          niveaus: {
+            basis: "25% korting van €200 = €50 besparing.",
+            simpeler: "¼ van €200 = €50 = de korting.",
+            nogSimpeler: "€200 ÷ 4 = €50.",
+          },
+        },
       },
       {
         q: "Op een toets van **40 vragen** maakt Lisa er **75% goed**. Hoeveel zijn dat?",
