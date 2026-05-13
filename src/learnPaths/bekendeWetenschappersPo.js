@@ -23,6 +23,29 @@ const steps = [
         options: ["Copernicus (1543)", "Aristoteles", "Galileo eerst", "Newton"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Geocentrisch.", "Galileo bewees het.", "Later."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wereldbeeld vóór Copernicus", tekst: "Eeuwenlang dacht iedereen dat de **aarde** in het middelpunt stond, en zon/sterren/planeten draaiden eromheen. Dat heet **geocentrisch** (geo = aarde)." },
+            { titel: "Copernicus draaide het om (1543)", tekst: "Pool **Nicolaus Copernicus** stelde voor: de **zon** staat in het midden, en de aarde + planeten draaien daar omheen. Dat heet **heliocentrisch** (helio = zon)." },
+            { titel: "Galileo bewees het (later)", tekst: "Galileo zag met telescoop (rond 1610) manen bij Jupiter en fasen van Venus. Dat bewees Copernicus' idee. Maar de kerk veroordeelde hem in 1633." },
+          ],
+          woorden: [
+            { woord: "geocentrisch", uitleg: "Aarde in middelpunt (oude model)." },
+            { woord: "heliocentrisch", uitleg: "Zon in middelpunt (Copernicus' model)." },
+            { woord: "Copernicus", uitleg: "Poolse astronoom, stelde zon-in-midden voor (1543)." },
+          ],
+          theorie: "Cito-tijdlijn astronomie: Aristoteles/Ptolemaeus = aarde-centrisch. Copernicus 1543 = zon-centrisch (idee). Galileo ~1610 = bewijs. Newton 1687 = zwaartekracht-verklaring. Steeds beter inzicht.",
+          voorbeelden: [
+            { type: "stap", tekst: "Heliocentrisch model: zon midden, daarom heen 8 planeten (Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus)." },
+            { type: "stap", tekst: "Truc: HELIO = zon (zoals 'helium' = element ontdekt in zon)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Copernicus = naam van de man. Heliocentrisch = naam van het model. Hij stelde het VOOR, Galileo BEWEES het later." }],
+          niveaus: {
+            basis: "Copernicus (1543) zei: zon staat in middelpunt.",
+            simpeler: "Vroeger: aarde in midden. Copernicus zei: nee, zon!",
+            nogSimpeler: "Copernicus = zon in midden.",
+          },
+        },
       },
       {
         q: "Wat ontdekte **Galileo** met telescoop?",
@@ -54,6 +77,28 @@ const steps = [
         options: ["Newton", "Galileo", "Einstein", "Darwin"],
         answer: 0,
         wrongHints: [null, "Klopt — appel-verhaal.", "Astronomie.", "Relativiteit.", "Evolutie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is zwaartekracht?", tekst: "Zwaartekracht is de kracht waarmee voorwerpen met massa elkaar AANTREKKEN. De aarde trekt alles naar zich toe — daarom valt een appel naar BENEDEN, niet omhoog." },
+            { titel: "Isaac Newton (1687)", tekst: "**Isaac Newton** beschreef als eerste hoe zwaartekracht werkt. Volgens legende inspireerde een vallende appel hem (mogelijk verzonnen verhaal, maar nu wereldberoemd)." },
+            { titel: "Waar zit zwaartekracht in?", tekst: "Aarde trekt jou + appel + maan aan. Zon trekt planeten aan → blijven in baan. Elke massa trekt elke andere massa aan." },
+          ],
+          woorden: [
+            { woord: "zwaartekracht", uitleg: "Aantrekkende kracht tussen voorwerpen met massa." },
+            { woord: "Newton (N)", uitleg: "Eenheid van kracht, vernoemd naar Isaac Newton. 1 appel ≈ 1 N." },
+          ],
+          theorie: "Cito-onderscheid wetenschappers: NEWTON = zwaartekracht + beweging-wetten. EINSTEIN = relativiteit (verklaring zwaartekracht). GALILEO = telescoop-waarnemingen. DARWIN = evolutie (biologie, niet natuurkunde).",
+          voorbeelden: [
+            { type: "stap", tekst: "Spring omhoog → aarde-zwaartekracht trekt je terug naar grond." },
+            { type: "stap", tekst: "Maan blijft in baan rond aarde dankzij aardse zwaartekracht." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Newton = appel + zwaartekracht (mythologie maar makkelijk te onthouden)." }],
+          niveaus: {
+            basis: "Newton ontdekte zwaartekracht (rond 1687).",
+            simpeler: "Newton + appel = zwaartekracht.",
+            nogSimpeler: "Newton = zwaartekracht.",
+          },
+        },
       },
       {
         q: "Wat is **Newton's eerste wet**?",
@@ -85,6 +130,28 @@ const steps = [
         options: ["Evolutietheorie + natuurlijke selectie", "Zwaartekracht", "Penicilline", "Relativiteit"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Newton.", "Fleming.", "Einstein."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is evolutie?", tekst: "Evolutie is het idee dat levende wezens (planten + dieren + mensen) over miljoenen jaren langzaam VERANDEREN — soorten ontstaan en verdwijnen." },
+            { titel: "Darwin's reis", tekst: "**Charles Darwin** maakte een 5-jarige zeereis (1831-1836) met het schip HMS Beagle. Op de Galápagos-eilanden zag hij **vinkjes met verschillende snavels** per eiland." },
+            { titel: "Natuurlijke selectie", tekst: "Darwin's idee: wezens met EIGENSCHAPPEN die goed passen bij hun omgeving overleven en planten zich voort. Slechte eigenschappen sterven uit. Dat heet **natuurlijke selectie**. In zijn boek '*Over het ontstaan van soorten*' (1859)." },
+          ],
+          woorden: [
+            { woord: "evolutie", uitleg: "Soorten veranderen over miljoenen jaren." },
+            { woord: "natuurlijke selectie", uitleg: "De best aangepaste wezens overleven en geven hun kenmerken door." },
+          ],
+          theorie: "Cito-onderscheid biologen: DARWIN = evolutie. MENDEL = genetica (erwten). PASTEUR = bacteriën + vaccin. FLEMING = penicilline. Verschillende ontdekkingen, niet verwarren.",
+          voorbeelden: [
+            { type: "stap", tekst: "Galápagos-vinkje met dikke snavel = beter in noten kraken → overleeft → krijgt jongen met dikke snavel." },
+            { type: "stap", tekst: "Giraffen met lange nek konden hoger eten → meer overleven → na vele generaties: allemaal lange nek." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Darwin = D van Diersoorten + Doorlopende verandering = evolutie." }],
+          niveaus: {
+            basis: "Darwin bedacht evolutietheorie + natuurlijke selectie.",
+            simpeler: "Darwin: dieren veranderen langzaam over miljoenen jaren.",
+            nogSimpeler: "Darwin = evolutie.",
+          },
+        },
       },
       {
         q: "Welk schip nam Darwin?",
