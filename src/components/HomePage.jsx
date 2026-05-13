@@ -934,17 +934,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       )}
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.7)" }}>{sub}</div>
-                      {cta && (
-                        <div style={{
-                          fontFamily: "var(--font-body)",
-                          fontSize: 10,
-                          color,
-                          opacity: 0.9,
-                          marginTop: 2,
-                          fontWeight: 600,
-                          letterSpacing: 0.2,
-                        }}>Alle vakken →</div>
-                      )}
                     </>
                   );
                   if (cta) {
@@ -976,9 +965,36 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       >
                         {innerContent}
                         <button
-                          onClick={(e) => { e.stopPropagation(); cta.onClick(); }}
+                          onClick={(e) => { e.stopPropagation(); onClick(); }}
+                          onMouseEnter={(e) => { e.currentTarget.style.background = `${color}26`; }}
+                          onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                           style={{
                             marginTop: "auto",
+                            width: "100%",
+                            minHeight: 28,
+                            padding: "4px 6px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            borderRadius: 8,
+                            border: `1.5px solid ${color}`,
+                            background: "transparent",
+                            color,
+                            fontFamily: "var(--font-display)",
+                            fontSize: 10.5,
+                            fontWeight: 700,
+                            letterSpacing: 0.2,
+                            cursor: "pointer",
+                            whiteSpace: "nowrap",
+                            lineHeight: 1,
+                            marginBottom: 6,
+                          }}
+                        >
+                          Alle vakken →
+                        </button>
+                        <button
+                          onClick={(e) => { e.stopPropagation(); cta.onClick(); }}
+                          style={{
                             width: "100%",
                             // Vaste min-height + flex-center → CTA's altijd
                             // gelijke hoogte, ongeacht of inhoud een <img> van
