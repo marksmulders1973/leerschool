@@ -26,9 +26,9 @@ Cito + examens versterken. Drie type werk:
 - [ ] **QW8 — Bing Webmaster Tools setup** (Mark zelf): 10 min, voedt ChatGPT-Search. Placeholder al in `index.html` zichtbaar.
 
 ### Audit-1-week-werk (~2 dagen werk)
-- [ ] **QW4 — Examen-modus echt splitsen**: `src/features/practice/PlayQuiz.jsx:553-591` → wrap `onLearnPathRequest`-knop + `wrongHints`-display in `if (gameState.mode !== 'exam')`. Voeg `mode: 'exam' | 'practice'` toe aan gameState (default `practice`; `examen-`-route zet `exam`). Reden: Mark's beslissing 2026-05-09 ("examen=authentiek/geen hints") is niet geïmplementeerd — alleen 60-min timer is gesplitst. **Effort: 2-3 uur. Impact: hoog (USP-authenticiteit).**
+- [x] **QW4 — Examen-modus echt splitsen** ✓ (2026-05-13, commit 90ecd90): `PlayQuiz.jsx` nieuwe `isExamMode = gameState.mode==="examen" || isCitoSimulation`. "Ik weet het niet"-knop + 2× YouTube-link verborgen in examen-modus. Triggert bij `App.jsx:647 mode="examen"` (PDF-archief) + Cito-50-simulatie.
 - [ ] **QW5 — Per-examen-vraag-URL template + 60 SEO-pagina's**: genereer uit `examenEconomie*.js` data 60 statische HTML-pagina's `public/examen/economie/vmbo-gl-tl/2024/tijdvak-1/vraag-36.html` etc. H1 = exacte vraagtekst, antwoord boven-de-vouw, FAQ-schema, citatie `examenblad.nl`. Reden: AI-citation goldmine — `leren.jojoschool.nl` doet dit al; Leerkwartier-content authentiek = beter. **Effort: 1-2 dagen. Impact: SEO-kritiek.**
-- [ ] **QW7 — Lazy-load STAP 2 voor LearnPath.jsx**: vervang `LearnPath.jsx:282` `ALL_LEARN_PATHS[pathId]` door `await getLearnPath(pathId)` + Suspense. Reden: bundle 5,8 MB per visit; Vercel Hobby 100 GB/mnd cap bij ~50k visits. **Effort: 2-3 uur. Impact: bundle kritiek.**
+- [⏳] **QW7 — Lazy-load STAP 2 voor LearnPath.jsx** PILOT GEDAAN (2026-05-13, commit 90ecd90): nieuwe `lazyGetLearnPath` import + useEffect met async fallback. Volle bundle-baat vereist nog: regel 3 ALL_LEARN_PATHS-import weg + examenLookup naar build-time JSON + LearnPathsHub/StudentHome/Curriculum metadata-only. Volgende sprint.
 
 ### Audit-content-verbeteringen (~3-5 uur)
 - [ ] **nogSimpeler audit-script**: `scripts/lint-nogsimpeler.mjs` — controleer `niveaus.nogSimpeler.length > 20 && bevat 1 zin + 1 voorbeeld`. Fix top 20 paden waar het "Plus.", "Zeven.", etc. is.
