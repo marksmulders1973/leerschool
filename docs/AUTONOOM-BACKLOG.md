@@ -50,7 +50,7 @@ Cito + examens versterken. Drie type werk:
 - [ ] **Upstash Redis voor rate-limit**: `_guard.js:24` in-memory Map vervangen door Redis voor cross-instance-quota. Free tier 10k/dag voldoende.
 
 ### Audit-monetization-blokkers (vóór Cito-piek nov 2026 LIVE)
-- [ ] **Paywall implementeren**: gratis (3 paden/dag, geen AI-tutor, geen examen-modus) / premium €5,99/mnd / jaarcontract €39 / examenperiode €19,95 / schoollicentie €99/klas/jr. Stripe of Mollie.
+- [⏳] **Paywall infrastructuur KLAAR — gating UIT** ✓ (2026-05-13): `src/subscription/{config,useSubscription,PaywallGate}.js(x)` + `public/abonnement.html` (pricing-pagina + waitlist-form) + `api/checkout-session.js` (Stripe-stub, 503 tot `STRIPE_ACTIVE=true`). `PAYWALL_ACTIVE=false` zodat alles gratis blijft tot Mark flipt (geplande go-live jan 2027 Cito-piek). Tier-systeem (free/parent_pro/teacher_pro) + FEATURE_GATES + PRICING-config gedocumenteerd in CLAUDE.md "Paywall"-sectie met 7-stappen-activatie-checklist.
 - [ ] **Ouder-dashboard v1**: gekoppeld account; toont "kind heeft X vragen geoefend, zwakke onderwerpen: Y". Wekelijkse mail = retention-anchor.
 - [ ] **VoorkennisKeten UI fase 2** (wacht op Mark akkoord — nieuwe component): POC op V36 economie 2023-T1 + Playwright-screenshot. Memory zegt `stop hier voor reviewer-agents akkoord`.
 - [ ] **A12 web push setup-stappen** (Mark zelf, ~30 min handwerk): VAPID + Vercel env + Supabase secrets + migration + cron.

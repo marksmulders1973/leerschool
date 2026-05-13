@@ -277,6 +277,35 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - **Geen paden > 5 stappen** *(toegevoegd 2026-05-12)* — anders breekt kwartier-belofte.
 - Geen documentatie/README's aanmaken tenzij Mark expliciet vraagt.
 
+## Paywall — klaar maar UIT (tot 2027)
+
+Status 2026-05-13: paywall-infrastructuur is gebouwd maar `PAYWALL_ACTIVE = false`. Reden: Leerkwartier heeft 0 betalende gebruikers; eerst groei, dan monetiseren. Mark plant lancering rond Cito-piek **januari 2027**.
+
+**Wat is er nu**:
+- `src/subscription/config.js` — feature-flag + pricing-constants + FEATURE_GATES-map.
+- `src/subscription/useSubscription.js` — hook die altijd `parent_pro` returnt zolang paywall uit staat.
+- `src/subscription/PaywallGate.jsx` — wrapper-component voor premium-only content (rendert children direct als paywall uit).
+- `public/abonnement.html` — pricing-pagina + waitlist-form (anon-key INSERT in `upgrade_waitlist`-tabel).
+- `api/checkout-session.js` — Stripe-stub die 503 retourneert tot `STRIPE_ACTIVE=true`.
+- Supabase-tabellen: `subscriptions(user_id, tier, valid_until)` + `upgrade_waitlist(email, plan)` + `schools(plan_tier, subscription_active)` — bestaan al.
+
+**Hoe schakel je de paywall LIVE** (volgorde aanhouden):
+1. `src/subscription/config.js` → `PAYWALL_ACTIVE = true`.
+2. Vercel env-vars zetten: `STRIPE_SECRET_KEY`, `STRIPE_PUBLIC_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_ID_PARENT_MONTHLY`, `STRIPE_PRICE_ID_PARENT_YEARLY`, `STRIPE_PRICE_ID_EXAM`. Plus: `STRIPE_ACTIVE=true` in `api/checkout-session.js`.
+3. `npm i stripe` + unblock TODO-blok in `api/checkout-session.js`.
+4. Bouw `api/stripe-webhook.js` die `subscriptions`-tabel update op `checkout.session.completed` (insert/upsert tier=parent_pro) en `customer.subscription.deleted` (tier=free).
+5. Wrap premium-features in code met `<PaywallGate feature="ai-tutor">…</PaywallGate>`. Features in `FEATURE_GATES`: `ai-tutor`, `exam-mode`, `unlimited-paths`, `voorkennis-keten`, `parent-dashboard`, `school-dashboard`, `generate-questions`.
+6. Test in Stripe test-mode (testkaart 4242 4242 4242 4242) → flip naar live keys.
+7. Stuur mail naar `upgrade_waitlist`-emails met 30-dagen-gratis-premium-coupon.
+
+**Pricing-defaults** (zie `PRICING` in `config.js`):
+- Maand: €5,99
+- Jaar: €39 (-45%)
+- Examenperiode jan-mei: €19,95 (geen auto-renewal)
+- Schoollicentie: €99/klas/jaar
+
+**Free-tier-quota** (`FREE_QUOTA`): 3 paden/dag, 0 AI-tutor-calls, 0 examen-modus.
+
 ## Externe resources
 
 - **Supabase project-ID**: zie `reference_studiebol_resources` in memory.

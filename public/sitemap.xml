@@ -169,6 +169,12 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://leerkwartier.app/abonnement.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
   <!-- Examen-vraag-pagina's (Audit-1 QW5 — gegenereerd 2026-05-13) -->
   <url>
