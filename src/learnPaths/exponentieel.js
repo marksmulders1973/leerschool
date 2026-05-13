@@ -832,6 +832,10 @@ const exponentieel = {
   referentieNiveau: "3F",
   sloThema: "Verbanden — exponentiële groei & afname",
   topics: ["WI.algebra.machten"],
+  prerequisites: [
+    { id: "machten", title: "Machten + exponenten", niveau: "vmbo-2F/2S" },
+    { id: "procenten", title: "Procenten", niveau: "vmbo-2F" },
+  ],
   intro:
     "Exponentiële groei en afname voor klas 3: lineair vs exponentieel, groeifactor + percentage, formule N(t) = b·g^t, halveringstijd. Voorbereiding op havo wiskunde A (logaritmen, financiële wiskunde) met praktische toepassingen: rente, bevolking, radioactief verval, virusverspreiding.",
   triggerKeywords: [

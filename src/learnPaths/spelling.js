@@ -1043,6 +1043,10 @@ const spelling = {
   // SLO-niveau (G4c): 2F basis. Spellingsregels einde basisschool / vmbo.
   referentieNiveau: "2F",
   sloThema: "Taalverzorging — spelling",
+  prerequisites: [
+    { id: "spelling-ei-ij-au-ou", title: "Spelling ei/ij + au/ou", niveau: "po-1F" },
+    { id: "spelling-overige-po", title: "Spelling overige", niveau: "po-1F" },
+  ],
   intro:
     "De basis van Nederlandse spelling voor klas 1-2: open/gesloten lettergrepen, korte/lange klinkers, ei/ij + au/ou (woordbeeld), ch/g, samenstellingen (aaneen + tussen-n + tussen-s), hoofdletters, verkleinwoorden, apostrof. Geen werkwoordsspelling — die zit al in 'werkwoordsvervoeging'.",
   triggerKeywords: [

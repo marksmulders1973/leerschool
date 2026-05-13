@@ -575,6 +575,10 @@ const schrijfvaardigheid = {
   // SLO-niveau (G4c): 3F havo / 3S vwo. Schrijfvaardigheid examen Nederlands.
   referentieNiveau: "3F/3S",
   sloThema: "Schrijven — beschouwende teksten",
+  prerequisites: [
+    { id: "argumentatieleer", title: "Argumentatieleer", niveau: "havo-3F/3S" },
+    { id: "werkwoordsvervoeging", title: "Werkwoordsvervoeging", niveau: "vmbo-2F" },
+  ],
   intro:
     "Examenstof havo 4-5 schrijfvaardigheid: drie tekstsoorten (betoog, beschouwing, uiteenzetting) met hun specifieke opbouw, alinea-structuur, verbindingswoorden, formuleer-checklist en revisie-aanpak. Counterpart van argumentatieleer (= leesvaardigheid).",
   triggerKeywords: [

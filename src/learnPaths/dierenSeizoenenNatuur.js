@@ -652,6 +652,9 @@ const dierenSeizoenenNatuur = {
   sloKerndoelen: [39, 40, 41, 42],
   sloThema: "Wereldoriëntatie — natuur, dieren & seizoenen",
   referentieNiveau: "PO-kerndoel",
+  prerequisites: [
+    { id: "dierenklassen-po", title: "Dierenklassen", niveau: "po-1F" },
+  ],
   intro:
     "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, en voedselketens.",
   triggerKeywords: [

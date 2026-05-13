@@ -446,6 +446,10 @@ const negatieveGetallen = {
   referentieNiveau: "2F",
   sloThema: "Getallen — negatieve getallen",
   topics: ["WI.rekenen.negatief"],
+  prerequisites: [
+    { id: "negatieve-getallen-po", title: "Negatieve getallen (basis)", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro: "Negatieve getallen zijn getallen kleiner dan nul. Je ziet ze bij temperaturen onder nul, schulden, hoogtes onder zeeniveau. Hier leer je: getallenlijn, optellen/aftrekken/vermenigvuldigen met negatieve getallen, en de regels voor plus-min combinaties.",
   triggerKeywords: ["negatief", "negatieve getallen", "−", "min × min", "tegengestelde", "getallenlijn"],
   chapters,

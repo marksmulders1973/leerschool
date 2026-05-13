@@ -749,6 +749,10 @@ const differentieren = {
   referentieNiveau: "HAVO/VWO wiskunde A/B",
   sloThema: "Verbanden — differentiëren",
   topics: ["WI.algebra.machten"],
+  prerequisites: [
+    { id: "machten", title: "Machten + exponenten", niveau: "vmbo-2F/2S" },
+    { id: "parabolen", title: "Parabolen", niveau: "vmbo-2S/3F" },
+  ],
   intro:
     "Differentiëren voor havo 4-5: helling-concept, raaklijn, afgeleide functie f'(x), regels voor machten, som-regel, en toepassingen — extreme waarden vinden en raaklijn-vergelijkingen opstellen. Examenstof havo wis A en B.",
   triggerKeywords: [

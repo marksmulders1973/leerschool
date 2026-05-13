@@ -625,6 +625,10 @@ const stelsels = {
   referentieNiveau: "2F/3F",
   sloThema: "Verbanden — stelsels vergelijkingen",
   topics: ["WI.algebra.vergelijking"],
+  prerequisites: [
+    { id: "vergelijkingen-oplossen", title: "Vergelijkingen oplossen", niveau: "vmbo-2F" },
+    { id: "lineaire-formules", title: "Lineaire formules", niveau: "vmbo-2F" },
+  ],
   intro:
     "Twee vergelijkingen, twee onbekenden — oplossen met substitutie of optellen/aftrekken (eliminatie). Plus woordvragen waarin je zelf het stelsel moet opstellen. Vervolg op vergelijkingen-oplossen.",
   triggerKeywords: [

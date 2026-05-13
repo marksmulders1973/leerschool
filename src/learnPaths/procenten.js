@@ -476,6 +476,10 @@ const procenten = {
   referentieNiveau: "2F",
   sloThema: "Verhoudingen — procenten",
   topics: ["WI.rekenen.procenten"],
+  prerequisites: [
+    { id: "procenten-po", title: "Procenten (basis)", niveau: "po-1F" },
+    { id: "breuken", title: "Breuken", niveau: "vmbo-2F" },
+  ],
   intro: "Procenten kom je overal tegen — in de winkel, op je rekening, in nieuwsbericht. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, korting, toename en BTW.",
   triggerKeywords: ["procent", "procenten", "korting", "btw", "toename", "stijging", "afname"],
   chapters,

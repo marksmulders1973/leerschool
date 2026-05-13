@@ -704,6 +704,10 @@ const periodiek = {
   referentieNiveau: "HAVO/VWO wiskunde B",
   sloThema: "Verbanden — periodieke functies",
   topics: ["WI.meetkunde.gonio"],
+  prerequisites: [
+    { id: "goniometrie", title: "Goniometrie (sin/cos/tan)", niveau: "vmbo-3S" },
+    { id: "coordinatenstelsel", title: "Coördinatenstelsel", niveau: "vmbo-2F" },
+  ],
   intro:
     "Sinusoïden voor havo 4-5: sin/cos uit eenheidscirkel, grafiek-vorm, periode + amplitude + evenwicht + faseverschuiving, algemene vorm y = a·sin(b·(x-d)) + c, met praktische toepassingen — geluid, getij, slinger, wisselspanning, biologische cycli. Voorbouw op goniometrie. Examenstof havo wis B en deels wis A.",
   triggerKeywords: [

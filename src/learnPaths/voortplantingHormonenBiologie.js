@@ -926,6 +926,10 @@ const voortplantingHormonenBiologie = {
   referentieNiveau: "2F",
   sloKerndoelen: [33, 34],
   sloThema: "Biologie — voortplanting & hormonen",
+  prerequisites: [
+    { id: "cel-biologie", title: "Cel-biologie", niveau: "vmbo-2F" },
+    { id: "pubertijd-groei-po", title: "Puberteit + groei (basis)", niveau: "po-1F" },
+  ],
   intro:
     "Hoe het hormoonstelsel werkt en hoe het voortplantingssysteem in elkaar zit. Van wat hormonen zijn tot de menstruatiecyclus, bevruchting, zwangerschap en puberteit. Plus belangrijke andere hormonen zoals insuline, adrenaline en schildklierhormoon, en wat er gebeurt als ze fout gaan. Examenstof biologie CSE.",
   triggerKeywords: [

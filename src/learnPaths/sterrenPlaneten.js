@@ -579,6 +579,9 @@ const sterrenPlaneten = {
   subject: "natuur",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — heelal, zon & planeten",
+  prerequisites: [
+    { id: "ruimtevaart-po", title: "Ruimtevaart", niveau: "po-1F" },
+  ],
   intro:
     "De zon, 8 planeten van Mercurius tot Neptunus, manen, dwergplaneten, asteroïden en kometen. Inclusief verschil tussen aardse rotsplaneten en gasreuzen, eb en vloed, en de Maan-landingen. Voor groep 5-8.",
   triggerKeywords: [

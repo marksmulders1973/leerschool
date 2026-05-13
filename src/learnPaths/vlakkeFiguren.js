@@ -857,6 +857,10 @@ const vlakkeFiguren = {
   referentieNiveau: "2F",
   sloThema: "Meetkunde — vlakke figuren",
   topics: ["WI.meetkunde.vlak"],
+  prerequisites: [
+    { id: "vlakke-figuren-po", title: "Vlakke figuren (basis)", niveau: "po-1F" },
+    { id: "meetkunde-bouwsels", title: "Meetkunde + bouwsels", niveau: "po-1F" },
+  ],
   intro: "Meetkundige constructies en vierhoeken: middelloodlijn, bissectrice, zwaartelijn, hoogtelijn — en hoe ze de in- en omgeschreven cirkels van een driehoek bepalen. Plus oppervlakteformules voor parallellogram, ruit en trapezium.",
   triggerKeywords: ["middelloodlijn", "bissectrice", "zwaartelijn", "hoogtelijn", "ingeschreven cirkel", "omgeschreven cirkel", "parallellogram", "ruit", "trapezium", "zwaartepunt"],
   chapters,

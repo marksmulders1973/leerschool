@@ -457,6 +457,10 @@ const volgordeBewerkingen = {
   // 1S = streef voor havo/vwo-bound leerlingen.
   referentieNiveau: "1F/1S",
   sloThema: "Getallen",
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "tafels-po", title: "Tafels", niveau: "po-1F" },
+  ],
   intro:
     "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. Cito-relevant voor groep 5-7.",
   triggerKeywords: [
