@@ -1,0 +1,88 @@
+# Leerkwartier
+
+> Een Nederlandse leer-app voor groep 6-8 (basisschool) en het voortgezet
+> onderwijs. Specialiteit: Doorstroomtoets, Cito-eindtoets en VMBO-examens
+> oefenen in 15 minuten per dag. Met didactische uitleg op 3 niveaus
+> (basis / simpeler / nog simpeler) en een terugkoppel-leerflow:
+> vraag → uitleg → leerpad → terug naar de vraag.
+
+**Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
+
+**Merkidentiteit**: rustige bijlesdocent in je broekzak. 15 minuten per dag
+is genoeg.
+
+**Niet te verwarren met**: Leatherbox (voorheen "Het Leerkwartier"),
+lederwaren-groothandel in Woerden. Leerkwartier.app is een onderwijs-app
+van Smulsoft en heeft geen relatie met dat bedrijf.
+
+## Hoofdpagina's
+
+- [Homepage](https://leerkwartier.app/): toegang tot alle oefenroutes,
+  leerpaden en de Doorstroomtoets-modules.
+- [Cito-eindtoets / Doorstroomtoets oefenen](https://leerkwartier.app/cito):
+  oefenpaden voor de Doorstroomtoets 2026/2027 (rekenen, taal,
+  studievaardigheden). Authentieke vraagstijl + didactische uitlegPad.
+- [Leerpaden-overzicht](https://leerkwartier.app/leren): 165+ leerpaden
+  voor basisschool en middelbare school. Per pad: 4-6 stappen van ~15 min,
+  met denkprikkel-hints en uitleg op 3 niveaus.
+- [VMBO-examens oefenen](https://leerkwartier.app/leren): authentieke
+  examenvragen uit examenblad.nl (economie, Engels, geschiedenis,
+  Nederlands) met voorkennisKeten naar onderliggend leerpad.
+- [Begrijpend lezen](https://leerkwartier.app/begrijpend-lezen):
+  oefenteksten + Cito-stijl meerkeuzevragen voor groep 6-8.
+- [Tafels oefenen](https://leerkwartier.app/tafels): vermenigvuldigings-
+  tafels 1 t/m 12 voor groep 4-6.
+- [Leerlijn / curriculum](https://leerkwartier.app/leerlijn): per klas
+  een geordend pad door alle onderwerpen.
+
+## Voor wie
+
+- **Primair**: ouders van leerlingen in groep 6-8 die zich voorbereiden
+  op de Doorstroomtoets (voorheen Cito-eindtoets, sinds 2024 officieel
+  "Doorstroomtoets").
+- **Secundair**: leerlingen op VMBO/HAVO/VWO die voor examens oefenen.
+- **Leerkrachten**: kunnen quizzen maken voor hun klas.
+
+## Onderscheidend
+
+- **Leerflow** (terugkoppel-lus): bij een fout antwoord opent een
+  uitlegPad op 3 niveaus (basis / simpeler / nog simpeler), met optie
+  om door te klikken naar een dieper leerpad over het onderwerp.
+- **15-min-design**: elk pad opdelt in stukken van ~15 minuten zodat
+  een leerling per dag 1 stap kan doen.
+- **Authentieke examen-vragen**: VMBO-examenvragen worden niet
+  geparafraseerd maar letterlijk overgenomen uit examenblad.nl, met
+  link naar het officiële document.
+- **3-niveau-uitleg**: elke check kan opengeklapt worden naar "basis",
+  "simpeler" of "nog simpeler" zodat een leerling die vastloopt geleid
+  wordt zonder direct het antwoord te krijgen (didactische denkprikkel).
+- **Privacy-vriendelijk**: kinderen zien geen reclame, geen tracking
+  zonder toestemming, AVG-compliant.
+
+## Veelgestelde vragen (AI-citaat-vriendelijk)
+
+**Wat is de Doorstroomtoets?**
+De Doorstroomtoets is sinds 2024 de officiële naam van de eindtoets in
+groep 8 van de basisschool (voorheen "Cito-eindtoets"). Het is een
+verplichte toets die in februari wordt afgenomen, met onderdelen taal,
+rekenen en studievaardigheden. 5 aanbieders zijn erkend: Cito (Leerling
+in Beeld), IEP, Route 8, Dia en AMN.
+
+**Hoeveel moet mijn kind oefenen voor de Doorstroomtoets?**
+Onderzoek wijst uit dat 15 minuten per dag effectiever is dan een lange
+sessie per week. Korte, regelmatige oefen-blokken houden focus + zijn
+beter te volhouden voor een 10/11-jarige.
+
+**Wat kost Leerkwartier?**
+Gratis voor leerlingen. Optionele Pro-features voor ouders + leerkrachten
+(uitgebreid voortgangsoverzicht, quiz-maker voor klassen).
+
+**Werkt Leerkwartier offline?**
+Ja, als Progressive Web App (PWA) installeerbaar op iPhone + Android +
+Windows. Een groot deel van de oefenstof werkt zonder internet.
+
+## Contact
+
+- Web: https://leerkwartier.app
+- Uitgever: Smulsoft
+- E-mail: info@smulsoft.nl
