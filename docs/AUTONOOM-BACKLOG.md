@@ -27,7 +27,7 @@ Cito + examens versterken. Drie type werk:
 
 ### Audit-1-week-werk (~2 dagen werk)
 - [x] **QW4 — Examen-modus echt splitsen** ✓ (2026-05-13, commit 90ecd90): `PlayQuiz.jsx` nieuwe `isExamMode = gameState.mode==="examen" || isCitoSimulation`. "Ik weet het niet"-knop + 2× YouTube-link verborgen in examen-modus. Triggert bij `App.jsx:647 mode="examen"` (PDF-archief) + Cito-50-simulatie.
-- [ ] **QW5 — Per-examen-vraag-URL template + 60 SEO-pagina's**: genereer uit `examenEconomie*.js` data 60 statische HTML-pagina's `public/examen/economie/vmbo-gl-tl/2024/tijdvak-1/vraag-36.html` etc. H1 = exacte vraagtekst, antwoord boven-de-vouw, FAQ-schema, citatie `examenblad.nl`. Reden: AI-citation goldmine — `leren.jojoschool.nl` doet dit al; Leerkwartier-content authentiek = beter. **Effort: 1-2 dagen. Impact: SEO-kritiek.**
+- [x] **QW5 — Per-examen-vraag-URL template + 61 SEO-pagina's** ✓ (2026-05-13, commit a2c4f1d): `scripts/buildExamenVraagPaginas.mjs` genereert uit alle 9 examen-files 61 statische HTML-pagina's met H1=vraagtekst + antwoord-banner + uitlegPad-stappen + voorkennisKeten + FAQ-schema + BreadcrumbList + canonical/OG + externe examenblad.nl-link (economie vakcode 0233). Sitemap.xml uitgebreid (172 → 540 regels). Audit-target 60 gehaald + 1.
 - [⏳] **QW7 — Lazy-load STAP 2 voor LearnPath.jsx** PILOT GEDAAN (2026-05-13, commit 90ecd90): nieuwe `lazyGetLearnPath` import + useEffect met async fallback. Volle bundle-baat vereist nog: regel 3 ALL_LEARN_PATHS-import weg + examenLookup naar build-time JSON + LearnPathsHub/StudentHome/Curriculum metadata-only. Volgende sprint.
 
 ### Audit-content-verbeteringen (~3-5 uur)
