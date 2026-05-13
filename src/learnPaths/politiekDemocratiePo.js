@@ -53,6 +53,29 @@ const steps = [
         options: ["150", "100", "300", "10"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Veel meer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "150 zetels in Tweede Kamer", tekst: "De **Tweede Kamer** heeft **150 stoelen** (zetels). Op elke stoel zit een **Kamerlid** (parlementariër) die door het volk gekozen is." },
+            { titel: "Hoe verdeelt het zich?", tekst: "Bij verkiezingen worden de zetels verdeeld over partijen op basis van **stemmen-percentage**. Eén zetel ≈ **70.000 stemmen**. Bv. partij met 1 miljoen stemmen krijgt ~14 zetels." },
+            { titel: "76 = meerderheid", tekst: "Om een wet aan te nemen heb je een **meerderheid** nodig = **76 zetels of meer**. Geen enkele partij haalt dat alleen, dus partijen werken samen in een **coalitie**." },
+          ],
+          woorden: [
+            { woord: "zetel", uitleg: "Stoel in de Kamer voor 1 Kamerlid." },
+            { woord: "Tweede Kamer", uitleg: "Belangrijkste parlement NL: 150 leden, maakt wetten." },
+            { woord: "Eerste Kamer", uitleg: "Senaat: 75 leden, controleert wetkwaliteit." },
+          ],
+          theorie: "Cito-feit:\n• **Tweede Kamer** = 150 zetels (volk kiest direct).\n• **Eerste Kamer** = 75 zetels (Provinciale Staten kiest).\n• Meerderheid Tweede = 76. Meerderheid Eerste = 38.",
+          voorbeelden: [
+            { type: "stap", tekst: "Verkiezingen 2023: PVV 37 zetels, GroenLinks-PvdA 25, VVD 24, NSC 20, etc. Samen 150." },
+            { type: "stap", tekst: "Coalitie 2024 (Schoof): PVV(37)+VVD(24)+NSC(20)+BBB(7) = 88 zetels = meerderheid." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "150 = altijd. 76 = meerderheid. Onthoud deze cijfers — Cito-favoriet." }],
+          niveaus: {
+            basis: "150 zetels. = A.",
+            simpeler: "De Tweede Kamer heeft 150 stoelen voor 150 Kamerleden. = A.",
+            nogSimpeler: "150 = A.",
+          },
+        },
       },
       {
         q: "Vanaf welke **leeftijd** stemmen NL?",
@@ -161,6 +184,30 @@ const steps = [
         options: ["Koning leest plannen kabinet voor", "Koningsfeestje", "Voetbalwedstrijd", "Verkiezing"],
         answer: 0,
         wrongHints: [null, "Klopt — 3e dinsdag sept.", "Niet specifiek.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wanneer is Prinsjesdag?", tekst: "**Prinsjesdag** is altijd op de **3e dinsdag in september**. Vaste afspraak: politiek seizoen begint dan. In 2025 = 16 september." },
+            { titel: "Wat gebeurt er?", tekst: "1) Koning rijdt in **glazen koets** door Den Haag.\n2) Spreekt **Troonrede** uit in de **Ridderzaal** — kabinet's plannen voor komend jaar.\n3) Daarna geeft **minister van Financiën** de **Miljoenennota + Rijksbegroting** (= het geld-plan voor NL)." },
+            { titel: "Hoedjes + cultuur", tekst: "Vrouwen in politiek dragen vaak **bijzondere hoedjes** op deze dag — speciale traditie. Het is een belangrijk **staatsmoment**, op TV uitgezonden, met militaire muziek + parade." },
+          ],
+          woorden: [
+            { woord: "Prinsjesdag", uitleg: "3e dinsdag september, koning leest plannen kabinet voor." },
+            { woord: "Troonrede", uitleg: "Koning's speech over kabinetsplannen." },
+            { woord: "Miljoenennota", uitleg: "Begrotings-overzicht NL voor komend jaar." },
+            { woord: "Ridderzaal", uitleg: "Beroemde zaal in Den Haag (Binnenhof) voor speciale gelegenheden." },
+          ],
+          theorie: "Cito-feit Prinsjesdag:\n• **3e dinsdag september** (vaste datum).\n• Sinds **1814** (na Franse tijd).\n• Koning leest, maar plannen zijn van het **kabinet** (regering schreef toespraak).\n• Eindigt met **balkonscène** op Paleis Noordeinde.",
+          voorbeelden: [
+            { type: "stap", tekst: "Koningsdag (27 april) = verjaardag koning + feest. Prinsjesdag (sept) = serieus + politiek. Niet verwarren!" },
+            { type: "stap", tekst: "Begroting in Miljoenennota laat zien: belasting omhoog/omlaag, meer geld voor onderwijs/zorg/defensie?" },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Prinsjesdag = serieus politiek. Koningsdag = feest. Allebei koning, maar verschillende rol." }],
+          niveaus: {
+            basis: "Koning leest plannen kabinet voor (3e dinsdag sept). = A.",
+            simpeler: "Op Prinsjesdag spreekt de Koning de Troonrede uit — het politieke jaarprogramma. = A.",
+            nogSimpeler: "Plannen voorlezen = A.",
+          },
+        },
       },
       {
         q: "Wat is een **motie van wantrouwen**?",
@@ -186,6 +233,28 @@ const steps = [
         options: ["12", "10", "11", "13"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Iets minder.", "Iets minder.", "Iets meer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "12 provincies", tekst: "Nederland heeft **12 provincies**. Dat aantal is sinds **1986** stabiel — toen werd **Flevoland** als 12e provincie toegevoegd (drooggelegde polder)." },
+            { titel: "De 12 op alfabet", tekst: "1. Drenthe\n2. Flevoland\n3. Friesland\n4. Gelderland\n5. Groningen\n6. Limburg\n7. Noord-Brabant\n8. Noord-Holland\n9. Overijssel\n10. Utrecht\n11. Zeeland\n12. Zuid-Holland" },
+            { titel: "Onthoud-truc", tekst: "Groepjes onthouden:\n• **'Noord'**: Friesland + Groningen + Drenthe (klein, boven)\n• **'Hollanden'**: Noord-Holland + Zuid-Holland + Utrecht + Flevoland (rijke kern)\n• **'Oosten'**: Gelderland + Overijssel\n• **'Zuiden'**: Zeeland + Noord-Brabant + Limburg." },
+          ],
+          woorden: [
+            { woord: "provincie", uitleg: "Bestuurlijke laag tussen gemeente en land." },
+            { woord: "Flevoland", uitleg: "Jongste provincie, sinds 1986, drooggelegde polder." },
+          ],
+          theorie: "Cito-feit provincies:\n• 12 stuks sinds 1986.\n• Eigen **Provinciale Staten** (gekozen).\n• Eigen **commissaris van de Koning** (benoemd door regering).\n• Verantwoordelijk voor: provinciale wegen, openbaar vervoer, natuur, ruimtelijke ordening.",
+          voorbeelden: [
+            { type: "stap", tekst: "Hoofdsteden om te kennen: Friesland → Leeuwarden, Groningen → Groningen, Utrecht → Utrecht, Zeeland → Middelburg, etc." },
+            { type: "stap", tekst: "Flevoland is gemaakt door 3 polders (Wieringermeer, Noordoostpolder, Flevopolder) drooggemaakt 1930-1968." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "12 provincies = vast onder Cito-vraag. Niet 11 (vóór 1986), niet 13. Sinds 1986 = 12." }],
+          niveaus: {
+            basis: "12 provincies. = A.",
+            simpeler: "NL heeft sinds 1986 12 provincies (Flevoland was de laatste). = A.",
+            nogSimpeler: "12 = A.",
+          },
+        },
       },
       {
         q: "Wie kiest **burgemeester**?",
