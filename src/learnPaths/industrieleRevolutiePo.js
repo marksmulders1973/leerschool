@@ -58,6 +58,28 @@ const steps = [
         options: ["Tijd van burgers en stoommachines (8)", "Romeinen", "Renaissance", "Toekomst"],
         answer: 0,
         wrongHints: [null, "Klopt — 1800-1900.", "Veel eerder.", "Eerder.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De Tien Tijdvakken", tekst: "In NL leren we geschiedenis via **10 tijdvakken** (canon NL). Elk tijdvak heeft een herkenbare naam + ongeveer 1 'kenmerkende' periode." },
+            { titel: "Tijdvak 8: Tijd van burgers en stoommachines", tekst: "Tijdvak **8** loopt van **1800 tot 1900**. Naam: '**Tijd van burgers en stoommachines**'. Twee kernwoorden:\n• **Burgers** = opkomst van de burgerij/bourgeoisie als rijke + machtige klasse.\n• **Stoommachines** = symbool voor industrialisatie." },
+            { titel: "Andere tijdvakken kort", tekst: "1) Jagers en boeren\n2) Grieken en Romeinen\n3) Monniken en ridders\n4) Steden en staten\n5) Ontdekkers en hervormers (Renaissance)\n6) Regenten en vorsten (Gouden Eeuw)\n7) Pruiken en revoluties\n**8) Burgers en stoommachines (1800-1900)**\n9) Wereldoorlogen\n10) Televisie en computer (na 1950)." },
+          ],
+          woorden: [
+            { woord: "tijdvak", uitleg: "Een periode in geschiedenis met eigen kenmerken." },
+            { woord: "canon NL", uitleg: "Officiële NL-canon: 50 vensters over 10 tijdvakken." },
+          ],
+          theorie: "Cito-feit: de 10 tijdvakken zijn een vaste vraag op Doorstroomtoets. Tijdvak-naam onthouden + grof tijdperk. Industriële Revolutie zit in tijdvak 8.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tijdvak 7 (pruiken + revoluties) = 1700s = Franse Revolutie + Verlichting." },
+            { type: "stap", tekst: "Tijdvak 9 (wereldoorlogen) = 1900-1950 = WO1 + WO2." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Volgorde tijdvakken op rijtje leren. Tijdvak 8 = 1800-1900 = burgers + stoom = Industriële Revolutie." }],
+          niveaus: {
+            basis: "Tijdvak 8: Tijd van burgers en stoommachines. = A.",
+            simpeler: "Industriële Revolutie zit in NL-tijdvak 8 (1800-1900). = A.",
+            nogSimpeler: "Tijdvak 8 = A.",
+          },
+        },
       },
       {
         q: "Wat hielp de **start**?",
@@ -158,6 +180,29 @@ const steps = [
         options: ["Rijke burgers / fabriekseigenaren", "Boeren", "Adel", "Arbeiders"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Eerdere groep.", "Eerdere groep.", "Proletariaat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Nieuwe rijke klasse", tekst: "**Bourgeoisie** is een Frans woord voor de **rijke burgerij** — fabriekseigenaren, kooplieden, dokters, bankiers, advocaten. Niet adellijk geboren, maar **zelf rijk geworden** door handel of fabrieken." },
+            { titel: "Vóór: alleen adel + boeren", tekst: "Vóór de Industriële Revolutie waren er vooral 2 groepen: **adel** (geboorte-recht macht) + **boeren** (arme meerderheid). De bourgeoisie was klein. Door industrialisatie werd zij groot + machtig." },
+            { titel: "Twee nieuwe klassen", tekst: "Industriële Revolutie creëerde 2 nieuwe groepen:\n• **Bourgeoisie** = rijke burgers (fabriekseigenaren)\n• **Proletariaat** = arbeiders (fabriekswerkers, arm)\nDit was de basis voor Karl Marx' ideeën over klassenstrijd." },
+          ],
+          woorden: [
+            { woord: "bourgeoisie", uitleg: "Rijke burgerij (Frans woord)." },
+            { woord: "proletariaat", uitleg: "Arbeiders-klasse." },
+            { woord: "adel", uitleg: "Edelen, geboorte-recht (graaf, baron, etc)." },
+          ],
+          theorie: "Cito-feit: bourgeoisie + proletariaat = Industriële Revolutie's twee nieuwe klassen. Niet adel (oud), niet boeren (oud), niet kerk. Nieuwe groep mensen door industrie.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bourgeois-naam: 'burger' (van stad). Industrialisatie gaf rijke kooplui meer macht dan adel — vandaar Franse Revolutie 1789." },
+            { type: "stap", tekst: "Karl Marx schreef in 'Communistisch Manifest' (1848): bourgeoisie buit proletariaat uit → revolutie nodig." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bourgeoisie = rijke. Proletariaat = arme. Allebei woorden uit Frans/Latijn — Cito kent ze allebei." }],
+          niveaus: {
+            basis: "Rijke burgerij (fabriekseigenaren, kooplui). = A.",
+            simpeler: "Bourgeoisie = nieuwe rijke groep door Industriële Revolutie. = A.",
+            nogSimpeler: "Rijke burgers = A.",
+          },
+        },
       },
       {
         q: "Wat is **verstedelijking**?",
@@ -183,6 +228,28 @@ const steps = [
         options: ["1874", "1700", "1950", "Nooit"],
         answer: 0,
         wrongHints: [null, "Klopt — eerste sociale NL-wet.", "Eerder.", "Te laat.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kinderarbeid was normaal", tekst: "In de 19e eeuw werkten kinderen vanaf **6 jaar** in fabrieken + mijnen + schoorstenen. Gevaarlijk, lange dagen, geen school. Veel kinderen stierven of werden ziek." },
+            { titel: "Het Kinderwetje van 1874", tekst: "Politicus **Samuel van Houten** kreeg een wet aangenomen: **kinderen onder 12 jaar mochten niet meer in fabrieken werken**. Heet ook 'Kinderwetje Van Houten' of '**Kinderwet van Van Houten**'." },
+            { titel: "Niet meteen perfect", tekst: "De wet had **uitzonderingen** (huishoudelijk werk + landbouw mocht nog wel) en werd niet altijd goed nageleefd. Maar het was de **eerste sociale wet in NL** — startpunt van arbeidsrecht." },
+          ],
+          woorden: [
+            { woord: "Kinderwetje van Van Houten", uitleg: "NL-wet uit 1874 die kinderarbeid (<12 jaar) in fabrieken verbood." },
+            { woord: "Samuel van Houten", uitleg: "Liberale NL-politicus die de wet schreef." },
+          ],
+          theorie: "Cito-feit sociale wetgeving NL:\n• **1874** Kinderwetje Van Houten (geen fabrieksarbeid <12).\n• **1900** Leerplichtwet (kinderen 6-12 naar school).\n• **1919** 8-urige werkdag.\n• **1957** AOW (pensioen).\nElk een mijlpaal naar moderne verzorgingsstaat.",
+          voorbeelden: [
+            { type: "stap", tekst: "Voor 1874: een 8-jarig meisje kon 12 uur per dag in textielfabriek werken voor een paar centen." },
+            { type: "stap", tekst: "1900 Leerplicht maakte 1874 wet pas écht effectief — kinderen MOESTEN naar school = konden niet meer werken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Kinderwetje 1874 = eerste sociale wet NL. Onthoud naam Van Houten + jaartal + verbod <12 jaar." }],
+          niveaus: {
+            basis: "1874 (kinderwetje Van Houten). = A.",
+            simpeler: "Het Kinderwetje uit 1874 was de eerste NL-wet die kinderen jonger dan 12 verbood in fabrieken te werken. = A.",
+            nogSimpeler: "1874 = A.",
+          },
+        },
       },
       {
         q: "**Leerplichtwet** in NL?",
