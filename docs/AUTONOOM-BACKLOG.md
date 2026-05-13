@@ -34,8 +34,8 @@ Voordat je nieuwe paden bouwt:
 - [x] Engels 2025-T1 (9 vragen) — voorkennisKeten — commit 4c56476.
 - [x] Geschiedenis 2025-T1 (6 vragen) — voorkennisKeten — commit 83762e1.
 - [x] `prerequisites: [{ id, title, niveau }]` als veld in leerpad-data — toegevoegd aan top 10 examen-referenced paden (commit b0a2221). 10/90 paden voorzien.
-- [ ] Prerequisites uitrollen naar de overige 80 paden (lagere prio).
-- [ ] Loggen welke voorkennis-paden ontbreken voor nieuwe paden in backlog.
+- [x] **Prerequisites uitrol VOLLEDIG** — alle 163 leerpaden hebben nu prerequisites (2026-05-13, commits 4aca00f → d866b28, 9 batches: Cito-PO kern → VO NL → VO talen → VO wiskunde/economie/bèta → laatste 16). Data-laag fase 1 ✓ klaar.
+- [x] Loggen voorkennis-paden voor nieuwe paden — alle bestaande paden hebben prereqs, dus bij elk nieuw pad gewoon meegeven (geen aparte log meer nodig).
 
 **Audit-bevindingen 2026-05-10**:
 - 9 examen-paden, 61 leerpadLink-verwijzingen, **0 broken loops** ✓
