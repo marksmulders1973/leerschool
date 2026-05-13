@@ -116,7 +116,31 @@ const steps = [
         q: "**100%** — wat betekent dat?",
         options: ["Alles","De helft","Honderd dingen","Niets"],
         answer: 0,
-        wrongHints: [null,"Half = 50%, niet 100%.","Niet 'honderd dingen' — het hangt af van waarvan je 100% hebt. 100% van 5 is bijvoorbeeld 5.","Niets = 0%, niet 100%."],
+        wrongHints: [null,"Klopt — 100% = ALLES (het geheel).","Half = 50%, niet 100%.","Niet 'honderd dingen' — het hangt af van waarvan je 100% hebt. 100% van 5 is bijvoorbeeld 5.","Niets = 0%, niet 100%."],
+        uitlegPad: {
+          stappen: [
+            { titel: "100% = het hele ding", tekst: "**100%** betekent **ALLES** — het hele geheel waar je het over hebt. Het is niet altijd 100 dingen!" },
+            { titel: "Voorbeelden", tekst: "• 100% van een **pizza** = de hele pizza (8 stukken bv.)\n• 100% van een **klas van 25** kinderen = alle 25\n• 100% van een **fles van €5** = €5\n• 100% van **jouw zakgeld** = je hele bedrag." },
+            { titel: "Tegenovergesteld: 0%", tekst: "**0% = niets**. En **50% = de helft**. **100% staat altijd voor het geheel** — wat dat geheel ook is.\n→ 100% van iets = dat hele iets." },
+          ],
+          woorden: [
+            { woord: "100%", uitleg: "Alles, het geheel." },
+            { woord: "0%", uitleg: "Niets." },
+            { woord: "50%", uitleg: "De helft." },
+          ],
+          theorie: "Cito-truc 100% denken: 'het geheel' = wat je telt. 100% van 30 leerlingen = alle 30. 100% van een meter = 1 meter (= 100 cm). 100% past altijd bij ALLES — niet '100 stuks'.",
+          voorbeelden: [
+            { type: "stap", tekst: "Spaarpot bevat €40. 100% van je spaargeld = €40 (alles)." },
+            { type: "stap", tekst: "Beker met 200 ml water. 100% vol = 200 ml." },
+            { type: "stap", tekst: "Lege batterij = 0%, vol = 100%. Tussenin: 50% = halve lading." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "100% = ALLES (zonder uitzondering). 0% = NIETS. 50% = HELFT. Onthoud deze 3." }],
+          niveaus: {
+            basis: "100% = alles (het hele ding). = A.",
+            simpeler: "100% van een pizza = de hele pizza. Niet 100 stuks. = A.",
+            nogSimpeler: "Alles = A.",
+          },
+        },
       },
       {
         q: "Stel: 100 leerlingen op school — **45** zijn meisjes. Welk percentage is dat?",
@@ -239,7 +263,30 @@ const steps = [
         q: "Een schoen normaal **€ 80**, met **25% korting**. Hoeveel **betaal je**?",
         options: ["€ 60","€ 20","€ 40","€ 75"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.","Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.","Te veel — heb je überhaupt korting gepakt?"],
+        wrongHints: [null,"Klopt — €80 − €20 korting = €60.","Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.","Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.","Te veel — heb je überhaupt korting gepakt?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — Cito test of je dit verschil herkent." },
+            { titel: "Manier 1: bereken korting, trek af", tekst: "Stap 1: 25% van €80. 25% = ¼. €80 ÷ 4 = **€20** korting.\nStap 2: nieuwe prijs = €80 − €20 = **€60**." },
+            { titel: "Manier 2: direct 75% berekenen (snelste!)", tekst: "Als je 25% korting krijgt, betaal je nog **75%** (100% − 25%).\n75% van €80 = ¾ × €80 = €80 ÷ 4 × 3 = €20 × 3 = **€60**.\nZelfde antwoord, één stap minder!" },
+          ],
+          woorden: [
+            { woord: "korting", uitleg: "Hoeveel wordt afgetrokken van de oude prijs." },
+            { woord: "nieuwe prijs", uitleg: "Wat je nu écht betaalt = oude prijs − korting." },
+          ],
+          theorie: "Cito-truc winkel:\n• 25% korting → je betaalt 75%\n• 50% korting → je betaalt 50%\n• 10% korting → je betaalt 90%\n• 75% korting → je betaalt 25%\nDirect rekenen wat je BETAALT is meestal sneller dan eerst korting + dan aftrekken.",
+          voorbeelden: [
+            { type: "stap", tekst: "€100 met 25% korting = je betaalt €75. €40 met 25% korting = je betaalt €30." },
+            { type: "stap", tekst: "Bedenk: 'is dit de korting of de nieuwe prijs?' = belangrijkste vraag bij %." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Betaal je = oud bedrag − korting. Of: betaal je = (100% − korting%) van oude prijs. Beide werken." },
+          ],
+          niveaus: {
+            basis: "€60 (€80 − €20 korting). = A.",
+            simpeler: "25% korting = ¼ aftrek. ¼ van €80 = €20. €80 − €20 = €60. = A.",
+            nogSimpeler: "€60 = A.",
+          },
+        },
       },
       {
         q: "Een tas van **€ 50** heeft **50% korting**. Wat **betaal** je?",
@@ -265,7 +312,30 @@ const steps = [
         q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage**?",
         options: ["75%","15%","85%","60%"],
         answer: 0,
-        wrongHints: [null,"Niet het aantal goed-antwoorden — dat is je teller, niet het percentage.","Dat zou 17 goed zijn — niet hier.","Te weinig — 15 van 20 is meer dan de helft."],
+        wrongHints: [null,"Klopt — 15/20 = ¾ = 75%.","Niet het aantal goed-antwoorden — dat is je teller, niet het percentage.","Dat zou 17 goed zijn — niet hier.","Te weinig — 15 van 20 is meer dan de helft."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Omgekeerde percentage-vraag", tekst: "Bij 'welk percentage is X van Y?' bereken je: (deel / totaal) × 100. Hier: deel = 15 (goede vragen), totaal = 20 (alle vragen)." },
+            { titel: "Reken: 15/20 → procent", tekst: "**Manier 1**: 15 ÷ 20 = 0,75. × 100 = **75%**.\n**Manier 2 (slim)**: 15/20 = 3/4 (deel beide door 5). 3/4 = **75%** (uit het hoofd!).\nBeide geven hetzelfde antwoord." },
+            { titel: "Mooie breuken uit het hoofd", tekst: "Onthoud deze breuk→% omzettingen:\n• 1/2 = 50%\n• 1/4 = 25%, 3/4 = 75%\n• 1/5 = 20%, 2/5 = 40%, 3/5 = 60%, 4/5 = 80%\n• 1/10 = 10%, 2/10 = 20%, etc.\nDan ga je supersnel." },
+          ],
+          woorden: [
+            { woord: "percentage uit deel + totaal", uitleg: "(deel / totaal) × 100 = procent." },
+            { woord: "vereenvoudigen", uitleg: "Teller + noemer door zelfde getal delen → 'mooie' breuk." },
+          ],
+          theorie: "Cito-truc 'welk %?' vragen:\n1. Reken **deel / totaal** als breuk.\n2. Vereenvoudig naar bekende breuk (½, ¼, ¾, ⅕, ...).\n3. Zet om naar %.\nSneller dan elke keer × 100 doen.",
+          voorbeelden: [
+            { type: "stap", tekst: "30 van 40 = 30/40 = 3/4 = 75%." },
+            { type: "stap", tekst: "10 van 50 = 10/50 = 1/5 = 20%." },
+            { type: "stap", tekst: "8 van 10 = 8/10 = 4/5 = 80%." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vereenvoudig je breuk eerst naar 1/2, 1/4, 3/4, 1/5, etc. Dan ken je het % zo." }],
+          niveaus: {
+            basis: "75% (15/20 = 3/4 = 75%). = A.",
+            simpeler: "15 van 20 = 3 van 4 = 3/4 = 75%. = A.",
+            nogSimpeler: "75% = A.",
+          },
+        },
       },
       {
         q: "In een klas van **25 leerlingen** spelen **5 voetbal**. Welk **percentage**?",
