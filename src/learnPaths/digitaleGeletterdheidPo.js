@@ -84,6 +84,30 @@ const steps = [
         options: ["AI die tekst maakt + vragen beantwoordt", "Spel", "Browser", "Wifi"],
         answer: 0,
         wrongHints: [null, "Klopt — sinds 2022.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is ChatGPT?", tekst: "**ChatGPT** is een **AI-chatbot** (Artificial Intelligence = kunstmatige intelligentie). Je typt een vraag, ChatGPT geeft antwoord in mensentaal — alsof je met iemand chat." },
+            { titel: "Wie heeft het gemaakt?", tekst: "**OpenAI** (Amerikaans bedrijf) bracht ChatGPT uit in **november 2022**. Binnen 2 maanden had het al **100 miljoen gebruikers** — sneller dan welke app ooit. Er zijn nu ook andere AI-chatbots: **Claude** (Anthropic), **Gemini** (Google), **Copilot** (Microsoft)." },
+            { titel: "Wat kan + niet kan ChatGPT", tekst: "**WEL**: tekst schrijven, vragen beantwoorden, vertalen, samenvatten, programmeren helpen.\n**NIET**: altijd kloppen (kan 'hallucinatie' = verzint feiten), nieuwste info weten (training stopt op een datum), denken zoals een mens. Altijd controleren!" },
+          ],
+          woorden: [
+            { woord: "AI", uitleg: "Artificial Intelligence (kunstmatige intelligentie). Computers die slim lijken." },
+            { woord: "ChatGPT", uitleg: "AI-chatbot van OpenAI, sinds 2022." },
+            { woord: "hallucinatie", uitleg: "Als AI iets verzint dat niet echt is, maar wel zeker klinkt." },
+          ],
+          theorie: "Cito-feit AI: niet 1 ding, maar verschillende modellen. ChatGPT = bekendste. Gebruikt door honderden miljoenen mensen voor school, werk, plezier. Pas op met huiswerk-opdrachten: scholen detecteren AI-tekst steeds beter.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vraag: 'Schrijf een gedicht over mijn kat.' → AI maakt direct een gedicht." },
+            { type: "stap", tekst: "Vraag: 'Wie heeft de eerste mens op de maan?' → AI antwoordt 'Neil Armstrong, 20 juli 1969'. Klopt." },
+            { type: "stap", tekst: "Vraag: 'Wie heeft NL gisteren als premier?' → AI weet het niet, training is van vorig jaar. Verzint mogelijk antwoord = HALLUCINATIE." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "ChatGPT = AI = computer-chatter. Niet menselijk. Niet perfect. Altijd controleren met andere bron voor feiten." }],
+          niveaus: {
+            basis: "AI-chatbot die tekst maakt en vragen beantwoordt. = A.",
+            simpeler: "Computer-programma waarmee je kan 'chatten' alsof met mens. = A.",
+            nogSimpeler: "Slimme AI-chatter = A.",
+          },
+        },
       },
     ],
   },
@@ -150,12 +174,57 @@ const steps = [
         options: ["Mijn-kat-eet-graag-vis-2024!", "123456", "password", "Je naam"],
         answer: 0,
         wrongHints: [null, "Klopt — lang + mix.", "Heel slecht.", "Top-slecht.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat maakt een wachtwoord sterk?", tekst: "Een sterk wachtwoord is:\n• **Lang** (min. 12 tekens, liefst meer)\n• **Mix** van hoofdletters, kleine letters, cijfers, leestekens\n• **Niet je naam, geboortedatum** of huisdier\n• **Anders per site**." },
+            { titel: "De wachtwoord-zin truc", tekst: "Maak een **hele zin** met streepjes ertussen: bv. **'Mijn-kat-eet-graag-vis-2024!'** Dit is:\n✓ Lang (28 tekens)\n✓ Mix (hoofdletter + cijfers + leesteken)\n✓ Makkelijk te onthouden (een verhaal)\n✓ Moeilijk te raden voor anderen." },
+            { titel: "Waarom slechte wachtwoorden gevaarlijk zijn", tekst: "Hackers proberen 'top-100-lijsten' van bekende wachtwoorden: **123456, password, qwerty, naam**. Die kraakt een computer in **minder dan 1 seconde**. Je rekening = leeg, accounts overgenomen. Daarom: STERK wachtwoord = essentieel." },
+          ],
+          woorden: [
+            { woord: "wachtwoord-manager", uitleg: "App die wachtwoorden onthoudt voor je (LastPass, 1Password, Bitwarden)." },
+            { woord: "2FA", uitleg: "Twee-staps-verificatie = extra check via sms of app bij inlog." },
+          ],
+          theorie: "Cito-feit: '123456' is al jaren **#1 meest-gebruikt wachtwoord ter wereld** (volgens NordPass-rapport). Hackers kraken het direct. Gebruik liever een lange zin + 2FA waar mogelijk.",
+          voorbeelden: [
+            { type: "stap", tekst: "Goed: 'Appels-vallen-niet-omhoog-2025!' (lang, mix, makkelijk te onthouden)." },
+            { type: "stap", tekst: "Slecht: 'Anna1995' (naam + geboortejaar, raadbaar)." },
+            { type: "stap", tekst: "Heel slecht: 'wachtwoord' (top-10 ranking, kraakbaar in 0,1 seconde)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lange zin > Kort wachtwoord. 12+ tekens. Mix. Anders per site. Plus 2FA voor belangrijke accounts (e-mail, bank)." }],
+          niveaus: {
+            basis: "Lange zin met mix = sterk. = A.",
+            simpeler: "Hoe LANGER en GEMENGDER, hoe sterker. 'Mijn-kat-eet-graag-vis-2024!' = top. = A.",
+            nogSimpeler: "Lang + mix = A.",
+          },
+        },
       },
       {
         q: "Wat is **phishing**?",
         options: ["Nep-email om gegevens te stelen", "Spel", "Vis vangen", "Soort virus"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Letterlijk niet.", "Bij sommige varianten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is phishing?", tekst: "**Phishing** = 'hengelen' (visserij in Engels) naar persoonlijke gegevens. Een **nep-email**, **nep-sms** of **nep-website** doet alsof het van je bank, postNL of school is — maar is van een **oplichter**." },
+            { titel: "Hoe herken je het?", tekst: "Let op:\n• **Urgentie** ('Klik NU! Je rekening wordt geblokkeerd!')\n• **Vreemde afzender** (bv. @ing-bank-online.com ipv echt @ing.nl)\n• **Slechte spelling** of vreemde NL-zinnen\n• **Vraag om wachtwoord** of pincode (echte bank vraagt dat NOOIT)\n• **Link met rare URL** (hover je muis erover om de echte URL te zien)." },
+            { titel: "Wat doe je?", tekst: "1) **Niet klikken** op links in verdachte emails.\n2) **Niet antwoorden**.\n3) **Verwijderen**.\n4) Wil je echt iets checken? **Typ zelf** het webadres in browser (bv. ing.nl).\n5) Bij twijfel: **bel** het echte bedrijf via hun normale nummer." },
+          ],
+          woorden: [
+            { woord: "phishing", uitleg: "Nep-bericht om wachtwoord/gegevens te stelen." },
+            { woord: "spoofing", uitleg: "Doen alsof je een bekende afzender bent." },
+          ],
+          theorie: "Cito-feit: phishing is **#1 manier** waarop accounts worden gehackt. NL heeft veel phishing via WhatsApp ('mam, ik heb een nieuw nummer en geld nodig'). Altijd via bekende kanaal controleren bij twijfel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Email: 'Beste klant, uw ING-rekening wordt geblokkeerd. Klik hier om te verifiëren.' Afzender: @ing-security.nl → NEP. Verwijderen." },
+            { type: "stap", tekst: "WhatsApp van onbekend nr: 'Mam, mijn telefoon is kapot, kun je geld sturen?' → ALTIJD eerst BELLEN naar oude nummer voor check." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij paniek-bericht: STOP. Adem. Controleer afzender + URL. Bel het echte bedrijf bij twijfel. Echte instanties vragen NOOIT om wachtwoord per email." }],
+          niveaus: {
+            basis: "Nep-email/sms om gegevens te stelen. = A.",
+            simpeler: "Oplichters sturen een vals bericht dat lijkt op je bank — om je wachtwoord/pincode te stelen. = A.",
+            nogSimpeler: "Nep-email = A.",
+          },
+        },
       },
       {
         q: "Wat is **2FA / twee-staps-verificatie**?",
