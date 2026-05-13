@@ -15,9 +15,9 @@ Cito + examens versterken. Drie type werk:
 ## Prioriteit 0 — Loop-audit (terugkerend, elke 5 paden)
 
 Voordat je nieuwe paden bouwt:
-- [ ] Run `grep -rh "leerpadLink:" src/learnPaths/examen*.js` → verzamel alle `id`-waardes.
-- [ ] Check per id: bestaat `src/learnPaths/<id>.js`? Zo nee → log in backlog als "ontbrekend pad voor examen-link".
-- [ ] Voor elk leerpad in lijst Prio 1: bestaan er examenvragen die ernaar linken? Zo ja → `examenLookup.js` regenereren als nodig en uitlegPad-prioriteit verhogen.
+- [x] Loop-audit 2026-05-13: 11 unieke leerpadLink-ids in examen-paden, 172 gedefinieerde leerpath-ids, **0 broken loops** ✓
+- [x] Top-gerefereerde paden: woordenschat-engels (17×), pincode-buitenland-eu (9×), pincode-inkomen-welvaart (7×), pincode-ondernemen (7×). Alle bestaan + hebben uitlegPad.
+- [x] Volgende loop-audit: na +5 nieuwe paden of na elke uitlegPad-uitrol-sprint.
 
 ## Prioriteit 0.5 — Optie-C kennisgraaf (lopend, hoogste prio)
 
