@@ -24,6 +24,28 @@ const steps = [
         options: ["Engeland", "Nederland", "Frankrijk", "Duitsland"],
         answer: 0,
         wrongHints: [null, "Klopt — rond 1760.", "Volgde later.", "Volgde later.", "Volgde later."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de Industriële Revolutie?", tekst: "Een grote omwenteling rond 1750-1900: van handwerk thuis naar machines in fabrieken. Veranderde hoe mensen werken en leven." },
+            { titel: "Begin in Engeland (~1760)", tekst: "Engeland had 3 dingen die andere landen nog niet hadden: 1) steenkool + ijzer in de grond, 2) rijke kooplieden met geld voor uitvindingen, 3) wetenschappers met nieuwe ideeën." },
+            { titel: "Verspreidde naar de rest van Europa", tekst: "Daarna volgden VS, Frankrijk, België, Duitsland. NL was relatief LAAT (~1870) want we waren handel-land, niet zo industrieel." },
+          ],
+          woorden: [
+            { woord: "Industriële Revolutie", uitleg: "Periode 1750-1900: omwenteling naar machine-productie." },
+            { woord: "fabriek", uitleg: "Gebouw waar machines + arbeiders samen producten maken." },
+          ],
+          theorie: "Cito-feit: Engeland 'won' omdat het steenkool, ijzer EN kapitaal had. Plus geen oorlog op eigen land (eiland). Andere landen volgden 50-100 jaar later.",
+          voorbeelden: [
+            { type: "stap", tekst: "Engeland: eerste fabrieken in Manchester (textiel) rond 1780." },
+            { type: "stap", tekst: "Nederland: eerste fabrieken in Twente (textiel) rond 1860-1870." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Engeland eerst, NL later. Industriële Revolutie zit in TIJDVAK 8 van NL-canon (Tijd van burgers en stoommachines)." }],
+          niveaus: {
+            basis: "Industriële Revolutie begon in Engeland (~1760).",
+            simpeler: "Engeland had steenkool + geld → eerste fabrieken daar.",
+            nogSimpeler: "Engeland eerst.",
+          },
+        },
       },
       {
         q: "**Vóór** de Industriële Revolutie — hoe werkten mensen meestal?",
@@ -55,6 +77,28 @@ const steps = [
         options: ["James Watt (1769)", "Edison", "Bell", "Ford"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Gloeilamp.", "Telefoon.", "T-Ford."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een stoommachine?", tekst: "Een motor die water KOOKT, en de stoom die ontstaat duwt een zuiger heen en weer. Daarmee kun je machines, treinen en boten aandrijven." },
+            { titel: "James Watt (1769) verbeterde een ouder ontwerp", tekst: "De allereerste stoommachine was van Thomas Newcomen (1712), maar die werkte slecht. James Watt maakte hem **veel efficiënter** in 1769 — daarom geldt hij als 'de uitvinder' van de werkende stoommachine." },
+            { titel: "Niet verwarren met andere uitvinders", tekst: "Edison = gloeilamp (1879). Bell = telefoon (1876). Ford = lopende band voor auto's (1908). Allemaal LATER dan Watt." },
+          ],
+          woorden: [
+            { woord: "stoommachine", uitleg: "Motor op stoom van gekookt water." },
+            { woord: "James Watt", uitleg: "Schotse uitvinder, verbeterde stoommachine in 1769." },
+          ],
+          theorie: "Cito-tip uitvinders onthouden: Watt = STOOM (1769). Stephenson = TREIN (1825). Bell = TELEFOON (1876). Edison = GLOEILAMP (1879). Ford = LOPENDE BAND (1908). Op tijdvolgorde.",
+          voorbeelden: [
+            { type: "stap", tekst: "De eenheid 'watt' (W) voor elektrisch vermogen is naar James Watt vernoemd." },
+            { type: "stap", tekst: "Stoom-eenheid kon eerst alleen mijnen leegpompen → later treinen + fabrieken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Watt klinkt als 'wat?' — wat is stoom? — antwoord = Watt." }],
+          niveaus: {
+            basis: "James Watt verbeterde de stoommachine in 1769.",
+            simpeler: "Watt = stoom-uitvinder. Edison = lamp. Bell = telefoon.",
+            nogSimpeler: "Watt = stoom.",
+          },
+        },
       },
       {
         q: "Wat is een **belangrijk** kenmerk van stoommachine?",
@@ -86,6 +130,28 @@ const steps = [
         options: ["12-16 uur", "8 uur", "4 uur", "24 uur"],
         answer: 0,
         wrongHints: [null, "Klopt — hard werken.", "Veel meer.", "Niet.", "Onmogelijk."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vroege fabriek: zeer lange dagen", tekst: "In de vroege Industriële Revolutie (1800-1850) werkten arbeiders **12 tot 16 uur per dag**, 6 dagen per week. Slechts 1 dag rust (zondag)." },
+            { titel: "Geen rechten", tekst: "Geen vakantie, geen ziekteverzekering, geen pensioen. Bij ongeluk werd je gewoon ontslagen. Loon was laag — amper genoeg om te eten." },
+            { titel: "Pas eind 1800: regels", tekst: "Vanaf ongeveer 1880 kwamen er wetten: maximale werkdag, verbod op kinderarbeid, etc. De **Kinderwetje van Van Houten** (NL, 1874) verbood arbeid voor kinderen onder 12." },
+          ],
+          woorden: [
+            { woord: "arbeider", uitleg: "Iemand die in fabriek werkt voor loon." },
+            { woord: "Kinderwetje 1874", uitleg: "NL-wet die kinderarbeid (<12 jaar) verbood — eerste stap arbeidsrecht." },
+          ],
+          theorie: "Cito-feit: de huidige '8-urige werkdag' is bevochten door arbeiders + vakbonden. In ~1900 werd dit normaal. Voor 1900: 12-16 uur was standaard.",
+          voorbeelden: [
+            { type: "stap", tekst: "Een 10-jarige in 1840 werkte 12 uur in textielfabriek voor een paar centen per dag." },
+            { type: "stap", tekst: "Pas vanaf 1919 (NL Arbeidswet) werd 8 uur per dag wettelijk maximum." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: VROEGE fabriek = 12-16 uur. Modern = 8 uur per dag. Verschil dankzij vakbonden + wetten." }],
+          niveaus: {
+            basis: "Vroege fabriek: 12-16 uur per dag werken.",
+            simpeler: "Veel langer dan nu: tweemaal zo lang als jouw schooldag.",
+            nogSimpeler: "12-16 uur per dag.",
+          },
+        },
       },
       {
         q: "Wat is de **bourgeoisie**?",
