@@ -149,7 +149,29 @@ const steps = [
         q: "Tekst: 'Kinderen leren beter na een goed ontbijt. Wetenschappers vergeleken kinderen mét en zónder ontbijt. Kinderen mét ontbijt scoorden hoger.'\n\n**Hoofdgedachte**?",
         options: ["Ontbijt helpt bij leren","Wetenschappers doen onderzoeken","Kinderen ontbijten thuis","Cornflakes zijn goed"],
         answer: 0,
-        wrongHints: [null,"Detail, niet hoofd.","Niet expliciet besproken.","Niet vermeld."],
+        wrongHints: [null,"Klopt — zin 1 zegt het direct, zin 2-3 bewijzen het.","Detail (= methode van bewijs), niet hoofdpunt.","Niet expliciet besproken.","Niet vermeld in tekst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees zin 1 — vaak de hoofdgedachte", tekst: "*'Kinderen leren beter na een goed ontbijt.'*\nDit is de **topic-sentence** — vaak staat de hoofdgedachte HIER. Daarna komen zinnen die het bewijzen." },
+            { titel: "Check: bewijzen zin 2-3 de hoofdgedachte?", tekst: "Zin 2: wetenschappers deden onderzoek (= bewijs voor zin 1).\nZin 3: kinderen mét ontbijt scoorden hoger (= concreet resultaat = bewijs voor zin 1).\n→ Beide bewijzen 'ontbijt helpt bij leren'. Bevestigd." },
+            { titel: "Waarom andere opties detail zijn", tekst: "• **'Wetenschappers doen onderzoeken'** — feit, maar over METHODE, niet over conclusie.\n• **'Kinderen ontbijten thuis'** — niet vermeld!\n• **'Cornflakes zijn goed'** — niet vermeld!\nCito-truc: antwoord MOET in de tekst staan. Niet in jouw eigen kennis." },
+          ],
+          woorden: [
+            { woord: "topic-sentence", uitleg: "Eerste zin van alinea, vaak de hoofdgedachte." },
+            { woord: "bewijs", uitleg: "Zinnen die de hoofdgedachte ondersteunen (onderzoek, voorbeelden)." },
+          ],
+          theorie: "Cito-leesstrategie hoofdgedachte:\n1. Lees zin 1 — kandidaat hoofdgedachte.\n2. Lezen volgende zinnen: bewijzen ze zin 1? Dan is zin 1 = hoofd.\n3. Antwoord MOET uit tekst komen, niet eigen kennis.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst: 'Sporten is gezond. Het versterkt je hart. Het verbetert je humeur.' → hoofdgedachte = 'sporten is gezond'." },
+            { type: "stap", tekst: "Tekst: 'Plastic in zee is een probleem. 8 miljoen ton komt erin per jaar. Dieren stikken erin.' → hoofdgedachte = 'plastic in zee is een probleem'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zin 1 vaak hoofdgedachte. Andere opties die in tekst staan = details. Opties die NIET in tekst staan = afleiders." }],
+          niveaus: {
+            basis: "Ontbijt helpt bij leren (zin 1 = hoofdgedachte, zinnen 2-3 = bewijs). = A.",
+            simpeler: "Zin 1 zegt het: ontbijt → beter leren. Andere zinnen bewijzen dat met onderzoek. = A.",
+            nogSimpeler: "Ontbijt helpt = A.",
+          },
+        },
       },
       {
         q: "Cito-fout — wat is **GEEN goede hoofdgedachte**?",
@@ -190,7 +212,30 @@ const steps = [
         q: "Tekst: 'Fietsen is gezond. Het is goed voor je hart en je spieren. Mijn oom Henk fietst elke dag 20 km.'\n\n**Welke zin is een bijzaak**?",
         options: ["Mijn oom Henk fietst elke dag 20 km.","Fietsen is gezond.","Het is goed voor hart.","Het is goed voor spieren."],
         answer: 0,
-        wrongHints: [null,"Hoofdzaak.","Hoofdzaak.","Hoofdzaak."],
+        wrongHints: [null,"Klopt — anecdote over één persoon, niet algemene info.","Hoofdzaak (= de hoofdgedachte).","Hoofdzaak (= bewijs algemeen).","Hoofdzaak (= bewijs algemeen)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoofdzaak vs bijzaak — schrap-test", tekst: "**Truc**: lees de tekst zonder die ene zin. Verandert de hoofdboodschap?\n• **Verandert NIET** → bijzaak (kan weg)\n• **Verandert WEL** → hoofdzaak (essentieel)" },
+            { titel: "Pas toe op deze tekst", tekst: "Zonder 'Mijn oom Henk fietst elke dag 20 km' lees je nog steeds: 'Fietsen is gezond. Het is goed voor hart en spieren.' → boodschap verandert niet → het is een **bijzaak** (anecdote)." },
+            { titel: "Waarom de andere zinnen hoofdzaak zijn", tekst: "• 'Fietsen is gezond' = de hoofdgedachte zelf — niet schrapbaar.\n• 'Goed voor hart' = bewijs dat fietsen gezond is — schrappen verzwakt boodschap.\n• 'Goed voor spieren' = ander bewijs — idem.\nDie 3 dragen samen de boodschap." },
+          ],
+          woorden: [
+            { woord: "hoofdzaak", uitleg: "Zin die direct de hoofdgedachte ondersteunt — essentieel." },
+            { woord: "bijzaak", uitleg: "Detail/anecdote — leuk, maar kan weg." },
+            { woord: "schrap-test", uitleg: "Truc: lees zonder die zin — verandert de boodschap?" },
+          ],
+          theorie: "Cito-truc hoofd-bij: bijzaken zijn vaak:\n• **Anecdotes** ('mijn oom...', 'ik herinner me...')\n• **Specifieke voorbeelden** met eigennamen\n• **Cijfers/details** die over 1 geval gaan\nHoofdzaken zijn algemeen + dekken het hoofdthema.",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Mijn buurman heeft een Labrador.'* → 'buurman/Labrador' = bijzaak (anecdote)." },
+            { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt je woordenschat. Ik las gisteren een boek over piraten.'* → 'gisteren piraten-boek' = bijzaak." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam (Henk, Anna, buurman) + specifieke daad = bijna altijd bijzaak (anecdote)." }],
+          niveaus: {
+            basis: "'Mijn oom Henk...' = bijzaak (schrap-test bevestigt). = A.",
+            simpeler: "Eigennaam + specifieke daad = anecdote = bijzaak. = A.",
+            nogSimpeler: "Oom Henk = bijzaak = A.",
+          },
+        },
       },
       {
         q: "Hoofdzaak of bijzaak: **'Beren slapen 's winters'**? *(in een tekst over winterslaap)*.",
@@ -215,7 +260,30 @@ const steps = [
         q: "Wat hoort **NIET** in een goede samenvatting?",
         options: ["Eigen mening","Hoofdgedachte","Hoofdzaken","Eigen woorden"],
         answer: 0,
-        wrongHints: [null,"Hoort wel.","Hoort wel.","Hoort wel — eigen woorden goed."],
+        wrongHints: [null,"Klopt — samenvatting = wat tekst zegt, niet wat JIJ vindt.","Hoort wel — kern van de samenvatting.","Hoort wel — belangrijke punten.","Hoort wel — eigen woorden voorkomen kopiëren."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Samenvatting = wat de tekst zegt", tekst: "Een goede samenvatting bevat:\n✓ **Hoofdgedachte** (kern in 1 zin)\n✓ **Hoofdzaken** (belangrijke punten)\n✓ **Eigen woorden** (niet kopiëren)\n\nWat NIET:\n✗ **Eigen mening** (wat JIJ ervan vindt — hoort er niet in)\n✗ **Bijzaken** (anecdotes)\n✗ **Letterlijke kopie** uit tekst" },
+            { titel: "Waarom geen mening?", tekst: "Een samenvatting is **objectief**: het vertelt wat de schrijver zegt. Niet wat jij ervan vindt. Mening hoort thuis in een **recensie** of **mening-stuk**, niet in samenvatting." },
+            { titel: "Voorbeeld: WEL vs NIET", tekst: "**Tekst**: 'Klimaatverandering is een probleem. Zeespiegel stijgt 3 mm per jaar.'\n\n**Goede samenvatting**: 'Volgens de tekst is klimaatverandering een probleem: de zeespiegel stijgt jaarlijks 3 mm.'\n\n**Foute samenvatting**: 'Klimaatverandering is een groot probleem en wij moeten dringend iets doen!' (= je eigen mening, niet wat tekst zegt)." },
+          ],
+          woorden: [
+            { woord: "samenvatting", uitleg: "Korte versie van tekst met hoofdgedachte + hoofdzaken." },
+            { woord: "objectief", uitleg: "Zonder eigen mening — alleen wat de feiten zeggen." },
+            { woord: "recensie", uitleg: "Mening-stuk over een tekst/film/boek (= apart van samenvatting)." },
+          ],
+          theorie: "Cito-checklist goede samenvatting:\n✓ Korter dan origineel (~25-30%)\n✓ Hoofdgedachte expliciet\n✓ Hoofdzaken (2-3)\n✓ Eigen woorden\n✗ Geen mening\n✗ Geen bijzaken\n✗ Geen letterlijke kopie",
+          voorbeelden: [
+            { type: "stap", tekst: "WEL: 'Volgens de schrijver is X gezond omdat Y.' (objectief, citeert tekst)" },
+            { type: "stap", tekst: "NIET: 'X is super gezond, iedereen zou meer X moeten doen!' (eigen mening, niet uit tekst)" },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: 'staat dit IN de tekst, of is het MIJN mening?' Alleen wat in tekst staat → samenvatting." }],
+          niveaus: {
+            basis: "Eigen mening hoort NIET in samenvatting. = A.",
+            simpeler: "Samenvatting = wat tekst zegt. Mening = wat JIJ vindt. Niet mixen. = A.",
+            nogSimpeler: "Eigen mening = A (mag niet).",
+          },
+        },
       },
       {
         q: "Hoe lang is een **goede** samenvatting meestal?",
