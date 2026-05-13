@@ -155,6 +155,29 @@ const steps = [
         options: ["0,25", "0,14", "0,4", "0,75"],
         answer: 0,
         wrongHints: [null, "Klopt — 1 ÷ 4 = 0,25.", "Niet — 1/4 is een kwart.", "Niet — dat is 4/10.", "Dat is 3/4."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Breuk = deling", tekst: "Een breuk is eigenlijk een deling. 1/4 betekent: '1 gedeeld door 4'." },
+            { titel: "Reken het uit", tekst: "1 ÷ 4 = 0,25. Dus 1/4 als decimaal is **0,25**." },
+            { titel: "Onthoud de 4 vaste breuken", tekst: "1/2 = 0,5. 1/4 = 0,25. 3/4 = 0,75. 1/5 = 0,20. Deze hebben we altijd nodig — uit hoofd kennen!" },
+          ],
+          woorden: [
+            { woord: "breuk", uitleg: "Een deel van een geheel (teller / noemer)." },
+            { woord: "decimaal", uitleg: "Getal met komma (0,25; 0,5; 1,75)." },
+          ],
+          theorie: "Een breuk omzetten naar decimaal: deel de teller door de noemer. 1/4 = 1 ÷ 4 = 0,25. 3/8 = 3 ÷ 8 = 0,375.",
+          voorbeelden: [
+            { type: "stap", tekst: "1/2 = 1 ÷ 2 = 0,5." },
+            { type: "stap", tekst: "3/4 = 3 ÷ 4 = 0,75." },
+            { type: "stap", tekst: "1/10 = 1 ÷ 10 = 0,1." },
+          ],
+          basiskennis: [{ onderwerp: "Geheugen", uitleg: "1/4 (kwart) = 0,25 — denk aan een kwartje (25 cent)." }],
+          niveaus: {
+            basis: "Breuk → decimaal = teller ÷ noemer.",
+            simpeler: "1/4 = 1 ÷ 4 = 0,25.",
+            nogSimpeler: "Kwart = 0,25.",
+          },
+        },
       },
       {
         q: "Wat is **0,5 + 1/4**?",
@@ -167,6 +190,28 @@ const steps = [
         options: ["1/2", "1/3", "1/6", "2/6"],
         answer: 0,
         wrongHints: [null, "Klopt — 4/6 − 1/6 = 3/6 = 1/2.", "Te weinig.", "Te weinig.", "Niet vereenvoudigd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: gelijke noemers maken", tekst: "Je kunt alleen breuken aftrekken met DEZELFDE noemer. 2/3 en 1/6 hebben niet dezelfde — eerst gelijknamig maken." },
+            { titel: "Stap 2: kleinste gemene noemer", tekst: "De noemers zijn 3 en 6. De kleinste gemeenschappelijke is **6** (6 is een veelvoud van 3). Reken 2/3 om: 2/3 = 4/6 (×2 boven en onder)." },
+            { titel: "Stap 3: nu aftrekken", tekst: "4/6 − 1/6 = **3/6**. Vereenvoudig: 3/6 = 1/2 (delen door 3 boven en onder)." },
+          ],
+          woorden: [
+            { woord: "gelijknamig maken", uitleg: "Beide breuken dezelfde noemer geven." },
+            { woord: "vereenvoudigen", uitleg: "Teller én noemer delen door hetzelfde getal." },
+          ],
+          theorie: "Breuken optellen of aftrekken: ALTIJD eerst gelijke noemer maken. Dan tellers samenvoegen, noemer blijft hetzelfde. Eindigen met vereenvoudigen indien mogelijk.",
+          voorbeelden: [
+            { type: "stap", tekst: "1/2 − 1/4 → 2/4 − 1/4 = 1/4." },
+            { type: "stap", tekst: "1/3 + 1/6 → 2/6 + 1/6 = 3/6 = 1/2." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Maak van de kleinste noemer de doelnoemer als de andere er een veelvoud van is." }],
+          niveaus: {
+            basis: "Gelijknamig maken, dan tellers aftrekken, vereenvoudigen.",
+            simpeler: "2/3 = 4/6. Nu 4/6 − 1/6 = 3/6 = 1/2.",
+            nogSimpeler: "Gelijke noemer eerst, dan tellers aftrekken.",
+          },
+        },
       },
       {
         q: "Schrijf **0,8 als breuk** in eenvoudigste vorm.",
@@ -215,6 +260,28 @@ const steps = [
         options: ["15", "5", "12", "60"],
         answer: 0,
         wrongHints: [null, "Klopt — 20÷4×3 = 15.", "Dat is 1/4.", "Verkeerd berekend.", "Veel te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: eerst 1/4 van 20", tekst: "Om 3/4 te krijgen, weet je eerst 1/4. 1/4 betekent 'gedeeld door 4'. 20 ÷ 4 = **5**." },
+            { titel: "Stap 2: keer 3", tekst: "Nu je weet dat 1/4 van 20 = 5, is 3/4 = 3 × 5 = **15**." },
+            { titel: "Snelle route", tekst: "Truc: deel eerst door de noemer, vermenigvuldig dan met de teller. 20 ÷ 4 × 3 = 5 × 3 = 15." },
+          ],
+          woorden: [
+            { woord: "breuk van een getal", uitleg: "Deel het getal door de noemer, maal met de teller." },
+            { woord: "teller / noemer", uitleg: "Boven streep = teller (3), onder streep = noemer (4)." },
+          ],
+          theorie: "Formule: breuk van getal = (getal ÷ noemer) × teller. Voor 3/4 van 20: (20 ÷ 4) × 3 = 5 × 3 = 15.",
+          voorbeelden: [
+            { type: "stap", tekst: "1/2 van 30: 30 ÷ 2 × 1 = 15." },
+            { type: "stap", tekst: "2/5 van 50: 50 ÷ 5 × 2 = 10 × 2 = 20." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst delen (door noemer), dan vermenigvuldigen (met teller). Soms makkelijker andersom." }],
+          niveaus: {
+            basis: "Getal ÷ noemer × teller.",
+            simpeler: "1/4 van 20 = 5. 3/4 = 3 × 5 = 15.",
+            nogSimpeler: "1/4 = 5, dus 3/4 = 15.",
+          },
+        },
       },
       {
         q: "Wat is **5/6 − 1/2**?",
@@ -357,6 +424,28 @@ const steps = [
         options: ["80", "60", "100", "240"],
         answer: 0,
         wrongHints: [null, "Klopt — 40/100 × 200 = 80.", "Te weinig.", "Dat is 50%.", "Niet — wel onder 200."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: 10% eerst", tekst: "Begin altijd met 10%. 10% van 200 = 200 ÷ 10 = **20**." },
+            { titel: "Stap 2: keer 4 voor 40%", tekst: "40% = 4 × 10%. Dus: 4 × 20 = **80**." },
+            { titel: "Of: % delen door 100", tekst: "Formule: (% ÷ 100) × getal. (40 ÷ 100) × 200 = 0,4 × 200 = 80." },
+          ],
+          woorden: [
+            { woord: "procent (%)", uitleg: "Per honderd. 40% = 40 van 100." },
+            { woord: "10%-truc", uitleg: "10% bereken je door te delen door 10. Dat is makkelijk." },
+          ],
+          theorie: "Twee manieren voor X% van Y: (1) bereken 10% van Y (Y ÷ 10), vermenigvuldig dan met (X ÷ 10). (2) Formule (X ÷ 100) × Y.",
+          voorbeelden: [
+            { type: "stap", tekst: "20% van 50: 10% = 5. Dus 20% = 10." },
+            { type: "stap", tekst: "60% van 80: 10% = 8. Dus 60% = 6 × 8 = 48." },
+          ],
+          basiskennis: [{ onderwerp: "10%-truc", uitleg: "Verdeel het percentage in stukjes van 10%. Veel makkelijker dan met komma's." }],
+          niveaus: {
+            basis: "% van getal = (% ÷ 100) × getal. Of: 10% × aantal-tientjes.",
+            simpeler: "10% van 200 = 20. 40% = 4 × 20 = 80.",
+            nogSimpeler: "10% = 20, dus 40% = 80.",
+          },
+        },
       },
       {
         q: "In een klas van 30: **20% is ziek**. Hoeveel kinderen?",
@@ -626,6 +715,28 @@ const steps = [
         options: ["26 m", "40 m", "13 m", "20 m"],
         answer: 0,
         wrongHints: [null, "Klopt — omtrek = 2 × (5+8) = 26 m.", "Dat is oppervlakte, niet omtrek.", "Halve omtrek.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hek = omtrek (rondom)", tekst: "Een hek loopt RONDOM de tuin. Je telt alle 4 de zijdes op. Dat heet de **omtrek**." },
+            { titel: "Stap 1: tel zijdes", tekst: "De tuin heeft 2 zijdes van 5 m (boven + onder) en 2 zijdes van 8 m (links + rechts). Dus: 5 + 5 + 8 + 8." },
+            { titel: "Stap 2: tel op", tekst: "5 + 5 = 10. 8 + 8 = 16. 10 + 16 = **26 m**. Of korter: 2 × (5 + 8) = 2 × 13 = 26 m." },
+          ],
+          woorden: [
+            { woord: "omtrek", uitleg: "Lengte rondom een vorm. Voor rechthoek: 2 × (lengte + breedte)." },
+            { woord: "oppervlakte", uitleg: "Iets ANDERS: lengte × breedte. Hier: 5 × 8 = 40 m². Meet je in m²." },
+          ],
+          theorie: "Cito-truc: lees goed of er om OMTREK of OPPERVLAKTE wordt gevraagd. Hek = rondom = omtrek. Tegels op vloer = bedekking = oppervlakte.",
+          voorbeelden: [
+            { type: "stap", tekst: "Rechthoek 3 × 4: omtrek = 2 × (3+4) = 14. Oppervlakte = 3 × 4 = 12." },
+            { type: "stap", tekst: "Vierkant zijde 6: omtrek = 4 × 6 = 24. Oppervlakte = 6 × 6 = 36." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Omtrek = m (rondrennen-lengte). Oppervlakte = m² (vakje-tellen)." }],
+          niveaus: {
+            basis: "Omtrek rechthoek = 2 × (lengte + breedte).",
+            simpeler: "5+5+8+8 = 26 m hek nodig.",
+            nogSimpeler: "Rondom = optellen alles.",
+          },
+        },
       },
       {
         q: "**3,5 kg** in **gram**?",
@@ -868,6 +979,28 @@ const steps = [
         options: ["75%", "60%", "80%", "70%"],
         answer: 0,
         wrongHints: [null, "Klopt — 18÷24 = 0,75 = 75%.", "Verkeerd.", "Iets te veel.", "Iets te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: deel het deel door het geheel", tekst: "Je vraagt: welk DEEL van het GEHEEL haalt voldoende? 18 (deel) ÷ 24 (geheel) = 0,75." },
+            { titel: "Stap 2: keer 100 voor procent", tekst: "0,75 × 100 = **75%**." },
+            { titel: "Cito-controle", tekst: "Even checken: 18 is meer dan helft van 24 (=12), dus moet boven 50% zijn. 75% klopt." },
+          ],
+          woorden: [
+            { woord: "deel-van-het-geheel", uitleg: "Deel ÷ geheel × 100 = %." },
+            { woord: "vermenigvuldigen met 100", uitleg: "Komma 2 plaatsen naar rechts. 0,75 → 75." },
+          ],
+          theorie: "Formule % bereken: (deel ÷ geheel) × 100. Bijvoorbeeld 18 van 24: (18/24) × 100 = 75%. Werkt voor alle 'hoeveel-procent-van'-vragen.",
+          voorbeelden: [
+            { type: "stap", tekst: "5 van 20 = 25%. (5÷20)×100." },
+            { type: "stap", tekst: "12 van 30 = 40%. (12÷30)×100." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Kortere breuk maken eerst: 18/24 = 3/4 (delen door 6). 3/4 = 75%. Sneller!" }],
+          niveaus: {
+            basis: "% = (deel ÷ geheel) × 100.",
+            simpeler: "18 ÷ 24 = 0,75 = 75%.",
+            nogSimpeler: "18 van 24 = 3/4 = 75%.",
+          },
+        },
       },
       {
         q: "Een fles **1,5 L**. Glas houdt **250 mL**. Hoeveel glazen?",

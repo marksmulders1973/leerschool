@@ -384,6 +384,31 @@ const steps = [
         options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tijdlijn"],
         answer: 0,
         wrongHints: [null, "Klopt — staaf = vergelijken groepen.", "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welk diagram waarvoor?", tekst: "Drie veelvoorkomende diagrammen, elk met hun eigen doel:" },
+            { titel: "Staafdiagram = vergelijken", tekst: "Bij verschillende GROEPEN (klassen, dieren, kleuren): staafdiagram. Hoogte = aantal." },
+            { titel: "Lijngrafiek = tijd-verandering", tekst: "Bij verandering OVER TIJD (per jaar, per maand): lijngrafiek. Stijgt of daalt de waarde?" },
+            { titel: "Cirkeldiagram = verdeling van 100%", tekst: "Bij verdeling van een GEHEEL (welke kleur het meest geliefd is %): cirkeldiagram." },
+          ],
+          woorden: [
+            { woord: "staafdiagram", uitleg: "Vergelijk groepen (klas A vs klas B vs klas C)." },
+            { woord: "lijngrafiek", uitleg: "Verandering door tijd (2020, 2021, 2022...)." },
+            { woord: "cirkeldiagram", uitleg: "Verdeling van 100% (taart-stukjes)." },
+          ],
+          theorie: "Cito-strategie diagrammen kiezen: vraag jezelf: 'wat wil ik vergelijken/zien?' 1) Groepen → staaf. 2) Tijd-verandering → lijn. 3) Verdeling % → cirkel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Temperatuur per dag = lijngrafiek (tijd)." },
+            { type: "stap", tekst: "Aantal leerlingen per klas = staafdiagram (vergelijken)." },
+            { type: "stap", tekst: "Hobby-verdeling 30 leerlingen = cirkeldiagram (deel van geheel)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vergelijken groepen → staaf. Tijd → lijn. Verdeling → cirkel." }],
+          niveaus: {
+            basis: "Staaf = vergelijken. Lijn = tijd. Cirkel = verdeling %.",
+            simpeler: "Klassen vergelijken? → staafdiagram (hoogte = aantal).",
+            nogSimpeler: "Vergelijken = staaf!",
+          },
+        },
       },
       {
         q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",

@@ -296,6 +296,28 @@ const steps = [
         options: ["Met moeite / mankend", "Snel", "Boos", "Vrolijk"],
         answer: 0,
         wrongHints: [null, "Klopt — gewond aan voet/been.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Onbekend woord? Kijk context", tekst: "Bij Cito krijg je soms onbekende woorden. Geen paniek — lees de zin eromheen voor hints." },
+            { titel: "Wat past bij 'liep'?", tekst: "De zin is over LOPEN. 'Vrolijk lopen' en 'boos lopen' zijn vaag gevoelens, geen manier van lopen. 'Snel' en 'met moeite' beschrijven HOE iemand loopt." },
+            { titel: "Kreupel = mank", tekst: "'Kreupel' betekent: niet goed kunnen lopen, vaak door pijn of een wond aan voet/been. Synoniem: mankend." },
+          ],
+          woorden: [
+            { woord: "kreupel", uitleg: "Niet goed lopend, vaak door blessure." },
+            { woord: "mank", uitleg: "Synoniem van kreupel. Iemand met een mank been loopt scheef." },
+          ],
+          theorie: "Cito-strategie bij onbekend woord: kijk wat ervoor en erna staat. Welk soort actie of beschrijving past bij die zin? Schrap antwoorden die niet bij de context passen.",
+          voorbeelden: [
+            { type: "stap", tekst: "'De hond hinkte naar de bak.' → hinken = kreupel lopen, alleen op 3 poten." },
+            { type: "stap", tekst: "'Na de val liep hij mank de trap op.' → mank = met moeite." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Cito woordenschat: schrap eerst antwoorden die NIET in de context passen. Dan blijven 1-2 over." }],
+          niveaus: {
+            basis: "Kreupel = niet goed kunnen lopen (door wond).",
+            simpeler: "Kreupel = mank = met moeite lopen.",
+            nogSimpeler: "Kreupel = pijnlijk lopen.",
+          },
+        },
       },
       {
         q: "Welk woord is een **synoniem** voor **'beginnen'**?",
