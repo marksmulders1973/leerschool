@@ -834,6 +834,10 @@ const argumentatieleer = {
   // SLO-niveau (G4c): 3F havo, 3S vwo. Argumentatie = examenstof havo/vwo.
   referentieNiveau: "3F/3S",
   sloThema: "Lezen — argumentatie",
+  prerequisites: [
+    { id: "tekstanalyse", title: "Tekstanalyse", niveau: "havo-3F/3S" },
+    { id: "kritisch-denken-po", title: "Kritisch denken", niveau: "po-1F" },
+  ],
   intro:
     "Examenstof havo 4-5 leesvaardigheid: standpunt en argumenten herkennen, vijf argumentatieschema's toepassen, structuur van argumentatie analyseren, en de vier veelvoorkomende drogredenen herkennen. Met eigen oefenvragen — geen tekst uit een specifieke methode.",
   triggerKeywords: [

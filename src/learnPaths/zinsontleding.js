@@ -906,6 +906,10 @@ const zinsontleding = {
   // = einde-vmbo basisterm taalbeschouwing.
   referentieNiveau: "2F",
   sloThema: "Taalbeschouwing — zinsontleding",
+  prerequisites: [
+    { id: "woordsoorten-nederlands", title: "Woordsoorten (Nederlands)", niveau: "vmbo-2F" },
+    { id: "werkwoord-tijden-po", title: "Werkwoord-tijden", niveau: "po-1F" },
+  ],
   intro:
     "Zinnen ontleden voor klas 1-2: persoonsvorm + onderwerp + gezegde (werkwoordelijk vs naamwoordelijk) + lijdend voorwerp + meewerkend voorwerp + bepalingen (plaats, tijd, wijze, reden) + verschil bijwoord/bijvoeglijk naamwoord. Met trucjes om elk zinsdeel snel te vinden.",
   triggerKeywords: [

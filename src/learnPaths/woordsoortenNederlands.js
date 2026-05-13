@@ -540,6 +540,10 @@ const woordsoortenNederlands = {
   subject: "taal",
   referentieNiveau: "2F",
   sloThema: "Taalverzorging — woordsoorten",
+  prerequisites: [
+    { id: "woordsoorten-po", title: "Woordsoorten (basis)", niveau: "po-1F" },
+    { id: "werkwoord-tijden-po", title: "Werkwoord-tijden", niveau: "po-1F" },
+  ],
   intro:
     "De 8 woordsoorten van het Nederlands: zelfstandig nw, werkwoord, bijvoeglijk nw, lidwoord, voornaamwoord (persoonlijk + bezittelijk), voorzetsel, voegwoord, bijwoord. Per soort herkenningstrucs en oefeningen.",
   triggerKeywords: [
