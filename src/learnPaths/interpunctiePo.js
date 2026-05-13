@@ -79,7 +79,31 @@ const steps = [
         q: "Welke leesteken hoort bij een **vraag**?",
         options: ["?", ".", "!", ","],
         answer: 0,
-        wrongHints: [null, "Punt is voor een gewone zin.", "Uitroepteken is voor verbazing.", "Komma zit midden in een zin."],
+        wrongHints: [null, "Klopt — vraagteken.", "Punt is voor een gewone zin.", "Uitroepteken is voor verbazing.", "Komma zit midden in een zin."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vraagteken (?) hoort bij vragen", tekst: "Een **vraag** = zin waarop je een **antwoord verwacht**. Aan het eind komt altijd een **vraagteken (?)**. Geen punt, geen uitroepteken." },
+            { titel: "Hoe herken je een vraag?", tekst: "**Vraag-signalen**:\n• Begint met een **vraagwoord**: wat / wie / waar / wanneer / waarom / hoe.\n• OF begint met een **werkwoord**: Heb je...? / Ga je...? / Wil je...?\n• Je verwacht een antwoord (ja/nee of meer)." },
+            { titel: "Vergelijk de 4 leestekens", tekst: "• **.** = einde gewone zin (mededeling). 'Het regent.'\n• **?** = einde vraag. 'Regent het?'\n• **!** = uitroep/verbazing/bevel. 'Het regent!'\n• **,** = pauze MIDDEN in zin (geen einde)." },
+          ],
+          woorden: [
+            { woord: "vraagteken (?)", uitleg: "Eind van een vraag." },
+            { woord: "vraagwoord", uitleg: "Wat / wie / waar / wanneer / waarom / hoe." },
+          ],
+          theorie: "Cito-feit eindleesteken:\n• Mededeling → **.**\n• Vraag → **?**\n• Uitroep/emotie → **!**\nKomma sluit GEEN zin af — die zit binnen een zin als pauze.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Ben jij Anna?' = vraag (begint met 'Ben' = werkwoord, antwoord verwacht)." },
+            { type: "stap", tekst: "'Waar is mijn boek?' = vraag (begint met 'Waar' = vraagwoord)." },
+            { type: "stap", tekst: "'Mooi weer.' = mededeling → punt. 'Mooi weer!' = enthousiast → uitroep." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lees zin hardop. Klinkt het als vraag (toonhoogte omhoog aan eind)? Dan ?. Klinkt het als feit? Dan ." },
+          ],
+          niveaus: {
+            basis: "? (vraagteken). = A.",
+            simpeler: "Vraag eindigt met vraagteken (?). Punt = mededeling, uitroep = emotie. = A.",
+            nogSimpeler: "? = A.",
+          },
+        },
       },
     ],
   },
@@ -148,6 +172,30 @@ const steps = [
         options: ["?", ".", "!", ","],
         answer: 0,
         wrongHints: [null, "Klopt — vraag.", "Punt is geen vraag.", "Niet boos genoeg voor uitroep.", "Komma sluit geen zin af."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Begint met werkwoord = vraag", tekst: "De zin begint met '**Heb**' (werkwoord). Dat is een typische **vraag-opbouw** in Nederlands: werkwoord vooraan + persoon erachter. 'Heb **je**...?'" },
+            { titel: "Wacht op antwoord", tekst: "Bij deze zin verwacht je een **ja/nee-antwoord** ('Ja, ik heb gepoetst' of 'Nee, nog niet'). Dat is hét kenmerk van een vraag." },
+            { titel: "Test: vervang de woord-volgorde", tekst: "Mededeling: 'Je hebt je tanden gepoetst.' (volgorde: persoon → werkwoord) → eindigt op **.**\nVraag: 'Heb je je tanden gepoetst?' (volgorde: werkwoord → persoon) → eindigt op **?**\nDe omdraai-truc helpt." },
+          ],
+          woorden: [
+            { woord: "ja/nee-vraag", uitleg: "Vraag waarop antwoord 'ja' of 'nee' kan zijn." },
+            { woord: "vraag-opbouw", uitleg: "Werkwoord eerst, dan persoon (in Nederlands)." },
+          ],
+          theorie: "Cito-truc vraag-herkenning: **Werkwoord vooraan** = vraag (Heb je..., Ga je..., Komt zij...). **Persoon vooraan** = mededeling (Je hebt..., Jij gaat..., Zij komt...). Hoofdregel om snel te zien.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Ga jij mee?' = vraag (Ga + jij)." },
+            { type: "stap", tekst: "'Jij gaat mee.' = mededeling (Jij + gaat)." },
+            { type: "stap", tekst: "'Heeft Anna een hond?' = vraag (Heeft + Anna)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Werkwoord vooraan → vraag → ?. Werkwoord midden/achter → mededeling → ." },
+          ],
+          niveaus: {
+            basis: "? (vraagteken). = A.",
+            simpeler: "'Heb je...?' = vraag-opbouw. Vraagteken aan eind. = A.",
+            nogSimpeler: "? = A.",
+          },
+        },
       },
       {
         q: "*'Ik ga vandaag fietsen'* — welk leesteken?",
@@ -175,6 +223,29 @@ const steps = [
         options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, en druiven.", "Ik, kocht appels peren en druiven."],
         answer: 0,
         wrongHints: [null, "Klopt — komma tussen opsomming, geen komma vóór 'en'.", "Geen komma's vóór elk woord — alleen tussen items.", "Geen komma vóór 'en' bij 2 items.", "Geen komma na werkwoord zonder reden."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Regel voor opsommingen", tekst: "Bij een opsomming (3 of meer items achter elkaar) zet je **komma's tussen de items**. MAAR: **vóór het laatste 'en' GEEN komma** — dat is de Nederlandse regel." },
+            { titel: "Stap voor stap door de zin", tekst: "'Ik kocht **appels**, **peren** en **druiven**.'\n• Appels → komma erna (want er volgt nog meer)\n• Peren → 'en' volgt direct, dus GEEN komma vóór 'en'\n• Druiven → laatste item, daarna punt." },
+            { titel: "Verschil met Engels", tekst: "In Engels gebruiken ze soms wél een komma vóór 'and' (Oxford-komma). In **Nederlands NIET**. Onthoud: NL-regel = geen komma vóór 'en'." },
+          ],
+          woorden: [
+            { woord: "opsomming", uitleg: "Lijstje van 3 of meer items in een zin." },
+            { woord: "Oxford-komma", uitleg: "Engelse komma vóór 'and' (NL gebruikt deze niet)." },
+          ],
+          theorie: "Cito-regel komma's bij opsomming:\n• 2 items: GEEN komma. 'Anna en Tom.'\n• 3+ items: komma's TUSSEN items, NIET vóór 'en'. 'Anna, Tom en Lisa.'\n• Eind: punt.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Ik wil rood, blauw, geel en groen.' = correct (3+ items, geen komma vóór 'en')." },
+            { type: "stap", tekst: "'Ik wil rood en blauw.' = correct (2 items, geen komma)." },
+            { type: "stap", tekst: "'Ik wil rood, blauw, geel, en groen.' = FOUT (komma vóór 'en' is Engelse stijl)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Komma's TUSSEN items. 'En' = de laatste verbinder, geen komma daarvoor. NL ≠ Engels." }],
+          niveaus: {
+            basis: "'Ik kocht appels, peren en druiven.' = A.",
+            simpeler: "Komma tussen items van opsomming. Voor laatste 'en' geen komma. = A.",
+            nogSimpeler: "Eerste optie = A.",
+          },
+        },
       },
       {
         q: "*'Ik ga naar buiten ___ het regent'.* Welke komma + woord?",
