@@ -86,7 +86,29 @@ const steps = [
         q: "Tekst: 'Honden zijn loyaal. Ze beschermen je. Ze spelen graag.'\n\n**Hoofdgedachte**?",
         options: ["Honden zijn fijne huisdieren","Honden bijten soms","Katten zijn beter","Honden eten veel"],
         answer: 0,
-        wrongHints: [null,"Niet vermeld in tekst.","Niet vermeld.","Niet vermeld."],
+        wrongHints: [null,"Klopt — alle 3 zinnen wijzen naar 'fijne huisdier'.","Niet vermeld in tekst.","Niet vermeld.","Niet vermeld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees alle 3 zinnen", tekst: "*'Honden zijn loyaal'* + *'Ze beschermen je'* + *'Ze spelen graag'*. Wat hebben deze 3 gemeen? Alle 3 zijn POSITIEVE eigenschappen van honden." },
+            { titel: "Vraag jezelf: rode draad?", tekst: "Wat verbindt deze 3 zinnen? Het thema is: **honden zijn goede / fijne huisdieren**. Daar wijzen alle 3 zinnen naar." },
+            { titel: "Waarom NIET de andere opties?", tekst: "• **Honden bijten soms** — niet in tekst.\n• **Katten zijn beter** — niet in tekst (en juist tegenovergesteld).\n• **Honden eten veel** — niet in tekst.\n→ Hoofdgedachte moet uit de TEKST komen, niet uit jouw eigen kennis." },
+          ],
+          woorden: [
+            { woord: "rode draad", uitleg: "Wat alle zinnen met elkaar verbindt." },
+            { woord: "hoofdgedachte", uitleg: "De kernboodschap die alle zinnen samenvat." },
+          ],
+          theorie: "Cito-truc hoofdgedachte: lees alle zinnen + vraag 'wat is hier het ONDERWERP?' (honden) + 'wat wordt erover gezegd?' (zijn fijn/loyaal/beschermend/speels). Onderwerp + boodschap = hoofdgedachte.",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Sneeuw is wit. Het smelt bij 0°C. Kinderen spelen erin.'* → hoofdgedachte: 'Sneeuw is een natuurverschijnsel/leuk om mee te spelen'." },
+            { type: "stap", tekst: "Pas op: 'Katten zijn beter' is een MENING die NIET in de tekst staat. Cito wil dat je uit de TEKST haalt, niet eigen mening." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Antwoord MOET uit de tekst komen. Niet vermeld in tekst = niet hoofdgedachte." }],
+          niveaus: {
+            basis: "Honden zijn fijne huisdieren (rode draad: loyaal + beschermen + spelen). = A.",
+            simpeler: "Alle 3 zinnen zeggen iets POSITIEFS over honden. Samen: fijne huisdieren. = A.",
+            nogSimpeler: "Fijne huisdieren = A.",
+          },
+        },
       },
     ],
   },
@@ -133,7 +155,29 @@ const steps = [
         q: "Cito-fout — wat is **GEEN goede hoofdgedachte**?",
         options: ["Een detail uit de tekst","Wat tekst zegt in eigen woorden","Wat tekst herhaalt over alle alinea's","De rode draad"],
         answer: 0,
-        wrongHints: [null,"Wel goed.","Wel goed.","Wel goed."],
+        wrongHints: [null,"Klopt — details zijn te klein voor hoofdgedachte.","Wel goed — eigen woorden gebruiken is juist sterk.","Wel goed — wat steeds terugkomt = hoofdgedachte.","Wel goed — synoniem voor hoofdgedachte."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cito-instinker: kies geen detail", tekst: "Bij hoofdgedachte-vragen zitten in de opties vaak DETAILS uit de tekst — die zien er bekend uit en lijken juist. Maar een detail is NIET de hoofdgedachte." },
+            { titel: "Wat is een detail vs hoofdgedachte?", tekst: "Tekst over voetbal:\n• **DETAIL**: 'Messi heeft 8 Gouden Ballen gewonnen' (specifieke info)\n• **HOOFD**: 'voetbal is wereldwijd populair' (algemene rode draad)\nDe hoofdgedachte staat boven de details — het is wat alle details ONDERSTEUNEN." },
+            { titel: "Hoe herken je een detail-val?", tekst: "Optie is een detail als:\n• Het maar over 1 alinea gaat (geen rode draad).\n• Het een specifiek getal / naam / feit is.\n• Andere alinea's zeggen er niets over.\nDe hoofdgedachte dekt ALLE alinea's." },
+          ],
+          woorden: [
+            { woord: "detail", uitleg: "Klein specifiek feit binnen tekst." },
+            { woord: "rode draad", uitleg: "Het thema dat door alle alinea's loopt." },
+          ],
+          theorie: "Cito-truc detail vs hoofdgedachte: lees elke optie + vraag 'klopt dit voor de HELE tekst, of slechts 1 zin?'. Als alleen voor 1 zin → detail. Als voor hele tekst → hoofdgedachte.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over fietsen. Detail: 'Mijn oom fietst 20 km'. Hoofd: 'fietsen is gezond'. De hoofd dekt de hele tekst, de detail is 1 anekdote." },
+            { type: "stap", tekst: "Pas op: 'Wat tekst herhaalt over alle alinea's' KLINKT als de hoofdgedachte want = rode draad. Niet weggooien als afleider!" },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofd = ALLE alinea's. Detail = 1 alinea / 1 zin. Detail-opties zijn val-strikken bij Cito." }],
+          niveaus: {
+            basis: "Een detail uit de tekst is GEEN hoofdgedachte. = A.",
+            simpeler: "Detail = klein stukje uit 1 zin. Hoofdgedachte = rode draad door HELE tekst. = A.",
+            nogSimpeler: "Detail = A (geen hoofdgedachte).",
+          },
+        },
       },
     ],
   },
@@ -196,7 +240,29 @@ const steps = [
         q: "Tekst: 'Apen zijn slim. Ze gebruiken stokken om termieten uit holen te halen. In Afrika is dit gezien bij chimpansees.'\n\n**Hoofdgedachte**?",
         options: ["Apen zijn slim — ze gebruiken gereedschap","Termieten leven in holen","Chimpansees komen uit Afrika","Stokken zijn handig"],
         answer: 0,
-        wrongHints: [null,"Detail.","Detail.","Detail."],
+        wrongHints: [null,"Klopt — slimme apen is rode draad, stokken-truc is bewijs.","Termieten zijn detail in voorbeeld, niet hoofd.","Detail over chimpansees specifiek, niet hoofd.","Stokken zijn middel in het voorbeeld, niet de hoofdgedachte zelf."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoek de rode draad", tekst: "3 zinnen:\n1. *Apen zijn slim*\n2. *Ze gebruiken stokken om termieten te halen*\n3. *In Afrika gezien bij chimpansees*\n→ Wat is hier het thema? **Apen + slim = gereedschap gebruiken**." },
+            { titel: "Zin 1 = hoofdgedachte expliciet", tekst: "Vaak doet de schrijver het werk al: **zin 1 IS de hoofdgedachte**. *'Apen zijn slim'* — alle volgende zinnen zijn BEWIJS daarvoor." },
+            { titel: "Andere opties zijn details", tekst: "• 'Termieten leven in holen' — feit binnen zin 2, geen rode draad.\n• 'Chimpansees komen uit Afrika' — feit binnen zin 3.\n• 'Stokken zijn handig' — middel in het bewijs.\nGeen van deze dekt 'apen + slim' (de rode draad)." },
+          ],
+          woorden: [
+            { woord: "topic-sentence", uitleg: "Eerste zin van alinea — vaak de hoofdgedachte." },
+            { woord: "bewijs / voorbeeld", uitleg: "Concrete details die de hoofdgedachte ondersteunen." },
+          ],
+          theorie: "Cito-truc lees-strategie: lees ZIN 1 eerst. Vaak is dat al de hoofdgedachte. Daarna check je: ondersteunen de andere zinnen die uitspraak? Zo ja → bevestigd.",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Ze spelen graag.'* → zin 1 = hoofdgedachte. Andere zinnen = bewijs." },
+            { type: "stap", tekst: "*'Plastic is een probleem. 8 miljoen ton per jaar in zee. Dieren stikken erin.'* → zin 1 = hoofdgedachte. Cijfers = bewijs." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eerste zin vaak = topic-sentence = hoofdgedachte. Andere zinnen = bewijs/voorbeeld." }],
+          niveaus: {
+            basis: "Apen zijn slim — ze gebruiken gereedschap. = A.",
+            simpeler: "Zin 1 zegt 'apen zijn slim'. Zin 2-3 bewijzen dat (stokken-truc). Dat is de hoofdgedachte. = A.",
+            nogSimpeler: "Apen slim = A.",
+          },
+        },
       },
       {
         q: "Welke zin is een **bijzaak** in een tekst over 'gezond eten'?",
