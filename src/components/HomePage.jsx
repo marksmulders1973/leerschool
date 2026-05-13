@@ -1030,6 +1030,29 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   );
                 })}
               </div>
+              {/* "Nieuw hier?"-link → hub naar landing pages (Optie 1a uit
+                  agents-review 2026-05-13). Eén rustige zin ipv 4 keyword-links;
+                  voldoet aan "rustige bijlesdocent"-identiteit + houdt
+                  twijfelaars op het domein. Bestemming = /leren-15-minuten.html
+                  die als hub onderaan naar 6 specifieke landing pages linkt. */}
+              <a
+                href="/leren-15-minuten.html"
+                className="lk-content-wide"
+                style={{
+                  display: "block",
+                  textAlign: "center",
+                  padding: "8px 12px",
+                  marginBottom: 10,
+                  color: "rgba(255,255,255,0.55)",
+                  fontFamily: "var(--font-body)",
+                  fontSize: 13,
+                  textDecoration: "none",
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.55)"; }}
+              >
+                Nieuw hier? Lees in 1 minuut hoe Leerkwartier werkt →
+              </a>
               {/* Rustige ouder-link direct onder de rol-tegels (audit 2 Q4):
                   ouders willen vóór de drukke ticker/scoreborden weten wat
                   Leerkwartier doet en wat met data gebeurt. Subtiele knop,

@@ -133,6 +133,13 @@
     .back{display:inline-block;margin-top:32px;color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px}
     .back:hover{color:#fff}
     .disambig{font-size:13px;color:rgba(255,255,255,0.5);font-style:italic;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08)}
+    .topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:16px 0 24px}
+    @media(max-width:560px){.topic-grid{grid-template-columns:1fr}}
+    .topic-card{display:flex;flex-direction:column;gap:4px;padding:14px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.10);border-radius:12px;text-decoration:none;color:#fff;transition:background 0.15s,border-color 0.15s,transform 0.15s}
+    .topic-card:hover{background:rgba(0,212,255,0.08);border-color:rgba(0,212,255,0.35);transform:translateY(-2px)}
+    .topic-emoji{font-size:22px;line-height:1}
+    .topic-title{font-size:15px;font-weight:700;color:#fff}
+    .topic-sub{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.4}
   </style>
 </head>
 <body>
@@ -223,6 +230,42 @@
     </details>
 
     <a class="cta" href="/">🌟 Begin nu jouw eerste leerkwartier</a>
+
+    <h2>Specifieke onderwerpen</h2>
+    <p>Wil je dieper op een specifiek onderwerp ingaan? Hieronder de belangrijkste oefen-routes per onderdeel:</p>
+
+    <div class="topic-grid">
+      <a href="/doorstroomtoets-oefenen.html" class="topic-card">
+        <div class="topic-emoji">📘</div>
+        <div class="topic-title">Doorstroomtoets oefenen</div>
+        <div class="topic-sub">Hoofdpagina · groep 7-8 · alles in 15 min/dag</div>
+      </a>
+      <a href="/cito-toets-oefenen.html" class="topic-card">
+        <div class="topic-emoji">🎯</div>
+        <div class="topic-title">Cito-toets oefenen</div>
+        <div class="topic-sub">Voor groep 6, 7 en 8 · 'Cito' = nu 'Doorstroomtoets'</div>
+      </a>
+      <a href="/begrijpend-lezen-doorstroomtoets.html" class="topic-card">
+        <div class="topic-emoji">📖</div>
+        <div class="topic-title">Begrijpend lezen</div>
+        <div class="topic-sub">~50% van Cito-score · 4 tekstsoorten + 4 vraagtypen</div>
+      </a>
+      <a href="/rekenen-doorstroomtoets.html" class="topic-card">
+        <div class="topic-emoji">🧮</div>
+        <div class="topic-title">Rekenen</div>
+        <div class="topic-sub">6 domeinen · 60-70% redactiesommen</div>
+      </a>
+      <a href="/vmbo-examens-oefenen.html" class="topic-card">
+        <div class="topic-emoji">🎓</div>
+        <div class="topic-title">VMBO-examens oefenen</div>
+        <div class="topic-sub">Authentieke vragen uit examenblad.nl + voorkennis-keten</div>
+      </a>
+      <a href="/vmbo-examens-downloaden.html" class="topic-card">
+        <div class="topic-emoji">📄</div>
+        <div class="topic-title">VMBO-examens downloaden + inzien</div>
+        <div class="topic-sub">Officiële PDF's via examenblad.nl + interactief alternatief</div>
+      </a>
+    </div>
 
     <p class="disambig"><strong>Brand-context:</strong> Leerkwartier (leerkwartier.app) is een onderwijs-app van Smulsoft. Niet gerelateerd aan andere bedrijven met "Leerkwartier" in de naam (zoals Leatherbox, voorheen "Het Leerkwartier", lederwaren-groothandel).</p>
 
