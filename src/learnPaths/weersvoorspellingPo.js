@@ -33,6 +33,28 @@ const steps = [
         options: ["mm (1 mm = 1 L/m²)", "kg", "Liter", "meter"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Wel maar specifiek mm.", "Te groot."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Neerslag = water uit lucht", tekst: "**Neerslag** is alle water dat uit de lucht valt: regen, sneeuw, hagel, motregen. Meteorologen meten dit in **millimeter (mm)**." },
+            { titel: "Wat betekent 1 mm?", tekst: "1 mm regen = als alle gevallen regen op een ondergrond van 1 vierkante meter blijft liggen, is dat laagje **1 millimeter dik**. Dat is hetzelfde als **1 liter water per m²**." },
+            { titel: "Praktisch", tekst: "Een hevige regenbui = ~20-30 mm in een uur. Een normale regendag = ~5 mm. Per jaar in NL: ~850 mm (= bijna 1 meter water als je het zou stapelen)." },
+          ],
+          woorden: [
+            { woord: "mm neerslag", uitleg: "Hoogte van waterlaag (1 mm = 1 L/m²)." },
+            { woord: "regenmeter", uitleg: "Glazen buisje dat regen opvangt om mm te meten." },
+          ],
+          theorie: "Cito-tip neerslag: ALTIJD in mm. Liter zegt niets zonder oppervlak — daarom mm (universeel). Regen in mm wordt gemeten per dag of per jaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tuintje 4 m × 5 m = 20 m². Bij 10 mm regen valt er: 10 × 20 = 200 liter water in je tuin." },
+            { type: "stap", tekst: "Dak van 100 m². 5 mm regen = 500 liter water dat in regenton kan." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 1 mm = 1 L/m². Per dag = die dag. Per jaar = totaal jaar." }],
+          niveaus: {
+            basis: "Neerslag wordt gemeten in mm (millimeter).",
+            simpeler: "1 mm = 1 liter water per vierkante meter.",
+            nogSimpeler: "Regen in mm.",
+          },
+        },
       },
       {
         q: "Wat is **gemiddelde regen NL** per jaar?",
@@ -52,6 +74,29 @@ const steps = [
         options: ["Drukverschil + opwarming", "Magie", "Vulkaan", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is wind?", tekst: "**Wind** = bewegende lucht. Lucht stroomt van een gebied met HOGE druk naar een gebied met LAGE druk." },
+            { titel: "Waardoor drukverschil?", tekst: "Vooral door **opwarming door zon**. Warme lucht stijgt op (lichter) → bij grond minder druk. Koude lucht zakt → bij grond meer druk. Verschil = wind." },
+            { titel: "Weerkaart: H + L", tekst: "Op weerkaart: **H** = hogedrukgebied (mooi weer). **L** = lagedrukgebied (wolken/regen). Wind blaast altijd van H naar L." },
+          ],
+          woorden: [
+            { woord: "wind", uitleg: "Bewegende lucht door drukverschil." },
+            { woord: "hogedruk (H)", uitleg: "Veel lucht — mooi weer." },
+            { woord: "lagedruk (L)", uitleg: "Minder lucht — wolken/regen." },
+          ],
+          theorie: "Cito-feit: zon = motor van wind. Warmt aarde ongelijk op → drukverschillen → wind. Op evenaar warm = laagedruk. Bij polen koud = hogedruk.",
+          voorbeelden: [
+            { type: "stap", tekst: "Zeewind: land warmt sneller op dan zee → lucht stijgt boven land → koele zeewind blaast naar binnen." },
+            { type: "stap", tekst: "Storm = groot drukverschil = harde wind. Beaufort-schaal gebruikt om kracht aan te geven." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "H → L. Lucht altijd van hoge naar lage druk, net als water bergaf." }],
+          niveaus: {
+            basis: "Wind = drukverschil in lucht (van hoog naar laag).",
+            simpeler: "Zon warmt lucht ongelijk → drukverschil → wind.",
+            nogSimpeler: "Drukverschil = wind.",
+          },
+        },
       },
       {
         q: "Meest voorkomende **windrichting NL**?",
@@ -83,6 +128,28 @@ const steps = [
         options: ["NL-weerinstituut (De Bilt)", "Belasting", "Sport", "School"],
         answer: 0,
         wrongHints: [null, "Klopt — sinds 1854.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is KNMI?", tekst: "**KNMI** = **Koninklijk Nederlands Meteorologisch Instituut**. Sinds **1854** verantwoordelijk voor weervoorspelling + onderzoek naar klimaat in Nederland." },
+            { titel: "Waar?", tekst: "Hoofdkwartier in **De Bilt** (provincie Utrecht). Meten daar continu het weer. Daarnaast 35+ weerstations door heel NL." },
+            { titel: "Wat doet KNMI?", tekst: "1) **Weervoorspelling** (per app/web). 2) **Weeralarmen** (code geel/oranje/rood bij storm/hitte). 3) **Klimaatonderzoek**. 4) Adviseert overheid + bedrijven." },
+          ],
+          woorden: [
+            { woord: "KNMI", uitleg: "Koninklijk Nederlands Meteorologisch Instituut." },
+            { woord: "weeralarm", uitleg: "Officiële waarschuwing — code geel/oranje/rood." },
+          ],
+          theorie: "Cito-feit: KNMI gebruikt supercomputers + satellieten + weerballonnen + radar. Modellen rekenen 4x per dag wat lucht gaat doen. Voorspellingen 1-3 dagen = ~90% betrouwbaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "KNMI-app op telefoon: actueel weer + buienradar + voorspelling." },
+            { type: "stap", tekst: "Code rood = blijf binnen! Bijv. zware storm of grote sneeuwval." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "KNMI = NL-weer-officieel. De Bilt = hoofdkwartier. Sinds 1854." }],
+          niveaus: {
+            basis: "KNMI = NL-weerinstituut (De Bilt, sinds 1854).",
+            simpeler: "Officiële weer-organisatie van Nederland.",
+            nogSimpeler: "KNMI = weer-NL.",
+          },
+        },
       },
       {
         q: "Wat zijn **isobaren**?",
