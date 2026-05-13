@@ -320,6 +320,78 @@ const steps = [
           niveaus: { basis: "1,5 L. A.", simpeler: "Vloer 6×5 = 30 m². 30 m² ÷ 20 m²/L = 1,5 L verf. = A.", nogSimpeler: "1,5 = A." },
         },
       },
+      {
+        q: "Een raam **120 cm × 80 cm**. Hoeveel **glas** in m²?",
+        options: ["0,96 m²","9.600 m²","9.600 cm²","2 m²"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 120×80 = 9.600 cm² = 0,96 m² (1 m² = 10.000 cm²).","Verkeerde eenheid — cm² getal correct maar gevraagd m².","Geen omrekening gedaan naar m².","Veel te ruw geschat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: oppervlakte in cm²", tekst: "Raam-rechthoek: 120 × 80 = **9.600 cm²**." },
+            { titel: "Stap 2: omrekenen naar m²", tekst: "1 m = 100 cm dus 1 m² = 100 × 100 = **10.000 cm²**. 9.600 ÷ 10.000 = **0,96 m²**." },
+            { titel: "Cito-instinker: eenheid", tekst: "Lengte: 1 m = 100 cm. **Maar oppervlakte: 1 m² = 10.000 cm²**. Lees vraag goed — gevraagde eenheid is cruciaal." },
+          ],
+          woorden: [
+            { woord: "m² ↔ cm²", uitleg: "1 m² = 10.000 cm². Niet 100 (dat is lengte). Twee keer 100." },
+            { woord: "oppervlakte-omrekening", uitleg: "Lengte: ×/÷100. Oppervlakte: ×/÷10.000." },
+          ],
+          theorie: "Eenheids-omrekenen oppervlakte:\n• 1 m² = 10.000 cm² = 1.000.000 mm²\n• 1 ha (hectare) = 10.000 m²\n• 1 km² = 1.000.000 m² = 100 ha\n\nLengte ×100 → oppervlakte ×100×100 = ×10.000.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tafel 1 m × 50 cm = 100 × 50 = 5.000 cm² = 0,5 m²." },
+            { type: "stap", tekst: "Tuin 20 m × 15 m = 300 m² = 3.000.000 cm² = 0,03 ha." },
+          ],
+          basiskennis: [{ onderwerp: "Cito test omrekening", uitleg: "Cito test bijna altijd op eenheid bij oppervlakte-vragen. Lees of m² of cm² gevraagd." }],
+          niveaus: { basis: "0,96 m². = A.", simpeler: "120 × 80 = 9.600 cm². 9.600 ÷ 10.000 = 0,96 m². = A.", nogSimpeler: "0,96 m² = A." },
+        },
+      },
+      {
+        q: "Een **L-vormig** terras: rechthoek 8 × 4 m + uitstekend stuk 3 × 2 m. **Totale oppervlakte**?",
+        options: ["38 m²","32 m²","26 m²","48 m²"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 32 + 6 = 38 m² (twee delen samen).","Klopt voor de grote rechthoek alleen — uitstekend stuk vergeten.","Niet beide vermenigvuldigd.","Te veel — geen overlap."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Splits in eenvoudige stukken", tekst: "L-vorm = optellen van twee rechthoeken.\n• Rechthoek 1: 8 × 4 = **32 m²**\n• Uitstekend stuk: 3 × 2 = **6 m²**" },
+            { titel: "Tel op", tekst: "Totale oppervlakte = 32 + 6 = **38 m²**." },
+            { titel: "Cito-truc: complexe vormen splitsen", tekst: "Bij L-vormen, T-vormen of trapjes-vormen: knip in **rechthoeken** waarvan je oppervlakte makkelijk weet. Tel ze op. Bij INGEVOEGDE vormen (gat erin): trek af.\nAltijd schets maken op kladpapier." },
+          ],
+          woorden: [
+            { woord: "samengestelde vorm", uitleg: "Vorm die uit meerdere eenvoudige delen bestaat." },
+            { woord: "splitsen", uitleg: "Complexe vorm uiteen in rechthoeken/driehoeken om oppervlakte te berekenen." },
+          ],
+          theorie: "Samengestelde-vorm-stappenplan:\n1. Teken vorm op kladpapier\n2. Knip in eenvoudige delen (rechthoeken, driehoeken)\n3. Bereken elk deel\n4. Tel op (als toegevoegd) of trek af (als gat)\n5. Eenheid checken",
+          voorbeelden: [
+            { type: "stap", tekst: "T-vorm: bovenkant 6×2 + onderkant 4×3 = 12+12 = 24 m²." },
+            { type: "stap", tekst: "Rechthoek 10×5 met gat 3×2 = 50 − 6 = 44 m²." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 1 grote vorm", uitleg: "Complexe vormen NIET als 1 grote rechthoek behandelen — splits altijd." }],
+          niveaus: { basis: "32 + 6 = 38 m². = A.", simpeler: "Splits: groot stuk 8×4=32, uitstek 3×2=6. Samen 38 m². = A.", nogSimpeler: "38 m² = A." },
+        },
+      },
+      {
+        q: "Hoeveel **vierkante tegels van 30 cm** passen op een vloer van **3 m × 2,4 m**?",
+        options: ["80","24","800","72"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80.","Te weinig — heb je niet 1 rij × 1 rij gerekend?","Veel te veel — je rekent oppervlakte in cm² niet in tegels.","Niet — controleer 10 × 8."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Aantal tegels per richting", tekst: "Tegel = 30 cm. Vloer 3 m = 300 cm → 300 ÷ 30 = **10 tegels lang**. Vloer 2,4 m = 240 cm → 240 ÷ 30 = **8 tegels breed**." },
+            { titel: "Totaal tegels", tekst: "10 × 8 = **80 tegels** passen perfect (geen knippen nodig — gelukkig, want 3 m én 2,4 m zijn deelbaar door 30 cm)." },
+            { titel: "Cito-truc: passend rekenen", tekst: "Bij 'hoeveel tegels?'-vragen: deel beide richtingen apart door tegel-afmeting. Reken in zelfde eenheid (cm). Vermenigvuldig de twee aantallen.\n\nAlternatieve methode via oppervlakte:\n• Vloer = 3 × 2,4 = 7,2 m²\n• Tegel = 0,3 × 0,3 = 0,09 m²\n• Tegels: 7,2 ÷ 0,09 = 80 ✓" },
+          ],
+          woorden: [
+            { woord: "passen / dekken", uitleg: "Hoeveel kleine vormen samen 1 grote dekken." },
+            { woord: "deelbaar", uitleg: "Past zonder rest in/op andere afmeting." },
+          ],
+          theorie: "Twee methodes voor tegel-/vloer-vragen:\n• **Per richting**: deel lengte ÷ tegel-zijde, en breedte ÷ tegel-zijde. Vermenigvuldig.\n• **Via oppervlakte**: vloer-oppervlakte ÷ tegel-oppervlakte.\nBeide geven hetzelfde — kies wat makkelijker is.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vloer 4 × 5 m, tegels 1 m: 4 × 5 = 20 tegels." },
+            { type: "stap", tekst: "Vloer 6 × 4 m, tegels 50 cm: 12 × 8 = 96 tegels." },
+          ],
+          basiskennis: [{ onderwerp: "Eenheid uniform", uitleg: "Altijd alle afmetingen in zelfde eenheid (cm OF m), niet mixen." }],
+          niveaus: { basis: "10 × 8 = 80 tegels. = A.", simpeler: "Vloer 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80. = A.", nogSimpeler: "80 = A." },
+        },
+      },
     ],
   },
 ];
