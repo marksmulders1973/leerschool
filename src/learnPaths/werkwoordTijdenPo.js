@@ -290,6 +290,103 @@ const steps = [
           niveaus: { basis: "rende. A.", simpeler: "Rennen → stam ren → N (geen kofschip) → -de → rende. = A.", nogSimpeler: "Rende = A." },
         },
       },
+      {
+        q: "**'De jongen ____ door de regen'** ('fietsen', tegenwoordige tijd):",
+        options: ["fietst","fietste","fietsen","fiets"],
+        answer: 0,
+        wrongHints: [null,"Klopt — stam 'fiets' + t = fietst (hij-vorm tegenwoordige tijd).","Dat is verleden tijd.","Dat is de wij/zij-vorm (meervoud) of het hele werkwoord.","Dat is de ik-vorm — bij hij hoort er t bij."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: stam vinden", tekst: "Werkwoord 'fietsen' → schrap -en → **stam = fiets**." },
+            { titel: "Stap 2: TT-uitgang voor hij/zij/het", tekst: "Tegenwoordige tijd 3e persoon enkelvoud = **stam + t**. Fiets + t = **fietst**." },
+            { titel: "Cito-instinker: stam eindigt op -s", tekst: "Bij stammen op -s lijkt 'fietst' op een typfout maar IS correct. NIET 'fietsst' (geen dubbele s) en NIET 'fiets' (mist de t)." },
+          ],
+          woorden: [
+            { woord: "stam", uitleg: "Werkwoord min -en. 'Fietsen' → stam 'fiets'." },
+            { woord: "TT 3e persoon", uitleg: "Hij/zij/het + werkwoord NU = stam + t." },
+          ],
+          theorie: "TT-vervoeging:\n• Ik + stam (ik fiets)\n• Jij/hij/zij/het + stam + t (jij fietst, hij fietst)\n• Wij/jullie/zij + hele werkwoord (wij fietsen)",
+          voorbeelden: [
+            { type: "vorm", tekst: "Werken: ik werk, hij werkt, wij werken." },
+            { type: "vorm", tekst: "Lezen: ik lees, hij leest, wij lezen." },
+          ],
+          basiskennis: [{ onderwerp: "Stam-op-s instinker", uitleg: "Stam eindigend op -s, -t, -d, -x of -z: gewoon t erbij. 'Hij racet', 'hij vist', 'hij rijdt'." }],
+          niveaus: { basis: "fietst. = A.", simpeler: "'Fietsen' → stam 'fiets'. Hij-vorm = stam + t = 'fietst'. = A.", nogSimpeler: "Fietst = A." },
+        },
+      },
+      {
+        q: "**'Wij ____ vroeger naar het strand'** ('gaan', verleden tijd):",
+        options: ["gingen","ging","gaan","ginge"],
+        answer: 0,
+        wrongHints: [null,"Klopt — sterk werkwoord 'gaan': verleden meervoud = gingen.","Dat is enkelvoud (ik/hij ging).","Dat is tegenwoordige tijd.","Geen correcte vorm in Nederlands."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Sterk werkwoord: gaan", tekst: "**Gaan** is een sterk (onregelmatig) werkwoord. Verleden tijd verandert klinker: ga → ging. Geen -te/-de, geen 't-kofschip." },
+            { titel: "Meervoud: + -en", tekst: "Wij/jullie/zij verleden tijd: voeg **-en** toe aan de stam-met-veranderde-klinker. Ging → gingen." },
+            { titel: "Enkelvoud vs meervoud", tekst: "• Enkelvoud (ik/jij/hij/zij): **ging**\n• Meervoud (wij/jullie/zij): **gingen**\nVoltooid deelwoord: **gegaan**." },
+          ],
+          woorden: [
+            { woord: "sterk werkwoord", uitleg: "Klinker verandert in verleden tijd (zingen→zong, lopen→liep)." },
+            { woord: "meervoud + -en", uitleg: "Werkwoorden in meervoud krijgen -en uitgang (wij gingen, wij liepen)." },
+          ],
+          theorie: "Sterke werkwoorden: leer de 3 vormen uit hoofd (hele werkwoord — verleden enk. — voltooid deelwoord).\n• gaan — ging — gegaan\n• lopen — liep — gelopen\n• zien — zag — gezien\n• komen — kwam — gekomen",
+          voorbeelden: [
+            { type: "vorm", tekst: "Lopen verleden: ik liep, wij liepen." },
+            { type: "vorm", tekst: "Zien verleden: hij zag, zij zagen." },
+          ],
+          basiskennis: [{ onderwerp: "Top-10 sterke WW", uitleg: "Gaan, komen, zien, doen, geven, nemen, lopen, weten, vinden, blijven — onthoud deze." }],
+          niveaus: { basis: "gingen. = A.", simpeler: "Gaan is sterk: ga→ging. Wij/zij = meervoud → -en erbij = gingen. = A.", nogSimpeler: "Gingen = A." },
+        },
+      },
+      {
+        q: "**'Lisa ____ het boek gisteren uit'** ('lezen', voltooid tegenwoordige tijd):",
+        options: ["heeft gelezen","las","leest","heeft geleest"],
+        answer: 0,
+        wrongHints: [null,"Klopt — voltooid TT: hebben + voltooid deelwoord 'gelezen'.","Dat is verleden tijd (VT), niet voltooid (VTT).","Dat is tegenwoordige tijd.","Niet correct — 'gelezen' is voltooid deelwoord (sterk ww), niet 'geleest'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke tijd is gevraagd?", tekst: "Voltooid tegenwoordige tijd (VTT) = **hebben/zijn + voltooid deelwoord**. Bij 'lezen': heeft + gelezen." },
+            { titel: "Voltooid deelwoord van 'lezen'", tekst: "Lezen is een **sterk werkwoord** → voltooid deelwoord = **gelezen** (klinker verandert). NIET 'geleest' (dat zou bij zwak ww horen)." },
+            { titel: "Cito-truc 3 tijden onderscheiden", tekst: "• Tegenwoordig: 'leest'\n• Verleden: 'las'\n• Voltooid: 'heeft gelezen'\nElke tijd heeft eigen vorm — lees vraag goed welke wordt gevraagd." },
+          ],
+          woorden: [
+            { woord: "VTT", uitleg: "Voltooid tegenwoordige tijd. Hulpwerkwoord (heeft/is) + voltooid deelwoord (ge...d/t/sterk)." },
+            { woord: "voltooid deelwoord", uitleg: "Werkwoordsvorm bij 'hebben/zijn'. Zwak: ge-stam-t/d. Sterk: klinker verandert vaak." },
+          ],
+          theorie: "Voltooid deelwoord-vorming:\n• **Zwak**: ge- + stam + -t/-d (gewerkt, gehoord)\n• **Sterk**: ge- + klinker verandert (gelezen, gezongen, gevangen)\nKijk altijd in lijst onregelmatige werkwoorden als je twijfelt.",
+          voorbeelden: [
+            { type: "vorm", tekst: "Werken (zwak): heeft gewerkt." },
+            { type: "vorm", tekst: "Zingen (sterk): heeft gezongen." },
+            { type: "vorm", tekst: "Schrijven (sterk): heeft geschreven." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-instinker", uitleg: "'Geleest' bestaat NIET. Lezen is sterk → gelezen." }],
+          niveaus: { basis: "heeft gelezen. = A.", simpeler: "VTT = hebben + voltooid deelwoord. Lezen sterk → gelezen. 'Lisa heeft gelezen'. = A.", nogSimpeler: "Heeft gelezen = A." },
+        },
+      },
+      {
+        q: "**'De hond ____ de bal'** ('vangen', tegenwoordige tijd):",
+        options: ["vangt","vangd","vang","vingt"],
+        answer: 0,
+        wrongHints: [null,"Klopt — stam 'vang' + t = vangt.","Niet correct — TT-uitgang is t, niet d. Schrijf zoals je hoort.","Dat is de ik-vorm (ik vang) — hij hoort er t bij.","Niet correct — geen klinkerwissel in TT (alleen in verleden)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stam = vang", tekst: "Vangen → schrap -en → stam 'vang'. (Niet 'vang' met i — die klinkerwissel komt pas in verleden tijd: 'ving'.)" },
+            { titel: "TT 3e persoon: stam + t", tekst: "Hij/zij/de hond + stam + t = vang + t = **vangt**." },
+            { titel: "Cito-spelregel: t of d?", tekst: "TT 3e persoon = ALTIJD t aan het eind. Bij stam op -d zoals 'rijd-en' → 'hij rijdt' (twee letters: de stam-d + extra t). Bij vangt: stam eindigt op -g, dus alleen t erbij." },
+          ],
+          woorden: [
+            { woord: "TT-uitgang", uitleg: "3e persoon tegenwoordige tijd: altijd -t. Geen -d, geen -de." },
+            { woord: "klinkerwissel", uitleg: "Sommige sterke ww veranderen klinker in verleden tijd, NIET in TT." },
+          ],
+          theorie: "TT geheugensteun: **'t kofschip' geldt voor VERLEDEN tijd. In TT is het simpeler: stam + t (geen kofschip-check).",
+          voorbeelden: [
+            { type: "vorm", tekst: "Vangen TT: ik vang, hij vangt, wij vangen." },
+            { type: "vorm", tekst: "Vangen VT (verleden): ik ving, wij vingen." },
+          ],
+          basiskennis: [{ onderwerp: "TT vs VT", uitleg: "In TT geen klinkerwissel. Pas in VT verandert 'a' van vangen naar 'i' (ving)." }],
+          niveaus: { basis: "vangt. = A.", simpeler: "Vangen → stam 'vang'. Hij-vorm TT = stam + t = vangt. = A.", nogSimpeler: "Vangt = A." },
+        },
+      },
     ],
   },
 ];
