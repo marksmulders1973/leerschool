@@ -74,6 +74,28 @@ const steps = [
         options: ["Zoogdier", "Vogel", "Reptiel", "Insect"],
         answer: 0,
         wrongHints: [null, "Klopt — heeft haren, zoogt jongen.", "Vliegt, maar geen vogel — geen veren.", "Heeft geen schubben.", "Te groot."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vliegt ≠ vogel", tekst: "Veel mensen denken: 'het vliegt, dus het is een vogel'. **Niet waar!** De groep waarbij een dier hoort, hangt niet af van wat het kan (vliegen/zwemmen), maar van **lichaams-eigenschappen**." },
+            { titel: "Kenmerken van een vleermuis", tekst: "Een vleermuis heeft:\n• **Haren / vacht** (geen veren!)\n• **Baart levende jongen** (geen eieren!)\n• **Zoogt jongen met melk** (typische zoogdier-eigenschap!)\n→ Dat zijn allemaal zoogdier-kenmerken." },
+            { titel: "Het 'wapen' van een vleermuis", tekst: "Vleermuizen hebben **gewrichten in hun vinger** waaraan een dunne huid zit — een vleugel-huid. Geen veren. De vleugel is dus een soort uitgestrekte hand. Echte vogels hebben veren-vleugels." },
+          ],
+          woorden: [
+            { woord: "zoogdier", uitleg: "Dier dat jongen met melk zoogt + haren heeft." },
+            { woord: "vleermuis", uitleg: "Enig zoogdier dat ECHT kan vliegen (eekhoorns zweven alleen)." },
+          ],
+          theorie: "Cito-strikvraag: 'Vliegt het + heeft het veren?' = vogel. 'Vliegt het + heeft het haar + melk?' = zoogdier (vleermuis). 'Vliegt het + heeft het 6 poten?' = insect.",
+          voorbeelden: [
+            { type: "stap", tekst: "Andere dieren die misleiden: walvis (zee, lijkt vis) = zoogdier. Pinguïn (zwemt) = vogel. Hagedis (lijkt slang) = reptiel maar mét poten." },
+            { type: "stap", tekst: "Vleermuizen zien in donker met echo's (sonar) — uniek voor zoogdieren." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vier zoogdier-kenmerken: haren, warm bloed, levende jongen, melk-zogen. Heeft dier minstens deze? → zoogdier, hoe vreemd het ook lijkt." }],
+          niveaus: {
+            basis: "Vleermuis = zoogdier. = A.",
+            simpeler: "Vleermuis heeft HAREN + zoogt jongen met MELK = zoogdier. Vliegen maakt geen verschil. = A.",
+            nogSimpeler: "Zoogdier = A.",
+          },
+        },
       },
       {
         q: "Een **walvis** is een ... ?",
@@ -139,6 +161,28 @@ const steps = [
         options: ["Pinguïn", "Mus", "Adelaar", "Kolibrie"],
         answer: 0,
         wrongHints: [null, "Klopt — pinguïn zwemt heel goed maar vliegt niet.", "Mus vliegt.", "Adelaar vliegt.", "Kolibrie vliegt (hovert zelfs)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Niet alle vogels vliegen", tekst: "We denken vaak dat **alle vogels vliegen**, maar dat is niet zo. Sommige vogels zijn vogels zónder vlieg-vermogen. Hun vleugels zijn aangepast voor iets anders, of veel te klein." },
+            { titel: "Pinguïn = zwem-vogel", tekst: "De **pinguïn** is een vogel: hij heeft VEREN, legt EIEREN, heeft een SNAVEL. Maar zijn vleugels zijn **flippers** geworden — perfect voor onder-water-zwemmen, niet voor vliegen." },
+            { titel: "Andere niet-vliegende vogels", tekst: "• **Struisvogel** — te groot/zwaar om te vliegen, maar rent ~70 km/u.\n• **Kiwi** — kleine NZ-vogel, vleugels piepklein.\n• **Emoe** + **kasuaris** (Australië/NG)." },
+          ],
+          woorden: [
+            { woord: "pinguïn", uitleg: "Vogel die zwemt i.p.v. vliegt." },
+            { woord: "flipper", uitleg: "Aangepaste vleugel om mee te zwemmen." },
+          ],
+          theorie: "Cito-truc — herken een vogel aan **VEREN + SNAVEL + EIEREN**. Dat een dier vliegt is NIET nodig om vogel te zijn. Pinguïn voldoet aan alle drie de kenmerken → vogel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Kolibrie kan ZWEEFVLIEGEN (op één plek hangen in de lucht) — uniek in vogel-wereld." },
+            { type: "stap", tekst: "Mus + adelaar = klassieke vlieg-vogels. Kolibrie = vlieg-meester. Pinguïn = zwem-meester. Allemaal vogels." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Sla de vraag andersom op: van de 4 opties is er ÉÉN die niet vliegt. Welke ken je als zwem-dier of grond-dier? Pinguïn → zwemt." }],
+          niveaus: {
+            basis: "Pinguïn = niet-vliegende vogel. = A.",
+            simpeler: "Pinguïns leven op Antarctica en duiken in zee om vis te vangen. Vleugels = flippers, niet vlieg-vleugels. = A.",
+            nogSimpeler: "Pinguïn = A.",
+          },
+        },
       },
     ],
   },
@@ -187,6 +231,28 @@ const steps = [
         options: ["8", "6", "4", "2"],
         answer: 0,
         wrongHints: [null, "Klopt — daarom is spin geen insect.", "Insecten hebben 6.", "Zoogdieren hebben 4.", "Vogels/mensen hebben 2."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel de poten van een spin", tekst: "Een spin heeft **8 poten** — altijd. Tel ze de volgende keer dat je een spin ziet: 4 links + 4 rechts = 8. Dit is HET kenmerk dat spinnen onderscheidt." },
+            { titel: "Spin = GEEN insect!", tekst: "Veel mensen noemen spinnen 'insecten', maar dat klopt niet. **Insecten = 6 poten + 3 lichaamsdelen**. Spinnen hebben **8 poten + 2 lichaamsdelen**. Daarom horen spinnen bij de **spinachtigen** (ander dier-groep)." },
+            { titel: "Andere spinachtigen", tekst: "Niet alleen spinnen: ook **schorpioenen** (8 poten), **hooiwagens** (8 poten + lange poten), **mijten + teken** (klein, 8 poten). Alle spinachtigen = 8 poten." },
+          ],
+          woorden: [
+            { woord: "spinachtige", uitleg: "Dier-groep met 8 poten — spin, schorpioen, mijt, teek." },
+            { woord: "insect", uitleg: "Dier-groep met 6 poten + 3 lichaamsdelen." },
+          ],
+          theorie: "Cito-truc voor 'insect of niet' — tel poten. 6 = insect. 8 = spinachtige (geen insect). 0 of veel meer = iets anders (worm, slak, duizendpoot).",
+          voorbeelden: [
+            { type: "stap", tekst: "Bij, vlieg, mier, kever, vlinder = 6 poten = insect. Spin, schorpioen = 8 poten = spinachtige." },
+            { type: "stap", tekst: "Duizendpoot? Lijkt 1000 poten maar heeft er meestal 30-300. Hoort bij 'veelpotigen', ook geen insect." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Insect of spin? Tel poten. 6 = insect (bij/vlinder/mier). 8 = spin (spinachtige). Onthoud: 6 = insect." }],
+          niveaus: {
+            basis: "8 poten. = A.",
+            simpeler: "Spinnen hebben 8 poten (4 links + 4 rechts). Daarom zijn ze geen insect (insecten = 6). = A.",
+            nogSimpeler: "8 = A.",
+          },
+        },
       },
       {
         q: "Welke is een **reptiel**?",
