@@ -122,6 +122,28 @@ const steps = [
         options: ["Vloeibaarheid", "Vast", "Vloeibaar", "Gas"],
         answer: 0,
         wrongHints: [null, "Klopt — 'vloeibaarheid' is geen toestand, het is een eigenschap.", "Wel een toestand.", "Wel een toestand.", "Wel een toestand."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op de vraag — NIET!", tekst: "Cito-strikvraag: zoek het ene woord dat **GEEN** toestand is. Drie van de vier zijn toestanden — eentje is anders." },
+            { titel: "De 3 toestanden van stoffen", tekst: "Een stof kan zijn:\n• **Vast** (bv. ijs, hout)\n• **Vloeibaar** (bv. water, melk)\n• **Gas** (bv. lucht, stoom)\nMeer dan deze 3 zijn er niet voor PO." },
+            { titel: "Wat is 'vloeibaarheid'?", tekst: "**Vloeibaarheid** is geen toestand maar een **eigenschap** — hoe makkelijk iets vloeit (water = veel vloeibaarheid, honing = weinig). Pas op met dit soort -heid-woorden, het zijn geen toestanden." },
+          ],
+          woorden: [
+            { woord: "toestand", uitleg: "Vorm waarin een stof zit: vast, vloeibaar of gas." },
+            { woord: "eigenschap", uitleg: "Kenmerk van een stof (bv. kleur, vloeibaarheid, gewicht)." },
+          ],
+          theorie: "Cito-truc: woorden eindigend op **-heid** of **-baarheid** zijn vaak **eigenschappen**, niet toestanden. Vloeibaarheid, hardheid, dichtheid = eigenschappen. Vast/vloeibaar/gas = toestanden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Hardheid van een steen = eigenschap. De steen-toestand = vast." },
+            { type: "stap", tekst: "Stroperigheid van honing = eigenschap. Toestand = vloeibaar." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "3 toestanden onthoud: V-V-G (vast-vloeibaar-gas). Komt er een 4e woord bij dat eindigt op -heid? = eigenschap, niet toestand." }],
+          niveaus: {
+            basis: "Vloeibaarheid (geen toestand, maar eigenschap). = A.",
+            simpeler: "3 toestanden: vast / vloeibaar / gas. 'Vloeibaarheid' is een eigenschap, geen toestand. = A.",
+            nogSimpeler: "Vloeibaarheid = A.",
+          },
+        },
       },
     ],
   },
@@ -202,6 +224,28 @@ const steps = [
         options: ["Koolstofdioxide (CO₂)", "Zuurstof", "Stikstof", "Helium"],
         answer: 0,
         wrongHints: [null, "Klopt — planten gebruiken CO₂ voor fotosynthese.", "Wij ademen zuurstof in, planten geven juist zuurstof af.", "Stikstof is grootste deel lucht maar niet wat planten gebruiken.", "Helium is geen onderdeel van fotosynthese."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Mens en plant zijn elkaars 'maatje'", tekst: "Mensen + dieren **ademen zuurstof IN** en **CO₂ UIT**.\nPlanten doen het **omgekeerd**: **CO₂ IN** en **zuurstof UIT** (via fotosynthese, met zonlicht). We hebben elkaar dus nodig." },
+            { titel: "Fotosynthese in 1 regel", tekst: "Plant + **CO₂** + water + zonlicht → **zuurstof** + suiker (energie voor de plant). De plant maakt eigen voedsel + geeft zuurstof terug aan de lucht." },
+            { titel: "Waarom dit belangrijk is", tekst: "Zonder planten = geen verse zuurstof. Daarom is **regenwoud** zo belangrijk voor de aarde — een soort 'longen' van de planeet. Cito-feit: bomen + planten = onmisbaar voor lucht." },
+          ],
+          woorden: [
+            { woord: "fotosynthese", uitleg: "Proces waarbij planten zonlicht omzetten in energie + zuurstof maken." },
+            { woord: "CO₂", uitleg: "Koolstofdioxide = kool-stof-di-oxide, het gas dat mensen uitademen." },
+          ],
+          theorie: "Cito-truc lucht-cyclus: mens **IN: O₂ UIT: CO₂** ↔ plant **IN: CO₂ UIT: O₂**. Geef-en-neem-relatie. Onthoud: 'planten ademen ANDERSOM dan wij'.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vis ademt zuurstof OPGELOST in water (via kieuwen). Planten in water (waterplanten) maken die zuurstof — daarom belang van waterplanten in aquarium." },
+            { type: "stap", tekst: "Bij donker stopt fotosynthese (geen zonlicht), maar planten ademen dan ook zuurstof in (zoals wij). Netto: meer zuurstof geven dan nemen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Mens-plant = elkaars tegenpolen in lucht-gebruik. Wij uit, plant in (CO₂). Plant uit, wij in (O₂). Win-win." }],
+          niveaus: {
+            basis: "Koolstofdioxide (CO₂). = A.",
+            simpeler: "Wij ademen CO₂ UIT. Planten ademen die CO₂ juist IN voor fotosynthese. = A.",
+            nogSimpeler: "CO₂ = A.",
+          },
+        },
       },
     ],
   },
@@ -218,6 +262,28 @@ const steps = [
         options: ["Vast → vloeibaar", "Vloeibaar → vast", "Gas → vloeibaar", "Vloeibaar → gas"],
         answer: 0,
         wrongHints: [null, "Klopt — bv. ijs → water.", "Dat is stollen.", "Dat is condenseren.", "Dat is verdampen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Smelten = vast → vloeibaar", tekst: "**Smelten** betekent dat iets dat eerst **vast** was, **vloeibaar** wordt. Door warmte. Bv: ijsblokje smelt in je hand tot water." },
+            { titel: "Andere bekende voorbeelden", tekst: "• **Boter** smelt in een hete pan (vaste klont → vloeibare boter)\n• **Chocola** smelt in je mond (vast → vloeibaar)\n• **IJs** smelt in de zon (vast water → vloeibaar water)\n• **Metaal** kan smelten bij heel hoge temperaturen (smederij)." },
+            { titel: "Niet verwarren met andere overgangen", tekst: "Smelten = VAST naar VLOEIBAAR. Andere namen:\n• **Stollen** = vloeibaar → vast (water bevriest)\n• **Verdampen** = vloeibaar → gas (water → stoom)\n• **Condenseren** = gas → vloeibaar (stoom op koude ruit)." },
+          ],
+          woorden: [
+            { woord: "smelten", uitleg: "Vast → vloeibaar (door warmte)." },
+            { woord: "stollen", uitleg: "Vloeibaar → vast (door kou). Tegenovergestelde van smelten." },
+          ],
+          theorie: "Cito-truc overgangen-tabel (uit het hoofd!):\n• vast→vloeibaar = **smelten**\n• vloeibaar→vast = **stollen**\n• vloeibaar→gas = **verdampen**\n• gas→vloeibaar = **condenseren**\n6 overgangen totaal (+ sublimeren + desublimeren), maar deze 4 zijn de belangrijkste.",
+          voorbeelden: [
+            { type: "stap", tekst: "Lood smelt bij 327°C. IJs bij 0°C. Boter bij ~32°C (lichaamswarmte is bijna genoeg)." },
+            { type: "stap", tekst: "Smelten gebeurt altijd MET warmte. Geen warmte erbij = blijft vast." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Smelten = WARMTE. Stollen = KOU. Beide gaan tussen vast/vloeibaar. Onthoud: warmte → vloeit, kou → bevriest." }],
+          niveaus: {
+            basis: "Vast → vloeibaar. = A.",
+            simpeler: "IJs (vast) wordt water (vloeibaar) = smelten. Vast → vloeibaar. = A.",
+            nogSimpeler: "Vast → vloeibaar = A.",
+          },
+        },
       },
       {
         q: "Wat is **condenseren**?",
