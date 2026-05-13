@@ -262,6 +262,28 @@ const steps = [
         options: ["Bos / park", "Stad", "Water", "Berg"],
         answer: 0,
         wrongHints: [null, "Klopt — groen = vegetatie.", "Stad = grijs/oranje.", "Water = blauw.", "Berg = bruin."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kaartkleuren = symbolen", tekst: "Op landkaarten heeft elke kleur een vaste betekenis. Hierdoor herken je in één oogopslag wat er staat." },
+            { titel: "Groen = natuur", tekst: "Groene gebieden zijn bossen, parken, weilanden, natuurgebieden. Denk: 'groen = planten'." },
+            { titel: "Andere kleuren", tekst: "Blauw = water (zee, meer, rivier). Bruin = bergen / heuvels. Grijs of oranje = stad / bebouwing. Geel = strand of woestijn." },
+          ],
+          woorden: [
+            { woord: "vegetatie", uitleg: "Planten, bomen, gras." },
+            { woord: "legenda", uitleg: "Op kaart staat een legenda die ALLE kleuren uitlegt." },
+          ],
+          theorie: "Cito-tip: bij een kaart-vraag eerst de LEGENDA bekijken. Daar staan alle gebruikte kleuren en symbolen netjes uitgelegd.",
+          voorbeelden: [
+            { type: "stap", tekst: "Een groot groen gebied = waarschijnlijk bos of natuurpark." },
+            { type: "stap", tekst: "Een lange blauwe lijn = rivier. Een grote blauwe vlek = meer of zee." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: blauw = water, groen = planten, bruin = bergen, grijs = stad." }],
+          niveaus: {
+            basis: "Groene vlek = bos of park (vegetatie).",
+            simpeler: "Groen = planten/bomen op kaart.",
+            nogSimpeler: "Groen = natuur.",
+          },
+        },
       },
       {
         q: "Welk kaart-element vertelt **hoe lang 1 cm in echt** is?",
@@ -286,6 +308,28 @@ const steps = [
         options: ["50 m", "500 m", "2,5 km", "50 cm"],
         answer: 0,
         wrongHints: [null, "Klopt — 2 × 2500 = 5000 cm = 50 m.", "Te veel.", "Veel te veel.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: cm op kaart × schaal", tekst: "Schaal 1:2.500 betekent: 1 cm op kaart = 2.500 cm in echt. 2 cm op kaart = 2 × 2.500 = **5.000 cm**." },
+            { titel: "Stap 2: cm naar m", tekst: "100 cm = 1 m. Dus 5.000 cm ÷ 100 = **50 m**." },
+            { titel: "Cito-check: realistisch?", tekst: "Een stadsplattegrond toont vaak een paar straten. 50 m = ongeveer een straat-lengte → realistisch! 50 cm of 2,5 km zouden raar zijn." },
+          ],
+          woorden: [
+            { woord: "stadsplattegrond", uitleg: "Kaart van een stad, hele kleine schaal voor detail." },
+            { woord: "schaal 1:2.500", uitleg: "1 cm op kaart = 25 m in werkelijkheid." },
+          ],
+          theorie: "Schaal-omrekenen: cm-op-kaart × schaal-getal = werkelijk in cm. Daarna delen door 100 (→ m) of 100.000 (→ km). Werkt voor elke schaal-vraag.",
+          voorbeelden: [
+            { type: "stap", tekst: "1:1.000, 3 cm op kaart → 3 × 1.000 = 3.000 cm = 30 m." },
+            { type: "stap", tekst: "1:5.000, 4 cm op kaart → 4 × 5.000 = 20.000 cm = 200 m." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij stadsplattegrond (kleine schaalgetallen) wordt het al snel meters. Bij landkaart (grote schaalgetallen) wordt het kilometers." }],
+          niveaus: {
+            basis: "Kaart-cm × schaal-getal = werkelijk in cm. Daarna omrekenen.",
+            simpeler: "2 × 2.500 = 5.000 cm = 50 m.",
+            nogSimpeler: "Maal de schaal, dan omrekenen.",
+          },
+        },
       },
     ],
   },
@@ -301,6 +345,28 @@ const steps = [
         options: ["donderdag", "maandag", "vrijdag", "woensdag"],
         answer: 0,
         wrongHints: [null, "Klopt — 8 is laagst.", "10 is meer dan 8.", "20 is meest, niet minst.", "15 is niet laagst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: lees alle getallen", tekst: "Tabel: ma 10, di 12, wo 15, do **8**, vr 20. Vijf getallen om te vergelijken." },
+            { titel: "Stap 2: zoek de laagste", tekst: "'Minst' = de KLEINSTE waarde. Vergelijk: 10 vs 12 vs 15 vs **8** vs 20. De 8 is het laagst." },
+            { titel: "Stap 3: bij welke dag hoort 8?", tekst: "8 stond bij DONDERDAG. Dus minste = donderdag." },
+          ],
+          woorden: [
+            { woord: "minst", uitleg: "Het LAAGSTE getal — kleinste hoeveelheid." },
+            { woord: "meest", uitleg: "Het HOOGSTE getal — grootste hoeveelheid." },
+          ],
+          theorie: "Cito-tip bij tabellen: lees eerst rustig ALLE waardes. Onderstreep ze met je vinger. Dan pas vergelijken. Onthoud goed: vraagt het 'minst' of 'meest'?",
+          voorbeelden: [
+            { type: "stap", tekst: "Cijfers: 5, 7, 3, 9. Minst = 3. Meest = 9." },
+            { type: "stap", tekst: "Bedragen: €20, €15, €8, €25. Minst = €8." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap mentaal alle getallen behalve de kleinste (bij 'minst') of grootste (bij 'meest'). Blijft 1 over." }],
+          niveaus: {
+            basis: "Minst = laagste getal vinden in tabel.",
+            simpeler: "Vergelijk: 10, 12, 15, 8, 20. Laagste = 8. Dat is donderdag.",
+            nogSimpeler: "Zoek kleinste = donderdag.",
+          },
+        },
       },
       {
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Totaal**?",
@@ -632,6 +698,28 @@ const steps = [
         options: ["Inhoudsopgave (hoofdstukken + pagina's)", "Index", "Register van auteurs", "Niets"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Index staat achterin.", "Soms maar niet standaard.", "Wel iets — inhoudsopgave."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Boek-structuur: 2 hulpmiddelen", tekst: "In een goed boek zitten 2 hulpmiddelen om iets snel te vinden:" },
+            { titel: "Voorin: inhoudsopgave", tekst: "De **inhoudsopgave** staat aan het BEGIN van het boek. Daar zie je: welke hoofdstukken er zijn + op welke pagina elk hoofdstuk begint." },
+            { titel: "Achterin: index/register", tekst: "Achterin staat de **index** (of register): een alfabetische lijst van begrippen, met de pagina-nummers waar ze worden behandeld." },
+          ],
+          woorden: [
+            { woord: "inhoudsopgave", uitleg: "Voorin — lijst van hoofdstukken met pagina." },
+            { woord: "index / register", uitleg: "Achterin — alfabetische lijst van begrippen met pagina." },
+          ],
+          theorie: "Cito-strategie: 1) hoofdstuk zoeken? → kijk in inhoudsopgave (voorin). 2) Specifiek woord/begrip zoeken? → kijk in de index (achterin).",
+          voorbeelden: [
+            { type: "stap", tekst: "Wil je hoofdstuk over 'planten'? Inhoudsopgave voorin: 'Hoofdstuk 3 — Planten ... blz. 42'." },
+            { type: "stap", tekst: "Wil je weten waar 'fotosynthese' staat? Index achterin: 'fotosynthese ... blz. 45, 78, 102'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Voorin = inhoud (per hoofdstuk). Achterin = index (alfabetisch per begrip)." }],
+          niveaus: {
+            basis: "Voorin = inhoudsopgave (hoofdstukken). Achterin = index.",
+            simpeler: "Hoofdstuk zoeken? Inhoudsopgave. Woord zoeken? Index.",
+            nogSimpeler: "Voorin = inhoud!",
+          },
+        },
       },
       {
         q: "Welk woord staat **eerder** in het woordenboek: 'kat' of 'kater'?",

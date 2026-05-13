@@ -352,6 +352,28 @@ const steps = [
         options: ["Bijzonder / zeldzaam", "Slecht", "Snel", "Saai"],
         answer: 0,
         wrongHints: [null, "Klopt — 'uit-zondering' = niet normaal.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Splits het woord", tekst: "Uitzonderlijk = uit + zonderlijk. 'Uitzondering' is iets wat NIET de gewone regel volgt. Dus uitzonderlijk = niet gewoon." },
+            { titel: "Past bij 'prestatie'?", tekst: "Een uitzonderlijke prestatie = een prestatie die zelden gebeurt, heel knap. Positief woord." },
+            { titel: "Synoniemen", tekst: "Uitzonderlijk = bijzonder, zeldzaam, opmerkelijk, indrukwekkend." },
+          ],
+          woorden: [
+            { woord: "uitzonderlijk", uitleg: "Niet gewoon, zeldzaam, bijzonder." },
+            { woord: "uitzondering", uitleg: "Iets wat niet de gewone regel volgt." },
+          ],
+          theorie: "Cito-truc: woord opdelen. Vaak zit de betekenis in een deel ('uit-zonder-lijk' = 'niet zoals anders').",
+          voorbeelden: [
+            { type: "stap", tekst: "Een uitzonderlijke leerling = bijzonder slimme leerling." },
+            { type: "stap", tekst: "Uitzonderlijk warm weer = ongewoon warm." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Uitzonderlijk is POSITIEF in context (knap, mooi, zeldzaam). Niet 'slecht'." }],
+          niveaus: {
+            basis: "Uitzonderlijk = bijzonder/zeldzaam.",
+            simpeler: "Niet gewoon, knap, indrukwekkend.",
+            nogSimpeler: "Bijzonder!",
+          },
+        },
       },
       {
         q: "Welk woord betekent **hetzelfde als** **'mooi'**?",
@@ -385,6 +407,28 @@ const steps = [
         options: ["Roekeloos", "Snel", "Klein", "Stom"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet primair.", "Niet primair.", "Te algemeen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een tegenstelling?", tekst: "Een tegenstelling (antoniem) heeft de OMGEKEERDE betekenis. Voorzichtig en roekeloos = elkaars tegendeel." },
+            { titel: "Wat betekent 'voorzichtig'?", tekst: "Voorzichtig = met aandacht, langzaam, om geen ongelukken te krijgen. (Bv. voorzichtig oversteken.)" },
+            { titel: "Wat is het omgekeerde?", tekst: "Het OMGEKEERDE is: zonder nadenken, zonder oppassen. Dat heet **roekeloos**." },
+          ],
+          woorden: [
+            { woord: "voorzichtig", uitleg: "Met aandacht, om risico te vermijden." },
+            { woord: "roekeloos", uitleg: "Zonder nadenken, zonder oppassen." },
+          ],
+          theorie: "Cito-tip bij tegenstellingen: zoek het MEEST tegengesteld. 'Snel' is wel tegenovergesteld aan 'langzaam' maar voorzichtig betekent meer dan alleen langzaam.",
+          voorbeelden: [
+            { type: "stap", tekst: "Voorzichtig auto rijden vs roekeloos auto rijden." },
+            { type: "stap", tekst: "Andere tegenstellingen: vrolijk ↔ verdrietig, snel ↔ langzaam, vroeg ↔ laat." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'het OMGEKEERDE van X is...?' Niet 'iets anders dan X'." }],
+          niveaus: {
+            basis: "Voorzichtig ↔ roekeloos.",
+            simpeler: "Voorzichtig = oppassen. Roekeloos = niet oppassen.",
+            nogSimpeler: "Tegenstelling = omgekeerd.",
+          },
+        },
       },
       {
         q: "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
@@ -423,6 +467,28 @@ const steps = [
         options: ["Omdat de zon fel schijnt", "Omdat ze honger hebben", "Omdat het regent", "Omdat het avond is"],
         answer: 0,
         wrongHints: [null, "Niet in de tekst genoemd.", "De zon schijnt — niet regen.", "Niet genoemd in de tekst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat staat er ECHT in de tekst?", tekst: "De tekst zegt: 1) zon schijnt fel, 2) mensen gaan naar strand. De reden moet komen uit wat erin staat." },
+            { titel: "Verband zoeken", tekst: "Twee zinnen achter elkaar over hetzelfde onderwerp = er is meestal een verband. Mensen gaan naar het strand BECAUSE zon = mooie strand-dag." },
+            { titel: "Cito-truc: blijf in de tekst", tekst: "Antwoorden die NIET in de tekst staan (honger, regen, avond) zijn fout. Alleen wat genoemd is telt." },
+          ],
+          woorden: [
+            { woord: "tekst-vraag", uitleg: "Antwoord moet uit de tekst komen, niet uit je eigen mening." },
+            { woord: "verband", uitleg: "Waarom-vragen zoeken een oorzaak-gevolg-koppeling in de tekst." },
+          ],
+          theorie: "Cito-strategie: bij 'waarom'-vragen, zoek wat de tekst zegt als reden. Schrap antwoorden die niet in de tekst staan. Twee gerelateerde zinnen geven vaak de oorzaak.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst: 'Het regende. De wedstrijd ging niet door.' → Waarom ging wedstrijd niet door? → Omdat het regende." },
+            { type: "stap", tekst: "Tekst: 'Anna oefende veel. Ze won.' → Waarom won Anna? → Omdat ze veel oefende." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Blijf binnen wat in de tekst staat. Eigen kennis ('mensen hebben honger') is NIET het antwoord — alleen wat genoemd is." }],
+          niveaus: {
+            basis: "Zoek de reden in de tekst zelf, niet in je eigen kennis.",
+            simpeler: "Tekst zegt: zon → mensen → strand. Reden = zon.",
+            nogSimpeler: "Alleen wat erin staat telt.",
+          },
+        },
       },
       {
         q: "Wat zoek je in de **eerste of laatste alinea** van een tekst?",
