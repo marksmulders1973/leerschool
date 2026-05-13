@@ -568,6 +568,9 @@ const nederlandseStaatMaatschappijleer = {
   subject: "maatschappijleer",
   referentieNiveau: "onderbouw",
   sloThema: "Maatschappijleer — Nederlandse staatsinrichting",
+  prerequisites: [
+    { id: "politiek-democratie-po", title: "Politiek + democratie", niveau: "po-1F" },
+  ],
   intro:
     "Hoe werkt onze democratie? Tweede Kamer, Eerste Kamer, regering, Koning, Trias Politica, Grondwet en grondrechten, rechtsstaat, stemrecht, plus NL in EU/VN/NAVO. Eerste pad maatschappijleer.",
   triggerKeywords: [

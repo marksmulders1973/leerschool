@@ -524,6 +524,10 @@ const werkwoordsspellingDT = {
   subject: "spelling",
   referentieNiveau: "1F/1S",
   sloThema: "Taalverzorging — werkwoordsspelling d/t",
+  prerequisites: [
+    { id: "werkwoord-tijden-po", title: "Werkwoord-tijden", niveau: "po-1F" },
+    { id: "woordsoorten-po", title: "Woordsoorten", niveau: "po-1F" },
+  ],
   intro:
     "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t,k,f,s,ch,h,p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5-7 — examenstof.",
   triggerKeywords: [

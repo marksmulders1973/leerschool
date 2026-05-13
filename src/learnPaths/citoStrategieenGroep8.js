@@ -579,6 +579,10 @@ const citoStrategieenGroep8 = {
   // — een meta-pad over álle eind-basisschool-domeinen.
   referentieNiveau: "1F/1S",
   sloThema: "Eindtoets — alle domeinen",
+  prerequisites: [
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategieën", niveau: "po-1F/1S" },
+    { id: "schemas-stappenplannen-po", title: "Schema's en stappenplannen", niveau: "po-1F" },
+  ],
   intro:
     "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
   triggerKeywords: [

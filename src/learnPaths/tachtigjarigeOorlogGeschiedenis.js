@@ -613,6 +613,10 @@ const tachtigjarigeOorlogGeschiedenis = {
   subject: "geschiedenis",
   referentieNiveau: "onderbouw",
   sloThema: "Geschiedenis — Tijd van Ontdekkers & Hervormers (Tachtigjarige Oorlog)",
+  prerequisites: [
+    { id: "bekende-nederlanders-po", title: "Historische Nederlanders", niveau: "po-1F" },
+    { id: "tijdvakken-nederland-po", title: "Tijdvakken Nederland", niveau: "po-kerndoel" },
+  ],
   intro:
     "Hoe de Republiek der Zeven Verenigde Nederlanden ontstond uit 80 jaar oorlog tegen Spanje. Van de Beeldenstorm en Filips II's drie problemen, via Den Briel + ontzet van Leiden, tot het Plakkaat van Verlatinghe (1581) en de Vrede van Münster (1648). Met Willem van Oranje als rode draad. Examenstof CSE Geschiedenis.",
   triggerKeywords: [

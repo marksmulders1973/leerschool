@@ -489,6 +489,9 @@ const spellingOverigePo = {
   subject: "spelling",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — spelling overig",
+  prerequisites: [
+    { id: "spelling-ei-ij-au-ou", title: "Spelling ei/ij + au/ou", niveau: "po-1F" },
+  ],
   intro:
     "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Cito-stijl woordtoets. ~12 min.",
   triggerKeywords: [
