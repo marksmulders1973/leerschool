@@ -70,6 +70,29 @@ const steps = [
           niveaus: { basis: "450c ÷100 = €4,50. A.", simpeler: "100 cent = €1. 400 cent = €4. + 50 cent = €4,50. = A.", nogSimpeler: "€4,50 = A." },
         },
       },
+      {
+        q: "Welke munten samen maken **€ 1,75**?",
+        options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 25c","1 × €1 + 7 × 10c"],
+        answer: 0,
+        wrongHints: [null,"Klopt — €1 + €0,50 + €0,20 + €0,05 = €1,75.","Geen 25-cent-munt in Nederland.","Geen 25-cent-munt in Nederland.","7 × 10c = 70c, geen 75c."],
+        uitlegPad: {
+          stappen: [
+            { titel: "NL-munten kennen", tekst: "In Nederland bestaan deze munten: 1c, 2c, 5c, 10c, 20c, 50c, €1, €2. Géén 25-cent." },
+            { titel: "Combineer naar €1,75", tekst: "€1 (munt) + €0,50 (munt) + €0,20 (munt) + €0,05 (munt) = €1,75. Vier munten in totaal." },
+          ],
+          woorden: [
+            { woord: "munt", uitleg: "Metalen geldstuk. Nederland: 1c-2c-5c-10c-20c-50c-€1-€2." },
+            { woord: "biljet", uitleg: "Papieren geldstuk: €5, €10, €20, €50, €100, €200, €500." },
+          ],
+          theorie: "Geen 25-cent-munt: in Nederland gebruik je 20c + 5c = 25c (twee munten).",
+          voorbeelden: [
+            { type: "samenstellen", tekst: "€1,75 = €1 + 50c + 20c + 5c. Vier munten." },
+            { type: "samenstellen", tekst: "€3,30 = €2 + €1 + 20c + 10c. Vier munten." },
+          ],
+          basiskennis: [{ onderwerp: "Geen 25-cent", uitleg: "Soms in oude boeken nog wel; sinds invoering euro (2002) niet meer in NL." }],
+          niveaus: { basis: "€1 + 50c + 20c + 5c = €1,75. A.", simpeler: "Tel grootste munt eerst: €1. Dan 50c = €1,50. Plus 20c = €1,70. Plus 5c = €1,75. ✓ = A.", nogSimpeler: "€1 + 50 + 20 + 5 = A." },
+        },
+      },
     ],
   },
 
@@ -124,6 +147,30 @@ const steps = [
           voorbeelden: [{ type: "totaal", tekst: "Schat: 2+5+4=11. Echt: €10,50. Past." }],
           basiskennis: [{ onderwerp: "Schat eerst", uitleg: "Schatting helpt om dom-foute antwoorden uit te sluiten." }],
           niveaus: { basis: "Totaal €10,50. A.", simpeler: "Centen: 15+80+55=150 (= €1,50). Euro: 2+4+3=9. Plus de €1,50 = €10,50. = A.", nogSimpeler: "€10,50 = A." },
+        },
+      },
+      {
+        q: "**€ 2,99 + € 4,99** = ?",
+        options: ["€ 7,98","€ 6,98","€ 7,99","€ 8,98"],
+        answer: 0,
+        wrongHints: [null,"Klopt — €3+€5=€8, dan -€0,02 voor de twee 'bijna-eurootjes' = €7,98.","Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8.","Verkeerd afgerond. Cent: 99+99=198 → €1,98 → +6 = €7,98.","Te veel — schatten: 3+5=8. Antwoord net daaronder."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cito-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
+            { titel: "Correctie toepassen", tekst: "Elke 'X,99' is 1 cent minder dan X+1 hele euro's. Twee keer 'bijna-euro' = 2 cent minder. €8 − €0,02 = **€7,98**." },
+            { titel: "Of: cent-stijl", tekst: "Cent: 99 + 99 = 198 → €1,98 → onthoudje 1. Euro: 2 + 4 + 1 = 7. Antwoord €7,98. Beide trucs werken." },
+          ],
+          woorden: [
+            { woord: "bijna-rond", uitleg: "Prijzen als €X,99 of €X,98 — bijna heel getal." },
+            { woord: "winkel-truc", uitleg: "Winkels gebruiken X,99-prijzen omdat het lijkt op '€2 iets' ipv '€3'." },
+          ],
+          theorie: "Bij ',99'-prijzen: rond AF naar boven, reken in hele euro's, trek dan 1 cent per ',99' weer af. Veel sneller dan cijferen.",
+          voorbeelden: [
+            { type: "stap", tekst: "€1,99 + €2,99 = €5 − €0,02 = €4,98." },
+            { type: "stap", tekst: "€4,99 + €4,99 + €4,99 = €15 − €0,03 = €14,97." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-instinker", uitleg: "Winkel-prijzen zijn vaak X,99 om groter lijkende korting te lijken. Echte verschil is 1 cent." },],
+          niveaus: { basis: "€2,99+€4,99=€7,98. A.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98. = A.", nogSimpeler: "€7,98 = A." },
         },
       },
     ],
@@ -183,6 +230,30 @@ const steps = [
           niveaus: { basis: "20−17,40=€2,60. A.", simpeler: "2 biljetten van 10 = €20. Wisselgeld vanaf 17,40 → 18 (+0,60) → 20 (+2) = €2,60. = A.", nogSimpeler: "€2,60 = A." },
         },
       },
+      {
+        q: "Patatje **€ 2,80**, frisdrank **€ 1,75**. Je betaalt met **€ 10**. Wisselgeld?",
+        options: ["€ 5,45","€ 6,45","€ 5,55","€ 4,55"],
+        answer: 0,
+        wrongHints: [null,"Klopt — totaal €4,55, wisselgeld €5,45.","Te veel — heb je de frisdrank meegerekend?","Te veel — controleer cent-deel.","Dat is het totaal, niet het wisselgeld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: totale kosten", tekst: "Patatje + frisdrank = €2,80 + €1,75. Cent: 80+75=155 (=€1,55). Euro: 2+1+1=4. Totaal **€4,55**." },
+            { titel: "Stap 2: wisselgeld", tekst: "Betaald €10 − kosten €4,55 = wisselgeld. Vooruit-tellen: 4,55 → 5 = +0,45. Van 5 → 10 = +5. Totaal **€5,45**." },
+            { titel: "Cito-truc bij twee-stappen-vragen", tekst: "Cito gebruikt vaak vragen met 2 stappen: eerst kosten optellen, dan aftrekken van betaald bedrag. Schat eerst om grove fouten te vermijden: kosten ~€5, betaald €10, dus wisselgeld ~€5. €5,45 past." },
+          ],
+          woorden: [
+            { woord: "twee-stappen-vraag", uitleg: "Vraag waarin je eerst iets uitrekent (totaal), dan iets anders (wisselgeld)." },
+            { woord: "wisselgeld", uitleg: "Wat je TERUGKRIJGT na betalen. Betaald − prijs." },
+          ],
+          theorie: "Bij meerdere producten + wisselgeld: stappenplan altijd:\n1. Tel alle producten op = totaalkosten\n2. Trek totaalkosten af van betaalde bedrag = wisselgeld",
+          voorbeelden: [
+            { type: "stap", tekst: "Ijsje €1,80 + drinken €2,20 = €4. Betaald €5: wisselgeld €1." },
+            { type: "stap", tekst: "Boek €7,95 + pen €2,05 = €10. Betaald €10: wisselgeld €0 precies." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij Cito staan vaak meerdere producten — lees alles voor je rekent." }],
+          niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45. = A.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45. = A.", nogSimpeler: "€5,45 = A." },
+        },
+      },
     ],
   },
 
@@ -236,6 +307,30 @@ const steps = [
           voorbeelden: [{ type: "per-stuk", tekst: "A €0,50/stuk. B €0,40/stuk. B wint." }],
           basiskennis: [{ onderwerp: "Reken altijd na", uitleg: "Niet vertrouwen op intuïtie — reken het uit." }],
           niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint. A.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper. = A (= 'B').", nogSimpeler: "B goedkoper = A." },
+        },
+      },
+      {
+        q: "Pak A: **2 L melk € 2,40**. Pak B: **1 L melk € 1,30**. **Goedkoper per liter**?",
+        options: ["A","B","Hetzelfde","Te weinig info"],
+        answer: 0,
+        wrongHints: [null,"Klopt — A is €1,20/L, B is €1,30/L. A goedkoper per liter.","Andersom — A €1,20/L, B €1,30/L.","Niet hetzelfde — reken na per liter.","Wel — beide vermelden prijs én hoeveelheid."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Per liter berekenen", tekst: "A: 2 L voor €2,40 → 1 L = €2,40 ÷ 2 = **€1,20**. B: 1 L voor €1,30 → 1 L = **€1,30**." },
+            { titel: "Vergelijken", tekst: "A €1,20/L < B €1,30/L. A is **10 cent goedkoper per liter**. Hoewel A duurder TOTAAL lijkt, krijg je meer voor je geld." },
+            { titel: "Cito-instinker: hoogste totaalprijs ≠ duurste", tekst: "A kost €2,40 (hoger dan B's €1,30). Maar je krijgt 2L (dubbele hoeveelheid). Reken altijd per L of per kg om eerlijk te vergelijken." },
+          ],
+          woorden: [
+            { woord: "per liter", uitleg: "Prijs gedeeld door het aantal liters." },
+            { woord: "hoeveelheid", uitleg: "Wat je krijgt: aantal stuks, kg, liter, gram." },
+          ],
+          theorie: "Voordeel-vergelijking-stappenplan:\n1. Bepaal de eenheid (stuk / liter / 100g)\n2. Reken prijs per eenheid voor beide pakken\n3. Laagste prijs/eenheid = winnaar\n4. Negeer totaalprijs als hoeveelheden verschillen",
+          voorbeelden: [
+            { type: "per-L", tekst: "Cola: 1L €1,50 vs 2L €2,50 → 1L=€1,50, per-L bij 2L=€1,25. 2L-fles voordeliger." },
+            { type: "per-stuk", tekst: "Appel: 1 los €0,50 vs 5-pak €2,00 → per stuk €0,40. 5-pak voordeliger." },
+          ],
+          basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. Cito test of je kunt NA-rekenen." }],
+          niveaus: { basis: "A €1,20/L. B €1,30/L. A wint. = A.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter. = A.", nogSimpeler: "A goedkoper = A." },
         },
       },
     ],
@@ -324,6 +419,54 @@ const steps = [
           voorbeelden: [{ type: "stuks", tekst: "12 × 15c = 180c = €1,80. Of 12×0,15=1,80." }],
           basiskennis: [{ onderwerp: "Cent of euro", uitleg: "Beide manieren werken — kies de makkelijkste." }],
           niveaus: { basis: "12×0,15=€1,80. A.", simpeler: "12 stickers × 15 cent = 180 cent = €1,80. = A.", nogSimpeler: "€1,80 = A." },
+        },
+      },
+      {
+        q: "Anna spaart **€ 7,50 per week**. Hoeveel heeft ze **na 8 weken** gespaard?",
+        options: ["€ 60","€ 56","€ 75","€ 50"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 8 × €7,50 = €60. Slim: 8 × €7 = €56, 8 × €0,50 = €4, samen €60.","Te weinig — heb je alleen 8 × €7 gerekend, zonder de 50 cent?","Geen vermenigvuldigen — dat zou €7,50 × 10 zijn.","Te weinig — controleer met schatting (8 × €7,50 ≈ 8 × 8 = €64)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de som?", tekst: "Sparen-per-week × aantal weken = totaal. 8 weken × €7,50/week = ?" },
+            { titel: "Slim splitsen", tekst: "Splits in 2 sommen die makkelijker zijn:\n• 8 × €7 = €56 (gewone tafel)\n• 8 × €0,50 = €4 (8 halve euro's)\n• Samen: €56 + €4 = **€60**" },
+            { titel: "Of: × 0,50 = ÷ 2", tekst: "Andere truc: €7,50 = €7,50. 8 keer = 8 × 7,50. Reken: 8 × 7 = 56, dan 8 × 0,5 = 4, totaal 60. €60." },
+          ],
+          woorden: [
+            { woord: "sparen", uitleg: "Geld bewaren ipv uitgeven, vaak om iets te kopen later." },
+            { woord: "per week", uitleg: "Elke week hetzelfde bedrag." },
+          ],
+          theorie: "Bij 'per week × X weken'-sommen:\n• Splits prijs in hele euro's + cent-deel\n• Reken beide × aantal weken\n• Tel op = totaal\nGeschat: 8 × €7 ≈ €56. Antwoord moet rond €60 zijn.",
+          voorbeelden: [
+            { type: "stap", tekst: "€2,50/week × 4 weken: 4×€2=€8, 4×€0,50=€2, totaal €10." },
+            { type: "stap", tekst: "€5,25/week × 6 weken: 6×€5=€30, 6×€0,25=€1,50, totaal €31,50." },
+          ],
+          basiskennis: [{ onderwerp: "Spaardoel-rekenen", uitleg: "Cito test vaak: 'Hoe lang om €X bij elkaar te sparen?' = X ÷ weekbedrag." }],
+          niveaus: { basis: "8 × €7,50 = €60. A.", simpeler: "8 × €7 = €56. Plus 8 × €0,50 = €4. Totaal €60. = A.", nogSimpeler: "€60 = A." },
+        },
+      },
+      {
+        q: "**3 broodjes** kosten samen **€ 7,80**. Wat kost **1 broodje**?",
+        options: ["€ 2,60","€ 2,40","€ 3,80","€ 2,80"],
+        answer: 0,
+        wrongHints: [null,"Klopt — €7,80 ÷ 3 = €2,60.","Te weinig — controleer: 3 × €2,40 = €7,20, niet €7,80.","Veel te veel — dat is meer dan de helft van het totaal.","Te veel — 3 × €2,80 = €8,40, niet €7,80."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de som?", tekst: "Totaal ÷ aantal = prijs per stuk. €7,80 ÷ 3 = ?" },
+            { titel: "Slim delen", tekst: "Splits €7,80 in delen die door 3 deelbaar zijn:\n• €6,00 ÷ 3 = €2 (gewone tafel)\n• €1,80 ÷ 3 = €0,60 (18 ÷ 3 = 6, dus €0,60)\n• Samen: €2 + €0,60 = **€2,60**" },
+            { titel: "Check je antwoord", tekst: "Reken terug: 3 × €2,60 = ? Cent: 3×60=180 (=€1,80). Euro: 3×2+1=7. Totaal **€7,80** ✓ — klopt." },
+          ],
+          woorden: [
+            { woord: "per stuk", uitleg: "Wat 1 los exemplaar kost. Totaal ÷ aantal." },
+            { woord: "delen", uitleg: "Iets in gelijke stukken verdelen. €7,80 over 3 = €2,60 elk." },
+          ],
+          theorie: "Bij 'wat kost 1?'-sommen:\n• Totaal ÷ aantal = prijs per stuk\n• Splits het totaal in stukken die makkelijker te delen zijn\n• Check altijd: aantal × prijs per stuk = totaal?",
+          voorbeelden: [
+            { type: "stap", tekst: "€6,00 ÷ 4 = €1,50/stuk. Check: 4 × €1,50 = €6 ✓." },
+            { type: "stap", tekst: "€9,90 ÷ 3: splits in €9 + €0,90. €9÷3=€3, €0,90÷3=€0,30. Samen €3,30." },
+          ],
+          basiskennis: [{ onderwerp: "Check terug", uitleg: "Bij twijfel: vermenigvuldig je antwoord met het aantal. Komt het totaal eruit? Dan klopt het." }],
+          niveaus: { basis: "€7,80 ÷ 3 = €2,60. A.", simpeler: "Splits: €6 ÷ 3 = €2. €1,80 ÷ 3 = €0,60. Samen €2,60. = A.", nogSimpeler: "€2,60 = A." },
         },
       },
     ],
