@@ -27,6 +27,29 @@ const steps = [
         options: ["Schillen + grasmaaisel + eierschalen", "Plastic", "Glas", "Batterijen"],
         answer: 0,
         wrongHints: [null, "Klopt — wordt compost.", "PMD.", "Glasbak.", "KCA."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent GFT?", tekst: "**GFT** = afkorting voor **Groente, Fruit en Tuin**afval. Dit is afval dat KAN ROTTEN — biologisch materiaal." },
+            { titel: "Wat hoort erin?", tekst: "Schillen (banaan, appel), groente-resten, koffiedik, theezakjes, eierschalen, gras, bladeren, takjes. Allemaal dingen die uit de natuur komen en kunnen verteren." },
+            { titel: "Wat wordt ermee gedaan?", tekst: "GFT wordt naar een **composteerinstallatie** gebracht. Daar wordt het door bacteriën omgezet in **compost** (zwarte vruchtbare aarde). Die compost wordt gebruikt door boeren en in tuinen." },
+          ],
+          woorden: [
+            { woord: "GFT", uitleg: "Groente, Fruit en Tuin-afval." },
+            { woord: "compost", uitleg: "Verteerde GFT-resten = vruchtbare aarde." },
+            { woord: "PMD", uitleg: "Andere bak: Plastic, Metaal, Drankkartons." },
+          ],
+          theorie: "Cito-tip afvalscheiding NL: GFT (rot), PMD (plastic+metaal+drank), papier, glas, restafval. Sommige gemeenten ook batterijen + chemisch afval (KCA). Goed scheiden = minder restafval = goedkoper + groener.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bananenschil → GFT. Plastic verpakking → PMD. Glasflesje → glasbak." },
+            { type: "stap", tekst: "Niet in GFT: vleesresten (trekken ratten), kattengrit, plastic zakken (zelfs biologische)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "GFT = uit natuur = kan rotten. Plastic + glas + metaal = niet in GFT (rotten niet)." }],
+          niveaus: {
+            basis: "GFT = Groente, Fruit, Tuin — biologisch afval.",
+            simpeler: "Schillen + tuinafval = GFT (wordt compost).",
+            nogSimpeler: "Wat kan rotten = GFT.",
+          },
+        },
       },
       {
         q: "Wat is **statiegeld**?",
@@ -52,6 +75,28 @@ const steps = [
         options: ["Voorkomen (geen afval maken)", "Recyclen", "Verbranden", "Storten"],
         answer: 0,
         wrongHints: [null, "Klopt — hoogste prioriteit.", "Wel goed maar specifiek dit.", "Niet primair.", "Slechtste."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de Ladder van Lansink?", tekst: "Een **rangorde** voor afval-aanpak, bedacht door politicus **Ad Lansink** in 1979. Van **beste** (boven) naar **slechtste** (onder)." },
+            { titel: "De rangorde (boven = best)", tekst: "1) **Voorkomen** (geen afval). 2) **Hergebruiken** (zelfde product opnieuw). 3) **Recyclen** (materiaal hergebruiken). 4) **Verbranden** (energie eruit). 5) **Storten** (op vuilnisbelt — slechtste)." },
+            { titel: "Beste = niet maken", tekst: "Het ALLERBESTE is: geen afval MAKEN. Bijvoorbeeld: geen plastic zakje pakken bij winkel = geen plastic afval. Beter dan recyclen — dat kost ook energie." },
+          ],
+          woorden: [
+            { woord: "Ladder van Lansink", uitleg: "NL-rangorde voor afval-aanpak (1979)." },
+            { woord: "preventie", uitleg: "Voorkomen = beste optie." },
+          ],
+          theorie: "Cito-tip afval-hiërarchie: PREVENTIE > HERGEBRUIK > RECYCLEN > VERBRANDEN > STORTEN. Onthoud volgorde. Politiek + bedrijven gebruiken dit nog steeds.",
+          voorbeelden: [
+            { type: "stap", tekst: "Eigen drinkfles gebruiken (preventie) is beter dan plastic flesje kopen + recyclen (recycle stap 3)." },
+            { type: "stap", tekst: "Tweedehands kleding kopen = hergebruik (stap 2) = beter dan oude kleding wegdoen + nieuwe kopen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hoog = goed. 'Voorkomen' staat hoogst op de ladder. Recyclen pas op #3." }],
+          niveaus: {
+            basis: "Beste = voorkomen (geen afval maken). Slechtste = storten.",
+            simpeler: "Niet maken > hergebruiken > recyclen > verbranden > storten.",
+            nogSimpeler: "Voorkomen is best.",
+          },
+        },
       },
       {
         q: "Wat is **circulaire economie**?",
@@ -64,6 +109,28 @@ const steps = [
         options: ["Tenminste Houdbaar Tot — vaak nog OK na", "Direct ongezond na", "Gewoon datum", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt — niet weggooien!", "Niet altijd.", "Niet specifiek.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent THT?", tekst: "**THT** = **Tenminste Houdbaar Tot**. Dat is een datum die zegt: TOT deze datum garandeert de fabrikant dat het product GOED is. NA die datum: vaak NOG STEEDS OK, maar zonder garantie." },
+            { titel: "Niet meteen weggooien!", tekst: "Veel mensen gooien automatisch weg na THT-datum. Maar voor veel producten (pasta, rijst, blikvoer, chocola, koekjes) is het nog **weken/maanden** OK. RUIK + KIJK + PROEF eerst." },
+            { titel: "Verschil met TGT", tekst: "**TGT** = **Te Gebruiken Tot** = STRENGE datum, vooral op vlees, vis, eieren. Na deze datum WEL gevaar (bacteriegroei). NIET meer eten. THT = vrijblijvend, TGT = strikt." },
+          ],
+          woorden: [
+            { woord: "THT", uitleg: "Tenminste Houdbaar Tot — vrijblijvende datum." },
+            { woord: "TGT", uitleg: "Te Gebruiken Tot — STRIKTE datum (vlees/vis)." },
+          ],
+          theorie: "Cito-feit voedselverspilling: NL gooit per jaar **34 kg** voedsel per persoon weg. Veel daarvan door verkeerd lezen van THT-datum. Beter: ruik + proef.",
+          voorbeelden: [
+            { type: "stap", tekst: "Pakje pasta met THT-datum gisteren = nog gewoon eten. Smaakt OK? Eet maar." },
+            { type: "stap", tekst: "Vlees met TGT-datum gisteren = WEGGOOIEN. Risico bacteriën." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "T**H**T = **H**outenswaardig (suggestie). T**G**T = **G**evaar (verplicht)." }],
+          niveaus: {
+            basis: "THT = Tenminste Houdbaar Tot — vaak na datum nog OK.",
+            simpeler: "THT = vrijblijvend. Ruik + proef. TGT = vlees/vis = strikt.",
+            nogSimpeler: "Na THT vaak nog goed.",
+          },
+        },
       },
       {
         q: "**% wereld-voedsel** wat weggegooid?",
