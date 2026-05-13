@@ -102,6 +102,29 @@ const steps = [
         options: ["Iets doen ALS voorwaarde klopt", "Sneller", "Herhalen", "Niet"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet primair.", "Loop.", "Wel iets."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een if-statement?", tekst: "**'If'** is Engels voor 'als'. Een **if-statement** = stukje code dat zegt: '**ALS** dit klopt, doe dan dat.' Het laat de computer **beslissingen** nemen." },
+            { titel: "Voorbeeld in code", tekst: "```\nALS leeftijd >= 18:\n   print('Je mag stemmen!')\nANDERS:\n   print('Nog even wachten.')\n```\nDe computer checkt: is leeftijd 18 of meer? Zo ja → print eerste. Zo nee → print tweede." },
+            { titel: "Waarom belangrijk?", tekst: "Zonder if's zou een programma maar 1 ding doen, ongeacht situatie. **Met if's** reageert het programma op gebruiker, getallen, tijd, etc.\n• Game: ALS jij raakt vijand DAN levens − 1\n• Login: ALS wachtwoord klopt DAN ingelogd, ANDERS foutmelding." },
+          ],
+          woorden: [
+            { woord: "if-statement", uitleg: "Code-regel die ALLEEN uitvoert als voorwaarde klopt." },
+            { woord: "voorwaarde", uitleg: "Wat moet kloppen voor je iets doet (bv. leeftijd >= 18)." },
+            { woord: "else", uitleg: "Engels voor 'anders' — wat doen als voorwaarde NIET klopt." },
+          ],
+          theorie: "Cito-feit if-statement: hoort bij de **3 hoofdbouwstenen** van programmeren:\n1. **Variabele** = onthouden (doosje met info)\n2. **If** = beslissen (als-dan)\n3. **Loop** = herhalen (zolang...).\nElk programma gebruikt deze 3.",
+          voorbeelden: [
+            { type: "stap", tekst: "Verkeerslicht-software: ALS auto wacht > 30 sec DAN groen licht." },
+            { type: "stap", tekst: "Cito-toets: ALS goed antwoord DAN +1 punt ANDERS 0 punten. Computer scoort automatisch." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "If = ALS = beslissing. Loop = HERHALEN. Variabele = ONTHOUDEN. Drie bouwstenen waarmee elk programma werkt." }],
+          niveaus: {
+            basis: "If-statement = iets doen ALS voorwaarde klopt. = A.",
+            simpeler: "ALS-DAN-regel in code. Computer kiest pad afhankelijk van situatie. = A.",
+            nogSimpeler: "Als-dan = A.",
+          },
+        },
       },
       {
         q: "Wat doet een **loop**?",
@@ -137,6 +160,28 @@ const steps = [
         options: ["Eerste programmeur (1840s, mathematicus)", "Eerste president", "Schilder", "Astronaut"],
         answer: 0,
         wrongHints: [null, "Klopt — dochter Lord Byron.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Ada Lovelace?", tekst: "**Ada Lovelace** (1815-1852) was een **Engelse wiskundige**. Ze wordt **wereldwijd erkend als de eerste programmeur ooit** — al in de jaren **1840s**, lang voor er computers bestonden zoals wij ze kennen." },
+            { titel: "Wat deed ze?", tekst: "Ada werkte samen met **Charles Babbage**, een uitvinder die een mechanische 'Analytical Engine' bouwde (eerste idee voor computer). Ada schreef het **eerste algoritme** dat op zo'n machine kon draaien — om Bernoulli-getallen uit te rekenen." },
+            { titel: "Vergeten en herontdekt", tekst: "Lang werd haar bijdrage vergeten. In **1980** noemde het Amerikaanse leger een programmeer-taal **'Ada'** naar haar — eerbetoon. Sindsdien wordt ze gezien als symbool voor **vrouwen in tech**." },
+          ],
+          woorden: [
+            { woord: "Ada Lovelace", uitleg: "Engelse wiskundige (1815-1852), eerste programmeur." },
+            { woord: "Analytical Engine", uitleg: "Mechanische voorloper van computer (Babbage)." },
+          ],
+          theorie: "Cito-feit Ada Lovelace:\n• Dochter van beroemde dichter **Lord Byron**.\n• Stierf jong (36 jaar) aan kanker.\n• Vroege voorzag dat machines meer konden dan rekenen — bv. muziek componeren!\n• Inspiratie voor Girls Who Code-beweging.",
+          voorbeelden: [
+            { type: "stap", tekst: "Ada zag al in 1840 dat computers ooit muziek + kunst zouden kunnen maken — visionair." },
+            { type: "stap", tekst: "Niet verwarren met Grace Hopper (1906-1992, ook tech-pionier — bedacht 'bug' voor software-fout)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Ada Lovelace = 1e programmeur (1840s) = vrouw. Lang voor moderne computers. Belangrijk feit." }],
+          niveaus: {
+            basis: "Ada Lovelace = eerste programmeur (1840s, Engelse wiskundige). = A.",
+            simpeler: "In 1840 schreef ze het eerste algoritme voor de Analytical Engine. = A.",
+            nogSimpeler: "Eerste programmeur = A.",
+          },
+        },
       },
     ],
   },
@@ -162,6 +207,29 @@ const steps = [
         options: ["Structuur van website", "Programmeer-taal voor algoritmen", "Reken", "Game"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet echt programmeren.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is HTML?", tekst: "**HTML** = **HyperText Markup Language**. Het is de **structuur-taal** voor websites: welke tekst is een kop, welke een paragraaf, waar staan plaatjes, links. Elke website ter wereld gebruikt het." },
+            { titel: "Voorbeeld HTML", tekst: "```html\n<h1>Welkom!</h1>\n<p>Dit is een paragraaf.</p>\n<img src=\"kat.jpg\">\n<a href=\"https://nos.nl\">Link naar NOS</a>\n```\n• `<h1>` = grote kop\n• `<p>` = paragraaf\n• `<img>` = plaatje\n• `<a>` = link" },
+            { titel: "HTML ≠ programmeer-taal", tekst: "HTML is **markup** (= opmaak), geen programmeer-taal. Het beschrijft hoe iets eruit ziet, maar 'denkt' niet. Echte logica + algoritmen schrijf je in JavaScript (gedrag) + CSS (kleur/stijl) bovenop HTML." },
+          ],
+          woorden: [
+            { woord: "HTML", uitleg: "HyperText Markup Language — structuur van websites." },
+            { woord: "CSS", uitleg: "Stijl + kleur van website." },
+            { woord: "JavaScript", uitleg: "Gedrag (knoppen, animaties, interactie)." },
+          ],
+          theorie: "Cito-feit website-bouwstenen:\n• **HTML** = structuur (wat staat waar)\n• **CSS** = stijl (kleur, lettertype, lay-out)\n• **JavaScript** = gedrag (klikken, animaties)\nDe 3 'kerntalen' van elke website.",
+          voorbeelden: [
+            { type: "stap", tekst: "Rechter-muisklik op willekeurige website → 'Inspect element' → je ziet de HTML achter de site." },
+            { type: "stap", tekst: "Wordpress/Wix maken HTML voor je. Maar onderwater = nog steeds HTML." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "HTML = structuur. Geen echte programmeer-taal — geen if-statements, loops. Maar wel onmisbaar voor websites." }],
+          niveaus: {
+            basis: "HTML = structuur van website. = A.",
+            simpeler: "HTML beschrijft welke delen van een website een kop, paragraaf of link zijn. = A.",
+            nogSimpeler: "Website-structuur = A.",
+          },
+        },
       },
       {
         q: "Wie schreef **Linux**?",
