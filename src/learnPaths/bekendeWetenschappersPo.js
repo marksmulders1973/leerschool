@@ -282,6 +282,80 @@ const steps = [
       { q: "Wie schreef '**Over het ontstaan van soorten**'?", options: ["Darwin (1859)", "Mendel", "Newton", "Pasteur"], answer: 0, wrongHints: [null, "Klopt.", "Erfelijkheid.", "Niet.", "Bacteriën."] },
       { q: "Wie ontdekte **penicilline**?", options: ["Fleming (1928)", "Darwin", "Curie", "Einstein"], answer: 0, wrongHints: [null, "Klopt — per ongeluk.", "Niet.", "Niet.", "Niet."] },
       { q: "Wie kreeg **2 Nobelprijzen**?", options: ["Marie Curie", "Einstein", "Newton", "Darwin"], answer: 0, wrongHints: [null, "Klopt — natuurkunde + chemie.", "Slechts 1.", "Geen Nobel (vóór bestaat).", "Geen."] },
+      {
+        q: "Wie ontwikkelde de **theorie van de relativiteit** (E=mc²)?",
+        options: ["Albert Einstein (1905, 1915)", "Isaac Newton", "Charles Darwin", "Marie Curie"],
+        answer: 0,
+        wrongHints: [null, "Klopt — speciale relativiteit 1905, algemene 1915.", "Newton vóór Einstein — andere natuurkunde.", "Darwin = evolutie, geen natuurkunde.", "Curie = radioactiviteit."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Einstein?", tekst: "**Albert Einstein** *(1879-1955)* was een Duits-Joods-Zwitsers-Amerikaanse natuurkundige. Vluchtte voor de nazi's in 1933 naar VS. **Belangrijkste natuurkundige van de 20e eeuw**." },
+            { titel: "Wat is E=mc²?", tekst: "Beroemdste formule ooit. Betekent: **Energie = massa × lichtsnelheid²**. Hier: een **kleine hoeveelheid massa** kan **enorm veel energie** worden. Basis voor:\n• Kernenergie (kerncentrales)\n• Atoombom\n• Begrip hoe sterren werken (zon)" },
+            { titel: "Cito-feit: Einstein-quotes + Nobel", tekst: "Einstein won **Nobelprijs 1921** — maar NIET voor relativiteitstheorie! Hij won voor het **foto-elektrisch effect** (basis voor zonnepanelen). Beroemd quote: 'Verbeelding is belangrijker dan kennis'. Veel mensen denken dat hij slecht was op school — onwaar, hij was juist goed in natuurkunde + wiskunde." },
+          ],
+          woorden: [
+            { woord: "relativiteitstheorie", uitleg: "Einstein's theorie over hoe tijd, ruimte en zwaartekracht werken. Verandert bij hoge snelheden / grote massa's." },
+            { woord: "E=mc²", uitleg: "Energie = massa × lichtsnelheid². Massa is een vorm van energie." },
+            { woord: "Nobelprijs", uitleg: "Belangrijkste wetenschap-prijs ter wereld. Jaarlijks toegekend in 6 categorieën." },
+          ],
+          theorie: "Top-natuurkundigen door tijd:\n• **Galileo** (1564-1642) — telescoop, helio-centrisch\n• **Newton** (1642-1727) — zwaartekracht, 3 wetten\n• **Maxwell** (1831-1879) — elektromagnetisme\n• **Einstein** (1879-1955) — relativiteit\n• **Bohr** (1885-1962) — atoommodel\n• **Hawking** (1942-2018) — zwarte gaten",
+          voorbeelden: [
+            { type: "feit", tekst: "GPS-satellieten gebruiken Einstein's algemene relativiteitstheorie — zonder zou je locatie elke dag 11 km af zijn." },
+            { type: "feit", tekst: "Einstein had zwart-wit klompschoenen en weigerde sokken te dragen — beroemd excentriek." },
+          ],
+          basiskennis: [{ onderwerp: "Niet bom-uitvinder", uitleg: "Einstein vond NIET de atoombom uit. Wel zijn formule was de theorie. Hij was juist pacifist + werkte er niet aan." }],
+          niveaus: { basis: "Einstein. = A.", simpeler: "Albert Einstein ontwikkelde relativiteitstheorie + formule E=mc². Belangrijkste natuurkundige 20e eeuw. = A.", nogSimpeler: "Einstein = A." },
+        },
+      },
+      {
+        q: "Wie ontdekte **zwaartekracht** door appel-verhaal?",
+        options: ["Isaac Newton (rond 1666)", "Galileo", "Einstein", "Aristoteles"],
+        answer: 0,
+        wrongHints: [null, "Klopt — beroemd verhaal (waarschijnlijk niet 100% waar).", "Galileo werkte aan vallende voorwerpen, niet appel-verhaal.", "Einstein later, andere theorie zwaartekracht.", "Veel ouder, beschreef niet zwaartekracht zo."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Newton?", tekst: "**Sir Isaac Newton** *(1642-1727)* was een Engelse natuurkundige + wiskundige. Wordt vaak gezien als **een van de grootste wetenschappers ooit**. Werkte aan zwaartekracht, beweging, licht, wiskunde (differentiaal-rekening)." },
+            { titel: "Het appel-verhaal", tekst: "Verhaal: Newton zat onder een appelboom in zijn moeders tuin. Een appel viel. Hij vroeg zich af: **'Waarom valt de appel altijd recht naar beneden, niet zijwaarts?'** Daaruit ontstond zijn idee van **zwaartekracht** — kracht die alle massa naar elkaar trekt.\n\n**Historische nuance**: het is bekend dat hij het verhaal zelf vertelde, maar of een appel echt viel is twijfelachtig. Verhaal werd populair om idee uit te leggen." },
+            { titel: "Newton's wetten van beweging", tekst: "Zijn beroemde **3 bewegingswetten** (1687):\n1. **Traagheidsregel**: een voorwerp blijft stilstaan of in beweging zonder kracht\n2. **F = m × a** (kracht = massa × versnelling)\n3. **Actie = reactie**: elke kracht heeft een tegenkracht\n\nNog steeds gebruikt voor: raketten, auto-veiligheid, sport-fysica." },
+          ],
+          woorden: [
+            { woord: "zwaartekracht", uitleg: "Kracht die alle massa naar elkaar trekt. Aarde trekt jou naar zich toe = je gewicht." },
+            { woord: "Principia Mathematica", uitleg: "Newton's beroemde boek (1687) waar zijn wetten in staan. Een van de belangrijkste natuurkunde-boeken ooit." },
+          ],
+          theorie: "Newton vs Einstein zwaartekracht:\n• **Newton**: zwaartekracht is een **kracht** tussen massa's. Werkt overal in heelal.\n• **Einstein** (1915): zwaartekracht is **kromming van ruimte-tijd** door massa. Diepere uitleg.\n\nNewton's theorie werkt prima voor 99% van praktische situaties. Einstein's nodig bij **extreem grote massa's** (zwart gat) of **hoge snelheden** (GPS-satellieten).",
+          voorbeelden: [
+            { type: "feit", tekst: "De appelboom waar Newton onder zat staat nog in Woolsthorpe Manor (Engeland). Toeristische trekpleister." },
+            { type: "feit", tekst: "Newton was ook directeur van de Engelse Munt — hield zich daar bezig met geld-vervalsers vangen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet uitvinder zwaartekracht", uitleg: "Zwaartekracht BESTOND al. Newton BESCHREEF en BEREKENDE het. Hij bedacht de wiskunde erachter." }],
+          niveaus: { basis: "Newton. = A.", simpeler: "Isaac Newton (Engels, 17e eeuw) beschreef zwaartekracht — verhaal met vallende appel. Schreef ook 3 bewegingswetten. = A.", nogSimpeler: "Newton = A." },
+        },
+      },
+      {
+        q: "Wie was **eerste vrouw met Nobelprijs** (1903)?",
+        options: ["Marie Curie", "Florence Nightingale", "Rosalind Franklin", "Ada Lovelace"],
+        answer: 0,
+        wrongHints: [null, "Klopt — eerste vrouw EVER + enige met 2 Nobelprijzen (1903 natuurkunde, 1911 chemie).", "Verpleegkunde-pionier maar geen Nobel.", "DNA-onderzoek maar geen Nobel toegekend (te vroeg overleden + plagiaat).", "Eerste programmeur (1840s), vóór Nobel bestond."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Marie Curie?", tekst: "**Marie Skłodowska-Curie** *(1867-1934)*. Geboren in Polen, werkte vooral in Frankrijk. Wetenschapper in **natuurkunde + chemie**. Werkte vaak met haar man Pierre Curie." },
+            { titel: "Wat ontdekte ze?", tekst: "• **Radioactiviteit** — term die ze zelf uitvond\n• **Twee nieuwe elementen**: polonium (vernoemd naar Polen) en radium\n• Werkte met radioactieve stoffen — wist toen nog niet hoe gevaarlijk dat was. Stierf uiteindelijk aan effects van straling." },
+            { titel: "Cito-feit: 2 Nobelprijzen", tekst: "Marie Curie is **uniek**:\n• **Eerste vrouw ooit** met een Nobelprijs (1903, natuurkunde, samen met Pierre)\n• **Enige persoon ooit** met Nobelprijzen in **2 verschillende wetenschap-categorieën** (natuurkunde 1903, chemie 1911)\n• Haar dochter Irène won later ook een Nobelprijs in chemie (1935). **3 Nobelprijzen in 1 familie!**" },
+          ],
+          woorden: [
+            { woord: "radioactiviteit", uitleg: "Eigenschap van bepaalde stoffen die straling afgeven door verval van atomen." },
+            { woord: "element", uitleg: "Pure stof in het periodiek systeem (waterstof, koolstof, polonium...). Curie ontdekte 2 nieuwe." },
+            { woord: "Sorbonne", uitleg: "Beroemde universiteit Parijs waar Curie eerste vrouw werd die er les gaf." },
+          ],
+          theorie: "Vrouwen in wetenschap-Cito-feiten:\n• **Marie Curie** (1867-1934) — radioactiviteit, 2× Nobel\n• **Ada Lovelace** (1815-1852) — eerste computerprogrammeur OOIT\n• **Rosalind Franklin** (1920-1958) — DNA-foto (haar werk werd gebruikt voor Watson+Crick Nobel zonder erkenning)\n• **Katherine Johnson** (1918-2020) — NASA-wiskunde voor Apollo-missies (film: Hidden Figures)\n• **Jane Goodall** (1934-2025) — chimpansees + gedrag",
+          voorbeelden: [
+            { type: "feit", tekst: "Curie's labnotitieboeken zijn nog steeds zo radioactief dat ze in lood-kisten bewaard moeten worden. Bezoekers moeten beschermingskleding aan." },
+            { type: "feit", tekst: "Wist je: Marie en Pierre Curie gaven hun Nobel-medailles weg voor de oorlog (smelt-waarde voor wapens)." },
+          ],
+          basiskennis: [{ onderwerp: "Geboren als Polen", uitleg: "Curie was geboren als Maria Skłodowska in Polen. Verhuisde naar Parijs voor studie (Polen weigerde vrouwen op universiteit toen)." }],
+          niveaus: { basis: "Marie Curie. = A.", simpeler: "Marie Curie (1867-1934) was eerste vrouw met Nobelprijs (1903) + enige met 2 Nobelprijzen in verschillende vakken. Ontdekte radioactiviteit. = A.", nogSimpeler: "Marie Curie = A." },
+        },
+      },
     ],
   },
 ];
