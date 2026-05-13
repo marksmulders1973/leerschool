@@ -256,7 +256,30 @@ const steps = [
         q: "Staafdiagram regen-mm: jan 60, feb 50, mrt 40, apr 70. Hoeveel mm in **maart**?",
         options: ["40 mm", "60 mm", "50 mm", "70 mm"],
         answer: 0,
-        wrongHints: [null, "Dat is januari — kijk goed naar de maart-balk.", "Dat is februari.", "Dat is april."],
+        wrongHints: [null, "Klopt — maart-balk staat op 40 mm.", "Dat is januari — kijk goed naar de maart-balk.", "Dat is februari.", "Dat is april."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: zoek 'maart' op x-as", tekst: "Bij een staafdiagram staat **op de x-as (onder)** de **categorie** — hier: maanden. Zoek het label **'mrt'** (maart). Dat is de derde balk van links." },
+            { titel: "Stap 2: lees de hoogte van die balk", tekst: "Kijk omhoog vanaf de maart-balk naar de **hoogte** = waarde op de **y-as**. De maart-balk reikt tot **40 mm**." },
+            { titel: "Stap 3: pak het juiste getal + eenheid", tekst: "Antwoord = **40 mm**. Niet alleen '40' — de eenheid is **mm** (millimeters regen). De andere maanden zijn afleiders:\n• jan = 60 mm\n• feb = 50 mm\n• **mrt = 40 mm** ←\n• apr = 70 mm\nVerwissel niet per ongeluk de balk." },
+          ],
+          woorden: [
+            { woord: "staafdiagram", uitleg: "Grafiek met verticale balken. Hoogte = waarde." },
+            { woord: "categorie", uitleg: "Het label onder elke balk (hier: maand)." },
+            { woord: "mm", uitleg: "Millimeter — meeteenheid voor regen-hoeveelheid." },
+          ],
+          theorie: "Staafdiagram aflezen in 3 stappen:\n1. Zoek **label** op x-as (categorie).\n2. Lees **hoogte** van die balk op y-as (waarde).\n3. **Eenheid** uit titel/y-as overnemen in antwoord.\n\nCito-instinker: maand-balken naast elkaar — verkeerde balk lezen = fout antwoord, ook al klopt het getal.",
+          voorbeelden: [
+            { type: "stap", tekst: "Staaf 'kinderen per klas': klas 1=25, klas 2=28, klas 3=22, klas 4=27. Hoeveel in klas 3? → derde balk = 22 kinderen." },
+            { type: "stap", tekst: "Staaf 'temperatuur per dag': ma=15, di=18, wo=12, do=20. Op woensdag? → 12 °C." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tel de balken zorgvuldig. Als de vraag 'maart' zegt, tel niet de balk van februari per ongeluk mee." }],
+          niveaus: {
+            basis: "Maart-balk = 40 mm. = A.",
+            simpeler: "Zoek 'mrt' onderaan. Kijk hoog die balk komt → 40 mm. = A.",
+            nogSimpeler: "Maart = 40 mm = A.",
+          },
+        },
       },
       {
         q: "Klas: ma 22, di 18, wo 26, do 30, vr 24 kinderen. **Hoeveel kinderen meer** op **donderdag** dan op **dinsdag**?",
@@ -614,7 +637,30 @@ const steps = [
         q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
         options: ["230 mm", "180 mm", "210 mm", "190 mm"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — controleer optelling.", "Te weinig — komma 1 verkeerd."],
+        wrongHints: [null, "Klopt — 60+80+40+50 = 230 mm.", "Te weinig — controleer 60+80+40+50.", "Te weinig — controleer optelling.", "Te weinig — kom je 20 tekort?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Totaal' = alle balken bij elkaar optellen", tekst: "Het woord **'totaal'** is een **signaalwoord voor +** (optellen). Bij staafdiagram: **alle balken bij elkaar** = totaal." },
+            { titel: "Stap-voor-stap optellen", tekst: "Lees elke balk en tel op:\n• jan = 60\n• feb = 80\n• mrt = 40\n• apr = 50\n\nReken slim:\n60 + 80 = **140**\n140 + 40 = **180**\n180 + 50 = **230**\n→ **Totaal = 230 mm**." },
+            { titel: "Cito-truc: tussenstappen opschrijven", tekst: "Bij 4+ getallen: NIET alles in 1 keer in je hoofd doen — kans op fout te groot.\nOpsplitsen in **2 stappen**:\n• Eerst: jan+feb = 60+80 = 140\n• Daarna: mrt+apr = 40+50 = 90\n• Tot slot: 140 + 90 = 230 ✓\nTwee kleine sommen = nauwkeuriger dan één grote." },
+          ],
+          woorden: [
+            { woord: "totaal", uitleg: "Alle getallen samen, na optellen." },
+            { woord: "optellen", uitleg: "Cijfers samen tellen tot één getal (+)." },
+          ],
+          theorie: "Cito-signaalwoorden optellen:\n• 'Totaal' → alles +\n• 'Samen' → alles +\n• 'Bij elkaar' → alles +\n• 'Alles in...' → alles +\n• 'Hoeveel in totaal verkocht/gegeten/...' → alles +\n\nTegenpolen (NIET optellen):\n• 'Verschil' → −\n• 'Hoeveel meer/minder' → −\n• 'Per dag/maand gemiddeld' → totaal ÷ aantal",
+          voorbeelden: [
+            { type: "stap", tekst: "Staaf ijsjes ma-vr: 12+8+18+22+30 = 90 ijsjes totaal." },
+            { type: "stap", tekst: "Staaf inwoners 4 buurten: 200+350+150+300 = 1.000 inwoners totaal." },
+            { type: "stap", tekst: "Staaf kinderen klas 1-4: 25+28+22+27 = 102 kinderen totaal." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij 4+ getallen: tel paren eerst (jan+feb, mrt+apr), dan paren samen. Veiliger dan alles in 1 keer." }],
+          niveaus: {
+            basis: "60 + 80 + 40 + 50 = 230 mm. = A.",
+            simpeler: "Tel alle 4 maanden: jan(60) + feb(80) + mrt(40) + apr(50) = 230 mm. = A.",
+            nogSimpeler: "230 mm = A.",
+          },
+        },
       },
       {
         q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. **Hoeveel kg aangekomen**?",
@@ -648,7 +694,31 @@ const steps = [
         q: "Taart: rood 25%, blauw 50%, geel 25%. Klas van **40** kinderen — hoeveel **blauw**?",
         options: ["20 kinderen", "50 kinderen", "10 kinderen", "40 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te veel — kan niet meer dan klas-totaal.", "Te weinig — 50% is de helft. Helft van 40 = ?", "Te veel — dat is alle kinderen."],
+        wrongHints: [null, "Klopt — 50% van 40 = helft = 20.", "Te veel — kan niet meer dan klas-totaal.", "Te weinig — 50% is de helft. Helft van 40 = ?", "Te veel — dat is alle kinderen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 50%?", tekst: "**50%** = **de helft** van het totaal. Een **percentage** zegt: zoveel **van de 100** delen.\n• 50% = 50 van de 100 = **helft**\n• 25% = 25 van de 100 = **kwart**\n• 100% = alles" },
+            { titel: "50% van 40 berekenen", tekst: "**Truc voor 50%**: gewoon **÷ 2** (delen door 2 = helft).\n• 40 ÷ 2 = **20 kinderen**\n\nAlternatief (langere weg):\n• 50% = 50/100 = 0,5\n• 0,5 × 40 = 20 kinderen ✓\nZelfde antwoord. Bij 50% is delen door 2 altijd het snelst." },
+            { titel: "Cito-procent-trucs (snel)", tekst: "Onthoud deze ezelsbruggetjes voor Cito:\n• **50%** → ÷ 2 (helft)\n• **25%** → ÷ 4 (kwart)\n• **10%** → ÷ 10 (1 nul ervanaf)\n• **20%** → ÷ 5 (of 2× de 10%)\n• **75%** → 3× de 25% (drie kwart)\n• **100%** → alles\n\nCheck: rood 25% van 40 = 40÷4 = 10 kinderen. Geel 25% = ook 10. Blauw 50% = 20. Totaal: 10+10+20 = 40 ✓" },
+          ],
+          woorden: [
+            { woord: "percentage", uitleg: "Aantal per 100, geschreven als %." },
+            { woord: "50%", uitleg: "De helft. Truc: deel door 2." },
+            { woord: "totaal", uitleg: "Hele groep = 100%." },
+          ],
+          theorie: "Percentage TOEPASSEN op een geheel:\n1. Identificeer het **totaal** (hier: 40 kinderen = 100%).\n2. Identificeer het **gevraagde %** (hier: blauw 50%).\n3. Bereken: % × totaal / 100, OF gebruik snelheid-truc:\n   - 50% → ÷ 2\n   - 25% → ÷ 4\n   - 10% → ÷ 10\n\nLet op: vraag is naar **aantal kinderen**, niet naar % zelf!",
+          voorbeelden: [
+            { type: "stap", tekst: "60 kinderen, 25% jongens → 60÷4 = 15 jongens." },
+            { type: "stap", tekst: "200 zakjes, 10% gratis → 200÷10 = 20 gratis." },
+            { type: "stap", tekst: "80 leerlingen, 50% meisjes → 80÷2 = 40 meisjes." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel Cito-vragen snel." }],
+          niveaus: {
+            basis: "50% van 40 = 40÷2 = 20 kinderen. = A.",
+            simpeler: "50% = de helft. Helft van 40 kinderen = 20. = A.",
+            nogSimpeler: "Helft van 40 = 20 = A.",
+          },
+        },
       },
       {
         q: "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",

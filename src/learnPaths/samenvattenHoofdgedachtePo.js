@@ -453,7 +453,29 @@ const steps = [
         q: "Wat is **NIET** een goed samenvattings-strategie?",
         options: ["Letterlijk kopiëren van zinnen","Eigen woorden","Hoofdpunten kiezen","Kort houden"],
         answer: 0,
-        wrongHints: [null,"Wel goed.","Wel goed.","Wel goed."],
+        wrongHints: [null,"Klopt — kopiëren laat zien dat je de tekst NIET hebt begrepen.","Wel goed — eigen woorden = begrip.","Wel goed — hoofdpunten = essentie.","Wel goed — samenvatting moet korter dan origineel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom NIET letterlijk kopiëren?", tekst: "Een **samenvatting** moet laten zien dat je de tekst zelf hebt **begrepen**. Als je zinnen letterlijk overschrijft, laat je alleen zien dat je kunt **kopiëren** — niet dat je weet wat er staat." },
+            { titel: "Wat je WEL doet bij goede samenvatting", tekst: "1. **Eigen woorden** — herschrijf in je eigen taal\n2. **Hoofdpunten kiezen** — alleen de belangrijkste zinnen\n3. **Kort houden** — ~25-30% van origineel\n4. **Logische volgorde** — eerst hoofdgedachte, dan steunende info" },
+            { titel: "Cito-instinker bij deze vraag", tekst: "De vraag vraagt: 'Wat is **NIET** goed?' Let op het woordje **NIET** — je moet de FOUTE strategie aanvinken. De 3 goede strategieën zijn afleiders. Bij NIET-vragen altijd extra goed lezen wat er staat:\n• 'NIET in samenvatting' → kies wat er NIET in hoort\n• 'WEL in samenvatting' → kies wat er WEL in hoort\nVerwisselen = direct fout, zelfs als je inhoud snapt." },
+          ],
+          woorden: [
+            { woord: "strategie", uitleg: "Aanpak / manier om iets te doen." },
+            { woord: "letterlijk kopiëren", uitleg: "Zinnen exact overschrijven uit de tekst, zonder veranderen." },
+          ],
+          theorie: "Goede samenvattings-strategieën (de 4 stappen):\n1. Lees de tekst 2× — overzicht eerst, details daarna.\n2. Markeer (of noteer) de hoofdpunten — meestal titel + eerste zin elke alinea.\n3. Schrijf in eigen woorden — herwoord, parafraseer.\n4. Lees terug — past het bij hoofdgedachte? Te lang? Korter maken.\n\nFout: kopiëren, hele tekst overschrijven, eigen mening toevoegen, details meenemen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Origineel: 'Plastic is een groot probleem in de oceaan.' → Goed: 'Plastic vervuilt zeeën.' Fout: 'Plastic is een groot probleem in de oceaan.' (= kopiëren)." },
+            { type: "stap", tekst: "Origineel: 'Hond is loyaal, beschermt eigenaar.' → Goed: 'Honden zijn trouw en passen op.' Fout: kopiëren of toevoegen 'ik vind honden leuk' (= mening)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Test: lees je samenvatting voor aan iemand die de originele tekst NIET kent. Snapt diegene de hoofdpunten? Ja = goed. Nee = te kort of te kopiërig." }],
+          niveaus: {
+            basis: "Letterlijk kopiëren ≠ samenvatten = A.",
+            simpeler: "Samenvatting = in EIGEN woorden de hoofdpunten. Kopiëren is geen samenvatten. = A.",
+            nogSimpeler: "Kopiëren fout = A.",
+          },
+        },
       },
       {
         q: "Tekst gaat over voordelen van fietsen. Welke is een **slechte hoofdgedachte**?",
@@ -488,13 +510,58 @@ const steps = [
         q: "Hoofdgedachte staat vaak in:",
         options: ["Titel of eerste zin","Voetnoten","Plaatjes","Bibliografie"],
         answer: 0,
-        wrongHints: [null,"Niet de hoofd.","Niet de hoofd.","Niet de hoofd."],
+        wrongHints: [null,"Klopt — schrijvers zetten hoofdgedachte vaak vooraan zodat lezer weet waar tekst over gaat.","Voetnoten = bronvermelding, niet hoofd.","Plaatjes ondersteunen wel, maar zijn niet de tekst zelf.","Bibliografie = bronnenlijst aan het einde, geen inhoud."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar plaats een schrijver de hoofdgedachte?", tekst: "Schrijvers willen dat de lezer **snel begrijpt** waarover de tekst gaat. Daarom zetten ze de hoofdgedachte op een **opvallende plek**:\n• **Titel** — meteen zichtbaar bovenaan\n• **Eerste zin** (van eerste alinea) — opening\n• Soms herhaald in **laatste zin/alinea** als conclusie" },
+            { titel: "Waarom NIET in voetnoten/plaatjes/bibliografie?", tekst: "• **Voetnoten** = extra info met bron-vermelding, onderaan pagina. Geen hoofdgedachte.\n• **Plaatjes** = ondersteuning bij tekst, geen tekst zelf. Een grafiek kan illustreren, niet uitleggen wat de tekst zegt.\n• **Bibliografie** = lijst van geraadpleegde boeken/sites. Geen inhoud, alleen bronnen." },
+            { titel: "Cito-truc: 3-plekken-check", tekst: "Als je snel de hoofdgedachte zoekt, check in deze volgorde:\n1. **Titel** — bevat vaak het hoofd-onderwerp\n2. **Eerste zin** — vaak meteen de stelling\n3. **Laatste zin** — vaak de conclusie\nBij Cito-tijdsdruk kun je vaak 80% van de hoofdgedachte vinden via deze 3 plekken zonder de hele tekst te lezen." },
+          ],
+          woorden: [
+            { woord: "voetnoot", uitleg: "Aanvullende notitie onderaan pagina, vaak met bron-verwijzing." },
+            { woord: "bibliografie", uitleg: "Lijst van boeken/sites die gebruikt zijn als bron." },
+            { woord: "alinea", uitleg: "Stukje tekst met meerdere zinnen over één onderwerp." },
+          ],
+          theorie: "Structuur van een typische tekst:\n• **Titel** = hoofdonderwerp (1 regel)\n• **Eerste alinea** = inleiding + hoofdgedachte\n• **Middenste alinea's** = uitwerking, voorbeelden, bewijzen\n• **Laatste alinea** = conclusie + herhaling hoofdgedachte\n→ Hoofdgedachte = **op de RANDEN** (begin + eind), niet in het midden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Titel 'Voordelen van fietsen' → hoofdgedachte = 'fietsen heeft voordelen'." },
+            { type: "stap", tekst: "Eerste zin 'Plastic vervuilt onze zeeën.' → hoofdgedachte = plastic-zee-vervuiling." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Begin + eind van tekst = waar hoofdgedachte vaak staat. Midden = uitwerking en details." }],
+          niveaus: {
+            basis: "Titel of eerste zin = A.",
+            simpeler: "Schrijvers zetten de hoofdgedachte vooraan, vaak in titel of eerste zin. = A.",
+            nogSimpeler: "Titel/eerste zin = A.",
+          },
+        },
       },
       {
         q: "Tekst: 'Honden helpen blinden. Ze leiden de baas veilig over straat. Hun training duurt 2 jaar.'\n\n**Bijzaak**?",
         options: ["Hun training duurt 2 jaar","Honden helpen blinden","Veilig over straat","Geen, alles hoofd"],
         answer: 0,
-        wrongHints: [null,"Hoofdzaak.","Hoofdzaak.","Wel een bijzaak — training-duur."],
+        wrongHints: [null,"Klopt — '2 jaar' is een specifiek detail, niet de hoofdboodschap.","Hoofdzaak — dit IS de hoofdgedachte.","Hoofdzaak — direct gevolg en uitleg van hulp.","Onjuist — er IS een bijzaak."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de hoofdgedachte?", tekst: "De tekst gaat over **hulphonden voor blinden**. Zin 1 ('Honden helpen blinden') = hoofdgedachte. Zin 2 ('leiden veilig over straat') = directe uitleg HOE ze helpen → ondersteunt de hoofdgedachte → hoofdzaak." },
+            { titel: "Wat maakt zin 3 een bijzaak?", tekst: "**'Hun training duurt 2 jaar'** geeft een **specifiek getal** over één detail (trainingsduur). Dit:\n• Helpt NIET om te begrijpen WAT honden doen voor blinden\n• Is een leuk weetje, maar geen kern-info\n• Kun je weglaten zonder dat de boodschap verandert\n→ bijzaak" },
+            { titel: "Schrap-test toepassen", tekst: "**Met zin 3**: 'Honden helpen blinden. Ze leiden de baas veilig over straat. Hun training duurt 2 jaar.'\n**Zonder zin 3**: 'Honden helpen blinden. Ze leiden de baas veilig over straat.'\n→ De hoofdgedachte (honden = hulpdier voor blinden) blijft duidelijk. Trainingsduur was extra info, niet kern.\n→ Bevestigt: zin 3 = **bijzaak**.\n\nLet op: **specifieke getallen** ('2 jaar', '3 uur', '5 keer') zijn vaak bijzaken — behalve als het getal ZELF de hoofdgedachte is." },
+          ],
+          woorden: [
+            { woord: "specifiek detail", uitleg: "Heel precieze info over één deel — vaak een bijzaak." },
+            { woord: "kern-info", uitleg: "Hoofdpunt zonder welke je de boodschap niet begrijpt." },
+          ],
+          theorie: "Signalen voor bijzaak (herhaling):\n• Eigennamen ('Mijn oom', 'meester Jan')\n• Specifieke getallen ('2 jaar', '20 km', '7 uur')\n• Voorbeeld-zinnen ('Bijvoorbeeld...', 'Zoals...')\n• Anecdote-zinnen ('Eens kwam ik...', 'Mijn buurman zei...')\n• Heel concrete plek/tijd ('In Alaska in 2019')\n\nVuistregel: hoe specifieker hoe vaker bijzaak.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over honden: 'Honden zijn loyaal. Hun staart wiebelt 60× per minuut.' → staart-getal = bijzaak." },
+            { type: "stap", tekst: "Tekst over fietsen: 'Fietsen is gezond. De Tour duurt 21 dagen.' → 21 dagen = bijzaak." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Specifiek getal in zin? Hoogstwaarschijnlijk bijzaak (tenzij getal ZELF kern is, bv. 'water bestaat voor 70% uit waterstof' in chemie-tekst)." }],
+          niveaus: {
+            basis: "Training 2 jaar = specifiek detail = bijzaak. = A.",
+            simpeler: "Schrap zin 3 → boodschap (honden helpen blinden) blijft hetzelfde → zin 3 = bijzaak. = A.",
+            nogSimpeler: "2 jaar = bijzaak = A.",
+          },
+        },
       },
     ],
   },
