@@ -156,6 +156,21 @@ const steps = [
         options: ["Berg of heuvel", "Rivier", "Bos", "Stad"],
         answer: 0,
         wrongHints: [null, "Klopt — bruin = hoog (berg/heuvel).", "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kaart-kleuren", tekst: "Bij topografische kaarten staat bruin meestal voor **hoogte** (berg/heuvel)." },
+            { titel: "Hoe donkerder", tekst: "Donkerbruin = hoger. Lichtbruin = lager. Geel-groen = laagland." },
+          ],
+          woorden: [{ woord: "topografische kaart", uitleg: "Kaart die het landschap toont met hoogtelijnen, rivieren, bossen." }],
+          theorie: "Standaard kaart-kleuren in NL/Europa: blauw=water, groen=bos/laagland, geel/oranje=heuvel, bruin=hooggebergte, wit=sneeuw.",
+          voorbeelden: [{ type: "stap", tekst: "Schweiz-kaart: veel bruine en witte vlekken = Alpen. NL-kaart: vrijwel alleen groen + blauw (plat land)." }],
+          basiskennis: [{ onderwerp: "Legenda checken", uitleg: "Elke kaart heeft eigen kleurcodes — controleer altijd de legenda!" }],
+          niveaus: {
+            basis: "Berg of heuvel. A.",
+            simpeler: "Bruin op kaart = hoog land. = A.",
+            nogSimpeler: "Berg = A.",
+          },
+        },
       },
       {
         q: "Schaal **1:200.000**. Op kaart **5 cm**. Werkelijkheid in **km**?",
@@ -332,6 +347,24 @@ const steps = [
         options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Geen"],
         answer: 0,
         wrongHints: [null, "Klopt — lijn = trend over tijd.", "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Grafiek-type kiezen", tekst: "Voor verandering over tijd → lijngrafiek (punten verbonden, trend zichtbaar)." },
+            { titel: "Vergelijking", tekst: "Staafdiagram = vergelijk groepen. Cirkeldiagram = deel-van-geheel. Lijn = verloop." },
+          ],
+          woorden: [
+            { woord: "lijngrafiek", uitleg: "Grafiek met punten op X-Y verbonden door lijnen — toont verloop/trend." },
+            { woord: "trend", uitleg: "Patroon over tijd (stijgend, dalend, golvend, stabiel)." },
+          ],
+          theorie: "Vuistregels: TIJD op horizontale as → lijngrafiek. GROEPEN op horizontaal → staafdiagram. PERCENTAGE-verdeling → cirkeldiagram.",
+          voorbeelden: [{ type: "stap", tekst: "Temperatuur over week = lijn. Aantal kinderen per klas = staaf. Hobby-verdeling % = cirkel." }],
+          basiskennis: [{ onderwerp: "X-as = onafhankelijk", uitleg: "Tijd, leeftijd, dagen — daar zet je op X-as. Wat je meet komt op Y-as." }],
+          niveaus: {
+            basis: "Lijngrafiek. A.",
+            simpeler: "Verandering over tijd = lijngrafiek. = A.",
+            nogSimpeler: "Lijn = A.",
+          },
+        },
       },
       {
         q: "Tabel: 100/200/300/400/500. Gemiddelde?",
