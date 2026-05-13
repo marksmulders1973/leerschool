@@ -88,6 +88,28 @@ const steps = [
         options: ["Ja, wisselregel", "Nee", "Soms", "Hangt af"],
         answer: 0,
         wrongHints: [null, "Klopt — volgorde maakt niet uit bij vermenigvuldigen.", "Wel waar — controleer: beide = 12.", "Altijd, niet soms.", "Eenduidig — altijd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zegt de wisselregel?", tekst: "Bij **vermenigvuldigen** (keer) maakt de **volgorde niet uit**. 3 × 4 geeft hetzelfde antwoord als 4 × 3. Dit heet de **wisselregel**." },
+            { titel: "Probeer het zelf", tekst: "**3 × 4** = 4 + 4 + 4 = **12**.\n**4 × 3** = 3 + 3 + 3 + 3 = **12**.\nAllebei 12! Volgorde maakt dus geen verschil." },
+            { titel: "Met een rooster", tekst: "Teken een **rooster** van 3 rijen × 4 kolommen = 12 vakjes. Draai het rooster — nu 4 rijen × 3 kolommen = nog steeds 12 vakjes. Hetzelfde aantal." },
+          ],
+          woorden: [
+            { woord: "wisselregel", uitleg: "Bij × maakt volgorde niet uit." },
+            { woord: "vermenigvuldigen", uitleg: "Keer doen, hetzelfde getal vaak optellen." },
+          ],
+          theorie: "Cito-truc — gebruik de wisselregel om makkelijker te rekenen. **7 × 3** voelt soms lastig, maar **3 × 7** ('drie keer zeven') is iets vertrouwder. Beide = 21. Kies de versie die voor jou snelste werkt.",
+          voorbeelden: [
+            { type: "stap", tekst: "8 × 2 = 2 × 8 = 16. Vaak weet je '2 keer 8' sneller dan '8 keer 2'." },
+            { type: "stap", tekst: "Let op: wisselregel werkt NIET bij delen of aftrekken! 10 − 3 ≠ 3 − 10." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij elke ×-som mag je de getallen omdraaien. Pak de makkelijkere kant." }],
+          niveaus: {
+            basis: "Ja — wisselregel. = A.",
+            simpeler: "3 × 4 = 12 én 4 × 3 = 12. Allebei 12. Volgorde maakt niets uit. = A.",
+            nogSimpeler: "Ja = A.",
+          },
+        },
       },
       {
         q: "Hoeveel is **2 × 6**?",
@@ -198,6 +220,27 @@ const steps = [
         options: ["56", "15", "87", "48"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Optelling.", "Plak-getal.", "Dat is 6 × 8."],
+        uitlegPad: {
+          stappen: [
+            { titel: "8 × 7 — een lastige", tekst: "8 × 7 is een van de **lastigste** tafel-sommen. Bijna iedereen vergeet 'm soms. Gelukkig zijn er trucjes." },
+            { titel: "Truc 1 — via tafel-10", tekst: "**8 × 7** = (8 × 10) − (8 × 3) = 80 − 24 = **56**.\nOf: **8 × 7** = (10 × 7) − (2 × 7) = 70 − 14 = **56**.\nBeide werken!" },
+            { titel: "Truc 2 — splitsen", tekst: "**8 × 7** = (8 × 5) + (8 × 2) = 40 + 16 = **56**.\nDe 5-tafel en 2-tafel zijn makkelijke tafels — gebruik ze als hulp." },
+          ],
+          woorden: [
+            { woord: "splitsen", uitleg: "Eén grote som in 2 kleinere makkelijkere stukken delen." },
+          ],
+          theorie: "Cito-onthoud-tip: '8 × 7 = 56' — zeg het hardop, als een rijmpje. Of: **'56 = 7 × 8'** (5-6 in volgorde komt na 7-8). Sommige juffen leren dit als 'mooie reeks': 5-6-7-8.",
+          voorbeelden: [
+            { type: "stap", tekst: "Met wisselregel: 8 × 7 = 7 × 8. Zeg het zoals jij het makkelijkst onthoudt." },
+            { type: "stap", tekst: "Niet 48 (= 6 × 8 of 8 × 6). Niet 64 (= 8 × 8). Goed: **56**." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Top-3 lastige tafel-sommen: 7×8=56, 7×9=63, 8×9=72. Leer deze 3 expliciet — ze komen op Cito vaak terug." }],
+          niveaus: {
+            basis: "56. = A.",
+            simpeler: "8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56. = A.",
+            nogSimpeler: "56 = A.",
+          },
+        },
       },
       {
         q: "**9 × 6** = ?",
@@ -243,6 +286,28 @@ const steps = [
         options: ["150", "31", "625", "100"],
         answer: 0,
         wrongHints: [null, "Klopt — 6×20 + 6×5 = 120+30 = 150.", "Optelling.", "Plak-getal.", "Net niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom splitsen?", tekst: "**25** zit niet in de gewone tafels (1 t/m 10). Maar je kunt 25 splitsen in delen die je WEL kent: **20 + 5**." },
+            { titel: "Stap 1 — splits 25", tekst: "**6 × 25** = 6 × (20 + 5) = (6 × 20) + (6 × 5). Het is alsof je 25 in 2 zakjes verdeelt: een zakje van 20 en een zakje van 5. Voor elk reken je apart, daarna optellen." },
+            { titel: "Stap 2 — reken de delen", tekst: "**6 × 20** = 6 × 2 × 10 = 12 × 10 = **120**.\n**6 × 5** = **30**.\nTotaal: **120 + 30 = 150**." },
+          ],
+          woorden: [
+            { woord: "splitsen", uitleg: "Een getal opdelen in 2 makkelijkere getallen." },
+            { woord: "× 25", uitleg: "= × 20 + × 5 (splitsen) OF = × 100 ÷ 4 (kwart van 100)." },
+          ],
+          theorie: "Cito-truc voor ×25: er is ook een **trucje** — × 25 = ÷ 4 × 100. Bv: 6 × 25 = 6 ÷ 4 × 100 = 1,5 × 100 = 150. Maar splitsen werkt altijd, ook bij rare getallen. Begin met splitsen.",
+          voorbeelden: [
+            { type: "stap", tekst: "**8 × 25** via splitsen: (8 × 20) + (8 × 5) = 160 + 40 = 200." },
+            { type: "stap", tekst: "**4 × 15** via splitsen: (4 × 10) + (4 × 5) = 40 + 20 = 60." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Splits het lastige getal in een **tien-deel** (× 10, 20, 30...) + een **rest-deel** (× 1, 2, 3, 5...). Tel apart, dan optellen." }],
+          niveaus: {
+            basis: "150. = A.",
+            simpeler: "6 × 25 = 6 × 20 + 6 × 5 = 120 + 30 = 150. = A.",
+            nogSimpeler: "150 = A.",
+          },
+        },
       },
     ],
   },
