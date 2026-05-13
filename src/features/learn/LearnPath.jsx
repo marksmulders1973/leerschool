@@ -429,8 +429,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
       // A11: spaced repetition — fout = reset naar morgen.
       srRecordSeen(pathId, stepIdx, realCheckIdx, false, attempts);
-      // Pilot 2026-05-10: tel fout per vraag voor adaptief uitlegpad-niveau.
-      if (currentCheck.uitlegPad && currentCheck.examenBron) {
+      // Tel fout per vraag voor adaptief uitlegpad-niveau (auto-switch naar simpeler bij ≥2).
+      // Audit 2026-05-13 QW2: examenBron-conditie verwijderd zodat ALLE 2000+ uitlegPad-checks
+      // adaptief werken, niet alleen de 61 examenvragen.
+      if (currentCheck.uitlegPad) {
         bumpVraagFouten(`${pathId}__${stepIdx}__${realCheckIdx}`);
       }
       setMode("wrong");

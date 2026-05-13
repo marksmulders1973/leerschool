@@ -105,9 +105,11 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         </div>
       )}
 
-      {/* NIVEAU-UITLEG (eerst — directe hulp, default open) */}
+      {/* NIVEAU-UITLEG — default DICHT om antwoord-verklap te vermijden.
+          niveaus.basis is in veel paden letterlijk het antwoord ("9.", "Ja.")
+          en zou de leerling van denken weghouden. Audit 2026-05-13 QW1. */}
       {niveauTekst && (
-        <Section title="💡 Korte uitleg" defaultOpen={true}>
+        <Section title="💡 Korte uitleg" defaultOpen={false}>
           <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
             <MdInline text={niveauTekst} />
           </div>
