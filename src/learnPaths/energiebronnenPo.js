@@ -104,7 +104,29 @@ const steps = [
         q: "**Groningen-gasveld** stopt wanneer?",
         options: ["2024", "Nooit", "1959", "2050"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Wel.", "Begon toen.", "Te laat."],
+        wrongHints: [null, "Klopt.", "Wel — gestopt.", "Begon toen — niet stop.", "Te laat — al gestopt."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is het Groningen-gasveld?", tekst: "Het **Groningen-gasveld** (vooral onder Slochteren) is een van de **grootste aardgasvelden ter wereld**. Ontdekt in 1959, bracht NL miljarden euro's op. Veel huizen kookten + verwarmden op Gronings gas." },
+            { titel: "Probleem: aardbevingen", tekst: "Door het wegpompen van gas zakt de bodem en ontstaan **aardbevingen**. Honderden Groningse huizen kregen scheuren. Mensen werden bang, sommigen moesten verhuizen. Grote schade + protest." },
+            { titel: "Sluiting 2024", tekst: "Na jarenlange afbouw heeft de NL-regering besloten het veld **per 1 oktober 2023 dicht** te draaien (laatste productie in 2024). NL moet nu gas importeren uit andere landen (Noorwegen, VS, Qatar)." },
+          ],
+          woorden: [
+            { woord: "Slochteren", uitleg: "Plaats in Groningen waar gas in 1959 werd ontdekt." },
+            { woord: "aardbevingen", uitleg: "Beving van de bodem; in Groningen veroorzaakt door gaswinning." },
+          ],
+          theorie: "Cito-feit Groningen-gas-tijdlijn:\n• **1959** ontdekt bij Slochteren.\n• **1963-2010s** miljarden m³ gas per jaar.\n• **1986** eerste aardbeving toegeschreven.\n• **2012** Huizinge-beving 3,6 (zwaarste ooit).\n• **2018** kabinet besluit te stoppen.\n• **2023-2024** dichtgedraaid.",
+          voorbeelden: [
+            { type: "stap", tekst: "Veel NL-huizen draaiden op Gronings gas. Nu moeten ze geleidelijk **van het gas af** (warmtepompen, all-electric)." },
+            { type: "stap", tekst: "1959 = ontdekking, niet sluiting. 2050 = klimaatdoel, niet datum dichtdraaien. Het gasveld sloot eerder af dan oorspronkelijk gepland, vooral door aardbevingen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Groningen-gas: ontdekt 1959, gestopt 2024 wegens aardbevingen. Politiek en ethisch issue — 'energie vs. veiligheid bewoners'." }],
+          niveaus: {
+            basis: "2024 (dichtgedraaid wegens aardbevingen). = A.",
+            simpeler: "Groningen-gasveld is per 2023-2024 gesloten omdat gaswinning aardbevingen veroorzaakt. = A.",
+            nogSimpeler: "2024 = A.",
+          },
+        },
       },
       {
         q: "Wat veroorzaakte **aardbevingen** in Groningen?",
@@ -165,6 +187,29 @@ const steps = [
         options: ["Op zee", "Op berg", "In stad", "In land"],
         answer: 0,
         wrongHints: [null, "Klopt — meer wind.", "Niet.", "Niet.", "Onshore."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Offshore = op zee", tekst: "**Offshore** is Engels voor 'van de kust af'. Een **offshore windpark** is een groep windmolens die in **zee** staan, ver van de kust. Het tegenovergestelde is **onshore** (op land)." },
+            { titel: "Waarom op zee?", tekst: "Op zee waait het:\n• **Harder** (geen heuvels of bomen die wind tegenhouden)\n• **Vaker** (consistente wind, niet stop-start)\n• **Geen overlast** voor bewoners (slagschaduw, geluid)\n→ Daarom meer stroom per molen + minder klachten." },
+            { titel: "NL is wereld-top", tekst: "Nederland heeft **enorme offshore windparken** in de **Noordzee**: Borssele, Hollandse Kust Zuid + Noord, Gemini. Samen leveren ze stroom voor miljoenen huishoudens. Ondiepe Noordzee = ideaal." },
+          ],
+          woorden: [
+            { woord: "offshore", uitleg: "Op zee, van kust af." },
+            { woord: "onshore", uitleg: "Op land." },
+            { woord: "windpark", uitleg: "Groep windmolens samen." },
+          ],
+          theorie: "Cito-feit offshore: ondiepe Noordzee + harde wind = perfect voor NL. Nieuwe offshore-projecten: 'Hollandse Kust West' opent in 2026. Doel NL: in 2030 70% duurzame stroom — offshore is de motor.",
+          voorbeelden: [
+            { type: "stap", tekst: "Op zee staat een grote windmolen makkelijk 200 meter hoog, wieken van 100 meter. Veel groter dan op land mogelijk is." },
+            { type: "stap", tekst: "1 grote offshore-molen = ~1500-4000 huishoudens. Een park van 100 molens = stad-omvang." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "OFFshore = OFF-kust = op zee. ON-shore = ON-land. Engelse termen, ook NL gebruikt." }],
+          niveaus: {
+            basis: "Op zee. = A.",
+            simpeler: "Windpark in zee (offshore = 'van de kust'), waar wind harder waait. = A.",
+            nogSimpeler: "Op zee = A.",
+          },
+        },
       },
       {
         q: "Probleem **zonne-energie**?",
@@ -184,6 +229,29 @@ const steps = [
         options: ["Splijten van uranium-atomen", "Verbranden van olie", "Wind invangen", "Zon vangen"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Fossiel.", "Wind.", "Zon."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kernsplijting = atomen breken", tekst: "**Kernenergie** komt uit het **splijten van uranium-atomen**. Wetenschappers schieten een mini-deeltje (neutron) op een uranium-atoom → het atoom **breekt in tweeën** + er komt **enorm veel warmte** vrij." },
+            { titel: "Van warmte naar stroom", tekst: "Die warmte verwarmt water → water wordt **stoom** → stoom drijft een **turbine** (soort grote ventilator) → turbine draait een **generator** → generator maakt **elektriciteit**. Dezelfde laatste stappen als bij een kolencentrale." },
+            { titel: "Waarom enorm veel energie", tekst: "**1 kilo uranium** geeft evenveel energie als **2,7 miljoen kilo steenkool**. Daarom kan 1 kerncentrale een hele stad voeden. Maar... het maakt **radioactief afval** dat 1000+ jaar gevaarlijk blijft." },
+          ],
+          woorden: [
+            { woord: "uranium", uitleg: "Zwaar metaal dat radioactief is en gespleten kan worden." },
+            { woord: "kernsplijting", uitleg: "Atoom breken in 2 stukken; geeft veel energie." },
+            { woord: "neutron", uitleg: "Klein deeltje dat geen lading heeft." },
+          ],
+          theorie: "Cito-feit kernenergie:\n• NL heeft 1 kerncentrale: **Borssele** (Zeeland, sinds 1973).\n• Levert ~3% NL-stroom.\n• Geen CO₂ uitstoot (klimaatvriendelijk).\n• MAAR: radioactief afval + risico ongelukken (Tsjernobyl 1986, Fukushima 2011).\n• Toekomst kernfusie (zoals zon, veiliger, nog niet commercieel).",
+          voorbeelden: [
+            { type: "stap", tekst: "Frankrijk: 70% van stroom uit kernenergie. Duitsland: alles uit (sinds 2023, paniek na Fukushima)." },
+            { type: "stap", tekst: "Olie verbranden = chemische reactie. Kernenergie = atoom breken. **Totaal anders proces** maar uiteindelijk allebei: warmte → stoom → stroom." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Kernenergie = URANIUM + SPLIJTEN + WARMTE. Niet verbranden (dat is fossiel). Niet weer-afhankelijk (zoals wind/zon)." }],
+          niveaus: {
+            basis: "Splijten van uranium-atomen. = A.",
+            simpeler: "Uranium-atomen breken → veel warmte → water kookt → stoom → stroom. = A.",
+            nogSimpeler: "Uranium splijten = A.",
+          },
+        },
       },
       {
         q: "**NL kerncentrale**?",
