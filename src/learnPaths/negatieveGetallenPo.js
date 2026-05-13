@@ -329,6 +329,103 @@ const steps = [
           niveaus: { basis: "−€7. A.", simpeler: "Marc heeft €15, geeft €22 uit (€7 te veel) → saldo −€7 (rood). = A.", nogSimpeler: "−€7 = A." },
         },
       },
+      {
+        q: "**Verschil tussen +12 °C en −5 °C** = ?",
+        options: ["17 °C","7 °C","−7 °C","−17 °C"],
+        answer: 0,
+        wrongHints: [null,"Klopt — van −5 naar +12 = 5 + 12 = 17 graden.","Te weinig — vergeet de stappen onder nul niet.","Verschil is altijd positief (afstand).","Verschil is altijd positief — geen min ervoor."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil = afstand op getalslijn", tekst: "Van −5 °C naar +12 °C: tel stappen. Stappen tot 0: **5**. Stappen van 0 tot 12: **12**. Samen: 5 + 12 = **17**." },
+            { titel: "Truc: hoog − laag", tekst: "Verschil = grootste min kleinste. **+12 − (−5)** = 12 + 5 = 17. Twee minnen worden plus." },
+            { titel: "Cito-instinker", tekst: "Verschil is ALTIJD positief. Hoeveel graden ertussen, ongeacht richting. Veelgemaakte fout: −7 of −17 invullen omdat de laagste temperatuur negatief is. Verschil = afstand, en afstand is altijd ≥ 0." },
+          ],
+          woorden: [
+            { woord: "verschil", uitleg: "Hoeveel ertussen zit. Altijd positief getal." },
+            { woord: "getalslijn", uitleg: "Visualisatie: negatieve getallen links, positief rechts van 0." },
+          ],
+          theorie: "Verschil-berekenen-stappen:\n1. Bepaal grootste en kleinste\n2. Trek af: grootste − kleinste\n3. Als kleinste negatief: −(−X) = +X (min-min = plus)\n4. Antwoord positief\n\nOf: tel stappen op getalslijn van kleinste naar grootste.",
+          voorbeelden: [
+            { type: "stap", tekst: "Verschil tussen +5 en −3: 5 + 3 = 8." },
+            { type: "stap", tekst: "Verschil tussen −10 en −2: 10 − 2 = 8 (allebei negatief, kleinere afstand)." },
+          ],
+          basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "Cito veel met temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
+          niveaus: { basis: "17 °C. = A.", simpeler: "Van −5 naar 0 = 5. Van 0 naar +12 = 12. Samen: 17 graden verschil. = A.", nogSimpeler: "17 = A." },
+        },
+      },
+      {
+        q: "Een duiker zwemt op **−12 m** *(diepte)*. Hij stijgt **8 meter**. Waar **nu**?",
+        options: ["−4 m","−20 m","+4 m","−8 m"],
+        answer: 0,
+        wrongHints: [null,"Klopt — −12 + 8 = −4 m. Hij is nog 4 meter onder zeespiegel.","Andersom — stijgen is omhoog (richting 0), niet omlaag.","Te veel — niet genoeg gestegen om boven water te zijn.","Te weinig — controleer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Diepte = negatief", tekst: "Onder zeespiegel: getallen negatief. −12 m = 12 meter onder water." },
+            { titel: "Stijgen = optellen", tekst: "Stijgen = richting 0 (omhoog). −12 + 8 = **−4**. Hij is nog 4 m onder de zeespiegel." },
+            { titel: "Cito-context: hoogte vs diepte", tekst: "• Boven zeespiegel: positief (+150 m berg)\n• Onder zeespiegel: negatief (−12 m duiker)\n• Zeespiegel zelf: 0 m\nStijgen = + (omhoog). Dalen = − (omlaag)." },
+          ],
+          woorden: [
+            { woord: "zeespiegel", uitleg: "Niveau van de zee = 0 m. Boven = +, onder = −." },
+            { woord: "stijgen / dalen", uitleg: "Stijgen = optellen (richting 0/+). Dalen = aftrekken (richting −)." },
+          ],
+          theorie: "Diepte / hoogte met negatieve getallen:\n• Vliegtuig +10.000 m\n• Berg +800 m\n• Zeespiegel 0\n• Duiker −12 m\n• Onderzeeer −80 m\nBij beweging: pas op of getal positief of negatief is — context bepaalt.",
+          voorbeelden: [
+            { type: "stap", tekst: "Berg +500 m, daalt 200 m → +300 m." },
+            { type: "stap", tekst: "Onderzeeer −80 m, stijgt 30 m → −50 m." },
+          ],
+          basiskennis: [{ onderwerp: "Onder zeespiegel NL", uitleg: "Nederland heeft delen onder zeespiegel (−6 m bv. in Zuidplaspolder). Vandaar dijken." }],
+          niveaus: { basis: "−12 + 8 = −4. = A.", simpeler: "Duiker op −12 m. 8 omhoog = −12 + 8 = −4 m. Nog 4 m onder water. = A.", nogSimpeler: "−4 m = A." },
+        },
+      },
+      {
+        q: "Welke rij is **op volgorde van klein naar groot**?",
+        options: ["−9, −3, 0, +4","0, −3, +4, −9","−3, −9, 0, +4","+4, 0, −3, −9"],
+        answer: 0,
+        wrongHints: [null,"Klopt — meest negatief eerst, dan richting positief.","Niet op volgorde — 0 hoort tussen negatieven en positieven.","Niet — −9 < −3, dus −9 hoort eerst.","Andersom — dat is groot naar klein."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Negatieven: groter cijfer = kleiner getal", tekst: "Bij negatieve getallen is het tegenovergesteld dan bij positieven. **−9 < −3** (omdat −9 verder van 0 ligt, dus kleiner)." },
+            { titel: "Volgorde op getalslijn", tekst: "Links naar rechts: kleinste naar grootste.\n←  −9    −3    0    +4  →\nDus de juiste volgorde: **−9, −3, 0, +4**." },
+            { titel: "Cito-instinker", tekst: "Veelgemaakte fout: −9 plaatsen NA −3 omdat '9 > 3'. Bij negatieven werkt het andersom — '−9 ligt verder onder nul dan −3'." },
+          ],
+          woorden: [
+            { woord: "klein naar groot", uitleg: "Van links naar rechts op getalslijn." },
+            { woord: "negatief vergelijken", uitleg: "Hoe groter het cijfer achter de min, hoe kleiner het getal." },
+          ],
+          theorie: "Negatieve-getallen-vergelijk-regel:\n• Verder weg van 0 (groter cijfer) = kleiner getal\n• −100 < −10 < −1 < 0 < +1 < +10\n• Truc: trek streep door min — kleinste 'gewone' getal in min = grootste in absoluut, dus kleinst overall.",
+          voorbeelden: [
+            { type: "stap", tekst: "Sorteer −5, +2, −1, 0: −5 < −1 < 0 < +2." },
+            { type: "stap", tekst: "Wat is groter: −7 of −20? −7 (ligt dichter bij 0)." },
+          ],
+          basiskennis: [{ onderwerp: "Temperatuur-vergelijking", uitleg: "Het is kouder bij −15°C dan bij −5°C. −15 < −5." }],
+          niveaus: { basis: "−9, −3, 0, +4. = A.", simpeler: "Negatieven: −9 verder van 0 = kleiner. Dus volgorde links→rechts: −9, −3, 0, +4. = A.", nogSimpeler: "−9, −3, 0, +4 = A." },
+        },
+      },
+      {
+        q: "**(−5) × 3** = ?",
+        options: ["−15","+15","−8","+8"],
+        answer: 0,
+        wrongHints: [null,"Klopt — min × plus = min. 5 × 3 = 15, met minteken: −15.","Niet — bij min×plus blijft het minteken.","Niet vermenigvuldigen genoeg.","Andersom."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Min × plus = min", tekst: "Regel: bij vermenigvuldigen tellen we de minnen.\n• min × plus → **min**\n• plus × min → **min**\n• min × min → **plus**\n• plus × plus → **plus**\nHier: (−5) × 3 → één min → **negatief antwoord**." },
+            { titel: "Reken het getal", tekst: "5 × 3 = 15. Met minteken (één minus): **−15**." },
+            { titel: "Cito-truc: tel de minnen", tekst: "Vermenigvuldig de getallen normaal. Tel daarna hoeveel minnen er totaal staan. **Oneven** aantal minnen → eindantwoord min. **Even** aantal minnen → plus.\n• (−2) × (−3) = 6 (twee min = even = plus)\n• (−2) × 3 = −6 (een min = oneven = min)" },
+          ],
+          woorden: [
+            { woord: "vermenigvuldigen met negatief", uitleg: "Reken getal normaal, kijk minnen-aantal voor teken." },
+            { woord: "min × min = plus", uitleg: "Twee minnen heffen elkaar op bij vermenigvuldigen." },
+          ],
+          theorie: "Negatief-vermenigvuldig-regels:\n1. Tel het aantal minnen in de som\n2. Reken de getallen normaal\n3. Oneven aantal minnen → uitkomst is negatief\n4. Even aantal minnen (incl. 0) → uitkomst is positief\n\nGeldt ook bij delen.",
+          voorbeelden: [
+            { type: "stap", tekst: "(−4) × 5 = −20 (1 min = oneven = −)." },
+            { type: "stap", tekst: "(−2) × (−7) = +14 (2 min = even = +)." },
+            { type: "stap", tekst: "(−1) × (−1) × (−1) = −1 (3 min = oneven = −)." },
+          ],
+          basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is brugklas-VO-stof, maar Cito-eindtoets test het ook." }],
+          niveaus: { basis: "−15. = A.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15. = A.", nogSimpeler: "−15 = A." },
+        },
+      },
     ],
   },
 ];
