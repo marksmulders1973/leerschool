@@ -22,6 +22,29 @@ const steps = [
         options: ["Verbod (mag niet)", "Gebod", "Waarschuwing", "Info"],
         answer: 0,
         wrongHints: [null, "Klopt — verbodsbord.", "Blauw.", "Driehoek.", "Vierkant."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vorm + kleur = soort bord", tekst: "Verkeersborden hebben een **logica** in vorm en kleur. Eenmaal geleerd, herken je ze in 1 oogopslag." },
+            { titel: "Rond + rood = VERBOD", tekst: "Een ROND bord met een RODE rand betekent een **verbod** (iets mag NIET). Bv: inrijden verboden, fietsen verboden, parkeren verboden." },
+            { titel: "Andere vormen + kleuren", tekst: "**Rond + blauw** = gebod (je MOET dit doen). **Driehoek + rood** = waarschuwing (gevaar). **Vierkant + blauw** = informatie. **8-hoek + rood** = STOP (uniek)." },
+          ],
+          woorden: [
+            { woord: "verbodsbord", uitleg: "Rond met rode rand — iets mag NIET." },
+            { woord: "gebodsbord", uitleg: "Rond + blauw — iets MOET." },
+            { woord: "waarschuwingsbord", uitleg: "Driehoek + rood — gevaar." },
+          ],
+          theorie: "Cito-truc verkeersborden: ROND ROOD = NEE (verbod). ROND BLAUW = MOET (gebod). DRIEHOEK = LET OP (gevaar). VIERKANT = INFO. 8-HOEK = STOP.",
+          voorbeelden: [
+            { type: "stap", tekst: "Rond bord met rode rand + fiets erin = fietsen verboden." },
+            { type: "stap", tekst: "Rond blauw bord met fiets erin = verplicht fietspad (moet je gebruiken)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Rood = stop/verboden. Blauw = ok/gebod. Driehoek = gevaar." }],
+          niveaus: {
+            basis: "Rond + rood = verbodsbord (mag niet).",
+            simpeler: "Rood = nee. Blauw = ja-moet. Driehoek = gevaar.",
+            nogSimpeler: "Rond + rood = verbod.",
+          },
+        },
       },
       {
         q: "Wat doet **driehoek met punt boven**?",
@@ -53,6 +76,28 @@ const steps = [
         options: ["Verboden sinds 2019, boete €160", "Toegestaan", "Alleen handsfree", "Geen wet"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet aanbevolen.", "Wel wet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Sinds 2019 verboden", tekst: "Op de fiets met je **mobiel** in de hand mag NIET meer. Sinds **1 juli 2019** is dat in NL bij wet verboden. Dat geldt voor zowel telefoon BELLEN als SCROLLEN/CHATTEN/SPEL." },
+            { titel: "Hoge boete: €160", tekst: "Krijg je gepakt door politie? Dan kost het **€160 boete** (in 2024). Voor kinderen onder 18 wordt vaak met ouders gesproken. Maar daarna gewoon boete." },
+            { titel: "Waarom verboden?", tekst: "**Afleiding** in verkeer is heel gevaarlijk. Onderzoek: 1 in elke 4 fietsongelukken heeft te maken met mobielgebruik. Snel zelfs eventjes naar je scherm kijken = niet meer letten op auto's." },
+          ],
+          woorden: [
+            { woord: "afleiding", uitleg: "Niet meer letten op verkeer." },
+            { woord: "wet 1 juli 2019", uitleg: "Datum dat mobielgebruik op fiets verboden werd." },
+          ],
+          theorie: "Cito-feit: ook **handsfree** bellen op fiets via oortjes mag, maar oppassen — het mag NIET als je een telefoon vasthoudt. Smartwatch checken op pols = ook verboden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Telefoon op stuur-houder GEBRUIKEN (route-app), zonder aanraken = OK." },
+            { type: "stap", tekst: "Telefoon in hand om bericht te lezen = verboden (€160)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vuistregel: 2 handen op het stuur = altijd veilig. Mobiel pakken = niet." }],
+          niveaus: {
+            basis: "Mobiel op fiets verboden sinds 2019 (boete €160).",
+            simpeler: "Geen telefoon in hand op fiets. Te gevaarlijk.",
+            nogSimpeler: "Mobiel = verboden op fiets.",
+          },
+        },
       },
       {
         q: "**Helm** verplicht in NL?",
@@ -65,6 +110,28 @@ const steps = [
         options: ["Rechts", "Links", "Tegen", "Niemand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een gelijkwaardige kruising?", tekst: "Een **gelijkwaardige kruising** is een kruispunt zonder verkeerslichten, zonder voorrangsborden — alle wegen lijken even belangrijk." },
+            { titel: "De regel: rechts gaat voor", tekst: "Op zo'n kruising heeft de auto/fietser die VAN RECHTS komt **voorrang**. Dus jij moet stoppen voor iemand die van rechts komt. Iemand van LINKS moet voor jou stoppen." },
+            { titel: "Waarom rechts?", tekst: "Internationale afspraak (en wettelijk in NL): rechts heeft voorrang. Door deze duidelijke regel weet iedereen wat te doen, ook bij rustige kruispunten zonder borden." },
+          ],
+          woorden: [
+            { woord: "gelijkwaardige kruising", uitleg: "Kruispunt zonder borden of lichten — alle wegen even belangrijk." },
+            { woord: "voorrang", uitleg: "Eerst mogen rijden." },
+          ],
+          theorie: "Cito-truc: bij gelijkwaardige kruising = 'rechts voor'. Bij voorrangsweg (haaietanden op de weg of bord met scheve balk) = ANDERS, dan moet jij voorrang verlenen aan de doorgaande weg.",
+          voorbeelden: [
+            { type: "stap", tekst: "Op fiets door rustige woonwijk: kruispunt zonder borden. Auto van rechts komt → jij wacht." },
+            { type: "stap", tekst: "Voor jou een hoofdweg met haaietanden geschilderd op jouw weg = je moet voorrang verlenen, ook al ben jij van rechts." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Geen borden = rechts voor. Met haaietanden = niet rechts voor maar de andere weg." }],
+          niveaus: {
+            basis: "Gelijkwaardige kruising → rechts heeft voorrang.",
+            simpeler: "Iemand van rechts → jij stopt eerst.",
+            nogSimpeler: "Rechts voor.",
+          },
+        },
       },
       {
         q: "**Promillegrens** fietsen NL?",
