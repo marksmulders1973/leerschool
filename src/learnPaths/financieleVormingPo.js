@@ -60,12 +60,57 @@ const steps = [
         options: ["Ruilmiddel + rekeneenheid + spaarmiddel", "Munt + biljet + digitaal", "Sparen + lenen + uitgeven", "Bank + crypto + cash"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Dat zijn soorten geld.", "Dat zijn acties.", "Geen functies."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom hebben we geld?", tekst: "Geld vervult 3 functies tegelijk. Daardoor is het zo handig in het dagelijks leven." },
+            { titel: "1) Ruilmiddel", tekst: "Vroeger ruilden mensen direct (koe voor graan). Met geld kun je ALLES kopen met hetzelfde middel. Veel makkelijker." },
+            { titel: "2) Rekeneenheid", tekst: "Met geld kun je prijzen vergelijken. 'Deze fiets €200, die €150' — je ziet meteen welke goedkoper is." },
+            { titel: "3) Spaarmiddel", tekst: "Geld kun je BEWAREN voor later. Een koe wordt ouder, geld op de bank groeit door rente." },
+          ],
+          woorden: [
+            { woord: "ruilmiddel", uitleg: "Voor uitwisseling van goederen/diensten." },
+            { woord: "rekeneenheid", uitleg: "Om prijzen te vergelijken." },
+            { woord: "spaarmiddel", uitleg: "Om waarde te bewaren." },
+          ],
+          theorie: "Cito-tip: onthoud de 3 R's: Ruilen, Rekenen, (op)spaRen (sparen). Drie functies, drie woorden die met R beginnen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Je koopt een boek met €10 = ruilen. Je vergelijkt prijs van 2 boeken = rekenen. Je legt €10 opzij = sparen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "3 functies = Ruilmiddel + Rekeneenheid + Spaarmiddel. Munten/biljetten/digitaal = soorten, geen functies." }],
+          niveaus: {
+            basis: "Geld doet 3 dingen: ruilen, rekenen, sparen.",
+            simpeler: "Kopen + prijzen vergelijken + bewaren voor later.",
+            nogSimpeler: "Ruilen, rekenen, sparen.",
+          },
+        },
       },
       {
         q: "Hoeveel **landen** gebruiken de euro?",
         options: ["20 (eurozone)", "5", "27 (alle EU = Europese Unie)", "50"],
         answer: 0,
         wrongHints: [null, "Klopt — niet elk EU-land heeft euro.", "Te weinig.", "EU = 27 landen, eurozone = 20 met euro.", "Veel te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee verschillende dingen", tekst: "Let op: EU (Europese Unie) en eurozone zijn NIET hetzelfde." },
+            { titel: "EU = 27 landen", tekst: "De EU is een samenwerking van **27 landen** in Europa. Daar horen ze allemaal bij." },
+            { titel: "Eurozone = 20 landen met euro", tekst: "Van die 27 EU-landen gebruiken **20** ook de euro als geld. De andere 7 (Zweden, Denemarken, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije) hebben nog eigen munt." },
+          ],
+          woorden: [
+            { woord: "EU", uitleg: "Europese Unie — 27 landen die samenwerken." },
+            { woord: "eurozone", uitleg: "20 landen in EU die de euro gebruiken." },
+          ],
+          theorie: "Cito-truc: EU = 27 LANDEN (politiek). Eurozone = 20 met EURO (geld). Verschillende dingen. Sinds 2023: Kroatië is laatste die euro invoerde.",
+          voorbeelden: [
+            { type: "stap", tekst: "Zweden: WEL in EU, NIET in eurozone (gebruikt Zweedse kroon)." },
+            { type: "stap", tekst: "Frankrijk: WEL in EU, WEL in eurozone (gebruikt euro)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eurozone is een KLEINERE groep BINNEN de EU." }],
+          niveaus: {
+            basis: "20 landen gebruiken euro (eurozone).",
+            simpeler: "EU heeft 27 landen. Maar slechts 20 daarvan gebruiken euro.",
+            nogSimpeler: "20 met euro!",
+          },
+        },
       },
       {
         q: "**Vóór de euro** in Nederland?",
@@ -99,6 +144,28 @@ const steps = [
         options: ["Geld terug bij flessen inleveren", "Belasting op cola", "Spaargeld bank", "Bonus"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet statiegeld.", "Niet hetzelfde.", "Geen statiegeld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is statiegeld?", tekst: "Statiegeld is een **extra bedrag** dat je betaalt bij aankoop van een fles of blikje. Je krijgt dit geld TERUG als je de lege verpakking inlevert." },
+            { titel: "Waarom?", tekst: "Statiegeld stimuleert mensen om flessen + blikjes IN TE LEVEREN (niet weg te gooien). Zo recycle je beter en minder zwerfafval." },
+            { titel: "Hoeveel?", tekst: "Plastic fles 0,5L = €0,15. Plastic fles 1L+ = €0,25. Glasfles bier/limonade = €0,25-1,00. Blikje (sinds 2023) = €0,15." },
+          ],
+          woorden: [
+            { woord: "statiegeld", uitleg: "Bedrag op fles/blikje dat je terug krijgt." },
+            { woord: "recyclen", uitleg: "Hergebruiken van materiaal in nieuwe producten." },
+          ],
+          theorie: "Cito-feit: statiegeld is geen belasting, geen winst voor de winkel. Het is gewoon TIJDELIJK je eigen geld dat je terugkrijgt bij inleveren. Bij Albert Heijn / Jumbo via automaat.",
+          voorbeelden: [
+            { type: "stap", tekst: "Je koopt cola van €2. Daar zit €0,15 statiegeld in. Je betaalt €2 + €0,15 = €2,15. Lege fles inleveren = €0,15 terug." },
+            { type: "stap", tekst: "Schoolfeest met 20 flessen frisdrank = €0,15 × 20 = €3 statiegeld om terug te halen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Statiegeld = jouw eigen geld in bewaring. Niet vergeten in te leveren!" }],
+          niveaus: {
+            basis: "Statiegeld = geld terug bij inleveren fles/blikje.",
+            simpeler: "Je betaalt extra, krijgt terug bij inleveren = goed voor milieu.",
+            nogSimpeler: "Inleveren = geld terug.",
+          },
+        },
       },
       {
         q: "**€0,25** statiegeld is voor:",
