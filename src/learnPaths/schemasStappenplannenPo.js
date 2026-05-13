@@ -30,12 +30,56 @@ const steps = [
         options: ["Welke volgorde te doen","Welke kleur","Wie iets doet","Wanneer iets ophoudt"],
         answer: 0,
         wrongHints: [null,"Niet over kleur.","Soms wel maar primair: volgorde.","Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een stappenplan?", tekst: "Een **stappenplan** is een lijst van stappen in een BEPAALDE VOLGORDE om iets te doen. Het zegt: doe eerst dit, dan dat, daarna dat." },
+            { titel: "Volgorde = belangrijk", tekst: "De volgorde is geen optie — die is VAST. Je kunt niet 'bakken' voordat je 'beslag' hebt. Stappenplan dwingt logische volgorde af." },
+            { titel: "Voorbeelden", tekst: "Een **recept** is een stappenplan. Een **routebeschrijving** ook. Bij Cito krijg je vaak stappenplannen waar je moet zien welke stap waar staat." },
+          ],
+          woorden: [
+            { woord: "stappenplan", uitleg: "Lijst stappen in vaste volgorde." },
+            { woord: "volgorde", uitleg: "Welke stap eerst, welke daarna." },
+          ],
+          theorie: "Cito-tip: bij stappenplan-vragen lees je ALLE stappen voordat je antwoord geeft. Vaak gaat de vraag over volgorde, ontbrekende stap, of wissel-mogelijkheid.",
+          voorbeelden: [
+            { type: "stap", tekst: "Recept pannenkoek: 1) kom pakken, 2) ingrediënten, 3) mixen, 4) bakken. Volgorde vast." },
+            { type: "stap", tekst: "Naar school: 1) opstaan, 2) ontbijten, 3) jas aan, 4) deur uit. Volgorde logisch." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Stappenplan = wat eerst, wat daarna. Niet kleur, niet wie." }],
+          niveaus: {
+            basis: "Stappenplan zegt in welke VOLGORDE je iets doet.",
+            simpeler: "Lijstje 'eerst X, dan Y, daarna Z'.",
+            nogSimpeler: "Volgorde-lijst.",
+          },
+        },
       },
       {
         q: "**Pijlen** in een schema laten zien:",
         options: ["Verband of volgorde","De kleur","Hoeveel","Niets"],
         answer: 0,
         wrongHints: [null,"Niet kleur.","Niet hoeveel.","Wel iets — verband."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat doen pijlen in schema's?", tekst: "**Pijlen** verbinden twee dingen en geven aan: hier hoort iets bij iets anders. Dat heet een VERBAND of een VOLGORDE." },
+            { titel: "Voorbeelden", tekst: "Tijdlijn: '1900 → 1950 → 2000' = pijlen geven volgorde aan. Boomdiagram: 'Dieren → Zoogdieren' = pijl geeft 'is een soort van'-verband aan." },
+            { titel: "Lezen: pijl volgen", tekst: "Begin bij vertrek-punt van pijl. Volg pijlrichting. Eindpunt is wat erop volgt. Sommige pijlen lopen TERUG of in CIRKEL — let goed op." },
+          ],
+          woorden: [
+            { woord: "pijl", uitleg: "Symbool dat verband of volgorde aangeeft." },
+            { woord: "diagram", uitleg: "Schema met dozen + pijlen om iets uit te leggen." },
+          ],
+          theorie: "Cito-tip pijlen: pijl wijst van het EERSTE naar het LATERE. Of van 'oorzaak' naar 'gevolg'. Lees in de richting van de pijl.",
+          voorbeelden: [
+            { type: "stap", tekst: "Stroomdiagram: 'Computer aan → log in → app open → werken'. Pijlen = volgorde stappen." },
+            { type: "stap", tekst: "Indeling: 'Voertuigen → Auto's / Fietsen / Boten'. Pijlen = soort-van-relatie." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Pijl = van A naar B = hetzij volgorde, hetzij soort-van-relatie." }],
+          niveaus: {
+            basis: "Pijlen tonen verband of volgorde tussen elementen.",
+            simpeler: "Pijl van A naar B = A leidt naar B (of A is soort van B).",
+            nogSimpeler: "Pijl = relatie.",
+          },
+        },
       },
       {
         q: "Wat doe je **eerst** als je een schema krijgt?",
@@ -80,6 +124,28 @@ const steps = [
         options: ["Drink water","Eet","Iets anders","Niets"],
         answer: 0,
         wrongHints: [null,"Dat hoort bij 'honger'.","Beslisboom geeft maar 2 opties.","Beslisboom zegt iets te doen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees de vraag goed", tekst: "De beslisboom vraagt: 'Heb je HONGER?' (niet dorst). Beantwoord ALLEEN die vraag, niet wat jij EIGENLIJK voelt." },
+            { titel: "Volg het pad", tekst: "Dorst, geen honger? → antwoord op de vraag 'heb je honger?' is **NEE**. Volg dus de 'Nee'-pijl → **drink water**." },
+            { titel: "Beslisboom werkt logisch", tekst: "Een beslisboom geeft ALLEEN antwoorden op haar eigen vragen. Andere informatie (zoals 'ik heb dorst') gebruik je om je antwoord te geven, maar daarna volg je het pad." },
+          ],
+          woorden: [
+            { woord: "beslisboom", uitleg: "Schema met ja/nee-vragen die naar antwoord leiden." },
+            { woord: "pad volgen", uitleg: "Bij elke vraag het juiste antwoord (ja/nee) kiezen en doorlopen." },
+          ],
+          theorie: "Cito-tip beslisboom: lees ALTIJD de exacte vraag, niet wat erop LIJKT. Vraag is 'honger?', dus antwoord ja of nee daarop. Daarna volg pijl.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vraag: 'regent het?' Het is bewolkt maar geen regen. → antwoord NEE. Volg nee-pijl." },
+            { type: "stap", tekst: "Bij twijfel: kies de letterlijke betekenis van de vraag. 'Honger' is geen 'dorst'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Beslisboom = stap voor stap. Bij elke vraag: alleen die vraag beantwoorden, dan volg pijl." }],
+          niveaus: {
+            basis: "Volg het pad: dorst = geen honger → 'Nee' → drink water.",
+            simpeler: "Beantwoord 'heb je honger?' met nee → volg nee-pad.",
+            nogSimpeler: "Nee = water.",
+          },
+        },
       },
       {
         q: "Beslisboom: 'Regen? Ja → jas aan. Nee → buiten zonder jas.'\n\nHet **regent niet** maar is wel koud. Volgens de beslisboom:",
