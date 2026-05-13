@@ -182,19 +182,87 @@ const steps = [
         q: "Wie bedacht **E = mc²**?",
         options: ["Einstein", "Newton", "Darwin", "Curie"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Klopt.", "Zwaartekracht.", "Evolutie.", "Radioactiviteit."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De beroemdste formule ooit", tekst: "**E = mc²** is misschien wel de beroemdste natuurkunde-formule. **E** = energie. **m** = massa. **c** = lichtsnelheid. De formule zegt: een kleine hoeveelheid massa kan een ENORME hoeveelheid energie worden." },
+            { titel: "Wie bedacht hem?", tekst: "**Albert Einstein** (1879-1955), Duits-Joodse natuurkundige. Hij publiceerde de formule in **1905** als onderdeel van zijn **speciale relativiteitstheorie**. Was toen patentbureau-ambtenaar in Bern (Zwitserland)." },
+            { titel: "Waarom belangrijk?", tekst: "De formule is de basis voor **kernenergie + atoombom**: in atoomreactor wordt heel kleine massa omgezet in heel veel energie. Bijvoorbeeld: 1 gram uranium → energie van 22.000 ton TNT." },
+          ],
+          woorden: [
+            { woord: "Einstein", uitleg: "Duits-Joodse natuurkundige (1879-1955), bedacht relativiteit." },
+            { woord: "relativiteitstheorie", uitleg: "Theorie over tijd, ruimte en zwaartekracht." },
+          ],
+          theorie: "Cito-onderscheid wetenschappers: EINSTEIN = relativiteit + E=mc². NEWTON = zwaartekracht + 3 wetten. DARWIN = evolutie (biologie). CURIE = radium + radioactiviteit. Elk had eigen revolutionair idee.",
+          voorbeelden: [
+            { type: "stap", tekst: "Einstein won de **Nobelprijs 1921** — maar niet voor relativiteit, voor het 'foto-elektrisch effect' (licht-deeltjes)." },
+            { type: "stap", tekst: "Einstein vluchtte 1933 uit nazi-Duitsland naar VS. Hielp later Roosevelt waarschuwen voor atoombom-mogelijkheid." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "E = mc² + relativiteit + 1905 = Einstein. Niet verwarren met andere groten — Einstein heeft de beroemdste formule." }],
+          niveaus: {
+            basis: "Einstein. = A.",
+            simpeler: "Einstein bedacht de formule E=mc² in 1905. Energie = massa × lichtsnelheid². = A.",
+            nogSimpeler: "Einstein = A.",
+          },
+        },
       },
       {
         q: "Wat ontdekte **Marie Curie**?",
         options: ["Radium + radioactiviteit", "Zwaartekracht", "Evolutie", "Computer"],
         answer: 0,
         wrongHints: [null, "Klopt — 2x Nobelprijs.", "Newton.", "Darwin.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Marie Curie?", tekst: "**Marie Curie** (1867-1934) was een Poolse-Franse wetenschapper. Ze was **de eerste vrouw** die ooit een **Nobelprijs** kreeg. En de eerste persoon met **2 verschillende Nobelprijzen**." },
+            { titel: "Wat deed ze?", tekst: "Ze onderzocht **radioactiviteit** — zelf verzonnen woord. Ontdekte 2 nieuwe scheikundige elementen: **radium** + **polonium** (polonium genoemd naar Polen, haar geboorteland)." },
+            { titel: "Tragisch einde", tekst: "In haar tijd wist niemand hoe gevaarlijk radioactieve straling was. Ze werkte er JAREN mee zonder bescherming. Stierf in 1934 aan **stralingsziekte**. Haar onderzoeksaantekeningen zijn nog steeds zo radioactief dat ze in een loden kluis liggen." },
+          ],
+          woorden: [
+            { woord: "radioactiviteit", uitleg: "Eigenschap van bepaalde stoffen om straling uit te zenden." },
+            { woord: "radium", uitleg: "Scheikundig element, sterk radioactief." },
+            { woord: "Nobelprijs", uitleg: "Hoogste internationale prijs voor wetenschap, vrede, literatuur." },
+          ],
+          theorie: "Cito-feit Marie Curie:\n• **1903** Nobelprijs natuurkunde (samen met man Pierre + Becquerel).\n• **1911** Nobelprijs scheikunde (alleen).\n• Eerste persoon ooit met 2 verschillende Nobelprijzen.\n• Symbool voor vrouwen in wetenschap.",
+          voorbeelden: [
+            { type: "stap", tekst: "Marie's dochter **Irène Joliot-Curie** kreeg in 1935 OOK een Nobelprijs (chemie) — moeder + dochter dus 3 prijzen samen." },
+            { type: "stap", tekst: "Radioactiviteit-ontdekking maakte later röntgenfoto's + kankerbehandeling mogelijk. Onbedoeld levensreddend." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Curie = radioactiviteit + radium. 2 Nobelprijzen = uniek (eerste persoon). Eerste vrouw met Nobelprijs." }],
+          niveaus: {
+            basis: "Radium + radioactiviteit. = A.",
+            simpeler: "Marie Curie ontdekte radium + bedacht woord 'radioactiviteit'. Kreeg 2 Nobelprijzen. = A.",
+            nogSimpeler: "Radium = A.",
+          },
+        },
       },
       {
         q: "Wie brak **Enigma-code**?",
         options: ["Alan Turing (WO2)", "Einstein", "Bohr", "Curie"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Klopt.", "Natuurkundige, niet code-breker.", "Atoom-onderzoeker.", "Radioactiviteit."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is Enigma?", tekst: "De **Enigma** was een **codeer-machine** van nazi-Duitsland in WO2. De Duitsers gebruikten hem om geheime berichten te versturen (over schepen, troepen, plannen). De code leek onkraakbaar." },
+            { titel: "Wie was Alan Turing?", tekst: "**Alan Turing** (1912-1954) was een Britse wiskundige + cryptanalist. Met zijn team in **Bletchley Park** (Engeland) bouwde hij een grote machine om de Enigma-code te kraken." },
+            { titel: "Impact + tragisch einde", tekst: "Het kraken **versnelde het einde van WO2** met geschat 2-4 jaar — miljoenen levens gespaard. Turing wordt ook gezien als **vader van de computer**. Helaas werd hij in 1952 vervolgd voor zijn homoseksualiteit. Stierf jong. In 2013 postuum gerehabiliteerd door koningin." },
+          ],
+          woorden: [
+            { woord: "Alan Turing", uitleg: "Britse wiskundige, brak Enigma-code, pionier computer." },
+            { woord: "Enigma", uitleg: "Duitse codeer-machine uit WO2." },
+            { woord: "Bletchley Park", uitleg: "Plek in Engeland waar de code-kraking gebeurde." },
+          ],
+          theorie: "Cito-feit Alan Turing:\n• Brak Enigma in **1940-1941**.\n• Bedacht concept van een 'universal computing machine' (= moderne computer).\n• **Turing-test** = test of een computer kan denken als een mens.\n• Krijgt nu vele eerbetuigingen (Britse 50-pond-biljet met zijn gezicht).",
+          voorbeelden: [
+            { type: "stap", tekst: "Film **'The Imitation Game'** (2014) met Benedict Cumberbatch vertelt zijn verhaal." },
+            { type: "stap", tekst: "Niet verwarren: Einstein = natuurkunde. Bohr = atoomstructuur. Curie = radium. Turing = code-kraking + computer." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Turing = Enigma + computer-pionier. WO2 + code-kraking = combinatie." }],
+          niveaus: {
+            basis: "Alan Turing. = A.",
+            simpeler: "Britse wiskundige Alan Turing brak de Duitse Enigma-code in WO2. = A.",
+            nogSimpeler: "Turing = A.",
+          },
+        },
       },
       {
         q: "Wie ontdekten **DNA-structuur**?",
