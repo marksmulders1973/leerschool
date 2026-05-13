@@ -247,7 +247,29 @@ const steps = [
         q: "**Truc** om te checken hoofd vs bij?",
         options: ["Schrap de zin — verandert de boodschap?","Tel de woorden","Kijk naar kleur","Kijk naar plaatje"],
         answer: 0,
-        wrongHints: [null,"Geen zin.","Geen criterium.","Geen criterium."],
+        wrongHints: [null,"Klopt — schrap-test is de hoofd-truc.","Aantal woorden zegt niets over belangrijkheid.","Tekst heeft geen kleuren.","Plaatjes ondersteunen, maar zijn niet de truc."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De schrap-test", tekst: "Voor elke zin: lees de tekst MET zin → lees de tekst ZONDER die zin → vergelijk.\n• **Hoofdboodschap verandert?** → die zin is een **hoofdzaak** (kan niet weg)\n• **Hoofdboodschap blijft hetzelfde?** → die zin is een **bijzaak** (kan weg)" },
+            { titel: "Concreet voorbeeld", tekst: "*'Honden zijn loyaal. Mijn oom heeft een witte hond. Ze beschermen je.'*\n\n**Schrap zin 2** ('Mijn oom...'): *'Honden zijn loyaal. Ze beschermen je.'* → boodschap (honden zijn fijne huisdieren) BLIJFT → **bijzaak**.\n\n**Schrap zin 1** ('Honden zijn loyaal'): *'Mijn oom heeft een witte hond. Ze beschermen je.'* → boodschap is verzwakt, je weet niet meer waarom honden goed zijn → **hoofdzaak**." },
+            { titel: "Waarom andere opties niet werken", tekst: "• **Aantal woorden** — een lange zin kan bijzaak zijn, een korte zin kan hoofdzaak.\n• **Kleur** — alleen relevant in opmaak/website, niet in tekst-inhoud.\n• **Plaatjes** — kunnen ondersteunen maar zeggen niet wat hoofd vs bij is." },
+          ],
+          woorden: [
+            { woord: "schrap-test", uitleg: "Truc: lees tekst zonder zin — verandert boodschap?" },
+            { woord: "essentieel", uitleg: "Onmisbaar — verwijderen = boodschap valt uit elkaar." },
+          ],
+          theorie: "Cito-truc voor lange teksten met veel zinnen:\n1. Lees zin\n2. Mentaal schrappen\n3. Verandert kern-boodschap? → hoofd\n4. Geen verandering? → bijzaak\nWerkt voor ALLE tekstsoorten (informatief, betogend, verhalend, instructief).",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt woordenschat. Mijn buurjongen leest nooit.'* → zin 3 schrappen verandert boodschap niet → bijzaak (negatieve anecdote)." },
+            { type: "stap", tekst: "*'Bewegen is gezond. Het versterkt hart en spieren. Onderzoekers raden 1 uur per dag aan.'* → alle 3 zinnen versterken elkaar → ALLE 3 hoofdzaak." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap-test = de mentale truc. Niet woorden tellen, kleur kijken of plaatje — gewoon zin mentaal weghalen + check boodschap." }],
+          niveaus: {
+            basis: "Schrap-test: lees zonder zin, verandert boodschap? = A.",
+            simpeler: "Doe alsof je de zin weglaat. Kun je de tekst nog snappen? Dan bijzaak. Niet meer snappen? Hoofdzaak. = A.",
+            nogSimpeler: "Schrap-test = A.",
+          },
+        },
       },
     ],
   },
@@ -289,7 +311,30 @@ const steps = [
         q: "Hoe lang is een **goede** samenvatting meestal?",
         options: ["Korter dan origineel","Langer dan origineel","Even lang","Heel lang"],
         answer: 0,
-        wrongHints: [null,"Niet samenvatten.","Niet samenvatten.","Niet samenvatten."],
+        wrongHints: [null,"Klopt — meestal ~25-30% van origineel.","Tegenovergesteld — dat zou een uitbreiding zijn.","Geen verkorting — geen samenvatting.","Niet samenvatten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Samen-vatten = korter maken", tekst: "Het woord **'samenvatten'** zegt het al: vat de tekst SAMEN in een korter geheel. Een samenvatting die even lang of langer is, is geen samenvatting." },
+            { titel: "Hoe kort precies?", tekst: "Vuistregel: **~25-30% van origineel**. Een tekst van 400 woorden → samenvatting van 100-120 woorden. Een tekst van 1000 woorden → 250-300 woorden samenvatting.\n\nKan korter (10-20% voor heel beknopt) maar zelden langer dan 30%." },
+            { titel: "Waarom dit percentage?", tekst: "Bij 25-30% behoud je:\n✓ Hoofdgedachte (essentieel)\n✓ Hoofdzaken (meestal 3-5 punten)\n✓ Eigen woorden\n\nMaar je verwijdert:\n✗ Bijzaken / anecdotes\n✗ Voorbeelden (tenzij essentieel)\n✗ Herhalingen" },
+          ],
+          woorden: [
+            { woord: "samenvatten", uitleg: "Kort maken zonder hoofdboodschap te verliezen." },
+            { woord: "uitbreiden", uitleg: "Langer maken — tegenovergestelde van samenvatten." },
+          ],
+          theorie: "Cito-vuistregel samenvatting:\n• ~25-30% van originele lengte\n• Hoofdgedachte expliciet\n• Hoofdzaken aanwezig\n• Bijzaken weg\n• Eigen woorden (geen kopie)",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst 400 woorden → samenvatting 100-120 woorden." },
+            { type: "stap", tekst: "Krantenartikel 600 woorden → samenvatting 150-200 woorden." },
+            { type: "stap", tekst: "Boekje 1000 woorden → samenvatting 250-300 woorden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Mik op een KWART tot DERDE van origineel. Kortere kan, langere zelden." }],
+          niveaus: {
+            basis: "Korter dan origineel (~25-30%). = A.",
+            simpeler: "Een samenvatting is een KORTERE versie van de tekst. Niet even lang, niet langer. = A.",
+            nogSimpeler: "Korter = A.",
+          },
+        },
       },
       {
         q: "Tekst: 'Mensen drinken water voor gezondheid. Water spoelt afvalstoffen weg. Water zorgt voor hydratatie. Mijn opa drinkt 2 liter per dag.'\n\n**Wat staat NIET in een goede samenvatting**?",
@@ -336,6 +381,28 @@ const steps = [
         q: "Welke zin is een **bijzaak** in een tekst over 'gezond eten'?",
         options: ["Mijn moeder kookt elke maandag pasta","Groenten geven vitaminen","Fruit is gezond","Suiker is ongezond"],
         answer: 0,
+        uitlegPad: {
+          stappen: [
+            { titel: "Algemeen vs persoonlijk", tekst: "In een tekst over **algemene** onderwerpen (gezond eten) zijn:\n• **Hoofdzaken** = algemene feiten ('groenten geven vitaminen', 'fruit is gezond')\n• **Bijzaken** = persoonlijke anecdotes ('mijn moeder', 'gisteren')" },
+            { titel: "Pas toe op opties", tekst: "• **'Mijn moeder kookt elke maandag pasta'** → persoonlijke anecdote → **bijzaak** ✓\n• **'Groenten geven vitaminen'** → algemeen feit → hoofdzaak\n• **'Fruit is gezond'** → algemeen feit → hoofdzaak\n• **'Suiker is ongezond'** → algemeen feit → hoofdzaak" },
+            { titel: "Signaalwoorden voor bijzaken", tekst: "Bijzaken hebben vaak:\n• **Eigennamen** ('moeder', 'oom Henk', 'Anna')\n• **Specifieke tijden** ('elke maandag', 'gisteren', 'twee weken geleden')\n• **Concrete details** die slechts 1 persoon betreffen\n\nHoofdzaken zijn breed + algemeen + dekken het thema." },
+          ],
+          woorden: [
+            { woord: "anecdote", uitleg: "Persoonlijk verhaaltje binnen tekst — meestal bijzaak." },
+            { woord: "algemeen feit", uitleg: "Geldt voor iedereen — meestal hoofdzaak." },
+          ],
+          theorie: "Cito-truc bijzaak-herkenning in algemene teksten:\n• Eigennaam + actie = bijna altijd anecdote = bijzaak\n• 'Mijn / mijn oom / gisteren' = signaalwoorden bijzaak\n• Algemeen feit zonder personen = hoofdzaak",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over honden: 'Honden zijn loyaal' = hoofd. 'Mijn buurman heeft een Labrador' = bijzaak." },
+            { type: "stap", tekst: "Tekst over fietsen: 'Fietsen is gezond' = hoofd. 'Oom Henk fietst 20 km per dag' = bijzaak." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam + specifieke daad = anecdote = bijzaak. Algemeen feit zonder personen = hoofdzaak." }],
+          niveaus: {
+            basis: "'Mijn moeder kookt pasta' = anecdote = bijzaak. = A.",
+            simpeler: "Algemene feiten = hoofd. Persoonlijke anecdotes met eigennaam = bijzaak. = A.",
+            nogSimpeler: "Moeder + pasta = anecdote = A.",
+          },
+        },
         wrongHints: [null,"Hoofdzaak.","Hoofdzaak.","Hoofdzaak."],
       },
       {
