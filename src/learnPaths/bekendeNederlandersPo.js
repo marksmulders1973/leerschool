@@ -27,12 +27,57 @@ const steps = [
         options: ["Leider Tachtigjarige Oorlog + Vader des Vaderlands", "Voetballer", "Schilder", "Astronaut"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Modern.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was hij?", tekst: "**Willem van Oranje** (1533-1584) was een edelman die de leiding nam in de **opstand tegen Spanje** (1568-1648, ook bekend als de Tachtigjarige Oorlog)." },
+            { titel: "Waarom 'Vader des Vaderlands'?", tekst: "Hij begon de Nederlandse onafhankelijkheidsstrijd. Daarom zien Nederlanders hem als oprichter van NL als zelfstandig land. Het Wilhelmus (volkslied) gaat over hem." },
+            { titel: "Vermoord 1584", tekst: "In **Delft** werd hij doodgeschoten door **Balthasar Gerards**. Eerste politieke moord met vuurwapen ter wereld. Hij werd begraven in de **Nieuwe Kerk Delft** — waar nu nog de koninklijke familie begraven wordt." },
+          ],
+          woorden: [
+            { woord: "Willem van Oranje", uitleg: "Leider opstand tegen Spanje, Vader des Vaderlands." },
+            { woord: "Tachtigjarige Oorlog", uitleg: "1568-1648: NL-onafhankelijkheid van Spanje." },
+            { woord: "Wilhelmus", uitleg: "NL-volkslied, geschreven over Willem van Oranje (oudst volkslied ter wereld)." },
+          ],
+          theorie: "Cito-feit: Willem van Oranje zit in **Tijdvak 6** van NL-canon (Tijd van ontdekkers en hervormers). Hij gaf 'Oranje' aan koninklijk huis Oranje-Nassau (huidige koning Willem-Alexander stamt af).",
+          voorbeelden: [
+            { type: "stap", tekst: "Wilhelmus-tekst: 'Wilhelmus van Nassouwe ben ik van Duitsen bloed...'" },
+            { type: "stap", tekst: "Koningsdag wordt gevierd op 27 april — verjaardag huidige koning, niet Willem van Oranje zelf." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Oranje = vorstenhuis NL = afstamming Willem van Oranje. Geboren in Duitsland (Dillenburg) maar werd Nederlands held." }],
+          niveaus: {
+            basis: "Willem van Oranje = leider opstand tegen Spanje + Vader des Vaderlands.",
+            simpeler: "Eerste 'leider' van Nederland, vermoord in Delft 1584.",
+            nogSimpeler: "Vader des Vaderlands.",
+          },
+        },
       },
       {
         q: "Wie zag **bacteriën** als eerste?",
         options: ["Antoni van Leeuwenhoek (microscoop, Delft)", "Huygens", "Cruijff", "Mussert"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Astronoom.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was hij?", tekst: "**Antoni van Leeuwenhoek** (1632-1723) was een lakenkoopman uit **Delft**. Hij was geen wetenschapper van opleiding, maar bouwde zelf **microscopen** uit nieuwsgierigheid." },
+            { titel: "Wat ontdekte hij?", tekst: "Met zijn beste microscoop (270x vergroting!) zag hij als eerste mens **bacteriën** + **spermacellen** + andere mini-leven. Hij noemde ze 'kleine diertjes'." },
+            { titel: "Onthouden", tekst: "Hij stuurde brieven naar de Royal Society in Londen. Daarom is hij wereldberoemd als 'vader van de microbiologie'. Sterk Nederlands-Engels samenspel in 1600s." },
+          ],
+          woorden: [
+            { woord: "microscoop", uitleg: "Apparaat om iets HEEL klein groot te zien." },
+            { woord: "microbiologie", uitleg: "Wetenschap van micro-organismen (bacteriën, virussen, schimmels)." },
+          ],
+          theorie: "Cito-tip: van Leeuwenhoek is een NL-trots-figuur. Hij toonde dat er een onzichtbare wereld bestaat — basis voor moderne medische wetenschap. Pasteur bouwde later voort (vaccins).",
+          voorbeelden: [
+            { type: "stap", tekst: "Eerste keer dat een mens een bacterie zag: rond 1675." },
+            { type: "stap", tekst: "Niet verwarren: HUYGENS (Christiaan) = astronoom + uitvinder slingerklok. Andere NL-wetenschapper." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Van Leeuwenhoek + Delft + microscoop = de combinatie. Christiaan Huygens = klok + ringen Saturnus." }],
+          niveaus: {
+            basis: "Van Leeuwenhoek (Delft) zag als eerste bacteriën via zelfgebouwde microscoop.",
+            simpeler: "Lakenkoopman uit Delft = vader van microbiologie.",
+            nogSimpeler: "Van Leeuwenhoek = microscoop + bacteriën.",
+          },
+        },
       },
       {
         q: "Wie ontsnapte uit **boekenkist Slot Loevestein**?",
@@ -52,6 +97,28 @@ const steps = [
         options: ["Johan Cruijff (3x Gouden Bal)", "Verstappen", "Cruyff junior", "Memphis"],
         answer: 0,
         wrongHints: [null, "Klopt — overleden 2016.", "F1.", "Niet zo bekend.", "Modern."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Cruijff?", tekst: "**Johan Cruijff** (1947-2016) was een NL-voetballer die wereldberoemd werd om zijn techniek + creativiteit. Speelde bij **Ajax** + **FC Barcelona** + Feyenoord." },
+            { titel: "3x Gouden Bal", tekst: "De **Gouden Bal** is de prijs voor de **beste voetballer van Europa per jaar**. Cruijff won hem 3 keer (1971, 1973, 1974). Bijna niemand wint hem 3x." },
+            { titel: "Cruijff-school", tekst: "Hij was niet alleen speler maar ook **denker**. Bedacht 'totaalvoetbal'. Later coach FC Barcelona (1988-1996, 'Dream Team'). Beïnvloedt voetbal nog steeds." },
+          ],
+          woorden: [
+            { woord: "Gouden Bal", uitleg: "Prijs voor beste voetballer Europa per jaar." },
+            { woord: "totaalvoetbal", uitleg: "NL-stijl: spelers wisselen van positie, alles aanvallen." },
+          ],
+          theorie: "Cito-feit: Cruijff was niet alleen sport-icoon maar cultureel symbool. Beroemde uitspraken: 'Je gaat het pas zien als je het door hebt'. Stierf 2016 aan longkanker.",
+          voorbeelden: [
+            { type: "stap", tekst: "Cruijff #14-shirt = legendarisch, wordt nu niet meer gegeven bij Ajax." },
+            { type: "stap", tekst: "Andere 3x Gouden Bal-winnaars: Lionel Messi (Argentinië), Marco van Basten (NL)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Cruijff = #14 = grootste NL-voetballer. Niet verwarren met zoon Jordi Cruijff (ook voetballer, minder bekend)." }],
+          niveaus: {
+            basis: "Johan Cruijff = grootste NL-voetballer (3x Gouden Bal).",
+            simpeler: "Cruijff van Ajax + Barcelona, drie keer beste van Europa.",
+            nogSimpeler: "Cruijff = grootste.",
+          },
+        },
       },
       {
         q: "Wie won **Tour de France 1980**?",
