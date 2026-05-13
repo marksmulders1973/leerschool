@@ -396,6 +396,21 @@ const steps = [
         options: ["1/4", "1/2", "1", "0"],
         answer: 0,
         wrongHints: [null, "Klopt — helft van een helft = kwart.", "Niet halveert.", "Dat is dubbel.", "Niet nul."],
+        uitlegPad: {
+          stappen: [
+            { titel: "50% = de helft", tekst: "50% betekent half. Dus 50% van 1/2 = de helft van 1/2." },
+            { titel: "Halveer breuk", tekst: "Helft van 1/2 = 1/4 (verdubbel de noemer: 2 → 4)." },
+          ],
+          woorden: [{ woord: "halveren breuk", uitleg: "Teller × 1 en noemer × 2 (of teller ÷ 2 als even)." }],
+          theorie: "Cito-truc: % en breuken samen — schrijf % als breuk. 50% = 1/2. Dan × of × elkaar.",
+          voorbeelden: [{ type: "stap", tekst: "50% van 1/2 = 1/2 × 1/2 = 1/4. 25% van 1/2 = 1/4 × 1/2 = 1/8." }],
+          basiskennis: [{ onderwerp: "Visualiseer", uitleg: "Pizza in 2 = halve. Half daarvan = kwart. Klopt." }],
+          niveaus: {
+            basis: "1/4 (helft van helft). A.",
+            simpeler: "50% = 1/2. 1/2 × 1/2 = 1/4. = A.",
+            nogSimpeler: "1/4 = A.",
+          },
+        },
       },
       {
         q: "Een artikel van **€120 is in de uitverkoop voor €90**. **% korting**?",

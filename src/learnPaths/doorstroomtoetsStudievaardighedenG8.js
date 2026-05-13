@@ -545,6 +545,21 @@ const steps = [
         options: ["paars", "rood", "Beide gelijk", "Niet alfabetisch"],
         answer: 0,
         wrongHints: [null, "Klopt — p vóór r.", "Niet — r komt later.", "Niet gelijk.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vergelijk eerste letter", tekst: "'paars' begint met p (16e letter). 'rood' begint met r (18e letter)." },
+            { titel: "Alfabet-volgorde", tekst: "p komt voor r → 'paars' staat eerder." },
+          ],
+          woorden: [{ woord: "alfabet-positie", uitleg: "Volgorde A=1, B=2, ..., P=16, ..., R=18, ..., Z=26." }],
+          theorie: "Bij verschillende eerste letters: kijk welke letter eerder in alfabet komt. Vergelijk: P=16 vs R=18.",
+          voorbeelden: [{ type: "stap", tekst: "'appel' vs 'boom': a (1) vs b (2) → appel eerder. 'huis' vs 'kat': h (8) vs k (11) → huis eerder." }],
+          basiskennis: [{ onderwerp: "Alfabet onthouden", uitleg: "Tip: leer rijtjes A-G, H-N, O-T, U-Z." }],
+          niveaus: {
+            basis: "paars (p < r). A.",
+            simpeler: "p komt voor r in alfabet. Dus 'paars' eerst. = A.",
+            nogSimpeler: "paars = A.",
+          },
+        },
       },
       {
         q: "Wat is een **woordenboek** voor?",
