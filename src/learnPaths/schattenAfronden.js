@@ -30,6 +30,28 @@ const steps = [
         options: ["1200","1500","800","2000"],
         answer: 0,
         wrongHints: [null,"Te veel — schat: 30 × 40 = 1200, niet 1500.","Te weinig — controleer met 30 × 40.","Veel te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: rond beide getallen af op 10", tekst: "28 → afgerond op tientallen = **30**. 41 → afgerond op tientallen = **40**." },
+            { titel: "Stap 2: vermenigvuldig de afgeronde getallen", tekst: "30 × 40 = 3 × 4 × 100 = 1200." },
+            { titel: "Check: klopt het qua grootte?", tekst: "Echte uitkomst: 28 × 41 = 1148. Schatting 1200 zit er dicht bij. Met schatten op 10 ben je vaak ~5% van de echte waarde af — goed genoeg voor Cito-controle." },
+          ],
+          woorden: [
+            { woord: "schatten", uitleg: "Snel een ongeveer-antwoord berekenen door af te ronden." },
+            { woord: "afronden", uitleg: "Een getal vereenvoudigen naar een 'rond' getal." },
+          ],
+          theorie: "Cito-tip schatten: rond af op tientallen (handig getal), reken met die. Goed voor: 1) sneller rekenen, 2) check of je echte antwoord ongeveer klopt.",
+          voorbeelden: [
+            { type: "stap", tekst: "Schat 47 × 19 → 50 × 20 = 1000. Echt: 893." },
+            { type: "stap", tekst: "Schat 19 × 21 → 20 × 20 = 400. Echt: 399." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "1, 2, 3, 4 → omlaag. 5, 6, 7, 8, 9 → omhoog. Dan keer doen." }],
+          niveaus: {
+            basis: "Schatten = afronden + dan rekenen.",
+            simpeler: "28 → 30. 41 → 40. 30 × 40 = 1200.",
+            nogSimpeler: "Afronden, dan keer.",
+          },
+        },
       },
       {
         q: "**Wanneer is schatten handig**?",
@@ -61,6 +83,28 @@ const steps = [
         options: ["400","300","350","360"],
         answer: 0,
         wrongHints: [null,"5 in tientallen → naar boven.","Niet op 100 afgerond — dat is op 10.","Niet op 100 afgerond — dat is op 10."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: welk cijfer telt?", tekst: "Bij afronden op **100** kijk je naar het cijfer in de **tientallen** (de '5' in 358)." },
+            { titel: "Stap 2: regel toepassen", tekst: "Cijfer **5 of hoger** = naar **BOVEN** afronden. Dus 358 → naar 400 (niet 300)." },
+            { titel: "Klopt het qua grootte?", tekst: "358 ligt tussen 300 en 400. Omdat de 5 in tientallen aangeeft 'naar boven', wordt het 400. Niet 350 of 360 — dat is afronden op 10, niet op 100." },
+          ],
+          woorden: [
+            { woord: "afronden op 100", uitleg: "Maak hele honderdtallen (300, 400, 500, ...)." },
+            { woord: "5-regel", uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag." },
+          ],
+          theorie: "Cito-tip: kijk altijd 1 cijfer NA waar je naartoe rondt. Bij op 100: kijk tientallen. Bij op 10: kijk eenheden. Bij op 1000: kijk honderdtallen.",
+          voorbeelden: [
+            { type: "stap", tekst: "247 op 100 → 4 in tien = omlaag → 200." },
+            { type: "stap", tekst: "850 op 100 → 5 in tien = omhoog → 900." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Op 100? Kijk naar tien. Dat cijfer beslist of je naar 200/300/400/... gaat." }],
+          niveaus: {
+            basis: "Op 100 afronden: kijk tientallen. 358 → 400 (5 = omhoog).",
+            simpeler: "Cijfer in tienen ≥ 5 → omhoog. <5 → omlaag.",
+            nogSimpeler: "358 → 400.",
+          },
+        },
       },
       {
         q: "**Rond af op 1000: 4500**",
@@ -80,6 +124,28 @@ const steps = [
         options: ["600","500","700","400"],
         answer: 0,
         wrongHints: [null,"Te weinig — controleer: 200 + 400 = 600.","Te veel — controleer afronding.","Veel te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: rond elk getal af op 100", tekst: "198 → ligt vlakbij 200 (cijfer in tien = 9 = omhoog) → **200**. 412 → ligt vlakbij 400 (cijfer in tien = 1 = omlaag) → **400**." },
+            { titel: "Stap 2: tel op", tekst: "200 + 400 = **600**." },
+            { titel: "Snelle check", tekst: "Echte uitkomst: 198 + 412 = 610. Schatting 600 zit super-dicht erbij. Schatten op 100 = ~98% accuraat hier." },
+          ],
+          woorden: [
+            { woord: "afronden op 100", uitleg: "Hele honderdtallen maken (100/200/300/...)." },
+            { woord: "schatten + optellen", uitleg: "Eerst afronden, dan + doen." },
+          ],
+          theorie: "Cito-tip: bij grote sommen ALTIJD even schatten als check. 198 + 412 mag niet 1000 of 100 zijn — als jouw echte berekening dat zegt, heb je fout gerekend.",
+          voorbeelden: [
+            { type: "stap", tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706." },
+            { type: "stap", tekst: "Schat 612 − 387 → 600 − 400 = 200. Echt: 225." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Afronden, dan rekenen. Veel sneller dan exact rekenen, en bijna altijd binnen 10% van echte antwoord." }],
+          niveaus: {
+            basis: "Schatten op 100: rond af, dan optellen. 200 + 400 = 600.",
+            simpeler: "198 → 200. 412 → 400. Som = 600.",
+            nogSimpeler: "200 + 400 = 600.",
+          },
+        },
       },
       {
         q: "**Schat 39 × 21** (afgerond op 10):",
