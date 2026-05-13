@@ -35,6 +35,12 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Rekenen Doorstroomtoets](https://leerkwartier.app/rekenen-doorstroomtoets.html):
   long-tail page over de 6 reken-domeinen + uitleg waarom 60-70% van
   reken-vragen redactiesommen zijn.
+- [Cito-toets oefenen](https://leerkwartier.app/cito-toets-oefenen.html):
+  voor mensen die "Cito" nog gebruiken ipv "Doorstroomtoets" — uitleg
+  van de naamwijziging + oefenen per groep (6, 7, 8).
+- [VMBO-examens downloaden + inzien](https://leerkwartier.app/vmbo-examens-downloaden.html):
+  hoe je VMBO-examens downloadt via examenblad.nl + verschil met
+  interactief oefenen op Leerkwartier. Inclusief URL-patronen.
 - [Cito-eindtoets oefenen (in-app)](https://leerkwartier.app/cito):
   oefenpaden voor de Doorstroomtoets 2026/2027 (rekenen, taal,
   studievaardigheden). Authentieke vraagstijl + didactische uitlegPad.
