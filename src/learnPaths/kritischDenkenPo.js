@@ -49,6 +49,28 @@ const steps = [
         options: ["Checken bron + andere bron + waarom", "Direct geloven", "Direct delen", "Niet lezen"],
         answer: 0,
         wrongHints: [null, "Klopt — 5 W's.", "Niet.", "Niet.", "Wel lezen + checken."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Internet = niet alles waar", tekst: "**Op internet kan IEDEREEN iets plaatsen** — een wetenschapper, een influencer, een 12-jarige, een oplichter. Daarom is **CHECKEN voor delen** essentieel." },
+            { titel: "De 3 controle-vragen", tekst: "Bij elk artikel/filmpje/post:\n1. **Wie zegt dit?** (bron + auteur)\n2. **Wat is bewijs?** (links naar onderzoek?)\n3. **Wat zeggen andere bronnen?** (vergelijk minstens 2 plekken)" },
+            { titel: "5 W-vragen volledig", tekst: "Voor diepere check:\n• **Wie** schreef het?\n• **Wat** zegt hij precies?\n• **Wanneer** geschreven? (recent? oud?)\n• **Waarom** dit? (voordeel? belang?)\n• **Waar** kwam de info vandaan?" },
+          ],
+          woorden: [
+            { woord: "bronnenkritiek", uitleg: "Onderzoeken WIE iets zegt + of dat klopt." },
+            { woord: "fact-check", uitleg: "Feitencheck — controleren of beweringen waar zijn." },
+          ],
+          theorie: "Cito-tip betrouwbare bron-niveaus:\n• **Top**: officiële instanties (.gov, .nl van overheid), wetenschappers, grote kranten (NOS, NRC).\n• **Midden**: bekende sites met redactie (Wikipedia voor algemene info).\n• **Laag**: blogs, sociale media zonder controle.\n• **Nul**: anonieme posts, AI-generatie zonder controle.",
+          voorbeelden: [
+            { type: "stap", tekst: "TikTok-video over 'natuurlijke kanker-genezing'? CHECK: wie zegt het (arts of influencer?), bron (onderzoek of mening?), andere bronnen (klopt dit elders?)." },
+            { type: "stap", tekst: "NOS-bericht over verkiezingen? Veiliger want NOS heeft redactie + fact-check, maar nog steeds: vergelijk met andere bronnen voor compleet beeld." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "STOP-truc: STOP voor delen. Check bron + bewijs + andere bron. Dan pas delen of geloven." }],
+          niveaus: {
+            basis: "Checken bron + andere bronnen + waarom. = A.",
+            simpeler: "Bij info: vraag WIE, WAT, WANNEER, WAAROM, WAAR. Dan pas geloven. = A.",
+            nogSimpeler: "Checken! = A.",
+          },
+        },
       },
       {
         q: "Wat is **wetenschappelijk denken**?",
@@ -102,6 +124,28 @@ const steps = [
         options: ["Doorgaan omdat je al investeerde", "Nieuw beginnen", "Slim kiezen", "Niets"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Wel goed.", "Niet primair.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is 'sunk cost'?", tekst: "**Sunk cost** = 'verzonken kosten' = geld of tijd dat al **uitgegeven** is en NIET meer terug te krijgen. **Sunk cost fallacy** = de denkfout om door te gaan met iets ALLEEN omdat je er al in geïnvesteerd hebt." },
+            { titel: "Klassiek voorbeeld", tekst: "Je begon een boek dat je SAAI vindt. Maar denkt: 'ik heb al 100 bladzijden gelezen, ik moet het uitlezen.' Resultaat: nog 200 saaie bladzijden te gaan.\n**Logischer**: stop nu. Die 100 bladzijden zijn weg, ongeacht wat je nu doet. Lees iets leuks." },
+            { titel: "Hoe ontsnap je?", tekst: "Stel jezelf de vraag: **'Wat zou ik kiezen als ik vandaag opnieuw kon beginnen?'** Niet 'ik heb er al in geïnvesteerd' — alleen 'wat is het beste voor de toekomst?'" },
+          ],
+          woorden: [
+            { woord: "sunk cost", uitleg: "Al uitgegeven kosten — niet meer terug te halen." },
+            { woord: "fallacy", uitleg: "Denkfout, redeneerfout." },
+          ],
+          theorie: "Cito-tip: sunk cost fallacy = niet alleen geld, ook TIJD + EMOTIE. Een relatie waar je 5 jaar in stak voelt 'te zonde om weg te gooien'. Maar dat is een denkfout — beoordeel op TOEKOMST, niet op verleden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bioscoop: film is saai na 30 min. Doorgaan want '€12 betaald'? Nee — die €12 is sowieso weg. Loop weg + doe iets leuks." },
+            { type: "stap", tekst: "Voor bedrijven: een project dat €1 mln kostte + nu €5 mln meer kost vs €0,5 mln voor nieuw plan. Slim = nieuw plan, niet voortbouwen op verlies." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Verleden is verleden. Beslis op basis van TOEKOMST. 'Wat zou ik nu kiezen als ik vandaag begon?'" }],
+          niveaus: {
+            basis: "Sunk cost fallacy = doorgaan omdat je al investeerde (denkfout). = A.",
+            simpeler: "Saai boek uitlezen alleen omdat je al 100 bladzijden las = sunk cost fallacy. = A.",
+            nogSimpeler: "Doorgaan om verleden = A.",
+          },
+        },
       },
       {
         q: "Waarom is **stereotypering** fout?",
@@ -149,6 +193,29 @@ const steps = [
         options: ["Aanval op persoon ipv argument", "Goed argument", "Vraag", "Niets"],
         answer: 0,
         wrongHints: [null, "Klopt — drogreden.", "Niet.", "Niet primair.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is ad hominem?", tekst: "**Ad hominem** is Latijns voor 'op de man'. Het is een **drogreden** waar je niet het ARGUMENT aanvalt maar de PERSOON die het zegt. Onhoudbaar in een goede discussie." },
+            { titel: "Voorbeeld", tekst: "Marieke zegt: 'Roken is slecht voor je gezondheid.'\n**Ad hominem-reactie**: 'Wat weet jij ervan, je hebt zelfs geen rij-bewijs!'\n**Probleem**: Marieke's rij-bewijs heeft NIETS te maken met of haar argument over roken klopt. Aanval op persoon = ontwijken van argument." },
+            { titel: "Hoe reageer je goed?", tekst: "Een **eerlijk argument**:\n• Reageer op WAT iemand zegt, niet WIE.\n• Vraag bewijs: 'Hoe weet je dat?'\n• Eens of oneens: gebruik feiten + redenen, geen scheldwoorden.\n• Als iemand jou ad hominem aanvalt: blijf rustig + verwijs naar je argument." },
+          ],
+          woorden: [
+            { woord: "ad hominem", uitleg: "Latijn 'op de man' = persoonsaanval ipv argument-aanval." },
+            { woord: "drogreden", uitleg: "Slecht argument dat goed lijkt." },
+          ],
+          theorie: "Cito-feit ad hominem: vaak gezien in politieke debatten + sociale media-ruzies. Mensen vallen elkaar persoonlijk aan ipv inhoudelijk te discussiëren. Aristoteles beschreef dit al in 4e eeuw v.Chr. als drogreden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Slecht: 'Je hebt geen recht van spreken — je hebt geen kinderen!' (aanval persoon)" },
+            { type: "stap", tekst: "Goed: 'Ik begrijp je punt, maar wat is je bewijs?' (aanval argument)" },
+            { type: "stap", tekst: "Politiek voorbeeld: 'Onze tegenstander is een leugenaar' = ad hominem. 'De plannen van tegenstander berusten op verkeerde cijfers omdat...' = inhoudelijk." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Goede discussie = bal spelen, niet man spelen. Aanval ARGUMENT, niet PERSOON." }],
+          niveaus: {
+            basis: "Ad hominem = aanval op persoon ipv argument. = A.",
+            simpeler: "In plaats van te reageren op WAT iemand zegt, ga je tegen WIE hij is. Drogreden. = A.",
+            nogSimpeler: "Persoon aanvallen = A.",
+          },
+        },
       },
       {
         q: "Wat is **stroman**?",
