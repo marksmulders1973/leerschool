@@ -475,6 +475,9 @@ const naamvallenDuits = {
   subject: "duits",
   referentieNiveau: "A1/A2",
   sloThema: "Duits — geslachten & vier naamvallen",
+  prerequisites: [
+    { id: "werkwoordsvervoeging-duits", title: "Werkwoorden Duits", niveau: "duits-A1" },
+  ],
   intro:
     "De drie geslachten (der/die/das), onbepaald lidwoord ein/eine, bezittelijke voornaamwoorden, en de vier naamvallen (NOM/ACC/DAT/GEN) — met voorzetselregels (für+acc, mit+dat) en wissels (in+acc bij beweging, in+dat bij plaats). Eerste pad Duits onderbouw.",
   triggerKeywords: [

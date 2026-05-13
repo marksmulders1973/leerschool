@@ -510,6 +510,10 @@ const pastTensesEngels = {
   // SLO-niveau (G4 batch 3): 2F → 2S, A2/B1 ERK Engels.
   referentieNiveau: "2F/2S",
   sloThema: "Engels — verleden tijden",
+  prerequisites: [
+    { id: "present-tenses-engels", title: "Present tenses Engels", niveau: "engels-A2" },
+    { id: "onregelmatige-werkwoorden-engels", title: "Onregelmatige werkwoorden Engels", niveau: "engels-A2/B1" },
+  ],
   intro:
     "De twee verleden tijden van het Engels: past simple (afgesloten verleden, vast tijdstip) en present perfect (have/has + V3, link met nu). Met spelling, signaalwoorden, top 5 fouten en het verschil since vs for.",
   triggerKeywords: [

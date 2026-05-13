@@ -639,6 +639,9 @@ const onregelmatigeWerkwoordenV2Engels = {
   subject: "engels",
   referentieNiveau: "A2/B1",
   sloThema: "Engels — onregelmatige werkwoorden (uitbreiding)",
+  prerequisites: [
+    { id: "onregelmatige-werkwoorden-engels", title: "Onregelmatige werkwoorden Engels (basis)", niveau: "engels-A2/B1" },
+  ],
   intro:
     "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-aught en de i-a-u shift. Met voorbeeldzinnen en eindopdracht waarbij je de juiste vorm kiest in zinnen.",
   triggerKeywords: [

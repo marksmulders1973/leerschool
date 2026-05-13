@@ -885,6 +885,10 @@ const werkwoordsvervoeging = {
   // SLO-niveau (G4c): 2F basis. d/t-regels = klassiek vmbo-eindterm.
   referentieNiveau: "2F",
   sloThema: "Taalverzorging — werkwoordsspelling",
+  prerequisites: [
+    { id: "werkwoordsspelling-dt", title: "Werkwoordsspelling d/t", niveau: "po-1F/1S" },
+    { id: "woordsoorten-nederlands", title: "Woordsoorten (Nederlands)", niveau: "vmbo-2F" },
+  ],
   intro:
     "De d/t-regels van het Nederlands — vanaf de stam tot voltooid deelwoord. Met 't kofschip, de lopen-test en de beruchte instinkers (worden/wordt, gebeurt/gebeurd, vindt/gevonden).",
   triggerKeywords: [

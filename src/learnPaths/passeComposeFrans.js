@@ -520,6 +520,9 @@ const passeComposeFrans = {
   subject: "frans",
   referentieNiveau: "A2",
   sloThema: "Frans — passé composé",
+  prerequisites: [
+    { id: "werkwoordsvervoeging-frans", title: "Werkwoordsvervoeging Frans", niveau: "frans-A1/A2" },
+  ],
   intro:
     "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onderwerp bij être, vragen en ontkenningen. Eerste pad Frans onderbouw.",
   triggerKeywords: [

@@ -818,6 +818,10 @@ const onregelmatigeWerkwoordenEngels = {
   subject: "engels",
   referentieNiveau: "A2/B1",
   sloThema: "Engels — onregelmatige werkwoorden V1/V2/V3",
+  prerequisites: [
+    { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "engels-A2" },
+    { id: "past-tenses-engels", title: "Past tenses Engels", niveau: "engels-A2/B1" },
+  ],
   intro:
     "De Engelse onregelmatige werkwoorden — V1/V2/V3, gegroepeerd per klankpatroon. Van de gelijk-blijvers (cut/cut/cut) tot de must-knows (be/have/do/go). Met toepassing in past simple en present perfect.",
   triggerKeywords: [
