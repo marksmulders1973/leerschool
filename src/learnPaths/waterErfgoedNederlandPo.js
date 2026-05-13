@@ -84,6 +84,28 @@ const steps = [
         options: ["~25%", "~5%", "~75%", "~100%"],
         answer: 0,
         wrongHints: [null, "Klopt — ongeveer een kwart.", "Veel meer.", "Te veel.", "Niet alles."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Een kwart = ~25%", tekst: "Ongeveer **25%** (= een **kwart**) van Nederland ligt **onder zeeniveau**. Zonder dijken zou een groot deel onder water lopen. Dit maakt NL uniek in Europa." },
+            { titel: "Waar precies?", tekst: "Het diepste punt is de **Zuidplaspolder** bij Rotterdam: ongeveer **6,76 meter onder NAP** (zeeniveau). Veel van Noord-Holland, Zuid-Holland, Flevoland en Zeeland liggen onder zeeniveau." },
+            { titel: "Waarom hier ooit zee/moeras", tekst: "Veel van het lage land was vroeger **zee, meer of moeras**. In eeuwen tijd hebben Nederlanders water weggepompt met **molens**, dijken gebouwd, en land 'gewonnen'. Zo ontstonden polders." },
+          ],
+          woorden: [
+            { woord: "zeeniveau", uitleg: "Hoogte van het zeewater = nulpunt (NAP)." },
+            { woord: "NAP", uitleg: "Normaal Amsterdams Peil = standaard zeeniveau in NL." },
+          ],
+          theorie: "Cito-feit: 25% onder zeeniveau is een typisch Doorstroomtoets-getal. Onthoud 'ongeveer een **kwart**' — makkelijk te vertalen naar 25%.",
+          voorbeelden: [
+            { type: "stap", tekst: "Het Westland (kassen) ligt onder zeeniveau. Schiphol ligt op -4 NAP (4 meter onder zee)." },
+            { type: "stap", tekst: "Vergelijk: alleen Bangladesh + de Maladiven hebben vergelijkbaar lage gebieden. Nederland is uniek in Europa." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 1/4 = 25%. Onthoud dit getal — komt op aardrijkskunde-vragen vaak terug." }],
+          niveaus: {
+            basis: "~25% (kwart). = A.",
+            simpeler: "Ongeveer 1 op de 4 m² van NL ligt onder zeeniveau = 25%. = A.",
+            nogSimpeler: "25% = A.",
+          },
+        },
       },
       {
         q: "Wat is **NAP**?",
@@ -198,6 +220,28 @@ const steps = [
         options: ["1953", "1932", "1965", "1975"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Dat was sluiting Afsluitdijk.", "Te laat.", "Te laat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "1953 — onthoud dit jaartal", tekst: "De **Watersnoodramp** was in **1953**, in de nacht van 31 januari op 1 februari. Een storm op de Noordzee + springtij brak de dijken in Zeeland, Zuid-Holland en Noord-Brabant." },
+            { titel: "Wat gebeurde", tekst: "**1836 mensen** verdronken. **70.000 mensen** moesten vluchten. **150.000 hectare** land overstroomde. De ramp werd het keerpunt voor de moderne waterkering in NL." },
+            { titel: "Reactie: Deltawerken", tekst: "Door deze ramp besloot NL: 'dit nooit meer'. De **Deltawerken** (1958-1997) werden gebouwd: stormvloedkeringen + dijken om Zuidwest-NL te beschermen." },
+          ],
+          woorden: [
+            { woord: "Watersnoodramp", uitleg: "De overstromingsramp van 1953." },
+            { woord: "springtij", uitleg: "Extra hoge vloed bij volle/nieuwe maan." },
+          ],
+          theorie: "Cito-jaartal-rij voor NL+water:\n• **1932** = Afsluitdijk klaar (Zuiderzee dicht).\n• **1953** = Watersnoodramp.\n• **1958-1997** = Deltawerken bouw.\n• **1986** = Oosterscheldekering klaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Het getal 1836 in de ramp = aantal slachtoffers. Verwar het NIET met een jaartal." },
+            { type: "stap", tekst: "Sinds 1953 staat 1 feb in NL geheugen als ramp-dag. Veel gedenktekens in Zeeland." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "1953 = Watersnoodramp. 1932 = Afsluitdijk. Niet door elkaar halen — Afsluitdijk was juist VÓÓR de ramp en hielp toen al een beetje." }],
+          niveaus: {
+            basis: "1953. = A.",
+            simpeler: "Watersnoodramp = 1953 (31 jan - 1 feb). = A.",
+            nogSimpeler: "1953 = A.",
+          },
+        },
       },
       {
         q: "Welke 3 **provincies** waren het meest getroffen?",
@@ -237,6 +281,28 @@ const steps = [
         options: ["Afsluitdijk", "Oosterscheldekering", "Maeslantkering", "Haringvlietdam"],
         answer: 0,
         wrongHints: [null, "Klopt — Afsluitdijk werd al in 1932 gebouwd, vóór de Deltawerken.", "Onderdeel.", "Onderdeel.", "Onderdeel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op de vraag — NIET!", tekst: "Het woord **NIET** verandert de vraag. Je zoekt het ENE antwoord dat **buiten** de Deltawerken valt." },
+            { titel: "Deltawerken = 1958-1997, Zuidwest-NL", tekst: "De Deltawerken zijn een serie projecten **NA de Watersnoodramp 1953**, in **Zuidwest-Nederland** (Zeeland + zuid). Periode: **1958-1997**. Doel: stormvloedkering + dijkversterking." },
+            { titel: "Afsluitdijk valt erbuiten", tekst: "De **Afsluitdijk** is van **1932** (Zuiderzee → IJsselmeer). Dat is **VOOR** de Watersnoodramp en in een ander gedeelte van NL (noord, niet zuid). Dus geen Deltawerk." },
+          ],
+          woorden: [
+            { woord: "Deltawerken", uitleg: "Reeks projecten 1958-1997 in Zeeland en zuid Zuid-Holland tegen overstromingen." },
+            { woord: "Afsluitdijk", uitleg: "Dijk uit 1932 die de Zuiderzee veranderde in IJsselmeer." },
+          ],
+          theorie: "Cito-truc onderscheiden: **Afsluitdijk = 1932 = noord** (boven Friesland). **Deltawerken = 1958-1997 = zuid** (Zeeland + Zuid-Holland). 2 verschillende projecten, 30+ jaar uit elkaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Onderdelen Deltawerken: Oosterscheldekering, Brouwersdam, Haringvlietdam, Veerse Gatdam, Maeslantkering (afsluitend stuk)." },
+            { type: "stap", tekst: "Afsluitdijk = los project. Vaak verward met Deltawerken omdat beide dijken zijn — maar het zijn 2 verschillende reeksen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij 'welke is GEEN Deltawerk?' = Afsluitdijk. Onthoud: '32 = Afsluitdijk' / '53 = ramp' / '58+ = Deltawerken'." }],
+          niveaus: {
+            basis: "Afsluitdijk (= 1932, niet Deltawerk). = A.",
+            simpeler: "Afsluitdijk = 1932 = noord. Deltawerken = 1958-1997 = zuid. Anders. = A.",
+            nogSimpeler: "Afsluitdijk = A.",
+          },
+        },
       },
       {
         q: "Wat is **bijzonder** aan de **Oosterscheldekering**?",
