@@ -249,6 +249,80 @@ const steps = [
       { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Vegetariër.", "Tegenovergesteld.", "Wel."] },
       { q: "Wat is **goed vet**?", options: ["Olijfolie + noten + avocado", "Frituur", "Boter alleen", "Geen vet"], answer: 0, wrongHints: [null, "Klopt.", "Slecht.", "Niet alleen.", "Wel nodig."] },
       { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Klopt.", "Koolhydraat.", "Niet.", "Niet."] },
+      {
+        q: "Een **gemiddeld ontbijt** voor groep 7-8 zou bestaan uit?",
+        options: ["Volkoren brood + kaas/beleg + fruit + melk", "Frietjes + frisdrank", "Niks — overslaan", "Alleen koek"],
+        answer: 0,
+        wrongHints: [null, "Klopt — combinatie koolhydraten + eiwit + fruit + vocht.", "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt-overslaan = minder concentratie school.", "Te eenzijdig — alleen suiker, geen eiwit/fiber."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Goed ontbijt = balans", tekst: "**Koolhydraten** (energie) + **eiwit** (verzadiging) + **vitaminen** (fruit) + **vocht** (melk/water) = goed ontbijt. Geeft langzame energie tot pauze." },
+            { titel: "Cito-feit: ontbijt + leren", tekst: "Onderzoek toont dat kinderen die ontbijten **15% hoger scoren** op aandachts- en geheugen-testen. Suiker-rijke ontbijten (cornflakes met veel suiker) geven kortdurende piek, daarna dip vóór pauze." },
+            { titel: "Cito-tip: Schijf van Vijf bij ontbijt", tekst: "Probeer 3+ van de 5 vakken in ontbijt:\n1. Groente/fruit ✓ (banaan, appel)\n2. Smeer- en bereidingsvet ✓ (boter op brood)\n3. Vis/peulvruchten/vlees/ei ✓ (kaas, ei)\n4. Brood/granen/aardappelen ✓ (volkoren brood)\n5. Zuivel ✓ (melk/yoghurt)" },
+          ],
+          woorden: [
+            { woord: "volkoren brood", uitleg: "Brood van hele graan-korrel (vezels behouden). Houdt langer vol dan wit brood." },
+            { woord: "Schijf van Vijf", uitleg: "NL-voedingsadvies van Voedingscentrum: 5 vakken = alles wat een gezond dieet nodig heeft." },
+          ],
+          theorie: "Ontbijt-stappen:\n1. Koolhydraat (volkoren) → langzame energie\n2. Eiwit (zuivel, kaas, ei) → verzadiging\n3. Fruit → vitaminen + vezel\n4. Vocht → hydratatie\n\nFout: alleen suiker (cruesli vol suiker = suikerpiek → snel hongerig).",
+          voorbeelden: [
+            { type: "voorbeeld", tekst: "Banaan + havermout + melk = perfect schoolontbijt." },
+            { type: "voorbeeld", tekst: "Volkorenboterham + kaas + appel = traditioneel + gezond." },
+          ],
+          basiskennis: [{ onderwerp: "Suikergranen-instinker", uitleg: "Cornflakes/cruesli lijken gezond maar bevatten vaak 25-40% suiker. Lees etiket — <10% suiker = OK." }],
+          niveaus: { basis: "Volkoren + kaas + fruit + melk. = A.", simpeler: "Goed ontbijt = brood + eiwit + fruit + drinken = balans van Schijf van Vijf. = A.", nogSimpeler: "Volkoren-combo = A." },
+        },
+      },
+      {
+        q: "**'Light'-producten** zijn altijd gezond — waar of niet?",
+        options: ["Niet waar — vaak meer zoetstof of toevoegingen", "Altijd waar — minder calorieën = gezonder", "Waar voor diabetici", "Verboden in NL"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 'light' = minder van iets (suiker/vet) maar vaak vervangen door zoetstof/zout.", "Marketing-claim — 'light' is GEEN gezondheidsgarantie.", "Niet automatisch geldig — context-afhankelijk.", "Niet — gewoon in supermarkt."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 'light'?", tekst: "**Light**-product moet wettelijk **minstens 30% minder** van iets (suiker, vet, calorieën, zout) bevatten dan het normale product. **Maar**: vaak vervangen door zoetstof, zout, of meer vet als suiker wordt geschrapt." },
+            { titel: "Cito-feit: 'light' kan ongezond zijn", tekst: "Bijvoorbeeld:\n• **Light frisdrank**: geen suiker maar **kunstmatige zoetstoffen** (aspartaam) — debat over effect.\n• **Light chips**: minder vet maar **meer zout**.\n• **Light yoghurt**: minder vet maar **meer suiker** voor smaak.\nLees altijd het etiket! Niet vertrouwen op marketing." },
+            { titel: "Schijf van Vijf-advies", tekst: "Voedingscentrum (NL): **'light' GEEN onderdeel van Schijf van Vijf**. Gewone groente, fruit, water = altijd beter dan 'light' bewerkte producten. 'Light' is geen toverwoord." },
+          ],
+          woorden: [
+            { woord: "light", uitleg: "Marketing-term: minstens 30% minder van X dan origineel. GEEN gezondheidsgarantie." },
+            { woord: "zoetstof", uitleg: "Vervanger van suiker (aspartaam, sucralose, stevia). Geeft zoete smaak zonder calorieën." },
+            { woord: "etiket lezen", uitleg: "Onderkant verpakking: voedingswaarde-tabel met suiker, vet, zout per 100g." },
+          ],
+          theorie: "Etiket-rode-vlaggen (Voedingscentrum):\n• **>22,5 g suiker / 100g** = veel suiker\n• **>17,5 g vet / 100g** = veel vet\n• **>1,5 g zout / 100g** = veel zout\nHoog op deze waardes? → niet dagelijks eten.",
+          voorbeelden: [
+            { type: "voorbeeld", tekst: "Light yoghurt: vergelijk met gewone halfvolle yoghurt — meestal beter." },
+            { type: "voorbeeld", tekst: "Wortelen (gewoon) = altijd gezonder dan light-koekje." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'light' = 'mag onbeperkt'", uitleg: "Veel mensen eten extra van light-producten omdat 'het mag', netto nemen ze meer calorieën binnen dan met origineel." }],
+          niveaus: { basis: "'Light' ≠ gezond. = A.", simpeler: "Light = minder van iets, maar vaak vervangen door zoetstof/zout. Lees etiket, vertrouw geen marketing. = A.", nogSimpeler: "Niet altijd = A." },
+        },
+      },
+      {
+        q: "**Diabetes type 2** kan voorkomen worden door?",
+        options: ["Gezond eten + bewegen + niet roken", "Veel suiker eten als kind", "Geen vlees eten", "Niets — erfelijk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — leefstijl beïnvloedt 80%+ van type-2-diabetes-risico.", "Tegenovergesteld — veel suiker verhoogt risico.", "Niet alleen — diëten zelf is niet beschermend.", "Type 1 deels erfelijk, type 2 vooral leefstijl."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is diabetes type 2?", tekst: "**Diabetes type 2** = lichaam reageert niet goed meer op **insuline** (hormoon dat suiker uit bloed haalt). Bloedsuiker te hoog → schade aan ogen, nieren, hart. **Komt vaak voor bij volwassenen** maar steeds vaker bij kinderen (overgewicht-gerelateerd)." },
+            { titel: "Type 1 vs Type 2", tekst: "• **Type 1**: alvleesklier maakt geen insuline. **Niet te voorkomen** — vaak vanaf jonge leeftijd. Insuline-injecties nodig.\n• **Type 2**: cellen 'luisteren niet meer naar' insuline. **Wel te voorkomen** door leefstijl.\nType 2 is verreweg de meest voorkomende vorm (~90% van diabetes-gevallen)." },
+            { titel: "Cito-tip: leefstijl-factoren", tekst: "Risico VERHOGEN type 2:\n• Te veel suiker, witte koolhydraten\n• Overgewicht\n• Weinig bewegen\n• Roken + alcohol\n• Stress + slechte slaap\n\nRisico VERLAGEN:\n• Schijf-van-Vijf-dieet\n• 1 uur per dag bewegen\n• Voldoende slaap\n• Geen roken" },
+          ],
+          woorden: [
+            { woord: "insuline", uitleg: "Hormoon uit alvleesklier. Helpt suiker uit bloed in lichaamscellen komen." },
+            { woord: "alvleesklier", uitleg: "Orgaan bij maag. Maakt insuline (én verteringssappen)." },
+            { woord: "preventie", uitleg: "Voorkomen ipv genezen. Bij type 2 mogelijk; bij type 1 niet." },
+          ],
+          theorie: "Hoe leefstijl diabetes type 2 voorkomt:\n• **Gezond eten** → minder suiker-pieken → cellen blijven 'luisteren' naar insuline\n• **Bewegen** → spieren gebruiken suiker → minder werk voor insuline\n• **Geen overgewicht** → vetcellen produceren minder ontstekings-stoffen\n• **Niet roken** → bloedvaten gezond\n\nEen kind dat nu gezond leeft, heeft enorme bescherming voor later.",
+          voorbeelden: [
+            { type: "feit", tekst: "NL: ~1,2 miljoen mensen met diabetes (2024), 90% type 2. Aantal stijgt door overgewicht." },
+            { type: "feit", tekst: "Onderzoek toont: 30 min/dag wandelen + gezond eten verlaagt type-2-risico met 58%." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen 'oud-leeftijds-ziekte'", uitleg: "Type 2 komt steeds vaker bij KINDEREN voor — direct gevolg van junkfood + zitten." }],
+          niveaus: { basis: "Leefstijl. = A.", simpeler: "Gezond eten + bewegen + niet roken voorkomt type-2-diabetes voor 80%+. = A.", nogSimpeler: "Leefstijl = A." },
+        },
+      },
     ],
   },
 ];
