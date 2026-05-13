@@ -12,6 +12,64 @@ Cito + examens versterken. Drie type werk:
 
 **Leidend principe** (zie CLAUDE.md → "Kern-flow"): examen-vraag → "begrijp je dit?" → uitlegPad → leerpad a-z → terug naar vraag. Elke nieuwe content moet deze loop dichten — geen losse leerpaden zonder examen-anker, geen examen-vragen zonder leerpad-link.
 
+---
+
+## 🚨 SPRINT-0 — 15-agent-audit bevindingen (2026-05-13) — KRITIEK EERST
+
+**Audit-rapport identificeerde 3 fatale gaten + 2 financiële tijdbommen.** Volgorde HARD aanhouden — geen nieuwe content tot Sprint-0 op groen.
+
+### Audit-instant-fixes (totaal: ~3 uur werk, doe deze EERST)
+- [ ] **QW1 — Verklap-bug fix**: `src/features/learn/VraagUitlegPad.jsx:110` → verander `defaultOpen={true}` naar `defaultOpen={false}`. ~~Reden~~: `niveaus.basis` is in veel paden letterlijk het antwoord ("9.", "16.", "Ja."); auto-open verklapt USP. **Effort: 1 min. Impact: kritiek (USP-bescherming).**
+- [ ] **QW2 — Adaptief op ALLE checks**: `src/features/learn/LearnPath.jsx:433` → verwijder `&& currentCheck.examenBron`. Reden: simpeler-auto-switch werkt nu maar voor 61 examenvragen ipv 2000+ checks. **Effort: 30 sec. Impact: hoog (adaptiviteit doorbreken).**
+- [ ] **QW6 — Daily-cost-cap AI**: `api/_guard.js` → voeg `MAX_GENERATE_CALLS_DAY=500` env-var toe + globale teller in Supabase (`ai_call_quota`-tabel). Hard kill-switch 503 als overschreden. Reden: 1 scraper-aanval kan in 1 uur €100+ kosten via `generate-questions` met web_search. **Effort: 1 uur. Impact: financieel kritiek.**
+- [ ] **QW10 — Supabase RLS-export**: open Supabase Studio → export alle RLS-policies van `profiles`, `learn_progress`, `topic_mastery`, `quizzes`, `leaderboard`, `hall_of_fame`, `share_events` → commit als `supabase/migrations/20260513_rls_export.sql`. Reden: nu alleen `push_subscriptions` + `ai_referrer_log` hebben RLS in repo; anon-key publiek; AVG-risico. **Effort: 1 uur. Impact: hoog (compliance).**
+- [ ] **QW8 — Bing Webmaster Tools setup** (Mark zelf): 10 min, voedt ChatGPT-Search. Placeholder al in `index.html` zichtbaar.
+
+### Audit-1-week-werk (~2 dagen werk)
+- [ ] **QW4 — Examen-modus echt splitsen**: `src/features/practice/PlayQuiz.jsx:553-591` → wrap `onLearnPathRequest`-knop + `wrongHints`-display in `if (gameState.mode !== 'exam')`. Voeg `mode: 'exam' | 'practice'` toe aan gameState (default `practice`; `examen-`-route zet `exam`). Reden: Mark's beslissing 2026-05-09 ("examen=authentiek/geen hints") is niet geïmplementeerd — alleen 60-min timer is gesplitst. **Effort: 2-3 uur. Impact: hoog (USP-authenticiteit).**
+- [ ] **QW5 — Per-examen-vraag-URL template + 60 SEO-pagina's**: genereer uit `examenEconomie*.js` data 60 statische HTML-pagina's `public/examen/economie/vmbo-gl-tl/2024/tijdvak-1/vraag-36.html` etc. H1 = exacte vraagtekst, antwoord boven-de-vouw, FAQ-schema, citatie `examenblad.nl`. Reden: AI-citation goldmine — `leren.jojoschool.nl` doet dit al; Leerkwartier-content authentiek = beter. **Effort: 1-2 dagen. Impact: SEO-kritiek.**
+- [ ] **QW7 — Lazy-load STAP 2 voor LearnPath.jsx**: vervang `LearnPath.jsx:282` `ALL_LEARN_PATHS[pathId]` door `await getLearnPath(pathId)` + Suspense. Reden: bundle 5,8 MB per visit; Vercel Hobby 100 GB/mnd cap bij ~50k visits. **Effort: 2-3 uur. Impact: bundle kritiek.**
+
+### Audit-content-verbeteringen (~3-5 uur)
+- [ ] **nogSimpeler audit-script**: `scripts/lint-nogsimpeler.mjs` — controleer `niveaus.nogSimpeler.length > 20 && bevat 1 zin + 1 voorbeeld`. Fix top 20 paden waar het "Plus.", "Zeven.", etc. is.
+- [ ] **wrongHints "Klopt"-detector**: scan `wrongHints[i]` voor `i !== answer` op patroon `^Klopt`. Audit top 20 paden waar dit voorkomt en herschrijf.
+- [ ] **Begripscheck-na-uitlegPad** (Roediger-Karpicke retrieval-practice): na sluiten uitlegPad + 1e correcte poging, markeer in adaptiveStore voor herhaling met VARIANT-vraag 1 stap verderop.
+- [ ] **Adaptive mastery van binair naar streak-based**: `src/shared/adaptiveStore.js:46-49` → vervang `filter !== checkIdx` door `correctCount[checkIdx]++` met threshold `>=3` voor uit-set. Echte mastery vereist herhaling.
+
+### Audit-AI-tutor-fixes (~2-3 uur)
+- [ ] **System prompt Socratisch maken**: `api/tutor-chat.js:31-83` → harde regel toevoegen: *"Je MOET je antwoord beginnen met een vraag terug aan de leerling. Pas na het volgende user-bericht mag je een uitleg geven."*
+- [ ] **Antwoord NIET in context sturen**: `tutor-chat.js:76-78` → vervang `Juiste antwoord: ${ctx.correctOption}` door een hash + client-side validatie. Of: stuur alleen optie-INDEX, niet de tekst.
+- [ ] **Leeftijds-adaptief prompt**: pak `path.id.startsWith("po-" / "vmbo-" / "havo-")` om toon-prompt aan te passen.
+- [ ] **Gemini-fallback bouwen**: bij `!resp.ok` of `5xx` op Anthropic → fetch naar `gemini-2.0-flash-exp:generateContent`. Memory zegt al dat dit zou bestaan; bouwen.
+
+### Audit-architectuur-tikbommen (~1-2 dagen elk)
+- [ ] **`examenLookup.js` naar build-time JSON**: nu `import { ALL_LEARN_PATHS }` op top-level blokkeert chunking. Bouw `scripts/buildExamenLookup.mjs` die `examenLookup.generated.json` produceert; consumer laadt JSON ipv module.
+- [ ] **`pathManifest.generated.json`** bouwen: id → bestandsnaam + meta (title/subject/level/emoji). LearnPathsHub/StudentHome/Curriculum laden ALLEEN metadata (~30 kB) ipv 5,8 MB.
+- [ ] **vendor-three lazy uit non-game routes**: Mini3DTeaser nu eager in HomeV3 hero; lazy-load met intersection-observer of vervang door statisch poster.
+- [ ] **Service Worker JS-bundle pre-cache**: `public/sw.js:10-14` APP_SHELL uitbreiden met build-time-geïnjecteerde index/vendor-react/vendor-router-hashes.
+- [ ] **Upstash Redis voor rate-limit**: `_guard.js:24` in-memory Map vervangen door Redis voor cross-instance-quota. Free tier 10k/dag voldoende.
+
+### Audit-monetization-blokkers (vóór Cito-piek nov 2026 LIVE)
+- [ ] **Paywall implementeren**: gratis (3 paden/dag, geen AI-tutor, geen examen-modus) / premium €5,99/mnd / jaarcontract €39 / examenperiode €19,95 / schoollicentie €99/klas/jr. Stripe of Mollie.
+- [ ] **Ouder-dashboard v1**: gekoppeld account; toont "kind heeft X vragen geoefend, zwakke onderwerpen: Y". Wekelijkse mail = retention-anchor.
+- [ ] **VoorkennisKeten UI fase 2** (wacht op Mark akkoord — nieuwe component): POC op V36 economie 2023-T1 + Playwright-screenshot. Memory zegt `stop hier voor reviewer-agents akkoord`.
+- [ ] **A12 web push setup-stappen** (Mark zelf, ~30 min handwerk): VAPID + Vercel env + Supabase secrets + migration + cron.
+
+### Audit-SEO-content-uitbreidingen (~1 week)
+- [ ] **doorstroomtoets-oefenen.html → 2500 woorden** + inline voorbeeld-vragen + 20 FAQ-items.
+- [ ] **cito-toets-oefenen.html → 2500 woorden** + expliciete bridge "Cito = Doorstroomtoets sinds 2024".
+- [ ] **Begrippen-glossarium** `/begrippen/` index met 50 NL-onderwijs-termen × 300-600w (doorstroomtoets, eindtoets, schooladvies, kerndoelen, referentieniveau 1F/2F/1S, etc).
+- [ ] **Pre-rendering 10-20 kern-leerpaden** (Vercel ISR of statische export) — SPA-content nu onzichtbaar voor AI-engines.
+- [ ] **5 sub-landing pages doorstroomtoets-aanbieders** (Cito LiB, IEP, Route 8, Dia, AMN) × ~800w met verschillen-tabel.
+
+### Audit-growth-loops (~1 week)
+- [ ] **Referral-loop**: 7-dagen-gratis voor uitnodiging + ontvanger.
+- [ ] **Pinterest-pinnable infographics**: 10 stuks "Doorstroomtoets datum 2027", "5 aanbieders vergeleken", "Wat is het schooladvies".
+- [ ] **TikTok-clips 15-sec**: "ChatGPT vs Leerkwartier op echt examen Economie 2024 vraag 36" — toont hallucination → toont Leerkwartier correct.
+- [ ] **Daily-goal-UI + "klaar voor vandaag"-scherm** (15-min-belofte hard maken).
+
+---
+
 ## Prioriteit 0 — Loop-audit (terugkerend, elke 5 paden)
 
 Voordat je nieuwe paden bouwt:

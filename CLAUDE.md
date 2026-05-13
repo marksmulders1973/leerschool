@@ -160,6 +160,36 @@ Om te voorkomen dat 2 weken werk de verkeerde kant op gaat: regelmatig **agents 
 ### Eind-datum
 2026-05-24. Daarna evalueert Mark of de modus verlengd wordt.
 
+### 15-agent-audit (terugkerend ritueel — elke 6-8 weken)
+
+Naast de lichte peer-review (2 agents) is er een **zware 15-perspectieven-audit** die scope-creep en uitvoerings-gaten vangt die normale review mist. Mark heeft deze 2026-05-13 voor het eerst gedraaid; het rapport identificeerde 3 kritieke gaten + 2 financiële tijdbommen in 3 uur werk-tijd.
+
+**Wanneer draaien**:
+- Elke 6-8 weken (max 1× per maand).
+- Vóór elke product-mijlpaal (Cito-piek, paywall-launch, nieuwe USP-feature).
+- Na grote scope-wijziging (Mark voegt nieuwe vak/feature toe).
+
+**Werkwijze (~2-3 uur Claude-tijd, geen Mark-tijd nodig)**:
+1. Dispatch **4 parallelle research-agents** (subagent_type: `general-purpose`) — niet 15, want te veel overlap + context-kosten. Cluster perspectieven slim:
+   - **Agent A — Concurrentie + product-strategie**: WebSearch naar 5-7 concurrenten (Squla/Junior Einstein/WRTS/Examenbundel/ChatGPT/Cito-aanbieders). Output: concurrentiematrix + marktgaten + bedreigingen.
+   - **Agent B — SEO + AI-search**: WebSearch naar zoekvolumes + huidige indexering + AI-engine visibility + top 10 quick-wins.
+   - **Agent C — Code-audit didactiek + AI**: lees `learnPaths/`, `VraagUitlegPad.jsx`, `api/tutor-chat.js`, `adaptiveStore.js`, `spacedRepetition.js`. Output: per-onderdeel-werkt-of-niet met file:line bewijs.
+   - **Agent D — Code-audit performance + scalability**: lees `vite.config.js`, `pathLoaders.js`, `_guard.js`, `sw.js`, supabase migrations. Output: bundle-bytes, AI-cost-projectie, RLS-gaps, in-memory-leaks.
+2. **Synthese zelf** met alle 15 perspectieven uit prompt-template (P1 product strategist t/m P15 brutally honest). Gebruik agent-rapporten + memory + codebase-kennis.
+3. **Output-structuur (vast)**: executive summary → grootste problemen-tabel met file:line → grootste kansen-tabel → per-agent-bulletjes → concurrentiematrix → SEO/UX/Didactiek/AI/Growth/Monetization audits → top 10 quick wins (impact/effort) → roadmap → final verdict + score /10 → **morgen / 3 maanden / 1 jaar**.
+4. **Sla bevindingen op in `docs/AUTONOOM-BACKLOG.md`** als nieuwe **Sprint-0** sectie. Quick wins met effort + file:line concreet.
+5. **Schrijf NIET in een apart audit-document** — backlog is single source of truth.
+
+**Wat ALTIJD vragen aan jezelf in de synthese**:
+- "Welke 3 fixes zijn samen <5 uur werk maar lossen >50% van de problemen op?" → die zijn QW1-3.
+- "Wat doet NU al pijn dat Mark niet weet?" → kritieke fixes.
+- "Welke architectuur-tikbommen ontploffen bij 1000 DAU?" → schaalbaarheids-blokkers.
+- "Cito-piek nov-feb is hard deadline — wat moet vóór die piek LIVE?" → roadmap-anker.
+
+**Eindscore /10 verplicht** in finale verdict. Onderverdeling: fundering / executie / strategische focus / marktpositionering / tech-keuzes / visie+branding. Mark wil EERLIJKE cijfer, geen "ziet er goed uit".
+
+**Prompt-template** staat in `docs/AUDIT-15-AGENT-PROMPT.md` (Mark levert prompt; Claude voert uit).
+
 ## Build & test
 
 ```bash
