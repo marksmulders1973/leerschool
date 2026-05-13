@@ -21,6 +21,29 @@ const steps = [
         options: ["Processor (brein van computer)", "Geheugen", "Scherm", "Internet"],
         answer: 0,
         wrongHints: [null, "Klopt.", "RAM.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent CPU?", tekst: "**CPU** is de afkorting van **Central Processing Unit** (Centrale Verwerkings-Eenheid). Het is het 'brein' van de computer — de chip die alle berekeningen doet." },
+            { titel: "Niet verwarren met geheugen", tekst: "CPU = doet rekenwerk (het brein). RAM = werkgeheugen (het werktafel). SSD/HDD = opslag (het archief). 3 verschillende onderdelen!" },
+            { titel: "Bekende CPU-merken", tekst: "**Intel**, **AMD** (PC's), **Apple Silicon** (M1/M2/M3 voor Macs), **Qualcomm Snapdragon** (telefoons). Snelheid in **GHz** (gigahertz)." },
+          ],
+          woorden: [
+            { woord: "CPU", uitleg: "Central Processing Unit — brein/processor." },
+            { woord: "RAM", uitleg: "Werkgeheugen (snel maar tijdelijk)." },
+            { woord: "GHz", uitleg: "Gigahertz — miljarden berekeningen per seconde." },
+          ],
+          theorie: "Cito-tip computer-onderdelen: CPU = brein. RAM = werktafel. SSD = archief. GPU = grafische chip (voor games + AI). Verschillende functies, allemaal nodig.",
+          voorbeelden: [
+            { type: "stap", tekst: "Snelle CPU = computer reageert snel. Trage CPU = haperend." },
+            { type: "stap", tekst: "Telefoon heeft ook CPU, kleiner en zuiniger dan in PC." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "CPU = de 'denker'. RAM = de 'aandacht/werktafel'. SSD = de 'kast met dossiers'." }],
+          niveaus: {
+            basis: "CPU = brein/processor van computer.",
+            simpeler: "CPU rekent + denkt. RAM is werkgeheugen.",
+            nogSimpeler: "CPU = brein.",
+          },
+        },
       },
       {
         q: "Wie bedacht het **World Wide Web** (1989)?",
@@ -33,6 +56,28 @@ const steps = [
         options: ["Beveiligde versie van HTTP (slot-icoontje)", "Browser", "Server", "Bestand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "HTTPS = HTTP + Secure", tekst: "**HTTPS** is de BEVEILIGDE versie van **HTTP** (HyperText Transfer Protocol). De 'S' staat voor **Secure** (= veilig). Wordt overal op moderne websites gebruikt." },
+            { titel: "Wat is het verschil?", tekst: "Bij HTTPS wordt het verkeer tussen browser en server **versleuteld** — dieven onderweg kunnen jouw wachtwoorden of bankgegevens niet onderscheppen. Bij gewone HTTP wel." },
+            { titel: "Slotje in browser", tekst: "Bovenin de browser-balk staat bij HTTPS een klein **slotje** 🔒. Geen slotje? → wees voorzichtig met inloggen of betalen. Echte banksites altijd HTTPS." },
+          ],
+          woorden: [
+            { woord: "HTTPS", uitleg: "HyperText Transfer Protocol Secure — beveiligde versie." },
+            { woord: "versleuteling", uitleg: "Data onleesbaar maken voor anderen onderweg." },
+          ],
+          theorie: "Cito-tip veiligheid: ALTIJD checken of er HTTPS + slotje staat voordat je: wachtwoord intypt, gegevens deelt, of betaalt online. Geen HTTPS = niet veilig.",
+          voorbeelden: [
+            { type: "stap", tekst: "https://www.ing.nl = veilig (echte bank). http://ing-login.com = waarschijnlijk nep!" },
+            { type: "stap", tekst: "Sinds 2018 markeren browsers HTTP-sites als 'Niet veilig'. 95% van internet is nu HTTPS." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "HTTPS = met slotje 🔒 = veilig. HTTP = geen slotje = niet veilig." }],
+          niveaus: {
+            basis: "HTTPS = beveiligde versie HTTP (slotje in browser).",
+            simpeler: "HTTPS versleutelt verkeer. HTTP niet.",
+            nogSimpeler: "HTTPS = veilig.",
+          },
+        },
       },
       {
         q: "Wat is **ChatGPT**?",
@@ -58,6 +103,28 @@ const steps = [
         options: ["Rijksoverheid + wetenschapsuniversiteit", "TikTok-influencer", "AI zonder check", "Onbekende blog"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Niet alle bronnen even goed", tekst: "Op internet kan IEDEREEN iets publiceren. Daarom moet je leren WIE iets heeft geschreven en of die persoon kennis van zaken heeft." },
+            { titel: "Hoog betrouwbaar", tekst: "Overheids-websites (.gov, rijksoverheid.nl), universiteiten (.edu of universiteits-naam), bekende kranten (NOS, NRC, Volkskrant, BBC). Deze worden gecontroleerd door professionals." },
+            { titel: "Voorzichtig", tekst: "Sociale media, TikTok, YouTube, blogs van onbekenden, AI-generatie. Niet altijd fout — maar altijd CHECKEN met betere bron. Influencers krijgen vaak geld om iets te zeggen." },
+          ],
+          woorden: [
+            { woord: "betrouwbare bron", uitleg: "Bron met expertise + controle + bronvermelding." },
+            { woord: "kruis-controleren", uitleg: "Hetzelfde feit op 2-3 onafhankelijke bronnen checken." },
+          ],
+          theorie: "Cito-tip betrouwbaarheid: vraag JE 4 dingen: 1) Wie schreef het? 2) Wanneer? 3) Welke bronnen geven ze? 4) Klopt het met andere bronnen? Antwoord op alle 4 → vertrouwen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Werkstuk over klimaat: betrouwbaar = KNMI, IPCC-rapport, universiteitssite. NIET betrouwbaar = TikTok-video van influencer." },
+            { type: "stap", tekst: "Wikipedia is OK voor algemene info — maar volg de voetnoten naar de echte bronnen voor zekerheid." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Officieel + expert + bronvermelding = betrouwbaar. Sociale media zonder check = wantrouwen." }],
+          niveaus: {
+            basis: "Overheid + universiteit + grote krant = meestal betrouwbaar.",
+            simpeler: "Officiële bronnen vertrouwen; sociale media checken.",
+            nogSimpeler: "Officieel = beter.",
+          },
+        },
       },
       {
         q: "Wat is **kruis-controleren**?",
