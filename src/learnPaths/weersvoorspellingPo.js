@@ -21,6 +21,29 @@ const steps = [
         options: ["Wat NU in atmosfeer gebeurt", "Gemiddelde van jaren", "Niet bestaand", "Geen verschil"],
         answer: 0,
         wrongHints: [null, "Klopt — vandaag.", "Klimaat.", "Wel.", "Wel verschil."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee belangrijke begrippen", tekst: "**Weer** = wat er **NU** (vandaag, deze week) in de atmosfeer gebeurt op een plek. Tempo, regen, wind. Kan **per uur** veranderen.\n**Klimaat** = het **gemiddelde** weer over **30+ jaar** op een plek. Verandert traag." },
+            { titel: "Voorbeeld", tekst: "**Weer**: 'Het regent vandaag in Amsterdam.'\n**Klimaat**: 'Amsterdam heeft een gematigd zeeklimaat met ~850 mm regen per jaar.'\nWeer = momentopname. Klimaat = lange-termijn patroon." },
+            { titel: "Cito-truc", tekst: "Verwar ze niet:\n• Iemand zegt 'klimaatverandering' → bedoelt TREND over decennia\n• Iemand zegt 'het weer is gek vandaag' → bedoelt MOMENT.\nKlimaatverandering ≠ regenachtige dag. Klimaatverandering = patronen over **jaren** verschuiven." },
+          ],
+          woorden: [
+            { woord: "weer", uitleg: "Atmosfeer NU (vandaag, deze week)." },
+            { woord: "klimaat", uitleg: "Gemiddelde weer over 30+ jaar." },
+            { woord: "meteorologie", uitleg: "Wetenschap van weer en klimaat." },
+          ],
+          theorie: "Cito-feit:\n• **Weer** verandert dagelijks.\n• **Klimaat** verandert over decennia.\n• KNMI meet beide.\n• Klimaat-cijfers NL: 10°C gem, 850 mm regen, 1600 zon-uren per jaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vandaag 25°C in juli = warm weer. Maar gemiddelde juli-temperatuur NL = ~18°C, dus klimatologisch is dit een warme dag." },
+            { type: "stap", tekst: "Sahara: het weer kan toevallig regen zijn op een dag, maar het klimaat is toch droog (gemiddeld). Klimaat overheerst." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Weer = NU. Klimaat = LANG. Beide gebruiken zelfde meet-eenheden (graden, mm), maar tijdschaal verschilt." }],
+          niveaus: {
+            basis: "Weer = wat NU in atmosfeer gebeurt. = A.",
+            simpeler: "Weer = vandaag. Klimaat = gemiddelde over decennia. = A.",
+            nogSimpeler: "NU = weer = A.",
+          },
+        },
       },
       {
         q: "Wat is **gemiddelde temperatuur NL** per jaar?",
@@ -103,6 +126,28 @@ const steps = [
         options: ["Zuidwesten", "Noorden", "Oosten", "Zuiden"],
         answer: 0,
         wrongHints: [null, "Klopt — 60%.", "Niet.", "Vooral droog.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wind komt VANDAAN waar je naar wijst", tekst: "Een 'zuidwestenwind' = wind die uit het **zuidwesten KOMT**, en dus naar het noordoosten BLAAST. Onthoud: wind heeft de naam van waar hij **VANDAAN** komt, niet waar hij heen gaat." },
+            { titel: "In NL: 60% zuidwesten", tekst: "Ongeveer **60% van de tijd** komt de wind in Nederland uit het **zuidwesten** (vanuit Atlantische Oceaan + UK). Dat brengt **vochtige + milde lucht** mee → grijs + regenachtig weer." },
+            { titel: "Andere richtingen", tekst: "• **Noordenwind**: koud (uit poolgebied)\n• **Oostenwind**: droog + warm zomers / droog + koud winters (uit Rusland/Duitsland)\n• **Zuidenwind**: warm (vanuit Frankrijk/Spanje)\n• **Westenwind**: nat (zee, lijkt op zuidwesten)." },
+          ],
+          woorden: [
+            { woord: "windrichting", uitleg: "Waar wind VANDAAN komt." },
+            { woord: "windroos", uitleg: "Symbool met 8 of 16 richtingen (N/NO/O/ZO/Z/ZW/W/NW)." },
+          ],
+          theorie: "Cito-feit NL-wind:\n• Zuidwesten = dominant (60%).\n• Daarom: westkust = zout/vochtig (zeewind).\n• Oosten van NL = drogere lucht.\n• Windmolens staan vaak met 'wieken naar zuidwesten' draaien als standaard.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vlag wapperen naar het noordoosten? = wind komt uit het zuidwesten." },
+            { type: "stap", tekst: "Klimaatverandering kan windpatronen verschuiven. Voor nu: zuidwesten blijft dominant in NL." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Wind komt VANDAAN waar hij heet. Zuidwestenwind = van zuidwest komen. Veelvoorkomend in NL." }],
+          niveaus: {
+            basis: "Zuidwesten. = A.",
+            simpeler: "60% van NL-wind komt uit het zuidwesten (Atlantische Oceaan + UK). = A.",
+            nogSimpeler: "Zuidwesten = A.",
+          },
+        },
       },
       {
         q: "Wat is **Beaufort 12**?",
@@ -156,6 +201,29 @@ const steps = [
         options: ["Lijnen van gelijke luchtdruk", "Temperatuur", "Wind", "Wolken"],
         answer: 0,
         wrongHints: [null, "Klopt — op weerkaart.", "Iso-thermen.", "Niet primair.", "Niet specifiek."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Iso = gelijk, baar = druk", tekst: "**Isobaren** zijn lijnen op een weerkaart die plekken met **gelijke luchtdruk** verbinden. Net zoals **hoogtelijnen** op landkaart hoogtepunten met gelijke hoogte verbinden." },
+            { titel: "Wat zie je eruit?", tekst: "• **Veel isobaren dicht bij elkaar** = groot drukverschil over kleine afstand → **HARDE WIND** (storm-risico).\n• **Isobaren ver uit elkaar** = klein verschil → **zwakke wind**.\n• Cirkels rond **H** of **L** = hoge/lage druk-centrum." },
+            { titel: "Iso- voorvoegsel komt vaker voor", tekst: "Bij weerkaarten ook:\n• **Isothermen** = lijnen van gelijke TEMPERATUUR\n• **Isohyeten** = lijnen van gelijke NEERSLAG\n'Iso' = Grieks voor 'gelijk'. Onthoud dit voorvoegsel." },
+          ],
+          woorden: [
+            { woord: "isobaar", uitleg: "Lijn van gelijke luchtdruk op weerkaart." },
+            { woord: "hoogtelijn", uitleg: "Vergelijkbaar op landkaart — lijn van gelijke hoogte." },
+            { woord: "iso-", uitleg: "Grieks voorvoegsel = 'gelijk'." },
+          ],
+          theorie: "Cito-feit isobaren-lezen:\n• Dicht bij elkaar = harde wind\n• Wijd uit elkaar = zwak\n• Cirkels: H = hoog, L = laag\n• Wind blaast LANGS isobaren (door Coriolis-effect), niet direct van H naar L.",
+          voorbeelden: [
+            { type: "stap", tekst: "Op weerkaart van NL zie je vaak isobaren op 5 hPa-stappen: 1010, 1015, 1020, etc." },
+            { type: "stap", tekst: "Bij Eunice-storm 2022 stonden isobaren super dicht op weerkaart — daaraan kon je vooraf zien dat het zwaar zou worden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Isobaar = 'gelijke druk'-lijn. Veel + dicht = wind hard. Weinig + ver = wind zwak." }],
+          niveaus: {
+            basis: "Isobaren = lijnen van gelijke luchtdruk op weerkaart. = A.",
+            simpeler: "Lijnen die luchtdruk-waarden verbinden. Dicht bij elkaar = wind. = A.",
+            nogSimpeler: "Druk-lijnen = A.",
+          },
+        },
       },
       {
         q: "Hoe **betrouwbaar** weersvoorspelling 1-3 dagen?",
