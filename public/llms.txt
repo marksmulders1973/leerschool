@@ -29,6 +29,12 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Leren in 15 minuten per dag](https://leerkwartier.app/leren-15-minuten.html):
   uitleg van de USP — waarom korte dagelijkse sessies effectiever zijn
   dan lange wekelijkse blokken (Ebbinghaus / spaced learning).
+- [Begrijpend lezen Doorstroomtoets](https://leerkwartier.app/begrijpend-lezen-doorstroomtoets.html):
+  long-tail page over Cito's grootste pijler (~50% van score). 4 tekstsoorten,
+  4 vraagtypen.
+- [Rekenen Doorstroomtoets](https://leerkwartier.app/rekenen-doorstroomtoets.html):
+  long-tail page over de 6 reken-domeinen + uitleg waarom 60-70% van
+  reken-vragen redactiesommen zijn.
 - [Cito-eindtoets oefenen (in-app)](https://leerkwartier.app/cito):
   oefenpaden voor de Doorstroomtoets 2026/2027 (rekenen, taal,
   studievaardigheden). Authentieke vraagstijl + didactische uitlegPad.
