@@ -21,6 +21,28 @@ const steps = [
         options: ["Beroemde humanist + filosoof Rotterdam", "Schilder", "Voetballer", "Politicus"],
         answer: 0,
         wrongHints: [null, "Klopt — 1466-1536.", "Rembrandt.", "Modern.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Erasmus?", tekst: "**Desiderius Erasmus van Rotterdam** (1466-1536) was een NL **humanist** en **filosoof**. Hij wordt vaak gezien als de slimste Nederlander ooit." },
+            { titel: "Wat schreef hij?", tekst: "Zijn beroemdste boek heet **'Lof der Zotheid'** (1511) — een satirisch werk waarin de godin 'Zotheid' zelf praat. Hij gebruikte humor om kritiek te leveren op de kerk en de elite van zijn tijd." },
+            { titel: "Waarom belangrijk?", tekst: "Erasmus stond voor **vrij denken** + **onderzoek** + **internationaal contact**. De **Erasmus Universiteit Rotterdam** + Europees Erasmus-uitwisselingsprogramma zijn naar hem genoemd. Een soort vader-figuur voor moderne Europese cultuur." },
+          ],
+          woorden: [
+            { woord: "humanist", uitleg: "Iemand die de mens centraal stelt + onderzoek/rede waardeert." },
+            { woord: "filosoof", uitleg: "Iemand die nadenkt over grote levensvragen + denken zelf." },
+          ],
+          theorie: "Cito-tip Erasmus-koppelingen: **Rotterdam** + **Lof der Zotheid** + **humanisme** + **1466-1536**. Zit in tijdvak 5 (Tijd van ontdekkers + hervormers) van de NL-canon.",
+          voorbeelden: [
+            { type: "stap", tekst: "Het Erasmus-uitwisselingsprogramma laat NL-studenten in een ander EU-land studeren. Vernoemd naar hem omdat hij zelf door Europa reisde." },
+            { type: "stap", tekst: "Erasmus en Maarten Luther kenden elkaar (allebei 1500s-denkers) maar Erasmus bleef rooms-katholiek terwijl Luther de reformatie startte." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Erasmus = boeken-denker uit Rotterdam, 1500. Niet verwarren met schilders (Rembrandt = 1600, Amsterdam) of moderne mensen." }],
+          niveaus: {
+            basis: "Erasmus = humanist + filosoof uit Rotterdam. = A.",
+            simpeler: "Beroemde NL-denker (1466-1536) die het boek 'Lof der Zotheid' schreef. = A.",
+            nogSimpeler: "Filosoof uit Rotterdam = A.",
+          },
+        },
       },
       {
         q: "Wie was **Willem van Oranje**?",
@@ -83,7 +105,29 @@ const steps = [
         q: "Wie ontsnapte uit **boekenkist Slot Loevestein**?",
         options: ["Hugo de Groot (1621)", "Erasmus", "Vondel", "Mussert"],
         answer: 0,
-        wrongHints: [null, "Klopt — beroemd verhaal.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Klopt — beroemd verhaal.", "Filosoof, ander tijdperk.", "Toneeldichter, geen gevangene.", "WO2-tijdperk, anders."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Hugo de Groot?", tekst: "**Hugo de Groot** (1583-1645) was een Nederlandse **jurist** + **filosoof**. Wordt vaak 'Vader van het internationaal recht' genoemd — zijn boeken gelden nog vandaag als basis." },
+            { titel: "Waarom in de gevangenis?", tekst: "Hij kwam in conflict met **Maurits van Oranje** over religieuze + politieke kwesties. In **1619** werd hij veroordeeld tot **levenslang** + opgesloten in **Slot Loevestein** (kasteel bij Gorinchem)." },
+            { titel: "De boekenkist-truc (1621)", tekst: "Zijn vrouw **Maria van Reigersberch** bedacht een list: ze stuurde regelmatig een grote kist met boeken naar het slot. Op een dag verstopte Hugo zich in die kist + ontsnapte. Vluchtte naar Parijs. Het meest beroemde ontsnappings-verhaal van NL." },
+          ],
+          woorden: [
+            { woord: "Slot Loevestein", uitleg: "Kasteel bij Gorinchem, vroeger gevangenis voor 'staatsgevangenen'." },
+            { woord: "Hugo de Groot", uitleg: "NL-jurist + filosoof, vader internationaal recht." },
+          ],
+          theorie: "Cito-feit Hugo de Groot:\n• Boek **'De jure belli ac pacis'** (1625) — basis volkenrecht.\n• Stierf bij schipbreuk 1645 in Rostock.\n• Standbeeld in **Delft**.\n• Boekenkist nu te zien in Rijksmuseum.",
+          voorbeelden: [
+            { type: "stap", tekst: "De originele boekenkist staat in het Rijksmuseum (Amsterdam) + Slot Loevestein zelf — verhaal blijft populair." },
+            { type: "stap", tekst: "Erasmus stierf 1536 = vóór Hugo de Groot. Vondel was toneeldichter (Gijsbreght van Aemstel), niet gevangene. Mussert was WO2 (NSB)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Boekenkist + Slot Loevestein + 1621 = Hugo de Groot. Beroemd ontsnappingsverhaal." }],
+          niveaus: {
+            basis: "Hugo de Groot. = A.",
+            simpeler: "Hugo de Groot ontsnapte 1621 uit Slot Loevestein verborgen in een boekenkist die zijn vrouw stuurde. = A.",
+            nogSimpeler: "Hugo de Groot = A.",
+          },
+        },
       },
     ],
   },
@@ -168,6 +212,28 @@ const steps = [
         options: ["Boyan Slat (16 jr begin)", "Mark Rutte", "Verstappen", "Cruijff"],
         answer: 0,
         wrongHints: [null, "Klopt — jonge held.", "Politicus.", "F1.", "Voetbal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie is Boyan Slat?", tekst: "**Boyan Slat** (geboren 1994) is een **Nederlandse uitvinder**. Op zijn **16e** kreeg hij tijdens een duik-vakantie in Griekenland het idee om **plastic uit de oceaan** te halen." },
+            { titel: "De Ocean Cleanup", tekst: "In 2013 (Boyan was 18) richtte hij **The Ocean Cleanup** op. Doel: drijvende systemen ontwikkelen die plastic uit de Stille Oceaan + rivieren halen vóór het zee bereikt." },
+            { titel: "Waarom inspirerend voor kinderen", tekst: "Hij toont dat **jongeren grote problemen kunnen aanpakken**. Begon met €200.000 crowdfunding, nu wereldwijd actief in 5 oceanen + 30 rivieren. **Tedx-talk** met miljoenen views maakte 'm beroemd." },
+          ],
+          woorden: [
+            { woord: "Boyan Slat", uitleg: "NL-uitvinder Ocean Cleanup, geb. 1994." },
+            { woord: "Ocean Cleanup", uitleg: "NL-organisatie die plastic uit zeeën en rivieren haalt." },
+          ],
+          theorie: "Cito-feit Boyan Slat:\n• Geboren **Delft**, 1994.\n• Hoort niet bij een politieke partij of bedrijf — eigen non-profit.\n• Won **VN-Champions of the Earth Award** (2014).\n• Mooi voorbeeld van een jonge NL'er met wereldimpact.",
+          voorbeelden: [
+            { type: "stap", tekst: "Ocean Cleanup System 001 + 002 = drijvende installaties die plastic 'vangen' in een grote boog. Wordt steeds verbeterd." },
+            { type: "stap", tekst: "Ook **Interceptor** = boot die plastic uit rivieren vist vóór het in zee komt. 80% van plastic in oceaan komt uit ~1000 rivieren." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Modern jong NL-held = Boyan Slat. Niet verwarren met politiek (Rutte) of sport (Verstappen/Cruijff). Slat = ocean + plastic." }],
+          niveaus: {
+            basis: "Boyan Slat. = A.",
+            simpeler: "Jonge NL-uitvinder die op zijn 16e Ocean Cleanup bedacht om plastic uit zee te halen. = A.",
+            nogSimpeler: "Boyan Slat = A.",
+          },
+        },
       },
     ],
   },
