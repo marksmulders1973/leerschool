@@ -540,6 +540,10 @@ const vraagAanbodEconomie = {
   subject: "economie",
   referentieNiveau: "onderbouw/HAVO",
   sloThema: "Economie — vraag & aanbod, marktevenwicht",
+  prerequisites: [
+    { id: "pincode-ondernemen", title: "Pincode — ondernemen", niveau: "vmbo-onderbouw" },
+    { id: "pincode-geld-sparen-lenen", title: "Pincode — geld + sparen + lenen", niveau: "vmbo-onderbouw" },
+  ],
   intro:
     "De motor van elke markt: vraag en aanbod. Vraagwet, aanbodwet, marktevenwicht, vraag- en aanbodverschuivingen, met praktische voorbeelden van uitverkoop tot concertkaartjes. Eerste pad economie.",
   triggerKeywords: [

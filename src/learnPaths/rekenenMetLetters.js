@@ -647,6 +647,10 @@ const rekenenMetLetters = {
   referentieNiveau: "2F/2S",
   sloThema: "Verbanden — algebra",
   topics: ["WI.algebra.basis"],
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "negatieve-getallen", title: "Negatieve getallen", niveau: "vmbo-2F" },
+  ],
   intro: "Algebra-basis: hoe reken je met letters? Termen herleiden, haakjes wegwerken, merkwaardige producten ((a+b)², (a−b)², (a+b)(a−b)) en rekenen met machten. Fundament voor élke wiskunde later.",
   triggerKeywords: ["herleiden", "haakjes wegwerken", "merkwaardig product", "machten", "termen", "soortgelijke termen", "(a+b)²"],
   chapters,

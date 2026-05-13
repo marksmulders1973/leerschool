@@ -1477,6 +1477,10 @@ const parabolen = {
   referentieNiveau: "2S/3F",
   sloThema: "Verbanden — kwadratische functies",
   topics: ["WI.algebra.parabolen"],
+  prerequisites: [
+    { id: "coordinatenstelsel", title: "Coördinatenstelsel", niveau: "vmbo-2F" },
+    { id: "rekenen-met-letters", title: "Rekenen met letters", niveau: "vmbo-2F" },
+  ],
   intro: "In 32 stapjes ontdek je wat een parabool is — vanaf de allereerste basis (wat is x²?) tot het uitrekenen van de top en de nulpunten. Geen voorkennis nodig.",
   triggerKeywords: ["parabool", "parabolen", "dalparabool", "bergparabool", "y=x²", "y = x²", "kwadratische functie"],
   chapters,

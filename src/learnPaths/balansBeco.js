@@ -569,6 +569,10 @@ const balansBeco = {
   subject: "beco",
   referentieNiveau: "HAVO",
   sloThema: "Bedrijfseconomie — balans & winst-verliesrekening",
+  prerequisites: [
+    { id: "pincode-ondernemen", title: "Pincode — ondernemen", niveau: "vmbo-onderbouw" },
+    { id: "pincode-belasting", title: "Pincode — belasting", niveau: "vmbo-onderbouw" },
+  ],
   intro:
     "De twee kern-overzichten van elke onderneming: de balans (debet = credit) en de winst-en-verliesrekening (omzet − kosten = winst). Met activa, passiva, eigen vs vreemd vermogen, kosten-soorten en afschrijven. Eerste pad bedrijfseconomie.",
   triggerKeywords: [

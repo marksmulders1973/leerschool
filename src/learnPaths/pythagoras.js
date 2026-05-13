@@ -573,6 +573,10 @@ const pythagoras = {
   referentieNiveau: "2F",
   sloThema: "Meten en meetkunde",
   topics: ["WI.meetkunde.pythagoras"],
+  prerequisites: [
+    { id: "vlakke-figuren", title: "Vlakke figuren — omtrek/oppervlakte", niveau: "vmbo-2F" },
+    { id: "kwadraten-wortels", title: "Kwadraten + wortels", niveau: "vmbo-2F" },
+  ],
   intro: "H6 uit Wiskunde Flex deel 2: een van de beroemdste stellingen uit de wiskunde. a² + b² = c² — een eenvoudige formule om in elke rechthoekige driehoek de derde zijde te berekenen.",
   triggerKeywords: ["pythagoras", "rechthoekige driehoek", "schuine zijde", "hypotenusa", "rechthoekszijde", "a² + b² = c²"],
   chapters,

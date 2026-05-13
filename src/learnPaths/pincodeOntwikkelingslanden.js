@@ -794,6 +794,10 @@ const pincodeOntwikkelingslanden = {
   subject: "economie",
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - Pincode VMBO-GT klas 4 hoofdstuk 8",
+  prerequisites: [
+    { id: "pincode-buitenland-eu", title: "Pincode — buitenland + EU", niveau: "vmbo-onderbouw" },
+    { id: "pincode-inkomen-welvaart", title: "Pincode — inkomen + welvaart", niveau: "vmbo-onderbouw" },
+  ],
   intro:
     "Hoofdstuk 8 van Pincode 7e ed. VMBO-GT 4: rijk vs arm, welvaart vs welzijn, oorzaken armoede, ontwikkelingshulp + Fair Trade, duurzame ontwikkeling + 17 SDG's, microkrediet, en de toekomst. 7 stappen examenvoorbereiding.",
   triggerKeywords: [

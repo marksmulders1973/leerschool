@@ -517,6 +517,10 @@ const kwadratischeVergelijkingen = {
   referentieNiveau: "3F",
   sloThema: "Verbanden — kwadratische vergelijkingen",
   topics: ["WI.algebra.kwadratisch", "WI.algebra.parabolen"],
+  prerequisites: [
+    { id: "parabolen", title: "Parabolen", niveau: "vmbo-2S/3F" },
+    { id: "vergelijkingen-oplossen", title: "Vergelijkingen oplossen", niveau: "vmbo-2F" },
+  ],
   intro: "H7 uit Wiskunde Flex deel 2: hoe los je een vergelijking met x² erin op? Twee methodes: rechtstreeks via x² = c, en factoriseren via x buiten haakjes. Met praktische toepassingen.",
   triggerKeywords: ["kwadratische vergelijking", "factoriseren", "x² = ", "buiten haakjes", "x² + bx", "ax² + bx + c"],
   chapters,

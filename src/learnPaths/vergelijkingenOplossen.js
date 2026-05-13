@@ -638,6 +638,10 @@ const vergelijkingenOplossen = {
   referentieNiveau: "2F/2S",
   sloThema: "Verbanden — vergelijkingen",
   topics: ["WI.algebra.vergelijking"],
+  prerequisites: [
+    { id: "rekenen-met-letters", title: "Rekenen met letters", niveau: "vmbo-2F" },
+    { id: "negatieve-getallen", title: "Negatieve getallen", niveau: "vmbo-2F" },
+  ],
   intro:
     "Lineaire vergelijkingen oplossen met de balans-methode: van eenvoudige x + a = b, via vergelijkingen met x aan beide kanten en haakjes/breuken, tot woordvergelijkingen. Voorbereiding op alle latere algebra (lineaire formules, kwadratische vergelijkingen, stelsels).",
   triggerKeywords: [
