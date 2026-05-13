@@ -71,6 +71,28 @@ const steps = [
         options: ["7", "5", "6", "8"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Soms wordt 5 gezegd, maar standaard is 7.", "Soms 6, maar Cito-standaard = 7.", "Niet 8."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 7 continenten — op de Nederlandse school", tekst: "In Nederland leer je dat er **7 continenten** zijn. Die hebben we hier voor de Doorstroomtoets nodig: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },
+            { titel: "Waarom soms 5 of 6?", tekst: "In sommige andere landen tellen ze anders. Bv. **Noord + Zuid-Amerika als 1** (= 6 totaal) of **Europa + Azië als 1 'Eurazië'** (= 6 totaal). In Nederland: **altijd 7**." },
+            { titel: "Onthoud-truc", tekst: "Tel mee op je vingers: 1) N-Amerika, 2) Z-Amerika, 3) Europa, 4) Afrika, 5) Azië, 6) Oceanië, 7) Antarctica. **7 vingers** — 1 hand + 2 erbij." },
+          ],
+          woorden: [
+            { woord: "continent", uitleg: "Groot stuk land op de aarde." },
+            { woord: "Antarctica", uitleg: "Het zuid-pool-continent, alleen ijs en pinguïns." },
+          ],
+          theorie: "Cito-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat Cito vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
+          voorbeelden: [
+            { type: "stap", tekst: "Trek de wereldkaart in je hoofd: Amerika links (Noord boven, Zuid onder = 2), Europa + Afrika in midden (= 2), Azië rechts (= 1), Australië/Oceanië onder Azië (= 1), Antarctica onderin (= 1). Totaal 7." },
+            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op Cito-NL altijd 7." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dat is verouderd. Op Cito = 7. Schrijf dit getal vet in je hoofd." }],
+          niveaus: {
+            basis: "7 continenten. = A.",
+            simpeler: "Tel ze op: N-Am, Z-Am, Europa, Afrika, Azië, Oceanië, Antarctica. 7. = A.",
+            nogSimpeler: "7 = A.",
+          },
+        },
       },
       {
         q: "Op welk continent ligt **Nederland**?",
@@ -110,6 +132,28 @@ const steps = [
         options: ["Stille Oceaan", "Atlantische Oceaan", "Indische Oceaan", "Noordelijke IJszee"],
         answer: 0,
         wrongHints: [null, "Klopt — ongeveer 1/3 van de aarde.", "Stille is groter.", "Indische is 3e.", "Veel kleiner."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De Stille Oceaan = grootste", tekst: "De **Stille Oceaan** (in het Engels: *Pacific*) is veruit de grootste. Hij beslaat ongeveer **een derde van de aarde** — meer water dan alle continenten samen!" },
+            { titel: "Waar ligt hij?", tekst: "Tussen Azië/Oceanië (links) en Amerika (rechts). Als je vanuit Tokio naar Los Angeles vliegt, kruis je de Stille Oceaan." },
+            { titel: "Volgorde van groot naar klein", tekst: "1) Stille (grootst) → 2) Atlantische → 3) Indische → 4) Zuidelijke IJszee → 5) Noordelijke IJszee (kleinst). Onthoud de **top-3** voor Cito." },
+          ],
+          woorden: [
+            { woord: "Stille Oceaan", uitleg: "Grootste oceaan, tussen Azië en Amerika." },
+            { woord: "Pacific", uitleg: "Engelse naam voor Stille Oceaan = 'rustig'." },
+          ],
+          theorie: "Cito-truc oceanen-rangorde: **S-A-I** (Stille-Atlantische-Indische) van groot naar klein. De 2 IJszeeën zijn klein (bij de polen). De Stille Oceaan is zelfs groter dan ALLE continenten bij elkaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Op een wereldkaart: Stille Oceaan = alles links + rechts (omdat hij doorloopt). Kijk hoe blauw die kant is — bijna alleen water." },
+            { type: "stap", tekst: "Waarom 'Stille'? Ontdekkers vonden hem op een rustig moment kalm. Echte naam is dus deels misleidend (er zijn ook stormen daar)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste oceaan = Stille = 1/3 van de aarde. Onthoud dit kerncijfer." }],
+          niveaus: {
+            basis: "Stille Oceaan = grootst. = A.",
+            simpeler: "Volgorde: Stille > Atlantische > Indische. Grootst = Stille. = A.",
+            nogSimpeler: "Stille = A.",
+          },
+        },
       },
       {
         q: "Welke oceaan ligt **tussen Nederland en Amerika**?",
@@ -196,6 +240,29 @@ const steps = [
         options: ["06:00", "18:00", "12:00", "20:00"],
         answer: 0,
         wrongHints: [null, "Klopt — 12 − 6 = 06:00.", "Verkeerde richting.", "Niet hetzelfde — andere tijdzone.", "Verkeerde berekening."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent '6 uur eerder'?", tekst: "Als New York **6 uur eerder** is dan Nederland, dan loopt de klok daar ACHTER op die van ons. Wij zijn al om 12:00 's middags, zij nog NIET — bij hen is het pas vroeg ochtend." },
+            { titel: "Rekenen: trek af!", tekst: "Eerder = klok lager = **AFTREKKEN**. NL-tijd 12:00 **min** 6 uur = **06:00**. Dus in New York is het 6 uur 's ochtends terwijl wij aan het lunchen zijn." },
+            { titel: "Andere richting: Tokio", tekst: "Als een stad **later** is (bv. Tokio, 8 uur later), dan moet je **OPTELLEN**: 12:00 + 8 = 20:00. Wij eten lunch, Tokio is bij het avondeten." },
+          ],
+          woorden: [
+            { woord: "tijdzone", uitleg: "Gebied op aarde met dezelfde kloktijd." },
+            { woord: "eerder/later", uitleg: "Eerder = aftrekken. Later = optellen." },
+          ],
+          theorie: "Cito-truc tijdzone-rekenen: lees of de andere stad **eerder** of **later** is. Eerder → MIN (aftrekken). Later → PLUS (optellen). Dan gewoon de uren rekenen. Pas op bij negatieve uitkomsten of >24 (dag wisselt).",
+          voorbeelden: [
+            { type: "stap", tekst: "NL 15:00 → London (1 uur eerder) = 15 − 1 = 14:00." },
+            { type: "stap", tekst: "NL 10:00 → Beijing (7 uur later) = 10 + 7 = 17:00." },
+            { type: "stap", tekst: "NL 03:00 → LA (9 uur eerder) = 3 − 9 = -6 → +24 = 18:00 (avond ervoor)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Westen (Amerika) = eerder = MIN. Oosten (Azië) = later = PLUS. Onthoud: zon gaat van oost naar west, dus oost = klok loopt voor." }],
+          niveaus: {
+            basis: "12 − 6 = 06:00. = A.",
+            simpeler: "New York is 6 uur eerder, dus je trekt 6 uur af. 12 − 6 = 6. = 06:00 = A.",
+            nogSimpeler: "12 − 6 = 6 uur 's ochtends = A.",
+          },
+        },
       },
       {
         q: "Ten **oosten** van Nederland is het uurwerk ... ?",
