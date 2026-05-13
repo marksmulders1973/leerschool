@@ -19,15 +19,22 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 
 - [Homepage](https://leerkwartier.app/): toegang tot alle oefenroutes,
   leerpaden en de Doorstroomtoets-modules.
-- [Cito-eindtoets / Doorstroomtoets oefenen](https://leerkwartier.app/cito):
+- [Doorstroomtoets oefenen](https://leerkwartier.app/doorstroomtoets-oefenen.html):
+  primaire landing page met USP-uitleg, FAQ over Doorstroomtoets 2027 en
+  link naar de oefen-app.
+- [VMBO-examens oefenen](https://leerkwartier.app/vmbo-examens-oefenen.html):
+  authentieke examenvragen uit examenblad.nl (economie 2023-2025, Engels
+  2024-2025, geschiedenis 2025) met voorkennisKeten naar onderliggend
+  leerpad.
+- [Leren in 15 minuten per dag](https://leerkwartier.app/leren-15-minuten.html):
+  uitleg van de USP — waarom korte dagelijkse sessies effectiever zijn
+  dan lange wekelijkse blokken (Ebbinghaus / spaced learning).
+- [Cito-eindtoets oefenen (in-app)](https://leerkwartier.app/cito):
   oefenpaden voor de Doorstroomtoets 2026/2027 (rekenen, taal,
   studievaardigheden). Authentieke vraagstijl + didactische uitlegPad.
 - [Leerpaden-overzicht](https://leerkwartier.app/leren): 165+ leerpaden
   voor basisschool en middelbare school. Per pad: 4-6 stappen van ~15 min,
   met denkprikkel-hints en uitleg op 3 niveaus.
-- [VMBO-examens oefenen](https://leerkwartier.app/leren): authentieke
-  examenvragen uit examenblad.nl (economie, Engels, geschiedenis,
-  Nederlands) met voorkennisKeten naar onderliggend leerpad.
 - [Begrijpend lezen](https://leerkwartier.app/begrijpend-lezen):
   oefenteksten + Cito-stijl meerkeuzevragen voor groep 6-8.
 - [Tafels oefenen](https://leerkwartier.app/tafels): vermenigvuldigings-
