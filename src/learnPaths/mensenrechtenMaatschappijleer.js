@@ -72,6 +72,28 @@ const steps = [
         options: ["Recht dat iedereen heeft als mens", "Recht van Nederlanders alleen", "Een wet uit 2000", "Iets dat alleen volwassenen hebben"],
         answer: 0,
         wrongHints: [null, "Klopt — universeel.", "Te beperkt — geldt voor iedereen.", "Veel ouder.", "Kinderen hebben ook rechten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een mensenrecht?", tekst: "Een **mensenrecht** is een recht dat iedereen heeft, simpelweg omdat hij of zij een MENS is. Geen onderscheid op land, leeftijd, geslacht, religie of huidskleur." },
+            { titel: "Universeel = voor iedereen", tekst: "Mensenrechten zijn **universeel**: ze gelden voor ELKE persoon op aarde. Een baby in NL heeft dezelfde basisrechten als een grootmoeder in India of een man in Brazilië." },
+            { titel: "Voorbeelden mensenrechten", tekst: "Recht op LEVEN, recht op VRIJHEID, recht op ONDERWIJS, recht op MENING uiten, recht op een EERLIJK proces, geen MARTELING, gelijkheid voor de wet. 30 in totaal in UVRM (1948)." },
+          ],
+          woorden: [
+            { woord: "mensenrecht", uitleg: "Recht dat iedereen heeft als mens." },
+            { woord: "universeel", uitleg: "Voor IEDEREEN, overal." },
+          ],
+          theorie: "Cito-feit: mensenrechten staan in het **UVRM** (Universele Verklaring van de Rechten van de Mens, VN, 1948). Een reactie op de gruwelen van WO2 + Holocaust. Voor iedereen, niet alleen Westerse landen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Recht op onderwijs: ELK kind mag naar school. Geldt in NL én in Afghanistan, ook al wordt het daar niet altijd geëerbiedigd." },
+            { type: "stap", tekst: "Recht op vrije meningsuiting: je mag zeggen wat je denkt — binnen grenzen van bv. discriminatie-verboden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Mensen-rechten = voor ALLE mensen. Niet 'NL-rechten' of 'Europese-rechten'. Universeel." }],
+          niveaus: {
+            basis: "Mensenrecht = recht dat iedereen heeft als mens (universeel).",
+            simpeler: "Geldt voor ELK mens, overal ter wereld.",
+            nogSimpeler: "Voor iedereen.",
+          },
+        },
       },
       {
         q: "**Universeel** betekent ... ?",
@@ -106,6 +128,28 @@ const steps = [
         options: ["1948", "1789", "1900", "2000"],
         answer: 0,
         wrongHints: [null, "Klopt — 10 december.", "Franse Revolutie (Verklaring Mens en Burger).", "Te vroeg.", "Te laat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is UVRM?", tekst: "**UVRM** = **Universele Verklaring van de Rechten van de Mens**. Een document met 30 artikelen die mensenrechten wereldwijd vastleggen." },
+            { titel: "Datum: 10 december 1948", tekst: "Aangenomen door de **Verenigde Naties (VN)** op **10 december 1948** in Parijs. Reactie op de gruwelen van **WO2** + Holocaust — 'nooit meer'." },
+            { titel: "Belangrijke datum onthouden", tekst: "10 december is sindsdien **Internationale Dag van de Rechten van de Mens**. Veel landen ondertekenden — maar niet allemaal houden zich eraan." },
+          ],
+          woorden: [
+            { woord: "UVRM", uitleg: "Universele Verklaring van de Rechten van de Mens (1948)." },
+            { woord: "VN", uitleg: "Verenigde Naties — internationale samenwerking sinds 1945." },
+          ],
+          theorie: "Cito-tip jaartallen: UVRM = 1948 (3 jaar na WO2). VN-oprichting = 1945. Kinderrechten-verdrag = 1989. EVRM = 1950 (Europees, voortbouwend op UVRM).",
+          voorbeelden: [
+            { type: "stap", tekst: "Eleanor Roosevelt (weduwe Amerikaans president) leidde de UVRM-commissie." },
+            { type: "stap", tekst: "30 artikelen totaal. Artikel 1: 'Alle mensen worden vrij en gelijk in waardigheid geboren'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "UVRM 1948 = direct na WO2. Belangrijk: Cito-feit." }],
+          niveaus: {
+            basis: "UVRM = 1948 (VN, na WO2).",
+            simpeler: "10 december 1948 ondertekend door VN.",
+            nogSimpeler: "1948.",
+          },
+        },
       },
       {
         q: "Welke organisatie nam UVRM aan?",
@@ -118,6 +162,28 @@ const steps = [
         options: ["Iedereen gelijk + vrij geboren", "Niemand mag stelen", "Iedereen moet werken", "Kinderen niet werken"],
         answer: 0,
         wrongHints: [null, "Klopt — basis.", "Geen artikel 1.", "Geen artikel 1.", "Artikel ergens anders."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De beroemdste regel ter wereld", tekst: "Artikel 1 van UVRM is misschien wel de beroemdste regel uit het hele document. Het zegt: 'Alle mensen worden vrij en gelijk in waardigheid en rechten geboren.'" },
+            { titel: "Wat betekent dit?", tekst: "**Vrij geboren** = niemand komt als slaaf ter wereld. **Gelijk in waardigheid** = elk mens telt evenveel mee, ongeacht ras, geslacht, religie, rijkdom. **Gelijk in rechten** = iedereen heeft dezelfde basis-rechten." },
+            { titel: "Basis voor alle andere artikelen", tekst: "Alle 29 andere artikelen bouwen voort op deze gelijkheids-gedachte. Recht op onderwijs, vrijheid, leven — komt allemaal uit dit fundament." },
+          ],
+          woorden: [
+            { woord: "Artikel 1 UVRM", uitleg: "Iedereen vrij + gelijk geboren." },
+            { woord: "waardigheid", uitleg: "Iedereen verdient respect als mens." },
+          ],
+          theorie: "Cito-feit: Artikel 1 = symbool van de mensenrechten-beweging. Geprint op vlaggen, gebouwen, schoolboeken. Inspireerde grondwetten van vele landen, incl. NL.",
+          voorbeelden: [
+            { type: "stap", tekst: "Slaverij is verboden (komt uit Art 1 + later artikelen)." },
+            { type: "stap", tekst: "Discriminatie is verboden (komt uit gelijkheid-principe Art 1)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Art 1 = 'vrij + gelijk geboren'. Fundamenteel principe — onthoud de tekst." }],
+          niveaus: {
+            basis: "Artikel 1 UVRM: alle mensen vrij + gelijk geboren in waardigheid en rechten.",
+            simpeler: "Iedereen evenveel waard, niemand slaaf van geboorte.",
+            nogSimpeler: "Vrij + gelijk.",
+          },
+        },
       },
       {
         q: "Wat is **EVRM**?",
