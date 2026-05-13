@@ -21,12 +21,56 @@ const steps = [
         options: ["~11 jaar", "5 jaar", "16 jaar", "Niet bij meisjes"],
         answer: 0,
         wrongHints: [null, "Klopt — variatie 8-13.", "Te jong.", "Te oud.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is puberteit?", tekst: "**Puberteit** is de fase waarin je lichaam van KIND naar VOLWASSENE verandert. Hormonen sturen lichamelijke groei + ontwikkeling van geslachtsorganen." },
+            { titel: "Wanneer begint het?", tekst: "Bij **meisjes** gemiddeld rond **11 jaar** (variatie 8-13). Bij **jongens** wat later: ~12-13 jaar (variatie 9-15). Iedereen heeft eigen tempo — geen reden voor stress." },
+            { titel: "Lange fase", tekst: "Puberteit duurt 3-5 jaar. Eindigt rond 16-18 jaar wanneer lichaam volwassen is. Niet iedereen begint of eindigt op zelfde leeftijd!" },
+          ],
+          woorden: [
+            { woord: "puberteit", uitleg: "Periode waarin kind volwassen wordt." },
+            { woord: "hormoon", uitleg: "Stof die signalen door lichaam stuurt (groei, ontwikkeling)." },
+          ],
+          theorie: "Cito-feit: puberteit komt tegenwoordig **eerder** dan vroeger (1900: rond 14-15, nu: 11). Oorzaak: betere voeding + meer lichaamsgewicht. Genetisch + omgeving samen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Meisje van 9 met eerste lichamelijke veranderingen = NORMAAL (vroege start)." },
+            { type: "stap", tekst: "Jongen van 14 nog geen veranderingen = NORMAAL (latere start)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Meisjes ~11, jongens ~12-13. Geen vast moment — iedereen eigen tempo." }],
+          niveaus: {
+            basis: "Puberteit begint bij meisjes gemiddeld rond 11 jaar.",
+            simpeler: "Meisjes 8-13 jaar, jongens 9-15 jaar.",
+            nogSimpeler: "Meisjes ~11, jongens iets later.",
+          },
+        },
       },
       {
         q: "Wat zijn **hormonen**?",
         options: ["Stoffen die signalen geven in lichaam", "Vitaminen", "Bot", "Spier"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Anders.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn hormonen?", tekst: "**Hormonen** zijn chemische stoffen die jouw lichaam zelf maakt. Ze werken als **signaal-stoffen**: ze sturen instructies van het ene orgaan naar het andere via het bloed." },
+            { titel: "Wat doen ze?", tekst: "Hormonen regelen heel veel: GROEI, honger, slaap, stemming, puberteit, voortplanting. Tijdens puberteit komen GROEI- en GESLACHTSHORMONEN extra hard aan het werk." },
+            { titel: "Bekende hormonen", tekst: "**Testosteron** (vooral jongens — gespierd, lage stem). **Oestrogeen** (vooral meisjes — borstontwikkeling, menstruatie). **Groeihormoon** (langer worden). **Adrenaline** (stress/spanning)." },
+          ],
+          woorden: [
+            { woord: "hormoon", uitleg: "Chemische signaal-stof in lichaam." },
+            { woord: "klier", uitleg: "Orgaan dat hormonen maakt (schildklier, bijnier, geslachtsklieren)." },
+          ],
+          theorie: "Cito-tip: hormonen ≠ vitamines. Vitamines = stoffen die je via voeding binnen krijgt. Hormonen = stoffen die je lichaam zelf maakt om signalen te geven.",
+          voorbeelden: [
+            { type: "stap", tekst: "Stresssituatie → adrenaline-hormoon → hart klopt sneller, je bent alert." },
+            { type: "stap", tekst: "Avond → melatonine-hormoon → slaperig gevoel." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hormoon = HORMOnaal = inwendig signaal. Maakt het lichaam zelf." }],
+          niveaus: {
+            basis: "Hormonen = signaal-stoffen in het lichaam.",
+            simpeler: "Ze zeggen organen wat ze moeten doen.",
+            nogSimpeler: "Lichaams-signalen.",
+          },
+        },
       },
       {
         q: "Wat is **testosteron**?",
@@ -64,6 +108,28 @@ const steps = [
         options: ["Hormonen activeren olieklieren", "Vies eten", "Geen wassen", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Geen verband bewezen.", "Helpt maar oorzaak hormoon.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een puistje?", tekst: "Een puistje (acne) ontstaat in je huid. Je huid heeft **olieklieren** die normaal een laagje olie maken. Soms raakt zo'n klier **verstopt** met olie + dode huidcellen + bacteriën = puistje." },
+            { titel: "Hormonen schuldig", tekst: "Tijdens puberteit gaan de **HORMONEN** (vooral testosteron, ook bij meisjes) je olieklieren **VEEL HARDER** laten werken. Meer olie → meer kans op verstopping → meer puistjes." },
+            { titel: "Niet door slechte hygiëne", tekst: "Mythe: 'puistjes komen door vies zijn'. Dat klopt NIET. Vies zijn helpt niet, maar **HOOFDOORZAAK = hormonen**. Veel + te hard wassen kan zelfs averechts werken (huid maakt nog meer olie als reactie)." },
+          ],
+          woorden: [
+            { woord: "acne", uitleg: "Medische naam voor puistjes." },
+            { woord: "olieklier", uitleg: "Klein klierje in huid dat olie maakt (talg)." },
+          ],
+          theorie: "Cito-feit: 85% van pubers heeft puistjes. Heel normaal, gaat meestal vanzelf weg rond ~20 jaar. Bij erge acne: huisarts → soms medicijn (Roaccutane bv).",
+          voorbeelden: [
+            { type: "stap", tekst: "Voorhoofd + neus + kin = T-zone = veel olieklieren = meeste puistjes." },
+            { type: "stap", tekst: "Chocolade veroorzaakt geen puistjes (mythe). Wel: stress + slecht slapen kan iets verergeren." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hormonen = hoofdoorzaak. Hygiëne helpt iets, maar is niet de echte reden." }],
+          niveaus: {
+            basis: "Puistjes komen door hormonen die olieklieren activeren.",
+            simpeler: "Hormoon zegt 'maak veel olie' → klieren verstopt → puistje.",
+            nogSimpeler: "Hormonen!",
+          },
+        },
       },
       {
         q: "Waarom **stem lager** bij jongens?",
