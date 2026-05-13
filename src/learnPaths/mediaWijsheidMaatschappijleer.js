@@ -38,6 +38,28 @@ const steps = [
         options: ["Kritisch omgaan met alle media", "Heel veel media kijken", "Tegen media zijn", "Telefoon weg"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet doel.", "Te negatief.", "Niet de oplossing."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is mediawijsheid?", tekst: "**Mediawijsheid** = bewust + kritisch omgaan met **alle media** (TV, internet, social media, krant, radio). Je weet hoe ze werken, wat ze doen, en hoe je ze veilig gebruikt." },
+            { titel: "Niet tegen, maar slim", tekst: "Mediawijsheid is NIET 'tegen media zijn' of 'telefoon weggooien'. Het is **slim gebruiken**: nepnieuws herkennen, bronnen checken, eigen tijd bewaken, online veiligheid." },
+            { titel: "5 vaardigheden", tekst: "1) Toegang (kunnen vinden). 2) Begrip (snappen wat je ziet). 3) Kritisch denken (bron-check). 4) Maken (zelf inhoud creëren). 5) Verantwoordelijk gebruiken (privacy, online-gedrag)." },
+          ],
+          woorden: [
+            { woord: "mediawijsheid", uitleg: "Slim + kritisch omgaan met alle media." },
+            { woord: "media", uitleg: "Communicatie-middelen: TV, internet, krant, social media, etc." },
+          ],
+          theorie: "Cito-tip mediawijsheid: hoort bij groep 7-8. Je leert: nepnieuws herkennen, online veiligheid, schermtijd bewaken, eigen content maken. Belangrijke groep 8-vaardigheid voor middelbare school.",
+          voorbeelden: [
+            { type: "stap", tekst: "TikTok-video: wie post dit? Klopt het? Is er bewijs? = mediawijs." },
+            { type: "stap", tekst: "Spam-mail: niet zomaar klikken op link, eerst checken. = mediawijs." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Mediawijs = bewust + kritisch. Niet 'tegen' media, juist slim ermee." }],
+          niveaus: {
+            basis: "Mediawijsheid = kritisch + bewust met media omgaan.",
+            simpeler: "Slim gebruiken: nepnieuws herkennen, bronnen checken.",
+            nogSimpeler: "Slim met media.",
+          },
+        },
       },
       {
         q: "Wat is **satire**?",
@@ -69,6 +91,29 @@ const steps = [
         options: ["Opzettelijk onjuiste info om te misleiden", "Per ongeluk onjuist", "Mening", "Reclame"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Dat is mis-informatie.", "Niet desinformatie.", "Aparte categorie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Verschil mis- en desinformatie", tekst: "**Mis-informatie** = per ONGELUK onjuist (je dacht dat het klopte, maar nee). **Des-informatie** = met **OPZET** onjuiste info, om mensen bewust te MISLEIDEN." },
+            { titel: "Waarom desinformatie?", tekst: "Mensen verspreiden expres nepnieuws voor 1) politiek (verkiezing beïnvloeden), 2) geld (clicks = advertentie-inkomsten), 3) macht (buitenlandse beïnvloeding zoals Rusland in VS-verkiezingen)." },
+            { titel: "Voorbeelden", tekst: "Mis-info: jij vertelt vriend 'morgen is school dicht' op basis van wat je dacht te horen → blijkt niet. Des-info: iemand maakt expres fake video van een politicus om hem zwart te maken." },
+          ],
+          woorden: [
+            { woord: "des-informatie", uitleg: "OPZETTELIJK onjuiste info." },
+            { woord: "mis-informatie", uitleg: "PER ONGELUK onjuiste info." },
+            { woord: "fake news", uitleg: "Verzonnen nieuws (= meestal desinformatie)." },
+          ],
+          theorie: "Cito-tip: DES = OPZET. MIS = PER ONGELUK. Onthoud dit verschil. Beide zijn nepnieuws, maar de bedoeling verschilt.",
+          voorbeelden: [
+            { type: "stap", tekst: "Rusland verspreidde tijdens VS-verkiezingen 2016 desinformatie via fake-Facebook-accounts." },
+            { type: "stap", tekst: "Influencer post per ongeluk verkeerde info over vaccin: mis-info (geen opzet)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Des = met opzet (Designed). Mis = per ongeluk (Mistake)." }],
+          niveaus: {
+            basis: "Desinformatie = opzettelijk onjuist om te misleiden.",
+            simpeler: "Iemand verzint expres nepnieuws om jou te bedriegen.",
+            nogSimpeler: "Opzettelijk gelogen.",
+          },
+        },
       },
       {
         q: "Hoe **check** je een nieuwsbericht?",
@@ -87,6 +132,28 @@ const steps = [
         options: ["Misleidende kop voor clicks", "Echt nieuws", "Saaie kop", "Reclame"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Tegenovergesteld.", "Soms wel, primair clickbait."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is clickbait?", tekst: "**Clickbait** (Engels voor 'klik-aas') is een **misleidende kop** die je verleidt om te klikken — maar het artikel zelf is teleurstellend, saai, of niet over de belofte." },
+            { titel: "Hoe herken je het?", tekst: "Typische clickbait-koppen: 'Je gelooft NIET wat er gebeurt!', 'Dokter ontdekt SCHOKKENDE waarheid', '10 dingen die je niet wist...'. Sensationele taal, geen specifieke info." },
+            { titel: "Waarom doen ze dit?", tekst: "Websites verdienen geld per **CLICK** of per advertentie-weergave. Hoe meer mensen klikken, hoe meer geld. Daarom **lokken** ze met geheimzinnige koppen." },
+          ],
+          woorden: [
+            { woord: "clickbait", uitleg: "Engels: 'klik-aas' — misleidende kop." },
+            { woord: "sensationeel", uitleg: "Overdreven spannend om aandacht te trekken." },
+          ],
+          theorie: "Cito-tip clickbait: ALTIJD met scepsis. Lees verder dan kop. Als artikel niet wat kop beloofde → niet delen. Sluit de tab.",
+          voorbeelden: [
+            { type: "stap", tekst: "Kop: 'Bijgaande foto zal je leven veranderen.' Artikel: standaard foto, niets bijzonders. Clickbait." },
+            { type: "stap", tekst: "Kop: 'Top 10 redenen waarom...' Artikel: 1 echte reden, rest opvulling. Clickbait." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Kop te sensationeel? Klopt zelden. Vertrouw saaie + feitelijke koppen meer." }],
+          niveaus: {
+            basis: "Clickbait = misleidende sensationele kop om mensen te laten klikken.",
+            simpeler: "'Klik-aas' — lokt je, valt tegen.",
+            nogSimpeler: "Misleidende kop.",
+          },
+        },
       },
     ],
   },
