@@ -432,6 +432,28 @@ const steps = [
         options: ["300", "250", "350", "1500"],
         answer: 0,
         wrongHints: [null, "Klopt — 1500 ÷ 5.", "Verkeerd berekend.", "Niet juist.", "Dat is totaal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: tel alles op", tekst: "Tel alle getallen bij elkaar op. 100 + 200 + 300 + 400 + 500 = **1.500**." },
+            { titel: "Stap 2: deel door aantal", tekst: "Tel hoeveel getallen er zijn. Er zijn 5 getallen. Deel: 1.500 ÷ 5 = **300**." },
+            { titel: "Cito-controle", tekst: "Het gemiddelde ligt altijd ergens tussen het laagste (100) en het hoogste (500). 300 zit precies in het midden — klopt." },
+          ],
+          woorden: [
+            { woord: "gemiddelde", uitleg: "Som ÷ aantal." },
+            { woord: "som", uitleg: "Alle getallen bij elkaar opgeteld." },
+          ],
+          theorie: "Formule: gemiddelde = (alle getallen opgeteld) ÷ (hoeveel getallen er zijn). Vergeet niet om EERST alles op te tellen, dan pas te delen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Cijfers 6, 7, 8: gemiddelde = (6+7+8)/3 = 21/3 = 7." },
+            { type: "stap", tekst: "Punten 10, 20: gemiddelde = (10+20)/2 = 15." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Voor 5 gelijk-verdeelde getallen: het middelste IS het gemiddelde. Hier 100/200/300/400/500 → midden = 300." }],
+          niveaus: {
+            basis: "Gemiddelde = som ÷ aantal.",
+            simpeler: "Tel alles op (1500), deel door 5. = 300.",
+            nogSimpeler: "Optellen, dan delen.",
+          },
+        },
       },
       {
         q: "Cirkeldiagram: blauw 25%, geel 25%, **rest** = ?",
@@ -450,6 +472,28 @@ const steps = [
         options: ["7", "8", "5", "37"],
         answer: 0,
         wrongHints: [null, "Klopt — middelste na sorteren.", "Niet middelste.", "Laagste.", "Som."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de mediaan?", tekst: "De mediaan is het **MIDDELSTE** getal als je ze van klein naar groot zet. Niet het gemiddelde — gewoon de middelste!" },
+            { titel: "Stap 1: zet op volgorde", tekst: "Eerst alle getallen klein → groot zetten. Hier: 5, 7, 7, 8, 10. (Al goed gesorteerd.)" },
+            { titel: "Stap 2: pak de middelste", tekst: "Er zijn 5 getallen. De middelste is de 3e: 5, 7, **7**, 8, 10. Mediaan = 7." },
+          ],
+          woorden: [
+            { woord: "mediaan", uitleg: "Middelste getal na sorteren." },
+            { woord: "gemiddelde", uitleg: "Som ÷ aantal — iets ANDERS dan mediaan!" },
+          ],
+          theorie: "Cito-truc: bij ONEVEN aantal getallen (3, 5, 7, ...) is mediaan het middelste. Bij EVEN aantal (4, 6, ...): tel de 2 middelste op, deel door 2.",
+          voorbeelden: [
+            { type: "stap", tekst: "3 getallen 4-6-10: mediaan = 6 (midden)." },
+            { type: "stap", tekst: "4 getallen 2-4-6-10: mediaan = (4+6)/2 = 5." },
+          ],
+          basiskennis: [{ onderwerp: "Verschil", uitleg: "Mediaan = middelste. Gemiddelde = som/aantal. Mediaan is ongevoelig voor uitschieters!" }],
+          niveaus: {
+            basis: "Mediaan = middelste getal na sorteren.",
+            simpeler: "5,7,7,8,10 → middelste = 7. Klaar.",
+            nogSimpeler: "Sorteer, pak het midden.",
+          },
+        },
       },
       {
         q: "Tabel: bedrag €10/€20/€30/€40/€50. **Som**?",
@@ -576,6 +620,27 @@ const steps = [
         options: ["piano", "plant", "Beide gelijk", "Niet te zeggen"],
         answer: 0,
         wrongHints: [null, "Klopt — p-i komt vóór p-l (i komt voor l in alfabet).", "p-l komt later.", "Verschillende woorden.", "Wel te zeggen — alfabetisch."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Woordenboek = alfabetisch", tekst: "Alle woorden in een woordenboek staan op alfabetische volgorde: van A naar Z." },
+            { titel: "Beginnen ze met dezelfde letter?", tekst: "Piano en plant beginnen beide met 'P'. Dus we moeten naar de TWEEDE letter kijken." },
+            { titel: "Vergelijk letter 2", tekst: "Piano = P-**I**-... Plant = P-**L**-... In het alfabet komt I (9e) eerder dan L (12e). Dus piano staat eerder." },
+          ],
+          woorden: [
+            { woord: "alfabetische volgorde", uitleg: "A-B-C-D-...-X-Y-Z. Eerste letter telt, dan tweede, dan derde." },
+          ],
+          theorie: "Cito-truc: bij gelijke beginletter kijk je naar de volgende. Bij gelijke 2 letters → 3e letter. Etc.",
+          voorbeelden: [
+            { type: "stap", tekst: "Auto vs Boom: A < B, dus auto eerst." },
+            { type: "stap", tekst: "School vs Sport: beide S-, dan C vs P. C komt eerst → school." },
+          ],
+          basiskennis: [{ onderwerp: "Alfabet hint", uitleg: "A=1, B=2, C=3, D=4, ... J=10, K=11, L=12, M=13, ..." }],
+          niveaus: {
+            basis: "Alfabetisch sorteren letter voor letter.",
+            simpeler: "P-I vs P-L: I komt vóór L → piano eerst.",
+            nogSimpeler: "Eerste letter gelijk? Kijk naar tweede.",
+          },
+        },
       },
       {
         q: "Waarvoor is een **register / index** achter in boek?",

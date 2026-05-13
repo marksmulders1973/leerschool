@@ -652,6 +652,28 @@ const steps = [
         options: ["pauw", "boud", "houd", "stout"],
         answer: 0,
         wrongHints: [null, "Klopt — denk aan de vogel.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        uitlegPad: {
+          stappen: [
+            { titel: "au/ou: geen vaste regel", tekst: "Voor 'au' en 'ou' bestaat geen automatische regel. Je moet de woorden uit je hoofd leren — net als bij ei/ij." },
+            { titel: "Klassieke 'au'-woorden", tekst: "pauw, kabouter, paus, blauw, dauw, klauw, gauw, auto — leer ze als groep." },
+            { titel: "Klassieke 'ou'-woorden", tekst: "hout, houd, koud, stout, oud, boud, vouw, gouden, schouder — leer ze als groep." },
+          ],
+          woorden: [
+            { woord: "au", uitleg: "pauw, blauw, klauw, kabouter, paus, auto." },
+            { woord: "ou", uitleg: "hout, koud, oud, stout, vouw, schouder." },
+          ],
+          theorie: "Cito-tip: ezelsbruggetjes helpen. 'Pauw' heeft 'au' — denk aan de vogel. 'Stout' heeft 'ou' — denk aan stout zijn. Bij twijfel: opzoeken en oefenen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Met au: pauw, blauw, klauw, paus, gauw, kabouter, auto." },
+            { type: "stap", tekst: "Met ou: hout, oud, koud, stout, schouder, vouw, gouden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lees veel — zo onthoud je vanzelf welk woord welke vorm heeft." }],
+          niveaus: {
+            basis: "Au/ou: geen regel, alleen uit hoofd. pauw = au. stout = ou.",
+            simpeler: "'Pauw' = de blauwe vogel met grote staart. 'Stout' = niet braaf.",
+            nogSimpeler: "Au/ou: leer per woord.",
+          },
+        },
       },
       {
         q: "**'Hij ___ snel'** — welk werkwoord?",
@@ -880,18 +902,84 @@ const steps = [
         options: ["een appel", "Ik", "eet", "Geen"],
         answer: 0,
         wrongHints: [null, "Klopt — waarop actie gericht.", "Onderwerp.", "Werkwoord.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een lijdend voorwerp?", tekst: "Het lijdend voorwerp is het ding WAAROP de actie van het werkwoord gericht is. Met andere woorden: WAT wordt er gegeten/gezien/gepakt?" },
+            { titel: "Truc: 'Wat + werkwoord + onderwerp?'", tekst: "Vraag: 'WAT eet ik?' → een appel. Dát is het lijdend voorwerp." },
+            { titel: "Verschil met onderwerp", tekst: "Onderwerp = wie/wat DOET. Lijdend voorwerp = WAT ondergaat de actie. In 'Ik eet een appel': ik = doe, appel = ondergaat." },
+          ],
+          woorden: [
+            { woord: "lijdend voorwerp", uitleg: "WAT ondergaat de actie. Antwoord op 'wat + werkwoord + onderwerp'." },
+            { woord: "onderwerp", uitleg: "WIE/WAT doet de actie." },
+          ],
+          theorie: "Cito-truc: zoek werkwoord (eet) + onderwerp (ik). Vraag dan: 'wat eet ik?' Antwoord = lijdend voorwerp. Niet alle zinnen hebben er één — 'Ik slaap' heeft geen lijdend voorwerp.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Tom leest een boek.' → wat leest Tom? → een boek." },
+            { type: "stap", tekst: "'Lisa schrijft een brief.' → wat schrijft Lisa? → een brief." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Wat + werkwoord + onderwerp? Antwoord = lijdend voorwerp." }],
+          niveaus: {
+            basis: "Lijdend voorwerp = WAT ondergaat de actie. Vraag 'wat + werkwoord + onderwerp?'",
+            simpeler: "'Ik eet een appel.' → wat eet ik? Een appel.",
+            nogSimpeler: "WAT? → lijdend voorwerp.",
+          },
+        },
       },
       {
         q: "Welke zin heeft een **bijvoeglijk naamwoord**?",
         options: ["De rode auto.", "De auto rijdt.", "Auto staat.", "Auto auto."],
         answer: 0,
         wrongHints: [null, "Klopt — 'rode' beschrijft de auto.", "Geen beschrijving.", "Geen beschrijving.", "Geen NL."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een bijvoeglijk naamwoord?", tekst: "Een bijvoeglijk naamwoord beschrijft HOE iets is. Het staat meestal vóór een ander woord en geeft een kenmerk." },
+            { titel: "Voorbeelden", tekst: "rode auto, grote tas, klein kind, mooi huis. 'rode/grote/klein/mooi' zijn bijvoeglijke naamwoorden." },
+            { titel: "Truc: 'Hoe is het?'", tekst: "Vraag: 'hoe is de auto?' → rood. Dat is het bijvoeglijk naamwoord. Vraag: 'wat doet de auto?' → rijdt. Dat is geen bijvoeglijk naamwoord." },
+          ],
+          woorden: [
+            { woord: "bijvoeglijk naamwoord", uitleg: "Beschrijft een kenmerk (kleur, grootte, vorm, gevoel)." },
+            { woord: "zelfstandig naamwoord", uitleg: "Het DING dat beschreven wordt (auto, kind, huis)." },
+          ],
+          theorie: "Cito-tip: bijvoeglijk naamwoord eindigt vaak op -e in NL (rode, grote). Of staat op zichzelf (rood, groot). Test: kun je 'mooi' / 'lelijk' / een kleur ervan maken? Dan is het een bijvoeglijk naamwoord.",
+          voorbeelden: [
+            { type: "stap", tekst: "'De blauwe lucht.' → blauwe = beschrijft de lucht." },
+            { type: "stap", tekst: "'Het zware boek.' → zware = beschrijft het boek." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Voor een 'ding'-woord (auto, kind, boek) staat vaak een bijvoeglijk naamwoord." }],
+          niveaus: {
+            basis: "Bijvoeglijk naamwoord = beschrijft hoe iets is (rood, groot, klein).",
+            simpeler: "'De rode auto' → 'rode' = welke kleur de auto is.",
+            nogSimpeler: "Hoe is het? = bijvoeglijk!",
+          },
+        },
       },
       {
         q: "Welke is een **persoonlijk voornaamwoord**?",
         options: ["ik", "auto", "snel", "boos"],
         answer: 0,
         wrongHints: [null, "Klopt — verwijst naar persoon.", "Andere woordsoort.", "Andere woordsoort.", "Andere woordsoort."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een persoonlijk voornaamwoord?", tekst: "Een persoonlijk voornaamwoord vervangt een persoon (of ding) zodat je niet steeds de naam hoeft te zeggen." },
+            { titel: "Lijstje", tekst: "ik / jij / hij / zij / het / wij / jullie / zij — en als 'object': mij, jou, hem, haar, ons, jullie, hen." },
+            { titel: "Voorbeeld", tekst: "In plaats van 'Tom rent en Tom is moe' zeggen we: 'Tom rent en HIJ is moe.' 'Hij' is een persoonlijk voornaamwoord." },
+          ],
+          woorden: [
+            { woord: "persoonlijk voornaamwoord", uitleg: "Vervangt een persoon/ding (ik, jij, hij, zij, wij, jullie)." },
+            { woord: "bezittelijk voornaamwoord", uitleg: "Iets anders: mijn, jouw, zijn, haar — geeft bezit aan." },
+          ],
+          theorie: "Cito-tip: persoonlijk voornaamwoorden zijn de KORTE woorden die naar mensen verwijzen: ik/jij/hij/zij/wij/jullie. Niet te verwarren met namen (Tom = naam, hij = persoonlijk vnw).",
+          voorbeelden: [
+            { type: "stap", tekst: "'Lisa is jarig. ZIJ krijgt cadeautjes.' → 'zij' verwijst naar Lisa." },
+            { type: "stap", tekst: "'Tom en ik gaan zwemmen. WIJ vertrekken.' → 'wij' verwijst naar Tom en mij." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vervangt het een naam of persoon? Dan is het een persoonlijk voornaamwoord." }],
+          niveaus: {
+            basis: "Persoonlijk voornaamwoord = ik, jij, hij, zij, wij, jullie. Vervangt naam.",
+            simpeler: "In plaats van 'Tom' kun je 'hij' zeggen. 'Hij' is een persoonlijk voornaamwoord.",
+            nogSimpeler: "ik/jij/hij/zij = persoonlijk vnw.",
+          },
+        },
       },
     ],
   },
