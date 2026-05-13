@@ -21,6 +21,29 @@ const steps = [
         options: ["7", "5", "10", "3"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "7 werelddelen (continenten)", tekst: "De wereld wordt verdeeld in **7 werelddelen**: 1) Azië, 2) Afrika, 3) Noord-Amerika, 4) Zuid-Amerika, 5) Antarctica, 6) Europa, 7) Oceanië (Australië)." },
+            { titel: "Geheugentruc: AANEZ-OA", tekst: "Onthoud volgorde (groot → klein): **A**zië, **A**frika, **N**oord-Amerika, **E**uropa, **Z**uid-Amerika, **O**ceanië, **A**ntarctica." },
+            { titel: "Of variant met 5 of 6", tekst: "Sommige scholen rekenen **Amerika** als 1 (in plaats van Noord+Zuid) of laten Antarctica weg. NL-Cito gebruikt 7." },
+          ],
+          woorden: [
+            { woord: "werelddeel", uitleg: "Continent — groot landoppervlak (Azië, Afrika, etc.)." },
+            { woord: "continent", uitleg: "Synoniem van werelddeel." },
+          ],
+          theorie: "Cito-feit: 7 werelddelen. Onthoud namen + ongeveer hun ligging op een wereldkaart. Vragen komen vaak over: grootste, kleinste, welke landen erin liggen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Nederland ligt in **Europa**." },
+            { type: "stap", tekst: "Rusland ligt deels in Europa, deels in Azië." },
+            { type: "stap", tekst: "Egypte ligt in Afrika (boven, Noord-Afrika)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "7 werelddelen. Antarctica is helemaal aan zuidpool — bijna geen mensen wonen er." }],
+          niveaus: {
+            basis: "7 werelddelen: Azië, Afrika, NA, ZA, Antarctica, Europa, Oceanië.",
+            simpeler: "Azië grootste, Antarctica koudste, Oceanië kleinste.",
+            nogSimpeler: "7 werelddelen.",
+          },
+        },
       },
       {
         q: "**Grootste werelddeel**?",
@@ -52,6 +75,28 @@ const steps = [
         options: ["Parijs", "Lyon", "Marseille", "Bordeaux"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Steden niet hoofdstad.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een hoofdstad?", tekst: "De **hoofdstad** is de belangrijkste stad van een land. Vaak zit daar de regering, het parlement en koning/president." },
+            { titel: "Parijs van Frankrijk", tekst: "**Parijs** is de hoofdstad van Frankrijk. Beroemde monumenten: **Eiffeltoren** (300 m hoog, gebouwd 1889), **Louvre** (museum), **Notre-Dame** (kathedraal)." },
+            { titel: "Lyon, Marseille, Bordeaux", tekst: "Dit zijn andere grote Franse steden, maar geen hoofdstad. Marseille = haven Middellandse Zee. Lyon = 2e stad. Bordeaux = wijn-streek." },
+          ],
+          woorden: [
+            { woord: "hoofdstad", uitleg: "Belangrijkste stad waar regering zit." },
+            { woord: "Parijs", uitleg: "Hoofdstad Frankrijk, ~11 mln mensen in regio." },
+          ],
+          theorie: "Cito-tip Europese hoofdsteden uit hoofd leren: Frankrijk-Parijs. Duitsland-Berlijn. Italië-Rome. Spanje-Madrid. UK-Londen. België-Brussel. Polen-Warschau.",
+          voorbeelden: [
+            { type: "stap", tekst: "Andere bekende hoofdsteden: Berlijn (Duitsland), Rome (Italië), Madrid (Spanje)." },
+            { type: "stap", tekst: "Verwarrend: NL heeft 2 'hoofdsteden' — Amsterdam (officieel) + Den Haag (regering)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Frankrijk → Eiffeltoren → Parijs. Beeldherkenning helpt." }],
+          niveaus: {
+            basis: "Parijs = hoofdstad Frankrijk.",
+            simpeler: "Parijs heeft de Eiffeltoren — Frankrijk.",
+            nogSimpeler: "Parijs.",
+          },
+        },
       },
       {
         q: "**Grootste land** qua bevolking 2024?",
@@ -64,6 +109,28 @@ const steps = [
         options: ["Mount Everest (Nepal)", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
         answer: 0,
         wrongHints: [null, "Klopt — 8849 m.", "Europa.", "Afrika.", "Zuid-Amerika."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Mount Everest is hoogste", tekst: "**Mount Everest** in de **Himalaya** (grens Nepal/Tibet) is met **8.849 meter** de hoogste berg van de wereld. Hoger dan de wolken!" },
+            { titel: "Hoogste per werelddeel", tekst: "Elk werelddeel heeft zijn eigen 'hoogste berg': Azië = Everest. Europa = Mont Blanc (4.810 m) of Elbrus (5.642 m). Afrika = Kilimanjaro (5.895 m). Zuid-Amerika = Aconcagua (6.961 m)." },
+            { titel: "Wie heeft hem beklommen?", tekst: "**Edmund Hillary** + **Tenzing Norgay** in 1953 als eersten op de top. Sindsdien hebben 6.000+ mensen het gedaan, ~300 zijn omgekomen tijdens de poging." },
+          ],
+          woorden: [
+            { woord: "Everest", uitleg: "Hoogste berg ter wereld, 8.849 m, Nepal/Tibet." },
+            { woord: "Himalaya", uitleg: "Bergketen tussen India en China." },
+          ],
+          theorie: "Cito-tip hoogtes: Everest = 8.849 m ≈ '8 km + 849 m'. Mont Blanc = 4.810 m. Mensen op vliegtuig vliegen op ~10 km hoogte = net iets hoger dan Everest!",
+          voorbeelden: [
+            { type: "stap", tekst: "Mount Everest = circa 9 km hoog. Wolkenkrabber Burj Khalifa = 828 m = 10x kleiner." },
+            { type: "stap", tekst: "Bij Everest-top is er weinig zuurstof (~33% van zeeniveau). Klimmers nemen extra zuurstof mee." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Everest = #1 wereld. Mont Blanc = #1 Europa. Per werelddeel een topper." }],
+          niveaus: {
+            basis: "Mount Everest (Himalaya, Nepal) is hoogste berg: 8.849 m.",
+            simpeler: "Everest ≈ 9 km hoog, hoger dan vliegtuigen vliegen.",
+            nogSimpeler: "Everest = hoogste.",
+          },
+        },
       },
       {
         q: "Hoeveel **landen in EU** (2024)?",
