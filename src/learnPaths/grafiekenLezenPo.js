@@ -148,7 +148,30 @@ const steps = [
         q: "Wat moet je **altijd eerst lezen** bij een grafiek?",
         options: ["Titel + assen + eenheid", "Alleen het hoogste getal", "De kleuren", "Het laagste punt"],
         answer: 0,
-        wrongHints: [null, "Te beperkt — je moet weten waar de grafiek over gaat.", "Kleuren zijn handig, maar context is belangrijker.", "Een punt geeft geen overzicht."],
+        wrongHints: [null, "Klopt — pas dan begrijp je waar de grafiek over gaat.", "Te beperkt — je moet weten waar de grafiek over gaat.", "Kleuren zijn handig, maar context is belangrijker.", "Een punt geeft geen overzicht."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Drie dingen vóór je gaat rekenen", tekst: "Bij elke Cito-grafiek check je eerst **3 dingen** voordat je een getal aankijkt:\n1. **Titel** — waar gaat de grafiek over?\n2. **Assen** — wat staat op x-as (onder) en y-as (zijkant)?\n3. **Eenheid** — meet de grafiek euro's, kinderen, °C, kilo's?" },
+            { titel: "Waarom belangrijk?", tekst: "Zonder context zie je alleen getallen. Met context begrijp je wat ze betekenen. Een staaf van '40' kan betekenen: 40 mm regen, 40 kinderen, 40 euro of 40 °C — totaal verschillende dingen!" },
+            { titel: "Cito-instinker", tekst: "Vergeet de **eenheid niet** in je antwoord. Op Cito staat soms in 4 opties: '40', '40 mm', '40 cm', '40 kinderen'. Alleen het juiste getal ÉN de juiste eenheid is goed." },
+          ],
+          woorden: [
+            { woord: "x-as", uitleg: "Horizontale as, onderaan de grafiek." },
+            { woord: "y-as", uitleg: "Verticale as, zijkant van de grafiek." },
+            { woord: "eenheid", uitleg: "Wat de getallen meten (mm, °C, kg, €, etc.)." },
+          ],
+          theorie: "Cito-volgorde grafiek lezen:\n1. Lees TITEL — waar gaat dit over?\n2. Lees ASSEN — wat is X (vaak tijd of categorie), wat is Y (waarde)?\n3. Check EENHEID — wat meet je?\n4. PAS DAN getal aflezen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Titel 'Regen per maand'. X-as: jan-dec. Y-as: mm. Eenheid: mm. Nu weet je: deze grafiek toont mm regen per maand." },
+            { type: "stap", tekst: "Zelfde getal '60' op een 'regen-mm'-grafiek = 60 mm regen. Op een 'kinderen'-grafiek = 60 kinderen. Eenheid maakt alles." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "T-A-E: Titel → Assen → Eenheid. Pas daarna getal aflezen." }],
+          niveaus: {
+            basis: "Titel + assen + eenheid. = A.",
+            simpeler: "Eerst lezen waar grafiek over gaat (titel) + wat de assen meten + welke eenheid. Pas daarna naar getallen kijken. = A.",
+            nogSimpeler: "Titel + assen + eenheid = A.",
+          },
+        },
       },
       {
         q: "Welke grafiek toont **hoe iets verandert door de tijd**?",
@@ -211,7 +234,29 @@ const steps = [
         q: "Zelfde klas. **Totaal aantal kinderen** in de hele week?",
         options: ["120 kinderen", "100 kinderen", "30 kinderen", "150 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Te veel — controleer optelling."],
+        wrongHints: [null, "Klopt — 22+18+26+30+24 = 120.", "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Te veel — controleer optelling."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Totaal' = optellen", tekst: "Bij Cito: woord **'totaal'** of **'samen'** of **'in totaal'** → ALLE balken bij elkaar **optellen**." },
+            { titel: "Tel alle 5 dagen op", tekst: "Maandag 22 + dinsdag 18 + woensdag 26 + donderdag 30 + vrijdag 24 = **120 kinderen**." },
+            { titel: "Slim optellen-truc", tekst: "Niet domweg achter elkaar. Maak slimme paren:\n• 22 + 18 = 40 (mooi rond)\n• 26 + 24 = 50 (mooi rond)\n• Subtotaal: 40 + 50 = 90\n• Plus donderdag: 90 + 30 = **120**.\nSneller + minder kans op fouten." },
+          ],
+          woorden: [
+            { woord: "totaal / in totaal", uitleg: "Signaalwoord voor OPTELLEN bij Cito." },
+            { woord: "verschil / hoeveel meer", uitleg: "Signaalwoord voor AFTREKKEN." },
+          ],
+          theorie: "Cito-signaalwoorden bij grafiekvragen:\n• 'totaal' / 'samen' / 'in totaal' → +\n• 'verschil' / 'hoeveel meer/minder' → −\n• 'gemiddeld' → som ÷ aantal\n• 'hoeveel keer zo veel' → ÷",
+          voorbeelden: [
+            { type: "stap", tekst: "5 maanden regen totaal: 60+50+40+70+80 = 300 mm." },
+            { type: "stap", tekst: "3 vakken score-gemiddelde: (8+7+6)÷3 = 21÷3 = 7." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Signaalwoord lezen vóór rekenen. 'Totaal' = ALLES bij elkaar optellen." }],
+          niveaus: {
+            basis: "120 kinderen (22+18+26+30+24). = A.",
+            simpeler: "Tel alle 5 balken op: 22+18+26+30+24 = 120 kinderen. = A.",
+            nogSimpeler: "120 = A.",
+          },
+        },
       },
       {
         q: "Zelfde klas. **Op welke dag** waren er **de meeste kinderen**?",
@@ -268,7 +313,30 @@ const steps = [
         q: "Een lijn die de hele dag **vlak** blijft betekent ... ?",
         options: ["Er verandert niets", "Het wordt warmer", "Het wordt kouder", "De grafiek is fout"],
         answer: 0,
-        wrongHints: [null, "Warmer = lijn omhoog. Vlak ≠ omhoog.", "Kouder = lijn omlaag. Vlak ≠ omlaag.", "Vlak is een normale uitkomst — 'geen verandering'."],
+        wrongHints: [null, "Klopt — vlak = constant = geen verandering.", "Warmer = lijn omhoog. Vlak ≠ omhoog.", "Kouder = lijn omlaag. Vlak ≠ omlaag.", "Vlak is een normale uitkomst — 'geen verandering'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lijn-interpretatie in 3 vormen", tekst: "Bij een lijngrafiek is de **richting** van de lijn alles:\n• **Omhoog ↗** = waarde stijgt (warmer / meer / hoger)\n• **Omlaag ↘** = waarde daalt (kouder / minder / lager)\n• **Vlak →** = waarde verandert NIET (constant / blijft hetzelfde)" },
+            { titel: "Vlakke lijn = stabiel", tekst: "Een vlakke lijn betekent: **er gebeurt niets nieuws**. Voorbeelden:\n• Temperatuur blijft 20 °C de hele middag → vlakke lijn op 20.\n• Aantal kinderen in klas blijft 25 elke dag → vlak op 25." },
+            { titel: "Combinatie van richtingen lezen", tekst: "Bij Cito krijg je vaak grafieken die **eerst stijgen, dan vlak, dan dalen**. Tip:\n• Lees per stuk: stijgt het, daalt het, of vlak?\n• Onderscheid de fases — vaak komt er een vraag over één specifieke fase." },
+          ],
+          woorden: [
+            { woord: "stijgend", uitleg: "Lijn gaat omhoog = waarde wordt groter." },
+            { woord: "dalend", uitleg: "Lijn gaat omlaag = waarde wordt kleiner." },
+            { woord: "constant / vlak", uitleg: "Lijn blijft hetzelfde = waarde verandert niet." },
+          ],
+          theorie: "Cito-richting bij lijngrafiek:\n• ↗ omhoog = stijgt = MEER\n• ↘ omlaag = daalt = MINDER\n• → vlak = constant = HETZELFDE\nLees de richting eerst, dan getal aflezen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Grafiek 'aantal kinderen op overblijf' blijft hele week op 25 = klas is constant elke dag." },
+            { type: "stap", tekst: "Grafiek 'temperatuur' stijgt 8u-14u, dan vlak 14u-17u, dan daalt → middag-warm, vlak in piek, avond koeler." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vlakke lijn = 'er verandert niets'. Niet 'fout' of 'leeg' — gewoon stabiel." }],
+          niveaus: {
+            basis: "Er verandert niets (vlak = constant). = A.",
+            simpeler: "Lijn omhoog = stijgt. Lijn omlaag = daalt. Lijn vlak = blijft hetzelfde. = A.",
+            nogSimpeler: "Vlak = niets verandert = A.",
+          },
+        },
       },
       {
         q: "Wat lees je af aan **de y-as** (zijkant)?",
