@@ -37,6 +37,29 @@ const steps = [
         options: ["Weer = nu, klimaat = gemiddelde over jaren", "Geen verschil", "Weer is in NL, klimaat wereldwijd", "Weer is wetenschap"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Wel verschil.", "Niet primair.", "Beide wetenschap."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Weer = nu, vandaag", tekst: "Het **weer** is wat er **vandaag** of **deze week** gebeurt: regent het? Is het warm? Waait het hard? Weer kan elke dag anders zijn." },
+            { titel: "Klimaat = gemiddelde over lange tijd", tekst: "Het **klimaat** is het GEMIDDELDE weer over een LANG period (10-30+ jaar). Bv: 'Nederland heeft een gematigd klimaat met natte winters en milde zomers.'" },
+            { titel: "Belangrijk verschil bij debat", tekst: "Een koude dag in winter zegt NIETS over klimaatverandering. Klimaatverandering gaat over GEMIDDELDEN over decennia. Eén koude winter ≠ einde opwarming." },
+          ],
+          woorden: [
+            { woord: "weer", uitleg: "Atmosferische toestand NU/vandaag." },
+            { woord: "klimaat", uitleg: "Gemiddelde weer over 10-30+ jaar." },
+          ],
+          theorie: "Cito-tip: kledij is voor weer (regenjas vandaag), klimaat is voor architectuur (huizen-isolatie in NL voor koude winters).",
+          voorbeelden: [
+            { type: "stap", tekst: "'Het regent vandaag in Amsterdam' = weer." },
+            { type: "stap", tekst: "'Amsterdam heeft ~850 mm regen per jaar gemiddeld' = klimaat." },
+            { type: "stap", tekst: "Sahara: weer per dag wisselt, maar KLIMAAT is altijd droog en heet." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Weer = kort. Klimaat = lang. 'Het weer is wat je ziet, klimaat is wat je verwacht.'" }],
+          niveaus: {
+            basis: "Weer = nu (vandaag). Klimaat = gemiddelde over jaren.",
+            simpeler: "Vandaag regen = weer. Nederland natte winters = klimaat.",
+            nogSimpeler: "Weer = nu. Klimaat = altijd.",
+          },
+        },
       },
       {
         q: "Hoeveel **warmer** is aarde sinds 1880?",
@@ -49,6 +72,28 @@ const steps = [
         options: ["VN-klimaatpanel met wetenschappers", "Politiek partij", "Bedrijf", "Ster"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is IPCC?", tekst: "**IPCC** staat voor **Intergovernmental Panel on Climate Change** = Intergouvernementeel Panel voor Klimaatverandering. Het is een wetenschappelijk orgaan van de **Verenigde Naties** (VN)." },
+            { titel: "Wie zit erin?", tekst: "Duizenden wetenschappers uit **195 landen** werken samen. Ze verzamelen + analyseren ALLE klimaatonderzoek wereldwijd. Publiceert elke 5-7 jaar een groot rapport." },
+            { titel: "Wat zegt IPCC?", tekst: "Belangrijkste conclusie: 'extremely likely' (>95% zeker) dat MENS de hoofdoorzaak is van klimaatverandering. Niet meer een mening — wetenschappelijke consensus." },
+          ],
+          woorden: [
+            { woord: "IPCC", uitleg: "VN-klimaatpanel met wetenschappers uit 195 landen." },
+            { woord: "VN", uitleg: "Verenigde Naties — internationale samenwerking sinds 1945." },
+          ],
+          theorie: "Cito-feit: IPCC won in 2007 de Nobelprijs voor de Vrede (samen met Al Gore). Hun rapporten worden door politici gebruikt om klimaatbeleid te maken (Parijs-akkoord 2015).",
+          voorbeelden: [
+            { type: "stap", tekst: "IPCC-rapport 2023: aarde 1,1°C warmer sinds 1880. Doel: onder 1,5°C blijven." },
+            { type: "stap", tekst: "Als 195 landen + duizenden wetenschappers eens zijn, is dat een sterke consensus." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "IPCC = klimaat-experts wereldwijd, georganiseerd door VN." }],
+          niveaus: {
+            basis: "IPCC = VN-klimaatpanel met duizenden wetenschappers.",
+            simpeler: "Wereld-experts die samen klimaatkennis verzamelen.",
+            nogSimpeler: "VN-klimaatpanel.",
+          },
+        },
       },
       {
         q: "Hoe weten we **historisch klimaat**?",
@@ -68,6 +113,28 @@ const steps = [
         options: ["Gassen houden zonne-warmte vast in atmosfeer", "Vervuiling", "Stoom", "Vulkaan"],
         answer: 0,
         wrongHints: [null, "Klopt — natuurlijk + noodzakelijk.", "Wel relatie maar specifiek dit.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vergelijk met broeikas in tuin", tekst: "Een **broeikas** (glashuis voor planten) houdt **warmte vast** vanwege de ramen. Zonlicht komt erin, kan minder makkelijk eruit. Daarom is het binnen veel warmer dan buiten." },
+            { titel: "Aarde werkt net zo", tekst: "Bepaalde gassen in de atmosfeer (CO₂, methaan, waterdamp) **werken als glaswanden**. Ze laten zonnewarmte binnen maar houden uitgestraalde warmte vast. Daarom heet aarde 'broeikas-effect'." },
+            { titel: "Natuurlijk + nodig!", tekst: "ZONDER broeikaseffect zou aarde -18°C zijn (te koud voor leven). MET broeikaseffect = +15°C gemiddeld = leefbaar. Probleem is alleen dat MEER gassen = TE veel warmte = klimaatverandering." },
+          ],
+          woorden: [
+            { woord: "broeikaseffect", uitleg: "Atmosferische gassen houden zonnewarmte vast." },
+            { woord: "broeikasgas", uitleg: "Gas dat warmte vasthoudt: CO₂, methaan, lachgas, waterdamp." },
+          ],
+          theorie: "Cito-tip: broeikaseffect ZELF is goed! Zonder dit geen leven. Het PROBLEEM is dat mens MEER broeikasgassen maakt door fossiele brandstoffen, en daardoor extra warmte vasthoudt.",
+          voorbeelden: [
+            { type: "stap", tekst: "Glazen broeikas in tuin: 's middags 35°C binnen, 22°C buiten. Zelfde principe." },
+            { type: "stap", tekst: "Mars heeft bijna geen atmosfeer = bijna geen broeikaseffect = -60°C gemiddeld. Venus = TE veel broeikaseffect = +460°C." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Broeikaseffect = warmte-deken om aarde. Natuurlijk goed. Door mens TE dik geworden." }],
+          niveaus: {
+            basis: "Broeikaseffect = atmosfeer houdt zonnewarmte vast.",
+            simpeler: "Als een broeikas in de tuin: warmte erin, weinig eruit.",
+            nogSimpeler: "Warmte-deken om aarde.",
+          },
+        },
       },
       {
         q: "Welk gas is **belangrijkste menselijke broeikasgas**?",
