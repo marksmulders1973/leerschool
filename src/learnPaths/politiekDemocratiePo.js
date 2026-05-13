@@ -24,6 +24,29 @@ const steps = [
         options: ["Volk beslist", "Eén leider beslist", "Niets beslist", "Koning beslist"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Dictatuur.", "Geen besluit.", "Niet meer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent democratie?", tekst: "Het woord **democratie** komt uit het Grieks: 'demos' = volk, 'kratia' = macht. Dus letterlijk: **het volk heeft de macht**." },
+            { titel: "Hoe werkt het in NL?", tekst: "Iedereen vanaf 18 jaar mag STEMMEN tijdens verkiezingen. Daarmee kies je wie er in de Tweede Kamer komt. Die kamer maakt samen met de regering de wetten." },
+            { titel: "Tegenovergesteld: dictatuur", tekst: "In een **dictatuur** beslist 1 persoon of 1 partij alles, zonder dat het volk inspraak heeft. Voorbeelden: Noord-Korea, Rusland (deels). Vaak: geen vrije media, geen vrije verkiezingen." },
+          ],
+          woorden: [
+            { woord: "democratie", uitleg: "Volk heeft macht via verkiezingen." },
+            { woord: "dictatuur", uitleg: "Eén persoon/partij beslist alles." },
+            { woord: "demos / kratia", uitleg: "Grieks: volk / macht." },
+          ],
+          theorie: "Cito-feit: NL is democratie sinds 1848 (grondwet Thorbecke). Vrouwen kregen kiesrecht in 1919. Stemmen mag pas vanaf 18 (niet eerder).",
+          voorbeelden: [
+            { type: "stap", tekst: "NL, VS, Frankrijk, Duitsland, België = democratie." },
+            { type: "stap", tekst: "Noord-Korea, China (deels) = dictatuur." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Demo-cratie = volk-macht. Dicta-tor = degene die zegt-bepaalt." }],
+          niveaus: {
+            basis: "Democratie = volk heeft macht via verkiezingen.",
+            simpeler: "Demo = volk. Iedereen mag kiezen.",
+            nogSimpeler: "Volk kiest.",
+          },
+        },
       },
       {
         q: "Hoeveel **zetels** in Tweede Kamer?",
@@ -55,6 +78,30 @@ const steps = [
         options: ["3 machten verdeeld", "1 partij", "Politieagent", "Verkiezing"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel relatie maar niet primair.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent Trias Politica?", tekst: "**Trias Politica** is Latijns voor 'drie staatsmachten'. Het idee: verdeel de macht in 3 delen, zodat **geen één persoon te veel** macht krijgt." },
+            { titel: "De 3 machten in NL", tekst: "1) **Wetgevende macht** (maakt wetten) = Tweede + Eerste Kamer + regering. 2) **Uitvoerende macht** (voert wet uit) = regering + ambtenaren + politie. 3) **Rechterlijke macht** (controleert + straft) = rechters." },
+            { titel: "Wie bedacht het?", tekst: "De Franse filosoof **Montesquieu** schreef erover in 1748. Doel: voorkomen dat dictators ontstaan. Alle democratieën gebruiken dit idee nu." },
+          ],
+          woorden: [
+            { woord: "Trias Politica", uitleg: "3 staatsmachten verdeeld." },
+            { woord: "wetgevend", uitleg: "Maakt wetten." },
+            { woord: "uitvoerend", uitleg: "Voert wetten uit." },
+            { woord: "rechterlijk", uitleg: "Controleert + straft." },
+          ],
+          theorie: "Cito-feit Trias: 3 machten = balans en controle. Rechters mogen niet door politici worden ontslagen (onafhankelijk). Anders zou regering rechters kunnen omkopen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Wet maken → Tweede Kamer. Wet uitvoeren → minister + politie. Wet overtreden → rechter beslist straf." },
+            { type: "stap", tekst: "Trias = TRI (drie) + AS (machten). 3 stoelen, niet 1 troon." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "TRIA = 3. POLITICA = politieke. Drie politieke machten = balans." }],
+          niveaus: {
+            basis: "Trias Politica = 3 staatsmachten verdeeld (wetgevend/uitvoerend/rechterlijk).",
+            simpeler: "Wetten maken, wetten uitvoeren, wetten controleren — 3 aparte groepen.",
+            nogSimpeler: "3 machten gescheiden.",
+          },
+        },
       },
       {
         q: "Wie **maakt wetten**?",
@@ -72,6 +119,28 @@ const steps = [
         q: "Hoeveel zetels voor **meerderheid** Tweede Kamer?",
         options: ["76 (van 150)", "150", "50", "100"],
         answer: 0,
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 'meerderheid'?", tekst: "Een **meerderheid** in een groep van X heb je als je MEER dan de helft hebt. Bij 150 zetels is de helft 75. Dus meer dan helft = **76 of meer**." },
+            { titel: "Waarom 76 belangrijk?", tekst: "Met **76 zetels** kun je een WET aannemen — je hebt de meerderheid, dus iedereen moet zich erbij neerleggen. Anders heb je een minderheid en wordt je voorstel afgewezen." },
+            { titel: "Waarom coalities?", tekst: "Geen ENKELE partij in NL heeft alleen 76 zetels. Daarom **werken meerdere partijen samen** = coalitie. Bv. 4 partijen met 30+20+15+12 zetels = 77 zetels = meerderheid." },
+          ],
+          woorden: [
+            { woord: "meerderheid", uitleg: "MEER dan helft van zetels." },
+            { woord: "coalitie", uitleg: "Samenwerking partijen om 76+ zetels te krijgen." },
+          ],
+          theorie: "Cito-formule: meerderheid = (totaal ÷ 2) + 1. Bij 150 = 75 + 1 = 76. Bij Eerste Kamer (75): 37 + 1 = 38.",
+          voorbeelden: [
+            { type: "stap", tekst: "Klas van 30 kinderen: meerderheid = 16. Klas van 20: meerderheid = 11." },
+            { type: "stap", tekst: "Coalitie 2024 (kabinet Schoof): PVV+VVD+NSC+BBB = 88 zetels. Genoeg voor meerderheid." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Helft + 1. Bij 150: 75 + 1 = 76." }],
+          niveaus: {
+            basis: "Meerderheid Tweede Kamer = 76 (van 150).",
+            simpeler: "Meer dan de helft van 150 = 76+.",
+            nogSimpeler: "76 = meerderheid.",
+          },
+        },
         wrongHints: [null, "Klopt — net iets meer dan helft.", "Helemaal te veel.", "Te weinig.", "Te veel."],
       },
     ],
