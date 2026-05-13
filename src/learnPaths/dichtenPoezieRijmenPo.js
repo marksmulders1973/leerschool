@@ -23,6 +23,29 @@ const steps = [
         options: ["Korte tekst in regels met rijm/ritme", "Lang verhaal", "Krantenartikel", "Brief"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Proza.", "Proza.", "Proza."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat maakt het een gedicht?", tekst: "Een **gedicht** (ook wel **poëzie**) is een tekst waarbij:\n• De **woorden in regels** staan (geen doorlopende zinnen).\n• Er vaak **rijm** of **ritme** is.\n• Veel **beeldspraak** wordt gebruikt.\n• Het meestal **kort** is en een **gevoel** of **gedachte** uitdrukt." },
+            { titel: "Verschil met proza", tekst: "**Proza** = gewone doorlopende tekst (boek, krant, brief). **Poëzie** = in versregels, vaak met rijm. Zelfde verhaal kun je in beide vormen vertellen — maar voelt anders." },
+            { titel: "Bouwstenen van gedicht", tekst: "• **Versregel** = 1 regel van het gedicht.\n• **Couplet (strofe)** = groep regels samen.\n• **Rijm** = woorden klinken hetzelfde.\n• **Wit** = lege ruimte tussen coupletten (functioneel — geeft pauze)." },
+          ],
+          woorden: [
+            { woord: "gedicht / poëzie", uitleg: "Korte tekst in regels, vaak met rijm." },
+            { woord: "proza", uitleg: "Gewone doorlopende tekst." },
+            { woord: "couplet / strofe", uitleg: "Groep regels samen." },
+          ],
+          theorie: "Cito-tip: een gedicht herken je aan de **regels** (in plaats van zinnen), het **rijm/ritme**, en de **emotionele lading**. Beroemde NL-dichter: Annie M.G. Schmidt voor kinderen, Hendrik Marsman voor volwassenen.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Denkend aan Holland / zie ik brede rivieren / traag door oneindig laagland gaan' — Marsman. Gedicht: in regels, met sfeer." },
+            { type: "stap", tekst: "Zelfde inhoud als proza: 'Wanneer ik aan Holland denk, zie ik brede rivieren langzaam door een oneindig laagland stromen.' Veel minder bijzonder." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Regels + rijm + emotie = poëzie. Doorlopend = proza. Allebei kunnen mooi zijn, maar verschillende vorm." }],
+          niveaus: {
+            basis: "Korte tekst in regels met rijm/ritme. = A.",
+            simpeler: "Gedicht = woorden in regels, vaak met rijm + gevoel. = A.",
+            nogSimpeler: "Korte tekst in regels = A.",
+          },
+        },
       },
       {
         q: "Wat is een **couplet**?",
@@ -153,6 +176,30 @@ const steps = [
         options: ["Dood ding doet als mens", "Synoniem", "Rijm", "Tegenovergesteld"],
         answer: 0,
         wrongHints: [null, "Klopt — 'wind fluistert'.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is personificatie?", tekst: "**Personificatie** = je laat een **levenloos ding** of **dier** doen alsof het een MENS is. Het krijgt menselijke eigenschappen (denken, voelen, praten, lachen, huilen)." },
+            { titel: "Voorbeelden", tekst: "• 'De **wind fluistert**' (wind kan niet fluisteren — alleen mensen)\n• 'De **zon lacht** naar mij' (zon kan niet lachen)\n• 'De **stenen klagen**' (stenen voelen niets)\n• 'De **bomen dansen** in de wind' (bomen dansen niet)\nEen levenloos ding krijgt een menselijke actie." },
+            { titel: "Waarom gebruiken dichters dit?", tekst: "Personificatie maakt poëzie **levendig + visueel**. Een zon die LACHT voel je beter dan 'het was zonnig'. Het geeft sfeer en emotie. Veel sprookjes + gedichten gebruiken het." },
+          ],
+          woorden: [
+            { woord: "personificatie", uitleg: "Levenloos ding krijgt menselijke eigenschappen." },
+            { woord: "metafoor", uitleg: "ANDERS: vergelijking zonder 'als' (jouw hart = rode roos)." },
+            { woord: "hyperbool", uitleg: "ANDERS: overdrijving (honderd keer gezegd)." },
+          ],
+          theorie: "Cito-truc beeldspraak-soorten:\n• **Personificatie** = ding doet als mens\n• **Vergelijking** = 'als' / 'zoals' erbij\n• **Metafoor** = vergelijking zonder 'als'\n• **Hyperbool** = overdrijving\nElk een eigen naam — leer het verschil.",
+          voorbeelden: [
+            { type: "stap", tekst: "'De wolken **huilen**' (= personificatie, wolken kunnen niet huilen — bedoeld: regen)." },
+            { type: "stap", tekst: "'De wind is **als** een fluistering' = vergelijking (heeft 'als')." },
+            { type: "stap", tekst: "'De wind **is** een fluistering' = metafoor (geen 'als')." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Persoon-ificatie = van iets levenloos een PERSOON maken (in taal). Zoek menselijk werkwoord bij niet-mens." }],
+          niveaus: {
+            basis: "Personificatie = dood ding doet als mens. = A.",
+            simpeler: "Een wind die 'fluistert' of een zon die 'lacht' = personificatie. Het ding krijgt menselijke eigenschappen. = A.",
+            nogSimpeler: "Ding doet als mens = A.",
+          },
+        },
       },
       {
         q: "*'De zon lacht naar mij'* — wat?",
@@ -184,6 +231,28 @@ const steps = [
         options: ["5-7-5 lettergrepen, 3 regels", "AABBA", "14 regels", "Geen vorm"],
         answer: 0,
         wrongHints: [null, "Klopt — Japans, natuur-thema.", "Andere dichtvorm.", "Veel langer.", "Wel vaste vorm."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een haiku?", tekst: "Een **haiku** is een **Japanse** gedichtsvorm. Heel kort: maar **3 regels** met een vast **lettergrepen-patroon**: **5-7-5**." },
+            { titel: "Het patroon", tekst: "• Regel 1: **5 lettergrepen**\n• Regel 2: **7 lettergrepen**\n• Regel 3: **5 lettergrepen**\nTotaal 17 lettergrepen. Vaak over **natuur**, **seizoenen** of een **klein moment**." },
+            { titel: "Voorbeeld", tekst: "**'Stille vijver-bloei** (5 lettergrepen: Stil-le-vij-ver-bloei)\n**Een kikker springt erin plons** (7: Een-kik-ker-springt-er-in-plons)\n**Geluid van het water'** (5: Ge-luid-van-het-wa-ter — eigenlijk 6 maar dichterlijke vrijheid)" },
+          ],
+          woorden: [
+            { woord: "haiku", uitleg: "Japans gedicht met 3 regels: 5-7-5 lettergrepen." },
+            { woord: "lettergreep", uitleg: "Stukje van een woord met 1 klemtoon (bv. 'mooi' = 1, 'mooie' = 2, 'lekkerste' = 3)." },
+          ],
+          theorie: "Cito-feit verschillende gedicht-vormen:\n• **Haiku** = 5-7-5, 3 regels, Japans, natuur.\n• **Limerick** = 5 regels AABBA, humoristisch.\n• **Sonnet** = 14 regels, deftig.\n• **Acrostichon** = eerste letters vormen woord.\n• **Vrij vers** = geen vaste vorm (modern).",
+          voorbeelden: [
+            { type: "stap", tekst: "Limerick is 5 regels MAAR met rijmschema AABBA. Heel anders dan haiku." },
+            { type: "stap", tekst: "Sonnet = 14 regels lang, vaste rijm + ritme. Veel ouder en deftiger dan haiku." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Haiku = 5-7-5. Onthoud die getallen: vijf-zeven-vijf. Drie regels totaal. Japans = denk natuur + moment." }],
+          niveaus: {
+            basis: "Haiku = 5-7-5 lettergrepen, 3 regels. = A.",
+            simpeler: "Japans gedicht: regel 1 = 5 lettergrepen, regel 2 = 7, regel 3 = 5. = A.",
+            nogSimpeler: "5-7-5 = A.",
+          },
+        },
       },
       {
         q: "Wat is een **limerick**?",
