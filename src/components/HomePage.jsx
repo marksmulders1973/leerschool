@@ -912,6 +912,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 {tiles.map(({ key, emoji, icon, label, sub, color, onClick, cta }) => {
                   const tileBackground = `${color}14`;
                   const tileBackgroundHover = `${color}28`;
+                  // "Alle vakken →"-hint alleen bij tegels mét cta-knop (= rol-tegels).
+                  // Zonder hint zien bezoekers de oranje cta als enige actie en
+                  // klikken nooit op de foto/label-zone die juist naar het
+                  // rol-overzicht (alle vakken) leidt. Mark UX-feedback 2026-05-13.
                   const innerContent = (
                     <>
                       {icon ? (
@@ -929,6 +933,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                       )}
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.7)" }}>{sub}</div>
+                      {cta && (
+                        <div style={{
+                          fontFamily: "var(--font-body)",
+                          fontSize: 10,
+                          color,
+                          opacity: 0.9,
+                          marginTop: 2,
+                          fontWeight: 600,
+                          letterSpacing: 0.2,
+                        }}>Alle vakken →</div>
+                      )}
                     </>
                   );
                   if (cta) {
@@ -964,7 +979,15 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                           style={{
                             marginTop: "auto",
                             width: "100%",
+                            // Vaste min-height + flex-center → CTA's altijd
+                            // gelijke hoogte, ongeacht of inhoud een <img> van
+                            // 26px (DoorstroomtoetsLogo) of een emoji is.
+                            // Mark UX-feedback 2026-05-13.
+                            minHeight: 34,
                             padding: "5px 6px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                             borderRadius: 8,
                             border: "none",
                             background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
@@ -974,6 +997,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                             fontWeight: 700,
                             cursor: "pointer",
                             whiteSpace: "nowrap",
+                            lineHeight: 1,
                           }}
                         >
                           {cta.label}
