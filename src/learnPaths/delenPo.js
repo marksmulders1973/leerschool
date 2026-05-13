@@ -61,6 +61,28 @@ const steps = [
         options: ["3", "8", "16", "48"],
         answer: 0,
         wrongHints: [null, "Klopt — 4 × 3 = 12.", "Optelling? 12-4 = 8.", "Optelling 12+4.", "Vermenigvuldiging."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 12 ÷ 4?", tekst: "**12 ÷ 4** = '**12 verdelen over 4**'. Bijvoorbeeld: je hebt 12 snoepjes en 4 vriendjes. Elk vriendje krijgt evenveel. Hoeveel per vriendje?" },
+            { titel: "Tafel-truc terugzoeken", tekst: "Denk: '**wat keer 4 is 12?**'. Antwoord uit de tafel van 4: **3 × 4 = 12**. Dus 12 ÷ 4 = **3**. Elke deling is een tafel-som omgekeerd." },
+            { titel: "Visueel - leg 12 dingen neer", tekst: "Stel je 12 fiches voor. Leg ze in 4 gelijke rijtjes. Hoeveel per rijtje? 3. Dus: 12 ÷ 4 = 3. Of: 4 rijtjes van 3 = 12 (omgekeerd: 4 × 3 = 12)." },
+          ],
+          woorden: [
+            { woord: "delen", uitleg: "Iets eerlijk verdelen in evenveel-grote groepen." },
+            { woord: "÷", uitleg: "Deelteken — kan ook : of / zijn." },
+          ],
+          theorie: "Cito-truc voor delen: zoek de **tafel terug**. 12 ÷ 4 → wat × 4 = 12? → 3. 20 ÷ 5 → wat × 5 = 20? → 4. Werk altijd via de bekende tafel-rij.",
+          voorbeelden: [
+            { type: "stap", tekst: "**15 ÷ 3** → wat × 3 = 15? → 5. Antwoord: 5." },
+            { type: "stap", tekst: "**24 ÷ 6** → wat × 6 = 24? → 4. Antwoord: 4." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Delen = tafel terug. Vermenigvuldigen + delen zijn elkaars tegen-bewerking. Eén oefenen helpt ook de andere." }],
+          niveaus: {
+            basis: "12 ÷ 4 = 3. = A.",
+            simpeler: "12 verdeeld over 4 gelijke groepen = 3 per groep. = A.",
+            nogSimpeler: "3 = A.",
+          },
+        },
       },
       {
         q: "Wat is **20 ÷ 5**?",
@@ -127,6 +149,27 @@ const steps = [
         options: ["8", "27", "21", "72"],
         answer: 0,
         wrongHints: [null, "Klopt — 3 × 8 = 24.", "Optelling.", "Aftrekking.", "Vermenigvuldiging."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tafel van 3 opzeggen", tekst: "Zeg de tafel van 3 op tot je 24 hoort: **3, 6, 9, 12, 15, 18, 21, 24**. Welke stap? Tel mee: 1-2-3-4-5-6-7-**8**. De **8e stap** levert 24. Dus 24 ÷ 3 = **8**." },
+            { titel: "Andersom check", tekst: "Check: 3 × 8 = 24 ✓. Dus 24 ÷ 3 = 8 klopt. Bij elke deling moet de tafel-controle uitkomen op het oorspronkelijke deeltal." },
+            { titel: "Wat als je vastloopt?", tekst: "Tafel-3 niet helemaal uit je hoofd? Bouw stappen van 3: 3+3=6, +3=9, +3=12, +3=15, +3=18, +3=21, +3=24. **8 stappen** = 8 keer 3 = 24. Antwoord: 8." },
+          ],
+          woorden: [
+            { woord: "tafel terugzoeken", tekst: "Bij delen: welke factor maakt het deeltal? = antwoord." },
+          ],
+          theorie: "Cito-truc voor delen door 3: tafel-3 is een veel-voorkomende. Leer hem **uit het hoofd**: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. Bij elke ÷3 vraag → tel waar het getal staat.",
+          voorbeelden: [
+            { type: "stap", tekst: "**18 ÷ 3** = 6 (18 is 6e stap: 3, 6, 9, 12, 15, **18**)." },
+            { type: "stap", tekst: "**27 ÷ 3** = 9 (27 is 9e stap)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-3 reciteren: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. Voor ÷3 zoek je gewoon de positie van het getal in deze rij." }],
+          niveaus: {
+            basis: "24 ÷ 3 = 8. = A.",
+            simpeler: "Tel tafel-3: 3, 6, 9, 12, 15, 18, 21, 24. 24 is de 8e. = A.",
+            nogSimpeler: "8 = A.",
+          },
+        },
       },
       {
         q: "**56 ÷ 7** = ?",
@@ -222,6 +265,28 @@ const steps = [
         options: ["4 koekjes", "3 koekjes", "5 koekjes", "8 koekjes"],
         answer: 0,
         wrongHints: [null, "Klopt — 32 ÷ 8 = 4.", "Te weinig — 3×8=24, niet 32.", "Te veel — 5×8=40.", "Te veel — dan alle koekjes per kind."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welk teken gebruik je?", tekst: "**32 koekjes verdelen over 8 kinderen** = delen. Symbool **÷**. De som: **32 ÷ 8 = ?**" },
+            { titel: "Reken: 32 ÷ 8", tekst: "Tafel terug: wat × 8 = 32? Tafel-8: 8, 16, 24, **32**. De 4e stap. Dus **32 ÷ 8 = 4**. Elk kind krijgt 4 koekjes." },
+            { titel: "Check je antwoord", tekst: "Klopt het? **8 kinderen × 4 koekjes = 32 koekjes** totaal ✓. Som is rond — geen koekjes blijven over." },
+          ],
+          woorden: [
+            { woord: "eerlijk verdelen", uitleg: "Iedereen krijgt evenveel = delen." },
+            { woord: "per kind", uitleg: "Signaalwoord 'per' = delen." },
+          ],
+          theorie: "Cito-truc redactiesommen — signaalwoorden:\n• **'per'** / **'elk'** / **'iedere'** / **'eerlijk verdelen'** → DELEN\n• **'totaal'** / **'samen'** → meestal × of +\n• **'over X groepen'** → delen door X.",
+          voorbeelden: [
+            { type: "stap", tekst: "**'48 appels in dozen van 6'** → 48 ÷ 6 = 8 dozen." },
+            { type: "stap", tekst: "**'€60 over 5 kinderen'** → 60 ÷ 5 = €12 per kind." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "'PER' = deel-teken. Schrijf elke redactiesom om naar een gewone som met getallen + ÷." }],
+          niveaus: {
+            basis: "32 ÷ 8 = 4 koekjes per kind. = A.",
+            simpeler: "32 koekjes verdelen over 8 kinderen = 32 ÷ 8 = 4. = A.",
+            nogSimpeler: "4 = A.",
+          },
+        },
       },
       {
         q: "**5 appels** voor **€2,50** totaal. Prijs **per appel**?",
