@@ -93,6 +93,28 @@ const steps = [
         options: ["Meer dan 200", "Ongeveer 50", "Ongeveer 1000", "Precies 100"],
         answer: 0,
         wrongHints: [null, "Klopt — 206 om precies te zijn.", "Veel te weinig.", "Veel te veel.", "Niet precies dat aantal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "206 botten — een geheugen-getal", tekst: "Een volwassen mens heeft **206 botten**. Onthoud dit getal — het komt vaak op Cito-vragen voor. **'Meer dan 200'** is het juiste antwoord-bereik." },
+            { titel: "Baby's hebben er meer!", tekst: "Een **baby** heeft ongeveer **270 botten**. Tijdens het opgroeien groeien sommige botten aan elkaar (bv. de schedel-platen). Een volwassene eindigt op 206." },
+            { titel: "Waar zitten er veel?", tekst: "**Hand** = 27 botjes per hand (54 totaal voor 2 handen).\n**Voet** = 26 botjes per voet (52 totaal).\nDus alleen al **handen + voeten = 106** van de 206 botten — meer dan de helft!" },
+          ],
+          woorden: [
+            { woord: "skelet", uitleg: "Alle botten in je lichaam samen." },
+            { woord: "wervelkolom", uitleg: "Ketting van 33 wervels langs je rug." },
+          ],
+          theorie: "Cito-truc bot-aantallen: 50 of 100 = te weinig (handen alleen al hebben meer). 1000 = te veel. **Tussen 200 en 300 = correct**. Bij 'meer dan 200' = ja.",
+          voorbeelden: [
+            { type: "stap", tekst: "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten die samengegroeid zijn." },
+            { type: "stap", tekst: "Grootste bot = dijbeen (~46 cm bij volwassene). Kleinste = stijgbeugel in je oor (3 mm)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud 206. Of in elk geval: 'meer dan 200, minder dan 300'." }],
+          niveaus: {
+            basis: "Meer dan 200 botten (206 precies). = A.",
+            simpeler: "Volwassene = 206 botten. Baby = ~270. Antwoord 'meer dan 200' klopt. = A.",
+            nogSimpeler: "Meer dan 200 = A.",
+          },
+        },
       },
       {
         q: "Wat is het **grootste bot**?",
@@ -132,6 +154,29 @@ const steps = [
         options: ["Bloed pompen door je lichaam", "Eten verteren", "Zuurstof maken", "Hersenen koelen"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Maag doet dat.", "Longen halen zuurstof binnen, niet maken.", "Niet de taak van het hart."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Het hart = pomp", tekst: "Het **hart** is een spier die werkt als een **pomp**. Het pompt bloed rond door je hele lichaam — net als een waterpomp die water rondpompt in een huis." },
+            { titel: "Waarom moet bloed rondgaan?", tekst: "**Bloed** brengt **zuurstof** (uit longen) + **voedingsstoffen** (uit darmen) naar alle cellen in je lichaam. Op de terugweg neemt het **afvalstoffen** mee (CO₂ + andere troep). Zonder bloed-stroom = cellen sterven." },
+            { titel: "Voel zelf — pols-meting", tekst: "Leg 2 vingers op je pols. Voel je het 'kloppen'? Dat is je hart dat bloed door je slagaders perst. In rust: ~**70 keer per minuut**. Bij sporten: meer, want spieren willen meer zuurstof." },
+          ],
+          woorden: [
+            { woord: "hart", uitleg: "Spier die bloed pompt." },
+            { woord: "slagaders", uitleg: "Bloedvaten WEG van het hart, dragen zuurstofrijk bloed." },
+            { woord: "aders", uitleg: "Bloedvaten NAAR het hart, dragen zuurstofarm bloed terug." },
+          ],
+          theorie: "Cito-feit: hart-functie = **bloed pompen**. Niet ademen (longen), niet verteren (maag), niet denken (hersenen). Elk orgaan heeft 1 hoofdtaak — onthoud die.",
+          voorbeelden: [
+            { type: "stap", tekst: "5 liter bloed pompt het hart per minuut. In een dag = ~7000 liter — gelijk aan vullen van 35 badkuipen!" },
+            { type: "stap", tekst: "Hart heeft 4 kamers: 2 boezems (boven) + 2 kamers (onder). Linkerkant pompt naar lichaam, rechterkant naar longen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hart = pomp. Longen = ademen. Maag = verteren. Hersenen = denken. Memoriseer dit ezelsbruggetje: H-L-M-H." }],
+          niveaus: {
+            basis: "Hart pompt bloed door het lichaam. = A.",
+            simpeler: "Het hart is een spier-pomp. Bloed gaat rond, brengt zuurstof + voeding. = A.",
+            nogSimpeler: "Bloed pompen = A.",
+          },
+        },
       },
       {
         q: "**Rode bloedcellen** vervoeren ... ?",
@@ -193,6 +238,28 @@ const steps = [
         options: ["5", "3", "7", "10"],
         answer: 0,
         wrongHints: [null, "Klopt — vandaar de naam.", "Te weinig.", "Te veel.", "Veel te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De naam zegt het al — 'Vijf'", tekst: "De **Schijf van Vijf** heet zo omdat hij **5 vakken** heeft. Vandaar 'Vijf' in de naam. Elke dag eet je iets uit alle 5 vakken om gezond te blijven." },
+            { titel: "De 5 vakken kort", tekst: "1) **Groente + fruit** (vitamines)\n2) **Brood/aardappel/pasta/rijst** (energie)\n3) **Vis/vlees/ei/noten/peulvruchten** (eiwit, bouwstof)\n4) **Zuivel + kaas** (calcium, sterke botten)\n5) **Smeer- + bereidingsvet** (gezond vet, bv. olijfolie)." },
+            { titel: "Extra: water", tekst: "Naast de 5 vakken hoort ook **water drinken** erbij — ~1,5 liter per dag. Water is geen 'vak' maar onmisbaar voor je lichaam." },
+          ],
+          woorden: [
+            { woord: "Schijf van Vijf", uitleg: "Nederlandse richtlijn voor gezond eten, met 5 vakken." },
+            { woord: "Voedingscentrum", uitleg: "Organisatie die in NL voedingsadvies geeft." },
+          ],
+          theorie: "Cito-feit: het Voedingscentrum maakt de Schijf. Niet alles wat smaakt mag — snoep + frisdrank + chips heten **'extra's'** en zitten **NIET** in de Schijf. Mogen soms, niet elke dag.",
+          voorbeelden: [
+            { type: "stap", tekst: "Per dag: 250 gram groente + 2 stuks fruit. Beide tellen samen in vak 1." },
+            { type: "stap", tekst: "Aardappel zit in vak 2 (koolhydraten), NIET in groente-vak. Cito-instinker!" },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schijf van **Vijf** = **5** vakken. Letterlijk in de naam." }],
+          niveaus: {
+            basis: "5 vakken. = A.",
+            simpeler: "De naam 'Schijf van Vijf' verklapt het al: 5. = A.",
+            nogSimpeler: "5 = A.",
+          },
+        },
       },
       {
         q: "Hoeveel **stuks fruit** per dag?",
