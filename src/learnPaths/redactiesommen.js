@@ -30,6 +30,29 @@ const steps = [
         options: ["per","verschil","over","samen"],
         answer: 0,
         wrongHints: [null,"'Verschil' = aftrekken.","'Over' = aftrekken.","'Samen' = optellen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Signaalwoorden bij redactiesommen", tekst: "Bij verhaaltjes-sommen geven bepaalde woorden hints welke **bewerking** je moet doen. Leer ze uit hoofd!" },
+            { titel: "'Per' = vermenigvuldigen", tekst: "'Per' (of 'elk', 'voor elke') betekent dat iets MEERDERE keren voorkomt. Bv: '€3 per glas, 5 glazen' → 3 × 5 = €15." },
+            { titel: "Andere signaalwoorden", tekst: "**Samen / totaal** = optellen. **Verschil / over / minder** = aftrekken. **Per / elk** = vermenigvuldigen. **Verdeeld / gedeeld** = delen." },
+          ],
+          woorden: [
+            { woord: "per", uitleg: "Hint voor vermenigvuldigen (× aantal)." },
+            { woord: "elk", uitleg: "Synoniem van 'per' — ook keer-bewerking." },
+          ],
+          theorie: "Cito-truc redactiesommen: zoek het SIGNAAL-woord. Dat bepaalt welke bewerking. Lees vraag rustig, onderstreep cijfers + signaalwoorden, kies dan bewerking.",
+          voorbeelden: [
+            { type: "stap", tekst: "'5 dozen met 12 koeken per doos' = 5 × 12 (per = keer)." },
+            { type: "stap", tekst: "'10 vrienden krijgen elk €2' = 10 × 2 = €20 (elk = keer)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Per/elk = keer. Samen/totaal = +. Verschil/over = −. Verdeeld = ÷." },
+          ],
+          niveaus: {
+            basis: "'Per' is signaalwoord voor vermenigvuldigen.",
+            simpeler: "€3 per glas, 5 glazen = 3×5 = €15.",
+            nogSimpeler: "Per = keer.",
+          },
+        },
       },
       {
         q: "*'Een doos heeft 12 koeken. Sven eet 5. Hoeveel **over**?'* — welke bewerking?",
@@ -55,6 +78,28 @@ const steps = [
         options: ["11","36","8","Geen"],
         answer: 0,
         wrongHints: [null,"Dat is wel relevant — beginaantal knikkers.","Dat is wel relevant — verloren knikkers.","Wel — leeftijd doet er niet toe."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cito-strik: extra info", tekst: "Cito stopt soms EXTRA cijfers in een vraag die NIET nodig zijn. Doel: testen of je goed leest + alleen het belangrijke pakt." },
+            { titel: "Wat is de vraag eigenlijk?", tekst: "Vraag gaat over **knikkers** (eindstand). Je hebt: beginstand (36) en verlies (8). Reken: 36 − 8 = 28. Leeftijd (11 jaar) is NIET nodig om dit te beantwoorden." },
+            { titel: "Truc: onderstreep wat je nodig hebt", tekst: "Lees vraag. Vraag jezelf: 'Welke getallen helpen mij?' Onderstreep die. Andere getallen = afleiders. Veel kinderen rekenen met alle 3 — dan klopt het antwoord niet." },
+          ],
+          woorden: [
+            { woord: "afleider", uitleg: "Extra info die niet nodig is voor antwoord." },
+            { woord: "redactiesom", uitleg: "Verhaaltje met cijfers — bereken iets." },
+          ],
+          theorie: "Cito-tip: bij verhaaltjes-sommen ALTIJD vragen: 'Welke info heb ik echt nodig?' Schrap of negeer wat irrelevant is. Cito test bewust met afleiders.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Anna heeft 5 € + 3 broers en ze koopt iets van €2.' Antwoord = €5−€2=€3. 'Broers' is afleider." },
+            { type: "stap", tekst: "'Trein vertrekt om 8:15 en heeft 6 wagons. Aankomst om 9:30.' Reistijd vraag = 1u15min. 'Wagons' is afleider." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Niet alle gegeven cijfers gebruiken — alleen wat de vraag écht nodig heeft." }],
+          niveaus: {
+            basis: "Niet alle getallen relevant. Onderstreep wat je echt nodig hebt.",
+            simpeler: "Vraag = knikkers. Leeftijd doet er niet toe.",
+            nogSimpeler: "Leeftijd = afleider.",
+          },
+        },
       },
       {
         q: "*'Een doos heeft 24 stickers. Verdeeld over 6 kinderen.'* Welke **bewerking**?",
@@ -67,6 +112,28 @@ const steps = [
         options: ["Delen (prijs ÷ liter)","Vermenigvuldigen","Optellen","Aftrekken"],
         answer: 0,
         wrongHints: [null,"Niet vermenigvuldigen — je gaat van groot naar 'per stuk'.","Niet samenvoegen.","Niet aftrekken — vraag is per-eenheid-prijs."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat vraagt 'per liter'?", tekst: "'Per liter' betekent: **prijs voor 1 liter**. Je krijgt: 1,5 L = €2,40. Vraag: 1 L = ?" },
+            { titel: "Bewerking: delen", tekst: "Van GROTER naar KLEINER (totaal naar per-stuk) = **delen**. Je deelt de TOTAAL-prijs door de hoeveelheid: €2,40 ÷ 1,5 = **€1,60 per liter**." },
+            { titel: "Check: klopt het qua grootte?", tekst: "Als 1,5 L = €2,40, moet 1 L MINDER kosten. €1,60 < €2,40. Klopt. Bij twijfel: doe omgekeerd: 1,60 × 1,5 = 2,40. Match!" },
+          ],
+          woorden: [
+            { woord: "per stuk / per liter", uitleg: "Prijs voor 1 eenheid (1 liter, 1 stuk)." },
+            { woord: "delen", uitleg: "Totaal ÷ aantal eenheden = per-eenheid." },
+          ],
+          theorie: "Cito-truc 'per stuk'-vragen: ALTIJD delen. Totaal-prijs ÷ aantal-stuks = prijs per stuk. Werkt voor liters, kilo's, stuks, etc.",
+          voorbeelden: [
+            { type: "stap", tekst: "3 boeken €36 → per boek = 36÷3 = €12." },
+            { type: "stap", tekst: "500 g €4,50 → per kg = €4,50 ÷ 0,5 = €9." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Per stuk = delen. Totaal = vermenigvuldigen. Tegengesteld!" }],
+          niveaus: {
+            basis: "Per-stuk-prijs = totaal ÷ aantal eenheden.",
+            simpeler: "€2,40 ÷ 1,5 = €1,60 per liter.",
+            nogSimpeler: "Delen voor 'per stuk'.",
+          },
+        },
       },
     ],
   },
