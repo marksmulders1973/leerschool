@@ -78,6 +78,28 @@ const steps = [
         options: ["Jongetje in flat met brandweerauto", "Kat die mens wordt", "Spin", "Indiaan"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Minoes.", "Sebastiaan-liedje.", "Andere."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie is Pluk?", tekst: "**Pluk** is het hoofdpersoon van een klassiek NL-kinderboek van **Annie M.G. Schmidt** (1971). Een **jongetje** dat in z'n eentje gaat wonen in een grote flat genaamd 'de **Petteflet**'." },
+            { titel: "Zijn rode brandweerauto", tekst: "Pluk rijdt rond in z'n eigen kleine **rode brandweerauto-tje** (het 'Pluk-mobiel'). Hij helpt mensen + dieren in nood — een lieve jonge held." },
+            { titel: "Andere personages", tekst: "Pluk maakt vrienden:\n• **Mevrouw Helderder** — buurvrouw die schoonmaakt\n• **De Stampertjes** — drukke kinderen\n• Het **torteltje** dat hij redt\n• **Meneer Penseel** — schilder.\nVoorgelezen door generaties NL-ouders." },
+          ],
+          woorden: [
+            { woord: "Pluk", uitleg: "Jongetje hoofd-personage van Schmidt's boek." },
+            { woord: "Petteflet", uitleg: "Verzonnen flat-naam waar Pluk woont." },
+          ],
+          theorie: "Cito-feit: 'Pluk van de Petteflet' werd in **2007 verkozen tot beste NL-jeugdboek van de 20e eeuw**. Klassieker dus. Niet verwarren met andere Schmidt-boeken: Minoes = kat-die-mens-wordt, Otje = meisje-die-dieren-verstaat, Wiplala = klein wezentje.",
+          voorbeelden: [
+            { type: "stap", tekst: "Het boek werd in 2004 verfilmd. Ook musical-versie." },
+            { type: "stap", tekst: "'Petteflet' is een Schmidt-bedacht woord, geen echt Nederlands. Hoort bij haar speelse stijl." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Pluk = jongetje + brandweerauto + Petteflet-flat. Schmidt's beroemdste solo-personage." }],
+          niveaus: {
+            basis: "Jongetje in flat met rode brandweerauto. = A.",
+            simpeler: "Pluk = hoofdpersoon Schmidt-boek (1971). Woont in Petteflet-flat + rijdt rond met klein brandweerauto-tje. = A.",
+            nogSimpeler: "Jongetje met brandweerauto = A.",
+          },
+        },
       },
       {
         q: "**Hoogste internationale kinderboek-prijs** die Schmidt won?",
@@ -151,12 +173,58 @@ const steps = [
         options: ["Februari/maart 1945 (Bergen-Belsen)", "1944", "1950", "Overleefd"],
         answer: 0,
         wrongHints: [null, "Klopt — net voor bevrijding kamp april 1945.", "Te vroeg.", "Te laat.", "Helaas niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Anne's verhaal kort", tekst: "**Anne Frank** (geb. 1929 Frankfurt) zat met haar familie ondergedoken in het achterhuis (Amsterdam) **1942-1944**. In augustus 1944 werden ze **verraden** + opgepakt door de nazi's." },
+            { titel: "Naar de kampen", tekst: "Anne + zus Margot werden uiteindelijk naar **Bergen-Belsen** gestuurd (concentratiekamp in Duitsland). Daar stierven ze aan **tyfus** in **februari of maart 1945**." },
+            { titel: "Bittere bijna-bevrijding", tekst: "Het kamp werd **15 april 1945** bevrijd door Engelse troepen. Anne stierf maar enkele weken **VÓÓR** die bevrijding. Daarom voelt haar verhaal extra tragisch. Alleen vader Otto overleefde." },
+          ],
+          woorden: [
+            { woord: "Anne Frank", uitleg: "Joods meisje uit Amsterdam dat dagboek schreef tijdens WO2." },
+            { woord: "Bergen-Belsen", uitleg: "Nazi-concentratiekamp in NW-Duitsland." },
+            { woord: "tyfus", uitleg: "Besmettelijke ziekte (luizen) die in kampen veel doden veroorzaakte." },
+          ],
+          theorie: "Cito-feit Anne Frank-tijdlijn:\n• **1929** geboren Frankfurt.\n• **1933** familie vlucht naar Amsterdam.\n• **1942** ondergedoken in achterhuis.\n• **1944** verraden + opgepakt.\n• **feb/mrt 1945** overleden Bergen-Belsen.\n• **april 1945** kamp bevrijd.",
+          voorbeelden: [
+            { type: "stap", tekst: "Otto Frank vond het dagboek na de oorlog en publiceerde het in 1947. Vertaald in 70+ talen." },
+            { type: "stap", tekst: "Hetzelfde lot trof miljoenen anderen — Anne staat symbool voor alle joodse kinderen die in WO2 omkwamen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Anne overleed 1945 (vlak vóór bevrijding). Niet 1944 (toen ontdekt) of later (heeft ze nooit beleefd). De zin 'bijna gered' = kern." }],
+          niveaus: {
+            basis: "Februari/maart 1945, Bergen-Belsen. = A.",
+            simpeler: "Anne stierf eind winter 1945 aan tyfus in concentratiekamp Bergen-Belsen, vlak voor het kamp bevrijd werd. = A.",
+            nogSimpeler: "1945 = A.",
+          },
+        },
       },
       {
         q: "Wie schreef **Max Havelaar** (1860)?",
         options: ["Multatuli", "Mulisch", "Schmidt", "Anne Frank"],
         answer: 0,
         wrongHints: [null, "Klopt — pseudoniem Dekker.", "Veel later.", "Kinderboek.", "Dagboek."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Multatuli?", tekst: "**Multatuli** is een pseudoniem (schuilnaam) van **Eduard Douwes Dekker** (1820-1887). 'Multatuli' is Latijn voor: 'ik heb veel geleden'. Hij koos die naam toen hij schrijver werd." },
+            { titel: "Waar gaat 'Max Havelaar' over?", tekst: "Het boek (1860) is een **aanklacht tegen het Nederlandse koloniaal beleid** in **Nederlands-Indië** (het huidige Indonesië). Dekker werkte daar zelf als ambtenaar en zag hoe de Javanen werden uitgebuit." },
+            { titel: "Impact van het boek", tekst: "Het boek schokte de NL-publieke opinie. Veroorzaakte langzaam betere wetten + minder uitbuiting. **Max Havelaar** is later een **fair-trade keurmerk** geworden — symbool voor eerlijke handel met ontwikkelingslanden." },
+          ],
+          woorden: [
+            { woord: "Multatuli", uitleg: "Schrijversnaam van Eduard Douwes Dekker." },
+            { woord: "Max Havelaar", uitleg: "Klassieke NL-roman uit 1860 + later fair-trade keurmerk." },
+            { woord: "Nederlands-Indië", uitleg: "NL-kolonie 1816-1949, nu Indonesië." },
+          ],
+          theorie: "Cito-feit Multatuli:\n• Schreef 'Max Havelaar' in **1860**.\n• Was zelf ambtenaar in NL-Indië voor hij schreef.\n• Niet verwarren met andere schrijvers: **Mulisch** (20e eeuw, 'De Aanslag'), **Schmidt** (kinderboeken), **Anne Frank** (dagboek).",
+          voorbeelden: [
+            { type: "stap", tekst: "Tegenwoordig zie je 'Max Havelaar' op koffie, chocolade, bananen — keurmerk voor eerlijke prijzen voor boeren." },
+            { type: "stap", tekst: "Boek wordt op middelbare scholen nog steeds gelezen als belangrijk historisch document." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Multatuli + 1860 + Max Havelaar + NL-Indië = de combinatie. Pseudoniem = schuilnaam, Latijn voor 'ik heb veel geleden'." }],
+          niveaus: {
+            basis: "Multatuli. = A.",
+            simpeler: "Multatuli (schuilnaam Eduard Douwes Dekker) schreef Max Havelaar in 1860 — aanklacht NL-koloniaal beleid in Indonesië. = A.",
+            nogSimpeler: "Multatuli = A.",
+          },
+        },
       },
       {
         q: "Waar is **Anne Frank Huis**?",
