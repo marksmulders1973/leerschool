@@ -79,7 +79,29 @@ const steps = [
         q: "Hoeveel **dagen** in een **gewoon jaar**?",
         options: ["365 dagen", "360 dagen", "366 dagen", "364 dagen"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Dat is een schrikkeljaar.", "Te weinig."],
+        wrongHints: [null, "Klopt.", "Te weinig.", "Dat is een schrikkeljaar.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "365 dagen per jaar", tekst: "Een **gewoon jaar** heeft **365 dagen**. Een **schrikkeljaar** heeft 366 dagen (1 extra in februari). Onthoud die twee getallen." },
+            { titel: "Waarom 365?", tekst: "De aarde draait in **365 dagen + 6 uur** rond de zon. Omdat dat geen rond getal is, hebben we elke 4 jaar een **schrikkeljaar** (366 dagen) om die extra uurtjes goed te maken." },
+            { titel: "Optellen check", tekst: "Tel de maanden:\n• 31 dagen: jan + mrt + mei + jul + aug + okt + dec = **7 × 31 = 217**\n• 30 dagen: apr + jun + sep + nov = **4 × 30 = 120**\n• Februari: **28**\nTotaal: 217 + 120 + 28 = **365** ✓" },
+          ],
+          woorden: [
+            { woord: "gewoon jaar", uitleg: "365 dagen." },
+            { woord: "schrikkeljaar", uitleg: "366 dagen, elke 4 jaar." },
+          ],
+          theorie: "Cito-feit: 365 = gewoon. 366 = schrikkel. 360 = bestaat niet (denk-fout). 364 = bestaat niet. Onthoud deze 2 cijfers.",
+          voorbeelden: [
+            { type: "stap", tekst: "1 januari + 365 dagen = 1 januari volgend jaar (in gewoon jaar)." },
+            { type: "stap", tekst: "1 januari + 366 dagen = 1 januari volgend jaar (in schrikkeljaar zoals 2024)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "365 = gewoon. 366 = schrikkel. Verschil = 1 dag (29 februari)." }],
+          niveaus: {
+            basis: "365 dagen. = A.",
+            simpeler: "Een gewoon jaar heeft 365 dagen. Een schrikkeljaar heeft 366. = A.",
+            nogSimpeler: "365 = A.",
+          },
+        },
       },
       {
         q: "Hoeveel dagen in **februari** in een **schrikkeljaar**?",
@@ -160,6 +182,29 @@ const steps = [
         options: ["Ja", "Nee", "Hangt af", "Weet niet"],
         answer: 0,
         wrongHints: [null, "Klopt — 2024 ÷ 4 = 506 → deelbaar.", "Reken nogmaals.", "Eenduidig — wel.", "2024 is wél schrikkeljaar."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 'deel door 4'-truc", tekst: "**Vuistregel**: een jaar is een **schrikkeljaar** als het deelbaar is door **4**. Test 2024: 2024 ÷ 4 = 506 (rond getal, geen rest) → **schrikkeljaar**." },
+            { titel: "Snel testen", tekst: "Kijk naar de **laatste 2 cijfers**: deelbaar door 4? Dan is het jaar dat ook.\n• 2024 → 24 ÷ 4 = 6 ✓ schrikkel\n• 2025 → 25 ÷ 4 = 6,25 ✗ gewoon\n• 2026 → 26 ÷ 4 = 6,5 ✗ gewoon\n• 2028 → 28 ÷ 4 = 7 ✓ schrikkel" },
+            { titel: "Uitzondering: eeuw-jaren", tekst: "**Hele eeuwen** (eindigend op 00) zijn alleen schrikkel als deelbaar door 400. Bv:\n• 1900: niet door 400 → **geen** schrikkel\n• 2000: wel door 400 → **wel** schrikkel\n• 2100: niet door 400 → geen schrikkel\nVoor Cito groep 6-8 meestal niet getoetst, maar handig om te weten." },
+          ],
+          woorden: [
+            { woord: "schrikkeljaar", uitleg: "Jaar met 366 dagen (1 dag extra in februari)." },
+            { woord: "deelbaar", uitleg: "Een getal valt rond te delen (geen rest)." },
+          ],
+          theorie: "Cito-truc schrikkeljaar:\n• Deelbaar door 4 → ja\n• Eindigt op 00 → moet ook door 400 deelbaar\n• Bv. 2024, 2028, 2032 = schrikkel. 2025, 2026, 2027 = gewoon.",
+          voorbeelden: [
+            { type: "stap", tekst: "2024 ÷ 4 = 506. Geen rest. Schrikkeljaar ✓." },
+            { type: "stap", tekst: "2026 ÷ 4 = 506,5. Wel rest. Geen schrikkel." },
+            { type: "stap", tekst: "Olympische zomerspelen vallen elke 4 jaar — vaak in schrikkeljaar (2020, 2024, 2028)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Deel door 4 = schrikkel. Niet deelbaar = gewoon. Heel snelle test." }],
+          niveaus: {
+            basis: "Ja, 2024 is schrikkeljaar. = A.",
+            simpeler: "2024 ÷ 4 = 506 (rond) → schrikkeljaar. = A.",
+            nogSimpeler: "Ja = A.",
+          },
+        },
       },
       {
         q: "Welk jaar is een **schrikkeljaar**?",
@@ -307,6 +352,30 @@ const steps = [
         options: ["30 dagen", "31 dagen", "28 dagen", "29 dagen"],
         answer: 0,
         wrongHints: [null, "Klopt — juni heeft 30 dagen, dus 10 juni → 10 juli = 30 dagen.", "Te veel.", "Te weinig.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op de vraag — 'tot' vs 't/m'", tekst: "Belangrijk verschil in Cito-vragen:\n• **'tot'** = einddag NIET meetellen\n• **'t/m' (tot en met)** = einddag WEL meetellen\nHier staat 'tot' → 10 juli zelf telt niet mee." },
+            { titel: "Reken: 10 juni → 10 juli", tekst: "Van 10 juni tot 10 juli is precies **1 maand**. Juni heeft **30 dagen**. Dus 30 dagen tussen 10 juni en 10 juli (10 juli niet meegerekend)." },
+            { titel: "Optellen-methode (check)", tekst: "Van 10 juni tot 30 juni = 30 − 10 = **20 dagen** (juni klaar).\nVan 1 juli tot 10 juli (10 juli niet mee) = **9 dagen**.\nTotaal: 20 + 9 = 29... \nMaar denk goed na: 10 juni telt mee als startpunt — niet als 'verstreken dag'. Vanaf 10 juni: 20 dagen later = 30 juni. Daarna nog 10 dagen = 10 juli. Totaal: **30 dagen**." },
+          ],
+          woorden: [
+            { woord: "tot vs t/m", uitleg: "'tot' = einde NIET inclusief, 't/m' = wel inclusief." },
+            { woord: "verstreken dagen", uitleg: "Aantal dagen dat voorbij is gegaan." },
+          ],
+          theorie: "Cito-truc datumverschil:\n• **Zelfde dag-getal volgende maand** → aantal dagen van die maand.\n• 10 jun tot 10 jul = juni-dagen = 30.\n• 5 mrt tot 5 apr = maart-dagen = 31.\n• 15 feb tot 15 mrt = februari-dagen = 28 (of 29 in schrikkel).",
+          voorbeelden: [
+            { type: "stap", tekst: "Van 5 jan tot 5 feb = januari-dagen = 31." },
+            { type: "stap", tekst: "Van 20 sep tot 20 okt = september-dagen = 30." },
+            { type: "stap", tekst: "Let op februari: van 15 feb tot 15 mrt = 28 dagen (gewoon jaar)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zelfde dag-getal volgende maand = dagen van TUSSENMAAND. Juni = 30, juli = 31, februari = 28/29." },
+          ],
+          niveaus: {
+            basis: "30 dagen. = A.",
+            simpeler: "Juni heeft 30 dagen. Van 10 juni naar 10 juli = 30 dagen later. = A.",
+            nogSimpeler: "30 = A.",
+          },
+        },
       },
       {
         q: "Op welke datum is **Bevrijdingsdag**?",
