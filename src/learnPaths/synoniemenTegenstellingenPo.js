@@ -68,6 +68,28 @@ const steps = [
         options: ["Reusachtig", "Klein", "Beetje", "Snel"],
         answer: 0,
         wrongHints: [null, "Klopt — beide betekenen 'heel groot'.", "Tegenstelling.", "Tegenstelling.", "Geen synoniem."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 'enorm'?", tekst: "**Enorm** = heel erg groot. *'Een enorme taart'* = een hele grote taart. Het is een sterker woord dan gewoon 'groot'." },
+            { titel: "Welk woord lijkt erop?", tekst: "**Reusachtig** komt van het woord *reus* (een hele grote figuur uit sprookjes). Een reusachtige taart = even groot als wat een reus zou eten. Dus reusachtig = enorm = heel groot." },
+            { titel: "Andere synoniemen van 'enorm'", tekst: "Gigantisch, kolossaal, immens, geweldig groot. Allemaal woorden voor 'heel erg groot'. **Klein, beetje** = tegenstellingen, geen synoniemen. **Snel** = over snelheid, niets met grootte." },
+          ],
+          woorden: [
+            { woord: "enorm", uitleg: "Heel erg groot." },
+            { woord: "reusachtig", uitleg: "Zo groot als een reus = enorm." },
+          ],
+          theorie: "Cito-truc: zoek bij synoniemen-vragen het woord dat **dezelfde categorie + dezelfde richting** heeft. Enorm = grootte + groot. Dus zoek ander grootte-woord dat ook 'groot' betekent → reusachtig.",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Hij heeft een enorme hond.'* = *'Hij heeft een reusachtige hond.'* Beide zinnen betekenen hetzelfde." },
+            { type: "stap", tekst: "*'Een kleine hond'* = tegenstelling. *'Een snelle hond'* = ander kenmerk (snelheid, niet grootte)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Synoniem = zelfde betekenis. Vraag jezelf: 'Kan ik het ene woord vervangen door het andere zonder dat de zin van betekenis verandert?' Bij enorm ↔ reusachtig: ja. Bij enorm ↔ klein: nee, betekenis draait om." }],
+          niveaus: {
+            basis: "Reusachtig = synoniem van enorm (allebei 'heel groot'). = A.",
+            simpeler: "Enorm = heel groot. Reusachtig = even groot als een reus = heel groot. Hetzelfde. = A.",
+            nogSimpeler: "Reusachtig = A.",
+          },
+        },
       },
     ],
   },
@@ -101,6 +123,28 @@ const steps = [
         options: ["Wandelen", "Sprinten", "Hollen", "Snel lopen"],
         answer: 0,
         wrongHints: [null, "Klopt — wandelen is rustig lopen, geen synoniem van rennen.", "Wel synoniem.", "Wel synoniem.", "Wel synoniem."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Let op de vraag — GEEN!", tekst: "Bij Cito staat soms het woord **GEEN** (vaak met hoofdletters) in de vraag. Dat draait de vraag om: je zoekt niet het woord dat hetzelfde betekent, maar het woord dat **anders** betekent." },
+            { titel: "Wat is 'rennen'?", tekst: "**Rennen** = heel hard lopen, snel voortbewegen. Een atleet die de 100 meter doet, rent. Synoniemen: sprinten, hollen, snel lopen — allemaal snel-bewegen." },
+            { titel: "Welk woord past NIET?", tekst: "**Wandelen** = rustig lopen, voor je plezier of om ergens te komen. Niet snel. Dus wandelen is GEEN synoniem van rennen — dat is het antwoord op de GEEN-vraag." },
+          ],
+          woorden: [
+            { woord: "rennen", uitleg: "Heel hard lopen, snel." },
+            { woord: "wandelen", uitleg: "Rustig lopen, niet snel." },
+          ],
+          theorie: "Cito-truc bij GEEN-vragen: lees de vraag 2x. Onderstreep het woord 'GEEN'. Zoek dan het ene woord dat NIET in het rijtje past. Vaak zijn 3 opties synoniemen + 1 is iets anders (de tegenstelling, of een ander concept).",
+          voorbeelden: [
+            { type: "stap", tekst: "*'Welk woord is GEEN synoniem van blij?'* Opties: vrolijk, gelukkig, **boos**, opgewekt. Antwoord = boos (tegenstelling)." },
+            { type: "stap", tekst: "*'Welk woord is GEEN synoniem van groot?'* Opties: enorm, reusachtig, **klein**, gigantisch. Antwoord = klein." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vind het 'vreemde eend in de bijt' = de optie die niet bij de andere drie past. Vaak is dat de tegenstelling van het hoofdwoord." }],
+          niveaus: {
+            basis: "Wandelen = rustig lopen, niet snel. Rennen = snel. Dus wandelen is GEEN synoniem van rennen. = A.",
+            simpeler: "Sprinten, hollen, snel lopen = allemaal snel = synoniemen van rennen. Wandelen = rustig = past niet. = A.",
+            nogSimpeler: "Wandelen = A (rustig, geen rennen).",
+          },
+        },
       },
     ],
   },
@@ -181,6 +225,28 @@ const steps = [
         options: ["oude", "snelle", "kleine", "blauwe"],
         answer: 0,
         wrongHints: [null, "Klopt — vaak 'oude man'-zinnetje.", "Kan, maar 'oude' is gangbaarder.", "Kan, maar 'oude' is gangbaarder.", "Mensen krijgen niet vaak kleur-adjectief."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welke woorden zijn 'normaal' bij 'man'?", tekst: "Bij een persoon zoals 'man' zijn sommige bijvoeglijke naamwoorden veel gangbaarder dan andere. Denk aan: **oude/jonge man**, **lange/kleine man**, **dikke/dunne man**. **Snelle man** of **blauwe man** zijn raar." },
+            { titel: "Lees de hele zin", tekst: "*'De ___ man stak de straat over.'* — wat doet die man? Hij STEEKT DE STRAAT OVER. Dat is een rustige activiteit, geen sport. Daarom past 'oude' het beste — denk aan een oudere meneer die voorzichtig oversteekt." },
+            { titel: "Waarom niet de andere opties?", tekst: "• **Snelle** — kan, maar 'snel een straat oversteken' is geen vast beeld. Hardlopers zijn op de baan, niet op straat. \n• **Kleine** — bestaat ('kleine man'), maar veel minder gangbaar dan 'oude man'. \n• **Blauwe** — kleur bij persoon? Zelden ('blauwe Smurf' misschien). Onnatuurlijk." },
+          ],
+          woorden: [
+            { woord: "gangbaar", uitleg: "Wat normaal of vaak wordt gezegd in het Nederlands." },
+            { woord: "bijvoeglijk naamwoord", uitleg: "Woord dat iets vertelt over een ander woord (mooi huis, oude man)." },
+          ],
+          theorie: "Cito-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. *'Blauwe man'* = bijna nooit. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
+          voorbeelden: [
+            { type: "stap", tekst: "*'De ___ kat sliep op de bank.'* Opties: dikke / boze / snelle / luide. **Dikke** past het beste — dat is een gangbaar beeld bij slapende kat." },
+            { type: "stap", tekst: "*'Het was een ___ feest.'* Opties: gezellig / koud / klein / vies. **Gezellig** past het beste — typisch woord bij een feest." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lees in je hoofd elke optie in de zin. Klinkt het natuurlijk — alsof je het zo in een verhaal zou kunnen vertellen? Kies die optie." }],
+          niveaus: {
+            basis: "Oude man = gangbaar beeld bij oversteken. = A.",
+            simpeler: "Welke past in een echt verhaal? 'Oude man steekt straat over' = ja, vaak. De andere: zelden of nooit. = A.",
+            nogSimpeler: "Oude = A.",
+          },
+        },
       },
     ],
   },
