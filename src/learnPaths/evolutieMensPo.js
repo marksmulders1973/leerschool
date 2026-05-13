@@ -27,6 +27,28 @@ const steps = [
         options: ["Best aangepast overleeft + plant zich voort", "Toeval", "Snel", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet primair.", "Niet specifiek.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is natuurlijke selectie?", tekst: "Natuurlijke selectie is het belangrijkste motor van evolutie. Het gaat zo: in elke generatie zijn er **kleine verschillen** tussen individuen." },
+            { titel: "Best aangepast overleeft", tekst: "Wie het BEST PAST bij zijn omgeving (sterke spieren, betere camouflage, snelheid, etc) heeft de meeste kans om te OVERLEVEN en JONGEN te krijgen." },
+            { titel: "Slechte eigenschappen sterven uit", tekst: "Wezens met slechte eigenschappen sterven eerder of krijgen minder jongen. Hun eigenschappen verdwijnen langzaam uit de soort. Zo verandert de soort over generaties." },
+          ],
+          woorden: [
+            { woord: "natuurlijke selectie", uitleg: "Best aangepaste wezens overleven en planten zich voort." },
+            { woord: "survival of the fittest", uitleg: "Engelse term: 'overleving van de geschiktste' (door Herbert Spencer)." },
+          ],
+          theorie: "Cito-tip: natuurlijke selectie is GEEN toeval. Het selecteert systematisch: betere eigenschappen winnen. Over miljoenen jaren ontstaat zo een nieuwe soort.",
+          voorbeelden: [
+            { type: "stap", tekst: "Donkere mot in vervuilde stad: minder zichtbaar voor vogels → overleeft → meer jongen → soort wordt donkerder." },
+            { type: "stap", tekst: "Cheeta's: snelste overleven het best (vangen prooi). Over generaties: cheeta's worden gemiddeld sneller." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Natuurlijke selectie = NATUUR selecteert wie blijft. Niet de mens, geen toeval — de omgeving." }],
+          niveaus: {
+            basis: "Natuurlijke selectie = best aangepast overleeft en plant zich voort.",
+            simpeler: "Wie past, blijft. Wie niet past, sterft uit.",
+            nogSimpeler: "Best passend = overleven.",
+          },
+        },
       },
       {
         q: "Hoe lang **moderne mens** (Homo sapiens) bestaat?",
@@ -39,6 +61,28 @@ const steps = [
         options: ["Planetoïde-inslag 66 mln jr geleden", "Vulkaan alleen", "Mens", "Niet uitgestorven"],
         answer: 0,
         wrongHints: [null, "Klopt — Krijt-uitsterving.", "Hielp wel.", "Mens kwam later.", "Wel uitgestorven."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Het einde van de dino's", tekst: "Dinosauriërs leefden ongeveer 165 miljoen jaar lang. Ze stierven plotseling uit **66 miljoen jaar geleden**. Geen mens in zicht — die kwam pas miljoenen jaren later." },
+            { titel: "Planetoïde-inslag", tekst: "Een enorme rotssteen uit de ruimte (planetoïde van ~10 km doorsnee) sloeg in op aarde, in wat nu Mexico is (krater **Chicxulub**). De inslag zette enorme branden in en gooide stof in atmosfeer." },
+            { titel: "Gevolg: geen zonlicht", tekst: "Het stof blokkeerde zonlicht voor maanden/jaren. Planten stierven, dieren die daarvan aten stierven, dieren die díe aten stierven. Hele voedselketens stortten in. ~75% van alle dier-soorten uitgestorven, incl. dino's." },
+          ],
+          woorden: [
+            { woord: "Krijt-uitsterving", uitleg: "Wetenschappelijke naam: einde van Krijt-periode, 66 mln jr geleden." },
+            { woord: "Chicxulub", uitleg: "Krater in Mexico, waar planetoïde-inslag plaatsvond." },
+          ],
+          theorie: "Cito-feit: kleine dieren overleefden (vogels = afstammelingen van dino's eigenlijk! Plus zoogdieren die later mensen werden). Niet ALLE dino's stierven uit — vogels zijn techn. nog dino's.",
+          voorbeelden: [
+            { type: "stap", tekst: "Stof in atmosfeer = jaren-lange 'winter'. Planten konden niet groeien. Geen voedsel = uitsterven." },
+            { type: "stap", tekst: "Vogels (technisch dino-afstammelingen) overleefden omdat ze klein waren en konden vliegen om voedsel te zoeken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud cijfer: 66 mln jaar geleden = einde dino's. Niet door mens (kwam veel later), niet alleen vulkaan." }],
+          niveaus: {
+            basis: "Dino's stierven 66 mln jaar geleden uit door planetoïde-inslag.",
+            simpeler: "Grote rotssteen uit ruimte stortte neer → stof → geen zon → uitsterving.",
+            nogSimpeler: "Meteoriet uit ruimte!",
+          },
+        },
       },
     ],
   },
@@ -52,6 +96,28 @@ const steps = [
         options: ["Nee — gemeenschappelijke voorouder ~7 mln jr", "Ja, van chimpansee", "Mens is helemaal apart", "Niet bekend"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet — beide afstammelingen.", "Wel verwant.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Veelvoorkomend misverstand", tekst: "Veel mensen denken: 'mens stamt af van aap'. Maar dat klopt NIET. Mens en chimpansee zijn **NEEFJES**, niet **kind-en-ouder**." },
+            { titel: "Gemeenschappelijke voorouder", tekst: "Ongeveer **7 miljoen jaar geleden** leefde er een dier (geen mens, geen moderne aap) waar BEIDE soorten uit voortkwamen. Daarna splitste het: 1 lijn werd mens, andere lijn werd chimpansee." },
+            { titel: "Vergelijk met familie", tekst: "Het is alsof jij en je neef dezelfde oma hebben, maar verschillende ouders. Jullie zijn verwant, maar jij stamt niet af van je neef." },
+          ],
+          woorden: [
+            { woord: "gemeenschappelijke voorouder", uitleg: "Soort waaruit 2 of meer huidige soorten zijn voortgekomen." },
+            { woord: "hominide", uitleg: "Familie van mens-achtigen (Australopithecus, Homo erectus, Neanderthaler, Homo sapiens)." },
+          ],
+          theorie: "Cito-nuance: 'Mens stamt af van aap' is fout. 'Mens en aap delen een voorouder' is juist. Wij delen 98,8% DNA met chimpansee — heel verwant, maar geen ouder-kind.",
+          voorbeelden: [
+            { type: "stap", tekst: "Lijn 1 (na splitsing): Australopithecus → Homo erectus → Homo sapiens (wij)." },
+            { type: "stap", tekst: "Lijn 2 (na splitsing): voorouder → chimpansee + bonobo (huidige apen)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Mens + aap = NEEFJES. Niet ouder-kind." }],
+          niveaus: {
+            basis: "Mens en aap hebben gemeenschappelijke voorouder ~7 mln jr geleden.",
+            simpeler: "Mens stamt NIET af van moderne aap, ze zijn neefjes.",
+            nogSimpeler: "Mens + aap = neefjes.",
+          },
+        },
       },
       {
         q: "Wie was **Lucy**?",
