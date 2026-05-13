@@ -21,12 +21,57 @@ const steps = [
         options: ["Annie M.G. Schmidt", "Roald Dahl", "Tonke Dragt", "Multatuli"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Brits.", "Andere.", "Volwassen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Annie M.G. Schmidt?", tekst: "**Annie M.G. Schmidt** (1911-1995) was de **beroemdste Nederlandse kinderboekenschrijfster** aller tijden. Ze schreef gedichten, verhalen, liedjes en musicals." },
+            { titel: "Bekende werken", tekst: "**Jip en Janneke** (verhalen over 2 buurkinderen), **Pluk van de Petteflet** (jongetje met rode kraanwagen), **Minoes** (kat die mens wordt), **Otje**, **Pippeloentje**, **Sebastiaan**." },
+            { titel: "Stijl + onderscheidingen", tekst: "Eenvoudige taal, vrolijk, soms een beetje opstandig tegen autoriteit. Won in 1988 de **Hans Christian Andersen Prijs** — de 'Nobelprijs' van kinderboeken." },
+          ],
+          woorden: [
+            { woord: "Annie M.G. Schmidt", uitleg: "NL-kinderboekenschrijfster, leefde 1911-1995." },
+            { woord: "Jip en Janneke", uitleg: "Verhalen over 2 buurkinderen, met tekeningen van Fiep Westendorp." },
+          ],
+          theorie: "Cito-feit: NL-schrijvers onthouden — Schmidt (klassiek), Roald Dahl (Brits, 'BFG'), Tonke Dragt ('De brief voor de koning'), Paul van Loon ('Dolfje'), Carry Slee (realistisch).",
+          voorbeelden: [
+            { type: "stap", tekst: "Pluk woont in de Petteflet met meneer Penseel — Schmidt-boek uit 1971." },
+            { type: "stap", tekst: "Annie M.G. Schmidt staat op een postzegel + Annie M.G. Schmidt-prijs voor kinderboeken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Annie M.G. Schmidt = klassieke NL-kinderboeken. Roald Dahl = Britse klassieke." }],
+          niveaus: {
+            basis: "Annie M.G. Schmidt schreef Jip en Janneke + Pluk + Minoes.",
+            simpeler: "Beroemdste NL-kinderboekenschrijver, jaren 1950-1990.",
+            nogSimpeler: "Schmidt = Jip en Janneke.",
+          },
+        },
       },
       {
         q: "Wie maakte **tekeningen** bij Schmidt?",
         options: ["Fiep Westendorp", "Dick Bruna", "Anton Pieck", "Rembrandt"],
         answer: 0,
         wrongHints: [null, "Klopt — iconisch.", "Nijntje.", "Efteling.", "Veel ouder."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Fiep Westendorp (1916-2004)", tekst: "**Fiep Westendorp** was de **tekenares** die de plaatjes maakte bij Annie M.G. Schmidt's boeken. Beroemde duo: zij tekende, Schmidt schreef." },
+            { titel: "Iconische stijl", tekst: "Eenvoudige, herkenbare lijnen. Jip en Janneke = silhouet-tekeningen. Pluk = kleine jongen met rode kraanwagen. Heel typisch Nederlandse kinderboek-stijl." },
+            { titel: "Niet verwarren met andere illustratoren", tekst: "**Dick Bruna** = Nijntje (eenvoudige zwart-witte lijnen + kleurvlakken). **Anton Pieck** = Efteling (sprookjes-stijl). Verschillende beroemde Nederlandse illustratoren." },
+          ],
+          woorden: [
+            { woord: "Fiep Westendorp", uitleg: "Illustratrice bij Schmidt's boeken." },
+            { woord: "Dick Bruna", uitleg: "Maker van Nijntje (Miffy)." },
+            { woord: "Anton Pieck", uitleg: "Tekenaar van de Efteling-sfeer." },
+          ],
+          theorie: "Cito-feit NL-illustratoren: Schmidt + Westendorp werkten 40+ jaar samen. Geweldig duo. Bekend zijn ook: Bruna (Nijntje wereldwijd), Pieck (Efteling), Marit Törnqvist.",
+          voorbeelden: [
+            { type: "stap", tekst: "Jip en Janneke = silhouet-figuurtjes van Fiep Westendorp. Nijntje = vlak konijntje van Dick Bruna." },
+            { type: "stap", tekst: "Schmidt schreef pas verhalen NADAT Westendorp eerst een tekening had — uniek werkproces." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schmidt + Westendorp = team. Bruna = Nijntje. Pieck = Efteling." }],
+          niveaus: {
+            basis: "Fiep Westendorp tekende Jip en Janneke (+ andere Schmidt-boeken).",
+            simpeler: "Schmidt schreef, Westendorp tekende — vast duo.",
+            nogSimpeler: "Westendorp = tekeningen Schmidt.",
+          },
+        },
       },
       {
         q: "**Pluk van de Petteflet** — wat is dat?",
@@ -64,6 +109,29 @@ const steps = [
         options: ["Oktober (2 wkn)", "Februari", "Mei", "Geen vaste tijd"],
         answer: 0,
         wrongHints: [null, "Klopt — sinds 1955.", "Niet.", "Niet.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de Kinderboekenweek?", tekst: "De **Kinderboekenweek** is een jaarlijks evenement in NL om kinderen aan het LEZEN te krijgen. Sinds 1955 elk jaar in oktober." },
+            { titel: "2 weken in oktober", tekst: "Loopt altijd ongeveer 2 weken in **oktober**. Elk jaar een ander thema (2024 was 'Tijdmachine'). Op scholen + in bibliotheken veel activiteiten." },
+            { titel: "Kinderboekenweekgeschenk", tekst: "Bij aankoop van €15 boeken krijg je GRATIS een speciaal boekje dat speciaal voor die week is geschreven. Ook prijzen: Gouden Griffel (beste tekst), Gouden Penseel (beste illustratie)." },
+          ],
+          woorden: [
+            { woord: "Kinderboekenweek", uitleg: "Jaarlijks NL-evenement in oktober om lezen te promoten." },
+            { woord: "Gouden Griffel", uitleg: "Prijs voor beste kinderboek-tekst." },
+            { woord: "Gouden Penseel", uitleg: "Prijs voor beste kinderboek-illustratie." },
+          ],
+          theorie: "Cito-feit: Kinderboekenweek is een vast NL-instituut. Hoort bij kennis over Nederlandse cultuur. Wordt georganiseerd door de **CPNB** (Stichting Collectieve Propaganda van het Nederlandse Boek).",
+          voorbeelden: [
+            { type: "stap", tekst: "Kinderboekenweek 2024: 2-13 oktober, thema 'Tijdmachine'." },
+            { type: "stap", tekst: "Veel scholen hebben in deze week voorleeswedstrijden + auteursbezoeken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: oktober + 2 weken + gratis boek bij €15 aankoop." }],
+          niveaus: {
+            basis: "Kinderboekenweek = jaarlijks in oktober (2 weken).",
+            simpeler: "Oktober-evenement om lezen leuk te maken.",
+            nogSimpeler: "Oktober!",
+          },
+        },
       },
       {
         q: "Hoeveel **Harry Potter-boeken**?",
