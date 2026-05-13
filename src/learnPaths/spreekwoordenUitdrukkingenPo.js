@@ -52,6 +52,28 @@ const steps = [
         options: ["Het regent heel hard", "Pijpen vallen uit lucht", "Het sneeuwt", "Geen idee"],
         answer: 0,
         wrongHints: [null, "Klopt — figuurlijk.", "Letterlijk = nee.", "Niet.", "Probeer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Klassieke Nederlandse uitdrukking", tekst: "'Het regent pijpenstelen' is een beroemde **uitdrukking** in NL. **Letterlijk** zou het betekenen: er vallen lange pijpen (zoals oude tabakspijpen) uit de lucht. Onmogelijk! Dus: **figuurlijk**." },
+            { titel: "Figuurlijke betekenis", tekst: "Pijpenstelen waren rechte staafjes (rookpijpen vroeger). Als regendruppels zo lang + dik zijn als pijpenstelen, **regent het HEEL hard** — dikke stralen water uit de lucht." },
+            { titel: "Vergelijkbare uitdrukkingen", tekst: "Andere manieren om 'hard regenen' te zeggen:\n• 'De hemel staat open'\n• 'Het giet'\n• Engels: 'It's raining cats and dogs'\n• Frans: 'Il pleut des cordes' (het regent touwen)\nElke taal heeft eigen plaatjes." },
+          ],
+          woorden: [
+            { woord: "pijpensteel", uitleg: "Het lange deel van een tabakspijp (vroeger gebruikelijk)." },
+            { woord: "uitdrukking", uitleg: "Vaste woord-combinatie met figuurlijke betekenis." },
+          ],
+          theorie: "Cito-tip uitdrukkingen: oude woorden (pijpensteel, korf, kruik) blijven in uitdrukkingen, ook al zien we ze niet vaak meer. Dat maakt sommige uitdrukkingen onlogisch — pas gewoon de **bedoelde betekenis** toe.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Het regent pijpenstelen, we kunnen niet naar buiten' = het regent hard, dus we blijven binnen." },
+            { type: "stap", tekst: "Andere weer-uitdrukkingen: 'het is hondenweer' (slecht weer), 'het is om geen hond door te jagen' (heel slecht weer)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij uitdrukkingen: vraag jezelf 'kan dit letterlijk?'. Nee? → figuurlijk. Zoek bedoelde betekenis in context." }],
+          niveaus: {
+            basis: "Het regent heel hard (uitdrukking). = A.",
+            simpeler: "Pijpenstelen-regen = dikke, lange regendruppels = hard regenen. = A.",
+            nogSimpeler: "Hard regenen = A.",
+          },
+        },
       },
       {
         q: "Wat is een **vergelijking**?",
@@ -128,6 +150,29 @@ const steps = [
         options: ["Schulden hebben", "Boos zijn", "Op rood licht", "Veel geld"],
         answer: 0,
         wrongHints: [null, "Klopt — banken.", "Niet.", "Letterlijk.", "Tegenovergesteld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar komt 'rood staan' vandaan?", tekst: "Vroeger gebruikten **boekhouders + banken** gekleurde inkt:\n• **Zwart** = je hebt geld (positief saldo)\n• **Rood** = je hebt schuld (negatief saldo).\nVandaar de term '**in het rood staan**' of '**rood staan**'." },
+            { titel: "Figuurlijke betekenis", tekst: "Als je '**in de rooie staat**' = je hebt **MEER UITGEGEVEN** dan je hebt. Je rekening staat onder nul. Je hebt schuld bij de bank." },
+            { titel: "Modern", tekst: "Tegenwoordig zie je het op je bank-app: '−€50' in rood. Saldo positief = blauw of zwart. Banken laten je vaak €500-1000 'rood staan' (= **'rood-stand'**) met extra rente." },
+          ],
+          woorden: [
+            { woord: "rood staan", uitleg: "Negatief saldo op bankrekening = schuld." },
+            { woord: "saldo", uitleg: "Hoeveel geld er op je rekening staat." },
+            { woord: "rood-stand", uitleg: "Toegestane schuld op rekening (bank betaalt vooruit)." },
+          ],
+          theorie: "Cito-feit financien-uitdrukkingen:\n• **'In de rooie'** = schuld.\n• **'In het zwart'** = winst/positief.\n• **'Op de kleintjes letten'** = zuinig zijn.\n• **'Het regent geld'** = veel verdienen.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Hij stond €200 in de rooie aan het eind van de maand' = hij had €200 schuld bij de bank." },
+            { type: "stap", tekst: "Niet verwarren met 'op rood licht staan' (verkeer) of 'rood worden' (schaamte)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "ROOD = schuld (bank). ZWART = winst. Onthoud die kleur-koppeling." }],
+          niveaus: {
+            basis: "Schulden hebben (negatief saldo). = A.",
+            simpeler: "Je bankrekening staat onder nul = je hebt geld geleend = 'in het rood'. = A.",
+            nogSimpeler: "Schuld = A.",
+          },
+        },
       },
       {
         q: "*'De koe bij de horens vatten'* — wat?",
@@ -152,7 +197,29 @@ const steps = [
         q: "*'Rome is niet op één dag gebouwd'* — wat is les?",
         options: ["Grote dingen kosten tijd", "Geschiedenis", "Reis naar Rome", "Bouwbedrijf"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Klopt.", "Niet primair — het is een SPREEKWOORD, niet feiten.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een spreekwoord?", tekst: "Een **spreekwoord** = korte volkswijsheid met een **les** (moraal). Niet bedoeld als letterlijk feit, maar als algemene WIJSHEID die geldt voor allerlei situaties." },
+            { titel: "De les van dit spreekwoord", tekst: "**'Rome is niet op één dag gebouwd'** betekent: **grote, mooie dingen kosten TIJD + geduld**. De stad Rome werd in eeuwen gebouwd — met al die bouwwerken (Colosseum, paleizen, kerken). Niemand kan dat in een dag." },
+            { titel: "Wanneer gebruiken?", tekst: "Als iemand ongeduldig is over een groot project. Bv:\n• 'Mijn project is nog niet klaar!' → 'Rome is niet op één dag gebouwd, geef het tijd.'\n• Studie van 4 jaar voor diploma: idem.\n• Eigen bedrijf opbouwen: idem." },
+          ],
+          woorden: [
+            { woord: "spreekwoord", uitleg: "Korte wijsheid met les." },
+            { woord: "moraal / les", uitleg: "Wat je leert uit de uitspraak." },
+          ],
+          theorie: "Cito-truc spreekwoord-vragen: zoek de **LES** (= algemene wijsheid), niet de letterlijke woorden. Rome / vogels / boter / koeien zijn maar BEELDEN — de wijsheid is universeel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Andere spreekwoorden over tijd: 'Haastige spoed is zelden goed.' 'Beter laat dan nooit.' 'Geduld is een schone zaak.'" },
+            { type: "stap", tekst: "Engels equivalent: 'Rome wasn't built in a day.' = exact zelfde betekenis." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Spreekwoord = LES = wijsheid voor de toekomst. Niet over Rome zelf, maar over GEDULD bij grote dingen." }],
+          niveaus: {
+            basis: "Grote dingen kosten tijd. = A.",
+            simpeler: "Iets groots maken (project, studie, gebouw) duurt lang — heb geduld. = A.",
+            nogSimpeler: "Tijd nodig = A.",
+          },
+        },
       },
       {
         q: "*'Goedkoop is duurkoop'* — wat?",
