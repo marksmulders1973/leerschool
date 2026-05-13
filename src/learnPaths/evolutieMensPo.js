@@ -55,6 +55,28 @@ const steps = [
         options: ["~300.000 jaar", "1000 jaar", "6000 jaar", "Miljarden jaar"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te kort.", "Te kort.", "Te lang."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Homo sapiens = wij", tekst: "**Homo sapiens** ('wijze mens') is de **wetenschappelijke naam** voor ons soort, de moderne mens. Wij bestaan ongeveer **300.000 jaar** als soort." },
+            { titel: "Waar kwam de soort vandaan?", tekst: "Onze soort ontstond in **Afrika** (vooral oost-Afrika, omgeving Ethiopië/Kenia). Vandaar trokken Homo sapiens ~70.000 jaar geleden de wereld over: Azië, Europa, Amerika, Australië." },
+            { titel: "Voor context: andere tijden", tekst: "• Aarde = **4,5 miljard** jaar oud.\n• Dinosauriërs = ~165 mln jaar geleefd (uitgestorven 66 mln jr terug).\n• Eerste mens-achtigen (hominiden) = ~7 mln jr geleden.\n• Homo sapiens = pas **300.000 jaar**.\nWij zijn dus 'jong' op planeet-tijdschaal." },
+          ],
+          woorden: [
+            { woord: "Homo sapiens", uitleg: "Wetenschappelijke naam moderne mens, 'wijze mens'." },
+            { woord: "soort", uitleg: "Wezens die zich met elkaar kunnen voortplanten." },
+          ],
+          theorie: "Cito-tijdsschalen om te kennen:\n• Aarde: 4,5 mld jr.\n• Dino-tijdperk eindigde: 66 mln jr terug.\n• Mens-aap gemeenschappelijke voorouder: 7 mln jr terug.\n• **Homo sapiens**: **300.000 jr**.\n• Landbouw: 12.000 jr.\n• Schrift: 5.000 jr.",
+          voorbeelden: [
+            { type: "stap", tekst: "6000 jaar = Bijbelse aanname, niet wetenschap." },
+            { type: "stap", tekst: "Miljarden jaar = leeftijd aarde, niet mens." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Homo sapiens = 300.000 jaar. Aarde = 4,5 miljard. Verschil = 15.000x! Wij zijn een klein vlekje in aarde-geschiedenis." }],
+          niveaus: {
+            basis: "~300.000 jaar. = A.",
+            simpeler: "Moderne mens (Homo sapiens) is een vrij jonge soort, ~300.000 jaar. = A.",
+            nogSimpeler: "300.000 jaar = A.",
+          },
+        },
       },
       {
         q: "Wat zijn **dino's** uitgestorven oorzaak?",
@@ -124,6 +146,28 @@ const steps = [
         options: ["Australopithecus-skelet uit Ethiopië 1974", "Eerste mens op maan", "Schilderij", "Auto"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Lucy?", tekst: "**Lucy** is de bijnaam van een beroemd **3,2 miljoen jaar oud skelet** van een **Australopithecus afarensis** — een vroege mens-voorouder. Gevonden in **Ethiopië** in **1974**." },
+            { titel: "Waarom 'Lucy'?", tekst: "De ontdekkers (onder leiding van Donald Johanson) luisterden naar het Beatles-nummer **'Lucy in the Sky with Diamonds'** terwijl ze graven. Vandaar de bijnaam — niet haar echte naam (die kennen we niet)." },
+            { titel: "Waarom belangrijk?", tekst: "Lucy bewees dat **mens-achtigen al rechtop liepen** vóór ze grote hersenen kregen. Hersenen kwamen LATER. Eerste belangrijk bewijs over de mens-evolutie." },
+          ],
+          woorden: [
+            { woord: "Australopithecus", uitleg: "Vroege mens-achtige (4-2 miljoen jaar geleden)." },
+            { woord: "hominide", uitleg: "Familie waar mens + voorouders bij horen." },
+          ],
+          theorie: "Cito-feit Lucy:\n• 3,2 miljoen jaar oud.\n• Ongeveer 1 meter lang.\n• Liep rechtop (bewijs uit bekken + been-botten).\n• Klein brein (~400 cc — vergelijk: moderne mens ~1400 cc).\n• Vrouwelijk skelet, ~25 jaar oud bij overlijden.",
+          voorbeelden: [
+            { type: "stap", tekst: "Lucy is GEEN onze directe voorouder, maar een neefje. Onze stamlijn ging via Homo habilis → Homo erectus → Homo sapiens." },
+            { type: "stap", tekst: "Origineel skelet ligt in het Nationaal Museum van Ethiopië. Replica's wereldwijd." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lucy + Ethiopië + 1974 + Australopithecus = de combinatie. Beroemd skelet, bekendste fossiel mens-voorouder." }],
+          niveaus: {
+            basis: "Lucy = Australopithecus-skelet uit Ethiopië (1974). = A.",
+            simpeler: "3,2 miljoen jaar oud skelet, 1 meter lang, liep al rechtop. Gevonden in 1974, bijnaam uit Beatles-lied. = A.",
+            nogSimpeler: "Lucy = oud skelet Ethiopië = A.",
+          },
+        },
       },
       {
         q: "Wie stierf uit ~40.000 jr geleden?",
@@ -149,6 +193,29 @@ const steps = [
         options: ["Versteende resten oude wezens", "Levende dieren", "Mineralen alleen", "Computers"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn fossielen?", tekst: "**Fossielen** zijn versteende resten van planten of dieren die heel lang geleden leefden. Botten, schelpen, bladafdrukken — alles wat over de tijd is **versteend** in gesteente." },
+            { titel: "Hoe ontstaat een fossiel?", tekst: "1) Dier sterft, valt in modder of slib.\n2) Vlees rot weg, alleen **botten** blijven over.\n3) Modder + zand bedekt langzaam alles.\n4) Over miljoenen jaren **drukt** de aarde dit + **mineralen** vervangen het bot.\n5) Eindresultaat: **steen** in de vorm van het bot." },
+            { titel: "Waarom belangrijk?", tekst: "Fossielen zijn **bewijs** van wat er vroeger leefde. Door **leeftijd te meten** (radiocarbon-dating) weten we wanneer een fossiel uit welke periode komt. Diepere gesteente-laag = ouder fossiel." },
+          ],
+          woorden: [
+            { woord: "fossiel", uitleg: "Versteende rest van oud organisme." },
+            { woord: "radiocarbon-dating", uitleg: "Methode om leeftijd van organisch materiaal te meten." },
+            { woord: "paleontologie", uitleg: "Wetenschap die fossielen bestudeert." },
+          ],
+          theorie: "Cito-feit beroemde fossielen:\n• **Tyrannosaurus rex** (65 mln jr)\n• **Archaeopteryx** (150 mln jr, tussen reptiel + vogel)\n• **Lucy** (Australopithecus, 3,2 mln jr)\n• **Tiktaalik** (375 mln jr, tussen vis + landdier)\n• **Ötzi** (de IJsman, 5300 jr, intact in Alpen-gletsjer).",
+          voorbeelden: [
+            { type: "stap", tekst: "Ammonieten (versteende schelpen) zijn populair in geologie-musea." },
+            { type: "stap", tekst: "Niet álle wezens worden fossiel. Vereist speciale omstandigheden — vlak terrein + snel bedekt + mineralen-rijk water." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Fossiel = STEEN in vorm van oud dier/plant. Niet levend, niet plastic. Vereist miljoenen jaren om te vormen." }],
+          niveaus: {
+            basis: "Versteende resten van oude wezens. = A.",
+            simpeler: "Botten + schelpen van lang geleden, nu versteend in gesteente. = A.",
+            nogSimpeler: "Versteende botten = A.",
+          },
+        },
       },
       {
         q: "Hoe oud is **aarde**?",
