@@ -132,6 +132,27 @@ const steps = [
         options: ["Noord (N)", "Oost (O)", "Zuid (Z)", "West (W)"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Rechts staat oost.", "Onder staat zuid.", "Links staat west."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Kompasroos = vier richtingen", tekst: "Op elke landkaart staat een kompasroos: een symbool met vier letters die de richtingen aanwijzen." },
+            { titel: "Boven = Noord", tekst: "Bijna altijd staat Noord (N) BOVEN op de kaart. Zuid (Z) onder, Oost (O) rechts, West (W) links." },
+            { titel: "Onthouden", tekst: "Klok-volgorde: Noord (12 uur) → Oost (3 uur) → Zuid (6 uur) → West (9 uur)." },
+          ],
+          woorden: [
+            { woord: "Noord (N)", uitleg: "Boven op de kaart." },
+            { woord: "Oost (O)", uitleg: "Rechts op de kaart." },
+            { woord: "Zuid (Z)", uitleg: "Onder op de kaart." },
+            { woord: "West (W)", uitleg: "Links op de kaart." },
+          ],
+          theorie: "Bij elke kaart eerst kompas zoeken. Soms staat alleen pijl met 'N' — die wijst naar Noord. Niet altijd staat N omhoog, maar bijna altijd.",
+          voorbeelden: [{ type: "stap", tekst: "Nederland op kaart: Noord = Groningen, Zuid = Maastricht, Oost = Twente, West = Amsterdam/Den Haag." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "NOZW = met de klok mee, beginnend bij Noord (boven)." }],
+          niveaus: {
+            basis: "Boven kaart = Noord. Klok-volgorde: N → O → Z → W.",
+            simpeler: "Noord = omhoog. Zuid = omlaag. Oost = rechts. West = links.",
+            nogSimpeler: "Boven = N!",
+          },
+        },
       },
       {
         q: "In welk **kaartvak** ligt een stad? *'Vak C3'* betekent ...",
@@ -347,6 +368,28 @@ const steps = [
         options: ["37,5%", "30%", "50%", "60%"],
         answer: 0,
         wrongHints: [null, "Klopt — 30/80 × 100 = 37,5%.", "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: bereken het verschil", tekst: "Van 80 lezers naar 50 lezers. Verschil = 80 − 50 = **30** lezers afname." },
+            { titel: "Stap 2: deel door beginwaarde", tekst: "% afname meet je tov het BEGIN (80, niet 50). Dus: 30 ÷ 80." },
+            { titel: "Stap 3: maal 100 voor procent", tekst: "30 ÷ 80 = 0,375. Maal 100 = **37,5%**." },
+          ],
+          woorden: [
+            { woord: "% afname", uitleg: "Hoeveel procent minder dan het begin." },
+            { woord: "beginwaarde", uitleg: "Het aantal aan het begin (hier 80) — altijd hierdoor delen." },
+          ],
+          theorie: "Formule % afname: (verschil ÷ beginwaarde) × 100. Bij toename idem: (verschil ÷ beginwaarde) × 100. Altijd delen door BEGIN, niet door eindwaarde.",
+          voorbeelden: [
+            { type: "stap", tekst: "Van 100 → 80: verschil 20. 20/100 = 0,20 = 20% afname." },
+            { type: "stap", tekst: "Van 50 → 60: verschil 10. 10/50 = 0,20 = 20% toename." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-truc", uitleg: "Vraag altijd: 'gedeeld door welke waarde?' → de BEGIN-waarde. Niet de kleinste." }],
+          niveaus: {
+            basis: "% afname = (verschil ÷ beginwaarde) × 100.",
+            simpeler: "30 lezers minder van 80. 30/80 = 0,375 = 37,5%.",
+            nogSimpeler: "Verschil delen door start, dan × 100.",
+          },
+        },
       },
       {
         q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. **Rest**?",
@@ -673,6 +716,29 @@ const steps = [
         options: ["Volgorde 1+2 omgedraaid (recept eerst)", "Stap 4 fout", "Niets fout", "Stap 3"],
         answer: 0,
         wrongHints: [null, "Klopt — recept lezen vóór ingrediënten kopen.", "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Logische volgorde", tekst: "Een stappenplan moet in logische volgorde. Stap 1 moet kunnen WAT MOGELIJK is zonder de andere stappen." },
+            { titel: "Recept eerst lezen", tekst: "Hoe weet je WELKE ingrediënten je nodig hebt? Pas als je het RECEPT hebt gelezen. Dus: recept → ingrediënten → mengen → bakken." },
+            { titel: "Cito-truc: doe het in je hoofd", tekst: "Loop het stappenplan in je hoofd na alsof je het zelf gaat doen. Bij elke stap: 'kan ik dit nu? Of moet er iets eerder?' Dan zie je de fout." },
+          ],
+          woorden: [
+            { woord: "stappenplan", uitleg: "Lijstje stappen om iets te doen, in volgorde." },
+            { woord: "volgorde", uitleg: "Welke stap eerst, welke daarna." },
+          ],
+          theorie: "Cito-vraag: stappenplannen worden vaak gegeven met 1 fout in de volgorde. Lees ze één voor één en denk: 'kan dit pas NA stap X?' Dan moet stap X eerst.",
+          voorbeelden: [
+            { type: "stap", tekst: "Goed: Recept → Ingrediënten → Mengen → Bakken." },
+            { type: "stap", tekst: "Fout: Ingrediënten → Recept → ... — want zonder recept weet je niet wat je moet kopen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag bij elke stap: 'wat heb ik HIERVOOR nodig?' Dat moet ervoor staan." },
+          ],
+          niveaus: {
+            basis: "Stap met fout = stap die op de verkeerde plek staat in de volgorde.",
+            simpeler: "Recept eerst lezen, anders weet je niet wat je nodig hebt.",
+            nogSimpeler: "Bedenk volgorde: wat eerst?",
+          },
+        },
       },
       {
         q: "In boomdiagram 'Vervoer → Auto / Trein / Fiets' — wat **mist**?",

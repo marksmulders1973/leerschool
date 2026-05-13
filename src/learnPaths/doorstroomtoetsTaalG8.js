@@ -491,6 +491,28 @@ const steps = [
         options: ["Reden / oorzaak", "Gevolg", "Tegenstelling", "Voorbeeld"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Gevolg = 'daardoor'.", "Tegenstelling = 'maar'.", "Voorbeeld = 'bijvoorbeeld'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is 'omdat'?", tekst: "'Omdat' geeft de REDEN waarom iets gebeurt. Het verbindt 2 zinnen: het gevolg + de reden." },
+            { titel: "Voorbeeld", tekst: "'Ik blijf thuis OMDAT ik ziek ben.' → thuis blijven = gevolg, ziek = reden." },
+            { titel: "Verschil met 'daardoor'", tekst: "'Omdat' staat vóór de reden. 'Daardoor' staat vóór het gevolg. Verschillende kant!" },
+          ],
+          woorden: [
+            { woord: "omdat", uitleg: "Geeft REDEN aan (wat ervoor zorgt)." },
+            { woord: "daardoor", uitleg: "Geeft GEVOLG aan (wat erna komt)." },
+          ],
+          theorie: "Cito-vraag: lees de zin goed. Wat komt er NA 'omdat'? Dat is de reden. Bij 'daardoor' komt het gevolg.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Tom won de wedstrijd OMDAT hij goed oefende.' → reden = goed oefenen." },
+            { type: "stap", tekst: "'Tom oefende goed. DAARDOOR won hij.' → gevolg = winnen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Omdat = waarom? Daardoor = wat gebeurt er dan?" }],
+          niveaus: {
+            basis: "'Omdat' = de REDEN. 'Daardoor' = het GEVOLG.",
+            simpeler: "Omdat hij ziek IS → reden. Daardoor blijft hij THUIS → gevolg.",
+            nogSimpeler: "Omdat = waarom. Daardoor = dus.",
+          },
+        },
       },
       {
         q: "Signaalwoord **'daardoor'** introduceert?",
@@ -642,6 +664,28 @@ const steps = [
         options: ["zonnebloem", "zonne bloem", "zon en bloem", "zonn-bloem"],
         answer: 0,
         wrongHints: [null, "Klopt — aan elkaar = 1 woord.", "Spatie = fout — moet aan elkaar.", "Met 'en' = geen samenstelling.", "Streepje hier niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een samenstelling?", tekst: "Een samenstelling is een nieuw woord dat je maakt door 2 woorden AAN ELKAAR te schrijven." },
+            { titel: "Aan elkaar, geen spatie", tekst: "'zonnebloem' = zon + bloem aan elkaar. NIET met spatie. NIET met streepje. NIET met 'en'." },
+            { titel: "Voorbeelden", tekst: "tandenborstel, schooltas, fietsstuur, brandweerwagen — allemaal 2+ woorden vastgeplakt." },
+          ],
+          woorden: [
+            { woord: "samenstelling", uitleg: "Twee woorden samen één nieuw woord." },
+            { woord: "tussen-n", uitleg: "Vaak een -n tussen: zonNebloem, pannenkoek, boekenkast." },
+          ],
+          theorie: "Cito-regel: bij samenstellingen NOOIT spatie. 'pannen koek' = fout. 'pannenkoek' = goed. Engels gebruikt vaak spaties (ice cream), Nederlands plakt vast.",
+          voorbeelden: [
+            { type: "stap", tekst: "huis + deur → huisdeur (1 woord)." },
+            { type: "stap", tekst: "school + tas → schooltas (1 woord)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: kan ik het ook als 1 begrip lezen? Ja → aan elkaar." }],
+          niveaus: {
+            basis: "Samenstelling = 2 woorden vast aan elkaar, geen spatie.",
+            simpeler: "zon + bloem = zonnebloem. Geen spatie. Geen streepje.",
+            nogSimpeler: "Plak ze vast: 1 woord!",
+          },
+        },
       },
       {
         q: "Welke zin is **goed**?",
@@ -779,12 +823,57 @@ const steps = [
         options: ["De kat", "Slaapt", "De", "Slaapt de kat"],
         answer: 0,
         wrongHints: [null, "Klopt — wie/wat doet de actie?", "Dat is het werkwoord.", "Lidwoord alleen.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is het onderwerp?", tekst: "Het onderwerp is **wie of wat de actie doet**. Vraag: 'Wie/wat slaapt?' → de kat." },
+            { titel: "Truc: zet het werkwoord vóór", tekst: "Pak het werkwoord (slaapt) en vraag: 'Slaapt WIE?' Het antwoord is het onderwerp." },
+            { titel: "Inclusief lidwoord", tekst: "'De kat' is samen het onderwerp — niet alleen 'kat'. Lidwoord (de/het/een) hoort erbij." },
+          ],
+          woorden: [
+            { woord: "onderwerp", uitleg: "Wie/wat doet de actie." },
+            { woord: "werkwoord", uitleg: "De actie zelf (slaapt, rent, eet)." },
+            { woord: "lidwoord", uitleg: "de, het, een — hoort bij het onderwerp." },
+          ],
+          theorie: "Cito-tip: 'Wie of wat + werkwoord?' is de onderwerps-vraag. Antwoord = onderwerp. 'De kat slaapt' → 'Wie slaapt?' → de kat.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Lisa rent.' → Wie rent? → Lisa." },
+            { type: "stap", tekst: "'De auto rijdt.' → Wat rijdt? → de auto." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onderwerp staat meestal vooraan de zin. Werkwoord komt erna." }],
+          niveaus: {
+            basis: "Onderwerp = wie/wat de actie doet.",
+            simpeler: "'De kat slaapt' → Wie slaapt? De kat. Dát is het onderwerp.",
+            nogSimpeler: "Wie? = onderwerp.",
+          },
+        },
       },
       {
         q: "Wat is het **werkwoord** in 'Lisa rent hard'?",
         options: ["rent", "Lisa", "hard", "Geen"],
         answer: 0,
         wrongHints: [null, "Klopt — actie-woord.", "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een werkwoord?", tekst: "Een werkwoord is het **actie-woord** in de zin: wat gebeurt er? (rent, slaapt, eet, leest)." },
+            { titel: "Truc: 'wat doet hij/zij?'", tekst: "Stel de vraag: 'wat doet Lisa?' → rent. Dat is het werkwoord." },
+            { titel: "Niet bijwoord", tekst: "'hard' beschrijft HOE Lisa rent — geen werkwoord, maar een bijwoord." },
+          ],
+          woorden: [
+            { woord: "werkwoord", uitleg: "Actie (rent, slaapt). Eindigt vaak op -t (bij hij/zij/het)." },
+            { woord: "bijwoord", uitleg: "Beschrijft HOE iets gebeurt (hard, snel, langzaam)." },
+          ],
+          theorie: "Cito-tip: 'Wat doet [onderwerp]?' is de werkwoord-vraag. Antwoord = werkwoord. 'Lisa rent hard' → Wat doet Lisa? → rent.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Tom leest.' → wat doet Tom? → leest." },
+            { type: "stap", tekst: "'De kat eet snel.' → wat doet de kat? → eet. ('snel' = hoe = bijwoord)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Werkwoord = ding dat je kunt DOEN. Rennen kun je doen. 'Hard' kun je niet doen." }],
+          niveaus: {
+            basis: "Werkwoord = actie-woord (rent, slaapt, eet).",
+            simpeler: "Vraag 'wat doet hij?'. Antwoord = werkwoord.",
+            nogSimpeler: "Werkwoord = doen!",
+          },
+        },
       },
       {
         q: "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
