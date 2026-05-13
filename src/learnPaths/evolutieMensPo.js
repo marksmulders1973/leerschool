@@ -247,6 +247,81 @@ const steps = [
       { q: "Hoe oud is **aarde**?", options: ["~4,5 miljard jr", "6000", "1 miljoen", "Eeuwig"], answer: 0, wrongHints: [null, "Klopt.", "Religieus.", "Te kort.", "Wel ouderdom."] },
       { q: "**5e massa-uitsterving** = ?", options: ["Krijt 66 mln (dino's weg)", "Mens nu", "Geen ramp", "Vulkaan"], answer: 0, wrongHints: [null, "Klopt.", "6e (huidige).", "Wel ramp.", "Wel bijdrage."] },
       { q: "Hoeveel **mens-chimpansee DNA** overeenkomst?", options: ["~98,8%", "10%", "0%", "50%"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Wel.", "Te weinig."] },
+      {
+        q: "Wat zijn **fossielen**?",
+        options: ["Versteende resten van leven uit het verleden", "Stenen die zelf groeien", "Bot-modellen die wetenschappers maken", "Foto's van dieren"],
+        answer: 0,
+        wrongHints: [null, "Klopt — bot/schelp/blad dat over duizenden jaren in steen veranderde.", "Niet — stenen groeien niet.", "Niet — fossielen zijn ECHTE resten.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een fossiel?", tekst: "Een **fossiel** is een **versteende rest** van een organisme dat lang geleden leefde. Botten, tanden, schelpen, soms zelfs poot-afdrukken of bladeren — kunnen miljoenen jaren behouden blijven in gesteente." },
+            { titel: "Hoe ontstaan ze?", tekst: "1. Dier sterft, wordt **snel begraven** (zand, slik, vulkanische as).\n2. Zachte delen (vlees) verteren weg.\n3. Harde delen (bot, schelp, tand) **versteenen** langzaam — mineralen vervangen het oorspronkelijke materiaal.\n4. Miljoenen jaren later: aardlagen erosie → fossiel komt aan oppervlakte." },
+            { titel: "Waarom belangrijk voor evolutie?", tekst: "Fossielen tonen welke dieren wanneer leefden = **directe bewijslijn evolutie**.\n• Trilobieten 500 mln jaar terug\n• Dinosauriërs 230-66 mln jaar terug\n• Mens-voorouders 7 mln jaar terug\nWetenschappers vergelijken fossielen om afstammingslijnen te reconstrueren." },
+          ],
+          woorden: [
+            { woord: "fossiel", uitleg: "Versteende rest van leven uit het verleden." },
+            { woord: "paleontoloog", uitleg: "Wetenschapper die fossielen bestudeert." },
+            { woord: "versteend", uitleg: "Bot/schelp dat door mineralen langzaam in steen is veranderd." },
+          ],
+          theorie: "Cito-feitjes fossielen:\n• **Lucy** (Ethiopië 1974) = fossiel van Australopithecus, ~3,2 mln jaar oud\n• **Trex-skelet 'Sue'** = beroemd dino-fossiel\n• **Naturalis Leiden** heeft groot NL-fossiel-museum\n• Fossielen worden gedateerd met **koolstof-14 methode** (tot 50.000 jaar) en uranium-methode (oudere)",
+          voorbeelden: [
+            { type: "feit", tekst: "In Limburg vinden mensen fossielen van zeedieren — vroeger lag NL onder zee." },
+            { type: "feit", tekst: "Mammoet-fossielen worden in Siberische ijslagen gevonden — soms compleet met huid + haar." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alle leven fossileert", uitleg: "Alleen dieren in juiste condities (begraven in zand/slik) worden fossiel. Veruit het meeste leven verdween spoorloos." }],
+          niveaus: { basis: "Versteende rest = A.", simpeler: "Fossielen zijn dode dieren/planten die over miljoenen jaren in steen veranderden. Wetenschappers vinden ze in oude aardlagen. = A.", nogSimpeler: "Versteend = A." },
+        },
+      },
+      {
+        q: "**Natuurlijke selectie** — wat is dat?",
+        options: ["Dieren die best aangepast zijn aan omgeving krijgen meeste nakomelingen", "Wetenschappers kiezen welke dieren leven", "Mensen fokken dieren", "Toeval"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Darwin's kernidee 1859.", "Niet — gebeurt zonder menselijke keuze.", "Dat is FOKKEN (artificiële selectie), niet natuurlijk.", "Niet helemaal toeval — selectie heeft richting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Darwin's basis-idee", tekst: "**Natuurlijke selectie** is het mechanisme dat **evolutie aandrijft**. Het werkt zo:\n1. In een soort zijn dieren **niet allemaal identiek** (variatie).\n2. Sommige variaties geven **betere overlevingskansen** in hun omgeving.\n3. Die dieren krijgen **meer nakomelingen**.\n4. Die nakomelingen erven de gunstige eigenschappen.\n5. Over generaties verandert de soort." },
+            { titel: "Voorbeeld: peper-vlinder", tekst: "**Bekend Cito-voorbeeld** (Engeland 1800):\n• Vóór industriële revolutie: lichte vlinders camoufleerden op witte berkenboomstammen — overleefden.\n• Industriële revolutie: roet maakte boomstammen zwart — donkere vlinders overleefden, lichte werden opgegeten.\n• Donkere variant werd dominant. **Natuurlijke selectie in actie**, binnen 50 jaar." },
+            { titel: "Cito-instinker: vs. fokken", tekst: "**Natuurlijke selectie** = natuur zelf doet het, geen menselijke keuze.\n**Artificiële selectie / fokken** = mensen kiezen welke dieren paren (rashonden, koeien voor melk).\nBeide veranderen soorten, maar de drijver is anders." },
+          ],
+          woorden: [
+            { woord: "natuurlijke selectie", uitleg: "Best aangepaste dieren overleven en krijgen meeste nakomelingen." },
+            { woord: "variatie", uitleg: "Verschillen binnen een soort (kleur, grootte, gedrag)." },
+            { woord: "aanpassing", uitleg: "Eigenschap die overlevingskans verhoogt in een specifieke omgeving." },
+          ],
+          theorie: "Darwin's 4 voorwaarden voor natuurlijke selectie:\n1. Er moet **variatie** zijn binnen een soort\n2. Variatie moet **erfelijk** zijn (van ouders naar kinderen)\n3. Er moet **strijd om bronnen** zijn (voedsel, partners, ruimte)\n4. Sommige variaties geven **voordeel** in die strijd\n\nAls alle 4 aanwezig: evolutie GEBEURT, automatisch.",
+          voorbeelden: [
+            { type: "feit", tekst: "Antibiotica-resistente bacteriën = natuurlijke selectie binnen WEKEN — bacteriën die antibioticum overleven planten zich voort." },
+            { type: "feit", tekst: "Galápagos-vinken (door Darwin bestudeerd) — verschillende snavels per eiland afhankelijk van wat er te eten was." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'sterkste'", uitleg: "Vaak misvatting: 'survival of the fittest' = sterkste. Eigenlijk: best AANGEPASTE — kan kleiner, sneller, slimmer of beter gecamoufleerd zijn." }],
+          niveaus: { basis: "Best aangepast krijgt meer kinderen. = A.", simpeler: "Natuurlijke selectie: dieren die beter passen bij hun omgeving overleven en krijgen meer nakomelingen. Hun voordelen erven over. Soort verandert langzaam. = A.", nogSimpeler: "Beste passende wint = A." },
+        },
+      },
+      {
+        q: "**Wij (Homo sapiens) bestaan ongeveer hoe lang**?",
+        options: ["~300.000 jaar", "1 miljoen jaar", "10.000 jaar", "100 jaar"],
+        answer: 0,
+        wrongHints: [null, "Klopt — oudste sapiens-fossielen Marokko ~300.000 jr (2017 ontdekking).", "Te lang — eerdere Homo-soorten leefden tot 1 mln jr terug.", "Te kort — dat is sinds landbouw.", "Veel te kort — heel de menselijke beschaving past niet in 100 jr."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tijdlijn menselijke evolutie", tekst: "• **Australopithecus (Lucy)**: 4-2 mln jr terug — eerste rechtoplopende voorouder\n• **Homo habilis**: 2,3-1,5 mln jr — eerste gereedschap-makers\n• **Homo erectus**: 2 mln-110.000 jr — verspreidde Afrika → Azië/Europa\n• **Homo neanderthalensis**: 400.000-40.000 jr — Europese tak\n• **Homo sapiens (wij)**: **~300.000 jaar tot nu** — Afrikaanse oorsprong" },
+            { titel: "Oudste sapiens-fossiel", tekst: "In **2017** werden in **Jebel Irhoud, Marokko** fossielen gevonden van ~300.000 jaar oud. Voor die ontdekking dachten we 200.000 jr. Onze soort is dus iets ouder dan we lang geloofden." },
+            { titel: "Cito-perspectief: hoe klein 300.000 jaar is", tekst: "**Aarde**: 4.500.000.000 jaar (4,5 miljard)\n**Leven**: 3.500.000.000 jaar\n**Dinosauriërs**: 230-66 mln jr\n**Homo sapiens**: 300.000 jaar\nVergelijking: als de aarde 1 jaar bestond, zou Homo sapiens er pas in de **laatste 35 minuten** zijn." },
+          ],
+          woorden: [
+            { woord: "Homo sapiens", uitleg: "Onze soort. Wetenschappelijke naam, Latijn voor 'wijze mens'." },
+            { woord: "Australopithecus", uitleg: "Vroege mensachtige (4-2 mln jr terug), eerste rechtoplopende voorouder." },
+            { woord: "geologische tijd", uitleg: "Aardgeschiedenis verdeeld in tijdperken (Krijt, Jura, etc.). Gebruikt mln en mlrd jaren." },
+          ],
+          theorie: "Belangrijke fossiel-ontdekkingen om te kennen voor Cito:\n• **Lucy** (1974, Ethiopië) — Australopithecus, 3,2 mln jr\n• **Turkana Boy** (1984, Kenia) — Homo erectus, 1,6 mln jr\n• **Jebel Irhoud sapiens** (2017, Marokko) — oudste H. sapiens, 300.000 jr\n• **Neanderthal-fossielen** Duitsland 1856 — eerste niet-sapiens-mens ontdekt",
+          voorbeelden: [
+            { type: "feit", tekst: "Mensen + Neanderthalers paarden tussen 50.000-40.000 jr terug. Niet-Afrikanen hebben ~1-4% Neanderthal-DNA." },
+            { type: "feit", tekst: "Beschaving (landbouw, dorpen) = 10.000 jr — slechts 3% van sapiens-bestaan." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 1 miljoen jr", uitleg: "Verwarring: eerdere Homo-soorten (erectus) bestaan 1+ mln jr, maar Homo SAPIENS specifiek = 300.000 jr." }],
+          niveaus: { basis: "~300.000 jaar. = A.", simpeler: "Homo sapiens (onze soort) bestaat ongeveer 300.000 jaar. Eerdere Homo-soorten zijn ouder. = A.", nogSimpeler: "300.000 = A." },
+        },
+      },
     ],
   },
 ];
