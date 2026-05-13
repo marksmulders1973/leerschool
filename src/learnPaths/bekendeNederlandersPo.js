@@ -247,6 +247,100 @@ const steps = [
       { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte (langste ooit)", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Klopt.", "Eerder.", "Eerder.", "Eerder."] },
       { q: "Wie ontwierp **Fokker-vliegtuigen**?", options: ["Anthony Fokker", "Slat", "Cruijff", "Verstappen"], answer: 0, wrongHints: [null, "Klopt.", "Ocean Cleanup.", "Voetbal.", "F1."] },
       { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Klopt — vóór hem ~123 jaar koninginnen.", "Te recent gekroond.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
+      {
+        q: "Wie schreef **Max Havelaar** (1860) — boek tegen koloniale uitbuiting?",
+        options: ["Multatuli (Eduard Douwes Dekker)", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Multatuli was pseudoniem ('ik heb veel gedragen').", "Andere periode — 2e Wereldoorlog dagboek.", "Andere generatie — na 1945.", "Kinderboeken (Jip & Janneke)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Multatuli?", tekst: "**Multatuli** is het pseudoniem (= schuilnaam) van **Eduard Douwes Dekker** *(1820-1887)*. Werkte als bestuurder in Nederlands-Indië, zag uitbuiting van Javanen door koloniaal systeem." },
+            { titel: "Wat is 'Max Havelaar'?", tekst: "Boek uit **1860**. Roman, gebaseerd op Dekker's eigen ervaring. Max Havelaar is de hoofdpersoon — koloniaal bestuurder die zich verzet tegen onrecht. Schokte Nederland en startte het debat over Indonesische onafhankelijkheid." },
+            { titel: "Cito-feitje", tekst: "Pseudoniem 'Multatuli' komt uit Latijn: 'multa tuli' = 'ik heb veel gedragen'. Belangrijk schoolvak: dit is **één van de bekendste NL-boeken ooit** en wordt vaak getoetst. Heden ten dage is 'Max Havelaar' ook het Fair-Trade-keurmerk-logo (zelfde naam)." },
+          ],
+          woorden: [
+            { woord: "pseudoniem", uitleg: "Andere naam waaronder een schrijver/artiest publiceert." },
+            { woord: "Nederlands-Indië", uitleg: "Nederlandse kolonie (1816-1945), nu Indonesië." },
+            { woord: "koloniaal systeem", uitleg: "Land bezet en uitbuit een ander land. NL deed dit eeuwenlang in Indonesië, Suriname, Caribische eilanden." },
+          ],
+          theorie: "Belangrijke NL-schrijvers per tijdvak:\n• 1600 — **P.C. Hooft** (Gouden Eeuw poëzie)\n• 1700 — **Justus van Effen** (essay)\n• 1860 — **Multatuli** (Max Havelaar, koloniale kritiek)\n• 1947 — **Anne Frank** (dagboek, WO2)\n• 1950-2000 — **Willem Frederik Hermans, Reve, Mulisch** (Grote Drie)\n• Kinderboeken NL: **Annie M.G. Schmidt** (Jip & Janneke, Pluk)",
+          voorbeelden: [
+            { type: "feit", tekst: "Multatuli wordt vaak vergeleken met 'Uncle Tom's Cabin' uit Amerika — beide boeken over kolonialisme/slavernij die de publieke opinie veranderden." },
+          ],
+          basiskennis: [{ onderwerp: "Niet Anne Frank", uitleg: "Anne Frank schreef DAGBOEK (1942-1944), niet een roman. Andere periode (WO2)." }],
+          niveaus: { basis: "Multatuli. = A.", simpeler: "Multatuli is de schuilnaam van Eduard Douwes Dekker. Schreef Max Havelaar (1860) over uitbuiting Indonesië. = A.", nogSimpeler: "Multatuli = A." },
+        },
+      },
+      {
+        q: "**Boyan Slat** — wat doet hij?",
+        options: ["Ocean Cleanup — plastic uit zeeën halen", "F1-coureur", "Voetballer", "Politicus"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Slat (geb. 1994) bedacht The Ocean Cleanup met 18 jaar.", "Andere jongere — Max Verstappen.", "Andere sport.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie is Boyan Slat?", tekst: "Boyan Slat (geboren **1994**) is een **Nederlandse uitvinder**. Begon **The Ocean Cleanup** op zijn 18e — bedrijf dat plastic uit oceanen verwijdert met grote drijvende systemen." },
+            { titel: "Wat doet The Ocean Cleanup?", tekst: "• In **oceanen** (vooral Great Pacific Garbage Patch) — drijvende U-vormige systemen die plastic verzamelen\n• In **rivieren** — Interceptors vangen plastic voordat het de zee bereikt\n• 100+ rivieren wereldwijd in actie sinds 2019" },
+            { titel: "Cito-feitje", tekst: "Slat is een **moderne Nederlandse held** — wordt vaak in Cito-onderwijs genoemd als voorbeeld van milieu-innovatie. Zijn TED-talk in 2012 (toen 18 jaar) ging viraal. In 2022 NL-Onderscheiding ontvangen." },
+          ],
+          woorden: [
+            { woord: "Ocean Cleanup", uitleg: "Nederlandse non-profit, opgericht 2013. Doel: 90% plastic uit oceanen tegen 2040." },
+            { woord: "Interceptor", uitleg: "Slat's rivierfilter — zonne-aangedreven schip dat plastic uit rivieren vist voor het zee bereikt." },
+          ],
+          theorie: "Beroemde moderne NL-vernieuwers:\n• **Boyan Slat** (1994) — Ocean Cleanup\n• **Bas Lansdorp** (1977) — Mars One initiatief\n• **Wouter Kaalverink** (architect duurzaam)\n• Diverse start-ups uit TU Delft / Eindhoven\nCito test vaak op 'wie deed wat?' bij moderne NL-figuren.",
+          voorbeelden: [
+            { type: "feit", tekst: "Ocean Cleanup heeft tot 2025+ ~330.000 kg plastic verwijderd uit Great Pacific Garbage Patch." },
+          ],
+          basiskennis: [{ onderwerp: "Jong + impact", uitleg: "Slat is voorbeeld van 'jong + grote impact'. Inspirerend voor Cito-leerlingen." }],
+          niveaus: { basis: "Ocean Cleanup. = A.", simpeler: "Boyan Slat is Nederlandse uitvinder van The Ocean Cleanup — plastic uit oceanen halen. = A.", nogSimpeler: "Ocean Cleanup = A." },
+        },
+      },
+      {
+        q: "**Anne Frank** — wat is ze beroemd door?",
+        options: ["Haar dagboek uit de onderduiktijd WO2", "Schilderingen", "Politiek leider", "Sport-prestaties"],
+        answer: 0,
+        wrongHints: [null, "Klopt — schreef dagboek in onderduik 1942-1944 in Amsterdam.", "Niet — was schoolmeisje.", "Niet — was joods slachtoffer, geen politicus.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Anne Frank?", tekst: "**Anne Frank** *(1929-1945)* was een **joods meisje** dat tijdens de Tweede Wereldoorlog ondergedoken zat in Amsterdam aan de **Prinsengracht 263** (nu Anne Frank Huis museum). Schreef daar haar dagboek." },
+            { titel: "Het dagboek", tekst: "Schreef van haar 13e tot 15e in een rood-geblokt dagboekje. Gaf het de naam **'Kitty'** alsof ze een vriendin aansprak. Behandelt onderduikleven, gezinsproblemen, eerste liefde, hoop op vrijheid. Vader Otto Frank publiceerde het na de oorlog (1947)." },
+            { titel: "Cito-feitje + erfgoed", tekst: "Het Anne Frank-dagboek is in **70+ talen** vertaald — een van de meest gelezen boeken ooit. Anne werd verraden in **augustus 1944**, gedeporteerd naar Bergen-Belsen waar ze begin **1945** stierf aan vlektyfus, vlak vóór de bevrijding. Symbool wereldwijd voor slachtoffers van de Holocaust." },
+          ],
+          woorden: [
+            { woord: "onderduiken", uitleg: "Zich verbergen voor vervolging (in WO2 vooral joden voor nazi's)." },
+            { woord: "Holocaust", uitleg: "Systematische moord op ~6 miljoen joden door nazi-Duitsland tijdens WO2." },
+            { woord: "Achterhuis", uitleg: "Naam van Anne's dagboek-uitgave + naam van het schuilhuis." },
+          ],
+          theorie: "WO2 Nederland-kerntermen:\n• **1940 mei** — Duitse inval NL\n• **1941-1944** — vervolging joden, deportaties\n• **1944 'Hongerwinter'** — extreme honger in west-NL\n• **1945 mei** — bevrijding\n• ~104.000 NL-joden vermoord (75% van NL-joden vóór WO2)\n• Anne Frank = symbool voor allen die niet meer konden vertellen.",
+          voorbeelden: [
+            { type: "feit", tekst: "Anne Frank Huis is een van de meest bezochte musea NL (1+ miljoen bezoekers/jaar)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet leider, slachtoffer", uitleg: "Anne was 13-15 jaar, geen politicus. Symbool door haar persoonlijk perspectief." }],
+          niveaus: { basis: "Dagboek WO2. = A.", simpeler: "Anne Frank schreef dagboek tijdens onderduik in WO2 — joods meisje, vermoord in concentratiekamp 1945. = A.", nogSimpeler: "Dagboek = A." },
+        },
+      },
+      {
+        q: "**Max Verstappen** — beroemd om?",
+        options: ["F1-coureur (wereldkampioen 2021-2024)", "Voetballer", "Tennisser", "Schaatsers"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 4× wereldkampioen Formule 1.", "Andere sport.", "Andere sport.", "Andere sport."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie is Max Verstappen?", tekst: "**Max Verstappen** (geboren **1997** in Hasselt, België) is een Nederlands-Belgische **Formule 1-coureur**. Rijdt sinds 2015 in de F1, tegenwoordig voor Red Bull Racing. Jongste F1-winnaar ooit (Spanje 2016, 18 jaar oud)." },
+            { titel: "Wereldkampioen-jaren", tekst: "Verstappen werd **wereldkampioen F1 in 2021, 2022, 2023, 2024** — vier opeenvolgende titels. Sinds 2024 is hij **één van de meest succesvolle NL-sporters** ooit." },
+            { titel: "Cito-feitje familie", tekst: "Max's vader is **Jos Verstappen** (ook ex-F1-coureur), moeder is **Sophie Kumpen** (Belgisch karting-talent). Reden waarom hij Nederlands EN Belgisch paspoort kreeg. Officieel rijdt hij voor **Nederland** (oranje shirt + Wilhelmus bij podium)." },
+          ],
+          woorden: [
+            { woord: "Formule 1", uitleg: "Hoogste klasse autoraces wereldwijd. 20+ races per jaar, exclusief talent." },
+            { woord: "wereldkampioen", uitleg: "Coureur met meeste punten over hele F1-seizoen." },
+          ],
+          theorie: "Grote NL-sporthelden modern (2000-heden):\n• **Max Verstappen** — F1 (4× WK)\n• **Sven Kramer** — schaatsen (3× Olympisch goud)\n• **Ireen Wüst** — schaatsen (meeste OS-medailles ooit, 13 stuks)\n• **Lieke Martens** — voetbal (WK-finale 2019)\n• **Robin van Persie** — voetbal (kop in WK 2014)\n• **Dafne Schippers** — atletiek (2× WK 200m)",
+          voorbeelden: [
+            { type: "feit", tekst: "Verstappen won zijn eerste race meteen bij zijn debuut voor Red Bull in 2016 — uniek in F1-historie." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen Cruijff", uitleg: "Bij 'grootste NL-sporter ooit' debatteren mensen: Cruijff (voetbal), Verstappen (F1), Wüst (schaatsen). Cito vraagt zelden 'wie is grootste' — wel 'wie won wat'." }],
+          niveaus: { basis: "F1. = A.", simpeler: "Max Verstappen = Nederlandse F1-coureur, 4× wereldkampioen 2021-2024. = A.", nogSimpeler: "F1 = A." },
+        },
+      },
     ],
   },
 ];
