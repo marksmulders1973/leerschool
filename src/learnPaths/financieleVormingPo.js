@@ -193,12 +193,58 @@ const steps = [
         options: ["Extra geld dat je krijgt over je spaargeld", "Belasting", "Boete", "Korting"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Belasting is iets anders.", "Niet boete.", "Niet korting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Rente = beloning voor sparen", tekst: "**Rente** is een **percentage extra geld** dat je krijgt van de **bank** als jij geld bij hen bewaart. Een soort 'bedankje' voor je vertrouwen." },
+            { titel: "Waarom geeft de bank rente?", tekst: "De bank gebruikt jouw spaargeld om **uit te lenen** aan andere mensen (bv. voor een huis-hypotheek). Die mensen betalen MEER rente aan de bank dan jij krijgt. Verschil = winst voor de bank." },
+            { titel: "Verschillende soorten rente", tekst: "• **Spaarrente** = krijg je over spaargeld (laag, bv. 2%).\n• **Hypotheekrente** = betaal je voor lening (bv. 4%).\n• **Negatieve rente** = soms moet je BETALEN om geld op bank te zetten (zeldzaam)." },
+          ],
+          woorden: [
+            { woord: "rente", uitleg: "Percentage extra geld over een bedrag (op spaargeld of lening)." },
+            { woord: "spaarrente", uitleg: "Wat je KRIJGT van bank over je spaargeld." },
+            { woord: "hypotheekrente", uitleg: "Wat je BETAALT voor een lening (bv. huis kopen)." },
+          ],
+          theorie: "Cito-feit rente:\n• KRIJG je over spaargeld.\n• BETAAL je over lening.\n• Wordt jaarlijks uitgekeerd (vaak in januari).\n• Hoger % = meer geld na jaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Spaarrekening met 3% rente, €1000 spaargeld → na jaar €1030 (€30 rente)." },
+            { type: "stap", tekst: "Niet verwarren: belasting = geld AF (overheid). Rente = geld erbij (bij sparen) of erafаф (bij lening)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Rente = % extra. Bij sparen = krijgen. Bij lenen = betalen. Een procent (%) op een bedrag." }],
+          niveaus: {
+            basis: "Rente = extra geld over je spaargeld. = A.",
+            simpeler: "De bank betaalt jou rente omdat jij geld bij hen bewaart. = A.",
+            nogSimpeler: "Extra geld = A.",
+          },
+        },
       },
       {
         q: "**€100** met **2% rente** per jaar — na 1 jaar?",
         options: ["€102", "€2", "€20", "€200"],
         answer: 0,
         wrongHints: [null, "Klopt — 100 + 2.", "Alleen rente, niet totaal.", "Te veel.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Rente berekenen: 2 stappen", tekst: "1) Reken de **rente** uit: 2% van €100.\n2) **Tel die rente op** bij het oorspronkelijke bedrag." },
+            { titel: "Stap 1: 2% van €100", tekst: "2% = 2 per 100 = 2/100 = 0,02.\n0,02 × €100 = **€2** rente.\n(Truc: bij 100 is het % gelijk aan het rente-bedrag in euro's.)" },
+            { titel: "Stap 2: totaal", tekst: "Spaargeld + rente = €100 + €2 = **€102**.\nDus na 1 jaar heb je €102 op je rekening." },
+          ],
+          woorden: [
+            { woord: "rente-bedrag", uitleg: "Hoeveel euro extra je krijgt." },
+            { woord: "eindbedrag", uitleg: "Spaargeld + rente samen." },
+          ],
+          theorie: "Cito-formule rente: **Eindbedrag = Begin × (1 + rente%/100)**. Bij €100 + 2%: 100 × 1,02 = 102. Slim om uit te rekenen: × 1,02 is precies hetzelfde als +2%.",
+          voorbeelden: [
+            { type: "stap", tekst: "€500 met 4% = €500 × 1,04 = €520 (of: €500 + €20 rente)." },
+            { type: "stap", tekst: "€200 met 5% = €200 × 1,05 = €210." },
+            { type: "stap", tekst: "Cito-fout: alleen 'rente' = €2 zonder oorspronkelijk bedrag. De vraag vraagt 'na 1 jaar' = totaal-bedrag." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Rente komt BOVENOP je spaargeld. Niet alleen 'de rente' is antwoord, maar TOTAAL (oud + rente)." }],
+          niveaus: {
+            basis: "€102 (€100 + €2 rente). = A.",
+            simpeler: "2% van €100 = €2. Totaal = €100 + €2 = €102. = A.",
+            nogSimpeler: "€102 = A.",
+          },
+        },
       },
       {
         q: "Wat is **samengestelde rente**?",
@@ -211,6 +257,29 @@ const steps = [
         options: ["Vooraf opzij zetten, niet wachten", "Aan het einde van maand", "Alleen als er over is", "Nooit"],
         answer: 0,
         wrongHints: [null, "Klopt — werkt het beste.", "Vaak niets over.", "Vaak niets over.", "Wel goed om te doen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Sparen-strategie: 'Pay yourself first'", tekst: "De **beste manier om te sparen** is: zet geld **DIRECT** opzij zodra je het krijgt. **Vóórdat** je iets uitgeeft. Dat heet 'pay yourself first' (eerst jezelf betalen)." },
+            { titel: "Waarom werkt 'eind van maand' niet?", tekst: "Mensen die wachten tot eind van maand om te sparen merken vaak: er is **niets over**. Uitgaven vullen elke euro die je hebt — zo werkt het brein. Vooraf opzij zetten = veilig." },
+            { titel: "Praktisch", tekst: "Bij **zakgeld**: zodra je €5 krijgt, doe €1 in spaarpot. Bij **werkenden volwassenen**: automatische overschrijving op de 1e van maand naar spaarrekening. Dan blijft de rest voor uitgaven over." },
+          ],
+          woorden: [
+            { woord: "pay yourself first", uitleg: "Engelse term voor 'eerst jezelf betalen' — eerst sparen, dan uitgeven." },
+            { woord: "automatische overschrijving", uitleg: "Bank schuift maandelijks automatisch een bedrag." },
+          ],
+          theorie: "Cito-tip sparen-gewoonte: vaste regel = 'eerst sparen, dan uitgeven'. Werkt voor zakgeld, salaris en familie-budget. Hoe vroeger je begint, hoe sterker het wordt door samengestelde rente.",
+          voorbeelden: [
+            { type: "stap", tekst: "Krijg je €10 zakgeld? Doe direct €2 in spaarpot. €8 over voor uitgeven." },
+            { type: "stap", tekst: "Bij volwassenen: salaris komt 25e binnen → 26e gaat €100 automatisch naar spaarrekening." },
+            { type: "stap", tekst: "Vergelijk: wachten tot 30e en hopen dat er nog €100 over is = werkt zelden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "VOORAF opzij = werkt. ACHTERAF hopen = werkt niet. Volgorde maakt alles verschil." }],
+          niveaus: {
+            basis: "Vooraf opzij zetten, niet wachten. = A.",
+            simpeler: "Krijg je geld? Direct deel in spaarpot. Rest blijft voor uitgaven. = A.",
+            nogSimpeler: "Direct opzij = A.",
+          },
+        },
       },
     ],
   },
