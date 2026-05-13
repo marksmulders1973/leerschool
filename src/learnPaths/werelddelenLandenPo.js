@@ -136,7 +136,30 @@ const steps = [
         q: "Hoeveel **landen in EU** (2024)?",
         options: ["27", "50", "10", "100"],
         answer: 0,
-        wrongHints: [null, "Klopt — Brexit 2020.", "Heel Europa.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Klopt — Brexit 2020.", "Heel Europa is meer.", "Te weinig.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "EU vs Europa", tekst: "Let op het verschil:\n• **Europa** = werelddeel (~50 landen totaal)\n• **EU** = Europese Unie = club van **27 landen** die samenwerken op handel, wetten, geld.\nNiet alle Europese landen zijn EU-lid (bv. Noorwegen, Zwitserland, UK niet)." },
+            { titel: "Sinds wanneer 27?", tekst: "EU is gegroeid van **6** stichtingsleden (1957) tot **28** (in 2013). In **2020** verliet **UK (Groot-Brittannië)** de EU door **Brexit**. Daarna 27 landen — dat aantal is sindsdien stabiel." },
+            { titel: "Belangrijke EU-feiten", tekst: "• **Euro (€)** = munt sinds **2002** in de meeste EU-landen (niet alle, NL wel)\n• **Schengen** = open grenzen, geen paspoortcontrole tussen 26 landen\n• **Europees Parlement** in Brussel + Straatsburg = gekozen door EU-burgers\n• NL is **stichtingslid** sinds 1957." },
+          ],
+          woorden: [
+            { woord: "EU", uitleg: "Europese Unie, club van 27 landen." },
+            { woord: "Brexit", uitleg: "Vertrek van UK uit EU (2020)." },
+            { woord: "stichtingslid", uitleg: "Land dat vanaf het begin lid was (NL is dat)." },
+          ],
+          theorie: "Cito-feit EU-cijfers: **27 landen** (2024). NL = stichtingslid. Euro sinds 2002. EU-burgers mogen vrij wonen + werken in alle 27 landen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Voorbeelden EU-landen: NL, België, Duitsland, Frankrijk, Spanje, Italië, Polen, Griekenland, Zweden..." },
+            { type: "stap", tekst: "Voorbeelden Europa MAAR niet-EU: UK (na Brexit), Noorwegen, Zwitserland, Oekraïne (kandidaat-lid)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "27 = sinds Brexit (2020). Niet 28. Niet 50 (= Europa als werelddeel)." }],
+          niveaus: {
+            basis: "27 EU-landen. = A.",
+            simpeler: "Sinds UK eruit ging (Brexit 2020) heeft de EU 27 landen. = A.",
+            nogSimpeler: "27 = A.",
+          },
+        },
       },
     ],
   },
@@ -155,7 +178,30 @@ const steps = [
         q: "**Langste rivier** ter wereld?",
         options: ["Nijl (Egypte, 6650 km)", "Amazone", "Yangtze", "Mississippi"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tweede.", "Derde.", "Vierde."],
+        wrongHints: [null, "Klopt.", "Tweede — Amazone.", "Derde — China.", "Vierde — VS."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De Nijl: 6.650 km", tekst: "De **Nijl** is de **langste rivier ter wereld**: ongeveer **6.650 km**. Loopt door **11 landen** in Afrika, voornamelijk **Egypte + Sudan + Ethiopië + Uganda**." },
+            { titel: "Waarom belangrijk?", tekst: "Egypte is een **woestijnland** — zonder de Nijl zou er bijna geen leven mogelijk zijn. **Piramiden + Sphinx** liggen op de oever. Sinds 5.000 jaar geleden bloeit de Egyptische cultuur **dankzij** de Nijl-overstromingen (vruchtbare modder)." },
+            { titel: "Top-5 langste rivieren", tekst: "1. **Nijl** (6.650 km, Afrika)\n2. **Amazone** (6.400 km, Zuid-Amerika)\n3. **Yangtze** (6.300 km, China)\n4. **Mississippi-Missouri** (6.275 km, VS)\n5. **Yenisei** (5.539 km, Rusland)\nNijl + Amazone zijn vrijwel even lang — debat tussen wetenschappers." },
+          ],
+          woorden: [
+            { woord: "Nijl", uitleg: "Langste rivier ter wereld, stroomt door Egypte." },
+            { woord: "Amazone", uitleg: "Tweede langste, maar grootste qua water-hoeveelheid." },
+            { woord: "monding", uitleg: "Waar rivier in de zee uitkomt." },
+          ],
+          theorie: "Cito-feit rivieren:\n• Langste = **Nijl** (Afrika)\n• Meeste water = **Amazone** (Zuid-Amerika, ~20% van zoet rivierwater wereld)\n• In NL: **Rijn** = belangrijkste rivier (vanuit Duitsland naar Noordzee).",
+          voorbeelden: [
+            { type: "stap", tekst: "De Nijl heeft 2 bronnen: Witte Nijl (Uganda) + Blauwe Nijl (Ethiopië). Komen samen in Sudan." },
+            { type: "stap", tekst: "Bij de monding (Egypte, Middellandse Zee) ligt een grote **delta** met veel vruchtbare grond." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Nijl = #1 lengte. Amazone = #1 water-volume. Allebei top, maar verschillende rangordes." }],
+          niveaus: {
+            basis: "De Nijl is langste rivier ter wereld. = A.",
+            simpeler: "De Nijl (Egypte/Afrika) is ~6.650 km lang — langste ooit. = A.",
+            nogSimpeler: "Nijl = A.",
+          },
+        },
       },
       {
         q: "Welk land heeft **Tafelberg** + Mandela?",
@@ -168,6 +214,29 @@ const steps = [
         options: ["Kangoeroe", "Leeuw", "Tijger", "Olifant"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Afrika.", "Azië.", "Afrika/Azië."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Australië = uniek dieren", tekst: "Australië is een **eiland-continent** — al miljoenen jaren afgezonderd van rest van wereld. Daarom evolueerden er **unieke dieren** die nergens anders voorkomen." },
+            { titel: "Kangoeroe = top-icoon", tekst: "De **kangoeroe** hupt rond in Australische binnenland (outback) + komt op de **vlag/munten** voor. Bijzondere eigenschap: vrouwtje heeft een **buidel** waarin de baby ('joey') opgroeit. Heet een **buideldier**." },
+            { titel: "Andere typische Australische dieren", tekst: "• **Koala** (buideldier, eet alleen eucalyptus-blad)\n• **Vogelbekdier** (eierleggend zoogdier — heel zeldzaam!)\n• **Wombat** (buideldier, lijkt op kleine beer)\n• **Krokodil** + **Tasmaanse duivel** + **emu**\n• Veel **giftige slangen + spinnen**." },
+          ],
+          woorden: [
+            { woord: "buideldier", uitleg: "Zoogdier met buidel waarin baby groeit (kangoeroe, koala, wombat)." },
+            { woord: "outback", uitleg: "Onbevolkt droog binnenland Australië." },
+            { woord: "endemisch", uitleg: "Komt alleen voor in 1 specifieke regio." },
+          ],
+          theorie: "Cito-feit Australië:\n• Eiland-continent in Oceanië.\n• Hoofdstad **Canberra** (niet Sydney!).\n• Beroemd: Opera House Sydney, Uluru rots, Great Barrier Reef.\n• Dieren: kangoeroe, koala, vogelbekdier = endemisch.\n• Leeuw, tijger, olifant = NIET Australië (Afrika/Azië).",
+          voorbeelden: [
+            { type: "stap", tekst: "Wapen-dier Australië: kangoeroe + emu — beide kunnen niet achteruit lopen (symbool voor 'altijd voorwaarts')." },
+            { type: "stap", tekst: "Niet Australië: leeuw/giraffe = Afrika. Tijger/panda = Azië. IJsbeer = Noordpool." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Australië-trio: kangoeroe, koala, vogelbekdier. Allemaal uniek voor dit eiland-continent." }],
+          niveaus: {
+            basis: "Kangoeroe. = A.",
+            simpeler: "Kangoeroes huppen rond in Australië en zijn op de vlag/munten te zien. Typisch dier. = A.",
+            nogSimpeler: "Kangoeroe = A.",
+          },
+        },
       },
     ],
   },
