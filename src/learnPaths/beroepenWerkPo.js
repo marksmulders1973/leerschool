@@ -28,6 +28,28 @@ const steps = [
         options: ["Zelfstandige zonder personeel", "Werknemer", "Stagiair", "Eigenaar groot bedrijf"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Loondienst.", "Niet primair.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent ZZP?", tekst: "**ZZP** is een afkorting voor **Zelfstandige Zonder Personeel**. Het is iemand die voor zichzelf werkt — niet in dienst bij een baas." },
+            { titel: "Verschil met werknemer", tekst: "Een werknemer heeft een **baas + vast loon + vakantiedagen + pensioenregeling**. Een ZZP'er regelt alles zelf: eigen klanten zoeken, eigen verzekering, eigen pensioen-spaar." },
+            { titel: "Voorbeelden", tekst: "Veel kappers, fotografen, schilders, klusbedrijfjes, sommige journalisten, sommige IT'ers werken als ZZP. In NL zijn er ~1,1 miljoen ZZP'ers (2024)." },
+          ],
+          woorden: [
+            { woord: "ZZP'er", uitleg: "Zelfstandige Zonder Personeel — eigen baas, geen werknemers." },
+            { woord: "werknemer", uitleg: "Iemand in loondienst bij een werkgever." },
+          ],
+          theorie: "Cito-tip economie: ZZP'er heeft VRIJHEID (eigen tijd kiezen, eigen klanten) maar ook RISICO (geen werk = geen loon, geen vakantiegeld). Daarom rekenen ZZP'ers hoger uurtarief.",
+          voorbeelden: [
+            { type: "stap", tekst: "Kapper Annemarie heeft eigen kapsalon = ZZP. Werkt zelf, regelt eigen klanten." },
+            { type: "stap", tekst: "Tegenover: Werknemer bij grote kapperketen = vast loon van baas." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "ZZP = ZONDER PERSONEEL. Werkt voor zichzelf, niemand in dienst." }],
+          niveaus: {
+            basis: "ZZP'er = Zelfstandige Zonder Personeel (eigen baas).",
+            simpeler: "ZZP'er werkt voor zichzelf, niet in loondienst.",
+            nogSimpeler: "Eigen baas zonder werknemers.",
+          },
+        },
       },
       {
         q: "Wat is een **vrijwilliger**?",
@@ -40,6 +62,29 @@ const steps = [
         options: ["Staatspensioen vanaf 67", "Banengeld", "Loon", "Belasting"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Wel maar specifiek dit.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is AOW?", tekst: "**AOW** is een afkorting voor **Algemene Ouderdomswet**. Het is een **staatspensioen** dat de overheid uitkeert aan iedereen die in NL gewoond/gewerkt heeft, vanaf hun pensioenleeftijd." },
+            { titel: "Pensioenleeftijd", tekst: "In 2024-2025 is de AOW-leeftijd **67 jaar**. Deze leeftijd stijgt langzaam (rond 2030: 67+iets), omdat mensen ouder worden." },
+            { titel: "Naast werkpensioen", tekst: "AOW = staats-deel (iedereen krijgt hetzelfde basisbedrag). Daarnaast hebben veel mensen een **werknemers-pensioen** dat ze zelf hebben gespaard via hun werkgever. Samen vormen ze 'het pensioen'." },
+          ],
+          woorden: [
+            { woord: "AOW", uitleg: "Algemene Ouderdomswet — staatspensioen." },
+            { woord: "pensioen", uitleg: "Geld na pensionering (stoppen met werken)." },
+            { woord: "AOW-leeftijd", uitleg: "Vanaf welke leeftijd je AOW krijgt (nu 67)." },
+          ],
+          theorie: "Cito-tip afkortingen: AOW = Algemene Ouderdoms Wet. Andere belangrijke: WW = Werkloosheidswet. WIA = arbeidsongeschiktheid. Bijstand = laagste uitkering.",
+          voorbeelden: [
+            { type: "stap", tekst: "Opa van 70 ontvangt elke maand AOW van overheid + werkpensioen van zijn vroegere werkgever." },
+            { type: "stap", tekst: "AOW wordt betaald uit belastingen die wij nu betalen. Solidariteits-systeem: jongeren betalen voor ouderen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "AOW = OUDERDOMS-uitkering van staat. Niet hetzelfde als werkgevers-pensioen." }],
+          niveaus: {
+            basis: "AOW = staatspensioen vanaf 67 jaar.",
+            simpeler: "Algemene Ouderdomswet — overheid betaalt ouderen.",
+            nogSimpeler: "AOW = staats-pensioen.",
+          },
+        },
       },
     ],
   },
@@ -65,6 +110,30 @@ const steps = [
         options: ["Tertiair (~50%)", "Primair (~2%)", "Secundair", "Quartair"],
         answer: 0,
         wrongHints: [null, "Klopt — diensten.", "Klein.", "Iets minder.", "Iets minder."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn sectoren?", tekst: "Economen verdelen banen in **3 (of 4) sectoren**: primair (natuur), secundair (maken), tertiair (diensten) en quartair (zorg+onderwijs+overheid)." },
+            { titel: "Verdeling in NL (2024)", tekst: "PRIMAIR (natuur): ~2%. SECUNDAIR (industrie/bouw): ~15%. **TERTIAIR (diensten): ~50% = GROOTSTE**. QUARTAIR (zorg/onderwijs/overheid): ~33%." },
+            { titel: "Waarom tertiair grootste?", tekst: "NL is een DIENSTEN-economie geworden. Veel mensen werken in winkels, banken, kappers, transport, horeca, IT. Industrie is meer naar Azië verplaatst." },
+          ],
+          woorden: [
+            { woord: "primaire sector", uitleg: "Natuur: landbouw, visserij, mijnbouw." },
+            { woord: "secundaire sector", uitleg: "Maken: industrie, bouw." },
+            { woord: "tertiaire sector", uitleg: "Diensten: winkel, horeca, vervoer, bank." },
+            { woord: "quartaire sector", uitleg: "Zorg, onderwijs, overheid." },
+          ],
+          theorie: "Cito-tip sectoren: PRIMAIR = direct uit natuur. SECUNDAIR = iets maken. TERTIAIR = iemand helpen (dienst). QUARTAIR = publieke sector (zorg/onderwijs/overheid).",
+          voorbeelden: [
+            { type: "stap", tekst: "Boer = primair. Loodgieter = secundair. Kapper = tertiair. Leerkracht = quartair." },
+            { type: "stap", tekst: "Een hamburger eten? Boer (primair) → fabriek (secundair) → restaurant (tertiair) → arts bij maagpijn (quartair)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tertiair = grootste in NL. Vroeger (~1900) was PRIMAIR de grootste (50% boeren!), nu maar 2%." }],
+          niveaus: {
+            basis: "Tertiaire sector = ~50% = grootste in NL (diensten).",
+            simpeler: "Helft van NL werkt in diensten (winkel, horeca, IT, etc).",
+            nogSimpeler: "Tertiair = grootste.",
+          },
+        },
       },
       {
         q: "Welke beroepen **groeien**?",
