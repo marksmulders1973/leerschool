@@ -21,6 +21,29 @@ const steps = [
         options: ["Groei + spieren + reparatie", "Energie", "Vitamines", "Water"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Koolhydraten/vetten.", "Niet eiwit.", "Niet voeding."],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 hoofd-voedingsstoffen", tekst: "Eten heeft 3 grote stof-groepen: koolhydraten (energie), eiwitten (bouwen), vetten (reserve + cel-bouw)." },
+            { titel: "Eiwitten = bouwstenen", tekst: "Eiwitten heten ook 'proteïnen'. Ze zijn de BOUWSTENEN van spieren, organen, haren, huid. Vooral nodig om te groeien en wonden te helen." },
+            { titel: "Waar zit eiwit in?", tekst: "Vlees, vis, eieren, melk, kaas, bonen, linzen, noten, tofu. Zonder eiwit kun je niet groeien." },
+          ],
+          woorden: [
+            { woord: "eiwit / proteïne", uitleg: "Voor groei + spieropbouw + reparatie." },
+            { woord: "koolhydraat", uitleg: "Voor energie (brood, pasta, rijst)." },
+            { woord: "vet", uitleg: "Voor reserve + cel-bouw (olie, noten)." },
+          ],
+          theorie: "Cito-truc voedingsstoffen: koolhydraten = energie. Eiwitten = bouwen. Vetten = reserve. Vitamines = beschermen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Spieren = grotendeels gemaakt van eiwit." },
+            { type: "stap", tekst: "Kinderen hebben extra eiwit nodig om te groeien." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 'eiwit = bouwsteen'. Energie komt vooral uit koolhydraten." }],
+          niveaus: {
+            basis: "Eiwit = bouwen + groeien + reparatie.",
+            simpeler: "Eiwit zit in vlees/vis/melk en bouwt spieren.",
+            nogSimpeler: "Eiwit = bouwsteen.",
+          },
+        },
       },
       {
         q: "Hoeveel **water** per dag drinken?",
@@ -39,6 +62,29 @@ const steps = [
         options: ["Vitamine D", "C", "A", "K"],
         answer: 0,
         wrongHints: [null, "Klopt — in NL winter supplement.", "Sinaasappel.", "Wortel.", "Greens."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vitamines = mini-helpers", tekst: "Vitamines zijn kleine stoffen die je lichaam nodig heeft om goed te werken. Elke vitamine heeft een eigen taak." },
+            { titel: "Vitamine D = van de zon", tekst: "Zonlicht op je huid maakt vitamine D aan. Vitamine D is nodig voor sterke BOTTEN en tanden." },
+            { titel: "In Nederland: in winter supplement", tekst: "Omdat de zon in NL in herfst/winter te zwak is, raden artsen aan om vitamine D in te nemen (druppeltjes/pilletje)." },
+          ],
+          woorden: [
+            { woord: "vitamine D", uitleg: "Voor botten + tanden. Van zon (huid) of vis." },
+            { woord: "vitamine C", uitleg: "Voor immuunsysteem. Van sinaasappel, paprika, kiwi." },
+            { woord: "vitamine A", uitleg: "Voor zien + huid. Van wortels, vis." },
+          ],
+          theorie: "Cito-truc vitamines: D = zon (denk: D voor 'daglicht'). C = sinaasappel (kleur). A = wortel (ogen). B = energie (granen, vlees).",
+          voorbeelden: [
+            { type: "stap", tekst: "Vitamine D: zon + vette vis." },
+            { type: "stap", tekst: "Vitamine C: fruit/groente met veel kleur." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tekort aan vitamine D in winter = vermoeid + zwakke botten. Daarom drogist-supplement aanbevolen." }],
+          niveaus: {
+            basis: "Vitamine D = van zonlicht. Voor botten.",
+            simpeler: "D = zon = sterke botten.",
+            nogSimpeler: "D = Daglicht!",
+          },
+        },
       },
     ],
   },
@@ -52,6 +98,28 @@ const steps = [
         options: ["250 gram", "1 kilo", "10 gram", "Geen aanbeveling"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te veel.", "Te weinig.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Schijf van Vijf-advies", tekst: "Het Voedingscentrum (Nederlandse instantie) geeft per dag aanbevelingen. Voor groente: **250 gram per dag**." },
+            { titel: "Hoeveel is 250 gram?", tekst: "Ongeveer **2 grote stukken** groente. Bv. 1 tomaat + 1 schaal sla + paar reepjes wortel = al snel 250 gram." },
+            { titel: "+ 2 stuks fruit", tekst: "Naast groente ook 2 stuks fruit per dag (1 stuk = ongeveer 80 gram, bv. een appel)." },
+          ],
+          woorden: [
+            { woord: "Schijf van Vijf", uitleg: "Nederlandse voedingsrichtlijn met 5 vakken." },
+            { woord: "Voedingscentrum", uitleg: "Nederlandse organisatie die voedingsadvies geeft." },
+          ],
+          theorie: "Cito-feit: 250 g groente + 2 stuks fruit per dag = officieel advies. Hoort bij Schijf van Vijf Vak 1.",
+          voorbeelden: [
+            { type: "stap", tekst: "Schaal sla bij avondeten = ~100 g. Wortel bij lunch = 50 g. Tomaat snack = 50 g. Snijbonen erbij = nog 50 g. Klaar." },
+            { type: "stap", tekst: "Verschillende KLEUREN groente = meer verschillende vitamines." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 250 g groente + 2 stuks fruit per dag. Te onthouden cijfer voor Cito." }],
+          niveaus: {
+            basis: "Aanbeveling: 250 gram groente per dag.",
+            simpeler: "Ongeveer 2 grote stukken groente (= halve bord vol).",
+            nogSimpeler: "250 g per dag.",
+          },
+        },
       },
       {
         q: "Hoeveel **vis per week**?",
