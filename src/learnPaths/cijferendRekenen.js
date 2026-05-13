@@ -502,6 +502,10 @@ const cijferendRekenen = {
   subject: "rekenen",
   referentieNiveau: "1F",
   sloThema: "Getallen — cijferen",
+  prerequisites: [
+    { id: "tafels-po", title: "Tafels (vermenigvuldigen)", niveau: "po-1F" },
+    { id: "geld-rekenen", title: "Geld rekenen", niveau: "po-1F" },
+  ],
   intro:
     "Cijferend rekenen voor groep 6-8: optellen + onthouden, aftrekken + lenen, vermenigvuldigen, delen (bus-bewerking), praktijk-redactiesommen. ~15 min per deel.",
   triggerKeywords: [

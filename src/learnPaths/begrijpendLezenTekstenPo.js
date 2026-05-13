@@ -1021,6 +1021,10 @@ const begrijpendLezenTekstenPo = {
   subject: "begrijpend-lezen",
   referentieNiveau: "1F/1S",
   sloThema: "Lezen — zakelijke, instructieve, betogende, verhalende teksten",
+  prerequisites: [
+    { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategieën", niveau: "po-1F/1S" },
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+  ],
   intro:
     "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Cito-eindtoets) begrijpend lezen.",
   triggerKeywords: [

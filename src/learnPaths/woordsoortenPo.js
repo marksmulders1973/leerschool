@@ -361,6 +361,9 @@ const woordsoortenPo = {
   subject: "taal",
   referentieNiveau: "1F",
   sloThema: "Taalverzorging — woordsoorten",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+  ],
   intro:
     "Zelfstandig naamwoord, werkwoord, bijvoeglijk naamwoord, lidwoord, voornaamwoord. Cito-stijl. ~12 min.",
   triggerKeywords: [

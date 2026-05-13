@@ -361,6 +361,10 @@ const kaartlezenPo = {
   subject: "aardrijkskunde",
   referentieNiveau: "1F",
   sloThema: "Studievaardigheden — kaartlezen",
+  prerequisites: [
+    { id: "continenten-wereld-po", title: "Continenten + landen", niveau: "po-1F" },
+    { id: "werelddelen-landen-po", title: "Werelddelen", niveau: "po-1F" },
+  ],
   intro:
     "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Cito-stijl. ~12 min.",
   triggerKeywords: [

@@ -347,6 +347,9 @@ const woordenschatPo = {
   subject: "taal",
   referentieNiveau: "1F",
   sloThema: "Lezen — woordenschat",
+  prerequisites: [
+    { id: "spelling-overige-po", title: "Spelling — basisregels", niveau: "po-1F" },
+  ],
   intro:
     "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Cito-stijl. ~12 min.",
   triggerKeywords: [

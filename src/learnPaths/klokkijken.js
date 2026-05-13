@@ -486,6 +486,10 @@ const klokkijken = {
   // 'Meten en meetkunde — tijd'. Klokkijken hoort bij 1F (einde groep 8).
   referentieNiveau: "1F",
   sloThema: "Meten en meetkunde",
+  prerequisites: [
+    { id: "tafels-po", title: "Tafels (vermenigvuldigen)", niveau: "po-1F" },
+    { id: "kalender-rekenen-po", title: "Kalender + tijd", niveau: "po-1F" },
+  ],
   intro:
     "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
   triggerKeywords: [

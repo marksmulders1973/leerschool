@@ -655,6 +655,10 @@ const begrijpendLezenStrategie = {
   // 1F = einde basisschool minimum; 1S = streef voor havo/vwo-bound.
   referentieNiveau: "1F/1S",
   sloThema: "Lezen — zakelijke teksten",
+  prerequisites: [
+    { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
+    { id: "schemas-stappenplannen-po", title: "Schema's en stappenplannen", niveau: "po-1F" },
+  ],
   intro:
     "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten met aparte aanpakken. Cito-relevant.",
   triggerKeywords: [
