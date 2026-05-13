@@ -19,10 +19,10 @@ Cito + examens versterken. Drie type werk:
 **Audit-rapport identificeerde 3 fatale gaten + 2 financiële tijdbommen.** Volgorde HARD aanhouden — geen nieuwe content tot Sprint-0 op groen.
 
 ### Audit-instant-fixes (totaal: ~3 uur werk, doe deze EERST)
-- [ ] **QW1 — Verklap-bug fix**: `src/features/learn/VraagUitlegPad.jsx:110` → verander `defaultOpen={true}` naar `defaultOpen={false}`. ~~Reden~~: `niveaus.basis` is in veel paden letterlijk het antwoord ("9.", "16.", "Ja."); auto-open verklapt USP. **Effort: 1 min. Impact: kritiek (USP-bescherming).**
-- [ ] **QW2 — Adaptief op ALLE checks**: `src/features/learn/LearnPath.jsx:433` → verwijder `&& currentCheck.examenBron`. Reden: simpeler-auto-switch werkt nu maar voor 61 examenvragen ipv 2000+ checks. **Effort: 30 sec. Impact: hoog (adaptiviteit doorbreken).**
-- [ ] **QW6 — Daily-cost-cap AI**: `api/_guard.js` → voeg `MAX_GENERATE_CALLS_DAY=500` env-var toe + globale teller in Supabase (`ai_call_quota`-tabel). Hard kill-switch 503 als overschreden. Reden: 1 scraper-aanval kan in 1 uur €100+ kosten via `generate-questions` met web_search. **Effort: 1 uur. Impact: financieel kritiek.**
-- [ ] **QW10 — Supabase RLS-export**: open Supabase Studio → export alle RLS-policies van `profiles`, `learn_progress`, `topic_mastery`, `quizzes`, `leaderboard`, `hall_of_fame`, `share_events` → commit als `supabase/migrations/20260513_rls_export.sql`. Reden: nu alleen `push_subscriptions` + `ai_referrer_log` hebben RLS in repo; anon-key publiek; AVG-risico. **Effort: 1 uur. Impact: hoog (compliance).**
+- [x] **QW1 — Verklap-bug fix** ✓ (2026-05-13, commit 21f4f22): `VraagUitlegPad.jsx:110` → `defaultOpen={false}`. Korte uitleg is nu opt-in zodat leerling eerst zelf nadenkt.
+- [x] **QW2 — Adaptief op ALLE checks** ✓ (2026-05-13, commit 21f4f22): `LearnPath.jsx:433` → `examenBron`-conditie weg. Simpeler-auto-switch werkt nu voor alle 2000+ uitlegPad-checks.
+- [x] **QW6 — Daily-cost-cap AI** ✓ (2026-05-13, commit 19d757a + migration applied): Supabase tabel `ai_call_quota` + RPC `increment_ai_call_quota` + `dailyQuotaCheck()` in `_guard.js` + ingehaakt in tutor-chat (5000/dag), generate-questions (500/dag), preview-topic (1000/dag). Overridable via env-vars. RPC smoke-test: 3 calls → count 3 ✓.
+- [x] **QW10 — Supabase RLS-export** ✓ (2026-05-13, commit 19d757a): alle 25 tabellen RLS-on, 57 policies geëxporteerd uit Studio via MCP naar `supabase/migrations/20260513_rls_policies_export.sql`. Idempotent (drop+create).
 - [ ] **QW8 — Bing Webmaster Tools setup** (Mark zelf): 10 min, voedt ChatGPT-Search. Placeholder al in `index.html` zichtbaar.
 
 ### Audit-1-week-werk (~2 dagen werk)
