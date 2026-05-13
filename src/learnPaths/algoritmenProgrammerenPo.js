@@ -21,6 +21,28 @@ const steps = [
         options: ["Stappenplan om iets op te lossen", "Computer", "Brood", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet primair.", "Wel — recept = algoritme.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een algoritme?", tekst: "Een algoritme is een **stappenplan**: een rijtje stappen om een probleem op te lossen of een taak te doen. Klinkt fancy maar je gebruikt het ELKE DAG." },
+            { titel: "Bekende voorbeelden", tekst: "Een **recept** voor pannenkoeken = algoritme. Een **routebeschrijving** = algoritme. Een **tandenpoets-volgorde** = algoritme. Stappen in vaste volgorde = altijd hetzelfde resultaat." },
+            { titel: "Bij computers", tekst: "Computers gebruiken algoritmes om bv. de KORTSTE route te vinden (GPS-app), om FOTOS te sorteren op datum, of om SPAM-mails te herkennen." },
+          ],
+          woorden: [
+            { woord: "algoritme", uitleg: "Stappenplan om probleem op te lossen." },
+            { woord: "stappenplan", uitleg: "Nederlandse woord voor algoritme." },
+          ],
+          theorie: "Cito-tip: een algoritme staat los van wat het GEBRUIKT (computer of mens). Recept = algoritme. Route op kaart = algoritme. Stenen tegen stenen-spel-strategie = algoritme.",
+          voorbeelden: [
+            { type: "stap", tekst: "Algoritme 'tafel zetten': 1) bord neerzetten, 2) bestek erbij, 3) glas erbij, 4) servet erbij. Klaar." },
+            { type: "stap", tekst: "Algoritme 'kortste route': probeer alle paden, kies de minst-tijd. Te traag op computer? Bestaan slimmere algoritmes (Dijkstra)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Algoritme = recept voor een taak. Niet beperkt tot computers." }],
+          niveaus: {
+            basis: "Algoritme = stappenplan om probleem op te lossen.",
+            simpeler: "Recept of routebeschrijving = soort algoritme.",
+            nogSimpeler: "Stappenplan.",
+          },
+        },
       },
       {
         q: "Wat doet **GPS** *(Global Positioning System — plaats-bepaling via satellieten)*-app?",
@@ -52,6 +74,28 @@ const steps = [
         options: ["Opslag-plaats met naam + waarde", "Spel", "Boekenrij", "Niet bestaand"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een variabele?", tekst: "Een variabele is een **opslag-plaats** in de computer met een NAAM en een WAARDE. Stel je voor: een doosje met een label, en iets erin." },
+            { titel: "Voorbeeld", tekst: "`leeftijd = 11` betekent: maak een doosje met label 'leeftijd' en stop er '11' in. Later kun je vragen: 'wat staat er in leeftijd?' → 11." },
+            { titel: "Vari-abel = veranderbaar", tekst: "De waarde kan VERANDEREN. Volgende jaar: `leeftijd = 12`. Daarom heet het 'variabele' (variabel = veranderlijk)." },
+          ],
+          woorden: [
+            { woord: "variabele", uitleg: "Naam + opslag-plaats voor een waarde." },
+            { woord: "waarde", uitleg: "Wat in de variabele staat (getal, tekst, etc)." },
+          ],
+          theorie: "Cito-feit: variabelen zitten in alle programmeertalen. In Python, Java, JavaScript, etc. Ze zijn de meest basale bouwsteen van programmeren.",
+          voorbeelden: [
+            { type: "stap", tekst: "`naam = 'Sven'` → variabele naam bevat tekst 'Sven'." },
+            { type: "stap", tekst: "`punten = 0` → variabele punten begint op 0. Bij goede vraag: `punten = punten + 1`." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Variabele = doosje met label (naam) en inhoud (waarde). De inhoud kan wisselen." }],
+          niveaus: {
+            basis: "Variabele = naam + waarde in computer-geheugen.",
+            simpeler: "Een 'doosje met label' waar iets in zit.",
+            nogSimpeler: "Doosje met naam.",
+          },
+        },
       },
       {
         q: "Wat doet **if-statement**?",
@@ -64,6 +108,29 @@ const steps = [
         options: ["Iets herhaaldelijk doen", "Sneller", "Controle", "Reken"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Niet primair.", "Conditie.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een loop?", tekst: "Een **loop** (lus) is een stuk code dat steeds OPNIEUW wordt uitgevoerd, totdat een voorwaarde klopt om te stoppen. Sla je dezelfde regels heen-en-weer." },
+            { titel: "Waarom handig?", tekst: "Stel je voor: print getallen van 1 tot 10. Zonder loop schrijf je 10 keer 'print'. Met loop: 1 keer, en de computer herhaalt het 10 keer. **Veel korter + minder fouten**." },
+            { titel: "Voorbeeld in code", tekst: "`voor i van 1 tot 10: print(i)` → print 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Eén regel doet het werk van 10." },
+          ],
+          woorden: [
+            { woord: "loop / lus", uitleg: "Code-blok dat herhaalt." },
+            { woord: "for-loop", uitleg: "Loop met vast aantal herhalingen." },
+            { woord: "while-loop", uitleg: "Loop die herhaalt zolang voorwaarde klopt." },
+          ],
+          theorie: "Cito-tip: loops zijn naast variabelen + if-statements DE belangrijkste bouwsteen van programmeren. Bijna elk programma gebruikt ze.",
+          voorbeelden: [
+            { type: "stap", tekst: "Game-engine: loop draait 60x per seconde om scherm te updaten." },
+            { type: "stap", tekst: "Sociale media: loop checkt elke 5 seconden of er nieuw bericht is." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Loop = herhalen. If = beslissen. Variabele = onthouden. Drie hoofdbouwstenen." }],
+          niveaus: {
+            basis: "Loop herhaalt code-blok meerdere keren.",
+            simpeler: "Loop = doe dit X keer (of zolang Y waar is).",
+            nogSimpeler: "Loop = herhalen.",
+          },
+        },
       },
       {
         q: "Wie was **Ada Lovelace**?",
