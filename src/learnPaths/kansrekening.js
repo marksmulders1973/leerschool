@@ -853,6 +853,10 @@ const kansrekening = {
   referentieNiveau: "2F/2S",
   sloThema: "Statistiek — kansrekening",
   topics: ["WI.statistiek.beschrijven"],
+  prerequisites: [
+    { id: "breuken", title: "Breuken", niveau: "vmbo-2F" },
+    { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
+  ],
   intro:
     "Basis van kansrekening voor klas 2-3: kans als breuk/percentage, dobbelsteen + munt + knikker, kansboom voor opeenvolgende gebeurtenissen, vermenigvuldigen bij onafhankelijk en optellen bij uitsluitend, plus de complement-truc voor 'minstens'-vragen. Voorbereiding op havo wiskunde A.",
   triggerKeywords: [

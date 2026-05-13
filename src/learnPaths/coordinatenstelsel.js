@@ -602,6 +602,10 @@ const coordinatenstelsel = {
   referentieNiveau: "2F",
   sloThema: "Verbanden — assenstelsel & coördinaten",
   topics: ["WI.basis.coordinaten"],
+  prerequisites: [
+    { id: "negatieve-getallen", title: "Negatieve getallen", niveau: "vmbo-2F" },
+    { id: "grafieken-lezen-po", title: "Grafieken lezen", niveau: "po-1F" },
+  ],
   intro:
     "Het assenstelsel — de basis voor alle grafieken in wiskunde. x-as, y-as, oorsprong, schaal, kwadranten, punten plotten en herkennen of punten op een rechte lijn liggen. Voorbereiding op lineaire formules en parabolen.",
   triggerKeywords: [

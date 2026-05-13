@@ -669,6 +669,10 @@ const breuken = {
   referentieNiveau: "2F",
   sloThema: "Getallen — breuken",
   topics: ["WI.rekenen.breuken"],
+  prerequisites: [
+    { id: "breuken-po", title: "Breuken (basis)", niveau: "po-1F" },
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+  ],
   intro: "Breuken zijn fundamenteel in álle wiskunde — niet alleen klas 1. Hier leer je vanaf de basis: wat is een breuk, gelijkwaardige breuken, optellen/aftrekken (met gelijknamig maken), vermenigvuldigen/delen (omdraaien-truc), en praktische toepassingen.",
   triggerKeywords: ["breuk", "breuken", "teller", "noemer", "gelijknamig", "½", "⅓", "¾"],
   chapters,

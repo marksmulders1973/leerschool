@@ -621,6 +621,10 @@ const machten = {
   referentieNiveau: "2F/2S",
   sloThema: "Getallen — machten & exponenten",
   topics: ["WI.algebra.machten"],
+  prerequisites: [
+    { id: "kwadraten-wortels", title: "Kwadraten + wortels", niveau: "vmbo-2F" },
+    { id: "rekenen-met-letters", title: "Rekenen met letters", niveau: "vmbo-2F" },
+  ],
   intro:
     "Machten in wiskunde — van notatie (a^n) tot de drie machtsregels (·, /, ()ⁿ), via macht-van-product en negatieve exponenten, naar machten van 10 en wetenschappelijke notatie. Voorbereiding op exponentiële functies (komt later) en heel veel praktische toepassingen.",
   triggerKeywords: [

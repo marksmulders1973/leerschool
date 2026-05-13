@@ -488,6 +488,10 @@ const verhoudingen = {
   referentieNiveau: "2F",
   sloThema: "Verhoudingen",
   topics: ["WI.rekenen.verhoudingen"],
+  prerequisites: [
+    { id: "verhoudingen-po", title: "Verhoudingen (basis)", niveau: "po-1F" },
+    { id: "breuken", title: "Breuken", niveau: "vmbo-2F" },
+  ],
   intro: "Verhoudingen vergelijken hoeveelheden — bij recepten, schaalmodellen, kortingen, mengen. Hier leer je: notatie a : b, vereenvoudigen, verhoudingstabellen, kruisproduct, schaalmodellen en recepten omrekenen.",
   triggerKeywords: ["verhouding", "verhoudingen", "evenredig", "kruisproduct", "verhoudingstabel"],
   chapters,

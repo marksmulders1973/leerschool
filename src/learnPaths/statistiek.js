@@ -497,6 +497,10 @@ const statistiek = {
   referentieNiveau: "2F",
   sloThema: "Statistiek — beschrijvende statistiek",
   topics: ["WI.statistiek.beschrijven"],
+  prerequisites: [
+    { id: "gemiddelden-statistiek-po", title: "Gemiddelden + statistiek (basis)", niveau: "po-1F" },
+    { id: "tabellen-grafieken", title: "Tabellen + grafieken", niveau: "vmbo-2F" },
+  ],
   intro: "Statistiek bestudeert gegevens (data). Hier leer je: frequentietabellen, staafdiagrammen, drie centrummaten (gemiddelde, modus, mediaan), bereik als spreidingsmaat, en wanneer je welke gebruikt.",
   triggerKeywords: ["statistiek", "gemiddelde", "modus", "mediaan", "frequentie", "staafdiagram", "bereik"],
   chapters,

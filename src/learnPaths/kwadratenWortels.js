@@ -716,6 +716,10 @@ const kwadratenWortels = {
   referentieNiveau: "2F",
   sloThema: "Getallen — machten en wortels",
   topics: ["WI.algebra.kwadraten"],
+  prerequisites: [
+    { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
+    { id: "negatieve-getallen", title: "Negatieve getallen", niveau: "vmbo-2F" },
+  ],
   intro: "H5 uit Wiskunde Flex deel 2: vanaf het kwadraat (3² = 9) tot wortels (√), rekenen met wortels, x² = c oplossen, en de soorten getallen (rationaal, irrationaal). Op basisniveau opgebouwd.",
   triggerKeywords: ["kwadraat", "kwadraten", "wortel", "wortels", "√", "x²", "irrationaal", "rationaal", "soorten getallen"],
   chapters,
