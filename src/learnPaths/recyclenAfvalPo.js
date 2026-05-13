@@ -21,6 +21,29 @@ const steps = [
         options: ["~480 kg", "10 kg", "10.000 kg", "100 kg"],
         answer: 0,
         wrongHints: [null, "Klopt — 1,5 kg/dag.", "Te weinig.", "Onmogelijk.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "480 kg per jaar = veel!", tekst: "Een gemiddelde Nederlander maakt ongeveer **480 kg afval per jaar** (2024). Dat is bijna **1,5 kg PER DAG** — meer dan een fles cola in gewicht!" },
+            { titel: "Waar komt het vandaan?", tekst: "• **Verpakkingen** (plastic, karton)\n• **Voedselresten** (~38 kg per jaar wordt zelfs WEGGEGOOID = verspilling)\n• **Tuinafval**\n• **Wegwerp-producten** (luiers, tissues)\n• **Kleding + meubels die je weggooit**." },
+            { titel: "Wat doe je ermee?", tekst: "Door **goed te scheiden** (GFT/PMD/papier/glas) kun je veel hergebruiken. NL recyclet 64% — EU-top! Doel 2030: 75%. Helpt: minder afval, minder grondstof-gebruik, minder CO₂." },
+          ],
+          woorden: [
+            { woord: "afval", uitleg: "Wat we weggooien." },
+            { woord: "voedselverspilling", uitleg: "Eten dat weggegooid wordt (~38 kg per persoon NL)." },
+          ],
+          theorie: "Cito-feit afval-cijfers:\n• **480 kg** per NL'er per jaar.\n• **1,5 kg** per dag.\n• **64%** wordt gerecycled.\n• **38 kg** voedsel wordt verspild per persoon.\nGetallen om te kennen voor Doorstroomtoets.",
+          voorbeelden: [
+            { type: "stap", tekst: "10 kg = onmogelijk (alleen verpakkingen al meer)." },
+            { type: "stap", tekst: "10.000 kg = onmogelijk (=10 ton, = ~3 auto's per persoon)." },
+            { type: "stap", tekst: "100 kg = te weinig (gemiddelde gezin van 4 = 4×480 = ~2000 kg!)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: ~480 kg per jaar = 1,5 kg per dag. Beide cijfers handig om te weten." }],
+          niveaus: {
+            basis: "~480 kg per jaar. = A.",
+            simpeler: "Een Nederlander maakt elke dag ~1,5 kg afval, dat is 480 kg per jaar. = A.",
+            nogSimpeler: "480 kg = A.",
+          },
+        },
       },
       {
         q: "Wat hoort in **GFT-bak**?",
@@ -56,6 +79,28 @@ const steps = [
         options: ["Geld dat je terug krijgt bij inleveren fles", "Belasting", "Boete", "Niets"],
         answer: 0,
         wrongHints: [null, "Klopt — €0,25 grote plastic.", "Niet.", "Niet.", "Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Statiegeld = bewaard geld", tekst: "**Statiegeld** is geen belasting + geen boete + geen extra kosten. Het is **JOUW eigen geld** dat tijdelijk bij de fles 'in bewaring' staat. Bij **inleveren** krijg je het terug." },
+            { titel: "Bedragen in NL (2024)", tekst: "• **Plastic fles 0,5L**: €0,15\n• **Plastic fles 1L+**: €0,25 (sinds 2021)\n• **Glasfles bier**: €0,10\n• **Glasfles statiegeld-frisdrank**: €0,25-1,00\n• **Blikje** (sinds 2023): €0,15" },
+            { titel: "Waarom werkt het?", tekst: "Mensen leveren flessen + blikjes IN (om hun geld terug te krijgen) ipv weg te gooien. Resultaat: **minder zwerfafval** + **meer recycling**. Sinds invoering blikjes-statiegeld: 70% minder blikjes in natuur." },
+          ],
+          woorden: [
+            { woord: "statiegeld", uitleg: "Bedrag op fles/blikje, terug bij inleveren." },
+            { woord: "zwerfafval", uitleg: "Afval dat in natuur/op straat ligt." },
+          ],
+          theorie: "Cito-feit statiegeld:\n• Bedoeld voor **minder afval** + **meer recycling**.\n• Bij Albert Heijn / Jumbo / Plus / etc. inleveren via automaat.\n• Bij groot evenement: vaak 'statiegeld' op bekers → terug bij teruggave.\n• Net als pinpas — JIJ haalt geld op.",
+          voorbeelden: [
+            { type: "stap", tekst: "Je koopt 6 grote colaflessen × €0,25 statiegeld = €1,50 extra betaald. Lege flessen inleveren = €1,50 terug." },
+            { type: "stap", tekst: "Niet verwarren met **belasting** (geld AF naar overheid) of **boete** (straf). Statiegeld = jouw geld in bewaring." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Statiegeld = jouw geld bewaard bij fles. Inleveren = terug. Niet vergeten — gratis geld!" }],
+          niveaus: {
+            basis: "Statiegeld = geld terug bij inleveren fles/blikje. = A.",
+            simpeler: "Je betaalt extra bij koop. Lege fles terugbrengen = geld terug. = A.",
+            nogSimpeler: "Inleveren = geld terug = A.",
+          },
+        },
       },
       {
         q: "Hoeveel **% NL-afval** wordt gerecycled?",
@@ -150,6 +195,29 @@ const steps = [
         options: ["~450 jaar", "1 maand", "10 jaar", "Eeuwig"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Bananenschil.", "Plastic-tas.", "Wel lang, maar niet eeuwig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Plastic vergaan = HEEL traag", tekst: "Een plastic fles in natuur (zee, bos, weg) duurt **~450 jaar** voor het volledig vergaan is. Tegen die tijd was 'jij' al lang dood + ook je achter-achterkleinkinderen!" },
+            { titel: "Vergelijking vergaantijden", tekst: "Andere afvalsoorten:\n• **Bananenschil**: 1 maand\n• **Karton**: 2-5 maanden\n• **Sigaret-filter**: 10-12 jaar\n• **Plastic zak**: 10-20 jaar\n• **Aluminium blikje**: 80-200 jaar\n• **Plastic fles**: **450 jaar**\n• **Piepschuim**: 500+ jaar\n• **Glazen fles**: 1 miljoen jaar (maar 100% recyclebaar)." },
+            { titel: "Daarom recyclen", tekst: "Plastic in natuur veroorzaakt **plastic-soup** in oceanen — 8-12 miljoen ton per jaar erbij. Dieren eten het en sterven. Recyclen + minder gebruiken = enige oplossing." },
+          ],
+          woorden: [
+            { woord: "vergaan", uitleg: "Volledig afbreken door natuur." },
+            { woord: "plastic-soup", uitleg: "Plastic-deeltjes drijvend in oceanen." },
+            { woord: "microplastic", uitleg: "Kleine stukjes plastic (<5 mm) door afgebroken plastic." },
+          ],
+          theorie: "Cito-feit plastic-vergaan:\n• Plastic vergaat **niet** echt — breekt in steeds kleinere stukjes (microplastic).\n• Die microplastics zitten nu in **mens-bloed + moedermelk + voedsel**.\n• Eens gemaakt = altijd ergens.\n• Daarom: voorkomen > recyclen > weggooien.",
+          voorbeelden: [
+            { type: "stap", tekst: "Plastic fles uit 1970 zou nu in 2026 = 56 jaar oud = nog ~400 jaar te gaan voor totaal vergaan." },
+            { type: "stap", tekst: "Bananenschil zelf wegrollen in bos = na 1 maand weg. Plastic flesje = jouw achter-achter-achterkleinkinderen vinden 't nog terug." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Plastic = ~450 jaar. Onthoud dit shock-cijfer. Helpt om bewust te kiezen voor minder plastic." }],
+          niveaus: {
+            basis: "~450 jaar. = A.",
+            simpeler: "Een plastic fles in natuur duurt 450 jaar voor afgebroken — 4 eeuwen! = A.",
+            nogSimpeler: "450 jaar = A.",
+          },
+        },
       },
       {
         q: "Wie startte **Ocean Cleanup**?",
