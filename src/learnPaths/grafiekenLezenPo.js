@@ -177,7 +177,31 @@ const steps = [
         q: "Welke grafiek toont **hoe iets verandert door de tijd**?",
         options: ["Lijngrafiek", "Cirkeldiagram", "Staafdiagram", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen, niet tijdsverloop. Lijn is beter voor 'door de tijd'.", "Tabel is getallen, geen plaatje van verandering."],
+        wrongHints: [null, "Klopt — lijn = ontwikkeling over tijd.", "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen, niet tijdsverloop. Lijn is beter voor 'door de tijd'.", "Tabel is getallen, geen plaatje van verandering."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Elk grafiektype heeft een doel", tekst: "Vier types grafiek, elk voor een andere vraag:\n• **Lijngrafiek** = verandering over **tijd** (temperatuur door de dag)\n• **Staafdiagram** = **vergelijken** van groepen (regen per maand)\n• **Cirkeldiagram** = **verdeling** van een geheel (sport-keuze in klas)\n• **Tabel** = exacte **getallen** netjes geordend" },
+            { titel: "Lijngrafiek = tijd-verloop", tekst: "Een lijn loopt **van links naar rechts** = van vroeg naar laat. De **hoogte** is de waarde op dat moment. Stijgt de lijn? Dan wordt de waarde groter. Daalt? Wordt kleiner." },
+            { titel: "Cito-truc grafiek herkennen", tekst: "Lees de vraag:\n• 'door de tijd' / 'op verschillende momenten' / 'wanneer' → **lijngrafiek**\n• 'vergelijk groep X met Y' → **staaf**\n• 'welk deel' / 'percentage van' → **cirkel/taart**\n• 'exact aantal van...' → **tabel**" },
+          ],
+          woorden: [
+            { woord: "lijngrafiek", uitleg: "Toont verandering door de tijd." },
+            { woord: "x-as", uitleg: "Onder, vaak tijd (uren/dagen/jaren)." },
+            { woord: "y-as", uitleg: "Zijkant, waarde op dat moment." },
+          ],
+          theorie: "Cito-grafiek-keuze:\n• Tijd → LIJN\n• Vergelijken groepen → STAAF\n• Verdeling van geheel → CIRKEL\n• Exacte getallen → TABEL\nEerst onderscheid type, daarna aflezen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Temperatuur door de dag = lijngrafiek (tijd op x-as)." },
+            { type: "stap", tekst: "Babygewicht na maanden = lijngrafiek (maanden op x-as)." },
+            { type: "stap", tekst: "Bevolking NL 1900-2020 = lijngrafiek (jaren op x-as)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Lijngrafiek = de enige die tijd-verloop laat zien. Andere types tonen momentopname." }],
+          niveaus: {
+            basis: "Lijngrafiek = verandering door de tijd. = A.",
+            simpeler: "Een lijn loopt van vroeg naar laat. Zo zie je hoe iets stijgt of daalt door tijd. = A.",
+            nogSimpeler: "Lijngrafiek = A.",
+          },
+        },
       },
       {
         q: "Welke grafiek laat goed zien **welk deel van het totaal** iets is?",
@@ -392,7 +416,30 @@ const steps = [
         q: "Zelfde taart, klas van **20**. Hoeveel kiezen **hockey** (25%)?",
         options: ["5 kinderen", "10 kinderen", "25 kinderen", "4 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is voetbal (50%), niet hockey (25%).", "Te veel — 25 kinderen kan niet in klas van 20.", "Te weinig — 25% van 20 is iets meer dan dat."],
+        wrongHints: [null, "Klopt — 25% van 20 = ¼ × 20 = 5.", "Te veel — dat is voetbal (50%), niet hockey (25%).", "Te veel — 25 kinderen kan niet in klas van 20.", "Te weinig — 25% van 20 is iets meer dan dat."],
+        uitlegPad: {
+          stappen: [
+            { titel: "25% = een kwart", tekst: "**25%** = ¼ (een vierde / een kwart). Onthoud: 100% ÷ 4 = 25%. Dus 25% van iets = dat iets gedeeld door 4." },
+            { titel: "25% van 20 berekenen", tekst: "**Stap 1**: 20 ÷ 4 = 5.\n**Stap 2**: Dus 25% van 20 = **5 kinderen**.\nEen klas van 20 kinderen heeft dus 5 hockey-kiezers." },
+            { titel: "Snelle procent-trucs", tekst: "Onthoud de kern-percentages:\n• **10%** = ÷ 10 (van 20 = 2)\n• **25%** = ÷ 4 (van 20 = 5)\n• **50%** = ÷ 2 (van 20 = 10)\n• **75%** = ÷ 4 × 3 (van 20 = 15)\n• **100%** = alles (= 20)" },
+          ],
+          woorden: [
+            { woord: "25%", uitleg: "Een kwart = ¼ = 1 op de 4." },
+            { woord: "%", uitleg: "Per honderd. 25% = 25 op de 100 = 1 op de 4." },
+          ],
+          theorie: "Cito-truc procenten in cirkeldiagrammen:\n• 50% = helft → ÷ 2\n• 25% = kwart → ÷ 4\n• 10% = tiende → ÷ 10\n• Voor andere %: gebruik 'procent × totaal ÷ 100'.\nBij Cito-cirkeldiagrammen zijn vaak mooie %-jes (10/20/25/50) → snel uit het hoofd.",
+          voorbeelden: [
+            { type: "stap", tekst: "25% van 40 = 40 ÷ 4 = 10." },
+            { type: "stap", tekst: "25% van 100 = 100 ÷ 4 = 25 (lekker rond, daarom heten ze ook 25%)." },
+            { type: "stap", tekst: "Pas op: 25% van 20 is NIET 25 kinderen — dat zou meer zijn dan de hele klas!" },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "25% = kwart = ÷ 4. Bij klas van 20 = 5. Bij klas van 24 = 6. Bij klas van 28 = 7." }],
+          niveaus: {
+            basis: "5 kinderen (20 ÷ 4 = 5). = A.",
+            simpeler: "25% = een kwart. 20 ÷ 4 = 5. Dus 5 kinderen kiezen hockey. = A.",
+            nogSimpeler: "5 = A.",
+          },
+        },
       },
       {
         q: "**Tellen alle stukken** van een taartdiagram bij elkaar samen op tot ... ?",
@@ -460,7 +507,29 @@ const steps = [
         q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. **Hoeveel kg aangekomen**?",
         options: ["3 kg", "6 kg", "9 kg", "2 kg"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — controleer 6 − 3."],
+        wrongHints: [null, "Klopt — verschil = 6 − 3 = 3 kg toegenomen.", "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — controleer 6 − 3."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Aangekomen' = verschil = aftrekken", tekst: "Het woord **'aangekomen'** betekent: hoeveel ERBIJ gekomen sinds het begin. Dat is een **verschil-vraag** → aftrekken." },
+            { titel: "Bereken: eind − begin", tekst: "**Begin**: 3 kg (bij geboorte).\n**Eind**: 6 kg (na 3 maanden).\n**Aangekomen** = 6 − 3 = **3 kg**." },
+            { titel: "Cito-instinker: vergeet niet de eenheid", tekst: "Antwoord = '3 **kg**', niet alleen '3'. Op Cito staat soms in de opties: '3', '3 kg', '3 g', '3 maanden'. Alleen het juiste getal MET juiste eenheid is goed." },
+          ],
+          woorden: [
+            { woord: "aangekomen", uitleg: "Hoeveel ERBIJ gekomen sinds begin. Bij gewicht: zwaarder geworden." },
+            { woord: "verschil", uitleg: "Resultaat van aftrekken (groot − klein)." },
+          ],
+          theorie: "Cito-signaalwoorden bij groei-vragen:\n• 'aangekomen' / 'gegroeid' / 'erbij' → eind − begin (aftrekken)\n• 'totaal nu' / 'eindgewicht' → alleen eind aflezen\n• 'gemiddeld per maand' → verschil ÷ aantal maanden",
+          voorbeelden: [
+            { type: "stap", tekst: "Plant 10 cm bij start, 25 cm na 4 weken. Gegroeid: 25 − 10 = 15 cm." },
+            { type: "stap", tekst: "Baby weegt 3 kg bij geboorte, 9 kg na 1 jaar. Aangekomen: 9 − 3 = 6 kg." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "'Aangekomen' = ERBIJ-gekomen = aftrekken (eind − begin)." }],
+          niveaus: {
+            basis: "3 kg aangekomen (6 − 3 = 3). = A.",
+            simpeler: "Begin: 3 kg. Eind: 6 kg. Hoeveel ERBIJ gekomen? 6 − 3 = 3 kg. = A.",
+            nogSimpeler: "3 kg = A.",
+          },
+        },
       },
       {
         q: "Taart: rood 25%, blauw 50%, geel 25%. Klas van **40** kinderen — hoeveel **blauw**?",
