@@ -50,6 +50,7 @@ export const PAGE_TO_PATH = {
   pro: "/pro",
   upgrade: "/upgrade",
   "admin-feedback": "/admin/feedback",
+  "admin-ai-referrers": "/admin/ai-referrers",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

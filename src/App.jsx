@@ -61,6 +61,7 @@ const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
+const AdminAIReferrers = lazy(() => import("./components/AdminAIReferrers.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
 const Curriculum = lazy(() => import("./features/learn/Curriculum.jsx"));
@@ -1594,6 +1595,12 @@ export default function App() {
       )}
       {page === "admin-feedback" && (
         <AdminFeedback
+          onBack={() => setPage("home")}
+          onHome={goHome}
+        />
+      )}
+      {page === "admin-ai-referrers" && (
+        <AdminAIReferrers
           onBack={() => setPage("home")}
           onHome={goHome}
         />

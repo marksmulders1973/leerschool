@@ -382,6 +382,49 @@
 
     <script type="module" src="/src/main.jsx"></script>
 
+    <!-- AI-referrer detection (Mark request 2026-05-13).
+         Detecteert AI-chat-doorklikkers (chatgpt.com, claude.ai, perplexity.ai,
+         gemini.google.com, copilot.microsoft.com) en pingt /api/log-ai-ref.
+         Lichtgewicht: 1× per sessie, sendBeacon → geen page-blocking,
+         alleen als referrer match maakt. Geen tracking van normale gebruikers. -->
+    <script>
+      (function () {
+        try {
+          if (sessionStorage.getItem('lk_ai_ref_sent') === '1') return;
+          var ref = document.referrer || '';
+          if (!ref) return;
+          var aiHosts = [
+            'chatgpt.com', 'chat.openai.com',
+            'claude.ai',
+            'perplexity.ai', 'www.perplexity.ai',
+            'gemini.google.com',
+            'copilot.microsoft.com', 'm365.cloud.microsoft',
+          ];
+          var refHost = '';
+          try { refHost = new URL(ref).hostname.toLowerCase(); } catch (_) { return; }
+          if (aiHosts.indexOf(refHost) === -1) return;
+          sessionStorage.setItem('lk_ai_ref_sent', '1');
+          var payload = JSON.stringify({ path: location.pathname, referrer: ref });
+          // sendBeacon eerst (overleeft page-unload), fetch als fallback.
+          var sent = false;
+          if (navigator.sendBeacon) {
+            try {
+              var blob = new Blob([payload], { type: 'application/json' });
+              sent = navigator.sendBeacon('/api/log-ai-ref', blob);
+            } catch (_) {}
+          }
+          if (!sent) {
+            fetch('/api/log-ai-ref', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: payload,
+              keepalive: true,
+            }).catch(function () {});
+          }
+        } catch (_) {}
+      })();
+    </script>
+
     <!-- English translate banner — alleen voor non-NL bezoekers (focus op NLers in USA) -->
     <style>
       /* Verberg Google Translate's eigen banner + tooltips — wij hebben eigen UI */
