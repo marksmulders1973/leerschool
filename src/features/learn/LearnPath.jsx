@@ -304,6 +304,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [lastWrongAnswer, setLastWrongAnswer] = useState(null);
   // Pilot 2026-05-10: dynamisch uitleg-paneel per vraag (Mark blauwdruk economie).
   const [showUitlegPad, setShowUitlegPad] = useState(false);
+  const [showTekstHerlees, setShowTekstHerlees] = useState(false);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -382,6 +383,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setSelected(null);
     setAttempts(1);
     setShowUitlegPad(false);
+    setShowTekstHerlees(false);
     setMode("reading");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -415,6 +417,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           setCheckIdx(checkIdx + 1);
           setSelected(null);
           setAttempts(1);
+          setShowTekstHerlees(false);
         } else {
           completeStep();
         }
@@ -440,6 +443,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       setCheckIdx(checkIdx + 1);
       setSelected(null);
       setAttempts(1);
+      setShowTekstHerlees(false);
       setMode("checking");
     } else {
       completeStep();
@@ -809,6 +813,46 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     overflowY: "auto",
                   }}>
                     {currentCheck.bronTekst.body}
+                  </div>
+                )}
+              </div>
+            )}
+            {step.explanation && (
+              <div style={{ marginBottom: 12 }}>
+                <button
+                  onClick={() => setShowTekstHerlees((v) => !v)}
+                  style={{
+                    padding: "8px 12px",
+                    background: "rgba(91,134,184,0.10)",
+                    border: "1px dashed rgba(91,134,184,0.40)",
+                    borderRadius: 8,
+                    color: "#5b86b8",
+                    fontSize: 13,
+                    fontWeight: 600,
+                    cursor: "pointer",
+                    width: "100%",
+                    textAlign: "left",
+                  }}
+                  aria-expanded={showTekstHerlees}
+                >
+                  {showTekstHerlees ? "▼ Verberg tekst" : "📖 Terug naar de tekst"}
+                </button>
+                {showTekstHerlees && (
+                  <div
+                    style={{
+                      marginTop: 8,
+                      padding: "12px 14px",
+                      background: "rgba(91,134,184,0.05)",
+                      border: "1px solid rgba(91,134,184,0.25)",
+                      borderRadius: 8,
+                      fontSize: 13,
+                      lineHeight: 1.55,
+                      maxHeight: "45vh",
+                      overflowY: "auto",
+                      color: "var(--color-text)",
+                    }}
+                  >
+                    <MdInline text={step.explanation} />
                   </div>
                 )}
               </div>
