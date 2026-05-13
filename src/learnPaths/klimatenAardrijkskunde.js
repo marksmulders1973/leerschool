@@ -491,6 +491,10 @@ const klimatenAardrijkskunde = {
   referentieNiveau: "2F",
   sloKerndoelen: [42, 43],
   sloThema: "Aardrijkskunde — klimaten",
+  prerequisites: [
+    { id: "werelddelen-landen-po", title: "Werelddelen + landen", niveau: "po-1F" },
+    { id: "weersvoorspelling-po", title: "Weer + voorspellen", niveau: "po-1F" },
+  ],
   intro:
     "Het verschil tussen weer en klimaat, hoe klimaatzones ontstaan door zon en zee, de 5 hoofdklimaten (A-E) plus hoogteklimaat, met klimaatverandering tot slot. Eerste pad aardrijkskunde onderbouw.",
   triggerKeywords: [

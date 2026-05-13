@@ -685,6 +685,10 @@ const geneticaErfelijkheidBiologie = {
   subject: "biologie",
   referentieNiveau: "onderbouw",
   sloThema: "Biologie — genetica & erfelijkheid",
+  prerequisites: [
+    { id: "cel-biologie", title: "Cel-biologie", niveau: "vmbo-2F" },
+    { id: "evolutie-mens-po", title: "Evolutie + mens", niveau: "po-1F" },
+  ],
   intro:
     "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendel's wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, stambomen, erfelijke ziektes en moderne technieken (DNA-tests, gentherapie, CRISPR). Examenstof biologie CSE.",
   triggerKeywords: [

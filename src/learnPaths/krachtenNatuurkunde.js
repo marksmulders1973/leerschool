@@ -550,6 +550,9 @@ const krachtenNatuurkunde = {
   referentieNiveau: "2F",
   sloThema: "Natuurkunde — krachten",
   subject: "natuurkunde",
+  prerequisites: [
+    { id: "bewegingen-snelheid-natuurkunde", title: "Bewegingen + snelheid", niveau: "vmbo-2F" },
+  ],
   intro:
     "De basis van krachten en beweging — kracht als pijl, massa vs gewicht, soorten krachten (zwaartekracht, wrijving, veerkracht), de drie wetten van Newton. Eerste pad natuurkunde onderbouw.",
   triggerKeywords: [

@@ -772,6 +772,10 @@ const celBiologie = {
   referentieNiveau: "2F",
   sloKerndoelen: [26, 27, 28],
   sloThema: "Biologie — celbiologie",
+  prerequisites: [
+    { id: "ecosystemen-biologie", title: "Ecosystemen", niveau: "vmbo-2F" },
+    { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid", niveau: "po-1F" },
+  ],
   intro:
     "Wat is een cel, en waar bestaat hij uit? Van eencelligen tot mensen, van celkern tot mitochondriën, plus de drie verschillen tussen plant- en dierlijke cellen. Eerste leerpad biologie onderbouw.",
   triggerKeywords: [

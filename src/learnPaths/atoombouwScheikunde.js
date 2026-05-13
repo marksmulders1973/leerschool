@@ -574,6 +574,10 @@ const atoombouwScheikunde = {
   referentieNiveau: "2F/3F",
   sloThema: "Scheikunde — atoombouw",
   subject: "scheikunde",
+  prerequisites: [
+    { id: "stoffen-mengsels-scheikunde", title: "Stoffen + mengsels", niveau: "vmbo-2F" },
+    { id: "toestand-stoffen-po", title: "Toestanden van stoffen", niveau: "po-1F" },
+  ],
   intro:
     "De bouw van atomen — kern (proton + neutron) + elektronen in schillen, atoomnummer en massagetal, isotopen, ionen, het periodiek systeem (metaal/niet-metaal/edelgas), moleculen en chemische reacties met behoud van atomen. Eerste pad scheikunde onderbouw.",
   triggerKeywords: [

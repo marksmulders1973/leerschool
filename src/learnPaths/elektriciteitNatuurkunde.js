@@ -818,6 +818,10 @@ const elektriciteitNatuurkunde = {
   subject: "natuurkunde",
   referentieNiveau: "2F/3F",
   sloThema: "Natuurkunde — elektriciteit (Wet van Ohm)",
+  prerequisites: [
+    { id: "krachten-natuurkunde", title: "Krachten", niveau: "vmbo-2F" },
+    { id: "energiebronnen-po", title: "Energie + energiebronnen", niveau: "po-1F" },
+  ],
   intro:
     "Hoe elektriciteit werkt: van geladen deeltjes en stroomkringen tot de Wet van Ohm (U = I × R), serie- en parallelschakelingen, vermogen (P = U × I), veiligheid (aardlek + smeltveiligheid) en hoe je je stroomverbruik berekent in kWh. Examenstof natuurkunde CSE.",
   triggerKeywords: [
