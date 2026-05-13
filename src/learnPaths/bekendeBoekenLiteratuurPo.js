@@ -250,6 +250,79 @@ const steps = [
       { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli (1860)", "Mulisch", "Vriens", "Schmidt"], answer: 0, wrongHints: [null, "Klopt — over koloniaal kwaad.", "Andere.", "Niet.", "Niet."] },
       { q: "**Kinderboekenweek** = welke maand?", options: ["Oktober", "Januari", "Mei", "Geen"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel vast."] },
       { q: "**Harry Potter** = aantal delen?", options: ["7", "1", "100", "3"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."] },
+      {
+        q: "**Kruistocht in Spijkerbroek** (Thea Beckman) — wat is het thema?",
+        options: ["Tijdreis terug naar de Middeleeuwen", "Voetbal", "Eerste Wereldoorlog", "Sprookje"],
+        answer: 0,
+        wrongHints: [null, "Klopt — moderne jongen reist terug naar 1212, kinderkruistocht.", "Niet.", "Andere tijd.", "Realistisch, geen sprookje."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Thea Beckman?", tekst: "**Thea Beckman** *(1923-2004)* was een **Nederlandse kinderboekenschrijfster**. Schreef vooral **historische romans** voor 10+ kinderen. Won meerdere Kinderboeken-prijzen." },
+            { titel: "Wat is 'Kruistocht in Spijkerbroek'?", tekst: "Boek uit **1973**. Hoofdpersoon **Rudolf Wega** wordt onverwacht teruggeflitst naar het jaar **1212** en sluit zich aan bij de **Kinderkruistocht** — een echte historische gebeurtenis waarbij duizenden kinderen probeerden naar het Heilige Land te lopen." },
+            { titel: "Cito-feit: NL-historische jeugdliteratuur", tekst: "Beckman is een **klassieker** voor groep 7-8. Cito vraagt soms naar bekende kinderboeken-schrijvers. Andere belangrijke NL-jeugdschrijvers:\n• **Annie M.G. Schmidt** (Jip en Janneke, Pluk van de Petteflet)\n• **Roald Dahl** (Brits — Matilda, Sjakie, GVR)\n• **Paul Biegel** (Het sleutelkruid)\n• **Tonke Dragt** (De brief voor de koning)" },
+          ],
+          woorden: [
+            { woord: "historische roman", uitleg: "Verzonnen verhaal in échte historische periode (Middeleeuwen, WO2, etc.)." },
+            { woord: "Kinderkruistocht", uitleg: "1212: ~30.000 Europese kinderen liepen richting Jeruzalem. De meesten kwamen nooit aan." },
+          ],
+          theorie: "Kinderboeken Cito kan vragen:\n• 'Jip en Janneke' — Annie M.G. Schmidt, illustraties Fiep Westendorp\n• 'Kruistocht in Spijkerbroek' — Thea Beckman, 1973\n• 'De brief voor de koning' — Tonke Dragt, 1962\n• 'Pluk van de Petteflet' — Annie M.G. Schmidt\n• 'Het sleutelkruid' — Paul Biegel\n• 'Oorlogswinter' — Jan Terlouw (WO2)",
+          voorbeelden: [
+            { type: "feit", tekst: "'Kruistocht in Spijkerbroek' werd ook verfilmd (2006). Het boek wordt nog steeds op scholen gelezen — Cito-stof." },
+          ],
+          basiskennis: [{ onderwerp: "Niet sprookje", uitleg: "Historische roman = échte gebeurtenis met verzonnen hoofdpersoon. Niet hetzelfde als sprookje." }],
+          niveaus: { basis: "Tijdreis Middeleeuwen. = A.", simpeler: "Boek door Thea Beckman: jongen reist terug naar 1212 voor de kinderkruistocht. Historische roman. = A.", nogSimpeler: "Tijdreis = A." },
+        },
+      },
+      {
+        q: "Wie schreef **'De brief voor de koning'** (1962, ook verfilmd op Netflix)?",
+        options: ["Tonke Dragt", "Annie M.G. Schmidt", "Thea Beckman", "Roald Dahl"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Tonke Dragt (1930-2024), schreef ook 'Geheimen van het Wilde Woud'.", "Niet — Schmidt schreef kortere boeken (Jip+Janneke).", "Niet — Beckman schreef Spijkerbroek.", "Niet — Dahl was Brits."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was Tonke Dragt?", tekst: "**Tonke Dragt** *(1930-2024)* was een Nederlandse schrijfster van avontuurlijke fantasy-romans voor jeugd. Geboren in Nederlands-Indië (Jakarta), kwam naar NL na WO2. Schreef vooral over **ridders, kastelen, geheime missies**." },
+            { titel: "'De brief voor de koning' (1962)", tekst: "Hoofdpersoon **Tiuri** is een **page** (jongeling-ridder-in-opleiding). Op de nacht voor zijn ridderslag krijgt hij een geheime missie: een brief afleveren bij een koning ver weg. Het boek volgt zijn gevaarlijke reis met paard door bossen, bergen en vijandige steden." },
+            { titel: "Cito-feit: prijzen + film", tekst: "Het boek won de **Gouden Griffel** (belangrijke NL-kinderboek-prijs) in 1963. In **2020** maakte Netflix er een serie van. Veel Nederlandse leerlingen lezen het in groep 7-8. Een ECHTE klassieker." },
+          ],
+          woorden: [
+            { woord: "page", uitleg: "Jongeling die opgeleid wordt tot ridder in de Middeleeuwen." },
+            { woord: "ridderslag", uitleg: "Ceremonie waarbij page officieel ridder wordt — met zwaardklap op schouder." },
+            { woord: "Gouden Griffel", uitleg: "Belangrijkste NL-prijs voor het beste kinderboek van het jaar." },
+          ],
+          theorie: "NL-jeugd-fantasy-klassiekers:\n• **Tonke Dragt** — De brief voor de koning (1962), Geheimen van het Wilde Woud (1965), Torenhoog en mijlenbreed (1969)\n• **Paul Biegel** — Het sleutelkruid\n• **Imme Dros** — Annetje Lie in het holst van de nacht\nDeze worden nog steeds gelezen + krijgen film/serie-bewerkingen.",
+          voorbeelden: [
+            { type: "feit", tekst: "Tonke Dragt schilderde haar eigen boekomslagen — zij was ook een goede illustrator." },
+            { type: "feit", tekst: "Netflix-serie 'The Letter for the King' (2020): wereldwijd te zien. Diende als marketing voor het oorspronkelijke boek." },
+          ],
+          basiskennis: [{ onderwerp: "Niet Beckman", uitleg: "Beckman = 'Kruistocht in Spijkerbroek'. Dragt = 'De brief voor de koning'. Beide historische jeugdverhalen, maar verschillende schrijvers." }],
+          niveaus: { basis: "Tonke Dragt. = A.", simpeler: "Tonke Dragt schreef 'De brief voor de koning' (1962). Won Gouden Griffel, verfilmd door Netflix 2020. = A.", nogSimpeler: "Tonke Dragt = A." },
+        },
+      },
+      {
+        q: "**Bibliotheek** = waar?",
+        options: ["Plek waar je boeken kunt lenen (gratis voor kinderen)", "Boekenwinkel waar je koopt", "School-bibliotheek alleen", "Online video-platform"],
+        answer: 0,
+        wrongHints: [null, "Klopt — leen gratis (jeugdlidmaatschap kost €0).", "Niet kopen — LENEN.", "Niet alleen school — ook publieke bibliotheek in dorp/stad.", "Niet video — boeken."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een bibliotheek?", tekst: "Een **bibliotheek** (of 'biep') is een plek waar je **boeken kunt lenen** voor een paar weken. **Voor kinderen onder 18: GRATIS** in heel Nederland (sinds 2017 wet). Volwassenen betalen ~€50/jaar." },
+            { titel: "Wat kun je doen in een bibliotheek?", tekst: "• **Boeken lenen** (4 weken meestal)\n• **Stripverhalen** lezen op locatie\n• **Huiswerk** maken (rustige werkplek + wifi)\n• **Tijdschriften** lezen\n• **DVD's, audioboeken, games** lenen\n• **Leesclubs**, voorleesuurtjes, workshops" },
+            { titel: "Cito-feit: openbare bibliotheek NL", tekst: "Nederland heeft **~1.300 openbare bibliotheek-vestigingen** (2024). Onderdeel van de **Koninklijke Bibliotheek**-systeem. Sommige bibliotheken hebben ook 3D-printers, escape rooms, en taalcafés voor nieuwkomers. **Veel meer dan alleen boeken!**" },
+          ],
+          woorden: [
+            { woord: "bibliotheek", uitleg: "Plek waar boeken (en andere media) gratis te lenen zijn." },
+            { woord: "lenen", uitleg: "Tijdelijk meenemen, daarna terugbrengen. Niet kopen." },
+            { woord: "boetes", uitleg: "Kleine kosten als je boek te laat terugbrengt. Voor kinderen <18: vaak geen boetes meer in 2024." },
+          ],
+          theorie: "Hoe werkt de bibliotheek:\n1. **Lid worden** (gratis <18, formulier ouders)\n2. Pasje krijgen + 5-15 boeken tegelijk lenen\n3. Boek **vier weken** thuis houden\n4. Op tijd terugbrengen of online verlengen\n5. **Niet vinden wat je zoekt?** Vraag aan bibliothecaris — die kan reserveren of bestellen van andere vestiging.",
+          voorbeelden: [
+            { type: "feit", tekst: "Veel scholen hebben hun eigen kleine bibliotheek + organiseren bezoeken aan grote openbare bibliotheek." },
+            { type: "feit", tekst: "Lezen in de bieb telt mee voor de **Schrijfwijzer-leesmeter**: hoe meer boeken hoe beter je leesvaardigheid voor Doorstroomtoets." },
+          ],
+          basiskennis: [{ onderwerp: "Niet boekenwinkel", uitleg: "Verschil: bibliotheek = lenen (gratis). Boekenwinkel = kopen (kost geld)." }],
+          niveaus: { basis: "Boeken lenen gratis kind. = A.", simpeler: "Bibliotheek = plek om boeken gratis te lenen. Voor kinderen <18 is lidmaatschap gratis in heel NL. = A.", nogSimpeler: "Gratis lenen = A." },
+        },
+      },
     ],
   },
 ];
