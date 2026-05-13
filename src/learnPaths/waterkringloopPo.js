@@ -21,6 +21,28 @@ const steps = [
         options: ["~3%", "50%", "97%", "99%"],
         answer: 0,
         wrongHints: [null, "Klopt — meeste is zout.", "Veel meer.", "Zout water.", "Te hoog."],
+        uitlegPad: {
+          stappen: [
+            { titel: "97% zout / 3% zoet", tekst: "Van al het water op aarde is **97% ZOUT** water (zeeën + oceanen). Slechts **3% is ZOET** water — dat is waar we van drinken, koken, douchen." },
+            { titel: "Maar nog minder beschikbaar...", tekst: "Van die 3% zoet water:\n• **2,5%** zit in **POLEN + GLETSJERS** als ijs (niet direct te gebruiken)\n• **0,5%** is vloeibaar = rivieren, meren, grondwater.\nDus uiteindelijk is maar **0,5% van al het water op aarde** direct bruikbaar voor mensen!" },
+            { titel: "Vergelijking met bad", tekst: "Stel je voor: alle water op aarde = 100 emmers.\n• 97 emmers = zout (zee)\n• 2,5 emmers = ijs (pool)\n• 0,5 emmer = drinkbaar.\nDat halve emmertje moet 8 miljard mensen + dieren + planten voeden!" },
+          ],
+          woorden: [
+            { woord: "zoet water", uitleg: "Water zonder veel zout — drinkbaar voor mens." },
+            { woord: "zout water", uitleg: "Zeewater — onbruikbaar voor drinken/planten." },
+          ],
+          theorie: "Cito-feit waterverdeling:\n• 71% aardoppervlak = water.\n• 97% zout, 3% zoet.\n• 2,5% ijs, 0,5% vloeibaar.\n• Daarom: **waterbesparing** belangrijk.",
+          voorbeelden: [
+            { type: "stap", tekst: "Klimaatverandering doet poolijs smelten. Wordt zoet water in zee = wordt zout = onbruikbaar." },
+            { type: "stap", tekst: "Sommige landen (Saoedi-Arabië, Israël) maken zoet water uit zeewater (ontzilten). Duur." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 3% zoet (slechts!). 97% is zout. Wij zijn allemaal afhankelijk van die kleine 3%." }],
+          niveaus: {
+            basis: "~3% zoet water. = A.",
+            simpeler: "97% van aarde-water = zout. Slechts 3% is zoet (drinkbaar). = A.",
+            nogSimpeler: "3% = A.",
+          },
+        },
       },
       {
         q: "Wat is **verdamping**?",
@@ -75,6 +97,28 @@ const steps = [
         options: ["Cumulonimbus", "Cirrus", "Stratus", "Altostratus"],
         answer: 0,
         wrongHints: [null, "Klopt — enorme stapelwolk.", "Hoog veer.", "Lage laag.", "Middelhoog."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cumulonimbus = onweerswolk", tekst: "De **cumulonimbus** is de **grootste + krachtigste** wolksoort. 'Cumulo' = stapel, 'nimbus' = regen. Dus letterlijk: 'stapel-regen-wolk'. Kan **tot 15 km hoog** worden — hoger dan de Mount Everest!" },
+            { titel: "Wat doet hij?", tekst: "Cumulonimbus brengt:\n• **Hevige regen** + soms HAGEL\n• **Onweer** (bliksem + donder)\n• Soms **tornado** (extreem)\n• Felle wind aan onderkant.\nLetterlijk staat zo'n wolk vol water + ijs + elektriciteit." },
+            { titel: "Hoe herken je 'm?", tekst: "Heel kenmerkend: **aambeeld-vorm** bovenin (door wind hoog in atmosfeer). Donker grijs/zwart aan onderkant. Soms ziet hij eruit als een **bloemkool** van wolken. Kom zo'n wolk tegen? **Schuil!**" },
+          ],
+          woorden: [
+            { woord: "cumulonimbus", uitleg: "Grootste wolksoort, brengt onweer + hevige regen." },
+            { woord: "aambeeld", uitleg: "Platte top van cumulonimbus (lijkt op smid-aambeeld)." },
+          ],
+          theorie: "Cito-feit wolksoorten:\n• **Cirrus** (hoog, dun, veer) = mooi weer\n• **Cumulus** (witte bol, zomer) = goed\n• **Stratus** (lage grijze laag) = miezerig\n• **Cumulonimbus** (enorm) = ONWEER\nElk geeft hint over wat voor weer komt.",
+          voorbeelden: [
+            { type: "stap", tekst: "Zomerse middag: kleine cumulus-wolken op blauwe lucht = mooi weer. Als ze samengroeien + worden hoge cumulonimbus → bui-tje opbouw." },
+            { type: "stap", tekst: "Tegen middag: lucht warm → opstijgt → koelt af → wolk groeit groter → cumulonimbus → onweer." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Cumulo-NIMBUS = NIMBUS = regen. Plus stapel-vorm. Onthoud die combinatie." }],
+          niveaus: {
+            basis: "Cumulonimbus = onweerswolk. = A.",
+            simpeler: "De grote stapel-wolk (tot 15 km hoog) brengt onweer + regen + hagel. = A.",
+            nogSimpeler: "Cumulonimbus = A.",
+          },
+        },
       },
       {
         q: "Hoeveel weegt **gemiddelde cumulus-wolk**?",
@@ -116,6 +160,28 @@ const steps = [
         options: ["7 (ROYGBIV)", "3", "10", "Oneindig"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Wel onderscheidbaar 7."],
+        uitlegPad: {
+          stappen: [
+            { titel: "7 kleuren in vaste volgorde", tekst: "Een regenboog heeft altijd **7 kleuren** in dezelfde volgorde, van **buitenste** (rood) naar **binnenste** (violet):\n1. **Rood**\n2. **Oranje**\n3. **Geel**\n4. **Groen**\n5. **Blauw**\n6. **Indigo** (donkerblauw)\n7. **Violet** (paars)" },
+            { titel: "Ezelsbruggetje: ROYGBIV", tekst: "Engelse afkorting: **R**ed-**O**range-**Y**ellow-**G**reen-**B**lue-**I**ndigo-**V**iolet = ROYGBIV. Spreek je uit als 'roi-bif'. Klinkt raar maar werkt om volgorde te onthouden." },
+            { titel: "Hoe ontstaat het?", tekst: "Wit zonlicht IS eigenlijk een MIX van alle kleuren. Als zonlicht een regendruppel raakt, BREEKT het in deze 7 kleuren. Daarom: regenboog = zon + regen tegelijk." },
+          ],
+          woorden: [
+            { woord: "regenboog", uitleg: "7-kleurige boog door zonlicht in regendruppels." },
+            { woord: "spectrum", uitleg: "Alle kleuren van wit licht (zoals uit een prisma)." },
+          ],
+          theorie: "Cito-feit regenboog:\n• 7 kleuren = ROYGBIV.\n• Zon achter jou, regen voor je.\n• Soms **dubbele** regenboog (2e zwakker, kleuren OMGEKEERD).\n• In Engels al sinds 1600s.\n• Newton ontdekte dat wit licht uit kleuren bestaat (prisma-experiment).",
+          voorbeelden: [
+            { type: "stap", tekst: "Sprookjes: 'aan einde van regenboog ligt pot goud.' Wetenschap: regenboog heeft GEEN einde — het is een cirkel. Vanaf grond zien wij alleen de bovenste helft." },
+            { type: "stap", tekst: "Prisma-experiment: wit licht door driehoekig glas-blok → 7 kleuren komen eruit. Newton deed dit in 1666." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "7 kleuren, ROYGBIV. Buiten = rood, binnen = violet. Onthoud volgorde." }],
+          niveaus: {
+            basis: "7 kleuren (rood-oranje-geel-groen-blauw-indigo-violet). = A.",
+            simpeler: "Regenboog heeft altijd 7 kleuren in vaste volgorde. = A.",
+            nogSimpeler: "7 = A.",
+          },
+        },
       },
     ],
   },
