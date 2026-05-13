@@ -333,7 +333,29 @@ const steps = [
         q: "Zelfde klas. **Op welke dag** waren er **de meeste kinderen**?",
         options: ["Donderdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
-        wrongHints: [null, "Dat is 22 — zoek het hoogste getal.", "Dat is 26 — hoger bestaat nog.", "Dat is 24 — hoger bestaat nog."],
+        wrongHints: [null, "Klopt — donderdag 30 is het hoogste.", "Dat is 22 — zoek het hoogste getal.", "Dat is 26 — hoger bestaat nog.", "Dat is 24 — hoger bestaat nog."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Meeste' = hoogste getal", tekst: "Het signaalwoord **'meeste'** vraagt om het **hoogste getal**. Bij een staafdiagram = de **langste/hoogste balk**." },
+            { titel: "Vergelijk de 5 dagen", tekst: "Lees alle waardes:\n• ma = 22\n• di = 18\n• wo = 26\n• **do = 30** ← hoogste!\n• vr = 24\nDe hoogste = 30, dat is **donderdag**." },
+            { titel: "Cito-instinker: GETAL vs DAG", tekst: "Vraag is: **'Op welke DAG'** — dus antwoord = de **dagnaam** (donderdag), NIET het getal (30).\nCito test of je de juiste taal-vorm in de opties pakt:\n• 'Op welke dag?' → dag-naam\n• 'Hoeveel kinderen?' → getal\n• 'Hoeveel meer dan ma?' → verschil-getal\nVerkeerde vraag-vorm aanvinken = punt kwijt, ook al klopt je redenering." },
+          ],
+          woorden: [
+            { woord: "meeste", uitleg: "Het hoogste aantal, grootste hoeveelheid." },
+            { woord: "minste", uitleg: "Het laagste aantal, kleinste hoeveelheid." },
+          ],
+          theorie: "Cito-signaalwoorden bij staaf:\n• 'meeste' / 'hoogste' / 'grootste' → hoogste balk\n• 'minste' / 'laagste' / 'kleinste' → laagste balk\n• 'op welke dag' → antwoord = dagnaam (NIET getal)\n• 'hoeveel' → antwoord = getal\n\n3 stappen: 1) bepaal extreme (max/min) 2) lees waarde 3) check wat de vraag VRAAGT (dag of getal).",
+          voorbeelden: [
+            { type: "stap", tekst: "Staaf verkoop ijsjes ma-vr: 12-8-18-22-30. Welke dag minst? → di (8). Hoeveel op vr? → 30." },
+            { type: "stap", tekst: "Staaf regen jan-apr: 60-80-40-50. Welke maand meest? → feb (80). Hoeveel mm in mrt? → 40 mm." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag-startwoord bepaalt antwoord-vorm: 'Welke...' = naam/categorie. 'Hoeveel...' = getal. 'Wanneer...' = tijd." },],
+          niveaus: {
+            basis: "Donderdag = 30 = hoogste. = A.",
+            simpeler: "Zoek hoogste getal: 30 op donderdag. Vraag: 'welke dag?' → antwoord = donderdag. = A.",
+            nogSimpeler: "Donderdag = A.",
+          },
+        },
       },
     ],
   },
@@ -596,13 +618,57 @@ const steps = [
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30 ijsjes. **Op welke dag minst** verkocht?",
         options: ["Dinsdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
-        wrongHints: [null, "Maandag is 12 — dinsdag is lager.", "Woensdag is 18 — hoger dan dinsdag.", "Vrijdag is 30 — de meest, niet minst."],
+        wrongHints: [null, "Klopt — dinsdag (8) is het laagste.", "Maandag is 12 — dinsdag is lager.", "Woensdag is 18 — hoger dan dinsdag.", "Vrijdag is 30 — de meest, niet minst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Minst' = laagste getal", tekst: "Bij een **tabel** zoek je het **laagste getal** als de vraag 'minst' / 'minste' / 'laagste' bevat." },
+            { titel: "Loop door de tabel — vergelijk", tekst: "• ma = 12\n• **di = 8** ← laagste!\n• wo = 18\n• do = 22\n• vr = 30\nHet kleinste getal is **8**, dat hoort bij **dinsdag**." },
+            { titel: "Cito-truc: dagen bij rekenen", tekst: "Bij tabel-vragen met dagen:\n• 'minst' / 'minste' / 'laagste' → kleinste getal\n• 'meeste' / 'hoogste' → grootste getal\n• 'verschil' → groot − klein\n• 'totaal' → alles +\n\nVerwar 'minst' niet met 'minder dan X' (= aftrekken). 'Minst' = extreme zoeken." },
+          ],
+          woorden: [
+            { woord: "minst", uitleg: "Het kleinste aantal/laagste getal in de groep." },
+            { woord: "tabel", uitleg: "Getallen netjes in rijen en kolommen geordend." },
+          ],
+          theorie: "Tabel aflezen 'minst/meest':\n1. Loop alle waardes na.\n2. Onthoud kleinste (bij minst) of grootste (bij meest).\n3. Pak de NAAM van de kolom/rij waar dat getal hoort.\n4. Antwoord = naam, NIET het getal zelf (tenzij vraag 'hoeveel' is).",
+          voorbeelden: [
+            { type: "stap", tekst: "Tabel cijfers ma 7, di 6, wo 9, do 5. Laagste cijfer? → do (5)." },
+            { type: "stap", tekst: "Tabel inwoners A=200, B=150, C=300. Minste inwoners? → B." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag 'welke dag' → antwoord = dag-naam. Vraag 'hoeveel' → antwoord = getal. Tabel-vragen testen vaak die verwisseling." }],
+          niveaus: {
+            basis: "Dinsdag (8) is het laagste. = A.",
+            simpeler: "Zoek het kleinste getal in de tabel: 8 → bij dinsdag. = A.",
+            nogSimpeler: "Dinsdag = A.",
+          },
+        },
       },
       {
         q: "Zelfde tabel. **Totaal ijsjes** hele week?",
         options: ["90 ijsjes", "70 ijsjes", "60 ijsjes", "100 ijsjes"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Te veel — controleer."],
+        wrongHints: [null, "Klopt — 12+8+18+22+30 = 90.", "Te weinig — controleer optelling 12+8+18+22+30.", "Te weinig — niet alle 5 dagen meegeteld.", "Te veel — controleer."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Totaal' = alle 5 dagen optellen", tekst: "Het signaalwoord **'totaal'** vraagt om **alle waardes bij elkaar**. Bij week-tabel: tel alle 5 dagen op." },
+            { titel: "Slim optellen in paren", tekst: "Niet alles in 1 keer in je hoofd — maak paren:\n• ma + di = 12 + 8 = **20**\n• wo + do = 18 + 22 = **40**\n• vr alleen = **30**\n\nNu paren samen:\n• 20 + 40 = **60**\n• 60 + 30 = **90**\n→ **Totaal = 90 ijsjes**." },
+            { titel: "Slimme trucs voor optellen", tekst: "Cito-trucs bij grotere optellingen:\n• Zoek **paren die mooi uitkomen**: 12+8 = 20 (rond getal!), 18+22 = 40 (rond!)\n• Maak van moeilijke som een ronde-getallen-som\n• Tel de eenheden eerst, daarna tientallen\n• Schat eerst: 5 dagen × ~18 gemiddeld ≈ 90 → 90 klopt qua orde van grootte" },
+          ],
+          woorden: [
+            { woord: "totaal", uitleg: "Alle waardes samen, na optellen." },
+            { woord: "paren", uitleg: "Twee getallen samen — vaak makkelijker dan alles in 1 keer." },
+          ],
+          theorie: "Cito-tabel signaalwoorden:\n• 'Totaal' → +\n• 'Samen' → +\n• 'In totaal verkocht' → +\n• 'Hele week/dag/jaar' → + (alles binnen die periode)\n\nNooit anders dan +. Alleen aftrekken bij 'verschil' / 'hoeveel meer/minder'.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tabel cijfers per dag: 5+7+9+6+8 = 35 punten totaal." },
+            { type: "stap", tekst: "Tabel regen jan-apr: 60+50+40+70 = 220 mm in 4 maanden." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij 5 getallen: pak 2 paren + 1 los, dan paren samen, dan los erbij. Drie stappen ipv 4 = minder fouten." }],
+          niveaus: {
+            basis: "12+8+18+22+30 = 90. = A.",
+            simpeler: "Tel: 12+8=20, 18+22=40, 20+40=60, +30=90. = A.",
+            nogSimpeler: "90 = A.",
+          },
+        },
       },
       {
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Hoeveel meer** op vr dan ma?",
@@ -724,7 +790,30 @@ const steps = [
         q: "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",
         options: ["Vogel", "Hond", "Kat", "Vis"],
         answer: 0,
-        wrongHints: [null, "Hond is 12 — kijk wie de minste heeft.", "Kat is 18 — dat is de meeste, niet de minste.", "Vis is 6 — vogel is met 4 nog minder."],
+        wrongHints: [null, "Klopt — vogel (4) is de laagste van alle 4.", "Hond is 12 — kijk wie de minste heeft.", "Kat is 18 — dat is de meeste, niet de minste.", "Vis is 6 — vogel is met 4 nog minder."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Minst' = laagste balk", tekst: "**'Komt het minst voor'** = het dier met het **kleinste aantal** = de **laagste balk** in de staaf-diagram." },
+            { titel: "Vergelijk alle 4 huisdieren", tekst: "• Hond = 12\n• Kat = 18\n• **Vogel = 4** ← laagste!\n• Vis = 6\n\nGesorteerd van laag naar hoog: vogel (4) < vis (6) < hond (12) < kat (18).\n→ Vogel is met **4** het minst." },
+            { titel: "Cito-instinker: vergelijk ALLE opties", tekst: "Veel kinderen kiezen het EERSTE lage getal dat ze zien. Maar je moet **ALLE 4** vergelijken — anders mis je iets lagers.\nVoorbeeld: je ziet vis (6) en denkt 'dat lijkt laag, kies vis'. Maar vogel is **nog lager** (4). Pas op dat je niet stopt bij het eerste 'best lijkende' antwoord.\n→ **Truc**: schrijf alle 4 getallen op in volgorde, dan pak de laagste." },
+          ],
+          woorden: [
+            { woord: "minst", uitleg: "Het kleinste aantal." },
+            { woord: "meest", uitleg: "Het grootste aantal." },
+            { woord: "vergelijken", uitleg: "Twee of meer getallen naast elkaar zetten en bepalen welke groter/kleiner is." },
+          ],
+          theorie: "Cito-staafdiagram 'minst/meest':\n1. Lees alle 4 (of meer) balken af.\n2. Vergelijk volledig — alle getallen.\n3. Zoek extreme (laagste = minst, hoogste = meest).\n4. Pak het LABEL van die balk als antwoord (vraag 'welk dier?' → naam dier).\n\nNooit stoppen bij het eerste 'best lijkende' getal — alle opties checken.",
+          voorbeelden: [
+            { type: "stap", tekst: "Staaf sport-keuze: voetbal 20, hockey 15, tennis 8, zwemmen 12. Minst? → tennis (8)." },
+            { type: "stap", tekst: "Staaf cijfers wiskunde-toets: 5= 2 keer, 6= 5 keer, 7= 8 keer, 8= 4 keer. Welk cijfer minst? → 5 (slechts 2 keer)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Sorteer alle 4 in je hoofd of op kladpapier van klein naar groot. Eerste = minst, laatste = meest. Veiliger dan 'in je hoofd vergelijken'." }],
+          niveaus: {
+            basis: "Vogel (4) is het laagst. = A.",
+            simpeler: "Vergelijk: hond=12, kat=18, vogel=4, vis=6. Laagste = 4 = vogel. = A.",
+            nogSimpeler: "Vogel = A.",
+          },
+        },
       },
       {
         q: "Lijngrafiek temperatuur. Bij Cito staat een **stijgende** lijn. Wat betekent dat?",
