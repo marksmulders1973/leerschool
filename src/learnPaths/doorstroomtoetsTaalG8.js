@@ -380,6 +380,28 @@ const steps = [
         options: ["Prachtig", "Lelijk", "Snel", "Klein"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hetzelfde betekenen = synoniem", tekst: "'Hetzelfde als mooi' = een woord dat ook MOOI betekent. Niet iets anders, niet het omgekeerde." },
+            { titel: "Vergelijk de opties", tekst: "Prachtig = heel mooi → ja, synoniem. Lelijk = niet mooi → tegenstelling. Snel/klein → andere onderwerpen." },
+            { titel: "Synoniemen van mooi (rijtje)", tekst: "prachtig, schitterend, fantastisch, fraai, geweldig — allemaal positieve waardering, vergelijkbaar met mooi." },
+          ],
+          woorden: [
+            { woord: "synoniem", uitleg: "Woord met dezelfde betekenis." },
+            { woord: "prachtig", uitleg: "Heel mooi — sterker dan 'mooi'." },
+          ],
+          theorie: "Cito-tip: zoek het meest dichtbij-staande synoniem. Soms zijn er meerdere passende, maar één staat het dichtst bij de oorspronkelijke betekenis.",
+          voorbeelden: [
+            { type: "stap", tekst: "mooi = prachtig = schitterend = fraai." },
+            { type: "stap", tekst: "groot = enorm = reusachtig. Klein = piepklein = mini." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap eerst de tegenstellingen (lelijk) en woorden uit andere categorieën (snel = snelheid)." }],
+          niveaus: {
+            basis: "Mooi = prachtig (synoniem).",
+            simpeler: "Beide betekenen ongeveer hetzelfde positiefs.",
+            nogSimpeler: "Mooi = prachtig.",
+          },
+        },
       },
       {
         q: "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
@@ -527,6 +549,28 @@ const steps = [
         options: ["Honden zijn nuttig bij brand", "Honden eten brood", "Brand is gevaarlijk", "Iedereen wil een hond"],
         answer: 0,
         wrongHints: [null, "Te specifiek — niet de hoofdgedachte.", "Klopt maar niet de hoofdgedachte over honden.", "Te algemeen — niet specifiek over honden."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een hoofdgedachte?", tekst: "De hoofdgedachte is in ÉÉN zin: waar gaat de hele tekst over? Niet één klein detail, maar de centrale boodschap." },
+            { titel: "Cito-truc: combineer onderwerp + boodschap", tekst: "Onderwerp = honden. Boodschap = zij helpen bij brand. Hoofdgedachte = 'Honden zijn nuttig bij brand'. Past beide samen." },
+            { titel: "Schrap te smal/breed", tekst: "'Honden eten brood' = staat niet in tekst. 'Brand is gevaarlijk' = te breed (niet over honden). 'Iedereen wil hond' = niet de boodschap." },
+          ],
+          woorden: [
+            { woord: "hoofdgedachte", uitleg: "Centrale boodschap van de hele tekst, in 1 zin." },
+            { woord: "detail", uitleg: "Klein stukje informatie — niet de hoofdgedachte." },
+          ],
+          theorie: "Cito-strategie hoofdgedachte: 1) Wat is het onderwerp? 2) Wat is de boodschap erover? 3) Voeg samen tot 1 zin. Vaak staat de hoofdgedachte in de eerste of laatste alinea.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over plastic in zee → hoofdgedachte: 'plastic is een groot probleem in de zee'." },
+            { type: "stap", tekst: "Tekst over voetbal-WK → hoofdgedachte: 'het WK is een groot voetbaltoernooi'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofdgedachte = wat zou je in 1 zin tegen een vriend zeggen als hij vraagt 'waar gaat die tekst over?'" }],
+          niveaus: {
+            basis: "Hoofdgedachte = centrale boodschap in 1 zin.",
+            simpeler: "Combineer: onderwerp (honden) + boodschap (helpen bij brand) = hoofdgedachte.",
+            nogSimpeler: "Onderwerp + waarom = hoofdgedachte.",
+          },
+        },
       },
       {
         q: "*Tekst: 'In de Sahara valt **bijna nooit** regen. Toch leven er kamelen.'* Welke **signaalwoord** geeft een **tegenstelling**?",
@@ -583,6 +627,28 @@ const steps = [
         options: ["Groep zinnen over één onderwerp", "Eén zin", "Hele tekst", "Plaatje"],
         answer: 0,
         wrongHints: [null, "Klopt — paragraaf met witregel ervoor.", "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een alinea?", tekst: "Een alinea is een groep zinnen die SAMEN over één onderwerp gaan. Daarna volgt vaak een witregel of een inspring." },
+            { titel: "Hoe herken je een alinea?", tekst: "Kijk naar de tekst: zie je een witregel of een nieuwe regel die iets inspringt? Daar begint een nieuwe alinea." },
+            { titel: "Waarom alinea's?", tekst: "Door alinea's wordt een tekst overzichtelijk. Elke alinea heeft een kerngedachte. Bij Cito heel handig om naar te verwijzen: 'alinea 3 zegt...'." },
+          ],
+          woorden: [
+            { woord: "alinea", uitleg: "Groep zinnen over één onderwerp, gescheiden door witregel." },
+            { woord: "paragraaf", uitleg: "Engels woord voor alinea." },
+          ],
+          theorie: "Cito-tip: bij lange teksten, eerst tellen hoeveel alinea's er zijn. Bij een 'detail-vraag over alinea 2' weet je dan precies waar te zoeken.",
+          voorbeelden: [
+            { type: "stap", tekst: "Een schoolboek heeft per hoofdstuk vaak 10-20 alinea's." },
+            { type: "stap", tekst: "Een nieuwsartikel: elke alinea = 2-4 zinnen over één deelonderwerp." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tel met je vinger: hoe vaak springt de tekst in / staat er een witregel? Zoveel alinea's zijn er." }],
+          niveaus: {
+            basis: "Alinea = groep zinnen over één onderwerp.",
+            simpeler: "Tekst-stukje met witregel ervoor en erna.",
+            nogSimpeler: "Stukje tekst over 1 ding.",
+          },
+        },
       },
       {
         q: "Signaalwoord **'bijvoorbeeld'** introduceert?",
@@ -629,6 +695,28 @@ const steps = [
         options: ["Gevolg", "Reden", "Voorbeeld", "Tegenstelling"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Reden = 'omdat'.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Daardoor = gevolg", tekst: "'Daardoor' wijst op het GEVOLG: wat er gebeurt VANWEGE iets dat eerder genoemd is." },
+            { titel: "Voorbeeld", tekst: "'Tom oefende veel. DAARDOOR won hij de wedstrijd.' → oefenen = reden, winnen = gevolg." },
+            { titel: "Verschil met 'omdat'", tekst: "'Omdat' staat vóór de REDEN. 'Daardoor' staat vóór het GEVOLG. Beide woorden verbinden reden+gevolg, alleen verschillende kant!" },
+          ],
+          woorden: [
+            { woord: "daardoor", uitleg: "Wijst op het gevolg (wat komt eruit)." },
+            { woord: "omdat", uitleg: "Wijst op de reden (wat ervoor zorgt)." },
+          ],
+          theorie: "Cito-truc: bij 'daardoor' staat ervoor de reden, erna het gevolg. Vraag jezelf 'WAT gebeurde er DOOR die reden?' Antwoord = gevolg.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Het regende hard. Daardoor werd het wegdek glad.' → glad = gevolg." },
+            { type: "stap", tekst: "Vergelijk: 'Het wegdek werd glad OMDAT het regende.' → zelfde idee, andere woordvolgorde." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Daardoor = dus = vandaar. Allemaal gevolg-woorden." }],
+          niveaus: {
+            basis: "Daardoor = gevolg-signaal.",
+            simpeler: "Wat gebeurde DOOR die actie? = daardoor.",
+            nogSimpeler: "Daardoor = dus.",
+          },
+        },
       },
       {
         q: "*Cito-tip*: een **lange tekst** lees je **eerst** ...?",
@@ -666,6 +754,28 @@ const steps = [
         options: ["'Wat staat er in alinea 2?'", "'Wat vind jij?'", "'Wat is de mening?'", "'Welk plaatje?'"],
         answer: 0,
         wrongHints: [null, "Klopt — specifieke info.", "Niet — eigen mening.", "Niet primair.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Detail-vraag = specifiek", tekst: "Een detail-vraag vraagt naar één concreet stukje informatie. Bijvoorbeeld: 'Hoe oud is Tom?' of 'Welk land wordt genoemd?'" },
+            { titel: "Antwoord staat in de tekst", tekst: "Het antwoord op een detail-vraag staat LETTERLIJK ergens in de tekst. Je hoeft niet te raden — gewoon zoeken." },
+            { titel: "Cito-strategie: zoek terug", tekst: "Stappen: 1) lees de vraag goed. 2) Zoek de juiste alinea. 3) Lees die alinea grondig. 4) Antwoord komt eruit." },
+          ],
+          woorden: [
+            { woord: "detail-vraag", uitleg: "Vraag over specifieke informatie in de tekst." },
+            { woord: "hoofdgedachte-vraag", uitleg: "Iets ANDERS: vraagt naar de boodschap van hele tekst." },
+          ],
+          theorie: "Cito-vraagsoorten: detail (specifieke info), hoofdgedachte (centrale boodschap), bedoeling (waarom schreef de auteur), verband (oorzaak-gevolg). Bij detail: ZOEK in de tekst, niet je eigen mening.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst zegt: 'De Sahara is in Afrika.' Detail-vraag: 'In welk werelddeel ligt de Sahara?' → Afrika." },
+            { type: "stap", tekst: "Tekst zegt: 'In 1969 ging Apollo 11 naar de maan.' Detail: 'In welk jaar?' → 1969." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Detail-vraag = vraag naar feit dat ergens precies in de tekst staat. Vinger erbij." }],
+          niveaus: {
+            basis: "Detail-vraag = vraag naar specifieke info uit de tekst.",
+            simpeler: "Zoek in tekst, niet raden of eigen mening.",
+            nogSimpeler: "Feit in tekst opzoeken.",
+          },
+        },
       },
       {
         q: "Hoeveel **leestips** voordat je vraag beantwoordt? Cito-strategie?",

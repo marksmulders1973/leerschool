@@ -165,6 +165,30 @@ const steps = [
         options: ["NO (noord-oost)", "ZO", "NW", "ZW"],
         answer: 0,
         wrongHints: [null, "Klopt — tussen noord en oost.", "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
+        uitlegPad: {
+          stappen: [
+            { titel: "8-puntig kompas", tekst: "Naast de 4 hoofdrichtingen (N/O/Z/W) heeft een kompas 4 tussenrichtingen: NO, ZO, ZW, NW." },
+            { titel: "Naam = combinatie van 2 hoofdrichtingen", tekst: "De naam laat zien tussen welke 2 hoofdrichtingen het ligt. NO = tussen Noord en Oost. ZO = tussen Zuid en Oost. Enzovoort." },
+            { titel: "Posities op kompas", tekst: "Klok-positie: N (12u), NO (1:30), O (3u), ZO (4:30), Z (6u), ZW (7:30), W (9u), NW (10:30)." },
+          ],
+          woorden: [
+            { woord: "NO", uitleg: "Noord-oost: tussen N en O." },
+            { woord: "ZO", uitleg: "Zuid-oost: tussen Z en O." },
+            { woord: "ZW", uitleg: "Zuid-west: tussen Z en W." },
+            { woord: "NW", uitleg: "Noord-west: tussen N en W." },
+          ],
+          theorie: "Cito-truc tussenrichtingen: de naam zegt het zelf. NO = N + O. Lees de letters en combineer de hoofdrichtingen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tussen Noord en Oost = NO (Noord-oost)." },
+            { type: "stap", tekst: "Tussen Zuid en West = ZW (Zuid-west)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Klok-volgorde 8 punten: N → NO → O → ZO → Z → ZW → W → NW → N (terug)." }],
+          niveaus: {
+            basis: "Tussen 2 hoofdrichtingen = naam combineert ze: NO, ZO, ZW, NW.",
+            simpeler: "Tussen Noord en Oost = Noord-oost (NO).",
+            nogSimpeler: "N + O = NO.",
+          },
+        },
       },
       {
         q: "Schaal **1:25.000**. Op kaart **2 cm**. In het echt?",
@@ -290,6 +314,28 @@ const steps = [
         options: ["Schaal-balk", "Legenda", "Kompas", "Titel"],
         answer: 0,
         wrongHints: [null, "Klopt — schaalbalk geeft schaal visueel weer.", "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "4 vaste kaart-elementen", tekst: "Op elke landkaart staan altijd 4 belangrijke dingen: TITEL (waar de kaart over gaat), LEGENDA (uitleg kleuren/symbolen), KOMPAS (windrichtingen), en SCHAALBALK (hoe groot het is in echt)." },
+            { titel: "Schaal-balk = afstand", tekst: "De schaalbalk laat zien: 1 cm op kaart = hoeveel meter/km in echt. Vaak een staafje met een streepje per 1 km of 10 km." },
+            { titel: "Niet verwarren", tekst: "Legenda = kleuren-uitleg (groen=bos, blauw=water). Kompas = welke kant is noord. Titel = naam van de kaart. Alleen schaalbalk geeft AFSTAND." },
+          ],
+          woorden: [
+            { woord: "schaalbalk", uitleg: "Maatstreepje dat zegt hoeveel 1 cm in werkelijkheid is." },
+            { woord: "legenda", uitleg: "Lijstje met betekenis van kleuren en symbolen." },
+          ],
+          theorie: "Cito-truc kaart-elementen: vraag jezelf: 1) wat moet ik weten? 2) Welk element heeft die info? Afstand→schaal. Kleur→legenda. Richting→kompas. Onderwerp→titel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Hoe ver van A naar B? → schaalbalk gebruiken." },
+            { type: "stap", tekst: "Wat is die groene vlek? → legenda gebruiken." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schaalbalk = afstand-info. Legenda = symbool-info. Kompas = richting. Titel = onderwerp." }],
+          niveaus: {
+            basis: "Schaal-balk vertelt hoe groot afstanden in werkelijkheid zijn.",
+            simpeler: "1 cm op kaart = X meter in echt → staat op schaalbalk.",
+            nogSimpeler: "Schaal = afstand.",
+          },
+        },
       },
       {
         q: "Op kompas: **tussen N en W** ligt?",
@@ -302,6 +348,28 @@ const steps = [
         options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Vlek"],
         answer: 0,
         wrongHints: [null, "Klopt — fiets/wandel = stippel.", "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Vlek = vlak."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lijnsoorten op kaarten", tekst: "Op een kaart staan verschillende lijnsoorten. Elk soort heeft een vaste betekenis." },
+            { titel: "Stippellijn = fiets/wandel", tekst: "Een stippellijn (- - - -) staat voor een fiets- of wandelroute. Niet voor auto's." },
+            { titel: "Doorgetrokken lijnen = wegen", tekst: "Een gewone, doorgetrokken lijn = autoweg. Een dikke gele/rode lijn = snelweg. Een blauwe lijn = rivier/kanaal." },
+          ],
+          woorden: [
+            { woord: "stippellijn", uitleg: "Onderbroken lijntjes - - - voor fiets/wandelroute." },
+            { woord: "legenda", uitleg: "Op de kaart staat altijd uitgelegd welke lijn wat betekent." },
+          ],
+          theorie: "Cito-tip: kijk altijd eerst in de LEGENDA. Daar staat exact welke lijn welke betekenis heeft. Op verschillende kaarten kan het iets anders zijn.",
+          voorbeelden: [
+            { type: "stap", tekst: "Op een fietsknooppunten-kaart staan stippellijnen voor fietsroutes." },
+            { type: "stap", tekst: "Op autokaarten: gele snelwegen, rode hoofdwegen, witte landwegen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Fietspad = vaak in plaatsen, niet zo druk → stippellijn. Snelweg = veel verkeer → dikke lijn." }],
+          niveaus: {
+            basis: "Stippellijn op kaart = fiets/wandelroute.",
+            simpeler: "Stippeltjes - - - = fietspad. Doorgetrokken = auto.",
+            nogSimpeler: "Stippels = fiets.",
+          },
+        },
       },
       {
         q: "Schaal **1:2.500** stadsplattegrond. Op kaart **2 cm**. Werkelijk?",
@@ -509,6 +577,27 @@ const steps = [
         options: ["15%", "20%", "10%", "25%"],
         answer: 0,
         wrongHints: [null, "Klopt — 100−35−25−25 = 15.", "Niet juist.", "Te weinig.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cirkel = altijd 100%", tekst: "Alle stukjes van een cirkeldiagram zijn SAMEN altijd 100%. Geen meer, geen minder." },
+            { titel: "Stap 1: tel bekende stukken op", tekst: "Bekende stukken: blauw 35% + rood 25% + groen 25% = 35 + 25 + 25 = **85%**." },
+            { titel: "Stap 2: trek af van 100", tekst: "Wat is er nog over voor de rest? 100% − 85% = **15%**." },
+          ],
+          woorden: [
+            { woord: "rest-stuk", uitleg: "Het overgebleven percentage in cirkeldiagram." },
+          ],
+          theorie: "Formule rest in cirkeldiagram: rest = 100 − (alle bekende %). Werkt altijd, want alles samen is 100%.",
+          voorbeelden: [
+            { type: "stap", tekst: "Cirkel: 50% + 30% + rest? Rest = 100 − 80 = 20%." },
+            { type: "stap", tekst: "Cirkel: 40% + 20% + 10% + rest? Rest = 100 − 70 = 30%." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-controle", uitleg: "Tel altijd ALLE delen op om te checken dat het 100% wordt. Anders mist er een stuk." }],
+          niveaus: {
+            basis: "Rest = 100 − (alles wat al bekend is).",
+            simpeler: "35+25+25 = 85. 100−85 = 15%.",
+            nogSimpeler: "Bekend optellen, dan van 100 aftrekken.",
+          },
+        },
       },
       {
         q: "Tabel-rij ma=5 di=10 wo=8 do=15 vr=12. **Mediaan** (middelste)?",
@@ -573,12 +662,55 @@ const steps = [
         options: ["50%", "25%", "100%", "75%"],
         answer: 0,
         wrongHints: [null, "Klopt — 100-50.", "Niet helft.", "Niet alles.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cirkel = altijd 100%", tekst: "Een cirkeldiagram is samen altijd 100%. Wat we kennen + wat we niet kennen = 100." },
+            { titel: "Stap 1: optellen wat bekend is", tekst: "Blauw 25% + geel 25% = **50%** bekend." },
+            { titel: "Stap 2: van 100 aftrekken", tekst: "Rest = 100 − 50 = **50%**." },
+          ],
+          woorden: [
+            { woord: "rest-stuk", uitleg: "Wat overblijft van 100% na bekende delen." },
+          ],
+          theorie: "Bij elk cirkeldiagram met bekende stukjes: tel bekende op, trek van 100 af. Klaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "30% + 20% + rest? Rest = 100 − 50 = 50%." },
+            { type: "stap", tekst: "10% + 40% + 30% + rest? Rest = 100 − 80 = 20%." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Check: tel alles op (inclusief rest) → moet 100% zijn." }],
+          niveaus: {
+            basis: "Rest = 100 − bekende delen samen.",
+            simpeler: "25+25 = 50. 100−50 = 50%.",
+            nogSimpeler: "Aftrekken van 100.",
+          },
+        },
       },
       {
         q: "Staafdiagram: hoogste staaf = ?",
         options: ["Grootste waarde", "Kleinste waarde", "Niets", "Gemiddelde"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Staaf-hoogte = waarde", tekst: "Op een staafdiagram laat elke staaf een waarde zien. Hoe HOGER de staaf, hoe GROTER het getal." },
+            { titel: "Hoogste staaf = grootste waarde", tekst: "De hoogste staaf hoort dus bij het grootste aantal/getal. Dat is wat er in beeld het meeste van is." },
+            { titel: "Laagste staaf = kleinste", tekst: "Omgekeerd: de laagste staaf hoort bij het kleinste getal — wat er het minste van is." },
+          ],
+          woorden: [
+            { woord: "staaf", uitleg: "Verticale of horizontale balk in een staafdiagram." },
+            { woord: "y-as", uitleg: "Verticale as: hier lees je de waardes af." },
+          ],
+          theorie: "Cito-truc bij staafdiagram: oogjes op de y-as (verticale as) houden. Vergelijk de hoogtes, niet de breedtes. De hoogste staaf wint qua waarde.",
+          voorbeelden: [
+            { type: "stap", tekst: "Diagram met klas A=20, B=30, C=25 leerlingen. Hoogste = B (30). Meeste leerlingen = klas B." },
+            { type: "stap", tekst: "Sport-cijfers: 15, 20, 8. Hoogste staaf = 20. Beste cijfer = 20." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Volg met je oog van de top van de staaf naar de y-as. Daar lees je het getal." }],
+          niveaus: {
+            basis: "Hoogste staaf = grootste getal in het diagram.",
+            simpeler: "Hoe hoger, hoe meer. Dus hoogste = grootste waarde.",
+            nogSimpeler: "Hoog = veel.",
+          },
+        },
       },
       {
         q: "**Mediaan** van 5,7,7,8,10?",
@@ -816,6 +948,28 @@ const steps = [
         options: ["Eerste + laatste woord op die pagina", "Alle woorden", "Alleen de titel", "Een lijst"],
         answer: 0,
         wrongHints: [null, "Klopt — handig bij snel zoeken.", "Niet alle.", "Geen titel.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoofdwoorden = navigatie-hulp", tekst: "Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Dat heten 'hoofdwoorden' of 'kopwoorden'." },
+            { titel: "Waarom? Snel zoeken", tekst: "Je hoeft niet hele pagina's te lezen. Kijk alleen naar de hoofdwoorden: ligt jouw woord (alfabetisch) tussen deze twee? Dan staat het op deze pagina." },
+            { titel: "Voorbeeld", tekst: "Hoofdwoorden 'kat' en 'kop'. Zoek je 'klok'? K-L komt tussen K-A en K-O → ja, deze pagina!" },
+          ],
+          woorden: [
+            { woord: "hoofdwoorden", uitleg: "Eerste + laatste woord op de pagina (boven in dik)." },
+            { woord: "kopwoorden", uitleg: "Synoniem van hoofdwoorden." },
+          ],
+          theorie: "Cito-tip: gebruik altijd hoofdwoorden om snel een woord op te zoeken. Eerst pagina vinden via hoofdwoorden, dan in die pagina precies zoeken.",
+          voorbeelden: [
+            { type: "stap", tekst: "Hoofdwoorden 'auto' en 'avond'. Zoek je 'augustus'? A-U-G past tussen A-U-T en A-V → ja." },
+            { type: "stap", tekst: "Hoofdwoorden 'paard' en 'piano'. Zoek je 'plant'? P-L past niet tussen P-A en P-I → nee, andere pagina." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bladeren wordt snel: kijk eerst naar hoofdwoorden, niet hele pagina's." }],
+          niveaus: {
+            basis: "Hoofdwoorden = eerste + laatste woord op die pagina.",
+            simpeler: "Ligt jouw woord alfabetisch tussen de hoofdwoorden? Dan zit het op die pagina.",
+            nogSimpeler: "Bovenste 2 dikke = pagina-grens.",
+          },
+        },
       },
       {
         q: "Welke is de **eerste letter** in alfabet?",
