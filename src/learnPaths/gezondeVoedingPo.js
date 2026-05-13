@@ -50,6 +50,28 @@ const steps = [
         options: ["1,5-2 liter", "Geen", "5 liter", "100 ml"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Wel nodig.", "Te veel.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom water belangrijk is", tekst: "Je lichaam bestaat voor **60% uit water**. Elke dag verlies je water (plassen, zweten, ademen). Dat moet je aanvullen — anders krijg je dorst, hoofdpijn en moeheid." },
+            { titel: "Hoeveel?", tekst: "Aanbeveling: **1,5 tot 2 liter** per dag voor een kind/volwassene. Dat is ongeveer **6-8 glazen** water (200-250 ml per glas)." },
+            { titel: "Telt thee/melk/sap ook mee?", tekst: "Ja — alle drinken telt mee voor je vocht-inname. Maar **water** is de gezondste keuze. Frisdrank + suiker-sapjes geven wel vocht maar ook veel suiker." },
+          ],
+          woorden: [
+            { woord: "vocht-inname", uitleg: "Hoeveel water/drinken je per dag binnenkrijgt." },
+            { woord: "uitdroging", uitleg: "Te weinig water = lichaam werkt slechter." },
+          ],
+          theorie: "Cito-feit: **60% water** in lichaam. **1,5-2 liter** drink-advies per dag. Tekenen van te weinig: donkere urine, dorst, hoofdpijn, moe.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bij sport of warm weer: meer water nodig (door zweten verlies je extra)." },
+            { type: "stap", tekst: "5 liter per dag is te veel — kan zelfs gevaarlijk zijn (water-vergiftiging). 100 ml is veel te weinig." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 6-8 glazen water per dag = 1,5-2 liter. Plan zelf: 2 bij ontbijt, 2 bij lunch, 2 tussendoor, 2 bij avondeten." }],
+          niveaus: {
+            basis: "1,5-2 liter water per dag. = A.",
+            simpeler: "Ongeveer 6-8 glazen water (250 ml elk). = A.",
+            nogSimpeler: "1,5-2 liter = A.",
+          },
+        },
       },
       {
         q: "Wat heeft **vezels**?",
@@ -151,6 +173,28 @@ const steps = [
         options: ["25 g", "100 g", "0 g", "1 kilo"],
         answer: 0,
         wrongHints: [null, "Klopt — 1 frisdrank = al boven.", "Te veel.", "Te streng.", "Onmogelijk."],
+        uitlegPad: {
+          stappen: [
+            { titel: "WHO-advies: 25 gram suiker per dag", tekst: "De **WHO** (Wereldgezondheidsorganisatie) adviseert voor kinderen maximaal **25 gram toegevoegde suiker** per dag. Dat is ongeveer **6 suikerklontjes**." },
+            { titel: "Hoe snel zit je 'eraan'?", tekst: "1 glas **frisdrank** = ~30 g suiker = al BOVEN het advies. 1 Mars-reep = 30 g. 1 portie ontbijtgranen kan 15 g hebben. Snel boven 25 g zonder dat je het door hebt." },
+            { titel: "Verborgen suikers", tekst: "Suiker zit niet alleen in snoep. Kijk op het etiket bij: **ketchup, brood, yoghurt met smaak, frisdrank, sapjes, ontbijtgranen**. Het kan veel meer zijn dan je denkt." },
+          ],
+          woorden: [
+            { woord: "WHO", uitleg: "Wereldgezondheidsorganisatie — Nederlandse afkorting WGO." },
+            { woord: "toegevoegde suiker", uitleg: "Suiker die EXTRA bij voedsel is gedaan (niet natuurlijk in fruit)." },
+          ],
+          theorie: "Cito-feit: max 25 g suiker per dag = WHO-advies kind. Suiker in fruit telt minder zwaar (omdat het samen met vezels komt + langzamer wordt opgenomen).",
+          voorbeelden: [
+            { type: "stap", tekst: "Te veel suiker = gaatjes in tanden, overgewicht, hoger risico op diabetes type 2." },
+            { type: "stap", tekst: "Sneaky: 1 zak Liga-koeken kan 30+ g suiker bevatten. Check etiket." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "25 g = ongeveer 6 suikerklontjes. Onthoud: 1 frisdrank = al boven het advies." }],
+          niveaus: {
+            basis: "Max 25 g suiker per dag (WHO kind). = A.",
+            simpeler: "Maximaal 25 gram = 6 suikerklontjes. 1 frisdrank zit er al boven. = A.",
+            nogSimpeler: "25 g = A.",
+          },
+        },
       },
       {
         q: "Hoeveel **alcohol** onder 18?",
@@ -169,6 +213,29 @@ const steps = [
         options: ["1 uur bewegen", "Niets", "8 uur", "5 minuten"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Slecht.", "Te veel.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de beweegnorm?", tekst: "De **Gezondheidsraad** in NL stelt: kinderen moeten **minstens 1 uur per dag matig tot intensief bewegen**. Dat geldt voor 4-18 jarigen." },
+            { titel: "Wat telt mee?", tekst: "Alles waarbij je hart sneller gaat kloppen + je ademt sneller:\n• Fietsen naar school\n• Op het schoolplein rennen\n• Voetbal/sport\n• Buitenspelen\n• Stoeien\n• Skaten/skateboarden." },
+            { titel: "Waarom belangrijk?", tekst: "Bewegen helpt:\n• **Hart + longen** sterker\n• **Botten + spieren** groeien\n• **Beter slapen + leren**\n• **Minder kans op overgewicht**\n• **Stress** verminderen.\nKinderen die genoeg bewegen scoren beter op school." },
+          ],
+          woorden: [
+            { woord: "beweegnorm", uitleg: "Aanbevolen hoeveelheid beweging per dag." },
+            { woord: "Gezondheidsraad", uitleg: "NL-instantie die advies geeft over gezondheid." },
+          ],
+          theorie: "Cito-feit: **1 uur per dag** is de NL-beweegnorm voor kinderen. WHO heeft dezelfde aanbeveling. Combineer met gezonde voeding voor beste resultaat.",
+          voorbeelden: [
+            { type: "stap", tekst: "Fietsen naar school + 30 min schoolplein + thuis buiten = makkelijk 1 uur halen." },
+            { type: "stap", tekst: "TV + tablet + gamen = stil-zitten. Probeer max 2 uur per dag scherm voor kinderen 4-12 jaar." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "1 uur per dag bewegen. Kan opgeknipt: 20 min fietsen + 30 min sporten + 10 min buiten spelen = al genoeg." },
+          ],
+          niveaus: {
+            basis: "1 uur per dag bewegen. = A.",
+            simpeler: "Minstens 60 minuten matig tot intensief bewegen per dag (sport, fietsen, spelen). = A.",
+            nogSimpeler: "1 uur = A.",
+          },
+        },
       },
     ],
   },
