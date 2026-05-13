@@ -27,6 +27,29 @@ const steps = [
         options: ["Vloeibaar water → damp", "Damp → vloeibaar", "Wolken naar regen", "IJs smelt"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Condensatie.", "Neerslag.", "Smelten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 toestanden van water", tekst: "Water kan in 3 vormen voorkomen: VAST (ijs), VLOEIBAAR (water uit kraan) en GAS (damp/stoom)." },
+            { titel: "Verdamping = vloeibaar → gas", tekst: "Bij verdamping wordt water UIT vloeibaar UIT gas (damp). Dit gebeurt door warmte: het water krijgt energie en 'vliegt weg' als gas." },
+            { titel: "Dagelijks voorbeeld", tekst: "Natte plas die in de zon ligt → na een uur droog. Het water is verdampt — de gas-vorm is in de lucht gegaan." },
+          ],
+          woorden: [
+            { woord: "verdamping", uitleg: "Vloeibaar water wordt damp (gas)." },
+            { woord: "condensatie", uitleg: "Andersom: damp wordt weer vloeibaar." },
+            { woord: "damp", uitleg: "Water in gas-vorm (onzichtbaar). Stoom = damp + heel kleine druppeltjes." },
+          ],
+          theorie: "Cito-tip waterkringloop: VERDAMPING (op aarde, door warmte) → CONDENSATIE (in lucht, koud) → NEERSLAG (regen/sneeuw) → terug op aarde. Steeds dezelfde rondje.",
+          voorbeelden: [
+            { type: "stap", tekst: "Was aan de lijn → wind/zon verdampt het water → droog." },
+            { type: "stap", tekst: "Zee verdampt door zon → water gaat omhoog → wolken → regen elders." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Verdamping = naar BOVEN (warm). Condensatie = naar BENEDEN (koud). Omgekeerde processen." }],
+          niveaus: {
+            basis: "Verdamping = vloeibaar water wordt damp/gas.",
+            simpeler: "Natte plas droogt op door zon = verdampt.",
+            nogSimpeler: "Water → gas.",
+          },
+        },
       },
       {
         q: "Wat is **condensatie**?",
@@ -64,6 +87,29 @@ const steps = [
         options: ["Regen die bevriest bij contact", "Sneeuw", "Hagel", "Mist"],
         answer: 0,
         wrongHints: [null, "Klopt — glad.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is ijzel?", tekst: "IJzel is regen die WEL vloeibaar uit de wolk valt, MAAR meteen bevriest zodra het de grond, bomen of auto's raakt." },
+            { titel: "Wanneer?", tekst: "Komt voor als de grond en oppervlakken eerder al onder 0°C waren (bv. na een koude nacht), terwijl de regen-druppel zelf nog vloeibaar is bij het vallen." },
+            { titel: "Gevaarlijk!", tekst: "Geeft een **gladde ijslaag** op wegen + stoepen. Heel glad — daarom waarschuwen KNMI en gemeente met code geel/oranje voor ijzel." },
+          ],
+          woorden: [
+            { woord: "ijzel", uitleg: "Regen die bevriest op koude grond → ijslaag." },
+            { woord: "hagel", uitleg: "Iets ANDERS: bevroren druppels die uit cumulonimbus-wolken vallen (al bevroren tijdens val)." },
+            { woord: "sneeuw", uitleg: "Iets ANDERS: ijskristallen die in wolk al vriezen en samen vlokken vormen." },
+          ],
+          theorie: "Cito-truc neerslagsoorten: SNEEUW = al bevroren in wolk + valt als vlok. HAGEL = bevroren door op-en-neer in onweerswolk. IJZEL = vloeibaar gevallen + pas op grond bevroren. Heel verschillende processen!",
+          voorbeelden: [
+            { type: "stap", tekst: "Na een koude nacht (vorst) regent het lichtjes. De druppels bevriezen direct op je auto-ruit = ijzel." },
+            { type: "stap", tekst: "Tijdens een zomeronweer vallen erwt-grote bevroren bolletjes = hagel (al bevroren bij vallen)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "IJzel = regen die WORDT ijs. Hagel = al ijs als het valt. Sneeuw = al ijs (zacht en wit) in wolk." }],
+          niveaus: {
+            basis: "IJzel = regen die bevriest bij contact met koude grond.",
+            simpeler: "Vloeibare regen + koude grond = ijslaag.",
+            nogSimpeler: "IJzel = glad ijs.",
+          },
+        },
       },
       {
         q: "Hoeveel **kleuren** in regenboog?",
@@ -83,6 +129,29 @@ const steps = [
         options: ["~25%", "100%", "0%", "75%"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Te veel.", "Wel.", "Te veel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Nederland is een waterland", tekst: "Een KWART van Nederland (= ~25%) ligt LAGER dan zeeniveau. Dat betekent: zonder dijken zou een groot deel onder water staan!" },
+            { titel: "Welke delen?", tekst: "Vooral het westen (Zuid-Holland, Noord-Holland, Flevoland, Zeeland). Het laagste punt is in Nieuwerkerk aan den IJssel = -6,76 m onder zeeniveau." },
+            { titel: "Hoe blijft het droog?", tekst: "Met **dijken** (7.000 km in NL) houden we het zeewater buiten. Met **gemalen** pompen we overtollig water weg naar zee of rivieren." },
+          ],
+          woorden: [
+            { woord: "zeeniveau", uitleg: "Hoogte van de zee, gebruikt als nul-punt." },
+            { woord: "polder", uitleg: "Land dat drooggemaakt is met dijken en gemalen." },
+            { woord: "dijk", uitleg: "Wal van aarde/stenen om water tegen te houden." },
+          ],
+          theorie: "Cito-feit: NL is bijzonder omdat we leven achter dijken op land dat eigenlijk onder water hoort. Daarom hebben we waterschappen, gemalen en de Deltawerken om veilig te blijven.",
+          voorbeelden: [
+            { type: "stap", tekst: "Flevoland: hele provincie was vroeger de Zuiderzee. Nu polder met steden (Almere, Lelystad)." },
+            { type: "stap", tekst: "Beemster (UNESCO): in 17e eeuw drooggemaakt met windmolens." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 25% = 1/4 van NL. Zonder dijken zou je nog steeds in 75% van NL kunnen wonen." }],
+          niveaus: {
+            basis: "~25% van NL ligt onder zeeniveau, beschermd door dijken.",
+            simpeler: "Een kwart van NL is lager dan de zee. Dijken houden water tegen.",
+            nogSimpeler: "1/4 onder zee, dijken redden.",
+          },
+        },
       },
       {
         q: "Wanneer **Watersnoodramp**?",
