@@ -335,7 +335,29 @@ const steps = [
         q: "Temperatuur: 8u → 12°C, 14u → 22°C, 20u → 16°C. **Wanneer warmst**?",
         options: ["14u", "8u", "20u", "11u"],
         answer: 0,
-        wrongHints: [null, "Dat is het koudst, niet het warmst.", "Niet het warmst — kijk naar het hoogste punt.", "Niet gegeven in de vraag."],
+        wrongHints: [null, "Klopt — 22°C is hoogste waarde, om 14u.", "Dat is het koudst, niet het warmst.", "Niet het warmst — kijk naar het hoogste punt.", "Niet gegeven in de vraag."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Warmst' = hoogste temperatuur", tekst: "Het woord **'warmst'** vraagt om het **HOOGSTE getal** in graden Celsius. Bij een lijngrafiek = het **HOOGSTE PUNT** op de y-as." },
+            { titel: "Vergelijk de 3 waardes", tekst: "• 8u → 12°C\n• 14u → **22°C** ← hoogste!\n• 20u → 16°C\n→ 14u heeft de hoogste waarde, dus 14u is het warmst." },
+            { titel: "Signaalwoorden temperatuur", tekst: "Cito gebruikt veel signaalwoorden bij temperatuur-vragen:\n• **'warmst'** / **'hoogste'** / **'top'** → grootste waarde → ↗\n• **'koudst'** / **'laagste'** / **'dieptepunt'** → kleinste waarde → ↘\n• **'wanneer'** → vraag om TIJD, antwoord = uur/dag\n• **'hoe warm'** → vraag om WAARDE, antwoord = °C" },
+          ],
+          woorden: [
+            { woord: "hoogste punt", uitleg: "Toppunt van een lijngrafiek = grootste waarde." },
+            { woord: "laagste punt", uitleg: "Dieptepunt = kleinste waarde." },
+          ],
+          theorie: "Cito-truc lijngrafiek extremen:\n• Hoogste punt → maximum-waarde\n• Laagste punt → minimum-waarde\n• Vraagt 'wanneer' → antwoord = tijd (x-as)\n• Vraagt 'hoe warm/veel' → antwoord = waarde (y-as)",
+          voorbeelden: [
+            { type: "stap", tekst: "Verkoopgrafiek: 'Wanneer meest verkocht?' → kijk hoogste staaf/punt → noem die dag/maand." },
+            { type: "stap", tekst: "Bevolkingsgrafiek: 'Wanneer minst inwoners?' → kijk laagste punt → noem dat jaar." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Warmst/hoogste/meest = hoogste punt. Koudst/laagste/minst = laagste punt. Vraag 'wanneer?' → tijd antwoorden, niet de waarde." }],
+          niveaus: {
+            basis: "14u (22°C is hoogste). = A.",
+            simpeler: "Zoek het hoogste getal: 22°C. Dat hoort bij 14u. Dus om 14u is het 't warmst. = A.",
+            nogSimpeler: "14u = A.",
+          },
+        },
       },
       {
         q: "Zelfde grafiek. Hoeveel **graden warmer** om 14u dan om 8u?",
@@ -437,7 +459,29 @@ const steps = [
         q: "Taart: voetbal 50%, hockey 25%, zwemmen 15%, anders 10%. **Welke sport is grootst**?",
         options: ["Voetbal", "Hockey", "Zwemmen", "Anders"],
         answer: 0,
-        wrongHints: [null, "Hockey is 25%, voetbal is 50%. Welke is groter?", "Zwemmen is maar 15%.", "Anders is maar 10%."],
+        wrongHints: [null, "Klopt — voetbal is de helft, dus het grootste stuk.", "Hockey is 25%, voetbal is 50%. Welke is groter?", "Zwemmen is maar 15%.", "Anders is maar 10%."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Grootst = hoogste percentage", tekst: "Bij een cirkeldiagram is **grootst** = het stuk met het **hoogste percentage**. Visueel = het **grootste taart-stuk**." },
+            { titel: "Vergelijk de 4 percentages", tekst: "• Voetbal **50%** ← hoogste!\n• Hockey 25%\n• Zwemmen 15%\n• Anders 10%\nVoetbal heeft 50%, dat is de helft van de hele taart. De rest samen is óók maar de helft. Voetbal wint dus duidelijk." },
+            { titel: "Cito-truc cirkeldiagram", tekst: "Bij cirkeldiagrammen werken **twee dingen** tegelijk:\n1. **Percentage** (cijfer) → hoogste = grootst\n2. **Visueel stuk** (oogmaat) → grootste taartpunt = grootst\nBeide kloppen altijd. Check ze tegen elkaar: als 50% lijkt op een klein stukje, is er iets mis met de tekening — vertrouw het getal." },
+          ],
+          woorden: [
+            { woord: "grootste stuk", uitleg: "Hoogste percentage = grootste taart-deel." },
+            { woord: "kleinste stuk", uitleg: "Laagste percentage = kleinste taart-deel." },
+          ],
+          theorie: "Cirkeldiagram + 'welke is grootst/kleinst':\n1. Lees percentages naast elke kleur/stuk.\n2. Kies hoogste (grootst) of laagste (kleinst).\n3. Visuele check: groot stuk klopt met hoog %?\n4. Antwoord = de NAAM van die sport/groep, niet het percentage zelf.",
+          voorbeelden: [
+            { type: "stap", tekst: "Reis-bestemming klas: Spanje 40%, Frankrijk 30%, Italië 20%, Anders 10%. Grootst? → 40% = Spanje." },
+            { type: "stap", tekst: "Huisdier: hond 45%, kat 30%, vis 15%, ander 10%. Kleinst? → 10% = ander." },
+          ],
+          basiskennis: [{ onderwerp: "Verwarring", uitleg: "Vraag is naar de NAAM, niet het getal! Antwoord 'voetbal' niet '50%'." }],
+          niveaus: {
+            basis: "Voetbal heeft 50% = grootste stuk = A.",
+            simpeler: "Welk percentage is het hoogst? 50% → dat hoort bij voetbal. Antwoord = naam: voetbal. = A.",
+            nogSimpeler: "Voetbal = A. Hoogste % wint.",
+          },
+        },
       },
       {
         q: "Zelfde taart, klas van **20** kinderen. Hoeveel kiezen **voetbal**?",
@@ -616,7 +660,30 @@ const steps = [
         q: "Lijngrafiek temperatuur. Bij Cito staat een **stijgende** lijn. Wat betekent dat?",
         options: ["Het wordt warmer", "Het wordt kouder", "Niets verandert", "De thermometer is stuk"],
         answer: 0,
-        wrongHints: [null, "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Niet zonder reden te zeggen — neem aan dat de grafiek klopt."],
+        wrongHints: [null, "Klopt — stijgend = omhoog = hogere temperatuur.", "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Niet zonder reden te zeggen — neem aan dat de grafiek klopt."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Stijgend' = omhoog = MEER", tekst: "Het woord **stijgend** komt van **'stijgen'** = omhoog gaan. Een stijgende lijn op een grafiek = **lijn gaat omhoog** = waarde wordt **groter**." },
+            { titel: "Wat 'waarde groter' betekent bij temperatuur", tekst: "Bij een **temperatuur**-grafiek staat op de y-as het aantal **°C** (graden Celsius). Groter getal °C = **warmer**.\n→ Stijgende lijn = temperatuur stijgt = **het wordt warmer**." },
+            { titel: "De 3 lijn-richtingen herhaling", tekst: "• **Stijgend** ↗ → groter / warmer / meer\n• **Dalend** ↘ → kleiner / kouder / minder\n• **Vlak** → → blijft hetzelfde\nAltijd 2 stappen: 1) richting kijken 2) link met onderwerp (temperatuur → warm/koud, geld → meer/minder)." },
+          ],
+          woorden: [
+            { woord: "stijgend", uitleg: "Lijn omhoog, waarde wordt groter." },
+            { woord: "dalend", uitleg: "Lijn omlaag, waarde wordt kleiner." },
+          ],
+          theorie: "Cito-vertaaltabel lijn-richting:\n• Temperatuur stijgt → het wordt warmer\n• Temperatuur daalt → het wordt kouder\n• Aantal mensen stijgt → meer mensen\n• Aantal mensen daalt → minder mensen\n• Bedrag stijgt → duurder\n• Bedrag daalt → goedkoper",
+          voorbeelden: [
+            { type: "stap", tekst: "Grafiek auto-prijs stijgend → auto wordt duurder." },
+            { type: "stap", tekst: "Grafiek hoeveelheid regen dalend → minder regen." },
+            { type: "stap", tekst: "Grafiek inwoners-aantal stad stijgend → meer inwoners." },
+          ],
+          basiskennis: [{ onderwerp: "Vertaling", uitleg: "Stijgend ≠ 'mooier' of 'beter'. Het zegt alleen: getal wordt groter. Wat dat betekent hangt af van het onderwerp." }],
+          niveaus: {
+            basis: "Stijgend = warmer. = A.",
+            simpeler: "Stijgend = omhoog = méér graden = het wordt warmer. = A.",
+            nogSimpeler: "Warmer = A.",
+          },
+        },
       },
       {
         q: "Tabel verkoop koekjes ma-vr: 5, 7, 9, 11, 13. **Patroon**?",

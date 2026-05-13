@@ -241,7 +241,29 @@ const steps = [
         q: "Hoofdzaak of bijzaak: **'Beren slapen 's winters'**? *(in een tekst over winterslaap)*.",
         options: ["Hoofdzaak","Bijzaak","Geen van beide","Geen tekst"],
         answer: 0,
-        wrongHints: [null,"Direct over winterslaap → hoofd.","Wel relevant.","Wel."],
+        wrongHints: [null,"Klopt — feit gaat direct over winterslaap = het hoofd-onderwerp.","Wel relevant.","Wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is het onderwerp van de tekst?", tekst: "De tekst gaat over **winterslaap**. Dat is het hoofdonderwerp. Elke zin die DIRECT over winterslaap gaat = **hoofdzaak**. Elke zin die alleen zijdelings gerelateerd is = **bijzaak**." },
+            { titel: "Past 'beren slapen 's winters' bij het onderwerp?", tekst: "Het feit: **beren slapen 's winters** = beren houden een winterslaap. Dit is **letterlijk** het onderwerp van de tekst. → **Hoofdzaak**." },
+            { titel: "Vergelijk: wat zou een BIJzaak zijn?", tekst: "Bij dezelfde tekst zouden bijzaken zijn:\n• 'Mijn buurman heeft een teddybeer thuis' → over beren, maar NIET over winterslaap\n• 'In Alaska is het 's winters −30 °C' → wel over winter, maar de tekst gaat over slapen\n• 'Mijn oma haakt graag in de winter' → totaal niet relevant\nDeze zinnen kun je weglaten zonder dat de hoofdgedachte verandert." },
+          ],
+          woorden: [
+            { woord: "hoofdzaak", uitleg: "Zin die direct over het hoofdonderwerp van de tekst gaat." },
+            { woord: "bijzaak", uitleg: "Zin die zijdelings, met details of voorbeelden, ergens omheen ligt." },
+          ],
+          theorie: "Hoofd-of-bijzaak-test in 3 stappen:\n1. Welk onderwerp staat in de TITEL of EERSTE zin?\n2. Gaat deze zin direct over dat onderwerp? → hoofd\n3. Of is het een detail, voorbeeld of zijspoor? → bij\n\nBelangrijk: **hoofd/bijzaak is altijd RELATIEF aan het tekst-onderwerp**. Een feit kan in tekst A hoofdzaak zijn en in tekst B bijzaak. Lees dus eerst goed waar de tekst over gaat.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over 'voordelen fietsen': 'Fietsen is goed voor je gezondheid' → hoofd (gaat over voordeel). 'Mijn fiets is rood' → bij (irrelevant detail)." },
+            { type: "stap", tekst: "Tekst over 'recycling': 'Plastic recyclen bespaart olie' → hoofd. 'Onze container staat naast school' → bij." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag jezelf: 'Als ik deze zin weghaal, mist de tekst dan iets belangrijks over het onderwerp?' Ja → hoofd. Nee → bij." }],
+          niveaus: {
+            basis: "Hoofdzaak — feit gaat direct over winterslaap. = A.",
+            simpeler: "De tekst gaat over winterslaap. 'Beren slapen 's winters' = beren houden winterslaap. Direct = hoofdzaak. = A.",
+            nogSimpeler: "Hoofdzaak = A. Direct over onderwerp.",
+          },
+        },
       },
       {
         q: "**Truc** om te checken hoofd vs bij?",
@@ -340,7 +362,29 @@ const steps = [
         q: "Tekst: 'Mensen drinken water voor gezondheid. Water spoelt afvalstoffen weg. Water zorgt voor hydratatie. Mijn opa drinkt 2 liter per dag.'\n\n**Wat staat NIET in een goede samenvatting**?",
         options: ["Mijn opa's 2 liter per dag","Mensen drinken water","Water spoelt afval","Hydratatie"],
         answer: 0,
-        wrongHints: [null,"Hoort wel.","Hoort wel.","Hoort wel."],
+        wrongHints: [null,"Klopt — eigennaam + persoonlijk detail = bijzaak, hoort er niet in.","Dit IS de hoofdgedachte — hoort wel.","Belangrijke reden waarom water nuttig is — hoort wel.","Belangrijke functie van water — hoort wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de hoofdgedachte?", tekst: "De tekst gaat over **water drinken en gezondheid**. De 3 belangrijke punten:\n• Mensen drinken water voor gezondheid\n• Water spoelt afvalstoffen weg\n• Water zorgt voor hydratatie\nDeze 3 horen samen → dit is de **hoofdgedachte**." },
+            { titel: "Spot de anecdote", tekst: "De zin **'Mijn opa drinkt 2 liter per dag'** is een **anecdote**:\n• **'Mijn opa'** = eigennaam / persoonlijk persoon → signaal voor BIJzaak\n• **'2 liter per dag'** = specifiek getal over één persoon → niet algemeen geldig\n\nDeze zin gaat NIET over water-in-het-algemeen, maar over één specifieke opa. → bijzaak → schrappen uit samenvatting." },
+            { titel: "Eigennaam-truc + getal-truc", tekst: "Twee betrouwbare signalen voor bijzaak:\n1. **Eigennaam** ('mijn opa', 'mijn buurman', 'meester Jan', 'mijn fiets'): de schrijver geeft een persoonlijk voorbeeld. Voorbeelden = bijzaak.\n2. **Specifiek getal** ('2 liter', '5 jaar oud', '3 keer per week'): vaak een detail over één geval, niet algemene regel.\nCombo eigennaam + specifiek getal = bijna altijd **anecdote → bijzaak**." },
+          ],
+          woorden: [
+            { woord: "anecdote", uitleg: "Klein persoonlijk verhaaltje als illustratie, geen algemene regel." },
+            { woord: "samenvatting", uitleg: "Korte versie van een tekst met alleen de hoofdpunten." },
+          ],
+          theorie: "Schrap-regels voor samenvatting:\n• Eigennamen (mijn opa, juf Linda, mijn neef) → meestal weg\n• Specifieke getallen (2 liter, 7 jaar oud) → vaak weg, behalve als ze de hoofdgedachte zijn\n• Persoonlijke voorbeelden → weg, behoud algemene regel\n• Herhalingen → 1× houden\n• Voorbeelden ('zoals X, Y, Z') → houden of weg afhankelijk van belang",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over slaap: 'Mensen slapen 7-9 uur. Mijn broertje slaapt 12 uur.' → broertje = anecdote = weg." },
+            { type: "stap", tekst: "Tekst over sport: 'Sporten is gezond. Mijn meester loopt elke dag.' → meester = anecdote = weg." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Test: vervang 'mijn opa' door 'Pieter' of 'mijn buurman'. Verandert er iets aan de boodschap? Nee → was bijzaak." }],
+          niveaus: {
+            basis: "Opa-zin = anecdote = niet in samenvatting. = A.",
+            simpeler: "'Mijn opa' is een eigennaam → persoonlijk voorbeeld → bijzaak → niet meenemen in samenvatting. = A.",
+            nogSimpeler: "Opa-zin weg = A.",
+          },
+        },
       },
     ],
   },
@@ -415,7 +459,30 @@ const steps = [
         q: "Tekst gaat over voordelen van fietsen. Welke is een **slechte hoofdgedachte**?",
         options: ["Fietsen is gevaarlijk","Fietsen is gezond","Fietsen is milieuvriendelijk","Fietsen is goedkoop"],
         answer: 0,
-        wrongHints: [null,"Past wel.","Past wel.","Past wel."],
+        wrongHints: [null,"Klopt — 'gevaarlijk' = NADEEL, past niet bij tekst over voordelen.","Past wel — gezond = voordeel.","Past wel — milieu = voordeel.","Past wel — goedkoop = voordeel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees het tekst-onderwerp goed", tekst: "De tekst gaat over **VOORdelen** van fietsen. Het sleutelwoord is **'voordelen'** = positieve kanten, goede dingen. Een hoofdgedachte moet bij DIT onderwerp passen." },
+            { titel: "Match: past de zin bij 'voordelen'?", tekst: "• A: 'Fietsen is **gevaarlijk**' → dat is een NADEEL, NIET een voordeel. → **past NIET** → slechte hoofdgedachte\n• B: 'Fietsen is gezond' → voordeel ✓\n• C: 'Fietsen is milieuvriendelijk' → voordeel ✓\n• D: 'Fietsen is goedkoop' → voordeel ✓\n\nAlleen A wijkt af van het onderwerp." },
+            { titel: "Cito-truc: positief vs negatief onderwerp", tekst: "Bij Cito-vragen 'kies de slechte hoofdgedachte':\n• Zoek altijd het sleutelwoord in het onderwerp (voordelen / nadelen / gevolgen / oorzaken / oplossingen).\n• Een optie die in TEGEN-richting wijst = slechte hoofdgedachte.\nVoorbeeld:\n• Tekst over 'gevaren van roken' → 'roken is leuk' = slechte hoofdgedachte (gevaar = negatief, leuk = positief)" },
+          ],
+          woorden: [
+            { woord: "voordeel", uitleg: "Iets goeds, positieve kant." },
+            { woord: "nadeel", uitleg: "Iets slechts, negatieve kant." },
+            { woord: "hoofdgedachte", uitleg: "De belangrijkste boodschap waar de hele tekst om draait." },
+          ],
+          theorie: "Een goede hoofdgedachte moet:\n1. Bij het ONDERWERP van de tekst passen (voordelen ≠ nadelen)\n2. ALGEMEEN genoeg zijn (niet over 1 detail)\n3. NIET te SMAL zijn ('mijn fiets is rood' = te specifiek)\n4. NIET te BREED zijn ('alles is leuk' = nietszeggend)\n\nGevaar #1: tekst zegt 'voordeel' → optie zegt 'nadeel' → optie sluit niet aan.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over 'nadelen van plastic' → 'plastic is handig' = slechte hoofdgedachte (handig = voordeel, tekst gaat over nadelen)." },
+            { type: "stap", tekst: "Tekst over 'oplossingen klimaat' → 'klimaat is een probleem' = slechte hoofdgedachte (tekst gaat over oplossingen, niet problemen)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst sleutelwoord onderwerp markeren ('voordelen/nadelen/oorzaak/gevolg'). Dan check welke optie de TEGEN-richting heeft. Die is fout." }],
+          niveaus: {
+            basis: "'Gevaarlijk' = nadeel, tekst gaat over voordelen → slechte match. = A.",
+            simpeler: "Tekst zegt VOORdelen = goede dingen. 'Gevaarlijk' is een slecht ding, dus past niet. = A.",
+            nogSimpeler: "Gevaarlijk = nadeel = A (slechte hoofdgedachte).",
+          },
+        },
       },
       {
         q: "Hoofdgedachte staat vaak in:",
