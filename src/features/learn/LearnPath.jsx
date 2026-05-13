@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
+import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.js";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
@@ -279,7 +280,32 @@ function YoutubeZoekKnop({ pathTitle, stepTitle, subject }) {
 }
 
 export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome, onPickPath }) {
-  const path = ALL_LEARN_PATHS[pathId];
+  // Audit-1 QW7 (2026-05-13): pilot lazy-load van het opgevraagde pad.
+  // ALL_LEARN_PATHS-sync-snapshot werkt nog steeds (voor next-path-suggestie
+  // op regel 529 + voor first-paint), maar we proberen via lazyGetLearnPath
+  // de individueel-gechunkte file te triggeren waardoor toekomstige router-
+  // navigatie sneller is. Volgende sprint: regel 3 (ALL_LEARN_PATHS-import)
+  // verwijderen + examenLookup naar build-time JSON + LearnPathsHub volledig
+  // lazy. Voor nu: graceful upgrade-path zonder breken.
+  const [path, setPath] = useState(() => ALL_LEARN_PATHS[pathId] || null);
+  useEffect(() => {
+    let cancelled = false;
+    if (!pathId) return;
+    // Probeer eerst sync uit ALL_LEARN_PATHS (huidige cache); als die mist,
+    // val terug op async loader. Werkt ook als consumers naar manifest-only
+    // worden gemigreerd.
+    const syncPath = ALL_LEARN_PATHS[pathId];
+    if (syncPath && !cancelled) {
+      setPath(syncPath);
+      return undefined;
+    }
+    lazyGetLearnPath(pathId).then((loaded) => {
+      if (!cancelled) setPath(loaded);
+    }).catch((err) => {
+      console.warn(`[LearnPath] kon ${pathId} niet laden:`, err.message);
+    });
+    return () => { cancelled = true; };
+  }, [pathId]);
   const player = (userName || "Speler").trim() || "Speler";
 
   // Als initialStepIdx meegegeven is (vanuit toets-vraag), spring direct naar die stap.

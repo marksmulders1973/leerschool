@@ -102,6 +102,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const simSeconds = simRemaining % 60;
   const simWarning = isCitoSimulation && simRemaining < 300; // laatste 5 min
 
+  // Audit-1 QW4 (2026-05-13): examen-modus = authentiek. Geen "ik snap het niet"-
+  // knop, geen YouTube-link, geen hints tijdens vraag. Mark beslissing 2026-05-09.
+  // Triggert bij PDF-examen-flow (App.jsx:647 mode="examen") + Cito-50-vragen-simulatie.
+  const isExamMode = gameState.mode === "examen" || isCitoSimulation;
+
   const SUBJECT_VIDEOS = {
     rekenen:           "https://www.youtube.com/watch?v=3tDBiUBiUQs",
     taal:              "https://www.youtube.com/watch?v=7cQC6l__Olk",
@@ -550,7 +555,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           })}
         </div>
 
-        {!showResult && onLearnPathRequest && (
+        {!showResult && !isExamMode && onLearnPathRequest && (
           <button
             onClick={() => {
               const subject = gameState?.quiz?.subject;
@@ -642,15 +647,18 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             }}>
               {isLast ? "📊 Bekijk resultaten" : "👉 Door naar volgende vraag"}
             </button>
-            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{
-              width: "100%", padding: "14px", border: "1px solid #1a73e8", borderRadius: 12,
-              background: "#1a2f4a", color: "var(--color-brand-primary-100)",
-              fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer",
-              display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-              textDecoration: "none", boxSizing: "border-box",
-            }}>
-              <span>🎬</span> Uitleg-video op YouTube
-            </a>
+            {/* Audit-1 QW4: YouTube-uitleg-link in examen-modus verbergen. */}
+            {!isExamMode && (
+              <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{
+                width: "100%", padding: "14px", border: "1px solid #1a73e8", borderRadius: 12,
+                background: "#1a2f4a", color: "var(--color-brand-primary-100)",
+                fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                textDecoration: "none", boxSizing: "border-box",
+              }}>
+                <span>🎬</span> Uitleg-video op YouTube
+              </a>
+            )}
             <a
               href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
               target="_blank" rel="noopener noreferrer"
@@ -785,10 +793,12 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               </div>
             </div>
 
-            {/* YouTube */}
-            <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 16px", background: "#101c2e", border: "1px solid #1a73e8", borderRadius: 12, color: "#69b2ff", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 14, marginBottom: 12 }}>
-              🎬 Zoek uitlegvideo op YouTube
-            </a>
+            {/* YouTube — Audit-1 QW4: verbergen in examen-modus. */}
+            {!isExamMode && (
+              <a href={getYouTubeUrl(question)} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 16px", background: "#101c2e", border: "1px solid #1a73e8", borderRadius: 12, color: "#69b2ff", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 14, marginBottom: 12 }}>
+                🎬 Zoek uitlegvideo op YouTube
+              </a>
+            )}
 
             {/* Fout melden */}
             <a
