@@ -30,12 +30,57 @@ const steps = [
         options: ["De kernboodschap","De titel","Een klein detail","De eerste letter"],
         answer: 0,
         wrongHints: [null,"Soms staat ie in titel, maar 't is meer.","Andersom — geen detail.","Nee, geen letter."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de hoofdgedachte?", tekst: "De **hoofdgedachte** is de **kernboodschap** van een tekst — wat de schrijver vooral wil zeggen. Het is GEEN klein detail, ook niet alleen de titel." },
+            { titel: "In 1 zin vatten", tekst: "Stel jezelf de vraag: als ik deze hele tekst in 1 zin aan iemand uitleg, wat is dan die zin? Dat is de hoofdgedachte." },
+            { titel: "Niet de titel zelf", tekst: "De TITEL geeft soms een hint, maar is meestal te kort. Hoofdgedachte = volledige boodschap in een zin." },
+          ],
+          woorden: [
+            { woord: "hoofdgedachte", uitleg: "Kernboodschap van een tekst." },
+            { woord: "detail", uitleg: "Klein stukje informatie binnen tekst." },
+            { woord: "titel", uitleg: "Naam van de tekst — slechts een hint." },
+          ],
+          theorie: "Cito-tip hoofdgedachte: kijk wat het ONDERWERP is + wat de schrijver ERVAN VINDT/zegt. Onderwerp + boodschap = hoofdgedachte.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over kraanwater: hoofdgedachte = 'NL-kraanwater is veilig en goedkoop'." },
+            { type: "stap", tekst: "Tekst over Pluto: hoofdgedachte = 'Pluto is geen planeet meer sinds 2006'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Stel: 'Wat zou de schrijver in één zin zeggen?' Dat is de hoofdgedachte." }],
+          niveaus: {
+            basis: "Hoofdgedachte = kernboodschap van de hele tekst.",
+            simpeler: "Wat zou je in 1 zin tegen vriend zeggen = hoofdgedachte.",
+            nogSimpeler: "Kern in 1 zin.",
+          },
+        },
       },
       {
         q: "Verschil **onderwerp** en **hoofdgedachte**?",
         options: ["Onderwerp = waarover, hoofdgedachte = wat ervan gezegd","Onderwerp komt na hoofdgedachte","Geen verschil","Onderwerp altijd 1 woord"],
         answer: 0,
         wrongHints: [null,"Onderwerp komt vaak eerst.","Wel verschil.","Niet altijd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee verschillende dingen", tekst: "**Onderwerp** = waarover gaat de tekst? (1-3 woorden). **Hoofdgedachte** = WAT zegt de tekst erover? (een hele zin)." },
+            { titel: "Voorbeeld: voetbal", tekst: "Tekst over voetbal. Onderwerp = 'voetbal'. Hoofdgedachte = 'voetbal is de populairste sport wereldwijd' (volledige boodschap)." },
+            { titel: "Cito-truc", tekst: "Vraag eerst: WAARover gaat het = onderwerp. Vraag daarna: WAT zegt de tekst erover = hoofdgedachte. Twee verschillende vragen!" },
+          ],
+          woorden: [
+            { woord: "onderwerp", uitleg: "WAAROVER de tekst gaat (1-3 woorden)." },
+            { woord: "hoofdgedachte", uitleg: "Wat de tekst over het onderwerp ZEGT (zin)." },
+          ],
+          theorie: "Cito-formule: ONDERWERP + WAT WORDT GEZEGD = HOOFDGEDACHTE. Bijvoorbeeld: 'kraanwater' (onderwerp) + 'is veilig' (boodschap) = 'kraanwater is veilig' (hoofdgedachte).",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over honden. Onderwerp = 'honden'. Hoofdgedachte = 'honden zijn trouwe huisdieren'." },
+            { type: "stap", tekst: "Tekst over plastic in zee. Onderwerp = 'plastic in zee'. Hoofdgedachte = 'plastic in zee is een groot probleem'." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onderwerp = kort (1-3 woorden). Hoofdgedachte = hele zin (onderwerp + WAT)." }],
+          niveaus: {
+            basis: "Onderwerp = waarover. Hoofdgedachte = wat erover gezegd.",
+            simpeler: "Onderwerp = woord(en). Hoofdgedachte = zin.",
+            nogSimpeler: "Onderwerp + boodschap = hoofdgedachte.",
+          },
+        },
       },
       {
         q: "Tekst: 'Honden zijn loyaal. Ze beschermen je. Ze spelen graag.'\n\n**Hoofdgedachte**?",
@@ -55,6 +100,28 @@ const steps = [
         options: ["Titel of eerste zin","Midden van zin 5","Helemaal niet","In de plaatjes"],
         answer: 0,
         wrongHints: [null,"Niet specifiek genoeg.","Wel — in titel/eerste zin.","Plaatjes ondersteunen, niet de hoofd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Schrijvers zetten hoofdgedachte vaak vooraan", tekst: "Veel schrijvers beginnen met hun belangrijkste boodschap — dan weet de lezer waar het over gaat. Daarom: vaak in **titel + eerste alinea**." },
+            { titel: "Kijk ook naar de laatste alinea", tekst: "Goede schrijvers HERHALEN de hoofdgedachte in de conclusie, soms in andere bewoording. Dus eerste én laatste alinea zijn beide goede zoek-plekken." },
+            { titel: "Cito-strategie", tekst: "Bij Cito-leesbegrip: lees eerst titel, dan EERSTE ZIN van elke alinea. Dat zijn de 'topic-sentences'. Vat samen → dat is meestal de hoofdgedachte." },
+          ],
+          woorden: [
+            { woord: "topic-sentence", uitleg: "Eerste zin van een alinea — samenvatting van wat erin staat." },
+            { woord: "conclusie", uitleg: "Laatste alinea — vaak herhaling van hoofdgedachte." },
+          ],
+          theorie: "Cito-tip: TITEL + EERSTE + LAATSTE alinea = 3 plekken om hoofdgedachte te vinden. Werkt voor 80%+ van teksten.",
+          voorbeelden: [
+            { type: "stap", tekst: "Titel: 'Voordelen van fietsen' → hoofdgedachte = 'fietsen heeft veel voordelen'." },
+            { type: "stap", tekst: "Eerste zin: 'Plastic is een groot probleem voor de zee.' → hoofdgedachte = dit." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Schrijvers willen lezers helpen. Daarom zetten ze hoofdgedachte vooraan + herhalen achteraan." }],
+          niveaus: {
+            basis: "Hoofdgedachte vaak in titel of eerste zin (soms laatste alinea).",
+            simpeler: "Titel + eerste zin van elke alinea bekijken.",
+            nogSimpeler: "Vooraan kijken!",
+          },
+        },
       },
       {
         q: "Tekst: 'Kinderen leren beter na een goed ontbijt. Wetenschappers vergeleken kinderen mét en zónder ontbijt. Kinderen mét ontbijt scoorden hoger.'\n\n**Hoofdgedachte**?",
