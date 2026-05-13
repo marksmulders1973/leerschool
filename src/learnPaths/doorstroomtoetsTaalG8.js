@@ -204,6 +204,24 @@ const steps = [
         options: ["Bemoeien met iets dat je niet aangaat", "Hulp bieden", "Op tijd komen", "Vrolijk zijn"],
         answer: 0,
         wrongHints: [null, "Klopt — 'in' + 'menging' = ergens in mengen.", "Wel kan, maar 'inmenging' is meer negatief.", "Geen verband.", "Geen verband."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stam analyse", tekst: "Inmenging = 'in' + 'mengen' = ergens in mengen waar je niet bij hoort. Negatieve connotatie." },
+            { titel: "Context-hint", tekst: "'Verstoord' versterkt het negatieve = bemoeien dat hindert." },
+          ],
+          woorden: [
+            { woord: "inmenging", uitleg: "Zich bemoeien met iets dat je niet aangaat — meestal ongewenst." },
+            { woord: "connotatie", uitleg: "Bijbetekenis of gevoelswaarde van een woord (positief/negatief/neutraal)." },
+          ],
+          theorie: "Cito-truc: woord-context geeft gevoel. 'Verstoord' is negatief → kies negatieve betekenis voor inmenging.",
+          voorbeelden: [{ type: "stap", tekst: "'Inmenging in buitenlandse politiek' = ander land mengt zich (negatief). 'Inmenging van leerkracht' = leerkracht bemoeit zich ongewenst." }],
+          basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Inmenging ↔ afzijdig blijven / je niet ermee bemoeien." }],
+          niveaus: {
+            basis: "Bemoeien met wat je niet aangaat. A.",
+            simpeler: "In + mengen = ergens in mengen waar het niet hoort. = A.",
+            nogSimpeler: "Bemoeien = A.",
+          },
+        },
       },
       {
         q: "Welk woord betekent **hetzelfde als** **'gehaast'**?",

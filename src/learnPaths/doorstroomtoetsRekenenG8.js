@@ -805,6 +805,21 @@ const steps = [
         options: ["12 weken", "10 weken", "6 weken", "300 weken"],
         answer: 0,
         wrongHints: [null, "Klopt — €60 ÷ €5 = 12.", "Verkeerd gedeeld.", "Te kort.", "Veel te lang."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Spaardoel", tekst: "Doel = €60. Per week = €5. Aantal weken = €60 ÷ €5." },
+            { titel: "Deel", tekst: "60 ÷ 5 = 12 weken." },
+          ],
+          woorden: [{ woord: "spaardoel", uitleg: "Bedrag dat je wilt bereiken." }],
+          theorie: "Spaarsom-truc: doel ÷ wekelijks-bedrag = aantal-weken. Werkt voor elke regelmatige inleg.",
+          voorbeelden: [{ type: "stap", tekst: "Tablet €120, spaar €10/wk = 12 wkn. Game €80, spaar €8/wk = 10 wkn." }],
+          basiskennis: [{ onderwerp: "Check", uitleg: "12 × €5 = €60 ✓. Realiteit-check: 12 weken is bijna 3 maanden — realistisch sparen." }],
+          niveaus: {
+            basis: "12 weken (€60 ÷ €5). A.",
+            simpeler: "Hoeveel keer €5 in €60? €60 ÷ €5 = 12. = A.",
+            nogSimpeler: "12 = A.",
+          },
+        },
       },
       {
         q: "Een trein vertrekt **08:45** en rijdt **2u15**. Aankomst?",
