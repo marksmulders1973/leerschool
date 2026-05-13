@@ -1,4 +1,4 @@
-import { guardRequest } from './_guard.js';
+import { guardRequest, dailyQuotaCheck } from './_guard.js';
 
 export const config = { runtime: 'edge', maxDuration: 60 };
 
@@ -14,6 +14,10 @@ export default async function handler(req) {
 
   const blocked = guardRequest(req);
   if (blocked) return blocked;
+
+  // Audit-1 QW6: daily cost-cap (default 500/dag — duurste endpoint vanwege web_search).
+  const quotaBlocked = await dailyQuotaCheck("generate-questions");
+  if (quotaBlocked) return quotaBlocked;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {

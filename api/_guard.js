@@ -68,3 +68,70 @@ export function guardRequest(req) {
 
   return null;
 }
+
+// Audit-1 QW6 (2026-05-13): daily cost-cap per AI-endpoint.
+// Voorkomt €100+ verrassings-bill bij scraper-misbruik. Roept Supabase
+// RPC `increment_ai_call_quota(p_endpoint)` aan die atomic count
+// teruggeeft. Bij overschrijding → 503 zonder Anthropic-call.
+//
+// Limits (overridable via env-var):
+//   MAX_TUTOR_CALLS_DAY=5000        (Haiku ~€0,005/call → max €25/dag)
+//   MAX_GENERATE_CALLS_DAY=500      (web_search ~€0,025/call → max €12,50/dag)
+//   MAX_PREVIEW_CALLS_DAY=1000
+//
+// Bij Supabase-config-missing of RPC-fout: stil door (geen quota = open
+// gate). Beter functionerende app dan blokkade bij DB-down. Wel loggen.
+const DEFAULT_LIMITS = {
+  "tutor-chat": 5000,
+  "generate-questions": 500,
+  "preview-topic": 1000,
+};
+
+export async function dailyQuotaCheck(endpoint) {
+  const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+  const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!SUPABASE_URL || !SERVICE_KEY) {
+    console.warn(`[quota] config-missing, fail-open for ${endpoint}`);
+    return null;
+  }
+
+  const envKey = `MAX_${endpoint.toUpperCase().replace(/-/g, "_")}_CALLS_DAY`;
+  const limit = parseInt(process.env[envKey], 10) || DEFAULT_LIMITS[endpoint] || 1000;
+
+  try {
+    const resp = await fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_ai_call_quota`, {
+      method: "POST",
+      headers: {
+        apikey: SERVICE_KEY,
+        Authorization: `Bearer ${SERVICE_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ p_endpoint: endpoint }),
+    });
+    if (!resp.ok) {
+      console.warn(`[quota] RPC failed ${resp.status}, fail-open for ${endpoint}`);
+      return null;
+    }
+    const count = await resp.json();
+    if (typeof count === "number" && count > limit) {
+      console.warn(`[quota] LIMIT HIT ${endpoint}: ${count}/${limit}`);
+      return new Response(
+        JSON.stringify({
+          error: "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
+          retryAfterHours: 24,
+        }),
+        {
+          status: 503,
+          headers: {
+            "Content-Type": "application/json",
+            "Retry-After": String(60 * 60 * 6), // 6u — voorzichtige reset-hint
+          },
+        }
+      );
+    }
+    return null;
+  } catch (err) {
+    console.warn(`[quota] error ${err.message}, fail-open for ${endpoint}`);
+    return null;
+  }
+}

@@ -3,7 +3,7 @@
 // als system-prompt meegegeven. Antwoord is altijd kort en didactisch:
 // stuurt richting begrip, geeft niet zomaar het juiste antwoord weg.
 
-import { guardRequest } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -88,6 +88,10 @@ export default async function handler(req) {
 
   const blocked = guardRequest(req);
   if (blocked) return blocked;
+
+  // Audit-1 QW6: daily cost-cap voor AI-endpoint (default 5000/dag).
+  const quotaBlocked = await dailyQuotaCheck("tutor-chat");
+  if (quotaBlocked) return quotaBlocked;
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return json({ error: "API key niet geconfigureerd" }, 500);
