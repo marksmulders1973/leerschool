@@ -302,6 +302,28 @@ const steps = [
         options: ["Starten", "Eindigen", "Stoppen", "Wachten"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Tegenovergesteld.", "Niet primair."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een synoniem?", tekst: "Een synoniem is een woord met (bijna) dezelfde betekenis. 'Beginnen' en 'starten' betekenen hetzelfde." },
+            { titel: "Test: vervang het woord", tekst: "Kun je het ene woord vervangen door het andere zonder dat de zin een andere betekenis krijgt? Dan zijn het synoniemen." },
+            { titel: "Tegenstellingen elimineren", tekst: "Eindigen en stoppen zijn TEGENSTELLINGEN van beginnen — die kun je dus uitsluiten." },
+          ],
+          woorden: [
+            { woord: "synoniem", uitleg: "Hetzelfde betekenend. (groot = enorm)." },
+            { woord: "tegenstelling / antoniem", uitleg: "Tegenovergestelde betekenis. (groot ↔ klein)." },
+          ],
+          theorie: "Cito-tip: bij synoniem-vragen altijd ook de tegenstellingen schrappen. Die staan vaak verlokkend tussen de antwoorden. Lees: betekent het echt hetzelfde?",
+          voorbeelden: [
+            { type: "stap", tekst: "blij = vrolijk. moe = vermoeid. snel = vlug. groot = enorm." },
+            { type: "stap", tekst: "Maar: blij ≠ verdrietig (tegenstelling), groot ≠ klein (tegenstelling)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tegenstellingen herken je omdat ze het OMGEKEERDE betekenen. Schrap die eerst." }],
+          niveaus: {
+            basis: "Synoniem = woord met dezelfde betekenis. Beginnen = starten.",
+            simpeler: "Vraag: 'kun je dit woord vervangen?' Ja, met starten. Eindigen is tegenovergesteld.",
+            nogSimpeler: "Hetzelfde = synoniem.",
+          },
+        },
       },
       {
         q: "*'Het was een **uitzonderlijke** prestatie.'* Wat betekent uitzonderlijk?",
@@ -525,6 +547,25 @@ const steps = [
         options: ["Globaal (titel + alinea-koppen)", "Heel langzaam", "Achteruit", "Niet"],
         answer: 0,
         wrongHints: [null, "Klopt — skimmen voor structuur.", "Te traag.", "Niet zinvol.", "Wel — globaal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eerst overzicht, dan details", tekst: "Bij een lange Cito-tekst NIET meteen woord-voor-woord lezen. Eerst snel een overzicht maken." },
+            { titel: "Skim-techniek", tekst: "Lees alleen: TITEL + EERSTE ALINEA + LAATSTE ALINEA + de KOPJES van alinea's. Zo weet je waar de tekst over gaat." },
+            { titel: "Dan: vraag → tekst", tekst: "Pas DAARNA lees je de vraag. Bij elke vraag zoek je het stukje tekst dat erbij hoort. Dat heet 'gericht lezen'." },
+          ],
+          woorden: [
+            { woord: "globaal lezen", uitleg: "Snel scannen voor het grote plaatje." },
+            { woord: "gericht lezen", uitleg: "Per vraag het juiste stukje tekst zoeken." },
+          ],
+          theorie: "Cito-leesstrategie: 1) globaal skimmen voor overzicht. 2) Lees de eerste vraag. 3) Zoek gericht het antwoord in de tekst. 4) Volgende vraag. Tijd besparen!",
+          voorbeelden: [{ type: "stap", tekst: "Tekst van 4 alinea's: lees titel + alinea 1 + alinea 4 voor overzicht. Vraag 2 gaat over alinea 3? → lees alleen die alinea grondig." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Cito-leestoetsen zit veel info IN de tekst maar je hoeft niet alles te onthouden. Zoek per vraag." }],
+          niveaus: {
+            basis: "Eerst globaal (titel + koppen). Dan per vraag gericht lezen.",
+            simpeler: "Snel overzicht eerst, dan per vraag het stukje zoeken.",
+            nogSimpeler: "Snel kijken, dan zoeken.",
+          },
+        },
       },
       {
         q: "*Tekst: 'Veel kinderen sporten weinig. **Toch** is sporten heel gezond.'* Wat is de **conclusie** van de schrijver?",

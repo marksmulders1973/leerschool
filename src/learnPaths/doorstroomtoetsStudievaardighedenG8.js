@@ -171,6 +171,28 @@ const steps = [
         options: ["500 m", "5 km", "50 m", "2,5 km"],
         answer: 0,
         wrongHints: [null, "Klopt — 2 × 25.000 = 50.000 cm = 500 m.", "Veel te veel.", "Te weinig — controleer cm→m.", "Verkeerde berekening."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: schaal toepassen", tekst: "Schaal 1:25.000 betekent: 1 cm op kaart = 25.000 cm in echt. Dus 2 cm = 2 × 25.000 = **50.000 cm**." },
+            { titel: "Stap 2: cm omzetten naar m", tekst: "100 cm = 1 m. Dus 50.000 cm ÷ 100 = **500 m**." },
+            { titel: "Stap 3: nog naar km?", tekst: "1.000 m = 1 km. 500 m is dus minder dan 1 km. Antwoord: 500 m." },
+          ],
+          woorden: [
+            { woord: "schaal", uitleg: "Hoeveel keer kleiner de kaart is dan in echt." },
+            { woord: "1:25.000", uitleg: "1 cm op kaart = 25.000 cm in werkelijkheid." },
+          ],
+          theorie: "Schaal-formule: werkelijk = kaart × schaal-getal. Vervolgens omrekenen naar passende eenheid (cm → m → km).",
+          voorbeelden: [
+            { type: "stap", tekst: "1:25.000, 4 cm op kaart → 4 × 25.000 = 100.000 cm = 1.000 m = 1 km." },
+            { type: "stap", tekst: "1:50.000, 2 cm op kaart → 2 × 50.000 = 100.000 cm = 1 km." },
+          ],
+          basiskennis: [{ onderwerp: "Eenheden", uitleg: "100 cm = 1 m. 1.000 m = 1 km. 100.000 cm = 1 km." }],
+          niveaus: {
+            basis: "Kaart-cm × schaal = werkelijke cm. Daarna omzetten naar m of km.",
+            simpeler: "2 × 25.000 = 50.000 cm. Delen door 100 = 500 m.",
+            nogSimpeler: "2 cm × 25.000 = 50.000 cm = 500 m.",
+          },
+        },
       },
       {
         q: "Op een kaart staat een **bruine vlek**. Wat betekent dat meestal?",
@@ -521,6 +543,28 @@ const steps = [
         options: ["Bijna (99%)", "Ja precies", "Nee onmogelijk", "100%"],
         answer: 0,
         wrongHints: [null, "Klopt — exact 33,33% nodig voor 100%.", "Niet exact.", "Wel mogelijk.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Cirkeldiagram = altijd 100%", tekst: "Alle stukjes van een cirkeldiagram zijn samen ALTIJD 100%. Anders klopt er iets niet." },
+            { titel: "Reken: 3 × 33", tekst: "Doe het in je hoofd: 33 + 33 + 33 = 99. Geen 100. Dus 3 × 33% = 99%, te weinig." },
+            { titel: "Exact zou zijn 33,33...", tekst: "100 ÷ 3 = 33,333... Het kan dus niet PRECIES met hele getallen 33. Daarom is het antwoord 'bijna' (99% klopt)." },
+          ],
+          woorden: [
+            { woord: "cirkeldiagram", uitleg: "Cirkel verdeeld in stukjes (%). Som = 100%." },
+            { woord: "afronding", uitleg: "33,333... wordt op papier vaak 33% — daardoor 'mist' 1%." },
+          ],
+          theorie: "Cito-controle bij cirkeldiagram: tel alle % op. Moet 100% zijn. Klopt het niet? → er mist een sectie OF er is afgerond.",
+          voorbeelden: [
+            { type: "stap", tekst: "Cirkel met 50% + 25% + 25% = 100%. Klopt." },
+            { type: "stap", tekst: "Cirkel met 33% + 33% + 33% = 99%. Klopt niet exact." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Drie gelijke stukken zou eigenlijk 33,33% per stuk zijn, geen 33%." }],
+          niveaus: {
+            basis: "Som van cirkeldiagram-stukjes = 100%. 3 × 33% = 99%, bijna.",
+            simpeler: "33 + 33 + 33 = 99. Niet 100. Dus 'bijna'.",
+            nogSimpeler: "3 × 33 = 99, mist 1.",
+          },
+        },
       },
     ],
   },
