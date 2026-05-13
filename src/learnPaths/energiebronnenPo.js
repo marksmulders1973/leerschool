@@ -30,6 +30,28 @@ const steps = [
         options: ["Aardolie", "Zon", "Wind", "Water"],
         answer: 0,
         wrongHints: [null, "Klopt.", "Duurzaam.", "Duurzaam.", "Duurzaam."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee soorten energie", tekst: "Energiebronnen splitsen we in: FOSSIEL (op-rakend) en DUURZAAM (niet-op-rakend)." },
+            { titel: "Fossiele brandstoffen", tekst: "Fossiel = ontstaan uit dode planten en dieren van miljoenen jaren geleden. **Aardolie + aardgas + steenkool** zijn de 3 fossiele brandstoffen." },
+            { titel: "Duurzame bronnen", tekst: "Zon, wind, water = duurzame bronnen. Ze raken niet op. De zon blijft schijnen, de wind blijft waaien." },
+          ],
+          woorden: [
+            { woord: "fossiel", uitleg: "Uit oude tijd, eindig (raakt op): olie, gas, kool." },
+            { woord: "duurzaam", uitleg: "Hernieuwbaar, raakt niet op: zon, wind, water." },
+          ],
+          theorie: "Cito-truc energie: 3 fossielen onthouden: olie, gas, kool. Alles ANDERS (zon, wind, water, biomassa) = duurzaam. Atomair (kernenergie) is geen van beide categorieën.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tankstation = aardolie (benzine, diesel) = fossiel." },
+            { type: "stap", tekst: "Zonnepanelen op dak = duurzaam (zon)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Fossiel = OUD (uit oude tijd). Duurzaam = NIEUW (kan elk moment weer komen)." }],
+          niveaus: {
+            basis: "Fossiel = aardolie, aardgas, steenkool. Duurzaam = zon, wind, water.",
+            simpeler: "Olie/gas/kool = uit oude planten = fossiel.",
+            nogSimpeler: "Olie/gas/kool = fossiel.",
+          },
+        },
       },
       {
         q: "Waarom heten ze **fossiele** brandstoffen?",
@@ -42,6 +64,28 @@ const steps = [
         options: ["Nee, alleen omzetten", "Ja, uit niets", "Soms", "Alleen door wetenschapper"],
         answer: 0,
         wrongHints: [null, "Klopt — natuurkundige wet.", "Niet.", "Niet.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Natuurwet: behoud van energie", tekst: "Energie kun je NIET maken en NIET vernietigen. Je kunt het alleen OMZETTEN van de ene vorm in de andere. Dit heet de wet van behoud van energie." },
+            { titel: "Energie zit overal", tekst: "Een windmolen ZET wind-energie om in elektrische energie. Een zonnepaneel ZET zonne-licht om in stroom. Een batterij ZET chemische energie om in elektriciteit." },
+            { titel: "Verlies = warmte", tekst: "Bij omzetten gaat ALTIJD een beetje verloren als warmte. Daarom worden lampen warm, motoren warm, etc. Niets is 100% efficiënt." },
+          ],
+          woorden: [
+            { woord: "omzetten", uitleg: "Van de ene energievorm naar de andere." },
+            { woord: "wet van behoud van energie", uitleg: "Energie verdwijnt of ontstaat nooit — verandert alleen van vorm." },
+          ],
+          theorie: "Cito-tip: energie 'maken' is GEEN goede woordkeuze, ook al gebruiken mensen het zo. Officieel: energie OPWEKKEN of OMZETTEN. Een centrale ZET fossiele/wind/zon-energie om in elektriciteit.",
+          voorbeelden: [
+            { type: "stap", tekst: "Eten geeft je energie. Niet 'jij maakt energie', maar: voedsel-energie wordt omgezet in spier-energie." },
+            { type: "stap", tekst: "Auto: benzine (chemisch) → ontploft in motor (warmte+beweging) → wielen draaien (kinetisch)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij elke vraag 'maakt het energie?' is het antwoord: nee, omzet. Behalve in atomaire reactor — daar wordt massa omgezet in energie (Einstein E=mc²)." }],
+          niveaus: {
+            basis: "Energie wordt niet gemaakt, alleen omgezet (wet van behoud).",
+            simpeler: "Windmolen ZET wind om in stroom. Niet 'maken'.",
+            nogSimpeler: "Alleen omzetten.",
+          },
+        },
       },
     ],
   },
@@ -86,6 +130,29 @@ const steps = [
         options: ["Energie die niet opraakt", "Goedkope energie", "Energie uit olie", "Alleen elektriciteit"],
         answer: 0,
         wrongHints: [null, "Klopt — hernieuwbaar.", "Niet primair.", "Niet duurzaam.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is duurzaam?", tekst: "DUURZAAM betekent: blijft lang bestaan, raakt niet op. Duurzame energie komt uit bronnen die zichzelf 'vernieuwen' — daarom heet het ook HERNIEUWBARE energie." },
+            { titel: "6 bronnen", tekst: "Duurzame energiebronnen: zon, wind, water (rivier of getij), biomassa (planten), aardwarmte (geothermie)." },
+            { titel: "Waarom belangrijk?", tekst: "Omdat fossiele brandstoffen 1) opraken (over 50-150 jaar weg) en 2) klimaatverandering veroorzaken (CO₂). Duurzaam = geen van beide problemen." },
+          ],
+          woorden: [
+            { woord: "duurzaam", uitleg: "Niet opraakt, kan eindeloos." },
+            { woord: "hernieuwbaar", uitleg: "Synoniem van duurzaam." },
+            { woord: "groene energie", uitleg: "Andere naam, vooral marketing-term." },
+          ],
+          theorie: "Cito-feit: 'duurzaam' wordt ook gebruikt voor producten of acties die het milieu sparen. Maar bij energie betekent het specifiek: hernieuwbare bron (zon/wind/water/etc).",
+          voorbeelden: [
+            { type: "stap", tekst: "Zonnepanelen, windmolens, waterkracht-centrales = duurzame energie-opwekking." },
+            { type: "stap", tekst: "Aardolie, aardgas, steenkool = NIET duurzaam (raken op + CO₂)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Duurzaam = blijft. Fossiel = OP een dag op." }],
+          niveaus: {
+            basis: "Duurzame energie = uit bronnen die niet opraken (zon, wind, water).",
+            simpeler: "Duurzaam = blijft komen. Fossiel = raakt op.",
+            nogSimpeler: "Duurzaam = oneindig.",
+          },
+        },
       },
       {
         q: "**Waterkracht** in NL?",
