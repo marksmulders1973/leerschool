@@ -12,6 +12,7 @@ import usePwaInstall from "../shared/usePwaInstall.js";
 // Three.js zit in een aparte chunk — alleen geladen voor nieuwe bezoekers die
 // de homepage in beeld krijgen. Houdt initial-bundle klein voor snelle conversie.
 const Mini3DTeaser = lazy(() => import("./learn/3d/Mini3DTeaser.jsx"));
+const EchteCijfers = lazy(() => import("./EchteCijfers.jsx"));
 
 // Error-boundary specifiek rond de 3D-tegel. Als WebGL faalt of three.js
 // crasht (kan voorkomen op zwakkere mobiele GPU's of bij 216 unit-cubes
@@ -1083,6 +1084,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <span style={{ fontSize: 16 }} aria-hidden="true">👨‍👩‍👧</span>
                 <span>Voor ouders — zo werkt het + privacy in 1 minuut</span>
               </a>
+              {/* Echte cijfers uit Supabase — geen verzonnen claims.
+                  Mark request 2026-05-13 na advies "geen 1.700+ als je het
+                  niet weet". Component verbergt zichzelf bij <10 entries
+                  (te weinig social proof-waarde), toont anders 1-3 metrieken.
+                  Lazy zodat het de TTI niet vertraagt. */}
+              <Suspense fallback={null}>
+                <EchteCijfers />
+              </Suspense>
               <TickerBanner />
             </>
           );
