@@ -776,6 +776,21 @@ const steps = [
         options: ["€9,00", "€7,20", "€10,00", "€1,80"],
         answer: 0,
         wrongHints: [null, "Klopt — 5 × €1,80 = €9,00.", "Dat is 4 × €1,80.", "Te veel — komma vergeten?", "Dat is 1 glas."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vermenigvuldig", tekst: "5 × €1,80 = €9,00." },
+            { titel: "Slim rekenen", tekst: "5 × €1 = €5, 5 × €0,80 = €4, samen €9." },
+          ],
+          woorden: [{ woord: "totale prijs", uitleg: "Aantal × prijs per stuk." }],
+          theorie: "Truc 'splits-en-tel-op': bij komma-getallen splits in geheel en kommadeel. Reken apart, tel op.",
+          voorbeelden: [{ type: "stap", tekst: "5 × €1,80 = 5×1 + 5×0,8 = 5 + 4 = 9. 3 × €2,50 = 3×2 + 3×0,5 = 6 + 1,5 = €7,50." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "5 glazen voor €9 = bijna €2 per glas. Past." }],
+          niveaus: {
+            basis: "€9,00 (5 × €1,80). A.",
+            simpeler: "5 × €1,80 = 5 + 4 = €9. = A.",
+            nogSimpeler: "€9 = A.",
+          },
+        },
       },
       {
         q: "Tom legt om de **15 minuten** een nieuwe pot bloemen. Hoeveel **per uur**?",

@@ -269,6 +269,21 @@ const steps = [
         options: ["Met respect / serieus", "Snel", "Boos", "Gefluisterd"],
         answer: 0,
         wrongHints: [null, "Klopt — formeel + waardig.", "Niet.", "Tegenovergesteld.", "Niet — plechtig = duidelijk hoorbaar."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Plechtig = ceremonieel", tekst: "Plechtig betekent: formeel, met respect, in stijl. Gebruikt bij belangrijke gebeurtenissen." },
+            { titel: "Context-hint", tekst: "Koningin = formele persoon → sprak plechtig = formeel/met waardigheid." },
+          ],
+          woorden: [{ woord: "plechtig", uitleg: "Formeel, ernstig, met respect — bij speciale gelegenheden." }],
+          theorie: "Cito-truc bij moeilijk bijwoord: kijk wie/wat doet de actie. Koningin/troonrede/herdenking → formele context = plechtig.",
+          voorbeelden: [{ type: "stap", tekst: "'Hij beloofde plechtig' = beloofde serieus + formeel. 'Plechtige opening' = officiële opening." }],
+          basiskennis: [{ onderwerp: "Verwant", uitleg: "Plechtigheid = de gebeurtenis zelf (bv huwelijksplechtigheid). Plechtig = de manier." }],
+          niveaus: {
+            basis: "Met respect / serieus. A.",
+            simpeler: "Plechtig = formeel, niet luchtig. = A.",
+            nogSimpeler: "Serieus = A.",
+          },
+        },
       },
       {
         q: "Welk woord is een **tegenstelling** van **'verlies'**?",
