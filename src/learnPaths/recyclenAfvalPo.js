@@ -249,6 +249,83 @@ const steps = [
       { q: "**Plastic fles** vergaat in?", options: ["~450 jr", "1 maand", "10 dagen", "Eeuwig"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet exact."] },
       { q: "Wie startte **Ocean Cleanup**?", options: ["Boyan Slat", "Verstappen", "Cruijff", "Geen NL'er"], answer: 0, wrongHints: [null, "Klopt.", "F1.", "Voetbal.", "Wel NL!"] },
       { q: "Wat is **circulaire economie**?", options: ["Niets verloren — alles hergebruikt", "Auto-bedrijf", "Cirkel", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Niet primair.", "Niet.", "Wel."] },
+      {
+        q: "Wat hoort in **PMD-bak** (Plastic, Metaal, Drankkartons)?",
+        options: ["Lege fles wasmiddel + soepblik + melkpak", "GFT", "Papier", "Batterijen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — PMD = plastic verpakkingen, metalen blikjes, drankkartons.", "GFT = aparte bak (groen).", "Papier = papierbak (blauw of papierwagen).", "Batterijen = KCA, supermarkt-inzameling."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is PMD?", tekst: "**PMD** staat voor:\n• **P** = **Plastic** verpakkingen (flesjes shampoo, yoghurtbakje, plastic zak)\n• **M** = **Metaal** verpakkingen (soepblik, drinkblikje, deksels)\n• **D** = **Drankkartons** (melk, sap, soms soep)\n\nVroeger waren plastic + blik aparte bakken — sinds 2014 in NL samen in **oranje PMD-bak** (sommige gemeenten doopt zakken)." },
+            { titel: "Wat hoort NIET in PMD?", tekst: "• **Folie** zonder verpakking (folielap zwerfvuil → restafval)\n• **Plastic speelgoed** → kringloop of restafval\n• **Plastic kledinghanger** → restafval\n• **Plastic met etensresten** → restafval (vies)\n• **Piepschuim** → soms PMD, soms restafval (gemeente-afhankelijk)\n• **Tube** met tandpasta → restafval (vermengd metaal/plastic)" },
+            { titel: "Cito-feit: NL afvalsysteem", tekst: "Nederland heeft **5-7 afvalbakken** per huis (gemeente verschilt):\n• **Grijs** = restafval\n• **Groen / GFT** = groente/fruit/tuin\n• **Oranje / PMD** = plastic/metaal/drank\n• **Blauw** = papier + karton\n• **Glasbak** (in wijk)\n• **Textielcontainer** (in wijk)\n• **KCA** = klein chemisch afval (verf, batterijen — supermarkt of milieustraat)\n\nNL recyclet ~80% van plastic flessen + 95% van glas — wereldwijd top." },
+          ],
+          woorden: [
+            { woord: "PMD", uitleg: "Plastic + Metaal + Drankkartons. Sinds 2014 samen in oranje bak." },
+            { woord: "KCA", uitleg: "Klein Chemisch Afval. Batterijen, verf, medicijnen, olie. Niet in restafval." },
+            { woord: "milieustraat", uitleg: "Inzamelplek voor groot afval + KCA. Elke gemeente heeft minstens 1." },
+            { woord: "scheidings­percentage", uitleg: "Hoeveel % afval correct gescheiden wordt. NL: ~75% in 2024." },
+          ],
+          theorie: "**Volgorde van afval-verwerking** (NL beleid):\n1. **Recyclen** — beste optie (PMD/papier/glas/GFT)\n2. **Verbranden met energie­winning** — restafval naar afval­energie­centrale (AEC), wekt elektriciteit op\n3. **Storten** — slechtste optie, alleen wat anders niet kan\n\nNL stort minder dan 1% van afval — een van de laagste percentages in EU.",
+          voorbeelden: [
+            { type: "feit", tekst: "1 plastic fles in PMD wordt ~6-10 keer hergebruikt voordat het te beschadigd is. Daarna brandstof voor cement-industrie." },
+            { type: "feit", tekst: "Wist je: 1 kg plastic recyclen bespaart 2 kg CO₂ vs nieuwe plastic maken." },
+          ],
+          basiskennis: [{ onderwerp: "Niet vies", uitleg: "Spoel PMD-spullen LICHT — niet super schoon nodig. Wel zo droog mogelijk (geen yoghurt-resten)." }],
+          niveaus: { basis: "Plastic + metaal + drankkartons. = A.", simpeler: "PMD-bak = Plastic verpakkingen + Metaal (blikjes) + Drankkartons (melk/sap). Alles wat van plastic, blik, of kartonnen drinkpak is. = A.", nogSimpeler: "Plastic/blik/melkpak = A." },
+        },
+      },
+      {
+        q: "Wat zijn **microplastics**?",
+        options: ["Heel kleine plastic-deeltjes (<5 mm) die overal komen", "Snoepje", "Computer", "Plastic auto"],
+        answer: 0,
+        wrongHints: [null, "Klopt — onzichtbaar bijna, gevonden in zee, drinkwater, ons bloed.", "Niet — kleine plastic-stukjes uit afgebroken zwerfvuil.", "Tegenovergesteld — micro = klein.", "Niet — micro = klein."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn microplastics?", tekst: "**Microplastics** = plastic-deeltjes **kleiner dan 5 millimeter**. Nog kleiner heten **nanoplastics**.\n\n**Waar komen ze vandaan?**\n• **Afgebroken plastic-flessen** in zee (verteren niet, breken in stukjes)\n• **Autobanden** slijten = plastic-stof in straten + lucht\n• **Synthetische kleding** in wasmachine (polyester, fleece)\n• **Microbeads** in oude cosmetica (verboden sinds 2018 in NL)\n• **Verf + lakken** die afbrokkelen" },
+            { titel: "Waarom probleem?", tekst: "Microplastics zitten **OVERAL**:\n• **In zee** — vissen eten ze (en wij eten dan de vis)\n• **In drinkwater** — onderzoek 2017: ~83% wereld-kraanwater bevat plastic\n• **In zout, suiker, bier**\n• **In ons lichaam** — wetenschappers vonden microplastics in bloed (2022), placenta, longen\n\nGevolg voor gezondheid nog onbekend — onderzoek loopt." },
+            { titel: "Cito-feit: NL-actie + Ocean Cleanup", tekst: "**NL acties tegen microplastics**:\n• **Microbeads** verbod (was in cosmetica, scrub-zalf — uitfaseren 2018-)\n• **Plastic-zak-verbod** gratis sinds 2016\n• **Statiegeld** op blikjes (vanaf 2023) — minder zwerfvuil\n• **The Ocean Cleanup** (Boyan Slat, NL!) — interceptors in rivieren VÓÓR ze in zee komen\n• **EU SUP-richtlijn** — verbod op single-use plastic (rietjes, bestek)\n\nElke beetje minder plastic = minder microplastics op lange termijn." },
+          ],
+          woorden: [
+            { woord: "microplastic", uitleg: "Plastic kleiner dan 5 mm. Niet biologisch afbreekbaar." },
+            { woord: "nanoplastic", uitleg: "Plastic kleiner dan 1 micrometer (1.000× kleiner dan microplastic). Onzichtbaar." },
+            { woord: "biologisch afbreekbaar", uitleg: "Materiaal dat door bacteriën vergaat. Plastic = NIET (alleen breken in kleinere stukjes)." },
+          ],
+          theorie: "Hoe lang doet plastic erover om af te breken?\n• **Plastic fles** — ~450 jaar (alleen breken in microplastic, niet weg)\n• **Plastic tas** — 10-1.000 jaar\n• **Plastic rietje** — 200 jaar\n• **Sigarettenpeuk** — 10-12 jaar (met filter)\n• **Touw** — 600 jaar\n\nVergelijk: papier 2-6 weken, appel-klokhuis 2 maanden, ijzer 50-100 jaar.",
+          voorbeelden: [
+            { type: "feit", tekst: "We eten gemiddeld 5 gram microplastic per week (~1 creditcard). Vooral via drinkwater + vis." },
+            { type: "feit", tekst: "WHO + EU onderzoeken nu gezondheidseffecten. Voorzorgsprincipe: zoveel mogelijk vermijden." },
+          ],
+          basiskennis: [{ onderwerp: "Niet zichtbaar", uitleg: "Microplastics zijn met blote oog vaak niet zichtbaar. Specialistische microscopen nodig." }],
+          niveaus: { basis: "Kleine plastic-deeltjes. = A.", simpeler: "Microplastics zijn plastic-stukjes kleiner dan 5 mm. Komen van afgebroken plastic-flessen, autobanden, kleding-wasbeurt. Zitten in zee + ons drinkwater + zelfs ons bloed. = A.", nogSimpeler: "Klein plastic = A." },
+        },
+      },
+      {
+        q: "Welke **3 R's** vormen de basis van duurzaamheid?",
+        options: ["Reduce, Reuse, Recycle (verminder, hergebruik, recycle)", "Rondom, Rondreis, Repetitief", "Rust, Reizen, Rennen", "Rood, Rood, Rood"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Engels woord-trio, basis van afvalbeleid.", "Niet — bedacht antwoord.", "Niet — heeft niets met duurzaamheid te maken.", "Niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 3 R's", tekst: "De **3 R's van duurzaamheid** zijn (Engels, internationaal gebruikt):\n\n1. **REDUCE** (verminder) — beste! Koop minder spullen, eet minder vlees, gebruik minder energie.\n2. **REUSE** (hergebruik) — gebruik tweedehands, navulbare flesjes, repareer kleding.\n3. **RECYCLE** — wat overblijft = laat het verwerken tot nieuwe grondstof.\n\n**Volgorde belangrijk**: REDUCE = beste. RECYCLE = pas als REDUCE + REUSE niet kan." },
+            { titel: "Voorbeelden in dagelijks leven", tekst: "**Reduce**:\n• Geen plastic tasje (eigen tas mee)\n• Vegetarisch eten 1× per week\n• Kortere douche\n• Geen pakketje bestellen voor 1 item\n\n**Reuse**:\n• Glazen pot voor lunch (geen aluminiumfolie)\n• Tweedehands kleding (Vinted, kringloop)\n• Repareer broek met gat\n• Compost voor tuin\n\n**Recycle**:\n• PMD/papier/glas scheiden\n• Oude telefoon naar inzamelpunt (kostbare grondstoffen)\n• Kerstboom naar gemeente" },
+            { titel: "Cito-feit: 5R's of 7R's", tekst: "Sommige variatie:\n• **3R's** klassiek (Reduce-Reuse-Recycle)\n• **5R's** modern: + **Refuse** (weigeren onnodige dingen) + **Rot** (composteren)\n• **7R's** uitgebreid: + Repair + Rethink\n\nVoor Cito-PO: de **3 klassieke R's** zijn voldoende kennis. Engelse woorden onthouden = makkelijk." },
+          ],
+          woorden: [
+            { woord: "duurzaamheid", uitleg: "Iets dat goed is voor mens, milieu, toekomst. Niet alleen NU maar ook OVER 100 jaar." },
+            { woord: "Reduce", uitleg: "Engels: verminderen. Minder kopen + verbruiken." },
+            { woord: "Reuse", uitleg: "Engels: hergebruiken. Tweede leven voor spullen." },
+            { woord: "Recycle", uitleg: "Engels: recyclen. Verwerken tot nieuwe grondstof." },
+          ],
+          theorie: "Waarom volgorde Reduce > Reuse > Recycle?\n• **Reduce**: kost geen energie (gewoon niet kopen). Beste voor planeet.\n• **Reuse**: weinig energie (alleen tweedehands transport).\n• **Recycle**: KOST WEL energie (smelten, schoonmaken). Beter dan storten, maar niet beter dan reduce.\n\nVerschil:\n• **Recycling** ≠ gratis goed. Plastic recyclen kost veel water + chemicaliën.\n• **Reduce** is altijd beter.",
+          voorbeelden: [
+            { type: "feit", tekst: "Nederlandse gemiddelde: 1 persoon = ~500 kg afval per jaar. Helft is recyclebaar." },
+            { type: "feit", tekst: "1 nieuwe spijkerbroek kost 7.500 liter water. Tweedehands = 0 liter extra. Daarom Vinted/Marktplaats = duurzaam." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen recycle", uitleg: "Veel mensen denken 'als ik recycle is het goed'. Maar Reduce is veel beter — voorkom afval überhaupt." }],
+          niveaus: { basis: "Reduce, Reuse, Recycle. = A.", simpeler: "De 3 R's: 1) Reduce = minder kopen, 2) Reuse = tweedehands gebruiken, 3) Recycle = scheiden + verwerken tot nieuwe spullen. Reduce is altijd beste. = A.", nogSimpeler: "Reduce-Reuse-Recycle = A." },
+        },
+      },
     ],
   },
 ];
