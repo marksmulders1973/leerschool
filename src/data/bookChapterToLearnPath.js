@@ -181,6 +181,321 @@ export const BOOK_CHAPTER_TO_LEARN_PATH = {
     ["pincode-overheid"],                                // Overheid
     ["pincode-buitenland-eu"],                           // Internationaal
   ],
+  "economie-integraal": [
+    [],                                                  // Inleiding economie
+    ["vraag-aanbod-economie"],                           // Markten en prijzen
+    ["pincode-ondernemen"],                              // Productie en bedrijven
+    ["pincode-werk-arbeidsmarkt", "pincode-inkomen-welvaart"], // Arbeid en lonen
+    ["pincode-overheid", "pincode-belasting"],           // Overheidseconomie
+    ["pincode-geld-sparen-lenen"],                       // Geld en banken
+    ["pincode-buitenland-eu", "pincode-ontwikkelingslanden"], // Internationale economie
+    ["bbp-conjunctuur-economie"],                        // Groei en welvaart
+  ],
+
+  // ───── Wiskunde — Moderne Wiskunde (MW) ─────────────────────────
+  "mw-hv1a": [
+    ["cijferend-rekenen"],                               // Rekenen
+    ["negatieve-getallen"],                              // Negatieve getallen
+    ["lineaire-formules", "vergelijkingen-oplossen"],    // Formules en vergelijkingen
+    ["vlakke-figuren", "meetkunde-bouwsels"],            // Oppervlakte en inhoud
+    ["rekenen-met-letters"],                             // Rekenen met variabelen
+    ["vlakke-figuren"],                                  // Vlakke figuren
+  ],
+  "mw-vwo1a": [
+    ["meetkunde-bouwsels"],                              // Ruimtefiguren
+    ["cijferend-rekenen", "negatieve-getallen"],         // Getallen
+    ["coordinatenstelsel", "grafieken-lezen-po"],        // Grafieken
+    ["vlakke-figuren"],                                  // Lijnen en hoeken
+    ["verhoudingen"],                                    // Verhoudingen
+    ["lineaire-formules", "coordinatenstelsel"],         // Formules en grafieken
+  ],
+  "mw-havo-a1": [
+    ["cijferend-rekenen", "rekenen-met-letters"],        // Rekenen
+    ["lineaire-formules"],                               // Verbanden
+    [],                                                  // Vaardigheden 1
+    ["statistiek"],                                      // Statistische vraagstellingen
+    ["kansrekening"],                                    // Systematisch tellen
+    [],                                                  // Vaardigheden 2
+    ["lineaire-formules", "exponentieel"],               // Lineaire en exponentiële groei
+    ["coordinatenstelsel", "vergelijkingen-oplossen"],   // Grafieken en vergelijkingen
+    [],                                                  // Vaardigheden 3
+  ],
+  "mw-vwo-b1": [
+    ["kansrekening"],                                    // Systematisch tellen
+    ["lineaire-formules"],                               // Verbanden
+    [],                                                  // Vaardigheden 1
+    ["machten"],                                         // Machtsfuncties
+    [],                                                  // Vaardigheden 2
+    ["exponentieel"],                                    // Exponentiële functies
+    ["differentieren"],                                  // Veranderingen
+    [],                                                  // Vaardigheden 3
+  ],
+
+  // ───── Wiskunde — KERN ──────────────────────────────────────────
+  "kern-wis-hv1a": [
+    ["cijferend-rekenen", "negatieve-getallen"],         // Getallen en bewerkingen
+    ["verhoudingen", "verhoudingen-po"],                 // Verhoudingen
+    ["vlakke-figuren", "meetkunde-bouwsels"],            // Meetkunde
+    ["rekenen-met-letters"],                             // Algebra
+    ["statistiek"],                                      // Statistiek
+  ],
+  "kern-wis-hv1b": [
+    ["breuken", "procenten"],                            // Breuken en procenten
+    ["rekenen-met-letters", "vergelijkingen-oplossen"],  // Algebra
+    ["vlakke-figuren", "pythagoras"],                    // Meetkunde
+    ["lineaire-formules", "coordinatenstelsel"],         // Functies en grafieken
+    ["kansrekening"],                                    // Kansen
+  ],
+  "kern-wis-hv2a": [
+    ["lineaire-formules"],                               // Lineaire verbanden
+    ["kwadratische-vergelijkingen", "parabolen"],        // Kwadratische verbanden
+    ["pythagoras", "vlakke-figuren"],                    // Meetkunde
+    ["statistiek"],                                      // Statistiek
+    ["stelsels"],                                        // Stelsels
+  ],
+  "gr-vwo1": [
+    ["cijferend-rekenen", "negatieve-getallen"],         // Getallen en bewerkingen
+    ["verhoudingen", "procenten"],                       // Verhoudingen en procenten
+    ["maten-eenheden", "vlakke-figuren"],                // Meten en meetkunde
+    ["lineaire-formules", "coordinatenstelsel"],         // Formules en grafieken
+    ["statistiek", "kansrekening"],                      // Statistiek en kansen
+    ["rekenen-met-letters"],                             // Algebra
+  ],
+  "gr-vmbo-havo1": [
+    ["cijferend-rekenen", "negatieve-getallen"],         // Getallen
+    ["verhoudingen"],                                    // Verhoudingen
+    ["maten-eenheden"],                                  // Meten
+    ["lineaire-formules"],                               // Formules
+    ["statistiek"],                                      // Statistiek
+  ],
+  "netwerk-wis": [
+    ["cijferend-rekenen", "negatieve-getallen"],         // Getallen
+    ["verhoudingen", "procenten"],                       // Verhoudingen
+    ["vlakke-figuren", "pythagoras"],                    // Meetkunde
+    ["lineaire-formules"],                               // Verbanden en grafieken
+    ["statistiek", "kansrekening"],                      // Statistiek en kansen
+  ],
+  "mathplus": [
+    ["differentieren", "exponentieel", "logaritmen"],    // Analyse
+    ["rekenen-met-letters", "machten"],                  // Algebra
+    ["vlakke-figuren", "pythagoras", "goniometrie"],     // Meetkunde
+    ["statistiek", "kansrekening"],                      // Statistiek en kansen
+    ["differentieren"],                                  // Differentiëren
+  ],
+
+  // ───── Natuurkunde ──────────────────────────────────────────────
+  "sys-natuurkunde": [
+    ["krachten-natuurkunde"],                            // Krachten
+    ["bewegingen-snelheid-natuurkunde"],                 // Beweging
+    [],                                                  // Energie en arbeid
+    [],                                                  // Warmte en temperatuur
+    ["licht-geluid-natuurkunde"],                        // Trillingen en golven
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    [],                                                  // Magnetisme en inductie
+    [],                                                  // Straling en atoomfysica
+  ],
+  "pulsar": [
+    ["krachten-natuurkunde", "bewegingen-snelheid-natuurkunde"], // Krachten en beweging
+    [],                                                  // Energie
+    [],                                                  // Warmte
+    ["licht-geluid-natuurkunde"],                        // Golven en geluid
+    ["licht-geluid-natuurkunde"],                        // Licht en optica
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    [],                                                  // Magnetisme
+    [],                                                  // Moderne fysica
+  ],
+  "nova-nat": [
+    ["krachten-natuurkunde"],                            // Krachten
+    ["bewegingen-snelheid-natuurkunde"],                 // Beweging
+    [],                                                  // Energie
+    [],                                                  // Warmte
+    ["licht-geluid-natuurkunde"],                        // Golven
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    [],                                                  // Magnetisme
+    [],                                                  // Straling
+  ],
+  "overal-nat": [
+    ["krachten-natuurkunde", "bewegingen-snelheid-natuurkunde"], // Krachten en beweging
+    [],                                                  // Energie en arbeid
+    [],                                                  // Warmte
+    ["licht-geluid-natuurkunde"],                        // Golven en geluid
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    [],                                                  // Magnetisme
+    ["licht-geluid-natuurkunde"],                        // Licht
+    [],                                                  // Straling
+  ],
+
+  // ───── NaSk (vmbo gecombineerd) ─────────────────────────────────
+  "overal-nask": [
+    ["stoffen-mengsels-scheikunde", "toestand-stoffen-po"], // Stoffen en materialen
+    ["krachten-natuurkunde", "bewegingen-snelheid-natuurkunde"], // Kracht en beweging
+    [],                                                  // Warmte en energie
+    ["licht-geluid-natuurkunde"],                        // Licht en zien
+    ["licht-geluid-natuurkunde"],                        // Geluid
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    ["chemische-reacties-scheikunde"],                   // Scheikundige reacties
+    ["atoombouw-scheikunde"],                            // Atomen en moleculen
+  ],
+  "newton-nask": [
+    [],                                                  // Het vak NaSk
+    ["licht-geluid-natuurkunde"],                        // Licht en straling
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit en magnetisme
+    [],                                                  // Energie en warmte
+    ["krachten-natuurkunde", "bewegingen-snelheid-natuurkunde"], // Kracht en beweging
+    ["licht-geluid-natuurkunde"],                        // Geluid
+    ["stoffen-mengsels-scheikunde", "atoombouw-scheikunde"], // Stoffen en deeltjes
+  ],
+  "nova-nask": [
+    [],                                                  // Natuur- en scheikunde
+    ["stoffen-mengsels-scheikunde", "toestand-stoffen-po"], // Stoffen en materialen
+    ["waterkringloop-po"],                               // Water
+    ["elektriciteit-natuurkunde"],                       // Elektriciteit
+    [],                                                  // Warmte
+    ["krachten-natuurkunde", "bewegingen-snelheid-natuurkunde"], // Kracht en beweging
+    ["licht-geluid-natuurkunde"],                        // Geluid
+    ["licht-geluid-natuurkunde"],                        // Licht
+  ],
+
+  // ───── Scheikunde ───────────────────────────────────────────────
+  "chemie-overal": [
+    ["stoffen-mengsels-scheikunde", "chemische-reacties-scheikunde"], // Scheiden en reageren
+    ["atoombouw-scheikunde"],                            // Bouwstenen van stoffen
+    ["chemische-reacties-scheikunde"],                   // Stoffen en reacties
+    ["atoombouw-scheikunde"],                            // Moleculaire stoffen
+    [],                                                  // Zouten en zoutoplossingen
+    [],                                                  // Koolstofchemie
+    [],                                                  // Zuren
+    [],                                                  // Basen
+  ],
+  "nova-scheikunde": [
+    ["chemische-reacties-scheikunde"],                   // Chemisch rekenen
+    ["atoombouw-scheikunde"],                            // Chemische bindingen
+    [],                                                  // Organische verbindingen
+    [],                                                  // Zouten
+    ["chemische-reacties-scheikunde"],                   // Reacties in beweging
+    [],                                                  // Chemisch evenwicht en zuur-base
+  ],
+
+  // ───── Aardrijkskunde ───────────────────────────────────────────
+  "de-geo": [
+    ["werelddelen-landen-po"],                           // Iran
+    ["klimaten-aardrijkskunde", "klimaatverandering-aardrijkskunde"], // Grote natuurlandschappen
+    ["werelddelen-landen-po"],                           // Gambia
+    ["platentektoniek-aardrijkskunde"],                  // Natuurrampen in Japan
+    ["werelddelen-landen-po"],                           // Indonesië
+    ["klimaten-aardrijkskunde"],                         // Klimaat en natuurlandschap Europa
+    ["topografie-nederland", "kaartlezen-po"],           // Je eigen omgeving
+    ["werelddelen-landen-po"],                           // Brazilië
+  ],
+  "buitenland": [
+    ["platentektoniek-aardrijkskunde"],                  // Aarde in beweging
+    ["bevolking-migratie-aardrijkskunde"],               // Bevolking en cultuur
+    ["klimaten-aardrijkskunde", "klimaatverandering-aardrijkskunde"], // Klimaat
+    [],                                                  // Ontwikkeling: arm en rijk
+    ["werelddelen-landen-po"],                           // Project Europa
+  ],
+
+  // ───── Maatschappijleer ─────────────────────────────────────────
+  "themas-maatschappijleer": [
+    [],                                                  // Wat is maatschappijleer?
+    ["nederlandse-staat-maatschappijleer"],              // Rechtsstaat
+    ["nederlandse-staat-maatschappijleer", "politiek-democratie-po"], // Parlementaire democratie
+    ["mensenrechten-maatschappijleer"],                  // Pluriforme samenleving
+    [],                                                  // Verzorgingsstaat
+  ],
+  "memo-maatschappijleer": [
+    ["nederlandse-staat-maatschappijleer", "politiek-democratie-po"], // Staat en democratie
+    ["mensenrechten-maatschappijleer"],                  // Rechten en plichten
+    [],                                                  // Samenleving
+    ["pincode-inkomen-welvaart"],                        // Economie en welvaart
+    ["pincode-buitenland-eu"],                           // Internationaal beleid
+  ],
+  "de-basis": [
+    ["politiek-democratie-po"],                          // Democratie
+    ["nederlandse-staat-maatschappijleer"],              // Rechtsstaat
+    ["mensenrechten-maatschappijleer"],                  // Samenleving
+    ["nederlandse-staat-maatschappijleer"],              // Overheid
+    ["pincode-buitenland-eu"],                           // Internationaal
+  ],
+
+  // ───── PO — Rekenen-methodes ────────────────────────────────────
+  "pluspunt": [
+    ["cijferend-rekenen", "tafels-po"],                  // Tellen en getallen
+    ["cijferend-rekenen"],                               // Optellen en aftrekken
+    ["tafels-po"],                                       // Vermenigvuldigen
+    ["delen-po"],                                        // Delen
+    ["breuken-po"],                                      // Breuken
+    ["maten-eenheden", "klokkijken", "tijdsduur-rekenen-po"], // Meten en tijd
+    ["vlakke-figuren-po", "meetkunde-bouwsels"],         // Meetkunde
+    ["tabellen-grafieken", "gemiddelden-statistiek-po"], // Statistiek
+  ],
+  "wereld-in-getallen": [
+    ["cijferend-rekenen", "tafels-po"],                  // Tellen en getallen
+    ["cijferend-rekenen"],                               // Optellen en aftrekken
+    ["tafels-po"],                                       // Vermenigvuldigen
+    ["delen-po"],                                        // Delen
+    ["breuken-po", "kommagetallen-po"],                  // Breuken en kommagetallen
+    ["maten-eenheden", "klokkijken", "kalender-rekenen-po"], // Meten en tijd
+    ["vlakke-figuren-po"],                               // Meetkunde
+    ["tabellen-grafieken"],                              // Statistiek
+  ],
+  "gr-junior": [
+    ["cijferend-rekenen"],                               // Getallen
+    ["cijferend-rekenen"],                               // Optellen en aftrekken
+    ["tafels-po"],                                       // Vermenigvuldigen
+    ["delen-po"],                                        // Delen
+    ["breuken-po"],                                      // Breuken
+    ["maten-eenheden"],                                  // Meten
+    ["vlakke-figuren-po"],                               // Meetkunde
+  ],
+  "wizwijs": [
+    ["cijferend-rekenen"],                               // Getallen
+    ["cijferend-rekenen"],                               // Optellen en aftrekken
+    ["tafels-po", "delen-po"],                           // Vermenigvuldigen en delen
+    ["breuken-po"],                                      // Breuken
+    ["maten-eenheden", "klokkijken"],                    // Meten en tijd
+    ["vlakke-figuren-po"],                               // Meetkunde
+  ],
+  "alles-telt": [
+    ["cijferend-rekenen"],                               // Getallen
+    ["cijferend-rekenen"],                               // Optellen en aftrekken
+    ["tafels-po"],                                       // Vermenigvuldigen
+    ["delen-po"],                                        // Delen
+    ["maten-eenheden", "klokkijken"],                    // Meten en tijd
+    ["vlakke-figuren-po"],                               // Meetkunde
+    ["tabellen-grafieken"],                              // Statistiek
+  ],
+
+  // ───── PO — Taal-methodes ───────────────────────────────────────
+  "taal-actief": [
+    [],                                                  // Luisteren en spreken
+    ["begrijpend-lezen-strategie", "begrijpend-lezen-teksten-po"], // Lezen
+    [],                                                  // Schrijven
+    ["spelling-ei-ij-au-ou", "spelling-overige-po", "werkwoordsspelling-dt"], // Spelling
+    ["woordenschat-po", "synoniemen-tegenstellingen-po"], // Woordenschat
+    ["woordsoorten-po", "werkwoord-tijden-po"],          // Taalbeschouwing
+  ],
+  "staal": [
+    [],                                                  // Luisteren en spreken
+    ["begrijpend-lezen-strategie", "samenvatten-hoofdgedachte-po"], // Lezen
+    [],                                                  // Schrijven
+    ["spelling-ei-ij-au-ou", "spelling-overige-po", "werkwoordsspelling-dt"], // Spelling
+    ["woordenschat-po", "spreekwoorden-uitdrukkingen-po"], // Woordenschat
+    ["woordsoorten-po", "werkwoord-tijden-po", "interpunctie-po"], // Grammatica
+  ],
+  "nieuw-nl-junior": [
+    [],                                                  // Luisteren
+    [],                                                  // Spreken
+    ["begrijpend-lezen-strategie", "begrijpend-lezen-teksten-po"], // Lezen
+    [],                                                  // Schrijven
+    ["spelling-ei-ij-au-ou", "spelling-overige-po"],     // Spelling
+    ["woordenschat-po", "synoniemen-tegenstellingen-po"], // Woordenschat
+  ],
+
+  // ───── VO — Nederlands ──────────────────────────────────────────
+  // De meeste Nederlands-VO-methodes hebben geen chapter-data in
+  // CHAPTER_TITLES (autoLevel-stijl). Mapping kan later wanneer
+  // chapter-titels worden toegevoegd. Voorlopig leeg.
 };
 
 // ──────────────────────────────────────────────────────────────────
