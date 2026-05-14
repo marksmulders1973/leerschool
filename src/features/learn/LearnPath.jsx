@@ -21,6 +21,7 @@ import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
+import KwartierPauze from "./KwartierPauze.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -580,6 +581,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
   return (
     <div style={pageStyle()}>
+      <KwartierPauze
+        player={player}
+        pathId={pathId}
+        stepIdx={stepIdx}
+        onStopForToday={() => { if (onHome) onHome(); }}
+      />
       <Header onBack={() => setMode("overview")} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
 
       {/* Mini-info: stap nummer + voortgangsbalk + prev/next-navigatie */}

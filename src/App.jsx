@@ -1168,6 +1168,12 @@ export default function App() {
             setLearnFilterSubject(subjectId);
             setPage("learn-paths-hub");
           }}
+          onResumeLearnPath={(pathId, stepIdx) => {
+            setActiveLearnPathId(pathId);
+            setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : 0);
+            setLearnPathReturnPage("home");
+            setPage("learn-path");
+          }}
           onBack={() => setPage("home")}
           onViewProgress={() => setPage("student-progress")}
           onLeaderboard={() => setPage("leaderboard")}

@@ -7,6 +7,7 @@ import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
 import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -50,7 +51,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -95,6 +96,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const [code, setCode] = useState(pendingCode || "");
   const [error, setError] = useState("");
   const [showCode, setShowCode] = useState(!!pendingCode);
+
+  // Kwartier-pauze resume: bij mount lezen of gebruiker is gestopt na 15 min.
+  const [kwartierResume, setKwartierResume] = useState(() => loadResume(userName));
+  useEffect(() => { setKwartierResume(loadResume(userName)); }, [userName]);
 
   // Als er een pendingCode is, direct joinen
   useEffect(() => {
@@ -230,6 +235,55 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
               {profileBadge}
             </span>
           </div>
+        )}
+
+        {/* Kwartier-pauze resume — als gebruiker gisteren stopte na 15 min,
+            spring direct terug naar pad+stap waar hij gebleven was. */}
+        {kwartierResume && onResumeLearnPath && ALL_LEARN_PATHS[kwartierResume.pathId] && (
+          <button
+            onClick={() => {
+              onResumeLearnPath(kwartierResume.pathId, kwartierResume.stepIdx);
+              setKwartierResume(null);
+            }}
+            style={{
+              width: "100%",
+              padding: "14px 16px",
+              borderRadius: 14,
+              border: "1px solid rgba(0,200,83,0.45)",
+              background: "linear-gradient(135deg, rgba(0,200,83,0.18), rgba(0,200,83,0.06))",
+              color: "#cdd6e2",
+              textAlign: "left",
+              cursor: "pointer",
+              marginBottom: 12,
+              display: "flex",
+              alignItems: "center",
+              gap: 12,
+              fontFamily: "var(--font-body)",
+            }}
+          >
+            <span style={{ fontSize: 24 }}>▶️</span>
+            <span style={{ flex: 1, minWidth: 0 }}>
+              <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00e676" }}>
+                Verder waar je was
+              </span>
+              <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
+                {ALL_LEARN_PATHS[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}
+              </span>
+            </span>
+            <span
+              role="button"
+              tabIndex={0}
+              onClick={(e) => { e.stopPropagation(); clearResume(userName); setKwartierResume(null); }}
+              onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); clearResume(userName); setKwartierResume(null); } }}
+              aria-label="Resume wissen"
+              style={{
+                fontSize: 18,
+                color: "rgba(255,255,255,0.55)",
+                padding: "4px 8px",
+                cursor: "pointer",
+              }}
+            >×</span>
+          </button>
         )}
 
         {/* A8 (10-agent circulariteit 2026-05-10): "Verder waar je was"-card.
