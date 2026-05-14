@@ -96,6 +96,7 @@ import examenEngels2024T1 from "./examenEngels2024T1.js";
 import examenGeschiedenis2025T1 from "./examenGeschiedenis2025T1.js";
 import examenBiologie2024T1 from "./examenBiologie2024T1.js";
 import examenBiologie2024T2 from "./examenBiologie2024T2.js";
+import examenBiologie2023T1 from "./examenBiologie2023T1.js";
 import mensBiologieVmbo from "./mensBiologieVmbo.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
@@ -360,6 +361,7 @@ export const ALL_LEARN_PATHS = {
   "examen-geschiedenis-2025-t1": examenGeschiedenis2025T1,
   "examen-biologie-2024-t1": examenBiologie2024T1,
   "examen-biologie-2024-t2": examenBiologie2024T2,
+  "examen-biologie-2023-t1": examenBiologie2023T1,
   "mens-biologie-vmbo": mensBiologieVmbo,
   // Bedrijfseconomie
   "balans-beco": balansBeco,

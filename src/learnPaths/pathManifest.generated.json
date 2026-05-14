@@ -1186,6 +1186,28 @@
     "chapterCount": 4
   },
   {
+    "id": "examen-biologie-2023-t1",
+    "title": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2023-T1",
+    "triggerKeywords": [
+      "examen biologie 2023 tijdvak 1",
+      "echte examenvragen biologie",
+      "ethogram gedrag",
+      "adrenaline bijnieren",
+      "mutatie straling",
+      "primair secundair geslachtskenmerken",
+      "pigmentcellen kiemlaag melanine"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1 (examen-id GT-0191-a-23-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 4
+  },
+  {
     "id": "examen-biologie-2024-t1",
     "title": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
     "subject": "biologie",

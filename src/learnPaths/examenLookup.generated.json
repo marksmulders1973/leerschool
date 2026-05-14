@@ -19,6 +19,13 @@
   ],
   "genetica-erfelijkheid-biologie": [
     {
+      "examPathId": "examen-biologie-2023-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 34,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 34"
+    },
+    {
       "examPathId": "examen-biologie-2024-t1",
       "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -34,6 +41,13 @@
     }
   ],
   "mens-biologie-vmbo": [
+    {
+      "examPathId": "examen-biologie-2023-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 42,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 42"
+    },
     {
       "examPathId": "examen-biologie-2024-t1",
       "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
@@ -404,6 +418,20 @@
     }
   ],
   "voortplanting-hormonen-biologie": [
+    {
+      "examPathId": "examen-biologie-2023-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 22,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 22"
+    },
+    {
+      "examPathId": "examen-biologie-2023-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 38,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 38"
+    },
     {
       "examPathId": "examen-biologie-2024-t1",
       "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",

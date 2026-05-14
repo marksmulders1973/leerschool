@@ -1,0 +1,340 @@
+{
+  "id": "biologie-2023-T1",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Wat is de naam van zo'n tabel met beschrijvingen van gedragingen? Een bioloog observeert ''n wulp. Met een stopwatch houdt ze gedurende ''n minuut bij, welk gedrag ze ziet. De resultaten zie je in de afbeelding.",
+      "options": [
+        "ethogram",
+        "practicum",
+        "protocol",
+        "veldwaarneming"
+      ],
+      "answer": 0,
+      "explanation": "Vraag Antwoord                                                                  Scores",
+      "tekstNr": null,
+      "vraagNr": 11
+    },
+    {
+      "q": "In de afbeelding zie je de organen van het mannelijke voortplantingsstelsel. Vier plaatsen zijn met letters aangegeven. Met welke letter is de plaats aangegeven waar tijdens de zaadlozing de verbinding afgesloten wordt?",
+      "options": [
+        "met letter P",
+        "met letter Q",
+        "met letter R",
+        "met letter S"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 15
+    },
+    {
+      "q": "De biologiedocent bespreekt met Faizal hoe zijn voedselweb eruit zou zien als er geen boerenkoolplanten waren. Uit hoeveel groepen organismen bestaat het voedselweb van Faizal als hij de boerenkoolplanten weglaat? Wespenallergie Door een steek van een wesp krijg je een gifstof in je lichaam. Er ontstaat daardoor een pijnlijk gezwel. Bij sommige mensen veroorzaakt een wespensteek een allergische reactie. Bij een allergische reactie kunnen er vele rode bultjes op de huid ontstaan. Ook kan een allergische reactie leiden tot een astma-aanval of een opgezwollen keel. Bij een allergische reactie reageren witte bloedcellen op het gif van de wesp door antistoffen te maken. Hierbij komt de stof histamine vrij. Histamine zorgt ervoor dat de bloedvaten wijder worden. Door histamine laten de wanden van de haarvaten ook meer vocht door naar het weefsel, waardoor de rode bultjes en zwellingen ontstaan. Je ziet een afbeelding waarin de drie stappen van de allergische reactie schematisch zijn getekend met antigenen, antistoffen en witte bloedcellen. stap 1  stap 2   stap 3",
+      "options": [
+        "uit 6 groepen organismen",
+        "uit 7 groepen organismen",
+        "uit 8 groepen organismen",
+        "uit 9 groepen organismen"
+      ],
+      "answer": 2,
+      "explanation": "Vraag Antwoord                                                                        Scores\n\n   Wespenallergie                                           antistof  witte bloedcel",
+      "tekstNr": null,
+      "vraagNr": 19
+    },
+    {
+      "q": "Adrenaline wordt ook in het lichaam gemaakt. Door welke hormoonklier wordt adrenaline gemaakt?",
+      "options": [
+        "door de alvleesklier",
+        "door de bijnieren",
+        "door de hypofyse",
+        "door de schildklier"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 22
+    },
+    {
+      "q": "Over dit diagram worden twee uitspraken gedaan. 1 Hoe dieper de koningsvis zwemt, hoe meer zijn lichaamstemperatuur daalt. 2 De koningsvis is tijdens de meting op meer dan 80 meter diepte geweest. Wat is juist? Koningsvissen hebben een enkelvoudige bloedsomloop. Het hart heeft ''n boezem en ''n kamer (zie de afbeelding hieronder). Enkele bloedvaten zijn met een letter aangegeven. De pijlen geven de stroomrichting van het bloed aan.",
+      "options": [
+        "alleen uitspraak 1",
+        "alleen uitspraak 2",
+        "beide uitspraken",
+        "geen van beide uitspraken"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 27
+    },
+    {
+      "q": "Welke letter geeft een bloedvat aan waar zuurstofrijk bloed doorheen stroomt? Luizen bij duiven Tussen de veren van duiven leven luizen die zich voeden met eiwitten en vetten uit die veren. Veel luizen hebben dezelfde kleur als de veren van de duiven waar ze op leven. Alle luizen behoren tot dezelfde soort. De duiven proberen de luizen bij elkaar of bij zichzelf te verwijderen door met hun snavel door de veren te strijken en de luizen eraf te vegen. Dit wordt `preening' genoemd. Biologen onderzoeken dit preening-gedrag bij de duiven. De biologen hebben daarvoor een snavelkapje ontwikkeld. Duiven die zo'n kapje over hun snavel krijgen, kunnen de luizen niet meer verwijderen, maar kunnen zich nog wel voeden.",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R"
+      ],
+      "answer": 0,
+      "explanation": "Luizen bij duiven",
+      "tekstNr": null,
+      "vraagNr": 28
+    },
+    {
+      "q": "Tot welk type gedrag hoort preening? De biologen willen weten of natuurlijke selectie een rol speelt in de aanpassing van de luizen aan de veerkleur van de duif. Ze doen een nieuwe proef die een aantal jaren duurt. De biologen hebben vier groepen duiven samengesteld: witte duiven met snavelkapjes witte duiven zonder snavelkapjes zwarte duiven met snavelkapjes zwarte duiven zonder snavelkapjes Alle duiven worden besmet met grijze luizen. Een luis leeft ongeveer 50 dagen en kan in die tijd tot wel 300 nakomelingen krijgen. Na vier jaar bekijken de onderzoekers de kleuren van de luizen op de duiven. Hieronder zie je de resultaten in een tabel. kleur van de   kleuren van de luizen na vier jaar luizen kleur duiven                      op de duiven met  op de duiven aan het begin       snavelkapje       zonder op alle duiven                    snavelkapje",
+      "options": [
+        "tot broedzorg",
+        "tot imponeergedrag",
+        "tot verzorgingsgedrag",
+        "tot voedingsgedrag"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 29
+    },
+    {
+      "q": "Het foute stukje DNA is ontstaan door een mutatie. Finn en Ilse praten over mutaties. Finn zegt dat een mutatie kan ontstaan door radio-actieve straling. Ilse zegt dat mutaties alleen ontstaan in geslachtscellen. Wie heeft gelijk?",
+      "options": [
+        "Alleen Finn heeft gelijk.",
+        "Alleen Ilse heeft gelijk.",
+        "Finn heeft gelijk en Ilse heeft gelijk.",
+        "Geen van beiden heeft gelijk."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 34
+    },
+    {
+      "q": "Heeft een behandeling met vrouwelijke geslachtshormonen invloed op de primaire of op de secundaire geslachtskenmerken? Soms laat een transgender persoon zich aan de geslachtsorganen opereren. De mannelijke geslachtsdelen worden dan zo veranderd dat ze lijken op vrouwelijke geslachtsdelen. De operatie gaat als volgt: 1 Er wordt een holte gemaakt tussen de endeldarm en de urinebuis. 2 De teelballen en delen van de penis worden verwijderd. 3 Van de penishuid wordt een vagina gemaakt. 4 Van de balzak worden schaamlippen gemaakt. 5 Van de eikel wordt een ander deel gemaakt.",
+      "options": [
+        "alleen op de primaire geslachtskenmerken",
+        "alleen op de secundaire geslachtskenmerken",
+        "op de primaire en op de secundaire geslachtskenmerken"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 38
+    },
+    {
+      "q": "Hoe heet het gedeelte van huid waarin de pigmentcellen worden gemaakt?",
+      "options": [
+        "hoornlaag",
+        "kiemlaag",
+        "lederhuid",
+        "onderhuids bindweefsel"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 42
+    },
+    {
+      "q": "In de afbeelding zie je een doorsnede van het oog. Welke letter geeft het deel aan dat Theo met zijn laskap beschermt?",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R",
+        "letter S",
+        "letter T"
+      ],
+      "answer": 4,
+      "explanation": "Het juiste antwoord is E.",
+      "tekstNr": null,
+      "vraagNr": 45
+    },
+    {
+      "q": "Een enkele keer ademt Theo een giftig gas in. Het giftige gas stroomt dan door verschillende delen van het ademhalingsstelsel en wordt opgenomen in het bloed. Delen van het ademhalingsstelsel zijn: de bronchi'n, de longblaasjes en de luchtpijp. In welke volgorde stroomt het giftige gas bij inademing door deze delen?",
+      "options": [
+        "bronchi'n  longblaasjes  luchtpijp",
+        "bronchi'n  luchtpijp  longblaasjes",
+        "longblaasjes  bronchi'n  luchtpijp",
+        "longblaasjes  luchtpijp  bronchi'n",
+        "luchtpijp  bronchi'n  longblaasjes F luchtpijp  longblaasjes  bronchi'n"
+      ],
+      "answer": 4,
+      "explanation": "Het juiste antwoord is E.",
+      "tekstNr": null,
+      "vraagNr": 47
+    },
+    {
+      "q": "In de afbeelding hieronder zie je een doorsnede van een tand van een hond. De delen hebben dezelfde namen en functies als bij de mens. Welke letter geeft het tandbeen aan?",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R",
+        "letter S",
+        "letter T"
+      ],
+      "answer": 4,
+      "explanation": "Het juiste antwoord is E.",
+      "tekstNr": null,
+      "vraagNr": 49
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 26,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 30,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 36,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 39,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 44,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 46,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 48,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 50,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 51,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 52,
+      "reden": "open/complex"
+    }
+  ]
+}
