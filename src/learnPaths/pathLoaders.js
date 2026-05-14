@@ -23,7 +23,16 @@
 
 // Vite resolves dit naar object { './parabolen.js': () => import('./parabolen.js'), ... }
 // Lazy: modules worden pas geladen wanneer de loader-functie wordt aangeroepen.
-const modules = import.meta.glob('./*.js{,x}', { import: 'default' });
+//
+// BUG-FIX 2026-05-14: exclude `.test.js`, `.generated.js`, `index.js`,
+// `examenLookup.js`, `pathLoaders.js`, `subjectMapping.js`. Anders pakt Rollup
+// die mee in de bundle waardoor:
+// 1. `index.test.js` importeert `./index.js` (cycle examens-wiskunde via core)
+// 2. test-code in productie-bundle
+const modules = import.meta.glob(
+  ['./*.js{,x}', '!./index.js', '!./index.test.js', '!./examenLookup.js', '!./pathLoaders.js', '!./subjectMapping.js', '!./subjectMapping.test.js', '!./questionPathMap.generated.js'],
+  { import: 'default' }
+);
 
 // Map van pad-id naar loader-functie. De pad-id zit in het default-export van
 // elk pad-file als `path.id`. We kunnen die niet uit de file-naam afleiden

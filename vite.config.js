@@ -83,6 +83,15 @@ export default defineConfig({
           // suffix), rest = core (wiskunde + algemeen).
           if (id.includes('src/learnPaths/')) {
             const fname = id.split(/[/\\]src[/\\]learnPaths[/\\]/).pop() || '';
+            // BUG-FIX 2026-05-14: index.js + examenLookup.js + pathLoaders.js
+            // moeten in 1 dezelfde chunk als ze elkaar importeren. Anders ontstaat
+            // een circulair-chunk-probleem (examens ↔ wiskunde) wat in productie
+            // 'Cannot read properties of undefined (reading config)' veroorzaakt
+            // zodra index.js geinitialiseerd wordt voordat data-learnpaths-wiskunde
+            // afgerond is. Forceer ze in 'data-learnpaths-core'.
+            if (fname === 'index.js' || fname === 'examenLookup.js' || fname === 'pathLoaders.js' || fname === 'subjectMapping.js' || fname === 'questionPathMap.generated.js') {
+              return 'data-learnpaths-core';
+            }
             if (fname.startsWith('examen')) return 'data-learnpaths-examens';
             if (fname.startsWith('pincode')) return 'data-learnpaths-pincode';
             if (/Po\.js$/.test(fname)) return 'data-learnpaths-po';
