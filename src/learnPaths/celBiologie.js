@@ -756,6 +756,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           niveaus: { basis: "Plant + dier + energie.", simpeler: "Beide hebben mito.", nogSimpeler: "Energie-maker." },
         },
       },
+      { q: "Wat is het verschil tussen een **prokaryoot** en een **eukaryoot**?", options: ["Prokaryoot heeft GEEN kern, eukaryoot WEL","Prokaryoot is een plant, eukaryoot een dier","Eukaryoot is kleiner","Geen verschil"], answer: 0, wrongHints: [null,"Niet over plant vs dier.","Andersom — eukaryoot is groter.","Wel — kern of niet."] },
     ],
   },
 ];

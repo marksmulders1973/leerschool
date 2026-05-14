@@ -535,6 +535,9 @@ const steps = [
           niveaus: { basis: "Isaac Newton.", simpeler: "Engelsman, 1700.", nogSimpeler: "Newton." },
         },
       },
+      { q: "Een voorwerp van 5 kg ondervindt zwaartekracht. Hoe groot is Fz? (g ≈ 10 N/kg)", options: ["50 N","5 N","0,5 N","500 N"], answer: 0, wrongHints: [null,"Te laag — Fz = m × g = 5 × 10.","Veel te laag.","Te hoog — alleen vermenigvuldigen met 10."] },
+      { q: "Newton 1 zegt: een voorwerp in rust blijft in rust ZOLANG?", options: ["Er geen netto kracht op werkt","Het zwaar genoeg is","Het op de grond ligt","Het bevriest"], answer: 0, wrongHints: [null,"Niet — gewicht maakt niet uit.","Niet — ook in de ruimte geldt het.","Niet — temperatuur niet relevant."] },
+      { q: "F = m × a. Massa 2 kg, versnelling 3 m/s². Wat is F?", options: ["6 N","5 N","1,5 N","0,67 N"], answer: 0, wrongHints: [null,"Niet — niet optellen, vermenigvuldigen.","Niet — niet delen.","Andersom."] },
     ],
   },
 ];
