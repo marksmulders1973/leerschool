@@ -247,6 +247,84 @@ const steps = [
       { q: "Wat is **stereotypering** fout?", options: ["Oordeel over groep ipv individu", "Slim", "Mag wel", "Niet"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Geen excuus.", "Wel fout."] },
       { q: "Wie won **Nobelprijs voor denkfouten**?", options: ["Daniel Kahneman (2002)", "Einstein", "Darwin", "Aristoteles"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Vroeger maar geen Nobel."] },
       { q: "Wat is **cherry picking**?", options: ["Kies gunstige feiten, negeer res", "Fruit plukken", "Goed", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt — drogreden.", "Letterlijk niet.", "Tegenovergesteld.", "Wel."] },
+      {
+        q: "Wat is **fake news**?",
+        options: ["Nepnieuws — info die niet klopt maar verspreid wordt als waar", "Grappig nieuws", "Reclame", "Nieuws uit ander land"],
+        answer: 0,
+        wrongHints: [null, "Klopt — bewust of onbewust onjuiste info, vooral op social media.", "Niet — humor-nieuws (bv. De Speld) is duidelijk fictief.", "Reclame is wel commercieel maar niet 'fake news' (heeft eigen regels).", "Buitenlands nieuws is gewoon nieuws — niet fake."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is fake news?", tekst: "**Fake news** = **nep-nieuws**. Informatie die niet klopt, maar gepresenteerd wordt als waar. Verspreid vooral via **social media** (TikTok, Instagram, X/Twitter, Whatsapp).\n\nTwee soorten:\n• **Misinformation** — onjuist maar zonder kwade bedoeling (per ongeluk gedeeld)\n• **Disinformation** — onjuist + bewust verspreid om mensen te misleiden" },
+            { titel: "Hoe herken je fake news?", tekst: "**6 vragen om te stellen**:\n1. **Wie schreef het?** Onbekende auteur? Verdacht.\n2. **Welke bron?** Niet-bekende website? Check een andere bron.\n3. **Wanneer geschreven?** Oude foto's worden vaak misbruikt voor nieuwe verhalen.\n4. **Klopt het met andere bronnen?** Check NOS, NRC, een echte krant.\n5. **Past het bij de URL?** 'nu.nl-tracking.com' = nep, alleen 'nu.nl' echt.\n6. **Wekt het sterke emoties op?** Fake news is vaak boos/bang-makend → klik-bait." },
+            { titel: "Cito-feit: fake news in NL + AI", tekst: "**2024 trends**:\n• **AI-deepfakes** — video waarin iemand iets zegt wat hij/zij nooit zei (gemaakt met AI)\n• **AI-stem-fraude** — oplichter belt 'mama, ik heb geld nodig' met AI-stem familie\n• **Whatsapp-kettingberichten** — vaak fake (delen niet)\n• Onderzoek: 60% NL'ers (2024) heeft moeite met onderscheiden echt/fake\n\nNL **Mediawijsheid-week** elk najaar → leert kinderen kritisch lezen." },
+          ],
+          woorden: [
+            { woord: "fake news", uitleg: "Engelse term voor nepnieuws. Onjuiste info verspreid als waar." },
+            { woord: "deepfake", uitleg: "AI-gemaakte video/audio waarin iemand iets zegt wat hij/zij niet zei." },
+            { woord: "factchecker", uitleg: "Persoon of website die onwaarheden controleert. NL: NU.nl-factcheck, ANP-factcheck." },
+            { woord: "broncheck", uitleg: "Controleren wie iets schreef + waar het vandaan komt." },
+          ],
+          theorie: "Betrouwbare bronnen voor kinderen:\n• **NOS Jeugdjournaal** — speciaal voor 9-12 jaar\n• **Junior Bibliotheek** — kindvriendelijke info\n• **Kennisnet** — onderwijs-platform\n• **Wikipedia** — vaak goed maar altijd bron-vermelding checken\n\nMijden: random TikTok-claims, kettingberichten, websites zonder 'over ons'-pagina.",
+          voorbeelden: [
+            { type: "feit", tekst: "Tijdens Corona (2020-2022) gingen veel fake nieuwsverhalen rond: 'vaccins veroorzaken X'. Onderzoeken bewezen telkens onjuist." },
+            { type: "feit", tekst: "AI kan in 2024 in 30 seconden een foto-perfect deepfake video maken — onmogelijk visueel te onderscheiden zonder tools." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen ouderen", uitleg: "Studies tonen: kinderen + tieners zijn ZOMS MEER vatbaar voor fake news omdat ze meer op TikTok/Insta vertrouwen." }],
+          niveaus: { basis: "Nepnieuws. = A.", simpeler: "Fake news = nieuws/info dat NIET klopt maar wel gedeeld wordt alsof het waar is. Komt vooral van social media. Check altijd 2 bronnen. = A.", nogSimpeler: "Nepnieuws = A." },
+        },
+      },
+      {
+        q: "Wat doe je als iemand zegt: **'Mijn opa rookt en is 90 — dus roken is gezond'**?",
+        options: ["Anekdote ≠ bewijs — onderzoek toont roken is ongezond", "Geloof het — opa is bewijs", "Ga zelf roken proberen", "Stop met opa praten"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1 persoon = anekdote, niet wetenschappelijk bewijs.", "Anekdote-fout — 1 voorbeeld bewijst niets over miljoenen mensen.", "Niet — gebruik kritisch denken, niet impuls.", "Niet nodig — leg uit wat anekdote-bewijs is."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een anekdote?", tekst: "Een **anekdote** is een **persoonlijk verhaal** of **1 voorbeeld**. Op zich niet erg, maar als **bewijs** is het zwak.\n\nVoorbeeld: 'Mijn opa rookt 60 jaar en is 90.' Klinkt overtuigend, maar:\n• Hij is een **uitzondering**\n• We weten niet hoe gezond hij echt is\n• Er zijn duizenden rokers die WEL kanker krijgen\n• 1 persoon zegt niets over miljarden mensen" },
+            { titel: "Anekdote vs wetenschappelijk bewijs", tekst: "**Wetenschappelijk bewijs** kijkt naar:\n• **Veel mensen** (niet 1)\n• **Lange tijd** gemeten\n• **Vergelijking** met groep die NIET rookt\n• **Statistiek** + analyse\n\nResultaat van duizenden zulke onderzoeken: roken verkort levensverwachting met **gemiddeld 10 jaar** en verhoogt risico op longkanker **15-30×**. Opa was geluk-hebber, geen regel." },
+            { titel: "Cito-tip: drogreden 'beroep op anekdote'", tekst: "Veelvoorkomende redeneer-fout op TikTok + in gesprekken:\n• 'Vaccins zijn slecht — mijn neef werd ziek na vaccin'\n• 'Diëet X werkt — mijn buurvrouw verloor 10 kg'\n• 'School in Amerika is beter — mijn neef gaat er heen'\n\n**Antwoord**: vraag naar **systematisch onderzoek**. Wat zeggen 1.000+ mensen? Wat zegt wetenschap? **N=1 is geen bewijs**." },
+          ],
+          woorden: [
+            { woord: "anekdote", uitleg: "Persoonlijk verhaal of 1 voorbeeld. Klein, niet representatief." },
+            { woord: "drogreden", uitleg: "Argument dat klinkt goed maar logisch fout is." },
+            { woord: "N=1", uitleg: "Wiskundige notatie: groep van 1 persoon. Geen statistiek mogelijk." },
+            { woord: "uitzondering", uitleg: "Iemand die niet bij de regel hoort. 1 uitzondering breekt de regel niet." },
+          ],
+          theorie: "Hoe weet je iets echt? **Wetenschappelijke methode**:\n1. **Hypothese** maken (idee)\n2. **Experiment** opzetten met groot aantal mensen\n3. **Controlegroep** (vergelijking)\n4. **Meten** wat er gebeurt\n5. **Statistiek** analyseren\n6. Andere wetenschappers **herhaald** dezelfde resultaten?\n\nAls JA → **bewijs**. Als NEE of slechts 1 onderzoek → **voorlopige aanwijzing**, geen bewijs.",
+          voorbeelden: [
+            { type: "feit", tekst: "Roken-onderzoek begon in jaren 1950 toen Doll + Hill 40.000 Britse artsen 50 jaar lang volgden. Pas TOEN was bewijs hard." },
+            { type: "feit", tekst: "Eén persoon-verhaal werkt sterker op brein dan 1.000 statistieken — daarom zijn anekdotes overtuigend, ook al kloppen ze niet. Brein-bias." },
+          ],
+          basiskennis: [{ onderwerp: "Niet onbeleefd", uitleg: "Anekdote-fout aanwijzen ≠ persoonlijke aanval. Mensen geloven het zelf vaak ook." }],
+          niveaus: { basis: "1 verhaal is geen bewijs. = A.", simpeler: "1 persoon (zoals opa) is een anekdote, geen wetenschappelijk bewijs. Echte conclusies komen uit onderzoek met veel mensen + statistiek. = A.", nogSimpeler: "Anekdote ≠ bewijs = A." },
+        },
+      },
+      {
+        q: "Wat is een **logische fout** in: 'Alle vogels kunnen vliegen. Pinguïns zijn vogels. Dus pinguïns kunnen vliegen'?",
+        options: ["Eerste regel is FOUT — niet alle vogels kunnen vliegen", "Conclusie klopt — pinguïns vliegen", "Pinguïns zijn geen vogels", "Vogels bestaan niet"],
+        answer: 0,
+        wrongHints: [null, "Klopt — pinguïns + struisvogels + emoes vliegen niet, dus regel is onjuist.", "Niet — pinguïns kunnen ECHT niet vliegen. Logica klopt, premisse niet.", "Pinguïns zijn WEL vogels (warmbloedig, eieren, veren).", "Vogels bestaan zeker wel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Hoe werkt logica?", tekst: "Een redenering werkt met **premissen** (uitspraken) + **conclusie**:\n\n• Premisse 1: 'Alle vogels kunnen vliegen'\n• Premisse 2: 'Pinguïns zijn vogels'\n• Conclusie: 'Pinguïns kunnen vliegen'\n\n**Logisch klopt het redeneren!** Maar... een premisse is FOUT. Conclusie wordt dan ook fout, ondanks goede logica." },
+            { titel: "Het foute begint bij premisse 1", tekst: "'**Alle** vogels kunnen vliegen' = **GEEN waar feit**.\n\nVogels die NIET vliegen:\n• **Pinguïn** (zwemt in plaats daarvan)\n• **Struisvogel** (rent — kan 70 km/u)\n• **Emoe**\n• **Kiwi** (uit Nieuw-Zeeland, snuffelt)\n• **Casuaris**\n• Kippen + kalkoenen vliegen ook nauwelijks\n\nDe regel moet zijn: '**De meeste** vogels kunnen vliegen' of 'Vogels met grote vleugels kunnen vliegen'." },
+            { titel: "Cito-tip: check eerst premisses", tekst: "Bij elke redenering: **check de uitspraken** voordat je naar de conclusie kijkt.\n\nDit type redenering heet een **syllogisme**. Bekend voorbeeld:\n• 'Alle mensen zijn sterfelijk' (klopt)\n• 'Socrates is een mens' (klopt)\n• 'Socrates is sterfelijk' (klopt) ✓\n\nMaar:\n• 'Alle Russen drinken wodka' (KLOPT NIET — generalisatie)\n• 'Ivan is Russisch'\n• 'Ivan drinkt wodka' ← conclusie fout door foute premisse\n\nMooi voorbeeld van **kritisch denken**: niet alleen kijken of logica klopt, ook of de premisses kloppen." },
+          ],
+          woorden: [
+            { woord: "premisse", uitleg: "Uitspraak die je als basis gebruikt voor een redenering." },
+            { woord: "conclusie", uitleg: "Wat je uit de premisses afleidt." },
+            { woord: "syllogisme", uitleg: "Logische redenering met 2 premisses en 1 conclusie." },
+            { woord: "generalisatie", uitleg: "Algemene uitspraak over hele groep ('Alle X zijn Y'). Vaak te breed." },
+          ],
+          theorie: "**Twee fouten kunnen optreden:**\n1. **Geldigheid-fout** — logica klopt niet (zelfs met goede premisses kom je tot fout)\n2. **Premisse-fout** — een uitspraak klopt niet (logica wel goed, maar fout aan binnen)\n\nKritisch denken: check beide.",
+          voorbeelden: [
+            { type: "feit", tekst: "Pinguïns zijn echte vogels — hebben veren, leggen eieren, zijn warmbloedig. Maar vliegen ze NIET. Wel zwemmen ze geweldig — vleugels als peddels." },
+            { type: "feit", tekst: "Aristoteles (Grieks filosoof, 384-322 v.Chr.) bedacht het systeem van syllogismen die we nog steeds gebruiken." },
+          ],
+          basiskennis: [{ onderwerp: "Niet logica-fout", uitleg: "De LOGICA klopt: ALS alle vogels vliegen ÉN pinguïns vogels zijn DAN vliegen pinguïns. Maar premisse 1 is fout, dus conclusie onbruikbaar." }],
+          niveaus: { basis: "Premisse 1 klopt niet. = A.", simpeler: "De eerste zin ('alle vogels vliegen') is FOUT — pinguïns/struisvogels vliegen niet. Daarom klopt de conclusie ook niet, ondanks goede logica. = A.", nogSimpeler: "Premisse fout = A." },
+        },
+      },
     ],
   },
 ];
