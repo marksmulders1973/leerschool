@@ -310,6 +310,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "'Usually' = simple. Tom = he → -s of -es. Do → does.", "Continuous past niet bij 'usually'.", "He → does.", "Geen geldige vorm."],
       },
+      { q: "Look! She _____ a beautiful song.", options: ["is singing","sings","sing","sang"], answer: 0, wrongHints: [null,"Niet — 'Look!' = NU bezig → continuous.","Niet — gebeurt nu, niet altijd.","Niet — vorm fout.","Past — niet nu."] },
+      { q: "Water _____ at 100°C.", options: ["boils","is boiling","boil","boiled"], answer: 0, wrongHints: [null,"Niet — algemene feit/wet → simple.","Niet — algemene waarheid, geen tijdelijk feit.","Niet — water = it → -s.","Past tense — niet nodig."] },
     ],
   },
 ];

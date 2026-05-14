@@ -506,6 +506,9 @@ const steps = [
           niveaus: { basis: "Je n'ai pas compris.", simpeler: "Ontkenning + compris.", nogSimpeler: "n'ai pas compris." },
         },
       },
+      { q: "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?", options: ["être","avoir","faire","aller"], answer: 0, wrongHints: [null,"Klopt — bewegingswerkwoord, op DR & MRS VANDERTRAMPP-lijst.","Niet — avoir voor meeste, maar 'aller' is être-ww.","Niet hulpwerkwoord.","Niet — geen reflexief."] },
+      { q: "Vorm de p.p. van 'manger' (eten)", options: ["mangé","mangi","mangu","mangait"], answer: 0, wrongHints: [null,"Klopt — -er werkwoord → -é.","Niet — -ir → -i.","Niet — -re/-oir → -u.","Dat is imparfait."] },
+      { q: "Marie est _____ (allé/allée/allés) à Paris.", options: ["allée","allé","allés","alla"], answer: 0, wrongHints: [null,"Klopt — être + vrouw → p.p. krijgt -e.","Niet — Marie is vrouw, e nodig.","Niet — meervoud.","Niet — geen geldige vorm."] },
     ],
   },
 ];

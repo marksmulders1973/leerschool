@@ -625,6 +625,8 @@ const steps = [
           niveaus: { basis: "broke.", simpeler: "V2 = broke.", nogSimpeler: "broke." },
         },
       },
+      { q: "Yesterday I _____ (run) to school.", options: ["ran","runned","run","running"], answer: 0, wrongHints: [null,"Niet — 'run' is onregelmatig, geen +ed.","Dat is V1 — verleden tijd nodig.","-ing gebruik je bij continuous."] },
+      { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik V3.","Onregelmatig — geen +ed.","-ing is continuous."] },
     ],
   },
 ];
