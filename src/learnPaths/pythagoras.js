@@ -557,6 +557,11 @@ const steps = [
           "Eén van de zijden, niet de schuine zijde. Bereken c² = 7,2² + 2,4² en dan √.",
         ],
       },
+      { q: "a=3, b=4. c=?", options: ["5","7","12","25"], answer: 0, wrongHints: [null,"Klopt — 9+16=25, √25=5.","Niet — niet plus.","Niet — niet keer.","Dat is c².","Niet."] },
+      { q: "Bij Pythagoras heet de **langste** zijde?", options: ["Hypotenusa (schuin)","Rechthoekszijde","Hoogte","Basis"], answer: 0, wrongHints: [null,"Klopt — tegenover rechte hoek.","Dat zijn de korte twee.","Niet de naam.","Niet."] },
+      { q: "Een rechthoekige driehoek a=6, b=8. Schuine zijde c?", options: ["10","14","48","2"], answer: 0, wrongHints: [null,"Klopt — 36+64=100.","Niet — niet optellen.","Niet.","Niet."] },
+      { q: "**Stelling** klinkt: a² + b² = ?", options: ["c²","c","a+b","a×b"], answer: 0, wrongHints: [null,"Klopt.","Niet — kwadraat.","Niet.","Niet."] },
+      { q: "Bij a=5, c=13, b=?", options: ["12","8","18","6"], answer: 0, wrongHints: [null,"Klopt — 13²−5² = 169−25 = 144 = 12².","Niet.","Optellen, niet aftrekken.","Niet."] },
     ],
   },
 ];

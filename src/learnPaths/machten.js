@@ -603,9 +603,10 @@ const steps = [
           theorie: "Bij meerdere variabelen in haakjes: macht verdelen, dan elke macht-van-macht.",
           voorbeelden: [{ type: "andere", tekst: "(x²y)³ = x⁶y³. (a³b²)² = a⁶b⁴." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "a⁶b⁷ = optellen i.p.v. ×. Andere = onzin-notatie." }],
-          niveaus: { basis: "a⁸b¹². A.", simpeler: "(a²)⁴ = a⁸, (b³)⁴ = b¹². Antwoord a⁸b¹². = A.", nogSimpeler: "a⁸b¹² = A." },
+          niveaus: { basis: "a⁸b¹². A.", simpeler: "(a²)⁴ = a⁸, (b³)⁴ = b¹². Antwoord a⁸b¹² = A.", nogSimpeler: "a⁸b¹² = A." },
         },
       },
+      { q: "2³ = ?", options: ["8","6","9","5"], answer: 0, wrongHints: [null,"Klopt — 2×2×2.","Niet — niet 2×3.","Dat is 3².","Niet."] },
     ],
   },
 ];
