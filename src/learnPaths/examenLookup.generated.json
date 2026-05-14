@@ -15,6 +15,22 @@
       "stepIdx": 5,
       "vraagNr": 35,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 35"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 50,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 50"
+    }
+  ],
+  "fotosynthese-biologie": [
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 30"
     }
   ],
   "genetica-erfelijkheid-biologie": [
@@ -110,6 +126,34 @@
       "stepIdx": 2,
       "vraagNr": 45,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 45"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 11"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 12"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 16,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 16"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 46,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 46"
     }
   ],
   "pincode-belasting": [

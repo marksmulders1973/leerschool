@@ -1,0 +1,333 @@
+{
+  "id": "biologie-2025-T1",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "In de afbeelding zie je een schematische doorsnede van een blad. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft een huidmondje aan?",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R",
+        "letter S"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 4
+    },
+    {
+      "q": "In de afbeelding zie je een opengesneden zaadje van een boon. Hierin zijn delen aangegeven met de letters P, Q en R. Welke letter geeft het deel aan waaruit het kiempje reservevoedsel haalt? Titeren De meeste honden worden gevaccineerd tegen ziektes zoals hepatitis, parvo en de ziekte van Carr'. Sommige vaccinaties worden elk jaar of elke twee jaar herhaald. Tegenwoordig kan eerst bloedonderzoek worden gedaan om te beoordelen of de vaccinatie echt nodig is. Dit onderzoek heet titeren. Met de resultaten van het titeren wordt dan bepaald of de hond nog beschermd is of opnieuw gevaccineerd moet worden.",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R"
+      ],
+      "answer": 2,
+      "explanation": "Vraag Antwoord                                                                  Scores\n\n   Titeren",
+      "tekstNr": null,
+      "vraagNr": 7
+    },
+    {
+      "q": "Welke laag is bij een trage maag minder actief waardoor er minder peristaltiek plaatsvindt?",
+      "options": [
+        "de slijmvlieslaag",
+        "de bindweefsellaag",
+        "de spierlaag"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 11
+    },
+    {
+      "q": "Carola voelt zich door haar trage maag altijd vol. In welk deel van de hersenen vindt bewustwording van haar volle maag plaats?",
+      "options": [
+        "in de grote hersenen",
+        "in de kleine hersenen",
+        "in de hersenstam"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 12
+    },
+    {
+      "q": "Om een bloedvat te bereiken, prikt de hoofdluis door lagen van de huid. In welke volgorde gebeurt dat?",
+      "options": [
+        "hoornlaag  kiemlaag  lederhuid",
+        "hoornlaag  lederhuid  kiemlaag",
+        "kiemlaag  hoornlaag  lederhuid",
+        "kiemlaag  lederhuid  hoornlaag",
+        "lederhuid  hoornlaag  kiemlaag F lederhuid  kiemlaag  hoornlaag"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 16
+    },
+    {
+      "q": "In de afbeelding zie je de levenscyclus van de hoofdluis. De cyclus begint als het vrouwtje een bevrucht eitje aan een hoofdhaar vastplakt. Uit het eitje komt een kleine luis, die na 10 dagen volwassen is. Over de levenscyclus van deze hoofdluis worden twee uitspraken gedaan: 1 De hoofdluis in stadium 3 heeft hetzelfde fenotype als in stadium 5. 2 Een lichaamscel van de hoofdluis in stadium 2 heeft hetzelfde aantal chromosomen als een lichaamscel in stadium 4. Welk van deze uitspraken is juist of welke van deze uitspraken zijn juist?",
+      "options": [
+        "geen van beide",
+        "alleen 1",
+        "alleen 2",
+        "zowel 1 als 2"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 18
+    },
+    {
+      "q": "Op welke momenten van de dag hebben de wortelcellen zuurstof nodig?",
+      "options": [
+        "alleen overdag",
+        "alleen 's nachts",
+        "overdag en 's nachts"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 30
+    },
+    {
+      "q": "Een neushoornkever-mannetje met een korte hoorn vlucht meteen als een ander mannetje zijn langere hoorn laat zien. Tot welk gedrag behoort dit laten zien van de hoorn aan de tegenstander?",
+      "options": [
+        "baltsgedrag",
+        "territoriumgedrag",
+        "verzorgingsgedrag"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 32
+    },
+    {
+      "q": "Melissa en Roy bekijken de tabel uit het onderzoek en doen daar uitspraken over. Melissa zegt dat uit elke klas meer jongens energiedrank drinken dan meisjes. Roy zegt dat meer leerlingen uit klas 2 energiedrank drinken dan leerlingen uit klas 4. Wie heeft gelijk?",
+      "options": [
+        "geen van beiden",
+        "alleen Melissa",
+        "alleen Roy",
+        "zowel Melissa als Roy"
+      ],
+      "answer": 1,
+      "explanation": "Vraag Antwoord                                                                    Scores",
+      "tekstNr": null,
+      "vraagNr": 39
+    },
+    {
+      "q": "Je ziet de foetussen van Chantal in de afbeelding. Hierin zijn delen aangegeven met de letters P tot en met S. Welke letter geeft het deel aan waar voedingsstoffen uitgewisseld worden tussen Chantal en de foetussen?",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R",
+        "letter S"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 44
+    },
+    {
+      "q": "Een virus kan na inademing via een longblaasje opgenomen worden in het bloed en gaat daarna via de kortste weg naar de kop van het konijn. In welke volgorde gaat het virus door de bloedvaten?",
+      "options": [
+        "longader  aorta  halsader",
+        "longader  aorta  halsslagader",
+        "longslagader  aorta  halsader",
+        "longslagader  aorta  halsslagader"
+      ],
+      "answer": 1,
+      "explanation": "1",
+      "tekstNr": null,
+      "vraagNr": 46
+    },
+    {
+      "q": "Als een konijn myxomatose had, gaf de dierenarts in het verleden uit voorzorg antibiotica om besmetting met andere ziekteverwekkers tegen te gaan. Tegen welke ziekteverwekkers werken antibiotica? Vingerdier Het vingerdier leeft in de bossen van Madagaskar. Vingerdieren gaan in het donker op zoek naar insectenlarven. Ze kloppen op bomen en luisteren naar het geluid van de bewegende larven onder de boomschors. Als een vingerdier een larve hoort, dan peutert hij met zijn lange vingers de larve uit de boom.",
+      "options": [
+        "tegen bacteri'n",
+        "tegen schimmels",
+        "tegen andere virussen"
+      ],
+      "answer": 0,
+      "explanation": "Vingerdier",
+      "tekstNr": null,
+      "vraagNr": 49
+    },
+    {
+      "q": "Is het vingerdier een consument, een producent of een reducent?",
+      "options": [
+        "een consument",
+        "een producent",
+        "een reducent"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 50
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 23,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 26,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 27,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 28,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 34,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 36,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 42,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 45,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 47,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 48,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 51,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 52,
+      "reden": "open/complex"
+    }
+  ]
+}

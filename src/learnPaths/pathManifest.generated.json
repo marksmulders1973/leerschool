@@ -1258,6 +1258,29 @@
     "chapterCount": 3
   },
   {
+    "id": "examen-biologie-2025-t1",
+    "title": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2025-T1",
+    "triggerKeywords": [
+      "examen biologie 2025",
+      "echte examenvragen biologie",
+      "trage maag peristaltiek spierlaag",
+      "bewustwording grote hersenen",
+      "huid hoornlaag kiemlaag lederhuid",
+      "longader aorta halsslagader",
+      "wortelcellen zuurstof ademhaling",
+      "consument producent reducent"
+    ],
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1 (examen-id GT-0191-a-25-1). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande bi",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 4
+  },
+  {
     "id": "examen-economie-2023-t1",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
     "subject": "economie",
