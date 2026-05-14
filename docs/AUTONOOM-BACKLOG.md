@@ -85,10 +85,10 @@ Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `d
 
 ### Drie sporen — volgorde van uitvoering
 
-**🔴 Spoor 1 — Doorstroomtoets G8 verdiepen (PRIO ICP)**
-- [⏳] Taal G8: 74 → **133q** ✓ 3 rondes (commits 8d1d841, 54f86ed, 67cccc6 — +59 vragen). 89% van 150. Nog +17q voor 150 oefen-pool.
-- [⏳] Rekenen G8: 74 → **134q** ✓ 3 rondes (commits d2f8bcd, 9e1542c, 51afd0c — +60 vragen). 89% van 150. Nog +16q.
-- [⏳] Studievaardigheden G8: 79 → **139q** ✓ 3 rondes (commits 928d4dd, 82644e4, c679e64 — +60 vragen). 93% van 150. Nog +11q.
+**🔴 Spoor 1 — Doorstroomtoets G8 verdiepen (PRIO ICP) — ✅ CONTENT-DOEL BEHAALD**
+- [x] Taal G8: 74 → **147q** (98% van 150) ✓ 4 rondes (commits 8d1d841, 54f86ed, 67cccc6, 7a2149e — +73 vragen totaal).
+- [x] Rekenen G8: 74 → **149q** (99% van 150) ✓ 4 rondes (commits d2f8bcd, 9e1542c, 51afd0c, 3e88bd8 — +75 vragen totaal).
+- [x] Studievaardigheden G8: 79 → **148q** (99% van 150) ✓ 4 rondes (commits 928d4dd, 82644e4, c679e64, 932412a — +69 vragen totaal).
 - [ ] **Feature** (architectuur — wacht op Mark): proef-toets-modus met 30 random vragen uit pool per onderdeel.
 
 **🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` (klein, snel)**
@@ -108,6 +108,11 @@ Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `d
 
 **⚪ Spoor 4 — Methodes opruimen (lage prio)**
 - [ ] Audit `src/data/textbooks.js`: welke edities > 5 jaar achterstand? Bewaar laatste 2 + 1 nog-veel-gebruikte.
+
+**⚪ Spoor 5 — P4 onder-min paden naar 25q** (gedaan 2026-05-14)
+- [x] nederlandseKunstenaarsPo, godsdienstenCulturenPo, pubertijdGroeiPo (commit 7cf4b6c).
+- [x] eetcultuurNederlandPo, emotiesSocialePo, klassiekeMuziekPo (commit 44a2bdc).
+- [x] koudeOorlogModernPo, olympischeSpelenPo, ruimtevaartPo (commit 1089de6).
 
 ## Prioriteit 0 — Loop-audit (terugkerend, elke 5 paden)
 
