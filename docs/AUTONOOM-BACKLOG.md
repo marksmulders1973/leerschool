@@ -70,6 +70,41 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 📊 Sprint Content-doelen (2026-05-14) — afgeleid uit `docs/CONTENT-DOELEN.md`
+
+Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `docs/CONTENT-DOELEN.md`.
+
+### Stand op 2026-05-14
+- **Doorstroomtoets G8**: 227 / 630q = **36% gevuld** (403q te maken) — primaire ICP, grootste gap
+- **VMBO-examens authentiek**: 476 / 560q = 85% (maar scheef: Wiskunde + Aardrijkskunde leeg, NL + Engels overcompleet)
+- **PO-leerpaden**: alle 62 paden op 40q-standaard ✓
+- **`examenQuizzes/*.json` skipped**: 797 zijn bewust (open vragen, geen MC) + 17 parser-bugs
+
+### Drie sporen — volgorde van uitvoering
+
+**🔴 Spoor 1 — Doorstroomtoets G8 verdiepen (PRIO ICP)**
+- [ ] Taal G8: van 74 → 210q (136q + 2 proef-toetsen 30q). In stijl van Cito-PDF, nooit kopiëren (private aanbieder, copyright). Bron-link naar officiële Cito-PDF per thema.
+- [ ] Rekenen G8: van 74 → 210q (136q + 2 proef-toetsen).
+- [ ] Studievaardigheden G8: van 79 → 210q (131q + 2 proef-toetsen).
+
+**🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` (klein, snel)**
+- [ ] Regex `vraag_marker_re` aanpassen zodat MC-antwoord in correctievoorschrift wordt herkend bij format-varianten. Concrete 17 files+vraag-nrs:
+  - biologie-2024-T1 v22, biologie-2024-T2 v13
+  - economie-2023-T1 v17, economie-2025-T2 v7/11/32/34
+  - engels-2023-T1 v30, engels-2024-T2 v18/19/26
+  - geschiedenis-2023-T1 v40
+  - maatschappijkunde-2023-T1 v5/6/7/8 (4 op rij = format-variant)
+  - nederlands-2025-T2 v11
+- [ ] Re-parse de 10 files → 17 extra vragen in `examenQuizzes/`
+
+**🟡 Spoor 3 — Open-vraag-modus (groot project — apart plannen, niet quick-win)**
+- [ ] Beslis: maken we open-vraag-modus? (Vereist nieuwe `kind: 'open'` questiontype + fuzzy match of AI-grading)
+- [ ] Zonder open-modus blijven aardrijkskunde + wiskunde + geschiedenis structureel onvolledig (VMBO-wiskunde is bijna 100% open).
+- [ ] Alternatief: numerieke-invoer-modus voor reken-antwoorden (lichter dan volledig open).
+
+**⚪ Spoor 4 — Methodes opruimen (lage prio)**
+- [ ] Audit `src/data/textbooks.js`: welke edities > 5 jaar achterstand? Bewaar laatste 2 + 1 nog-veel-gebruikte.
+
 ## Prioriteit 0 — Loop-audit (terugkerend, elke 5 paden)
 
 Voordat je nieuwe paden bouwt:
