@@ -515,6 +515,24 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen.", "Niet primair functie.", "Niet primair."],
       },
+      {
+        q: "Een **klimaatkaart** toont vooral?",
+        options: ["Temperatuur en neerslag per gebied", "Wegen", "Inwoners", "Geld"],
+        answer: 0,
+        wrongHints: [null, "Daarvoor wegenkaart.", "Daarvoor bevolkings-kaart.", "Niet relevant op kaart."],
+      },
+      {
+        q: "Welke **richting** ligt **tegenover west**?",
+        options: ["Oost", "Zuid", "Noord", "Zuid-west"],
+        answer: 0,
+        wrongHints: [null, "90° draaiing.", "90° draaiing.", "Schuin tegenover."],
+      },
+      {
+        q: "**Een land op een kaart** zoek je via ___?",
+        options: ["Land-index", "Telefoonboek", "Recepten", "Hoofdstuk-cijfer"],
+        answer: 0,
+        wrongHints: [null, "Geen kaart-hulpmiddel.", "Geen kaart-hulpmiddel.", "Te vaag."],
+      },
     ],
   },
 
@@ -1022,6 +1040,18 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tekort.", "Tekort.", "Wel — anders klopt het niet."],
       },
+      {
+        q: "Een **histogram** is een ___?",
+        options: ["Staafdiagram zonder ruimte tussen staven", "Lijngrafiek", "Cirkeldiagram", "Tabel"],
+        answer: 0,
+        wrongHints: [null, "Histogram zijn wel staven.", "Niet.", "Niet."],
+      },
+      {
+        q: "Tabel toont temperaturen **per uur**. Tussen welke 2 uren is **grootste verandering**?",
+        options: ["Kijk naar grootste verschil tussen 2 opeenvolgende cellen", "Eerste 2", "Laatste 2", "Midden 2"],
+        answer: 0,
+        wrongHints: [null, "Niet altijd — verschil tellen.", "Niet altijd.", "Niet altijd."],
+      },
     ],
   },
 
@@ -1353,6 +1383,18 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk **boek** raadpleeg je voor **'wat is de hoofdstad van Frankrijk?'**?",
+        options: ["Atlas of encyclopedie", "Roman", "Recept", "Comic"],
+        answer: 0,
+        wrongHints: [null, "Verhaal — geen feiten.", "Geen.", "Geen."],
+      },
+      {
+        q: "Een **inhoudsopgave** staat ___ in een boek?",
+        options: ["Voorin", "Achterin", "In het midden", "Op elke pagina"],
+        answer: 0,
+        wrongHints: [null, "Dat is de index.", "Niet — voorin.", "Niet — alleen 1 keer."],
+      },
     ],
   },
 
@@ -1627,6 +1669,18 @@ const steps = [
         options: ["Boomdiagram", "Cirkeldiagram", "Lijngrafiek", "Tabel"],
         answer: 0,
         wrongHints: [null, "Andere vorm.", "Andere vorm.", "Andere vorm."],
+      },
+      {
+        q: "Bij **'eerst → daarna → vervolgens'** spreek je over ___?",
+        options: ["Stappenplan / volgorde", "Tegenstelling", "Vergelijking", "Recept"],
+        answer: 0,
+        wrongHints: [null, "Geen tegenstelling-woord.", "Geen vergelijking-woord.", "Recept is wel volgorde maar geen schema."],
+      },
+      {
+        q: "Een **planningsschema** voor een **week** toont meestal...",
+        options: ["Wat je elke dag moet doen", "Wat je vroeger deed", "Wat je niet doet", "Niets relevants"],
+        answer: 0,
+        wrongHints: [null, "Niet — planning gaat over toekomst.", "Niet primair.", "Wel — iets relevants."],
       },
     ],
   },
