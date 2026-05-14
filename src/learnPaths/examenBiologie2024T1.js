@@ -333,7 +333,7 @@ const steps = [
         explanation: "Bewustwording — het bewust ervaren van geluid, beeld, gevoel — gebeurt altijd in de GROTE HERSENEN. De andere delen geleiden signalen of regelen automatische processen, maar bewustzijn zelf zit in de cortex van de grote hersenen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'zenuwstelsel', 'bewustwording', 'grote hersenen', 'ruggenmerg'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam & organen", niveau: "po-1F", why: "basaal overzicht zenuwstelsel + hersenen — opfris voor deze examenvraag" },
@@ -392,7 +392,7 @@ const steps = [
         explanation: "De tandzenuwen + bloedvaten zitten samen in de TANDHOLTE (pulpa), het zachte centrum van de tand. Het tandbeen (dentine) eromheen is hard en zelf zonder zenuwen, en het glazuur ook niet. Daarom voelt boren door glazuur weinig, maar zodra de tandarts in de tandholte komt = pijn → verdoving nodig.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 17",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'tandbeen', 'tandholte', 'zenuwen'" },
         ],
@@ -449,7 +449,7 @@ const steps = [
         explanation: "Het hart pompt BLOED door de slag- en aderen. De lymfevaten hebben geen aansluiting op de hart-pomp. Lymfe stroomt door (1) druk uit weefsels + (2) spier-bewegingen (skeletspieren knijpen lymfe vooruit) en wordt door (3) KLEPPEN in de juiste richting gehouden. Alleen Julia heeft dus gelijk: B.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 33",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'lymfevaten', 'kleppen', 'haarvaten', 'pompen'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam & spieren + bloed", niveau: "po-1F", why: "basis bloedsomloop + hart — opfris voor deze examenvraag" },
@@ -506,7 +506,7 @@ const steps = [
         explanation: "Alleen WITTE BLOEDCELLEN kunnen door de wanden van haarvaten heen (ze persen zich er doorheen — diapedese). Zo komen ze in weefselvocht en daarmee in lymfe terecht. Rode bloedcellen en bloedplaatjes blijven in de bloedbaan.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 34",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'rode bloedcel', 'witte bloedcel', 'bloedplaatje', 'lymfevloeistof'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam & spieren + bloed", niveau: "po-1F", why: "basis bloedcellen-soorten — opfris voor deze examenvraag" },
@@ -563,7 +563,7 @@ const steps = [
         explanation: "Maagsap bevat het enzym PEPSINE plus zoutzuur. Pepsine breekt EIWITTEN af tot kleinere stukjes (peptiden). Maagsap doet niets met koolhydraten, vetten of vezels. In de dunne darm worden eiwitten verder afgebroken tot aminozuren.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 38",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'maagsap', 'eiwitten', 'koolhydraten', 'vetten', 'vezels'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam — Organen + voeding", niveau: "po-1F", why: "basis spijsvertering + voedingsstoffen — opfris voor deze examenvraag" },
@@ -620,7 +620,7 @@ const steps = [
         explanation: "Het filteren van bloed gebeurt in de NEFRONEN. Die zitten gedeeltelijk in de NIERSCHORS (waar het bloed binnenkomt + voorfilter) en gedeeltelijk in het NIERMERG (waar water + zouten terug-opgenomen worden). Het NIERBEKKEN is alleen een verzamelpot voor urine voordat die door de urineleider naar de blaas gaat — geen filtering.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 42",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'nierschors', 'niermerg', 'nierbekken', 'nefron'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam — Organen", niveau: "po-1F", why: "basis nieren + urinewegen — opfris voor deze examenvraag" },

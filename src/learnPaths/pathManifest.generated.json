@@ -2396,6 +2396,33 @@
     "chapterCount": 6
   },
   {
+    "id": "mens-biologie-vmbo",
+    "title": "Mens-biologie (VMBO)",
+    "subject": "biologie",
+    "level": "klas2-3",
+    "emoji": "🫀",
+    "referentieNiveau": "VMBO-2F",
+    "sloThema": "Biologie — mens & gezondheid",
+    "triggerKeywords": [
+      "zenuwstelsel",
+      "grote hersenen",
+      "kleine hersenen",
+      "hersenstam",
+      "ruggenmerg",
+      "coördinatie",
+      "conditionering",
+      "prikkel inwendig uitwendig",
+      "bloed",
+      "rode bloedcellen",
+      "witte bloedcellen",
+      "bloedplaatjes"
+    ],
+    "intro": "5 onderdelen van mens-biologie op vmbo-niveau: zenuwstelsel, bloed & lymfe, ademhaling, spijsvertering, uitscheiding. Plus eindtoets. Sluit aan op examenstof biologie CSE — vooral vragen over hersenen",
+    "stepCount": 6,
+    "checkCount": 27,
+    "chapterCount": 6
+  },
+  {
     "id": "mensenrechten-maatschappijleer",
     "title": "Mensenrechten + organisaties (klas 2-3)",
     "subject": "maatschappijleer",

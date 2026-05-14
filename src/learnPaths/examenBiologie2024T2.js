@@ -38,7 +38,7 @@ const steps = [
         explanation: "Enzymen zijn eiwit-moleculen die chemische reacties versnellen. In maagsap zit het enzym PEPSINE, dat eiwitten afbreekt. Algemeen geldt: enzymen in spijsvertering VERTEREN VOEDINGSSTOFFEN (eiwitten, koolhydraten, vetten — afhankelijk van welk enzym op welke plek).",
         examenBron: BRON_LABEL(12),
         bronLink: PDF_LINK,
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'enzym', 'maagzuur', 'verteren', 'voedingsstoffen'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam — Organen + voeding", niveau: "po-1F", why: "basis spijsvertering — opfris voor deze vraag" },
@@ -94,7 +94,7 @@ const steps = [
         explanation: "De KLEINE HERSENEN (cerebellum, achter onder in de schedel) zijn verantwoordelijk voor coördinatie van bewegingen + balans. Alcohol verstoort die werking — daarom waggelt iemand die teveel gedronken heeft. Politie's loopproeven (rechte lijn lopen, ogen dicht) testen de kleine hersenen.",
         examenBron: BRON_LABEL(43),
         bronLink: PDF_LINK,
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'coördinatie', 'grote/kleine hersenen', 'hersenstam'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam & organen", niveau: "po-1F", why: "basis zenuwstelsel — opfris voor deze vraag" },
@@ -149,7 +149,7 @@ const steps = [
         explanation: "Gaswisseling = zuurstof uit lucht naar bloed + CO₂ uit bloed naar lucht. Dat gebeurt alleen in de LONGBLAASJES (alveolen) — dunne bolletjes met dichte haarvaten eromheen, waar de afstand tussen lucht en bloed minimaal is. Alcoholdamp (een vluchtige stof) lekt ook via deze plek terug naar uitgeademde lucht → daarom werkt de blaastest.",
         examenBron: BRON_LABEL(45),
         bronLink: PDF_LINK,
-        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'gaswisseling', 'longblaasje', 'bronchiën', 'luchtpijp'" },
           { id: "lichaam-gezondheid-po", title: "Lichaam — Organen", niveau: "po-1F", why: "basis longen + ademhaling — opfris voor deze vraag" },
