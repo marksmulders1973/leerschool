@@ -72,10 +72,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     setBusy(true);
     setError(null);
 
-    const correctOption =
-      currentCheck && Number.isInteger(currentCheck.answer) && Array.isArray(currentCheck.options)
-        ? currentCheck.options[currentCheck.answer]
-        : undefined;
+    // Audit fix 2026-05-14: correctOption NIET meer in payload. AI moet uit
+    // uitleg + opties zelf afleiden welke optie correct is, anders kan een
+    // doorgewinterde leerling het antwoord uit de prompt-context lekken.
 
     try {
       const resp = await fetch("/api/tutor-chat", {
@@ -84,12 +83,12 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
         body: JSON.stringify({
           messages: next,
           context: {
+            pathId,
             pathTitle,
             stepTitle,
             stepExplanation,
             currentCheckQuestion: currentCheck?.q,
             checkOptions: currentCheck?.options,
-            correctOption,
             lastWrongAnswer,
           },
         }),

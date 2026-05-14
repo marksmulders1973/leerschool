@@ -2,6 +2,12 @@
 // Context (pad-titel, stap-titel, uitleg, optionele check + fout-poging) wordt
 // als system-prompt meegegeven. Antwoord is altijd kort en didactisch:
 // stuurt richting begrip, geeft niet zomaar het juiste antwoord weg.
+//
+// Mark Sprint-0 audit 2026-05-13 fixes (2026-05-14):
+// - Socratisch verplicht: antwoord MOET met vraag terug beginnen
+// - Juiste antwoord NIET meer in system prompt (privacy + lek-risico)
+// - Leeftijds-adaptief: po-paden krijgen simpeler toon dan havo
+// - Gemini-fallback bij Anthropic-failure (kosten + uptime)
 
 import { guardRequest, dailyQuotaCheck } from "./_guard.js";
 
@@ -28,36 +34,71 @@ function isClean(text) {
   return !BLOCKED.some((w) => lower.includes(w));
 }
 
+// Bepaal leeftijdsgroep uit pad-id-prefix.
+// po-* / *-po = groep 4-8 (~8-12 jaar)
+// vmbo-* / mavo-* = klas 1-4 (~12-16 jaar)
+// havo-* / vwo-* = klas 1-6 (~12-18 jaar)
+function inferAgeGroup(pathId) {
+  if (!pathId) return "vo";
+  const id = String(pathId).toLowerCase();
+  if (id.startsWith("po-") || id.endsWith("-po") || id.includes("groep")) return "po";
+  if (id.startsWith("examen-")) return "vmbo"; // examen-paden zijn vmbo-mavo
+  if (id.includes("havo") || id.includes("vwo")) return "havo";
+  if (id.includes("vmbo") || id.includes("mavo")) return "vmbo";
+  return "vo";
+}
+
+function ageInstructie(ageGroup) {
+  switch (ageGroup) {
+    case "po":
+      return "De leerling is 8-12 jaar (basisschool). Gebruik héél eenvoudige woorden en korte zinnen. Geef altijd 1 concreet voorbeeld uit de leefwereld (broer, fiets, snoep, klas).";
+    case "vmbo":
+      return "De leerling is 12-16 jaar (vmbo/mavo). Schrijf duidelijk + concreet, vermijd academisch jargon. Eén voorbeeld helpt.";
+    case "havo":
+      return "De leerling is 13-18 jaar (havo/vwo). Mag iets abstracter — vraag-terug + 1 voorbeeld blijft kern.";
+    default:
+      return "Schrijf in duidelijke taal, met 1 concreet voorbeeld.";
+  }
+}
+
 function buildSystemPrompt(ctx = {}) {
+  const ageGroup = inferAgeGroup(ctx.pathId);
   const lines = [];
   lines.push(
-    "Je bent een vriendelijke wiskunde- en taal-leerbegeleider voor Leerkwartier, " +
-      "een Nederlandse leerapp voor leerlingen van 8 tot 18 jaar. " +
-      "De leerling werkt nu aan een specifieke uitleg-stap. Help met BEGRIP, " +
-      "niet door het antwoord weg te geven."
+    "Je bent een vriendelijke leerbegeleider voor Leerkwartier, een Nederlandse " +
+      "leerapp. De leerling werkt aan een specifieke uitleg-stap. Help met BEGRIP " +
+      "— NOOIT door het antwoord weg te geven."
+  );
+  lines.push("");
+  lines.push("KERNREGEL (Socratisch):");
+  lines.push(
+    "Begin elk antwoord MET een vraag terug aan de leerling. Pas in het volgende " +
+      "bericht mag je een korte uitleg of voorbeeld geven. Doel: leerling laat " +
+      "zélf nadenken; jij stuurt alleen bij."
   );
   lines.push("");
   lines.push("REGELS:");
+  lines.push("- Maximum 3 zinnen. Eenvoudig Nederlands. Geen lange opsommingen.");
+  lines.push(ageInstructie(ageGroup));
   lines.push(
-    "- Antwoord in maximaal 3-4 zinnen, in eenvoudig Nederlands. " +
-      "Geen lange opsommingen tenzij de leerling daarom vraagt."
+    "- Bij een fout antwoord: stel een terug-vraag die naar het juiste denkpad leidt, " +
+      "geen kant-en-klare oplossing. Bv. 'Wat denk je dat er gebeurt als…?'"
   );
   lines.push(
-    "- Bij een fout antwoord: leg uit WAAROM het fout is en geef een denkprikkel " +
-      "of vraag terug, geen kant-en-klare oplossing."
+    "- Bij 'leg het anders uit': geef een NIEUW voorbeeld of vergelijking — niet " +
+      "dezelfde uitleg in andere woorden."
   );
   lines.push(
-    "- Bij 'leg het anders uit': zoek een nieuw voorbeeld of vergelijking, " +
-      "niet dezelfde uitleg in andere woorden."
+    "- Off-topic vraag: vriendelijk terugleiden. ('Goede vraag, maar laten we " +
+      "eerst dit afmaken.')"
   );
   lines.push(
-    "- Als de vraag niets met de huidige stof te maken heeft: stuur vriendelijk " +
-      "terug naar de les. ('Goede vraag, maar laten we eerst dit afmaken.')"
+    "- Hooguit 1 emoji per antwoord, alleen als het echt past. Spreek met je/jij."
   );
   lines.push(
-    "- Geen emoji-spam — hooguit één per antwoord, en alleen als het echt past."
+    "- GEEN antwoord-letter (A/B/C/D) en GEEN optie-tekst direct teruggeven, ook " +
+      "niet als de leerling erom vraagt. Stel een wedervraag."
   );
-  lines.push("- Spreek de leerling met je/jij aan, niet 'u'.");
   lines.push("");
   lines.push("HUIDIGE STAP-CONTEXT:");
   if (ctx.pathTitle) lines.push(`Onderwerp: ${ctx.pathTitle}`);
@@ -73,14 +114,81 @@ function buildSystemPrompt(ctx = {}) {
     if (Array.isArray(ctx.checkOptions) && ctx.checkOptions.length) {
       lines.push(`Opties: ${ctx.checkOptions.join(" | ")}`);
     }
-    if (typeof ctx.correctOption === "string") {
-      lines.push(`Juiste antwoord (NIET letterlijk geven): ${ctx.correctOption}`);
-    }
+    // Audit 2026-05-14: juiste antwoord NIET meer in context. AI moet uit
+    // uitleg + opties zelf afleiden welke optie correct is. Voorkomt
+    // lek-risico ("Het juiste antwoord is C, omdat...").
   }
   if (ctx.lastWrongAnswer) {
     lines.push(`De leerling koos zojuist fout: "${ctx.lastWrongAnswer}".`);
   }
   return lines.join("\n");
+}
+
+// ─── Anthropic-call ────────────────────────────────────────────────
+async function callAnthropic(apiKey, system, messages) {
+  const resp = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "claude-haiku-4-5-20251001",
+      max_tokens: 400,
+      temperature: 0.4,
+      system,
+      messages: messages.map((m) => ({
+        role: m.role === "assistant" ? "assistant" : "user",
+        content: String(m.content || "").slice(0, 2000),
+      })),
+    }),
+  });
+  if (!resp.ok) {
+    const txt = await resp.text();
+    throw new Error(`Anthropic ${resp.status}: ${txt.slice(0, 200)}`);
+  }
+  const data = await resp.json();
+  const reply = data?.content?.[0]?.text?.trim() || "";
+  if (!reply) throw new Error("Leeg Anthropic-antwoord");
+  return reply;
+}
+
+// ─── Gemini-fallback ───────────────────────────────────────────────
+// Activeert wanneer Anthropic 5xx/timeout geeft of er geen
+// ANTHROPIC_API_KEY is. Vereist GOOGLE_API_KEY env-var.
+async function callGemini(apiKey, system, messages) {
+  // Gemini neemt geen aparte 'system'-rol — we prepend de system prompt
+  // aan de eerste user-message.
+  const formatted = messages.map((m, i) => {
+    let content = String(m.content || "").slice(0, 2000);
+    if (i === 0 && m.role === "user") {
+      content = `${system}\n\n--- LEERLING-VRAAG ---\n${content}`;
+    }
+    return {
+      role: m.role === "assistant" ? "model" : "user",
+      parts: [{ text: content }],
+    };
+  });
+  const resp = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        contents: formatted,
+        generationConfig: { maxOutputTokens: 400, temperature: 0.4 },
+      }),
+    }
+  );
+  if (!resp.ok) {
+    const txt = await resp.text();
+    throw new Error(`Gemini ${resp.status}: ${txt.slice(0, 200)}`);
+  }
+  const data = await resp.json();
+  const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
+  if (!reply) throw new Error("Leeg Gemini-antwoord");
+  return reply;
 }
 
 export default async function handler(req) {
@@ -93,8 +201,11 @@ export default async function handler(req) {
   const quotaBlocked = await dailyQuotaCheck("tutor-chat");
   if (quotaBlocked) return quotaBlocked;
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) return json({ error: "API key niet geconfigureerd" }, 500);
+  const anthropicKey = process.env.ANTHROPIC_API_KEY;
+  const geminiKey = process.env.GOOGLE_API_KEY;
+  if (!anthropicKey && !geminiKey) {
+    return json({ error: "Geen AI-key geconfigureerd" }, 500);
+  }
 
   let body;
   try {
@@ -107,10 +218,8 @@ export default async function handler(req) {
   if (!Array.isArray(messages) || messages.length === 0) {
     return json({ error: "Geen berichten" }, 400);
   }
-  // Begrens chat-lengte zodat we niet eindeloos meegroeien met context-tokens.
   const trimmed = messages.slice(-12);
 
-  // Veiligheidsfilter op de laatste user-prompt
   const lastUser = [...trimmed].reverse().find((m) => m.role === "user");
   if (lastUser && !isClean(lastUser.content)) {
     return json({
@@ -121,38 +230,28 @@ export default async function handler(req) {
 
   const system = buildSystemPrompt(context);
 
-  try {
-    const resp = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 400,
-        temperature: 0.4,
-        system,
-        messages: trimmed.map((m) => ({
-          role: m.role === "assistant" ? "assistant" : "user",
-          content: String(m.content || "").slice(0, 2000),
-        })),
-      }),
-    });
-
-    if (!resp.ok) {
-      const txt = await resp.text();
-      return json(
-        { error: `AI-fout: ${resp.status}`, detail: txt.slice(0, 200) },
-        502
-      );
+  // Eerst Anthropic (primair), Gemini als fallback bij failure.
+  let lastError = null;
+  if (anthropicKey) {
+    try {
+      const reply = await callAnthropic(anthropicKey, system, trimmed);
+      return json({ reply, provider: "anthropic" });
+    } catch (e) {
+      lastError = e;
+      console.warn("[tutor-chat] Anthropic faalde, val terug op Gemini:", e.message);
     }
-    const data = await resp.json();
-    const reply = data?.content?.[0]?.text?.trim() || "";
-    if (!reply) return json({ error: "Leeg AI-antwoord" }, 502);
-    return json({ reply });
-  } catch (e) {
-    return json({ error: `Netwerkfout: ${e.message}` }, 502);
   }
+  if (geminiKey) {
+    try {
+      const reply = await callGemini(geminiKey, system, trimmed);
+      return json({ reply, provider: "gemini" });
+    } catch (e) {
+      lastError = e;
+      console.warn("[tutor-chat] Gemini ook gefaald:", e.message);
+    }
+  }
+  return json(
+    { error: `AI niet bereikbaar: ${lastError?.message || "onbekend"}` },
+    502
+  );
 }
