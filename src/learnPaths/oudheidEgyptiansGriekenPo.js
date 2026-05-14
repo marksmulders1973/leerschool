@@ -114,6 +114,84 @@ const steps = [
       { q: "Wie zei **'Veni, vidi, vici'**?", options: ["Caesar", "Augustus", "Alexander", "Toetanchamon"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Egyptisch."] },
       { q: "Hoogste **piramide** wereld 3800 jr lang?", options: ["Cheops (Gizeh, 146 m)", "Khafre", "Menkaure", "Burj Khalifa"], answer: 0, wrongHints: [null, "Klopt.", "Kleinere.", "Kleinere.", "Modern."] },
       { q: "Wanneer **viel West-Romeinse Rijk**?", options: ["476 n.Chr.", "100 v.Chr.", "1000 n.Chr.", "Bestaat nog"], answer: 0, wrongHints: [null, "Klopt.", "Bestond nog.", "Te laat.", "Wel."] },
+      {
+        q: "Wat waren **hiërogliefen** (Egypte)?",
+        options: ["Schrift met plaatjes — letters, klanken, hele woorden", "Soort vis", "Egyptische dansvorm", "Tegels"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gebruikt in tempels + piramides + boekrollen.", "Niet — dat zijn vissen-namen.", "Niet — geen dans.", "Niet — wel sommige tekst stond op stenen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn hiërogliefen?", tekst: "**Hiërogliefen** waren het **schrift van het oude Egypte**. Gebruikt **~3000 v.Chr. tot ~400 n.Chr.** (~3.500 jaar lang).\n\nElke 'letter' was eigenlijk een **plaatje** (vogel, oog, slang, hand). Sommige stonden voor:\n• **Klank** (zoals letters)\n• **Hele woord** (zoals Chinese tekens)\n• **Idee** (zoals emoji's)\n\nGevolg: ~700 verschillende symbolen. Alleen **priesters + schrijvers** konden lezen + schrijven (~1% van bevolking)." },
+            { titel: "Hoe konden we ze ontcijferen?", tekst: "Lange tijd kon **niemand meer hiërogliefen lezen** (was vergeten). Tot **1799**: Franse soldaten van Napoleon vonden in Egypte de **Steen van Rosetta**.\n\nDe Steen had hetzelfde tekst in **3 schriften**:\n• Hiërogliefen (Egyptisch)\n• Demotisch (laat-Egyptisch)\n• **Grieks** (deze konden we wel lezen!)\n\nFransman **Champollion** ontcijferde in **1822** de code door Grieks naast hiërogliefen te leggen. Daardoor weten we nu hoe Egyptisch werkte." },
+            { titel: "Cito-feit: waar zie je ze?", tekst: "Hiërogliefen zijn te zien op:\n• **Piramides** van Gizeh (rond Cheops)\n• **Sfinx**\n• **Karnak-tempel** in Luxor\n• **Tutankhamun's graf** (ontdekt 1922 door Carter)\n• **Steen van Rosetta** (nu in British Museum, Londen)\n\nCito vraagt soms: **'Wat is het oudste schrift?'** Antwoord: hiërogliefen of spijkerschrift (Mesopotamië, ook ~3000 v.Chr. — eigen schrijfsysteem)." },
+          ],
+          woorden: [
+            { woord: "hiërogliefen", uitleg: "Egyptisch plaatjes-schrift. Werd geschreven op steen, papyrus, tempel-muren." },
+            { woord: "papyrus", uitleg: "Egyptisch 'papier' — gemaakt van papyrus-plant uit Nijl." },
+            { woord: "Champollion", uitleg: "Frans wetenschapper die in 1822 hiërogliefen ontcijferde." },
+            { woord: "Steen van Rosetta", uitleg: "Steen uit 196 v.Chr. met zelfde tekst in 3 schriften. Sleutel tot Egyptische taal." },
+          ],
+          theorie: "Belangrijke schrift-systemen oudheid (Cito-stof):\n• **Hiërogliefen** (Egypte, 3000 v.Chr.)\n• **Spijkerschrift** (Mesopotamië, 3500 v.Chr.) — wedgevormige tekens in klei\n• **Grieks alfabet** (Griekenland, ~800 v.Chr.) — basis voor Latijn + ons alfabet\n• **Romeinse cijfers** (I, V, X, L, C, D, M) — nog gebruikt voor klok + pausen-namen\n• **Chinees schrift** (ook ~3000 v.Chr., nog steeds gebruikt!)",
+          voorbeelden: [
+            { type: "feit", tekst: "Onze letter 'A' komt via Grieks 'alpha' uit Fenicisch 'aleph' = stier. De vorm leek vroeger op een omgekeerde stier-kop." },
+            { type: "feit", tekst: "Cleopatra (laatste farao, gestorven 30 v.Chr.) sprak Grieks als hoofdtaal, niet Egyptisch — koningshuis was Grieks (Ptolemaeën-dynastie)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet zomaar plaatjes", uitleg: "Hiërogliefen zijn echt schrift, niet 'lekker tekenen'. Elk symbool had vaste betekenis + uitspraak." }],
+          niveaus: { basis: "Egyptisch plaatjes-schrift. = A.", simpeler: "Hiërogliefen waren het schrift van oude Egyptenaren. Plaatjes die letters/klanken/woorden voorstelden. ~3000 v.Chr. tot 400 n.Chr. = A.", nogSimpeler: "Schrift Egypte = A." },
+        },
+      },
+      {
+        q: "Wat zijn de **Olympische Spelen** oorsprong?",
+        options: ["Griekse stad Olympia, sinds 776 v.Chr.", "Frankrijk 1900", "China 200 v.Chr.", "Rusland 1850"],
+        answer: 0,
+        wrongHints: [null, "Klopt — oudste sport-event, vernoemd naar plaats Olympia in Griekenland.", "Niet — moderne OS sinds 1896 in Athene, maar oude OS veel ouder.", "Niet — Chinese sport-cultuur anders.", "Niet — geen Russische oorsprong."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Antieke Olympische Spelen", tekst: "De **eerste Olympische Spelen** waren in **776 v.Chr.** in de Griekse stad **Olympia** (vandaar de naam). **Elke 4 jaar** kwamen mannen samen om sport te beoefenen ter ere van de **god Zeus** (oppergod Grieken).\n\n**Sporten waren**:\n• Hardlopen\n• Discus + speerwerpen\n• Worstelen\n• Boksen\n• Wagenrennen\n• Pentatlon (5 sporten combi)" },
+            { titel: "Regels in oude OS", tekst: "Bijzondere regels:\n• **Alleen mannen** mochten meedoen + kijken\n• **Vrouwen** verboden — eigen Herafestival\n• Atleten waren **naakt** (Grieks: gymnos → 'gymnastiek')\n• Tijdens spelen: **wapenstilstand** in alle Griekse stadstaten (Olympische Truce)\n• Geen geldprijzen — winnaar kreeg **olijfkrans** + eeuwige roem\n• **1200 jaar lang** gehouden — tot 393 n.Chr. (Christelijke keizer Theodosius verbood)" },
+            { titel: "Cito-feit: moderne OS", tekst: "**Moderne Olympische Spelen** zijn herstart in **1896** in **Athene** (Griekenland — als eerbetoon aan oorsprong) door Fransman **Pierre de Coubertin**.\n\nVerschillen met oude OS:\n• **Vrouwen mogen meedoen** sinds 1900 (Parijs)\n• **Internationale deelname** (niet alleen Grieken)\n• **Winter + zomer OS** afwisselend\n• **Sport-medailles** (goud/zilver/brons) ipv olijfkrans\n• Locatie wisselt elke 4 jaar (2024: Parijs, 2028: LA, 2032: Brisbane)\n\nNL was succesvol op 2024 Parijs: ~30+ medailles." },
+          ],
+          woorden: [
+            { woord: "Olympia", uitleg: "Stad in Griekenland — religieus + sport-centrum oude OS. Bestaat nog (toeristische ruïnes)." },
+            { woord: "Zeus", uitleg: "Oppergod in Griekse mythologie. Heerste op berg Olympus." },
+            { woord: "gymnasium", uitleg: "Grieks woord voor 'oefenplaats' — wij gebruiken het nu voor sport-zaal + middelbare school (VWO)." },
+            { woord: "Pierre de Coubertin", uitleg: "Franse baron die in 1896 moderne OS herstartte. Vandaar 'IOC' = Internationaal Olympisch Comité." },
+          ],
+          theorie: "Oude Olympische Spelen-feiten:\n• 776 v.Chr. — eerste OS (officieel)\n• 393 n.Chr. — verboden door Christelijke keizer\n• 1896 — moderne herstart Athene\n• Symbolen: 5 ringen = 5 continenten, vlam komt uit Olympia overgedragen\n• 'Citius, Altius, Fortius' = Latijns motto: 'Sneller, Hoger, Sterker'\n\nVerband met andere Cito-stof: Griekse cultuur → Romeinen → Middeleeuwen → Renaissance → wij.",
+          voorbeelden: [
+            { type: "feit", tekst: "Marathon (42 km) komt van Griekse soldaat die in 490 v.Chr. van veldslag Marathon naar Athene rende met overwinningsbericht — viel daar dood neer." },
+            { type: "feit", tekst: "Op NL OS-2024 Parijs: Femke Bol won goud op 4×400m mixed estafette. Spirit van Olympia leeft door." },
+          ],
+          basiskennis: [{ onderwerp: "Olympia ≠ Olympus", uitleg: "**Olympia** = stad in Griekenland (waar spelen waren). **Berg Olympus** = waar Zeus woonde volgens mythologie. Andere plek." }],
+          niveaus: { basis: "Griekenland, 776 v.Chr. = A.", simpeler: "De Olympische Spelen ontstonden in 776 v.Chr. in de Griekse stad Olympia. Werden 1200 jaar lang elke 4 jaar gehouden ter ere van god Zeus. = A.", nogSimpeler: "Griekenland oud = A." },
+        },
+      },
+      {
+        q: "Wat is **mythologie**?",
+        options: ["Verhalen over goden + helden om wereld + natuur uit te leggen", "Bewezen wetenschap", "Geschiedenis-boek voor middelbaar", "Sport in oudheid"],
+        answer: 0,
+        wrongHints: [null, "Klopt — verklarend verhaal vóór wetenschap bestond.", "Niet — mythologie = vóór wetenschap, geen feit.", "Niet — wel deel van geschiedenisles maar mythologie zelf is iets anders.", "Niet — wel sport komt VOOR in mythen (Hercules), niet hetzelfde."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is mythologie?", tekst: "**Mythologie** = **verhalen over goden + bovennatuurlijke wezens** die mensen vroeger geloofden. Bedoeld om **uit te leggen**:\n• Hoe de wereld ontstond\n• Waarom donder + bliksem\n• Waarom seizoenen\n• Waarom mensen sterven\n• Lessen voor goed leven\n\nVoordat wetenschap dit ALLES kon uitleggen, gebruikten mensen mythologie." },
+            { titel: "Bekende mythologieën", tekst: "**Griekse mythologie** (meest bekend in NL-onderwijs):\n• **Zeus** — oppergod, donder + bliksem\n• **Hera** — vrouw Zeus, beschermt huwelijk\n• **Poseidon** — god zee\n• **Hades** — god onderwereld\n• **Athena** — wijsheid + oorlog\n• **Aphrodite** — liefde\n• **Apollo** — zon + muziek\n• **Hercules** — sterkste held (12 werken)\n\n**Romeinse mythologie** = bijna identiek, andere namen:\n• Zeus → Jupiter\n• Hera → Juno\n• Athena → Minerva\n• etc.\n\nAndere bekende: **Egyptisch** (Osiris, Ra, Anubis), **Noors** (Odin, Thor, Loki — bekend via Marvel-films)." },
+            { titel: "Cito-feit: mythologie in onze taal + cultuur", tekst: "Mythologie zit OVERAL in onze cultuur:\n• **Maanden**: maart (Mars, god oorlog), juli (Julius Caesar — voortaan een god)\n• **Planeten**: Mars, Venus, Jupiter, Saturnus — allemaal Romeinse goden\n• **Merken**: Nike (Griekse godin overwinning), Amazon (Amazones-strijdsters), Hermes (boodschapper-god)\n• **Films**: Hercules (Disney), Marvel Thor-films (Noors), Percy Jackson (Grieks)\n• **Uitdrukkingen**: 'Achilles-hiel' (zwakke plek), 'Trojaans paard' (verraderlijke gift), 'Pandora's doos' (rampen losmaken)\n• **Sterrenbeelden**: 12 sterrenbeelden zodiak — allemaal Griekse mythen" },
+          ],
+          woorden: [
+            { woord: "mythologie", uitleg: "Verhalen-collectie over goden + helden van een cultuur. Bedoeld om wereld te verklaren." },
+            { woord: "mythe", uitleg: "Enkel verhaal binnen een mythologie. Bv. mythe van Hercules." },
+            { woord: "god", uitleg: "Bovennatuurlijk wezen met macht over natuur, leven, lot. Vaak meerdere in oude religies (polytheïsme)." },
+            { woord: "polytheïsme", uitleg: "Geloof in meerdere goden. Vroeger normaal in Griekenland, Egypte, Noord-Europa." },
+          ],
+          theorie: "Mythologie vs religie vs wetenschap:\n• **Mythologie** = oude verklaringen, vaak meerdere goden, niet meer geloofd (door velen)\n• **Religie** = georganiseerd geloof — nu vooral monotheïstisch (1 god): christendom, islam, jodendom\n• **Wetenschap** = bewezen verklaringen via experiment\n\nOude Grieken hadden vooral mythologie. Romeinen idem. Daarna kwam christendom (1 god). Tegelijkertijd ontstond wetenschap.",
+          voorbeelden: [
+            { type: "feit", tekst: "Het Trojaanse Paard-verhaal (Griekse oorlog tegen Troje) was lang gezien als mythe. Maar archeologen vonden Troje WEL terug in 1870 — het gebeurde echt." },
+            { type: "feit", tekst: "Hercules deed '12 werken' (zware opdrachten) — een ervan: Nemese-leeuw doden + huid dragen. Symbool van moed." },
+          ],
+          basiskennis: [{ onderwerp: "Niet zelfde als sprookje", uitleg: "Mythen werden ECHT geloofd door oude volken. Sprookjes werden altijd als fictie verteld. Verschil." }],
+          niveaus: { basis: "Verhalen over goden om wereld uit te leggen. = A.", simpeler: "Mythologie = oude verhalen over goden + helden die uitleggen hoe natuur + wereld werkt. Bv. Grieks: Zeus voor bliksem. Niet wetenschappelijk maar wel cultureel waardevol. = A.", nogSimpeler: "Verhalen over goden = A." },
+        },
+      },
     ],
   },
 ];
