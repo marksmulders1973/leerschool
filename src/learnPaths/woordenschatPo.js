@@ -333,6 +333,81 @@ const steps = [
           niveaus: { basis: "Lelijk = niet synoniem. A.", simpeler: "Prachtig, schitterend, fraai = allemaal synoniem voor mooi. Lelijk = TEGENSTELLING. = A.", nogSimpeler: "Lelijk = A." },
         },
       },
+      {
+        q: "Wat betekent het **spreekwoord** 'De kat uit de boom kijken'?",
+        options: ["Eerst afwachten + observeren voor je iets doet","Letterlijk naar een kat in boom kijken","Boos worden","Slapen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — figuurlijke betekenis: voorzichtig zijn, niet meteen handelen.","Niet letterlijk — spreekwoorden zijn figuurlijk.","Niet — geen woedend gedrag.","Niet — geen slaap-betekenis."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een spreekwoord?", tekst: "Een **spreekwoord** is een **vaste uitdrukking** met een **figuurlijke** (= overdrachtelijke) betekenis. Je begrijpt het niet door de woorden letterlijk te nemen.\n\nVoorbeeld: 'de kat uit de boom kijken' = NIET letterlijk naar een kat staren. Wel: **'voorzichtig afwachten + kijken hoe een situatie zich ontwikkelt voordat je actie onderneemt'**." },
+            { titel: "Cito-truc: letterlijk vs figuurlijk", tekst: "Bij elke spreekwoord-vraag: vraag jezelf 'wat is de **figuurlijke** betekenis?'\n\nMeer voorbeelden:\n• **'Boter bij de vis'** = direct betalen (niet letterlijk over eten)\n• **'Gras over laten groeien'** = vergeten, voorbij laten gaan\n• **'Iemand om de tuin leiden'** = bedriegen, misleiden\n• **'Door de zure appel heen bijten'** = iets vervelends doen wat moet\n• **'Met de deur in huis vallen'** = direct ter zake komen" },
+            { titel: "Cito-feit: in NL veel 'dieren-spreekwoorden'", tekst: "Veel Nederlandse spreekwoorden gebruiken dieren:\n• 'Een kat in de zak kopen' (slecht koopje)\n• 'Een paard kijken in de bek' (kritiek op cadeau)\n• 'De koe bij de horens vatten' (probleem aanpakken)\n• 'Vissen achter het net' (te laat zijn)\n• 'Een wolf in schaapskleren' (boos persoon doet aardig)\n\nVoor Cito hoef je niet alles te kennen — wel: weten dat spreekwoord = figuurlijk + kunnen achterhalen uit context." },
+          ],
+          woorden: [
+            { woord: "spreekwoord", uitleg: "Vaste uitdrukking met figuurlijke betekenis. Vaak generaties oud." },
+            { woord: "figuurlijk", uitleg: "Niet letterlijk — overdrachtelijk. Betekenis verschilt van de woorden zelf." },
+            { woord: "letterlijk", uitleg: "Precies wat de woorden zeggen. 'Letterlijk een kat in boom' = echte kat zien." },
+          ],
+          theorie: "Spreekwoord-aanpak Cito:\n1. Lees zin in context (verhaal/dialoog)\n2. Letterlijke woorden niet voldoende — denk: 'wat betekent dit FIGUURLIJK?'\n3. Twijfel? Welke optie past bij wat in het verhaal gebeurt?\n\nNiet meteen kiezen letterlijke optie — bijna altijd verkeerd bij spreekwoord-vragen.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Tom kreeg een appeltje voor de dorst' = Tom kreeg iets voor later/zekerheid, niet letterlijk fruit." },
+            { type: "stap", tekst: "'De spijker op de kop' = exact het juiste raken." },
+          ],
+          basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "Bij spreekwoord-vraag: kies NOOIT letterlijke optie. Altijd figuurlijke uitleg." }],
+          niveaus: { basis: "Afwachten + observeren. = A.", simpeler: "Spreekwoord 'de kat uit de boom kijken' = voorzichtig zijn, eerst kijken hoe iets verloopt voor je iets doet. NIET letterlijk. = A.", nogSimpeler: "Afwachten = A." },
+        },
+      },
+      {
+        q: "Wat betekent **'een open boek'** in 'Floor is een open boek voor mij'?",
+        options: ["Ik begrijp haar makkelijk / ze verbergt niets","Ze leest veel","Ze heeft een boek open","Ze schrijft een boek"],
+        answer: 0,
+        wrongHints: [null,"Klopt — figuurlijke uitdrukking: voorspelbaar, doorzichtig, eerlijk.","Niet — geen leesgewoonten.","Niet letterlijk.","Niet — geen schrijven."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Figuurlijke uitdrukking", tekst: "**'Een open boek'** betekent figuurlijk: **iemand of iets dat doorzichtig + makkelijk te begrijpen is**. Geen verborgen agenda. Eerlijk + voorspelbaar.\n\nIemand die 'een gesloten boek' is = ondoorgrondelijk, mysterieus." },
+            { titel: "Cito-context: persoonsbeschrijving", tekst: "In de zin 'Floor is een open boek voor mij':\n• 'Ik kan haar gemakkelijk doorzien'\n• 'Ze verbergt niets'\n• 'Ik weet altijd wat ze denkt + voelt'\n\nLet op CONTEXT: 'voor mij' = vanuit perspectief van spreker. Iemand anders kan haar moeilijker doorzien." },
+            { titel: "Cito-tip: stijlfiguren herkennen", tekst: "**'Een open boek'** is een **metafoor** — beeldspraak waarbij iets met iets anders vergeleken wordt zonder 'als' of 'zoals'.\n\nAndere metaforen:\n• 'Hij is een leeuw in een gevecht' (= sterk, dapper)\n• 'Mijn baas is een dictator' (= autoritair)\n• 'Het regent pijpenstelen' (= het regent hard)\n\n**Vergelijking** ('zoals'): 'Hij is sterk ALS een leeuw' — met woord 'als' = vergelijking. Zonder = metafoor." },
+          ],
+          woorden: [
+            { woord: "metafoor", uitleg: "Beeldspraak: iets WORDT iets anders genoemd zonder 'als'. 'Hij is een ster' = sterren-vergelijking." },
+            { woord: "doorzichtig", uitleg: "Letterlijk: licht doorlaat (glas). Figuurlijk: makkelijk te begrijpen." },
+          ],
+          theorie: "**Stijlfiguren** in Cito-stof:\n• **Metafoor**: 'mijn hart is een woestijn' (zonder 'als')\n• **Vergelijking**: 'mijn hart is als een woestijn' (mét 'als')\n• **Personificatie**: 'de wind huilt' (dingen krijgen menselijk gedrag)\n• **Hyperbool**: 'ik heb 1000 keer gezegd' (overdrijving)\n• **Litotes**: 'niet onaardig' (= aardig, dubbele ontkenning)",
+          voorbeelden: [
+            { type: "stap", tekst: "'Mijn moeder is een rots' = sterke steun, niet letterlijk steen." },
+            { type: "stap", tekst: "'De zon lacht' = personificatie, zon kan niet echt lachen." },
+          ],
+          basiskennis: [{ onderwerp: "Context belangrijk", uitleg: "Spreekwoord-vragen vereisen altijd de hele zin lezen. Soms helpt vorige zin ook." }],
+          niveaus: { basis: "Makkelijk te begrijpen. = A.", simpeler: "'Open boek' = figuurlijk: makkelijk te doorzien, niets verbergen, voorspelbaar. = A.", nogSimpeler: "Doorzichtig = A." },
+        },
+      },
+      {
+        q: "Wat is het **antoniem** van **'overvloed'**?",
+        options: ["Tekort / schaarste","Veel","Eten","Bos"],
+        answer: 0,
+        wrongHints: [null,"Klopt — overvloed = veel, antoniem = weinig/tekort.","Niet — 'veel' is synoniem van overvloed.","Niet — eten heeft niets met de tegenstelling.","Niet — bos is een plek."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een antoniem?", tekst: "Een **antoniem** is een woord met **tegengestelde betekenis**. Het is het tegenovergestelde van een **synoniem** (zelfde betekenis).\n\nVoorbeeld:\n• 'Mooi' ↔ antoniem 'lelijk'\n• 'Snel' ↔ antoniem 'langzaam'\n• 'Veel' ↔ antoniem 'weinig'" },
+            { titel: "Overvloed = ?", tekst: "**Overvloed** betekent: heel veel ergens van. Bijvoorbeeld 'overvloed aan voedsel' = veel meer dan genoeg.\n\nTegenstelling: **tekort** of **schaarste** — wanneer er TE WEINIG is van iets. Bijvoorbeeld 'tekort aan water' = te weinig water.\n\nIn Cito-vragen wordt vaak gevraagd: 'Welk woord is het ANTONIEM van X?'" },
+            { titel: "Cito-tip: synoniem vs antoniem", tekst: "Cito test allebei:\n• **Synoniem** = zelfde betekenis. (Bv. 'huis' ↔ 'woning')\n• **Antoniem** = tegenovergestelde. (Bv. 'huis' geen direct antoniem, maar 'mooi' ↔ 'lelijk')\n\nLet ALTIJD op vraag: zoekt Cito synoniem of antoniem? Veel kinderen lezen te snel + wisselen ze om → verkeerd antwoord ondanks goede kennis." },
+          ],
+          woorden: [
+            { woord: "antoniem", uitleg: "Woord met tegengestelde betekenis. Ook wel 'tegenstelling' genoemd." },
+            { woord: "synoniem", uitleg: "Woord met dezelfde of bijna dezelfde betekenis." },
+            { woord: "overvloed", uitleg: "Heel veel ergens van. Meer dan genoeg." },
+            { woord: "tekort", uitleg: "Te weinig ergens van. Schaarste." },
+          ],
+          theorie: "Veel antoniem-paren voor Cito-PO:\n• groot ↔ klein\n• rijk ↔ arm\n• jong ↔ oud\n• warm ↔ koud\n• binnen ↔ buiten\n• boven ↔ onder\n• stil ↔ luid\n• schoon ↔ vies\n• begin ↔ einde\n• verleden ↔ toekomst\n• overvloed ↔ tekort/schaarste\n• groei ↔ krimp",
+          voorbeelden: [
+            { type: "stap", tekst: "Antoniem van 'optimistisch' = pessimistisch." },
+            { type: "stap", tekst: "Antoniem van 'transparant' = ondoorzichtig." },
+          ],
+          basiskennis: [{ onderwerp: "Niet vertroubelen", uitleg: "Antoniem is TEGENOVERGESTELDE — niet 'iets anders'. 'Mooi' antoniem is 'lelijk', niet 'rood' (rood is ander concept, geen tegenstelling)." }],
+          niveaus: { basis: "Tekort. = A.", simpeler: "Overvloed = veel → antoniem = tekort/schaarste. = A.", nogSimpeler: "Tekort = A." },
+        },
+      },
     ],
   },
 ];
