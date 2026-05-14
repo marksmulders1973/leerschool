@@ -95,6 +95,7 @@ import examenEngels2025T1 from "./examenEngels2025T1.js";
 import examenEngels2024T1 from "./examenEngels2024T1.js";
 import examenGeschiedenis2025T1 from "./examenGeschiedenis2025T1.js";
 import examenBiologie2024T1 from "./examenBiologie2024T1.js";
+import examenBiologie2024T2 from "./examenBiologie2024T2.js";
 import naamvallenDuits from "./naamvallenDuits.js";
 import passeComposeFrans from "./passeComposeFrans.js";
 import presentTensesEngels from "./presentTensesEngels.js";
@@ -357,6 +358,7 @@ export const ALL_LEARN_PATHS = {
   "examen-engels-2024-t1": examenEngels2024T1,
   "examen-geschiedenis-2025-t1": examenGeschiedenis2025T1,
   "examen-biologie-2024-t1": examenBiologie2024T1,
+  "examen-biologie-2024-t2": examenBiologie2024T2,
   // Bedrijfseconomie
   "balans-beco": balansBeco,
   // Duits

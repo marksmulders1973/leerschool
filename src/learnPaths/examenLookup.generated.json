@@ -8,6 +8,15 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36"
     }
   ],
+  "ecosystemen-biologie": [
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 35,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 35"
+    }
+  ],
   "genetica-erfelijkheid-biologie": [
     {
       "examPathId": "examen-biologie-2024-t1",
@@ -66,6 +75,27 @@
       "stepIdx": 10,
       "vraagNr": 42,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 42"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 12"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 43,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 43"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 45,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 45"
     }
   ],
   "pincode-belasting": [
@@ -380,6 +410,20 @@
       "stepIdx": 3,
       "vraagNr": 41,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 22,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 22"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 23"
     }
   ],
   "wereldoorlog2-geschiedenis": [

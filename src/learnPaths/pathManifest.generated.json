@@ -1213,6 +1213,29 @@
     "chapterCount": 4
   },
   {
+    "id": "examen-biologie-2024-t2",
+    "title": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2024-T2",
+    "triggerKeywords": [
+      "examen biologie 2024 tijdvak 2",
+      "echte examenvragen biologie",
+      "enzymen maagsap",
+      "weeën baarmoeder",
+      "inwendige prikkel hormoon",
+      "alcohol coördinatie kleine hersenen",
+      "gaswisseling longblaasjes",
+      "abiotisch biotisch temperatuur"
+    ],
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2 (examen-id GT-0191-a-24-2). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3
+  },
+  {
     "id": "examen-economie-2023-t1",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
     "subject": "economie",

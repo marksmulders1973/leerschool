@@ -1,0 +1,336 @@
+{
+  "id": "biologie-2024-T2",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Behalve maagzuur bevat maagsap ook enzymen. Wat is de functie van enzymen? Immuunsysteem en mazelen Mazelen is een zeer besmettelijke ziekte die wordt veroorzaakt door een virus. Het virus veroorzaakt koorts en ontstekingen aan ogen, oren, longen en hersenen. Sinds 1974 is er een vaccin beschikbaar tegen mazelen.",
+      "options": [
+        "Enzymen activeren hormoonklieren.",
+        "Enzymen doden bacteri'n.",
+        "Enzymen lossen vetten op.",
+        "Enzymen verteren voedingsstoffen."
+      ],
+      "answer": 3,
+      "explanation": "Vraag Antwoord                                                                   Scores\n\n   Immuunsysteem en mazelen\n\n13 C                                                        juist onjuist\n                                                              X",
+      "tekstNr": null,
+      "vraagNr": 12
+    },
+    {
+      "q": "Voor de ontsluiting krijgt Mandy wee'n. Deze wee'n zijn samentrekkingen van bepaalde spieren. Deze samentrekkingen zijn onbewuste bewegingen. Van welke spieren zijn dit de samentrekkingen?",
+      "options": [
+        "van de baarmoederspieren",
+        "van de buikspieren",
+        "van de middenrifspieren",
+        "van de vaginaspieren"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 22
+    },
+    {
+      "q": "Hormonen geven bepaalde prikkels waardoor wee'n ontstaan. Wat is de naam van deze prikkels?",
+      "options": [
+        "adequate prikkels",
+        "inwendige prikkels",
+        "supranormale prikkels",
+        "uitwendige prikkels"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 23
+    },
+    {
+      "q": "De foetus is omhuld door vruchtvliezen. Om de geboorte mogelijk te maken, zullen deze vruchtvliezen breken. Op welk moment zullen de vruchtvliezen meestal breken?",
+      "options": [
+        "tijdens de bevruchting",
+        "tijdens de indaling",
+        "tijdens de ontsluiting"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 24
+    },
+    {
+      "q": "De baby krijgt de naam Luna. Joris, de partner van Mandy, heeft ontslag genomen en blijft thuis om Luna op te voeden en te verzorgen. Joris vindt dat heel normaal. Maar de ouders van Joris vinden dat Mandy vooral voor Luna moet zorgen. 25 jaar geleden, toen Joris nog een baby was, werd hij vooral verzorgd door zijn moeder. Wat is er nu anders? Cellen determineren Maartje maakt een determineertabel om te bepalen of een cel afkomstig is van organismen uit de groep van bacteri'n, dieren, planten of schimmels. In de tabel zijn deze groepen met de letters P, Q, R en S aangegeven. determineertabel 1 a de cellen hebben een celkern ................................. ga verder bij 2 b de cellen hebben geen celkern .................................................... P 2 a de cellen hebben een celwand ................................ ga verder bij 3 b de cellen hebben geen celwand .................................................. Q 3 a er zijn cellen met bladgroenkorrels ..............................................R b er zijn geen cellen met bladgroenkorrels ...................................... S",
+      "options": [
+        "de rangorde tussen ouders",
+        "de rolpatronen van ouders",
+        "het imponeergedrag van ouders",
+        "het territoriumgedrag van ouders"
+      ],
+      "answer": 1,
+      "explanation": "Cellen determineren",
+      "tekstNr": null,
+      "vraagNr": 26
+    },
+    {
+      "q": "Bij een val worden de pijnprikkels vanuit de zenuwuiteinden van de `pijnzintuigen' in de huid doorgegeven naar het centraal zenuwstelsel. Waar in de huid liggen deze zenuwuiteinden?",
+      "options": [
+        "in de hoornlaag",
+        "in de kiemlaag",
+        "in de lederhuid",
+        "in het onderhuids bindweefsel"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 28
+    },
+    {
+      "q": "Wordt het geslacht van soepschildpadden volgens de informatie uit het onderzoek bepaald door een abiotische factor, door een biotische factor of door beide?",
+      "options": [
+        "abiotisch",
+        "biotisch",
+        "beide"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 35
+    },
+    {
+      "q": "Mensen die alcohol hebben gedronken, hebben een verminderde co'rdinatie van hun bewegingen. In welk deel van het centrale zenuwstelsel vindt de co'rdinatie van bewegingen plaats?",
+      "options": [
+        "in de grote hersenen",
+        "in de kleine hersenen",
+        "in de hersenstam",
+        "in het ruggenmerg"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 43
+    },
+    {
+      "q": "Alcohol wordt in het lichaam afgebroken, maar kan ook door gaswisseling het lichaam verlaten. Waar vindt de gaswisseling plaats?",
+      "options": [
+        "in de bronchi'n",
+        "in de longblaasjes",
+        "in de luchtpijp",
+        "in de mondholte"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 45
+    },
+    {
+      "q": "Via welke route komt het hormoon ADH bij de nieren?",
+      "options": [
+        "via de dunne darmwand",
+        "via de urinebuis",
+        "via een lymfevat",
+        "via een slagader"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": null,
+      "vraagNr": 46
+    },
+    {
+      "q": "Je ziet hier een afbeelding van het hormoonstelsel. Welke letter wijst de hypofyse aan?",
+      "options": [
+        "letter P",
+        "letter Q",
+        "letter R",
+        "letter S"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 47
+    },
+    {
+      "q": "Pubers zijn nog niet helemaal volgroeid, waardoor alcohol drinken voor hen schadelijker is dan voor volwassenen. Hoe komt dat? Let op: de laatste vragen van dit examen staan op de volgende pagina. Intersekse Soms worden er meisjes geboren met het mannelijke genotype of jongens met het vrouwelijke genotype. Dit wordt intersekse genoemd. Ongeveer 1 op de 2000 mensen wordt geboren als een intersekse-persoon. Elsa is geboren met alle primaire vrouwelijke geslachtskenmerken. In de puberteit krijgt zij secundaire mannelijke geslachtskenmerken. Uit onderzoek blijkt dat zij mannelijke geslachts-chromosomen heeft en dat haar vrouwelijke geslachtsklieren niet actief zijn.",
+      "options": [
+        "Bij pubers is het evenwichtsorgaan nog niet volledig ontwikkeld.",
+        "Bij pubers is het immuunsysteem nog niet volledig ontwikkeld.",
+        "Bij pubers is het orgaan dat alcohol afbreekt nog niet volledig ontwikkeld.",
+        "Bij pubers zijn de hersenen nog niet volledig ontwikkeld."
+      ],
+      "answer": 3,
+      "explanation": "Intersekse",
+      "tekstNr": null,
+      "vraagNr": 48
+    },
+    {
+      "q": "Welke geslachts-chromosomen heeft Elsa in de lichaamscellen volgens de informatie?",
+      "options": [
+        "XX",
+        "XY",
+        "YY"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 49
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 11,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 27,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 30,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 33,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 34,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 36,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 38,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 39,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 41,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 42,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 44,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 50,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 51,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 52,
+      "reden": "open/complex"
+    }
+  ]
+}
