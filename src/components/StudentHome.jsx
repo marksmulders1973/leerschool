@@ -453,7 +453,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           Kies je vak — leren of oefenen?
         </h3>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 10, marginBottom: 20 }}>
           {vakkenLijst.map((vak) => {
             const subj = SUBJECTS.find(s => s.id === vak.id);
             if (!subj) return null;
@@ -926,7 +926,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         {/* Sinds M2 (vakkenkeuze-grid bovenaan) zijn 'Test je kennis' en
             'Uit je boek' dubbelop met de Leren/Oefenen-knoppen per vak.
             Hou alleen de unieke shortcuts: Voortgang + Scorebord. */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 10, marginBottom: 24 }}>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #00b84d, #36537e)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 24 }}>📊</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Voortgang</span>
