@@ -240,9 +240,9 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
         {EXAMENS.length === 0 && (
           <div style={{ ...cardStyle(), textAlign: "center", padding: "30px 14px" }}>
             <div style={{ fontSize: 36, marginBottom: 8 }}>📚</div>
-            <div style={{ fontWeight: 700, marginBottom: 6 }}>Nog geen examens</div>
+            <div style={{ fontWeight: 700, marginBottom: 6 }}>Even geen examens beschikbaar</div>
             <div style={{ fontSize: 13, color: C.muted }}>
-              Mark voegt binnenkort de eerste examens toe.
+              Probeer een ander vak of niveau via de filters bovenaan.
             </div>
           </div>
         )}

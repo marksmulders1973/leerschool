@@ -505,7 +505,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                             <span style={{ fontSize: 16 }}>📚</span>
                             <span>Leren</span>
                             <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>
-                              {hasPaths ? `${pathCount} paden` : "binnenkort"}
+                              {hasPaths ? `${pathCount} paden` : "vraag maker aan"}
                             </span>
                           </button>
                           <button

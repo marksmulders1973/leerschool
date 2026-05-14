@@ -461,7 +461,7 @@ export default function HomeV2() {
             color: T.textDim,
             letterSpacing: 0.5,
           }}>
-            {BRAND.shortName} · gratis · open · in ontwikkeling
+            {BRAND.shortName} · gratis tot 2027 · 15 min per dag · slim leren
           </div>
         </footer>
       </div>

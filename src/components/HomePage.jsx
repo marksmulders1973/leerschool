@@ -1602,7 +1602,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <a href="/privacy.html" style={{ color: "#445566" }}>Privacybeleid</a>
           </p>
           <p style={{ fontFamily: "var(--font-body)", color: "#334455", fontSize: 10, margin: 0 }}>
-            Deze app is in ontwikkeling en kan fouten bevatten.
+            Vraag of suggestie? Tik op "Feedback" — we lezen alles.
           </p>
         </div>
       </div>

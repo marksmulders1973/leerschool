@@ -308,7 +308,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Betaling via iDEAL of creditcard — binnenkort. Geen spam, alleen één mail als het klaar is.
+              Leerkwartier is gratis tot januari 2027. Premium start dan met €5,99/maand of €19,95 voor de hele examenperiode — geen auto-renewal.
             </div>
             <input
               type="email"

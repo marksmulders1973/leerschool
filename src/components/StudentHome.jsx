@@ -430,7 +430,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                       key: "leren",
                       enabled: heeftPaden && !!onPickPathsForSubject,
                       label: "📚 Leren",
-                      sub: heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "binnenkort",
+                      sub: heeftPaden ? `${aantalPaden} ${aantalPaden === 1 ? "pad" : "paden"}` : "vraag maker aan",
                       onClick: () => { if (heeftPaden && onPickPathsForSubject) { SoundEngine.play("click"); onPickPathsForSubject(vak.id); } },
                       colorOn: "#00e676",
                       bgOn: "rgba(0,200,83,0.18)",

@@ -88,7 +88,7 @@ export default function MeeBezig({
             {subjectLabel || subjectId}
           </span>
         ) : `${subjectIcon || "📚"} ${subjectLabel || subjectId}`}
-        subtitle="Leren — komt eraan!"
+        subtitle="Voor dit vak werken we aan de leerpaden — start nu met toets oefenen"
         onBack={onBack}
         onHome={onHome}
       />

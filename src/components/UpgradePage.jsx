@@ -149,7 +149,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
               🔔 Notificeer mij bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 12 }}>
-              Betaling via iDEAL of creditcard — binnenkort beschikbaar. Laat je e-mail achter en we sturen je een berichtje.
+              Leerkwartier is in 2026 helemaal gratis. Vanaf januari 2027 starten we premium — laat je e-mail achter voor 30 dagen gratis premium bij lancering.
             </div>
             <input
               type="email"
