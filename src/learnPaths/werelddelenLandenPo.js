@@ -250,6 +250,81 @@ const steps = [
       { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Duitsland.", "Spanje."] },
       { q: "**Hoofdstad** Brazilië?", options: ["Brasília", "Rio", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Klopt.", "Stad maar geen hoofdstad.", "Argentinië.", "Peru."] },
       { q: "**Grootste oceaan**?", options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"], answer: 0, wrongHints: [null, "Klopt.", "Tweede.", "Derde.", "Klein."] },
+      {
+        q: "Welke **rivier** stroomt door **Egypte**?",
+        options: ["Nijl", "Amazone", "Rijn", "Donau"],
+        answer: 0,
+        wrongHints: [null, "Klopt — langste rivier van Afrika (~6.650 km).", "Amazone = Zuid-Amerika.", "Rijn = Europa (Duitsland-NL).", "Donau = Europa (Oost)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is de Nijl?", tekst: "De **Nijl** is een **gigantische rivier in Afrika**. ~6.650 km lang — vaak genoemd als langste rivier ter wereld (debat met Amazone). Stroomt door **11 landen**, eindigt in Egypte → Middellandse Zee." },
+            { titel: "Waarom belangrijk voor Egypte?", tekst: "Egypte is grotendeels **woestijn** (Sahara). De Nijl is de enige **vaste waterbron**. Daardoor:\n• 95% van Egyptenaren wonen langs de Nijl\n• Oude Egyptenaren bouwden hun beschaving rond de rivier\n• Vruchtbaar slik na overstromingen → landbouw\n• Hoofdstad **Caïro** ligt aan de Nijl\n• **Piramides van Gizeh** vlakbij" },
+            { titel: "Cito-feit: top rivieren wereld", tekst: "Onthoud deze beroemde rivieren voor Cito:\n• **Nijl** — Afrika, Egypte (~6.650 km)\n• **Amazone** — Zuid-Amerika, Brazilië (~7.000 km, breedst)\n• **Yangtze** — China, langste in Azië\n• **Mississippi** — VS\n• **Rijn** — Duitsland → NL → Noordzee\n• **Donau** — Duitsland → Oost-Europa → Zwarte Zee" },
+          ],
+          woorden: [
+            { woord: "rivier", uitleg: "Lange stroom water die naar zee of meer loopt. Vaak van bron in bergen." },
+            { woord: "monding", uitleg: "Waar rivier in zee/meer eindigt." },
+            { woord: "delta", uitleg: "Gebied bij monding waar rivier in vele takken splitst (zoals Nijl-delta)." },
+          ],
+          theorie: "Cito-rivier-vragen vragen vaak: 'door welk LAND stroomt rivier X?' of 'welke rivier door land Y?'. Onthoud minstens:\n• Nijl → Egypte/Soedan\n• Amazone → Brazilië\n• Rijn → Duitsland/NL/CH/FR\n• Donau → 10 landen (van Duitsland tot Zwarte Zee)\n• Maas → Frankrijk/België/NL\n• Schelde → Frankrijk/België/NL",
+          voorbeelden: [
+            { type: "feit", tekst: "Egypte heet ook wel 'het geschenk van de Nijl' — zonder de rivier geen Egyptische beschaving 5000 jaar terug." },
+            { type: "feit", tekst: "De Nijl heeft 2 hoofdtakken: Blauwe Nijl (uit Ethiopië) + Witte Nijl (uit Oeganda)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet Sahara-rivier", uitleg: "De Nijl loopt DOOR de Sahara maar komt niet uit de Sahara — bron ligt in regenrijk Oost-Afrika." }],
+          niveaus: { basis: "Nijl. = A.", simpeler: "De Nijl is een lange rivier in Afrika die door Egypte stroomt. Belangrijk voor landbouw + oude beschaving. = A.", nogSimpeler: "Nijl = A." },
+        },
+      },
+      {
+        q: "Welk **land** ligt **noordelijk** van Nederland?",
+        options: ["Geen (Noordzee)", "België", "Duitsland", "Frankrijk"],
+        answer: 0,
+        wrongHints: [null, "Klopt — boven NL = Noordzee, dan Engeland/Schotland.", "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
+        uitlegPad: {
+          stappen: [
+            { titel: "NL buurlanden + windstreken", tekst: "Nederland heeft maar **2 landen-buren**:\n• **België** in het **zuiden**\n• **Duitsland** in het **oosten**\n\nIn het **noorden** + **westen** ligt de **Noordzee**. Aan de andere kant van de Noordzee: **Engeland/Schotland**." },
+            { titel: "Windstreken in NL", tekst: "Cito vraagt vaak naar **windstreken**:\n• **N** (noord) — boven NL\n• **Z** (zuid) — onder NL\n• **W** (west) — links\n• **O** (oost) — rechts\n\nHandig ezelsbruggetje: 'Nooit Op Zaterdag Werken' = **N**-**O**-**Z**-**W** (klokrond)." },
+            { titel: "Cito-feit: NL ligt LAAG", tekst: "Nederland betekent letterlijk **'lage landen'**. Veel onder zeespiegel (Zuid-Holland tot 6 meter onder NAP). Daarom: dijken + dammen + Deltawerken. Hoogste punt = **Vaalserberg** (322 m, hoek Limburg waar NL-BE-DE elkaar raken). Veel landen zonder bergen, maar wel water + dijken." },
+          ],
+          woorden: [
+            { woord: "windstreek", uitleg: "Richting op kompas: noord, oost, zuid, west." },
+            { woord: "NAP", uitleg: "Normaal Amsterdams Peil — referentiepunt voor hoogte in NL." },
+            { woord: "Vaalserberg", uitleg: "Hoogste punt vasteland NL: 322 m boven zeespiegel. Drielandenpunt." },
+          ],
+          theorie: "NL ligging in Europa:\n• Buurland N: **Noordzee** (geen land)\n• Buurland O: **Duitsland** (grens ~570 km)\n• Buurland Z: **België** (grens ~450 km)\n• Buurland W: **Noordzee**\n• NL-eilanden: Wadden­eilanden + Caribische delen (Aruba/Curaçao/Bonaire/Sint Maarten)",
+          voorbeelden: [
+            { type: "feit", tekst: "Vanuit Den Haag is het ~370 km naar Berlijn (DE) maar maar ~180 km naar Brussel (BE)." },
+            { type: "feit", tekst: "Caribische deel: Aruba, Curaçao, Sint Maarten zijn LANDEN binnen het Koninkrijk NL. Bonaire/Saba/Sint Eustatius zijn 'bijzondere gemeentes'." },
+          ],
+          basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Frankrijk grenst NIET aan NL — daar zit België tussen. Cito-instinker." }],
+          niveaus: { basis: "Noordzee. = A.", simpeler: "Ten noorden van NL ligt de Noordzee (water, geen land). Verder weg over zee: Engeland/Schotland. = A.", nogSimpeler: "Noordzee = A." },
+        },
+      },
+      {
+        q: "Wat is een **continent**?",
+        options: ["Heel groot stuk land — 7 werelddelen", "Een land", "Een berg", "Een zee"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 7 continenten = werelddelen: Azië, Afrika, Europa, etc.", "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een continent?", tekst: "Een **continent** (of **werelddeel**) is een **gigantisch stuk land** op de aarde. Er zijn **7 continenten** wereldwijd:\n1. **Azië** (grootste, 4,5 miljard mensen)\n2. **Afrika** (snelst groeiend)\n3. **Noord-Amerika**\n4. **Zuid-Amerika**\n5. **Antarctica** (zuidpool — geen permanente bewoners)\n6. **Europa** (waar NL ligt)\n7. **Australië/Oceanië** (kleinste)" },
+            { titel: "Wat is verschil land vs continent?", tekst: "• **Continent** = werelddeel, bevat veel landen. Bv. Europa heeft ~50 landen.\n• **Land** = afgebakend gebied met grenzen + eigen overheid. Bv. Nederland, België, Duitsland.\n\nNederland = land **in** continent Europa." },
+            { titel: "Cito-feit: 5 vs 6 vs 7 continenten?", tekst: "Verschillende landen tellen anders. In **NL leren we 7 continenten**. Maar in sommige landen telt men:\n• 6 continenten: Eurazië als 1\n• 5 continenten: Amerika als 1 (Olympische ringen: 5 ringen voor 5 bewoonde continenten)\n\nCito-antwoord NL: **7 continenten**. Onthoud allemaal: AAEEOON­A → Azië, Afrika, Europa, Antarctica, Oceanië, Noord-Amerika, Zuid-Amerika." },
+          ],
+          woorden: [
+            { woord: "continent", uitleg: "Heel groot stuk land. Werelddeel. NL telt er 7." },
+            { woord: "werelddeel", uitleg: "Synoniem van continent." },
+            { woord: "oceaan", uitleg: "Heel groot stuk water tussen continenten. 5 oceanen wereldwijd." },
+          ],
+          theorie: "Continenten + oceanen samen:\n• **7 continenten** (land)\n• **5 oceanen** (water): Stille (Pacific), Atlantisch, Indisch, Arctisch (noordpool), Antarctisch (zuidpool)\n\n**Aarde = ~71% water + 29% land**. Meer water dan land!",
+          voorbeelden: [
+            { type: "feit", tekst: "Antarctica heeft GEEN permanente inwoners — alleen onderzoekers (~1.000-4.000 wisselend). Te koud + grond bevroren." },
+            { type: "feit", tekst: "Azië heeft 30% van wereld-landoppervlak maar 60% van wereldbevolking." },
+          ],
+          basiskennis: [{ onderwerp: "Niet land", uitleg: "Cito test soms: 'Is Frankrijk een continent?' Antwoord: NEE — Frankrijk is een LAND in continent Europa." }],
+          niveaus: { basis: "Werelddeel — 7 stuks. = A.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië. = A.", nogSimpeler: "Werelddeel = A." },
+        },
+      },
     ],
   },
 ];
