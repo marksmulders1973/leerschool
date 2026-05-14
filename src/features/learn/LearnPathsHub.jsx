@@ -3,6 +3,7 @@ import supabase from "../../supabase";
 import { ALL_LEARN_PATHS } from "../../learnPaths";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
+import { estimatePathMinutes } from "../../shared/pathDuration.js";
 import LeerpadBot from "./LeerpadBot.jsx";
 
 const C = {
@@ -870,7 +871,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                     {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
                                   </div>
                                   <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
-                                    {total} stappen · {p.chapters?.length || 0} hoofdstukken
+                                    {total} stappen · {p.chapters?.length || 0} hoofdstukken · ⏱️ ~{estimatePathMinutes(p)} min
                                   </div>
                                   {isStarted && (
                                     <div>
