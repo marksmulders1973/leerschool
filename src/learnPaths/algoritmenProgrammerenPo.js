@@ -249,6 +249,81 @@ const steps = [
       { q: "Wie was **eerste programmeur**?", options: ["Ada Lovelace (1840s)", "Gates", "Jobs", "Berners-Lee"], answer: 0, wrongHints: [null, "Klopt.", "Veel later.", "Niet primair.", "Niet primair."] },
       { q: "**Linux** door?", options: ["Linus Torvalds (1991)", "Microsoft", "Apple", "Google"], answer: 0, wrongHints: [null, "Klopt — open source.", "Niet.", "Niet.", "Niet."] },
       { q: "**NL-informaticus** die kortste-pad-algoritme bedacht?", options: ["Edsger Dijkstra", "Cruijff", "Slat", "Tim Berners-Lee"], answer: 0, wrongHints: [null, "Klopt — Turing-award 1972.", "Voetbal.", "Niet primair.", "Niet NL."] },
+      {
+        q: "Een **if-else**-instructie betekent?",
+        options: ["ALS X dan dit, ANDERS dat", "Herhaal iets 10 keer", "Wacht 5 seconden", "Maak een variabele"],
+        answer: 0,
+        wrongHints: [null, "Klopt — beslissing op basis van conditie.", "Dat is een loop, niet if-else.", "Dat is sleep/wait.", "Dat is variabele declaratie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is if-else?", tekst: "**If-else** (Engels voor 'als-anders') is een **beslissings-instructie** in elke programmeertaal. Computer checkt een **conditie** en kiest één van twee paden:\n\n```\nif (regen):\n    pak paraplu\nelse:\n    laat paraplu thuis\n```\n\nMens-vertaling: 'ALS het regent → paraplu mee. ANDERS → niet.'" },
+            { titel: "Voorbeelden in dagelijks leven", tekst: "Computers doen if-else miljoenen keren per dag:\n• **Login**: ALS wachtwoord klopt → laat binnen, ANDERS → toon fout\n• **Spel**: ALS speler nog 0 levens → game over, ANDERS → ga door\n• **Webshop**: ALS in voorraad → toon 'koop', ANDERS → 'wachtlijst'\n• **Self-driving car**: ALS rood licht → stop, ANDERS → rij door" },
+            { titel: "Cito-tip: 3 belangrijke programmeer-bouwstenen", tekst: "Onthoud deze 3 voor Cito:\n1. **Sequentie** — stappen in volgorde uitvoeren\n2. **Conditie** (if-else) — beslissing nemen\n3. **Loop** (herhaling) — iets X keer of zolang nodig herhalen\n\nAlle programma's combineren deze 3 dingen, hoe complex ook." },
+          ],
+          woorden: [
+            { woord: "if-else", uitleg: "Programmeer-instructie voor beslissingen: ALS conditie → A, ANDERS → B." },
+            { woord: "conditie", uitleg: "Voorwaarde die waar (true) of niet-waar (false) is. Bv. 'regent het?'" },
+            { woord: "Boolean", uitleg: "Waarde die alleen TRUE of FALSE kan zijn. Komt van wiskundige George Boole." },
+          ],
+          theorie: "Voorbeelden if-else in Scratch (kinder-programmeer-omgeving):\n```\nals <regent> dan\n    zeg 'paraplu mee!'\nanders\n    zeg 'fijne dag!'\n```\n\nDezelfde logica in Python:\n```\nif regent:\n    print('paraplu mee!')\nelse:\n    print('fijne dag!')\n```\n\nIn elke taal hetzelfde idee: conditie → beslissing.",
+          voorbeelden: [
+            { type: "feit", tekst: "Kinderen leren if-else vaak via Scratch (visuele blokken) voor ze 'echte' code typen." },
+            { type: "feit", tekst: "Spelletjes als Minecraft hebben honderden if-else: ALS speler aanvalt → minus leven, ANDERS → wacht." },
+          ],
+          basiskennis: [{ onderwerp: "Engels", uitleg: "Programmeertalen gebruiken Engels: 'if', 'else', 'while', 'for'. Goed Engels = makkelijker leren." }],
+          niveaus: { basis: "Als-dan-anders. = A.", simpeler: "If-else = ALS-DAN-ANDERS. Computer checkt iets en kiest 1 van 2 paden. Bv. ALS wachtwoord klopt → laat binnen. = A.", nogSimpeler: "Als-anders = A." },
+        },
+      },
+      {
+        q: "Een **bug** in software is?",
+        options: ["Fout in de code waardoor programma niet goed werkt", "Spinnetje in de computer", "Snelheid van de chip", "Wachtwoord-kraker"],
+        answer: 0,
+        wrongHints: [null, "Klopt — Engels 'bug' = beestje, maar in code-context = fout/probleem.", "Niet letterlijk — kwam wel van echte mot in oude computer (1947).", "Dat is clock-snelheid (GHz).", "Dat is hacking-tool."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een bug?", tekst: "Een **bug** is een **fout in software**. Code werkt niet zoals bedoeld. Voorbeelden:\n• Knop reageert niet als je klikt\n• App crasht plotseling\n• Spelletje geeft 999999 punten ipv 100\n• Rekenmachine zegt 2+2=5\n\nElke programmeur — zelfs de allerbeste — schrijft bugs. Goede programmeurs zoeken + verbeteren bugs snel." },
+            { titel: "Waar komt de naam 'bug' vandaan?", tekst: "**Echt verhaal uit 1947**: pionier-programmeur **Grace Hopper** vond een **echte mot** in haar computer (Harvard Mark II). De mot zat tussen schakelaars en blokkeerde de werking. Ze schreef 'first actual case of bug being found' in haar logboek. Sindsdien = bug = software-fout.\n\nHet woord 'bug' bestond al eerder in techniek (Thomas Edison gebruikte het), maar Hopper's verhaal werd legendarisch." },
+            { titel: "Cito-feit: bug-jacht = debuggen", tekst: "Het zoeken + oplossen van bugs heet **'debuggen'**. Programmeurs gebruiken:\n• **Print-statements** — laat zien wat code doet\n• **Debugger** — stap-voor-stap door code lopen\n• **Tests** — automatisch checken of code klopt\n• **Vraag aan AI** (ChatGPT/Copilot) — moderne hulpmiddel" },
+          ],
+          woorden: [
+            { woord: "bug", uitleg: "Fout in software. Maakt dat programma niet werkt zoals bedoeld." },
+            { woord: "debuggen", uitleg: "Bugs zoeken en oplossen. Letterlijk: 'on-buggen'." },
+            { woord: "crash", uitleg: "Programma stopt onverwacht door bug. App sluit, scherm zwart." },
+          ],
+          theorie: "Beroemde bugs in geschiedenis:\n• **Y2K-bug (2000)** — angst dat alle computers zouden crashen op 1 jan 2000 (datum-format) — viel mee\n• **NASA Mars Climate Orbiter (1999)** — bug met meter vs feet → $125 mln-satelliet verloren\n• **Knight Capital (2012)** — bug zorgde voor $440 mln verlies in 45 minuten\n• **Therac-25 (1985-87)** — radio-therapie-bug doodde 6 patiënten\n\nProgramma-fouten kunnen ECHTE gevolgen hebben.",
+          voorbeelden: [
+            { type: "feit", tekst: "Grace Hopper's mot zit nu in het Smithsonian Museum (Washington DC), opgeplakt in een logboek." },
+            { type: "feit", tekst: "Top-software heeft ~1 bug per 1000 regels code. Een browser heeft 10+ miljoen regels = 10.000+ bugs." },
+          ],
+          basiskennis: [{ onderwerp: "Niet beestje", uitleg: "Hoewel het verhaal echt is, betekent 'bug' nu uitsluitend code-fout — geen letterlijk insect." }],
+          niveaus: { basis: "Fout in code. = A.", simpeler: "Een bug is een fout in software die maakt dat programma niet goed werkt. Naam komt van een echte mot in oude computer (1947). = A.", nogSimpeler: "Code-fout = A." },
+        },
+      },
+      {
+        q: "Wat doet een **variabele** in code?",
+        options: ["Onthoudt een waarde met een naam (bv. score = 0)", "Voert berekening uit", "Toont bericht aan gebruiker", "Sluit programma af"],
+        answer: 0,
+        wrongHints: [null, "Klopt — variabele bewaart waarde voor later gebruik.", "Dat is een functie/operator, niet een variabele.", "Dat is print/output.", "Dat is exit/quit."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een variabele?", tekst: "Een **variabele** is een **'doosje met naam'** in code. Computer onthoudt er een waarde in, en jij gebruikt de naam om de waarde op te halen.\n\nVoorbeeld:\n```\nscore = 0\nleven = 3\nspeler_naam = 'Floor'\n```\n\nLater in code: `score = score + 10` (score wordt 10)." },
+            { titel: "Waarom 'variabele'?", tekst: "Heet zo omdat de waarde **kan veranderen** (variëren). Anders dan een **constante** (bv. π = 3,14, blijft altijd hetzelfde).\n\nIn games:\n• Score VERANDERT (variabele)\n• Maximum-leven KAN constant zijn (bv. altijd 3)\n• Speler-naam VERANDERT per speler" },
+            { titel: "Cito-feit: data-types", tekst: "Variabelen hebben **types** (soorten waarden):\n• **Getal** (int): score = 100\n• **Tekst** (string): naam = 'Floor'\n• **Waar/onwaar** (boolean): geactiveerd = True\n• **Lijst**: hoogste_scores = [100, 85, 70]\n\nElk type heeft eigen regels. Bij Cito test soms: 'welk type is X?' bij voorbeeld." },
+          ],
+          woorden: [
+            { woord: "variabele", uitleg: "Doosje met naam dat een waarde opslaat. Waarde kan veranderen." },
+            { woord: "constante", uitleg: "Waarde die NIET kan veranderen. Bv. π of het aantal dagen in een week." },
+            { woord: "type", uitleg: "Soort waarde: getal, tekst, waar/onwaar, lijst." },
+          ],
+          theorie: "Variabelen in verschillende talen:\n• **Scratch**: 'maak variabele score' → blokje\n• **Python**: `score = 0`\n• **JavaScript**: `let score = 0;`\n• **Java**: `int score = 0;`\n\nElke taal heeft eigen syntax, maar het CONCEPT is overal hetzelfde: 'sla waarde op onder naam'.",
+          voorbeelden: [
+            { type: "feit", tekst: "Een game zoals Minecraft heeft tienduizenden variabelen tegelijk: positie speler, leven, item-inhoud, weer, dag/nacht, enzovoort." },
+            { type: "feit", tekst: "Slimme namen helpen: 'score' > 's', 'aantal_levens' > 'al'. Code-leesbaarheid = belangrijk." },
+          ],
+          basiskennis: [{ onderwerp: "Geen 'doos'-tegel-cito", uitleg: "Cito vraagt vaak op concept-niveau: 'wat doet een variabele?' Antwoord = 'onthoudt waarde met naam'." }],
+          niveaus: { basis: "Onthoudt waarde. = A.", simpeler: "Variabele = doosje met naam in code dat een waarde onthoudt. Bv. score = 0. Later: score = 10. = A.", nogSimpeler: "Doosje met naam = A." },
+        },
+      },
     ],
   },
 ];
