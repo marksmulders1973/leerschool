@@ -45,9 +45,11 @@ Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vrag
 - **Afkortingen uitleggen** bij eerste gebruik (MBO/HBO/WO/CAO/AOW/ZZP/NAVO/USSR/AVG/HTTPS/EU/VS).
 - **Examen-modus split schoon**: `examenEconomie2025T1` heeft hints — beslis split of opschonen.
 
-**P3 — Pas DAARNA nieuwe paden** + alleen als ze in Cito-core vallen *(taal/rekenen/studievaardigheden/wereldoriëntatie groep 6-8)*:
-- Geen ruimtevaart/Olympische/eetcultuur/koude-oorlog meer.
+**P3 — Pas DAARNA nieuwe paden** in Cito-kern *(taal/rekenen/studievaardigheden/wereldoriëntatie groep 6-8)*:
+- Eerst Cito-kern volledig vullen + opfrissen.
 - Bij twijfel: Leerkwartier-test ("helpt 10-jarige Cito-vraag beter begrijpen?") strikt toepassen.
+
+**P4 — Niet-Cito-vakken die al in de app staan** *(toegevoegd 2026-05-14 na Mark-feedback)*: Engels-PO, ruimtevaart, Olympische, eetcultuur, kunstenaars, etc. zijn **toegestaan** maar **lagere prioriteit**. Volgorde: eerst Cito-kern (P3) compleet — pas dán uitbouwen. **Niet zomaar verwijderen** als ze al in de app zichtbaar zijn; behandel als achterlopende prio in plaats van scrap.
 
 **STOP** met klas 1-3 onderbouw VO-uitbreiding (C-taak in `project_continuum_klas_1_3_onderbouw`) tot P0/P1/P2 op groen staan.
 
@@ -273,7 +275,7 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - Geen mocks in DB-tests.
 - Geen alarmistische taal over AVG-boetes — solo-builder = vrijwel nul boete-risico, eerste AP-actie = brief.
 - Geen feature-bloat — Leerkwartier-test bij elke feature toepassen.
-- **Geen nieuwe paden buiten Cito-kern groep 6-8** *(toegevoegd 2026-05-12)* tot P0/P1/P2 op groen. Bij twijfel: niet bouwen. Geen ruimtevaart/Olympische/eetcultuur/koude-oorlog/kunstenaars/godsdiensten-detail meer in deze sprint.
+- **Cito-kern eerst** *(verduidelijkt 2026-05-14)*: prio = Doorstroomtoets/Cito-kern groep 6-8 vullen + verbeteren. Niet-Cito-vakken die al in de app staan (Engels, ruimtevaart, kunstenaars, etc.) zijn TOEGESTAAN — maar pas uitbouwen als Cito-kern compleet. **Niet weghalen** als ze al zichtbaar zijn; ze horen in de app, ze hebben gewoon lagere prio.
 - **Geen paden > 5 stappen** *(toegevoegd 2026-05-12)* — anders breekt kwartier-belofte.
 - Geen documentatie/README's aanmaken tenzij Mark expliciet vraagt.
 

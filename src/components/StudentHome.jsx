@@ -17,6 +17,7 @@ const VAKKEN_PO = [
   { id: "spelling" },
   { id: "begrijpend-lezen" },
   { id: "natuur", labelOverride: "Wereld & Natuur" },
+  { id: "engels" },
   { id: "geschiedenis" },
   { id: "aardrijkskunde" },
 ];
