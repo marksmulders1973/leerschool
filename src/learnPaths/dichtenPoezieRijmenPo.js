@@ -284,6 +284,9 @@ const steps = [
       { q: "Wat is **alliteratie**?", options: ["Beginrijm zelfde letter", "Eindrijm", "Niet rijm", "Ritme"], answer: 0, wrongHints: [null, "Klopt — Mooie Mette.", "Eindrijm.", "Wel.", "Niet."] },
       { q: "**Haiku** is uit welk land?", options: ["Japan", "NL", "VS", "Frankrijk"], answer: 0, wrongHints: [null, "Klopt.", "Niet origineel.", "Niet.", "Niet."] },
       { q: "Beroemde **NL-kindergedicht-dichter**?", options: ["Annie M.G. Schmidt", "Joost Vondel", "Shakespeare", "Marsman"], answer: 0, wrongHints: [null, "Klopt.", "Gouden Eeuw, niet kindergedicht.", "Engels.", "Niet kindergedicht."] },
+      { q: "Een **strofe** is?", options: ["Een groepje versregels (couplet)","Een woord","Een rijm","Een dichter"], answer: 0, wrongHints: [null,"Klopt — bouwsteen van gedicht.","Niet.","Rijm = klank, geen groep.","Persoon."] },
+      { q: "*'Zo wit als sneeuw'* = ?", options: ["Vergelijking","Hyperbool","Personificatie","Rijm"], answer: 0, wrongHints: [null,"Klopt — vergelijken met 'als'.","Niet overdrijven.","Geen menselijke eigenschap.","Geen rijm."] },
+      { q: "Hoeveel lettergrepen heeft een **haiku** per regel?", options: ["5-7-5","4-4-4","8-8-8","2-3-2"], answer: 0, wrongHints: [null,"Klopt — beroemd 17-lettergrepen-totaal.","Niet — vast Japans patroon.","Te veel.","Te weinig."] },
     ],
   },
 ];

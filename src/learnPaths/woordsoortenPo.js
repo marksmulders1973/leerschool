@@ -347,6 +347,10 @@ const steps = [
           niveaus: { basis: "een. A.", simpeler: "Lidwoorden = de, het, een. Hier 'een' (onbepaald) vóór 'huis'. = A.", nogSimpeler: "Een = A." },
         },
       },
+      { q: "*'De **snelle** auto rijdt.'* — Welk woordsoort is 'snelle'?", options: ["Bijvoeglijk naamwoord","Zelfst. naamwoord","Werkwoord","Lidwoord"], answer: 0, wrongHints: [null,"Klopt — beschrijft hoe de auto is.","Niet — geen ding.","Niet — geen actie.","Niet."] },
+      { q: "*'Jij **loopt** naar school.'* — Welk woordsoort is 'loopt'?", options: ["Werkwoord","Zelfst. naamwoord","Bijvoeglijk","Voornaamwoord"], answer: 0, wrongHints: [null,"Klopt — actie/doen-woord.","Niet — geen ding.","Niet — geen eigenschap.","Niet."] },
+      { q: "*'**Hij** is mijn vriend.'* — Welk woordsoort is 'hij'?", options: ["Persoonlijk voornaamwoord","Zelfst. naamwoord","Bijvoeglijk","Werkwoord"], answer: 0, wrongHints: [null,"Klopt — vervangt een persoon.","Niet — geen naam.","Niet.","Niet."] },
+      { q: "*'**Mijn** boek ligt hier.'* — Welk woordsoort is 'mijn'?", options: ["Bezittelijk voornaamwoord","Lidwoord","Bijvoeglijk","Werkwoord"], answer: 0, wrongHints: [null,"Klopt — wijst bezit aan.","Niet — bezittelijk vnw.","Vergelijkbaar maar specifieker.","Niet."] },
     ],
   },
 ];

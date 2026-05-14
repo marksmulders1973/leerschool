@@ -387,6 +387,10 @@ const steps = [
           niveaus: { basis: "vangt. = A.", simpeler: "Vangen → stam 'vang'. Hij-vorm TT = stam + t = vangt. = A.", nogSimpeler: "Vangt = A." },
         },
       },
+      { q: "Werken — verleden tijd: 'hij ____'?", options: ["werkte","werkde","werk","werkten"], answer: 0, wrongHints: [null,"Klopt — stam 'werk' eindigt op 'k' (kofschip) → +te.","Niet — k zit in kofschip, dus -te.","Geen verleden vorm.","Meervoud."] },
+      { q: "Spelen — verleden tijd: 'wij ____'?", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null,"Klopt — stam 'speel' niet in kofschip → +den (meervoud).","Dat is enkelvoud.","Niet — l zit niet in kofschip.","Tegenwoordige tijd."] },
+      { q: "Welke werkwoorden zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","a-e-i-o-u","b-d-g-w"], answer: 0, wrongHints: [null,"Klopt — eind op deze letters → -te / -t.","Niet — h en d horen er niet bij.","Dat zijn klinkers.","Andere letters."] },
+      { q: "Ik **bak** brood. Stam = ?", options: ["bak","ba","bakk","bakken"], answer: 0, wrongHints: [null,"Klopt — ik-vorm = stam.","Te kort.","Verdubbeling klopt niet hier.","Hele werkwoord."] },
     ],
   },
 ];

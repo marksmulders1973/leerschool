@@ -408,6 +408,8 @@ const steps = [
           niveaus: { basis: "Tekort. = A.", simpeler: "Overvloed = veel → antoniem = tekort/schaarste. = A.", nogSimpeler: "Tekort = A." },
         },
       },
+      { q: "Synoniem van **boos**?", options: ["kwaad","blij","verdrietig","bang"], answer: 0, wrongHints: [null,"Klopt — zelfde betekenis.","Antoniem.","Andere emotie.","Andere emotie."] },
+      { q: "Wat betekent 'pessimistisch'?", options: ["Verwacht het slechtste","Verwacht het beste","Lacht veel","Eet veel"], answer: 0, wrongHints: [null,"Klopt.","Dat is optimistisch.","Niet betekenis.","Geen verband."] },
     ],
   },
 ];

@@ -560,6 +560,13 @@ const steps = [
           "Cijfers zijn welkom maar het ontbreken is niet de hoofdfout. Denk aan welke tekstsoort dit was.",
         ],
       },
+      { q: "Wat is doel van een **betoog**?", options: ["Lezer overtuigen","Lezer informeren","Lezer aan laten denken","Lezer laten lachen"], answer: 0, wrongHints: [null,"Klopt — standpunt + argumenten.","Dat is uiteenzetting.","Dat is beschouwing.","Niet examen-tekstsoort."] },
+      { q: "Een **uiteenzetting** heeft welk doel?", options: ["Informeren","Overtuigen","Tegenargumenten geven","Mening kiezen"], answer: 0, wrongHints: [null,"Klopt — neutraal uitleggen.","Dat is betoog.","Dat is beschouwing.","Geen mening — neutraal."] },
+      { q: "Een **beschouwing** geeft?", options: ["Verschillende kanten zonder definitieve keuze","Eén mening","Alleen feiten","Alleen voorbeelden"], answer: 0, wrongHints: [null,"Klopt — pro + contra + bedenking.","Dat is betoog.","Dat is uiteenzetting.","Niet structuur."] },
+      { q: "Welk **verbindingswoord** geeft een tegenstelling aan?", options: ["echter","want","bijvoorbeeld","ten eerste"], answer: 0, wrongHints: [null,"Klopt — markeert wending/contrast.","Reden, geen tegenstelling.","Voorbeeld.","Volgorde."] },
+      { q: "Wat moet **in de inleiding** van een tekst?", options: ["Onderwerp + aanleiding + opbouw","De conclusie","Alle voorbeelden","De bronnen"], answer: 0, wrongHints: [null,"Klopt — lezer weet wat te verwachten.","Dat is slot.","Voorbeelden in kern.","Bronnen achteraan."] },
+      { q: "Wat is een **topic sentence**?", options: ["De kernzin van een alinea","De titel","De laatste zin","De inleiding"], answer: 0, wrongHints: [null,"Klopt — meestal eerste zin met hoofdgedachte alinea.","Niet specifiek genoeg.","Niet altijd.","Te groot."] },
+      { q: "Welke stap doe je bij **reviseren** als laatste?", options: ["Spelling + interpunctie checken","De argumenten bedenken","Structuur veranderen","Tekst schrijven"], answer: 0, wrongHints: [null,"Klopt — eindcheck na inhoud.","Dat is begin.","Eerder.","Eerder."] },
     ],
   },
 ];

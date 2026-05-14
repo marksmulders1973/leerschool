@@ -635,6 +635,10 @@ const steps = [
           niveaus: { basis: "Bijna even lang. = A.", simpeler: "Samenvatting > 40-50% origineel = TE LANG. Doel: 20-30%. = A.", nogSimpeler: "Bijna even lang = A." },
         },
       },
+      { q: "Wat hoort NIET in een samenvatting?", options: ["Je eigen mening","De hoofdgedachte","Belangrijke voorbeelden","Conclusie"], answer: 0, wrongHints: [null,"Klopt — samenvatting = objectief, geen mening.","Wel — kern van tekst.","Wel — als ze de hoofdgedachte ondersteunen.","Wel — vaak laatste zin."] },
+      { q: "Welke zin past meestal als hoofdgedachte van een alinea?", options: ["De eerste zin","De laatste zin","Een willekeurige zin","Een citaat"], answer: 0, wrongHints: [null,"Klopt — vaak de openingszin (kernzin).","Soms wel, maar meestal openingszin.","Niet — kernzin staat doorgaans voorin.","Citaten zijn voorbeelden, geen hoofdgedachte."] },
+      { q: "Welke lengte is goed voor een samenvatting van 200 woorden?", options: ["~50 woorden","~150 woorden","~10 woorden","~200 woorden"], answer: 0, wrongHints: [null,"Klopt — 20-30% = 40-60 woorden.","Te lang — dat is bijna de tekst zelf.","Te kort — niet alle hoofdpunten passen.","Niet samengevat."] },
+      { q: "Welke vraag stel je om de **hoofdgedachte** te vinden?", options: ["Waar gaat de tekst PRECIES over?","Welke kleur is het mooist?","Hoeveel woorden zijn er?","Wie schreef het?"], answer: 0, wrongHints: [null,"Klopt — kernvraag.","Mening, niet inhoud.","Telling, geen inhoud.","Auteur, niet hoofdgedachte."] },
     ],
   },
 ];

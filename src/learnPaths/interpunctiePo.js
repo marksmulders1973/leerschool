@@ -365,6 +365,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — aanhalingstekens + hoofdletter + punt binnen.", "Mist aanhalingstekens.", "Mist hoofdletter + punt binnen aanhalingstekens.", "Enkele aanhalingstekens minder standaard."],
       },
+      { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null,"Klopt — opsomming heeft komma's tussen, niet vóór 'en'.","Komma's ontbreken.","Verkeerde positie.","Komma vóór 'en' niet bij opsomming."] },
     ],
   },
 ];
