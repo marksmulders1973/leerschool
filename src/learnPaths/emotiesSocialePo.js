@@ -114,6 +114,12 @@ const steps = [
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "0800-2000"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Veilig Thuis."] },
       { q: "Wat doe je bij **boosheid**?", options: ["Tel 10 + diep ademen", "Direct schreeuwen", "Slaan", "Niets"], answer: 0, wrongHints: [null, "Maakt erger.", "Niet OK.", "Wel reageren."] },
       { q: "Wat doe je als **getuige van pesten**?", options: ["Spreek uit + help + vertel volwassene", "Negeer", "Lach mee", "Pest mee"], answer: 0, wrongHints: [null, "Wegkijken werkt niet.", "Slecht.", "Slecht."] },
+      { q: "Wat is **empathie**?", options: ["Inleven in gevoel van iemand anders", "Een soort medicijn", "Boos worden", "Niet praten"], answer: 0, wrongHints: [null, "Geen medicijn.", "Tegenovergesteld.", "Niet."] },
+      { q: "Wat is **assertief** zijn?", options: ["Voor jezelf opkomen zonder anderen aan te vallen", "Agressief schreeuwen", "Niets zeggen", "Iedereen volgen"], answer: 0, wrongHints: [null, "Verschilt van agressief.", "Tegenovergesteld.", "Tegenovergesteld."] },
+      { q: "Welke **lichaamsuiting** wijst vaak op **boosheid**?", options: ["Gespannen gezicht, vuisten", "Lachen", "Slapen", "Zingen"], answer: 0, wrongHints: [null, "Blij.", "Niet emotie-uiting.", "Plezier."] },
+      { q: "Wat helpt bij **stress**?", options: ["Diep ademen + praten met iemand", "Eten + slapen heel veel", "Niet erover praten", "Schreeuwen"], answer: 0, wrongHints: [null, "Niet primair.", "Verzwijgen maakt erger.", "Maakt boos."] },
+      { q: "Wat is een **conflict**?", options: ["Meningsverschil tussen mensen", "Een fijne activiteit", "Een ziekte", "Een land"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Geen ziekte.", "Niet."] },
+      { q: "Hoe los je een **ruzie** met een vriend op?", options: ["Praten + luisteren + sorry zeggen waar nodig", "Wegrennen", "Slaan", "Niet meer praten"], answer: 0, wrongHints: [null, "Lost niets op.", "Niet OK.", "Maakt erger."] },
     ],
   },
 ];

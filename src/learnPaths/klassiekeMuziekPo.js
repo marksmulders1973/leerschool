@@ -114,6 +114,13 @@ const steps = [
       { q: "Hoeveel **strijkers** in symfonieorkest?", options: ["~50-60", "5", "200", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
       { q: "**EU-volkslied** = ?", options: ["Beethoven 9e (Ode an die Freude)", "Mozart Requiem", "Wilhelmus", "Bach Toccata"], answer: 0, wrongHints: [null, "Niet.", "NL.", "Niet."] },
       { q: "Welk NL-feit: **NL is grootmacht in**?", options: ["DJ-muziek (Tiësto/Armin)", "Klassiek componeren", "Opera", "Geen"], answer: 0, wrongHints: [null, "Wel deelnemers.", "Niet specifiek NL.", "Wel."] },
+      { q: "Welke **muziekstijl** hoort bij **Mozart** en **Beethoven**?", options: ["Klassieke muziek", "Pop", "Hip-hop", "Country"], answer: 0, wrongHints: [null, "Veel later.", "Veel later.", "Niet relevant."] },
+      { q: "**Wilhelmus** (NL-volkslied) is uit ___ tijd?", options: ["1568-1572 (Willem van Oranje)", "1900", "1950", "Vandaag"], answer: 0, wrongHints: [null, "Veel ouder.", "Veel ouder.", "Niet."] },
+      { q: "Wat is een **strijkkwartet**?", options: ["4 strijkers samen", "Sportgroep", "Schilderij", "Boek"], answer: 0, wrongHints: [null, "Geen sport.", "Geen kunst.", "Geen tekst."] },
+      { q: "Welk instrument hoort bij **strijkers**?", options: ["Viool", "Fluit", "Trompet", "Drum"], answer: 0, wrongHints: [null, "Houtblazer.", "Koperblazer.", "Slagwerk."] },
+      { q: "**Eurovisie Songfestival 2019** werd gewonnen door welke Nederlander?", options: ["Duncan Laurence — 'Arcade'", "Anouk", "Tiësto", "Marco Borsato"], answer: 0, wrongHints: [null, "Wel NL, niet 2019.", "Geen Eurovisie.", "Geen Eurovisie."] },
+      { q: "Wat is **adagio**?", options: ["Langzaam tempo", "Snel tempo", "Stil", "Hard"], answer: 0, wrongHints: [null, "Allegro = snel.", "Niet tempo.", "Niet tempo."] },
+      { q: "Welk land speelt veel **klompendansen**?", options: ["Nederland", "Spanje", "Japan", "Brazilië"], answer: 0, wrongHints: [null, "Flamenco.", "Japans.", "Samba."] },
     ],
   },
 ];

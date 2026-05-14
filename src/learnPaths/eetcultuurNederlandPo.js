@@ -114,6 +114,13 @@ const steps = [
       { q: "**Goudse kaas** komt uit?", options: ["Gouda (NL)", "Italië", "Frankrijk", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Brie wel.", "Wel."] },
       { q: "**Vis** aanbevolen aantal per week?", options: ["1 keer (omega-3)", "Dagelijks", "Nooit", "Maandelijks"], answer: 0, wrongHints: [null, "Te veel.", "Wel.", "Te weinig."] },
       { q: "**Stroopwafel** uit?", options: ["Gouda (1810)", "Amsterdam", "Frankrijk", "Indonesië"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welk NL-gerecht eet je vaak op **5 december (Sinterklaas)**?", options: ["Pepernoten", "Pizza", "Sushi", "Curry"], answer: 0, wrongHints: [null, "Italiaans.", "Japans.", "Aziatisch."] },
+      { q: "**Boerenkool** wordt vaak gemengd met aardappel tot ___?", options: ["Stamppot", "Soep", "Salade", "Brood"], answer: 0, wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet primair."] },
+      { q: "Welke **drank** drinken NL-kinderen vaak bij ontbijt?", options: ["Melk of jus d'orange", "Bier", "Koffie zwart", "Wijn"], answer: 0, wrongHints: [null, "Geen kinderdrank!", "Niet voor kinderen.", "Geen kinderdrank!"] },
+      { q: "Wat is **Surinaamse roti**?", options: ["Pannenkoek-achtig brood met curry-vulling", "Een soort kaas", "Een fruit", "Soep"], answer: 0, wrongHints: [null, "Niet — roti is brood.", "Geen fruit.", "Geen soep."] },
+      { q: "Hoeveel maaltijden per dag eet **gemiddelde NL'er**?", options: ["3 (ontbijt, lunch, avondeten)", "1", "6", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."] },
+      { q: "Wat is **bitterballen**?", options: ["Gefrituurde balletjes met ragout (NL-borrel)", "Snoep", "Vis", "Fruit"], answer: 0, wrongHints: [null, "Geen snoep.", "Geen vis.", "Geen fruit."] },
+      { q: "**Drop** is een typische NL-snoep met smaak van ___?", options: ["Zoethout-extract", "Chocolade", "Fruit", "Karamel"], answer: 0, wrongHints: [null, "Andere smaak.", "Andere snoep.", "Niet primair."] },
     ],
   },
 ];
