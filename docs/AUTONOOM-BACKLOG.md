@@ -74,8 +74,11 @@ Cito + examens versterken. Drie type werk:
 
 Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `docs/CONTENT-DOELEN.md`.
 
-### Stand op 2026-05-14 (geüpdatet einde sessie ronde 2)
-- **Doorstroomtoets G8**: 346 / 630q = **55% gevuld** ↑↑ (was 36% — sessie 2026-05-14 voegde **+119 vragen** toe in 2 rondes × 3 onderdelen)
+### Stand op 2026-05-14 (geüpdatet einde sessie ronde 3)
+- **Doorstroomtoets G8 — 150-content-doel**: 406 / 450q = **90% gevuld** (3 onderdelen × 150 oefen-vragen)
+  - Was vóór sessie: 227 / 450 = 50%
+  - +179 vragen vandaag in 3 rondes
+- **Proef-toetsen** (60q per onderdeel via random-selectie) = aparte FEATURE, niet meer content
 - **VMBO-examens authentiek**: 476 / 560q = 85% (ongewijzigd — scheef: Wiskunde + Aardrijkskunde leeg, NL + Engels overcompleet)
 - **PO-leerpaden**: alle 62 paden op 40q-standaard ✓
 - **`examenQuizzes/*.json` skipped**: 797 zijn bewust (open vragen, geen MC) + 17 parser-bugs
@@ -83,10 +86,10 @@ Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `d
 ### Drie sporen — volgorde van uitvoering
 
 **🔴 Spoor 1 — Doorstroomtoets G8 verdiepen (PRIO ICP)**
-- [⏳] Taal G8: 74 → **114q** ✓ 2 rondes (commits 8d1d841 + 54f86ed, 2026-05-14, +40 vragen). Verder naar 210 = +96q te gaan.
-- [⏳] Rekenen G8: 74 → **114q** ✓ 2 rondes (commits d2f8bcd + 9e1542c, 2026-05-14, +40 vragen). Verder naar 210 = +96q te gaan.
-- [⏳] Studievaardigheden G8: 79 → **118q** ✓ 2 rondes (commits 928d4dd + 82644e4, 2026-05-14, +39 vragen). Verder naar 210 = +92q te gaan.
-- [ ] 2 proef-toetsen per onderdeel (van 30q elk) — nieuw, nog op te zetten.
+- [⏳] Taal G8: 74 → **133q** ✓ 3 rondes (commits 8d1d841, 54f86ed, 67cccc6 — +59 vragen). 89% van 150. Nog +17q voor 150 oefen-pool.
+- [⏳] Rekenen G8: 74 → **134q** ✓ 3 rondes (commits d2f8bcd, 9e1542c, 51afd0c — +60 vragen). 89% van 150. Nog +16q.
+- [⏳] Studievaardigheden G8: 79 → **139q** ✓ 3 rondes (commits 928d4dd, 82644e4, c679e64 — +60 vragen). 93% van 150. Nog +11q.
+- [ ] **Feature** (architectuur — wacht op Mark): proef-toets-modus met 30 random vragen uit pool per onderdeel.
 
 **🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` (klein, snel)**
 - [ ] Regex `vraag_marker_re` aanpassen zodat MC-antwoord in correctievoorschrift wordt herkend bij format-varianten. Concrete 17 files+vraag-nrs:
