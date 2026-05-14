@@ -648,6 +648,24 @@ export default function App() {
     setPage("play");
   };
 
+  // Proef-toets-modus voor Doorstroomtoets G8 onderdelen: 30 random vragen
+  // uit het oefen-pool, examen-modus (geen hints/uitlegPad). Spoor 1
+  // Doorstroomtoets-content-doel zit op 99%, dit is de feature die de pool
+  // verzilvert.
+  const startProefToets = async (leerpadId, aantal = 30) => {
+    const { buildProefToets } = await import("./features/practice/buildProefToets.js");
+    try {
+      const { quiz, questions } = buildProefToets({ leerpadId, aantal });
+      track("proeftoets_started", { leerpad_id: leerpadId, vragen: questions.length });
+      setGameState({ quiz, mode: "examen", questions, currentQ: 0, score: 0, answers: [], timePerQuestion: 0, startedAt: Date.now() });
+      setPage("play");
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error("[proeftoets] kan niet starten:", e);
+      alert("⚠️ Proef-toets kon niet starten. Probeer later opnieuw.");
+    }
+  };
+
   const finishGame = (finalState) => {
     SoundEngine.play("celebrate");
     const result = {
@@ -1304,6 +1322,7 @@ export default function App() {
             setCurrentQuiz(quiz);
             startGame(quiz, "self");
           }}
+          onStartProefToets={(leerpadId) => startProefToets(leerpadId, 30)}
           onBack={() => setPage("student-home")}
           onHome={goHome}
         />

@@ -1,0 +1,322 @@
+{
+  "id": "nederlands-2024-T1",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Alinea 6 (regels 50-58) bestaat uit twee zinnen. Wat is het verband tussen deze zinnen?",
+      "options": [
+        "Zin 2 geeft een verklaring voor het besluit uit zin 1.",
+        "Zin 2 geeft een voorbeeld bij het probleem in zin 1.",
+        "Zin 2 is een tegenstelling bij het probleem in zin 1.",
+        "Zin 2 vormt samen met zin 1 een opsomming."
+      ],
+      "answer": 0,
+      "explanation": "Vraag Antwoord                                                            Scores",
+      "tekstNr": 1,
+      "vraagNr": 3
+    },
+    {
+      "q": "Welk deelonderwerp hebben de alinea's 1 tot en met 5?",
+      "options": [
+        "de afbrokkeling van de kust door klimaatverandering",
+        "de risico's die kusterosie met zich meebrengt",
+        "het terugtrekken van de kust van Engeland",
+        "het verdwijnen van het dorp Happisburgh"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": 1,
+      "vraagNr": 4
+    },
+    {
+      "q": "Welk deelonderwerp hebben de alinea's 6 tot en met 9?",
+      "options": [
+        "de kosten en baten van het beschermen van kusten",
+        "de noodzaak van het beschermen van de dorpen",
+        "de vraag of kusten beschermd moeten worden",
+        "het beschermen van de Engelse kust"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": 1,
+      "vraagNr": 5
+    },
+    {
+      "q": "Er zijn verschillende manieren van omgaan met de gevolgen van klimaatverandering voor de kustlijn. Welke manier is volgens Nicholls het best?",
+      "options": [
+        "accepteren dat de kustlijn erodeert en land aan de natuur teruggeven",
+        "bepaalde locaties goed beschermen en andere locaties overgeven aan de zee",
+        "dammen en muren bouwen om de zee op afstand te houden",
+        "meer geld investeren in bescherming van de kustlijn bij grote steden"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 1,
+      "vraagNr": 8
+    },
+    {
+      "q": "Wat is de hoofdgedachte van deze tekst? Lees nu het tekstfragment en beantwoord daarna vraag 10 en 11. Tekstfragment Klimaatverandering bedreigt zandstranden als een sluipmoordenaar (1) Lange strandwandelingen bij zonsondergang of afkoelen tijdens een hittegolf: jaarlijks trekken miljoenen mensen naar het strand. Maar wereld- wijd kan de helft van de zandstranden binnen een eeuw verdwijnen. (2) Dit blijkt uit een onderzoek van het Joint Research Centre (JRC) van de Europese Commissie dat gisteren is gepubliceerd. \"Wij zijn geschrokken van de impact op kusten wereldwijd\", zegt Arjen Luijendijk, een van de onderzoekers en werkzaam bij kennisinstituut Deltares. (3) Zandstranden zullen namelijk tientallen tot honderden meters landinwaarts trekken of zelfs compleet verdwijnen als gevolg van de stijgende zeespiegel. Ruim 130.000 kilometer aan zandstrand dreigt te verdwijnen. Als er niet ingegrepen wordt, verdwijnen zandstranden in het oosten van Noord-Amerika, het Amazonegebied, Zuid- en West-Azi', en het zuidwesten van Europa. In de Verenigde Staten is zelfs al een complete kustplaats opgeslokt door de zee. (4) In totaal bestaat een derde van alle kustlijnen ter wereld uit zandstranden. Deze stranden zijn belangrijk als een natuurlijke buffer voor stormen en hoog water. Daarnaast zijn ze belangrijk voor de economie, de recreatie en het toerisme. (5) Hoeveel stranden daadwerkelijk zullen verdwijnen, hangt volgens het onderzoek grotendeels af van twee dingen. Allereerst van de inzet van landen om kusterosie tegen te gaan, door bijvoorbeeld zand op te spuiten zoals we in Nederland doen. En het hangt af van de toekomstige uitstoot van broeikasgassen. (6) \"Kusterosie is een sluipmoordenaar\", legt Luijendijk uit. \"Het is een langzame trend waarbij op lange termijn pas grote gevolgen zichtbaar zijn.\" naar een deel van een online artikel van RTL Nieuws, 3 maart 2020",
+      "options": [
+        "De geschiedenis van Engeland gaat verloren, doordat erosie van de kust door een stijgende zeespiegel steeds meer dorpen in zee laat verdwijnen.",
+        "De kustlijn van Engeland erodeert door klimaatverandering en daarom moeten er maatregelen worden getroffen om dorpen te behouden.",
+        "Engelse dorpen verdwijnen steeds vaker in zee omdat de Britse regering geen maatregelen neemt, in tegenstelling tot de regering van Nederland.",
+        "Erosie van de Engelse kustlijn is een eeuwenoud proces dat steeds sneller gaat en daarom moet er nagedacht worden over de vraag wat beschermd moet worden."
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": 1,
+      "vraagNr": 9
+    },
+    {
+      "q": "Hoe is het tekstfragment het best te typeren ten opzichte van tekst 1?",
+      "options": [
+        "als een aanvulling",
+        "als een conclusie",
+        "als een verklaring",
+        "als een voorbeeld"
+      ],
+      "answer": 0,
+      "explanation": "Vraag Antwoord                                                                      Scores\n\n   Tekst 2 Maal meer",
+      "tekstNr": 1,
+      "vraagNr": 11
+    },
+    {
+      "q": "Wat is de functie van alinea 5? Alinea 5",
+      "options": [
+        "geeft achtergrondinformatie bij het gestelde in alinea 4.",
+        "noemt een gevolg van het gestelde in alinea 4.",
+        "noemt een verschil met de informatie in alinea 4.",
+        "plaatst een kanttekening bij de informatie in alinea 4."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": 2,
+      "vraagNr": 15
+    },
+    {
+      "q": "Wat is de belangrijkste functie van alinea 9?",
+      "options": [
+        "een advies geven",
+        "een conclusie trekken",
+        "een samenvatting geven",
+        "een toekomstverwachting geven"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 2,
+      "vraagNr": 18
+    },
+    {
+      "q": "Welke zin geeft het best de hoofdgedachte van deze tekst weer?",
+      "options": [
+        "Alleen bij bepaalde voedingsmiddelen is het belangrijk dat je goed kauwt, bij andere voedingsmiddelen niet.",
+        "Goed kauwen heeft meerdere voordelen en daarvoor hoef je geen honderd keer te kauwen op een hap.",
+        "Het is belangrijk dat je als kind al leert om goed te kauwen, anders zul je later minder gezond eten.",
+        "Onderzoek naar kauwen bewijst dat de voordelen van goed kauwen het grootst zijn als je minstens honderd keer op een hap kauwt."
+      ],
+      "answer": 1,
+      "explanation": "Tekst 3 Muziek als erfenis",
+      "tekstNr": 2,
+      "vraagNr": 19
+    },
+    {
+      "q": "De afbeelding in deze advertentie trekt de aandacht. Welke andere functie heeft de afbeelding in deze advertentie vooral? De afbeelding",
+      "options": [
+        "is nodig om de tekst te kunnen begrijpen.",
+        "laat zien voor wie de tekst is bedoeld.",
+        "ondersteunt de inhoud van de tekst.",
+        "voegt nieuwe inhoudselementen aan de tekst toe."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": 3,
+      "vraagNr": 20
+    },
+    {
+      "q": "In de tekst staat: \"Het heeft mij zoveel gegeven door de jaren heen, zoveel gebracht. Daarom voelt het logisch dat ik iets teruggeef en straks muziek ga steunen door na te laten aan het Cultuurfonds.\" Wat is het verband tussen deze twee zinnen?",
+      "options": [
+        "doel ' middel",
+        "reden ' uitspraak",
+        "tegenstelling",
+        "uitspraak ' toelichting"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 3,
+      "vraagNr": 21
+    },
+    {
+      "q": "Wat is het belangrijkste doel van deze advertentie?",
+      "options": [
+        "lezers aansporen om net zoals de man uit de advertentie muziek te maken voor het Cultuurfonds",
+        "lezers aansporen om op de website van het Cultuurfonds te kijken of hun brochure aan te vragen",
+        "lezers informeren over de mogelijkheid geld aan het Cultuurfonds na te laten uit hun erfenis",
+        "lezers informeren over het bestaan van de website en brochure van het Cultuurfonds"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 3,
+      "vraagNr": 22
+    },
+    {
+      "q": "In de advertentie staat de tekst \"Wat gaat u straks steunen?\" Tot wie richt de advertentie zich hier vooral? vooral tot lezers die",
+      "options": [
+        "geld willen geven aan de muziekprojecten van het Cultuurfonds",
+        "in hun testament hebben vastgelegd geld na te laten aan het Cultuurfonds",
+        "interesse hebben in de culturele projecten van het Cultuurfonds",
+        "met hun erfenis cultuur in Nederland willen steunen via het Cultuurfonds"
+      ],
+      "answer": 3,
+      "explanation": "Vraag Antwoord                                                                     Scores\n\n   Tekst 4 Uit gewoonte naar Instagram                                                1\n                                                                                      1",
+      "tekstNr": 3,
+      "vraagNr": 23
+    },
+    {
+      "q": "Een tekst kan op verschillende manieren ingeleid worden. bijvoorbeeld door 1 de aanleiding voor het schrijven van de tekst te melden 2 een anekdote te vertellen 3 een conclusie te trekken 4 een deskundige te introduceren Op welke twee manieren wordt deze tekst ingeleid in alinea 1?",
+      "options": [
+        "1 en 2",
+        "1 en 4",
+        "2 en 3",
+        "3 en 4"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 4,
+      "vraagNr": 24
+    },
+    {
+      "q": "\"Daardoor blijft je brein geprikkeld en blijf je scrollen.\" (regels 32-33) Wat zorgt er vooral voor dat je brein geprikkeld blijft?",
+      "options": [
+        "De schokkende beelden op sociale media zorgen dat je blijft kijken.",
+        "De variatie van de inhoud op sociale media is als een fruitmachine.",
+        "Door het algoritme krijg je steeds iets verrassends te zien wat jou interesseert.",
+        "Je vrienden plaatsen steeds weer iets nieuws wat jou interesseert."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": 4,
+      "vraagNr": 26
+    },
+    {
+      "q": "In de alinea's 5 en 6 staan de resultaten van het Nationale Social Media Onderzoek 2021 van Newcom. Wat blijkt uit dit onderzoek? Hieruit blijkt in vergelijking met een jaar eerder dat",
+      "options": [
+        "jongeren en ouderen steeds meer gebruik gaan maken van sociale media.",
+        "jongeren in tegenstelling tot ouderen veel minder gebruikmaken van sociale media.",
+        "jongeren steeds meer gebruikmaken van sociale media, terwijl het gebruik van sociale media door ouderen niet veel verandert.",
+        "jongeren steeds meer gebruikmaken van sociale media, terwijl ouderen steeds minder sociale media gebruiken."
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": 4,
+      "vraagNr": 27
+    },
+    {
+      "q": "\"En hoe meer een verslaving door de maatschappij wordt omarmd, des te lastiger het is om er een einde aan te maken.\" (regels 74-77) Welk verband is er tussen het eerste deel (voor de komma) en het tweede deel (na de komma) van deze zin?",
+      "options": [
+        "doel ' middel",
+        "oorzaak ' gevolg",
+        "opsomming",
+        "uitspraak ' toelichting"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": 4,
+      "vraagNr": 28
+    },
+    {
+      "q": "De alinea's 9 en 10 hebben een gezamenlijk deelonderwerp. Welk deelonderwerp is dat?",
+      "options": [
+        "beter communiceren",
+        "nadeel van telefoongebruik in relaties",
+        "stoppen met sociale media",
+        "tips voor vermindering telefoongebruik"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": 4,
+      "vraagNr": 29
+    },
+    {
+      "q": "Wat is het hoofdonderwerp van deze tekst?",
+      "options": [
+        "storing bij Facebook",
+        "storing op sociale media",
+        "verslaafd aan Instagram",
+        "verslaafd aan sociale media"
+      ],
+      "answer": 3,
+      "explanation": "Het juiste antwoord is D.",
+      "tekstNr": 4,
+      "vraagNr": 30
+    },
+    {
+      "q": "Een van de tekstdoelen van deze tekst is de lezer een verklaring geven voor de verslaving aan sociale media. Welk ander tekstdoel heeft deze tekst? de lezer Schrijfopdracht In de les Nederlands is de tekst `Uit gewoonte naar Instagram' behandeld. Je docent vroeg de leerlingen of ze een dag zonder sociale media zouden kunnen of dat ze dit lastig zouden vinden. Er ontstond een levendige discussie. Zo bleek dat er leerlingen waren die niet zonder sociale media kunnen, maar er waren ook leerlingen die hier weinig om geven. Daarnaast werden er nadelen genoemd van het overmatig gebruik van sociale media. Ook werden mogelijke manieren besproken om het gebruik van sociale media te verminderen. Het onderwerp lijkt iedereen bezig te houden. Jij zit in de leerlingenraad en bespreekt deze discussie. Een medeleerling uit de raad komt met het plan om een challenge te organiseren waarbij leerlingen een week geen sociale media gebruiken. De meningen binnen de leerlingenraad zijn verdeeld. Bovendien kost het organiseren van zo'n challenge veel tijd, dus willen jullie eerst weten of er wel behoefte is aan zo'n week. Jullie plaatsen een artikel in de nieuwsbrief. In het artikel roepen jullie leerlingen op om te laten weten of ze bereid zijn deel te nemen aan de challenge. Je gaat dit artikel schrijven. Je vertelt hierin wat de aanleiding voor het artikel is, namelijk het idee van de leerlingenraad om een challenge te organiseren waarbij leerlingen een week geen sociale media gebruiken. Je legt uit dat jullie op dit idee zijn gekomen door de verschillende meningen bij de discussie in de les Nederlands. Ook het doel van de challenge vergeet je niet te vermelden. Natuurlijk geef je verder aan tot welke datum de leerlingen de leerlingenraad kunnen e-mailen. Ze kunnen hun mail sturen naar challenge@leerlingenraad.nl om zo te laten weten of ze wel of niet aan de challenge mee zouden willen doen. Let op: de laatste vraag van dit examen staat op de volgende pagina.",
+      "options": [
+        "informeren over de gevolgen van de storing bij Facebook",
+        "informeren over manieren om het socialemediagebruik te beperken",
+        "overtuigen om een socialemediadetox te doen",
+        "overtuigen van de nadelen van het gebruik van algoritmes door apps"
+      ],
+      "answer": 1,
+      "explanation": "Vraag Aftrekregels                                                                      Aftrek\n\n   Schrijfopdracht",
+      "tekstNr": 4,
+      "vraagNr": 31
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 1,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 2,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 17,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 25,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    }
+  ]
+}

@@ -113,7 +113,7 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets }) {
   const [groep, setGroep] = useState("8");
   const [mode, setMode] = useState("kies"); // "kies" | "oefenen"
   const [selected, setSelected] = useState(null);
@@ -336,6 +336,45 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
                 </div>
                 <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
               </button>
+            )}
+
+            {/* Proef-toets per onderdeel — uit Doorstroomtoets G8-pools */}
+            {onStartProefToets && (
+              <div style={{ marginTop: 4 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: "rgba(0,176,255,0.85)", marginBottom: 8, marginLeft: 2 }}>
+                  🎯 Proef-toets per onderdeel — 30 vragen, geen hulp
+                </div>
+                <div style={{ display: "grid", gap: 8 }}>
+                  {[
+                    { id: "doorstroomtoets-taal-g8", label: "Taal", icon: "📝", color: "#00b0ff" },
+                    { id: "doorstroomtoets-rekenen-g8", label: "Rekenen", icon: "🔢", color: "#00c853" },
+                    { id: "doorstroomtoets-studievaardigheden-g8", label: "Studievaardigheden", icon: "🗺️", color: "#ba68c8" },
+                  ].map((o) => (
+                    <button
+                      key={o.id}
+                      onClick={() => { SoundEngine.play("click"); onStartProefToets(o.id); }}
+                      style={{
+                        textAlign: "left",
+                        borderRadius: 14,
+                        border: `1.5px solid ${o.color}40`,
+                        background: `${o.color}12`,
+                        padding: "12px 16px",
+                        cursor: "pointer",
+                        color: "var(--color-text)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 12,
+                      }}
+                    >
+                      <span style={{ fontSize: 22 }}>{o.icon}</span>
+                      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 600, color: o.color }}>
+                        Proef-toets {o.label}
+                      </div>
+                      <span style={{ fontSize: 16, color: `${o.color}aa` }}>›</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
             )}
 
             {/* Info-blokje */}
