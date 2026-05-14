@@ -21,6 +21,7 @@ import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
 import { getExamRefsForPath } from "../../learnPaths/examenLookup.js";
 import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
+import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
 import KwartierPauze from "./KwartierPauze.jsx";
 
 const C = {
@@ -785,6 +786,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <ExamenBronBanner examenBron={currentCheck.examenBron} />
+            {/* VoorkennisKeten POC (Mark 2026-05-14): toont leerlijn naar examenvraag.
+                Alleen tonen in oefen-modus (LearnPath = oefen, PlayQuiz examen-mode
+                verbergt hints elders). */}
+            {Array.isArray(currentCheck.voorkennisKeten) && currentCheck.voorkennisKeten.length > 0 && (
+              <VoorkennisKeten keten={currentCheck.voorkennisKeten} onJumpToPath={onPickPath} />
+            )}
 
             {currentCheck.bronTekst && (
               <div style={{
