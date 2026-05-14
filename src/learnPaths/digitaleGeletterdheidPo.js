@@ -250,6 +250,81 @@ const steps = [
       { q: "Wat is **AI-hallucinatie**?", options: ["AI verzint feiten", "AI slaapt", "Beeld", "Goed nieuws"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."] },
       { q: "Wat is **AVG**?", options: ["EU-privacy-wet sinds 2018", "Belasting", "Bank", "School"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
       { q: "Wat doe je bij **cyberpesten**?", options: ["Screenshot + blokkeren + volwassene", "Negeren", "Terug-pesten", "Niet vertellen"], answer: 0, wrongHints: [null, "Klopt.", "Niet altijd genoeg.", "Maakt erger.", "Wel praten."] },
+      {
+        q: "Wat is een **phishing-mail**?",
+        options: ["Nep-mail die wachtwoord/bankgegevens probeert te stelen", "Reclamemail van winkel", "Mail van leraar", "Spam met grappen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — doet zich voor als bank/Postnl/Belastingdienst maar is nep.", "Reclamemail = vervelend maar geen oplichting.", "Echte mail = geen phishing.", "Spam is irritant maar niet altijd oplichting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is phishing?", tekst: "**Phishing** komt van **'fishing'** (vissen) — oplichters proberen jouw gegevens 'te vissen'. Ze sturen een **nep-mail** of **nep-SMS** die er echt uitziet (lijkt op je bank, Postnl, school). Klik je op de link en vul je gegevens in → die gaan naar criminelen." },
+            { titel: "Hoe herken je phishing?", tekst: "**Rode vlaggen**:\n• Vreemd e-mailadres (bv. 'support@p0stnl-tracking.com' met nul ipv letter o)\n• **Druk uitoefenen**: 'Klik binnen 24 uur of je rekening wordt geblokkeerd!'\n• Spelfouten of slecht Nederlands\n• Link naar onbekende website (hover muis om echte link te zien zonder te klikken)\n• Vraag om wachtwoord of pincode (echte banken vragen dit NOOIT per mail)" },
+            { titel: "Cito-tip: wat doe je?", tekst: "Bij phishing-mail:\n1. **NIET klikken** op links\n2. **NIET antwoorden** met gegevens\n3. Mail **verwijderen** of als spam markeren\n4. Bij twijfel: bel zelf de echte organisatie (gebruik nummer van OFFICIELE website)\n5. Vertel ouder/leerkracht — ook als je per ongeluk klikte" },
+          ],
+          woorden: [
+            { woord: "phishing", uitleg: "Engelse term voor digitale oplichting via nep-mail. Uitspraak: 'fis-jing'." },
+            { woord: "spoofing", uitleg: "Nep e-mailadres dat lijkt op echt adres (van 'spoof' = nep-doen)." },
+            { woord: "datadiefstal", uitleg: "Stelen van persoonlijke info (wachtwoord, geboortedatum, bankgegevens)." },
+          ],
+          theorie: "Veelvoorkomende phishing-soorten in NL:\n• **Postnl-pakket**: 'pakket niet bezorgd, betaal kosten'\n• **Belastingdienst-teruggave**: 'je krijgt geld terug, vul gegevens in'\n• **Bank**: 'verdachte activiteit, log in om te controleren'\n• **Marktplaats**: 'koper wil tikkie' (verkoper-fraude)\n• **Whatsapp**: 'mam ik heb mijn telefoon kapot, kan jij geld overmaken?'\n\nIn 2024+ ook **AI-stem-fraude**: oplichter belt met AI-stem van familie.",
+          voorbeelden: [
+            { type: "feit", tekst: "In Nederland verliezen mensen samen **~€100 miljoen per jaar** aan online oplichting. Ouderen + kinderen kwetsbaarder." },
+            { type: "feit", tekst: "Politie + Fraudehelpdesk (0800-2112) helpen je als je toch ingetrapt bent." },
+          ],
+          basiskennis: [{ onderwerp: "Banken bellen niet", uitleg: "Echte bank, Belastingdienst, of Postnl vraagt NOOIT per mail/sms om je wachtwoord. ALTIJD nep als het wel gevraagd wordt." }],
+          niveaus: { basis: "Nep-mail = A.", simpeler: "Phishing = nep-mail die doet alsof het van bank/Postnl is. Wil wachtwoord/bankgegevens stelen. Niet klikken. = A.", nogSimpeler: "Oplichting-mail = A." },
+        },
+      },
+      {
+        q: "Wat is een **cookie** op internet?",
+        options: ["Klein bestandje dat website op je computer zet om je te herkennen", "Snoepje", "Virus", "Wachtwoord"],
+        answer: 0,
+        wrongHints: [null, "Klopt — bestandje dat info onthoudt (taal, login-status, voorkeuren).", "Niet — wel toevallig zelfde naam als koekje.", "Niet altijd — kan tracking-cookie zijn maar niet altijd virus.", "Niet — wachtwoord = jouw geheim, cookie = van website."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een cookie?", tekst: "Een **cookie** is een **klein tekstbestandje** dat een website op jouw apparaat opslaat. Doel: jou **herkennen** bij volgend bezoek. Bevat dingen als:\n• Taal-voorkeur (NL/EN)\n• Login-status (ingelogd of niet)\n• Items in winkelmandje\n• Wat je laatst bekeek (voor advertenties)" },
+            { titel: "Soorten cookies", tekst: "**Twee hoofdsoorten**:\n• **Functionele cookies** — nodig voor de website (login, taal). Geen toestemming nodig.\n• **Tracking-cookies** — volgen wat je doet, ook over websites heen. Gebruikt voor advertenties. **TOESTEMMING VERPLICHT** in EU (AVG/GDPR).\n\nDaarom zie je op elke website 'Accepteer cookies?'-vraag." },
+            { titel: "Cito-feit: privacy + AVG", tekst: "**Sinds 2018** is in EU de **AVG-wet** (Algemene Verordening Gegevensbescherming): websites MOETEN vragen voor tracking-cookies. Je MAG altijd weigeren. Pers­oonlijke gegevens worden beschermd. Bij overtreding: boetes tot **20 miljoen euro**." },
+          ],
+          woorden: [
+            { woord: "cookie", uitleg: "Klein bestandje van website op jouw apparaat. Onthoudt info over je bezoek." },
+            { woord: "tracking", uitleg: "Volgen wat je doet — vaak voor reclame. Vereist toestemming in EU." },
+            { woord: "AVG / GDPR", uitleg: "Nederlandse + Europese privacy-wet sinds 2018. Beschermt persoonsgegevens." },
+          ],
+          theorie: "Cookies + privacy-tips:\n• **Lees** de cookie-banner — alleen functionele toestaan is OK\n• **Verwijder** cookies regelmatig in browser (Settings → Privacy → Clear data)\n• **Incognito-mode** = geen cookies bewaard na sessie\n• **Tracking-blockers** (Brave-browser, uBlock Origin) blokkeren tracking-cookies automatisch\n\nKinderen onder 16: ouders mogen extra strikt zijn over cookies (KIDS-AVG).",
+          voorbeelden: [
+            { type: "feit", tekst: "Bekendste tracking-cookies: Google Analytics, Facebook Pixel — gebruiken duizenden websites." },
+            { type: "feit", tekst: "Apple Safari blokkeert sinds 2020 tracking-cookies automatisch — andere browsers volgen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet eng", uitleg: "Cookies op zich zijn niet eng. Tracking-cookies WEL bewust beslissen. Lees banner, klik 'alleen noodzakelijke' als je twijfelt." }],
+          niveaus: { basis: "Bestandje van website. = A.", simpeler: "Cookie = bestandje dat website op je computer zet om je te herkennen. Bv. om in te loggen, taal te onthouden, of jou advertenties te tonen. = A.", nogSimpeler: "Bestandje = A." },
+        },
+      },
+      {
+        q: "Wat is een **algoritme**?",
+        options: ["Stappenplan dat computer volgt om iets te beslissen", "Computer-virus", "Wachtwoord", "Internet-kabel"],
+        answer: 0,
+        wrongHints: [null, "Klopt — bv. TikTok-algoritme beslist welke video's je ziet.", "Niet — virus is schadelijk programma.", "Wachtwoord is jouw geheim.", "Kabel is hardware."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een algoritme?", tekst: "Een **algoritme** is een **stappenplan** dat een computer (of mens) volgt om iets te beslissen of berekenen. Letterlijk: 'recept' voor het oplossen van een probleem.\n\nGenoemd naar de Perzische wiskundige **Al-Khwarizmi** (~825 jaar geleden) — uitvinder van algebra." },
+            { titel: "Voorbeelden van algoritmen", tekst: "• **Recept**: pannenkoek bakken = algoritme van stappen\n• **TikTok**: kiest welke video's je ziet op basis van wat je leuk vond\n• **YouTube**: 'Aanbevolen voor jou' = algoritme\n• **Google Maps**: berekent snelste route\n• **Bank**: bepaalt of je een lening krijgt\n• **AI/ChatGPT**: heel complex algoritme dat tekst voorspelt" },
+            { titel: "Cito-feit: algoritmes + macht", tekst: "Algoritmen zijn **niet neutraal** — ze maken beslissingen die ons leven raken:\n• Wat zie je op social media? (algoritme kiest)\n• Krijg je een lening? (algoritme adviseert)\n• Word je aangenomen voor een baan? (CV-algoritme filtert)\n\nDaarom debat in Nederland over **AI-wet** + **algoritme-transparantie**: mensen moeten weten WAT algoritmes met hun data doen." },
+          ],
+          woorden: [
+            { woord: "algoritme", uitleg: "Stappenplan voor een computer om iets te beslissen of berekenen." },
+            { woord: "kunstmatige intelligentie (AI)", uitleg: "Computers die zelf leren en beslissingen maken — gebaseerd op algoritmes + grote hoeveelheden data." },
+            { woord: "data", uitleg: "Informatie — gebruikt door algoritmes om beslissingen te trainen." },
+          ],
+          theorie: "Bekende algoritme-toepassingen 2024+:\n• **ChatGPT / Claude / Gemini** — taal-AI\n• **TikTok-feed** — content-aanbeveling\n• **Spotify Discover Weekly** — muziek-aanbeveling\n• **Netflix-aanbevelingen**\n• **Belastingdienst-fraudedetectie** (de 'toeslagenaffaire' was algoritme-fout!)\n• **Politie-criminaliteit-voorspelling**\n• **DigiD-inloggen** — checkt of jij echt jij bent",
+          voorbeelden: [
+            { type: "feit", tekst: "TikTok-algoritme is zo goed dat veel mensen er uren in blijven hangen. Critici: dit is bewust verslavend gemaakt." },
+            { type: "feit", tekst: "Toeslagenaffaire (2013-2021): NL-Belastingdienst-algoritme bestempelde duizenden ouders onterecht als fraudeur. Mensen verloren huis, kinderen uit huis geplaatst. Algoritme-fout met mensen-gevolgen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet eng", uitleg: "Algoritmen zijn overal en meestal nuttig. Wel goed om te WETEN dat ze er zijn + dat ze niet altijd kloppen." }],
+          niveaus: { basis: "Stappenplan computer. = A.", simpeler: "Algoritme = stappenplan dat computer volgt om iets te beslissen of berekenen. Bv. welke TikTok-video je ziet of welke route Google Maps kiest. = A.", nogSimpeler: "Stappenplan = A." },
+        },
+      },
     ],
   },
 ];
