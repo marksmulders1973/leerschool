@@ -377,6 +377,67 @@ const steps = [
           niveaus: { basis: "1815. A.", simpeler: "Eerste koning NL = Willem I in 1815. (Daarvoor: stadhouders/Republiek/Bataafs/Lodewijk Napoleon). = A.", nogSimpeler: "1815 = A." },
         },
       },
+      {
+        q: "Wat is de **Patatkar-school**, hippe naam voor wat?",
+        options: ["Geen — niet bestaand","Vroege NL-democratie","Modern onderwijs","Historisch museum"],
+        answer: 0,
+        wrongHints: [null,"Klopt — bedacht antwoord, bestaat niet.","Niet — geen historisch concept.","Niet — geen onderwijs-systeem.","Niet — geen museum."],
+        uitlegPad: {
+          stappen: [{ titel: "Niet alles wat klinkt is echt", tekst: "Cito test soms of je leerlingen onderscheid maken tussen echte historische begrippen + verzonnen. 'Patatkar-school' = bedacht. Echt: Tachtigjarige Oorlog, Gouden Eeuw, etc." }],
+          woorden: [{ woord: "kritisch denken", uitleg: "Niet automatisch geloven dat naam = echt." }],
+          theorie: "Bij Cito: kies alleen antwoorden waar je weet dat ze echt-historisch zijn. Bedacht = vermijden.",
+          voorbeelden: [{ type: "stap", tekst: "'Was Karel de Grote koning van Frankrijk?' → JA (echt). 'Patatkar' → twijfel = wegstrepen." }],
+          basiskennis: [{ onderwerp: "Bedachte termen", uitleg: "Cito gebruikt soms gekke + verzonnen termen als afleider. Niet kiezen als je niet zeker weet." }],
+          niveaus: { basis: "Niet echt. = A.", simpeler: "Bestaat niet in geschiedenis. = A.", nogSimpeler: "Verzonnen = A." },
+        },
+      },
+      {
+        q: "Wanneer was de **Tweede Wereldoorlog** in Nederland?",
+        options: ["1940-1945","1914-1918","1815","1648"],
+        answer: 0,
+        wrongHints: [null,"Klopt — Duitse bezetting van 10 mei 1940 tot bevrijding 5 mei 1945.","Niet — dat is WO1, NL was neutraal toen.","Begin Koninkrijk.","Vrede van Münster."],
+        uitlegPad: {
+          stappen: [
+            { titel: "WO2 in NL — sleuteldatums", tekst: "• **10 mei 1940**: Duitsland valt NL binnen, Rotterdam gebombardeerd\n• **15 mei 1940**: NL capituleert\n• **1940-1945**: Duitse bezetting\n• **Joden-vervolging** intensiveert vanaf 1941 (~104.000 NL-joden vermoord)\n• **5 september 1944 'Dolle Dinsdag'**: zuiden bevrijd\n• **Hongerwinter 1944-1945**: west-NL extreem honger\n• **5 mei 1945**: bevrijding hele NL — Bevrijdingsdag" },
+            { titel: "Cito-feit: belangrijke namen", tekst: "**WO2-Nederlanders**:\n• **Anne Frank** (1929-1945) — Joods meisje, dagboek\n• **Koningin Wilhelmina** — vluchtte naar Engeland, leidde verzet via radio\n• **Verzet** — illegale kranten, onderduikadressen, sabotage\n• **NSB** — collaborerende NL-partij onder Mussert\n• **Hannie Schaft** — verzetsstrijder, beroemd door rood haar\n\nWO2 is **kernstof Cito-geschiedenis** + Doorstroomtoets." },
+          ],
+          woorden: [
+            { woord: "bezetting", uitleg: "Periode waarin vreemde macht een land controleert." },
+            { woord: "verzet", uitleg: "Illegaal werk tegen bezetter (kranten, onderduik, sabotage)." },
+            { woord: "bevrijding", uitleg: "Einde bezetting. Voor NL: 5 mei 1945." },
+          ],
+          theorie: "WO2-Cito-kerntermen:\n• 10 mei 1940 — invasie\n• 1942-1944 — Holocaust intensiveert\n• 1944 Hongerwinter\n• 5 mei 1945 — bevrijding\n• 4+5 mei nu = nationale herdenkings­dagen\n• Anne Frank Huis (Amsterdam) — symbool",
+          voorbeelden: [
+            { type: "stap", tekst: "Op 4 mei (Dodenherdenking) staan we 2 minuten stil voor WO2-slachtoffers. 5 mei = Bevrijdingsdag (feest)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet WO1", uitleg: "WO1 (1914-1918): NL was neutraal, geen oorlog op NL-bodem. WO2 (1940-1945): wél bezet." }],
+          niveaus: { basis: "1940-1945. = A.", simpeler: "WO2 NL: 10 mei 1940 invasie → 5 mei 1945 bevrijding. 5 jaar bezetting. = A.", nogSimpeler: "1940-1945 = A." },
+        },
+      },
+      {
+        q: "**Industriële Revolutie** kwam in NL ongeveer wanneer?",
+        options: ["Eind 1800 / begin 1900","Middeleeuwen","Romeinse tijd","1990"],
+        answer: 0,
+        wrongHints: [null,"Klopt — NL was later dan Engeland (1750+). NL pas vanaf ~1850-1870 industrialisering.","Te vroeg.","Veel te vroeg.","Te recent — dat is digitale revolutie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat was Industriële Revolutie?", tekst: "**Industriële Revolutie** = grote verandering van **handwerk → machine-productie**. Begon **Engeland ~1750-1850**, daarna naar rest van Europa.\n\n**Belangrijke uitvindingen**:\n• Stoommachine (Watt ~1769)\n• Spinmachine (textiel)\n• Stoomtrein (1800+)\n• Telegraaf (1830+)" },
+            { titel: "Waarom NL later?", tekst: "Nederland startte **industrialisering ~1850-1870**, een halve eeuw na Engeland. Redenen:\n• NL focuste op handel (VOC, koloniën)\n• Geen veel kolen/ijzer (Engeland had wel)\n• Pas vanaf spoorwegen (1840+) + stoommachines werden NL-fabrieken modern\n• **Twentse textiel** (Enschede, Almelo) was eerste industrie-cluster\n• **Philips** opgericht 1891 in Eindhoven (gloeilampen)" },
+            { titel: "Cito-feit: gevolgen", tekst: "**Effect op samenleving**:\n• Mensen van platteland → stad (urbanisatie)\n• Fabrieken vervangen huisindustrie\n• Kinderen werkten in fabrieken (Kinderwet 1874 verbood arbeid <12 jaar)\n• Spoorwegen (1839 eerste NL-traject Amsterdam-Haarlem)\n• Beter onderwijs nodig voor machine-bediening\n• Sociale problemen → vakbonden + arbeidersrechten" },
+          ],
+          woorden: [
+            { woord: "Industriële Revolutie", uitleg: "Overgang van handwerk naar machine-productie. Engeland 1750-1850, NL ~1850-1900." },
+            { woord: "stoommachine", uitleg: "Machine die water-stoom omzet in beweging. James Watt 1769." },
+            { woord: "urbanisatie", uitleg: "Verplaatsing platteland → stad. Steden groeien snel." },
+          ],
+          theorie: "NL-tijdvakken (Cito-bron):\n• Prehistorie - Romeinse tijd\n• Middeleeuwen 500-1500\n• Gouden Eeuw 1600-1700\n• 80-jr Oorlog 1568-1648\n• Republiek 1648-1795\n• Napoleon 1795-1813\n• Koninkrijk 1815+\n• **Industriële Revolutie ~1850-1900**\n• WO1 (1914-1918) — NL neutraal\n• WO2 (1940-1945) — NL bezet\n• Wederopbouw + EU (1945+)",
+          voorbeelden: [
+            { type: "feit", tekst: "Philips Eindhoven groeide van gloeilampen (1891) tot wereldconcern. Iconisch NL-bedrijf van Industriële Revolutie." },
+          ],
+          basiskennis: [{ onderwerp: "Late maar succesvol", uitleg: "NL begon laat maar haalde wel in. Tegenwoordig is NL een van wereldwijd top industrie-landen." }],
+          niveaus: { basis: "1850-1900. = A.", simpeler: "NL-industriële revolutie kwam laat: pas ~1850-1900. Daarvoor handel + landbouw. Philips (1891) iconisch. = A.", nogSimpeler: "Eind 1800 = A." },
+        },
+      },
     ],
   },
 ];

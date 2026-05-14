@@ -1007,6 +1007,76 @@ const steps = [
           },
         },
       },
+      {
+        q: "Tekst: 'De jongen rende WANHOPIG naar zijn moeder.' Wat betekent **wanhopig**?",
+        options: ["Heel verdrietig + bang, geen hoop","Heel vrolijk","Snel maar rustig","Slaapt"],
+        answer: 0,
+        wrongHints: [null,"Klopt — context (jongen rent naar moeder) wijst op nood.","Tegenovergesteld — geen vrolijk gevoel.","Klopt deels qua snelheid, niet qua emotie.","Niet — een rennende jongen slaapt niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Context-aanpak", tekst: "Onbekend woord 'wanhopig' in zin 'De jongen rende **wanhopig** naar zijn moeder.' Wat helpt:\n• **Actie**: rennen → snelheid, urgentie\n• **Doel**: naar moeder → wellicht behoefte, troost, redding\n• **Combinatie**: rennen + naar moeder = situatie van nood\n\nDus 'wanhopig' = **zonder hoop, in nood**. Het bijwoord versterkt de emotionele lading." },
+            { titel: "Cito-truc context-bewijs", tekst: "Bij onbekende-woord-vragen op Cito: zoek **3 aanwijzingen** in context:\n1. Wie doet wat?\n2. Waarom?\n3. Welk gevoel/effect?\n\nVoor 'wanhopig': een kind dat naar moeder rent. Niet voor de lol. Iets is ernstig. Bijwoord = emotie. Dus 'wanhopig' = sterk negatief gevoel." },
+            { titel: "Cito-feit: bijwoord-positie", tekst: "**Bijwoord** beschrijft het **werkwoord**. 'Rende wanhopig' = manier waarop hij rende. Andere bijwoorden:\n• 'Rende snel' = focus snelheid\n• 'Rende vrolijk' = focus emotie\n• 'Rende wanhopig' = focus combo nood + emotie\n\nBij Cito-onbekende-woord-vragen: kijk altijd bij welk werkwoord/zelfstandig naamwoord het hoort." },
+          ],
+          woorden: [
+            { woord: "wanhopig", uitleg: "Zonder hoop. Heel verdrietig + bang. Behoefte aan redding/hulp." },
+            { woord: "bijwoord", uitleg: "Woord dat werkwoord beschrijft (rende SNEL/WANHOPIG/RUSTIG)." },
+            { woord: "context", uitleg: "Woorden + zinnen rondom een onbekend woord die helpen betekenis te raden." },
+          ],
+          theorie: "Onbekend-woord-aanpak Cito:\n1. Lees zin + ontbrekend woord\n2. Lees vorige + volgende zin (context-breed)\n3. Welke EMOTIE/ACTIE past?\n4. Kies optie die best past\n5. Negeer letterlijke vertaling als context anders zegt",
+          voorbeelden: [
+            { type: "stap", tekst: "'Het kind keek SCHUW naar de hond.' Context: kind + hond = bang/voorzichtig → 'schuw' = verlegen, bang." },
+          ],
+          basiskennis: [{ onderwerp: "Bijwoord = emotie", uitleg: "Bijwoorden zoals 'wanhopig/blij/snel/rustig' beschrijven de manier of emotie van een actie." }],
+          niveaus: { basis: "Bang + verdrietig. = A.", simpeler: "Jongen rent naar moeder = nood. Wanhopig = zonder hoop + bang. = A.", nogSimpeler: "In nood = A." },
+        },
+      },
+      {
+        q: "Een tekst-vraag: 'Welk SIGNAALWOORD wijst op een **tegenstelling**?'",
+        options: ["Maar","Daarom","Bijvoorbeeld","Eerst"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 'maar' / 'echter' / 'hoewel' wijzen op tegenstelling.","Niet — conclusie-signaal.","Niet — voorbeeld-signaal.","Niet — volgorde-signaal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tegenstelling-signaalwoorden", tekst: "Bij een **tegenstelling** verandert de tekst van richting. Signaalwoorden:\n• **Maar**\n• **Echter**\n• **Hoewel**\n• **Daarentegen**\n• **Aan de andere kant**\n• **Toch**\n\nVoorbeeld: 'Hij wilde fietsen, maar het regende.' De 'maar' geeft tegenstelling tussen wens + realiteit." },
+            { titel: "Cito-truc: signaalwoord-groepen", tekst: "**4 hoofd-groepen**:\n• **Tegenstelling**: maar, echter, hoewel, toch\n• **Conclusie**: dus, daarom, kortom\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, ten slotte\n\nKennis hiervan helpt vraagtypen snel oplossen." },
+          ],
+          woorden: [
+            { woord: "tegenstelling", uitleg: "Onverwachte wending. Iets dat afwijkt van eerder gezegde." },
+            { woord: "signaalwoord", uitleg: "Klein woord dat aangeeft wat schrijver doet (vergelijken, concluderen, voorbeelden)." },
+          ],
+          theorie: "Tegenstellingen helpen Cito-vragen:\n• 'Welke zin spreekt vorige tegen?' → zoek 'maar/echter'\n• 'Wat is wending in tekst?' → tegenstelling-signaal\n• 'Welke alinea afwijkt?' → kijk woord aan begin",
+          voorbeelden: [
+            { type: "stap", tekst: "'Honden zijn aardig. MAAR sommige bijten.' Tegenstelling met 'maar'." },
+          ],
+          basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Bij begrijpend lezen Cito: signaalwoorden zijn TOP-tip om snel structuur te zien." }],
+          niveaus: { basis: "Maar = tegenstelling. = A.", simpeler: "'Maar' signaleert tegenstelling. 'Daarom' = conclusie, 'bijvoorbeeld' = voorbeeld, 'eerst' = volgorde. = A.", nogSimpeler: "Maar = A." },
+        },
+      },
+      {
+        q: "Een tekst over **fietsen** begint: 'Vroeger waren fietsen veel zwaarder dan nu.' Wat verwacht je in het VERVOLG?",
+        options: ["Hoe fietsen lichter werden / wat er nu beter is","Recept voor pannenkoeken","Geschiedenis van auto's","Niet te zeggen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — eerste zin geeft thema. Logisch vervolg: hoe is het nu lichter? Welke materialen?","Niet — past niet bij thema fietsen.","Niet — over auto's, niet fietsen.","Wel — eerste zin GEEFT richting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eerste zin = thema-aanwijzer", tekst: "De **eerste zin** of **eerste alinea** geeft vaak het **thema** van de tekst. Schrijvers gebruiken dit om:\n• Lezer voor te bereiden\n• Verwachting te scheppen\n• Hoofdgedachte aan te kondigen\n\nVoorbeeld: 'Vroeger waren fietsen veel zwaarder dan nu.' → thema = **vergelijking vroeger vs nu bij fietsen**. Vervolg gaat dat uitwerken." },
+            { titel: "Cito-truc: voorspellen", tekst: "Bij Cito-vragen over **structuur** of **vervolg**: kijk wat eerste zin BELOOFT.\n• 'Honden zijn slim' → vervolg = bewijs / voorbeelden van honden-slimheid\n• 'Klimaatverandering is urgent' → vervolg = effecten / oplossingen\n• 'De geschiedenis van de fiets begint in 1817' → vervolg = chronologisch verhaal\n\nOpties die NIET passen bij thema → niet kiezen." },
+            { titel: "Cito-feit: tekst-structuur", tekst: "**Typische tekst-structuur**:\n1. **Inleiding** (1ste alinea) = thema + waarom belangrijk\n2. **Kern** (2-4 alinea's) = uitwerking, voorbeelden, bewijs\n3. **Slot** (laatste alinea) = conclusie / samenvatting / mening\n\nVoorspellen werkt op alle 3 niveaus. Slot vaak voorspelbaar uit inleiding-thema." },
+          ],
+          woorden: [
+            { woord: "thema", uitleg: "Hoofdonderwerp van de tekst." },
+            { woord: "structuur", uitleg: "Hoe een tekst is opgebouwd: inleiding-kern-slot." },
+            { woord: "voorspellen", uitleg: "Verwachten wat komt op basis van wat al gelezen is." },
+          ],
+          theorie: "Voorspellen-helpt-snel-vinden:\n• Lees eerste zin\n• Bedenk: wat zou jij erover schrijven?\n• Lees verder + check of klopt\n• Bij verrassing: extra opletten\n\nDeze techniek versnelt lezen + verbetert begrip.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Dieren reageren anders op kou dan mensen.' Voorspelling: hoe? Welke dieren? Voorbeelden komen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet altijd correct", uitleg: "Voorspelling klopt niet altijd. Goed: je let extra op = brein actief." }],
+          niveaus: { basis: "Vervolg over fietsen vroeger/nu. = A.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe lichter werden, welke materialen, etc. = A.", nogSimpeler: "Past bij thema = A." },
+        },
+      },
     ],
   },
 ];

@@ -563,6 +563,101 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat doe je 's **avonds voor de Doorstroomtoets**?",
+        options: ["Rustig avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Niets — toets is morgen","Veel coffee drinken om wakker te blijven"],
+        answer: 0,
+        wrongHints: [null,"Klopt — uitgerust = beter scoren. Brein heeft slaap nodig om geheugen vast te zetten.","Tegenovergesteld — last-minute werkt averechts, brein moet rusten.","Klopt deels maar 'niets' is te passief — bedoeling is bewust uitrusten.","Cafeïne stoort slaap = brein werkt slechter."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Slaap = brein-prestatie", tekst: "Wetenschappers tonen: **goede nachtrust voor toets** = beter resultaat dan extra studeren. Brein verwerkt geleerde stof tijdens slaap. 10-12-jarigen hebben **9-10 uur** slaap nodig." },
+            { titel: "Avond-routine voor toets", tekst: "**Wel doen**:\n• Vroeg eten (geen zwaar maal)\n• Spullen klaar leggen (potlood, gum, bril, lunch)\n• Iets ontspannends — boek, tekenen, wandeling\n• In bed uiterlijk 21:00\n• Telefoon NIET in slaapkamer (blauw licht verstoort slaap)\n\n**Niet doen**:\n• Tot middernacht oefenen\n• Stress-gesprekken\n• Caffeïne (cola, ijskoffie)\n• Beeldscherm 1 uur voor slapen" },
+            { titel: "Cito-feit: prestatie + slaap", tekst: "Onderzoek Universiteit Tilburg: kinderen die <8 uur slapen vóór toets scoorden **15% lager** dan goed-uitgeruste klasgenoten. Studeer-uren < slaap-uren in prestatie-impact. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
+          ],
+          woorden: [
+            { woord: "consolidatie", uitleg: "Brein-proces waarbij dagelijkse kennis wordt vastgezet in lange-termijn-geheugen. Gebeurt vooral in slaap." },
+            { woord: "REM-slaap", uitleg: "Diepe slaap-fase waarin brein leren verwerkt. Cruciaal voor geheugen." },
+          ],
+          theorie: "Doorstroomtoets-week aanpak:\n• **Week ervoor**: rustige routine, voldoende slaap, lichte herhaling\n• **Avond ervoor**: NIET studeren, vroeg slapen, ontspanning\n• **Ochtend zelf**: gezond ontbijt, op tijd zijn, mentaal rustig\n• **Tijdens toets**: ademen, niet panieken, plan tijd\n\nOuder-tip: maak avond ervoor rustig + warm. Geen druk-makende gesprekken.",
+          voorbeelden: [
+            { type: "stap", tekst: "Goed scenario: 19:00 eten, 20:00 boek/spel, 20:45 tanden poetsen + slapen-routine, 21:15 in bed. 7:00 wakker = 9u45 slaap." },
+          ],
+          basiskennis: [{ onderwerp: "Niet stressen", uitleg: "Stress remt brein. Toets is NIET einde van wereld — bij twijfel kunt u (ouder) doorstroomtoets-advies aanvechten." }],
+          niveaus: { basis: "Rustig + vroeg slapen. = A.", simpeler: "Avond voor Doorstroomtoets: niet meer studeren, ontspannen, vroeg slapen (9-10 uur). Uitgerust brein scoort beter dan vermoeid brein. = A.", nogSimpeler: "Slapen = A." },
+        },
+      },
+      {
+        q: "Wat doe je bij een **lastige rekenvraag** in de Doorstroomtoets als je echt vast loopt?",
+        options: ["Slimme schatting + markeren (later terug)","Lang doorrekenen — moet kloppen","Volgende vraag overslaan zonder iets","Foutief antwoord opzettelijk"],
+        answer: 0,
+        wrongHints: [null,"Klopt — schatting + markeer (?) + door, terugkomen als tijd over.","Tijdverlies — kost te veel andere vragen.","Beter: SCHAT + markeer dan helemaal niets.","Onzin — bewust fout is dom."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 'schat + markeer + door'-truc", tekst: "Bij lastige vraag (>1 min vast):\n1. **Schat** een redelijk antwoord (vergelijk met opties: welke past qua orde van grootte?)\n2. **Markeer** vraag (rondje om vraag-nummer)\n3. **Ga door** naar volgende\n4. **Kom terug** in laatste 5 minuten als er tijd over is\n\nNooit leeg laten — geschat antwoord = 25% kans op punt vs 0% bij leeg." },
+            { titel: "Eliminatie-truc voor rekenvragen", tekst: "Bij meerkeuze 4 opties:\n• **Schat eerst**: ongeveer hoeveel kan het antwoord zijn?\n• **Sluit onmogelijke opties uit** (te groot, te klein, verkeerde eenheid)\n• Vaak blijven 2 plausibele opties over → kans 50% bij gok\n• Soms 1 = direct juiste antwoord\n\nVoorbeeld: '4 × 25 = ?' Opties: 1) 80, 2) 100, 3) 200, 4) 500. Schat 4×25=100 → optie 2." },
+            { titel: "Cito-feit: tijd-management", tekst: "Doorstroomtoets ~150 min totaal. **Tip**:\n• Maak eerst **alle makkelijke vragen** (~80% van vragen)\n• Markeer lastige\n• **Laatste 15 min**: terug naar gemarkeerde vragen\n• **Niet panieken** bij 1 lastige — er zijn 100+ vragen, 1 missen heeft minimaal effect" },
+          ],
+          woorden: [
+            { woord: "markeren", uitleg: "Klein tekentje (rondje, kruisje) bij vraag-nummer om later terug te keren." },
+            { woord: "eliminatie", uitleg: "Onmogelijke antwoorden uitsluiten om kans op juiste te verhogen." },
+            { woord: "schatting", uitleg: "Ongeveer-berekening om grove fout te vermijden + plausibele antwoord te vinden." },
+          ],
+          theorie: "Doorstroomtoets-strategie:\n1. **Begin** bij vraag 1, ga **op tempo**\n2. Vraag te lastig (>1 min)? **Schat + markeer + door**\n3. **Maak eerste ronde** rust + simpel\n4. **Tweede ronde** terug naar lastige\n5. **Laatste 5 min**: controleer alle antwoorden — niet blanco laten",
+          voorbeelden: [
+            { type: "stap", tekst: "Vraag: '12,5% van 240 = ?' Opties: 15, 30, 45, 60. Schat: 10% van 240 = 24. 12,5% ≈ 30. Antwoord B." },
+          ],
+          basiskennis: [{ onderwerp: "Nooit blanco", uitleg: "Bij meerkeuze: ALTIJD invullen. Blanco = zeker 0 punten. Geschat = kans op punt." }],
+          niveaus: { basis: "Schatten + markeren. = A.", simpeler: "Lastige vraag: schat antwoord, markeer met rondje, ga door. Kom terug aan einde als tijd over. = A.", nogSimpeler: "Schat + markeer = A." },
+        },
+      },
+      {
+        q: "Een **multiple-choice vraag** met 4 opties — je weet 2 antwoorden zeker NIET. Wat doe je?",
+        options: ["Gok tussen de 2 overgebleven opties","Geef op + laat leeg","Vraag de buurman","Allebei aanvinken"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 50% kans op punt is beter dan 0% bij leeg.","Tegenovergesteld — leeg = zeker 0 punt. Gokken = kans.","Niet — dat is spieken, mag niet.","Niet — kan vaak maar 1 optie aanvinken op antwoordblad."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Eliminatie-strategie", tekst: "Bij meerkeuze 4 opties + je weet 2 zeker fout:\n• Optie 1: gokken tussen overgebleven 2 → **50% kans op punt**\n• Optie 2: leeg laten → **0% kans op punt**\n\nWiskundig: gokken is altijd beter dan leeg laten bij MC-toetsen zonder strafpunten. Bij Doorstroomtoets = geen strafpunten." },
+            { titel: "Hoe elimineer je?", tekst: "Sluit fout-opties uit op basis van:\n• **Eenheid klopt niet** (vraag in km, antwoord in cm)\n• **Orde van grootte** klopt niet (vraagt 'hoeveel kinderen', antwoord 1.000.000)\n• **Direct tegengesteld** aan wat tekst zegt\n• **Belachelijk** (klopt niet met logica)\n\nVaak blijven 2 plausibele opties — gok tussen die." },
+            { titel: "Cito-feit: kans-berekening", tekst: "Bij 4 opties + willekeurige gok:\n• Geen eliminatie: **25%** kans op punt\n• 1 fout eruit: **33%** kans (3 over)\n• 2 fout eruit: **50%** kans (2 over)\n• 3 fout eruit: **100%** kans (= weten welke goed is)\n\nElke eliminatie verhoogt je kans. Doe het altijd!" },
+          ],
+          woorden: [
+            { woord: "eliminatie", uitleg: "Uitsluiten van onmogelijke antwoorden." },
+            { woord: "multiple-choice", uitleg: "Vraag met vooraf gegeven antwoord-opties (meestal 3-4)." },
+            { woord: "gokken", uitleg: "Antwoord kiezen zonder zeker te weten. Bij elimineren = slimme gok." },
+          ],
+          theorie: "Wiskundige logica gokken:\n• 25% per vraag bij willekeur\n• 40 vragen × 25% = 10 punten gemiddeld zonder kennis\n• Met half-eliminatie: ~50% × N = veel meer punten\n\nBijdrage aan totaal-score: niet onderschatten.",
+          voorbeelden: [
+            { type: "stap", tekst: "Vraag: 'Wat is Cito-eindtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. Cito is altijd februari → eliminate 3+4. Gok 1 of 2 = 50% kans." },
+          ],
+          basiskennis: [{ onderwerp: "Nooit blanco bij MC", uitleg: "Bij multiple-choice + geen strafpunten: gokken altijd beter dan blanco. Math achter de logica." }],
+          niveaus: { basis: "Gok tussen 2. = A.", simpeler: "Bij MC: weet je 2 opties zeker fout, gok tussen overgebleven 2 = 50% kans op punt. Beter dan leeg (0%). = A.", nogSimpeler: "Gokken = A." },
+        },
+      },
+      {
+        q: "Stress vlak voor de toets — wat helpt **direct** om rustig te worden?",
+        options: ["Diep ademhalen (4-7-8 techniek)","Veel cafeïne","Klagen tegen klasgenoten","Nog snel studeren"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 4 sec inademen, 7 sec vasthouden, 8 sec uitademen. Brein kalmeert.","Tegenovergesteld — cafeïne verhoogt hartslag = meer stress-gevoel.","Niet — stress overdraagbaar op anderen.","Geen tijd meer — vergroot stress."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is examen-stress?", tekst: "**Examen-stress** is normaal — lichaam maakt **adrenaline + cortisol** klaar voor 'vechten of vluchten'. Helpt wel scherp + alert. Te veel = verlamt + concentreert slecht.\n\nSymptomen:\n• Hart bonst snel\n• Zweten handen\n• Maag-gevoel ('vlinders')\n• Gedachten malen\n• Vergeten wat je wist" },
+            { titel: "4-7-8 ademhalingstruc", tekst: "**4-7-8 techniek** (1 keer = 30 sec):\n1. Adem **4 sec** rustig in door neus\n2. Houd **7 sec** vast\n3. Adem **8 sec** uit door mond\n4. Herhaal 3-4×\n\nWaarom werkt het: vertraagt hartslag, kalmeert zenuwstelsel, verlaagt cortisol. Brein schakelt van 'paniek' naar 'denken'." },
+            { titel: "Andere tips bij examen-stress", tekst: "**Direct vóór toets**:\n• 4-7-8 ademhaling\n• Schouders rondschudden\n• Korte wandeling buiten (frisse lucht)\n• Glas water (niet veel)\n• Positieve zelfspraak ('ik kan dit')\n• Klasgenoten vermijden die piekeren\n\n**Langere termijn**:\n• Voldoende slaap\n• Sport tijdens leerweek\n• Niet alles op laatste moment\n• Praten met ouder/leerkracht over zorgen" },
+          ],
+          woorden: [
+            { woord: "examen-stress", uitleg: "Stress-reactie vóór + tijdens een toets. Normaal." },
+            { woord: "cortisol", uitleg: "Stress-hormoon. Helpt alert zijn, te veel = verlammend." },
+            { woord: "4-7-8", uitleg: "Ademhalingstruc: 4 in, 7 vast, 8 uit. Kalmeert direct." },
+          ],
+          theorie: "Stress-management Cito:\n• **Erkennen** dat stress normaal is\n• **Ademen** om kalmeren (4-7-8)\n• **Bewegen** om energie kwijt te raken\n• **Praten** als het te veel wordt\n\nNet als sport-prestatie: te gespannen = mindere prestatie. Iets stress = scherp. Veel = verlamd.",
+          voorbeelden: [
+            { type: "stap", tekst: "Topsporters gebruiken 4-7-8 ademhalingsoefening ook vóór belangrijke wedstrijden — zelfde principe." },
+          ],
+          basiskennis: [{ onderwerp: "Niet vermijden", uitleg: "Stress vermijden lukt niet helemaal. Wel kun je ermee LEREN omgaan. Helpt levenslang." }],
+          niveaus: { basis: "Diep ademen. = A.", simpeler: "Stress vlak voor toets? Doe 4-7-8 ademhaling: 4 sec in, 7 sec vasthouden, 8 sec uit. Kalmeert brein binnen 1 minuut. = A.", nogSimpeler: "Ademhalen = A." },
+        },
+      },
     ],
   },
 ];

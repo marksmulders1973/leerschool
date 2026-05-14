@@ -347,6 +347,104 @@ const steps = [
           niveaus: { basis: "1:1.000.000. A.", simpeler: "Hoe groter het getal achter ':' hoe groter het gebied. 1.000.000 > 100. = A.", nogSimpeler: "1:1.000.000 = A." },
         },
       },
+      {
+        q: "Wat is een **legenda** op een kaart?",
+        options: ["Uitleg van symbolen + kleuren","Naam van kaart-maker","Schaal","Datum"],
+        answer: 0,
+        wrongHints: [null,"Klopt — wat betekent rood, blauw, klein boom-symbool, etc.","Niet — dat is bronvermelding.","Niet — schaal apart.","Niet — datum apart."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een legenda?", tekst: "Een **legenda** is een klein vakje op de kaart (vaak hoek onderaan) dat **uitlegt wat de symbolen, kleuren + lijnen betekenen**. Zonder legenda snap je de kaart niet." },
+            { titel: "Voorbeelden legenda-items", tekst: "• **Kleuren**: blauw = water, groen = bos/park, geel = woestijn/zand\n• **Lijnen**: dik = snelweg, dun = lokale weg, stippels = wandelpad\n• **Symbolen**: dennenboom = bos, kerk = religieus gebouw, treintje = station\n• **Hoogtelijnen**: lijnen die punten van gelijke hoogte verbinden" },
+            { titel: "Cito-truc: kaart lezen-stappenplan", tekst: "1. **Titel** — wat toont de kaart?\n2. **Schaal** — hoe klein/groot?\n3. **Legenda** — wat betekenen symbolen?\n4. **Windroos** — welke kant is noord?\n5. PAS DAN het kaart-detail lezen.\n\nVeel Cito-fouten = legenda niet lezen + symbool verkeerd interpreteren." },
+          ],
+          woorden: [
+            { woord: "legenda", uitleg: "Verklarend vakje op kaart met betekenis van symbolen + kleuren." },
+            { woord: "symbool", uitleg: "Klein plaatje dat iets voorstelt (boom, kerk, weg)." },
+            { woord: "topografische kaart", uitleg: "Detail-kaart met hoogteverschillen, wegen, gebouwen." },
+          ],
+          theorie: "Kaart-onderdelen Cito-stof:\n• **Titel** — wat\n• **Schaal** — hoe groot\n• **Legenda** — wat betekenen tekens\n• **Windroos** — richting\n• **Coördinaten** — locatie precies (vakjes A1, B2 of GPS)\n\nElk onderdeel onmisbaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "ANWB-kaart legenda: rood lijn = snelweg, geel = autoweg, zwart = kleine weg, blauw = water." },
+            { type: "stap", tekst: "Atlas-kaart: lichter blauw = ondiep water, donkerder = dieper. Tonen we via kleur-verloop." },
+          ],
+          basiskennis: [{ onderwerp: "Altijd kijken", uitleg: "Cito-tip: kijk EERST legenda voor je een kaart-vraag beantwoordt. Anders kun je symbolen verkeerd interpreteren." }],
+          niveaus: { basis: "Uitleg symbolen. = A.", simpeler: "Legenda = vakje op kaart dat uitlegt wat de symbolen + kleuren + lijnen betekenen. = A.", nogSimpeler: "Uitleg symbolen = A." },
+        },
+      },
+      {
+        q: "Een kaart toont **hoogtelijnen** dicht bij elkaar. Wat betekent dat?",
+        options: ["Steil hellend gebied (berg)","Plat landschap","Water","Bos"],
+        answer: 0,
+        wrongHints: [null,"Klopt — dicht bij elkaar = stijl. Ver uit elkaar = vlak.","Niet — vlak gebied heeft hoogtelijnen ver uit elkaar.","Niet — water meestal blauw + zonder hoogtelijnen.","Niet — bos meestal groen, niet hoogtelijnen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat zijn hoogtelijnen?", tekst: "**Hoogtelijnen** (ook 'contourlijnen') zijn **lijnen op een topografische kaart die punten van DEZELFDE hoogte verbinden**.\n\nElke lijn = bepaalde hoogte boven zeespiegel. Bv:\n• 50 m hoogtelijn\n• 100 m hoogtelijn\n• 150 m hoogtelijn" },
+            { titel: "Wat zegt afstand tussen lijnen?", tekst: "• **Dicht bij elkaar** (kleine afstand) → **steile helling**, snelle hoogteverandering. Berg of klif.\n• **Ver uit elkaar** (grote afstand) → **flauwe helling** of vlak. Polder of dal.\n• **Gesloten cirkels** → top van berg of heuvel.\n• **Concentrische cirkels** → typische bergvorm.\n\nNL heeft weinig hoogtelijnen (vlak). Limburg + duinen wel." },
+            { titel: "Cito-feit: hoogste punt NL", tekst: "Op NL-kaart zie je hoogtelijnen vooral bij:\n• **Limburg** — Heuvelland + Drielandenpunt\n• **Veluwe** — heuvelachtig deel\n• **Duinen** langs kust\n• **Sallandse heuvelrug** in Overijssel\n\nHoogste punt NL = **Vaalserberg** (322,5 m) in Zuid-Limburg. Vergeleken met buitenland heel laag — Mount Everest 8.849 m." },
+          ],
+          woorden: [
+            { woord: "hoogtelijn", uitleg: "Lijn op kaart die punten van zelfde hoogte verbindt." },
+            { woord: "topografisch", uitleg: "Met hoogteverschillen + landschapsdetail." },
+            { woord: "NAP", uitleg: "Normaal Amsterdams Peil — NL-referentie voor hoogtemeting. 0 m = gemiddelde zeespiegel." },
+          ],
+          theorie: "Hoogtelijnen-aflezen:\n• Dicht = steil\n• Ver = vlak\n• Cirkels = berg/heuvel-top\n• V-vorm wijst naar onder = dal (rivier vaak)\n• Ω-vorm = bergkam\n\nGebruikt door wandelaars, klimmers, militairen voor terrein-inschatting.",
+          voorbeelden: [
+            { type: "stap", tekst: "Kaart van Alpen toont vaak veel dichte hoogtelijnen → bergachtig." },
+            { type: "stap", tekst: "Kaart van Friesland: bijna geen hoogtelijnen → super vlak." },
+          ],
+          basiskennis: [{ onderwerp: "Niet op alle kaarten", uitleg: "Niet elke kaart heeft hoogtelijnen — toeristische kaarten vaak niet. Topografische wel." }],
+          niveaus: { basis: "Steile helling. = A.", simpeler: "Hoogtelijnen DICHT bij elkaar betekent: hoogte verandert snel = steile berg of helling. VER = vlak. = A.", nogSimpeler: "Steil = A." },
+        },
+      },
+      {
+        q: "Wat is de **windroos** op een kaart?",
+        options: ["Symbool dat noord, oost, zuid, west aanwijst","Bloem op kaart","Naam van wind","Soort kaart"],
+        answer: 0,
+        wrongHints: [null,"Klopt — kompas-symbool meestal hoek kaart. Pijl wijst noord.","Niet — geen bloem.","Niet — wind-richting is iets anders.","Niet — onderdeel van kaart, niet kaart-type."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een windroos?", tekst: "Een **windroos** is een **klein kompas-symbool** in een hoek van de kaart. Toont:\n• **Noord (N)** — meestal boven (pijl ↑)\n• **Oost (O)** — rechts\n• **Zuid (Z)** — onder\n• **West (W)** — links\n\nOok soms 8 of 16 tussen-richtingen (NO, ZO, ZW, NW)." },
+            { titel: "Cito-feit: noord altijd boven?", tekst: "**Conventie**: bij moderne kaarten staat **noord altijd boven**. Daarom toont windroos vaak alleen noord-pijl + impliciet de rest.\n\nUitzonderingen:\n• Oude kaarten: oost boven (christelijke traditie, richting Jeruzalem)\n• Sommige stadsplattegronden: gedraaid voor leesbaarheid\n• Wandelroutes: noord soms niet boven\n\nALTIJD windroos checken — zonder weet je niet welke kant noord is." },
+          ],
+          woorden: [
+            { woord: "windroos", uitleg: "Kompas-symbool op kaart dat 4-16 richtingen aangeeft." },
+            { woord: "noord-pijl", uitleg: "Symbool dat naar noord wijst. Vaak vereenvoudigde windroos." },
+          ],
+          theorie: "Windroos NOZW + tussenrichtingen:\n• 4 hoofdrichtingen: N, O, Z, W\n• 8 tussen: N-NO-O-ZO-Z-ZW-W-NW\n• 16 (precisie): NNO, ONO, OZO, ZZO, etc.\n\nEzelsbruggetje: 'Nooit Op Zaterdag Werken' = N-O-Z-W kloksrond.",
+          voorbeelden: [
+            { type: "stap", tekst: "Atlas-kaarten: windroos altijd zichtbaar in legenda." },
+            { type: "stap", tekst: "Op stadsplattegrond Amsterdam centraal: noord-pijl helpt om noordkant Amstel te vinden." },
+          ],
+          basiskennis: [{ onderwerp: "Altijd checken", uitleg: "Voor route-vraag op Cito-kaart: kijk ALTIJD eerst de windroos. Anders weet je niet welke kant 'noord' is op die specifieke kaart." }],
+          niveaus: { basis: "Kompas-symbool richtingen. = A.", simpeler: "Windroos = klein kompas-tekentje op kaart dat aangeeft welke kant noord/oost/zuid/west is. = A.", nogSimpeler: "Kompas op kaart = A." },
+        },
+      },
+      {
+        q: "Met **Google Maps** of een **navigatie-app** in de auto — welk principe lijkt op een papieren kaart?",
+        options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's","Filmt","Stuurt sms"],
+        answer: 0,
+        wrongHints: [null,"Klopt — moderne digitale variant van papieren kaart.","Niet — foto's apart (Google Street View wel).","Niet — film is video.","Niet — geen berichten-app."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauw stip)\n• **Live verkeer** + werk-zaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
+            { titel: "Hoe weet je telefoon waar je bent?", tekst: "**GPS** (Global Positioning System) = ~30 satellieten rond aarde. Je telefoon ontvangt signaal van ≥3 satellieten + berekent positie (driehoek-meting). Nauwkeurigheid: **3-10 meter**.\n\nDriehoeksmeting-truc: als satelliet 1 zegt 'je bent 100 km van mij', satelliet 2 zegt 'je bent 120 km van mij', dan ben je op kruispunt van 2 cirkels. Met 3 satellieten = precies 1 punt." },
+            { titel: "Cito-feit: GPS-eigenaardig­heid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
+          ],
+          woorden: [
+            { woord: "GPS", uitleg: "Global Positioning System. Satelliet-systeem om locatie te bepalen." },
+            { woord: "satelliet", uitleg: "Voorwerp dat rond aarde draait. GPS-satellieten op ~20.000 km hoogte." },
+            { woord: "navigatie", uitleg: "Route bepalen naar een bestemming." },
+          ],
+          theorie: "Verschillen papier vs digitaal:\n• Papier: vast, zwaar, geen update, geen GPS\n• Digitaal: live update, GPS-locatie, route-plan, batterij nodig, kan stuk\n\n**Tip**: bij wandelen in onbekend terrein → papieren kaart als back-up (batterij leeg = papier werkt nog).",
+          voorbeelden: [
+            { type: "feit", tekst: "Google Maps heeft 1+ miljard gebruikers wereldwijd (2024)." },
+            { type: "feit", tekst: "Bij stroomuitval / netwerkstoring: papieren kaart blijft werken." },
+          ],
+          basiskennis: [{ onderwerp: "Niet altijd uniek-modern", uitleg: "Kaart-principe (gebied + schaal + symbolen) is duizenden jaren oud. Wel ELEKTRONISCH veel nieuwer." }],
+          niveaus: { basis: "Zelfde principe als papier. = A.", simpeler: "Google Maps werkt net als een papieren kaart maar dan elektronisch: toont gebied met schaal + symbolen + jouw eigen locatie via GPS. = A.", nogSimpeler: "Digitale kaart = A." },
+        },
+      },
     ],
   },
 ];

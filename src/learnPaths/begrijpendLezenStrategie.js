@@ -639,6 +639,77 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat doe je bij een vraag met **'volgens de tekst'**?",
+        options: ["Antwoord ALLEEN baseren op wat in tekst staat","Eigen mening geven","Algemene kennis gebruiken","Tekst negeren"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 'volgens de tekst' = bewijs uit DE TEKST.","Tegenovergesteld — bij 'volgens de tekst' mag je GEEN eigen mening geven.","Niet — je moet juist alleen die tekst gebruiken.","Tegenovergesteld — tekst is essentieel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'Volgens de tekst'-signaal", tekst: "Bij Cito-vragen met **'volgens de tekst'** of **'wat zegt de tekst over X'**: je moet je antwoord BASEREN op precies wat er staat. Niet wat jij denkt of weet uit eigen ervaring." },
+            { titel: "Cito-instinker: algemene kennis", tekst: "Stel: tekst zegt 'Sommige honden bijten'. Vraag: 'Volgens de tekst, bijten honden?'\n• A) Ja, alle honden\n• B) Sommige honden\n• C) Nee, honden bijten niet\n• D) Honden zijn lief\n\nAntwoord: **B** — wat tekst zegt. Niet **A** (eigen kennis: niet alle honden), niet **D** (eigen mening). **De tekst is de baas**." },
+            { titel: "Cito-truc: terug naar tekst", tekst: "**Stappenplan**:\n1. Lees vraag rustig\n2. Onderstreep 'volgens de tekst'-signaal\n3. **Ga TERUG naar tekst** — zoek waar het over gaat\n4. Lees relevante alinea\n5. Kies optie die het BEST de tekst weergeeft\n6. Negeer opties die alleen kloppen volgens jou — niet volgens tekst" },
+          ],
+          woorden: [
+            { woord: "volgens de tekst", uitleg: "Cito-signaal: gebruik alleen tekst-info, geen eigen kennis/mening." },
+            { woord: "interpretatie", uitleg: "Wat je VAN de tekst kunt afleiden — strict op basis van wat staat." },
+          ],
+          theorie: "Verschillende vraagtypen begrijpend lezen:\n• **'Wat staat in de tekst?'** → letterlijk zoeken\n• **'Wat bedoelt schrijver?'** → interpretatie (waar leidt het naar?)\n• **'Wat is hoofdgedachte?'** → samenvatting in 1 zin\n• **'Wat NIET in tekst?'** → uitsluiting (zie eerdere check)\n\nEigen mening is NOOIT antwoord bij begrijpend lezen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst zegt: 'Plastic vervuilt zeeën.' Vraag: 'Volgens tekst, wat doet plastic?' → 'Vervuilt zeeën' (niet 'beschermt vissen' of jouw eigen mening)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet je eigen kennis", uitleg: "Cito test of je TEKST kunt lezen, niet of je veel weet. 'Volgens de tekst' is grens." }],
+          niveaus: { basis: "Alleen tekst. = A.", simpeler: "'Volgens de tekst' = je antwoord moet uit DE TEKST komen, geen eigen mening. Tekst is de baas. = A.", nogSimpeler: "Tekst-alleen = A." },
+        },
+      },
+      {
+        q: "Wat is **een goede zin lezen** stappen?",
+        options: ["Stuk voor stuk + woorden snappen + verband zien","Snel scannen voor sleutelwoorden","Letterlijk lezen","Lange-zin-overslaan"],
+        answer: 0,
+        wrongHints: [null,"Klopt — bij Cito-vragen op detail-niveau is grondig lezen nodig.","Scannen werkt voor overzicht, niet voor begrip.","Te oppervlakkig — 'letterlijk' is half-lezen.","Tegenovergesteld — overslaan kan veel betekenis kosten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Goed lezen vs scannen", tekst: "Twee technieken:\n• **Scannen** = ogen snel over tekst voor sleutelwoorden (zoals 'wanneer' / 'jaartal' opzoeken)\n• **Goed lezen** = stuk voor stuk + alle woorden snappen + verband leggen\n\nBij **Cito-detail-vragen** ('wat staat in alinea 2?') = goed lezen. Bij **algemene vragen** ('waar gaat tekst over?') = scannen + globaal lezen genoeg." },
+            { titel: "Goed-lezen stappenplan", tekst: "1. **Lees zin tot komma/punt**\n2. **Snap alle woorden** (onbekend? raad uit context)\n3. **Wat zegt de zin?** Eigen woorden in hoofd herhalen\n4. **Verbind met vorige zin** (en/maar/dus?)\n5. **Volgende zin**\n\nDuurt langer maar je 'krijgt' de tekst echt." },
+            { titel: "Cito-tip: gemarkeerd onthouden", tekst: "Tijdens lezen MAG je markeren in Cito-boekje:\n• **Onderstreep** belangrijke zinnen\n• **Cirkel** sleutelwoorden\n• **Schrijf in marge** vraagtekens bij niet-begrip\n\nMaakt later terug-vinden makkelijker. Brein onthoudt ook beter wat je actief markeert dan passief leest." },
+          ],
+          woorden: [
+            { woord: "scannen", uitleg: "Snel kijken voor specifiek info (jaartal, naam, getal). Niet alles lezen." },
+            { woord: "globaal lezen", uitleg: "Hele tekst rustig doorlezen voor algemeen begrip. Geen detail." },
+            { woord: "goed lezen", uitleg: "Zin voor zin met begrip + verband leggen. Voor detail-vragen." },
+          ],
+          theorie: "Wanneer welke techniek:\n• **Cito-tijdsdruk + globaal**: 1 keer rustig doorlezen\n• **Detail-vraag** (wat staat in alinea X?): goed lezen of scannen + goed lezen alinea\n• **Hoofdgedachte**: globaal lezen + conclusie zoeken\n• **'Volgens tekst'-vraag**: terug + goed lezen relevante zin\n\nProfs wisselen technieken. Bij Cito-toets = goed leren wisselen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bij vraag 'wat zegt alinea 3?' = lees alinea 3 goed. Niet hele tekst." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alles even grondig", uitleg: "Goed lezen kost tijd. Bij Cito: leer WANNEER goed lezen + wanneer scannen. Mix is sleutel." }],
+          niveaus: { basis: "Stuk voor stuk + begrip. = A.", simpeler: "Goed lezen: zin voor zin, alle woorden snappen, verband leggen. Bij detail-vragen Cito nodig. = A.", nogSimpeler: "Grondig = A." },
+        },
+      },
+      {
+        q: "Hoe verbeter je je **leesvaardigheid** op lange termijn?",
+        options: ["Veel boeken lezen + woordenschat bouwen","Alleen Cito oefenen","Streaming kijken","Niets doen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — onderzoek toont: lezers scoren 20-30% hoger op begrijpend lezen.","Cito oefenen helpt, maar zonder lezen blijft basis te smal.","Niet — beelden ipv tekst trainen leesvaardigheid niet.","Tegenovergesteld — leesvaardigheid groeit met inspanning."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom lezen helpt", tekst: "**Leesvaardigheid** is een vaardigheid die je opbouwt door **veel lezen**:\n• **Meer woordenschat** — onbekende woorden vaker zien → kennen\n• **Beter verband zien** — hoe schrijvers zinnen bouwen\n• **Sneller lezen** — automatische herkenning patronen\n• **Beter begrip context** — wereld + onderwerpen-kennis\n\nOnderzoek (Cito-bron): kinderen die **30 min/dag** lezen scoren **20-30% hoger** op begrijpend lezen dan niet-lezers." },
+            { titel: "Wat lezen? Top-tips groep 7-8", tekst: "**Fictie** (verhalen):\n• Jip & Janneke / Pluk (Schmidt)\n• Kruistocht in Spijkerbroek (Beckman)\n• Brief voor de koning (Dragt)\n• Harry Potter / Roald Dahl\n\n**Non-fictie** (informatie):\n• Jeugd-encyclopedie\n• National Geographic Junior\n• Nieuws-apps voor kinderen (NOS Jeugdjournaal-tekst)\n• Junior-versies populaire onderwerpen (Beeld + Geluid, NEMO)\n\n**Wat NIET doet**: alleen instagram-bijschriften lezen (te kort, te eenvoudig)." },
+            { titel: "Cito-feit: bibliotheek + scholen", tekst: "**NL beleid**:\n• Bibliotheek lid <18 jaar = GRATIS\n• Veel scholen hebben leesbeleid (15 min stillezen per dag)\n• **DEAR-tijd** (Drop Everything And Read) op sommige scholen\n• Leestoets-resultaten in PISA-onderzoek: NL daalde — leerlingen lezen minder dan vroeger. Daarom: zelf MEER lezen = direct voordeel." },
+          ],
+          woorden: [
+            { woord: "leesvaardigheid", uitleg: "Vermogen om geschreven tekst te lezen + begrijpen." },
+            { woord: "PISA", uitleg: "Internationaal onderzoek dat leesvaardigheid van 15-jarigen meet per land." },
+            { woord: "DEAR", uitleg: "Drop Everything And Read — vast lees-moment op school." },
+          ],
+          theorie: "Lezen-trainings­advies:\n• **Begin klein**: 10 min/dag, bouw op naar 30 min\n• **Kies wat JIJ leuk vindt** (geen gedwongen literatuur)\n• **Lees voor slapen**: combineert + ontspant\n• **Wissel fictie + non-fictie** voor variatie\n• **Praat over wat je leest** met ouder/vriend (versterkt onthouden)\n\nBijproduct: lezers slapen vaak beter (zonder schermtijd vóór slapen).",
+          voorbeelden: [
+            { type: "feit", tekst: "Onderzoek Universiteit Leiden: leerlingen die thuis 5+ boeken lezen per jaar scoren ~1 jaar voor op Cito-niveau." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen voor toets", uitleg: "Lezen voor levenslange vaardigheid — niet alleen Cito. Hoog-opleidings volwassenen lezen gemiddeld meer dan laag-opleids." }],
+          niveaus: { basis: "Veel lezen. = A.", simpeler: "Leesvaardigheid groeit door VEEL lezen — boeken + tijdschriften + jeugd-encyclopedie. 30 min/dag = grote sprong. = A.", nogSimpeler: "Lezen = A." },
+        },
+      },
     ],
   },
 ];
