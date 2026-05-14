@@ -122,9 +122,11 @@ def parse_correctie(text):
     # zijn de uitleg.
     lines = bm_text.split("\n")
     n = len(lines)
-    vraag_marker_re = re.compile(r"^\s*(\d{1,2})\s*([A-E])\s*$")
+    # MC-marker: "5 B", "5B", "5 B   2" (scorepunten erna OK). \b zorgt dat
+    # 'B' niet matcht in "Bevoegd" o.i.d. — moet eind van token zijn.
+    vraag_marker_re = re.compile(r"^\s*(\d{1,2})\s*([A-E])\b(?!\w)")
     open_marker_re = re.compile(r"^\s*(\d{1,2})\s+maximumscore\s+\d+")
-    any_marker_re = re.compile(r"^\s*(\d{1,2})\s*(?:[A-E]\s*$|maximumscore\s+\d+)")
+    any_marker_re = re.compile(r"^\s*(\d{1,2})\s*(?:[A-E]\b(?!\w)|maximumscore\s+\d+)")
     i = 0
     while i < n:
         line = lines[i]

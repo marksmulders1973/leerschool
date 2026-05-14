@@ -17,9 +17,22 @@
         "Enzymen verteren voedingsstoffen."
       ],
       "answer": 3,
-      "explanation": "Vraag Antwoord                                                                   Scores\n\n   Immuunsysteem en mazelen\n\n13 C                                                        juist onjuist\n                                                              X",
+      "explanation": "Vraag Antwoord                                                                   Scores\n\n   Immuunsysteem en mazelen",
       "tekstNr": null,
       "vraagNr": 12
+    },
+    {
+      "q": "Mensen die niet gevaccineerd zijn tegen mazelen, zullen bij besmetting met het mazelenvirus meestal ziek worden. Hun lichaam maakt dan antistoffen aan. Als ze genezen zijn, zijn ze immuun voor een volgende besmetting met het mazelenvirus. Op welke manier zijn deze mensen dan immuun geworden voor het mazelenvirus?",
+      "options": [
+        "door kunstmatige, actieve immunisatie",
+        "door kunstmatige, passieve immunisatie",
+        "door natuurlijke, actieve immunisatie",
+        "door natuurlijke, passieve immunisatie"
+      ],
+      "answer": 2,
+      "explanation": "X",
+      "tekstNr": null,
+      "vraagNr": 13
     },
     {
       "q": "Voor de ontsluiting krijgt Mandy wee'n. Deze wee'n zijn samentrekkingen van bepaalde spieren. Deze samentrekkingen zijn onbewuste bewegingen. Van welke spieren zijn dit de samentrekkingen?",
@@ -219,10 +232,6 @@
     {
       "nr": 11,
       "reden": "open/complex"
-    },
-    {
-      "nr": 13,
-      "reden": "geen MC-antwoord in correctie"
     },
     {
       "nr": 14,

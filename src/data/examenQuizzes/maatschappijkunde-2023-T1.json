@@ -38,9 +38,59 @@
         "het Europees Parlement"
       ],
       "answer": 1,
-      "explanation": "Vraag Antwoord                                     Scores\n\n    5B                                                2\n                                                      1\n    6B                                                0\n                                                      1\n    7A                                                1\n\n    8B                                                1\n                                                      1",
+      "explanation": "Vraag Antwoord                                     Scores",
       "tekstNr": 2,
       "vraagNr": 4
+    },
+    {
+      "q": "Er volgen drie uitspraken over gegevens uit tekst 3 en tabel 1. Welk van de uitspraken laat zien dat de Verenigde Staten een meerderheidsstelsel hebben? worden.",
+      "options": [
+        "De burgers hebben een nieuwe president gekozen.",
+        "De presidentskandidaat met de meeste stemmen wint de hele staat.",
+        "In iedere staat kan op dezelfde presidentskandidaten gestemd"
+      ],
+      "answer": 1,
+      "explanation": "1",
+      "tekstNr": 3,
+      "vraagNr": 5
+    },
+    {
+      "q": "Welke taak van het parlement vervult de Tweede Kamer in de tekst?",
+      "options": [
+        "de (mede)wetgevende taak",
+        "de controlerende taak",
+        "de rechtsprekende taak",
+        "de uitvoerende taak"
+      ],
+      "answer": 1,
+      "explanation": "1",
+      "tekstNr": 4,
+      "vraagNr": 6
+    },
+    {
+      "q": "Wat laat tekst 5 zien over politieke besluitvorming in Nederland? De tekst laat zien dat doorgaand proces is. uitvoerbaar is.",
+      "options": [
+        "een politiek besluit geen eindpunt is, maar dat besluitvorming een",
+        "er vaak geen draagvlak is voor besluiten van de Tweede Kamer.",
+        "tijdens de uitvoer van besluiten kan blijken dat een besluit niet"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": 5,
+      "vraagNr": 7
+    },
+    {
+      "q": "De vier standpunten uit tekst 6 zijn van ''n Nederlandse politieke partij. Welke politieke partij moet er op de puntjes in tekst 6 ingevuld worden? Zie tekst 6.",
+      "options": [
+        "CDA",
+        "D66",
+        "PVV",
+        "SGP"
+      ],
+      "answer": 1,
+      "explanation": "1",
+      "tekstNr": 6,
+      "vraagNr": 8
     },
     {
       "q": "Het besluit tot de komst van jongerencentra is genomen door de Amsterdamse politiek. Bij welk kenmerk van Nederland past dat besluit het best? Bij het kenmerk dat Nederland Zie tekst 7.",
@@ -234,22 +284,6 @@
     {
       "nr": 3,
       "reden": "open/complex"
-    },
-    {
-      "nr": 5,
-      "reden": "geen MC-antwoord in correctie"
-    },
-    {
-      "nr": 6,
-      "reden": "geen MC-antwoord in correctie"
-    },
-    {
-      "nr": 7,
-      "reden": "geen MC-antwoord in correctie"
-    },
-    {
-      "nr": 8,
-      "reden": "geen MC-antwoord in correctie"
     },
     {
       "nr": 9,

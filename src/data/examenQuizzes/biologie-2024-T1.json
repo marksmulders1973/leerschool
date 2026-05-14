@@ -61,6 +61,18 @@
       "vraagNr": 17
     },
     {
+      "q": "Met welke letter is in de afbeelding het deel aangegeven waar tijdens de menstruatie het baarmoederslijmvlies het lichaam verlaat? De fruitvlieg als proefdier Thomas is laborant. Hij werkt met fruitvliegjes die hij gebruikt voor onderzoek naar allerlei erfelijke eigenschappen. Het is een geschikt proefdier, omdat Thomas in korte tijd veel generaties fruitvliegjes kan kweken. Een fruitvlieg heeft acht chromosomen in elke lichaamscel.",
+      "options": [
+        "met letter X  7 / 20  lees verder",
+        "met letter Y",
+        "met letter Z"
+      ],
+      "answer": 1,
+      "explanation": "GT-0191-a-24-1-c                       8\n Vraag Antwoord                                                          Scores\n\n   De fruitvlieg als proefdier",
+      "tekstNr": null,
+      "vraagNr": 22
+    },
+    {
       "q": "Thomas bestraalt enkele fruitvliegjes met r'ntgenstraling. Daardoor verandert het DNA in de geslachtscellen van deze fruitvliegjes. Hoe wordt deze verandering van DNA genoemd?",
       "options": [
         "evolutie",
@@ -243,10 +255,6 @@
     {
       "nr": 21,
       "reden": "open/complex"
-    },
-    {
-      "nr": 22,
-      "reden": "geen MC-antwoord in correctie"
     },
     {
       "nr": 24,

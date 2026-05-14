@@ -197,6 +197,19 @@
       "vraagNr": 29
     },
     {
+      "q": "Tussen 1950 en 1980 begon de samenstelling van de Nederlandse bevolking te veranderen. Waardoor veranderde de samenstelling? Door de komst van:",
+      "options": [
+        "Amerikaanse soldaten + Belgische vluchtelingen",
+        "Belgische vluchtelingen + gastarbeiders uit het Middellandse Zeegebied",
+        "gastarbeiders uit het Middellandse Zeegebied + migranten uit Indonesi'",
+        "migranten uit Indonesi' + Amerikaanse soldaten"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 40
+    },
+    {
       "q": "Welke president van de Verenigde Staten wordt beschreven? Gebruik bron 20.",
       "options": [
         "Kennedy",
@@ -368,10 +381,6 @@
     {
       "nr": 39,
       "reden": "open/complex"
-    },
-    {
-      "nr": 40,
-      "reden": "geen MC-antwoord in correctie"
     },
     {
       "nr": 41,
