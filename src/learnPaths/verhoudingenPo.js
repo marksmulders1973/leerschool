@@ -376,6 +376,78 @@ const steps = [
           niveaus: { basis: "Beide 3:4. A.", simpeler: "Klas A: 12:16 = 3:4 (÷4). Klas B: 9:12 = 3:4 (÷3). Verhouding identiek. = A.", nogSimpeler: "3:4 beide = A." },
         },
       },
+      {
+        q: "**Recept** voor 4 pannenkoeken: 200 g meel, 1 ei, 300 ml melk. Hoeveel **meel** voor **12 pannenkoeken**?",
+        options: ["600 g","300 g","800 g","200 g"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 12 ÷ 4 = 3. Dus 3 × 200 = 600 g.","Te weinig — controleer factor (12÷4=3, geen 1,5).","Te veel — geen × 4 nodig.","Onveranderd — heb je vermenigvuldigen overgeslagen?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: vergrotings­factor", tekst: "Hoeveel keer GROTER is recept B? 12 pannenkoeken ÷ 4 pannenkoeken = **3 keer groter**. Alle ingrediënten moeten dus × 3." },
+            { titel: "Stap 2: ingrediënten × 3", tekst: "• Meel: 200 g × 3 = **600 g**\n• Ei: 1 × 3 = **3 eieren**\n• Melk: 300 ml × 3 = **900 ml**\n\nAlle 3 ingrediënten in dezelfde verhouding aanpassen — anders smaak verandert." },
+            { titel: "Cito-truc: recept-rekenen", tekst: "Bij recept-vragen:\n1. **Bereken factor**: gewenst aantal ÷ oorspronkelijk aantal\n2. **Vermenigvuldig** ALLE ingrediënten met die factor\n3. **Check** met andere ingrediënt of factor klopt\n\nLet op: factor kan ook **kleiner dan 1** zijn (bv. recept voor 6 → 4 pannenkoeken = 4÷6 = 2/3 × alles)." },
+          ],
+          woorden: [
+            { woord: "verhoudingsfactor", uitleg: "Getal waarmee je alles vermenigvuldigt om naar nieuwe verhouding te komen." },
+            { woord: "recept", uitleg: "Lijst van ingrediënten + hoeveelheden voor een gerecht." },
+          ],
+          theorie: "Recept-omrekenen-stappenplan:\n1. Wat is de **factor**? Nieuw-aantal ÷ oud-aantal.\n2. **Alle** ingrediënten × factor.\n3. Klopt het qua hoeveelheid (te veel? halveer factor)?\n\nWerkt ook voor:\n• Verf voor groter oppervlak\n• Drank voor meer mensen\n• Geld voor meer dagen vakantie",
+          voorbeelden: [
+            { type: "stap", tekst: "Cake voor 6: 250 g suiker. Voor 9 personen: 9÷6 = 1,5. 250 × 1,5 = 375 g suiker." },
+            { type: "stap", tekst: "Limonade voor 4 glazen: 100 ml siroop. Voor 10 glazen: 10÷4 = 2,5. 100 × 2,5 = 250 ml." },
+          ],
+          basiskennis: [{ onderwerp: "Alles aanpassen", uitleg: "Niet ALLEEN meel × 3. Ook ei + melk × 3. Anders verandert smaak/textuur." }],
+          niveaus: { basis: "600 g. = A.", simpeler: "12 ÷ 4 = 3 (factor). Meel: 200 × 3 = 600 g. = A.", nogSimpeler: "600 g = A." },
+        },
+      },
+      {
+        q: "Op een **kaart 1:25.000** is een weg **8 cm**. Hoe **lang** is de weg in werkelijkheid?",
+        options: ["2 km","200 m","20 km","2 m"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 8 × 25.000 = 200.000 cm = 2.000 m = 2 km.","Te kort — heb je 100 ipv 25.000 gedaan?","Te lang — 8 × 25.000 = 200.000 cm = 2 km, niet 20.","Veel te kort — eenheid omrekenen vergeten?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is schaal 1:25.000?", tekst: "**Schaal 1:25.000** = **1 cm op kaart komt overeen met 25.000 cm werkelijk**. Of: kaart is 25.000× kleiner dan werkelijkheid." },
+            { titel: "Stap 1: × schaal-getal", tekst: "8 cm op kaart × 25.000 = **200.000 cm** werkelijk." },
+            { titel: "Stap 2: eenheden omrekenen", tekst: "200.000 cm = 2.000 m (÷ 100) = **2 km** (÷ 1.000). Antwoord: weg is 2 km lang.\n\n**Cito-tip schaal-conversie**:\n• 1:25.000 → 1 cm = 250 m = 0,25 km\n• 1:50.000 → 1 cm = 500 m = 0,5 km\n• 1:100.000 → 1 cm = 1 km\n• 1:200.000 → 1 cm = 2 km" },
+          ],
+          woorden: [
+            { woord: "schaal", uitleg: "Verhouding kaart vs werkelijkheid. 1:25.000 = kaart is 25.000× kleiner." },
+            { woord: "topografische kaart", uitleg: "Detail-kaart met landschap, wegen, gebouwen. Vaak schaal 1:25.000 of 1:50.000." },
+          ],
+          theorie: "Schaal-rekenen-aanpak:\n1. **Kaart → werkelijkheid**: × schaal-getal (vermenigvuldig)\n2. **Werkelijkheid → kaart**: ÷ schaal-getal (deel)\n3. **Eenheid omrekenen** (meestal cm → m → km)\n\nHandige cm-m-km conversie:\n• 100 cm = 1 m\n• 1.000 m = 1 km\n• 100.000 cm = 1 km",
+          voorbeelden: [
+            { type: "stap", tekst: "Plattegrond 1:100. Tafel 5 cm = 5×100 = 500 cm = 5 m." },
+            { type: "stap", tekst: "Stad-kaart 1:10.000. Park 12 cm = 12×10.000 = 120.000 cm = 1,2 km." },
+          ],
+          basiskennis: [{ onderwerp: "Eenheid in antwoord", uitleg: "Veel Cito-fouten = vergeten cm naar m of km om te zetten. Antwoord 200.000 cm = 2 km — gewone weg-lengte." },],
+          niveaus: { basis: "2 km. = A.", simpeler: "8 cm × 25.000 = 200.000 cm. ÷100 = 2.000 m. ÷1.000 = 2 km. = A.", nogSimpeler: "2 km = A." },
+        },
+      },
+      {
+        q: "Een **muur van 4 m²** kost **€ 12** verf. Hoeveel verf nodig voor **muur van 10 m²**?",
+        options: ["€ 30","€ 20","€ 25","€ 40"],
+        answer: 0,
+        wrongHints: [null,"Klopt — €12 ÷ 4 = €3/m². 10 m² × €3 = €30.","Te weinig — controleer prijs per m².","Te weinig — heb je 10×€3 of 10×€2,50?","Te veel — controleer hoeveelheid per m²."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: prijs per m²", tekst: "€ 12 voor 4 m² → 12 ÷ 4 = **€ 3 per m²**. Dit is de **eenheidsprijs**." },
+            { titel: "Stap 2: vermenigvuldig", tekst: "10 m² × € 3/m² = **€ 30**.\n\nOf: directe verhouding 4:12 = 10:?\n→ Vermenigvuldigingsfactor: 10 ÷ 4 = 2,5.\n→ 12 × 2,5 = € 30. Beide methoden geven hetzelfde." },
+            { titel: "Cito-tip: prijs-per-eenheid", tekst: "Bij verhoudings-vragen met geld/oppervlakte/inhoud: bereken **prijs per eenheid** eerst.\n• Aantal × prijs per eenheid = totaal\n• Totaal ÷ aantal = prijs per eenheid\n\nGebruikt bij:\n• Schilderen (€/m²)\n• Eten kopen (€/kg)\n• Reisplan (km/uur of €/km)" },
+          ],
+          woorden: [
+            { woord: "eenheidsprijs", uitleg: "Prijs per 1 eenheid (per m², per kg, per stuk)." },
+            { woord: "evenredig", uitleg: "Twee groottes die samen op- of afnemen in vaste verhouding." },
+          ],
+          theorie: "Wanneer is iets EVENREDIG?\n• Meer m² muur → meer verf nodig (evenredig)\n• Meer kinderen op feestje → meer taart (evenredig)\n• Meer afstand → meer benzine (evenredig, ongeveer)\n\n**Niet evenredig**:\n• Lengte vs gewicht persoon (groei is anders)\n• Studie-uren vs cijfers (afnemende meeropbrengst)",
+          voorbeelden: [
+            { type: "stap", tekst: "5 liter benzine = €10. 12 liter? €10÷5 = €2/L. 12 × €2 = €24." },
+            { type: "stap", tekst: "3 boeken kosten €18. 1 boek = €6. 7 boeken = €42." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen vermenigvuldigen", uitleg: "Belangrijke stap: EERST prijs per eenheid berekenen, DAN vermenigvuldigen. Niet vergeten." }],
+          niveaus: { basis: "€30. = A.", simpeler: "€12 voor 4 m² = €3/m². Voor 10 m²: 10 × €3 = €30. = A.", nogSimpeler: "€30 = A." },
+        },
+      },
     ],
   },
 ];
