@@ -1,0 +1,451 @@
+{
+  "pincode-belasting": [
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 14,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 14"
+    },
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 36,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 36"
+    },
+    {
+      "examPathId": "examen-economie-2025-t2",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 16,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 16"
+    }
+  ],
+  "pincode-buitenland-eu": [
+    {
+      "examPathId": "examen-economie-2023-t1",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 13"
+    },
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 27,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 27"
+    },
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 28,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 28"
+    },
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 6,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 30"
+    },
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 4"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 7,
+      "vraagNr": 29,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29"
+    }
+  ],
+  "pincode-geld-sparen-lenen": [
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 36,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36"
+    },
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 33"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 8,
+      "vraagNr": 37,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37"
+    },
+    {
+      "examPathId": "examen-economie-2025-t2",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 3"
+    }
+  ],
+  "pincode-inkomen-welvaart": [
+    {
+      "examPathId": "examen-economie-2023-t1",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 4"
+    },
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 26"
+    },
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 27,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 27"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 14,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 14"
+    },
+    {
+      "examPathId": "examen-economie-2025-t2",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 39,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 39"
+    },
+    {
+      "examPathId": "examen-economie-2025-t2",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 43,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 43"
+    }
+  ],
+  "pincode-ondernemen": [
+    {
+      "examPathId": "examen-economie-2023-t1",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 36,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 36"
+    },
+    {
+      "examPathId": "examen-economie-2023-t1",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 38,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 38"
+    },
+    {
+      "examPathId": "examen-economie-2023-t1",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 42,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 42"
+    },
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 7"
+    },
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 17"
+    },
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 21,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 21"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 6,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 17"
+    }
+  ],
+  "pincode-ontwikkelingslanden": [
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 28,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 28"
+    }
+  ],
+  "pincode-overheid": [
+    {
+      "examPathId": "examen-economie-2023-t2",
+      "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 12"
+    },
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 8"
+    },
+    {
+      "examPathId": "examen-economie-2025-t1",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 9,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9"
+    }
+  ],
+  "pincode-werk-arbeidsmarkt": [
+    {
+      "examPathId": "examen-economie-2024-t1",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 41,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41"
+    },
+    {
+      "examPathId": "examen-economie-2024-t2",
+      "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 27,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 27"
+    },
+    {
+      "examPathId": "examen-economie-2025-t2",
+      "examPathTitle": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 2, vraag 8"
+    }
+  ],
+  "tijdvakken-geschiedenis": [
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 11"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 34,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 34"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 39,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 39"
+    }
+  ],
+  "wereldoorlog2-geschiedenis": [
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 15,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 15"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 16,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 16"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 35,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 35"
+    }
+  ],
+  "woordenschat-engels": [
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 6,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 6"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 7"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 9,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 9"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 11"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 6,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 12"
+    },
+    {
+      "examPathId": "examen-engels-2024-t1",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 7,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 1, vraag 13"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 3"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 5,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 5"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 6,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 6"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 7"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 8"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 6,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 10"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 7,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 12"
+    },
+    {
+      "examPathId": "examen-engels-2025-t1",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
+      "stepIdx": 8,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 1, vraag 13"
+    }
+  ]
+}
