@@ -56,6 +56,31 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 25"
     }
   ],
+  "industriele-revolutie-po": [
+    {
+      "examPathId": "examen-geschiedenis-2024-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 5,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2024 tijdvak 2, vraag 5"
+    }
+  ],
+  "koude-oorlog-modern-po": [
+    {
+      "examPathId": "examen-geschiedenis-2023-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 42,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 1, vraag 42"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2024-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 38,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2024 tijdvak 1, vraag 38"
+    }
+  ],
   "mens-biologie-vmbo": [
     {
       "examPathId": "examen-biologie-2023-t1",
@@ -157,6 +182,27 @@
     }
   ],
   "nederlandse-staat-maatschappijleer": [
+    {
+      "examPathId": "examen-geschiedenis-2023-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2023-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 45,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 1, vraag 45"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2024-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2024 tijdvak 1, vraag 1"
+    },
     {
       "examPathId": "examen-maatschappijkunde-2023-t1",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",

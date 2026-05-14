@@ -1474,6 +1474,68 @@
     "chapterCount": 3
   },
   {
+    "id": "examen-geschiedenis-2023-t1",
+    "title": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2023-T1",
+    "triggerKeywords": [
+      "examen geschiedenis 2023",
+      "willem ii grondwet 1848",
+      "abraham kuyper arp",
+      "pacificatie 1917 schoolstrijd",
+      "reagan koude oorlog",
+      "populisme lpf pvv"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1 (examen-id GT-0125-a-23-1). Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doork",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 2
+  },
+  {
+    "id": "examen-geschiedenis-2024-t1",
+    "title": "Examen oefenen — Geschiedenis 2024 tijdvak 1 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2024-T1",
+    "triggerKeywords": [
+      "examen geschiedenis 2024",
+      "ministeriele verantwoordelijkheid 1848",
+      "gelijkschakeling arbeidsfront",
+      "politionele actie indonesie",
+      "soevereiniteitsoverdracht 1949",
+      "cubacrisis hotline",
+      "poldermodel"
+    ],
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1 (examen-id GT-0125-a-24-1). Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikk",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3
+  },
+  {
+    "id": "examen-geschiedenis-2024-t2",
+    "title": "Examen oefenen — Geschiedenis 2024 tijdvak 2 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2024-T2",
+    "triggerKeywords": [
+      "examen geschiedenis 2024 tijdvak 2",
+      "industrialisatie",
+      "beurskrach 1929 antidemocratisch",
+      "gestapo nazi geheime politie"
+    ],
+    "intro": "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2 (examen-id GT-0125-a-24-2). Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden +",
+    "stepCount": 3,
+    "checkCount": 3,
+    "chapterCount": 2
+  },
+  {
     "id": "examen-geschiedenis-2025-t1",
     "title": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
     "subject": "geschiedenis",
