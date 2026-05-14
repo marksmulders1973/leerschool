@@ -563,6 +563,78 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk woord helpt vaak om **hoofdgedachte** te vinden in laatste alinea van betoogtekst?",
+        options: ["'Dus' / 'Daarom' / 'Kortom'","'Maar' / 'Hoewel'","'Bijvoorbeeld'","'Een keer'"],
+        answer: 0,
+        wrongHints: [null,"Klopt — concluderende signaalwoorden wijzen op samenvatting/hoofdgedachte.","Tegenstelling-woorden — wel belangrijk, maar niet voor hoofdgedachte aan einde.","Voorbeeld-signaal — leidt naar uitwerking, niet conclusie.","Vertel-woord, geen signaal."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Signaalwoorden voor conclusie", tekst: "Aan het einde van een betogende tekst staat vaak een **conclusie** = de hoofdgedachte samengevat. Signaalwoorden die dit aanduiden:\n• **Dus** ('… dus is recyclen belangrijk')\n• **Daarom** ('… daarom moeten we minder vlees eten')\n• **Kortom** ('… kortom, lezen is goed voor je brein')\n• **Concluderend** ('… concluderend: deze methode werkt')\n• **Tot slot** ('… tot slot blijft de boodschap…')\n• **Samengevat** ('… samengevat:…')" },
+            { titel: "Cito-truc: 4 signaalwoord-groepen", tekst: "Cito vraagt vaak naar signaalwoorden:\n• **Conclusie**: dus, daarom, kortom, samengevat\n• **Tegenstelling**: maar, echter, hoewel, daarentegen\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, vervolgens, ten slotte\n\nElke groep helpt verschillende vraag-types:\n• Hoofdgedachte? → zoek **conclusie**-signalen\n• Argument-vraag? → kijk **tegenstelling** + **voorbeeld**" },
+            { titel: "Voorbeeld in tekst", tekst: "*'Roken is slecht voor longen. Het kost geld. Het stinkt. **Daarom** raden artsen aan om niet te beginnen.'*\n\nLaatste zin met 'daarom' = hoofdgedachte van tekst. Drie redenen (longen/geld/stank) leiden naar conclusie 'niet beginnen met roken'." },
+          ],
+          woorden: [
+            { woord: "signaalwoord", uitleg: "Woord dat aangeeft wat de schrijver gaat doen: concluderen, vergelijken, voorbeelden geven, etc." },
+            { woord: "conclusie", uitleg: "Slotzin/-alinea die samenvat wat tekst wil zeggen. Vaak hoofdgedachte." },
+            { woord: "betoog", uitleg: "Tekst die mening verdedigt + lezer wil overtuigen." },
+          ],
+          theorie: "**Cito-aanpak hoofdgedachte vinden** (3 plaatsen):\n1. **Titel** — vaak hoofdthema\n2. **Eerste zin** of eerste alinea — vaak introductie van hoofdgedachte\n3. **Laatste alinea** — vaak conclusie met signaalwoorden\n\nKijk waar signaalwoorden 'dus/daarom/kortom' staan = vaak hoofdgedachte daar.",
+          voorbeelden: [
+            { type: "stap", tekst: "'Kinderen leren beter na ontbijt. Wetenschappers bewezen dit. Daarom: ALTIJD ontbijten voor school.' → hoofdgedachte = laatste zin met 'daarom'." },
+            { type: "stap", tekst: "'Plastic vervuilt zeeën. Diereet plastic. Kortom: minder plastic kopen.' → 'kortom' wijst op hoofdgedachte." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'maar'", uitleg: "Tegenstelling-signaalwoorden (maar, hoewel) wijzen op nuance — niet conclusie. Cito-instinker." }],
+          niveaus: { basis: "Dus / daarom / kortom. = A.", simpeler: "Signaalwoorden voor conclusie aan einde tekst: 'dus', 'daarom', 'kortom', 'samengevat'. Daar staat vaak hoofdgedachte. = A.", nogSimpeler: "Dus/daarom = A." },
+        },
+      },
+      {
+        q: "Tekst: 'Veel scholen verbieden mobieltjes in de klas. Studies tonen dat kinderen zich daardoor beter concentreren. **Dus is dit verbod een goede zaak.**' — Wat is de **hoofdgedachte**?",
+        options: ["Mobielverbod op school is positief","Mobieltjes zijn duur","Scholen zijn streng","Kinderen vinden het oneerlijk"],
+        answer: 0,
+        wrongHints: [null,"Klopt — laatste zin met 'dus' is conclusie + hoofdgedachte.","Niet vermeld — geen prijs-info.","Wel deels (over scholen) maar te zwak — gaat over EFFECT verbod, niet streng-zijn.","Niet vermeld — geen kind-meningen genoemd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Toepassing signaalwoord-truc", tekst: "Net geleerd: 'dus' wijst op conclusie. In deze tekst:\n• Zin 1: scholen verbieden mobiel\n• Zin 2: kinderen concentreren beter (effect)\n• Zin 3: **'Dus** is dit verbod een goede zaak'\n\nLaatste zin = hoofdgedachte = **mobielverbod is positief**." },
+            { titel: "Korte samenvatting maken", tekst: "Hoofdgedachte = de **kern in 1 zin**. Voor deze tekst:\n• **Mobielverbod op scholen is een goede zaak** (= optie A)\n\nAlternatieven afvallen:\n• B 'duur' — niet genoemd\n• C 'streng' — focus op effect, niet streng-zijn\n• D 'oneerlijk' — geen tegenstem in tekst\n\nKies altijd antwoord dat zin-3-conclusie BEST samenvat." },
+            { titel: "Cito-tip: betogende tekst", tekst: "**Betogende tekst** = schrijver wil overtuigen. Structuur:\n1. Stelling/probleem\n2. Argumenten + bewijs\n3. Conclusie (= hoofdgedachte)\n\nDeze 3-stappen-structuur komt veel voor in Cito-opgaven. Herkennen helpt om hoofdgedachte snel te vinden — zit meestal **aan einde**." },
+          ],
+          woorden: [
+            { woord: "betogende tekst", uitleg: "Tekst die mening verdedigt + lezer wil overtuigen." },
+            { woord: "argument", uitleg: "Reden waarom iets klopt of waarom iemand iets vindt." },
+          ],
+          theorie: "Bij Cito-vraag 'wat is hoofdgedachte?' bij betoogtekst:\n1. **Zoek conclusie-signaal** in laatste alinea\n2. **Vat zin om** in eenvoudige woorden\n3. **Kies optie** die zin-conclusie best raakt\n4. **Negeer** opties over details die niet in tekst staan",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst over fietshelm met 'daarom adviseren artsen helm' → hoofdgedachte = 'fietshelm dragen is verstandig'." },
+          ],
+          basiskennis: [{ onderwerp: "Hoofdgedachte = 1 zin", uitleg: "Hoofdgedachte is altijd kort + duidelijk samen te vatten in 1 zin. Geen ingewikkelde opties." }],
+          niveaus: { basis: "Mobielverbod positief. = A.", simpeler: "'Dus' wijst op conclusie. Laatste zin: mobielverbod is goede zaak. Hoofdgedachte = dat = optie A. = A.", nogSimpeler: "Verbod is goed = A." },
+        },
+      },
+      {
+        q: "Wanneer is een samenvatting **TE LANG**?",
+        options: ["Wanneer hij bijna even lang is als origineel","Wanneer hij 25-30% van origineel is","Wanneer hij 1 zin is","Nooit te lang"],
+        answer: 0,
+        wrongHints: [null,"Klopt — samenvatting hoort 20-30% van origineel te zijn.","Dat is goede lengte — niet te lang.","Dat is te KORT — mist context.","Wel — verliest samenvattings-functie als te lang."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Doel van samenvatten", tekst: "Een **samenvatting** vat in **eigen woorden** + **kort** een tekst samen. Hoort:\n• **20-30% van origineel** (vuistregel)\n• Alle **hoofdpunten** bevatten\n• Geen **details / voorbeelden** uitgebreid\n• Geen **eigen mening** toevoegen\n• Lopende tekst (geen lijst)" },
+            { titel: "Wat is TE LANG?", tekst: "Te lang = **>40-50% van origineel**. Dan ben je niet meer aan het samenvatten maar **herschrijven**. Veel mensen doen dit fout:\n• Schrijven alle voorbeelden over\n• Citeren te veel\n• Houden alle bijzaken erin\n\n**Doel samenvatting**: lezer KAN tekst overslaan + toch hoofdgedachte begrijpen. Te lang = doel mislukt." },
+            { titel: "Cito-tip: aanpak", tekst: "**Samenvatten-stappenplan**:\n1. **Lees** tekst 2× — eerst overzicht, dan details\n2. **Markeer** hoofdgedachte + hoofdpunten\n3. **Negeer** voorbeelden + details + bijzaken\n4. **Herschrijf** in eigen woorden — kort\n5. **Check** lengte: 20-30% van origineel?\n6. **Lees terug**: snapt iemand het zonder het origineel?\n\nBij Cito: vaak **specifieke woordlimiet** (bv. 'maximaal 50 woorden')." },
+          ],
+          woorden: [
+            { woord: "samenvatting", uitleg: "Korte versie van tekst met alleen hoofdpunten. 20-30% origineel." },
+            { woord: "hoofdpunt", uitleg: "Belangrijkste inhoud per alinea/onderdeel." },
+          ],
+          theorie: "Goede samenvatting kenmerken (Cito-criteria):\n• Compleet — alle hoofdpunten\n• Beknopt — 20-30% lengte\n• Eigen woorden — geen letterlijk citeren\n• Objectief — geen mening\n• Logisch — zelfde volgorde meestal\n• Begrijpelijk — los van origineel\n\nFouten: te lang, mening toevoegen, voorbeelden meenemen, eigen interpretatie.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tekst 200 woorden → samenvatting ~50-60 woorden = OK." },
+            { type: "stap", tekst: "Tekst 200 woorden → samenvatting 180 woorden = veel te lang, niet samengevat." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alles", uitleg: "Mooi samenvatten = WEGLATEN durven. Niet alles is even belangrijk." }],
+          niveaus: { basis: "Bijna even lang. = A.", simpeler: "Samenvatting > 40-50% origineel = TE LANG. Doel: 20-30%. = A.", nogSimpeler: "Bijna even lang = A." },
+        },
+      },
     ],
   },
 ];
