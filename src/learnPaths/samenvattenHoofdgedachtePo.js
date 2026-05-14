@@ -650,7 +650,7 @@ const samenvattenHoofdgedachtePo = {
   title: "Samenvatten en hoofdgedachte — Cito groep 5-8",
   emoji: "💭",
   level: "groep5-8",
-  subject: "taal",
+  subject: "begrijpend-lezen",
   referentieNiveau: "1F",
   sloThema: "Studievaardigheden — leesvaardigheid",
   prerequisites: [
