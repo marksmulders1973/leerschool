@@ -510,6 +510,49 @@ const steps = [
           niveaus: { basis: "Vindt (dt). A.", simpeler: "Stam van vinden = vind (op d). Bij hij + t. Vind + t = vindt. Beide letters d en t schrijven. = A.", nogSimpeler: "Vindt = A." },
         },
       },
+      {
+        q: "**'Hij is gisteren ____'** (werken, voltooid deelwoord)?",
+        options: ["gewerkt","werkte","gewerkd","werkt"],
+        answer: 0,
+        wrongHints: [null,"Klopt — voltooid deelwoord: ge-stam-t want stam 'werk' eindigt op kofschip-letter k.","Niet — dat is verleden tijd (VT), niet voltooid (VTT).","Niet — bij kofschip-letter krijg je -t niet -d.","Niet — dat is tegenwoordige tijd."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Voltooid deelwoord recipe", tekst: "**Voltooid deelwoord** = **ge- + stam + -t/-d**.\n• Stam-eindletter in 't kofschip (t,k,f,s,ch,p)? → **-t**\n• Anders → **-d**\n\nVoor 'werken':\n• Stam: werk\n• 'k' staat in 't kofschip → -t\n• Voltooid deelwoord: **ge-werk-t = gewerkt**\n\nHulpwerkwoord ervoor: 'is/heeft'. 'Hij is/heeft gewerkt'." },
+            { titel: "Cito-tip: VTT vs VT", tekst: "**Drie tijden onderscheiden**:\n• Tegenwoordig (TT): 'hij werkt'\n• Verleden (VT): 'hij werkte'\n• Voltooid (VTT): 'hij heeft gewerkt'\n\nLezen vraag scherp! 'Hij is gisteren ____' = voltooide gebeurtenis = VTT = gewerkt." },
+          ],
+          woorden: [
+            { woord: "voltooid deelwoord", uitleg: "Werkwoordsvorm met ge-. Bij hulpwerkwoord 'hebben/zijn'." },
+            { woord: "'t kofschip", uitleg: "Ezelsbruggetje voor -t-letters: t-k-f-s-ch-p. Stam-eind in kofschip = -t in verleden + voltooid." },
+          ],
+          theorie: "Voltooid deelwoord-stappenplan:\n1. Stam vinden (werkwoord min -en)\n2. Stam-eindletter checken\n3. In 't kofschip? → ge-stam-t\n4. Niet in kofschip? → ge-stam-d\n\nGeldt voor zwakke werkwoorden. Sterke werkwoorden = klinker-wissel (geslapen, gegeten, gelezen).",
+          voorbeelden: [
+            { type: "stap", tekst: "Werken (k = kofschip) → gewerkt. Hopen (p = kofschip) → gehoopt. Reizen (z ≠ kofschip) → gereisd." },
+          ],
+          basiskennis: [{ onderwerp: "Sterk anders", uitleg: "Sterke werkwoorden volgen kofschip NIET: gaan→gegaan (geen -t/-d), zien→gezien, eten→gegeten." }],
+          niveaus: { basis: "gewerkt. = A.", simpeler: "Werken: stam 'werk', k in kofschip → gewerkt. = A.", nogSimpeler: "Gewerkt = A." },
+        },
+      },
+      {
+        q: "**'word'** of **'wordt'**? — 'Hij ___ vanavond ouder.'",
+        options: ["wordt","word","wort","worden"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 3e persoon (hij) = stam + t = wordt.","Niet — 'word' is ik-vorm.","Niet — geen 't' alleen.","Niet — meervoud, niet bij 'hij'."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Word vs wordt", tekst: "Werkwoord **'worden'** — TT-vervoeging:\n• Ik: word (stam zonder t)\n• Jij/hij/zij/het: **wordt** (stam + t)\n• Wij/jullie/zij: worden (hele werkwoord)\n\nStam = 'word'. Eindigt op 'd'. Hij + stam + t = 'word + t' = **wordt** (twee letters dt)." },
+            { titel: "Cito-instinker: dt of d?", tekst: "**Veel-gemaakte fouten**:\n• 'Hij word' ✗ — mist de t (verplicht bij hij-vorm)\n• 'Hij wort' ✗ — geen d, kan niet (stam = word, met d)\n• 'Hij wordt' ✓ — d (van stam) + t (van uitgang)\n\nKlinkt hetzelfde: 'wort'. Maar SCHRIJVEN met dt." },
+          ],
+          woorden: [
+            { woord: "wordt", uitleg: "TT 3e persoon van worden. Stam (word) + t = wordt. Dubbele letter dt." },
+          ],
+          theorie: "Andere stam-op-d werkwoorden:\n• Vinden (vind) → vindt\n• Houden (houd) → houdt\n• Rijden (rijd) → rijdt\n• Snijden (snijd) → snijdt\n\nAllemaal dt-eindiging bij hij-vorm. Engel-stijl: één t — fout.",
+          voorbeelden: [
+            { type: "stap", tekst: "Stam 'word'. Hij + stam + t. Word + t = wordt." },
+          ],
+          basiskennis: [{ onderwerp: "Lopen-test", uitleg: "Vervang 'worden' door 'lopen': 'hij loopt'. Loopt = met t. Dus wordt = met t. Lopen-test bevestigt dt." }],
+          niveaus: { basis: "wordt. = A.", simpeler: "Hij-vorm = stam 'word' + t = wordt (dt-eindiging). = A.", nogSimpeler: "Wordt = A." },
+        },
+      },
     ],
   },
 ];
