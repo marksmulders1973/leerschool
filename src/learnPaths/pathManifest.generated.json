@@ -1500,6 +1500,28 @@
     "chapterCount": 2
   },
   {
+    "id": "examen-maatschappijkunde-2024-t1",
+    "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2024-T1",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2024",
+      "echte examenvragen maatschappij",
+      "recht van initiatief",
+      "staten-generaal volksvertegenwoordigers",
+      "europese commissie toezicht",
+      "hoger beroep gerechtshof",
+      "officier van justitie opsporing"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1 (examen-id GT-1127-a-24-1). Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar ",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3
+  },
+  {
     "id": "exponentieel",
     "title": "Exponentiële groei en afname",
     "subject": "wiskunde",
