@@ -2,6 +2,7 @@ node_modules
 dist
 .env
 .vercel
+tmp/
 
 # Lokale eenmalige opruim-scripts (vragen-database fixes)
 check-dupes*.py
