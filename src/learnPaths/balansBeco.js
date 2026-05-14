@@ -555,6 +555,79 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           niveaus: { basis: "Winst €30.000.", simpeler: "100k − 70k.", nogSimpeler: "Winst." },
         },
       },
+      {
+        q: "Wat staat aan de **DEBET-kant** van een balans?",
+        options: ["Bezittingen (activa)","Schulden","Winst","Inkomen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — debet = links = wat bedrijf bezit.","Niet — schulden = credit (rechts).","Niet — winst = onderdeel eigen vermogen, credit-kant.","Niet — inkomen staat op winst-en-verliesrekening, niet balans."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Balans-structuur", tekst: "Een **balans** heeft 2 kanten:\n• **Debet (links)** = **bezittingen** (activa): gebouwen, voorraad, geld in kas, auto's, computers\n• **Credit (rechts)** = **eigen vermogen + schulden** (passiva): kapitaal eigenaar + leningen + crediteuren\n\n**Regel**: debet = credit (altijd in evenwicht). Vandaar 'balans'." },
+            { titel: "Voorbeelden activa/passiva", tekst: "**Activa (debet)**:\n• Gebouw waarde €500.000\n• Voorraad waarde €50.000\n• Kasgeld €5.000\n• Bank-saldo €20.000\n• Auto's €30.000\n• Totaal: €605.000\n\n**Passiva (credit)** moet ook €605.000:\n• Eigen vermogen €200.000\n• Hypotheek €350.000\n• Leveranciers-schuld €55.000" },
+            { titel: "Cito-feit: ezelsbruggetje", tekst: "**'D-A en C-P'** = Debet-Activa + Credit-Passiva. Onthoud deze!\n\nIn boekhoud-software (Exact, AFAS): debet + credit altijd zichtbaar. Bij verkoop: debet kas, credit voorraad. Bij inkoop: debet voorraad, credit kas/schuld. Symmetrisch boekhouden = dubbel boekhouden, uitvinding 1494 door Luca Pacioli (Italiaans monnik)." },
+          ],
+          woorden: [
+            { woord: "debet", uitleg: "Linker-kant balans: bezittingen + uitgaven." },
+            { woord: "credit", uitleg: "Rechter-kant balans: vermogen + inkomsten." },
+            { woord: "activa", uitleg: "Bezittingen van bedrijf (debet)." },
+            { woord: "passiva", uitleg: "Hoe activa zijn gefinancierd: eigen geld + schulden (credit)." },
+          ],
+          theorie: "Balans-vergelijking:\nActiva = Eigen Vermogen + Schulden\nLinks (Debet) = Rechts (Credit)\n\nVerschillende balans-types:\n• Begin-balans (start jaar)\n• Eindbalans (einde jaar)\n• Tussenbalans (kwartaal)\n• Voortgangsbalans (controle)",
+          voorbeelden: [
+            { type: "stap", tekst: "Bakker koopt oven €10.000 contant. Debet: oven +€10.000 (activa). Credit: kas -€10.000 (ook activa, dus verschuiving binnen debet). Balans nog steeds in evenwicht." },
+          ],
+          basiskennis: [{ onderwerp: "Altijd in balans", uitleg: "Debet = credit. Anders is er een fout in boekhouding." }],
+          niveaus: { basis: "Bezittingen. = A.", simpeler: "Debet (links) van balans = activa = wat bedrijf bezit (gebouw, voorraad, geld). = A.", nogSimpeler: "Bezittingen = A." },
+        },
+      },
+      {
+        q: "Wat is **liquiditeit**?",
+        options: ["Snel kunnen omzetten naar geld (kas + bank)","Hoeveelheid winst","Hoeveel je verdient","Tijd op kantoor"],
+        answer: 0,
+        wrongHints: [null,"Klopt — kas + bankrekening = direct beschikbaar.","Niet — dat is winst.","Niet — dat is inkomen.","Niet — geen tijd-meting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
+            { titel: "Liquiditeitsratio's", tekst: "Bedrijven berekenen **liquiditeit-ratio's** om gezondheid te checken:\n• **Current Ratio** = vlottende activa ÷ kortlopende schulden. Streven: >1.0 (kan schulden betalen)\n• **Quick Ratio** = (vlottende activa - voorraad) ÷ kortlopende schulden. Strenger\n• **Kas-ratio** = kas + bank ÷ kortlopende schulden\n\nLage ratio = bedrijf kan rekeningen niet betalen = faillissement-risico." },
+            { titel: "Cito-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor Cito: winst ≠ liquiditeit. **Cashflow is koning**." },
+          ],
+          woorden: [
+            { woord: "liquide", uitleg: "Snel naar geld om te zetten (kas, bank)." },
+            { woord: "illiquide", uitleg: "Moeilijk naar geld om te zetten (gebouw, kunstwerk)." },
+            { woord: "cashflow", uitleg: "Geldstroom in/uit bedrijf — niet hetzelfde als winst." },
+          ],
+          theorie: "Liquiditeits-hiërarchie balans:\n• **Vlottende activa** (1 jaar of korter): kas, bank, voorraad, vorderingen\n• **Vaste activa** (>1 jaar): gebouwen, machines, vrachtwagens\n\nWel-liquide bedrijven kunnen storm doorstaan. Niet-liquide = kwetsbaar.",
+          voorbeelden: [
+            { type: "stap", tekst: "Restaurant met €10k kas, €30k voorraad, €100k gebouw. Liquide = €10k. Bij plotselinge schuld €20k → ZIE direct probleem ondanks veel totale activa." },
+          ],
+          basiskennis: [{ onderwerp: "Goud regel", uitleg: "Houd 3-6 maanden kosten in kas/bank. Voor noodgevallen." }],
+          niveaus: { basis: "Snel naar geld omzetten. = A.", simpeler: "Liquiditeit = hoe snel kun je bezittingen naar geld omzetten. Kas = direct, gebouw = maanden. = A.", nogSimpeler: "Snel geld = A." },
+        },
+      },
+      {
+        q: "Wat is **afschrijven** (boekhoudkundig)?",
+        options: ["Waarde-vermindering vaste activa over levensduur","Iets weggooien","Korting","Belasting"],
+        answer: 0,
+        wrongHints: [null,"Klopt — auto/machine/computer verliezen waarde over jaren — boekhoudkundig afschrijven.","Niet — dat is afvoeren, andere term.","Niet — korting is iets anders.","Niet — wel mag afschrijving belastbaar zijn."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is afschrijven?", tekst: "**Afschrijven** = de **waarde van een vast actief (auto, machine, gebouw) over de jaren verlagen** op de balans. Reden: deze spullen slijten + verouderen.\n\nVoorbeeld: bedrijf koopt **vrachtwagen €60.000**, gebruikt 6 jaar:\n• Afschrijving: €60.000 ÷ 6 jaar = **€10.000/jaar**\n• Jaar 1 op balans: €50.000\n• Jaar 2: €40.000\n• ...\n• Jaar 6: €0 (boekwaarde)" },
+            { titel: "Waarom afschrijven?", tekst: "**Doelen**:\n• Reëel beeld van bedrijfswaarde\n• Verspreid kosten over gebruiksjaren\n• **Belasting-voordeel**: afschrijving = kosten = minder winst = minder belasting\n• Voorbereid op vervanging (sparen voor nieuwe machine)\n\nElke vaste activa heeft eigen **levensduur**:\n• Auto: 5 jaar\n• Computer: 3 jaar\n• Gebouw: 33 jaar\n• Machine: 10 jaar" },
+            { titel: "Cito-feit: methodes", tekst: "**Afschrijvingsmethoden**:\n• **Lineair**: gelijke € per jaar (simpelste)\n• **Degressief**: meer eerste jaren, minder later (versneld)\n• **Productie-eenheden**: op basis van gebruik (km of uren)\n\nKeuze afhankelijk van bedrijfsbeleid + belasting-regels. Cito-VMBO: meestal lineair." },
+          ],
+          woorden: [
+            { woord: "afschrijven", uitleg: "Waarde-vermindering van vast actief over levensduur." },
+            { woord: "boekwaarde", uitleg: "Waarde op balans NA afschrijving (origineel min cumulatieve afschrijving)." },
+            { woord: "levensduur", uitleg: "Hoeveel jaar een actief economisch bruikbaar is." },
+          ],
+          theorie: "Lineaire afschrijving formule:\nAfschrijving per jaar = (Aanschaf - Restwaarde) ÷ Levensduur\n\nBv: machine €50.000, restwaarde €5.000, 5 jaar.\n→ (50.000 - 5.000) ÷ 5 = **€9.000 per jaar**",
+          voorbeelden: [
+            { type: "stap", tekst: "Bedrijfsauto €30.000, 5 jaar, restwaarde €0. → €6.000/jaar afschrijven. Na 3 jaar boekwaarde €12.000." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-economie-stof", uitleg: "Afschrijven = examen-VMBO-stof. Lineair-formule moeten kunnen toepassen." }],
+          niveaus: { basis: "Waarde-vermindering vast actief. = A.", simpeler: "Afschrijven = waarde van auto/machine over jaren verlagen op balans. Lineair: gelijke € per jaar. = A.", nogSimpeler: "Waarde dalen = A." },
+        },
+      },
     ],
   },
 ];
