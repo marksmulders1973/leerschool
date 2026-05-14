@@ -114,6 +114,12 @@ const steps = [
       { q: "Wat is **NAVO**?", options: ["Westerse militaire alliantie sinds 1949", "Sovjet-pact", "VN", "EU"], answer: 0, wrongHints: [null, "Warschau.", "Andere.", "Andere."] },
       { q: "Wie won **Vietnam-oorlog**?", options: ["Noord-Vietnam", "VS", "Frankrijk", "Niemand"], answer: 0, wrongHints: [null, "Verloor.", "Eerder weg.", "Wel."] },
       { q: "Wanneer **9/11**?", options: ["11 september 2001", "1989", "1945", "2022"], answer: 0, wrongHints: [null, "Muur viel.", "WO2.", "Oekraine."] },
+      { q: "Wat was het **IJzeren Gordijn**?", options: ["Symbolische scheiding Oost en West Europa", "Een echt gordijn in een museum", "Een rivier", "Een berg"], answer: 0, wrongHints: [null, "Symbolisch, niet letterlijk.", "Niet.", "Niet."] },
+      { q: "Welke leider leidde de **Sovjet-Unie** in WO2?", options: ["Stalin", "Hitler", "Roosevelt", "Churchill"], answer: 0, wrongHints: [null, "Duitsland.", "VS.", "VK."] },
+      { q: "Welk land was **bondgenoot van de VS** in NAVO?", options: ["West-Duitsland", "Oost-Duitsland", "Sovjet-Unie", "China"], answer: 0, wrongHints: [null, "Warschau-pact.", "Tegenstander VS.", "Communistisch."] },
+      { q: "Wat is een **dictatuur**?", options: ["Land geregeerd door één leider zonder eerlijke verkiezingen", "Een eerlijke democratie", "Een religie", "Een sport"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet politiek.", "Niet politiek."] },
+      { q: "Wanneer viel de **Sovjet-Unie uiteen**?", options: ["1991", "1945", "1989", "2000"], answer: 0, wrongHints: [null, "WO2.", "Berlijnse Muur.", "Te laat."] },
+      { q: "Wie was **eerste leider Cuba in revolutie 1959**?", options: ["Fidel Castro", "Kennedy", "Stalin", "Chroesjtsjov"], answer: 0, wrongHints: [null, "VS-president.", "Sovjet-leider eerder.", "Sovjet."] },
     ],
   },
 ];

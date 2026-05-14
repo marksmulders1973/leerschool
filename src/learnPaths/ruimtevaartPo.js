@@ -114,6 +114,12 @@ const steps = [
       { q: "**Apollo 11** wanneer?", options: ["1969", "1957", "1989", "2020"], answer: 0, wrongHints: [null, "Sputnik.", "Niet.", "Recent."] },
       { q: "**ISS** = ?", options: ["Internationaal ruimtestation in baan", "Raket", "Maan", "Mars-rover"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
       { q: "NL-astronaut **André Kuipers** ging 2x naar?", options: ["ISS", "Maan", "Mars", "Sun"], answer: 0, wrongHints: [null, "Geen NL'er op maan.", "Onbemand.", "Onmogelijk."] },
+      { q: "Welke **planeet** is het **dichtst bij de zon**?", options: ["Mercurius", "Venus", "Mars", "Aarde"], answer: 0, wrongHints: [null, "Tweede.", "Vierde.", "Derde."] },
+      { q: "Welke **planeet** wordt **rode planeet** genoemd?", options: ["Mars", "Jupiter", "Venus", "Saturnus"], answer: 0, wrongHints: [null, "Grootste — bruin.", "Helste — wit.", "Met ringen."] },
+      { q: "Hoeveel **manen** heeft de **Aarde**?", options: ["1", "0", "2", "62"], answer: 0, wrongHints: [null, "Wel.", "Te weinig.", "Saturnus."] },
+      { q: "Wat is een **lichtjaar**?", options: ["De afstand die licht in 1 jaar aflegt", "Een jaar van licht weg", "Tijd dat een ster brandt", "Geen afstand"], answer: 0, wrongHints: [null, "Onjuist.", "Niet.", "Wel — afstand-maat."] },
+      { q: "Welke **planeet** heeft **opvallende ringen**?", options: ["Saturnus", "Aarde", "Mars", "Mercurius"], answer: 0, wrongHints: [null, "Geen.", "Geen.", "Geen."] },
+      { q: "Hoe heet onze **galaxy** (sterrenstelsel)?", options: ["Melkweg", "Andromeda", "Plejaden", "Mars"], answer: 0, wrongHints: [null, "Andere galaxy.", "Sterrengroep.", "Planet."] },
     ],
   },
 ];

@@ -114,6 +114,12 @@ const steps = [
       { q: "**Meest medailles** NL ooit?", options: ["Ireen Wüst", "Sven Kramer", "Phelps", "Femke Bol"], answer: 0, wrongHints: [null, "Iets minder.", "Geen NL.", "Nog actief."] },
       { q: "**Goud** medaille voor?", options: ["1e plaats", "2e", "3e", "Doping"], answer: 0, wrongHints: [null, "Zilver.", "Brons.", "Niet."] },
       { q: "Wat is **WADA**?", options: ["Anti-Doping-Agency", "Sportbond", "NL-team", "Stadion"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet."] },
+      { q: "Welke kleuren hebben de **olympische ringen**?", options: ["Blauw, geel, zwart, groen, rood", "Alleen blauw", "Wit en zwart", "Regenboog"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Niet primair olympisch."] },
+      { q: "Wanneer waren **Olympische Spelen Amsterdam**?", options: ["1928", "1900", "2000", "2020"], answer: 0, wrongHints: [null, "Parijs.", "Sydney.", "Tokio (uitgesteld)."] },
+      { q: "Welke **NL-sporter** wint vaak op de **schaats**?", options: ["Ireen Wüst, Sven Kramer", "Lionel Messi", "Usain Bolt", "Michael Phelps"], answer: 0, wrongHints: [null, "Voetbal.", "Atletiek.", "Zwemmen."] },
+      { q: "**Paralympische Spelen** zijn voor ___?", options: ["Sporters met een handicap", "Alleen kinderen", "Niet bestaand", "Alleen NL"], answer: 0, wrongHints: [null, "Volwassenen ook.", "Wel bestaand.", "Internationaal."] },
+      { q: "Welke kleur heeft de **2e plaats**-medaille?", options: ["Zilver", "Goud", "Brons", "Wit"], answer: 0, wrongHints: [null, "1e plaats.", "3e plaats.", "Niet bestaand."] },
+      { q: "Hoeveel jaar tussen **Zomerspelen**?", options: ["4 jaar", "1 jaar", "2 jaar", "10 jaar"], answer: 0, wrongHints: [null, "Te vaak.", "Te vaak.", "Te zelden."] },
     ],
   },
 ];
