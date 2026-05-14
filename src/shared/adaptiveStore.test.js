@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from "vitest";
 import {
   recordWrong, recordRight, getWrongChecks,
   buildCheckOrder, countPathWrong, pathWrongMap,
-  clearPath, clearAll,
+  clearPath, clearAll, getCheckStreak, STREAK_TO_MASTER,
 } from "./adaptiveStore.js";
 
 beforeEach(() => {
@@ -17,16 +17,37 @@ describe("adaptiveStore", () => {
     expect(getWrongChecks("p1", 0)).toEqual([2, 5]);
   });
 
-  it("recordRight: verwijdert specifieke checkIdx", () => {
+  it("recordRight: verwijdert specifieke checkIdx na STREAK_TO_MASTER × goed", () => {
     recordWrong("p1", 0, 2);
     recordWrong("p1", 0, 5);
-    recordRight("p1", 0, 2);
+    for (let i = 0; i < STREAK_TO_MASTER; i++) recordRight("p1", 0, 2);
     expect(getWrongChecks("p1", 0)).toEqual([5]);
   });
 
-  it("recordRight: laatste check leegt step (geen lege array blijft hangen)", () => {
+  it("recordRight: 1× goed = blijft in fout-set (streak-progressie)", () => {
     recordWrong("p1", 0, 2);
     recordRight("p1", 0, 2);
+    expect(getWrongChecks("p1", 0)).toEqual([2]);
+    expect(getCheckStreak("p1", 0, 2)).toBe(1);
+  });
+
+  it("recordRight: laatste check leegt step na STREAK_TO_MASTER × goed", () => {
+    recordWrong("p1", 0, 2);
+    for (let i = 0; i < STREAK_TO_MASTER; i++) recordRight("p1", 0, 2);
+    expect(getWrongChecks("p1", 0)).toEqual([]);
+  });
+
+  it("recordWrong reset streak naar 0", () => {
+    recordWrong("p1", 0, 2);
+    recordRight("p1", 0, 2);
+    recordRight("p1", 0, 2);
+    expect(getCheckStreak("p1", 0, 2)).toBe(2);
+    recordWrong("p1", 0, 2);
+    expect(getCheckStreak("p1", 0, 2)).toBe(0);
+  });
+
+  it("recordRight op niet-foute check: no-op", () => {
+    recordRight("p1", 0, 99);
     expect(getWrongChecks("p1", 0)).toEqual([]);
   });
 
