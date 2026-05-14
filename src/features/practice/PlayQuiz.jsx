@@ -5,6 +5,7 @@ import { SoundEngine, track } from "../../utils.js";
 import { findLearnPathForQuestion } from "../../learnPaths/index.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
+import { checkOpenAnswer } from "./openAnswerCheck.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
@@ -296,7 +297,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     setSelected(idx);
     setShowResult(true);
 
-    const isCorrect = idx === question.answer;
+    // Open-vraag: idx is een string (user input). MC: idx is een index.
+    const isOpenQuestion = question?.kind === "open";
+    const isCorrect = isOpenQuestion
+      ? (idx !== -1 && checkOpenAnswer(String(idx ?? ""), question))
+      : idx === question.answer;
     if (isCorrect) {
       SoundEngine.play("correct");
       setScoreAnim(true);
@@ -507,8 +512,17 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
           />
         )}
 
+        {question.kind === "open" ? (
+          <OpenAnswerBlock
+            question={question}
+            showResult={showResult}
+            selected={selected}
+            canAnswer={canAnswer}
+            onSubmit={handleAnswer}
+          />
+        ) : (
         <div style={styles.optionsGrid}>
-          {question.options.map((opt, i) => {
+          {(question.options || []).map((opt, i) => {
             const colors = ["var(--color-brand-primary)", "var(--color-brand-primary)", "var(--color-brand-primary)", "var(--color-brand-primary)"];
             let bg = colors[i] + "20";
             let border = colors[i] + "50";
@@ -554,6 +568,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             );
           })}
         </div>
+        )}
 
         {!showResult && !isExamMode && onLearnPathRequest && (
           <button
@@ -929,6 +944,96 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               cursor: "default",
             }}
           />
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Open-vraag-block: input + submit-knop. Bij showResult toont status + juiste antwoord.
+function OpenAnswerBlock({ question, showResult, selected, canAnswer, onSubmit }) {
+  const [value, setValue] = useState("");
+  const inputRef = useRef(null);
+  useEffect(() => {
+    if (!showResult) {
+      setValue("");
+      setTimeout(() => inputRef.current?.focus(), 50);
+    }
+  }, [question, showResult]);
+  const handleSubmit = () => {
+    if (showResult || !canAnswer) return;
+    const trimmed = value.trim();
+    if (!trimmed) return;
+    onSubmit(trimmed);
+  };
+  const onKeyDown = (e) => {
+    if (e.key === "Enter") handleSubmit();
+  };
+  const isCorrect = showResult && typeof selected === "string"
+    ? checkOpenAnswer(selected, question)
+    : null;
+  const firstAccepted = Array.isArray(question.acceptedAnswers) ? question.acceptedAnswers[0] : "";
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: "8px 4px" }}>
+      <input
+        ref={inputRef}
+        type="text"
+        value={showResult ? String(selected ?? "") : value}
+        onChange={(e) => setValue(e.target.value)}
+        onKeyDown={onKeyDown}
+        disabled={showResult || !canAnswer}
+        placeholder="Typ je antwoord en druk Enter"
+        aria-label="Typ je antwoord"
+        style={{
+          padding: "14px 16px",
+          fontSize: 18,
+          fontFamily: "var(--font-body)",
+          borderRadius: 12,
+          border: showResult
+            ? `2px solid ${isCorrect ? "#28a745" : "#dc3545"}`
+            : "2px solid rgba(255,255,255,0.15)",
+          background: showResult
+            ? (isCorrect ? "#1a3a2a" : "#3a1a1a")
+            : "rgba(255,255,255,0.05)",
+          color: "var(--color-text)",
+          outline: "none",
+          width: "100%",
+          boxSizing: "border-box",
+        }}
+      />
+      {!showResult && (
+        <button
+          onClick={handleSubmit}
+          disabled={!canAnswer || !value.trim()}
+          style={{
+            padding: "12px 20px",
+            background: !canAnswer || !value.trim() ? "#2a3f5f" : "linear-gradient(135deg, var(--color-brand-primary), #69f0ae)",
+            border: "none",
+            borderRadius: 12,
+            color: !canAnswer || !value.trim() ? "var(--color-text-muted)" : "#0d1b2e",
+            fontFamily: "var(--font-display)",
+            fontSize: 15,
+            fontWeight: 700,
+            cursor: !canAnswer || !value.trim() ? "not-allowed" : "pointer",
+            alignSelf: "flex-start",
+          }}
+        >
+          Antwoord indienen ↵
+        </button>
+      )}
+      {showResult && (
+        <div style={{
+          padding: "10px 14px",
+          borderRadius: 10,
+          background: isCorrect ? "rgba(40,167,69,0.13)" : "rgba(220,53,69,0.13)",
+          color: isCorrect ? "#6fcf87" : "#f08080",
+          fontFamily: "var(--font-body)",
+          fontSize: 14,
+        }}>
+          {isCorrect
+            ? "✅ Juist!"
+            : <>❌ Juiste antwoord: <strong>{firstAccepted}</strong></>
+          }
         </div>
       )}
     </div>

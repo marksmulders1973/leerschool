@@ -1922,6 +1922,13 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — 8 × 150 = 1200.", "Niet.", "Eén rondje."],
       },
+      {
+        q: "**Open vraag**: hoeveel is **12 × 8**? Typ alleen het getal.",
+        kind: "open",
+        acceptedAnswers: ["96"],
+        numericTolerance: 0,
+        explanation: "12 × 8 = 96. Truc: 10 × 8 = 80, dan + 2 × 8 = 16 → 96.",
+      },
     ],
   },
 ];
