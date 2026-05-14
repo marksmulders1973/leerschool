@@ -1500,6 +1500,29 @@
     "chapterCount": 2
   },
   {
+    "id": "examen-maatschappijkunde-2023-t1",
+    "title": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2023-T1",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2023",
+      "echte examenvragen maatschappij",
+      "europese raad crisis",
+      "verzorgingsstaat jongerencentra",
+      "beleidsambtenaren voorbereiding",
+      "sociaaldemocratie criminaliteit",
+      "bindingstheorie hirschi",
+      "anomietheorie etikettentheorie"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1 (examen-id GT-1127-a-23-1). Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De ",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 2
+  },
+  {
     "id": "examen-maatschappijkunde-2024-t1",
     "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
     "subject": "maatschappijleer",
@@ -1517,6 +1540,28 @@
       "officier van justitie opsporing"
     ],
     "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1 (examen-id GT-1127-a-24-1). Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar ",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3
+  },
+  {
+    "id": "examen-maatschappijkunde-2024-t2",
+    "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2024-T2",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2024 tijdvak 2",
+      "echte examenvragen maatschappij",
+      "beleidsbepaling fase",
+      "recht van initiatief amendement",
+      "college b en w coalitie",
+      "resocialisatie straffen",
+      "requisitoir strafeis"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2 (examen-id GT-1127-a-24-2). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 3

@@ -158,6 +158,41 @@
   ],
   "nederlandse-staat-maatschappijleer": [
     {
+      "examPathId": "examen-maatschappijkunde-2023-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 4"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 11"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 14,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 14"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 23"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 26"
+    },
+    {
       "examPathId": "examen-maatschappijkunde-2024-t1",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -191,6 +226,41 @@
       "stepIdx": 4,
       "vraagNr": 19,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 1, vraag 19"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2024-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 5,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 2, vraag 5"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2024-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 2, vraag 10"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2024-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 2, vraag 17"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2024-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 2, vraag 26"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2024-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 27,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2024 tijdvak 2, vraag 27"
     }
   ],
   "pincode-belasting": [
