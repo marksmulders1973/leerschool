@@ -327,6 +327,9 @@ const steps = [
           niveaus: { basis: "5 × €8 = €40. = A.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40. = A.", nogSimpeler: "~€40 = A." },
         },
       },
+      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null,"Klopt — 7 ≥ 5 dus omhoog.","Niet — 7 ≥ 5, afronden omhoog.","Dat is honderdtal.","Dat is honderdtal afgerond op."] },
+      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","7,0"], answer: 0, wrongHints: [null,"Klopt — 8 ≥ 5 dus 7.","Niet — afronden omhoog.","Dat is op 1 decimaal.","Niet — geen decimaal nodig."] },
+      { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null,"Klopt — 200 + 400 = 600.","Te hoog.","Te laag.","Veel te hoog."] },
     ],
   },
 ];

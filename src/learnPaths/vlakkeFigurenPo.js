@@ -392,6 +392,11 @@ const steps = [
           niveaus: { basis: "10 × 8 = 80 tegels. = A.", simpeler: "Vloer 3 m = 10 tegels, 2,4 m = 8 tegels. 10 × 8 = 80. = A.", nogSimpeler: "80 = A." },
         },
       },
+      { q: "Vierkant met zijde 7 cm. Omtrek?", options: ["28 cm","14 cm","49 cm","21 cm"], answer: 0, wrongHints: [null,"Klopt — 4 × 7 = 28.","Niet — 4 zijden.","Dat is oppervlakte.","3 zijden gerekend."] },
+      { q: "Vierkant zijde 7 cm. Oppervlakte?", options: ["49 cm²","28 cm²","14 cm²","21 cm²"], answer: 0, wrongHints: [null,"Klopt — 7 × 7 = 49.","Dat is omtrek.","Te laag.","Te laag."] },
+      { q: "Rechthoek 8 × 5 cm. Oppervlakte?", options: ["40 cm²","26 cm²","13 cm²","45 cm²"], answer: 0, wrongHints: [null,"Klopt — 8 × 5 = 40.","Dat is omtrek.","Niet.","Te hoog."] },
+      { q: "Driehoek basis 6, hoogte 4. Oppervlakte?", options: ["12","24","10","8"], answer: 0, wrongHints: [null,"Klopt — (6×4)/2 = 12.","Vergeet niet ÷2.","Niet — basis × hoogte, geen optellen.","Niet."] },
+      { q: "Rechthoek 10 × 4 m. Omtrek?", options: ["28 m","40 m","20 m","14 m"], answer: 0, wrongHints: [null,"Klopt — 2×(10+4) = 28.","Dat is oppervlakte.","Maar 2 zijden meegenomen.","Niet — 4 zijden."] },
     ],
   },
 ];

@@ -426,6 +426,10 @@ const steps = [
           niveaus: { basis: "−15. = A.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15. = A.", nogSimpeler: "−15 = A." },
         },
       },
+      { q: "Het is −3°C. De temperatuur stijgt 8°. Hoe warm is het nu?", options: ["5°C","11°C","−11°C","−5°C"], answer: 0, wrongHints: [null,"Klopt — vanaf −3 stap 8 omhoog: −3+8 = 5.","Niet — niet bij elkaar optellen zonder min.","Niet — getal is gestegen.","Niet — je telt erbij op, daalt niet."] },
+      { q: "Op een rekening staat −€20. Er komt €35 bij. Saldo nu?", options: ["+€15","+€55","−€55","−€15"], answer: 0, wrongHints: [null,"Klopt — −20 + 35 = 15. Schuld weg, beetje over.","Niet — niet −20 omgedraaid bij +35.","Niet — je VOEGT TOE.","Niet — kleiner schuld? Klopt niet."] },
+      { q: "−6 − 4 = ?", options: ["−10","−2","2","10"], answer: 0, wrongHints: [null,"Klopt — beide negatief, dieper schuld: −10.","Niet — schuld wordt groter, niet kleiner.","Niet — antwoord is negatief.","Niet — beide min, getal wordt min."] },
+      { q: "Welke is het kleinst?", options: ["−8","−3","0","5"], answer: 0, wrongHints: [null,"Klopt — −8 ligt het verst links op de getalslijn.","Niet — dichter bij nul = groter.","Niet — er zijn nog kleinere.","Niet — dat is de grootste."] },
     ],
   },
 ];

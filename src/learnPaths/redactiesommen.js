@@ -317,6 +317,9 @@ const steps = [
           niveaus: { basis: "1/3 van 27 = 9. = A.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO. = A.", nogSimpeler: "9 = A." },
         },
       },
+      { q: "Lisa heeft 36 stickers. Ze geeft 1/4 weg. Hoeveel houdt ze over?", options: ["27","9","32","12"], answer: 0, wrongHints: [null,"Klopt — 36÷4 = 9 weg, 36−9 = 27 over.","Dat is wat ze WEG geeft.","Te veel — niet alleen 4 weg.","Niet — 1/4 is geen 12."] },
+      { q: "Een rugzak kost €40. Met 15% korting kost hij?", options: ["€34","€25","€55","€38"], answer: 0, wrongHints: [null,"Klopt — 15% van €40 = €6. €40 − €6 = €34.","Te laag — 25% korting niet 15%.","Niet — korting trekt af, telt niet op.","Bijna — reken korting nogmaals."] },
+      { q: "Tom fietst 12 km in 1 uur. Hoeveel km in 30 minuten?", options: ["6 km","12 km","24 km","18 km"], answer: 0, wrongHints: [null,"Klopt — half uur = helft = 6 km.","Dat is in 1 uur.","Dat is 2 uur.","Niet — halveer 12, niet bij optellen."] },
     ],
   },
 ];

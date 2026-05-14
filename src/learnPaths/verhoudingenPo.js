@@ -448,6 +448,8 @@ const steps = [
           niveaus: { basis: "€30. = A.", simpeler: "€12 voor 4 m² = €3/m². Voor 10 m²: 10 × €3 = €30. = A.", nogSimpeler: "€30 = A." },
         },
       },
+      { q: "In een klas van 28 leerlingen zijn 12 jongens. Verhouding jongens : meisjes?", options: ["12 : 16 (of 3 : 4)","16 : 12","12 : 28","28 : 12"], answer: 0, wrongHints: [null,"Klopt — 28−12=16 meisjes; vereenvoudig (÷4) = 3:4.","Andersom — jongens eerst.","Tweede getal moet meisjes zijn, niet totaal.","Andersom."] },
+      { q: "Schaal 1 : 1.000 — een straat is 5 cm op de kaart. Echt?", options: ["50 m","5 m","500 m","5 km"], answer: 0, wrongHints: [null,"Klopt — 5 cm × 1000 = 5000 cm = 50 m.","Niet — schaal vergroot.","Niet — 500 m is 10× te groot.","Veel te groot."] },
     ],
   },
 ];

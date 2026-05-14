@@ -864,6 +864,7 @@ const steps = [
           },
         },
       },
+      { q: "Een taartdiagram laat zien: 50% rood, 25% blauw, 25% geel. Welke kleur heeft de grootste taartpunt?", options: ["Rood","Blauw","Geel","Allemaal even groot"], answer: 0, wrongHints: [null,"Klopt — 50% is helft van de hele cirkel, de grootste taartpunt.","Dat is maar een kwart.","Dat is ook maar een kwart.","25% en 50% zijn verschillend."] },
     ],
   },
 ];

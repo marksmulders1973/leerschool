@@ -470,6 +470,7 @@ const steps = [
           niveaus: { basis: "Half 9. A.", simpeler: "08:30 = halve uur, vooruit kijken naar 9 = 'half 9'. (Half 8 zou 7:30 zijn). = A.", nogSimpeler: "Half 9 = A." },
         },
       },
+      { q: "De film begint om 19:15 en duurt 90 minuten. Hoe laat is hij afgelopen?", options: ["20:45","20:15","21:00","19:45"], answer: 0, wrongHints: [null,"Klopt — 90 min = 1 uur 30 min. 19:15 + 1u30 = 20:45.","Niet — dat is +1 uur.","Niet — te veel.","Niet — alleen 30 min erbij."] },
     ],
   },
 ];

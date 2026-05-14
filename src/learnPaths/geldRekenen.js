@@ -469,6 +469,8 @@ const steps = [
           niveaus: { basis: "€7,80 ÷ 3 = €2,60. A.", simpeler: "Splits: €6 ÷ 3 = €2. €1,80 ÷ 3 = €0,60. Samen €2,60. = A.", nogSimpeler: "€2,60 = A." },
         },
       },
+      { q: "Mark koopt 2 broden van €2,15. Hij betaalt met €5. Hoeveel wisselgeld?", options: ["€0,70","€1,30","€2,85","€4,30"], answer: 0, wrongHints: [null,"Tel eerst 2 broden samen (€4,30), dan €5 − €4,30.","Dat is 1 brood × 2 − iets. Check 2×€2,15 = €4,30.","Dat is de totaalprijs. Wisselgeld = €5 − €4,30.","Dat is de prijs van 2 broden zelf."] },
+      { q: "Een pen kost €1,25. Hoeveel kosten 4 pennen?", options: ["€5,00","€4,80","€5,25","€4,00"], answer: 0, wrongHints: [null,"Klopt — 4 × €1,25 = €5,00.","Te laag — reken nogmaals.","Te hoog.","Dat is 4 × €1."] },
     ],
   },
 ];
