@@ -89,22 +89,29 @@ Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `d
 - [x] Taal G8: 74 → **147q** (98% van 150) ✓ 4 rondes (commits 8d1d841, 54f86ed, 67cccc6, 7a2149e — +73 vragen totaal).
 - [x] Rekenen G8: 74 → **149q** (99% van 150) ✓ 4 rondes (commits d2f8bcd, 9e1542c, 51afd0c, 3e88bd8 — +75 vragen totaal).
 - [x] Studievaardigheden G8: 79 → **148q** (99% van 150) ✓ 4 rondes (commits 928d4dd, 82644e4, c679e64, 932412a — +69 vragen totaal).
-- [ ] **Feature** (architectuur — wacht op Mark): proef-toets-modus met 30 random vragen uit pool per onderdeel.
+- [x] **Feature** ✅ Proef-toets-modus gebouwd (commit 1944fb5): 30 random vragen uit pool, examen-modus (geen hints/uitlegPad/YouTube). Knoppen op `CitoPage` onder mini-eindtoets. Files: `src/features/practice/buildProefToets.js` + `startProefToets()` in App.jsx + 3 knoppen in CitoPage.
 
-**🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` (klein, snel)**
-- [ ] Regex `vraag_marker_re` aanpassen zodat MC-antwoord in correctievoorschrift wordt herkend bij format-varianten. Concrete 17 files+vraag-nrs:
-  - biologie-2024-T1 v22, biologie-2024-T2 v13
-  - economie-2023-T1 v17, economie-2025-T2 v7/11/32/34
-  - engels-2023-T1 v30, engels-2024-T2 v18/19/26
-  - geschiedenis-2023-T1 v40
-  - maatschappijkunde-2023-T1 v5/6/7/8 (4 op rij = format-variant)
-  - nederlands-2025-T2 v11
-- [ ] Re-parse de 10 files → 17 extra vragen in `examenQuizzes/`
+**🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` — ✅ GEDAAN 2026-05-14 (deels)**
+- [x] Regex `vraag_marker_re` toleranter gemaakt (woordgrens \b ipv eindigt-op): commit ccaf596.
+- [x] 4 files met PDFs lokaal beschikbaar in tmp/ — re-parsed:
+  - maatschappijkunde-2023-T1: 15 → 19 (+4 — v5/6/7/8)
+  - biologie-2024-T1: 13 → 14 (+1 — v22)
+  - biologie-2024-T2: 13 → 14 (+1 — v13)
+  - geschiedenis-2023-T1: 9 → 10 (+1 — v40)
+- [ ] 10 MC-bugs blijven in files waarvan PDFs niet lokaal staan. Mark kan zelf re-parsen door PDFs in tmp/ te zetten + `python scripts/parse_examen.py <id> opgaven.pdf bijlage.pdf correctie.pdf`:
+  - economie-2023-T1 v17 (1 bug)
+  - economie-2025-T2 v7/11/32/34 (4)
+  - engels-2023-T1 v30 (1)
+  - engels-2024-T2 v18/19/26 (3)
+  - nederlands-2025-T2 v11 (1)
 
-**🟡 Spoor 3 — Open-vraag-modus (groot project — apart plannen, niet quick-win)**
-- [ ] Beslis: maken we open-vraag-modus? (Vereist nieuwe `kind: 'open'` questiontype + fuzzy match of AI-grading)
-- [ ] Zonder open-modus blijven aardrijkskunde + wiskunde + geschiedenis structureel onvolledig (VMBO-wiskunde is bijna 100% open).
-- [ ] Alternatief: numerieke-invoer-modus voor reken-antwoorden (lichter dan volledig open).
+**🟡 Spoor 3 — Open-vraag-modus — ✅ MVP GEBOUWD 2026-05-14**
+- [x] Helper `src/features/practice/openAnswerCheck.js` — normalisatie (lowercase, trim, accent-strip, komma→punt) + optionele numerieke tolerantie. Geen AI-grading.
+- [x] `PlayQuiz.jsx` — `OpenAnswerBlock` component + conditional render bij `question.kind === "open"` + `handleAnswer` met type-switch.
+- [x] 1 demo-vraag in `doorstroomtoetsRekenenG8` (12×8=96 open).
+- [x] Commit c7ae948.
+- [ ] Open-vragen toevoegen aan VMBO-examen-paden (aardrijkskunde + wiskunde) zodat die onderdelen structureel compleet worden. **Content-werk** — kan stapsgewijs.
+- [ ] Eventueel: AI-grading toevoegen voor synoniemen/parafrase. Nu alleen exact match.
 
 **⚪ Spoor 4 — Methodes opruimen (lage prio)**
 - [ ] Audit `src/data/textbooks.js`: welke edities > 5 jaar achterstand? Bewaar laatste 2 + 1 nog-veel-gebruikte.
