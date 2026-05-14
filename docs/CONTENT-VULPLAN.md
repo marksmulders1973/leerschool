@@ -16,12 +16,12 @@ Cito-PO + VMBO/HAVO-examenstof prioriteit; STOPLIST-paden skippen.
 - Vragen Cito-relevant + NL-context
 - Build groen na elk pad, commit + push
 
-## Status (2026-05-14)
+## Status (2026-05-14) — ✅ 100% KLAAR
 
 ### Voortgang min-doel 25
 - **Totaal actief**: 156 paden (na STOPLIST-skip 7)
-- **≥25 checks** (doel ✓): **88 paden** (56%)
-- **<25 checks** (te vullen): **68 paden** (44%)
+- **≥25 checks** (doel ✓): **156 paden (100%)** 🎯
+- **<25 checks**: **0 paden** (excl. STOPLIST + authentieke examen-paden)
 
 ### Per subject — paden <25 (TE VULLEN)
 
@@ -54,13 +54,13 @@ Een leerling met 0 content haakt direct af. **Eerst alle paden onder 15 checks
 vullen** voor batch-volgorde wordt vervolgd. Mark-quote: "weinig = jammer maar
 ok, nul = killing voor app".
 
-**Bijna-lege paden (< 15 checks)**:
-- `negatieveGetallen.js` 10 → 25 (+15) — wiskunde VO klas 1
-- `verhoudingen.js` 12 → 25 (+13) — wiskunde VO klas 1
-- `goniometrie.js` 13 → 25 (+12) — wiskunde VO klas 3
-- `statistiek.js` 14 → 25 (+11) — wiskunde VO klas 1
+✅ **Klaar 2026-05-13** (commit 76142f4):
+- `negatieveGetallen.js` 10 → 25 (+15) ✓
+- `verhoudingen.js` 12 → 25 (+13) ✓
+- `goniometrie.js` 13 → 25 (+12) ✓
+- `statistiek.js` 14 → 25 (+11) ✓
 
-Totaal: **4 paden, +51 vragen, ~6-8 uur**. Allemaal wiskunde-VO basis.
+Totaal: **4 paden, +51 vragen**. URGENT-blok klaar.
 
 ## Batch-roadmap (na urgent)
 
