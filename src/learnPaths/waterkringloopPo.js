@@ -249,6 +249,83 @@ const steps = [
       { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."] },
       { q: "Wanneer **Afsluitdijk**?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Klopt — werd IJsselmeer.", "Watersnood.", "Te vroeg.", "Wel."] },
       { q: "Hoeveel **kleuren** regenboog?", options: ["7", "3", "10", "1"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Niet."] },
+      {
+        q: "Welke 4 hoofdstappen vormen samen de **waterkringloop**?",
+        options: ["Verdamping → wolken → neerslag → afstromen terug naar zee", "Eten → drinken → plassen → slapen", "Zonsopgang → middag → zonsondergang → nacht", "Lente → zomer → herfst → winter"],
+        answer: 0,
+        wrongHints: [null, "Klopt — eindeloze cyclus van water op aarde.", "Mens-gebonden — waterkringloop is natuur-fenomeen.", "Dagcyclus — andere natuurkunde.", "Seizoenen — ook andere cyclus."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 4 stappen van de waterkringloop", tekst: "Water op aarde gaat oneindig **rond** via 4 hoofdstappen:\n\n1. **Verdamping** ☀️ — water in zeeën/meren verdampt door zonnewarmte → waterdamp gaat omhoog\n2. **Wolken vormen** ☁️ — hoog in lucht koelt damp af → condenseert tot kleine druppeltjes = wolken\n3. **Neerslag** 🌧️ — druppels worden groter → vallen als regen/sneeuw/hagel\n4. **Afstromen** 💧 — regen valt op land → stroomt via beken/rivieren terug naar zee\n\nDan begint het opnieuw. **Geen begin, geen eind**." },
+            { titel: "Cito-feit: water 'gebruikt' is nooit weg", tekst: "Het water dat jij vandaag drinkt is **HETZELFDE water** dat dinosauriërs dronken — alleen heel veel keer rondgegaan. Aarde maakt geen nieuw water. Alleen de 'plek' verandert: nu in oceaan, dan in wolk, dan in plant, dan in dier.\n\nGevolg: vervuiling is permanent. Plastic in zee blijft eeuwen. Daarom water-zuivering belangrijk." },
+            { titel: "Cito-tip: planten + dieren in cyclus", tekst: "Planten doen ook mee — **transpiratie**: planten 'zweten' water uit hun bladeren. Een grote boom kan **honderden liters water per dag** afgeven aan de lucht. Daarom is bos belangrijk voor regen.\n\nDieren + mensen: drinken water, plassen het uit, het verdampt weer, etc. Allemaal onderdeel van de cyclus." },
+          ],
+          woorden: [
+            { woord: "waterkringloop", uitleg: "Eindeloos rondgaan van water tussen zee, lucht, land. Verdamping → wolk → regen → terug." },
+            { woord: "verdamping", uitleg: "Vloeistof wordt damp (gas). Door zonnewarmte." },
+            { woord: "condensatie", uitleg: "Damp wordt weer vloeibaar. Bv. condens op koud raam in winter." },
+            { woord: "transpiratie", uitleg: "Planten geven water af aan lucht via hun bladeren." },
+          ],
+          theorie: "Waterkringloop is **fundamenteel** voor Cito-natuur:\n• Geeft regen + zoet water\n• Houdt klimaat in balans\n• Veroorzaakt weer + wolken\n• Verbindt zee + land\n\nVerstoring (klimaatverandering, ontbossing) → onbalans → meer extreem weer.",
+          voorbeelden: [
+            { type: "feit", tekst: "Eén regendruppel kan tot **10 jaar** in een wolk blijven voordat hij valt — afhankelijk van temperatuur + wind." },
+            { type: "feit", tekst: "Amazone-regenwoud produceert ~20% van wereld-zuurstof DOOR de waterkringloop (verdamping + plant-fotosynthese)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet gemaakt of weg", uitleg: "Water op aarde is een constante hoeveelheid. Gaat alleen rond." }],
+          niveaus: { basis: "Verdamping → wolk → neerslag → afstromen. = A.", simpeler: "Water gaat eindeloos rond: zon verdampt zeewater → omhoog → wolk → regen → terug naar zee via rivieren. = A.", nogSimpeler: "Eindeloze cyclus = A." },
+        },
+      },
+      {
+        q: "Een **dijk** is waarvoor?",
+        options: ["Houden water tegen — beschermt land tegen overstroming", "Genereert elektriciteit", "Voor schepen om aan te leggen", "Drinkwater filteren"],
+        answer: 0,
+        wrongHints: [null, "Klopt — kerntaak: water uit land houden.", "Niet — andere techniek (waterkracht­centrale).", "Niet — dat is een haven/pier.", "Niet — dat is waterzuivering."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een dijk?", tekst: "Een **dijk** is een **wal van klei + zand + soms stenen** die water tegen­houdt. Beschermt land achter de dijk tegen overstroming.\n\nNederland heeft **~22.000 km dijken** — meer dan welk land ook. Reden: 26% van NL ligt **onder zeespiegel**. Zonder dijken: helft van NL onder water." },
+            { titel: "Soorten dijken in NL", tekst: "• **Zeedijken** — beschermen tegen Noordzee + Waddenzee (bv. Afsluitdijk)\n• **Rivierdijken** — bij Rijn, Maas, Waal, IJssel\n• **Polderdijken** — rond drooggemaakt land (Haarlemmermeer)\n• **Duinen** — natuurlijke 'dijken' van zand langs kust\n\nBeroemde dijken: **Afsluitdijk** (1932, 32 km) + **Deltawerken** (jaren 50-90, beschermen Zuid-Holland/Zeeland)." },
+            { titel: "Cito-feit: Watersnood 1953", tekst: "Op **31 januari / 1 februari 1953** brak een ramp uit:\n• Storm + extreme springtij\n• Dijken in Zeeland + Zuid-Holland braken\n• **1.836 mensen verdronken**\n• 200.000 ha land onder water\n• 200.000 dieren dood\n\nGevolg: **Deltawerken** gebouwd om dit nooit meer te laten gebeuren. Officieel klaar in 1997. Beschermt nu tegen 1-in-4.000-jaar-stormen." },
+          ],
+          woorden: [
+            { woord: "dijk", uitleg: "Aarden wal die water tegenhoudt. NL: ~22.000 km totaal." },
+            { woord: "Deltawerken", uitleg: "Reeks dammen + stormvloedkeringen in Zuid-Holland/Zeeland (1953-1997)." },
+            { woord: "Afsluitdijk", uitleg: "Dijk van 32 km die in 1932 Zuiderzee → IJsselmeer maakte." },
+            { woord: "polder", uitleg: "Drooggemaakt land beneden zeespiegel, omringd door dijken." },
+          ],
+          theorie: "NL waterveiligheid kerntermen:\n• **Dijk** — wal die water tegenhoudt\n• **Polder** — droog land achter dijk\n• **Sluis** — opening voor schepen, kan dicht bij hoog water\n• **Stormvloedkering** — beweegbare dam (Maeslantkering, Oosterscheldekering)\n• **Spaarbekken** — extra waterberging bij overlast\n\nDoor klimaatverandering wordt water-management nóg belangrijker.",
+          voorbeelden: [
+            { type: "feit", tekst: "De Maeslantkering bij Hoek van Holland is een van de grootste beweegbare bouwwerken ter wereld — twee armen elk zo groot als de Eiffeltoren liggend." },
+            { type: "feit", tekst: "Tijdens hoogwater in 1995 moesten 250.000 mensen evacueren in Limburg/Gelderland. Net niet ramp." },
+          ],
+          basiskennis: [{ onderwerp: "Niet voor elektriciteit", uitleg: "Een dijk is GEEN waterkrachtcentrale. Wel kan op een dijk een windmolen staan." }],
+          niveaus: { basis: "Water tegenhouden. = A.", simpeler: "Een dijk is een aarden wal die zeewater of rivierwater tegenhoudt zodat land erachter niet overstroomt. NL heeft 22.000 km dijken. = A.", nogSimpeler: "Water tegen = A." },
+        },
+      },
+      {
+        q: "**Waar komt drinkwater in NL** vandaan?",
+        options: ["Vooral grondwater + oppervlaktewater (rivier/duinen), gezuiverd", "Direct uit zee zonder zuivering", "Alleen regenwater opvangen", "Geïmporteerd uit het buitenland"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 60% grondwater + 40% oppervlaktewater, daarna gezuiverd.", "Zout water → onbruikbaar zonder ontzilting (duur, niet in NL).", "Te onbetrouwbaar voor heel land.", "Niet — NL maakt eigen drinkwater."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Bron 1: grondwater (60% in NL)", tekst: "**Grondwater** is water dat onder de grond zit — eeuwen geleden in de bodem gezakt. **Diep, schoon, beschermd** door zandlagen die als natuurlijk filter werken.\n\nWaterbedrijven pompen het op uit **diepe putten** (50-300 meter diep) in heide­gebieden + bossen. Vraag voor extra zuivering meestal klein." },
+            { titel: "Bron 2: oppervlaktewater (40% in NL)", tekst: "**Oppervlaktewater** = water uit rivieren, meren, duinen. Bv. **Rijn** + **Maas** + **IJsselmeer**.\n\nDit water is **viezer** dan grondwater (industrie, landbouw, riool). Daarom **veel meer zuivering** nodig. Vooral in west-NL (Den Haag, Rotterdam) gebruikt omdat grondwater daar zout is door zeenabijheid." },
+            { titel: "Cito-feit: zuivering-stappen", tekst: "Zuivering van rivierwater tot drinkwater:\n1. **Voorfilter** (zand, grind verwijderen)\n2. **Beluchting** (zuurstof toevoegen)\n3. **Coagulatie** (chemisch — vuil klontert)\n4. **Zandfilter** (microben)\n5. **Actief-kool-filter** (geur/smaak)\n6. **Chloor** of **UV** (desinfectie)\n7. **Drinkwater** naar leiding\n\nKost ~€1 per 1000 liter — Nederlands drinkwater = goedkoopste + schoonste ter wereld (volgens internationale rankings)." },
+          ],
+          woorden: [
+            { woord: "grondwater", uitleg: "Water in de bodem, diep onder grond. Schoonste bron." },
+            { woord: "oppervlaktewater", uitleg: "Water in rivieren, meren, sloten. Aan het oppervlak van de aarde." },
+            { woord: "drinkwaterbedrijf", uitleg: "Bedrijf dat water zuivert + via leiding aan huizen levert. NL heeft 10 regionale bedrijven." },
+          ],
+          theorie: "Verschil zoet/zout/brak water:\n• **Zoet** — minder dan 0,5 g zout/L. Drinkbaar zonder ontzilting.\n• **Brak** — 0,5-30 g zout/L. Mengsel zout-zoet (zoals delta's).\n• **Zout** — meer dan 30 g zout/L. Zee. Niet drinkbaar zonder dure ontzilting.\n\nOcean Cleanup-stichting + zuiver-water-organisaties werken aan oceaan-vervuiling.",
+          voorbeelden: [
+            { type: "feit", tekst: "Nederlanders drinken gemiddeld 120 liter water per dag — uit kraan. Goedkoper dan flessen + minder plastic-afval." },
+            { type: "feit", tekst: "Nederland heeft 10 drinkwaterbedrijven (bv. Vitens, PWN, Evides). Alle in overheidshanden (geen winstdoel)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet zee", uitleg: "Zeewater is in NL niet bruikbaar voor drinkwater — ontzilting te duur. Sommige eilanden (Aruba, Saba) gebruiken wel ontzilte zee." }],
+          niveaus: { basis: "Grond + oppervlaktewater. = A.", simpeler: "NL drinkwater = 60% grondwater (diep onder grond) + 40% rivierwater. Beide goed gezuiverd in waterzuiveringsinstallaties. = A.", nogSimpeler: "Grond + rivier, gezuiverd = A." },
+        },
+      },
     ],
   },
 ];
