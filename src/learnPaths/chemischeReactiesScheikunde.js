@@ -227,7 +227,7 @@ const steps = [
           theorie: "Geen index = 1. Som van indices = totaal.",
           voorbeelden: [{ type: "voorbeeld", tekst: "H₂SO₄ = 2+1+4 = 7" }],
           basiskennis: [{ onderwerp: "S zonder index", uitleg: "S = 1 zwavel-atoom" }],
-          niveaus: { basis: "7.", simpeler: "2 + 1 + 4 = 7.", nogSimpeler: "7." },
+          niveaus: { basis: "7.", simpeler: "2 + 1 + 4 = 7.", nogSimpeler: "2 + 1 + 4 = 7. → 7." },
         },
       },
       {
@@ -246,7 +246,7 @@ const steps = [
           theorie: "Aantal atomen = coëfficiënt × index per element.",
           voorbeelden: [{ type: "voorbeeld", tekst: "2 H₂SO₄ = 2×2=4 H + 2×1=2 S + 2×4=8 O" }],
           basiskennis: [{ onderwerp: "verdeel per element", uitleg: "tel per soort apart" }],
-          niveaus: { basis: "6 H-atomen.", simpeler: "3 × 2 = 6.", nogSimpeler: "6." },
+          niveaus: { basis: "6 H-atomen.", simpeler: "3 × 2 = 6.", nogSimpeler: "3 × 2 = 6. → 6." },
         },
       },
       {
@@ -265,7 +265,7 @@ const steps = [
           theorie: "HONClBrIF-regel: H₂, O₂, N₂, Cl₂, Br₂, I₂, F₂ komen als pair voor.",
           voorbeelden: [{ type: "voorbeeld", tekst: "lucht: O₂ en N₂, geen losse O of N" }],
           basiskennis: [{ onderwerp: "O₃ vs O₂", uitleg: "O₂ normaal, O₃ = ozon (zeldzaam)" }],
-          niveaus: { basis: "O₂.", simpeler: "Twee-atomig.", nogSimpeler: "O₂." },
+          niveaus: { basis: "O₂.", simpeler: "Twee-atomig.", nogSimpeler: "Twee-atomig. → O₂." },
         },
       },
     ],
@@ -291,7 +291,7 @@ const steps = [
           theorie: "Element-symbool eerst, dan index achter.",
           voorbeelden: [{ type: "voorbeeld", tekst: "CH₄ niet HC4 of CH2" }],
           basiskennis: [{ onderwerp: "ruimtelijk", uitleg: "tetrahedron-vorm" }],
-          niveaus: { basis: "CH₄.", simpeler: "1 C + 4 H.", nogSimpeler: "CH₄." },
+          niveaus: { basis: "CH₄.", simpeler: "1 C + 4 H.", nogSimpeler: "1 C + 4 H. → CH₄." },
         },
       },
       {

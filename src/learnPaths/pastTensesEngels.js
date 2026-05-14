@@ -266,7 +266,7 @@ const steps = [
           theorie: "Vast tijdstip → past simple.",
           voorbeelden: [{ type: "voorbeeld", tekst: "see → V2 = saw" }],
           basiskennis: [{ onderwerp: "signal", uitleg: "yesterday signaleert simple" }],
-          niveaus: { basis: "saw.", simpeler: "Verleden = saw.", nogSimpeler: "saw." },
+          niveaus: { basis: "saw.", simpeler: "Verleden = saw.", nogSimpeler: "Verleden = saw. → saw." },
         },
       },
       {
@@ -450,7 +450,7 @@ const steps = [
           theorie: "Specifieke gebeurtenis in verleden → simple.",
           voorbeelden: [{ type: "voorbeeld", tekst: "I had blond hair when I was young" }],
           basiskennis: [{ onderwerp: "had", uitleg: "V2 én V3 zijn beide 'had'" }],
-          niveaus: { basis: "had.", simpeler: "Verleden = had.", nogSimpeler: "had." },
+          niveaus: { basis: "had.", simpeler: "Verleden = had.", nogSimpeler: "Verleden = had. → had." },
         },
       },
       {

@@ -163,7 +163,7 @@ const steps = [
           theorie: "MVAMJSUN — Mijn Vader At Met Jonge Soldaten Uien-roomsoep.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Pluto is dwerg, niet meegerekend in 8" }],
           basiskennis: [{ onderwerp: "definitie planeet", uitleg: "groot + eigen baan + zuivert omgeving" }],
-          niveaus: { basis: "8.", simpeler: "Acht.", nogSimpeler: "8." },
+          niveaus: { basis: "8.", simpeler: "Acht.", nogSimpeler: "Acht. → 8." },
         },
       },
       {
@@ -212,7 +212,7 @@ const steps = [
           theorie: "Dichter bij zon = hoger temperatuur (overdag) + kortere baan.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Mercurius doet 88 dagen over 1 baan, Mars 687" }],
           basiskennis: [{ onderwerp: "afstandstabel", uitleg: "M-V-A-M binnenste vier" }],
-          niveaus: { basis: "Mercurius.", simpeler: "Eerste.", nogSimpeler: "#1." },
+          niveaus: { basis: "Mercurius.", simpeler: "Eerste.", nogSimpeler: "Eerste. → #1." },
         },
       },
       {
@@ -338,7 +338,7 @@ const steps = [
           theorie: "Phobos: ~22 km doorsnee. Deimos: ~12 km. Veel kleiner dan onze Maan.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Phobos beweegt zo snel dat 'ie 3× per Mars-dag opkomt" }],
           basiskennis: [{ onderwerp: "kleine manen", uitleg: "niet bolvormig" }],
-          niveaus: { basis: "2.", simpeler: "Twee.", nogSimpeler: "2." },
+          niveaus: { basis: "2.", simpeler: "Twee.", nogSimpeler: "Twee. → 2." },
         },
       },
     ],

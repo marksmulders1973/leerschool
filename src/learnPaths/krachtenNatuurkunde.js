@@ -43,7 +43,7 @@ const steps = [
           theorie: "Onthoud: kg = massa, N = kracht, m = lengte, s = tijd.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Appel ~1 N, mens ~700 N, auto ~15.000 N" }],
           basiskennis: [{ onderwerp: "eenheid", uitleg: "1 N = 1 kg × 1 m/s²" }],
-          niveaus: { basis: "Newton (N).", simpeler: "N van Newton.", nogSimpeler: "N." },
+          niveaus: { basis: "Newton (N).", simpeler: "N van Newton.", nogSimpeler: "N van Newton. → N." },
         },
       },
       {
@@ -201,7 +201,7 @@ const steps = [
           theorie: "Maan g ≈ 1,6. Mars g ≈ 3,7. Jupiter g ≈ 24,8.",
           voorbeelden: [{ type: "voorbeeld", tekst: "1 kg op aarde weegt 10 N (echte waarde: 9,81 N)" }],
           basiskennis: [{ onderwerp: "N/kg", uitleg: "newton per kilogram" }],
-          niveaus: { basis: "10 N/kg.", simpeler: "Tien.", nogSimpeler: "10." },
+          niveaus: { basis: "10 N/kg.", simpeler: "Tien.", nogSimpeler: "Tien. → 10." },
         },
       },
     ],
@@ -384,7 +384,7 @@ const steps = [
           theorie: "Versnelling = hoeveel m/s de snelheid per seconde toeneemt.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Auto van 0 naar 30 m/s in 10 s: a = 3 m/s²" }],
           basiskennis: [{ onderwerp: "delen", uitleg: "F gedeeld door m" }],
-          niveaus: { basis: "3 m/s².", simpeler: "12 / 4.", nogSimpeler: "3." },
+          niveaus: { basis: "3 m/s².", simpeler: "12 / 4.", nogSimpeler: "12 / 4. → 3." },
         },
       },
       {
@@ -490,7 +490,7 @@ const steps = [
           theorie: "Standaardformule: vermenigvuldig massa (kg) met g (10 N/kg op aarde).",
           voorbeelden: [{ type: "voorbeeld", tekst: "75 kg → 750 N. 8 kg → 80 N" }],
           basiskennis: [{ onderwerp: "10× je kg's", uitleg: "snelle truc op aarde" }],
-          niveaus: { basis: "500 N.", simpeler: "50 × 10.", nogSimpeler: "500." },
+          niveaus: { basis: "500 N.", simpeler: "50 × 10.", nogSimpeler: "50 × 10. → 500." },
         },
       },
       {

@@ -80,7 +80,7 @@ const steps = [
           theorie: "Helling = a. y-snijpunt = b.",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = 2x + 5 → helling = 2" }],
           basiskennis: [{ onderwerp: "rechte lijn", uitleg: "altijd zelfde helling" }],
-          niveaus: { basis: "Helling = 7 (coëfficiënt vóór x).", simpeler: "Getal voor x.", nogSimpeler: "7." },
+          niveaus: { basis: "Helling = 7 (coëfficiënt vóór x).", simpeler: "Getal voor x.", nogSimpeler: "Getal voor x. → 7." },
         },
       },
     ],
@@ -559,7 +559,7 @@ const steps = [
           theorie: "x³ → 3x². x → 1. Som: 3x² + 1.",
           voorbeelden: [{ type: "voorbeeld", tekst: "f'(2) = 12 + 1 = 13" }],
           basiskennis: [{ onderwerp: "let op", uitleg: "x is anders dan constante" }],
-          niveaus: { basis: "f'(2) = 12 + 1 = 13.", simpeler: "3·4 + 1 = 13.", nogSimpeler: "13." },
+          niveaus: { basis: "f'(2) = 12 + 1 = 13.", simpeler: "3·4 + 1 = 13.", nogSimpeler: "3·4 + 1 = 13. → 13." },
         },
       },
       {

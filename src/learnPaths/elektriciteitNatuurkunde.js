@@ -398,7 +398,7 @@ const steps = [
           theorie: "Onthoud-trio: U (V), I (A), R (Ω). Vermogen P (W) komt erbij.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Gewone weerstand op printplaat: kleurcode geeft Ω-waarde" }],
           basiskennis: [{ onderwerp: "kΩ, MΩ", uitleg: "kilo-ohm = 1000, mega-ohm = 1M" }],
-          niveaus: { basis: "Ohm (Ω).", simpeler: "Omega.", nogSimpeler: "Ω." },
+          niveaus: { basis: "Ohm (Ω).", simpeler: "Omega.", nogSimpeler: "Omega. → Ω." },
         },
       },
       {
@@ -711,7 +711,7 @@ const steps = [
           theorie: "E (Wh) = P (W) × t (uren). Daarna /1000 voor kWh.",
           voorbeelden: [{ type: "voorbeeld", tekst: "100 W lamp 10 uur: 1 kWh" }],
           basiskennis: [{ onderwerp: "min → uur", uitleg: "30 min = 0,5 uur" }],
-          niveaus: { basis: "1 kWh.", simpeler: "2 kW × half uur.", nogSimpeler: "1." },
+          niveaus: { basis: "1 kWh.", simpeler: "2 kW × half uur.", nogSimpeler: "2 kW × half uur. → 1." },
         },
       },
     ],
@@ -758,7 +758,7 @@ const steps = [
           theorie: "Reken in kW + uur direct naar kWh.",
           voorbeelden: [{ type: "voorbeeld", tekst: "500 W × 2 uur = 1 kWh" }],
           basiskennis: [{ onderwerp: "× = product", uitleg: "vermenigvuldigen vermogen en tijd" }],
-          niveaus: { basis: "6 kWh.", simpeler: "1,5 × 4.", nogSimpeler: "6." },
+          niveaus: { basis: "6 kWh.", simpeler: "1,5 × 4.", nogSimpeler: "1,5 × 4. → 6." },
         },
       },
       {

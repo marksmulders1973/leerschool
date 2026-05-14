@@ -212,7 +212,7 @@ const steps = [
           theorie: "Korte werkwoorden op -t/-d: vaak AAA.",
           voorbeelden: [{ type: "voorbeeld", tekst: "cut, put, hit, let, cost, hurt" }],
           basiskennis: [{ onderwerp: "makkelijk", uitleg: "1 vorm leren = klaar" }],
-          niveaus: { basis: "cut.", simpeler: "Blijft cut.", nogSimpeler: "cut." },
+          niveaus: { basis: "cut.", simpeler: "Blijft cut.", nogSimpeler: "Blijft cut. → cut." },
         },
       },
       {
@@ -231,7 +231,7 @@ const steps = [
           theorie: "AAA-werkwoorden = minst werk.",
           voorbeelden: [{ type: "voorbeeld", tekst: "I put, I put, I have put" }],
           basiskennis: [{ onderwerp: "ABC vs AAA", uitleg: "go/see/eat = ABC (3 verschillend)" }],
-          niveaus: { basis: "put.", simpeler: "AAA = put.", nogSimpeler: "put." },
+          niveaus: { basis: "put.", simpeler: "AAA = put.", nogSimpeler: "AAA = put. → put." },
         },
       },
     ],

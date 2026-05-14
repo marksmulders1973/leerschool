@@ -317,7 +317,7 @@ const steps = [
           theorie: "Komt uit de W&V-rekening (over een periode).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Omzet €100k, kosten €70k → winst €30k" }],
           basiskennis: [{ onderwerp: "minteken", uitleg: "kosten worden afgetrokken" }],
-          niveaus: { basis: "Opbrengsten − Kosten.", simpeler: "Omzet min kosten.", nogSimpeler: "Min." },
+          niveaus: { basis: "Opbrengsten − Kosten.", simpeler: "Omzet min kosten.", nogSimpeler: "Omzet min kosten. → Min." },
         },
       },
       {

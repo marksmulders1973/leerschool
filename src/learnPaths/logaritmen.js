@@ -318,7 +318,7 @@ const steps = [
           theorie: "log_a(1) = 0 (want a⁰ = 1).",
           voorbeelden: [{ type: "voorbeeld", tekst: "log(1)=0, ln(1)=0, log₅(1)=0" }],
           basiskennis: [{ onderwerp: "log(0)", uitleg: "= onbepaald (-oneindig)" }],
-          niveaus: { basis: "log(1) = 0.", simpeler: "Argument 1 → antwoord 0.", nogSimpeler: "Nul." },
+          niveaus: { basis: "log(1) = 0.", simpeler: "Argument 1 → antwoord 0.", nogSimpeler: "Argument 1 → antwoord 0. → Nul." },
         },
       },
       {
