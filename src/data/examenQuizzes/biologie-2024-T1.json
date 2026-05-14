@@ -1,0 +1,340 @@
+{
+  "id": "biologie-2024-T1",
+  "meta": {
+    "vak": "engels",
+    "niveau": "vmbo-gltl",
+    "jaar": 2025,
+    "tijdvak": 1
+  },
+  "teksten": {},
+  "questions": [
+    {
+      "q": "Door de training leert de hond. Hoe heet het type leergedrag dat de hond vertoont tijdens de training met een clicker?",
+      "options": [
+        "conditionering",
+        "gewenning",
+        "inprenten",
+        "trial-and-error"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 1
+    },
+    {
+      "q": "In welk deel van het centraal zenuwstelsel vindt de bewustwording plaats bij het horen van de click?",
+      "options": [
+        "grote hersenen",
+        "kleine hersenen",
+        "hersenstam",
+        "ruggenmerg"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 2
+    },
+    {
+      "q": "In welk deel van de bloem ontstaan de stuifmeelkorrels?",
+      "options": [
+        "in de helmknop",
+        "in de stempel",
+        "in het vruchtbeginsel",
+        "in het zaadbeginsel"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 11
+    },
+    {
+      "q": "Bij diepe gaatjes boort de tandarts door het tandbeen en maakt de tandholte leeg. Bij de behandeling worden zenuwen geraakt. Waar bevinden zich de zenuwen?",
+      "options": [
+        "alleen in het tandbeen",
+        "alleen in de tandholte",
+        "in beide",
+        "in geen van beide"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 17
+    },
+    {
+      "q": "Thomas bestraalt enkele fruitvliegjes met r'ntgenstraling. Daardoor verandert het DNA in de geslachtscellen van deze fruitvliegjes. Hoe wordt deze verandering van DNA genoemd?",
+      "options": [
+        "evolutie",
+        "mutatie",
+        "reductie",
+        "selectie"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 23
+    },
+    {
+      "q": "Een fruitvlieg heeft XX- of XY-geslachtschromosomen, die op dezelfde manier het geslacht be'nvloeden als bij de mens. De eigenschap `oogkleur' ligt op het X-chromosoom. Op het Y-chromosoom is de eigenschap `oogkleur' niet aanwezig. Een mannetje heeft rode ogen. Zit het stukje DNA voor rode ogen in zijn spermacellen?",
+      "options": [
+        "Ja, in alle spermacellen.",
+        "Ja, in 50% van de spermacellen.",
+        "Nee, in geen van de spermacellen."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 25
+    },
+    {
+      "q": "Witte bloedcellen kunnen vanuit haarvaten in het weefselvloeistof terechtkomen. Dat stroomt via de lymfevaten weer richting het hart. Deze lymfevloeistof kan maar in ''n richting stromen. Hierover wordt door Julia en Finn een uitspraak gedaan. Julia zegt dat kleppen in de lymfevaten ervoor zorgen dat lymfevloeistof in de goede richting stroomt. Finn zegt dat het pompen van het hart ervoor zorgt dat lymfevloeistof in de goede richting stroomt. Wie heeft gelijk?",
+      "options": [
+        "Geen van beiden heeft gelijk.",
+        "Alleen Julia heeft gelijk.",
+        "Alleen Finn heeft gelijk.",
+        "Julia heeft gelijk en Finn heeft gelijk."
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 33
+    },
+    {
+      "q": "Welke bloeddeeltjes zijn in de lymfevloeistof aanwezig?",
+      "options": [
+        "alleen de witte bloedcellen",
+        "alleen de witte bloedcellen en de rode bloedcellen",
+        "de witte bloedcellen, de rode bloedcellen en de bloedplaatjes"
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 34
+    },
+    {
+      "q": "Liam en Sophie praten over de cellen die kweekvlees maken. Liam zegt dat de chromosomen van deze cellen los in het cytoplasma liggen. Sophie zegt dat deze cellen een celwand hebben. Wie heeft gelijk? Liam en Sophie vergelijken de voedingswaarde van een hamburger van kweekvlees met die van een vegetarische hamburger. In de tabel hieronder zie je de voedingswaarden van de twee hamburgers, per 100 gram. eiwitten (g)      hamburger,  hamburger, koolhydraten (g)  kweekvlees  vegetarisch vetten (g) vezels (g)             16,8        17,7 water (g)                2,2         9,4 8,0 18,0          3,2 0,6 61,5 61,0",
+      "options": [
+        "Geen van beiden heeft gelijk.",
+        "Liam heeft gelijk.",
+        "Sophie heeft gelijk.",
+        "Liam heeft gelijk en Sophie heeft gelijk."
+      ],
+      "answer": 0,
+      "explanation": "Het juiste antwoord is A.",
+      "tekstNr": null,
+      "vraagNr": 36
+    },
+    {
+      "q": "Welke van de voedingsstoffen uit de voedingswaarden-tabel wordt door maagsap verteerd? De mannenpoli Hans en zijn partner Karlijn gaan naar de mannenpoli in het ziekenhuis, omdat hij onder andere klachten ondervindt tijdens het vrijen. Als Hans een erectie krijgt, trekt zijn penis krom. Tijdens het onderzoek zegt de arts dat hij littekenweefsel in de penis voelt. Littekenweefsel is dikker dan normaal weefsel. Hij besluit een echo te maken om vast te stellen waar het littekenweefsel zich precies bevindt. Gedurende het bezoek aan de mannenpoli stellen Hans en Karlijn ook vragen over anticonceptiemethoden.",
+      "options": [
+        "eiwitten",
+        "koolhydraten",
+        "vetten",
+        "vezels"
+      ],
+      "answer": 0,
+      "explanation": "Vraag Antwoord                                                                         Scores\n\n   De mannenpoli",
+      "tekstNr": null,
+      "vraagNr": 38
+    },
+    {
+      "q": "Hans en Karlijn willen geen kinderen meer. Op de poli stellen ze vragen over sterilisatie. Na het gesprek over de sterilisatie bespreken Hans en Karlijn wat er verandert aan de zaadlozing. Hans zegt dat er na de operatie geen zaadcellen meer gemaakt worden waardoor hij onvruchtbaar is. Karlijn zegt dat er na de operatie geen testosteron meer gemaakt wordt waardoor Hans onvruchtbaar is. Wie heeft gelijk? Nierfalen Als nieren minder goed functioneren, worden afvalstoffen niet goed uit het bloed gefilterd. Dit wordt nierfalen genoemd. Diabetes of een hoge bloeddruk kunnen een oorzaak zijn van nierfalen.",
+      "options": [
+        "Geen van beiden heeft gelijk.",
+        "Alleen Hans heeft gelijk.",
+        "Alleen Karlijn heeft gelijk.",
+        "Hans heeft gelijk en Karlijn heeft gelijk."
+      ],
+      "answer": 0,
+      "explanation": "Nierfalen",
+      "tekstNr": null,
+      "vraagNr": 41
+    },
+    {
+      "q": "In welke delen van een nier wordt het bloed gefilterd?",
+      "options": [
+        "in het nierbekken en het niermerg",
+        "in het nierbekken en de nierschors",
+        "in de nierschors en het niermerg"
+      ],
+      "answer": 2,
+      "explanation": "Het juiste antwoord is C.",
+      "tekstNr": null,
+      "vraagNr": 42
+    },
+    {
+      "q": "Bij pati'nten met ernstig nierfalen is nierdialyse nodig. Nierdialyse wordt gedaan met een machine: de kunstnier. Het bloed wordt door de kunstnier gepompt en daar gefilterd. Tijdens een nierdialyse wordt ureum verwijderd. In welk orgaan ontstaat ureum?",
+      "options": [
+        "darm",
+        "lever",
+        "maag",
+        "nier"
+      ],
+      "answer": 1,
+      "explanation": "Het juiste antwoord is B.",
+      "tekstNr": null,
+      "vraagNr": 44
+    }
+  ],
+  "skipped": [
+    {
+      "nr": 3,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 4,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 5,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 6,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 7,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 8,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 9,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 10,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 12,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 13,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 14,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 15,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 16,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 18,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 19,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 20,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 21,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 22,
+      "reden": "geen MC-antwoord in correctie"
+    },
+    {
+      "nr": 24,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 26,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 27,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 28,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 29,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 30,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 31,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 32,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 35,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 37,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 39,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 40,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 43,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 45,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 46,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 47,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 48,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 49,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 50,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 51,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 52,
+      "reden": "open/complex"
+    },
+    {
+      "nr": 53,
+      "reden": "open/complex"
+    }
+  ]
+}

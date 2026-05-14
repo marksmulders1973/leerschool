@@ -1186,6 +1186,30 @@
     "chapterCount": 4
   },
   {
+    "id": "examen-biologie-2024-t1",
+    "title": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2024-T1",
+    "triggerKeywords": [
+      "examen biologie 2024",
+      "examen oefenen biologie",
+      "echte examenvragen biologie",
+      "mutatie",
+      "x-chromosoom oogkleur",
+      "kweekvlees cel",
+      "sterilisatie testosteron",
+      "ureum lever",
+      "vmbo biologie 2024 tijdvak 1"
+    ],
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3
+  },
+  {
     "id": "examen-economie-2023-t1",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
     "subject": "economie",

@@ -1,4 +1,29 @@
 {
+  "cel-biologie": [
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 36,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36"
+    }
+  ],
+  "genetica-erfelijkheid-biologie": [
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 23"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 25,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 25"
+    }
+  ],
   "pincode-belasting": [
     {
       "examPathId": "examen-economie-2023-t2",
@@ -302,6 +327,15 @@
       "stepIdx": 5,
       "vraagNr": 39,
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 39"
+    }
+  ],
+  "voortplanting-hormonen-biologie": [
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 41,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41"
     }
   ],
   "wereldoorlog2-geschiedenis": [
