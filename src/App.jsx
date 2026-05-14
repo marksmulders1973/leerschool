@@ -1328,6 +1328,12 @@ export default function App() {
           userRole={role}
           userLevel={userLevel}
           userSchoolType={userSchoolType}
+          onPickLearnPath={(pathId) => {
+            setActiveLearnPathId(pathId);
+            setActiveLearnStepIdx(0);
+            setLearnPathReturnPage("textbook");
+            setPage("learn-path");
+          }}
           onPickLearn={(catId) => {
             const subjects = categoryToLearnSubjects(catId);
             if (hasLearnPathsForCategory(catId) && subjects.length > 0) {

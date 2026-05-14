@@ -5,6 +5,10 @@ import { SoundEngine } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import DoorstroomtoetsLogo from "../../components/DoorstroomtoetsLogo.jsx";
 import { hasLearnPathsForCategory, countLearnPathsForCategory } from "../../learnPaths/subjectMapping.js";
+import { getLearnPathsForChapter } from "../../data/bookChapterToLearnPath.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
+
+const pathManifestById = Object.fromEntries(pathManifest.map(p => [p.id, p]));
 
 const schoolTypeMatchesBook = (bookName, schoolType) => {
   if (!schoolType || !bookName) return false;
@@ -19,7 +23,7 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   return false;
 };
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, prefilledCategory }) {
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, onPickLearnPath, prefilledCategory }) {
   const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
   const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
   const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
@@ -768,6 +772,76 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                   });
                 })()}
               </select>
+
+              {/* 📚 Leer dit concept-banner (Mark visie 2026-05-14: universele
+                  concept-paden dekken meerdere methodes). Toont alleen als er
+                  een mapping is in bookChapterToLearnPath.js. */}
+              {chapterNum && selectedBook && (() => {
+                const pathIds = getLearnPathsForChapter(selectedBook.id, parseInt(chapterNum) - 1);
+                if (pathIds.length === 0 || !onPickLearnPath) return null;
+                const validPaths = pathIds
+                  .map(id => pathManifestById[id])
+                  .filter(Boolean);
+                if (validPaths.length === 0) return null;
+                return (
+                  <div style={{
+                    marginTop: 12,
+                    marginBottom: 4,
+                    padding: "12px 14px",
+                    borderRadius: 12,
+                    background: "linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,200,83,0.05))",
+                    border: "1px solid rgba(0,200,83,0.40)",
+                  }}>
+                    <div style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 12,
+                      fontWeight: 700,
+                      color: "#00e676",
+                      marginBottom: 8,
+                      letterSpacing: 0.3,
+                    }}>
+                      📚 LEER DIT CONCEPT
+                    </div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", marginBottom: 10, lineHeight: 1.4 }}>
+                      Dit hoofdstuk gaat over {validPaths.length === 1 ? "dit concept" : "deze concepten"}. Leer het in ~15 min:
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                      {validPaths.map((p) => (
+                        <button
+                          key={p.id}
+                          type="button"
+                          onClick={() => { SoundEngine.play("click"); onPickLearnPath(p.id); }}
+                          style={{
+                            padding: "10px 12px",
+                            borderRadius: 10,
+                            border: "1px solid rgba(0,200,83,0.45)",
+                            background: "rgba(0,200,83,0.12)",
+                            color: "#e0e6f0",
+                            cursor: "pointer",
+                            textAlign: "left",
+                            fontFamily: "var(--font-body)",
+                            fontSize: 13,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 10,
+                          }}
+                        >
+                          <span style={{ fontSize: 20, flexShrink: 0 }}>{p.emoji || "📘"}</span>
+                          <span style={{ flex: 1, minWidth: 0 }}>
+                            <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 700, color: "#cdd6e2" }}>
+                              {p.title}
+                            </span>
+                            <span style={{ display: "block", fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 1 }}>
+                              {p.stepCount} stappen · {p.checkCount} vragen
+                            </span>
+                          </span>
+                          <span style={{ color: "#00e676", fontSize: 18 }}>›</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* Paragraaf dropdown of vrij tekstveld */}
               {chapterNum && (
