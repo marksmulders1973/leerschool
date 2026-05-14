@@ -324,6 +324,10 @@ const steps = [
           niveaus: { basis: "Onthoudt waarde. = A.", simpeler: "Variabele = doosje met naam in code dat een waarde onthoudt. Bv. score = 0. Later: score = 10. = A.", nogSimpeler: "Doosje met naam = A." },
         },
       },
+      { q: "Wat is een **algoritme**?", options: ["Stappenplan om iets op te lossen","Een spel","Een tafel","Een verhaal"], answer: 0, wrongHints: [null,"Klopt.","Niet specifiek.","Niet.","Niet."] },
+      { q: "Welke programmeertaal is **kindvriendelijk** met sleep-blokjes?", options: ["Scratch","Python","JavaScript","C++"], answer: 0, wrongHints: [null,"Klopt — visueel, MIT.","Tekst-taal.","Tekst-taal.","Niet voor beginners."] },
+      { q: "Wat is een **loop** (lus) in code?", options: ["Stappen herhalen","Een spel","Een variabele","Een fout"], answer: 0, wrongHints: [null,"Klopt — for/while.","Niet relevant.","Andere bouwsteen.","Niet."] },
+      { q: "**Ada Lovelace** wordt gezien als?", options: ["Eerste programmeur","Eerste astronaut","Eerste president","Eerste schaker"], answer: 0, wrongHints: [null,"Klopt — 19e eeuw.","Niet.","Niet.","Niet."] },
     ],
   },
 ];

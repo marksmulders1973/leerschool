@@ -734,6 +734,10 @@ const steps = [
           niveaus: { basis: "f'(1) = 6.", simpeler: "Vul x = 1 in -6x + 12.", nogSimpeler: "-6 + 12 = 6." },
         },
       },
+      { q: "Wat is de afgeleide van f(x) = x²?", options: ["2x","x","x²/2","x³"], answer: 0, wrongHints: [null,"Klopt — n·x^(n-1).","Niet — vergeet exponent te vermenigvuldigen.","Dat is integraal.","Niet — exponent ↓, niet ↑."] },
+      { q: "Wat is de afgeleide van f(x) = 3x?", options: ["3","3x","x","0"], answer: 0, wrongHints: [null,"Klopt — lineaire term geeft constante.","Niet — x weg.","Niet — coëfficiënt blijft.","Niet — niet 0."] },
+      { q: "Wat is de afgeleide van f(x) = 5?", options: ["0","5","5x","1"], answer: 0, wrongHints: [null,"Klopt — constante = helling 0.","Niet — constante is verdwenen.","Niet.","Niet."] },
+      { q: "**Helling** in punt is gelijk aan?", options: ["Waarde van afgeleide in dat punt","Y-waarde in dat punt","X-waarde","Som x + y"], answer: 0, wrongHints: [null,"Klopt — f'(x) geeft helling.","Niet — y zelf, geen helling.","Niet.","Niet."] },
     ],
   },
 ];

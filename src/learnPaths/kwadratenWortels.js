@@ -699,6 +699,11 @@ const steps = [
           niveaus: { basis: "±10. A.", simpeler: "x²=100 → x=±√100=±10. = A.", nogSimpeler: "±10 = A." },
         },
       },
+      { q: "Bereken: 6² = ?", options: ["36","12","18","30"], answer: 0, wrongHints: [null,"Klopt.","Niet — niet 2×6.","Niet — niet 3×6.","Niet."] },
+      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null,"Klopt — 9×9=81.","Niet.","Niet.","Niet."] },
+      { q: "Bereken: √144 = ?", options: ["12","11","14","72"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Helft."] },
+      { q: "Wat is **√2** ongeveer?", options: ["1,41","1,5","2","1"], answer: 0, wrongHints: [null,"Klopt — beroemd irrationaal getal.","Te hoog.","Wortel ≠ getal.","Te laag."] },
+      { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null,"Klopt — kan niet als breuk geschreven.","Niet — π is irrationaal.","Niet.","Niet."] },
     ],
   },
 ];

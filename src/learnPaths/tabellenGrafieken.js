@@ -553,6 +553,7 @@ const steps = [
           niveaus: { basis: "7 (25-18). A.", simpeler: "Warmste 25, koudste 18. Verschil 25-18 = 7. = A.", nogSimpeler: "7 = A." },
         },
       },
+      { q: "Een **lijngrafiek** wordt vooral gebruikt om wat te tonen?", options: ["Verloop in de tijd","Categorieën vergelijken","Verdeling van geheel","Frequentie"], answer: 0, wrongHints: [null,"Klopt — temperatuur per dag bijvoorbeeld.","Dat is staafdiagram.","Dat is cirkeldiagram.","Dat is histogram."] },
     ],
   },
 ];

@@ -441,6 +441,9 @@ const steps = [
           niveaus: { basis: "× (vermenigvuldigen). A.", simpeler: "× en ÷ zijn sterker dan + en −. Optie A correct. = A.", nogSimpeler: "× = A." },
         },
       },
+      { q: "Bereken: 2 + 3 × 4 = ?", options: ["14","20","24","9"], answer: 0, wrongHints: [null,"Klopt — × eerst: 12, dan +2.","Niet — eerst keer.","Niet.","Niet."] },
+      { q: "Bereken: (2 + 3) × 4 = ?", options: ["20","14","9","24"], answer: 0, wrongHints: [null,"Klopt — haakjes eerst.","Niet — haakjes forceren volgorde.","Niet — vermenigvuldigen eerst klopt niet hier.","Niet."] },
+      { q: "Bereken: 12 − 6 ÷ 2 = ?", options: ["9","3","6","2"], answer: 0, wrongHints: [null,"Klopt — ÷ eerst, dan −.","Niet — −6 dan ÷2 = 3, klopt niet.","Niet.","Niet."] },
     ],
   },
 ];
