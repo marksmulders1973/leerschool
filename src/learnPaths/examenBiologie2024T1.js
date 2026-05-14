@@ -8,7 +8,8 @@
 const chapters = [
   { letter: "A", title: "Erfelijkheid (V23, V25)", emoji: "🧬", from: 0, to: 1 },
   { letter: "B", title: "Cellen & voortplanting (V36, V41)", emoji: "🔬", from: 2, to: 3 },
-  { letter: "C", title: "Lichaam (V44)", emoji: "🫀", from: 4, to: 4 },
+  { letter: "C", title: "Lichaam & organen (V44, V2, V17, V33, V34, V38, V42)", emoji: "🫀", from: 4, to: 10 },
+  { letter: "D", title: "Gedrag (V1)", emoji: "🐕", from: 11, to: 11 },
 ];
 
 const steps = [
@@ -307,6 +308,410 @@ const steps = [
       },
     ],
   },
+
+  // ─── Vraag 2 — Bewustwording in grote hersenen ─────────────
+  {
+    title: "Vraag 2 — Bewustwording in zenuwstelsel",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 2.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "In welk deel van het centraal zenuwstelsel vindt de bewustwording plaats bij het horen van de click?",
+        options: [
+          "grote hersenen",
+          "kleine hersenen",
+          "hersenstam",
+          "ruggenmerg",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Kleine hersenen sturen vooral evenwicht + coördinatie aan — geen bewustwording.",
+          "De hersenstam regelt onbewuste functies (ademen, hartslag) — niet bewust horen.",
+          "Het ruggenmerg geleidt signalen door, maar bewust 'horen' gebeurt hogerop.",
+        ],
+        explanation: "Bewustwording — het bewust ervaren van geluid, beeld, gevoel — gebeurt altijd in de GROTE HERSENEN. De andere delen geleiden signalen of regelen automatische processen, maar bewustzijn zelf zit in de cortex van de grote hersenen.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'zenuwstelsel', 'bewustwording', 'grote hersenen', 'ruggenmerg'" },
+          { id: "lichaam-gezondheid-po", title: "Lichaam & organen", niveau: "po-1F", why: "basaal overzicht zenuwstelsel + hersenen — opfris voor deze examenvraag" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Centraal zenuwstelsel = hersenen + ruggenmerg", tekst: "Het CZS bestaat uit hersenen + ruggenmerg. De hersenen splitsen we in 3 delen: GROTE hersenen, KLEINE hersenen, en HERSENSTAM." },
+            { titel: "Wat doet wat?", tekst: "**Grote hersenen** = denken, herinneren, bewust ervaren (zien, horen, voelen).\n**Kleine hersenen** = evenwicht + coördinatie van beweging.\n**Hersenstam** = automatische functies (ademen, hartslag).\n**Ruggenmerg** = transportkabel voor signalen + reflexen." },
+            { titel: "Antwoord", tekst: "Bewust HOREN = bewustwording = grote hersenen. Antwoord A." },
+          ],
+          woorden: [
+            { woord: "centraal zenuwstelsel", uitleg: "Hersenen + ruggenmerg — verwerkt en stuurt zenuwsignalen." },
+            { woord: "grote hersenen", uitleg: "Grootste deel, bewust denken + waarnemen." },
+            { woord: "kleine hersenen", uitleg: "Achteronder, regelt evenwicht en fijne motoriek." },
+            { woord: "hersenstam", uitleg: "Verbindt hersenen met ruggenmerg, regelt automatische functies." },
+          ],
+          theorie: "**Onthoud per functie:**\n• Bewust waarnemen, denken, willekeurige bewegingen → grote hersenen\n• Evenwicht, soepel bewegen → kleine hersenen\n• Ademen, hartslag, slikken, niezen → hersenstam\n• Reflexen + signaaldoorgifte → ruggenmerg",
+          voorbeelden: [
+            { type: "stap", tekst: "Je hoort een click + denkt 'dat is mijn signaal' → grote hersenen." },
+            { type: "stap", tekst: "Je fietst zonder na te denken → kleine hersenen + ruggenmerg (motoriek/reflexen)." },
+          ],
+          basiskennis: [
+            { onderwerp: "Bewust = grote hersenen", uitleg: "Alle 'ik weet dat ik dit zie/hoor/voel' = grote hersenen." },
+          ],
+          niveaus: {
+            basis: "Bewustwording = grote hersenen. Antwoord A.",
+            simpeler: "Bewust horen gebeurt in de grote hersenen — de 'denker'. Andere delen sturen onbewuste functies of geleiden signalen. Antwoord A.",
+            nogSimpeler: "Bewust = grote hersenen = A.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 17 — Zenuwen in de tand ────────────────────────
+  {
+    title: "Vraag 17 — Waar zitten de tandzenuwen?",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 17.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "Bij diepe gaatjes boort de tandarts door het tandbeen en maakt de tandholte leeg. Bij de behandeling worden zenuwen geraakt. Waar bevinden zich de zenuwen?",
+        options: [
+          "alleen in het tandbeen",
+          "alleen in de tandholte",
+          "in beide",
+          "in geen van beide",
+        ],
+        answer: 1,
+        wrongHints: [
+          "Het tandbeen (dentine) is een harde laag zonder zenuwen — anders zou de tandarts elke kleine kies-bewerking direct pijnlijk maken.",
+          null,
+          "Niet ook in tandbeen — daar zitten geen zenuwen.",
+          "Wel — anders zou de tandarts geen verdoving hoeven geven bij diepe gaatjes.",
+        ],
+        explanation: "De tandzenuwen + bloedvaten zitten samen in de TANDHOLTE (pulpa), het zachte centrum van de tand. Het tandbeen (dentine) eromheen is hard en zelf zonder zenuwen, en het glazuur ook niet. Daarom voelt boren door glazuur weinig, maar zodra de tandarts in de tandholte komt = pijn → verdoving nodig.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 17",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'tandbeen', 'tandholte', 'zenuwen'" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 lagen van een tand", tekst: "Een tand heeft van buiten naar binnen: GLAZUUR (hardste laag, geen zenuwen) → TANDBEEN/dentine (hard, geen zenuwen) → TANDHOLTE/pulpa (zacht, met zenuwen + bloedvaten)." },
+            { titel: "Waar zitten zenuwen?", tekst: "Alleen in de **tandholte**. Niet in tandbeen, niet in glazuur. Daarom voelt oppervlakkig boren weinig, maar dieper boren (naar de holte) doet veel pijn." },
+            { titel: "Verdoving bij gaatjes", tekst: "Bij diepe gaatjes verdooft de tandarts vooraf, omdat de boor de tandholte raakt. Bij oppervlakkige reiniging is verdoving niet nodig — geen zenuwen aanwezig." },
+          ],
+          woorden: [
+            { woord: "glazuur", uitleg: "Hardste laag van de tand (buitenkant)." },
+            { woord: "tandbeen (dentine)", uitleg: "Harde laag onder glazuur — bevat geen zenuwen maar wel tubuli (kanaaltjes)." },
+            { woord: "tandholte (pulpa)", uitleg: "Zacht centrum met zenuwen + bloedvaten." },
+          ],
+          theorie: "Een gaatje begint in glazuur (geen pijn), groeit door tandbeen (kleine pijn bij koud/zoet), en raakt uiteindelijk de tandholte (kies-pijn die niet meer weggaat zonder behandeling).",
+          voorbeelden: [
+            { type: "stap", tekst: "Tand schuren bij gewone reiniging = oppervlakkig glazuur → geen pijn." },
+            { type: "stap", tekst: "Diepe boor + zachtjes raken pulpa = direct fel pijn → verdoving nodig." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Zenuwen + bloedvaten zitten samen in de centrale holte. Buitenkant van een tand is 'dood'." },
+          ],
+          niveaus: {
+            basis: "Alleen in de tandholte. Antwoord B.",
+            simpeler: "Zenuwen zitten alleen in de zachte kern van de tand (de tandholte). Het tandbeen eromheen is hard en zonder zenuwen. Antwoord B.",
+            nogSimpeler: "Alleen tandholte = B.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 33 — Lymfevaten stromen door kleppen ────────────
+  {
+    title: "Vraag 33 — Wat zorgt voor lymfestroom?",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 33.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "Witte bloedcellen kunnen vanuit haarvaten in het weefselvloeistof terechtkomen. Dat stroomt via de lymfevaten weer richting het hart. Deze lymfevloeistof kan maar in één richting stromen. Hierover wordt door Julia en Finn een uitspraak gedaan. Julia zegt dat kleppen in de lymfevaten ervoor zorgen dat lymfevloeistof in de goede richting stroomt. Finn zegt dat het pompen van het hart ervoor zorgt dat lymfevloeistof in de goede richting stroomt. Wie heeft gelijk?",
+        options: [
+          "Geen van beiden heeft gelijk.",
+          "Alleen Julia heeft gelijk.",
+          "Alleen Finn heeft gelijk.",
+          "Julia heeft gelijk en Finn heeft gelijk.",
+        ],
+        answer: 1,
+        wrongHints: [
+          "Julia heeft wél gelijk — kleppen voorkomen terugstromen in lymfevaten (net als in aderen).",
+          null,
+          "Finn heeft het mis — het hart pompt BLOED, niet lymfe. Lymfe stroomt door spier-bewegingen + kleppen.",
+          "Finn heeft het mis — de pomp-werking van het hart gaat door BLOEDvaten, niet door lymfevaten.",
+        ],
+        explanation: "Het hart pompt BLOED door de slag- en aderen. De lymfevaten hebben geen aansluiting op de hart-pomp. Lymfe stroomt door (1) druk uit weefsels + (2) spier-bewegingen (skeletspieren knijpen lymfe vooruit) en wordt door (3) KLEPPEN in de juiste richting gehouden. Alleen Julia heeft dus gelijk: B.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 33",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'lymfevaten', 'kleppen', 'haarvaten', 'pompen'" },
+          { id: "lichaam-gezondheid-po", title: "Lichaam & spieren + bloed", niveau: "po-1F", why: "basis bloedsomloop + hart — opfris voor deze examenvraag" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee transportsystemen", tekst: "Lichaam heeft 2 vloeistof-systemen:\n• **Bloed** in slagaders + aders + haarvaten → aangedreven door HART.\n• **Lymfe** in lymfevaten → NIET aangedreven door hart." },
+            { titel: "Waar komt lymfe vandaan?", tekst: "Uit weefselvocht (vloeistof tussen cellen). Lymfevaten zuigen dat op en transporteren het terug naar grote aders bij hartwerking-gebied. Dus wel uiteindelijk naar bloed, maar niet ÍN bloed." },
+            { titel: "Wat duwt lymfe vooruit?", tekst: "1. **Druk** uit weefsel\n2. **Spier-bewegingen** (lopen, ademen) knijpen lymfevaten samen\n3. **Kleppen** in lymfevaten zorgen dat lymfe niet terug stroomt — alleen vooruit\n\nHet hart speelt hier GEEN rol." },
+            { titel: "Conclusie", tekst: "Julia (kleppen → goede richting): klopt. Finn (hart pompt): klopt NIET. Antwoord B." },
+          ],
+          woorden: [
+            { woord: "lymfevaten", uitleg: "Buisjes-systeem dat weefselvocht terugbrengt naar de bloedbaan." },
+            { woord: "klep", uitleg: "Eénrichtingsdoorgang — stroomt alleen vooruit, niet terug." },
+            { woord: "haarvat", uitleg: "Heel klein bloedvat tussen slagader en ader, waar uitwisseling met weefsel plaatsvindt." },
+          ],
+          theorie: "**Bloed vs lymfe — verschillen:**\n\n| | Bloed | Lymfe |\n|---|---|---|\n| Pomp | hart | spierwerking |\n| Kleur | rood (rode bloedcel) | helder/geel |\n| Inhoud | rode + witte cellen + plaatjes | alleen witte cellen |\n| Richting | rondje | eenrichting (van weefsel naar bloed) |",
+          voorbeelden: [
+            { type: "stap", tekst: "Veel lopen / sport → spieren knijpen lymfe vooruit. Daarom: bij stilzitten dikke voeten (oedeem) — lymfe stagneert." },
+            { type: "stap", tekst: "Aderen hebben OOK kleppen, om dezelfde reden — bloed terug omhoog tegen zwaartekracht in." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Hart pompt alleen BLOED. Lymfe gebruikt spierwerking + kleppen." },
+          ],
+          niveaus: {
+            basis: "Alleen Julia. Antwoord B.",
+            simpeler: "Het hart pompt alleen BLOED. Lymfe stroomt door spier-bewegingen en kleppen. Julia (kleppen) heeft gelijk, Finn (hartpomp) niet. Antwoord B.",
+            nogSimpeler: "Julia ja, Finn nee = B.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 34 — Welke bloeddeeltjes in lymfe ────────────
+  {
+    title: "Vraag 34 — Bloeddeeltjes in lymfe",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 34.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "Welke bloeddeeltjes zijn in de lymfevloeistof aanwezig?",
+        options: [
+          "alleen de witte bloedcellen",
+          "alleen de witte bloedcellen en de rode bloedcellen",
+          "de witte bloedcellen, de rode bloedcellen en de bloedplaatjes",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Rode bloedcellen zijn te groot voor lymfevaten en blijven in de bloedbaan.",
+          "Bloedplaatjes (voor stolling) zitten ook alleen in bloed — niet in lymfe.",
+        ],
+        explanation: "Alleen WITTE BLOEDCELLEN kunnen door de wanden van haarvaten heen (ze persen zich er doorheen — diapedese). Zo komen ze in weefselvocht en daarmee in lymfe terecht. Rode bloedcellen en bloedplaatjes blijven in de bloedbaan.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 34",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'rode bloedcel', 'witte bloedcel', 'bloedplaatje', 'lymfevloeistof'" },
+          { id: "lichaam-gezondheid-po", title: "Lichaam & spieren + bloed", niveau: "po-1F", why: "basis bloedcellen-soorten — opfris voor deze examenvraag" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 soorten bloeddeeltjes", tekst: "**Rode bloedcellen** (zuurstof-transport) — groot + rood door hemoglobine.\n**Witte bloedcellen** (afweer) — minder talrijk, kunnen door celwanden heen kruipen.\n**Bloedplaatjes** (stolling) — celfragmenten." },
+            { titel: "Wat past door haarvatwand?", tekst: "Witte bloedcellen kunnen actief door haarvatwand kruipen (diapedese) — dat is nodig om infecties in weefsels aan te pakken. Rode cellen + plaatjes blijven binnen het vat." },
+            { titel: "Wat zit in lymfe?", tekst: "Lymfe = weefselvocht dat via lymfevaten teruggevoerd wordt. Bevat dus wat in weefselvocht zit: WITTE bloedcellen (de andere bloed-deeltjes komen niet uit het bloedvat)." },
+          ],
+          woorden: [
+            { woord: "diapedese", uitleg: "Door de vaatwand heen kruipen — alleen witte cellen kunnen dit." },
+            { woord: "weefselvocht", uitleg: "Vloeistof tussen cellen — voert voedingsstoffen aan en afval af." },
+          ],
+          theorie: "Bedenk: lymfe = letterlijk vloeistof TUSSEN cellen die door haarvaatwand is gesijpeld. Wat past door die wand?\n• water + opgeloste stoffen ✓\n• witte bloedcellen (actief kruipend) ✓\n• rode bloedcellen — te groot ✗\n• bloedplaatjes — blijven binnen ✗",
+          voorbeelden: [
+            { type: "stap", tekst: "Bij infectie: witte cellen gaan uit bloed naar weefsel (etter = veel witte cellen). Roding bloed blijft in vat." },
+            { type: "stap", tekst: "Bij sportblessure: bloeding = rode cellen lekken uit kapotte bloedvat. In lymfe gebeurt dit niet zo." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Lymfe = witte cellen ✓, rode cellen + plaatjes ✗." },
+          ],
+          niveaus: {
+            basis: "Alleen witte bloedcellen. Antwoord A.",
+            simpeler: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen en zo in lymfe komen. De rest van het bloed blijft binnen het vat. Antwoord A.",
+            nogSimpeler: "Alleen wit = A.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 38 — Maagsap verteert welke voedingsstof ────────
+  {
+    title: "Vraag 38 — Wat verteert maagsap?",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 38.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "Welke van de voedingsstoffen wordt door maagsap verteerd?",
+        options: [
+          "eiwitten",
+          "koolhydraten",
+          "vetten",
+          "vezels",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Koolhydraten worden afgebroken in de mond (door speeksel-amylase) en in de dunne darm — niet door maagsap.",
+          "Vetten worden in de dunne darm verteerd (door gal + lipase), niet in de maag.",
+          "Vezels worden niet verteerd door enzymen — ze passeren grotendeels onverteerd.",
+        ],
+        explanation: "Maagsap bevat het enzym PEPSINE plus zoutzuur. Pepsine breekt EIWITTEN af tot kleinere stukjes (peptiden). Maagsap doet niets met koolhydraten, vetten of vezels. In de dunne darm worden eiwitten verder afgebroken tot aminozuren.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 38",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'maagsap', 'eiwitten', 'koolhydraten', 'vetten', 'vezels'" },
+          { id: "lichaam-gezondheid-po", title: "Lichaam — Organen + voeding", niveau: "po-1F", why: "basis spijsvertering + voedingsstoffen — opfris voor deze examenvraag" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar wordt wat verteerd?", tekst: "**Mond** (speeksel): koolhydraten beginnen.\n**Maag** (maagsap = zoutzuur + pepsine): eiwitten.\n**Dunne darm** (galsap + alvleeskliersap): alle 3 (koolhydraten, eiwitten, vetten) volledig afgebroken.\n**Dikke darm**: water-opname + vezels gefermenteerd door bacteriën." },
+            { titel: "Maagsap = pepsine + HCl", tekst: "Maagsap bestaat uit:\n• Zoutzuur (HCl) — doodt bacteriën + activeert pepsine\n• **Pepsine** — eiwit-afbrekend enzym\n\nGeen koolhydraat- of vet-enzymen. Daarom alleen eiwit-vertering." },
+            { titel: "Antwoord", tekst: "Maagsap verteert eiwitten → antwoord A." },
+          ],
+          woorden: [
+            { woord: "maagsap", uitleg: "Vloeistof gemaakt door maagwand: zoutzuur + pepsine." },
+            { woord: "pepsine", uitleg: "Enzym dat eiwitten afbreekt — werkt alleen in zure omgeving (maag)." },
+            { woord: "eiwit", uitleg: "Voedingsstof uit vlees/vis/zuivel/peulvruchten — bouwsteen voor lichaam." },
+            { woord: "vezel", uitleg: "Onverteerbare plant-stof — goed voor darmwerking, niet voor energie." },
+          ],
+          theorie: "**Vertering per plek:**\n• Mond → koolhydraten (speeksel-amylase)\n• Maag → **EIWITTEN** (pepsine)\n• Dunne darm → koolhydraten + eiwitten + vetten (galsap + pancreas-enzymen)\n• Vezels → niet verteerd",
+          voorbeelden: [
+            { type: "stap", tekst: "Hamburger eten: gehakt (eiwit) wordt in maag afgebroken. Brood (koolhydraat) gaat door naar dunne darm." },
+            { type: "stap", tekst: "Vet steak: vet blijft intact in maag, verteerd pas in dunne darm met behulp van gal." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Maag = zuur = eiwit-vertering. Dunne darm = neutraal = alle drie." },
+          ],
+          niveaus: {
+            basis: "Maagsap verteert eiwitten (pepsine). Antwoord A.",
+            simpeler: "Maagsap bevat het enzym pepsine, dat eiwitten afbreekt. Koolhydraten/vetten/vezels worden ELDERS verwerkt. Antwoord A.",
+            nogSimpeler: "Eiwitten = A.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 42 — Waar filtert de nier? ──────────────────────
+  {
+    title: "Vraag 42 — Waar filtert de nier?",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 42.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "In welke delen van een nier wordt het bloed gefilterd?",
+        options: [
+          "in het nierbekken en het niermerg",
+          "in het nierbekken en de nierschors",
+          "in de nierschors en het niermerg",
+        ],
+        answer: 2,
+        wrongHints: [
+          "Het nierbekken VERZAMELT alleen urine — daar wordt niet gefilterd.",
+          "Het nierbekken filtert niet. Alleen de nierschors + het niermerg samen doen het filterwerk.",
+          null,
+        ],
+        explanation: "Het filteren van bloed gebeurt in de NEFRONEN. Die zitten gedeeltelijk in de NIERSCHORS (waar het bloed binnenkomt + voorfilter) en gedeeltelijk in het NIERMERG (waar water + zouten terug-opgenomen worden). Het NIERBEKKEN is alleen een verzamelpot voor urine voordat die door de urineleider naar de blaas gaat — geen filtering.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 42",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        leerpadLink: { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid (basisniveau)" },
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'nierschors', 'niermerg', 'nierbekken', 'nefron'" },
+          { id: "lichaam-gezondheid-po", title: "Lichaam — Organen", niveau: "po-1F", why: "basis nieren + urinewegen — opfris voor deze examenvraag" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 lagen van een nier", tekst: "Van buiten naar binnen:\n1. **Nierschors** — buitenste laag, hier komen de meeste filter-units (nefronen).\n2. **Niermerg** — middenstuk, waar water + nuttige stoffen terug-opgenomen worden.\n3. **Nierbekken** — holle ruimte binnenin, hier komt klare urine in voordat 'ie naar de urineleider gaat." },
+            { titel: "Wat filtert wat?", tekst: "Het **nefron** (microscopisch filter-eenheid) zit half in schors + half in merg. Bloed wordt eerst in schors gefilterd, dan loopt het door het merg waar bruikbare stoffen + water terug naar bloed gaan. Wat overblijft = urine." },
+            { titel: "Antwoord", tekst: "Filtering = schors + merg samen. Antwoord C." },
+          ],
+          woorden: [
+            { woord: "nierschors", uitleg: "Buitenste laag van nier — start van filteren." },
+            { woord: "niermerg", uitleg: "Middenlaag — terug-opname water + zout." },
+            { woord: "nierbekken", uitleg: "Verzamelpot voor urine — niet filterend." },
+            { woord: "nefron", uitleg: "Microscopisch filter-eenheid (1 nier = ~1 miljoen nefronen)." },
+          ],
+          theorie: "**Functie per nier-deel:**\n• Nierschors: filteren (waar nefronen starten)\n• Niermerg: terug-opname water + zouten\n• Nierbekken: opvangen klare urine\n• Urineleider: vervoer naar blaas",
+          voorbeelden: [
+            { type: "stap", tekst: "Bloed gaat de nier in via nierslagader → gefilterd in nefronen (schors + merg) → urine verzamelt in bekken → blaas via urineleider." },
+            { type: "stap", tekst: "Drink je veel water? → minder terug-opname in merg → meer urine. Drink je weinig? → veel terug-opname → geconcentreerde urine." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Schors + merg = filteren. Bekken = verzamelen." },
+          ],
+          niveaus: {
+            basis: "Nierschors + niermerg. Antwoord C.",
+            simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet. Antwoord C.",
+            nogSimpeler: "Schors + merg = C.",
+          },
+        },
+      },
+    ],
+  },
+
+  // ─── Vraag 1 — Type leergedrag bij clicker-training ────────
+  {
+    title: "Vraag 1 — Wat is clicker-training voor leergedrag?",
+    explanation: "Echte examenvraag uit VMBO-GL/TL biologie 2024 tijdvak 1, vraag 1.",
+    emoji: "🎓",
+    checks: [
+      {
+        q: "Door de training leert de hond. Hoe heet het type leergedrag dat de hond vertoont tijdens de training met een clicker?",
+        options: [
+          "conditionering",
+          "gewenning",
+          "inprenten",
+          "trial-and-error",
+        ],
+        answer: 0,
+        wrongHints: [
+          null,
+          "Gewenning = stoppen met reageren op een prikkel — niet wat de hond hier doet.",
+          "Inprenten = jonge dieren leren hun moeder/eerste-zien (eend achter mens) — niet hier.",
+          "Trial-and-error = uitproberen + zelf ontdekken — hier kríjgt de hond een signaal en beloning.",
+        ],
+        explanation: "Bij clicker-training koppelt de hond een SIGNAAL (click) aan een GEDRAG (zit) aan een BELONING (snoepje). Dat is klassieke **conditionering**: een aangeleerde reactie op een specifieke prikkel. Pavlov was de eerste die dit beschreef bij honden + bel + voer.",
+        examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 1",
+        bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
+        voorkennisKeten: [
+          { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'conditionering', 'gewenning', 'inprenten', 'trial-and-error'" },
+        ],
+        uitlegPad: {
+          stappen: [
+            { titel: "4 typen leergedrag", tekst: "Biologen onderscheiden:\n• **Conditionering** — prikkel koppelen aan reactie (Pavlov, clicker)\n• **Gewenning** — leren een prikkel NEGEREN (gewone fietsbel-geluid stoort niet meer)\n• **Inprenten** — jong dier herkent eerste-bewegende-ding als 'moeder' (eendje + Lorenz)\n• **Trial-and-error** — uitproberen + onthouden wat werkt" },
+            { titel: "Wat doet clicker-training?", tekst: "Hond hoort click → krijgt snoepje. Na herhaling: hond verbindt click = beloning. Dan: click NA gewenst gedrag = hond herhaalt gedrag. Dit is conditionering — net als Pavlov's bel-experiment." },
+            { titel: "Verschil met trial-and-error", tekst: "Bij conditionering geeft de TRAINER het signaal + beloning. Bij trial-and-error zoekt het dier ZELF de oplossing (rat in doolhof). Hier komt het signaal van de mens → conditionering." },
+          ],
+          woorden: [
+            { woord: "conditionering", uitleg: "Leren door koppeling van prikkel + gedrag + beloning." },
+            { woord: "Pavlov", uitleg: "Russische wetenschapper, ontdekte conditionering bij honden (bel + voer = kwijlen)." },
+            { woord: "gewenning", uitleg: "Stoppen met reageren op prikkel die geen gevolg heeft." },
+            { woord: "inprenten", uitleg: "Vroegkinderlijk leren van soortgenoten / ouders." },
+          ],
+          theorie: "**Onthoud per type:**\n• Beloning + signaal = **conditionering**\n• Negeren = **gewenning**\n• Eerste-zien als moeder = **inprenten**\n• Zelf ontdekken = **trial-and-error**",
+          voorbeelden: [
+            { type: "stap", tekst: "Hondje hoort blikje openen → komt aanrennen. = conditionering (geluid = eten)." },
+            { type: "stap", tekst: "Eendjes lopen achter mens aan die ze eerst zagen. = inprenten." },
+            { type: "stap", tekst: "Kat leert dat aanraken van hete kachel pijn doet. = trial-and-error." },
+          ],
+          basiskennis: [
+            { onderwerp: "Onthoud", uitleg: "Clicker + beloning = conditionering. Pavlov-experiment is hét standaard-voorbeeld." },
+          ],
+          niveaus: {
+            basis: "Conditionering. Antwoord A.",
+            simpeler: "De hond leert: click = snoepje. Een gekoppelde reactie op een prikkel = conditionering (zoals Pavlov's bel-experiment). Antwoord A.",
+            nogSimpeler: "Click + snoepje = conditionering = A.",
+          },
+        },
+      },
+    ],
+  },
 ];
 
 const examenBiologie2024T1 = {
@@ -318,11 +723,13 @@ const examenBiologie2024T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Biologie - eindexamen oefenen 2024-T1",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden voor diepere stof. Open vragen + tabel-vragen overgeslagen.",
+    "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar relevant) doorklik naar bestaande biologie-leerpaden. Open vragen + tabel-vragen + plaatje-afhankelijke vragen overgeslagen.",
   triggerKeywords: [
     "examen biologie 2024", "examen oefenen biologie", "echte examenvragen biologie",
     "mutatie", "x-chromosoom oogkleur", "kweekvlees cel", "sterilisatie testosteron",
     "ureum lever", "vmbo biologie 2024 tijdvak 1",
+    "conditionering", "grote hersenen", "tandzenuwen", "lymfevaten kleppen",
+    "witte bloedcellen lymfe", "maagsap eiwitten", "nierschors niermerg",
   ],
   chapters,
   steps,

@@ -24,6 +24,50 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 25"
     }
   ],
+  "lichaam-gezondheid-po": [
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 6,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 17"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 7,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 33"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 8,
+      "vraagNr": 34,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 34"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 9,
+      "vraagNr": 38,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 38"
+    },
+    {
+      "examPathId": "examen-biologie-2024-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
+      "stepIdx": 10,
+      "vraagNr": 42,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 42"
+    }
+  ],
   "pincode-belasting": [
     {
       "examPathId": "examen-economie-2023-t2",
