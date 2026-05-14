@@ -475,6 +475,82 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk woord is **correct geschreven**?",
+        options: ["fietspomp","fiets-pomp","fiets pomp","Fietspomp"],
+        answer: 0,
+        wrongHints: [null,"Klopt — samenstelling zonder streepje of spatie.","Niet — streepje meestal niet bij gewone samenstelling.","Niet — spatie maakt 2 woorden.","Niet — hoofdletter alleen aan zinbegin."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Samenstellingen aan-elkaar", tekst: "Een **samenstelling** is 2+ woorden samen tot 1: 'fiets' + 'pomp' = **'fietspomp'**. Schrijfregel: **aan elkaar, zonder spatie of streepje**." },
+            { titel: "Cito-instinker: spaties", tekst: "Veel mensen schrijven 'fiets pomp' (engels-stijl). FOUT in NL. Andere voorbeelden:\n• ✓ kinderboek (niet 'kinder boek')\n• ✓ schoolplein (niet 'school plein')\n• ✓ wereldoorlog (niet 'wereld oorlog')\n• ✓ tijdsverschil (niet 'tijds verschil')\n\nUitzondering: **streepje** soms bij klinker-conflicten of woorden met merkenamen." },
+          ],
+          woorden: [{ woord: "samenstelling", uitleg: "2+ woorden gecombineerd tot 1 nieuw woord. Zonder spatie." }],
+          theorie: "Cito-spelfout #1 = spaties in samenstellingen. Engels heeft wel spaties ('book store') maar NL niet ('boekwinkel').",
+          voorbeelden: [{ type: "fout", tekst: "✗ 'pizza koerier' → ✓ 'pizzakoerier'." }],
+          basiskennis: [{ onderwerp: "Geen Engels", uitleg: "NL = aan elkaar. Engels = spaties. Verwar niet." }],
+          niveaus: { basis: "Aan elkaar. = A.", simpeler: "Samenstelling 'fiets+pomp' = fietspomp, aan elkaar zonder spatie of streepje. = A.", nogSimpeler: "Aan elkaar = A." },
+        },
+      },
+      {
+        q: "Welk woord heeft de **correcte hoofdletter**?",
+        options: ["Nederland","nederland","NEDERLAND","Neder­land"],
+        answer: 0,
+        wrongHints: [null,"Klopt — landnamen krijgen altijd hoofdletter.","Niet — landnamen NIET met kleine letter.","Niet — alleen 1 hoofdletter aan begin.","Niet — geen streepje midden in landnaam."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wanneer hoofdletter?", tekst: "Hoofdletter (kapitaal) gebruik je bij:\n• **Begin zin**: 'De auto rijdt.'\n• **Eigennamen**: persoonsnamen (Tom, Lisa), landen (Nederland), steden (Amsterdam), rivieren (Rijn)\n• **Talen**: Nederlands, Engels, Duits\n• **Volk-namen**: Nederlander, Marokkaan, Spanjaard\n• **Maanden + dagen**: Januari, Maandag... — WACHT, in NL juist NIET (kleine letter)" },
+            { titel: "NL-specifiek: kleine letter", tekst: "**Anders dan Engels**:\n• In Engels: 'I speak English' (taal met hoofdletter)\n• In NL: 'Ik spreek Nederlands' — DAT WEL hoofdletter\n• Maar **maanden + dagen**: 'januari, maandag' — KLEINE letter!\n• **Seizoenen**: 'lente, zomer, herfst, winter' — KLEINE letter\n\nEnglish style: 'Monday in January' = beide hoofdletters. NL: 'maandag in januari' = beide klein." },
+          ],
+          woorden: [
+            { woord: "eigennaam", uitleg: "Naam van specifieke persoon/plaats/ding. Met hoofdletter." },
+            { woord: "soortnaam", uitleg: "Algemene aanduiding (jongen, stad, rivier). Kleine letter." },
+          ],
+          theorie: "Cito-hoofdletter-checklist:\n• Begin zin → HL\n• Eigennaam → HL\n• Taal-naam → HL (Nederlands, Engels)\n• Maand/dag/seizoen → klein\n• 'God' (christelijke God) → HL\n• Gewoon zelfstandig naamwoord → klein",
+          voorbeelden: [{ type: "stap", tekst: "✓ 'Op maandag ga ik naar Amsterdam.' (HL voor Amsterdam, klein voor maandag)" }],
+          basiskennis: [{ onderwerp: "Anders dan Engels", uitleg: "NL-maanden + dagen: klein. Engels: groot. Verwar niet." }],
+          niveaus: { basis: "Nederland. = A.", simpeler: "Landnamen altijd hoofdletter: Nederland, Frankrijk, Duitsland. = A.", nogSimpeler: "HL = A." },
+        },
+      },
+      {
+        q: "Welk woord eindigt op **-isch**?",
+        options: ["fantastisch","fantastiesch","fantastik","fantasties"],
+        answer: 0,
+        wrongHints: [null,"Klopt — '-isch' is de standaard-NL-uitgang.","Niet — extra letters niet nodig.","Niet — geen 'k' aan einde.","Niet — '-ies' bestaat niet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'-isch'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-isch'**:\n• fantastisch\n• elektrisch\n• logisch\n• magisch\n• klassiek (verwarrend! Zonder -h: 'klassiek')\n\nDe -h is stil — je hoort 'fantasties' maar SCHRIJFT '-isch'." },
+            { titel: "Cito-truc: hoor vs schrijf", tekst: "**Belangrijk verschil**:\n• HOREN: 'fan-tas-ties'\n• SCHRIJVEN: 'fan-tas-tisch'\n\nDat 'h' op het einde is ALTIJD aanwezig in '-isch'-woorden. Vergelijk Latijnse herkomst: 'fantasticus' (Latijn) → '-isch' (NL).\n\nVeel-gemaakte fouten: 'fantastiesch' (te veel klinkers) of 'logies' (vergeten -h)." },
+          ],
+          woorden: [
+            { woord: "-isch uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden uit Latijn/Grieks." },
+            { woord: "stille h", uitleg: "H die wel geschreven wordt maar niet uitgesproken." },
+          ],
+          theorie: "Veel '-isch'-woorden zijn van **Latijnse/Griekse oorsprong**:\n• elektrisch (electricus)\n• magisch (magicus)\n• logisch (logicus)\n• fantastisch (fantasticus)\n• automatisch\n\nUitspraak NL: '-isies'. Schrijfwijze: altijd '-isch'.",
+          voorbeelden: [{ type: "fout", tekst: "✗ 'elektries' → ✓ 'elektrisch'. ✗ 'logiesch' → ✓ 'logisch'." }],
+          basiskennis: [{ onderwerp: "Niet horen, wel schrijven", uitleg: "Stille h = leerlingen vergeten vaak. Train: '-isch' altijd met h." }],
+          niveaus: { basis: "fantastisch. = A.", simpeler: "Woorden eindigend op -isch (zoals fantastisch, elektrisch, logisch) hebben altijd een stille h: -ISCH, geen -ies. = A.", nogSimpeler: "-isch = A." },
+        },
+      },
+      {
+        q: "Welk woord eindigt op **-lijk**?",
+        options: ["vriendelijk","vriendelik","vriendelijc","vriendlijk"],
+        answer: 0,
+        wrongHints: [null,"Klopt — '-lijk' standaard-uitgang.","Niet — geen 'k' zonder 'j'.","Niet — geen 'c'.","Niet — 'e' tussen 'vriend' + 'lijk' nodig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• gelukkig (uitzondering: -ig ipv -lijk)\n• menselijk\n• kinderlijk\n• plotseling (-ling, niet -lijk)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
+            { titel: "Cito-truc: hoor vs schrijf", tekst: "Je hoort '-lijk' uitspraak: '-lik' (zonder de j-klank). Maar schrijft altijd **-lijk** met j+k.\n\nVeel-gemaakte fout: 'vriendelik' = klinkt OK maar SCHRIJF-fout. Onthoud: bij -lijk altijd j-k samen, in die volgorde." },
+          ],
+          woorden: [
+            { woord: "-lijk uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden." },
+          ],
+          theorie: "Veel '-lijk'-woorden geven **eigenschap**:\n• vriendelijk (zoals vriend)\n• menselijk (zoals mens)\n• kinderlijk (zoals kind)\n• mannelijk (zoals man)\n• vrouwelijk (zoals vrouw)\n\nPas op variaties: -lijks (dagelijks), -lijkheid (mogelijkheid).",
+          voorbeelden: [{ type: "fout", tekst: "✗ 'vrolik' → ✓ 'vrolijk'. ✗ 'lieflic' → ✓ 'lieflijk'." }],
+          basiskennis: [{ onderwerp: "Niet -lik", uitleg: "Engels heeft 'like' (-like). NL = -lijk (met j)." }],
+          niveaus: { basis: "vriendelijk. = A.", simpeler: "NL-uitgang -lijk wordt altijd met j-k geschreven (niet -lik of -lijc). Vriendelijk = standaard. = A.", nogSimpeler: "-lijk = A." },
+        },
+      },
     ],
   },
 ];

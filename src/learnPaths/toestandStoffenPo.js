@@ -348,6 +348,76 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — speciaal proces.", "Smelten = naar vloeibaar tussen.", "Stollen = vloeibaar → vast.", "Niet hetzelfde — sublimatie slaat vloeibaar over."],
       },
+      {
+        q: "Bij welke **temperatuur** kookt water (op zeespiegel)?",
+        options: ["100 °C","0 °C","50 °C","200 °C"],
+        answer: 0,
+        wrongHints: [null,"Klopt — kookpunt water = 100°C bij normale luchtdruk.","Niet — dat is vriespunt.","Niet — dat is lauw.","Niet — veel te heet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Vriespunt + kookpunt water", tekst: "Twee belangrijke temperaturen voor water:\n• **Vriespunt**: **0 °C** — water wordt ijs (stollen)\n• **Kookpunt**: **100 °C** — water wordt damp/stoom (verdampen)\n\nDeze twee zijn de **referentiepunten** voor de Celsius-temperatuurschaal." },
+            { titel: "Druk + hoogte beïnvloeden kookpunt", tekst: "Op **zeespiegel** kookt water op 100°C. Maar op **hoge bergen** (lage luchtdruk) kookt het bij lagere temperatuur:\n• Mount Everest (8.849 m): water kookt bij ~70°C\n• Zwitserse alpen: ~95°C\n\nDaarom in bergen: thee minder heet, eten duurder om gaar te koken. Snelkookpan helpt." },
+          ],
+          woorden: [
+            { woord: "kookpunt", uitleg: "Temperatuur waarbij vloeistof verdampt. Water: 100°C op zeespiegel." },
+            { woord: "vriespunt", uitleg: "Temperatuur waarbij vloeistof stolt. Water: 0°C." },
+            { woord: "Celsius", uitleg: "Temperatuurschaal: 0 = water vriest, 100 = water kookt." },
+          ],
+          theorie: "Andere stoffen, andere kookpunten:\n• IJzer: 1538°C (smeltpunt)\n• Goud: 1064°C\n• Stikstof: -196°C (vloeibaar bij die temperatuur)\n• Alcohol: ~78°C\n• Water: 100°C\n\nCelsius vernoemd naar Zweedse Anders Celsius (1701-1744).",
+          voorbeelden: [
+            { type: "stap", tekst: "Stoom uit theeketel = 100°C. Pas op verbranding!" },
+          ],
+          basiskennis: [{ onderwerp: "Op zeespiegel", uitleg: "100°C geldt bij normale luchtdruk op zeespiegel. In bergen anders." }],
+          niveaus: { basis: "100 °C. = A.", simpeler: "Water kookt bij 100°C (op zeespiegel). Daarbij wordt vloeistof gas (stoom). = A.", nogSimpeler: "100°C = A." },
+        },
+      },
+      {
+        q: "Bij welke **temperatuur** smelt ijs?",
+        options: ["0 °C","100 °C","-10 °C","37 °C"],
+        answer: 0,
+        wrongHints: [null,"Klopt — smeltpunt ijs = 0°C, gelijk aan vriespunt water.","Niet — kookpunt.","Niet — dan is het nog ijs.","Niet — lichaamstemperatuur."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Smelten + vriezen", tekst: "Bij **0°C** gebeurt twee dingen:\n• Water → IJs (vriezen/stollen)\n• IJs → water (smelten)\n\nHet is hetzelfde getal — heen + terug. Onder 0°C: ijs. Boven 0°C: water (vloeibaar)." },
+            { titel: "Cito-feit: gladde wegen", tekst: "Bij temperaturen rond 0°C ontstaan **gladde wegen**. Water op weg-oppervlak kan ineens bevriezen bij dalende temperatuur. Strooidiensten gebruiken **zout** — dat verlaagt vriespunt tot ~-9°C.\n\nDaarom strooien: zout verandert moment van bevriezen. Bij -15°C werkt zout niet meer." },
+            { titel: "Cito-tip: vergeten niet", tekst: "**Belangrijke temperaturen onthouden**:\n• 0°C — water/ijs\n• 100°C — water/stoom\n• 37°C — gemiddelde lichaamstemperatuur\n• ~20°C — kamer-temperatuur\n• -18°C — vriezer (modern)\n• 4°C — koelkast" },
+          ],
+          woorden: [
+            { woord: "smelten", uitleg: "Vast → vloeibaar. Bv. ijs → water." },
+            { woord: "stollen / vriezen", uitleg: "Vloeibaar → vast. Bv. water → ijs." },
+            { woord: "strooizout", uitleg: "Zout dat vriespunt water verlaagt — voorkomt gladheid op weg." },
+          ],
+          theorie: "Toestandsveranderingen-cyclus:\n```\nIJs ←smelten→ Water ←verdampen→ Stoom\n  ←stollen←       ←condenseren←\n```\nAlle veranderingen hebben omkeerbaar tegendeel.",
+          voorbeelden: [
+            { type: "stap", tekst: "Sneeuwman in zon: smelt langzaam (0°C → boven 0°C)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet altijd 0°C", uitleg: "Zout water (zee) bevriest bij ~-2°C — daarom NL-Noordzee zelden bevriest." }],
+          niveaus: { basis: "0 °C. = A.", simpeler: "IJs smelt bij 0°C — wordt water. Hetzelfde temperatuur als waarbij water vriest. = A.", nogSimpeler: "0°C = A." },
+        },
+      },
+      {
+        q: "**Condenseren** is wat?",
+        options: ["Gas → vloeibaar (bv. damp op koud raam)","Vast → vloeibaar","Vast → gas","Vloeibaar → gas"],
+        answer: 0,
+        wrongHints: [null,"Klopt — damp wordt weer water op koude oppervlakte.","Niet — dat is smelten.","Niet — dat is sublimeren.","Niet — dat is verdampen (tegenovergesteld)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is condensatie?", tekst: "**Condenseren** = **gas wordt vloeibaar**. Tegenovergestelde van verdampen.\n\nVoorbeelden:\n• Damp in douche → druppels op spiegel\n• Adem op koud raam in winter → witte 'wolk' (waterdamp uit adem condenseert op koud glas)\n• Wolken vormen = waterdamp condenseert op stof-deeltjes\n• Dauwdruppels 's morgens op gras" },
+            { titel: "Wanneer condenseert iets?", tekst: "Damp condenseert bij **temperatuur-daling** of **drukverhoging**:\n• Warme damp raakt koud oppervlak → vloeibaar\n• Hoog in lucht (koud) → wolken\n• Compressor in koelkast comprimeert gas → vloeibaar maken\n\nIn waterkringloop: zon verdampt zeewater → omhoog → koelt af → CONDENSEERT in wolken → regen." },
+          ],
+          woorden: [
+            { woord: "condenseren", uitleg: "Gas → vloeibaar. Tegenovergestelde van verdampen." },
+            { woord: "dauw", uitleg: "Druppels op gras 's morgens — water dat uit lucht condenseerde 's nachts." },
+            { woord: "condens", uitleg: "Het gecondenseerde water dat je ziet (op raam, in douche, op koude glas)." },
+          ],
+          theorie: "**Toestandsveranderingen-overzicht**:\n• Smelten: vast → vloeibaar (ijs → water)\n• Stollen: vloeibaar → vast (water → ijs)\n• Verdampen: vloeibaar → gas (water → damp)\n• Condenseren: gas → vloeibaar (damp → water)\n• Sublimeren: vast → gas (droog ijs → CO₂-gas)\n• Rijp/depositie: gas → vast (waterdamp → ijskristallen)",
+          voorbeelden: [
+            { type: "stap", tekst: "Glas koude limonade in zomer → druppels buitenkant = lucht-vocht condenseert op glas." },
+          ],
+          basiskennis: [{ onderwerp: "Niet smelten", uitleg: "Condenseren ≠ smelten. Smelten = vast → vloeibaar (ijs). Condenseren = gas → vloeibaar (damp)." }],
+          niveaus: { basis: "Gas → vloeibaar. = A.", simpeler: "Condenseren = damp/gas wordt water. Voorbeeld: spiegel beslagen na douche. = A.", nogSimpeler: "Damp → water = A." },
+        },
+      },
     ],
   },
 ];
