@@ -48,7 +48,21 @@ Cito-PO + VMBO/HAVO-examenstof prioriteit; STOPLIST-paden skippen.
 
 **Totaal sinds plan-akkoord**: 13 paden, +43 vragen.
 
-## Batch-roadmap (vooruit)
+## URGENT: bijna-lege paden EERST (Mark prio 2026-05-14)
+
+Een leerling met 0 content haakt direct af. **Eerst alle paden onder 15 checks
+vullen** voor batch-volgorde wordt vervolgd. Mark-quote: "weinig = jammer maar
+ok, nul = killing voor app".
+
+**Bijna-lege paden (< 15 checks)**:
+- `negatieveGetallen.js` 10 → 25 (+15) — wiskunde VO klas 1
+- `verhoudingen.js` 12 → 25 (+13) — wiskunde VO klas 1
+- `goniometrie.js` 13 → 25 (+12) — wiskunde VO klas 3
+- `statistiek.js` 14 → 25 (+11) — wiskunde VO klas 1
+
+Totaal: **4 paden, +51 vragen, ~6-8 uur**. Allemaal wiskunde-VO basis.
+
+## Batch-roadmap (na urgent)
 
 ### Batch 3 — VMBO-geschiedenis (10 paden, ~7 uur)
 **Status**: bijna allemaal al 26 checks (vlak boven doel). **Skip — al klaar**:
