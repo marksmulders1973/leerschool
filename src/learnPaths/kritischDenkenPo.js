@@ -325,6 +325,10 @@ const steps = [
           niveaus: { basis: "Premisse 1 klopt niet. = A.", simpeler: "De eerste zin ('alle vogels vliegen') is FOUT — pinguïns/struisvogels vliegen niet. Daarom klopt de conclusie ook niet, ondanks goede logica. = A.", nogSimpeler: "Premisse fout = A." },
         },
       },
+      { q: "Wat is **bevestigingsbias**?", options: ["Alleen info zoeken die jouw mening bevestigt","Alle info opnemen","Je mening direct veranderen","Twijfelen over alles"], answer: 0, wrongHints: [null,"Klopt — veelvoorkomende denkfout.","Tegenovergesteld.","Niet — vasthouden, niet veranderen.","Niet relevant."] },
+      { q: "Welke vraag is een **kritische** vraag bij een bewering?", options: ["Klopt de bron?","Hoe lang is de zin?","Wie schreef het mooist?","Wat is de kleur?"], answer: 0, wrongHints: [null,"Klopt — bronkritiek.","Niet inhoudelijk.","Stijl, geen inhoud.","Niet relevant."] },
+      { q: "*'Hij heeft ongelijk want hij is dom.'* — Welke drogreden?", options: ["Ad hominem","Stroman","Vals dilemma","Cirkelredenering"], answer: 0, wrongHints: [null,"Klopt — aanval op persoon.","Niet — geen verdraaiing.","Niet — geen 2 opties.","Niet — geen herhaling."] },
+      { q: "Wat is **nepnieuws**?", options: ["Bewust verzonnen 'nieuws' om mensen te misleiden","Oud nieuws","Slecht-geschreven nieuws","Buitenlands nieuws"], answer: 0, wrongHints: [null,"Klopt — fake news.","Niet — kan wel waar zijn.","Stijl, niet feit.","Niet relevant."] },
     ],
   },
 ];

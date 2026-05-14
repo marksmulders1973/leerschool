@@ -258,6 +258,10 @@ const steps = [
           niveaus: { basis: "Massale sterfte. = A.", simpeler: "~90% van inheemse Amerikanen stierf in 150 jaar na Columbus. Vooral door Europese ziektes (pokken) + geweld + dwangarbeid. Beschavingen verloren. = A.", nogSimpeler: "Massa-sterfte = A." },
         },
       },
+      { q: "In welk jaar **ontdekte Columbus Amerika**?", options: ["1492","1066","1776","1900"], answer: 0, wrongHints: [null,"Klopt — beroemd jaartal.","Slag bij Hastings.","Onafhankelijkheid VS.","Te recent."] },
+      { q: "Wat is de **VOC**?", options: ["Verenigde Oost-Indische Compagnie","Voetbal-Organisatie-Club","Voor Op Computer","Vinden Onder Cito"], answer: 0, wrongHints: [null,"Klopt — eerste multinational, 1602.","Niet.","Niet.","Onzin."] },
+      { q: "Welke Nederlander ontdekte **Tasmanië**?", options: ["Abel Tasman","Columbus","Magellan","Barentsz"], answer: 0, wrongHints: [null,"Klopt — eiland is naar hem genoemd.","Niet — Amerika.","Wereldreis maar niet Tasmanië-eerst.","Nova Zembla."] },
+      { q: "Welke Amerikaanse stad heette eerst **Nieuw-Amsterdam**?", options: ["New York","Boston","Chicago","Philadelphia"], answer: 0, wrongHints: [null,"Klopt — Nederlands tot 1664.","Niet.","Niet.","Niet."] },
     ],
   },
 ];

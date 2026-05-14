@@ -326,6 +326,10 @@ const steps = [
           niveaus: { basis: "Beaufort 9+ (75 km/u). = A.", simpeler: "Storm in NL = windkracht 9 op Beaufort-schaal = 75 km/u of harder. Beaufort 12 = orkaan (>117 km/u). = A.", nogSimpeler: "Beaufort 9+ = A." },
         },
       },
+      { q: "Welk instituut doet **weersvoorspellingen** in Nederland?", options: ["KNMI","RIVM","CBS","NS"], answer: 0, wrongHints: [null,"Klopt — De Bilt.","Volksgezondheid.","Statistiek.","Spoorwegen."] },
+      { q: "Welke schaal meet **windkracht**?", options: ["Beaufort","Richter","Celsius","Kelvin"], answer: 0, wrongHints: [null,"Klopt — 0-12.","Aardbevingen.","Temperatuur.","Temperatuur."] },
+      { q: "**Bliksem** is sneller dan **donder** omdat?", options: ["Licht reist sneller dan geluid","Bliksem komt eerst","Donder is verzonnen","Geen verschil"], answer: 0, wrongHints: [null,"Klopt — daarom zie je bliksem voor je donder hoort.","Wel — maar wat is de REDEN?","Donder bestaat wel.","Wel verschil."] },
+      { q: "Welk weersymbool betekent **regenbui**?", options: ["Wolk met druppels","Zon","Sneeuwvlok","Streep"], answer: 0, wrongHints: [null,"Klopt.","Mooi weer.","Sneeuw.","Niet."] },
     ],
   },
 ];

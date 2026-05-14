@@ -323,6 +323,10 @@ const steps = [
           niveaus: { basis: "Boeken lenen gratis kind. = A.", simpeler: "Bibliotheek = plek om boeken gratis te lenen. Voor kinderen <18 is lidmaatschap gratis in heel NL. = A.", nogSimpeler: "Gratis lenen = A." },
         },
       },
+      { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt","Roald Dahl","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null,"Klopt.","Engelse schrijver.","Andere kinderboeken (De brief voor de koning).","Schreef dagboek, geen kinderboeken."] },
+      { q: "Wie tekende de illustraties bij **Jip en Janneke**?", options: ["Fiep Westendorp","Vincent van Gogh","Rembrandt","Dick Bruna"], answer: 0, wrongHints: [null,"Klopt — beroemd duo.","Schilder, geen illustrator.","Schilder Gouden Eeuw.","Tekende Nijntje."] },
+      { q: "**Anne Frank** schreef tijdens?", options: ["Tweede Wereldoorlog","Eerste Wereldoorlog","Middeleeuwen","Gouden Eeuw"], answer: 0, wrongHints: [null,"Klopt — Achterhuis, Amsterdam 1942-44.","Niet — andere periode.","Veel eerder.","Veel eerder."] },
+      { q: "Wat wordt elk jaar in oktober **gevierd** in scholen?", options: ["Kinderboekenweek","Voorleeswedstrijd","Boekenmarkt","Schrijfdag"], answer: 0, wrongHints: [null,"Klopt — sinds 1955.","Andere activiteit.","Niet jaarlijks zelfde week.","Geen schoolfeest."] },
     ],
   },
 ];

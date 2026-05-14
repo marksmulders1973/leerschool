@@ -325,6 +325,10 @@ const steps = [
           niveaus: { basis: "Stappenplan computer. = A.", simpeler: "Algoritme = stappenplan dat computer volgt om iets te beslissen of berekenen. Bv. welke TikTok-video je ziet of welke route Google Maps kiest. = A.", nogSimpeler: "Stappenplan = A." },
         },
       },
+      { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je verjaardag","Naam huisdier","123456"], answer: 0, wrongHints: [null,"Klopt — moeilijk te raden.","Te makkelijk te vinden online.","Gemakkelijk te raden.","Top 1 gehackt wachtwoord."] },
+      { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een vissport","Een online-spel","Een browser"], answer: 0, wrongHints: [null,"Klopt — alert blijven op verdachte mails.","Niet relevant.","Niet.","Niet."] },
+      { q: "Welke site heeft **HTTPS**?", options: ["Veiligere verbinding (slotje in browser)","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null,"Klopt — versleutelde verbinding.","Snelheid los van HTTP/HTTPS.","Niets met kosten.","Niets met reclame."] },
+      { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden","De AI ziet kleuren","De AI maakt foto's"], answer: 0, wrongHints: [null,"Klopt — AI klinkt zeker maar feit is fout. Altijd checken.","Niet.","Niet.","Niet."] },
     ],
   },
 ];

@@ -322,6 +322,10 @@ const steps = [
           niveaus: { basis: "~300.000 jaar. = A.", simpeler: "Homo sapiens (onze soort) bestaat ongeveer 300.000 jaar. Eerdere Homo-soorten zijn ouder. = A.", nogSimpeler: "300.000 = A." },
         },
       },
+      { q: "Wie bedacht de **evolutie-theorie**?", options: ["Charles Darwin","Isaac Newton","Albert Einstein","Galileo"], answer: 0, wrongHints: [null,"Klopt — boek 'Origin of Species' 1859.","Zwaartekracht.","Relativiteit.","Astronomie."] },
+      { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepaste dieren overleven en krijgen meer nakomelingen","Toeval","Hard werken","Geluk"], answer: 0, wrongHints: [null,"Klopt — kern Darwin.","Niet — patroon, geen toeval.","Dieren werken niet.","Wel maar systematisch."] },
+      { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null,"Klopt — bij Ecuador.","Niet.","Niet.","Niet."] },
+      { q: "Wie was **Lucy**?", options: ["Een 3,2 mln jaar oud fossiel mens-voorouder","Een schilder","Een wetenschapper","Een schip"], answer: 0, wrongHints: [null,"Klopt — Australopithecus, gevonden 1974.","Niet.","Niet — een fossiel met bijnaam.","Niet."] },
     ],
   },
 ];

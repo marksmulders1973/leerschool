@@ -326,6 +326,10 @@ const steps = [
           niveaus: { basis: "Grond + oppervlaktewater. = A.", simpeler: "NL drinkwater = 60% grondwater (diep onder grond) + 40% rivierwater. Beide goed gezuiverd in waterzuiveringsinstallaties. = A.", nogSimpeler: "Grond + rivier, gezuiverd = A." },
         },
       },
+      { q: "Wat is **verdamping**?", options: ["Water wordt waterdamp (gas)","Water wordt ijs","Water valt naar beneden","Water vriest"], answer: 0, wrongHints: [null,"Klopt — vloeistof → gas.","Dat is bevriezen.","Dat is neerslag.","Bevriezen."] },
+      { q: "Wat is **condensatie**?", options: ["Waterdamp wordt water (vloeistof)","IJs wordt water","Water wordt gas","Niets"], answer: 0, wrongHints: [null,"Klopt — gas → vloeistof (wolken).","Dat is smelten.","Verdamping.","Wel iets."] },
+      { q: "Welk soort wolken brengt onweer?", options: ["Cumulonimbus","Cirrus","Cumulus","Stratus"], answer: 0, wrongHints: [null,"Klopt — hoog stapelend met bliksem.","IJskristallen, geen onweer.","Mooi weer.","Grijze grond-laag."] },
+      { q: "Wanneer was de **Watersnoodramp**?", options: ["1953","1900","2000","1700"], answer: 0, wrongHints: [null,"Klopt — Zeeland onder water.","Te vroeg.","Te recent.","Niet."] },
     ],
   },
 ];

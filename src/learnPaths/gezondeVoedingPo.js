@@ -323,6 +323,10 @@ const steps = [
           niveaus: { basis: "Leefstijl. = A.", simpeler: "Gezond eten + bewegen + niet roken voorkomt type-2-diabetes voor 80%+. = A.", nogSimpeler: "Leefstijl = A." },
         },
       },
+      { q: "Hoeveel **groente** per dag is aanbevolen (Schijf van Vijf)?", options: ["250 gram","50 gram","1 kilo","Geen norm"], answer: 0, wrongHints: [null,"Klopt — ~2 stuks groente.","Veel te weinig.","Veel te veel.","Wel — Voedingscentrum norm."] },
+      { q: "Welke voedingsstof geeft je **energie** voor het dagelijks bewegen?", options: ["Koolhydraten","Vitamine C","Calcium","IJzer"], answer: 0, wrongHints: [null,"Klopt — brood, pasta, rijst.","Niet primair energie.","Bouwstof voor botten.","Bloed-bouwstof."] },
+      { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar","Iedereen onder 21","Alleen kinderen","Bestuurders"], answer: 0, wrongHints: [null,"Klopt — sinds 2014.","Niet in NL.","Tot 18 jaar.","Wel maar niet alleen."] },
+      { q: "Hoeveel **suiker** per dag is max-norm (WHO)?", options: ["~25 gram (6 tl)","100 gram","250 gram","Geen norm"], answer: 0, wrongHints: [null,"Klopt — 1 cola = ±35g!","Te veel — krijg je snel binnen.","Veel te veel.","Wel — WHO norm."] },
     ],
   },
 ];

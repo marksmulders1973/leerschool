@@ -326,6 +326,10 @@ const steps = [
           niveaus: { basis: "Reduce, Reuse, Recycle. = A.", simpeler: "De 3 R's: 1) Reduce = minder kopen, 2) Reuse = tweedehands gebruiken, 3) Recycle = scheiden + verwerken tot nieuwe spullen. Reduce is altijd beste. = A.", nogSimpeler: "Reduce-Reuse-Recycle = A." },
         },
       },
+      { q: "Waar gooi je een **bananenschil** in?", options: ["GFT","Restafval","Plastic","Papier"], answer: 0, wrongHints: [null,"Klopt — groente/fruit/tuinafval.","Niet — composteerbaar.","Niet — geen plastic.","Niet."] },
+      { q: "**PMD** staat voor?", options: ["Plastic + Metaal + Drankkartons","Papier + Magazines + Drukwerk","Plastic + Materiaal + Dozen","Geen afkorting"], answer: 0, wrongHints: [null,"Klopt.","Wel — afkorting recyclebare verpakkingen.","Bijna — drankkartons, niet dozen.","Wel — bestaat sinds 2010s."] },
+      { q: "Op welke bak hoort een **glazen fles**?", options: ["Glasbak","GFT","Plastic","Papier"], answer: 0, wrongHints: [null,"Klopt — apart inzamelen.","Niet — geen organisch.","Niet.","Niet."] },
+      { q: "**Statiegeld** krijg je terug bij?", options: ["Inleveren van fles in winkel","Aankoop","Vakantie","Geboorte"], answer: 0, wrongHints: [null,"Klopt — beloning voor recyclen.","Niet — bij teruggeven.","Niet relevant.","Niet relevant."] },
     ],
   },
 ];

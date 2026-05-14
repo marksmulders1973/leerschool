@@ -213,6 +213,9 @@ const steps = [
       { q: "Bij **zebrapad** voorrang?", options: ["Voetganger", "Auto", "Fiets", "Geen"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."] },
       { q: "**Spoednummer** ongeluk?", options: ["112", "0900", "Geen", "06"], answer: 0, wrongHints: [null, "Klopt.", "Niet spoed.", "Wel.", "Niet."] },
       { q: "**Helm** verplicht in NL?", options: ["Advies (niet wettelijk)", "Wettelijk", "Geen helm bestaat", "Alleen kind"], answer: 0, wrongHints: [null, "Klopt — speed-pedelec wel.", "Niet voor gewone fiets.", "Wel.", "Niet wettelijk."] },
+      { q: "Bij **gelijkwaardige kruising** zonder borden — wie heeft voorrang?", options: ["Verkeer van rechts","Verkeer van links","Eerste die er is","Auto's altijd"], answer: 0, wrongHints: [null,"Klopt — algemeen Nederlandse regel.","Andersom.","Niet.","Niet — fietser ook."] },
+      { q: "Welke kleur **fietsverlichting** voor (volgens NL wet)?", options: ["Wit","Geel","Rood","Blauw"], answer: 0, wrongHints: [null,"Klopt — wit voor, rood achter.","Niet wettelijk.","Achter, niet voor.","Niet — politiekleur."] },
+      { q: "**Stoplicht** — wat doet oranje (geel)?", options: ["Waarschuwing: bijna rood","Rijden mag","Stop direct","Maak vaart"], answer: 0, wrongHints: [null,"Klopt — voorbereiden op stoppen.","Niet — kan veranderen.","Soms wel, soms doorrijden veilig.","Niet — vertragen."] },
     ],
   },
 ];

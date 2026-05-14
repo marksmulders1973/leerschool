@@ -325,6 +325,10 @@ const steps = [
           niveaus: { basis: "Werelddeel — 7 stuks. = A.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië. = A.", nogSimpeler: "Werelddeel = A." },
         },
       },
+      { q: "Wat is de **hoofdstad van Frankrijk**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null,"Klopt.","Duitsland.","Spanje.","VK."] },
+      { q: "Op welk werelddeel ligt **Egypte**?", options: ["Afrika","Azië","Europa","Australië"], answer: 0, wrongHints: [null,"Klopt — Noord-Afrika.","Sinaï-schiereiland wel deels, maar grootste deel Afrika.","Niet.","Niet."] },
+      { q: "Welke oceaan ligt tussen **Europa en Amerika**?", options: ["Atlantische Oceaan","Stille Oceaan","Indische Oceaan","Noordzee"], answer: 0, wrongHints: [null,"Klopt.","Tussen Amerika + Azië.","Tussen Afrika + Australië.","Tussen NL + VK."] },
+      { q: "Wat is de **hoogste berg ter wereld**?", options: ["Mount Everest","Mont Blanc","Kilimanjaro","Fuji"], answer: 0, wrongHints: [null,"Klopt — 8.848 m, Nepal/Tibet.","Alpen, lager.","Afrika, lager.","Japan, lager."] },
     ],
   },
 ];

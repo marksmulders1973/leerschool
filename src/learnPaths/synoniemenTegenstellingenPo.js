@@ -293,6 +293,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klopt — bij goed cijfer hoort trots/blij.", "Past niet bij goed cijfer.", "Past niet bij gevoel.", "Past niet bij goed nieuws."],
       },
+      { q: "Synoniem van **groot**?", options: ["enorm","klein","leeg","laag"], answer: 0, wrongHints: [null,"Klopt.","Tegenstelling.","Niet over grootte.","Anders."] },
+      { q: "Tegenstelling van **snel**?", options: ["langzaam","vlug","direct","kort"], answer: 0, wrongHints: [null,"Klopt.","Synoniem.","Synoniem.","Niet snelheid."] },
+      { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","klein","oud"], answer: 0, wrongHints: [null,"Klopt.","Tegenstelling.","Niets met mooi.","Niets met mooi."] },
+      { q: "Tegenstelling van **vol**?", options: ["leeg","gevuld","volop","ruim"], answer: 0, wrongHints: [null,"Klopt.","Synoniem.","Synoniem.","Andere betekenis."] },
     ],
   },
 ];

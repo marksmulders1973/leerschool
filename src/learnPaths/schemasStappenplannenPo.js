@@ -302,6 +302,10 @@ const steps = [
           niveaus: { basis: "Voedselketen. = A.", simpeler: "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat. = A.", nogSimpeler: "Voedselketen = A." },
         },
       },
+      { q: "Wat is een **beslisboom**?", options: ["Schema met ja/nee-vragen die leidt naar antwoord","Boom buiten","Stappenplan zonder vragen","Tijdslijn"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet — heeft vragen.","Niet — geen tijd."] },
+      { q: "Wat hoort op een **tijdslijn**?", options: ["Gebeurtenissen in chronologische volgorde","Willekeurige feiten","Recepten","Tekeningen"], answer: 0, wrongHints: [null,"Klopt.","Niet — volgorde maakt uit.","Niet relevant.","Niet specifiek."] },
+      { q: "Een stappenplan **'pannenkoek bakken'** begint met?", options: ["Beslag mengen","Op tafel zetten","Pan wassen","Eieren scheiden"], answer: 0, wrongHints: [null,"Klopt — eerste praktische stap.","Laatste stap.","Vooraf.","Bij sommige recepten, maar niet altijd eerste."] },
+      { q: "Bij **'A → B'** in voedselketen?", options: ["A wordt door B gegeten","B leeft naast A","A en B zijn vrienden","Geen betekenis"], answer: 0, wrongHints: [null,"Klopt — pijl wijst energiestroom.","Niet — pijl betekent eten/energie.","Niet.","Wel — staat voor eten."] },
     ],
   },
 ];

@@ -341,6 +341,9 @@ const steps = [
           niveaus: { basis: "F1. = A.", simpeler: "Max Verstappen = Nederlandse F1-coureur, 4× wereldkampioen 2021-2024. = A.", nogSimpeler: "F1 = A." },
         },
       },
+      { q: "**Willem van Oranje** leefde tijdens?", options: ["Tachtigjarige Oorlog (16e eeuw)","Tweede Wereldoorlog","Gouden Eeuw","Romeinen"], answer: 0, wrongHints: [null,"Klopt — leider opstand tegen Spanje.","Veel later.","Iets later — Gouden Eeuw is 17e eeuw.","Veel eerder."] },
+      { q: "Welke Nederlander is bekend van de **microscoop**?", options: ["Anton van Leeuwenhoek","Christiaan Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null,"Klopt — zag eerst micro-organismen.","Astronoom en klokmaker.","Filosoof.","Plastic-soep-opruimer."] },
+      { q: "**Boyan Slat** is bekend om?", options: ["Plastic uit oceanen halen","F1-races","Schaatsen","Politiek"], answer: 0, wrongHints: [null,"Klopt — Ocean Cleanup.","Andere persoon.","Andere persoon.","Andere persoon."] },
     ],
   },
 ];

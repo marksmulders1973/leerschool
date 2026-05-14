@@ -192,6 +192,10 @@ const steps = [
           niveaus: { basis: "Verhalen over goden om wereld uit te leggen. = A.", simpeler: "Mythologie = oude verhalen over goden + helden die uitleggen hoe natuur + wereld werkt. Bv. Grieks: Zeus voor bliksem. Niet wetenschappelijk maar wel cultureel waardevol. = A.", nogSimpeler: "Verhalen over goden = A." },
         },
       },
+      { q: "Bij welke **rivier** woonden de oude Egyptenaren?", options: ["De Nijl","De Amazone","De Donau","De Rijn"], answer: 0, wrongHints: [null,"Klopt — vruchtbare oevers.","Zuid-Amerika.","Europa.","Europa."] },
+      { q: "Welke **stad** was eerste democratie?", options: ["Athene","Sparta","Rome","Cairo"], answer: 0, wrongHints: [null,"Klopt — 508 v.Chr.","Wel Grieks maar geen democratie.","Republiek, maar later.","Egyptisch."] },
+      { q: "Welk **Romeins bouwwerk** was het grote arena-gebouw in Rome?", options: ["Colosseum","Acropolis","Parthenon","Piramide"], answer: 0, wrongHints: [null,"Klopt — gladiatoren-arena.","Grieks.","Grieks.","Egyptisch."] },
+      { q: "In welk jaar viel het **West-Romeinse Rijk**?", options: ["476 n.Chr.","100 v.Chr.","1066","1500"], answer: 0, wrongHints: [null,"Klopt — begin Middeleeuwen.","Te vroeg.","Slag bij Hastings.","Renaissance."] },
     ],
   },
 ];
