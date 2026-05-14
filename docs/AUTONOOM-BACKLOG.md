@@ -74,8 +74,8 @@ Cito + examens versterken. Drie type werk:
 
 Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `docs/CONTENT-DOELEN.md`.
 
-### Stand op 2026-05-14 (geüpdatet einde sessie)
-- **Doorstroomtoets G8**: 286 / 630q = **45% gevuld** ↑ (was 36% — sessie 2026-05-14 voegde +59 vragen toe verdeeld over 3 onderdelen)
+### Stand op 2026-05-14 (geüpdatet einde sessie ronde 2)
+- **Doorstroomtoets G8**: 346 / 630q = **55% gevuld** ↑↑ (was 36% — sessie 2026-05-14 voegde **+119 vragen** toe in 2 rondes × 3 onderdelen)
 - **VMBO-examens authentiek**: 476 / 560q = 85% (ongewijzigd — scheef: Wiskunde + Aardrijkskunde leeg, NL + Engels overcompleet)
 - **PO-leerpaden**: alle 62 paden op 40q-standaard ✓
 - **`examenQuizzes/*.json` skipped**: 797 zijn bewust (open vragen, geen MC) + 17 parser-bugs
@@ -83,9 +83,9 @@ Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `d
 ### Drie sporen — volgorde van uitvoering
 
 **🔴 Spoor 1 — Doorstroomtoets G8 verdiepen (PRIO ICP)**
-- [⏳] Taal G8: 74 → **94q** ✓ deelopgave (commit 8d1d841, 2026-05-14, +20 vragen verspreid 4 stappen). Verder naar 210 = +116q te gaan.
-- [⏳] Rekenen G8: 74 → **94q** ✓ deelopgave (commit d2f8bcd, 2026-05-14, +20 vragen verspreid 4 stappen). Verder naar 210 = +116q te gaan.
-- [⏳] Studievaardigheden G8: 79 → **98q** ✓ deelopgave (commit 928d4dd, 2026-05-14, +19 vragen verspreid 5 stappen). Verder naar 210 = +112q te gaan.
+- [⏳] Taal G8: 74 → **114q** ✓ 2 rondes (commits 8d1d841 + 54f86ed, 2026-05-14, +40 vragen). Verder naar 210 = +96q te gaan.
+- [⏳] Rekenen G8: 74 → **114q** ✓ 2 rondes (commits d2f8bcd + 9e1542c, 2026-05-14, +40 vragen). Verder naar 210 = +96q te gaan.
+- [⏳] Studievaardigheden G8: 79 → **118q** ✓ 2 rondes (commits 928d4dd + 82644e4, 2026-05-14, +39 vragen). Verder naar 210 = +92q te gaan.
 - [ ] 2 proef-toetsen per onderdeel (van 30q elk) — nieuw, nog op te zetten.
 
 **🟠 Spoor 2 — Parser-fix in `scripts/parse_examen.py` (klein, snel)**
