@@ -2,8 +2,12 @@
 // Per (pathId, stepIdx) houden we een set van checkIdx-en die fout zijn gegaan.
 // Bij hervatten van een stap reorderen we de checks zodat foute eerst komen.
 // Sprint B v1 (2026-05-08).
+// Sprint-0 v2 (2026-05-14): mastery streak — een check verlaat de fout-set pas
+// na STREAK_TO_MASTER (3) keer goed achter elkaar. Voorkomt schijnzekerheid bij
+// 1 goed antwoord. Backwards-compat met oude array-vorm via normalizeValue().
 
 const KEY = "lk_adaptive_v1";
+export const STREAK_TO_MASTER = 3;
 
 function readAll() {
   try {
@@ -28,32 +32,73 @@ function stepKey(pathId, stepIdx) {
   return `${pathId}::${stepIdx}`;
 }
 
+// Normaliseert een opgeslagen waarde naar { wrong: number[], streak: {idx: count} }.
+// Oude vorm = bare array (legacy v1). Nieuwe vorm = object met wrong + streak.
+function normalizeValue(v) {
+  if (Array.isArray(v)) return { wrong: v.slice(), streak: {} };
+  if (v && typeof v === "object" && Array.isArray(v.wrong)) {
+    const streak = v.streak && typeof v.streak === "object" ? v.streak : {};
+    return { wrong: v.wrong.slice(), streak: { ...streak } };
+  }
+  return { wrong: [], streak: {} };
+}
+
+function writeEntry(all, k, entry) {
+  if (entry.wrong.length === 0) {
+    delete all[k];
+  } else {
+    // Houd streak-map klein: alleen entries voor checks die nog in wrong-set zitten.
+    const cleanStreak = {};
+    for (const idx of entry.wrong) {
+      if (entry.streak[idx] != null) cleanStreak[idx] = entry.streak[idx];
+    }
+    all[k] = { wrong: entry.wrong, streak: cleanStreak };
+  }
+}
+
 export function recordWrong(pathId, stepIdx, checkIdx) {
   if (!pathId || stepIdx == null || checkIdx == null) return;
   const all = readAll();
   const k = stepKey(pathId, stepIdx);
-  const cur = Array.isArray(all[k]) ? all[k] : [];
-  if (!cur.includes(checkIdx)) cur.push(checkIdx);
-  all[k] = cur;
+  const entry = normalizeValue(all[k]);
+  if (!entry.wrong.includes(checkIdx)) entry.wrong.push(checkIdx);
+  entry.streak[checkIdx] = 0; // reset bij elke fout
+  writeEntry(all, k, entry);
   writeAll(all);
 }
 
+// Bump streak voor een check in de fout-set. Pas bij STREAK_TO_MASTER achtereen
+// goede antwoorden verdwijnt de check uit de set. Checks die NIET in de set
+// staan (= nooit fout geweest) blijven onaangeraakt.
 export function recordRight(pathId, stepIdx, checkIdx) {
   if (!pathId || stepIdx == null || checkIdx == null) return;
   const all = readAll();
   const k = stepKey(pathId, stepIdx);
-  const cur = Array.isArray(all[k]) ? all[k] : [];
-  const next = cur.filter((c) => c !== checkIdx);
-  if (next.length === 0) delete all[k];
-  else all[k] = next;
+  const entry = normalizeValue(all[k]);
+  if (!entry.wrong.includes(checkIdx)) return; // niet in fout-set: niks doen
+  const nextStreak = (entry.streak[checkIdx] || 0) + 1;
+  if (nextStreak >= STREAK_TO_MASTER) {
+    entry.wrong = entry.wrong.filter((c) => c !== checkIdx);
+    delete entry.streak[checkIdx];
+  } else {
+    entry.streak[checkIdx] = nextStreak;
+  }
+  writeEntry(all, k, entry);
   writeAll(all);
 }
 
 export function getWrongChecks(pathId, stepIdx) {
   if (!pathId || stepIdx == null) return [];
   const all = readAll();
-  const cur = all[stepKey(pathId, stepIdx)];
-  return Array.isArray(cur) ? cur : [];
+  return normalizeValue(all[stepKey(pathId, stepIdx)]).wrong;
+}
+
+// Huidige streak voor een specifieke check (voor UI: "nog X keer goed → beheerst").
+export function getCheckStreak(pathId, stepIdx, checkIdx) {
+  if (!pathId || stepIdx == null || checkIdx == null) return 0;
+  const all = readAll();
+  const entry = normalizeValue(all[stepKey(pathId, stepIdx)]);
+  return entry.streak[checkIdx] || 0;
 }
 
 // Returnt een herordende array van check-indexen waarbij eerder-foute checks
@@ -76,7 +121,7 @@ export function countPathWrong(pathId) {
   const prefix = `${pathId}::`;
   let total = 0;
   for (const k of Object.keys(all)) {
-    if (k.startsWith(prefix)) total += (all[k]?.length || 0);
+    if (k.startsWith(prefix)) total += normalizeValue(all[k]).wrong.length;
   }
   return total;
 }
@@ -90,7 +135,7 @@ export function pathWrongMap(pathId) {
   for (const k of Object.keys(all)) {
     if (!k.startsWith(prefix)) continue;
     const stepIdx = Number(k.slice(prefix.length));
-    if (Number.isInteger(stepIdx)) out[stepIdx] = all[k]?.length || 0;
+    if (Number.isInteger(stepIdx)) out[stepIdx] = normalizeValue(all[k]).wrong.length;
   }
   return out;
 }
@@ -134,7 +179,7 @@ export function pathMasteryStatus(pathId, everSeenIds) {
   const prefix = `${pathId}::`;
   let hasWrong = false;
   for (const k of Object.keys(all)) {
-    if (k.startsWith(prefix) && Array.isArray(all[k]) && all[k].length > 0) {
+    if (k.startsWith(prefix) && normalizeValue(all[k]).wrong.length > 0) {
       hasWrong = true;
       break;
     }
