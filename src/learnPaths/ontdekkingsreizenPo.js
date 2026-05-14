@@ -180,6 +180,84 @@ const steps = [
       { q: "Wat ontdekte **Abel Tasman**?", options: ["Nieuw-Zeeland + Tasmanië", "Amerika", "India", "Australië-zuid"], answer: 0, wrongHints: [null, "Klopt.", "Columbus.", "Vasco da Gama.", "Janszoon noord."] },
       { q: "**Verdrag van Tordesillas** deed wat?", options: ["Wereld verdeeld Portugal/Spanje 1494", "Vrede in Europa", "Slavernij stop", "Niets"], answer: 0, wrongHints: [null, "Klopt.", "Niet primair.", "Niet.", "Wel iets."] },
       { q: "**Slavernij in NL** afgeschaft?", options: ["1863", "1492", "2024", "Nooit"], answer: 0, wrongHints: [null, "Klopt — Keti Koti.", "Te vroeg.", "Te laat — excuses dat jaar.", "Wel afgeschaft."] },
+      {
+        q: "Wat was het doel van **ontdekkingsreizen** (15e-17e eeuw)?",
+        options: ["Nieuwe handelsroutes + grondstoffen vinden", "Toerisme", "Sport", "Wetenschap-onderzoek alleen"],
+        answer: 0,
+        wrongHints: [null, "Klopt — vooral specerijen (peper/kaneel) + goud + zilver halen uit Azië/Amerika.", "Toerisme bestond nog niet — risico te hoog.", "Niet — geen sportwedstrijden.", "Wetenschap deels (kaarten maken), maar geld was hoofdmotief."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom gingen Europeanen weg?", tekst: "In de **15e-17e eeuw** wilden Europeanen vooral:\n• **Specerijen** uit Azië (peper, kaneel, kruidnagel) — heel duur in Europa, gebruikt voor smaak + bewaren vlees\n• **Goud + zilver** (Amerika bleek vol)\n• **Nieuwe handelsroutes** — Turkse Rijk versperde de oude landroute naar Azië\n• **Christelijk geloof** verspreiden\n• **Macht + roem** voor land/koning" },
+            { titel: "Belangrijke ontdekkers", tekst: "• **Columbus** (1492) — Amerika 'ontdekt' (was er al door inheemse volkeren)\n• **Vasco da Gama** (1498) — Portugal → India via Kaap de Goede Hoop\n• **Magellan** (1519-1522) — eerste wereld-omzeiling (zelf gestorven onderweg)\n• **Willem Barentsz** (NL, 1596) — zocht noordelijke route, vast in ijs\n• **Abel Tasman** (NL, 1642) — Nieuw-Zeeland + Tasmanië\n• **James Cook** (1768-1779) — Australië in kaart" },
+            { titel: "Cito-feit: positief én negatief", tekst: "Ontdekkingsreizen hadden **twee kanten**:\n\n**Positief**:\n• Nieuwe planten (aardappel, tomaat, chocola → Europa)\n• Wereldwijde handel\n• Kaarten + wetenschap\n\n**Negatief** — niet vergeten:\n• **Slavernij** — Afrikanen naar Amerika voor plantages (NL = grote slavenhandelaar)\n• **Ziektes** — Europese pokken doodden 90% inheemse Amerikanen\n• **Kolonisatie** — eigen volken in landen onderdrukt\n• **Verdrag van Tordesillas** (1494) — wereld verdeeld door Paus over Spanje + Portugal" },
+          ],
+          woorden: [
+            { woord: "ontdekkingsreiziger", uitleg: "Iemand die met schip naar onbekende delen wereld voer. Vaak in dienst koning/handelaar." },
+            { woord: "specerij", uitleg: "Smaakmaker uit verre landen: peper, kaneel, kruidnagel, gember." },
+            { woord: "kolonie", uitleg: "Land dat door ander land bezet + uitbuit wordt. NL had veel kolonies." },
+            { woord: "Keti Koti", uitleg: "'Ketens gebroken' — Surinaams voor afschaffing slavernij 1 juli 1863." },
+          ],
+          theorie: "Belangrijke jaartallen ontdekkingsreizen + NL:\n• **1492** — Columbus Amerika\n• **1498** — Da Gama India-route\n• **1602** — **VOC** opgericht (NL) — eerste aandelen-handel ter wereld\n• **1621** — **WIC** opgericht — slavenhandel\n• **1863** — Slavernij in NL afgeschaft\n• **2022** — NL-excuses voor slavernij (premier Rutte)\n\nKolonies van NL: Indonesië, Suriname, Caribische eilanden, Zuid-Afrika (deels).",
+          voorbeelden: [
+            { type: "feit", tekst: "VOC was wereld's eerste 'aandelenmaatschappij' — investeerders kochten aandelen om handel te financieren. Begin van moderne beurs (Amsterdam Stock Exchange)." },
+            { type: "feit", tekst: "Tijdens 1600-1800: NL bracht ~600.000 Afrikanen als slaaf naar Caribische gebieden via WIC. Donker hoofdstuk geschiedenis." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen heldenverhaal", uitleg: "Vroeger werd het positief verteld. Tegenwoordig erkent Cito ook negatieve kanten — slavernij + onderdrukking." }],
+          niveaus: { basis: "Handel + grondstoffen. = A.", simpeler: "Ontdekkingsreizen zochten nieuwe routes om specerijen + goud te halen. Maakten Europa rijk maar veroorzaakten slavernij + uitsterving inheemse volken. = A.", nogSimpeler: "Handel + grondstoffen = A." },
+        },
+      },
+      {
+        q: "Wat was de **rol van de VOC** (Verenigde Oostindische Compagnie)?",
+        options: ["Eerste multinational — handel + bestuur in Indië voor NL", "Sport-organisatie", "Universiteit", "Niet bestaand"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 1602-1799, handel in specerijen + bestuur Indonesië namens NL.", "Geen sport.", "Geen onderwijs.", "Wel — 200 jaar invloed."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat was de VOC?", tekst: "De **VOC** (Verenigde Oostindische Compagnie) was een **Nederlands handelsbedrijf**, opgericht **1602**.\n\n**Doel**: handel in Azië (vooral huidig Indonesië) — specerijen kopen + verkopen in Europa. Maar VOC kreeg ook **politieke macht**:\n• Mocht **forten** bouwen\n• Mocht **oorlogen voeren**\n• Mocht **verdragen sluiten** met lokale heersers\n• Mocht **eigen geld slaan** (munten)\n\n→ VOC = wereld's **eerste multinational** + **eerste aandelenmaatschappij**." },
+            { titel: "Wat deden ze?", tekst: "VOC vestigde **handelsposten** in:\n• **Batavia** (huidig Jakarta) — hoofdkwartier in Indië\n• **Ceylon** (Sri Lanka)\n• **Kaap de Goede Hoop** (Zuid-Afrika)\n• Diverse andere plekken\n\nHandel in: peper, kaneel, kruidnagel, nootmuskaat, **textiel**, **porselein**, **thee**, **opium**.\n\n**Donkere kant**: VOC onderdrukte lokale bevolking, voerde oorlogen, monopoliseerde markten met geweld. **Slavernij** ook." },
+            { titel: "Cito-feit: einde + erfenis", tekst: "VOC ging in **1799 failliet** — corruptie, oorlogen, slechte handel-resultaten.\n\n**Wat NL nu nog herinnert**:\n• **Naam VOC** in oude geschiedenisboeken\n• **Indonesische woorden** in NL: pisang, sarong, pajong\n• **Kolonie Indonesië** — door VOC begonnen, pas in **1945-1949** onafhankelijk\n• **Amsterdam Stock Exchange** — oudste beurs ter wereld (gestart voor VOC-aandelen)\n• **'VOC-mentaliteit'** — uitspraak Balkenende (2006) — veroorzaakte debat over koloniaal verleden" },
+          ],
+          woorden: [
+            { woord: "VOC", uitleg: "Verenigde Oostindische Compagnie. Nederlands handelsbedrijf 1602-1799." },
+            { woord: "multinational", uitleg: "Bedrijf met activiteiten in meerdere landen. VOC was de allereerste." },
+            { woord: "aandeel", uitleg: "Klein stukje eigendom van een bedrijf. VOC vond dit uit in 1602." },
+            { woord: "Indonesië", uitleg: "Land in Zuidoost-Azië. Was NL-kolonie tot 1949." },
+          ],
+          theorie: "VOC-tijdlijn:\n• **1602** — opgericht\n• **1619** — Batavia (Jakarta) gesticht\n• **1652** — Kaap de Goede Hoop kolonie\n• **1799** — failliet\n• **1814-1949** — NL-staat nam Indonesië over\n• **1945** — Indonesische onafhankelijkheidsverklaring\n• **1949** — NL erkende onafhankelijkheid",
+          voorbeelden: [
+            { type: "feit", tekst: "Op het hoogtepunt had VOC ~50.000 medewerkers, 200+ schepen, was rijker dan Apple of Google nu (geschatte waarde tegenwoordig: ~7 biljoen euro)." },
+            { type: "feit", tekst: "VOC had eigen vlag, leger, ambassadeurs — bijna een 'land binnen het bedrijf'." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen positief", uitleg: "Cito-onderwijs nu benadrukt ook negatieve kant: dwangarbeid, slavernij, onderdrukking lokale volken. Andere kijk dan 50 jaar geleden." }],
+          niveaus: { basis: "Handelsbedrijf 1602-1799. = A.", simpeler: "VOC = Verenigde Oostindische Compagnie. NL handelsbedrijf 1602-1799. Eerste multinational ter wereld. Handelde in specerijen uit Indonesië + bestuurde kolonie. = A.", nogSimpeler: "Handelsbedrijf Indonesië = A." },
+        },
+      },
+      {
+        q: "Welke **gevolgen** had de ontdekking van Amerika voor inheemse volkeren?",
+        options: ["Massale sterfte door Europese ziektes + onderdrukking", "Alleen positief — handel + welvaart", "Niets — Europeanen lieten hen met rust", "Inheemse volken werden rijker"],
+        answer: 0,
+        wrongHints: [null, "Klopt — ~90% van inheemse bevolking stierf in 1500-1600. Vooral pokken, mazelen, griep.", "Niet — historische feiten zijn duidelijk donkerder.", "Niet — Europeanen vestigden kolonies + tot slaaf gemaakt.", "Niet — meeste werden armer of dood."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Het tragische verhaal", tekst: "Toen Europeanen in **1492** aankwamen in Amerika, woonden er al **~60-100 miljoen inheemse mensen** (Azteken, Maya's, Inka's, en veel kleine stammen).\n\nBinnen **150 jaar** waren er nog ~**6-10 miljoen** over. **80-90%** stierf. Belangrijkste oorzaken:" },
+            { titel: "3 hoofdoorzaken", tekst: "1. **Ziektes** (~70-80% van sterfte)\n• Europeanen hadden generaties immuniteit voor pokken, mazelen, griep, etc.\n• Inheemse volken NIET — hele dorpen wegvaagde\n• Soms zonder dat Europeanen er fysiek waren (ziekte ging vooruit)\n\n2. **Geweld + oorlog**\n• Conquistadores als Cortés (Mexico, Azteken) + Pizarro (Peru, Inka's)\n• Inheemse legers met pijl-en-boog tegen Spaanse zwaarden + paarden + geweren\n• Inheemse rijken vielen binnen 20 jaar uiteen\n\n3. **Dwangarbeid + slavernij**\n• Inheemse mensen moesten werken in zilvermijnen + plantages\n• Overlevenden vluchten naar bergen of werden opgenomen in Europese maatschappij" },
+            { titel: "Cito-feit: erfenis vandaag", tekst: "**In 1500 bestaande beschavingen** zoals Azteken (huidig Mexico) + Inka's (Peru) hadden **eigen schrift, wiskunde, sterrenkunde, gigantische steden** — totaal niet 'primitief'.\n\n**Vandaag**:\n• ~50-60 miljoen inheemse mensen leven nog in Amerika\n• Veel talen + culturen wel verdwenen\n• Erkenning + excuses van overheden begint pas in 21e eeuw\n• **Columbus Day** (VS, 12 oktober) wordt steeds vaker 'Indigenous Peoples' Day' genoemd om recht te doen" },
+          ],
+          woorden: [
+            { woord: "inheems volk", uitleg: "Oorspronkelijke inwoners van een land voordat anderen kwamen." },
+            { woord: "conquistador", uitleg: "Spaanse 'veroveraar' — soldaten die in 1500-1600 Amerika onderwierpen." },
+            { woord: "pokken", uitleg: "Zeer dodelijke virus-ziekte (uitgeroeid in 1980). Veroorzaakte massale inheemse sterfte." },
+            { woord: "kolonialisme", uitleg: "Europees beleid: land bezetten + uitbuiten ten gunste eigen rijk." },
+          ],
+          theorie: "Cito-tip: vroeger versus nu in geschiedenisles\n• **Vroeger**: 'Columbus ontdekte Amerika' = held\n• **Nu**: 'Columbus zeilde naar Amerika — er woonden al miljoenen mensen. Wat hij begon werd ramp voor hen.'\n\nGeschiedenis kijkt naar **alle perspectieven** — winnaars + verliezers. Bij Cito zien we meer historische nuance dan vroeger.",
+          voorbeelden: [
+            { type: "feit", tekst: "Mexico-stad (Tenochtitlán) was in 1519 GROTER dan elke Europese stad — ~200.000 inwoners. Cortés vernietigde het." },
+            { type: "feit", tekst: "Inheemse Amerikaanse landbouw gaf de wereld: aardappel, tomaat, maïs, chocola, paprika, ananas, tabak, vanille, pompoen. Onze keuken zou totaal anders zijn zonder." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'ontdekt'", uitleg: "Het woord 'ontdekt' is moderne kritiek waard — Amerika was bewoond. 'Aangelegd contact' of 'binnengevallen' is feitelijker." }],
+          niveaus: { basis: "Massale sterfte. = A.", simpeler: "~90% van inheemse Amerikanen stierf in 150 jaar na Columbus. Vooral door Europese ziektes (pokken) + geweld + dwangarbeid. Beschavingen verloren. = A.", nogSimpeler: "Massa-sterfte = A." },
+        },
+      },
     ],
   },
 ];
