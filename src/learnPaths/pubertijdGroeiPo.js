@@ -180,6 +180,81 @@ const steps = [
       { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Te zelden.", "Wel."] },
       { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Klopt.", "Spoed.", "Niet.", "Niet."] },
       { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Klopt.", "Te jong.", "Te jong.", "Te oud."] },
+      {
+        q: "Wat is een **groeispurt**?",
+        options: ["Periode waarin je snel langer wordt (soms 10+ cm/jaar)", "Pijn in benen", "Trainen om te groeien", "Eten voor groei"],
+        answer: 0,
+        wrongHints: [null, "Klopt — typisch in 2 fases: rond 1 jr + in puberteit.", "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een groeispurt?", tekst: "Een **groeispurt** is een **periode waarin je lichaam plotseling veel sneller groeit** dan normaal. In **één jaar** kun je 8-12 cm langer worden — bijna een centimeter per maand.\n\nMensen hebben **twee grote groeispurten** in hun leven:\n1. **Babyjaar** (0-1 jr): groei van ~50 cm naar 75 cm (50% in lengte!)\n2. **Puberteit**: meisjes ~11-13, jongens ~13-15" },
+            { titel: "Hoe voel je een groeispurt?", tekst: "• **Schoenen passen niet meer** — voeten groeien soms eerst\n• **Broeken te kort** — je benen groeien snel\n• **Honger** als nooit tevoren — lichaam heeft brandstof nodig\n• **Vermoeidheid** — groeien kost energie\n• Soms **groeipijnen** in benen 's nachts (onschadelijk)\n• **Slungelig gevoel** — armen/benen langer voor je brein eraan went" },
+            { titel: "Cito-feit: lengte-eindstand", tekst: "Je **uiteindelijke lengte** wordt voor **80% door genen** bepaald (van je ouders). Voeding + slaap helpen om je 'genetisch potentieel' te bereiken.\n\n**Vuistregel**: tel lengte vader + moeder, deel door 2.\n• Voor jongens: + ~7 cm\n• Voor meisjes: − ~7 cm\nDit geeft een schatting (kan 5-10 cm afwijken)." },
+          ],
+          woorden: [
+            { woord: "groeispurt", uitleg: "Periode van snelle groei. Bij baby (0-1 jr) en in puberteit." },
+            { woord: "groeipijnen", uitleg: "Lichte pijn in benen tijdens groei — meestal 's nachts, onschadelijk." },
+            { woord: "genetisch potentieel", uitleg: "Maximale lengte die je genen toestaan. Voeding/slaap bepalen of je het haalt." },
+          ],
+          theorie: "Tips voor goede groei tijdens puberteit:\n• **Voldoende eten** (vooral eiwit + groenten)\n• **9-10 uur slaap** (groeihormoon werkt vooral in slaap)\n• **Bewegen** (botten + spieren ontwikkelen)\n• **Genoeg calcium** (melk, kaas, broccoli — botten sterk maken)\n• **Vitamine D** (zonlicht — helpt calcium-opname)\n\nNiet doen: roken (remt groei), te streng diëten (lichaam mist bouwstoffen), te weinig slaap.",
+          voorbeelden: [
+            { type: "feit", tekst: "Wereldwijd worden mensen gemiddeld langer over de eeuwen — Nederlanders waren in 1850 gemiddeld 165 cm, nu 181 cm voor mannen." },
+            { type: "feit", tekst: "Voeten groeien vaak vóór benen — daarom kun je in 1 jaar 2-3 schoenmaten verschillen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet bezorgd", uitleg: "Alle kinderen groeien in eigen tempo. Klasgenoten ver voor of achter lopen = normaal." }],
+          niveaus: { basis: "Snelle groeiperiode. = A.", simpeler: "Groeispurt = periode (bv. in puberteit) waarin je heel snel langer wordt — soms 10+ cm/jaar. Door hormonen. = A.", nogSimpeler: "Snelle groei = A." },
+        },
+      },
+      {
+        q: "Wat helpt **botten sterk** maken tijdens groei?",
+        options: ["Calcium (melk/kaas/broccoli) + vitamine D + bewegen", "Veel zoetigheid", "Lang stilzitten", "Niet eten"],
+        answer: 0,
+        wrongHints: [null, "Klopt — combinatie van calcium-rijk eten, vitamine D én bewegen.", "Tegenovergesteld — suiker kan calcium uit botten halen.", "Niet — bewegen is juist nodig voor sterke botten.", "Tegenovergesteld — voeding is essentieel."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Botten in puberteit", tekst: "In puberteit groeien je botten enorm — in lengte ÉN sterkte. Dit is het **belangrijkste moment in je leven** om sterke botten op te bouwen. Wat je nu in je botten 'opslaat' bepaalt risico op botbreuken/osteoporose op latere leeftijd." },
+            { titel: "De 3 bouwstenen", tekst: "Voor sterke botten heb je nodig:\n1. **Calcium** — de hoofdbouwstof van botten. Zit in: melk, yoghurt, kaas, broccoli, amandelen, sardientjes.\n2. **Vitamine D** — helpt lichaam calcium opnemen. Maakt huid zelf in zonlicht (15-30 min/dag). Ook in vis, eieren.\n3. **Bewegen** — vooral '**impact-bewegingen**' zoals rennen, springen, basketbal. Dit stimuleert botgroei." },
+            { titel: "Cito-feit: 90% van botten gevormd vóór 18", tekst: "Je piek-botmassa wordt bereikt rond **18-25 jaar**. Daarna kun je nog wel onderhouden maar nieuwe bot-mass opbouwen wordt steeds moeilijker. **NU goed eten + bewegen = sterke botten levenslang**.\n\nNL-aanbeveling voor kinderen 9-13 jr: **1100 mg calcium per dag** = ~3 zuivelporties (melk, yoghurt, kaas)." },
+          ],
+          woorden: [
+            { woord: "calcium", uitleg: "Mineraal. Hoofdbouwstof botten + tanden. 99% van calcium in lichaam zit in botten." },
+            { woord: "vitamine D", uitleg: "Vitamine die helpt bij calcium-opname. Komt deels van zonlicht." },
+            { woord: "osteoporose", uitleg: "Botverlies-ziekte (vooral ouderen). Wordt voorkomen door sterke botten in jeugd." },
+          ],
+          theorie: "Calcium-rijke voeding:\n• **Zuivel**: melk (250 ml = 300 mg), kaas, yoghurt\n• **Groenten**: broccoli, spinazie, boerenkool\n• **Noten**: amandelen, sesam-zaad (tahin)\n• **Vis met graten**: sardientjes, ansjovis\n• **Vegan opties**: verrijkte plantaardige melk (soja, haver)\n\nLactose-intolerant? Vele alternatieven beschikbaar — vraag (huis)arts.",
+          voorbeelden: [
+            { type: "feit", tekst: "1 glas melk (250 ml) = ~300 mg calcium = 27% van dagelijkse behoefte." },
+            { type: "feit", tekst: "Cola + frisdrank bevatten fosforzuur dat calcium-opname kan blokkeren bij grote hoeveelheden." },
+          ],
+          basiskennis: [{ onderwerp: "Botten bouwen = nu", uitleg: "Cito-feit: je hebt 1 kans in je leven om sterke botten op te bouwen — tussen 10-20 jaar. Daarna alleen onderhoud mogelijk." }],
+          niveaus: { basis: "Calcium + vit D + bewegen. = A.", simpeler: "Sterke botten in groei: melk/kaas (calcium) + zonlicht (vit D) + bewegen (impact-sporten). = A.", nogSimpeler: "Calcium + zon + bewegen = A." },
+        },
+      },
+      {
+        q: "Het **brein in puberteit** — wat is uniek?",
+        options: ["Beslissings-deel ontwikkelt zich laatst — daardoor soms impulsief", "Brein krimpt", "Brein groeit niet meer", "Brein verandert niet"],
+        answer: 0,
+        wrongHints: [null, "Klopt — prefrontale cortex (planning/impuls-controle) pas klaar rond 25.", "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Twee verschillende brein-delen", tekst: "Je brein heeft (heel grof gezegd) twee delen die anders ontwikkelen:\n• **Emotie-deel (limbisch systeem)** — vroeg klaar, ~13 jaar. Dit is waarom je in puberteit intens kunt voelen.\n• **Beslissings-deel (prefrontale cortex)** — pas klaar rond **25 jaar**. Dit deel doet: lange-termijn-plannen, impuls-controle, gevolgen overzien." },
+            { titel: "Waarom dit verklaart", tekst: "**Emotie sterk + beslissings-controle nog niet klaar = soms impulsieve keuzes** in puberteit:\n• Risico-gedrag (te hard fietsen, dingen proberen zonder na te denken)\n• Sterke emoties (snel boos, snel verliefd, snel verdrietig)\n• Drukke groep aantrekkelijk (peer pressure werkt sterker)\n• Moeite met opletten in les (focus-deel groeit nog)\n\n**Dit is normaal + tijdelijk**." },
+            { titel: "Cito-feit: brein-onderzoek + tips", tekst: "**Eveline Crone** (NL-hoogleraar) deed beroemd onderzoek naar tiener-brein. Conclusie: tieners zijn niet 'moeilijk' — ze zijn **biologisch ontworpen** om te experimenteren + risico's nemen.\n\nTips voor tieners zelf:\n• **8-10 uur slaap** = brein heeft tijd nodig om te ontwikkelen\n• **Geen alcohol/drugs** vóór 18 = remt brein-ontwikkeling permanent\n• **Sport + sociale contacten** = brein wordt slimmer\n• **Stress-managen** = lange-stress is slecht voor brein" },
+          ],
+          woorden: [
+            { woord: "prefrontale cortex", uitleg: "Voorste deel van het brein. Doet: plannen, beslissen, impuls-controle. Pas volwassen rond 25." },
+            { woord: "limbisch systeem", uitleg: "Diep brein-deel. Doet: emoties, beloning, motivatie. Vroeg klaar in puberteit." },
+            { woord: "neuroplasticiteit", uitleg: "Vermogen van brein om te veranderen + leren. Heel hoog in puberteit." },
+          ],
+          theorie: "Brein in cijfers:\n• Gewicht: ~1,4 kg (~2% van lichaam)\n• Energie-verbruik: 20% van totaal (denken kost veel!)\n• Neuronen: ~86 miljard\n• Verbindingen: 100+ biljoen\n• Volledig volwassen: rond 25 jaar\n\nWat helpt brein groeien: leren, sport, vrienden, slaap, gezonde voeding, omega-3 (vis), nieuwe ervaringen.",
+          voorbeelden: [
+            { type: "feit", tekst: "Tieners scoren BETER op risico-inschatting in tests waar geen tijdsdruk is. Onder druk + emotie wordt impulsief deel sterker." },
+            { type: "feit", tekst: "Alcohol vóór 25 kan permanent brein-ontwikkeling schaden — daarom 18+-grens in NL." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'verkeerd'", uitleg: "Tiener-brein is niet 'mis' ontworpen — het werkt zoals het hoort. Volwassenen zijn niet 'beter' maar gewoon ANDERE fase." }],
+          niveaus: { basis: "Beslissings-deel laatst klaar. = A.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25. = A.", nogSimpeler: "Beslissings-deel laat klaar = A." },
+        },
+      },
     ],
   },
 ];
