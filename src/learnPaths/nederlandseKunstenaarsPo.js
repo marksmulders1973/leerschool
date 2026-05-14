@@ -146,6 +146,9 @@ const steps = [
       { q: "**Mondriaan** stijl?", options: ["Rechthoeken + primaire kleuren", "Realistisch", "Donker", "Sprookjes"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."] },
       { q: "Wie bedacht **Nijntje**?", options: ["Dick Bruna", "Pieck", "Mondriaan", "Hals"], answer: 0, wrongHints: [null, "Efteling.", "Niet.", "Niet."] },
       { q: "**Grootste museum** NL?", options: ["Rijksmuseum Amsterdam", "Mauritshuis", "Bonnefanten", "Eftelingmuseum"], answer: 0, wrongHints: [null, "Klein.", "Niet grootst.", "Pretpark."] },
+      { q: "Wie schreef de boeken **'Pluk van de Petteflet'** en **'Jip en Janneke'**?", options: ["Annie M.G. Schmidt", "Dick Bruna", "Anton Pieck", "Rembrandt"], answer: 0, wrongHints: [null, "Tekeningen, geen boeken.", "Pretpark.", "Schilder."] },
+      { q: "**Van Gogh** ging na zijn leven beroemd worden. Hoe **verkocht** hij zijn schilderijen toen hij leefde?", options: ["Bijna niet — slechts één in zijn leven", "Heel veel", "Hij gaf ze gratis weg", "Hij maakte er geen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Hij maakte er duizenden."] },
+      { q: "Bij welke **kunststroming** hoort **Mondriaan**?", options: ["De Stijl (abstract)", "Impressionisme", "Realisme", "Romantiek"], answer: 0, wrongHints: [null, "Niet — Monet.", "Niet — Rembrandt.", "Niet."] },
     ],
   },
 ];

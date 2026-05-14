@@ -146,6 +146,9 @@ const steps = [
       { q: "**Heilige rivier** hindoes?", options: ["Ganges (India)", "Nijl", "Donau", "Jordaan"], answer: 0, wrongHints: [null, "Egyptisch.", "Europees.", "Christen."] },
       { q: "**Vasten** in islam = ?", options: ["Ramadan", "Pesach", "Pasen", "Sabbat"], answer: 0, wrongHints: [null, "Joods.", "Christen.", "Joods."] },
       { q: "Wat is **atheïst**?", options: ["Gelooft niet in God", "Christen", "Hindoe", "Niet bekend"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welke godsdienst gelooft in **reïncarnatie** (wedergeboorte)?", options: ["Hindoeisme + Boeddhisme", "Christendom", "Jodendom", "Islam"], answer: 0, wrongHints: [null, "Hemel/hel ipv wedergeboorte.", "Geen reïncarnatie-leer.", "Geen reïncarnatie-leer."] },
+      { q: "**Kerk** is gebouw voor christenen. Wat is voor **moslims**?", options: ["Moskee", "Synagoge", "Tempel", "Kapel"], answer: 0, wrongHints: [null, "Joods.", "Hindoe/Boeddhist.", "Klein christen-gebouw."] },
+      { q: "**Anne Frank** was een ___ kind in WO2?", options: ["Joods", "Christen", "Moslim", "Atheist"], answer: 0, wrongHints: [null, "Niet — Duitsers vervolgden joden.", "Niet aanleiding tot dagboek.", "Niet relevant."] },
     ],
   },
 ];

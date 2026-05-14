@@ -255,6 +255,10 @@ const steps = [
           niveaus: { basis: "Beslissings-deel laatst klaar. = A.", simpeler: "Brein in puberteit: emotie-deel werkt al sterk, maar beslissings-deel (plannen + impuls-controle) pas klaar rond 25. = A.", nogSimpeler: "Beslissings-deel laat klaar = A." },
         },
       },
+      { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in puberteit.", "Te veel.", "Onjuist."] },
+      { q: "Welke **hormonen** spelen vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Vrouwelijk hormoon.", "Bloedsuiker.", "Stress."] },
+      { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Niet — komt op huid.", "Niet bij huid.", "Niet bij huid."] },
+      { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ["Gezond eten, sport, voldoende slaap", "Alleen games spelen", "Niet leren", "Stress hebben"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Onjuist.", "Tegenovergesteld."] },
     ],
   },
 ];
