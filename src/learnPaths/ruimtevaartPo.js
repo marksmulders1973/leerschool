@@ -125,7 +125,7 @@ const ruimtevaartPo = {
   title: "Ruimtevaart (Cito groep 6-8)",
   emoji: "🚀",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "natuur",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — natuur & techniek / sterrenkunde",
   prerequisites: [

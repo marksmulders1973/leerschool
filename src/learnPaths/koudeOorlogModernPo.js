@@ -125,7 +125,7 @@ const koudeOorlogModernPo = {
   title: "Koude Oorlog + moderne geschiedenis (Cito groep 7-8)",
   emoji: "🧊",
   level: "groep7-8",
-  subject: "wereldorientatie",
+  subject: "geschiedenis",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — geschiedenis (Tijdvak 10)",
   prerequisites: [

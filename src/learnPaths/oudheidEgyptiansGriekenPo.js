@@ -207,7 +207,7 @@ const oudheidEgyptiansGriekenPo = {
   title: "Oudheid — Egyptenaren + Grieken + Romeinen (Cito groep 6-8)",
   emoji: "🏺",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "geschiedenis",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — geschiedenis (Tijdvak 1-3)",
   prerequisites: [

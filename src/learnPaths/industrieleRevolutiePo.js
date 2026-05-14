@@ -323,7 +323,7 @@ const industrieleRevolutiePo = {
   title: "Industriële Revolutie (groep 6-8 + klas 1-2)",
   emoji: "⚙️",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "geschiedenis",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — geschiedenis (Tijdvak 8)",
   prerequisites: [

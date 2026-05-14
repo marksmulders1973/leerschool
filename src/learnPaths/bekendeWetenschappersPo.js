@@ -367,7 +367,7 @@ const bekendeWetenschappersPo = {
   title: "Bekende wetenschappers (Cito groep 6-8)",
   emoji: "🔭",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "natuur",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — natuur & techniek / geschiedenis van wetenschap",
   prerequisites: [

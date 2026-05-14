@@ -266,7 +266,7 @@ const pubertijdGroeiPo = {
   title: "Puberteit + groei (groep 7-8)",
   emoji: "🌱",
   level: "groep7-8",
-  subject: "wereldorientatie",
+  subject: "natuur",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — natuur & techniek / gezondheid + burgerschap",
   prerequisites: [

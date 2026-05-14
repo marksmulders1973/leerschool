@@ -340,7 +340,7 @@ const werelddelenLandenPo = {
   title: "Werelddelen + landen (Cito groep 6-8)",
   emoji: "🌍",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "aardrijkskunde",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — aardrijkskunde / topografie",
   prerequisites: [

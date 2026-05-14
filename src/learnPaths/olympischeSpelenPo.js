@@ -125,7 +125,7 @@ const olympischeSpelenPo = {
   title: "Olympische Spelen + sport (Cito groep 6-8)",
   emoji: "🥇",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "geschiedenis",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — cultuur / sport",
   prerequisites: [],

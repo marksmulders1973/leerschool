@@ -338,7 +338,7 @@ const bekendeBoekenLiteratuurPo = {
   title: "Bekende boeken + literatuur (Cito groep 6-8)",
   emoji: "📖",
   level: "groep6-8",
-  subject: "wereldorientatie",
+  subject: "geschiedenis",
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — cultuur / literatuur",
   prerequisites: [
