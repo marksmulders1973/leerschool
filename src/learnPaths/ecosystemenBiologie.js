@@ -73,7 +73,7 @@ const steps = [
         q: "Wat is een **abiotische factor**?",
         options: ["Niet-levend (water, lucht, grond)", "Een dier", "Een plant", "Een bacterie"],
         answer: 0,
-        wrongHints: [null, "Dat is biotisch.", "Dat is biotisch.", "Dat is biotisch."],
+        wrongHints: [null, "Beweegt + eet + ademt — leeft dus.", "Groeit + maakt voedsel — leeft.", "Eencellig — maar wel een levend organisme."],
       },
       {
         q: "Wat is een **populatie**?",
@@ -85,7 +85,7 @@ const steps = [
         q: "Welke is een **biotische** factor?",
         options: ["Een schimmel", "Regen", "Temperatuur", "Bodem"],
         answer: 0,
-        wrongHints: [null, "Abiotisch.", "Abiotisch.", "Abiotisch."],
+        wrongHints: [null, "Water valt — geen organisme.", "Een meetbare grootheid, niet een wezen.", "Materie van de aarde — geen leven."],
       },
     ],
   },
@@ -118,7 +118,7 @@ const steps = [
         q: "Wat is een **autotroof**?",
         options: ["Wezen dat zelf voedsel maakt (producent)", "Vleeseter", "Plant-eter", "Afbreker"],
         answer: 0,
-        wrongHints: [null, "Heterotroof.", "Heterotroof.", "Heterotroof."],
+        wrongHints: [null, "Eet andere dieren — maakt geen eigen voedsel.", "Eet planten — maakt zelf niets.", "Eet dode resten — geen eigen productie."],
         uitlegPad: {
           stappen: [
             { titel: "Auto + troof = zelf voedend", tekst: "Grieks: auto = zelf, troof = voeden. Een autotroof maakt zijn eigen voedsel via fotosynthese (planten) of chemosynthese (sommige bacteriën)." },
@@ -234,7 +234,7 @@ const steps = [
         q: "Wat is de **grootste oorzaak** van soorten-uitsterven?",
         options: ["Habitat-vernieling (bos kappen, droogleggen)", "Jacht alleen", "Vervuiling alleen", "Klimaatverandering alleen"],
         answer: 0,
-        wrongHints: [null, "Belangrijk maar niet grootste.", "Belangrijk maar niet grootste.", "Belangrijk maar niet grootste."],
+        wrongHints: [null, "Doet schade, maar veel soorten worden niet bejaagd.", "Geeft druk, maar zonder leefgebied lukt het sowieso niet.", "Snelgroeiend probleem, maar nog geen #1 in cijfers (2024)."],
       },
       {
         q: "Wat is een **invasieve soort**?",
@@ -261,7 +261,7 @@ const steps = [
         q: "Wat is een **producent**?",
         options: ["Plant of alg (maakt voedsel via fotosynthese)", "Vleeseter", "Aaseter", "Plant-eter"],
         answer: 0,
-        wrongHints: [null, "Consument.", "Consument.", "Consument."],
+        wrongHints: [null, "Verteert vlees — maakt geen nieuw voedsel.", "Verteert dood materiaal — geen productie.", "Verteert plant — geen eigen productie."],
       },
       {
         q: "Welk dier zit **bovenaan** een energiepiramide?",
@@ -285,7 +285,7 @@ const steps = [
         q: "Welke is een **invasieve soort** in NL?",
         options: ["Amerikaanse rivierkreeft", "Eekhoorn", "Vos", "Hert"],
         answer: 0,
-        wrongHints: [null, "Inheems.", "Inheems.", "Inheems."],
+        wrongHints: [null, "Komt al eeuwen in NL voor.", "NL-roofdier, hier thuis.", "NL-zoogdier, behoort tot eigen natuur."],
       },
       {
         q: "Wat is de rol van **schimmels** in ecosysteem?",
