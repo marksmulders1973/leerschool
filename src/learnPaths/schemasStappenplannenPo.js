@@ -227,6 +227,81 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Kwam later.","Veel later.","Veel later."],
       },
+      {
+        q: "Een **stappenplan** is gegeven: 1) Lees de hele opgave. 2) Onderstreep belangrijke woorden. 3) Maak schets. 4) Reken uit. 5) Controleer antwoord.\n\nWelke stap is gericht op **niet rekenen maar BEGRIJPEN**?",
+        options: ["Stap 1 (lees de hele opgave)","Stap 4 (reken uit)","Stap 5 (controleer)","Geen — alle gaan over rekenen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — lezen + begrijpen komt vóór rekenen.","Dat is uitrekenen, niet begrijpen.","Controle is na rekenen, niet begrijpen vooraf.","Wel — stap 1 + 2 zijn lezen + markeren."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stappenplan = volgorde", tekst: "Een stappenplan helpt je iets **systematisch + zonder fout** te doen. Vooral handig bij:\n• Redactiesommen (lange verhaal-vragen)\n• Examen-opgaven\n• Practicum biologie/scheikunde\n• Een recept\n\nEerste stap is bijna ALTIJD: **lees rustig, begrijp wat er gevraagd wordt** — niet meteen aan rekenen!" },
+            { titel: "Cito-tip: 5-stappen-rekenen", tekst: "**Officieel stappenplan rekenen** (uit veel rekenboeken):\n1. **Lees + begrijp** vraag\n2. **Onderstreep** getallen + sleutelwoorden\n3. **Schets** (als handig)\n4. **Reken** uit\n5. **Controleer** antwoord (klopt eenheid? Past schatting?)\n\nVeelgemaakte fout: stap 4 meteen doen zonder 1+2. Dan reken je iets anders dan gevraagd." },
+            { titel: "Studievaardigheid voor Cito", tekst: "Doorstroomtoets (groep 8) test ook **studievaardigheid** — slim leren + werken. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nKinderen die stappenplan-aanpak gebruiken scoren 10-15% hoger gemiddeld op Cito-toetsen." },
+          ],
+          woorden: [
+            { woord: "stappenplan", uitleg: "Lijst van stappen in vaste volgorde voor een taak." },
+            { woord: "studievaardigheid", uitleg: "Vaardigheid om effectief te leren + werken. Cito test dit." },
+            { woord: "structureren", uitleg: "Iets ordenen in vaste delen of stappen." },
+          ],
+          theorie: "Stappenplan-types die Cito test:\n• **Rekenen** — 5-stappen (lees → markeer → schets → reken → check)\n• **Schrijven** — opzet → uitwerken → herlezen → fout-check\n• **Lezen** — globaal lezen → vraag begrijpen → terug naar tekst → antwoord kiezen\n• **Probleem oplossen** — wat weet ik? Wat zoek ik? Welke stappen?",
+          voorbeelden: [
+            { type: "feit", tekst: "Schaak-grootmeesters gebruiken óók stappenplannen (positie analyseren → opties bedenken → beste zet → uitvoeren). Gestructureerd denken werkt overal." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'tijd verspillen'", uitleg: "Stap 1 (lezen) lijkt vertraging maar BESPAART tijd: betere antwoorden, minder fouten, minder herrekenen." }],
+          niveaus: { basis: "Stap 1 = lezen. = A.", simpeler: "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Cito-tip: niet meteen tellen, eerst de vraag SNAPPEN. = A.", nogSimpeler: "Stap 1 = A." },
+        },
+      },
+      {
+        q: "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Score Cito 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
+        options: ["HAVO","VMBO-GL/TL","VWO","Geen"],
+        answer: 0,
+        wrongHints: [null,"Klopt — 540 valt in 536-545 (HAVO).","Te laag — 540 zit hoger dan VMBO-grens.","Te hoog — VWO begint pas bij 546.","Wel een advies."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een beslisboom?", tekst: "Een **beslisboom** is een schema waarmee je via **JA/NEE-vragen** of **getallen-vergelijkingen** tot een conclusie komt.\n\nVoorbeeld:\n```\nIs score ≥ 546? → JA → VWO\n                  → NEE → Is score ≥ 536? → JA → HAVO\n                                            → NEE → VMBO\n```\n\nVeel gebruikt bij: schooladvies, medische diagnose, kledings-keuze (warm/koud), recept-keuze." },
+            { titel: "Stap voor stap: score 540", tekst: "Voor score **540**, ga we door de boom:\n1. Is 540 ≥ 546? **NEE** (540 < 546, geen VWO)\n2. Is 540 ≥ 536? **JA** (540 > 536) → **HAVO** ✓\n\nDe regels:\n• 525-535: **VMBO-GL/TL**\n• 536-545: **HAVO**\n• 546+: **VWO**\n\n540 zit in 536-545 → HAVO." },
+            { titel: "Cito-feit: schooladvies in NL", tekst: "**Belangrijk**: dit voorbeeld is GEFICTIONALISEERD. Werkelijk schooladvies hangt af van **veel factoren**:\n• Doorstroomtoets-score (was Cito)\n• Schooladvies van leerkracht (zwaarder dan toets sinds 2014)\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nSinds **2024** geeft Doorstroomtoets het **belangrijkste advies**. Leerkracht maakt eindvoorstel + bespreekt met ouders. Bij twijfel: hoger advies meestal beter (stapelen mogelijk)." },
+          ],
+          woorden: [
+            { woord: "beslisboom", uitleg: "Schema dat via vragen of getal-vergelijkingen tot een keuze leidt." },
+            { woord: "Doorstroomtoets", uitleg: "Officiële naam sinds 2024 voor de vroegere 'Cito-eindtoets' in groep 8." },
+            { woord: "schooladvies", uitleg: "Aanbeveling van basisschool voor middelbare school (VMBO/HAVO/VWO)." },
+          ],
+          theorie: "Beslisboom-stappen (algemeen):\n1. **Start bij wortel** (eerste vraag)\n2. **Beantwoord** met JA/NEE of getal-vergelijking\n3. **Volg de tak** die past\n4. **Herhaal** tot je aan een bladknoop (eind-conclusie) komt\n\nGebruikt in: medische diagnose, computer-algoritmen, recept-keuze, route-planning.",
+          voorbeelden: [
+            { type: "voorbeeld", tekst: "Beslisboom 'wat trek ik aan?': Regent het? → JA → jas + paraplu. → NEE → Koud? → JA → trui. → NEE → T-shirt." },
+            { type: "voorbeeld", tekst: "Beslisboom 'vis-naam': Heeft schubben? → Heeft tentakels? etc. → Maakt biologen mogelijk te onderscheiden." },
+          ],
+          basiskennis: [{ onderwerp: "Onthoud grenzen", uitleg: "Bij beslisboom-vragen op Cito: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet." }],
+          niveaus: { basis: "HAVO. = A.", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535). = A.", nogSimpeler: "HAVO = A." },
+        },
+      },
+      {
+        q: "Een **diagram**: pijl van 'zon' naar 'plant', pijl van 'plant' naar 'koe', pijl van 'koe' naar 'mens'.\n\n**Wat stelt dit voor**?",
+        options: ["Voedselketen (zonne-energie → plant → dier → mens)","Familie-stamboom","Tijdslijn","Recept"],
+        answer: 0,
+        wrongHints: [null,"Klopt — energie + voedingsstoffen stromen door deze keten.","Niet — geen familieleden.","Niet — geen jaren genoemd.","Niet — geen voedselbereiding."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een voedselketen?", tekst: "Een **voedselketen** toont wie wie eet in de natuur. De **pijl** wijst naar **wie GEGETEN wordt**:\n• Zon → plant (plant gebruikt zonne-energie via fotosynthese)\n• Plant → koe (koe eet plant)\n• Koe → mens (mens eet koe = vlees)\n\nDe energie **stroomt door** de keten — elke stap verliest energie als warmte. Daarom: weinig roofdieren bovenaan, veel planten onderaan." },
+            { titel: "Onderdelen voedselketen", tekst: "**Producenten** (bovenkant): planten — maken energie van zon via **fotosynthese**.\n**Consumenten**:\n• **Eerste-orde** (primair) — eten planten: koeien, konijnen, sprinkhanen\n• **Tweede-orde** (secundair) — eten primaire consumenten: vossen, kippen, mensen\n• **Derde-orde** (tertiair) — top-roofdieren: tijger, haai, adelaar\n\n**Afbrekers**: bacteriën + schimmels die dode planten/dieren opruimen → terug naar grond → nieuwe planten." },
+            { titel: "Cito-feit: voedselweb vs keten", tekst: "**Voedselketen** = simpel, 1 lijn (zon → A → B → C).\n**Voedselweb** = realistischer, meerdere ketens door elkaar.\n\nBv. een vos eet niet alleen konijnen, maar ook muizen, vogels, bessen. Konijnen worden gegeten door vossen, vogels, mensen. Tekening: ALLE pijlen samen = web.\n\nCito vraagt vaak: 'Wat gebeurt als roofdier verdwijnt?' Antwoord: prooi-populatie stijgt → plant-populatie daalt → systeem uit balans." },
+          ],
+          woorden: [
+            { woord: "voedselketen", uitleg: "Lijn die toont wie wie eet in natuur. Energie stroomt door." },
+            { woord: "fotosynthese", uitleg: "Proces waarbij planten zonlicht + CO₂ + water omzetten in suiker (energie) + zuurstof." },
+            { woord: "consument", uitleg: "Dier dat ander voedsel eet (geen plant maakt zelf eten)." },
+            { woord: "afbreker", uitleg: "Bacterie/schimmel die dood materiaal opruimt." },
+          ],
+          theorie: "Cito-tip: voedselketen lezen\n• Pijl wijst naar wat gegeten wordt (zie A→B = A wordt door B gegeten? Of: A→B = A eet B?)\n• NL-conventie: **A → B betekent 'A wordt gegeten door B'** OF energie stroomt richting van pijl\n• Bij elke nieuwe schakel: ~90% energie verloren als warmte (ecologische piramide)",
+          voorbeelden: [
+            { type: "voorbeeld", tekst: "Eenvoudige voedselketen tuin: blad → rups → vogel → kat." },
+            { type: "voorbeeld", tekst: "Zee-voedselketen: plankton → kleine vis → tonijn → mens." },
+          ],
+          basiskennis: [{ onderwerp: "Niet schaal-keten", uitleg: "Voedselketen = wie eet wie. Niet 'wie is groter' (anders zou olifant bovenaan staan). Tijger eet olifant in sommige gevallen." }],
+          niveaus: { basis: "Voedselketen. = A.", simpeler: "Dit diagram toont een voedselketen: zonne-energie → plant → koe → mens. Pijl = wat geeft energie aan wat. = A.", nogSimpeler: "Voedselketen = A." },
+        },
+      },
     ],
   },
 ];
