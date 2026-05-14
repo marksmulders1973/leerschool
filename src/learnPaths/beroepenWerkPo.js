@@ -215,6 +215,83 @@ const steps = [
       { q: "Wat is **AOW**?", options: ["Staatspensioen", "Salaris", "Belasting", "Bonus"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
       { q: "**Top-1 best betaalde** beroep NL?", options: ["Specialist-arts", "Verkoper", "Schoonmaker", "Stagiair"], answer: 0, wrongHints: [null, "Klopt — €150k+.", "Veel minder.", "Veel minder.", "Niet betaald."] },
       { q: "Wat is **bruto**?", options: ["Salaris voor belasting", "Salaris na belasting", "Cadeau", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Netto.", "Niet.", "Wel."] },
+      {
+        q: "Wat betekent **MBO/HBO/WO**?",
+        options: ["MBO=praktisch, HBO=hoger beroeps, WO=universitair", "Alle drie hetzelfde", "Niets bijzonders", "Type bedrijven"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 3 niveaus in NL-onderwijssysteem na middelbare school.", "Tegenovergesteld — heel verschillende niveaus.", "Wel — onderwijsniveaus.", "Niet — dit zijn opleidingsniveaus."],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 niveaus vervolgonderwijs in NL", tekst: "Na de middelbare school kun je in NL kiezen uit drie hoofdniveaus:\n\n• **MBO** (**Middelbaar Beroeps­onderwijs**) — praktijkgericht. Niveau 1-4. Duur: 1-4 jaar. Bv. kapper, verpleegkunde, ICT-helpdesk.\n• **HBO** (**Hoger Beroeps­onderwijs**) — toegepaste theorie + praktijk. Duur: 4 jaar (bachelor). Bv. leraar basisschool, verpleegkundige niveau 6, marketing.\n• **WO** (**Wetenschappelijk Onderwijs**) — universiteit, theoretisch + onderzoek. Duur: 3 jaar bachelor + 1-2 jaar master. Bv. arts, advocaat, psycholoog." },
+            { titel: "Welke middelbare-school-keuze leidt waarheen?", tekst: "• **VMBO** → meestal MBO\n• **HAVO** → meestal HBO\n• **VWO** → meestal WO\n\nMaar **stapelen kan altijd**: MBO niveau 4 → HBO. HBO → WO. Niemand zit vast — je kunt altijd nog doorgroeien. Tegenwoordig switchen veel mensen zelfs ná hun studie." },
+            { titel: "Cito-feit: Doorstroomtoets-link", tekst: "**De Doorstroomtoets** (groep 8) helpt bepalen welk middelbare-school-niveau bij je past — VMBO, HAVO of VWO. Dit beïnvloedt welk vervolgonderwijs makkelijk bereikbaar is. Maar het is **geen einde van keuzes** — stapelen kan altijd later.\n\nNederland heeft ~3 miljoen studenten in MBO/HBO/WO samen (2024)." },
+          ],
+          woorden: [
+            { woord: "MBO", uitleg: "Middelbaar Beroepsonderwijs. Praktijkgericht. ROC's, scholen voor specifieke beroepen." },
+            { woord: "HBO", uitleg: "Hoger Beroepsonderwijs. Hogescholen. 4 jaar bachelor, toepassings­gericht." },
+            { woord: "WO", uitleg: "Wetenschappelijk Onderwijs. Universiteiten. 3+2 jaar bachelor+master, onderzoeks­gericht." },
+            { woord: "stapelen", uitleg: "Doorgaan naar hoger niveau na een opleiding. VMBO→MBO→HBO bv." },
+          ],
+          theorie: "NL-onderwijsniveaus van laag naar hoog (samenvatting):\n• Basisschool (groep 1-8)\n• **VMBO** (4 jr) → MBO\n• **HAVO** (5 jr) → HBO\n• **VWO** (6 jr) → WO\n• **MBO** (1-4 jr) → werk of HBO\n• **HBO** (4 jr bachelor) → werk of master/WO\n• **WO** (3+2 jr) → werk of PhD\n\nDoor stapelen kan iedereen elk niveau bereiken — niet alleen via 1 route.",
+          voorbeelden: [
+            { type: "feit", tekst: "Onze huidige minister-president (2024+ Dick Schoof) studeerde aan universiteit (WO Rechten)." },
+            { type: "feit", tekst: "Beroemde NL'ers die VMBO/MBO deden + later doorstapelden: Geert Wilders, Khalid Boulahrouz." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 'lager = slechter'", uitleg: "MBO is NIET minder dan WO — verschillende beroepen + interesses. Stratenmaker (MBO) en arts (WO) zijn beide nodig." }],
+          niveaus: { basis: "Drie onderwijsniveaus. = A.", simpeler: "MBO = praktijk-beroep, HBO = hogeschool 4 jaar, WO = universiteit. Drie niveaus vervolgonderwijs in NL. = A.", nogSimpeler: "3 niveaus = A." },
+        },
+      },
+      {
+        q: "Wat is een **CAO**?",
+        options: ["Collectieve Arbeidsovereenkomst — afspraken tussen werkgevers + vakbond", "Computer-Aided Onderwijs", "Cadeau-Aanbod-Order", "Belasting-soort"],
+        answer: 0,
+        wrongHints: [null, "Klopt — afspraken over salaris, vakantie, werktijden voor hele branche.", "Niet — geen onderwijs-term.", "Niet — bedacht antwoord.", "Niet — geen belasting."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een CAO?", tekst: "**CAO** = **Collectieve Arbeids­overeenkomst** — een **schriftelijke afspraak** tussen werkgevers (vaak via een werkgevers-organisatie) en werknemers (via een **vakbond**, bv. FNV of CNV).\n\nGeldt voor **alle werknemers** in een sector (zorg, bouw, onderwijs, supermarkten). Je hoeft niet apart te onderhandelen — CAO regelt het al." },
+            { titel: "Wat staat erin?", tekst: "Een CAO regelt minimaal:\n• **Salaris-tabel** per functie en ervaringsjaren\n• **Werktijden** (max uur/week, overwerk-regels)\n• **Vakantie-dagen** (meestal 25+ per jaar)\n• **Ziekteverzuim** (loon doorbetalen)\n• **Pensioen** (deel salaris naar pensioen)\n• **Ontslag-regels** (opzegtermijn)\n• **13e maand** of bonus (soms)" },
+            { titel: "Cito-feit: vakbonden NL", tekst: "Nederland heeft **~1,5 miljoen vakbonds­leden** (2024). Grootste vakbonden:\n• **FNV** (Federatie Nederlandse Vakbeweging) — ~900.000 leden\n• **CNV** (Christelijk Nationaal Vakverbond) — ~250.000 leden\n• **VCP** (kleinere)\n\nLidmaatschap kost ~€15/maand. Vakbond helpt bij conflicten met werkgever, onderhandelt CAO's, geeft juridisch advies." },
+          ],
+          woorden: [
+            { woord: "CAO", uitleg: "Collectieve Arbeidsovereenkomst. Afspraken over werk-voorwaarden voor hele branche." },
+            { woord: "vakbond", uitleg: "Organisatie van werknemers die opkomt voor hun belangen. Onderhandelt CAO." },
+            { woord: "werkgever", uitleg: "Bedrijf/persoon die jou in dienst neemt en salaris betaalt." },
+            { woord: "werknemer", uitleg: "Persoon die in dienst is en salaris ontvangt." },
+          ],
+          theorie: "Hoe werkt een CAO?\n1. Vakbond stelt eisen op (bv. 5% loonsverhoging)\n2. Werkgevers-organisatie stelt aanbod (bv. 2% loonsverhoging)\n3. Onderhandelen tot akkoord\n4. CAO ondertekenen voor **2-3 jaar**\n5. Nieuwe ronde na afloop\n\nBij conflict: **staking** mogelijk (werknemers leggen werk neer om druk te zetten).",
+          voorbeelden: [
+            { type: "feit", tekst: "Top-3 CAO's in NL qua aantal werknemers: zorg, supermarkten (AH/Jumbo), bouw." },
+            { type: "feit", tekst: "Een ZZP'er valt NIET onder een CAO — moet eigen afspraken maken met klanten." },
+          ],
+          basiskennis: [{ onderwerp: "Niet altijd alle bedrijven", uitleg: "CAO geldt voor sectoren waar werkgevers + vakbond afspraken hebben. Niet elk bedrijf — sommige cao-loze sectoren bestaan." }],
+          niveaus: { basis: "Afspraken werk-voorwaarden. = A.", simpeler: "CAO = Collectieve Arbeidsovereenkomst. Afspraken tussen werkgevers + vakbond over salaris, vakantie, werktijden voor hele branche. = A.", nogSimpeler: "Werk-afspraken = A." },
+        },
+      },
+      {
+        q: "Op welke leeftijd mag je in NL beginnen met **werken voor geld**?",
+        options: ["Vanaf 13 jaar (licht werk) of 15 jaar (krant)", "16 jaar pas", "18 jaar pas", "Geen leeftijdsgrens"],
+        answer: 0,
+        wrongHints: [null, "Klopt — 13 mag licht werk, 15+ krant/folder, 16+ alles met regels.", "Te laat — vanaf 13 mag al beperkt.", "Te laat — vanaf 16 mag al veel.", "Niet — wel regels: maximaal aantal uur per week, geen nacht-werk."],
+        uitlegPad: {
+          stappen: [
+            { titel: "NL-leeftijdsgrenzen werken", tekst: "Nederland heeft duidelijke regels per leeftijd:\n• **<13 jaar**: alleen huishoudelijke klusjes voor zakgeld\n• **13-14**: **licht werk** rondom huis (auto wassen voor buurman, hondenuitlater)\n• **15**: kranten/folders bezorgen, vakantie-werk\n• **16-17**: bijbaan met **beperkingen** (max 40 u/week vakantie, niet 's nachts)\n• **18+**: volwaardig werken zonder beperkingen" },
+            { titel: "Regels voor 16-17 jarigen", tekst: "**School-week**:\n• Max **12 uur/week** werken (naast school)\n• Niet vóór 06:00 of na 21:00\n\n**Vakantie-week**:\n• Max **40 uur/week**\n• Max **8 uur/dag**\n• Wel rust-tijden (15 min pauze bij 4,5+ uur)\n\nNiet toegestaan voor minderjarigen: alcohol-werk, gevaarlijke machines, nachtwerk (22:00-06:00)." },
+            { titel: "Cito-feit: salaris jongeren", tekst: "**Minimumloon jongeren** (juli 2024):\n• 15 jaar: **€4,77/uur** bruto\n• 16: €5,49\n• 17: €6,28\n• 18: €7,63\n• 19: €9,16\n• 20: €12,21\n• 21+: **€14,06** (volwassen minimumloon)\n\nDus 13-jarige hondenuitlater verdient minder dan 21-jarige werknemer voor zelfde werk = **leeftijdsdiscriminatie wettelijk toegestaan** in NL (uitzondering in arbeidswet)." },
+          ],
+          woorden: [
+            { woord: "bijbaan", uitleg: "Werk naast school of studie. Niet hoofdinkomen." },
+            { woord: "minimumloon", uitleg: "Laagste salaris dat werkgever mag betalen. Verschillend per leeftijd in NL." },
+            { woord: "Arbeidsinspectie", uitleg: "Overheidsinstantie die controleert of werkgevers zich aan werk-regels houden." },
+          ],
+          theorie: "Belangrijke regels jonge werknemers (Arbeidstijdenwet):\n• Werkgever MAG NIET vragen je school over te slaan\n• Werkgever MOET pauzes geven\n• Loonstrook MAG je vragen (bewijs salaris)\n• Bij ziekte: doorbetaling regelen via CAO\n\nVeel jongeren weten hun rechten niet. Vakbond CNV Jongeren of FNV Jong geven info.",
+          voorbeelden: [
+            { type: "feit", tekst: "~750.000 Nederlandse jongeren (15-24) hebben een bijbaan (2024). Populairst: supermarkt, horeca, krantenwijk." },
+            { type: "feit", tekst: "Je krijgt ook **vakantiegeld** (8% van salaris extra in mei) — telt op bij salaris." },
+          ],
+          basiskennis: [{ onderwerp: "Niet stiekem", uitleg: "Werken vóór 13 of zonder regels = werkgever in overtreding. Niet jouw schuld als ouder/werkgever het niet weet." }],
+          niveaus: { basis: "13 jaar. = A.", simpeler: "Vanaf 13 mag licht werk (klusjes), vanaf 15 krant/folder, vanaf 16 bijbaan met regels (max uur, geen nacht). = A.", nogSimpeler: "13+ licht werk = A." },
+        },
+      },
     ],
   },
 ];
