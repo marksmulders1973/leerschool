@@ -108,6 +108,33 @@
     "chapterCount": 4
   },
   {
+    "id": "basis-grammatica-engels-po",
+    "title": "Basis-grammatica Engels (groep 6-8)",
+    "subject": "engels",
+    "level": "groep6-8",
+    "emoji": "📖",
+    "referentieNiveau": "A1",
+    "sloThema": "Engels — grammatica basis",
+    "triggerKeywords": [
+      "grammatica engels",
+      "english grammar basis",
+      "a an the",
+      "lidwoord engels",
+      "meervoud engels",
+      "plural english",
+      "this that these those",
+      "to be am is are",
+      "present simple",
+      "do does",
+      "don't doesn't",
+      "vraagwoorden engels"
+    ],
+    "intro": "Engelse grammatica voor groep 6-8 — a/an, meervoud (incl. children/men/feet), this/that/these/those, am/is/are, present simple + -s-regel, do/does-vragen + don't/doesn't-ontkenning, vraagwoorden. Voor",
+    "stepCount": 7,
+    "checkCount": 40,
+    "chapterCount": 4
+  },
+  {
     "id": "bbp-conjunctuur-economie",
     "title": "BBP, conjunctuur, inflatie (klas 4-5)",
     "subject": "economie",
@@ -4366,6 +4393,33 @@
     "intro": "~80 basiswoorden in 8 thema's: eten, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen, tijd en standaarduitdrukkingen. Genoeg voor dagelijks Engels.",
     "stepCount": 10,
     "checkCount": 26,
+    "chapterCount": 4
+  },
+  {
+    "id": "woordenschat-engels-po",
+    "title": "Woordenschat Engels — basis (groep 6-8)",
+    "subject": "engels",
+    "level": "groep6-8",
+    "emoji": "🇬🇧",
+    "referentieNiveau": "A1",
+    "sloThema": "Engels — woordenschat basis (Early-English)",
+    "triggerKeywords": [
+      "woordenschat engels",
+      "engels basis",
+      "begroeting engels",
+      "hello goodbye",
+      "getallen engels",
+      "numbers english",
+      "kleuren engels",
+      "colors colours",
+      "dagen engels",
+      "maanden engels",
+      "days months",
+      "familie engels"
+    ],
+    "intro": "Engelse basiswoordenschat voor groep 6-8 — begroetingen, getallen 0-20, kleuren, dagen + maanden, familie, eten + drinken, lichaamsdelen. Voorbereiding op brugklas-Engels (CEFR-niveau A1).",
+    "stepCount": 8,
+    "checkCount": 45,
     "chapterCount": 4
   },
   {
