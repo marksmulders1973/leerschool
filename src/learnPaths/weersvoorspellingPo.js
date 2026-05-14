@@ -249,6 +249,83 @@ const steps = [
       { q: "**Beaufort 12** = ?", options: ["Orkaan (>32 m/s)", "Windstil", "Matige wind", "Sneeuwstorm"], answer: 0, wrongHints: [null, "Klopt.", "0.", "5.", "Niet specifiek."] },
       { q: "**Eenheid neerslag**?", options: ["mm", "kg", "graden", "m³"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Temp.", "Niet."] },
       { q: "Hoe lang **vooruit voorspellen**?", options: ["~7 dagen redelijk", "1 maand exact", "1 jaar", "Niet mogelijk"], answer: 0, wrongHints: [null, "Klopt.", "Onmogelijk.", "Onmogelijk.", "Wel."] },
+      {
+        q: "Wat is **klimaatverandering**?",
+        options: ["Aarde wordt langzaam warmer door meer CO₂", "Wisseling van weer per dag", "Wisseling van seizoenen", "Een weer-app"],
+        answer: 0,
+        wrongHints: [null, "Klopt — gemiddelde temperatuur stijgt sinds industriële revolutie ~1,5 °C.", "Dat is gewoon WEER, niet klimaat (= langere termijn).", "Seizoenen = normale cyclus, geen verandering.", "Niet — klimaat is wetenschappelijk fenomeen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Weer vs klimaat (herhaling)", tekst: "**Weer** = wat NU gebeurt (vandaag regen). **Klimaat** = GEMIDDELDE over **30+ jaar** (Nederlands klimaat = gematigd zee-klimaat).\n\n**Klimaatverandering** = het klimaat (gemiddelde) verandert over de lange termijn. Niet één warme dag — een **trend over decennia**." },
+            { titel: "Wat gebeurt er nu?", tekst: "Sinds **industriële revolutie (~1850)** is aarde gemiddeld **1,5 °C warmer**. Verklaring:\n• Mensen verbranden veel **fossiele brandstoffen** (olie, kolen, gas)\n• Dat geeft **CO₂** (koolstofdioxide) in de lucht\n• CO₂ houdt zonnewarmte vast = **broeikaseffect**\n• Meer CO₂ → meer warmte vasthouden → opwarming\n\nGevolgen al zichtbaar: smeltende ijskappen, hogere zeespiegel, meer extreem weer." },
+            { titel: "Cito-feit: Parijsakkoord", tekst: "In **2015** sloten 196 landen het **Parijsakkoord**:\n• Opwarming **onder 2 °C** houden (liefst 1,5 °C)\n• Drastisch minder CO₂ uitstoten\n• Tegen ~2050 'klimaatneutraal' zijn\n\nNL doel: **49% minder CO₂ in 2030** + **95% minder in 2050** (Klimaatwet 2019). Voor Cito-stof: weet dat MENS de oorzaak is + Parijs 2015 belangrijk." },
+          ],
+          woorden: [
+            { woord: "klimaatverandering", uitleg: "Langzame opwarming van aarde over decennia door menselijke uitstoot van CO₂ + andere broeikasgassen." },
+            { woord: "broeikaseffect", uitleg: "CO₂ houdt warmte vast (zoals glas in broeikas). Zonder geen leven mogelijk; te veel = opwarming." },
+            { woord: "CO₂", uitleg: "Koolstofdioxide. Komt bij verbranding van fossiele brandstoffen + ademen. Hoofdoorzaak opwarming." },
+            { woord: "fossiele brandstoffen", uitleg: "Olie, kolen, gas. Gevormd uit oude planten/dieren miljoenen jaren terug." },
+          ],
+          theorie: "Wat doen we eraan?\n• **Duurzame energie**: zon, wind, water (geen CO₂)\n• **Elektrische auto's** (geen benzine)\n• **Isoleren** huizen (minder verwarming)\n• **Minder vlees** eten (dieren stoten CH₄ uit)\n• **Bossen aanplanten** (CO₂ uit lucht halen)\n\nNL: ~30% energie uit duurzaam in 2024, doel 70% in 2030.",
+          voorbeelden: [
+            { type: "feit", tekst: "2024 was wereldwijd het warmste jaar ooit gemeten — gemiddeld 1,55 °C boven pre-industrieel." },
+            { type: "feit", tekst: "Zeespiegelstijging: ~20 cm sinds 1900, mogelijk 1 meter in 2100. Voor NL = grote uitdaging (26% land onder zeespiegel)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet 1 dag warm = klimaat", uitleg: "Hete zomer ≠ klimaatverandering. TREND over 30 jaar wel. Cito-feit: weer ≠ klimaat." }],
+          niveaus: { basis: "Opwarming door CO₂. = A.", simpeler: "Klimaatverandering = aarde wordt langzaam warmer door mensen die fossiele brandstoffen verbranden + veel CO₂ uitstoten. Al ~1,5 °C warmer sinds 1850. = A.", nogSimpeler: "Opwarming = A." },
+        },
+      },
+      {
+        q: "Welke 4 **windrichtingen** zijn er?",
+        options: ["Noord, Oost, Zuid, West (NOZW)", "Boven, Onder, Links, Rechts", "Plus, Min, Ster, Vierkant", "Niet bestaand"],
+        answer: 0,
+        wrongHints: [null, "Klopt — kompas-windrichtingen. Ezelsbruggetje: 'Nooit Op Zaterdag Werken'.", "Dat zijn schermrichtingen, geen windrichtingen.", "Wiskunde-symbolen, niet windrichtingen.", "Wel — basis weer + navigatie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 4 hoofd-windrichtingen", tekst: "Het **kompas** heeft 4 hoofdrichtingen:\n• **N** — Noord (boven op kaart)\n• **O** — Oost (rechts)\n• **Z** — Zuid (onder)\n• **W** — West (links)\n\nEzelsbruggetje: **'Nooit Op Zaterdag Werken'** = NOZW (klokrond)." },
+            { titel: "Tussen-richtingen", tekst: "Ook nuttig: **NO, NW, ZO, ZW** (tussen-richtingen).\n• **NO** = Noord-Oost (rechtsboven)\n• **NW** = Noord-West (linksboven)\n• **ZO** = Zuid-Oost (rechtsonder)\n• **ZW** = Zuid-West (linksonder)\n\nTotaal **8 hoofdrichtingen**. Meer fijn-richtingen bestaan ook (NNO etc.) maar niet voor Cito." },
+            { titel: "Cito-feit: windrichting bij weer", tekst: "**Wind komt UIT die richting**:\n• **Noordenwind** = wind WAAIT uit het noorden NAAR ons (vanaf Noordpool → koud)\n• **Zuidenwind** = uit het zuiden → warm (vanaf Sahara/Spanje)\n• **Westenwind** = uit het westen (vanaf Atlantische Oceaan → vochtig, brengt regen)\n• **Oostenwind** = uit het oosten (vanaf Rusland → droog, koud in winter)\n\n**NL hoofdwind = zuidwest** (komt van warme oceaan, vandaar veel regen)." },
+          ],
+          woorden: [
+            { woord: "kompas", uitleg: "Instrument dat altijd noord aanwijst (magneet). Onmisbaar voor navigatie zonder GPS." },
+            { woord: "windrichting", uitleg: "Uit welke kant de wind komt. Bv. noordenwind = waait uit noord." },
+            { woord: "Beaufort-schaal", uitleg: "Schaal voor windsterkte: 0 (windstil) tot 12 (orkaan)." },
+          ],
+          theorie: "Cito-context windrichting + weer in NL:\n• **Zuidwesten-wind** (meest voorkomend): mild + nat\n• **Westen-wind**: koel + nat\n• **Noorden-wind**: koud + droog winter / fris zomer\n• **Oosten-wind**: droog (continentaal) — vrieskou winter\n\nWindroos op weerkaarten KNMI = standaard 8 of 16 richtingen.",
+          voorbeelden: [
+            { type: "feit", tekst: "Het Noorderlicht (aurora) zie je vanaf de noordpool — vandaar de naam." },
+            { type: "feit", tekst: "Vroeger bouwden NL boeren huizen met de gevel NIET naar zuidwesten (waar regen vandaan kwam)." },
+          ],
+          basiskennis: [{ onderwerp: "Niet schermrichting", uitleg: "Op kaart: noord = boven, zuid = onder. Maar op kompas in WERKELIJKHEID is noord magnetisch noorden." }],
+          niveaus: { basis: "NOZW. = A.", simpeler: "Vier windrichtingen: Noord (boven), Oost (rechts), Zuid (onder), West (links). Ezelsbrug: Nooit Op Zaterdag Werken. = A.", nogSimpeler: "NOZW = A." },
+        },
+      },
+      {
+        q: "Wat is een **storm** in Nederland (volgens KNMI)?",
+        options: ["Wind ≥ Beaufort 9 (75 km/u)", "Veel regen", "Sneeuw", "Onweer"],
+        answer: 0,
+        wrongHints: [null, "Klopt — KNMI definieert storm = Beaufort 9+, 75-88 km/u.", "Veel regen = bui, geen storm-definitie.", "Sneeuw + storm = sneeuwstorm, maar storm zelf = wind.", "Onweer = bliksem/donder, andere fenomeen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een storm?", tekst: "Volgens **KNMI** is er storm bij **windkracht 9 op Beaufort-schaal** = **75-88 km/u**.\n• **Zware storm** = Beaufort 10 (89-102 km/u)\n• **Zeer zware storm** = Beaufort 11 (103-117 km/u)\n• **Orkaan** = Beaufort 12 (>117 km/u)\n\nIn NL gebeurt orkaankracht zelden (laatste keer: 1953 Watersnood)." },
+            { titel: "KNMI-waarschuwingen", tekst: "**KNMI** geeft waarschuwingen uit:\n• **Code geel** — wees voorbereid (kans op gevaar)\n• **Code oranje** — wees alert (echt gevaar)\n• **Code rood** — neem actie (extreme situatie, kans op slachtoffers)\n\nBij code rood: blijf binnen, ga niet op de weg. Vaak gegeven bij storm + sneeuw." },
+            { titel: "Cito-feit: bekende NL-stormen", tekst: "Beroemde stormen in NL:\n• **31 jan 1953**: Watersnoodramp (orkaan + springvloed, 1.836 doden)\n• **18 jan 2007**: Storm Kyrill, 6 doden NL\n• **3 jan 2018**: Storm Friederike, eerste code rood NL\n• **18 feb 2022**: Storm Eunice, NS legde alle treinen plat\n\nNL krijgt vaak namen via NL-België-VK-systeem (vanaf 2019)." },
+          ],
+          woorden: [
+            { woord: "storm", uitleg: "Wind met snelheid ≥ Beaufort 9 (75 km/u). KNMI-definitie." },
+            { woord: "Beaufort-schaal", uitleg: "Engelse zee-officier Francis Beaufort (1805) bedacht schaal 0-12 voor wind." },
+            { woord: "windstoot", uitleg: "Kortdurige uitschieter in windsnelheid. Vaak hoger dan gemiddelde." },
+            { woord: "KNMI", uitleg: "Koninklijk Nederlands Meteorologisch Instituut. Sinds 1854. In De Bilt." },
+          ],
+          theorie: "Beaufort-schaal kerntermen:\n• 0 — Windstil (<1 km/u)\n• 3 — Matige wind (12-19 km/u) — vlag wappert\n• 6 — Krachtige wind (40-49 km/u) — paraplu lastig\n• 9 — **STORM** (75-88 km/u) — takken breken\n• 12 — **ORKAAN** (>117 km/u) — verwoesting\n\nKnipperende verkeerstekens + spoorvertraging vanaf code geel.",
+          voorbeelden: [
+            { type: "feit", tekst: "Tijdens storm Eunice (2022) bereikte windstoot Wilhelminadorp 144 km/u — recordhoog voor NL." },
+            { type: "feit", tekst: "NL/BE/VK kondigen sinds 2019 stormen aan met namen. Letter rouleert: Eunice (E) → Franklin (F) → ..." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alleen wind", uitleg: "Stormschade in NL meestal door wind + neerslag samen. Bomen omver, ramen kapot, dijken bedreigd." }],
+          niveaus: { basis: "Beaufort 9+ (75 km/u). = A.", simpeler: "Storm in NL = windkracht 9 op Beaufort-schaal = 75 km/u of harder. Beaufort 12 = orkaan (>117 km/u). = A.", nogSimpeler: "Beaufort 9+ = A." },
+        },
+      },
     ],
   },
 ];
