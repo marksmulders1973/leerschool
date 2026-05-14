@@ -75,7 +75,7 @@ const steps = [
         q: "Welk woord is een **synoniem** van **'enorm'**?",
         options: ["Heel groot", "Beetje klein", "Snel", "Stil"],
         answer: 0,
-        wrongHints: [null, "Klopt — synoniem.", "Tegenovergesteld.", "Andere dimensie.", "Andere dimensie."],
+        wrongHints: [null, "Tegenovergesteld.", "Andere dimensie.", "Andere dimensie."],
         uitlegPad: {
           stappen: [
             { titel: "Synoniem = zelfde betekenis", tekst: "Een synoniem is een ander woord met (bijna) dezelfde betekenis. 'Enorm' = heel groot." },
@@ -115,7 +115,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'tevreden'**?",
         options: ["Blij met de situatie", "Boos", "Verbaasd", "Bang"],
         answer: 0,
-        wrongHints: [null, "Klopt — gevoel van rust + akkoord.", "Tegenovergesteld.", "Ander gevoel.", "Ander gevoel."],
+        wrongHints: [null, "Tegenovergesteld.", "Ander gevoel.", "Ander gevoel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'tevreden'?", tekst: "Tevreden = blij met hoe iets gegaan is. Geen klacht. Voorbeeld: tevreden met je rapport." },
@@ -135,7 +135,7 @@ const steps = [
         q: "*'De docent gaf een **toelichting** bij de som.'* Wat is een toelichting?",
         options: ["Een uitleg", "Een straf", "Een spel", "Een boek"],
         answer: 0,
-        wrongHints: [null, "Klopt — denk aan 'toelichten' = uitleg geven.", "Niet — toelichting is positief/neutraal.", "Geen activiteit.", "Geen boek."],
+        wrongHints: [null, "Niet — toelichting is positief/neutraal.", "Geen activiteit.", "Geen boek."],
         uitlegPad: {
           stappen: [
             { titel: "Woordfamilie", tekst: "Toelichting komt van 'toelichten' = licht werpen op iets, helderder maken." },
@@ -156,7 +156,7 @@ const steps = [
         q: "*'Zij was **onverstoorbaar** tijdens de toets.'* Wat betekent onverstoorbaar?",
         options: ["Rustig en niet snel uit balans", "Boos", "Verdwaald", "Onhandig"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'on' + 'verstoorbaar'.", "Niet de juiste richting.", "Geen verband.", "Ander gevoel."],
+        wrongHints: [null, "Niet de juiste richting.", "Geen verband.", "Ander gevoel."],
         uitlegPad: {
           stappen: [
             { titel: "Voorvoegsel 'on-'", tekst: "'On-' voor een woord betekent meestal 'niet'. Onverstoorbaar = NIET verstoorbaar = niet uit balans te brengen." },
@@ -177,13 +177,13 @@ const steps = [
         q: "Welk woord is een **tegenstelling** van **'genereus'**?",
         options: ["Gierig", "Vriendelijk", "Groot", "Snel"],
         answer: 0,
-        wrongHints: [null, "Klopt — genereus = gul, gierig = juist niet.", "Lijkt op genereus.", "Niet over geven/karakter.", "Andere dimensie."],
+        wrongHints: [null, "Lijkt op genereus.", "Niet over geven/karakter.", "Andere dimensie."],
       },
       {
         q: "*'De situatie was uiterst **precair**.'* Wat betekent precair?",
         options: ["Onzeker / gevaarlijk", "Saai", "Vrolijk", "Druk"],
         answer: 0,
-        wrongHints: [null, "Klopt — formeel woord voor wankel/riskant.", "Tegenovergesteld.", "Tegenovergesteld.", "Andere richting."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Andere richting."],
         uitlegPad: {
           stappen: [
             { titel: "Moeilijk woord", tekst: "'Precair' is een formeel woord. Komt uit het Latijn (precarius = afhankelijk van gunst). In NL: onzeker, riskant, gevaarlijk." },
@@ -203,7 +203,7 @@ const steps = [
         q: "*'De vergadering werd door zijn **inmenging** verstoord.'* Wat is inmenging?",
         options: ["Bemoeien met iets dat je niet aangaat", "Hulp bieden", "Op tijd komen", "Vrolijk zijn"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'in' + 'menging' = ergens in mengen.", "Wel kan, maar 'inmenging' is meer negatief.", "Geen verband.", "Geen verband."],
+        wrongHints: [null, "Wel kan, maar 'inmenging' is meer negatief.", "Geen verband.", "Geen verband."],
         uitlegPad: {
           stappen: [
             { titel: "Stam analyse", tekst: "Inmenging = 'in' + 'mengen' = ergens in mengen waar je niet bij hoort. Negatieve connotatie." },
@@ -227,7 +227,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'gehaast'**?",
         options: ["Snel + gestrest", "Rustig", "Verveeld", "Voldoening"],
         answer: 0,
-        wrongHints: [null, "Klopt — onder tijdsdruk.", "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
         uitlegPad: {
           stappen: [
             { titel: "Stam herkennen", tekst: "Gehaast komt van 'haast' = grote spoed/snel-doen-druk." },
@@ -247,7 +247,7 @@ const steps = [
         q: "*'De **moedige** soldaat redde 3 mensen.'* Wat betekent moedig?",
         options: ["Dapper, niet bang", "Bang", "Snel", "Sterk"],
         answer: 0,
-        wrongHints: [null, "Klopt — gerelateerd aan 'moed' (durven).", "Tegenovergesteld.", "Andere eigenschap.", "Wel een kwaliteit maar niet primair 'moedig'."],
+        wrongHints: [null, "Tegenovergesteld.", "Andere eigenschap.", "Wel een kwaliteit maar niet primair 'moedig'."],
         uitlegPad: {
           stappen: [
             { titel: "Stam 'moed'", tekst: "Moedig komt van 'moed' = durven, niet bang zijn. Iemand met moed durft iets gevaarlijks." },
@@ -268,7 +268,7 @@ const steps = [
         q: "*'De koningin sprak **plechtig**.'* Wat betekent plechtig?",
         options: ["Met respect / serieus", "Snel", "Boos", "Gefluisterd"],
         answer: 0,
-        wrongHints: [null, "Klopt — formeel + waardig.", "Niet.", "Tegenovergesteld.", "Niet — plechtig = duidelijk hoorbaar."],
+        wrongHints: [null, "Niet.", "Tegenovergesteld.", "Niet — plechtig = duidelijk hoorbaar."],
         uitlegPad: {
           stappen: [
             { titel: "Plechtig = ceremonieel", tekst: "Plechtig betekent: formeel, met respect, in stijl. Gebruikt bij belangrijke gebeurtenissen." },
@@ -289,13 +289,13 @@ const steps = [
         q: "Welk woord is een **tegenstelling** van **'verlies'**?",
         options: ["Winst", "Resultaat", "Spel", "Cijfer"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te algemeen.", "Niet primair tegenstelling.", "Niet."],
+        wrongHints: [null, "Te algemeen.", "Niet primair tegenstelling.", "Niet."],
       },
       {
         q: "*'De jongen liep **kreupel**.'* Wat betekent kreupel?",
         options: ["Met moeite / mankend", "Snel", "Boos", "Vrolijk"],
         answer: 0,
-        wrongHints: [null, "Klopt — gewond aan voet/been.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
             { titel: "Onbekend woord? Kijk context", tekst: "Bij Cito krijg je soms onbekende woorden. Geen paniek — lees de zin eromheen voor hints." },
@@ -323,7 +323,7 @@ const steps = [
         q: "Welk woord is een **synoniem** voor **'beginnen'**?",
         options: ["Starten", "Eindigen", "Stoppen", "Wachten"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Tegenovergesteld.", "Niet primair."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet primair."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een synoniem?", tekst: "Een synoniem is een woord met (bijna) dezelfde betekenis. 'Beginnen' en 'starten' betekenen hetzelfde." },
@@ -351,7 +351,7 @@ const steps = [
         q: "*'Het was een **uitzonderlijke** prestatie.'* Wat betekent uitzonderlijk?",
         options: ["Bijzonder / zeldzaam", "Slecht", "Snel", "Saai"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'uit-zondering' = niet normaal.", "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
             { titel: "Splits het woord", tekst: "Uitzonderlijk = uit + zonderlijk. 'Uitzondering' is iets wat NIET de gewone regel volgt. Dus uitzonderlijk = niet gewoon." },
@@ -379,7 +379,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'mooi'**?",
         options: ["Prachtig", "Lelijk", "Snel", "Klein"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet.", "Niet primair."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet primair."],
         uitlegPad: {
           stappen: [
             { titel: "Hetzelfde betekenen = synoniem", tekst: "'Hetzelfde als mooi' = een woord dat ook MOOI betekent. Niet iets anders, niet het omgekeerde." },
@@ -407,7 +407,7 @@ const steps = [
         q: "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
         options: ["Heel moe", "Hongerig", "Boos", "Verbaasd"],
         answer: 0,
-        wrongHints: [null, "Klopt — geen energie meer.", "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Letterlijk: leeg", tekst: "Uitgeput = energie 'uit' + 'put' = leeg van energie. Lijkt op een leeggepompte waterput." },
@@ -428,7 +428,7 @@ const steps = [
         q: "**Tegenstelling** van **'voorzichtig'**?",
         options: ["Roekeloos", "Snel", "Klein", "Stom"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet primair.", "Niet primair.", "Te algemeen."],
+        wrongHints: [null, "Niet primair.", "Niet primair.", "Te algemeen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een tegenstelling?", tekst: "Een tegenstelling (antoniem) heeft de OMGEKEERDE betekenis. Voorzichtig en roekeloos = elkaars tegendeel." },
@@ -456,7 +456,7 @@ const steps = [
         q: "*'Ze verzon een **leugen**.'* Wat betekent leugen?",
         options: ["Niet-waar verhaal", "Geheim", "Grap", "Verhaal"],
         answer: 0,
-        wrongHints: [null, "Klopt — bewust niet-waar.", "Geheim = wel waar maar niet verteld.", "Grap = niet bedoeld te misleiden.", "Verhaal kan waar of niet waar zijn."],
+        wrongHints: [null, "Geheim = wel waar maar niet verteld.", "Grap = niet bedoeld te misleiden.", "Verhaal kan waar of niet waar zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Context-hint", tekst: "'Verzon' = bedenken zonder dat het waar is. Dus 'leugen' = iets bedacht/niet waar." },
@@ -576,7 +576,7 @@ const steps = [
         q: "*Tekst: 'In de Sahara valt **bijna nooit** regen. Toch leven er kamelen.'* Welke **signaalwoord** geeft een **tegenstelling**?",
         options: ["Toch", "In", "Er", "Leven"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'toch' wijst op 'maar/echter'.", "Plaats, niet tegenstelling.", "Verwijst naar Sahara.", "Werkwoord."],
+        wrongHints: [null, "Plaats, niet tegenstelling.", "Verwijst naar Sahara.", "Werkwoord."],
         uitlegPad: {
           stappen: [
             { titel: "Signaalwoorden", tekst: "Tegenstelling-woorden geven aan dat er iets verrassends komt: **maar / toch / hoewel / echter / desondanks**." },
@@ -596,37 +596,37 @@ const steps = [
         q: "*Tekst: 'Tom oefende elke dag 1 uur. **Daarom** won hij de wedstrijd.'* Wat geeft **'daarom'** aan?",
         options: ["Gevolg / reden", "Tegenstelling", "Opsomming", "Plek"],
         answer: 0,
-        wrongHints: [null, "Klopt — gevolg-signaalwoord.", "Geen tegenstelling.", "Niet opsommend.", "Niet plaats."],
+        wrongHints: [null, "Geen tegenstelling.", "Niet opsommend.", "Niet plaats."],
       },
       {
         q: "*'De auteur wil je **vooral overtuigen**'* — wat is dan de **bedoeling** van de tekst?",
         options: ["Overhalen om iets te doen of denken", "Informeren met feiten", "Amuseren met grappen", "Beschrijven hoe iets is"],
         answer: 0,
-        wrongHints: [null, "Klopt — overtuigen = mening laten delen.", "Informeren is doel #2 maar niet 'overtuigen'.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
+        wrongHints: [null, "Informeren is doel #2 maar niet 'overtuigen'.", "Amuseren is anders.", "Beschrijven = neutraal vermelden."],
       },
       {
         q: "*Tekst: 'Eerst moet je de fles open. **Vervolgens** schenk je het water.'* Wat geeft **'vervolgens'** aan?",
         options: ["Volgorde / opeenvolging", "Tegenstelling", "Reden", "Doel"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'vervolgens' = daarna.", "Geen tegenstelling.", "Geen reden.", "Geen doel."],
+        wrongHints: [null, "Geen tegenstelling.", "Geen reden.", "Geen doel."],
       },
       {
         q: "*'Het boek is **niet** alleen spannend.'* Welke vraagtype: dit antwoord testen — welke is **fout**?",
         options: ["Het boek is alleen spannend (NIET klopt)", "Het boek is ook leerzaam (zou kunnen)", "Het boek is een roman (mogelijk)", "Niet te zeggen"],
         answer: 0,
-        wrongHints: [null, "Klopt — tekst zegt 'niet alleen' = ook ander iets.", "Mogelijk waar.", "Mogelijk waar.", "Wel te zeggen — let op 'niet alleen'."],
+        wrongHints: [null, "Mogelijk waar.", "Mogelijk waar.", "Wel te zeggen — let op 'niet alleen'."],
       },
       {
         q: "*Hoofdgedachte* van tekst — meestal te vinden in:",
         options: ["Eerste of laatste alinea", "Middelste alinea", "Plaatje", "Voetnoot"],
         answer: 0,
-        wrongHints: [null, "Klopt — Cito-tip.", "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
+        wrongHints: [null, "Soms maar niet primair.", "Niet tekst-onderdeel.", "Te detail."],
       },
       {
         q: "Wat is **alinea**?",
         options: ["Groep zinnen over één onderwerp", "Eén zin", "Hele tekst", "Plaatje"],
         answer: 0,
-        wrongHints: [null, "Klopt — paragraaf met witregel ervoor.", "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
+        wrongHints: [null, "Alinea heeft meer.", "Tekst heeft meerdere.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een alinea?", tekst: "Een alinea is een groep zinnen die SAMEN over één onderwerp gaan. Daarna volgt vaak een witregel of een inspring." },
@@ -654,19 +654,19 @@ const steps = [
         q: "Signaalwoord **'bijvoorbeeld'** introduceert?",
         options: ["Een voorbeeld", "Tegenstelling", "Gevolg", "Conclusie"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'b.v.' = voorbeeld geven.", "Niet.", "Niet.", "Niet primair."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet primair."],
       },
       {
         q: "Cito-strik: een vraag heeft **'NIET'** in. Wat doe je?",
         options: ["Zoek de fout / uitzondering", "Negeer dat woord", "Onmogelijk te beantwoorden", "Kies eerste optie"],
         answer: 0,
-        wrongHints: [null, "Klopt — let goed op 'niet'!", "Niet — heel belangrijk.", "Wel — gewoon goed lezen.", "Random kiezen werkt niet."],
+        wrongHints: [null, "Niet — heel belangrijk.", "Wel — gewoon goed lezen.", "Random kiezen werkt niet."],
       },
       {
         q: "Signaalwoord **'omdat'** introduceert?",
         options: ["Reden / oorzaak", "Gevolg", "Tegenstelling", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Gevolg = 'daardoor'.", "Tegenstelling = 'maar'.", "Voorbeeld = 'bijvoorbeeld'."],
+        wrongHints: [null, "Gevolg = 'daardoor'.", "Tegenstelling = 'maar'.", "Voorbeeld = 'bijvoorbeeld'."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is 'omdat'?", tekst: "'Omdat' geeft de REDEN waarom iets gebeurt. Het verbindt 2 zinnen: het gevolg + de reden." },
@@ -694,7 +694,7 @@ const steps = [
         q: "Signaalwoord **'daardoor'** introduceert?",
         options: ["Gevolg", "Reden", "Voorbeeld", "Tegenstelling"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Reden = 'omdat'.", "Niet.", "Niet."],
+        wrongHints: [null, "Reden = 'omdat'.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Daardoor = gevolg", tekst: "'Daardoor' wijst op het GEVOLG: wat er gebeurt VANWEGE iets dat eerder genoemd is." },
@@ -722,7 +722,7 @@ const steps = [
         q: "*Cito-tip*: een **lange tekst** lees je **eerst** ...?",
         options: ["Globaal (titel + alinea-koppen)", "Heel langzaam", "Achteruit", "Niet"],
         answer: 0,
-        wrongHints: [null, "Klopt — skimmen voor structuur.", "Te traag.", "Niet zinvol.", "Wel — globaal."],
+        wrongHints: [null, "Te traag.", "Niet zinvol.", "Wel — globaal."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst overzicht, dan details", tekst: "Bij een lange Cito-tekst NIET meteen woord-voor-woord lezen. Eerst snel een overzicht maken." },
@@ -747,13 +747,13 @@ const steps = [
         q: "*Tekst: 'Veel kinderen sporten weinig. **Toch** is sporten heel gezond.'* Wat is de **conclusie** van de schrijver?",
         options: ["Kinderen moeten meer sporten", "Sport is gezond, dus stop kinderen", "Kinderen mogen niet sporten", "Onbekend"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'toch sporten gezond' = boodschap.", "Tegenovergesteld.", "Niet.", "Wel te bepalen."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Wel te bepalen."],
       },
       {
         q: "Wat is een **detail-vraag** bij Cito?",
         options: ["'Wat staat er in alinea 2?'", "'Wat vind jij?'", "'Wat is de mening?'", "'Welk plaatje?'"],
         answer: 0,
-        wrongHints: [null, "Klopt — specifieke info.", "Niet — eigen mening.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet — eigen mening.", "Niet primair.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Detail-vraag = specifiek", tekst: "Een detail-vraag vraagt naar één concreet stukje informatie. Bijvoorbeeld: 'Hoe oud is Tom?' of 'Welk land wordt genoemd?'" },
@@ -781,7 +781,7 @@ const steps = [
         q: "Hoeveel **leestips** voordat je vraag beantwoordt? Cito-strategie?",
         options: ["Lees vraag → zoek terug in tekst", "Lees vraag → gok", "Lees alleen tekst", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt — vraag eerst, dan zoeken.", "Niet — slim zoeken.", "Onefficiënt.", "Wel — strategie."],
+        wrongHints: [null, "Niet — slim zoeken.", "Onefficiënt.", "Wel — strategie."],
       },
     ],
   },
@@ -822,7 +822,7 @@ const steps = [
         q: "Welke schrijfwijze is **fout**?",
         options: ["paarden staart", "paardenstaart", "fietsenstalling", "computerscherm"],
         answer: 0,
-        wrongHints: [null, "Klopt — moet aan elkaar: paardenstaart (1 woord).", "Dat is juist — paardenstaart is 1 samenstelling.", "Dit is goed gespeld (1 woord).", "Dit is goed gespeld (1 woord)."],
+        wrongHints: [null, "Dat is juist — paardenstaart is 1 samenstelling.", "Dit is goed gespeld (1 woord).", "Dit is goed gespeld (1 woord)."],
       },
       {
         q: "Wanneer schrijf je een **hoofdletter**?",
@@ -834,7 +834,7 @@ const steps = [
         q: "Welk woord schrijf je **met 'ei'**?",
         options: ["trein", "vlijtig", "lijden", "blijven"],
         answer: 0,
-        wrongHints: [null, "Klopt — denk aan 'reis met de trein'.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        wrongHints: [null, "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
         uitlegPad: {
           stappen: [
             { titel: "Geen regel, uit hoofd", tekst: "Voor ei/ij bestaat geen makkelijke regel — woorden moet je uit hoofd kennen." },
@@ -858,13 +858,13 @@ const steps = [
         q: "*'Ik **... gisteren** een mooi boek.'* Welk werkwoord?",
         options: ["las", "lees", "laste", "lazen"],
         answer: 0,
-        wrongHints: [null, "Klopt — verleden tijd 'lezen' (onregelmatig: las).", "Tegenwoordige tijd.", "Geen werkwoord.", "Meervoud — vraag is 'ik' (enkelvoud)."],
+        wrongHints: [null, "Tegenwoordige tijd.", "Geen werkwoord.", "Meervoud — vraag is 'ik' (enkelvoud)."],
       },
       {
         q: "Welk woord is **goed** geschreven?",
         options: ["dinsdag", "Dinsdag", "DInsdag", "din sdag"],
         answer: 0,
-        wrongHints: [null, "Klopt — weekdagen krijgen in NL geen hoofdletter.", "Hoofdletter is fout midden in zin.", "Tweede letter mag niet groot.", "Aan elkaar."],
+        wrongHints: [null, "Hoofdletter is fout midden in zin.", "Tweede letter mag niet groot.", "Aan elkaar."],
         uitlegPad: {
           stappen: [
             { titel: "Weekdagen klein", tekst: "In Nederlands schrijven we weekdagen + maanden + jaargetijden met **kleine letter**. Anders dan in Engels!" },
@@ -884,13 +884,13 @@ const steps = [
         q: "Wat is **goed**?",
         options: ["Hij heeft gegeten.", "Hij heeft geet.", "Hij heeft eet.", "Hij heeft eaten."],
         answer: 0,
-        wrongHints: [null, "Klopt — voltooid deelwoord van 'eten' = 'gegeten'.", "Verkeerde vorm.", "Mist 'ge-'.", "Engels woord."],
+        wrongHints: [null, "Verkeerde vorm.", "Mist 'ge-'.", "Engels woord."],
       },
       {
         q: "Welk woord schrijf je **met 'au'** (niet ou)?",
         options: ["pauw", "boud", "houd", "stout"],
         answer: 0,
-        wrongHints: [null, "Klopt — denk aan de vogel.", "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        wrongHints: [null, "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
         uitlegPad: {
           stappen: [
             { titel: "au/ou: geen vaste regel", tekst: "Voor 'au' en 'ou' bestaat geen automatische regel. Je moet de woorden uit je hoofd leren — net als bij ei/ij." },
@@ -918,13 +918,13 @@ const steps = [
         q: "**'Hij ___ snel'** — welk werkwoord?",
         options: ["loopt", "loop", "lopen", "gelopen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 3e persoon: stam + t.", "Voor 'ik' (1e pers).", "Meervoud.", "Voltooid deelwoord."],
+        wrongHints: [null, "Voor 'ik' (1e pers).", "Meervoud.", "Voltooid deelwoord."],
       },
       {
         q: "Welk woord is een **samenstelling** (1 woord)?",
         options: ["zonnebloem", "zonne bloem", "zon en bloem", "zonn-bloem"],
         answer: 0,
-        wrongHints: [null, "Klopt — aan elkaar = 1 woord.", "Spatie = fout — moet aan elkaar.", "Met 'en' = geen samenstelling.", "Streepje hier niet."],
+        wrongHints: [null, "Spatie = fout — moet aan elkaar.", "Met 'en' = geen samenstelling.", "Streepje hier niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een samenstelling?", tekst: "Een samenstelling is een nieuw woord dat je maakt door 2 woorden AAN ELKAAR te schrijven." },
@@ -952,37 +952,37 @@ const steps = [
         q: "Welke zin is **goed**?",
         options: ["Ik antwoordde 'ja'.", "Ik antwoorde 'ja'.", "Ik anwoordde 'ja'.", "Ik antwoorden 'ja'."],
         answer: 0,
-        wrongHints: [null, "Klopt — 'antwoorden'-stam = 'antwoord' (op d). Voor verleden tijd niet in 't kofschip → -de = antwoordde.", "Spelfout: dubbele d nodig.", "Spelfout in stam.", "Plural — vraag is ik (enkelvoud)."],
+        wrongHints: [null, "Spelfout: dubbele d nodig.", "Spelfout in stam.", "Plural — vraag is ik (enkelvoud)."],
       },
       {
         q: "**'gisteren ___ ik thuis'** — werkwoord?",
         options: ["was", "is", "ben", "zijn"],
         answer: 0,
-        wrongHints: [null, "Klopt — verleden tijd 'zijn' enkelvoud = was.", "Tegenwoordige tijd 3e pers.", "Tegenwoordige tijd 1e pers.", "Infinitief / meervoud."],
+        wrongHints: [null, "Tegenwoordige tijd 3e pers.", "Tegenwoordige tijd 1e pers.", "Infinitief / meervoud."],
       },
       {
         q: "Welk woord schrijf je met **'ij'** (niet ei)?",
         options: ["wijn", "trein", "klein", "stein"],
         answer: 0,
-        wrongHints: [null, "Klopt — denk aan 'wijn drinken'.", "Andere spellingvariant.", "Andere spellingvariant.", "Niet uit Nederlands."],
+        wrongHints: [null, "Andere spellingvariant.", "Andere spellingvariant.", "Niet uit Nederlands."],
       },
       {
         q: "**Tegenwoordige tijd** van 'lopen' bij 'wij'?",
         options: ["wij lopen", "wij loopt", "wij looptn", "wij loop"],
         answer: 0,
-        wrongHints: [null, "Klopt — meervoud = infinitief.", "Enkelvoud-vorm.", "Geen NL.", "Stam zonder uitgang."],
+        wrongHints: [null, "Enkelvoud-vorm.", "Geen NL.", "Stam zonder uitgang."],
       },
       {
         q: "Welk woord is **goed gespeld**?",
         options: ["beschuit", "beschuid", "beshuit", "beschwit"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Eindigt op t, niet d.", "Mist c.", "Geen NL."],
+        wrongHints: [null, "Eindigt op t, niet d.", "Mist c.", "Geen NL."],
       },
       {
         q: "**'Het kind ___ blij'** — welk werkwoord (tegenwoordige tijd)?",
         options: ["is", "zijn", "was", "ben"],
         answer: 0,
-        wrongHints: [null, "Klopt — 3e persoon enkelvoud.", "Meervoud.", "Verleden tijd.", "1e persoon."],
+        wrongHints: [null, "Meervoud.", "Verleden tijd.", "1e persoon."],
       },
     ],
   },
@@ -1003,7 +1003,7 @@ const steps = [
         q: "Welke zin heeft **komma's op de goede plek**?",
         options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, druiven.", "Ik kocht, appels peren en druiven."],
         answer: 0,
-        wrongHints: [null, "Klopt — komma tussen opsommingen, geen komma vóór 'en'.", "Geen komma's vóór elk woord — alleen tussen items.", "Geen komma vóór de allerlaatste — daar staat 'en'.", "Geen komma ná het werkwoord."],
+        wrongHints: [null, "Geen komma's vóór elk woord — alleen tussen items.", "Geen komma vóór de allerlaatste — daar staat 'en'.", "Geen komma ná het werkwoord."],
         uitlegPad: {
           stappen: [
             { titel: "Komma + en", tekst: "Bij een opsomming staat tussen de eerste items een komma, en vóór het laatste item gebruik je 'en' (zonder komma)." },
@@ -1029,61 +1029,61 @@ const steps = [
         q: "Welke zin is **geen complete zin**?",
         options: ["Het rennende paard.", "Het paard rent.", "Het paard rent snel.", "Het paard rent door de wei."],
         answer: 0,
-        wrongHints: [null, "Klopt — er staat geen werkwoord in, alleen een omschrijving.", "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'."],
+        wrongHints: [null, "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'."],
       },
       {
         q: "*'Ik ga naar buiten ___ het regent.'* Welk woord past?",
         options: ["maar", "omdat", "en", "als"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'maar' geeft tegenstelling: regent toch ga ik.", "'Omdat' = reden. Dan ga je juist NIET naar buiten vanwege regen — vreemd zonder context.", "'En' is opsommend, mist het tegenstelling-gevoel.", "'Als' geeft voorwaarde, maar de zin is meer een tegenstelling."],
+        wrongHints: [null, "'Omdat' = reden. Dan ga je juist NIET naar buiten vanwege regen — vreemd zonder context.", "'En' is opsommend, mist het tegenstelling-gevoel.", "'Als' geeft voorwaarde, maar de zin is meer een tegenstelling."],
       },
       {
         q: "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
         options: ["dubbele punt :", "punt .", "komma ,", "uitroepteken !"],
         answer: 0,
-        wrongHints: [null, "Klopt — directe rede begint met dubbele punt, daarna aanhalingstekens.", "Een punt sluit een zin af, niet introduceert.", "Komma kan ook maar dubbele punt is correcter bij directe rede.", "Geen sterke emotie hier."],
+        wrongHints: [null, "Een punt sluit een zin af, niet introduceert.", "Komma kan ook maar dubbele punt is correcter bij directe rede.", "Geen sterke emotie hier."],
       },
       {
         q: "Welk zin heeft een **fout** met komma's?",
         options: ["Ik wandel, en ik fiets.", "Ik wandel en ik fiets.", "Ik wandel, omdat het mooi weer is.", "Ik wandel, maar ik fiets niet."],
         answer: 0,
-        wrongHints: [null, "Klopt — geen komma vóór 'en' tussen 2 hoofdzinnen zonder andere reden.", "Goed — geen komma nodig.", "Goed — komma vóór 'omdat' (samengestelde zin).", "Goed — komma vóór 'maar' (tegenstelling)."],
+        wrongHints: [null, "Goed — geen komma nodig.", "Goed — komma vóór 'omdat' (samengestelde zin).", "Goed — komma vóór 'maar' (tegenstelling)."],
       },
       {
         q: "Welk zin is **goed**?",
         options: ["Jan, Piet en Klaas spelen.", "Jan Piet en Klaas spelen.", "Jan, Piet, en Klaas spelen.", "Jan, Piet en, Klaas spelen."],
         answer: 0,
-        wrongHints: [null, "Klopt — komma's tussen items, geen komma vóór 'en'.", "Geen komma's — moeilijk te lezen.", "Komma vóór 'en' = fout in NL-opsomming.", "Komma op verkeerde plek."],
+        wrongHints: [null, "Geen komma's — moeilijk te lezen.", "Komma vóór 'en' = fout in NL-opsomming.", "Komma op verkeerde plek."],
       },
       {
         q: "Welke zin heeft een **vraagteken** nodig?",
         options: ["Waar is mijn jas", "De jas is rood", "Een jas in de kast", "Mijn jas is hier"],
         answer: 0,
-        wrongHints: [null, "Klopt — beginnen met 'Waar' = vraag.", "Mededelende zin → punt.", "Geen werkwoord — niet eens hele zin.", "Mededelend."],
+        wrongHints: [null, "Mededelende zin → punt.", "Geen werkwoord — niet eens hele zin.", "Mededelend."],
       },
       {
         q: "Welke is een **complete zin**?",
         options: ["De kat slaapt.", "Slapende kat.", "Op de bank.", "De rode kat."],
         answer: 0,
-        wrongHints: [null, "Klopt — onderwerp (kat) + werkwoord (slaapt).", "Geen werkwoord.", "Geen onderwerp + werkwoord.", "Geen werkwoord."],
+        wrongHints: [null, "Geen werkwoord.", "Geen onderwerp + werkwoord.", "Geen werkwoord."],
       },
       {
         q: "Welk woord krijgt **een hoofdletter**?",
         options: ["Amsterdam (plaatsnaam)", "maandag (weekdag)", "boek (zelfstandig naamwoord)", "rennen (werkwoord)"],
         answer: 0,
-        wrongHints: [null, "Klopt — eigennamen krijgen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter."],
+        wrongHints: [null, "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter."],
       },
       {
         q: "Welke zin heeft **goede aanhalingstekens**?",
         options: ["Hij zei: 'Hallo.'", "Hij zei Hallo.", "Hij zei: Hallo", "'Hij zei Hallo'"],
         answer: 0,
-        wrongHints: [null, "Klopt — dubbele punt + aanhalingstekens + punt binnen.", "Geen aanhalingstekens.", "Mist aanhalingstekens.", "Hele zin tussen aanhalingstekens = fout."],
+        wrongHints: [null, "Geen aanhalingstekens.", "Mist aanhalingstekens.", "Hele zin tussen aanhalingstekens = fout."],
       },
       {
         q: "Wat is het **onderwerp** in 'De kat slaapt'?",
         options: ["De kat", "Slaapt", "De", "Slaapt de kat"],
         answer: 0,
-        wrongHints: [null, "Klopt — wie/wat doet de actie?", "Dat is het werkwoord.", "Lidwoord alleen.", "Niet."],
+        wrongHints: [null, "Dat is het werkwoord.", "Lidwoord alleen.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is het onderwerp?", tekst: "Het onderwerp is **wie of wat de actie doet**. Vraag: 'Wie/wat slaapt?' → de kat." },
@@ -1112,7 +1112,7 @@ const steps = [
         q: "Wat is het **werkwoord** in 'Lisa rent hard'?",
         options: ["rent", "Lisa", "hard", "Geen"],
         answer: 0,
-        wrongHints: [null, "Klopt — actie-woord.", "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
+        wrongHints: [null, "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een werkwoord?", tekst: "Een werkwoord is het **actie-woord** in de zin: wat gebeurt er? (rent, slaapt, eet, leest)." },
@@ -1140,7 +1140,7 @@ const steps = [
         q: "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
         options: ["een appel", "Ik", "eet", "Geen"],
         answer: 0,
-        wrongHints: [null, "Klopt — waarop actie gericht.", "Onderwerp.", "Werkwoord.", "Wel."],
+        wrongHints: [null, "Onderwerp.", "Werkwoord.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een lijdend voorwerp?", tekst: "Het lijdend voorwerp is het ding WAAROP de actie van het werkwoord gericht is. Met andere woorden: WAT wordt er gegeten/gezien/gepakt?" },
@@ -1168,7 +1168,7 @@ const steps = [
         q: "Welke zin heeft een **bijvoeglijk naamwoord**?",
         options: ["De rode auto.", "De auto rijdt.", "Auto staat.", "Auto auto."],
         answer: 0,
-        wrongHints: [null, "Klopt — 'rode' beschrijft de auto.", "Geen beschrijving.", "Geen beschrijving.", "Geen NL."],
+        wrongHints: [null, "Geen beschrijving.", "Geen beschrijving.", "Geen NL."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een bijvoeglijk naamwoord?", tekst: "Een bijvoeglijk naamwoord beschrijft HOE iets is. Het staat meestal vóór een ander woord en geeft een kenmerk." },
@@ -1196,7 +1196,7 @@ const steps = [
         q: "Welke is een **persoonlijk voornaamwoord**?",
         options: ["ik", "auto", "snel", "boos"],
         answer: 0,
-        wrongHints: [null, "Klopt — verwijst naar persoon.", "Andere woordsoort.", "Andere woordsoort.", "Andere woordsoort."],
+        wrongHints: [null, "Andere woordsoort.", "Andere woordsoort.", "Andere woordsoort."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een persoonlijk voornaamwoord?", tekst: "Een persoonlijk voornaamwoord vervangt een persoon (of ding) zodat je niet steeds de naam hoeft te zeggen." },

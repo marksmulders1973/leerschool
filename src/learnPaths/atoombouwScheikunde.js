@@ -563,7 +563,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat is een **atoomkern**?",
         options: ["Centrum atoom met protonen + neutronen","Buitenste laag","Elektron-wolk","Niets"],
         answer: 0,
-        wrongHints: [null,"Klopt — kern bevat positieve protonen + neutrale neutronen. Elektronen draaien eromheen.","Niet — buitenste laag = elektronen-wolk.","Niet — elektronen zitten BUITEN de kern.","Niet — kern bestaat zeker."],
+        wrongHints: [null, "Niet — buitenste laag = elektronen-wolk.", "Niet — elektronen zitten BUITEN de kern.", "Niet — kern bestaat zeker."],
         uitlegPad: {
           stappen: [
             { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Electron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
@@ -588,7 +588,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat is het **periodiek systeem**?",
         options: ["Tabel met alle ~118 elementen geordend","Klok","Soort grafiek","Wetboek"],
         answer: 0,
-        wrongHints: [null,"Klopt — Mendeleev 1869, gerangschikt op atoomnummer + eigenschappen.","Niet — geen tijd-meting.","Niet — wel TABEL maar geen gewone grafiek.","Niet — geen juridisch document."],
+        wrongHints: [null, "Niet — geen tijd-meting.", "Niet — wel TABEL maar geen gewone grafiek.", "Niet — geen juridisch document."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is periodiek systeem?", tekst: "Het **periodiek systeem der elementen** is een **tabel** met alle bekende **chemische elementen** (atomen) gerangschikt op:\n• **Rijen (periodes)** — toenemend atoomnummer\n• **Kolommen (groepen)** — gelijkende eigenschappen\n\nIn totaal ~**118 elementen** (2024). Eerste 92 in natuur, rest in lab gemaakt." },
@@ -612,7 +612,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Wat is een **isotoop**?",
         options: ["Atoom met zelfde protonen maar ander aantal neutronen","Heel groot atoom","Negatief geladen","Niet bestaand"],
         answer: 0,
-        wrongHints: [null,"Klopt — bv C-12 + C-14 hebben beide 6 protonen, maar 6 vs 8 neutronen.","Niet — isotopen ≠ groot/klein per se.","Niet — neutronen zijn neutraal.","Niet — wel echt fenomeen."],
+        wrongHints: [null, "Niet — isotopen ≠ groot/klein per se.", "Niet — neutronen zijn neutraal.", "Niet — wel echt fenomeen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een isotoop?", tekst: "**Isotopen** zijn atomen van **HETZELFDE element** met **DIFFERENT aantal neutronen**. Aantal protonen blijft gelijk (anders ander element).\n\nVoorbeeld koolstof:\n• **C-12** (6 p + 6 n) — meest voorkomend, stabiel\n• **C-13** (6 p + 7 n) — stabiel, ~1% van koolstof\n• **C-14** (6 p + 8 n) — radioactief, vervalt over tijd" },

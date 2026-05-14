@@ -20,7 +20,7 @@ const steps = [
         q: "Hoeveel **werelddelen**?",
         options: ["7", "5", "10", "3"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "7 werelddelen (continenten)", tekst: "De wereld wordt verdeeld in **7 werelddelen**: 1) Azië, 2) Afrika, 3) Noord-Amerika, 4) Zuid-Amerika, 5) Antarctica, 6) Europa, 7) Oceanië (Australië)." },
@@ -49,19 +49,19 @@ const steps = [
         q: "**Grootste werelddeel**?",
         options: ["Azië", "Afrika", "Europa", "Antarctica"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tweede.", "Klein.", "Wel groot maar niet grootst."],
+        wrongHints: [null, "Tweede.", "Klein.", "Wel groot maar niet grootst."],
       },
       {
         q: "**Grootste oceaan**?",
         options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"],
         answer: 0,
-        wrongHints: [null, "Klopt — 165 mln km².", "Tweede.", "Derde.", "Vijfde."],
+        wrongHints: [null, "Tweede.", "Derde.", "Vijfde."],
       },
       {
         q: "Hoeveel **wereldbevolking** 2024?",
         options: ["~8 miljard", "1 miljard", "100 miljard", "500 miljoen"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Veel minder.", "Onmogelijk.", "Te weinig."],
+        wrongHints: [null, "Veel minder.", "Onmogelijk.", "Te weinig."],
       },
     ],
   },
@@ -74,7 +74,7 @@ const steps = [
         q: "Hoofdstad van **Frankrijk**?",
         options: ["Parijs", "Lyon", "Marseille", "Bordeaux"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Steden niet hoofdstad.", "Niet.", "Niet."],
+        wrongHints: [null, "Steden niet hoofdstad.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een hoofdstad?", tekst: "De **hoofdstad** is de belangrijkste stad van een land. Vaak zit daar de regering, het parlement en koning/president." },
@@ -102,13 +102,13 @@ const steps = [
         q: "**Grootste land** qua bevolking 2024?",
         options: ["India (~1,43 miljard)", "China", "VS", "Rusland"],
         answer: 0,
-        wrongHints: [null, "Klopt — passeerde China 2023.", "Recent niet meer.", "Veel minder.", "Veel minder."],
+        wrongHints: [null, "Recent niet meer.", "Veel minder.", "Veel minder."],
       },
       {
         q: "**Hoogste berg** ter wereld?",
         options: ["Mount Everest (Nepal)", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
         answer: 0,
-        wrongHints: [null, "Klopt — 8849 m.", "Europa.", "Afrika.", "Zuid-Amerika."],
+        wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."],
         uitlegPad: {
           stappen: [
             { titel: "Mount Everest is hoogste", tekst: "**Mount Everest** in de **Himalaya** (grens Nepal/Tibet) is met **8.849 meter** de hoogste berg van de wereld. Hoger dan de wolken!" },
@@ -136,7 +136,7 @@ const steps = [
         q: "Hoeveel **landen in EU** (2024)?",
         options: ["27", "50", "10", "100"],
         answer: 0,
-        wrongHints: [null, "Klopt — Brexit 2020.", "Heel Europa is meer.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Heel Europa is meer.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "EU vs Europa", tekst: "Let op het verschil:\n• **Europa** = werelddeel (~50 landen totaal)\n• **EU** = Europese Unie = club van **27 landen** die samenwerken op handel, wetten, geld.\nNiet alle Europese landen zijn EU-lid (bv. Noorwegen, Zwitserland, UK niet)." },
@@ -172,13 +172,13 @@ const steps = [
         q: "Hoofdstad van **Brazilië**?",
         options: ["Brasília", "Rio de Janeiro", "São Paulo", "Buenos Aires"],
         answer: 0,
-        wrongHints: [null, "Klopt — niet Rio!.", "Bekend maar niet hoofdstad.", "Bekend maar niet hoofdstad.", "Argentinië."],
+        wrongHints: [null, "Bekend maar niet hoofdstad.", "Bekend maar niet hoofdstad.", "Argentinië."],
       },
       {
         q: "**Langste rivier** ter wereld?",
         options: ["Nijl (Egypte, 6650 km)", "Amazone", "Yangtze", "Mississippi"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tweede — Amazone.", "Derde — China.", "Vierde — VS."],
+        wrongHints: [null, "Tweede — Amazone.", "Derde — China.", "Vierde — VS."],
         uitlegPad: {
           stappen: [
             { titel: "De Nijl: 6.650 km", tekst: "De **Nijl** is de **langste rivier ter wereld**: ongeveer **6.650 km**. Loopt door **11 landen** in Afrika, voornamelijk **Egypte + Sudan + Ethiopië + Uganda**." },
@@ -207,13 +207,13 @@ const steps = [
         q: "Welk land heeft **Tafelberg** + Mandela?",
         options: ["Zuid-Afrika", "Nigeria", "Egypte", "Brazilie"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Andere.", "Andere.", "Niet."],
+        wrongHints: [null, "Andere.", "Andere.", "Niet."],
       },
       {
         q: "Welk dier is **typisch Australië**?",
         options: ["Kangoeroe", "Leeuw", "Tijger", "Olifant"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Afrika.", "Azië.", "Afrika/Azië."],
+        wrongHints: [null, "Afrika.", "Azië.", "Afrika/Azië."],
         uitlegPad: {
           stappen: [
             { titel: "Australië = uniek dieren", tekst: "Australië is een **eiland-continent** — al miljoenen jaren afgezonderd van rest van wereld. Daarom evolueerden er **unieke dieren** die nergens anders voorkomen." },
@@ -244,17 +244,17 @@ const steps = [
     title: "Eind-toets — wereld mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Hoeveel **werelddelen**?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."] },
-      { q: "**Grootste** werelddeel?", options: ["Azië", "Afrika", "Europa", "Australie"], answer: 0, wrongHints: [null, "Klopt.", "Tweede.", "Klein.", "Kleinst."] },
-      { q: "**Hoogste berg** ter wereld?", options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"], answer: 0, wrongHints: [null, "Klopt — Nepal.", "Europa.", "Afrika.", "Zuid-Amerika."] },
-      { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Duitsland.", "Spanje."] },
-      { q: "**Hoofdstad** Brazilië?", options: ["Brasília", "Rio", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Klopt.", "Stad maar geen hoofdstad.", "Argentinië.", "Peru."] },
-      { q: "**Grootste oceaan**?", options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"], answer: 0, wrongHints: [null, "Klopt.", "Tweede.", "Derde.", "Klein."] },
+      { q: "Hoeveel **werelddelen**?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
+      { q: "**Grootste** werelddeel?", options: ["Azië", "Afrika", "Europa", "Australie"], answer: 0, wrongHints: [null, "Tweede.", "Klein.", "Kleinst."] },
+      { q: "**Hoogste berg** ter wereld?", options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"], answer: 0, wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."] },
+      { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Niet.", "Duitsland.", "Spanje."] },
+      { q: "**Hoofdstad** Brazilië?", options: ["Brasília", "Rio", "Buenos Aires", "Lima"], answer: 0, wrongHints: [null, "Stad maar geen hoofdstad.", "Argentinië.", "Peru."] },
+      { q: "**Grootste oceaan**?", options: ["Stille / Pacific", "Atlantisch", "Indisch", "Arctisch"], answer: 0, wrongHints: [null, "Tweede.", "Derde.", "Klein."] },
       {
         q: "Welke **rivier** stroomt door **Egypte**?",
         options: ["Nijl", "Amazone", "Rijn", "Donau"],
         answer: 0,
-        wrongHints: [null, "Klopt — langste rivier van Afrika (~6.650 km).", "Amazone = Zuid-Amerika.", "Rijn = Europa (Duitsland-NL).", "Donau = Europa (Oost)."],
+        wrongHints: [null, "Amazone = Zuid-Amerika.", "Rijn = Europa (Duitsland-NL).", "Donau = Europa (Oost)."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Nijl?", tekst: "De **Nijl** is een **gigantische rivier in Afrika**. ~6.650 km lang — vaak genoemd als langste rivier ter wereld (debat met Amazone). Stroomt door **11 landen**, eindigt in Egypte → Middellandse Zee." },
@@ -279,7 +279,7 @@ const steps = [
         q: "Welk **land** ligt **noordelijk** van Nederland?",
         options: ["Geen (Noordzee)", "België", "Duitsland", "Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Klopt — boven NL = Noordzee, dan Engeland/Schotland.", "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
+        wrongHints: [null, "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
         uitlegPad: {
           stappen: [
             { titel: "NL buurlanden + windstreken", tekst: "Nederland heeft maar **2 landen-buren**:\n• **België** in het **zuiden**\n• **Duitsland** in het **oosten**\n\nIn het **noorden** + **westen** ligt de **Noordzee**. Aan de andere kant van de Noordzee: **Engeland/Schotland**." },
@@ -304,7 +304,7 @@ const steps = [
         q: "Wat is een **continent**?",
         options: ["Heel groot stuk land — 7 werelddelen", "Een land", "Een berg", "Een zee"],
         answer: 0,
-        wrongHints: [null, "Klopt — 7 continenten = werelddelen: Azië, Afrika, Europa, etc.", "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
+        wrongHints: [null, "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een continent?", tekst: "Een **continent** (of **werelddeel**) is een **gigantisch stuk land** op de aarde. Er zijn **7 continenten** wereldwijd:\n1. **Azië** (grootste, 4,5 miljard mensen)\n2. **Afrika** (snelst groeiend)\n3. **Noord-Amerika**\n4. **Zuid-Amerika**\n5. **Antarctica** (zuidpool — geen permanente bewoners)\n6. **Europa** (waar NL ligt)\n7. **Australië/Oceanië** (kleinste)" },
@@ -325,25 +325,25 @@ const steps = [
           niveaus: { basis: "Werelddeel — 7 stuks. = A.", simpeler: "Een continent is een heel groot stuk land. Er zijn 7 continenten op aarde: Azië, Afrika, Europa, Noord-Amerika, Zuid-Amerika, Antarctica, Oceanië. = A.", nogSimpeler: "Werelddeel = A." },
         },
       },
-      { q: "Wat is de **hoofdstad van Frankrijk**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null,"Klopt.","Duitsland.","Spanje.","VK."] },
-      { q: "Op welk werelddeel ligt **Egypte**?", options: ["Afrika","Azië","Europa","Australië"], answer: 0, wrongHints: [null,"Klopt — Noord-Afrika.","Sinaï-schiereiland wel deels, maar grootste deel Afrika.","Niet.","Niet."] },
-      { q: "Welke oceaan ligt tussen **Europa en Amerika**?", options: ["Atlantische Oceaan","Stille Oceaan","Indische Oceaan","Noordzee"], answer: 0, wrongHints: [null,"Klopt.","Tussen Amerika + Azië.","Tussen Afrika + Australië.","Tussen NL + VK."] },
-      { q: "Wat is de **hoogste berg ter wereld**?", options: ["Mount Everest","Mont Blanc","Kilimanjaro","Fuji"], answer: 0, wrongHints: [null,"Klopt — 8.848 m, Nepal/Tibet.","Alpen, lager.","Afrika, lager.","Japan, lager."] },
-      { q: "Hoofdstad van **Duitsland**?", options: ["Berlijn","Hamburg","München","Frankfurt"], answer: 0, wrongHints: [null,"Klopt.","Andere stad.","Andere stad.","Andere stad."] },
-      { q: "Hoofdstad van **Spanje**?", options: ["Madrid","Barcelona","Valencia","Sevilla"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Niet."] },
-      { q: "Hoofdstad van **Italië**?", options: ["Rome","Milaan","Napels","Venetië"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Niet."] },
-      { q: "Hoofdstad van **Verenigd Koninkrijk**?", options: ["Londen","Manchester","Edinburgh","Liverpool"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Schotland-hoofdstad.","Niet."] },
-      { q: "Hoofdstad van **VS**?", options: ["Washington D.C.","New York","Los Angeles","Chicago"], answer: 0, wrongHints: [null,"Klopt.","Grootste, geen hoofdstad.","Niet.","Niet."] },
-      { q: "Hoofdstad van **Rusland**?", options: ["Moskou","Sint-Petersburg","Kiev","Niet relevant"], answer: 0, wrongHints: [null,"Klopt.","Andere stad.","Oekraïne.","Wel."] },
-      { q: "Hoofdstad van **Japan**?", options: ["Tokio","Kyoto","Osaka","Seoul"], answer: 0, wrongHints: [null,"Klopt.","Vorige.","Niet.","Zuid-Korea."] },
-      { q: "Hoofdstad van **China**?", options: ["Peking (Beijing)","Shanghai","Hong Kong","Niet relevant"], answer: 0, wrongHints: [null,"Klopt.","Grootste, geen hoofdstad.","Andere.","Wel."] },
-      { q: "Hoofdstad van **Brazilië**?", options: ["Brasília","Rio de Janeiro","São Paulo","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — gebouwd 1960.","Vroeger.","Grootste.","Wel."] },
-      { q: "Welke woestijn is in **Afrika**?", options: ["Sahara","Gobi","Mojave","Atacama"], answer: 0, wrongHints: [null,"Klopt.","Azië.","VS.","Zuid-Amerika."] },
-      { q: "Welke is **grootste** Europese stad?", options: ["Moskou","Londen","Parijs","Madrid"], answer: 0, wrongHints: [null,"Klopt — ~13 mln.","Tweede.","Niet.","Niet."] },
-      { q: "Welk land heeft **Acropolis**?", options: ["Griekenland","Italië","Egypte","Turkije"], answer: 0, wrongHints: [null,"Klopt — Athene.","Romeins erfgoed.","Egyptisch.","Niet."] },
-      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate","Tower Bridge","Brooklyn","Niet bekend"], answer: 0, wrongHints: [null,"Klopt.","Londen.","NY.","Wel."] },
-      { q: "**Taj Mahal** ligt in?", options: ["India","Egypte","China","Japan"], answer: 0, wrongHints: [null,"Klopt — Agra.","Niet.","Niet.","Niet."] },
-      { q: "**Christ Verlosser**-standbeeld ligt in?", options: ["Rio de Janeiro (Brazilië)","Madrid","Niet bekend","Niet relevant"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Wel.","Wel."] },
+      { q: "Wat is de **hoofdstad van Frankrijk**?", options: ["Parijs","Berlijn","Madrid","Londen"], answer: 0, wrongHints: [null, "Duitsland.", "Spanje.", "VK."] },
+      { q: "Op welk werelddeel ligt **Egypte**?", options: ["Afrika","Azië","Europa","Australië"], answer: 0, wrongHints: [null, "Sinaï-schiereiland wel deels, maar grootste deel Afrika.", "Niet.", "Niet."] },
+      { q: "Welke oceaan ligt tussen **Europa en Amerika**?", options: ["Atlantische Oceaan","Stille Oceaan","Indische Oceaan","Noordzee"], answer: 0, wrongHints: [null, "Tussen Amerika + Azië.", "Tussen Afrika + Australië.", "Tussen NL + VK."] },
+      { q: "Wat is de **hoogste berg ter wereld**?", options: ["Mount Everest","Mont Blanc","Kilimanjaro","Fuji"], answer: 0, wrongHints: [null, "Alpen, lager.", "Afrika, lager.", "Japan, lager."] },
+      { q: "Hoofdstad van **Duitsland**?", options: ["Berlijn","Hamburg","München","Frankfurt"], answer: 0, wrongHints: [null, "Andere stad.", "Andere stad.", "Andere stad."] },
+      { q: "Hoofdstad van **Spanje**?", options: ["Madrid","Barcelona","Valencia","Sevilla"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoofdstad van **Italië**?", options: ["Rome","Milaan","Napels","Venetië"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoofdstad van **Verenigd Koninkrijk**?", options: ["Londen","Manchester","Edinburgh","Liverpool"], answer: 0, wrongHints: [null, "Niet.", "Schotland-hoofdstad.", "Niet."] },
+      { q: "Hoofdstad van **VS**?", options: ["Washington D.C.","New York","Los Angeles","Chicago"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Niet.", "Niet."] },
+      { q: "Hoofdstad van **Rusland**?", options: ["Moskou","Sint-Petersburg","Kiev","Niet relevant"], answer: 0, wrongHints: [null, "Andere stad.", "Oekraïne.", "Wel."] },
+      { q: "Hoofdstad van **Japan**?", options: ["Tokio","Kyoto","Osaka","Seoul"], answer: 0, wrongHints: [null, "Vorige.", "Niet.", "Zuid-Korea."] },
+      { q: "Hoofdstad van **China**?", options: ["Peking (Beijing)","Shanghai","Hong Kong","Niet relevant"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Andere.", "Wel."] },
+      { q: "Hoofdstad van **Brazilië**?", options: ["Brasília","Rio de Janeiro","São Paulo","Niet relevant"], answer: 0, wrongHints: [null, "Vroeger.", "Grootste.", "Wel."] },
+      { q: "Welke woestijn is in **Afrika**?", options: ["Sahara","Gobi","Mojave","Atacama"], answer: 0, wrongHints: [null, "Azië.", "VS.", "Zuid-Amerika."] },
+      { q: "Welke is **grootste** Europese stad?", options: ["Moskou","Londen","Parijs","Madrid"], answer: 0, wrongHints: [null, "Tweede.", "Niet.", "Niet."] },
+      { q: "Welk land heeft **Acropolis**?", options: ["Griekenland","Italië","Egypte","Turkije"], answer: 0, wrongHints: [null, "Romeins erfgoed.", "Egyptisch.", "Niet."] },
+      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate","Tower Bridge","Brooklyn","Niet bekend"], answer: 0, wrongHints: [null, "Londen.", "NY.", "Wel."] },
+      { q: "**Taj Mahal** ligt in?", options: ["India","Egypte","China","Japan"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Christ Verlosser**-standbeeld ligt in?", options: ["Rio de Janeiro (Brazilië)","Madrid","Niet bekend","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel."] },
     ],
   },
 ];

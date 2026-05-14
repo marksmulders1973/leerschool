@@ -225,7 +225,7 @@ const steps = [
         q: "**Schat: 19,80 × 4** (in winkel zonder rekenmachine):",
         options: ["~80","~70","~90","~50"],
         answer: 0,
-        wrongHints: [null,"Klopt — 19,80 ≈ €20. 20 × 4 = €80.","Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.","Te veel — 4 × €20 is precies €80, antwoord net daaronder.","Veel te weinig."],
+        wrongHints: [null, "Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.", "Te veel — 4 × €20 is precies €80, antwoord net daaronder.", "Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Wanneer schat je?", tekst: "Bij winkel-vragen zonder rekenmachine: rond eerst af naar makkelijk getal, daarna rekenen." },
@@ -249,7 +249,7 @@ const steps = [
         q: "**Rond af op 10**: 145 + 89 + 36 = ?",
         options: ["270","260","280","250"],
         answer: 0,
-        wrongHints: [null,"Klopt — 150 + 90 + 40 = 280? Nee: 150+90=240, +40=280. Hmm — 145→150, 89→90, 36→40. Som schatten: 150+90+40=280. Maar precies = 145+89+36 = 270. Afhankelijk van vraag-interpretatie hier 270 als antwoord.","Te weinig — controleer: 150+90+40 = 280.","Klopt bij ronde afronding (150+90+40=280) — antwoord-keuze A toont 270 als 'precies'.","Veel te weinig."],
+        wrongHints: [null, "Te weinig — controleer: 150+90+40 = 280.", "Klopt bij ronde afronding (150+90+40=280) — antwoord-keuze A toont 270 als 'precies'.", "Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Cent-stijl: 145+89 = 234, +36 = **270**." },
@@ -266,7 +266,7 @@ const steps = [
         q: "Een **klas van 24 kinderen** krijgt elk een trakteerzakje van **€ 2,15**. **Past het in € 50 budget**?",
         options: ["Ja, net — schat ~€52, maar precies €51,60 → past niet","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
         answer: 0,
-        wrongHints: [null,"Klopt — schat: 24 × €2 = €48 → bijna. Maar 24 × €0,15 = €3,60 erbij = €51,60 (boven €50).","Te optimistisch — schat: 24 × €2,15 ≈ 24 × €2 = €48, + 24 × €0,15 = €3,60 erbij = €51,60. NET niet.","Te pessimistisch — schat eerst: 24 × €2 = €48.","Wel — schat altijd eerst voor budget-vragen."],
+        wrongHints: [null, "Te optimistisch — schat: 24 × €2,15 ≈ 24 × €2 = €48, + 24 × €0,15 = €3,60 erbij = €51,60. NET niet.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Wel — schat altijd eerst voor budget-vragen."],
         uitlegPad: {
           stappen: [
             { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
@@ -287,7 +287,7 @@ const steps = [
         q: "**Rond af op 1000**: 4.612 + 3.298 = ?",
         options: ["8.000","7.000","9.000","7.910"],
         answer: 0,
-        wrongHints: [null,"Klopt — 4.612 ≈ 5.000 of 4.000 (dichtst bij 5.000). 3.298 ≈ 3.000. 5.000 + 3.000 = 8.000. Of: precies = 7.910, ronde 8.000.","Te weinig — afronding op 1000 brengt 4.612 dichter bij 5.000 dan 4.000.","Te veel.","Dat is precies, niet afgerond op 1000."],
+        wrongHints: [null, "Te weinig — afronding op 1000 brengt 4.612 dichter bij 5.000 dan 4.000.", "Te veel.", "Dat is precies, niet afgerond op 1000."],
         uitlegPad: {
           stappen: [
             { titel: "Afronden op 1000", tekst: "Kijk naar de **honderden-cijfer**:\n• 4.612 → 6 in honderden ≥ 5 → afronden naar BOVEN = **5.000**\n• 3.298 → 2 in honderden < 5 → afronden naar BENEDEN = **3.000**" },
@@ -311,7 +311,7 @@ const steps = [
         q: "**€ 7,99** is bijna **€ 8**. Wat is **5 × € 7,99** ongeveer?",
         options: ["~€ 40","~€ 35","~€ 45","~€ 50"],
         answer: 0,
-        wrongHints: [null,"Klopt — 5 × €8 = €40 (echt: €39,95).","Te weinig — €8 × 5 = €40, niet €35.","Te veel — €8 × 5 = €40, niet €45.","Te veel — controleer: 5 × €8 = €40."],
+        wrongHints: [null, "Te weinig — €8 × 5 = €40, niet €35.", "Te veel — €8 × 5 = €40, niet €45.", "Te veel — controleer: 5 × €8 = €40."],
         uitlegPad: {
           stappen: [
             { titel: "Bijna-rond-getal-truc", tekst: "€7,99 ≈ €8 (1 cent verschil)." },
@@ -327,24 +327,24 @@ const steps = [
           niveaus: { basis: "5 × €8 = €40. = A.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40. = A.", nogSimpeler: "~€40 = A." },
         },
       },
-      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null,"Klopt — 7 ≥ 5 dus omhoog.","Niet — 7 ≥ 5, afronden omhoog.","Dat is honderdtal.","Dat is honderdtal afgerond op."] },
-      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","7,0"], answer: 0, wrongHints: [null,"Klopt — 8 ≥ 5 dus 7.","Niet — afronden omhoog.","Dat is op 1 decimaal.","Niet — geen decimaal nodig."] },
-      { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null,"Klopt — 200 + 400 = 600.","Te hoog.","Te laag.","Veel te hoog."] },
-      { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null,"Klopt — 67 ≥ 50.","Niet.","Te ver.","Te ver."] },
-      { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null,"Klopt — 2 < 5 dus omlaag.","Niet — 2 < 5.","Te ver.","Niet afgerond."] },
-      { q: "Schat: 19 × 21 ≈ ?", options: ["~400","~200","~600","~40"], answer: 0, wrongHints: [null,"Klopt — 20×20.","Niet.","Niet.","Niet."] },
-      { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null,"Klopt — 5×5.","Niet.","Niet.","Niet."] },
-      { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null,"Klopt — 5 ≥ 5.","Niet — 5 ≥ 5.","Honderdtal-niveau.","Te ver."] },
-      { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Te veel."] },
-      { q: "Schat hoogte mens 1,72 m", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null,"Klopt — afronden 10-cm.","Niet — 172 < 175.","Geen schatting.","Te laag."] },
-      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€20,00"], answer: 0, wrongHints: [null,"Klopt — 80 ct ≥ 50.","Niet.","Geen afronding.","Niet — euro is heel."] },
-      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd","Nooit","Alleen in winkel"], answer: 0, wrongHints: [null,"Klopt — bv. boodschappen-budget.","Niet altijd nuttig.","Wel handig.","Niet alleen daar."] },
-      { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null,"Klopt.","Niet — geen exact 10×10.","Te weinig.","Te veel."] },
-      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null,"Klopt — 1.000+1.000.","Te veel.","Te weinig.","Veel."] },
-      { q: "Welke regel bij afronden 5?", options: ["Naar boven","Naar beneden","Random","Niet afronden"], answer: 0, wrongHints: [null,"Klopt — standaardregel.","Niet.","Niet.","Wel — meestal."] },
-      { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null,"Klopt — 11+9.","Te veel.","Te weinig.","Niet."] },
-      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = exact geregeld op getal","Hetzelfde","Geen verschil","Afronden is moeilijker"], answer: 0, wrongHints: [null,"Klopt.","Wel verschil.","Wel verschil.","Beide makkelijk."] },
-      { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null,"Klopt — 4 < 5.","Niet — onder 0,5.","Niet — heel getal.","Niet."] },
+      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Dat is honderdtal afgerond op."] },
+      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","7,0"], answer: 0, wrongHints: [null, "Niet — afronden omhoog.", "Dat is op 1 decimaal.", "Niet — geen decimaal nodig."] },
+      { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null, "Te hoog.", "Te laag.", "Veel te hoog."] },
+      { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Niet.", "Te ver.", "Te ver."] },
+      { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null, "Niet — 2 < 5.", "Te ver.", "Niet afgerond."] },
+      { q: "Schat: 19 × 21 ≈ ?", options: ["~400","~200","~600","~40"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Niet — 5 ≥ 5.", "Honderdtal-niveau.", "Te ver."] },
+      { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
+      { q: "Schat hoogte mens 1,72 m", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Geen schatting.", "Te laag."] },
+      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€20,00"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Niet — euro is heel."] },
+      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd","Nooit","Alleen in winkel"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
+      { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Niet — geen exact 10×10.", "Te weinig.", "Te veel."] },
+      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel."] },
+      { q: "Welke regel bij afronden 5?", options: ["Naar boven","Naar beneden","Random","Niet afronden"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel — meestal."] },
+      { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Niet."] },
+      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = exact geregeld op getal","Hetzelfde","Geen verschil","Afronden is moeilijker"], answer: 0, wrongHints: [null, "Wel verschil.", "Wel verschil.", "Beide makkelijk."] },
+      { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null, "Niet — onder 0,5.", "Niet — heel getal.", "Niet."] },
     ],
   },
 ];

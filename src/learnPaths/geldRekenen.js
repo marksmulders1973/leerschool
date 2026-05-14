@@ -74,7 +74,7 @@ const steps = [
         q: "Welke munten samen maken **€ 1,75**?",
         options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 25c","1 × €1 + 7 × 10c"],
         answer: 0,
-        wrongHints: [null,"Klopt — €1 + €0,50 + €0,20 + €0,05 = €1,75.","Geen 25-cent-munt in Nederland.","Geen 25-cent-munt in Nederland.","7 × 10c = 70c, geen 75c."],
+        wrongHints: [null, "Geen 25-cent-munt in Nederland.", "Geen 25-cent-munt in Nederland.", "7 × 10c = 70c, geen 75c."],
         uitlegPad: {
           stappen: [
             { titel: "NL-munten kennen", tekst: "In Nederland bestaan deze munten: 1c, 2c, 5c, 10c, 20c, 50c, €1, €2. Géén 25-cent." },
@@ -153,7 +153,7 @@ const steps = [
         q: "**€ 2,99 + € 4,99** = ?",
         options: ["€ 7,98","€ 6,98","€ 7,99","€ 8,98"],
         answer: 0,
-        wrongHints: [null,"Klopt — €3+€5=€8, dan -€0,02 voor de twee 'bijna-eurootjes' = €7,98.","Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8.","Verkeerd afgerond. Cent: 99+99=198 → €1,98 → +6 = €7,98.","Te veel — schatten: 3+5=8. Antwoord net daaronder."],
+        wrongHints: [null, "Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8.", "Verkeerd afgerond. Cent: 99+99=198 → €1,98 → +6 = €7,98.", "Te veel — schatten: 3+5=8. Antwoord net daaronder."],
         uitlegPad: {
           stappen: [
             { titel: "Cito-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
@@ -234,7 +234,7 @@ const steps = [
         q: "Patatje **€ 2,80**, frisdrank **€ 1,75**. Je betaalt met **€ 10**. Wisselgeld?",
         options: ["€ 5,45","€ 6,45","€ 5,55","€ 4,55"],
         answer: 0,
-        wrongHints: [null,"Klopt — totaal €4,55, wisselgeld €5,45.","Te veel — heb je de frisdrank meegerekend?","Te veel — controleer cent-deel.","Dat is het totaal, niet het wisselgeld."],
+        wrongHints: [null, "Te veel — heb je de frisdrank meegerekend?", "Te veel — controleer cent-deel.", "Dat is het totaal, niet het wisselgeld."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: totale kosten", tekst: "Patatje + frisdrank = €2,80 + €1,75. Cent: 80+75=155 (=€1,55). Euro: 2+1+1=4. Totaal **€4,55**." },
@@ -313,7 +313,7 @@ const steps = [
         q: "Pak A: **2 L melk € 2,40**. Pak B: **1 L melk € 1,30**. **Goedkoper per liter**?",
         options: ["A","B","Hetzelfde","Te weinig info"],
         answer: 0,
-        wrongHints: [null,"Klopt — A is €1,20/L, B is €1,30/L. A goedkoper per liter.","Andersom — A €1,20/L, B €1,30/L.","Niet hetzelfde — reken na per liter.","Wel — beide vermelden prijs én hoeveelheid."],
+        wrongHints: [null, "Andersom — A €1,20/L, B €1,30/L.", "Niet hetzelfde — reken na per liter.", "Wel — beide vermelden prijs én hoeveelheid."],
         uitlegPad: {
           stappen: [
             { titel: "Per liter berekenen", tekst: "A: 2 L voor €2,40 → 1 L = €2,40 ÷ 2 = **€1,20**. B: 1 L voor €1,30 → 1 L = **€1,30**." },
@@ -425,7 +425,7 @@ const steps = [
         q: "Anna spaart **€ 7,50 per week**. Hoeveel heeft ze **na 8 weken** gespaard?",
         options: ["€ 60","€ 56","€ 75","€ 50"],
         answer: 0,
-        wrongHints: [null,"Klopt — 8 × €7,50 = €60. Slim: 8 × €7 = €56, 8 × €0,50 = €4, samen €60.","Te weinig — heb je alleen 8 × €7 gerekend, zonder de 50 cent?","Geen vermenigvuldigen — dat zou €7,50 × 10 zijn.","Te weinig — controleer met schatting (8 × €7,50 ≈ 8 × 8 = €64)."],
+        wrongHints: [null, "Te weinig — heb je alleen 8 × €7 gerekend, zonder de 50 cent?", "Geen vermenigvuldigen — dat zou €7,50 × 10 zijn.", "Te weinig — controleer met schatting (8 × €7,50 ≈ 8 × 8 = €64)."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de som?", tekst: "Sparen-per-week × aantal weken = totaal. 8 weken × €7,50/week = ?" },
@@ -449,7 +449,7 @@ const steps = [
         q: "**3 broodjes** kosten samen **€ 7,80**. Wat kost **1 broodje**?",
         options: ["€ 2,60","€ 2,40","€ 3,80","€ 2,80"],
         answer: 0,
-        wrongHints: [null,"Klopt — €7,80 ÷ 3 = €2,60.","Te weinig — controleer: 3 × €2,40 = €7,20, niet €7,80.","Veel te veel — dat is meer dan de helft van het totaal.","Te veel — 3 × €2,80 = €8,40, niet €7,80."],
+        wrongHints: [null, "Te weinig — controleer: 3 × €2,40 = €7,20, niet €7,80.", "Veel te veel — dat is meer dan de helft van het totaal.", "Te veel — 3 × €2,80 = €8,40, niet €7,80."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de som?", tekst: "Totaal ÷ aantal = prijs per stuk. €7,80 ÷ 3 = ?" },
@@ -470,22 +470,22 @@ const steps = [
         },
       },
       { q: "Mark koopt 2 broden van €2,15. Hij betaalt met €5. Hoeveel wisselgeld?", options: ["€0,70","€1,30","€2,85","€4,30"], answer: 0, wrongHints: [null,"Tel eerst 2 broden samen (€4,30), dan €5 − €4,30.","Dat is 1 brood × 2 − iets. Check 2×€2,15 = €4,30.","Dat is de totaalprijs. Wisselgeld = €5 − €4,30.","Dat is de prijs van 2 broden zelf."] },
-      { q: "Een pen kost €1,25. Hoeveel kosten 4 pennen?", options: ["€5,00","€4,80","€5,25","€4,00"], answer: 0, wrongHints: [null,"Klopt — 4 × €1,25 = €5,00.","Te laag — reken nogmaals.","Te hoog.","Dat is 4 × €1."] },
-      { q: "Je krijgt €5 zakgeld + €2 verjaardag. Totaal?", options: ["€7","€3","€10","€5"], answer: 0, wrongHints: [null,"Klopt.","Niet — optellen.","Te veel.","Geen verjaardag-bonus?"] },
-      { q: "1 sticker kost €0,20. 10 stickers?", options: ["€2,00","€0,20","€20,00","€10"], answer: 0, wrongHints: [null,"Klopt — 10×€0,20.","Per stuk.","Komma fout.","Aantal."] },
-      { q: "Hoeveel cent zit in **€1,75**?", options: ["175","75","17,5","1,75"], answer: 0, wrongHints: [null,"Klopt — €1=100ct, €0,75=75ct.","Vergeet 100.","Niet zo.","In €."] },
-      { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null,"Klopt.","Niet — 5−4=1 niet 5.","Niet.","Komma vergeten."] },
-      { q: "Voordeligst: 3 × €4 OF 1× €11?", options: ["1× €11","3× €4","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null,"Klopt — €11 < €12.","Niet — duurder.","Niet — verschil €1.","Wel — vergelijken."] },
-      { q: "10% korting op €40 = nieuwe prijs?", options: ["€36","€30","€4","€39"], answer: 0, wrongHints: [null,"Klopt — €40−€4.","Niet — 10% niet 25%.","Dat is korting.","Niet — 10% niet 2,5%."] },
-      { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Niet."] },
+      { q: "Een pen kost €1,25. Hoeveel kosten 4 pennen?", options: ["€5,00","€4,80","€5,25","€4,00"], answer: 0, wrongHints: [null, "Te laag — reken nogmaals.", "Te hoog.", "Dat is 4 × €1."] },
+      { q: "Je krijgt €5 zakgeld + €2 verjaardag. Totaal?", options: ["€7","€3","€10","€5"], answer: 0, wrongHints: [null, "Niet — optellen.", "Te veel.", "Geen verjaardag-bonus?"] },
+      { q: "1 sticker kost €0,20. 10 stickers?", options: ["€2,00","€0,20","€20,00","€10"], answer: 0, wrongHints: [null, "Per stuk.", "Komma fout.", "Aantal."] },
+      { q: "Hoeveel cent zit in **€1,75**?", options: ["175","75","17,5","1,75"], answer: 0, wrongHints: [null, "Vergeet 100.", "Niet zo.", "In €."] },
+      { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null, "Niet — 5−4=1 niet 5.", "Niet.", "Komma vergeten."] },
+      { q: "Voordeligst: 3 × €4 OF 1× €11?", options: ["1× €11","3× €4","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — duurder.", "Niet — verschil €1.", "Wel — vergelijken."] },
+      { q: "10% korting op €40 = nieuwe prijs?", options: ["€36","€30","€4","€39"], answer: 0, wrongHints: [null, "Niet — 10% niet 25%.", "Dat is korting.", "Niet — 10% niet 2,5%."] },
+      { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
       { q: "Welke is **goedkoper** per stuk: 3×€6 OF 5×€8?", options: ["3×€6 (€2/stuk)","5×€8 (€1,60/stuk)","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null,"Niet — €1,60 < €2.","Klopt — reken: 8÷5.","Niet — verschil €0,40.","Wel — eenheidsprijs."] },
-      { q: "**€25 ÷ 5** = ?", options: ["€5","€20","€30","€125"], answer: 0, wrongHints: [null,"Klopt — eerlijk delen.","Niet — −, niet ÷.","Niet.","Niet."] },
-      { q: "Je hebt €100. Koopt boek €18 + spel €25. Over?", options: ["€57","€43","€73","€67"], answer: 0, wrongHints: [null,"Klopt — €100−€43.","Dat is uitgaven.","Niet.","Niet."] },
-      { q: "Verjaardagsfeest €120 voor 8 gasten. Per gast?", options: ["€15","€120","€8","€12"], answer: 0, wrongHints: [null,"Klopt.","Totaal.","Aantal.","Niet."] },
-      { q: "Wat is **wisselgeld**?", options: ["Geld terug bij betalen meer dan bedrag","Geld in kassa","Vakantiegeld","Spaargeld"], answer: 0, wrongHints: [null,"Klopt.","Niet specifiek.","Niet relevant.","Niet."] },
-      { q: "BTW 21% op €100 = totaal?", options: ["€121","€21","€100","€79"], answer: 0, wrongHints: [null,"Klopt — €100+€21.","Dat is BTW alleen.","Zonder BTW.","Met korting?"] },
-      { q: "Welke munten heb je nodig voor **€2,75**?", options: ["1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,05","3×€1","2×€2","1×€2,75"], answer: 0, wrongHints: [null,"Klopt — combinatie.","Te veel.","Te veel.","Bestaat niet."] },
-      { q: "Je verdient **€2,50/uur** als oppas. 4 uur = ?", options: ["€10","€8","€12","€2,50"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Per uur."] },
+      { q: "**€25 ÷ 5** = ?", options: ["€5","€20","€30","€125"], answer: 0, wrongHints: [null, "Niet — −, niet ÷.", "Niet.", "Niet."] },
+      { q: "Je hebt €100. Koopt boek €18 + spel €25. Over?", options: ["€57","€43","€73","€67"], answer: 0, wrongHints: [null, "Dat is uitgaven.", "Niet.", "Niet."] },
+      { q: "Verjaardagsfeest €120 voor 8 gasten. Per gast?", options: ["€15","€120","€8","€12"], answer: 0, wrongHints: [null, "Totaal.", "Aantal.", "Niet."] },
+      { q: "Wat is **wisselgeld**?", options: ["Geld terug bij betalen meer dan bedrag","Geld in kassa","Vakantiegeld","Spaargeld"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet relevant.", "Niet."] },
+      { q: "BTW 21% op €100 = totaal?", options: ["€121","€21","€100","€79"], answer: 0, wrongHints: [null, "Dat is BTW alleen.", "Zonder BTW.", "Met korting?"] },
+      { q: "Welke munten heb je nodig voor **€2,75**?", options: ["1×€2 + 1×€0,50 + 1×€0,20 + 1×€0,05","3×€1","2×€2","1×€2,75"], answer: 0, wrongHints: [null, "Te veel.", "Te veel.", "Bestaat niet."] },
+      { q: "Je verdient **€2,50/uur** als oppas. 4 uur = ?", options: ["€10","€8","€12","€2,50"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Per uur."] },
     ],
   },
 ];

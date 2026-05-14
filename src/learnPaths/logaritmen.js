@@ -791,8 +791,8 @@ const steps = [
           niveaus: { basis: "t = 4 · log(0.1)/log(0.5) ≈ 13.3.", simpeler: "Tussen 8 en 16 uur.", nogSimpeler: "≈ 13 uur." },
         },
       },
-      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null,"Klopt — 10³ = 1000.","Niet — dat is 10²=100.","Dat is argument.","Dat is basis."] },
-      { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null,"Klopt — product-naar-som.","Niet.","Andere eigenschap.","Andere eigenschap."] },
+      { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — dat is 10²=100.", "Dat is argument.", "Dat is basis."] },
+      { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Niet.", "Andere eigenschap.", "Andere eigenschap."] },
     ],
   },
 ];

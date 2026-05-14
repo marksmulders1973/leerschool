@@ -567,7 +567,7 @@ const steps = [
         q: "Wat doe je 's **avonds voor de Doorstroomtoets**?",
         options: ["Rustig avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Niets — toets is morgen","Veel coffee drinken om wakker te blijven"],
         answer: 0,
-        wrongHints: [null,"Klopt — uitgerust = beter scoren. Brein heeft slaap nodig om geheugen vast te zetten.","Tegenovergesteld — last-minute werkt averechts, brein moet rusten.","Klopt deels maar 'niets' is te passief — bedoeling is bewust uitrusten.","Cafeïne stoort slaap = brein werkt slechter."],
+        wrongHints: [null, "Tegenovergesteld — last-minute werkt averechts, brein moet rusten.", "Klopt deels maar 'niets' is te passief — bedoeling is bewust uitrusten.", "Cafeïne stoort slaap = brein werkt slechter."],
         uitlegPad: {
           stappen: [
             { titel: "Slaap = brein-prestatie", tekst: "Wetenschappers tonen: **goede nachtrust voor toets** = beter resultaat dan extra studeren. Brein verwerkt geleerde stof tijdens slaap. 10-12-jarigen hebben **9-10 uur** slaap nodig." },
@@ -590,7 +590,7 @@ const steps = [
         q: "Wat doe je bij een **lastige rekenvraag** in de Doorstroomtoets als je echt vast loopt?",
         options: ["Slimme schatting + markeren (later terug)","Lang doorrekenen — moet kloppen","Volgende vraag overslaan zonder iets","Foutief antwoord opzettelijk"],
         answer: 0,
-        wrongHints: [null,"Klopt — schatting + markeer (?) + door, terugkomen als tijd over.","Tijdverlies — kost te veel andere vragen.","Beter: SCHAT + markeer dan helemaal niets.","Onzin — bewust fout is dom."],
+        wrongHints: [null, "Tijdverlies — kost te veel andere vragen.", "Beter: SCHAT + markeer dan helemaal niets.", "Onzin — bewust fout is dom."],
         uitlegPad: {
           stappen: [
             { titel: "De 'schat + markeer + door'-truc", tekst: "Bij lastige vraag (>1 min vast):\n1. **Schat** een redelijk antwoord (vergelijk met opties: welke past qua orde van grootte?)\n2. **Markeer** vraag (rondje om vraag-nummer)\n3. **Ga door** naar volgende\n4. **Kom terug** in laatste 5 minuten als er tijd over is\n\nNooit leeg laten — geschat antwoord = 25% kans op punt vs 0% bij leeg." },
@@ -614,7 +614,7 @@ const steps = [
         q: "Een **multiple-choice vraag** met 4 opties — je weet 2 antwoorden zeker NIET. Wat doe je?",
         options: ["Gok tussen de 2 overgebleven opties","Geef op + laat leeg","Vraag de buurman","Allebei aanvinken"],
         answer: 0,
-        wrongHints: [null,"Klopt — 50% kans op punt is beter dan 0% bij leeg.","Tegenovergesteld — leeg = zeker 0 punt. Gokken = kans.","Niet — dat is spieken, mag niet.","Niet — kan vaak maar 1 optie aanvinken op antwoordblad."],
+        wrongHints: [null, "Tegenovergesteld — leeg = zeker 0 punt. Gokken = kans.", "Niet — dat is spieken, mag niet.", "Niet — kan vaak maar 1 optie aanvinken op antwoordblad."],
         uitlegPad: {
           stappen: [
             { titel: "Eliminatie-strategie", tekst: "Bij meerkeuze 4 opties + je weet 2 zeker fout:\n• Optie 1: gokken tussen overgebleven 2 → **50% kans op punt**\n• Optie 2: leeg laten → **0% kans op punt**\n\nWiskundig: gokken is altijd beter dan leeg laten bij MC-toetsen zonder strafpunten. Bij Doorstroomtoets = geen strafpunten." },
@@ -638,7 +638,7 @@ const steps = [
         q: "Stress vlak voor de toets — wat helpt **direct** om rustig te worden?",
         options: ["Diep ademhalen (4-7-8 techniek)","Veel cafeïne","Klagen tegen klasgenoten","Nog snel studeren"],
         answer: 0,
-        wrongHints: [null,"Klopt — 4 sec inademen, 7 sec vasthouden, 8 sec uitademen. Brein kalmeert.","Tegenovergesteld — cafeïne verhoogt hartslag = meer stress-gevoel.","Niet — stress overdraagbaar op anderen.","Geen tijd meer — vergroot stress."],
+        wrongHints: [null, "Tegenovergesteld — cafeïne verhoogt hartslag = meer stress-gevoel.", "Niet — stress overdraagbaar op anderen.", "Geen tijd meer — vergroot stress."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is examen-stress?", tekst: "**Examen-stress** is normaal — lichaam maakt **adrenaline + cortisol** klaar voor 'vechten of vluchten'. Helpt wel scherp + alert. Te veel = verlamt + concentreert slecht.\n\nSymptomen:\n• Hart bonst snel\n• Zweten handen\n• Maag-gevoel ('vlinders')\n• Gedachten malen\n• Vergeten wat je wist" },
@@ -658,21 +658,21 @@ const steps = [
           niveaus: { basis: "Diep ademen. = A.", simpeler: "Stress vlak voor toets? Doe 4-7-8 ademhaling: 4 sec in, 7 sec vasthouden, 8 sec uit. Kalmeert brein binnen 1 minuut. = A.", nogSimpeler: "Ademhalen = A." },
         },
       },
-      { q: "Wat doe je bij een **moeilijke vraag** in de Doorstroomtoets?", options: ["Skip + later terug","Lang puzzelen","Random gokken zonder eliminatie","Stoppen"], answer: 0, wrongHints: [null,"Klopt — tijd-bescherming.","Verbruikt tijd voor makkelijke.","Eerst eliminatie proberen.","Niet — door."] },
-      { q: "Bij een **meerkeuze-vraag** met 4 opties: hoeveel kans bij gokken zonder eliminatie?", options: ["25%","50%","100%","0%"], answer: 0, wrongHints: [null,"Klopt — 1 op 4.","Bij 2 opties.","Niet — alleen bij weten.","Wel kans."] },
-      { q: "Bij eliminatie van 2 foute opties, hoeveel kans wordt het?", options: ["50%","25%","100%","0%"], answer: 0, wrongHints: [null,"Klopt — 1 van 2 over.","Niet — beter dan dat.","Niet — geen zekerheid.","Wel kans."] },
-      { q: "Wat **niet** doen tijdens Doorstroomtoets?", options: ["Antwoorden vergelijken met buurman","Diep ademhalen","Skippen van moeilijke vraag","Pacing controleren"], answer: 0, wrongHints: [null,"Klopt — spieken = diskwalificatie.","Wel goed.","Wel goed.","Wel goed."] },
-      { q: "Wat is **pacing**?", options: ["Tempo bewaken zodat je op tijd klaar bent","Snel doorbladeren","Stil zitten","Eten"], answer: 0, wrongHints: [null,"Klopt — kijken hoever je bent.","Niet alleen kijken.","Niet relevant.","Niet relevant."] },
-      { q: "Bij **begrijpend lezen-vraag**: wat doe je eerst?", options: ["Vraag lezen, dan tekst doorzoeken","Tekst hardop lezen","Random kiezen","Skippen"], answer: 0, wrongHints: [null,"Klopt — gerichter lezen.","Te traag.","Niet — denk na.","Eerst proberen."] },
-      { q: "Bij **rekensom met %**: wat doe je eerst?", options: ["Lezen wat gevraagd wordt","Direct rekenen","Antwoord raden","Stoppen"], answer: 0, wrongHints: [null,"Klopt — context begrijpen.","Niet zonder vraag goed te begrijpen.","Eerst proberen.","Doorgaan."] },
-      { q: "Welke **nacht** voor de toets is belangrijk?", options: ["Goed slapen","Tot laat leren","Tot laat gamen","Niet eten"], answer: 0, wrongHints: [null,"Klopt — bewezen prestatie-boost.","Niet — overmatig leren werkt slecht.","Vermoeidheid.","Energie nodig."] },
-      { q: "Wat eet je voor de toets?", options: ["Goed ontbijt (volkorenbrood/fruit)","Niets","Veel suiker","Energy-drink"], answer: 0, wrongHints: [null,"Klopt — energie voor uren.","Niet — laag energie.","Crash later.","Te veel cafeïne."] },
-      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies de eerste ingeving en ga door","Lang twijfelen","Beide aanstrepen","Niet kiezen"], answer: 0, wrongHints: [null,"Klopt — bewezen vaak goed.","Tijd weg.","Werkt niet.","Verlies."] },
-      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt","Vraag over touw","Vraag over magie","Geen vraag"], answer: 0, wrongHints: [null,"Klopt — lezen lezen lezen.","Niet relevant.","Niet relevant.","Wel vraag."] },
-      { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","Sla over","Random","Stop"], answer: 0, wrongHints: [null,"Klopt — anders verkeerde optie.","Niet zomaar.","Risico.","Niet — doorgaan."] },
-      { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw","Niet — eerste poging is altijd goed","Vraag aan buurman","Random aanpassen"], answer: 0, wrongHints: [null,"Klopt — 2e check pakt fouten.","Niet altijd.","Niet — spieken.","Slechtste manier."] },
-      { q: "Wat is een **mind-blank** tijdens toets?", options: ["Tijdelijk niet meer weten — diep ademhalen helpt","Defect papier","Stroomstoring","Eind toets"], answer: 0, wrongHints: [null,"Klopt — normaal, gaat over.","Niet relevant.","Niet relevant.","Niet relevant."] },
-      { q: "Bij **groep 8** Doorstroomtoets gaat over?", options: ["Taal + rekenen + studievaardigheden","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null,"Klopt — 3 pijlers.","Niet alleen rekenen.","Niet hoofdvak.","Geen Engels-onderdeel."] },
+      { q: "Wat doe je bij een **moeilijke vraag** in de Doorstroomtoets?", options: ["Skip + later terug","Lang puzzelen","Random gokken zonder eliminatie","Stoppen"], answer: 0, wrongHints: [null, "Verbruikt tijd voor makkelijke.", "Eerst eliminatie proberen.", "Niet — door."] },
+      { q: "Bij een **meerkeuze-vraag** met 4 opties: hoeveel kans bij gokken zonder eliminatie?", options: ["25%","50%","100%","0%"], answer: 0, wrongHints: [null, "Bij 2 opties.", "Niet — alleen bij weten.", "Wel kans."] },
+      { q: "Bij eliminatie van 2 foute opties, hoeveel kans wordt het?", options: ["50%","25%","100%","0%"], answer: 0, wrongHints: [null, "Niet — beter dan dat.", "Niet — geen zekerheid.", "Wel kans."] },
+      { q: "Wat **niet** doen tijdens Doorstroomtoets?", options: ["Antwoorden vergelijken met buurman","Diep ademhalen","Skippen van moeilijke vraag","Pacing controleren"], answer: 0, wrongHints: [null, "Wel goed.", "Wel goed.", "Wel goed."] },
+      { q: "Wat is **pacing**?", options: ["Tempo bewaken zodat je op tijd klaar bent","Snel doorbladeren","Stil zitten","Eten"], answer: 0, wrongHints: [null, "Niet alleen kijken.", "Niet relevant.", "Niet relevant."] },
+      { q: "Bij **begrijpend lezen-vraag**: wat doe je eerst?", options: ["Vraag lezen, dan tekst doorzoeken","Tekst hardop lezen","Random kiezen","Skippen"], answer: 0, wrongHints: [null, "Te traag.", "Niet — denk na.", "Eerst proberen."] },
+      { q: "Bij **rekensom met %**: wat doe je eerst?", options: ["Lezen wat gevraagd wordt","Direct rekenen","Antwoord raden","Stoppen"], answer: 0, wrongHints: [null, "Niet zonder vraag goed te begrijpen.", "Eerst proberen.", "Doorgaan."] },
+      { q: "Welke **nacht** voor de toets is belangrijk?", options: ["Goed slapen","Tot laat leren","Tot laat gamen","Niet eten"], answer: 0, wrongHints: [null, "Niet — overmatig leren werkt slecht.", "Vermoeidheid.", "Energie nodig."] },
+      { q: "Wat eet je voor de toets?", options: ["Goed ontbijt (volkorenbrood/fruit)","Niets","Veel suiker","Energy-drink"], answer: 0, wrongHints: [null, "Niet — laag energie.", "Crash later.", "Te veel cafeïne."] },
+      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies de eerste ingeving en ga door","Lang twijfelen","Beide aanstrepen","Niet kiezen"], answer: 0, wrongHints: [null, "Tijd weg.", "Werkt niet.", "Verlies."] },
+      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt","Vraag over touw","Vraag over magie","Geen vraag"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet relevant.", "Wel vraag."] },
+      { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","Sla over","Random","Stop"], answer: 0, wrongHints: [null, "Niet zomaar.", "Risico.", "Niet — doorgaan."] },
+      { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw","Niet — eerste poging is altijd goed","Vraag aan buurman","Random aanpassen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet — spieken.", "Slechtste manier."] },
+      { q: "Wat is een **mind-blank** tijdens toets?", options: ["Tijdelijk niet meer weten — diep ademhalen helpt","Defect papier","Stroomstoring","Eind toets"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."] },
+      { q: "Bij **groep 8** Doorstroomtoets gaat over?", options: ["Taal + rekenen + studievaardigheden","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null, "Niet alleen rekenen.", "Niet hoofdvak.", "Geen Engels-onderdeel."] },
     ],
   },
 ];

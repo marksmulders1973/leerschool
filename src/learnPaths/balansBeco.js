@@ -559,7 +559,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat staat aan de **DEBET-kant** van een balans?",
         options: ["Bezittingen (activa)","Schulden","Winst","Inkomen"],
         answer: 0,
-        wrongHints: [null,"Klopt — debet = links = wat bedrijf bezit.","Niet — schulden = credit (rechts).","Niet — winst = onderdeel eigen vermogen, credit-kant.","Niet — inkomen staat op winst-en-verliesrekening, niet balans."],
+        wrongHints: [null, "Niet — schulden = credit (rechts).", "Niet — winst = onderdeel eigen vermogen, credit-kant.", "Niet — inkomen staat op winst-en-verliesrekening, niet balans."],
         uitlegPad: {
           stappen: [
             { titel: "Balans-structuur", tekst: "Een **balans** heeft 2 kanten:\n• **Debet (links)** = **bezittingen** (activa): gebouwen, voorraad, geld in kas, auto's, computers\n• **Credit (rechts)** = **eigen vermogen + schulden** (passiva): kapitaal eigenaar + leningen + crediteuren\n\n**Regel**: debet = credit (altijd in evenwicht). Vandaar 'balans'." },
@@ -584,7 +584,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat is **liquiditeit**?",
         options: ["Snel kunnen omzetten naar geld (kas + bank)","Hoeveelheid winst","Hoeveel je verdient","Tijd op kantoor"],
         answer: 0,
-        wrongHints: [null,"Klopt — kas + bankrekening = direct beschikbaar.","Niet — dat is winst.","Niet — dat is inkomen.","Niet — geen tijd-meting."],
+        wrongHints: [null, "Niet — dat is winst.", "Niet — dat is inkomen.", "Niet — geen tijd-meting."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
@@ -608,7 +608,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat is **afschrijven** (boekhoudkundig)?",
         options: ["Waarde-vermindering vaste activa over levensduur","Iets weggooien","Korting","Belasting"],
         answer: 0,
-        wrongHints: [null,"Klopt — auto/machine/computer verliezen waarde over jaren — boekhoudkundig afschrijven.","Niet — dat is afvoeren, andere term.","Niet — korting is iets anders.","Niet — wel mag afschrijving belastbaar zijn."],
+        wrongHints: [null, "Niet — dat is afvoeren, andere term.", "Niet — korting is iets anders.", "Niet — wel mag afschrijving belastbaar zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is afschrijven?", tekst: "**Afschrijven** = de **waarde van een vast actief (auto, machine, gebouw) over de jaren verlagen** op de balans. Reden: deze spullen slijten + verouderen.\n\nVoorbeeld: bedrijf koopt **vrachtwagen €60.000**, gebruikt 6 jaar:\n• Afschrijving: €60.000 ÷ 6 jaar = **€10.000/jaar**\n• Jaar 1 op balans: €50.000\n• Jaar 2: €40.000\n• ...\n• Jaar 6: €0 (boekwaarde)" },

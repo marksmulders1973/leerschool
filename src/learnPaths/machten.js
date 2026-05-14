@@ -606,7 +606,7 @@ const steps = [
           niveaus: { basis: "a⁸b¹². A.", simpeler: "(a²)⁴ = a⁸, (b³)⁴ = b¹². Antwoord a⁸b¹² = A.", nogSimpeler: "a⁸b¹² = A." },
         },
       },
-      { q: "2³ = ?", options: ["8","6","9","5"], answer: 0, wrongHints: [null,"Klopt — 2×2×2.","Niet — niet 2×3.","Dat is 3².","Niet."] },
+      { q: "2³ = ?", options: ["8","6","9","5"], answer: 0, wrongHints: [null, "Niet — niet 2×3.", "Dat is 3².", "Niet."] },
     ],
   },
 ];

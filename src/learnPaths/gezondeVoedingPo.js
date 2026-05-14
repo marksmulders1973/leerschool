@@ -20,7 +20,7 @@ const steps = [
         q: "Waarvoor zijn **eiwitten** vooral?",
         options: ["Groei + spieren + reparatie", "Energie", "Vitamines", "Water"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Koolhydraten/vetten.", "Niet eiwit.", "Niet voeding."],
+        wrongHints: [null, "Koolhydraten/vetten.", "Niet eiwit.", "Niet voeding."],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofd-voedingsstoffen", tekst: "Eten heeft 3 grote stof-groepen: koolhydraten (energie), eiwitten (bouwen), vetten (reserve + cel-bouw)." },
@@ -49,7 +49,7 @@ const steps = [
         q: "Hoeveel **water** per dag drinken?",
         options: ["1,5-2 liter", "Geen", "5 liter", "100 ml"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Wel nodig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Wel nodig.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom water belangrijk is", tekst: "Je lichaam bestaat voor **60% uit water**. Elke dag verlies je water (plassen, zweten, ademen). Dat moet je aanvullen — anders krijg je dorst, hoofdpijn en moeheid." },
@@ -77,13 +77,13 @@ const steps = [
         q: "Wat heeft **vezels**?",
         options: ["Volkoren + groente", "Snoep", "Frisdrank", "Boter"],
         answer: 0,
-        wrongHints: [null, "Klopt — voor darmen.", "Geen.", "Geen.", "Geen."],
+        wrongHints: [null, "Geen.", "Geen.", "Geen."],
       },
       {
         q: "Welke vitamine vooral uit **zon**?",
         options: ["Vitamine D", "C", "A", "K"],
         answer: 0,
-        wrongHints: [null, "Klopt — in NL winter supplement.", "Sinaasappel.", "Wortel.", "Greens."],
+        wrongHints: [null, "Sinaasappel.", "Wortel.", "Greens."],
         uitlegPad: {
           stappen: [
             { titel: "Vitamines = mini-helpers", tekst: "Vitamines zijn kleine stoffen die je lichaam nodig heeft om goed te werken. Elke vitamine heeft een eigen taak." },
@@ -119,7 +119,7 @@ const steps = [
         q: "Hoeveel **groente** per dag?",
         options: ["250 gram", "1 kilo", "10 gram", "Geen aanbeveling"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te veel.", "Te weinig.", "Wel."],
+        wrongHints: [null, "Te veel.", "Te weinig.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Schijf van Vijf-advies", tekst: "Het Voedingscentrum (Nederlandse instantie) geeft per dag aanbevelingen. Voor groente: **250 gram per dag**." },
@@ -147,19 +147,19 @@ const steps = [
         q: "Hoeveel **vis per week**?",
         options: ["1 keer (omega-3)", "Elke dag", "Nooit", "Maandelijks"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te veel.", "Wel goed.", "Te weinig."],
+        wrongHints: [null, "Te veel.", "Wel goed.", "Te weinig."],
       },
       {
         q: "**Belangrijkste maaltijd**?",
         options: ["Ontbijt (energie voor school)", "Lunch", "Diner", "Snack"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Ook belangrijk maar specifiek dit.", "Niet eerst.", "Niet hoofdmaal."],
+        wrongHints: [null, "Ook belangrijk maar specifiek dit.", "Niet eerst.", "Niet hoofdmaal."],
       },
       {
         q: "Wat is **vegetarisch**?",
         options: ["Geen vlees + vis (wel zuivel + ei)", "Geen alles", "Alleen brood", "Niet bestaand"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Veganist.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Veganist.", "Niet specifiek.", "Wel."],
       },
     ],
   },
@@ -172,7 +172,7 @@ const steps = [
         q: "Hoeveel **suiker** max per dag (WHO kind)?",
         options: ["25 g", "100 g", "0 g", "1 kilo"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 frisdrank = al boven.", "Te veel.", "Te streng.", "Onmogelijk."],
+        wrongHints: [null, "Te veel.", "Te streng.", "Onmogelijk."],
         uitlegPad: {
           stappen: [
             { titel: "WHO-advies: 25 gram suiker per dag", tekst: "De **WHO** (Wereldgezondheidsorganisatie) adviseert voor kinderen maximaal **25 gram toegevoegde suiker** per dag. Dat is ongeveer **6 suikerklontjes**." },
@@ -200,19 +200,19 @@ const steps = [
         q: "Hoeveel **alcohol** onder 18?",
         options: ["0,0 (verboden)", "1 glas", "Veel", "Geen regel"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "Niet.", "Niet.", "Wel."],
       },
       {
         q: "1 glas frisdrank = **hoeveel suikerklontjes**?",
         options: ["~7", "1", "0", "100"],
         answer: 0,
-        wrongHints: [null, "Klopt — veel.", "Te weinig.", "Wel suiker.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Wel suiker.", "Te veel."],
       },
       {
         q: "**Beweegnorm** kind per dag?",
         options: ["1 uur bewegen", "Niets", "8 uur", "5 minuten"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Slecht.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Slecht.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de beweegnorm?", tekst: "De **Gezondheidsraad** in NL stelt: kinderen moeten **minstens 1 uur per dag matig tot intensief bewegen**. Dat geldt voor 4-18 jarigen." },
@@ -243,17 +243,17 @@ const steps = [
     title: "Eind-toets — voeding mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
-      { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Klopt.", "Wel.", "Te veel.", "Te weinig."] },
-      { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klopt.", "Klein.", "Buiten schijf.", "Buiten schijf."] },
-      { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Niet bestaand"], answer: 0, wrongHints: [null, "Klopt.", "Vegetariër.", "Tegenovergesteld.", "Wel."] },
-      { q: "Wat is **goed vet**?", options: ["Olijfolie + noten + avocado", "Frituur", "Boter alleen", "Geen vet"], answer: 0, wrongHints: [null, "Klopt.", "Slecht.", "Niet alleen.", "Wel nodig."] },
-      { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Klopt.", "Koolhydraat.", "Niet.", "Niet."] },
+      { q: "Waar zit **vitamine C** vooral?", options: ["Sinaasappel + paprika", "Vlees", "Boter", "Suiker"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoeveel **water** per dag?", options: ["1,5-2 liter", "Geen", "5 L", "100 ml"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te weinig."] },
+      { q: "Wat in **Schijf van Vijf** moet het meest?", options: ["Groente + fruit", "Vet", "Snoep", "Frisdrank"], answer: 0, wrongHints: [null, "Klein.", "Buiten schijf.", "Buiten schijf."] },
+      { q: "**Veganistisch** = ?", options: ["Geen dierlijke producten", "Geen vlees alleen", "Alleen vlees", "Niet bestaand"], answer: 0, wrongHints: [null, "Vegetariër.", "Tegenovergesteld.", "Wel."] },
+      { q: "Wat is **goed vet**?", options: ["Olijfolie + noten + avocado", "Frituur", "Boter alleen", "Geen vet"], answer: 0, wrongHints: [null, "Slecht.", "Niet alleen.", "Wel nodig."] },
+      { q: "**Eiwitten** vooral voor?", options: ["Groei + spieren", "Snelle energie", "Water", "Vitamine"], answer: 0, wrongHints: [null, "Koolhydraat.", "Niet.", "Niet."] },
       {
         q: "Een **gemiddeld ontbijt** voor groep 7-8 zou bestaan uit?",
         options: ["Volkoren brood + kaas/beleg + fruit + melk", "Frietjes + frisdrank", "Niks — overslaan", "Alleen koek"],
         answer: 0,
-        wrongHints: [null, "Klopt — combinatie koolhydraten + eiwit + fruit + vocht.", "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt-overslaan = minder concentratie school.", "Te eenzijdig — alleen suiker, geen eiwit/fiber."],
+        wrongHints: [null, "Geen ontbijt-voedsel — energie te kort + suiker-piek.", "Onderzoek toont: ontbijt-overslaan = minder concentratie school.", "Te eenzijdig — alleen suiker, geen eiwit/fiber."],
         uitlegPad: {
           stappen: [
             { titel: "Goed ontbijt = balans", tekst: "**Koolhydraten** (energie) + **eiwit** (verzadiging) + **vitaminen** (fruit) + **vocht** (melk/water) = goed ontbijt. Geeft langzame energie tot pauze." },
@@ -277,7 +277,7 @@ const steps = [
         q: "**'Light'-producten** zijn altijd gezond — waar of niet?",
         options: ["Niet waar — vaak meer zoetstof of toevoegingen", "Altijd waar — minder calorieën = gezonder", "Waar voor diabetici", "Verboden in NL"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'light' = minder van iets (suiker/vet) maar vaak vervangen door zoetstof/zout.", "Marketing-claim — 'light' is GEEN gezondheidsgarantie.", "Niet automatisch geldig — context-afhankelijk.", "Niet — gewoon in supermarkt."],
+        wrongHints: [null, "Marketing-claim — 'light' is GEEN gezondheidsgarantie.", "Niet automatisch geldig — context-afhankelijk.", "Niet — gewoon in supermarkt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'light'?", tekst: "**Light**-product moet wettelijk **minstens 30% minder** van iets (suiker, vet, calorieën, zout) bevatten dan het normale product. **Maar**: vaak vervangen door zoetstof, zout, of meer vet als suiker wordt geschrapt." },
@@ -302,7 +302,7 @@ const steps = [
         q: "**Diabetes type 2** kan voorkomen worden door?",
         options: ["Gezond eten + bewegen + niet roken", "Veel suiker eten als kind", "Geen vlees eten", "Niets — erfelijk"],
         answer: 0,
-        wrongHints: [null, "Klopt — leefstijl beïnvloedt 80%+ van type-2-diabetes-risico.", "Tegenovergesteld — veel suiker verhoogt risico.", "Niet alleen — diëten zelf is niet beschermend.", "Type 1 deels erfelijk, type 2 vooral leefstijl."],
+        wrongHints: [null, "Tegenovergesteld — veel suiker verhoogt risico.", "Niet alleen — diëten zelf is niet beschermend.", "Type 1 deels erfelijk, type 2 vooral leefstijl."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is diabetes type 2?", tekst: "**Diabetes type 2** = lichaam reageert niet goed meer op **insuline** (hormoon dat suiker uit bloed haalt). Bloedsuiker te hoog → schade aan ogen, nieren, hart. **Komt vaak voor bij volwassenen** maar steeds vaker bij kinderen (overgewicht-gerelateerd)." },
@@ -323,25 +323,25 @@ const steps = [
           niveaus: { basis: "Leefstijl. = A.", simpeler: "Gezond eten + bewegen + niet roken voorkomt type-2-diabetes voor 80%+. = A.", nogSimpeler: "Leefstijl = A." },
         },
       },
-      { q: "Hoeveel **groente** per dag is aanbevolen (Schijf van Vijf)?", options: ["250 gram","50 gram","1 kilo","Geen norm"], answer: 0, wrongHints: [null,"Klopt — ~2 stuks groente.","Veel te weinig.","Veel te veel.","Wel — Voedingscentrum norm."] },
-      { q: "Welke voedingsstof geeft je **energie** voor het dagelijks bewegen?", options: ["Koolhydraten","Vitamine C","Calcium","IJzer"], answer: 0, wrongHints: [null,"Klopt — brood, pasta, rijst.","Niet primair energie.","Bouwstof voor botten.","Bloed-bouwstof."] },
-      { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar","Iedereen onder 21","Alleen kinderen","Bestuurders"], answer: 0, wrongHints: [null,"Klopt — sinds 2014.","Niet in NL.","Tot 18 jaar.","Wel maar niet alleen."] },
-      { q: "Hoeveel **suiker** per dag is max-norm (WHO)?", options: ["~25 gram (6 tl)","100 gram","250 gram","Geen norm"], answer: 0, wrongHints: [null,"Klopt — 1 cola = ±35g!","Te veel — krijg je snel binnen.","Veel te veel.","Wel — WHO norm."] },
-      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor","1","10","Geen norm"], answer: 0, wrongHints: [null,"Klopt — Voedingscentrum.","Te weinig.","Te veel.","Wel."] },
-      { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren (groente/fruit)","Bruin alleen","Wit alleen","Alles geel"], answer: 0, wrongHints: [null,"Klopt.","Vezelarm.","Vezelarm.","Niet."] },
-      { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)","Verzadigd (chips)","Geen vet eten","Friet"], answer: 0, wrongHints: [null,"Klopt — omega-3.","Niet primair gezond.","Niet — wel iets nodig.","Niet."] },
-      { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen","Energie","Stollen","Zien"], answer: 0, wrongHints: [null,"Klopt.","Koolhydraten.","Bloedplaatjes.","Vitamine A."] },
-      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null,"Klopt — botten.","Niet.","Niet.","Niet."] },
-      { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika","Brood","Patat","Vlees"], answer: 0, wrongHints: [null,"Klopt.","Niet primair.","Niet.","Niet primair."] },
-      { q: "Hoeveel **fruit** per dag (Schijf van Vijf)?", options: ["2 stuks","1 stuk","5 stuks","10 stuks"], answer: 0, wrongHints: [null,"Klopt — ~200 g.","Te weinig.","Te veel.","Veel te veel."] },
-      { q: "**Vegetarisch** eten betekent?", options: ["Geen vlees + vis","Geen suiker","Niets","Alleen plantaardig"], answer: 0, wrongHints: [null,"Klopt — wel zuivel/eieren.","Niet specifiek.","Wel iets.","Veganistisch."] },
-      { q: "**Veganistisch** eten?", options: ["Geen dierlijke producten","Geen vis","Geen vlees","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — strikter dan vegetarisch.","Niet alleen vis.","Vegetarisch.","Wel."] },
-      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel","Snoep","Niets","Alleen drinken"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Verkeerd start.","Onvoldoende."] },
-      { q: "Wat doet **water drinken**?", options: ["Hydrateert + dorst stillen","Niets","Maakt zwaar","Schaadt"], answer: 0, wrongHints: [null,"Klopt.","Wel iets.","Niet.","Niet."] },
-      { q: "Wat is **vezel**?", options: ["Onverteerbaar plantmateriaal — goed voor darmen","Suiker","Vet","Niet relevant"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Wel."] },
-      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkoren + groenten","Wit brood","Snoep","Frisdrank"], answer: 0, wrongHints: [null,"Klopt.","Vezelarm.","Geen vezels.","Geen."] },
-      { q: "Hoeveel **lichaamsbeweging** per dag?", options: ["~1 uur","5 min","Geen","8 uur"], answer: 0, wrongHints: [null,"Klopt — Voedingscentrum.","Te weinig.","Niet gezond.","Te veel."] },
-      { q: "**Bewerkt voedsel** is meestal?", options: ["Meer toegevoegde zout/suiker","Gezonder","Goedkoper","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — minder gezond.","Tegengestelde.","Niet primair.","Wel."] },
+      { q: "Hoeveel **groente** per dag is aanbevolen (Schijf van Vijf)?", options: ["250 gram","50 gram","1 kilo","Geen norm"], answer: 0, wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Wel — Voedingscentrum norm."] },
+      { q: "Welke voedingsstof geeft je **energie** voor het dagelijks bewegen?", options: ["Koolhydraten","Vitamine C","Calcium","IJzer"], answer: 0, wrongHints: [null, "Niet primair energie.", "Bouwstof voor botten.", "Bloed-bouwstof."] },
+      { q: "Voor wie geldt **0,0 alcohol** wettelijk?", options: ["Iedereen onder 18 jaar","Iedereen onder 21","Alleen kinderen","Bestuurders"], answer: 0, wrongHints: [null, "Niet in NL.", "Tot 18 jaar.", "Wel maar niet alleen."] },
+      { q: "Hoeveel **suiker** per dag is max-norm (WHO)?", options: ["~25 gram (6 tl)","100 gram","250 gram","Geen norm"], answer: 0, wrongHints: [null, "Te veel — krijg je snel binnen.", "Veel te veel.", "Wel — WHO norm."] },
+      { q: "Hoeveel **maaltijden** per dag is gezond?", options: ["3 hoofdmaaltijden + 2-3 tussendoor","1","10","Geen norm"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
+      { q: "Welke **kleur** zou een gezond bord moeten zijn?", options: ["Veel kleuren (groente/fruit)","Bruin alleen","Wit alleen","Alles geel"], answer: 0, wrongHints: [null, "Vezelarm.", "Vezelarm.", "Niet."] },
+      { q: "Welk type **vet** is gezond?", options: ["Onverzadigd (vis, noten, olijfolie)","Verzadigd (chips)","Geen vet eten","Friet"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Niet — wel iets nodig.", "Niet."] },
+      { q: "Wat is **eiwit** vooral voor?", options: ["Spieren/cellen bouwen","Energie","Stollen","Zien"], answer: 0, wrongHints: [null, "Koolhydraten.", "Bloedplaatjes.", "Vitamine A."] },
+      { q: "Welke voeding heeft veel **calcium**?", options: ["Melk + zuivel","Chips","Cola","Snoep"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke voeding heeft **vitamine C**?", options: ["Sinaasappel/paprika","Brood","Patat","Vlees"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet primair."] },
+      { q: "Hoeveel **fruit** per dag (Schijf van Vijf)?", options: ["2 stuks","1 stuk","5 stuks","10 stuks"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
+      { q: "**Vegetarisch** eten betekent?", options: ["Geen vlees + vis","Geen suiker","Niets","Alleen plantaardig"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel iets.", "Veganistisch."] },
+      { q: "**Veganistisch** eten?", options: ["Geen dierlijke producten","Geen vis","Geen vlees","Niet relevant"], answer: 0, wrongHints: [null, "Niet alleen vis.", "Vegetarisch.", "Wel."] },
+      { q: "Wat is **gezond ontbijt**?", options: ["Volkoren + fruit + zuivel","Snoep","Niets","Alleen drinken"], answer: 0, wrongHints: [null, "Niet.", "Verkeerd start.", "Onvoldoende."] },
+      { q: "Wat doet **water drinken**?", options: ["Hydrateert + dorst stillen","Niets","Maakt zwaar","Schaadt"], answer: 0, wrongHints: [null, "Wel iets.", "Niet.", "Niet."] },
+      { q: "Wat is **vezel**?", options: ["Onverteerbaar plantmateriaal — goed voor darmen","Suiker","Vet","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welke voeding heeft veel **vezels**?", options: ["Volkoren + groenten","Wit brood","Snoep","Frisdrank"], answer: 0, wrongHints: [null, "Vezelarm.", "Geen vezels.", "Geen."] },
+      { q: "Hoeveel **lichaamsbeweging** per dag?", options: ["~1 uur","5 min","Geen","8 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Niet gezond.", "Te veel."] },
+      { q: "**Bewerkt voedsel** is meestal?", options: ["Meer toegevoegde zout/suiker","Gezonder","Goedkoper","Niet relevant"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet primair.", "Wel."] },
     ],
   },
 ];

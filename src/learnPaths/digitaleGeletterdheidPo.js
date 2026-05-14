@@ -20,7 +20,7 @@ const steps = [
         q: "Wat is **CPU**?",
         options: ["Processor (brein van computer)", "Geheugen", "Scherm", "Internet"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "RAM.", "Niet.", "Niet."],
+        wrongHints: [null, "RAM.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent CPU?", tekst: "**CPU** is de afkorting van **Central Processing Unit** (Centrale Verwerkings-Eenheid). Het is het 'brein' van de computer — de chip die alle berekeningen doet." },
@@ -49,13 +49,13 @@ const steps = [
         q: "Wie bedacht het **World Wide Web** (1989)?",
         options: ["Tim Berners-Lee (CERN)", "Bill Gates", "Steve Jobs", "Mark Zuckerberg"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Microsoft.", "Apple.", "Facebook."],
+        wrongHints: [null, "Microsoft.", "Apple.", "Facebook."],
       },
       {
         q: "Wat is **HTTPS**?",
         options: ["Beveiligde versie van HTTP (slot-icoontje)", "Browser", "Server", "Bestand"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet primair.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "HTTPS = HTTP + Secure", tekst: "**HTTPS** is de BEVEILIGDE versie van **HTTP** (HyperText Transfer Protocol). De 'S' staat voor **Secure** (= veilig). Wordt overal op moderne websites gebruikt." },
@@ -83,7 +83,7 @@ const steps = [
         q: "Wat is **ChatGPT**?",
         options: ["AI die tekst maakt + vragen beantwoordt", "Spel", "Browser", "Wifi"],
         answer: 0,
-        wrongHints: [null, "Klopt — sinds 2022.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is ChatGPT?", tekst: "**ChatGPT** is een **AI-chatbot** (Artificial Intelligence = kunstmatige intelligentie). Je typt een vraag, ChatGPT geeft antwoord in mensentaal — alsof je met iemand chat." },
@@ -120,13 +120,13 @@ const steps = [
         q: "Hoe **exacte zin** zoeken in Google?",
         options: ["Met aanhalingstekens 'zin'", "Hoofdletters", "Veel spaties", "Niet mogelijk"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Maakt niets uit.", "Niet.", "Wel mogelijk."],
+        wrongHints: [null, "Maakt niets uit.", "Niet.", "Wel mogelijk."],
       },
       {
         q: "Welke bron is meestal **betrouwbaar**?",
         options: ["Rijksoverheid + wetenschapsuniversiteit", "TikTok-influencer", "AI zonder check", "Onbekende blog"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet primair.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Niet alle bronnen even goed", tekst: "Op internet kan IEDEREEN iets publiceren. Daarom moet je leren WIE iets heeft geschreven en of die persoon kennis van zaken heeft." },
@@ -154,13 +154,13 @@ const steps = [
         q: "Wat is **kruis-controleren**?",
         options: ["2-3 onafhankelijke bronnen vergelijken", "Eén keer kijken", "Niet vragen", "Gokken"],
         answer: 0,
-        wrongHints: [null, "Klopt — feit-check.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet."],
       },
       {
         q: "Wat is **AI-hallucinatie**?",
         options: ["AI verzint feiten die niet kloppen", "AI is moe", "Beeld", "Geluid"],
         answer: 0,
-        wrongHints: [null, "Klopt — daarom controleren.", "Niet menselijk.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Niet menselijk.", "Niet primair.", "Niet."],
       },
     ],
   },
@@ -173,7 +173,7 @@ const steps = [
         q: "Welk **wachtwoord** is sterk?",
         options: ["Mijn-kat-eet-graag-vis-2024!", "123456", "password", "Je naam"],
         answer: 0,
-        wrongHints: [null, "Klopt — lang + mix.", "Heel slecht.", "Top-slecht.", "Niet."],
+        wrongHints: [null, "Heel slecht.", "Top-slecht.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat maakt een wachtwoord sterk?", tekst: "Een sterk wachtwoord is:\n• **Lang** (min. 12 tekens, liefst meer)\n• **Mix** van hoofdletters, kleine letters, cijfers, leestekens\n• **Niet je naam, geboortedatum** of huisdier\n• **Anders per site**." },
@@ -202,7 +202,7 @@ const steps = [
         q: "Wat is **phishing**?",
         options: ["Nep-email om gegevens te stelen", "Spel", "Vis vangen", "Soort virus"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Letterlijk niet.", "Bij sommige varianten."],
+        wrongHints: [null, "Niet.", "Letterlijk niet.", "Bij sommige varianten."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is phishing?", tekst: "**Phishing** = 'hengelen' (visserij in Engels) naar persoonlijke gegevens. Een **nep-email**, **nep-sms** of **nep-website** doet alsof het van je bank, postNL of school is — maar is van een **oplichter**." },
@@ -230,13 +230,13 @@ const steps = [
         q: "Wat is **2FA / twee-staps-verificatie**?",
         options: ["Tweede check (sms-code) bij inlog", "2 wachtwoorden", "Niets", "Adres-check"],
         answer: 0,
-        wrongHints: [null, "Klopt — extra slot.", "Niet primair.", "Wel iets.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Wel iets.", "Niet."],
       },
       {
         q: "**Screen-tijd advies** kind 6-12 jaar?",
         options: ["~2 uur entertainment per dag", "Geen", "8+ uur", "Onbeperkt"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Niet."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Niet."],
       },
     ],
   },
@@ -244,17 +244,17 @@ const steps = [
     title: "Eind-toets — digitaal mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**HTTPS** = ?", options: ["Beveiligd internet (slot-icoontje)", "Browser", "Server", "Bestand"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."] },
-      { q: "Wie bedacht **WWW**?", options: ["Tim Berners-Lee", "Gates", "Jobs", "Zuckerberg"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
-      { q: "Welk **wachtwoord** is goed?", options: ["Mijn-kat-eet-vis-2024!", "12345", "naam", "Wachtwoord"], answer: 0, wrongHints: [null, "Klopt.", "Slecht.", "Slecht.", "Slecht."] },
-      { q: "Wat is **AI-hallucinatie**?", options: ["AI verzint feiten", "AI slaapt", "Beeld", "Goed nieuws"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet primair.", "Niet."] },
-      { q: "Wat is **AVG**?", options: ["EU-privacy-wet sinds 2018", "Belasting", "Bank", "School"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
-      { q: "Wat doe je bij **cyberpesten**?", options: ["Screenshot + blokkeren + volwassene", "Negeren", "Terug-pesten", "Niet vertellen"], answer: 0, wrongHints: [null, "Klopt.", "Niet altijd genoeg.", "Maakt erger.", "Wel praten."] },
+      { q: "**HTTPS** = ?", options: ["Beveiligd internet (slot-icoontje)", "Browser", "Server", "Bestand"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
+      { q: "Wie bedacht **WWW**?", options: ["Tim Berners-Lee", "Gates", "Jobs", "Zuckerberg"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welk **wachtwoord** is goed?", options: ["Mijn-kat-eet-vis-2024!", "12345", "naam", "Wachtwoord"], answer: 0, wrongHints: [null, "Slecht.", "Slecht.", "Slecht."] },
+      { q: "Wat is **AI-hallucinatie**?", options: ["AI verzint feiten", "AI slaapt", "Beeld", "Goed nieuws"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
+      { q: "Wat is **AVG**?", options: ["EU-privacy-wet sinds 2018", "Belasting", "Bank", "School"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat doe je bij **cyberpesten**?", options: ["Screenshot + blokkeren + volwassene", "Negeren", "Terug-pesten", "Niet vertellen"], answer: 0, wrongHints: [null, "Niet altijd genoeg.", "Maakt erger.", "Wel praten."] },
       {
         q: "Wat is een **phishing-mail**?",
         options: ["Nep-mail die wachtwoord/bankgegevens probeert te stelen", "Reclamemail van winkel", "Mail van leraar", "Spam met grappen"],
         answer: 0,
-        wrongHints: [null, "Klopt — doet zich voor als bank/Postnl/Belastingdienst maar is nep.", "Reclamemail = vervelend maar geen oplichting.", "Echte mail = geen phishing.", "Spam is irritant maar niet altijd oplichting."],
+        wrongHints: [null, "Reclamemail = vervelend maar geen oplichting.", "Echte mail = geen phishing.", "Spam is irritant maar niet altijd oplichting."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is phishing?", tekst: "**Phishing** komt van **'fishing'** (vissen) — oplichters proberen jouw gegevens 'te vissen'. Ze sturen een **nep-mail** of **nep-SMS** die er echt uitziet (lijkt op je bank, Postnl, school). Klik je op de link en vul je gegevens in → die gaan naar criminelen." },
@@ -279,7 +279,7 @@ const steps = [
         q: "Wat is een **cookie** op internet?",
         options: ["Klein bestandje dat website op je computer zet om je te herkennen", "Snoepje", "Virus", "Wachtwoord"],
         answer: 0,
-        wrongHints: [null, "Klopt — bestandje dat info onthoudt (taal, login-status, voorkeuren).", "Niet — wel toevallig zelfde naam als koekje.", "Niet altijd — kan tracking-cookie zijn maar niet altijd virus.", "Niet — wachtwoord = jouw geheim, cookie = van website."],
+        wrongHints: [null, "Niet — wel toevallig zelfde naam als koekje.", "Niet altijd — kan tracking-cookie zijn maar niet altijd virus.", "Niet — wachtwoord = jouw geheim, cookie = van website."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een cookie?", tekst: "Een **cookie** is een **klein tekstbestandje** dat een website op jouw apparaat opslaat. Doel: jou **herkennen** bij volgend bezoek. Bevat dingen als:\n• Taal-voorkeur (NL/EN)\n• Login-status (ingelogd of niet)\n• Items in winkelmandje\n• Wat je laatst bekeek (voor advertenties)" },
@@ -304,7 +304,7 @@ const steps = [
         q: "Wat is een **algoritme**?",
         options: ["Stappenplan dat computer volgt om iets te beslissen", "Computer-virus", "Wachtwoord", "Internet-kabel"],
         answer: 0,
-        wrongHints: [null, "Klopt — bv. TikTok-algoritme beslist welke video's je ziet.", "Niet — virus is schadelijk programma.", "Wachtwoord is jouw geheim.", "Kabel is hardware."],
+        wrongHints: [null, "Niet — virus is schadelijk programma.", "Wachtwoord is jouw geheim.", "Kabel is hardware."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een algoritme?", tekst: "Een **algoritme** is een **stappenplan** dat een computer (of mens) volgt om iets te beslissen of berekenen. Letterlijk: 'recept' voor het oplossen van een probleem.\n\nGenoemd naar de Perzische wiskundige **Al-Khwarizmi** (~825 jaar geleden) — uitvinder van algebra." },
@@ -325,25 +325,25 @@ const steps = [
           niveaus: { basis: "Stappenplan computer. = A.", simpeler: "Algoritme = stappenplan dat computer volgt om iets te beslissen of berekenen. Bv. welke TikTok-video je ziet of welke route Google Maps kiest. = A.", nogSimpeler: "Stappenplan = A." },
         },
       },
-      { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je verjaardag","Naam huisdier","123456"], answer: 0, wrongHints: [null,"Klopt — moeilijk te raden.","Te makkelijk te vinden online.","Gemakkelijk te raden.","Top 1 gehackt wachtwoord."] },
-      { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een vissport","Een online-spel","Een browser"], answer: 0, wrongHints: [null,"Klopt — alert blijven op verdachte mails.","Niet relevant.","Niet.","Niet."] },
-      { q: "Welke site heeft **HTTPS**?", options: ["Veiligere verbinding (slotje in browser)","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null,"Klopt — versleutelde verbinding.","Snelheid los van HTTP/HTTPS.","Niets met kosten.","Niets met reclame."] },
-      { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden","De AI ziet kleuren","De AI maakt foto's"], answer: 0, wrongHints: [null,"Klopt — AI klinkt zeker maar feit is fout. Altijd checken.","Niet.","Niet.","Niet."] },
-      { q: "Wat is **2FA** (twee-factor-authenticatie)?", options: ["Extra check naast wachtwoord (bv. SMS-code)","Twee wachtwoorden","Niet bestaand","Reclame"], answer: 0, wrongHints: [null,"Klopt — extra beveiliging.","Niet exact.","Wel.","Niet."] },
-      { q: "Wat is **cyberpesten**?", options: ["Pesten via internet/sociale media","Niet bestaand","Game","Reclame"], answer: 0, wrongHints: [null,"Klopt.","Wel.","Niet.","Niet."] },
-      { q: "Wat is **AVG** (privacy-wet)?", options: ["EU-regels voor persoonsgegevens","Game","Reclame","Niet bestaand"], answer: 0, wrongHints: [null,"Klopt — Algemene Verordening Gegevensbescherming.","Niet.","Niet.","Wel."] },
-      { q: "Wat is een **browser**?", options: ["Programma om websites te openen","Een toetsenbord","Camera","Niet bestaand"], answer: 0, wrongHints: [null,"Klopt — Chrome/Firefox/Safari.","Hardware.","Niet.","Wel."] },
-      { q: "Wat is een **URL**?", options: ["Webadres (bv. google.com)","Pagina","Toetsenbord","Niet bestaand"], answer: 0, wrongHints: [null,"Klopt.","Inhoud.","Niet.","Wel."] },
-      { q: "Wat is **CPU**?", options: ["Centrale Processor / 'brein' computer","Scherm","Toetsenbord","Software"], answer: 0, wrongHints: [null,"Klopt.","Output.","Input.","Programma."] },
-      { q: "Wat is een **download**?", options: ["Bestand binnenhalen van internet","Bestand verzenden","Niet relevant","Reclame"], answer: 0, wrongHints: [null,"Klopt — tegengestelde van upload.","Upload.","Wel.","Niet."] },
-      { q: "Wat is een **cookie** op websites?", options: ["Klein bestandje dat info onthoudt","Eten","Niet bestaand","Reclame"], answer: 0, wrongHints: [null,"Klopt — voorkeuren onthouden.","Letterlijk wel, maar bedoeld is digitaal.","Wel.","Niet primair."] },
-      { q: "Wat is een **virus** (software)?", options: ["Schadelijk programma","Ziekte","Niet bestaand","Game"], answer: 0, wrongHints: [null,"Klopt — malware.","Letterlijk wel, hier digitaal.","Wel.","Niet."] },
-      { q: "Wat doet een **firewall**?", options: ["Beschermt computer tegen aanvallen","Vuurmuur letterlijk","Niet bestaand","Bouwt website"], answer: 0, wrongHints: [null,"Klopt — software-bescherming.","Niet bedoeld.","Wel.","Niet."] },
-      { q: "Wat is **deepfake**?", options: ["Nep-video gemaakt door AI","Echte video","Boek","Niet bestaand"], answer: 0, wrongHints: [null,"Klopt — pas op.","Tegengestelde.","Niet.","Wel."] },
-      { q: "Wat is **bron-controle** bij zoeken?", options: ["Checken of bron betrouwbaar is","Klakkeloos overnemen","Niet relevant","Reclame"], answer: 0, wrongHints: [null,"Klopt.","Tegengestelde.","Wel.","Niet."] },
-      { q: "Welke leeftijd voor **TikTok** officieel?", options: ["13+","8+","18+","Geen grens"], answer: 0, wrongHints: [null,"Klopt — officieel.","Te laag.","Niet wettelijk.","Wel grens."] },
-      { q: "Wat is een **back-up**?", options: ["Kopie van bestanden voor noodgeval","Origineel","Niet relevant","Reclame"], answer: 0, wrongHints: [null,"Klopt.","Tegengestelde.","Wel.","Niet."] },
-      { q: "Welke kleur slotje in browser betekent **veilig**?", options: ["Groen / dichtgesloten","Rood","Niet relevant","Geel"], answer: 0, wrongHints: [null,"Klopt — HTTPS.","Gevaar.","Wel.","Soms waarschuwing."] },
+      { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je verjaardag","Naam huisdier","123456"], answer: 0, wrongHints: [null, "Te makkelijk te vinden online.", "Gemakkelijk te raden.", "Top 1 gehackt wachtwoord."] },
+      { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een vissport","Een online-spel","Een browser"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Niet."] },
+      { q: "Welke site heeft **HTTPS**?", options: ["Veiligere verbinding (slotje in browser)","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null, "Snelheid los van HTTP/HTTPS.", "Niets met kosten.", "Niets met reclame."] },
+      { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden","De AI ziet kleuren","De AI maakt foto's"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is **2FA** (twee-factor-authenticatie)?", options: ["Extra check naast wachtwoord (bv. SMS-code)","Twee wachtwoorden","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet exact.", "Wel.", "Niet."] },
+      { q: "Wat is **cyberpesten**?", options: ["Pesten via internet/sociale media","Niet bestaand","Game","Reclame"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Wat is **AVG** (privacy-wet)?", options: ["EU-regels voor persoonsgegevens","Game","Reclame","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wat is een **browser**?", options: ["Programma om websites te openen","Een toetsenbord","Camera","Niet bestaand"], answer: 0, wrongHints: [null, "Hardware.", "Niet.", "Wel."] },
+      { q: "Wat is een **URL**?", options: ["Webadres (bv. google.com)","Pagina","Toetsenbord","Niet bestaand"], answer: 0, wrongHints: [null, "Inhoud.", "Niet.", "Wel."] },
+      { q: "Wat is **CPU**?", options: ["Centrale Processor / 'brein' computer","Scherm","Toetsenbord","Software"], answer: 0, wrongHints: [null, "Output.", "Input.", "Programma."] },
+      { q: "Wat is een **download**?", options: ["Bestand binnenhalen van internet","Bestand verzenden","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Upload.", "Wel.", "Niet."] },
+      { q: "Wat is een **cookie** op websites?", options: ["Klein bestandje dat info onthoudt","Eten","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Letterlijk wel, maar bedoeld is digitaal.", "Wel.", "Niet primair."] },
+      { q: "Wat is een **virus** (software)?", options: ["Schadelijk programma","Ziekte","Niet bestaand","Game"], answer: 0, wrongHints: [null, "Letterlijk wel, hier digitaal.", "Wel.", "Niet."] },
+      { q: "Wat doet een **firewall**?", options: ["Beschermt computer tegen aanvallen","Vuurmuur letterlijk","Niet bestaand","Bouwt website"], answer: 0, wrongHints: [null, "Niet bedoeld.", "Wel.", "Niet."] },
+      { q: "Wat is **deepfake**?", options: ["Nep-video gemaakt door AI","Echte video","Boek","Niet bestaand"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
+      { q: "Wat is **bron-controle** bij zoeken?", options: ["Checken of bron betrouwbaar is","Klakkeloos overnemen","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
+      { q: "Welke leeftijd voor **TikTok** officieel?", options: ["13+","8+","18+","Geen grens"], answer: 0, wrongHints: [null, "Te laag.", "Niet wettelijk.", "Wel grens."] },
+      { q: "Wat is een **back-up**?", options: ["Kopie van bestanden voor noodgeval","Origineel","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
+      { q: "Welke kleur slotje in browser betekent **veilig**?", options: ["Groen / dichtgesloten","Rood","Niet relevant","Geel"], answer: 0, wrongHints: [null, "Gevaar.", "Wel.", "Soms waarschuwing."] },
     ],
   },
 ];

@@ -140,7 +140,7 @@ const steps = [
         q: "Welke breuk is **groter**: 3/5 of 2/3?",
         options: ["2/3", "3/5", "Even groot", "Niet te bepalen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 2/3 ≈ 0,67 en 3/5 = 0,60.", "Kleiner dan 2/3.", "Niet — verschillende waarden.", "Wel — maak gelijknamig of decimaal."],
+        wrongHints: [null, "Kleiner dan 2/3.", "Niet — verschillende waarden.", "Wel — maak gelijknamig of decimaal."],
         uitlegPad: {
           stappen: [{ titel: "Gelijknamig maken", tekst: "Maak gelijke noemer. KGN van 5 en 3 = 15. 3/5 = 9/15. 2/3 = 10/15. Dus 2/3 > 3/5." }],
           woorden: [{ woord: "KGN", uitleg: "Kleinste Gemeenschappelijke Noemer — kleinste getal waar beide noemers in passen." }],
@@ -154,7 +154,7 @@ const steps = [
         q: "Hoeveel is **1/4 in decimalen**?",
         options: ["0,25", "0,14", "0,4", "0,75"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 ÷ 4 = 0,25.", "Niet — 1/4 is een kwart.", "Niet — dat is 4/10.", "Dat is 3/4."],
+        wrongHints: [null, "Niet — 1/4 is een kwart.", "Niet — dat is 4/10.", "Dat is 3/4."],
         uitlegPad: {
           stappen: [
             { titel: "Breuk = deling", tekst: "Een breuk is eigenlijk een deling. 1/4 betekent: '1 gedeeld door 4'." },
@@ -183,13 +183,13 @@ const steps = [
         q: "Wat is **0,5 + 1/4**?",
         options: ["0,75", "0,55", "1,5", "1/8"],
         answer: 0,
-        wrongHints: [null, "Klopt — 0,5 + 0,25 = 0,75 (of 1/2 + 1/4 = 3/4).", "Verkeerd opgeteld.", "Te groot.", "Niet — 1/8 is helft van 1/4."],
+        wrongHints: [null, "Verkeerd opgeteld.", "Te groot.", "Niet — 1/8 is helft van 1/4."],
       },
       {
         q: "Wat is **2/3 − 1/6**?",
         options: ["1/2", "1/3", "1/6", "2/6"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4/6 − 1/6 = 3/6 = 1/2.", "Te weinig.", "Te weinig.", "Niet vereenvoudigd."],
+        wrongHints: [null, "Te weinig.", "Te weinig.", "Niet vereenvoudigd."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: gelijke noemers maken", tekst: "Je kunt alleen breuken aftrekken met DEZELFDE noemer. 2/3 en 1/6 hebben niet dezelfde — eerst gelijknamig maken." },
@@ -217,49 +217,49 @@ const steps = [
         q: "Schrijf **0,8 als breuk** in eenvoudigste vorm.",
         options: ["4/5", "8/10", "0,8", "5/4"],
         answer: 0,
-        wrongHints: [null, "Klopt — 8/10 ÷ 2 = 4/5.", "Klopt qua waarde maar niet vereenvoudigd.", "Dat is decimaal, niet breuk.", "Groter dan 1 — verkeerd."],
+        wrongHints: [null, "Klopt qua waarde maar niet vereenvoudigd.", "Dat is decimaal, niet breuk.", "Groter dan 1 — verkeerd."],
       },
       {
         q: "Welk getal is **groter**: **0,7** of **3/4**?",
         options: ["3/4", "0,7", "Even groot", "Niet te bepalen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 3/4 = 0,75 > 0,7.", "0,7 = 0,70. Kleiner dan 0,75.", "Niet — verschillende waarden.", "Wel — decimaliseer."],
+        wrongHints: [null, "0,7 = 0,70. Kleiner dan 0,75.", "Niet — verschillende waarden.", "Wel — decimaliseer."],
       },
       {
         q: "Wat is **2/5 + 1/10**?",
         options: ["1/2", "3/15", "3/10", "1/7"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4/10 + 1/10 = 5/10 = 1/2.", "Tellers + noemers samen — fout.", "Niet vereenvoudigd.", "Niet."],
+        wrongHints: [null, "Tellers + noemers samen — fout.", "Niet vereenvoudigd.", "Niet."],
       },
       {
         q: "**1,25 als breuk** (eenvoudigst)?",
         options: ["5/4", "1 1/4", "125/100", "12,5/10"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1,25 = 125/100 = 5/4.", "Klopt ook (gemengd), maar 5/4 is breuk.", "Niet vereenvoudigd.", "Niet eens een breuk."],
+        wrongHints: [null, "Klopt ook (gemengd), maar 5/4 is breuk.", "Niet vereenvoudigd.", "Niet eens een breuk."],
       },
       {
         q: "**Helft van 0,8**?",
         options: ["0,4", "1,6", "0,08", "0,5"],
         answer: 0,
-        wrongHints: [null, "Klopt — 0,8 ÷ 2 = 0,4.", "Dat is 2× zo veel.", "10x te weinig.", "Helft van 1."],
+        wrongHints: [null, "Dat is 2× zo veel.", "10x te weinig.", "Helft van 1."],
       },
       {
         q: "Welk getal is **kleiner**: 0,25 of 1/3?",
         options: ["0,25", "1/3", "Even groot", "Niet te bepalen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1/3 ≈ 0,33, dus 0,25 < 0,33.", "Niet — kleiner zoeken.", "Niet.", "Wel."],
+        wrongHints: [null, "Niet — kleiner zoeken.", "Niet.", "Wel."],
       },
       {
         q: "**Vereenvoudig 12/16**.",
         options: ["3/4", "6/8", "1/2", "12/16"],
         answer: 0,
-        wrongHints: [null, "Klopt — beide ÷4.", "Klopt waarde maar niet helemaal vereenvoudigd.", "Niet — die is kleiner.", "Niet vereenvoudigd."],
+        wrongHints: [null, "Klopt waarde maar niet helemaal vereenvoudigd.", "Niet — die is kleiner.", "Niet vereenvoudigd."],
       },
       {
         q: "Hoeveel is **3/4 van 20**?",
         options: ["15", "5", "12", "60"],
         answer: 0,
-        wrongHints: [null, "Klopt — 20÷4×3 = 15.", "Dat is 1/4.", "Verkeerd berekend.", "Veel te veel."],
+        wrongHints: [null, "Dat is 1/4.", "Verkeerd berekend.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: eerst 1/4 van 20", tekst: "Om 3/4 te krijgen, weet je eerst 1/4. 1/4 betekent 'gedeeld door 4'. 20 ÷ 4 = **5**." },
@@ -287,19 +287,19 @@ const steps = [
         q: "Wat is **5/6 − 1/2**?",
         options: ["1/3", "4/4", "1/6", "2/3"],
         answer: 0,
-        wrongHints: [null, "Klopt — 5/6 − 3/6 = 2/6 = 1/3.", "Niet zo.", "Te klein.", "Te groot."],
+        wrongHints: [null, "Niet zo.", "Te klein.", "Te groot."],
       },
       {
         q: "Schrijf **2 1/2 als onechte breuk** (teller groter).",
         options: ["5/2", "21/2", "2/2", "3/2"],
         answer: 0,
-        wrongHints: [null, "Klopt — 2×2+1 = 5.", "Niet — getal aan elkaar = fout.", "Dat is 1.", "Dat is 1 1/2."],
+        wrongHints: [null, "Niet — getal aan elkaar = fout.", "Dat is 1.", "Dat is 1 1/2."],
       },
       {
         q: "**4 × 0,25** is?",
         options: ["1", "0,1", "10", "4,25"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4 × 1/4 = 1.", "10x te weinig.", "10x te veel.", "Optellen, niet."],
+        wrongHints: [null, "10x te weinig.", "10x te veel.", "Optellen, niet."],
       },
     ],
   },
@@ -406,7 +406,7 @@ const steps = [
         q: "Een jas kost €80. Met **25% korting** — wat betaal je?",
         options: ["€60", "€55", "€20", "€105"],
         answer: 0,
-        wrongHints: [null, "Klopt — 25% van €80 = €20 korting. €80 − €20 = €60.", "Verkeerde aftrek.", "Dat is het kortingsbedrag, niet de eindprijs.", "Korting verlaagt prijs."],
+        wrongHints: [null, "Verkeerde aftrek.", "Dat is het kortingsbedrag, niet de eindprijs.", "Korting verlaagt prijs."],
         uitlegPad: {
           stappen: [
             { titel: "Korting berekenen", tekst: "25% van €80 = (25/100) × 80 = €20. Korting = €20." },
@@ -423,7 +423,7 @@ const steps = [
         q: "**40% van 200** is?",
         options: ["80", "60", "100", "240"],
         answer: 0,
-        wrongHints: [null, "Klopt — 40/100 × 200 = 80.", "Te weinig.", "Dat is 50%.", "Niet — wel onder 200."],
+        wrongHints: [null, "Te weinig.", "Dat is 50%.", "Niet — wel onder 200."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: 10% eerst", tekst: "Begin altijd met 10%. 10% van 200 = 200 ÷ 10 = **20**." },
@@ -451,13 +451,13 @@ const steps = [
         q: "In een klas van 30: **20% is ziek**. Hoeveel kinderen?",
         options: ["6", "5", "10", "15"],
         answer: 0,
-        wrongHints: [null, "Klopt — 20/100 × 30 = 6.", "Net te weinig.", "Dat zou 33% zijn.", "Dat is 50%."],
+        wrongHints: [null, "Net te weinig.", "Dat zou 33% zijn.", "Dat is 50%."],
       },
       {
         q: "Een schoen van **€60 wordt verhoogd met 10%**. Nieuwe prijs?",
         options: ["€66", "€70", "€54", "€600"],
         answer: 0,
-        wrongHints: [null, "Klopt — 10% van €60 = €6. €60 + €6 = €66.", "Te veel.", "Dat zou korting zijn.", "Veel te veel — komma vergeten?"],
+        wrongHints: [null, "Te veel.", "Dat zou korting zijn.", "Veel te veel — komma vergeten?"],
         uitlegPad: {
           stappen: [
             { titel: "Bereken verhoging", tekst: "10% van €60 = (10/100) × 60 = €6 verhoging." },
@@ -478,13 +478,13 @@ const steps = [
         q: "Verhouding **rood : blauw = 2:3**. 15 blauwe knikkers — hoeveel rode?",
         options: ["10", "5", "15", "6"],
         answer: 0,
-        wrongHints: [null, "Klopt — 15÷3 = 5 per deel, 2 delen rood = 10.", "Dat is 1 deel.", "Dezelfde aantal als blauw — niet.", "Verkeerd berekend."],
+        wrongHints: [null, "Dat is 1 deel.", "Dezelfde aantal als blauw — niet.", "Verkeerd berekend."],
       },
       {
         q: "**Wat is 50% van 1/2**?",
         options: ["1/4", "1/2", "1", "0"],
         answer: 0,
-        wrongHints: [null, "Klopt — helft van een helft = kwart.", "Niet halveert.", "Dat is dubbel.", "Niet nul."],
+        wrongHints: [null, "Niet halveert.", "Dat is dubbel.", "Niet nul."],
         uitlegPad: {
           stappen: [
             { titel: "50% = de helft", tekst: "50% betekent half. Dus 50% van 1/2 = de helft van 1/2." },
@@ -505,31 +505,31 @@ const steps = [
         q: "Een artikel van **€120 is in de uitverkoop voor €90**. **% korting**?",
         options: ["25%", "30%", "75%", "33%"],
         answer: 0,
-        wrongHints: [null, "Klopt — €30 ÷ €120 = 25%.", "Verkeerde berekening.", "Niet — dat is wat je betaalt.", "Iets te veel."],
+        wrongHints: [null, "Verkeerde berekening.", "Niet — dat is wat je betaalt.", "Iets te veel."],
       },
       {
         q: "Verhouding **2:5** opnieuw uitdrukken als breuk **van de kleinste in totaal**?",
         options: ["2/7", "2/5", "5/7", "1/3"],
         answer: 0,
-        wrongHints: [null, "Klopt — 2 delen op totaal 7 delen (2+5).", "Niet — dat is 2 op 5, niet totaal 7.", "Andere deel.", "Verkeerd."],
+        wrongHints: [null, "Niet — dat is 2 op 5, niet totaal 7.", "Andere deel.", "Verkeerd."],
       },
       {
         q: "**80% van 50** is?",
         options: ["40", "30", "20", "100"],
         answer: 0,
-        wrongHints: [null, "Klopt — 80/100 × 50 = 40.", "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
       },
       {
         q: "**150% van 20** is?",
         options: ["30", "20", "15", "150"],
         answer: 0,
-        wrongHints: [null, "Klopt — 150/100 × 20 = 30 (groter dan 100%).", "Dat is 100%.", "Te weinig.", "Niet."],
+        wrongHints: [null, "Dat is 100%.", "Te weinig.", "Niet."],
       },
       {
         q: "Verhouding **jongens:meisjes = 3:2**. Totaal 25 leerlingen. Aantal jongens?",
         options: ["15", "10", "12", "5"],
         answer: 0,
-        wrongHints: [null, "Klopt — 25÷5 = 5/deel, jongens = 3×5 = 15.", "Dat is meisjes.", "Verkeerd.", "1 deel."],
+        wrongHints: [null, "Dat is meisjes.", "Verkeerd.", "1 deel."],
         uitlegPad: {
           stappen: [
             { titel: "Tel delen op", tekst: "3 + 2 = 5 delen totaal." },
@@ -551,25 +551,25 @@ const steps = [
         q: "Een product was **€50, nu €30**. **% korting**?",
         options: ["40%", "20%", "60%", "30%"],
         answer: 0,
-        wrongHints: [null, "Klopt — €20 ÷ €50 = 40%.", "Te weinig.", "Te veel.", "Dat is wat je betaalt %."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Dat is wat je betaalt %."],
       },
       {
         q: "**10% van 350** is?",
         options: ["35", "30", "40", "350"],
         answer: 0,
-        wrongHints: [null, "Klopt — 10% = ÷10.", "Niet zo.", "Niet zo.", "100%."],
+        wrongHints: [null, "Niet zo.", "Niet zo.", "100%."],
       },
       {
         q: "Verhouding **1:3** in **percentages**?",
         options: ["25% : 75%", "33% : 67%", "10% : 90%", "50% : 50%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 op 4 totaal = 25%.", "Niet juist.", "Niet — 1:3.", "Niet."],
+        wrongHints: [null, "Niet juist.", "Niet — 1:3.", "Niet."],
       },
       {
         q: "BTW **21% op €100** prijs zonder BTW. Eindprijs?",
         options: ["€121", "€79", "€100", "€21"],
         answer: 0,
-        wrongHints: [null, "Klopt — €100 + €21.", "Dat is min BTW.", "Zonder BTW.", "Alleen BTW-bedrag."],
+        wrongHints: [null, "Dat is min BTW.", "Zonder BTW.", "Alleen BTW-bedrag."],
         uitlegPad: {
           stappen: [
             { titel: "BTW berekenen", tekst: "21% van €100 = 21/100 × 100 = €21." },
@@ -691,13 +691,13 @@ const steps = [
         q: "Hoeveel **cm** is **1,2 m**?",
         options: ["120 cm", "12 cm", "12.000 cm", "1200 cm"],
         answer: 0,
-        wrongHints: [null, "Klopt — m × 100 = cm. 1,2 × 100 = 120.", "Te weinig — 12 cm is een gum.", "Veel te veel.", "Te veel — komma 1 plek te ver."],
+        wrongHints: [null, "Te weinig — 12 cm is een gum.", "Veel te veel.", "Te veel — komma 1 plek te ver."],
       },
       {
         q: "Een doos is **10 cm × 10 cm × 10 cm**. **Inhoud** (volume)?",
         options: ["1000 cm³", "100 cm³", "30 cm³", "300 cm³"],
         answer: 0,
-        wrongHints: [null, "Klopt — kubus: zijde × zijde × zijde = 10×10×10 = 1000 cm³.", "Te weinig — dat is oppervlakte 1 zijde.", "Dat is omtrek-achtig (10+10+10).", "Niet."],
+        wrongHints: [null, "Te weinig — dat is oppervlakte 1 zijde.", "Dat is omtrek-achtig (10+10+10).", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Volume formule", tekst: "Kubus: V = z × z × z = z³. Voor 10 cm: 10 × 10 × 10 = 1000." },
@@ -714,7 +714,7 @@ const steps = [
         q: "Een tuin is **5 m × 8 m**. Hoeveel meter **hek** is nodig (omtrek)?",
         options: ["26 m", "40 m", "13 m", "20 m"],
         answer: 0,
-        wrongHints: [null, "Klopt — omtrek = 2 × (5+8) = 26 m.", "Dat is oppervlakte, niet omtrek.", "Halve omtrek.", "Niet."],
+        wrongHints: [null, "Dat is oppervlakte, niet omtrek.", "Halve omtrek.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Hek = omtrek (rondom)", tekst: "Een hek loopt RONDOM de tuin. Je telt alle 4 de zijdes op. Dat heet de **omtrek**." },
@@ -742,55 +742,55 @@ const steps = [
         q: "**3,5 kg** in **gram**?",
         options: ["3500 g", "350 g", "35 g", "35.000 g"],
         answer: 0,
-        wrongHints: [null, "Klopt — kg × 1000.", "Te weinig.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
       },
       {
         q: "Schaal **1:1.000.000** (atlas). **3 cm** op kaart = ?",
         options: ["30 km", "3 km", "300 m", "300 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 3 × 1.000.000 cm = 30.000 m = 30 km.", "Te weinig.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Veel te weinig.", "Te veel."],
       },
       {
         q: "Een driehoek heeft **basis 6 cm** en **hoogte 4 cm**. Oppervlakte?",
         options: ["12 cm²", "24 cm²", "10 cm²", "6 cm²"],
         answer: 0,
-        wrongHints: [null, "Klopt — opp = ½ × basis × hoogte = ½ × 6 × 4 = 12.", "Vergeten ½ — dat is rechthoek-opp.", "Optellen werkt niet.", "Halve hoogte."],
+        wrongHints: [null, "Vergeten ½ — dat is rechthoek-opp.", "Optellen werkt niet.", "Halve hoogte."],
       },
       {
         q: "Hoeveel **mL** in een **halve liter**?",
         options: ["500 mL", "50 mL", "5 mL", "5000 mL"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 L = 1000 mL, helft = 500.", "Veel te weinig.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Veel te weinig.", "Veel te weinig.", "Te veel."],
       },
       {
         q: "Een vierkant heeft **omtrek 24 cm**. Wat is **zijde**?",
         options: ["6 cm", "12 cm", "24 cm", "4 cm"],
         answer: 0,
-        wrongHints: [null, "Klopt — vierkant heeft 4 zijden, 24÷4 = 6.", "Niet — dat is halve omtrek.", "Hele omtrek.", "Te weinig."],
+        wrongHints: [null, "Niet — dat is halve omtrek.", "Hele omtrek.", "Te weinig."],
       },
       {
         q: "**0,5 ton** in **kg**?",
         options: ["500 kg", "50 kg", "5000 kg", "5 kg"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 ton = 1000 kg, half = 500.", "Te weinig.", "Te veel.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Veel te weinig."],
       },
       {
         q: "**1500 mm** in **m**?",
         options: ["1,5 m", "15 m", "0,15 m", "150 m"],
         answer: 0,
-        wrongHints: [null, "Klopt — mm ÷ 1000 = m.", "Te veel.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
       },
       {
         q: "Een **kubus** met zijde **5 cm** — volume?",
         options: ["125 cm³", "25 cm³", "15 cm³", "75 cm³"],
         answer: 0,
-        wrongHints: [null, "Klopt — 5³ = 5×5×5 = 125.", "Dat is opp 1 zijde.", "Optelsom — niet.", "Verkeerd berekend."],
+        wrongHints: [null, "Dat is opp 1 zijde.", "Optelsom — niet.", "Verkeerd berekend."],
       },
       {
         q: "**Omtrek cirkel** met diameter 10 cm? *(π ≈ 3,14)*",
         options: ["31,4 cm", "78,5 cm", "10 cm", "100 cm"],
         answer: 0,
-        wrongHints: [null, "Klopt — omtrek = π × d = 3,14 × 10.", "Dat is opp niet omtrek.", "Diameter zelf.", "Te veel."],
+        wrongHints: [null, "Dat is opp niet omtrek.", "Diameter zelf.", "Te veel."],
       },
     ],
   },
@@ -901,7 +901,7 @@ const steps = [
         q: "Een glas frisdrank kost €1,80. Hoeveel betaal je voor **5 glazen**?",
         options: ["€9,00", "€7,20", "€10,00", "€1,80"],
         answer: 0,
-        wrongHints: [null, "Klopt — 5 × €1,80 = €9,00.", "Dat is 4 × €1,80.", "Te veel — komma vergeten?", "Dat is 1 glas."],
+        wrongHints: [null, "Dat is 4 × €1,80.", "Te veel — komma vergeten?", "Dat is 1 glas."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig", tekst: "5 × €1,80 = €9,00." },
@@ -922,13 +922,13 @@ const steps = [
         q: "Tom legt om de **15 minuten** een nieuwe pot bloemen. Hoeveel **per uur**?",
         options: ["4 potten", "15 potten", "60 potten", "1 pot"],
         answer: 0,
-        wrongHints: [null, "Klopt — 60 min ÷ 15 = 4.", "Niet — 15 was tijdsinterval.", "Veel te veel.", "Te weinig — minder dan 15 min/pot."],
+        wrongHints: [null, "Niet — 15 was tijdsinterval.", "Veel te veel.", "Te weinig — minder dan 15 min/pot."],
       },
       {
         q: "Een fietstas weegt **leeg 800 g**. Met **2 kg** boodschappen erin — totaal?",
         options: ["2,8 kg", "2,2 kg", "10 kg", "2,08 kg"],
         answer: 0,
-        wrongHints: [null, "Klopt — 800 g = 0,8 kg. 0,8 + 2 = 2,8 kg.", "Verkeerd opgeteld.", "Veel te veel.", "Te weinig — 800 g ≠ 0,08 kg."],
+        wrongHints: [null, "Verkeerd opgeteld.", "Veel te veel.", "Te weinig — 800 g ≠ 0,08 kg."],
         uitlegPad: {
           stappen: [
             { titel: "Eenheid gelijk", tekst: "Voor optellen: zet beide in zelfde eenheid. 800 g = 0,8 kg." },
@@ -945,7 +945,7 @@ const steps = [
         q: "Anne spaart **€5 per week** voor een fiets van **€60**. Hoeveel weken?",
         options: ["12 weken", "10 weken", "6 weken", "300 weken"],
         answer: 0,
-        wrongHints: [null, "Klopt — €60 ÷ €5 = 12.", "Verkeerd gedeeld.", "Te kort.", "Veel te lang."],
+        wrongHints: [null, "Verkeerd gedeeld.", "Te kort.", "Veel te lang."],
         uitlegPad: {
           stappen: [
             { titel: "Spaardoel", tekst: "Doel = €60. Per week = €5. Aantal weken = €60 ÷ €5." },
@@ -966,19 +966,19 @@ const steps = [
         q: "Een trein vertrekt **08:45** en rijdt **2u15**. Aankomst?",
         options: ["11:00", "10:45", "11:30", "10:00"],
         answer: 0,
-        wrongHints: [null, "Klopt — 08:45 + 2u = 10:45 + 15 min = 11:00.", "Slechts 2 uur opgeteld.", "Te lang.", "Te kort."],
+        wrongHints: [null, "Slechts 2 uur opgeteld.", "Te lang.", "Te kort."],
       },
       {
         q: "**240 km** met snelheid **80 km/u** — reistijd?",
         options: ["3 uur", "2 uur", "4 uur", "240 uur"],
         answer: 0,
-        wrongHints: [null, "Klopt — 240 ÷ 80 = 3.", "Te kort.", "Te lang.", "Absurd."],
+        wrongHints: [null, "Te kort.", "Te lang.", "Absurd."],
       },
       {
         q: "Een klas van 24 doet **mee aan toets**. **18 halen voldoende**. % voldoendes?",
         options: ["75%", "60%", "80%", "70%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 18÷24 = 0,75 = 75%.", "Verkeerd.", "Iets te veel.", "Iets te weinig."],
+        wrongHints: [null, "Verkeerd.", "Iets te veel.", "Iets te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: deel het deel door het geheel", tekst: "Je vraagt: welk DEEL van het GEHEEL haalt voldoende? 18 (deel) ÷ 24 (geheel) = 0,75." },
@@ -1006,19 +1006,19 @@ const steps = [
         q: "Een fles **1,5 L**. Glas houdt **250 mL**. Hoeveel glazen?",
         options: ["6", "4", "5", "10"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1500÷250 = 6.", "Te weinig.", "Iets te weinig.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Iets te weinig.", "Te veel."],
       },
       {
         q: "Tom werkt **3 uur** voor **€18**. **Uurloon**?",
         options: ["€6", "€21", "€54", "€9"],
         answer: 0,
-        wrongHints: [null, "Klopt — €18 ÷ 3 = €6.", "Optellen werkt niet.", "Vermenigvuldigen werkt niet.", "Verkeerd berekend."],
+        wrongHints: [null, "Optellen werkt niet.", "Vermenigvuldigen werkt niet.", "Verkeerd berekend."],
       },
       {
         q: "**3 boeken** kosten **€36 samen**. Per boek?",
         options: ["€12", "€18", "€9", "€11"],
         answer: 0,
-        wrongHints: [null, "Klopt — €36 ÷ 3.", "Dat is helft.", "Niet juist.", "Niet."],
+        wrongHints: [null, "Dat is helft.", "Niet juist.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Deelsom", tekst: "Per stuk = totaal ÷ aantal. €36 ÷ 3 = €12 per boek." },
@@ -1038,13 +1038,13 @@ const steps = [
         q: "Een receptenboek kost **€25**. Met **20% korting**?",
         options: ["€20", "€5", "€30", "€22"],
         answer: 0,
-        wrongHints: [null, "Klopt — 20% van €25 = €5, dus €25−€5 = €20.", "Dat is korting-bedrag.", "Dat is verhoging.", "Verkeerd."],
+        wrongHints: [null, "Dat is korting-bedrag.", "Dat is verhoging.", "Verkeerd."],
       },
       {
         q: "**Reis 60 km** met **45 km/u**. Tijd?",
         options: ["1u20 (1,33 u)", "1 uur", "2 uur", "45 min"],
         answer: 0,
-        wrongHints: [null, "Klopt — 60÷45 ≈ 1,33 uur = 1u20.", "Te kort — zou 45 km zijn.", "Te lang.", "Te kort."],
+        wrongHints: [null, "Te kort — zou 45 km zijn.", "Te lang.", "Te kort."],
       },
     ],
   },

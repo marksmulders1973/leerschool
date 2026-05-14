@@ -69,7 +69,7 @@ const steps = [
         q: "Schaal **1:100.000**. **3 cm** op kaart = ... in werkelijkheid?",
         options: ["3 km", "300 m", "30 m", "30 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1 cm = 1 km bij 1:100.000.", "Te weinig — controleer omrekening.", "Veel te weinig.", "Verkeerde berekening."],
+        wrongHints: [null, "Te weinig — controleer omrekening.", "Veel te weinig.", "Verkeerde berekening."],
         uitlegPad: {
           stappen: [
             { titel: "Onthoud truc 1:100.000", tekst: "Bij schaal 1:100.000 is 1 cm op kaart = 100.000 cm = 1.000 m = 1 km in het echt." },
@@ -90,7 +90,7 @@ const steps = [
         q: "Wat staat in de **legenda** van een kaart?",
         options: ["Uitleg van de symbolen + kleuren", "De schaal", "Hoeveelheid plaatsen", "De maker"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Schaal staat meestal apart.", "Niet legenda.", "Soms in colofon, niet legenda."],
+        wrongHints: [null, "Schaal staat meestal apart.", "Niet legenda.", "Soms in colofon, niet legenda."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een legenda?", tekst: "Een legenda is het 'verklaring-blok' op de kaart waarin staat wat elk symbool of kleur betekent." },
@@ -110,7 +110,7 @@ const steps = [
         q: "Schaal **1:50.000**. Op kaart **4 cm**. In het echt?",
         options: ["2 km", "200 m", "200 km", "0,2 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4 × 0,5 km.", "Te weinig — controleer omrekening cm→km.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig — controleer omrekening cm→km.", "Veel te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig kaart met schaal", tekst: "4 cm × 50.000 = 200.000 cm." },
@@ -131,7 +131,7 @@ const steps = [
         q: "Op een kompasroos staat boven meestal welke windrichting?",
         options: ["Noord (N)", "Oost (O)", "Zuid (Z)", "West (W)"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Rechts staat oost.", "Onder staat zuid.", "Links staat west."],
+        wrongHints: [null, "Rechts staat oost.", "Onder staat zuid.", "Links staat west."],
         uitlegPad: {
           stappen: [
             { titel: "Kompasroos = vier richtingen", tekst: "Op elke landkaart staat een kompasroos: een symbool met vier letters die de richtingen aanwijzen." },
@@ -158,13 +158,13 @@ const steps = [
         q: "In welk **kaartvak** ligt een stad? *'Vak C3'* betekent ...",
         options: ["Kolom C, rij 3", "Coördinaat 3 en C", "3 cm vanaf C", "3e plaats vanaf C"],
         answer: 0,
-        wrongHints: [null, "Klopt — letter is kolom, cijfer is rij.", "Niet die zelfde betekenis.", "Niet over afstand.", "Niet over volgorde."],
+        wrongHints: [null, "Niet die zelfde betekenis.", "Niet over afstand.", "Niet over volgorde."],
       },
       {
         q: "Tussen **N en O** op kompas: welke windrichting?",
         options: ["NO (noord-oost)", "ZO", "NW", "ZW"],
         answer: 0,
-        wrongHints: [null, "Klopt — tussen noord en oost.", "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
+        wrongHints: [null, "Tussen Z en O.", "Tussen N en W.", "Tussen Z en W."],
         uitlegPad: {
           stappen: [
             { titel: "8-puntig kompas", tekst: "Naast de 4 hoofdrichtingen (N/O/Z/W) heeft een kompas 4 tussenrichtingen: NO, ZO, ZW, NW." },
@@ -194,7 +194,7 @@ const steps = [
         q: "Schaal **1:25.000**. Op kaart **2 cm**. In het echt?",
         options: ["500 m", "5 km", "50 m", "2,5 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 2 × 25.000 = 50.000 cm = 500 m.", "Veel te veel.", "Te weinig — controleer cm→m.", "Verkeerde berekening."],
+        wrongHints: [null, "Veel te veel.", "Te weinig — controleer cm→m.", "Verkeerde berekening."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: schaal toepassen", tekst: "Schaal 1:25.000 betekent: 1 cm op kaart = 25.000 cm in echt. Dus 2 cm = 2 × 25.000 = **50.000 cm**." },
@@ -222,7 +222,7 @@ const steps = [
         q: "Op een kaart staat een **bruine vlek**. Wat betekent dat meestal?",
         options: ["Berg of heuvel", "Rivier", "Bos", "Stad"],
         answer: 0,
-        wrongHints: [null, "Klopt — bruin = hoog (berg/heuvel).", "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
+        wrongHints: [null, "Rivier = blauw.", "Bos = groen.", "Stad = grijs/rood-vakje."],
         uitlegPad: {
           stappen: [
             { titel: "Kaart-kleuren", tekst: "Bij topografische kaarten staat bruin meestal voor **hoogte** (berg/heuvel)." },
@@ -243,25 +243,25 @@ const steps = [
         q: "Schaal **1:200.000**. Op kaart **5 cm**. Werkelijkheid in **km**?",
         options: ["10 km", "1 km", "100 km", "5 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 5 × 200.000 = 1.000.000 cm = 10 km.", "Veel te weinig.", "Veel te veel.", "Verkeerde berekening."],
+        wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Verkeerde berekening."],
       },
       {
         q: "Op kompas: **ZW** ligt tussen welke twee?",
         options: ["Z en W", "N en W", "N en O", "Z en O"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Dat is NW.", "Dat is NO.", "Dat is ZO."],
+        wrongHints: [null, "Dat is NW.", "Dat is NO.", "Dat is ZO."],
       },
       {
         q: "Tussen welke richtingen ligt **NO**?",
         options: ["N en O", "Z en O", "N en W", "Z en W"],
         answer: 0,
-        wrongHints: [null, "Klopt — noord-oost.", "ZO.", "NW.", "ZW."],
+        wrongHints: [null, "ZO.", "NW.", "ZW."],
       },
       {
         q: "Schaal **1:10.000** is **groter of kleiner** dan 1:100.000?",
         options: ["Groter (kleiner getal = meer detail)", "Kleiner", "Gelijk", "Niet te vergelijken"],
         answer: 0,
-        wrongHints: [null, "Klopt — hoe kleiner schaalgetal, hoe meer detail.", "Niet — 1:10.000 = stadsplattegrond met meer detail.", "Niet gelijk.", "Wel vergelijkbaar."],
+        wrongHints: [null, "Niet — 1:10.000 = stadsplattegrond met meer detail.", "Niet gelijk.", "Wel vergelijkbaar."],
         uitlegPad: {
           stappen: [
             { titel: "Schaal verklaard", tekst: "1:10.000 betekent: 1 cm op kaart = 10.000 cm = 100 m in het echt. Veel detail!" },
@@ -285,7 +285,7 @@ const steps = [
         q: "Op kaart: **groene vlek** betekent meestal?",
         options: ["Bos / park", "Stad", "Water", "Berg"],
         answer: 0,
-        wrongHints: [null, "Klopt — groen = vegetatie.", "Stad = grijs/oranje.", "Water = blauw.", "Berg = bruin."],
+        wrongHints: [null, "Stad = grijs/oranje.", "Water = blauw.", "Berg = bruin."],
         uitlegPad: {
           stappen: [
             { titel: "Kaartkleuren = symbolen", tekst: "Op landkaarten heeft elke kleur een vaste betekenis. Hierdoor herken je in één oogopslag wat er staat." },
@@ -313,7 +313,7 @@ const steps = [
         q: "Welk kaart-element vertelt **hoe lang 1 cm in echt** is?",
         options: ["Schaal-balk", "Legenda", "Kompas", "Titel"],
         answer: 0,
-        wrongHints: [null, "Klopt — schaalbalk geeft schaal visueel weer.", "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
+        wrongHints: [null, "Legenda voor kleuren-uitleg.", "Kompas voor richting.", "Niet schaal."],
         uitlegPad: {
           stappen: [
             { titel: "4 vaste kaart-elementen", tekst: "Op elke landkaart staan altijd 4 belangrijke dingen: TITEL (waar de kaart over gaat), LEGENDA (uitleg kleuren/symbolen), KOMPAS (windrichtingen), en SCHAALBALK (hoe groot het is in echt)." },
@@ -341,13 +341,13 @@ const steps = [
         q: "Op kompas: **tussen N en W** ligt?",
         options: ["NW (noord-west)", "ZW", "NO", "ZO"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "ZW = tussen Z+W.", "NO = tussen N+O.", "ZO = tussen Z+O."],
+        wrongHints: [null, "ZW = tussen Z+W.", "NO = tussen N+O.", "ZO = tussen Z+O."],
       },
       {
         q: "Een **fietsroute** op kaart staat aangegeven met?",
         options: ["Stippellijn", "Doorgetrokken lijn", "Dikke lijn", "Vlek"],
         answer: 0,
-        wrongHints: [null, "Klopt — fiets/wandel = stippel.", "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Vlek = vlak."],
+        wrongHints: [null, "Auto-weg = doorgetrokken.", "Snelweg = dikke lijn.", "Vlek = vlak."],
         uitlegPad: {
           stappen: [
             { titel: "Lijnsoorten op kaarten", tekst: "Op een kaart staan verschillende lijnsoorten. Elk soort heeft een vaste betekenis." },
@@ -375,7 +375,7 @@ const steps = [
         q: "Schaal **1:2.500** stadsplattegrond. Op kaart **2 cm**. Werkelijk?",
         options: ["50 m", "500 m", "2,5 km", "50 cm"],
         answer: 0,
-        wrongHints: [null, "Klopt — 2 × 2500 = 5000 cm = 50 m.", "Te veel.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "Te veel.", "Veel te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: cm op kaart × schaal", tekst: "Schaal 1:2.500 betekent: 1 cm op kaart = 2.500 cm in echt. 2 cm op kaart = 2 × 2.500 = **5.000 cm**." },
@@ -412,7 +412,7 @@ const steps = [
         q: "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
         options: ["donderdag", "maandag", "vrijdag", "woensdag"],
         answer: 0,
-        wrongHints: [null, "Klopt — 8 is laagst.", "10 is meer dan 8.", "20 is meest, niet minst.", "15 is niet laagst."],
+        wrongHints: [null, "10 is meer dan 8.", "20 is meest, niet minst.", "15 is niet laagst."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: lees alle getallen", tekst: "Tabel: ma 10, di 12, wo 15, do **8**, vr 20. Vijf getallen om te vergelijken." },
@@ -440,7 +440,7 @@ const steps = [
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Totaal**?",
         options: ["90", "70", "100", "60"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te weinig — controleer optelling.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig — controleer optelling.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Optellen", tekst: "12 + 8 + 18 + 22 + 30 = 90." },
@@ -461,7 +461,7 @@ const steps = [
         q: "Cirkeldiagram: voetbal 50%, hockey 25%, zwemmen 15%, **rest** = ?",
         options: ["10%", "20%", "5%", "25%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 100 − 50 − 25 − 15 = 10.", "Te veel — controleer 100% min de 3.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Te veel — controleer 100% min de 3.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Alles samen = 100%", tekst: "Voetbal 50% + hockey 25% + zwemmen 15% = 90%. Rest = 100 − 90 = 10%." },
@@ -499,25 +499,25 @@ const steps = [
         },
         options: ["Eerst stijgen, dan dalen", "Steeds stijgen", "Steeds dalen", "Geen patroon"],
         answer: 0,
-        wrongHints: [null, "Klopt — top op dag 3, daarna omlaag.", "Niet — daalt na 25.", "Niet — stijgt eerst.", "Wel patroon zichtbaar."],
+        wrongHints: [null, "Niet — daalt na 25.", "Niet — stijgt eerst.", "Wel patroon zichtbaar."],
       },
       {
         q: "Tabel: ma 22, di 18, wo 26, do 30, vr 24. **Hoeveel meer op donderdag dan dinsdag**?",
         options: ["12", "8", "6", "48"],
         answer: 0,
-        wrongHints: [null, "Klopt — 30 − 18.", "Verkeerde 2 dagen vergeleken.", "Verkeerde 2 dagen.", "Optelling, geen verschil."],
+        wrongHints: [null, "Verkeerde 2 dagen vergeleken.", "Verkeerde 2 dagen.", "Optelling, geen verschil."],
       },
       {
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30. **Gemiddeld per dag**?",
         options: ["18", "20", "15", "90"],
         answer: 0,
-        wrongHints: [null, "Klopt — 90 ÷ 5 = 18.", "Te veel.", "Te weinig.", "Dat is totaal."],
+        wrongHints: [null, "Te veel.", "Te weinig.", "Dat is totaal."],
       },
       {
         q: "Staafdiagram laat zien dat **3e klas** 25 leerlingen heeft, **4e klas** 30. Welk type grafiek **vergelijkt het beste**?",
         options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tijdlijn"],
         answer: 0,
-        wrongHints: [null, "Klopt — staaf = vergelijken groepen.", "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
+        wrongHints: [null, "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
         uitlegPad: {
           stappen: [
             { titel: "Welk diagram waarvoor?", tekst: "Drie veelvoorkomende diagrammen, elk met hun eigen doel:" },
@@ -548,7 +548,7 @@ const steps = [
         q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",
         options: ["37,5%", "30%", "50%", "60%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 30/80 × 100 = 37,5%.", "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
+        wrongHints: [null, "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: bereken het verschil", tekst: "Van 80 lezers naar 50 lezers. Verschil = 80 − 50 = **30** lezers afname." },
@@ -576,7 +576,7 @@ const steps = [
         q: "Cirkeldiagram: blauw 35%, rood 25%, groen 25%. **Rest**?",
         options: ["15%", "20%", "10%", "25%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 100−35−25−25 = 15.", "Niet juist.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Niet juist.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkel = altijd 100%", tekst: "Alle stukjes van een cirkeldiagram zijn SAMEN altijd 100%. Geen meer, geen minder." },
@@ -603,13 +603,13 @@ const steps = [
         q: "Tabel-rij ma=5 di=10 wo=8 do=15 vr=12. **Mediaan** (middelste)?",
         options: ["10", "8", "15", "12"],
         answer: 0,
-        wrongHints: [null, "Klopt — gesorteerd 5,8,10,12,15 → midden = 10.", "Tweede laagst.", "Hoogst.", "Tweede hoogst."],
+        wrongHints: [null, "Tweede laagst.", "Hoogst.", "Tweede hoogst."],
       },
       {
         q: "Welk type grafiek voor **verandering door tijd** (bv. temperatuur over week)?",
         options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Geen"],
         answer: 0,
-        wrongHints: [null, "Klopt — lijn = trend over tijd.", "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
+        wrongHints: [null, "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
         uitlegPad: {
           stappen: [
             { titel: "Grafiek-type kiezen", tekst: "Voor verandering over tijd → lijngrafiek (punten verbonden, trend zichtbaar)." },
@@ -633,7 +633,7 @@ const steps = [
         q: "Tabel: 100/200/300/400/500. Gemiddelde?",
         options: ["300", "250", "350", "1500"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1500 ÷ 5.", "Verkeerd berekend.", "Niet juist.", "Dat is totaal."],
+        wrongHints: [null, "Verkeerd berekend.", "Niet juist.", "Dat is totaal."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: tel alles op", tekst: "Tel alle getallen bij elkaar op. 100 + 200 + 300 + 400 + 500 = **1.500**." },
@@ -661,7 +661,7 @@ const steps = [
         q: "Cirkeldiagram: blauw 25%, geel 25%, **rest** = ?",
         options: ["50%", "25%", "100%", "75%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 100-50.", "Niet helft.", "Niet alles.", "Te veel."],
+        wrongHints: [null, "Niet helft.", "Niet alles.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkel = altijd 100%", tekst: "Een cirkeldiagram is samen altijd 100%. Wat we kennen + wat we niet kennen = 100." },
@@ -688,7 +688,7 @@ const steps = [
         q: "Staafdiagram: hoogste staaf = ?",
         options: ["Grootste waarde", "Kleinste waarde", "Niets", "Gemiddelde"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
+        wrongHints: [null, "Tegenovergesteld.", "Wel iets.", "Gemiddelde is lijn-tussenwaarde."],
         uitlegPad: {
           stappen: [
             { titel: "Staaf-hoogte = waarde", tekst: "Op een staafdiagram laat elke staaf een waarde zien. Hoe HOGER de staaf, hoe GROTER het getal." },
@@ -716,7 +716,7 @@ const steps = [
         q: "**Mediaan** van 5,7,7,8,10?",
         options: ["7", "8", "5", "37"],
         answer: 0,
-        wrongHints: [null, "Klopt — middelste na sorteren.", "Niet middelste.", "Laagste.", "Som."],
+        wrongHints: [null, "Niet middelste.", "Laagste.", "Som."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de mediaan?", tekst: "De mediaan is het **MIDDELSTE** getal als je ze van klein naar groot zet. Niet het gemiddelde — gewoon de middelste!" },
@@ -744,7 +744,7 @@ const steps = [
         q: "Tabel: bedrag €10/€20/€30/€40/€50. **Som**?",
         options: ["€150", "€100", "€50", "€30"],
         answer: 0,
-        wrongHints: [null, "Klopt — alles optellen.", "Te weinig.", "Halve som.", "Gemiddelde."],
+        wrongHints: [null, "Te weinig.", "Halve som.", "Gemiddelde."],
         uitlegPad: {
           stappen: [
             { titel: "Slim optellen", tekst: "Combineer paartjes: 10+50=60, 20+40=60, 30 over. Som = 60+60+30 = 150." },
@@ -765,7 +765,7 @@ const steps = [
         q: "Cirkeldiagram heeft **3 secties van 33%**. Klopt dat?",
         options: ["Bijna (99%)", "Ja precies", "Nee onmogelijk", "100%"],
         answer: 0,
-        wrongHints: [null, "Klopt — exact 33,33% nodig voor 100%.", "Niet exact.", "Wel mogelijk.", "Te weinig."],
+        wrongHints: [null, "Niet exact.", "Wel mogelijk.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkeldiagram = altijd 100%", tekst: "Alle stukjes van een cirkeldiagram zijn samen ALTIJD 100%. Anders klopt er iets niet." },
@@ -802,7 +802,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["'appel' (vóór 'auto')", "'auto' (vóór 'appel')", "Beide gelijk", "Niet uit te leggen"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'a-p-p' staat vóór 'a-u-t'.", "Andersom — kijk naar 2e letter.", "Verschillende woorden.", "Wel — alfabetisch."],
+        wrongHints: [null, "Andersom — kijk naar 2e letter.", "Verschillende woorden.", "Wel — alfabetisch."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "Beide woorden beginnen met 'a'. Dan: 'appel' = a-p, 'auto' = a-u. In alfabet: p (16e letter) komt vóór u (21e letter)." },
@@ -823,13 +823,13 @@ const steps = [
         q: "Waar zoek je een **plaatsnaam** in een atlas?",
         options: ["In de index (achterin)", "In hoofdstuk 1", "Op de eerste kaart", "Bij plaatjes"],
         answer: 0,
-        wrongHints: [null, "Klopt — achterin staat alfabetische lijst.", "Niet zeker waar plaats staat.", "Eerste kaart hoeft niet je plaats.", "Niet bij plaatjes."],
+        wrongHints: [null, "Niet zeker waar plaats staat.", "Eerste kaart hoeft niet je plaats.", "Niet bij plaatjes."],
       },
       {
         q: "Wat staat **voorin** een boek?",
         options: ["Inhoudsopgave (hoofdstukken + pagina's)", "Index", "Register van auteurs", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Index staat achterin.", "Soms maar niet standaard.", "Wel iets — inhoudsopgave."],
+        wrongHints: [null, "Index staat achterin.", "Soms maar niet standaard.", "Wel iets — inhoudsopgave."],
         uitlegPad: {
           stappen: [
             { titel: "Boek-structuur: 2 hulpmiddelen", tekst: "In een goed boek zitten 2 hulpmiddelen om iets snel te vinden:" },
@@ -857,7 +857,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek: 'kat' of 'kater'?",
         options: ["kat", "kater", "Beide gelijk", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "Klopt — kortere komt eerst als begin gelijk.", "Niet — kat staat eerst.", "Niet gelijk.", "Wel — een staat eerst."],
+        wrongHints: [null, "Niet — kat staat eerst.", "Niet gelijk.", "Wel — een staat eerst."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "k-a-t en k-a-t-e-r. Eerste 3 letters gelijk. Bij 'kat' stopt het woord, bij 'kater' komt nog 'er'." },
@@ -878,13 +878,13 @@ const steps = [
         q: "Waarvoor gebruik je de **inhoudsopgave**?",
         options: ["Snel een hoofdstuk vinden", "Een specifiek woord", "Plaatjes ordenen", "Korter lezen"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Daarvoor: index.", "Niet inhoudsopgave.", "Niet doel."],
+        wrongHints: [null, "Daarvoor: index.", "Niet inhoudsopgave.", "Niet doel."],
       },
       {
         q: "In een **atlas** zoek je 'Amsterdam' in de **index**: 'Amsterdam ... 22 D5'. Waar kijk je?",
         options: ["Bladzijde 22, vak D5", "Bladzijde 5, vak D22", "Vak 22 op pagina D5", "Vak A22 op pagina D"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Andere volgorde.", "Andere volgorde.", "Andere combinatie."],
+        wrongHints: [null, "Andere volgorde.", "Andere volgorde.", "Andere combinatie."],
         uitlegPad: {
           stappen: [
             { titel: "Lees de index", tekst: "Atlas-index toont: '[plaatsnaam] [paginanummer] [vakcode]'. Vakcode = letter (kolom) + cijfer (rij)." },
@@ -908,7 +908,7 @@ const steps = [
         q: "Welk woord staat **eerder** in woordenboek: 'piano' of 'plant'?",
         options: ["piano", "plant", "Beide gelijk", "Niet te zeggen"],
         answer: 0,
-        wrongHints: [null, "Klopt — p-i komt vóór p-l (i komt voor l in alfabet).", "p-l komt later.", "Verschillende woorden.", "Wel te zeggen — alfabetisch."],
+        wrongHints: [null, "p-l komt later.", "Verschillende woorden.", "Wel te zeggen — alfabetisch."],
         uitlegPad: {
           stappen: [
             { titel: "Woordenboek = alfabetisch", tekst: "Alle woorden in een woordenboek staan op alfabetische volgorde: van A naar Z." },
@@ -935,19 +935,19 @@ const steps = [
         q: "Waarvoor is een **register / index** achter in boek?",
         options: ["Onderwerpen op alfabet met paginanummers", "Inhoudsopgave", "Auteursnamen", "Plaatjes"],
         answer: 0,
-        wrongHints: [null, "Klopt — alfabetisch zoekregister.", "Inhoud zit voorin.", "Auteurs op pakket of voorpagina.", "Niet primair."],
+        wrongHints: [null, "Inhoud zit voorin.", "Auteurs op pakket of voorpagina.", "Niet primair."],
       },
       {
         q: "Welk woord staat **eerder** in woordenboek: 'school' of 'sport'?",
         options: ["school", "sport", "Beide gelijk", "Niet te zeggen"],
         answer: 0,
-        wrongHints: [null, "Klopt — s-c komt vóór s-p (c voor p in alfabet).", "s-p komt later.", "Niet gelijk.", "Wel — alfabetisch."],
+        wrongHints: [null, "s-p komt later.", "Niet gelijk.", "Wel — alfabetisch."],
       },
       {
         q: "**Hoofdwoorden** op pagina-bovenkant van woordenboek — wat zijn ze?",
         options: ["Eerste + laatste woord op die pagina", "Alle woorden", "Alleen de titel", "Een lijst"],
         answer: 0,
-        wrongHints: [null, "Klopt — handig bij snel zoeken.", "Niet alle.", "Geen titel.", "Niet primair."],
+        wrongHints: [null, "Niet alle.", "Geen titel.", "Niet primair."],
         uitlegPad: {
           stappen: [
             { titel: "Hoofdwoorden = navigatie-hulp", tekst: "Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Dat heten 'hoofdwoorden' of 'kopwoorden'." },
@@ -975,13 +975,13 @@ const steps = [
         q: "Welke is de **eerste letter** in alfabet?",
         options: ["A", "B", "Z", "Geen volgorde"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tweede.", "Laatste.", "Wel volgorde."],
+        wrongHints: [null, "Tweede.", "Laatste.", "Wel volgorde."],
       },
       {
         q: "Welk staat **eerder**: 'rood' of 'paars'?",
         options: ["paars", "rood", "Beide gelijk", "Niet alfabetisch"],
         answer: 0,
-        wrongHints: [null, "Klopt — p vóór r.", "Niet — r komt later.", "Niet gelijk.", "Wel."],
+        wrongHints: [null, "Niet — r komt later.", "Niet gelijk.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk eerste letter", tekst: "'paars' begint met p (16e letter). 'rood' begint met r (18e letter)." },
@@ -1002,13 +1002,13 @@ const steps = [
         q: "Wat is een **woordenboek** voor?",
         options: ["Betekenis + spelling van woorden", "Geschiedenis", "Kaart", "Recept"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Atlas.", "Kookboek."],
+        wrongHints: [null, "Niet.", "Atlas.", "Kookboek."],
       },
       {
         q: "Bij **Van Dale** vind je info over Nederlandse woorden. Dat is een?",
         options: ["Woordenboek", "Atlas", "Encyclopedie", "Roman"],
         answer: 0,
-        wrongHints: [null, "Klopt — beroemd NL-woordenboek.", "Kaarten.", "Algemene kennis.", "Verhaal."],
+        wrongHints: [null, "Kaarten.", "Algemene kennis.", "Verhaal."],
       },
     ],
   },
@@ -1023,7 +1023,7 @@ const steps = [
         q: "Wat is een **stroomdiagram**?",
         options: ["Stappen met pijlen", "Een tabel", "Een kaart", "Een grafiek"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Geen stappen-volgorde.", "Geen kaart.", "Niet schema."],
+        wrongHints: [null, "Geen stappen-volgorde.", "Geen kaart.", "Niet schema."],
         uitlegPad: {
           stappen: [
             { titel: "Stroomdiagram visueel", tekst: "Een stroomdiagram (flowchart) toont een proces met blokken (stappen) en pijlen (volgorde). Bv. start → 'water koken' → 'thee zetten' → klaar." },
@@ -1046,7 +1046,7 @@ const steps = [
         q: "Bij **'taart bakken'** — wat doe je **eerst**?",
         options: ["Recept lezen", "Bakken", "Mengen", "Eten"],
         answer: 0,
-        wrongHints: [null, "Klopt — zonder recept weet je niets.", "Pas later.", "Pas na ingrediënten.", "Helemaal aan het einde."],
+        wrongHints: [null, "Pas later.", "Pas na ingrediënten.", "Helemaal aan het einde."],
         uitlegPad: {
           stappen: [
             { titel: "Stappenplan-logica", tekst: "Voor elk stappenplan: vraag jezelf 'wat moet ik weten/hebben voor ik kan beginnen?'." },
@@ -1067,31 +1067,31 @@ const steps = [
         q: "Schema: 'A → B → C → D'. Welke stap komt **na B**?",
         options: ["C", "A", "D", "B"],
         answer: 0,
-        wrongHints: [null, "Klopt — pijl wijst van B naar C.", "Komt vóór B.", "Komt later.", "Is zelf."],
+        wrongHints: [null, "Komt vóór B.", "Komt later.", "Is zelf."],
       },
       {
         q: "Wat staat in een **vergelijkings-tabel**?",
         options: ["Overeenkomsten + verschillen tussen 2 dingen", "Alleen overeenkomsten", "Alleen verschillen", "Plaatjes"],
         answer: 0,
-        wrongHints: [null, "Klopt — beide.", "Niet alleen overeenkomsten.", "Niet alleen verschillen.", "Niet plaatjes."],
+        wrongHints: [null, "Niet alleen overeenkomsten.", "Niet alleen verschillen.", "Niet plaatjes."],
       },
       {
         q: "In een **boomdiagram** met 'Dieren → Zoogdieren / Vogels' — wat is **Hond**?",
         options: ["Onder Zoogdieren", "Onder Vogels", "Geen plaats", "Bovenaan"],
         answer: 0,
-        wrongHints: [null, "Klopt — Hond = zoogdier.", "Hond is geen vogel.", "Wel plaats.", "Bovenaan staat 'Dieren'."],
+        wrongHints: [null, "Hond is geen vogel.", "Wel plaats.", "Bovenaan staat 'Dieren'."],
       },
       {
         q: "In een **ja/nee-schema** staat **ruit** — wat betekent dat?",
         options: ["Keuze-vraag", "Stap zonder keuze", "Eindpunt", "Pijl"],
         answer: 0,
-        wrongHints: [null, "Klopt — ruit = vraag met ja/nee-uitkomsten.", "Stap zonder keuze = kader.", "Eindpunt = afgeronde vorm.", "Pijl = pijl, niet ruit."],
+        wrongHints: [null, "Stap zonder keuze = kader.", "Eindpunt = afgeronde vorm.", "Pijl = pijl, niet ruit."],
       },
       {
         q: "Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. **Welke stap is fout**?",
         options: ["Volgorde 1+2 omgedraaid (recept eerst)", "Stap 4 fout", "Niets fout", "Stap 3"],
         answer: 0,
-        wrongHints: [null, "Klopt — recept lezen vóór ingrediënten kopen.", "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
+        wrongHints: [null, "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
         uitlegPad: {
           stappen: [
             { titel: "Logische volgorde", tekst: "Een stappenplan moet in logische volgorde. Stap 1 moet kunnen WAT MOGELIJK is zonder de andere stappen." },
@@ -1120,55 +1120,55 @@ const steps = [
         q: "In boomdiagram 'Vervoer → Auto / Trein / Fiets' — wat **mist**?",
         options: ["Lopen + bus + boot", "Auto's-merken", "Wegen", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt — ook andere vervoermiddelen.", "Subcategorie van auto.", "Niet vervoersmiddel.", "Wel iets — onvolledig."],
+        wrongHints: [null, "Subcategorie van auto.", "Niet vervoersmiddel.", "Wel iets — onvolledig."],
       },
       {
         q: "Wat is het **doel** van een stappenplan?",
         options: ["Doel halen door volgorde te volgen", "Mooie tekening maken", "Tijd doden", "Geen doel"],
         answer: 0,
-        wrongHints: [null, "Klopt — efficiënt werken.", "Niet primair.", "Tegenovergesteld.", "Wel doel."],
+        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Wel doel."],
       },
       {
         q: "Schema 'Vraag → ja → X / nee → Y'. Welke vorm gebruik je voor **'Vraag'**?",
         options: ["Ruit", "Rechthoek", "Cirkel", "Pijl"],
         answer: 0,
-        wrongHints: [null, "Klopt — ruit = keuze.", "Rechthoek = gewone stap.", "Cirkel = start/eind.", "Pijl = verbinding."],
+        wrongHints: [null, "Rechthoek = gewone stap.", "Cirkel = start/eind.", "Pijl = verbinding."],
       },
       {
         q: "In stroomdiagram: welke vorm voor **start of einde**?",
         options: ["Cirkel of ovaal", "Ruit", "Rechthoek", "Driehoek"],
         answer: 0,
-        wrongHints: [null, "Klopt — afgerond = start/eind.", "Keuze.", "Stap.", "Niet."],
+        wrongHints: [null, "Keuze.", "Stap.", "Niet."],
       },
       {
         q: "Wat is het **voordeel** van schema's?",
         options: ["Veel informatie kort + duidelijk", "Mooi om naar te kijken", "Saai", "Verplicht door school"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet primair.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Niet."],
       },
       {
         q: "Bij **conflict-oplossen** is welke vorm handig?",
         options: ["Stappenplan (volgorde acties)", "Cirkeldiagram", "Atlas", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Voor verhoudingen.", "Voor plaatsen.", "Wel iets."],
+        wrongHints: [null, "Voor verhoudingen.", "Voor plaatsen.", "Wel iets."],
       },
       {
         q: "Schema 'A → ja → B / A → nee → C'. Wat is **A**?",
         options: ["Keuze-vraag", "Eindpunt", "Gewone stap", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt — ruit met ja/nee.", "Niet.", "Geen keuze.", "Wel iets."],
+        wrongHints: [null, "Niet.", "Geen keuze.", "Wel iets."],
       },
       {
         q: "Stappenplan voor **brand** in huis. Wat **eerst**?",
         options: ["Vluchten + 112 bellen", "Spullen pakken", "Foto's maken", "Niet bewegen"],
         answer: 0,
-        wrongHints: [null, "Klopt — veiligheid eerst.", "Te risicovol.", "Verspil geen tijd.", "Onveilig."],
+        wrongHints: [null, "Te risicovol.", "Verspil geen tijd.", "Onveilig."],
       },
       {
         q: "Boomdiagram: 'Sport → Voetbal / Tennis / Hockey'. Hoeveel **takken**?",
         options: ["3", "1", "4", "0"],
         answer: 0,
-        wrongHints: [null, "Klopt — 3 sporten.", "Te weinig.", "Te veel.", "Niet."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Niet."],
       },
     ],
   },
@@ -1183,7 +1183,7 @@ const steps = [
         q: "Schaal **1:25.000**. Op kaart **8 cm**. Werkelijkheid?",
         options: ["2 km", "200 m", "20 m", "200 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 8 × 25.000 = 200.000 cm = 2 km.", "Te weinig — controleer cm→km omzetting.", "Veel te weinig.", "Te veel."],
+        wrongHints: [null, "Te weinig — controleer cm→km omzetting.", "Veel te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldigen", tekst: "8 cm × 25.000 (schaalgetal) = 200.000 cm in werkelijkheid." },
@@ -1204,7 +1204,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["bal", "balk", "balkon", "ballon"],
         answer: 0,
-        wrongHints: [null, "Klopt — kortst bij gelijke prefix.", "Andere letter na 'bal'.", "Andere letter na 'bal'.", "Andere letter na 'bal'."],
+        wrongHints: [null, "Andere letter na 'bal'.", "Andere letter na 'bal'.", "Andere letter na 'bal'."],
         uitlegPad: {
           stappen: [
             { titel: "Alle 4 beginnen met 'bal'", tekst: "Vergelijk wat erna komt: bal (niets), balk (k), balkon (k-o-n), ballon (l-o-n)." },
@@ -1225,7 +1225,7 @@ const steps = [
         q: "Cirkeldiagram: rood 40%, blauw 30%, geel 20%. **Rest** = ?",
         options: ["10%", "5%", "15%", "25%"],
         answer: 0,
-        wrongHints: [null, "Klopt — 100−90.", "Te weinig.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Tel bekende stukken", tekst: "rood 40 + blauw 30 + geel 20 = 90%." },
@@ -1246,49 +1246,49 @@ const steps = [
         q: "Waar zoek je **uitleg over een onderwerp** in een non-fictie boek?",
         options: ["In de index (achterin)", "Op de kaft", "Bij plaatjes", "Op de titelpagina"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Geen uitleg op kaft.", "Niet primair.", "Geen index."],
+        wrongHints: [null, "Geen uitleg op kaft.", "Niet primair.", "Geen index."],
       },
       {
         q: "Tabel-totaal: 5+8+12+15+10 = ?",
         options: ["50", "45", "55", "40"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
       },
       {
         q: "Schema: 'start → A → ja → B → klaar'. Wat is **B**?",
         options: ["Een vervolg-stap", "Het einde", "Een keuze", "Onbekend"],
         answer: 0,
-        wrongHints: [null, "Klopt — komt vóór 'klaar'.", "'Klaar' is het einde.", "Niet noodzakelijk keuze.", "Wel duidelijk."],
+        wrongHints: [null, "'Klaar' is het einde.", "Niet noodzakelijk keuze.", "Wel duidelijk."],
       },
       {
         q: "Op een kompas: tussen **W en Z** ligt welke richting?",
         options: ["ZW (zuid-west)", "NW", "NO", "ZO"],
         answer: 0,
-        wrongHints: [null, "Klopt — tussen west en zuid.", "Tussen N en W.", "Tussen N en O.", "Tussen Z en O."],
+        wrongHints: [null, "Tussen N en W.", "Tussen N en O.", "Tussen Z en O."],
       },
       {
         q: "Lijngrafiek: bezoek dierentuin **stijgt** van 100 naar 250 in 3 jaar. Per jaar gemiddeld?",
         options: ["50", "150", "75", "350"],
         answer: 0,
-        wrongHints: [null, "Klopt — (250-100)÷3 = 50 stijging per jaar.", "Dat is totale stijging.", "Niet juist berekend.", "Dat is som."],
+        wrongHints: [null, "Dat is totale stijging.", "Niet juist berekend.", "Dat is som."],
       },
       {
         q: "Wat doe je **eerst** als je een onderwerp in een dik boek wilt vinden?",
         options: ["Index achterin checken op onderwerp", "Boek hele lezen", "Plaatjes bekijken", "Eerste hoofdstuk"],
         answer: 0,
-        wrongHints: [null, "Klopt — directe sprong naar pagina.", "Veel te lang.", "Niet effectief.", "Niet als je specifiek zoekt."],
+        wrongHints: [null, "Veel te lang.", "Niet effectief.", "Niet als je specifiek zoekt."],
       },
       {
         q: "Tabel: bezoekers maandag-zondag: 20/25/22/30/45/60/40. Welke dag **piek**?",
         options: ["zaterdag", "vrijdag", "zondag", "donderdag"],
         answer: 0,
-        wrongHints: [null, "Klopt — 60 hoogst.", "45, niet hoogst.", "40.", "30."],
+        wrongHints: [null, "45, niet hoogst.", "40.", "30."],
       },
       {
         q: "**Atlas**-vraag: in welk **werelddeel** ligt Egypte?",
         options: ["Afrika", "Azië", "Europa", "Amerika"],
         answer: 0,
-        wrongHints: [null, "Klopt — Noord-Afrika.", "Wel grens-buur via Sinaï maar Egypte = Afrika.", "Te ver.", "Te ver."],
+        wrongHints: [null, "Wel grens-buur via Sinaï maar Egypte = Afrika.", "Te ver.", "Te ver."],
         uitlegPad: {
           stappen: [
             { titel: "Egypte op kaart", tekst: "Egypte ligt in het **noordoosten van Afrika**, met de Nijl-rivier en de Middellandse Zee als noordgrens." },
@@ -1312,25 +1312,25 @@ const steps = [
         q: "Schaal **1:75.000**. Op kaart **4 cm**. In het echt (in km)?",
         options: ["3 km", "300 m", "30 km", "0,3 km"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4 × 75.000 = 300.000 cm = 3 km.", "Te weinig — controleer cm→km.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig — controleer cm→km.", "Te veel.", "Te weinig."],
       },
       {
         q: "Welk werelddeel: **Rusland**?",
         options: ["Europa + Azië (beide)", "Alleen Azië", "Alleen Europa", "Amerika"],
         answer: 0,
-        wrongHints: [null, "Klopt — grootste deel Azië, westelijk Europa.", "Niet alleen.", "Niet alleen.", "Niet."],
+        wrongHints: [null, "Niet alleen.", "Niet alleen.", "Niet."],
       },
       {
         q: "Inhoudsopgave staat **voorin** of **achterin** boek?",
         options: ["Voorin", "Achterin", "Midden", "Beide"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Index = achterin.", "Niet.", "Twee aparte dingen."],
+        wrongHints: [null, "Index = achterin.", "Niet.", "Twee aparte dingen."],
       },
       {
         q: "Schaal **1:500.000**. Op kaart **6 cm**. Werkelijk?",
         options: ["30 km", "300 m", "3 km", "30 m"],
         answer: 0,
-        wrongHints: [null, "Klopt — 6 × 500.000 = 3 mln cm = 30 km.", "Veel te weinig.", "Te weinig.", "Veel te weinig."],
+        wrongHints: [null, "Veel te weinig.", "Te weinig.", "Veel te weinig."],
       },
     ],
   },

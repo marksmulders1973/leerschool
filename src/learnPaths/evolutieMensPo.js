@@ -20,13 +20,13 @@ const steps = [
         q: "Wie schreef **evolutietheorie** in boek?",
         options: ["Charles Darwin (1859)", "Newton", "Einstein", "Mendel"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'Over het ontstaan'.", "Zwaartekracht.", "Relativiteit.", "Erfelijkheid."],
+        wrongHints: [null, "Zwaartekracht.", "Relativiteit.", "Erfelijkheid."],
       },
       {
         q: "Wat is **natuurlijke selectie**?",
         options: ["Best aangepast overleeft + plant zich voort", "Toeval", "Snel", "Niet bestaand"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet primair.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Niet primair.", "Niet specifiek.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is natuurlijke selectie?", tekst: "Natuurlijke selectie is het belangrijkste motor van evolutie. Het gaat zo: in elke generatie zijn er **kleine verschillen** tussen individuen." },
@@ -54,7 +54,7 @@ const steps = [
         q: "Hoe lang **moderne mens** (Homo sapiens) bestaat?",
         options: ["~300.000 jaar", "1000 jaar", "6000 jaar", "Miljarden jaar"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te kort.", "Te kort.", "Te lang."],
+        wrongHints: [null, "Te kort.", "Te kort.", "Te lang."],
         uitlegPad: {
           stappen: [
             { titel: "Homo sapiens = wij", tekst: "**Homo sapiens** ('wijze mens') is de **wetenschappelijke naam** voor ons soort, de moderne mens. Wij bestaan ongeveer **300.000 jaar** als soort." },
@@ -82,7 +82,7 @@ const steps = [
         q: "Wat zijn **dino's** uitgestorven oorzaak?",
         options: ["Planetoïde-inslag 66 mln jr geleden", "Vulkaan alleen", "Mens", "Niet uitgestorven"],
         answer: 0,
-        wrongHints: [null, "Klopt — Krijt-uitsterving.", "Hielp wel.", "Mens kwam later.", "Wel uitgestorven."],
+        wrongHints: [null, "Hielp wel.", "Mens kwam later.", "Wel uitgestorven."],
         uitlegPad: {
           stappen: [
             { titel: "Het einde van de dino's", tekst: "Dinosauriërs leefden ongeveer 165 miljoen jaar lang. Ze stierven plotseling uit **66 miljoen jaar geleden**. Geen mens in zicht — die kwam pas miljoenen jaren later." },
@@ -117,7 +117,7 @@ const steps = [
         q: "Stamt mens **af van aap** zoals nu?",
         options: ["Nee — gemeenschappelijke voorouder ~7 mln jr", "Ja, van chimpansee", "Mens is helemaal apart", "Niet bekend"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet — beide afstammelingen.", "Wel verwant.", "Wel."],
+        wrongHints: [null, "Niet — beide afstammelingen.", "Wel verwant.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Veelvoorkomend misverstand", tekst: "Veel mensen denken: 'mens stamt af van aap'. Maar dat klopt NIET. Mens en chimpansee zijn **NEEFJES**, niet **kind-en-ouder**." },
@@ -145,7 +145,7 @@ const steps = [
         q: "Wie was **Lucy**?",
         options: ["Australopithecus-skelet uit Ethiopië 1974", "Eerste mens op maan", "Schilderij", "Auto"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Lucy?", tekst: "**Lucy** is de bijnaam van een beroemd **3,2 miljoen jaar oud skelet** van een **Australopithecus afarensis** — een vroege mens-voorouder. Gevonden in **Ethiopië** in **1974**." },
@@ -173,13 +173,13 @@ const steps = [
         q: "Wie stierf uit ~40.000 jr geleden?",
         options: ["Neanderthaler", "Homo sapiens", "Lucy", "Apen"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Wij — bestaan nog.", "Veel eerder.", "Niet."],
+        wrongHints: [null, "Wij — bestaan nog.", "Veel eerder.", "Niet."],
       },
       {
         q: "Hoeveel **DNA-overeenkomst** mens-chimpansee?",
         options: ["~98,8%", "10%", "50%", "100%"],
         answer: 0,
-        wrongHints: [null, "Klopt — heel dichtbij.", "Te weinig.", "Te weinig.", "Zou zelfde wezen zijn."],
+        wrongHints: [null, "Te weinig.", "Te weinig.", "Zou zelfde wezen zijn."],
       },
     ],
   },
@@ -192,7 +192,7 @@ const steps = [
         q: "Wat zijn **fossielen**?",
         options: ["Versteende resten oude wezens", "Levende dieren", "Mineralen alleen", "Computers"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Tegenovergesteld.", "Niet primair.", "Niet."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn fossielen?", tekst: "**Fossielen** zijn versteende resten van planten of dieren die heel lang geleden leefden. Botten, schelpen, bladafdrukken — alles wat over de tijd is **versteend** in gesteente." },
@@ -221,19 +221,19 @@ const steps = [
         q: "Hoe oud is **aarde**?",
         options: ["~4,5 miljard jaar", "6000 jaar", "1 miljoen", "Eeuwig"],
         answer: 0,
-        wrongHints: [null, "Klopt — radiocarbon-dating.", "Niet wetenschap.", "Te weinig.", "Niet."],
+        wrongHints: [null, "Niet wetenschap.", "Te weinig.", "Niet."],
       },
       {
         q: "Wat is **restorgaan** voorbeeld?",
         options: ["Blindedarm + wijsheidskiezen", "Hart", "Hersenen", "Niets"],
         answer: 0,
-        wrongHints: [null, "Klopt — geen functie meer.", "Wel functie.", "Wel.", "Bestaan wel."],
+        wrongHints: [null, "Wel functie.", "Wel.", "Bestaan wel."],
       },
       {
         q: "Hoeveel **DNA-overeenkomst** mens-muis?",
         options: ["~85%", "10%", "100%", "Niet"],
         answer: 0,
-        wrongHints: [null, "Klopt — dichtbij.", "Te weinig.", "Onmogelijk.", "Wel overeenkomst."],
+        wrongHints: [null, "Te weinig.", "Onmogelijk.", "Wel overeenkomst."],
       },
     ],
   },
@@ -241,17 +241,17 @@ const steps = [
     title: "Eind-toets — evolutie mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wie schreef **evolutietheorie** boek?", options: ["Darwin (1859)", "Newton", "Mendel", "Einstein"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Erfelijkheid.", "Niet."] },
-      { q: "Stamt mens **af van moderne aap**?", options: ["Nee — gem. voorouder ~7 mln", "Ja", "Niet bekend", "Geen verband"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Wel.", "Wel verband."] },
-      { q: "**'Lucy'** is welke voorouder?", options: ["Australopithecus", "Neanderthaler", "Homo sapiens", "Chimpansee"], answer: 0, wrongHints: [null, "Klopt — Ethiopië 1974.", "Later.", "Wij.", "Andere tak."] },
-      { q: "Hoe oud is **aarde**?", options: ["~4,5 miljard jr", "6000", "1 miljoen", "Eeuwig"], answer: 0, wrongHints: [null, "Klopt.", "Religieus.", "Te kort.", "Wel ouderdom."] },
-      { q: "**5e massa-uitsterving** = ?", options: ["Krijt 66 mln (dino's weg)", "Mens nu", "Geen ramp", "Vulkaan"], answer: 0, wrongHints: [null, "Klopt.", "6e (huidige).", "Wel ramp.", "Wel bijdrage."] },
-      { q: "Hoeveel **mens-chimpansee DNA** overeenkomst?", options: ["~98,8%", "10%", "0%", "50%"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Wel.", "Te weinig."] },
+      { q: "Wie schreef **evolutietheorie** boek?", options: ["Darwin (1859)", "Newton", "Mendel", "Einstein"], answer: 0, wrongHints: [null, "Niet.", "Erfelijkheid.", "Niet."] },
+      { q: "Stamt mens **af van moderne aap**?", options: ["Nee — gem. voorouder ~7 mln", "Ja", "Niet bekend", "Geen verband"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel verband."] },
+      { q: "**'Lucy'** is welke voorouder?", options: ["Australopithecus", "Neanderthaler", "Homo sapiens", "Chimpansee"], answer: 0, wrongHints: [null, "Later.", "Wij.", "Andere tak."] },
+      { q: "Hoe oud is **aarde**?", options: ["~4,5 miljard jr", "6000", "1 miljoen", "Eeuwig"], answer: 0, wrongHints: [null, "Religieus.", "Te kort.", "Wel ouderdom."] },
+      { q: "**5e massa-uitsterving** = ?", options: ["Krijt 66 mln (dino's weg)", "Mens nu", "Geen ramp", "Vulkaan"], answer: 0, wrongHints: [null, "6e (huidige).", "Wel ramp.", "Wel bijdrage."] },
+      { q: "Hoeveel **mens-chimpansee DNA** overeenkomst?", options: ["~98,8%", "10%", "0%", "50%"], answer: 0, wrongHints: [null, "Te weinig.", "Wel.", "Te weinig."] },
       {
         q: "Wat zijn **fossielen**?",
         options: ["Versteende resten van leven uit het verleden", "Stenen die zelf groeien", "Bot-modellen die wetenschappers maken", "Foto's van dieren"],
         answer: 0,
-        wrongHints: [null, "Klopt — bot/schelp/blad dat over duizenden jaren in steen veranderde.", "Niet — stenen groeien niet.", "Niet — fossielen zijn ECHTE resten.", "Niet."],
+        wrongHints: [null, "Niet — stenen groeien niet.", "Niet — fossielen zijn ECHTE resten.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een fossiel?", tekst: "Een **fossiel** is een **versteende rest** van een organisme dat lang geleden leefde. Botten, tanden, schelpen, soms zelfs poot-afdrukken of bladeren — kunnen miljoenen jaren behouden blijven in gesteente." },
@@ -276,7 +276,7 @@ const steps = [
         q: "**Natuurlijke selectie** — wat is dat?",
         options: ["Dieren die best aangepast zijn aan omgeving krijgen meeste nakomelingen", "Wetenschappers kiezen welke dieren leven", "Mensen fokken dieren", "Toeval"],
         answer: 0,
-        wrongHints: [null, "Klopt — Darwin's kernidee 1859.", "Niet — gebeurt zonder menselijke keuze.", "Dat is FOKKEN (artificiële selectie), niet natuurlijk.", "Niet helemaal toeval — selectie heeft richting."],
+        wrongHints: [null, "Niet — gebeurt zonder menselijke keuze.", "Dat is FOKKEN (artificiële selectie), niet natuurlijk.", "Niet helemaal toeval — selectie heeft richting."],
         uitlegPad: {
           stappen: [
             { titel: "Darwin's basis-idee", tekst: "**Natuurlijke selectie** is het mechanisme dat **evolutie aandrijft**. Het werkt zo:\n1. In een soort zijn dieren **niet allemaal identiek** (variatie).\n2. Sommige variaties geven **betere overlevingskansen** in hun omgeving.\n3. Die dieren krijgen **meer nakomelingen**.\n4. Die nakomelingen erven de gunstige eigenschappen.\n5. Over generaties verandert de soort." },
@@ -301,7 +301,7 @@ const steps = [
         q: "**Wij (Homo sapiens) bestaan ongeveer hoe lang**?",
         options: ["~300.000 jaar", "1 miljoen jaar", "10.000 jaar", "100 jaar"],
         answer: 0,
-        wrongHints: [null, "Klopt — oudste sapiens-fossielen Marokko ~300.000 jr (2017 ontdekking).", "Te lang — eerdere Homo-soorten leefden tot 1 mln jr terug.", "Te kort — dat is sinds landbouw.", "Veel te kort — heel de menselijke beschaving past niet in 100 jr."],
+        wrongHints: [null, "Te lang — eerdere Homo-soorten leefden tot 1 mln jr terug.", "Te kort — dat is sinds landbouw.", "Veel te kort — heel de menselijke beschaving past niet in 100 jr."],
         uitlegPad: {
           stappen: [
             { titel: "Tijdlijn menselijke evolutie", tekst: "• **Australopithecus (Lucy)**: 4-2 mln jr terug — eerste rechtoplopende voorouder\n• **Homo habilis**: 2,3-1,5 mln jr — eerste gereedschap-makers\n• **Homo erectus**: 2 mln-110.000 jr — verspreidde Afrika → Azië/Europa\n• **Homo neanderthalensis**: 400.000-40.000 jr — Europese tak\n• **Homo sapiens (wij)**: **~300.000 jaar tot nu** — Afrikaanse oorsprong" },
@@ -322,25 +322,25 @@ const steps = [
           niveaus: { basis: "~300.000 jaar. = A.", simpeler: "Homo sapiens (onze soort) bestaat ongeveer 300.000 jaar. Eerdere Homo-soorten zijn ouder. = A.", nogSimpeler: "300.000 = A." },
         },
       },
-      { q: "Wie bedacht de **evolutie-theorie**?", options: ["Charles Darwin","Isaac Newton","Albert Einstein","Galileo"], answer: 0, wrongHints: [null,"Klopt — boek 'Origin of Species' 1859.","Zwaartekracht.","Relativiteit.","Astronomie."] },
-      { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepaste dieren overleven en krijgen meer nakomelingen","Toeval","Hard werken","Geluk"], answer: 0, wrongHints: [null,"Klopt — kern Darwin.","Niet — patroon, geen toeval.","Dieren werken niet.","Wel maar systematisch."] },
-      { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null,"Klopt — bij Ecuador.","Niet.","Niet.","Niet."] },
-      { q: "Wie was **Lucy**?", options: ["Een 3,2 mln jaar oud fossiel mens-voorouder","Een schilder","Een wetenschapper","Een schip"], answer: 0, wrongHints: [null,"Klopt — Australopithecus, gevonden 1974.","Niet.","Niet — een fossiel met bijnaam.","Niet."] },
-      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier","Steen","Levend organisme","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — miljoenen jaren oud.","Te algemeen.","Niet — overblijfsel.","Wel."] },
-      { q: "Wie is onze **dichtste verwant** in het dierenrijk?", options: ["Chimpansees","Honden","Katten","Krokodillen"], answer: 0, wrongHints: [null,"Klopt — 98%+ DNA.","Verder weg.","Verder weg.","Veel verder."] },
-      { q: "Wat zijn **Neanderthalers**?", options: ["Uitgestorven Homo-soort","Apen","Reptielen","Vissen"], answer: 0, wrongHints: [null,"Klopt — uitgestorven ~40.000 jr geleden.","Niet — Homo.","Niet.","Niet."] },
-      { q: "Wat is **uitsterven**?", options: ["Laatste van een soort sterft","Slapen","Niet relevant","Vermeerderen"], answer: 0, wrongHints: [null,"Klopt — dinosaurus.","Niet.","Wel.","Tegengestelde."] },
-      { q: "Wat veroorzaakte uitsterven **dinosaurussen** vermoedelijk?", options: ["Meteoriet-inslag","Mens","Klimaatverandering puur","Niets"], answer: 0, wrongHints: [null,"Klopt — 66 mln jr geleden.","Te recent.","Onderdeel.","Wel oorzaak."] },
-      { q: "Hoeveel jaar oud is de **aarde** ongeveer?", options: ["4,5 miljard jaar","100 mln","10.000","100.000"], answer: 0, wrongHints: [null,"Klopt.","Veel te jong.","Te jong.","Te jong."] },
-      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen","Een dier","Een plant","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — code voor leven.","Niet.","Niet.","Wel."] },
-      { q: "Wat is een **soort**?", options: ["Groep dieren die zich kan voortplanten","1 dier","Familie","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — biologische definitie.","Niet.","Bredere groep.","Wel."] },
-      { q: "Welk werelddeel was **wieg van mensheid**?", options: ["Afrika","Europa","Azië","Amerika"], answer: 0, wrongHints: [null,"Klopt — vroegste fossielen.","Latere migratie.","Latere migratie.","Veel latere."] },
-      { q: "Wat zijn **restorganen** als bewijs voor evolutie?", options: ["Organen die functie verloren (bv. blindedarm)","Pijnlijke organen","Niet bestaand","Belangrijk"], answer: 0, wrongHints: [null,"Klopt.","Niet specifiek.","Wel.","Niet primair functie."] },
-      { q: "Welke **eigenschap** geeft voordeel bij voortplanting?", options: ["Aangepaste eigenschappen","Random eigenschappen","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null,"Klopt — natuurlijke selectie.","Niet — selectie selecteert.","Wel.","Wel."] },
-      { q: "**Mutaties** zijn?", options: ["Veranderingen in DNA","Trucs","Niet bestaand","Politiek"], answer: 0, wrongHints: [null,"Klopt — bron variatie.","Niet biologie.","Wel.","Niet."] },
-      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donker overlevde beter (camouflage op roet)","Wit overleefde","Geen verandering","Uitgestorven"], answer: 0, wrongHints: [null,"Klopt — bekend evolutie-voorbeeld.","Tegengestelde voor industrieel.","Wel.","Wel populatie veranderd."] },
-      { q: "Welke groep is **directe voorouder** van mens?", options: ["Australopithecus","Apen tegenwoordig","Reptielen","Vogels"], answer: 0, wrongHints: [null,"Klopt — Homo afstamt van.","Niet — gemeen voorouder.","Veel verder.","Veel verder."] },
-      { q: "Hoeveel mensen leven nu **op aarde**?", options: ["~8 miljard","1 miljard","100 miljoen","30 miljard"], answer: 0, wrongHints: [null,"Klopt — 2026.","Te weinig.","Te weinig.","Te veel."] },
+      { q: "Wie bedacht de **evolutie-theorie**?", options: ["Charles Darwin","Isaac Newton","Albert Einstein","Galileo"], answer: 0, wrongHints: [null, "Zwaartekracht.", "Relativiteit.", "Astronomie."] },
+      { q: "Wat is **natuurlijke selectie**?", options: ["Best aangepaste dieren overleven en krijgen meer nakomelingen","Toeval","Hard werken","Geluk"], answer: 0, wrongHints: [null, "Niet — patroon, geen toeval.", "Dieren werken niet.", "Wel maar systematisch."] },
+      { q: "Op welke eilanden onderzocht Darwin **vinken**?", options: ["Galapagos","Hawaï","IJsland","Cuba"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wie was **Lucy**?", options: ["Een 3,2 mln jaar oud fossiel mens-voorouder","Een schilder","Een wetenschapper","Een schip"], answer: 0, wrongHints: [null, "Niet.", "Niet — een fossiel met bijnaam.", "Niet."] },
+      { q: "Wat is een **fossiel**?", options: ["Versteende rest van plant/dier","Steen","Levend organisme","Niet relevant"], answer: 0, wrongHints: [null, "Te algemeen.", "Niet — overblijfsel.", "Wel."] },
+      { q: "Wie is onze **dichtste verwant** in het dierenrijk?", options: ["Chimpansees","Honden","Katten","Krokodillen"], answer: 0, wrongHints: [null, "Verder weg.", "Verder weg.", "Veel verder."] },
+      { q: "Wat zijn **Neanderthalers**?", options: ["Uitgestorven Homo-soort","Apen","Reptielen","Vissen"], answer: 0, wrongHints: [null, "Niet — Homo.", "Niet.", "Niet."] },
+      { q: "Wat is **uitsterven**?", options: ["Laatste van een soort sterft","Slapen","Niet relevant","Vermeerderen"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Tegengestelde."] },
+      { q: "Wat veroorzaakte uitsterven **dinosaurussen** vermoedelijk?", options: ["Meteoriet-inslag","Mens","Klimaatverandering puur","Niets"], answer: 0, wrongHints: [null, "Te recent.", "Onderdeel.", "Wel oorzaak."] },
+      { q: "Hoeveel jaar oud is de **aarde** ongeveer?", options: ["4,5 miljard jaar","100 mln","10.000","100.000"], answer: 0, wrongHints: [null, "Veel te jong.", "Te jong.", "Te jong."] },
+      { q: "**DNA** is?", options: ["Erfelijk materiaal in cellen","Een dier","Een plant","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wat is een **soort**?", options: ["Groep dieren die zich kan voortplanten","1 dier","Familie","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Bredere groep.", "Wel."] },
+      { q: "Welk werelddeel was **wieg van mensheid**?", options: ["Afrika","Europa","Azië","Amerika"], answer: 0, wrongHints: [null, "Latere migratie.", "Latere migratie.", "Veel latere."] },
+      { q: "Wat zijn **restorganen** als bewijs voor evolutie?", options: ["Organen die functie verloren (bv. blindedarm)","Pijnlijke organen","Niet bestaand","Belangrijk"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel.", "Niet primair functie."] },
+      { q: "Welke **eigenschap** geeft voordeel bij voortplanting?", options: ["Aangepaste eigenschappen","Random eigenschappen","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Niet — selectie selecteert.", "Wel.", "Wel."] },
+      { q: "**Mutaties** zijn?", options: ["Veranderingen in DNA","Trucs","Niet bestaand","Politiek"], answer: 0, wrongHints: [null, "Niet biologie.", "Wel.", "Niet."] },
+      { q: "**Pepermot** in Engeland (industrieel) — welk effect?", options: ["Donker overlevde beter (camouflage op roet)","Wit overleefde","Geen verandering","Uitgestorven"], answer: 0, wrongHints: [null, "Tegengestelde voor industrieel.", "Wel.", "Wel populatie veranderd."] },
+      { q: "Welke groep is **directe voorouder** van mens?", options: ["Australopithecus","Apen tegenwoordig","Reptielen","Vogels"], answer: 0, wrongHints: [null, "Niet — gemeen voorouder.", "Veel verder.", "Veel verder."] },
+      { q: "Hoeveel mensen leven nu **op aarde**?", options: ["~8 miljard","1 miljard","100 miljoen","30 miljard"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
     ],
   },
 ];

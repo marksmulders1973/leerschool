@@ -20,7 +20,7 @@ const steps = [
         q: "Wie is **Erasmus**?",
         options: ["Beroemde humanist + filosoof Rotterdam", "Schilder", "Voetballer", "Politicus"],
         answer: 0,
-        wrongHints: [null, "Klopt — 1466-1536.", "Rembrandt.", "Modern.", "Niet."],
+        wrongHints: [null, "Rembrandt.", "Modern.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Erasmus?", tekst: "**Desiderius Erasmus van Rotterdam** (1466-1536) was een NL **humanist** en **filosoof**. Hij wordt vaak gezien als de slimste Nederlander ooit." },
@@ -48,7 +48,7 @@ const steps = [
         q: "Wie was **Willem van Oranje**?",
         options: ["Leider Tachtigjarige Oorlog + Vader des Vaderlands", "Voetballer", "Schilder", "Astronaut"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Modern.", "Niet.", "Niet."],
+        wrongHints: [null, "Modern.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was hij?", tekst: "**Willem van Oranje** (1533-1584) was een edelman die de leiding nam in de **opstand tegen Spanje** (1568-1648, ook bekend als de Tachtigjarige Oorlog)." },
@@ -77,7 +77,7 @@ const steps = [
         q: "Wie zag **bacteriën** als eerste?",
         options: ["Antoni van Leeuwenhoek (microscoop, Delft)", "Huygens", "Cruijff", "Mussert"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Astronoom.", "Niet.", "Niet."],
+        wrongHints: [null, "Astronoom.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was hij?", tekst: "**Antoni van Leeuwenhoek** (1632-1723) was een lakenkoopman uit **Delft**. Hij was geen wetenschapper van opleiding, maar bouwde zelf **microscopen** uit nieuwsgierigheid." },
@@ -105,7 +105,7 @@ const steps = [
         q: "Wie ontsnapte uit **boekenkist Slot Loevestein**?",
         options: ["Hugo de Groot (1621)", "Erasmus", "Vondel", "Mussert"],
         answer: 0,
-        wrongHints: [null, "Klopt — beroemd verhaal.", "Filosoof, ander tijdperk.", "Toneeldichter, geen gevangene.", "WO2-tijdperk, anders."],
+        wrongHints: [null, "Filosoof, ander tijdperk.", "Toneeldichter, geen gevangene.", "WO2-tijdperk, anders."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Hugo de Groot?", tekst: "**Hugo de Groot** (1583-1645) was een Nederlandse **jurist** + **filosoof**. Wordt vaak 'Vader van het internationaal recht' genoemd — zijn boeken gelden nog vandaag als basis." },
@@ -140,7 +140,7 @@ const steps = [
         q: "Wie is **grootste NL-voetballer** ooit?",
         options: ["Johan Cruijff (3x Gouden Bal)", "Verstappen", "Cruyff junior", "Memphis"],
         answer: 0,
-        wrongHints: [null, "Klopt — overleden 2016.", "F1.", "Niet zo bekend.", "Modern."],
+        wrongHints: [null, "F1.", "Niet zo bekend.", "Modern."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Cruijff?", tekst: "**Johan Cruijff** (1947-2016) was een NL-voetballer die wereldberoemd werd om zijn techniek + creativiteit. Speelde bij **Ajax** + **FC Barcelona** + Feyenoord." },
@@ -168,19 +168,19 @@ const steps = [
         q: "Wie won **Tour de France 1980**?",
         options: ["Joop Zoetemelk", "Tom Dumoulin", "Van Vleuten", "Cruijff"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Giro.", "Vrouwen.", "Voetbal."],
+        wrongHints: [null, "Giro.", "Vrouwen.", "Voetbal."],
       },
       {
         q: "**3x wereldkampioen F1** Nederlander?",
         options: ["Max Verstappen (2021-2023, 2024)", "Jos Verstappen", "Cruijff", "Geen"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Vader, geen titel.", "Voetbal.", "Wel."],
+        wrongHints: [null, "Vader, geen titel.", "Voetbal.", "Wel."],
       },
       {
         q: "**Meeste medailles** NL ooit?",
         options: ["Ireen Wüst (13 schaatsen)", "Verstappen", "Cruijff", "Sven Kramer"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "F1 wel maar geen OS-medaille.", "Niet.", "Iets minder."],
+        wrongHints: [null, "F1 wel maar geen OS-medaille.", "Niet.", "Iets minder."],
       },
     ],
   },
@@ -193,25 +193,25 @@ const steps = [
         q: "Wie was **premier 2010-2024**?",
         options: ["Mark Rutte (VVD, langste ooit)", "Dick Schoof", "Wim Kok", "Balkenende"],
         answer: 0,
-        wrongHints: [null, "Klopt — 14 jaar.", "Sinds juli 2024.", "Eerder.", "Eerder."],
+        wrongHints: [null, "Sinds juli 2024.", "Eerder.", "Eerder."],
       },
       {
         q: "Sinds welk jaar **Willem-Alexander** koning?",
         options: ["30 april 2013", "2000", "2020", "1980"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Beatrix."],
+        wrongHints: [null, "Niet.", "Niet.", "Beatrix."],
       },
       {
         q: "Wie regisseerde **Robocop + Basic Instinct**?",
         options: ["Paul Verhoeven", "Anton Corbijn", "Carice van Houten", "Tarantino"],
         answer: 0,
-        wrongHints: [null, "Klopt — NL → Hollywood.", "Music-films.", "Actrice.", "Amerikaan."],
+        wrongHints: [null, "Music-films.", "Actrice.", "Amerikaan."],
       },
       {
         q: "Wie begon **Ocean Cleanup**?",
         options: ["Boyan Slat (16 jr begin)", "Mark Rutte", "Verstappen", "Cruijff"],
         answer: 0,
-        wrongHints: [null, "Klopt — jonge held.", "Politicus.", "F1.", "Voetbal."],
+        wrongHints: [null, "Politicus.", "F1.", "Voetbal."],
         uitlegPad: {
           stappen: [
             { titel: "Wie is Boyan Slat?", tekst: "**Boyan Slat** (geboren 1994) is een **Nederlandse uitvinder**. Op zijn **16e** kreeg hij tijdens een duik-vakantie in Griekenland het idee om **plastic uit de oceaan** te halen." },
@@ -241,17 +241,17 @@ const steps = [
     title: "Eind-toets — NL'ers mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wie was **Vader des Vaderlands**?", options: ["Willem van Oranje", "Erasmus", "Cruijff", "Rutte"], answer: 0, wrongHints: [null, "Klopt — 1533-1584.", "Humanist.", "Voetbal.", "Modern."] },
-      { q: "Wie maakte **microscoop** als eerste?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Klopt — Delft, 17e eeuw.", "Andere wetenschap.", "Andere wetenschap.", "Niet."] },
-      { q: "**Grootste voetballer** NL ooit?", options: ["Johan Cruijff", "Verstappen", "Rutte", "Erasmus"], answer: 0, wrongHints: [null, "Klopt.", "F1.", "Politiek.", "Filosoof."] },
-      { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte (langste ooit)", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Klopt.", "Eerder.", "Eerder.", "Eerder."] },
-      { q: "Wie ontwierp **Fokker-vliegtuigen**?", options: ["Anthony Fokker", "Slat", "Cruijff", "Verstappen"], answer: 0, wrongHints: [null, "Klopt.", "Ocean Cleanup.", "Voetbal.", "F1."] },
-      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Klopt — vóór hem ~123 jaar koninginnen.", "Te recent gekroond.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
+      { q: "Wie was **Vader des Vaderlands**?", options: ["Willem van Oranje", "Erasmus", "Cruijff", "Rutte"], answer: 0, wrongHints: [null, "Humanist.", "Voetbal.", "Modern."] },
+      { q: "Wie maakte **microscoop** als eerste?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Andere wetenschap.", "Andere wetenschap.", "Niet."] },
+      { q: "**Grootste voetballer** NL ooit?", options: ["Johan Cruijff", "Verstappen", "Rutte", "Erasmus"], answer: 0, wrongHints: [null, "F1.", "Politiek.", "Filosoof."] },
+      { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte (langste ooit)", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Eerder.", "Eerder.", "Eerder."] },
+      { q: "Wie ontwierp **Fokker-vliegtuigen**?", options: ["Anthony Fokker", "Slat", "Cruijff", "Verstappen"], answer: 0, wrongHints: [null, "Ocean Cleanup.", "Voetbal.", "F1."] },
+      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Te recent gekroond.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
       {
         q: "Wie schreef **Max Havelaar** (1860) — boek tegen koloniale uitbuiting?",
         options: ["Multatuli (Eduard Douwes Dekker)", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
         answer: 0,
-        wrongHints: [null, "Klopt — Multatuli was pseudoniem ('ik heb veel gedragen').", "Andere periode — 2e Wereldoorlog dagboek.", "Andere generatie — na 1945.", "Kinderboeken (Jip & Janneke)."],
+        wrongHints: [null, "Andere periode — 2e Wereldoorlog dagboek.", "Andere generatie — na 1945.", "Kinderboeken (Jip & Janneke)."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Multatuli?", tekst: "**Multatuli** is het pseudoniem (= schuilnaam) van **Eduard Douwes Dekker** *(1820-1887)*. Werkte als bestuurder in Nederlands-Indië, zag uitbuiting van Javanen door koloniaal systeem." },
@@ -275,7 +275,7 @@ const steps = [
         q: "**Boyan Slat** — wat doet hij?",
         options: ["Ocean Cleanup — plastic uit zeeën halen", "F1-coureur", "Voetballer", "Politicus"],
         answer: 0,
-        wrongHints: [null, "Klopt — Slat (geb. 1994) bedacht The Ocean Cleanup met 18 jaar.", "Andere jongere — Max Verstappen.", "Andere sport.", "Niet."],
+        wrongHints: [null, "Andere jongere — Max Verstappen.", "Andere sport.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie is Boyan Slat?", tekst: "Boyan Slat (geboren **1994**) is een **Nederlandse uitvinder**. Begon **The Ocean Cleanup** op zijn 18e — bedrijf dat plastic uit oceanen verwijdert met grote drijvende systemen." },
@@ -298,7 +298,7 @@ const steps = [
         q: "**Anne Frank** — wat is ze beroemd door?",
         options: ["Haar dagboek uit de onderduiktijd WO2", "Schilderingen", "Politiek leider", "Sport-prestaties"],
         answer: 0,
-        wrongHints: [null, "Klopt — schreef dagboek in onderduik 1942-1944 in Amsterdam.", "Niet — was schoolmeisje.", "Niet — was joods slachtoffer, geen politicus.", "Niet."],
+        wrongHints: [null, "Niet — was schoolmeisje.", "Niet — was joods slachtoffer, geen politicus.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Anne Frank?", tekst: "**Anne Frank** *(1929-1945)* was een **joods meisje** dat tijdens de Tweede Wereldoorlog ondergedoken zat in Amsterdam aan de **Prinsengracht 263** (nu Anne Frank Huis museum). Schreef daar haar dagboek." },
@@ -322,7 +322,7 @@ const steps = [
         q: "**Max Verstappen** — beroemd om?",
         options: ["F1-coureur (wereldkampioen 2021-2024)", "Voetballer", "Tennisser", "Schaatsers"],
         answer: 0,
-        wrongHints: [null, "Klopt — 4× wereldkampioen Formule 1.", "Andere sport.", "Andere sport.", "Andere sport."],
+        wrongHints: [null, "Andere sport.", "Andere sport.", "Andere sport."],
         uitlegPad: {
           stappen: [
             { titel: "Wie is Max Verstappen?", tekst: "**Max Verstappen** (geboren **1997** in Hasselt, België) is een Nederlands-Belgische **Formule 1-coureur**. Rijdt sinds 2015 in de F1, tegenwoordig voor Red Bull Racing. Jongste F1-winnaar ooit (Spanje 2016, 18 jaar oud)." },
@@ -341,24 +341,24 @@ const steps = [
           niveaus: { basis: "F1. = A.", simpeler: "Max Verstappen = Nederlandse F1-coureur, 4× wereldkampioen 2021-2024. = A.", nogSimpeler: "F1 = A." },
         },
       },
-      { q: "**Willem van Oranje** leefde tijdens?", options: ["Tachtigjarige Oorlog (16e eeuw)","Tweede Wereldoorlog","Gouden Eeuw","Romeinen"], answer: 0, wrongHints: [null,"Klopt — leider opstand tegen Spanje.","Veel later.","Iets later — Gouden Eeuw is 17e eeuw.","Veel eerder."] },
-      { q: "Welke Nederlander is bekend van de **microscoop**?", options: ["Anton van Leeuwenhoek","Christiaan Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null,"Klopt — zag eerst micro-organismen.","Astronoom en klokmaker.","Filosoof.","Plastic-soep-opruimer."] },
-      { q: "**Boyan Slat** is bekend om?", options: ["Plastic uit oceanen halen","F1-races","Schaatsen","Politiek"], answer: 0, wrongHints: [null,"Klopt — Ocean Cleanup.","Andere persoon.","Andere persoon.","Andere persoon."] },
-      { q: "Wie is huidige koning van NL (2026)?", options: ["Willem-Alexander","Beatrix","Juliana","Willem I"], answer: 0, wrongHints: [null,"Klopt — sinds 2013.","Vorige.","Eerder.","Eerste."] },
-      { q: "Wie is **koningin Máxima** geboren?", options: ["Argentinië","Nederland","Duitsland","België"], answer: 0, wrongHints: [null,"Klopt.","Wel woont nu.","Niet.","Niet."] },
-      { q: "**Erasmus** was een?", options: ["Humanistische filosoof (1466-1536)","Politicus","Schilder","Atleet"], answer: 0, wrongHints: [null,"Klopt — Rotterdam.","Niet.","Niet.","Niet."] },
-      { q: "Wie schreef *Max Havelaar*?", options: ["Multatuli","Vondel","Anne Frank","Annie M.G. Schmidt"], answer: 0, wrongHints: [null,"Klopt — schuilnaam.","Andere periode.","Andere.","Niet."] },
-      { q: "**Rembrandt** schilderde welk beroemd werk?", options: ["De Nachtwacht","Mona Lisa","Sterrennacht","Niet bekend"], answer: 0, wrongHints: [null,"Klopt — 1642.","Da Vinci.","Van Gogh.","Wel."] },
-      { q: "**Vincent van Gogh** is bekend om welk werk?", options: ["De Zonnebloemen / Sterrennacht","Nachtwacht","Niet bekend","Anna Karenina"], answer: 0, wrongHints: [null,"Klopt.","Rembrandt.","Wel beroemd.","Niet schilder."] },
-      { q: "**Cruijff** was beroemde NL-?", options: ["Voetballer","Politicus","Wetenschapper","Schaker"], answer: 0, wrongHints: [null,"Klopt — Ajax.","Niet.","Niet.","Niet."] },
-      { q: "Wie was **Ann Schmidt** (afk. Annie M.G.)?", options: ["NL kinderboeken-schrijfster","Voetbalspeelster","Politicus","Niet bekend"], answer: 0, wrongHints: [null,"Klopt.","Niet.","Niet.","Wel."] },
-      { q: "**Marga Klompé** was eerste vrouwelijke wat in NL?", options: ["Minister","Premier","Koningin","Bibliothecaris"], answer: 0, wrongHints: [null,"Klopt — 1956.","Nooit was er nog.","Was koningin.","Niet."] },
-      { q: "Wie is huidige **premier** NL (2026)?", options: ["Dick Schoof","Mark Rutte","Wilders","Rutte"], answer: 0, wrongHints: [null,"Klopt — vanaf 2024.","Vorige.","Politicus, geen premier.","Vorige."] },
-      { q: "Welke beroemde NL-schaatser?", options: ["Sven Kramer / Ireen Wüst","Cruijff","Rembrandt","Erasmus"], answer: 0, wrongHints: [null,"Klopt.","Voetbal.","Schilder.","Filosoof."] },
-      { q: "**Vermeer** is bekend om?", options: ["Schilderij 'Meisje met de parel'","Wetenschap","Politiek","Sport"], answer: 0, wrongHints: [null,"Klopt — Delft 17e eeuw.","Niet.","Niet.","Niet."] },
-      { q: "**Mata Hari** was een?", options: ["NL-danseres / spionne in WO1","Schilder","Wetenschapper","Politicus"], answer: 0, wrongHints: [null,"Klopt — Leeuwarden.","Niet.","Niet.","Niet."] },
-      { q: "Welke NL-zanger had hit *Bloed, Zweet en Tranen*?", options: ["André Hazes","Hazes jr.","Niet bekend","Niet bestaand"], answer: 0, wrongHints: [null,"Klopt — André sr.","Wel ook bekend.","Wel.","Wel."] },
-      { q: "Wie won 2010 **Tour de France** (NL'er)?", options: ["Niet NL — wel Jan Janssen 1968","Cruijff","Niemand","Verstappen"], answer: 0, wrongHints: [null,"Klopt — 1968 Jan Janssen.","Voetbal.","Wel.","F1."] },
+      { q: "**Willem van Oranje** leefde tijdens?", options: ["Tachtigjarige Oorlog (16e eeuw)","Tweede Wereldoorlog","Gouden Eeuw","Romeinen"], answer: 0, wrongHints: [null, "Veel later.", "Iets later — Gouden Eeuw is 17e eeuw.", "Veel eerder."] },
+      { q: "Welke Nederlander is bekend van de **microscoop**?", options: ["Anton van Leeuwenhoek","Christiaan Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null, "Astronoom en klokmaker.", "Filosoof.", "Plastic-soep-opruimer."] },
+      { q: "**Boyan Slat** is bekend om?", options: ["Plastic uit oceanen halen","F1-races","Schaatsen","Politiek"], answer: 0, wrongHints: [null, "Andere persoon.", "Andere persoon.", "Andere persoon."] },
+      { q: "Wie is huidige koning van NL (2026)?", options: ["Willem-Alexander","Beatrix","Juliana","Willem I"], answer: 0, wrongHints: [null, "Vorige.", "Eerder.", "Eerste."] },
+      { q: "Wie is **koningin Máxima** geboren?", options: ["Argentinië","Nederland","Duitsland","België"], answer: 0, wrongHints: [null, "Wel woont nu.", "Niet.", "Niet."] },
+      { q: "**Erasmus** was een?", options: ["Humanistische filosoof (1466-1536)","Politicus","Schilder","Atleet"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wie schreef *Max Havelaar*?", options: ["Multatuli","Vondel","Anne Frank","Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Andere periode.", "Andere.", "Niet."] },
+      { q: "**Rembrandt** schilderde welk beroemd werk?", options: ["De Nachtwacht","Mona Lisa","Sterrennacht","Niet bekend"], answer: 0, wrongHints: [null, "Da Vinci.", "Van Gogh.", "Wel."] },
+      { q: "**Vincent van Gogh** is bekend om welk werk?", options: ["De Zonnebloemen / Sterrennacht","Nachtwacht","Niet bekend","Anna Karenina"], answer: 0, wrongHints: [null, "Rembrandt.", "Wel beroemd.", "Niet schilder."] },
+      { q: "**Cruijff** was beroemde NL-?", options: ["Voetballer","Politicus","Wetenschapper","Schaker"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wie was **Ann Schmidt** (afk. Annie M.G.)?", options: ["NL kinderboeken-schrijfster","Voetbalspeelster","Politicus","Niet bekend"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "**Marga Klompé** was eerste vrouwelijke wat in NL?", options: ["Minister","Premier","Koningin","Bibliothecaris"], answer: 0, wrongHints: [null, "Nooit was er nog.", "Was koningin.", "Niet."] },
+      { q: "Wie is huidige **premier** NL (2026)?", options: ["Dick Schoof","Mark Rutte","Wilders","Rutte"], answer: 0, wrongHints: [null, "Vorige.", "Politicus, geen premier.", "Vorige."] },
+      { q: "Welke beroemde NL-schaatser?", options: ["Sven Kramer / Ireen Wüst","Cruijff","Rembrandt","Erasmus"], answer: 0, wrongHints: [null, "Voetbal.", "Schilder.", "Filosoof."] },
+      { q: "**Vermeer** is bekend om?", options: ["Schilderij 'Meisje met de parel'","Wetenschap","Politiek","Sport"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Mata Hari** was een?", options: ["NL-danseres / spionne in WO1","Schilder","Wetenschapper","Politicus"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke NL-zanger had hit *Bloed, Zweet en Tranen*?", options: ["André Hazes","Hazes jr.","Niet bekend","Niet bestaand"], answer: 0, wrongHints: [null, "Wel ook bekend.", "Wel.", "Wel."] },
+      { q: "Wie won 2010 **Tour de France** (NL'er)?", options: ["Niet NL — wel Jan Janssen 1968","Cruijff","Niemand","Verstappen"], answer: 0, wrongHints: [null, "Voetbal.", "Wel.", "F1."] },
     ],
   },
 ];

@@ -645,7 +645,7 @@ const steps = [
         q: "Wat is een **chemische reactie**?",
         options: ["Stoffen veranderen in andere stoffen","Stoffen worden warm","Verkleurd","Volume verandert"],
         answer: 0,
-        wrongHints: [null,"Klopt — atomen rangschikken anders → nieuwe stof.","Niet primair — soms wel maar niet definitie.","Niet primair — gevolg, geen definitie.","Niet primair — natuurkunde, geen chemie."],
+        wrongHints: [null, "Niet primair — soms wel maar niet definitie.", "Niet primair — gevolg, geen definitie.", "Niet primair — natuurkunde, geen chemie."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is chemische reactie?", tekst: "**Chemische reactie** = proces waarbij **stoffen veranderen in andere stoffen** met nieuwe eigenschappen. Atomen blijven hetzelfde, maar hun rangschikking verandert.\n\nVoorbeelden:\n• IJzer + zuurstof → roest\n• Hout + zuurstof → as + CO₂ + water (verbranding)\n• Magnesium + zuurstof → magnesiumoxide (felle witte flits)\n• Maagzuur + voedsel → vertering" },
@@ -670,7 +670,7 @@ const steps = [
         q: "Welke **3 fasen** kan een stof hebben?",
         options: ["Vast, vloeibaar, gas","Klein, middel, groot","Koud, lauw, heet","Kleurloos, helder, donker"],
         answer: 0,
-        wrongHints: [null,"Klopt — drie basis-aggregatietoestanden + soms 4e (plasma).","Niet — grootte is geen fase.","Niet — temperatuur is geen fase (wel oorzaak overgang).","Niet — kleur niet relevant voor fase."],
+        wrongHints: [null, "Niet — grootte is geen fase.", "Niet — temperatuur is geen fase (wel oorzaak overgang).", "Niet — kleur niet relevant voor fase."],
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** (g) — geïoniseerd gas, in zon + bliksem + neon-lampen." },
@@ -694,7 +694,7 @@ const steps = [
         q: "Wat is een **molecuul**?",
         options: ["Groep atomen samen verbonden","Klein metaal","Een type cel","Atoomkern"],
         answer: 0,
-        wrongHints: [null,"Klopt — bv H₂O = 1 zuurstof + 2 waterstof atomen.","Niet — molecuul kan elk type atoom bevatten.","Niet — cellen zijn biologisch, moleculen scheikundig.","Niet — kern = onderdeel atoom, niet molecuul."],
+        wrongHints: [null, "Niet — molecuul kan elk type atoom bevatten.", "Niet — cellen zijn biologisch, moleculen scheikundig.", "Niet — kern = onderdeel atoom, niet molecuul."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een molecuul?", tekst: "Een **molecuul** is een **groep atomen** die **chemisch verbonden** zijn (via electronen). Vormen kleinste eenheid van een chemische verbinding.\n\nVoorbeelden moleculen:\n• **H₂O** = water (2 H + 1 O)\n• **CO₂** = koolstofdioxide (1 C + 2 O)\n• **O₂** = zuurstof-gas (2 O)\n• **CH₄** = methaan (1 C + 4 H)\n• **NaCl** = keukenzout (1 Na + 1 Cl)" },
@@ -718,7 +718,7 @@ const steps = [
         q: "Wat is een **pH-waarde**?",
         options: ["Mate van zuur/base (schaal 0-14)","Temperatuur","Gewicht","Druk"],
         answer: 0,
-        wrongHints: [null,"Klopt — pH 0 = sterk zuur, pH 7 = neutraal, pH 14 = sterk base.","Niet — temperatuur is Celsius.","Niet — gewicht is gram/kg.","Niet — druk is Pascal/bar."],
+        wrongHints: [null, "Niet — temperatuur is Celsius.", "Niet — gewicht is gram/kg.", "Niet — druk is Pascal/bar."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is pH?", tekst: "**pH** = maat voor **zuur of base** van een oplossing. Schaal:\n• **0-6** = zuur (lager = zuurder)\n• **7** = neutraal (zuiver water)\n• **8-14** = base (hoger = basischer)\n\nLogaritmisch: elke stap = 10× verschil. pH 5 is 10× zuurder dan pH 6." },

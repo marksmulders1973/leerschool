@@ -526,7 +526,7 @@ const steps = [
           niveaus: { basis: "bijwoord (tijd).", simpeler: "Wanneer = bw.", nogSimpeler: "Wanneer = bw. → bw." },
         },
       },
-      { q: "Welke woordsoort is **omdat** in: *Ik blijf thuis omdat het regent*?", options: ["Voegwoord","Voorzetsel","Bijwoord","Lidwoord"], answer: 0, wrongHints: [null,"Klopt — verbindt twee zinsdelen.","Voorzetsel staat vóór zn (op, in, onder).","Geen bijwoord.","De/het/een."] },
+      { q: "Welke woordsoort is **omdat** in: *Ik blijf thuis omdat het regent*?", options: ["Voegwoord","Voorzetsel","Bijwoord","Lidwoord"], answer: 0, wrongHints: [null, "Voorzetsel staat vóór zn (op, in, onder).", "Geen bijwoord.", "De/het/een."] },
     ],
   },
 ];

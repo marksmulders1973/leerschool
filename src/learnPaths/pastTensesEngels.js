@@ -496,7 +496,7 @@ const steps = [
         },
       },
       { q: "I _____ in London since 2020.", options: ["have lived","lived","live","am living"], answer: 0, wrongHints: [null,"Niet — 'since' triggert present perfect.","Niet — link met nu (woont er nog).","Niet — continuous past niet bij 'since'."] },
-      { q: "Welk signaalwoord hoort bij past simple, niet present perfect?", options: ["yesterday","ever","just","already"], answer: 0, wrongHints: [null,"Klopt — yesterday = afgerond verleden.","Ever past bij present perfect.","Just past bij present perfect.","Already past bij present perfect."] },
+      { q: "Welk signaalwoord hoort bij past simple, niet present perfect?", options: ["yesterday","ever","just","already"], answer: 0, wrongHints: [null, "Ever past bij present perfect.", "Just past bij present perfect.", "Already past bij present perfect."] },
     ],
   },
 ];

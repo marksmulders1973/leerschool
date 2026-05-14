@@ -479,7 +479,7 @@ const steps = [
         q: "Welk woord is **correct geschreven**?",
         options: ["fietspomp","fiets-pomp","fiets pomp","Fietspomp"],
         answer: 0,
-        wrongHints: [null,"Klopt — samenstelling zonder streepje of spatie.","Niet — streepje meestal niet bij gewone samenstelling.","Niet — spatie maakt 2 woorden.","Niet — hoofdletter alleen aan zinbegin."],
+        wrongHints: [null, "Niet — streepje meestal niet bij gewone samenstelling.", "Niet — spatie maakt 2 woorden.", "Niet — hoofdletter alleen aan zinbegin."],
         uitlegPad: {
           stappen: [
             { titel: "Samenstellingen aan-elkaar", tekst: "Een **samenstelling** is 2+ woorden samen tot 1: 'fiets' + 'pomp' = **'fietspomp'**. Schrijfregel: **aan elkaar, zonder spatie of streepje**." },
@@ -496,7 +496,7 @@ const steps = [
         q: "Welk woord heeft de **correcte hoofdletter**?",
         options: ["Nederland","nederland","NEDERLAND","Neder­land"],
         answer: 0,
-        wrongHints: [null,"Klopt — landnamen krijgen altijd hoofdletter.","Niet — landnamen NIET met kleine letter.","Niet — alleen 1 hoofdletter aan begin.","Niet — geen streepje midden in landnaam."],
+        wrongHints: [null, "Niet — landnamen NIET met kleine letter.", "Niet — alleen 1 hoofdletter aan begin.", "Niet — geen streepje midden in landnaam."],
         uitlegPad: {
           stappen: [
             { titel: "Wanneer hoofdletter?", tekst: "Hoofdletter (kapitaal) gebruik je bij:\n• **Begin zin**: 'De auto rijdt.'\n• **Eigennamen**: persoonsnamen (Tom, Lisa), landen (Nederland), steden (Amsterdam), rivieren (Rijn)\n• **Talen**: Nederlands, Engels, Duits\n• **Volk-namen**: Nederlander, Marokkaan, Spanjaard\n• **Maanden + dagen**: Januari, Maandag... — WACHT, in NL juist NIET (kleine letter)" },
@@ -516,7 +516,7 @@ const steps = [
         q: "Welk woord eindigt op **-isch**?",
         options: ["fantastisch","fantastiesch","fantastik","fantasties"],
         answer: 0,
-        wrongHints: [null,"Klopt — '-isch' is de standaard-NL-uitgang.","Niet — extra letters niet nodig.","Niet — geen 'k' aan einde.","Niet — '-ies' bestaat niet."],
+        wrongHints: [null, "Niet — extra letters niet nodig.", "Niet — geen 'k' aan einde.", "Niet — '-ies' bestaat niet."],
         uitlegPad: {
           stappen: [
             { titel: "'-isch'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-isch'**:\n• fantastisch\n• elektrisch\n• logisch\n• magisch\n• klassiek (verwarrend! Zonder -h: 'klassiek')\n\nDe -h is stil — je hoort 'fantasties' maar SCHRIJFT '-isch'." },
@@ -536,7 +536,7 @@ const steps = [
         q: "Welk woord eindigt op **-lijk**?",
         options: ["vriendelijk","vriendelik","vriendelijc","vriendlijk"],
         answer: 0,
-        wrongHints: [null,"Klopt — '-lijk' standaard-uitgang.","Niet — geen 'k' zonder 'j'.","Niet — geen 'c'.","Niet — 'e' tussen 'vriend' + 'lijk' nodig."],
+        wrongHints: [null, "Niet — geen 'k' zonder 'j'.", "Niet — geen 'c'.", "Niet — 'e' tussen 'vriend' + 'lijk' nodig."],
         uitlegPad: {
           stappen: [
             { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• gelukkig (uitzondering: -ig ipv -lijk)\n• menselijk\n• kinderlijk\n• plotseling (-ling, niet -lijk)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
@@ -551,21 +551,21 @@ const steps = [
           niveaus: { basis: "vriendelijk. = A.", simpeler: "NL-uitgang -lijk wordt altijd met j-k geschreven (niet -lik of -lijc). Vriendelijk = standaard. = A.", nogSimpeler: "-lijk = A." },
         },
       },
-      { q: "Hoe schrijf je: 'natuurlijk' / 'natuurlik' / 'natuurlic'?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null,"Klopt — -lijk vast.","Niet — j-k blijft.","Niet — geen c.","Niet — verkeerd grond-woord."] },
-      { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritiek'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null,"Klopt — -isch vast.","Niet — h zonder s.","Niet.","Niet."] },
-      { q: "Welke is goed: 'voetbalveld' of 'voetbal-veld'?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null,"Klopt — samenstelling = aan elkaar.","Geen streepje nodig.","Niet.","Niet."] },
-      { q: "Hoofdletter: 'mijn moeder is uit ___.'", options: ["Nederland","nederland","Nederland (?)","NEDERLAND"], answer: 0, wrongHints: [null,"Klopt — land = hoofdletter.","Niet — land krijgt hoofdletter.","Niet — geen vraag.","Niet — niet alles hoofdletter."] },
-      { q: "Hoofdletter: 'we zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null,"Klopt — dagen NL = klein.","Niet — dagen in NL klein.","Niet.","Niet."] },
-      { q: "Welke zin heeft de **juiste hoofdletter** voor namen?", options: ["Mijn vriend Tim komt morgen.","mijn vriend tim komt morgen.","Mijn Vriend Tim komt morgen.","mijn vriend tim Komt morgen."], answer: 0, wrongHints: [null,"Klopt — alleen begin zin + naam.","Geen hoofdletter aan begin zin.","Vriend ≠ naam.","Komt ≠ naam."] },
-      { q: "Welke woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null,"Klopt.","Niet — j-k samen.","Verkeerde klinker.","Niet."] },
-      { q: "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null,"Klopt — samen.","Niet — uit elkaar.","Niet — geen streepje.","Niet."] },
-      { q: "**Het meervoud** van 'huis' is?", options: ["huizen","huisen","huises","huis'en"], answer: 0, wrongHints: [null,"Klopt — s wordt z.","Niet — verandering nodig.","Engels.","Niet."] },
-      { q: "Het meervoud van 'kind' is?", options: ["kinderen","kinden","kindes","kinds"], answer: 0, wrongHints: [null,"Klopt — onregelmatig.","Niet.","Niet.","Engels."] },
-      { q: "Het meervoud van 'auto' is?", options: ["auto's","autos","autoes","auto"], answer: 0, wrongHints: [null,"Klopt — apostrof + s.","Niet — apostrof nodig.","Engels.","Niet — meervoud nodig."] },
-      { q: "Welke trema: 'po___tje' / 'po-etje' / 'poöetje'?", options: ["poëtje","poetje","poötje","po'etje"], answer: 0, wrongHints: [null,"Klopt — trema breekt klinkers.","Niet — letters botsen.","Niet — verkeerde trema.","Geen apostrof."] },
-      { q: "Welke is goed: 'in tussen' of 'intussen'?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null,"Klopt — vast woord.","Niet — geen 2 woorden.","Geen streepje.","Niet."] },
-      { q: "Welke is goed: 's morgens' of 'smorgens' of 's-morgens'?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null,"Klopt — apostrof + spatie.","Apostrof mist.","Aan elkaar fout.","Spatie ontbreekt."] },
-      { q: "Welke is goed: 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null,"Klopt — eigen-naam-persoon.","Niet — naam = hoofdletter.","Niet — geen streepje.","Niet."] },
+      { q: "Hoe schrijf je: 'natuurlijk' / 'natuurlik' / 'natuurlic'?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Niet — j-k blijft.", "Niet — geen c.", "Niet — verkeerd grond-woord."] },
+      { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritiek'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Niet — h zonder s.", "Niet.", "Niet."] },
+      { q: "Welke is goed: 'voetbalveld' of 'voetbal-veld'?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null, "Geen streepje nodig.", "Niet.", "Niet."] },
+      { q: "Hoofdletter: 'mijn moeder is uit ___.'", options: ["Nederland","nederland","Nederland (?)","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — geen vraag.", "Niet — niet alles hoofdletter."] },
+      { q: "Hoofdletter: 'we zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Niet.", "Niet."] },
+      { q: "Welke zin heeft de **juiste hoofdletter** voor namen?", options: ["Mijn vriend Tim komt morgen.","mijn vriend tim komt morgen.","Mijn Vriend Tim komt morgen.","mijn vriend tim Komt morgen."], answer: 0, wrongHints: [null, "Geen hoofdletter aan begin zin.", "Vriend ≠ naam.", "Komt ≠ naam."] },
+      { q: "Welke woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Niet — j-k samen.", "Verkeerde klinker.", "Niet."] },
+      { q: "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null, "Niet — uit elkaar.", "Niet — geen streepje.", "Niet."] },
+      { q: "**Het meervoud** van 'huis' is?", options: ["huizen","huisen","huises","huis'en"], answer: 0, wrongHints: [null, "Niet — verandering nodig.", "Engels.", "Niet."] },
+      { q: "Het meervoud van 'kind' is?", options: ["kinderen","kinden","kindes","kinds"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Engels."] },
+      { q: "Het meervoud van 'auto' is?", options: ["auto's","autos","autoes","auto"], answer: 0, wrongHints: [null, "Niet — apostrof nodig.", "Engels.", "Niet — meervoud nodig."] },
+      { q: "Welke trema: 'po___tje' / 'po-etje' / 'poöetje'?", options: ["poëtje","poetje","poötje","po'etje"], answer: 0, wrongHints: [null, "Niet — letters botsen.", "Niet — verkeerde trema.", "Geen apostrof."] },
+      { q: "Welke is goed: 'in tussen' of 'intussen'?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null, "Niet — geen 2 woorden.", "Geen streepje.", "Niet."] },
+      { q: "Welke is goed: 's morgens' of 'smorgens' of 's-morgens'?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null, "Apostrof mist.", "Aan elkaar fout.", "Spatie ontbreekt."] },
+      { q: "Welke is goed: 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null, "Niet — naam = hoofdletter.", "Niet — geen streepje.", "Niet."] },
     ],
   },
 ];

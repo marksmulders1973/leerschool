@@ -819,9 +819,9 @@ const steps = [
           niveaus: { basis: "Onderschikkend.", simpeler: "Reden onder reden.", nogSimpeler: "Onderschikkend." },
         },
       },
-      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem (op de man)","Vals dilemma","Cirkelredenering","Vergelijking"], answer: 0, wrongHints: [null,"Klopt — aanval op persoon ipv argument.","Niet — geen 2 opties.","Niet — geen herhaling.","Niet — geen vergelijking."] },
-      { q: "*'Je bent vóór de regering óf je bent een verrader.'* = ?", options: ["Vals dilemma","Ad hominem","Autoriteit","Vergelijking"], answer: 0, wrongHints: [null,"Klopt — slechts 2 keuzes voorgesteld waar er meer zijn.","Geen persoonsaanval.","Geen expert genoemd.","Geen vergelijking."] },
-      { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null,"Klopt — 'want' = redengevend.","Tegenstellings-woord.","Tegenstelling.","Tegenstelling."] },
+      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem (op de man)","Vals dilemma","Cirkelredenering","Vergelijking"], answer: 0, wrongHints: [null, "Niet — geen 2 opties.", "Niet — geen herhaling.", "Niet — geen vergelijking."] },
+      { q: "*'Je bent vóór de regering óf je bent een verrader.'* = ?", options: ["Vals dilemma","Ad hominem","Autoriteit","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoonsaanval.", "Geen expert genoemd.", "Geen vergelijking."] },
+      { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null, "Tegenstellings-woord.", "Tegenstelling.", "Tegenstelling."] },
     ],
   },
 ];

@@ -530,7 +530,7 @@ const steps = [
         q: "Wat is **marktevenwicht**?",
         options: ["Prijs waar vraag = aanbod","Hoogste prijs","Laagste prijs","Geen verkoop"],
         answer: 0,
-        wrongHints: [null,"Klopt — kruispunt van vraag- en aanbodlijn.","Niet — bij hoogste prijs te weinig kopers.","Niet — bij laagste prijs te weinig aanbieders.","Niet — er IS verkoop, juist max."],
+        wrongHints: [null, "Niet — bij hoogste prijs te weinig kopers.", "Niet — bij laagste prijs te weinig aanbieders.", "Niet — er IS verkoop, juist max."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is marktevenwicht?", tekst: "**Marktevenwicht** = de **prijs waar vraag PRECIES gelijk is aan aanbod**. Alle producten worden verkocht, geen overschot of tekort.\n\nGrafisch: kruispunt van **vraaglijn** (omlaag-hellend) + **aanbodlijn** (omhoog-hellend). Op kruispunt: evenwichts­prijs + evenwichts­hoeveelheid." },
@@ -554,7 +554,7 @@ const steps = [
         q: "Wat gebeurt met **prijs** als de **vraag stijgt** (aanbod gelijk)?",
         options: ["Prijs stijgt","Prijs daalt","Niets","Aanbod stopt"],
         answer: 0,
-        wrongHints: [null,"Klopt — meer mensen die hetzelfde product willen → schaarste → prijs omhoog.","Niet — meer vraag = prijs OMHOOG (niet omlaag).","Niet — markt reageert direct.","Niet — aanbod blijft gelijk per aanname."],
+        wrongHints: [null, "Niet — meer vraag = prijs OMHOOG (niet omlaag).", "Niet — markt reageert direct.", "Niet — aanbod blijft gelijk per aanname."],
         uitlegPad: {
           stappen: [
             { titel: "Wet: meer vraag = hoger prijs", tekst: "Als **vraag stijgt** maar aanbod gelijk blijft:\n• Meer kopers willen zelfde aantal producten\n• Schaarste ontstaat\n• Verkopers kunnen meer vragen\n• **Prijs stijgt**\n\nVoorbeeld: bij hete zomer → meer vraag naar airco's → prijs stijgt." },
@@ -577,7 +577,7 @@ const steps = [
         q: "Welke factor **verschuift** de vraaglijn?",
         options: ["Verandering in inkomen, smaak, of bevolking","Productie­kosten","Lonen van werknemers","Belasting op productie"],
         answer: 0,
-        wrongHints: [null,"Klopt — vraag verandert door consument-factoren (inkomen, smaak, etc.).","Niet — dat verschuift AANBOD-lijn, niet vraag.","Niet — ook aanbod-factor.","Niet — ook aanbod-factor."],
+        wrongHints: [null, "Niet — dat verschuift AANBOD-lijn, niet vraag.", "Niet — ook aanbod-factor.", "Niet — ook aanbod-factor."],
         uitlegPad: {
           stappen: [
             { titel: "Vraag-lijn-verschuivers", tekst: "**Vraaglijn verschuift NAAR RECHTS (meer vraag)** door:\n• **Inkomen stijgt** (meer geld om uit te geven)\n• **Smaak verandert** (item wordt hip)\n• **Bevolking groeit** (meer kopers)\n• **Prijs alternatief stijgt** (mensen schakelen over)\n• **Verwachting toekomst** (prijs gaat stijgen → kopen NU)\n\nVraaglijn verschuift naar LINKS (minder vraag) bij tegenovergestelde." },
@@ -600,7 +600,7 @@ const steps = [
         q: "**Concurrentie** — wat doen bedrijven om klanten te trekken?",
         options: ["Lagere prijzen, betere kwaliteit, reclame","Niets","Klanten dwingen","Andere bedrijven kopen"],
         answer: 0,
-        wrongHints: [null,"Klopt — gezonde concurrentie geeft consument voordelen.","Tegenovergesteld — bedrijven concurreren actief.","Niet legaal — dwang is verboden.","Soms (overnames) maar niet hoofd-strategie."],
+        wrongHints: [null, "Tegenovergesteld — bedrijven concurreren actief.", "Niet legaal — dwang is verboden.", "Soms (overnames) maar niet hoofd-strategie."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is concurrentie?", tekst: "**Concurrentie** = wedijver tussen bedrijven om klanten + winst. Bedrijven doen verschillende dingen:\n• **Lagere prijs** (Aldi/Lidl-strategie)\n• **Hogere kwaliteit** (premium-merk)\n• **Betere klantenservice**\n• **Slimmere marketing** (TikTok-reclame)\n• **Innovatie** (nieuwe producten)\n• **Locatie** (winkel op betere plek)" },
@@ -624,7 +624,7 @@ const steps = [
         q: "Wat is een **substituut**?",
         options: ["Vervanger product (boter → margarine)","Iets unieks","Productie­machine","Belasting"],
         answer: 0,
-        wrongHints: [null,"Klopt — alternatief dat zelfde behoefte vervult.","Tegenovergesteld — substituut IS vervanger.","Niet — machine maakt, geen vervanger.","Niet — onafhankelijk concept."],
+        wrongHints: [null, "Tegenovergesteld — substituut IS vervanger.", "Niet — machine maakt, geen vervanger.", "Niet — onafhankelijk concept."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een substituut?", tekst: "**Substituut** = **alternatief product dat dezelfde behoefte vervult**. Als prijs van product A stijgt, schakelen consumenten naar substituut B.\n\nVoorbeelden:\n• Boter ↔ margarine\n• Coca-Cola ↔ Pepsi\n• Trein ↔ auto (voor reizen)\n• Koffie ↔ thee\n• iPhone ↔ Samsung Galaxy" },

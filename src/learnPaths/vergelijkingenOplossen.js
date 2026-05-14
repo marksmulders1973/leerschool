@@ -622,9 +622,9 @@ const steps = [
           niveaus: { basis: "4. A.", simpeler: "2x=8 → x=4. = A.", nogSimpeler: "4 = A." },
         },
       },
-      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null,"Klopt — 12 − 7.","Niet — aftrekken, niet optellen.","Niet — x niet 7.","Niet — beide kanten −7."] },
-      { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null,"Klopt — 21 ÷ 3.","Niet — delen, niet aftrekken.","Niet — optellen klopt niet.","Niet — vermenigvuldigen klopt niet."] },
-      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null,"Klopt — +3 dan ÷2.","Niet — vergeet +3 eerst.","Niet.","Niet."] },
+      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "Niet — aftrekken, niet optellen.", "Niet — x niet 7.", "Niet — beide kanten −7."] },
+      { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null, "Niet — delen, niet aftrekken.", "Niet — optellen klopt niet.", "Niet — vermenigvuldigen klopt niet."] },
+      { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Niet — vergeet +3 eerst.", "Niet.", "Niet."] },
     ],
   },
 ];

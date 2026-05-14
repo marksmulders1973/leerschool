@@ -554,7 +554,7 @@ ${Array.from({ length: 30 }, (_, i) => {
           niveaus: { basis: "Munt 20 EU-landen. A.", simpeler: "Euro = munt van 20 EU-landen, incl. NL sinds 2002. = A.", nogSimpeler: "EU-munt = A." },
         },
       },
-      { q: "Wat is de **NAVO** (Noord-Atlantische Verdragsorganisatie)?", options: ["Militair bondgenootschap (westerse landen)","Een EU-instituut","Een Nederlandse politieke partij","Een sportbond"], answer: 0, wrongHints: [null,"Klopt — sinds 1949, NL is lid.","Niet — losstaand van EU.","Niet.","Niet."] },
+      { q: "Wat is de **NAVO** (Noord-Atlantische Verdragsorganisatie)?", options: ["Militair bondgenootschap (westerse landen)","Een EU-instituut","Een Nederlandse politieke partij","Een sportbond"], answer: 0, wrongHints: [null, "Niet — losstaand van EU.", "Niet.", "Niet."] },
     ],
   },
 ];

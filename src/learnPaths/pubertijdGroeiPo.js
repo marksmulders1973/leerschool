@@ -20,7 +20,7 @@ const steps = [
         q: "Wanneer begint **puberteit** bij meisjes (gemiddeld)?",
         options: ["~11 jaar", "5 jaar", "16 jaar", "Niet bij meisjes"],
         answer: 0,
-        wrongHints: [null, "Klopt — variatie 8-13.", "Te jong.", "Te oud.", "Wel."],
+        wrongHints: [null, "Te jong.", "Te oud.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is puberteit?", tekst: "**Puberteit** is de fase waarin je lichaam van KIND naar VOLWASSENE verandert. Hormonen sturen lichamelijke groei + ontwikkeling van geslachtsorganen." },
@@ -48,7 +48,7 @@ const steps = [
         q: "Wat zijn **hormonen**?",
         options: ["Stoffen die signalen geven in lichaam", "Vitaminen", "Bot", "Spier"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Anders.", "Niet.", "Niet."],
+        wrongHints: [null, "Anders.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn hormonen?", tekst: "**Hormonen** zijn chemische stoffen die jouw lichaam zelf maakt. Ze werken als **signaal-stoffen**: ze sturen instructies van het ene orgaan naar het andere via het bloed." },
@@ -76,13 +76,13 @@ const steps = [
         q: "Wat is **testosteron**?",
         options: ["Hormoon vooral bij jongens", "Voedsel", "Ziekte", "Bot"],
         answer: 0,
-        wrongHints: [null, "Klopt — meisjes ook iets.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet."],
       },
       {
         q: "Hoeveel kun je **per jaar groeien** in piek?",
         options: ["10-12 cm", "1 mm", "1 meter", "Niet"],
         answer: 0,
-        wrongHints: [null, "Klopt — soms 1 cm/maand.", "Te weinig.", "Onmogelijk.", "Wel."],
+        wrongHints: [null, "Te weinig.", "Onmogelijk.", "Wel."],
       },
     ],
   },
@@ -95,19 +95,19 @@ const steps = [
         q: "Wat is **menstruatie**?",
         options: ["Maandelijkse bloeding uit baarmoeder", "Pijn", "Hormoon", "Geen"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Wel kan pijn.", "Hormoon stuurt.", "Wel."],
+        wrongHints: [null, "Wel kan pijn.", "Hormoon stuurt.", "Wel."],
       },
       {
         q: "Hoe vaak **menstruatie** cyclus?",
         options: ["~Elke 28 dagen", "Elke week", "Elke 6 maanden", "Geen vaste tijd"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te vaak.", "Te zelden.", "Wel cyclisch."],
+        wrongHints: [null, "Te vaak.", "Te zelden.", "Wel cyclisch."],
       },
       {
         q: "Wat **veroorzaakt puistjes**?",
         options: ["Hormonen activeren olieklieren", "Vies eten", "Geen wassen", "Niet bestaand"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Geen verband bewezen.", "Helpt maar oorzaak hormoon.", "Wel."],
+        wrongHints: [null, "Geen verband bewezen.", "Helpt maar oorzaak hormoon.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een puistje?", tekst: "Een puistje (acne) ontstaat in je huid. Je huid heeft **olieklieren** die normaal een laagje olie maken. Soms raakt zo'n klier **verstopt** met olie + dode huidcellen + bacteriën = puistje." },
@@ -135,7 +135,7 @@ const steps = [
         q: "Waarom **stem lager** bij jongens?",
         options: ["Stembanden groeien", "Niet wetenschappelijk", "Buurt", "Geen reden"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Wel.", "Niet.", "Wel."],
+        wrongHints: [null, "Wel.", "Niet.", "Wel."],
       },
     ],
   },
@@ -148,25 +148,25 @@ const steps = [
         q: "Tot welke leeftijd **ontwikkelt brein**?",
         options: ["~25 jaar", "12 jaar", "60 jaar", "Niet"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Te vroeg.", "Te laat.", "Wel."],
+        wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."],
       },
       {
         q: "Waarom **stemmingswisselingen**?",
         options: ["Brein-emotie ontwikkelt eerst, rationeel later", "Voedsel", "Niets", "Wisselend"],
         answer: 0,
-        wrongHints: [null, "Klopt.", "Niet primair.", "Wel.", "Niet specifiek."],
+        wrongHints: [null, "Niet primair.", "Wel.", "Niet specifiek."],
       },
       {
         q: "Welk **nummer Kindertelefoon**?",
         options: ["0800-0432", "112", "0900", "06"],
         answer: 0,
-        wrongHints: [null, "Klopt — gratis + anoniem.", "Spoednummer.", "Niet.", "Niet."],
+        wrongHints: [null, "Spoednummer.", "Niet.", "Niet."],
       },
       {
         q: "Wat is **LHBTQ+**?",
         options: ["Mensen niet 'standaard hetero'", "Ziekte", "Sport", "Tehuis"],
         answer: 0,
-        wrongHints: [null, "Klopt — inclusieve term.", "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet."],
       },
     ],
   },
@@ -174,17 +174,17 @@ const steps = [
     title: "Eind-toets — puberteit mix",
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
-      { q: "**Puberteit** begint bij meisjes gem.?", options: ["~11 jaar", "5", "18", "Niet bij meisjes"], answer: 0, wrongHints: [null, "Klopt.", "Te vroeg.", "Te laat.", "Wel."] },
-      { q: "Wat is een **hormoon**?", options: ["Stof die signaal geeft in lichaam", "Spier", "Voedsel", "Bot"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Niet.", "Niet."] },
-      { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Klopt.", "Te weinig.", "Te veel.", "Wel."] },
-      { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Klopt.", "Niet.", "Te zelden.", "Wel."] },
-      { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Klopt.", "Spoed.", "Niet.", "Niet."] },
-      { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Klopt.", "Te jong.", "Te jong.", "Te oud."] },
+      { q: "**Puberteit** begint bij meisjes gem.?", options: ["~11 jaar", "5", "18", "Niet bij meisjes"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Wel."] },
+      { q: "Wat is een **hormoon**?", options: ["Stof die signaal geeft in lichaam", "Spier", "Voedsel", "Bot"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoeveel **slaap** in puberteit?", options: ["9-10 uur", "4 uur", "12+ uur", "Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Wel."] },
+      { q: "Hoe vaak **menstruatie**?", options: ["~Elke 28 dagen", "Elke dag", "1 keer per jaar", "Niet"], answer: 0, wrongHints: [null, "Niet.", "Te zelden.", "Wel."] },
+      { q: "Welk nummer **Kindertelefoon**?", options: ["0800-0432", "112", "0900", "06"], answer: 0, wrongHints: [null, "Spoed.", "Niet.", "Niet."] },
+      { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong.", "Te jong.", "Te oud."] },
       {
         q: "Wat is een **groeispurt**?",
         options: ["Periode waarin je snel langer wordt (soms 10+ cm/jaar)", "Pijn in benen", "Trainen om te groeien", "Eten voor groei"],
         answer: 0,
-        wrongHints: [null, "Klopt — typisch in 2 fases: rond 1 jr + in puberteit.", "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
+        wrongHints: [null, "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een groeispurt?", tekst: "Een **groeispurt** is een **periode waarin je lichaam plotseling veel sneller groeit** dan normaal. In **één jaar** kun je 8-12 cm langer worden — bijna een centimeter per maand.\n\nMensen hebben **twee grote groeispurten** in hun leven:\n1. **Babyjaar** (0-1 jr): groei van ~50 cm naar 75 cm (50% in lengte!)\n2. **Puberteit**: meisjes ~11-13, jongens ~13-15" },
@@ -209,7 +209,7 @@ const steps = [
         q: "Wat helpt **botten sterk** maken tijdens groei?",
         options: ["Calcium (melk/kaas/broccoli) + vitamine D + bewegen", "Veel zoetigheid", "Lang stilzitten", "Niet eten"],
         answer: 0,
-        wrongHints: [null, "Klopt — combinatie van calcium-rijk eten, vitamine D én bewegen.", "Tegenovergesteld — suiker kan calcium uit botten halen.", "Niet — bewegen is juist nodig voor sterke botten.", "Tegenovergesteld — voeding is essentieel."],
+        wrongHints: [null, "Tegenovergesteld — suiker kan calcium uit botten halen.", "Niet — bewegen is juist nodig voor sterke botten.", "Tegenovergesteld — voeding is essentieel."],
         uitlegPad: {
           stappen: [
             { titel: "Botten in puberteit", tekst: "In puberteit groeien je botten enorm — in lengte ÉN sterkte. Dit is het **belangrijkste moment in je leven** om sterke botten op te bouwen. Wat je nu in je botten 'opslaat' bepaalt risico op botbreuken/osteoporose op latere leeftijd." },
@@ -234,7 +234,7 @@ const steps = [
         q: "Het **brein in puberteit** — wat is uniek?",
         options: ["Beslissings-deel ontwikkelt zich laatst — daardoor soms impulsief", "Brein krimpt", "Brein groeit niet meer", "Brein verandert niet"],
         answer: 0,
-        wrongHints: [null, "Klopt — prefrontale cortex (planning/impuls-controle) pas klaar rond 25.", "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
+        wrongHints: [null, "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
             { titel: "Twee verschillende brein-delen", tekst: "Je brein heeft (heel grof gezegd) twee delen die anders ontwikkelen:\n• **Emotie-deel (limbisch systeem)** — vroeg klaar, ~13 jaar. Dit is waarom je in puberteit intens kunt voelen.\n• **Beslissings-deel (prefrontale cortex)** — pas klaar rond **25 jaar**. Dit deel doet: lange-termijn-plannen, impuls-controle, gevolgen overzien." },

@@ -351,7 +351,7 @@ const steps = [
         q: "Wat is een **legenda** op een kaart?",
         options: ["Uitleg van symbolen + kleuren","Naam van kaart-maker","Schaal","Datum"],
         answer: 0,
-        wrongHints: [null,"Klopt — wat betekent rood, blauw, klein boom-symbool, etc.","Niet — dat is bronvermelding.","Niet — schaal apart.","Niet — datum apart."],
+        wrongHints: [null, "Niet — dat is bronvermelding.", "Niet — schaal apart.", "Niet — datum apart."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een legenda?", tekst: "Een **legenda** is een klein vakje op de kaart (vaak hoek onderaan) dat **uitlegt wat de symbolen, kleuren + lijnen betekenen**. Zonder legenda snap je de kaart niet." },
@@ -376,7 +376,7 @@ const steps = [
         q: "Een kaart toont **hoogtelijnen** dicht bij elkaar. Wat betekent dat?",
         options: ["Steil hellend gebied (berg)","Plat landschap","Water","Bos"],
         answer: 0,
-        wrongHints: [null,"Klopt — dicht bij elkaar = stijl. Ver uit elkaar = vlak.","Niet — vlak gebied heeft hoogtelijnen ver uit elkaar.","Niet — water meestal blauw + zonder hoogtelijnen.","Niet — bos meestal groen, niet hoogtelijnen."],
+        wrongHints: [null, "Niet — vlak gebied heeft hoogtelijnen ver uit elkaar.", "Niet — water meestal blauw + zonder hoogtelijnen.", "Niet — bos meestal groen, niet hoogtelijnen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn hoogtelijnen?", tekst: "**Hoogtelijnen** (ook 'contourlijnen') zijn **lijnen op een topografische kaart die punten van DEZELFDE hoogte verbinden**.\n\nElke lijn = bepaalde hoogte boven zeespiegel. Bv:\n• 50 m hoogtelijn\n• 100 m hoogtelijn\n• 150 m hoogtelijn" },
@@ -401,7 +401,7 @@ const steps = [
         q: "Wat is de **windroos** op een kaart?",
         options: ["Symbool dat noord, oost, zuid, west aanwijst","Bloem op kaart","Naam van wind","Soort kaart"],
         answer: 0,
-        wrongHints: [null,"Klopt — kompas-symbool meestal hoek kaart. Pijl wijst noord.","Niet — geen bloem.","Niet — wind-richting is iets anders.","Niet — onderdeel van kaart, niet kaart-type."],
+        wrongHints: [null, "Niet — geen bloem.", "Niet — wind-richting is iets anders.", "Niet — onderdeel van kaart, niet kaart-type."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een windroos?", tekst: "Een **windroos** is een **klein kompas-symbool** in een hoek van de kaart. Toont:\n• **Noord (N)** — meestal boven (pijl ↑)\n• **Oost (O)** — rechts\n• **Zuid (Z)** — onder\n• **West (W)** — links\n\nOok soms 8 of 16 tussen-richtingen (NO, ZO, ZW, NW)." },
@@ -424,7 +424,7 @@ const steps = [
         q: "Met **Google Maps** of een **navigatie-app** in de auto — welk principe lijkt op een papieren kaart?",
         options: ["Toont gebied met schaal + symbolen + jouw locatie","Maakt foto's","Filmt","Stuurt sms"],
         answer: 0,
-        wrongHints: [null,"Klopt — moderne digitale variant van papieren kaart.","Niet — foto's apart (Google Street View wel).","Niet — film is video.","Niet — geen berichten-app."],
+        wrongHints: [null, "Niet — foto's apart (Google Street View wel).", "Niet — film is video.", "Niet — geen berichten-app."],
         uitlegPad: {
           stappen: [
             { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauw stip)\n• **Live verkeer** + werk-zaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
@@ -445,21 +445,21 @@ const steps = [
           niveaus: { basis: "Zelfde principe als papier. = A.", simpeler: "Google Maps werkt net als een papieren kaart maar dan elektronisch: toont gebied met schaal + symbolen + jouw eigen locatie via GPS. = A.", nogSimpeler: "Digitale kaart = A." },
         },
       },
-      { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null,"Klopt — vaste afspraak.","Dat is zuid.","Dat is oost.","Dat is west."] },
-      { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null,"Klopt — O ↔ W tegenover elkaar.","Niet — boven.","Niet — onder.","Niet — tussen."] },
-      { q: "Een **legenda** is?", options: ["Uitleg van symbolen op de kaart","De titel","Lijst landen","Aantal pagina's"], answer: 0, wrongHints: [null,"Klopt — symbolen-lijst.","Dat is titel.","Niet inhoud legenda.","Niet."] },
-      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["1.000 cm in werkelijkheid (=10 m)","1 m","1 km","100 cm"], answer: 0, wrongHints: [null,"Klopt.","Te weinig — 100 cm = 1 m.","Te veel.","Dat is 1:100."] },
-      { q: "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null,"Klopt — 5×50.000 cm = 250.000 cm = 2,5 km.","Niet — bereken nogmaals.","Te veel.","Niet."] },
-      { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null,"Klopt — kruis.","Dat is berg/driehoek.","Dat is water/golf.","Niet."] },
-      { q: "Tussen N en O ligt?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null,"Klopt — combinatie.","Niet — W links van N.","Niet — onder.","Niet."] },
-      { q: "Welke kant is **zuid** op de meeste kaarten?", options: ["Onderkant","Bovenkant","Links","Rechts"], answer: 0, wrongHints: [null,"Klopt.","Dat is noord.","West.","Oost."] },
-      { q: "Op kaart 1 cm bij schaal 1:25.000 = ?", options: ["250 m","2,5 km","25 m","2.500 m"], answer: 0, wrongHints: [null,"Klopt — 25.000 cm = 250 m.","Te veel.","Te weinig.","Dat is 2,5 km."] },
-      { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","Onder"], answer: 0, wrongHints: [null,"Klopt — magnetisch noord.","Dat is wit/andere kant.","Niet relevant.","Niet."] },
-      { q: "Een **plattegrond** is?", options: ["Kaart van klein gebied (huis/school)","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null,"Klopt — kleine schaal/groot detail.","Veel groter.","Boek met veel kaarten.","Wel een kaart."] },
-      { q: "Hoe verkort je **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null,"Klopt.","Dat is kilo-gram.","Niet bestaand.","Niet."] },
-      { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null,"Klopt — diagonaal tegenover.","Niet diagonaal.","Niet diagonaal.","Niet diagonaal."] },
-      { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Tellen"], answer: 0, wrongHints: [null,"Klopt — visueel meten.","Wel iets.","Niet — meten.","Niet relevant."] },
-      { q: "Tegen welke schaal is een atlas-NL-kaart meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null,"Klopt — voor heel NL.","Veel te klein.","Veel te klein.","Veel te klein."] },
+      { q: "Welke kant is **noord** op een kaart meestal?", options: ["Bovenkant","Onderkant","Rechts","Links"], answer: 0, wrongHints: [null, "Dat is zuid.", "Dat is oost.", "Dat is west."] },
+      { q: "Op de **kompasroos**: tegenover oost ligt?", options: ["West","Noord","Zuid","Noordoost"], answer: 0, wrongHints: [null, "Niet — boven.", "Niet — onder.", "Niet — tussen."] },
+      { q: "Een **legenda** is?", options: ["Uitleg van symbolen op de kaart","De titel","Lijst landen","Aantal pagina's"], answer: 0, wrongHints: [null, "Dat is titel.", "Niet inhoud legenda.", "Niet."] },
+      { q: "Schaal 1:1.000 betekent: 1 cm op kaart = ___?", options: ["1.000 cm in werkelijkheid (=10 m)","1 m","1 km","100 cm"], answer: 0, wrongHints: [null, "Te weinig — 100 cm = 1 m.", "Te veel.", "Dat is 1:100."] },
+      { q: "Op kaart 5 cm bij schaal 1:50.000 = welke afstand?", options: ["2,5 km","250 m","25 km","50 m"], answer: 0, wrongHints: [null, "Niet — bereken nogmaals.", "Te veel.", "Niet."] },
+      { q: "Welk symbool op de kaart is meestal voor een **kerk**?", options: ["†","△","∼","#"], answer: 0, wrongHints: [null, "Dat is berg/driehoek.", "Dat is water/golf.", "Niet."] },
+      { q: "Tussen N en O ligt?", options: ["Noordoost","Noordwest","Zuidoost","Zuidwest"], answer: 0, wrongHints: [null, "Niet — W links van N.", "Niet — onder.", "Niet."] },
+      { q: "Welke kant is **zuid** op de meeste kaarten?", options: ["Onderkant","Bovenkant","Links","Rechts"], answer: 0, wrongHints: [null, "Dat is noord.", "West.", "Oost."] },
+      { q: "Op kaart 1 cm bij schaal 1:25.000 = ?", options: ["250 m","2,5 km","25 m","2.500 m"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Dat is 2,5 km."] },
+      { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","Onder"], answer: 0, wrongHints: [null, "Dat is wit/andere kant.", "Niet relevant.", "Niet."] },
+      { q: "Een **plattegrond** is?", options: ["Kaart van klein gebied (huis/school)","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null, "Veel groter.", "Boek met veel kaarten.", "Wel een kaart."] },
+      { q: "Hoe verkort je **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
+      { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Niet diagonaal.", "Niet diagonaal.", "Niet diagonaal."] },
+      { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Tellen"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Niet relevant."] },
+      { q: "Tegen welke schaal is een atlas-NL-kaart meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Veel te klein.", "Veel te klein.", "Veel te klein."] },
     ],
   },
 ];
