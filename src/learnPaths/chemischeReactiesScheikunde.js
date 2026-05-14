@@ -641,6 +641,104 @@ const steps = [
           niveaus: { basis: "O₂.", simpeler: "Altijd als pair.", nogSimpeler: "Twee aan elkaar." },
         },
       },
+      {
+        q: "Wat is een **chemische reactie**?",
+        options: ["Stoffen veranderen in andere stoffen","Stoffen worden warm","Verkleurd","Volume verandert"],
+        answer: 0,
+        wrongHints: [null,"Klopt — atomen rangschikken anders → nieuwe stof.","Niet primair — soms wel maar niet definitie.","Niet primair — gevolg, geen definitie.","Niet primair — natuurkunde, geen chemie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is chemische reactie?", tekst: "**Chemische reactie** = proces waarbij **stoffen veranderen in andere stoffen** met nieuwe eigenschappen. Atomen blijven hetzelfde, maar hun rangschikking verandert.\n\nVoorbeelden:\n• IJzer + zuurstof → roest\n• Hout + zuurstof → as + CO₂ + water (verbranding)\n• Magnesium + zuurstof → magnesiumoxide (felle witte flits)\n• Maagzuur + voedsel → vertering" },
+            { titel: "Hoe herken je chemische reactie?", tekst: "**Signalen** dat chemische reactie plaatsvond:\n• **Kleurverandering** (zilver → zwart)\n• **Temperatuur** stijgt of daalt\n• **Gas** vrijkomt (bruiseend)\n• **Vaste stof** vormt zich (precipitatie)\n• **Geur** verandert\n• **Licht** geeft (vuur, vuurwerk)\n\nLet op: smelten of verdampen is GEEN chemische reactie (zelfde stof, alleen andere toestand)." },
+            { titel: "Cito-feit: Wet van Behoud van Massa", tekst: "**Antoine Lavoisier** (Frans, 1789): de **totale massa** vóór + ná reactie is GELIJK. Atomen verdwijnen niet, alleen rangschikking verandert.\n\nVoorbeeld: 12 g koolstof + 32 g zuurstof = 44 g CO₂. (geen 30 g, geen 50 g — exact 44).\n\nDit principe is basis van alle scheikunde-berekeningen + reactievergelijkingen." },
+          ],
+          woorden: [
+            { woord: "chemische reactie", uitleg: "Proces waarbij stoffen veranderen in andere stoffen." },
+            { woord: "reactant", uitleg: "Stof waarmee je start (links van pijl in vergelijking)." },
+            { woord: "product", uitleg: "Stof die ontstaat (rechts van pijl)." },
+            { woord: "Wet van Behoud van Massa", uitleg: "Totale massa blijft gelijk in chemische reactie." },
+          ],
+          theorie: "Reactievergelijking-notatie:\n• Reactanten → Producten\n• Bv: 2H₂ + O₂ → 2H₂O\n• Aantal atomen LINKS = RECHTS (kloppend maken)\n• Hoge cijfers = molecule-aantal\n• Lage cijfers = atomen binnen molecule",
+          voorbeelden: [
+            { type: "feit", tekst: "Verbranden hout: hout + O₂ → CO₂ + H₂O + as. Zelfde aantal atomen, andere stoffen." },
+          ],
+          basiskennis: [{ onderwerp: "Niet alle reacties zichtbaar", uitleg: "Sommige reacties subtiel (vertering, oxidatie metaal). Belangrijk weten: het GEBEURT, ook al zie je niet veel." }],
+          niveaus: { basis: "Stoffen veranderen. = A.", simpeler: "Chemische reactie = stoffen veranderen in andere stoffen met nieuwe eigenschappen. Atomen blijven, rangschikking nieuw. = A.", nogSimpeler: "Nieuwe stof = A." },
+        },
+      },
+      {
+        q: "Welke **3 fasen** kan een stof hebben?",
+        options: ["Vast, vloeibaar, gas","Klein, middel, groot","Koud, lauw, heet","Kleurloos, helder, donker"],
+        answer: 0,
+        wrongHints: [null,"Klopt — drie basis-aggregatietoestanden + soms 4e (plasma).","Niet — grootte is geen fase.","Niet — temperatuur is geen fase (wel oorzaak overgang).","Niet — kleur niet relevant voor fase."],
+        uitlegPad: {
+          stappen: [
+            { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** (g) — geïoniseerd gas, in zon + bliksem + neon-lampen." },
+            { titel: "Faseovergangen", tekst: "Tussen fasen 6 overgangen:\n• Vast → Vloeibaar = **smelten**\n• Vloeibaar → Vast = **stollen/vriezen**\n• Vloeibaar → Gas = **verdampen/koken**\n• Gas → Vloeibaar = **condenseren**\n• Vast → Gas = **sublimeren** (droog ijs CO₂)\n• Gas → Vast = **rijp/depositie** (waterdamp → ijskristal)" },
+            { titel: "Cito-tip: water", tekst: "Water = enige veel-voorkomende stof die natuurlijk in **alle 3 fasen** op aarde voorkomt:\n• **IJs** (gletsjers, ijsklontjes, sneeuw)\n• **Water** (oceaan, regen)\n• **Damp** (wolken, stoom)\n\nDaarom waterkringloop continue: zon verdampt → wolk → regen → terug." },
+          ],
+          woorden: [
+            { woord: "aggregatietoestand", uitleg: "Fase (vast/vloeibaar/gas) van een stof." },
+            { woord: "smelten", uitleg: "Vast → vloeibaar (door verwarmen)." },
+            { woord: "condenseren", uitleg: "Gas → vloeibaar (door afkoelen)." },
+          ],
+          theorie: "Atomen-beweging per fase:\n• Vast: trillen op plek (vast rooster)\n• Vloeibaar: schuiven langs elkaar\n• Gas: vrij door ruimte\n\nDaarom volume:\n• Vast = vast\n• Vloeibaar = vast (maar aanpasbare vorm)\n• Gas = vult alles",
+          voorbeelden: [
+            { type: "stap", tekst: "Verwarmen ijs (vast) → smelt naar water (vloeibaar) → kookt naar stoom (gas). Drie fasen door verwarming." },
+          ],
+          basiskennis: [{ onderwerp: "Plasma 4e fase", uitleg: "Geavanceerd: plasma = 4e fase, geïoniseerd gas. Cito-Po vraagt meestal alleen 3 hoofdfasen." }],
+          niveaus: { basis: "Vast, vloeibaar, gas. = A.", simpeler: "3 fasen: vast (ijs), vloeibaar (water), gas (damp). Overgangen mogelijk door warmte. = A.", nogSimpeler: "3 fasen = A." },
+        },
+      },
+      {
+        q: "Wat is een **molecuul**?",
+        options: ["Groep atomen samen verbonden","Klein metaal","Een type cel","Atoomkern"],
+        answer: 0,
+        wrongHints: [null,"Klopt — bv H₂O = 1 zuurstof + 2 waterstof atomen.","Niet — molecuul kan elk type atoom bevatten.","Niet — cellen zijn biologisch, moleculen scheikundig.","Niet — kern = onderdeel atoom, niet molecuul."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een molecuul?", tekst: "Een **molecuul** is een **groep atomen** die **chemisch verbonden** zijn (via electronen). Vormen kleinste eenheid van een chemische verbinding.\n\nVoorbeelden moleculen:\n• **H₂O** = water (2 H + 1 O)\n• **CO₂** = koolstofdioxide (1 C + 2 O)\n• **O₂** = zuurstof-gas (2 O)\n• **CH₄** = methaan (1 C + 4 H)\n• **NaCl** = keukenzout (1 Na + 1 Cl)" },
+            { titel: "Atoom vs molecuul vs stof", tekst: "**Hiërarchie**:\n• **Atoom** = kleinste deel element (H, O, Fe, Au)\n• **Molecuul** = 2+ atomen verbonden (H₂, H₂O, glucose)\n• **Stof** = veel moleculen samen (1 glas water = ~10²⁴ H₂O-moleculen)\n\nVergelijking: atoom = letter. Molecuul = woord. Stof = boek." },
+            { titel: "Cito-feit: zichtbaar?", tekst: "Moleculen zijn **onzichtbaar** voor blote oog (en zelfs gewone microscoop). Pas zichtbaar met **elektronenmicroscoop** of **STM** (scanning tunneling microscope, 1981 Nobelprijs).\n\nGrote moleculen zoals DNA = 'lang' (2 m als uitgerold!) maar dun (~2 nanometer). Zichtbaar via speciale technieken." },
+          ],
+          woorden: [
+            { woord: "molecuul", uitleg: "Groep atomen chemisch verbonden. Kleinste eenheid verbinding." },
+            { woord: "molecuulformule", uitleg: "Aanduiding hoeveel atomen per molecuul. H₂O = 2 H + 1 O." },
+            { woord: "verbinding", uitleg: "Chemische combinatie van 2+ elementen via moleculen of ionen." },
+          ],
+          theorie: "Soorten verbindingen:\n• **Molecuul-verbinding**: atomen delen elektronen (water, suiker)\n• **Ion-verbinding**: atomen geven/nemen elektronen (zout NaCl)\n• **Metaal-binding**: vrije elektronen tussen atomen (ijzer, koper)",
+          voorbeelden: [
+            { type: "stap", tekst: "Water-molecuul H₂O: één centraal zuurstof-atoom met 2 waterstof-atomen 'armen'. ~104° hoek." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-VMBO basis", uitleg: "Onderscheid atoom/molecuul/verbinding moeten kunnen maken." }],
+          niveaus: { basis: "Atomen verbonden. = A.", simpeler: "Molecuul = groep atomen chemisch aaneengeplakt. Bv water H₂O = 2 waterstof + 1 zuurstof. = A.", nogSimpeler: "Atomen-groep = A." },
+        },
+      },
+      {
+        q: "Wat is een **pH-waarde**?",
+        options: ["Mate van zuur/base (schaal 0-14)","Temperatuur","Gewicht","Druk"],
+        answer: 0,
+        wrongHints: [null,"Klopt — pH 0 = sterk zuur, pH 7 = neutraal, pH 14 = sterk base.","Niet — temperatuur is Celsius.","Niet — gewicht is gram/kg.","Niet — druk is Pascal/bar."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is pH?", tekst: "**pH** = maat voor **zuur of base** van een oplossing. Schaal:\n• **0-6** = zuur (lager = zuurder)\n• **7** = neutraal (zuiver water)\n• **8-14** = base (hoger = basischer)\n\nLogaritmisch: elke stap = 10× verschil. pH 5 is 10× zuurder dan pH 6." },
+            { titel: "Voorbeelden", tekst: "**Zure stoffen** (pH <7):\n• Maagzuur: pH 1-2\n• Citroensap: pH 2\n• Cola: pH 2-3\n• Tomaten: pH 4\n• Koffie: pH 5\n\n**Neutraal**: pH 7 (zuiver water)\n\n**Basische stoffen** (pH >7):\n• Bloed mens: pH 7,4\n• Zeewater: pH 8\n• Bakpoeder oplossing: pH 9\n• Bleekwater: pH 12-13\n• Gootsteenontstopper: pH 14" },
+            { titel: "Cito-feit: lakmoespapier + pH-meter", tekst: "**Meten van pH**:\n• **Lakmoespapier**: rood = zuur, blauw = base. Snel + simpel\n• **Universeel indicator**: kleurverloop alle pH-waarden (rood→geel→groen→blauw→paars)\n• **Digitale pH-meter**: precies (decimalen)\n\nBekend in: zwembad-onderhoud, aquarium-water, tuinaarde-test, voedingsindustrie." },
+          ],
+          woorden: [
+            { woord: "pH", uitleg: "Maat voor zuur/base. Schaal 0-14. 7 = neutraal." },
+            { woord: "zuur", uitleg: "Stof die H⁺-ionen afgeeft. pH <7." },
+            { woord: "base", uitleg: "Stof die OH⁻-ionen afgeeft. pH >7." },
+            { woord: "lakmoes", uitleg: "Indicator-papier dat verkleurt bij zuur/base." },
+          ],
+          theorie: "Belangrijke pH-feiten:\n• Bloed mens MOET tussen pH 7,35-7,45 zijn — anders ziek\n• Mond pH ~6,5 (lichte zuur)\n• Maagzuur pH 1-2 = zo zuur dat het bacteriën doodt\n• Regen normaal pH 5,6 (CO₂ in lucht). Zure regen pH <5",
+          voorbeelden: [
+            { type: "feit", tekst: "Bij brandend maagzuur: maagzuur lekt naar slokdarm. Anti-zuur-pillen (Rennies) = base = neutraliseert zuur tot pH ~7." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-VMBO scheikunde", uitleg: "pH-vragen vaak in examen-stof. Onthoud schaal + 7 = neutraal." }],
+          niveaus: { basis: "Zuur/base maat 0-14. = A.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterk base (gootsteenontstopper). = A.", nogSimpeler: "Zuur/base = A." },
+        },
+      },
     ],
   },
 ];
