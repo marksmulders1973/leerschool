@@ -13,6 +13,8 @@ import {
   recordRight as adaptRecordRight,
   buildCheckOrder as adaptBuildOrder,
   pathWrongMap as adaptPathWrongMap,
+  markPathSeen,
+  getSeenPaths,
 } from "../../shared/adaptiveStore.js";
 import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
@@ -333,6 +335,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // Pilot 2026-05-10: dynamisch uitleg-paneel per vraag (Mark blauwdruk economie).
   const [showUitlegPad, setShowUitlegPad] = useState(false);
   const [showTekstHerlees, setShowTekstHerlees] = useState(false);
+
+  // VoorkennisKeten fase 3 (2026-05-14): markeer pad als 'ooit gezien' bij
+  // mount. Verzamel volledige seen-set in state voor mastery-detectie.
+  useEffect(() => {
+    if (pathId) markPathSeen(pathId);
+  }, [pathId]);
+  const seenIds = useMemo(() => getSeenPaths(), [pathId, stepIdx]);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -790,7 +799,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 Alleen tonen in oefen-modus (LearnPath = oefen, PlayQuiz examen-mode
                 verbergt hints elders). */}
             {Array.isArray(currentCheck.voorkennisKeten) && currentCheck.voorkennisKeten.length > 0 && (
-              <VoorkennisKeten keten={currentCheck.voorkennisKeten} onJumpToPath={onPickPath} />
+              <VoorkennisKeten keten={currentCheck.voorkennisKeten} onJumpToPath={onPickPath} everSeenIds={seenIds} />
             )}
 
             {currentCheck.bronTekst && (

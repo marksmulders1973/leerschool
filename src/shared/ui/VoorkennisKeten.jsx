@@ -1,10 +1,10 @@
 // VoorkennisKeten — visualiseert de "basis → top"-leerlijn die naar
-// een examenvraag toe leidt. POC voor de Leerkwartier-USP: examen-vraag
-// → keten van vereiste basiskennis (laagste niveau eerst) → terug naar
-// examen.
+// een examenvraag toe leidt. Leerkwartier-USP: examen-vraag → keten
+// van vereiste basiskennis (laagste niveau eerst) → terug naar examen.
 //
-// Mark 2026-05-14: pilot op economie 2023-T1 vraag 4 (zonnepanelen-subsidie).
-// Adaptive routing (zwakste-pad-detectie) komt fase 3 — hier alleen visueel.
+// Mark fase 2 (POC) → fase 3 (mastery-detectie) — 2026-05-14:
+// Per pad-stap in de keten wordt mastery-status getoond + "begin hier"
+// highlight wijst leerling naar zwakste / nog-niet-beheerste basis.
 //
 // Schema (gedefinieerd in src/learnPaths/<examenPad>.js per check):
 //   voorkennisKeten: [
@@ -12,6 +12,8 @@
 //     ...,                          // intermediate
 //     { id, title, niveau, why },  // top (kern-pad van examenvraag)
 //   ]
+
+import { pathMasteryStatus, findWeakestKetenIdx } from "../adaptiveStore.js";
 
 const NIVEAU_KLEUR = {
   "po-1F": "#69b2ff",
@@ -42,8 +44,23 @@ function niveauStyle(niveau) {
   };
 }
 
-export default function VoorkennisKeten({ keten, onJumpToPath }) {
+// Mastery-statusicoon per stap.
+function MasteryDot({ status }) {
+  if (status === "mastered") {
+    return <span title="Beheerst" aria-label="Beheerst" style={{ fontSize: 14 }}>✅</span>;
+  }
+  if (status === "weak") {
+    return <span title="Nog fouten" aria-label="Nog fouten" style={{ fontSize: 14 }}>⚠️</span>;
+  }
+  return <span title="Nog niet aangeraakt" aria-label="Nog niet aangeraakt" style={{ fontSize: 14 }}>⏳</span>;
+}
+
+export default function VoorkennisKeten({ keten, onJumpToPath, everSeenIds }) {
   if (!Array.isArray(keten) || keten.length === 0) return null;
+
+  // Fase 3: bepaal mastery-status per pad + zwakste-pad-suggestie.
+  const masteries = keten.map((s) => pathMasteryStatus(s?.id, everSeenIds));
+  const weakestIdx = findWeakestKetenIdx(keten, everSeenIds);
 
   return (
     <div
@@ -79,6 +96,8 @@ export default function VoorkennisKeten({ keten, onJumpToPath }) {
       }}>
         {keten.map((stap, i) => {
           const isLast = i === keten.length - 1;
+          const status = masteries[i];
+          const isWeakest = i === weakestIdx;
           return (
             <li key={stap.id + "_" + i} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
               <div style={{
@@ -114,6 +133,7 @@ export default function VoorkennisKeten({ keten, onJumpToPath }) {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
+                    <MasteryDot status={status} />
                     <span style={{
                       fontFamily: "var(--font-display)",
                       fontSize: 13,
@@ -126,6 +146,16 @@ export default function VoorkennisKeten({ keten, onJumpToPath }) {
                       {stap.title}
                     </span>
                     {stap.niveau && <span style={niveauStyle(stap.niveau)}>{stap.niveau}</span>}
+                    {isWeakest && <span style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: 10,
+                      fontWeight: 700,
+                      padding: "1px 6px",
+                      borderRadius: 999,
+                      background: "rgba(255,213,79,0.22)",
+                      color: "#ffd54f",
+                      letterSpacing: 0.3,
+                    }}>👉 begin hier</span>}
                     {isLast && <span style={{
                       fontFamily: "var(--font-body)",
                       fontSize: 10,
