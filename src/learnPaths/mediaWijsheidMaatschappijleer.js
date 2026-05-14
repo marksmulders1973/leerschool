@@ -65,7 +65,7 @@ const steps = [
         q: "Wat is **satire**?",
         options: ["Grappige nep — niet serieus bedoeld", "Echt nieuws", "Reclame", "Mening"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Feiten worden grappig overdreven — niet bedoeld als feit.", "Geen verkoopdoel — een lach.", "Een columnstuk is iets anders dan een grap-stuk."],
       },
       {
         q: "Hoeveel uur per dag op scherm gemiddeld?",
@@ -77,7 +77,7 @@ const steps = [
         q: "Welke is **geen** media?",
         options: ["Een glas water", "Krant", "TikTok", "Radio"],
         answer: 0,
-        wrongHints: [null, "Wel media.", "Wel media.", "Wel media."],
+        wrongHints: [null, "Drukmedium — letters op papier.", "Sociale-media-app met video's.", "Audiomedium — uitzendingen via lucht."],
       },
     ],
   },
@@ -125,7 +125,7 @@ const steps = [
         q: "Welke is **betrouwbaar** in NL?",
         options: ["NOS", "Anoniem Twitter-account", "Random TikTok-video", "Reclame-mail"],
         answer: 0,
-        wrongHints: [null, "Verdacht.", "Verdacht.", "Verdacht."],
+        wrongHints: [null, "Geen naam erbij = geen verantwoording.", "Onbekende maker, geen redactie.", "Doel = jou iets verkopen, niet informeren."],
       },
       {
         q: "Wat is **clickbait**?",
@@ -197,7 +197,7 @@ const steps = [
         q: "Wat is **AVG**?",
         options: ["EU-privacy-wet (2018)", "Auto-vereniging", "Sociale media", "Belasting"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Verwarring met ANWB? Andere afkorting.", "Geen platform — een wet.", "Geen heffing — een regel."],
       },
       {
         q: "**Tracking cookies** — wat doen ze?",
@@ -209,7 +209,7 @@ const steps = [
         q: "Wat is **2FA**?",
         options: ["Twee-staps-verificatie", "Tweede factor accent", "2x foto", "Twee accounts"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Geen taalkundig begrip — een inlog-stap.", "Niet over foto's — over inloggen.", "Geen extra account — een extra check."],
       },
       {
         q: "Welke deel je **NIET** online?",
@@ -257,7 +257,7 @@ const steps = [
       { q: "**Mediawijsheid** is?", options: ["Kritisch met media omgaan", "Tegen media", "Geen media", "Veel media"], answer: 0, wrongHints: [null, "Te negatief.", "Niet doel.", "Niet doel."] },
       { q: "**Desinformatie** = ?", options: ["Opzettelijk onjuist", "Per ongeluk", "Mening", "Reclame"], answer: 0, wrongHints: [null, "Misinformatie.", "Niet specifiek.", "Aparte categorie."] },
       { q: "Wat doen **algoritmes**?", options: ["Kiezen wat jij ziet", "Verbergen reclame", "Beveiligen", "Doen niets"], answer: 0, wrongHints: [null, "Niet doel.", "Niet primair.", "Doen veel."] },
-      { q: "**AVG** = ?", options: ["EU-privacy-wet", "Auto-club", "App", "Belasting"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**AVG** = ?", options: ["EU-privacy-wet", "Auto-club", "App", "Belasting"], answer: 0, wrongHints: [null, "Verwarring met ANWB? Andere club.", "Geen software — een wet.", "Geen heffing — een regel."] },
       { q: "**2FA** = ?", options: ["Twee-staps-verificatie", "Twee accounts", "2x foto", "Andere"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel iets."] },
       { q: "Wat NOOIT delen online?", options: ["Wachtwoord", "Boekrecensie", "Vakantie-foto", "Vriendelijk bericht"], answer: 0, wrongHints: [null, "OK.", "OK (eventueel zonder locatie).", "OK."] },
     ],
