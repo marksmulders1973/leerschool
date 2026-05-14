@@ -3,7 +3,10 @@ import styles from "../styles.js";
 import { SUBJECTS, LEVELS } from "../constants.js";
 import { SoundEngine, daysUntil, formatDate } from "../utils.js";
 import { loadDueTopics } from "../features/mastery/mastery.js";
-import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
+import pathManifest from "../learnPaths/pathManifest.generated.json";
+// QW7 lazy-load STAP 2: ALL_LEARN_PATHS-import is verwijderd; alle metadata
+// komt nu uit pathManifest.generated.json (~130 kB ipv 5,8 MB).
+const pathManifestById = Object.fromEntries(pathManifest.map(p => [p.id, p]));
 import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
@@ -68,17 +71,19 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   // VO = level start met "klas", "vmbo", "havo", "vwo" of "mavo" — zo vallen
   // paden als "vmbo-gt-4" (Pincode-hoofdstukken) en "havo4-5" ook in de
   // VO-telling, niet alleen "klas3-havo4"-stijl labels.
+  // QW7 lazy-load STAP 2 (2026-05-14): tellen via pathManifest.generated.json
+  // (~130 kB) ipv ALL_LEARN_PATHS-import (~5,8 MB). Output identiek.
   const padenPerVak = useMemo(() => {
     const isPo = vakModus === "po";
     const isVoLevel = (lvl) => /^(klas|vmbo|mavo|havo|vwo)/.test(lvl);
     const counts = {};
-    Object.values(ALL_LEARN_PATHS).forEach(p => {
-      if (!p?.subject) return;
+    for (const p of pathManifest) {
+      if (!p?.subject) continue;
       const lvl = (p.level || "").toLowerCase();
       const matches = isPo ? lvl.startsWith("groep") : isVoLevel(lvl);
-      if (!matches) return;
+      if (!matches) continue;
       counts[p.subject] = (counts[p.subject] || 0) + 1;
-    });
+    }
     return counts;
   }, [vakModus]);
   // Due-onderwerpen voor de mixed-herhaal-quiz (P3a deel 2). Laden in
@@ -239,7 +244,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
         {/* Kwartier-pauze resume — als gebruiker gisteren stopte na 15 min,
             spring direct terug naar pad+stap waar hij gebleven was. */}
-        {kwartierResume && onResumeLearnPath && ALL_LEARN_PATHS[kwartierResume.pathId] && (
+        {kwartierResume && onResumeLearnPath && pathManifestById[kwartierResume.pathId] && (
           <button
             onClick={() => {
               onResumeLearnPath(kwartierResume.pathId, kwartierResume.stepIdx);
@@ -267,7 +272,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                 Verder waar je was
               </span>
               <span style={{ display: "block", fontSize: 12, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
-                {ALL_LEARN_PATHS[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}
+                {pathManifestById[kwartierResume.pathId].title} · deel {(kwartierResume.stepIdx || 0) + 1}
               </span>
             </span>
             <span

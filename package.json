@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node scripts/buildPathManifest.mjs",
     "build": "vite build",
+    "manifest": "node scripts/buildPathManifest.mjs",
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
