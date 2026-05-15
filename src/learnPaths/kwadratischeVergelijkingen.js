@@ -512,6 +512,13 @@ const steps = [
       { q: "**abc-formule** lost op?", options: ["ax² + bx + c = 0","ax + b","Alleen x² = 0","2x + 1"], answer: 0, wrongHints: [null, "Lineair.", "Niet algemeen.", "Lineair."] },
       { q: "Discriminant van x² − 5x + 6 = ?", options: ["1","11","25","6"], answer: 0, wrongHints: [null, "Niet — niet plus.", "Alleen b².", "Niet."] },
       { q: "x² + 6x + 9 = (x + 3)². Welke methode?", options: ["Volkomen kwadraat","abc-formule","Factoriseren met x","Wortels"], answer: 0, wrongHints: [null, "Werkt ook maar overkill.", "Niet — geen x los.", "Niet specifiek."] },
+      { q: "**Discriminant D = 0** betekent?", options: ["1 oplossing (dubbele wortel)","2 oplossingen","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D<0.","Niet bij kwadratisch."] },
+      { q: "**D < 0** betekent (reëel)?", options: ["Geen reële oplossingen","2 oplossingen","1 oplossing","Oneindig"], answer: 0, wrongHints: [null,"Bij D>0.","Bij D=0.","Niet."] },
+      { q: "**Top** van parabool y = (x − 2)² is op?", options: ["x=2","x=−2","x=0","x=4"], answer: 0, wrongHints: [null,"Andere kant.","Bij standaardvorm zonder shift.","Niet."] },
+      { q: "Snijpunt parabool **y = x² − 4** met **x-as**?", options: ["x = 2 en x = −2","x = 0","x = 4","x = ±4"], answer: 0, wrongHints: [null,"Op y-as.","Verwarring met c-term.","Wortel mist."] },
+      { q: "**Parabool opent omhoog** als a in ax²+bx+c is?", options: ["Positief","Negatief","Nul","Niet relevant"], answer: 0, wrongHints: [null,"Opent omlaag.","Geen parabool.","Wel relevant."] },
+      { q: "**Open vraag**: bereken de discriminant van x² − 5x + 6. Typ alleen getal.", kind: "open", acceptedAnswers: ["1"], numericTolerance: 0, explanation: "D = b² − 4ac = 25 − 24 = 1." },
+      { q: "**Open vraag**: los op: x² = 49. Typ beide x-waarden gescheiden door spatie (bv '7 -7').", kind: "open", acceptedAnswers: ["7 -7", "-7 7", "7 en -7", "±7", "7, -7", "-7, 7"], explanation: "x² = 49 → x = ±7. Twee oplossingen: 7 en −7." },
     ],
   },
 ];
