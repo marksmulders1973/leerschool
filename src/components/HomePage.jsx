@@ -812,30 +812,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero-doelgroep-zin + social proof — direct boven de tegels (5-agents
-            review 2026-05-15). Cito-ouder zoekt op "doorstroomtoets oefenen" en
-            moet binnen 1 seconde zien dat ze op de juiste plek is. EchteCijfers
-            (Supabase) toont alleen als er ≥10 entries zijn — fungeert als
-            social-proof-anker zodra de app gevuld is. */}
+        {/* Hero-doelgroep-zin direct boven de tegels (5-agents review 2026-05-15).
+            Cito-ouder zoekt op "doorstroomtoets oefenen" en moet binnen 1 seconde
+            zien dat ze op de juiste plek is. EchteCijfers (toetsen-gemaakt-balk)
+            verwijderd 2026-05-15 op Mark's verzoek — niet relevant social proof
+            voor Cito-ouder, voegde visuele ruis toe. */}
         {step === "role" && (
-          <>
-            <div className="lk-content-wide" style={{
-              textAlign: "center",
-              marginBottom: 14,
-              fontFamily: "var(--font-display)",
-              fontSize: 14,
-              fontWeight: 600,
-              color: "rgba(255,255,255,0.85)",
-              letterSpacing: "0.01em",
-              lineHeight: 1.5,
-            }}>
-              <span style={{ fontSize: 16, marginRight: 6 }} aria-hidden="true">🎯</span>
-              Voor de <strong style={{ color: "#69f0ae" }}>Doorstroomtoets</strong>, Cito-toetsen en VMBO/HAVO/VWO-examens
-            </div>
-            <Suspense fallback={null}>
-              <EchteCijfers />
-            </Suspense>
-          </>
+          <div className="lk-content-wide" style={{
+            textAlign: "center",
+            marginBottom: 14,
+            fontFamily: "var(--font-display)",
+            fontSize: 14,
+            fontWeight: 600,
+            color: "rgba(255,255,255,0.85)",
+            letterSpacing: "0.01em",
+            lineHeight: 1.5,
+          }}>
+            <span style={{ fontSize: 16, marginRight: 6 }} aria-hidden="true">🎯</span>
+            Voor de <strong style={{ color: "#69f0ae" }}>Doorstroomtoets</strong>, Cito-toetsen en VMBO/HAVO/VWO-examens
+          </div>
         )}
 
         {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
