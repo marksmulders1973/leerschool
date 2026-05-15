@@ -70,6 +70,13 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 🔄 Terugkerend ritueel — Chrome-Claude UX-review
+
+Cadens: ~elke 6-8 weken of vóór elke product-mijlpaal (Cito-piek nov-feb, paywall jan 2027).
+
+- 2026-05-15 — eerste twee runs gedaan (UX-flow + content-kwaliteit). Resultaat: 20+ fixes in 4 commits (2d76e78, 62e1ec2, 1a82454, 0837f03). Werkwijze: ik schrijf prompt → Mark plakt in Claude-voor-Chrome → rapport terug in chat → ik fix per severity. Zie `memory/feedback_chrome_claude_review.md`.
+- [ ] Volgende run plannen rond 2026-07-01 (6 wk later), of vóór de Cito-piek.
+
 ## 📊 Sprint Content-doelen (2026-05-14) — afgeleid uit `docs/CONTENT-DOELEN.md`
 
 Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `docs/CONTENT-DOELEN.md`.
