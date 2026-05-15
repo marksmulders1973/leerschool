@@ -4,10 +4,10 @@
 // PDF-corruptions handmatig gefixt.
 
 const chapters = [
-  { letter: "A", title: "Spijsvertering & hersenen (V11, V12)", emoji: "🍽️", from: 0, to: 1 },
-  { letter: "B", title: "Huid & bloed (V16, V46)", emoji: "🩸", from: 2, to: 3 },
-  { letter: "C", title: "Planten (V30)", emoji: "🌱", from: 4, to: 4 },
-  { letter: "D", title: "Ecologie (V50)", emoji: "🦝", from: 5, to: 5 },
+  { letter: "A", title: "Spijsvertering & hersenen", emoji: "🍽️", from: 0, to: 1 },
+  { letter: "B", title: "Huid & bloed", emoji: "🩸", from: 2, to: 3 },
+  { letter: "C", title: "Planten", emoji: "🌱", from: 4, to: 4 },
+  { letter: "D", title: "Ecologie", emoji: "🦝", from: 5, to: 5 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2025-05/gt-0191-a-25-1-o.pdf";
@@ -317,7 +317,7 @@ const examenBiologie2025T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Biologie - eindexamen oefenen 2025-T1",
   intro:
-    "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1 (examen-id GT-0191-a-25-1). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Plaatje-afhankelijke + open vragen overgeslagen.",
+    "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1. Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Plaatje-afhankelijke + open vragen overgeslagen.",
   triggerKeywords: [
     "examen biologie 2025", "echte examenvragen biologie",
     "trage maag peristaltiek spierlaag", "bewustwording grote hersenen",

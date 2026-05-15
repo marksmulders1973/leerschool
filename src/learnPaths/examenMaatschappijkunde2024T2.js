@@ -3,9 +3,9 @@
 // 5 MC-vragen geselecteerd uit 15 (zelfstandig + linkt aan staat-pad).
 
 const chapters = [
-  { letter: "A", title: "Politieke besluitvorming (V5, V10)", emoji: "🗳️", from: 0, to: 1 },
-  { letter: "B", title: "Lokaal bestuur (V17)", emoji: "🏛️", from: 2, to: 2 },
-  { letter: "C", title: "Strafrecht (V26, V27)", emoji: "⚖️", from: 3, to: 4 },
+  { letter: "A", title: "Politieke besluitvorming", emoji: "🗳️", from: 0, to: 1 },
+  { letter: "B", title: "Lokaal bestuur", emoji: "🏛️", from: 2, to: 2 },
+  { letter: "C", title: "Strafrecht", emoji: "⚖️", from: 3, to: 4 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-1127-a-24-2-o-spr.pdf";
@@ -272,7 +272,7 @@ const examenMaatschappijkunde2024T2 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Maatschappijkunde - eindexamen oefenen 2024-T2",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2 (examen-id GT-1127-a-24-2). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'.",
+    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2. Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'.",
   triggerKeywords: [
     "examen maatschappijkunde 2024 tijdvak 2", "echte examenvragen maatschappij",
     "beleidsbepaling fase", "recht van initiatief amendement",

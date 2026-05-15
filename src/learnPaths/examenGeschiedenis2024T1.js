@@ -3,9 +3,9 @@
 // 5 MC-vragen geselecteerd uit 10. Bron-afhankelijke kaart/tekening-vragen geskipt.
 
 const chapters = [
-  { letter: "A", title: "1848 + parlement (V1)", emoji: "👑", from: 0, to: 0 },
-  { letter: "B", title: "WO2 + dekolonisatie (V25, V33, V34)", emoji: "🌍", from: 1, to: 3 },
-  { letter: "C", title: "Koude Oorlog + modern (V38, V41)", emoji: "🧊", from: 4, to: 5 },
+  { letter: "A", title: "1848 + parlement", emoji: "👑", from: 0, to: 0 },
+  { letter: "B", title: "WO2 + dekolonisatie", emoji: "🌍", from: 1, to: 3 },
+  { letter: "C", title: "Koude Oorlog + modern", emoji: "🧊", from: 4, to: 5 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0125-a-24-1-o-spr.pdf";
@@ -294,7 +294,7 @@ const examenGeschiedenis2024T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Geschiedenis - eindexamen oefenen 2024-T1",
   intro:
-    "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1 (examen-id GT-0125-a-24-1). Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikkel-hints + uitleg + doorklik naar bestaande geschiedenis-paden.",
+    "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1. Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikkel-hints + uitleg + doorklik naar bestaande geschiedenis-paden.",
   triggerKeywords: [
     "examen geschiedenis 2024", "ministeriele verantwoordelijkheid 1848",
     "gelijkschakeling arbeidsfront", "politionele actie indonesie",

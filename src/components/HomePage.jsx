@@ -334,6 +334,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [shake, setShake] = useState(false);
+  const [nameError, setNameError] = useState("");
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [pendingFeature, setPendingFeature] = useState(null);
@@ -564,22 +565,27 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     onSelectRole(role, featureId);
   };
 
-  const handleConfirm = () => {
-    const effectiveName = name.trim() ||
+  const handleConfirm = (opts = {}) => {
+    const asGuest = opts === true || opts?.asGuest === true;
+    let effectiveName = name.trim() ||
       (authUser && (authUser.user_metadata?.full_name || authUser.user_metadata?.name || authUser.email?.split("@")[0])) ||
       "";
+    // Guest-knop: nooit blokkeren op ontbrekende naam — gebruik "Speler" default.
+    if (!effectiveName && asGuest) effectiveName = "Speler";
     if (!effectiveName) {
       setShake(true);
+      setNameError("Vul eerst je naam in (of klik 'Doorgaan als gast').");
       setTimeout(() => setShake(false), 500);
       return;
     }
+    setNameError("");
     if (!name.trim()) setName(effectiveName);
     setUserName(effectiveName);
     setUserLevel(level);
     setUserSchoolType?.(schoolType);
     try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
     try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
-    track("name_entered", { name_length: effectiveName.length, level, role: pendingRole, school_type: schoolType || "" });
+    track("name_entered", { name_length: effectiveName.length, level, role: pendingRole, school_type: schoolType || "", guest: asGuest });
     onSelectRole(pendingRole, pendingFeature);
   };
 
@@ -1179,13 +1185,21 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ ...styles.nameInput, animation: shake ? "shake 0.5s ease" : "none" }}>
               <label style={styles.inputLabel}>Wat is je naam?</label>
               <input
-                style={styles.textInput}
+                style={{
+                  ...styles.textInput,
+                  border: nameError ? "1.5px solid #ff5252" : undefined,
+                }}
                 value={name}
                 autoFocus
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => { setName(e.target.value); if (nameError) setNameError(""); }}
                 placeholder="Vul je naam in..."
                 onKeyDown={(e) => e.key === "Enter" && handleConfirm()}
               />
+              {nameError && (
+                <div style={{ marginTop: 6, fontSize: 12, color: "#ff5252", fontFamily: "var(--font-body)" }}>
+                  {nameError}
+                </div>
+              )}
             </div>
 
             {levelOptions[pendingRole]?.length > 0 && (
@@ -1263,7 +1277,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </>
             ) : (
               <>
-                <button onClick={handleConfirm} style={{
+                <button onClick={() => handleConfirm({ asGuest: true })} style={{
                   width: "100%", padding: "15px", borderRadius: 16, border: "none",
                   background: "linear-gradient(135deg, #1565c0, #0d47a1)",
                   color: "var(--color-text-strong)", fontFamily: "var(--font-display)",

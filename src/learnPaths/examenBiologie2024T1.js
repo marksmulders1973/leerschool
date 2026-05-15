@@ -6,10 +6,10 @@
 // overgenomen — geen paraphrase. Open vragen + tabellen overgeslagen.
 
 const chapters = [
-  { letter: "A", title: "Erfelijkheid (V23, V25)", emoji: "🧬", from: 0, to: 1 },
-  { letter: "B", title: "Cellen & voortplanting (V36, V41)", emoji: "🔬", from: 2, to: 3 },
-  { letter: "C", title: "Lichaam & organen (V44, V2, V17, V33, V34, V38, V42)", emoji: "🫀", from: 4, to: 10 },
-  { letter: "D", title: "Gedrag (V1)", emoji: "🐕", from: 11, to: 11 },
+  { letter: "A", title: "Erfelijkheid", emoji: "🧬", from: 0, to: 1 },
+  { letter: "B", title: "Cellen & voortplanting", emoji: "🔬", from: 2, to: 3 },
+  { letter: "C", title: "Lichaam & organen", emoji: "🫀", from: 4, to: 10 },
+  { letter: "D", title: "Gedrag", emoji: "🐕", from: 11, to: 11 },
 ];
 
 const steps = [
@@ -723,7 +723,7 @@ const examenBiologie2024T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Biologie - eindexamen oefenen 2024-T1",
   intro:
-    "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar relevant) doorklik naar bestaande biologie-leerpaden. Open vragen + tabel-vragen + plaatje-afhankelijke vragen overgeslagen.",
+    "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar relevant) doorklik naar bestaande biologie-leerpaden. Open vragen + tabel-vragen + plaatje-afhankelijke vragen overgeslagen.",
   triggerKeywords: [
     "examen biologie 2024", "examen oefenen biologie", "echte examenvragen biologie",
     "mutatie", "x-chromosoom oogkleur", "kweekvlees cel", "sterilisatie testosteron",

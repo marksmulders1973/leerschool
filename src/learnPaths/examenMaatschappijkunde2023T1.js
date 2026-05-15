@@ -3,8 +3,8 @@
 // 5 MC-vragen geselecteerd uit 15 (zelfstandig + linkt aan staat-pad).
 
 const chapters = [
-  { letter: "A", title: "EU + bestuurslagen (V4, V11, V14)", emoji: "🏛️", from: 0, to: 2 },
-  { letter: "B", title: "Criminaliteit + recht (V23, V26)", emoji: "⚖️", from: 3, to: 4 },
+  { letter: "A", title: "EU + bestuurslagen", emoji: "🏛️", from: 0, to: 2 },
+  { letter: "B", title: "Criminaliteit + recht", emoji: "⚖️", from: 3, to: 4 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-1127-a-23-1-o.pdf";
@@ -266,7 +266,7 @@ const examenMaatschappijkunde2023T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Maatschappijkunde - eindexamen oefenen 2023-T1",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1 (examen-id GT-1127-a-23-1). Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De Nederlandse staat'.",
+    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1. Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De Nederlandse staat'.",
   triggerKeywords: [
     "examen maatschappijkunde 2023", "echte examenvragen maatschappij",
     "europese raad crisis", "verzorgingsstaat jongerencentra",

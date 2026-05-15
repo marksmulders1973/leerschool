@@ -3,8 +3,8 @@
 // 5 MC-vragen geselecteerd uit 9 (bron-afhankelijke vragen geskipt).
 
 const chapters = [
-  { letter: "A", title: "1848 + verzuiling (V1, V6, V7)", emoji: "👑", from: 0, to: 2 },
-  { letter: "B", title: "20e eeuw (V42, V45)", emoji: "🌍", from: 3, to: 4 },
+  { letter: "A", title: "1848 + verzuiling", emoji: "👑", from: 0, to: 2 },
+  { letter: "B", title: "20e eeuw", emoji: "🌍", from: 3, to: 4 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0125-a-23-1-o.pdf";
@@ -262,7 +262,7 @@ const examenGeschiedenis2023T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Geschiedenis - eindexamen oefenen 2023-T1",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1 (examen-id GT-0125-a-23-1). Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doorklik naar bestaande paden.",
+    "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1. Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doorklik naar bestaande paden.",
   triggerKeywords: [
     "examen geschiedenis 2023", "willem ii grondwet 1848",
     "abraham kuyper arp", "pacificatie 1917 schoolstrijd",

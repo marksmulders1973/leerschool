@@ -5,9 +5,9 @@
 // licht herformuleerd om zelfstandig te zijn.
 
 const chapters = [
-  { letter: "A", title: "Politiek & democratie (V3, V8)", emoji: "🗳️", from: 0, to: 1 },
-  { letter: "B", title: "Europese Unie (V12)", emoji: "🇪🇺", from: 2, to: 2 },
-  { letter: "C", title: "Rechtsstaat & justitie (V17, V19)", emoji: "⚖️", from: 3, to: 4 },
+  { letter: "A", title: "Politiek & democratie", emoji: "🗳️", from: 0, to: 1 },
+  { letter: "B", title: "Europese Unie", emoji: "🇪🇺", from: 2, to: 2 },
+  { letter: "C", title: "Rechtsstaat & justitie", emoji: "⚖️", from: 3, to: 4 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-1127-a-24-1-o-spr.pdf";
@@ -292,7 +292,7 @@ const examenMaatschappijkunde2024T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Maatschappijkunde - eindexamen oefenen 2024-T1",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1 (examen-id GT-1127-a-24-1). Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'. Bron-tekst-afhankelijke vragen overgeslagen of licht herformuleerd om zelfstandig te zijn.",
+    "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1. Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'. Bron-tekst-afhankelijke vragen overgeslagen of licht herformuleerd om zelfstandig te zijn.",
   triggerKeywords: [
     "examen maatschappijkunde 2024", "echte examenvragen maatschappij",
     "recht van initiatief", "staten-generaal volksvertegenwoordigers",

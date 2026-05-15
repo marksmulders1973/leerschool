@@ -5,9 +5,9 @@
 // PDF-corruptions handmatig gefixt: weeën, bacteriën, coördinatie, bronchiën.
 
 const chapters = [
-  { letter: "A", title: "Spijsvertering & alcohol (V12, V43, V45)", emoji: "🍷", from: 0, to: 2 },
-  { letter: "B", title: "Voortplanting & hormonen (V22, V23)", emoji: "👶", from: 3, to: 4 },
-  { letter: "C", title: "Ecologie (V35)", emoji: "🐢", from: 5, to: 5 },
+  { letter: "A", title: "Spijsvertering & alcohol", emoji: "🍷", from: 0, to: 2 },
+  { letter: "B", title: "Voortplanting & hormonen", emoji: "👶", from: 3, to: 4 },
+  { letter: "C", title: "Ecologie", emoji: "🐢", from: 5, to: 5 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-2-o-spr.pdf";
@@ -357,7 +357,7 @@ const examenBiologie2024T2 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Biologie - eindexamen oefenen 2024-T2",
   intro:
-    "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2 (examen-id GT-0191-a-24-2). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Open vragen + bron-afhankelijke vragen overgeslagen.",
+    "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Open vragen + bron-afhankelijke vragen overgeslagen.",
   triggerKeywords: [
     "examen biologie 2024 tijdvak 2", "echte examenvragen biologie",
     "enzymen maagsap", "weeën baarmoeder", "inwendige prikkel hormoon",

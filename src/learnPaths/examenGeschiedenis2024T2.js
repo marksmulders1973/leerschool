@@ -3,8 +3,8 @@
 // 3 MC-vragen geselecteerd uit 8 (veel bron-afhankelijke vragen geskipt).
 
 const chapters = [
-  { letter: "A", title: "Industriële Revolutie (V5)", emoji: "🏭", from: 0, to: 0 },
-  { letter: "B", title: "WO2 + nazi-Duitsland (V16, V30)", emoji: "⚔️", from: 1, to: 2 },
+  { letter: "A", title: "Industriële Revolutie", emoji: "🏭", from: 0, to: 0 },
+  { letter: "B", title: "WO2 + nazi-Duitsland", emoji: "⚔️", from: 1, to: 2 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0125-a-24-2-o-spr.pdf";
@@ -159,7 +159,7 @@ const examenGeschiedenis2024T2 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Geschiedenis - eindexamen oefenen 2024-T2",
   intro:
-    "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2 (examen-id GT-0125-a-24-2). Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden + uitleg + doorklik naar bestaande paden.",
+    "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2. Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden + uitleg + doorklik naar bestaande paden.",
   triggerKeywords: [
     "examen geschiedenis 2024 tijdvak 2", "industrialisatie",
     "beurskrach 1929 antidemocratisch", "gestapo nazi geheime politie",

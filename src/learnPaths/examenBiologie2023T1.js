@@ -5,10 +5,10 @@
 // PDF-corruptions handmatig gefixt.
 
 const chapters = [
-  { letter: "A", title: "Gedrag (V11)", emoji: "🐦", from: 0, to: 0 },
-  { letter: "B", title: "Hormonen & voortplanting (V22, V38)", emoji: "🧪", from: 1, to: 2 },
-  { letter: "C", title: "Erfelijkheid (V34)", emoji: "🧬", from: 3, to: 3 },
-  { letter: "D", title: "Lichaam — huid (V42)", emoji: "🫀", from: 4, to: 4 },
+  { letter: "A", title: "Gedrag", emoji: "🐦", from: 0, to: 0 },
+  { letter: "B", title: "Hormonen & voortplanting", emoji: "🧪", from: 1, to: 2 },
+  { letter: "C", title: "Erfelijkheid", emoji: "🧬", from: 3, to: 3 },
+  { letter: "D", title: "Lichaam — huid", emoji: "🫀", from: 4, to: 4 },
 ];
 
 const PDF_LINK = "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-23-1-o.pdf";
@@ -281,7 +281,7 @@ const examenBiologie2023T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Biologie - eindexamen oefenen 2023-T1",
   intro:
-    "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1 (examen-id GT-0191-a-23-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Plaatje-afhankelijke + open vragen overgeslagen.",
+    "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Plaatje-afhankelijke + open vragen overgeslagen.",
   triggerKeywords: [
     "examen biologie 2023 tijdvak 1", "echte examenvragen biologie",
     "ethogram gedrag", "adrenaline bijnieren", "mutatie straling",
