@@ -526,6 +526,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     onLearnPathsHub?.();
   };
 
+  // Helper voor inline link-knoppen in hero-zin (Mark 2026-05-15): doorklikbare
+  // 'Doorstroomtoets' / 'Cito-toetsen' / 'VMBO/HAVO/VWO-examens' spans die
+  // visueel als link voelen (kleur + onderlijn-op-hover) maar buttons zijn.
+  const linkSpanStyle = (kleur) => ({
+    background: "transparent",
+    border: "none",
+    padding: 0,
+    margin: 0,
+    color: kleur,
+    fontFamily: "inherit",
+    fontSize: "inherit",
+    fontWeight: 700,
+    cursor: "pointer",
+    textDecoration: "underline",
+    textDecorationStyle: "dotted",
+    textUnderlineOffset: 3,
+    textDecorationColor: "rgba(255,255,255,0.35)",
+  });
+
   const handleFeatureClick = (featureId) => {
     if (featureId === "pro") { onPro?.(); return; }
     const role = featureId === "leerkrachten" ? "teacher" : "leerling";
@@ -812,11 +831,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero-doelgroep-zin direct boven de tegels (5-agents review 2026-05-15).
-            Cito-ouder zoekt op "doorstroomtoets oefenen" en moet binnen 1 seconde
-            zien dat ze op de juiste plek is. EchteCijfers (toetsen-gemaakt-balk)
-            verwijderd 2026-05-15 op Mark's verzoek — niet relevant social proof
-            voor Cito-ouder, voegde visuele ruis toe. */}
+        {/* Hero-doelgroep-zin direct boven de tegels. Drie doorklikbare spans
+            (Mark feedback 2026-05-15): Doorstroomtoets + Cito-toetsen → /cito,
+            VMBO/HAVO/VWO-examens → /examens. Geen icoon (was 🎯 — weg). */}
         {step === "role" && (
           <div className="lk-content-wide" style={{
             textAlign: "center",
@@ -828,8 +845,24 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             letterSpacing: "0.01em",
             lineHeight: 1.5,
           }}>
-            <span style={{ fontSize: 16, marginRight: 6 }} aria-hidden="true">🎯</span>
-            Voor de <strong style={{ color: "#69f0ae" }}>Doorstroomtoets</strong>, Cito-toetsen en VMBO/HAVO/VWO-examens
+            Voor de{" "}
+            <button
+              type="button"
+              onClick={() => handleFeatureClick("cito")}
+              style={linkSpanStyle("#69f0ae")}
+            >Doorstroomtoets</button>
+            ,{" "}
+            <button
+              type="button"
+              onClick={() => handleFeatureClick("cito")}
+              style={linkSpanStyle("rgba(255,255,255,0.95)")}
+            >Cito-toetsen</button>
+            {" "}en{" "}
+            <button
+              type="button"
+              onClick={() => handleFeatureClick("examens")}
+              style={linkSpanStyle("rgba(255,255,255,0.95)")}
+            >VMBO/HAVO/VWO-examens</button>
           </div>
         )}
 
@@ -1427,25 +1460,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
-        {/* Footer */}
-        <div style={{
-          marginTop: 32,
-          paddingTop: 16,
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          textAlign: "center",
-          width: "100%",
-          maxWidth: 360,
-        }}>
-          <p style={{ fontFamily: "var(--font-body)", color: "#445566", fontSize: 11, margin: "0 0 4px" }}>
-            © Smulsoft &nbsp;·&nbsp;
-            <a href="/over.html" style={{ color: "#445566" }}>Over</a>
-            &nbsp;·&nbsp;
-            <a href="/privacy.html" style={{ color: "#445566" }}>Privacybeleid</a>
-          </p>
-          <p style={{ fontFamily: "var(--font-body)", color: "#334455", fontSize: 10, margin: 0 }}>
-            Vraag of suggestie? Tik op "Feedback" — we lezen alles.
-          </p>
-        </div>
+        {/* Footer-blokje verwijderd 2026-05-15 — App.jsx heeft al een globale
+            <footer> onderaan met "Over Leerkwartier · Privacybeleid · © Smulsoft".
+            HomePage rendert die dus niet meer apart om dubbeling te voorkomen. */}
       </div>
 
       <style>{`
