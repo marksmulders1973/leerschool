@@ -812,6 +812,32 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
+        {/* Hero-doelgroep-zin + social proof — direct boven de tegels (5-agents
+            review 2026-05-15). Cito-ouder zoekt op "doorstroomtoets oefenen" en
+            moet binnen 1 seconde zien dat ze op de juiste plek is. EchteCijfers
+            (Supabase) toont alleen als er ≥10 entries zijn — fungeert als
+            social-proof-anker zodra de app gevuld is. */}
+        {step === "role" && (
+          <>
+            <div className="lk-content-wide" style={{
+              textAlign: "center",
+              marginBottom: 14,
+              fontFamily: "var(--font-display)",
+              fontSize: 14,
+              fontWeight: 600,
+              color: "rgba(255,255,255,0.85)",
+              letterSpacing: "0.01em",
+              lineHeight: 1.5,
+            }}>
+              <span style={{ fontSize: 16, marginRight: 6 }} aria-hidden="true">🎯</span>
+              Voor de <strong style={{ color: "#69f0ae" }}>Doorstroomtoets</strong>, Cito-toetsen en VMBO/HAVO/VWO-examens
+            </div>
+            <Suspense fallback={null}>
+              <EchteCijfers />
+            </Suspense>
+          </>
+        )}
+
         {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
             als blikvanger en 3 rol-tegels (Leerling / Student / Leerkracht).
             Bewust géén "Leren" / "Test" tegels: die concurreerden met de rol-
@@ -964,34 +990,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                         }}
                       >
                         {innerContent}
-                        <button
-                          onClick={(e) => { e.stopPropagation(); onClick(); }}
-                          onMouseEnter={(e) => { e.currentTarget.style.background = `${color}26`; }}
-                          onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-                          style={{
-                            marginTop: "auto",
-                            width: "100%",
-                            minHeight: 28,
-                            padding: "4px 6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            borderRadius: 8,
-                            border: `1.5px solid ${color}`,
-                            background: "transparent",
-                            color,
-                            fontFamily: "var(--font-display)",
-                            fontSize: 10.5,
-                            fontWeight: 700,
-                            letterSpacing: 0.2,
-                            cursor: "pointer",
-                            whiteSpace: "nowrap",
-                            lineHeight: 1,
-                            marginBottom: 6,
-                          }}
-                        >
-                          Alle vakken →
-                        </button>
+                        {/* "Alle vakken →"-sub-button verwijderd (5-agents review 2026-05-15):
+                            6 klikzones boven de fold = keuze-paralyse. Klik op de
+                            tegel-foto zelf gaat al naar rol-overzicht (alle vakken);
+                            oranje CTA blijft als directe Doorstroomtoets/Examen-shortcut. */}
                         <button
                           onClick={(e) => { e.stopPropagation(); cta.onClick(); }}
                           style={{
@@ -1047,149 +1049,20 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   );
                 })}
               </div>
-              {/* "Nieuw hier?"-link → hub naar landing pages (Optie 1a uit
-                  agents-review 2026-05-13). Eén rustige zin ipv 4 keyword-links;
-                  voldoet aan "rustige bijlesdocent"-identiteit + houdt
-                  twijfelaars op het domein. Bestemming = /leren-15-minuten.html
-                  die als hub onderaan naar 6 specifieke landing pages linkt. */}
-              <a
-                href="/leren-15-minuten.html"
-                className="lk-content-wide"
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  padding: "8px 12px",
-                  marginBottom: 10,
-                  color: "rgba(255,255,255,0.55)",
-                  fontFamily: "var(--font-body)",
-                  fontSize: 13,
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.85)"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255,255,255,0.55)"; }}
-              >
-                Nieuw hier? Lees in 1 minuut hoe Leerkwartier werkt →
-              </a>
-              {/* Rustige ouder-link direct onder de rol-tegels (audit 2 Q4):
-                  ouders willen vóór de drukke ticker/scoreborden weten wat
-                  Leerkwartier doet en wat met data gebeurt. Subtiele knop,
-                  geen brand-kleur — niet bedoeld als hoofdactie maar als
-                  ouder-anchor op een drukke pagina. */}
-              <a
-                href="/privacy.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lk-content-wide"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 8,
-                  padding: "10px 14px",
-                  marginBottom: 12,
-                  borderRadius: 12,
-                  border: "1px solid rgba(255,255,255,0.12)",
-                  background: "rgba(255,255,255,0.04)",
-                  color: "rgba(255,255,255,0.75)",
-                  fontFamily: "var(--font-body)",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  textDecoration: "none",
-                }}
-              >
-                <span style={{ fontSize: 16 }} aria-hidden="true">👨‍👩‍👧</span>
-                <span>Voor ouders — zo werkt het + privacy in 1 minuut</span>
-              </a>
-              {/* Echte cijfers uit Supabase — geen verzonnen claims.
-                  Mark request 2026-05-13 na advies "geen 1.700+ als je het
-                  niet weet". Component verbergt zichzelf bij <10 entries
-                  (te weinig social proof-waarde), toont anders 1-3 metrieken.
-                  Lazy zodat het de TTI niet vertraagt. */}
-              <Suspense fallback={null}>
-                <EchteCijfers />
-              </Suspense>
-              <TickerBanner />
+              {/* 5-agents review 2026-05-15: "Nieuw hier?"-link, "Voor ouders"-knop,
+                  EchteCijfers (verplaatst naar boven tegels) en TickerBanner weg.
+                  Zes elementen tussen tegels en de fold-vouw verdunden de focus
+                  en concurreerden met de rol-tegel-CTR. Privacy + uitleg blijven
+                  toegankelijk via footer-links onderaan. */}
             </>
           );
         })()}
 
-        {/* Lancering-promo (75%) + Installeer-app-blokje (25%), naast elkaar
-            als beide zichtbaar zijn. Eén van beide alleen → vult de hele rij.
-            Promo verbergt voor ingelogde gebruikers (alleen wervings-tool voor
-            nieuwe bezoekers); install verbergt als app al als PWA draait. */}
-        {step === "role" && (() => {
-          let hasName = false;
-          try {
-            hasName = !!(JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim();
-          } catch {}
-          const showPromo = isLaunchPromoActive() && !hasName;
-          const showInstall = pwa.canShow;
-          if (!showPromo && !showInstall) return null;
-          const handleInstall = async () => {
-            const r = await pwa.promptInstall();
-            // Geen native prompt mogelijk (iOS, of Chrome heeft 'm nog
-            // niet beschikbaar gemaakt) → toon instructie-modal met de
-            // platform-specifieke stappen uit de hook.
-            if (r.result === "no-prompt") {
-              setShowInstallHelp(true);
-            }
-          };
-          return (
-            <div className="lk-content-wide" style={{
-              display: "flex",
-              gap: 8,
-              marginBottom: 12,
-              alignItems: "stretch",
-            }}>
-              {showPromo && (
-                <div style={{
-                  flex: showInstall ? 3 : 1,
-                  padding: "10px 14px",
-                  background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(124,58,237,0.12))",
-                  border: "1px solid rgba(105,240,174,0.35)",
-                  borderRadius: 14,
-                  fontFamily: "var(--font-body)",
-                  textAlign: "center",
-                }}>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 2 }}>
-                    {LAUNCH_PROMO_SHORT}
-                  </div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", lineHeight: 1.4 }}>
-                    {LAUNCH_PROMO_LONG}
-                  </div>
-                </div>
-              )}
-              {showInstall && (
-                <button
-                  type="button"
-                  disabled={pwa.installing}
-                  onClick={handleInstall}
-                  style={{
-                    flex: showPromo ? 1 : 1,
-                    background: "linear-gradient(135deg, rgba(0,72,200,0.20), rgba(0,212,255,0.12))",
-                    border: "1px solid rgba(0,212,255,0.40)",
-                    borderRadius: 14,
-                    padding: "8px 6px",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: 2,
-                    cursor: pwa.installing ? "default" : "pointer",
-                    fontFamily: "var(--font-body)",
-                    color: "#fff",
-                    minWidth: 0,
-                  }}
-                >
-                  <span style={{ fontSize: 22, lineHeight: 1 }} aria-hidden="true">📲</span>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, color: "#00d4ff", textAlign: "center", lineHeight: 1.15 }}>
-                    {pwa.installing ? "Een moment…" : "Installeer app"}
-                  </div>
-                </button>
-              )}
-            </div>
-          );
-        })()}
+        {/* 5-agents review 2026-05-15: launch-promo bar + install-knop weg uit
+            first-visit-flow. Reden: concurreerden met rol-tegel-CTR. PWA-best
+            practice = install-prompt pas tonen ná eerste sessie (niet bij eerste
+            bezoek). Install-prompt + launch-promo blijven beschikbaar via andere
+            triggers (bv. /abonnement-pagina, settings, na X sessies). */}
 
         {/* (verplaatst naar boven de hero — Prio 2 uit competitor-research) */}
 
