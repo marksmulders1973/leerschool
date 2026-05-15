@@ -2043,6 +2043,30 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen afstand-woord.", "Geen afstand-woord.", "Geen relevant woord."],
       },
+      {
+        q: "*'Wij hebben een ___ huis.'* Wat is een **passend bijvoeglijk naamwoord**?",
+        options: ["mooi", "lopen", "snel", "hij"],
+        answer: 0,
+        wrongHints: [null, "Werkwoord.", "Past bij actie, niet bij huis.", "Voornaamwoord."],
+      },
+      {
+        q: "*'Open vraag*': hoe schrijf je 'paardenstaart' (zonder spatie of streepje)?",
+        kind: "open",
+        acceptedAnswers: ["paardenstaart"],
+        explanation: "Samenstelling met tussen-n: paard + (en) + staart = paardenstaart.",
+      },
+      {
+        q: "*'Open vraag*': wat is het **verkleinwoord** van 'huis'? (typ alleen het woord)",
+        kind: "open",
+        acceptedAnswers: ["huisje"],
+        explanation: "Verkleinwoord van 'huis' is 'huisje' — niet 'huissie' (spreektaal).",
+      },
+      {
+        q: "*'Open vraag*': welke **persoonsvorm** zit in *'Tom rent hard'*?",
+        kind: "open",
+        acceptedAnswers: ["rent"],
+        explanation: "De persoonsvorm is het werkwoord dat met het onderwerp meeverandert. 'Tom rent' → persoonsvorm = 'rent'.",
+      },
     ],
   },
 ];

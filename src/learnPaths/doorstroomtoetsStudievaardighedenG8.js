@@ -1951,6 +1951,18 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat was stap 1.", "Niet relevant.", "Aan einde."],
       },
+      {
+        q: "Bij **stappenschema 'taart bakken'** komt 'pan in oven zetten' ___ 'beslag mengen'?",
+        options: ["Erna", "Ervoor", "Tegelijk", "Niet"],
+        answer: 0,
+        wrongHints: [null, "Niet — eerst beslag, dan pan in oven.", "Beslag eerst.", "Wel — heel relevant."],
+      },
+      {
+        q: "Een **kaart van de wereld** is geprojecteerd op een **platte vorm**. Welke **vertekening** zie je vaak?",
+        options: ["Groenland lijkt veel te groot", "Amsterdam is verdwenen", "Oceanen zijn paars", "Alles is even groot"],
+        answer: 0,
+        wrongHints: [null, "Niet — wel zichtbaar.", "Geen relevant.", "Tegenovergesteld — vertekening BESTAAT."],
+      },
     ],
   },
 ];
