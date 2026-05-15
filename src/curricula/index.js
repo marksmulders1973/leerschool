@@ -8,7 +8,11 @@
 //   2. Verwijs alleen naar pathId's die in src/learnPaths/index.js bestaan.
 //   3. Optioneel: groepeer in "phases" (= leerjaar/blok) voor visuele indeling.
 
-import { ALL_LEARN_PATHS } from "../learnPaths";
+import pathManifest from "../learnPaths/pathManifest.generated.json";
+
+// QW7 lazy-load STAP 2 (2026-05-15): manifest geeft stepCount per pad.
+// Curricula heeft alleen stepCount nodig — geen full path-data.
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 export const CURRICULA = {
   "wiskunde-klas1": {
@@ -144,8 +148,8 @@ export function curriculumPathIds(curriculumId) {
 export function curriculumTotalSteps(curriculumId) {
   const ids = curriculumPathIds(curriculumId);
   return ids.reduce((sum, pid) => {
-    const path = ALL_LEARN_PATHS[pid];
-    return sum + (path?.steps.length || 0);
+    const path = PATHS_BY_ID[pid];
+    return sum + (path?.stepCount || 0);
   }, 0);
 }
 
@@ -154,12 +158,13 @@ export function curriculumTotalSteps(curriculumId) {
 export function curriculumNextStep(curriculumId, progressByPath) {
   const ids = curriculumPathIds(curriculumId);
   for (const pid of ids) {
-    const path = ALL_LEARN_PATHS[pid];
+    const path = PATHS_BY_ID[pid];
     if (!path) continue;
+    const stepCount = path.stepCount || 0;
     const done = progressByPath?.[pid] || new Set();
-    if (done.size < path.steps.length) {
+    if (done.size < stepCount) {
       // Eerste niet-voltooide stap binnen dit pad
-      for (let i = 0; i < path.steps.length; i++) {
+      for (let i = 0; i < stepCount; i++) {
         if (!done.has(i)) return { pathId: pid, stepIdx: i };
       }
     }

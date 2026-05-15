@@ -7,7 +7,7 @@
 //
 // Mode is "examen" — PlayQuiz verbergt dan hints/YouTube/uitlegPad-trigger.
 
-import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
+import { getLearnPath } from "../../learnPaths/pathLoaders.js";
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -30,8 +30,8 @@ const SUBJECTS = {
   "doorstroomtoets-studievaardigheden-g8": "studievaardigheden",
 };
 
-export function buildProefToets({ leerpadId, aantal = 30 }) {
-  const pad = ALL_LEARN_PATHS[leerpadId];
+export async function buildProefToets({ leerpadId, aantal = 30 }) {
+  const pad = await getLearnPath(leerpadId);
   if (!pad) {
     throw new Error(`buildProefToets: leerpad '${leerpadId}' niet gevonden`);
   }

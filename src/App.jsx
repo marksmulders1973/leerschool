@@ -68,7 +68,8 @@ const Curriculum = lazy(() => import("./features/learn/Curriculum.jsx"));
 const MeeBezig = lazy(() => import("./features/learn/MeeBezig.jsx"));
 const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
-import { ALL_LEARN_PATHS, levelsCompatible } from "./learnPaths/index.js";
+import { levelsCompatible } from "./learnPaths/utils.js";
+import pathManifest from "./learnPaths/pathManifest.generated.json";
 import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
 import { SUBJECTS as LEARN_PATH_SUBJECTS } from "./shared/subjects.js";
@@ -655,7 +656,7 @@ export default function App() {
   const startProefToets = async (leerpadId, aantal = 30) => {
     const { buildProefToets } = await import("./features/practice/buildProefToets.js");
     try {
-      const { quiz, questions } = buildProefToets({ leerpadId, aantal });
+      const { quiz, questions } = await buildProefToets({ leerpadId, aantal });
       track("proeftoets_started", { leerpad_id: leerpadId, vragen: questions.length });
       setGameState({ quiz, mode: "examen", questions, currentQ: 0, score: 0, answers: [], timePerQuestion: 0, startedAt: Date.now() });
       setPage("play");
@@ -872,7 +873,7 @@ export default function App() {
         // gebruikersprofiel-niveau.
         const meeBezigLevel = (fromQuiz ? gameState?.quiz?.level : null) || userLevel;
         const relatedPaths = relatedSubjects.length > 0
-          ? Object.values(ALL_LEARN_PATHS).filter((p) =>
+          ? pathManifest.filter((p) =>
               relatedSubjects.includes(p.subject)
               && (!meeBezigLevel || levelsCompatible(meeBezigLevel, p.level))
             )

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
-import { findLearnPathForQuestion } from "../../learnPaths/index.js";
+import { findLearnPathForQuestion } from "../../learnPaths/utils.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer } from "../mastery/mastery.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";

@@ -89,7 +89,7 @@ export default defineConfig({
             // 'Cannot read properties of undefined (reading config)' veroorzaakt
             // zodra index.js geinitialiseerd wordt voordat data-learnpaths-wiskunde
             // afgerond is. Forceer ze in 'data-learnpaths-core'.
-            if (fname === 'index.js' || fname === 'examenLookup.js' || fname === 'pathLoaders.js' || fname === 'subjectMapping.js' || fname === 'questionPathMap.generated.js') {
+            if (fname === 'index.js' || fname === 'examenLookup.js' || fname === 'pathLoaders.js' || fname === 'subjectMapping.js' || fname === 'questionPathMap.generated.js' || fname === 'utils.js') {
               return 'data-learnpaths-core';
             }
             if (fname.startsWith('examen')) return 'data-learnpaths-examens';

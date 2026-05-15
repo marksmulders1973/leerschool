@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "./mastery.js";
-import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { track } from "../../utils.js";
 import { subjectMeta } from "../../shared/subjects.js";
+
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 /**
  * MasteryCTABanner — éérste primaire CTA op homepage voor terugkerende
@@ -88,7 +90,7 @@ function FirstTimeNudge({ userName, onStart }) {
 }
 
 function RecommendedCard({ player, record, onPickPath, variant = "default" }) {
-  const path = record.path || ALL_LEARN_PATHS[record.pathId];
+  const path = record.path || PATHS_BY_ID[record.pathId];
   if (!path) return null;
   const meta = MASTERY_LABELS[record.level];
   const subj = subjectMeta(path.subject);
