@@ -1,6 +1,7 @@
 [
   {
     "id": "algoritmen-programmeren-po",
+    "file": "./algoritmenProgrammerenPo.js",
     "title": "Algoritmen + programmeren (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -24,10 +25,12 @@
     "intro": "Algoritmen + programmeren voor Cito groep 6-8 — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scratch/Python/JavaScr",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "argumentatieleer",
+    "file": "./argumentatieleer.js",
     "title": "Argumentatieleer",
     "subject": "taal",
     "level": "havo4-5",
@@ -51,10 +54,12 @@
     "intro": "Examenstof havo 4-5 leesvaardigheid: standpunt en argumenten herkennen, vijf argumentatieschema's toepassen, structuur van argumentatie analyseren, en de vier veelvoorkomende drogredenen herkennen. Me",
     "stepCount": 15,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "atoombouw-scheikunde",
+    "file": "./atoombouwScheikunde.js",
     "title": "Atoombouw en periodiek systeem",
     "subject": "scheikunde",
     "level": "klas3-4",
@@ -78,10 +83,12 @@
     "intro": "De bouw van atomen — kern (proton + neutron) + elektronen in schillen, atoomnummer en massagetal, isotopen, ionen, het periodiek systeem (metaal/niet-metaal/edelgas), moleculen en chemische reacties m",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "balans-beco",
+    "file": "./balansBeco.js",
     "title": "Balans en winst-en-verliesrekening",
     "subject": "beco",
     "level": "havo3-4",
@@ -105,10 +112,12 @@
     "intro": "De twee kern-overzichten van elke onderneming: de balans (debet = credit) en de winst-en-verliesrekening (omzet − kosten = winst). Met activa, passiva, eigen vs vreemd vermogen, kosten-soorten en afsc",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "basis-grammatica-engels-po",
+    "file": "./basisGrammaticaEngelsPo.js",
     "title": "Basis-grammatica Engels (groep 6-8)",
     "subject": "engels",
     "level": "groep6-8",
@@ -132,10 +141,12 @@
     "intro": "Engelse grammatica voor groep 6-8 — a/an, meervoud (incl. children/men/feet), this/that/these/those, am/is/are, present simple + -s-regel, do/does-vragen + don't/doesn't-ontkenning, vraagwoorden. Voor",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "bbp-conjunctuur-economie",
+    "file": "./bbpConjunctuurEconomie.js",
     "title": "BBP, conjunctuur, inflatie (klas 4-5)",
     "subject": "economie",
     "level": "klas4-5",
@@ -159,10 +170,12 @@
     "intro": "Macro-economie voor klas 4-5 — BBP (totale productie, nominaal vs reëel), conjunctuur (opgang/piek/recessie/dal, 2 kwartalen rule), inflatie (vraag/kosten, hyperinflatie Weimar/Zimbabwe, koopkracht), ",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "begrijpend-lezen-strategie",
+    "file": "./begrijpendLezenStrategie.js",
     "title": "Begrijpend lezen — strategieën voor groep 5-8",
     "subject": "begrijpend-lezen",
     "level": "groep5-8",
@@ -186,10 +199,12 @@
     "intro": "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten m",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "begrijpend-lezen-teksten-po",
+    "file": "./begrijpendLezenTekstenPo.js",
     "title": "Begrijpend lezen — echte oefenteksten",
     "subject": "begrijpend-lezen",
     "level": "groep5-8",
@@ -212,10 +227,12 @@
     "intro": "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "bekende-boeken-literatuur-po",
+    "file": "./bekendeBoekenLiteratuurPo.js",
     "title": "Bekende boeken + literatuur (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -239,10 +256,12 @@
     "intro": "Bekende kinderboeken + literatuur voor Cito groep 6-8 — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl, Rowling) +",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "bekende-nederlanders-po",
+    "file": "./bekendeNederlandersPo.js",
     "title": "Bekende Nederlanders (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -266,10 +285,12 @@
     "intro": "Bekende Nederlanders voor Cito groep 6-8 — historisch (Erasmus/Willem van Oranje/Hugo de Groot/Leeuwenhoek/Huygens/Eisinga) + sport (Cruijff/Van Basten/Kramer/Wüst/Verstappen) + modern (Willem-Alexand",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "bekende-wetenschappers-po",
+    "file": "./bekendeWetenschappersPo.js",
     "title": "Bekende wetenschappers (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -293,10 +314,12 @@
     "intro": "Bekende wetenschappers voor Cito groep 6-8 — Copernicus/Galileo (zon-middelpunt) + Newton (zwaartekracht, 3 wetten) + Darwin (evolutie) + Mendel/Pasteur/Fleming + Einstein (E=mc²) + Curie (radium) + T",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "beroepen-werk-po",
+    "file": "./beroepenWerkPo.js",
     "title": "Beroepen + werk (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -320,10 +343,12 @@
     "intro": "Beroepen + werk voor Cito groep 6-8 — wat is beroep (werknemer/ZZP/vrijwilliger) + 4 sectoren (primair/secundair/tertiair/quartair) + MBO/HBO/WO + voorbeelden beroepen + salaris (bruto/netto/minimum/C",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "bevolking-migratie-aardrijkskunde",
+    "file": "./bevolkingMigratieAardrijkskunde.js",
     "title": "Bevolking + migratie (klas 2-3)",
     "subject": "aardrijkskunde",
     "level": "klas2-3",
@@ -347,10 +372,12 @@
     "intro": "Bevolking + migratie voor klas 2-3 — 8 miljard wereldbevolking, dichtheid, spreiding (kustgebieden, rivieren), migratie-soorten (emi/immi, vluchteling/asielzoeker), push+pull-factoren, NL als migratie",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "bewegingen-snelheid-natuurkunde",
+    "file": "./bewegingenSnelheidNatuurkunde.js",
     "title": "Bewegingen + snelheid (klas 1-2)",
     "subject": "natuurkunde",
     "level": "klas1-2",
@@ -374,10 +401,12 @@
     "intro": "Bewegingen + snelheid voor klas 1-2 natuurkunde — formule v=s/t, eenheden m/s vs km/u (× 3,6), versnelling (m/s², zwaartekracht 9,8), afstand-tijd-grafiek lezen, praktijksnelheden (verkeer, atletiek, ",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "breuken",
+    "file": "./breuken.js",
     "title": "Breuken",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -397,10 +426,12 @@
     "intro": "Breuken zijn fundamenteel in álle wiskunde — niet alleen klas 1. Hier leer je vanaf de basis: wat is een breuk, gelijkwaardige breuken, optellen/aftrekken (met gelijknamig maken), vermenigvuldigen/del",
     "stepCount": 15,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "breuken-po",
+    "file": "./breukenPo.js",
     "title": "Breuken — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -424,10 +455,12 @@
     "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Cito-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "brugklas-orientatie",
+    "file": "./brugklasOrientatie.js",
     "title": "Brugklas-tips — overgang naar middelbare school (groep 8 → klas 1)",
     "subject": "rekenen",
     "level": "groep8",
@@ -451,10 +484,12 @@
     "intro": "Brugklas-overgang voor groep 8 → klas 1 — verschil basisschool/middelbare school (10-15 docenten, cijfers 1-10, profiel-keuze), agenda + Magister, leren-leren (spaced repetition, Feynman, Pomodoro), s",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "cel-biologie",
+    "file": "./celBiologie.js",
     "title": "De cel — bouwsteen van het leven",
     "subject": "biologie",
     "level": "klas1-3",
@@ -478,10 +513,12 @@
     "intro": "Wat is een cel, en waar bestaat hij uit? Van eencelligen tot mensen, van celkern tot mitochondriën, plus de drie verschillen tussen plant- en dierlijke cellen. Eerste leerpad biologie onderbouw.",
     "stepCount": 11,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "chemische-reacties-scheikunde",
+    "file": "./chemischeReactiesScheikunde.js",
     "title": "Chemische reacties balanceren",
     "subject": "scheikunde",
     "level": "klas3",
@@ -505,10 +542,12 @@
     "intro": "Hoe je reactievergelijkingen schrijft en kloppend maakt: van molecuulformules en de Wet van Behoud van Massa, via balanceren stap-voor-stap, tot de zes hoofdtypen reacties (synthese, ontleding, verbra",
     "stepCount": 9,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "cijferend-rekenen",
+    "file": "./cijferendRekenen.js",
     "title": "Cijferend rekenen — Cito groep 6-8",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -532,10 +571,12 @@
     "intro": "Cijferend rekenen voor groep 6-8: optellen + onthouden, aftrekken + lenen, vermenigvuldigen, delen (bus-bewerking), praktijk-redactiesommen. ~15 min per deel.",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "cito-strategieen-groep8",
+    "file": "./citoStrategieenGroep8.js",
     "title": "Cito Doorstroomtoets — strategieën voor groep 8",
     "subject": "cito",
     "level": "groep8",
@@ -559,10 +600,12 @@
     "intro": "Hoe je slim met de Doorstroomtoets omgaat: pacing, eliminatie bij meerkeuze, slimme aanpak voor begrijpend lezen + rekenen, omgaan met twijfel + tijdgebrek. Niet alleen 'kennen', ook 'aanpakken'.",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "comparatives-engels",
+    "file": "./comparativesEngels.js",
     "title": "Comparatives + superlatives (klas 2)",
     "subject": "engels",
     "level": "klas2",
@@ -585,10 +628,12 @@
     "intro": "Engelse trappen van vergelijking voor klas 2 — stellend/vergrotend/overtreffend (big/bigger/biggest), -er/-est vs more/most, onregelmatig (good/better/best), spellingsregels (-y, dubbele medeklinker).",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "conditionals-engels",
+    "file": "./conditionalsEngels.js",
     "title": "Conditionals (if-zinnen) Engels (klas 3)",
     "subject": "engels",
     "level": "klas3",
@@ -611,10 +656,12 @@
     "intro": "Conditionals (if-zinnen) voor klas 3 — Type 0 algemene waarheid, Type 1 reëel toekomst, Type 2 onreëel heden (would + base), Type 3 onreëel verleden (would have + past participle), mixed + unless/shou",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "continenten-wereld-po",
+    "file": "./continentenWereldPo.js",
     "title": "Continenten en wereldkennis (groep 6-8)",
     "subject": "aardrijkskunde",
     "level": "groep6-8",
@@ -638,10 +685,12 @@
     "intro": "De wereld voor groep 6-8 — 7 continenten, 5 oceanen, beroemde landen + steden, tijdzones, wereldwonderen. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "coordinatenstelsel",
+    "file": "./coordinatenstelsel.js",
     "title": "Coördinatenstelsel",
     "subject": "wiskunde",
     "level": "klas1-vmbo-vwo",
@@ -664,10 +713,12 @@
     "intro": "Het assenstelsel — de basis voor alle grafieken in wiskunde. x-as, y-as, oorsprong, schaal, kwadranten, punten plotten en herkennen of punten op een rechte lijn liggen. Voorbereiding op lineaire formu",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-leesvaardigheid-engels",
+    "file": "./cseLeesvaardigheidEngels.js",
     "title": "CSE Engels — leesvaardigheid (klas 3-4)",
     "subject": "engels",
     "level": "klas3-4",
@@ -689,10 +740,12 @@
     "intro": "CSE Engels leesvaardigheid voor klas 3-4 — signaalwoorden (however, therefore), tekstsoorten (news, opinion, review, ad), woordbetekenis uit context, hoofdgedachte + details, verwijzingen (he/it/this)",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-leesvaardigheid-nederlands",
+    "file": "./cseLeesvaardigheidNederlands.js",
     "title": "CSE Nederlands — leesvaardigheid (klas 3-4)",
     "subject": "taal",
     "level": "klas3-4",
@@ -713,10 +766,12 @@
     "intro": "CSE Nederlands leesvaardigheid voor klas 3-4 — strategie (skim/scan/answer), hoofdgedachte + details, verwijzingen (hij/dit/deze), argumenten herkennen (feitelijk/emotioneel/moreel/autoriteit), bedoel",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-schrijfvaardigheid-engels",
+    "file": "./cseSchrijfvaardigheidEngels.js",
     "title": "CSE Engels — schrijfvaardigheid (klas 3-4)",
     "subject": "engels",
     "level": "klas3-4",
@@ -738,10 +793,12 @@
     "intro": "CSE Engels schrijfvaardigheid voor klas 3-4 — formele brief (Dear Sir/Mr/Mrs, Yours sincerely/faithfully), informele e-mail (Hi/Cheers), samenvatting (eigen woorden, 50-100 wrd), essay (5 alinea-struc",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-schrijfvaardigheid-nederlands",
+    "file": "./cseSchrijfvaardigheidNederlands.js",
     "title": "CSE Nederlands — schrijfvaardigheid (klas 3-4)",
     "subject": "taal",
     "level": "klas3-4",
@@ -762,10 +819,12 @@
     "intro": "CSE Nederlands schrijfvaardigheid voor klas 3-4 — formele brief (Geachte/Hoogachtend), betoog (stelling+3 argumenten+tegenwerping+slot), verslag + verhaal (perspectief, tijdgebruik), samenvatten (syno",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "cse-wiskunde-strategie-vmbo",
+    "file": "./cseWiskundeStrategieVmbo.js",
     "title": "CSE Wiskunde-strategie VMBO (klas 3-4)",
     "subject": "wiskunde",
     "level": "klas3-4",
@@ -784,10 +843,12 @@
     "intro": "Examenstrategie wiskunde voor klas 3-4 VMBO — 5-stappen-aanpak per vraag, schema/HMVDOA-regel, rekenmachine slim, top-10 CSE-onderwerpen (procent/verhouding/oppervlak/volume/Pythagoras/functies/vergel",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "delen-po",
+    "file": "./delenPo.js",
     "title": "Delen (groep 5-6)",
     "subject": "rekenen",
     "level": "groep5-6",
@@ -807,10 +868,12 @@
     "intro": "Delen voor groep 5-6 — wat is delen, makkelijke (÷2/5/10), tafel-terug (÷3-9), delen met rest, praktijksommen. Bouwt voort op tafelsPo. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "dichten-poezie-rijmen-po",
+    "file": "./dichtenPoezieRijmenPo.js",
     "title": "Dichten + poëzie + rijm (Cito groep 5-8)",
     "subject": "taal",
     "level": "groep5-8",
@@ -834,10 +897,12 @@
     "intro": "Dichten + poëzie voor Cito groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/metafoor) + so",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "dieren-seizoenen-natuur",
+    "file": "./dierenSeizoenenNatuur.js",
     "title": "Dieren en seizoenen",
     "subject": "natuur",
     "level": "groep4-7",
@@ -861,10 +926,12 @@
     "intro": "Wereld & Natuur voor de basisschool: wat is leven, de diergroepen (zoogdieren, vogels, vissen, reptielen+amfibieën, insecten), levensstadia + metamorfose, de vier seizoenen, planten met fotosynthese, ",
     "stepCount": 11,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "dierenklassen-po",
+    "file": "./dierenklassenPo.js",
     "title": "Dierenklassen + voedselketen (groep 5-8)",
     "subject": "natuur",
     "level": "groep5-8",
@@ -888,10 +955,12 @@
     "intro": "Dierenklassen voor groep 5-8 — 6 hoofdklassen (zoogdieren/vogels/vissen/reptielen/amfibieën/insecten), kenmerken, voedselketens, biotopen. Cito-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "differentieren",
+    "file": "./differentieren.js",
     "title": "Differentiëren",
     "subject": "wiskunde",
     "level": "havo4-5-vwo",
@@ -914,10 +983,12 @@
     "intro": "Differentiëren voor havo 4-5: helling-concept, raaklijn, afgeleide functie f'(x), regels voor machten, som-regel, en toepassingen — extreme waarden vinden en raaklijn-vergelijkingen opstellen. Examens",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "digitale-geletterdheid-po",
+    "file": "./digitaleGeletterdheidPo.js",
     "title": "Digitale geletterdheid (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -941,10 +1012,12 @@
     "intro": "Digitale geletterdheid voor Cito groep 6-8 — computer + internet basis (CPU/HTTPS/WWW/Tim Berners-Lee) + slim zoeken (Google-trucs + bronnen-controle + AI-hallucinatie) + veiligheid (wachtwoord + 2FA ",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "doorstroomtoets-rekenen-g8",
+    "file": "./doorstroomtoetsRekenenG8.js",
     "title": "Doorstroomtoets — rekenen oefenen (groep 8)",
     "subject": "rekenen",
     "level": "groep8",
@@ -967,11 +1040,13 @@
     ],
     "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
     "stepCount": 4,
-    "checkCount": 74,
-    "chapterCount": 4
+    "checkCount": 150,
+    "chapterCount": 4,
+    "estimatedMinutes": 90
   },
   {
     "id": "doorstroomtoets-studievaardigheden-g8",
+    "file": "./doorstroomtoetsStudievaardighedenG8.js",
     "title": "Doorstroomtoets — studievaardigheden groep 8 (pilot)",
     "subject": "rekenen",
     "level": "groep8",
@@ -994,11 +1069,13 @@
     ],
     "intro": "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~100 min totaal (5× ~2",
     "stepCount": 5,
-    "checkCount": 79,
-    "chapterCount": 5
+    "checkCount": 148,
+    "chapterCount": 5,
+    "estimatedMinutes": 90
   },
   {
     "id": "doorstroomtoets-taal-g8",
+    "file": "./doorstroomtoetsTaalG8.js",
     "title": "Doorstroomtoets — taal groep 8 (pilot)",
     "subject": "taal",
     "level": "groep8",
@@ -1020,11 +1097,13 @@
     ],
     "intro": "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorb",
     "stepCount": 4,
-    "checkCount": 74,
-    "chapterCount": 4
+    "checkCount": 147,
+    "chapterCount": 4,
+    "estimatedMinutes": 90
   },
   {
     "id": "ecosystemen-biologie",
+    "file": "./ecosystemenBiologie.js",
     "title": "Ecosystemen + voedselweb (klas 2-3)",
     "subject": "biologie",
     "level": "klas2-3",
@@ -1048,10 +1127,12 @@
     "intro": "Ecosystemen voor klas 2-3 — wat een ecosysteem is (biotisch/abiotisch), 3 rollen (producent/consument/afbreker), voedselweb + energiepiramide (~10% door), koolstof + water + stikstof-kringloop, biodiv",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "eetcultuur-nederland-po",
+    "file": "./eetcultuurNederlandPo.js",
     "title": "Eetcultuur NL + invloeden (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -1074,11 +1155,13 @@
     ],
     "intro": "Eetcultuur NL voor Cito groep 6-8 — Hollandse keuken (stamppot/haring/stroopwafels) + vis+brood+zuivel (kazen Gouda/Edam/Leerdam, 14 kg per persoon) + invloeden uit koloniaal verleden (rijsttafel = NL",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 25,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "elektriciteit-natuurkunde",
+    "file": "./elektriciteitNatuurkunde.js",
     "title": "Elektriciteit — stroom, spanning, weerstand",
     "subject": "natuurkunde",
     "level": "klas3",
@@ -1102,10 +1185,12 @@
     "intro": "Hoe elektriciteit werkt: van geladen deeltjes en stroomkringen tot de Wet van Ohm (U = I × R), serie- en parallelschakelingen, vermogen (P = U × I), veiligheid (aardlek + smeltveiligheid) en hoe je je",
     "stepCount": 11,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "emoties-sociaal-po",
+    "file": "./emotiesSocialePo.js",
     "title": "Emoties + sociaal omgaan (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -1128,11 +1213,13 @@
     ],
     "intro": "Emoties + sociaal omgaan voor Cito groep 6-8 — 6 basis-emoties (Ekman) + omgaan met boosheid/verdriet/angst + vrienden maken + conflict oplossen (ik-boodschap) + pesten (4 soorten + KiVa + Kindertelef",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 24,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "energiebronnen-po",
+    "file": "./energiebronnenPo.js",
     "title": "Energiebronnen (PO + klas 1-2)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -1156,10 +1243,12 @@
     "intro": "Energiebronnen voor groep 6-8 + klas 1-2 — wat is energie + fossiel (olie/gas/kool) + duurzaam (zon/wind/water/biomassa/geothermie) + kernenergie (uranium/Tsjernobyl/Borssele) + NL energiemix + energi",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "evolutie-mens-po",
+    "file": "./evolutieMensPo.js",
     "title": "Evolutie + mens (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -1183,10 +1272,12 @@
     "intro": "Evolutie voor Cito groep 6-8 — Darwin/natuurlijke selectie + voorbeelden (Galapagos-vinken + pepermot) + mens stamboom (Australopithecus/Lucy/Neanderthaler/Homo sapiens) + reis uit Afrika + bewijzen (",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "examen-biologie-2023-t1",
+    "file": "./examenBiologie2023T1.js",
     "title": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
     "subject": "biologie",
     "level": "vmbo-gt-4",
@@ -1205,10 +1296,12 @@
     "intro": "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1 (examen-id GT-0191-a-23-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-biologie-2024-t1",
+    "file": "./examenBiologie2024T1.js",
     "title": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
     "subject": "biologie",
     "level": "vmbo-gt-4",
@@ -1232,10 +1325,12 @@
     "intro": "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar rele",
     "stepCount": 12,
     "checkCount": 12,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "examen-biologie-2024-t2",
+    "file": "./examenBiologie2024T2.js",
     "title": "Examen oefenen — Biologie 2024 tijdvak 2 (echte vragen)",
     "subject": "biologie",
     "level": "vmbo-gt-4",
@@ -1255,10 +1350,12 @@
     "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2 (examen-id GT-0191-a-24-2). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-biologie-2025-t1",
+    "file": "./examenBiologie2025T1.js",
     "title": "Examen oefenen — Biologie 2025 tijdvak 1 (echte vragen)",
     "subject": "biologie",
     "level": "vmbo-gt-4",
@@ -1278,10 +1375,12 @@
     "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1 (examen-id GT-0191-a-25-1). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande bi",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2023-t1",
+    "file": "./examenEconomie2023T1.js",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1302,10 +1401,12 @@
     "intro": "5 echte examenvragen uit VMBO-GL/TL economie 2023 tijdvak 1. Per vraag de echte antwoorden, didactische denkprikkels, inhoudelijke uitleg, doorklik naar Pincode-leerpad. V9 + V30 (vereist tabel/grafie",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2023-t2",
+    "file": "./examenEconomie2023T2.js",
     "title": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1327,10 +1428,12 @@
     "intro": "7 echte examenvragen uit VMBO-GL/TL economie 2023 tijdvak 2. Per vraag de echte antwoorden, didactische denkprikkels, inhoudelijke uitleg, doorklik naar Pincode-leerpad. Vragen die grafiek/cirkel/sche",
     "stepCount": 7,
     "checkCount": 7,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2024-t1",
+    "file": "./examenEconomie2024T1.js",
     "title": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1352,10 +1455,12 @@
     "intro": "6 echte examenvragen uit het VMBO-GL/TL economie-examen 2024 tijdvak 1. Per vraag de echte 4 antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar het bijhorende Pincode-lee",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2024-t2",
+    "file": "./examenEconomie2024T2.js",
     "title": "Examen oefenen — Economie 2024 tijdvak 2 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1377,10 +1482,12 @@
     "intro": "6 echte examenvragen uit het VMBO-GL/TL economie-examen 2024 tijdvak 2. Per vraag de echte antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar het bijhorende Pincode-leerp",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2025-t1",
+    "file": "./examenEconomie2025T1.js",
     "title": "Examen oefenen — Economie 2025 tijdvak 1 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1404,10 +1511,12 @@
     "intro": "10 echte examenvragen uit het VMBO-GL/TL economie-examen 2025 tijdvak 1. Per vraag krijg je de informatiebron uit de bijlage als nette tabel of tekst, de 4 antwoorden uit het examen, en daarna de '📖 ",
     "stepCount": 9,
     "checkCount": 9,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-economie-2025-t2",
+    "file": "./examenEconomie2025T2.js",
     "title": "Examen oefenen — Economie 2025 tijdvak 2 (echte vragen)",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -1427,10 +1536,12 @@
     "intro": "5 echte examenvragen uit VMBO-GL/TL economie 2025 tijdvak 2 (laatste van 6 economie examens). Per vraag de echte antwoorden, denkprikkel-hints, inhoudelijke uitleg, doorklik naar Pincode-leerpad. V20 ",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-engels-2024-t1",
+    "file": "./examenEngels2024T1.js",
     "title": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
     "subject": "engels",
     "level": "vmbo-gt-4",
@@ -1448,10 +1559,12 @@
     "intro": "8 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 1, verdeeld over 3 leesteksten (Golden Gate Bridge album, medieval tunnel Wales, equal pay football Brazil). Per vraag de echte 4 antwoorden, de",
     "stepCount": 8,
     "checkCount": 8,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-engels-2025-t1",
+    "file": "./examenEngels2025T1.js",
     "title": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",
     "subject": "engels",
     "level": "vmbo-gt-4",
@@ -1471,10 +1584,12 @@
     "intro": "9 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 1, verdeeld over 3 leesteksten (UFO sightings, e-scooter battery fires, microplastics research). Per vraag de echte 4 antwoorden, denkprikkel-hi",
     "stepCount": 9,
     "checkCount": 9,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-geschiedenis-2023-t1",
+    "file": "./examenGeschiedenis2023T1.js",
     "title": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",
     "subject": "geschiedenis",
     "level": "vmbo-gt-4",
@@ -1492,10 +1607,12 @@
     "intro": "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1 (examen-id GT-0125-a-23-1). Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doork",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 2
+    "chapterCount": 2,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-geschiedenis-2024-t1",
+    "file": "./examenGeschiedenis2024T1.js",
     "title": "Examen oefenen — Geschiedenis 2024 tijdvak 1 (echte vragen)",
     "subject": "geschiedenis",
     "level": "vmbo-gt-4",
@@ -1514,10 +1631,12 @@
     "intro": "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1 (examen-id GT-0125-a-24-1). Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikk",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-geschiedenis-2024-t2",
+    "file": "./examenGeschiedenis2024T2.js",
     "title": "Examen oefenen — Geschiedenis 2024 tijdvak 2 (echte vragen)",
     "subject": "geschiedenis",
     "level": "vmbo-gt-4",
@@ -1533,10 +1652,12 @@
     "intro": "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2 (examen-id GT-0125-a-24-2). Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden +",
     "stepCount": 3,
     "checkCount": 3,
-    "chapterCount": 2
+    "chapterCount": 2,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-geschiedenis-2025-t1",
+    "file": "./examenGeschiedenis2025T1.js",
     "title": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
     "subject": "geschiedenis",
     "level": "vmbo-gt-4",
@@ -1559,10 +1680,12 @@
     "intro": "6 echte examenvragen uit VMBO-GL/TL geschiedenis 2025 tijdvak 1. Onderwerpen: kiesrecht 1918, Conferentie van München, appeasement, Stalin & WO2, Schuman-plan/EGKS, Cubacrisis. Per vraag denkprikkel-h",
     "stepCount": 6,
     "checkCount": 6,
-    "chapterCount": 2
+    "chapterCount": 2,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-maatschappijkunde-2023-t1",
+    "file": "./examenMaatschappijkunde2023T1.js",
     "title": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
     "subject": "maatschappijleer",
     "level": "vmbo-gt-4",
@@ -1582,10 +1705,12 @@
     "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1 (examen-id GT-1127-a-23-1). Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De ",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 2
+    "chapterCount": 2,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-maatschappijkunde-2024-t1",
+    "file": "./examenMaatschappijkunde2024T1.js",
     "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
     "subject": "maatschappijleer",
     "level": "vmbo-gt-4",
@@ -1604,10 +1729,12 @@
     "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1 (examen-id GT-1127-a-24-1). Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar ",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "examen-maatschappijkunde-2024-t2",
+    "file": "./examenMaatschappijkunde2024T2.js",
     "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 2 (echte vragen)",
     "subject": "maatschappijleer",
     "level": "vmbo-gt-4",
@@ -1626,10 +1753,12 @@
     "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2 (examen-id GT-1127-a-24-2). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De",
     "stepCount": 5,
     "checkCount": 5,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 5
   },
   {
     "id": "exponentieel",
+    "file": "./exponentieel.js",
     "title": "Exponentiële groei en afname",
     "subject": "wiskunde",
     "level": "klas3-vmbo-vwo",
@@ -1653,10 +1782,12 @@
     "intro": "Exponentiële groei en afname voor klas 3: lineair vs exponentieel, groeifactor + percentage, formule N(t) = b·g^t, halveringstijd. Voorbereiding op havo wiskunde A (logaritmen, financiële wiskunde) me",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "financiele-vorming-po",
+    "file": "./financieleVormingPo.js",
     "title": "Geldwijsheid + sparen (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -1678,10 +1809,12 @@
     "intro": "Geldwijsheid voor groep 6-8 — 3 functies geld (ruil/reken/spaar), zakgeld + zelf verdienen, sparen + rente + samengestelde rente, 50/30/20-begrotingsregel, lenen + reclame-trucs (BNPL, influencers). ~",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "fotosynthese-biologie",
+    "file": "./fotosyntheseBiologie.js",
     "title": "Fotosynthese + plantkunde (klas 1-2)",
     "subject": "biologie",
     "level": "klas1-2",
@@ -1705,10 +1838,12 @@
     "intro": "Fotosynthese voor klas 1-2 — wat planten doen met zonlicht, water en CO₂ om suiker + zuurstof te maken. Bladeren, ademhaling, voedselketens. ~15 min.",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "franse-revolutie-geschiedenis",
+    "file": "./franseRevolutieGeschiedenis.js",
     "title": "Franse Revolutie + Napoleon (klas 2-3)",
     "subject": "geschiedenis",
     "level": "klas2-3",
@@ -1732,10 +1867,12 @@
     "intro": "Franse Revolutie voor klas 2-3 — Frankrijk vóór 1789 (3 standen), oorzaken + Verlichting (Voltaire/Rousseau/Montesquieu), Bestorming Bastille, Terreur + Robespierre, Napoleon + zijn invloed op Nederla",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "geld-rekenen",
+    "file": "./geldRekenen.js",
     "title": "Geld rekenen — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -1758,10 +1895,12 @@
     "intro": "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Cito-stijl praktijksommen. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "gemiddelden-statistiek-po",
+    "file": "./gemiddeldenStatistiekPo.js",
     "title": "Gemiddelde, modus, mediaan (groep 7-8)",
     "subject": "rekenen",
     "level": "groep7-8",
@@ -1782,10 +1921,12 @@
     "intro": "Statistiek voor groep 7-8 — gemiddelde uitrekenen, modus (vaakst voorkomend), mediaan (middelste). Met praktijksommen over cijfers, temperatuur, zakgeld, schoenmaat. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "genetica-erfelijkheid-biologie",
+    "file": "./geneticaErfelijkheidBiologie.js",
     "title": "Genetica + erfelijkheid",
     "subject": "biologie",
     "level": "klas3",
@@ -1809,10 +1950,12 @@
     "intro": "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendel's wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, st",
     "stepCount": 9,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "gezonde-voeding-po",
+    "file": "./gezondeVoedingPo.js",
     "title": "Gezonde voeding (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -1836,10 +1979,12 @@
     "intro": "Gezonde voeding voor Cito groep 6-8 — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout max 5g, alco",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "godsdiensten-culturen-po",
+    "file": "./godsdienstenCulturenPo.js",
     "title": "Godsdiensten + culturen (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -1862,11 +2007,13 @@
     ],
     "intro": "Godsdiensten + culturen voor Cito groep 6-8 — wat is religie (5 wereldgodsdiensten, atheist, NL-statistieken) + christendom (Jezus, paus, Reformatie) + islam (5 zuilen, Ramadan) + jodendom (Abraham, M",
     "stepCount": 5,
-    "checkCount": 22,
-    "chapterCount": 5
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "goniometrie",
+    "file": "./goniometrie.js",
     "title": "Goniometrie (sin/cos/tan)",
     "subject": "wiskunde",
     "level": "klas3-vwo",
@@ -1886,10 +2033,12 @@
     "intro": "Goniometrie gaat over de verhoudingen tussen zijden in een rechthoekige driehoek, vanuit een gekozen hoek. Met sin, cos en tan kun je elke onbekende zijde of hoek uitrekenen — handig om hoogtes te bep",
     "stepCount": 11,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 15
   },
   {
     "id": "gouden-eeuw-geschiedenis",
+    "file": "./goudenEeuwGeschiedenis.js",
     "title": "De Gouden Eeuw (klas 2-3)",
     "subject": "geschiedenis",
     "level": "klas2-3",
@@ -1913,10 +2062,12 @@
     "intro": "De Gouden Eeuw voor klas 2-3 — VOC + handel, schilders (Rembrandt/Vermeer), wetenschap (Huygens, Van Leeuwenhoek), slavernij + schaduwkanten, einde (rampjaar 1672). ~15 min.",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "grafieken-lezen-po",
+    "file": "./grafiekenLezenPo.js",
     "title": "Grafieken lezen — staaf, lijn, taart (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -1940,10 +2091,12 @@
     "intro": "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Cito-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "industriele-revolutie-po",
+    "file": "./industrieleRevolutiePo.js",
     "title": "Industriële Revolutie (groep 6-8 + klas 1-2)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -1967,10 +2120,12 @@
     "intro": "Industriële Revolutie voor groep 6-8 + klas 1-2 — wat vóór + stoommachine + uitvindingen (trein/telegraaf/auto) + fabrieken/verstedelijking + kinderarbeid/sociale strijd (Marx/vakbond/leerplicht) + NL",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "interpunctie-po",
+    "file": "./interpunctiePo.js",
     "title": "Interpunctie & hoofdletters (groep 5-7)",
     "subject": "taal",
     "level": "groep5-7",
@@ -1991,10 +2146,12 @@
     "intro": "Interpunctie voor groep 5-7 — hoofdletters, punt, vraagteken, uitroepteken, komma's, aanhalingstekens. Met Cito-stijl oefenvragen en duidelijke regels. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "kaartlezen-po",
+    "file": "./kaartlezenPo.js",
     "title": "Kaartlezen — Cito groep 5-8",
     "subject": "aardrijkskunde",
     "level": "groep5-8",
@@ -2018,10 +2175,12 @@
     "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Cito-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "kalender-rekenen-po",
+    "file": "./kalenderRekenenPo.js",
     "title": "Kalender, data en leeftijden (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -2045,10 +2204,12 @@
     "intro": "Kalender voor groep 6-8 — maanden, weken, schrikkeljaar, dagen tellen vooruit/achteruit, leeftijden uitrekenen, speciale data (Koningsdag, Bevrijdingsdag). ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "kansrekening",
+    "file": "./kansrekening.js",
     "title": "Kansrekening",
     "subject": "wiskunde",
     "level": "klas2-3-vmbo-vwo",
@@ -2072,10 +2233,12 @@
     "intro": "Basis van kansrekening voor klas 2-3: kans als breuk/percentage, dobbelsteen + munt + knikker, kansboom voor opeenvolgende gebeurtenissen, vermenigvuldigen bij onafhankelijk en optellen bij uitsluiten",
     "stepCount": 15,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "klassieke-muziek-po",
+    "file": "./klassiekeMuziekPo.js",
     "title": "Klassieke muziek + componisten (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -2098,11 +2261,13 @@
     ],
     "intro": "Klassieke muziek voor Cito groep 6-8 — muziek-basis (melodie/ritme/tempo/instrumenten) + 5 perioden (barok-klassiek-romantiek) + grote 3 (Bach/Mozart-wonderkind/Beethoven-doof) + Vivaldi/Tsjaikovski +",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 25,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "klimaatverandering-aardrijkskunde",
+    "file": "./klimaatveranderingAardrijkskunde.js",
     "title": "Klimaatverandering (klas 2-3)",
     "subject": "aardrijkskunde",
     "level": "klas2-3",
@@ -2126,10 +2291,12 @@
     "intro": "Klimaatverandering voor klas 2-3 — 1,1°C opwarming sinds 1880, broeikaseffect + CO₂+methaan, gevolgen (zeespiegel, weersextremen, biodiversiteit, kantelpunten), NL (dijken+stikstof+gas-uit-2024), Pari",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "klimaten-aardrijkskunde",
+    "file": "./klimatenAardrijkskunde.js",
     "title": "Klimaten en klimaatzones",
     "subject": "aardrijkskunde",
     "level": "klas1-3",
@@ -2153,10 +2320,12 @@
     "intro": "Het verschil tussen weer en klimaat, hoe klimaatzones ontstaan door zon en zee, de 5 hoofdklimaten (A-E) plus hoogteklimaat, met klimaatverandering tot slot. Eerste pad aardrijkskunde onderbouw.",
     "stepCount": 10,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "klokkijken",
+    "file": "./klokkijken.js",
     "title": "Klokkijken — analoog + digitaal",
     "subject": "rekenen",
     "level": "groep3-5",
@@ -2180,10 +2349,12 @@
     "intro": "Leer de klok lezen — analoog (met wijzers) én digitaal. Hele uren, halve, kwartieren, minuten en het 24-uurs format. Plus tijd uitrekenen (hoe lang duurt iets?). Voor groep 3 t/m 5.",
     "stepCount": 8,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "kommagetallen-po",
+    "file": "./kommagetallenPo.js",
     "title": "Kommagetallen / decimalen (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -2203,10 +2374,12 @@
     "intro": "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Cito-praktijksommen met geld/meten. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "koude-oorlog-modern-po",
+    "file": "./koudeOorlogModernPo.js",
     "title": "Koude Oorlog + moderne geschiedenis (Cito groep 7-8)",
     "subject": "geschiedenis",
     "level": "groep7-8",
@@ -2229,11 +2402,13 @@
     ],
     "intro": "Koude Oorlog + moderne geschiedenis voor Cito groep 7-8 — VS vs USSR (kapitalisme vs communisme + NAVO 1949 + Rutte 2024) + crises (Berlijnse Muur 1961, Cuba 1962 bijna-kernoorlog, Vietnam) + val Muur",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 24,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "krachten-natuurkunde",
+    "file": "./krachtenNatuurkunde.js",
     "title": "Krachten en bewegen",
     "subject": "natuurkunde",
     "level": "klas2-3",
@@ -2257,10 +2432,12 @@
     "intro": "De basis van krachten en beweging — kracht als pijl, massa vs gewicht, soorten krachten (zwaartekracht, wrijving, veerkracht), de drie wetten van Newton. Eerste pad natuurkunde onderbouw.",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "kritisch-denken-po",
+    "file": "./kritischDenkenPo.js",
     "title": "Kritisch denken + denkfouten (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -2284,10 +2461,12 @@
     "intro": "Kritisch denken voor Cito groep 6-8 — wat is kritisch denken (5 W's + niet alles geloven) + 10 denkfouten (bevestigingsbias/anker/groepsdruk/halo/sunk cost - Daniel Kahneman) + 10 drogredenen (ad homi",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "kwadraten-wortels",
+    "file": "./kwadratenWortels.js",
     "title": "Kwadraten en wortels",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -2308,10 +2487,12 @@
     "intro": "H5 uit Wiskunde Flex deel 2: vanaf het kwadraat (3² = 9) tot wortels (√), rekenen met wortels, x² = c oplossen, en de soorten getallen (rationaal, irrationaal). Op basisniveau opgebouwd.",
     "stepCount": 18,
     "checkCount": 25,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "kwadratische-vergelijkingen",
+    "file": "./kwadratischeVergelijkingen.js",
     "title": "Kwadratische vergelijkingen",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -2329,10 +2510,12 @@
     "intro": "H7 uit Wiskunde Flex deel 2: hoe los je een vergelijking met x² erin op? Twee methodes: rechtstreeks via x² = c, en factoriseren via x buiten haakjes. Met praktische toepassingen.",
     "stepCount": 13,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "lichaam-gezondheid-po",
+    "file": "./lichaamGezondheidPo.js",
     "title": "Het lichaam + gezondheid (groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -2356,10 +2539,12 @@
     "intro": "Het lichaam voor groep 6-8 — skelet, spieren, bloed, organen, Schijf van Vijf, gezonde gewoontes. Cito-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "licht-geluid-natuurkunde",
+    "file": "./lichtGeluidNatuurkunde.js",
     "title": "Licht + geluid (klas 2-3)",
     "subject": "natuurkunde",
     "level": "klas2-3",
@@ -2383,10 +2568,12 @@
     "intro": "Licht + geluid voor klas 2-3 natuurkunde — geluidsgolven (Hz, dB, snelheid 343 m/s), licht (300.000 km/s, rechte lijn), spiegels + lenzen (bril bij/verziend), kleuren-spectrum (ROGGBIV, RGB vs CMY), p",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "lineaire-formules",
+    "file": "./lineaireFormules.js",
     "title": "Lineaire formules",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -2405,10 +2592,12 @@
     "intro": "Lineaire formules — de meest gebruikte wiskundige basis. y = ax + b is overal: bij taxi-tarieven, spaarrekeningen, telefoonabonnementen, plantengroei. Hier leer je wat de getallen a en b doen, hoe je ",
     "stepCount": 17,
     "checkCount": 25,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "literatuurgeschiedenis",
+    "file": "./literatuurgeschiedenis.js",
     "title": "Literatuurgeschiedenis",
     "subject": "taal",
     "level": "havo4-5",
@@ -2432,10 +2621,12 @@
     "intro": "Examenstof havo 4-5 literatuur Nederlands: 9 stromingen op de tijdlijn (Middeleeuwen tot nu) met kenmerken, top-schrijvers en bekendste werken. Plus literaire begrippen (vertelperspectief, stijlfigure",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "logaritmen",
+    "file": "./logaritmen.js",
     "title": "Logaritmen",
     "subject": "wiskunde",
     "level": "havo4-5-vwo",
@@ -2459,10 +2650,12 @@
     "intro": "Logaritmen voor havo 4-5: log als omkering van macht, log/ln-notatie, drie eigenschappen (log(ab)=log(a)+log(b), log(a/b)=log(a)−log(b), log(aⁿ)=n·log(a)), exponentiële vergelijkingen oplossen, halver",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "machten",
+    "file": "./machten.js",
     "title": "Machten en machtsregels",
     "subject": "wiskunde",
     "level": "klas2-3-vmbo-vwo",
@@ -2486,10 +2679,12 @@
     "intro": "Machten in wiskunde — van notatie (a^n) tot de drie machtsregels (·, /, ()ⁿ), via macht-van-product en negatieve exponenten, naar machten van 10 en wetenschappelijke notatie. Voorbereiding op exponent",
     "stepCount": 13,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "maten-eenheden",
+    "file": "./matenEenheden.js",
     "title": "Maten en eenheden — Cito groep 7-8",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -2513,10 +2708,12 @@
     "intro": "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Ci",
     "stepCount": 8,
     "checkCount": 42,
-    "chapterCount": 7
+    "chapterCount": 7,
+    "estimatedMinutes": 25
   },
   {
     "id": "media-wijsheid-maatschappijleer",
+    "file": "./mediaWijsheidMaatschappijleer.js",
     "title": "Mediawijsheid (klas 2-3)",
     "subject": "maatschappijleer",
     "level": "klas2-3",
@@ -2540,10 +2737,12 @@
     "intro": "Mediawijsheid voor klas 2-3 — 5 vaardigheden + soorten media, nepnieuws (FACT-check, satire vs desinformatie), algoritmes + filterbubbels + influencers, privacy + AVG + cookies + 2FA, cyberpesten + gr",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "meetkunde-bouwsels",
+    "file": "./meetkundeBouwsels.js",
     "title": "Volume — kubus en balk (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -2567,10 +2766,12 @@
     "intro": "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Cito-praktijksommen met zwembad, aquarium en doos. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "mens-biologie-vmbo",
+    "file": "./mensBiologieVmbo.js",
     "title": "Mens-biologie (VMBO)",
     "subject": "biologie",
     "level": "klas2-3",
@@ -2594,10 +2795,12 @@
     "intro": "5 onderdelen van mens-biologie op vmbo-niveau: zenuwstelsel, bloed & lymfe, ademhaling, spijsvertering, uitscheiding. Plus eindtoets. Sluit aan op examenstof biologie CSE — vooral vragen over hersenen",
     "stepCount": 6,
     "checkCount": 27,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "mensenrechten-maatschappijleer",
+    "file": "./mensenrechtenMaatschappijleer.js",
     "title": "Mensenrechten + organisaties (klas 2-3)",
     "subject": "maatschappijleer",
     "level": "klas2-3",
@@ -2621,10 +2824,12 @@
     "intro": "Mensenrechten voor klas 2-3 — wat zijn mensenrechten, UVRM 1948 + Eleanor Roosevelt, 3 generaties (vrijheid → sociaal → collectief), schendingen wereldwijd + Toeslagenaffaire, VN + Amnesty + ICC Den H",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "middeleeuwen-geschiedenis",
+    "file": "./middeleeuwenGeschiedenis.js",
     "title": "De middeleeuwen 500-1500 (klas 1-2)",
     "subject": "geschiedenis",
     "level": "klas1-2",
@@ -2648,10 +2853,12 @@
     "intro": "Middeleeuwen voor klas 1-2 — 1000 jaar Europese geschiedenis (500-1500). Feodalisme, Kerk + macht, ridders + kruistochten, boeren + steden, Zwarte Dood + einde. ~15 min.",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "naamvallen-duits",
+    "file": "./naamvallenDuits.js",
     "title": "Lidwoorden en naamvallen",
     "subject": "duits",
     "level": "klas1-3",
@@ -2675,10 +2882,12 @@
     "intro": "De drie geslachten (der/die/das), onbepaald lidwoord ein/eine, bezittelijke voornaamwoorden, en de vier naamvallen (NOM/ACC/DAT/GEN) — met voorzetselregels (für+acc, mit+dat) en wissels (in+acc bij be",
     "stepCount": 9,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "nederlandse-kunstenaars-po",
+    "file": "./nederlandseKunstenaarsPo.js",
     "title": "Nederlandse kunstenaars (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -2701,11 +2910,13 @@
     ],
     "intro": "Nederlandse kunstenaars voor Cito groep 6-8 — Rembrandt (Nachtwacht) + Vermeer (Meisje met Parel) + Gouden Eeuw (Jan Steen/Hals) + Van Gogh (Zonnebloemen/Sterrennacht) + Mondriaan + De Stijl (Rietveld",
     "stepCount": 5,
-    "checkCount": 22,
-    "chapterCount": 5
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "nederlandse-staat-maatschappijleer",
+    "file": "./nederlandseStaatMaatschappijleer.js",
     "title": "De Nederlandse staat",
     "subject": "maatschappijleer",
     "level": "klas3-4",
@@ -2729,10 +2940,12 @@
     "intro": "Hoe werkt onze democratie? Tweede Kamer, Eerste Kamer, regering, Koning, Trias Politica, Grondwet en grondrechten, rechtsstaat, stemrecht, plus NL in EU/VN/NAVO. Eerste pad maatschappijleer.",
     "stepCount": 11,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "negatieve-getallen",
+    "file": "./negatieveGetallen.js",
     "title": "Negatieve getallen",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -2750,10 +2963,12 @@
     "intro": "Negatieve getallen zijn getallen kleiner dan nul. Je ziet ze bij temperaturen onder nul, schulden, hoogtes onder zeeniveau. Hier leer je: getallenlijn, optellen/aftrekken/vermenigvuldigen met negatiev",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "negatieve-getallen-po",
+    "file": "./negatieveGetallenPo.js",
     "title": "Negatieve getallen — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -2774,10 +2989,12 @@
     "intro": "Negatieve getallen voor groep 5-8: wat is een negatief getal, getalslijn lopen, min-een-minus = plus, praktijk met temperatuur en geld. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "olympische-spelen-po",
+    "file": "./olympischeSpelenPo.js",
     "title": "Olympische Spelen + sport (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -2800,11 +3017,13 @@
     ],
     "intro": "Olympische Spelen voor Cito groep 6-8 — geschiedenis (Olympia → Athene 1896 → Parijs 2024) + 5 ringen + motto + sport-categorieën (atletiek/water/bal/wintersport) + medailles + Paralympics + NL-helden",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 24,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "onregelmatige-werkwoorden-engels",
+    "file": "./onregelmatigeWerkwoordenEngels.js",
     "title": "Onregelmatige werkwoorden (irregular verbs)",
     "subject": "engels",
     "level": "klas1-3",
@@ -2828,10 +3047,12 @@
     "intro": "De Engelse onregelmatige werkwoorden — V1/V2/V3, gegroepeerd per klankpatroon. Van de gelijk-blijvers (cut/cut/cut) tot de must-knows (be/have/do/go). Met toepassing in past simple en present perfect.",
     "stepCount": 12,
     "checkCount": 28,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "onregelmatige-werkwoorden-v2-engels",
+    "file": "./onregelmatigeWerkwoordenV2Engels.js",
     "title": "Engels — onregelmatige werkwoorden uitbreiding",
     "subject": "engels",
     "level": "klas2",
@@ -2855,10 +3076,12 @@
     "intro": "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-au",
     "stepCount": 9,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "ontdekkingsreizen-po",
+    "file": "./ontdekkingsreizenPo.js",
     "title": "Ontdekkingsreizen (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -2882,10 +3105,12 @@
     "intro": "Ontdekkingsreizen voor Cito groep 6-8 — waarom op reis (specerijen, goud) + Columbus 1492 + Vasco da Gama + Magellan + slavenhandel + NL-ontdekkers (Tasman, Hudson, Barentsz, Roggeveen) + VOC + Nieuw-",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "oudheid-egyptenaren-grieken-romeinen-po",
+    "file": "./oudheidEgyptiansGriekenPo.js",
     "title": "Oudheid — Egyptenaren + Grieken + Romeinen (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -2909,10 +3134,12 @@
     "intro": "Oudheid voor Cito groep 6-8 — Egyptenaren (Nijl/farao's/Toetanchamon/piramides/mummies/hiëroglyfen + Rosetta-steen) + Grieken (Athene democratie 508 v.Chr./Socrates-Plato-Aristoteles/Olympische Spelen",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "parabolen",
+    "file": "./parabolen.js",
     "title": "Parabolen begrijpen",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -2931,10 +3158,12 @@
     "intro": "In 32 stapjes ontdek je wat een parabool is — vanaf de allereerste basis (wat is x²?) tot het uitrekenen van de top en de nulpunten. Geen voorkennis nodig.",
     "stepCount": 32,
     "checkCount": 41,
-    "chapterCount": 9
+    "chapterCount": 9,
+    "estimatedMinutes": 30
   },
   {
     "id": "passe-compose-frans",
+    "file": "./passeComposeFrans.js",
     "title": "Passé composé (voltooid verleden tijd)",
     "subject": "frans",
     "level": "klas2-3",
@@ -2958,10 +3187,12 @@
     "intro": "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onde",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "past-tenses-engels",
+    "file": "./pastTensesEngels.js",
     "title": "Past simple & present perfect",
     "subject": "engels",
     "level": "klas2-3",
@@ -2985,10 +3216,12 @@
     "intro": "De twee verleden tijden van het Engels: past simple (afgesloten verleden, vast tijdstip) en present perfect (have/has + V3, link met nu). Met spelling, signaalwoorden, top 5 fouten en het verschil sin",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "periodiek",
+    "file": "./periodiek.js",
     "title": "Periodieke functies (sinusoïden)",
     "subject": "wiskunde",
     "level": "havo4-5-vwo",
@@ -3012,10 +3245,12 @@
     "intro": "Sinusoïden voor havo 4-5: sin/cos uit eenheidscirkel, grafiek-vorm, periode + amplitude + evenwicht + faseverschuiving, algemene vorm y = a·sin(b·(x-d)) + c, met praktische toepassingen — geluid, geti",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "pincode-belasting",
+    "file": "./pincodeBelasting.js",
     "title": "Belasting",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3039,10 +3274,12 @@
     "intro": "Hoofdstuk 6 van Pincode 7e ed. VMBO-GT 4: directe + indirecte belastingen, BTW + accijns, IB + schijven + boxen, heffingskortingen, toeslagen, belastingmoraal, de Belastingdienst. 7 stappen examenvoor",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-buitenland-eu",
+    "file": "./pincodeBuitenlandEu.js",
     "title": "Nederland en het buitenland",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3066,10 +3303,12 @@
     "intro": "Hoofdstuk 7 van Pincode 7e ed. VMBO-GT 4: import/export, comparatief voordeel, beschermingsmaatregelen, Europese Unie + 4 vrijheden, wisselkoersen, globalisering + multinationals, ECB monetair beleid.",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-geld-sparen-lenen",
+    "file": "./pincodeGeldSparenLenen.js",
     "title": "Geld, sparen en lenen",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3093,10 +3332,12 @@
     "intro": "Hoofdstuk 2 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): geld + betaalmiddelen, sparen of beleggen, geldcirculatie, inflatie, begroten, lenen + hypotheek. 9 stappen, concrete voorbeelden voor ti",
     "stepCount": 9,
     "checkCount": 53,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-inkomen-welvaart",
+    "file": "./pincodeInkomenWelvaart.js",
     "title": "Inkomen en welvaart",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3120,10 +3361,12 @@
     "intro": "Hoofdstuk 1 van Pincode 7e ed. VMBO-GT 4: schaarste, productiefactoren, inkomen, inkomensverdeling, welvaart/inflatie, BBP, en inkomensbeleid (minimumloon/toeslagen/AOW). 7 stappen examenvoorbereiding",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-ondernemen",
+    "file": "./pincodeOndernemen.js",
     "title": "Ondernemen",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3147,10 +3390,12 @@
     "intro": "Hoofdstuk 3 van Pincode 7e ed. VMBO-GT 4 (en andere methodes): ondernemen, marktonderzoek, marketing, kosten/omzet/winst, vraag en aanbod, marktvormen, rechtsvormen, BTW + facturen, risico. 9 stappen,",
     "stepCount": 9,
     "checkCount": 54,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 45
   },
   {
     "id": "pincode-ontwikkelingslanden",
+    "file": "./pincodeOntwikkelingslanden.js",
     "title": "Ontwikkelingslanden",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3174,10 +3419,12 @@
     "intro": "Hoofdstuk 8 van Pincode 7e ed. VMBO-GT 4: rijk vs arm, welvaart vs welzijn, oorzaken armoede, ontwikkelingshulp + Fair Trade, duurzame ontwikkeling + 17 SDG's, microkrediet, en de toekomst. 7 stappen ",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 30
   },
   {
     "id": "pincode-overheid",
+    "file": "./pincodeOverheid.js",
     "title": "De overheid",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3201,10 +3448,12 @@
     "intro": "Hoofdstuk 5 van Pincode 7e ed. VMBO-GT 4: taken overheid, drie overheidslagen, Rijksbegroting, staatsschuld, conjunctuur, marktordening (ACM/NVWA/DNB), en politiek systeem. 7 stappen examenvoorbereidi",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-werk-arbeidsmarkt",
+    "file": "./pincodeWerkArbeidsmarkt.js",
     "title": "Werk en arbeidsmarkt",
     "subject": "economie",
     "level": "vmbo-gt-4",
@@ -3228,10 +3477,12 @@
     "intro": "Hoofdstuk 4 van Pincode 7e ed. VMBO-GT 4: werkgever/werknemer, contracten + arbeidsovereenkomst, arbeidsmarkt + CAO, vraag/aanbod arbeid, werkloosheid, productiviteit en sociale zekerheid. 7 stappen e",
     "stepCount": 7,
     "checkCount": 42,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "platentektoniek-aardrijkskunde",
+    "file": "./platentektoniekAardrijkskunde.js",
     "title": "Platentektoniek — aardplaten, vulkanen en aardbevingen",
     "subject": "aardrijkskunde",
     "level": "klas2-3",
@@ -3255,10 +3506,12 @@
     "intro": "Hoe de aardlagen zijn opgebouwd, hoe tektonische platen bewegen langs de drie grenstypen (uit elkaar / tegen elkaar / langs elkaar) en wat dat oplevert: bergen, oceanen, aardbevingen en vulkanen. Met ",
     "stepCount": 11,
     "checkCount": 27,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "politiek-democratie-po",
+    "file": "./politiekDemocratiePo.js",
     "title": "Politiek + democratie (Cito groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -3282,10 +3535,12 @@
     "intro": "Politiek + democratie voor groep 6-8 — wat is democratie (volk beslist) + Trias Politica (3 machten) + Koning/kabinet/Tweede Kamer + gemeente/provincie/Europa + Grondwet/grondrechten (Artikel 1). Slui",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "present-tenses-engels",
+    "file": "./presentTensesEngels.js",
     "title": "Present simple & present continuous",
     "subject": "engels",
     "level": "klas1-3",
@@ -3309,10 +3564,12 @@
     "intro": "De twee belangrijkste tegenwoordige tijden in het Engels: present simple (altijd, gewoonte) en present continuous (nu bezig). Met de -s-regel, do/does, am/is/are + V-ing, signaalwoorden en state verbs",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "procenten",
+    "file": "./procenten.js",
     "title": "Procenten",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -3331,10 +3588,12 @@
     "intro": "Procenten kom je overal tegen — in de winkel, op je rekening, in nieuwsbericht. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, k",
     "stepCount": 13,
     "checkCount": 25,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "procenten-po",
+    "file": "./procentenPo.js",
     "title": "Procenten — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -3355,10 +3614,12 @@
     "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Cito-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "pubertijd-groei-po",
+    "file": "./pubertijdGroeiPo.js",
     "title": "Puberteit + groei (groep 7-8)",
     "subject": "natuur",
     "level": "groep7-8",
@@ -3381,11 +3642,13 @@
     ],
     "intro": "Puberteit voor groep 7-8 — wat is puberteit (8-14 jaar start, hormonen) + lichamelijke veranderingen (menstruatie/zaadlozing/borsten/stem) + acne/zweten + tienerbrein (rationeel-deel ontwikkelt tot 25",
     "stepCount": 4,
-    "checkCount": 21,
-    "chapterCount": 4
+    "checkCount": 25,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "pythagoras",
+    "file": "./pythagoras.js",
     "title": "De stelling van Pythagoras",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -3403,10 +3666,12 @@
     "intro": "H6 uit Wiskunde Flex deel 2: een van de beroemdste stellingen uit de wiskunde. a² + b² = c² — een eenvoudige formule om in elke rechthoekige driehoek de derde zijde te berekenen.",
     "stepCount": 15,
     "checkCount": 25,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "recyclen-afval-po",
+    "file": "./recyclenAfvalPo.js",
     "title": "Recyclen + afval + duurzaam (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -3430,10 +3695,12 @@
     "intro": "Recyclen voor Cito groep 6-8 — afval-soorten (GFT/PMD/glas/papier/restafval) + scheiden (NL 64% recycle, EU-top) + statiegeld + Ladder van Lansink (voorkomen→hergebruiken→recyclen) + circulaire econom",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "redactiesommen-pad",
+    "file": "./redactiesommen.js",
     "title": "Redactiesommen — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -3454,10 +3721,12 @@
     "intro": "Redactiesommen voor groep 5-8: hoe lees je een rekensom in een verhaal, signaal-woorden voor +/-/×/÷, één-stap- en twee-stap-sommen, eindopdracht. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "rekenen-met-letters",
+    "file": "./rekenenMetLetters.js",
     "title": "Rekenen met letters (algebra-basis)",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -3476,10 +3745,12 @@
     "intro": "Algebra-basis: hoe reken je met letters? Termen herleiden, haakjes wegwerken, merkwaardige producten ((a+b)², (a−b)², (a+b)(a−b)) en rekenen met machten. Fundament voor élke wiskunde later.",
     "stepCount": 15,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "romeinen-geschiedenis",
+    "file": "./romeinenGeschiedenis.js",
     "title": "Het Romeinse Rijk (klas 1-2)",
     "subject": "geschiedenis",
     "level": "klas1-2",
@@ -3503,10 +3774,12 @@
     "intro": "Romeinen voor klas 1-2 — stichting (753 v.Chr. Romulus+Remus), Republiek (Caesar), Keizerrijk (Augustus+Pax Romana), Romeinen in Nederland (Limes, Nijmegen), ondergang 476, erfenis (Latijn, recht, Rom",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "ruimtevaart-po",
+    "file": "./ruimtevaartPo.js",
     "title": "Ruimtevaart (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -3529,11 +3802,13 @@
     ],
     "intro": "Ruimtevaart voor Cito groep 6-8 — hoe raket werkt (Newton's 3e wet, brandstof, lanceerlocaties) + maanlanding Apollo 11 (Armstrong/Aldrin 1969) + ISS (sinds 1998, André Kuipers) + Mars-rovers + SpaceX",
     "stepCount": 4,
-    "checkCount": 18,
-    "chapterCount": 4
+    "checkCount": 24,
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "samenvatten-hoofdgedachte-po",
+    "file": "./samenvattenHoofdgedachtePo.js",
     "title": "Samenvatten en hoofdgedachte — Cito groep 5-8",
     "subject": "begrijpend-lezen",
     "level": "groep5-8",
@@ -3555,10 +3830,12 @@
     "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Cito-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "schatten-afronden",
+    "file": "./schattenAfronden.js",
     "title": "Schatten en afronden — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -3578,10 +3855,12 @@
     "intro": "Schatten en afronden voor groep 5-8: wanneer schatten, afronden op 10/100/1000, schatten van sommen, praktijk met kassabon en tijden. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "schemas-stappenplannen-po",
+    "file": "./schemasStappenplannenPo.js",
     "title": "Schema's en stappenplannen — Cito groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
@@ -3602,10 +3881,12 @@
     "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Cito-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "schrijfvaardigheid",
+    "file": "./schrijfvaardigheid.js",
     "title": "Schrijfvaardigheid",
     "subject": "taal",
     "level": "havo4-5",
@@ -3629,10 +3910,12 @@
     "intro": "Examenstof havo 4-5 schrijfvaardigheid: drie tekstsoorten (betoog, beschouwing, uiteenzetting) met hun specifieke opbouw, alinea-structuur, verbindingswoorden, formuleer-checklist en revisie-aanpak. C",
     "stepCount": 13,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "spelling",
+    "file": "./spelling.js",
     "title": "Spelling",
     "subject": "taal",
     "level": "klas1-vmbo-vwo",
@@ -3656,10 +3939,12 @@
     "intro": "De basis van Nederlandse spelling voor klas 1-2: open/gesloten lettergrepen, korte/lange klinkers, ei/ij + au/ou (woordbeeld), ch/g, samenstellingen (aaneen + tussen-n + tussen-s), hoofdletters, verkl",
     "stepCount": 14,
     "checkCount": 27,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "spelling-ei-ij-au-ou",
+    "file": "./spellingEiIjAuOu.js",
     "title": "Spelling — ei vs ij + au vs ou",
     "subject": "spelling",
     "level": "groep4-6",
@@ -3683,10 +3968,12 @@
     "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reis vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voor",
     "stepCount": 9,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "spelling-overige-po",
+    "file": "./spellingOverigePo.js",
     "title": "Spelling overige — Cito groep 5-8",
     "subject": "spelling",
     "level": "groep5-8",
@@ -3710,10 +3997,12 @@
     "intro": "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Cito-stijl woordtoets. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "spreekwoorden-uitdrukkingen-po",
+    "file": "./spreekwoordenUitdrukkingenPo.js",
     "title": "Spreekwoorden + uitdrukkingen (Cito groep 6-8)",
     "subject": "taal",
     "level": "groep6-8",
@@ -3736,10 +4025,12 @@
     "intro": "Spreekwoorden + uitdrukkingen voor Cito groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (Cito-vraag) + valkuilen. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "statistiek",
+    "file": "./statistiek.js",
     "title": "Statistiek (basis)",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -3758,10 +4049,12 @@
     "intro": "Statistiek bestudeert gegevens (data). Hier leer je: frequentietabellen, staafdiagrammen, drie centrummaten (gemiddelde, modus, mediaan), bereik als spreidingsmaat, en wanneer je welke gebruikt.",
     "stepCount": 12,
     "checkCount": 25,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "stelsels",
+    "file": "./stelsels.js",
     "title": "Stelsels van vergelijkingen",
     "subject": "wiskunde",
     "level": "klas2-3-vmbo-vwo",
@@ -3782,10 +4075,12 @@
     "intro": "Twee vergelijkingen, twee onbekenden — oplossen met substitutie of optellen/aftrekken (eliminatie). Plus woordvragen waarin je zelf het stelsel moet opstellen. Vervolg op vergelijkingen-oplossen.",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "sterren-planeten",
+    "file": "./sterrenPlaneten.js",
     "title": "Sterren en planeten — ons zonnestelsel",
     "subject": "natuur",
     "level": "groep5-8",
@@ -3809,10 +4104,12 @@
     "intro": "De zon, 8 planeten van Mercurius tot Neptunus, manen, dwergplaneten, asteroïden en kometen. Inclusief verschil tussen aardse rotsplaneten en gasreuzen, eb en vloed, en de Maan-landingen. Voor groep 5-",
     "stepCount": 9,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "stoffen-mengsels-scheikunde",
+    "file": "./stoffenMengselsScheikunde.js",
     "title": "Stoffen + mengsels + scheiden (klas 1-2)",
     "subject": "scheikunde",
     "level": "klas1-2",
@@ -3836,10 +4133,12 @@
     "intro": "Stoffen + mengsels voor klas 1-2 scheikunde — pure stof vs mengsel, soorten (oplossing/emulsie/suspensie/schuim), scheidingsmethoden (filtreren/destilleren/chromatografie), eigenschappen (dichtheid, s",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "synoniemen-tegenstellingen-po",
+    "file": "./synoniemenTegenstellingenPo.js",
     "title": "Synoniemen + tegenstellingen (groep 5-7)",
     "subject": "taal",
     "level": "groep5-7",
@@ -3859,10 +4158,12 @@
     "intro": "Synoniemen + tegenstellingen voor groep 5-7 — bijna-gelijke woorden, tegenovergestelde betekenis, welk woord past het beste in een zin. ~15 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "tabellen-grafieken",
+    "file": "./tabellenGrafieken.js",
     "title": "Tabellen en grafieken — Doorstroomtoets groep 6-8",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -3885,10 +4186,12 @@
     "intro": "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdrac",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "tachtigjarige-oorlog-geschiedenis",
+    "file": "./tachtigjarigeOorlogGeschiedenis.js",
     "title": "Tachtigjarige Oorlog 1568-1648",
     "subject": "geschiedenis",
     "level": "klas2",
@@ -3912,10 +4215,12 @@
     "intro": "Hoe de Republiek der Zeven Verenigde Nederlanden ontstond uit 80 jaar oorlog tegen Spanje. Van de Beeldenstorm en Filips II's drie problemen, via Den Briel + ontzet van Leiden, tot het Plakkaat van Ve",
     "stepCount": 11,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "tafels-po",
+    "file": "./tafelsPo.js",
     "title": "Vermenigvuldigingstafels (groep 4-5)",
     "subject": "rekenen",
     "level": "groep4-5",
@@ -3934,10 +4239,12 @@
     "intro": "Tafels 1 t/m 10 voor groep 4-5 — wat is een tafel, makkelijke (2/5/10), basis (3/4), lastig (6/7/8/9), slimme trucs (splitsen, 9-truc, verdubbelen). ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "tekstanalyse",
+    "file": "./tekstanalyse.js",
     "title": "Tekstanalyse",
     "subject": "taal",
     "level": "havo4-5",
@@ -3961,10 +4268,12 @@
     "intro": "Examenstof havo 4-5 leesvaardigheid: tekstdoel + doelgroep herkennen, hoofdgedachte/hoofdvraag/deelvragen vinden, alinea-functies en verbanden analyseren, feit ↔ mening onderscheiden, bron-strategie e",
     "stepCount": 13,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "tijdsduur-rekenen-po",
+    "file": "./tijdsduurRekenenPo.js",
     "title": "Tijdsduur uitrekenen (groep 6-8)",
     "subject": "rekenen",
     "level": "groep6-8",
@@ -3988,10 +4297,12 @@
     "intro": "Tijdsduur voor groep 6-8 — hoe lang duurt iets, tussen 2 klokken, optellen+aftrekken met 60-stap, 24-uurs format, praktijksommen school/reizen/sport. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "tijdvakken-geschiedenis",
+    "file": "./tijdvakkenGeschiedenis.js",
     "title": "De 10 tijdvakken — Nederlandse geschiedenis",
     "subject": "geschiedenis",
     "level": "klas1-3",
@@ -4015,10 +4326,12 @@
     "intro": "Het skelet van Nederlandse geschiedenis: 10 tijdvakken van Jagers en boeren tot Televisie en computer. Per tijdvak de belangrijkste mensen, gebeurtenissen en uitvindingen — basis voor alle geschiedeni",
     "stepCount": 12,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "tijdvakken-nederland-po",
+    "file": "./tijdvakkenNederlandPo.js",
     "title": "Tijdvakken Nederland — geschiedenis groep 6-8",
     "subject": "geschiedenis",
     "level": "groep6-8",
@@ -4042,10 +4355,12 @@
     "intro": "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Cito-doorstroomtoets-stof wil dekken.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "toestand-stoffen-po",
+    "file": "./toestandStoffenPo.js",
     "title": "Vast, vloeibaar, gas (groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -4069,10 +4384,12 @@
     "intro": "Toestanden van stoffen voor groep 6-8 — vast/vloeibaar/gas, eigenschappen van vloeistoffen, gassen om ons heen, 6 overgangen (smelten/stollen/verdampen/condenseren), watercyclus. ~15 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "topografie-nederland",
+    "file": "./topografieNederland.js",
     "title": "Topografie Nederland — provincies, hoofdsteden, water",
     "subject": "aardrijkskunde",
     "level": "groep6-8",
@@ -4096,10 +4413,12 @@
     "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. Cito-relevant voor groep 7-8.",
     "stepCount": 9,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "vergelijkingen-oplossen",
+    "file": "./vergelijkingenOplossen.js",
     "title": "Vergelijkingen oplossen",
     "subject": "wiskunde",
     "level": "klas2-vmbo-vwo",
@@ -4119,10 +4438,12 @@
     "intro": "Lineaire vergelijkingen oplossen met de balans-methode: van eenvoudige x + a = b, via vergelijkingen met x aan beide kanten en haakjes/breuken, tot woordvergelijkingen. Voorbereiding op alle latere al",
     "stepCount": 14,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "verhoudingen",
+    "file": "./verhoudingen.js",
     "title": "Verhoudingen",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -4139,10 +4460,12 @@
     "intro": "Verhoudingen vergelijken hoeveelheden — bij recepten, schaalmodellen, kortingen, mengen. Hier leer je: notatie a : b, vereenvoudigen, verhoudingstabellen, kruisproduct, schaalmodellen en recepten omre",
     "stepCount": 10,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 15
   },
   {
     "id": "verhoudingen-po",
+    "file": "./verhoudingenPo.js",
     "title": "Verhoudingen — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -4163,10 +4486,12 @@
     "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Cito-stijl praktijksommen. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "verkeersregels-veiligheid-po",
+    "file": "./verkeersregelsVeiligheidPo.js",
     "title": "Verkeersregels + veiligheid (Cito groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
@@ -4190,10 +4515,12 @@
     "intro": "Verkeersregels voor Cito groep 6-8 + verkeersexamen groep 7 — verkeersborden (verbod/gebod/waarschuwing/info) + lichten + fiets-uitrusting + regels (mobiel verboden, alcohol grens) + voorrang (rechts/",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "vlakke-figuren",
+    "file": "./vlakkeFiguren.js",
     "title": "Vlakke figuren (meetkunde)",
     "subject": "wiskunde",
     "level": "klas1-vwo",
@@ -4215,10 +4542,12 @@
     "intro": "Meetkundige constructies en vierhoeken: middelloodlijn, bissectrice, zwaartelijn, hoogtelijn — en hoe ze de in- en omgeschreven cirkels van een driehoek bepalen. Plus oppervlakteformules voor parallel",
     "stepCount": 17,
     "checkCount": 25,
-    "chapterCount": 7
+    "chapterCount": 7,
+    "estimatedMinutes": 20
   },
   {
     "id": "vlakke-figuren-po",
+    "file": "./vlakkeFigurenPo.js",
     "title": "Vlakke figuren — Cito groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
@@ -4242,10 +4571,12 @@
     "intro": "Omtrek en oppervlakte voor groep 5-8: vierkant, rechthoek, driehoek (basis × hoogte ÷ 2), praktijksommen met hek/verf/gras/tegels. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 3
+    "chapterCount": 3,
+    "estimatedMinutes": 20
   },
   {
     "id": "volgorde-bewerkingen",
+    "file": "./volgordeBewerkingen.js",
     "title": "Volgorde van bewerkingen + haakjes",
     "subject": "rekenen",
     "level": "groep5-7",
@@ -4269,10 +4600,12 @@
     "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. Cito-relevant voor groep 5-7.",
     "stepCount": 7,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "voortplanting-hormonen-biologie",
+    "file": "./voortplantingHormonenBiologie.js",
     "title": "Voortplanting en hormonen",
     "subject": "biologie",
     "level": "klas2-3",
@@ -4296,10 +4629,12 @@
     "intro": "Hoe het hormoonstelsel werkt en hoe het voortplantingssysteem in elkaar zit. Van wat hormonen zijn tot de menstruatiecyclus, bevruchting, zwangerschap en puberteit. Plus belangrijke andere hormonen zo",
     "stepCount": 11,
     "checkCount": 28,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "vraag-aanbod-economie",
+    "file": "./vraagAanbodEconomie.js",
     "title": "Vraag en aanbod",
     "subject": "economie",
     "level": "klas3-havo4",
@@ -4323,10 +4658,12 @@
     "intro": "De motor van elke markt: vraag en aanbod. Vraagwet, aanbodwet, marktevenwicht, vraag- en aanbodverschuivingen, met praktische voorbeelden van uitverkoop tot concertkaartjes. Eerste pad economie.",
     "stepCount": 9,
     "checkCount": 25,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "water-erfgoed-nederland-po",
+    "file": "./waterErfgoedNederlandPo.js",
     "title": "Nederland en water (groep 6-8)",
     "subject": "aardrijkskunde",
     "level": "groep6-8",
@@ -4350,10 +4687,12 @@
     "intro": "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Cito-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "waterkringloop-po",
+    "file": "./waterkringloopPo.js",
     "title": "Waterkringloop (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -4377,10 +4716,12 @@
     "intro": "Waterkringloop voor Cito groep 6-8 — 4 fasen (verdamping/condensatie/neerslag/afstroming) + soorten wolken (cumulus/cirrus/cumulonimbus) + soorten neerslag (regen/sneeuw/hagel/ijzel/mist/dauw/regenboo",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "weersvoorspelling-po",
+    "file": "./weersvoorspellingPo.js",
     "title": "Weer + weersvoorspelling (Cito groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
@@ -4404,10 +4745,12 @@
     "intro": "Weer voor Cito groep 6-8 — wat is weer (temperatuur/neerslag/wind/druk) + wind + luchtdruk + onweer/bliksem + KNMI in De Bilt + voorspellen via radar/satelliet/computermodellen + weerkaart-symbolen + ",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "werelddelen-landen-po",
+    "file": "./werelddelenLandenPo.js",
     "title": "Werelddelen + landen (Cito groep 6-8)",
     "subject": "aardrijkskunde",
     "level": "groep6-8",
@@ -4431,10 +4774,12 @@
     "intro": "Werelddelen + landen voor Cito groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazone, Great Wa",
     "stepCount": 4,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "wereldoorlog1-geschiedenis",
+    "file": "./wereldoorlog1Geschiedenis.js",
     "title": "Eerste Wereldoorlog 1914-1918 (klas 2-3)",
     "subject": "geschiedenis",
     "level": "klas2-3",
@@ -4458,10 +4803,12 @@
     "intro": "Eerste Wereldoorlog voor klas 2-3 — MAIN-oorzaken, moord Frans Ferdinand 1914 + Schlieffenplan, loopgravenoorlog Westfront, Nederland neutraal (1M Belgische vluchtelingen, aardappeloproer, keizer Wilh",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "wereldoorlog2-geschiedenis",
+    "file": "./wereldoorlog2Geschiedenis.js",
     "title": "Tweede Wereldoorlog — oorzaken, verloop, gevolgen",
     "subject": "geschiedenis",
     "level": "klas3-4",
@@ -4485,10 +4832,12 @@
     "intro": "Van het Verdrag van Versailles tot de bevrijding van Nederland en de Koude Oorlog. De drie hoofdoorzaken, het verloop van de oorlog in Europa en in Nederland, de Holocaust, en de gevolgen die de moder",
     "stepCount": 11,
     "checkCount": 31,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 25
   },
   {
     "id": "werkwoord-tijden-po",
+    "file": "./werkwoordTijdenPo.js",
     "title": "Werkwoordsvervoeging T/V — Cito groep 7-8",
     "subject": "taal",
     "level": "groep5-8",
@@ -4509,10 +4858,12 @@
     "intro": "Werkwoordsvervoeging voor groep 5-8: tegenwoordige tijd, kofschip-regel, sterke werkwoorden in verleden tijd. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 20
   },
   {
     "id": "werkwoordsspelling-dt",
+    "file": "./werkwoordsspellingDT.js",
     "title": "Werkwoordsspelling — d/t en 't kofschip",
     "subject": "spelling",
     "level": "groep5-7",
@@ -4536,10 +4887,12 @@
     "intro": "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t,k,f,s,ch,h,p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5-7 ",
     "stepCount": 8,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   },
   {
     "id": "werkwoordsvervoeging",
+    "file": "./werkwoordsvervoeging.js",
     "title": "Werkwoordsvervoeging (d/t)",
     "subject": "taal",
     "level": "klas1-vmbo-vwo",
@@ -4563,10 +4916,12 @@
     "intro": "De d/t-regels van het Nederlands — vanaf de stam tot voltooid deelwoord. Met 't kofschip, de lopen-test en de beruchte instinkers (worden/wordt, gebeurt/gebeurd, vindt/gevonden).",
     "stepCount": 14,
     "checkCount": 30,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "werkwoordsvervoeging-duits",
+    "file": "./werkwoordsvervoegingDuits.js",
     "title": "Werkwoorden Duits (klas 1-2)",
     "subject": "duits",
     "level": "klas1-2",
@@ -4590,10 +4945,12 @@
     "intro": "Werkwoorden Duits voor klas 1-2 — infinitief op -en, persoonlijke voornaamwoorden (ich/du/er/sie/wir/ihr/sie/Sie), Präsens regelmatig + onregelmatig (sein/haben/werden + sterke werkwoorden a→ä, e→i, e",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "werkwoordsvervoeging-frans",
+    "file": "./werkwoordsvervoegingFrans.js",
     "title": "Werkwoorden Frans (klas 1-2)",
     "subject": "frans",
     "level": "klas1-2",
@@ -4617,10 +4974,12 @@
     "intro": "Werkwoorden Frans voor klas 1-2 — 3 groepen (-er/-ir/-re), persoonlijke voornaamwoorden (je/tu/il/elle/nous/vous/ils/elles), Présent regelmatig + onregelmatig (être/avoir/aller/faire), Imparfait (verl",
     "stepCount": 6,
     "checkCount": 26,
-    "chapterCount": 6
+    "chapterCount": 6,
+    "estimatedMinutes": 20
   },
   {
     "id": "woordenschat-engels",
+    "file": "./woordenschatEngels.js",
     "title": "Engelse woordenschat — basis",
     "subject": "engels",
     "level": "klas1-2",
@@ -4644,10 +5003,12 @@
     "intro": "~80 basiswoorden in 8 thema's: eten, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen, tijd en standaarduitdrukkingen. Genoeg voor dagelijks Engels.",
     "stepCount": 10,
     "checkCount": 26,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 15
   },
   {
     "id": "woordenschat-engels-po",
+    "file": "./woordenschatEngelsPo.js",
     "title": "Woordenschat Engels — basis (groep 6-8)",
     "subject": "engels",
     "level": "groep6-8",
@@ -4671,10 +5032,12 @@
     "intro": "Engelse basiswoordenschat voor groep 6-8 — begroetingen, getallen 0-20, kleuren, dagen + maanden, familie, eten + drinken, lichaamsdelen. Voorbereiding op brugklas-Engels (CEFR-niveau A1).",
     "stepCount": 8,
     "checkCount": 45,
-    "chapterCount": 4
+    "chapterCount": 4,
+    "estimatedMinutes": 25
   },
   {
     "id": "woordenschat-po",
+    "file": "./woordenschatPo.js",
     "title": "Woordenschat — Cito groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
@@ -4694,10 +5057,12 @@
     "intro": "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Cito-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "woordsoorten-nederlands",
+    "file": "./woordsoortenNederlands.js",
     "title": "Woordsoorten",
     "subject": "taal",
     "level": "klas1-2",
@@ -4721,10 +5086,12 @@
     "intro": "De 8 woordsoorten van het Nederlands: zelfstandig nw, werkwoord, bijvoeglijk nw, lidwoord, voornaamwoord (persoonlijk + bezittelijk), voorzetsel, voegwoord, bijwoord. Per soort herkenningstrucs en oef",
     "stepCount": 11,
     "checkCount": 25,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "woordsoorten-po",
+    "file": "./woordsoortenPo.js",
     "title": "Woordsoorten herkennen — Cito groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
@@ -4745,10 +5112,12 @@
     "intro": "Zelfstandig naamwoord, werkwoord, bijvoeglijk naamwoord, lidwoord, voornaamwoord. Cito-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   },
   {
     "id": "zinsontleding",
+    "file": "./zinsontleding.js",
     "title": "Zinsontleding",
     "subject": "taal",
     "level": "klas1-vmbo-vwo",
@@ -4772,6 +5141,7 @@
     "intro": "Zinnen ontleden voor klas 1-2: persoonsvorm + onderwerp + gezegde (werkwoordelijk vs naamwoordelijk) + lijdend voorwerp + meewerkend voorwerp + bepalingen (plaats, tijd, wijze, reden) + verschil bijwo",
     "stepCount": 14,
     "checkCount": 26,
-    "chapterCount": 5
+    "chapterCount": 5,
+    "estimatedMinutes": 25
   }
 ]

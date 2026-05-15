@@ -10,56 +10,28 @@
 //   import { getLearnPath, hasLearnPath } from './pathLoaders.js';
 //   const path = await getLearnPath('parabolen');  // returnt het default export
 //
-// Migratie-status:
-// - LearnPath.jsx: TODO (huidige top-prioriteit voor lazy migratie).
-// - LearnPathsHub.jsx: TODO (gebruikt MANIFEST-data; alleen full data nodig
-//   wanneer user op pad klikt).
-// - citoMixVragen.js / examenLookup.js: blijft ALL_LEARN_PATHS-based tot apart
-//   manifest beschikbaar.
-//
-// Voor backward compat blijft `ALL_LEARN_PATHS` in `index.js` exporteren met
-// alle pad-data eager. Verwijder ALL_LEARN_PATHS pas wanneer alle consumers
-// gemigreerd zijn.
+// QW7 lazy-load STAP 2 voltooid (2026-05-15): id→file mapping uit
+// pathManifest.generated.json (build-time gegenereerd via buildPathManifest.mjs).
+// Geen eager-resolve meer van alle modules — alleen het opgevraagde pad wordt
+// geladen, andere chunks blijven onaangeraakt.
+
+import pathManifest from "./pathManifest.generated.json";
 
 // Vite resolves dit naar object { './parabolen.js': () => import('./parabolen.js'), ... }
 // Lazy: modules worden pas geladen wanneer de loader-functie wordt aangeroepen.
 //
-// BUG-FIX 2026-05-14: exclude `.test.js`, `.generated.js`, `index.js`,
-// `examenLookup.js`, `pathLoaders.js`, `subjectMapping.js`. Anders pakt Rollup
-// die mee in de bundle waardoor:
-// 1. `index.test.js` importeert `./index.js` (cycle examens-wiskunde via core)
-// 2. test-code in productie-bundle
+// Exclusions: niet-pad-files die anders in de bundle terecht komen.
 const modules = import.meta.glob(
   ['./*.js{,x}', '!./index.js', '!./index.test.js', '!./examenLookup.js', '!./pathLoaders.js', '!./subjectMapping.js', '!./subjectMapping.test.js', '!./questionPathMap.generated.js'],
   { import: 'default' }
 );
 
-// Map van pad-id naar loader-functie. De pad-id zit in het default-export van
-// elk pad-file als `path.id`. We kunnen die niet uit de file-naam afleiden
-// (file 'parabolen.js' = id 'parabolen', maar 'cijferendRekenen.js' = id
-// 'cijferend-rekenen'). Daarom: bouw cache lazy bij eerste gebruik.
-let _idToLoader = null;
-
-async function buildIdMap() {
-  if (_idToLoader) return _idToLoader;
-  _idToLoader = {};
-  // Eager-load alleen de metadata (id-velden) door alle modules eenmalig te
-  // resolven. Voor 165 modules = klein eenmalig kostje, daarna mapping cached.
-  // BELANGRIJK: bij de migratie naar volledig lazy verdwijnt dit — dan moet
-  // de id-map static gegenereerd worden via build-script.
-  await Promise.all(
-    Object.entries(modules).map(async ([path, loader]) => {
-      try {
-        const data = await loader();
-        if (data && data.id) {
-          _idToLoader[data.id] = loader;
-        }
-      } catch (err) {
-        console.warn(`[pathLoaders] kon ${path} niet laden:`, err.message);
-      }
-    })
-  );
-  return _idToLoader;
+// Static id→loader-mapping via manifest. Geen runtime-resolve van alle modules.
+const _idToLoader = {};
+for (const entry of pathManifest) {
+  if (entry.id && entry.file && modules[entry.file]) {
+    _idToLoader[entry.id] = modules[entry.file];
+  }
 }
 
 // Cache van al geresolved paden zodat herhaalde getLearnPath(id)-calls niet
@@ -68,22 +40,19 @@ const _resolved = new Map();
 
 export async function getLearnPath(id) {
   if (_resolved.has(id)) return _resolved.get(id);
-  const map = await buildIdMap();
-  const loader = map[id];
+  const loader = _idToLoader[id];
   if (!loader) return null;
   const data = await loader();
   _resolved.set(id, data);
   return data;
 }
 
-export async function hasLearnPath(id) {
-  const map = await buildIdMap();
-  return Object.prototype.hasOwnProperty.call(map, id);
+export function hasLearnPath(id) {
+  return Object.prototype.hasOwnProperty.call(_idToLoader, id);
 }
 
 // Voor consumers die alle ID's willen (lijsten/zoeken) zonder full data te
-// laden. Wachten op buildIdMap-eerste-call, daarna sync via cache.
-export async function listLearnPathIds() {
-  const map = await buildIdMap();
-  return Object.keys(map);
+// laden. Sync — uit manifest, geen async nodig.
+export function listLearnPathIds() {
+  return Object.keys(_idToLoader);
 }

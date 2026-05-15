@@ -41,8 +41,17 @@ async function main() {
         (sum, s) => sum + (Array.isArray(s?.checks) ? s.checks.length : 0),
         0
       );
+      // estimatedMinutes precomputen zodat consumers (LearnPathsHub) geen full
+      // pad-data nodig hebben om '~15 min' te tonen. Zelfde formule als
+      // shared/pathDuration.js → rawMinutes() + bucket-rounding.
+      const explChars = steps.reduce((sum, s) => sum + ((s?.explanation || "").length), 0);
+      const rawMin = explChars / 1500 + checks * 0.4;
+      const BUCKETS = [5, 10, 15, 20, 25, 30, 45, 60, 90];
+      let estimatedMinutes = Math.ceil(rawMin / 15) * 15;
+      for (const b of BUCKETS) { if (rawMin <= b) { estimatedMinutes = b; break; } }
       manifest.push({
         id: p.id,
+        file: `./${file}`,  // gebruikt door pathLoaders.js voor static id→loader-mapping
         title: p.title || p.id,
         subject: p.subject || "overig",
         level: p.level || "",
@@ -54,6 +63,7 @@ async function main() {
         stepCount: steps.length,
         checkCount: checks,
         chapterCount: Array.isArray(p.chapters) ? p.chapters.length : 0,
+        estimatedMinutes,
       });
     } catch (e) {
       console.warn(`[buildPathManifest] skip ${file}: ${e.message}`);

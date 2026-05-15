@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
-import { ALL_LEARN_PATHS } from "../../learnPaths";
 import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import MiniQuiz from "../practice/MiniQuiz.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { SUBJECTS } from "../../shared/subjects.js";
@@ -284,25 +284,14 @@ function YoutubeZoekKnop({ pathTitle, stepTitle, subject }) {
 }
 
 export default function LearnPath({ pathId, initialStepIdx, userName, authUser, onBack, onHome, onPickPath }) {
-  // Audit-1 QW7 (2026-05-13): pilot lazy-load van het opgevraagde pad.
-  // ALL_LEARN_PATHS-sync-snapshot werkt nog steeds (voor next-path-suggestie
-  // op regel 529 + voor first-paint), maar we proberen via lazyGetLearnPath
-  // de individueel-gechunkte file te triggeren waardoor toekomstige router-
-  // navigatie sneller is. Volgende sprint: regel 3 (ALL_LEARN_PATHS-import)
-  // verwijderen + examenLookup naar build-time JSON + LearnPathsHub volledig
-  // lazy. Voor nu: graceful upgrade-path zonder breken.
-  const [path, setPath] = useState(() => ALL_LEARN_PATHS[pathId] || null);
+  // QW7 lazy-load STAP 2 voltooid (2026-05-15): volledig async — geen
+  // ALL_LEARN_PATHS-import meer. Pad-data komt uit lazy chunk (~50 kB)
+  // ipv 5,8 MB bundle. First paint toont 'Laden…'-state (paar honderd ms).
+  const [path, setPath] = useState(null);
   useEffect(() => {
     let cancelled = false;
     if (!pathId) return;
-    // Probeer eerst sync uit ALL_LEARN_PATHS (huidige cache); als die mist,
-    // val terug op async loader. Werkt ook als consumers naar manifest-only
-    // worden gemigreerd.
-    const syncPath = ALL_LEARN_PATHS[pathId];
-    if (syncPath && !cancelled) {
-      setPath(syncPath);
-      return undefined;
-    }
+    setPath(null); // reset zodat bij pathId-switch oude pad verdwijnt
     lazyGetLearnPath(pathId).then((loaded) => {
       if (!cancelled) setPath(loaded);
     }).catch((err) => {
@@ -396,6 +385,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   }, [pathId, stepIdx, checkIdx, rawCheck]);
 
   if (!path) {
+    // Onderscheid loading (pad bestaat, nog niet geladen) van niet-gevonden.
+    const existsInManifest = pathManifest.some((p) => p.id === pathId);
+    if (existsInManifest) {
+      return (
+        <div style={{ padding: 24, color: C.text, textAlign: "center" }}>
+          <p style={{ opacity: 0.7 }}>Leerpad laden…</p>
+        </div>
+      );
+    }
     return (
       <div style={{ padding: 24, color: C.text }}>
         <p>Leerpad niet gevonden.</p>
@@ -562,8 +560,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     const wrongCount = Object.values(wrongPerStep || {}).reduce((sum, arr) => sum + (Array.isArray(arr) ? arr.length : 0), 0);
     const correctCount = Math.max(0, totalChecks - wrongCount);
     // Volgende pad: zelfde subject + level, eerstvolgende met hogere id (alfa).
+    // QW7 STAP 2: via pathManifest (metadata-only) zodat geen 5,8MB bundle nodig.
     const nextPath = (() => {
-      const all = Object.values(ALL_LEARN_PATHS || {})
+      const all = pathManifest
         .filter((p) => p && p.id !== path.id && p.subject === path.subject && p.level === path.level)
         .sort((a, b) => (a.id || "").localeCompare(b.id || ""));
       const idx = all.findIndex((p) => (p.id || "") > (path.id || ""));

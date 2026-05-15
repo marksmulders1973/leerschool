@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 import supabase from "../../supabase";
-import { ALL_LEARN_PATHS } from "../../learnPaths";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
-import { estimatePathMinutes } from "../../shared/pathDuration.js";
 import LeerpadBot from "./LeerpadBot.jsx";
+
+// QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
+// import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
+// (~155 kB) ipv 5,8 MB full pad-data.
+const ALL_PATHS_MANIFEST = pathManifest;
+const ALL_PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 const C = {
   bg: "#0f1729",
@@ -169,7 +174,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
     setClassFilter(myBucket);
   }, [selectedSubject, filterSubject, myBucket]);
 
-  const allPaths = Object.values(ALL_LEARN_PATHS);
+  const allPaths = ALL_PATHS_MANIFEST;
   // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
   // state vanuit vak-grid-klik). filterSubject heeft voorrang. Wanneer beide
   // null zijn: tonen we het vak-grid entry-screen (Oefenen-tab-stijl).
@@ -236,7 +241,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
   const continuePath = (() => {
     for (const path of paths) {
       const done = progressByPath[path.id];
-      if (done && done.size > 0 && done.size < path.steps.length) {
+      if (done && done.size > 0 && done.size < (path.stepCount ?? 0)) {
         return path;
       }
     }
@@ -244,7 +249,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
   })();
 
   const totalCompleted = Object.values(progressByPath).reduce((sum, s) => sum + s.size, 0);
-  const totalSteps = paths.reduce((sum, p) => sum + p.steps.length, 0);
+  const totalSteps = paths.reduce((sum, p) => sum + (p.stepCount ?? 0), 0);
 
   // Vak-grid (entry-screen) — zelfde IA als Oefenen-tab. Elke vak-tegel toont
   // emoji + label + "X onderwerpen" + voortgangs-pil. Klik → setSelectedSubject
@@ -256,7 +261,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
       const subj = p.subject || "wiskunde";
       if (!subjectStats[subj]) subjectStats[subj] = { count: 0, total: 0, done: 0 };
       subjectStats[subj].count += 1;
-      subjectStats[subj].total += p.steps.length;
+      subjectStats[subj].total += (p.stepCount ?? 0);
       subjectStats[subj].done += progressByPath[p.id]?.size || 0;
     });
     // Sorteer vakken op aantal paden (meest gevulde eerst), met wiskunde+taal
@@ -278,7 +283,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
           </p>
 
           <LeerpadBot
-            paths={ALL_LEARN_PATHS}
+            paths={ALL_PATHS_BY_ID}
             subject={null}
             onPickPath={(path) => onPickPath(path.id)}
           />
@@ -476,7 +481,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
         </div>
 
         <LeerpadBot
-          paths={ALL_LEARN_PATHS}
+          paths={ALL_PATHS_BY_ID}
           subject={effectiveFilter}
           onPickPath={(path) => onPickPath(path.id)}
         />
@@ -534,7 +539,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
           return subjectKeys.map((subject) => {
             const pathList = grouped[subject];
             const meta = SUBJECT_LABELS[subject] || { title: subject, emoji: "📘" };
-            const subjTotal = pathList.reduce((s, p) => s + p.steps.length, 0);
+            const subjTotal = pathList.reduce((s, p) => s + (p.stepCount ?? 0), 0);
             const subjDone = pathList.reduce((s, p) => s + (progressByPath[p.id]?.size || 0), 0);
             const subjPct = subjTotal ? Math.round((subjDone / subjTotal) * 100) : 0;
             const isOpen = !allowCollapse || expandedSubjects.has(subject);
@@ -816,7 +821,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                       <div className="lp-grid">
                         {sortedPaths.map((p) => {
                           const done = progressByPath[p.id]?.size || 0;
-                          const total = p.steps.length;
+                          const total = p.stepCount ?? 0;
                           const pct = total ? Math.round((done / total) * 100) : 0;
                           const isStarted = done > 0;
                           const isComplete = done >= total;
@@ -871,7 +876,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                     {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
                                   </div>
                                   <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
-                                    {total} stappen · {p.chapters?.length || 0} hoofdstukken · ⏱️ ~{estimatePathMinutes(p)} min
+                                    {total} stappen · {p.chapterCount || 0} hoofdstukken · ⏱️ ~{p.estimatedMinutes || 15} min
                                   </div>
                                   {isStarted && (
                                     <div>
