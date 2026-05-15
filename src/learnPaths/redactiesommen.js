@@ -334,7 +334,7 @@ const steps = [
       { q: "8 leerlingen krijgen elk 3 stickers. Hoeveel totaal?", options: ["24","11","3","8"], answer: 0, wrongHints: [null, "Optelfout.", "Per leerling.", "Aantal leerlingen."] },
       { q: "Bij **'verschil'** in een som doe je?", options: ["Aftrekken","Optellen","Vermenigvuldigen","Delen"], answer: 0, wrongHints: [null, "Samen = +.", "Per × = ×.", "Eerlijk = ÷."] },
       { q: "Boek van 240 pagina's. Anna las al 150. Nog hoeveel?", options: ["90","150","240","390"], answer: 0, wrongHints: [null, "Al gelezen.", "Hele.", "Bij elkaar."] },
-      { q: "Liefde voor 4 dagen 6 kg appels. Per dag?", options: ["1,5 kg","6 kg","24 kg","4 kg"], answer: 0, wrongHints: [null, "Hele.", "Vermenigvuldigd.", "Aantal dagen."] },
+      { q: "Een gezin eet in **4 dagen 6 kg appels**. Hoeveel **per dag**?", options: ["1,5 kg","6 kg","24 kg","4 kg"], answer: 0, wrongHints: [null, "Dat is het totaal, niet per dag.", "Niet — vermenigvuldigd ipv gedeeld.", "Aantal dagen, geen kg."] },
     ],
   },
 ];

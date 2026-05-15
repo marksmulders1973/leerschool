@@ -55,7 +55,9 @@ function overzichtSvg() {
 </svg>`;
 }
 
-const examenLink = "[Cito's gratis voorbeeldopgavenboekje](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf)";
+// Plain-text URL — explanation-renderer doet geen Markdown, dus `[label](url)`-
+// syntax was zichtbaar voor eindgebruikers (Chrome-Claude review 2026-05-15).
+const examenLink = "Cito's gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
 
 const steps = [
   // STAP 1: Woordenschat (~20 min)
@@ -75,7 +77,7 @@ const steps = [
         q: "Welk woord is een **synoniem** van **'enorm'**?",
         options: ["Heel groot", "Beetje klein", "Snel", "Stil"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Andere dimensie.", "Andere dimensie."],
+        wrongHints: [null, "Tegenovergesteld — 'enorm' gaat juist over GROOT.", "Snel gaat over tempo, 'enorm' over grootte.", "Stil gaat over geluid, 'enorm' over grootte."],
         uitlegPad: {
           stappen: [
             { titel: "Synoniem = zelfde betekenis", tekst: "Een synoniem is een ander woord met (bijna) dezelfde betekenis. 'Enorm' = heel groot." },
@@ -115,7 +117,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'tevreden'**?",
         options: ["Blij met de situatie", "Boos", "Verbaasd", "Bang"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Ander gevoel.", "Ander gevoel."],
+        wrongHints: [null, "Boos is juist NIET tevreden — dat is het tegenovergestelde.", "Verbaasd = verrast zijn; tevreden = blij. Andere emotie.", "Bang = angstig; tevreden = blij. Andere emotie."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'tevreden'?", tekst: "Tevreden = blij met hoe iets gegaan is. Geen klacht. Voorbeeld: tevreden met je rapport." },

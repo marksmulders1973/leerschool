@@ -492,7 +492,7 @@ const steps = [
         },
       },
       {
-        q: "**Hoeveel rondjes liep Ali minder dan Eva**?",
+        q: "*Tabel rondjes hardlopen:* Tom **24**, Eva **32**, Ali **18**, Lisa **28**. **Hoeveel rondjes liep Ali minder dan Eva**?",
         options: ["14","18","32","50"],
         answer: 0,
         wrongHints: [null,"Dat is alleen Ali — vraag is verschil.","Dat is alleen Eva — vraag is verschil.","Dat is som — niet het verschil."],
@@ -506,7 +506,7 @@ const steps = [
         },
       },
       {
-        q: "**Wat is het gemiddelde aantal rondjes** per kind?",
+        q: "*Tabel:* Tom **24**, Eva **32**, Ali **18**, Lisa **28** rondjes. **Wat is het gemiddelde aantal rondjes** per kind?",
         options: ["25,5","26","24","28"],
         answer: 0,
         wrongHints: [null,"Te veel — controleer: (24+32+18+28) ÷ 4.","Te weinig — controleer som.","Te veel — dat is Lisa."],

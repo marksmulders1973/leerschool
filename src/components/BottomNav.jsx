@@ -17,7 +17,7 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 const ALL_TABS = [
   { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
   { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
-  { id: "oefenen", label: "Test",        emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
+  { id: "oefenen", label: "Toets",       emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
 ];
 
 function bepaalActieveTab(page) {

@@ -55,7 +55,7 @@ function overzichtSvg() {
 </svg>`;
 }
 
-const examenLink = "[Cito's gratis voorbeeldopgavenboekje](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf)";
+const examenLink = "Cito.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
 
 const steps = [
   // STAP 1: Kaart + schaal
