@@ -7,6 +7,7 @@ import {
   getExamenUrl,
   getCorrectieUrl,
   getBijlageUrl,
+  getUitwerkbijlageUrl,
 } from "../data/examens.js";
 import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
@@ -317,6 +318,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                       const opgaveUrl = getExamenUrl(e);
                       const correctieUrl = getCorrectieUrl(e);
                       const bijlageUrl = getBijlageUrl(e);
+                      const uitwerkbijlageUrl = getUitwerkbijlageUrl(e);
                       const speelbaar = isExamenSpeelbaar(e.id);
                       const isExtern = !!e.externalUrl;
                       return (
@@ -405,6 +407,17 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                                 kleur={C.muted}
                                 border={C.border}
                                 hoverBg="rgba(255,213,79,0.1)"
+                              />
+                            )}
+                            {uitwerkbijlageUrl && (
+                              <PdfKnop
+                                href={uitwerkbijlageUrl}
+                                icon="📝"
+                                label="Uitwerkbijlage"
+                                sublabel="invul-velden"
+                                kleur="#69f0ae"
+                                border="rgba(105,240,174,0.45)"
+                                hoverBg="rgba(105,240,174,0.12)"
                               />
                             )}
                           </div>

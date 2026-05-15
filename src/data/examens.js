@@ -42,20 +42,22 @@ const NIVEAU_VMBO_GLTL = { niveauPad: "vmbo-gl", niveauPrefix: "gt" };
 
 // Vakcode-tabel — geverifieerd via curl (alle URLs HTTP 200 in 2026-05-08).
 // heeftBijlage: of er een apart bijlage-PDF (-b) bestaat met teksten/bronnen.
+// heeftUitwerkbijlage: of er een uitwerkbijlage-PDF (-u) bestaat met antwoord-
+//   velden (lege tabellen/grafieken om in te vullen). Geverifieerd 2026-05-15.
 // Geverifieerd 2026-05-09 voor 2022-2025, beide tijdvakken — talen + zaakvakken
 // hebben bijlage; wiskunde/biologie/aardrijkskunde hebben bronnen in opgaven zelf.
 const VAKCODES_VMBO_GLTL = {
-  wiskunde:        { code: "0153", titel: "Wiskunde — VMBO GL/TL",       heeftBijlage: false },
-  nederlands:      { code: "0011", titel: "Nederlands — VMBO GL/TL",     heeftBijlage: true  },
-  engels:          { code: "0071", titel: "Engels — VMBO GL/TL",         heeftBijlage: true  },
-  biologie:        { code: "0191", titel: "Biologie — VMBO GL/TL",       heeftBijlage: false },
-  economie:        { code: "0233", titel: "Economie — VMBO GL/TL",       heeftBijlage: true  },
-  geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL",   heeftBijlage: true  },
-  aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL", heeftBijlage: false },
+  wiskunde:        { code: "0153", titel: "Wiskunde — VMBO GL/TL",       heeftBijlage: false, heeftUitwerkbijlage: true  },
+  nederlands:      { code: "0011", titel: "Nederlands — VMBO GL/TL",     heeftBijlage: true,  heeftUitwerkbijlage: true  },
+  engels:          { code: "0071", titel: "Engels — VMBO GL/TL",         heeftBijlage: true,  heeftUitwerkbijlage: true  },
+  biologie:        { code: "0191", titel: "Biologie — VMBO GL/TL",       heeftBijlage: false, heeftUitwerkbijlage: true  },
+  economie:        { code: "0233", titel: "Economie — VMBO GL/TL",       heeftBijlage: true,  heeftUitwerkbijlage: false },
+  geschiedenis:    { code: "0125", titel: "Geschiedenis — VMBO GL/TL",   heeftBijlage: true,  heeftUitwerkbijlage: false },
+  aardrijkskunde:  { code: "0131", titel: "Aardrijkskunde — VMBO GL/TL", heeftBijlage: false, heeftUitwerkbijlage: false },
 };
 
 // Helper: genereer entries voor 1 vak × meerdere jaren × 2 tijdvakken.
-function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren, heeftBijlage }) {
+function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren, heeftBijlage, heeftUitwerkbijlage }) {
   const out = [];
   for (const jaar of jaren) {
     for (const tijdvak of [1, 2]) {
@@ -72,6 +74,9 @@ function genVakSet({ vak, niveau, niveauInfo, vakCode, titel, jaren, heeftBijlag
       };
       if (heeftBijlage) {
         entry.bijlageUrl = eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "b");
+      }
+      if (heeftUitwerkbijlage) {
+        entry.uitwerkbijlageUrl = eb(jaar, tijdvak, niveauInfo.niveauPad, vakCode, niveauInfo.niveauPrefix, "u");
       }
       out.push(entry);
     }
@@ -91,6 +96,7 @@ const _vmboGltlExterneEntries = Object.entries(VAKCODES_VMBO_GLTL).flatMap(
     titel: info.titel,
     jaren: VMBO_GLTL_JAREN,
     heeftBijlage: info.heeftBijlage,
+    heeftUitwerkbijlage: info.heeftUitwerkbijlage,
   })
 );
 
@@ -152,6 +158,14 @@ export function getCorrectieUrl(examen) {
 // het opgavenboekje zelf en geven hier null terug.
 export function getBijlageUrl(examen) {
   return examen?.bijlageUrl || null;
+}
+
+// Uitwerkbijlage-URL — bevat lege antwoord-velden (tabellen/grafieken/diagrammen)
+// om in te vullen tijdens het examen. Aanwezig voor wiskunde, biologie,
+// Nederlands en Engels (vakken met teken-/invul-vragen). Economie, geschiedenis
+// en aardrijkskunde hebben er geen.
+export function getUitwerkbijlageUrl(examen) {
+  return examen?.uitwerkbijlageUrl || null;
 }
 
 // Helpers voor filtering/sortering (gebruikt door ExamensPage).
