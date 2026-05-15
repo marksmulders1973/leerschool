@@ -40,10 +40,33 @@ function isPoLevel(level) {
   return /^groep[1-8]/.test(level);
 }
 
-export function gatherPoChecks() {
+// Doorstroomtoets-simulatie eist groep 7-8 niveau (eindniveau basisschool).
+// Chrome-Claude review 2026-05-15: vragen als "Pen €1,25 × 4" en "10−2,75"
+// uit groep 4-5-paden voelen kinderachtig voor G8-leerling. Strenger filter.
+// Accepteert: "groep7", "groep8", "groep6-8", "groep7-8", "groep5-8" (omdat
+// dat pad expliciet G8 mee neemt), etc.
+function isDoorstroomtoetsLevel(level) {
+  if (!level) return false;
+  const s = String(level).toLowerCase();
+  // Single-grade: alleen 7 of 8.
+  if (/^groep[78]$/.test(s)) return true;
+  // Range: eindgrade moet 7 of 8 zijn (groep5-8, groep6-8, etc.).
+  const range = s.match(/^groep(\d)-(\d)$/);
+  if (range) {
+    const end = parseInt(range[2], 10);
+    return end >= 7;
+  }
+  // Onbekend formaat → uitsluiten voor Doorstroomtoets-simulatie.
+  return false;
+}
+
+export function gatherPoChecks(opts = {}) {
   const out = [];
+  // doorstroomtoets-only: filter strenger op groep 7-8 zodat de simulatie geen
+  // kinderachtige PO-vragen toont. Default = breed (alle PO).
+  const levelCheck = opts.doorstroomtoetsOnly ? isDoorstroomtoetsLevel : isPoLevel;
   for (const [pathId, path] of Object.entries(ALL_LEARN_PATHS)) {
-    if (!path || !isPoLevel(path.level)) continue;
+    if (!path || !levelCheck(path.level)) continue;
     const pijler = pijlerForPath(path);
     if (!pijler) continue;
     const steps = Array.isArray(path.steps) ? path.steps : [];
@@ -119,7 +142,9 @@ function annotateWithWrongHistory(checks) {
 // voor vak-specifieke Cito-oefen-knop op StudentHome.
 export function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
   const adaptive = opts.adaptive !== false;
-  let all = gatherPoChecks();
+  // doorstroomtoetsOnly propageert naar gatherPoChecks zodat groep<7-paden
+  // uitgesloten worden (Chrome-Claude review 2026-05-15).
+  let all = gatherPoChecks({ doorstroomtoetsOnly: !!opts.doorstroomtoetsOnly });
   if (opts.subjectFilter) {
     const allowed = new Set(
       Array.isArray(opts.subjectFilter) ? opts.subjectFilter : [opts.subjectFilter]

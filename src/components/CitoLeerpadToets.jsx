@@ -73,7 +73,10 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   }, [mode]);
 
   const start = () => {
-    const qs = sampleCitoMix(config.count, null, Math.random, { subjectFilter });
+    // doorstroomtoetsOnly: filter pool op groep 7-8 zodat geen kinderachtige
+    // groep 4-5-vragen ('Pen €1,25', '10-2,75') in de Doorstroomtoets-simulatie
+    // belanden. Chrome-Claude review 2026-05-15.
+    const qs = sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
     // Shuffle opties per vraag zodat antwoord 0 niet altijd correct is.
     const shuffled = qs.map((q) => shuffleOptions(q));
     setQuestions(shuffled);

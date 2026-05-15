@@ -1077,7 +1077,19 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             >
               💬 Vraag aan de leerbegeleider
             </button>
-            <button onClick={tryAgain} style={{ ...btnPrimary(), marginTop: 8 }}>
+            {/* Chrome-Claude V2 review 2026-05-15: twee primaire groene CTA's
+                concurreerden ("Hier is de uitleg" + "Probeer opnieuw"). Bij
+                uitlegPad-vragen is de uitleg het didactische primary —
+                "Probeer opnieuw" wordt secondary zodat de leerling EERST leest.
+                Bij vragen zonder uitlegPad blijft "Probeer opnieuw" wel
+                primary (anders is er geen CTA). */}
+            <button
+              onClick={tryAgain}
+              style={{
+                ...(currentCheck.uitlegPad ? btnSecondary() : btnPrimary()),
+                marginTop: 8,
+              }}
+            >
               🔁 Probeer opnieuw
             </button>
             {/* A3 (10-agent circulariteit 2026-05-10): leerpadLink altijd zichtbaar
