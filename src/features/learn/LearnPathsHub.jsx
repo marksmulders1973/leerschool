@@ -93,7 +93,7 @@ function parseLevel(level) {
   const fallback = { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
   if (!level) return fallback;
   const l = String(level).toLowerCase();
-  if (l.startsWith("groep")) return { bucketKey: "po", bucketSort: 0, bucketLabel: "Basisschool", badge: { text: "PO", bg: "#b9f6ca", fg: "#003d1c" } };
+  if (l.startsWith("groep")) return { bucketKey: "po", bucketSort: 0, bucketLabel: "Basisschool", badge: { text: "Basis", bg: "#b9f6ca", fg: "#003d1c" } };
   if (l.includes("klas1")) return { bucketKey: "klas-1", bucketSort: 1, bucketLabel: "Klas 1", badge: { text: "Klas 1", bg: "#69f0ae", fg: "#003d1c" } };
   if (l.includes("klas2")) return { bucketKey: "klas-2", bucketSort: 2, bucketLabel: "Klas 2", badge: { text: "Klas 2", bg: "#00e676", fg: "#003d1c" } };
   if (l.includes("klas3") || l.startsWith("havo3")) return { bucketKey: "klas-3", bucketSort: 3, bucketLabel: "Klas 3", badge: { text: "Klas 3", bg: "#ffd54f", fg: "#1a0a00" } };
@@ -294,7 +294,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                 Totaal voortgang
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.text }}>
-                <span>{totalCompleted} van {totalSteps} stappen voltooid</span>
+                <span>{totalCompleted} van {totalSteps} delen voltooid</span>
                 <span>{Math.round((totalCompleted / totalSteps) * 100)}%</span>
               </div>
               <div style={{ height: 6, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
@@ -492,7 +492,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
               Totaal voortgang
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.text }}>
-              <span>{totalCompleted} van {totalSteps} stappen voltooid</span>
+              <span>{totalCompleted} van {totalSteps} delen voltooid</span>
               <span>{Math.round((totalCompleted / totalSteps) * 100)}%</span>
             </div>
             <div style={{ height: 6, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
@@ -696,7 +696,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                     {isComplete && <span style={{ fontSize: 13 }}>✅</span>}
                                   </div>
                                   <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 4 : 0 }}>
-                                    {allPathIds.length} onderwerpen · {total} stappen
+                                    {allPathIds.length} onderwerpen · {total} delen
                                   </div>
                                   {isStarted && (
                                     <div>
@@ -859,7 +859,13 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                     </span>
                                     <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
                                     {p.referentieNiveau && (
-                                      <span title={`SLO-referentieniveau ${p.referentieNiveau}${p.sloThema ? ` · ${p.sloThema}` : ""}`} style={{
+                                      <span title={`Referentieniveau ${p.referentieNiveau} — ${
+                                        p.referentieNiveau === "1F" ? "instapniveau (eind basisschool)"
+                                        : p.referentieNiveau === "2F" ? "middenniveau (eind VMBO/onderbouw HAVO-VWO)"
+                                        : p.referentieNiveau === "3F" ? "doorstroom-niveau (eind HAVO/VWO)"
+                                        : p.referentieNiveau === "4F" ? "academisch niveau (HBO/WO)"
+                                        : "SLO-referentieniveau"
+                                      }${p.sloThema ? ` · ${p.sloThema}` : ""}`} style={{
                                         fontFamily: "var(--font-body)",
                                         fontSize: 10,
                                         fontWeight: 700,
@@ -876,7 +882,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
                                     {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
                                   </div>
                                   <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4, marginBottom: isStarted ? 6 : 0 }}>
-                                    {total} stappen · {p.chapterCount || 0} hoofdstukken · ⏱️ ~{p.estimatedMinutes || 15} min
+                                    {total} delen · {p.chapterCount || 0} hoofdstukken · ⏱️ ~{p.estimatedMinutes || 15} min
                                   </div>
                                   {isStarted && (
                                     <div>
