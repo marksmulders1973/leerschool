@@ -12,7 +12,12 @@
 import supabase from "../../supabase.js";
 import { getCurrentUserId } from "../../auth.js";
 import { QUESTION_PATH_MAP } from "../../learnPaths/questionPathMap.generated.js";
-import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
+
+// QW7 lazy-load STAP 2 (2026-05-15): manifest-only (id/title/subject/emoji)
+// in plaats van ALL_LEARN_PATHS (5,8 MB). Mastery-record consumers (Banner,
+// home-tegels) gebruiken alleen metadata.
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 const MIN_ATTEMPTS_FOR_LEVEL = 5; // hoeveel pogingen vóór we een niveau toekennen
 
@@ -320,7 +325,7 @@ export async function loadDueTopics(playerName) {
       lastSeen: r.last_seen,
       nextDueAt: r.next_due_at,
       level: getMasteryLevel(r.attempts || 0, r.correct || 0),
-      path: ALL_LEARN_PATHS[r.path_id] || null,
+      path: PATHS_BY_ID[r.path_id] || null,
     })).filter((r) => r.path);
   } catch {
     return [];
@@ -347,7 +352,7 @@ export async function loadMasteryForPlayer(playerName) {
       lastSeen: r.last_seen,
       nextDueAt: r.next_due_at,
       level: getMasteryLevel(r.attempts || 0, r.correct || 0),
-      path: ALL_LEARN_PATHS[r.path_id] || null,
+      path: PATHS_BY_ID[r.path_id] || null,
     })).filter((r) => r.path); // filter records waarvan pad niet meer bestaat
   } catch {
     return [];

@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import supabase from "../../supabase";
-import { ALL_LEARN_PATHS } from "../../learnPaths";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { CURRICULA, curriculumNextStep, curriculumTotalSteps } from "../../curricula";
+
+// QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. stepCount/emoji/
+// title komen uit pathManifest (~155 kB) ipv ALL_LEARN_PATHS (5,8 MB).
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 import HeaderShared from "../../components/Header.jsx";
 import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
@@ -131,7 +135,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
                   fontSize: "var(--font-size-md)",
                 }}
               >
-                {ALL_LEARN_PATHS[next.pathId]?.emoji} {ALL_LEARN_PATHS[next.pathId]?.title}
+                {PATHS_BY_ID[next.pathId]?.emoji} {PATHS_BY_ID[next.pathId]?.title}
                 <span style={{ opacity: 0.85, fontWeight: 500 }}> · stap {next.stepIdx + 1}</span>
               </div>
             </div>
@@ -172,7 +176,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
         {curriculum.phases.map((phase, phaseIdx) => {
           const phasePathIds = phase.pathIds;
           const phaseTotal = phasePathIds.reduce(
-            (sum, pid) => sum + (ALL_LEARN_PATHS[pid]?.steps.length || 0),
+            (sum, pid) => sum + (PATHS_BY_ID[pid]?.stepCount || 0),
             0
           );
           const phaseDone = phasePathIds.reduce(
@@ -214,7 +218,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
 
               <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-2)", position: "relative" }}>
                 {phasePathIds.map((pid, pi) => {
-                  const path = ALL_LEARN_PATHS[pid];
+                  const path = PATHS_BY_ID[pid];
                   if (!path) {
                     return (
                       <Card key={pid} variant="ghost" padding="sm" style={{ color: "var(--color-text-muted)", fontSize: "var(--font-size-sm)" }}>
@@ -223,7 +227,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
                     );
                   }
                   const done = progressByPath[pid]?.size || 0;
-                  const total = path.steps.length;
+                  const total = path.stepCount || 0;
                   const pct = total ? Math.round((done / total) * 100) : 0;
                   const isStarted = done > 0;
                   const isComplete = done >= total;
@@ -250,7 +254,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
                       )}
                       <button
                         type="button"
-                        onClick={() => onPickStep(pid, isStarted && !isComplete ? findFirstUnfinished(path, progressByPath[pid]) : 0)}
+                        onClick={() => onPickStep(pid, isStarted && !isComplete ? findFirstUnfinished(total, progressByPath[pid]) : 0)}
                         style={pathRow(isNext, isComplete)}
                       >
                         <div
@@ -308,7 +312,7 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
                               marginBottom: isStarted ? 5 : 0,
                             }}
                           >
-                            {total} stappen · {path.chapters?.length || 0} hoofdstukken
+                            {total} stappen · {path.chapterCount || 0} hoofdstukken
                           </div>
                           {isStarted && (
                             <div>
@@ -361,9 +365,9 @@ export default function Curriculum({ curriculumId, userName, onPickStep, onHome,
   );
 }
 
-function findFirstUnfinished(path, doneSet) {
+function findFirstUnfinished(totalSteps, doneSet) {
   if (!doneSet) return 0;
-  for (let i = 0; i < path.steps.length; i++) {
+  for (let i = 0; i < totalSteps; i++) {
     if (!doneSet.has(i)) return i;
   }
   return 0;

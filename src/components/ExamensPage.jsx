@@ -9,7 +9,7 @@ import {
   getBijlageUrl,
 } from "../data/examens.js";
 import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
-import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
+import pathManifest from "../learnPaths/pathManifest.generated.json";
 
 // Examens-pagina (Mark idee 2026-05-08, herzien 2026-05-11):
 // TWEE gelijkwaardige modi (beide kern-feature, geen mag worden weggemoffeld):
@@ -39,7 +39,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
   // Examen-leerpaden (id startsWith "examen-") — onze "echt leren"-modus.
   // Gegroepeerd per subject voor visuele indeling.
   const examenLeerpaden = useMemo(() => {
-    return Object.values(ALL_LEARN_PATHS).filter((p) => p.id && p.id.startsWith("examen-"));
+    return pathManifest.filter((p) => p.id && p.id.startsWith("examen-"));
   }, []);
 
   const examenPathsBySubject = useMemo(() => {
@@ -172,7 +172,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                 {isOpen && (
                 <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
                   {lijst.map((p) => {
-                    const aantalVragen = (p.steps || []).reduce((s, st) => s + (st.checks?.length || 0), 0);
+                    const aantalVragen = p.checkCount ?? 0;
                     return (
                       <button
                         key={p.id}

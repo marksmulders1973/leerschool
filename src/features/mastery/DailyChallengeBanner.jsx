@@ -13,7 +13,9 @@
 
 import { useEffect, useState } from "react";
 import { loadMasteryForPlayer, recommendNextTopic, loadDueTopics } from "./mastery.js";
-import { ALL_LEARN_PATHS } from "../../learnPaths/index.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
+
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 import { track } from "../../utils.js";
 
 const TODAY_KEY = () => new Date().toISOString().split("T")[0];
@@ -86,7 +88,7 @@ export default function DailyChallengeBanner({ userName, onStart }) {
   if (!player) return null;
 
   const state = deriveState(streakInfo);
-  const recommendedPath = recommended ? ALL_LEARN_PATHS[recommended.pathId] : null;
+  const recommendedPath = recommended ? PATHS_BY_ID[recommended.pathId] : null;
 
   // Visuele states
   const variants = {
