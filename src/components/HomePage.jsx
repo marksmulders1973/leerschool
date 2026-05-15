@@ -1061,36 +1061,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
         {/* (verplaatst naar boven de hero — Prio 2 uit competitor-research) */}
 
-        {/* Mijn voortgang — alleen voor terugkerende leerlingen.
-            Leren + Oefenen staan voor iedereen al in de hero-tegels hierboven,
-            dus die hoeven we hier niet te herhalen. */}
-        {step === "role" && onMyMastery && (() => {
-          let savedName = null;
-          try { savedName = (JSON.parse(localStorage.getItem("ls_user") || "{}")?.name || "").trim(); } catch {}
-          if (!savedName) return null;
-          return (
-            <div style={{ width: "100%", maxWidth: 360, marginBottom: 16, marginTop: 4 }}>
-              <button
-                onClick={() => { track("home_cta_mastery"); onMyMastery(); }}
-                style={{
-                  width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: 14,
-                  border: "1px solid rgba(0,200,83,0.40)",
-                  background: "rgba(0,200,83,0.10)",
-                  color: "var(--color-brand-primary-100)",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 14, fontWeight: 700,
-                  cursor: "pointer",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
-                }}
-              >
-                <span style={{ fontSize: 18 }}>📈</span>
-                <span>Mijn voortgang — {savedName}</span>
-              </button>
-            </div>
-          );
-        })()}
+        {/* 'Mijn voortgang'-knop verwijderd 2026-05-15 op Mark's verzoek.
+            Voortgang blijft toegankelijk via bottom-nav (Voortgang-tab in
+            StudentHome) — homepage hoeft 'm niet apart te tonen. */}
 
         {/* Rol-tegels (Leerling / Student / Leerkracht) zijn voor nieuwe
             bezoekers IN de 6-tegel hero. Voor returning users tonen we ze
