@@ -111,6 +111,7 @@ import examenBiologie2023T1 from "./examenBiologie2023T1.js";
 import examenBiologie2025T1 from "./examenBiologie2025T1.js";
 import examenBiologie2025T2 from "./examenBiologie2025T2.js";
 import examenBiologie2022T1 from "./examenBiologie2022T1.js";
+import examenBiologie2022T2 from "./examenBiologie2022T2.js";
 import examenMaatschappijkunde2024T1 from "./examenMaatschappijkunde2024T1.js";
 import examenMaatschappijkunde2024T2 from "./examenMaatschappijkunde2024T2.js";
 import examenMaatschappijkunde2023T1 from "./examenMaatschappijkunde2023T1.js";
@@ -393,6 +394,7 @@ export const ALL_LEARN_PATHS = {
   "examen-biologie-2025-t2": examenBiologie2025T2,
   "examen-biologie-2025-t1": examenBiologie2025T1,
   "examen-biologie-2022-t1": examenBiologie2022T1,
+  "examen-biologie-2022-t2": examenBiologie2022T2,
   "examen-maatschappijkunde-2024-t1": examenMaatschappijkunde2024T1,
   "examen-maatschappijkunde-2024-t2": examenMaatschappijkunde2024T2,
   "examen-maatschappijkunde-2023-t1": examenMaatschappijkunde2023T1,
