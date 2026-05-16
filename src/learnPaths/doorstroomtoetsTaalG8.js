@@ -656,7 +656,7 @@ const steps = [
         q: "Wat betekent *'iemand een **hart onder de riem** steken'*?",
         options: ["Iemand bemoedigen / moed inspreken", "Iemand pijn doen", "Iemand wegsturen", "Iemand uitlachen"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Een 'hart' wijst eerder op iets positiefs dan op pijn — vriendelijk gebaar.", null, null],
       },
       {
         q: "*'Het was een **uitputtende** dag.'* Wat betekent **uitputtend**?",
@@ -1248,7 +1248,7 @@ const steps = [
         q: "Welk woord schrijf je **met 'ei'**?",
         options: ["trein", "vlijtig", "lijden", "blijven"],
         answer: 0,
-        wrongHints: [null, "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        wrongHints: [null, "Vlijtig komt van 'vlijt' — net als 'pijn' met lange ij.", null, "Vraag jezelf af welke spelling hoort bij 'spoorvervoer'."],
         uitlegPad: {
           stappen: [
             { titel: "Geen regel, uit hoofd", tekst: "Voor ei/ij bestaat geen makkelijke regel — woorden moet je uit hoofd kennen." },
@@ -1304,7 +1304,7 @@ const steps = [
         q: "Welk woord schrijf je **met 'au'** (niet ou)?",
         options: ["pauw", "boud", "houd", "stout"],
         answer: 0,
-        wrongHints: [null, "Andere spellingvariant.", "Andere spellingvariant.", "Andere spellingvariant."],
+        wrongHints: [null, null, "Werkwoord 'houden' (au of ou?) — denk aan 'koud' en 'oud' in dezelfde groep.", null],
         uitlegPad: {
           stappen: [
             { titel: "au/ou: geen vaste regel", tekst: "Voor 'au' en 'ou' bestaat geen automatische regel. Je moet de woorden uit je hoofd leren — net als bij ei/ij." },
