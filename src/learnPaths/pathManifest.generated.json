@@ -1905,6 +1905,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-geschiedenis-2022-t2",
+    "file": "./examenGeschiedenis2022T2.js",
+    "title": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2022-T2",
+    "triggerKeywords": [
+      "examen geschiedenis 2022 tijdvak 2",
+      "thorbecke liberalisme",
+      "recht van amendement",
+      "beurskrach 1929 duitsland",
+      "geheime politie totalitair",
+      "ddr vrije verkiezingen",
+      "populisme"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Geschiedenis 2022 tijdvak 2. Onderwerpen: Thorbecke + liberalisme, recht van amendement, Beurskrach 1929 Duitsland-crisis, geheime politie totalitair, DDR vrije ver",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-geschiedenis-2023-t1",
     "file": "./examenGeschiedenis2023T1.js",
     "title": "Examen oefenen — Geschiedenis 2023 tijdvak 1 (echte vragen)",

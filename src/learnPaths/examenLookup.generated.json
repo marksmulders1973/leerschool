@@ -895,6 +895,34 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 3"
     },
     {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 2"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 44,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 44"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 46,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 46"
+    },
+    {
       "examPathId": "examen-geschiedenis-2023-t2",
       "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
       "stepIdx": 0,
@@ -1095,6 +1123,20 @@
       "stepIdx": 3,
       "vraagNr": 30,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 30"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 15,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 15"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 19,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 2, vraag 19"
     },
     {
       "examPathId": "examen-geschiedenis-2023-t2",
