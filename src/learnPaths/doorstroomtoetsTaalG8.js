@@ -77,7 +77,7 @@ const steps = [
         q: "Welk woord is een **synoniem** van **'enorm'**?",
         options: ["Heel groot", "Beetje klein", "Snel", "Stil"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — 'enorm' gaat juist over GROOT.", "Snel gaat over tempo, 'enorm' over grootte.", "Stil gaat over geluid, 'enorm' over grootte."],
+        wrongHints: [null, "Tegenovergesteld — 'enorm' gaat juist over GROOT.", "Snel gaat over snelheid, niet over grootte. Synoniem = woord met dezelfde betekenis.", "Stil gaat over geluid, 'enorm' over grootte."],
         uitlegPad: {
           stappen: [
             { titel: "Synoniem = zelfde betekenis", tekst: "Een synoniem is een ander woord met (bijna) dezelfde betekenis. 'Enorm' = heel groot." },
@@ -117,7 +117,7 @@ const steps = [
         q: "Welk woord betekent **hetzelfde als** **'tevreden'**?",
         options: ["Blij met de situatie", "Boos", "Verbaasd", "Bang"],
         answer: 0,
-        wrongHints: [null, "Boos is juist NIET tevreden — dat is het tegenovergestelde.", "Verbaasd = verrast zijn; tevreden = blij. Andere emotie.", "Bang = angstig; tevreden = blij. Andere emotie."],
+        wrongHints: [null, "Boos is het tegenovergestelde van tevreden. Je zoekt een woord met dezélfde betekenis.", "Verbaasd = verrast zijn; tevreden = blij. Andere emotie.", "Bang = angstig; tevreden = blij. Andere emotie."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'tevreden'?", tekst: "Tevreden = blij met hoe iets gegaan is. Geen klacht. Voorbeeld: tevreden met je rapport." },

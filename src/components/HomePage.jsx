@@ -574,7 +574,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     if (!effectiveName && asGuest) effectiveName = "Speler";
     if (!effectiveName) {
       setShake(true);
-      setNameError("Vul eerst je naam in (of klik 'Doorgaan als gast').");
+      // Bug 4d (UX-review): naam-veld krijgt rode rand + inline foutmelding;
+      // tekst aangepast zodat de hint óók klopt als er geen 'gast'-knop is
+      // (bv. wanneer user via Google ingelogd is en Doorgaan → klikt).
+      setNameError("Vul even je naam in");
       setTimeout(() => setShake(false), 500);
       return;
     }
@@ -590,7 +593,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   return (
-    <div style={styles.page}>
+    <div style={{ ...styles.page, background: "linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%)" }}>
       {/* Bedankt-toast na delen */}
       {shareToast && (
         <div style={{

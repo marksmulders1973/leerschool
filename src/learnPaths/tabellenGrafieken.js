@@ -492,6 +492,11 @@ const steps = [
         },
       },
       {
+        // disabled = vraag leunt op step.svg (staafdiagram) die in citoMix-sample-flow
+        // verloren gaat, waardoor gebruikers in de Doorstroomtoets-simulator alleen
+        // de bare vraagtekst zien zonder grafiek-context. Blijft beschikbaar in
+        // dit leerpad zelf — daar is de svg wel aanwezig. (Bug 4a uit UX-review.)
+        disabled: true,
         q: "*Tabel rondjes hardlopen:* Tom **24**, Eva **32**, Ali **18**, Lisa **28**. **Hoeveel rondjes liep Ali minder dan Eva**?",
         options: ["14","18","32","50"],
         answer: 0,

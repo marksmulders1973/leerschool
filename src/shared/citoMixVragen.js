@@ -75,6 +75,10 @@ export function gatherPoChecks(opts = {}) {
       checks.forEach((c, checkIdx) => {
         if (!c || !Array.isArray(c.options) || typeof c.answer !== "number") return;
         if (!c.q && !c.question) return;
+        // Checks met `disabled: true` zijn buiten de Cito-mix sample gehouden —
+        // typisch omdat ze leunen op step.svg/tabel-context die in sample-flow
+        // verloren gaat. Ze blijven beschikbaar in het oorspronkelijke leerpad.
+        if (c.disabled) return;
         out.push({
           id: `${pathId}::${stepIdx}::${checkIdx}`,
           question: c.q || c.question,

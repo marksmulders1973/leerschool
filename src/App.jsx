@@ -192,6 +192,14 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
+  // Body-class voor lichtere achtergrond op homepage. Interne pagina's
+  // (leerpaden, vragen) houden het donkere thema voor minder afleiding.
+  useEffect(() => {
+    const isHome = location.pathname === "/";
+    document.body.classList.toggle("lk-home", isHome);
+    return () => { document.body.classList.remove("lk-home"); };
+  }, [location.pathname]);
+
   const [activeLearnPathId, setActiveLearnPathId] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");

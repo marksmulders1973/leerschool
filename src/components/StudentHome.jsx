@@ -453,7 +453,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           Kies je vak — leren of oefenen?
         </h3>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 10, marginBottom: 20 }}>
+        <div className="vakken-grid" style={{ marginBottom: 20 }}>
           {vakkenLijst.map((vak) => {
             const subj = SUBJECTS.find(s => s.id === vak.id);
             if (!subj) return null;

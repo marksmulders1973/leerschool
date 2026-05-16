@@ -210,10 +210,22 @@
         -webkit-tap-highlight-color: transparent;
       }
       #root { min-height: 100vh; }
-      /* Responsive container — vroeger hardcoded 480px in styles.app, nu schaalt mee per device. */
-      .app-shell { max-width: 480px; margin: 0 auto; }
-      @media (min-width: 600px)  { .app-shell { max-width: 560px; } }
-      @media (min-width: 1024px) { .app-shell { max-width: 800px; } }
+      /* Responsive container — mobiel-first, schaalt mee per device.
+         < 768px  → 560px (mobiel — ongewijzigd)
+         ≥ 768px  → 720px (tablet)
+         ≥ 1024px → 920px (laptop)
+         ≥ 1280px → 1100px (groot scherm) */
+      .app-shell { max-width: 560px; margin: 0 auto; }
+      @media (min-width: 768px)  { .app-shell { max-width: 720px; } }
+      @media (min-width: 1024px) { .app-shell { max-width: 920px; } }
+      @media (min-width: 1280px) { .app-shell { max-width: 1100px; } }
+      /* Vakken-overzicht (StudentHome): mobiel = 1 kolom, ≥ 1024px = 2 kolommen. */
+      .vakken-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      @media (min-width: 1024px) {
+        .vakken-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      }
+      /* Lichtere achtergrond op homepage — alleen bij <body class="lk-home">. */
+      body.lk-home { background: linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%); }
       /* Leerpaden-hub: lijst → 2-kolom grid op laptop zodat minder scrollen nodig is. */
       .lp-grid { display: flex; flex-direction: column; gap: 10px; }
       @media (min-width: 1024px) {

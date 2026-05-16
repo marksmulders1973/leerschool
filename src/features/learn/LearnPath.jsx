@@ -38,17 +38,40 @@ const C = {
   warm: "#ffd54f",
 };
 
+// Bug 4c (UX-review): chapter/sectie-labels mogen geen interne vraag-codes
+// als "(V11)" of "(V22, V38)" tonen. Defensieve strip — als een title eindigt
+// met `(V<digits>[, V<digits>]*)` halen we dat eraf voor de UI. De codes blijven
+// in de data staan (handig voor interne verwijzingen + comments).
+function stripInternalCodes(s) {
+  if (!s) return s;
+  return String(s).replace(/\s*\(V\d+(?:\s*,\s*V\d+)*\)\s*$/i, "").trim();
+}
+
 function renderInline(text) {
-  // Ondersteunt zowel **bold** (dubbele asterisks) als *bold* (enkele
-  // asterisks). Voor *...* moeten de asterisks niet-spatie raken zodat
-  // math-uitdrukkingen als "2 * 3" of "n * x" niet per ongeluk vet worden.
-  const parts = text.split(/(\*\*[^*]+\*\*|\*\S[^*]*\S\*|\*\S\*)/g);
+  // Ondersteunt **bold**, *bold* (asterisks raken niet-spatie aan beide kanten
+  // zodat "2 * 3" niet per ongeluk vet wordt) en [label](url)-markdown-links
+  // die als <a>-tag renderen — anders ziet de gebruiker rauwe Markdown-syntax.
+  const parts = text.split(/(\*\*[^*]+\*\*|\*\S[^*]*\S\*|\*\S\*|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((p, i) => {
     if (p.startsWith("**") && p.endsWith("**")) {
       return <strong key={i} style={{ color: "#ffffff" }}>{p.slice(2, -2)}</strong>;
     }
     if (p.startsWith("*") && p.endsWith("*") && p.length >= 3 && !p.startsWith("**")) {
       return <strong key={i} style={{ color: "#ffffff" }}>{p.slice(1, -1)}</strong>;
+    }
+    const linkMatch = p.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={i}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#00b0ff", textDecoration: "underline" }}
+        >
+          {linkMatch[1]}
+        </a>
+      );
     }
     return <span key={i}>{p}</span>;
   });
@@ -1356,7 +1379,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)" }}>
-                    {ch.emoji} {ch.title}
+                    {ch.emoji} {stripInternalCodes(ch.title)}
                   </div>
                   <div style={{ fontSize: 12, color: C.muted }}>
                     {doneCount}/{stepsInCh.length} delen{allDone ? " — voltooid" : ""}
