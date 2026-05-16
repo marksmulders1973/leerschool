@@ -372,7 +372,11 @@ const steps = [
           theorie: "1 A = 1 coulomb per seconde = ~6×10¹⁸ elektronen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Telefoonoplader ~1 A. Wasmachine ~10 A. Bliksem 30.000 A" }],
           basiskennis: [{ onderwerp: "mA", uitleg: "milli-ampère, 1/1000 A" }],
-          niveaus: { basis: "Ampère (A).", simpeler: "A.", nogSimpeler: "A." },
+          niveaus: {
+            basis: "Stroomsterkte wordt gemeten in **Ampère**, symbool A. = A.",
+            simpeler: "A staat voor Ampère — de eenheid van stroomsterkte. Volt is voor spanning. = A.",
+            nogSimpeler: "Stroom = Ampère (A). Onthoud: A = André-Marie Ampère, Franse wetenschapper.",
+          },
         },
       },
     ],

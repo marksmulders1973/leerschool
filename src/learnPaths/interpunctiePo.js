@@ -314,9 +314,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Mama zei: \"Kom maar mee.\" — netjes opgebouwd." }],
           basiskennis: [{ onderwerp: "5 onderdelen", uitleg: "Hoofdletter / dubbele punt / aanhalen / hoofdletter / leesteken." }],
           niveaus: {
-            basis: "Mama zei: \"Kom maar mee.\". A.",
-            simpeler: "Wat moet erin: Hoofdletter, dubbele punt, aanhalingstekens, hoofdletter, leesteken binnen aanhalingstekens. Antwoord A heeft dat allemaal. = A.",
-            nogSimpeler: "A.",
+            basis: "Mama zei: \"Kom maar mee.\". = A.",
+            simpeler: "5 dingen nodig: Hoofdletter / dubbele punt / aanhalingstekens / hoofdletter / leesteken binnen. Antwoord A heeft alles. = A.",
+            nogSimpeler: "Truc: Wie zei : \"Inhoud .\" — 5 dingen op rij. Antwoord A = correct.",
           },
         },
       },

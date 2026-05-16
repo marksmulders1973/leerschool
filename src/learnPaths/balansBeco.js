@@ -68,7 +68,11 @@ const steps = [
           theorie: "Balans = foto. W&V = film over een jaar.",
           voorbeelden: [{ type: "voorbeeld", tekst: "1 jan vs 31 dec geeft jaarverandering van bezit + schuld" }],
           basiskennis: [{ onderwerp: "moment vs periode", uitleg: "balans = punt, W&V = lijn" }],
-          niveaus: { basis: "Toont moment.", simpeler: "Foto van bezit/schuld.", nogSimpeler: "Foto." },
+          niveaus: {
+            basis: "Balans toont een moment in de tijd — bezit + schuld op één dag. = A.",
+            simpeler: "Een foto van bezit + schuld op één dag. Geen optellen over een periode. = A.",
+            nogSimpeler: "Truc: balans = foto (1 moment). Winst-en-verliesrekening = film (over jaar).",
+          },
         },
       },
     ],
@@ -538,7 +542,11 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           theorie: "Constant: huur, vast salaris, abonnementen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Maand met 0 omzet: nog steeds €X huur" }],
           basiskennis: [{ onderwerp: "verbinding met activiteit", uitleg: "huur niet, inkoop wel" }],
-          niveaus: { basis: "Maandhuur.", simpeler: "Vast bedrag huur.", nogSimpeler: "Huur." },
+          niveaus: {
+            basis: "Maandhuur is een constante kost — onafhankelijk van verkoop. = A.",
+            simpeler: "Huur blijft hetzelfde bedrag of je nu 1 of 1000 stuks verkoopt. Constant dus. = A.",
+            nogSimpeler: "Truc: 'constant' = stilstaand bedrag. Inkoop/vracht schalen met verkoop = variabel. Huur niet = constant.",
+          },
         },
       },
       {

@@ -1004,7 +1004,11 @@ ${gridSvg}
           theorie: "Een dalparabool heeft 1 laagste punt. Bergparabool: 1 hoogste punt.",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = x²: top op (0, 0). y = -x² + 4: top op (0, 4)" }],
           basiskennis: [{ onderwerp: "symmetrisch", uitleg: "top zit op de spiegel-as" }],
-          niveaus: { basis: "1.", simpeler: "Eén.", nogSimpeler: "1." },
+          niveaus: {
+            basis: "Eén top per parabool. = 1.",
+            simpeler: "Een parabool kantelt op één plek: het hoogste of laagste punt. Dat is de top — dus altijd 1.",
+            nogSimpeler: "Onthoud: parabool = U-vorm of berg-vorm. Altijd één 'kantelpunt' = 1 top.",
+          },
         },
       },
     ],

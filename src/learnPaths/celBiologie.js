@@ -193,7 +193,11 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           theorie: "Kern = bibliotheek van het DNA. Beschermt het tegen schade.",
           voorbeelden: [{ type: "voorbeeld", tekst: "DNA bepaalt of een cel een spiercel of huidcel wordt" }],
           basiskennis: [{ onderwerp: "erfelijk", uitleg: "wordt doorgegeven bij celdeling" }],
-          niveaus: { basis: "DNA.", simpeler: "Het 'recept' van de cel.", nogSimpeler: "Code." },
+          niveaus: {
+            basis: "In de celkern zit DNA — het erfelijk materiaal van de cel. = A.",
+            simpeler: "DNA = het 'recept' van de cel. De kern bewaart het veilig. = A.",
+            nogSimpeler: "Truc: kern = de bibliotheek. DNA = het boek. Beide woorden zeggen 'instructie-opslag'.",
+          },
         },
       },
       {
@@ -729,7 +733,11 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           theorie: "Check 3 dingen: kern? celwand? mitochondriën?",
           voorbeelden: [{ type: "voorbeeld", tekst: "Spiercel, huidcel, zenuwcel: allemaal dierlijke cellen" }],
           basiskennis: [{ onderwerp: "checklist", uitleg: "kenmerken vergelijken" }],
-          niveaus: { basis: "Dierlijke cel.", simpeler: "Kern + mito, geen wand.", nogSimpeler: "Dier." },
+          niveaus: {
+            basis: "Geen celwand + wel kern = dierlijke cel. = A.",
+            simpeler: "Plant heeft wand. Bacterie heeft wand + geen kern. Wel kern + geen wand → dierlijk. = A.",
+            nogSimpeler: "Check-volgorde: kern? mito? geen wand? → ja, ja, ja → dier. (Plant heeft wand.)",
+          },
         },
       },
       {
