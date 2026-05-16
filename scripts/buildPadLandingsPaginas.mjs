@@ -40,6 +40,12 @@ const KERN_PADEN = [
   { file: "kaartlezenPo", pitch: "Kaartlezen groep 6-8 — schaal, legenda, windrichtingen, topografische kaart." },
   { file: "tijdvakkenNederlandPo", pitch: "10 tijdvakken Nederlandse geschiedenis — Cito-tijdlijn van jagers-verzamelaars tot nu." },
   { file: "woordenschatPo", pitch: "Woordenschat groep 6-8 — synoniemen, tegenstellingen, spreekwoorden, context-truc." },
+  // 2e ronde uitbreiding 2026-05-16 — 5 extra Cito-relevante paden
+  { file: "synoniemenTegenstellingenPo", pitch: "Synoniemen + tegenstellingen groep 5-7 — Cito-taal kern met 'on-' truc en context-zin." },
+  { file: "spellingOverigePo", pitch: "Spelling groep 6-8 — ei/ij, au/ou, c/k en moeilijke woorden voor de Doorstroomtoets." },
+  { file: "werkwoordTijdenPo", pitch: "Werkwoordstijden groep 6-8 — tegenwoordige tijd, verleden tijd, voltooid deelwoord met d/t-regel." },
+  { file: "interpunctiePo", pitch: "Leestekens groep 5-7 — punt, komma, vraagteken, uitroepteken + dubbele punt + aanhalingstekens." },
+  { file: "tijdsduurRekenenPo", pitch: "Tijdsduur berekenen groep 6-8 — van klok-tijd 9:15 tot 10:45, uren+minuten optellen met 60-stap." },
 ];
 
 function escapeHtml(s) {
