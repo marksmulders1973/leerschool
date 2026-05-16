@@ -51,6 +51,11 @@ const KERN_PADEN = [
   { file: "dierenklassenPo", pitch: "Dierenklassen groep 5-7 — zoogdier vs vogel vs reptiel vs vis, met koudbloedig/warmbloedig + Cito-strikvraag-trucs." },
   { file: "lichaamGezondheidPo", pitch: "Lichaam + gezondheid groep 6-8 — skelet, spieren, organen, schijf van vijf, ademhaling en bloedsomloop." },
   { file: "continentenWereldPo", pitch: "Continenten + oceanen groep 6-8 — 7 continenten + 5 oceanen, hoofdsteden, tijdzones en bekende landen." },
+  // 4e ronde uitbreiding 2026-05-17 — 4 nieuwe Cito-PO paden uit sessie 16/05
+  { file: "europeseUniePo", pitch: "Europese Unie groep 7-8 — 27 lidstaten, Commissie/Parlement/Raden, euro, EU-symbolen + Nederlandse buurlanden." },
+  { file: "topografieEuropaPo", pitch: "Topografie Europa groep 7-8 — hoofdsteden 4 windrichtingen, Donau-rivier-trucs, Wolga, Pyreneeën, Middellandse Zee." },
+  { file: "wereldreligiesPo", pitch: "Wereldreligies groep 7-8 — 5 religies (christendom/islam/hindoeïsme/boeddhisme/jodendom), boeken, gebouwen, symbolen." },
+  { file: "oppervlakteOmtrekPo", pitch: "Oppervlakte en omtrek groep 6-8 — rechthoek, vierkant, driehoek, cirkel met praktische voorbeelden + 1 m² = 10.000 cm²." },
 ];
 
 function escapeHtml(s) {
