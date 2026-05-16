@@ -115,19 +115,73 @@ const steps = [
         q: "**24 ÷ 2** = ?",
         options: ["12", "22", "48", "26"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Vermenigvuldiging.", "Optelling."],
+        wrongHints: [null, "22 = 24 − 2 (aftrekking, niet delen).", "48 = 24 × 2 (vermenigvuldiging, niet delen).", "26 = 24 + 2 (optelling, niet delen)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Delen door 2 = halveren", tekst: "Delen door 2 betekent in 2 gelijke stukken splitsen — de helft pakken. Helft van 24 = **12**." },
+            { titel: "Truc voor halveren", tekst: "Bij even getallen: deel het cijferpaar in 2. 24 = 20 + 4 → helft = 10 + 2 = **12**." },
+            { titel: "Check terug", tekst: "12 × 2 = 24 ✓. Vermenigvuldigen + delen zijn elkaars tegenpolen — terug-rekenen bevestigt." },
+          ],
+          woorden: [{ woord: "halveren", uitleg: "In 2 gelijke stukken splitsen." }],
+          theorie: "Cito-truc: ÷ 2 = halveren. ÷ 4 = halveren + nog eens halveren. ÷ 10 = laatste cijfer (0) weghalen.",
+          voorbeelden: [
+            { type: "stap", tekst: "18 ÷ 2 = 9. 30 ÷ 2 = 15. 100 ÷ 2 = 50." },
+            { type: "stap", tekst: "Odd-getal halveren: 25 ÷ 2 = 12,5 (komma!). Voor PO mostly even getallen." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Op deze leeftijd weet je tafel-2 al uit je hoofd. ÷ 2 is gewoon andersom: 12 × 2 = 24, dus 24 ÷ 2 = 12." }],
+          niveaus: {
+            basis: "24 ÷ 2 = 12 (helft). = A.",
+            simpeler: "Helft van 24 = 12. = A.",
+            nogSimpeler: "12 = A.",
+          },
+        },
       },
       {
         q: "**40 ÷ 10** = ?",
         options: ["4", "30", "400", "50"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Vermenigvuldiging.", "Optelling."],
+        wrongHints: [null, "30 = 40 − 10 (aftrekking).", "400 = 40 × 10 (vermenigvuldiging).", "50 = 40 + 10 (optelling)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Delen door 10 = laatste 0 weghalen", tekst: "Bij delen door 10 haal je gewoon de laatste 0 weg. **40** ÷ 10 = **4**." },
+            { titel: "Waarom werkt dit?", tekst: "Onze cijfer-systeem heeft 10 als basis. 40 betekent: 4 keer 10 + 0 keer 1. Dus 40 ÷ 10 = hoeveel keer 10? = 4 keer." },
+            { titel: "Bij grotere getallen", tekst: "100 ÷ 10 = 10. 250 ÷ 10 = 25. 1000 ÷ 10 = 100. Altijd: 0 eraf." },
+          ],
+          woorden: [{ woord: "tientallen", uitleg: "Getallen die delen op 10 (10, 20, 30, ...)." }],
+          theorie: "Cito-truc: ÷ 10 = 0 weg. ÷ 100 = 2 nullen weg. ÷ 1000 = 3 nullen weg.",
+          voorbeelden: [{ type: "stap", tekst: "70 ÷ 10 = 7. 900 ÷ 10 = 90. 30 ÷ 10 = 3." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Werkt alleen bij getallen die op 0 eindigen (tientallen). 47 ÷ 10 zou 4,7 zijn — komma erbij." }],
+          niveaus: {
+            basis: "40 ÷ 10 = 4 (0 eraf). = A.",
+            simpeler: "Haal de laatste 0 weg van 40 → 4. = A.",
+            nogSimpeler: "4 = A.",
+          },
+        },
       },
       {
         q: "**35 ÷ 5** = ?",
         options: ["7", "30", "40", "175"],
         answer: 0,
-        wrongHints: [null, "Aftrekking.", "Optelling.", "Vermenigvuldiging."],
+        wrongHints: [null, "30 = 35 − 5 (aftrekking).", "40 = 35 + 5 (optelling).", "175 = 35 × 5 (vermenigvuldiging)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Welk getal × 5 = 35?", tekst: "Delen door 5 = tafel-5 terug-zoeken. **Welk getal × 5 = 35?** Tel mee: 5, 10, 15, 20, 25, 30, **35**. Dat was 7×. Dus 35 ÷ 5 = **7**." },
+            { titel: "Truc: ÷ 5 = ÷ 10 × 2", tekst: "Alternatief: 35 ÷ 10 = 3,5. Dan × 2 = **7**. Soms sneller bij grotere getallen." },
+            { titel: "Check", tekst: "7 × 5 = 35 ✓. Terug-rekenen bevestigt het antwoord altijd." },
+          ],
+          woorden: [{ woord: "tafel van 5", uitleg: "5, 10, 15, 20, 25, 30, 35, 40, ..." }],
+          theorie: "Cito-truc: ÷ 5 → kijk welke veelvoud van 5 het is. Tafel-5 ken je uit je hoofd, dus terug-zoeken is snel.",
+          voorbeelden: [
+            { type: "stap", tekst: "45 ÷ 5 = 9 (9 × 5 = 45). 60 ÷ 5 = 12. 75 ÷ 5 = 15." },
+            { type: "stap", tekst: "Bij niet-tafel-5 (bv. 32 ÷ 5): kom uit op 6 rest 2, of 6,4." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Op een nood-moment: tel 5-stappen van 5 tot je het getal bereikt, tel hoeveel stappen. Bij 35: 5-10-15-20-25-30-35 = 7 stappen." }],
+          niveaus: {
+            basis: "35 ÷ 5 = 7 (7 × 5 = 35). = A.",
+            simpeler: "Tafel-5 terug: welk getal × 5 = 35? Antwoord 7. = A.",
+            nogSimpeler: "7 = A.",
+          },
+        },
       },
       {
         q: "**100 ÷ 10** = ?",

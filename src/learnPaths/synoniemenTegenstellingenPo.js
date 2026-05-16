@@ -55,13 +55,58 @@ const steps = [
         q: "Wat is een **synoniem**?",
         options: ["Een woord met bijna dezelfde betekenis", "Een woord met tegengestelde betekenis", "Een woord met dezelfde uitspraak", "Een woord uit een vreemde taal"],
         answer: 0,
-        wrongHints: [null, "Dat is een tegenstelling.", "Dat is een homoniem.", "Dat is een leenwoord."],
+        wrongHints: [null, "Dat is een tegenstelling (antoniem) — precies omgekeerd.", "Dat is een homoniem — bv. 'bank' (zit) en 'bank' (geld).", "Dat is een leenwoord — bv. 'computer' (Engels) of 'paraplu' (Frans)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Synoniem = (bijna) hetzelfde", tekst: "Een **synoniem** is een ander woord dat (bijna) dezelfde betekenis heeft. Bv. blij = vrolijk = gelukkig. Drie woorden, één gevoel." },
+            { titel: "Waarom 'bijna' hetzelfde?", tekst: "Synoniemen zijn niet altijd 100% identiek. *'Lekker'* en *'goed'* zijn synoniem bij **eten** ('lekker eten' = 'goed eten'), maar niet bij **weer** ('lekker weer' klinkt natuurlijker dan 'goed weer'). Nuance-verschil." },
+            { titel: "Waarom belangrijk?", tekst: "Schrijven met synoniemen voorkomt saaie herhaling. Op Cito krijg je vaak: 'welk woord betekent (bijna) hetzelfde als X?'. Dat is een synoniem-vraag." },
+          ],
+          woorden: [
+            { woord: "synoniem", uitleg: "Ander woord met (bijna) dezelfde betekenis." },
+            { woord: "antoniem", uitleg: "Tegenovergesteld woord (de tegenstelling)." },
+            { woord: "homoniem", uitleg: "Woord met meerdere betekenissen — bv. 'bank'." },
+          ],
+          theorie: "Cito-truc: zoek bij synoniem-vragen het woord dat in dezelfde zin hetzelfde gevoel/idee oproept als het oorspronkelijke woord.",
+          voorbeelden: [
+            { type: "stap", tekst: "**blij = vrolijk** — beide positieve gevoelens, kunnen elkaar vervangen." },
+            { type: "stap", tekst: "**blij ≠ boos** — tegenovergesteld gevoel, dus geen synoniem maar een antoniem." },
+          ],
+          basiskennis: [{ onderwerp: "Eenvoudige check", uitleg: "Kun je het ene woord vervangen door het andere zonder dat de zin van betekenis verandert? Ja = synoniem. Nee = geen synoniem." }],
+          niveaus: {
+            basis: "Synoniem = woord met bijna dezelfde betekenis. = A.",
+            simpeler: "Twee woorden die hetzelfde betekenen, bv. blij en vrolijk. Dat zijn synoniemen. = A.",
+            nogSimpeler: "Truc: synoniem = sameblijven. Beide woorden zeggen hetzelfde.",
+          },
+        },
       },
       {
         q: "Welk woord is een **synoniem** van **'blij'**?",
         options: ["Vrolijk", "Boos", "Verdrietig", "Bang"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Tegenstelling.", "Niet hetzelfde."],
+        wrongHints: [null, "Tegenovergesteld gevoel — dat is een tegenstelling, geen synoniem.", "Tegenovergesteld gevoel — verdrietig is het tegenovergestelde van blij.", "Ander negatief gevoel, maar niet hetzelfde als blij."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent 'blij'?", tekst: "**Blij** = een fijn gevoel, gelukkig, vrolijk. Iemand die net een cadeau kreeg, is blij." },
+            { titel: "Welk woord lijkt erop?", tekst: "**Vrolijk** = óók een fijn gevoel, met een glimlach, lachen. Klassiek synoniem van blij." },
+            { titel: "Andere opties?", tekst: "Boos = boze gezicht, niet blij. Verdrietig = huilen, het tegenovergestelde van blij. Bang = angstig, ander gevoel. Allemaal geen synoniemen." },
+          ],
+          woorden: [
+            { woord: "blij", uitleg: "Een fijn, positief gevoel." },
+            { woord: "vrolijk", uitleg: "Hetzelfde — fijn gevoel, vaak met lachen erbij." },
+          ],
+          theorie: "Bij gevoels-synoniemen: zoek het woord met dezelfde 'kleur' van gevoel (positief/negatief).",
+          voorbeelden: [
+            { type: "stap", tekst: "Andere blij-synoniemen: gelukkig, opgewekt, in een goed humeur." },
+            { type: "stap", tekst: "Blij-antoniemen (tegenstellingen): verdrietig, boos, somber, neerslachtig." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Sorteer eerst alle opties: welke zijn positief? Welke negatief? Bij blij zoek je een positief woord — alleen 'vrolijk' is positief in deze lijst." }],
+          niveaus: {
+            basis: "Vrolijk = synoniem van blij. = A.",
+            simpeler: "Blij + vrolijk = beide positief gevoel. Dus synoniem. = A.",
+            nogSimpeler: "Vrolijk = A.",
+          },
+        },
       },
       {
         q: "Welk woord betekent hetzelfde als **'enorm'**?",
@@ -104,19 +149,74 @@ const steps = [
         q: "Synoniem van **'snel'**?",
         options: ["Vlug", "Traag", "Bang", "Klein"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Geen synoniem.", "Geen synoniem."],
+        wrongHints: [null, "Traag = het tegenovergestelde van snel.", "Bang = ander gevoel, niets met snelheid.", "Klein = grootte, niets met snelheid."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Snel betekent...", tekst: "**Snel** = hoge snelheid, in korte tijd. Een snelle auto, snel rennen, snel praten." },
+            { titel: "Welk woord lijkt op snel?", tekst: "**Vlug** is een Nederlands woord dat exact hetzelfde betekent als snel. *'Vlug naar binnen!'* = *'Snel naar binnen!'*" },
+            { titel: "Andere synoniemen", tekst: "Gauw, rap, kwiek, in een snelheid. Allemaal woorden voor hoge snelheid." },
+          ],
+          woorden: [
+            { woord: "snel", uitleg: "Hoge snelheid." },
+            { woord: "vlug", uitleg: "Synoniem voor snel, vooral in beweging." },
+            { woord: "traag", uitleg: "Antoniem (tegenstelling): lage snelheid." },
+          ],
+          theorie: "Cito-truc: bij snelheids-woorden vraag jezelf — gaat het snel of langzaam? Synoniem = zelfde 'kant' (snel of langzaam).",
+          voorbeelden: [{ type: "stap", tekst: "Snel-synoniemen sorteren op stijl: vlug (alledaags), gauw (informeel), rap (informeel), kwiek (literair). Allemaal snelheid + positief." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Snel ↔ traag is een klassiek antoniem-paar. Twee andere klassieke paren: groot↔klein, mooi↔lelijk." }],
+          niveaus: {
+            basis: "Vlug = synoniem van snel. = A.",
+            simpeler: "Snel + vlug = beide hoge snelheid. Hetzelfde. = A.",
+            nogSimpeler: "Vlug = A.",
+          },
+        },
       },
       {
         q: "Synoniem van **'aardig'**?",
         options: ["Vriendelijk", "Boos", "Klein", "Snel"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Iets anders.", "Iets anders."],
+        wrongHints: [null, "Boos = tegenovergestelde gevoel.", "Klein = grootte, niets met karakter.", "Snel = snelheid, niets met karakter."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Aardig betekent...", tekst: "**Aardig** = lief, vriendelijk, helpend. Een aardige juf, een aardige buurman. Positief karakter-woord." },
+            { titel: "Welk woord lijkt erop?", tekst: "**Vriendelijk** = bijna identiek. Een vriendelijke groet, een vriendelijke buur. Allebei positief karakter." },
+            { titel: "Andere synoniemen aardig", tekst: "Lief, sympathiek, beleefd, behulpzaam, hartelijk. Allemaal positieve karakter-woorden." },
+          ],
+          woorden: [{ woord: "aardig", uitleg: "Lief en vriendelijk in karakter." }, { woord: "vriendelijk", uitleg: "Lief en aardig — synoniem." }],
+          theorie: "Karakter-synoniemen sorteren: positief (aardig, lief, vriendelijk, hartelijk) vs negatief (boos, gemeen, vals).",
+          voorbeelden: [{ type: "stap", tekst: "*'De aardige man hielp mij.'* = *'De vriendelijke man hielp mij.'* Beide zinnen hetzelfde." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij karakter-vragen: pos vs neg sorteren. Aardig = positief. Vriendelijk ook positief = synoniem." }],
+          niveaus: {
+            basis: "Vriendelijk = synoniem van aardig. = A.",
+            simpeler: "Beide positief karakter. = A.",
+            nogSimpeler: "Vriendelijk = A.",
+          },
+        },
       },
       {
         q: "Welk paar zijn synoniemen?",
         options: ["prachtig + mooi", "groot + klein", "blij + verdrietig", "snel + langzaam"],
         answer: 0,
-        wrongHints: [null, "Tegenstelling.", "Tegenstelling.", "Tegenstelling."],
+        wrongHints: [null, "Groot + klein zijn tegenstellingen — niet hetzelfde maar omgekeerd.", "Blij + verdrietig zijn tegenstellingen.", "Snel + langzaam zijn tegenstellingen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Lees elke optie", tekst: "Per paar: betekenen ze hetzelfde (= synoniem) of omgekeerd (= tegenstelling)? Synoniem zoek je hier." },
+            { titel: "Prachtig + mooi", tekst: "**Prachtig** = heel mooi. **Mooi** = aantrekkelijk, goed om te zien. Beide positief over uiterlijk. Synoniem!" },
+            { titel: "De andere paren", tekst: "Groot ↔ klein = grootte omgedraaid. Blij ↔ verdrietig = gevoel omgedraaid. Snel ↔ langzaam = snelheid omgedraaid. Alle 3 tegenstellingen, geen synoniemen." },
+          ],
+          woorden: [
+            { woord: "prachtig", uitleg: "Heel erg mooi." },
+            { woord: "mooi", uitleg: "Aantrekkelijk om te zien." },
+          ],
+          theorie: "Cito-truc paren-vraag: lees beide woorden van elk paar. Vraag: zeggen ze hetzelfde? Ja → synoniem. Tegengesteld → antoniem.",
+          voorbeelden: [{ type: "stap", tekst: "Synoniem-paren: blij+vrolijk, snel+vlug, klein+miniscuul. Antoniem-paren: dag+nacht, jong+oud." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij paren: 'kunnen ze elkaar vervangen in een zin?' Ja → synoniem. Nee, betekenis wordt omgekeerd → antoniem." }],
+          niveaus: {
+            basis: "prachtig + mooi = beide aantrekkelijk = synoniem. = A.",
+            simpeler: "Andere paren zijn tegenstellingen. Alleen prachtig+mooi = hetzelfde. = A.",
+            nogSimpeler: "prachtig + mooi = A.",
+          },
+        },
       },
       {
         q: "Welk woord is GEEN synoniem van 'rennen'?",

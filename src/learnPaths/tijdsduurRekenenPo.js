@@ -89,19 +89,76 @@ const steps = [
         q: "**1 uur** is hoeveel **minuten**?",
         options: ["60 minuten", "100 minuten", "30 minuten", "24 minuten"],
         answer: 0,
-        wrongHints: [null, "Niet 100 — tijd is geen 100-base, maar 60.", "Dat is een half uur.", "24 = uren in een dag, niet minuten in een uur."],
+        wrongHints: [null, "Bij tijd telt niet 100 maar 60 — de klok heeft 60 streepjes per uur.", "Een half uur = 30 min. Vraag is over een heel uur.", "24 = uren in een dag, niet minuten in een uur."],
+        uitlegPad: {
+          stappen: [
+            { titel: "60-stap bij tijd", tekst: "Bij tijd-meten gaat alles in stappen van 60: 60 seconden = 1 minuut, 60 minuten = 1 uur. Niet 100 zoals bij geld of getallen." },
+            { titel: "Op de klok zichtbaar", tekst: "Een analoge klok heeft 60 streepjes voor de minuten. Eén volle rondje van de grote wijzer = 60 minuten = 1 uur." },
+            { titel: "Andere tijd-omrekeningen", tekst: "1 minuut = 60 seconden. 1 dag = 24 uur. 1 week = 7 dagen. 1 jaar = ~365 dagen." },
+          ],
+          woorden: [{ woord: "60-base", uitleg: "Tijd gaat met 60, niet 100. Sinds de oude Babyloniërs." }],
+          theorie: "Cito-truc: bij tijd-vraag — altijd 60 omrekenen, niet 100. Veelgemaakte fout: '1 uur 70 min' (niet bestaand) ipv '2 uur 10 min'.",
+          voorbeelden: [
+            { type: "stap", tekst: "2 uur = 2 × 60 = 120 min. 30 min = 1/2 uur = halve. 90 min = 1u 30min." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "60 min = 1 uur. Klassiek getal, onthoud dit en alle tijd-vragen worden makkelijker." }],
+          niveaus: {
+            basis: "1 uur = 60 minuten. = A.",
+            simpeler: "Klok gaat in 60-stappen. 1 uur = 60 minuten. = A.",
+            nogSimpeler: "60 = A.",
+          },
+        },
       },
       {
         q: "**3 minuten** = ... **seconden**?",
         options: ["180 sec", "30 sec", "60 sec", "300 sec"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 min = 60 sec. Dus 3 × 60 = 180.", "Dat is 1 minuut.", "Te veel — controleer 3 × 60."],
+        wrongHints: [null, "Te weinig — 1 min = 60 sec, dus 3 × 60 = 180.", "Dat is maar 1 minuut, niet 3.", "Te veel — controleer 3 × 60 = 180."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Stap 1: hoeveel sec in 1 min?", tekst: "**1 minuut = 60 seconden**. Vast feit." },
+            { titel: "Stap 2: × aantal min", tekst: "3 min = 3 × 60 = **180 seconden**." },
+            { titel: "Check: snel uitrekenen", tekst: "3 × 6 = 18. Plus 0 erachter (vermenigvuldigen met 10 voor de extra 0). = 180." },
+          ],
+          woorden: [{ woord: "seconde", uitleg: "Korte tijd-eenheid. 60 zitten er in een minuut." }],
+          theorie: "Cito-truc: ÷ 60 of × 60. Minuten naar seconden = × 60. Seconden naar minuten = ÷ 60.",
+          voorbeelden: [
+            { type: "stap", tekst: "5 min = 300 sec. 10 min = 600 sec. Half min = 30 sec." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Werk met tafel-6 (3 × 6 = 18) + 0 eraan plakken. Snelle truc voor 'min naar sec'." }],
+          niveaus: {
+            basis: "3 min × 60 = 180 sec. = A.",
+            simpeler: "3 × 60 = 180. = A.",
+            nogSimpeler: "180 = A.",
+          },
+        },
       },
       {
         q: "Wat is **tijdsduur**?",
         options: ["Hoe lang iets duurt", "Wanneer iets begint", "De huidige tijd", "Het dagdeel"],
         answer: 0,
-        wrongHints: [null, "Dat is een tijdstip, niet tijdsduur.", "Dat is een tijdstip.", "Een dagdeel is iets als 'ochtend' — niet de tijdsduur zelf."],
+        wrongHints: [null, "Dat is een tijdstip (wanneer = punt in tijd), niet tijdsduur (hoe lang).", "Dat is ook een tijdstip — de klok-aanwijzing op dit moment.", "Een dagdeel is een tijd-categorie (ochtend, middag), geen duur."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tijdsduur = hoe lang", tekst: "**Tijdsduur** vertelt hoe lang iets duurt — van begin tot eind. Bv. een schooldag duurt 6,5 uur. Een film 1 uur 30 min." },
+            { titel: "Verschil met tijdstip", tekst: "**Tijdstip** = wanneer? (om 14:00). **Tijdsduur** = hoe lang? (30 minuten). Cito test of je deze 2 begrippen niet door elkaar haalt." },
+            { titel: "Cito-truc bij vraag-tekst", tekst: "Kijk naar woorden: 'hoe lang' / 'duurt' / 'totale tijd' → tijdsduur. 'Wanneer' / 'om welk uur' / 'hoe laat' → tijdstip." },
+          ],
+          woorden: [
+            { woord: "tijdsduur", uitleg: "Hoe lang iets duurt (een aantal minuten/uren)." },
+            { woord: "tijdstip", uitleg: "Wanneer iets gebeurt (een klok-tijd zoals 14:30)." },
+          ],
+          theorie: "Bij Cito-rekenen-vragen 80% kans dat het gaat om tijdsduur berekenen tussen 2 tijdstippen. Bv. 'van 9:15 tot 10:45 — hoe lang?' = duur-vraag.",
+          voorbeelden: [
+            { type: "stap", tekst: "Tijdstip: het is nu 13:45 (klok-aanwijzing). Tijdsduur: het duurde 45 minuten (van 13:00 tot 13:45)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tijdstip = klok-foto (1 moment). Tijdsduur = 2 momenten + verschil." }],
+          niveaus: {
+            basis: "Tijdsduur = hoe lang iets duurt. = A.",
+            simpeler: "Duur = lengte in tijd, niet wanneer. = A.",
+            nogSimpeler: "Hoe lang = A.",
+          },
+        },
       },
       {
         q: "**1 uur 70 minuten** — wat is dat in netjes geschreven tijd?",
