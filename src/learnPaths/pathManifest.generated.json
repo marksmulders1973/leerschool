@@ -1683,6 +1683,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-engels-2022-t2",
+    "file": "./examenEngels2022T2.js",
+    "title": "Examen oefenen — Engels 2022 tijdvak 2 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2022-T2",
+    "triggerKeywords": [
+      "examen engels 2022 tijdvak 2",
+      "smuggling boat customs",
+      "empathy museum walk a mile",
+      "primary sports day inverness",
+      "sottes upcycling fashion",
+      "youth criminal justice canada",
+      "siamese twins chang eng bunker"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2022 tijdvak 2. Teksten: Smuggling-bord UK, Empathy Museum 'Walk a Mile', Primary school sports day Inverness, Sottes upcycling fashion, Canada Youth Justice",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 4,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-engels-2023-t1",
     "file": "./examenEngels2023T1.js",
     "title": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
