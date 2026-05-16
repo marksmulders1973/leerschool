@@ -1,6 +1,13 @@
 {
   "cel-biologie": [
     {
+      "examPathId": "examen-biologie-2022-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 24,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Biologie 2022 tijdvak 1, vraag 24"
+    },
+    {
       "examPathId": "examen-biologie-2024-t1",
       "examPathTitle": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
       "stepIdx": 2,
@@ -9,6 +16,48 @@
     }
   ],
   "cse-leesvaardigheid-engels": [
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 8"
+    },
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 12"
+    },
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 19,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 19"
+    },
+    {
+      "examPathId": "examen-engels-2023-t1",
+      "examPathTitle": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2023 tijdvak 1, vraag 23"
+    },
     {
       "examPathId": "examen-engels-2024-t2",
       "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
@@ -130,6 +179,20 @@
   ],
   "genetica-erfelijkheid-biologie": [
     {
+      "examPathId": "examen-biologie-2022-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Biologie 2022 tijdvak 1, vraag 10"
+    },
+    {
+      "examPathId": "examen-biologie-2022-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 22,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Biologie 2022 tijdvak 1, vraag 22"
+    },
+    {
       "examPathId": "examen-biologie-2023-t1",
       "examPathTitle": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
       "stepIdx": 3,
@@ -184,6 +247,20 @@
     }
   ],
   "lichaam-gezondheid-po": [
+    {
+      "examPathId": "examen-biologie-2022-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Biologie 2022 tijdvak 1, vraag 4"
+    },
+    {
+      "examPathId": "examen-biologie-2022-t1",
+      "examPathTitle": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 46,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Biologie 2022 tijdvak 1, vraag 46"
+    },
     {
       "examPathId": "examen-biologie-2025-t2",
       "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
@@ -468,6 +545,13 @@
   ],
   "pincode-buitenland-eu": [
     {
+      "examPathId": "examen-economie-2022-t1",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 13"
+    },
+    {
       "examPathId": "examen-economie-2023-t1",
       "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
       "stepIdx": 1,
@@ -562,6 +646,13 @@
     }
   ],
   "pincode-inkomen-welvaart": [
+    {
+      "examPathId": "examen-economie-2022-t1",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 37,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 37"
+    },
     {
       "examPathId": "examen-economie-2023-t1",
       "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
@@ -674,6 +765,13 @@
   ],
   "pincode-overheid": [
     {
+      "examPathId": "examen-economie-2022-t1",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 19,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 19"
+    },
+    {
       "examPathId": "examen-economie-2023-t2",
       "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 2 (echte vragen)",
       "stepIdx": 0,
@@ -704,6 +802,13 @@
   ],
   "pincode-werk-arbeidsmarkt": [
     {
+      "examPathId": "examen-economie-2022-t1",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 41,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 41"
+    },
+    {
       "examPathId": "examen-economie-2024-t1",
       "examPathTitle": "Examen oefenen — Economie 2024 tijdvak 1 (echte vragen)",
       "stepIdx": 5,
@@ -726,6 +831,13 @@
     }
   ],
   "tijdvakken-geschiedenis": [
+    {
+      "examPathId": "examen-geschiedenis-2022-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 3"
+    },
     {
       "examPathId": "examen-geschiedenis-2025-t1",
       "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
@@ -820,7 +932,37 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 48"
     }
   ],
+  "vraag-aanbod-economie": [
+    {
+      "examPathId": "examen-economie-2022-t1",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 32,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 32"
+    }
+  ],
   "wereldoorlog2-geschiedenis": [
+    {
+      "examPathId": "examen-geschiedenis-2022-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 17"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 20,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 20"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2022-t1",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 30"
+    },
     {
       "examPathId": "examen-geschiedenis-2025-t1",
       "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",

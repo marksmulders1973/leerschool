@@ -1276,6 +1276,29 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "examen-biologie-2022-t1",
+    "file": "./examenBiologie2022T1.js",
+    "title": "Examen oefenen — Biologie 2022 tijdvak 1 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2022-T1",
+    "triggerKeywords": [
+      "examen biologie 2022 tijdvak 1",
+      "geslacht bevruchting",
+      "vaccin actief passief",
+      "witte bloedcellen kern",
+      "darm water opname",
+      "dunne darm koolhydraten"
+    ],
+    "intro": "5 echte examenvragen uit VMBO-GL/TL Biologie 2022 tijdvak 1. Onderwerpen: geslachtsbepaling bevruchting, vaccin kunstmatig-actief, witte bloedcellen DNA, darm water-opname, dunne darm koolhydraten.",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 2,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-biologie-2023-t1",
     "file": "./examenBiologie2023T1.js",
     "title": "Examen oefenen — Biologie 2023 tijdvak 1 (echte vragen)",
@@ -1402,6 +1425,29 @@
     "intro": "6 echte examenvragen uit VMBO-GL/TL biologie 2025 tijdvak 2. Onderwerpen: meerling-kans (FSH), nageboorte-fase, geluid-waarneming grote hersenen, gal-functie emulgeren, zaadcel-route, giraffe consumen",
     "stepCount": 6,
     "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
+    "id": "examen-economie-2022-t1",
+    "file": "./examenEconomie2022T1.js",
+    "title": "Examen oefenen — Economie 2022 tijdvak 1 (echte vragen)",
+    "subject": "economie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Economie - eindexamen oefenen 2022-T1",
+    "triggerKeywords": [
+      "examen economie 2022 tijdvak 1",
+      "eu vrij verkeer personen",
+      "cpb prinsjesdag",
+      "modaal inkomen",
+      "uwv werknemersverzekeringen",
+      "vraag aanbod"
+    ],
+    "intro": "5 echte examenvragen uit VMBO-GL/TL Economie 2022 tijdvak 1. Onderwerpen: EU vrij verkeer personen, CPB doorrekening Prinsjesdag, recordoogst & prijsdaling, modaal inkomen, UWV werknemersverzekeringen",
+    "stepCount": 5,
+    "checkCount": 5,
     "chapterCount": 3,
     "estimatedMinutes": 5
   },
@@ -1567,6 +1613,29 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-engels-2023-t1",
+    "file": "./examenEngels2023T1.js",
+    "title": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2023-T1",
+    "triggerKeywords": [
+      "examen engels 2023 tijdvak 1",
+      "rugby twickenham",
+      "very important trees",
+      "jamaican bobsled",
+      "wild place project",
+      "smokejumpers canada"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2023 tijdvak 1. Onderwerpen: rugby-train info, Very Important Trees campagne, Jamaicaanse bobsledders, Wild Place Project, smokejumpers Canada.",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-engels-2024-t1",
     "file": "./examenEngels2024T1.js",
     "title": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
@@ -1667,6 +1736,29 @@
     "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 2. Onderwerpen: koemest-biogas Duitsland, 98-jarige spelling bee, phones in schools, vintage clothing sizing, bridezilla mocking-toon, Māori tā ",
     "stepCount": 6,
     "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
+    "id": "examen-geschiedenis-2022-t1",
+    "file": "./examenGeschiedenis2022T1.js",
+    "title": "Examen oefenen — Geschiedenis 2022 tijdvak 1 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2022-T1",
+    "triggerKeywords": [
+      "examen geschiedenis 2022 tijdvak 1",
+      "caoutchoucartikel kiesrecht",
+      "nazi terreur strafkampen",
+      "censuur duitse pers",
+      "hongerwinter 1944",
+      "spoorwegstaking"
+    ],
+    "intro": "4 echte examenvragen uit VMBO-GL/TL Geschiedenis 2022 tijdvak 1. Onderwerpen: caoutchoucartikel 1887, Nazi-regime kenmerken, censuur Duitse pers, Hongerwinter Spoorwegstaking.",
+    "stepCount": 4,
+    "checkCount": 4,
     "chapterCount": 3,
     "estimatedMinutes": 5
   },
