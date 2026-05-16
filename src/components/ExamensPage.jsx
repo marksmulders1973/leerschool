@@ -43,6 +43,20 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
     return pathManifest.filter((p) => p.id && p.id.startsWith("examen-"));
   }, []);
 
+  // PDF-examen-id ↔ oefen-leerpad-id bridge (Mark verzoek 2026-05-16).
+  // PDF format: "<vak>-vmbo-gltl-<jaar>-tijdvak<n>" (bv "biologie-vmbo-gltl-2024-tijdvak1")
+  // Leerpad format: "examen-<vak>-<jaar>-t<n>" (bv "examen-biologie-2024-t1")
+  // Aliassen: maatschappijleer (PDF-label) ↔ maatschappijkunde (leerpad-vak).
+  const examenLeerpadIds = useMemo(() => new Set(examenLeerpaden.map((p) => p.id)), [examenLeerpaden]);
+  const getOefenLeerpadForExamen = useMemo(() => {
+    return (examen) => {
+      if (!examen?.vak || !examen?.jaar || !examen?.tijdvak) return null;
+      const vak = examen.vak === "maatschappijleer" ? "maatschappijkunde" : examen.vak;
+      const candidate = `examen-${vak}-${examen.jaar}-t${examen.tijdvak}`;
+      return examenLeerpadIds.has(candidate) ? candidate : null;
+    };
+  }, [examenLeerpadIds]);
+
   const examenPathsBySubject = useMemo(() => {
     const out = {};
     for (const p of examenLeerpaden) {
@@ -377,6 +391,40 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                               ▶ Speel in de app (oefenmodus)
                             </button>
                           )}
+                          {/* Bridge naar didactische oefen-versie (leerpad). 2026-05-16:
+                              Mark wens "examen inzien + dit examen oefenen — alles in 1". */}
+                          {(() => {
+                            const oefenId = getOefenLeerpadForExamen(e);
+                            if (!oefenId || !onPickPath) return null;
+                            return (
+                              <button
+                                onClick={() => onPickPath(oefenId)}
+                                style={{
+                                  width: "100%",
+                                  marginBottom: 8,
+                                  padding: "12px 14px",
+                                  borderRadius: 10,
+                                  border: `1.5px solid rgba(0,200,83,0.55)`,
+                                  background: "linear-gradient(135deg, rgba(0,200,83,0.20), rgba(0,200,83,0.06))",
+                                  color: "#00e676",
+                                  fontFamily: "var(--font-display)",
+                                  fontSize: 14,
+                                  fontWeight: 700,
+                                  cursor: "pointer",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  gap: 8,
+                                  transition: "all 0.15s",
+                                }}
+                                onMouseOver={(ev) => ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,200,83,0.32), rgba(0,200,83,0.10))"}
+                                onMouseOut={(ev) => ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,200,83,0.20), rgba(0,200,83,0.06))"}
+                                title="Oefen dit examen met didactische uitleg op 3 niveaus"
+                              >
+                                🎯 Oefen dit examen met uitleg →
+                              </button>
+                            );
+                          })()}
                           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                             <PdfKnop
                               href={opgaveUrl}
