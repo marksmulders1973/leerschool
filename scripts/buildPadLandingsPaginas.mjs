@@ -46,6 +46,11 @@ const KERN_PADEN = [
   { file: "werkwoordTijdenPo", pitch: "Werkwoordstijden groep 6-8 — tegenwoordige tijd, verleden tijd, voltooid deelwoord met d/t-regel." },
   { file: "interpunctiePo", pitch: "Leestekens groep 5-7 — punt, komma, vraagteken, uitroepteken + dubbele punt + aanhalingstekens." },
   { file: "tijdsduurRekenenPo", pitch: "Tijdsduur berekenen groep 6-8 — van klok-tijd 9:15 tot 10:45, uren+minuten optellen met 60-stap." },
+  // 3e ronde uitbreiding 2026-05-16 — 4 wereldoriëntatie + geschiedenis-paden
+  { file: "delenPo", pitch: "Delen groep 4-6 — door 2/5/10 met trucs, daarna delen door 3-9 + grotere getallen." },
+  { file: "dierenklassenPo", pitch: "Dierenklassen groep 5-7 — zoogdier vs vogel vs reptiel vs vis, met koudbloedig/warmbloedig + Cito-strikvraag-trucs." },
+  { file: "lichaamGezondheidPo", pitch: "Lichaam + gezondheid groep 6-8 — skelet, spieren, organen, schijf van vijf, ademhaling en bloedsomloop." },
+  { file: "continentenWereldPo", pitch: "Continenten + oceanen groep 6-8 — 7 continenten + 5 oceanen, hoofdsteden, tijdzones en bekende landen." },
 ];
 
 function escapeHtml(s) {

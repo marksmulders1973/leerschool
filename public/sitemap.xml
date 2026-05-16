@@ -186,6 +186,30 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://leerkwartier.app/leerpad/delen-po.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://leerkwartier.app/leerpad/dierenklassen-po.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://leerkwartier.app/leerpad/lichaam-gezondheid-po.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://leerkwartier.app/leerpad/continenten-wereld-po.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://leerkwartier.app/vmbo-examens-oefenen.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
