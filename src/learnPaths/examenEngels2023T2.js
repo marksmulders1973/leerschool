@@ -58,7 +58,7 @@ const chapters = [
 
 const steps = [
   {
-    title: "V1 — YouTube parents sell baby doll: hostile reactions",
+    title: "Vraag 1 — YouTube parents sell baby doll: hostile reactions",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 1.",
     emoji: "🎓",
     checks: [{
@@ -88,7 +88,7 @@ const steps = [
     }],
   },
   {
-    title: "V2 — Wurst luck: what happens to burglar",
+    title: "Vraag 2 — Wurst luck: what happens to burglar",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 2.",
     emoji: "🎓",
     checks: [{
@@ -118,7 +118,7 @@ const steps = [
     }],
   },
   {
-    title: "V8 — Selfie museum: what is true overall",
+    title: "Vraag 8 — Selfie museum: what is true overall",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 8.",
     emoji: "🎓",
     checks: [{
@@ -148,7 +148,7 @@ const steps = [
     }],
   },
   {
-    title: "V13 — Hailie Deegan: how racing career started",
+    title: "Vraag 13 — Hailie Deegan: how racing career started",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 13.",
     emoji: "🎓",
     checks: [{
@@ -178,7 +178,7 @@ const steps = [
     }],
   },
   {
-    title: "V25 — Dutch playground shut: waarom dichtgegooid?",
+    title: "Vraag 25 — Dutch playground shut: waarom dichtgegooid?",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 25.",
     emoji: "🎓",
     checks: [{
@@ -208,7 +208,7 @@ const steps = [
     }],
   },
   {
-    title: "V29 — Blue whales: what is true about communication",
+    title: "Vraag 29 — Blue whales: what is true about communication",
     explanation: "Echte examenvraag uit Engels 2023-T2, vraag 29.",
     emoji: "🎓",
     checks: [{
