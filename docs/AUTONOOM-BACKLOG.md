@@ -325,4 +325,15 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
 
 Cadens: elke 5 taken, elke 2e sessie, of na nieuw pad. Format: datum — taken-sinds-vorige — agent A oordeel — agent B oordeel — beslissing.
 
-- (nog geen reviews)
+- 2026-05-16 — ExamensPage 2 sectie-design + content-prio aardrijkskunde/nederlands/wiskunde.
+  - **Agent A (UX/conversion)**: NIET secties samenvoegen (verdunt USP 4:1), GEEN "niet-beschikbaar"-tags (66% van cards rood = signaal-vermoeidheid). Wel positief framing: teller in sectie 2-kop "19 van 56 ook als leerpad". Beslissing: implementeer alleen de teller (commit 32ab... — zie sessie-log).
+  - **Agent B (Content/prio)**: SKIP wiskunde (zware open-vraag-modus) + SKIP nederlands (lange lees-bronteksten, zwakke uitlegPad-loop). Aardrijkskunde 2024-T1 als PILOT — 4-6 MC-vragen mits atlas-kaart-vragen worden geskipt. Tijd: 3-4u. Beslissing: aardrijkskunde-pilot wacht op Mark — PDF moet in `tmp/` zodat parser draait (zie open backlog-item).
+
+## Open: aardrijkskunde-examen-pilot (Agent B-advies 2026-05-16)
+
+- [ ] **Aardrijkskunde VMBO-GL/TL 2024 tijdvak 1 — pilot examen-leerpad**
+  - Mark: download `gt-0131-a-24-1-o.pdf` + `gt-0131-a-24-1-c.pdf` van examenblad.nl naar `tmp/` (gebruik `reference_examenblad_urls.md` voor URL-patroon).
+  - Daarna: `python scripts/parse_examen.py aardrijkskunde-2024-t1 <opgaven.pdf> <correctie.pdf>` (test of parser vakcode 0131 aankan).
+  - Triage: skip atlas-kaart-vragen, behoud tekst/tabel-vragen (geschat 4-6 vragen).
+  - Voeg uitlegPad + voorkennisKeten toe per vraag, leerpadLink naar wereldoriëntatie-paden (klimaat-aardrijkskunde, werelddelen-landen, bevolking-migratie).
+  - Scope: 3-4 uur werk.

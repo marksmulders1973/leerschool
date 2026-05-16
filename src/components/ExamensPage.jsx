@@ -264,11 +264,50 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
 
         {EXAMENS.length > 0 && (
           <>
-            <p style={{ fontSize: 13, color: C.muted, marginBottom: 14, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13, color: C.muted, marginBottom: 10, lineHeight: 1.5 }}>
               Echte oude eindexamens. Goed om de stijl en moeilijkheidsgraad te leren kennen.
               <br/>
               Klik op een examen → opent in een nieuwe tab.
             </p>
+            {/* Bridge-counter (Mark verzoek 2026-05-16 + agent-A UX-advies):
+                positief framing dat een deel van de PDFs ook didactisch oefenbaar
+                is — verwijst terug naar sectie 1. */}
+            {(() => {
+              const totalPdfs = EXAMENS.length;
+              const withOefen = EXAMENS.filter((e) => getOefenLeerpadForExamen(e)).length;
+              if (withOefen === 0) return null;
+              return (
+                <button
+                  type="button"
+                  onClick={() => lerenSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    width: "100%",
+                    padding: "10px 14px",
+                    marginBottom: 16,
+                    background: "linear-gradient(135deg, rgba(0,200,83,0.10), rgba(0,200,83,0.03))",
+                    border: "1px solid rgba(0,200,83,0.40)",
+                    borderRadius: 10,
+                    color: "#cdd6e2",
+                    fontFamily: "var(--font-body)",
+                    fontSize: 13,
+                    cursor: "pointer",
+                    textAlign: "left",
+                    lineHeight: 1.4,
+                  }}
+                  title="Spring terug naar sectie 1 — Oefenen met uitleg"
+                >
+                  <span style={{ fontSize: 20 }}>🎯</span>
+                  <span style={{ flex: 1 }}>
+                    <strong style={{ color: "#00e676" }}>{withOefen} van deze {totalPdfs} examens</strong>{" "}
+                    is óók beschikbaar als <strong>leerpad met uitleg</strong> — bovenaan deze pagina (sectie 1).
+                  </span>
+                  <span style={{ fontSize: 16, color: "#00e676" }}>↑</span>
+                </button>
+              );
+            })()}
 
             {vakken.length > 2 && (
               <FilterRij
