@@ -3644,6 +3644,29 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "oppervlakte-omtrek-po",
+    "file": "./oppervlakteOmtrekPo.js",
+    "title": "Oppervlakte en omtrek — rechthoek, driehoek, cirkel",
+    "subject": "rekenen",
+    "level": "po",
+    "emoji": "📐",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Rekenen - meten + meetkunde",
+    "triggerKeywords": [
+      "oppervlakte omtrek po",
+      "rechthoek vierkant",
+      "driehoek oppervlakte",
+      "cirkel pi",
+      "m² cm² conversie",
+      "praktijkvraagstuk meten"
+    ],
+    "intro": "18 vragen Cito-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plinte",
+    "stepCount": 6,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "oudheid-egyptenaren-grieken-romeinen-po",
     "file": "./oudheidEgyptiansGriekenPo.js",
     "title": "Oudheid — Egyptenaren + Grieken + Romeinen (Cito groep 6-8)",
