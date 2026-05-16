@@ -581,6 +581,48 @@
       "stepIdx": 5,
       "vraagNr": 40,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 1, vraag 40"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 2"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 12,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 12"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 13"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 23"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 30"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2025-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2, vraag 33"
     }
   ],
   "pincode-belasting": [
