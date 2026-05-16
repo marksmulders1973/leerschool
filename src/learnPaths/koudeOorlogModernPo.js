@@ -20,19 +20,88 @@ const steps = [
         q: "Wat was de **Koude Oorlog**?",
         options: ["Spanning VS-USSR 1945-1991 zonder echte oorlog", "Echte oorlog", "Winter-oorlog", "Niet bestaand"],
         answer: 0,
-        wrongHints: [null, "Wel geweld via proxy maar niet direct.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Er was wél geweld via andere landen (proxy), maar geen rechtstreeks gevecht.", "De naam slaat niet op weer of seizoen.", "De Koude Oorlog bestond wel — denk aan VS tegenover Sovjet-Unie."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waarom 'koud'?", tekst: "Twee supermachten (VS + USSR) waren elkaars tegenstander, maar vochten nooit direct. Daarom 'koud' — geen schoten tussen ze." },
+            { titel: "Wel spanning, wel wapens", tekst: "Wapenwedloop (kernwapens), spionage (CIA vs KGB), proxy-oorlogen (Vietnam, Korea, Afghanistan). Spannend genoeg om naar adem te happen." },
+            { titel: "Hoe lang duurde het?", tekst: "Ongeveer **46 jaar**: vanaf einde Wereldoorlog 2 (1945) tot uiteenvallen van de Sovjet-Unie (1991)." },
+          ],
+          woorden: [
+            { woord: "Koude Oorlog", uitleg: "Lange spanning VS vs USSR zonder directe oorlog." },
+            { woord: "USSR / Sovjet-Unie", uitleg: "Communistische unie van Rusland en buurlanden (1922-1991)." },
+            { woord: "supermacht", uitleg: "Land met enorm veel militaire + economische macht." },
+          ],
+          theorie: "De Koude Oorlog draaide om twee tegengestelde systemen: kapitalisme (VS) versus communisme (USSR). Beide kanten wilden hun systeem aan andere landen geven.",
+          voorbeelden: [
+            { type: "proxy", tekst: "Vietnam-oorlog: VS hielp Zuid-Vietnam, USSR hielp Noord-Vietnam. De grootmachten vochten via Vietnamezen, niet zelf." },
+            { type: "wedloop", tekst: "In 1986 had de wereld ~70.000 kernwapens — meer dan genoeg om alles 100× te vernietigen. Mensen lazen elke dag de krant met angst." },
+          ],
+          basiskennis: [{ onderwerp: "Begin + einde", uitleg: "Start: 1945 na WO2. Einde: 1991 toen de Sovjet-Unie uit elkaar viel. Geen één-dag-moment maar een geleidelijk proces." }],
+          niveaus: {
+            basis: "Koude Oorlog = lange spanning VS vs USSR (1945-1991) zonder direct gevecht. = A.",
+            simpeler: "Twee landen die elkaars vijand waren maar nooit echt oorlog tegen elkaar voerden. Wel veel wapens en angst. = A.",
+            nogSimpeler: "VS en Sovjet-Unie waren boos op elkaar, 46 jaar lang. Niet echt vechten. = A.",
+          },
+        },
       },
       {
         q: "Wat is de **NAVO**?",
         options: ["Westerse militaire alliantie (1949)", "Sovjet-pact", "VN", "Niets"],
         answer: 0,
-        wrongHints: [null, "Warschaupact.", "Andere.", "Wel."],
+        wrongHints: [null, "Dat was het Warschaupact — die hoorde bij USSR.", "VN = Verenigde Naties, een ander soort organisatie (vrede + overleg, geen militair bondgenootschap).", "De NAVO bestaat sinds 1949 en is heel belangrijk vandaag de dag."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent NAVO?", tekst: "**NAVO** = Noord-Atlantische Verdragsorganisatie (Engels: NATO). Een militair bondgenootschap van westerse landen rond de Atlantische Oceaan." },
+            { titel: "Opgericht in 1949 — waarom?", tekst: "Na WO2 was de Sovjet-Unie sterk in Oost-Europa. Westerse landen waren bang: 'wat als de USSR aanvalt?'. NAVO werd opgericht zodat ze elkaar zouden helpen verdedigen." },
+            { titel: "Belangrijkste regel", tekst: "**Artikel 5**: een aanval op één NAVO-land = aanval op allemaal. Alle landen moeten helpen verdedigen. Sterk afschrikkingsmiddel." },
+          ],
+          woorden: [
+            { woord: "NAVO", uitleg: "Westerse militaire alliantie, opgericht 1949." },
+            { woord: "alliantie", uitleg: "Bondgenootschap — landen die elkaar steunen." },
+            { woord: "artikel 5", uitleg: "Wettelijke regel die elke NAVO-land verplicht andere te verdedigen." },
+          ],
+          theorie: "Tijdens de Koude Oorlog was NAVO de westerse kant, het Warschaupact (USSR + Oost-Europa) was de andere kant. Na 1991 bestaat alleen NAVO nog.",
+          voorbeelden: [
+            { type: "leden", tekst: "Onder andere VS, VK, Frankrijk, Duitsland, Nederland, België. Sinds 2024 zijn er 32 lidstaten." },
+            { type: "leider", tekst: "Sinds oktober 2024 is de Nederlander Mark Rutte secretaris-generaal van de NAVO — de baas." },
+          ],
+          basiskennis: [{ onderwerp: "Tegenhanger", uitleg: "Warschaupact (1955-1991) was de oosterse tegenhanger. Bestaat niet meer sinds USSR uit elkaar viel." }],
+          niveaus: {
+            basis: "NAVO = westerse militaire bondgenootschap sinds 1949. = A.",
+            simpeler: "Een groep westerse landen die afspraken dat ze elkaar helpen als iemand wordt aangevallen. = A.",
+            nogSimpeler: "Westerse landen die samen verdedigen. Hoofd zit nu Mark Rutte. = A.",
+          },
+        },
       },
       {
         q: "Wat is **'IJzeren Gordijn'**?",
         options: ["Scheiding West-Oost Europa", "Echte gordijn", "Wapen", "Auto"],
         answer: 0,
-        wrongHints: [null, "Beeldspraak.", "Niet.", "Niet."],
+        wrongHints: [null, "Geen letterlijk gordijn van ijzer — dit is beeldspraak voor een politieke grens.", "Geen wapen, maar een term over verdeling van Europa.", "Geen voertuig — het gaat over een grens in Europa na WO2."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie bedacht het?", tekst: "Winston Churchill (oud-premier Groot-Brittannië) zei in 1946: 'Een ijzeren gordijn is over Europa gevallen'. Het werd direct een wereldberoemde term." },
+            { titel: "Wat bedoelde hij?", tekst: "Europa was na WO2 in twee delen gevallen. West = vrij + kapitalistisch. Oost = onder controle van USSR + communistisch. Tussen die twee delen kon je niet zomaar lopen — bewaakte grenzen." },
+            { titel: "Letterlijke grens", tekst: "Vooral in Duitsland zichtbaar: het werd in 1949 in tweeën gesplitst. Berlijn ook. Later kwam zelfs een echte muur (1961). Niet van ijzer, wel net zo onbeweeglijk." },
+          ],
+          woorden: [
+            { woord: "IJzeren Gordijn", uitleg: "Beeldspraak voor de scheiding tussen Oost- en West-Europa tijdens Koude Oorlog." },
+            { woord: "beeldspraak", uitleg: "Iets wordt vergeleken met iets anders om het duidelijker te maken." },
+          ],
+          theorie: "Een goede beeldspraak blijft hangen. 'IJzeren Gordijn' suggereerde: hard, ondoordringbaar, alles afsluitend. Dat klopte: mensen aan de Oost-kant konden niet vrij naar West.",
+          voorbeelden: [
+            { type: "concrete grens", tekst: "Tussen West- en Oost-Duitsland stond een muur, hekken, mijnvelden en wachttorens. ~1400 km lang." },
+            { type: "westkant", tekst: "Nederland, België, Frankrijk, GB, West-Duitsland, Italië — vrij." },
+            { type: "oostkant", tekst: "Polen, Oost-Duitsland, Tsjechoslowakije, Hongarije, Roemenië, Bulgarije — onder USSR-invloed." },
+          ],
+          basiskennis: [{ onderwerp: "Geen echt gordijn", uitleg: "De term is poëtisch. Bewaakte landgrenzen + muren waren wel echt." }],
+          niveaus: {
+            basis: "IJzeren Gordijn = grens tussen West- en Oost-Europa in de Koude Oorlog. = A.",
+            simpeler: "Een naam voor de scherpe scheiding tussen vrije westerse landen en communistische oosterse landen. = A.",
+            nogSimpeler: "Een onzichtbare muur door Europa, oost ↔ west. = A.",
+          },
+        },
       },
       {
         q: "Wie was **NL secretaris-generaal NAVO sinds 2024**?",
@@ -57,19 +126,85 @@ const steps = [
         q: "Wat was **Cuba-crisis** (1962)?",
         options: ["USSR-raketten op Cuba, bijna kernoorlog", "Echte oorlog", "Spel", "Niet bestaand"],
         answer: 0,
-        wrongHints: [null, "Werd voorkomen.", "Niet.", "Wel."],
+        wrongHints: [null, "Echte oorlog werd nét voorkomen — dat is juist het verhaal.", "Geen spel — dit was 13 dagen waarin de wereld op springen stond.", "Bestond zeker — een van de spannendste momenten in de geschiedenis."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat was er aan de hand?", tekst: "Cuba werd in 1959 communistisch (Fidel Castro). De USSR plaatste daar kernraketten — slechts **150 km** van Florida (VS). De VS schrok zich rot." },
+            { titel: "13 dagen op het randje", tekst: "President **Kennedy** (VS) en leider **Chroesjtsjov** (USSR) onderhandelden 13 dagen lang (16-28 oktober 1962). De VS blokkeerde Cuba met oorlogsschepen. Eén verkeerde beweging = kernoorlog." },
+            { titel: "Hoe is het opgelost?", tekst: "Compromis: USSR haalt raketten weg uit Cuba, VS belooft Cuba niet binnen te vallen + haalt stiekem ook raketten weg uit Turkije. Beide kanten konden 'gezicht behouden'." },
+          ],
+          woorden: [
+            { woord: "Cuba-crisis", uitleg: "Spanning okt 1962 tussen VS en USSR over kernraketten op Cuba." },
+            { woord: "kernraket", uitleg: "Raket met kernkop — kan een hele stad wegvagen." },
+            { woord: "blokkade", uitleg: "Het afsnijden van een land of haven door schepen." },
+          ],
+          theorie: "Cuba-crisis wordt vaak '**dichtste bij kernoorlog ooit**' genoemd. Door dit gevaar maakten VS en USSR daarna een directe 'rode telefoon' tussen Washington en Moskou — om snel te overleggen bij volgende crisis.",
+          voorbeelden: [
+            { type: "held", tekst: "Sovjet-officier **Vasili Arkhipov** weigerde op 27 oktober 1962 een kernraket af te vuren vanaf een onderzeeër. Mogelijk redde hij de wereld." },
+            { type: "context", tekst: "Cuba was communistisch geworden onder Fidel Castro (1959). Zijn vriendschap met USSR maakte de VS nerveus — een communistische bondgenoot zo dichtbij." },
+          ],
+          basiskennis: [{ onderwerp: "Waarom belangrijk?", uitleg: "Eerste keer dat de wereld besefte: kernoorlog kan letterlijk in dagen ontstaan. Daarna kwamen ontwapenings-onderhandelingen." }],
+          niveaus: {
+            basis: "Cuba-crisis = USSR-raketten op Cuba, bijna kernoorlog (1962). = A.",
+            simpeler: "Sovjet-Unie zette raketten op Cuba dicht bij VS. 13 dagen lang dreigde kernoorlog. Opgelost via onderhandelen. = A.",
+            nogSimpeler: "Bijna kernoorlog in 1962. = A.",
+          },
+        },
       },
       {
         q: "Wie won **Vietnam-oorlog**?",
         options: ["Noord-Vietnam (communistisch)", "VS", "Niemand", "Frankrijk"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Wel iemand.", "Wel eerder maar niet primair."],
+        wrongHints: [null, "De VS trok zich terug zonder de oorlog te winnen — pijnlijke nederlaag.", "Iemand won wel — kijk naar wie sinds 1975 heel Vietnam beheerste.", "Frankrijk had Vietnam eerder als kolonie maar verloor al in 1954 (Dien Bien Phu)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie vocht tegen wie?", tekst: "Noord-Vietnam (communistisch, geholpen door USSR en China) vocht tegen Zuid-Vietnam (gesteund door VS en bondgenoten). Een proxy-oorlog tussen grootmachten." },
+            { titel: "Hoe ging het mis voor de VS?", tekst: "VS stuurde ~500.000 soldaten + dropte meer bommen dan in heel WO2. Maar Vietnamezen vochten met guerrilla-tactieken (verbergen in jungle, tunnels). VS won wel veel gevechten, maar niet de oorlog. Thuis groeide het verzet ('Stop de oorlog!')." },
+            { titel: "Uitkomst 1975", tekst: "VS trok zich in 1973 terug. Noord-Vietnam veroverde Saigon in 1975. Heel Vietnam werd communistisch. ~3 miljoen doden, vooral Vietnamezen." },
+          ],
+          woorden: [
+            { woord: "guerrilla", uitleg: "Kleine, snelle aanvallen van verzetsstrijders — niet groot leger tegen groot leger." },
+            { woord: "proxy-oorlog", uitleg: "Een oorlog waar grootmachten via andere landen vechten." },
+          ],
+          theorie: "Vietnam was de eerste 'tv-oorlog' — mensen zagen beelden thuis. Foto's zoals **Phan Thi Kim Phuc** (1972, naakt kind met napalm-brandwonden) keerden de publieke opinie in de VS tegen de oorlog.",
+          voorbeelden: [
+            { type: "cultuur", tekst: "Hippie-beweging (1960s) protesteerde tegen Vietnam-oorlog. 'Make love, not war'. Woodstock-festival (1969) werd symbool." },
+            { type: "Vietnam vandaag", tekst: "Vietnam is nu één land, communistisch maar economisch open. Veel Nederlandse toeristen bezoeken Hanoi en Ho Chi Minh-stad." },
+          ],
+          basiskennis: [{ onderwerp: "Les van Vietnam", uitleg: "Een grote militaire macht kan een oorlog verliezen tegen een kleinere tegenstander die volk + tijd + thuisvoordeel heeft." }],
+          niveaus: {
+            basis: "Vietnam-oorlog gewonnen door Noord-Vietnam (communistisch). = A.",
+            simpeler: "De VS verloor de Vietnam-oorlog. Noord-Vietnam veroverde Saigon in 1975 en verenigde het land. = A.",
+            nogSimpeler: "Noord-Vietnam won, VS trok zich terug. = A.",
+          },
+        },
       },
       {
         q: "Wat zei **Kennedy in Berlijn** (1963)?",
         options: ["'Ich bin ein Berliner'", "'We choose to go to the Moon'", "'I have a dream'", "Niets"],
         answer: 0,
-        wrongHints: [null, "Toespraak NASA-doel.", "Martin Luther King.", "Wel."],
+        wrongHints: [null, "Dat zei Kennedy ook, maar over NASA — niet in Berlijn.", "Dat was Martin Luther King, niet Kennedy.", "Kennedy gaf juist een heel beroemde toespraak in Berlijn."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat betekent het?", tekst: "**'Ich bin ein Berliner'** = 'Ik ben een Berlijner'. Kennedy zei dit op 26 juni 1963 voor een enorme menigte in West-Berlijn. Hij sprak Duits om solidariteit te tonen." },
+            { titel: "Waarom belangrijk?", tekst: "De Berlijnse Muur stond er nog maar 2 jaar. West-Berlijners voelden zich kwetsbaar — een vrij eiland in communistisch Oost-Duitsland. Kennedy zei: **'Wij Amerikanen staan aan jullie kant.'**" },
+            { titel: "Mythe over de jelly donut", tekst: "Sommigen zeggen: 'Berliner' betekent ook een soort krentenbol! Dus Kennedy zou hebben gezegd 'Ik ben een krentenbol'. Maar Berlijners zelf noemen die niet 'Berliner' — dus dit is een grapje, geen echte fout." },
+          ],
+          woorden: [
+            { woord: "toespraak", uitleg: "Een speech voor publiek, vaak politiek." },
+            { woord: "solidariteit", uitleg: "Je voelen verbonden met anderen, vooral als zij steun nodig hebben." },
+          ],
+          theorie: "Een goede toespraak in een crisis kan een symbool worden van een hele tijd. Kennedy's 'Ich bin ein Berliner' werd dat voor de Koude Oorlog: VS = vriend, USSR = vijand.",
+          voorbeelden: [
+            { type: "andere zin", tekst: "26 jaar later (1987) zei president Reagan in Berlijn: 'Mr. Gorbachev, tear down this wall!' (Hr. Gorbatsjov, breek deze muur af!). 2 jaar later vond de val plaats." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-context", uitleg: "Kennedy = jonge populaire VS-president (1961-1963). Vermoord 22 november 1963 — slechts 5 maanden na deze toespraak." }],
+          niveaus: {
+            basis: "Kennedy zei in Berlijn: 'Ich bin ein Berliner' (1963). = A.",
+            simpeler: "Beroemde toespraak: 'Ik ben een Berlijner' — solidariteit met West-Berlijn. = A.",
+            nogSimpeler: "'Ich bin ein Berliner'. = A.",
+          },
+        },
       },
     ],
   },
@@ -88,13 +223,59 @@ const steps = [
         q: "Wie was **Gorbatsjov**?",
         options: ["USSR-leider die hervormde (Glasnost/Perestrojka)", "VS-president", "Kennedy", "NL-premier"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Eerder.", "Niet."],
+        wrongHints: [null, "Gorbatsjov leidde de Sovjet-Unie, niet de VS.", "Kennedy was 20 jaar eerder VS-president — andere periode.", "Gorbatsjov is Russisch, niet Nederlands."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wie was hij?", tekst: "**Mikhail Gorbatsjov** (1931-2022) werd in 1985 leider van de Sovjet-Unie. Hij begreep dat het systeem stond te wankelen — armoede, corruptie, achterstand op Westen." },
+            { titel: "Glasnost + Perestrojka", tekst: "Twee hervormingen: **Glasnost** = openheid (minder geheim, vrijere pers). **Perestrojka** = omstructurering (meer markt, minder staat). Onbedoeld effect: Oost-Europese landen begonnen ook te hervormen → revoluties 1989." },
+            { titel: "Einde van USSR", tekst: "In 1991 viel de Sovjet-Unie uit elkaar. Republieken werden onafhankelijk (Estland, Letland, Oekraïne, etc.). Gorbatsjov trad af. Hij kreeg in 1990 de Nobelprijs voor de Vrede." },
+          ],
+          woorden: [
+            { woord: "Glasnost", uitleg: "Openheid — letterlijk 'het laten zien'." },
+            { woord: "Perestrojka", uitleg: "Omstructurering — economische hervorming." },
+            { woord: "hervormen", uitleg: "Iets veranderen om beter te maken." },
+          ],
+          theorie: "Gorbatsjov wilde de USSR redden door hervorming. Maar zodra mensen iets meer vrijheid kregen, eisten ze meer — en het systeem stortte in. Een belangrijke les: half-vrij is moeilijk vast te houden.",
+          voorbeelden: [
+            { type: "in NL", tekst: "Gorbatsjov was in het Westen geliefd — 'Gorby' werd hij genoemd. Russen zelf zijn verdeeld: hij verloor hun supermacht-status." },
+            { type: "tegenstelling Poetin", tekst: "Huidige Russische president Poetin noemt het uiteenvallen van USSR 'grootste geopolitieke ramp van 20e eeuw' — tegenovergesteld van Gorbatsjov." },
+          ],
+          basiskennis: [{ onderwerp: "Cito-truc", uitleg: "Gorbatsjov = laatste Sovjet-leider, hervormer. Yeltsin = eerste president van nieuwe Rusland (1991-1999)." }],
+          niveaus: {
+            basis: "Gorbatsjov = USSR-leider 1985-1991, hervormde via Glasnost + Perestrojka. = A.",
+            simpeler: "Laatste leider van Sovjet-Unie. Wilde hervormen, daardoor viel het uit elkaar. = A.",
+            nogSimpeler: "Hij was de baas van de USSR aan het einde. = A.",
+          },
+        },
       },
       {
         q: "Wat gebeurde op **11 september 2001**?",
         options: ["Aanslag Twin Towers NYC", "Berlijnse Muur viel", "Cuba-crisis", "Geen"],
         answer: 0,
-        wrongHints: [null, "Eerder.", "1962.", "Wel iets."],
+        wrongHints: [null, "De Muur viel 12 jaar eerder (1989).", "Cuba-crisis was 1962, niet 2001.", "Er gebeurde wel degelijk iets enorms op die dag."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat gebeurde er?", tekst: "Op dinsdag 11 september 2001 kaapten **19 terroristen van Al-Qaida** 4 vliegtuigen in de VS. Twee vlogen in de Twin Towers (World Trade Center, New York). Eén in het Pentagon. Eén crashte in Pennsylvania (passagiers vochten terug)." },
+            { titel: "Waarom 'kantelpunt'?", tekst: "**2977 mensen** stierven die dag. De Twin Towers stortten allebei in. Live op TV — de hele wereld zag het gebeuren. De aanslag veranderde hoe landen denken over veiligheid, terreur, vliegen." },
+            { titel: "Wat kwam erna?", tekst: "VS-president Bush startte de '**War on Terror**'. VS viel **Afghanistan** binnen (2001) — daar zat Bin Laden (de leider van Al-Qaida). Later ook **Irak** (2003). Bin Laden werd in 2011 in Pakistan gedood." },
+          ],
+          woorden: [
+            { woord: "9/11", uitleg: "Korte aanduiding: '9 elf' — 9 september → maand 9, dag 11." },
+            { woord: "Al-Qaida", uitleg: "Terreurgroep van Osama bin Laden, gericht tegen het Westen." },
+            { woord: "terreuraanslag", uitleg: "Geweldsdaad om angst te zaaien voor een politiek doel." },
+          ],
+          theorie: "11 september wordt vaak gezien als de gebeurtenis die de 21e eeuw vormde — meer veiligheidschecks, langere oorlogen, andere internationale verhoudingen.",
+          voorbeelden: [
+            { type: "concrete impact", tekst: "Sinds 9/11 moet je je schoenen + riem uittrekken op het vliegveld. Veiligheids­controles werden veel strenger." },
+            { type: "NL deelname", tekst: "Nederland stuurde militairen naar Afghanistan (2001-2014). 25 NL-soldaten kwamen om." },
+          ],
+          basiskennis: [{ onderwerp: "Onthouden", uitleg: "9/11 = 11 september 2001 = Twin Towers New York = Al-Qaida = begin War on Terror." }],
+          niveaus: {
+            basis: "11 september 2001: terreuraanslag Twin Towers New York. = A.",
+            simpeler: "Vliegtuigen vlogen in de Twin Towers — bijna 3000 doden. Begin van de War on Terror. = A.",
+            nogSimpeler: "Aanslag op Twin Towers. = A.",
+          },
+        },
       },
       {
         q: "Wanneer **Rusland-Oekraïne grote oorlog**?",
