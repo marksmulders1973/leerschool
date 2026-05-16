@@ -2149,6 +2149,29 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-maatschappijkunde-2025-t1",
+    "file": "./examenMaatschappijkunde2025T1.js",
+    "title": "Examen oefenen — Maatschappijkunde 2025 tijdvak 1 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2025-T1",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2025 tijdvak 1",
+      "recht van initiatief thuiswerkwet",
+      "requisitoir rechtszitting",
+      "bindingstheorie hirschi",
+      "legaliteitsbeginsel rechtsstaat",
+      "framingtheorie media"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Maatschappijkunde 2025 tijdvak 1. Onderwerpen: recht van initiatief (Thuiswerkwet), requisitoir rechtszitting, bindingstheorie vadervleugel, legaliteitsbeginsel rec",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "exponentieel",
     "file": "./exponentieel.js",
     "title": "Exponentiële groei en afname",

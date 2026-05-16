@@ -119,6 +119,7 @@ import examenBiologie2022T2 from "./examenBiologie2022T2.js";
 import examenBiologie2023T2 from "./examenBiologie2023T2.js";
 import examenMaatschappijkunde2024T1 from "./examenMaatschappijkunde2024T1.js";
 import examenMaatschappijkunde2024T2 from "./examenMaatschappijkunde2024T2.js";
+import examenMaatschappijkunde2025T1 from "./examenMaatschappijkunde2025T1.js";
 import examenMaatschappijkunde2023T1 from "./examenMaatschappijkunde2023T1.js";
 import mensBiologieVmbo from "./mensBiologieVmbo.js";
 import naamvallenDuits from "./naamvallenDuits.js";
@@ -407,6 +408,7 @@ export const ALL_LEARN_PATHS = {
   "examen-biologie-2023-t2": examenBiologie2023T2,
   "examen-maatschappijkunde-2024-t1": examenMaatschappijkunde2024T1,
   "examen-maatschappijkunde-2024-t2": examenMaatschappijkunde2024T2,
+  "examen-maatschappijkunde-2025-t1": examenMaatschappijkunde2025T1,
   "examen-maatschappijkunde-2023-t1": examenMaatschappijkunde2023T1,
   "mens-biologie-vmbo": mensBiologieVmbo,
   // Bedrijfseconomie
