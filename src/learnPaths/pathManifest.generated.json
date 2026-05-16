@@ -1660,6 +1660,29 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-engels-2022-t1",
+    "file": "./examenEngels2022T1.js",
+    "title": "Examen oefenen — Engels 2022 tijdvak 1 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2022-T1",
+    "triggerKeywords": [
+      "examen engels 2022 tijdvak 1",
+      "pirri-pirri bur lindisfarne",
+      "let the children sleep",
+      "heavy dining uk restaurants",
+      "manaaki day wellington maori",
+      "joe nicchi ice cream influencers"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2022 tijdvak 1. Teksten: Pirri-pirri exotic plant warning, Let the children sleep (school start time), Heavy Dining UK restaurants calories, Wellington Manaa",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-engels-2023-t1",
     "file": "./examenEngels2023T1.js",
     "title": "Examen oefenen — Engels 2023 tijdvak 1 (echte vragen)",
