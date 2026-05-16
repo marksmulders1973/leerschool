@@ -53,7 +53,7 @@
     ],
     "intro": "Examenstof havo 4-5 leesvaardigheid: standpunt en argumenten herkennen, vijf argumentatieschema's toepassen, structuur van argumentatie analyseren, en de vier veelvoorkomende drogredenen herkennen. Me",
     "stepCount": 15,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 25
   },
@@ -82,9 +82,9 @@
     ],
     "intro": "De bouw van atomen — kern (proton + neutron) + elektronen in schillen, atoomnummer en massagetal, isotopen, ionen, het periodiek systeem (metaal/niet-metaal/edelgas), moleculen en chemische reacties m",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "balans-beco",
@@ -111,7 +111,7 @@
     ],
     "intro": "De twee kern-overzichten van elke onderneming: de balans (debet = credit) en de winst-en-verliesrekening (omzet − kosten = winst). Met activa, passiva, eigen vs vreemd vermogen, kosten-soorten en afsc",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 4,
     "estimatedMinutes": 20
   },
@@ -169,9 +169,9 @@
     ],
     "intro": "Macro-economie voor klas 4-5 — BBP (totale productie, nominaal vs reëel), conjunctuur (opgang/piek/recessie/dal, 2 kwartalen rule), inflatie (vraag/kosten, hyperinflatie Weimar/Zimbabwe, koopkracht), ",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 42,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "begrijpend-lezen-strategie",
@@ -371,9 +371,9 @@
     ],
     "intro": "Bevolking + migratie voor klas 2-3 — 8 miljard wereldbevolking, dichtheid, spreiding (kustgebieden, rivieren), migratie-soorten (emi/immi, vluchteling/asielzoeker), push+pull-factoren, NL als migratie",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "bewegingen-snelheid-natuurkunde",
@@ -400,7 +400,7 @@
     ],
     "intro": "Bewegingen + snelheid voor klas 1-2 natuurkunde — formule v=s/t, eenheden m/s vs km/u (× 3,6), versnelling (m/s², zwaartekracht 9,8), afstand-tijd-grafiek lezen, praktijksnelheden (verkeer, atletiek, ",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 33,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -425,7 +425,7 @@
     ],
     "intro": "Breuken zijn fundamenteel in álle wiskunde — niet alleen klas 1. Hier leer je vanaf de basis: wat is een breuk, gelijkwaardige breuken, optellen/aftrekken (met gelijknamig maken), vermenigvuldigen/del",
     "stepCount": 15,
-    "checkCount": 25,
+    "checkCount": 33,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -512,7 +512,7 @@
     ],
     "intro": "Wat is een cel, en waar bestaat hij uit? Van eencelligen tot mensen, van celkern tot mitochondriën, plus de drie verschillen tussen plant- en dierlijke cellen. Eerste leerpad biologie onderbouw.",
     "stepCount": 11,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -541,9 +541,9 @@
     ],
     "intro": "Hoe je reactievergelijkingen schrijft en kloppend maakt: van molecuulformules en de Wet van Behoud van Massa, via balanceren stap-voor-stap, tot de zes hoofdtypen reacties (synthese, ontleding, verbra",
     "stepCount": 9,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "cijferend-rekenen",
@@ -627,7 +627,7 @@
     ],
     "intro": "Engelse trappen van vergelijking voor klas 2 — stellend/vergrotend/overtreffend (big/bigger/biggest), -er/-est vs more/most, onregelmatig (good/better/best), spellingsregels (-y, dubbele medeklinker).",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 35,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -655,7 +655,7 @@
     ],
     "intro": "Conditionals (if-zinnen) voor klas 3 — Type 0 algemene waarheid, Type 1 reëel toekomst, Type 2 onreëel heden (would + base), Type 3 onreëel verleden (would have + past participle), mixed + unless/shou",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 35,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -712,9 +712,9 @@
     ],
     "intro": "Het assenstelsel — de basis voor alle grafieken in wiskunde. x-as, y-as, oorsprong, schaal, kwadranten, punten plotten en herkennen of punten op een rechte lijn liggen. Voorbereiding op lineaire formu",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "cse-leesvaardigheid-engels",
@@ -739,9 +739,9 @@
     ],
     "intro": "CSE Engels leesvaardigheid voor klas 3-4 — signaalwoorden (however, therefore), tekstsoorten (news, opinion, review, ad), woordbetekenis uit context, hoofdgedachte + details, verwijzingen (he/it/this)",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "cse-leesvaardigheid-nederlands",
@@ -792,9 +792,9 @@
     ],
     "intro": "CSE Engels schrijfvaardigheid voor klas 3-4 — formele brief (Dear Sir/Mr/Mrs, Yours sincerely/faithfully), informele e-mail (Hi/Cheers), samenvatting (eigen woorden, 50-100 wrd), essay (5 alinea-struc",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 37,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "cse-schrijfvaardigheid-nederlands",
@@ -818,9 +818,9 @@
     ],
     "intro": "CSE Nederlands schrijfvaardigheid voor klas 3-4 — formele brief (Geachte/Hoogachtend), betoog (stelling+3 argumenten+tegenwerping+slot), verslag + verhaal (perspectief, tijdgebruik), samenvatten (syno",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 35,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "cse-wiskunde-strategie-vmbo",
@@ -842,9 +842,9 @@
     ],
     "intro": "Examenstrategie wiskunde voor klas 3-4 VMBO — 5-stappen-aanpak per vraag, schema/HMVDOA-regel, rekenmachine slim, top-10 CSE-onderwerpen (procent/verhouding/oppervlak/volume/Pythagoras/functies/vergel",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "delen-po",
@@ -982,9 +982,9 @@
     ],
     "intro": "Differentiëren voor havo 4-5: helling-concept, raaklijn, afgeleide functie f'(x), regels voor machten, som-regel, en toepassingen — extreme waarden vinden en raaklijn-vergelijkingen opstellen. Examens",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "digitale-geletterdheid-po",
@@ -1040,7 +1040,7 @@
     ],
     "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
     "stepCount": 4,
-    "checkCount": 150,
+    "checkCount": 156,
     "chapterCount": 4,
     "estimatedMinutes": 90
   },
@@ -1069,7 +1069,7 @@
     ],
     "intro": "Doorstroomtoets-pilot voor studievaardigheden — kaart + schaal, tabel + grafiek, woordenboek + atlas + index, schema's + stappenplannen. Eigen oefenvragen in stijl van Cito/IEP. ~100 min totaal (5× ~2",
     "stepCount": 5,
-    "checkCount": 148,
+    "checkCount": 150,
     "chapterCount": 5,
     "estimatedMinutes": 90
   },
@@ -1097,7 +1097,7 @@
     ],
     "intro": "Doorstroomtoets-pilot voor taal — woordenschat, begrijpend lezen, spelling, taalverzorging. Eigen oefenvragen in stijl van Cito/IEP, geen letterlijke kopieën. Met externe link naar Cito's gratis voorb",
     "stepCount": 4,
-    "checkCount": 147,
+    "checkCount": 151,
     "chapterCount": 4,
     "estimatedMinutes": 90
   },
@@ -1126,9 +1126,9 @@
     ],
     "intro": "Ecosystemen voor klas 2-3 — wat een ecosysteem is (biotisch/abiotisch), 3 rollen (producent/consument/afbreker), voedselweb + energiepiramide (~10% door), koolstof + water + stikstof-kringloop, biodiv",
     "stepCount": 6,
-    "checkCount": 26,
+    "checkCount": 33,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "eetcultuur-nederland-po",
@@ -1293,7 +1293,7 @@
       "primair secundair geslachtskenmerken",
       "pigmentcellen kiemlaag melanine"
     ],
-    "intro": "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1 (examen-id GT-0191-a-23-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL biologie-examen 2023 tijdvak 1. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerp",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 4,
@@ -1322,7 +1322,7 @@
       "grote hersenen",
       "tandzenuwen"
     ],
-    "intro": "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1 (examen-id GT-0191-a-24-1). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar rele",
+    "intro": "12 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 1. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en (waar relevant) doorklik naar bestaan",
     "stepCount": 12,
     "checkCount": 12,
     "chapterCount": 4,
@@ -1347,7 +1347,7 @@
       "gaswisseling longblaasjes",
       "abiotisch biotisch temperatuur"
     ],
-    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2 (examen-id GT-0191-a-24-2). Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik na",
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2024 tijdvak 2. Per vraag de officiële antwoorden, didactische denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerp",
     "stepCount": 6,
     "checkCount": 6,
     "chapterCount": 3,
@@ -1372,7 +1372,7 @@
       "wortelcellen zuurstof ademhaling",
       "consument producent reducent"
     ],
-    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1 (examen-id GT-0191-a-25-1). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande bi",
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL biologie-examen 2025 tijdvak 1. Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar bestaande biologie-leerpaden. Plaatje-a",
     "stepCount": 6,
     "checkCount": 6,
     "chapterCount": 4,
@@ -1604,7 +1604,7 @@
       "reagan koude oorlog",
       "populisme lpf pvv"
     ],
-    "intro": "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1 (examen-id GT-0125-a-23-1). Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doork",
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2023 tijdvak 1. Bron-afhankelijke kaart/tekening-vragen geskipt. Per vraag: officiële antwoorden + uitleg + doorklik naar bestaande paden.",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 2,
@@ -1628,7 +1628,7 @@
       "cubacrisis hotline",
       "poldermodel"
     ],
-    "intro": "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1 (examen-id GT-0125-a-24-1). Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikk",
+    "intro": "6 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 1. Bron-afhankelijke kaart/tekening-vragen overgeslagen. Per vraag: officiële antwoorden + denkprikkel-hints + uitleg + doorkli",
     "stepCount": 6,
     "checkCount": 6,
     "chapterCount": 3,
@@ -1649,7 +1649,7 @@
       "beurskrach 1929 antidemocratisch",
       "gestapo nazi geheime politie"
     ],
-    "intro": "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2 (examen-id GT-0125-a-24-2). Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden +",
+    "intro": "3 echte examenvragen uit het VMBO-GL/TL geschiedenis-examen 2024 tijdvak 2. Vooral bron-afhankelijke (kaart, tekening, foto) vragen geskipt. Per vraag officiële antwoorden + uitleg + doorklik naar bes",
     "stepCount": 3,
     "checkCount": 3,
     "chapterCount": 2,
@@ -1684,6 +1684,35 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-geschiedenis-2025-t2",
+    "file": "./examenGeschiedenis2025T2.js",
+    "title": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2025-T2",
+    "triggerKeywords": [
+      "examen geschiedenis",
+      "geschiedenis 2025 tijdvak 2",
+      "echte examenvragen geschiedenis",
+      "grondwet 1848",
+      "thorbecke",
+      "parlementaire democratie",
+      "rechtsstaat",
+      "eerlijk proces",
+      "show-proces",
+      "stalin zuiveringen",
+      "wo1 nederland neutraal",
+      "handelsblokkade 1918"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL geschiedenis 2025 tijdvak 2. Onderwerpen: Grondwet 1848 (Thorbecke), Eerste Wereldoorlog handelsblokkades, bombardement Rotterdam 1940, rechtsstaat-criteria (eerlij",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-maatschappijkunde-2023-t1",
     "file": "./examenMaatschappijkunde2023T1.js",
     "title": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
@@ -1702,7 +1731,7 @@
       "bindingstheorie hirschi",
       "anomietheorie etikettentheorie"
     ],
-    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1 (examen-id GT-1127-a-23-1). Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De ",
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2023 tijdvak 1. Per vraag officiële antwoorden, denkprikkel-hints en inhoudelijke uitleg. Doorklik naar 'De Nederlandse staat'.",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 2,
@@ -1726,7 +1755,7 @@
       "hoger beroep gerechtshof",
       "officier van justitie opsporing"
     ],
-    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1 (examen-id GT-1127-a-24-1). Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar ",
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 1. Per vraag de officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'. Bro",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 3,
@@ -1750,7 +1779,7 @@
       "resocialisatie straffen",
       "requisitoir strafeis"
     ],
-    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2 (examen-id GT-1127-a-24-2). Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De",
+    "intro": "5 echte examenvragen uit het VMBO-GL/TL maatschappijkunde-examen 2024 tijdvak 2. Per vraag officiële antwoorden, denkprikkel-hints, inhoudelijke uitleg, en doorklik naar 'De Nederlandse staat'.",
     "stepCount": 5,
     "checkCount": 5,
     "chapterCount": 3,
@@ -1781,9 +1810,9 @@
     ],
     "intro": "Exponentiële groei en afname voor klas 3: lineair vs exponentieel, groeifactor + percentage, formule N(t) = b·g^t, halveringstijd. Voorbereiding op havo wiskunde A (logaritmen, financiële wiskunde) me",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "financiele-vorming-po",
@@ -1949,9 +1978,9 @@
     ],
     "intro": "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendel's wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, st",
     "stepCount": 9,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "gezonde-voeding-po",
@@ -2032,9 +2061,9 @@
     ],
     "intro": "Goniometrie gaat over de verhoudingen tussen zijden in een rechthoekige driehoek, vanuit een gekozen hoek. Met sin, cos en tan kun je elke onbekende zijde of hoek uitrekenen — handig om hoogtes te bep",
     "stepCount": 11,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "gouden-eeuw-geschiedenis",
@@ -2431,9 +2460,9 @@
     ],
     "intro": "De basis van krachten en beweging — kracht als pijl, massa vs gewicht, soorten krachten (zwaartekracht, wrijving, veerkracht), de drie wetten van Newton. Eerste pad natuurkunde onderbouw.",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "kritisch-denken-po",
@@ -2486,7 +2515,7 @@
     ],
     "intro": "H5 uit Wiskunde Flex deel 2: vanaf het kwadraat (3² = 9) tot wortels (√), rekenen met wortels, x² = c oplossen, en de soorten getallen (rationaal, irrationaal). Op basisniveau opgebouwd.",
     "stepCount": 18,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 6,
     "estimatedMinutes": 20
   },
@@ -2509,7 +2538,7 @@
     ],
     "intro": "H7 uit Wiskunde Flex deel 2: hoe los je een vergelijking met x² erin op? Twee methodes: rechtstreeks via x² = c, en factoriseren via x buiten haakjes. Met praktische toepassingen.",
     "stepCount": 13,
-    "checkCount": 25,
+    "checkCount": 32,
     "chapterCount": 5,
     "estimatedMinutes": 20
   },
@@ -2591,9 +2620,9 @@
     ],
     "intro": "Lineaire formules — de meest gebruikte wiskundige basis. y = ax + b is overal: bij taxi-tarieven, spaarrekeningen, telefoonabonnementen, plantengroei. Hier leer je wat de getallen a en b doen, hoe je ",
     "stepCount": 17,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "literatuurgeschiedenis",
@@ -2620,9 +2649,9 @@
     ],
     "intro": "Examenstof havo 4-5 literatuur Nederlands: 9 stromingen op de tijdlijn (Middeleeuwen tot nu) met kenmerken, top-schrijvers en bekendste werken. Plus literaire begrippen (vertelperspectief, stijlfigure",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 33,
     "chapterCount": 5,
-    "estimatedMinutes": 25
+    "estimatedMinutes": 30
   },
   {
     "id": "logaritmen",
@@ -2649,9 +2678,9 @@
     ],
     "intro": "Logaritmen voor havo 4-5: log als omkering van macht, log/ln-notatie, drie eigenschappen (log(ab)=log(a)+log(b), log(a/b)=log(a)−log(b), log(aⁿ)=n·log(a)), exponentiële vergelijkingen oplossen, halver",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "machten",
@@ -2678,9 +2707,9 @@
     ],
     "intro": "Machten in wiskunde — van notatie (a^n) tot de drie machtsregels (·, /, ()ⁿ), via macht-van-product en negatieve exponenten, naar machten van 10 en wetenschappelijke notatie. Voorbereiding op exponent",
     "stepCount": 13,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "maten-eenheden",
@@ -2881,9 +2910,9 @@
     ],
     "intro": "De drie geslachten (der/die/das), onbepaald lidwoord ein/eine, bezittelijke voornaamwoorden, en de vier naamvallen (NOM/ACC/DAT/GEN) — met voorzetselregels (für+acc, mit+dat) en wissels (in+acc bij be",
     "stepCount": 9,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "nederlandse-kunstenaars-po",
@@ -2939,9 +2968,9 @@
     ],
     "intro": "Hoe werkt onze democratie? Tweede Kamer, Eerste Kamer, regering, Koning, Trias Politica, Grondwet en grondrechten, rechtsstaat, stemrecht, plus NL in EU/VN/NAVO. Eerste pad maatschappijleer.",
     "stepCount": 11,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "negatieve-getallen",
@@ -2962,9 +2991,9 @@
     ],
     "intro": "Negatieve getallen zijn getallen kleiner dan nul. Je ziet ze bij temperaturen onder nul, schulden, hoogtes onder zeeniveau. Hier leer je: getallenlijn, optellen/aftrekken/vermenigvuldigen met negatiev",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "negatieve-getallen-po",
@@ -3075,9 +3104,9 @@
     ],
     "intro": "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-au",
     "stepCount": 9,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "ontdekkingsreizen-po",
@@ -3186,7 +3215,7 @@
     ],
     "intro": "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onde",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
     "estimatedMinutes": 20
   },
@@ -3215,9 +3244,9 @@
     ],
     "intro": "De twee verleden tijden van het Engels: past simple (afgesloten verleden, vast tijdstip) en present perfect (have/has + V3, link met nu). Met spelling, signaalwoorden, top 5 fouten en het verschil sin",
     "stepCount": 10,
-    "checkCount": 25,
+    "checkCount": 34,
     "chapterCount": 4,
-    "estimatedMinutes": 15
+    "estimatedMinutes": 20
   },
   {
     "id": "periodiek",
@@ -3244,9 +3273,9 @@
     ],
     "intro": "Sinusoïden voor havo 4-5: sin/cos uit eenheidscirkel, grafiek-vorm, periode + amplitude + evenwicht + faseverschuiving, algemene vorm y = a·sin(b·(x-d)) + c, met praktische toepassingen — geluid, geti",
     "stepCount": 14,
-    "checkCount": 25,
+    "checkCount": 35,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "pincode-belasting",

@@ -79,6 +79,13 @@
       "stepIdx": 4,
       "vraagNr": 38,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2024 tijdvak 1, vraag 38"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 44,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 44"
     }
   ],
   "mens-biologie-vmbo": [
@@ -181,6 +188,15 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 46"
     }
   ],
+  "mensenrechten-maatschappijleer": [
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 30"
+    }
+  ],
   "nederlandse-staat-maatschappijleer": [
     {
       "examPathId": "examen-geschiedenis-2023-t1",
@@ -202,6 +218,13 @@
       "stepIdx": 0,
       "vraagNr": 1,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2024 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 43,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 43"
     },
     {
       "examPathId": "examen-maatschappijkunde-2023-t1",
@@ -612,6 +635,20 @@
       "stepIdx": 5,
       "vraagNr": 39,
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 39"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 10"
     }
   ],
   "voortplanting-hormonen-biologie": [
@@ -672,6 +709,13 @@
       "stepIdx": 3,
       "vraagNr": 35,
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 1, vraag 35"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2025-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 24,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 24"
     }
   ],
   "woordenschat-engels": [
