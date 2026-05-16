@@ -40,7 +40,7 @@ const steps = [
         q: "In welk jaar werd het Verdrag van Maastricht getekend — het ontstaan van de Europese Unie?",
         options: ["1957", "1973", "1992", "2002"],
         answer: 2,
-        wrongHints: ["1957 = oprichting EEG (voorloper) door 6 landen.", "1973 = uitbreiding met VK + Ierland + Denemarken.", null, "2002 = invoering euro als contant geld."],
+        wrongHints: ["Te vroeg — toen heette het nog EEG, niet EU.", null, null, "Te laat — toen kwam de euro pas in omloop. EU bestond al."],
         explanation: "**1992 Verdrag van Maastricht** = oprichting Europese Unie. Was eerder EEG (Europese Economische Gemeenschap, 1957). Maastricht maakte de samenwerking breder: niet alleen economie, ook politiek + gemeenschappelijke munt (euro plan). Antwoord C.",
         uitlegPad: compact(
           "Verdrag van Maastricht 1992 = officieel begin van de Europese Unie. NL-stad, ondertekend door 12 landen.",

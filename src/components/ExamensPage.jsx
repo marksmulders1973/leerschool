@@ -28,7 +28,7 @@ const C = {
   muted: "#8899aa",
   warm: "#ffd54f",
   accent: "#ff6b35",
-  oefen: "#00e676",
+  oefen: "#00b0ff",
   pdf: "#a78bfa",
 };
 
@@ -165,7 +165,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
               <span style={{
                 width: 12, height: 12, borderRadius: 3,
-                background: "rgba(0,230,118,0.25)", border: `1.5px solid ${C.oefen}`,
+                background: "rgba(0,176,255,0.25)", border: `1.5px solid ${C.oefen}`,
               }} />
               <span><strong style={{ color: C.oefen }}>Oefenen met uitleg</strong> — vraag voor vraag + uitleg + leerpad</span>
             </span>
@@ -249,8 +249,8 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                   fontSize: 11, fontWeight: 700,
                   color: oefenAanwezig === 0 ? C.muted : C.oefen,
                   padding: "3px 8px", borderRadius: 999,
-                  border: `1px solid ${oefenAanwezig === 0 ? C.border : "rgba(0,230,118,0.4)"}`,
-                  background: oefenAanwezig === 0 ? "transparent" : "rgba(0,230,118,0.10)",
+                  border: `1px solid ${oefenAanwezig === 0 ? C.border : "rgba(0,176,255,0.4)"}`,
+                  background: oefenAanwezig === 0 ? "transparent" : "rgba(0,176,255,0.10)",
                 }} title="Oefen-paden met uitleg">
                   🎯 {isMaatschappij ? oefenAanwezig : `${oefenAanwezig}/${totaal}`}
                 </span>
@@ -355,7 +355,7 @@ function SlotRij({ slot, vakInfo, onPickPath, onPlayExamen }) {
                 padding: "12px 14px",
                 borderRadius: 10,
                 border: `1.5px solid ${C.oefen}`,
-                background: "linear-gradient(135deg, rgba(0,230,118,0.18), rgba(0,230,118,0.06))",
+                background: "linear-gradient(135deg, rgba(0,176,255,0.18), rgba(0,176,255,0.06))",
                 color: C.oefen,
                 fontFamily: "var(--font-display)",
                 fontSize: 13, fontWeight: 700,
@@ -365,8 +365,8 @@ function SlotRij({ slot, vakInfo, onPickPath, onPlayExamen }) {
                 minHeight: 64,
                 transition: "background 0.15s",
               }}
-              onMouseOver={(ev) => { if (onPickPath) ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,230,118,0.30), rgba(0,230,118,0.10))"; }}
-              onMouseOut={(ev) => { ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,230,118,0.18), rgba(0,230,118,0.06))"; }}
+              onMouseOver={(ev) => { if (onPickPath) ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,176,255,0.30), rgba(0,176,255,0.10))"; }}
+              onMouseOut={(ev) => { ev.currentTarget.style.background = "linear-gradient(135deg, rgba(0,176,255,0.18), rgba(0,176,255,0.06))"; }}
               title="Oefen dit examen vraag voor vraag met didactische uitleg"
             >
               <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
@@ -374,7 +374,7 @@ function SlotRij({ slot, vakInfo, onPickPath, onPlayExamen }) {
                 <span>Oefenen met uitleg</span>
               </span>
               <span style={{
-                fontSize: 10, fontWeight: 600, color: "rgba(0,230,118,0.85)", textTransform: "uppercase", letterSpacing: 0.4,
+                fontSize: 10, fontWeight: 600, color: "rgba(0,176,255,0.85)", textTransform: "uppercase", letterSpacing: 0.4,
               }}>
                 {pad.checkCount ? `${pad.checkCount} vragen · ` : ""}vraag → uitleg → leerpad
               </span>

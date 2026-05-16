@@ -72,7 +72,7 @@ const steps = [
         q: "Wat is het heilige boek van het christendom?",
         options: ["Koran", "Bijbel", "Tora", "Veda"],
         answer: 1,
-        wrongHints: ["Koran = heilig boek van de islam.", null, "Tora = eerste 5 boeken van het jodendom (zit ook in christelijke Bijbel).", "Veda = oude heilige teksten van het hindoeïsme."],
+        wrongHints: [null, "Tora is wel ÉÉN deel van de christelijke Bijbel (Oude Testament) — maar niet het hele boek.", null, null],
         explanation: "**Bijbel** = het heilige boek van het christendom. Bestaat uit Oude Testament (gedeeld met jodendom, ~39 boeken) + Nieuwe Testament (specifiek christelijk, ~27 boeken over Jezus + zijn leerlingen). Antwoord B.",
         uitlegPad: compact(
           "Boeken-tabel: BIJBEL = christendom. KORAN = islam. TORA/TENACH = jodendom. VEDA = hindoeïsme. TRIPITAKA = boeddhisme.",
@@ -84,7 +84,7 @@ const steps = [
         q: "In welk gebouw komen christenen samen om te bidden?",
         options: ["moskee", "kerk", "tempel", "synagoge"],
         answer: 1,
-        wrongHints: ["Moskee = gebedshuis islam.", null, "Tempel = gebedshuis hindoeïsme + boeddhisme.", "Synagoge = gebedshuis jodendom."],
+        wrongHints: ["Andere religie. Denk aan een toren (klokkentoren of kruis).", null, null, null],
         explanation: "**Kerk** = christelijk gebedshuis. Grote kerken heten **kathedraal** of **basiliek**. Hoofd-rooms-katholieke kerk = Sint-Pietersbasiliek in Vaticaan, Rome. Antwoord B.",
         uitlegPad: compact(
           "Gebouwen-tabel: KERK/KATHEDRAAL = christendom. MOSKEE = islam. TEMPEL = hindoeïsme. PAGODE/TEMPEL = boeddhisme. SYNAGOGE = jodendom.",
@@ -127,7 +127,7 @@ const steps = [
         q: "Wat is het heilige boek van de islam?",
         options: ["Bijbel", "Tora", "Koran", "Veda"],
         answer: 2,
-        wrongHints: ["Bijbel = christendom.", "Tora = jodendom.", null, "Veda = hindoeïsme."],
+        wrongHints: ["Denk aan de naam van de profeet die de openbaringen ontving.", null, null, null],
         explanation: "**Koran** = heilig boek van de islam. Bevat de openbaringen die Mohammed kreeg van Allah via aartsengel Gabriël. 114 hoofdstukken (soera's). Geschreven in Arabisch. Antwoord C.",
         uitlegPad: compact(
           "Koran = islam (114 soera's in Arabisch). Bijbel = christendom. Tora = jodendom. Veda = hindoeïsme. Tripitaka = boeddhisme.",
@@ -201,7 +201,7 @@ const steps = [
         q: "Wat is het symbool van het jodendom?",
         options: ["Kruis", "Halve maan", "Davidster", "Om-teken"],
         answer: 2,
-        wrongHints: ["Kruis = christendom.", "Halve maan = islam.", null, "Om = hindoeïsme."],
+        wrongHints: [null, null, null, null],
         explanation: "**Davidster** = zespuntige ster. Genoemd naar koning David. Op de vlag van Israël. Plus **menora** = 7-armige kandelaar (oud joods symbool). Antwoord C.",
         uitlegPad: compact(
           "Symbolen-tabel: KRUIS=christendom. HALVE MAAN+STER=islam. DAVIDSTER=jodendom. OM=hindoeïsme. WIEL VAN DHARMA=boeddhisme.",
@@ -225,7 +225,7 @@ const steps = [
         q: "Op welke **dag van de week** vieren joden hun heilige dag (sabbat)?",
         options: ["vrijdag", "zaterdag", "zondag", "woensdag"],
         answer: 1,
-        wrongHints: ["Vrijdag = heilige dag islam.", null, "Zondag = heilige dag christendom.", "Geen religie heeft woensdag als hoofd-rustdag."],
+        wrongHints: [null, null, null, "Geen religie heeft woensdag als hoofd-rustdag."],
         explanation: "**Sabbat** = zaterdag (van vrijdagavond tot zaterdagavond). Volgens Tora rustte God op de 7e dag van de schepping. Strikt orthodoxe joden werken dan helemaal niet (geen lichten aan, geen auto). Antwoord B.",
         uitlegPad: compact(
           "Heilige dagen: vrijdag=islam. zaterdag=jodendom (sabbat). zondag=christendom. Sabbat = vanaf zonsondergang vrijdag tot zonsondergang zaterdag.",

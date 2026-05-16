@@ -157,7 +157,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Noorwegen**?",
         options: ["Bergen", "Stockholm", "Oslo", "Helsinki"],
         answer: 2,
-        wrongHints: ["Bergen = 2e stad Noorwegen + havenstad — niet hoofdstad.", "Stockholm = hoofdstad Zweden, niet Noorwegen.", null, "Helsinki = hoofdstad Finland."],
+        wrongHints: ["Bergen = wel 2e stad Noorwegen, maar geen hoofdstad.", null, null, null],
         explanation: "**Oslo** = hoofdstad Noorwegen. Ligt aan een fjord (Oslofjord). Antwoord C.",
         uitlegPad: compact(
           "Oslo = hoofdstad Noorwegen. Aan fjord. Noorwegen niet in EU (referenda 1972 + 1994).",
@@ -169,7 +169,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Denemarken**?",
         options: ["Stockholm", "Kopenhagen", "Oslo", "Aarhus"],
         answer: 1,
-        wrongHints: ["Stockholm = Zweden.", null, "Oslo = Noorwegen.", "Aarhus = 2e stad Denemarken, niet hoofdstad."],
+        wrongHints: [null, null, null, "Aarhus = wel grote stad in Denemarken, maar geen hoofdstad."],
         explanation: "**Kopenhagen** = hoofdstad Denemarken. Ligt op eiland Seeland. Verbonden via brug + tunnel met Zweden (Öresundbrug). Antwoord B.",
         uitlegPad: compact(
           "Kopenhagen = Denemarken-hoofdstad. Op eiland Seeland. Brug naar Zweden.",
@@ -200,7 +200,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Polen**?",
         options: ["Krakau", "Praag", "Warschau", "Boedapest"],
         answer: 2,
-        wrongHints: ["Krakau = oude koningsstad Polen, 2e stad — niet hoofdstad.", "Praag = hoofdstad Tsjechië, niet Polen.", null, "Boedapest = hoofdstad Hongarije."],
+        wrongHints: ["Krakau = oude koningsstad in Polen — wel binnen het land, maar geen hoofdstad meer.", null, null, null],
         explanation: "**Warschau** (Pools: Warszawa) = hoofdstad Polen. Antwoord C.",
         uitlegPad: compact(
           "Warschau = Polen-hoofdstad. EU-lid sinds 2004. Munt: zloty (geen euro).",
@@ -229,7 +229,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Oekraïne**?",
         options: ["Moskou", "Minsk", "Kiev", "Sofia"],
         answer: 2,
-        wrongHints: ["Moskou = hoofdstad Rusland, niet Oekraïne.", "Minsk = hoofdstad Wit-Rusland (Belarus), niet Oekraïne.", null, "Sofia = hoofdstad Bulgarije."],
+        wrongHints: [null, null, null, null],
         explanation: "**Kiev** (Oekraïens: Kyiv) = hoofdstad Oekraïne. Sinds Russische invasie februari 2022 dagelijks in het nieuws. Antwoord C.",
         uitlegPad: compact(
           "Kiev/Kyiv = Oekraïne-hoofdstad. Russische spelling 'Kiev', Oekraïense 'Kyiv'. Sinds 2022 in oorlog met Rusland.",
