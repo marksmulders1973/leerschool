@@ -165,18 +165,64 @@ const steps = [
         options: ["20 °C", "18 °C", "100 °C", "22 °C"],
         answer: 0,
         wrongHints: [null, "Dat is de laagste, niet het gemiddelde.", "Dat is de som — nog ÷ 5 doen.", "Dat is de hoogste, niet het gemiddelde."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Som", tekst: "18 + 20 + 22 + 19 + 21 = **100 °C**." },
+            { titel: "Aantal", tekst: "**5** dagen." },
+            { titel: "Delen", tekst: "Gemiddelde = 100 ÷ 5 = **20 °C**." },
+          ],
+          woorden: [{ woord: "gemiddelde", uitleg: "Som van alle waarden gedeeld door aantal waarden." }],
+          theorie: "Cito-check: gemiddelde 20 ligt tussen laagste 18 en hoogste 22 → klopt qua range.",
+          voorbeelden: [{ type: "schatten", tekst: "Snelle schatting: alle waarden liggen rond 20. Gemiddelde moet dan ook ~20 zijn." }],
+          basiskennis: [{ onderwerp: "Eenheid meenemen", uitleg: "Het antwoord is een temperatuur, dus '°C' erbij." }],
+          niveaus: {
+            basis: "(18+20+22+19+21) ÷ 5 = 100 ÷ 5 = 20 °C. = A.",
+            simpeler: "Som 100, gedeeld door 5 dagen = 20 °C gemiddeld. = A.",
+            nogSimpeler: "20 °C = A.",
+          },
+        },
       },
       {
         q: "Zakgeld 4 vrienden: **€5, €4, €6, €5**. Gemiddeld zakgeld?",
         options: ["€5", "€20", "€4", "€6"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is de som. Nog ÷ 4.", "Dat is de laagste.", "Dat is de hoogste."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Som", tekst: "€5 + €4 + €6 + €5 = **€20**." },
+            { titel: "Delen", tekst: "Gemiddelde = €20 ÷ 4 = **€5 per persoon**." },
+          ],
+          woorden: [{ woord: "gemiddelde", uitleg: "Som ÷ aantal." }],
+          theorie: "Tip: vergeet de euro-eenheid niet — het antwoord is in geld.",
+          voorbeelden: [{ type: "check", tekst: "Check: 4 × €5 = €20 ✓ (de oorspronkelijke som). Klopt." }],
+          basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "€5 ligt tussen €4 en €6 → range klopt." }],
+          niveaus: {
+            basis: "(5+4+6+5) ÷ 4 = 20 ÷ 4 = €5. = A.",
+            simpeler: "Som €20 ÷ 4 vrienden = €5 elk. = A.",
+            nogSimpeler: "€5 = A.",
+          },
+        },
       },
       {
         q: "Een loper rent **5 keer**: 8, 9, 10, 9, 9 km. **Gemiddeld km per keer**?",
         options: ["9 km", "10 km", "45 km", "8 km"],
         answer: 0,
         wrongHints: [null, "Te veel — dat is alleen de hoogste keer.", "Dat is de som — nog ÷ 5.", "Dat is de laagste."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Som", tekst: "8 + 9 + 10 + 9 + 9 = **45 km** in totaal." },
+            { titel: "Delen", tekst: "Gemiddelde = 45 ÷ 5 = **9 km per keer**." },
+          ],
+          woorden: [{ woord: "per keer", uitleg: "Per gerend rondje — dus we delen door aantal rondjes." }],
+          theorie: "Cito-truc: schatten. Meeste waarden zijn rond 9. Gemiddelde moet ook ~9 zijn.",
+          voorbeelden: [{ type: "check", tekst: "5 × 9 = 45 ✓ — de som klopt." }],
+          basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "9 ligt tussen 8 (laagst) en 10 (hoogst) → klopt." }],
+          niveaus: {
+            basis: "(8+9+10+9+9) ÷ 5 = 45 ÷ 5 = 9 km. = A.",
+            simpeler: "Som 45 km ÷ 5 keer = 9 km gemiddeld per keer. = A.",
+            nogSimpeler: "9 km = A.",
+          },
+        },
       },
     ],
   },
@@ -193,6 +239,21 @@ const steps = [
         options: ["5", "4", "6", "Geen modus"],
         answer: 0,
         wrongHints: [null, "Tel hoe vaak elk getal voorkomt. 5 komt 3× voor, 4 maar 1×.", "Tel opnieuw — 5 komt het vaakst.", "Er is wél een modus. Welk getal komt het vaakst voor?"],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel hoe vaak", tekst: "3: 1×. 4: 1×. **5: 3×**. 6: 1×. 7: 1×. → De 5 komt het vaakst voor." },
+            { titel: "Modus = vaakst", tekst: "De **modus** is de waarde die het vaakst voorkomt. Hier dus **5**." },
+          ],
+          woorden: [{ woord: "modus", uitleg: "Het vaakst voorkomende getal in een rijtje." }],
+          theorie: "Modus ≠ hoogste of laagste. Modus = vaakste. Belangrijk om uit elkaar te houden.",
+          voorbeelden: [{ type: "streepjes", tekst: "Cito-truc: zet een streepje per keer dat een getal voorkomt. Het getal met de meeste streepjes = modus." }],
+          basiskennis: [{ onderwerp: "Speciale gevallen", uitleg: "Soms zijn er twee modussen (twee getallen even vaak). Soms is er géén modus (alles 1×)." }],
+          niveaus: {
+            basis: "5 (komt 3× voor). = A.",
+            simpeler: "Tel: 5 komt 3× voor, alle andere maar 1×. Modus = 5. = A.",
+            nogSimpeler: "5 = A.",
+          },
+        },
       },
       {
         q: "Stemmen kleur: rood 3, blauw 8, groen 2, geel 3. **Modus**?",
@@ -219,6 +280,21 @@ const steps = [
         options: ["7", "6", "8", "5"],
         answer: 0,
         wrongHints: [null, "6 komt 2× voor — 7 komt 3× voor. Meer.", "Dat is maar 1×.", "Dat is maar 1× — minst."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Tel hoe vaak", tekst: "5: 1×. 6: 2×. **7: 3×**. 8: 1×. → 7 wint." },
+            { titel: "Modus = 7", tekst: "Het cijfer dat het vaakst voorkomt = de modus. Hier: een 7." },
+          ],
+          woorden: [{ woord: "modus", uitleg: "Het vaakst voorkomende getal." }],
+          theorie: "Bij ongesorteerde rijtjes: maak een tellijst met streepjes.",
+          voorbeelden: [{ type: "stap", tekst: "Cito-truc: streep weg wat je hebt geteld. 6, 7, 8, 7, 6, 7, 5 → 5:1, 6:2, 7:3, 8:1." }],
+          basiskennis: [{ onderwerp: "Niet hoogste", uitleg: "8 is hoogste maar slechts 1×. Modus is vaakste, niet hoogste." }],
+          niveaus: {
+            basis: "7 (3×). = A.",
+            simpeler: "Tel elk cijfer. 7 komt 3 keer voor. Modus = 7. = A.",
+            nogSimpeler: "7 = A.",
+          },
+        },
       },
       {
         q: "Wanneer **kun je geen gemiddelde** uitrekenen maar wel een **modus**?",
@@ -268,6 +344,21 @@ const steps = [
         options: ["8", "7", "9", "5"],
         answer: 0,
         wrongHints: [null, "Te weinig — sorteer en pak middelste. 3, 5, 7, 8, 9, 10, 12 → middelste = 8.", "Te veel — controleer sortering.", "Te weinig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Sorteer eerst", tekst: "3, 5, 7, **8**, 9, 10, 12 (op volgorde van klein naar groot)." },
+            { titel: "Tel middelste", tekst: "7 getallen → middelste is positie 4 (3 links + middelste + 3 rechts). Op positie 4 staat: **8**." },
+          ],
+          woorden: [{ woord: "mediaan", uitleg: "Middelste getal als alles op volgorde staat." }],
+          theorie: "Bij oneven aantal: er is altijd 1 middelste getal. Bij 7 getallen → 4e positie.",
+          voorbeelden: [{ type: "stap", tekst: "3 (1e) - 5 (2e) - 7 (3e) - **8 (4e = midden)** - 9 (5e) - 10 (6e) - 12 (7e)." }],
+          basiskennis: [{ onderwerp: "Volgorde-truc", uitleg: "Schrijf altijd de gesorteerde rij op. Dan zie je het middelste direct." }],
+          niveaus: {
+            basis: "Gesorteerd: 3,5,7,8,9,10,12. Middelste = 8. = A.",
+            simpeler: "Op volgorde zetten, dan 4e positie pakken (van 7 getallen). = 8. = A.",
+            nogSimpeler: "8 = A.",
+          },
+        },
       },
       {
         q: "Cijfers: 7, 7, 7, 7, **2** (iemand was ziek). Welk getal geeft een **eerlijker beeld** van de klas?",
