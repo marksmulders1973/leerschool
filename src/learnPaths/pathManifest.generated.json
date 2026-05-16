@@ -5393,6 +5393,31 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "wereldreligies-po",
+    "file": "./wereldreligiesPo.js",
+    "title": "Wereldreligies — 5 grote religies van de wereld",
+    "subject": "wereldorientatie",
+    "level": "po",
+    "emoji": "🌐",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Wereldoriëntatie - religies + culturen",
+    "triggerKeywords": [
+      "wereldreligies",
+      "christendom",
+      "islam",
+      "jodendom",
+      "hindoeisme",
+      "boeddhisme",
+      "heilige boeken",
+      "monotheisme polytheisme"
+    ],
+    "intro": "18 vragen Cito-stof groep 7-8 over de 5 wereldreligies: christendom, islam, hindoeïsme, boeddhisme, jodendom. Heilige boeken, gebouwen, symbolen, feesten. Neutraal + feitelijk.",
+    "stepCount": 6,
+    "checkCount": 18,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "werkwoord-tijden-po",
     "file": "./werkwoordTijdenPo.js",
     "title": "Werkwoordsvervoeging T/V — Cito groep 7-8",

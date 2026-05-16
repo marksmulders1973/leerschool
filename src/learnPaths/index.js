@@ -70,6 +70,7 @@ import platentektoniekAardrijkskunde from "./platentektoniekAardrijkskunde.js";
 import topografieNederland from "./topografieNederland.js";
 import europeseUniePo from "./europeseUniePo.js";
 import topografieEuropaPo from "./topografieEuropaPo.js";
+import wereldreligiesPo from "./wereldreligiesPo.js";
 import citoStrategieenGroep8 from "./citoStrategieenGroep8.js";
 import doorstroomtoetsRekenenG8 from "./doorstroomtoetsRekenenG8.js";
 import begrijpendLezenStrategie from "./begrijpendLezenStrategie.js";
@@ -358,6 +359,7 @@ export const ALL_LEARN_PATHS = {
   "topografie-nederland": topografieNederland,
   "europese-unie-po": europeseUniePo,
   "topografie-europa-po": topografieEuropaPo,
+  "wereldreligies-po": wereldreligiesPo,
   "cito-strategieen-groep8": citoStrategieenGroep8,
   "doorstroomtoets-rekenen-g8": doorstroomtoetsRekenenG8,
   "doorstroomtoets-taal-g8": doorstroomtoetsTaalG8,
