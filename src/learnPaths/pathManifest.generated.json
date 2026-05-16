@@ -1247,6 +1247,30 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "europese-unie-po",
+    "file": "./europeseUniePo.js",
+    "title": "Europese Unie — wat is het en hoe werkt het?",
+    "subject": "wereldorientatie",
+    "level": "po",
+    "emoji": "🇪🇺",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Wereldoriëntatie - Europa + EU",
+    "triggerKeywords": [
+      "europese unie po",
+      "eu lidstaten 27",
+      "europese commissie",
+      "europees parlement",
+      "europese raad",
+      "euro eurozone",
+      "eu vlag 12 sterren"
+    ],
+    "intro": "18 vragen over de EU voor groep 7-8: 27 lidstaten, 4 vrijheden, instellingen (Commissie/Parlement/Raden), euro + ECB, EU-symbolen + Nederlandse buurlanden. Sluit aan op maatschappij-eindexamenstof.",
+    "stepCount": 6,
+    "checkCount": 18,
+    "chapterCount": 3,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "evolutie-mens-po",
     "file": "./evolutieMensPo.js",
     "title": "Evolutie + mens (Cito groep 6-8)",
