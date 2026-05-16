@@ -436,6 +436,27 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 43"
     },
     {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 15,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 15"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 32,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 32"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 33"
+    },
+    {
       "examPathId": "examen-maatschappijkunde-2023-t1",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -755,6 +776,13 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29"
     },
     {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 17"
+    },
+    {
       "examPathId": "examen-maatschappijkunde-2023-t2",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
       "stepIdx": 2,
@@ -973,6 +1001,20 @@
       "stepIdx": 4,
       "vraagNr": 9,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 6,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 6"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t1",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 11"
     }
   ],
   "pincode-werk-arbeidsmarkt": [

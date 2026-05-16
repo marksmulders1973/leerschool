@@ -2076,6 +2076,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-maatschappijkunde-2022-t1",
+    "file": "./examenMaatschappijkunde2022T1.js",
+    "title": "Examen oefenen — Maatschappijkunde 2022 tijdvak 1 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2022-T1",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2022 tijdvak 1",
+      "ambtenaren ministerie",
+      "minister leiding",
+      "ministeriële verantwoordelijkheid koning",
+      "europese commissie wetsvoorstel",
+      "media crimineel gedrag",
+      "noodweer"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1. Onderwerpen: ambtenaren werken op ministeries, minister leidt ministerie, ministeriële verantwoordelijkheid (koning onschendbaar),",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-maatschappijkunde-2023-t1",
     "file": "./examenMaatschappijkunde2023T1.js",
     "title": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
