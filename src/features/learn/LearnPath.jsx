@@ -15,6 +15,9 @@ import {
   pathWrongMap as adaptPathWrongMap,
   markPathSeen,
   getSeenPaths,
+  markRetrievalDue,
+  popDueRetrieval,
+  peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
 import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
@@ -348,12 +351,29 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [showUitlegPad, setShowUitlegPad] = useState(false);
   const [showTekstHerlees, setShowTekstHerlees] = useState(false);
 
+  // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval, 2026-05-16):
+  // bij entry van een latere stap, peek of er een check uit een vorige stap
+  // klaar staat voor herhaling. Als ja, banner + modal-flow zichtbaar.
+  // `null` = geen pending retrieval voor deze step-context.
+  const [retrievalChallenge, setRetrievalChallenge] = useState(null);
+
   // VoorkennisKeten fase 3 (2026-05-14): markeer pad als 'ooit gezien' bij
   // mount. Verzamel volledige seen-set in state voor mastery-detectie.
   useEffect(() => {
     if (pathId) markPathSeen(pathId);
   }, [pathId]);
   const seenIds = useMemo(() => getSeenPaths(), [pathId, stepIdx]);
+
+  // Begripscheck-na-uitlegPad: bij entry van een stap kijken of er een
+  // retrieval-check klaarstaat uit een vorige stap. Non-destructive peek;
+  // pas bij klik op de banner wordt de check echt gepopt.
+  const [retrievalAvailable, setRetrievalAvailable] = useState(null);
+  useEffect(() => {
+    if (!pathId || stepIdx == null) return;
+    const due = peekDueRetrieval(pathId, stepIdx);
+    setRetrievalAvailable(due);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathId, stepIdx]);
 
   // Voortgang ophalen bij start
   useEffect(() => {
@@ -464,6 +484,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       adaptRecordRight(pathId, stepIdx, realCheckIdx);
       // A11: spaced repetition — schuif interval-stap (correct na fout = consolideren).
       srRecordSeen(pathId, stepIdx, realCheckIdx, true, attempts);
+      // Begripscheck-na-uitlegPad (Roediger-Karpicke retrieval-practice, 2026-05-16):
+      // correct antwoord terwijl het uitlegpad open staat = de leerling heeft net
+      // uitleg gezien én kan het toepassen. Markeer voor retrieval-herhaling
+      // in een latere stap. Voorwaarde: uitlegPad bestaat én was zichtbaar
+      // (sluit retrieval uit van pure-recall-correcties zonder uitleg).
+      if (showUitlegPad && currentCheck.uitlegPad) {
+        markRetrievalDue(pathId, stepIdx, realCheckIdx);
+      }
       // Bij begrijpend-lezen-vragen met `evidence`: pauzeer en toon aan de
       // leerling waar in de tekst het antwoord stond (didactiek-feedback Mark).
       if (currentCheck.evidence) {
@@ -753,6 +781,144 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
           {stepIdx + 1}. {step.title}
         </h2>
+
+        {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
+            verschijnt als er een check uit een vorige stap "due" is voor
+            retrieval-herhaling. Klik → modal met die check. */}
+        {mode === "reading" && retrievalAvailable && !retrievalChallenge && (() => {
+          const fromStep = path.steps[retrievalAvailable.stepIdx];
+          const fromCheck = fromStep?.checks?.[retrievalAvailable.checkIdx];
+          if (!fromCheck) return null;
+          return (
+            <button
+              type="button"
+              onClick={() => {
+                const popped = popDueRetrieval(pathId, stepIdx);
+                if (!popped) return;
+                setRetrievalChallenge({
+                  fromStepIdx: popped.stepIdx,
+                  fromCheckIdx: popped.checkIdx,
+                  check: shuffleOptions(fromCheck),
+                  selected: null,
+                  feedback: null,
+                });
+                setRetrievalAvailable(null);
+              }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                width: "100%",
+                padding: "12px 14px",
+                margin: "12px 0",
+                background: "linear-gradient(135deg, rgba(155,77,224,0.12), rgba(155,77,224,0.04))",
+                border: "1px solid rgba(155,77,224,0.45)",
+                borderRadius: 10,
+                color: C.text,
+                cursor: "pointer",
+                textAlign: "left",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              <span style={{ fontSize: 20 }}>🧠</span>
+              <span style={{ flex: 1, lineHeight: 1.35 }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#b380ff" }}>
+                  Snelle terughaal — herhaal een eerdere vraag
+                </span>
+                <span style={{ display: "block", fontSize: 12, color: C.muted, marginTop: 2 }}>
+                  Bij deel {retrievalAvailable.stepIdx + 1} kreeg je uitleg. Probeer het opnieuw — werkt het nu uit je hoofd?
+                </span>
+              </span>
+              <span style={{ fontSize: 18, color: "#b380ff" }}>▶</span>
+            </button>
+          );
+        })()}
+
+        {/* Retrieval-modal: toont de eerdere check inline, registreert
+            correct/fout in adaptiveStore (oude stap-context). */}
+        {retrievalChallenge && (
+          <div style={{ ...cardStyle("#b380ff"), margin: "12px 0" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#b380ff" }}>
+                🧠 Snelle terughaal · deel {retrievalChallenge.fromStepIdx + 1}
+              </div>
+              <button
+                onClick={() => setRetrievalChallenge(null)}
+                style={{ background: "transparent", border: "1px solid var(--color-border)", color: C.muted, borderRadius: 6, padding: "4px 10px", fontSize: 12, cursor: "pointer" }}
+              >
+                later
+              </button>
+            </div>
+            <div style={{ fontSize: 15, lineHeight: 1.5, color: "var(--color-text-strong)", marginBottom: 12 }}>
+              <MdInline text={retrievalChallenge.check.q || retrievalChallenge.check.question} />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {retrievalChallenge.check.options.map((opt, i) => {
+                const isPicked = retrievalChallenge.selected === i;
+                const isCorrect = retrievalChallenge.feedback && i === retrievalChallenge.check.answer;
+                const isWrong = retrievalChallenge.feedback && isPicked && i !== retrievalChallenge.check.answer;
+                return (
+                  <button
+                    key={i}
+                    disabled={retrievalChallenge.feedback != null}
+                    onClick={() => {
+                      const correct = i === retrievalChallenge.check.answer;
+                      // Versterk mastery op de oorspronkelijke stap-context.
+                      if (correct) {
+                        adaptRecordRight(pathId, retrievalChallenge.fromStepIdx, retrievalChallenge.fromCheckIdx);
+                      } else {
+                        adaptRecordWrong(pathId, retrievalChallenge.fromStepIdx, retrievalChallenge.fromCheckIdx);
+                        // Niet meteen opnieuw markeren — voorkomt direct-herhaal-loop.
+                        // Volgende keer dat user uitlegPad opent + correct doet, komt-ie weer in queue.
+                      }
+                      setRetrievalChallenge({ ...retrievalChallenge, selected: i, feedback: correct ? "good" : "bad" });
+                    }}
+                    style={{
+                      textAlign: "left",
+                      padding: "10px 14px",
+                      borderRadius: 8,
+                      background: isCorrect
+                        ? "rgba(0,200,83,0.18)"
+                        : isWrong
+                        ? "rgba(255,82,82,0.18)"
+                        : "rgba(255,255,255,0.04)",
+                      border: `1px solid ${isCorrect ? "rgba(0,200,83,0.55)" : isWrong ? "rgba(255,82,82,0.55)" : "var(--color-border)"}`,
+                      color: C.text,
+                      cursor: retrievalChallenge.feedback != null ? "default" : "pointer",
+                      fontFamily: "var(--font-body)",
+                      fontSize: 14,
+                      minHeight: 44,
+                    }}
+                  >
+                    <MdInline text={opt} />
+                  </button>
+                );
+              })}
+            </div>
+            {retrievalChallenge.feedback === "good" && (
+              <div style={{ marginTop: 10, padding: "8px 12px", background: "rgba(0,200,83,0.12)", border: "1px solid rgba(0,200,83,0.40)", borderRadius: 8, fontSize: 13, color: C.good }}>
+                ✅ Goed onthouden! Verder met deel {stepIdx + 1}.
+                <button
+                  onClick={() => setRetrievalChallenge(null)}
+                  style={{ marginLeft: 12, padding: "4px 10px", background: C.good, color: "#06211a", border: "none", borderRadius: 6, fontWeight: 700, cursor: "pointer", fontSize: 12 }}
+                >
+                  ▶ Door
+                </button>
+              </div>
+            )}
+            {retrievalChallenge.feedback === "bad" && (
+              <div style={{ marginTop: 10, padding: "8px 12px", background: "rgba(255,82,82,0.10)", border: "1px solid rgba(255,82,82,0.40)", borderRadius: 8, fontSize: 13, color: C.text }}>
+                Niet erg — je kunt dit terug-vinden bij deel {retrievalChallenge.fromStepIdx + 1}.
+                <button
+                  onClick={() => setRetrievalChallenge(null)}
+                  style={{ marginLeft: 12, padding: "4px 10px", background: "transparent", color: C.text, border: `1px solid ${C.border}`, borderRadius: 6, cursor: "pointer", fontSize: 12 }}
+                >
+                  Door
+                </button>
+              </div>
+            )}
+          </div>
+        )}
 
         {(mode === "reading" || mode === "stepDone") && (
           <>

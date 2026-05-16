@@ -200,6 +200,86 @@ export function findWeakestKetenIdx(keten, everSeenIds) {
   return -1;
 }
 
+// ─── Retrieval-practice (Roediger-Karpicke, 2026-05-16) ───────────────────────
+// Na correct antwoord ná het zien van een uitlegPad heeft de leerling de
+// uitleg verwerkt. Volgens retrieval-practice-onderzoek werkt herhaling
+// ná een korte vertraging (= bij de volgende stap) didactisch beter dan
+// directe herhaling. We bewaren daarom een queue van checks die "due" zijn
+// voor een herhaal-vraag in een latere stap.
+//
+// Schema: lk_retrieval_v1 = { [pathId]: [{stepIdx, checkIdx, t}] }
+// Bij volgende stap-bezoek wordt 1 check uit een eerdere stepIdx gepopt en
+// als bonus-check getoond.
+const RETRIEVAL_KEY = "lk_retrieval_v1";
+
+function readRetrievals() {
+  try {
+    const raw = localStorage.getItem(RETRIEVAL_KEY);
+    if (!raw) return {};
+    const obj = JSON.parse(raw);
+    return obj && typeof obj === "object" ? obj : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeRetrievals(obj) {
+  try {
+    localStorage.setItem(RETRIEVAL_KEY, JSON.stringify(obj));
+  } catch {
+    // stil falen
+  }
+}
+
+// Markeer dat een check een uitlegPad heeft gezien én daarna correct beantwoord
+// is. De check krijgt een retrieval-due-stempel voor herhaling in een latere stap.
+// Per (pathId, stepIdx, checkIdx) wordt max 1 entry bewaard (dedupe).
+export function markRetrievalDue(pathId, stepIdx, checkIdx) {
+  if (!pathId || stepIdx == null || checkIdx == null) return;
+  const all = readRetrievals();
+  const list = Array.isArray(all[pathId]) ? all[pathId] : [];
+  if (list.some((r) => r.stepIdx === stepIdx && r.checkIdx === checkIdx)) return;
+  list.push({ stepIdx, checkIdx, t: Date.now() });
+  // Cap queue per pad op 5 — voorkomt dat we ouder spul oneindig in localStorage houden.
+  while (list.length > 5) list.shift();
+  all[pathId] = list;
+  writeRetrievals(all);
+}
+
+// Non-destructive peek: returnt 1 retrieval-check uit een eerdere stap dan
+// currentStepIdx, of null. FIFO — oudste eerst. Geeft alleen iets terug als
+// de markering is gemaakt vóór dit moment in een eerdere stap.
+export function peekDueRetrieval(pathId, currentStepIdx) {
+  if (!pathId || currentStepIdx == null) return null;
+  const all = readRetrievals();
+  const list = Array.isArray(all[pathId]) ? all[pathId] : [];
+  return list.find((r) => r.stepIdx < currentStepIdx) || null;
+}
+
+// Destructive pop: idem als peekDueRetrieval maar verwijdert de entry.
+// Gebruikt zodra de bonus-check daadwerkelijk getoond wordt.
+export function popDueRetrieval(pathId, currentStepIdx) {
+  if (!pathId || currentStepIdx == null) return null;
+  const all = readRetrievals();
+  const list = Array.isArray(all[pathId]) ? all[pathId] : [];
+  const idx = list.findIndex((r) => r.stepIdx < currentStepIdx);
+  if (idx < 0) return null;
+  const [entry] = list.splice(idx, 1);
+  if (list.length === 0) delete all[pathId];
+  else all[pathId] = list;
+  writeRetrievals(all);
+  return entry;
+}
+
+// Aantal pending retrievals voor een pad (voor UI-badge).
+export function countDueRetrievals(pathId, currentStepIdx) {
+  if (!pathId) return 0;
+  const all = readRetrievals();
+  const list = Array.isArray(all[pathId]) ? all[pathId] : [];
+  if (currentStepIdx == null) return list.length;
+  return list.filter((r) => r.stepIdx < currentStepIdx).length;
+}
+
 // Wis adaptieve state voor een pad (gebruikt bij self-service delete).
 export function clearPath(pathId) {
   if (!pathId) return;
@@ -215,10 +295,20 @@ export function clearPath(pathId) {
   if (changed) writeAll(all);
 }
 
+// Wis retrieval-queue voor een pad (gebruikt bij pad-reset).
+export function clearRetrievalsForPath(pathId) {
+  if (!pathId) return;
+  const all = readRetrievals();
+  if (!(pathId in all)) return;
+  delete all[pathId];
+  writeRetrievals(all);
+}
+
 // Wis ALLE adaptieve state (gebruikt bij "verwijder al mijn data").
 export function clearAll() {
   try {
     localStorage.removeItem(KEY);
+    localStorage.removeItem(RETRIEVAL_KEY);
   } catch {
     // stil
   }
