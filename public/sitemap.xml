@@ -52,6 +52,12 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://leerkwartier.app/onderwijs-begrippen.html</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://leerkwartier.app/vmbo-examens-oefenen.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
