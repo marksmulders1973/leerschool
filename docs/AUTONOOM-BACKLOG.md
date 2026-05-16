@@ -320,6 +320,13 @@ Eén regel per sessie. Datum + wat gedaan + commit-hash van laatste push.
   - **Placeholder-UI in ExamensPage** sectie 1: per vak nu "X / 8" teller, dashed-border placeholders voor ontbrekende slots met PDF-link knop ernaast, info-banner voor niet-haalbare vakken (wiskunde/nederlands/aardrijkskunde) met reden. Commit fb40809.
   - 4 haalbare vakken nu: Biologie 5/8, Economie 6/8, Engels 4/8, Geschiedenis 5/8 = 20/32. Maatschappijkunde 3 paden (geen 8-target).
   - 24 niet-haalbare slots (wisk/ned/aardr) zichtbaar als placeholders met directe PDF-link.
+- 2026-05-16 (7e autonome blok, ~2u) — **4 NIEUWE examen-leerpaden batch** (Mark verzoek "ga door met vullen") aanvullend op 6e blok:
+  - **Engels 2023-T1**: 6 vragen (T1 Twickenham/T2 trees/T4 Jamaican bobsledders/T5 Wild Place/T6 smokejumpers ×2).
+  - **Economie 2022-T1**: 5 vragen (EU vrij verkeer/CPB Prinsjesdag/modaal inkomen/recordoogst/UWV werknemersverzekeringen).
+  - **Biologie 2022-T1**: 5 vragen (geslachtsbepaling/vaccin actief/witte bloedcellen DNA/water-opname dikke darm/koolhydraten dunne darm).
+  - **Geschiedenis 2022-T1**: 4 vragen (caoutchoucartikel 1887/Nazi terreur+strafkampen+censuur/Spoorwegstaking Hongerwinter). V23 kaart-vraag overgeslagen.
+  - Vakken-teller: Engels 4/8→5/8, Economie 6/8→7/8, Biologie 5/8→6/8, Geschiedenis 5/8→6/8. Totaal oefen-examens 21→25.
+  - 20 nieuwe SEO-vraagpaginas in public/examen/. pathManifest 191→193, examenLookup 143→152 refs / 25 targets. Build groen. Commit 6a607d1.
 - 2026-05-16 (6e autonome blok, ~2u) — **2 NIEUWE examen-leerpaden zichtbaar** (Mark verzoek "wel zichtbaar nieuw examen-pad bouwen"):
   - **Geschiedenis 2025 tijdvak 2**: 6 vragen (Grondwet 1848 / rechtsstaat / WO1-blokkade / Rotterdam-bombardement 1940 / vergrijzing-verzorgingsstaat / 1991 Warschaupact-einde). Commit b89e4bd. PDFs via curl, parser draaide direct (vakcode 0125 bewezen). 12 → 8 → 6 vragen-triage (skip kaart-V8 + prent-V22).
   - **Engels 2024 tijdvak 2**: 6 vragen geselecteerd uit 29 MC (AI Japan / Queen Barbie / SS Gairsoppa-brieven / Pompeii-curse / Skellig Michael / spider playful ironie). Commit f614074. Eerste pad waar bronTekst-veld breed wordt gebruikt (Engelse leesbronnen 200-400w per vraag).
