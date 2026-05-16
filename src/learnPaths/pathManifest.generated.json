@@ -1659,6 +1659,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-engels-2023-t2",
+    "file": "./examenEngels2023T2.js",
+    "title": "Examen oefenen — Engels 2023 tijdvak 2 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2023-T2",
+    "triggerKeywords": [
+      "examen engels 2023 tijdvak 2",
+      "youtube baby doll",
+      "wurst burglary dna",
+      "selfie museum vienna",
+      "hailie deegan nascar",
+      "decibel playground netherlands",
+      "blue whales song"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2023 tijdvak 2. Teksten: YouTube baby-doll Ingham, German burglary wurst-DNA, Vienna selfie museum, Hailie Deegan NASCAR, Dutch playground decibels, Blue wha",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-engels-2024-t1",
     "file": "./examenEngels2024T1.js",
     "title": "Examen oefenen — Engels 2024 tijdvak 1 (echte vragen)",
