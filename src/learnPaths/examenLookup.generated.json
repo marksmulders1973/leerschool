@@ -471,6 +471,34 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 1, vraag 26"
     },
     {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 3"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 21,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 21"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 23"
+    },
+    {
       "examPathId": "examen-maatschappijkunde-2024-t1",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -725,6 +753,20 @@
       "stepIdx": 7,
       "vraagNr": 29,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 7"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2023-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2, vraag 8"
     }
   ],
   "pincode-geld-sparen-lenen": [

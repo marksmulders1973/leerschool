@@ -2101,6 +2101,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-maatschappijkunde-2023-t2",
+    "file": "./examenMaatschappijkunde2023T2.js",
+    "title": "Examen oefenen — Maatschappijkunde 2023 tijdvak 2 (echte vragen)",
+    "subject": "maatschappijleer",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Maatschappijkunde - eindexamen oefenen 2023-T2",
+    "triggerKeywords": [
+      "examen maatschappijkunde 2023 tijdvak 2",
+      "referendum helsinki",
+      "wethouder coalitieakkoord",
+      "europese raad regeringsleiders",
+      "eu richtlijn verordening",
+      "trias politica",
+      "klassenjustitie"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Maatschappijkunde 2023 tijdvak 2. Onderwerpen: referendum Helsinki, wethouders kiezen na coalitieakkoord, Europese Raad regeringsleiders, EU-richtlijn, Trias Politi",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-maatschappijkunde-2024-t1",
     "file": "./examenMaatschappijkunde2024T1.js",
     "title": "Examen oefenen — Maatschappijkunde 2024 tijdvak 1 (echte vragen)",
