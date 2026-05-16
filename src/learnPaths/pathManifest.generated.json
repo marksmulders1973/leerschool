@@ -1347,6 +1347,30 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-biologie-2023-t2",
+    "file": "./examenBiologie2023T2.js",
+    "title": "Examen oefenen — Biologie 2023 tijdvak 2 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2023-T2",
+    "triggerKeywords": [
+      "examen biologie 2023 tijdvak 2",
+      "staafjes kegeltjes oog",
+      "brandnetel voortplanting",
+      "eiwitten bouwstof",
+      "genotype fenotype metamorfose",
+      "beenmerg stamcellen",
+      "prokaryoot eukaryoot celkern"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Biologie 2023 tijdvak 2. Onderwerpen: staafjes in donker, brandnetel-voortplanting, eiwitten als bouwstof, genotype vs fenotype, beenmerg-stamcellen, alg vs bacteri",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-biologie-2024-t1",
     "file": "./examenBiologie2024T1.js",
     "title": "Examen oefenen — Biologie 2024 tijdvak 1 (echte vragen)",
