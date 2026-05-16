@@ -329,11 +329,37 @@ Cadens: elke 5 taken, elke 2e sessie, of na nieuw pad. Format: datum — taken-s
   - **Agent A (UX/conversion)**: NIET secties samenvoegen (verdunt USP 4:1), GEEN "niet-beschikbaar"-tags (66% van cards rood = signaal-vermoeidheid). Wel positief framing: teller in sectie 2-kop "19 van 56 ook als leerpad". Beslissing: implementeer alleen de teller (commit 32ab... — zie sessie-log).
   - **Agent B (Content/prio)**: SKIP wiskunde (zware open-vraag-modus) + SKIP nederlands (lange lees-bronteksten, zwakke uitlegPad-loop). Aardrijkskunde 2024-T1 als PILOT — 4-6 MC-vragen mits atlas-kaart-vragen worden geskipt. Tijd: 3-4u. Beslissing: aardrijkskunde-pilot wacht op Mark — PDF moet in `tmp/` zodat parser draait (zie open backlog-item).
 
-## Open: aardrijkskunde-examen-pilot (Agent B-advies 2026-05-16)
+## Bevinding: aardrijkskunde-pilot niet haalbaar zonder bron-afbeelding-render (2026-05-16)
 
-- [ ] **Aardrijkskunde VMBO-GL/TL 2024 tijdvak 1 — pilot examen-leerpad**
-  - Mark: download `gt-0131-a-24-1-o.pdf` + `gt-0131-a-24-1-c.pdf` van examenblad.nl naar `tmp/` (gebruik `reference_examenblad_urls.md` voor URL-patroon).
-  - Daarna: `python scripts/parse_examen.py aardrijkskunde-2024-t1 <opgaven.pdf> <correctie.pdf>` (test of parser vakcode 0131 aankan).
-  - Triage: skip atlas-kaart-vragen, behoud tekst/tabel-vragen (geschat 4-6 vragen).
-  - Voeg uitlegPad + voorkennisKeten toe per vraag, leerpadLink naar wereldoriëntatie-paden (klimaat-aardrijkskunde, werelddelen-landen, bevolking-migratie).
-  - Scope: 3-4 uur werk.
+PDF's gedownload via curl (gt-0131-a-24-1-o.pdf + correctie). Parser draaide
+succesvol (47 vragen herkend, 4 als MC). Maar handmatige triage van alle 4
+MC-vragen toont:
+- **V3** — 5-opties (A-E) foto-matching: 3 landschapsfoto's Spanje koppelen aan 3 klimaatbeschrijvingen → vereist foto-bronnen.
+- **V6** — volgorde-vraag (1-2-5-4-3 enz.): geen meerkeuze-feiten-vraag.
+- **V8** — weerkaart-aflezing + 3 weerberichten: vereist weerkaart-afbeelding.
+- **V9** — 6-opties (A-F) foto-landschap-matching: vereist 4 landschapsfoto's + kaart.
+
+**Conclusie**: aardrijkskunde-MC is fundamenteel visueel — atlas, foto's, kaarten.
+Onze tekst-meerkeuze-format kan dit niet ondersteunen. Agent B's voorspelling
+"4-6 MC-vragen mogelijk mits atlas-kaart-vragen worden geskipt" klopte niet
+voor 2024-T1: álle MC's leunen op visueel materiaal.
+
+**Voorstel toekomst** (wacht op Mark-akkoord):
+1. **Bron-afbeelding-rendering toevoegen** aan examen-check-format: een
+   `bronAfbeelding: { src, caption }`-veld dat in LearnPath gerenderd wordt
+   boven de vraag. Vereist: lokale opslag van bron-PNGs uit examenblad-PDF
+   (mogelijk via `pdftoppm` of `pdfimages`). Auteursrechtelijk grijs gebied —
+   examenblad-bronnen zijn officieel openbaar maar reproductie vraagt
+   afweging.
+2. **OF: skip aardrijkskunde/wiskunde/nederlands volledig** voor oefen-modus.
+   Houd PDF-sectie als enige route voor deze 3 vakken. Verleg auteur-energie
+   naar uitbreiding van bestaande vakken (economie/biologie/engels/geschiedenis
+   meer jaren) waar tekst-MC wél werkt.
+
+Geadviseerde route: **optie 2** — past bij Mark's solo-builder-status en
+de visie "diepte boven breedte". De huidige bridge-knop (commit 222f76f) +
+counter (commit 8e03409) lossen de UX-discrepantie al op zonder dat we
+3 vakken half-haalbaar moeten doen.
+
+PDFs niet gecommit (24 MB) — staan tijdelijk in tmp/, kunnen via download
+opnieuw opgehaald worden indien nodig.
