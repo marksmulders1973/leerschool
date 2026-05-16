@@ -457,6 +457,41 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 1, vraag 33"
     },
     {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 5,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 5"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 25,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 25"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 26"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 30"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 33"
+    },
+    {
       "examPathId": "examen-maatschappijkunde-2023-t1",
       "examPathTitle": "Examen oefenen — Maatschappijkunde 2023 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -1138,6 +1173,13 @@
       "stepIdx": 2,
       "vraagNr": 10,
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 10"
+    },
+    {
+      "examPathId": "examen-maatschappijkunde-2022-t2",
+      "examPathTitle": "Examen oefenen — Maatschappijkunde 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Maatschappijkunde 2022 tijdvak 2, vraag 7"
     }
   ],
   "voortplanting-hormonen-biologie": [
