@@ -552,6 +552,13 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 13"
     },
     {
+      "examPathId": "examen-economie-2022-t2",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 29,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 2, vraag 29"
+    },
+    {
       "examPathId": "examen-economie-2023-t1",
       "examPathTitle": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
       "stepIdx": 1,
@@ -652,6 +659,27 @@
       "stepIdx": 2,
       "vraagNr": 37,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 37"
+    },
+    {
+      "examPathId": "examen-economie-2022-t2",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 2, vraag 13"
+    },
+    {
+      "examPathId": "examen-economie-2022-t2",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 14,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 2, vraag 14"
+    },
+    {
+      "examPathId": "examen-economie-2022-t2",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 38,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 2, vraag 38"
     },
     {
       "examPathId": "examen-economie-2023-t1",
@@ -807,6 +835,13 @@
       "stepIdx": 4,
       "vraagNr": 41,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 1, vraag 41"
+    },
+    {
+      "examPathId": "examen-economie-2022-t2",
+      "examPathTitle": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 5,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Economie 2022 tijdvak 2, vraag 5"
     },
     {
       "examPathId": "examen-economie-2024-t1",

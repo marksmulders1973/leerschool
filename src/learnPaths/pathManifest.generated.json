@@ -1452,6 +1452,29 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-economie-2022-t2",
+    "file": "./examenEconomie2022T2.js",
+    "title": "Examen oefenen — Economie 2022 tijdvak 2 (echte vragen)",
+    "subject": "economie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Economie - eindexamen oefenen 2022-T2",
+    "triggerKeywords": [
+      "examen economie 2022 tijdvak 2",
+      "structurele werkloosheid bangladesh",
+      "incidentele uitgave huisdier",
+      "verzekering vaste lasten",
+      "invoerheffing eu suiker",
+      "cbs economische groei"
+    ],
+    "intro": "5 echte examenvragen uit VMBO-GL/TL Economie 2022 tijdvak 2. Onderwerpen: structurele werkloosheid, incidentele uitgave + verzekering-effect, EU-protectionisme suiker, CBS/CPB en economische groei.",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-economie-2023-t1",
     "file": "./examenEconomie2023T1.js",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
