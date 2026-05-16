@@ -329,6 +329,22 @@ Cadens: elke 5 taken, elke 2e sessie, of na nieuw pad. Format: datum — taken-s
   - **Agent A (UX/conversion)**: NIET secties samenvoegen (verdunt USP 4:1), GEEN "niet-beschikbaar"-tags (66% van cards rood = signaal-vermoeidheid). Wel positief framing: teller in sectie 2-kop "19 van 56 ook als leerpad". Beslissing: implementeer alleen de teller (commit 32ab... — zie sessie-log).
   - **Agent B (Content/prio)**: SKIP wiskunde (zware open-vraag-modus) + SKIP nederlands (lange lees-bronteksten, zwakke uitlegPad-loop). Aardrijkskunde 2024-T1 als PILOT — 4-6 MC-vragen mits atlas-kaart-vragen worden geskipt. Tijd: 3-4u. Beslissing: aardrijkskunde-pilot wacht op Mark — PDF moet in `tmp/` zodat parser draait (zie open backlog-item).
 
+## Bron-afbeelding-render: infra klaar, content open (2026-05-16)
+
+Mark akkoord op "1 en 2" — bouw capability, maak nog geen leerpad.
+
+- [x] **Render-infra**: `bronAfbeelding`-veld in check-schema, rendering in
+  LearnPath.jsx (boven `bronTekst`), styling consistent met bestaande bron-
+  cards. Schema: `{ src, alt, caption?, maxHeight? }`.
+- [x] **Documentatie**: `public/examens/bronnen/README.md` met map-structuur,
+  schema-voorbeeld, 3 extract-werkwijzen (schermopname / Acrobat / online tool)
+  + auteursrecht-overweging + bestandsformaat-richtlijnen.
+- [ ] **Eerste leerpad** (wacht op Mark-beslissing): aardrijkskunde 2024-T1
+  zou 4 MC-vragen kunnen krijgen (V3, V8, V9 + eventueel V6 als foto-volgorde-
+  variant) met PNG-bronnen. Vereist handmatige PNG-extractie uit de PDF (geen
+  pdftoppm/pdfimages in dev-PATH) + auteur-tijd ~2-3 uur. Voor nu skip — focus
+  blijft op uitbreiding bestaande tekst-MC-vakken.
+
 ## Bevinding: aardrijkskunde-pilot niet haalbaar zonder bron-afbeelding-render (2026-05-16)
 
 PDF's gedownload via curl (gt-0131-a-24-1-o.pdf + correctie). Parser draaide

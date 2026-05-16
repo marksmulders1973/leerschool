@@ -990,6 +990,40 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               <VoorkennisKeten keten={currentCheck.voorkennisKeten} onJumpToPath={onPickPath} everSeenIds={seenIds} />
             )}
 
+            {/* Bron-afbeelding: voor examenvragen die leunen op foto/kaart/grafiek-bronnen
+                (vooral aardrijkskunde, wiskunde, biologie). Lokaal opgeslagen in
+                public/examens/bronnen/<examen-id>/. Auteursrecht-overweging:
+                examenblad.nl-bronnen zijn officieel openbaar onderwijsmateriaal.
+                Schema:
+                  bronAfbeelding: { src, alt, caption?, maxHeight? }
+                Werkt naast bronTekst — kan beide aanwezig zijn (bron met foto + tabel). */}
+            {currentCheck.bronAfbeelding?.src && (
+              <div style={{
+                background: "rgba(255,107,53,0.06)",
+                border: "1px solid rgba(255,107,53,0.30)",
+                borderRadius: 10,
+                marginBottom: 12,
+                padding: "10px 12px",
+              }}>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#ff8c5a", marginBottom: 6 }}>
+                  🖼️ Bron — {currentCheck.bronAfbeelding.caption || "afbeelding"}
+                </div>
+                <img
+                  src={currentCheck.bronAfbeelding.src}
+                  alt={currentCheck.bronAfbeelding.alt || ""}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    maxHeight: currentCheck.bronAfbeelding.maxHeight || 400,
+                    objectFit: "contain",
+                    display: "block",
+                    borderRadius: 6,
+                    background: "rgba(255,255,255,0.04)",
+                  }}
+                />
+              </div>
+            )}
+
             {currentCheck.bronTekst && (
               <div style={{
                 background: "rgba(255,107,53,0.06)",
