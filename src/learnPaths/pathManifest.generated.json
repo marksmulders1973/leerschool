@@ -1857,6 +1857,28 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-geschiedenis-2023-t2",
+    "file": "./examenGeschiedenis2023T2.js",
+    "title": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Geschiedenis - eindexamen oefenen 2023-T2",
+    "triggerKeywords": [
+      "examen geschiedenis 2023 tijdvak 2",
+      "thorbecke 1848 censuskiesrecht",
+      "socialisten arbeiders sociale wetten",
+      "conferentie munchen 1938",
+      "militarisme indoctrinatie nazi"
+    ],
+    "intro": "4 echte examenvragen uit VMBO-GL/TL Geschiedenis 2023 tijdvak 2. Onderwerpen: Thorbecke + censuskiesrecht 1848, socialisten + sociale wetten, Britse appeasement 1938 (Conferentie München), Nazi-milita",
+    "stepCount": 4,
+    "checkCount": 4,
+    "chapterCount": 2,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-geschiedenis-2024-t1",
     "file": "./examenGeschiedenis2024T1.js",
     "title": "Examen oefenen — Geschiedenis 2024 tijdvak 1 (echte vragen)",

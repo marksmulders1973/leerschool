@@ -874,6 +874,20 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 3"
     },
     {
+      "examPathId": "examen-geschiedenis-2023-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2023-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 6,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 2, vraag 6"
+    },
+    {
       "examPathId": "examen-geschiedenis-2025-t1",
       "examPathTitle": "Examen oefenen — Geschiedenis 2025 tijdvak 1 (echte vragen)",
       "stepIdx": 0,
@@ -1039,6 +1053,20 @@
       "stepIdx": 3,
       "vraagNr": 30,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2022 tijdvak 1, vraag 30"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2023-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 20,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 2, vraag 20"
+    },
+    {
+      "examPathId": "examen-geschiedenis-2023-t2",
+      "examPathTitle": "Examen oefenen — Geschiedenis 2023 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 21,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Geschiedenis 2023 tijdvak 2, vraag 21"
     },
     {
       "examPathId": "examen-geschiedenis-2025-t1",
