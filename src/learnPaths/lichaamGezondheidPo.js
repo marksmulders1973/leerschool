@@ -120,19 +120,82 @@ const steps = [
         q: "Wat is het **grootste bot**?",
         options: ["Dijbeen", "Schedel", "Wervelkolom", "Sleutelbeen"],
         answer: 0,
-        wrongHints: [null, "Schedel is geen 1 bot maar een set.", "Wervelkolom is een ketting van vele kleinere botten.", "Niet het grootste."],
+        wrongHints: [null, "Schedel = 22 samengegroeide botten — geen 1 bot.", "Wervelkolom = ketting van 33 wervels (niet 1 bot).", "Sleutelbeen is veel kleiner — bij je schouder."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Dijbeen = grootste", tekst: "Het **dijbeen** (de bovenkant van je been, tussen heup en knie) is het grootste, langste en sterkste bot in je lichaam — ongeveer **46 cm** bij een volwassene." },
+            { titel: "Waarom dijbeen zo groot?", tekst: "Het dijbeen draagt al je gewicht bij staan, lopen, springen. Hoe meer kracht een bot moet dragen, hoe groter en sterker het is. Het dijbeen kan zelfs auto-impact opvangen voor het breekt." },
+            { titel: "Geen schedel / wervelkolom", tekst: "Schedel = 22 botten samen (lijkt 1 bot maar is gefuseerd). Wervelkolom = 33 losse wervels op een kolom. Beide zijn dus geen 'één bot'." },
+          ],
+          woorden: [{ woord: "dijbeen", uitleg: "Bot tussen heup en knie — grootste van je lichaam." }],
+          theorie: "Cito-truc bot-grootte: dijbeen > opperarmbot > scheenbeen > kuitbeen. Allemaal lange botten in de extremiteiten.",
+          voorbeelden: [
+            { type: "stap", tekst: "Bij een volwassene 1,80 m lang is het dijbeen ongeveer 46 cm = een kwart van je hele lengte!" },
+            { type: "stap", tekst: "Tegenover dijbeen: stijgbeugel in oor = 3 mm = kleinste bot van het lichaam." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste bot = dijbeen (een kwart van je lengte!). Kleinste = stijgbeugel in oor." }],
+          niveaus: {
+            basis: "Dijbeen = grootste bot. = A.",
+            simpeler: "Het dijbeen (bovenbeen) is langste + zwaarste bot — ~46 cm. = A.",
+            nogSimpeler: "Dijbeen = A.",
+          },
+        },
       },
       {
         q: "Wat **beschermt** de **schedel**?",
         options: ["Hersenen", "Hart", "Longen", "Maag"],
         answer: 0,
-        wrongHints: [null, "Hart zit in borst (achter ribben).", "Longen zitten in borst.", "Maag zit in buik."],
+        wrongHints: [null, "Hart zit in borst — beschermd door ribben + borstbeen.", "Longen zitten in borst — beschermd door ribben.", "Maag zit in buik — geen botten eromheen, maar zachte spieren."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Schedel = beschermkap", tekst: "De **schedel** (Latijn: cranium) is het bot rond je hoofd. Functie: **bescherming van de hersenen** — het kwetsbaarste orgaan dat we hebben." },
+            { titel: "Waarom hard?", tekst: "Hersenen zijn zacht (~consistentie van tofu). Zonder schedel zou een lichte tik al schade veroorzaken. Schedel is daarom 1 van de hardste botten in het lichaam." },
+            { titel: "Andere bescherming-organen", tekst: "Hart + longen → ribben + borstbeen (ribbenkast). Maag/lever/nieren → buikspieren + soms rib-onderkant. Heupen → bekkenbot. Elk vitaal orgaan heeft eigen bescherming." },
+          ],
+          woorden: [
+            { woord: "schedel", uitleg: "Bot rond hoofd — beschermt hersenen." },
+            { woord: "hersenen", uitleg: "Het denk-orgaan in je hoofd." },
+          ],
+          theorie: "Cito-truc: bot beschermt orgaan dat ernaast zit. Schedel ↔ hersenen. Ribbenkast ↔ hart+longen. Bekkenbot ↔ blaas+darmen.",
+          voorbeelden: [
+            { type: "stap", tekst: "Fietshelm = extra bescherming op de schedel. Voor 12-jarigen wettelijk niet verplicht maar wel slim — schedel zelf is niet onverwoestbaar." },
+          ],
+          basiskennis: [{ onderwerp: "Onthouden", uitleg: "Schedel = hersenen. Ribben = hart + longen." }],
+          niveaus: {
+            basis: "Schedel beschermt de hersenen. = A.",
+            simpeler: "De schedel is een hard bot rond je hoofd — beschermt de zachte hersenen erbinnen. = A.",
+            nogSimpeler: "Hersenen = A.",
+          },
+        },
       },
       {
         q: "Wat is een **gewricht**?",
         options: ["Plek waar 2 botten elkaar ontmoeten", "Een spier", "Een bot zelf", "Een orgaan"],
         answer: 0,
-        wrongHints: [null, "Spier is iets anders.", "Bot is niet gewricht.", "Geen orgaan."],
+        wrongHints: [null, "Spier ≠ gewricht. Spier trekt aan bot, gewricht is de verbinding.", "Een gewricht is geen bot — het is de verbinding tussen twee botten.", "Geen orgaan — gewrichten zijn structurele onderdelen van je skelet."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Gewricht = ontmoetingsplek", tekst: "Een **gewricht** is de plek waar **2 botten elkaar ontmoeten en kunnen bewegen** ten opzichte van elkaar. Voorbeelden: knie (dijbeen + scheenbeen), elleboog (opperarmbot + spaakbeen)." },
+            { titel: "Wat zit er in een gewricht?", tekst: "Tussen de botten zit **kraakbeen** (zacht glijoppervlak) + **gewrichtsvloeistof** (smering, als olie in een scharnier). Daardoor schuiven botten zonder pijn langs elkaar." },
+            { titel: "2 hoofd-soorten", tekst: "**Scharnier-gewricht**: 1 richting (knie, elleboog, vinger-kootje). **Kogel-gewricht**: alle richtingen (schouder, heup). Schouder = meest beweegbare gewricht in je lichaam." },
+          ],
+          woorden: [
+            { woord: "gewricht", uitleg: "Verbinding tussen 2 botten die beweging toelaat." },
+            { woord: "kraakbeen", uitleg: "Zacht-glad weefsel als beschermlaag tussen botten." },
+            { woord: "gewrichtsvloeistof", uitleg: "Smeermiddel in een gewricht." },
+          ],
+          theorie: "Cito-truc gewricht: 2 botten + beweging mogelijk = gewricht. Geen beweging? Dan zijn ze vastgegroeid (zoals schedel-platen) — geen gewricht.",
+          voorbeelden: [
+            { type: "stap", tekst: "Knie buigen: dijbeen + scheenbeen schuiven langs elkaar (scharnier). Schouder draaien: kogelvorm in komvorm (alle richtingen)." },
+            { type: "stap", tekst: "Bij artrose slijt kraakbeen → bot wrijft over bot → pijn. Daarom heupoperaties bij ouderen — heup-gewricht wordt vervangen." },
+          ],
+          basiskennis: [{ onderwerp: "Onthouden", uitleg: "Gewricht = waar 2 botten elkaar ontmoeten en bewegen. Geen bot, geen spier — een verbinding." }],
+          niveaus: {
+            basis: "Gewricht = plek waar 2 botten elkaar ontmoeten. = A.",
+            simpeler: "Gewricht = verbinding tussen 2 botten waar beweging mogelijk is. Voorbeeld: knie, elleboog. = A.",
+            nogSimpeler: "Plek waar botten samenkomen. A.",
+          },
+        },
       },
     ],
   },
