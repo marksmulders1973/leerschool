@@ -121,13 +121,57 @@ const steps = [
         q: "Welk dier is **koudbloedig**?",
         options: ["Slang", "Hond", "Mus", "Walvis"],
         answer: 0,
-        wrongHints: [null, "Zoogdier = warmbloedig.", "Vogel = warmbloedig.", "Zoogdier = warmbloedig."],
+        wrongHints: [null, "Honden zijn zoogdieren — warmbloedig.", "Mussen zijn vogels — warmbloedig.", "Walvissen zijn zoogdieren — warmbloedig."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is koudbloedig?", tekst: "**Koudbloedig** = lichaamstemperatuur = omgevingstemperatuur. Als het buiten koud is, koelt het dier af. Als het warm is, warmt het op." },
+            { titel: "Welke groepen?", tekst: "**Koudbloedig**: reptielen (slang, hagedis), vissen, amfibieën (kikker), insecten. **Warmbloedig**: zoogdieren + vogels — die houden hun temperatuur stabiel." },
+            { titel: "Slang = reptiel", tekst: "Slangen zijn reptielen → koudbloedig. Daarom liggen ze graag in de zon: ze gebruiken de zonne-warmte om actief te worden." },
+          ],
+          woorden: [
+            { woord: "koudbloedig", uitleg: "Lichaamstemperatuur volgt de omgeving." },
+            { woord: "warmbloedig", uitleg: "Lichaamstemperatuur blijft constant (~37°C bij mensen)." },
+          ],
+          theorie: "Cito-truc: kruipt het op de grond + heeft het schubben? → reptiel + koudbloedig. Heeft het haren of veren? → warmbloedig.",
+          voorbeelden: [
+            { type: "stap", tekst: "Hagedis op zonbeschenen steen = klassiek beeld koudbloedig dier dat opwarmt." },
+            { type: "stap", tekst: "Kikker op koude lentemorgen = bijna onbeweeglijk; in de zon weer actief." },
+          ],
+          basiskennis: [{ onderwerp: "Snel-check", uitleg: "Zoogdier of vogel? → warmbloedig. Anders → koudbloedig." }],
+          niveaus: {
+            basis: "Slang = reptiel = koudbloedig. = A.",
+            simpeler: "Hond/mus/walvis = warmbloedig (vacht of veren). Slang = reptiel = koudbloedig. = A.",
+            nogSimpeler: "Slang = A. Kruipt op grond + schubben = koudbloedig.",
+          },
+        },
       },
       {
         q: "Hoeveel poten heeft een **insect**?",
         options: ["6", "8", "4", "2"],
         answer: 0,
-        wrongHints: [null, "Dat is een spin (geen insect!).", "Te weinig.", "Vogels en mensen — geen insect."],
+        wrongHints: [null, "Dat is een spin (geen insect!) — spinnen hebben 8 poten.", "Te weinig — meeste 4-poters zijn zoogdieren of reptielen.", "Vogels en mensen — geen insecten."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Insect = 6 poten", tekst: "Een echt **insect** heeft altijd **6 poten** + 3 lichaamsdelen (kop, borststuk, achterlijf). Voorbeelden: mier, bij, vlieg, vlinder, kever." },
+            { titel: "Spin ≠ insect", tekst: "Spinnen hebben **8 poten** + 2 lichaamsdelen. Daarom zijn spinnen géén insecten — ze vallen onder de groep 'spinachtigen'." },
+            { titel: "Truc voor herkenning", tekst: "Tel de poten: 6 = insect, 8 = spin. Andere kenmerken: insecten hebben vaak vleugels + voelsprieten; spinnen niet." },
+          ],
+          woorden: [
+            { woord: "insect", uitleg: "Klein dier met 6 poten en 3 lichaamsdelen." },
+            { woord: "spinachtige", uitleg: "8-potigen — spin, schorpioen, mijt." },
+          ],
+          theorie: "Cito-strikvraag: 'Welk dier is een insect?' → tel poten. 6 = insect. 8 = spin (geen insect).",
+          voorbeelden: [
+            { type: "stap", tekst: "Lieveheersbeestje (6) = insect. Mier (6) = insect. Spin (8) = spinachtige." },
+            { type: "stap", tekst: "Slak heeft 0 poten = geen insect (weekdier)." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: zes = insect, acht = spin. Komen op '6 / 8' uit." }],
+          niveaus: {
+            basis: "Insect heeft 6 poten. = A.",
+            simpeler: "Een insect = 6 poten + 3 lichaamsdelen. Spin = 8 poten (geen insect). = A.",
+            nogSimpeler: "6 poten = insect. Spin = 8 poten. A = 6.",
+          },
+        },
       },
     ],
   },
@@ -142,19 +186,82 @@ const steps = [
         q: "Welk **kenmerk** hebben alle vogels?",
         options: ["Veren", "Schubben", "Vacht", "Vier poten"],
         answer: 0,
-        wrongHints: [null, "Dat zijn reptielen/vissen.", "Dat zijn zoogdieren.", "Vogels hebben 2 poten."],
+        wrongHints: [null, "Schubben horen bij reptielen of vissen — niet bij vogels.", "Vacht hoort bij zoogdieren (haren).", "Vogels hebben 2 poten, geen 4."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Veren = uniek voor vogels", tekst: "Alleen vogels hebben **veren**. Dit is hét onderscheidende kenmerk waardoor je een vogel altijd herkent — of het nu vliegt of niet." },
+            { titel: "Vogels die niet vliegen", tekst: "Niet alle vogels vliegen (pinguïn, struisvogel, kiwi) — maar alle vogels hebben veren. Dus 'kan vliegen' is geen vogel-kenmerk; 'heeft veren' wel." },
+            { titel: "Andere kenmerken", tekst: "Vogels: snavel (geen tanden), 2 poten, leggen eieren met harde schaal, warmbloedig. Maar dé herkenning = veren." },
+          ],
+          woorden: [
+            { woord: "veren", uitleg: "Lichte, isolerende huidaanhangsels — alleen bij vogels." },
+            { woord: "snavel", uitleg: "Harde mond zonder tanden." },
+          ],
+          theorie: "Cito-truc: zie je veren? → vogel. Zie je haren/vacht? → zoogdier. Zie je schubben? → reptiel of vis.",
+          voorbeelden: [
+            { type: "stap", tekst: "Pinguïn = vogel (veren), ook al vliegt het niet. Vleermuis = zoogdier (haren), ook al vliegt het wel." },
+            { type: "stap", tekst: "Wat heb je nodig om vleugels te maken? Veren (= bij vogel) of huidvlies (= bij vleermuis). Verschillend bouwsel." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Veren = vogel. Geen andere dieren hebben veren." }],
+          niveaus: {
+            basis: "Alle vogels hebben veren. = A.",
+            simpeler: "Veren komen alleen bij vogels voor — uniek kenmerk. = A.",
+            nogSimpeler: "Veren = vogel. = A.",
+          },
+        },
       },
       {
         q: "Welke is een **zoogdier**?",
         options: ["Olifant", "Slang", "Mus", "Vis"],
         answer: 0,
-        wrongHints: [null, "Reptiel.", "Vogel.", "Vis."],
+        wrongHints: [null, "Slangen zijn reptielen (schubben, koudbloedig).", "Mussen zijn vogels (veren, eieren).", "Vissen zijn een aparte klasse (schubben, kieuwen)."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is een zoogdier?", tekst: "Een **zoogdier** zoogt zijn jongen met **melk** uit melkklieren, heeft **haren of vacht**, is **warmbloedig**, en baart meestal levende jongen." },
+            { titel: "Olifant is een zoogdier", tekst: "Olifanten: vacht (klein), zogen kalveren met melk, warmbloedig, baren 1 jong na ~22 maanden zwangerschap. Klassiek zoogdier." },
+            { titel: "Andere opties checken", tekst: "Slang = reptiel (schubben, koudbloedig). Mus = vogel (veren). Vis = vis (schubben + kieuwen)." },
+          ],
+          woorden: [{ woord: "zoogdier", uitleg: "Dier dat melk geeft + haren heeft + warmbloedig is." }],
+          theorie: "Vier checks voor zoogdier: zoogt met melk? haren? warmbloedig? levende jongen? Drie of meer ja = zoogdier.",
+          voorbeelden: [
+            { type: "stap", tekst: "Mens, hond, kat, paard, olifant, walvis, vleermuis — allemaal zoogdieren." },
+            { type: "stap", tekst: "Uitzonderingen: vogelbekdier (zoogdier maar legt eieren!) — bestaat alleen in Australië." },
+          ],
+          basiskennis: [{ onderwerp: "Snel-check", uitleg: "Heeft het dier melk-klieren? Dan zoogdier." }],
+          niveaus: {
+            basis: "Olifant = zoogdier (zoogt + haren + warmbloedig). = A.",
+            simpeler: "Olifant geeft melk aan jongen → zoogdier. Anderen: slang=reptiel, mus=vogel, vis=vis. = A.",
+            nogSimpeler: "Olifant = zoogdier. A.",
+          },
+        },
       },
       {
         q: "Welk **kenmerk** hebben zoogdieren?",
         options: ["Zoogen jongen met melk", "Leggen eieren", "Schubben", "Kieuwen"],
         answer: 0,
-        wrongHints: [null, "Geen typisch zoogdier-kenmerk (uitzondering vogelbekdier).", "Vissen/reptielen.", "Vissen."],
+        wrongHints: [null, "Geen typisch zoogdier-kenmerk (uitzondering vogelbekdier). Vogels en reptielen leggen eieren.", "Schubben horen bij reptielen/vissen.", "Kieuwen horen bij vissen — om in water adem te halen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Zoog-dier — de naam zegt alles", tekst: "De naam **zoogdier** komt van **zogen** = melk geven aan jongen. Dat is het belangrijkste, onderscheidende kenmerk." },
+            { titel: "Andere typische zoogdier-kenmerken", tekst: "Naast zoogen met melk: haren/vacht, warmbloedig, baren levende jongen (geen eieren), longen om lucht te ademen, gewervelde rug." },
+            { titel: "Wat hoort niet bij zoogdieren?", tekst: "Eieren leggen → vogels, reptielen, vissen, amfibieën. Schubben → reptielen, vissen. Kieuwen → vissen. Zoogdieren delen al deze kenmerken NIET." },
+          ],
+          woorden: [
+            { woord: "zogen", uitleg: "Melk geven aan jongen vanuit melkklieren." },
+            { woord: "warmbloedig", uitleg: "Lichaamstemperatuur blijft stabiel." },
+          ],
+          theorie: "Cito-truc: 4 kern-kenmerken zoogdier: melk + haren + warm bloed + levend baren. Alle 4 → zoogdier.",
+          voorbeelden: [
+            { type: "stap", tekst: "Mens: melk (borstvoeding), haren, warm bloed (37°C), levende baby. 4 op 4 → zoogdier." },
+            { type: "stap", tekst: "Walvis: melk (ja, in zee!), kleine haren, warm bloed, levend jong. 4 op 4 → zoogdier (geen vis!)." },
+          ],
+          basiskennis: [{ onderwerp: "Onthouden", uitleg: "Zoogdier = melk-geven. Alle andere klassen geven geen melk." }],
+          niveaus: {
+            basis: "Zoogdieren zoogen jongen met melk. = A.",
+            simpeler: "Naam = zoog-dier = melk-geven. Andere opties horen bij andere klassen. = A.",
+            nogSimpeler: "Melk = zoogdier-kenmerk. A.",
+          },
+        },
       },
       {
         q: "Welke vogel **kan niet vliegen**?",

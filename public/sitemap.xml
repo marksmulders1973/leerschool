@@ -60,6 +60,12 @@
 
   <!-- Pre-rendered kern-leerpad-landingpaginas (top 15 Cito-doelgroep, 2026-05-16) -->
   <url>
+    <loc>https://leerkwartier.app/leerpad/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://leerkwartier.app/leerpad/doorstroomtoets-rekenen-g8.html</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
