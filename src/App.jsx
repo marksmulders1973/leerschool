@@ -91,6 +91,7 @@ import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
+import { startTracking as startDailyTracking } from "./shared/dailyGoal.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
 // Deze constant blijft tijdelijk voor backwards-compat met code die alleen
@@ -199,6 +200,14 @@ export default function App() {
     document.body.classList.toggle("lk-home", isHome);
     return () => { document.body.classList.remove("lk-home"); };
   }, [location.pathname]);
+
+  // Daily-goal tracking (Mark's 15-min belofte hard maken, 2026-05-16).
+  // Globale heartbeat die actieve minuten registreert. Auto-reset bij datum-
+  // wissel. Telt alleen mee als tab zichtbaar is.
+  useEffect(() => {
+    const stop = startDailyTracking();
+    return stop;
+  }, []);
 
   const [activeLearnPathId, setActiveLearnPathId] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);

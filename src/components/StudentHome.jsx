@@ -11,6 +11,7 @@ import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
+import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated } from "../shared/dailyGoal.js";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -86,6 +87,14 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     }
     return counts;
   }, [vakModus]);
+  // Daily-goal-tick: dwingt re-render elke 30s zodat de leerkwartier-banner
+  // zijn voortgangs-balk en minuten-teller bijwerkt zonder reload.
+  const [, setDailyTick] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setDailyTick((n) => n + 1), 30_000);
+    return () => clearInterval(id);
+  }, []);
+
   // Due-onderwerpen voor de mixed-herhaal-quiz (P3a deel 2). Laden in
   // achtergrond — als 0 toont de card niet, en de Self-Study + Boek + Voortgang
   // + Scorebord-grid neemt de hele bovenste rij in.
@@ -227,6 +236,53 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
       <div style={styles.content}>
         <KindAcceptBanner userName={userName} />
+
+        {/* Daily-goal-banner (Mark's "leerkwartier" hard maken, 2026-05-16).
+            Toont voortgangs-balk naar 15-min/dag-doel. Bij voltooiing felicitatie. */}
+        {(() => {
+          const goal = getDailyGoal();
+          const pct = dailyPercent(goal);
+          const minDone = dailyMinutesDone(goal);
+          const minLeft = dailyMinutesLeft(goal);
+          const completed = goal.completed;
+          const containerStyle = {
+            marginBottom: 12,
+            padding: "10px 14px",
+            background: completed
+              ? "linear-gradient(135deg, rgba(0,200,83,0.15), rgba(0,200,83,0.04))"
+              : "linear-gradient(135deg, rgba(255,213,79,0.10), rgba(255,213,79,0.04))",
+            border: `1px solid ${completed ? "rgba(0,200,83,0.45)" : "rgba(255,213,79,0.35)"}`,
+            borderRadius: 12,
+            color: "var(--color-text)",
+          };
+          return (
+            <div style={containerStyle} aria-label="Dagelijkse leerkwartier-voortgang">
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 6 }}>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: completed ? "#00e676" : "#ffd54f" }}>
+                  {completed ? "🎉 Leerkwartier behaald!" : "🕒 Jouw leerkwartier vandaag"}
+                </span>
+                <span style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
+                  {minDone} / {Math.round((goal.target || 900) / 60)} min
+                </span>
+              </div>
+              <div style={{ height: 6, borderRadius: 999, background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
+                <div style={{
+                  width: `${pct}%`,
+                  height: "100%",
+                  background: completed ? "linear-gradient(90deg, #00c853, #00e676)" : "linear-gradient(90deg, #ffd54f, #ffaa00)",
+                  transition: "width 600ms ease",
+                }} />
+              </div>
+              <div style={{ marginTop: 6, fontSize: 11, lineHeight: 1.4, color: "rgba(255,255,255,0.65)" }}>
+                {completed
+                  ? "Mooi gedaan — je kunt nu rustig stoppen. Doorgaan mag, maar hoeft niet."
+                  : minLeft > 0
+                  ? `Nog ${minLeft} ${minLeft === 1 ? "minuut" : "minuten"} tot je dagelijkse leerkwartier.`
+                  : "Bijna klaar — nog even doorzetten."}
+              </div>
+            </div>
+          );
+        })()}
         {profileBadge && (
           <div style={{
             display: "inline-flex", alignItems: "center", gap: 6,
