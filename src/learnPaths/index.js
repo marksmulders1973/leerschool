@@ -92,6 +92,7 @@ import examenEconomie2023T1 from "./examenEconomie2023T1.js";
 import examenEconomie2023T2 from "./examenEconomie2023T2.js";
 import examenEconomie2025T2 from "./examenEconomie2025T2.js";
 import examenEngels2025T1 from "./examenEngels2025T1.js";
+import examenEngels2024T2 from "./examenEngels2024T2.js";
 import examenEngels2024T1 from "./examenEngels2024T1.js";
 import examenGeschiedenis2025T2 from "./examenGeschiedenis2025T2.js";
 import examenGeschiedenis2025T1 from "./examenGeschiedenis2025T1.js";
@@ -365,6 +366,7 @@ export const ALL_LEARN_PATHS = {
   "examen-economie-2023-t2": examenEconomie2023T2,
   "examen-economie-2025-t2": examenEconomie2025T2,
   "examen-engels-2025-t1": examenEngels2025T1,
+  "examen-engels-2024-t2": examenEngels2024T2,
   "examen-engels-2024-t1": examenEngels2024T1,
   "examen-geschiedenis-2025-t2": examenGeschiedenis2025T2,
   "examen-geschiedenis-2025-t1": examenGeschiedenis2025T1,

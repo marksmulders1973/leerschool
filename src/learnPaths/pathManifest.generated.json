@@ -1563,6 +1563,35 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-engels-2024-t2",
+    "file": "./examenEngels2024T2.js",
+    "title": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2024-T2",
+    "triggerKeywords": [
+      "examen engels",
+      "engels 2024 tijdvak 2",
+      "echte examenvragen engels",
+      "ai japan",
+      "queen elizabeth barbie",
+      "ss gairsoppa",
+      "pompeii curse",
+      "skellig michael",
+      "noble false widow spider",
+      "reading comprehension",
+      "main idea engels",
+      "tone playful"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 2. Onderwerpen: AI in Japanse bedrijven, Queen Elizabeth II Barbie, oorlogsbrieven SS Gairsoppa, Skellig Michael UNESCO, Pompeii-curse Nicole, i",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-engels-2025-t1",
     "file": "./examenEngels2025T1.js",
     "title": "Examen oefenen — Engels 2025 tijdvak 1 (echte vragen)",

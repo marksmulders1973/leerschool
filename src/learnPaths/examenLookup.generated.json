@@ -8,6 +8,50 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36"
     }
   ],
+  "cse-leesvaardigheid-engels": [
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 33"
+    },
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 25,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 25"
+    },
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 40,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 40"
+    },
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 8,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 8"
+    },
+    {
+      "examPathId": "examen-engels-2024-t2",
+      "examPathTitle": "Examen oefenen — Engels 2024 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 4"
+    }
+  ],
   "ecosystemen-biologie": [
     {
       "examPathId": "examen-biologie-2024-t2",
