@@ -557,7 +557,7 @@ const steps = [
           "Eén van de zijden, niet de schuine zijde. Bereken c² = 7,2² + 2,4² en dan √.",
         ],
       },
-      { q: "a=3, b=4. c=?", options: ["5","7","12","25"], answer: 0, wrongHints: [null,"Klopt — 9+16=25, √25=5.","Niet — niet plus.","Niet — niet keer.","Dat is c².","Niet."] },
+      { q: "a=3, b=4. c=?", options: ["5","7","12","25"], answer: 0, wrongHints: [null,"3+4 mag niet — Pythagoras kwadrateert eerst.","3×4 mag niet — denk a² + b² = c².","Dat is c² (= 25), nog niet c.","Niet."] },
       { q: "Bij Pythagoras heet de **langste** zijde?", options: ["Hypotenusa (schuin)","Rechthoekszijde","Hoogte","Basis"], answer: 0, wrongHints: [null, "Dat zijn de korte twee.", "Niet de naam.", "Niet."] },
       { q: "Een rechthoekige driehoek a=6, b=8. Schuine zijde c?", options: ["10","14","48","2"], answer: 0, wrongHints: [null, "Niet — niet optellen.", "Niet.", "Niet."] },
       { q: "**Stelling** klinkt: a² + b² = ?", options: ["c²","c","a+b","a×b"], answer: 0, wrongHints: [null, "Niet — kwadraat.", "Niet.", "Niet."] },

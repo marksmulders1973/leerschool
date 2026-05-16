@@ -38,7 +38,7 @@ const steps = [
         },
       },
       { q: "Welk lidwoord komt voor **book**?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Niet — book begint met medeklinker.", "Niet vraag.", "Niet — any = enig."] },
-      { q: "Welke is **fout**?", options: ["a egg", "an egg", "a book", "an apple"], answer: 0, wrongHints: [null, "Klopt wel.", "Klopt.", "Klopt."] },
+      { q: "Welke is **fout**?", options: ["a egg", "an egg", "a book", "an apple"], answer: 0, wrongHints: [null, "Kijk: 'an' + klinker — past dat?", "'a' + medeklinker — controleer of dat klopt.", "Kijk hoe het woord begint en welk lidwoord ervoor staat."] },
       { q: "*'Het meisje heeft een hond.'* → 'She has __ dog.'", options: ["a", "an", "the", "no"], answer: 0, wrongHints: [null, "Dog begint met medeklinker.", "Wel mogelijk maar 'een' vraagt om a/an.", "Niet — geen ontkenning."] },
       { q: "*'I have an orange.'* — Welke vertaling?", options: ["Ik heb een sinaasappel.", "Ik heb sinaasappels.", "De sinaasappel is van mij.", "Ik heb geen sinaasappel."], answer: 0, wrongHints: [null, "Niet — 'an' is enkelvoud.", "Andere zinsbouw.", "Geen ontkenning."] },
     ],
@@ -102,7 +102,7 @@ const steps = [
     title: "Eindopdracht — alles samen",
     explanation: "Mix-toets over a/an + meervoud + this/that + am-is-are + present simple + vragen.\n\n**Tip**: bij twijfel, vraag jezelf:\n1. Klinker of medeklinker? → a/an\n2. Enkelvoud of meervoud?\n3. Ik / jij/wij/zij / hij-zij-het? → am / are / is\n4. Gewone werkwoord + -s bij he/she/it? → play / plays",
     checks: [
-      { q: "Welke is **fout**?", options: ["She play piano.", "She plays piano.", "I play piano.", "They play piano."], answer: 0, wrongHints: [null, "Klopt — she → plays.", "Klopt.", "Klopt."] },
+      { q: "Welke is **fout**?", options: ["She play piano.", "She plays piano.", "I play piano.", "They play piano."], answer: 0, wrongHints: [null, "Kijk naar het onderwerp + werkwoordvorm.", "Klopt I/we/you/they zonder -s?", "Klopt I/we/you/they zonder -s?"] },
       { q: "Vul in: '__ apple a day keeps the doctor away.'", options: ["An", "A", "The", "Some"], answer: 0, wrongHints: [null, "Niet — klinkerklank.", "Niet — context vraagt om 'een'.", "Niet — niet 'wat appel'."] },
       { q: "Meervoud van **woman**?", options: ["women", "womans", "womens", "womies"], answer: 0, wrongHints: [null, "Niet — onregelmatig.", "Niet.", "Niet."] },
       { q: "Vul in: 'My brother __ tall.' (to be)", options: ["is", "are", "am", "be"], answer: 0, wrongHints: [null, "Niet — are = jij/wij/zij.", "Niet — am = ik.", "Hele werkwoord."] },

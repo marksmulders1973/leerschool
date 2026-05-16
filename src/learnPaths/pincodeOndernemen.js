@@ -130,7 +130,7 @@ const steps = [
         q: "Welk kenmerk hoort er NIET bij een ondernemer?",
         options: ["Heeft een baas die het werk uitdeelt", "Ziet kansen", "Investeert eigen geld of leent", "Neemt risico"],
         answer: 0,
-        wrongHints: [null, "Klopt — kansen zien is kern.", "Klopt — geld is altijd nodig.", "Klopt — risico is essentieel kenmerk."],
+        wrongHints: [null, "Past dit bij een werknemer of bij een ondernemer? Wie ziet zelf de kansen?", "Wie investeert dat geld doorgaans: een werknemer of een ondernemer?", "Wie loopt het echte risico — de werknemer of de ondernemer?"],
         uitlegPad: {
           stappen: [{ titel: "Wat onderscheidt ondernemer van werknemer?", tekst: "Werknemer heeft een baas. Ondernemer IS de baas — neemt zelf alle beslissingen, ziet kansen, investeert + draagt risico." }],
           woorden: [{ woord: "ondernemer", uitleg: "Zelfstandig persoon die met eigen middelen een bedrijf runt." }, { woord: "werknemer", uitleg: "Iemand in loondienst bij een werkgever." }],

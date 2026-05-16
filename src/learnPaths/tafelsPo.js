@@ -352,7 +352,7 @@ const steps = [
         q: "Welke tafel-uitkomst is **fout**?",
         options: ["7 × 8 = 54", "6 × 6 = 36", "9 × 4 = 36", "8 × 7 = 56"],
         answer: 0,
-        wrongHints: [null, "Klopt qua som.", "Klopt qua som.", "Klopt qua som."],
+        wrongHints: [null, "Probeer 6 × 6 zelf even uit te rekenen.", "Reken 9 × 4 stap voor stap na.", "Reken 8 × 7 stap voor stap na."],
       },
       { q: "3 × 4 = ?", options: ["12","7","9","16"], answer: 0, wrongHints: [null, "Som.", "Niet.", "Niet."] },
       { q: "5 × 6 = ?", options: ["30","11","25","36"], answer: 0, wrongHints: [null, "Som.", "5×5.", "6×6."] },

@@ -164,7 +164,7 @@ const steps = [
             nogSimpeler: "76 = meerderheid.",
           },
         },
-        wrongHints: [null, "Klopt — net iets meer dan helft.", "Helemaal te veel.", "Te weinig.", "Te veel."],
+        wrongHints: [null, "Dat is alle zetels — je zoekt MEER dan de helft, niet allemaal.", "Helemaal te weinig — bereken eerst de helft van 150.", "Iets te weinig — wat is meer dan 75?"],
       },
     ],
   },
