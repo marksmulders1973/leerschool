@@ -50,6 +50,57 @@
       "stepIdx": 5,
       "vraagNr": 4,
       "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2024 tijdvak 2, vraag 4"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 3"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 11,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 11"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 25,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 25"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 32,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 32"
+    },
+    {
+      "examPathId": "examen-engels-2025-t2",
+      "examPathTitle": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 34,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 34"
+    }
+  ],
+  "dierenklassen-po": [
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 5,
+      "vraagNr": 27,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 27"
     }
   ],
   "ecosystemen-biologie": [
@@ -130,6 +181,22 @@
       "stepIdx": 5,
       "vraagNr": 44,
       "examenBron": "🎓 Echt examen VMBO-GL/TL geschiedenis 2025 tijdvak 2, vraag 44"
+    }
+  ],
+  "lichaam-gezondheid-po": [
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 2,
+      "vraagNr": 19,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 19"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 3,
+      "vraagNr": 36,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 36"
     }
   ],
   "mens-biologie-vmbo": [
@@ -730,6 +797,27 @@
       "stepIdx": 4,
       "vraagNr": 23,
       "examenBron": "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 23"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 0,
+      "vraagNr": 15,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 15"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 1,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 30"
+    },
+    {
+      "examPathId": "examen-biologie-2025-t2",
+      "examPathTitle": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+      "stepIdx": 4,
+      "vraagNr": 48,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL biologie 2025 tijdvak 2, vraag 48"
     }
   ],
   "wereldoorlog2-geschiedenis": [

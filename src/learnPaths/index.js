@@ -92,6 +92,7 @@ import examenEconomie2023T1 from "./examenEconomie2023T1.js";
 import examenEconomie2023T2 from "./examenEconomie2023T2.js";
 import examenEconomie2025T2 from "./examenEconomie2025T2.js";
 import examenEngels2025T1 from "./examenEngels2025T1.js";
+import examenEngels2025T2 from "./examenEngels2025T2.js";
 import examenEngels2024T2 from "./examenEngels2024T2.js";
 import examenEngels2024T1 from "./examenEngels2024T1.js";
 import examenGeschiedenis2025T2 from "./examenGeschiedenis2025T2.js";
@@ -103,6 +104,7 @@ import examenBiologie2024T1 from "./examenBiologie2024T1.js";
 import examenBiologie2024T2 from "./examenBiologie2024T2.js";
 import examenBiologie2023T1 from "./examenBiologie2023T1.js";
 import examenBiologie2025T1 from "./examenBiologie2025T1.js";
+import examenBiologie2025T2 from "./examenBiologie2025T2.js";
 import examenMaatschappijkunde2024T1 from "./examenMaatschappijkunde2024T1.js";
 import examenMaatschappijkunde2024T2 from "./examenMaatschappijkunde2024T2.js";
 import examenMaatschappijkunde2023T1 from "./examenMaatschappijkunde2023T1.js";
@@ -365,6 +367,7 @@ export const ALL_LEARN_PATHS = {
   "examen-economie-2023-t1": examenEconomie2023T1,
   "examen-economie-2023-t2": examenEconomie2023T2,
   "examen-economie-2025-t2": examenEconomie2025T2,
+  "examen-engels-2025-t2": examenEngels2025T2,
   "examen-engels-2025-t1": examenEngels2025T1,
   "examen-engels-2024-t2": examenEngels2024T2,
   "examen-engels-2024-t1": examenEngels2024T1,
@@ -376,6 +379,7 @@ export const ALL_LEARN_PATHS = {
   "examen-biologie-2024-t1": examenBiologie2024T1,
   "examen-biologie-2024-t2": examenBiologie2024T2,
   "examen-biologie-2023-t1": examenBiologie2023T1,
+  "examen-biologie-2025-t2": examenBiologie2025T2,
   "examen-biologie-2025-t1": examenBiologie2025T1,
   "examen-maatschappijkunde-2024-t1": examenMaatschappijkunde2024T1,
   "examen-maatschappijkunde-2024-t2": examenMaatschappijkunde2024T2,

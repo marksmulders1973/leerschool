@@ -1379,6 +1379,33 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-biologie-2025-t2",
+    "file": "./examenBiologie2025T2.js",
+    "title": "Examen oefenen — Biologie 2025 tijdvak 2 (echte vragen)",
+    "subject": "biologie",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Biologie - eindexamen oefenen 2025-T2",
+    "triggerKeywords": [
+      "examen biologie 2025 tijdvak 2",
+      "echte examenvragen biologie",
+      "meerling kans nederland",
+      "fsh hormoon",
+      "nageboorte placenta",
+      "grote hersenen geluid",
+      "gal emulgeren vetten",
+      "zaadleider urinebuis",
+      "giraffe plooikiezen",
+      "consument producent"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL biologie 2025 tijdvak 2. Onderwerpen: meerling-kans (FSH), nageboorte-fase, geluid-waarneming grote hersenen, gal-functie emulgeren, zaadcel-route, giraffe consumen",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "examen-economie-2023-t1",
     "file": "./examenEconomie2023T1.js",
     "title": "Examen oefenen — Economie 2023 tijdvak 1 (echte vragen)",
@@ -1613,6 +1640,33 @@
     "intro": "9 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 1, verdeeld over 3 leesteksten (UFO sightings, e-scooter battery fires, microplastics research). Per vraag de echte 4 antwoorden, denkprikkel-hi",
     "stepCount": 9,
     "checkCount": 9,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
+    "id": "examen-engels-2025-t2",
+    "file": "./examenEngels2025T2.js",
+    "title": "Examen oefenen — Engels 2025 tijdvak 2 (echte vragen)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "🎓",
+    "referentieNiveau": "VMBO-GT eindexamen",
+    "sloThema": "Engels - eindexamen oefenen 2025-T2",
+    "triggerKeywords": [
+      "examen engels 2025 tijdvak 2",
+      "echte examenvragen engels",
+      "biogas koemest",
+      "spelling bee 98-jarige",
+      "phones in schools",
+      "vintage clothing sizing",
+      "bridezilla mocking",
+      "moko kauae maori",
+      "cse engels",
+      "engelse leesvaardigheid"
+    ],
+    "intro": "6 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 2. Onderwerpen: koemest-biogas Duitsland, 98-jarige spelling bee, phones in schools, vintage clothing sizing, bridezilla mocking-toon, Māori tā ",
+    "stepCount": 6,
+    "checkCount": 6,
     "chapterCount": 3,
     "estimatedMinutes": 5
   },
