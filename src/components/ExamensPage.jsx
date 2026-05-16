@@ -69,6 +69,54 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
     return out;
   }, [examenLeerpaden]);
 
+  // Mark verzoek 2026-05-16: toon "8 slots per vak" voor 4 haalbare vakken,
+  // met placeholder-cards voor ontbrekende jaren/tijdvakken. Vakken zonder
+  // bestaand pad (wiskunde/nederlands/aardrijkskunde) worden hier expliciet
+  // toegevoegd zodat de gebruiker ziet dát ze missen.
+  const HAALBARE_VAKKEN = ["biologie", "economie", "engels", "geschiedenis"];
+  const NIET_HAALBARE_VAKKEN = ["wiskunde", "nederlands", "aardrijkskunde"];
+  const ALLE_EXAMEN_JAREN = [2022, 2023, 2024, 2025];
+  const ALLE_TIJDVAKKEN = [1, 2];
+
+  // Per vak: lijst van 8 slots ({jaar, tijdvak, padId-indien-bestaat}).
+  // Voor niet-haalbare vakken zijn alle 8 slots placeholders.
+  const examenSlotsBySubject = useMemo(() => {
+    const result = {};
+    for (const vak of [...HAALBARE_VAKKEN, ...NIET_HAALBARE_VAKKEN]) {
+      const slots = [];
+      for (const jaar of ALLE_EXAMEN_JAREN) {
+        for (const tijdvak of ALLE_TIJDVAKKEN) {
+          const expectedId = `examen-${vak}-${jaar}-t${tijdvak}`;
+          const existingPad = examenLeerpaden.find((p) => p.id === expectedId);
+          slots.push({ jaar, tijdvak, expectedId, pad: existingPad || null });
+        }
+      }
+      result[vak] = slots;
+    }
+    // Maatschappijkunde apart — heeft wel oefen-paden maar geen PDF-cluster.
+    // We tonen alleen de echte paden zonder placeholders (geen "verwacht 8").
+    const maPaden = examenLeerpaden.filter((p) => p.subject === "maatschappijkunde");
+    if (maPaden.length) {
+      result.maatschappijkunde = maPaden.map((p) => {
+        const m = p.id.match(/^examen-maatschappijkunde-(\d{4})-t(\d)$/);
+        return {
+          jaar: m ? Number(m[1]) : 0,
+          tijdvak: m ? Number(m[2]) : 0,
+          expectedId: p.id,
+          pad: p,
+        };
+      }).sort((a, b) => a.expectedId.localeCompare(b.expectedId));
+    }
+    return result;
+  }, [examenLeerpaden]);
+
+  // Reden waarom een vak niet haalbaar is in tekst-MC-format (voor placeholder-toelichting).
+  const NIET_HAALBAAR_REDEN = {
+    wiskunde: "Wiskunde-examens hebben open vragen (berekenen, tekenen, oplossen) — ons format past niet zonder open-vraag-grading.",
+    nederlands: "Nederlandse leesteksten zijn 500+ woorden — moeilijk te verwerken in onze didactische uitleg-loop.",
+    aardrijkskunde: "Aardrijkskunde leunt op kaarten en foto's — bron-afbeelding-render is gebouwd maar nog niet gevuld.",
+  };
+
   // Scroll naar gevraagde sectie bij mount (en wanneer Mark de pagina opnieuw
   // opent met andere mode). Beide secties blijven zichtbaar — alleen scroll-positie.
   useEffect(() => {
@@ -154,9 +202,13 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
               Nog geen interactieve examen-paden.
             </div>
           )}
-          {Object.entries(examenPathsBySubject).map(([vak, lijst]) => {
+          {Object.entries(examenSlotsBySubject).map(([vak, slots]) => {
             const vakInfo = VAK_LABELS[vak] || { label: vak, icon: "📄", color: C.warm };
             const isOpen = openLerenVakken.has(vak);
+            const aanwezig = slots.filter((s) => s.pad).length;
+            const isMaatschappij = vak === "maatschappijkunde";
+            const totalSlots = isMaatschappij ? aanwezig : 8;
+            const isNietHaalbaar = NIET_HAALBARE_VAKKEN.includes(vak);
             return (
               <div key={vak} style={{ marginBottom: 12 }}>
                 <button
@@ -179,48 +231,119 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                   <span style={{
                     fontFamily: "var(--font-display)", fontSize: 16, color: vakInfo.color, fontWeight: 700,
                   }}>{vakInfo.label}</span>
-                  <span style={{ marginLeft: "auto", fontSize: 11, color: C.muted }}>
-                    {lijst.length} {lijst.length === 1 ? "pad" : "paden"}
+                  <span style={{ marginLeft: "auto", fontSize: 11, color: aanwezig === 0 ? C.muted : aanwezig === 8 ? C.warm : C.text }}>
+                    {isMaatschappij
+                      ? `${aanwezig} ${aanwezig === 1 ? "pad" : "paden"}`
+                      : `${aanwezig} / ${totalSlots}`}
                   </span>
                   <span style={{ fontSize: 14, color: C.muted, transition: "transform 0.15s", display: "inline-block", transform: isOpen ? "rotate(90deg)" : "rotate(0deg)" }} aria-hidden="true">›</span>
                 </button>
                 {isOpen && (
                 <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 8 }}>
-                  {lijst.map((p) => {
-                    const aantalVragen = p.checkCount ?? 0;
+                  {isNietHaalbaar && (
+                    <div style={{
+                      padding: "10px 12px",
+                      background: "rgba(91,134,184,0.10)",
+                      border: "1px solid rgba(91,134,184,0.30)",
+                      borderRadius: 8,
+                      fontSize: 12,
+                      color: C.muted,
+                      lineHeight: 1.5,
+                    }}>
+                      ℹ️ <strong style={{ color: C.text }}>Nog geen oefen-versie:</strong>{" "}
+                      {NIET_HAALBAAR_REDEN[vak]} De PDF-versies zijn wél beschikbaar (zie sectie 2 hieronder).
+                    </div>
+                  )}
+                  {slots.map((slot) => {
+                    if (slot.pad) {
+                      const p = slot.pad;
+                      const aantalVragen = p.checkCount ?? 0;
+                      return (
+                        <button
+                          key={slot.expectedId}
+                          onClick={() => onPickPath && onPickPath(p.id)}
+                          disabled={!onPickPath}
+                          style={{
+                            textAlign: "left",
+                            background: "rgba(255,213,79,0.08)",
+                            border: `1.5px solid rgba(255,213,79,0.45)`,
+                            borderRadius: 12,
+                            padding: "12px 14px",
+                            color: C.text,
+                            cursor: onPickPath ? "pointer" : "default",
+                            fontFamily: "var(--font-body)",
+                            minHeight: 44,
+                            transition: "background 0.15s",
+                          }}
+                          onMouseOver={(ev) => { if (onPickPath) ev.currentTarget.style.background = "rgba(255,213,79,0.15)"; }}
+                          onMouseOut={(ev) => { ev.currentTarget.style.background = "rgba(255,213,79,0.08)"; }}
+                        >
+                          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                            <span style={{ fontSize: 22 }} aria-hidden="true">{p.emoji || "🎓"}</span>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: C.warm, marginBottom: 2 }}>
+                                {p.title || p.id}
+                              </div>
+                              <div style={{ fontSize: 11, color: C.muted }}>
+                                {aantalVragen > 0 ? `${aantalVragen} vragen · ` : ""}met uitleg waarom het juiste antwoord klopt
+                              </div>
+                            </div>
+                            <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
+                          </div>
+                        </button>
+                      );
+                    }
+                    // Placeholder-card voor ontbrekend slot. PDF-link aan de
+                    // zijkant zodat user kan zien dat het materiaal er wél is.
+                    const pdfId = `${vak}-vmbo-gltl-${slot.jaar}-tijdvak${slot.tijdvak}`;
+                    const pdfExamen = EXAMENS.find((e) => e.id === pdfId);
                     return (
-                      <button
-                        key={p.id}
-                        onClick={() => onPickPath && onPickPath(p.id)}
-                        disabled={!onPickPath}
+                      <div
+                        key={slot.expectedId}
                         style={{
                           textAlign: "left",
-                          background: "rgba(255,213,79,0.08)",
-                          border: `1.5px solid rgba(255,213,79,0.45)`,
+                          background: "rgba(255,255,255,0.02)",
+                          border: `1px dashed ${C.border}`,
                           borderRadius: 12,
-                          padding: "12px 14px",
-                          color: C.text,
-                          cursor: onPickPath ? "pointer" : "default",
+                          padding: "10px 14px",
+                          color: C.muted,
                           fontFamily: "var(--font-body)",
                           minHeight: 44,
-                          transition: "background 0.15s",
+                          opacity: 0.7,
                         }}
-                        onMouseOver={(ev) => { if (onPickPath) ev.currentTarget.style.background = "rgba(255,213,79,0.15)"; }}
-                        onMouseOut={(ev) => { ev.currentTarget.style.background = "rgba(255,213,79,0.08)"; }}
                       >
                         <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                          <span style={{ fontSize: 22 }} aria-hidden="true">{p.emoji || "🎓"}</span>
+                          <span style={{ fontSize: 18, opacity: 0.5 }} aria-hidden="true">📋</span>
                           <div style={{ flex: 1, minWidth: 0 }}>
-                            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: C.warm, marginBottom: 2 }}>
-                              {p.title || p.id}
+                            <div style={{ fontSize: 13, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 2 }}>
+                              {vakInfo.label} — {slot.jaar} tijdvak {slot.tijdvak}
                             </div>
                             <div style={{ fontSize: 11, color: C.muted }}>
-                              {aantalVragen > 0 ? `${aantalVragen} vragen · ` : ""}met uitleg waarom het juiste antwoord klopt
+                              Oefen-versie nog niet beschikbaar
+                              {pdfExamen ? " · PDF wél beschikbaar in sectie 2" : ""}
                             </div>
                           </div>
-                          <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
+                          {pdfExamen && (
+                            <a
+                              href={getExamenUrl(pdfExamen)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{
+                                fontSize: 11,
+                                color: "#a78bfa",
+                                textDecoration: "none",
+                                padding: "4px 8px",
+                                border: "1px solid rgba(167,139,250,0.4)",
+                                borderRadius: 6,
+                                whiteSpace: "nowrap",
+                              }}
+                              title="Open PDF van dit examen op examenblad.nl"
+                            >
+                              📄 PDF ↗
+                            </a>
+                          )}
                         </div>
-                      </button>
+                      </div>
                     );
                   })}
                 </div>
