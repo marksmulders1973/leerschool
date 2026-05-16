@@ -99,18 +99,73 @@ const steps = [
         options: ["Europa", "Azië", "Afrika", "Noord-Amerika"],
         answer: 0,
         wrongHints: [null, "Ten oosten van ons.", "Ten zuiden.", "Ten westen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Waar ligt Europa?", tekst: "Europa is een van de 7 continenten — in het noord-westen van Eurazië. Het is een relatief klein continent qua oppervlakte, maar met veel landen." },
+            { titel: "Nederland in Europa", tekst: "Nederland ligt in **West-Europa**, aan de Noordzee. Buurlanden: Duitsland (oosten), België (zuiden). Hoofdstad: Amsterdam." },
+            { titel: "Andere continenten ligging", tekst: "Azië = oosten (China, Japan). Afrika = zuiden (Egypte, Kenia). Noord-Amerika = westen (VS, Canada). Niet via die kant kom je naar Nederland zonder oversteek." },
+          ],
+          woorden: [{ woord: "continent", uitleg: "Groot landmassief op aarde." }, { woord: "Europa", uitleg: "Continent waar Nederland op ligt." }],
+          theorie: "Cito-truc continent-vraag: zoek per land in welk continent het ligt. Nederland = Europa is een vrijwel altijd-correct antwoord.",
+          voorbeelden: [{ type: "stap", tekst: "Andere Europa-landen: Frankrijk, Duitsland, Spanje, Italië, Polen — allemaal vrij dichtbij Nederland." }],
+          basiskennis: [{ onderwerp: "Vlucht", uitleg: "Vanaf Schiphol vlieg je ~1u naar buurland. Naar Azië (China) ~10u. Naar Australië ~24u." }],
+          niveaus: {
+            basis: "Nederland ligt in Europa. = A.",
+            simpeler: "Europa = ons continent. Buren: Duitsland, België. = A.",
+            nogSimpeler: "Europa = A.",
+          },
+        },
       },
       {
         q: "Welk continent is **grootst**?",
         options: ["Azië", "Afrika", "Noord-Amerika", "Europa"],
         answer: 0,
         wrongHints: [null, "Afrika is 2e.", "Noord-Amerika is 3e.", "Europa is een van de kleinste."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Azië = grootste", tekst: "**Azië** is veruit het grootste continent — bijna een derde van alle landoppervlakte op aarde. Bekende landen: China, India, Japan, Rusland, Indonesië." },
+            { titel: "Rangorde van groot naar klein", tekst: "1) Azië 2) Afrika 3) Noord-Amerika 4) Zuid-Amerika 5) Antarctica 6) Europa 7) Oceanië (Australië)." },
+            { titel: "Verwarring", tekst: "Veel mensen denken dat Afrika het grootst is omdat het op de kaart groot oogt — maar Azië is groter. (Kaarten vertekenen vaak ronde aarde naar plat → polen lijken groter dan ze zijn.)" },
+          ],
+          woorden: [{ woord: "Azië", uitleg: "Grootste continent met meer dan helft van wereldbevolking." }],
+          theorie: "Onthoud: A → A → N: Azië-Afrika-Noord-Amerika. Top 3.",
+          voorbeelden: [{ type: "schatten", tekst: "Azië heeft ~4,7 miljard mensen — meer dan de helft van de hele wereldbevolking (8 miljard)." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste continent = Azië (oppervlakte + bevolking)." }],
+          niveaus: {
+            basis: "Azië = grootst. = A.",
+            simpeler: "Top 3: Azië > Afrika > Noord-Amerika. Grootst = Azië. = A.",
+            nogSimpeler: "Azië = A.",
+          },
+        },
       },
       {
         q: "Wat is er **wel** op Antarctica?",
         options: ["Pinguïns en onderzoekers", "Steden met inwoners", "Tropisch regenwoud", "Grote dorpen"],
         answer: 0,
         wrongHints: [null, "Geen steden — te koud.", "Het is een ijswoestijn, geen regenwoud.", "Geen dorpen."],
+        uitlegPad: {
+          stappen: [
+            { titel: "Wat is Antarctica?", tekst: "Antarctica = het continent rond de **Zuidpool**. 99% bedekt met ijs. Gemiddelde temperatuur 's winters: -49°C. Niemand woont er permanent." },
+            { titel: "Wie zit er dan?", tekst: "**Pinguïns** (Keizerspinguïn vooral), zeehonden, sommige walvissen in het zee-water. En: ~5000 **onderzoekers** in 70 onderzoeksstations — zij blijven hooguit een paar maanden." },
+            { titel: "Geen permanente inwoners", tekst: "Geen steden, geen dorpen, geen scholen, geen winkels. Geen land 'bezit' Antarctica — er is een internationaal verdrag (1959) dat zegt: alleen voor wetenschap." },
+          ],
+          woorden: [
+            { woord: "Antarctica", uitleg: "Continent rond de Zuidpool, ijswoestijn." },
+            { woord: "pinguïn", uitleg: "Vogel die niet kan vliegen maar wel zwemmen; leeft op Antarctica + dichtbij." },
+            { woord: "onderzoeksstation", uitleg: "Plek waar wetenschappers tijdelijk wonen + experimenten doen." },
+          ],
+          theorie: "Cito-truc: Antarctica = koudst, niet bewoond. Geen verwarring met Arctica (Noordpool, daar wonen wél mensen — Inuit, Sami).",
+          voorbeelden: [
+            { type: "verbazing", tekst: "Antarctica is het droogste continent — er valt amper sneeuw. Het ijs is opgebouwd over miljoenen jaren." },
+            { type: "nederland", tekst: "Nederland heeft sinds 1988 een eigen onderzoeksstation: 'Dirck Gerritsz Laboratorium'." },
+          ],
+          basiskennis: [{ onderwerp: "Tegen-stelling", uitleg: "Antarctica = koud, geen mensen. Tropisch regenwoud = warm, veel leven. Het tegenovergestelde." }],
+          niveaus: {
+            basis: "Pinguïns + onderzoekers. = A.",
+            simpeler: "Antarctica = ijs + pinguïns. Wel onderzoekers, geen steden. = A.",
+            nogSimpeler: "Pinguïns = A.",
+          },
+        },
       },
     ],
   },
