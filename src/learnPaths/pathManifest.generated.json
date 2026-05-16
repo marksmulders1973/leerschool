@@ -4923,6 +4923,28 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "topografie-europa-po",
+    "file": "./topografieEuropaPo.js",
+    "title": "Topografie Europa — hoofdsteden, zeeën, bergen",
+    "subject": "wereldorientatie",
+    "level": "po",
+    "emoji": "🌍",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Wereldoriëntatie - topografie Europa",
+    "triggerKeywords": [
+      "topografie europa",
+      "hoofdsteden europa",
+      "europese landen",
+      "rivier europa",
+      "bergen europa"
+    ],
+    "intro": "18 vragen Cito-stof groep 7-8: hoofdsteden per windrichting, grote zeeën + rivieren, bergketens. Aansluiting op topografie-nederland + europese-unie-po.",
+    "stepCount": 6,
+    "checkCount": 18,
+    "chapterCount": 3,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "topografie-nederland",
     "file": "./topografieNederland.js",
     "title": "Topografie Nederland — provincies, hoofdsteden, water",
