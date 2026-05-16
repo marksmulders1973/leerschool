@@ -4,22 +4,49 @@ import react from '@vitejs/plugin-react'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-// Vervangt `__SW_VERSION__` in dist/sw.js door een build-timestamp.
-// Zonder dit blijft de SW byte-identiek tussen deploys → browser ziet geen
-// update → user moet handmatig cache wissen.
+// Vervangt `__SW_VERSION__` + `__SW_PRECACHE_ASSETS__` in dist/sw.js na build.
+// Zonder version-injectie blijft SW byte-identiek tussen deploys → geen update.
+// Zonder precache-assets pre-cachet de SW alleen "/" en moet bij iedere repeat-
+// visit alsnog de JS-bundle ophalen — onnodige LCP-vertraging op herhalingen.
 function injectSwVersion() {
   return {
     name: 'inject-sw-version',
     apply: 'build',
     closeBundle() {
       const swPath = resolve('dist/sw.js')
+      const indexHtmlPath = resolve('dist/index.html')
       try {
-        const original = readFileSync(swPath, 'utf8')
+        let updated = readFileSync(swPath, 'utf8')
         const version = String(Date.now())
-        const updated = original.replace(/__SW_VERSION__/g, version)
+        updated = updated.replace(/__SW_VERSION__/g, version)
+
+        // Extract de kritieke asset-paths uit dist/index.html. Vite injecteert
+        // de gehashte entry-bundles + hun preload-link's daarin. We pakken het
+        // entry-script + vendor-react + vendor-react-router; data-chunks niet
+        // (anders worden offline-resources te zwaar voor service-worker install).
+        let assets = []
+        try {
+          const html = readFileSync(indexHtmlPath, 'utf8')
+          // Match <script src="/assets/...js"> én rel="modulepreload" entries
+          const matches = html.match(/\/assets\/[^"]+?\.(?:js|css)/g) || []
+          const unique = Array.from(new Set(matches))
+          // Whitelist: alleen entry-bundles + react/router-vendors. data-* en
+          // ObliteratorGame + vendor-three + vendor-supabase NIET pre-cachen.
+          assets = unique.filter((p) =>
+            /\/assets\/index-/.test(p) ||
+            /\/assets\/vendor-react(?:-router)?-/.test(p)
+          )
+        } catch (e) {
+          console.warn('[inject-sw-version] kon dist/index.html niet lezen:', e.message)
+        }
+        updated = updated.replace(
+          /"__SW_PRECACHE_ASSETS__"/,
+          JSON.stringify(JSON.stringify(assets))
+        )
+
         writeFileSync(swPath, updated)
         // eslint-disable-next-line no-console
-        console.log(`[inject-sw-version] sw.js → version ${version}`)
+        console.log(`[inject-sw-version] sw.js → version ${version} + ${assets.length} precache-assets`)
       } catch (err) {
         console.warn('[inject-sw-version] kon dist/sw.js niet patchen:', err.message)
       }

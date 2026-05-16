@@ -7,21 +7,46 @@ const CACHE_VERSION = RAW_VERSION.startsWith("__") ? "dev-" + Date.now() : RAW_V
 const CACHE_SHELL = `studiebol-shell-${CACHE_VERSION}`;
 const CACHE_ASSETS = `studiebol-assets-${CACHE_VERSION}`;
 
+// __SW_PRECACHE_ASSETS__ wordt bij `vite build` vervangen door een JSON-array
+// van kritieke asset-paths (entry-bundle + vendor-react + vendor-router) met
+// hun build-hashes. Zonder dit blijft de SW alleen "/" pre-cachen, waardoor
+// repeat-visits offline alsnog een netwerk-roundtrip moeten doen voor JS.
+// In dev mode blijft de placeholder een lege array zodat dev-server werkt.
+const PRECACHE_ASSETS_RAW = "__SW_PRECACHE_ASSETS__";
+const PRECACHE_ASSETS = (() => {
+  if (PRECACHE_ASSETS_RAW.startsWith("__")) return [];
+  try { return JSON.parse(PRECACHE_ASSETS_RAW); } catch { return []; }
+})();
+
 const APP_SHELL = [
   "/",
   "/manifest.json",
   "/icons/icon.svg",
+  ...PRECACHE_ASSETS,
 ];
 
 // Static asset extensions
 const STATIC_EXTENSIONS = /\.(js|css|png|jpg|jpeg|svg|woff2|woff|ttf|ico)(\?.*)?$/;
 
-// Install: cache de app shell + skipWaiting zodat nieuwe SW direct activeert
+// Install: cache de app shell + skipWaiting zodat nieuwe SW direct activeert.
+// addAll is atomic: bij failure van 1 asset hele install faalt + oude SW
+// blijft actief. Daarom: kritieke shell ("/", manifest, icon) via addAll,
+// en de extra precache-assets per stuk via Promise.allSettled zodat een
+// individuele hash-mismatch (asset hernoemd tussen builds) de install niet
+// onderuit haalt.
 self.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(CACHE_SHELL)
-      .then((cache) => cache.addAll(APP_SHELL))
-      .then(() => self.skipWaiting())
+    caches.open(CACHE_SHELL).then(async (cache) => {
+      await cache.addAll(["/", "/manifest.json", "/icons/icon.svg"]);
+      if (PRECACHE_ASSETS.length) {
+        await Promise.allSettled(
+          PRECACHE_ASSETS.map((asset) =>
+            cache.add(asset).catch(() => {})
+          )
+        );
+      }
+      await self.skipWaiting();
+    })
   );
 });
 
