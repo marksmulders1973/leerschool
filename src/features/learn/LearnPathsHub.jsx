@@ -78,6 +78,25 @@ const PATH_THEMES = {
 // leerling ziet eerst klas-4 paden, dan klas-3, dan klas-5/bovenbouw, etc.
 const BUCKET_ORDER = ["po", "klas-1", "klas-2", "klas-3", "klas-4", "bovenbouw"];
 
+// Cito-pijlers voor entry-screen-filter (2026-05-16 — Agent B-aanbeveling).
+// Mapt elk leerpad-`subject` naar 1 of meerdere Cito-pijlers. Subject "rekenen"
+// valt onder "rekenen"-pijler, "wiskunde" ook (basis-wiskunde groep 6-8
+// hoort bij rekenen-pijler). "geschiedenis"/"biologie"/"aardrijkskunde" valt
+// onder "wereld" (wereldoriëntatie).
+const CITO_PIJLERS = {
+  taal: { label: "Taal", emoji: "📝", subjects: ["taal", "engels", "duits", "frans"] },
+  rekenen: { label: "Rekenen", emoji: "🔢", subjects: ["rekenen", "wiskunde"] },
+  lezen: { label: "Lezen", emoji: "📖", subjects: ["begrijpend-lezen"] },
+  wereld: { label: "Wereldoriëntatie", emoji: "🌍", subjects: ["aardrijkskunde", "geschiedenis", "biologie", "natuur", "maatschappijleer", "natuurkunde", "scheikunde", "economie", "beco"] },
+};
+
+// Niveau-buckets voor entry-screen-filter.
+const NIVEAU_BUCKETS = {
+  "po": { label: "Basisschool", emoji: "🎓", buckets: ["po"] },
+  "vo-onderbouw": { label: "Onderbouw VO", emoji: "🏫", buckets: ["klas-1", "klas-2"] },
+  "vo-bovenbouw": { label: "Bovenbouw VO", emoji: "🎒", buckets: ["klas-3", "klas-4", "bovenbouw"] },
+};
+
 function bucketDistance(a, b) {
   const ai = BUCKET_ORDER.indexOf(a);
   const bi = BUCKET_ORDER.indexOf(b);
@@ -123,6 +142,14 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
   // Zoekbalk-state (P0b vindbaarheid bij 67+ PO-paden, audit 2026-05-12).
   // Filtert paden op title + triggerKeywords + subject.
   const [searchQuery, setSearchQuery] = useState("");
+  // Entry-screen filters (P0 — Agent B-aanbeveling 2026-05-16). Op de vak-grid
+  // krijgt de gebruiker een filter-bar bovenaan voor zoek + Cito-pijler +
+  // niveau. Bij actief filter switchen we van vak-grid naar resultaten-lijst
+  // zodat ouders met "breuken groep 6"-vraag direct vinden i.p.v. 80+ paden
+  // doorscrollen.
+  const [entrySearch, setEntrySearch] = useState("");
+  const [pijlerFilter, setPijlerFilter] = useState(null); // "taal" | "rekenen" | "lezen" | "wereld" | null
+  const [niveauFilter, setNiveauFilter] = useState(null); // "po" | "vo-onderbouw" | "vo-bovenbouw" | null
   // Reset class-filter naar "mijn klas" wanneer de leerling van vak wisselt.
   // Anders blijft een vorige keuze hangen die op het nieuwe vak misschien
   // niets oplevert.
@@ -264,6 +291,34 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
       subjectStats[subj].total += (p.stepCount ?? 0);
       subjectStats[subj].done += progressByPath[p.id]?.size || 0;
     });
+
+    // Entry-filter actief? Zoek-query (≥2 chars) OF pijler OF niveau gekozen.
+    const qRaw = entrySearch.trim().toLowerCase();
+    const hasSearch = qRaw.length >= 2;
+    const hasPijler = pijlerFilter != null;
+    const hasNiveau = niveauFilter != null;
+    const filterActief = hasSearch || hasPijler || hasNiveau;
+
+    // Filterde resultaten (alleen relevant als filterActief).
+    const pijlerSubjects = hasPijler ? new Set(CITO_PIJLERS[pijlerFilter].subjects) : null;
+    const niveauBuckets = hasNiveau ? new Set(NIVEAU_BUCKETS[niveauFilter].buckets) : null;
+    const filteredPaths = filterActief
+      ? allPaths.filter((p) => {
+          if (hasPijler && !pijlerSubjects.has(p.subject || "wiskunde")) return false;
+          if (hasNiveau && !niveauBuckets.has(parseLevel(p.level).bucketKey)) return false;
+          if (hasSearch) {
+            const hay = [
+              p.title,
+              p.intro,
+              p.subject,
+              p.sloThema,
+              ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
+            ].filter(Boolean).join(" ").toLowerCase();
+            if (!hay.includes(qRaw)) return false;
+          }
+          return true;
+        })
+      : [];
     // Sorteer vakken op aantal paden (meest gevulde eerst), met wiskunde+taal
     // als eerste twee zodat de meest-gebruikte vakken bovenin staan.
     const orderedSubjects = Object.keys(subjectStats).sort((a, b) => {
@@ -328,6 +383,189 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
           )}
         </div>
 
+        {/* ─── ENTRY-FILTER-BAR (P0 — 2026-05-16) ─── */}
+        <div style={{ padding: "8px 18px 0" }}>
+          {/* Zoekbalk */}
+          <div style={{ position: "relative", marginBottom: 10 }}>
+            <input
+              type="search"
+              value={entrySearch}
+              onChange={(e) => setEntrySearch(e.target.value)}
+              placeholder="Zoek een onderwerp — bijv. 'breuken' of 'EU'"
+              style={{
+                width: "100%",
+                padding: "11px 38px 11px 38px",
+                borderRadius: 10,
+                border: `1px solid ${C.border}`,
+                background: "rgba(20,30,50,0.6)",
+                color: C.text,
+                fontSize: 14,
+                fontFamily: "var(--font-body)",
+                outline: "none",
+                boxSizing: "border-box",
+              }}
+              aria-label="Zoek een leeronderwerp"
+            />
+            <span style={{
+              position: "absolute", left: 12, top: "50%",
+              transform: "translateY(-50%)", color: C.muted,
+              fontSize: 16, pointerEvents: "none",
+            }}>🔍</span>
+            {entrySearch && (
+              <button
+                onClick={() => setEntrySearch("")}
+                style={{
+                  position: "absolute", right: 8, top: "50%",
+                  transform: "translateY(-50%)", background: "transparent",
+                  border: "none", color: C.muted, cursor: "pointer",
+                  padding: "4px 8px", fontSize: 16,
+                }}
+                aria-label="Zoekopdracht wissen"
+              >✕</button>
+            )}
+          </div>
+
+          {/* Cito-pijler-pillen */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 8 }}>
+            <span style={{ fontSize: 11, color: C.muted, fontWeight: 700, alignSelf: "center", marginRight: 4 }}>
+              CITO:
+            </span>
+            {Object.entries(CITO_PIJLERS).map(([key, info]) => (
+              <ClassFilterPill
+                key={key}
+                label={`${info.emoji} ${info.label}`}
+                active={pijlerFilter === key}
+                onClick={() => setPijlerFilter(pijlerFilter === key ? null : key)}
+              />
+            ))}
+          </div>
+
+          {/* Niveau-pillen */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
+            <span style={{ fontSize: 11, color: C.muted, fontWeight: 700, alignSelf: "center", marginRight: 4 }}>
+              NIVEAU:
+            </span>
+            {Object.entries(NIVEAU_BUCKETS).map(([key, info]) => (
+              <ClassFilterPill
+                key={key}
+                label={`${info.emoji} ${info.label}`}
+                active={niveauFilter === key}
+                onClick={() => setNiveauFilter(niveauFilter === key ? null : key)}
+              />
+            ))}
+            {(hasPijler || hasNiveau || hasSearch) && (
+              <button
+                onClick={() => { setEntrySearch(""); setPijlerFilter(null); setNiveauFilter(null); }}
+                style={{
+                  background: "transparent", border: `1px solid ${C.border}`,
+                  color: C.muted, padding: "5px 10px", borderRadius: 999,
+                  fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 600,
+                  cursor: "pointer", marginLeft: "auto",
+                }}
+              >Filter wissen ✕</button>
+            )}
+          </div>
+        </div>
+
+        {/* ─── RESULTATEN of VAK-GRID ─── */}
+        {filterActief ? (
+          <div style={{ padding: "0 14px 32px" }}>
+            <div style={{
+              padding: "8px 4px 12px", fontSize: 12, color: C.muted,
+              fontFamily: "var(--font-display)", letterSpacing: 1.2, textTransform: "uppercase", fontWeight: 700,
+            }}>
+              🔎 {filteredPaths.length === 1 ? "1 resultaat" : `${filteredPaths.length} resultaten`}
+              {hasPijler && ` · ${CITO_PIJLERS[pijlerFilter].label}`}
+              {hasNiveau && ` · ${NIVEAU_BUCKETS[niveauFilter].label}`}
+              {hasSearch && ` · "${entrySearch}"`}
+            </div>
+            {filteredPaths.length === 0 ? (
+              <div style={{
+                padding: "20px 14px", background: "rgba(255,179,0,0.08)",
+                border: `1px solid rgba(255,179,0,0.25)`, borderRadius: 12,
+                fontSize: 13, color: "#ffd54f", textAlign: "center", lineHeight: 1.5,
+              }}>
+                Geen onderwerpen gevonden met deze filters.
+                <br/>
+                <button
+                  onClick={() => { setEntrySearch(""); setPijlerFilter(null); setNiveauFilter(null); }}
+                  style={{
+                    marginTop: 10, background: "transparent",
+                    border: `1px solid rgba(255,213,79,0.5)`, color: "#ffd54f",
+                    padding: "5px 12px", borderRadius: 999,
+                    fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, cursor: "pointer",
+                  }}
+                >Filter wissen</button>
+              </div>
+            ) : (
+              <div className="lp-grid">
+                {filteredPaths
+                  .sort((a, b) => (a.title || "").localeCompare(b.title || "", "nl", { sensitivity: "base" }))
+                  .map((p) => {
+                    const done = progressByPath[p.id]?.size || 0;
+                    const total = p.stepCount ?? 0;
+                    const pct = total ? Math.round((done / total) * 100) : 0;
+                    const isStarted = done > 0;
+                    const isComplete = done >= total;
+                    const theme = PATH_THEMES[p.id] || { gradient: `linear-gradient(135deg, ${C.accent}, #2c4d77)`, accent: "#90caf9" };
+                    const lvl = parseLevel(p.level);
+                    const subjMeta = SUBJECT_LABELS[p.subject || "wiskunde"] || { title: p.subject, emoji: "📘" };
+                    return (
+                      <button
+                        key={p.id}
+                        onClick={() => onPickPath(p.id)}
+                        style={pathCard(theme, isComplete)}
+                        onMouseOver={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
+                        onMouseOut={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                      >
+                        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                          <div style={{
+                            width: 48, height: 48, borderRadius: 12,
+                            background: theme.gradient, display: "flex",
+                            alignItems: "center", justifyContent: "center",
+                            fontSize: 24, flexShrink: 0,
+                            boxShadow: "0 3px 10px rgba(0,0,0,0.3)",
+                          }}>{p.emoji}</div>
+                          <div style={{ flex: 1, textAlign: "left", minWidth: 0 }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4, flexWrap: "wrap" }}>
+                              <span style={{ fontFamily: "var(--font-display)", fontSize: 15, color: "var(--color-text-strong)", fontWeight: 700 }}>
+                                {p.title}
+                              </span>
+                              <span style={levelPillStyle(lvl.badge)}>{lvl.badge.text}</span>
+                              <span style={{
+                                fontFamily: "var(--font-body)", fontSize: 10, fontWeight: 700,
+                                padding: "1px 6px", borderRadius: 999,
+                                background: "rgba(255,255,255,0.06)", border: `1px solid ${C.border}`,
+                                color: C.muted,
+                              }}>{subjMeta.emoji} {subjMeta.title}</span>
+                              {isComplete && <span style={{ fontSize: 14 }}>✅</span>}
+                            </div>
+                            <div style={{ fontSize: 12, color: C.muted, lineHeight: 1.4 }}>
+                              {total} delen · ⏱️ ~{p.estimatedMinutes || 15} min
+                            </div>
+                            {isStarted && (
+                              <div style={{ marginTop: 4 }}>
+                                <div style={{ height: 3, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
+                                  <div style={{
+                                    height: "100%", width: `${pct}%`,
+                                    background: theme.gradient,
+                                  }}/>
+                                </div>
+                                <div style={{ fontSize: 10, color: theme.accent, marginTop: 2, fontWeight: 700 }}>
+                                  {done}/{total} · {pct}%
+                                </div>
+                              </div>
+                            )}
+                          </div>
+                          <span style={{ color: C.muted, fontSize: 18 }}>›</span>
+                        </div>
+                      </button>
+                    );
+                  })}
+              </div>
+            )}
+          </div>
+        ) : (
         <div style={{ padding: "8px 14px 32px" }}>
           <div style={{
             display: "grid",
@@ -417,6 +655,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
             </div>
           </div>
         </div>
+        )}
       </div>
     );
   }
