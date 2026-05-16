@@ -41,8 +41,8 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
   }, []);
   const examenLeerpadIds = useMemo(() => new Set(examenLeerpaden.map((p) => p.id)), [examenLeerpaden]);
 
-  // 4 haalbare vakken (oefen-paden bestaan/kunnen bestaan met 8-slots), plus
-  // niet-haalbare (alleen PDF) en maatschappij (apart aantal).
+  // 4 haalbare vakken met 8/8-pattern (oefen + PDF). Maatschappij wordt apart
+  // gerendered want geen PDF-archief (private aanbieder). Niet-haalbare = PDF-only.
   const HAALBARE_VAKKEN = ["biologie", "economie", "engels", "geschiedenis"];
   const NIET_HAALBARE_VAKKEN = ["wiskunde", "nederlands", "aardrijkskunde"];
   const ALLE_EXAMEN_JAREN = [2025, 2024, 2023, 2022];
