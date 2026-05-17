@@ -141,7 +141,7 @@ const steps = [
         q: "Tegenstelling van **'zwaar'**?",
         options: ["licht","groot","klein","donker"],
         answer: 0,
-        wrongHints: [null,"Niet altijd — kan ook (groot ↔ klein), maar zwaar-licht is gewicht.","Past bij groot-klein, niet bij zwaar.","Past bij licht-donker (helderheid)."],
+        wrongHints: [null,"Niet — past bij groot/klein (afmeting), zwaar gaat over gewicht.","Past bij groot/klein, niet bij zwaar.","Past bij licht/donker (helderheid), niet zwaar."],
         uitlegPad: {
           stappen: [{ titel: "Zwaar ↔ licht", tekst: "Zwaar = veel gewicht. Tegenovergesteld = licht (weinig gewicht)." }],
           woorden: [{ woord: "licht", uitleg: "Twee betekenissen: weinig gewicht (↔ zwaar) of veel helderheid (↔ donker)." }],
@@ -155,7 +155,7 @@ const steps = [
         q: "Antoniem van **'beginnen'**?",
         options: ["eindigen","starten","openen","stoppen"],
         answer: 0,
-        wrongHints: [null,"Synoniem!","Synoniem.","Klopt qua betekenis maar 'eindigen' is preciezer."],
+        wrongHints: [null,"Synoniem van beginnen, geen tegenstelling.","Synoniem van beginnen.","Lijkt qua betekenis, maar er is een preciezer woord."],
         uitlegPad: {
           stappen: [{ titel: "Beginnen ↔ eindigen", tekst: "Beginnen = start. Tegenovergesteld = eindigen, klaarmaken, afronden." }],
           woorden: [{ woord: "eindigen", uitleg: "Tot een einde komen — antoniem van beginnen." }],
@@ -169,7 +169,7 @@ const steps = [
         q: "Tegenstelling van **'verlengen'**?",
         options: ["verkorten","vergroten","openen","stoppen"],
         answer: 0,
-        wrongHints: [null,"Synoniem-achtig (groter maken).","Geen verband.","Verkorten past beter."],
+        wrongHints: [null,"Synoniem-achtig (groter maken) — geen tegenstelling.","Geen verband met lengte/duur.","Er is een preciezer ver- woord dat bij verlengen past."],
         uitlegPad: {
           stappen: [{ titel: "Verlengen ↔ verkorten", tekst: "Verlengen = langer maken. Tegenovergesteld = verkorten (korter maken)." }],
           woorden: [{ woord: "verlengen", uitleg: "Langer maken in tijd of afstand." }],
@@ -183,7 +183,7 @@ const steps = [
         q: "Welk paar zijn **antoniemen**?",
         options: ["jong - oud","blij - vrolijk","snel - vlug","mooi - prachtig"],
         answer: 0,
-        wrongHints: [null,"Synoniemen.","Synoniemen.","Synoniemen."],
+        wrongHints: [null,"Blij/vrolijk = bijna hetzelfde, geen tegenstelling.","Snel/vlug = bijna hetzelfde, geen tegenstelling.","Mooi/prachtig = bijna hetzelfde, geen tegenstelling."],
         uitlegPad: {
           stappen: [{ titel: "Zoek tegenstelling", tekst: "Jong ↔ oud = leeftijd-tegenstelling. Andere paren zijn synoniem (zelfde betekenis)." }],
           woorden: [{ woord: "antoniem-paar", uitleg: "Twee woorden met tegenovergestelde betekenis." }],
@@ -267,7 +267,7 @@ const steps = [
         q: "Antoniem van **'eerlijk'**?",
         options: ["oneerlijk","aardig","verdrietig","slim"],
         answer: 0,
-        wrongHints: [null,"Geen verband.","Geen verband.","Geen verband."],
+        wrongHints: [null,"Aardig = karakter, geen tegenstelling van eerlijk.","Verdrietig = gevoel, geen tegenstelling van eerlijk.","Slim = verstand, geen tegenstelling van eerlijk."],
         uitlegPad: {
           stappen: [{ titel: "Eerlijk ↔ oneerlijk", tekst: "Voorvoegsel 'on-' maakt tegenstelling: eerlijk → oneerlijk." }],
           woorden: [{ woord: "on-", uitleg: "Voorvoegsel dat tegenstelling maakt: on-eerlijk, on-aardig, on-mogelijk." }],
@@ -416,7 +416,7 @@ const steps = [
       { q: "Antoniem van **licht** (gewicht)?", options: ["zwaar","donker","helder","klein"], answer: 0, wrongHints: [null, "Andere betekenis (licht = donker).", "Synoniem helderheid.", "Niet."] },
       { q: "Antoniem van **vol**?", options: ["leeg","gevuld","groot","klein"], answer: 0, wrongHints: [null, "Synoniem.", "Niet.", "Niet."] },
       { q: "Wat betekent **enthousiast**?", options: ["Vol energie en blij","Boos","Verdrietig","Verveeld"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Tegengestelde."] },
-      { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst / gevonden spullen","Boot","Net","Water"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst / gevonden spullen","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },
       { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","slim","groot"], answer: 0, wrongHints: [null, "Antoniem.", "Andere betekenis.", "Niet."] },
       { q: "*Context*: 'Hij is een fanatiek voetballer.' Fanatiek =?", options: ["Heel toegewijd","Lui","Onverschillig","Bang"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Niet."] },
       { q: "Wat betekent **discreet**?", options: ["Stil + voorzichtig","Luid","Boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
