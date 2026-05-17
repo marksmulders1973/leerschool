@@ -7843,6 +7843,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam}${h.level ? ` (L${h.level})` : ""} — ${h.score}`).join("    •    ")
     : "Nog geen high scores — wees de eerste! 👽";
 
+  // ---------- ACHTERGROND-MUZIEK ----------
+  // Mark verzoek 2026-05-17: muziekje onder het spel. Vivaldi - Zomer Presto
+  // (John Harrison / Wichita State Players, CC-BY-SA 3.0 via Internet Archive).
+  // File: public/audio/obliterator-bg.mp3 (3.4 MB, 2:39, loopt naadloos).
+  // Attribution-comment hier i.p.v. UI-credit (Mark kan later zelf zetten in
+  // privacy/credits-pagina als hij wil).
+  const bgMusicRef = useRef(null);
+  useEffect(() => {
+    const a = bgMusicRef.current;
+    if (!a) return;
+    a.volume = 0.32; // achtergrond, niet boven de sfx
+    a.loop = true;
+    if (fase === "spelen" && geluidAan) {
+      a.play().catch(() => {/* autoplay-block, geen probleem */});
+    } else {
+      try { a.pause(); a.currentTime = 0; } catch {}
+    }
+  }, [fase, geluidAan]);
+
   return (
     <div
       onPointerDown={(e) => {
@@ -9517,6 +9536,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           </div>
         )}
       </div>
+
+      {/* Achtergrond-muziek: Vivaldi - Zomer Presto (CC-BY-SA 3.0, John Harrison
+          / Wichita State Players via Internet Archive). Speelt alleen tijdens
+          fase 'spelen' + geluidAan; useEffect hierboven bestuurt play/pause. */}
+      <audio ref={bgMusicRef} src="/audio/obliterator-bg.mp3" preload="auto" />
 
       <style>{`
         @keyframes obliterator-marquee {
