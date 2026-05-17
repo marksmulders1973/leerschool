@@ -4891,7 +4891,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Wereldsnelheid is constant over levels — moeilijkheid komt uit
       // obstakel-density/variatie, niet uit speed-scaling.
       const moeilijkheidsMul = 1;
-      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul;
+      // Beat-mul (2026-05-17): violen-burst in Vivaldi → kort 'sprintje'.
+      // audioBeatRef is 0..1 live bass+treble-energie. Max +35% piek = duidelijk
+      // merkbaar zonder game-balans onhoudbaar te maken. Alleen actief tijdens
+      // normaal spelen (niet bij afgeremd/boss/bonus — die hebben eigen feel).
+      const beatMul = (afgeremFrames <= 0 && !bonusFase && !bossActief)
+        ? 1 + Math.min(0.35, audioBeatRef.current * 0.4)
+        : 1;
+      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
@@ -8357,6 +8364,42 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     );
                   })}
                 </ol>
+              </div>
+            )}
+
+            {/* Level-start-dropdown (Mark wens 2026-05-17): kies bij welk level
+                je begint, tot maxKiesbaar (= hoogste vrijgespeelde level). */}
+            {maxKiesbaar > 1 && (
+              <div style={{
+                width: "100%", maxWidth: 320, marginBottom: 14,
+                display: "flex", alignItems: "center", justifyContent: "space-between",
+                padding: "10px 14px", borderRadius: 10,
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,204,64,0.3)",
+              }}>
+                <label htmlFor="startLevelSelect" style={{
+                  color: "#ffcc40", fontFamily: "'Fredoka', sans-serif",
+                  fontSize: 13, fontWeight: 700, letterSpacing: 1,
+                  textTransform: "uppercase",
+                }}>Start op level</label>
+                <select
+                  id="startLevelSelect"
+                  value={gekozenStartLevel}
+                  onChange={(e) => setGekozenStartLevel(parseInt(e.target.value, 10) || 1)}
+                  style={{
+                    padding: "6px 10px", borderRadius: 8,
+                    background: "rgba(20,10,30,0.9)", color: "#ffcc40",
+                    border: "1px solid rgba(255,204,64,0.5)",
+                    fontFamily: "'Fredoka', sans-serif", fontSize: 15,
+                    fontWeight: 700, cursor: "pointer", minWidth: 80,
+                  }}
+                >
+                  {Array.from({ length: maxKiesbaar }, (_, i) => i + 1).map((lvl) => (
+                    <option key={lvl} value={lvl}>
+                      {moeilijkheidEmoji(lvl)} Level {lvl}
+                    </option>
+                  ))}
+                </select>
               </div>
             )}
 
