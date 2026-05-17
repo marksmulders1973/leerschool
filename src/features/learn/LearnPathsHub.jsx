@@ -90,11 +90,12 @@ const CITO_PIJLERS = {
   wereld: { label: "Wereldoriëntatie", emoji: "🌍", subjects: ["aardrijkskunde", "geschiedenis", "biologie", "natuur", "maatschappijleer", "natuurkunde", "scheikunde", "economie", "beco"] },
 };
 
-// Niveau-buckets voor entry-screen-filter.
+// Niveau-buckets voor entry-screen-filter. Labels in ouder-taal (geen
+// "VO"/"PO"-jargon) — review-fix 2026-05-17.
 const NIVEAU_BUCKETS = {
-  "po": { label: "Basisschool", emoji: "🎓", buckets: ["po"] },
-  "vo-onderbouw": { label: "Onderbouw VO", emoji: "🏫", buckets: ["klas-1", "klas-2"] },
-  "vo-bovenbouw": { label: "Bovenbouw VO", emoji: "🎒", buckets: ["klas-3", "klas-4", "bovenbouw"] },
+  "po": { label: "Basisschool (groep 1-8)", emoji: "🎓", buckets: ["po"] },
+  "vo-onderbouw": { label: "Brugklas + klas 2", emoji: "🏫", buckets: ["klas-1", "klas-2"] },
+  "vo-bovenbouw": { label: "Klas 3-4 + bovenbouw", emoji: "🎒", buckets: ["klas-3", "klas-4", "bovenbouw"] },
 };
 
 function bucketDistance(a, b) {
