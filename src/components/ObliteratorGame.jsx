@@ -1498,10 +1498,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Cheerful biomes hebben een open lucht — brick-pattern bijna onzichtbaar.
       // Donker behoudt de oude muur-look. Tijdens biome-fade lerpt dit smooth.
       const cheerful = cheerfulMix();
-      // Beat-pulse 2026-05-17: subtiele 'ademende' wand op ~120 BPM-tempo
-      // (Geometry-Dash-stijl) — sin-wave op frameTeller. Alleen in donker-biome
-      // omdat cheerful (open lucht) geen muur heeft die kan pulseren.
-      const beatPulse = 1 + 0.18 * Math.sin(frameTeller * 0.045) * (1 - cheerful);
+      // Beat-pulse 2026-05-17: wand 'ademt' op het ritme van Vivaldi Zomer
+      // Presto (~158 BPM via audioBeatRef). Fallback naar frameTeller-sin
+      // als muziek niet speelt. Alleen in donker-biome zichtbaar.
+      const beatPhase = (audioBeatRef.current > 0)
+        ? audioBeatRef.current * Math.PI * 2  // audio-gestuurde fase
+        : frameTeller * 0.045;                 // fallback (muziek af)
+      const beatPulse = 1 + 0.22 * Math.sin(beatPhase) * (1 - cheerful);
       const brickOpacity = (0.55 * (1 - cheerful) + 0.05 * cheerful) * beatPulse;
       const offset = (frameTeller * spelSnelheid * 0.15) % BAKSTEEN_W;
       ctx.save();
@@ -2206,9 +2209,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return;
       }
       // stone (default — donker-biome). 2026-05-17 Geometry-Dash-stijl:
-      // warmgloeiende rand (rood/oranje) als gevaar-signaal, pulst lichtjes
-      // op tempo zodat speler ze opvalt.
-      const dangerPulse = 0.7 + 0.3 * Math.abs(Math.sin(frameTeller * 0.06));
+      // warmgloeiende rand (rood/oranje) als gevaar-signaal, pulseert op
+      // het ritme van de muziek (Vivaldi ~158 BPM via audioBeatRef).
+      const spikeBeatPhase = (audioBeatRef.current > 0)
+        ? audioBeatRef.current * Math.PI * 2
+        : frameTeller * 0.06;
+      const dangerPulse = 0.6 + 0.4 * Math.abs(Math.sin(spikeBeatPhase));
       ctx.shadowBlur = 18 * dangerPulse;
       ctx.shadowColor = `rgba(255, 110, 50, ${0.55 * dangerPulse})`;
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -7843,13 +7849,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam}${h.level ? ` (L${h.level})` : ""} — ${h.score}`).join("    •    ")
     : "Nog geen high scores — wees de eerste! 👽";
 
-  // ---------- ACHTERGROND-MUZIEK ----------
-  // Mark verzoek 2026-05-17: muziekje onder het spel. Vivaldi - Zomer Presto
-  // (John Harrison / Wichita State Players, CC-BY-SA 3.0 via Internet Archive).
-  // File: public/audio/obliterator-bg.mp3 (3.4 MB, 2:39, loopt naadloos).
-  // Attribution-comment hier i.p.v. UI-credit (Mark kan later zelf zetten in
-  // privacy/credits-pagina als hij wil).
+  // ---------- ACHTERGROND-MUZIEK + BEAT-SYNC ----------
+  // Mark verzoek 2026-05-17: muziekje onder het spel + spel meebewegen
+  // op ritme. Vivaldi - Zomer Presto (John Harrison / Wichita State,
+  // CC-BY-SA 3.0 via Internet Archive). 2:39, loopt naadloos. ~158 BPM.
+  //
+  // Beat-sync truc: lees audio.currentTime elke frame en bereken cyclus-fase
+  // (0..1 per kwart-noot). audioBeatRef.current is dan een continue ritme-
+  // klok die de game-render-functies gebruiken voor wand-pulse + glow.
   const bgMusicRef = useRef(null);
+  const audioBeatRef = useRef(0); // 0..1 cyclus per kwart-noot
+  const BG_MUSIC_BPM = 158;       // Vivaldi Summer Presto, gemeten gemiddelde
   useEffect(() => {
     const a = bgMusicRef.current;
     if (!a) return;
@@ -7859,7 +7869,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       a.play().catch(() => {/* autoplay-block, geen probleem */});
     } else {
       try { a.pause(); a.currentTime = 0; } catch {}
+      audioBeatRef.current = 0;
+      return;
     }
+    // Beat-tracker via requestAnimationFrame — audio.currentTime is de
+    // bron-van-waarheid (geen drift met framedrop). Update audioBeatRef
+    // 60×/sec voor smooth pulse-curves.
+    let rafId;
+    const beatsPerSec = BG_MUSIC_BPM / 60;
+    function beatTick() {
+      if (a && !a.paused && a.currentTime > 0) {
+        const totalBeats = a.currentTime * beatsPerSec;
+        audioBeatRef.current = totalBeats % 1; // fractie van huidige beat
+      }
+      rafId = requestAnimationFrame(beatTick);
+    }
+    rafId = requestAnimationFrame(beatTick);
+    return () => { if (rafId) cancelAnimationFrame(rafId); };
   }, [fase, geluidAan]);
 
   return (
