@@ -13,20 +13,21 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 // faalangst-gevoelig; vergelijking met klasgenoten = anti-leren. Component+route
 // blijven bestaan (`leaderboard` page rendert nog), maar geen entry-point in nav.
 //
-// Reden OBLITERATOR weg: niet onderdeel van Leerkwartier-product-flow.
-// Eigen route `/spel` (obliteratorPlay) blijft werken voor Mark's zoon
-// die er met AI aan bouwt. Geen tab in hoofd-nav.
+// 2026-05-17 (Mark wens): OBLITERATOR weer als 4e tab — discoverability
+// terug, beloning-spel naast leren. Niet meer alleen via /spel-deeplink.
 
 const ALL_TABS = [
   { id: "home",            label: "Home",           emoji: "🏠", target: "_home" },
   { id: "leren",           label: "Leren",          emoji: "📚", target: "learn-paths-hub" },
   { id: "doorstroomtoets", label: "Doorstroomtoets", target: "cito", iconNode: <DoorstroomtoetsLogo size={24} /> },
+  { id: "spel",            label: "Spel",           emoji: "🎮", target: "obliteratorPlay" },
 ];
 
 function bepaalActieveTab(page) {
   if (page === "home" || page === "student-home" || page === "teacher-home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "cito" || page === "cito-leerpad-toets") return "doorstroomtoets";
+  if (page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "spel";
   return null;
 }
 
