@@ -56,6 +56,17 @@ const KERN_PADEN = [
   { file: "topografieEuropaPo", pitch: "Topografie Europa groep 7-8 — hoofdsteden 4 windrichtingen, Donau-rivier-trucs, Wolga, Pyreneeën, Middellandse Zee." },
   { file: "wereldreligiesPo", pitch: "Wereldreligies groep 7-8 — 5 religies (christendom/islam/hindoeïsme/boeddhisme/jodendom), boeken, gebouwen, symbolen." },
   { file: "oppervlakteOmtrekPo", pitch: "Oppervlakte en omtrek groep 6-8 — rechthoek, vierkant, driehoek, cirkel met praktische voorbeelden + 1 m² = 10.000 cm²." },
+  // 5e ronde uitbreiding 2026-05-17 — 10 Cito-PO paden voor SEO/AI-discovery
+  { file: "begrijpendLezenStrategie", pitch: "Begrijpend lezen strategieën groep 5-8 — signaalwoorden, hoofdgedachte, skim+scan voor Doorstroomtoets-pijler." },
+  { file: "cijferendRekenen", pitch: "Cijferend rekenen groep 6-8 — onder elkaar optellen, aftrekken, vermenigvuldigen en delen met overhouden." },
+  { file: "geldRekenen", pitch: "Geld rekenen groep 5-8 — euro's + centen, wisselgeld, korting in euro berekenen voor Cito-redactiesommen." },
+  { file: "klokkijken", pitch: "Klokkijken groep 3-5 — analoog + digitaal, kwart over, half, kwartieren, NL-stijl tijd-aanduiding." },
+  { file: "matenEenheden", pitch: "Maten en eenheden groep 7-8 — mm/cm/m/km omrekenen, gram/kg/ton, ml/l, hectare voor Cito-meetkunde." },
+  { file: "werkwoordsspellingDT", pitch: "Werkwoordspelling d/t groep 5-7 — 't kofschip-regel, word/wordt, voltooid deelwoord-vragen." },
+  { file: "politiekDemocratiePo", pitch: "Politiek + democratie groep 7-8 — Tweede Kamer, kabinet, gemeente, koning + 3 machten Trias Politica." },
+  { file: "industrieleRevolutiePo", pitch: "Industriële Revolutie groep 7-8 — stoommachine, fabrieken, kinderarbeid + impact op Nederland." },
+  { file: "werelddelenLandenPo", pitch: "Werelddelen + landen groep 6-8 — 7 continenten, grote landen per continent, bekende hoofdsteden." },
+  { file: "brugklasOrientatie", pitch: "Brugklas-tips groep 8 — overgang basisschool naar middelbare, schoolboeken, planner, agenda, huiswerk." },
 ];
 
 function escapeHtml(s) {
