@@ -790,6 +790,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // Levels: 30 sec per level, max 100 levels (= 50 min totaal voor MAX)
     const LEVEL_DUUR_FRAMES = 1800; // 30 sec @ 60fps
     const MAX_LEVEL = 100;
+    // Score-multiplier 2026-05-17 (Mark wens): alle scoring × 10. Reden:
+    // oude high-scores onverslaanbaar voor nieuwe spelers; binnen 10 min
+    // moet je nu eroverheen kunnen. Alle score-bonussen vermenigvuldigd
+    // met deze constante op uitgifte-moment.
+    const SCORE_MUL = 10;
     // PvP forceert L1 zodat beide spelers identieke start-condities hebben.
     let huidigLevel = pvpMatch ? 1 : (startLevelRef.current || 1);
     // ── CUSTOM LEVEL ── speel een door iemand gemaakt level uit DB
@@ -1083,7 +1088,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       setTimeout(() => piep(784, 0.14, "sine", 0.18), 240);
       setTimeout(() => piep(1047, 0.20, "sine", 0.18), 380);
       // beloning: +50 score + 1 leven (max blijft 5)
-      score += 50;
+      score += 50 * SCORE_MUL;
       scoreElText = score;
       if (levens < MAX_LEVENS) levens++;
       shakeKracht = 14;
@@ -4777,7 +4782,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // Unlock op 60 sec (eenmalig)
         if (!oblivionUnlockGedaan && oblivionFrames >= OBLIVION_DUUR_VOOR_UNLOCK) {
           oblivionUnlockGedaan = true;
-          score += 500;
+          score += 500 * SCORE_MUL;
           // Black Hole skin ontgrendelen via React state-setter
           try {
             setUnlockedSkins((prev) => prev.includes("blackhole") ? prev : [...prev, "blackhole"]);
@@ -5063,7 +5068,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 if (hit) {
                   r.opgepakt = true;
                   bonusScore += 5;
-                  score += 5;
+                  score += 5 * SCORE_MUL;
                   spawnParticles(r.x, r.y, 18, "#ffd700", { spread: 7, opwaarts: 1.5, leven: 30, grootte: 5, glow: 22 });
                   spawnParticles(r.x, r.y, 10, "#ffffff", { spread: 5, opwaarts: 1.2, leven: 22, grootte: 3, glow: 16 });
                   piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
@@ -5091,7 +5096,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               if (inX && Math.abs(dy) < ringR) {
                 r.opgepakt = true;
                 bonusScore += 5;
-                score += 5;
+                score += 5 * SCORE_MUL;
                 spawnParticles(r.x, r.y, 14, "#ffd700", { spread: 6, opwaarts: 1.5, leven: 26, grootte: 4, glow: 18 });
                 spawnParticles(r.x, r.y, 8, "#ffffff", { spread: 4, opwaarts: 1, leven: 20, grootte: 3, glow: 14 });
                 piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
@@ -5852,7 +5857,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             dungeonMode = false;
             dungeonFrames = 0;
             if (levens < MAX_LEVENS) levens++;
-            score += 100;
+            score += 100 * SCORE_MUL;
             spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 30, "#ffd54f", { spread: 8, opwaarts: 3, leven: 40, grootte: 5, glow: 22 });
             piep(660, 0.10, "sine", 0.14);
             setTimeout(() => piep(990, 0.10, "sine", 0.12), 90);
@@ -5889,7 +5894,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             // Exit hell — beloning
             hellMode = false;
             hellFrames = 0;
-            score += 150;
+            score += 150 * SCORE_MUL;
             spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 36, "#ffd54f", { spread: 10, opwaarts: 4, leven: 50, grootte: 6, glow: 24 });
             spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 16, "#ff7040", { spread: 8, opwaarts: 3, leven: 42, grootte: 5, glow: 22 });
             piep(660, 0.12, "sine", 0.14);
@@ -5943,7 +5948,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const sb = spelerBots();
         const visBox = { x: v.x - v.grootte, y: v.y - v.grootte * 0.55, breedte: v.grootte * 2, hoogte: v.grootte * 1.1 };
         if (!loopActief && botst(sb, visBox)) {
-          score += 5;
+          score += 5 * SCORE_MUL;
           bubbelFrames = BUBBEL_DUUR;
           piep(880, 0.06, "sine", 0.10);
           setTimeout(() => piep(1320, 0.06, "sine", 0.08), 50);
@@ -5966,7 +5971,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const kBox = { x: s.x, y: s.y + Math.sin(s.fase) * 3, breedte: s.breedte, hoogte: s.hoogte };
         if (!s.opgepakt && !loopActief && botst(sb, kBox)) {
           s.opgepakt = true;
-          score += 25;
+          score += 25 * SCORE_MUL;
           // schatkist herstelt ook 25% hp (water-wereld bonus voelt nu écht waardevol)
           hp = Math.min(HP_MAX, hp + HP_PER_HIT);
           piep(660, 0.08, "sine", 0.12);
@@ -6004,7 +6009,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           } else if (levens < MAX_LEVENS) {
             levens++;
           } else {
-            score += 5; // alles vol: bonus-punten ipv leven
+            score += 5 * SCORE_MUL; // alles vol: bonus-punten ipv leven
           }
           piep(880, 0.06, "sine", 0.15);
           setTimeout(() => piep(1320, 0.08, "sine", 0.12), 50);
@@ -6267,13 +6272,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // op L20+ haalbaar blijft ondanks de hogere obstakel-density.
           // Curve: L1=1×, L5=~1.6×, L10=~2.4×, L20=~3.9×, L50=~8.4×, L100=~15.9×.
           const levelFactor = 1 + (huidigLevel - 1) * 0.15;
-          score += Math.max(1, Math.round(multiplier * levelFactor));
+          score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL;
           scoreElText = score;
 
           // record-checks voor spanning-melding
           const pr = prRef.current;
           const wr = wrRef.current;
-          if (pr > 0 && !prHintGedaan && score >= pr - 4 && score < pr) {
+          if (pr > 0 && !prHintGedaan && score >= pr - 4 * SCORE_MUL && score < pr) {
             prHintGedaan = true;
             recordBannerTekst = `🔥 Nog ${pr - score + 1} tot je record!`;
             recordBannerKleur = "#ffaa40";
@@ -6293,7 +6298,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             setTimeout(() => piep(659, 0.1, "sine", 0.14), 100);
             setTimeout(() => piep(784, 0.12, "sine", 0.14), 200);
           }
-          if (wr > pr && !wrHintGedaan && score >= wr - 4 && score < wr) {
+          if (wr > pr && !wrHintGedaan && score >= wr - 4 * SCORE_MUL && score < wr) {
             wrHintGedaan = true;
             recordBannerTekst = `🌟 Nog ${wr - score + 1} tot WERELDRECORD!`;
             recordBannerKleur = "#ffd700";
@@ -8001,7 +8006,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     if (!pvpMatch && startLevelRef.current > 1) {
       // pre-set frameTeller zodat density-formule meteen op level-niveau zit
       frameTeller = (startLevelRef.current - 1) * LEVEL_DUUR_FRAMES;
-      score = startLevelRef.current * 5;
+      score = startLevelRef.current * 5 * SCORE_MUL;
       scoreElText = score;
       scoreBijLevelStart = score;
     }
