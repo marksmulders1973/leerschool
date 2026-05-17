@@ -130,7 +130,7 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null }) {
   const player = (userName || "Speler").trim() || "Speler";
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
@@ -654,6 +654,33 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
               <span style={{ fontSize: 11 }}>Mis je iets? Geef het door via "Tip aan de maker" op de homepage.</span>
             </div>
           </div>
+
+          {/* OBLITERATOR-koppeling (Mark wens 2026-05-17): pauze-knop */}
+          {onPlayObliterator && (
+            <button
+              onClick={onPlayObliterator}
+              style={{
+                width: "100%", marginTop: 12, textAlign: "left",
+                background: "linear-gradient(135deg, rgba(255,107,53,0.10), rgba(255,107,53,0.04))",
+                border: "1.5px solid rgba(255,107,53,0.4)", borderRadius: 14,
+                padding: "12px 16px", cursor: "pointer",
+                color: "var(--color-text)", fontFamily: "var(--font-body)",
+                display: "flex", alignItems: "center", gap: 12,
+              }}
+              title="Speel OBLITERATOR — beloning-spel"
+            >
+              <span style={{ fontSize: 26 }}>🎮</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#ff8c42" }}>
+                  Pauze? Speel OBLITERATOR
+                </div>
+                <div style={{ fontSize: 11, color: C.muted, marginTop: 2 }}>
+                  Beloning-spel — even ontladen tussen leren door.
+                </div>
+              </div>
+              <span style={{ fontSize: 16, color: "rgba(255,107,53,0.6)" }}>›</span>
+            </button>
+          )}
         </div>
         )}
       </div>

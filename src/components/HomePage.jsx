@@ -1359,6 +1359,19 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               <span>👩‍🏫</span>
               Voor leerkrachten
             </button>
+            {/* OBLITERATOR-link teruggezet 2026-05-17 (Mark wens): discrete
+                koppeling naar het beloning-spel, in dezelfde footer-rij. */}
+            {onPlayObliterator && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "#ff6b35", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+                onClick={onPlayObliterator}
+                title="Speel het beloningsspel OBLITERATOR"
+              >
+                <span>🎮</span>
+                OBLITERATOR (spel)
+              </button>
+            )}
             {isAdmin && onAdminFeedback && (
               <button
                 type="button"

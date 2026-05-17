@@ -94,7 +94,7 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator }) {
   const [groep, setGroep] = useState("8");
   const [openOnderdelen, setOpenOnderdelen] = useState(() => new Set());
   const [vragenAantal, setVragenAantal] = useState({}); // per onderdeel-id
@@ -506,6 +506,33 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             );
           })}
         </div>
+
+        {/* OBLITERATOR-koppeling (Mark wens 2026-05-17): discrete knop voor
+            beloning-spel — bereikbaar als pauze tussen oefenen door. */}
+        {onPlayObliterator && (
+          <button
+            onClick={onPlayObliterator}
+            style={{
+              textAlign: "left", borderRadius: 14,
+              border: "1.5px solid rgba(255,107,53,0.4)",
+              background: "linear-gradient(135deg, rgba(255,107,53,0.10), rgba(255,107,53,0.04))",
+              padding: "12px 16px", cursor: "pointer", color: "var(--color-text)",
+              display: "flex", alignItems: "center", gap: 12, marginTop: 4,
+            }}
+            title="Speel OBLITERATOR — beloning-spel"
+          >
+            <span style={{ fontSize: 28 }}>🎮</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42" }}>
+                Pauze? Speel OBLITERATOR
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                Beloning-spel — even ontladen tussen oefenen door.
+              </div>
+            </div>
+            <span style={{ fontSize: 18, color: "rgba(255,107,53,0.6)" }}>›</span>
+          </button>
+        )}
 
         {/* Info-blokje */}
         <div style={{

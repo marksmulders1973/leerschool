@@ -860,6 +860,7 @@ export default function App() {
           }}
           onBack={() => { setLearnFilterSubject(null); setPage("home"); }}
           onHome={() => { setLearnFilterSubject(null); goHome(); }}
+          onPlayObliterator={() => setPage("obliteratorPlay")}
         />
       )}
       {page === "my-mastery" && (() => {
@@ -1343,6 +1344,7 @@ export default function App() {
             startGame(quiz, "self");
           }}
           onStartProefToets={(leerpadId) => startProefToets(leerpadId, 30)}
+          onPlayObliterator={() => setPage("obliteratorPlay")}
           onBack={() => setPage("student-home")}
           onHome={goHome}
         />
