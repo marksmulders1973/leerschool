@@ -1093,8 +1093,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
     // Piep met zachte attack-ramp (geen click), kleine frequentie-jitter
     // (geen monotonie), en lowpass via masterFilter (geen scherpe harmonics).
+    // Mark feedback 2026-05-17: sfx (spring/schiet) waren te schreeuwerig naast
+    // bg-muziek. Volume × 0.45 als bg-muziek speelt — sfx blijft hoorbaar maar
+    // valt niet meer over Vivaldi heen.
     function piep(freq, duur, type = "triangle", volume = 0.10) {
       try {
+        const bg = bgMusicRef.current;
+        const muziekSpeelt = bg && !bg.paused && bg.currentTime > 0;
+        const effectiefVolume = muziekSpeelt ? volume * 0.45 : volume;
         const a = aud();
         const osc = a.createOscillator(), gain = a.createGain();
         // Auto-replace harde sawtooth/square door zachtere triangle
@@ -1103,9 +1109,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // ±2% frequentie-jitter zodat herhaalde piep niet exact zelfde toon is
         const jittered = freq * (1 + (Math.random() - 0.5) * 0.04);
         osc.frequency.setValueAtTime(jittered, a.currentTime);
-        // Attack: 5ms ramp van 0 naar volume (geen click), dan exp decay
+        // Attack: 5ms ramp van 0 naar effectiefVolume (geen click), dan exp decay
         gain.gain.setValueAtTime(0.0001, a.currentTime);
-        gain.gain.linearRampToValueAtTime(volume, a.currentTime + 0.005);
+        gain.gain.linearRampToValueAtTime(effectiefVolume, a.currentTime + 0.005);
         gain.gain.exponentialRampToValueAtTime(0.0001, a.currentTime + duur);
         osc.connect(gain); gain.connect(masterFilter);
         osc.start(); osc.stop(a.currentTime + duur);
@@ -1498,13 +1504,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Cheerful biomes hebben een open lucht — brick-pattern bijna onzichtbaar.
       // Donker behoudt de oude muur-look. Tijdens biome-fade lerpt dit smooth.
       const cheerful = cheerfulMix();
-      // Beat-pulse 2026-05-17: wand 'ademt' op het ritme van Vivaldi Zomer
-      // Presto (~158 BPM via audioBeatRef). Fallback naar frameTeller-sin
-      // als muziek niet speelt. Alleen in donker-biome zichtbaar.
-      const beatPhase = (audioBeatRef.current > 0)
-        ? audioBeatRef.current * Math.PI * 2  // audio-gestuurde fase
-        : frameTeller * 0.045;                 // fallback (muziek af)
-      const beatPulse = 1 + 0.22 * Math.sin(beatPhase) * (1 - cheerful);
+      // Beat-pulse v2 (2026-05-17): audioBeatRef = live bass-energie (0..1),
+      // dus pulse volgt nu DE ECHTE muziek, ook bij ritardando/accelerando.
+      // Sneller-snelle stukken → vaker pieken. Langzamere → minder pieken.
+      // Fallback naar subtiele frameTeller-sin als audio-analyse geen output
+      // levert (autoplay-block / non-spelen).
+      const liveBeat = audioBeatRef.current; // 0..1
+      const beatBoost = liveBeat > 0 ? liveBeat * 0.35 : 0.08 * Math.sin(frameTeller * 0.045);
+      const beatPulse = 1 + beatBoost * (1 - cheerful);
       const brickOpacity = (0.55 * (1 - cheerful) + 0.05 * cheerful) * beatPulse;
       const offset = (frameTeller * spelSnelheid * 0.15) % BAKSTEEN_W;
       ctx.save();
@@ -2210,11 +2217,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // stone (default — donker-biome). 2026-05-17 Geometry-Dash-stijl:
       // warmgloeiende rand (rood/oranje) als gevaar-signaal, pulseert op
-      // het ritme van de muziek (Vivaldi ~158 BPM via audioBeatRef).
-      const spikeBeatPhase = (audioBeatRef.current > 0)
-        ? audioBeatRef.current * Math.PI * 2
-        : frameTeller * 0.06;
-      const dangerPulse = 0.6 + 0.4 * Math.abs(Math.sin(spikeBeatPhase));
+      // het ritme van de muziek via live bass-energie (audioBeatRef 0..1).
+      const liveBeatSp = audioBeatRef.current;
+      const dangerPulse = liveBeatSp > 0
+        ? 0.55 + liveBeatSp * 0.85               // audio-gestuurd: 0.55..1.4
+        : 0.7 + 0.3 * Math.abs(Math.sin(frameTeller * 0.06)); // fallback
       ctx.shadowBlur = 18 * dangerPulse;
       ctx.shadowColor = `rgba(255, 110, 50, ${0.55 * dangerPulse})`;
       const grad = ctx.createLinearGradient(x, y, x, y + h);
@@ -7849,21 +7856,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     ? highscores.map((h, i) => `🏆 #${i + 1} ${h.naam}${h.level ? ` (L${h.level})` : ""} — ${h.score}`).join("    •    ")
     : "Nog geen high scores — wees de eerste! 👽";
 
-  // ---------- ACHTERGROND-MUZIEK + BEAT-SYNC ----------
+  // ---------- ACHTERGROND-MUZIEK + LIVE AUDIO-ANALYSE ----------
   // Mark verzoek 2026-05-17: muziekje onder het spel + spel meebewegen
   // op ritme. Vivaldi - Zomer Presto (John Harrison / Wichita State,
-  // CC-BY-SA 3.0 via Internet Archive). 2:39, loopt naadloos. ~158 BPM.
+  // CC-BY-SA 3.0 via Internet Archive). 2:39, loopt naadloos.
   //
-  // Beat-sync truc: lees audio.currentTime elke frame en bereken cyclus-fase
-  // (0..1 per kwart-noot). audioBeatRef.current is dan een continue ritme-
-  // klok die de game-render-functies gebruiken voor wand-pulse + glow.
+  // V2: vaste BPM kreeg Vivaldi's ritardando/accelerando niet mee. Nu echte
+  // audio-analyse via Web Audio API AnalyserNode. Bass-energie (sub-200Hz)
+  // wordt elke frame gemeten — bij piek wordt audioBeatRef opgepompt en faded
+  // terug. Speelt mee met dynamische tempo-veranderingen.
   const bgMusicRef = useRef(null);
-  const audioBeatRef = useRef(0); // 0..1 cyclus per kwart-noot
-  const BG_MUSIC_BPM = 158;       // Vivaldi Summer Presto, gemeten gemiddelde
+  const audioBeatRef = useRef(0); // 0..1 — current bass-energy intensiteit
+  const audioCtxRef = useRef(null);
+  const analyserRef = useRef(null);
   useEffect(() => {
     const a = bgMusicRef.current;
     if (!a) return;
-    a.volume = 0.32; // achtergrond, niet boven de sfx
+    a.volume = 0.32;
     a.loop = true;
     if (fase === "spelen" && geluidAan) {
       a.play().catch(() => {/* autoplay-block, geen probleem */});
@@ -7872,19 +7881,54 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       audioBeatRef.current = 0;
       return;
     }
-    // Beat-tracker via requestAnimationFrame — audio.currentTime is de
-    // bron-van-waarheid (geen drift met framedrop). Update audioBeatRef
-    // 60×/sec voor smooth pulse-curves.
-    let rafId;
-    const beatsPerSec = BG_MUSIC_BPM / 60;
-    function beatTick() {
-      if (a && !a.paused && a.currentTime > 0) {
-        const totalBeats = a.currentTime * beatsPerSec;
-        audioBeatRef.current = totalBeats % 1; // fractie van huidige beat
+
+    // Web Audio API setup: AudioContext + Analyser. 1× opzetten, herbruiken.
+    if (!audioCtxRef.current) {
+      try {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        const ctx = new Ctx();
+        const source = ctx.createMediaElementSource(a);
+        const analyser = ctx.createAnalyser();
+        analyser.fftSize = 256;          // 128 bass-bins, snel
+        analyser.smoothingTimeConstant = 0.55;
+        source.connect(analyser);
+        analyser.connect(ctx.destination); // door naar luidspreker
+        audioCtxRef.current = ctx;
+        analyserRef.current = analyser;
+      } catch (e) {
+        // Sommige browsers blokken MediaElementSource — fallback: vaste sin
       }
-      rafId = requestAnimationFrame(beatTick);
     }
-    rafId = requestAnimationFrame(beatTick);
+    // Resume context als suspended (autoplay-policy)
+    if (audioCtxRef.current && audioCtxRef.current.state === "suspended") {
+      audioCtxRef.current.resume().catch(() => {});
+    }
+
+    const analyser = analyserRef.current;
+    if (!analyser) {
+      audioBeatRef.current = 0;
+      return;
+    }
+    const bins = new Uint8Array(analyser.frequencyBinCount);
+    let lastBassEnergy = 0;
+    let beatDecay = 0;
+    let rafId;
+    function tick() {
+      analyser.getByteFrequencyData(bins);
+      // Sub-bass bins 0..4 (= ~0-700Hz bij sample-rate 44.1kHz / fftSize 256
+      // = bin-width 172Hz). 5 bins ≈ 0-860Hz pakt kick + lage strijkers.
+      let energy = 0;
+      for (let i = 0; i < 5; i++) energy += bins[i];
+      energy = energy / (5 * 255); // normaliseer 0..1
+      // Piek-detectie: als energie sterk hoger dan vorige frame → boost.
+      const delta = Math.max(0, energy - lastBassEnergy * 0.92);
+      lastBassEnergy = energy * 0.7 + lastBassEnergy * 0.3;
+      // Beat-decay zorgt voor zichtbare puls: snel up, langzaam down.
+      beatDecay = Math.max(beatDecay * 0.88, Math.min(1, delta * 6));
+      audioBeatRef.current = beatDecay;
+      rafId = requestAnimationFrame(tick);
+    }
+    rafId = requestAnimationFrame(tick);
     return () => { if (rafId) cancelAnimationFrame(rafId); };
   }, [fase, geluidAan]);
 
