@@ -1730,30 +1730,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
 
-      // Monumenten-parallax (Mark verzoek 2026-05-17 'verhaal' — 7 wereld-
-      // wonderen + iconen). ALTIJD getekend (ook in cheerful biome 1 = Grass
-      // Hills) — anders ziet Mark ze pas vanaf level 3. Donker silhouet werkt
-      // in beide stijlen: tegen lichte lucht (cheerful) of donkere muur (donker).
-      {
-        ctx.save();
-        ctx.globalAlpha = 0.92;
-        // Tegen lichte cheerful-lucht: donker silhouet. Tegen donkere muur:
-        // iets lichter donker zodat het niet wegvalt.
-        const silKleur = cheerful > 0.5 ? "rgba(15,10,30,0.88)" : "rgba(40,25,60,0.95)";
-        const horizonY = grondTop - 20 * SCHAAL;
-        const monCycle = 420 * SCHAAL;
-        const monScrollSpeed = 0.2;
-        const monOff = (frameTeller * spelSnelheid * monScrollSpeed) % monCycle;
-        const aantal = Math.ceil(W / monCycle) + 2;
-        for (let i = -1; i < aantal; i++) {
-          const mx = i * monCycle - monOff;
-          if (mx < -250 * SCHAAL || mx > W + 150) continue;
-          const wereldMonIdx = Math.floor((frameTeller * spelSnelheid * monScrollSpeed) / monCycle) + i;
-          const mon = MONUMENTEN[((wereldMonIdx % MONUMENTEN.length) + MONUMENTEN.length) % MONUMENTEN.length];
-          tekenMonument(ctx, mx + monCycle / 2, horizonY, 130 * SCHAAL, silKleur, mon);
-        }
-        ctx.restore();
-      }
+      // Monumenten-silhouet 2026-05-17 weer weggehaald (Mark wens: 'die
+      // schaduw gebouwen leiden teveel af'). Quotes blijven. Code +
+      // tekenMonument()-helper + MONUMENTEN-array blijven in bestand voor
+      // eventuele terugzetting.
 
       // Wijze-quotes als achtergrond-graffiti (Mark verzoek 2026-05-17 v3:
       // ALTIJD zichtbaar, ook in cheerful biome 1). In donker biome = gele
