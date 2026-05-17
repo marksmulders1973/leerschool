@@ -18,7 +18,8 @@ import {
 
 // Wijze quotes als wand-graffiti (Mark verzoek 2026-05-17 — Leerkwartier-leer-
 // imago naast Vivaldi). Gemixt internationaal + NL voor groep 6-8 herkenbaar.
-// Volgorde = rotatie-volgorde tijdens spelen.
+// V2: uitgebreid naar 25 quotes + langzamere scroll zodat ze ~30 sec
+// leesbaar blijven.
 const WIJZE_QUOTES = [
   { tekst: "One small step for man, one giant leap for mankind", auteur: "— Neil Armstrong, 1969" },
   { tekst: "I have a dream", auteur: "— Martin Luther King, 1963" },
@@ -30,6 +31,42 @@ const WIJZE_QUOTES = [
   { tekst: "Het schip is veilig in de haven, maar daar is het niet voor gebouwd", auteur: "— Albert Einstein" },
   { tekst: "Ondanks alles geloof ik nog steeds dat mensen in wezen goed zijn", auteur: "— Anne Frank, 1944" },
   { tekst: "Dat heb ik nog nooit gedaan, dus ik denk dat ik het wel kan", auteur: "— Pippi Langkous" },
+  { tekst: "Ad astra per aspera (door moeite naar de sterren)", auteur: "— Romeinse spreuk" },
+  { tekst: "Kennis is macht", auteur: "— Francis Bacon, 1597" },
+  { tekst: "De grootste glorie is niet nooit vallen, maar elke keer weer opstaan", auteur: "— Nelson Mandela" },
+  { tekst: "Wie het kleine niet eert, is het grote niet weerd", auteur: "— Nederlands spreekwoord" },
+  { tekst: "Leven is wat er gebeurt terwijl je andere plannen maakt", auteur: "— John Lennon" },
+  { tekst: "Imagination is more important than knowledge", auteur: "— Albert Einstein" },
+  { tekst: "Eureka! (ik heb het gevonden)", auteur: "— Archimedes, ~250 v.Chr." },
+  { tekst: "Honger is de beste saus", auteur: "— Cervantes" },
+  { tekst: "Het is moeilijker een vooroordeel te kraken dan een atoom", auteur: "— Albert Einstein" },
+  { tekst: "Vrede begint met een glimlach", auteur: "— Moeder Teresa" },
+  { tekst: "Het beste boek heb je nog niet gelezen", auteur: "— Annie M.G. Schmidt" },
+  { tekst: "Try not. Do, or do not. There is no try.", auteur: "— Yoda" },
+  { tekst: "De toekomst is van hen die geloven in de schoonheid van hun dromen", auteur: "— Eleanor Roosevelt" },
+  { tekst: "Wie niet sterk is, moet slim zijn", auteur: "— Johan Cruijff" },
+  { tekst: "Elk nadeel heb z'n voordeel", auteur: "— Johan Cruijff" },
+];
+
+// Monumenten + 7 Wereldwonderen als horizon-silhouet (Mark verzoek 2026-05-17
+// — 'als het maar een verhaal heeft'). Mix oude/nieuwe wereldwonderen + iconen.
+// Roteren tijdens spelen — kind leert architectuur uit verschillende perioden.
+const MONUMENTEN = [
+  // Oude 7 wereldwonderen (alleen Piramide nog bestaat)
+  { naam: "Piramide Cheops", jaar: "~2560 v.Chr.", land: "Egypte", vorm: "piramide" },
+  { naam: "Vuurtoren Alexandrië", jaar: "~280 v.Chr.", land: "Egypte", vorm: "vuurtoren" },
+  { naam: "Kolossus Rhodos", jaar: "~280 v.Chr.", land: "Griekenland", vorm: "kolossus" },
+  // Nieuwe 7 wereldwonderen (2007)
+  { naam: "Colosseum", jaar: "80 n.Chr.", land: "Rome, Italië", vorm: "colosseum" },
+  { naam: "Grote Muur", jaar: "vanaf 7e eeuw v.Chr.", land: "China", vorm: "muur" },
+  { naam: "Taj Mahal", jaar: "1648", land: "India", vorm: "tajmahal" },
+  { naam: "Machu Picchu", jaar: "~1450", land: "Peru", vorm: "berg-stad" },
+  // Moderne iconen
+  { naam: "Eiffeltoren", jaar: "1889", land: "Parijs, Frankrijk", vorm: "eiffel" },
+  { naam: "Vrijheidsbeeld", jaar: "1886", land: "New York, VS", vorm: "vrijheid" },
+  { naam: "Acropolis", jaar: "~450 v.Chr.", land: "Athene, Griekenland", vorm: "tempel" },
+  { naam: "Domtoren", jaar: "1382", land: "Utrecht, Nederland", vorm: "kerktoren" },
+  { naam: "Big Ben", jaar: "1859", land: "Londen, VK", vorm: "klokkentoren" },
 ];
 
 import {
@@ -1475,46 +1512,214 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     // ---------- ACHTERGROND ----------
+    // Monument-silhouet-renderer. cx = midden-x, by = onder-grenslijn (basis
+    // van monument), h = max hoogte. kleur = fill-stijl. mon = entry uit
+    // MONUMENTEN-array. Plus naam-label onder de basis.
+    function tekenMonument(ctx, cx, by, h, kleur, mon) {
+      ctx.fillStyle = kleur;
+      const halfW = h * 0.6;
+      switch (mon.vorm) {
+        case "piramide": {
+          ctx.beginPath();
+          ctx.moveTo(cx - halfW, by);
+          ctx.lineTo(cx, by - h);
+          ctx.lineTo(cx + halfW, by);
+          ctx.closePath(); ctx.fill();
+          break;
+        }
+        case "vuurtoren": {
+          ctx.fillRect(cx - h * 0.12, by - h * 0.95, h * 0.24, h * 0.95);
+          // Vuurkamer bovenin
+          ctx.fillRect(cx - h * 0.18, by - h, h * 0.36, h * 0.08);
+          // Vlam (gele puls bovenop)
+          ctx.fillStyle = "rgba(255,180,80,0.7)";
+          ctx.beginPath();
+          ctx.arc(cx, by - h - h * 0.06, h * 0.1, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = kleur;
+          break;
+        }
+        case "kolossus": {
+          // Staand mens-figuur
+          const bodyH = h * 0.7;
+          ctx.fillRect(cx - h * 0.06, by - bodyH, h * 0.12, bodyH);     // benen+romp
+          ctx.beginPath(); ctx.arc(cx, by - bodyH - h * 0.08, h * 0.08, 0, Math.PI * 2); ctx.fill(); // hoofd
+          ctx.fillRect(cx - h * 0.25, by - bodyH * 0.7, h * 0.5, h * 0.04); // armen wijd
+          break;
+        }
+        case "colosseum": {
+          // Halfronde grote arena met bogen
+          ctx.beginPath();
+          ctx.ellipse(cx, by, halfW, h * 0.5, 0, Math.PI, 0);
+          ctx.lineTo(cx + halfW, by); ctx.lineTo(cx - halfW, by); ctx.closePath(); ctx.fill();
+          // 3 boog-rijen highlights (lichtere lijnen)
+          ctx.strokeStyle = "rgba(255,200,150,0.45)";
+          ctx.lineWidth = 1.4;
+          for (let r = 1; r <= 3; r++) {
+            ctx.beginPath();
+            ctx.ellipse(cx, by, halfW * (1 - r * 0.2), h * 0.5 * (1 - r * 0.2), 0, Math.PI, 0);
+            ctx.stroke();
+          }
+          break;
+        }
+        case "muur": {
+          // Brede lage muur met kantelen
+          ctx.fillRect(cx - halfW, by - h * 0.4, halfW * 2, h * 0.4);
+          // Kantelen bovenop
+          const kantW = (halfW * 2) / 8;
+          for (let k = 0; k < 8; k += 2) {
+            ctx.fillRect(cx - halfW + k * kantW, by - h * 0.5, kantW, h * 0.1);
+          }
+          break;
+        }
+        case "tajmahal": {
+          // Centrale koepel + minaretten
+          const basisH = h * 0.4;
+          ctx.fillRect(cx - halfW * 0.7, by - basisH, halfW * 1.4, basisH);
+          // Centrale koepel
+          ctx.beginPath();
+          ctx.arc(cx, by - basisH, h * 0.28, Math.PI, 0); ctx.fill();
+          // Punt bovenop koepel
+          ctx.beginPath();
+          ctx.moveTo(cx - h * 0.04, by - basisH - h * 0.28);
+          ctx.lineTo(cx, by - basisH - h * 0.42);
+          ctx.lineTo(cx + h * 0.04, by - basisH - h * 0.28);
+          ctx.closePath(); ctx.fill();
+          // 2 minaretten
+          ctx.fillRect(cx - halfW * 0.7, by - h * 0.6, h * 0.06, h * 0.6);
+          ctx.fillRect(cx + halfW * 0.7 - h * 0.06, by - h * 0.6, h * 0.06, h * 0.6);
+          break;
+        }
+        case "berg-stad": {
+          // Berg-silhouet met huizen
+          ctx.beginPath();
+          ctx.moveTo(cx - halfW, by);
+          ctx.lineTo(cx - h * 0.25, by - h * 0.5);
+          ctx.lineTo(cx + h * 0.05, by - h * 0.9);
+          ctx.lineTo(cx + h * 0.3, by - h * 0.55);
+          ctx.lineTo(cx + halfW, by);
+          ctx.closePath(); ctx.fill();
+          // Huisjes op berg
+          ctx.fillRect(cx - h * 0.18, by - h * 0.32, h * 0.08, h * 0.08);
+          ctx.fillRect(cx + h * 0.08, by - h * 0.42, h * 0.08, h * 0.08);
+          break;
+        }
+        case "eiffel": {
+          // Spitse vakwerk-toren
+          ctx.beginPath();
+          ctx.moveTo(cx - h * 0.32, by);
+          ctx.lineTo(cx - h * 0.18, by - h * 0.4);
+          ctx.lineTo(cx - h * 0.05, by - h);
+          ctx.lineTo(cx + h * 0.05, by - h);
+          ctx.lineTo(cx + h * 0.18, by - h * 0.4);
+          ctx.lineTo(cx + h * 0.32, by);
+          ctx.closePath(); ctx.fill();
+          // Antenne
+          ctx.fillRect(cx - 1, by - h - h * 0.08, 2, h * 0.08);
+          break;
+        }
+        case "vrijheid": {
+          // Sokkel + standbeeld met kroon-stralen
+          ctx.fillRect(cx - h * 0.18, by - h * 0.3, h * 0.36, h * 0.3); // sokkel
+          ctx.fillRect(cx - h * 0.08, by - h * 0.7, h * 0.16, h * 0.4); // gewaad
+          ctx.beginPath(); ctx.arc(cx, by - h * 0.78, h * 0.08, 0, Math.PI * 2); ctx.fill(); // hoofd
+          // Kroon-stralen (7 zonnestralen)
+          for (let r = 0; r < 7; r++) {
+            const a = -Math.PI / 2 + (r - 3) * 0.3;
+            ctx.beginPath();
+            ctx.moveTo(cx + Math.cos(a) * h * 0.08, by - h * 0.78 + Math.sin(a) * h * 0.08);
+            ctx.lineTo(cx + Math.cos(a) * h * 0.18, by - h * 0.78 + Math.sin(a) * h * 0.18);
+            ctx.lineWidth = 2; ctx.strokeStyle = kleur; ctx.stroke();
+          }
+          // Toorts (rechterarm omhoog)
+          ctx.fillRect(cx + h * 0.08, by - h * 0.85, h * 0.04, h * 0.15);
+          ctx.fillStyle = "rgba(255,200,80,0.7)";
+          ctx.beginPath();
+          ctx.arc(cx + h * 0.1, by - h * 0.88, h * 0.04, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = kleur;
+          break;
+        }
+        case "tempel": {
+          // Acropolis-stijl: 8 zuilen + dak-driehoek
+          const zuilen = 6;
+          const zuilB = (halfW * 2) / (zuilen + 0.5);
+          for (let z = 0; z < zuilen; z++) {
+            ctx.fillRect(cx - halfW + z * zuilB + zuilB * 0.2, by - h * 0.7, zuilB * 0.6, h * 0.7);
+          }
+          // Dak-driehoek
+          ctx.beginPath();
+          ctx.moveTo(cx - halfW - 4, by - h * 0.7);
+          ctx.lineTo(cx, by - h);
+          ctx.lineTo(cx + halfW + 4, by - h * 0.7);
+          ctx.closePath(); ctx.fill();
+          break;
+        }
+        case "kerktoren": {
+          // Smal vierkant + spitse top + 1 raam
+          ctx.fillRect(cx - h * 0.14, by - h * 0.85, h * 0.28, h * 0.85);
+          ctx.beginPath();
+          ctx.moveTo(cx - h * 0.14, by - h * 0.85);
+          ctx.lineTo(cx, by - h);
+          ctx.lineTo(cx + h * 0.14, by - h * 0.85);
+          ctx.closePath(); ctx.fill();
+          // Klok-raam
+          ctx.fillStyle = "rgba(255,180,80,0.5)";
+          ctx.beginPath(); ctx.arc(cx, by - h * 0.55, h * 0.06, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = kleur;
+          break;
+        }
+        case "klokkentoren": {
+          // Rechthoekig torentje met klok bovenin
+          ctx.fillRect(cx - h * 0.15, by - h * 0.9, h * 0.3, h * 0.9);
+          // Klok-cirkel
+          ctx.fillStyle = "rgba(255,220,150,0.7)";
+          ctx.beginPath(); ctx.arc(cx, by - h * 0.7, h * 0.1, 0, Math.PI * 2); ctx.fill();
+          ctx.fillStyle = kleur;
+          // Spits dak
+          ctx.beginPath();
+          ctx.moveTo(cx - h * 0.18, by - h * 0.9);
+          ctx.lineTo(cx, by - h);
+          ctx.lineTo(cx + h * 0.18, by - h * 0.9);
+          ctx.closePath(); ctx.fill();
+          break;
+        }
+      }
+      // Naam-label onder monument (klein, leesbaar)
+      ctx.fillStyle = "rgba(255,220,180,0.85)";
+      ctx.font = `${Math.max(9, 11 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "top";
+      ctx.fillText(mon.naam, cx, by + 4 * SCHAAL);
+      ctx.font = `${Math.max(8, 9 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+      ctx.fillStyle = "rgba(255,200,150,0.65)";
+      ctx.fillText(`${mon.jaar} · ${mon.land}`, cx, by + 18 * SCHAAL);
+    }
+
     function tekenBakstenenMuur() {
       const grondTop = GROND_Y + SPELER_GROOTTE;
       const bg = ctx.createLinearGradient(0, 0, 0, H);
       bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
-      // Kasteel-silhouet parallax-laag (2026-05-17 Geometry-Dash-stijl): verre
-      // donkere kasteel-torens op de horizon, scrollt op 0.35× snelheid. Alleen
-      // in donker-biome zichtbaar (cheerful = open lucht met wolken al genoeg).
+      // Monumenten-parallax (2026-05-17 Mark verzoek 'verhaal' — 7 wereld-
+      // wonderen + iconen). Roteren door MONUMENTEN-array. Elk monument heeft
+      // unieke silhouet-vorm + naam-label. Parallax 0.2× = staat lang in beeld.
       const cheerfulMixVal = cheerfulMix();
       if (cheerfulMixVal < 0.7) {
-        const silhouetAlpha = 0.45 * (1 - cheerfulMixVal);
+        const silhouetAlpha = 0.55 * (1 - cheerfulMixVal);
         ctx.save();
         ctx.globalAlpha = silhouetAlpha;
-        // Donkere kasteel-tint die past bij het bgBot
-        ctx.fillStyle = biomeKleur("bakstenenDonker", 0.9) || "rgba(15,12,25,0.85)";
-        const horizonY = grondTop - 70 * SCHAAL;
-        const torenW = 38 * SCHAAL;
-        const towerCycle = 96 * SCHAAL;
-        const towerOff = (frameTeller * spelSnelheid * 0.35) % towerCycle;
-        // Tower-hoogtes uit deterministische sequence — zelfde patroon per loop
-        const hoogtes = [55, 38, 72, 45, 62, 33, 80, 50, 68, 40, 58, 75];
-        const aantal = Math.ceil(W / towerCycle) + 2;
-        for (let i = 0; i < aantal; i++) {
-          const tx = i * towerCycle - towerOff;
-          const h = hoogtes[i % hoogtes.length] * SCHAAL;
-          // Hoofdtoren
-          ctx.fillRect(tx, horizonY - h, torenW, h + 70 * SCHAAL);
-          // Spitse top — driehoek
-          ctx.beginPath();
-          ctx.moveTo(tx - 3, horizonY - h);
-          ctx.lineTo(tx + torenW / 2, horizonY - h - 14 * SCHAAL);
-          ctx.lineTo(tx + torenW + 3, horizonY - h);
-          ctx.closePath(); ctx.fill();
-          // Klein raam (gele dot — fakkel-licht binnen)
-          if (i % 2 === 0) {
-            ctx.fillStyle = "rgba(255,180,80,0.6)";
-            ctx.fillRect(tx + torenW * 0.4, horizonY - h * 0.6, 3 * SCHAAL, 4 * SCHAAL);
-            ctx.fillStyle = biomeKleur("bakstenenDonker", 0.9) || "rgba(15,12,25,0.85)";
-          }
+        const silKleur = biomeKleur("bakstenenDonker", 0.92) || "rgba(15,12,25,0.85)";
+        const horizonY = grondTop - 50 * SCHAAL;
+        const monCycle = 380 * SCHAAL; // 1 monument elke 380px scherm
+        const monScrollSpeed = 0.2;
+        const monOff = (frameTeller * spelSnelheid * monScrollSpeed) % monCycle;
+        const aantal = Math.ceil(W / monCycle) + 2;
+        for (let i = -1; i < aantal; i++) {
+          const mx = i * monCycle - monOff;
+          if (mx < -200 * SCHAAL || mx > W + 100) continue;
+          const wereldMonIdx = Math.floor((frameTeller * spelSnelheid * monScrollSpeed) / monCycle) + i;
+          const mon = MONUMENTEN[((wereldMonIdx % MONUMENTEN.length) + MONUMENTEN.length) % MONUMENTEN.length];
+          tekenMonument(ctx, mx + monCycle / 2, horizonY, 100 * SCHAAL, silKleur, mon);
         }
         ctx.restore();
       }
@@ -1550,40 +1755,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
 
-      // Wijze-quotes als wand-graffiti (Mark verzoek 2026-05-17 — Leerkwartier-
-      // leerzaam imago naast Vivaldi). 10 inspiratie-citaten die periodiek op
-      // de wand verschijnen, scrollen mee met de wand-textuur. Alleen in
-      // donker-biome (cheerful = open lucht = geen muur).
+      // Wijze-quotes als wand-graffiti — Mark verzoek 2026-05-17.
+      // V2: langzamere parallax (0.05× speed → quote blijft ~25 sec leesbaar
+      // op scherm). Quote spawnt elke ~30 sec (afstand 4500px op langzame
+      // parallax-snelheid). Bigger, prominenter, hoger contrast.
       if (cheerful < 0.7) {
-        const quoteAlpha = 0.62 * (1 - cheerful);
-        const quoteSpacing = 850 * SCHAAL; // 1 quote elke ~850px wand
-        // Scroll-offset = zelfde snelheid als bakstenen → graffiti staat 'op' muur
-        const quoteOffset = (frameTeller * spelSnelheid * 0.15) % quoteSpacing;
+        const quoteAlpha = 0.85 * (1 - cheerful);
+        const quoteSpacing = 4500 * SCHAAL; // 1 quote elke ~4500 wereld-px = ~30 sec
+        const quoteScrollSpeed = 0.05;       // langzaam = goed leesbaar
+        const quoteOffset = (frameTeller * spelSnelheid * quoteScrollSpeed) % quoteSpacing;
         const aantalQuotes = Math.ceil(W / quoteSpacing) + 2;
         ctx.save();
         ctx.globalAlpha = quoteAlpha;
         for (let i = -1; i < aantalQuotes; i++) {
-          const qx = i * quoteSpacing - quoteOffset + 60 * SCHAAL;
-          if (qx < -300 * SCHAAL || qx > W + 100) continue;
-          // Pak deterministisch een quote uit de bank op basis van wereld-positie
-          // (wereldX = quoteSpacing-index sinds spel start)
-          const wereldQuoteIdx = Math.floor((frameTeller * spelSnelheid * 0.15) / quoteSpacing) + i;
+          const qx = i * quoteSpacing - quoteOffset + 80 * SCHAAL;
+          if (qx < -500 * SCHAAL || qx > W + 100) continue;
+          const wereldQuoteIdx = Math.floor((frameTeller * spelSnelheid * quoteScrollSpeed) / quoteSpacing) + i;
           const q = WIJZE_QUOTES[((wereldQuoteIdx % WIJZE_QUOTES.length) + WIJZE_QUOTES.length) % WIJZE_QUOTES.length];
-          // Y-positie: deterministisch verdeeld over wand-hoogte (niet onder de spelerlijn)
-          const muurTop = PLAFOND_HOOGTE + 40 * SCHAAL;
-          const muurBot = grondTop - 80 * SCHAAL;
+          // Y-positie: deterministisch maar variabel (niet altijd zelfde hoogte)
+          const muurTop = PLAFOND_HOOGTE + 50 * SCHAAL;
+          const muurBot = grondTop - 100 * SCHAAL;
           const muurH = Math.max(60, muurBot - muurTop);
-          const qy = muurTop + ((wereldQuoteIdx * 137) % Math.max(1, Math.floor(muurH - 50 * SCHAAL)));
-          // Graffiti-style: spuitverf-look. Schaduw + bold sans-serif.
-          ctx.font = `italic ${Math.max(11, 14 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
+          const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 70 * SCHAAL)));
+          // Quote-tekst: groter + prominenter + gele spuitverf-look
+          ctx.font = `italic bold ${Math.max(16, 20 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
           ctx.textAlign = "left"; ctx.textBaseline = "top";
-          ctx.shadowBlur = 8; ctx.shadowColor = "rgba(255,200,80,0.55)";
-          ctx.fillStyle = "rgba(255,240,180,0.95)";
+          ctx.shadowBlur = 14; ctx.shadowColor = "rgba(255,200,80,0.75)";
+          ctx.fillStyle = "rgba(255,245,200,1)";
           ctx.fillText(`"${q.tekst}"`, qx, qy);
           ctx.shadowBlur = 0;
-          ctx.font = `${Math.max(9, 11 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
-          ctx.fillStyle = "rgba(255,200,100,0.75)";
-          ctx.fillText(q.auteur, qx + 12 * SCHAAL, qy + 18 * SCHAAL);
+          // Auteur eronder
+          ctx.font = `${Math.max(12, 14 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+          ctx.fillStyle = "rgba(255,200,100,0.9)";
+          ctx.fillText(q.auteur, qx + 18 * SCHAAL, qy + 26 * SCHAAL);
         }
         ctx.restore();
       }
