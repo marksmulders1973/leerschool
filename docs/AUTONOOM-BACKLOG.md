@@ -398,3 +398,42 @@ counter (commit 8e03409) lossen de UX-discrepantie al op zonder dat we
 
 PDFs niet gecommit (24 MB) — staan tijdelijk in tmp/, kunnen via download
 opnieuw opgehaald worden indien nodig.
+
+### Sessie 2026-05-16/17 — content-burst + B-shift (UI + audit)
+
+**Eerste deel (16/05) — content-burst**:
+- 10 nieuwe examen-paden: Engels 2022-T1+T2 + 2023-T1+T2, Economie 2022-T1+T2,
+  Biologie 2022-T1+T2 + 2023-T2, Geschiedenis 2022-T1+T2 + 2023-T2.
+- Maatschappij-cluster van 3 → 8 paden (alle 8/8 compleet).
+- 4 nieuwe Cito-PO paden: europese-unie-po, topografie-europa-po,
+  wereldreligies-po, oppervlakte-omtrek-po. 191 → 210 leerpaden.
+- 2 UI-refactors: ExamensPage dual-view per vak (1 rij met links 🎯 oefen +
+  rechts 📄 PDF, dual-teller in header) + CitoPage idem voor onderdelen.
+
+**Peer-review eind 16/05** (2 agents parallel — A=UX/didactiek, B=strategie):
+Beide negatief op verschillende dingen. Mark koos **B = strategie-shift**:
+"stop met content, bouw P0 + USP-zichtbaarheid".
+
+**Tweede deel (16-17/05) — B-shift**:
+- **P0 LearnPathsHub filter-bar**: zoekbalk + 4 Cito-pijler-pillen
+  (Taal/Rekenen/Lezen/Wereld) + 3 niveau-pillen (PO/onderbouw/bovenbouw)
+  op entry-screen. Switch naar resultaten-lijst bij actief filter.
+- **Pre-rendering**: 4 nieuwe paden toegevoegd aan KERN_PADEN
+  (24 → 28 statische /leerpad/*.html). Sitemap-entries bijgewerkt.
+- **Agent A quick fixes**: wrongHints-eliminatie-leak in 9 vragen verspreid
+  over 4 paden (wereldreligies, topografieEuropa, europeseUnie,
+  doorstroomtoetsTaalG8). Dual-view kleur-uniformering ExamensPage
+  groen → blauw (matcht CitoPage 🎯).
+- **OBLITERATOR-koppeling terug** op Home/Leren/Doorstroomtoets (Mark wens
+  2026-05-17): discrete koppelingen, niet-hero. Was alleen /spel-deeplink.
+
+**Status na sessie**:
+- Audit kennisgraaf: 0 broken loops, 0 ontbrekende voorkennisKeten ✓
+- Audit wrongHints: 139 files met hits resterend (top ICP-pad
+  doorstroomtoetsTaalG8 van 12 → 9 hits).
+- VoorkennisKeten UI **bestaat al** (src/shared/ui/VoorkennisKeten.jsx
+  + ingebouwd op LearnPath.jsx:989) — backlog dacht dat het ontbrak.
+
+**Open uit Agent B-plan** (vereisen Mark-go):
+- Ouder-dashboard v1 (nieuwe component + Supabase-schema)
+- Open-vragen wiskunde/aardrijkskunde VMBO-examens (PlayQuiz/LearnPath-refactor)
