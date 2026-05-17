@@ -7330,10 +7330,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
     }
-    // Frame-cap op 60 FPS (of 30 FPS bij low-FX devices zoals Xbox One).
-    // Voorkomt dat game 2× zo snel draait op 120Hz/144Hz schermen + spaart
-    // CPU op zwakke hardware.
-    const TARGET_FRAME_MS = LOW_FX ? 1000 / 30 : 1000 / 60;
+    // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op
+    // 120Hz/144Hz schermen (Galaxy S23 etc). LOW_FX gebruikt zelfde cap —
+    // de game-loop heeft GEEN delta-time-compensatie, dus een lagere FPS
+    // zou alles letterlijk langzamer maken (review 2026-05-17). De win van
+    // LOW_FX zit alleen in shadowBlur=0 + dpr=1 (zie hierboven).
+    const TARGET_FRAME_MS = 1000 / 60;
     let laatsteFrameTijd = 0;
     function lus() {
       const nu = performance.now();

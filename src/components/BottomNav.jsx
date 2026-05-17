@@ -20,7 +20,9 @@ const ALL_TABS = [
   { id: "home",            label: "Home",           emoji: "🏠", target: "_home" },
   { id: "leren",           label: "Leren",          emoji: "📚", target: "learn-paths-hub" },
   { id: "doorstroomtoets", label: "Doorstroomtoets", target: "cito", iconNode: <DoorstroomtoetsLogo size={24} /> },
-  { id: "spel",            label: "Spel",           emoji: "🎮", target: "obliteratorPlay" },
+  // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
+  // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
+  { id: "spel",            label: "Spel",           emoji: "🎮", target: "obliteratorPlay", gameRelated: true },
 ];
 
 function bepaalActieveTab(page) {
