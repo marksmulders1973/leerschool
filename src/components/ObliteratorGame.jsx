@@ -1268,13 +1268,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       osc.connect(gain).connect(muziek.masterGain); osc.start(t); osc.stop(t + lengte);
     }
     function muziekStart() {
-      if (muziek.draait) return;
-      try {
-        const a = aud(); if (a.state === "suspended") a.resume();
-        if (!muziek.masterGain) { muziek.masterGain = a.createGain(); muziek.masterGain.gain.value = 0.4; muziek.masterGain.connect(masterVolume || a.destination); }
-        muziek.draait = true; muziek.beat = 0; muziek.startTijd = a.currentTime + 0.1;
-        plan();
-      } catch {}
+      // 2026-05-17: synthetische bg-muziek uitgezet — Vivaldi <audio>-element
+      // is nu de enige achtergrond-muziek. Mark hoorde beide tegelijk; deze
+      // engine blijft staan als fallback-code maar wordt nooit gestart.
+      return;
     }
     function muziekStop() {
       muziek.draait = false;
