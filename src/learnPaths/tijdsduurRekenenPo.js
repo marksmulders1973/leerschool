@@ -229,7 +229,7 @@ const steps = [
         q: "Van **11:50** tot **12:10** is hoe lang?",
         options: ["20 min", "1 uur 40 min", "40 min", "10 min"],
         answer: 0,
-        wrongHints: [null, "Niet 1u40 — kort over de 12 heen.", "Te veel — minder dan een uur.", "Niet 10 — denk: 10 min vóór 12, plus 10 min ná 12 = 20 min."],
+        wrongHints: [null, "Niet 1u40 — het is kort over de 12 heen.", "Te veel — het is minder dan een uur.", "Te weinig — reken vóór 12 + ná 12 samen op."],
       },
     ],
   },
@@ -250,7 +250,7 @@ const steps = [
         q: "Film begint **19:30** en duurt **1 uur 50 min**. **Eindtijd**?",
         options: ["21:20", "20:80", "21:50", "20:20"],
         answer: 0,
-        wrongHints: [null, "Niet 80 min — netjes: 19:30 + 1u = 20:30, + 50 min = 21:20.", "Te veel — eindtijd is vóór 21:50.", "Te weinig — 50 min eraf maar je telt op."],
+        wrongHints: [null, "Niet :80 — tijd loopt max tot :59. Splits eerst de uren, dan de minuten.", "Te veel — eindtijd is vóór 21:50.", "Te weinig — 50 min erbij, niet eraf."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst uur erbij", tekst: "19:30 + 1 uur = 20:30." },
@@ -271,7 +271,7 @@ const steps = [
         q: "Aankomst **15:10**, trein duurde **2 uur 25 min**. **Wanneer vertrokken**?",
         options: ["12:45", "13:45", "13:35", "17:35"],
         answer: 0,
-        wrongHints: [null, "Net niet — 15:10 − 2u = 13:10. 13:10 − 25 min = 12:45.", "Te veel — heb je goed afgetrokken?", "Te veel — controleer.", "Optellen — je moet aftrekken."],
+        wrongHints: [null, "Net niet — trek eerst de 2 uur af, daarna nog 25 min terug.", "Te veel — heb je goed afgetrokken?", "Te veel — controleer.", "Optellen — je moet aftrekken."],
       },
       {
         q: "**3 uur 15 min − 1 uur 40 min** = ?",
@@ -310,7 +310,7 @@ const steps = [
         q: "Nachtbus vertrekt **23:45**, duurt **40 min**. **Aankomst**?",
         options: ["00:25", "23:85", "01:25", "24:25"],
         answer: 0,
-        wrongHints: [null, "Geen 23:85 — over middernacht heen: 23:45 + 15 min = 00:00, + 25 min = 00:25.", "Te laat — controleer 23:45 + 40 min.", "Geen 24:25 — na 23:59 komt 00:00."],
+        wrongHints: [null, "Geen :85 — tijd loopt tot :59. Splits over middernacht heen.", "Te laat — controleer 23:45 + 40 min.", "Geen 24:25 — na 23:59 komt 00:00."],
         uitlegPad: {
           stappen: [
             { titel: "Tot middernacht", tekst: "23:45 → 24:00 (oftewel 00:00) = 15 min." },
@@ -421,14 +421,14 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Net niet — 20:30 → 21:30 = 1u, daarna 21:30 → 21:45 = 15 min. Totaal 1u 15min.", "Te veel.", "Te weinig.", "Te veel."],
       },
-      { q: "**8:00 → 12:00**. Duur?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**8:00 → 12:00**. Duur?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — tel het verschil 12 − 8.", "Te veel — niet 5.", "Te weinig — meer dan 2."] },
       { q: "Hardlopen van 17:50 → 18:25. Hoe lang?", options: ["35 min","45 min","25 min","1 uur"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."] },
       { q: "Vlucht 6 uur 45 min. Vertrek 9:00. Aankomst?", options: ["15:45","16:00","14:45","15:00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — 30 vergeten."] },
       { q: "**70 minuten** = ?", options: ["1 uur 10 min","1 uur 7 min","70 sec","2 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet — minuten.", "Te veel."] },
       { q: "Hoeveel **seconden** in 5 minuten?", options: ["300","60","100","500"], answer: 0, wrongHints: [null, "1 min.", "Niet.", "Niet."] },
       { q: "School 8:30 → 12:00, daarna 13:00 → 15:00. Totale lestijd?", options: ["5 uur 30 min","6 uur","4 uur","5 uur"], answer: 0, wrongHints: [null, "Niet — pauze niet meegerekend.", "Niet.", "Bijna."] },
       { q: "Reis duurt 2 uur 50 min. Begint 14:25. Eindigt?", options: ["17:15","17:25","16:25","17:00"], answer: 0, wrongHints: [null, "Niet — 50 min ipv 60.", "Maar 2 uur.", "Niet."] },
-      { q: "Hoeveel uur is **240 minuten**?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Hoeveel uur is **240 minuten**?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — deel 240 door 60.", "Te veel — minder dan 5×60=300.", "Te weinig — 2×60=120, minder dan 240."] },
       { q: "Wedstrijd 90 min + verlenging 30 min. Totaal?", options: ["2 uur","1 uur 30 min","1 uur","2 uur 30 min"], answer: 0, wrongHints: [null, "Niet — niet verlenging.", "Niet — alleen verlenging.", "Te veel."] },
       { q: "Tussen **13:15** en **15:50**. Duur?", options: ["2 uur 35 min","2 uur 45 min","2 uur 25 min","3 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Bus elke 20 min. Eerste 7:00. Vierde?", options: ["8:00","7:40","7:20","8:20"], answer: 0, wrongHints: [null, "Tweede.", "Eerste.", "Vijfde."] },

@@ -152,7 +152,7 @@ const steps = [
         q: "**7,80 − 3,25** = ?",
         options: ["4,55", "4,65", "10,05", "5,45"],
         answer: 0,
-        wrongHints: [null, "Net niet — controleer: 80 − 25 = 55. 7 − 3 = 4. Dus 4,55.", "Niet 10 — dat is opgeteld i.p.v. afgetrokken.", "Te veel."],
+        wrongHints: [null, "Net niet — reken: 80 − 25 = ? en 7 − 3 = ? Zet die samen.", "Niet 10 — dat is opgeteld i.p.v. afgetrokken.", "Te veel — kijk goed naar het verschil tussen 7 en 3."],
         uitlegPad: {
           stappen: [
             { titel: "Komma's uitlijnen", tekst: "7,80 - 3,25. Komma's recht onder elkaar. 80 - 25 = 55 (cijfers ná komma). 7 - 3 = 4. Antwoord: 4,55." },
@@ -172,13 +172,13 @@ const steps = [
         q: "**4,5 + 1,75** = ?",
         options: ["6,25", "6,2", "5,75", "62,5"],
         answer: 0,
-        wrongHints: [null, "Net niet — vul aan: 4,50 + 1,75 = 6,25.", "Te weinig — 4,5 = 4,50. Reken nogmaals.", "Komma verkeerd."],
+        wrongHints: [null, "Net niet — schrijf 4,5 als 4,50 zodat je 2 decimalen onder elkaar hebt, en tel dan op.", "Te weinig — controleer of je 4,5 als 4,50 noteert.", "Komma verkeerd geplaatst — werk met 2 decimalen."],
       },
       {
         q: "**10 − 2,75** = ?",
         options: ["7,25", "7,75", "8,25", "12,75"],
         answer: 0,
-        wrongHints: [null, "Net niet — 10 = 10,00. 10,00 - 2,75 = 7,25.", "Te veel — controleer aftrekking.", "Niet 12,75 — dat is optellen, niet aftrekken."],
+        wrongHints: [null, "Net niet — schrijf 10 als 10,00 zodat je decimalen onder elkaar hebt en trek dan af.", "Te veel — controleer de aftrekking nog eens.", "Niet 12,75 — dat is optellen, niet aftrekken."],
       },
     ],
   },
