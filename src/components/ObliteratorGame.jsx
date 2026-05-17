@@ -1731,13 +1731,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       ctx.restore();
 
       // Monumenten-parallax (Mark verzoek 2026-05-17 'verhaal' — 7 wereld-
-      // wonderen + iconen). NA bricks getekend zodat ze niet bedekt worden.
-      // Parallax 0.2× = staat lang in beeld. Unieke silhouet-vorm + naam-label.
-      if (cheerfulMixVal < 0.7) {
-        const silhouetAlpha = 0.85 * (1 - cheerfulMixVal);
+      // wonderen + iconen). ALTIJD getekend (ook in cheerful biome 1 = Grass
+      // Hills) — anders ziet Mark ze pas vanaf level 3. Donker silhouet werkt
+      // in beide stijlen: tegen lichte lucht (cheerful) of donkere muur (donker).
+      {
         ctx.save();
-        ctx.globalAlpha = silhouetAlpha;
-        const silKleur = "rgba(20,15,35,0.92)";
+        ctx.globalAlpha = 0.92;
+        // Tegen lichte cheerful-lucht: donker silhouet. Tegen donkere muur:
+        // iets lichter donker zodat het niet wegvalt.
+        const silKleur = cheerful > 0.5 ? "rgba(15,10,30,0.88)" : "rgba(40,25,60,0.95)";
         const horizonY = grondTop - 20 * SCHAAL;
         const monCycle = 420 * SCHAAL;
         const monScrollSpeed = 0.2;
@@ -1753,18 +1755,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
 
-      // Wijze-quotes als wand-graffiti (Mark verzoek 2026-05-17 v2: meer in
-      // beeld, ~elke 30 sec eentje). Spacing 600px = bij spelSnelheid 5 ≈ 24
-      // sec tussen quotes. Langzame parallax 0.05× = quote blijft ~12-15 sec
-      // leesbaar voordat hij van scherm scrolt.
-      if (cheerful < 0.7) {
-        const quoteAlpha = 0.95 * (1 - cheerful);
+      // Wijze-quotes als achtergrond-graffiti (Mark verzoek 2026-05-17 v3:
+      // ALTIJD zichtbaar, ook in cheerful biome 1). In donker biome = gele
+      // spuitverf-look op muur. In cheerful biome = bruine inkt-look op bord
+      // tegen blauwe lucht zodat het leesbaar blijft.
+      {
         const quoteSpacing = 600 * SCHAAL;
         const quoteScrollSpeed = 0.05;
         const quoteOffset = (frameTeller * spelSnelheid * quoteScrollSpeed) % quoteSpacing;
         const aantalQuotes = Math.ceil(W / quoteSpacing) + 3;
         ctx.save();
-        ctx.globalAlpha = quoteAlpha;
+        ctx.globalAlpha = 0.95;
         for (let i = -1; i < aantalQuotes; i++) {
           const qx = i * quoteSpacing - quoteOffset + 40 * SCHAAL;
           if (qx < -400 * SCHAAL || qx > W + 50) continue;
@@ -1774,16 +1775,34 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const muurBot = grondTop - 180 * SCHAAL;
           const muurH = Math.max(60, muurBot - muurTop);
           const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 70 * SCHAAL)));
-          // Quote-tekst: gele spuitverf-graffiti-look
+          // Tekst-meting voor bord-achtergrond
           ctx.font = `italic bold ${Math.max(18, 22 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
-          ctx.textAlign = "left"; ctx.textBaseline = "top";
-          ctx.shadowBlur = 16; ctx.shadowColor = "rgba(255,200,80,0.9)";
-          ctx.fillStyle = "rgba(255,245,200,1)";
-          ctx.fillText(`"${q.tekst}"`, qx, qy);
-          ctx.shadowBlur = 0;
-          ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
-          ctx.fillStyle = "rgba(255,210,120,0.95)";
-          ctx.fillText(q.auteur, qx + 20 * SCHAAL, qy + 28 * SCHAAL);
+          const tekstW = ctx.measureText(`"${q.tekst}"`).width;
+          // Bord/achtergrond zodat tekst altijd leesbaar is in elk biome
+          if (cheerful > 0.5) {
+            // Cheerful: bruin houten bord met lichte rand
+            ctx.fillStyle = "rgba(120,75,40,0.85)";
+            ctx.fillRect(qx - 10 * SCHAAL, qy - 6 * SCHAAL, tekstW + 20 * SCHAAL, 52 * SCHAAL);
+            ctx.strokeStyle = "rgba(70,40,20,0.95)";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(qx - 10 * SCHAAL, qy - 6 * SCHAAL, tekstW + 20 * SCHAAL, 52 * SCHAAL);
+            ctx.fillStyle = "rgba(255,245,210,1)";
+            ctx.textAlign = "left"; ctx.textBaseline = "top";
+            ctx.fillText(`"${q.tekst}"`, qx, qy);
+            ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+            ctx.fillStyle = "rgba(255,230,180,0.95)";
+            ctx.fillText(q.auteur, qx + 18 * SCHAAL, qy + 28 * SCHAAL);
+          } else {
+            // Donker biome: gele spuitverf-graffiti zonder bord
+            ctx.textAlign = "left"; ctx.textBaseline = "top";
+            ctx.shadowBlur = 16; ctx.shadowColor = "rgba(255,200,80,0.9)";
+            ctx.fillStyle = "rgba(255,245,200,1)";
+            ctx.fillText(`"${q.tekst}"`, qx, qy);
+            ctx.shadowBlur = 0;
+            ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+            ctx.fillStyle = "rgba(255,210,120,0.95)";
+            ctx.fillText(q.auteur, qx + 20 * SCHAAL, qy + 28 * SCHAAL);
+          }
         }
         ctx.restore();
       }
