@@ -310,34 +310,19 @@ export default function App() {
 
   // A1 (10-agent circulariteit-review 2026-05-10): 🏠-knop moet ingelogde
   // leerling/leerkracht naar hun PERSOONLIJKE hub sturen, niet naar de
-  // marketing-page. Lens 5: HomePage = landing/marketing, StudentHome = echte hub.
-  // Gast/uitgelogd → wel terug naar home (onboarding).
+  // Mark wens 2026-05-17: ÉÉN home voor iedereen — de marketing-HomePage.
+  // Was eerder role-based (leerling → student-home, leerkracht → teacher-home),
+  // maar Mark heeft maar 1 echte home: "Leerkwartier — Één kwartier per dag".
   const goHome = () => {
-    if (userName && role === "teacher") { setPage("teacher-home"); return; }
-    if (userName && role) { setPage("student-home"); return; }
     setPage("home");
   };
 
-  // Bottom-nav navigatie. "_home" = special: ingelogde gebruikers krijgen hun
-  // eigen dashboard (student-home/teacher-home), anonieme bezoekers de
-  // marketing-HomePage. Voorkomt dat een ingelogde leerling op de verkoop-pagina
-  // belandt als hij op 🏠 klikt.
+  // Bottom-nav navigatie. "_home" = altijd de marketing-HomePage (Mark wens).
   const handleBottomNavNavigate = (target) => {
     // Bottom-tab "Leren" opent altijd de volledige hub — geen vakfilter
     if (target === "learn-paths-hub") { setLearnFilterSubject(null); setPage(target); return; }
-    if (target !== "_home") { setLearnFilterSubject(null); setPage(target); return; }
-    try {
-      const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
-      if (saved.name) {
-        if (saved.name && !userName) setUserName(saved.name);
-        if (saved.level && !userLevel) setUserLevel(saved.level);
-        if (saved.role && !role) setRole(saved.role);
-        setPage(saved.role === "teacher" ? "teacher-home" : "student-home");
-        return;
-      }
-    } catch {}
-    // Geen opgeslagen naam → marketing-HomePage voor onboarding
-    setPage("home");
+    if (target === "_home") { setLearnFilterSubject(null); setPage("home"); return; }
+    setLearnFilterSubject(null); setPage(target);
   };
 
   // S2 sprint-5 (audit-3): teacher-route-guard. Bij flag-aan + non-teacher
