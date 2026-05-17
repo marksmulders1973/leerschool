@@ -897,7 +897,7 @@ const steps = [
         q: "Een **boek** kost €15, in de zomer **5% goedkoper**. Wat is de **korting**?",
         options: ["€0,75", "€5", "€10", "€1"],
         answer: 0,
-        wrongHints: [null, "Dat is alleen het %.", "Te veel — dat is zonder %.", "Bijna goed — 5% van €15 = €0,75."],
+        wrongHints: [null, "Dat is alleen het %, niet het bedrag in euro.", "Te veel — dat is bijna het hele boek.", "Bijna — reken nog eens 5% × €15 uit."],
       },
       {
         q: "Wat is **80% van 50**?",
@@ -1868,7 +1868,7 @@ const steps = [
         q: "**Bordje** met **€12,50** + **fooi 10%**. Hoeveel **fooi**?",
         options: ["€1,25", "€1,50", "€2,50", "€12,50"],
         answer: 0,
-        wrongHints: [null, "Niet — 10% van €12,50 is €1,25.", "Te veel.", "Heel bedrag, geen fooi."],
+        wrongHints: [null, "Bijna — reken nog eens 10% × €12,50 uit.", "Te veel — 20% i.p.v. 10%?", "Dat is het hele bedrag, niet alleen de fooi."],
         uitlegPad: {
           stappen: [
             { titel: "10% = / 10", tekst: "Schuif komma 1 plek naar links: €12,50 → €1,25." },
