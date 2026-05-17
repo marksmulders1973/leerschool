@@ -743,7 +743,7 @@ const steps = [
         q: "Welk type grafiek voor **verandering door tijd** (bv. temperatuur over week)?",
         options: ["Lijngrafiek", "Staafdiagram", "Cirkeldiagram", "Geen"],
         answer: 0,
-        wrongHints: [null, "Staaf = vergelijken groepen.", "Cirkel = verdeling.", "Wel — lijngrafiek."],
+        wrongHints: [null, "Staaf = vergelijken groepen.", "Cirkel = verdeling van 1 geheel.", "Er IS wel een passend grafiek-type — denk aan een doorlopende lijn over tijd."],
         uitlegPad: {
           stappen: [
             { titel: "Grafiek-type kiezen", tekst: "Voor verandering over tijd → lijngrafiek (punten verbonden, trend zichtbaar)." },
@@ -1393,7 +1393,7 @@ const steps = [
         q: "Een **inhoudsopgave** staat ___ in een boek?",
         options: ["Voorin", "Achterin", "In het midden", "Op elke pagina"],
         answer: 0,
-        wrongHints: [null, "Dat is de index.", "Niet — voorin.", "Niet — alleen 1 keer."],
+        wrongHints: [null, "Dat is de index (lijst van onderwerpen alfabetisch).", "Denk: vóór je begint met lezen wil je weten wat er komt.", "Inhoudsopgave komt 1 keer voor in een boek."],
       },
     ],
   },
@@ -1618,7 +1618,7 @@ const steps = [
         q: "Bij **'als-dan'-schema**: 'als regen, dan paraplu'. Wat is de **conclusie**?",
         options: ["Paraplu", "Regen", "Beide", "Niets"],
         answer: 0,
-        wrongHints: [null, "Dat is de voorwaarde, niet de conclusie.", "Niet — alleen één.", "Wel — de paraplu."],
+        wrongHints: [null, "Dat is de voorwaarde (het 'als'-deel), niet de conclusie.", "Een 'als-dan'-schema heeft één duidelijke conclusie, geen twee.", "Een 'als-dan'-schema heeft wél een conclusie — kijk welke kant van 'dan' staat."],
       },
       {
         q: "**Schema 'voor → na'** laat zien wat **veranderd** is. Goed voor?",
@@ -1630,7 +1630,7 @@ const steps = [
         q: "**Mindmap**: centraal woord met **takken**. Wat doe je ermee?",
         options: ["Ideeën rond een thema verzamelen", "Eten klaarmaken", "Foto's tonen", "Geld tellen"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Mindmap = papier met pen, geen keuken-tool.", "Mindmap heeft tekst + takken, geen plaatjes.", "Mindmap = denken, niet rekenen."],
       },
       {
         q: "**Schema voedselketen**: gras → konijn → vos. Wat **eet** de vos?",
@@ -1662,13 +1662,13 @@ const steps = [
         q: "**Schema 'oorzaak → gevolg'**: brand → schade. Wat is **oorzaak**?",
         options: ["Brand", "Schade", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Dat is gevolg.", "Niet — één is oorzaak.", "Wel — brand."],
+        wrongHints: [null, "Dat is wat ER VAN KOMT (= gevolg), niet wat eerst gebeurde.", "Een 'oorzaak → gevolg'-schema heeft één van elk.", "Er is wél één duidelijke oorzaak — wat gebeurt ER EERST?"],
       },
       {
         q: "Een **boomstructuur** lijkt op een echte boom: 1 top + meerdere **takken**. Andere naam?",
         options: ["Boomdiagram", "Cirkeldiagram", "Lijngrafiek", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Andere vorm.", "Andere vorm.", "Andere vorm."],
+        wrongHints: [null, "Cirkel = verdeling van 1 geheel, niet vertakkend.", "Lijn = doorlopend signaal, geen vertakking.", "Tabel = rijen + kolommen, geen vertakking."],
       },
       {
         q: "Bij **'eerst → daarna → vervolgens'** spreek je over ___?",
