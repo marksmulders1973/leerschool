@@ -3924,6 +3924,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // 4. Zeewier vanaf de bodem — lange wuivende strengen, geeft
       //    dynamiek + onderwater-thema (vervangt kettingen). Vaste posities
       //    voor stabiliteit, hoogtes en kleuren wisselend.
+      // Mark fix 2026-05-17: SKIP tijdens boss-arena.
+      if (bossActief && bossArenaFade > 0.4) {
+        // skip zeewier — boss heeft zwarte arena
+      } else {
       const zeewierGroepen = [
         { x: W * 0.08, h: 95, kleur: "#1a8a3a" },
         { x: W * 0.22, h: 70, kleur: "#229a44" },
@@ -3963,6 +3967,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.ellipse(baseXz + sway, baseYz - len, 4 * SCHAAL, 8 * SCHAAL, 0, 0, Math.PI * 2);
         ctx.fill();
       }
+      } // einde else (skip zeewier bij boss)
 
       // 5. Bubbels stijgen op vanaf de bodem — extra leven in het water
       if (frameTeller % 8 === 0 && bubbels.length < 30) {
@@ -7339,10 +7344,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // in gewone staat'. Buiten dungeon overslaan zodat speler niet boven
       // obstakels komt te staan in normale gameplay.
       if (dungeonMode || dungeonFadeOut > 0) tekenSpeler();
-      // Vissen + haaien + schatkisten NA de overlay zodat ze niet grijs getint worden
-      for (const v of vissen) tekenVis(v);
-      for (const h of haaien) tekenHaai(h);
-      for (const s of schatkisten) tekenSchatkist(s);
+      // Vissen + haaien + schatkisten NA de overlay zodat ze niet grijs getint worden.
+      // Mark fix 2026-05-17: SKIP tijdens boss-arena — anders zie je water/vis
+      // door de zwarte overlay heen (mismatch met boss-zwarte arena).
+      const skipWaterTijdensBoss = bossActief && bossArenaFade > 0.4;
+      if (!skipWaterTijdensBoss) {
+        for (const v of vissen) tekenVis(v);
+        for (const h of haaien) tekenHaai(h);
+        for (const s of schatkisten) tekenSchatkist(s);
+      }
       // Periscoop + bonus-fase boven alles (incl. dungeon-overlay)
       tekenPeriscoop();
       tekenBonusFase();
