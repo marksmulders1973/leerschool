@@ -7942,6 +7942,86 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         </div>
 
         {fase === "menu" && (
+          <div style={{ textAlign: "center", padding: isPortrait ? "40px 16px" : "20px 16px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: isPortrait ? "70vh" : "auto" }}>
+            {/* Mark wens 2026-05-17: drastisch versimpeld menu — alleen
+                titel + jouw record + top 5 ranking + START. Alle uitleg,
+                wereld-keuzes, custom-editor, admin-paneel, instellingen
+                weg uit UI (functies bestaan nog in code, niet bereikbaar
+                via menu — voor latere terug-zetting indien gewenst). */}
+            <div style={{ fontSize: isPortrait ? 56 : 42, marginBottom: 12 }}>👽🛸👽</div>
+            <h2 style={{
+              fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: isPortrait ? 38 : 30, letterSpacing: 4, margin: "0 0 18px 0",
+              color: "#ff8050",
+              textShadow: "0 0 18px rgba(255,128,80,0.55), 0 2px 4px rgba(0,0,0,0.6)",
+            }}>OBLITERATOR</h2>
+
+            {persoonlijkRecord > 0 && (
+              <div style={{ marginBottom: 18, color: "#ffcc40", fontFamily: "'Fredoka', sans-serif" }}>
+                <div style={{ fontSize: 12, opacity: 0.7, letterSpacing: 1.5, textTransform: "uppercase" }}>Jouw record</div>
+                <div style={{ fontSize: 32, fontWeight: 800, textShadow: "0 0 14px rgba(255,204,64,0.5)" }}>{persoonlijkRecord}</div>
+              </div>
+            )}
+
+            {highscores && highscores.length > 0 && (
+              <div style={{
+                width: "100%", maxWidth: 320, marginBottom: 22,
+                padding: "12px 14px", borderRadius: 12,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.12)",
+              }}>
+                <div style={{ color: "#ffcc40", fontSize: 12, fontWeight: 700, letterSpacing: 1.5, marginBottom: 8, textAlign: "center", textTransform: "uppercase" }}>
+                  🏆 Top {Math.min(5, highscores.length)}
+                </div>
+                <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                  {highscores.slice(0, 5).map((s, i) => {
+                    const medals = ["🥇","🥈","🥉"];
+                    const isMe = (userName || "").trim().toLowerCase() === (s.naam || "").trim().toLowerCase();
+                    return (
+                      <li key={i} style={{
+                        display: "flex", justifyContent: "space-between", alignItems: "center",
+                        padding: "6px 8px", marginBottom: 2, borderRadius: 6,
+                        background: isMe ? "rgba(255,204,64,0.15)" : "transparent",
+                        fontSize: 14,
+                      }}>
+                        <span style={{ fontWeight: 700 }}>
+                          {medals[i] || `${i + 1}.`} {s.naam || "Speler"}
+                          {isMe && <span style={{ marginLeft: 6, fontSize: 10, opacity: 0.7 }}>(jij)</span>}
+                        </span>
+                        <span style={{ fontWeight: 800, color: "#ffcc40" }}>{s.score}</span>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+            )}
+
+            <button onClick={() => {
+              track("obliterator_started", {
+                source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
+                personal_record: persoonlijkRecord || 0,
+                bonus_leven: bonusLeven || 0,
+                start_level: gekozenStartLevel,
+              });
+              setFase("spelen");
+            }} style={{
+              width: "100%", maxWidth: 320,
+              padding: isPortrait ? "16px 32px" : "12px 28px",
+              background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
+              border: "none", borderRadius: 14, color: "#1a0008",
+              fontFamily: "Impact, 'Arial Black', sans-serif",
+              fontSize: isPortrait ? 26 : 22, letterSpacing: 4,
+              fontWeight: 700, cursor: "pointer",
+              boxShadow: "0 0 22px rgba(255,100,60,0.6)",
+            }}>
+              🔥 START
+            </button>
+          </div>
+        )}
+
+        {/* Oude menu-content — uitgeschakeld 2026-05-17 (Mark wens). Code blijft
+            staan voor terug-zetting; conditie 'false' voorkomt render. */}
+        {false && fase === "menu" && (
           <div style={{ textAlign: "center", padding: isPortrait ? "30px 12px" : "8px 12px" }}>
             <div style={{ fontSize: isPortrait ? 56 : 32, marginBottom: isPortrait ? 8 : 2 }}>👽🛸👽</div>
             <p style={{ color: "#ffcc40", fontFamily: "'Fredoka', sans-serif", fontSize: isPortrait ? 18 : 15, fontWeight: 700, marginBottom: isPortrait ? 6 : 2 }}>Spring over de stekels!</p>
