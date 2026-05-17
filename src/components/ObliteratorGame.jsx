@@ -15,6 +15,23 @@ import {
   SKIN_BY_ID,
   PRESET_LEVELS,
 } from "../games/obliterator/constants.js";
+
+// Wijze quotes als wand-graffiti (Mark verzoek 2026-05-17 — Leerkwartier-leer-
+// imago naast Vivaldi). Gemixt internationaal + NL voor groep 6-8 herkenbaar.
+// Volgorde = rotatie-volgorde tijdens spelen.
+const WIJZE_QUOTES = [
+  { tekst: "One small step for man, one giant leap for mankind", auteur: "— Neil Armstrong, 1969" },
+  { tekst: "I have a dream", auteur: "— Martin Luther King, 1963" },
+  { tekst: "It always seems impossible until it's done", auteur: "— Nelson Mandela" },
+  { tekst: "Wees de verandering die je in de wereld wilt zien", auteur: "— Mahatma Gandhi" },
+  { tekst: "Ik denk, dus ik ben", auteur: "— René Descartes, 1637" },
+  { tekst: "Veni, vidi, vici", auteur: "— Julius Caesar, 47 v.Chr." },
+  { tekst: "E = mc²", auteur: "— Albert Einstein, 1905" },
+  { tekst: "Het schip is veilig in de haven, maar daar is het niet voor gebouwd", auteur: "— Albert Einstein" },
+  { tekst: "Ondanks alles geloof ik nog steeds dat mensen in wezen goed zijn", auteur: "— Anne Frank, 1944" },
+  { tekst: "Dat heb ik nog nooit gedaan, dus ik denk dat ik het wel kan", auteur: "— Pippi Langkous" },
+];
+
 import {
   leesInt,
   schrijfInt,
@@ -1532,6 +1549,45 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         }
       }
       ctx.restore();
+
+      // Wijze-quotes als wand-graffiti (Mark verzoek 2026-05-17 — Leerkwartier-
+      // leerzaam imago naast Vivaldi). 10 inspiratie-citaten die periodiek op
+      // de wand verschijnen, scrollen mee met de wand-textuur. Alleen in
+      // donker-biome (cheerful = open lucht = geen muur).
+      if (cheerful < 0.7) {
+        const quoteAlpha = 0.62 * (1 - cheerful);
+        const quoteSpacing = 850 * SCHAAL; // 1 quote elke ~850px wand
+        // Scroll-offset = zelfde snelheid als bakstenen → graffiti staat 'op' muur
+        const quoteOffset = (frameTeller * spelSnelheid * 0.15) % quoteSpacing;
+        const aantalQuotes = Math.ceil(W / quoteSpacing) + 2;
+        ctx.save();
+        ctx.globalAlpha = quoteAlpha;
+        for (let i = -1; i < aantalQuotes; i++) {
+          const qx = i * quoteSpacing - quoteOffset + 60 * SCHAAL;
+          if (qx < -300 * SCHAAL || qx > W + 100) continue;
+          // Pak deterministisch een quote uit de bank op basis van wereld-positie
+          // (wereldX = quoteSpacing-index sinds spel start)
+          const wereldQuoteIdx = Math.floor((frameTeller * spelSnelheid * 0.15) / quoteSpacing) + i;
+          const q = WIJZE_QUOTES[((wereldQuoteIdx % WIJZE_QUOTES.length) + WIJZE_QUOTES.length) % WIJZE_QUOTES.length];
+          // Y-positie: deterministisch verdeeld over wand-hoogte (niet onder de spelerlijn)
+          const muurTop = PLAFOND_HOOGTE + 40 * SCHAAL;
+          const muurBot = grondTop - 80 * SCHAAL;
+          const muurH = Math.max(60, muurBot - muurTop);
+          const qy = muurTop + ((wereldQuoteIdx * 137) % Math.max(1, Math.floor(muurH - 50 * SCHAAL)));
+          // Graffiti-style: spuitverf-look. Schaduw + bold sans-serif.
+          ctx.font = `italic ${Math.max(11, 14 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
+          ctx.textAlign = "left"; ctx.textBaseline = "top";
+          ctx.shadowBlur = 8; ctx.shadowColor = "rgba(255,200,80,0.55)";
+          ctx.fillStyle = "rgba(255,240,180,0.95)";
+          ctx.fillText(`"${q.tekst}"`, qx, qy);
+          ctx.shadowBlur = 0;
+          ctx.font = `${Math.max(9, 11 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+          ctx.fillStyle = "rgba(255,200,100,0.75)";
+          ctx.fillText(q.auteur, qx + 12 * SCHAAL, qy + 18 * SCHAAL);
+        }
+        ctx.restore();
+      }
+
       // Parallax-wolken in cheerful biomes (Mario/Flappy Bird-vibe).
       // Volgt cheerfulMix zodat ze smooth in/uit-faden bij biome-overgang.
       if (cheerful > 0.05) {
