@@ -629,9 +629,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
+    // Low-FX modus voor zwakke devices (Mark verzoek 2026-05-17 — Xbox One
+    // Edge is traag). Detectie via userAgent: Xbox + oudere consoles.
+    // Override: ?lowfx=1 in URL forceert aan, ?lowfx=0 forceert uit.
+    const ua = (navigator.userAgent || "").toLowerCase();
+    const urlForce = new URLSearchParams(window.location.search).get("lowfx");
+    const LOW_FX = urlForce === "1" ? true
+                 : urlForce === "0" ? false
+                 : /xbox|playstation|smart-tv|smarttv|nintendo/.test(ua);
+    if (LOW_FX) {
+      // Disable alle shadowBlur-aanroepen via property-override op de context.
+      // Effect: bij Xbox vervalt de glow/shadow-render (grootste FPS-killer
+      // op zwakke GPU), maar alle bestaande ctx.shadowBlur = X regels blijven
+      // werken (no-op). Geen game-logica refactor nodig.
+      try {
+        Object.defineProperty(ctx, "shadowBlur", { get: () => 0, set: () => {}, configurable: true });
+      } catch { /* sommige browsers staan property-override op canvas-ctx niet toe */ }
+    }
+
     // High-DPI rendering: scherp canvas op moderne telefoons (iPhone, Galaxy, Pixel — DPR 2-3).
     // Cap op 2 zodat 3x-DPR devices niet 9x meer pixels hoeven te renderen.
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    // Low-FX: cap op 1 (geen retina-rendering) zodat zwakke GPU's geen 4× pixels hoeven te tekenen.
+    const dpr = LOW_FX ? 1 : Math.min(window.devicePixelRatio || 1, 2);
     const cssW = canvas.width;
     const cssH = canvas.height;
     if (dpr > 1) {
@@ -7311,8 +7330,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
       }
     }
-    // Frame-cap op 60 FPS zodat de game niet 2× zo snel draait op 120Hz/144Hz schermen (Galaxy S23 etc).
-    const TARGET_FRAME_MS = 1000 / 60;
+    // Frame-cap op 60 FPS (of 30 FPS bij low-FX devices zoals Xbox One).
+    // Voorkomt dat game 2× zo snel draait op 120Hz/144Hz schermen + spaart
+    // CPU op zwakke hardware.
+    const TARGET_FRAME_MS = LOW_FX ? 1000 / 30 : 1000 / 60;
     let laatsteFrameTijd = 0;
     function lus() {
       const nu = performance.now();
