@@ -1700,29 +1700,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
 
-      // Monumenten-parallax (2026-05-17 Mark verzoek 'verhaal' — 7 wereld-
-      // wonderen + iconen). Roteren door MONUMENTEN-array. Elk monument heeft
-      // unieke silhouet-vorm + naam-label. Parallax 0.2× = staat lang in beeld.
       const cheerfulMixVal = cheerfulMix();
-      if (cheerfulMixVal < 0.7) {
-        const silhouetAlpha = 0.55 * (1 - cheerfulMixVal);
-        ctx.save();
-        ctx.globalAlpha = silhouetAlpha;
-        const silKleur = biomeKleur("bakstenenDonker", 0.92) || "rgba(15,12,25,0.85)";
-        const horizonY = grondTop - 50 * SCHAAL;
-        const monCycle = 380 * SCHAAL; // 1 monument elke 380px scherm
-        const monScrollSpeed = 0.2;
-        const monOff = (frameTeller * spelSnelheid * monScrollSpeed) % monCycle;
-        const aantal = Math.ceil(W / monCycle) + 2;
-        for (let i = -1; i < aantal; i++) {
-          const mx = i * monCycle - monOff;
-          if (mx < -200 * SCHAAL || mx > W + 100) continue;
-          const wereldMonIdx = Math.floor((frameTeller * spelSnelheid * monScrollSpeed) / monCycle) + i;
-          const mon = MONUMENTEN[((wereldMonIdx % MONUMENTEN.length) + MONUMENTEN.length) % MONUMENTEN.length];
-          tekenMonument(ctx, mx + monCycle / 2, horizonY, 100 * SCHAAL, silKleur, mon);
-        }
-        ctx.restore();
-      }
       // Cheerful biomes hebben een open lucht — brick-pattern bijna onzichtbaar.
       // Donker behoudt de oude muur-look. Tijdens biome-fade lerpt dit smooth.
       const cheerful = cheerfulMix();
@@ -1755,39 +1733,60 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       ctx.restore();
 
-      // Wijze-quotes als wand-graffiti — Mark verzoek 2026-05-17.
-      // V2: langzamere parallax (0.05× speed → quote blijft ~25 sec leesbaar
-      // op scherm). Quote spawnt elke ~30 sec (afstand 4500px op langzame
-      // parallax-snelheid). Bigger, prominenter, hoger contrast.
+      // Monumenten-parallax (Mark verzoek 2026-05-17 'verhaal' — 7 wereld-
+      // wonderen + iconen). NA bricks getekend zodat ze niet bedekt worden.
+      // Parallax 0.2× = staat lang in beeld. Unieke silhouet-vorm + naam-label.
+      if (cheerfulMixVal < 0.7) {
+        const silhouetAlpha = 0.85 * (1 - cheerfulMixVal);
+        ctx.save();
+        ctx.globalAlpha = silhouetAlpha;
+        const silKleur = "rgba(20,15,35,0.92)";
+        const horizonY = grondTop - 20 * SCHAAL;
+        const monCycle = 420 * SCHAAL;
+        const monScrollSpeed = 0.2;
+        const monOff = (frameTeller * spelSnelheid * monScrollSpeed) % monCycle;
+        const aantal = Math.ceil(W / monCycle) + 2;
+        for (let i = -1; i < aantal; i++) {
+          const mx = i * monCycle - monOff;
+          if (mx < -250 * SCHAAL || mx > W + 150) continue;
+          const wereldMonIdx = Math.floor((frameTeller * spelSnelheid * monScrollSpeed) / monCycle) + i;
+          const mon = MONUMENTEN[((wereldMonIdx % MONUMENTEN.length) + MONUMENTEN.length) % MONUMENTEN.length];
+          tekenMonument(ctx, mx + monCycle / 2, horizonY, 130 * SCHAAL, silKleur, mon);
+        }
+        ctx.restore();
+      }
+
+      // Wijze-quotes als wand-graffiti (Mark verzoek 2026-05-17 v2: meer in
+      // beeld, ~elke 30 sec eentje). Spacing 600px = bij spelSnelheid 5 ≈ 24
+      // sec tussen quotes. Langzame parallax 0.05× = quote blijft ~12-15 sec
+      // leesbaar voordat hij van scherm scrolt.
       if (cheerful < 0.7) {
-        const quoteAlpha = 0.85 * (1 - cheerful);
-        const quoteSpacing = 4500 * SCHAAL; // 1 quote elke ~4500 wereld-px = ~30 sec
-        const quoteScrollSpeed = 0.05;       // langzaam = goed leesbaar
+        const quoteAlpha = 0.95 * (1 - cheerful);
+        const quoteSpacing = 600 * SCHAAL;
+        const quoteScrollSpeed = 0.05;
         const quoteOffset = (frameTeller * spelSnelheid * quoteScrollSpeed) % quoteSpacing;
-        const aantalQuotes = Math.ceil(W / quoteSpacing) + 2;
+        const aantalQuotes = Math.ceil(W / quoteSpacing) + 3;
         ctx.save();
         ctx.globalAlpha = quoteAlpha;
         for (let i = -1; i < aantalQuotes; i++) {
-          const qx = i * quoteSpacing - quoteOffset + 80 * SCHAAL;
-          if (qx < -500 * SCHAAL || qx > W + 100) continue;
+          const qx = i * quoteSpacing - quoteOffset + 40 * SCHAAL;
+          if (qx < -400 * SCHAAL || qx > W + 50) continue;
           const wereldQuoteIdx = Math.floor((frameTeller * spelSnelheid * quoteScrollSpeed) / quoteSpacing) + i;
           const q = WIJZE_QUOTES[((wereldQuoteIdx % WIJZE_QUOTES.length) + WIJZE_QUOTES.length) % WIJZE_QUOTES.length];
-          // Y-positie: deterministisch maar variabel (niet altijd zelfde hoogte)
-          const muurTop = PLAFOND_HOOGTE + 50 * SCHAAL;
-          const muurBot = grondTop - 100 * SCHAAL;
+          const muurTop = PLAFOND_HOOGTE + 60 * SCHAAL;
+          const muurBot = grondTop - 180 * SCHAAL;
           const muurH = Math.max(60, muurBot - muurTop);
           const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 70 * SCHAAL)));
-          // Quote-tekst: groter + prominenter + gele spuitverf-look
-          ctx.font = `italic bold ${Math.max(16, 20 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
+          // Quote-tekst: gele spuitverf-graffiti-look
+          ctx.font = `italic bold ${Math.max(18, 22 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
           ctx.textAlign = "left"; ctx.textBaseline = "top";
-          ctx.shadowBlur = 14; ctx.shadowColor = "rgba(255,200,80,0.75)";
+          ctx.shadowBlur = 16; ctx.shadowColor = "rgba(255,200,80,0.9)";
           ctx.fillStyle = "rgba(255,245,200,1)";
           ctx.fillText(`"${q.tekst}"`, qx, qy);
           ctx.shadowBlur = 0;
-          // Auteur eronder
-          ctx.font = `${Math.max(12, 14 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
-          ctx.fillStyle = "rgba(255,200,100,0.9)";
-          ctx.fillText(q.auteur, qx + 18 * SCHAAL, qy + 26 * SCHAAL);
+          ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
+          ctx.fillStyle = "rgba(255,210,120,0.95)";
+          ctx.fillText(q.auteur, qx + 20 * SCHAAL, qy + 28 * SCHAAL);
         }
         ctx.restore();
       }
