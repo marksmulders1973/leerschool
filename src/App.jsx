@@ -318,12 +318,14 @@ export default function App() {
     setPage("home");
   };
 
-  // Bottom-nav navigatie. "_oefenen" = special: skipt naam-step voor terugkerende
-  // gebruikers en gaat naar student-home of teacher-home afhankelijk van rol.
+  // Bottom-nav navigatie. "_home" = special: ingelogde gebruikers krijgen hun
+  // eigen dashboard (student-home/teacher-home), anonieme bezoekers de
+  // marketing-HomePage. Voorkomt dat een ingelogde leerling op de verkoop-pagina
+  // belandt als hij op 🏠 klikt.
   const handleBottomNavNavigate = (target) => {
     // Bottom-tab "Leren" opent altijd de volledige hub — geen vakfilter
     if (target === "learn-paths-hub") { setLearnFilterSubject(null); setPage(target); return; }
-    if (target !== "_oefenen") { setLearnFilterSubject(null); setPage(target); return; }
+    if (target !== "_home") { setLearnFilterSubject(null); setPage(target); return; }
     try {
       const saved = JSON.parse(localStorage.getItem("ls_user") || "{}");
       if (saved.name) {
@@ -334,7 +336,7 @@ export default function App() {
         return;
       }
     } catch {}
-    // Geen opgeslagen naam → eerst naar home voor onboarding
+    // Geen opgeslagen naam → marketing-HomePage voor onboarding
     setPage("home");
   };
 

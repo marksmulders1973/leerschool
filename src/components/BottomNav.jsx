@@ -1,36 +1,32 @@
 import { track } from "../utils.js";
-import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
 
 // Bottom-tabs nav (Duolingo-style). Maand 1 snoei (visie-bewaker 2026-05-10):
-// alleen 3 tabs zichtbaar — Home, Leren, Test. Scorebord en OBLITERATOR
-// zijn weggehaald uit de standaard-flow.
+// alleen 3 tabs zichtbaar. UX-fix 2026-05-17: tabs heroverwogen na user-feedback.
+// - "Home" wees naar marketing-pagina ipv eigen dashboard → nu sentinel "_home"
+//   routeert ingelogden naar student-home, anon naar marketing-HomePage.
+// - "Toets"-label opende eigenlijk student-home (verwarrend) → vervangen door
+//   directe Doorstroomtoets-ingang (USP + ICP-focus uit CLAUDE.md).
 //
-// Reden Scorebord (Hall of Fame): Cito-doelgroep is faalangst-gevoelig;
-// vergelijking met klasgenoten = anti-leren. Component+route blijven
-// bestaan (`leaderboard` page rendert nog), maar geen entry-point in nav.
+// Reden Scorebord (Hall of Fame) eerder weggehaald: Cito-doelgroep is
+// faalangst-gevoelig; vergelijking met klasgenoten = anti-leren. Component+route
+// blijven bestaan (`leaderboard` page rendert nog), maar geen entry-point in nav.
 //
-// Reden OBLITERATOR: niet onderdeel van Leerkwartier-product-flow.
+// Reden OBLITERATOR weg: niet onderdeel van Leerkwartier-product-flow.
 // Eigen route `/spel` (obliteratorPlay) blijft werken voor Mark's zoon
 // die er met AI aan bouwt. Geen tab in hoofd-nav.
 
 const ALL_TABS = [
-  { id: "home",    label: "Home",        emoji: "🏠", target: "home" },
-  { id: "leren",   label: "Leren",       emoji: "📚", target: "learn-paths-hub" },
-  { id: "oefenen", label: "Toets",       emoji: "🎯", target: "_oefenen", iconSvg: <QuizCardIcon size={24} accent="#ff8030" /> },
+  { id: "home",            label: "Home",           emoji: "🏠", target: "_home" },
+  { id: "leren",           label: "Leren",          emoji: "📚", target: "learn-paths-hub" },
+  { id: "doorstroomtoets", label: "Doorstroomtoets", target: "cito", iconNode: <DoorstroomtoetsLogo size={24} /> },
 ];
 
 function bepaalActieveTab(page) {
-  if (page === "home") return "home";
+  if (page === "home" || page === "student-home" || page === "teacher-home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
-  if (page === "leaderboard") return "score";
-  if (page === "obliteratorPlay" || page === "obliteratorDirect") return "spel";
-  if ([
-    "student-home", "teacher-home", "self-study",
-    "textbook", "cito", "tafels", "redactiesommen",
-    "spelling", "woordenschat", "begrijpend-lezen",
-    "create-quiz", "quiz-preview", "class-manager", "lobby",
-  ].includes(page)) return "oefenen";
+  if (page === "cito" || page === "cito-leerpad-toets") return "doorstroomtoets";
   return null;
 }
 
@@ -65,12 +61,7 @@ export default function BottomNav({ currentPage, onNavigate, authUser }) {
       >
         {TABS.map((tab) => {
           const isActief = actief === tab.id;
-          const isBrand = !!tab.brand;
-          // Brand-tab krijgt altijd oranje look (matcht OBLITERATOR
-          // start-knop). Andere tabs gebruiken normale design-system kleuren.
-          const tabKleur = isBrand
-            ? "#ff8030"
-            : (isActief ? "var(--color-brand-primary-100)" : "var(--color-text-muted)");
+          const heeftLangLabel = tab.label.length > 8;
           return (
             <button
               key={tab.id}
@@ -83,11 +74,10 @@ export default function BottomNav({ currentPage, onNavigate, authUser }) {
                 padding: "var(--space-2) 2px var(--space-1)",
                 border: "none",
                 background: "transparent",
-                color: tabKleur,
+                color: isActief ? "var(--color-brand-primary-100)" : "var(--color-text-muted)",
                 fontFamily: "var(--font-display)",
-                fontSize: isBrand ? "10px" : "var(--font-size-xs)",
+                fontSize: heeftLangLabel ? "10px" : "var(--font-size-xs)",
                 fontWeight: "var(--font-weight-bold)",
-                letterSpacing: isBrand ? "0.5px" : "normal",
                 cursor: "pointer",
                 display: "flex",
                 flexDirection: "column",
@@ -95,11 +85,10 @@ export default function BottomNav({ currentPage, onNavigate, authUser }) {
                 gap: 2,
                 transition: "color var(--motion-fast) var(--ease-out)",
                 position: "relative",
-                textShadow: isBrand ? "0 0 8px rgba(255, 100, 40, 0.6)" : "none",
                 overflow: "hidden",
               }}
             >
-              {isActief && !isBrand && (
+              {isActief && (
                 <span
                   aria-hidden="true"
                   style={{
@@ -113,45 +102,23 @@ export default function BottomNav({ currentPage, onNavigate, authUser }) {
                   }}
                 />
               )}
-              {isActief && isBrand && (
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    top: 0, left: "20%", right: "20%",
-                    height: 3,
-                    borderRadius: "0 0 3px 3px",
-                    background: "linear-gradient(90deg, #ffcc40, #ff5030)",
-                    boxShadow: "0 0 12px rgba(255, 100, 40, 0.8)",
-                  }}
-                />
-              )}
               <span
                 aria-hidden="true"
                 style={{
                   fontSize: 22,
-                  width: tab.iconSvg ? 24 : "auto",
-                  height: tab.iconSvg ? 24 : "auto",
+                  width: tab.iconNode ? 24 : "auto",
+                  height: tab.iconNode ? 24 : "auto",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  opacity: isActief ? 1 : (isBrand ? 1 : 0.78),
+                  opacity: isActief ? 1 : 0.78,
                   transition: "opacity var(--motion-fast), transform var(--motion-fast) var(--ease-bounce)",
                   transform: isActief ? "scale(1.08)" : "scale(1)",
-                  filter: isBrand ? "drop-shadow(0 0 6px rgba(255, 100, 40, 0.7))" : "none",
                 }}
               >
-                {tab.iconSvg || tab.emoji}
+                {tab.iconNode || tab.emoji}
               </span>
-              <span style={{
-                whiteSpace: "nowrap",
-                ...(isBrand ? {
-                  background: "linear-gradient(180deg, #fff 0%, #ffcc40 50%, #ff5030 100%)",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                } : {}),
-              }}>{tab.label}</span>
+              <span style={{ whiteSpace: "nowrap" }}>{tab.label}</span>
             </button>
           );
         })}
