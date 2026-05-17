@@ -504,7 +504,7 @@ const steps = [
         q: "Taart: voetbal 50%, hockey 25%, zwemmen 15%, anders 10%. **Welke sport is grootst**?",
         options: ["Voetbal", "Hockey", "Zwemmen", "Anders"],
         answer: 0,
-        wrongHints: [null, "Hockey is 25%, voetbal is 50%. Welke is groter?", "Zwemmen is maar 15%.", "Anders is maar 10%."],
+        wrongHints: [null, "Hockey is 25% — er is een grotere sport.", "Zwemmen is maar 15% — niet de grootste.", "Anders is maar 10% — niet de grootste."],
         uitlegPad: {
           stappen: [
             { titel: "Grootst = hoogste percentage", tekst: "Bij een cirkeldiagram is **grootst** = het stuk met het **hoogste percentage**. Visueel = het **grootste taart-stuk**." },
@@ -552,7 +552,7 @@ const steps = [
         q: "Zelfde taart, klas van **20**. Hoeveel kiezen **hockey** (25%)?",
         options: ["5 kinderen", "10 kinderen", "25 kinderen", "4 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is voetbal (50%), niet hockey (25%).", "Te veel — 25 kinderen kan niet in klas van 20.", "Te weinig — 25% van 20 is iets meer dan dat."],
+        wrongHints: [null, "Te veel — dat zou 50% van 20 zijn, niet 25%.", "Onmogelijk — meer kinderen dan de klas groot is.", "Te weinig — 25% van 20 is iets meer dan dat."],
         uitlegPad: {
           stappen: [
             { titel: "25% = een kwart", tekst: "**25%** = ¼ (een vierde / een kwart). Onthoud: 100% ÷ 4 = 25%. Dus 25% van iets = dat iets gedeeld door 4." },
@@ -581,7 +581,7 @@ const steps = [
         q: "**Tellen alle stukken** van een taartdiagram bij elkaar samen op tot ... ?",
         options: ["100%", "50%", "1000%", "Het hangt af van de grafiek"],
         answer: 0,
-        wrongHints: [null, "Te weinig — alle stukken samen vormen de hele taart.", "Te veel — 100% = het maximum, alles wat er is.", "Niet juist — een hele taart is altijd 100%, ongeacht de grafiek."],
+        wrongHints: [null, "Te weinig — alle stukken samen vormen de hele taart.", "Onmogelijk — meer dan een hele taart.", "Niet juist — een hele taart is altijd hetzelfde getal, ongeacht de grafiek."],
         uitlegPad: {
           stappen: [
             { titel: "Een taart is een geheel = 100%", tekst: "Bij een cirkeldiagram is de **hele cirkel** = het **totale aantal** = **100%**. Alle stukken samen vormen die hele cirkel — dus alle % samen = 100%." },
@@ -618,7 +618,7 @@ const steps = [
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30 ijsjes. **Op welke dag minst** verkocht?",
         options: ["Dinsdag", "Maandag", "Woensdag", "Vrijdag"],
         answer: 0,
-        wrongHints: [null, "Maandag is 12 — dinsdag is lager.", "Woensdag is 18 — hoger dan dinsdag.", "Vrijdag is 30 — de meest, niet minst."],
+        wrongHints: [null, "Maandag 12 — er is een dag met een nog lager getal.", "Woensdag 18 — hoger dan een andere dag in de week.", "Vrijdag 30 — dat is juist het MEEST."],
         uitlegPad: {
           stappen: [
             { titel: "'Minst' = laagste getal", tekst: "Bij een **tabel** zoek je het **laagste getal** als de vraag 'minst' / 'minste' / 'laagste' bevat." },
@@ -790,7 +790,7 @@ const steps = [
         q: "Staafdiagram huisdieren: hond 12, kat 18, vogel 4, vis 6. **Welk dier komt het minst voor**?",
         options: ["Vogel", "Hond", "Kat", "Vis"],
         answer: 0,
-        wrongHints: [null, "Hond is 12 — kijk wie de minste heeft.", "Kat is 18 — dat is de meeste, niet de minste.", "Vis is 6 — vogel is met 4 nog minder."],
+        wrongHints: [null, "Hond is 12 — niet de minste.", "Kat is 18 — dat is juist de MEESTE.", "Vis is 6 — er is nog een dier dat minder voorkomt."],
         uitlegPad: {
           stappen: [
             { titel: "'Minst' = laagste balk", tekst: "**'Komt het minst voor'** = het dier met het **kleinste aantal** = de **laagste balk** in de staaf-diagram." },
