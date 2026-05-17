@@ -1457,10 +1457,52 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const bg = ctx.createLinearGradient(0, 0, 0, H);
       bg.addColorStop(0, biomeKleur("bgTop")); bg.addColorStop(1, biomeKleur("bgBot"));
       ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
+
+      // Kasteel-silhouet parallax-laag (2026-05-17 Geometry-Dash-stijl): verre
+      // donkere kasteel-torens op de horizon, scrollt op 0.35× snelheid. Alleen
+      // in donker-biome zichtbaar (cheerful = open lucht met wolken al genoeg).
+      const cheerfulMixVal = cheerfulMix();
+      if (cheerfulMixVal < 0.7) {
+        const silhouetAlpha = 0.45 * (1 - cheerfulMixVal);
+        ctx.save();
+        ctx.globalAlpha = silhouetAlpha;
+        // Donkere kasteel-tint die past bij het bgBot
+        ctx.fillStyle = biomeKleur("bakstenenDonker", 0.9) || "rgba(15,12,25,0.85)";
+        const horizonY = grondTop - 70 * SCHAAL;
+        const torenW = 38 * SCHAAL;
+        const towerCycle = 96 * SCHAAL;
+        const towerOff = (frameTeller * spelSnelheid * 0.35) % towerCycle;
+        // Tower-hoogtes uit deterministische sequence — zelfde patroon per loop
+        const hoogtes = [55, 38, 72, 45, 62, 33, 80, 50, 68, 40, 58, 75];
+        const aantal = Math.ceil(W / towerCycle) + 2;
+        for (let i = 0; i < aantal; i++) {
+          const tx = i * towerCycle - towerOff;
+          const h = hoogtes[i % hoogtes.length] * SCHAAL;
+          // Hoofdtoren
+          ctx.fillRect(tx, horizonY - h, torenW, h + 70 * SCHAAL);
+          // Spitse top — driehoek
+          ctx.beginPath();
+          ctx.moveTo(tx - 3, horizonY - h);
+          ctx.lineTo(tx + torenW / 2, horizonY - h - 14 * SCHAAL);
+          ctx.lineTo(tx + torenW + 3, horizonY - h);
+          ctx.closePath(); ctx.fill();
+          // Klein raam (gele dot — fakkel-licht binnen)
+          if (i % 2 === 0) {
+            ctx.fillStyle = "rgba(255,180,80,0.6)";
+            ctx.fillRect(tx + torenW * 0.4, horizonY - h * 0.6, 3 * SCHAAL, 4 * SCHAAL);
+            ctx.fillStyle = biomeKleur("bakstenenDonker", 0.9) || "rgba(15,12,25,0.85)";
+          }
+        }
+        ctx.restore();
+      }
       // Cheerful biomes hebben een open lucht — brick-pattern bijna onzichtbaar.
       // Donker behoudt de oude muur-look. Tijdens biome-fade lerpt dit smooth.
       const cheerful = cheerfulMix();
-      const brickOpacity = 0.55 * (1 - cheerful) + 0.05 * cheerful;
+      // Beat-pulse 2026-05-17: subtiele 'ademende' wand op ~120 BPM-tempo
+      // (Geometry-Dash-stijl) — sin-wave op frameTeller. Alleen in donker-biome
+      // omdat cheerful (open lucht) geen muur heeft die kan pulseren.
+      const beatPulse = 1 + 0.18 * Math.sin(frameTeller * 0.045) * (1 - cheerful);
+      const brickOpacity = (0.55 * (1 - cheerful) + 0.05 * cheerful) * beatPulse;
       const offset = (frameTeller * spelSnelheid * 0.15) % BAKSTEEN_W;
       ctx.save();
       ctx.globalAlpha = brickOpacity;
@@ -2163,8 +2205,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.restore();
         return;
       }
-      // stone (default)
-      ctx.shadowBlur = 12; ctx.shadowColor = "rgba(255,255,255,0.4)";
+      // stone (default — donker-biome). 2026-05-17 Geometry-Dash-stijl:
+      // warmgloeiende rand (rood/oranje) als gevaar-signaal, pulst lichtjes
+      // op tempo zodat speler ze opvalt.
+      const dangerPulse = 0.7 + 0.3 * Math.abs(Math.sin(frameTeller * 0.06));
+      ctx.shadowBlur = 18 * dangerPulse;
+      ctx.shadowColor = `rgba(255, 110, 50, ${0.55 * dangerPulse})`;
       const grad = ctx.createLinearGradient(x, y, x, y + h);
       grad.addColorStop(0, "#f0f0f5"); grad.addColorStop(0.6, "#a8a8b0"); grad.addColorStop(1, "#5a5a65");
       ctx.fillStyle = grad;
