@@ -29,7 +29,7 @@ const steps = [
         q: "**'tropisch'** of **'tropies'**?",
         options: ["tropisch","tropies","tropich","tropiesch"],
         answer: 0,
-        wrongHints: [null,"Truc: hoor je 'iese' achter 'tropisch-e'? Dan -isch.","-ch komt na de 's', dus -isch (volgorde s-c-h).","Eén 'sch' is genoeg."],
+        wrongHints: [null,"Truc: hoor je 'iese' achter het woord? Dan eindigt het op -isch.","-ch komt achter -s, niet voor.","Eén 'sch' achterin is genoeg — niet twee."],
         uitlegPad: {
           stappen: [
             { titel: "-isch herkennen", tekst: "'Iese'-klank op het eind = -isch (sch)." },
@@ -71,7 +71,7 @@ const steps = [
         q: "Welke is **fout** geschreven?",
         options: ["fantasties","fantastisch","logisch","komisch"],
         answer: 0,
-        wrongHints: [null,"Goed gespeld.","Goed gespeld.","Goed gespeld."],
+        wrongHints: [null,"Fantastisch is correct gespeld (-isch eindigt).","Logisch volgt dezelfde -isch-regel.","Komisch volgt dezelfde -isch-regel."],
         uitlegPad: {
           stappen: [
             { titel: "Welke is FOUT?", tekst: "'Fantasties' eindigt op -ies. Moet -isch zijn: fantastisch." },
@@ -205,7 +205,7 @@ const steps = [
         q: "Welke is **fout** geschreven?",
         options: ["voetbal schoen","voetbalschoen","tandarts","zonnebril"],
         answer: 0,
-        wrongHints: [null,"Goed (samenstelling).","Goed (samenstelling).","Goed (samenstelling)."],
+        wrongHints: [null,"Aan elkaar geschreven — correcte samenstelling.","Tandarts is correct samengesteld.","Zonnebril is correct samengesteld."],
         uitlegPad: {
           stappen: [
             { titel: "FOUT-vraag", tekst: "Zoek welke FOUT is. 'Voetbal schoen' staat los — moet aaneen: voetbalschoen." },
@@ -332,7 +332,7 @@ const steps = [
         q: "Welke is **fout**?",
         options: ["mijn naam is sara","Mijn naam is Sara.","Sara is jarig.","Wij gaan naar België."],
         answer: 0,
-        wrongHints: [null,"Goed.","Goed.","Goed."],
+        wrongHints: [null,"Hoofdletter aan begin + naam: correct.","Sara begint met hoofdletter (naam): correct.","Wij + landnaam met hoofdletters: correct."],
         uitlegPad: {
           stappen: [
             { titel: "Welke is FOUT?", tekst: "'mijn naam is sara' mist 2 hoofdletters: Mijn (begin) + Sara (naam). + punt aan einde." },
@@ -399,7 +399,7 @@ const steps = [
         q: "Welke is **fout** geschreven?",
         options: ["voetbal schoen","tandarts","boekenkast","zonnebril"],
         answer: 0,
-        wrongHints: [null,"Goed.","Goed.","Goed."],
+        wrongHints: [null,"Tandarts is aan elkaar geschreven: correct.","Boekenkast met tussen-en: correct.","Zonnebril met tussen-e: correct."],
         uitlegPad: {
           stappen: [
             { titel: "Welke is fout?", tekst: "'Voetbal schoen' staat los met spatie. Samenstellingen aaneen: voetbalschoen." },

@@ -222,7 +222,7 @@ const steps = [
         q: "Welk woord is GEEN synoniem van 'rennen'?",
         options: ["Wandelen", "Sprinten", "Hollen", "Snel lopen"],
         answer: 0,
-        wrongHints: [null, "Wel synoniem.", "Wel synoniem.", "Wel synoniem."],
+        wrongHints: [null, "Sprinten = heel snel rennen — wel synoniem.", "Hollen = oud-NL voor rennen — wel synoniem.", "Snel lopen ≈ rennen — wel synoniem."],
         uitlegPad: {
           stappen: [
             { titel: "Let op de vraag — GEEN!", tekst: "Bij Cito staat soms het woord **GEEN** (vaak met hoofdletters) in de vraag. Dat draait de vraag om: je zoekt niet het woord dat hetzelfde betekent, maar het woord dat **anders** betekent." },
@@ -291,7 +291,7 @@ const steps = [
         q: "Welk paar zijn **tegenstellingen**?",
         options: ["jong + oud", "klein + minuscuul", "blij + vrolijk", "snel + vlug"],
         answer: 0,
-        wrongHints: [null, "Synoniemen.", "Synoniemen.", "Synoniemen."],
+        wrongHints: [null, "Klein/minuscuul = bijna hetzelfde — synoniemen.", "Blij/vrolijk = bijna hetzelfde — synoniemen.", "Snel/vlug = bijna hetzelfde — synoniemen."],
       },
     ],
   },
@@ -312,7 +312,7 @@ const steps = [
         q: "Welk woord past? *'Het ___ ijsje smolt in de zon.'*",
         options: ["koude", "boze", "snelle", "blauwe"],
         answer: 0,
-        wrongHints: [null, "Geen gevoel.", "Snelheid past niet bij ijsje smelten.", "Kleur kan, maar 'koude' is logischer."],
+        wrongHints: [null, "Ijsjes hebben geen gemoedstoestand.", "Snelheid past niet bij ijsje smelten.", "Kleur kan, maar denk: WAAROM smelt het in de zon?"],
       },
       {
         q: "Welk woord past? *'Lisa was ___ omdat haar huisdier weg was.'*",
@@ -324,7 +324,7 @@ const steps = [
         q: "Welk woord past het **best**? *'De ___ man stak de straat over.'*",
         options: ["oude", "snelle", "kleine", "blauwe"],
         answer: 0,
-        wrongHints: [null, "Kan, maar 'oude' is gangbaarder.", "Kan, maar 'oude' is gangbaarder.", "Mensen krijgen niet vaak kleur-adjectief."],
+        wrongHints: [null, "Kan, maar denk: oversteken is een rustige actie — welke leeftijd past?", "Kan, maar 'oversteken' suggereert geen klein kind.", "Mensen krijgen niet vaak een kleur-adjectief in het Nederlands."],
         uitlegPad: {
           stappen: [
             { titel: "Welke woorden zijn 'normaal' bij 'man'?", tekst: "Bij een persoon zoals 'man' zijn sommige bijvoeglijke naamwoorden veel gangbaarder dan andere. Denk aan: **oude/jonge man**, **lange/kleine man**, **dikke/dunne man**. **Snelle man** of **blauwe man** zijn raar." },
@@ -385,7 +385,7 @@ const steps = [
         q: "Tegenstelling van **'beginnen'**?",
         options: ["Stoppen", "Doorgaan", "Starten", "Aanvang"],
         answer: 0,
-        wrongHints: [null, "Doorgaan is voortzetten, niet stoppen.", "Synoniem van beginnen.", "Synoniem van beginnen."],
+        wrongHints: [null, "Doorgaan is voortzetten, geen tegenstelling.", "Starten = synoniem van beginnen.", "Aanvang = synoniem van beginnen (zelfstandig naamwoord)."],
       },
       {
         q: "Welk woord past het beste? *'Anna voelde zich ___ na haar uitstekend cijfer.'*",
