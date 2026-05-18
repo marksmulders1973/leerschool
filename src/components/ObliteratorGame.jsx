@@ -4910,11 +4910,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (loopActief) {
         loopProgress += 1 / LOOP_DUUR;
         if (loopProgress >= 1) {
+          // BUG-FIX 2 (2026-05-18, 15-agent-audit): exit-X = mathematisch
+          // gelijk aan loop-bodem (entry-positie), niet meer naar basisX
+          // teleporten. Voorheen: speler.x=basisX terwijl entry op cx zat
+          // = referentie-frame-mismatch → speler clipt door zijwand bij
+          // exit. Drift-terug naar basisX gebeurt smooth in volgende frames
+          // via bestaande drift-correctie elders.
+          const exitCx = loopRef.x + loopRef.breedte / 2;
           loopActief = false;
           loopRef = null;
-          // BEHOUD x-positie (niet teleport naar basisX) — wereld kan dan
-          // smooth doorscrollen i.p.v. visuele snap.
-          speler.x = speler.basisX;
+          speler.x = exitCx - speler.breedte / 2;
           speler.snelheidX = 0;
           speler.y = GROND_Y;
           // SUPER-JUMP (was *1.0, nu *1.7 zoals schans) + horizontaal-boost
@@ -4971,7 +4976,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               { spread: 1, opwaarts: 0, leven: 14, grootte: 3, glow: 10 }
             );
           }
-          return; // skip alles — wereld bevroren
+          // BUG-FIX 1 (2026-05-18, 15-agent-audit): ringen IN de loop worden
+          // nu opgepakt. Vroeger skipte 'return' de hele pickup-loop verderop
+          // → 5 gespawnde rings op de loop-baan bleven liggen. Inline pickup
+          // alleen tegen rings die binnen loopRef-cirkel liggen.
+          if (loopRef) {
+            const spCx = speler.x + speler.breedte / 2;
+            const spCy = speler.y + speler.hoogte / 2;
+            for (let i = ringen.length - 1; i >= 0; i--) {
+              const r = ringen[i];
+              if (r.opgepakt) continue;
+              const dx = spCx - (r.x + 11 * SCHAAL);
+              const dy = spCy - (r.y + 11 * SCHAAL);
+              const drempel = (r.grootte || 22 * SCHAAL) + speler.breedte / 2;
+              if (dx * dx + dy * dy < drempel * drempel) {
+                r.opgepakt = true;
+                score += Math.max(1, Math.round(2 * (1 + (huidigLevel - 1) * 0.15))) * SCORE_MUL;
+                scoreElText = score;
+                spawnParticles(r.x + 11 * SCHAAL, r.y + 11 * SCHAAL, 12, "#ffd700",
+                  { spread: 6, opwaarts: 1.5, leven: 24, grootte: 4, glow: 16 });
+                piep(880 + Math.random() * 200, 0.05, "sine", 0.10);
+              }
+            }
+          }
+          return; // skip overige game-update — wereld bevroren
         }
       }
 
@@ -5781,10 +5809,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const benaderingOk = isLoop
             ? voet > sc.y + sc.hoogte / 2
             : voet > sc.y;
+          // BUG-FIX 3 (2026-05-18, 15-agent-audit): X-tolerantie bij loop-trigger.
+          // Voorheen activeerde overlap zodra speler binnen sc.x..sc.x+breedte zat
+          // → entry-hoek (cx) ver verwijderd van speler-positie = visuele teleport.
+          // Nu alleen activeren als speler-midden binnen 1/3 van loop-midden zit.
+          const spCx = sb.x + sb.breedte / 2;
+          const scCx = sc.x + sc.breedte / 2;
+          const xCentered = !isLoop || Math.abs(spCx - scCx) < sc.breedte / 3;
           const overlapt =
             sb.x + sb.breedte > sc.x &&
             sb.x < sc.x + sc.breedte &&
-            benaderingOk;
+            benaderingOk &&
+            xCentered;
           if (overlapt) {
             // Loop triggert direct op AABB-overlap (mits voet onder loop-midden,
             // zie benaderingOk hierboven). Speler teleporteert naar de vaste
