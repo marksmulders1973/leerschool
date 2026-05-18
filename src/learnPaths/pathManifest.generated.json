@@ -5451,6 +5451,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "vvn-verkeersexamen-po",
+    "file": "./vvnVerkeersexamenPo.js",
+    "title": "VVN Verkeersexamen (groep 7-8)",
+    "subject": "wereldorientatie",
+    "level": "groep7-8",
+    "emoji": "🚦",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Verkeer + verkeersveiligheid — VVN Praktisch Verkeersexamen",
+    "triggerKeywords": [
+      "verkeersexamen",
+      "VVN",
+      "Veilig Verkeer",
+      "verkeer",
+      "verkeersbord",
+      "verkeersborden",
+      "voorrang",
+      "fietsen",
+      "fiets",
+      "fietspad",
+      "fietshelm",
+      "dode hoek"
+    ],
+    "intro": "Slagen voor het VVN-verkeersexamen groep 7-8. Verkeersborden + voorrangsregels + veilig fietsen + gevaar herkennen. Past bij officieel Veilig Verkeer Nederland-examen (april). 5 stappen × ~5 vragen. ~",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "water-erfgoed-nederland-po",
     "file": "./waterErfgoedNederlandPo.js",
     "title": "Nederland en water (groep 6-8)",
