@@ -51,6 +51,30 @@ const WIJZE_QUOTES = [
 // Monumenten + 7 Wereldwonderen als horizon-silhouet (Mark verzoek 2026-05-17
 // — 'als het maar een verhaal heeft'). Mix oude/nieuwe wereldwonderen + iconen.
 // Roteren tijdens spelen — kind leert architectuur uit verschillende perioden.
+// Mutators-per-run (Sprint 8 light — 15-agent-audit, Hades-stijl).
+// Bij elke run wordt random 1 mutator gekozen uit deze pool. Geeft elke
+// ronde een merkbare 'twist' zonder content-explosie. Mutators worden
+// toegepast in de game-loop via runtime-flags. 'normaal' = geen mutator
+// (40% kans) zodat sommige runs gewoon standaard zijn.
+const MUTATOR_POOL = [
+  { id: "normaal",    naam: "Geen mutator",          beschrijving: "Standaard run, geen extra twist.",                 emoji: "▶️", kans: 4 },
+  { id: "dubbelpunt", naam: "Dubbele punten",        beschrijving: "Alle score × 2 deze run.",                          emoji: "💰", kans: 2 },
+  { id: "magneet",    naam: "Magneet altijd aan",    beschrijving: "Ringen vliegen automatisch naar je toe.",          emoji: "🧲", kans: 2 },
+  { id: "minispeler", naam: "Mini-speler",           beschrijving: "Speler is kleiner — moeilijker te raken.",          emoji: "🐭", kans: 1 },
+  { id: "tempoplus",  naam: "Snelheid +25%",         beschrijving: "Wereld scrollt sneller, meer ringen per minuut.",   emoji: "💨", kans: 1 },
+  { id: "ringregen",  naam: "Ringen-regen",          beschrijving: "Veel meer ringen, maar ook meer obstakels.",        emoji: "💍", kans: 1 },
+];
+function kiesMutator() {
+  // Weighted random op kans
+  const totaal = MUTATOR_POOL.reduce((s, m) => s + m.kans, 0);
+  let r = Math.random() * totaal;
+  for (const m of MUTATOR_POOL) {
+    r -= m.kans;
+    if (r <= 0) return m;
+  }
+  return MUTATOR_POOL[0];
+}
+
 // Missie-systeem (Sprint 6 — 15-agent-audit, Subway-Surfers-stijl).
 // Bij elke run-start kiest de game 3 willekeurige missies. Voortgang
 // staat rechtsboven in beeld. Alle 3 voltooid → bonus + letter naar
@@ -847,6 +871,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let streak = 0;
     let multiplier = 1;
     let multiplierFlashTeller = 0; // frames voor "x3!" flash
+    // Sprint 8 — mutator-effect: extra score-multiplier voor 'dubbelpunt'
+    const mutatorScoreMul = mutatorRef.current === "dubbelpunt" ? 2 : 1;
+    const mutatorTempoMul = mutatorRef.current === "tempoplus" ? 1.25 : 1;
+    const mutatorMinispelerMul = mutatorRef.current === "minispeler" ? 0.7 : 1;
+    const mutatorMagneetAan = mutatorRef.current === "magneet";
+    const mutatorRingregenAan = mutatorRef.current === "ringregen";
+    void mutatorRingregenAan; // TODO Sprint 8b: dubbele ring-spawn rate
     // Sprint 4 — visual juice (15-agent-audit, Tetris Effect-stijl):
     // - bloomFlashTeller: 1-frame wit overlay bij pickup, fade in 8 frames
     // - spelerTrail: ringbuffer met 5 oude posities voor trail-ghost-effect
@@ -2328,7 +2359,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
 
     // ---------- SPELER ----------
-    const speler = { x: 100 * SCHAAL, basisX: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidX: 0, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
+    const _spelerGrootte = SPELER_GROOTTE * mutatorMinispelerMul;
+    const speler = { x: 100 * SCHAAL, basisX: 100 * SCHAAL, y: GROND_Y, breedte: _spelerGrootte, hoogte: _spelerGrootte, snelheidX: 0, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
     function spelerBots() { const m = 4 * SCHAAL; return { x: speler.x + m, y: speler.y + m, breedte: speler.breedte - m * 2, hoogte: speler.hoogte - m * 2 }; }
     function tekenSpeler() {
       // Sprint 4 — trail-ghost (Tetris Effect-stijl): 4 oude silhouetten met
@@ -5190,7 +5222,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const beatMul = (afgeremFrames <= 0 && !bonusFase && !bossActief)
         ? 1 + Math.min(0.35, audioBeatRef.current * 0.4)
         : 1;
-      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul;
+      effSnelheid = spelSnelheid * slowMul * boostMul * afremMul * bonusMul * moeilijkheidsMul * beatMul * mutatorTempoMul;
       // Sonic-rolling: uphill remt af, downhill versnelt. Slope is afgeleide
       // van vloerHoogte op speler-positie. Geclampt op [0.65, 1.35] zodat
       // extremen niet ontsporen. Defensieve Number.isFinite-check tegen NaN.
@@ -6591,7 +6623,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // op L20+ haalbaar blijft ondanks de hogere obstakel-density.
           // Curve: L1=1×, L5=~1.6×, L10=~2.4×, L20=~3.9×, L50=~8.4×, L100=~15.9×.
           const levelFactor = 1 + (huidigLevel - 1) * 0.15;
-          score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL;
+          score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL * mutatorScoreMul;
           scoreElText = score;
           // Sprint 4 — bloom-flash bij ring-pickup (Tetris Effect-trick)
           bloomFlashTeller = 8;
@@ -6856,6 +6888,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (recordBannerTeller > 0) recordBannerTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
       if (bloomFlashTeller > 0) bloomFlashTeller--;
+      // Sprint 8 — mutator 'magneet': altijd actief deze run
+      if (mutatorMagneetAan) magneetFrames = Math.max(magneetFrames, 60);
       // Trail-ghost: push huidige speler-positie, oud frame eraf zodra ringbuffer vol
       spelerTrail.push({ x: speler.x, y: speler.y, rotatie: speler.rotatie || 0 });
       if (spelerTrail.length > TRAIL_LEN) spelerTrail.shift();
@@ -8488,6 +8522,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // de audio-card gebeurt via state met auto-fade timer.
   const levelTrackRef = useRef(0); // index van laatste track die we showden
   const [nowPlaying, setNowPlaying] = useState(null); // {componist, werk, jaar} | null
+  // Sprint 8 — mutator-per-run (Hades-stijl)
+  const [activeMutator, setActiveMutator] = useState(null); // {id, naam, beschrijving, emoji} | null
+  const mutatorRef = useRef("normaal"); // mirror voor game-loop
+  useEffect(() => { mutatorRef.current = activeMutator?.id || "normaal"; }, [activeMutator]);
+  const [mutatorBanner, setMutatorBanner] = useState(null); // 4 sec intro-popup
+  useEffect(() => {
+    if (!mutatorBanner) return;
+    const t = setTimeout(() => setMutatorBanner(null), 4000);
+    return () => clearTimeout(t);
+  }, [mutatorBanner]);
   // Sprint 7 — tijdperk-bubble bij biome-wissel
   const [tijdperkBubble, setTijdperkBubble] = useState(null); // {jaar, denker, plek} | null
   const triggerTijdperkRef = useRef(() => {});
@@ -8801,6 +8845,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               });
               // Sprint 6 — kies 3 random missies voor deze run
               setActieveMissies(kiesRandomMissies(3));
+              // Sprint 8 — kies random mutator (40% kans op 'normaal')
+              const m = kiesMutator();
+              setActiveMutator(m);
+              if (m.id !== "normaal") setMutatorBanner(m);
               setFase("spelen");
             }} style={{
               width: "100%", maxWidth: 320,
@@ -10374,6 +10422,39 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </span>
             </div>
           )}
+        </div>
+      )}
+
+      {/* Sprint 8 — Mutator-intro-banner: 4 sec popup midden in scherm bij
+          run-start. Alleen als mutator != 'normaal'. Toont emoji + naam +
+          beschrijving zodat kid weet wat anders is deze run. */}
+      {fase === "spelen" && mutatorBanner && (
+        <div style={{
+          position: "absolute", top: "30%", left: "50%", transform: "translate(-50%, -50%)",
+          padding: "16px 22px",
+          background: "rgba(20,15,30,0.92)",
+          border: "2px solid #ffcc40",
+          borderRadius: 16,
+          backdropFilter: "blur(8px)",
+          color: "#fff",
+          fontFamily: "'Fredoka', sans-serif",
+          textAlign: "center",
+          maxWidth: 320,
+          boxShadow: "0 12px 32px rgba(0,0,0,0.6), 0 0 30px rgba(255,204,64,0.35)",
+          zIndex: 11,
+          animation: "obliterator-audio-card-in 320ms ease-out",
+          pointerEvents: "none",
+        }}>
+          <div style={{ fontSize: 48, marginBottom: 4 }}>{mutatorBanner.emoji}</div>
+          <div style={{ fontSize: 11, opacity: 0.6, letterSpacing: 2, textTransform: "uppercase" }}>
+            Mutator deze ronde
+          </div>
+          <div style={{ fontSize: 20, fontWeight: 800, color: "#ffd54f", marginTop: 4 }}>
+            {mutatorBanner.naam}
+          </div>
+          <div style={{ fontSize: 13, opacity: 0.85, marginTop: 6, lineHeight: 1.4 }}>
+            {mutatorBanner.beschrijving}
+          </div>
         </div>
       )}
 
