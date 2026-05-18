@@ -51,6 +51,24 @@ const WIJZE_QUOTES = [
 // Monumenten + 7 Wereldwonderen als horizon-silhouet (Mark verzoek 2026-05-17
 // — 'als het maar een verhaal heeft'). Mix oude/nieuwe wereldwonderen + iconen.
 // Roteren tijdens spelen — kind leert architectuur uit verschillende perioden.
+// Klassieke muziek-tracks per biome-cluster (Sprint 3 — 15-agent-audit).
+// Alle stukken publiek domein (componisten +70j dood); opnames moeten CC-licensed
+// of public domain zijn. Plug nieuwe MP3's in /public/audio/ en wijzig src.
+// Cluster-mapping: level 1-2, 3-4, 5-6, 7-8, 9-10.
+// TODO Mark/Claude volgende sessie: download de 4 ontbrekende tracks van
+// musopen.org of wikimedia commons (zie OBLITERATOR-UPGRADE-PLAN Sprint 3).
+const KLASSIEKE_TRACKS = [
+  { componist: "Vivaldi", werk: "Vier Jaargetijden — Zomer (Presto)", jaar: 1725, src: "/audio/obliterator-bg.mp3", levels: [1, 2] },
+  { componist: "Mozart", werk: "Eine kleine Nachtmusik — Rondo Allegro", jaar: 1787, src: "/audio/obliterator-bg.mp3", levels: [3, 4] },
+  { componist: "Rossini", werk: "William Tell — Finale", jaar: 1829, src: "/audio/obliterator-bg.mp3", levels: [5, 6] },
+  { componist: "Bach", werk: "Brandenburg Concerto nr. 3 — Allegro", jaar: 1721, src: "/audio/obliterator-bg.mp3", levels: [7, 8] },
+  { componist: "Beethoven", werk: "Symfonie nr. 5 — deel 1", jaar: 1808, src: "/audio/obliterator-bg.mp3", levels: [9, 10] },
+];
+function getTrackForLevel(lvl) {
+  for (const t of KLASSIEKE_TRACKS) if (t.levels.includes(lvl)) return t;
+  return KLASSIEKE_TRACKS[0];
+}
+
 const MONUMENTEN = [
   // Oude 7 wereldwonderen (alleen Piramide nog bestaat)
   { naam: "Piramide Cheops", jaar: "~2560 v.Chr.", land: "Egypte", vorm: "piramide" },
@@ -1131,6 +1149,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       muziek.toonsoort = BIOMES[idx]?.toonsoort || "mineur";
       levelUpFlash = LEVEL_UP_DUUR;
       levelUpNaam = BIOMES[idx]?.naam || '';
+      // Sprint 3 — track-switch + audio-card. Alleen tonen als nieuwe cluster
+      // (anders pop-up bij elk biome-binnen-cluster, te frequent).
+      try {
+        const track = getTrackForLevel(lvl);
+        const trackKey = track.componist + track.werk;
+        if (trackKey !== levelTrackRef.current) {
+          levelTrackRef.current = trackKey;
+          triggerTrackCardRef.current(track);
+          // Switch audio-bron als pad anders (nog niet relevant tot Mark MP3's
+          // toevoegt — alle clusters wijzen nu naar dezelfde Vivaldi-MP3, dus
+          // .src komt overeen en switcht niet). Wel klaar voor later.
+          const a = bgMusicRef.current;
+          if (a && !a.src.endsWith(track.src)) {
+            const wasPaused = a.paused;
+            const prevTime = a.currentTime;
+            a.src = track.src;
+            try {
+              a.currentTime = 0;
+              if (!wasPaused) a.play().catch(() => {});
+            } catch {}
+            void prevTime; // gereserveerd voor later crossfade
+          }
+        }
+      } catch {}
       // Particle-curtain transitie (Sprint 2 — 15-agent-audit, Celeste-stijl).
       // 50 deeltjes in nieuwe-biome-kleur vegen van rechts naar links over
       // het scherm — verbergt de scene-swap, voelt magisch ipv techy fade.
@@ -8328,6 +8370,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const audioBeatRef = useRef(0); // 0..1 — current bass-energy intensiteit
   const audioCtxRef = useRef(null);
   const analyserRef = useRef(null);
+  // Sprint 3 — multi-track infra. levelTrackRef volgt het huidige level zodat
+  // de game-loop track-switches kan triggeren via setNowPlaying. Display van
+  // de audio-card gebeurt via state met auto-fade timer.
+  const levelTrackRef = useRef(0); // index van laatste track die we showden
+  const [nowPlaying, setNowPlaying] = useState(null); // {componist, werk, jaar} | null
+  // Bridge naar game-loop: setBiomeVoorLevel() roept dit aan om de card te tonen.
+  // Ref ipv state-callback om closure-scope-issues in game-loop te voorkomen.
+  const triggerTrackCardRef = useRef(() => {});
+  useEffect(() => { triggerTrackCardRef.current = (track) => setNowPlaying(track); }, []);
+  // Auto-fade na 4 sec
+  useEffect(() => {
+    if (!nowPlaying) return;
+    const t = setTimeout(() => setNowPlaying(null), 4000);
+    return () => clearTimeout(t);
+  }, [nowPlaying]);
   useEffect(() => {
     const a = bgMusicRef.current;
     if (!a) return;
@@ -10107,10 +10164,49 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           fase 'spelen' + geluidAan; useEffect hierboven bestuurt play/pause. */}
       <audio ref={bgMusicRef} src="/audio/obliterator-bg.mp3" preload="auto" />
 
+      {/* Sprint 3 — Audio-card: bij track-switch verschijnt componist + werk
+          + jaar linksboven, fade na 4 sec. Leerzaam-coded: kid ziet 5
+          componisten per session. */}
+      {nowPlaying && (
+        <div style={{
+          position: "absolute", top: 16, left: 16,
+          padding: "10px 14px",
+          background: "rgba(20,15,30,0.85)",
+          border: "1px solid rgba(255,204,64,0.5)",
+          borderRadius: 10,
+          backdropFilter: "blur(6px)",
+          color: "#ffd54f",
+          fontFamily: "'Fredoka', 'Arial', sans-serif",
+          fontSize: 13, lineHeight: 1.35,
+          maxWidth: 260,
+          boxShadow: "0 6px 18px rgba(0,0,0,0.4), 0 0 22px rgba(255,204,64,0.25)",
+          zIndex: 10,
+          animation: "obliterator-audio-card-in 240ms ease-out",
+          pointerEvents: "none",
+        }}>
+          <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 1.2, textTransform: "uppercase" }}>
+            🎻 Nu speelt
+          </div>
+          <div style={{ fontSize: 16, fontWeight: 800, marginTop: 2 }}>
+            {nowPlaying.componist}
+          </div>
+          <div style={{ fontSize: 12, opacity: 0.85, marginTop: 1 }}>
+            {nowPlaying.werk}
+          </div>
+          <div style={{ fontSize: 11, opacity: 0.6, marginTop: 2 }}>
+            {nowPlaying.jaar}
+          </div>
+        </div>
+      )}
+
       <style>{`
         @keyframes obliterator-marquee {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+        @keyframes obliterator-audio-card-in {
+          from { opacity: 0; transform: translateX(-12px); }
+          to   { opacity: 1; transform: translateX(0); }
         }
       `}</style>
     </div>
