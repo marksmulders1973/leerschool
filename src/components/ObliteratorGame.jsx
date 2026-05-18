@@ -144,11 +144,11 @@ const BIOME_TIJDPERK = [
 // TODO Mark/Claude volgende sessie: download de 4 ontbrekende tracks van
 // musopen.org of wikimedia commons (zie OBLITERATOR-UPGRADE-PLAN Sprint 3).
 const KLASSIEKE_TRACKS = [
-  { componist: "Vivaldi", werk: "Vier Jaargetijden — Zomer (Presto)", jaar: 1725, src: "/audio/obliterator-bg.mp3", levels: [1, 2] },
-  { componist: "Mozart", werk: "Eine kleine Nachtmusik — Rondo Allegro", jaar: 1787, src: "/audio/obliterator-bg.mp3", levels: [3, 4] },
-  { componist: "Rossini", werk: "William Tell — Finale", jaar: 1829, src: "/audio/obliterator-bg.mp3", levels: [5, 6] },
-  { componist: "Bach", werk: "Brandenburg Concerto nr. 3 — Allegro", jaar: 1721, src: "/audio/obliterator-bg.mp3", levels: [7, 8] },
-  { componist: "Beethoven", werk: "Symfonie nr. 5 — deel 1", jaar: 1808, src: "/audio/obliterator-bg.mp3", levels: [9, 10] },
+  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer (Presto)",      jaar: 1725, src: "/audio/obliterator-bg.mp3",        levels: [1, 2] },
+  { componist: "Mozart",    werk: "Eine kleine Nachtmusik — Allegro",        jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levels: [3, 4] },
+  { componist: "Rossini",   werk: "William Tell — Ouverture",                jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levels: [5, 6] },
+  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3 — Allegro",    jaar: 1721, src: "/audio/obliterator-bach.mp3",      levels: [7, 8] },
+  { componist: "Beethoven", werk: "Symfonie nr. 5 — Allegro con brio",       jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levels: [9, 10] },
 ];
 function getTrackForLevel(lvl) {
   for (const t of KLASSIEKE_TRACKS) if (t.levels.includes(lvl)) return t;
