@@ -20,7 +20,7 @@ const steps = [
         q: "Wat is **klassieke muziek**?",
         options: ["Muziek 1600-1900 door bekende componisten", "Pop", "Jazz", "Sport"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Pop is moderne lichte muziek met zang.", "Jazz is jongere stijl met improvisatie.", "Sport heeft niks met muziek te maken."],
       },
       {
         q: "Wat is **allegro**?",
@@ -57,7 +57,7 @@ const steps = [
         q: "Welke componist werd **doof**?",
         options: ["Beethoven", "Mozart", "Bach", "Vivaldi"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Mozart hoorde tot zijn dood — stierf jong op 35.", "Bach kon goed horen en zien — werd 65.", "Vivaldi schreef veel vioolwerken, geen doofheid bekend."],
       },
       {
         q: "Wat is **EU-volkslied**?",
@@ -69,7 +69,7 @@ const steps = [
         q: "Wie componeerde **'De Vier Jaargetijden'**?",
         options: ["Vivaldi", "Bach", "Mozart", "Beethoven"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet."],
+        wrongHints: [null, "Bach is bekend om orgel + Brandenburgse Concerten.", "Mozart schreef opera + Eine kleine Nachtmusik.", "Beethoven schreef vooral symfonieën en piano-werken."],
       },
     ],
   },
@@ -109,7 +109,7 @@ const steps = [
     explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
     checks: [
       { q: "Welke componist werd **doof**?", options: ["Beethoven", "Mozart", "Bach", "Vivaldi"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Wie schreef **De Vier Jaargetijden**?", options: ["Vivaldi", "Mozart", "Bach", "Schubert"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wie schreef **De Vier Jaargetijden**?", options: ["Vivaldi", "Mozart", "Bach", "Schubert"], answer: 0, wrongHints: [null, "Mozart schreef opera + serenades.", "Bach schreef vooral kerk- + orgelwerken.", "Schubert is bekend om liederen + Onvoltooide Symfonie."] },
       { q: "Wat is **allegro**?", options: ["Snel tempo", "Langzaam", "Stil", "Hard"], answer: 0, wrongHints: [null, "Adagio.", "Piano.", "Forte."] },
       { q: "Hoeveel **strijkers** in symfonieorkest?", options: ["~50-60", "5", "200", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
       { q: "**EU-volkslied** = ?", options: ["Beethoven 9e (Ode an die Freude)", "Mozart Requiem", "Wilhelmus", "Bach Toccata"], answer: 0, wrongHints: [null, "Niet.", "NL.", "Niet."] },
