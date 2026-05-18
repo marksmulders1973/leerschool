@@ -161,21 +161,58 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
           <div style={{ marginBottom: 6, color: C.text, fontWeight: 700, fontSize: 14 }}>
             🎓 Eindexamens VMBO GL/TL — twee manieren om te leren
           </div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, marginTop: 8 }}>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 8 }}>
+            {/* Mark UX 2026-05-18: beide modi nu klikbare knoppen die naar
+                de vakken-lijst scrollen — visuele bevestiging dat dit echte
+                keuzes zijn, geen alleen-uitleg. */}
+            <button
+              type="button"
+              onClick={() => document.querySelector('[aria-expanded]')?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                padding: "8px 12px",
+                background: "rgba(0,176,255,0.10)",
+                border: `1.5px solid ${C.oefen}`,
+                borderRadius: 10,
+                color: C.text,
+                cursor: "pointer",
+                fontFamily: "inherit", fontSize: 13,
+                textAlign: "left",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(0,176,255,0.20)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(0,176,255,0.10)"; }}
+            >
               <span style={{
-                width: 12, height: 12, borderRadius: 3,
-                background: "rgba(0,176,255,0.25)", border: `1.5px solid ${C.oefen}`,
+                width: 14, height: 14, borderRadius: 3,
+                background: "rgba(0,176,255,0.35)", border: `1.5px solid ${C.oefen}`,
+                flexShrink: 0,
               }} />
-              <span><strong style={{ color: C.oefen }}>Maak dit examen</strong> — echte examenvragen mét uitleg + leerpad</span>
-            </span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+              <span><strong style={{ color: C.oefen }}>🎯 Maak dit examen</strong> — echte examenvragen mét uitleg + leerpad</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => document.querySelector('[aria-expanded]')?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              style={{
+                display: "inline-flex", alignItems: "center", gap: 8,
+                padding: "8px 12px",
+                background: "rgba(167,139,250,0.10)",
+                border: `1.5px solid ${C.pdf}`,
+                borderRadius: 10,
+                color: C.text,
+                cursor: "pointer",
+                fontFamily: "inherit", fontSize: 13,
+                textAlign: "left",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(167,139,250,0.20)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = "rgba(167,139,250,0.10)"; }}
+            >
               <span style={{
-                width: 12, height: 12, borderRadius: 3,
-                background: "rgba(167,139,250,0.25)", border: `1.5px solid ${C.pdf}`,
+                width: 14, height: 14, borderRadius: 3,
+                background: "rgba(167,139,250,0.35)", border: `1.5px solid ${C.pdf}`,
+                flexShrink: 0,
               }} />
-              <span><strong style={{ color: C.pdf }}>PDF inzien</strong> — hele examen + correctievoorschrift</span>
-            </span>
+              <span><strong style={{ color: C.pdf }}>📄 PDF inzien</strong> — hele examen + correctievoorschrift</span>
+            </button>
           </div>
         </div>
 
