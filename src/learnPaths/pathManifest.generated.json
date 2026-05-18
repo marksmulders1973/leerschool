@@ -3485,6 +3485,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "nederland-water-vo",
+    "file": "./nederlandWaterVo.js",
+    "title": "Nederland en water (VMBO-AK)",
+    "subject": "aardrijkskunde",
+    "level": "vmbo-gt-4",
+    "emoji": "🌊",
+    "referentieNiveau": "vmbo-gt-CSE",
+    "sloThema": "Aardrijkskunde VMBO — domein Water / Nederland delta-land",
+    "triggerKeywords": [
+      "Nederland water",
+      "delta",
+      "watersnood",
+      "1953",
+      "Deltawerken",
+      "Oosterscheldekering",
+      "Maeslantkering",
+      "Afsluitdijk",
+      "Lely",
+      "IJsselmeer",
+      "Markermeer",
+      "Flevoland"
+    ],
+    "intro": "Hoe houdt Nederland droge voeten? Van Hoogheemraadschap Rijnland (1255) via Afsluitdijk (1932) + Watersnood (1953) + Deltawerken (1953-1997) naar klimaatadaptatie vandaag. VMBO-GT-AK eindexamen-stof d",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "nederlandse-kunstenaars-po",
     "file": "./nederlandseKunstenaarsPo.js",
     "title": "Nederlandse kunstenaars (Cito groep 6-8)",
