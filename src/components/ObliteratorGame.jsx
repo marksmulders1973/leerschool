@@ -51,6 +51,52 @@ const WIJZE_QUOTES = [
 // Monumenten + 7 Wereldwonderen als horizon-silhouet (Mark verzoek 2026-05-17
 // — 'als het maar een verhaal heeft'). Mix oude/nieuwe wereldwonderen + iconen.
 // Roteren tijdens spelen — kind leert architectuur uit verschillende perioden.
+// Missie-systeem (Sprint 6 — 15-agent-audit, Subway-Surfers-stijl).
+// Bij elke run-start kiest de game 3 willekeurige missies. Voortgang
+// staat rechtsboven in beeld. Alle 3 voltooid → bonus + letter naar
+// localStorage (collect O-B-L-I-T-E-R = nieuwe skin).
+// Elke missie heeft een `key` voor matching met game-loop events.
+const MISSIE_POOL = [
+  { id: "ringen20", titel: "Pak 20 ringen",     key: "ring",       target: 20 },
+  { id: "ringen50", titel: "Pak 50 ringen",     key: "ring",       target: 50 },
+  { id: "overleef30", titel: "Overleef 30 sec", key: "overleef",   target: 30 * 60 },
+  { id: "overleef60", titel: "Overleef 60 sec", key: "overleef",   target: 60 * 60 },
+  { id: "score500",   titel: "Haal 500 punten", key: "score",      target: 500 },
+  { id: "score2000",  titel: "Haal 2000 punten", key: "score",     target: 2000 },
+  { id: "level3",     titel: "Bereik level 3",  key: "level",      target: 3 },
+  { id: "level5",     titel: "Bereik level 5",  key: "level",      target: 5 },
+  { id: "spring30",   titel: "Spring 30×",      key: "spring",     target: 30 },
+  { id: "schans5",    titel: "Raak 5 schansen", key: "schans",     target: 5 },
+];
+const MISSIE_LETTERS = ["L", "E", "E", "R", "K", "W", "A", "R", "T"]; // LEERKWART
+function kiesRandomMissies(n = 3) {
+  const pool = [...MISSIE_POOL];
+  const out = [];
+  while (out.length < n && pool.length > 0) {
+    const idx = Math.floor(Math.random() * pool.length);
+    out.push({ ...pool[idx], voortgang: 0, voltooid: false });
+    pool.splice(idx, 1);
+  }
+  return out;
+}
+
+// Tijdmachine-thema (Sprint 7 — 15-agent-audit). Geen biome-rename in
+// BIOMES-config zelf (laat de naam Engels staan voor het level-banner),
+// maar voeg per biome een 'tijdperk'-overlay toe: jaar + denker + plek.
+// Kid leert passief 10 namen. Vivaldi-barok-muziek past bij 'ontdekkers'.
+const BIOME_TIJDPERK = [
+  { jaar: "1859", denker: "Charles Darwin",    plek: "Galapagos eilanden" },
+  { jaar: "1610", denker: "Galileo Galilei",   plek: "Sterren door telescoop" },
+  { jaar: "1752", denker: "Benjamin Franklin", plek: "Bliksem-experiment" },
+  { jaar: "~250 v.Chr.", denker: "Archimedes", plek: "Strand van Syracuse" },
+  { jaar: "~570 v.Chr.", denker: "Pythagoras", plek: "Egypte-Griekenland" },
+  { jaar: "1666", denker: "Isaac Newton",      plek: "Appel-boom Cambridge" },
+  { jaar: "1903", denker: "Marie Curie",       plek: "Lab in Parijs" },
+  { jaar: "79 n.Chr.", denker: "Plinius de Oudere", plek: "Vesuvius-uitbarsting" },
+  { jaar: "1905", denker: "Albert Einstein",   plek: "Patent-bureau Bern" },
+  { jaar: "1974", denker: "Stephen Hawking",   plek: "Zwart gat — straling" },
+];
+
 // Klassieke muziek-tracks per biome-cluster (Sprint 3 — 15-agent-audit).
 // Alle stukken publiek domein (componisten +70j dood); opnames moeten CC-licensed
 // of public domain zijn. Plug nieuwe MP3's in /public/audio/ en wijzig src.
@@ -1155,6 +1201,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       muziek.toonsoort = BIOMES[idx]?.toonsoort || "mineur";
       levelUpFlash = LEVEL_UP_DUUR;
       levelUpNaam = BIOMES[idx]?.naam || '';
+      // Sprint 7 — tijdperk-bubble bij elke biome-wissel (10 denkers passief)
+      try {
+        const tijdperk = BIOME_TIJDPERK[idx];
+        if (tijdperk) triggerTijdperkRef.current(tijdperk);
+      } catch {}
       // Sprint 3 — track-switch + audio-card. Alleen tonen als nieuwe cluster
       // (anders pop-up bij elk biome-binnen-cluster, te frequent).
       try {
@@ -4825,6 +4876,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         // tijdens FLIP: omgekeerd (omlaag duiken)
         const richting = flipFrames > 0 ? -1 : 1;
         speler.snelheidY = SPRING_KRACHT * kracht * richting;
+        // Sprint 6 — missie: spring
+        try { missieUpdateRef.current("spring", 1); } catch {}
         // Lichte voorwaartse zet bij sprong — minder statisch dan puur op-en-neer.
         // Decay komt via update; bal drift terug naar basisX als 'ie weer op de grond is.
         // Cap zodat multi-jumps de bal niet ver buiten beeld duwen.
@@ -5387,6 +5440,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           levelGehaaldFlash = 130; // ~2 sec banner
           // wissel biome + muziek (bass + BPM) per level
           setBiomeVoorLevel(nieuwLevel);
+          // Sprint 6 — missie-update: level + overleef-tijd
+          try { missieUpdateRef.current("level", nieuwLevel); } catch {}
           // bonus piep
           piep(880, 0.10, "sine", 0.15);
           setTimeout(() => piep(1320, 0.12, "sine", 0.14), 100);
@@ -5924,6 +5979,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             // entry-hoek (lower-left van loop) en draait dan rechtsom door de
             // hele revolutie. Particle-burst verbergt de teleport.
 
+            // Sprint 6 — missie: schans
+            try { missieUpdateRef.current("schans", 1); } catch {}
             if (isLoop) {
               // ── LOOP — speler gaat ECHT door de loop heen ─────
               sc.geactiveerd = true;
@@ -6538,6 +6595,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           scoreElText = score;
           // Sprint 4 — bloom-flash bij ring-pickup (Tetris Effect-trick)
           bloomFlashTeller = 8;
+          // Sprint 6 — missie-update: ring + score
+          try { missieUpdateRef.current("ring", 1); } catch {}
+          try { missieUpdateRef.current("score", score); } catch {}
 
           // record-checks voor spanning-melding
           const pr = prRef.current;
@@ -6799,6 +6859,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // Trail-ghost: push huidige speler-positie, oud frame eraf zodra ringbuffer vol
       spelerTrail.push({ x: speler.x, y: speler.y, rotatie: speler.rotatie || 0 });
       if (spelerTrail.length > TRAIL_LEN) spelerTrail.shift();
+      // Sprint 6 — missie: overleef-tijd in frames. Update elke 30 frames (0.5s)
+      // om setState-overhead te beperken.
+      if (frameTeller % 30 === 0) {
+        try { missieUpdateRef.current("overleef", frameTeller); } catch {}
+      }
 
       // ───── BOSS-FASE ─────
       if (bossActief) {
@@ -7998,7 +8063,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     function hitTotale() {
       if (hpFlashTeller > 0) return; // i-frames actief
       hp -= HP_PER_HIT;
-      hpFlashTeller = 45; // ~0.75 sec invincibility na hit
+      // Sprint 5 — kid-vriendelijk: i-frames van 45 → 90 (1.5 sec). Geeft
+      // 10-jarige tijd om te herstellen voordat volgend hazard raakt.
+      hpFlashTeller = 90;
       shakeKracht = Math.max(shakeKracht, 10);
       // rode hit-burst
       spawnParticles(speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2, 14, "#ff4040", { spread: 6, opwaarts: 1.5, leven: 22, grootte: 4, glow: 14 });
@@ -8421,6 +8488,48 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // de audio-card gebeurt via state met auto-fade timer.
   const levelTrackRef = useRef(0); // index van laatste track die we showden
   const [nowPlaying, setNowPlaying] = useState(null); // {componist, werk, jaar} | null
+  // Sprint 7 — tijdperk-bubble bij biome-wissel
+  const [tijdperkBubble, setTijdperkBubble] = useState(null); // {jaar, denker, plek} | null
+  const triggerTijdperkRef = useRef(() => {});
+  useEffect(() => { triggerTijdperkRef.current = (t) => setTijdperkBubble(t); }, []);
+  useEffect(() => {
+    if (!tijdperkBubble) return;
+    const t = setTimeout(() => setTijdperkBubble(null), 5000);
+    return () => clearTimeout(t);
+  }, [tijdperkBubble]);
+  // Sprint 6 — missie-systeem
+  const [actieveMissies, setActieveMissies] = useState([]);
+  const missiesRef = useRef([]); // mirror voor game-loop closure
+  useEffect(() => { missiesRef.current = actieveMissies; }, [actieveMissies]);
+  const [verzameldeLetters, setVerzameldeLetters] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("obliterator-letters") || "[]"); } catch { return []; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-letters", JSON.stringify(verzameldeLetters)); } catch {}
+  }, [verzameldeLetters]);
+  // Bridge naar game-loop voor missie-updates
+  const missieUpdateRef = useRef(() => {});
+  useEffect(() => {
+    missieUpdateRef.current = (key, val) => {
+      setActieveMissies((prev) => prev.map((m) => {
+        if (m.voltooid || m.key !== key) return m;
+        const nieuw = key === "score" || key === "overleef" || key === "level"
+          ? Math.max(m.voortgang, val)
+          : m.voortgang + val;
+        if (nieuw >= m.target) {
+          // Voltooid! Geluid + letter
+          setVerzameldeLetters((letters) => {
+            const beschikbaar = MISSIE_LETTERS.filter((l) => !letters.includes(l) || letters.filter(x => x === l).length < MISSIE_LETTERS.filter(x => x === l).length);
+            if (beschikbaar.length === 0) return letters;
+            const nieuweLetter = beschikbaar[Math.floor(Math.random() * beschikbaar.length)];
+            return [...letters, nieuweLetter];
+          });
+          return { ...m, voortgang: m.target, voltooid: true };
+        }
+        return { ...m, voortgang: nieuw };
+      }));
+    };
+  }, []);
   // Bridge naar game-loop: setBiomeVoorLevel() roept dit aan om de card te tonen.
   // Ref ipv state-callback om closure-scope-issues in game-loop te voorkomen.
   const triggerTrackCardRef = useRef(() => {});
@@ -8690,6 +8799,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                 bonus_leven: bonusLeven || 0,
                 start_level: gekozenStartLevel,
               });
+              // Sprint 6 — kies 3 random missies voor deze run
+              setActieveMissies(kiesRandomMissies(3));
               setFase("spelen");
             }} style={{
               width: "100%", maxWidth: 320,
@@ -10209,6 +10320,98 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           / Wichita State Players via Internet Archive). Speelt alleen tijdens
           fase 'spelen' + geluidAan; useEffect hierboven bestuurt play/pause. */}
       <audio ref={bgMusicRef} src="/audio/obliterator-bg.mp3" preload="auto" />
+
+      {/* Sprint 6 — Missie-checklist rechtsboven tijdens spelen. Toont 3
+          actieve missies + voortgang. Voltooid = ✓ + groen, anders progress. */}
+      {fase === "spelen" && actieveMissies.length > 0 && (
+        <div style={{
+          position: "absolute", top: 16, right: 16,
+          padding: "8px 12px",
+          background: "rgba(20,15,30,0.78)",
+          border: "1px solid rgba(255,255,255,0.18)",
+          borderRadius: 10,
+          backdropFilter: "blur(6px)",
+          color: "#fff",
+          fontFamily: "'Fredoka', sans-serif",
+          fontSize: 12, lineHeight: 1.4,
+          minWidth: 150, maxWidth: 220,
+          boxShadow: "0 4px 14px rgba(0,0,0,0.4)",
+          zIndex: 9,
+          pointerEvents: "none",
+        }}>
+          <div style={{ fontSize: 10, opacity: 0.6, letterSpacing: 1.2, textTransform: "uppercase", marginBottom: 4 }}>
+            🎯 Missies
+          </div>
+          {actieveMissies.map((m, i) => (
+            <div key={i} style={{
+              padding: "3px 0",
+              opacity: m.voltooid ? 1 : 0.92,
+              color: m.voltooid ? "#69f0ae" : "#fff",
+              fontWeight: m.voltooid ? 700 : 500,
+            }}>
+              {m.voltooid ? "✓" : "○"} {m.titel}
+              {!m.voltooid && (
+                <span style={{ opacity: 0.55, marginLeft: 4 }}>
+                  ({m.key === "overleef"
+                    ? `${Math.floor(m.voortgang / 60)}/${m.target / 60}s`
+                    : `${Math.min(m.voortgang, m.target)}/${m.target}`})
+                </span>
+              )}
+            </div>
+          ))}
+          {verzameldeLetters.length > 0 && (
+            <div style={{
+              marginTop: 6, paddingTop: 6,
+              borderTop: "1px solid rgba(255,255,255,0.15)",
+              fontSize: 11, opacity: 0.85,
+            }}>
+              <span style={{ opacity: 0.7 }}>Letters: </span>
+              <span style={{ color: "#ffd54f", fontWeight: 800, letterSpacing: 1.2 }}>
+                {verzameldeLetters.join("·")}
+              </span>
+              <span style={{ opacity: 0.5, marginLeft: 4 }}>
+                ({verzameldeLetters.length}/{MISSIE_LETTERS.length})
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Sprint 7 — Tijdperk-bubble: bij elke biome-wissel verschijnt 5 sec
+          lang een tekstwolkje met jaar + denker + plek. 10 denkers per
+          ronde. Onderaan-midden zodat het niet conflicteert met audio-card. */}
+      {fase === "spelen" && tijdperkBubble && (
+        <div style={{
+          position: "absolute", bottom: 80, left: "50%", transform: "translateX(-50%)",
+          padding: "10px 16px",
+          background: "rgba(20,15,30,0.88)",
+          border: "1px solid rgba(105,240,174,0.45)",
+          borderRadius: 12,
+          backdropFilter: "blur(6px)",
+          color: "#e8ffe8",
+          fontFamily: "'Fredoka', 'Georgia', serif",
+          fontSize: 14, lineHeight: 1.4,
+          textAlign: "center",
+          maxWidth: 320,
+          boxShadow: "0 6px 18px rgba(0,0,0,0.5), 0 0 18px rgba(105,240,174,0.18)",
+          zIndex: 10,
+          animation: "obliterator-audio-card-in 280ms ease-out",
+          pointerEvents: "none",
+        }}>
+          <div style={{ fontSize: 11, opacity: 0.7, letterSpacing: 1.5, textTransform: "uppercase" }}>
+            ⏳ Tijdmachine
+          </div>
+          <div style={{ fontSize: 18, fontWeight: 800, marginTop: 2, color: "#ffd54f" }}>
+            {tijdperkBubble.jaar}
+          </div>
+          <div style={{ fontSize: 14, marginTop: 1 }}>
+            {tijdperkBubble.denker}
+          </div>
+          <div style={{ fontSize: 12, opacity: 0.7, marginTop: 2, fontStyle: "italic" }}>
+            {tijdperkBubble.plek}
+          </div>
+        </div>
+      )}
 
       {/* Sprint 3 — Audio-card: bij track-switch verschijnt componist + werk
           + jaar linksboven, fade na 4 sec. Leerzaam-coded: kid ziet 5
