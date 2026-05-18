@@ -4651,6 +4651,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "staatsinrichting-1848",
+    "file": "./staatsinrichting1848.js",
+    "title": "Staatsinrichting Nederland 1848-nu",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🏛️",
+    "referentieNiveau": "vmbo-gt-CSE",
+    "sloThema": "Geschiedenis + Staatsinrichting VMBO — Thorbecke + grondwet 1848",
+    "triggerKeywords": [
+      "staatsinrichting",
+      "grondwet",
+      "Thorbecke",
+      "1848",
+      "constitutionele monarchie",
+      "parlementaire democratie",
+      "trias politica",
+      "Montesquieu",
+      "Tweede Kamer",
+      "Eerste Kamer",
+      "regering",
+      "kabinet"
+    ],
+    "intro": "Hoe ontstond ons huidige politieke systeem? Van koning Willem II (1848) via Thorbecke naar koning Willem-Alexander + kabinet Schoof (2024). VMBO-GT eindexamen-stof. 5 stappen × ~5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "statistiek",
     "file": "./statistiek.js",
     "title": "Statistiek (basis)",
