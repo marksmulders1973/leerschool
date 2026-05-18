@@ -36,10 +36,15 @@ const PIJLER_COLOR = {
   studievaardigheden: "#e040fb",
 };
 
-export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFilter, subjectLabel }) {
+export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFilter, subjectLabel, simulatieMode = false }) {
   // mode: "intro" | "running" | "done"
   const [mode, setMode] = useState("intro");
-  const [config, setConfig] = useState({ count: 15, minutes: 15 });
+  // P0-2 (4-agent-audit 2026-05-18): simulatieMode = volledige Doorstroomtoets-
+  // simulatie (50 vragen, 60 min) met niveau-advies. Anders losse-onderdeel-test
+  // (15 vragen, 15 min default).
+  const [config, setConfig] = useState(
+    simulatieMode ? { count: 50, minutes: 60 } : { count: 15, minutes: 15 }
+  );
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -117,63 +122,88 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return (
       <div style={pageStyle()}>
         <Header
-          title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>{subjectFilter ? `Doorstroomtoets ${subjectLabel || subjectFilter}` : "Oefen-Doorstroomtoets"} <DoorstroomtoetsLogo size={22} /></span>}
-          subtitle={`${config.count} vragen uit Leerkwartier-paden`}
+          title={<span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>{simulatieMode ? "Doorstroomtoets-simulatie" : subjectFilter ? `Doorstroomtoets ${subjectLabel || subjectFilter}` : "Oefen-Doorstroomtoets"} <DoorstroomtoetsLogo size={22} /></span>}
+          subtitle={simulatieMode ? "Volledige test van 50 vragen + niveau-indicatie" : `${config.count} vragen uit Leerkwartier-paden`}
           onBack={onBack}
           onHome={onHome}
         />
         <div style={{ padding: "16px 18px 32px", color: C.text }}>
-          <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 18 }}>
-            Een echte oefen-toets met vragen uit de leerpaden die je hier op Leerkwartier hebt gedaan.
-            Mix van <strong style={{ color: PIJLER_COLOR.rekenen }}>rekenen</strong>,{" "}
-            <strong style={{ color: PIJLER_COLOR.taal }}>taal</strong> en{" "}
-            <strong style={{ color: PIJLER_COLOR.studievaardigheden }}>studievaardigheden</strong>.
-          </p>
-
-          <div style={{ ...cardStyle(), marginBottom: 14 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: C.warm, marginBottom: 6 }}>
-              ⏱️ Hoe het werkt
+          {simulatieMode ? (
+            <div style={{
+              padding: "14px 16px",
+              marginBottom: 18,
+              borderRadius: 14,
+              background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.08))",
+              border: `1px solid ${C.accent}`,
+            }}>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: C.accent, marginBottom: 6 }}>
+                🎯 Wat krijg je?
+              </div>
+              <ul style={{ margin: "0 0 8px 0", paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
+                <li><strong>50 vragen</strong> — mix van rekenen + taal + studievaardigheden</li>
+                <li><strong>60 minuten</strong> countdown (zoals de echte Doorstroomtoets)</li>
+                <li>Score per onderdeel + indicatie richting vmbo / havo / vwo</li>
+                <li>Per foute vraag: uitleg + doorklikken naar leerpad</li>
+              </ul>
+              <div style={{ fontSize: 12, color: "rgba(255,200,77,0.85)", lineHeight: 1.45, marginTop: 6 }}>
+                ⚠ Eén oefen-score = geen advies. Doe meerdere simulaties verspreid over dagen.
+              </div>
             </div>
-            <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
-              <li>{config.count} meerkeuze-vragen</li>
-              <li>{config.minutes} minuten countdown</li>
-              <li>Je kunt vooruit en terug navigeren</li>
-              <li>Aan het einde: score per onderdeel + hints</li>
-            </ul>
-          </div>
+          ) : (
+            <>
+              <p style={{ fontSize: 14, lineHeight: 1.55, marginBottom: 18 }}>
+                Een echte oefen-toets met vragen uit de leerpaden die je hier op Leerkwartier hebt gedaan.
+                Mix van <strong style={{ color: PIJLER_COLOR.rekenen }}>rekenen</strong>,{" "}
+                <strong style={{ color: PIJLER_COLOR.taal }}>taal</strong> en{" "}
+                <strong style={{ color: PIJLER_COLOR.studievaardigheden }}>studievaardigheden</strong>.
+              </p>
 
-          <div style={{ marginBottom: 14 }}>
-            <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Aantal vragen</div>
-            <div style={{ display: "flex", gap: 8 }}>
-              {[15, 30, 50].map((n) => (
-                <button
-                  key={n}
-                  onClick={() => setConfig((c) => ({ ...c, count: n, minutes: Math.round(n) }))}
-                  style={pillStyle(config.count === n)}
-                >
-                  {n}
-                </button>
-              ))}
-            </div>
-          </div>
+              <div style={{ ...cardStyle(), marginBottom: 14 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 14, color: C.warm, marginBottom: 6 }}>
+                  ⏱️ Hoe het werkt
+                </div>
+                <ul style={{ margin: 0, paddingLeft: 18, fontSize: 13, lineHeight: 1.6 }}>
+                  <li>{config.count} meerkeuze-vragen</li>
+                  <li>{config.minutes} minuten countdown</li>
+                  <li>Je kunt vooruit en terug navigeren</li>
+                  <li>Aan het einde: score per onderdeel + hints</li>
+                </ul>
+              </div>
 
-          <div style={{ marginBottom: 22 }}>
-            <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Minuten</div>
-            <div style={{ display: "flex", gap: 8 }}>
-              {[15, 30, 60].map((m) => (
-                <button
-                  key={m}
-                  onClick={() => setConfig((c) => ({ ...c, minutes: m }))}
-                  style={pillStyle(config.minutes === m)}
-                >
-                  {m}
-                </button>
-              ))}
-            </div>
-          </div>
+              <div style={{ marginBottom: 14 }}>
+                <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Aantal vragen</div>
+                <div style={{ display: "flex", gap: 8 }}>
+                  {[15, 30, 50].map((n) => (
+                    <button
+                      key={n}
+                      onClick={() => setConfig((c) => ({ ...c, count: n, minutes: Math.round(n) }))}
+                      style={pillStyle(config.count === n)}
+                    >
+                      {n}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ marginBottom: 22 }}>
+                <div style={{ fontSize: 13, color: C.muted, fontWeight: 700, marginBottom: 8 }}>Minuten</div>
+                <div style={{ display: "flex", gap: 8 }}>
+                  {[15, 30, 60].map((m) => (
+                    <button
+                      key={m}
+                      onClick={() => setConfig((c) => ({ ...c, minutes: m }))}
+                      style={pillStyle(config.minutes === m)}
+                    >
+                      {m}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
 
           <button onClick={start} style={btnPrimary()}>
-            🚀 Start oefen-Doorstroomtoets
+            {simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : "🚀 Start oefen-Doorstroomtoets"}
           </button>
         </div>
       </div>
@@ -196,6 +226,55 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               {answered < questions.length && ` · ${questions.length - answered} niet beantwoord`}
             </div>
           </div>
+
+          {/* P0-2 (4-agent-audit 2026-05-18): niveau-advies-banner bij volledige
+              50-vragen-simulatie. Score% → indicatie vmbo-bb/kb/tl/havo/vwo.
+              Disclaimer: 1 oefen-score = geen advies. */}
+          {simulatieMode && score?.total?.total >= 30 && (() => {
+            const pct = score.total.pct;
+            let advies, kleur, emoji, uitleg;
+            if (pct >= 85) {
+              advies = "vwo / gymnasium"; kleur = "#7c3aed"; emoji = "🎓";
+              uitleg = "Sterke score op alle onderdelen — een goede aanwijzing voor vwo-niveau.";
+            } else if (pct >= 70) {
+              advies = "havo"; kleur = "#1976d2"; emoji = "📚";
+              uitleg = "Goede score — past bij havo-niveau. Met extra oefenen kan vwo ook lukken.";
+            } else if (pct >= 55) {
+              advies = "vmbo-tl (mavo)"; kleur = "#00897b"; emoji = "📖";
+              uitleg = "Voldoende — past bij vmbo-tl. Sterk in sommige delen, andere kunnen nog beter.";
+            } else if (pct >= 35) {
+              advies = "vmbo-kb / vmbo-bb"; kleur = "#ef6c00"; emoji = "💪";
+              uitleg = "Basis aanwezig — past bij vmbo-bb of kb. Blijven oefenen helpt om hoger uit te komen.";
+            } else {
+              advies = "extra oefenen aanbevolen"; kleur = "#ef5350"; emoji = "🌱";
+              uitleg = "Score is nog laag — geen probleem, dat betekent dat er veel ruimte is om te groeien!";
+            }
+            return (
+              <div style={{
+                marginBottom: 18,
+                padding: "16px 18px",
+                borderRadius: 14,
+                background: `linear-gradient(135deg, ${kleur}30, ${kleur}10)`,
+                border: `1px solid ${kleur}60`,
+              }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "rgba(255,255,255,0.6)", marginBottom: 4, letterSpacing: 0.4 }}>
+                  DOORSTROOMTOETS-SIMULATIE · RUWE INDICATIE
+                </div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 19, fontWeight: 800, color: kleur, marginBottom: 8 }}>
+                  {emoji} Past nu bij {advies}
+                </div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.55, marginBottom: 10 }}>
+                  {uitleg}
+                </div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,200,77,0.85)", lineHeight: 1.5, padding: "9px 11px", borderRadius: 8, background: "rgba(255,200,77,0.06)", border: "1px solid rgba(255,200,77,0.20)", marginBottom: 8 }}>
+                  ⚠ <strong>Geen echt advies — dit is één oefen-score.</strong> Doe minstens 3 simulaties verspreid over een paar dagen voor een betrouwbaarder beeld. Eén slechte dag kan 20% verschil maken.
+                </div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.45)", lineHeight: 1.4, fontStyle: "italic" }}>
+                  Het officiële schooladvies krijg je van je leerkracht; de echte Doorstroomtoets in februari bepaalt of je advies omhoog kan.
+                </div>
+              </div>
+            );
+          })()}
 
           <div style={{ marginBottom: 18 }}>
             <div style={{ fontFamily: "var(--font-display)", fontSize: 16, marginBottom: 10 }}>

@@ -223,6 +223,10 @@ export default function App() {
   // oefenen" op een vak-tegel). Pijler-id zoals "rekenen"/"taal".
   const [citoToetsSubject, setCitoToetsSubject] = useState(null);
   const [citoToetsSubjectLabel, setCitoToetsSubjectLabel] = useState(null);
+  // P0-2 (4-agent-audit 2026-05-18): vlag voor volledige Doorstroomtoets-
+  // simulatie (50 vragen, 60 min, niveau-advies). Stap 3-CTA in CitoPage
+  // zet deze true; subject-specifieke toetsen blijven false.
+  const [citoToetsSimulatie, setCitoToetsSimulatie] = useState(false);
   const [examenInitialMode, setExamenInitialMode] = useState("leren");
   // Filter de leerpaden-hub op één vak (komt via TextbookQuiz "📚 Leren"-knop).
   const [learnFilterSubject, setLearnFilterSubject] = useState(null);
@@ -1324,15 +1328,18 @@ export default function App() {
         <CitoLeerpadToets
           subjectFilter={citoToetsSubject}
           subjectLabel={citoToetsSubjectLabel}
+          simulatieMode={citoToetsSimulatie}
           onBack={() => {
             setCitoToetsSubject(null);
             setCitoToetsSubjectLabel(null);
+            setCitoToetsSimulatie(false);
             // Terug naar entry-page (cito-hub of student-home)
             setPage(citoToetsSubject ? "student-home" : "cito");
           }}
           onHome={() => {
             setCitoToetsSubject(null);
             setCitoToetsSubjectLabel(null);
+            setCitoToetsSimulatie(false);
             setPage("home");
           }}
           onPickPath={(id, stepIdx) => {
@@ -1350,7 +1357,10 @@ export default function App() {
           userSchoolType={userSchoolType}
           onGoExamens={() => setPage("examens")}
           citoProgress={studentProgress.filter(r => r.player === userName && r.citoId)}
-          onStartLeerpadToets={() => setPage("cito-leerpad-toets")}
+          onStartLeerpadToets={(simulatie = false) => {
+            setCitoToetsSimulatie(!!simulatie);
+            setPage("cito-leerpad-toets");
+          }}
           onPickPath={(id) => {
             setActiveLearnPathId(id);
             setActiveLearnStepIdx(null);

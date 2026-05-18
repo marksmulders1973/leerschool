@@ -288,7 +288,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
 
         {onStartLeerpadToets && (
           <button
-            onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(); }}
+            onClick={() => { SoundEngine.play("click"); onStartLeerpadToets(true); }}
             style={{
               textAlign: "left", borderRadius: 18,
               border: "2px solid rgba(255,213,79,0.4)",
