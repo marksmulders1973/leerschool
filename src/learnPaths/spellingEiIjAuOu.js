@@ -201,7 +201,7 @@ const steps = [
         q: "Hoe schrijf je: 'het wordt steeds duurder'?",
         options: ["prijs","preis","prijsj","prys"],
         answer: 0,
-        wrongHints: [null,"Met ij — prijs.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Hier hoort geen 'ei' — denk aan vergelijkbare woorden.","De 'sj'-spelling bestaat in Nederlands niet voor deze klank.","De 'y' wordt in modern Nederlands niet meer gebruikt voor deze klank."],
         uitlegPad: {
           stappen: [{ titel: "prijs = ij", tekst: "Prijs (kosten) heeft ij. Familie: prijslijst, prijswinnaar — allemaal ij." }],
           woorden: [{ woord: "prijs", uitleg: "Kosten van iets, of beloning bij wedstrijd." }],
@@ -215,7 +215,7 @@ const steps = [
         q: "Welk woord heeft **ei**?",
         options: ["klein","klijn","kleyn","klyn"],
         answer: 0,
-        wrongHints: [null,"Bestaat niet — 'klein' = ei.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"Bestaat niet in deze schrijfwijze.","De 'ey'-combinatie wordt in Nederlands niet gebruikt voor deze klank.","De 'y' wordt in modern Nederlands niet meer gebruikt."],
         uitlegPad: {
           stappen: [{ titel: "klein = ei", tekst: "Alleen 'klein' is een echt Nederlands woord — met ei. Andere opties bestaan niet." }],
           woorden: [{ woord: "klein", uitleg: "Niet groot. Bijvoeglijk naamwoord met ei." }],
@@ -313,7 +313,7 @@ const steps = [
         q: "Welk woord heeft **ou** (niet au)?",
         options: ["mouw","mauw","mouwe","mauwe"],
         answer: 0,
-        wrongHints: [null,"Bestaat niet — 'mouw' is correct met ou.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
+        wrongHints: [null,"De 'au'-spelling klopt niet bij deze klank — denk aan oud, gauw.","Geen Nederlandse spelling.","Geen Nederlandse spelling."],
         uitlegPad: {
           stappen: [{ titel: "mouw = ou", tekst: "Mouw (deel van trui/jas) heeft ou. 'Mauw' is geen NL woord (kat zegt miauw)." }],
           woorden: [{ woord: "mouw", uitleg: "Deel van een trui/jas/shirt waarin je arm zit." }],
@@ -334,7 +334,7 @@ const steps = [
         q: "**'Het is heel ____ buiten'** (= zeer lage temperatuur):",
         options: ["koud","kaud","kouwd","koudt"],
         answer: 0,
-        wrongHints: [null,"Met ou niet au.","Geen Nederlandse spelling.","Geen extra t — 'koud' is bijvoeglijk."],
+        wrongHints: [null,"De 'au'-spelling klopt niet bij deze klank — denk aan oud, gauw.","Geen Nederlandse spelling.","Geen extra t — bijvoeglijk naamwoord eindigt zonder t."],
         uitlegPad: {
           stappen: [{ titel: "koud = ou", tekst: "Koud hoort in -oud-rijtje: oud, koud, goud, zout — allemaal ou." }],
           woorden: [{ woord: "koud", uitleg: "Lage temperatuur. Bijvoeglijk naamwoord met ou." }],
@@ -348,7 +348,7 @@ const steps = [
         q: "**'Hij rijd / rijdt op zijn fiets'**: welke is goed?",
         options: ["rijdt","rijd","rijds","rijden"],
         answer: 0,
-        wrongHints: [null,"Bij hij/zij = stam (rijd) + t = rijdt.","-s is geen NL vervoeging.","-en is voor meervoud."],
+        wrongHints: [null,"Bij 'hij' krijg je geen kale stam — denk aan de regel.","-s is geen Nederlandse vervoeging.","-en is voor meervoud (wij/zij)."],
         uitlegPad: {
           stappen: [{ titel: "Hij/zij/het + stam + t", tekst: "Werkwoord rijden → stam = rijd. Hij/zij + stam + t = rijdt." }],
           woorden: [{ woord: "rijdt", uitleg: "3e persoon enkelvoud van rijden (hij/zij/het rijdt)." }],
@@ -533,7 +533,7 @@ const steps = [
       { q: "Schrijf juist: 'Het is k___d.'", options: ["ou","au","au(?)","ouw"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — 'koud' geen w."] },
       { q: "Schrijf juist: 'Hij is een vr___w.'", options: ["ou","au","ouw","aw"], answer: 0, wrongHints: [null, "Niet.", "Bijna — letter na ou is w.", "Engels."] },
       { q: "Schrijf juist: 'Wat g___f van die hond.'", options: ["au","ou","auw","ouw"], answer: 0, wrongHints: [null, "Niet — verkeerde klank.", "Bijna — letter na au is w.", "Niet."] },
-      { q: "Schrijf juist: 'Mijn k___s is opgebroken.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Schrijf juist: 'Mijn k___s is opgebroken.'", options: ["ou","au","aw","ow"], answer: 0, wrongHints: [null, "Niet — verkeerde klank.", "Geen Nederlandse spelling.", "Geen Nederlandse spelling."] },
       { q: "Schrijf juist: 'Het is mijn p___s ze.'", options: ["au","ou","aw","ow"], answer: 0, wrongHints: [null, "Niet — andere klank.", "Niet.", "Niet."] },
       { q: "Schrijf juist: 'Vergeet jouw bril niet, ___!'", options: ["wijsneus","weisneus","wijsneuws","wysneus"], answer: 0, wrongHints: [null, "Niet — geen 'ei'-woord.", "Niet — geen w.", "Niet — geen y."] },
     ],

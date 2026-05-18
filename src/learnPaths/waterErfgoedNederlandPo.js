@@ -280,7 +280,7 @@ const steps = [
         q: "Welke is **NIET** onderdeel van de Deltawerken?",
         options: ["Afsluitdijk", "Oosterscheldekering", "Maeslantkering", "Haringvlietdam"],
         answer: 0,
-        wrongHints: [null, "Onderdeel.", "Onderdeel.", "Onderdeel."],
+        wrongHints: [null, "Wel een Deltawerk — beschermt Zeeland tegen stormvloed.", "Wel een Deltawerk — beschermt Rotterdam.", "Wel een Deltawerk — sluit het Haringvliet af."],
         uitlegPad: {
           stappen: [
             { titel: "Let op de vraag — NIET!", tekst: "Het woord **NIET** verandert de vraag. Je zoekt het ENE antwoord dat **buiten** de Deltawerken valt." },
@@ -344,19 +344,19 @@ const steps = [
         q: "Wat betekent **NAP**?",
         options: ["Normaal Amsterdams Peil", "Nederlandse Algemene Polder", "Nationaal Aardrijkskunde Plan", "Nieuwe Afsluit-Polder"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Bestaande afkorting, maar niet voor NAP.", "Bestaat niet als officiële Nederlandse afkorting.", "Bestaat niet als officiële Nederlandse afkorting."],
       },
       {
         q: "Welke jongste provincie ligt **helemaal op drooggemaakte polder**?",
         options: ["Flevoland", "Friesland", "Limburg", "Drenthe"],
         answer: 0,
-        wrongHints: [null, "Oude provincie.", "Oude provincie.", "Oude provincie."],
+        wrongHints: [null, "Friesland is een eeuwenoude provincie, geen polder.", "Limburg ligt op vaste grond in het zuiden.", "Drenthe is eeuwenoud, geen polder."],
       },
       {
         q: "In welk jaar was de **Watersnoodramp**?",
         options: ["1953", "1832", "1953 én 1932", "1900"],
         answer: 0,
-        wrongHints: [null, "Te lang geleden.", "Twee jaren — alleen 1953 = ramp.", "Niet."],
+        wrongHints: [null, "Te lang geleden — een andere storm in dat jaar.", "Maar één van de twee jaren klopt — kijk goed.", "Geen ramp in dat jaar."],
       },
       {
         q: "Welke kering is **bij Rotterdam**?",
@@ -376,7 +376,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen korenmolen.", "Geen kering — een pomp.", "Geen brug."],
       },
-      { q: "**Deltawerken** beschermen NL tegen?", options: ["Overstroming (stormvloed)","Aardbeving","Tornado","Lawine"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet relevant."] },
+      { q: "**Deltawerken** beschermen NL tegen?", options: ["Overstroming (stormvloed)","Aardbeving","Tornado","Lawine"], answer: 0, wrongHints: [null, "Aardbevingen komen nauwelijks in NL voor — niks om tegen te beschermen.", "Tornado's komen zelden voor en zijn niet de reden voor de Deltawerken.", "Lawines zijn alleen in bergen, niet in NL."] },
       { q: "Een **polder** is?", options: ["Drooggelegd land beneden zeeniveau","Een rivier","Een stad","Een dijk"], answer: 0, wrongHints: [null, "Niet.", "Niet — landgebied.", "Beschermt polder."] },
       { q: "Wat is de **Afsluitdijk**?", options: ["Dijk Friesland↔Noord-Holland (sloot Zuiderzee af)","Een molen","Een gemaal","Een spoorbrug"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
       { q: "Welk **percentage** van NL ligt onder zee-niveau?", options: ["Ongeveer 25%","60%","5%","90%"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
