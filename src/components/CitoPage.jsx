@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import styles from "../styles.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
@@ -95,7 +95,15 @@ const ONDERDELEN = [
 ];
 
 export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, userRole, userLevel, userSchoolType, onGoExamens }) {
-  const [groep, setGroep] = useState("8");
+  // QW-C (4-agent-audit 2026-05-18): bij directe deeplink (/cito zonder
+  // role-flow) was groep hard "8" — een groep-6-kind kreeg groep-8-stof.
+  // Default nu op userLevel (groep 7/8) of "8" als ouder/gast.
+  const initialGroep = useMemo(() => {
+    const m = String(userLevel || "").match(/(\d)/);
+    if (m && (m[1] === "6" || m[1] === "7" || m[1] === "8")) return m[1];
+    return "8";
+  }, [userLevel]);
+  const [groep, setGroep] = useState(initialGroep);
   const [openOnderdelen, setOpenOnderdelen] = useState(() => new Set());
   const [vragenAantal, setVragenAantal] = useState({}); // per onderdeel-id
 

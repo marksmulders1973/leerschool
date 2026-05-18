@@ -299,6 +299,31 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                   ? `Nog ${minLeft} ${minLeft === 1 ? "minuut" : "minuten"} tot je dagelijkse leerkwartier.`
                   : "Bijna klaar — nog even doorzetten."}
               </div>
+              {/* QW-B (4-agent-audit 2026-05-18): bij 0 min toon een directe
+                  CTA zodat een nieuwe gebruiker niet hoeft te zoeken naar
+                  een vak. Vouwt vakken-grid open via window scroll. */}
+              {minDone === 0 && !completed && (
+                <button
+                  onClick={() => {
+                    const grid = document.querySelector('.vakken-grid');
+                    if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  style={{
+                    marginTop: 8,
+                    width: "100%",
+                    padding: "8px 14px",
+                    background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
+                    border: "none",
+                    borderRadius: 8,
+                    color: "#fff",
+                    fontFamily: "var(--font-display)",
+                    fontSize: 13, fontWeight: 700,
+                    cursor: "pointer",
+                  }}
+                >
+                  ▶ Start je leerkwartier
+                </button>
+              )}
             </div>
           );
         })()}

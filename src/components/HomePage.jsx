@@ -1435,6 +1435,20 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 blijven bestaan; alleen de homepage-knop is verwijderd. */}
             {/* Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-link verplaatst
                 van hero-tegel naar footer. Niet ICP, maar route blijft bereikbaar. */}
+            {/* QW-A (4-agent-audit 2026-05-18): "Voor ouders"-link terug op
+                homepage. Ouder-dashboard bestond al maar prop onOuderDashboard
+                werd niet aangeroepen — was via UI onbereikbaar. Footer-link
+                naast leerkracht houdt het discreet (geen hero-tegel-bloat). */}
+            {onOuderDashboard && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "#a78bfa", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+                onClick={onOuderDashboard}
+              >
+                <span>👨‍👩‍👧</span>
+                Voor ouders
+              </button>
+            )}
             <button
               type="button"
               style={{ background: "none", border: "none", color: "#00897b", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
