@@ -77,7 +77,7 @@ const steps = [
         q: "Welke stad was het **financiële centrum**?",
         options: ["Amsterdam", "Rotterdam", "Utrecht", "Den Haag"],
         answer: 0,
-        wrongHints: [null, "Belangrijke haven maar Amsterdam was financieel hart.", "Utrecht was groot maar geen handelscentrum.", "Den Haag was bestuurlijk."],
+        wrongHints: [null, "Belangrijke haven, maar niet de bank-stad in de Gouden Eeuw.", "Utrecht was groot maar geen handelscentrum.", "Den Haag was bestuurlijk centrum, geen handelscentrum."],
       },
     ],
   },
@@ -92,7 +92,7 @@ const steps = [
         q: "Wat betekent **VOC**?",
         options: ["Verenigde Oostindische Compagnie", "Volkswagen Oude Cars", "Vrije Oranjes Compagnie", "Vlaamse Oost Coalitie"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Volkswagen werd pas in 1937 opgericht, eeuwen na de Gouden Eeuw.", "Niet bestaande organisatie.", "Vlaanderen had geen aparte compagnie in de Gouden Eeuw."],
       },
       {
         q: "Wanneer werd de **VOC opgericht**?",
@@ -178,7 +178,7 @@ const steps = [
         q: "Hoe heet de **handelsroute** Afrika→Amerika→Europa→Afrika?",
         options: ["Driehoekshandel", "Cirkelroute", "Vier-hoek", "Snelheidsroute"],
         answer: 0,
-        wrongHints: [null, "Niet de term.", "Niet de term.", "Niet de term."],
+        wrongHints: [null, "Het patroon is geen cirkel maar drie hoeken.", "De route had geen vier hoeken — telkens 3.", "De term gaat over de vorm, niet de snelheid."],
       },
       {
         q: "Wanneer schafte Nederland **slavernij af** in koloniën?",
@@ -238,7 +238,7 @@ const steps = [
         q: "Wat is **VOC**?",
         options: ["Verenigde Oostindische Compagnie", "Vrije Oranje-Coalitie", "Volkswagen Oost-Coalitie", "Vereniging Olie-Centra"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Geen politieke coalitie, maar een handelsbedrijf.", "Volkswagen werd pas in 1937 opgericht, niet in 1602.", "Olie was geen Gouden Eeuw-handelsproduct."],
       },
       {
         q: "Wie schilderde **De Nachtwacht**?",
@@ -250,7 +250,7 @@ const steps = [
         q: "Welk **eiland was kort Nederlands** maar werd New York?",
         options: ["Nieuw-Amsterdam (Manhattan)", "Nieuw-Sicilië", "Nieuw-Madagaskar", "Nieuw-Cuba"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Bestaat niet.", "Bestaat niet."],
+        wrongHints: [null, "Sicilië is een Italiaans eiland in de Middellandse Zee.", "Madagaskar is een Afrikaans eiland, geen NL-kolonie.", "Cuba was Spaans, geen NL-kolonie."],
       },
       {
         q: "Wanneer werd **slavernij afgeschaft** in NL-koloniën?",

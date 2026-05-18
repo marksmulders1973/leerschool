@@ -112,13 +112,13 @@ const steps = [
         q: "Wat is **bevolkingsdichtheid**?",
         options: ["Mensen per km²", "Aantal kinderen", "Aantal landen", "Aantal steden"],
         answer: 0,
-        wrongHints: [null, "Niet dichtheid.", "Niet dichtheid.", "Niet dichtheid."],
+        wrongHints: [null, "Aantal kinderen = geboortecijfer, ander begrip.", "Aantal landen heeft niets met dichtheid te maken.", "Aantal steden is geen dichtheid-maat."],
       },
       {
         q: "Waar wonen weinig mensen?",
         options: ["Woestijnen + poolgebieden + hooggebergte", "Kustgebieden", "Rivierdalen", "Vlaktes"],
         answer: 0,
-        wrongHints: [null, "Veel mensen.", "Veel mensen.", "Veel mensen."],
+        wrongHints: [null, "Aan de kust wonen juist veel mensen — water + handel.", "Rivierdalen zijn vruchtbaar, dus dichtbevolkt.", "Vlaktes zijn handig voor steden en landbouw."],
       },
       {
         q: "**10 miljoen inwoners** op **100.000 km²**. Dichtheid?",
@@ -211,7 +211,7 @@ const steps = [
         q: "Welke is een **pull-factor**?",
         options: ["Goed werk + veilig land", "Oorlog", "Hongersnood", "Ramp"],
         answer: 0,
-        wrongHints: [null, "Push.", "Push.", "Push."],
+        wrongHints: [null, "Oorlog duwt mensen wég — dat is een push-factor.", "Honger duwt mensen wég — push-factor.", "Een ramp duwt mensen wég — push-factor."],
       },
       {
         q: "Wat is **brain drain**?",
@@ -283,7 +283,7 @@ const steps = [
         q: "Welke is een **push-factor**?",
         options: ["Oorlog in het land", "Goede school", "Veiligheid", "Werk"],
         answer: 0,
-        wrongHints: [null, "Pull.", "Pull.", "Pull."],
+        wrongHints: [null, "Een goede school trekt mensen aan — dat is een pull-factor.", "Veiligheid trekt aan — pull-factor.", "Werk trekt aan — pull-factor."],
       },
       {
         q: "Welk **land** heeft sinds 2023 de meeste mensen?",
@@ -313,7 +313,7 @@ const steps = [
         q: "Welke is een **pull-factor** voor migratie?",
         options: ["Beter werk in nieuw land", "Oorlog in eigen land", "Geen geld", "Hongersnood"],
         answer: 0,
-        wrongHints: [null, "Push-factor.", "Push-factor.", "Push-factor."],
+        wrongHints: [null, "Oorlog duwt mensen wég — push-factor.", "Geen geld duwt mensen wég — push-factor.", "Honger duwt mensen wég — push-factor."],
       },
       {
         q: "**Open vraag**: hoeveel **inwoners** heeft Nederland ongeveer (in miljoen)?",
