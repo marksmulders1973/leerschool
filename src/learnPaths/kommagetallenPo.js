@@ -193,7 +193,7 @@ const steps = [
         q: "**0,4 × 0,2** = ?",
         options: ["0,08", "0,8", "8", "0,008"],
         answer: 0,
-        wrongHints: [null, "Te veel — heb je goed op de komma gelet? 4 × 2 = 8, dan 2 plaatsen vanaf rechts: 0,08.", "Komma vergeten.", "Te ver naar rechts."],
+        wrongHints: [null, "Te veel — hoeveel decimalen heeft elk getal? Tel ze op.", "Komma vergeten — er moet er één in.", "Te ver naar links — 1 decimaal te veel."],
       },
       {
         q: "**3,2 × 5** = ?",
@@ -221,7 +221,7 @@ const steps = [
         q: "**1,2 × 1,2** = ?",
         options: ["1,44", "1,4", "1,2", "2,4"],
         answer: 0,
-        wrongHints: [null, "Net niet — 12 × 12 = 144, dan 2 decimalen → 1,44.", "Te weinig — controleer 1,2 × 1,2.", "Optelling.", "Optelling."],
+        wrongHints: [null, "Net niet — hoeveel decimalen krijg je bij 1,2 × 1,2 samen?", "Te weinig — vergeet de decimalen niet.", "Dat is een optelling (1,2 + 1,2), geen vermenigvuldiging.", "Lijkt op optelling, niet vermenigvuldiging."],
       },
       {
         q: "Bij **0,5 × 0,2** tel je hoeveel **decimalen** op om de komma in het antwoord te plaatsen?",
@@ -355,7 +355,7 @@ const steps = [
         q: "**0,6 × 0,4** = ?",
         options: ["0,24", "2,4", "0,024", "0,1"],
         answer: 0,
-        wrongHints: [null, "Net niet — 6 × 4 = 24, 2 decimalen → 0,24.", "Komma te ver naar rechts — 2 plaatsen vanaf rechts moet.", "Komma 1 plaats te ver naar links.", "Veel te weinig — controleer 6 × 4 = 24, met 2 decimalen → 0,24."],
+        wrongHints: [null, "Net niet — eerst getallen vermenigvuldigen, dan decimalen tellen.", "Komma te ver naar rechts — kijk naar het aantal decimalen.", "Komma 1 plaats te ver naar links.", "Veel te weinig — vergeet niet de gehele berekening."],
       },
       {
         q: "**8,4 ÷ 0,7** = ?",
@@ -367,13 +367,13 @@ const steps = [
         q: "Een doos met **0,25 kg** koekjes. **4 dozen** wegen samen?",
         options: ["1 kg", "0,5 kg", "100 kg", "0,1 kg"],
         answer: 0,
-        wrongHints: [null, "Net niet — 4 × 0,25 = 1,00 = 1 kg.", "Te weinig — dat is 2 dozen.", "Komma weg.", "Te weinig — dat is maar 1 koekje misschien."],
+        wrongHints: [null, "Net niet — 4 × 0,25 is bijna een rond getal, denk goed na.", "Te weinig — dat is maar 2 dozen.", "Komma weg — dat is 100× te veel.", "Te weinig — dat is maar 1 koekje misschien."],
       },
       {
         q: "**2,4 m** stof = **... cm**?",
         options: ["240 cm", "24 cm", "2400 cm", "2,4 cm"],
         answer: 0,
-        wrongHints: [null, "Net niet — 1 m = 100 cm, dus 2,4 m = 2,4 × 100 = 240 cm.", "Te weinig — komma 1 plaats verkeerd.", "Te veel — komma 1 plaats te ver.", "Dat is hetzelfde getal — heb je niet omgerekend?"],
+        wrongHints: [null, "Net niet — hoeveel cm zit er in 1 m?", "Te weinig — komma 1 plaats verkeerd.", "Te veel — komma 1 plaats te ver.", "Dat is hetzelfde getal — heb je niet omgerekend?"],
         uitlegPad: {
           stappen: [
             { titel: "1 m = 100 cm", tekst: "Vermenigvuldig met 100: 2,4 × 100 = 240. Dus 2,4 m = 240 cm." },

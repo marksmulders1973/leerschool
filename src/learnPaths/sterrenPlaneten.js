@@ -135,7 +135,7 @@ const steps = [
         q: "Hoe heet onze sterrenstelsel?",
         options: ["Melkweg","Andromeda","Zonnestelsel","Pluto"],
         answer: 0,
-        wrongHints: [null,"Dat is onze BUURsterrenstelsel.","Dat is alleen de zon + planeten — onderdeel van Melkweg.","Dat is een dwergplaneet."],
+        wrongHints: [null,"Dat is een ander sterrenstelsel — onze BUURMAN.","Dat is alleen onze zon + planeten — een onderdeel ervan, niet het geheel.","Dat is een dwergplaneet, geen sterrenstelsel."],
         uitlegPad: {
           stappen: [{ titel: "Melkweg = onze sterrenstelsel", tekst: "Onze zon is één van 200-400 miljard sterren in de Melkweg. Spiraalvormig met ons in de buitenwijken." }],
           woorden: [{ woord: "sterrenstelsel", uitleg: "verzameling sterren bijeen gehouden door zwaartekracht" }],
@@ -219,7 +219,7 @@ const steps = [
         q: "Welke planeet is **het heetst** op het oppervlak?",
         options: ["Venus","Mercurius","Mars","Jupiter"],
         answer: 0,
-        wrongHints: [null,"Door dikke broeikas-atmosfeer is Venus heter.","Mercurius is dichterbij maar heeft geen atmosfeer.","Mars is juist koud.","Jupiter is veel verder weg."],
+        wrongHints: [null,"Het lijkt logisch (dichtbij de zon), maar er ontbreekt een atmosfeer die warmte vasthoudt.","Mars is juist koud — verder van de zon en dunne atmosfeer.","Jupiter is veel verder weg + gasreus."],
         uitlegPad: {
           stappen: [{ titel: "Venus = heetst (~465°C)", tekst: "Venus heeft dikke CO₂-atmosfeer → broeikaseffect op steroïden. Houdt warmte vast → ~465°C oppervlak. Hete dan Mercurius (die geen atmosfeer heeft)." }],
           woorden: [{ woord: "broeikaseffect", uitleg: "warmte vasthouden door atmosfeer" }],
@@ -233,7 +233,7 @@ const steps = [
         q: "Hoe heet de helderste object aan de avondhemel (na de maan)?",
         options: ["Venus","Mercurius","Mars","Jupiter"],
         answer: 0,
-        wrongHints: [null,"Venus = Avondster.","Mercurius is moeilijk te zien.","Mars is rood maar minder helder.","Jupiter is wel zichtbaar maar minder helder."],
+        wrongHints: [null,"Mercurius is moeilijk te zien — staat dicht bij de zon.","Mars is rood maar veel minder helder.","Jupiter is zichtbaar maar minder helder dan deze 'avondster'."],
         uitlegPad: {
           stappen: [{ titel: "Venus = Avondster", tekst: "Venus is na de maan het helderste object aan onze hemel. Vaak zichtbaar net na zonsondergang (Avondster) of vroeg voor zonsopkomst (Morgenster)." }],
           woorden: [{ woord: "Avondster/Morgenster", uitleg: "twee namen voor Venus, afhankelijk van tijd" }],
@@ -415,7 +415,7 @@ const steps = [
         q: "Welke planeet heeft **de sterkste winden** in het zonnestelsel?",
         options: ["Neptunus","Aarde","Jupiter","Saturnus"],
         answer: 0,
-        wrongHints: [null,"Aarde heeft hooguit 400 km/u (orkaan).","Jupiter heeft snelle winden maar Neptunus is sneller.","Idem."],
+        wrongHints: [null,"Aarde heeft hooguit 400 km/u (orkaan) — niet sterrenstelsel-record.","Jupiter is groot maar de winden zijn niet het hardst.","Saturnus heeft ringen maar geen recordwinden."],
         uitlegPad: {
           stappen: [{ titel: "Neptunus = ~2100 km/u winden", tekst: "Neptunus heeft de hardste winden in ons zonnestelsel — tot 2100 km/u. Vergelijking: zwaarste aardse orkaan ~400 km/u." }],
           woorden: [{ woord: "supersonische winden", uitleg: "sneller dan geluid (1234 km/u)" }],
@@ -570,7 +570,7 @@ const steps = [
       { q: "Welke planeet noemen we de **rode planeet**?", options: ["Mars","Venus","Jupiter","Saturnus"], answer: 0, wrongHints: [null, "Heet, geel.", "Reuzenplaneet.", "Ringen."] },
       { q: "Welke planeet is **grootst**?", options: ["Jupiter","Saturnus","Neptunus","Aarde"], answer: 0, wrongHints: [null, "Tweede.", "Vierde.", "Klein."] },
       { q: "**Maan** van de aarde — hoeveel?", options: ["1","2","0","5"], answer: 0, wrongHints: [null, "Niet.", "Wel een.", "Niet."] },
-      { q: "Welke planeet heeft veel **ringen**?", options: ["Saturnus","Mars","Venus","Mercurius"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Welke planeet heeft veel **ringen**?", options: ["Saturnus","Mars","Venus","Mercurius"], answer: 0, wrongHints: [null, "Mars is rood, geen ringen.", "Venus is heet, geen ringen.", "Mercurius is klein en dicht bij de zon."] },
       { q: "Hoeveel dagen duurt een **jaar** op aarde?", options: ["365","100","30","1000"], answer: 0, wrongHints: [null, "Niet.", "Maand.", "Te veel."] },
       { q: "Hoe lang duurt 1 **dag** op aarde?", options: ["24 uur","12 uur","365 dagen","1 jaar"], answer: 0, wrongHints: [null, "Halve dag.", "Jaar.", "Niet."] },
       { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },

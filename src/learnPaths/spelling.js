@@ -317,7 +317,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Vrijheid is een 'ij'-woord, geen 'ei'.",
+          "Past de 'ei' wel bij de regels voor deze klank? Denk aan vergelijkbare woorden.",
           "De y wordt in modern Nederlands niet meer gebruikt voor deze klank — wel ij.",
           "De combinatie 'ey' bestaat niet in het Nederlands.",
         ],
@@ -365,7 +365,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Auto is een van de bekendste au-woorden. Niet ou.",
+          "Past dit bij de au-of-ou-regel? Denk aan andere woorden met dezelfde klank.",
           "Ouwto bestaat niet — geen 'w' in dit woord.",
           "Auwto bestaat ook niet. Het is gewoon: au + to.",
         ],
@@ -390,7 +390,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Koud is een typisch ou-woord — heeft een familie: koud, kouder, koudst.",
+          "Hoort 'au' of 'ou' bij deze klank? Vergelijk met 'oud' en 'gauw'.",
           "Kowd bestaat niet in Nederlands. We gebruiken 'ou' voor deze klank.",
           "Cowd is Engels (cold). Nederlands schrijft het anders.",
         ],
@@ -829,7 +829,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Manen = meervoud van maan (boom-/maan-/zee-achtig). 'Mannen' = meervoud van man (mens) met dubbele n vanwege korte a.",
+          "Dat is meervoud van 'maan' (lange aa). Maar de vraag gaat over 'man' — korte a.",
           "Geen Nederlands meervoud eindigt op -ens.",
           "Het Nederlandse meervoud eindigt op -en, niet -e. Plus: vanwege korte klank moet medeklinker verdubbeld.",
         ],
@@ -959,7 +959,7 @@ const steps = [
         wrongHints: [
           null,
           "Na een -y aan het eind volgt apostrof + s om de y-klank te bewaren in het meervoud.",
-          "Babies is Engels. In Nederlands: baby's.",
+          "Babies is Engelse spelling — Nederlands schrijft het anders.",
           "Geen koppelteken voor meervoud — apostrof.",
         ],
         uitlegPad: {
