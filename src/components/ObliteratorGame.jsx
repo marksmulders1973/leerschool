@@ -4391,10 +4391,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         return;
       }
       if (sc.type === "loop") {
-        // Looping in 3 stukken: aanloop-ramp links → cirkel → uitloop-ramp rechts.
-        // Lit-from-above kleurverloop op voorste rail + ramps voor 3D-effect.
-        // Achterste rail krijgt parallax-shift voor diepte. Glow-halo signaleert
-        // interactiviteit. Gat aan onderkant (0.4π-0.6π) = entry/exit.
+        // Achtbaan-stijl looping (Mark wens 2026-05-18, ref-afbeelding):
+        // gele dubbele rails met dwarsbalkjes ('ladder'-textuur) + groene
+        // verticale staanders/pijlers links en rechts onder de loop.
+        // Cartoon-feel, niet meer donker metaal.
         const cx = sc.x + sc.breedte / 2;
         const cy = sc.y + sc.hoogte / 2;
         const rx = sc.breedte / 2;
@@ -4409,88 +4409,133 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const rEntryX = cx + rx * Math.cos(0.4 * Math.PI);
         const rEntryY = cy + ry * Math.sin(0.4 * Math.PI);
 
-        // Linear gradient voor 3D: lit-from-above (lichter top, donker bot)
-        const trackGrad = ctx.createLinearGradient(0, sc.y - 4 * SCHAAL, 0, footY + 4 * SCHAAL);
-        trackGrad.addColorStop(0,    "#7a7a88");
-        trackGrad.addColorStop(0.45, "#3a3a44");
-        trackGrad.addColorStop(1,    "#15151c");
+        const RAIL_GAP = 9 * SCHAAL;        // afstand tussen binnen- en buitenrail
+        const RAIL_DIK = 4 * SCHAAL;        // dikte van elke rail
+        const railOuter = "#f59e0b";        // helder oranje-geel (top)
+        const railInner = "#d97706";        // donker-oranje (bottom)
+        const railShadow = "#92400e";       // diepe schaduw
 
-        // 1. Glow-halo (oranje signaal, alleen om de cirkel)
+        // 1) Groene verticale staanders/pijlers — twee onder de loop, lopen
+        // van de zijkanten van de cirkel-basis recht naar beneden tot de grond.
+        const pijlerW = 8 * SCHAAL;
+        const pijlerLx = cx - rx * 0.85;
+        const pijlerRx = cx + rx * 0.85;
+        const pijlerTopY = cy + ry * 0.55; // waar pijler de loop raakt
+        const pijlerBotY = footY + 8 * SCHAAL;
+        ctx.fillStyle = "#16a34a";
+        ctx.fillRect(pijlerLx - pijlerW / 2, pijlerTopY, pijlerW, pijlerBotY - pijlerTopY);
+        ctx.fillRect(pijlerRx - pijlerW / 2, pijlerTopY, pijlerW, pijlerBotY - pijlerTopY);
+        // Pijler-highlight (links lichter)
+        ctx.fillStyle = "rgba(132,204,80,0.75)";
+        ctx.fillRect(pijlerLx - pijlerW / 2, pijlerTopY, pijlerW * 0.3, pijlerBotY - pijlerTopY);
+        ctx.fillRect(pijlerRx - pijlerW / 2, pijlerTopY, pijlerW * 0.3, pijlerBotY - pijlerTopY);
+        // Pijler-schaduw rechts
+        ctx.fillStyle = "rgba(20,80,40,0.5)";
+        ctx.fillRect(pijlerLx + pijlerW * 0.15, pijlerTopY, pijlerW * 0.25, pijlerBotY - pijlerTopY);
+        ctx.fillRect(pijlerRx + pijlerW * 0.15, pijlerTopY, pijlerW * 0.25, pijlerBotY - pijlerTopY);
+        // Voetstuk donker rechthoekje
+        ctx.fillStyle = "#0a3a18";
+        ctx.fillRect(pijlerLx - pijlerW * 0.8, pijlerBotY - 4 * SCHAAL, pijlerW * 1.6, 4 * SCHAAL);
+        ctx.fillRect(pijlerRx - pijlerW * 0.8, pijlerBotY - 4 * SCHAAL, pijlerW * 1.6, 4 * SCHAAL);
+
+        // 2) Glow-halo om de cirkel (subtiele signalering, niet meer dominant)
         ctx.save();
-        ctx.shadowBlur = 22;
-        ctx.shadowColor = "#ffaa20";
-        ctx.strokeStyle = "rgba(255, 170, 32, 0.40)";
-        ctx.lineWidth = 14 * SCHAAL;
+        ctx.shadowBlur = 16;
+        ctx.shadowColor = "rgba(255,180,40,0.7)";
+        ctx.strokeStyle = "rgba(255,180,40,0.0)";
+        ctx.lineWidth = 1;
         ctx.beginPath();
-        ctx.ellipse(cx, cy, rx, ry, 0, startAng, endAng, false);
+        ctx.ellipse(cx, cy, rx + RAIL_GAP / 2, ry + RAIL_GAP / 2, 0, startAng, endAng, false);
         ctx.stroke();
         ctx.restore();
 
-        // 2. Aanloop-ramp links + uitloop-ramp rechts. Twee passes: donkere
-        // schaduw-laag + lichtere voorgrond met gradient zodat ze 3D ogen.
-        const rampLen = 60 * SCHAAL;
-        ctx.lineCap = "round";
-        // Schaduw-laag (achterkant)
-        ctx.strokeStyle = "#10101a";
-        ctx.lineWidth = 13 * SCHAAL;
-        ctx.beginPath();
-        ctx.moveTo(sc.x - rampLen, footY);
-        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY + 2 * SCHAAL, lEntryX, lEntryY);
-        ctx.moveTo(sc.x + sc.breedte + rampLen, footY);
-        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY + 2 * SCHAAL, rEntryX, rEntryY);
-        ctx.stroke();
-        // Voorgrond met gradient
-        ctx.strokeStyle = trackGrad;
-        ctx.lineWidth = 10 * SCHAAL;
-        ctx.beginPath();
-        ctx.moveTo(sc.x - rampLen, footY);
-        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY, lEntryX, lEntryY);
-        ctx.moveTo(sc.x + sc.breedte + rampLen, footY);
-        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY, rEntryX, rEntryY);
-        ctx.stroke();
-        // Witte highlight bovenop ramp-curves voor extra reflectie
-        ctx.strokeStyle = "rgba(220, 220, 235, 0.45)";
-        ctx.lineWidth = 1.5 * SCHAAL;
-        ctx.beginPath();
-        ctx.moveTo(sc.x - rampLen, footY - 4 * SCHAAL);
-        ctx.quadraticCurveTo(lEntryX - 18 * SCHAAL, footY - 4 * SCHAAL, lEntryX - 1 * SCHAAL, lEntryY + 2 * SCHAAL);
-        ctx.moveTo(sc.x + sc.breedte + rampLen, footY - 4 * SCHAAL);
-        ctx.quadraticCurveTo(rEntryX + 18 * SCHAAL, footY - 4 * SCHAAL, rEntryX + 1 * SCHAAL, rEntryY + 2 * SCHAAL);
-        ctx.stroke();
-        ctx.lineCap = "butt"; // reset
-
-        // 3. Achterste rail (parallax shift naar links-boven voor diepte)
-        ctx.strokeStyle = "#15151c";
-        ctx.lineWidth = 10 * SCHAAL;
-        ctx.beginPath();
-        ctx.ellipse(cx - 7 * SCHAAL, cy - 5 * SCHAAL, rx, ry, 0, startAng, endAng, false);
-        ctx.stroke();
-
-        // 4. Voorste rail (hoofdloop) met linear gradient = lit-from-above 3D
-        ctx.strokeStyle = trackGrad;
-        ctx.lineWidth = 11 * SCHAAL;
-        ctx.beginPath();
-        ctx.ellipse(cx, cy, rx, ry, 0, startAng, endAng, false);
-        ctx.stroke();
-
-        // 5. Highlight bovenaan voorste rail (metaal-reflectie)
-        ctx.strokeStyle = "rgba(220, 220, 235, 0.65)";
-        ctx.lineWidth = 2 * SCHAAL;
-        ctx.beginPath();
-        ctx.ellipse(cx, cy - 2 * SCHAAL, rx + 1 * SCHAAL, ry + 1 * SCHAAL, 0, 1.15 * Math.PI, 1.85 * Math.PI, false);
-        ctx.stroke();
-
-        // 6. Track-segmenten (radiale dashes voor rails-detail)
-        ctx.strokeStyle = "rgba(110, 110, 125, 0.65)";
-        ctx.lineWidth = 1.5 * SCHAAL;
-        for (let a = 0.66 * Math.PI; a <= 2.34 * Math.PI; a += Math.PI * 0.10) {
-          const x1 = cx + (rx - 5 * SCHAAL) * Math.cos(a);
-          const y1 = cy + (ry - 5 * SCHAAL) * Math.sin(a);
-          const x2 = cx + (rx + 5 * SCHAAL) * Math.cos(a);
-          const y2 = cy + (ry + 5 * SCHAAL) * Math.sin(a);
+        // Helper: teken een ellipse-pad-segment
+        function tekenRailEllipse(rxx, ryy, kleur, dikte) {
+          ctx.strokeStyle = kleur;
+          ctx.lineWidth = dikte;
           ctx.beginPath();
-          ctx.moveTo(x1, y1);
-          ctx.lineTo(x2, y2);
+          ctx.ellipse(cx, cy, rxx, ryy, 0, startAng, endAng, false);
+          ctx.stroke();
+        }
+
+        // 3) Aanloop-ramps (links + rechts) — gele rails met dwarsbalkjes,
+        // tangentieel aan de loop. Twee evenwijdige rails.
+        const rampLen = 70 * SCHAAL;
+        ctx.lineCap = "round";
+
+        function tekenRamp(startX, eindX, eindY, ctrlX) {
+          // Buitenrail (boven) + binnenrail (onder)
+          for (const offset of [-RAIL_GAP / 2, RAIL_GAP / 2]) {
+            // Schaduwlaag
+            ctx.strokeStyle = railShadow;
+            ctx.lineWidth = RAIL_DIK + 2 * SCHAAL;
+            ctx.beginPath();
+            ctx.moveTo(startX, footY + offset);
+            ctx.quadraticCurveTo(ctrlX, footY + offset, eindX, eindY + offset);
+            ctx.stroke();
+            // Hoofdrail
+            ctx.strokeStyle = offset < 0 ? railOuter : railInner;
+            ctx.lineWidth = RAIL_DIK;
+            ctx.beginPath();
+            ctx.moveTo(startX, footY + offset);
+            ctx.quadraticCurveTo(ctrlX, footY + offset, eindX, eindY + offset);
+            ctx.stroke();
+          }
+        }
+        tekenRamp(sc.x - rampLen, lEntryX, lEntryY, lEntryX - 24 * SCHAAL);
+        tekenRamp(sc.x + sc.breedte + rampLen, rEntryX, rEntryY, rEntryX + 24 * SCHAAL);
+
+        // Dwarsbalkjes op de ramps
+        ctx.strokeStyle = railInner;
+        ctx.lineWidth = 2 * SCHAAL;
+        const aantalRampBalken = 6;
+        for (let r = 1; r < aantalRampBalken; r++) {
+          const t = r / aantalRampBalken;
+          // Links-ramp: lerp van (sc.x - rampLen, footY) naar (lEntryX, lEntryY)
+          const lxA = (1 - t) * (sc.x - rampLen) + t * lEntryX;
+          const lyA = (1 - t) * footY + t * lEntryY;
+          ctx.beginPath();
+          ctx.moveTo(lxA, lyA - RAIL_GAP / 2);
+          ctx.lineTo(lxA, lyA + RAIL_GAP / 2);
+          ctx.stroke();
+          // Rechts-ramp: lerp van (sc.x+sc.breedte+rampLen, footY) naar (rEntryX, rEntryY)
+          const rxA = (1 - t) * (sc.x + sc.breedte + rampLen) + t * rEntryX;
+          const ryA = (1 - t) * footY + t * rEntryY;
+          ctx.beginPath();
+          ctx.moveTo(rxA, ryA - RAIL_GAP / 2);
+          ctx.lineTo(rxA, ryA + RAIL_GAP / 2);
+          ctx.stroke();
+        }
+        ctx.lineCap = "butt";
+
+        // 4) Cirkel-rails — buitenrail (groter, lichter) + binnenrail (kleiner, donker)
+        // Schaduw onder
+        tekenRailEllipse(rx + RAIL_GAP / 2, ry + RAIL_GAP / 2, railShadow, RAIL_DIK + 2 * SCHAAL);
+        tekenRailEllipse(rx - RAIL_GAP / 2, ry - RAIL_GAP / 2, railShadow, RAIL_DIK + 2 * SCHAAL);
+        // Hoofdrails
+        tekenRailEllipse(rx + RAIL_GAP / 2, ry + RAIL_GAP / 2, railOuter, RAIL_DIK);
+        tekenRailEllipse(rx - RAIL_GAP / 2, ry - RAIL_GAP / 2, railInner, RAIL_DIK);
+        // Highlight bovenaan buitenrail (zon-reflectie)
+        ctx.strokeStyle = "rgba(255,235,170,0.85)";
+        ctx.lineWidth = 1.5 * SCHAAL;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, rx + RAIL_GAP / 2, ry + RAIL_GAP / 2, 0, 1.15 * Math.PI, 1.85 * Math.PI, false);
+        ctx.stroke();
+
+        // 5) Dwarsbalkjes ('ladder'-textuur) tussen binnen- en buitenrail
+        ctx.strokeStyle = railInner;
+        ctx.lineWidth = 2 * SCHAAL;
+        const aantalBalken = 26;
+        for (let i = 0; i < aantalBalken; i++) {
+          const t = i / aantalBalken;
+          const a = startAng + t * (endAng - startAng);
+          const xIn = cx + (rx - RAIL_GAP / 2) * Math.cos(a);
+          const yIn = cy + (ry - RAIL_GAP / 2) * Math.sin(a);
+          const xOut = cx + (rx + RAIL_GAP / 2) * Math.cos(a);
+          const yOut = cy + (ry + RAIL_GAP / 2) * Math.sin(a);
+          ctx.beginPath();
+          ctx.moveTo(xIn, yIn);
+          ctx.lineTo(xOut, yOut);
           ctx.stroke();
         }
       } else {
