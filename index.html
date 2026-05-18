@@ -247,6 +247,22 @@
         0%   { opacity: 0; transform: translateY(-3px); }
         100% { opacity: 0.7; transform: translateY(0); }
       }
+      /* 2026-05-18 (12-agent-audit, micro-celebrate): pulse-animatie op
+         de "Dat is juist!"-banner + pop-effect op de streak-counter. */
+      @keyframes lk-celebrate-pulse {
+        0%   { transform: scale(1); }
+        35%  { transform: scale(1.04); }
+        100% { transform: scale(1); }
+      }
+      @keyframes lk-streak-pop {
+        0%   { transform: scale(0.6) rotate(-8deg); opacity: 0; }
+        60%  { transform: scale(1.2) rotate(4deg); opacity: 1; }
+        100% { transform: scale(1) rotate(0deg); opacity: 1; }
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
       /* Hero-tiles grid: 4 even grote vierkanten (3D-teaser + 3 rol-tegels),
          responsive. Op alle viewports een 2×2 layout — geen 3-koloms variant
          zoals bij de oude 6-tegel-versie, want 4 op 3 col geeft een lelijk

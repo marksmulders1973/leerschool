@@ -340,6 +340,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [checkIdx, setCheckIdx] = useState(0);
   const [selected, setSelected] = useState(null);
   const [attempts, setAttempts] = useState(1);
+  // 2026-05-18 (12-agent-audit, A3 finding #3): micro-celebrate per correct
+  // antwoord ipv pas na hele stap. Streak verhoogt elke goed; reset bij fout
+  // of stap-wissel. Toont '🔥 N op rij!'-badge bij ≥2.
+  const [correctStreak, setCorrectStreak] = useState(0);
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [loaded, setLoaded] = useState(false);
   const [showMiniQuiz, setShowMiniQuiz] = useState(false);
@@ -479,6 +483,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setSelected(i);
     if (i === currentCheck.answer) {
       setLastWrongAnswer(null);
+      setCorrectStreak((s) => s + 1);
       // A2 (10-agent didactiek 2026-05-10): elke correcte poging telt als
       // beheerst — ook ná wrongHint + uitlegpad + retry. Anders straft het
       // systeem leerlingen die wel ECHT bijleren via de uitleg.
@@ -513,6 +518,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
       // kan reageren als de leerling om hulp vraagt.
       setLastWrongAnswer(currentCheck.options?.[i] || null);
+      setCorrectStreak(0);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
       // A11: spaced repetition — fout = reset naar morgen.
       srRecordSeen(pathId, stepIdx, realCheckIdx, false, attempts);
@@ -1240,10 +1246,24 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 display: "flex",
                 alignItems: "center",
                 gap: 8,
-                animation: "slideUp 0.2s ease",
+                animation: "slideUp 0.2s ease, lk-celebrate-pulse 0.55s ease-out",
               }}>
                 <span aria-hidden="true">✅</span>
                 <span>Dat is juist!</span>
+                {correctStreak >= 2 && (
+                  <span style={{
+                    marginLeft: "auto",
+                    padding: "2px 10px",
+                    background: "rgba(255,213,79,0.18)",
+                    border: "1px solid rgba(255,213,79,0.45)",
+                    borderRadius: 999,
+                    color: "#ffd54f",
+                    fontWeight: 800, fontSize: 13,
+                    animation: "lk-streak-pop 0.4s ease-out",
+                  }}>
+                    🔥 {correctStreak} op rij
+                  </span>
+                )}
               </div>
             )}
             {selected !== null && currentCheck.examenBron && currentCheck.explanation && (
