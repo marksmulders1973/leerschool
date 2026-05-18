@@ -489,7 +489,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                         </div>
                         <div style={{
                           display: "grid",
-                          gridTemplateColumns: "1fr 1fr",
+                          gridTemplateColumns: "1fr 1fr 1fr",
                           borderTop: "1px solid rgba(0,0,0,0.06)",
                         }}>
                           <button
@@ -501,16 +501,39 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               background: hasPaths ? "rgba(0,200,83,0.10)" : "rgba(255,179,0,0.10)",
                               color: hasPaths ? "#00a040" : "#b07300",
                               fontFamily: "var(--font-display)",
-                              fontSize: 12, fontWeight: 700,
+                              fontSize: 11, fontWeight: 700,
                               display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
                               borderRight: "1px solid rgba(0,0,0,0.06)",
                             }}
                           >
-                            <span style={{ fontSize: 16 }}>📚</span>
+                            <span style={{ fontSize: 15 }}>📚</span>
                             <span>Leren</span>
                             <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>
                               {hasPaths ? `${pathCount} paden` : "vraag maker aan"}
                             </span>
+                          </button>
+                          {/* Mark UX 2026-05-18: 3e optie "Per onderwerp" naast
+                              Leren (didactisch pad) en Oefenen-uit-je-boek (TextbookQuiz).
+                              Routeert nu naar LearnPathsHub (onPickLearn) — Mark wil
+                              zien hoe de 3-knop-layout oogt voordat we de echte
+                              topic-only-flow bouwen. */}
+                          <button
+                            onClick={onLeren}
+                            style={{
+                              border: "none",
+                              cursor: "pointer",
+                              padding: "9px 4px",
+                              background: "rgba(167,139,250,0.10)",
+                              color: "#7c3aed",
+                              fontFamily: "var(--font-display)",
+                              fontSize: 11, fontWeight: 700,
+                              display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
+                              borderRight: "1px solid rgba(0,0,0,0.06)",
+                            }}
+                          >
+                            <span style={{ fontSize: 15 }}>🔍</span>
+                            <span>Per onderwerp</span>
+                            <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>zoek topic</span>
                           </button>
                           <button
                             onClick={onOefenen}
@@ -521,11 +544,11 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               background: "rgba(0,212,255,0.10)",
                               color: "#0096b8",
                               fontFamily: "var(--font-display)",
-                              fontSize: 12, fontWeight: 700,
+                              fontSize: 11, fontWeight: 700,
                               display: "flex", flexDirection: "column", alignItems: "center", gap: 1,
                             }}
                           >
-                            <span style={{ fontSize: 16 }}>🎯</span>
+                            <span style={{ fontSize: 15 }}>🎯</span>
                             <span>Oefenen</span>
                             <span style={{ fontSize: 9, fontWeight: 500, opacity: 0.85 }}>uit je boek</span>
                           </button>
