@@ -4565,6 +4565,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "sociale-zekerheid-nl",
+    "file": "./socialeZekerheidNL.js",
+    "title": "Sociale zekerheid + welvaartsstaat NL",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "👴",
+    "referentieNiveau": "vmbo-gt-CSE",
+    "sloThema": "Geschiedenis VMBO — sociale zekerheid + welvaartsstaat NL 1900-nu",
+    "triggerKeywords": [
+      "sociale zekerheid",
+      "welvaartsstaat",
+      "AOW",
+      "WAO",
+      "WIA",
+      "Drees",
+      "Vadertje Drees",
+      "PvdA",
+      "Ongevallenwet",
+      "Kuyper",
+      "bijstand",
+      "ABW"
+    ],
+    "intro": "Van Kinderwetje (1874) via Drees + AOW (1957) tot vergrijzing + Toeslagenaffaire vandaag. Hoe Nederland van armoede-zonder-vangnet naar moderne welvaartsstaat ging — en de hedendaagse uitdagingen. VMB",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "spelling",
     "file": "./spelling.js",
     "title": "Spelling",

@@ -150,6 +150,7 @@ import schrijvenTekstenPo from "./schrijvenTekstenPo.js";
 import informatiebronnenPo from "./informatiebronnenPo.js";
 import staatsinrichting1848 from "./staatsinrichting1848.js";
 import kolonieIndonesie from "./kolonieIndonesie.js";
+import socialeZekerheidNL from "./socialeZekerheidNL.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -242,6 +243,7 @@ export const ALL_LEARN_PATHS = {
   "informatiebronnen-po": informatiebronnenPo,
   "staatsinrichting-1848": staatsinrichting1848,
   "kolonie-indonesie": kolonieIndonesie,
+  "sociale-zekerheid-nl": socialeZekerheidNL,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
