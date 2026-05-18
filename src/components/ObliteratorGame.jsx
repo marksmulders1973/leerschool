@@ -6215,11 +6215,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           });
           haaiSpawnTeller = 180 + Math.floor(Math.random() * 180); // 3-6 sec
         }
-        // Spawn vissen — max 2 tegelijk in beeld zodat de bubbel-shield
-        // niet doorlopend wordt ververst door pickups (haaien moeten gevaar
-        // blijven). Mark's feedback: 'heel veel minder van deze vissen, max 2'.
+        // Spawn vissen — max 1 tegelijk + grote pauze tussen spawns.
+        // 2026-05-18 (Mark wens): 'minder vissen — bescherming moet schaars
+        // genoeg blijven dat de haai-bonus iets waard is'.
         visSpawnTeller--;
-        if (dungeonFadeIn === 0 && visSpawnTeller <= 0 && vissen.length < 2) {
+        if (dungeonFadeIn === 0 && visSpawnTeller <= 0 && vissen.length < 1) {
           const waterTop = H - 70 * SCHAAL;
           vissen.push({
             x: W + 30 * SCHAAL,
@@ -6230,7 +6230,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             kleur: VIS_KLEUREN[Math.floor(Math.random() * VIS_KLEUREN.length)],
             snelheid: 0.6 + Math.random() * 0.6,
           });
-          visSpawnTeller = 240 + Math.floor(Math.random() * 180);
+          // 8-14 sec tussen spawns (was 4-7 sec)
+          visSpawnTeller = 480 + Math.floor(Math.random() * 360);
         }
         // SCHATKIST — zeldzame bonus-pickup tijdens dungeon (max 1 in beeld).
         // Springen/raken = +25 score + gouden burst. Mark's input: 'weinig
@@ -6323,12 +6324,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const sb = spelerBots();
           if (botst(sb, { x: h.x, y: h.y, breedte: h.breedte, hoogte: h.hoogte })) {
             if (bubbelFrames > 0) {
-              // Bubbel-shield vernietigt de haai i.p.v. dat speler damage neemt
+              // Bubbel-shield vernietigt de haai → speler krijgt BONUS-punten.
+              // 2026-05-18 (Mark wens): 'haai pakken met bescherming = bonus'.
               h.dood = true;
-              piep(440, 0.12, "sine", 0.12);
-              setTimeout(() => piep(880, 0.10, "sine", 0.08), 60);
-              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 22, "#80e8ff", { spread: 8, opwaarts: 2, leven: 30, grootte: 4, glow: 18 });
-              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 12, "#ffffff", { spread: 6, opwaarts: 1.5, leven: 22, grootte: 3, glow: 12 });
+              const haaiBonus = 200 * SCORE_MUL;
+              score += haaiBonus;
+              scoreElText = score;
+              shakeKracht = Math.max(shakeKracht, 10);
+              bloomFlashTeller = 8;
+              recordBannerTekst = `🦈 HAAI VERSLAGEN! +${haaiBonus}`;
+              recordBannerKleur = "#80e8ff";
+              recordBannerTeller = 110;
+              try { missieUpdateRef.current("score", score); } catch {}
+              piep(440, 0.12, "sine", 0.14);
+              setTimeout(() => piep(660, 0.10, "sine", 0.12), 60);
+              setTimeout(() => piep(990, 0.10, "sine", 0.12), 130);
+              setTimeout(() => piep(1320, 0.14, "sine", 0.10), 220);
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 30, "#80e8ff", { spread: 10, opwaarts: 3, leven: 36, grootte: 5, glow: 22 });
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 18, "#ffffff", { spread: 8, opwaarts: 2.5, leven: 28, grootte: 4, glow: 16 });
+              spawnParticles(h.x + h.breedte / 2, h.y + h.hoogte / 2, 12, "#ffd54f", { spread: 7, opwaarts: 3, leven: 32, grootte: 5, glow: 20 });
             } else {
               levenVerlies();
               h.dood = true;
@@ -6372,17 +6386,32 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         const kBox = { x: s.x, y: s.y + Math.sin(s.fase) * 3, breedte: s.breedte, hoogte: s.hoogte };
         if (!s.opgepakt && !loopActief && botst(sb, kBox)) {
           s.opgepakt = true;
-          score += 25 * SCORE_MUL;
-          // schatkist herstelt ook 25% hp (water-wereld bonus voelt nu écht waardevol)
+          // 2026-05-18 (Mark wens): schatkist gaf weinig feedback. Score
+          // 25→100 + banner-melding + extra particles + magneet 5 sec erbij
+          // zodat het écht voelt als beloning ('jackpot').
+          const schatBonus = 100 * SCORE_MUL;
+          score += schatBonus;
+          scoreElText = score;
           hp = Math.min(HP_MAX, hp + HP_PER_HIT);
-          piep(660, 0.08, "sine", 0.12);
-          setTimeout(() => piep(990, 0.08, "sine", 0.10), 60);
-          setTimeout(() => piep(1320, 0.10, "sine", 0.10), 130);
-          setTimeout(() => piep(1760, 0.14, "sine", 0.08), 220);
-          // gouden burst
-          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 24, "#ffd700", { spread: 8, opwaarts: 2, leven: 32, grootte: 5, glow: 20 });
-          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 12, "#ffffff", { spread: 6, opwaarts: 2, leven: 26, grootte: 3, glow: 14 });
-          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 8, "#ff8030", { spread: 7, opwaarts: 1.5, leven: 28, grootte: 4, glow: 16 });
+          // Gratis magneet 5 sec → speler trekt automatisch ringen aan
+          magneetFrames = Math.max(magneetFrames, 300);
+          // Banner + visuele impact
+          shakeKracht = Math.max(shakeKracht, 14);
+          bloomFlashTeller = 8;
+          recordBannerTekst = `💰 SCHAT! +${schatBonus} · MAGNEET 5s`;
+          recordBannerKleur = "#ffd700";
+          recordBannerTeller = 120;
+          try { missieUpdateRef.current("score", score); } catch {}
+          // Pitch-bend jackpot-cue (laag → hoog → hoog)
+          piep(440, 0.08, "sine", 0.14);
+          setTimeout(() => piep(660, 0.08, "sine", 0.12), 60);
+          setTimeout(() => piep(880, 0.08, "sine", 0.12), 130);
+          setTimeout(() => piep(1320, 0.10, "sine", 0.12), 220);
+          setTimeout(() => piep(1760, 0.14, "sine", 0.10), 330);
+          // Grotere gouden + witte + oranje burst
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 40, "#ffd700", { spread: 12, opwaarts: 4, leven: 44, grootte: 6, glow: 24 });
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 22, "#ffffff", { spread: 8, opwaarts: 3, leven: 32, grootte: 4, glow: 18 });
+          spawnParticles(s.x + s.breedte / 2, s.y + s.hoogte / 2, 16, "#ff8030", { spread: 10, opwaarts: 2.5, leven: 36, grootte: 5, glow: 20 });
         }
         if (s.x + s.breedte < -20 || s.opgepakt) schatkisten.splice(i, 1);
       }
