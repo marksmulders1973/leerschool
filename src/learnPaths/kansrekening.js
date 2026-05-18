@@ -505,7 +505,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is P(precies 0× kop) = (1/2)⁵. Maar je wilt het complement: 1 − 1/32 = 31/32.",
+          "Dat is P(precies 0× kop) = (1/2)⁵. De vraag wil het complement van die kans.",
           "1/2 is kans bij 1 worp. Bij 5 worpen verandert de kans op 'minstens 1'.",
           "5/32 zou een specifieke combinatie zijn. Truc: 1 − P(0 K).",
         ],
@@ -538,7 +538,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Geen logische berekening — voor en-kans: 1/6 · 1/6 = 1/36.",
+          "Niet zomaar getal — denk aan en-kans: P(A én B) = P(A) × P(B).",
           "Optellen ipv vermenigvuldigen — bij twee onafhankelijke worpen vermenigvuldig je.",
           "Dat is kans op één 6 bij één worp.",
         ],
@@ -656,7 +656,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet 'niet 3 keer' = 'minstens 1 verlies'. Voor 'geen prijs winnen' = 'alle 3 verloren'.",
-          "Dat is kans op precies 3 winnende lootjes (waarschijnlijk verkeerd ook). Voor 'geen prijs' = (99/100)³.",
+          "Dat is een ruwe schatting via aftrekken — maar bij onafhankelijke lootjes moet je 'alle 3 verlies' vermenigvuldigen.",
           "100/103 is geen logische berekening voor deze setup.",
         ],
         uitlegPad: {
@@ -679,7 +679,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1/2 is een ruwe schatting maar niet exact. Bereken via complement: 1 − P(0 K) − P(1 K) = 1 − 1/16 − 4/16 = 11/16.",
+          "1/2 is een ruwe schatting maar niet exact — bereken via complement.",
           "1/4 zou kans op precies 2 zijn (= 6/16). Maar 'minstens 2' = 6/16 + 4/16 + 1/16 = 11/16.",
           "5/16 = P(precies 1 K). Maar 'minstens 2' is 1 − P(0 of 1) = 11/16.",
         ],
@@ -740,7 +740,7 @@ const steps = [
         wrongHints: [
           null,
           "Verkeerd berekend complement — 1 − 12/30 = 18/30, niet 12/30.",
-          "Dat is een ratio. Kans = gunstig/totaal. P(meisje) = 18/30 = 3/5.",
+          "Dat is een ratio — kans = gunstig/totaal. Tel meisjes en deel door totaal.",
           "Onlogisch — kans kan nooit > 1.",
         ],
         uitlegPad: {

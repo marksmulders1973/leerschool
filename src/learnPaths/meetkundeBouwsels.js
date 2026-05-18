@@ -315,13 +315,13 @@ const steps = [
         q: "**Melkpak** van **1 liter** = hoeveel **cm³**?",
         options: ["1000 cm³", "100 cm³", "10 cm³", "10.000 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1 L = 1000 mL = 1000 cm³.", "Te weinig — dat is 1 cL.", "Te veel — controleer 1 × 1000."],
+        wrongHints: [null, "Te weinig — denk aan hoeveel mL in 1 liter.", "Te weinig — dat is een centiliter (cL).", "Te veel — komma 1 plaats verkeerd."],
       },
       {
         q: "Een **emmer** van **50 cm × 30 cm × 40 cm**. Hoeveel **liter**?",
         options: ["60 liter", "120 liter", "600 liter", "12 liter"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 50 × 30 × 40 = 60.000 cm³ = 60 liter. Klopt.", "Te veel — heb je niet gedeeld door 1000?", "Te veel — controleer 60.000 ÷ 1000.", "Te weinig — komma 1 plek verkeerd."],
+        wrongHints: [null, "Te veel — heb je gedeeld door 1000 om naar liter te gaan?", "Te veel — controleer 60.000 ÷ 1000.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — controleer of je 60.000 ÷ 1000 deelt."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst cm³", tekst: "50 × 30 × 40 = 60.000 cm³." },
@@ -402,9 +402,9 @@ const steps = [
       { q: "Volume balk **5 × 4 × 2** cm?", options: ["40 cm³","11 cm³","20 cm³","80 cm³"], answer: 0, wrongHints: [null, "Som.", "2 dimensies.", "×2 fout."] },
       { q: "Een **kubus** heeft hoeveel ribben?", options: ["12","8","6","4"], answer: 0, wrongHints: [null, "Hoekpunten.", "Vlakken.", "Niet."] },
       { q: "Een **kubus** heeft hoeveel **vlakken**?", options: ["6","4","8","12"], answer: 0, wrongHints: [null, "Niet — 6 vlakken.", "Hoekpunten.", "Ribben."] },
-      { q: "1 dm³ = hoeveel L?", options: ["1","100","1000","10"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
-      { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "1 dm³ = hoeveel L?", options: ["1","100","1000","10"], answer: 0, wrongHints: [null, "Te veel — denk aan de directe omzetting dm³ ↔ liter.", "Te veel — dat is cm³ per liter.", "Te veel — komma 1 plek verkeerd."] },
+      { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Te weinig — controleer 50 × 30 × 40.", "Veel te weinig — vergeet je een nul?", "Komma 1 plek verkeerd."] },
+      { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — komma verkeerd.", "Veel te weinig — denk groot, 1 m³ = veel liters.", "Te veel — komma 1 plek verkeerd."] },
       { q: "Een **kubus** heeft hoeveel hoekpunten?", options: ["8","6","4","12"], answer: 0, wrongHints: [null, "Vlakken.", "Niet.", "Ribben."] },
       { q: "Volume formule **balk**?", options: ["lengte × breedte × hoogte","l + b + h","l × b","l × h"], answer: 0, wrongHints: [null, "Som = niet volume.", "2 dimensies.", "2 dimensies."] },
       { q: "Een **doos** 10 × 10 × 10 cm. Volume?", options: ["1000 cm³","100 cm³","10 cm³","10.000 cm³"], answer: 0, wrongHints: [null, "Vlak.", "Ribbe.", "Te veel."] },
