@@ -8961,7 +8961,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                   width: "100%", maxWidth: 360, marginBottom: 18,
                   display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10,
                 }}>
-                  {/* Vandaag */}
+                  {/* Vandaag — met empty-state als nog niemand gespeeld heeft */}
                   <div style={{
                     padding: "10px 10px", borderRadius: 10,
                     background: "rgba(105,240,174,0.06)",
@@ -8970,9 +8970,25 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     <div style={{ color: "#69f0ae", fontSize: 10, fontWeight: 700, letterSpacing: 1.2, marginBottom: 6, textAlign: "center", textTransform: "uppercase" }}>
                       ⚡ Vandaag
                     </div>
-                    <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
-                      {tien(highscoresVandaag).map(renderRij)}
-                    </ol>
+                    {highscoresVandaag.length === 0 ? (
+                      <div style={{
+                        textAlign: "center", padding: "16px 4px",
+                        color: "rgba(255,255,255,0.85)",
+                        fontFamily: "'Fredoka', sans-serif",
+                      }}>
+                        <div style={{ fontSize: 32, marginBottom: 6 }}>🌅</div>
+                        <div style={{ fontSize: 12, fontWeight: 800, color: "#69f0ae", marginBottom: 2 }}>
+                          Nog niemand!
+                        </div>
+                        <div style={{ fontSize: 10, opacity: 0.75, lineHeight: 1.35 }}>
+                          Wees de eerste vandaag — pak een goede score voor de top!
+                        </div>
+                      </div>
+                    ) : (
+                      <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                        {tien(highscoresVandaag).map(renderRij)}
+                      </ol>
+                    )}
                   </div>
                   {/* Aller Tijden */}
                   <div style={{
