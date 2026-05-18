@@ -45,7 +45,7 @@ Cito + examens versterken. Drie type werk:
 ### Audit-architectuur-tikbommen (~1-2 dagen elk)
 - [x] **`examenLookup.js` naar build-time JSON** ✓ (verified 2026-05-16): laadt `examenLookup.generated.json` (~16 kB) ipv top-level `ALL_LEARN_PATHS`-import. Build-script: `scripts/buildExamenLookup.mjs`.
 - [x] **`pathManifest.generated.json`** ✓ (verified 2026-05-16): bestaat + wordt gebruikt door LearnPathsHub/StudentHome/Curriculum/ExamensPage. Build-script: `scripts/buildPathManifest.mjs`.
-- [ ] **vendor-three lazy uit non-game routes**: Mini3DTeaser nu eager in HomeV3 hero; lazy-load met intersection-observer of vervang door statisch poster.
+- [x] **vendor-three lazy uit non-game routes** ✓ (verified 2026-05-18): `Mini3DTeaser` is `lazy()` in `HomePage.jsx:14` + niet meer gerenderd op home (Maand 1 snoei 2026-05-10, regel 962-970 toont snoei-comment). `vite.config.js` chunkt `three` apart als `vendor-three` (regel 94) + SW pre-cache slaat `vendor-three` over (regel 85). Three.js wordt alleen geladen vanuit wiskunde-leerpaden die zelf al lazy zijn. Geen werk meer nodig.
 - [x] **Service Worker JS-bundle pre-cache** ✓ (2026-05-16, commit b58faa0): vite-plugin injectSwVersion uitgebreid om `__SW_PRECACHE_ASSETS__`-placeholder te vervangen door JSON-array met gehashte entry-bundle + vendor-react + vendor-router paths. SW install gebruikt Promise.allSettled zodat losse asset-failures de install niet onderuit halen. Repeat-visit-LCP profiteert van directe cache-hit.
 - [ ] **Upstash Redis voor rate-limit**: `_guard.js:24` in-memory Map vervangen door Redis voor cross-instance-quota. Free tier 10k/dag voldoende.
 

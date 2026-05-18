@@ -652,7 +652,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, on
           <div style={{ marginTop: 18, padding: "14px 14px", background: "rgba(255,255,255,0.02)", borderRadius: 12, border: `1px dashed ${C.border}`, textAlign: "center" }}>
             <div style={{ fontSize: 13, color: C.muted, lineHeight: 1.5 }}>
               Meer onderwerpen volgen.<br />
-              <span style={{ fontSize: 11 }}>Mis je iets? Geef het door via "Tip aan de maker" op de homepage.</span>
+              <span style={{ fontSize: 11 }}>Mis je iets? Laat het ons weten via mark-smulders@hotmail.com.</span>
             </div>
           </div>
 

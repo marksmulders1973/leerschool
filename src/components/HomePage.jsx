@@ -916,12 +916,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Ik ben leerling", sub: "basisschool · groep 1 t/m 8",
+              label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>leerling</span></>),
+              sub: "basisschool · groep 1 t/m 8",
               color: "#0072ff", onClick: () => handleRoleClick("leerling"),
               cta: {
+                // Mark UX 2026-05-18: "Of ..." op beide CTA's positioneert ze
+                // expliciet als keuze tussen leerling-Cito en student-examen.
+                // Kernwoord "Doorstroomtoets" in goudgeel zodat het direct
+                // visueel aanwijst waar de knop heen leidt.
                 label: (
                   <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    <DoorstroomtoetsLogo size={26} /> Doorstroomtoets oefenen
+                    <DoorstroomtoetsLogo size={26} /> Of direct naar{" "}
+                    <span style={{ color: "#fff176", fontWeight: 800 }}>Doorstroomtoets</span>
                   </span>
                 ),
                 onClick: () => handleFeatureClick("cito"),
@@ -949,9 +955,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   }}
                 />
               ),
-              label: "Ik ben student", sub: "vmbo · havo · vwo",
+              label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>student</span></>),
+              sub: "vmbo · havo · vwo",
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
-              cta: { label: "🎓 Examen oefenen", onClick: () => handleFeatureClick("examens") },
+              cta: {
+                label: (
+                  <span>
+                    🎓 Of direct naar <span style={{ color: "#fff176", fontWeight: 800 }}>examen</span> oefenen
+                  </span>
+                ),
+                onClick: () => handleFeatureClick("examens"),
+              },
             },
             // Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-tegel UIT hero.
             // Niet ICP. Code/route bestaat nog — link nu in footer-section onderaan.
@@ -1000,45 +1014,86 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     </>
                   );
                   if (cta) {
+                    // Mark UX 2026-05-18: rol-keuze ("Ik ben leerling/student")
+                    // was verstopt onder de foto + verschilde van pad bij klik
+                    // op de oranje CTA. Beide acties krijgen nu een eigen
+                    // duidelijke blok-knop. Tile-container is niet meer zelf
+                    // klikbaar — alleen de twee knoppen zijn.
                     return (
                       <div
                         key={key}
-                        onClick={onClick}
                         className="lk-tile"
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") onClick(); }}
                         style={{
                           background: tileBackground,
                           border: `1.5px solid ${color}55`,
                           color: "#fff",
-                          paddingBottom: 4, // ruimte voor cta-strip
+                          paddingBottom: 8,
                           justifyContent: "flex-start",
                           paddingTop: 12,
-                          gap: 4,
+                          gap: 6,
+                          cursor: "default",
                         }}
                         onMouseEnter={e => {
-                          e.currentTarget.style.transform = "translateY(-2px)";
                           e.currentTarget.style.background = tileBackgroundHover;
                         }}
                         onMouseLeave={e => {
-                          e.currentTarget.style.transform = "translateY(0)";
                           e.currentTarget.style.background = tileBackground;
                         }}
                       >
-                        {innerContent}
-                        {/* "Alle vakken →"-sub-button verwijderd (5-agents review 2026-05-15):
-                            6 klikzones boven de fold = keuze-paralyse. Klik op de
-                            tegel-foto zelf gaat al naar rol-overzicht (alle vakken);
-                            oranje CTA blijft als directe Doorstroomtoets/Examen-shortcut. */}
+                        {/* Visuele foto-zone (niet klikbaar — knop hieronder doet de actie). */}
+                        {icon ? (
+                          <div style={{
+                            width: "100%",
+                            flex: "1 1 0",
+                            minHeight: 0,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginBottom: 2,
+                          }}>{icon}</div>
+                        ) : (
+                          <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
+                        )}
+
+                        {/* Knop A — rol-keuze (secundair, donker blok). Leidt
+                            naar het rol-overzicht (alle vakken voor die rol). */}
                         <button
-                          onClick={(e) => { e.stopPropagation(); cta.onClick(); }}
+                          onClick={onClick}
                           style={{
                             width: "100%",
-                            // Vaste min-height + flex-center → CTA's altijd
-                            // gelijke hoogte, ongeacht of inhoud een <img> van
-                            // 26px (DoorstroomtoetsLogo) of een emoji is.
-                            // Mark UX-feedback 2026-05-13.
+                            minHeight: 38,
+                            padding: "6px 8px",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            borderRadius: 8,
+                            border: `1.5px solid ${color}`,
+                            background: `${color}22`,
+                            color: "#fff",
+                            fontFamily: "var(--font-display)",
+                            cursor: "pointer",
+                            lineHeight: 1.1,
+                            transition: "background 150ms ease, transform 150ms ease",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.background = `${color}44`;
+                            e.currentTarget.style.transform = "translateY(-1px)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.background = `${color}22`;
+                            e.currentTarget.style.transform = "translateY(0)";
+                          }}
+                        >
+                          <span style={{ fontSize: 13, fontWeight: 700 }}>{label}</span>
+                          <span style={{ fontSize: 10, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>{sub}</span>
+                        </button>
+
+                        {/* Knop B — directe CTA (oranje primair). Doorstroomtoets/Examen oefenen. */}
+                        <button
+                          onClick={cta.onClick}
+                          style={{
+                            width: "100%",
                             minHeight: 34,
                             padding: "5px 6px",
                             display: "flex",
@@ -1341,14 +1396,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               </svg>
               Deel via Facebook
             </button>
-            <button
-              type="button"
-              style={{ background: "none", border: "none", color: "#ffcc40", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-              onClick={() => { setShowFeedback(true); setFeedbackError(""); setFeedbackSent(false); }}
-            >
-              <span>💡</span>
-              Tip aan de maker
-            </button>
+            {/* "Tip aan de maker" weg uit hero-rij (Mark 2026-05-18): past niet
+                bij ICP-conversie-homepage. Modal-state + LearnPathsHub-trigger
+                blijven bestaan; alleen de homepage-knop is verwijderd. */}
             {/* Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-link verplaatst
                 van hero-tegel naar footer. Niet ICP, maar route blijft bereikbaar. */}
             <button
