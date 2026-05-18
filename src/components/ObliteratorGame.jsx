@@ -787,8 +787,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const bonusHarten = [];
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
     let countdown = COUNTDOWN_FRAMES;
-    // Levels: 30 sec per level, max 100 levels (= 50 min totaal voor MAX)
-    const LEVEL_DUUR_FRAMES = 1800; // 30 sec @ 60fps
+    // Levels: 18 sec per level, max 100 levels (= 30 min totaal voor MAX).
+    // 2026-05-18 (Sprint 2 — 15-agent-audit): 30s voelde slepend voor 10-jarige.
+    // Celeste-pacing = 15-20 sec actief; 18 sec sweet-spot tussen stress en saai.
+    const LEVEL_DUUR_FRAMES = 1080; // 18 sec @ 60fps
     const MAX_LEVEL = 100;
     // Score-multiplier 2026-05-17 (Mark wens): alle scoring × 10. Reden:
     // oude high-scores onverslaanbaar voor nieuwe spelers; binnen 10 min
@@ -1129,6 +1131,31 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       muziek.toonsoort = BIOMES[idx]?.toonsoort || "mineur";
       levelUpFlash = LEVEL_UP_DUUR;
       levelUpNaam = BIOMES[idx]?.naam || '';
+      // Particle-curtain transitie (Sprint 2 — 15-agent-audit, Celeste-stijl).
+      // 50 deeltjes in nieuwe-biome-kleur vegen van rechts naar links over
+      // het scherm — verbergt de scene-swap, voelt magisch ipv techy fade.
+      try {
+        const nieuw = BIOMES[idx];
+        const kleurArr = nieuw?.bgTop || [200, 200, 200];
+        const tint = `rgba(${kleurArr[0]},${kleurArr[1]},${kleurArr[2]},0.9)`;
+        const accent = nieuw?.glow ? `rgba(${nieuw.glow[0]},${nieuw.glow[1]},${nieuw.glow[2]},0.95)` : tint;
+        for (let s = 0; s < 50; s++) {
+          const sy = (s / 50) * H + (Math.random() - 0.5) * 40;
+          const p = new Particle(W + 30, sy, s % 3 === 0 ? accent : tint, {
+            spread: 0,
+            opwaarts: 0,
+            leven: 60,
+            grootte: 7 + Math.random() * 6,
+            zwaartekracht: 0,
+            glow: 16,
+            krimp: false,
+          });
+          // Gerichte vx links + lichte verticale jitter — sweep-effect.
+          p.vx = -(10 + Math.random() * 6);
+          p.vy = (Math.random() - 0.5) * 1.2;
+          particles.push(p);
+        }
+      } catch {}
     }
 
     // ---------- AUDIO ----------
