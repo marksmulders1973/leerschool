@@ -339,6 +339,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [pendingFeature, setPendingFeature] = useState(null);
   const [level, setLevel] = useState("");
+  const [levelSkipped, setLevelSkipped] = useState(false);
   const [schoolType, setSchoolType] = useState("");
   const [onboardingStep, setOnboardingStep] = useState(0);
   // Maand 1 snoei (visie-bewaker 2026-05-10): onboarding-modal UIT.
@@ -1272,13 +1273,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               )}
             </div>
 
-            {levelOptions[pendingRole]?.length > 0 && (
+            {levelOptions[pendingRole]?.length > 0 && !levelSkipped && (
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <label style={{ ...styles.inputLabel, marginBottom: 0 }}>
                     {pendingRole === "leerling" ? "Welke groep zit je in?" : "Welke klas zit je in?"}
                   </label>
-                  <button onClick={() => setLevel("")} style={{
+                  {/* Mark UX 2026-05-18: "sla over" deed setLevel("") wat geen
+                      visueel effect had (level was al ""). Nu klapt de sectie
+                      écht weg via levelSkipped-state. Knop "terug" verschijnt
+                      hieronder zodat de keuze niet permanent verloren is. */}
+                  <button onClick={() => { setLevel(""); setLevelSkipped(true); }} style={{
                     background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)",
                     borderRadius: 8, padding: "4px 10px",
                     color: "rgba(255,255,255,0.85)", fontSize: 12, cursor: "pointer",
@@ -1297,6 +1302,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                     }}>{n}</button>
                   ))}
                 </div>
+              </div>
+            )}
+            {levelOptions[pendingRole]?.length > 0 && levelSkipped && (
+              <div style={{
+                display: "flex", alignItems: "center", justifyContent: "space-between",
+                padding: "8px 12px",
+                background: "rgba(255,255,255,0.04)",
+                border: "1px dashed rgba(255,255,255,0.18)",
+                borderRadius: 8,
+                fontSize: 12, color: "rgba(255,255,255,0.55)",
+              }}>
+                <span>{pendingRole === "leerling" ? "Groep" : "Klas"} overgeslagen</span>
+                <button onClick={() => setLevelSkipped(false)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  color: "#00d4ff", fontSize: 12, fontFamily: "var(--font-body)",
+                  textDecoration: "underline",
+                }}>← terug</button>
               </div>
             )}
 
