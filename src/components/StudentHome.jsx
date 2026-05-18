@@ -11,7 +11,7 @@ import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
-import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated } from "../shared/dailyGoal.js";
+import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -245,6 +245,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           const minDone = dailyMinutesDone(goal);
           const minLeft = dailyMinutesLeft(goal);
           const completed = goal.completed;
+          const streak = getDayStreak();
           const containerStyle = {
             marginBottom: 12,
             padding: "10px 14px",
@@ -261,8 +262,26 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
                 <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: completed ? "#00e676" : "#ffd54f" }}>
                   {completed ? "🎉 Leerkwartier behaald!" : "🕒 Jouw leerkwartier vandaag"}
                 </span>
-                <span style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
-                  {minDone} / {Math.round((goal.target || 900) / 60)} min
+                <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  {streak.current >= 1 && (
+                    <span
+                      title={streak.best > streak.current ? `Beste streak ooit: ${streak.best} dagen` : ""}
+                      style={{
+                        display: "inline-flex", alignItems: "center", gap: 3,
+                        padding: "2px 8px", borderRadius: 999,
+                        background: "rgba(255,138,0,0.18)",
+                        border: "1px solid rgba(255,138,0,0.45)",
+                        color: "#ffa040", fontSize: 11, fontWeight: 800,
+                        fontFamily: "var(--font-display)",
+                      }}
+                    >
+                      🔥 {streak.current}
+                      {streak.current === 1 ? " dag" : " dagen"}
+                    </span>
+                  )}
+                  <span style={{ fontSize: 12, color: "rgba(255,255,255,0.7)" }}>
+                    {minDone} / {Math.round((goal.target || 900) / 60)} min
+                  </span>
                 </span>
               </div>
               <div style={{ height: 6, borderRadius: 999, background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
