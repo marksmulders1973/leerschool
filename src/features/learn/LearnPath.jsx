@@ -791,7 +791,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           )}
         </div>
         <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
-          {stepIdx + 1}. {step.title}
+          {/* Mark UX 2026-05-18: bij examen-paden is "Vraag 11 — ..." al in
+              step.title verwerkt; "1." prefix erbij is dubbele nummering. */}
+          {isExamenPad ? step.title : `${stepIdx + 1}. ${step.title}`}
         </h2>
 
         {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
@@ -1420,7 +1422,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               {stepIdx + 1 < totalSteps && (
                 <NextStepCard
                   eyebrow="Volgend deel"
-                  title={`${stepIdx + 2}. ${path.steps[stepIdx + 1]?.title || "Verder"}`}
+                  title={isExamenPad ? (path.steps[stepIdx + 1]?.title || "Verder") : `${stepIdx + 2}. ${path.steps[stepIdx + 1]?.title || "Verder"}`}
                   hint="Doorgaan met dit onderwerp"
                   accent={C.good}
                   primary
