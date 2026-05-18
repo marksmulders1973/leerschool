@@ -2524,6 +2524,34 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "getallen-tot-20-po",
+    "file": "./getallenTot20Po.js",
+    "title": "Getallen + sommen tot 20 (groep 3-4)",
+    "subject": "rekenen",
+    "level": "groep3-5",
+    "emoji": "🔢",
+    "referentieNiveau": "po-1F",
+    "sloThema": "Rekenen — getalbegrip + optellen/aftrekken tot 20 onderbouw",
+    "triggerKeywords": [
+      "getallen tot 20",
+      "sommen",
+      "optellen",
+      "aftrekken",
+      "splitsen",
+      "dubbele",
+      "telrij",
+      "groep 3",
+      "groep 4",
+      "rekenen basis",
+      "verschil"
+    ],
+    "intro": "Eerste rekensommen — getallen 0 tot 20, plus en min, splitsen + dubbele + truc 'eerst tien maken'. Voor groep 3-4. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "gezonde-voeding-po",
     "file": "./gezondeVoedingPo.js",
     "title": "Gezonde voeding (Cito groep 6-8)",
