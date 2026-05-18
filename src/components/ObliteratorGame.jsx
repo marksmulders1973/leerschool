@@ -1740,17 +1740,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // tekenMonument()-helper + MONUMENTEN-array blijven in bestand voor
       // eventuele terugzetting.
 
-      // Wijze-quotes als achtergrond-graffiti (Mark verzoek 2026-05-17 v3:
-      // ALTIJD zichtbaar, ook in cheerful biome 1). In donker biome = gele
-      // spuitverf-look op muur. In cheerful biome = bruine inkt-look op bord
-      // tegen blauwe lucht zodat het leesbaar blijft.
+      // Wijze-quotes als graffiti op de muur (Mark wens 2026-05-18: 'moet
+      // op de muur getekend zijn, niet in een blok'). Echte spuitverf-look:
+      // - Geen bord/kader-achtergrond
+      // - Lichte tilt per quote (alsof handmatig gespoten)
+      // - Dikke donkere outline + gele fill voor leesbaarheid in alle biomes
+      // - Drip-effecten onder letters (1-3 verticale verfdruppels)
+      // - Random spuit-spatten om de tekst
+      // - Tag-stijl handtekening van de auteur
       {
         const quoteSpacing = 600 * SCHAAL;
         const quoteScrollSpeed = 0.05;
         const quoteOffset = (frameTeller * spelSnelheid * quoteScrollSpeed) % quoteSpacing;
         const aantalQuotes = Math.ceil(W / quoteSpacing) + 3;
         ctx.save();
-        ctx.globalAlpha = 0.95;
         for (let i = -1; i < aantalQuotes; i++) {
           const qx = i * quoteSpacing - quoteOffset + 40 * SCHAAL;
           if (qx < -400 * SCHAAL || qx > W + 50) continue;
@@ -1760,34 +1763,77 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const muurBot = grondTop - 180 * SCHAAL;
           const muurH = Math.max(60, muurBot - muurTop);
           const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 70 * SCHAAL)));
-          // Tekst-meting voor bord-achtergrond
+
+          // Deterministische 'random'-waarden per quote zodat ze niet trillen
+          const seed = wereldQuoteIdx * 419 + 7;
+          const tiltDeg = (((seed % 17) - 8) / 8) * 4; // -4° tot +4° tilt
+          const tiltRad = (tiltDeg * Math.PI) / 180;
+
+          ctx.save();
+          ctx.translate(qx, qy);
+          ctx.rotate(tiltRad);
+
           ctx.font = `italic bold ${Math.max(18, 22 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
-          const tekstW = ctx.measureText(`"${q.tekst}"`).width;
-          // Bord/achtergrond zodat tekst altijd leesbaar is in elk biome
-          if (cheerful > 0.5) {
-            // Cheerful: bruin houten bord met lichte rand
-            ctx.fillStyle = "rgba(120,75,40,0.85)";
-            ctx.fillRect(qx - 10 * SCHAAL, qy - 6 * SCHAAL, tekstW + 20 * SCHAAL, 52 * SCHAAL);
-            ctx.strokeStyle = "rgba(70,40,20,0.95)";
-            ctx.lineWidth = 2;
-            ctx.strokeRect(qx - 10 * SCHAAL, qy - 6 * SCHAAL, tekstW + 20 * SCHAAL, 52 * SCHAAL);
-            ctx.fillStyle = "rgba(255,245,210,1)";
-            ctx.textAlign = "left"; ctx.textBaseline = "top";
-            ctx.fillText(`"${q.tekst}"`, qx, qy);
-            ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
-            ctx.fillStyle = "rgba(255,230,180,0.95)";
-            ctx.fillText(q.auteur, qx + 18 * SCHAAL, qy + 28 * SCHAAL);
-          } else {
-            // Donker biome: gele spuitverf-graffiti zonder bord
-            ctx.textAlign = "left"; ctx.textBaseline = "top";
-            ctx.shadowBlur = 16; ctx.shadowColor = "rgba(255,200,80,0.9)";
-            ctx.fillStyle = "rgba(255,245,200,1)";
-            ctx.fillText(`"${q.tekst}"`, qx, qy);
-            ctx.shadowBlur = 0;
-            ctx.font = `${Math.max(13, 15 * SCHAAL)}px "Fredoka", "Arial", sans-serif`;
-            ctx.fillStyle = "rgba(255,210,120,0.95)";
-            ctx.fillText(q.auteur, qx + 20 * SCHAAL, qy + 28 * SCHAAL);
+          ctx.textAlign = "left"; ctx.textBaseline = "top";
+          const tekst = `"${q.tekst}"`;
+          const tekstW = ctx.measureText(tekst).width;
+          const tekstH = 24 * SCHAAL;
+
+          // Drie spray-spatten random om de tekst (kleine cirkels)
+          ctx.fillStyle = "rgba(255,220,100,0.35)";
+          for (let s = 0; s < 5; s++) {
+            const ss = seed + s * 31;
+            const sx = ((ss * 17) % Math.max(40, Math.floor(tekstW + 30))) - 10 * SCHAAL;
+            const sy = ((ss * 23) % Math.max(20, Math.floor(tekstH + 20))) - 6 * SCHAAL;
+            const sr = (1 + (ss % 3)) * SCHAAL;
+            ctx.beginPath();
+            ctx.arc(sx, sy, sr, 0, Math.PI * 2);
+            ctx.fill();
           }
+
+          // Donkere outline (spuitverf bleeding-edge) — meerdere offsets voor
+          // zachte rand. Eerst grote diffuse outline, dan harde donkere.
+          ctx.shadowBlur = 0;
+          ctx.lineJoin = "round";
+          ctx.strokeStyle = "rgba(0,0,0,0.85)";
+          ctx.lineWidth = 5 * SCHAAL;
+          ctx.strokeText(tekst, 0, 0);
+          ctx.strokeStyle = "rgba(80,40,0,0.65)";
+          ctx.lineWidth = 8 * SCHAAL;
+          ctx.globalAlpha = 0.4;
+          ctx.strokeText(tekst, 0, 0);
+          ctx.globalAlpha = 1;
+
+          // Gele fill met spuit-glow
+          ctx.shadowBlur = 14;
+          ctx.shadowColor = "rgba(255,200,80,0.85)";
+          ctx.fillStyle = "#fff4b8";
+          ctx.fillText(tekst, 0, 0);
+          ctx.shadowBlur = 0;
+
+          // Verf-druppels onder de tekst — 2-3 verticale streepjes
+          ctx.fillStyle = "rgba(255,200,80,0.75)";
+          const dripCount = 2 + (seed % 2);
+          for (let d = 0; d < dripCount; d++) {
+            const ds = seed + d * 53;
+            const dx = ((ds * 13) % Math.max(40, Math.floor(tekstW - 30))) + 15 * SCHAAL;
+            const dh = (8 + (ds % 14)) * SCHAAL;
+            ctx.fillRect(dx, tekstH - 4 * SCHAAL, 2 * SCHAAL, dh);
+            // Druppel-bolletje onderaan
+            ctx.beginPath();
+            ctx.arc(dx + SCHAAL, tekstH - 4 * SCHAAL + dh, 2 * SCHAAL, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          // Auteur als kleinere tag eronder (oranje krabbel-look)
+          ctx.font = `italic ${Math.max(13, 15 * SCHAAL)}px "Permanent Marker", "Brush Script MT", cursive`;
+          ctx.strokeStyle = "rgba(0,0,0,0.75)";
+          ctx.lineWidth = 3 * SCHAAL;
+          ctx.strokeText(q.auteur, 20 * SCHAAL, tekstH + 14 * SCHAAL);
+          ctx.fillStyle = "#ffb840";
+          ctx.fillText(q.auteur, 20 * SCHAAL, tekstH + 14 * SCHAAL);
+
+          ctx.restore();
         }
         ctx.restore();
       }
