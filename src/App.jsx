@@ -20,6 +20,7 @@ const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
 const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
+const TopicPicker = lazy(() => import("./features/practice/TopicPicker.jsx"));
 const CitoPage = lazy(() => import("./components/CitoPage.jsx"));
 const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"));
 const ExamensPage = lazy(() => import("./components/ExamensPage.jsx"));
@@ -269,6 +270,9 @@ export default function App() {
   // Audit 2 QA bug #2: Oefenen-knop op StudentHome-vakkenkeuze geeft nu vak-id
   // mee zodat TextbookQuiz de juiste category vooraf selecteert.
   const [pendingTextbookSubject, setPendingTextbookSubject] = useState(null);
+  // Mark UX 2026-05-18: "Per onderwerp"-flow — selecteer een topic-pad
+  // direct, zonder boek-mapping of leerpad-stappen ertussen.
+  const [pendingTopicCategory, setPendingTopicCategory] = useState(null);
   const abortControllerRef = useRef(null);
   const pageRef = useRef("home");
   const onboardingActiveRef = useRef(false);
@@ -668,6 +672,23 @@ export default function App() {
       // eslint-disable-next-line no-console
       console.error("[proeftoets] kan niet starten:", e);
       alert("⚠️ Proef-toets kon niet starten. Probeer later opnieuw.");
+    }
+  };
+
+  // Topic-quiz (Mark wens 2026-05-18): één onderwerp = één pad, oefen-modus
+  // met hints + uitlegPad. Aangeroepen vanuit TopicPicker — primaire route
+  // voor de "🔍 Per onderwerp"-knop in TextbookQuiz vakkengrid.
+  const startTopicQuiz = async (pathId) => {
+    const { buildTopicQuiz } = await import("./features/practice/buildTopicQuiz.js");
+    try {
+      const { quiz, questions } = await buildTopicQuiz({ pathId });
+      track("topic_quiz_started", { path_id: pathId, vragen: questions.length });
+      setGameState({ quiz, mode: "self", questions, currentQ: 0, score: 0, answers: [], timePerQuestion: 0, startedAt: Date.now() });
+      setPage("play");
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error("[topic-quiz] kan niet starten:", e);
+      alert("⚠️ Onderwerp-quiz kon niet starten. Probeer later opnieuw.");
     }
   };
 
@@ -1388,8 +1409,20 @@ export default function App() {
               setPage("learn-meebezig");
             }
           }}
+          onPickTopicPicker={(catId) => {
+            setPendingTopicCategory(catId);
+            setPage("topic-picker");
+          }}
           onBack={() => setPage("student-home")}
           onHome={goHome}
+        />
+      )}
+      {page === "topic-picker" && (
+        <TopicPicker
+          categoryId={pendingTopicCategory}
+          onBack={() => setPage("textbook")}
+          onHome={goHome}
+          onPickTopic={(pathId) => startTopicQuiz(pathId)}
         />
       )}
       {page === "play" && gameState && (

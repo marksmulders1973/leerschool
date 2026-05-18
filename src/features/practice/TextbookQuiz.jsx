@@ -23,7 +23,7 @@ const schoolTypeMatchesBook = (bookName, schoolType) => {
   return false;
 };
 
-export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, onPickLearnPath, prefilledCategory }) {
+export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLevel, userSchoolType, onPickLearn, onPickLearnPath, onPickTopicPicker, prefilledCategory }) {
   const initType = userRole === "leerling" ? "po" : userRole === "student" ? "vo" : null;
   const [schoolType2, setSchoolType2] = useState(initType); // po | vo | null
   const TEXTBOOK_CATEGORIES = schoolType2 === "po" ? TEXTBOOK_CATEGORIES_PO : schoolType2 === "vo" ? TEXTBOOK_CATEGORIES_VO : [];
@@ -512,13 +512,15 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                               {hasPaths ? `${pathCount} paden` : "vraag maker aan"}
                             </span>
                           </button>
-                          {/* Mark UX 2026-05-18: 3e optie "Per onderwerp" naast
-                              Leren (didactisch pad) en Oefenen-uit-je-boek (TextbookQuiz).
-                              Routeert nu naar LearnPathsHub (onPickLearn) — Mark wil
-                              zien hoe de 3-knop-layout oogt voordat we de echte
-                              topic-only-flow bouwen. */}
+                          {/* Mark UX 2026-05-18: 3e optie "Per onderwerp" routeert
+                              naar TopicPicker — topic-list voor dit vak,
+                              klik = directe oefen-quiz over dat onderwerp
+                              (alle check-vragen uit het pad, didactische modus). */}
                           <button
-                            onClick={onLeren}
+                            onClick={() => {
+                              SoundEngine.play("click");
+                              if (onPickTopicPicker) onPickTopicPicker(cat.id);
+                            }}
                             style={{
                               border: "none",
                               cursor: "pointer",
