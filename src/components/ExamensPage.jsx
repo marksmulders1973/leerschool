@@ -167,7 +167,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                 width: 12, height: 12, borderRadius: 3,
                 background: "rgba(0,176,255,0.25)", border: `1.5px solid ${C.oefen}`,
               }} />
-              <span><strong style={{ color: C.oefen }}>Oefenen met uitleg</strong> — vraag voor vraag + uitleg + leerpad</span>
+              <span><strong style={{ color: C.oefen }}>Maak dit examen</strong> — echte examenvragen mét uitleg + leerpad</span>
             </span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
               <span style={{
@@ -371,12 +371,12 @@ function SlotRij({ slot, vakInfo, onPickPath, onPlayExamen }) {
             >
               <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
                 <span style={{ fontSize: 16 }}>🎯</span>
-                <span>Oefenen met uitleg</span>
+                <span>Maak dit examen — echte examenvragen mét uitleg</span>
               </span>
               <span style={{
                 fontSize: 10, fontWeight: 600, color: "rgba(0,176,255,0.85)", textTransform: "uppercase", letterSpacing: 0.4,
               }}>
-                {pad.checkCount ? `${pad.checkCount} vragen · ` : ""}vraag → uitleg → leerpad
+                {pad.checkCount ? `${pad.checkCount} vragen · ` : ""}bij elke fout een leerpad
               </span>
             </button>
           ) : (
