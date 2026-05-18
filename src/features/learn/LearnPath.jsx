@@ -28,6 +28,7 @@ import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
 import KwartierPauze from "./KwartierPauze.jsx";
+import BronTekstInteractief from "./BronTekstInteractief.jsx";
 
 const C = {
   bg: "#0f1729",
@@ -1077,16 +1078,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   </div>
                 )}
                 {currentCheck.bronTekst.body && (
-                  <div style={{
-                    fontSize: 13,
-                    lineHeight: 1.5,
-                    color: "var(--color-text)",
-                    whiteSpace: "pre-wrap",
-                    maxHeight: "30vh",
-                    overflowY: "auto",
-                  }}>
-                    {currentCheck.bronTekst.body}
-                  </div>
+                  <BronTekstInteractief
+                    body={currentCheck.bronTekst.body}
+                    woorden={currentCheck.uitlegPad?.woorden || []}
+                    resetKey={`${stepIdx}-${checkIdx}`}
+                  />
                 )}
               </div>
             )}
