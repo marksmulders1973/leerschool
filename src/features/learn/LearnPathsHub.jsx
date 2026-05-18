@@ -131,8 +131,13 @@ const SUBJECT_TO_CURRICULUM_PREFIX = {
   taal: "nederlands",
 };
 
-export default function LearnPathsHub({ userName, authUser, userLevel = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null }) {
+export default function LearnPathsHub({ userName, authUser, userLevel = null, userRole = null, userSchoolType = null, onPickPath, onPickCurriculum, onHome, onBack, filterSubject = null, onPlayObliterator = null }) {
   const player = (userName || "Speler").trim() || "Speler";
+  // Mark UX 2026-05-18: rol-filter — basisschool-leerlingen zien geen VO-paden,
+  // VO-studenten geen PO-paden. Bepaal het filter-niveau op basis van role
+  // (primair) of userLevel (fallback voor returning users zonder role-set).
+  const isPoUser = userRole === "leerling" || (userLevel && /^(groep|po)/i.test(String(userLevel)));
+  const isVoUser = userRole === "student" || (userLevel && /^(klas|vo|bovenbouw)/i.test(String(userLevel)));
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
   // Klas-filter binnen vak-detail. null = "alle klassen". String = bucketKey

@@ -865,6 +865,8 @@ export default function App() {
         <LearnPathsHub
           userName={userName || "Speler"}
           authUser={authUser}
+          userRole={role}
+          userSchoolType={userSchoolType}
           userLevel={
             userLevel && /^\d+$/.test(String(userLevel))
               ? (userSchoolType ? `klas${userLevel}` : `groep${userLevel}`)
@@ -1301,6 +1303,9 @@ export default function App() {
       )}
       {page === "examens" && (
         <ExamensPage
+          userRole={role}
+          userLevel={userLevel}
+          userSchoolType={userSchoolType}
           onBack={() => setPage("student-home")}
           onHome={goHome}
           onPlayExamen={startExamenQuiz}
@@ -1312,6 +1317,7 @@ export default function App() {
             setPage("learn-path");
           }}
           onStartExamenMix={startExamenMix}
+          onGoCito={() => setPage("cito")}
         />
       )}
       {page === "cito-leerpad-toets" && (
