@@ -801,6 +801,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let streak = 0;
     let multiplier = 1;
     let multiplierFlashTeller = 0; // frames voor "x3!" flash
+    // Sprint 4 — visual juice (15-agent-audit, Tetris Effect-stijl):
+    // - bloomFlashTeller: 1-frame wit overlay bij pickup, fade in 8 frames
+    // - spelerTrail: ringbuffer met 5 oude posities voor trail-ghost-effect
+    let bloomFlashTeller = 0;
+    const TRAIL_LEN = 5;
+    const spelerTrail = []; // [{x, y, rotatie}, ...] oudste eerst
     let aantalObstakelsTotaal = 0;
     const bonusHarten = [];
     const COUNTDOWN_FRAMES = 130; // ~2.2 sec @ 60fps (3 stappen van ~43)
@@ -2274,6 +2280,28 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const speler = { x: 100 * SCHAAL, basisX: 100 * SCHAAL, y: GROND_Y, breedte: SPELER_GROOTTE, hoogte: SPELER_GROOTTE, snelheidX: 0, snelheidY: 0, springt: false, rotatie: 0, trailTeller: 0, sprongTeller: 0 };
     function spelerBots() { const m = 4 * SCHAAL; return { x: speler.x + m, y: speler.y + m, breedte: speler.breedte - m * 2, hoogte: speler.hoogte - m * 2 }; }
     function tekenSpeler() {
+      // Sprint 4 — trail-ghost (Tetris Effect-stijl): 4 oude silhouetten met
+      // aflopende alpha vóór de hoofdspeler. Skin-onafhankelijk (circulaire
+      // afterimage) — geeft snelheidssensatie bij hoge effSnelheid + tijdens
+      // sprongen/loops. Skip bij low-FX.
+      if (!LOW_FX && spelerTrail.length > 1) {
+        ctx.save();
+        const halfW = speler.breedte / 2;
+        const halfH = speler.hoogte / 2;
+        for (let t = 0; t < spelerTrail.length - 1; t++) {
+          const g = spelerTrail[t];
+          const fade = (t + 1) / spelerTrail.length; // 0..1, oudste laag
+          ctx.globalAlpha = fade * 0.32;
+          ctx.shadowBlur = 12 * fade;
+          ctx.shadowColor = "rgba(255,200,80,0.6)";
+          ctx.fillStyle = "rgba(255,220,140,0.85)";
+          ctx.beginPath();
+          ctx.arc(g.x + halfW, g.y + halfH, halfW * (0.6 + fade * 0.3), 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      }
+
       const cx = speler.x + speler.breedte / 2;
       const cy = speler.y + speler.hoogte / 2;
       const r = speler.breedte / 2;
@@ -6508,6 +6536,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           const levelFactor = 1 + (huidigLevel - 1) * 0.15;
           score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL;
           scoreElText = score;
+          // Sprint 4 — bloom-flash bij ring-pickup (Tetris Effect-trick)
+          bloomFlashTeller = 8;
 
           // record-checks voor spanning-melding
           const pr = prRef.current;
@@ -6765,6 +6795,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (multiplierFlashTeller > 0) multiplierFlashTeller--;
       if (recordBannerTeller > 0) recordBannerTeller--;
       if (shakeKracht > 0) shakeKracht *= 0.85;
+      if (bloomFlashTeller > 0) bloomFlashTeller--;
+      // Trail-ghost: push huidige speler-positie, oud frame eraf zodra ringbuffer vol
+      spelerTrail.push({ x: speler.x, y: speler.y, rotatie: speler.rotatie || 0 });
+      if (spelerTrail.length > TRAIL_LEN) spelerTrail.shift();
 
       // ───── BOSS-FASE ─────
       if (bossActief) {
@@ -7589,6 +7623,18 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         ctx.beginPath();
         ctx.arc(0, 0, h.grootte * 0.7, 0, Math.PI * 2);
         ctx.stroke();
+        ctx.restore();
+      }
+
+      // Sprint 4 — bloom-flash overlay (Tetris Effect-trick). 1-frame
+      // fullscreen wit + 8-frame fade na ring-pickup. Brein leest dit als
+      // 'iets groots gebeurde'. Skip bij low-FX.
+      if (!LOW_FX && bloomFlashTeller > 0) {
+        const alpha = (bloomFlashTeller / 8) * 0.32;
+        ctx.save();
+        ctx.globalCompositeOperation = "lighter";
+        ctx.fillStyle = `rgba(255,245,200,${alpha})`;
+        ctx.fillRect(0, 0, W, H);
         ctx.restore();
       }
 
