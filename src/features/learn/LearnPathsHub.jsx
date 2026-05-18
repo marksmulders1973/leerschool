@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
@@ -207,7 +207,17 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     setClassFilter(myBucket);
   }, [selectedSubject, filterSubject, myBucket]);
 
-  const allPaths = ALL_PATHS_MANIFEST;
+  // Mark UX 2026-05-18: rol-filter — PO-leerlingen zien geen VO-paden en
+  // VO-studenten geen PO-paden. Level-detector op pathManifest.level:
+  //   "groep*" / "po" → PO-pad
+  //   "klas*" / "havo*" / "vwo*" / "vmbo*" → VO-pad
+  const allPaths = useMemo(() => {
+    const isPoLevel = (lvl) => /^(groep|po)/i.test(String(lvl || ""));
+    const isVoLevel = (lvl) => /^(klas|havo|vwo|vmbo)/i.test(String(lvl || ""));
+    if (isPoUser) return ALL_PATHS_MANIFEST.filter((p) => isPoLevel(p.level));
+    if (isVoUser) return ALL_PATHS_MANIFEST.filter((p) => isVoLevel(p.level));
+    return ALL_PATHS_MANIFEST;
+  }, [isPoUser, isVoUser]);
   // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
   // state vanuit vak-grid-klik). filterSubject heeft voorrang. Wanneer beide
   // null zijn: tonen we het vak-grid entry-screen (Oefenen-tab-stijl).

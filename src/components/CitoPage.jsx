@@ -94,10 +94,58 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, userRole, userLevel, userSchoolType, onGoExamens }) {
   const [groep, setGroep] = useState("8");
   const [openOnderdelen, setOpenOnderdelen] = useState(() => new Set());
   const [vragenAantal, setVragenAantal] = useState({}); // per onderdeel-id
+
+  // Mark UX 2026-05-18: omgekeerde rol-filter — Doorstroomtoets is voor
+  // basisschool groep 6-8. VO-studenten (vmbo/havo/vwo) zijn er voorbij
+  // en horen naar VMBO-eindexamens. Vriendelijke fallback met CTA.
+  const isVoStudent = userRole === "student" || (userLevel && /^(klas|vo|bovenbouw|havo|vwo|vmbo)/i.test(String(userLevel)));
+  if (isVoStudent) {
+    return (
+      <div style={{ minHeight: "100vh", background: "#0f1729", color: "#e0e6f0" }}>
+        <Header title="Doorstroomtoets 🎯" subtitle="" onBack={onBack} onHome={onHome} />
+        <div style={{ maxWidth: 720, margin: "0 auto", padding: "24px 16px" }}>
+          <div style={{
+            padding: "28px 22px",
+            background: "rgba(124,58,237,0.08)",
+            border: "1px solid rgba(124,58,237,0.30)",
+            borderRadius: 16,
+            textAlign: "center",
+          }}>
+            <div style={{ marginBottom: 8 }}><DoorstroomtoetsLogo size={48} /></div>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "#a78bfa", marginBottom: 8 }}>
+              Doorstroomtoets is voor groep 8
+            </h2>
+            <p style={{ fontSize: 14, color: "#8899aa", lineHeight: 1.55, marginBottom: 18 }}>
+              Voor de middelbare school zijn de <strong style={{ color: "#e0e6f0" }}>VMBO-eindexamens</strong>
+              {" "}relevanter. Daar oefen je echte examenvragen mét uitleg.
+            </p>
+            {onGoExamens && (
+              <button
+                type="button"
+                onClick={onGoExamens}
+                style={{
+                  padding: "12px 22px",
+                  background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
+                  border: "none",
+                  borderRadius: 10,
+                  color: "#fff",
+                  fontFamily: "var(--font-display)",
+                  fontSize: 14, fontWeight: 700,
+                  cursor: "pointer",
+                }}
+              >
+                🎓 Naar examens oefenen
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const getBestScore = (id) => {
     const matches = citoProgress.filter((r) => r.citoId === id && r.citoGroep === groep);

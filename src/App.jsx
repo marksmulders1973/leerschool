@@ -1345,6 +1345,10 @@ export default function App() {
       )}
       {page === "cito" && (
         <CitoPage
+          userRole={role}
+          userLevel={userLevel}
+          userSchoolType={userSchoolType}
+          onGoExamens={() => setPage("examens")}
           citoProgress={studentProgress.filter(r => r.player === userName && r.citoId)}
           onStartLeerpadToets={() => setPage("cito-leerpad-toets")}
           onPickPath={(id) => {
