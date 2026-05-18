@@ -4848,6 +4848,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "statistiek-havo-vwo",
+    "file": "./statistiekHavoVwo.js",
+    "title": "Statistiek (HAVO/VWO Wiskunde A)",
+    "subject": "wiskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "📊",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Wiskunde A — statistiek (HAVO/VWO eindexamen)",
+    "triggerKeywords": [
+      "statistiek",
+      "gemiddelde",
+      "mediaan",
+      "modus",
+      "standaardafwijking",
+      "spreiding",
+      "boxplot",
+      "kwartiel",
+      "IQR",
+      "uitschieter",
+      "normaalverdeling",
+      "normale verdeling"
+    ],
+    "intro": "Statistiek voor HAVO/VWO Wiskunde A eindexamen. Centrum-maten (gemiddelde/mediaan/modus), spreiding (σ + IQR + boxplot), normaalverdeling (68-95-99,7-regel + z-scores), lineaire regressie + correlatie",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "stelsels",
     "file": "./stelsels.js",
     "title": "Stelsels van vergelijkingen",
