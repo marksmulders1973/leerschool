@@ -121,7 +121,7 @@ const steps = [
         q: "Welke is **NIET** een toestand van een stof?",
         options: ["Vloeibaarheid", "Vast", "Vloeibaar", "Gas"],
         answer: 0,
-        wrongHints: [null, "Wel een toestand.", "Wel een toestand.", "Wel een toestand."],
+        wrongHints: [null, "Vast is een echte toestand — iets dat hard is.", "Vloeibaar is een echte toestand — water bv.", "Gas is een echte toestand — lucht bv."],
         uitlegPad: {
           stappen: [
             { titel: "Let op de vraag — NIET!", tekst: "Cito-strikvraag: zoek het ene woord dat **GEEN** toestand is. Drie van de vier zijn toestanden — eentje is anders." },
@@ -217,7 +217,7 @@ const steps = [
         q: "Wat heb je **nodig om vuur te maken**?",
         options: ["Brandstof + zuurstof + warmte", "Alleen brandstof", "Alleen zuurstof", "Alleen warmte"],
         answer: 0,
-        wrongHints: [null, "Te beperkt.", "Te beperkt.", "Te beperkt."],
+        wrongHints: [null, "Alleen brandstof — maar wat doet 'm aan?", "Alleen zuurstof zonder iets dat brandt = niets.", "Alleen warmte zonder iets brandbaars = geen vuur."],
       },
       {
         q: "Wat ademen **planten in** dat wij uitademen?",
@@ -328,7 +328,7 @@ const steps = [
         q: "Welke is **GEEN vloeistof**?",
         options: ["IJs", "Water", "Olie", "Melk"],
         answer: 0,
-        wrongHints: [null, "Wel vloeistof.", "Wel vloeistof.", "Wel vloeistof."],
+        wrongHints: [null, "Water stroomt — is dus vloeibaar.", "Olie stroomt — is dus vloeibaar.", "Melk stroomt — is dus vloeibaar."],
       },
       {
         q: "Wat **vult een gas**?",
@@ -425,12 +425,12 @@ const steps = [
       { q: "Wat is **stollen**?", options: ["Vloeibaar wordt vast","Vast wordt vloeibaar","Verdampen","Condenseren"], answer: 0, wrongHints: [null, "Smelten.", "Niet.", "Niet."] },
       { q: "Wat is **verdampen**?", options: ["Vloeibaar wordt gas","Gas wordt vloeibaar","Smelten","Stollen"], answer: 0, wrongHints: [null, "Condenseren.", "Niet.", "Niet."] },
       { q: "**IJs op een glas** is welke toestand?", options: ["Vast","Vloeibaar","Gas","Plasma"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet bij water-stof."] },
-      { q: "**Stoom uit kookpot** is?", options: ["Gas","Vloeibaar","Vast","Plasma"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "**Stoom uit kookpot** is?", options: ["Gas","Vloeibaar","Vast","Plasma"], answer: 0, wrongHints: [null, "Stoom is geen druppels — daarvoor zou het al gecondenseerd zijn.", "Stoom heeft geen vaste vorm.", "Plasma is iets heel anders (heter, in sterren)."] },
       { q: "**Smelt-** en **kookpunt** zijn?", options: ["Vaste eigenschappen van een stof","Random","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel."] },
       { q: "Wat is **massa**?", options: ["Hoeveelheid materie","Gewicht","Volume","Niet relevant"], answer: 0, wrongHints: [null, "Wel verwant maar verschillend.", "Ruimte-inname.", "Wel."] },
       { q: "Wat is een **mengsel**?", options: ["Meerdere stoffen samen","Zuivere stof","Element","Niet bestaand"], answer: 0, wrongHints: [null, "Tegengestelde.", "Specifieker.", "Wel."] },
       { q: "**Lucht** is welke toestand?", options: ["Gas","Vloeibaar","Vast","Mengsel van gassen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Ook correct — specifieker."] },
-      { q: "Wat is **verdrijven** (vloeistof)?", options: ["Plaats innemen in vloeistof — Archimedes","Verdwijnen","Mengen","Smelten"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Wat is **verdrijven** (vloeistof)?", options: ["Plaats innemen in vloeistof — Archimedes","Verdwijnen","Mengen","Smelten"], answer: 0, wrongHints: [null, "Verdwijnen is iets anders — verdrijven betekent juist 'wegduwen'.", "Mengen is twee stoffen bij elkaar doen.", "Smelten is vast → vloeibaar door warmte."] },
       { q: "Wat is **sublimeren**?", options: ["Vast direct naar gas","Vloeibaar naar gas","Gas naar vast","Niet bestaand"], answer: 0, wrongHints: [null, "Verdampen.", "Rijp.", "Wel."] },
       { q: "Welke **stof** zet uit bij verwarming (gewoonlijk)?", options: ["Bijna alle stoffen","Geen","Alleen water","Alleen ijs"], answer: 0, wrongHints: [null, "Niet — wel uitzetting.", "Niet — geldt breder.", "Niet."] },
     ],

@@ -280,7 +280,7 @@ const steps = [
         q: "**Lelystad** is de hoofdstad van welke provincie?",
         options: ["Flevoland","Gelderland","Noord-Holland","Drenthe"],
         answer: 0,
-        wrongHints: [null,"Lelystad is op nieuw land — Flevoland.","Gelderland heeft Arnhem als hoofdstad.","Noord-Holland heeft Haarlem.","Drenthe heeft Assen."],
+        wrongHints: [null,"Gelderland heeft Arnhem als hoofdstad.","Noord-Holland heeft Haarlem.","Drenthe heeft Assen."],
         uitlegPad: {
           stappen: [{ titel: "Lelystad = nieuwste hoofdstad", tekst: "Lelystad is hoofdstad van Flevoland (jongste provincie, 1986). Stad is GEBOUWD in 1967 op gewonnen land. Vernoemd naar Cornelis Lely — ingenieur die plan maakte voor Zuiderzeewerken (Afsluitdijk + polders). 'Lely's stad'." }],
           woorden: [{ woord: "Lelystad", uitleg: "Hoofdstad Flevoland. ~80.000 inwoners. Sinds 1967." }, { woord: "Cornelis Lely", uitleg: "Ingenieur. Plan Zuiderzeewerken 1891. Stad naar hem vernoemd." }],
@@ -294,7 +294,7 @@ const steps = [
         q: "Wat is de hoofdstad van **Gelderland**?",
         options: ["Arnhem","Nijmegen","Utrecht","Apeldoorn"],
         answer: 0,
-        wrongHints: [null,"Nijmegen is groter qua bevolking maar Arnhem is de hoofdstad.","Utrecht is in andere provincie.","Apeldoorn is grote stad in Gelderland maar geen hoofdstad."],
+        wrongHints: [null,"Nijmegen is groter qua bevolking, maar niet de hoofdstad.","Utrecht is in een andere provincie.","Apeldoorn is grote stad in Gelderland maar geen hoofdstad."],
         uitlegPad: {
           stappen: [{ titel: "Arnhem — niet Nijmegen", tekst: "Arnhem is hoofdstad van Gelderland (grootste provincie qua oppervlak). Veel mensen denken Nijmegen — maar Nijmegen is wel GROTER, niet hoofdstad. Examen-val. Arnhem bekend van Slag om Arnhem (WO2, 1944, 'A Bridge Too Far')." }],
           woorden: [{ woord: "Arnhem", uitleg: "Hoofdstad Gelderland. ~165.000 inwoners. Stad aan de Rijn." }, { woord: "Slag om Arnhem", uitleg: "September 1944. Geallieerde luchtlanding mislukte. Brug niet veroverd. Beroemde film + boek." }],
@@ -588,7 +588,7 @@ const steps = [
         q: "Tot welke provincie behoort **Texel**?",
         options: ["Noord-Holland","Friesland","Drenthe","Groningen"],
         answer: 0,
-        wrongHints: [null,"Andere Wadden­eilanden (Vlieland t/m Schiermonnikoog) zijn Friesland, maar Texel is van Noord-Holland.","Texel valt niet onder Friesland.","Drenthe heeft geen eilanden.","Groningen heeft geen eilanden."],
+        wrongHints: [null,"Vlieland t/m Schiermonnikoog zijn Friesland — maar Texel is van een andere provincie.","Drenthe heeft geen eilanden.","Groningen heeft geen eilanden."],
         uitlegPad: {
           stappen: [{ titel: "Texel = uniek Noord-Holland", tekst: "Van de 5 Wadden­eilanden hoort alleen TEXEL bij Noord-Holland. De andere 4 (Vlieland-Terschelling-Ameland-Schiermonnikoog) horen bij Friesland. Examen-val: makkelijk om te denken 'alle wadden = Friesland'." }],
           woorden: [{ woord: "Texel", uitleg: "Grootste Wadden­eiland. ~13.500 inwoners. Bij Noord-Holland (gemeente Texel)." }],
@@ -635,9 +635,9 @@ const steps = [
       { q: "Welke **provincie** is hoofdstad-provincie (Amsterdam)?", options: ["Noord-Holland","Zuid-Holland","Utrecht","Flevoland"], answer: 0, wrongHints: [null, "Rotterdam/Den Haag daar.", "Anders.", "Anders."] },
       { q: "**Wadden** liggen?", options: ["Noorden — boven Friesland/Groningen","Zuiden","Westen","Oosten"], answer: 0, wrongHints: [null, "Niet.", "Niet exact.", "Niet."] },
       { q: "**IJsselmeer** ontstond door?", options: ["Afsluitdijk (1932)","Mensen-graven","Natuurlijk","Industrie"], answer: 0, wrongHints: [null, "Niet primair.", "Wel maar afgesloten 1932.", "Niet."] },
-      { q: "Welke **provincie** is nieuwste (jongste)?", options: ["Flevoland (1986)","Limburg","Zeeland","Groningen"], answer: 0, wrongHints: [null, "Veel ouder.", "Veel ouder.", "Veel ouder."] },
+      { q: "Welke **provincie** is nieuwste (jongste)?", options: ["Flevoland (1986)","Limburg","Zeeland","Groningen"], answer: 0, wrongHints: [null, "Limburg bestaat al eeuwen.", "Zeeland is een hele oude provincie.", "Groningen is een hele oude provincie."] },
       { q: "Hoogste **berg** in NL ligt in?", options: ["Limburg (Vaalserberg 322m)","Friesland","Zeeland","Noord-Holland"], answer: 0, wrongHints: [null, "Geen bergen.", "Niet hoog.", "Niet."] },
-      { q: "Welke provincie ligt het **meest noordelijk**?", options: ["Groningen","Limburg","Zeeland","Drenthe"], answer: 0, wrongHints: [null, "Zuid.", "Zuidwest.", "Bijna — Groningen iets noordelijker."] },
+      { q: "Welke provincie ligt het **meest noordelijk**?", options: ["Groningen","Limburg","Zeeland","Drenthe"], answer: 0, wrongHints: [null, "Limburg ligt in het zuiden.", "Zeeland ligt zuidwest.", "Drenthe ligt noord, maar er ligt nog iets bovenop."] },
     ],
   },
 ];
