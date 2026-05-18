@@ -1,6 +1,13 @@
 // Leerpad: Examen-oefenpad Engels VMBO-GL/TL 2024 tijdvak 1
 // 2026-05-10: 2e Engels-pilot. 8 vragen over 3 leesteksten.
+// 2026-05-18: uitgebreid naar 30 vragen over 11 leesteksten via Chrome-Claude
+// van examenblad.nl. Nieuwe bron-teksten (5-11) bevatten ALLEEN korte
+// onderwerp-parafrase + examenblad-link i.p.v. volledige leestekst —
+// voor third-party copyright (bronnen uit kranten/magazines) verwijst de
+// leerling naar examenblad.nl voor de volledige tekst.
 // Bron: examenblad.nl, examen 0071 GT 2024-1.
+
+const EBN_T1 = "https://www.examenblad.nl/2024/vmbo-gl/documenten/cse-1/gt-0071-a-24-1-b";
 
 const tekst1 = {
   titel: "Tekst 1 — Musical Bridge (Golden Gate Bridge album)",
@@ -17,10 +24,57 @@ const tekst4 = {
   body: "1. Brazil's football federation announced it will pay men and women the same amount for representing the national team, one of the few countries to make such a pledge. It means Brazil's little-known female players will receive the same fees and allowances as global superstars such as Neymar.\n\n2. Brazil's announcement was met with widespread praise. Marta, the most successful Brazilian female player, said: 'This is a moment of joy, of huge celebration. A historic moment.' On social media, fans applauded the move.\n\n3. Australia, Norway and New Zealand were amongst the nations to previously decide to pay their men and women internationals the same amount. In March 2019, the US women's team filed a lawsuit against the US Soccer Federation alleging gender discrimination.\n\n4. The decision is part of [_12_] equal treatment in football. The country's football federation president said: 'There's no more gender difference. The CBF is equalising salaries and prize money among men and women.'\n\n5. [_13_], not all is equal yet. Female players still play in less prestigious tournaments and the women's league receives much less media coverage and sponsorship.\n\nSource: theguardian.com, 2020",
 };
 
+// 2026-05-18: korte parafrase-only bron-teksten voor tekst 5-11 (Chrome-Claude
+// invoer). GEEN lange leestekst-body — leerling klikt naar examenblad.nl voor
+// de volle tekst. Body bevat alleen onderwerp-samenvatting (~25 woorden) +
+// bron-attributie + externe-link-aanwijzing.
+const tekst5 = {
+  titel: "Tekst 5 — Whistled Language of the Canary Islands",
+  body: "Korte intro: Het fluittalige Silbo Gomero op La Gomera raakt buiten gebruik nu de jongere generatie het niet meer leert.\n\nBron: chicagotribune.com (2021).\n\n📖 Lees de volledige leestekst op examenblad.nl (link bij de vraag).",
+  examenbladUrl: EBN_T1,
+};
+const tekst6 = {
+  titel: "Tekst 6 — Kong's calling card (silverback chest-beating)",
+  body: "Korte intro: Wetenschappelijk onderzoek in Rwanda toont aan hoe borstkloppend gedrag van silverback-gorilla's informatie geeft over hun lichaamsgrootte.\n\nBron: nationalgeographic.com (2021).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+const tekst7 = {
+  titel: "Tekst 7 — Miso maker creates cricket soy sauce",
+  body: "Korte intro: Japanse miso-maker Noda ontwikkelt sojasaus op basis van krekels, in samenwerking met restaurant Antcicada in Tokyo.\n\nBron: asahi.com (2020).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+const tekst8 = {
+  titel: "Tekst 8 — James Vickery: R&B artist with one deaf ear",
+  body: "Korte intro: R&B-zanger James Vickery vertelt hoe hij doof werd aan één oor en hoe dat zijn muzikale carrière juist heeft gevormd.\n\nBron: news.sky.com (2021).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+const tekst9 = {
+  titel: "Tekst 9 — Judge John Hodgman on the Family Netflix Account",
+  body: "Korte intro: Advieskolumn waarin rechter Hodgman een 18-jarige antwoordt die klaagt dat haar vader haar Netflix-profiel beperkt.\n\nBron: nyti.ms (2021).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+const tekst10 = {
+  titel: "Tekst 10 — We noticed a wild rabbit in our yard (Q&A)",
+  body: "Korte intro: Q&A over wilde konijnen in je tuin. Experts leggen uit waarom je ze beter niet kunt voeren.\n\nBron: cwf-fcf.org (2021).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+const tekst11 = {
+  titel: "Tekst 11 — Headless Statue in Sacramento",
+  body: "Korte intro: Een onthoofd standbeeld van 19e-eeuwse slager en verpakkingsmagnaat Swanston in Sacramento leidt tot politieonderzoek.\n\nBron: huffpost.com (2022).\n\n📖 Lees de volledige leestekst op examenblad.nl.",
+  examenbladUrl: EBN_T1,
+};
+
 const chapters = [
   { letter: "A", title: "Tekst 1 — Musical Bridge", emoji: "🎵", from: 0, to: 1 },
   { letter: "B", title: "Tekst 3 — Medieval tunnel", emoji: "🏰", from: 2, to: 4 },
   { letter: "C", title: "Tekst 4 — Equal pay football", emoji: "⚽", from: 5, to: 7 },
+  { letter: "D", title: "Tekst 5 — Whistled language", emoji: "🎵", from: 8, to: 12 },
+  { letter: "E", title: "Tekst 6 — Gorilla chest-beating", emoji: "🦍", from: 13, to: 18 },
+  { letter: "F", title: "Tekst 7 — Cricket soy sauce", emoji: "🦗", from: 19, to: 21 },
+  { letter: "G", title: "Tekst 8 — Deaf singer Vickery", emoji: "🎤", from: 22, to: 25 },
+  { letter: "H", title: "Tekst 9 — Hodgman & Netflix", emoji: "📺", from: 26, to: 27 },
+  { letter: "I", title: "Tekst 10 — Wild rabbits", emoji: "🐇", from: 28, to: 29 },
+  { letter: "J", title: "Tekst 11 — Headless statue", emoji: "🗿", from: 30, to: 30 },
 ];
 
 const steps = [
@@ -351,10 +405,12 @@ const examenEngels2024T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Engels - eindexamen oefenen 2024-T1",
   intro:
-    "8 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 1, verdeeld over 3 leesteksten (Golden Gate Bridge album, medieval tunnel Wales, equal pay football Brazil). Per vraag de echte 4 antwoorden, denkprikkel-hints, inhoudelijke uitleg.",
+    "30 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 1, verdeeld over 11 leesteksten. Per vraag de echte antwoorden van het examen, denkprikkel-hints en inhoudelijke uitleg. Voor de leesteksten 5-11 verwijst de app naar examenblad.nl (third-party copyright).",
   triggerKeywords: [
     "examen engels 2024", "echte examenvragen engels",
     "golden gate bridge album", "medieval tunnel", "brazil equal pay football",
+    "whistled language", "silbo gomero", "gorilla chest-beating", "cricket soy sauce",
+    "james vickery", "netflix family account", "wild rabbit", "headless statue",
     "begrijpend lezen engels",
   ],
   chapters,
