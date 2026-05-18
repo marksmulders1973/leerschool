@@ -147,6 +147,7 @@ import kommagetallenPo from "./kommagetallenPo.js";
 import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
 import interpunctiePo from "./interpunctiePo.js";
 import schrijvenTekstenPo from "./schrijvenTekstenPo.js";
+import informatiebronnenPo from "./informatiebronnenPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -236,6 +237,7 @@ export const ALL_LEARN_PATHS = {
   "tijdsduur-rekenen-po": tijdsduurRekenenPo,
   "interpunctie-po": interpunctiePo,
   "schrijven-teksten-po": schrijvenTekstenPo,
+  "informatiebronnen-po": informatiebronnenPo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

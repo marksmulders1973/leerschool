@@ -2665,6 +2665,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "informatiebronnen-po",
+    "file": "./informatiebronnenPo.js",
+    "title": "Informatiebronnen (Cito groep 6-8)",
+    "subject": "taal",
+    "level": "groep6-8",
+    "emoji": "🔍",
+    "referentieNiveau": "1F",
+    "sloThema": "Studievaardigheden — informatiebronnen / Doorstroomtoets-onderdeel",
+    "triggerKeywords": [
+      "informatiebron",
+      "bron",
+      "woordenboek",
+      "alfabetisch",
+      "encyclopedie",
+      "atlas",
+      "index",
+      "inhoudsopgave",
+      "betrouwbaar",
+      "fake news",
+      "primaire bron",
+      "secundaire bron"
+    ],
+    "intro": "Bronnen voor de Cito-Doorstroomtoets — woordenboek, atlas, encyclopedie, inhoudsopgave + index, betrouwbaarheid + fake news. 5 stappen × ~5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "interpunctie-po",
     "file": "./interpunctiePo.js",
     "title": "Interpunctie & hoofdletters (groep 5-7)",
