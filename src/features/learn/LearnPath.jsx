@@ -51,6 +51,15 @@ function stripInternalCodes(s) {
   return String(s).replace(/\s*\(V\d+(?:\s*,\s*V\d+)*\)\s*$/i, "").trim();
 }
 
+/** Mark UX 2026-05-18: examen-pad-stap-titels beginnen vaak met "Vraag N — "
+ *  of "Vraag N - " (origineel examenblad-nummer). In de UI willen we de
+ *  stap-positie tonen ("1."), niet het bron-vraagnummer — dat staat al in
+ *  de examenBron-banner. Strip de prefix uit display-titels. */
+function stripExamenVraagPrefix(s) {
+  if (!s) return s;
+  return String(s).replace(/^\s*Vraag\s*\d+\s*[—\-·:]\s*/i, "").trim();
+}
+
 function renderInline(text) {
   // Ondersteunt **bold**, *bold* (asterisks raken niet-spatie aan beide kanten
   // zodat "2 * 3" niet per ongeluk vet wordt) en [label](url)-markdown-links
@@ -791,9 +800,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           )}
         </div>
         <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
-          {/* Mark UX 2026-05-18: bij examen-paden is "Vraag 11 — ..." al in
-              step.title verwerkt; "1." prefix erbij is dubbele nummering. */}
-          {isExamenPad ? step.title : `${stepIdx + 1}. ${step.title}`}
+          {/* Mark UX 2026-05-18: bij examen-paden begint step.title vaak met
+              "Vraag N — " (origineel examenblad-nummer). Strippen, want de
+              stap-positie is "1." in dit leerpad. Bron-vermelding staat al
+              in examenBron-banner eronder. */}
+          {stepIdx + 1}. {stripExamenVraagPrefix(step.title)}
         </h2>
 
         {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
@@ -1422,7 +1433,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               {stepIdx + 1 < totalSteps && (
                 <NextStepCard
                   eyebrow="Volgend deel"
-                  title={isExamenPad ? (path.steps[stepIdx + 1]?.title || "Verder") : `${stepIdx + 2}. ${path.steps[stepIdx + 1]?.title || "Verder"}`}
+                  title={`${stepIdx + 2}. ${stripExamenVraagPrefix(path.steps[stepIdx + 1]?.title || "Verder")}`}
                   hint="Doorgaan met dit onderwerp"
                   accent={C.good}
                   primary
