@@ -823,6 +823,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "cse-strategie-engels-vmbo",
+    "file": "./cseStrategieEngelsVmbo.js",
+    "title": "CSE-strategie Engels (VMBO-GT)",
+    "subject": "engels",
+    "level": "vmbo-gt-4",
+    "emoji": "📕",
+    "referentieNiveau": "vmbo-gt-CSE",
+    "sloThema": "Engels VMBO — leesvaardigheid CSE strategie + tips",
+    "triggerKeywords": [
+      "CSE Engels",
+      "leesvaardigheid",
+      "VMBO Engels examen",
+      "scan",
+      "skim",
+      "lees-strategie",
+      "vraagsoort",
+      "signaalwoord",
+      "however",
+      "therefore",
+      "because",
+      "verwijswoord"
+    ],
+    "intro": "Hoe haal je een hoger cijfer op het VMBO-GT-eindexamen Engels? Strategieën voor scan + skim, vraagsoorten herkennen, onbekende woorden raden, valstrikken vermijden. 5 stappen × ~5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "cse-wiskunde-strategie-vmbo",
     "file": "./cseWiskundeStrategieVmbo.js",
     "title": "CSE Wiskunde-strategie VMBO (klas 3-4)",

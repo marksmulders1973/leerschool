@@ -152,6 +152,7 @@ import staatsinrichting1848 from "./staatsinrichting1848.js";
 import kolonieIndonesie from "./kolonieIndonesie.js";
 import socialeZekerheidNL from "./socialeZekerheidNL.js";
 import nederlandWaterVo from "./nederlandWaterVo.js";
+import cseStrategieEngelsVmbo from "./cseStrategieEngelsVmbo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -246,6 +247,7 @@ export const ALL_LEARN_PATHS = {
   "kolonie-indonesie": kolonieIndonesie,
   "sociale-zekerheid-nl": socialeZekerheidNL,
   "nederland-water-vo": nederlandWaterVo,
+  "cse-strategie-engels-vmbo": cseStrategieEngelsVmbo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
