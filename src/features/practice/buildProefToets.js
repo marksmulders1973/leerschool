@@ -35,9 +35,14 @@ export async function buildProefToets({ leerpadId, aantal = 30 }) {
   if (!pad) {
     throw new Error(`buildProefToets: leerpad '${leerpadId}' niet gevonden`);
   }
-  const alleChecks = (pad.steps || []).flatMap((s) => s.checks || []);
+  // Mark infra-fix 2026-05-18: neem step.svg mee per check zodat grafiek-/
+  // tabel-vragen renderable blijven in proef-toets-modus. PlayQuiz toont
+  // question.svg automatisch. Skip checks met `disabled: true`.
+  const alleChecks = (pad.steps || []).flatMap((s) =>
+    (s.checks || []).map((c) => ({ ...c, svg: c.svg || s.svg || null }))
+  );
   const valide = alleChecks.filter(
-    (c) => Array.isArray(c.options) && c.options.length >= 2 && typeof c.answer === "number"
+    (c) => !c.disabled && Array.isArray(c.options) && c.options.length >= 2 && typeof c.answer === "number"
   );
   if (valide.length === 0) {
     throw new Error(`buildProefToets: geen geldige vragen in '${leerpadId}'`);

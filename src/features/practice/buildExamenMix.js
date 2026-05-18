@@ -54,8 +54,12 @@ export async function buildExamenMix({ subject, aantal = null }) {
     if (!pad) continue;
     for (const step of (pad.steps || [])) {
       for (const check of (step.checks || [])) {
+        if (check.disabled) continue;
         if (Array.isArray(check.options) && check.options.length >= 2 && typeof check.answer === "number") {
-          alleChecks.push(check);
+          // Mark infra-fix 2026-05-18: step.svg meegeven aan check zodat
+          // grafiek-/tabel-context bewaard blijft in examen-mix-modus.
+          // PlayQuiz rendert question.svg automatisch.
+          alleChecks.push({ ...check, svg: check.svg || step.svg || null });
         }
       }
     }

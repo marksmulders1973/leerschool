@@ -94,6 +94,11 @@ export function gatherPoChecks(opts = {}) {
           // zichtbaar is als een check uit een echt examen komt.
           examenBron: c.examenBron || null,
           bronTekst: c.bronTekst || null,
+          // Mark infra-fix 2026-05-18: neem step.svg mee zodat grafiek-/
+          // tabel-vragen ook in sample-flow renderable zijn (PlayQuiz
+          // toont question.svg al automatisch). Lost root-cause op die
+          // de 5 disabled-vlaggen in tabellenGrafieken patchte.
+          svg: step?.svg || null,
           checkIdx,
           subject: pijler,
           pathId,
