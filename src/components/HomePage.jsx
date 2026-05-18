@@ -1227,7 +1227,19 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 background: "rgba(255,255,255,0.06)", borderRadius: 16,
                 padding: "10px 14px", display: "flex", alignItems: "center", gap: 10,
               }}>
-                <img src="/bol.jpg" alt="" style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover" }} />
+                {/* Rol-foto ipv oud Studiebol-bol-logo (Mark 2026-05-18 rebrand
+                    Leerkwartier). Foto matcht de gekozen rol — continuïteit
+                    met de hero-tegels die dezelfde brand-foto's gebruiken. */}
+                <img
+                  src={
+                    pendingRole === "leerling" ? "/model-leerling.png"
+                    : pendingRole === "student" ? "/model-student.jpg"
+                    : pendingRole === "teacher" ? "/model-leerkracht.jpg"
+                    : "/logo-doorstroomtoets.png"
+                  }
+                  alt=""
+                  style={{ width: 44, height: 44, borderRadius: 10, objectFit: "cover", objectPosition: "center 22%" }}
+                />
                 <div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.5)" }}>Je koos:</div>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "var(--color-text-strong)" }}>{roleLabels[pendingRole]}</div>
