@@ -329,7 +329,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const player = (userName || "Speler").trim() || "Speler";
 
   // Als initialStepIdx meegegeven is (vanuit toets-vraag), spring direct naar die stap.
-  const startMode = typeof initialStepIdx === "number" ? "reading" : "overview";
+  // Mark UX 2026-05-18: voor examen-paden (id begint met "examen-") skippen we
+  // het hoofdstukken-overzicht en starten direct in vraag 1. Een examen is een
+  // serie vragen — geen "kies een hoofdstuk"-keuze. "← Overzicht" blijft
+  // beschikbaar in step-mode voor wie wil teruggaan.
+  const isExamenPad = String(pathId || "").startsWith("examen-");
+  const startMode = typeof initialStepIdx === "number" || isExamenPad ? "reading" : "overview";
   const startStep = typeof initialStepIdx === "number" ? initialStepIdx : 0;
 
   // mode: overview | reading | checking | wrong | correctEvidence | stepDone | allDone
