@@ -10,6 +10,7 @@ const pathManifestById = Object.fromEntries(pathManifest.map(p => [p.id, p]));
 import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
+import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
@@ -56,7 +57,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -238,6 +239,20 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
       <div style={styles.content}>
         <KindAcceptBanner userName={userName} />
         <KoppelcodeBanner userName={userName} />
+        {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen
+            als userLevel nog leeg is + wizard niet eerder gedismissed via
+            localStorage-flag. Zet userLevel + userSchoolType automatisch. */}
+        {!userLevel && (() => {
+          let done = false;
+          try { done = localStorage.getItem("lk_niveau_wizard_done") === "1"; } catch {}
+          if (done) return null;
+          return (
+            <NiveauWizardBanner
+              onSetLevel={(lvl) => onSetLevel && onSetLevel(lvl || "")}
+              onSetSchoolType={(st) => onSetSchoolType && onSetSchoolType(st || "")}
+            />
+          );
+        })()}
 
         {/* Daily-goal-banner (Mark's "leerkwartier" hard maken, 2026-05-16).
             Toont voortgangs-balk naar 15-min/dag-doel. Bij voltooiing felicitatie. */}

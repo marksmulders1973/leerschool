@@ -1210,6 +1210,8 @@ export default function App() {
           userName={userName}
           userLevel={userLevel}
           userSchoolType={userSchoolType}
+          onSetLevel={setUserLevel}
+          onSetSchoolType={setUserSchoolType}
           quizzes={quizzes}
           sessionMin={sessionMin}
           kwartierTarget={KWARTIER_TARGET_MIN}
