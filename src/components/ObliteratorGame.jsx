@@ -180,7 +180,7 @@ import {
   schrijfPendingScores,
   pushNaarPendingQueue,
 } from "../games/obliterator/storage.js";
-import { laadTopScores, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
+import { laadTopScores, laadTopScoresVandaag, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
 import { makeMulberry32, moeilijkheidEmoji } from "../games/obliterator/rng.js";
 
 export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose, onChallengeFriend, pvpMatch, pvpSub, pvpRole, pvpStartsAt }) {
@@ -282,6 +282,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [pvpResult, setPvpResult] = useState(null);
   const [eindScore, setEindScore] = useState(0);
   const [highscores, setHighscores] = useState([]);
+  // 2026-05-18 — daily-leaderboard naast all-time
+  const [highscoresVandaag, setHighscoresVandaag] = useState([]);
   const [nieuwRecord, setNieuwRecord] = useState(false);
   const [laden, setLaden] = useState(true);
 
@@ -678,7 +680,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     }
   };
 
-  // top 25 ophalen bij mount + na elke game-over
+  // top 25 + daily-leaderboard ophalen bij mount + na elke game-over
   useEffect(() => {
     let actief = true;
     laadTopScores().then(s => {
@@ -689,6 +691,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const namen = (s || []).slice(0, 3).map(x => x.naam).filter(Boolean);
       if (namen.length > 0) topSpelersRef.current = namen;
     });
+    laadTopScoresVandaag().then(s => { if (actief) setHighscoresVandaag(s); });
     return () => { actief = false; };
   }, [fase]);
 
@@ -8621,6 +8624,48 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   useEffect(() => { actieveTrailRef.current = actieveTrail; }, [actieveTrail]);
   const [prizeSpinning, setPrizeSpinning] = useState(false);
   const [prizeRevealed, setPrizeRevealed] = useState(null); // {id, soort, naam, emoji, waarde, isNew}
+  // 2026-05-18 — naam-prompt vóór game-start. Mark wens: 'als speler 'Speler'
+  // heet valt de high-score tegen. Vraag de naam voordat ze beginnen, maar
+  // niet verplicht (skip-knop).
+  const [naamPromptOpen, setNaamPromptOpen] = useState(false);
+  const [naamInput, setNaamInput] = useState("");
+  function isAnonyme() {
+    const n = (userName || "").trim();
+    return !n || n.toLowerCase() === "speler";
+  }
+  function checkNaamEnStart() {
+    if (isAnonyme()) {
+      setNaamInput("");
+      setNaamPromptOpen(true);
+      return;
+    }
+    startSpel();
+  }
+  function startSpel() {
+    track("obliterator_started", {
+      source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
+      personal_record: persoonlijkRecord || 0,
+      bonus_leven: bonusLeven || 0,
+      start_level: gekozenStartLevel,
+    });
+    setActieveMissies(kiesRandomMissies(3));
+    const m = kiesMutator();
+    setActiveMutator(m);
+    if (m.id !== "normaal") setMutatorBanner(m);
+    setFase("spelen");
+  }
+  function bevestigNaamEnStart() {
+    const schoon = (naamInput || "").trim().slice(0, 30);
+    if (schoon && schoon.toLowerCase() !== "speler") {
+      try {
+        localStorage.setItem("obliterator-naam", schoon);
+        // Broadcast naam-wijziging — App.jsx leest dit normaal op
+        window.dispatchEvent(new CustomEvent("obliterator-naam-update", { detail: schoon }));
+      } catch {}
+    }
+    setNaamPromptOpen(false);
+    startSpel();
+  }
   function trekPrijs() {
     if (prizeSpinning) return;
     if (verzameldeLetters.length < MISSIE_LETTERS.length) return;
@@ -8887,38 +8932,61 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </div>
             )}
 
-            {highscores && highscores.length > 0 && (
-              <div style={{
-                width: "100%", maxWidth: 320, marginBottom: 22,
-                padding: "12px 14px", borderRadius: 12,
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.12)",
-              }}>
-                <div style={{ color: "#ffcc40", fontSize: 12, fontWeight: 700, letterSpacing: 1.5, marginBottom: 8, textAlign: "center", textTransform: "uppercase" }}>
-                  🏆 Top {Math.min(5, highscores.length)}
+            {/* 2026-05-18 dual leaderboard — Mark wens 'daily naast all-time'. */}
+            {(highscores.length > 0 || highscoresVandaag.length > 0) && (() => {
+              const myNaam = (userName || "").trim().toLowerCase();
+              const medals = ["🥇","🥈","🥉"];
+              const renderRij = (s, i) => {
+                const isMe = !!s && myNaam && myNaam === (s.naam || "").trim().toLowerCase();
+                return (
+                  <li key={i} style={{
+                    display: "flex", justifyContent: "space-between", alignItems: "center",
+                    padding: "4px 6px", marginBottom: 1, borderRadius: 5,
+                    background: isMe ? "rgba(255,204,64,0.18)" : "transparent",
+                    fontSize: 12,
+                  }}>
+                    <span style={{ fontWeight: 700, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 90 }}>
+                      {s ? `${medals[i] || `${i + 1}.`} ${s.naam || "Speler"}` : <span style={{ opacity: 0.3 }}>—</span>}
+                    </span>
+                    <span style={{ fontWeight: 800, color: "#ffcc40", flexShrink: 0 }}>{s ? s.score : ""}</span>
+                  </li>
+                );
+              };
+              const tien = (arr) => Array.from({ length: 10 }, (_, i) => arr[i] || null);
+              return (
+                <div style={{
+                  width: "100%", maxWidth: 360, marginBottom: 18,
+                  display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10,
+                }}>
+                  {/* Vandaag */}
+                  <div style={{
+                    padding: "10px 10px", borderRadius: 10,
+                    background: "rgba(105,240,174,0.06)",
+                    border: "1px solid rgba(105,240,174,0.25)",
+                  }}>
+                    <div style={{ color: "#69f0ae", fontSize: 10, fontWeight: 700, letterSpacing: 1.2, marginBottom: 6, textAlign: "center", textTransform: "uppercase" }}>
+                      ⚡ Vandaag
+                    </div>
+                    <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                      {tien(highscoresVandaag).map(renderRij)}
+                    </ol>
+                  </div>
+                  {/* Aller Tijden */}
+                  <div style={{
+                    padding: "10px 10px", borderRadius: 10,
+                    background: "rgba(255,204,64,0.06)",
+                    border: "1px solid rgba(255,204,64,0.25)",
+                  }}>
+                    <div style={{ color: "#ffcc40", fontSize: 10, fontWeight: 700, letterSpacing: 1.2, marginBottom: 6, textAlign: "center", textTransform: "uppercase" }}>
+                      🏆 Aller Tijden
+                    </div>
+                    <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
+                      {tien(highscores).map(renderRij)}
+                    </ol>
+                  </div>
                 </div>
-                <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
-                  {highscores.slice(0, 5).map((s, i) => {
-                    const medals = ["🥇","🥈","🥉"];
-                    const isMe = (userName || "").trim().toLowerCase() === (s.naam || "").trim().toLowerCase();
-                    return (
-                      <li key={i} style={{
-                        display: "flex", justifyContent: "space-between", alignItems: "center",
-                        padding: "6px 8px", marginBottom: 2, borderRadius: 6,
-                        background: isMe ? "rgba(255,204,64,0.15)" : "transparent",
-                        fontSize: 14,
-                      }}>
-                        <span style={{ fontWeight: 700 }}>
-                          {medals[i] || `${i + 1}.`} {s.naam || "Speler"}
-                          {isMe && <span style={{ marginLeft: 6, fontSize: 10, opacity: 0.7 }}>(jij)</span>}
-                        </span>
-                        <span style={{ fontWeight: 800, color: "#ffcc40" }}>{s.score}</span>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </div>
-            )}
+              );
+            })()}
 
             {/* Sprint 10 — Prize Machine knop. Verschijnt alleen als de 9-letter
                 LEERKWART compleet is. Eén klik = spin → unlock. */}
@@ -8988,21 +9056,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </div>
             )}
 
-            <button onClick={() => {
-              track("obliterator_started", {
-                source: vanDeelLink ? "deeplink" : (wrongQuestions && wrongQuestions.length > 0 ? "results_page" : "menu"),
-                personal_record: persoonlijkRecord || 0,
-                bonus_leven: bonusLeven || 0,
-                start_level: gekozenStartLevel,
-              });
-              // Sprint 6 — kies 3 random missies voor deze run
-              setActieveMissies(kiesRandomMissies(3));
-              // Sprint 8 — kies random mutator (40% kans op 'normaal')
-              const m = kiesMutator();
-              setActiveMutator(m);
-              if (m.id !== "normaal") setMutatorBanner(m);
-              setFase("spelen");
-            }} style={{
+            <button onClick={checkNaamEnStart} style={{
               width: "100%", maxWidth: 320,
               padding: isPortrait ? "16px 32px" : "12px 28px",
               background: "linear-gradient(135deg, #ffcc40 0%, #ff5030 100%)",
@@ -10574,6 +10628,72 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               </span>
             </div>
           )}
+        </div>
+      )}
+
+      {/* 2026-05-18 — Naam-prompt vóór game-start als speler 'Speler' heet. */}
+      {naamPromptOpen && (
+        <div onClick={(e) => { if (e.target === e.currentTarget) setNaamPromptOpen(false); }} style={{
+          position: "absolute", inset: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          background: "rgba(0,0,0,0.78)", zIndex: 110,
+          padding: 24,
+        }}>
+          <div style={{
+            padding: "24px 26px",
+            background: "linear-gradient(135deg, #1a0a22, #2a1530)",
+            border: "2px solid #ffd54f",
+            borderRadius: 18,
+            boxShadow: "0 20px 60px rgba(0,0,0,0.7), 0 0 50px rgba(255,213,79,0.35)",
+            color: "#fff", maxWidth: 360, width: "100%",
+            fontFamily: "'Fredoka', sans-serif", textAlign: "center",
+          }}>
+            <div style={{ fontSize: 56, marginBottom: 4 }}>👋</div>
+            <div style={{ fontSize: 19, fontWeight: 800, color: "#ffd54f", marginTop: 4 }}>
+              Hoe heet jij?
+            </div>
+            <div style={{ fontSize: 13, opacity: 0.85, marginTop: 8, lineHeight: 1.45 }}>
+              Anders verschijn je in de high-score als <strong>"Speler"</strong> — beetje saai voor zo'n top-record.
+            </div>
+            <input
+              type="text"
+              value={naamInput}
+              onChange={(e) => setNaamInput(e.target.value.slice(0, 30))}
+              onKeyDown={(e) => { if (e.key === "Enter") bevestigNaamEnStart(); }}
+              placeholder="Jouw naam…"
+              autoFocus
+              style={{
+                marginTop: 14, width: "100%",
+                padding: "10px 14px", borderRadius: 10,
+                background: "rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,213,79,0.4)",
+                color: "#fff", fontSize: 16, fontWeight: 600,
+                fontFamily: "'Fredoka', sans-serif",
+                outline: "none",
+              }}
+            />
+            <div style={{ display: "flex", gap: 10, marginTop: 14 }}>
+              <button onClick={() => { setNaamPromptOpen(false); startSpel(); }} style={{
+                flex: 1, padding: "10px 16px",
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.18)",
+                borderRadius: 10, color: "#fff", fontSize: 13,
+                fontFamily: "'Fredoka', sans-serif", fontWeight: 600,
+                cursor: "pointer",
+              }}>Skip — speel als Speler</button>
+              <button onClick={bevestigNaamEnStart} disabled={!naamInput.trim()} style={{
+                flex: 1, padding: "10px 16px",
+                background: naamInput.trim()
+                  ? "linear-gradient(135deg, #ffd54f, #ff8030)"
+                  : "rgba(255,255,255,0.08)",
+                border: "none", borderRadius: 10,
+                color: naamInput.trim() ? "#1a0008" : "rgba(255,255,255,0.4)",
+                fontSize: 14, fontWeight: 800, letterSpacing: 1,
+                fontFamily: "Impact, 'Arial Black', sans-serif",
+                cursor: naamInput.trim() ? "pointer" : "default",
+              }}>OK · SPEEL</button>
+            </div>
+          </div>
         </div>
       )}
 

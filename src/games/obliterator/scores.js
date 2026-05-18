@@ -25,6 +25,32 @@ export async function laadTopScores() {
   }
 }
 
+// Daily-leaderboard: alleen scores van vandaag (in UTC, eenvoudig + universeel).
+// 2026-05-18 Mark wens: 'extra scorebord — 1 dag record (10) + all-time (10)'.
+export async function laadTopScoresVandaag() {
+  try {
+    const nu = new Date();
+    // Start van vandaag 00:00 UTC
+    const dagStart = new Date(Date.UTC(nu.getUTCFullYear(), nu.getUTCMonth(), nu.getUTCDate())).toISOString();
+    const { data, error } = await supabase
+      .from("obliterator_scores")
+      .select("player_name, score, level, created_at")
+      .gte("created_at", dagStart)
+      .order("score", { ascending: false })
+      .order("created_at", { ascending: true })
+      .limit(TOP_LIMIT);
+    if (error) return [];
+    return (data || []).map(d => ({
+      naam: d.player_name,
+      score: d.score,
+      level: d.level || null,
+      datum: d.created_at?.slice(0, 10),
+    }));
+  } catch {
+    return [];
+  }
+}
+
 export async function schrijfScore(naam, userId, score, level) {
   if (!score || score <= 0) return;
   const payload = {
