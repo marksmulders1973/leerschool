@@ -1928,21 +1928,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // - Drip-effecten onder letters (1-3 verticale verfdruppels)
       // - Random spuit-spatten om de tekst
       // - Tag-stijl handtekening van de auteur
+      // 2026-05-18 v2: Mark wens 'tekst veel groter/leesbaarder'.
+      // Font 22→34px, outline 5→9, shadowBlur 14→24, auteur 15→22.
+      // Spacing 600→950 zodat grotere quotes elkaar niet overlappen.
       {
-        const quoteSpacing = 600 * SCHAAL;
+        const quoteSpacing = 950 * SCHAAL;
         const quoteScrollSpeed = 0.05;
         const quoteOffset = (frameTeller * spelSnelheid * quoteScrollSpeed) % quoteSpacing;
         const aantalQuotes = Math.ceil(W / quoteSpacing) + 3;
         ctx.save();
         for (let i = -1; i < aantalQuotes; i++) {
-          const qx = i * quoteSpacing - quoteOffset + 40 * SCHAAL;
-          if (qx < -400 * SCHAAL || qx > W + 50) continue;
+          const qx = i * quoteSpacing - quoteOffset + 50 * SCHAAL;
+          if (qx < -700 * SCHAAL || qx > W + 80) continue;
           const wereldQuoteIdx = Math.floor((frameTeller * spelSnelheid * quoteScrollSpeed) / quoteSpacing) + i;
           const q = WIJZE_QUOTES[((wereldQuoteIdx % WIJZE_QUOTES.length) + WIJZE_QUOTES.length) % WIJZE_QUOTES.length];
-          const muurTop = PLAFOND_HOOGTE + 60 * SCHAAL;
-          const muurBot = grondTop - 180 * SCHAAL;
-          const muurH = Math.max(60, muurBot - muurTop);
-          const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 70 * SCHAAL)));
+          const muurTop = PLAFOND_HOOGTE + 50 * SCHAAL;
+          const muurBot = grondTop - 220 * SCHAAL;
+          const muurH = Math.max(80, muurBot - muurTop);
+          const qy = muurTop + ((wereldQuoteIdx * 211) % Math.max(1, Math.floor(muurH - 100 * SCHAAL)));
 
           // Deterministische 'random'-waarden per quote zodat ze niet trillen
           const seed = wereldQuoteIdx * 419 + 7;
@@ -1953,19 +1956,19 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           ctx.translate(qx, qy);
           ctx.rotate(tiltRad);
 
-          ctx.font = `italic bold ${Math.max(18, 22 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
+          ctx.font = `italic bold ${Math.max(28, 34 * SCHAAL)}px "Permanent Marker", "Brush Script MT", "Comic Sans MS", cursive`;
           ctx.textAlign = "left"; ctx.textBaseline = "top";
           const tekst = `"${q.tekst}"`;
           const tekstW = ctx.measureText(tekst).width;
-          const tekstH = 24 * SCHAAL;
+          const tekstH = 38 * SCHAAL;
 
-          // Drie spray-spatten random om de tekst (kleine cirkels)
-          ctx.fillStyle = "rgba(255,220,100,0.35)";
-          for (let s = 0; s < 5; s++) {
+          // Vijf spray-spatten random om de tekst (groter dan voorheen)
+          ctx.fillStyle = "rgba(255,220,100,0.4)";
+          for (let s = 0; s < 6; s++) {
             const ss = seed + s * 31;
-            const sx = ((ss * 17) % Math.max(40, Math.floor(tekstW + 30))) - 10 * SCHAAL;
-            const sy = ((ss * 23) % Math.max(20, Math.floor(tekstH + 20))) - 6 * SCHAAL;
-            const sr = (1 + (ss % 3)) * SCHAAL;
+            const sx = ((ss * 17) % Math.max(60, Math.floor(tekstW + 40))) - 16 * SCHAAL;
+            const sy = ((ss * 23) % Math.max(30, Math.floor(tekstH + 30))) - 10 * SCHAAL;
+            const sr = (1.5 + (ss % 4)) * SCHAAL;
             ctx.beginPath();
             ctx.arc(sx, sy, sr, 0, Math.PI * 2);
             ctx.fill();
@@ -1975,43 +1978,43 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // zachte rand. Eerst grote diffuse outline, dan harde donkere.
           ctx.shadowBlur = 0;
           ctx.lineJoin = "round";
-          ctx.strokeStyle = "rgba(0,0,0,0.85)";
-          ctx.lineWidth = 5 * SCHAAL;
+          ctx.strokeStyle = "rgba(0,0,0,0.9)";
+          ctx.lineWidth = 9 * SCHAAL;
           ctx.strokeText(tekst, 0, 0);
-          ctx.strokeStyle = "rgba(80,40,0,0.65)";
-          ctx.lineWidth = 8 * SCHAAL;
+          ctx.strokeStyle = "rgba(80,40,0,0.7)";
+          ctx.lineWidth = 14 * SCHAAL;
           ctx.globalAlpha = 0.4;
           ctx.strokeText(tekst, 0, 0);
           ctx.globalAlpha = 1;
 
-          // Gele fill met spuit-glow
-          ctx.shadowBlur = 14;
-          ctx.shadowColor = "rgba(255,200,80,0.85)";
+          // Gele fill met sterkere spuit-glow
+          ctx.shadowBlur = 24;
+          ctx.shadowColor = "rgba(255,200,80,0.95)";
           ctx.fillStyle = "#fff4b8";
           ctx.fillText(tekst, 0, 0);
           ctx.shadowBlur = 0;
 
-          // Verf-druppels onder de tekst — 2-3 verticale streepjes
-          ctx.fillStyle = "rgba(255,200,80,0.75)";
+          // Verf-druppels onder de tekst — dikker + langer
+          ctx.fillStyle = "rgba(255,200,80,0.8)";
           const dripCount = 2 + (seed % 2);
           for (let d = 0; d < dripCount; d++) {
             const ds = seed + d * 53;
-            const dx = ((ds * 13) % Math.max(40, Math.floor(tekstW - 30))) + 15 * SCHAAL;
-            const dh = (8 + (ds % 14)) * SCHAAL;
-            ctx.fillRect(dx, tekstH - 4 * SCHAAL, 2 * SCHAAL, dh);
+            const dx = ((ds * 13) % Math.max(60, Math.floor(tekstW - 50))) + 20 * SCHAAL;
+            const dh = (12 + (ds % 22)) * SCHAAL;
+            ctx.fillRect(dx, tekstH - 6 * SCHAAL, 3 * SCHAAL, dh);
             // Druppel-bolletje onderaan
             ctx.beginPath();
-            ctx.arc(dx + SCHAAL, tekstH - 4 * SCHAAL + dh, 2 * SCHAAL, 0, Math.PI * 2);
+            ctx.arc(dx + 1.5 * SCHAAL, tekstH - 6 * SCHAAL + dh, 3 * SCHAAL, 0, Math.PI * 2);
             ctx.fill();
           }
 
-          // Auteur als kleinere tag eronder (oranje krabbel-look)
-          ctx.font = `italic ${Math.max(13, 15 * SCHAAL)}px "Permanent Marker", "Brush Script MT", cursive`;
-          ctx.strokeStyle = "rgba(0,0,0,0.75)";
-          ctx.lineWidth = 3 * SCHAAL;
-          ctx.strokeText(q.auteur, 20 * SCHAAL, tekstH + 14 * SCHAAL);
+          // Auteur als grotere tag eronder
+          ctx.font = `italic ${Math.max(18, 22 * SCHAAL)}px "Permanent Marker", "Brush Script MT", cursive`;
+          ctx.strokeStyle = "rgba(0,0,0,0.85)";
+          ctx.lineWidth = 5 * SCHAAL;
+          ctx.strokeText(q.auteur, 24 * SCHAAL, tekstH + 22 * SCHAAL);
           ctx.fillStyle = "#ffb840";
-          ctx.fillText(q.auteur, 20 * SCHAAL, tekstH + 14 * SCHAAL);
+          ctx.fillText(q.auteur, 24 * SCHAAL, tekstH + 22 * SCHAAL);
 
           ctx.restore();
         }

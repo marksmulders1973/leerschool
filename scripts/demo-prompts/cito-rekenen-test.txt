@@ -1,0 +1,31 @@
+Genereer 3 nieuwe Cito-stijl rekenvragen voor groep 7-8 over PROCENTEN
+in dagelijkse context (winkel, korting, statistiek).
+
+EISEN:
+- Multiple-choice met 4 opties (A/B/C/D)
+- Authentiek Cito-toon (niet "leerling X heeft Y", maar realistische
+  contexten: kleding-winkel, supermarkt, schoolfeest, sport)
+- Antwoord op index 0 (eerste optie)
+- Verkeerde opties moeten REALISTISCHE foutpaden zijn (niet absurd)
+- 1 vraag makkelijk, 1 medium, 1 lastig
+
+Geef terug als JSON-array, klaar voor copy-paste in een leerpad:
+
+[
+  {
+    "q": "<vraagtekst>",
+    "options": ["<correct>", "<plausible fout>", "<plausible fout>", "<plausible fout>"],
+    "answer": 0,
+    "wrongHints": [null, "<denkprikkel zonder antwoord weg te geven>", "<denkprikkel>", "<denkprikkel>"],
+    "explanation": "<1-zin uitleg waarom A correct is>",
+    "niveau": "makkelijk|medium|lastig"
+  },
+  ...
+]
+
+ABSOLUUT VERMIJDEN:
+- Copyright-issues: GEEN echte CvTE/Cito-examen-vragen reproduceren
+- wrongHints die het juiste antwoord noemen of impliciet weggeven
+- "Niet." als wrongHint — wees specifiek
+
+Geef ALLEEN de JSON, geen toelichting eromheen.
