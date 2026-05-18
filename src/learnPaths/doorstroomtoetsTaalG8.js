@@ -409,7 +409,7 @@ const steps = [
         q: "*'De jongen was **uitgeput** na de race.'* Wat betekent uitgeput?",
         options: ["Heel moe", "Hongerig", "Boos", "Verbaasd"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Honger gaat over eten, niet over energie.", "Boos gaat over emotie, niet over moeheid.", "Verbaasd gaat over verrassing."],
         uitlegPad: {
           stappen: [
             { titel: "Letterlijk: leeg", tekst: "Uitgeput = energie 'uit' + 'put' = leeg van energie. Lijkt op een leeggepompte waterput." },
@@ -849,7 +849,7 @@ const steps = [
         q: "Signaalwoord **'bijvoorbeeld'** introduceert?",
         options: ["Een voorbeeld", "Tegenstelling", "Gevolg", "Conclusie"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet primair."],
+        wrongHints: [null, "Tegenstelling = 'maar' / 'echter'.", "Gevolg = 'dus' / 'daardoor'.", "Conclusie = 'kortom' / 'dus'."],
       },
       {
         q: "Cito-strik: een vraag heeft **'NIET'** in. Wat doe je?",
@@ -889,7 +889,7 @@ const steps = [
         q: "Signaalwoord **'daardoor'** introduceert?",
         options: ["Gevolg", "Reden", "Voorbeeld", "Tegenstelling"],
         answer: 0,
-        wrongHints: [null, "Reden = 'omdat'.", "Niet.", "Niet."],
+        wrongHints: [null, "Reden = 'omdat' of 'doordat'.", "Voorbeeld = 'bijvoorbeeld' of 'zoals'.", "Tegenstelling = 'maar' of 'echter'."],
         uitlegPad: {
           stappen: [
             { titel: "Daardoor = gevolg", tekst: "'Daardoor' wijst op het GEVOLG: wat er gebeurt VANWEGE iets dat eerder genoemd is." },
@@ -1216,7 +1216,7 @@ const steps = [
         q: "*'Gisteren **... ik naar school.'* Welk werkwoord?",
         options: ["fietste", "fietsde", "fietsten", "fiets"],
         answer: 0,
-        wrongHints: [null, "'fietsen' → stam 'fiets' → eindigt op s → 't kofschip → +te = fietste.", "Plural — vraag is 'ik' (enkelvoud).", "Geen werkwoord-tijd."],
+        wrongHints: [null, "Welke medeklinker staat aan het eind van de stam? Zit die in 't kofschip?", "Plural — vraag is 'ik' (enkelvoud).", "Geen werkwoord-tijd."],
         uitlegPad: {
           stappen: [
             { titel: "'t kofschip", tekst: "Stam 'fiets' eindigt op 's'. 's' zit in 't kofschip → krijg '-te' voor verleden tijd. Dus 'ik fietste'." },
@@ -1468,7 +1468,7 @@ const steps = [
         q: "Welk woord is **goed gespeld**: '**eiland**' of '**ijland**'?",
         options: ["eiland", "ijland", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Onjuist — moet uit je hoofd geleerd.", "Geen — slechts één is goed.", "Wel — 'eiland' bestaat."],
+        wrongHints: [null, "Onjuist — moet uit je hoofd geleerd. Welke spelling zie je vaker in boeken?", "Slechts één is goed.", "Eén ervan bestaat wel, kijk goed."],
         uitlegPad: {
           stappen: [
             { titel: "ei of ij?", tekst: "Voor ei/ij bestaat geen regel. Je moet woorden gewoon UIT JE HOOFD kennen. 'Eiland' schrijf je met ei." },
@@ -1534,7 +1534,7 @@ const steps = [
         q: "Welk woord is **goed gespeld**: '**station**' of '**stasion**'?",
         options: ["station", "stasion", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — 'ti' wordt uitgesproken als 'si' maar geschreven als 'ti'.", "Slechts één is goed.", "Wel — 'station' bestaat."],
+        wrongHints: [null, "Niet — hoe je 't uitspreekt is anders dan hoe je het schrijft.", "Slechts één is goed.", "Een schrijfwijze klopt — denk aan wat op een groot perron-bord staat."],
         uitlegPad: {
           stappen: [
             { titel: "ti vs si", tekst: "In veel Nederlandse woorden klinkt 'ti' als 'si': station, politie, vakantie. Maar je schrijft 'ti'." },
@@ -1584,7 +1584,7 @@ const steps = [
         q: "Welk **verkleinwoord** is goed: 'huisje' of 'huisie'?",
         options: ["huisje", "huisie", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — '-ie' is spreektaal, niet juist NL.", "Slechts één.", "Wel — 'huisje' bestaat."],
+        wrongHints: [null, "Niet — '-ie' is spreektaal, niet juist Nederlands.", "Slechts één.", "Eén schrijfwijze is correct in NL — welke leerde je op school?"],
         uitlegPad: {
           stappen: [
             { titel: "-je / -tje / -etje", tekst: "Verkleinwoorden eindigen op -je, -tje, -etje of -pje. NOOIT op -ie (dat is spreektaal)." },
@@ -1653,13 +1653,13 @@ const steps = [
         q: "Welke zin is **geen complete zin**?",
         options: ["Het rennende paard.", "Het paard rent.", "Het paard rent snel.", "Het paard rent door de wei."],
         answer: 0,
-        wrongHints: [null, "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'.", "Heeft werkwoord 'rent'."],
+        wrongHints: [null, "Heeft een werkwoord — is dus een echte zin.", "Werkwoord aanwezig + ook nog 'snel' als bijwoord.", "Werkwoord + voorzetselgroep — alles aanwezig."],
       },
       {
         q: "*'Ik ga naar buiten ___ het regent.'* Welk woord past?",
         options: ["maar", "omdat", "en", "als"],
         answer: 0,
-        wrongHints: [null, "'Omdat' = reden. Dan ga je juist NIET naar buiten vanwege regen — vreemd zonder context.", "'En' is opsommend, mist het tegenstelling-gevoel.", "'Als' geeft voorwaarde, maar de zin is meer een tegenstelling."],
+        wrongHints: [null, "'Omdat' = reden. Past dat hier? Buiten gaan vanwege regen is raar.", "'En' is opsommend, niet tegenstellend.", "'Als' geeft voorwaarde. Voelt deze zin als een voorwaarde of als een tegenstelling?"],
       },
       {
         q: "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
@@ -1695,7 +1695,7 @@ const steps = [
         q: "Welk woord krijgt **een hoofdletter**?",
         options: ["Amsterdam (plaatsnaam)", "maandag (weekdag)", "boek (zelfstandig naamwoord)", "rennen (werkwoord)"],
         answer: 0,
-        wrongHints: [null, "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter.", "Krijgt in NL geen hoofdletter."],
+        wrongHints: [null, "Weekdagen schrijven we klein in NL (anders dan in Engels).", "Zelfstandige naamwoorden krijgen geen hoofdletter (behalve aan zinsbegin).", "Werkwoorden krijgen geen hoofdletter."],
       },
       {
         q: "Welke zin heeft **goede aanhalingstekens**?",
@@ -1736,7 +1736,7 @@ const steps = [
         q: "Wat is het **werkwoord** in 'Lisa rent hard'?",
         options: ["rent", "Lisa", "hard", "Geen"],
         answer: 0,
-        wrongHints: [null, "Dat is onderwerp.", "Dat is bijvoeglijk naamwoord.", "Wel — rent."],
+        wrongHints: [null, "Dat is het onderwerp (wie of wat doet iets).", "Dat is een bijvoeglijk naamwoord (hoe iets is).", "Eén optie ís het werkwoord — denk: welk woord doet de actie?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een werkwoord?", tekst: "Een werkwoord is het **actie-woord** in de zin: wat gebeurt er? (rent, slaapt, eet, leest)." },
@@ -1820,7 +1820,7 @@ const steps = [
         q: "Welke is een **persoonlijk voornaamwoord**?",
         options: ["ik", "auto", "snel", "boos"],
         answer: 0,
-        wrongHints: [null, "Andere woordsoort.", "Andere woordsoort.", "Andere woordsoort."],
+        wrongHints: [null, "Dat is een zelfstandig naamwoord — een ding.", "Dat is een bijwoord — zegt hoe iets gaat.", "Dat is een bijvoeglijk naamwoord — beschrijft een gevoel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een persoonlijk voornaamwoord?", tekst: "Een persoonlijk voornaamwoord vervangt een persoon (of ding) zodat je niet steeds de naam hoeft te zeggen." },

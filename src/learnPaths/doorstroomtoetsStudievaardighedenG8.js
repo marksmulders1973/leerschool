@@ -1716,7 +1716,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["bal", "balk", "balkon", "ballon"],
         answer: 0,
-        wrongHints: [null, "Andere letter na 'bal'.", "Andere letter na 'bal'.", "Andere letter na 'bal'."],
+        wrongHints: [null, "Heeft een 'k' erbij — komt later in alfabet.", "Heeft 'kon' erachter — nog later.", "Heeft een dubbele 'l' — komt na enkele 'l'."],
         uitlegPad: {
           stappen: [
             { titel: "Alle 4 beginnen met 'bal'", tekst: "Vergelijk wat erna komt: bal (niets), balk (k), balkon (k-o-n), ballon (l-o-n)." },
@@ -1800,7 +1800,7 @@ const steps = [
         q: "**Atlas**-vraag: in welk **werelddeel** ligt Egypte?",
         options: ["Afrika", "Azië", "Europa", "Amerika"],
         answer: 0,
-        wrongHints: [null, "Wel grens-buur via Sinaï maar Egypte = Afrika.", "Te ver.", "Te ver."],
+        wrongHints: [null, "Sinaï is grens-buur, maar daar ligt Egypte niet.", "Te ver naar het noorden.", "Verkeerd continent — andere kant van de wereld."],
         uitlegPad: {
           stappen: [
             { titel: "Egypte op kaart", tekst: "Egypte ligt in het **noordoosten van Afrika**, met de Nijl-rivier en de Middellandse Zee als noordgrens." },
@@ -1854,7 +1854,7 @@ const steps = [
         q: "Bij een **cirkeldiagram** zijn alle delen samen altijd ___?",
         options: ["100%", "50%", "10%", "Variabel"],
         answer: 0,
-        wrongHints: [null, "Te weinig — moet helemaal vol.", "Te weinig.", "Niet — altijd 100%."],
+        wrongHints: [null, "Te weinig — een cirkel moet helemaal vol.", "Veel te weinig.", "Niet variabel — de hele cirkel is altijd hetzelfde getal."],
       },
       {
         q: "Welk woord komt **eerst** in het woordenboek: **'tabel'**, **'tafel'** of **'taart'**?",
@@ -1904,7 +1904,7 @@ const steps = [
         q: "Een **legenda** legt uit wat de **kleuren** op een grafiek of kaart betekenen. Goed of fout?",
         options: ["Goed", "Fout", "Soms goed", "Soms fout"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is wat legenda's doen.", "Onnodig vaag — gewoon goed.", "Onnodig vaag."],
+        wrongHints: [null, "Niet — dat is precies wat een legenda doet.", "Niet 'soms' — dit is altijd hun functie.", "Niet 'soms' — geldt voor elke legenda."],
         uitlegPad: {
           stappen: [
             { titel: "Legenda = sleutel", tekst: "De legenda staat naast/onder de grafiek en geeft betekenis aan elke kleur, symbool of streep." },
