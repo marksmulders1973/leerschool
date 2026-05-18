@@ -78,6 +78,7 @@ const MUTATOR_POOL = [
   { id: "minispeler", naam: "Mini-speler",           beschrijving: "Speler is kleiner — moeilijker te raken.",          emoji: "🐭", kans: 1 },
   { id: "tempoplus",  naam: "Snelheid +25%",         beschrijving: "Wereld scrollt sneller, meer ringen per minuut.",   emoji: "💨", kans: 1 },
   { id: "ringregen",  naam: "Ringen-regen",          beschrijving: "Veel meer ringen, maar ook meer obstakels.",        emoji: "💍", kans: 1 },
+  { id: "shipmode",   naam: "Ship-mode",             beschrijving: "Houd de spatie ingedrukt om omhoog te stuwen. Loslaten = vallen.", emoji: "🚀", kans: 1 },
 ];
 function kiesMutator() {
   // Weighted random op kans
@@ -893,6 +894,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const mutatorMagneetAan = mutatorRef.current === "magneet";
     const mutatorRingregenAan = mutatorRef.current === "ringregen";
     void mutatorRingregenAan; // TODO Sprint 8b: dubbele ring-spawn rate
+    const mutatorShipModeAan = mutatorRef.current === "shipmode";
+    // Ship-mode: input-state (spatie/click ingedrukt). Game-loop leest dit
+    // elke frame om continue-upward-thrust te geven i.p.v. eenmalige jump.
+    let shipInputActief = false;
     // Sprint 4 — visual juice (15-agent-audit, Tetris Effect-stijl):
     // - bloomFlashTeller: 1-frame wit overlay bij pickup, fade in 8 frames
     // - spelerTrail: ringbuffer met 5 oude posities voor trail-ghost-effect
@@ -4965,15 +4970,26 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (e.code !== "Space") return;
       if (!spelLoopt) return;
       e.preventDefault();
-      spring();
+      shipInputActief = true; // Sprint 9 — ship-mode tracking
+      // In ship-mode trigger niet de gewone spring (continue thrust via game-loop)
+      if (!mutatorShipModeAan) spring();
+    };
+    const onKeyUp = (e) => {
+      if (e.code !== "Space") return;
+      shipInputActief = false;
     };
     const onPointer = (e) => {
       if (e.target !== canvas) return;
       e.preventDefault();
-      spring();
+      shipInputActief = true;
+      if (!mutatorShipModeAan) spring();
     };
+    const onPointerUp = () => { shipInputActief = false; };
     window.addEventListener("keydown", onKey);
+    window.addEventListener("keyup", onKeyUp);
     canvas.addEventListener("pointerdown", onPointer, { passive: false });
+    window.addEventListener("pointerup", onPointerUp);
+    window.addEventListener("pointercancel", onPointerUp);
 
     // Extra blokkades om scroll-gestures te voorkomen tijdens spelen
     const blockTouch = (e) => { e.preventDefault(); };
@@ -5634,6 +5650,20 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       }
       // gravity: inverteren tijdens FLIP
       speler.snelheidY += (flipFrames > 0 ? -ZWAARTEKRACHT : ZWAARTEKRACHT) * zoneGravMul;
+      // Sprint 9 — ship-mode: continue upward-thrust zolang input ingedrukt.
+      // Cancelt zwaartekracht + voegt extra omhoog-versnelling toe → speler
+      // stijgt soepel zolang spatie/click vasthoudt. Loslaten = valt door
+      // zwaartekracht. Werkt alleen tijdens normaal spelen (geen flip/loop).
+      if (mutatorShipModeAan && shipInputActief && flipFrames === 0 && !loopActief && !bonusFase) {
+        speler.snelheidY -= 0.95 * SCHAAL; // overstijgt zwaartekracht + extra lift
+        // Cap upward velocity zodat speler niet door plafond schiet
+        if (speler.snelheidY < -8 * SCHAAL) speler.snelheidY = -8 * SCHAAL;
+        // Trail-particles voor visual feedback
+        if (frameTeller % 3 === 0) {
+          spawnParticles(speler.x + 4 * SCHAAL, speler.y + speler.hoogte, 1, "#ff8030",
+            { spread: 1, opwaarts: -1, leven: 16, grootte: 4, glow: 12, zwaartekracht: 0.1 });
+        }
+      }
       const yVorig = speler.y;
       speler.y += speler.snelheidY;
       // Horizontale push tijdens sprong + drift-terug op grond — geeft jump
@@ -8487,7 +8517,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       cancelAnimationFrame(raf);
       muziekStop();
       window.removeEventListener("keydown", onKey);
+      window.removeEventListener("keyup", onKeyUp);
       canvas.removeEventListener("pointerdown", onPointer);
+      window.removeEventListener("pointerup", onPointerUp);
+      window.removeEventListener("pointercancel", onPointerUp);
       canvas.removeEventListener("touchstart", blockTouch);
       canvas.removeEventListener("touchmove", blockTouch);
       canvas.removeEventListener("touchend", blockTouch);
