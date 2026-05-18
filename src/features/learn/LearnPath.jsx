@@ -1201,6 +1201,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {currentCheck.options.map((opt, i) => {
               const isSelected = selected === i;
               const isCorrect = selected !== null && i === currentCheck.answer;
+              // 2026-05-18 (Mark wens): bij examen-vragen letters A/B/C/D
+              // tonen — net als op het echte papieren examen. Marker:
+              // currentCheck.examenBron aanwezig → echt examen-item.
+              const isExamen = !!currentCheck.examenBron;
+              const letter = String.fromCharCode(65 + i);
               return (
                 <button
                   key={i}
@@ -1208,7 +1213,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   disabled={selected !== null}
                   style={optionStyle(isSelected, isCorrect, selected !== null)}
                 >
-                  {opt}
+                  {isExamen ? (
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 12, width: "100%" }}>
+                      <span style={{
+                        flexShrink: 0,
+                        width: 28, height: 28,
+                        borderRadius: 8,
+                        background: "rgba(255,213,79,0.18)",
+                        color: "#ffd54f",
+                        fontWeight: 800, fontSize: 14,
+                        display: "inline-flex", alignItems: "center", justifyContent: "center",
+                        fontFamily: "var(--font-display)",
+                      }}>{letter}</span>
+                      <span style={{ flex: 1 }}>{opt}</span>
+                    </span>
+                  ) : opt}
                 </button>
               );
             })}
