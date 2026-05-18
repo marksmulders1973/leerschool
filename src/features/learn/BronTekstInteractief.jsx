@@ -43,15 +43,26 @@ function splitOpWoorden(tekst, woorden) {
   return segments;
 }
 
+// 3 marker-kleuren (Mark wens 2026-05-18). Geel = klassiek, blauw +
+// roze als extra opties zodat kinderen verschillende soorten info kunnen
+// markeren (bv. geel = sleutelwoorden, blauw = vraag-info, roze = onzeker).
+const MARKER_KLEUREN = [
+  { id: "geel", fill: "rgba(255,235,59,0.55)",  rand: "#fbc02d", label: "Geel" },
+  { id: "blauw", fill: "rgba(100,181,246,0.55)", rand: "#1976d2", label: "Blauw" },
+  { id: "roze", fill: "rgba(244,143,177,0.55)", rand: "#c2185b", label: "Roze" },
+];
+
 export default function BronTekstInteractief({ body, woorden, resetKey }) {
   const [actief, setActief] = useState(null); // { woordIdx, x, y } | null
-  const [markeringen, setMarkeringen] = useState([]); // [{ start, eind }] character offsets in body
+  const [markeringen, setMarkeringen] = useState([]); // [{ start, eind, kleurId }] character offsets
+  const [activeKleur, setActiveKleur] = useState("geel"); // gekozen marker-kleur
   const containerRef = useRef(null);
 
   // Reset markeringen + popover bij check-wissel
   useEffect(() => {
     setActief(null);
     setMarkeringen([]);
+    // Kleur-keuze bewaren — voorkeur volgt de leerling
   }, [resetKey]);
 
   const segments = useMemo(() => splitOpWoorden(body || "", woorden), [body, woorden]);
@@ -76,14 +87,17 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
     const offs = offsetVanRange(range);
     if (!offs || offs.eind - offs.start < 2) return;
     setMarkeringen((prev) => {
-      // Merge met overlappende markeringen
-      const nieuw = { start: offs.start, eind: offs.eind };
-      const overlapt = prev.filter(m => m.start < nieuw.eind && m.eind > nieuw.start);
-      const rest = prev.filter(m => m.start >= nieuw.eind || m.eind <= nieuw.start);
-      const merged = overlapt.length > 0
+      // Merge alleen met markeringen van DEZELFDE kleur. Anders blijven ze
+      // afzonderlijk (kid markeert keyword geel + vraag-stuk blauw bovenop
+      // — beide moeten zichtbaar blijven). Render-laag combineert ze.
+      const nieuw = { start: offs.start, eind: offs.eind, kleurId: activeKleur };
+      const overlaptZelfde = prev.filter(m => m.kleurId === activeKleur && m.start < nieuw.eind && m.eind > nieuw.start);
+      const rest = prev.filter(m => !(m.kleurId === activeKleur && m.start < nieuw.eind && m.eind > nieuw.start));
+      const merged = overlaptZelfde.length > 0
         ? {
-            start: Math.min(nieuw.start, ...overlapt.map(m => m.start)),
-            eind: Math.max(nieuw.eind, ...overlapt.map(m => m.eind)),
+            start: Math.min(nieuw.start, ...overlaptZelfde.map(m => m.start)),
+            eind: Math.max(nieuw.eind, ...overlaptZelfde.map(m => m.eind)),
+            kleurId: activeKleur,
           }
         : nieuw;
       return [...rest, merged].sort((a, b) => a.start - b.start);
@@ -130,9 +144,10 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
       );
     }
 
-    // Split segment in stukken die wel/niet gemarkeerd zijn
+    // Split segment in stukken die wel/niet gemarkeerd zijn — overlappen
+    // van verschillende kleuren: laatst-toegevoegde wint visueel (we tonen
+    // alleen 1 kleur per character, eenvoudig + voorspelbaar).
     const parts = [];
-    let cur = offsetStart;
     const grenzen = new Set();
     for (const m of overlappend) {
       grenzen.add(Math.max(offsetStart, m.start));
@@ -146,29 +161,31 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
       const b = sorteerlijst[i + 1];
       if (b <= a) continue;
       const stuk = seg.value.slice(a - offsetStart, b - offsetStart);
-      const ergens = overlappend.find(m => m.start <= a && m.eind >= b);
-      parts.push({ tekst: stuk, gemarkeerd: !!ergens, markIdx: ergens?.mi });
-      cur = b;
+      // Top-marker: laatste in array die hier overlapt (= meest recent)
+      const omsluitend = overlappend.filter(m => m.start <= a && m.eind >= b);
+      const top = omsluitend[omsluitend.length - 1];
+      parts.push({ tekst: stuk, mark: top });
     }
-    void cur;
     return (
       <span key={key} style={baseStyle} onClick={onWoordClick}>
-        {parts.map((p, pi) => p.gemarkeerd ? (
-          <span
-            key={pi}
-            onClick={(e) => { e.stopPropagation(); verwijderMarkering(p.markIdx); }}
-            style={{
-              background: "rgba(255,235,59,0.5)",
-              color: "#1a1a1a",
-              padding: "1px 2px",
-              borderRadius: 3,
-              cursor: "pointer",
-            }}
-            title="Klik om markering te verwijderen"
-          >{p.tekst}</span>
-        ) : (
-          <span key={pi}>{p.tekst}</span>
-        ))}
+        {parts.map((p, pi) => {
+          if (!p.mark) return <span key={pi}>{p.tekst}</span>;
+          const kleur = MARKER_KLEUREN.find(k => k.id === p.mark.kleurId) || MARKER_KLEUREN[0];
+          return (
+            <span
+              key={pi}
+              onClick={(e) => { e.stopPropagation(); verwijderMarkering(p.mark.mi); }}
+              style={{
+                background: kleur.fill,
+                color: "#1a1a1a",
+                padding: "1px 2px",
+                borderRadius: 3,
+                cursor: "pointer",
+              }}
+              title="Klik om markering te verwijderen"
+            >{p.tekst}</span>
+          );
+        })}
       </span>
     );
   }
@@ -183,40 +200,76 @@ export default function BronTekstInteractief({ body, woorden, resetKey }) {
 
   const activeWoord = actief != null && woorden ? woorden[actief.woordIdx] : null;
 
+  const activeKleurDef = MARKER_KLEUREN.find(k => k.id === activeKleur) || MARKER_KLEUREN[0];
+
   return (
-    <div style={{ position: "relative" }} onClick={() => setActief(null)}>
-      <div
-        ref={containerRef}
-        onMouseUp={onSelectie}
-        onTouchEnd={onSelectie}
-        style={{
-          fontSize: 13,
-          lineHeight: 1.55,
-          color: "var(--color-text)",
-          whiteSpace: "pre-wrap",
-          maxHeight: "30vh",
-          overflowY: "auto",
-          userSelect: "text",
-          cursor: "text",
-          padding: "2px 4px",
-        }}
-      >
-        {renderedSegs}
-      </div>
-      {/* Markeer-stift help-tekst onderaan */}
+    <div style={{ position: "relative", display: "flex", gap: 8 }} onClick={() => setActief(null)}>
+      {/* Markeerstift-kleur-keuze links — Mark wens 2026-05-18: 'kies je marker
+          dan geel/blauw/roze'. Verticale stack zodat de tekst niet smaller wordt. */}
       <div style={{
-        marginTop: 6, fontSize: 11, opacity: 0.6,
-        display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap",
+        display: "flex", flexDirection: "column", gap: 6, alignItems: "center",
+        paddingTop: 4, flexShrink: 0,
       }}>
-        <span>🖍️ Sleep om tekst te markeren · klik markering om weg te halen</span>
-        {markeringen.length > 0 && (
-          <button onClick={() => setMarkeringen([])} style={{
-            background: "transparent", border: "1px solid rgba(255,255,255,0.15)",
-            color: "var(--color-text-muted)", borderRadius: 6,
-            padding: "2px 8px", fontSize: 10, cursor: "pointer",
-            fontFamily: "var(--font-body)",
-          }}>Wis alle</button>
-        )}
+        <div style={{
+          fontSize: 9, opacity: 0.55, textTransform: "uppercase", letterSpacing: 1,
+          writingMode: "horizontal-tb", textAlign: "center", lineHeight: 1.1,
+        }}>🖍️<br/>marker</div>
+        {MARKER_KLEUREN.map((k) => {
+          const isActief = k.id === activeKleur;
+          return (
+            <button
+              key={k.id}
+              onClick={(e) => { e.stopPropagation(); setActiveKleur(k.id); }}
+              title={`Marker — ${k.label}`}
+              aria-label={`Kies ${k.label} marker`}
+              style={{
+                width: 28, height: 28, borderRadius: 8,
+                background: k.fill.replace("0.55", "0.85"),
+                border: `2px solid ${isActief ? k.rand : "rgba(255,255,255,0.15)"}`,
+                cursor: "pointer",
+                boxShadow: isActief ? `0 0 12px ${k.rand}, 0 2px 6px rgba(0,0,0,0.3)` : "none",
+                transform: isActief ? "scale(1.1)" : "scale(1)",
+                transition: "all 160ms ease",
+                padding: 0,
+              }}
+            />
+          );
+        })}
+      </div>
+      <div style={{ flex: 1, minWidth: 0 }}>
+        <div
+          ref={containerRef}
+          onMouseUp={onSelectie}
+          onTouchEnd={onSelectie}
+          style={{
+            fontSize: 13,
+            lineHeight: 1.55,
+            color: "var(--color-text)",
+            whiteSpace: "pre-wrap",
+            maxHeight: "30vh",
+            overflowY: "auto",
+            userSelect: "text",
+            cursor: "text",
+            padding: "2px 4px",
+          }}
+        >
+          {renderedSegs}
+        </div>
+        {/* Help-tekst onderaan */}
+        <div style={{
+          marginTop: 6, fontSize: 11, opacity: 0.6,
+          display: "flex", justifyContent: "space-between", gap: 8, flexWrap: "wrap",
+        }}>
+          <span>Sleep om te markeren met <strong style={{ color: activeKleurDef.rand }}>{activeKleurDef.label.toLowerCase()}</strong> · klik om weg te halen</span>
+          {markeringen.length > 0 && (
+            <button onClick={() => setMarkeringen([])} style={{
+              background: "transparent", border: "1px solid rgba(255,255,255,0.15)",
+              color: "var(--color-text-muted)", borderRadius: 6,
+              padding: "2px 8px", fontSize: 10, cursor: "pointer",
+              fontFamily: "var(--font-body)",
+            }}>Wis alle</button>
+          )}
+        </div>
       </div>
       {/* Woord-popover */}
       {activeWoord && actief && (
