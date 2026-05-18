@@ -2923,6 +2923,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "kolonie-indonesie",
+    "file": "./kolonieIndonesie.js",
+    "title": "NL-kolonie Indonesië 1602-1949",
+    "subject": "geschiedenis",
+    "level": "vmbo-gt-4",
+    "emoji": "🇮🇩",
+    "referentieNiveau": "vmbo-gt-CSE",
+    "sloThema": "Geschiedenis VMBO — koloniale relatie NL-Indonesië 1602-1949",
+    "triggerKeywords": [
+      "Indonesië",
+      "Nederlands-Indië",
+      "kolonie",
+      "VOC",
+      "Cultuurstelsel",
+      "Van den Bosch",
+      "Multatuli",
+      "Max Havelaar",
+      "ethische politiek",
+      "Wilhelmina",
+      "Boedi Oetomo",
+      "Japanse bezetting"
+    ],
+    "intro": "Hoe kreeg Nederland Indonesië als kolonie en hoe verloor het de kolonie weer? Van VOC (1602) tot soevereiniteitsoverdracht (1949) + excuses Willem-Alexander (2020). VMBO-GT eindexamen-stof. 5 stappen ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "kommagetallen-po",
     "file": "./kommagetallenPo.js",
     "title": "Kommagetallen / decimalen (groep 6-8)",
