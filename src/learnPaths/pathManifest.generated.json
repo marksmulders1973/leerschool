@@ -1816,12 +1816,18 @@
       "golden gate bridge album",
       "medieval tunnel",
       "brazil equal pay football",
-      "begrijpend lezen engels"
+      "whistled language",
+      "silbo gomero",
+      "gorilla chest-beating",
+      "cricket soy sauce",
+      "james vickery",
+      "netflix family account",
+      "wild rabbit"
     ],
-    "intro": "8 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 1, verdeeld over 3 leesteksten (Golden Gate Bridge album, medieval tunnel Wales, equal pay football Brazil). Per vraag de echte 4 antwoorden, de",
+    "intro": "30 echte examenvragen uit VMBO-GL/TL Engels 2024 tijdvak 1, verdeeld over 11 leesteksten. Per vraag de echte antwoorden van het examen, denkprikkel-hints en inhoudelijke uitleg. Voor de leesteksten 5-",
     "stepCount": 8,
     "checkCount": 8,
-    "chapterCount": 3,
+    "chapterCount": 10,
     "estimatedMinutes": 5
   },
   {
@@ -4470,6 +4476,35 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "schrijven-teksten-po",
+    "file": "./schrijvenTekstenPo.js",
+    "title": "Schrijven van teksten (Cito groep 6-8)",
+    "subject": "taal",
+    "level": "groep6-8",
+    "emoji": "📝",
+    "referentieNiveau": "1F",
+    "sloThema": "Taal — schrijven van teksten / Doorstroomtoets-onderdeel",
+    "triggerKeywords": [
+      "schrijven",
+      "tekstdoel",
+      "brief",
+      "email",
+      "e-mail",
+      "samenvatten",
+      "hoofdgedachte",
+      "opinie",
+      "argument",
+      "drogreden",
+      "formeel",
+      "informeel"
+    ],
+    "intro": "Schrijven voor de Cito-Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
   },
   {
     "id": "spelling",

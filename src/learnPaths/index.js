@@ -146,6 +146,7 @@ import doorstroomtoetsTaalG8 from "./doorstroomtoetsTaalG8.js";
 import kommagetallenPo from "./kommagetallenPo.js";
 import tijdsduurRekenenPo from "./tijdsduurRekenenPo.js";
 import interpunctiePo from "./interpunctiePo.js";
+import schrijvenTekstenPo from "./schrijvenTekstenPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -234,6 +235,7 @@ export const ALL_LEARN_PATHS = {
   "kommagetallen-po": kommagetallenPo,
   "tijdsduur-rekenen-po": tijdsduurRekenenPo,
   "interpunctie-po": interpunctiePo,
+  "schrijven-teksten-po": schrijvenTekstenPo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
