@@ -122,7 +122,7 @@ const steps = [
         q: "Welke vorm gebruik je om **verschillen tussen groepen** te zien?",
         options: ["Staafdiagram","Lijngrafiek","Tabel","Tekst"],
         answer: 0,
-        wrongHints: [null,"Lijngrafiek = verloop over tijd, niet vergelijking groepen.","Tabel kan, maar staafdiagram is sneller voor vergelijken.","Tekst is traag — beter een grafiek."],
+        wrongHints: [null,"Lijngrafiek = verloop over tijd, niet vergelijken van groepen.","Tabel toont getallen maar geen visuele vergelijking.","Tekst is traag — beter een grafiek."],
         uitlegPad: {
           stappen: [{ titel: "Staaf = vergelijken", tekst: "Staafdiagram heeft verschillende-hoog balken naast elkaar. Hoogte = hoeveelheid. Perfect om in één oogopslag te zien wie meer/minder is dan ander." }],
           woorden: [{ woord: "staafdiagram", uitleg: "Grafiek met balken voor categorieën (sport, kleuren, namen). Hoogte = hoeveelheid." }, { woord: "categorieën", uitleg: "Groepen die je vergelijkt (sporten, schooljaren, etc.)." }],
@@ -194,7 +194,7 @@ const steps = [
         q: "Op welke dag werden **de meeste ijsjes** verkocht (totaal alle smaken)?",
         options: ["vrijdag","dinsdag","maandag","woensdag"],
         answer: 0,
-        wrongHints: [null,"Tel rij voor dinsdag: 8+10+6 = 24. Vrijdag: 9+13+7 = 29.","Te weinig — maandag-totaal is 15.","Veel te weinig — woensdag-totaal is 12."],
+        wrongHints: [null,"Dinsdag-totaal is 24 — een andere dag heeft meer.","Maandag-totaal is maar 15.","Woensdag-totaal is maar 12."],
         uitlegPad: {
           stappen: [
             { titel: "Tel per dag", tekst: "Som per dag (alle 3 smaken): ma=5+7+3=15. di=8+10+6=24. wo=4+5+3=12. do=6+9+5=20. vr=9+13+7=29." },
@@ -239,7 +239,7 @@ const steps = [
         q: "**Welke sport is het populairst**?",
         options: ["Voetbal","Zwemmen","Tennis","Hockey"],
         answer: 0,
-        wrongHints: [null,"Tweede plek — voetbal is hoger.","Derde plek.","Vierde plek."],
+        wrongHints: [null,"Tweede plek — kijk welke staaf het hoogste piekt.","Derde plek.","Vierde plek."],
         uitlegPad: {
           stappen: [{ titel: "Hoogste balk = populairst", tekst: "Bij staafdiagram: hoogste balk = meest van. Voetbal heeft balk van 28 (hoogste). Zwemmen 22 (2e). Tennis 15. Hockey 12. Judo 8. Voetbal wint." }],
           woorden: [{ woord: "populairst", uitleg: "Meest gekozen, meest gewenst. In staafdiagram: hoogste balk." }],
@@ -303,7 +303,7 @@ const steps = [
         q: "**Op welke dag was 't het warmst**?",
         options: ["zaterdag","vrijdag","woensdag","zondag"],
         answer: 0,
-        wrongHints: [null,"Bijna — vrijdag was 24, zaterdag 27.","Veel minder — kijk naar het hoogste punt.","Niet — kijk naar het hoogste punt."],
+        wrongHints: [null,"Bijna — vrijdag was 24, maar er was een dag hoger.","Veel minder — kijk naar het hoogste punt.","Niet — kijk naar het hoogste punt."],
         uitlegPad: {
           stappen: [{ titel: "Hoogste punt = warmst", tekst: "Lijngrafiek: zoek HOOGSTE punt op de lijn. Lees x-as voor de dag, y-as voor de temperatuur. Hoogste punt = zaterdag (27°C)." }],
           woorden: [{ woord: "hoogste punt", uitleg: "Punt op grafiek met de grootste y-waarde." }, { woord: "piek", uitleg: "Hoogste punt van een lijngrafiek. Synoniem voor maximum." }],
@@ -531,7 +531,7 @@ const steps = [
         q: "Een cirkeldiagram: **rood 60%, blauw 25%, geel 15%**. Welk deel is **MINDER dan een kwart**?",
         options: ["Geel","Blauw","Rood","Geen"],
         answer: 0,
-        wrongHints: [null,"25% is precies een kwart — geel is 15% (minder).","60% is veel meer dan een kwart.","Wel — geel is minder dan kwart."],
+        wrongHints: [null,"25% is precies een kwart — niet minder dan een kwart.","60% is veel meer dan een kwart.","Eén kleur is wel kleiner dan een kwart — vergelijk percentages."],
         uitlegPad: {
           stappen: [{ titel: "Kwart = 25%", tekst: "Een kwart = 1/4 = 25%. Vergelijk: rood 60% (>25%), blauw 25% (=25%, niet minder), geel 15% (<25%, JA!). Alleen geel is minder dan kwart." }],
           woorden: [{ woord: "kwart", uitleg: "Vierde deel = 25% = 1/4." }, { woord: "minder dan", uitleg: "Kleiner dan. <" }],
@@ -573,7 +573,7 @@ const steps = [
       { q: "Een **frequentietabel** toont?", options: ["Hoe vaak elke waarde voorkomt","Tijd-verloop","Verhouding","Som"], answer: 0, wrongHints: [null, "Lijngrafiek.", "Niet.", "Niet enkel."] },
       { q: "Bij grafiek-vraag: **eerst** doen?", options: ["Titel + assen lezen","Direct antwoord raden","Telling totaal","Naam tellen"], answer: 0, wrongHints: [null, "Niet — fout.", "Soms maar niet eerst.", "Niet."] },
       { q: "Welke vraag bij **tabel** is moeilijkst?", options: ["Optellen meerdere cellen + interpreteren","Naam zoeken","Datum lezen","Titel lezen"], answer: 0, wrongHints: [null, "Te makkelijk.", "Niet.", "Niet."] },
-      { q: "Een **histogram** lijkt op?", options: ["Staafdiagram (voor frequentie)","Lijn","Taart","Tijdslijn"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet."] },
+      { q: "Een **histogram** lijkt op?", options: ["Staafdiagram (voor frequentie)","Lijn","Taart","Tijdslijn"], answer: 0, wrongHints: [null, "Een lijn = lijngrafiek (verloop tijd), iets anders.", "Taart = cirkeldiagram (verdeling), iets anders.", "Tijdslijn = historische volgorde, iets anders."] },
     ],
   },
 ];
