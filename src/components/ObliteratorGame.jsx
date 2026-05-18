@@ -51,6 +51,21 @@ const WIJZE_QUOTES = [
 // Monumenten + 7 Wereldwonderen als horizon-silhouet (Mark verzoek 2026-05-17
 // — 'als het maar een verhaal heeft'). Mix oude/nieuwe wereldwonderen + iconen.
 // Roteren tijdens spelen — kind leert architectuur uit verschillende perioden.
+// Prize-pool voor de Prize Machine (Sprint 10 — Crossy-Road-stijl).
+// Bij elke volle 9-letter LEERKWART → 1 willekeurige unlock uit deze
+// pool. Items zijn cosmetisch + 1 'gouden mutator'-slot dat nieuwe
+// mutator-pool-entry vrijspeelt (later). Voor MVP: trail-kleur skins.
+const PRIZE_POOL = [
+  { id: "trail-goud",     soort: "trail",   naam: "Gouden trail",     emoji: "✨", waarde: "#ffd54f" },
+  { id: "trail-azuur",    soort: "trail",   naam: "Azuren trail",     emoji: "💎", waarde: "#40c0ff" },
+  { id: "trail-vuur",     soort: "trail",   naam: "Vuur-trail",       emoji: "🔥", waarde: "#ff6020" },
+  { id: "trail-mint",     soort: "trail",   naam: "Mint-trail",       emoji: "🌿", waarde: "#69f0ae" },
+  { id: "trail-roze",     soort: "trail",   naam: "Roze trail",       emoji: "🌸", waarde: "#ff80c0" },
+  { id: "trail-paars",    soort: "trail",   naam: "Paarse trail",     emoji: "🪻", waarde: "#a060ff" },
+  { id: "titel-tijdreis", soort: "titel",   naam: "Titel: Tijdreiziger", emoji: "⏳", waarde: "Tijdreiziger" },
+  { id: "titel-componist", soort: "titel",  naam: "Titel: Componist", emoji: "🎼", waarde: "Componist" },
+];
+
 // Mutators-per-run (Sprint 8 light — 15-agent-audit, Hades-stijl).
 // Bij elke run wordt random 1 mutator gekozen uit deze pool. Geeft elke
 // ronde een merkbare 'twist' zonder content-explosie. Mutators worden
@@ -2368,16 +2383,21 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // afterimage) — geeft snelheidssensatie bij hoge effSnelheid + tijdens
       // sprongen/loops. Skip bij low-FX.
       if (!LOW_FX && spelerTrail.length > 1) {
+        // Sprint 10 — trail-kleur volgt actieve unlock (PRIZE_POOL trail-skin),
+        // anders default warm-gele gloed.
+        const trailId = actieveTrailRef.current;
+        const trailPrijs = trailId ? PRIZE_POOL.find((p) => p.id === trailId) : null;
+        const trailKleur = trailPrijs?.waarde || "#ffd54f";
         ctx.save();
         const halfW = speler.breedte / 2;
         const halfH = speler.hoogte / 2;
         for (let t = 0; t < spelerTrail.length - 1; t++) {
           const g = spelerTrail[t];
           const fade = (t + 1) / spelerTrail.length; // 0..1, oudste laag
-          ctx.globalAlpha = fade * 0.32;
+          ctx.globalAlpha = fade * 0.34;
           ctx.shadowBlur = 12 * fade;
-          ctx.shadowColor = "rgba(255,200,80,0.6)";
-          ctx.fillStyle = "rgba(255,220,140,0.85)";
+          ctx.shadowColor = trailKleur;
+          ctx.fillStyle = trailKleur;
           ctx.beginPath();
           ctx.arc(g.x + halfW, g.y + halfH, halfW * (0.6 + fade * 0.3), 0, Math.PI * 2);
           ctx.fill();
@@ -8522,6 +8542,44 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // de audio-card gebeurt via state met auto-fade timer.
   const levelTrackRef = useRef(0); // index van laatste track die we showden
   const [nowPlaying, setNowPlaying] = useState(null); // {componist, werk, jaar} | null
+  // Sprint 10 — Prize Machine + unlocks
+  const [unlockedPrizes, setUnlockedPrizes] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("obliterator-prizes") || "[]"); } catch { return []; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-prizes", JSON.stringify(unlockedPrizes)); } catch {}
+  }, [unlockedPrizes]);
+  const [actieveTrail, setActieveTrail] = useState(() => {
+    try { return localStorage.getItem("obliterator-actieve-trail") || ""; } catch { return ""; }
+  });
+  useEffect(() => {
+    try { localStorage.setItem("obliterator-actieve-trail", actieveTrail); } catch {}
+  }, [actieveTrail]);
+  const actieveTrailRef = useRef(actieveTrail);
+  useEffect(() => { actieveTrailRef.current = actieveTrail; }, [actieveTrail]);
+  const [prizeSpinning, setPrizeSpinning] = useState(false);
+  const [prizeRevealed, setPrizeRevealed] = useState(null); // {id, soort, naam, emoji, waarde, isNew}
+  function trekPrijs() {
+    if (prizeSpinning) return;
+    if (verzameldeLetters.length < MISSIE_LETTERS.length) return;
+    setPrizeSpinning(true);
+    // 2 sec spin-animatie, dan reveal
+    setTimeout(() => {
+      // Kies bij voorkeur iets dat de speler nog niet had (80% kans)
+      const nogNiet = PRIZE_POOL.filter((p) => !unlockedPrizes.includes(p.id));
+      const pool = nogNiet.length > 0 && Math.random() < 0.8 ? nogNiet : PRIZE_POOL;
+      const prijs = pool[Math.floor(Math.random() * pool.length)];
+      const isNew = !unlockedPrizes.includes(prijs.id);
+      if (isNew) setUnlockedPrizes((prev) => [...prev, prijs.id]);
+      // Trail-prijs = direct actief zetten als 't nieuwe is
+      if (prijs.soort === "trail" && isNew) setActieveTrail(prijs.id);
+      setPrizeRevealed({ ...prijs, isNew });
+      setPrizeSpinning(false);
+      // Reset letters — kost 9 letters, nu leeg, kan opnieuw verdienen
+      setVerzameldeLetters([]);
+    }, 1800);
+  }
+
   // Sprint 8 — mutator-per-run (Hades-stijl)
   const [activeMutator, setActiveMutator] = useState(null); // {id, naam, beschrijving, emoji} | null
   const mutatorRef = useRef("normaal"); // mirror voor game-loop
@@ -8797,6 +8855,38 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                     );
                   })}
                 </ol>
+              </div>
+            )}
+
+            {/* Sprint 10 — Prize Machine knop. Verschijnt alleen als de 9-letter
+                LEERKWART compleet is. Eén klik = spin → unlock. */}
+            {verzameldeLetters.length >= MISSIE_LETTERS.length && (
+              <button onClick={trekPrijs} disabled={prizeSpinning} style={{
+                width: "100%", maxWidth: 320, marginBottom: 14,
+                padding: "12px 18px",
+                background: "linear-gradient(135deg, #ffd54f 0%, #ff8030 100%)",
+                border: "none", borderRadius: 14,
+                color: "#1a0008",
+                fontFamily: "Impact, 'Arial Black', sans-serif",
+                fontSize: 18, letterSpacing: 2,
+                fontWeight: 700, cursor: prizeSpinning ? "default" : "pointer",
+                opacity: prizeSpinning ? 0.6 : 1,
+                boxShadow: "0 6px 22px rgba(255,180,60,0.55), 0 0 28px rgba(255,213,79,0.35)",
+                animation: prizeSpinning ? "none" : "obliterator-prize-pulse 1.6s infinite",
+              }}>
+                {prizeSpinning ? "🎰 Spinnen…" : "🎁 Open prijsmachine!"}
+              </button>
+            )}
+            {verzameldeLetters.length > 0 && verzameldeLetters.length < MISSIE_LETTERS.length && (
+              <div style={{
+                width: "100%", maxWidth: 320, marginBottom: 14,
+                padding: "8px 12px", borderRadius: 10,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,213,79,0.25)",
+                color: "#ffd54f", fontSize: 12, textAlign: "center",
+                fontFamily: "'Fredoka', sans-serif",
+              }}>
+                Letters voor de prijsmachine: <strong>{verzameldeLetters.length}/{MISSIE_LETTERS.length}</strong>
               </div>
             )}
 
@@ -10425,6 +10515,63 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         </div>
       )}
 
+      {/* Sprint 10 — Prize-spin overlay + reveal-modal. */}
+      {prizeSpinning && (
+        <div style={{
+          position: "absolute", inset: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          background: "rgba(0,0,0,0.78)", zIndex: 100,
+          pointerEvents: "all",
+        }}>
+          <div style={{ fontSize: 110, animation: "obliterator-prize-spin 0.18s linear infinite" }}>🎰</div>
+        </div>
+      )}
+      {prizeRevealed && !prizeSpinning && (
+        <div onClick={() => setPrizeRevealed(null)} style={{
+          position: "absolute", inset: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          background: "rgba(0,0,0,0.85)", zIndex: 100,
+          cursor: "pointer",
+          padding: 24,
+        }}>
+          <div style={{
+            padding: "28px 32px",
+            background: "linear-gradient(135deg, #1a0a22, #2a1530)",
+            border: "2px solid #ffd54f",
+            borderRadius: 20,
+            boxShadow: "0 20px 60px rgba(0,0,0,0.7), 0 0 50px rgba(255,213,79,0.4)",
+            color: "#fff", textAlign: "center", maxWidth: 360,
+            fontFamily: "'Fredoka', sans-serif",
+            animation: "obliterator-audio-card-in 320ms ease-out",
+          }}>
+            <div style={{ fontSize: 86, marginBottom: 6 }}>{prizeRevealed.emoji}</div>
+            <div style={{ fontSize: 12, opacity: 0.7, letterSpacing: 2, textTransform: "uppercase" }}>
+              {prizeRevealed.isNew ? "🎉 Nieuw!" : "Dubbele — al verzameld"}
+            </div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: "#ffd54f", marginTop: 4 }}>
+              {prizeRevealed.naam}
+            </div>
+            <div style={{ fontSize: 13, opacity: 0.75, marginTop: 8, lineHeight: 1.4 }}>
+              {prizeRevealed.soort === "trail" && (prizeRevealed.isNew
+                ? "Direct actief — jouw nieuwe trail-kleur."
+                : "Je had deze al — klik hieronder om hem te activeren.")}
+              {prizeRevealed.soort === "titel" && "Voeg toe aan je high-score-naam."}
+            </div>
+            {prizeRevealed.soort === "trail" && !prizeRevealed.isNew && (
+              <button onClick={(e) => { e.stopPropagation(); setActieveTrail(prizeRevealed.id); setPrizeRevealed(null); }} style={{
+                marginTop: 12, padding: "8px 16px",
+                background: "rgba(255,213,79,0.18)", border: "1px solid rgba(255,213,79,0.4)",
+                borderRadius: 10, color: "#ffd54f", fontWeight: 700, cursor: "pointer",
+                fontFamily: "'Fredoka', sans-serif", fontSize: 13,
+              }}>Activeren</button>
+            )}
+            <div style={{ fontSize: 11, opacity: 0.5, marginTop: 14 }}>
+              Klik om te sluiten · {unlockedPrizes.length + (prizeRevealed.isNew ? 0 : 0)}/{PRIZE_POOL.length} verzameld
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Sprint 8 — Mutator-intro-banner: 4 sec popup midden in scherm bij
           run-start. Alleen als mutator != 'normaal'. Toont emoji + naam +
           beschrijving zodat kid weet wat anders is deze run. */}
@@ -10537,6 +10684,17 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         @keyframes obliterator-audio-card-in {
           from { opacity: 0; transform: translateX(-12px); }
           to   { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes obliterator-prize-pulse {
+          0%, 100% { transform: scale(1);    box-shadow: 0 6px 22px rgba(255,180,60,0.55), 0 0 28px rgba(255,213,79,0.35); }
+          50%      { transform: scale(1.04); box-shadow: 0 8px 28px rgba(255,180,60,0.75), 0 0 40px rgba(255,213,79,0.55); }
+        }
+        @keyframes obliterator-prize-spin {
+          0%   { transform: rotate(0deg)    scale(1); }
+          25%  { transform: rotate(90deg)   scale(1.15); }
+          50%  { transform: rotate(180deg)  scale(1); }
+          75%  { transform: rotate(270deg)  scale(1.15); }
+          100% { transform: rotate(360deg)  scale(1); }
         }
       `}</style>
     </div>
