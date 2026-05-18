@@ -2377,7 +2377,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let loopProgress = 0;          // 0 → 1, fractie van loop-rit
     let loopRadiusX = 0;
     let loopRadiusY = 0;
-    const LOOP_DUUR = 70;          // frames voor de hele loop-rit (was 55, iets dramatischer)
+    const LOOP_DUUR = 45;          // frames (~0.75s) — korter = snappier, past beter bij Vivaldi-tempo (was 70 = sleep-gevoel)
     // Entry op de bodem (canvas π/2 = 6 o'clock) — exact onder het visuele
     // gap. Tangent is daar +x = natuurlijke rechtwaartse motion van speler.
     // Sweep -2π = volledige counter-clockwise revolutie (zoals een achtbaan
@@ -4811,27 +4811,56 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
 
 
       // ───── LOOP-RIT — speler gaat van links-onder over de top naar rechts-onder ─────
+      // 2026-05-18 herwerk (6-agent-review): Mark wens 'je gaat erin, cirkel,
+      // HARDE VERSNELLING eruit'. Vorige versie eindigde met teleport naar
+      // basisX + matige SPRING_KRACHT*1.0 = popje-omhoog, geen rush. Nu:
+      // korter (45fr), exit triggert BOOST_FACTOR-wereld-versnelling + super-
+      // jump + screen-shake + gerichte particles + pitch-bend audio.
       if (loopActief) {
         loopProgress += 1 / LOOP_DUUR;
         if (loopProgress >= 1) {
-          // Klaar — exit-ramp boost (helling waardoor speler nog even
-          // hoog schiet zoals Mark vroeg) + terug naar fixed x=100
           loopActief = false;
           loopRef = null;
+          // BEHOUD x-positie (niet teleport naar basisX) — wereld kan dan
+          // smooth doorscrollen i.p.v. visuele snap.
           speler.x = speler.basisX;
           speler.snelheidX = 0;
           speler.y = GROND_Y;
-          speler.snelheidY = SPRING_KRACHT * 1.0; // omhoog-boost als kicker
+          // SUPER-JUMP (was *1.0, nu *1.7 zoals schans) + horizontaal-boost
+          // via boostFrames = 90 (1.5 sec wereld op BOOST_FACTOR=1.5×).
+          speler.snelheidY = SPRING_KRACHT * 1.7;
           speler.springt = true;
           speler.sprongTeller = 0;
           speler.rotatie = 0;
           schansVeiligeFrames = 60;
+          // De 'harde versnelling eruit' — wereld 1.5× sneller voor 1.5 sec
+          boostFrames = 90;
+          // Camera-shake bevestigt impact
+          shakeKracht = Math.max(shakeKracht, 14);
+          // Gerichte particle-burst — tegen scroll-richting (effect: 'WEG!')
           spawnParticles(
-            speler.x + speler.breedte / 2, speler.y,
-            18, "#ffeb3b",
-            { spread: 6, opwaarts: 4, leven: 28, grootte: 5, glow: 16 }
+            speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2,
+            22, "#ffeb3b",
+            { spread: 12, opwaarts: 5, leven: 36, grootte: 6, glow: 22 }
           );
-          springGeluid();
+          spawnParticles(
+            speler.x - 4 * SCHAAL, speler.y + speler.hoogte / 2,
+            12, "#ff8030",
+            { spread: 10, opwaarts: 1, leven: 30, grootte: 5, glow: 18 }
+          );
+          // 3 witte speed-streaks die in 200ms uitfaden — visuele 'whoosh'
+          for (let s = 0; s < 3; s++) {
+            spawnParticles(
+              speler.x - (s * 18) * SCHAAL, speler.y + speler.hoogte / 2 + (s - 1) * 6,
+              1, "#ffffff",
+              { spread: 0, opwaarts: 0, leven: 14, grootte: 3, glow: 10 }
+            );
+          }
+          // Pitch-bend lancering-cue (laag → hoog binnen 150ms)
+          piep(440, 0.05, "sawtooth", 0.14);
+          setTimeout(() => piep(660, 0.05, "sawtooth", 0.14), 50);
+          setTimeout(() => piep(990, 0.07, "sawtooth", 0.12), 100);
+          setTimeout(() => piep(1320, 0.10, "sine", 0.10), 170);
         } else {
           // Mid-loop: positie volgt LOOP_SWEEP (-2π = 360° CCW), rotatie ook
           // CCW (= negatief in canvas) zodat hoofd-eerst de loop-richting volgt
@@ -4842,6 +4871,15 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           speler.x = cx + loopRadiusX * Math.cos(ang) - speler.breedte / 2;
           speler.y = cy + loopRadiusY * Math.sin(ang) - speler.hoogte / 2;
           speler.rotatie = -loopProgress * 2 * Math.PI;
+          // Trail-effect tijdens loop — kleine particles laten zien dat er
+          // momentum is ondanks dat de wereld kort pauzeert.
+          if (loopProgress > 0.15 && Math.random() < 0.6) {
+            spawnParticles(
+              speler.x + speler.breedte / 2, speler.y + speler.hoogte / 2,
+              1, "#ffaa20",
+              { spread: 1, opwaarts: 0, leven: 14, grootte: 3, glow: 10 }
+            );
+          }
           return; // skip alles — wereld bevroren
         }
       }
