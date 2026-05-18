@@ -9,6 +9,7 @@ import pathManifest from "../learnPaths/pathManifest.generated.json";
 const pathManifestById = Object.fromEntries(pathManifest.map(p => [p.id, p]));
 import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
+import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
@@ -236,6 +237,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
 
       <div style={styles.content}>
         <KindAcceptBanner userName={userName} />
+        <KoppelcodeBanner userName={userName} />
 
         {/* Daily-goal-banner (Mark's "leerkwartier" hard maken, 2026-05-16).
             Toont voortgangs-balk naar 15-min/dag-doel. Bij voltooiing felicitatie. */}
