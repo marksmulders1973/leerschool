@@ -11,6 +11,7 @@ import {
 } from "../data/examens.js";
 import { isExamenSpeelbaar } from "../data/examenQuizzes/index.js";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
+import { countExamenMixVragen } from "../features/practice/buildExamenMix.js";
 
 // Examens-pagina (Mark idee 2026-05-08, herzien 2026-05-11, samengevoegd 2026-05-16):
 // ÉÉN GECOMBINEERDE VIEW per vak — Mark wens "wat je kunt: echte examens
@@ -32,7 +33,7 @@ const C = {
   pdf: "#a78bfa",
 };
 
-export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen, onPickPath, initialMode = "leren" }) {
+export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen, onPickPath, initialMode = "leren", onStartExamenMix }) {
   const sectionRef = useRef(null);
 
   // Examen-leerpaden (id startsWith "examen-") — onze oefen-modus.
@@ -309,6 +310,54 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
               </button>
               {isOpen && (
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                  {/* Examen-mix-knop (Mark wens 2026-05-18): bovenaan elk
+                      vak met meer dan 1 oefen-pad. Doet random vragen uit
+                      ALLE jaren/tijdvakken samen — authentiek examen-volume. */}
+                  {onStartExamenMix && oefenAanwezig >= 2 && (() => {
+                    const mixCount = countExamenMixVragen(vak);
+                    if (!mixCount) return null;
+                    return (
+                      <button
+                        type="button"
+                        onClick={() => onStartExamenMix(vak)}
+                        style={{
+                          width: "100%",
+                          padding: "14px 16px",
+                          background: "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.10))",
+                          border: `1.5px solid ${C.accent}`,
+                          borderRadius: 12,
+                          color: C.text,
+                          cursor: "pointer",
+                          fontFamily: "inherit",
+                          textAlign: "left",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: 12,
+                          transition: "background 0.15s, transform 0.15s",
+                        }}
+                        onMouseEnter={(ev) => {
+                          ev.currentTarget.style.background = "linear-gradient(135deg, rgba(255,107,53,0.30), rgba(255,140,66,0.18))";
+                          ev.currentTarget.style.transform = "translateY(-1px)";
+                        }}
+                        onMouseLeave={(ev) => {
+                          ev.currentTarget.style.background = "linear-gradient(135deg, rgba(255,107,53,0.18), rgba(255,140,66,0.10))";
+                          ev.currentTarget.style.transform = "translateY(0)";
+                        }}
+                        title={`Alle ${mixCount} examenvragen ${vakInfo.label} door elkaar — examen-modus`}
+                      >
+                        <span style={{ fontSize: 22 }}>🎯</span>
+                        <span style={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}>
+                          <span style={{ fontWeight: 700, fontSize: 14, color: C.warm }}>
+                            Doe een echt {vakInfo.label}-examen — alles door elkaar
+                          </span>
+                          <span style={{ fontSize: 12, color: C.muted }}>
+                            <strong style={{ color: C.text }}>{mixCount} vragen</strong> uit alle jaren + tijdvakken · examen-modus (geen hints)
+                          </span>
+                        </span>
+                        <span style={{ fontSize: 18, color: C.accent }}>▶</span>
+                      </button>
+                    );
+                  })()}
                   {isNietHaalbaar && (
                     <div style={{
                       padding: "10px 12px",

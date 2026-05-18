@@ -671,6 +671,23 @@ export default function App() {
     }
   };
 
+  // Examen-mix per vak (Mark wens 2026-05-18): alle examen-vragen over alle
+  // jaren+tijdvakken samen, gerandomiseerd, in examen-modus. Geeft volume
+  // (~40-50 vragen) voor authentieke eind-examen-voorbereiding.
+  const startExamenMix = async (subject) => {
+    const { buildExamenMix } = await import("./features/practice/buildExamenMix.js");
+    try {
+      const { quiz, questions } = await buildExamenMix({ subject });
+      track("examen_mix_started", { subject, vragen: questions.length });
+      setGameState({ quiz, mode: "examen", questions, currentQ: 0, score: 0, answers: [], timePerQuestion: 0, startedAt: Date.now() });
+      setPage("play");
+    } catch (e) {
+      // eslint-disable-next-line no-console
+      console.error("[examen-mix] kan niet starten:", e);
+      alert("⚠️ Examen-mix kon niet starten. Probeer later opnieuw.");
+    }
+  };
+
   const finishGame = (finalState) => {
     SoundEngine.play("celebrate");
     const result = {
@@ -1273,6 +1290,7 @@ export default function App() {
             setLearnPathReturnPage("examens");
             setPage("learn-path");
           }}
+          onStartExamenMix={startExamenMix}
         />
       )}
       {page === "cito-leerpad-toets" && (
