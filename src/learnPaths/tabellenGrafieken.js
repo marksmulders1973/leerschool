@@ -300,6 +300,10 @@ const steps = [
     ], "Temperatuur in graden Celsius — week"),
     checks: [
       {
+        // disabled = leunt op step.svg (lijngrafiek ma-zo temperaturen) die in
+        // citoMix-sample-flow verloren gaat. Mark melding 2026-05-18: vraag
+        // verscheen in Doorstroomtoets-simulator zonder grafiek-context.
+        disabled: true,
         q: "**Op welke dag was 't het warmst**?",
         options: ["zaterdag","vrijdag","woensdag","zondag"],
         answer: 0,
@@ -314,6 +318,7 @@ const steps = [
         },
       },
       {
+        disabled: true, // leunt op step.svg (lijngrafiek temperaturen ma-zo).
         q: "**Verschil in temperatuur tussen maandag en zaterdag**?",
         options: ["11","27","16","10"],
         answer: 0,
@@ -331,6 +336,7 @@ const steps = [
         },
       },
       {
+        disabled: true, // leunt op step.svg (lijngrafiek temperaturen ma-zo).
         q: "**Op welke dagen daalde de temperatuur** ten opzichte van de dag ervoor?",
         options: ["Donderdag en zondag","Maandag en dinsdag","Geen enkele dag","Alle dagen"],
         answer: 0,
@@ -464,6 +470,7 @@ const steps = [
     ], "Sponsorloop — gelopen rondjes", "rondjes"),
     checks: [
       {
+        disabled: true, // leunt op step.svg (staafdiagram Tom/Eva/Ali/Lisa).
         q: "Welk kind liep **het meest**?",
         options: ["Eva","Tom","Ali","Lisa"],
         answer: 0,
@@ -478,6 +485,7 @@ const steps = [
         },
       },
       {
+        disabled: true, // leunt op step.svg (staafdiagram Tom/Eva/Ali/Lisa).
         q: "Hoeveel **rondjes liepen Tom en Lisa samen**?",
         options: ["52","56","48","60"],
         answer: 0,
