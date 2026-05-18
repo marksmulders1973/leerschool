@@ -39,6 +39,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   const [linkMethod, setLinkMethod] = useState("whatsapp"); // "whatsapp" | "naam"
   const [inviteCode, setInviteCode] = useState("");
   const [inviteSent, setInviteSent] = useState(false);
+  // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
+  // naam-in-app van kind opgeven vóór code-generatie.
+  const [inviteChildName, setInviteChildName] = useState("");
 
   // Laad gekoppelde kinderen
   useEffect(() => {
@@ -167,10 +170,23 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
 
   const generateInvite = async () => {
     if (!authUser) return;
+    const childName = inviteChildName.trim();
+    if (!childName) return;
     setLoading(true);
     const code = generateCode();
     const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
-    await supabase.from("link_codes").insert({ code, parent_user_id: authUser.id, expires_at: expires }).catch(() => {});
+    // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Silent .catch
+    // verving door explicit-log zodat insert-fails niet meer onzichtbaar zijn.
+    const { error } = await supabase.from("link_codes").insert({
+      code, parent_user_id: authUser.id, child_name: childName, expires_at: expires,
+    });
+    if (error) {
+      // eslint-disable-next-line no-console
+      console.error("[OuderDashboard] generateInvite failed:", error.message);
+      alert("Kon code niet opslaan. Probeer later opnieuw.");
+      setLoading(false);
+      return;
+    }
     setInviteCode(code);
     setInviteSent(false);
     setLoading(false);
@@ -289,7 +305,41 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 10, lineHeight: 1.5 }}>
                     Je kind opent de app op zijn/haar telefoon en voert de code in. Je ontvangt daarna automatisch de voortgang.
                   </div>
-                  <button onClick={generateInvite} disabled={loading} style={{ width: "100%", padding: "11px", borderRadius: 10, border: "none", background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, cursor: "pointer" }}>
+                  {/* Naam-veld toegevoegd 2026-05-18 (bug-fix): link_codes.child_name
+                      is NOT NULL — ouder geeft hier de naam-in-app van het kind. */}
+                  <input
+                    value={inviteChildName}
+                    onChange={(e) => setInviteChildName(e.target.value)}
+                    placeholder="Naam van je kind (zoals in de app)"
+                    style={{
+                      width: "100%",
+                      padding: "10px 12px",
+                      marginBottom: 10,
+                      borderRadius: 10,
+                      border: "1px solid rgba(255,255,255,0.18)",
+                      background: "rgba(255,255,255,0.06)",
+                      color: "var(--color-text-strong)",
+                      fontFamily: "var(--font-body)",
+                      fontSize: 14,
+                      outline: "none",
+                    }}
+                  />
+                  <button
+                    onClick={generateInvite}
+                    disabled={loading || !inviteChildName.trim()}
+                    style={{
+                      width: "100%",
+                      padding: "11px",
+                      borderRadius: 10,
+                      border: "none",
+                      background: loading || !inviteChildName.trim() ? "rgba(37,211,102,0.30)" : "#25D366",
+                      color: "var(--color-text-strong)",
+                      fontFamily: "var(--font-display)",
+                      fontSize: 15,
+                      fontWeight: 700,
+                      cursor: loading || !inviteChildName.trim() ? "not-allowed" : "pointer",
+                    }}
+                  >
                     {loading ? "Genereren..." : "📲 Genereer uitnodigingscode"}
                   </button>
                 </>
@@ -307,7 +357,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                       ✓ Verstuurd! Je kind voert de code in bij 'Koppel met ouder'.
                     </div>
                   )}
-                  <button onClick={() => { setInviteCode(""); setInviteSent(false); }} style={{ width: "100%", marginTop: 8, padding: "7px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", background: "none", color: "rgba(255,255,255,0.35)", fontFamily: "var(--font-body)", fontSize: 12, cursor: "pointer" }}>
+                  <button onClick={() => { setInviteCode(""); setInviteSent(false); setInviteChildName(""); }} style={{ width: "100%", marginTop: 8, padding: "7px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)", background: "none", color: "rgba(255,255,255,0.35)", fontFamily: "var(--font-body)", fontSize: 12, cursor: "pointer" }}>
                     Nieuwe code genereren
                   </button>
                 </div>
