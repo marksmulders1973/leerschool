@@ -179,9 +179,9 @@ const steps = [
         options: ["⁴⁄₁₂", "⅔", "²⁄₆", "Beide ²⁄₆ en ⁴⁄₁₂"],
         answer: 3,
         wrongHints: [
-          "Klopt — maar ²⁄₆ is óók gelijk aan ⅓. Beide opties kloppen.",
-          "⅔ is twee derde, niet een derde.",
-          "Klopt — maar ⁴⁄₁₂ is óók gelijk aan ⅓. Beide opties kloppen.",
+          "⁴⁄₁₂ = ⅓ is correct. Maar er staat nóg een gelijke breuk in de lijst — kijk goed naar ²⁄₆.",
+          "⅔ is twee derde, niet één derde.",
+          "²⁄₆ = ⅓ is correct. Maar er staat nóg een gelijke breuk in de lijst — kijk goed naar ⁴⁄₁₂.",
           null,
         ],
         uitlegPad: {
@@ -424,9 +424,9 @@ const steps = [
         options: ["¼", "³⁄₁₂ (= ¼)", "²⁄₇", "Beide ¼ en ³⁄₁₂"],
         answer: 3,
         wrongHints: [
-          "Klopt — maar ³⁄₁₂ is hetzelfde als ¼. Beide opties zijn correct.",
-          "Klopt — maar ¼ is hetzelfde als ³⁄₁₂ (vereenvoudigd). Beide kloppen.",
-          "²⁄₇ = (3+ −)/(4+3)? Klopt niet. Vermenigvuldigen: teller·teller, noemer·noemer. 3·1=3 en 4·3=12.",
+          "¼ is het vereenvoudigde antwoord. Maar de directe uitkomst van 3·1 boven en 4·3 onder staat óók in de lijst — kijk naar ³⁄₁₂.",
+          "³⁄₁₂ is de directe uitkomst. Maar dat is hetzelfde als ¼ — die staat óók in de lijst.",
+          "²⁄₇ = (3+ −)/(4+3)? Nee — bij vermenigvuldigen tel je niet op. Boven·boven en onder·onder: 3·1=3 en 4·3=12.",
           null,
         ],
         uitlegPad: {

@@ -102,7 +102,7 @@ const steps = [
     title: "Eindopdracht — alles samen",
     explanation: "Mix-toets over a/an + meervoud + this/that + am-is-are + present simple + vragen.\n\n**Tip**: bij twijfel, vraag jezelf:\n1. Klinker of medeklinker? → a/an\n2. Enkelvoud of meervoud?\n3. Ik / jij/wij/zij / hij-zij-het? → am / are / is\n4. Gewone werkwoord + -s bij he/she/it? → play / plays",
     checks: [
-      { q: "Welke is **fout**?", options: ["She play piano.", "She plays piano.", "I play piano.", "They play piano."], answer: 0, wrongHints: [null, "Kijk naar het onderwerp + werkwoordvorm.", "Klopt I/we/you/they zonder -s?", "Klopt I/we/you/they zonder -s?"] },
+      { q: "Welke is **fout**?", options: ["She play piano.", "She plays piano.", "I play piano.", "They play piano."], answer: 0, wrongHints: [null, "Kijk naar het onderwerp + werkwoordvorm.", "Deze zin is juist — I/we/you/they krijgen géén -s. Zoek de zin met he/she/it + verkeerd werkwoord.", "Deze zin is juist — I/we/you/they krijgen géén -s. Zoek de zin met he/she/it + verkeerd werkwoord."] },
       { q: "Vul in: '__ apple a day keeps the doctor away.'", options: ["An", "A", "The", "Some"], answer: 0, wrongHints: [null, "Niet — klinkerklank.", "Niet — context vraagt om 'een'.", "Niet — niet 'wat appel'."] },
       { q: "Meervoud van **woman**?", options: ["women", "womans", "womens", "womies"], answer: 0, wrongHints: [null, "Niet — onregelmatig.", "Niet.", "Niet."] },
       { q: "Vul in: 'My brother __ tall.' (to be)", options: ["is", "are", "am", "be"], answer: 0, wrongHints: [null, "Niet — are = jij/wij/zij.", "Niet — am = ik.", "Hele werkwoord."] },

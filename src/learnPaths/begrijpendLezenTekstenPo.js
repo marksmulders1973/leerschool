@@ -1011,7 +1011,7 @@ const steps = [
         q: "Tekst: 'De jongen rende WANHOPIG naar zijn moeder.' Wat betekent **wanhopig**?",
         options: ["Heel verdrietig + bang, geen hoop","Heel vrolijk","Snel maar rustig","Slaapt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — geen vrolijk gevoel.", "Klopt deels qua snelheid, niet qua emotie.", "Niet — een rennende jongen slaapt niet."],
+        wrongHints: [null, "Tegenovergesteld — geen vrolijk gevoel.", "Snel past wel bij rennen, maar 'wanhopig' gaat over een gevoel — kijk welke optie emotie beschrijft.", "Niet — een rennende jongen slaapt niet."],
         uitlegPad: {
           stappen: [
             { titel: "Context-aanpak", tekst: "Onbekend woord 'wanhopig' in zin 'De jongen rende **wanhopig** naar zijn moeder.' Wat helpt:\n• **Actie**: rennen → snelheid, urgentie\n• **Doel**: naar moeder → wellicht behoefte, troost, redding\n• **Combinatie**: rennen + naar moeder = situatie van nood\n\nDus 'wanhopig' = **zonder hoop, in nood**. Het bijwoord versterkt de emotionele lading." },
