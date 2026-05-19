@@ -24,6 +24,17 @@
 
 Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken. Doel: app helemaal vullen met paden + vragen vóór fine-tuning. Mark wil **maximaal-lang autonoom werk per sessie**, zelfs als hij offline is — dus nooit pauzeren om input te vragen als er nog andere taken zijn die wél kunnen.
 
+### Hoogste prio (boven alles, ingesteld 2026-05-19)
+
+**Een werkende + competitieve app komt vóór content-vullen.** Mark's woorden: "vullen heeft hoge prio, maar hoogste prio is een app die werkt, kan concurreren met soortgelijke apps of liever net beter is".
+
+Dat betekent: voor je nieuwe content bouwt, check eerst dat:
+- **De app werkt**: geen kapotte flows, geen broken loops (examen → uitleg → leerpad → terug), geen onbruikbare features.
+- **De app concurrentie aankan**: USP's (uitlegPad 3-niveau, authentieke examens, 15-min belofte) zijn duidelijk + ontdekbaar voor nieuwe gebruikers.
+- **De app net beter is** dan Squla/Junior Einstein/WRTS/Examenbundel waar mogelijk.
+
+Bij twijfel: kies kwaliteit boven kwantiteit. Een goede tour/onboarding/UX-fix > nog een leerpad.
+
 ### Prioriteit-stelsel — bijgesteld 2026-05-12 na 12-agent-review
 
 **12-agent-review constateerde scope-creep**: 12 van 32 nieuwe paden vielen buiten Cito-kern groep 6-8 (puberteit/emoties/Olympische/koude-oorlog/eetcultuur/etc.). Bovendien: paden gemiddeld 22-32 min ipv kwartier-belofte, bundle 5,4 MB, geen zoekbalk bij 67+ PO-paden. **Strategie-advies**: stop scope-creep, kies diepte boven breedte.

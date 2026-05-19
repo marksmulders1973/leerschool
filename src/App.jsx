@@ -59,6 +59,7 @@ const Kampioenen = lazy(() =>
 const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
+const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
@@ -1113,6 +1114,7 @@ export default function App() {
           onManageClasses={() => setPage("class-manager")}
           onUpgrade={() => setPage("pro")}
           onBack={() => setPage("home")}
+          onRondleiding={() => setPage("rondleiding")}
           schoolLogoUrl={schoolLogoUrl}
           onLogoUpdate={(url) => {
             setSchoolLogoUrl(url);
@@ -1702,8 +1704,10 @@ export default function App() {
           onHome={goHome}
           onUpgrade={() => setPage("pro")}
           onLogin={handleGoogleLogin}
+          onRondleiding={() => setPage("rondleiding")}
         />
       )}
+      {page === "rondleiding" && <RondleidingPage setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}

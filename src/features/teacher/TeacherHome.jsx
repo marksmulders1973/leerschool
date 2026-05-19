@@ -6,7 +6,7 @@ import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
 
-export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft }) {
+export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
 
@@ -358,6 +358,24 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
               })}
             </div>
           </>
+        )}
+        {onRondleiding && (
+          <div style={{ marginTop: 24, textAlign: "center" }}>
+            <button
+              type="button"
+              onClick={onRondleiding}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--color-text-muted, #99a3b4)",
+                fontSize: 13,
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
+              Hoe werkt Leerkwartier?
+            </button>
+          </div>
         )}
       </div>
     </div>

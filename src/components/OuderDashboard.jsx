@@ -27,7 +27,7 @@ function generateCode() {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
 }
 
-export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin }) {
+export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin, onRondleiding }) {
   const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
   const [selectedChild, setSelectedChild] = useState(null);
@@ -544,6 +544,24 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 {deletingMyData ? "Bezig met wissen…" : "Verwijder al mijn data"}
               </button>
             )}
+          </div>
+        )}
+        {onRondleiding && (
+          <div style={{ marginTop: 24, textAlign: "center" }}>
+            <button
+              type="button"
+              onClick={onRondleiding}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--color-text-muted, #99a3b4)",
+                fontSize: 13,
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
+              Hoe werkt Leerkwartier?
+            </button>
           </div>
         )}
       </div>
