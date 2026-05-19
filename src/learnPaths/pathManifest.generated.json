@@ -5495,6 +5495,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "verandering-groei-havo-vwo",
+    "file": "./veranderingGroeiHavoVwo.js",
+    "title": "Verandering + groei (HAVO/VWO wiskunde A)",
+    "subject": "wiskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "📈",
+    "referentieNiveau": "havo-vwo-CSE-wiskundeA",
+    "sloThema": "Wiskunde A HAVO/VWO — modellen voor groei + verandering eindexamen",
+    "triggerKeywords": [
+      "lineaire groei",
+      "lineair model",
+      "richtingscoëfficiënt",
+      "helling",
+      "exponentiële groei",
+      "exp groei",
+      "groeifactor",
+      "verdubbelingstijd",
+      "halveringstijd",
+      "vuistregel 70",
+      "samengestelde rente",
+      "rente op rente"
+    ],
+    "intro": "Verandering + groei HAVO/VWO wiskunde A eindexamen. Lineair model (vast bedrag), exponentieel (vaste factor + verdubbelingstijd), logaritmen (terugrekenen tijd + halveringstijd + log-schalen), logisti",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "vergelijkingen-oplossen",
     "file": "./vergelijkingenOplossen.js",
     "title": "Vergelijkingen oplossen",
