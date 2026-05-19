@@ -161,6 +161,7 @@ import kansrekeningHavoVwo from "./kansrekeningHavoVwo.js";
 import organischeChemieHavoVwo from "./organischeChemieHavoVwo.js";
 import betoogBeschouwingHavoVwo from "./betoogBeschouwingHavoVwo.js";
 import engelsCseHavoVwo from "./engelsCseHavoVwo.js";
+import integralenHavoVwo from "./integralenHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -264,6 +265,7 @@ export const ALL_LEARN_PATHS = {
   "organische-chemie-havo-vwo": organischeChemieHavoVwo,
   "betoog-beschouwing-havo-vwo": betoogBeschouwingHavoVwo,
   "engels-cse-havo-vwo": engelsCseHavoVwo,
+  "integralen-havo-vwo": integralenHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

@@ -2838,6 +2838,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "integralen-havo-vwo",
+    "file": "./integralenHavoVwo.js",
+    "title": "Integralen (HAVO/VWO wiskunde B)",
+    "subject": "wiskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "∫",
+    "referentieNiveau": "havo-vwo-CSE-wiskundeB",
+    "sloThema": "Wiskunde B HAVO/VWO — integraalrekening eindexamen-stof",
+    "triggerKeywords": [
+      "integraal",
+      "integreren",
+      "integralen",
+      "primitieve",
+      "primitief",
+      "onbepaalde integraal",
+      "bepaalde integraal",
+      "F(b)-F(a)",
+      "hoofdstelling",
+      "oppervlakte onder grafiek",
+      "oppervlakte tussen",
+      "snijpunten grafieken"
+    ],
+    "intro": "Integraalrekening HAVO/VWO wiskunde B eindexamen-stof. Primitieven (∫ x^n, e^x, sin, cos, ln), bepaalde integraal + oppervlakte tussen grafieken, substitutie + partiële integratie, en toepassingen (sn",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "interpunctie-po",
     "file": "./interpunctiePo.js",
     "title": "Interpunctie & hoofdletters (groep 5-7)",
