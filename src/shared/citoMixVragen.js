@@ -8,7 +8,11 @@
 // component het direct kan renderen:
 //   { id, question, options, answer, wrongHints, subject, pathTitle, stepTitle }
 
-import { ALL_LEARN_PATHS } from "../learnPaths/index.js";
+// Mark P0 STAP 2 (2026-05-19): vervangen door pathManifest-filter +
+// lazy getLearnPath ipv eager ALL_LEARN_PATHS-import. Bij Cito-mix
+// laden we alleen de PO-paden (~25-30 van 165), niet de hele bundel.
+import pathManifest from "../learnPaths/pathManifest.generated.json";
+import { getLearnPath } from "../learnPaths/pathLoaders.js";
 import { getWrongChecks } from "./adaptiveStore.js";
 
 // Welke `subject`-keys horen bij welk Cito-onderdeel.
@@ -60,12 +64,20 @@ function isDoorstroomtoetsLevel(level) {
   return false;
 }
 
-export function gatherPoChecks(opts = {}) {
+export async function gatherPoChecks(opts = {}) {
   const out = [];
   // doorstroomtoets-only: filter strenger op groep 7-8 zodat de simulatie geen
   // kinderachtige PO-vragen toont. Default = breed (alle PO).
   const levelCheck = opts.doorstroomtoetsOnly ? isDoorstroomtoetsLevel : isPoLevel;
-  for (const [pathId, path] of Object.entries(ALL_LEARN_PATHS)) {
+  // Filter eerst via manifest (lichte ~130 kB JSON) zodat alleen relevante
+  // paden lazy-geladen worden. Parallel via Promise.all.
+  const candidateIds = pathManifest
+    .filter((p) => levelCheck(p.level))
+    .map((p) => p.id);
+  const loadedEntries = await Promise.all(
+    candidateIds.map(async (id) => [id, await getLearnPath(id)])
+  );
+  for (const [pathId, path] of loadedEntries) {
     if (!path || !levelCheck(path.level)) continue;
     const pijler = pijlerForPath(path);
     if (!pijler) continue;
@@ -149,11 +161,11 @@ function annotateWithWrongHistory(checks) {
 // opts.subjectFilter: indien gezet ("rekenen" / "taal" / "studievaardigheden"
 // of een array daarvan) wordt de pool beperkt tot die pijler(s) — gebruikt
 // voor vak-specifieke Cito-oefen-knop op StudentHome.
-export function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
+export async function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
   const adaptive = opts.adaptive !== false;
   // doorstroomtoetsOnly propageert naar gatherPoChecks zodat groep<7-paden
   // uitgesloten worden (Chrome-Claude review 2026-05-15).
-  let all = gatherPoChecks({ doorstroomtoetsOnly: !!opts.doorstroomtoetsOnly });
+  let all = await gatherPoChecks({ doorstroomtoetsOnly: !!opts.doorstroomtoetsOnly });
   if (opts.subjectFilter) {
     const allowed = new Set(
       Array.isArray(opts.subjectFilter) ? opts.subjectFilter : [opts.subjectFilter]

@@ -77,18 +77,29 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
     return () => clearInterval(tickRef.current);
   }, [mode]);
 
-  const start = () => {
-    // doorstroomtoetsOnly: filter pool op groep 7-8 zodat geen kinderachtige
-    // groep 4-5-vragen ('Pen €1,25', '10-2,75') in de Doorstroomtoets-simulatie
-    // belanden. Chrome-Claude review 2026-05-15.
-    const qs = sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
-    // Shuffle opties per vraag zodat antwoord 0 niet altijd correct is.
-    const shuffled = qs.map((q) => shuffleOptions(q));
-    setQuestions(shuffled);
-    setAnswers(new Array(shuffled.length).fill(null));
-    setIdx(0);
-    setSecondsLeft(config.minutes * 60);
-    setMode("running");
+  const [loading, setLoading] = useState(false);
+  const start = async () => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      // doorstroomtoetsOnly: filter pool op groep 7-8 zodat geen kinderachtige
+      // groep 4-5-vragen ('Pen €1,25', '10-2,75') in de Doorstroomtoets-simulatie
+      // belanden. Chrome-Claude review 2026-05-15.
+      // Mark P0 STAP 2 (2026-05-19): sampleCitoMix is nu async — laadt
+      // alleen relevante PO-paden lazy ipv hele bundel eager.
+      const qs = await sampleCitoMix(config.count, null, Math.random, { subjectFilter, doorstroomtoetsOnly: true });
+      const shuffled = qs.map((q) => shuffleOptions(q));
+      setQuestions(shuffled);
+      setAnswers(new Array(shuffled.length).fill(null));
+      setIdx(0);
+      setSecondsLeft(config.minutes * 60);
+      setMode("running");
+    } catch (e) {
+      console.error("sampleCitoMix failed:", e);
+      alert("Kon de vragen niet laden. Probeer het opnieuw.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const score = useMemo(() => {
@@ -202,8 +213,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
             </>
           )}
 
-          <button onClick={start} style={btnPrimary()}>
-            {simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : "🚀 Start oefen-Doorstroomtoets"}
+          <button onClick={start} disabled={loading} style={{ ...btnPrimary(), opacity: loading ? 0.6 : 1, cursor: loading ? "wait" : "pointer" }}>
+            {loading ? "⏳ Vragen laden…" : (simulatieMode ? "🚀 Start de simulatie (50 vragen / 60 min)" : "🚀 Start oefen-Doorstroomtoets")}
           </button>
         </div>
       </div>
