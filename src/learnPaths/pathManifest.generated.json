@@ -3571,6 +3571,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "maatschappijwetenschappen-havo-vwo",
+    "file": "./maatschappijwetenschappenHavoVwo.js",
+    "title": "Maatschappijwetenschappen kernconcepten (HAVO/VWO)",
+    "subject": "maatschappij",
+    "level": "havo4-5-vwo",
+    "emoji": "🏛️",
+    "referentieNiveau": "havo-vwo-CSE-MAW",
+    "sloThema": "MAW HAVO/VWO — kernconcepten politiek/binding/vorming/verhouding eindexamen",
+    "triggerKeywords": [
+      "maatschappijwetenschappen",
+      "MAW",
+      "politiek",
+      "macht",
+      "gezag",
+      "Weber",
+      "rationeel-legaal",
+      "democratie",
+      "dictatuur",
+      "autoritair",
+      "coalitie Schoof",
+      "Schoof-kabinet"
+    ],
+    "intro": "Maatschappijwetenschappen HAVO/VWO CSE-kernconcepten. Politiek + macht (Weber-gezagstypen, NL-coalitie-Schoof 2024, ideologieën), binding (cognitief/affectief/functioneel + socialisatie + Durkheim + B",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "machten",
     "file": "./machten.js",
     "title": "Machten en machtsregels",
