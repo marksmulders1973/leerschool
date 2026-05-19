@@ -228,6 +228,9 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                   <li>⏱️ Max 15 min per sessie — daarna pauze of kort spel</li>
                 </ul>
               </div>
+              <div style={{ gridColumn: "1 / -1", padding: "10px 12px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 8, fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
+                <strong style={{ color: "#ffd54f" }}>✨ Anders dan Squla / Junior Einstein:</strong> bij een fout krijgt je leerling geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. En het is gratis. Plus complete leerpaden waar elk onderwerp van A tot Z wordt uitgelegd.
+              </div>
               {onRondleiding && (
                 <div style={{ gridColumn: "1 / -1", marginTop: 4, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
                   <button
