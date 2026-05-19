@@ -138,6 +138,22 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   // (primair) of userLevel (fallback voor returning users zonder role-set).
   const isPoUser = userRole === "leerling" || (userLevel && /^(groep|po)/i.test(String(userLevel)));
   const isVoUser = userRole === "student" || (userLevel && /^(klas|vo|bovenbouw)/i.test(String(userLevel)));
+  // Mark UX 2026-05-19: als bezoeker zonder rol op /leren komt (geen userRole,
+  // geen userLevel), dan zien ze ALLE vakken — inclusief VMBO-economie /
+  // filosofie / scheikunde. Voor primaire ICP (Doorstroomtoets-ouder groep
+  // 6-8) is dat verwarrend. Default = PO. Gebruiker kan switchen via toggle
+  // bovenaan; keuze persisteert in localStorage.
+  const [implicitNiveau, setImplicitNiveau] = useState(() => {
+    if (isPoUser || isVoUser) return null;
+    try {
+      const stored = localStorage.getItem("lk-implicit-niveau");
+      if (stored === "po" || stored === "vo") return stored;
+    } catch { /* localStorage geblokt — gebruik default */ }
+    return "po"; // ICP-default
+  });
+  const effectivePo = isPoUser || (!isVoUser && implicitNiveau === "po");
+  const effectiveVo = isVoUser || (!isPoUser && implicitNiveau === "vo");
+  const showNiveauToggle = !isPoUser && !isVoUser;
   const [progressByPath, setProgressByPath] = useState({});
   const [loaded, setLoaded] = useState(false);
   // Klas-filter binnen vak-detail. null = "alle klassen". String = bucketKey
@@ -214,10 +230,10 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   const allPaths = useMemo(() => {
     const isPoLevel = (lvl) => /^(groep|po)/i.test(String(lvl || ""));
     const isVoLevel = (lvl) => /^(klas|havo|vwo|vmbo)/i.test(String(lvl || ""));
-    if (isPoUser) return ALL_PATHS_MANIFEST.filter((p) => isPoLevel(p.level));
-    if (isVoUser) return ALL_PATHS_MANIFEST.filter((p) => isVoLevel(p.level));
+    if (effectivePo) return ALL_PATHS_MANIFEST.filter((p) => isPoLevel(p.level));
+    if (effectiveVo) return ALL_PATHS_MANIFEST.filter((p) => isVoLevel(p.level));
     return ALL_PATHS_MANIFEST;
-  }, [isPoUser, isVoUser]);
+  }, [effectivePo, effectiveVo]);
   // Effective filter = filterSubject (van bovenaf) OF selectedSubject (interne
   // state vanuit vak-grid-klik). filterSubject heeft voorrang. Wanneer beide
   // null zijn: tonen we het vak-grid entry-screen (Oefenen-tab-stijl).
@@ -352,6 +368,56 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           <p style={{ color: C.muted, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
             Kies een vak om te leren — uitleg per stap, met korte vragen om te zien of het is blijven hangen.
           </p>
+
+          {showNiveauToggle && (
+            <div
+              role="radiogroup"
+              aria-label="Voor wie ben je hier?"
+              style={{
+                display: "flex",
+                gap: 8,
+                marginBottom: 14,
+                padding: "4px",
+                background: "#0e1726",
+                borderRadius: 8,
+                border: "1px solid rgba(255,255,255,0.06)",
+              }}
+            >
+              {[
+                { val: "po", label: "🎓 Basisschool", sub: "groep 1-8" },
+                { val: "vo", label: "🎒 Middelbare school", sub: "klas 1-6" },
+              ].map(({ val, label, sub }) => {
+                const active = implicitNiveau === val;
+                return (
+                  <button
+                    key={val}
+                    type="button"
+                    role="radio"
+                    aria-checked={active}
+                    onClick={() => {
+                      setImplicitNiveau(val);
+                      try { localStorage.setItem("lk-implicit-niveau", val); } catch { /* ignore */ }
+                    }}
+                    style={{
+                      flex: 1,
+                      padding: "10px 12px",
+                      borderRadius: 6,
+                      border: active ? "1px solid #ffd54f" : "1px solid rgba(255,255,255,0.08)",
+                      background: active ? "rgba(255,213,79,0.10)" : "transparent",
+                      color: active ? "#ffd54f" : C.muted,
+                      cursor: "pointer",
+                      fontSize: 13,
+                      lineHeight: 1.3,
+                      textAlign: "left",
+                    }}
+                  >
+                    <div style={{ fontWeight: 600 }}>{label}</div>
+                    <div style={{ fontSize: 11, opacity: 0.85, marginTop: 2 }}>{sub}</div>
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           <LeerpadBot
             paths={ALL_PATHS_BY_ID}
