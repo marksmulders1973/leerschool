@@ -163,6 +163,7 @@ import betoogBeschouwingHavoVwo from "./betoogBeschouwingHavoVwo.js";
 import engelsCseHavoVwo from "./engelsCseHavoVwo.js";
 import integralenHavoVwo from "./integralenHavoVwo.js";
 import zenuwstelselHormonenHavoVwo from "./zenuwstelselHormonenHavoVwo.js";
+import zurenBasenHavoVwo from "./zurenBasenHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -268,6 +269,7 @@ export const ALL_LEARN_PATHS = {
   "engels-cse-havo-vwo": engelsCseHavoVwo,
   "integralen-havo-vwo": integralenHavoVwo,
   "zenuwstelsel-hormonen-havo-vwo": zenuwstelselHormonenHavoVwo,
+  "zuren-basen-havo-vwo": zurenBasenHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

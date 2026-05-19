@@ -6246,5 +6246,34 @@
     "checkCount": 26,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "zuren-basen-havo-vwo",
+    "file": "./zurenBasenHavoVwo.js",
+    "title": "Zuren, basen + pH (HAVO/VWO scheikunde)",
+    "subject": "scheikunde",
+    "level": "havo4-5-vwo",
+    "emoji": "⚗️",
+    "referentieNiveau": "havo-vwo-CSE-scheikunde",
+    "sloThema": "Scheikunde HAVO/VWO — zuren basen evenwicht eindexamen",
+    "triggerKeywords": [
+      "zuur",
+      "zuren",
+      "base",
+      "basen",
+      "Brønsted",
+      "Brønsted-Lowry",
+      "proton-donor",
+      "proton-acceptor",
+      "H+",
+      "H3O+",
+      "OH-",
+      "geconjugeerd zuur"
+    ],
+    "intro": "Zuur-base-chemie HAVO/VWO eindexamen. Brønsted-Lowry-definities, pH/pOH-berekeningen, sterke vs zwakke zuren + Ka/pKa, bufferoplossingen + bloed-buffer, titratie + indicator-keuze. ~15-20 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
   }
 ]
