@@ -176,6 +176,7 @@ import twintigsteEeuwHavoVwo from "./twintigsteEeuwHavoVwo.js";
 import bedrijfseconomieHavoVwo from "./bedrijfseconomieHavoVwo.js";
 import wereldAardrijkskundeHavoVwo from "./wereldAardrijkskundeHavoVwo.js";
 import nederlandsCseHavoVwo from "./nederlandsCseHavoVwo.js";
+import latijnVwo from "./latijnVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -294,6 +295,7 @@ export const ALL_LEARN_PATHS = {
   "bedrijfseconomie-havo-vwo": bedrijfseconomieHavoVwo,
   "wereld-globalisering-havo-vwo": wereldAardrijkskundeHavoVwo,
   "nederlands-cse-havo-vwo": nederlandsCseHavoVwo,
+  "latijn-vwo": latijnVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

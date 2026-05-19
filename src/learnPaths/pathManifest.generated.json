@@ -3460,6 +3460,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "latijn-vwo",
+    "file": "./latijnVwo.js",
+    "title": "Latijn basis (VWO Gymnasium)",
+    "subject": "klassieke-talen",
+    "level": "vwo",
+    "emoji": "📜",
+    "referentieNiveau": "vwo-CSE-latijn",
+    "sloThema": "Klassieke Talen VWO — Latijn basis eindexamen",
+    "triggerKeywords": [
+      "Latijn",
+      "klassieke talen",
+      "gymnasium",
+      "Romeins",
+      "Rome",
+      "Caesar",
+      "Cicero",
+      "Vergilius",
+      "Aeneis",
+      "Horatius",
+      "carpe diem",
+      "Ovidius"
+    ],
+    "intro": "Latijn basis VWO-Gymnasium. Alfabet + uitspraak (klassiek Caesar=Kaesar) + Romeinse cijfers, 6 naamvallen (Nom/Gen/Dat/Acc/Abl/Voc), werkwoord-vervoeging (4 conjugaties + tijden + esse), Romeinse cult",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "lichaam-gezondheid-po",
     "file": "./lichaamGezondheidPo.js",
     "title": "Het lichaam + gezondheid (groep 6-8)",
