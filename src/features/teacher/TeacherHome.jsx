@@ -9,6 +9,23 @@ import supabase from "../../supabase.js";
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
+  // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
+  // Default open zonder toetsen (eerste bezoek), daarna in te klappen.
+  const [welcomeCollapsed, setWelcomeCollapsed] = useState(() => {
+    try {
+      const stored = localStorage.getItem("lk-teacher-welcome-collapsed");
+      if (stored === "1") return true;
+    } catch { /* ignore */ }
+    // Default ingeklapt zodra leerkracht ≥1 toets heeft gemaakt
+    return quizzes.length > 0;
+  });
+  const toggleWelcome = () => {
+    setWelcomeCollapsed((prev) => {
+      const next = !prev;
+      try { localStorage.setItem("lk-teacher-welcome-collapsed", next ? "1" : "0"); } catch { /* ignore */ }
+      return next;
+    });
+  };
 
   const handleLogoUpload = (e) => {
     const file = e.target.files?.[0];
@@ -156,6 +173,102 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
       <Header title={`Hoi ${userName}! 👋`} subtitle="Leerkracht Dashboard" onBack={onBack} onHome={onHome} />
 
       <div style={styles.content}>
+        {/* Welkom-paneel — wat kan Leerkwartier voor jouw klas */}
+        <div style={{
+          marginBottom: 16,
+          padding: welcomeCollapsed ? "10px 14px" : "16px 18px",
+          borderRadius: 14,
+          background: welcomeCollapsed ? "rgba(255,255,255,0.04)" : "rgba(0,212,255,0.07)",
+          border: `1px solid ${welcomeCollapsed ? "rgba(255,255,255,0.08)" : "rgba(0,212,255,0.25)"}`,
+        }}>
+          <button
+            type="button"
+            onClick={toggleWelcome}
+            aria-expanded={!welcomeCollapsed}
+            style={{
+              background: "none",
+              border: "none",
+              color: welcomeCollapsed ? "rgba(255,255,255,0.55)" : "#00d4ff",
+              fontFamily: "var(--font-display)",
+              fontSize: 14,
+              fontWeight: 700,
+              cursor: "pointer",
+              padding: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              width: "100%",
+              justifyContent: "space-between",
+              textAlign: "left",
+            }}
+          >
+            <span>🏫 {welcomeCollapsed ? "Wat kan Leerkwartier voor mijn klas?" : "Welkom bij Leerkwartier"}</span>
+            <span style={{ fontSize: 12, opacity: 0.7 }}>{welcomeCollapsed ? "▼ Open" : "▲ Klap in"}</span>
+          </button>
+          {!welcomeCollapsed && (
+            <div style={{ marginTop: 14, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
+              <div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#00d4ff", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JOU ALS LEERKRACHT</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
+                  <li>📝 Toetsen maken + delen via code</li>
+                  <li>📊 Klas-voortgang in één blik</li>
+                  <li>👥 Klassen + leerlinglijst beheren</li>
+                  <li>🖨️ Toetsen printen (met antwoordblad)</li>
+                  <li>💬 Toets delen via WhatsApp / mail</li>
+                </ul>
+              </div>
+              <div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#00e676", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JE LEERLINGEN</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
+                  <li>📚 249 onderwerpen zelf doorlopen</li>
+                  <li>🎯 Doorstroomtoets-voorbereiding (groep 6-8)</li>
+                  <li>🎓 Echte VMBO/HAVO/VWO-examenvragen</li>
+                  <li>💡 Uitleg op 3 niveaus bij elke fout</li>
+                  <li>🏆 Hall of Fame + scorebord</li>
+                  <li>🎮 OBLITERATOR (beloningsspel)</li>
+                </ul>
+              </div>
+              {onRondleiding && (
+                <div style={{ gridColumn: "1 / -1", marginTop: 4, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
+                  <button
+                    type="button"
+                    onClick={onRondleiding}
+                    style={{
+                      padding: "8px 14px",
+                      background: "rgba(0,212,255,0.15)",
+                      border: "1px solid rgba(0,212,255,0.4)",
+                      color: "#00d4ff",
+                      borderRadius: 8,
+                      fontFamily: "var(--font-display)",
+                      fontSize: 12,
+                      fontWeight: 700,
+                      cursor: "pointer",
+                    }}
+                  >
+                    Bekijk de rondleiding →
+                  </button>
+                  <button
+                    type="button"
+                    onClick={toggleWelcome}
+                    style={{
+                      padding: "8px 14px",
+                      background: "transparent",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: "rgba(255,255,255,0.55)",
+                      borderRadius: 8,
+                      fontFamily: "var(--font-body)",
+                      fontSize: 12,
+                      cursor: "pointer",
+                    }}
+                  >
+                    Ik snap het, klap in
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
         {/* Quiz limiet banner */}
         {!isTeacherPro && (
           <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 12, background: quizLimitReached ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.04)", border: `1px solid ${quizLimitReached ? "rgba(255,107,53,0.4)" : "rgba(255,255,255,0.1)"}`, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>

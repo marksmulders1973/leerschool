@@ -28,6 +28,22 @@ function generateCode() {
 }
 
 export default function OuderDashboard({ onBack, onHome, authUser, subscription, onUpgrade, onLogin, onRondleiding }) {
+  // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
+  // Default open zonder gekoppeld kind, daarna in te klappen.
+  const [welcomeCollapsed, setWelcomeCollapsed] = useState(() => {
+    try {
+      const stored = localStorage.getItem("lk-ouder-welcome-collapsed");
+      if (stored === "1") return true;
+    } catch { /* ignore */ }
+    return false; // default open — ouder oriënteert zich vaak vooraf
+  });
+  const toggleWelcome = () => {
+    setWelcomeCollapsed((prev) => {
+      const next = !prev;
+      try { localStorage.setItem("lk-ouder-welcome-collapsed", next ? "1" : "0"); } catch { /* ignore */ }
+      return next;
+    });
+  };
   const isPro = isLaunchPromoActive() || subscription?.tier === "parent_pro";
   const [children, setChildren] = useState([]);
   const [selectedChild, setSelectedChild] = useState(null);
@@ -238,6 +254,103 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       <Header title="Ouder Dashboard 👨‍👩‍👧" subtitle="Volg de voortgang van je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
+
+        {/* Welkom-paneel — voordelen voor ouder + kind */}
+        <div style={{
+          padding: welcomeCollapsed ? "10px 14px" : "16px 18px",
+          borderRadius: 14,
+          background: welcomeCollapsed ? "rgba(255,255,255,0.04)" : "rgba(0,200,83,0.07)",
+          border: `1px solid ${welcomeCollapsed ? "rgba(255,255,255,0.08)" : "rgba(0,200,83,0.25)"}`,
+        }}>
+          <button
+            type="button"
+            onClick={toggleWelcome}
+            aria-expanded={!welcomeCollapsed}
+            style={{
+              background: "none",
+              border: "none",
+              color: welcomeCollapsed ? "rgba(255,255,255,0.55)" : "#69f0ae",
+              fontFamily: "var(--font-display)",
+              fontSize: 14,
+              fontWeight: 700,
+              cursor: "pointer",
+              padding: 0,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              width: "100%",
+              justifyContent: "space-between",
+              textAlign: "left",
+            }}
+          >
+            <span>👨‍👩‍👧 {welcomeCollapsed ? "Wat krijg ik en mijn kind?" : "Welkom — wat krijg je hier?"}</span>
+            <span style={{ fontSize: 12, opacity: 0.7 }}>{welcomeCollapsed ? "▼ Open" : "▲ Klap in"}</span>
+          </button>
+          {!welcomeCollapsed && (
+            <div style={{ marginTop: 14, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
+              <div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#69f0ae", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JOU ALS OUDER</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
+                  <li>🔑 Koppel je kind met één korte code</li>
+                  <li>📊 Voortgang in één oogopslag</li>
+                  <li>🆓 100% gratis — geen abonnement</li>
+                  <li>🔒 Geen reclame, AVG-veilig</li>
+                  <li>📵 Werkt ook offline (PWA)</li>
+                </ul>
+              </div>
+              <div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#ffd54f", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JE KIND</div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
+                  <li>📚 249 onderwerpen op niveau</li>
+                  <li>🎯 Doorstroomtoets-voorbereiding (groep 6-8)</li>
+                  <li>💡 Uitleg op 3 niveaus bij elke fout</li>
+                  <li>🎓 Echte VMBO/HAVO/VWO-examenvragen</li>
+                  <li>🎮 OBLITERATOR als beloning</li>
+                </ul>
+              </div>
+              <div style={{ gridColumn: "1 / -1", padding: "10px 12px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 8, fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
+                <strong style={{ color: "#ffd54f" }}>✨ Anders dan Squla / Junior Einstein:</strong> bij een fout krijgt je kind geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. En het is gratis.
+              </div>
+              {onRondleiding && (
+                <div style={{ gridColumn: "1 / -1", display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
+                  <button
+                    type="button"
+                    onClick={onRondleiding}
+                    style={{
+                      padding: "8px 14px",
+                      background: "rgba(0,200,83,0.15)",
+                      border: "1px solid rgba(0,200,83,0.4)",
+                      color: "#69f0ae",
+                      borderRadius: 8,
+                      fontFamily: "var(--font-display)",
+                      fontSize: 12,
+                      fontWeight: 700,
+                      cursor: "pointer",
+                    }}
+                  >
+                    Bekijk de rondleiding →
+                  </button>
+                  <button
+                    type="button"
+                    onClick={toggleWelcome}
+                    style={{
+                      padding: "8px 14px",
+                      background: "transparent",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: "rgba(255,255,255,0.55)",
+                      borderRadius: 8,
+                      fontFamily: "var(--font-body)",
+                      fontSize: 12,
+                      cursor: "pointer",
+                    }}
+                  >
+                    Ik snap het, klap in
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* Pro gate */}
         {!isPro && (
