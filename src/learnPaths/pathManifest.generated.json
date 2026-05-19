@@ -6407,6 +6407,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "wereldorientatie-mix-po",
+    "file": "./wereldorientatieMixPo.js",
+    "title": "Wereldoriëntatie mix (groep 7-8 Cito-stijl)",
+    "subject": "wereld",
+    "level": "groep7-8",
+    "emoji": "🌍",
+    "referentieNiveau": "po-doorstroomtoets-wereldorientatie",
+    "sloThema": "Wereldoriëntatie groep 7-8 — Cito-stijl gemixed eindtoets",
+    "triggerKeywords": [
+      "wereldoriëntatie",
+      "wereld-oriëntatie",
+      "Cito-eindtoets",
+      "Doorstroomtoets wereldoriëntatie",
+      "tijdvakken NL",
+      "10 tijdvakken",
+      "Gouden Eeuw",
+      "VOC 1602",
+      "Anne Frank",
+      "Watersnoodramp 1953",
+      "Willem van Oranje",
+      "Tachtigjarige Oorlog"
+    ],
+    "intro": "Wereldoriëntatie groep 7-8 mixed — Cito-eindtoets-stijl. Geschiedenis (10 tijdvakken NL + WO2 + Anne Frank + Watersnood 1953), aardrijkskunde (12 provincies + 27 EU + werelddelen + klimaat), natuur + ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "wereldreligies-po",
     "file": "./wereldreligiesPo.js",
     "title": "Wereldreligies — 5 grote religies van de wereld",
