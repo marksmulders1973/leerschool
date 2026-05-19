@@ -3469,6 +3469,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "kunst-havo-vwo",
+    "file": "./kunstHavoVwo.js",
+    "title": "Kunst — stijlperioden + analyse (HAVO/VWO)",
+    "subject": "kunst",
+    "level": "havo4-5-vwo",
+    "emoji": "🎨",
+    "referentieNiveau": "havo-vwo-CSE-kunst-algemeen",
+    "sloThema": "Kunst HAVO/VWO — kunstgeschiedenis + analyse eindexamen",
+    "triggerKeywords": [
+      "kunst",
+      "kunstgeschiedenis",
+      "Renaissance",
+      "Leonardo da Vinci",
+      "Mona Lisa",
+      "sfumato",
+      "Michelangelo",
+      "Sixtijnse Kapel",
+      "Rafaël",
+      "Botticelli",
+      "Jan van Eyck",
+      "Hieronymus Bosch"
+    ],
+    "intro": "Kunstgeschiedenis HAVO/VWO. Klassiek (Egypte-Griekenland-Romeins + Middeleeuwen gotisch + Renaissance Leonardo/Michelangelo + NL Bosch/Bruegel), Barok-19e eeuw (Rembrandt/Vermeer + Impressionisme Mone",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "kwadraten-wortels",
     "file": "./kwadratenWortels.js",
     "title": "Kwadraten en wortels",
