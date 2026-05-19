@@ -850,8 +850,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let shakeKracht = 0;
     let raf;
     let scoreElText = 0;
-    const startLevens = 3;     // Mark: extra levens weg, altijd 3 om te beginnen.
-    const MAX_LEVENS = 3;      // Cap op 3 — geen extra levens via pickups boven de basis.
+    const startLevens = 1;     // Mark 2026-05-19: start met 1 hartje (was 3).
+    const MAX_LEVENS = 3;      // Cap op 3 — extra levens via pickups/dungeon/boss boven start.
     // ── HP-systeem (NEW) ──
     // Per leven krijgt speler 100% hp. Spike-hit = -25% hp. Bij hp ≤ 0 →
     // 1 leven kwijt + hp reset naar 100. Hartjes/schatkist herstellen +25%
@@ -5921,8 +5921,8 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           aantalObstakelsTotaal++; // teller voor pickups (niet voor score)
           // GEEN power-ups in Oblivion Pulse — extreme difficulty, geen schild, geen reddingsboei.
           if (!oblivionMode && !customLevelMode) {
-            // bonus-hart spawn (elke ~25 obstakels, 40% kans)
-            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.4 && levens < MAX_LEVENS) {
+            // bonus-hart spawn (elke ~25 obstakels, 10% kans — Mark 2026-05-19: 75% minder)
+            if (aantalObstakelsTotaal > 0 && aantalObstakelsTotaal % 25 === 0 && Math.random() < 0.1 && levens < MAX_LEVENS) {
               const yMin = (200 + Math.random() * 60) * SCHAAL;
               bonusHarten.push({ x: W + 40, y: yMin, grootte: 28 * SCHAAL, fase: 0, opgepakt: false });
             }
