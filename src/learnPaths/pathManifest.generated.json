@@ -2472,6 +2472,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "filosofie-vwo",
+    "file": "./filosofieVwo.js",
+    "title": "Filosofie kernbegrippen (VWO)",
+    "subject": "filosofie",
+    "level": "vwo",
+    "emoji": "🤔",
+    "referentieNiveau": "vwo-CSE-filosofie",
+    "sloThema": "Filosofie VWO — kernbegrippen kennisleer/ethiek/zijn/politiek eindexamen",
+    "triggerKeywords": [
+      "filosofie",
+      "filosofische",
+      "epistemologie",
+      "kennisleer",
+      "rationalisme",
+      "empirisme",
+      "Descartes",
+      "cogito",
+      "Locke",
+      "Hume",
+      "Berkeley",
+      "tabula rasa"
+    ],
+    "intro": "Filosofie VWO eindexamen-kernbegrippen. Kennisleer (Descartes-rationalisme vs Locke-empirisme + Kant-synthese + Popper-falsifikatie), zijnsleer (materialisme/idealisme/dualisme + vrije wil), ethiek (K",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "financiele-vorming-po",
     "file": "./financieleVormingPo.js",
     "title": "Geldwijsheid + sparen (groep 6-8)",

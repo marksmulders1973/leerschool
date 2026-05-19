@@ -169,6 +169,7 @@ import aardobservatieHavoVwo from "./aardobservatieHavoVwo.js";
 import veranderingGroeiHavoVwo from "./veranderingGroeiHavoVwo.js";
 import fransCseHavoVwo from "./fransCseHavoVwo.js";
 import duitsCseHavoVwo from "./duitsCseHavoVwo.js";
+import filosofieVwo from "./filosofieVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -280,6 +281,7 @@ export const ALL_LEARN_PATHS = {
   "verandering-groei-havo-vwo": veranderingGroeiHavoVwo,
   "frans-cse-havo-vwo": fransCseHavoVwo,
   "duits-cse-havo-vwo": duitsCseHavoVwo,
+  "filosofie-vwo": filosofieVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
