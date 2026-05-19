@@ -3,6 +3,8 @@ import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, SUBJECT_FOR_LEVEL, TEACHER_TOPIC_SUGGESTIONS, EIGEN_TOPIC_SUGGESTIONS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { daysUntil, fetchAIQuestions } from "../../utils.js";
+import { countExamPathsFor } from "../../learnPaths/examPathPicker.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import Header from "../../components/Header.jsx";
 
 export function ClassManager({ classes, onSave, onBack, onHome }) {
@@ -158,12 +160,83 @@ export function ClassManager({ classes, onSave, onBack, onHome }) {
   );
 }
 
+// Simpele parser voor plakken-modus. Verwacht patterns zoals:
+//   1. Wat is 2+2?
+//   A. 3
+//   B. 4 *
+//   C. 5
+//   D. 6
+// Het sterretje (*), "(juist)", "(goed)" of "JUIST:" markeert het correcte antwoord.
+// Vragen mogen genummerd of gescheiden door een lege regel.
+export function parsePastedQuestions(raw) {
+  if (!raw || typeof raw !== "string") return [];
+  const text = raw.replace(/\r\n/g, "\n").trim();
+  if (!text) return [];
+
+  // Split op nummering aan begin van een regel (1. of 1) of dubbele newline.
+  const chunks = text.split(/(?=^\s*\d+[\.\)]\s)|\n{2,}/m).map(c => c.trim()).filter(Boolean);
+
+  const out = [];
+  for (const chunk of chunks) {
+    const lines = chunk.split("\n").map(l => l.trim()).filter(Boolean);
+    if (lines.length < 2) continue;
+
+    let qText = lines[0].replace(/^\d+[\.\)]\s*/, "").trim();
+    const options = [];
+    let answerIdx = -1;
+    const optionRe = /^([A-Da-d])[\.\)]\s*(.+?)\s*(\*|\(juist\)|\(goed\)|✓)?\s*$/;
+
+    let collectingQ = true;
+    for (let i = 1; i < lines.length; i++) {
+      const m = lines[i].match(optionRe);
+      if (m) {
+        collectingQ = false;
+        const letter = m[1].toUpperCase();
+        const idx = "ABCD".indexOf(letter);
+        if (idx === -1) continue;
+        let optText = m[2].trim();
+        const isCorrect = !!m[3];
+        // Of trailing-marker zonder regex (bv "B. 4 [JUIST]")
+        const trailingJuist = /\b(JUIST|GOED|ANTWOORD)\b/i.test(optText);
+        if (trailingJuist) optText = optText.replace(/\b(JUIST|GOED|ANTWOORD)\b/gi, "").trim();
+        options[idx] = optText;
+        if (isCorrect || trailingJuist) answerIdx = idx;
+      } else if (collectingQ) {
+        qText += " " + lines[i];
+      } else {
+        // "Antwoord: B" of "Goed: C" als losse regel
+        const ansLine = lines[i].match(/^(?:antwoord|goed|juist)\s*[:=]\s*([A-Da-d])/i);
+        if (ansLine) {
+          const idx = "ABCD".indexOf(ansLine[1].toUpperCase());
+          if (idx >= 0) answerIdx = idx;
+        }
+      }
+    }
+
+    const compactOptions = options.filter(o => o !== undefined && o !== "");
+    if (!qText || compactOptions.length < 2) continue;
+    out.push({
+      q: qText,
+      options: compactOptions,
+      answer: answerIdx >= 0 && answerIdx < compactOptions.length ? answerIdx : 0,
+      explanation: "",
+      isCustom: true,
+    });
+  }
+  return out;
+}
+
 export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
   const [questions, setQuestions] = useState(() =>
     quizConfig.preGeneratedQuestions.map((q, i) => ({ ...q, id: i }))
   );
   const [editingId, setEditingId] = useState(null);
   const [regenLoading, setRegenLoading] = useState(null);
+  const [showPasteModal, setShowPasteModal] = useState(false);
+  const [pasteText, setPasteText] = useState("");
+  const [pastePreview, setPastePreview] = useState(null);
+  const nextIdRef = useRef(quizConfig.preGeneratedQuestions.length);
+  const makeId = () => nextIdRef.current++;
 
   const updateQuestion = (id, field, value) => {
     setQuestions((prev) => prev.map((q) => q.id === id ? { ...q, [field]: value } : q));
@@ -181,6 +254,38 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
   const deleteQuestion = (id) => {
     setQuestions((prev) => prev.filter((q) => q.id !== id));
     if (editingId === id) setEditingId(null);
+  };
+
+  const addBlankQuestion = () => {
+    const id = makeId();
+    setQuestions(prev => [
+      ...prev,
+      { id, q: "", options: ["", "", "", ""], answer: 0, explanation: "", isCustom: true },
+    ]);
+    setEditingId(id);
+    setTimeout(() => {
+      try { window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" }); } catch {}
+    }, 50);
+  };
+
+  const previewPaste = () => {
+    const parsed = parsePastedQuestions(pasteText);
+    setPastePreview(parsed);
+  };
+
+  const confirmPaste = () => {
+    const parsed = pastePreview && pastePreview.length > 0 ? pastePreview : parsePastedQuestions(pasteText);
+    if (parsed.length === 0) {
+      alert("⚠️ Kon geen vragen herkennen.\n\nGebruik dit patroon:\n\n1. Vraag-tekst?\nA. Optie A\nB. Optie B *\nC. Optie C\nD. Optie D\n\n(* = correct antwoord)");
+      return;
+    }
+    setQuestions(prev => [
+      ...prev,
+      ...parsed.map(q => ({ ...q, id: makeId() })),
+    ]);
+    setShowPasteModal(false);
+    setPasteText("");
+    setPastePreview(null);
   };
 
   const regenQuestion = async (id) => {
@@ -203,6 +308,99 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
           ✏️ Tik op een vraag om hem te bewerken. Verwijder of regenereer vragen waar nodig.
         </div>
 
+        <div style={{ display: "flex", gap: 8, marginBottom: 14, flexWrap: "wrap" }}>
+          <button
+            onClick={addBlankQuestion}
+            style={{
+              flex: "1 1 200px",
+              padding: "10px 14px",
+              borderRadius: 12,
+              border: "2px solid #7c3aed",
+              background: "linear-gradient(135deg, #1e1a3a, #2a1e4a)",
+              color: "var(--color-text-strong)",
+              fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 13,
+              cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+            }}
+          >
+            ➕ Eigen vraag toevoegen
+          </button>
+          <button
+            onClick={() => { setShowPasteModal(true); setPasteText(""); setPastePreview(null); }}
+            style={{
+              flex: "1 1 200px",
+              padding: "10px 14px",
+              borderRadius: 12,
+              border: "2px solid #3a5f8a",
+              background: "linear-gradient(135deg, #1a2a3a, #1e3050)",
+              color: "var(--color-text-strong)",
+              fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 13,
+              cursor: "pointer",
+              display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+            }}
+          >
+            📋 Plakken uit Word/lesboek
+          </button>
+        </div>
+
+        {showPasteModal && (
+          <div style={{ marginBottom: 14, padding: 14, background: "#0d1830", borderRadius: 14, border: "2px solid #3a5f8a" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+              <span style={{ fontSize: 20 }}>📋</span>
+              <div style={{ flex: 1, fontFamily: "var(--font-display)", fontWeight: 700, color: "var(--color-text-strong)", fontSize: 14 }}>
+                Vragen plakken
+              </div>
+              <button onClick={() => { setShowPasteModal(false); setPasteText(""); setPastePreview(null); }} aria-label="Sluiten" style={{ background: "transparent", border: "1px solid #2a3f5f", borderRadius: 8, color: "#8eaadb", cursor: "pointer", padding: "3px 9px", fontSize: 12 }}>✕</button>
+            </div>
+            <div style={{ fontSize: 12, color: "#8eaadb", marginBottom: 8, lineHeight: 1.45 }}>
+              Plak uit Word, lesboek of e-mail. Gebruik dit patroon (* of "JUIST" markeert het correcte antwoord):
+              <pre style={{ background: "#06101e", padding: 8, borderRadius: 6, marginTop: 6, color: "#a8c2e8", fontSize: 11, overflow: "auto" }}>
+{`1. Wat is de hoofdstad van Frankrijk?
+A. Berlijn
+B. Parijs *
+C. Madrid
+D. Rome`}
+              </pre>
+            </div>
+            <textarea
+              value={pasteText}
+              onChange={(e) => { setPasteText(e.target.value); setPastePreview(null); }}
+              placeholder="Plak hier je vragen…"
+              rows={8}
+              style={{ ...styles.textInput, width: "100%", minHeight: 140, resize: "vertical", fontFamily: "monospace", fontSize: 12, boxSizing: "border-box", marginBottom: 8 }}
+            />
+            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+              <button
+                onClick={previewPaste}
+                disabled={!pasteText.trim()}
+                style={{ flex: "1 1 120px", padding: "9px", borderRadius: 10, border: "1px solid #3a5f8a", background: pasteText.trim() ? "#1e2d45" : "#0a1525", color: pasteText.trim() ? "#8eaadb" : "#33445a", fontWeight: 700, fontSize: 13, cursor: pasteText.trim() ? "pointer" : "default" }}
+              >
+                🔍 Voorbeeld
+              </button>
+              <button
+                onClick={confirmPaste}
+                disabled={!pasteText.trim()}
+                style={{ flex: "1 1 120px", padding: "9px", borderRadius: 10, border: "none", background: pasteText.trim() ? "var(--color-brand-primary)" : "#2a3f5f", color: "var(--color-text-strong)", fontWeight: 800, fontSize: 13, cursor: pasteText.trim() ? "pointer" : "default" }}
+              >
+                ✅ Toevoegen
+              </button>
+            </div>
+            {pastePreview && (
+              <div style={{ marginTop: 10, padding: 10, background: pastePreview.length > 0 ? "#0a2018" : "#2a1010", borderRadius: 10, border: `1px solid ${pastePreview.length > 0 ? "#00e676" : "#ff5252"}40` }}>
+                <div style={{ fontSize: 12, color: pastePreview.length > 0 ? "#00e676" : "#ff8888", fontWeight: 700, marginBottom: 6 }}>
+                  {pastePreview.length > 0 ? `✅ ${pastePreview.length} vragen herkend` : "❌ Geen vragen herkend"}
+                </div>
+                {pastePreview.slice(0, 2).map((p, i) => (
+                  <div key={i} style={{ fontSize: 11, color: "#a8c2e8", marginTop: 4 }}>
+                    <strong>{i + 1}.</strong> {p.q.slice(0, 80)}{p.q.length > 80 ? "…" : ""} <em style={{ color: "#00e676" }}>(antwoord: {"ABCD"[p.answer]})</em>
+                  </div>
+                ))}
+                {pastePreview.length > 2 && <div style={{ fontSize: 11, color: "#667788", marginTop: 4 }}>…en {pastePreview.length - 2} meer</div>}
+              </div>
+            )}
+          </div>
+        )}
+
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           {questions.map((q, idx) => {
             const isEditing = editingId === q.id;
@@ -216,16 +414,26 @@ export function QuizPreview({ quizConfig, onConfirm, onBack, onHome }) {
                 position: "relative",
               }}>
                 {/* Header rij */}
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10, flexWrap: "wrap" }}>
                   <span style={{ fontFamily: "Fredoka", fontWeight: 700, fontSize: 14, color: "var(--color-brand-primary)", minWidth: 32 }}>
                     #{idx + 1}
                   </span>
+                  {q.isExam && (
+                    <span title={q.examenBron || "Echte examenvraag"} style={{ fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 12, background: "#3a2510", color: "#fbbf24", border: "1px solid #f59e0b" }}>
+                      🎓 ECHT EXAMEN
+                    </span>
+                  )}
+                  {q.isCustom && !q.isExam && (
+                    <span style={{ fontSize: 10, fontWeight: 800, padding: "2px 7px", borderRadius: 12, background: "#1e1a3a", color: "#c07fff", border: "1px solid #7c3aed" }}>
+                      ✏️ EIGEN VRAAG
+                    </span>
+                  )}
                   <div style={{ flex: 1 }} />
                   <button
                     onClick={() => regenQuestion(q.id)}
-                    disabled={isRegen}
-                    title="Nieuwe vraag genereren"
-                    style={{ background: "none", border: "1px solid #2a5080", borderRadius: 8, padding: "4px 10px", cursor: "pointer", color: "#8eaadb", fontSize: 12, fontFamily: "var(--font-body)" }}
+                    disabled={isRegen || q.isExam}
+                    title={q.isExam ? "Echte examenvragen worden niet vervangen" : "Nieuwe vraag genereren"}
+                    style={{ background: "none", border: "1px solid #2a5080", borderRadius: 8, padding: "4px 10px", cursor: q.isExam ? "not-allowed" : "pointer", color: q.isExam ? "#33445a" : "#8eaadb", fontSize: 12, fontFamily: "var(--font-body)", opacity: q.isExam ? 0.4 : 1 }}
                   >
                     {isRegen ? "⏳" : "🔄 Nieuwe vraag"}
                   </button>
@@ -343,6 +551,15 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
   const [previewConfirmed, setPreviewConfirmed] = useState(false);
   const [topicForAI, setTopicForAI] = useState("");
   const [extraContext, setExtraContext] = useState("");
+  const [mixMode, setMixMode] = useState(false);
+  const [selectedTopics, setSelectedTopics] = useState([]);
+  const [customTopicInput, setCustomTopicInput] = useState("");
+  const [examMixCount, setExamMixCount] = useState(0);
+
+  const examPathCount = useMemo(
+    () => (subject && level ? countExamPathsFor(subject, level) : 0),
+    [subject, level]
+  );
 
   const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[schoolTypeSelect] || "";
   const levelLabel = level === "nvt"
@@ -353,7 +570,27 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
     ? `Klas ${klasSelect.replace("k","")}${schoolTypeLabel ? ` · ${schoolTypeLabel}` : ""}`
     : "";
   const isVO = level.startsWith("klas");
-  const suggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
+  const baseSuggestions = subject ? (TEACHER_TOPIC_SUGGESTIONS[subject]?.[isVO ? "vo" : "basisschool"] || []) : [];
+  // Fallback voor vakken zonder hand-gepicktede suggestions (biologie, economie, wiskunde, etc.):
+  // gebruik pathManifest-titels van bestaande leerpaden bij dit vak.
+  const fallbackSuggestions = useMemo(() => {
+    if (!subject || baseSuggestions.length > 0) return [];
+    const matched = pathManifest.filter((p) => {
+      if (p.subject !== subject) return false;
+      if (!level) return true;
+      if (p.id?.startsWith("examen-")) return false;
+      // Match op niveau-bucket: po-paden (groepN/po) vs vo-paden (klasN/vmbo/havo/vwo)
+      if (level.startsWith("klas") || level.startsWith("klas")) {
+        return !p.level?.startsWith("groep") && p.level !== "po";
+      }
+      return p.level?.startsWith("groep") || p.level === "po" || !p.level;
+    });
+    const titles = matched
+      .map((p) => (p.title || "").replace(/\s*\([^)]*\)\s*/g, "").replace(/\s*[-—]\s*.+$/, "").trim())
+      .filter((t) => t.length > 2 && t.length < 60);
+    return [...new Set(titles)].slice(0, 10);
+  }, [subject, level, baseSuggestions.length]);
+  const suggestions = baseSuggestions.length > 0 ? baseSuggestions : fallbackSuggestions;
   const totalSteps = (eigenMode || tafelMode) ? 3 : 4;
   // eigenMode/tafelMode: stap 1 → 2 → 4 (stap 3 overgeslagen); visueel genummerd als 1/2/3
   const displayStep = (eigenMode || tafelMode) && step === 4 ? 3 : step;
@@ -429,13 +666,36 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
 
   const handleSave = () => {
     const subjectId = eigenMode ? "vrij" : tafelMode ? "rekenen" : subject;
-    const topicVal = eigenMode ? (topicForAI || topic.trim() || null) : tafelMode ? (selectedTafel === "mix" ? "tafels mix" : `tafel van ${selectedTafel}`) : (topic || null);
+    const mixTopics = !eigenMode && !tafelMode && mixMode ? selectedTopics : null;
+    const topicVal = eigenMode
+      ? (topicForAI || topic.trim() || null)
+      : tafelMode
+      ? (selectedTafel === "mix" ? "tafels mix" : `tafel van ${selectedTafel}`)
+      : mixTopics && mixTopics.length > 0
+      ? mixTopics.join(", ")
+      : (topic || null);
     const defaultTitle = eigenMode
       ? (topic ? `${topic} Toets` : "Vrij onderwerp Toets")
       : tafelMode
       ? (selectedTafel === "mix" ? "Alle tafels mix" : `Tafel van ${selectedTafel}`)
+      : mixTopics && mixTopics.length > 1
+      ? `Mix: ${mixTopics.slice(0, 2).join(" + ")}${mixTopics.length > 2 ? "…" : ""}`
       : (SUBJECTS.find((s) => s.id === subject)?.label + " Toets");
-    onSave({ title: title || defaultTitle, subject: subjectId, level, topic: topicVal, deadline: deadline || null, questionCount, timePerQuestion, resultMethod, teacherEmail: resultMethod === "email" ? teacherEmail : null, classId: selectedClassId || null, tafelNummer: tafelMode ? selectedTafel : undefined });
+    onSave({
+      title: title || defaultTitle,
+      subject: subjectId,
+      level,
+      topic: topicVal,
+      topics: mixTopics && mixTopics.length > 0 ? mixTopics : null,
+      examMix: examMixCount > 0 && examPathCount > 0 ? examMixCount : 0,
+      deadline: deadline || null,
+      questionCount,
+      timePerQuestion,
+      resultMethod,
+      teacherEmail: resultMethod === "email" ? teacherEmail : null,
+      classId: selectedClassId || null,
+      tafelNummer: tafelMode ? selectedTafel : undefined,
+    });
   };
 
   return (
@@ -809,7 +1069,39 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
             <p style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 14, marginTop: -4 }}>
               De AI maakt gerichte vragen over dit onderwerp. Je kunt ook overslaan voor algemene vragen.
             </p>
-            {suggestions.length > 0 && (
+
+            <button
+              onClick={() => {
+                const next = !mixMode;
+                setMixMode(next);
+                if (next && topic) {
+                  setSelectedTopics([topic]);
+                  setTopic("");
+                } else if (!next) {
+                  setSelectedTopics([]);
+                  setCustomTopicInput("");
+                }
+              }}
+              style={{
+                width: "100%", marginBottom: 14, padding: "12px 16px",
+                background: mixMode ? "linear-gradient(135deg, #2a1e3a, #3a2a5a)" : "linear-gradient(135deg, #1a2a3a, #1e3050)",
+                border: `2px solid ${mixMode ? "#7c3aed" : "#3a5f8a"}`,
+                borderRadius: 14, cursor: "pointer", display: "flex", alignItems: "center", gap: 10, textAlign: "left",
+              }}
+            >
+              <span style={{ fontSize: 22 }}>📚</span>
+              <div style={{ flex: 1 }}>
+                <div style={{ color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700 }}>
+                  Meerdere onderwerpen mixen
+                </div>
+                <div style={{ color: "#8899bb", fontSize: 12, marginTop: 2 }}>
+                  {mixMode ? `${selectedTopics.length} gekozen — vragen worden door elkaar gemixt` : "AI maakt vragen verdeeld over alle gekozen onderwerpen"}
+                </div>
+              </div>
+              <span style={{ fontSize: 18 }}>{mixMode ? "✅" : "→"}</span>
+            </button>
+
+            {!mixMode && suggestions.length > 0 && (
               <div style={{ marginBottom: 16 }}>
                 <div style={{ fontSize: 12, color: "#667788", marginBottom: 8 }}>Suggesties voor {SUBJECTS.find(s => s.id === subject)?.label}:</div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
@@ -833,23 +1125,150 @@ export function CreateQuiz({ onSave, onBack, onHome, classes = [] }) {
                 </div>
               </div>
             )}
-            <div style={{ marginBottom: 8 }}>
-              <label style={{ ...styles.settingLabel, marginBottom: 6 }}>Of typ zelf een onderwerp:</label>
-              <input
-                style={styles.textInput}
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                placeholder="Bijv. Breuken met gelijke noemers, WOII..."
-                maxLength={80}
-              />
-            </div>
-            {topic ? (
+
+            {mixMode && (
+              <>
+                {suggestions.length > 0 && (
+                  <div style={{ marginBottom: 12 }}>
+                    <div style={{ fontSize: 12, color: "#667788", marginBottom: 8 }}>Tik om toe te voegen / weg te halen:</div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                      {suggestions.map(s => {
+                        const sel = selectedTopics.includes(s);
+                        return (
+                          <button
+                            key={s}
+                            onClick={() => setSelectedTopics(prev => sel ? prev.filter(t => t !== s) : [...prev, s])}
+                            style={{
+                              padding: "7px 14px", borderRadius: 20, cursor: "pointer",
+                              background: sel ? "#7c3aed" : "#1e2d45",
+                              border: `1px solid ${sel ? "#7c3aed" : "#2a3f5f"}`,
+                              color: sel ? "var(--color-text-strong)" : "#8eaadb",
+                              fontSize: 13, fontWeight: sel ? 700 : 400,
+                              fontFamily: "var(--font-body)",
+                            }}
+                          >
+                            {sel ? "✓ " : ""}{s}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {suggestions.length > 0 && (
+                      <button
+                        onClick={() => setSelectedTopics(selectedTopics.length === suggestions.length ? [] : [...suggestions])}
+                        style={{ marginTop: 8, padding: "5px 12px", borderRadius: 16, cursor: "pointer", border: "1px solid #2a3f5f", background: "transparent", color: "#8eaadb", fontSize: 12, fontFamily: "var(--font-body)" }}
+                      >
+                        {selectedTopics.length === suggestions.length ? "✕ Alles weghalen" : `📚 Alle ${suggestions.length} onderwerpen`}
+                      </button>
+                    )}
+                  </div>
+                )}
+
+                <div style={{ marginBottom: 10 }}>
+                  <label style={{ ...styles.settingLabel, marginBottom: 6 }}>Eigen onderwerp toevoegen:</label>
+                  <div style={{ display: "flex", gap: 8 }}>
+                    <input
+                      style={{ ...styles.textInput, flex: 1, marginBottom: 0 }}
+                      value={customTopicInput}
+                      onChange={(e) => setCustomTopicInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && customTopicInput.trim().length > 1) {
+                          e.preventDefault();
+                          const t = customTopicInput.trim();
+                          if (!selectedTopics.includes(t)) setSelectedTopics(prev => [...prev, t]);
+                          setCustomTopicInput("");
+                        }
+                      }}
+                      placeholder="Bijv. Breuken met gelijke noemers"
+                      maxLength={80}
+                    />
+                    <button
+                      onClick={() => {
+                        const t = customTopicInput.trim();
+                        if (t.length > 1 && !selectedTopics.includes(t)) setSelectedTopics(prev => [...prev, t]);
+                        setCustomTopicInput("");
+                      }}
+                      disabled={customTopicInput.trim().length <= 1}
+                      style={{ padding: "10px 14px", borderRadius: 10, border: "none", background: customTopicInput.trim().length > 1 ? "#7c3aed" : "#2a1e3a", color: customTopicInput.trim().length > 1 ? "var(--color-text-strong)" : "#4a3a6a", fontWeight: 700, fontSize: 13, cursor: customTopicInput.trim().length > 1 ? "pointer" : "default", flexShrink: 0 }}
+                    >+ Toevoegen</button>
+                  </div>
+                </div>
+
+                {selectedTopics.length > 0 && (
+                  <div style={{ marginBottom: 10, padding: 10, background: "#1a1530", borderRadius: 10, border: "1px solid #7c3aed40" }}>
+                    <div style={{ fontSize: 12, color: "#c07fff", marginBottom: 6, fontWeight: 700 }}>
+                      ✨ Gekozen ({selectedTopics.length}):
+                    </div>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                      {selectedTopics.map(t => (
+                        <span key={t} style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "4px 8px 4px 10px", background: "#7c3aed", color: "var(--color-text-strong)", borderRadius: 16, fontSize: 12 }}>
+                          {t}
+                          <button onClick={() => setSelectedTopics(prev => prev.filter(x => x !== t))} aria-label={`Verwijder ${t}`} style={{ background: "transparent", border: "none", color: "var(--color-text-strong)", cursor: "pointer", fontSize: 14, padding: "0 2px", lineHeight: 1 }}>×</button>
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {!mixMode && (
+              <div style={{ marginBottom: 8 }}>
+                <label style={{ ...styles.settingLabel, marginBottom: 6 }}>Of typ zelf een onderwerp:</label>
+                <input
+                  style={styles.textInput}
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  placeholder="Bijv. Breuken met gelijke noemers, WOII..."
+                  maxLength={80}
+                />
+              </div>
+            )}
+
+            {!mixMode && (topic ? (
               <div style={{ fontSize: 12, color: "#c07fff", fontWeight: 700, padding: "8px 12px", background: "#1e0a2e", borderRadius: 10, border: "1px solid #7c3aed40" }}>
                 ✨ AI maakt vragen over: <span style={{ color: "var(--color-text-strong)" }}>{topic}</span>
               </div>
             ) : (
               <div style={{ fontSize: 12, color: "#667788", padding: "8px 12px", background: "#1a2030", borderRadius: 10, border: "1px solid #2a3f5f" }}>
                 ⚡ Geen onderwerp? Dan krijg je algemene {SUBJECTS.find(s => s.id === subject)?.label}-vragen.
+              </div>
+            ))}
+
+            {examPathCount > 0 && (
+              <div style={{ marginTop: 14, padding: 12, background: "linear-gradient(135deg, #2a1a05, #3a2510)", borderRadius: 12, border: "2px solid #f59e0b" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                  <span style={{ fontSize: 20 }}>🎓</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ color: "#fbbf24", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 14 }}>
+                      Echte VMBO-examenvragen meenemen?
+                    </div>
+                    <div style={{ color: "#a8916b", fontSize: 11, marginTop: 2 }}>
+                      Authentieke vragen uit het officiële eindexamen — beschikbaar voor {SUBJECTS.find(s => s.id === subject)?.label}.
+                    </div>
+                  </div>
+                </div>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {[0, 2, 5, 10].map(n => (
+                    <button
+                      key={n}
+                      onClick={() => setExamMixCount(n)}
+                      disabled={n > questionCount}
+                      style={{
+                        flex: "1 1 60px", padding: "8px 0", borderRadius: 10, cursor: n > questionCount ? "not-allowed" : "pointer",
+                        border: examMixCount === n ? "2px solid #f59e0b" : "1px solid rgba(255,255,255,0.15)",
+                        background: examMixCount === n ? "rgba(245,158,11,0.18)" : "rgba(255,255,255,0.05)",
+                        color: examMixCount === n ? "#fbbf24" : "rgba(255,255,255,0.55)",
+                        opacity: n > questionCount ? 0.3 : 1,
+                        fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700,
+                      }}
+                    >{n === 0 ? "Geen" : `+${n}`}</button>
+                  ))}
+                </div>
+                {examMixCount > 0 && (
+                  <div style={{ fontSize: 11, color: "#fbbf24", marginTop: 8 }}>
+                    ✅ {examMixCount} echte examenvragen + {Math.max(0, questionCount - examMixCount)} AI-vragen
+                  </div>
+                )}
               </div>
             )}
           </div>

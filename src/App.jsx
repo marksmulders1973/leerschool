@@ -1157,10 +1157,16 @@ export default function App() {
             abortControllerRef.current = new AbortController();
             setLoading(true);
             setLoadingMode(q.textbook?.bookName ? "textbook" : "self");
+            const totalCount = q.questionCount || 8;
+            const examMixCount = Math.min(q.examMix || 0, totalCount);
+            const aiCount = Math.max(0, totalCount - examMixCount);
+            const topicForAI = Array.isArray(q.topics) && q.topics.length > 0
+              ? q.topics.join(", ")
+              : (q.topic || null);
             let questions = [];
-            if (q.useAI !== false) {
+            if (q.useAI !== false && aiCount > 0) {
               try {
-                questions = await fetchAIQuestions(q.subject, q.level, q.questionCount || 8, q.textbook || null, q.topic || null, abortControllerRef.current.signal);
+                questions = await fetchAIQuestions(q.subject, q.level, aiCount, q.textbook || null, topicForAI, abortControllerRef.current.signal);
               } catch (err) {
                 setLoading(false);
                 if (abortControllerRef.current?.signal.aborted) return;
@@ -1168,15 +1174,32 @@ export default function App() {
                 return;
               }
             }
+            if (examMixCount > 0) {
+              try {
+                const { getRandomExamQuestions } = await import("./learnPaths/examPathPicker.js");
+                const examQs = await getRandomExamQuestions(q.subject, q.level, examMixCount);
+                if (examQs.length > 0) {
+                  questions = [...questions, ...examQs];
+                } else if (aiCount === 0) {
+                  alert("⚠️ Geen examenvragen gevonden voor dit vak/niveau. Toets wordt aangemaakt met alleen AI-vragen.");
+                }
+              } catch (e) {
+                console.warn("Kon examenvragen niet laden:", e);
+              }
+            }
             setLoading(false);
             if (abortControllerRef.current?.signal.aborted) return;
             if (questions.length === 0) {
               const subjectQuestions = SAMPLE_QUESTIONS[q.subject]?.[q.level] || [];
-              questions = shuffle(subjectQuestions).slice(0, q.questionCount || 8);
+              questions = shuffle(subjectQuestions).slice(0, totalCount);
             }
             if (questions.length === 0) {
               alert("Kon geen vragen laden. Controleer je internetverbinding en probeer het opnieuw.");
               return;
+            }
+            // Examen + AI door elkaar zetten zodat ze niet in blokken aan eind staan
+            if (examMixCount > 0 && questions.length > 1) {
+              questions = shuffle(questions);
             }
             setPendingQuizData({ ...q, preGeneratedQuestions: questions });
             setPage("quiz-preview");
