@@ -3919,6 +3919,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "nederlands-cse-havo-vwo",
+    "file": "./nederlandsCseHavoVwo.js",
+    "title": "Nederlands CSE — tekstanalyse + samenvatten (HAVO/VWO)",
+    "subject": "taal",
+    "level": "havo4-5-vwo",
+    "emoji": "📰",
+    "referentieNiveau": "havo-B2-vwo-C1",
+    "sloThema": "Nederlands HAVO/VWO — CSE eindexamen leesvaardigheid + samenvatten",
+    "triggerKeywords": [
+      "Nederlands CSE",
+      "leesvaardigheid Nederlands",
+      "tekstanalyse",
+      "alinea-functie",
+      "tekststructuur",
+      "signaalwoord",
+      "signaalwoorden",
+      "argumentatie",
+      "standpunt",
+      "argument",
+      "drogreden",
+      "drogredenen"
+    ],
+    "intro": "Nederlands CSE HAVO/VWO leesvaardigheid + samenvatten. Examen-format (3u, B2/C1, kernvak), tekststructuur + alinea-functies (concessio/weerlegging/conclusie + signaalwoorden), argumentatie + drogreden",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "nederlandse-kunstenaars-po",
     "file": "./nederlandseKunstenaarsPo.js",
     "title": "Nederlandse kunstenaars (Cito groep 6-8)",
