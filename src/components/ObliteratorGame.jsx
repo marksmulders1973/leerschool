@@ -142,18 +142,31 @@ const BIOME_TIJDPERK = [
 // of public domain zijn. Plug nieuwe MP3's in /public/audio/ en wijzig src.
 // Mark wens 2026-05-19: elke 10 levels een ander muziekje. Cluster-mapping:
 // 1-10 Vivaldi → 11-20 Mozart → 21-30 Rossini → 31-40 Bach → 41-50 Beethoven → loop.
-// TODO Mark/Claude volgende sessie: download de 4 ontbrekende tracks van
-// musopen.org of wikimedia commons (zie OBLITERATOR-UPGRADE-PLAN Sprint 3).
 const KLASSIEKE_TRACKS = [
-  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer (Presto)",      jaar: 1725, src: "/audio/obliterator-bg.mp3",        levelRange: "1-10"  },
-  { componist: "Mozart",    werk: "Eine kleine Nachtmusik — Allegro",        jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levelRange: "11-20" },
-  { componist: "Rossini",   werk: "William Tell — Ouverture",                jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levelRange: "21-30" },
-  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3 — Allegro",    jaar: 1721, src: "/audio/obliterator-bach.mp3",      levelRange: "31-40" },
-  { componist: "Beethoven", werk: "Symfonie nr. 5 — Allegro con brio",       jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levelRange: "41-50" },
+  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer",       jaar: 1725, src: "/audio/obliterator-bg.mp3",        levelRange: "1-10"  },
+  { componist: "Mozart",    werk: "Eine kleine Nachtmusik",          jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levelRange: "11-20" },
+  { componist: "Rossini",   werk: "William Tell — Ouverture",        jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levelRange: "21-30" },
+  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3",      jaar: 1721, src: "/audio/obliterator-bach.mp3",      levelRange: "31-40" },
+  { componist: "Beethoven", werk: "Symfonie nr. 5",                  jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levelRange: "41-50" },
+];
+// Tempo-varianten — Mark wens 2026-05-19 later: na level 50 moet het ook
+// nog blijven wisselen tot lvl 100+. Bij elke nieuwe cluster-ronde door
+// dezelfde 5 tracks veranderen we de afspeel-snelheid, zodat dezelfde MP3
+// hoorbaar anders klinkt (Presto = sneller, Largo = trager, etc).
+const TEMPO_VARIANTEN = [
+  { suffix: "",                    speed: 1.00 },
+  { suffix: " — Presto",           speed: 1.18 },
+  { suffix: " — Adagio",           speed: 0.85 },
+  { suffix: " — Allegro Vivace",   speed: 1.30 },
+  { suffix: " — Largo",            speed: 0.75 },
 ];
 function getTrackForLevel(lvl) {
-  const cluster = Math.floor((Math.max(1, lvl) - 1) / 10);
-  return KLASSIEKE_TRACKS[cluster % KLASSIEKE_TRACKS.length];
+  const totalCluster = Math.floor((Math.max(1, lvl) - 1) / 10);
+  const trackIdx = totalCluster % KLASSIEKE_TRACKS.length;
+  const rondeIdx = Math.floor(totalCluster / KLASSIEKE_TRACKS.length) % TEMPO_VARIANTEN.length;
+  const base = KLASSIEKE_TRACKS[trackIdx];
+  const v = TEMPO_VARIANTEN[rondeIdx];
+  return { ...base, werk: base.werk + v.suffix, playbackRate: v.speed };
 }
 
 const MONUMENTEN = [
@@ -851,8 +864,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     let shakeKracht = 0;
     let raf;
     let scoreElText = 0;
-    const startLevens = 1;     // Mark 2026-05-19: start met 1 hartje (was 3).
-    const MAX_LEVENS = 3;      // Cap op 3 — extra levens via pickups/dungeon/boss boven start.
+    const startLevens = 1;     // Mark 2026-05-19: start met 1 hartje.
+    const MAX_LEVENS = 1;      // Mark 2026-05-19 later: cap op 1 — extra hartjes
+                               // mogen niet meer doortikken (gaf "oneindig lang door"-gevoel).
     // ── HP-systeem (NEW) ──
     // Per leven krijgt speler 100% hp. Spike-hit = -25% hp. Bij hp ≤ 0 →
     // 1 leven kwijt + hp reset naar 100. Hartjes/schatkist herstellen +25%
@@ -1265,23 +1279,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // (anders pop-up bij elk biome-binnen-cluster, te frequent).
       try {
         const track = getTrackForLevel(lvl);
-        const trackKey = track.componist + track.werk;
+        const trackKey = track.componist + track.werk; // werk bevat tempo-suffix → unieke key per ronde
         if (trackKey !== levelTrackRef.current) {
           levelTrackRef.current = trackKey;
           triggerTrackCardRef.current(track);
-          // Switch audio-bron als pad anders (nog niet relevant tot Mark MP3's
-          // toevoegt — alle clusters wijzen nu naar dezelfde Vivaldi-MP3, dus
-          // .src komt overeen en switcht niet). Wel klaar voor later.
           const a = bgMusicRef.current;
-          if (a && !a.src.endsWith(track.src)) {
-            const wasPaused = a.paused;
-            const prevTime = a.currentTime;
-            a.src = track.src;
-            try {
-              a.currentTime = 0;
-              if (!wasPaused) a.play().catch(() => {});
-            } catch {}
-            void prevTime; // gereserveerd voor later crossfade
+          if (a) {
+            // Tempo altijd opnieuw zetten — ook als src gelijk blijft (volgende
+            // cluster-ronde gebruikt zelfde MP3 maar andere playbackRate).
+            try { a.playbackRate = track.playbackRate || 1.0; } catch {}
+            if (!a.src.endsWith(track.src)) {
+              const wasPaused = a.paused;
+              a.src = track.src;
+              try {
+                a.currentTime = 0;
+                a.playbackRate = track.playbackRate || 1.0;
+                if (!wasPaused) a.play().catch(() => {});
+              } catch {}
+            }
           }
         }
       } catch {}
