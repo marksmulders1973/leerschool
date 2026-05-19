@@ -391,7 +391,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                       }}
                       aria-expanded={isExpanded}
                     >
-                      {isExpanded ? "▲ Verberg uitleg" : "▼ Meer uitleg & leerpad"}
+                      {isExpanded ? "▲ Verberg uitleg" : "▼ Meer uitleg"}
                     </button>
                   )}
                   {isExpanded && (

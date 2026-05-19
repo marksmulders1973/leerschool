@@ -276,7 +276,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   </span>
                 )}
               </span>
-              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
+              <button onClick={e => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.2)", cursor: "pointer", fontSize: 16, padding: 4 }}>×</button>
             </div>
           ))}
 

@@ -1490,7 +1490,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <div style={{ fontSize: 18, fontWeight: 700, color: "#ffcc40", fontFamily: "var(--font-display)" }}>
                   💡 Tip aan de maker
                 </div>
-                <button onClick={sluitFeedback} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer" }}>×</button>
+                <button onClick={sluitFeedback} aria-label="Sluiten" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer" }}>×</button>
               </div>
               <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, marginBottom: 10, lineHeight: 1.4 }}>
                 Heb je een idee, een fout gevonden of werkt iets niet? Schrijf het hier — Mark leest alle tips zelf.
