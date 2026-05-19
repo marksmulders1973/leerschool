@@ -1305,6 +1305,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "engels-cse-havo-vwo",
+    "file": "./engelsCseHavoVwo.js",
+    "title": "Engels CSE leesvaardigheid (HAVO/VWO)",
+    "subject": "engels",
+    "level": "havo4-5-vwo",
+    "emoji": "📕",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Engels HAVO/VWO — leesvaardigheid CSE + literair fragment VWO",
+    "triggerKeywords": [
+      "Engels CSE",
+      "HAVO Engels",
+      "VWO Engels",
+      "leesvaardigheid Engels",
+      "register",
+      "formal",
+      "informal",
+      "academic English",
+      "tone",
+      "mood",
+      "irony",
+      "sarcasm"
+    ],
+    "intro": "Engels CSE HAVO/VWO — leesvaardigheid op lange teksten (1000+ woorden) + register-analyse + 8 vraagsoorten + literair fragment (alleen VWO) + tone/mood/character-analyse. Diepe-uitbreiding van VMBO-st",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "europese-unie-po",
     "file": "./europeseUniePo.js",
     "title": "Europese Unie — wat is het en hoe werkt het?",
