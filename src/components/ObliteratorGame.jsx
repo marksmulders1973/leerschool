@@ -6712,7 +6712,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
           // op L20+ haalbaar blijft ondanks de hogere obstakel-density.
           // Curve: L1=1×, L5=~1.6×, L10=~2.4×, L20=~3.9×, L50=~8.4×, L100=~15.9×.
           const levelFactor = 1 + (huidigLevel - 1) * 0.15;
-          score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL * mutatorScoreMul;
+          // Rainbow-ring geeft 2× score (Mark wens 2026-05-19). Naast bestaande
+          // 5× munten-bonus die rainbow al had.
+          const rainbowScoreMul = r.rainbow ? 2 : 1;
+          score += Math.max(1, Math.round(multiplier * levelFactor)) * SCORE_MUL * mutatorScoreMul * rainbowScoreMul;
           scoreElText = score;
           // Sprint 4 — bloom-flash bij ring-pickup (Tetris Effect-trick)
           bloomFlashTeller = 8;
