@@ -87,6 +87,8 @@ Cadens: ~elke 6-8 weken of vóór elke product-mijlpaal (Cito-piek nov-feb, payw
 
 ### Build-volgorde (4 sessies, ~10-14 uur)
 
+> 📌 **Volgende sessie (2026-05-20): Kwartierplan-sessie 1.** Mark akkoord 2026-05-19. P0 bundle-splitsing klaar; "Kwartierplan" als naam vastgepind.
+
 - [ ] **Sessie 1 — Foundation + doel + startfoto** (~3-4 uur)
   - Supabase migrations: `learning_goals`, `diagnostic_assessments`, `daily_plans`, `daily_completions` (+ RLS)
   - Ouder/lk-dashboard: "Doel zetten"-modal (niveau + datum-doel)
