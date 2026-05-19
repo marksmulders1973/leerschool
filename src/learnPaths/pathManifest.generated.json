@@ -3875,6 +3875,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "organische-chemie-havo-vwo",
+    "file": "./organischeChemieHavoVwo.js",
+    "title": "Organische chemie (HAVO/VWO scheikunde)",
+    "subject": "scheikunde",
+    "level": "havo4-5-vwo",
+    "emoji": "🧪",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Scheikunde HAVO/VWO — organische chemie CSE-stof",
+    "triggerKeywords": [
+      "organische chemie",
+      "koolstof",
+      "alkaan",
+      "alkeen",
+      "alkyn",
+      "cyclo-alkaan",
+      "methaan",
+      "ethaan",
+      "propaan",
+      "butaan",
+      "pentaan",
+      "isomerie"
+    ],
+    "intro": "Organische chemie op HAVO/VWO-niveau. Koolstof-bindingen + alkanen (eerste 10) + naamgeving (IUPAC) + functionele groepen (alcohol/zuur/ester/keton) + reacties (verbranding/additie/polymerisatie). ~15",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "oudheid-egyptenaren-grieken-romeinen-po",
     "file": "./oudheidEgyptiansGriekenPo.js",
     "title": "Oudheid — Egyptenaren + Grieken + Romeinen (Cito groep 6-8)",
