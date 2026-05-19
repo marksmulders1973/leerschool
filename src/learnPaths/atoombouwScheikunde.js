@@ -87,7 +87,7 @@ const steps = [
         q: "Een atoom heeft 6 protonen. Welk element is het?",
         options: ["Koolstof (C)", "Zuurstof (O)", "Waterstof (H)", "IJzer (Fe)"],
         answer: 0,
-        wrongHints: [null, "Zuurstof = 8 protonen.", "Waterstof = 1 proton.", "IJzer = 26 protonen."],
+        wrongHints: [null, "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen.", "Reken na: atoomnummer Z = aantal protonen."],
         uitlegPad: {
           stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6 = C." }],
           woorden: [{ woord: "atoomnummer Z", uitleg: "= aantal protonen" }],
@@ -321,7 +321,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Welk element is een **niet-metaal**?",
         options: ["Zuurstof (O)", "IJzer (Fe)", "Koper (Cu)", "Goud (Au)"],
         answer: 0,
-        wrongHints: [null, "IJzer is een metaal.", "Koper is een metaal.", "Goud is een metaal."],
+        wrongHints: [null, "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?", "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?", "Denk: wat geleidt stroom (metaal) vs wat niet (gas/niet-metaal)?"],
         uitlegPad: {
           stappen: [{ titel: "O = niet-metaal", tekst: "Zuurstof is gas, geen metaal." }],
           woorden: [{ woord: "niet-metaal", uitleg: "rechts in tabel, vaak gas" }],

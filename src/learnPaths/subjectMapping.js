@@ -4,7 +4,11 @@
 // Wordt gebruikt om bij klikken op 📚 Leren te bepalen of er leerpaden zijn,
 // of dat we naar de "Mee bezig"-pagina sturen.
 
-import { ALL_LEARN_PATHS } from "./index.js";
+// Quick-win 2026-05-19 (audit-agent A): vervang ALL_LEARN_PATHS-import door
+// pathManifest. ALL_LEARN_PATHS-import dwong rollup om data-learnpaths-core
+// (215 kB) eager mee te laden in de entry-bundle. pathManifest is een lichte
+// JSON (~200 kB) die alleen metadata bevat, geen pad-content.
+import pathManifest from "./pathManifest.generated.json";
 
 // Categorie-id (TextbookQuiz) → leerpad-subject (zoals in pad-files)
 const CATEGORY_TO_LEARN_SUBJECT = {
@@ -53,12 +57,12 @@ export function categoryToLearnSubjects(categoryId) {
 export function hasLearnPathsForCategory(categoryId) {
   const subjects = categoryToLearnSubjects(categoryId);
   if (subjects.length === 0) return false;
-  return Object.values(ALL_LEARN_PATHS).some((p) => subjects.includes(p.subject));
+  return pathManifest.some((p) => subjects.includes(p.subject));
 }
 
 // Aantal leerpaden voor visuele badge op de tegel ("17 paden")
 export function countLearnPathsForCategory(categoryId) {
   const subjects = categoryToLearnSubjects(categoryId);
   if (subjects.length === 0) return 0;
-  return Object.values(ALL_LEARN_PATHS).filter((p) => subjects.includes(p.subject)).length;
+  return pathManifest.filter((p) => subjects.includes(p.subject)).length;
 }

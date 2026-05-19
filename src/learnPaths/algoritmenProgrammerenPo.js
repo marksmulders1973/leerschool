@@ -341,7 +341,7 @@ const steps = [
       { q: "Welk **probleem** lost een algoritme niet op?", options: ["Onmogelijke wiskunde","Sorteren","Zoeken","Patronen vinden"], answer: 0, wrongHints: [null, "Klassiek algoritme-toepassing (bubble-sort etc.).", "Klassiek algoritme-toepassing (binary search).", "Klassiek algoritme-toepassing (machine learning)."] },
       { q: "Wat is **AI** (kunstmatige intelligentie)?", options: ["Software die patronen leert","Robot uit film","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel.", "Niet."] },
       { q: "Wat is een **hash** in computers?", options: ["Unieke digitale code","Niet bestaand","Eten","Reclame"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
-      { q: "Wie ontwierp het **WWW** (web)?", options: ["Tim Berners-Lee","Bill Gates","Steve Jobs","Linus Torvalds"], answer: 0, wrongHints: [null, "Microsoft.", "Apple.", "Linux."] },
+      { q: "Wie ontwierp het **WWW** (web)?", options: ["Tim Berners-Lee","Bill Gates","Steve Jobs","Linus Torvalds"], answer: 0, wrongHints: [null, "Niet — die is bekend van iets anders dan het web.", "Niet — die is bekend van iets anders dan het web.", "Niet — die is bekend van iets anders dan het web."] },
       { q: "Wat is een **stappenplan** in code (samenvatting)?", options: ["Geordende stappen om probleem op te lossen","Reclame","Niet bestaand","Game"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Niet primair."] },
     ],
   },
