@@ -2499,6 +2499,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "frans-cse-havo-vwo",
+    "file": "./fransCseHavoVwo.js",
+    "title": "Frans CSE leesvaardigheid (HAVO/VWO)",
+    "subject": "frans",
+    "level": "havo4-5-vwo",
+    "emoji": "🇫🇷",
+    "referentieNiveau": "havo-B1-vwo-B2",
+    "sloThema": "Frans HAVO/VWO — CSE leesvaardigheid eindexamen",
+    "triggerKeywords": [
+      "Frans CSE",
+      "centraal examen Frans",
+      "leesvaardigheid Frans",
+      "faux amis",
+      "librairie",
+      "bibliothèque",
+      "sans doute",
+      "actuellement",
+      "ne pas",
+      "ne que",
+      "ne jamais",
+      "ne rien"
+    ],
+    "intro": "Frans HAVO/VWO CSE leesvaardigheid-strategie. Examen-format (2,5/3u, ~10 teksten, B1/B2), vraagsoorten + scanning + faux amis (librairie/sans doute/actuellement) + ne...que-val, lange teksten + regist",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "franse-revolutie-geschiedenis",
     "file": "./franseRevolutieGeschiedenis.js",
     "title": "Franse Revolutie + Napoleon (klas 2-3)",
