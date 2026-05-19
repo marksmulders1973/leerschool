@@ -157,6 +157,7 @@ import vvnVerkeersexamenPo from "./vvnVerkeersexamenPo.js";
 import getallenTot20Po from "./getallenTot20Po.js";
 import statistiekHavoVwo from "./statistiekHavoVwo.js";
 import geneticaHavoVwo from "./geneticaHavoVwo.js";
+import kansrekeningHavoVwo from "./kansrekeningHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -256,6 +257,7 @@ export const ALL_LEARN_PATHS = {
   "getallen-tot-20-po": getallenTot20Po,
   "statistiek-havo-vwo": statistiekHavoVwo,
   "genetica-havo-vwo": geneticaHavoVwo,
+  "kansrekening-havo-vwo": kansrekeningHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

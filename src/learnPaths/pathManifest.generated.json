@@ -2893,6 +2893,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "kansrekening-havo-vwo",
+    "file": "./kansrekeningHavoVwo.js",
+    "title": "Kansrekening + combinatoriek (HAVO/VWO Wisk A)",
+    "subject": "wiskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "🎲",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Wiskunde A — kansrekening + combinatoriek HAVO/VWO eindexamen",
+    "triggerKeywords": [
+      "kans",
+      "kansrekening",
+      "P(A)",
+      "complement",
+      "boomdiagram",
+      "product-regel",
+      "som-regel",
+      "afhankelijk",
+      "onafhankelijk",
+      "voorwaardelijke kans",
+      "combinatoriek",
+      "permutatie"
+    ],
+    "intro": "Kansrekening voor HAVO/VWO Wiskunde A eindexamen. Basis-kans + complement, boomdiagram + product/som-regels, permutaties + combinaties (faculteit, lotto), Venndiagram + verwachtingswaarde + eerlijke s",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "klassieke-muziek-po",
     "file": "./klassiekeMuziekPo.js",
     "title": "Klassieke muziek + componisten (Cito groep 6-8)",
