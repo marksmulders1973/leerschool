@@ -452,13 +452,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     if (existsInManifest) {
       return (
         <div style={{ padding: 24, color: C.text, textAlign: "center" }}>
-          <p style={{ opacity: 0.7 }}>Leerpad laden…</p>
+          <p style={{ opacity: 0.7 }}>Onderwerp laden…</p>
         </div>
       );
     }
     return (
       <div style={{ padding: 24, color: C.text }}>
-        <p>Leerpad niet gevonden.</p>
+        <p>Dit onderwerp bestaat niet (meer).</p>
         <button onClick={onHome} style={btnSecondary()}>Terug naar home</button>
       </div>
     );
@@ -1194,7 +1194,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     color: "var(--color-text)",
                   }}>
                     <div style={{ marginBottom: 10 }}>
-                      In het leerpad <strong>{currentCheck.leerpadLink.title}</strong> wordt dit onderwerp uitgelegd.
+                      Bij het onderwerp <strong>{currentCheck.leerpadLink.title}</strong> wordt dit uitgelegd.
                     </div>
                     {onPickPath && (
                       <button
@@ -1211,7 +1211,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                           fontSize: 13,
                         }}
                       >
-                        📚 Open leerpad: {currentCheck.leerpadLink.title}
+                        📚 Open uitleg: {currentCheck.leerpadLink.title}
                       </button>
                     )}
                   </div>
@@ -1375,7 +1375,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 onClick={() => onPickPath(currentCheck.leerpadLink.id)}
                 style={{ ...btnSecondary(), marginTop: 8 }}
               >
-                📚 Open leerpad: {currentCheck.leerpadLink.title}
+                📚 Open uitleg: {currentCheck.leerpadLink.title}
               </button>
             )}
           </div>
@@ -1756,7 +1756,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
         Knap gedaan!
       </h2>
       <div style={{ color: C.text, fontSize: 16, marginBottom: 16, lineHeight: 1.5 }}>
-        Je hebt het hele leerpad <strong>{path.title}</strong> doorlopen.
+        Je hebt het hele onderwerp <strong>{path.title}</strong> doorlopen.
       </div>
       {score && score.total > 0 && (
         <div style={{
@@ -1780,7 +1780,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
           onClick={() => onPickPath(nextPath.id)}
           style={{ ...btnPrimary(), marginBottom: 8, width: "100%" }}
         >
-          {isExamen ? "🎓 Volgend examen ▶" : "📚 Volgend leerpad ▶"} {nextPath.title}
+          {isExamen ? "🎓 Volgend examen ▶" : "📚 Volgend onderwerp ▶"} {nextPath.title}
         </button>
       )}
       {/* A9: voor Pincode/leer-paden — toon examen-vragen die naar dit pad linken. */}
