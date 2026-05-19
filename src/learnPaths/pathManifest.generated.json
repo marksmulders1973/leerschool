@@ -6516,6 +6516,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "wiskunde-d-vwo",
+    "file": "./wiskundeDVwo.js",
+    "title": "Wiskunde D (VWO specialisatie)",
+    "subject": "wiskunde",
+    "level": "vwo",
+    "emoji": "ℹ",
+    "referentieNiveau": "vwo-SE-wiskundeD",
+    "sloThema": "Wiskunde D VWO — specialisatie complexe getallen + matrices",
+    "triggerKeywords": [
+      "Wiskunde D",
+      "complex getal",
+      "complexe getallen",
+      "imaginaire eenheid",
+      "i kwadraat",
+      "Gauss-vlak",
+      "geconjugeerd",
+      "modulus",
+      "argument",
+      "polaire vorm",
+      "Eulerformule",
+      "e^(iπ)"
+    ],
+    "intro": "Wiskunde D VWO specialisatie-vak (SE-only, geen CSE). Complexe getallen (i²=−1, a+bi, geconjugeerd, modulus, polair, Eulerformule e^(iπ)+1=0, De Moivre, n-de wortels), matrices (operaties, determinant",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "woordenschat-engels",
     "file": "./woordenschatEngels.js",
     "title": "Engelse woordenschat — basis",

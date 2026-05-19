@@ -180,6 +180,7 @@ import latijnVwo from "./latijnVwo.js";
 import grieksVwo from "./grieksVwo.js";
 import informaticaHavoVwo from "./informaticaHavoVwo.js";
 import kunstHavoVwo from "./kunstHavoVwo.js";
+import wiskundeDVwo from "./wiskundeDVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -302,6 +303,7 @@ export const ALL_LEARN_PATHS = {
   "grieks-vwo": grieksVwo,
   "informatica-havo-vwo": informaticaHavoVwo,
   "kunst-havo-vwo": kunstHavoVwo,
+  "wiskunde-d-vwo": wiskundeDVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
