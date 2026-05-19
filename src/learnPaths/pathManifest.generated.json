@@ -2524,6 +2524,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "genetica-havo-vwo",
+    "file": "./geneticaHavoVwo.js",
+    "title": "Genetica + erfelijkheid (HAVO/VWO)",
+    "subject": "biologie",
+    "level": "havo4-5-vwo",
+    "emoji": "🧬",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Biologie HAVO/VWO — genetica + erfelijkheid CSE-stof",
+    "triggerKeywords": [
+      "genetica",
+      "erfelijkheid",
+      "DNA",
+      "RNA",
+      "Mendel",
+      "Mendel-wetten",
+      "monohybride",
+      "dihybride",
+      "Punnett",
+      "Punnett-vierkant",
+      "kruisingsschema",
+      "homozygoot"
+    ],
+    "intro": "Genetica op HAVO/VWO-niveau: DNA-structuur + Mendel-wetten + Punnett-vierkant + geslachtsgebonden overerving (hemofilie/kleurenblindheid) + stamboomanalyse + mutaties (puntmutatie/frameshift/aneuploïd",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "getallen-tot-20-po",
     "file": "./getallenTot20Po.js",
     "title": "Getallen + sommen tot 20 (groep 3-4)",

@@ -156,6 +156,7 @@ import cseStrategieEngelsVmbo from "./cseStrategieEngelsVmbo.js";
 import vvnVerkeersexamenPo from "./vvnVerkeersexamenPo.js";
 import getallenTot20Po from "./getallenTot20Po.js";
 import statistiekHavoVwo from "./statistiekHavoVwo.js";
+import geneticaHavoVwo from "./geneticaHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -254,6 +255,7 @@ export const ALL_LEARN_PATHS = {
   "vvn-verkeersexamen-po": vvnVerkeersexamenPo,
   "getallen-tot-20-po": getallenTot20Po,
   "statistiek-havo-vwo": statistiekHavoVwo,
+  "genetica-havo-vwo": geneticaHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
