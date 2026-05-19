@@ -3716,6 +3716,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "maatschappijleer-havo-vwo",
+    "file": "./maatschappijleerHavoVwo.js",
+    "title": "Maatschappijleer (HAVO/VWO klas 4 verplicht)",
+    "subject": "maatschappij",
+    "level": "havo4-5-vwo",
+    "emoji": "🏛️",
+    "referentieNiveau": "havo-vwo-SE-maatschappijleer",
+    "sloThema": "Maatschappijleer HAVO/VWO — verplicht SE klas 4",
+    "triggerKeywords": [
+      "maatschappijleer",
+      "ML",
+      "staatsinrichting",
+      "trias politica",
+      "Tweede Kamer",
+      "Eerste Kamer",
+      "regering",
+      "kabinet",
+      "minister-president",
+      "Schoof",
+      "PVV",
+      "VVD"
+    ],
+    "intro": "Maatschappijleer HAVO/VWO klas 4 = verplicht SE-vak voor alle leerlingen. Onderwerpen: staatsinrichting (trias politica + 2K + kabinet-Schoof 2024), pluriforme samenleving (cultuur + religies + migrat",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "maatschappijwetenschappen-havo-vwo",
     "file": "./maatschappijwetenschappenHavoVwo.js",
     "title": "Maatschappijwetenschappen kernconcepten (HAVO/VWO)",
