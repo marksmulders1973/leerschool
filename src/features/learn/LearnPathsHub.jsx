@@ -522,19 +522,32 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
             ))}
           </div>
 
-          {/* Niveau-pillen */}
+          {/* Niveau-pillen — alleen tonen wat relevant is voor gekozen rol.
+              Mark UX 2026-05-19: bij basisschool zijn brugklas/bovenbouw-filters
+              verwarrend (geen content beschikbaar). Bij VO andersom. */}
+          {(() => {
+            const visibleNiveauKeys = Object.keys(NIVEAU_BUCKETS).filter((k) => {
+              if (effectivePo) return k === "po";
+              if (effectiveVo) return k !== "po";
+              return true;
+            });
+            if (visibleNiveauKeys.length <= 1) return null;
+            return (
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
             <span style={{ fontSize: 11, color: C.muted, fontWeight: 700, alignSelf: "center", marginRight: 4 }}>
               NIVEAU:
             </span>
-            {Object.entries(NIVEAU_BUCKETS).map(([key, info]) => (
+            {visibleNiveauKeys.map((key) => {
+              const info = NIVEAU_BUCKETS[key];
+              return (
               <ClassFilterPill
                 key={key}
                 label={`${info.emoji} ${info.label}`}
                 active={niveauFilter === key}
                 onClick={() => setNiveauFilter(niveauFilter === key ? null : key)}
               />
-            ))}
+              );
+            })}
             {(hasPijler || hasNiveau || hasSearch) && (
               <button
                 onClick={() => { setEntrySearch(""); setPijlerFilter(null); setNiveauFilter(null); }}
@@ -547,6 +560,8 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
               >Filter wissen ✕</button>
             )}
           </div>
+            );
+          })()}
         </div>
 
         {/* ─── RESULTATEN of VAK-GRID ─── */}
