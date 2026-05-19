@@ -9094,6 +9094,62 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             }}>
               🔥 START
             </button>
+
+            {/* Instellingen-knop terug in nieuwe menu (Mark wens 2026-05-19). */}
+            <button
+              onClick={() => setSettingsOpen((o) => !o)}
+              style={{
+                marginTop: 14, width: "100%", maxWidth: 320,
+                padding: "10px 14px", borderRadius: 12,
+                background: "rgba(255,255,255,0.06)",
+                border: "1px solid rgba(255,255,255,0.18)",
+                color: "#fff",
+                fontFamily: "'Fredoka', sans-serif",
+                fontSize: 14, fontWeight: 700,
+                cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "space-between",
+              }}
+            >
+              <span>⚙️ Instellingen</span>
+              <span style={{ fontSize: 16, transform: settingsOpen ? "rotate(90deg)" : "none", transition: "transform 0.2s" }}>›</span>
+            </button>
+            {settingsOpen && (
+              <div style={{
+                marginTop: 8, width: "100%", maxWidth: 320, padding: "12px 14px", borderRadius: 10,
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.10)",
+                textAlign: "left",
+              }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+                  <span style={{ color: "#fff", fontSize: 13 }}>{geluidAan ? "🔊" : "🔇"} Muziek + geluid</span>
+                  <button
+                    onClick={() => setGeluidAan((v) => !v)}
+                    style={{
+                      padding: "5px 14px", borderRadius: 999, border: "none",
+                      background: geluidAan ? "linear-gradient(135deg, #00c853, #69f0ae)" : "rgba(255,255,255,0.10)",
+                      color: geluidAan ? "#0d1b2e" : "rgba(255,255,255,0.7)",
+                      fontFamily: "'Fredoka', sans-serif", fontSize: 12, fontWeight: 700,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {geluidAan ? "AAN" : "UIT"}
+                  </button>
+                </div>
+                <div style={{ opacity: geluidAan ? 1 : 0.4 }}>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
+                    <span style={{ color: "#fff", fontSize: 13 }}>🎚️ Volume</span>
+                    <span style={{ color: "rgba(255,255,255,0.6)", fontSize: 12 }}>{Math.round(volume * 100)}%</span>
+                  </div>
+                  <input
+                    type="range" min="0" max="100" step="1"
+                    value={Math.round(volume * 100)}
+                    onChange={(e) => setVolume(parseInt(e.target.value, 10) / 100)}
+                    disabled={!geluidAan}
+                    style={{ width: "100%", accentColor: "#69f0ae" }}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         )}
 
