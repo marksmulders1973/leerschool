@@ -5742,6 +5742,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "verlichting-revoluties-havo-vwo",
+    "file": "./verlichtingRevolutiesHavoVwo.js",
+    "title": "Verlichting + Atlantische revoluties (HAVO/VWO geschiedenis)",
+    "subject": "geschiedenis",
+    "level": "havo4-5-vwo",
+    "emoji": "💡",
+    "referentieNiveau": "havo-vwo-CSE-geschiedenis",
+    "sloThema": "Geschiedenis HAVO/VWO — Tijdvak 7 Pruiken + Revoluties eindexamen",
+    "triggerKeywords": [
+      "Verlichting",
+      "Aufklärung",
+      "Enlightenment",
+      "Lumières",
+      "Locke",
+      "natuurrechten",
+      "Voltaire",
+      "Candide",
+      "Montesquieu",
+      "trias politica",
+      "Rousseau",
+      "volonté générale"
+    ],
+    "intro": "Tijdvak Pruiken + Revoluties (1700-1900) HAVO/VWO geschiedenis. Verlichting (Locke/Voltaire/Montesquieu/Rousseau/Kant + verlicht despotisme), Amerikaanse Revolutie (1776 Jefferson + Locke-invloed), Fr",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "vlakke-figuren",
     "file": "./vlakkeFiguren.js",
     "title": "Vlakke figuren (meetkunde)",
