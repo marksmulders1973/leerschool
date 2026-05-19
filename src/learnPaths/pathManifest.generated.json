@@ -203,6 +203,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "bedrijfseconomie-havo-vwo",
+    "file": "./bedrijfseconomieHavoVwo.js",
+    "title": "Bedrijfseconomie kerngebieden (HAVO/VWO)",
+    "subject": "economie",
+    "level": "havo4-5-vwo",
+    "emoji": "💼",
+    "referentieNiveau": "havo-vwo-CSE-bedrijfseconomie",
+    "sloThema": "Bedrijfseconomie HAVO/VWO — eindexamen (M&O-opvolger)",
+    "triggerKeywords": [
+      "bedrijfseconomie",
+      "M&O",
+      "MO",
+      "balans",
+      "activa",
+      "passiva",
+      "eigen vermogen",
+      "vreemd vermogen",
+      "vlottende activa",
+      "vaste activa",
+      "debiteuren",
+      "crediteuren"
+    ],
+    "intro": "Bedrijfseconomie HAVO/VWO eindexamen (sinds 2018, opvolger M&O). Balans + W&V (debet/credit + solvabiliteit/liquiditeit), kostencalculatie + BEP, financiering + investering (EV/VV + TVT + rechtsvormen",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "begrijpend-lezen-strategie",
     "file": "./begrijpendLezenStrategie.js",
     "title": "Begrijpend lezen — strategieën voor groep 5-8",
