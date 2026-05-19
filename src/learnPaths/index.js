@@ -172,6 +172,7 @@ import duitsCseHavoVwo from "./duitsCseHavoVwo.js";
 import filosofieVwo from "./filosofieVwo.js";
 import maatschappijwetenschappenHavoVwo from "./maatschappijwetenschappenHavoVwo.js";
 import verlichtingRevolutiesHavoVwo from "./verlichtingRevolutiesHavoVwo.js";
+import twintigsteEeuwHavoVwo from "./twintigsteEeuwHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -286,6 +287,7 @@ export const ALL_LEARN_PATHS = {
   "filosofie-vwo": filosofieVwo,
   "maatschappijwetenschappen-havo-vwo": maatschappijwetenschappenHavoVwo,
   "verlichting-revoluties-havo-vwo": verlichtingRevolutiesHavoVwo,
+  "twintigste-eeuw-havo-vwo": twintigsteEeuwHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
