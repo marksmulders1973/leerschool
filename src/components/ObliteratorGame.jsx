@@ -137,22 +137,23 @@ const BIOME_TIJDPERK = [
   { jaar: "1974", denker: "Stephen Hawking",   plek: "Zwart gat — straling" },
 ];
 
-// Klassieke muziek-tracks per biome-cluster (Sprint 3 — 15-agent-audit).
+// Klassieke muziek-tracks (Sprint 3 — 15-agent-audit).
 // Alle stukken publiek domein (componisten +70j dood); opnames moeten CC-licensed
 // of public domain zijn. Plug nieuwe MP3's in /public/audio/ en wijzig src.
-// Cluster-mapping: level 1-2, 3-4, 5-6, 7-8, 9-10.
+// Mark wens 2026-05-19: elke 10 levels een ander muziekje. Cluster-mapping:
+// 1-10 Vivaldi → 11-20 Mozart → 21-30 Rossini → 31-40 Bach → 41-50 Beethoven → loop.
 // TODO Mark/Claude volgende sessie: download de 4 ontbrekende tracks van
 // musopen.org of wikimedia commons (zie OBLITERATOR-UPGRADE-PLAN Sprint 3).
 const KLASSIEKE_TRACKS = [
-  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer (Presto)",      jaar: 1725, src: "/audio/obliterator-bg.mp3",        levels: [1, 2] },
-  { componist: "Mozart",    werk: "Eine kleine Nachtmusik — Allegro",        jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levels: [3, 4] },
-  { componist: "Rossini",   werk: "William Tell — Ouverture",                jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levels: [5, 6] },
-  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3 — Allegro",    jaar: 1721, src: "/audio/obliterator-bach.mp3",      levels: [7, 8] },
-  { componist: "Beethoven", werk: "Symfonie nr. 5 — Allegro con brio",       jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levels: [9, 10] },
+  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer (Presto)",      jaar: 1725, src: "/audio/obliterator-bg.mp3",        levelRange: "1-10"  },
+  { componist: "Mozart",    werk: "Eine kleine Nachtmusik — Allegro",        jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levelRange: "11-20" },
+  { componist: "Rossini",   werk: "William Tell — Ouverture",                jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levelRange: "21-30" },
+  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3 — Allegro",    jaar: 1721, src: "/audio/obliterator-bach.mp3",      levelRange: "31-40" },
+  { componist: "Beethoven", werk: "Symfonie nr. 5 — Allegro con brio",       jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levelRange: "41-50" },
 ];
 function getTrackForLevel(lvl) {
-  for (const t of KLASSIEKE_TRACKS) if (t.levels.includes(lvl)) return t;
-  return KLASSIEKE_TRACKS[0];
+  const cluster = Math.floor((Math.max(1, lvl) - 1) / 10);
+  return KLASSIEKE_TRACKS[cluster % KLASSIEKE_TRACKS.length];
 }
 
 const MONUMENTEN = [
