@@ -3513,6 +3513,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "mechanica-havo-vwo",
+    "file": "./mechanicaHavoVwo.js",
+    "title": "Mechanica (HAVO/VWO natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo4-5-vwo",
+    "emoji": "💪",
+    "referentieNiveau": "havo-vwo-CSE-natuurkunde",
+    "sloThema": "Natuurkunde HAVO/VWO — mechanica eindexamen-stof",
+    "triggerKeywords": [
+      "mechanica",
+      "kinematica",
+      "dynamica",
+      "snelheid",
+      "versnelling",
+      "afgelegde weg",
+      "v-t diagram",
+      "x-t diagram",
+      "vrije val",
+      "g=9,81",
+      "valbeweging",
+      "Newton"
+    ],
+    "intro": "Mechanica HAVO/VWO natuurkunde eindexamen. Kinematica (positie/snelheid/versnelling, vrije val, grafieken), Newton-wetten + krachten (zwaarte/normaal/wrijving/helling), arbeid + energie (E_k/E_p/E_vee",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "media-wijsheid-maatschappijleer",
     "file": "./mediaWijsheidMaatschappijleer.js",
     "title": "Mediawijsheid (klas 2-3)",
