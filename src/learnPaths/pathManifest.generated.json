@@ -6088,6 +6088,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "wereld-globalisering-havo-vwo",
+    "file": "./wereldAardrijkskundeHavoVwo.js",
+    "title": "Wereld — globalisering + ontwikkeling (HAVO/VWO aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "🌍",
+    "referentieNiveau": "havo-vwo-CSE-aardrijkskunde",
+    "sloThema": "Aardrijkskunde HAVO/VWO — Wereld eindexamen-thema",
+    "triggerKeywords": [
+      "globalisering",
+      "WTO",
+      "wereldhandel",
+      "container",
+      "multinational",
+      "glokalisering",
+      "re-shoring",
+      "deglobalisering",
+      "Trump-tarieven",
+      "trade war",
+      "ongelijkheid",
+      "HDI"
+    ],
+    "intro": "Wereld-aardrijkskunde HAVO/VWO CSE. Globalisering (4 dimensies + WTO + container + anti-glob), mondiale ongelijkheid (HDI/Gini + Diamond/Acemoglu + SDG's), Sub-Sahara Afrika (demografie/Sahel/BRI/Rwan",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "werelddelen-landen-po",
     "file": "./werelddelenLandenPo.js",
     "title": "Werelddelen + landen (Cito groep 6-8)",
