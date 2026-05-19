@@ -1189,6 +1189,35 @@
     "estimatedMinutes": 90
   },
   {
+    "id": "duits-cse-havo-vwo",
+    "file": "./duitsCseHavoVwo.js",
+    "title": "Duits CSE leesvaardigheid (HAVO/VWO)",
+    "subject": "duits",
+    "level": "havo4-5-vwo",
+    "emoji": "🇩🇪",
+    "referentieNiveau": "havo-B1-vwo-B2",
+    "sloThema": "Duits HAVO/VWO — CSE leesvaardigheid eindexamen",
+    "triggerKeywords": [
+      "Duits CSE",
+      "centraal examen Duits",
+      "leesvaardigheid Duits",
+      "naamval",
+      "Akkusativ",
+      "Dativ",
+      "Nominativ",
+      "Genitiv",
+      "Wechselpräposition",
+      "Konjunktiv I",
+      "Konjunktiv II",
+      "bekommen"
+    ],
+    "intro": "Duits HAVO/VWO CSE leesvaardigheid-strategie. Examen-format (2,5/3u, ~10 teksten, B1/B2), vraagsoorten + scanning + faux amis (bekommen/eventuell) + naamvallen-snelcheck (Wechselpräp), lange teksten +",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "ecosystemen-biologie",
     "file": "./ecosystemenBiologie.js",
     "title": "Ecosystemen + voedselweb (klas 2-3)",
