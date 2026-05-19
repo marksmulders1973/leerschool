@@ -1421,6 +1421,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "engels-schrijven-spreken-havo-vwo",
+    "file": "./engelsSchrijvenSprekenHavoVwo.js",
+    "title": "Engels schrijven + spreken (HAVO/VWO SE)",
+    "subject": "engels",
+    "level": "havo4-5-vwo",
+    "emoji": "✍️",
+    "referentieNiveau": "havo-B1+-vwo-B2",
+    "sloThema": "Engels HAVO/VWO — SE schrijfvaardigheid + spreekvaardigheid",
+    "triggerKeywords": [
+      "Engels schrijven",
+      "Engels spreken",
+      "writing",
+      "speaking",
+      "Engels SE",
+      "present simple",
+      "present perfect",
+      "past simple",
+      "conditional",
+      "cover letter",
+      "sollicitatie",
+      "formal letter"
+    ],
+    "intro": "Engels schrijven + spreken HAVO/VWO SE (kernvak, gemiddeld met CSE). Schrijfvaardigheid (tijden + articles + conditionals + NL-fouten), email + formele brief (Dear Sir/Madam → faithfully, Dear Mr → si",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "europese-unie-po",
     "file": "./europeseUniePo.js",
     "title": "Europese Unie — wat is het en hoe werkt het?",
