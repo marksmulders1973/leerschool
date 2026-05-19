@@ -6190,6 +6190,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "zenuwstelsel-hormonen-havo-vwo",
+    "file": "./zenuwstelselHormonenHavoVwo.js",
+    "title": "Zenuwstelsel + hormonen (HAVO/VWO biologie)",
+    "subject": "biologie",
+    "level": "havo4-5-vwo",
+    "emoji": "🧠",
+    "referentieNiveau": "havo-vwo-CSE-biologie",
+    "sloThema": "Biologie HAVO/VWO — regulatie-systemen eindexamen-stof",
+    "triggerKeywords": [
+      "zenuwstelsel",
+      "centrale zenuwstelsel",
+      "perifere zenuwstelsel",
+      "neuron",
+      "axon",
+      "dendriet",
+      "myeline",
+      "Ranvier",
+      "synaps",
+      "neurotransmitter",
+      "actiepotentiaal",
+      "rustpotentiaal"
+    ],
+    "intro": "Regulatie-systemen HAVO/VWO biologie eindexamen. Zenuwstelsel (CZS/PZS, autonoom/animaal, neuron-bouw), actiepotentiaal + synapsen + reflex, hormonen (hypofyse/schildklier/bijnier/alvleesklier), homeo",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "zinsontleding",
     "file": "./zinsontleding.js",
     "title": "Zinsontleding",
