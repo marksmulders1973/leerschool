@@ -347,6 +347,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "betoog-beschouwing-havo-vwo",
+    "file": "./betoogBeschouwingHavoVwo.js",
+    "title": "Betoog + beschouwing + uiteenzetting (HAVO/VWO)",
+    "subject": "taal",
+    "level": "havo4-5-vwo",
+    "emoji": "📝",
+    "referentieNiveau": "havo-vwo-CSE",
+    "sloThema": "Nederlands CSE — tekstsoorten herkennen + analyseren + schrijven",
+    "triggerKeywords": [
+      "betoog",
+      "beschouwing",
+      "uiteenzetting",
+      "tekstsoort",
+      "tekstdoel",
+      "argumentatie",
+      "argument-soorten",
+      "drogreden",
+      "vals dilemma",
+      "stroman",
+      "generalisatie",
+      "hellend vlak"
+    ],
+    "intro": "Drie tekstsoorten (uiteenzetting/beschouwing/betoog) herkennen + analyseren + zelf schrijven. Plus argumentatie-typen, 10 drogredenen + stijlmiddelen voor HAVO/VWO Nederlands CSE. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "bevolking-migratie-aardrijkskunde",
     "file": "./bevolkingMigratieAardrijkskunde.js",
     "title": "Bevolking + migratie (klas 2-3)",

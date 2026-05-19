@@ -159,6 +159,7 @@ import statistiekHavoVwo from "./statistiekHavoVwo.js";
 import geneticaHavoVwo from "./geneticaHavoVwo.js";
 import kansrekeningHavoVwo from "./kansrekeningHavoVwo.js";
 import organischeChemieHavoVwo from "./organischeChemieHavoVwo.js";
+import betoogBeschouwingHavoVwo from "./betoogBeschouwingHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -260,6 +261,7 @@ export const ALL_LEARN_PATHS = {
   "genetica-havo-vwo": geneticaHavoVwo,
   "kansrekening-havo-vwo": kansrekeningHavoVwo,
   "organische-chemie-havo-vwo": organischeChemieHavoVwo,
+  "betoog-beschouwing-havo-vwo": betoogBeschouwingHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
