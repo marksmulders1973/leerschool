@@ -6117,6 +6117,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "voorrang-basis-po",
+    "file": "./voorrangBasisPo.js",
+    "title": "Voorrang in plaatjes (groep 5-8)",
+    "subject": "verkeer",
+    "level": "groep5-8",
+    "emoji": "🚦",
+    "referentieNiveau": "po-vvn-basis",
+    "sloThema": "Verkeer PO — voorrang basis met visuele uitleg",
+    "triggerKeywords": [
+      "voorrang",
+      "voorrangsregel",
+      "voorrangsregels",
+      "rechts voorrang",
+      "rechts heeft voorrang",
+      "gelijkwaardig kruispunt",
+      "haaientanden",
+      "haaitanden",
+      "zebrapad",
+      "voetganger oversteken",
+      "stopbord",
+      "STOP-bord"
+    ],
+    "intro": "Voorrang in 5 plaatjes. De meest voorkomende alledaagse situaties — geen randgevallen. Elke stap: één tekening + één vraag. Visueel-eerst.",
+    "stepCount": 5,
+    "checkCount": 6,
+    "chapterCount": 5,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "voortplanting-hormonen-biologie",
     "file": "./voortplantingHormonenBiologie.js",
     "title": "Voortplanting en hormonen",

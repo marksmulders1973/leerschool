@@ -184,6 +184,7 @@ import wiskundeDVwo from "./wiskundeDVwo.js";
 import maatschappijleerHavoVwo from "./maatschappijleerHavoVwo.js";
 import engelsSchrijvenSprekenHavoVwo from "./engelsSchrijvenSprekenHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
+import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -310,6 +311,7 @@ export const ALL_LEARN_PATHS = {
   "maatschappijleer-havo-vwo": maatschappijleerHavoVwo,
   "engels-schrijven-spreken-havo-vwo": engelsSchrijvenSprekenHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
+  "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
