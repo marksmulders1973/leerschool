@@ -1,5 +1,34 @@
 [
   {
+    "id": "aardobservatie-risico-havo-vwo",
+    "file": "./aardobservatieHavoVwo.js",
+    "title": "Aardobservatie + risicogebieden (HAVO/VWO aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo4-5-vwo",
+    "emoji": "🛰️",
+    "referentieNiveau": "havo-vwo-CSE-aardrijkskunde",
+    "sloThema": "Aardrijkskunde HAVO/VWO — aardobservatie + natuurlijke risico's eindexamen",
+    "triggerKeywords": [
+      "platentektoniek",
+      "subductie",
+      "divergent",
+      "convergent",
+      "transform",
+      "Ring van Vuur",
+      "Pacific",
+      "aardbeving",
+      "Richter",
+      "magnitude",
+      "vulkaan",
+      "stratovulkaan"
+    ],
+    "intro": "Aardrijkskunde HAVO/VWO CSE — natuurlijke risico's + aardobservatie. Tektonische risico's (plaatgrenzen, Ring van Vuur, tsunami's), klimaat- + waterrisico's (zeespiegel, overstroming, droogte, hittego",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "algoritmen-programmeren-po",
     "file": "./algoritmenProgrammerenPo.js",
     "title": "Algoritmen + programmeren (Cito groep 6-8)",

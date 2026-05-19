@@ -165,6 +165,7 @@ import integralenHavoVwo from "./integralenHavoVwo.js";
 import zenuwstelselHormonenHavoVwo from "./zenuwstelselHormonenHavoVwo.js";
 import zurenBasenHavoVwo from "./zurenBasenHavoVwo.js";
 import mechanicaHavoVwo from "./mechanicaHavoVwo.js";
+import aardobservatieHavoVwo from "./aardobservatieHavoVwo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -272,6 +273,7 @@ export const ALL_LEARN_PATHS = {
   "zenuwstelsel-hormonen-havo-vwo": zenuwstelselHormonenHavoVwo,
   "zuren-basen-havo-vwo": zurenBasenHavoVwo,
   "mechanica-havo-vwo": mechanicaHavoVwo,
+  "aardobservatie-risico-havo-vwo": aardobservatieHavoVwo,
   "kalender-rekenen-po": kalenderRekenenPo,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
