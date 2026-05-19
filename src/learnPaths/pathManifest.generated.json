@@ -2983,6 +2983,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "informatica-havo-vwo",
+    "file": "./informaticaHavoVwo.js",
+    "title": "Informatica kernconcepten (HAVO/VWO)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "💻",
+    "referentieNiveau": "havo-vwo-CSE-informatica",
+    "sloThema": "Informatica HAVO/VWO — vernieuwd eindexamen sinds 2019",
+    "triggerKeywords": [
+      "informatica",
+      "algoritme",
+      "programmeren",
+      "Python",
+      "Java",
+      "for-lus",
+      "while-lus",
+      "if-else",
+      "functie",
+      "parameter",
+      "lijst",
+      "array"
+    ],
+    "intro": "Informatica HAVO/VWO eindexamen (vernieuwd 2019). Programmeren + algoritmes (Python + O-notatie + datastructuren), netwerken + internet (TCP/IP + HTTPS + AVG), databases + data-modellering (SQL + JOIN",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "informatiebronnen-po",
     "file": "./informatiebronnenPo.js",
     "title": "Informatiebronnen (Cito groep 6-8)",
