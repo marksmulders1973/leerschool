@@ -42,7 +42,7 @@ Bij twijfel: kies kwaliteit boven kwantiteit. Een goede tour/onboarding/UX-fix >
 **Nieuwe prio-volgorde (volg STRENG)**:
 
 **P0 — Tech-debt blokkers** *(eerst, want raakt elke gebruiker)*:
-- **Bundle splitsen**: ~~`data-learnpaths` 5,4 MB → per-pad lazy import.~~ **STAP 1 GEDAAN 2026-05-12**: vite-config splitst nu in 8 chunks per subject (examens/po/talen/wereld/nask/nederlands/pincode/wiskunde). Grootste chunk nu **1,98 MB** (wiskunde). Browser laadt parallel via H/2 → snellere TTI. **STAP 2 TODO**: echte lazy-load via `pathLoaders.js` (`import.meta.glob` + async `getLearnPath()` — infrastructure staat al, maar consumers (LearnPath.jsx, LearnPathsHub.jsx) gebruiken nog `ALL_LEARN_PATHS` synchroon. Migratie vergt async-pattern in 17 consumer-files. Volgende sessie: migreer LearnPath.jsx als pilot, dan rest. Eindresultaat: route laadt alleen het pad dat user opent (~50 kB) ipv alle paden (~5,8 MB).
+- **Bundle splitsen**: ~~`data-learnpaths` 5,4 MB → per-pad lazy import.~~ ✅ KLAAR. **STAP 1** 2026-05-12: vite-config splitst in 8 chunks per subject. **STAP 2** 2026-05-15+19: alle consumers gemigreerd naar lazy `getLearnPath()` via `pathLoaders.js`. Laatste eager-import (`citoMixVragen.js → ALL_LEARN_PATHS`) gemigreerd 2026-05-19 naar pathManifest-filter + parallel dynamic-import. Root-pageload trekt geen PO/wiskunde/examens-bundles meer in; consumers laden lazy bij gebruik.
 - **Zoekbalk + Cito-pijler-filter + groep-niveau-filter** op StudentHome/LearnPathsHub.
 
 **P1 — Maand-2-plan diepte** *(strategische ICP-focus)*:
