@@ -2925,6 +2925,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "grieks-vwo",
+    "file": "./grieksVwo.js",
+    "title": "Grieks basis (VWO Gymnasium)",
+    "subject": "klassieke-talen",
+    "level": "vwo",
+    "emoji": "Α",
+    "referentieNiveau": "vwo-CSE-grieks",
+    "sloThema": "Klassieke Talen VWO — Grieks basis eindexamen",
+    "triggerKeywords": [
+      "Grieks",
+      "klassiek Grieks",
+      "Grieks alfabet",
+      "alfa",
+      "omega",
+      "spiritus",
+      "asper",
+      "lenis",
+      "Grieks naamval",
+      "Grieks lidwoord",
+      "ὁ ἡ τό",
+      "Grieks werkwoord"
+    ],
+    "intro": "Grieks basis VWO-Gymnasium. Alfabet (24 letters Α-Ω) + uitspraak Erasmus + spiritus, 5 naamvallen + lidwoord (ὁ ἡ τό) + declinaties, werkwoorden + 3 aspecten (imperfectief/aoristisch/perfectief) + aug",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "industriele-revolutie-po",
     "file": "./industrieleRevolutiePo.js",
     "title": "Industriële Revolutie (groep 6-8 + klas 1-2)",
