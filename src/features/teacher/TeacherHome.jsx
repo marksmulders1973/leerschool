@@ -225,7 +225,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
                   <li>🎓 Echte VMBO/HAVO/VWO-examenvragen</li>
                   <li>💡 Uitleg op 3 niveaus bij elke fout</li>
                   <li>🏆 Hall of Fame + scorebord</li>
-                  <li>🎮 OBLITERATOR (beloningsspel)</li>
+                  <li>⏱️ Max 15 min per sessie — daarna pauze of kort spel</li>
                 </ul>
               </div>
               {onRondleiding && (

@@ -305,7 +305,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                   <li>🎯 Doorstroomtoets-voorbereiding (groep 6-8)</li>
                   <li>💡 Uitleg op 3 niveaus bij elke fout</li>
                   <li>🎓 Echte VMBO/HAVO/VWO-examenvragen</li>
-                  <li>🎮 OBLITERATOR als beloning</li>
+                  <li>⏱️ Max 15 min per sessie — daarna pauze of kort spel</li>
                 </ul>
               </div>
               <div style={{ gridColumn: "1 / -1", padding: "10px 12px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 8, fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
