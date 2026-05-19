@@ -77,6 +77,49 @@ Cadens: ~elke 6-8 weken of vóór elke product-mijlpaal (Cito-piek nov-feb, payw
 - 2026-05-15 — eerste twee runs gedaan (UX-flow + content-kwaliteit). Resultaat: 20+ fixes in 4 commits (2d76e78, 62e1ec2, 1a82454, 0837f03). Werkwijze: ik schrijf prompt → Mark plakt in Claude-voor-Chrome → rapport terug in chat → ik fix per severity. Zie `memory/feedback_chrome_claude_review.md`.
 - [ ] Volgende run plannen rond 2026-07-01 (6 wk later), of vóór de Cito-piek.
 
+## 🎯 KWARTIERPLAN — Ouder/leerkracht-traject (idee 2026-05-19)
+
+**Status**: nog niet gestart — idee uitgewerkt in `memory/project_studiebol_kwartierplan.md`. Plaatsing onder ouder- en leerkracht-tab; NIET in onboarding (Mark wil die laagdrempelig houden).
+
+**Concept**: 4 samenhangende functies — doel zetten (HAVO/VWO/etc.) → startfoto (8-12-vragen-diagnose, ~5-7 min) → persoonlijk stappenplan (15 min/dag, X weken) → voltooi-sein per dag + weekrapport zondag. Anti-spoof: voltooid = min-N vragen + ≥60% correct + ≥30 sec/vraag.
+
+**ICP-effect**: pitch verandert van "Leerkwartier helpt oefenen voor Doorstroomtoets" naar "Leerkwartier maakt persoonlijk 15-min-per-dag-plan op basis van diagnose met dagelijks sein naar ouder". Killer-USP voor FB/school/Google-ads.
+
+### Build-volgorde (4 sessies, ~10-14 uur)
+
+- [ ] **Sessie 1 — Foundation + doel + startfoto** (~3-4 uur)
+  - Supabase migrations: `learning_goals`, `diagnostic_assessments`, `daily_plans`, `daily_completions` (+ RLS)
+  - Ouder/lk-dashboard: "Doel zetten"-modal (niveau + datum-doel)
+  - Startfoto-component: 8-12 stratified random vragen op streefniveau, anti-spoof timing
+  - Rapport-scherm: per-pijler scores + 3-5 aanbevolen paden
+
+- [ ] **Sessie 2 — Stappenplan-generator + kind-zicht** (~3-4 uur)
+  - Rule-based plan-volgorde uit diagnose + doel
+  - Ouder/lk-review-UI: pad-volgorde aanpassen + activeren + pauzeren
+  - StudentHome "Vandaag"-strip bovenaan (alleen als plan actief)
+  - Voltooi-tracking met anti-spoof-checks
+
+- [ ] **Sessie 3 — Voltooi-sein (e-mail interim)** (~2-3 uur)
+  - Edge function `notify-completion` → e-mail met "Maarten heeft 14 min Nederlands geoefend, 11/13 goed"
+  - Ouder kan e-mail-adres + tijd-voorkeur instellen
+  - Volgt later: WhatsApp + A12 Web Push (na Mark's setup)
+
+- [ ] **Sessie 4 — Weekrapport + adaptieve diagnose** (~2-3 uur)
+  - Cron-edge: zondag 19:00 weekrapport (% verandering + streak)
+  - Auto-trigger mini-diagnose elke 4 weken (5 vragen op zwakke plekken)
+  - Pauze/vakantie-knop voor schoolvakanties
+
+### Toon + disclaimers (verplicht)
+- Geen "garantie geslaagd" / "je haalt VWO wel".
+- Alle rapporten benoemen: "Leerkwartier helpt oefenen — schooladvies komt van school".
+- Naar kind: NIET "task", "opdracht", "controle" — wel "Vandaag", "Klaar! 🎉", "Streak X dagen".
+- Doel-frame als "richting waar je voor oefent", niet voorspelling.
+
+### Open beslispunten (vraag aan Mark voor sessie 1)
+- Wachten met bouwen tot na lopende prio's (P0 bundle-splitsing, A12-Web-Push-setup)?
+- Notificatie-volgorde: e-mail eerst of direct WhatsApp-integratie?
+- "Kwartierplan" als naam OK of liever "Studieplan" / "Persoonlijk Plan" / iets anders?
+
 ## 📊 Sprint Content-doelen (2026-05-14) — afgeleid uit `docs/CONTENT-DOELEN.md`
 
 Doelen vastgepind + huidige status geteld. Volledige tabel + onderbouwing zie `docs/CONTENT-DOELEN.md`.
