@@ -1334,6 +1334,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "elektromagnetisme-havo-vwo",
+    "file": "./elektromagnetismeHavoVwo.js",
+    "title": "Elektromagnetisme (HAVO/VWO Natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🧲",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Natuurkunde — Elektromagnetisme (CSE-onderwerp)",
+    "triggerKeywords": [
+      "magnetisch veld",
+      "B-veld",
+      "tesla",
+      "weber",
+      "magneet",
+      "permanente magneet",
+      "noordpool",
+      "zuidpool",
+      "Lorentzkracht",
+      "F=qvB",
+      "F=BIL",
+      "rechterhandregel"
+    ],
+    "intro": "Elektromagnetisme voor HAVO/VWO eindexamen — magnetisch veld B, Lorentzkracht F=qvB en F=BIL, Faraday-inductie, transformator + wisselstroom. VWO-stof: zelfinductie + LC-kring + EM-spectrum. 5 stappen",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "emoties-sociaal-po",
     "file": "./emotiesSocialePo.js",
     "title": "Emoties + sociaal omgaan (Cito groep 6-8)",
