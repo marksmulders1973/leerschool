@@ -17,7 +17,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    padding: "48px 24px 32px",
+    padding: "48px 12px 32px",
     flex: 1,
     background: "radial-gradient(ellipse 110% 45% at 50% 12%, rgba(20,90,200,0.18) 0%, transparent 70%)",
   },
