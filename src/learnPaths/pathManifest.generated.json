@@ -87,6 +87,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "atmosfeer-klimaat-havo-vwo",
+    "file": "./atmosfeerKlimaatHavoVwo.js",
+    "title": "Atmosfeer + Klimaatsystemen (HAVO/VWO Aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "☁️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Aardrijkskunde — Atmosfeer + Klimaatsystemen (CSE-onderwerp)",
+    "triggerKeywords": [
+      "atmosfeer",
+      "lucht-lagen",
+      "troposfeer",
+      "stratosfeer",
+      "mesosfeer",
+      "thermosfeer",
+      "ozonlaag",
+      "Montréal Protocol",
+      "broeikaseffect",
+      "CO₂",
+      "methaan",
+      "luchtdruk"
+    ],
+    "intro": "Atmosfeer + Klimaatsystemen voor HAVO/VWO eindexamen — atmosfeer-lagen, broeikaseffect + ozonlaag, luchtdruk + wind + Coriolis, fronten + depressies (Bjerknes), Köppen-zones + oceaanstromingen, klimaa",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "atoombouw-scheikunde",
     "file": "./atoombouwScheikunde.js",
     "title": "Atoombouw en periodiek systeem",

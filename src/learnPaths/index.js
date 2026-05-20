@@ -197,6 +197,7 @@ import marktvormenHavoVwo from "./marktvormenHavoVwo.js";
 import differentialenHavoVwo from "./differentialenHavoVwo.js";
 import logaritmenExponentieleHavoVwo from "./logaritmenExponentieleHavoVwo.js";
 import evolutieHavoVwo from "./evolutieHavoVwo.js";
+import atmosfeerKlimaatHavoVwo from "./atmosfeerKlimaatHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -338,6 +339,7 @@ export const ALL_LEARN_PATHS = {
   "differentialen-havo-vwo": differentialenHavoVwo,
   "logaritmen-exponentieel-havo-vwo": logaritmenExponentieleHavoVwo,
   "evolutie-havo-vwo": evolutieHavoVwo,
+  "atmosfeer-klimaat-havo-vwo": atmosfeerKlimaatHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,
