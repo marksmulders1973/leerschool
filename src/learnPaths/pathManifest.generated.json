@@ -6510,6 +6510,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "tweede-wereldoorlog-havo-vwo",
+    "file": "./tweedeWereldoorlogHavoVwo.js",
+    "title": "Tweede Wereldoorlog + Holocaust (HAVO/VWO Geschiedenis)",
+    "subject": "geschiedenis",
+    "level": "havo-vwo-4-5",
+    "emoji": "⚔️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Geschiedenis — WO2 + Holocaust (CSE-onderwerp)",
+    "triggerKeywords": [
+      "Tweede Wereldoorlog",
+      "WO2",
+      "WWII",
+      "Verdrag van Versailles",
+      "Weimar-Republiek",
+      "Hitler",
+      "NSDAP",
+      "Mein Kampf",
+      "Rijksdagbrand",
+      "machtigingswet",
+      "rassenleer",
+      "antisemitisme"
+    ],
+    "intro": "WO2 + Holocaust voor HAVO/VWO eindexamen — aanloop (Versailles → Hitler → Anschluss), Europese theater (Blitzkrieg → Stalingrad → D-Day), Holocaust + Nederland (75%-verlies, Anne Frank), Pacific + Hir",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "twintigste-eeuw-havo-vwo",
     "file": "./twintigsteEeuwHavoVwo.js",
     "title": "20e eeuw — Interbellum/WO2/Koude Oorlog (HAVO/VWO geschiedenis)",
