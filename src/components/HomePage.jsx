@@ -851,40 +851,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
-        {/* Hero-doelgroep-zin direct boven de tegels. Drie doorklikbare spans
-            (Mark feedback 2026-05-15): Doorstroomtoets + Cito-toetsen → /cito,
-            VMBO/HAVO/VWO-examens → /examens. Geen icoon (was 🎯 — weg). */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{
-            textAlign: "center",
-            marginBottom: 14,
-            fontFamily: "var(--font-display)",
-            fontSize: 14,
-            fontWeight: 600,
-            color: "rgba(255,255,255,0.85)",
-            letterSpacing: "0.01em",
-            lineHeight: 1.5,
-          }}>
-            Voor de{" "}
-            <button
-              type="button"
-              onClick={() => handleFeatureClick("cito")}
-              style={linkSpanStyle("#69f0ae")}
-            >Doorstroomtoets</button>
-            ,{" "}
-            <button
-              type="button"
-              onClick={() => handleFeatureClick("cito")}
-              style={linkSpanStyle("rgba(255,255,255,0.95)")}
-            >Cito-toetsen</button>
-            {" "}en{" "}
-            <button
-              type="button"
-              onClick={() => handleFeatureClick("examens")}
-              style={linkSpanStyle("rgba(255,255,255,0.95)")}
-            >VMBO/HAVO/VWO-examens</button>
-          </div>
-        )}
+        {/* Hero-doelgroep-zin verwijderd 2026-05-20 (Mark): tegels + CTA-balken
+            verwijzen zelf al naar Doorstroomtoets/Cito + examens — een extra
+            tekst-balk maakt 3-4 ingangen naar hetzelfde, verwarrend. */}
 
         {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
             als blikvanger en 3 rol-tegels (Leerling / Student / Leerkracht).
