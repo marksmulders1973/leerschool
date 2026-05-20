@@ -926,8 +926,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 // Kernwoord "Doorstroomtoets" in goudgeel zodat het direct
                 // visueel aanwijst waar de knop heen leidt.
                 label: (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                    <DoorstroomtoetsLogo size={26} /> Of direct naar{" "}
+                  <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
+                    <DoorstroomtoetsLogo size={18} /> Of direct naar{" "}
                     <span style={{ color: "#fff176", fontWeight: 800 }}>Doorstroomtoets</span>
                   </span>
                 ),
@@ -1090,7 +1090,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                           <span style={{ fontSize: 10, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>{sub}</span>
                         </button>
 
-                        {/* Knop B — directe CTA (oranje primair). Doorstroomtoets/Examen oefenen. */}
+                        {/* Knop B — directe CTA (oranje primair). Doorstroomtoets/Examen oefenen.
+                            Mark feedback 2026-05-20: tekst viel buiten knop op smal scherm.
+                            whiteSpace nowrap weg + lineHeight + kleinere font → wrap toestaan. */}
                         <button
                           onClick={cta.onClick}
                           style={{
@@ -1100,16 +1102,18 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
+                            textAlign: "center",
                             borderRadius: 8,
                             border: "none",
                             background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
                             color: "#fff",
                             fontFamily: "var(--font-display)",
-                            fontSize: 11,
+                            fontSize: 10.5,
                             fontWeight: 700,
                             cursor: "pointer",
-                            whiteSpace: "nowrap",
-                            lineHeight: 1,
+                            lineHeight: 1.2,
+                            wordBreak: "normal",
+                            overflowWrap: "anywhere",
                           }}
                         >
                           {cta.label}
