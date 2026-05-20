@@ -4987,6 +4987,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "radioactiviteit-havo-vwo",
+    "file": "./radioactiviteitHavoVwo.js",
+    "title": "Radioactiviteit + Kernfysica (HAVO/VWO Natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "☢️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Natuurkunde — Radioactiviteit + Kernfysica (CSE-onderwerp)",
+    "triggerKeywords": [
+      "radioactief",
+      "radioactiviteit",
+      "straling",
+      "atoomkern",
+      "isotoop",
+      "atoomnummer",
+      "massagetal",
+      "proton",
+      "neutron",
+      "elektron",
+      "alpha",
+      "alfa"
+    ],
+    "intro": "Radioactiviteit + kernfysica voor HAVO/VWO eindexamen — atoomkern, α/β/γ-straling, halveringstijd, activiteit, fissie + fusie + bindingsenergie, dosis + toepassingen. 5 stappen × 5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "recyclen-afval-po",
     "file": "./recyclenAfvalPo.js",
     "title": "Recyclen + afval + duurzaam (Cito groep 6-8)",
