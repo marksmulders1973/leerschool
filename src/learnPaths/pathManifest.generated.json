@@ -3890,6 +3890,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "logaritmen-exponentieel-havo-vwo",
+    "file": "./logaritmenExponentieleHavoVwo.js",
+    "title": "Logaritmen + Exponentiële functies (HAVO/VWO Wiskunde)",
+    "subject": "wiskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "📊",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Wiskunde — Logaritmen + Exponentiële functies (CSE-onderwerp wis-A/B)",
+    "triggerKeywords": [
+      "machten",
+      "exponenten",
+      "wortel",
+      "gebroken macht",
+      "wetenschappelijke notatie",
+      "exponentiële functie",
+      "y=a·b^x",
+      "groei-factor",
+      "verval-factor",
+      "e",
+      "Euler",
+      "natuurlijke logaritme"
+    ],
+    "intro": "Logaritmen + Exponentiële functies voor HAVO/VWO eindexamen — machten + wortels, y=a·b^x, logaritme als omgekeerde, groei + verval (halveringstijd, verdubbelingstijd), toepassingen (rente, pH, aardbev",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "maatschappijleer-havo-vwo",
     "file": "./maatschappijleerHavoVwo.js",
     "title": "Maatschappijleer (HAVO/VWO klas 4 verplicht)",
