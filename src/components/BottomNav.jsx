@@ -1,5 +1,4 @@
 import { track } from "../utils.js";
-import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
 
 // Bottom-tabs nav (Duolingo-style). Maand 1 snoei (visie-bewaker 2026-05-10):
@@ -15,20 +14,25 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 //
 // 2026-05-17 (Mark wens): OBLITERATOR weer als 4e tab — discoverability
 // terug, beloning-spel naast leren. Niet meer alleen via /spel-deeplink.
+//
+// 2026-05-20 (Mark feedback): Doorstroomtoets-tab weg uit bottom-nav. Reden:
+// stond al onder leerling-tegel + CTA-balk op homepage → drie ingangen naar
+// hetzelfde was verwarrend. Vervangen door "Toets maken" (leerkracht-route)
+// als ontdekbare ingang naar de Pro-kritische leerkracht-flow.
 
 const ALL_TABS = [
-  { id: "home",            label: "Home",           emoji: "🏠", target: "_home" },
-  { id: "leren",           label: "Leren",          emoji: "📚", target: "learn-paths-hub" },
-  { id: "doorstroomtoets", label: "Doorstroomtoets", target: "cito", iconNode: <DoorstroomtoetsLogo size={24} /> },
+  { id: "home",            label: "Home",         emoji: "🏠", target: "_home" },
+  { id: "leren",           label: "Leren",        emoji: "📚", target: "learn-paths-hub" },
+  { id: "toets-maken",     label: "Toets maken",  emoji: "📝", target: "teacher-home" },
   // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
   // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
-  { id: "spel",            label: "Spel",           emoji: "🎮", target: "obliteratorPlay", gameRelated: true },
+  { id: "spel",            label: "Spel",         emoji: "🎮", target: "obliteratorPlay", gameRelated: true },
 ];
 
 function bepaalActieveTab(page) {
-  if (page === "home" || page === "student-home" || page === "teacher-home") return "home";
+  if (page === "home" || page === "student-home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
-  if (page === "cito" || page === "cito-leerpad-toets") return "doorstroomtoets";
+  if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview") return "toets-maken";
   if (page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "spel";
   return null;
 }
