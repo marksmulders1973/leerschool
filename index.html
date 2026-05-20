@@ -310,7 +310,17 @@
         justify-content: center;
         gap: 6px;
         padding: 6px;
+        min-width: 0;
         transition: transform 0.15s ease, background 0.15s ease;
+      }
+      /* Mark wens 2026-05-20: homepage was 475px breed op iPhone 390px door
+         (a) SEO-section met white-space:nowrap (text pushte tot 1940 px),
+         (b) lk-tile-min-content > grid-1fr-track. min-width:0 op tile fixt
+         track-shrink; html/body overflow-x:hidden vangt SEO + alle andere
+         off-screen elementen op. */
+      html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
       }
       /* (Eerdere experiment met 1:1.25 voor de 3D-tegel teruggedraaid —
          maakte alleen de eerste rij hoger, niet de andere; gaf ongelijke
