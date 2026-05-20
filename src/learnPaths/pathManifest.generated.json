@@ -2925,6 +2925,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "goniometrie-havo-vwo",
+    "file": "./goniometrieHavoVwo.js",
+    "title": "Goniometrie (HAVO/VWO Wiskunde)",
+    "subject": "wiskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "📐",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Wiskunde — Goniometrie (CSE-onderwerp wis-A/B)",
+    "triggerKeywords": [
+      "goniometrie",
+      "trigonometrie",
+      "sinus",
+      "cosinus",
+      "tangens",
+      "sin",
+      "cos",
+      "tan",
+      "SOSCASTOA",
+      "rechthoekige driehoek",
+      "Pythagoras",
+      "eenheidscirkel"
+    ],
+    "intro": "Goniometrie voor HAVO/VWO eindexamen — sin/cos/tan in rechthoekige driehoek, eenheidscirkel + radialen, sinus + cosinusregel, goniometrische grafieken. VWO-stof: dubbele-hoek + afgeleide. 5 stappen × ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "gouden-eeuw-geschiedenis",
     "file": "./goudenEeuwGeschiedenis.js",
     "title": "De Gouden Eeuw (klas 2-3)",
