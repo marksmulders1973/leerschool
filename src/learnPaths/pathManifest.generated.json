@@ -6349,6 +6349,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "warmte-thermodynamica-havo-vwo",
+    "file": "./warmteThermodynamicaHavoVwo.js",
+    "title": "Warmte + Thermodynamica (HAVO/VWO Natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🌡️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Natuurkunde — Warmte + Thermodynamica (CSE-onderwerp)",
+    "triggerKeywords": [
+      "temperatuur",
+      "Celsius",
+      "Kelvin",
+      "absoluut nulpunt",
+      "warmte",
+      "Q",
+      "joule",
+      "soortelijke warmte",
+      "warmtecapaciteit",
+      "c",
+      "smeltwarmte",
+      "verdampingswarmte"
+    ],
+    "intro": "Warmte + Thermodynamica voor HAVO/VWO eindexamen — Kelvin-schaal, Q=mcΔT, faseovergangen, ideale gaswet pV=nRT, 1e hoofdwet, warmte-transport (geleiding/convectie/straling). VWO-stof: Carnot-rendement",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "water-erfgoed-nederland-po",
     "file": "./waterErfgoedNederlandPo.js",
     "title": "Nederland en water (groep 6-8)",
