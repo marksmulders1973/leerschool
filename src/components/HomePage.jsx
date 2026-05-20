@@ -549,7 +549,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
 
   const handleFeatureClick = (featureId) => {
     if (featureId === "pro") { onPro?.(); return; }
-    const role = featureId === "leerkrachten" ? "teacher" : "leerling";
+    // Mark feedback 2026-05-20: 'direct naar examens'-knop stuurde naar
+    // Doorstroomtoets/Cito. Oorzaak: role default "leerling" → ExamensPage
+    // redirect-of-leeg. Fix: examens = student-rol (VMBO/HAVO/VWO).
+    const role = featureId === "leerkrachten" ? "teacher"
+               : featureId === "examens" ? "student"
+               : "leerling";
     setPendingFeature(featureId);
     // Terugkerende gebruiker: naam al opgeslagen → direct doorgaan
     try {
@@ -558,7 +563,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         setUserName(saved.name);
         if (saved.level) setUserLevel(saved.level);
         if (saved.schoolType) setUserSchoolType?.(saved.schoolType);
-        onSelectRole(saved.role || role, featureId);
+        // Feature-specifieke role overschrijft opgeslagen role (examens =
+        // altijd student, leerkrachten = altijd teacher), anders behoud.
+        const effectiveRole = (featureId === "examens" || featureId === "leerkrachten")
+          ? role
+          : (saved.role || role);
+        onSelectRole(effectiveRole, featureId);
         return;
       }
     } catch {}
