@@ -5016,6 +5016,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "quantum-atoommodel-havo-vwo",
+    "file": "./quantumAtoommodelHavoVwo.js",
+    "title": "Quantum + Atoommodel (HAVO/VWO Natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "⚛️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Natuurkunde — Quantum + Atoommodel (CSE-onderwerp)",
+    "triggerKeywords": [
+      "quantum",
+      "kwantum",
+      "foton",
+      "lichtkwantum",
+      "Planck",
+      "h",
+      "constante van Planck",
+      "E=hf",
+      "foton-energie",
+      "elektronvolt",
+      "eV",
+      "foto-elektrisch"
+    ],
+    "intro": "Quantum + Atoommodel voor HAVO/VWO eindexamen — foton E=hf, foto-elektrisch effect, Bohr-energieniveaus, spectraal-analyse. VWO-stof: de Broglie + onzekerheid. 5 stappen × 5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "radioactiviteit-havo-vwo",
     "file": "./radioactiviteitHavoVwo.js",
     "title": "Radioactiviteit + Kernfysica (HAVO/VWO Natuurkunde)",
