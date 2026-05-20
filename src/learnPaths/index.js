@@ -191,6 +191,7 @@ import warmteThermodynamicaHavoVwo from "./warmteThermodynamicaHavoVwo.js";
 import quantumAtoommodelHavoVwo from "./quantumAtoommodelHavoVwo.js";
 import molStoichiometrieHavoVwo from "./molStoichiometrieHavoVwo.js";
 import goniometrieHavoVwo from "./goniometrieHavoVwo.js";
+import ecosystemenHavoVwo from "./ecosystemenHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -326,6 +327,7 @@ export const ALL_LEARN_PATHS = {
   "quantum-atoommodel-havo-vwo": quantumAtoommodelHavoVwo,
   "mol-stoichiometrie-havo-vwo": molStoichiometrieHavoVwo,
   "goniometrie-havo-vwo": goniometrieHavoVwo,
+  "ecosystemen-havo-vwo": ecosystemenHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,

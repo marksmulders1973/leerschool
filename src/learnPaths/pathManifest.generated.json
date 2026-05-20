@@ -1276,6 +1276,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "ecosystemen-havo-vwo",
+    "file": "./ecosystemenHavoVwo.js",
+    "title": "Ecosystemen + Biodiversiteit (HAVO/VWO Biologie)",
+    "subject": "biologie",
+    "level": "havo-vwo-4-5",
+    "emoji": "🌳",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Biologie — Ecosystemen + Biodiversiteit (CSE-onderwerp)",
+    "triggerKeywords": [
+      "ecosysteem",
+      "ecologie",
+      "voedselketen",
+      "voedselweb",
+      "producent",
+      "consument",
+      "reducent",
+      "trofisch niveau",
+      "energiepiramide",
+      "10%-regel",
+      "energiestroom",
+      "fotosynthese"
+    ],
+    "intro": "Ecosystemen voor HAVO/VWO eindexamen — voedselweb + 10%-energie, populatie-dynamica + draagkracht, successie + kringlopen (C/N/water), biodiversiteit + bedreigingen, mens-natuur-interactie. 5 stappen ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "eetcultuur-nederland-po",
     "file": "./eetcultuurNederlandPo.js",
     "title": "Eetcultuur NL + invloeden (Cito groep 6-8)",
