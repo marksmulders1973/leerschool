@@ -206,6 +206,7 @@ import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
 import stedelijkeOntwikkelingHavoVwo from "./stedelijkeOntwikkelingHavoVwo.js";
 import hartBloedAdemhalingHavoVwo from "./hartBloedAdemhalingHavoVwo.js";
+import filosofieHavoVwo from "./filosofieHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -356,6 +357,7 @@ export const ALL_LEARN_PATHS = {
   "globalisering-havo-vwo": globaliseringHavoVwo,
   "stedelijke-ontwikkeling-havo-vwo": stedelijkeOntwikkelingHavoVwo,
   "hart-bloed-ademhaling-havo-vwo": hartBloedAdemhalingHavoVwo,
+  "filosofie-havo-vwo": filosofieHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,

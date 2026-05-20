@@ -2733,6 +2733,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "filosofie-havo-vwo",
+    "file": "./filosofieHavoVwo.js",
+    "title": "Filosofie (HAVO/VWO algemeen)",
+    "subject": "filosofie",
+    "level": "havo-vwo-4-5",
+    "emoji": "🤔",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Filosofie — Inleidend (HAVO + VWO)",
+    "triggerKeywords": [
+      "filosofie",
+      "metafysica",
+      "epistemologie",
+      "ethiek",
+      "logica",
+      "Socrates",
+      "socratische methode",
+      "Plato",
+      "ideeën-leer",
+      "grot-allegorie",
+      "Aristoteles",
+      "syllogisme"
+    ],
+    "intro": "Filosofie voor HAVO/VWO algemeen — oudheid (Socrates/Plato/Aristoteles), middeleeuwen + verlichting (Augustinus tot Kant-voorlopers), moderne tijd (Kant/Hegel/Marx/Nietzsche/Mill), 20e + 21e eeuw (exi",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "filosofie-vwo",
     "file": "./filosofieVwo.js",
     "title": "Filosofie kernbegrippen (VWO)",
