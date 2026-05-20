@@ -208,6 +208,7 @@ import stedelijkeOntwikkelingHavoVwo from "./stedelijkeOntwikkelingHavoVwo.js";
 import hartBloedAdemhalingHavoVwo from "./hartBloedAdemhalingHavoVwo.js";
 import filosofieHavoVwo from "./filosofieHavoVwo.js";
 import tweedeWereldoorlogHavoVwo from "./tweedeWereldoorlogHavoVwo.js";
+import energieHulpbronnenHavoVwo from "./energieHulpbronnenHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -360,6 +361,7 @@ export const ALL_LEARN_PATHS = {
   "hart-bloed-ademhaling-havo-vwo": hartBloedAdemhalingHavoVwo,
   "filosofie-havo-vwo": filosofieHavoVwo,
   "tweede-wereldoorlog-havo-vwo": tweedeWereldoorlogHavoVwo,
+  "energie-hulpbronnen-havo-vwo": energieHulpbronnenHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,

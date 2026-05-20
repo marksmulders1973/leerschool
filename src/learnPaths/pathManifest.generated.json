@@ -1508,6 +1508,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "energie-hulpbronnen-havo-vwo",
+    "file": "./energieHulpbronnenHavoVwo.js",
+    "title": "Energie + Hulpbronnen (HAVO/VWO Aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "⛽",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Aardrijkskunde — Energie + Hulpbronnen + Geopolitiek (CSE)",
+    "triggerKeywords": [
+      "energie",
+      "hulpbronnen",
+      "fossiele brandstof",
+      "olie",
+      "petroleum",
+      "aardgas",
+      "methaan",
+      "steenkool",
+      "fracking",
+      "shale",
+      "Groningen",
+      "aardbevingen"
+    ],
+    "intro": "Energie + Hulpbronnen voor HAVO/VWO eindexamen — fossiele brandstoffen (olie/gas/kolen + Groningen), hernieuwbaar (zon/wind/water/biomassa), OPEC + geopolitiek (oliecrises + Oekraïne 2022), kritieke m",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "energiebronnen-po",
     "file": "./energiebronnenPo.js",
     "title": "Energiebronnen (PO + klas 1-2)",
