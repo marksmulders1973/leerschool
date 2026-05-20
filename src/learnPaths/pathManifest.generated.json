@@ -3045,6 +3045,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "globalisering-havo-vwo",
+    "file": "./globaliseringHavoVwo.js",
+    "title": "Globalisering + Wereldongelijkheid (HAVO/VWO Aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🌐",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Aardrijkskunde — Globalisering + Ontwikkeling (CSE-onderwerp)",
+    "triggerKeywords": [
+      "globalisering",
+      "wereldhandel",
+      "WTO",
+      "EU",
+      "NAFTA",
+      "ASEAN",
+      "Mercosur",
+      "vrijhandel",
+      "comparatief voordeel",
+      "Ricardo",
+      "MNC",
+      "multinational"
+    ],
+    "intro": "Globalisering + Wereldongelijkheid voor HAVO/VWO eindexamen — 4 dimensies, WTO + MNCs, Noord-Zuid kloof, theorieën (modernisatie/afhankelijkheid/institutioneel), migratie + remittances, SDGs + toekoms",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "godsdiensten-culturen-po",
     "file": "./godsdienstenCulturenPo.js",
     "title": "Godsdiensten + culturen (Cito groep 6-8)",
