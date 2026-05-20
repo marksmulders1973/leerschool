@@ -3244,6 +3244,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "hart-bloed-ademhaling-havo-vwo",
+    "file": "./hartBloedAdemhalingHavoVwo.js",
+    "title": "Hart + Bloedsomloop + Ademhaling (HAVO/VWO Biologie)",
+    "subject": "biologie",
+    "level": "havo-vwo-4-5",
+    "emoji": "❤️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Biologie — Hart + Bloed + Ademhaling (CSE-onderwerp)",
+    "triggerKeywords": [
+      "hart",
+      "myocard",
+      "rechterboezem",
+      "rechterkamer",
+      "linkerboezem",
+      "linkerkamer",
+      "tricuspidalisklep",
+      "mitralisklep",
+      "aortaklep",
+      "sinusknoop",
+      "AV-knoop",
+      "pacemaker"
+    ],
+    "intro": "Hart + Bloedsomloop + Ademhaling voor HAVO/VWO eindexamen — hart-anatomie + kleppen + circulatie, bloedvaten + bloeddruk, bloed-componenten (RBC/WBC/plaatjes/plasma), longen + gasuitwisseling, hartzie",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "immuunsysteem-havo-vwo",
     "file": "./immuunsysteemHavoVwo.js",
     "title": "Immuunsysteem + Afweer (HAVO/VWO Biologie)",
