@@ -4064,6 +4064,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "mol-stoichiometrie-havo-vwo",
+    "file": "./molStoichiometrieHavoVwo.js",
+    "title": "Mol + Stoichiometrie + Redox (HAVO/VWO Scheikunde)",
+    "subject": "scheikunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "⚖️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Scheikunde — Mol + Stoichiometrie + Redox (CSE-onderwerp)",
+    "triggerKeywords": [
+      "mol",
+      "molair",
+      "molariteit",
+      "Avogadro",
+      "6,022·10²³",
+      "N_A",
+      "molaire massa",
+      "M",
+      "molair volume",
+      "22,4 L",
+      "STP",
+      "concentratie"
+    ],
+    "intro": "Mol + stoichiometrie + redox voor HAVO/VWO eindexamen — Avogadro, molaire massa, reactievergelijkingen balanceren, mol-verhoudingen, opbrengst, redox-reacties + oxidatiegetallen. VWO-stof: chemisch ev",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "naamvallen-duits",
     "file": "./naamvallenDuits.js",
     "title": "Lidwoorden en naamvallen",
