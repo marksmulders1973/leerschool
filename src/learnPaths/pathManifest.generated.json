@@ -1537,6 +1537,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "engels-literatuur-havo-vwo",
+    "file": "./engelsLiteratuurHavoVwo.js",
+    "title": "Engels Literatuur (HAVO/VWO)",
+    "subject": "engels",
+    "level": "havo-vwo-4-5",
+    "emoji": "🇬🇧",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Engels — Literatuur (CSE-onderwerp)",
+    "triggerKeywords": [
+      "Engelse literatuur",
+      "English literature",
+      "Beowulf",
+      "Old English",
+      "Chaucer",
+      "Canterbury Tales",
+      "Middle English",
+      "Shakespeare",
+      "Hamlet",
+      "Macbeth",
+      "Othello",
+      "King Lear"
+    ],
+    "intro": "Engelse Literatuur voor HAVO/VWO eindexamen — perioden van Beowulf tot vandaag, Shakespeare-drama, Victoriaans + modernist roman, Amerikaanse canon, moderne fictie + analyse-technieken. 5 stappen × 5 ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "engels-schrijven-spreken-havo-vwo",
     "file": "./engelsSchrijvenSprekenHavoVwo.js",
     "title": "Engels schrijven + spreken (HAVO/VWO SE)",
