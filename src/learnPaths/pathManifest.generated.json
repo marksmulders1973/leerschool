@@ -6343,6 +6343,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "tijd-snelheid-afstand-po",
+    "file": "./tijdSnelheidAfstandPo.js",
+    "title": "Tijd + Snelheid + Afstand (Cito groep 7-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "🏃",
+    "referentieNiveau": "1F",
+    "sloThema": "Rekenen — Tijd/snelheid/afstand / Doorstroomtoets",
+    "triggerKeywords": [
+      "tijd",
+      "uren",
+      "minuten",
+      "seconden",
+      "omrekenen",
+      "snelheid",
+      "km/h",
+      "m/s",
+      "afstand",
+      "S=V·T",
+      "V=S/T",
+      "T=S/V"
+    ],
+    "intro": "Tijd + snelheid + afstand voor Cito-Doorstroomtoets — tijdseenheden + omrekenen, snelheid km/h ↔ m/s, S=V·T-formule, snelheid + tijd berekenen, praktijksommen (reistijden, marathon, inhalen). 5 stappe",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "tijdsduur-rekenen-po",
     "file": "./tijdsduurRekenenPo.js",
     "title": "Tijdsduur uitrekenen (groep 6-8)",

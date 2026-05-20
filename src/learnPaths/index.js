@@ -209,6 +209,7 @@ import hartBloedAdemhalingHavoVwo from "./hartBloedAdemhalingHavoVwo.js";
 import filosofieHavoVwo from "./filosofieHavoVwo.js";
 import tweedeWereldoorlogHavoVwo from "./tweedeWereldoorlogHavoVwo.js";
 import energieHulpbronnenHavoVwo from "./energieHulpbronnenHavoVwo.js";
+import tijdSnelheidAfstandPo from "./tijdSnelheidAfstandPo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -362,6 +363,7 @@ export const ALL_LEARN_PATHS = {
   "filosofie-havo-vwo": filosofieHavoVwo,
   "tweede-wereldoorlog-havo-vwo": tweedeWereldoorlogHavoVwo,
   "energie-hulpbronnen-havo-vwo": energieHulpbronnenHavoVwo,
+  "tijd-snelheid-afstand-po": tijdSnelheidAfstandPo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,
