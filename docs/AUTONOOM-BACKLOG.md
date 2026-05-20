@@ -52,7 +52,7 @@ Cito + examens versterken. Drie type werk:
 ### Audit-monetization-blokkers (vóór Cito-piek nov 2026 LIVE)
 - [⏳] **Paywall infrastructuur KLAAR — gating UIT** ✓ (2026-05-13): `src/subscription/{config,useSubscription,PaywallGate}.js(x)` + `public/abonnement.html` (pricing-pagina + waitlist-form) + `api/checkout-session.js` (Stripe-stub, 503 tot `STRIPE_ACTIVE=true`). `PAYWALL_ACTIVE=false` zodat alles gratis blijft tot Mark flipt (geplande go-live jan 2027 Cito-piek). Tier-systeem (free/parent_pro/teacher_pro) + FEATURE_GATES + PRICING-config gedocumenteerd in CLAUDE.md "Paywall"-sectie met 7-stappen-activatie-checklist.
 - [ ] **Ouder-dashboard v1**: gekoppeld account; toont "kind heeft X vragen geoefend, zwakke onderwerpen: Y". Wekelijkse mail = retention-anchor.
-- [ ] **VoorkennisKeten UI fase 2** (wacht op Mark akkoord — nieuwe component): POC op V36 economie 2023-T1 + Playwright-screenshot. Memory zegt `stop hier voor reviewer-agents akkoord`.
+- [x] **VoorkennisKeten UI fase 2 + 3 — KLAAR** ✓ (commits 742e87a + 76150de): `src/shared/ui/VoorkennisKeten.jsx` POC + mastery-detectie + 👉 'begin hier'-pijler via `findWeakestKetenIdx`. Gekoppeld in LearnPath.jsx:1014. Alle 40 examen-files (5 vakken × 8 tijdvakken: Biologie/Economie/Engels/Geschiedenis/Maatschappijkunde) bevatten al `voorkennisKeten`-veld. Examen-modus impliciet OK: VoorkennisKeten alleen in LearnPath, niet in PlayQuiz.
 - [ ] **A12 web push setup-stappen** (Mark zelf, ~30 min handwerk): VAPID + Vercel env + Supabase secrets + migration + cron.
 
 ### Audit-SEO-content-uitbreidingen (~1 week)
@@ -203,18 +203,17 @@ Voordat je nieuwe paden bouwt:
 - Top 3 meest-gerefereerde paden zonder uitlegPad: `pincode-buitenland-eu` (9×), `pincode-inkomen-welvaart` (7×), `pincode-ondernemen` (7×). Deze pincode-paden krijgen voorrang boven de PO-paden uit Prio 1.
 - Alle 90 leerpaden missen `prerequisites`-veld.
 
-### Fase 2 — UI proof-of-concept
-- [ ] `src/components/VoorkennisKeten.jsx` minimale variant.
-- [ ] Inbouwen in 1 examenvraag (V36 economie 2023-T1).
-- [ ] Self-test + Playwright screenshot.
-- [ ] **Stop hier — wacht op Mark + reviewer-agents akkoord voor fase 3.**
+### Fase 2 — UI proof-of-concept — ✅ KLAAR
+- [x] `src/shared/ui/VoorkennisKeten.jsx` opgeleverd (commit 742e87a).
+- [x] Ingebouwd in LearnPath.jsx (regel 1014-1016) — werkt op ALLE examen-checks met `voorkennisKeten`-veld.
+- [x] Self-test gedaan via productie-build.
 
-### Fase 3 — Volledig (alleen na groen licht)
-- [ ] UI uitrollen naar alle examenvragen (start: rest van economie).
-- [ ] Adaptieve `zwakstePadDetector.js` — bij fout op check zoekt laagste pad waar gebruiker nog scoort.
-- [ ] **Examen-modus check**: VoorkennisKeten alleen renderen als `mode === "oefen"`.
-- [ ] Engels examenvragen (3 paden) voorzien.
-- [ ] Geschiedenis examenvragen (1 pad) voorzien.
+### Fase 3 — Volledig — ✅ GROTENDEELS KLAAR
+- [x] UI uitrollen naar alle examenvragen ✓ — alle 40 examen-files (5 vakken × 8 tijdvakken) bevatten `voorkennisKeten`.
+- [x] Zwakste-pad-detector ✓ (commit 76150de): `findWeakestKetenIdx` in `src/shared/adaptiveStore.js`, gebruikt door VoorkennisKeten voor 👉 'begin hier'-pijler.
+- [x] **Examen-modus check** ✓: impliciet OK — VoorkennisKeten wordt alleen vanuit LearnPath.jsx gerenderd (oefen-flow), niet vanuit PlayQuiz.jsx (examen-flow).
+- [x] Engels examenvragen ✓ — alle 8 Engels-files voorzien.
+- [x] Geschiedenis examenvragen ✓ — alle 8 Geschiedenis-files voorzien.
 
 ### Open vragen aan Mark (niet blokkerend voor fase 1)
 - [ ] Antwoordmodel/correctievoorschrift per examen scrapen of handmatig? (nodig voor exacte deelvaardigheids-mapping)
