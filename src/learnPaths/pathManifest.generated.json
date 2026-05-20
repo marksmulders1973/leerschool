@@ -4397,6 +4397,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "optica-havo-vwo",
+    "file": "./opticaHavoVwo.js",
+    "title": "Optica (HAVO/VWO Natuurkunde)",
+    "subject": "natuurkunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🔍",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Natuurkunde — Optica (CSE-onderwerp)",
+    "triggerKeywords": [
+      "optica",
+      "licht",
+      "lichtsnelheid",
+      "reflectie",
+      "spiegel",
+      "spiegelwet",
+      "breking",
+      "lichtbreking",
+      "Snellius",
+      "brekingsindex",
+      "n",
+      "totale reflectie"
+    ],
+    "intro": "Optica voor HAVO/VWO eindexamen — reflectie + lichtbreking (Snellius), totale interne reflectie, lenzen + lensformule, kleuren + spectrum. VWO-stof: Young's dubbelspleet + interferentie. 5 stappen × 5",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "organische-chemie-havo-vwo",
     "file": "./organischeChemieHavoVwo.js",
     "title": "Organische chemie (HAVO/VWO scheikunde)",
