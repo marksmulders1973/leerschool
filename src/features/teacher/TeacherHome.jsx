@@ -220,7 +220,7 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
               <div>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "#00e676", fontWeight: 700, marginBottom: 6, letterSpacing: 0.5 }}>VOOR JE LEERLINGEN</div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
-                  <li>📚 249 onderwerpen zelf doorlopen</li>
+                  <li>📚 300+ onderwerpen zelf doorlopen</li>
                   <li>🎯 Doorstroomtoets-voorbereiding (groep 6-8)</li>
                   <li>🎓 Echte VMBO/HAVO/VWO-examenvragen</li>
                   <li>💡 Uitleg op 3 niveaus bij elke fout</li>
