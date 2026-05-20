@@ -1561,6 +1561,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "evolutie-havo-vwo",
+    "file": "./evolutieHavoVwo.js",
+    "title": "Evolutie + Natuurlijke Selectie (HAVO/VWO Biologie)",
+    "subject": "biologie",
+    "level": "havo-vwo-4-5",
+    "emoji": "🦴",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Biologie — Evolutie + Natuurlijke Selectie (CSE-onderwerp)",
+    "triggerKeywords": [
+      "evolutie",
+      "Darwin",
+      "Wallace",
+      "Origin of Species",
+      "1859",
+      "natuurlijke selectie",
+      "selectiedruk",
+      "variatie",
+      "mutatie",
+      "recombinatie",
+      "fitness",
+      "reproductief succes"
+    ],
+    "intro": "Evolutie + Natuurlijke Selectie voor HAVO/VWO eindexamen — Darwin + 4 voorwaarden, variatie/mutaties/recombinatie, drift + soortvorming, bewijzen (fossielen/anatomie/embryo/biogeografie/moleculair), r",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "evolutie-mens-po",
     "file": "./evolutieMensPo.js",
     "title": "Evolutie + mens (Cito groep 6-8)",
