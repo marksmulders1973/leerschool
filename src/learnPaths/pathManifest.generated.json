@@ -3070,6 +3070,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "industriele-revolutie-havo-vwo",
+    "file": "./industrieleRevolutieHavoVwo.js",
+    "title": "Industriële Revolutie (HAVO/VWO Geschiedenis)",
+    "subject": "geschiedenis",
+    "level": "havo-vwo-4-5",
+    "emoji": "🚂",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Geschiedenis — Industriële Revolutie 1750-1914 (CSE-onderwerp)",
+    "triggerKeywords": [
+      "industriële revolutie",
+      "agrarisch",
+      "drieslag",
+      "vruchtwisseling",
+      "inclosure",
+      "gemene grond",
+      "mercantilisme",
+      "Adam Smith",
+      "Engeland",
+      "Manchester",
+      "Cottonopolis",
+      "stoom-machine"
+    ],
+    "intro": "Industriële Revolutie voor HAVO/VWO eindexamen — agrarische voorgeschiedenis, 1e + 2e revolutie, sociale kwestie + Marx, imperialisme, doorlijn naar nu. 5 stappen × 5 vragen. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "industriele-revolutie-po",
     "file": "./industrieleRevolutiePo.js",
     "title": "Industriële Revolutie (groep 6-8 + klas 1-2)",
