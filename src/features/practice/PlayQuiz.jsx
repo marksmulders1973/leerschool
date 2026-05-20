@@ -470,7 +470,26 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       <div style={{ ...styles.questionCard, animation: "slideUp 0.3s ease" }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-          <h2 style={{ ...styles.questionText, flex: 1, margin: 0 }}><MdInline text={question.q} /></h2>
+          <div style={{ flex: 1 }}>
+            <h2 style={{ ...styles.questionText, margin: 0 }}><MdInline text={question.q} /></h2>
+            {/* Mark wens 2026-05-20: in 'oefen alle door elkaar'-mix tijdvak +
+                vraagnummer in kleine gele letters onder vraag tonen. quiz
+                .examenMixSource wordt gezet door buildExamenMix. */}
+            {gameState.quiz?.examenMixSource && question.examenBron && (
+              <div style={{
+                marginTop: 4,
+                fontSize: 11,
+                fontFamily: "var(--font-body)",
+                color: "#ffd54f",
+                opacity: 0.85,
+                fontStyle: "italic",
+                letterSpacing: 0.3,
+                lineHeight: 1.3,
+              }}>
+                {question.examenBron}
+              </div>
+            )}
+          </div>
           {questionImage && !question.imageInExplanation && (
             <button
               type="button"
