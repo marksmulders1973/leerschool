@@ -29,6 +29,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "algebra-vergelijkingen-havo-vwo",
+    "file": "./algebraVergelijkingenHavoVwo.js",
+    "title": "Algebra + Vergelijkingen (HAVO/VWO Wiskunde)",
+    "subject": "wiskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🟰",
+    "referentieNiveau": "havo-2F / vwo-3F",
+    "sloThema": "Wiskunde — Algebra + Vergelijkingen (CSE-fundament)",
+    "triggerKeywords": [
+      "algebra",
+      "variabele",
+      "haakjes wegwerken",
+      "distributiewet",
+      "factoriseren",
+      "merkwaardig product",
+      "verschil van kwadraten",
+      "(a+b)²",
+      "(a-b)²",
+      "lineair",
+      "vergelijking oplossen",
+      "kwadratisch"
+    ],
+    "intro": "Algebra + Vergelijkingen voor HAVO/VWO eindexamen — algebra-basis (haakjes, factoriseren, breuken, wortels), lineaire + kwadratische vergelijkingen, stelsels (substitutie/eliminatie), ongelijkheden + ",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "algoritmen-programmeren-po",
     "file": "./algoritmenProgrammerenPo.js",
     "title": "Algoritmen + programmeren (Cito groep 6-8)",
