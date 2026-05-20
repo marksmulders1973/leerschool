@@ -5979,6 +5979,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "stedelijke-ontwikkeling-havo-vwo",
+    "file": "./stedelijkeOntwikkelingHavoVwo.js",
+    "title": "Stedelijke Ontwikkeling + Verstedelijking (HAVO/VWO Aardrijkskunde)",
+    "subject": "aardrijkskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "🏙️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Aardrijkskunde — Stedelijke Ontwikkeling (CSE-onderwerp)",
+    "triggerKeywords": [
+      "verstedelijking",
+      "urbanisatie",
+      "suburbanisatie",
+      "voorstad",
+      "disurbanisatie",
+      "re-urbanisatie",
+      "gentrification",
+      "counter-urbanisatie",
+      "CBD",
+      "Central Business District",
+      "Burgess-model",
+      "concentrische ringen"
+    ],
+    "intro": "Stedelijke Ontwikkeling voor HAVO/VWO eindexamen — verstedelijking-proces (urbanisatie/suburbanisatie/gentrification), stadsmodellen (Burgess/Hoyt/Multinucleair), megacities + global cities, stadsprob",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "stelsels",
     "file": "./stelsels.js",
     "title": "Stelsels van vergelijkingen",
