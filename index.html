@@ -320,7 +320,10 @@
         }
       }
       .lk-tile {
-        aspect-ratio: 1 / 1;
+        /* Mark feedback 2026-05-20: foto's te klein op mobiel.
+           Default 4:5 = staand → meer hoogte voor model-foto.
+           Op tablet/desktop terug naar 1:1 / 5:4 via media-queries. */
+        aspect-ratio: 4 / 5;
         border-radius: 16px;
         cursor: pointer;
         display: flex;
@@ -331,6 +334,9 @@
         padding: 6px;
         min-width: 0;
         transition: transform 0.15s ease, background 0.15s ease;
+      }
+      @media (min-width: 640px) {
+        .lk-tile { aspect-ratio: 1 / 1; }
       }
       /* Mark wens 2026-05-20: homepage was 475px breed op iPhone 390px door
          (a) SEO-section met white-space:nowrap (text pushte tot 1940 px),
