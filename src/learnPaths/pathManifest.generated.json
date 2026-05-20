@@ -1075,6 +1075,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "differentialen-havo-vwo",
+    "file": "./differentialenHavoVwo.js",
+    "title": "Differentialen + Afgeleiden (HAVO/VWO Wiskunde)",
+    "subject": "wiskunde",
+    "level": "havo-vwo-4-5",
+    "emoji": "📐",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Wiskunde — Differentialen + Afgeleiden (CSE-onderwerp wis-A/B)",
+    "triggerKeywords": [
+      "differentiëren",
+      "afgeleide",
+      "f'(x)",
+      "dy/dx",
+      "Leibniz",
+      "limiet",
+      "helling",
+      "raaklijn",
+      "macht-regel",
+      "som-regel",
+      "verschil-regel",
+      "productregel"
+    ],
+    "intro": "Differentialen + Afgeleiden voor HAVO/VWO eindexamen — limiet + helling-begrip, machtsregel + som-verschil-regel, product/quotiënt/kettingregel, raaklijn + extremen + optimalisatie, toepassingen. 5 st",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "differentieren",
     "file": "./differentieren.js",
     "title": "Differentiëren",
