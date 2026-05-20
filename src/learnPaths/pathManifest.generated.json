@@ -3948,6 +3948,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "marktvormen-havo-vwo",
+    "file": "./marktvormenHavoVwo.js",
+    "title": "Marktvormen + Markfalen (HAVO/VWO Economie)",
+    "subject": "economie",
+    "level": "havo-vwo-4-5",
+    "emoji": "🏪",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Economie — Marktvormen + Markfalen + Inkomensverdeling (CSE-onderwerp)",
+    "triggerKeywords": [
+      "vraag",
+      "aanbod",
+      "evenwichtsprijs",
+      "elasticiteit",
+      "prijselasticiteit",
+      "inkomenselasticiteit",
+      "kruiselasticiteit",
+      "substituut",
+      "complement",
+      "volkomen concurrentie",
+      "monopolistische concurrentie",
+      "oligopolie"
+    ],
+    "intro": "Marktvormen + Markfalen voor HAVO/VWO eindexamen — vraag+aanbod, prijselasticiteit, vier marktvormen, markfalen + externaliteiten, overheidsingrijpen, inkomensverdeling (Lorenz, Gini). 5 stappen × 5 v",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "maten-eenheden",
     "file": "./matenEenheden.js",
     "title": "Maten en eenheden — Cito groep 7-8",

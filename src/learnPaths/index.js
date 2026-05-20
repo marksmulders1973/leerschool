@@ -193,6 +193,7 @@ import molStoichiometrieHavoVwo from "./molStoichiometrieHavoVwo.js";
 import goniometrieHavoVwo from "./goniometrieHavoVwo.js";
 import ecosystemenHavoVwo from "./ecosystemenHavoVwo.js";
 import industrieleRevolutieHavoVwo from "./industrieleRevolutieHavoVwo.js";
+import marktvormenHavoVwo from "./marktvormenHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -330,6 +331,7 @@ export const ALL_LEARN_PATHS = {
   "goniometrie-havo-vwo": goniometrieHavoVwo,
   "ecosystemen-havo-vwo": ecosystemenHavoVwo,
   "industriele-revolutie-havo-vwo": industrieleRevolutieHavoVwo,
+  "marktvormen-havo-vwo": marktvormenHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,
