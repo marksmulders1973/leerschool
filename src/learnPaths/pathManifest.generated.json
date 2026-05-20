@@ -5889,6 +5889,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "stijl-literatuur-havo-vwo",
+    "file": "./stijlLiteratuurHavoVwo.js",
+    "title": "Stijlfiguren + Literatuur (HAVO/VWO Nederlands)",
+    "subject": "nederlands",
+    "level": "havo-vwo-4-5",
+    "emoji": "📜",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Nederlands — Stijlfiguren + Literatuur (CSE-onderwerp)",
+    "triggerKeywords": [
+      "stijlfiguur",
+      "stijlmiddel",
+      "metafoor",
+      "vergelijking",
+      "personificatie",
+      "synesthesie",
+      "alliteratie",
+      "assonantie",
+      "onomatopee",
+      "anafoor",
+      "refrein",
+      "climax"
+    ],
+    "intro": "Stijlfiguren + Literatuur voor HAVO/VWO eindexamen — beeldspraak, klankfiguren, contrast + vertekening, literaire periodes (ME tot nu), drie genres, tekstanalyse + interpretatie, NL-canon. 5 stappen ×",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "stoffen-mengsels-scheikunde",
     "file": "./stoffenMengselsScheikunde.js",
     "title": "Stoffen + mengsels + scheiden (klas 1-2)",
