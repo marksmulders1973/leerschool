@@ -4499,6 +4499,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "mensenrechten-vn-havo-vwo",
+    "file": "./mensenrechtenVnHavoVwo.js",
+    "title": "Mensenrechten + VN (HAVO/VWO Maatschappij)",
+    "subject": "maatschappijleer",
+    "level": "havo-vwo-4-5",
+    "emoji": "🕊️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Maatschappijleer — Mensenrechten + VN (CSE)",
+    "triggerKeywords": [
+      "mensenrechten",
+      "human rights",
+      "UDHR",
+      "Universele Verklaring",
+      "1948",
+      "Eleanor Roosevelt",
+      "Geneefse Conventies",
+      "EVRM",
+      "Straatsburg",
+      "ICCPR",
+      "ICESCR",
+      "CRC"
+    ],
+    "intro": "Mensenrechten + VN voor HAVO/VWO eindexamen — UDHR 1948 + 3 generaties rechten, VN-structuur + vetorecht, internationale rechtspraak (ICJ/ICC/tribunalen), actuele schendingen (Oeigoeren/Oekraïne/Gaza/",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "middeleeuwen-geschiedenis",
     "file": "./middeleeuwenGeschiedenis.js",
     "title": "De middeleeuwen 500-1500 (klas 1-2)",

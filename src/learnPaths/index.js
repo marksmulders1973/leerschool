@@ -210,6 +210,7 @@ import filosofieHavoVwo from "./filosofieHavoVwo.js";
 import tweedeWereldoorlogHavoVwo from "./tweedeWereldoorlogHavoVwo.js";
 import energieHulpbronnenHavoVwo from "./energieHulpbronnenHavoVwo.js";
 import tijdSnelheidAfstandPo from "./tijdSnelheidAfstandPo.js";
+import mensenrechtenVnHavoVwo from "./mensenrechtenVnHavoVwo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -364,6 +365,7 @@ export const ALL_LEARN_PATHS = {
   "tweede-wereldoorlog-havo-vwo": tweedeWereldoorlogHavoVwo,
   "energie-hulpbronnen-havo-vwo": energieHulpbronnenHavoVwo,
   "tijd-snelheid-afstand-po": tijdSnelheidAfstandPo,
+  "mensenrechten-vn-havo-vwo": mensenrechtenVnHavoVwo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,
