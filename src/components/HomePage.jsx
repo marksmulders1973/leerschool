@@ -971,8 +971,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               color: "#7c3aed", onClick: () => handleRoleClick("student"),
               cta: {
                 label: (
-                  <span>
-                    🎓 Of direct naar <span style={{ color: "#fff176", fontWeight: 800 }}>examen</span> oefenen
+                  <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
+                    <span style={{ fontSize: 20, lineHeight: 1 }}>🎓</span> Of direct naar{" "}
+                    <span style={{ color: "#fff176", fontWeight: 800 }}>examen</span> oefenen
                   </span>
                 ),
                 onClick: () => handleFeatureClick("examens"),
