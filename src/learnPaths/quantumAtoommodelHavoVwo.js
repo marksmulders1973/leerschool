@@ -411,7 +411,7 @@ const quantumAtoommodelHavoVwo = {
     { id: "optica-havo-vwo", title: "Optica", niveau: "havo-3F" },
   ],
   intro:
-    "Quantum + Atoommodel voor HAVO/VWO eindexamen — foton E=hf, foto-elektrisch effect, Bohr-energieniveaus, spectraal-analyse. VWO-stof: de Broglie + onzekerheid. 5 stappen × 5 vragen. ~15 min.",
+    "Quantum + Atoommodel voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — foton E=hf, foto-elektrisch effect, Bohr-energieniveaus, spectraal-analyse. VWO-stof: de Broglie + onzekerheid. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "quantum", "kwantum",
     "foton", "lichtkwantum",

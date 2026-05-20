@@ -71,7 +71,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
             Kies jouw plan
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", marginTop: 4 }}>
-            {BRAND.name} blijft gratis voor leerlingen — altijd
+            {BRAND.name} in 2026 helemaal gratis · daarna basis vrij, Pro voor extra's
           </div>
         </div>
 

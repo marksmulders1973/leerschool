@@ -525,7 +525,7 @@ const trillingenGolvenHavoVwo = {
     { id: "mechanica-havo-vwo", title: "Mechanica (HAVO/VWO)", niveau: "havo-3F" },
   ],
   intro:
-    "Trillingen + Golven voor HAVO/VWO eindexamen — periode, frequentie, golfvergelijking v=f·λ, geluid, resonantie, staande golven. VWO-stof: Doppler-effect. 5 stappen × 5 vragen. ~15 min.",
+    "Trillingen + Golven voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — periode, frequentie, golfvergelijking v=f·λ, geluid, resonantie, staande golven. VWO-stof: Doppler-effect. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "trilling", "frequentie", "periode", "amplitude", "Hz", "hertz",
     "harmonische trilling", "sin", "cos",

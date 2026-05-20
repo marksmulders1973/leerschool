@@ -163,14 +163,14 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.45)" }}>
             {isLaunchPromoActive()
               ? "Geen betaling, geen creditcard. Prijzen hieronder starten pas in 2027."
-              : "Leerlingen oefenen altijd gratis — Pro is voor ouders en leerkrachten"}
+              : "Basis-oefenen blijft gratis — Pro voegt extra's toe voor ouders en leerkrachten"}
           </div>
         </div>
 
         {/* Gratis overzicht */}
         <div style={{ borderRadius: 16, border: "1px solid rgba(105,240,174,0.2)", background: "rgba(105,240,174,0.04)", padding: "14px 16px", marginBottom: 20 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 10 }}>
-            🆓 Gratis — altijd, voor iedereen
+            🆓 Gratis-basis — voor iedereen, ook na 2026
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4 }}>
             {FREE_FEATURES.map((f, i) => (

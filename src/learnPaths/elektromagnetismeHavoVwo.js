@@ -395,7 +395,7 @@ const elektromagnetismeHavoVwo = {
     { id: "mechanica-havo-vwo", title: "Mechanica (HAVO/VWO)", niveau: "havo-3F" },
   ],
   intro:
-    "Elektromagnetisme voor HAVO/VWO eindexamen — magnetisch veld B, Lorentzkracht F=qvB en F=BIL, Faraday-inductie, transformator + wisselstroom. VWO-stof: zelfinductie + LC-kring + EM-spectrum. 5 stappen × 5 vragen. ~15 min.",
+    "Elektromagnetisme voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — magnetisch veld B, Lorentzkracht F=qvB en F=BIL, Faraday-inductie, transformator + wisselstroom. VWO-stof: zelfinductie + LC-kring + EM-spectrum. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "magnetisch veld", "B-veld", "tesla", "weber",
     "magneet", "permanente magneet", "noordpool", "zuidpool",

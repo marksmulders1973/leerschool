@@ -350,7 +350,7 @@ const steps = [
         q: "Welke isotoop heeft halveringstijd **van miljarden jaren** + wordt gebruikt voor leeftijds-bepaling rotsen?",
         options: ["U-238", "C-14", "I-131", "Tc-99m"],
         answer: 0,
-        wrongHints: [null, "Niet — C-14 voor archeologie (duizenden jaren).", "Niet — t½ 8 dagen.", "Niet — t½ 6 uur."],
+        wrongHints: [null, "C-14 wordt voor iets ouds maar veel jongers ingezet.", "Medische isotoop, niet voor rotsen.", "Medische isotoop, niet voor rotsen."],
         uitlegPad: {
           stappen: [{ titel: "U-238 → Pb-206, t½=4,5 mld j", tekst: "Uranium-238 vervalt naar lood-206 met halveringstijd ~4,5 miljard jaar — ongeveer leeftijd aarde. Verhouding U/Pb in een rots → ouderdom. Klassieke methode voor oudste aardrotsen (4,4 mld j!)." }],
           niveaus: { basis: "U-238 voor rotsdatering. A.", simpeler: "Lange halveringstijd → miljard-jaren bereik. A.", nogSimpeler: "U-238 = A." },
@@ -405,7 +405,7 @@ const radioactiviteitHavoVwo = {
     { id: "mechanica-havo-vwo", title: "Mechanica (HAVO/VWO)", niveau: "havo-3F" },
   ],
   intro:
-    "Radioactiviteit + kernfysica voor HAVO/VWO eindexamen — atoomkern, α/β/γ-straling, halveringstijd, activiteit, fissie + fusie + bindingsenergie, dosis + toepassingen. 5 stappen × 5 vragen. ~15 min.",
+    "Radioactiviteit + kernfysica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — atoomkern, α/β/γ-straling, halveringstijd, activiteit, fissie + fusie + bindingsenergie, dosis + toepassingen. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "radioactief", "radioactiviteit", "straling",
     "atoomkern", "isotoop", "atoomnummer", "massagetal",

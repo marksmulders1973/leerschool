@@ -393,7 +393,7 @@ const warmteThermodynamicaHavoVwo = {
     { id: "mechanica-havo-vwo", title: "Mechanica (HAVO/VWO)", niveau: "havo-3F" },
   ],
   intro:
-    "Warmte + Thermodynamica voor HAVO/VWO eindexamen — Kelvin-schaal, Q=mcΔT, faseovergangen, ideale gaswet pV=nRT, 1e hoofdwet, warmte-transport (geleiding/convectie/straling). VWO-stof: Carnot-rendement. 5 stappen × 5 vragen. ~15 min.",
+    "Warmte + Thermodynamica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — Kelvin-schaal, Q=mcΔT, faseovergangen, ideale gaswet pV=nRT, 1e hoofdwet, warmte-transport (geleiding/convectie/straling). VWO-stof: Carnot-rendement. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "temperatuur", "Celsius", "Kelvin", "absoluut nulpunt",
     "warmte", "Q", "joule",

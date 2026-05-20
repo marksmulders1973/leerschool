@@ -293,7 +293,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
                   <li>🔑 Koppel je kind met één korte code</li>
                   <li>📊 Voortgang in één oogopslag</li>
-                  <li>🆓 100% gratis — geen abonnement</li>
+                  <li>🆓 In 2026 helemaal gratis · daarna basis-functies vrij</li>
                   <li>🔒 Geen reclame, AVG-veilig</li>
                   <li>📵 Werkt ook offline (PWA)</li>
                 </ul>
@@ -309,7 +309,7 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
                 </ul>
               </div>
               <div style={{ gridColumn: "1 / -1", padding: "10px 12px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.25)", borderRadius: 8, fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
-                <strong style={{ color: "#ffd54f" }}>✨ Anders dan Squla / Junior Einstein:</strong> bij een fout krijgt je kind geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. En het is gratis. Plus complete leerpaden waar elk onderwerp van A tot Z wordt uitgelegd.
+                <strong style={{ color: "#ffd54f" }}>✨ Anders dan Squla / Junior Einstein:</strong> bij een fout krijgt je kind geen "fout!" + door, maar uitleg op 3 niveaus om zelf op door te klikken — als een bijlesdocent in de broekzak. En in 2026 is alles gratis (basis blijft daarna ook gratis). Plus complete leerpaden waar elk onderwerp van A tot Z wordt uitgelegd.
               </div>
               {onRondleiding && (
                 <div style={{ gridColumn: "1 / -1", display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>

@@ -409,7 +409,7 @@ const opticaHavoVwo = {
     { id: "licht-geluid-natuurkunde", title: "Licht + geluid (basis)", niveau: "vmbo-2" },
   ],
   intro:
-    "Optica voor HAVO/VWO eindexamen — reflectie + lichtbreking (Snellius), totale interne reflectie, lenzen + lensformule, kleuren + spectrum. VWO-stof: Young's dubbelspleet + interferentie. 5 stappen × 5 vragen. ~15 min.",
+    "Optica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — reflectie + lichtbreking (Snellius), totale interne reflectie, lenzen + lensformule, kleuren + spectrum. VWO-stof: Young's dubbelspleet + interferentie. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "optica", "licht", "lichtsnelheid",
     "reflectie", "spiegel", "spiegelwet",
