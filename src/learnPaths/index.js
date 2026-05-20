@@ -200,6 +200,7 @@ import evolutieHavoVwo from "./evolutieHavoVwo.js";
 import atmosfeerKlimaatHavoVwo from "./atmosfeerKlimaatHavoVwo.js";
 import stijlLiteratuurHavoVwo from "./stijlLiteratuurHavoVwo.js";
 import engelsLiteratuurHavoVwo from "./engelsLiteratuurHavoVwo.js";
+import matenOmtrekOppervlaktePo from "./matenOmtrekOppervlaktePo.js";
 import wereldorientatieMixPo from "./wereldorientatieMixPo.js";
 import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
@@ -344,6 +345,7 @@ export const ALL_LEARN_PATHS = {
   "atmosfeer-klimaat-havo-vwo": atmosfeerKlimaatHavoVwo,
   "stijl-literatuur-havo-vwo": stijlLiteratuurHavoVwo,
   "engels-literatuur-havo-vwo": engelsLiteratuurHavoVwo,
+  "maten-omtrek-oppervlakte-po": matenOmtrekOppervlaktePo,
   "wereldorientatie-mix-po": wereldorientatieMixPo,
   "voorrang-basis-po": voorrangBasisPo,
   "kalender-rekenen-po": kalenderRekenenPo,

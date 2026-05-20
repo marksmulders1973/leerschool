@@ -4151,6 +4151,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "maten-omtrek-oppervlakte-po",
+    "file": "./matenOmtrekOppervlaktePo.js",
+    "title": "Maten + Omtrek + Oppervlakte + Inhoud (Cito groep 7-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "📏",
+    "referentieNiveau": "1F",
+    "sloThema": "Rekenen — Meetkunde / Doorstroomtoets-onderdeel rekenen",
+    "triggerKeywords": [
+      "maten",
+      "lengte",
+      "km",
+      "kilometer",
+      "meter",
+      "centimeter",
+      "millimeter",
+      "omrekenen",
+      "schaal",
+      "kaart",
+      "omtrek",
+      "oppervlakte"
+    ],
+    "intro": "Cito-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 stap",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "mechanica-havo-vwo",
     "file": "./mechanicaHavoVwo.js",
     "title": "Mechanica (HAVO/VWO natuurkunde)",
