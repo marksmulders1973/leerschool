@@ -3215,6 +3215,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "immuunsysteem-havo-vwo",
+    "file": "./immuunsysteemHavoVwo.js",
+    "title": "Immuunsysteem + Afweer (HAVO/VWO Biologie)",
+    "subject": "biologie",
+    "level": "havo-vwo-4-5",
+    "emoji": "🛡️",
+    "referentieNiveau": "havo-3F / vwo-3S",
+    "sloThema": "Biologie — Immuunsysteem (CSE-onderwerp)",
+    "triggerKeywords": [
+      "immuunsysteem",
+      "afweer",
+      "aspecifiek",
+      "specifiek",
+      "huid",
+      "slijmvlies",
+      "lysozym",
+      "ontsteking",
+      "rubor calor tumor dolor",
+      "fagocyt",
+      "macrofaag",
+      "neutrofiel"
+    ],
+    "intro": "Immuunsysteem voor HAVO/VWO eindexamen — aspecifieke afweer (barrières, ontsteking, fagocytose), specifieke afweer (B/T-cellen, antilichamen), vaccinatie + groepsimmuniteit, auto-immuun + allergie, pa",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 20
+  },
+  {
     "id": "industriele-revolutie-havo-vwo",
     "file": "./industrieleRevolutieHavoVwo.js",
     "title": "Industriële Revolutie (HAVO/VWO Geschiedenis)",
