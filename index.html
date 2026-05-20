@@ -293,11 +293,30 @@
       }
       @media (min-width: 1024px) {
         .lk-hero-tiles {
-          max-width: 600px;
+          max-width: 720px;
           gap: 16px;
         }
         .lk-content-wide {
-          max-width: 760px;
+          max-width: 880px;
+        }
+      }
+      /* Mark feedback 2026-05-20: op laptop nog steeds te veel lege blauw.
+         Op brede schermen (≥1280) tegels + content nog breder zodat hero
+         niet eenzaam in het midden 'zweeft'. */
+      @media (min-width: 1280px) {
+        .lk-hero-tiles {
+          max-width: 880px;
+          gap: 20px;
+        }
+        .lk-content-wide {
+          max-width: 1040px;
+        }
+      }
+      /* Bij bredere tegels (>~320 px each) ziet 1:1 te hoog uit → kortere
+         aspect-ratio zodat foto/CTA compact blijven. */
+      @media (min-width: 1024px) {
+        .lk-tile {
+          aspect-ratio: 5 / 4;
         }
       }
       .lk-tile {
