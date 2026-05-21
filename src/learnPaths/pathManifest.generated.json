@@ -1472,7 +1472,7 @@
       "F=BIL",
       "rechterhandregel"
     ],
-    "intro": "Elektromagnetisme voor HAVO/VWO eindexamen — magnetisch veld B, Lorentzkracht F=qvB en F=BIL, Faraday-inductie, transformator + wisselstroom. VWO-stof: zelfinductie + LC-kring + EM-spectrum. 5 stappen",
+    "intro": "Elektromagnetisme voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — magnetisch veld B, Lorentzkracht F=qvB en F=BIL, Faraday-inductie, transformator + wisselstroom. VWO-stof: zelfinductie + L",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -2727,6 +2727,22 @@
       "morele verontwaardiging"
     ],
     "intro": "6 echte examenvragen uit VMBO-GL/TL Maatschappijkunde 2025 tijdvak 2. Onderwerpen: fase 2 beleidsvoorbereiding (park Maashaven), constitutionele monarchie, motie verzorgingshuis, laatste woord rechtsz",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
+    "id": "examen-nederlands-2023-t1",
+    "file": "./examenNederlands2023T1.js",
+    "title": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+    "subject": "nederlands",
+    "level": "",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": null,
+    "triggerKeywords": [],
+    "intro": "",
     "stepCount": 6,
     "checkCount": 6,
     "chapterCount": 3,
@@ -4941,7 +4957,7 @@
       "n",
       "totale reflectie"
     ],
-    "intro": "Optica voor HAVO/VWO eindexamen — reflectie + lichtbreking (Snellius), totale interne reflectie, lenzen + lensformule, kleuren + spectrum. VWO-stof: Young's dubbelspleet + interferentie. 5 stappen × 5",
+    "intro": "Optica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — reflectie + lichtbreking (Snellius), totale interne reflectie, lenzen + lensformule, kleuren + spectrum. VWO-stof: Young's dubbelsplee",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -5560,7 +5576,7 @@
       "eV",
       "foto-elektrisch"
     ],
-    "intro": "Quantum + Atoommodel voor HAVO/VWO eindexamen — foton E=hf, foto-elektrisch effect, Bohr-energieniveaus, spectraal-analyse. VWO-stof: de Broglie + onzekerheid. 5 stappen × 5 vragen. ~15 min.",
+    "intro": "Quantum + Atoommodel voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — foton E=hf, foto-elektrisch effect, Bohr-energieniveaus, spectraal-analyse. VWO-stof: de Broglie + onzekerheid. 5 stappe",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -5589,7 +5605,7 @@
       "alpha",
       "alfa"
     ],
-    "intro": "Radioactiviteit + kernfysica voor HAVO/VWO eindexamen — atoomkern, α/β/γ-straling, halveringstijd, activiteit, fissie + fusie + bindingsenergie, dosis + toepassingen. 5 stappen × 5 vragen. ~15 min.",
+    "intro": "Radioactiviteit + kernfysica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — atoomkern, α/β/γ-straling, halveringstijd, activiteit, fissie + fusie + bindingsenergie, dosis + toepassingen. 5",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -6590,7 +6606,7 @@
       "massa veer",
       "veerconstante"
     ],
-    "intro": "Trillingen + Golven voor HAVO/VWO eindexamen — periode, frequentie, golfvergelijking v=f·λ, geluid, resonantie, staande golven. VWO-stof: Doppler-effect. 5 stappen × 5 vragen. ~15 min.",
+    "intro": "Trillingen + Golven voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — periode, frequentie, golfvergelijking v=f·λ, geluid, resonantie, staande golven. VWO-stof: Doppler-effect. 5 stappen × 5 ",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -7038,7 +7054,7 @@
       "smeltwarmte",
       "verdampingswarmte"
     ],
-    "intro": "Warmte + Thermodynamica voor HAVO/VWO eindexamen — Kelvin-schaal, Q=mcΔT, faseovergangen, ideale gaswet pV=nRT, 1e hoofdwet, warmte-transport (geleiding/convectie/straling). VWO-stof: Carnot-rendement",
+    "intro": "Warmte + Thermodynamica voor het HAVO/VWO CSE (Centraal Schriftelijk Eindexamen) — Kelvin-schaal, Q=mcΔT, faseovergangen, ideale gaswet pV=nRT, 1e hoofdwet, warmte-transport (geleiding/convectie/stral",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
