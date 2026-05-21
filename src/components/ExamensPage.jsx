@@ -90,10 +90,12 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
   }, []);
   const examenLeerpadIds = useMemo(() => new Set(examenLeerpaden.map((p) => p.id)), [examenLeerpaden]);
 
-  // 4 haalbare vakken met 8/8-pattern (oefen + PDF). Maatschappij wordt apart
+  // 5 haalbare vakken met 8/8-pattern (oefen + PDF). Maatschappij wordt apart
   // gerendered want geen PDF-archief (private aanbieder). Niet-haalbare = PDF-only.
-  const HAALBARE_VAKKEN = ["biologie", "economie", "engels", "geschiedenis"];
-  const NIET_HAALBARE_VAKKEN = ["wiskunde", "nederlands", "aardrijkskunde"];
+  // Nederlands toegevoegd 2026-05-21 — eerste 5 leerpaden (2023-T1/T2,
+  // 2024-T1/T2, 2025-T2) zijn gebouwd uit echte MC-vragen.
+  const HAALBARE_VAKKEN = ["biologie", "economie", "engels", "geschiedenis", "nederlands"];
+  const NIET_HAALBARE_VAKKEN = ["wiskunde", "aardrijkskunde"];
   const ALLE_EXAMEN_JAREN = [2025, 2024, 2023, 2022];
   const ALLE_TIJDVAKKEN = [1, 2];
 
@@ -142,9 +144,8 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
 
   // Reden waarom oefen-versie er nog niet is (voor niet-haalbare vakken).
   const NIET_HAALBAAR_REDEN = {
-    wiskunde: "Wiskunde-examens hebben open vragen (berekenen/tekenen) — onze 4-keuze-uitleg past nog niet zonder open-vraag-grading.",
-    nederlands: "Nederlandse leesteksten zijn 500+ woorden per vraag — moeilijk te verwerken in een didactische 15-minuten-loop.",
-    aardrijkskunde: "Aardrijkskunde leunt op kaarten en foto's — die bron-render-infra staat klaar maar is nog niet gevuld.",
+    wiskunde: "Wiskunde-examens hebben open vragen (berekenen/tekenen) — onze 4-keuze-uitleg past nog niet. Een open-vraag-modus staat op de planning.",
+    aardrijkskunde: "Aardrijkskunde-vragen leunen op kaarten en satellietbeelden uit de bijlage-PDF — die zit nog niet in onze bron-renderer. Wordt opgepakt.",
   };
 
   // Vakfilter — Mark idee: 1 lijst is overzichtelijk maar bij scrollen op
