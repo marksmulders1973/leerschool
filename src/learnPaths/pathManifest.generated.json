@@ -2781,6 +2781,22 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "examen-nederlands-2024-t2",
+    "file": "./examenNederlands2024T2.js",
+    "title": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+    "subject": "nederlands",
+    "level": "",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": null,
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 2,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "exponentieel",
     "file": "./exponentieel.js",
     "title": "Exponentiële groei en afname",
