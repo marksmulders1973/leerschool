@@ -137,17 +137,12 @@ const BIOME_TIJDPERK = [
   { jaar: "1974", denker: "Stephen Hawking",   plek: "Zwart gat — straling" },
 ];
 
-// Klassieke muziek-tracks (Sprint 3 — 15-agent-audit).
-// Alle stukken publiek domein (componisten +70j dood); opnames moeten CC-licensed
-// of public domain zijn. Plug nieuwe MP3's in /public/audio/ en wijzig src.
-// Mark wens 2026-05-19: elke 10 levels een ander muziekje. Cluster-mapping:
-// 1-10 Vivaldi → 11-20 Mozart → 21-30 Rossini → 31-40 Bach → 41-50 Beethoven → loop.
+// OBLITERATOR-soundtrack (2026-05-22 — klassieke muziek vervallen op Mark's
+// verzoek; vervangen door Cheerio Ol' Remix als enige bg-track). De cluster-
+// logica blijft intact: per 10 levels wisselt de playbackRate via TEMPO_VARIANTEN
+// zodat dezelfde track hoorbaar anders klinkt naarmate je dieper komt.
 const KLASSIEKE_TRACKS = [
-  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer",       jaar: 1725, src: "/audio/obliterator-bg.mp3",        levelRange: "1-10"  },
-  { componist: "Mozart",    werk: "Eine kleine Nachtmusik",          jaar: 1787, src: "/audio/obliterator-mozart.mp3",    levelRange: "11-20" },
-  { componist: "Rossini",   werk: "William Tell — Ouverture",        jaar: 1829, src: "/audio/obliterator-rossini.mp3",   levelRange: "21-30" },
-  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3",      jaar: 1721, src: "/audio/obliterator-bach.mp3",      levelRange: "31-40" },
-  { componist: "Beethoven", werk: "Symfonie nr. 5",                  jaar: 1808, src: "/audio/obliterator-beethoven.mp3", levelRange: "41-50" },
+  { componist: "Cheerio Ol'", werk: "Remix", jaar: 2026, src: "/audio/obliterator-cheerio.mp3", levelRange: "1-10" },
 ];
 // Tempo-varianten — Mark wens 2026-05-19 later: na level 50 moet het ook
 // nog blijven wisselen tot lvl 100+. Bij elke nieuwe cluster-ronde door
@@ -10668,10 +10663,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         )}
       </div>
 
-      {/* Achtergrond-muziek: Vivaldi - Zomer Presto (CC-BY-SA 3.0, John Harrison
-          / Wichita State Players via Internet Archive). Speelt alleen tijdens
-          fase 'spelen' + geluidAan; useEffect hierboven bestuurt play/pause. */}
-      <audio ref={bgMusicRef} src="/audio/obliterator-bg.mp3" preload="auto" />
+      {/* Achtergrond-muziek: Cheerio Ol' Remix (2026-05-22 — klassieke tracks
+          vervallen). Speelt alleen tijdens fase 'spelen' + geluidAan; useEffect
+          hierboven bestuurt play/pause. */}
+      <audio ref={bgMusicRef} src="/audio/obliterator-cheerio.mp3" preload="auto" />
 
       {/* Sprint 6 — Missie-checklist rechtsboven tijdens spelen. Toont 3
           actieve missies + voortgang. Voltooid = ✓ + groen, anders progress. */}
