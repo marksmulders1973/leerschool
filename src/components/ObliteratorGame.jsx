@@ -8811,10 +8811,27 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     a.play().catch(() => {/* autoplay-block, geen probleem */});
 
     // Playlist-rotatie: Cheerio (vol) → klassiek (~22s) → Cheerio (volgende tempo) → ...
-    let interludeTimer = null;
-    const clearInterludeTimer = () => { if (interludeTimer) { clearTimeout(interludeTimer); interludeTimer = null; } };
+    // 2026-05-22b — timer-based ipv ended-only: `ended` vuurt soms niet bij
+    // ServiceWorker-gecachte audio of bepaalde codecs. We schedulen op basis
+    // van duration (via `durationchange` event); `ended` blijft als backup.
+    let switchTimer = null;
+    const clearSwitchTimer = () => { if (switchTimer) { clearTimeout(switchTimer); switchTimer = null; } };
+    const ENDS_BUFFER_MS = 250;
+    const scheduleNextSwitch = () => {
+      clearSwitchTimer();
+      const dur = a.duration;
+      const rate = a.playbackRate || 1;
+      if (!dur || !isFinite(dur) || dur <= 0) return; // wachten op durationchange
+      const fullMs = (dur * 1000) / rate;
+      const cap = playlistModeRef.current === "interlude" ? INTERLUDE_DUUR_MS : Infinity;
+      const ms = Math.max(2000, Math.min(cap, fullMs - ENDS_BUFFER_MS));
+      switchTimer = setTimeout(() => {
+        if (playlistModeRef.current === "main") startInterlude();
+        else startMain();
+      }, ms);
+    };
     const startMain = () => {
-      clearInterludeTimer();
+      clearSwitchTimer();
       cheerioRondeRef.current = (cheerioRondeRef.current + 1) % TEMPO_VARIANTEN.length;
       const v = TEMPO_VARIANTEN[cheerioRondeRef.current];
       playlistModeRef.current = "main";
@@ -8822,12 +8839,14 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         a.src = MAIN_SRC;
         a.currentTime = 0;
         a.playbackRate = v.speed;
+        a.loop = false;
         a.play().catch(() => {});
       } catch {}
       try { triggerTrackCardRef.current({ componist: "Cheerio Ol'", werk: "Remix" + v.suffix, jaar: 2026 }); } catch {}
+      // durationchange triggert scheduleNextSwitch zodra new duration bekend is
     };
     const startInterlude = () => {
-      clearInterludeTimer();
+      clearSwitchTimer();
       const t = INTERLUDE_TRACKS[interludeIdxRef.current % INTERLUDE_TRACKS.length];
       interludeIdxRef.current = (interludeIdxRef.current + 1) % INTERLUDE_TRACKS.length;
       playlistModeRef.current = "interlude";
@@ -8835,19 +8854,24 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
         a.src = t.src;
         a.currentTime = 0;
         a.playbackRate = 1.0;
+        a.loop = false;
         a.play().catch(() => {});
       } catch {}
       try { triggerTrackCardRef.current({ componist: t.componist, werk: t.werk + " (kort)", jaar: t.jaar }); } catch {}
-      // Cap op INTERLUDE_DUUR_MS — anders blijven we te lang in klassiek hangen
-      interludeTimer = setTimeout(() => {
+      // Veiligheidsnet: ook als durationchange faalt, switchen we na INTERLUDE_DUUR_MS
+      switchTimer = setTimeout(() => {
         if (playlistModeRef.current === "interlude") startMain();
       }, INTERLUDE_DUUR_MS);
     };
+    const onDurationChange = () => scheduleNextSwitch();
     const onEnded = () => {
       if (playlistModeRef.current === "main") startInterlude();
       else startMain();
     };
     a.addEventListener("ended", onEnded);
+    a.addEventListener("durationchange", onDurationChange);
+    // Initial schedule — duration kan al beschikbaar zijn (preload="auto")
+    scheduleNextSwitch();
 
     // Web Audio API setup: AudioContext + Analyser. 1× opzetten, herbruiken.
     if (!audioCtxRef.current) {
@@ -8898,8 +8922,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     rafId = requestAnimationFrame(tick);
     return () => {
       if (rafId) cancelAnimationFrame(rafId);
-      clearInterludeTimer();
+      clearSwitchTimer();
       try { a.removeEventListener("ended", onEnded); } catch {}
+      try { a.removeEventListener("durationchange", onDurationChange); } catch {}
     };
   }, [fase, geluidAan]);
 
