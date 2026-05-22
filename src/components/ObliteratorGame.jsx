@@ -138,12 +138,23 @@ const BIOME_TIJDPERK = [
 ];
 
 // OBLITERATOR-soundtrack (2026-05-22 — klassieke muziek vervallen op Mark's
-// verzoek; vervangen door Cheerio Ol' Remix als enige bg-track). De cluster-
-// logica blijft intact: per 10 levels wisselt de playbackRate via TEMPO_VARIANTEN
-// zodat dezelfde track hoorbaar anders klinkt naarmate je dieper komt.
+// verzoek; Cheerio Ol' Remix is de hoofd-track). De cluster-logica blijft
+// intact: per 10 levels wisselt de playbackRate via TEMPO_VARIANTEN zodat de
+// hoofd-track hoorbaar anders klinkt naarmate je dieper komt.
 const KLASSIEKE_TRACKS = [
   { componist: "Cheerio Ol'", werk: "Remix", jaar: 2026, src: "/audio/obliterator-cheerio.mp3", levelRange: "1-10" },
 ];
+// Interlude-pool — Mark wens 2026-05-22: na elke Cheerio-doorgang kort een
+// klassiek nummer als overgang, dan terug naar Cheerio. Hergebruikt de 5 oude
+// mp3's die nog in /public/audio/ staan.
+const INTERLUDE_TRACKS = [
+  { componist: "Vivaldi",   werk: "Vier Jaargetijden — Zomer",  jaar: 1725, src: "/audio/obliterator-bg.mp3" },
+  { componist: "Mozart",    werk: "Eine kleine Nachtmusik",     jaar: 1787, src: "/audio/obliterator-mozart.mp3" },
+  { componist: "Rossini",   werk: "William Tell — Ouverture",   jaar: 1829, src: "/audio/obliterator-rossini.mp3" },
+  { componist: "Bach",      werk: "Brandenburg Concerto nr. 3", jaar: 1721, src: "/audio/obliterator-bach.mp3" },
+  { componist: "Beethoven", werk: "Symfonie nr. 5",             jaar: 1808, src: "/audio/obliterator-beethoven.mp3" },
+];
+const INTERLUDE_DUUR_MS = 22000; // ~22 sec — net lang genoeg voor een herkenbare snippet
 // Tempo-varianten — Mark wens 2026-05-19 later: na level 50 moet het ook
 // nog blijven wisselen tot lvl 100+. Bij elke nieuwe cluster-ronde door
 // dezelfde 5 tracks veranderen we de afspeel-snelheid, zodat dezelfde MP3
@@ -1272,25 +1283,30 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       } catch {}
       // Sprint 3 — track-switch + audio-card. Alleen tonen als nieuwe cluster
       // (anders pop-up bij elk biome-binnen-cluster, te frequent).
+      // 2026-05-22 — skip als we in interlude (klassiek) zitten; de playlist-
+      // rotatie regelt de src zelf via onended, deze cluster-code mag dan niet
+      // tussendoor terug-switchen naar Cheerio.
       try {
-        const track = getTrackForLevel(lvl);
-        const trackKey = track.componist + track.werk; // werk bevat tempo-suffix → unieke key per ronde
-        if (trackKey !== levelTrackRef.current) {
-          levelTrackRef.current = trackKey;
-          triggerTrackCardRef.current(track);
-          const a = bgMusicRef.current;
-          if (a) {
-            // Tempo altijd opnieuw zetten — ook als src gelijk blijft (volgende
-            // cluster-ronde gebruikt zelfde MP3 maar andere playbackRate).
-            try { a.playbackRate = track.playbackRate || 1.0; } catch {}
-            if (!a.src.endsWith(track.src)) {
-              const wasPaused = a.paused;
-              a.src = track.src;
-              try {
-                a.currentTime = 0;
-                a.playbackRate = track.playbackRate || 1.0;
-                if (!wasPaused) a.play().catch(() => {});
-              } catch {}
+        if (playlistModeRef.current !== "interlude") {
+          const track = getTrackForLevel(lvl);
+          const trackKey = track.componist + track.werk; // werk bevat tempo-suffix → unieke key per ronde
+          if (trackKey !== levelTrackRef.current) {
+            levelTrackRef.current = trackKey;
+            triggerTrackCardRef.current(track);
+            const a = bgMusicRef.current;
+            if (a) {
+              // Tempo altijd opnieuw zetten — ook als src gelijk blijft (volgende
+              // cluster-ronde gebruikt zelfde MP3 maar andere playbackRate).
+              try { a.playbackRate = track.playbackRate || 1.0; } catch {}
+              if (!a.src.endsWith(track.src)) {
+                const wasPaused = a.paused;
+                a.src = track.src;
+                try {
+                  a.currentTime = 0;
+                  a.playbackRate = track.playbackRate || 1.0;
+                  if (!wasPaused) a.play().catch(() => {});
+                } catch {}
+              }
             }
           }
         }
@@ -8623,6 +8639,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const audioBeatRef = useRef(0); // 0..1 — current bass-energy intensiteit
   const audioCtxRef = useRef(null);
   const analyserRef = useRef(null);
+  // 2026-05-22 — playlist-rotatie: Cheerio (vol) → klassiek (kort) → Cheerio (andere tempo) → ...
+  const playlistModeRef = useRef("main");   // "main" | "interlude"
+  const interludeIdxRef = useRef(0);        // cycle door INTERLUDE_TRACKS
+  const cheerioRondeRef = useRef(0);        // hoe vaak Cheerio al opnieuw gestart is → tempo-variant
   // Sprint 3 — multi-track infra. levelTrackRef volgt het huidige level zodat
   // de game-loop track-switches kan triggeren via setNowPlaying. Display van
   // de audio-card gebeurt via state met auto-fade timer.
@@ -8774,14 +8794,60 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const a = bgMusicRef.current;
     if (!a) return;
     a.volume = 0.32;
-    a.loop = true;
-    if (fase === "spelen" && geluidAan) {
-      a.play().catch(() => {/* autoplay-block, geen probleem */});
-    } else {
+    a.loop = false; // 2026-05-22 — rotatie via onended ipv looping
+    if (fase !== "spelen" || !geluidAan) {
       try { a.pause(); a.currentTime = 0; } catch {}
       audioBeatRef.current = 0;
+      playlistModeRef.current = "main";
       return;
     }
+    // Start altijd met Cheerio in main-mode
+    const MAIN_SRC = "/audio/obliterator-cheerio.mp3";
+    if (playlistModeRef.current !== "main" || !a.src.endsWith("obliterator-cheerio.mp3")) {
+      a.src = MAIN_SRC;
+      a.playbackRate = TEMPO_VARIANTEN[0].speed;
+      playlistModeRef.current = "main";
+    }
+    a.play().catch(() => {/* autoplay-block, geen probleem */});
+
+    // Playlist-rotatie: Cheerio (vol) → klassiek (~22s) → Cheerio (volgende tempo) → ...
+    let interludeTimer = null;
+    const clearInterludeTimer = () => { if (interludeTimer) { clearTimeout(interludeTimer); interludeTimer = null; } };
+    const startMain = () => {
+      clearInterludeTimer();
+      cheerioRondeRef.current = (cheerioRondeRef.current + 1) % TEMPO_VARIANTEN.length;
+      const v = TEMPO_VARIANTEN[cheerioRondeRef.current];
+      playlistModeRef.current = "main";
+      try {
+        a.src = MAIN_SRC;
+        a.currentTime = 0;
+        a.playbackRate = v.speed;
+        a.play().catch(() => {});
+      } catch {}
+      try { triggerTrackCardRef.current({ componist: "Cheerio Ol'", werk: "Remix" + v.suffix, jaar: 2026 }); } catch {}
+    };
+    const startInterlude = () => {
+      clearInterludeTimer();
+      const t = INTERLUDE_TRACKS[interludeIdxRef.current % INTERLUDE_TRACKS.length];
+      interludeIdxRef.current = (interludeIdxRef.current + 1) % INTERLUDE_TRACKS.length;
+      playlistModeRef.current = "interlude";
+      try {
+        a.src = t.src;
+        a.currentTime = 0;
+        a.playbackRate = 1.0;
+        a.play().catch(() => {});
+      } catch {}
+      try { triggerTrackCardRef.current({ componist: t.componist, werk: t.werk + " (kort)", jaar: t.jaar }); } catch {}
+      // Cap op INTERLUDE_DUUR_MS — anders blijven we te lang in klassiek hangen
+      interludeTimer = setTimeout(() => {
+        if (playlistModeRef.current === "interlude") startMain();
+      }, INTERLUDE_DUUR_MS);
+    };
+    const onEnded = () => {
+      if (playlistModeRef.current === "main") startInterlude();
+      else startMain();
+    };
+    a.addEventListener("ended", onEnded);
 
     // Web Audio API setup: AudioContext + Analyser. 1× opzetten, herbruiken.
     if (!audioCtxRef.current) {
@@ -8830,7 +8896,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       rafId = requestAnimationFrame(tick);
     }
     rafId = requestAnimationFrame(tick);
-    return () => { if (rafId) cancelAnimationFrame(rafId); };
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      clearInterludeTimer();
+      try { a.removeEventListener("ended", onEnded); } catch {}
+    };
   }, [fase, geluidAan]);
 
   return (
