@@ -3556,6 +3556,34 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "inhoudsmaten-po",
+    "file": "./inhoudsmatenPo.js",
+    "title": "Inhoudsmaten — liters, ml, cm³ omrekenen (groep 6-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "🥛",
+    "referentieNiveau": "1F-1S",
+    "sloThema": "Rekenen — inhoudsmaten (liters + kubieke maten) Doorstroomtoets",
+    "triggerKeywords": [
+      "inhoudsmaten",
+      "liter",
+      "milliliter",
+      "deciliter",
+      "centiliter",
+      "kubieke centimeter",
+      "cm3",
+      "dm3",
+      "m3",
+      "omrekenen inhoud",
+      "doorstroomtoets rekenen"
+    ],
+    "intro": "Leer liters, deciliters, centiliters en milliliters omrekenen. Plus: kubieke maten (cm³, dm³, m³) en de gouden regel 1 dm³ = 1 liter. Alles wat je nodig hebt voor de Doorstroomtoets.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "integralen-havo-vwo",
     "file": "./integralenHavoVwo.js",
     "title": "Integralen (HAVO/VWO wiskunde B)",
@@ -5840,6 +5868,32 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "schaal-plattegrond-po",
+    "file": "./schaalPlattegrondPo.js",
+    "title": "Schaal en plattegrond — kaart lezen en omrekenen (groep 7-8)",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "🗺️",
+    "referentieNiveau": "1F-1S",
+    "sloThema": "Rekenen — schaal en plattegrond (Doorstroomtoets)",
+    "triggerKeywords": [
+      "schaal",
+      "plattegrond",
+      "kaart lezen",
+      "1 op",
+      "schaalberekening",
+      "maquette",
+      "omrekenen kaart",
+      "echte afstand",
+      "doorstroomtoets rekenen"
+    ],
+    "intro": "Leer werken met schaal: van kaart naar werkelijkheid (×) en terug (÷). Met plattegronden, kaarten en maquettes. Alles wat je nodig hebt voor de Doorstroomtoets rekenen.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "schatten-afronden",
     "file": "./schattenAfronden.js",
     "title": "Schatten en afronden — Cito groep 5-8",
@@ -6895,6 +6949,32 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "verwijswoorden-po",
+    "file": "./verwijswoordenPo.js",
+    "title": "Verwijswoorden — waar slaat het op? (groep 7-8)",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "🔗",
+    "referentieNiveau": "1F-2F",
+    "sloThema": "Taal — verwijswoorden herkennen (Doorstroomtoets begrijpend lezen)",
+    "triggerKeywords": [
+      "verwijswoorden",
+      "waar verwijst",
+      "waar slaat op",
+      "hij zij het",
+      "dit dat die deze",
+      "daarin daarmee",
+      "daarom daardoor",
+      "doorstroomtoets taal",
+      "begrijpend lezen verwijzing"
+    ],
+    "intro": "Leer herkennen waar verwijswoorden (hij/zij/die/dat/daarin/daarmee) naar terugwijzen in een tekst. Dit is een van de meest gestelde vraagtypen op de Doorstroomtoets taal.",
+    "stepCount": 4,
+    "checkCount": 22,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "vlakke-figuren",
     "file": "./vlakkeFiguren.js",
     "title": "Vlakke figuren (meetkunde)",
@@ -7747,6 +7827,33 @@
     "checkCount": 26,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "zinsontleding-po",
+    "file": "./zinsontledingPo.js",
+    "title": "Zinsontleding — zinsdelen herkennen (groep 7-8)",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "🧩",
+    "referentieNiveau": "1F-2F",
+    "sloThema": "Taal — zinsontleding (zinsdelen aanwijzen) Doorstroomtoets",
+    "triggerKeywords": [
+      "zinsontleding",
+      "zinsdelen",
+      "persoonsvorm",
+      "onderwerp",
+      "lijdend voorwerp",
+      "meewerkend voorwerp",
+      "ontleden",
+      "pv vinden",
+      "gezegde",
+      "doorstroomtoets taal"
+    ],
+    "intro": "Leer zinsdelen herkennen: persoonsvorm, onderwerp, lijdend voorwerp en meewerkend voorwerp. Met de vaste stappen (pv → ow → lv → mv) kun je elke zin ontleden op de Doorstroomtoets.",
+    "stepCount": 5,
+    "checkCount": 26,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
   },
   {
     "id": "zuren-basen-havo-vwo",
