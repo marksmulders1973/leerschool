@@ -7749,6 +7749,33 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "zinsontleding-po",
+    "file": "./zinsontledingPo.js",
+    "title": "Zinsontleding — zinsdelen herkennen (groep 7-8)",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "🧩",
+    "referentieNiveau": "1F-2F",
+    "sloThema": "Taal — zinsontleding (zinsdelen aanwijzen) Doorstroomtoets",
+    "triggerKeywords": [
+      "zinsontleding",
+      "zinsdelen",
+      "persoonsvorm",
+      "onderwerp",
+      "lijdend voorwerp",
+      "meewerkend voorwerp",
+      "ontleden",
+      "pv vinden",
+      "gezegde",
+      "doorstroomtoets taal"
+    ],
+    "intro": "Leer zinsdelen herkennen: persoonsvorm, onderwerp, lijdend voorwerp en meewerkend voorwerp. Met de vaste stappen (pv → ow → lv → mv) kun je elke zin ontleden op de Doorstroomtoets.",
+    "stepCount": 5,
+    "checkCount": 26,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "zuren-basen-havo-vwo",
     "file": "./zurenBasenHavoVwo.js",
     "title": "Zuren, basen + pH (HAVO/VWO scheikunde)",
