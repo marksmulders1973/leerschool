@@ -6895,6 +6895,32 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "verwijswoorden-po",
+    "file": "./verwijswoordenPo.js",
+    "title": "Verwijswoorden — waar slaat het op? (groep 7-8)",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "🔗",
+    "referentieNiveau": "1F-2F",
+    "sloThema": "Taal — verwijswoorden herkennen (Doorstroomtoets begrijpend lezen)",
+    "triggerKeywords": [
+      "verwijswoorden",
+      "waar verwijst",
+      "waar slaat op",
+      "hij zij het",
+      "dit dat die deze",
+      "daarin daarmee",
+      "daarom daardoor",
+      "doorstroomtoets taal",
+      "begrijpend lezen verwijzing"
+    ],
+    "intro": "Leer herkennen waar verwijswoorden (hij/zij/die/dat/daarin/daarmee) naar terugwijzen in een tekst. Dit is een van de meest gestelde vraagtypen op de Doorstroomtoets taal.",
+    "stepCount": 4,
+    "checkCount": 22,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "vlakke-figuren",
     "file": "./vlakkeFiguren.js",
     "title": "Vlakke figuren (meetkunde)",
