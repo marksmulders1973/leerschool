@@ -3556,6 +3556,34 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "inhoudsmaten-po",
+    "file": "./inhoudsmatenPo.js",
+    "title": "Inhoudsmaten — liters, ml, cm³ omrekenen (groep 6-8)",
+    "subject": "rekenen",
+    "level": "groep6-8",
+    "emoji": "🥛",
+    "referentieNiveau": "1F-1S",
+    "sloThema": "Rekenen — inhoudsmaten (liters + kubieke maten) Doorstroomtoets",
+    "triggerKeywords": [
+      "inhoudsmaten",
+      "liter",
+      "milliliter",
+      "deciliter",
+      "centiliter",
+      "kubieke centimeter",
+      "cm3",
+      "dm3",
+      "m3",
+      "omrekenen inhoud",
+      "doorstroomtoets rekenen"
+    ],
+    "intro": "Leer liters, deciliters, centiliters en milliliters omrekenen. Plus: kubieke maten (cm³, dm³, m³) en de gouden regel 1 dm³ = 1 liter. Alles wat je nodig hebt voor de Doorstroomtoets.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "integralen-havo-vwo",
     "file": "./integralenHavoVwo.js",
     "title": "Integralen (HAVO/VWO wiskunde B)",
