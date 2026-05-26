@@ -5868,6 +5868,32 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "schaal-plattegrond-po",
+    "file": "./schaalPlattegrondPo.js",
+    "title": "Schaal en plattegrond — kaart lezen en omrekenen (groep 7-8)",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "🗺️",
+    "referentieNiveau": "1F-1S",
+    "sloThema": "Rekenen — schaal en plattegrond (Doorstroomtoets)",
+    "triggerKeywords": [
+      "schaal",
+      "plattegrond",
+      "kaart lezen",
+      "1 op",
+      "schaalberekening",
+      "maquette",
+      "omrekenen kaart",
+      "echte afstand",
+      "doorstroomtoets rekenen"
+    ],
+    "intro": "Leer werken met schaal: van kaart naar werkelijkheid (×) en terug (÷). Met plattegronden, kaarten en maquettes. Alles wat je nodig hebt voor de Doorstroomtoets rekenen.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "schatten-afronden",
     "file": "./schattenAfronden.js",
     "title": "Schatten en afronden — Cito groep 5-8",
