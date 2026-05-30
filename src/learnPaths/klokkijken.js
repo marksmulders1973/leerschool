@@ -173,7 +173,7 @@ const steps = [
         q: "Bij **half 8** staat de **kleine wijzer**...",
         options: ["Tussen 7 en 8","Op 8","Op 7","Tussen 8 en 9"],
         answer: 0,
-        wrongHints: [null,"De kleine wijzer is halverwege twee uren.","Bij precies 8 uur staat 'ie op 8.","Bij 7 uur staat 'ie op 7.","Dan zou het al na 8 zijn."],
+        wrongHints: [null,"Bij precies 8 uur staat 'ie op de 8.","Bij precies 7 uur staat 'ie op de 7.","Dan zou het al ná 8 zijn."],
         uitlegPad: {
           stappen: [{ titel: "Half = halverwege", tekst: "Half 8 = 7:30. Uurwijzer staat halverwege 7 en 8." }],
           woorden: [{ woord: "halverwege", uitleg: "In het midden tussen 2 punten. Bij half: tussen vorig + huidig uur." }],

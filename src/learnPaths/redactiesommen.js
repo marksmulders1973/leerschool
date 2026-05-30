@@ -105,7 +105,7 @@ const steps = [
         q: "*'Een doos heeft 24 stickers. Verdeeld over 6 kinderen.'* Welke **bewerking**?",
         options: ["Delen","Optellen","Aftrekken","Vermenigvuldigen"],
         answer: 0,
-        wrongHints: [null,"'Verdeeld over' = delen.","Niet samenvoegen.","Niet aftrekken — niemand neemt iets weg.","Niet vermenigvuldigen — verdelen is anders."],
+        wrongHints: [null,"Niet samenvoegen — er komt niets bij.","Niet aftrekken — niemand neemt iets weg.","Niet vermenigvuldigen — verdelen is anders."],
       },
       {
         q: "*'Een fles 1,5 L kost € 2,40. Hoeveel **per liter**?'* — bewerking?",
@@ -177,7 +177,7 @@ const steps = [
         q: "*'Een klas heeft € 200. Ze kopen 12 boeken van € 14,50. Hoeveel over?'*",
         options: ["€ 26","€ 174","€ 14,50","€ 200"],
         answer: 0,
-        wrongHints: [null,"Te veel — eerst 12 × €14,50 = €174. Dan €200 − €174.","Dat is wat ze betalen, niet wat over is.","Verkeerd — dat is prijs per boek.","Niets afgetrokken."],
+        wrongHints: [null,"Dat is wat ze betalen (12 × €14,50), niet wat er over is.","Dat is de prijs per boek, niet het restant.","Niets afgetrokken — €200 is het startbedrag."],
       },
       {
         q: "*'30 leerlingen verdelen € 90 evenwichtig. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
@@ -214,7 +214,7 @@ const steps = [
         q: "*'Drie vriendinnen verdelen € 75 evenwichtig. Daarna koopt iedereen iets van € 12. **Hoeveel ieder over?'*",
         options: ["€ 13","€ 25","€ 12","€ 39"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is per kind vóór koop.","Niets afgetrokken.","Te veel — controleer 25 - 12.","Veel te veel."],
+        wrongHints: [null,"Te veel — dat is per kind vóór de koop.","Te veel — controleer 25 − 12.","Veel te veel."],
       },
       {
         q: "*'Een trein vertrekt 09:35 en rijdt 2 uur 50 min. **Aankomst**?'*",

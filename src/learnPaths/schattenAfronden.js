@@ -207,7 +207,7 @@ const steps = [
         q: "Een biljet van **€ 50** voor boodschappen van **€ 12,40 + € 8,30 + € 25,80**. **Past 't?**",
         options: ["Net niet — schat 47","Ja, ruim genoeg","Nee, te veel","Onmogelijk te zeggen"],
         answer: 0,
-        wrongHints: [null,"12+8+26 = 46. Plus extras. Bijna 50 maar net.","Niet ruim — kort op 50.","Past wel — net.","Wel — schat de som."],
+        wrongHints: [null,"Niet ruim — het is kort op de 50.","Het past wél — de som is ongeveer 46.","Wel te zeggen — schat de som (12 + 8 + 26)."],
       },
       {
         q: "**Schat 612 ÷ 7**:",

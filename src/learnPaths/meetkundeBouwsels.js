@@ -321,7 +321,7 @@ const steps = [
         q: "Een **emmer** van **50 cm × 30 cm × 40 cm**. Hoeveel **liter**?",
         options: ["60 liter", "120 liter", "600 liter", "12 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel — heb je gedeeld door 1000 om naar liter te gaan?", "Te veel — controleer 60.000 ÷ 1000.", "Te weinig — komma 1 plek verkeerd.", "Te weinig — controleer of je 60.000 ÷ 1000 deelt."],
+        wrongHints: [null, "Te veel — controleer 60.000 ÷ 1000.", "Te veel — komma 1 plek verkeerd.", "Te weinig — heb je 60.000 ÷ 1000 gedaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Eerst cm³", tekst: "50 × 30 × 40 = 60.000 cm³." },
@@ -357,7 +357,7 @@ const steps = [
         q: "Balk **5 cm × 4 cm × 3 cm**. Volume?",
         options: ["60 cm³", "12 cm³", "20 cm³", "15 cm³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 4 × 3 gedaan, lengte vergeten.", "Te weinig — alleen 5 × 4 gedaan, hoogte vergeten.", "Te weinig — alleen 5 × 3 gedaan, breedte vergeten."],
+        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 5 × 4 gedaan, hoogte vergeten.", "Te weinig — alleen 5 × 3 gedaan, breedte vergeten."],
       },
       {
         q: "**8000 cm³** = ... **liter**?",
@@ -369,7 +369,7 @@ const steps = [
         q: "Een **kamer** is **5 m × 4 m × 3 m**. Hoeveel **m³** lucht?",
         options: ["60 m³", "12 m³", "20 m³", "120 m³"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 4 × 3 gedaan.", "Te weinig — alleen 5 × 4 gedaan.", "Te veel — controleer 5 × 4 × 3."],
+        wrongHints: [null, "Te weinig — dat is 5 + 4 + 3. Volume is keer.", "Te weinig — alleen 5 × 4 gedaan.", "Te veel — controleer 5 × 4 × 3."],
       },
       {
         q: "**2,5 liter** = ... **mL**?",

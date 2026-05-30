@@ -403,7 +403,7 @@ const steps = [
       { q: "Welke 3 **functies** heeft geld?", options: ["Ruil + reken + spaar","Ruil + reken","Ruil + reclame","Spaar + lenen + reclame"], answer: 0, wrongHints: [null, "Mist sparen.", "Niet — reclame is geen functie.", "Niet 3 functies."] },
       { q: "**Schulden** ontstaan als je?", options: ["Niet terugbetaalt wat je leende","Veel spaart","Niet uitgeeft","Statiegeld inlevert"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."] },
       { q: "Influencer reclame heet?", options: ["Sponsored content / partnership","Eerlijke mening","Niet reclame","Belasting"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel.", "Niet."] },
-      { q: "Als geld op spaarrekening blijft, krijg je vaak?", options: ["Rente","Niets","Korting","Bonus"], answer: 0, wrongHints: [null,"Klopt — beloning.","Niet — wel rente.","Niet — spaar.","Soms.","Niet algemeen."] },
+      { q: "Als geld op spaarrekening blijft, krijg je vaak?", options: ["Rente","Niets","Korting","Bonus"], answer: 0, wrongHints: [null,"Niet niets — je krijgt wél iets.","Korting is bij kopen, niet bij sparen.","Soms een bonus, maar meestal heet het rente."] },
       { q: "**Begroting** is?", options: ["Plan voor inkomsten + uitgaven","Boodschappenlijst","Reclame","Bankrekening"], answer: 0, wrongHints: [null, "Soms onderdeel.", "Niet.", "Niet."] },
       { q: "Welke geldzaak is voor **kinderen** verstandig?", options: ["Klein deel zakgeld sparen","Alles op één hoop","Niets sparen","Lenen"], answer: 0, wrongHints: [null, "Niet — overzicht weg.", "Niet.", "Risico."] },
       { q: "Welk product heeft **statiegeld** in NL?", options: ["Plastic flessen","Boeken","Stickers","Bananen"], answer: 0, wrongHints: [null, "Geen statiegeld.", "Geen.", "Geen."] },

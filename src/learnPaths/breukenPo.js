@@ -229,7 +229,7 @@ const steps = [
         q: "**5/6 − 2/6** = ?",
         options: ["1/2","3/12","3/6","2/6"],
         answer: 0,
-        wrongHints: [null,"Niet vereenvoudigd — kun je 3/6 nog kleiner maken?","Niet beide aftrekken — alleen tellers.","Niet vereenvoudigd.","Verkeerde aftrekking — 5−2=?"],
+        wrongHints: [null,"Niet beide aftrekken — alleen de tellers, de noemer blijft 6.","Klopt qua som maar nog niet vereenvoudigd — maak kleiner.","Verkeerde aftrekking — reken 5 − 2 in de teller."],
         uitlegPad: {
           stappen: [{ titel: "Trek af + vereenvoudig", tekst: "5-2=3. Noemer blijft 6 → 3/6. Vereenvoudig: 3/6 → 1/2." }],
           woorden: [{ woord: "vereenvoudigen na", uitleg: "Antwoord altijd zo simpel mogelijk maken." }],

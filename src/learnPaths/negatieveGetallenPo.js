@@ -165,7 +165,7 @@ const steps = [
         q: "**8 − (−3)** = ?",
         options: ["11","5","−11","−5"],
         answer: 0,
-        wrongHints: [null,"Twee minnen achter elkaar — wat doen die samen? Optellen of aftrekken?","Niet 8 − 3 — let goed op het minteken in de haakjes.","Andersom — twee minnen heffen elkaar op.","Niet aftrekken — twee minnen heffen elkaar op."],
+        wrongHints: [null,"Niet 8 − 3 — let goed op het minteken in de haakjes.","Andersom — twee minnen heffen elkaar op.","Niet aftrekken — twee minnen heffen elkaar op."],
         uitlegPad: {
           stappen: [{ titel: "−− = +", tekst: "8 − (−3) → twee minnen worden plus → 8 + 3 = 11." }],
           woorden: [{ woord: "min een minus", uitleg: "Twee minnen achter elkaar = plus." }],
@@ -179,7 +179,7 @@ const steps = [
         q: "**−4 + (−6)** = ?",
         options: ["−10","+10","−2","+2"],
         answer: 0,
-        wrongHints: [null,"Plus een minus = aftrekken: −4 − 6.","Niet plus — hoe twee tekens samen.","Te dichtbij — heb je 4 − 6 gedaan ipv −4−6?","Andersom."],
+        wrongHints: [null,"Niet plus — kijk hoe de twee tekens samen werken.","Te dichtbij — heb je 4 − 6 gedaan in plaats van −4 − 6?","Andersom — het antwoord is negatief."],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "+(−6) wordt −6. Dus −4 + (−6) = −4 − 6 = −10." }],
           woorden: [{ woord: "plus een minus", uitleg: "Plus voor minus-getal = aftrekken." }],
@@ -193,7 +193,7 @@ const steps = [
         q: "**5 + (−2)** = ?",
         options: ["+3","+7","−3","−7"],
         answer: 0,
-        wrongHints: [null,"Plus een minus = aftrekken: 5 − 2 = 3.","Niet optellen — er is een min in de haakjes.","Andersom — 5 > 2, dus positief.","Veel te ver."],
+        wrongHints: [null,"Niet optellen — er staat een min in de haakjes.","Andersom — 5 > 2, dus het antwoord is positief.","Veel te ver."],
         uitlegPad: {
           stappen: [{ titel: "+− = −", tekst: "5 + (−2) → +(−) = − → 5 − 2 = 3." }],
           woorden: [{ woord: "plus een negatief", uitleg: "+(−X) = −X (gewoon aftrekken)." }],

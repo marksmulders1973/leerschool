@@ -347,7 +347,7 @@ const steps = [
         q: "Van **50 vogels** zijn **30 mussen**. Welk **percentage** is geen mus?",
         options: ["40%","60%","30%","20%"],
         answer: 0,
-        wrongHints: [null,"Lees nogmaals: hoeveel zijn er GEEN mus? 50 − 30 = 20 → 20/50 = ?","Dat is het percentage WEL-mussen. Vraag is het tegenovergestelde.","Niet het aantal — eerst delen door totaal × 100.","Te weinig — 20 op 50 = 2 op 5."],
+        wrongHints: [null,"Dat is het percentage WEL-mussen. De vraag is juist het tegenovergestelde.","Dat is het aantal mussen, niet het percentage — deel eerst door het totaal × 100.","Te weinig — hoeveel vogels zijn er géén mus?"],
       },
     ],
   },
@@ -373,7 +373,7 @@ const steps = [
         q: "Een laptop kost **€ 800**. Anna betaalt **€ 720**. Welk **kortings-percentage**?",
         options: ["10%","20%","80%","8%"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je €800 − €720 = €80 niet vergelijken met de oorspronkelijke prijs?","Te veel — wat is €800 − €720? Vergelijk met €800.","Klopt niet — dat zou betekenen €720 korting, niet €80.","Klopt niet — vergelijk €80 op €800."],
+        wrongHints: [null,"Te veel — €800 − €720 = €80; vergelijk dat met €800.","Klopt niet — dat verwart het betaalde bedrag met de korting.","Klopt niet — vergelijk €80 met €800, niet andersom."],
       },
       {
         q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is melk-chocolade**. Hoeveel zijn dat?",

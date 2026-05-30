@@ -322,7 +322,7 @@ const steps = [
         q: "**Mediaan** van: 4, 8, 6, 10 (op volgorde zetten!)?",
         options: ["7", "6", "8", "28"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 4 getallen = even aantal. Middelste 2 zijn 6 en 8, gemiddelde = 7.", "Klopt qua middelste links, maar bij even aantal pak je gemiddelde van de 2 middelste.", "Klopt qua middelste rechts, maar pak gemiddelde 6+8.", "Dat is de som."],
+        wrongHints: [null, "Dat is één van de 2 middelste; bij een even aantal pak je het gemiddelde van die twee.", "Dat is het andere middelste; pak het gemiddelde van 6 en 8.", "Dat is de som, niet de mediaan."],
         uitlegPad: {
           stappen: [
             { titel: "Op volgorde", tekst: "4, 6, 8, 10. Op volgorde gezet." },
@@ -418,13 +418,13 @@ const steps = [
         q: "Schoenen verkocht: maat 38, 39, 38, 40, 38, 41, 39. **Modus**?",
         options: ["38", "39", "40", "41"],
         answer: 0,
-        wrongHints: [null, "Tel: 38 komt 3× voor, 39 komt 2× voor.", "39 komt 2× — minder dan 38.", "40 komt maar 1×.", "41 komt maar 1×."],
+        wrongHints: [null, "39 komt 2× voor — tel nog eens welke maat het vaakst voorkomt.", "40 komt maar 1×.", "41 komt maar 1×."],
       },
       {
         q: "Leeftijden: 8, 10, 12, 9, 11. **Mediaan**?",
         options: ["10", "8", "12", "11"],
         answer: 0,
-        wrongHints: [null, "Sorteer eerst: 8, 9, 10, 11, 12. Middelste = 10.", "Dat is de laagste.", "Dat is de hoogste.", "Dat is op positie 4 — niet middelste."],
+        wrongHints: [null, "Dat is de laagste, niet de middelste — sorteer eerst.", "Dat is de hoogste, niet de middelste.", "Dat is positie 4 — niet de middelste van 5."],
       },
       {
         q: "Temperaturen 4 dagen: 18, 20, 22, 20 °C. **Gemiddelde temperatuur**?",
