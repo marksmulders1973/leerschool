@@ -28,7 +28,6 @@ const steps = [
           "Hier stroomt geld JUIST naar Nederland (Kameroen koopt en betaalt aan NL).",
           "Eigen groente verbouwen → geen geldstroom tussen landen.",
           null,
-          "Klopt ook (NL geld → Kameroen), maar context-vraag wijst meestal op toerisme als 'export van diensten'.",
         ],
         explanation: "Nederlandse toeristen op vakantie in Kameroen geven daar geld uit (hotel, eten, souvenirs). Dat is geld dat van NL naar Kameroen stroomt — voor Kameroen is het export van diensten. Voor NL is het import.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 2, vraag 1",

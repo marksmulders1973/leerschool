@@ -231,7 +231,6 @@ const steps = [
           "Bij meer inkomsten dan uitgaven daalt de staatsschuld juist.",
           null,
           "Stijging inkomsten + gelijke uitgaven = overschot = schuld DAALT.",
-          "Gelijke inkomsten + dalende uitgaven = overschot = schuld DAALT.",
         ],
         explanation: "Staatsschuld stijgt als de overheid jaar na jaar méér uitgeeft dan ze binnenkrijgt (begrotingstekort). Dat tekort moet bijgeleend worden — dus de schuld groeit. Italië heeft al jaren een groot tekort + hoge schuld (~140% BBP, ver boven de EMU-norm van 60%).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30",

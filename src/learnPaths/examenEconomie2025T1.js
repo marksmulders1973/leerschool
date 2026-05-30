@@ -486,7 +486,6 @@ const steps = [
           "Tegendeel: dan zou overschot juist kleiner worden.",
           null,
           "Klopt al uit de vraag (import procentueel sterker), maar verklaart niet waarom overschot toch toeneemt.",
-          "Tegendeel uit de vraag.",
         ],
         explanation: "Hoewel het AANTAL geïmporteerd sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
