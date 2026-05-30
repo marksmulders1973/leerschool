@@ -467,7 +467,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
       },
       { q: "Welk lidwoord (mannelijk) verandert van NOM naar ACC?", options: ["der → den","die → die","das → das","der → die"], answer: 0, wrongHints: [null, "Vrouw blijft die in acc.", "Onzijdig blijft das in acc.", "Geen wissel naar vrouwelijk."] },
       { q: "Welk voorzetsel vraagt **altijd** datief?", options: ["mit","für","ohne","durch"], answer: 0, wrongHints: [null, "Für = accusatief.", "Ohne = accusatief.", "Durch = accusatief."] },
-      { q: "_____ Buch ist interessant. (NOM, onzijdig)", options: ["Das","Der","Die","Den"], answer: 0, wrongHints: [null,"Niet — Buch is onzijdig.","Vrouwelijk.","Mannelijk acc.","Niet."] },
+      { q: "_____ Buch ist interessant. (NOM, onzijdig)", options: ["Das","Der","Die","Den"], answer: 0, wrongHints: [null,"'Der' is mannelijk — Buch is onzijdig.","'Die' is vrouwelijk — Buch is onzijdig.","'Den' is mannelijk accusatief."] },
       { q: "Ich gebe _____ Mann ein Buch. (DAT, mannelijk)", options: ["dem","den","der","das"], answer: 0, wrongHints: [null,"Niet — den = ACC mannelijk.","Niet — der = NOM mannelijk.","Niet — onzijdig."] },
       { q: "Mein Vater fährt mit _____ Auto. (mit + DAT onzijdig)", options: ["dem","das","der","den"], answer: 0, wrongHints: [null,"Niet — das = NOM/ACC onzijdig.","Niet.","Niet."] },
       { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4 (Nom, Akk, Dat, Gen)","2","3","6"], answer: 0, wrongHints: [null,"Te weinig.","Te weinig.","Latijn/Russisch heeft meer."] },

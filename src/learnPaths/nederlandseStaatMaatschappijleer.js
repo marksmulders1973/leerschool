@@ -195,7 +195,7 @@ ${Array.from({ length: 30 }, (_, i) => {
         q: "Wat is een **coalitie**?",
         options: ["Meerdere partijen die samen regeren","Een politieke partij","Een verkiezingscampagne","Een internationaal verdrag"],
         answer: 0,
-        wrongHints: [null, "Coalitie = samenwerking.", "Coalitie = samenwerkende partijen, geen losse partij.", "Niet hetzelfde als campagne.", "Kan ook bestaan, maar in NL = regerings-coalitie."],
+        wrongHints: [null, "Een coalitie is samenwerkende partijen, geen losse partij.", "Niet hetzelfde als een campagne.", "Een verdrag kan ook zo heten, maar in NL = regerings-coalitie."],
         uitlegPad: {
           stappen: [{ titel: "Samen meerderheid vormen", tekst: "In NL haalt 1 partij nooit meerderheid alleen (zou >75 zetels nodig hebben). Daarom: na verkiezingen onderhandelen partijen wie samen regeren = coalitie. Ze schrijven samen REGEERAKKOORD. Anders = oppositie (controle vanuit minderheid)." }],
           woorden: [{ woord: "coalitie", uitleg: "Samenwerking van meerdere partijen om te regeren." }, { woord: "regeerakkoord", uitleg: "Document waarin coalitiepartijen afspreken wat ze samen willen doen." }, { woord: "formatie", uitleg: "Periode waarin coalitie wordt gevormd (kan maanden duren)." }],
@@ -407,7 +407,7 @@ ${Array.from({ length: 30 }, (_, i) => {
         q: "Wat is **geen** plicht voor Nederlandse burgers?",
         options: ["Stemmen", "Belasting betalen", "Leerplicht", "Identificatieplicht"],
         answer: 0,
-        wrongHints: [null, "Stemmen is recht, niet plicht.", "Belasting wel plicht.", "Leerplicht wel.", "ID-plicht wel."],
+        wrongHints: [null, "Belasting betalen is wél een plicht.", "Leerplicht is wél een plicht.", "ID-plicht is wél een plicht."],
         uitlegPad: {
           stappen: [{ titel: "Stemmen = recht", tekst: "In NL is stemmen een RECHT, geen plicht. Je MAG, niet MOET. Vroeger (1917-1970) was er wel opkomstplicht (stemplicht). Sinds 1970 afgeschaft. Vergelijk: in België is stemmen WEL verplicht." }],
           woorden: [{ woord: "recht vs plicht", uitleg: "Recht = je MAG iets doen (vrijwillig). Plicht = je MOET iets doen (verplicht)." }, { woord: "opkomstplicht", uitleg: "Verplichting om naar stembureau te gaan. NL had dit 1917-1970." }],

@@ -500,7 +500,7 @@ const steps = [
         q: "Welke is goed: **'Hij vint het mooi'** of **'Hij vindt het mooi'**?",
         options: ["Hij vindt het mooi","Hij vint het mooi","Hij vind het mooi","Hij vindd het mooi"],
         answer: 0,
-        wrongHints: [null,"Stam = vind (met d), + t = vindt.","Mist de d van de stam.","Mist de t van vervoeging.","Dubbel-d bestaat niet."],
+        wrongHints: [null,"Mist de d van de stam (vind).","Mist de t van de vervoeging.","Dubbel-d bestaat hier niet."],
         uitlegPad: {
           stappen: [{ titel: "vinden → vind + t = vindt", tekst: "Stam vind eindigt op d. Hij = +t. Beide letters: dt." }],
           woorden: [{ woord: "vindt", uitleg: "Tegenwoordige tijd hij/zij/het van 'vinden'. Met dt-eindiging." }],

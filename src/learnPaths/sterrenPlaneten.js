@@ -254,7 +254,7 @@ const steps = [
         q: "Wat veroorzaakt **eb en vloed** op Aarde?",
         options: ["Zwaartekracht van de Maan","Wind","Onderzeese aardbevingen","De zon"],
         answer: 0,
-        wrongHints: [null,"De zon helpt ook iets, maar maan is hoofdoorzaak.","Wind veroorzaakt golven — niet eb/vloed.","Aardbevingen geven tsunami's, geen eb/vloed.","Niet hoofdoorzaak."],
+        wrongHints: [null,"Wind veroorzaakt golven, niet eb en vloed.","Aardbevingen geven tsunami's, geen eb en vloed.","De zon helpt iets mee, maar de maan is de hoofdoorzaak."],
         uitlegPad: {
           stappen: [{ titel: "Maan trekt aan water", tekst: "Door de zwaartekracht van de Maan wordt zeewater 'opgetrokken' naar de Maan-kant. Twee keer per dag een vloedgolf rondom Aarde." }],
           woorden: [{ woord: "getijden", uitleg: "eb + vloed cyclus" }],

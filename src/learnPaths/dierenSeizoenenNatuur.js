@@ -250,7 +250,7 @@ const steps = [
         q: "Tot welke groep hoort een **krab**?",
         options: ["Schaaldieren", "Weekdieren", "Vissen", "Zoogdieren"],
         answer: 0,
-        wrongHints: [null, "Krab heeft pantser.", "Geen schelp zoals slak.", "Geen kieuwen+schubben.", "Geen vacht."],
+        wrongHints: [null, "Geen schelp zoals een slak (weekdier).", "Geen kieuwen + schubben zoals een vis.", "Geen vacht zoals een zoogdier."],
         uitlegPad: {
           stappen: [{ titel: "Pantser = schaaldier", tekst: "Krab heeft hard pantser + veel poten = schaaldier." }],
           woorden: [{ woord: "schaaldier", uitleg: "Pantser, veel poten, vaak in water. Krab, kreeft, garnaal." }],
@@ -582,7 +582,7 @@ const steps = [
         q: "Wat doen **bijen** voor planten?",
         options: ["Bestuiven (stuifmeel verplaatsen)", "Eten ze op", "Beschermen ze", "Maken zaden"],
         answer: 0,
-        wrongHints: [null, "Bestuiving is sleutelrol.", "Eten honing, niet planten.", "Beschermen niet zo direct.", "Bijen maken honing, geen zaden."],
+        wrongHints: [null, "Bijen eten honing, ze eten geen planten op.", "Beschermen doen ze niet direct.", "Bijen maken honing, geen zaden."],
         uitlegPad: {
           stappen: [{ titel: "Bestuiving = sleutel", tekst: "Bij vliegt van bloem naar bloem en brengt stuifmeel mee → bevruchting → vrucht/zaad." }],
           woorden: [{ woord: "bestuiving", uitleg: "Stuifmeel van ene bloem naar andere → bloem kan vrucht/zaad maken." }],
@@ -624,7 +624,7 @@ const steps = [
         q: "Wat doet een **plant met zonlicht**?",
         options: ["Maakt zelf voedsel (fotosynthese)", "Wordt warmer", "Krijgt kleur", "Slaapt"],
         answer: 0,
-        wrongHints: [null, "Fotosynthese = sleutel.", "Wordt wel warmer maar dat is bijproduct.", "Kleur is wel maar niet hoofddoel.", "Planten slapen niet."],
+        wrongHints: [null, "Wordt wel warmer, maar dat is een bijproduct.", "Krijgt wel kleur, maar dat is niet het hoofddoel.", "Planten slapen niet."],
         uitlegPad: {
           stappen: [{ titel: "Fotosynthese", tekst: "Plant gebruikt zonlicht om voedsel te maken (suiker) uit water + CO2." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Plant maakt suiker uit zonlicht. Geeft zuurstof af." }],

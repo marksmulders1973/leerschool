@@ -98,7 +98,7 @@ const steps = [
         q: "Welke is **geen** zelfstandig naamwoord?",
         options: ["mooi", "auto", "kasteel", "vreugde"],
         answer: 0,
-        wrongHints: [null, "Mooi = bijvoeglijk nw. Klopt — daarom is het GEEN zn.", "Auto is een ding, dus zn.", "Kasteel is een ding/plaats, dus zn.", "Vreugde is een gevoel, dus zn."],
+        wrongHints: [null, "Auto is een ding, dus wél een zn.", "Kasteel is een ding/plaats, dus wél een zn.", "Vreugde is een gevoel (zn), dus wél een zn."],
         uitlegPad: {
           stappen: [{ titel: "Mooi = bn", tekst: "Mooi beschrijft hoe iets is → bijvoeglijk naamwoord, geen zn." }],
           woorden: [{ woord: "bn vs zn", uitleg: "bn beschrijft, zn benoemt" }],
@@ -232,7 +232,7 @@ const steps = [
         q: "Welk werkwoord is hier de persoonsvorm: *Hij is naar de winkel gegaan*?",
         options: ["is", "gegaan", "naar", "winkel"],
         answer: 0,
-        wrongHints: [null, "Is = vervoegd. Gegaan = voltooid deelwoord, niet pv.", "Gegaan is voltooid deelwoord — geen pv.", "Naar = voorzetsel.", "Winkel = zelfstandig nw."],
+        wrongHints: [null, "Gegaan is een voltooid deelwoord — geen pv.", "Naar = voorzetsel.", "Winkel = zelfstandig nw."],
         uitlegPad: {
           stappen: [{ titel: "'Is' = vervoegde ww = pv", tekst: "Hij is gegaan: is = pv (vervoegd), gegaan = restdeel." }],
           woorden: [{ woord: "pv", uitleg: "vervoegde werkwoord, één per zin" }],
@@ -474,7 +474,7 @@ const steps = [
         q: "Welke woordsoort is **mooie** in: *een mooie dag*?",
         options: ["bijvoeglijk naamwoord", "zelfstandig nw", "bijwoord", "voornaamwoord"],
         answer: 0,
-        wrongHints: [null, "Mooie beschrijft 'dag' (zn) → bn.", "Mooie is geen ding/persoon.", "Bijwoord beschrijft ww/bn, niet zn.", "Vnw vervangt — mooie vervangt niets."],
+        wrongHints: [null, "Mooie is geen ding/persoon, dus geen zn.", "Een bijwoord beschrijft een ww/bn, niet een zn.", "Een vnw vervangt iets — mooie vervangt niets."],
         uitlegPad: {
           stappen: [{ titel: "Mooie + dag", tekst: "Mooie beschrijft 'dag' (zn) → bijvoeglijk naamwoord." }],
           woorden: [{ woord: "bn", uitleg: "beschrijft zelfst. naamwoord" }],
@@ -488,7 +488,7 @@ const steps = [
         q: "Welke woordsoort is **omdat**?",
         options: ["voegwoord", "voorzetsel", "voornaamwoord", "bijwoord"],
         answer: 0,
-        wrongHints: [null, "Verbindt zinnen → voegwoord.", "Voorzetsel staat voor zn — 'omdat' verbindt zinnen.", "Vnw vervangt zn.", "Bijwoord beschrijft niet."],
+        wrongHints: [null, "Een voorzetsel staat vóór een zn — 'omdat' verbindt juist zinnen.", "Een vnw vervangt een zn.", "Een bijwoord beschrijft, het verbindt niet."],
         uitlegPad: {
           stappen: [{ titel: "Omdat = vg", tekst: "Omdat verbindt twee zinnen → voegwoord." }],
           woorden: [{ woord: "verbinder", uitleg: "voegwoord verbindt zinnen" }],
@@ -502,7 +502,7 @@ const steps = [
         q: "Welke woordsoort is **hen** in: *Ik zie hen*?",
         options: ["persoonlijk voornaamwoord", "bezittelijk voornaamwoord", "voorzetsel", "voegwoord"],
         answer: 0,
-        wrongHints: [null, "Hen = persoonlijk vnw, lijdend voorwerp.", "Bezittelijk vnw is hun, niet hen.", "Geen voorzetsel.", "Geen voegwoord."],
+        wrongHints: [null, "Bezittelijk vnw is 'hun', niet 'hen'.", "Geen voorzetsel.", "Geen voegwoord."],
         uitlegPad: {
           stappen: [{ titel: "Hen = pers. vnw", tekst: "Ik zie hen: hen vervangt personen → persoonlijk voornaamwoord." }],
           woorden: [{ woord: "hen", uitleg: "lijdend voorwerp meervoud" }],
@@ -516,7 +516,7 @@ const steps = [
         q: "Welke woordsoort is **vandaag** in: *Ik werk vandaag*?",
         options: ["bijwoord (tijd)", "zelfstandig nw", "bijvoeglijk nw", "lidwoord"],
         answer: 0,
-        wrongHints: [null, "Vandaag zegt wanneer → bijwoord.", "Vandaag is geen ding.", "Vandaag beschrijft geen zn.", "Lidwoord = de/het/een."],
+        wrongHints: [null, "Vandaag is geen ding, dus geen zn.", "Vandaag beschrijft geen zn, dus geen bn.", "Een lidwoord is de/het/een."],
         uitlegPad: {
           stappen: [{ titel: "Vandaag = tijd", tekst: "Vandaag zegt wanneer ik werk → bijwoord van tijd." }],
           woorden: [{ woord: "tijd-bw", uitleg: "wanneer? hoe lang?" }],

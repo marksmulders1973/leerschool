@@ -425,7 +425,7 @@ const steps = [
         q: "**'Wij eten elke avond ____'** (witte korreltjes uit Azië):",
         options: ["rijst","reist","reizen","rijz"],
         answer: 0,
-        wrongHints: [null,"Met ij — voedsel.","Met ei = van reizen, ander woord.","-en vorm.","Geen NL spelling."],
+        wrongHints: [null,"Met ei = van 'reizen', een ander woord.","Dat is de -en-vorm (werkwoord).","Geen bestaande NL-spelling."],
         uitlegPad: {
           stappen: [{ titel: "rijst (eten) = ij", tekst: "Voedsel = rijst met ij. Werkwoord reist (van reizen) = ei. Context bepaalt!" }],
           woorden: [{ woord: "rijst", uitleg: "Voedsel uit Azië, met ij." }],
