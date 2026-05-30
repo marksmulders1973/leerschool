@@ -164,7 +164,7 @@ const steps = [
         q: "Welke is **goed**? — *I ___ that film three times.* (see)",
         options: ["have seen", "saw", "have see", "saw three times"],
         answer: 0,
-        wrongHints: [null, "Ervaring-betekenis = perfect.", "'Three times' = ervaring → perfect.", "Na 'have' moet V3.", "Geen geldige vorm."],
+        wrongHints: [null, "'Three times' = ervaring → perfect.", "Na 'have' moet V3.", "Geen geldige vorm."],
         uitlegPad: {
           stappen: [{ titel: "Three times = ervaring", tekst: "I have seen that film three times. Ervaring → perfect." }],
           woorden: [{ woord: "frequentie", uitleg: "X times = aantal keer in ervaring" }],
@@ -178,7 +178,7 @@ const steps = [
         q: "Welke is **goed**? — *We ___ here since 2018.* (live)",
         options: ["have lived", "lived", "are living", "live"],
         answer: 0,
-        wrongHints: [null, "'Since' = perfect (duur tot nu).", "Past simple past niet bij 'since'.", "Continuous past hier minder goed.", "Simple past niet bij 'since'."],
+        wrongHints: [null, "Past simple past niet bij 'since'.", "Continuous past hier minder goed.", "Simple past niet bij 'since'."],
         uitlegPad: {
           stappen: [{ titel: "Since + perfect", tekst: "We have lived here since 2018." }],
           woorden: [{ woord: "since", uitleg: "sinds (een tijdstip)" }],
@@ -208,7 +208,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["I have already eaten.", "I already have eaten.", "I have eaten already at start.", "Already I have eaten."],
         answer: 0,
-        wrongHints: [null, "'Already' staat tussen have en V3.", "Engelse zinsvolgorde plaatst already binnenin.", "Beetje raar geformuleerd.", "'Already' niet vooraan."],
+        wrongHints: [null, "Engelse zinsvolgorde plaatst already binnenin.", "Beetje raar geformuleerd.", "'Already' niet vooraan."],
         uitlegPad: {
           stappen: [{ titel: "have + already + V3", tekst: "I have already eaten. Already tussen have en V3." }],
           woorden: [{ woord: "already", uitleg: "al, midden in de zin" }],
@@ -222,7 +222,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["Have you finished yet?", "Have yet you finished?", "Yet have you finished?", "You have yet finished?"],
         answer: 0,
-        wrongHints: [null, "Yet hoort aan het eind.", "Verkeerde plek.", "Niet vooraan.", "Geen vraagvolgorde."],
+        wrongHints: [null, "Verkeerde plek.", "Niet vooraan.", "Geen vraagvolgorde."],
         uitlegPad: {
           stappen: [{ titel: "Yet aan eind", tekst: "Have you finished yet? — yet komt achteraan." }],
           woorden: [{ woord: "yet", uitleg: "al? / nog niet" }],
@@ -259,7 +259,7 @@ const steps = [
         q: "Welke is goed? — *I ___ him yesterday.* (see)",
         options: ["saw", "have seen", "see", "did see"],
         answer: 0,
-        wrongHints: [null, "Yesterday = vast tijdstip → simple.", "Perfect past niet bij 'yesterday'.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
+        wrongHints: [null, "Perfect past niet bij 'yesterday'.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
         uitlegPad: {
           stappen: [{ titel: "Yesterday = simple", tekst: "I saw him yesterday. Vast tijdstip → simple, V2." }],
           woorden: [{ woord: "yesterday", uitleg: "vast verleden tijdstip" }],
@@ -273,7 +273,7 @@ const steps = [
         q: "Welke is goed? — *I ___ him three times this week.* (see)",
         options: ["have seen", "saw", "see", "have see"],
         answer: 0,
-        wrongHints: [null, "'This week' = nog bezig → perfect.", "Simple past niet bij 'this week' (nog bezig).", "Tegenwoordige tijd.", "Na 'have' moet V3 = seen."],
+        wrongHints: [null, "Simple past niet bij 'this week' (nog bezig).", "Tegenwoordige tijd.", "Na 'have' moet V3 = seen."],
         uitlegPad: {
           stappen: [{ titel: "This week = perfect", tekst: "I have seen him three times this week. Week is nog bezig → perfect." }],
           woorden: [{ woord: "this week", uitleg: "open tijdsperiode, nog niet voorbij" }],
@@ -302,7 +302,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["I have lost my keys.", "I have lose my keys.", "I have lost my keys yesterday.", "I am lost my keys."],
         answer: 0,
-        wrongHints: [null, "Lost is V3 — klopt na have.", "Lose = basis, na have moet V3 = lost.", "Vast tijdstip + perfect klopt niet.", "Be is geen hulpwerkwoord voor perfect."],
+        wrongHints: [null, "Lose = basis, na have moet V3 = lost.", "Vast tijdstip + perfect klopt niet.", "Be is geen hulpwerkwoord voor perfect."],
         uitlegPad: {
           stappen: [{ titel: "Have + V3 = lost", tekst: "I have lost my keys. Lost is V3 van lose." }],
           woorden: [{ woord: "lose-lost-lost", uitleg: "V1-V2-V3" }],
@@ -316,7 +316,7 @@ const steps = [
         q: "Welke is **goed**? — sinds 2020 woon ik in Amsterdam.",
         options: ["I have lived in Amsterdam since 2020.", "I live in Amsterdam since 2020.", "I have lived in Amsterdam for 2020.", "I live in Amsterdam for 5 years."],
         answer: 0,
-        wrongHints: [null, "Since + perfect = goed.", "Simple past niet bij 'since'.", "For + jaartal klopt niet — 'for' bij duur, 'since' bij tijdstip.", "Simple past niet bij doorlopende situatie."],
+        wrongHints: [null, "Simple past niet bij 'since'.", "For + jaartal klopt niet — 'for' bij duur, 'since' bij tijdstip.", "Simple past niet bij doorlopende situatie."],
         uitlegPad: {
           stappen: [{ titel: "Since 2020 = perfect", tekst: "I have lived in Amsterdam since 2020. Since + perfect." }],
           woorden: [{ woord: "since vs for", uitleg: "since = vanaf tijdstip, for = gedurende duur" }],
@@ -346,7 +346,7 @@ const steps = [
         q: "Wat betekent *She's gone home*?",
         options: ["She has gone home.", "She is going home.", "Her gone home.", "She does gone home."],
         answer: 0,
-        wrongHints: [null, "Met 'gone' = perfect → has gone.", "Continuous zou 'going' zijn, niet 'gone'.", "Geen geldige zin.", "Geen geldige Engelse vorm."],
+        wrongHints: [null, "Continuous zou 'going' zijn, niet 'gone'.", "Geen geldige zin.", "Geen geldige Engelse vorm."],
         uitlegPad: {
           stappen: [{ titel: "She's = she has", tekst: "She's gone home = She has gone home (perfect)." }],
           woorden: [{ woord: "contractie", uitleg: "'s = is OF has, kijk naar erna" }],
@@ -388,7 +388,7 @@ const steps = [
         q: "*She ___ to Spain in 2018.* (go)",
         options: ["went", "has gone", "go", "did went"],
         answer: 0,
-        wrongHints: [null, "Vast jaartal = simple. Went = V2.", "Vast tijdstip → niet perfect.", "Tegenwoordige tijd.", "Na did → basisvorm; en vast tijdstip = simple zonder did."],
+        wrongHints: [null, "Vast tijdstip → niet perfect.", "Tegenwoordige tijd.", "Na did → basisvorm; en vast tijdstip = simple zonder did."],
         uitlegPad: {
           stappen: [{ titel: "In 2018 = simple", tekst: "She went to Spain in 2018. Jaartal → V2." }],
           woorden: [{ woord: "go-went-gone", uitleg: "V1-V2-V3" }],
@@ -402,7 +402,7 @@ const steps = [
         q: "*___ you ever ___ a snake?* (see)",
         options: ["Have / seen", "Did / see", "Have / saw", "Do / see"],
         answer: 0,
-        wrongHints: [null, "Ever → perfect. Seen = V3.", "Did is voor simple zonder 'ever'.", "V2 past niet na have.", "Do is voor present, en 'ever' eist perfect."],
+        wrongHints: [null, "Did is voor simple zonder 'ever'.", "V2 past niet na have.", "Do is voor present, en 'ever' eist perfect."],
         uitlegPad: {
           stappen: [{ titel: "Ever = perfect", tekst: "Have you ever seen a snake? Ever signaleert perfect." }],
           woorden: [{ woord: "ever", uitleg: "ooit (ervaring)" }],
@@ -416,7 +416,7 @@ const steps = [
         q: "*We ___ each other for 10 years.* (know)",
         options: ["have known", "knew", "know", "have knew"],
         answer: 0,
-        wrongHints: [null, "For 10 years (tot nu) = perfect. Known = V3.", "Simple past niet bij 'for ... years' = nu.", "Tegenwoordige tijd past niet.", "V2 past niet na have."],
+        wrongHints: [null, "Simple past niet bij 'for ... years' = nu.", "Tegenwoordige tijd past niet.", "V2 past niet na have."],
         uitlegPad: {
           stappen: [{ titel: "For + perfect", tekst: "We have known each other for 10 years. Doorlopend → perfect." }],
           woorden: [{ woord: "know-knew-known", uitleg: "V1-V2-V3 onregelmatig" }],
@@ -443,7 +443,7 @@ const steps = [
         q: "*When I was 10, I ___ a dog.* (have)",
         options: ["had", "have had", "have", "had have"],
         answer: 0,
-        wrongHints: [null, "'When I was 10' = vast verleden → simple. Had = V2.", "Vast tijdstip → niet perfect.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
+        wrongHints: [null, "Vast tijdstip → niet perfect.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
         uitlegPad: {
           stappen: [{ titel: "When I was = simple", tekst: "When I was 10, I had a dog. Vast verleden → simple, V2 = had." }],
           woorden: [{ woord: "have-had-had", uitleg: "V1-V2-V3" }],
@@ -457,7 +457,7 @@ const steps = [
         q: "*She ___ never ___ a horror film.* (watch)",
         options: ["has / watched", "did / watch", "has / watch", "does / watch"],
         answer: 0,
-        wrongHints: [null, "Never = perfect. Watched = V3 (regelmatig).", "Did is voor simple zonder 'never' meestal niet juist hier.", "Na has moet V3, niet basisvorm.", "Does is present simple."],
+        wrongHints: [null, "Did is voor simple zonder 'never' meestal niet juist hier.", "Na has moet V3, niet basisvorm.", "Does is present simple."],
         uitlegPad: {
           stappen: [{ titel: "Never = perfect", tekst: "She has never watched a horror film. Never → perfect, V3 = watched." }],
           woorden: [{ woord: "never", uitleg: "nooit (ervaring)" }],
@@ -471,7 +471,7 @@ const steps = [
         q: "*I ___ my homework. Can I go now?*",
         options: ["have finished", "finished", "did finish", "finishing"],
         answer: 0,
-        wrongHints: [null, "Gevolg nu (mag ik gaan?) = perfect.", "Simple kan, maar perfect drukt 'gevolg nu' beter uit; in deze context is perfect natuurlijker.", "Did finish past minder, perfect drukt 'klaar nu' uit.", "Geen werkwoordvorm."],
+        wrongHints: [null, "Simple kan, maar perfect drukt 'gevolg nu' beter uit; in deze context is perfect natuurlijker.", "Did finish past minder, perfect drukt 'klaar nu' uit.", "Geen werkwoordvorm."],
         uitlegPad: {
           stappen: [{ titel: "Gevolg nu = perfect", tekst: "I have finished my homework. Can I go now? Gevolg in heden → perfect." }],
           woorden: [{ woord: "gevolg", uitleg: "actie heeft effect nu" }],
@@ -485,7 +485,7 @@ const steps = [
         q: "*Last weekend we ___ to the cinema and ___ a great film.* (go / see)",
         options: ["went / saw", "have gone / seen", "went / have seen", "have gone / saw"],
         answer: 0,
-        wrongHints: [null, "Last weekend = simple. Went en saw zijn V2.", "Last weekend → niet perfect.", "Beide werkwoorden hetzelfde tense met vast tijdstip.", "Eerste klopt niet, vast tijdstip."],
+        wrongHints: [null, "Last weekend → niet perfect.", "Beide werkwoorden hetzelfde tense met vast tijdstip.", "Eerste klopt niet, vast tijdstip."],
         uitlegPad: {
           stappen: [{ titel: "Last weekend = simple", tekst: "Last weekend we went... and saw... Beide V2." }],
           woorden: [{ woord: "last weekend", uitleg: "gesloten tijdstip" }],

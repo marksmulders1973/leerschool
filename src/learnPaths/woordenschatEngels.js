@@ -175,7 +175,7 @@ const steps = [
         q: "Wat is het meervoud van **foot**?",
         options: ["feet", "foots", "feets", "footes"],
         answer: 0,
-        wrongHints: [null, "Onregelmatig: foot → feet.", "Niet -s — onregelmatig.", "Niet -s.", "Niet -es."],
+        wrongHints: [null, "Niet -s — onregelmatig.", "Niet -s.", "Niet -es."],
         uitlegPad: {
           stappen: [{ titel: "foot → feet", tekst: "Onregelmatig meervoud: oo→ee. Foot wordt feet (geen -s)." }],
           woorden: [{ woord: "feet", uitleg: "Meervoud van foot (voet). Klanksprong oo→ee." }],
@@ -293,7 +293,7 @@ const steps = [
         q: "Wat is het meervoud van **mouse**?",
         options: ["mice", "mouses", "mices", "mouse"],
         answer: 0,
-        wrongHints: [null, "Onregelmatig: mouse → mice.", "Niet -s.", "Niet -s.", "Verschilt enkelvoud/mv."],
+        wrongHints: [null, "Niet -s.", "Niet -s.", "Verschilt enkelvoud/mv."],
         uitlegPad: {
           stappen: [{ titel: "mouse → mice", tekst: "Onregelmatig: mouse (1) → mice (meerdere). Klanksprong ou→i." }],
           woorden: [{ woord: "mice", uitleg: "Meervoud van mouse (muis)." }],
@@ -391,7 +391,7 @@ const steps = [
         q: "Wat is **a quarter past three**?",
         options: ["3:15", "3:45", "2:45", "3:30"],
         answer: 0,
-        wrongHints: [null, "Past = na. Kwartier na 3 = 3:15.", "Quarter to = 15 min vóór.", "Quarter to vóór een ander uur.", "Half past = 30 min."],
+        wrongHints: [null, "Quarter to = 15 min vóór.", "Quarter to vóór een ander uur.", "Half past = 30 min."],
         uitlegPad: {
           stappen: [{ titel: "quarter past = kwart na", tekst: "Quarter (kwart=15 min) + past (na) + three (3) = 15 minuten na 3 = 3:15." }],
           woorden: [{ woord: "quarter", uitleg: "Kwart (1/4 = 15 minuten van 60)." }, { woord: "past", uitleg: "Na, voorbij." }],
@@ -463,7 +463,7 @@ const steps = [
         q: "Welke is het **niet**: een familie-woord?",
         options: ["window", "mother", "uncle", "cousin"],
         answer: 0,
-        wrongHints: [null, "Window = raam (huis).", "Mother = moeder.", "Uncle = oom.", "Cousin = neef/nicht."],
+        wrongHints: [null, "Mother = moeder.", "Uncle = oom.", "Cousin = neef/nicht."],
         uitlegPad: {
           stappen: [{ titel: "Welke hoort niet", tekst: "Window = raam (huis-thema). Mother/uncle/cousin = familie-woorden." }],
           woorden: [{ woord: "window", uitleg: "Raam — onderdeel van een huis, geen familie." }],
@@ -477,7 +477,7 @@ const steps = [
         q: "Wat betekent: *I'm wearing a red dress.*",
         options: ["Ik draag een rode jurk.", "Ik koop een rode jurk.", "Ik ben een rode jurk.", "Ik wil een rode jurk."],
         answer: 0,
-        wrongHints: [null, "Wearing = dragend.", "Wear ≠ buy.", "Wearing ≠ I am.", "Wearing ≠ want."],
+        wrongHints: [null, "Wear ≠ buy.", "Wearing ≠ I am.", "Wearing ≠ want."],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woord-voor-woord", tekst: "I'm = ik ben (bezig). Wearing = dragend. A red dress = een rode jurk. Samen: 'Ik draag een rode jurk'." }],
           woorden: [{ woord: "to wear", uitleg: "Dragen (kleding). Onregelmatig: wear-wore-worn." }],
@@ -491,7 +491,7 @@ const steps = [
         q: "Hoe vertaal je: *My grandmother lives in a small house.*",
         options: ["Mijn oma woont in een klein huis.", "Mijn oma werkt in een klein huis.", "Mijn moeder woont in een groot huis.", "Mijn opa heeft een klein huis."],
         answer: 0,
-        wrongHints: [null, "Lives = woont.", "Lives ≠ works.", "Mother ≠ grandmother. Small ≠ big.", "Has ≠ lives in."],
+        wrongHints: [null, "Lives ≠ works.", "Mother ≠ grandmother. Small ≠ big.", "Has ≠ lives in."],
         uitlegPad: {
           stappen: [{ titel: "Vertaal stuk voor stuk", tekst: "My grandmother = mijn oma. Lives = woont. In a small house = in een klein huis." }],
           woorden: [{ woord: "grandmother", uitleg: "Oma. Grand- (groot-) + mother (moeder)." }, { woord: "lives", uitleg: "Woont (van to live)." }],
@@ -505,7 +505,7 @@ const steps = [
         q: "Welk woord hoort niet bij eten?",
         options: ["scarf", "bread", "milk", "egg"],
         answer: 0,
-        wrongHints: [null, "Scarf = sjaal (kleding).", "Bread = brood.", "Milk = melk.", "Egg = ei."],
+        wrongHints: [null, "Bread = brood.", "Milk = melk.", "Egg = ei."],
         uitlegPad: {
           stappen: [{ titel: "Welke hoort niet", tekst: "Bread (brood), milk (melk), egg (ei) = eten/drinken. Scarf (sjaal) = kleding." }],
           woorden: [{ woord: "scarf", uitleg: "Sjaal — kleding-thema, geen eten." }],
