@@ -131,7 +131,7 @@ const steps = [
         q: "**12 − 6 ÷ 3** = ?",
         options: ["10","2","6","4"],
         answer: 0,
-        wrongHints: [null,"Eerst ÷: 6÷3=2, dan 12-2=10.","Dat zou (12-6)÷3 zijn met haakjes.","Anders.","Anders."],
+        wrongHints: [null,"Dat zou (12-6)÷3 zijn — maar er staan geen haakjes.","Welke bewerking is sterker, ÷ of −?","Welke bewerking is sterker, ÷ of −?"],
         uitlegPad: {
           stappen: [{ titel: "÷ eerst", tekst: "÷ sterker dan −. Eerst 6÷3=2, dan 12-2=10." }],
           woorden: [{ woord: "÷ vóór −", uitleg: "Delen gaat vóór aftrekken (zelfde regel als × vóór +)." }],
@@ -145,7 +145,7 @@ const steps = [
         q: "**6 × 2 + 4 × 3** = ?",
         options: ["24","36","48","20"],
         answer: 0,
-        wrongHints: [null,"Welke twee onderdelen pak je eerst — beide ×? Doe ze los van elkaar.","Niet (6×2+4)×3 — × bindt sterker dan + zonder haakjes.","Te veel — je rekent waarschijnlijk haakjes om de hele som.","Te weinig — heb je beide × meegenomen?"],
+        wrongHints: [null,"Welke twee onderdelen pak je eerst — beide ×? Doe ze los van elkaar.","Niet (6×2+4)×3 — × bindt sterker dan + zonder haakjes.","Te weinig — heb je beide × meegenomen?"],
         uitlegPad: {
           stappen: [{ titel: "Beide × eerst", tekst: "Eerst beide ×: 6×2=12, 4×3=12. Dan +: 12+12=24." }],
           woorden: [{ woord: "× bindt", uitleg: "× verbindt twee getallen sterker dan + ze van elkaar scheidt." }],
@@ -170,7 +170,7 @@ const steps = [
         q: "**(4 + 6) × 3** = ?",
         options: ["30","22","18","13"],
         answer: 0,
-        wrongHints: [null,"Eerst haakjes: 10, dan ×3 = 30.","Niet 4+6×3 — haakjes!","Te weinig.","Te weinig."],
+        wrongHints: [null,"Niet 4+6×3 — er staan haakjes, doe die eerst!","Te weinig — heb je de haakjes wel als eerste gedaan?","Te weinig — heb je de haakjes wel als eerste gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "Haakjes eerst", tekst: "(4+6)=10. Dan ×3=30." }],
           woorden: [{ woord: "haakjes", uitleg: "Forceren volgorde: ALTIJD eerst." }],
@@ -184,7 +184,7 @@ const steps = [
         q: "**3 × (4 + 2) − 1** = ?",
         options: ["17","11","9","21"],
         answer: 0,
-        wrongHints: [null,"Werk van binnen naar buiten: doe eerst de haakjes, dan ×, dan −.","Heb je de haakjes als eerste gedaan?","Heb je de × en − in de juiste volgorde gedaan?","Niet zo — werk van binnen naar buiten."],
+        wrongHints: [null,"Werk van binnen naar buiten: doe eerst de haakjes, dan ×, dan −.","Heb je de haakjes als eerste gedaan?","Heb je de × en − in de juiste volgorde gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "Volgorde HMVDOA", tekst: "Haakjes: 4+2=6. ×: 3×6=18. −: 18-1=17." }],
           woorden: [{ woord: "stappenplan", uitleg: "Haakjes → × → −. Strikt deze volgorde." }],
@@ -223,7 +223,7 @@ const steps = [
         q: "**3²** = ?",
         options: ["9","6","5","12"],
         answer: 0,
-        wrongHints: [null,"Niet 3×2.","3+3 zou zijn — geen macht.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Niet 3×2 — een macht is herhaald vermenigvuldigen.","Niet 3+3 — dat is optellen, geen macht.","Reken nog eens: 3² = 3×3."],
         uitlegPad: {
           stappen: [{ titel: "3×3 = 9", tekst: "3² = 3 keer met zichzelf vermenigvuldigd = 3×3 = 9." }],
           woorden: [{ woord: "kwadraat", uitleg: "x² = x maal x. 'Tot de tweede macht'." }],
@@ -237,7 +237,7 @@ const steps = [
         q: "**2³** = ?",
         options: ["8","6","9","16"],
         answer: 0,
-        wrongHints: [null,"2×2×2 = 8.","Niet 2×3.","Dat is 3².","2⁴ is 16."],
+        wrongHints: [null,"Niet 2×3 — een macht is herhaald vermenigvuldigen.","Dat is 3², niet 2³.","Dat is 2⁴, één keer te veel."],
         uitlegPad: {
           stappen: [{ titel: "2×2×2 = 8", tekst: "2³ = 3 keer 2 vermenigvuldigen = 2×2×2 = 8." }],
           woorden: [{ woord: "tot de derde macht", uitleg: "x³ = x × x × x." }],
@@ -251,7 +251,7 @@ const steps = [
         q: "**4 + 5²** = ?",
         options: ["29","81","20","9"],
         answer: 0,
-        wrongHints: [null,"5²=25, 4+25=29.","(4+5)²=81 — maar geen haakjes.","Niet zo.","Niet zo."],
+        wrongHints: [null,"(4+5)²=81 — maar er staan geen haakjes.","Doe eerst de macht, dan pas +.","Doe eerst de macht, dan pas +."],
         uitlegPad: {
           stappen: [{ titel: "Macht eerst", tekst: "5² = 25. Dan +: 4+25 = 29." }],
           woorden: [{ woord: "macht eerst", uitleg: "Machten gaan vóór + en − en × en ÷." }],
@@ -272,7 +272,7 @@ const steps = [
         q: "**8 − 4 ÷ 2 + 1** = ?",
         options: ["7","3","5","9"],
         answer: 0,
-        wrongHints: [null,"Eerst ÷: 4÷2=2, dan 8-2+1=7.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Welke bewerking is sterker — deel eerst.","Welke bewerking is sterker — deel eerst.","Welke bewerking is sterker — deel eerst."],
         uitlegPad: {
           stappen: [{ titel: "÷ → − → +", tekst: "÷ eerst: 4÷2=2. Som: 8-2+1. − en + links→rechts: 8-2=6, 6+1=7." }],
           woorden: [{ woord: "links→rechts", uitleg: "Bij gelijke prioriteit (+ en −): van links naar rechts." }],
@@ -286,7 +286,7 @@ const steps = [
         q: "**(2 + 3)² − 5** = ?",
         options: ["20","22","11","17"],
         answer: 0,
-        wrongHints: [null,"Haakjes: 5, machten: 25, -5: 20.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Doe haakjes, dan de macht, dan pas −.","Doe haakjes, dan de macht, dan pas −.","Doe haakjes, dan de macht, dan pas −."],
         uitlegPad: {
           stappen: [{ titel: "H → M → −", tekst: "Haakjes: 2+3=5. Macht: 5²=25. −: 25-5=20." }],
           woorden: [{ woord: "haakjes met macht", uitleg: "Eerst haakjes invullen, dan kwadraat van resultaat." }],
@@ -300,7 +300,7 @@ const steps = [
         q: "**3 × 2² + 4** = ?",
         options: ["16","24","28","12"],
         answer: 0,
-        wrongHints: [null,"2²=4, 3×4=12, +4=16.","(3×2)²=36 — geen haakjes.","Niet zo.","3×2+4 = 10."],
+        wrongHints: [null,"(3×2)²=36 — maar er staan geen haakjes.","Doe eerst de macht, dan ×, dan +.","Heb je de macht 2² wel gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "M → × → +", tekst: "Macht eerst: 2²=4. ×: 3×4=12. +: 12+4=16." }],
           woorden: [{ woord: "macht ≠ vermenigvuldiging", uitleg: "Macht (2²) en × (3×2) zijn verschillend." }],
@@ -326,7 +326,7 @@ const steps = [
         q: "**18 ÷ (1 + 2) × 4** = ?",
         options: ["24","6","2","12"],
         answer: 0,
-        wrongHints: [null,"Haakjes:3, 18÷3=6, 6×4=24.","Niet zo — × erna.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Doe eerst de haakjes, dan ÷ en × van links naar rechts.","Doe eerst de haakjes, dan ÷ en × van links naar rechts.","Doe eerst de haakjes, dan ÷ en × van links naar rechts."],
         uitlegPad: {
           stappen: [{ titel: "H → ÷× LR", tekst: "Haakjes: 1+2=3. Daarna ÷ en × van links naar rechts: 18÷3=6, 6×4=24." }],
           woorden: [{ woord: "links→rechts", uitleg: "Bij × en ÷ samen: van links naar rechts." }],
@@ -340,7 +340,7 @@ const steps = [
         q: "**2 × (4 + 3²)** = ?",
         options: ["26","18","14","49"],
         answer: 0,
-        wrongHints: [null,"3²=9, 4+9=13, 2×13=26.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Doe binnen de haakjes eerst de macht, dan +.","Doe binnen de haakjes eerst de macht, dan +.","Doe binnen de haakjes eerst de macht, dan +."],
         uitlegPad: {
           stappen: [{ titel: "Macht in haakjes", tekst: "Binnen haakjes: 3²=9 eerst, dan 4+9=13. Daarna ×: 2×13=26." }],
           woorden: [{ woord: "binnen-volgorde", uitleg: "Binnen haakjes geldt ook HMVDOA." }],
@@ -354,7 +354,7 @@ const steps = [
         q: "**(5 + 1)² − 4 × 3** = ?",
         options: ["24","60","30","12"],
         answer: 0,
-        wrongHints: [null,"Haakjes:6, macht:36, ×:12, -:24.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Volgorde: haakjes, macht, ×, dan −.","Volgorde: haakjes, macht, ×, dan −.","Volgorde: haakjes, macht, ×, dan −."],
         uitlegPad: {
           stappen: [{ titel: "Volledige HMVDOA", tekst: "H: 5+1=6. M: 6²=36. ×: 4×3=12. −: 36-12=24." }],
           woorden: [{ woord: "alle stappen", uitleg: "Som met alle 4 niveaus van HMVDOA." }],
@@ -375,7 +375,7 @@ const steps = [
         q: "**3 + 4 × 2** = ?",
         options: ["11","14","9","24"],
         answer: 0,
-        wrongHints: [null,"× eerst: 4×2=8, 3+8=11.","(3+4)×2 zou zijn — geen haakjes.","Niet zo.","Niet zo."],
+        wrongHints: [null,"(3+4)×2 zou zijn — maar er staan geen haakjes.","Welke bewerking is sterker, × of +?","Welke bewerking is sterker, × of +?"],
         uitlegPad: {
           stappen: [{ titel: "× eerst", tekst: "4×2=8, dan 3+8=11." }],
           woorden: [{ woord: "× vóór +", uitleg: "Vermenigvuldigen sterker dan optellen." }],
@@ -389,7 +389,7 @@ const steps = [
         q: "**(6 − 2) × 5** = ?",
         options: ["20","-4","60","8"],
         answer: 0,
-        wrongHints: [null,"Haakjes:4, ×5=20.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Doe eerst wat tussen de haakjes staat, dan ×5.","Doe eerst wat tussen de haakjes staat, dan ×5.","Doe eerst wat tussen de haakjes staat, dan ×5."],
         uitlegPad: {
           stappen: [{ titel: "Haakjes eerst", tekst: "(6-2)=4. Dan ×5: 4×5=20." }],
           woorden: [{ woord: "haakjes met −", uitleg: "Aftrekking binnen haakjes wordt eerst gedaan." }],
@@ -403,7 +403,7 @@ const steps = [
         q: "**5²** = ?",
         options: ["25","10","7","52"],
         answer: 0,
-        wrongHints: [null,"5×5=25, niet 5+5 of 5×2.","Dat is 5+5.","Niet zo.","Niet getal in macht-vorm."],
+        wrongHints: [null,"Dat is 5+5 — een macht is vermenigvuldigen.","Een macht is herhaald vermenigvuldigen, geen optelling.","Dat is gewoon de cijfers achter elkaar, niet 5×5."],
         uitlegPad: {
           stappen: [{ titel: "5×5 = 25", tekst: "5² = 5 keer met zichzelf = 5×5 = 25." }],
           woorden: [{ woord: "5²", uitleg: "Vijf kwadraat = 25." }],
@@ -417,7 +417,7 @@ const steps = [
         q: "**12 ÷ 4 + 3 × 2** = ?",
         options: ["9","24","30","6"],
         answer: 0,
-        wrongHints: [null,"÷:3, ×:6, samen:9.","Niet zo.","Niet zo.","Niet zo."],
+        wrongHints: [null,"Doe ÷ en × eerst, dan pas +.","Doe ÷ en × eerst, dan pas +.","Doe ÷ en × eerst, dan pas +."],
         uitlegPad: {
           stappen: [{ titel: "Beide ÷× eerst", tekst: "÷ + × allebei eerst: 12÷4=3, 3×2=6. Dan +: 3+6=9." }],
           woorden: [{ woord: "twee × en ÷", uitleg: "Doe alle × en ÷ vóór + en −." }],
