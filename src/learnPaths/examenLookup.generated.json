@@ -157,6 +157,260 @@
       "examenBron": "🎓 Echt examen VMBO-GL/TL Engels 2025 tijdvak 2, vraag 34"
     }
   ],
+  "cse-leesvaardigheid-nederlands": [
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 2,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 2"
+    },
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 7"
+    },
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 13,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 13"
+    },
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 17,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 17"
+    },
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 26"
+    },
+    {
+      "examPathId": "examen-nederlands-2022-t1",
+      "examPathTitle": "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 29,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2022 tijdvak 1, vraag 29"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 1"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 10"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 18,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 18"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 23"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 20,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 20"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t1",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 28,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 1, vraag 28"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 3,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 3"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 7,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 7"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 10,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 10"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 18,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 18"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 21,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 21"
+    },
+    {
+      "examPathId": "examen-nederlands-2023-t2",
+      "examPathTitle": "Examen Nederlands 2023 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2023 tijdvak 2, vraag 33"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 4,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 4"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 9,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 9"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 18,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 18"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 22,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 22"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 24,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 24"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t1",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 1 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 30,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 1, vraag 30"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 1,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 1"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 9,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 9"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 18,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 18"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 23,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 23"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 24,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 24"
+    },
+    {
+      "examPathId": "examen-nederlands-2024-t2",
+      "examPathTitle": "Examen Nederlands 2024 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2024 tijdvak 2, vraag 33"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 0,
+      "vraagNr": 9,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 9"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 1,
+      "vraagNr": 16,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 16"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 2,
+      "vraagNr": 19,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 19"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 3,
+      "vraagNr": 32,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 32"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 4,
+      "vraagNr": 26,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 26"
+    },
+    {
+      "examPathId": "examen-nederlands-2025-t2",
+      "examPathTitle": "Examen Nederlands 2025 — tijdvak 2 (VMBO-GL/TL)",
+      "stepIdx": 5,
+      "vraagNr": 33,
+      "examenBron": "🎓 Echt examen VMBO-GL/TL Nederlands 2025 tijdvak 2, vraag 33"
+    }
+  ],
   "dierenklassen-po": [
     {
       "examPathId": "examen-biologie-2025-t2",
