@@ -1,7 +1,41 @@
 # Content-gaps inventaris
 
-> Gegenereerd 2026-05-04. Bijgewerkt 2026-05-05 na nachtsessie.
-> Leeg-cellen = ontbrekende content. Updaten: zie scripts onderaan.
+> ⚠️ **De per-cel-tabellen verderop dateren van 2026-05-04/05 en zijn ACHTERHAALD.**
+> Gebruik ze niet als bron van waarheid — draai de live audit-scripts (onderaan).
+
+## Actuele stand (gemeten 2026-05-30)
+
+- **237 leerpaden** + **45 examen-paden** (was 46 totaal in mei; app is ~6× gegroeid).
+- **8.059 oefen-checks** in 282 bestanden.
+- Per vak (leerpaden): geschiedenis 34, wiskunde 32, rekenen 29, taal 23, engels 23,
+  economie 20, biologie 20, aardrijkskunde 16, natuur 14, wereldoriëntatie 12,
+  maatschappijleer 12, natuurkunde 11, scheikunde 6, nederlands 6, begrijpend-lezen 3,
+  spelling 3, duits 3, frans 3, + losse vakken.
+
+### Bekende gaten per 2026-05-30 (zie `memory/project_studiebol_gaps_20260530`)
+
+1. **Nederlands-examens 5/8** — mist 2022-T1, 2022-T2, 2025-T1 (bron nodig).
+2. **Geen authentieke examen-paden** voor wiskunde/natuurkunde/scheikunde/aardrijkskunde/
+   Frans/Duits — wiskunde-examen ontbreekt als USP terwijl het 't grootste vak is (bron nodig).
+3. **Bundle-gewicht**: `data-learnpaths-wiskunde` 4,1 MB, `data-learnpaths-po` 2 MB (per-pad lazy zou beter).
+4. ✅ **wrongHints lengte-mismatch (118 checks)** — opgelost 2026-05-30. Detector:
+   `scripts/lint-wronghints-length.mjs` (nu 0/8059).
+5. ✅ **Deze doc** — kop bijgewerkt 2026-05-30.
+
+### Levende gap-detectoren (draai deze, niet de tabellen hieronder)
+
+```bash
+node scripts/lint-wronghints-length.mjs   # wrongHints.length != options.length
+node scripts/lint-wronghints-klopt.mjs    # 'Klopt'-leak in foute opties
+node scripts/auditKennisgraaf.mjs         # kapotte leerpadLink-loops / ontbrekende voorkennisKeten
+node scripts/audit-units.mjs              # % / € / eenheid ontbreekt in uitleg
+```
+
+---
+
+## (HISTORISCH — 2026-05-04/05) Content-gaps inventaris
+
+> Onderstaande tabellen zijn een momentopname uit mei en kloppen NIET meer met de live data.
 
 ## Sessie 2026-05-04/05 — toegevoegd
 
