@@ -1,18 +1,20 @@
 // Oefenpakket-pagina "/oefenpakket" — genereert een print-/PDF-klaar
-// Doorstroomtoets-oefenpakket uit de echte app-vragen (rekenen, taal,
+// Doorstroomtoets-werkboek uit de echte app-vragen (rekenen, taal,
 // studievaardigheden groep 8).
 //
-// Doel: ouder van groep 7/8 print thuis een nette set oefenvragen + een
-// antwoordsleutel met korte uitleg. WYSIWYG: op het scherm zie je dezelfde
-// witte A4-vellen die de printer/PDF maakt.
+// Doel: ouder van groep 7/8 print thuis een compleet, net oefenwerkboek —
+// per onderdeel ingedeeld in hoofdstukken, met een ouder-instructiepagina en
+// een volledige antwoordsleutel met korte uitleg. WYSIWYG: op het scherm zie
+// je dezelfde witte A4-vellen die de printer/PDF maakt.
 //
 // Bewust geen externe PDF-library: we gebruiken de browser-printdialoog
-// (window.print → "Opslaan als PDF"). Werkt overal, nul dependencies,
-// nul Vercel-config.
+// (window.print → "Opslaan als PDF"). Werkt overal, nul dependencies.
 //
 // Visie-bewaker: de app-kern blijft gratis (gratis-belofte). Dit pakket is
-// een gratis lead-magnet — geen koop-knop in de app. Mark kan hetzelfde
-// pakket los exporteren en als product verkopen; dat gebeurt buiten de app.
+// een gratis lead-magnet — geen koop-knop in de app. Vragen zijn eigen werk
+// "in stijl van" de Doorstroomtoets, géén officiële Cito/IEP-vragen
+// (copyright-policy). Externe link naar Cito's gratis voorbeeldboekje voor
+// echte voorbeelden.
 
 import { useEffect, useMemo, useState } from "react";
 import { BRAND } from "../brand.js";
@@ -21,10 +23,32 @@ import taalPad from "../learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../learnPaths/doorstroomtoetsStudievaardighedenG8.js";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
+const CITO_VOORBEELD_URL =
+  "https://cito.nl/onderwijs/primair-onderwijs/doorstroomtoets-leerling-in-beeld";
 
-// ── Vragen uit een leerpad halen ────────────────────────────────
-// Elk pad: pad.steps[].checks[] met { q, options, answer, uitlegPad }.
-// We pakken alleen echte meerkeuzevragen (>=2 opties, geldig antwoord).
+const OMVANG = {
+  compact: { label: "Compact", perHoofdstuk: 8, sub: "± snelle oefenronde" },
+  normaal: { label: "Normaal", perHoofdstuk: 16, sub: "± compleet werkboek" },
+  compleet: { label: "Compleet", perHoofdstuk: 999, sub: "± alle vragen" },
+};
+
+const ONDERWERPEN = [
+  { id: "rekenen", label: "Rekenen", emoji: "🔢", pad: rekenenPad },
+  { id: "taal", label: "Taal", emoji: "📖", pad: taalPad },
+  { id: "studie", label: "Studievaardigheden", emoji: "🗺️", pad: studiePad },
+];
+
+// ── Helpers ─────────────────────────────────────────────────────
+function isGeldig(check) {
+  return (
+    Array.isArray(check.options) &&
+    check.options.length >= 2 &&
+    Number.isInteger(check.answer) &&
+    check.answer >= 0 &&
+    check.answer < check.options.length
+  );
+}
+
 function korteUitleg(check) {
   const u = check.uitlegPad;
   if (!u) return "";
@@ -34,32 +58,34 @@ function korteUitleg(check) {
   return "";
 }
 
-function vragenUitPad(pad, max) {
-  const out = [];
-  for (const step of pad.steps || []) {
-    for (const check of step.checks || []) {
-      if (
-        Array.isArray(check.options) &&
-        check.options.length >= 2 &&
-        Number.isInteger(check.answer) &&
-        check.answer >= 0 &&
-        check.answer < check.options.length
-      ) {
-        out.push({
-          q: check.q,
-          options: check.options,
-          answer: check.answer,
-          uitleg: korteUitleg(check),
-        });
-      }
-      if (out.length >= max) return out;
-    }
-  }
-  return out;
+// "Breuken & decimalen — ~20 min" → "Breuken & decimalen"
+function schoonHoofdstuk(titel = "") {
+  return titel.replace(/\s*[—-]\s*~?\d+\s*min.*$/i, "").trim();
 }
 
-// Mini-markdown: **vet** en *cursief* → HTML. Strip overige tekens niet,
-// vragen bevatten soms ·, €, breuken — die mogen blijven.
+// Werkboek-structuur per onderwerp: hoofdstukken (= stappen) met vragen.
+function werkboekUitPad(pad, perHoofdstuk) {
+  const chapters = pad.chapters || [];
+  const hoofdstukken = [];
+  (pad.steps || []).forEach((step, i) => {
+    const ch = chapters.find((c) => i >= c.from && i <= c.to);
+    const titel = schoonHoofdstuk(ch?.title || step.title || `Deel ${i + 1}`);
+    const emoji = ch?.emoji || "•";
+    const vragen = (step.checks || [])
+      .filter(isGeldig)
+      .slice(0, perHoofdstuk)
+      .map((c) => ({
+        q: c.q,
+        options: c.options,
+        answer: c.answer,
+        uitleg: korteUitleg(c),
+      }));
+    if (vragen.length) hoofdstukken.push({ titel, emoji, vragen });
+  });
+  return hoofdstukken;
+}
+
+// Mini-markdown: **vet** en *cursief* → HTML (veilig ge-escaped).
 function mdNaarHtml(tekst = "") {
   return tekst
     .replace(/&/g, "&amp;")
@@ -69,14 +95,12 @@ function mdNaarHtml(tekst = "") {
     .replace(/(^|[^*])\*(?!\*)(.+?)\*(?!\*)/g, "$1<em>$2</em>");
 }
 
-const ONDERWERPEN = [
-  { id: "rekenen", label: "Rekenen", emoji: "🔢", pad: rekenenPad, max: 10 },
-  { id: "taal", label: "Taal", emoji: "📖", pad: taalPad, max: 10 },
-  { id: "studie", label: "Studievaardigheden", emoji: "🗺️", pad: studiePad, max: 8 },
-];
+function stripMd(t = "") {
+  return t.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1");
+}
 
 // Print-stylesheet: bij printen verbergen we de hele app en tonen alleen
-// het pakket. Klassieke visibility-truc zodat alle layout-chrome wegvalt.
+// het werkboek. Klassieke visibility-truc zodat alle layout-chrome wegvalt.
 const PRINT_CSS = `
 @media print {
   body * { visibility: hidden !important; }
@@ -95,12 +119,15 @@ const PRINT_CSS = `
     border: none !important;
   }
   .oefenpakket-sheet:last-child { page-break-after: auto; }
+  .oefenpakket-vraag { break-inside: avoid; page-break-inside: avoid; }
+  .oefenpakket-hoofdstuk { break-after: avoid; page-break-after: avoid; }
   @page { margin: 16mm 14mm; }
 }
 `;
 
 export default function OefenpakketPage({ setPage } = {}) {
   const [actief, setActief] = useState({ rekenen: true, taal: true, studie: true });
+  const [omvang, setOmvang] = useState("normaal");
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -115,27 +142,37 @@ export default function OefenpakketPage({ setPage } = {}) {
     };
   }, []);
 
+  const perHoofdstuk = OMVANG[omvang].perHoofdstuk;
+
   const secties = useMemo(
     () =>
       ONDERWERPEN.filter((o) => actief[o.id]).map((o) => ({
         ...o,
-        vragen: vragenUitPad(o.pad, o.max),
+        hoofdstukken: werkboekUitPad(o.pad, perHoofdstuk),
       })),
-    [actief]
+    [actief, perHoofdstuk]
   );
 
-  const totaal = secties.reduce((n, s) => n + s.vragen.length, 0);
+  const totaal = secties.reduce(
+    (n, s) => n + s.hoofdstukken.reduce((m, h) => m + h.vragen.length, 0),
+    0
+  );
 
-  // Doorlopende vraagnummering over alle secties voor de antwoordsleutel.
+  // Doorlopende vraagnummering over het hele pakket (voor de antwoordsleutel).
   let teller = 0;
   const genummerd = secties.map((s) => ({
     ...s,
-    vragen: s.vragen.map((v) => ({ ...v, nr: ++teller })),
+    hoofdstukken: s.hoofdstukken.map((h) => ({
+      ...h,
+      vragen: h.vragen.map((v) => ({ ...v, nr: ++teller })),
+    })),
   }));
 
   function toggle(id) {
     setActief((a) => ({ ...a, [id]: !a[id] }));
   }
+
+  const geschatteMin = Math.max(5, Math.round(totaal * 0.75));
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
@@ -144,13 +181,9 @@ export default function OefenpakketPage({ setPage } = {}) {
         <button
           onClick={() => setPage && setPage("cito")}
           style={{
-            background: "transparent",
-            border: "none",
-            color: "var(--color-text-muted, #8899aa)",
-            cursor: "pointer",
-            fontSize: 14,
-            padding: 0,
-            marginBottom: 12,
+            background: "transparent", border: "none",
+            color: "var(--color-text-muted, #8899aa)", cursor: "pointer",
+            fontSize: 14, padding: 0, marginBottom: 12,
           }}
         >
           ← Terug naar Doorstroomtoets
@@ -160,11 +193,17 @@ export default function OefenpakketPage({ setPage } = {}) {
           📄 Gratis Doorstroomtoets-oefenpakket
         </h1>
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
-          Print thuis een net oefenpakket voor groep 7/8 — met antwoordsleutel en
-          korte uitleg. Kies de onderwerpen en klik op <strong>Opslaan als PDF</strong>.
-          De vragen zijn in stijl van de Doorstroomtoets (Cito/IEP), gemaakt door {BRAND.publisher}.
+          Print thuis een compleet oefenwerkboek voor groep 7/8 — per onderdeel
+          ingedeeld in hoofdstukken, met een ouder-uitlegpagina en een volledige
+          antwoordsleutel. Kies de onderdelen en de omvang, en klik op{" "}
+          <strong>Opslaan als PDF</strong>. Vragen in stijl van de Doorstroomtoets
+          (Cito/IEP), gemaakt door {BRAND.publisher}.
         </p>
 
+        {/* Onderdelen */}
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+          Onderdelen
+        </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 18 }}>
           {ONDERWERPEN.map((o) => {
             const aan = actief[o.id];
@@ -173,20 +212,40 @@ export default function OefenpakketPage({ setPage } = {}) {
                 key={o.id}
                 onClick={() => toggle(o.id)}
                 style={{
-                  padding: "10px 16px",
-                  borderRadius: 999,
-                  border: aan
-                    ? "1.5px solid var(--color-accent, #42a5f5)"
-                    : "1.5px solid rgba(255,255,255,0.15)",
+                  padding: "10px 16px", borderRadius: 999,
+                  border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : "1.5px solid rgba(255,255,255,0.15)",
                   background: aan ? "rgba(66,165,245,0.15)" : "transparent",
                   color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
-                  cursor: "pointer",
-                  fontSize: 15,
-                  fontWeight: 600,
+                  cursor: "pointer", fontSize: 15, fontWeight: 600,
                 }}
               >
-                {aan ? "✓ " : ""}
-                {o.emoji} {o.label}
+                {aan ? "✓ " : ""}{o.emoji} {o.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Omvang */}
+        <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+          Omvang
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 20 }}>
+          {Object.entries(OMVANG).map(([key, o]) => {
+            const aan = omvang === key;
+            return (
+              <button
+                key={key}
+                onClick={() => setOmvang(key)}
+                style={{
+                  padding: "8px 16px", borderRadius: 12, textAlign: "left",
+                  border: aan ? "1.5px solid var(--color-accent, #42a5f5)" : "1.5px solid rgba(255,255,255,0.15)",
+                  background: aan ? "rgba(66,165,245,0.15)" : "transparent",
+                  color: aan ? "var(--color-text, #e8edf5)" : "var(--color-text-muted, #8899aa)",
+                  cursor: "pointer", fontSize: 14, fontWeight: 600,
+                }}
+              >
+                {aan ? "✓ " : ""}{o.label}
+                <span style={{ display: "block", fontSize: 11, fontWeight: 400, opacity: 0.8 }}>{o.sub}</span>
               </button>
             );
           })}
@@ -197,22 +256,17 @@ export default function OefenpakketPage({ setPage } = {}) {
             onClick={() => window.print()}
             disabled={totaal === 0}
             style={{
-              padding: "14px 28px",
-              borderRadius: 12,
-              border: "none",
-              background:
-                totaal === 0 ? "rgba(255,255,255,0.1)" : "var(--color-accent, #42a5f5)",
+              padding: "14px 28px", borderRadius: 12, border: "none",
+              background: totaal === 0 ? "rgba(255,255,255,0.1)" : "var(--color-accent, #42a5f5)",
               color: totaal === 0 ? "#888" : "#0b1224",
-              fontSize: 17,
-              fontWeight: 700,
-              cursor: totaal === 0 ? "not-allowed" : "pointer",
+              fontSize: 17, fontWeight: 700, cursor: totaal === 0 ? "not-allowed" : "pointer",
               boxShadow: totaal === 0 ? "none" : "0 4px 16px rgba(66,165,245,0.35)",
             }}
           >
             🖨️ Opslaan als PDF / Printen
           </button>
           <span style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14 }}>
-            {totaal} {totaal === 1 ? "vraag" : "vragen"} geselecteerd
+            {totaal} {totaal === 1 ? "vraag" : "vragen"} · ± {geschatteMin} min oefenen
           </span>
         </div>
 
@@ -223,65 +277,104 @@ export default function OefenpakketPage({ setPage } = {}) {
         </p>
       </div>
 
-      {/* ── Het printbare pakket (WYSIWYG witte vellen) ───────── */}
+      {/* ── Het printbare werkboek (WYSIWYG witte vellen) ─────── */}
       <div className="oefenpakket-print">
         {/* Voorblad */}
         <Sheet>
-          <div style={{ textAlign: "center", paddingTop: 60 }}>
+          <div style={{ textAlign: "center", paddingTop: 50 }}>
             <div style={{ fontSize: 54, marginBottom: 8 }}>📘</div>
             <div style={{ fontSize: 13, letterSpacing: 2, color: "#6b7785", fontWeight: 700 }}>
-              {BRAND.name.toUpperCase()} · OEFENPAKKET
+              {BRAND.name.toUpperCase()} · OEFENWERKBOEK
             </div>
             <h2 style={{ fontSize: 30, margin: "10px 0 4px", color: "#1a2332" }}>
               Doorstroomtoets oefenen
             </h2>
-            <div style={{ fontSize: 18, color: "#46546a", marginBottom: 28 }}>Groep 7 &amp; 8</div>
+            <div style={{ fontSize: 18, color: "#46546a", marginBottom: 26 }}>Groep 7 &amp; 8</div>
 
-            <div
-              style={{
-                display: "inline-block",
-                textAlign: "left",
-                background: "#f4f7fb",
-                borderRadius: 12,
-                padding: "18px 26px",
-                margin: "0 auto",
-              }}
-            >
-              <div style={{ fontWeight: 700, color: "#1a2332", marginBottom: 8 }}>
-                In dit pakket:
-              </div>
+            <div style={{ display: "inline-block", textAlign: "left", background: "#f4f7fb", borderRadius: 12, padding: "18px 26px" }}>
+              <div style={{ fontWeight: 700, color: "#1a2332", marginBottom: 8 }}>In dit werkboek:</div>
               {genummerd.map((s) => (
                 <div key={s.id} style={{ color: "#3a4658", fontSize: 15, marginBottom: 4 }}>
-                  {s.emoji} {s.label} — {s.vragen.length} vragen
+                  {s.emoji} {s.label} — {s.hoofdstukken.reduce((m, h) => m + h.vragen.length, 0)} vragen
+                  <span style={{ color: "#8893a3", fontSize: 13 }}>
+                    {" "}({s.hoofdstukken.length} hoofdstukken)
+                  </span>
                 </div>
               ))}
-              <div style={{ color: "#3a4658", fontSize: 15, marginTop: 8, fontWeight: 600 }}>
+              <div style={{ color: "#1a2332", fontSize: 15, marginTop: 10, fontWeight: 700, borderTop: "1px solid #dde3ec", paddingTop: 8 }}>
                 ✏️ Totaal {totaal} oefenvragen + antwoordsleutel met uitleg
               </div>
             </div>
 
-            <div style={{ marginTop: 40, color: "#6b7785", fontSize: 14, lineHeight: 1.6 }}>
-              <p style={{ margin: "0 0 4px" }}>
-                <strong>Naam:</strong> ______________________________
-              </p>
-              <p style={{ margin: 0 }}>
-                <strong>Datum:</strong> ______________________________
-              </p>
+            <div style={{ marginTop: 36, color: "#6b7785", fontSize: 14, lineHeight: 1.7 }}>
+              <p style={{ margin: "0 0 4px" }}><strong>Naam:</strong> ______________________________</p>
+              <p style={{ margin: 0 }}><strong>Datum:</strong> ______________________________</p>
             </div>
 
-            <div style={{ marginTop: 50, color: "#9aa6b4", fontSize: 12 }}>
+            <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12, lineHeight: 1.5 }}>
               © {BRAND.publisher} · {BRAND.domain} · Oefenvragen in stijl van de
               Doorstroomtoets — geen officiële Cito/IEP-vragen.
             </div>
           </div>
         </Sheet>
 
-        {/* Opgaven per onderwerp */}
+        {/* Ouder-instructiepagina */}
+        <Sheet>
+          <SectieKop emoji="👪" label="Voor de ouder — zo gebruik je dit werkboek" />
+          <Alinea titel="Wat is de Doorstroomtoets?">
+            De Doorstroomtoets (sinds 2024 — vroeger de Cito-eindtoets) wordt
+            gemaakt in groep 8, in de eerste twee weken van februari. Hij test
+            rekenen, taal en studievaardigheden. Dit werkboek oefent precies die
+            onderdelen, in dezelfde stijl.
+          </Alinea>
+          <Alinea titel="Hoe pak je het aan?">
+            Niet alles in één keer. Een kwartier per dag werkt aantoonbaar beter
+            dan één lange sessie per week. Laat je kind één hoofdstuk per keer
+            maken (± 15 minuten), bespreek daarna samen de antwoorden.
+          </Alinea>
+          <Alinea titel="Wat doe je bij een fout antwoord?">
+            Geef niet meteen het juiste antwoord. Lees samen de korte uitleg in
+            de antwoordsleutel achterin, en laat je kind de vraag dan opnieuw
+            proberen. Begrijpen &gt; raden.
+          </Alinea>
+          <Alinea titel="Meer oefenen — met uitleg op 3 niveaus">
+            Online op {BRAND.domain} opent bij elke fout een uitleg op drie
+            niveaus (basis / simpeler / nog simpeler) en een leerpad over het
+            onderliggende concept. Gratis te gebruiken.
+          </Alinea>
+          <div style={{ marginTop: 24, background: "#fff8e6", border: "1px solid #f0d98a", borderRadius: 10, padding: "14px 18px", fontSize: 13.5, color: "#5c4d1f", lineHeight: 1.55 }}>
+            <strong>Officiële voorbeelden?</strong> Cito stelt een gratis
+            voorbeeldopgavenboekje beschikbaar. Zoek op “Cito Leerling in Beeld
+            voorbeeldopgaven” of kijk op{" "}
+            <span style={{ textDecoration: "underline" }}>{CITO_VOORBEELD_URL.replace("https://", "")}</span>.
+            De vragen in dit werkboek zijn eigen oefenvragen in dezelfde stijl —
+            géén overgenomen toetsvragen.
+          </div>
+        </Sheet>
+
+        {/* Opgaven per onderwerp → per hoofdstuk */}
         {genummerd.map((s) => (
           <Sheet key={s.id}>
             <SectieKop emoji={s.emoji} label={s.label} />
-            {s.vragen.map((v) => (
-              <Opgave key={v.nr} v={v} />
+            {s.hoofdstukken.map((h, hi) => (
+              <div key={hi} style={{ marginBottom: 22 }}>
+                <h4
+                  className="oefenpakket-hoofdstuk"
+                  style={{
+                    fontSize: 15, color: "#1a2332", margin: "0 0 12px",
+                    fontFamily: "Arial, sans-serif",
+                    background: "#eef2f8", borderRadius: 6, padding: "7px 12px",
+                  }}
+                >
+                  {h.emoji} {hi + 1}. {h.titel}
+                  <span style={{ color: "#8893a3", fontWeight: 400, fontSize: 12 }}>
+                    {" "}· {h.vragen.length} vragen
+                  </span>
+                </h4>
+                {h.vragen.map((v) => (
+                  <Opgave key={v.nr} v={v} />
+                ))}
+              </div>
             ))}
           </Sheet>
         ))}
@@ -294,26 +387,29 @@ export default function OefenpakketPage({ setPage } = {}) {
             uitleg en laat je kind de vraag opnieuw proberen.
           </p>
           {genummerd.map((s) => (
-            <div key={s.id} style={{ marginBottom: 14 }}>
-              <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 14, margin: "10px 0 6px" }}>
+            <div key={s.id} style={{ marginBottom: 14, breakInside: "avoid" }}>
+              <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 15, margin: "14px 0 8px", fontFamily: "Arial, sans-serif", borderBottom: "1px solid #dde3ec", paddingBottom: 4 }}>
                 {s.emoji} {s.label}
               </div>
-              {s.vragen.map((v) => (
-                <div key={v.nr} style={{ marginBottom: 8, fontSize: 13.5, lineHeight: 1.5 }}>
-                  <span style={{ fontWeight: 700, color: "#1a2332" }}>
-                    {v.nr}. {LETTERS[v.answer]}
-                  </span>{" "}
-                  <span style={{ color: "#3a4658" }}>
-                    ({stripMd(v.options[v.answer])})
-                  </span>
-                  {v.uitleg && (
-                    <span style={{ color: "#6b7785" }}> — {stripMd(v.uitleg)}</span>
-                  )}
+              {s.hoofdstukken.map((h, hi) => (
+                <div key={hi} style={{ marginBottom: 10 }}>
+                  <div style={{ fontWeight: 700, color: "#46546a", fontSize: 13, margin: "6px 0 4px" }}>
+                    {h.emoji} {hi + 1}. {h.titel}
+                  </div>
+                  {h.vragen.map((v) => (
+                    <div key={v.nr} className="oefenpakket-vraag" style={{ marginBottom: 6, fontSize: 13, lineHeight: 1.45 }}>
+                      <span style={{ fontWeight: 700, color: "#1a2332" }}>
+                        {v.nr}. {LETTERS[v.answer]}
+                      </span>{" "}
+                      <span style={{ color: "#3a4658" }}>({stripMd(v.options[v.answer])})</span>
+                      {v.uitleg && <span style={{ color: "#6b7785" }}> — {stripMd(v.uitleg)}</span>}
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>
           ))}
-          <div style={{ marginTop: 30, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
+          <div style={{ marginTop: 28, paddingTop: 16, borderTop: "1px solid #e3e8ef", textAlign: "center" }}>
             <div style={{ color: "#46546a", fontSize: 14, fontWeight: 600 }}>
               Meer oefenen met uitleg op 3 niveaus?
             </div>
@@ -327,25 +423,15 @@ export default function OefenpakketPage({ setPage } = {}) {
   );
 }
 
-function stripMd(t = "") {
-  return t.replace(/\*\*(.+?)\*\*/g, "$1").replace(/\*(.+?)\*/g, "$1");
-}
-
 function Sheet({ children }) {
   return (
     <div
       className="oefenpakket-sheet"
       style={{
-        background: "#fff",
-        color: "#1a2332",
-        width: "100%",
-        maxWidth: 740,
-        margin: "0 auto 24px",
-        padding: "40px 44px",
-        borderRadius: 8,
+        background: "#fff", color: "#1a2332", width: "100%", maxWidth: 740,
+        margin: "0 auto 24px", padding: "40px 44px", borderRadius: 8,
         boxShadow: "0 6px 30px rgba(0,0,0,0.4)",
-        fontFamily: "Georgia, 'Times New Roman', serif",
-        boxSizing: "border-box",
+        fontFamily: "Georgia, 'Times New Roman', serif", boxSizing: "border-box",
       }}
     >
       {children}
@@ -357,11 +443,8 @@ function SectieKop({ emoji, label }) {
   return (
     <h3
       style={{
-        fontSize: 20,
-        color: "#1a2332",
-        margin: "0 0 16px",
-        paddingBottom: 8,
-        borderBottom: "2px solid #1a2332",
+        fontSize: 20, color: "#1a2332", margin: "0 0 16px",
+        paddingBottom: 8, borderBottom: "2px solid #1a2332",
         fontFamily: "Arial, sans-serif",
       }}
     >
@@ -370,9 +453,20 @@ function SectieKop({ emoji, label }) {
   );
 }
 
+function Alinea({ titel, children }) {
+  return (
+    <div style={{ marginBottom: 16 }}>
+      <div style={{ fontWeight: 700, color: "#1a2332", fontSize: 15, marginBottom: 3, fontFamily: "Arial, sans-serif" }}>
+        {titel}
+      </div>
+      <p style={{ margin: 0, fontSize: 14.5, color: "#3a4658", lineHeight: 1.6 }}>{children}</p>
+    </div>
+  );
+}
+
 function Opgave({ v }) {
   return (
-    <div style={{ marginBottom: 18, breakInside: "avoid" }}>
+    <div className="oefenpakket-vraag" style={{ marginBottom: 16, breakInside: "avoid" }}>
       <div
         style={{ fontSize: 15, color: "#1a2332", marginBottom: 8, lineHeight: 1.45 }}
         dangerouslySetInnerHTML={{ __html: `<strong>${v.nr}.</strong> ${mdNaarHtml(v.q)}` }}
@@ -382,9 +476,7 @@ function Opgave({ v }) {
           <div
             key={i}
             style={{ fontSize: 14, color: "#3a4658", lineHeight: 1.5 }}
-            dangerouslySetInnerHTML={{
-              __html: `<strong>${LETTERS[i]}.</strong>&nbsp; ${mdNaarHtml(opt)}`,
-            }}
+            dangerouslySetInnerHTML={{ __html: `<strong>${LETTERS[i]}.</strong>&nbsp; ${mdNaarHtml(opt)}` }}
           />
         ))}
       </div>
