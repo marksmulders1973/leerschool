@@ -9,6 +9,7 @@
 
 export const GO_PARAM_TO_PAGE = {
   cito: "cito",
+  oefenpakket: "oefenpakket",
   tafels: "tafels",
   spelling: "spelling",
   woordenschat: "woordenschat",
