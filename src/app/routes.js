@@ -30,6 +30,7 @@ export const PAGE_TO_PATH = {
   "self-study": "/zelfstudie",
   textbook: "/oefenen",
   cito: "/cito",
+  oefenpakket: "/oefenpakket",
   tafels: "/tafels",
   redactiesommen: "/redactiesommen",
   spelling: "/spelling",

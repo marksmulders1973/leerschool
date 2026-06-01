@@ -94,7 +94,7 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, userRole, userLevel, userSchoolType, onGoExamens }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, onPrintPakket, userRole, userLevel, userSchoolType, onGoExamens }) {
   // QW-C (4-agent-audit 2026-05-18): bij directe deeplink (/cito zonder
   // role-flow) was groep hard "8" — een groep-6-kind kreeg groep-8-stof.
   // Default nu op userLevel (groep 7/8) of "8" als ouder/gast.
@@ -306,6 +306,29 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               </div>
             </div>
             <span style={{ fontSize: 20, color: "rgba(255,213,79,0.7)" }}>›</span>
+          </button>
+        )}
+
+        {onPrintPakket && (
+          <button
+            onClick={() => { SoundEngine.play("click"); onPrintPakket(); }}
+            style={{
+              textAlign: "left", borderRadius: 18,
+              border: "2px solid rgba(0,176,255,0.4)",
+              background: "linear-gradient(135deg, rgba(0,176,255,0.15), rgba(0,176,255,0.05))",
+              padding: "16px 20px", cursor: "pointer", color: "var(--color-text)",
+              display: "flex", alignItems: "center", gap: 16,
+            }}
+          >
+            <span style={{ fontSize: 34 }}>📄</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(0,176,255,0.95)", fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase" }}>Op papier</div>
+              <div style={{ fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 700, color: "#4fc3f7" }}>Print een oefenpakket (PDF)</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
+                Oefenvragen + antwoordsleutel met uitleg · thuis printen of opslaan als PDF
+              </div>
+            </div>
+            <span style={{ fontSize: 20, color: "rgba(0,176,255,0.7)" }}>›</span>
           </button>
         )}
 

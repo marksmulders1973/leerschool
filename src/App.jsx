@@ -60,6 +60,7 @@ const UpgradePage = lazy(() => import("./components/UpgradePage.jsx"));
 const OuderDashboard = lazy(() => import("./components/OuderDashboard.jsx"));
 const ProPage = lazy(() => import("./components/ProPage.jsx"));
 const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
+const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
@@ -1416,6 +1417,7 @@ export default function App() {
           }}
           onStartProefToets={(leerpadId) => startProefToets(leerpadId, 30)}
           onPlayObliterator={() => setPage("obliteratorPlay")}
+          onPrintPakket={() => setPage("oefenpakket")}
           onBack={() => setPage("student-home")}
           onHome={goHome}
         />
@@ -1731,6 +1733,7 @@ export default function App() {
         />
       )}
       {page === "rondleiding" && <RondleidingPage setPage={setPage} />}
+      {page === "oefenpakket" && <OefenpakketPage setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}
