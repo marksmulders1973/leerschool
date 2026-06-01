@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import ErrorBoundary, { isChunkLoadError, recoverFromChunkError } from "./app/ErrorBoundary.jsx";
+import { Analytics } from "@vercel/analytics/react";
 import "./shared/tokens.css";
 
 // PWA chunk-load-error vangen voordat React 'm ziet. Bij async dynamic
@@ -33,6 +34,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ErrorBoundary>
       <BrowserRouter>
         <App />
+        {/* Vercel Web Analytics — cookieloos, geaggregeerd, geen
+            persoonsgegevens. Telt bezoekers + paginaweergaven. Moet in het
+            Vercel-dashboard onder Analytics aangezet worden. */}
+        <Analytics />
       </BrowserRouter>
     </ErrorBoundary>
   </React.StrictMode>
