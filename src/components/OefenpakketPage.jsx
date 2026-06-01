@@ -18,6 +18,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { BRAND } from "../brand.js";
+import supabase from "../supabase.js";
+import { track } from "../utils.js";
 import rekenenPad from "../learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../learnPaths/doorstroomtoetsStudievaardighedenG8.js";
@@ -125,9 +127,14 @@ const PRINT_CSS = `
 }
 `;
 
+const MAIL_DONE_KEY = "lk_oefenpakket_mail";
+
 export default function OefenpakketPage({ setPage } = {}) {
   const [actief, setActief] = useState({ rekenen: true, taal: true, studie: true });
   const [omvang, setOmvang] = useState("normaal");
+  const [email, setEmail] = useState("");
+  // 'idle' | 'busy' | 'done' | 'error' — 'done' ook als eerder al ingevuld.
+  const [mailStatus, setMailStatus] = useState("idle");
 
   useEffect(() => {
     const prevTitle = document.title;
@@ -136,11 +143,36 @@ export default function OefenpakketPage({ setPage } = {}) {
     style.textContent = PRINT_CSS;
     document.head.appendChild(style);
     window.scrollTo(0, 0);
+    try {
+      if (localStorage.getItem(MAIL_DONE_KEY)) setMailStatus("done");
+    } catch {}
     return () => {
       document.title = prevTitle;
       document.head.removeChild(style);
     };
   }, []);
+
+  async function meldAan(e) {
+    e.preventDefault();
+    const adres = email.trim();
+    if (!adres.includes("@") || adres.length < 5) {
+      setMailStatus("error");
+      return;
+    }
+    setMailStatus("busy");
+    try {
+      const { error } = await supabase
+        .from("upgrade_waitlist")
+        .insert({ email: adres, plan: "oefenpakket" });
+      // Dubbele inschrijving (unique-constraint) telt als succes.
+      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
+      try { localStorage.setItem(MAIL_DONE_KEY, "1"); } catch {}
+      track("oefenpakket_mail_signup", { omvang });
+      setMailStatus("done");
+    } catch {
+      setMailStatus("error");
+    }
+  }
 
   const perHoofdstuk = OMVANG[omvang].perHoofdstuk;
 
@@ -249,6 +281,66 @@ export default function OefenpakketPage({ setPage } = {}) {
               </button>
             );
           })}
+        </div>
+
+        {/* E-mail opt-in — niet-blokkerend. Het werkboek blijft vrij te
+            printen; dit is een bonus + groeit de lijst voor de Pro-lancering. */}
+        <div
+          style={{
+            border: "1.5px solid rgba(66,165,245,0.4)",
+            background: "rgba(66,165,245,0.08)",
+            borderRadius: 14, padding: "16px 18px", marginBottom: 20,
+          }}
+        >
+          {mailStatus === "done" ? (
+            <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, lineHeight: 1.5 }}>
+              ✓ <strong>Gelukt!</strong> Je hoort het als eerste wanneer er nieuwe
+              oefenstof is en bij de Doorstroomtoets-tips. Veel succes met oefenen!
+            </div>
+          ) : (
+            <form onSubmit={meldAan}>
+              <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, fontWeight: 700, marginBottom: 4 }}>
+                📧 Wil je nieuwe oefenstof + Doorstroomtoets-tips per mail?
+              </div>
+              <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, marginBottom: 12, lineHeight: 1.5 }}>
+                Laat je e-mail achter en je krijgt een seintje bij nieuwe gratis
+                oefenpakketten en handige tips richting februari. Geen spam,
+                uitschrijven kan altijd.
+              </div>
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => { setEmail(e.target.value); if (mailStatus === "error") setMailStatus("idle"); }}
+                  placeholder="jouw@email.nl"
+                  aria-label="E-mailadres"
+                  style={{
+                    flex: "1 1 200px", minWidth: 0, padding: "11px 14px",
+                    borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)",
+                    background: "rgba(255,255,255,0.06)", color: "var(--color-text, #e8edf5)",
+                    fontSize: 15,
+                  }}
+                />
+                <button
+                  type="submit"
+                  disabled={mailStatus === "busy"}
+                  style={{
+                    padding: "11px 22px", borderRadius: 10, border: "none",
+                    background: "var(--color-accent, #42a5f5)", color: "#0b1224",
+                    fontSize: 15, fontWeight: 700,
+                    cursor: mailStatus === "busy" ? "wait" : "pointer",
+                  }}
+                >
+                  {mailStatus === "busy" ? "Even bezig…" : "Houd me op de hoogte"}
+                </button>
+              </div>
+              {mailStatus === "error" && (
+                <div style={{ color: "#ff8a65", fontSize: 13, marginTop: 8 }}>
+                  Vul een geldig e-mailadres in en probeer het opnieuw.
+                </div>
+              )}
+            </form>
+          )}
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
