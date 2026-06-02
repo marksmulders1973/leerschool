@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useRef, useCallback, lazy, Suspense } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
@@ -11,7 +11,7 @@ import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import UpdateBanner from "./components/UpdateBanner.jsx";
 import PageLoader from "./app/PageLoader.jsx";
-import AgeGate from "./components/AgeGate.jsx";
+import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
 
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
@@ -261,6 +261,14 @@ export default function App() {
     handleGoogleLogin,
     logout,
   } = useAuth();
+  // Leeftijd-/ouder-toestemming (AVG art. 8) verschijnt nu pas bij account-
+  // aanmaken (Mark 2026-06-02). Houdt de uit-te-voeren login-actie vast tot
+  // consent gegeven is; daarna pas inloggen.
+  const [pendingLogin, setPendingLogin] = useState(null);
+  const loginWithConsent = useCallback(() => {
+    if (hasConsent()) { handleGoogleLogin(); return; }
+    setPendingLogin(() => handleGoogleLogin);
+  }, [handleGoogleLogin]);
   const [quizzes, setQuizzes] = useState([]);
   const [classes, setClasses] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
@@ -826,10 +834,14 @@ export default function App() {
       {/* Auto-update banner — toont wanneer nieuwe SW geïnstalleerd is */}
       <UpdateBanner />
 
-      {/* AVG art. 8 age-gate (sprint-2 G1): first-visit modal die leeftijd
-          + ouder-aanwezig-bevestiging vraagt. Rendert null zodra consent
-          gegeven (localStorage flag lk_age_consent_v1). */}
-      <AgeGate />
+      {/* AVG art. 8 age-gate: verschijnt nu pas bij account-aanmaken (login),
+          niet meer als entree-muur. Vrij rondkijken/oefenen = geen data, dus
+          geen toestemming nodig. Na consent → de bewaarde login-actie uitvoeren. */}
+      <AgeGate
+        open={!!pendingLogin}
+        onConsent={() => { const fn = pendingLogin; setPendingLogin(null); fn?.(); }}
+        onClose={() => setPendingLogin(null)}
+      />
 
       {/* Offline banner */}
       {isOffline && (
@@ -1053,7 +1065,7 @@ export default function App() {
             }
           }}
           authUser={authUser}
-          onGoogleLogin={handleGoogleLogin}
+          onGoogleLogin={loginWithConsent}
           onLogout={handleLogout}
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
@@ -1626,7 +1638,7 @@ export default function App() {
           quiz={currentQuiz}
           userName={userName}
           authUser={authUser}
-          onLogin={handleGoogleLogin}
+          onLogin={loginWithConsent}
           onBack={() => {
             if (currentQuiz?.id?.startsWith("self-tafels")) { setPage("tafels"); return; }
             if (currentQuiz?.id?.startsWith("self-redactie")) { setPage("redactiesommen"); return; }
@@ -1714,7 +1726,7 @@ export default function App() {
           onBack={() => setPage(role === "teacher" ? "teacher-home" : role === "student" ? "student-home" : "home")}
           onHome={goHome}
           subscription={subscription}
-          onLogin={handleGoogleLogin}
+          onLogin={loginWithConsent}
           onTrialStarted={(sub) => {
             setSubscription(sub);
             setPage(role === "teacher" ? "teacher-home" : "home");
@@ -1728,7 +1740,7 @@ export default function App() {
           onBack={() => setPage("home")}
           onHome={goHome}
           onUpgrade={() => setPage("pro")}
-          onLogin={handleGoogleLogin}
+          onLogin={loginWithConsent}
           onRondleiding={() => setPage("rondleiding")}
         />
       )}

@@ -1,16 +1,19 @@
-// AgeGate — first-visit modal die leeftijd vraagt + bij <16 ouder-aanwezig-
-// bevestiging. Voldoet aan AVG art. 8 (jonger dan 16 = ouderlijke toestemming
-// nodig). Bewaart consent in localStorage als gestructureerde JSON-blob.
+// AgeGate — leeftijd-/ouder-toestemming modal die verschijnt op het moment dat
+// iemand een account maakt (niet meer bij entree). Voldoet aan AVG art. 8
+// (jonger dan 16 = ouderlijke toestemming nodig). Bewaart consent in
+// localStorage als gestructureerde JSON-blob.
 //
-// Sprint-2 G1 v1 (2026-05-08): self-attest model. v2 = e-mail-verificatie van
-// ouder via Edge Function — buiten scope deze sessie.
+// 2026-06-02 (Mark): omgezet van first-visit-muur naar CONTROLLED modal. De app
+// opent nu vrij; deze gate triggert pas bij account-aanmaken (Google-login).
+// Voor enkel rondkijken/oefenen worden geen persoonsgegevens verwerkt, dus is
+// een entree-muur niet nodig. (Aankopen blijven later wel leeftijd-gated.)
 //
 // Gebruik in App.jsx:
-//   <AgeGate />  // rendert null als consent al gegeven
+//   <AgeGate open={...} onConsent={...} onClose={...} />
 //
-// Het Component leest zelf de localStorage flag; zonder consent → modal-overlay.
+// hasConsent() blijft de bron van waarheid — App.jsx checkt die vóór login.
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import useFocusTrap from "../shared/hooks/useFocusTrap.js";
@@ -28,28 +31,23 @@ export function hasConsent() {
   }
 }
 
-export default function AgeGate() {
-  const [show, setShow] = useState(false);
+export default function AgeGate({ open = false, onConsent, onClose }) {
   const [step, setStep] = useState("age");          // age → parent (if <16) → done
   const [ageGroup, setAgeGroup] = useState(null);   // "<13" | "13-15" | "16+"
   const [parentEmail, setParentEmail] = useState("");
   const [emailErr, setEmailErr] = useState("");
 
-  useEffect(() => {
-    if (!hasConsent()) setShow(true);
-  }, []);
+  // Focus-trap actief zolang de modal open is.
+  const trapRef = useFocusTrap(open);
 
-  // Focus-trap: AgeGate is non-dismissible (geen Esc) — gebruiker MOET kiezen.
-  const trapRef = useFocusTrap(show);
-
-  if (!show) return null;
+  if (!open) return null;
 
   const opslaan = (data) => {
     try {
       localStorage.setItem(KEY, JSON.stringify({ ...data, confirmedAt: new Date().toISOString() }));
     } catch {}
     try { track("age_gate_consent", { age_group: data.ageGroup, parent_email_given: !!data.parentEmail }); } catch {}
-    setShow(false);
+    onConsent?.();
   };
 
   const onAge = (group) => {
@@ -98,15 +96,15 @@ export default function AgeGate() {
           fontSize: 22, fontWeight: 700, color: "#00e676",
           textAlign: "center", margin: "0 0 6px",
         }}>
-          Welkom bij {BRAND.name}
+          Account maken bij {BRAND.name}
         </h2>
         <p style={{
           fontFamily: "var(--font-body, sans-serif)",
           fontSize: 13, color: "rgba(255,255,255,0.7)",
           textAlign: "center", lineHeight: 1.5, margin: "0 0 20px",
         }}>
-          Voor je kind veilig kan oefenen vragen we eerst hoe oud je bent.
-          Voor kinderen onder de 16 vragen we ook even of een ouder er bij is.
+          Voordat we je voortgang bewaren, vragen we even hoe oud je bent.
+          Voor kinderen onder de 16 vragen we ook of een ouder er bij is.
         </p>
 
         {step === "age" && (
@@ -216,9 +214,23 @@ export default function AgeGate() {
         )}
 
         <p style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", textAlign: "center", marginTop: 16, lineHeight: 1.4 }}>
-          We slaan alleen je leeftijdscategorie op in deze browser. Geen e-mail,
-          geen profiel. <a href="/privacy.html" target="_blank" rel="noreferrer" style={{ color: "#00d4ff" }}>Privacybeleid</a>.
+          We slaan alleen je leeftijdscategorie op. <a href="/privacy.html" target="_blank" rel="noreferrer" style={{ color: "#00d4ff" }}>Privacybeleid</a>.
         </p>
+
+        {onClose && (
+          <button
+            onClick={onClose}
+            style={{
+              width: "100%", marginTop: 10, padding: "10px",
+              background: "transparent", border: "none",
+              color: "rgba(255,255,255,0.4)",
+              fontFamily: "var(--font-body, sans-serif)",
+              fontSize: 12, cursor: "pointer",
+            }}
+          >
+            Nog niet — eerst verder kijken
+          </button>
+        )}
       </div>
     </div>
   );
