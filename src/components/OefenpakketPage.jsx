@@ -283,8 +283,10 @@ export default function OefenpakketPage({ setPage } = {}) {
           })}
         </div>
 
-        {/* E-mail opt-in — niet-blokkerend. Het werkboek blijft vrij te
-            printen; dit is een bonus + groeit de lijst voor de Pro-lancering. */}
+        {/* E-mail-drempel: de VRAGEN zijn gratis printbaar, maar de
+            ANTWOORDSLEUTEL ontgrendelt pas na e-mail (2026-06-02, Mark).
+            Reden: 15 bezoekers, 0 aanmeldingen toen alles gratis was — de
+            antwoorden zijn de waarde die de opt-in waard maakt. */}
         <div
           style={{
             border: "1.5px solid rgba(66,165,245,0.4)",
@@ -294,17 +296,19 @@ export default function OefenpakketPage({ setPage } = {}) {
         >
           {mailStatus === "done" ? (
             <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, lineHeight: 1.5 }}>
-              ✓ <strong>Gelukt!</strong> Je hoort het als eerste wanneer er nieuwe
-              oefenstof is en bij de Doorstroomtoets-tips. Veel succes met oefenen!
+              ✓ <strong>Antwoorden ontgrendeld!</strong> De volledige antwoordsleutel
+              met uitleg staat nu achterin het werkboek. We sturen je ook een seintje
+              bij nieuwe gratis oefenstof. Veel succes met oefenen!
             </div>
           ) : (
             <form onSubmit={meldAan}>
               <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, fontWeight: 700, marginBottom: 4 }}>
-                📧 Wil je nieuwe oefenstof + Doorstroomtoets-tips per mail?
+                🔑 Ontgrendel de antwoorden + uitleg
               </div>
               <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, marginBottom: 12, lineHeight: 1.5 }}>
-                Laat je e-mail achter en je krijgt een seintje bij nieuwe gratis
-                oefenpakketten en handige tips richting februari. Geen spam,
+                De oefenvragen kun je gratis printen. Laat je e-mail achter, dan
+                ontgrendel je meteen de <strong>volledige antwoordsleutel met uitleg</strong>
+                {" "}— én je krijgt een seintje bij nieuwe gratis oefenpakketten. Geen spam,
                 uitschrijven kan altijd.
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -331,7 +335,7 @@ export default function OefenpakketPage({ setPage } = {}) {
                     cursor: mailStatus === "busy" ? "wait" : "pointer",
                   }}
                 >
-                  {mailStatus === "busy" ? "Even bezig…" : "Houd me op de hoogte"}
+                  {mailStatus === "busy" ? "Even bezig…" : "🔓 Ontgrendel de antwoorden"}
                 </button>
               </div>
               {mailStatus === "error" && (
@@ -471,7 +475,8 @@ export default function OefenpakketPage({ setPage } = {}) {
           </Sheet>
         ))}
 
-        {/* Antwoordsleutel */}
+        {/* Antwoordsleutel — ontgrendelt pas na e-mail (Mark 2026-06-02) */}
+        {mailStatus === "done" ? (
         <Sheet>
           <SectieKop emoji="✅" label="Antwoordsleutel & uitleg" />
           <p style={{ color: "#6b7785", fontSize: 13, marginTop: -8, marginBottom: 18 }}>
@@ -510,6 +515,16 @@ export default function OefenpakketPage({ setPage } = {}) {
             </div>
           </div>
         </Sheet>
+        ) : (
+          <Sheet>
+            <SectieKop emoji="🔒" label="Antwoordsleutel & uitleg (vergrendeld)" />
+            <p style={{ color: "#6b7785", fontSize: 14, lineHeight: 1.6, marginTop: -4 }}>
+              De volledige antwoordsleutel met korte uitleg is <strong>vergrendeld</strong>.
+              Vul bovenaan deze pagina je e-mailadres in om hem gratis te ontgrendelen —
+              daarna verschijnt hij hier en kun je hem meeprinten.
+            </p>
+          </Sheet>
+        )}
       </div>
     </div>
   );
