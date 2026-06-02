@@ -1319,10 +1319,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <label style={{ ...styles.inputLabel, marginBottom: 0 }}>Welk type onderwijs volg je?</label>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {[
-                    { id: "mavo", label: "VMBO-TL",   color: "#f59e0b" },
-                    { id: "havo", label: "HAVO",      color: "#3b82f6" },
-                    { id: "vwo",  label: "VWO",       color: "#8b5cf6" },
-                    { id: "gym",  label: "Gymnasium", color: "#ec4899" },
+                    { id: "mavo",     label: "VMBO-TL",   color: "#f59e0b" },
+                    { id: "havo",     label: "HAVO",      color: "#3b82f6" },
+                    { id: "havo-vwo", label: "HAVO/VWO",  color: "#6366f1" },
+                    { id: "vwo",      label: "VWO",       color: "#8b5cf6" },
+                    { id: "gym",      label: "Gymnasium", color: "#ec4899" },
                   ].map(({ id, label, color }) => {
                     const sel = schoolType === id;
                     return (

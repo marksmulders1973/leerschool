@@ -219,11 +219,11 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
     return subj ? { ...subj, avg: weakAvg } : null;
   })();
 
-  const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
+  const schoolTypeLabel = { mavo: "VMBO-TL", havo: "HAVO", "havo-vwo": "HAVO/VWO", vwo: "VWO", gym: "Gymnasium" }[userSchoolType] || "";
   // Fallback hier expliciet hex (niet de token) want elders worden
   // template-suffixen gebruikt zoals `${schoolTypeColor}18` voor opacity —
   // CSS-variables ondersteunen dat niet.
-  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#3B82F6";
+  const schoolTypeColor = { mavo: "#f59e0b", havo: "#3b82f6", "havo-vwo": "#6366f1", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#3B82F6";
   // PO (basisschool) gebruikt "Groep", VO (met schoolType) gebruikt "Klas".
   const niveauWoord = schoolTypeLabel ? "Klas" : "Groep";
   const profileBadge = userLevel && schoolTypeLabel
