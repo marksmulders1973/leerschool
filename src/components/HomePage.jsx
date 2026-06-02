@@ -354,6 +354,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   // de play()-rejection af en schakelen alsnog muted in.
   const [welcomeVideoMuted, setWelcomeVideoMuted] = useState(false);
   const welcomeVideoRef = useRef(null);
+  // Mark wens 2026-06-02: intro speelt max 2× en stopt dan (geen oneindige loop).
+  const welcomeVideoPlaysRef = useRef(0);
   useEffect(() => {
     if (!showWelcomeVideo || !welcomeVideoRef.current) return;
     const el = welcomeVideoRef.current;
@@ -646,9 +648,15 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               ref={welcomeVideoRef}
               src="/reclame.mp4"
               autoPlay
-              loop
               muted={welcomeVideoMuted}
               playsInline
+              onEnded={() => {
+                welcomeVideoPlaysRef.current += 1;
+                // Na 1e keer: nog één keer afspelen. Na 2e keer: laten staan (stop).
+                if (welcomeVideoPlaysRef.current < 2 && welcomeVideoRef.current) {
+                  try { welcomeVideoRef.current.play(); } catch {}
+                }
+              }}
               onClick={() => setWelcomeVideoMuted((m) => !m)}
               style={{ width: "100%", display: "block", cursor: "pointer" }}
             />
