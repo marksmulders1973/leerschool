@@ -14,10 +14,38 @@
 
 import fs from "fs";
 import path from "path";
+import os from "os";
 import { pathToFileURL } from "url";
 
 const ROOT = path.resolve(process.cwd(), "src/learnPaths");
 const OUT_FILE = path.join(ROOT, "pathManifest.generated.json");
+
+// .jsx-paden (bv. ruimtemeetkunde met 3D-componenten) kan Node niet direct
+// importeren — JSX is geen geldige Node-syntax. We bundelen ze met esbuild naar
+// een tijdelijk .mjs en importeren dát. De 3D-componenten worden alleen
+// gedéfinieerd (functie-referenties op steps), nooit uitgevoerd, dus de
+// metadata (id/title/steps) is veilig leesbaar.
+async function importModule(full) {
+  if (!full.endsWith(".jsx")) {
+    return import(pathToFileURL(full).href);
+  }
+  const esbuild = await import("esbuild");
+  const tmp = path.join(os.tmpdir(), `lk-path-${path.basename(full)}-${process.pid}.mjs`);
+  await esbuild.build({
+    entryPoints: [full],
+    bundle: true,
+    format: "esm",
+    platform: "node",
+    outfile: tmp,
+    logLevel: "silent",
+    jsx: "automatic",
+  });
+  try {
+    return await import(pathToFileURL(tmp).href + `?t=${process.pid}`);
+  } finally {
+    try { fs.unlinkSync(tmp); } catch { /* ignore */ }
+  }
+}
 
 const SKIP = new Set([
   "index.js", "index.test.js", "examenLookup.js", "pathLoaders.js",
@@ -26,14 +54,14 @@ const SKIP = new Set([
 
 async function main() {
   const files = fs.readdirSync(ROOT).filter(
-    (f) => f.endsWith(".js") && !SKIP.has(f) && !f.includes(".test.")
+    (f) => (f.endsWith(".js") || f.endsWith(".jsx")) && !SKIP.has(f) && !f.includes(".test.")
   );
 
   const manifest = [];
   for (const file of files) {
     const full = path.join(ROOT, file);
     try {
-      const mod = await import(pathToFileURL(full).href);
+      const mod = await importModule(full);
       const p = mod.default;
       if (!p || typeof p !== "object" || !p.id) continue;
       const steps = Array.isArray(p.steps) ? p.steps : [];

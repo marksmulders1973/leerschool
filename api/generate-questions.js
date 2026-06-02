@@ -24,7 +24,9 @@ export default async function handler(req) {
     return json({ error: 'API key not configured' }, 500);
   }
 
-  const { subject, level, count = 5, textbook, topic } = await req.json();
+  const { subject, level, count: rawCount = 5, textbook, topic } = await req.json();
+  // Server-side clamp: voorkomt dat een client een gigantische count meestuurt (kostenbom).
+  const count = Math.min(Math.max(parseInt(rawCount, 10) || 5, 1), 20);
 
   // ─── Content Safety Filter ─────────────────────────────────────
   // Educatieve onderwerpen die altijd toegestaan zijn

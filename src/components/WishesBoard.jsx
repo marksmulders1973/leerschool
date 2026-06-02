@@ -155,10 +155,20 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
             />
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", margin: "10px 0" }}>
               <span style={{ fontSize: 13, color: "rgba(231,237,246,0.6)" }}>Cijfer voor de app (optioneel):</span>
-              <div style={{ fontSize: 24, letterSpacing: 2, cursor: "pointer" }}>
+              <div role="radiogroup" aria-label="Cijfer voor de app, 1 tot 5 sterren" style={{ fontSize: 24, letterSpacing: 2 }}>
                 {[1, 2, 3, 4, 5].map((n) => (
-                  <span key={n} onClick={() => setRating(rating === n ? 0 : n)}
-                    style={{ color: n <= rating ? "#ffd54f" : "rgba(255,255,255,0.25)" }}>★</span>
+                  <span
+                    key={n}
+                    role="radio"
+                    aria-checked={rating === n}
+                    aria-label={`${n} ${n === 1 ? "ster" : "sterren"}`}
+                    tabIndex={0}
+                    onClick={() => setRating(rating === n ? 0 : n)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setRating(rating === n ? 0 : n); }
+                    }}
+                    style={{ color: n <= rating ? "#ffd54f" : "rgba(255,255,255,0.25)", cursor: "pointer" }}
+                  >★</span>
                 ))}
               </div>
             </div>

@@ -5832,6 +5832,34 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "ruimtemeetkunde",
+    "file": "./ruimtemeetkunde.jsx",
+    "title": "Ruimtemeetkunde",
+    "subject": "wiskunde",
+    "level": "klas1-vwo",
+    "emoji": "📦",
+    "referentieNiveau": "2F",
+    "sloThema": "Meetkunde — inhoud & ruimtemeetkunde",
+    "triggerKeywords": [
+      "inhoud",
+      "vergrotingsfactor",
+      "oppervlakte",
+      "omtrek",
+      "kubus",
+      "balk",
+      "cilinder",
+      "kegel",
+      "piramide",
+      "ruimtemeetkunde",
+      "vergroten"
+    ],
+    "intro": "Ruimtemeetkunde gaat over 2D- en 3D-figuren. We beginnen bij het begin (oppervlakte van een rechthoek) en bouwen op naar inhoud van balken, cilinders, piramides en kegels — en eindigen met de vergroti",
+    "stepCount": 26,
+    "checkCount": 32,
+    "chapterCount": 8,
+    "estimatedMinutes": 25
+  },
+  {
     "id": "ruimtevaart-po",
     "file": "./ruimtevaartPo.js",
     "title": "Ruimtevaart (Cito groep 6-8)",

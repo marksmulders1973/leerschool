@@ -15,7 +15,7 @@ export default function UpgradePage({ onBack, onHome, authUser, plan: defaultPla
       id: "parent_pro",
       icon: "👨‍👩‍👧",
       label: "Ouder Pro",
-      price: "€1,95",
+      price: "€5,99",
       period: "/maand",
       color: "#00b0ff",
       bg: "rgba(0,176,255,0.12)",

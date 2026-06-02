@@ -1329,6 +1329,40 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {/* Begrijpend-lezen: laat de plek in de tekst zien waar het
                 antwoord vandaan komt (Mark feedback 2026-05-08). */}
             <EvidenceQuote text={currentCheck.evidence} label="💡 Hint — kijk hier in de tekst" />
+            {/* Examen-correctievoorschrift óók bij fout tonen — kern-loop:
+                bij een fout op een examenvraag wíl je juist de officiële
+                uitleg zien (stond eerder alleen in de 'goed'-tak). */}
+            {currentCheck.examenBron && currentCheck.explanation && (
+              <details style={{ marginTop: 10 }} open>
+                <summary style={{
+                  cursor: "pointer",
+                  padding: "8px 12px",
+                  background: "rgba(255,213,79,0.10)",
+                  border: "1px solid rgba(255,213,79,0.35)",
+                  borderRadius: 8,
+                  color: "#ffd54f",
+                  fontWeight: 700,
+                  fontSize: 13,
+                  fontFamily: "var(--font-display)",
+                  listStyle: "none",
+                }}>
+                  📖 Leg uit (officiële uitleg uit correctievoorschrift)
+                </summary>
+                <div style={{
+                  marginTop: 8,
+                  padding: "10px 14px",
+                  background: "rgba(255,255,255,0.03)",
+                  border: "1px solid rgba(255,213,79,0.20)",
+                  borderRadius: 8,
+                  fontSize: 13,
+                  lineHeight: 1.5,
+                  whiteSpace: "pre-wrap",
+                  color: "var(--color-text)",
+                }}>
+                  {currentCheck.explanation}
+                </div>
+              </details>
+            )}
             {currentCheck.uitlegPad && !showUitlegPad && (
               <button
                 onClick={() => setShowUitlegPad(true)}

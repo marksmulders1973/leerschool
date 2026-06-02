@@ -41,7 +41,7 @@
   --color-text-strong:          #FFFFFF;
   --color-text:                 #E6EBF5;
   --color-text-muted:           #9AA8C0;
-  --color-text-subtle:          #5E6B85;
+  --color-text-subtle:          #828FAC;       /* WCAG AA: was #5E6B85 (~3.5:1), nu ~4.7:1 op elevated bg (audit 2026-06-02) */
 
   /* ─── Border ────────────────────────────────────────────────────── */
   --color-border:               #2D3F5F;
@@ -144,6 +144,16 @@
   --content-max-width:  640px;
   --tap-target-min:     44px;
   --bottom-nav-height:  64px;
+}
+
+/* iOS Safari zoomt automatisch in op een invoerveld zodra de tekst < 16px is.
+   Op conversiepunten (e-mail, naam, zoekbalk) is dat hinderlijk — het scherm
+   springt en de layout breekt. 70% van het verkeer is mobiel, dus forceer
+   minimaal 16px font-size op alle invoervelden. (Audit 25-agent 2026-06-02, QW1) */
+input,
+textarea,
+select {
+  font-size: 16px;
 }
 
 /* WCAG 2.4.7 — Focus visible globally.
