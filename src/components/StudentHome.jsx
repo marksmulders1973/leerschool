@@ -57,7 +57,7 @@ const VAKKEN_VO = [
   { id: "frans" },
 ];
 
-export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType }) {
+export default function StudentHome({ userName, userLevel, userSchoolType, quizzes, progress, sessionMin = 0, kwartierTarget = 15, onJoinQuiz, onSelfStudy, onBack, onHome, onViewProgress, onLeaderboard, onTextbook, onHerhaalQuiz, onPickPathsForSubject, pendingCode, streak, onViewResult, onDeleteResult, entryContext, onCitoOefenenSubject, onExamens, onResumeLearnPath, onSetLevel, onSetSchoolType, onOpenWishes }) {
   // PO/VO-toggle: default afgeleid van userSchoolType (mavo/havo/vwo/gym = VO),
   // anders PO. Gebruiker kan handmatig switchen.
   // Detecteer of de leerling al een niveau heeft gekozen — dan is de
@@ -1052,6 +1052,12 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 24 }}>🏆</span>
             <span style={{ fontWeight: 700, fontSize: 13 }}>Scorebord</span>
           </button>
+          {onOpenWishes && (
+            <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, #5b6ee1, #36537e)" }} onClick={() => { SoundEngine.play("click"); onOpenWishes(); }}>
+              <span style={{ fontSize: 24 }}>💬</span>
+              <span style={{ fontWeight: 700, fontSize: 13 }}>Tips aan maker</span>
+            </button>
+          )}
         </div>
 
         {/* Urgente deadline banner */}

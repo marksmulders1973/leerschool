@@ -18,6 +18,7 @@ import AgeGate, { hasConsent } from "./components/AgeGate.jsx";
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
+const WishesBoard = lazy(() => import("./components/WishesBoard.jsx"));
 const SelfStudy = lazy(() => import("./components/SelfStudy.jsx"));
 const TextbookQuiz = lazy(() => import("./features/practice/TextbookQuiz.jsx"));
 const TopicPicker = lazy(() => import("./features/practice/TopicPicker.jsx"));
@@ -1319,6 +1320,7 @@ export default function App() {
             setExamenInitialMode(mode === "pdf" ? "pdf" : "leren");
             setPage("examens");
           }}
+          onOpenWishes={() => setPage("wishes")}
         />
       )}
       {page === "self-study" && (
@@ -1749,6 +1751,14 @@ export default function App() {
       {page === "admin-feedback" && (
         <AdminFeedback
           onBack={() => setPage("home")}
+          onHome={goHome}
+        />
+      )}
+      {page === "wishes" && (
+        <WishesBoard
+          authUser={authUser}
+          userName={userName}
+          onBack={() => setPage(role === "teacher" ? "teacher-home" : "student-home")}
           onHome={goHome}
         />
       )}
