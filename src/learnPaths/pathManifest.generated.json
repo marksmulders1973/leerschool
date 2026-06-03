@@ -4966,6 +4966,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "netwerken-internet-informatica",
+    "file": "./netwerkenInternetInformatica.js",
+    "title": "Netwerken & internet (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🌐",
+    "referentieNiveau": "havo-vwo-informatica-domein-netwerken",
+    "sloThema": "Informatica HAVO/VWO — hoe het internet werkt: netwerken, IP/DNS, pakketjes/protocollen en het web",
+    "triggerKeywords": [
+      "netwerk",
+      "internet",
+      "LAN",
+      "WAN",
+      "client server",
+      "client-server",
+      "IP-adres",
+      "IP adres",
+      "IPv4",
+      "IPv6",
+      "DNS",
+      "domeinnaam"
+    ],
+    "intro": "Hoe werkt internet écht? Je leert wat een netwerk is (LAN/WAN, internet vs web, client–server), IP-adressen + DNS (het 'telefoonboek'), hoe data in pakketjes via routers reist met TCP/IP, en hoe het w",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "olympische-spelen-po",
     "file": "./olympischeSpelenPo.js",
     "title": "Olympische Spelen + sport (Cito groep 6-8)",

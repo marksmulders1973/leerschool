@@ -181,6 +181,7 @@ import grieksVwo from "./grieksVwo.js";
 import informaticaHavoVwo from "./informaticaHavoVwo.js";
 import binairDatarepresentatieInformatica from "./binairDatarepresentatieInformatica.js";
 import algoritmenPseudocodeInformatica from "./algoritmenPseudocodeInformatica.js";
+import netwerkenInternetInformatica from "./netwerkenInternetInformatica.js";
 import kunstHavoVwo from "./kunstHavoVwo.js";
 import wiskundeDVwo from "./wiskundeDVwo.js";
 import maatschappijleerHavoVwo from "./maatschappijleerHavoVwo.js";
@@ -338,6 +339,7 @@ export const ALL_LEARN_PATHS = {
   "informatica-havo-vwo": informaticaHavoVwo,
   "binair-datarepresentatie-informatica": binairDatarepresentatieInformatica,
   "algoritmen-pseudocode-informatica": algoritmenPseudocodeInformatica,
+  "netwerken-internet-informatica": netwerkenInternetInformatica,
   "kunst-havo-vwo": kunstHavoVwo,
   "wiskunde-d-vwo": wiskundeDVwo,
   "maatschappijleer-havo-vwo": maatschappijleerHavoVwo,
