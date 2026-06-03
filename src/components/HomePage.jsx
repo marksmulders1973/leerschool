@@ -333,6 +333,7 @@ const ONBOARDING_STEPS = [
 export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
+  const [visitorCount, setVisitorCount] = useState(null);
   const [shake, setShake] = useState(false);
   const [nameError, setNameError] = useState("");
   const [step, setStep] = useState(pendingCode ? "name" : "role");
@@ -490,6 +491,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         if (d.level) setLevel(d.level);
       }
     } catch {}
+  }, []);
+
+  // Eerlijke bezoekersteller (sociale bewijskracht): echt basisgetal +
+  // live nieuwe unieke bezoekers via de anonieme events-log. Geen verzonnen getal.
+  useEffect(() => {
+    supabase.rpc("get_visitor_count")
+      .then(({ data }) => { if (typeof data === "number") setVisitorCount(data); })
+      .catch(() => {});
   }, []);
 
   // Naam automatisch invullen vanuit Google profiel
@@ -789,6 +798,24 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         </div>
       )}
       <div style={styles.heroSection}>
+
+        {/* Sociale-bewijs bezoekersteller (Mark 2026-06-04): echt + groeit.
+            Basis = verifieerbare bezoekers tot nu toe; live opgeteld met nieuwe
+            unieke (anonieme) sessies via get_visitor_count(). Geen verzonnen getal. */}
+        {visitorCount != null && (
+          <div style={{
+            alignSelf: "center",
+            display: "inline-flex", alignItems: "center", gap: 8,
+            background: "rgba(0,200,83,0.12)",
+            border: "1px solid rgba(0,200,83,0.35)",
+            borderRadius: 999, padding: "6px 14px",
+            marginBottom: 14,
+            fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.88)",
+          }}>
+            <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#00e676", boxShadow: "0 0 8px #00e676", flexShrink: 0 }} />
+            Al <strong style={{ color: "#69f0ae", fontWeight: 800 }}>{visitorCount.toLocaleString("nl-NL")}</strong> mensen gingen je voor
+          </div>
+        )}
 
         {/* Brand-mark linksboven (compact, 2-regels): pictogram + wordmark op regel 1,
             slogan op regel 2. Speelt 1× bij open en blijft in eindframe staan.
