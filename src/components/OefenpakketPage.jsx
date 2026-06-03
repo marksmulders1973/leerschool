@@ -210,16 +210,40 @@ export default function OefenpakketPage({ setPage } = {}) {
     <div style={{ maxWidth: 900, margin: "0 auto", padding: "20px 16px 80px" }}>
       {/* ── Scherm-only bediening ───────────────────────────── */}
       <div className="oefenpakket-noprint" style={{ marginBottom: 24 }}>
+        {/* Klikbare Leerkwartier-home (Mark 2026-06-03): bezoekers landen via
+            posts/bio direct op deze pagina en zagen geen weg naar de home — het
+            voelde alsof deze ene pagina "alles" was. Een klikbaar merk-logo is de
+            universele home-affordance. Quarter-circle = brand-mark uit HomePage. */}
         <button
-          onClick={() => setPage && setPage("cito")}
+          onClick={() => setPage && setPage("home")}
+          aria-label="Naar de homepage van Leerkwartier"
           style={{
-            background: "transparent", border: "none",
-            color: "var(--color-text-muted, #8899aa)", cursor: "pointer",
-            fontSize: 14, padding: 0, marginBottom: 12,
+            display: "inline-flex", alignItems: "center", gap: 8,
+            background: "transparent", border: "none", cursor: "pointer",
+            padding: 0, marginBottom: 12,
           }}
         >
-          ← Terug naar Doorstroomtoets
+          <svg viewBox="0 0 100 100" style={{ width: 22, height: 22, flexShrink: 0 }} aria-hidden="true">
+            <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
+          </svg>
+          <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 18, color: "var(--color-text, #e8edf5)", letterSpacing: "-0.01em" }}>
+            {BRAND.name}
+          </span>
+          <span style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>· naar home</span>
         </button>
+
+        <div>
+          <button
+            onClick={() => setPage && setPage("cito")}
+            style={{
+              background: "transparent", border: "none",
+              color: "var(--color-text-muted, #8899aa)", cursor: "pointer",
+              fontSize: 14, padding: 0, marginBottom: 12,
+            }}
+          >
+            ← Terug naar Doorstroomtoets
+          </button>
+        </div>
 
         <h1 style={{ fontSize: 26, margin: "0 0 8px", color: "var(--color-text, #e8edf5)" }}>
           📄 Gratis Doorstroomtoets-oefenpakket
