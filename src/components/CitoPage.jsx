@@ -3,6 +3,7 @@ import styles from "../styles.js";
 import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 
 // Doorstroomtoets-voorbereidingsflow (gecombineerd 2026-05-16, idem ExamensPage):
 //   Boven: 3 grote banners — Stap 1 (aanpak) / Stap 3 (50-simulatie) / Bonus
@@ -612,6 +613,11 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             <span style={{ fontSize: 18, color: "rgba(255,107,53,0.6)" }}>›</span>
           </button>
         )}
+
+        {/* E-mail-capture (Mark 2026-06-03): bouwt de e-maillijst vanaf de
+            hoogste-intentie-pagina (bezorgde Doorstroomtoets-ouder). source=cito
+            voor segmentatie. Oefenpakket-link als secundaire optie. */}
+        <GratisLesmateriaal source="cito" onPrintPakket={onPrintPakket} />
 
         {/* Info-blokje */}
         <div style={{
