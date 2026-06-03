@@ -3978,6 +3978,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "kleur-licht-compositie-kunst",
+    "file": "./kleurLichtCompositieKunst.js",
+    "title": "Kleur, licht & compositie (Kunst)",
+    "subject": "kunst",
+    "level": "havo4-5-vwo",
+    "emoji": "🎨",
+    "referentieNiveau": "havo-vwo-kunst-beeldaspecten",
+    "sloThema": "Kunst HAVO/VWO — de beeldende grammatica: kleur, licht/toon, compositie en beeldaspecten analyseren",
+    "triggerKeywords": [
+      "kleur",
+      "kleurenleer",
+      "kleurencirkel",
+      "primaire kleuren",
+      "secundaire kleuren",
+      "complementaire kleuren",
+      "warm koud",
+      "kleursymboliek",
+      "verzadiging",
+      "tint",
+      "licht",
+      "toonwaarde"
+    ],
+    "intro": "De 'grammatica' van het beeld — onmisbaar om kunst te maken én te analyseren. Je leert kleurenleer (primair/secundair, complementair, warm/koud, symboliek), licht & toon (clair-obscur, schaduw, lokale",
+    "stepCount": 4,
+    "checkCount": 13,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "klimaatverandering-aardrijkskunde",
     "file": "./klimaatveranderingAardrijkskunde.js",
     "title": "Klimaatverandering (klas 2-3)",

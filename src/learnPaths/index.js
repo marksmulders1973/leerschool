@@ -188,6 +188,7 @@ import programmerenBasisInformatica from "./programmerenBasisInformatica.js";
 import hardwareBesturingssysteemInformatica from "./hardwareBesturingssysteemInformatica.js";
 import aiMachineLearningInformatica from "./aiMachineLearningInformatica.js";
 import kunstHavoVwo from "./kunstHavoVwo.js";
+import kleurLichtCompositieKunst from "./kleurLichtCompositieKunst.js";
 import wiskundeDVwo from "./wiskundeDVwo.js";
 import maatschappijleerHavoVwo from "./maatschappijleerHavoVwo.js";
 import engelsSchrijvenSprekenHavoVwo from "./engelsSchrijvenSprekenHavoVwo.js";
@@ -351,6 +352,7 @@ export const ALL_LEARN_PATHS = {
   "hardware-besturingssysteem-informatica": hardwareBesturingssysteemInformatica,
   "ai-machine-learning-informatica": aiMachineLearningInformatica,
   "kunst-havo-vwo": kunstHavoVwo,
+  "kleur-licht-compositie-kunst": kleurLichtCompositieKunst,
   "wiskunde-d-vwo": wiskundeDVwo,
   "maatschappijleer-havo-vwo": maatschappijleerHavoVwo,
   "engels-schrijven-spreken-havo-vwo": engelsSchrijvenSprekenHavoVwo,
