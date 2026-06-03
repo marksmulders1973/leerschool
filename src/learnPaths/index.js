@@ -183,6 +183,7 @@ import binairDatarepresentatieInformatica from "./binairDatarepresentatieInforma
 import algoritmenPseudocodeInformatica from "./algoritmenPseudocodeInformatica.js";
 import netwerkenInternetInformatica from "./netwerkenInternetInformatica.js";
 import databasesSqlInformatica from "./databasesSqlInformatica.js";
+import cybersecurityEncryptieInformatica from "./cybersecurityEncryptieInformatica.js";
 import kunstHavoVwo from "./kunstHavoVwo.js";
 import wiskundeDVwo from "./wiskundeDVwo.js";
 import maatschappijleerHavoVwo from "./maatschappijleerHavoVwo.js";
@@ -342,6 +343,7 @@ export const ALL_LEARN_PATHS = {
   "algoritmen-pseudocode-informatica": algoritmenPseudocodeInformatica,
   "netwerken-internet-informatica": netwerkenInternetInformatica,
   "databases-sql-informatica": databasesSqlInformatica,
+  "cybersecurity-encryptie-informatica": cybersecurityEncryptieInformatica,
   "kunst-havo-vwo": kunstHavoVwo,
   "wiskunde-d-vwo": wiskundeDVwo,
   "maatschappijleer-havo-vwo": maatschappijleerHavoVwo,

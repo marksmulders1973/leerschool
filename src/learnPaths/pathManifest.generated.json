@@ -1079,6 +1079,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "cybersecurity-encryptie-informatica",
+    "file": "./cybersecurityEncryptieInformatica.js",
+    "title": "Cybersecurity & encryptie (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🛡️",
+    "referentieNiveau": "havo-vwo-informatica-domein-security",
+    "sloThema": "Informatica HAVO/VWO — digitale veiligheid: bedreigingen, authenticatie, encryptie en privacy/AVG",
+    "triggerKeywords": [
+      "cybersecurity",
+      "beveiliging",
+      "security",
+      "hacken",
+      "malware",
+      "virus",
+      "worm",
+      "trojan",
+      "trojaans paard",
+      "ransomware",
+      "spyware",
+      "phishing"
+    ],
+    "intro": "Hoe blijf je veilig online? Je leert de bedreigingen (malware: virus/ransomware, phishing, social engineering), hoe je je accounts beschermt (sterke wachtwoorden, 2FA, hashing), wat encryptie is (symm",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "databases-sql-informatica",
     "file": "./databasesSqlInformatica.js",
     "title": "Databases & SQL (Informatica)",
