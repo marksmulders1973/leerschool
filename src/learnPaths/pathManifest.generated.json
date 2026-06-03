@@ -550,6 +550,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "binair-datarepresentatie-informatica",
+    "file": "./binairDatarepresentatieInformatica.js",
+    "title": "Binair & datarepresentatie (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🔢",
+    "referentieNiveau": "havo-vwo-informatica-domein-datarepresentatie",
+    "sloThema": "Informatica HAVO/VWO — hoe data (getallen, tekst, beeld, geluid) digitaal wordt opgeslagen",
+    "triggerKeywords": [
+      "binair",
+      "bit",
+      "byte",
+      "binaire",
+      "tweetallig",
+      "hexadecimaal",
+      "hex",
+      "nibble",
+      "RGB",
+      "kleurcode",
+      "#FF0000",
+      "truecolor"
+    ],
+    "intro": "Hoe slaat een computer álles op met alleen 0 en 1? Je leert bits & bytes en binair tellen, hexadecimaal + kleuren (RGB-hexcodes zoals #FF0000), hoe tekst werkt (ASCII vs Unicode/UTF-8 + emoji) en hoe ",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "breuken",
     "file": "./breuken.js",
     "title": "Breuken",
