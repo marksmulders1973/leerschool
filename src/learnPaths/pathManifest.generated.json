@@ -4371,6 +4371,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "leestekens-hoofdletters-po",
+    "file": "./leestekensHoofdlettersPo.js",
+    "title": "Leestekens & hoofdletters",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-interpunctie",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "lichaam-gezondheid-po",
     "file": "./lichaamGezondheidPo.js",
     "title": "Het lichaam + gezondheid (groep 6-8)",

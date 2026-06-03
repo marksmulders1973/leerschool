@@ -212,6 +212,7 @@ import stijlLiteratuurHavoVwo from "./stijlLiteratuurHavoVwo.js";
 import engelsLiteratuurHavoVwo from "./engelsLiteratuurHavoVwo.js";
 import matenOmtrekOppervlaktePo from "./matenOmtrekOppervlaktePo.js";
 import metenGewichtInhoudTijdPo from "./metenGewichtInhoudTijdPo.js";
+import leestekensHoofdlettersPo from "./leestekensHoofdlettersPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -378,6 +379,7 @@ export const ALL_LEARN_PATHS = {
   "engels-literatuur-havo-vwo": engelsLiteratuurHavoVwo,
   "maten-omtrek-oppervlakte-po": matenOmtrekOppervlaktePo,
   "meten-gewicht-inhoud-tijd-po": metenGewichtInhoudTijdPo,
+  "leestekens-hoofdletters-po": leestekensHoofdlettersPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,
