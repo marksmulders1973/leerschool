@@ -1168,28 +1168,39 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   gap: 10,
                 }}>
                   {[
-                    { logo: true, color: "#ff8c42", title: "Doorstroomtoets oefenen", desc: "Eindtoets-simulatie én per onderdeel" },
-                    { icon: "📚", color: "#0072ff", title: "Leerpaden per vak", desc: "Rekenen, taal, begrijpend lezen & meer" },
-                    { icon: "🎓", color: "#7c3aed", title: "Echte examens", desc: "VMBO · HAVO · VWO, oefenen mét uitleg" },
-                    { icon: "💬", color: "#00C853", title: "Uitleg op 3 niveaus", desc: "Snap je iets niet? Wij leggen het ánders uit" },
+                    { logo: true, color: "#ff8c42", title: "Doorstroomtoets oefenen", desc: "Eindtoets-simulatie én per onderdeel", onClick: () => handleFeatureClick("cito") },
+                    { icon: "📚", color: "#0072ff", title: "Leerpaden per vak", desc: "Rekenen, taal, begrijpend lezen & meer", onClick: handleLerenClick },
+                    { icon: "🎓", color: "#7c3aed", title: "Echte examens", desc: "VMBO · HAVO · VWO, oefenen mét uitleg", onClick: () => handleFeatureClick("examens") },
+                    { icon: "💬", color: "#00C853", title: "Uitleg op 3 niveaus", desc: "Snap je iets niet? Wij leggen het ánders uit", onClick: handleOefenenClick },
                   ].map((f, i) => (
-                    <div key={i} style={{
-                      background: `${f.color}14`,
-                      border: `1px solid ${f.color}33`,
-                      borderRadius: 12,
-                      padding: "12px 10px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      textAlign: "center",
-                      gap: 5,
-                    }}>
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={f.onClick}
+                      style={{
+                        background: `${f.color}14`,
+                        border: `1px solid ${f.color}55`,
+                        borderRadius: 12,
+                        padding: "12px 10px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        textAlign: "center",
+                        gap: 5,
+                        cursor: "pointer",
+                        color: "#fff",
+                        fontFamily: "inherit",
+                        transition: "background 150ms ease, transform 150ms ease, border-color 150ms ease",
+                      }}
+                      onMouseEnter={(e) => { e.currentTarget.style.background = `${f.color}26`; e.currentTarget.style.borderColor = `${f.color}aa`; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                      onMouseLeave={(e) => { e.currentTarget.style.background = `${f.color}14`; e.currentTarget.style.borderColor = `${f.color}55`; e.currentTarget.style.transform = "translateY(0)"; }}
+                    >
                       <div style={{ height: 24, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, lineHeight: 1 }}>
                         {f.logo ? <DoorstroomtoetsLogo size={22} /> : <span aria-hidden="true">{f.icon}</span>}
                       </div>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, color: "#fff", lineHeight: 1.15 }}>{f.title}</div>
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "rgba(255,255,255,0.62)", lineHeight: 1.28 }}>{f.desc}</div>
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
