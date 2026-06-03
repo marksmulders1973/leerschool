@@ -4888,6 +4888,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "meten-gewicht-inhoud-tijd-po",
+    "file": "./metenGewichtInhoudTijdPo.js",
+    "title": "Meten: gewicht, inhoud & tijd",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "rekenen-meten",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 19,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "middeleeuwen-geschiedenis",
     "file": "./middeleeuwenGeschiedenis.js",
     "title": "De middeleeuwen 500-1500 (klas 1-2)",
