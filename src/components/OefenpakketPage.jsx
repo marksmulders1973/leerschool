@@ -320,20 +320,21 @@ export default function OefenpakketPage({ setPage } = {}) {
         >
           {mailStatus === "done" ? (
             <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, lineHeight: 1.5 }}>
-              ✓ <strong>Antwoorden ontgrendeld!</strong> De volledige antwoordsleutel
-              met uitleg staat nu achterin het werkboek. We sturen je ook een seintje
-              bij nieuwe gratis oefenstof. Veel succes met oefenen!
+              ✓ <strong>Gelukt!</strong> De volledige antwoordsleutel met uitleg staat nu
+              achterin het werkboek. En vanaf nu krijg je <strong>elke week 15 minuten
+              gratis extra oefenstof</strong> in je mail. Veel succes met oefenen! 💚
             </div>
           ) : (
             <form onSubmit={meldAan}>
-              <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 15, fontWeight: 700, marginBottom: 4 }}>
-                🔑 Ontgrendel de antwoorden + uitleg
+              <div style={{ color: "var(--color-text, #e8edf5)", fontSize: 16, fontWeight: 800, marginBottom: 4 }}>
+                🎁 Vul je e-mail in — 2 dingen gratis erbij
               </div>
-              <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, marginBottom: 12, lineHeight: 1.5 }}>
-                De oefenvragen kun je gratis printen. Laat je e-mail achter, dan
-                ontgrendel je meteen de <strong>volledige antwoordsleutel met uitleg</strong>
-                {" "}— én je krijgt een seintje bij nieuwe gratis oefenpakketten. Geen spam,
-                uitschrijven kan altijd.
+              <div style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13.5, marginBottom: 12, lineHeight: 1.55 }}>
+                De oefenvragen print je sowieso gratis. Vul je e-mail in en je krijgt er twee dingen bij:
+                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>1) meteen de volledige antwoordsleutel met uitleg</strong>
+                {" "}— zo weet je of je kind het goed heeft — én
+                {" "}<strong style={{ color: "var(--color-text, #e8edf5)" }}>2) elke week 15 minuten gratis extra oefenstof</strong>
+                {" "}voor de Doorstroomtoets in je mail. Geen spam, uitschrijven kan altijd.
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <input
@@ -359,7 +360,7 @@ export default function OefenpakketPage({ setPage } = {}) {
                     cursor: mailStatus === "busy" ? "wait" : "pointer",
                   }}
                 >
-                  {mailStatus === "busy" ? "Even bezig…" : "🔓 Ontgrendel de antwoorden"}
+                  {mailStatus === "busy" ? "Even bezig…" : "Ja, gratis ontvangen →"}
                 </button>
               </div>
               {mailStatus === "error" && (
