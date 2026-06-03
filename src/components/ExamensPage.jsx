@@ -187,6 +187,20 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
     ? vakkenInVolgorde
     : vakkenInVolgorde.filter((v) => v === vakFilter);
 
+  // Klik op een legenda-balk (🎯 / 📄): klap het eerste zichtbare vak open
+  // zodat de twee kolommen meteen verschijnen, en scroll ernaartoe. Zonder
+  // dit voelden de balken "dood" — ze scrollden alleen naar een knop die al
+  // in beeld stond (Mark UX-melding 2026-06-04).
+  const toonVakken = () => {
+    const eerste = zichtbareVakken[0];
+    if (eerste) {
+      setOpenVakken((prev) => new Set(prev).add(eerste));
+    }
+    setTimeout(() => {
+      document.querySelector('[aria-expanded]')?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
+  };
+
   return (
     <div style={{ minHeight: "100dvh", background: C.bg, color: C.text, fontFamily: "var(--font-body)" }}>
       <Header
@@ -217,7 +231,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
                 keuzes zijn, geen alleen-uitleg. */}
             <button
               type="button"
-              onClick={() => document.querySelector('[aria-expanded]')?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              onClick={toonVakken}
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
                 padding: "8px 12px",
@@ -241,7 +255,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
             </button>
             <button
               type="button"
-              onClick={() => document.querySelector('[aria-expanded]')?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              onClick={toonVakken}
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8,
                 padding: "8px 12px",
