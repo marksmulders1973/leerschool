@@ -1079,6 +1079,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "databases-sql-informatica",
+    "file": "./databasesSqlInformatica.js",
+    "title": "Databases & SQL (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🗄️",
+    "referentieNiveau": "havo-vwo-informatica-domein-databases",
+    "sloThema": "Informatica HAVO/VWO — gegevens gestructureerd opslaan en opvragen met relationele databases en SQL",
+    "triggerKeywords": [
+      "database",
+      "databases",
+      "tabel",
+      "record",
+      "veld",
+      "DBMS",
+      "relationeel",
+      "relationele database",
+      "primaire sleutel",
+      "primary key",
+      "foreign key",
+      "verwijssleutel"
+    ],
+    "intro": "Hoe slaan apps hun gegevens op? Je leert wat een database is (tabellen, records, velden), het relationele model (primaire sleutel, foreign key, waarom opsplitsen), en SQL: gegevens opvragen met SELECT",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "delen-po",
     "file": "./delenPo.js",
     "title": "Delen (groep 5-6)",
