@@ -1,6 +1,57 @@
 // ─── Analytics helper ────────────────────────────────────────────
+// AVG-vriendelijk eerstepartij gebruiksstatistieken: events gaan naar onze
+// EIGEN Supabase-tabel `events` — geen Google, geen cookies, geen
+// persoonsgegevens. Privacy-by-design:
+//  • cookieloze sessie-id (sessionStorage → weg bij tab sluiten, geen
+//    cross-session/persoon-tracking; alleen om events binnen één bezoek te
+//    groeperen voor funnels).
+//  • PII-sleutels (email/naam/wachtwoord/adres) en lange vrije tekst worden
+//    eruit gefilterd vóór opslaan.
+//  • geen IP-kolom (slaan we niet op).
+import supabase from "./supabase.js";
+
+function _sessionId() {
+  try {
+    let s = sessionStorage.getItem("lk_s");
+    if (!s) { s = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem("lk_s", s); }
+    return s;
+  } catch { return null; }
+}
+
+function _cleanProps(p) {
+  if (!p || typeof p !== "object") return null;
+  const out = {};
+  for (const k of Object.keys(p)) {
+    if (/e?mail|naam|name(?!_length)|wachtwoord|password|adres|telefoon/i.test(k)) continue; // PII-sleutels weg
+    const v = p[k];
+    if (typeof v === "string" && v.length > 60) continue; // geen lange vrije tekst loggen
+    out[k] = v;
+  }
+  return Object.keys(out).length ? out : null;
+}
+
+function _source() {
+  try {
+    const utm = new URLSearchParams(location.search).get("utm_source");
+    if (utm) return utm.slice(0, 40);
+    if (document.referrer) return new URL(document.referrer).hostname.slice(0, 60);
+  } catch {}
+  return null;
+}
+
 export function track(event, params = {}) {
+  // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)
   try { window.gtag?.("event", event, params); } catch (e) {}
+  // (2) eigen, anonieme eerstepartij-log in Supabase (fire-and-forget, blokkeert niets)
+  try {
+    supabase.from("events").insert({
+      name: String(event).slice(0, 60),
+      props: _cleanProps(params),
+      path: typeof location !== "undefined" ? location.pathname.slice(0, 120) : null,
+      source: _source(),
+      session: _sessionId(),
+    }).then(() => {}).catch(() => {});
+  } catch (e) {}
 }
 
 // ─── Sound Engine ────────────────────────────────────────────────
