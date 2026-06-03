@@ -4,6 +4,7 @@ import styles from "../styles.js";
 import { LEVELS, SUBJECTS, isLaunchPromoActive, LAUNCH_PROMO_SHORT, LAUNCH_PROMO_LONG } from "../constants.js";
 import QuizCardIcon from "../shared/ui/QuizCardIcon.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import UspDemo from "./UspDemo.jsx";
 import { BRAND } from "../brand.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
@@ -885,6 +886,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             </div>
           );
         })()}
+
+        {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
+            show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
+            nieuwe ouder binnen 30 sec ziet waarom dit beter is dan YouTube/ChatGPT.
+            Zelfstandig, geen backend, geen extra navigatie-knop. */}
+        {step === "role" && <UspDemo />}
 
         {/* Hero-doelgroep-zin verwijderd 2026-05-20 (Mark): tegels + CTA-balken
             verwijzen zelf al naar Doorstroomtoets/Cito + examens — een extra
