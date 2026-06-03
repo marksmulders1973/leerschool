@@ -5759,6 +5759,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "programmeren-basis-informatica",
+    "file": "./programmerenBasisInformatica.js",
+    "title": "Programmeren — de basis (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "📦",
+    "referentieNiveau": "havo-vwo-informatica-domein-programmeren",
+    "sloThema": "Informatica HAVO/VWO — leren programmeren: variabelen, condities, herhaling en functies (Python-stijl)",
+    "triggerKeywords": [
+      "programmeren",
+      "python",
+      "code",
+      "coderen",
+      "variabele",
+      "datatype",
+      "integer",
+      "float",
+      "string",
+      "boolean",
+      "if",
+      "else"
+    ],
+    "intro": "Echt leren programmeren (in Python-stijl). Je leert variabelen & datatypes (int/float/string/boolean), condities (if/elif/else + en/of), herhaling (for & while + de gevreesde oneindige lus) en functie",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "pubertijd-groei-po",
     "file": "./pubertijdGroeiPo.js",
     "title": "Puberteit + groei (groep 7-8)",
