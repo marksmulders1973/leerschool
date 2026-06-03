@@ -185,6 +185,7 @@ import netwerkenInternetInformatica from "./netwerkenInternetInformatica.js";
 import databasesSqlInformatica from "./databasesSqlInformatica.js";
 import cybersecurityEncryptieInformatica from "./cybersecurityEncryptieInformatica.js";
 import programmerenBasisInformatica from "./programmerenBasisInformatica.js";
+import hardwareBesturingssysteemInformatica from "./hardwareBesturingssysteemInformatica.js";
 import kunstHavoVwo from "./kunstHavoVwo.js";
 import wiskundeDVwo from "./wiskundeDVwo.js";
 import maatschappijleerHavoVwo from "./maatschappijleerHavoVwo.js";
@@ -346,6 +347,7 @@ export const ALL_LEARN_PATHS = {
   "databases-sql-informatica": databasesSqlInformatica,
   "cybersecurity-encryptie-informatica": cybersecurityEncryptieInformatica,
   "programmeren-basis-informatica": programmerenBasisInformatica,
+  "hardware-besturingssysteem-informatica": hardwareBesturingssysteemInformatica,
   "kunst-havo-vwo": kunstHavoVwo,
   "wiskunde-d-vwo": wiskundeDVwo,
   "maatschappijleer-havo-vwo": maatschappijleerHavoVwo,

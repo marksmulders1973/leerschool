@@ -3546,6 +3546,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "hardware-besturingssysteem-informatica",
+    "file": "./hardwareBesturingssysteemInformatica.js",
+    "title": "Hardware & besturingssysteem (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🖥️",
+    "referentieNiveau": "havo-vwo-informatica-domein-architectuur",
+    "sloThema": "Informatica HAVO/VWO — hoe een computer is opgebouwd: hardware, CPU/geheugen, het OS en bestanden",
+    "triggerKeywords": [
+      "hardware",
+      "computer onderdelen",
+      "CPU",
+      "processor",
+      "core",
+      "GHz",
+      "kloksnelheid",
+      "RAM",
+      "werkgeheugen",
+      "geheugen",
+      "opslag",
+      "SSD"
+    ],
+    "intro": "Wat zit er ín een computer en hoe werkt het samen? Je leert de onderdelen (CPU, RAM, SSD/HDD, GPU), hoe de CPU rekent (fetch-decode-execute) en de geheugenhiërarchie (vluchtig vs niet-vluchtig), wat e",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "hart-bloed-ademhaling-havo-vwo",
     "file": "./hartBloedAdemhalingHavoVwo.js",
     "title": "Hart + Bloedsomloop + Ademhaling (HAVO/VWO Biologie)",
