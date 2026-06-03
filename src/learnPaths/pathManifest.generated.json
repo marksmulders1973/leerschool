@@ -87,6 +87,35 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "algoritmen-pseudocode-informatica",
+    "file": "./algoritmenPseudocodeInformatica.js",
+    "title": "Algoritmen & pseudocode (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "📋",
+    "referentieNiveau": "havo-vwo-informatica-domein-algoritmen",
+    "sloThema": "Informatica HAVO/VWO — algoritmisch denken: stappen, bouwstenen, pseudocode en efficiëntie",
+    "triggerKeywords": [
+      "algoritme",
+      "algoritmen",
+      "algoritmisch",
+      "pseudocode",
+      "stroomdiagram",
+      "flowchart",
+      "sequentie",
+      "selectie",
+      "herhaling",
+      "loop",
+      "lus",
+      "if else"
+    ],
+    "intro": "De kern van informatica: algoritmisch denken. Je leert wat een algoritme is (en het verschil met een programma), de 3 bouwstenen (sequentie, selectie, herhaling), hoe je het opschrijft in pseudocode e",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "argumentatieleer",
     "file": "./argumentatieleer.js",
     "title": "Argumentatieleer",
