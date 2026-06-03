@@ -1134,6 +1134,65 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   );
                 })}
               </div>
+
+              {/* Breedte-sectie (Mark 2026-06-03): koude bezoekers uit social
+                  zagen alleen de rol-tegels en dachten "is dit alles?". Deze
+                  rustige info-strip laat zien dat er een héél platform achter
+                  zit. BEWUST niet klikbaar — geen concurrerende CTA's met de
+                  rol-tegels (Mark verwijderde 2026-05-20 een losse tekstbalk om
+                  precies die reden). Pure geruststelling + breedte. Doorstroom-
+                  toets-pijler gebruikt <DoorstroomtoetsLogo> ipv emoji (huisstijl). */}
+              <div className="lk-content-wide" style={{ marginTop: 10, marginBottom: 4 }}>
+                <div style={{
+                  textAlign: "center",
+                  fontFamily: "var(--font-display)",
+                  fontSize: 15,
+                  fontWeight: 700,
+                  color: "rgba(255,255,255,0.92)",
+                  marginBottom: 3,
+                }}>
+                  Meer dan een toets — een hele leeromgeving
+                </div>
+                <div style={{
+                  textAlign: "center",
+                  fontFamily: "var(--font-body)",
+                  fontSize: 12,
+                  color: "rgba(255,255,255,0.6)",
+                  marginBottom: 14,
+                }}>
+                  Alles voor groep 1 t/m 8 op één plek · in 2026 helemaal gratis
+                </div>
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(148px, 1fr))",
+                  gap: 10,
+                }}>
+                  {[
+                    { logo: true, color: "#ff8c42", title: "Doorstroomtoets oefenen", desc: "Eindtoets-simulatie én per onderdeel" },
+                    { icon: "📚", color: "#0072ff", title: "Leerpaden per vak", desc: "Rekenen, taal, begrijpend lezen & meer" },
+                    { icon: "🎓", color: "#7c3aed", title: "Echte examens", desc: "VMBO · HAVO · VWO, oefenen mét uitleg" },
+                    { icon: "💬", color: "#00C853", title: "Uitleg op 3 niveaus", desc: "Snap je iets niet? Wij leggen het ánders uit" },
+                  ].map((f, i) => (
+                    <div key={i} style={{
+                      background: `${f.color}14`,
+                      border: `1px solid ${f.color}33`,
+                      borderRadius: 12,
+                      padding: "12px 10px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      textAlign: "center",
+                      gap: 5,
+                    }}>
+                      <div style={{ height: 24, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, lineHeight: 1 }}>
+                        {f.logo ? <DoorstroomtoetsLogo size={22} /> : <span aria-hidden="true">{f.icon}</span>}
+                      </div>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, color: "#fff", lineHeight: 1.15 }}>{f.title}</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "rgba(255,255,255,0.62)", lineHeight: 1.28 }}>{f.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
               {/* 5-agents review 2026-05-15: "Nieuw hier?"-link, "Voor ouders"-knop,
                   EchteCijfers (verplaatst naar boven tegels) en TickerBanner weg.
                   Zes elementen tussen tegels en de fold-vouw verdunden de focus
