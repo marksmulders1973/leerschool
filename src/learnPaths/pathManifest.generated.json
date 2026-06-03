@@ -29,6 +29,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "ai-machine-learning-informatica",
+    "file": "./aiMachineLearningInformatica.js",
+    "title": "AI & machine learning (Informatica)",
+    "subject": "informatica",
+    "level": "havo4-5-vwo",
+    "emoji": "🤖",
+    "referentieNiveau": "havo-vwo-informatica-domein-ai",
+    "sloThema": "Informatica HAVO/VWO — kunstmatige intelligentie: wat is AI, machine learning, generatieve AI en de ethiek",
+    "triggerKeywords": [
+      "AI",
+      "kunstmatige intelligentie",
+      "artificial intelligence",
+      "smalle AI",
+      "narrow AI",
+      "AGI",
+      "algemene AI",
+      "machine learning",
+      "ML",
+      "leren uit data",
+      "trainen",
+      "trainingsdata"
+    ],
+    "intro": "Wat is AI nou écht? Je leert het verschil tussen smalle en algemene AI, hoe machine learning uit data leert (i.p.v. geprogrammeerde regels), de soorten ML + generatieve AI (hoe een chatbot/LLM woord-v",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "algebra-vergelijkingen-havo-vwo",
     "file": "./algebraVergelijkingenHavoVwo.js",
     "title": "Algebra + Vergelijkingen (HAVO/VWO Wiskunde)",
