@@ -348,6 +348,35 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "beeldhouwkunst-kunst",
+    "file": "./beeldhouwkunstKunst.js",
+    "title": "Beeldhouwkunst & ruimtelijk werk (Kunst)",
+    "subject": "kunst",
+    "level": "havo4-5-vwo",
+    "emoji": "🗿",
+    "referentieNiveau": "havo-vwo-kunst-beeldhouwkunst",
+    "sloThema": "Kunst HAVO/VWO — de 3D-discipline: beeldhouwkunst, materialen/technieken en hedendaags ruimtelijk werk",
+    "triggerKeywords": [
+      "beeldhouwkunst",
+      "sculptuur",
+      "beeld",
+      "ruimtelijk werk",
+      "3D kunst",
+      "vrijstaand beeld",
+      "reliëf",
+      "bas-reliëf",
+      "hoog-reliëf",
+      "massa",
+      "volume",
+      "negatieve ruimte"
+    ],
+    "intro": "Kunst in drie dimensies. Je leert wat beeldhouwkunst is (vrijstaand vs reliëf, massa, negatieve ruimte), de materialen & technieken (wegnemend hakken, opbouwend boetseren, bronsgieten, readymade), de ",
+    "stepCount": 4,
+    "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "begrijpend-lezen-strategie",
     "file": "./begrijpendLezenStrategie.js",
     "title": "Begrijpend lezen — strategieën voor groep 5-8",
