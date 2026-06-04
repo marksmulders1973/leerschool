@@ -5911,6 +5911,22 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "plattegrond-legenda-po",
+    "file": "./plattegrondLegendaPo.js",
+    "title": "Plattegrond & legenda lezen",
+    "subject": "studievaardigheden",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "studievaardigheden-plattegrond",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "politiek-democratie-po",
     "file": "./politiekDemocratiePo.js",
     "title": "Politiek + democratie (Cito groep 6-8)",
@@ -6337,6 +6353,22 @@
     "checkCount": 24,
     "chapterCount": 4,
     "estimatedMinutes": 20
+  },
+  {
+    "id": "samenstellingen-tussenletters-po",
+    "file": "./samenstellingenTussenlettersPo.js",
+    "title": "Samenstellingen & tussenletters",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-samenstellingen",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "samenvatten-hoofdgedachte-po",
