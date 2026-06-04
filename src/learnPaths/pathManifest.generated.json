@@ -1249,6 +1249,22 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "dienstregeling-roosters-po",
+    "file": "./dienstregelingRoostersPo.js",
+    "title": "Dienstregeling & roosters lezen",
+    "subject": "studievaardigheden",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "studievaardigheden-roosters",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "dieren-seizoenen-natuur",
     "file": "./dierenSeizoenenNatuur.js",
     "title": "Dieren en seizoenen",
@@ -6347,6 +6363,22 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "signaalwoorden-verbanden-po",
+    "file": "./signaalwoordenVerbandenPo.js",
+    "title": "Signaalwoorden & verbanden",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-signaalwoorden",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "sociale-zekerheid-nl",
     "file": "./socialeZekerheidNL.js",
     "title": "Sociale zekerheid + welvaartsstaat NL",
@@ -8145,6 +8177,22 @@
     "checkCount": 26,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "zinsontleding-onderwerp-persoonsvorm-po",
+    "file": "./zinsontledingOnderwerpPersoonsvormPo.js",
+    "title": "Zinsontleding: onderwerp & persoonsvorm",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-zinsontleding",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "zuren-basen-havo-vwo",

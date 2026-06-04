@@ -213,6 +213,9 @@ import engelsLiteratuurHavoVwo from "./engelsLiteratuurHavoVwo.js";
 import matenOmtrekOppervlaktePo from "./matenOmtrekOppervlaktePo.js";
 import metenGewichtInhoudTijdPo from "./metenGewichtInhoudTijdPo.js";
 import leestekensHoofdlettersPo from "./leestekensHoofdlettersPo.js";
+import zinsontledingOnderwerpPersoonsvormPo from "./zinsontledingOnderwerpPersoonsvormPo.js";
+import dienstregelingRoostersPo from "./dienstregelingRoostersPo.js";
+import signaalwoordenVerbandenPo from "./signaalwoordenVerbandenPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -380,6 +383,9 @@ export const ALL_LEARN_PATHS = {
   "maten-omtrek-oppervlakte-po": matenOmtrekOppervlaktePo,
   "meten-gewicht-inhoud-tijd-po": metenGewichtInhoudTijdPo,
   "leestekens-hoofdletters-po": leestekensHoofdlettersPo,
+  "zinsontleding-onderwerp-persoonsvorm-po": zinsontledingOnderwerpPersoonsvormPo,
+  "dienstregeling-roosters-po": dienstregelingRoostersPo,
+  "signaalwoorden-verbanden-po": signaalwoordenVerbandenPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,
