@@ -64,6 +64,33 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Examenvraag van de dag (4 jun) — maatschappijkunde, Staten-Generaal ──
+  "maatschappij1": {
+    vak: "maatschappijkunde",
+    vraag: "In de **Staten-Generaal** zit een groep mensen die **namens de burgers** mag meebeslissen over de wetten. **Hoe noemen we die groep?**",
+    options: ["De regering", "Het kabinet", "De stemmers", "De volksvertegenwoordigers"],
+    answer: 3,
+    wrongHints: [
+      "De regering (koning + ministers) bestúurt het land — maar wie controleert hen namens de burgers?",
+      "Het kabinet zijn de ministers en staatssecretarissen die besturen — niet de gekozen mensen die de burgers vertegenwoordigen.",
+      "Burgers stemmen wél, maar 'stemmers' is geen groep die ín de Staten-Generaal zit te beslissen.",
+      null,
+    ],
+    bron: "🎓 Echt examen VMBO-GL en TL maatschappijkunde 2024, tijdvak 1",
+    uitlegPad: {
+      stappen: [
+        { titel: "Wat is de Staten-Generaal?", tekst: "De Staten-Generaal is de officiële naam voor de Eerste Kamer + Tweede Kamer samen. Daar worden wetten besproken en goedgekeurd." },
+        { titel: "Wie zitten daar namens jou?", tekst: "De leden zijn gekozen door de burgers bij verkiezingen. Daarom heten ze volksvertegenwoordigers: ze vertegenwoordigen het volk." },
+        { titel: "Verschil met de regering", tekst: "De regering (koning + ministers) en het kabinet (ministers + staatssecretarissen) bestúren het land. De volksvertegenwoordigers controleren hén — dat is de scheiding tussen besturen en controleren." },
+      ],
+      niveaus: {
+        basis: "De Staten-Generaal = Eerste + Tweede Kamer. De mensen daar zijn gekozen door de burgers en beslissen namens hen mee over de wetten. Dat noemen we volksvertegenwoordigers (antwoord D).",
+        simpeler: "Bij verkiezingen kies jij wie er voor jou in de Tweede Kamer gaat zitten. Die gekozen personen 'vertegenwoordigen' jou — vandaar volksvertegenwoordigers. De regering bestuurt; zij controleren de regering.",
+        nogSimpeler: "Jij mag niet zelf elke wet bespreken, dus kies je iemand die dat vóór jou doet. Die persoon spreekt namens het volk = een volksvertegenwoordiger.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
