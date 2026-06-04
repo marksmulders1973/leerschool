@@ -91,7 +91,8 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/l
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
-import { getInitialPvpJoinCode, getInitialPage } from "./app/initialPage.js";
+import { getInitialPvpJoinCode, getInitialPage, parseVraagId } from "./app/initialPage.js";
+import DeepVraag from "./components/DeepVraag.jsx";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
@@ -159,6 +160,9 @@ export default function App() {
       // Eerste render: URL is bron van waarheid (deep link wint).
       // /duel/:code blijft staan zodat de PvP-lobby de code kan lezen.
       if (location.pathname.match(/^\/duel\//i)) return;
+      // /v/<id> — social-deep-link naar één vraag; pad blijft staan zodat
+      // DeepVraag de id uit de URL kan lezen.
+      if (location.pathname.match(/^\/v\//i)) return;
       const fromUrl = pageForPath(location.pathname);
       if (fromUrl !== page) {
         // Bij /?go=tafels (of ?play=obliterator) is `page` al door
@@ -178,6 +182,9 @@ export default function App() {
     // pvp-lobby/play hebben dynamische URLs (/duel/:code) — niet redirecten,
     // anders verliest de guest de match-code uit de URL.
     if (page === "pvp-lobby" || page === "pvp-play") return;
+    // "vraag" heeft een dynamische URL (/v/:id) buiten PAGE_TO_PATH — niet
+    // redirecten, anders verliezen we de vraag-id.
+    if (page === "vraag") return;
     const expected = pathForPage(page);
     if (expected && expected !== location.pathname) {
       navigate(expected);
@@ -190,6 +197,10 @@ export default function App() {
     // /duel/:code → PvP-lobby (anders mappen naar "home" en verliezen we de match)
     if (location.pathname.match(/^\/duel\//i)) {
       if (page !== "pvp-lobby" && page !== "pvp-play") setPage("pvp-lobby");
+      return;
+    }
+    if (location.pathname.match(/^\/v\//i)) {
+      if (page !== "vraag") setPage("vraag");
       return;
     }
     const newPage = pageForPath(location.pathname);
@@ -866,6 +877,10 @@ export default function App() {
           <main> + tabIndex=-1 voor skip-link landing (a11y-audit). */}
       <main id="main-content" tabIndex={-1} style={{ outline: "none" }}>
       <Suspense fallback={<PageLoader />}>
+      {/* Social-deep-link /v/<id> → directe vraag-landing (Mark's trechter). */}
+      {page === "vraag" && (
+        <DeepVraag id={parseVraagId(location.pathname)} setPage={setPage} />
+      )}
       {page === "learn-path" && activeLearnPathId && (
         <LearnPath
           pathId={activeLearnPathId}

@@ -26,8 +26,16 @@ export function parsePvpJoinCode(pathname) {
   return m ? m[1].toLowerCase() : null;
 }
 
+// /v/<id> — social-deep-link naar één vraag (Mark's trechter-concept 2026-06-04).
+export function parseVraagId(pathname) {
+  if (!pathname) return null;
+  const m = pathname.match(/^\/v\/([A-Za-z0-9_-]{2,40})/);
+  return m ? m[1] : null;
+}
+
 export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (parsePvpJoinCode(pathname)) return "pvp-lobby";
+  if (parseVraagId(pathname)) return "vraag";
   try {
     const sp = new URLSearchParams(search);
     if (sp.get("play") === "obliterator") return "obliteratorDirect";
@@ -40,6 +48,11 @@ export function parseInitialPage({ pathname = "", search = "" } = {}) {
 export function getInitialPvpJoinCode() {
   if (typeof window === "undefined") return null;
   return parsePvpJoinCode(window.location.pathname);
+}
+
+export function getInitialVraagId() {
+  if (typeof window === "undefined") return null;
+  return parseVraagId(window.location.pathname);
 }
 
 export function getInitialPage() {
