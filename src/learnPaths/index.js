@@ -219,6 +219,9 @@ import signaalwoordenVerbandenPo from "./signaalwoordenVerbandenPo.js";
 import feitMeningPo from "./feitMeningPo.js";
 import folderBonAdvertentiePo from "./folderBonAdvertentiePo.js";
 import verwijswoordenPo from "./verwijswoordenPo.js";
+import omzettenBreukProcentKommaPo from "./omzettenBreukProcentKommaPo.js";
+import schaalKaartRekenenPo from "./schaalKaartRekenenPo.js";
+import soortenTekstenPo from "./soortenTekstenPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -392,6 +395,9 @@ export const ALL_LEARN_PATHS = {
   "feit-mening-po": feitMeningPo,
   "folder-bon-advertentie-po": folderBonAdvertentiePo,
   "verwijswoorden-po": verwijswoordenPo,
+  "omzetten-breuk-procent-komma-po": omzettenBreukProcentKommaPo,
+  "schaal-kaart-rekenen-po": schaalKaartRekenenPo,
+  "soorten-teksten-po": soortenTekstenPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,

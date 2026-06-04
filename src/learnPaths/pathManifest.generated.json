@@ -5278,6 +5278,22 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "omzetten-breuk-procent-komma-po",
+    "file": "./omzettenBreukProcentKommaPo.js",
+    "title": "Breuken, procenten & kommagetallen omzetten",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "rekenen-omzetten",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "onregelmatige-werkwoorden-engels",
     "file": "./onregelmatigeWerkwoordenEngels.js",
     "title": "Onregelmatige werkwoorden (irregular verbs)",
@@ -6286,6 +6302,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "schaal-kaart-rekenen-po",
+    "file": "./schaalKaartRekenenPo.js",
+    "title": "Schaal & kaart rekenen",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "rekenen-schaal",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "schatten-afronden",
     "file": "./schattenAfronden.js",
     "title": "Schatten en afronden — Cito groep 5-8",
@@ -6438,6 +6470,22 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 15
+  },
+  {
+    "id": "soorten-teksten-po",
+    "file": "./soortenTekstenPo.js",
+    "title": "Soorten teksten herkennen",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-soorten-teksten",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "spelling",
