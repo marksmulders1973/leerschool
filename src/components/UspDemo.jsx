@@ -73,12 +73,15 @@ export default function UspDemo() {
       }}>
         Zo werkt Leerkwartier
       </div>
-      <h2 style={{
+      {/* Zichtbare H1 van de homepage (audit-25: er was alleen een verborgen
+          clip:rect-H1). Dit is meteen de USP-belofte — goed voor zowel de
+          bezoeker als Google. */}
+      <h1 style={{
         margin: "0 0 4px", fontFamily: "var(--font-display, sans-serif)",
-        fontSize: 19, lineHeight: 1.25, fontWeight: 800, color: "#fff",
+        fontSize: 21, lineHeight: 1.22, fontWeight: 800, color: "#fff",
       }}>
         Snapt je kind iets niet? Wij leggen het op <span style={{ color: GROEN_LICHT }}>3 niveaus</span> uit — tot het kwartje valt.
-      </h2>
+      </h1>
       <p style={{ margin: "0 0 12px", fontSize: 13, color: "rgba(255,255,255,0.65)" }}>
         Probeer het zelf even. Klik op een antwoord 👇
       </p>
