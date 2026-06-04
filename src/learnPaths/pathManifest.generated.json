@@ -58,6 +58,22 @@
     "estimatedMinutes": 10
   },
   {
+    "id": "alfabet-woordenboek-po",
+    "file": "./alfabetWoordenboekPo.js",
+    "title": "Alfabetisch opzoeken & woordenboek",
+    "subject": "studievaardigheden",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "studievaardigheden-alfabet",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "algebra-vergelijkingen-havo-vwo",
     "file": "./algebraVergelijkingenHavoVwo.js",
     "title": "Algebra + Vergelijkingen (HAVO/VWO Wiskunde)",
@@ -1207,6 +1223,22 @@
     "intro": "Hoe slaan apps hun gegevens op? Je leert wat een database is (tabellen, records, velden), het relationele model (primaire sleutel, foreign key, waarom opsplitsen), en SQL: gegevens opvragen met SELECT",
     "stepCount": 4,
     "checkCount": 12,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
+    "id": "deelsommen-met-rest-po",
+    "file": "./deelsommenMetRestPo.js",
+    "title": "Deelsommen met rest",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "rekenen-delen-rest",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
     "chapterCount": 4,
     "estimatedMinutes": 10
   },

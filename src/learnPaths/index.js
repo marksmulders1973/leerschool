@@ -225,6 +225,8 @@ import soortenTekstenPo from "./soortenTekstenPo.js";
 import romeinseCijfersPo from "./romeinseCijfersPo.js";
 import trappenVanVergelijkingPo from "./trappenVanVergelijkingPo.js";
 import betrouwbaarheidBronnenPo from "./betrouwbaarheidBronnenPo.js";
+import deelsommenMetRestPo from "./deelsommenMetRestPo.js";
+import alfabetWoordenboekPo from "./alfabetWoordenboekPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -404,6 +406,8 @@ export const ALL_LEARN_PATHS = {
   "romeinse-cijfers-po": romeinseCijfersPo,
   "trappen-van-vergelijking-po": trappenVanVergelijkingPo,
   "betrouwbaarheid-bronnen-po": betrouwbaarheidBronnenPo,
+  "deelsommen-met-rest-po": deelsommenMetRestPo,
+  "alfabet-woordenboek-po": alfabetWoordenboekPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,
