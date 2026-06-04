@@ -229,6 +229,8 @@ import deelsommenMetRestPo from "./deelsommenMetRestPo.js";
 import alfabetWoordenboekPo from "./alfabetWoordenboekPo.js";
 import plattegrondLegendaPo from "./plattegrondLegendaPo.js";
 import samenstellingenTussenlettersPo from "./samenstellingenTussenlettersPo.js";
+import lettergrepenKlemtoonPo from "./lettergrepenKlemtoonPo.js";
+import inhoudsopgaveRegisterPo from "./inhoudsopgaveRegisterPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -412,6 +414,8 @@ export const ALL_LEARN_PATHS = {
   "alfabet-woordenboek-po": alfabetWoordenboekPo,
   "plattegrond-legenda-po": plattegrondLegendaPo,
   "samenstellingen-tussenletters-po": samenstellingenTussenlettersPo,
+  "lettergrepen-klemtoon-po": lettergrepenKlemtoonPo,
+  "inhoudsopgave-register-po": inhoudsopgaveRegisterPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,
