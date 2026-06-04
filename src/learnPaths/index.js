@@ -222,6 +222,9 @@ import verwijswoordenPo from "./verwijswoordenPo.js";
 import omzettenBreukProcentKommaPo from "./omzettenBreukProcentKommaPo.js";
 import schaalKaartRekenenPo from "./schaalKaartRekenenPo.js";
 import soortenTekstenPo from "./soortenTekstenPo.js";
+import romeinseCijfersPo from "./romeinseCijfersPo.js";
+import trappenVanVergelijkingPo from "./trappenVanVergelijkingPo.js";
+import betrouwbaarheidBronnenPo from "./betrouwbaarheidBronnenPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -398,6 +401,9 @@ export const ALL_LEARN_PATHS = {
   "omzetten-breuk-procent-komma-po": omzettenBreukProcentKommaPo,
   "schaal-kaart-rekenen-po": schaalKaartRekenenPo,
   "soorten-teksten-po": soortenTekstenPo,
+  "romeinse-cijfers-po": romeinseCijfersPo,
+  "trappen-van-vergelijking-po": trappenVanVergelijkingPo,
+  "betrouwbaarheid-bronnen-po": betrouwbaarheidBronnenPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,

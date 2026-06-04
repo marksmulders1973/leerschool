@@ -579,6 +579,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "betrouwbaarheid-bronnen-po",
+    "file": "./betrouwbaarheidBronnenPo.js",
+    "title": "Betrouwbaarheid van bronnen",
+    "subject": "studievaardigheden",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "studievaardigheden-bronnen",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "bevolking-migratie-aardrijkskunde",
     "file": "./bevolkingMigratieAardrijkskunde.js",
     "title": "Bevolking + migratie (klas 2-3)",
@@ -6218,6 +6234,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "romeinse-cijfers-po",
+    "file": "./romeinseCijfersPo.js",
+    "title": "Romeinse cijfers",
+    "subject": "rekenen",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "rekenen-romeinse-cijfers",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "ruimtemeetkunde",
     "file": "./ruimtemeetkunde.jsx",
     "title": "Ruimtemeetkunde",
@@ -7156,6 +7188,22 @@
     "checkCount": 40,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "trappen-van-vergelijking-po",
+    "file": "./trappenVanVergelijkingPo.js",
+    "title": "Trappen van vergelijking",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-trappen-vergelijking",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "trillingen-golven-havo-vwo",
