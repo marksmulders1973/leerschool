@@ -3080,6 +3080,22 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "feit-mening-po",
+    "file": "./feitMeningPo.js",
+    "title": "Feit & mening",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-feit-mening",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "filosofie-havo-vwo",
     "file": "./filosofieHavoVwo.js",
     "title": "Filosofie (HAVO/VWO algemeen)",
@@ -3163,6 +3179,22 @@
     "checkCount": 40,
     "chapterCount": 6,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "folder-bon-advertentie-po",
+    "file": "./folderBonAdvertentiePo.js",
+    "title": "Folder, bon & advertentie lezen",
+    "subject": "studievaardigheden",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "studievaardigheden-folder",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "fotosynthese-biologie",
@@ -7323,6 +7355,22 @@
     "checkCount": 25,
     "chapterCount": 5,
     "estimatedMinutes": 25
+  },
+  {
+    "id": "verwijswoorden-po",
+    "file": "./verwijswoordenPo.js",
+    "title": "Verwijswoorden in een tekst",
+    "subject": "taal",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "taal-verwijswoorden",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 16,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
   },
   {
     "id": "vlakke-figuren",

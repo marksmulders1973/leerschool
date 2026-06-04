@@ -216,6 +216,9 @@ import leestekensHoofdlettersPo from "./leestekensHoofdlettersPo.js";
 import zinsontledingOnderwerpPersoonsvormPo from "./zinsontledingOnderwerpPersoonsvormPo.js";
 import dienstregelingRoostersPo from "./dienstregelingRoostersPo.js";
 import signaalwoordenVerbandenPo from "./signaalwoordenVerbandenPo.js";
+import feitMeningPo from "./feitMeningPo.js";
+import folderBonAdvertentiePo from "./folderBonAdvertentiePo.js";
+import verwijswoordenPo from "./verwijswoordenPo.js";
 import algebraVergelijkingenHavoVwo from "./algebraVergelijkingenHavoVwo.js";
 import immuunsysteemHavoVwo from "./immuunsysteemHavoVwo.js";
 import globaliseringHavoVwo from "./globaliseringHavoVwo.js";
@@ -386,6 +389,9 @@ export const ALL_LEARN_PATHS = {
   "zinsontleding-onderwerp-persoonsvorm-po": zinsontledingOnderwerpPersoonsvormPo,
   "dienstregeling-roosters-po": dienstregelingRoostersPo,
   "signaalwoorden-verbanden-po": signaalwoordenVerbandenPo,
+  "feit-mening-po": feitMeningPo,
+  "folder-bon-advertentie-po": folderBonAdvertentiePo,
+  "verwijswoorden-po": verwijswoordenPo,
   "algebra-vergelijkingen-havo-vwo": algebraVergelijkingenHavoVwo,
   "immuunsysteem-havo-vwo": immuunsysteemHavoVwo,
   "globalisering-havo-vwo": globaliseringHavoVwo,
