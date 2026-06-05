@@ -6,7 +6,7 @@
 
 import { useEffect, useState } from "react";
 import {
-  submitWish, listApprovedWishes, listPendingWishes, moderateWish, supportWish,
+  submitWish, listApprovedWishes, listPendingWishes, moderateWish, supportWish, addMakerThanks,
 } from "../data/repos/wishesRepo.js";
 
 const ADMIN_EMAIL = "mark-smulders@hotmail.com";
@@ -64,6 +64,10 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
   const [replyText, setReplyText] = useState("");
   const [replySent, setReplySent] = useState(false);
 
+  // Admin: "Dank van de maker" onder een tip
+  const [bedankFor, setBedankFor] = useState(null);
+  const [bedankText, setBedankText] = useState("");
+
   const laad = async () => {
     setLoading(true);
     const { tops, repliesByParent } = await listApprovedWishes();
@@ -106,6 +110,17 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
     setPending((p) => p.filter((w) => w.id !== id));
     await moderateWish(id, status);
     laad();
+  };
+
+  // Admin: plaats een "Dank van de maker" onder een tip
+  const bedankTipper = async (parentId) => {
+    const m = bedankText.trim();
+    if (m.length < 1) return;
+    setBusy(true);
+    const { ok } = await addMakerThanks({ parentId, message: m });
+    setBusy(false);
+    if (ok) { setBedankText(""); setBedankFor(null); laad(); }
+    else setWarn("Bedankje plaatsen mislukte — probeer opnieuw.");
   };
 
   const card = {
@@ -231,6 +246,9 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                       borderColor: heeftGesteund ? "rgba(105,240,174,0.5)" : "rgba(255,255,255,0.15)",
                     }}>👍 Steun{w.support_count ? ` · ${w.support_count}` : ""}</button>
                     <button onClick={() => { setReplyFor(replyFor === w.id ? null : w.id); setReplyText(""); }} style={btnGhost}>💬 Reageer</button>
+                    {isAdmin && (
+                      <button onClick={() => { setBedankFor(bedankFor === w.id ? null : w.id); setBedankText(""); }} style={btnThanks}>💛 Bedank de tipper</button>
+                    )}
                   </div>
 
                   {replyFor === w.id && (
@@ -241,14 +259,39 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                     </div>
                   )}
 
+                  {isAdmin && bedankFor === w.id && (
+                    <div style={{ marginTop: 10, display: "flex", gap: 8 }}>
+                      <input value={bedankText} onChange={(e) => setBedankText(e.target.value)} placeholder="Bedankje van de maker…" maxLength={500}
+                        autoFocus
+                        onKeyDown={(e) => { if (e.key === "Enter") bedankTipper(w.id); }}
+                        style={{ flex: 1, borderRadius: 8, padding: "8px 10px", background: "rgba(255,213,79,0.08)", border: "1px solid rgba(255,213,79,0.4)", color: "#fff", fontSize: 14, fontFamily: "inherit" }} />
+                      <button onClick={() => bedankTipper(w.id)} disabled={busy} style={btnThanks}>💛 Plaats</button>
+                    </div>
+                  )}
+
                   {replies.length > 0 && (
                     <div style={{ marginTop: 10, borderLeft: "2px solid rgba(255,255,255,0.1)", paddingLeft: 12, display: "flex", flexDirection: "column", gap: 8 }}>
                       {replies.map((r) => (
-                        <div key={r.id} style={{ fontSize: 13.5 }}>
-                          <strong style={{ color: "#9be069" }}>{r.display_name || "anoniem"}</strong>
-                          <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}> · {fmt(r.created_at)}</span>
-                          <div style={{ whiteSpace: "pre-wrap", color: "rgba(231,237,246,0.85)" }}>{r.message}</div>
-                        </div>
+                        r.is_maker ? (
+                          <div key={r.id} style={{
+                            fontSize: 13.5, borderRadius: 10, padding: "10px 12px",
+                            background: "linear-gradient(135deg, rgba(255,213,79,0.14), rgba(255,213,79,0.06))",
+                            border: "1px solid rgba(255,213,79,0.45)",
+                          }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 3 }}>
+                              <strong style={{ color: "#ffd54f" }}>💛 Dank van de maker</strong>
+                              <span style={{ fontSize: 10, fontWeight: 800, color: "#0a0e1a", background: "#ffd54f", borderRadius: 999, padding: "1px 6px" }}>✔ maker</span>
+                              <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}>· {fmt(r.created_at)}</span>
+                            </div>
+                            <div style={{ whiteSpace: "pre-wrap", color: "#fff" }}>{r.message}</div>
+                          </div>
+                        ) : (
+                          <div key={r.id} style={{ fontSize: 13.5 }}>
+                            <strong style={{ color: "#9be069" }}>{r.display_name || "anoniem"}</strong>
+                            <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}> · {fmt(r.created_at)}</span>
+                            <div style={{ whiteSpace: "pre-wrap", color: "rgba(231,237,246,0.85)" }}>{r.message}</div>
+                          </div>
+                        )
                       ))}
                     </div>
                   )}
@@ -267,3 +310,4 @@ const btnPrimary = { padding: "10px 16px", borderRadius: 12, border: "none", bac
 const btnApprove = { padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.15)", color: "#69f0ae", fontSize: 12, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" };
 const btnReject = { padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(244,67,54,0.4)", background: "rgba(244,67,54,0.12)", color: "#ff7043", fontSize: 12, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" };
 const chip = { padding: "5px 10px", borderRadius: 999, border: "1px dashed rgba(255,255,255,0.2)", background: "transparent", color: "rgba(231,237,246,0.7)", fontSize: 12, cursor: "pointer", fontFamily: "inherit" };
+const btnThanks = { padding: "7px 12px", borderRadius: 9, border: "1px solid rgba(255,213,79,0.45)", background: "rgba(255,213,79,0.12)", color: "#ffd54f", fontSize: 13, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" };

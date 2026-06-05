@@ -48,6 +48,28 @@ export async function moderateWish(id, status) {
   return { ok: !error, error };
 }
 
+/**
+ * Admin-only: "Dank van de maker" onder een tip plaatsen. Verschijnt direct
+ * (geen review) als gouden maker-reactie. Twee stappen omdat de publieke
+ * insert-policy is_maker/approved niet toelaat: eerst als pending insturen,
+ * dan via de admin-update-policy promoveren naar approved + is_maker.
+ */
+export async function addMakerThanks({ parentId, message }) {
+  const m = String(message || "").trim().slice(0, 1500);
+  if (m.length < 1 || !parentId) return { ok: false, error: new Error("leeg") };
+  const { data, error } = await supabase
+    .from("wishes")
+    .insert({ message: m, parent_id: parentId, display_name: "De maker", status: "pending", is_maker: false })
+    .select("id")
+    .single();
+  if (error) return { ok: false, error };
+  const { error: e2 } = await supabase
+    .from("wishes")
+    .update({ status: "approved", is_maker: true })
+    .eq("id", data.id);
+  return { ok: !e2, error: e2 };
+}
+
 /** +1 steun via veilige RPC (alleen op goedgekeurde tips). */
 export async function supportWish(id) {
   const { error } = await supabase.rpc("support_wish", { p_id: id });
