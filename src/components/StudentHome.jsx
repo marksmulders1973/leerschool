@@ -12,6 +12,7 @@ import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
 import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import VraagVanDeDag from "./VraagVanDeDag.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 
@@ -420,6 +421,12 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             >×</span>
           </button>
         )}
+
+        {/* Doorstroomtoets-vraag van de dag — dagelijkse terugkom-haak (retentie,
+            Mark 2026-06-05). Hergebruikt de /v/-vragenpool, kost niets. */}
+        <div style={{ marginBottom: 12 }}>
+          <VraagVanDeDag />
+        </div>
 
         {/* A8 (10-agent circulariteit 2026-05-10): "Verder waar je was"-card.
             Toont laatste activiteit met directe knop naar bijbehorend vak. */}
