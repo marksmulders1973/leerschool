@@ -102,6 +102,11 @@ export default defineConfig({
             if (id.includes('react-router')) return 'vendor-react-router';
             if (id.includes('react-dom') || id.includes('/react/')) return 'vendor-react';
           }
+          // 3D-componenten (Shape3D e.d.) een eigen chunk geven. Shape3D wordt
+          // gedeeld door de leerpaden én de losse /kubus.html-hookpagina; zonder
+          // dit absorbeert Rollup 'm in de zware data-learnpaths-chunk, waardoor
+          // /kubus.html de hele 4,3 MB + circulaire init binnentrekt en crasht.
+          if (id.includes('src/components/learn/3d/')) return 'three-shapes';
           // Eigen data-blokken — grote arrays met vragen/boeken/topics
           if (id.includes('src/data/sampleQuestions')) return 'data-questions';
           if (id.includes('src/data/topics')) return 'data-topics';
