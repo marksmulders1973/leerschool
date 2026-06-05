@@ -91,7 +91,7 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry } from "./data/repos/l
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
-import { getInitialPvpJoinCode, getInitialPage, parseVraagId } from "./app/initialPage.js";
+import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
 import DeepVraag from "./components/DeepVraag.jsx";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
@@ -224,7 +224,8 @@ export default function App() {
     return stop;
   }, []);
 
-  const [activeLearnPathId, setActiveLearnPathId] = useState(null);
+  // Deep-link ?pad=<id> opent direct een leerpad (social-reclame-link).
+  const [activeLearnPathId, setActiveLearnPathId] = useState(getInitialLeerpadId());
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
   const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);

@@ -33,9 +33,19 @@ export function parseVraagId(pathname) {
   return m ? m[1] : null;
 }
 
+// ?pad=<id> — social-deep-link die direct een leerpad opent (Mark 2026-06-05:
+// reclame-link moet rechtstreeks naar het onderwerp leiden).
+export function parseLeerpadId(search = "") {
+  try {
+    const p = new URLSearchParams(search).get("pad");
+    return p && /^[A-Za-z0-9_-]{2,60}$/.test(p) ? p : null;
+  } catch { return null; }
+}
+
 export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (parsePvpJoinCode(pathname)) return "pvp-lobby";
   if (parseVraagId(pathname)) return "vraag";
+  if (parseLeerpadId(search)) return "learn-path";
   try {
     const sp = new URLSearchParams(search);
     if (sp.get("play") === "obliterator") return "obliteratorDirect";
@@ -53,6 +63,11 @@ export function getInitialPvpJoinCode() {
 export function getInitialVraagId() {
   if (typeof window === "undefined") return null;
   return parseVraagId(window.location.pathname);
+}
+
+export function getInitialLeerpadId() {
+  if (typeof window === "undefined") return null;
+  return parseLeerpadId(window.location.search);
 }
 
 export function getInitialPage() {
