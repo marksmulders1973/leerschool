@@ -5077,6 +5077,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "moederbedrijf-overname-sonac-beco",
+    "file": "./moederbedrijfOvernameSonacBeco.js",
+    "title": "Moederbedrijven & overnames — voorbeeld Sonac Vuren",
+    "subject": "economie",
+    "level": "klas3",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "economie-bedrijfsstructuur",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 4,
+    "checkCount": 4,
+    "chapterCount": 2,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "mol-stoichiometrie-havo-vwo",
     "file": "./molStoichiometrieHavoVwo.js",
     "title": "Mol + Stoichiometrie + Redox (HAVO/VWO Scheikunde)",
