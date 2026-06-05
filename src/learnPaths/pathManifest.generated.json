@@ -7286,6 +7286,22 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "topografie-nederland-provincies-po",
+    "file": "./topografieNederlandProvinciesPo.jsx",
+    "title": "Topografie Nederland — provincies & hoofdsteden",
+    "subject": "aardrijkskunde",
+    "level": "groep7-8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "aardrijkskunde-topografie-nederland",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 5,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "trappen-van-vergelijking-po",
     "file": "./trappenVanVergelijkingPo.js",
     "title": "Trappen van vergelijking",
