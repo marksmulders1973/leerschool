@@ -7235,6 +7235,22 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "topografie-europa-landen-po",
+    "file": "./topografieEuropaPo.jsx",
+    "title": "Topografie Europa — landen & hoofdsteden",
+    "subject": "aardrijkskunde",
+    "level": "groep8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "aardrijkskunde-topografie-europa",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 4,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "topografie-europa-po",
     "file": "./topografieEuropaPo.js",
     "title": "Topografie Europa — hoofdsteden, zeeën, bergen",
