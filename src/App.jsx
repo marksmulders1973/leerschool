@@ -136,6 +136,35 @@ const LEARN_PAGES = new Set([
 
 const KWARTIER_TARGET_MIN = 15;
 
+// Dag-persistente leertijd. De 15-min-teller telde vroeger alleen seconden
+// binnen één tab-load (useState(0)) en sprong bij elke reload/navigatie terug
+// naar 0 — daardoor haalde vrijwel niemand 15 min "aaneengesloten" en vuurde
+// `kwartier_reached` NOOIT (0 events). Nu bewaren we de leertijd per dag in
+// localStorage zodat hij optelt over reloads heen: dát weerspiegelt de echte
+// "een kwartier per dag"-belofte.
+const _leertijdDayKey = () => {
+  const d = new Date();
+  const ymd = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+  return `lk_leertijd_${ymd}`;
+};
+const leesLeertijdVandaag = () => {
+  try { return Math.max(0, parseInt(localStorage.getItem(_leertijdDayKey()) || "0", 10) || 0); }
+  catch { return 0; }
+};
+const schrijfLeertijdVandaag = (sec) => {
+  try { localStorage.setItem(_leertijdDayKey(), String(sec)); } catch { /* private mode e.d. */ }
+};
+// Ruim leertijd-sleutels van vorige dagen op (houdt localStorage schoon).
+const pruneOudeLeertijd = () => {
+  try {
+    const houden = _leertijdDayKey();
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i);
+      if (k && k.startsWith("lk_leertijd_") && k !== houden) localStorage.removeItem(k);
+    }
+  } catch { /* negeer */ }
+};
+
 const FREE_QUIZ_LIMIT = 20;
 
 const fonts = `
@@ -309,16 +338,25 @@ export default function App() {
   // is en de tab zichtbaar is. kwartierMilestone wordt 1× per sessie getoond
   // bij het bereiken van 15 min — vrolijke toast met optie naar OBLITERATOR
   // of stoppen voor vandaag.
-  const [sessionSec, setSessionSec] = useState(0);
+  // Init uit localStorage: leertijd telt door over reloads heen binnen de dag.
+  const [sessionSec, setSessionSec] = useState(leesLeertijdVandaag);
   const [showKwartierToast, setShowKwartierToast] = useState(false);
-  const milestoneShownRef = useRef(false);
+  // Al 15 min gehaald vandaag? Dan niet opnieuw vuren/toasten bij een reload.
+  const milestoneShownRef = useRef(leesLeertijdVandaag() >= KWARTIER_TARGET_MIN * 60);
   useEffect(() => {
+    pruneOudeLeertijd();
     let visible = !document.hidden;
     const onVis = () => { visible = !document.hidden; };
     document.addEventListener("visibilitychange", onVis);
     const id = setInterval(() => {
       if (visible && LEARN_PAGES.has(pageRef.current)) {
-        setSessionSec((s) => s + 1);
+        setSessionSec((s) => {
+          const next = s + 1;
+          // Persist elke 5s (beperkt het aantal writes) zodat de tijd een
+          // reload/navigatie overleeft.
+          if (next % 5 === 0) schrijfLeertijdVandaag(next);
+          return next;
+        });
       }
     }, 1000);
     return () => {
@@ -329,6 +367,7 @@ export default function App() {
   useEffect(() => {
     if (!milestoneShownRef.current && sessionSec >= KWARTIER_TARGET_MIN * 60) {
       milestoneShownRef.current = true;
+      schrijfLeertijdVandaag(sessionSec);
       setShowKwartierToast(true);
       track("kwartier_reached", { sessie_min: Math.floor(sessionSec / 60) });
     }
