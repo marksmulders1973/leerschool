@@ -36,6 +36,8 @@
 
 **Dagrapport meeleveren (Mark-wens 2026-06-05).** Bij dezelfde sessie-start-check ook een kort **statistieken-dagrapport** geven (bezoekers vandaag/week, gem. sessieduur, beste bron, top-pagina's, QR-scans, open feedback). Cijfers via de RPC **`get_admin_stats`** óf de directe SQL over `events`/`profiles`/`feedback`/`wishes` (zelfde logica als `src/components/AdminStats.jsx` → `/admin/stats`). **Triggerwoorden:** als Mark "**het rapport**" of "**dagrapport**" zegt, bedoelt hij dít — haal de cijfers op en presenteer ze. Wees eerlijk over kanttekeningen (korte historie sinds 4 juni; eigen test-sessies kunnen "vandaag" opblazen; bron "leerkwartier.app" = interne navigatie, geen nieuw verkeer).
 
+**Dagrapport altijd door agent(s) laten CHECKEN + aanbevelingen (Mark-wens 2026-06-05).** Laat de cijfers niet voor zichzelf spreken: spawn bij het dagrapport 1-3 `general-purpose`-agents (model sonnet, parallel) die (a) **verifiëren of de cijfers kloppen / niet misleidend zijn** (dubbeltellingen, test-sessies, sessie≠persoon, events die niet vuren zoals `kwartier_reached`), en (b) **concrete aanbevelingen** geven — data-controle, groei/marketing (bv. meer /v/-trechter-reclame), en product/UX. Synthese kort terugkoppelen aan Mark. Lessons al gevonden 2026-06-05: betrouwbaarheid laag (eigen test-sessies vervuilen "vandaag"); `kwartier_reached` vuurt vermoedelijk niet (0× bij 100+ vragen → bug checken); /v/-deeplink-trechter is de bewezen reclamevorm die naar de site stuurt.
+
 Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. "Elke dag" = elke werkdag/sessie, 1× checken aan het begin.
 
 ## Autonome modus (actief tot app gevuld — geen einddatum)
