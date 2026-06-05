@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getSocialVraag } from "../socialVragen.js";
 import { track } from "../utils.js";
 import { BRAND } from "../brand.js";
+import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 
 /**
  * DeepVraag — landingspagina voor de social-deep-link /v/<id>.
@@ -27,10 +28,14 @@ function renderTekst(s) {
   });
 }
 
-export default function DeepVraag({ id, setPage }) {
+export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
   const vraag = getSocialVraag(id);
   const [gekozen, setGekozen] = useState(null);
   const [niveau, setNiveau] = useState("basis");
+  // Al aangemeld voor de gratis lesmateriaal-mail? Dan het opt-in-blok niet tonen.
+  const [emailAl] = useState(() => {
+    try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
+  });
 
   useEffect(() => {
     track("deeplink_open", { id: String(id || "").slice(0, 40), gevonden: !!vraag });
@@ -152,12 +157,33 @@ export default function DeepVraag({ id, setPage }) {
         </div>
       )}
 
+      {/* E-mail-opt-in op het moment van hoogste interesse: net na de uitleg,
+          vóór de CTA. De USP is nu bewezen (3-niveau-uitleg werkte), dus dít is
+          de sterkste plek om de gratis-lesmateriaal-mail aan te bieden. */}
+      {beantwoord && !emailAl && (
+        <div style={{ marginBottom: 18 }}>
+          <GratisLesmateriaal source="deeplink-vraag" compact />
+        </div>
+      )}
+
       {/* CTA-nudge na antwoord */}
       {beantwoord && (
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.12)", paddingTop: 16 }}>
           <div style={{ fontSize: 14.5, color: "rgba(255,255,255,0.85)", marginBottom: 12, textAlign: "center" }}>
             Dit zit achter <strong style={{ color: "#fff" }}>élke</strong> vraag in {BRAND.name}. In 2026 helemaal gratis.
           </div>
+          {/* Leerpad-link: sluit de USP-lus (vraag → uitleg → volledig leerpad). */}
+          {vraag.leerpadLink && onOpenLeerpad && (
+            <button type="button"
+              onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "leerpad", pad: vraag.leerpadLink.id }); onOpenLeerpad(vraag.leerpadLink.id); }}
+              style={{
+                display: "block", width: "100%", marginBottom: 10, padding: "13px 14px",
+                background: "rgba(0,200,83,0.10)", border: `1.5px solid ${GROEN}`, borderRadius: 12,
+                color: GROEN_LICHT, fontFamily: "var(--font-body, sans-serif)", fontSize: 15, fontWeight: 800, cursor: "pointer",
+              }}>
+              📚 Leer dit helemaal: {vraag.leerpadLink.title} →
+            </button>
+          )}
           <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
             Doe de gratis oefentoets →
           </PrimaryCTA>

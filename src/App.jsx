@@ -937,7 +937,11 @@ export default function App() {
       <Suspense fallback={<PageLoader />}>
       {/* Social-deep-link /v/<id> → directe vraag-landing (Mark's trechter). */}
       {page === "vraag" && (
-        <DeepVraag id={parseVraagId(location.pathname)} setPage={setPage} />
+        <DeepVraag
+          id={parseVraagId(location.pathname)}
+          setPage={setPage}
+          onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
+        />
       )}
       {page === "learn-path" && activeLearnPathId && (
         <LearnPath
