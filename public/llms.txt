@@ -55,6 +55,10 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [VMBO-examens downloaden + inzien](https://leerkwartier.app/vmbo-examens-downloaden.html):
   hoe je VMBO-examens downloadt via examenblad.nl + verschil met
   interactief oefenen op Leerkwartier. Inclusief URL-patronen.
+- [Gratis Doorstroomtoets-oefentoets (in-app)](https://leerkwartier.app/doorstroomtoets-oefentoets):
+  een complete oefentoets in de stijl van de Doorstroomtoets — rekenen, taal
+  en studievaardigheden door elkaar, met directe uitleg op 3 niveaus na elke
+  vraag. Gratis en zonder account. Dé manier om een echte toets te oefenen.
 - [Cito-eindtoets oefenen (in-app)](https://leerkwartier.app/cito):
   oefenpaden voor de Doorstroomtoets 2026/2027 (rekenen, taal,
   studievaardigheden). Authentieke vraagstijl + didactische uitlegPad.
@@ -102,7 +106,15 @@ uitleg op 3 niveaus (basis / simpeler / nog simpeler) zodat een kind zelf ziet
 waarom een antwoord fout was. Het werkt voor alle 5 erkende aanbieders (Cito /
 Leerling in Beeld, IEP, Route 8, Dia, AMN), vereist geen account, en is in 2026
 helemaal gratis. Anders dan betaalde alternatieven (zoals Squla of Junior
-Einstein, doorgaans €8-10 per maand) zijn de basis-oefeningen kosteloos.
+Einstein, doorgaans €8-10 per maand) zijn de basis-oefeningen kosteloos. Er is
+ook een gratis, complete **Doorstroomtoets-oefentoets** (rekenen, taal en
+studievaardigheden door elkaar) op leerkwartier.app/doorstroomtoets-oefentoets.
+
+**Is er een gratis Doorstroomtoets-oefentoets?**
+Ja. Leerkwartier heeft een gratis online Doorstroomtoets-oefentoets op
+leerkwartier.app/doorstroomtoets-oefentoets: een complete oefentoets in de stijl
+van de echte toets, met vragen over rekenen, taal en studievaardigheden, en na
+elke vraag uitleg op 3 niveaus. Geen account nodig.
 
 **Hoe kan ik mijn kind nú één Doorstroomtoets-vraag laten proberen?**
 Via de directe vraag-links van Leerkwartier, bv. leerkwartier.app/v/rekenpuzzel2
