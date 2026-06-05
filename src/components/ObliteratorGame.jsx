@@ -215,6 +215,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   // Top-3 namen voor de spandoek-fans op de grond (rouleren door highscores).
   // Default-fallback als Supabase nog niet geladen heeft of leeg is.
   const topSpelersRef = useRef(["Brian", "Anouk", "Mark"]);
+  // Naam die de speler net invulde (anoniem, geen login). Ref zodat de
+  // game-loop-closure 'm bij het opslaan van de score altijd leest — ook als de
+  // userName-prop nog niet is bijgewerkt (Mark-bug 2026-06-05: score werd als
+  // "Speler" opgeslagen i.p.v. de ingevulde naam).
+  const gekozenNaamRef = useRef("");
   const [fase, setFase] = useState(pvpMatch ? "spelen" : "menu"); // PvP slaat menu over
   // Custom-level-editor state
   const [editorObstakels, setEditorObstakels] = useState([]); // [{type, x, y?}]
@@ -8434,7 +8439,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const scoreInHuidigLevel = score - scoreBijLevelStart;
       sessieLevelRecords[huidigLevel] = Math.max(sessieLevelRecords[huidigLevel] || 0, scoreInHuidigLevel);
       eindLevelRef.current = huidigLevel;
-      const naam = (userName || "").trim();
+      const naam = (gekozenNaamRef.current || userName || "").trim();
       if (authUser?.id && naam) {
         Object.entries(sessieLevelRecords).forEach(([lvl, sc]) => {
           if (sc <= 0) return;
@@ -8479,12 +8484,12 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       const triggerWelkom = driedeSessie && vanDeelLink; // deeplink-bezoeker -> Studiebol-conversie
       const triggerVraag = !triggerWelkom && driedeSessie && wrongQuestions && wrongQuestions.length > 0;
 
-      const huidigBeste = highscores.find(h => h.naam === (userName || "Speler"))?.score || 0;
+      const huidigBeste = highscores.find(h => h.naam === (gekozenNaamRef.current || userName || "Speler"))?.score || 0;
       setNieuwRecord(score > huidigBeste && score > 0);
       setEindScore(score);
       setBonusLeven(0);
 
-      schrijfScore(userName, authUser?.id, score, eindLevelRef.current).then(() => {
+      schrijfScore(gekozenNaamRef.current || userName, authUser?.id, score, eindLevelRef.current).then(() => {
         laadTopScores().then(s => setHighscores(s));
         if (triggerWelkom) {
           setFase("welkom");
@@ -8698,9 +8703,11 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   function bevestigNaamEnStart() {
     const schoon = (naamInput || "").trim().slice(0, 30);
     if (schoon && schoon.toLowerCase() !== "speler") {
+      gekozenNaamRef.current = schoon; // direct gebruiken bij score-opslag
       try {
         localStorage.setItem("obliterator-naam", schoon);
-        // Broadcast naam-wijziging — App.jsx leest dit normaal op
+        // Broadcast naam-wijziging — App.jsx zet hiermee userName (listener
+        // toegevoegd 2026-06-05) zodat de naam app-breed klopt.
         window.dispatchEvent(new CustomEvent("obliterator-naam-update", { detail: schoon }));
       } catch {}
     }

@@ -387,6 +387,21 @@ export default function App() {
   }, []);
 
   useEffect(() => { pageRef.current = page; }, [page]);
+
+  // OBLITERATOR-naam → userName. De game dispatcht "obliterator-naam-update"
+  // zodra een anonieme speler (geen login) een naam invult. Zonder deze listener
+  // bleef de score als "Speler" opgeslagen i.p.v. de ingevulde naam
+  // (Mark-bug 2026-06-05). Ook bij mount uit localStorage ophalen.
+  useEffect(() => {
+    try {
+      const stored = (localStorage.getItem("obliterator-naam") || "").trim();
+      if (stored) setUserName((prev) => (!prev || prev.toLowerCase() === "speler" ? stored : prev));
+    } catch {}
+    const onNaam = (e) => { const n = (e.detail || "").trim(); if (n) setUserName(n); };
+    window.addEventListener("obliterator-naam-update", onNaam);
+    return () => window.removeEventListener("obliterator-naam-update", onNaam);
+  }, []);
+
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
 
   // Cross-device quiz-sync: zodra we weten wie de ingelogde leerkracht is,
