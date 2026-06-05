@@ -69,6 +69,31 @@ export function track(event, params = {}) {
   } catch (e) {}
 }
 
+// ─── Referral "deel & win" ───────────────────────────────────────
+// Eigen, stabiele aanbreng-code per browser (geen PII — gewoon random).
+// Pas aangemaakt zodra iemand wil delen. Gebruikt in de deel-link
+// leerkwartier.app/?ref=<code> en bij waitlist-attributie.
+export function getMyRefCode() {
+  try {
+    let c = localStorage.getItem("lk_ref_code");
+    if (!c) {
+      c = "r" + Math.random().toString(36).slice(2, 9);
+      localStorage.setItem("lk_ref_code", c);
+    }
+    return c;
+  } catch { return "r0000000"; }
+}
+// De ?ref=<code> van een binnenkomende bezoeker (de aanbrenger). Onthouden in
+// sessionStorage zodat het ook bij een latere aanmelding op een andere pagina
+// nog beschikbaar is.
+export function getIncomingRef() {
+  try {
+    const fromUrl = new URLSearchParams(location.search).get("ref");
+    if (fromUrl) { try { sessionStorage.setItem("lk_incoming_ref", fromUrl); } catch {} return fromUrl.slice(0, 40); }
+    return (sessionStorage.getItem("lk_incoming_ref") || null);
+  } catch { return null; }
+}
+
 // ─── Sound Engine ────────────────────────────────────────────────
 export const SoundEngine = {
   ctx: null,

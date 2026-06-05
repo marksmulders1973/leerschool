@@ -46,6 +46,7 @@ export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (parsePvpJoinCode(pathname)) return "pvp-lobby";
   if (parseVraagId(pathname)) return "vraag";
   if (parseLeerpadId(search)) return "learn-path";
+  if (/^\/actie(\/|$)/.test(pathname)) return "actie";
   try {
     const sp = new URLSearchParams(search);
     if (sp.get("play") === "obliterator") return "obliteratorDirect";

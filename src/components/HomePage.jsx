@@ -331,7 +331,7 @@ const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -1505,6 +1505,20 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14,
             fontFamily: "var(--font-body)", fontSize: 12,
           }}>
+            {onActie && (
+              <button
+                type="button"
+                style={{
+                  background: "linear-gradient(135deg, #ffd54f, #ffb300)", border: "none",
+                  color: "#3a2a00", cursor: "pointer", padding: "6px 12px", borderRadius: 999,
+                  fontWeight: 800, display: "inline-flex", alignItems: "center", gap: 5,
+                  width: "100%", justifyContent: "center", maxWidth: 320, marginBottom: 4,
+                }}
+                onClick={() => { trackShare("deel_win_cta"); onActie(); }}
+              >
+                📣 Deel &amp; win een gratis Pro-jaar 2027
+              </button>
+            )}
             <button
               type="button"
               style={{ background: "none", border: "none", color: "#25D366", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}

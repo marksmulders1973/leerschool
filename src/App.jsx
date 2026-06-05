@@ -66,6 +66,7 @@ const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
+const ActieVoorwaarden = lazy(() => import("./components/ActieVoorwaarden.jsx"));
 const AdminAIReferrers = lazy(() => import("./components/AdminAIReferrers.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
@@ -1143,6 +1144,7 @@ export default function App() {
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
           onAdminStats={() => setPage("admin-stats")}
+          onActie={() => setPage("actie")}
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
@@ -1828,6 +1830,12 @@ export default function App() {
       )}
       {page === "admin-stats" && (
         <AdminStats
+          onBack={() => setPage("home")}
+          onHome={goHome}
+        />
+      )}
+      {page === "actie" && (
+        <ActieVoorwaarden
           onBack={() => setPage("home")}
           onHome={goHome}
         />

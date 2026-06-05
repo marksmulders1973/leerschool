@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import supabase from "../supabase.js";
-import { track } from "../utils.js";
+import { track, getIncomingRef } from "../utils.js";
 
 // Herbruikbaar e-mail-capture-blokje (Mark 2026-06-03). Bouwt de e-maillijst
 // ("het bestand"). Magneet = "elke week 15 minuten gratis extra lesmateriaal".
@@ -79,6 +79,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
         kind_voornaam: voornaam.trim() || null,
         kind_groep: groep || null,
         vakken: vakken.length ? vakken : null,
+        ref: getIncomingRef(),
       });
       if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
       try { localStorage.setItem(doneKey, "1"); } catch {}
