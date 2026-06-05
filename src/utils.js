@@ -39,13 +39,14 @@ function _source() {
   return null;
 }
 
-// Campagne-labels uit de URL (?bron=qr, ?pad=<id>, utm_*). Zo worden QR-stickers,
-// social-posts en leerpad-deeplinks meetbaar in events.props (2026-06-05).
+// Campagne-labels uit de URL (?bron=qr, ?pad=<id>, utm_*, ?ref=<code>). Zo worden
+// QR-stickers, social-posts, leerpad-deeplinks én referral-links (deel & win)
+// meetbaar in events.props (2026-06-05; ref toegevoegd voor de referral-loop).
 function _campaignParams() {
   try {
     const sp = new URLSearchParams(location.search);
     const out = {};
-    for (const k of ["bron", "pad", "utm_medium", "utm_campaign"]) {
+    for (const k of ["bron", "pad", "utm_medium", "utm_campaign", "utm_source", "ref"]) {
       const v = sp.get(k);
       if (v) out[k] = v.slice(0, 60);
     }
