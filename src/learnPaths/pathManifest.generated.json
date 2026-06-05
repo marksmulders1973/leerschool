@@ -1010,6 +1010,22 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "crypto-blockchain-geld-beco",
+    "file": "./cryptoBlockchainGeldBeco.js",
+    "title": "Geld, crypto & blockchain — hoe digitaal geld werkt",
+    "subject": "economie",
+    "level": "klas3",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "economie-geld-digitaal",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 6,
+    "checkCount": 6,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "cse-leesvaardigheid-engels",
     "file": "./cseLeesvaardigheidEngels.js",
     "title": "CSE Engels — leesvaardigheid (klas 3-4)",
