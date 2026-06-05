@@ -34,7 +34,18 @@ function _source() {
   try {
     const utm = new URLSearchParams(location.search).get("utm_source");
     if (utm) return utm.slice(0, 40);
-    if (document.referrer) return new URL(document.referrer).hostname.slice(0, 60);
+    const host = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : "";
+    if (!host) return null;
+    // Bekende bronnen samenvoegen — een referrer fragmenteert anders over
+    // l.threads.com/threads.net, m/lm/www.facebook.com enz. Zo klopt de
+    // bronnen-telling in het dagrapport (2026-06-05; threads toegevoegd).
+    if (host.includes("threads")) return "threads";
+    if (host.includes("instagram")) return "ig";
+    if (host.includes("facebook") || host.includes("fb.")) return "fb";
+    if (host.includes("chatgpt") || host.includes("openai")) return "chatgpt";
+    if (host.includes("google.")) return "google";
+    if (host.includes("leerkwartier")) return "leerkwartier.app"; // interne navigatie
+    return host.slice(0, 60);
   } catch {}
   return null;
 }
