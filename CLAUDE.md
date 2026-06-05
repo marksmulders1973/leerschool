@@ -34,6 +34,8 @@
 
 **ALTIJD feedback terug geven (Mark-regel 2026-06-05) — sluit de lus.** Elke melding die we oppakken (of bewust níét doen) krijgt een reactie terug naar de melder op het wensenbord: een **"💛 Dank van de maker"**-reactie die bedankt + vertelt wat we ermee doen ("opgepakt", "staat live", of "waarom niet"). Kwam de melding via het feedback-formulier (geen reactie-kanaal)? Zet 'm dan als tip op het bord met de naam van de melder + maker-bedankje (zoals bij Sahasra/Sarah/Sonac). **Nooit een melding stilletjes afhandelen** — de melder moet altijd horen dat er iets mee is gebeurd. Dit geldt ook bij latere updates (bv. "fase 1 gestart" → later "fase 3 ook live").
 
+**Dagrapport meeleveren (Mark-wens 2026-06-05).** Bij dezelfde sessie-start-check ook een kort **statistieken-dagrapport** geven (bezoekers vandaag/week, gem. sessieduur, beste bron, top-pagina's, QR-scans, open feedback). Cijfers via de RPC **`get_admin_stats`** óf de directe SQL over `events`/`profiles`/`feedback`/`wishes` (zelfde logica als `src/components/AdminStats.jsx` → `/admin/stats`). **Triggerwoorden:** als Mark "**het rapport**" of "**dagrapport**" zegt, bedoelt hij dít — haal de cijfers op en presenteer ze. Wees eerlijk over kanttekeningen (korte historie sinds 4 juni; eigen test-sessies kunnen "vandaag" opblazen; bron "leerkwartier.app" = interne navigatie, geen nieuw verkeer).
+
 Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. "Elke dag" = elke werkdag/sessie, 1× checken aan het begin.
 
 ## Autonome modus (actief tot app gevuld — geen einddatum)
