@@ -77,6 +77,18 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
   };
   useEffect(() => { laad(); /* eslint-disable-next-line */ }, []);
 
+  // Voor-ingevulde melding vanuit "🚩 Fout melden" bij een vraag.
+  // Komt via localStorage (overleeft de router + een nieuwe tab); query-param
+  // als fallback. Eenmalig: na ophalen wissen.
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("lk_melding_prefill");
+      const q = new URLSearchParams(window.location.search).get("melding");
+      const m = stored || q;
+      if (m) { setMessage(m); localStorage.removeItem("lk_melding_prefill"); }
+    } catch { /* geen storage/URL-context */ }
+  }, []);
+
   const verstuur = async () => {
     const m = message.trim();
     if (m.length < 3) { setWarn("Schrijf even iets meer 🙂"); return; }

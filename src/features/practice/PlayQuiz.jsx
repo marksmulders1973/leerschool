@@ -694,7 +694,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
               </a>
             )}
             <a
-              href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
+              href="/tips"
+              onClick={() => { try { localStorage.setItem("lk_melding_prefill", `🚩 Mogelijk foute vraag\nVraag: ${question.q}\nGegeven juiste antwoord: ${question.options[question.answer]}\n\nWat klopt er niet: `); } catch { /* localStorage niet beschikbaar */ } }}
               target="_blank" rel="noopener noreferrer"
               style={{
                 width: "100%", padding: "12px", border: "1px solid #445566", borderRadius: 12,
@@ -836,7 +837,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
             {/* Fout melden */}
             <a
-              href={`https://docs.google.com/forms/d/e/1FAIpQLScCoM_2aTEgaBY3ssqR7g-ffqLoFZgiPv8l23MDD0nEPvongQ/viewform?entry.879534266=${encodeURIComponent(`Vraag: ${question.q}\nGoede antwoord: ${question.options[question.answer]}\nUitleg: ${question.explanation || ""}\n\nWat klopt er niet:`)}`}
+              href="/tips"
+              onClick={() => { try { localStorage.setItem("lk_melding_prefill", `🚩 Mogelijk foute vraag\nVraag: ${question.q}\nGegeven juiste antwoord: ${question.options[question.answer]}\n\nWat klopt er niet: `); } catch { /* localStorage niet beschikbaar */ } }}
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "10px 16px", background: "transparent", border: "1px solid #334455", borderRadius: 12, color: "var(--color-text-muted)", textDecoration: "none", fontFamily: "var(--font-body)", fontWeight: 600, fontSize: 13, marginBottom: 12 }}
             >
