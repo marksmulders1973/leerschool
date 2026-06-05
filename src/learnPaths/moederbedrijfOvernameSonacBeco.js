@@ -4,7 +4,13 @@
 // vast bestand, verpakt als economie-concept (moederbedrijf/dochter/overname).
 //
 // Bronnen: Wikipedia "Wed. P. Smits en Zoon / De Benenkluif", sonac.biz,
-// darlingii.com/sonac, vuren-dorp.nl. Sonac-medewerker (Mark) bevestigt lokaal.
+// darlingii.com/sonac, vuren-dorp.nl.
+//
+// ✅ FEITEN BEVESTIGD door een Sonac-medewerker (Mark) op 2026-06-05 (zie
+//    wensenbord). NIET 'verbeteren' naar "Vion/Sovion is de voorganger van
+//    Sonac" — dat is juist de FOUT. Correct: Smits = voorganger van de FABRIEK;
+//    Vion/Sovion = vroegere MOEDERbedrijven (Sovion = oude naam Vion); sinds
+//    2014 is het moederbedrijf Darling Ingredients.
 
 const chapters = [
   { letter: "A", title: "Moederbedrijf & dochter", emoji: "🏢", from: 0, to: 1 },
