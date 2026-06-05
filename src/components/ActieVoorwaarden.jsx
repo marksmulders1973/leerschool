@@ -10,7 +10,7 @@ import { track, getMyRefCode } from "../utils.js";
 // organisator vermeld, prijswaarde < €449 (geen kansspelbelasting).
 //
 // Props: onBack?, onHome?
-export default function ActieVoorwaarden({ onBack, onHome }) {
+export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
   const [code] = useState(getMyRefCode);
   const [aantal, setAantal] = useState(null);
   const [gekopieerd, setGekopieerd] = useState(false);
@@ -106,6 +106,17 @@ export default function ActieVoorwaarden({ onBack, onHome }) {
             </div>
           )}
         </div>
+
+        {onDank && (
+          <button onClick={onDank} style={{ ...card, width: "100%", textAlign: "left", cursor: "pointer", color: "#fff", border: "1px solid rgba(255,213,79,0.35)", background: "rgba(255,213,79,0.08)" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15, marginBottom: 2 }}>
+              💛 Iedereen die deelt komt op onze bedankmuur
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.75)" }}>
+              Gegarandeerd vermeld — bovenop je win-kans. Bekijk de muur &amp; zet je naam erop →
+            </div>
+          </button>
+        )}
 
         <details style={{ ...card, marginBottom: 24 }}>
           <summary style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 15, cursor: "pointer" }}>

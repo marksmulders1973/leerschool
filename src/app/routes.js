@@ -58,6 +58,7 @@ export const PAGE_TO_PATH = {
   "admin-ai-referrers": "/admin/ai-referrers",
   wishes: "/tips",
   actie: "/actie",
+  dank: "/dank",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

@@ -67,6 +67,7 @@ const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
 const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
 const ActieVoorwaarden = lazy(() => import("./components/ActieVoorwaarden.jsx"));
+const MetDankAan = lazy(() => import("./components/MetDankAan.jsx"));
 const AdminAIReferrers = lazy(() => import("./components/AdminAIReferrers.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
@@ -1836,6 +1837,14 @@ export default function App() {
       )}
       {page === "actie" && (
         <ActieVoorwaarden
+          onBack={() => setPage("home")}
+          onHome={goHome}
+          onDank={() => setPage("dank")}
+        />
+      )}
+      {page === "dank" && (
+        <MetDankAan
+          authUser={authUser}
           onBack={() => setPage("home")}
           onHome={goHome}
         />
