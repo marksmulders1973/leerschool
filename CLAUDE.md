@@ -32,6 +32,8 @@
 3. Bij een melding over een **foute vraag**: probeer 'm te corrigeren in het vooraf-gegenereerde vragenbestand (`sampleQuestions.js` e.d.) en zet de verbeterde versie vast. **AI-gegenereerde vragen zijn niet altijd te fixen** — wees daar eerlijk over.
 4. Mark modereert/bedankt zelf op `/tips` (admin-wachtrij "🔒 Wachtrij — alleen jij" + knop **"💛 Dank van de maker"**).
 
+**ALTIJD feedback terug geven (Mark-regel 2026-06-05) — sluit de lus.** Elke melding die we oppakken (of bewust níét doen) krijgt een reactie terug naar de melder op het wensenbord: een **"💛 Dank van de maker"**-reactie die bedankt + vertelt wat we ermee doen ("opgepakt", "staat live", of "waarom niet"). Kwam de melding via het feedback-formulier (geen reactie-kanaal)? Zet 'm dan als tip op het bord met de naam van de melder + maker-bedankje (zoals bij Sahasra/Sarah/Sonac). **Nooit een melding stilletjes afhandelen** — de melder moet altijd horen dat er iets mee is gebeurd. Dit geldt ook bij latere updates (bv. "fase 1 gestart" → later "fase 3 ook live").
+
 Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. "Elke dag" = elke werkdag/sessie, 1× checken aan het begin.
 
 ## Autonome modus (actief tot app gevuld — geen einddatum)
