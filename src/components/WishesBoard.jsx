@@ -156,6 +156,17 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
           <br /><strong style={{ color: "#ffd54f" }}>Bij genoeg steun passen we het aan naar jullie wens.</strong>
         </p>
 
+        {/* AI-disclaimer — eerlijk over door AI gemaakte vragen */}
+        <div style={{
+          ...card, marginBottom: 16, borderColor: "rgba(105,180,255,0.3)",
+          background: "rgba(105,180,255,0.07)", fontSize: 13, lineHeight: 1.5,
+          color: "rgba(231,237,246,0.85)",
+        }}>
+          ℹ️ Sommige vragen worden door <strong>AI</strong> gemaakt en kunnen een foutje bevatten.
+          Niet alles is altijd te herstellen, maar waar het kan <strong>verbeteren we de vraag</strong> en
+          zetten 'm vast in onze vragenbank. Zie je iets fouts? Meld het hier — <strong style={{ color: "#69f0ae" }}>bedankt dat je meedenkt!</strong> 🙏
+        </div>
+
         {/* ── Inzendformulier ── */}
         {sent ? (
           <div style={{ ...card, borderColor: "rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.08)", marginBottom: 22 }}>

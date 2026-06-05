@@ -20,6 +20,20 @@
 - **30-sec autonomie-regel**: als Mark 30 seconden niet reageert op een vraag, doorgaan zonder hem tot tokens op zijn.
 - **Memory raadplegen voor openstaande taken**: niet alle taken staan in `docs/AUTONOOM-BACKLOG.md`. Sommige sessie-overstijgende projecten + strategische beslissingen staan in `memory/project_*.md`. Bij sessie-start of vage instructie ook memory-index scannen op `project_*` items + zoeken op "TODO/later/uitgesteld/C-taak/open" in memory-files. Behandel memory als TWEEDE backlog.
 
+### Dagelijkse meldingen-check (vast ritueel — Mark vroeg dit 2026-06-05)
+
+**Mark wil weten of er meldingen binnenkomen — dat is belangrijk voor hem.** Bij de **start van elke werksessie** (max 1× per dag) de openstaande gebruikersmeldingen ophalen en het aantal aan Mark melden — **óók als het er nul zijn**.
+
+**Wat te doen:**
+1. Query Supabase (project `studiebol`, ID in `reference_studiebol_resources`):
+   - `wishes` waar `status = 'pending'` → nieuwe tips op het wensenbord (incl. "🚩 Fout melden"-meldingen die vanuit een vraag binnenkomen).
+   - `feedback` waar `resolved = false and blocked = false` → in-app feedback-formulier.
+2. Meld het kort aan Mark, bv. **"📨 Meldingen: 0 nieuwe"** of **"📨 Meldingen: 2 nieuwe"** met per melding 1 regel (wie + korte inhoud).
+3. Bij een melding over een **foute vraag**: probeer 'm te corrigeren in het vooraf-gegenereerde vragenbestand (`sampleQuestions.js` e.d.) en zet de verbeterde versie vast. **AI-gegenereerde vragen zijn niet altijd te fixen** — wees daar eerlijk over.
+4. Mark modereert/bedankt zelf op `/tips` (admin-wachtrij "🔒 Wachtrij — alleen jij" + knop **"💛 Dank van de maker"**).
+
+Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. "Elke dag" = elke werkdag/sessie, 1× checken aan het begin.
+
 ## Autonome modus (actief tot app gevuld — geen einddatum)
 
 Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken. Doel: app helemaal vullen met paden + vragen vóór fine-tuning. Mark wil **maximaal-lang autonoom werk per sessie**, zelfs als hij offline is — dus nooit pauzeren om input te vragen als er nog andere taken zijn die wél kunnen.
