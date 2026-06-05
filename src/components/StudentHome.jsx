@@ -68,6 +68,9 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const niveauVastgelegd = !!(userSchoolType || isVoLevel(userLevel) || isPoLevel(userLevel));
   const initieleVakModus = userSchoolType || isVoLevel(userLevel) ? "vo" : "po";
   const [vakModus, setVakModus] = useState(initieleVakModus);
+  // Niveau achteraf kunnen wijzigen (feedback Sarah/Sahasra 2026-06-05:
+  // "ik weet niet waar ik mijn niveau kies"). Badge → heropent de wizard.
+  const [wijzigNiveau, setWijzigNiveau] = useState(false);
   const vakkenLijst = vakModus === "vo" ? VAKKEN_VO : VAKKEN_PO;
   // Tel paden per subject voor het juiste niveau.
   // PO = level start met "groep".
@@ -242,13 +245,16 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
         {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen
             als userLevel nog leeg is + wizard niet eerder gedismissed via
             localStorage-flag. Zet userLevel + userSchoolType automatisch. */}
-        {!userLevel && (() => {
+        {(() => {
+          // Toon de wizard als (a) er nog geen niveau is en 'ie niet eerder is
+          // weggeklikt, OF (b) de gebruiker op "wijzig" tikte bij het badge.
           let done = false;
           try { done = localStorage.getItem("lk_niveau_wizard_done") === "1"; } catch {}
-          if (done) return null;
+          const autoToon = !userLevel && !done;
+          if (!autoToon && !wijzigNiveau) return null;
           return (
             <NiveauWizardBanner
-              onSetLevel={(lvl) => onSetLevel && onSetLevel(lvl || "")}
+              onSetLevel={(lvl) => { setWijzigNiveau(false); onSetLevel && onSetLevel(lvl || ""); }}
               onSetSchoolType={(st) => onSetSchoolType && onSetSchoolType(st || "")}
             />
           );
@@ -345,18 +351,25 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           );
         })()}
         {profileBadge && (
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: 6,
-            background: `${schoolTypeColor}18`,
-            border: `1px solid ${schoolTypeColor}55`,
-            borderRadius: 20, padding: "5px 14px",
-            marginBottom: 8, alignSelf: "flex-start",
-          }}>
+          <button
+            type="button"
+            onClick={() => { try { localStorage.removeItem("lk_niveau_wizard_done"); } catch {} setWijzigNiveau(true); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+            title="Klik om je klas/niveau te wijzigen"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 6,
+              background: `${schoolTypeColor}18`,
+              border: `1px solid ${schoolTypeColor}55`,
+              borderRadius: 20, padding: "5px 14px",
+              marginBottom: 8, alignSelf: "flex-start",
+              cursor: "pointer", fontFamily: "var(--font-display)",
+            }}
+          >
             <span style={{ fontSize: 14 }}>🎓</span>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: schoolTypeColor }}>
+            <span style={{ fontSize: 14, fontWeight: 700, color: schoolTypeColor }}>
               {profileBadge}
             </span>
-          </div>
+            <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.5)" }}>· ✏️ wijzig</span>
+          </button>
         )}
 
         {/* Kwartier-pauze resume — als gebruiker gisteren stopte na 15 min,

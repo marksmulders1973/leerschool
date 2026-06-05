@@ -34,10 +34,14 @@ const VO_KLASSEN = [
   { key: "klas6", label: "Klas 6" },
 ];
 
+// Gelijk aan de keuze in het profiel (HomePage): incl. HAVO/VWO-combi en
+// Gymnasium. Sleutels matchen de downstream-labels/kleuren in StudentHome.
 const VO_NIVEAUS = [
-  { key: "vmbo-tl", label: "VMBO" },
+  { key: "mavo", label: "VMBO-TL" },
   { key: "havo", label: "HAVO" },
+  { key: "havo-vwo", label: "HAVO/VWO" },
   { key: "vwo", label: "VWO" },
+  { key: "gym", label: "Gymnasium" },
 ];
 
 export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
@@ -185,13 +189,16 @@ export default function NiveauWizardBanner({ onSetLevel, onSetSchoolType }) {
     const klasKey = `klas${klasNr}`;
     return (
       <div style={containerStyle()}>
-        <Header n="Bijna klaar" titel={`Klas ${klasNr} — VMBO, HAVO of VWO?`} onBack={() => setStap(2)} />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8 }}>
+        <Header n="Bijna klaar" titel={`Klas ${klasNr} — welk niveau?`} onBack={() => setStap(2)} />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
           {VO_NIVEAUS.map((n) => (
-            <button key={n.key} onClick={() => kiesNiveau(klasKey, n.key)} style={pillStyle("#7c3aed")}>
+            <button key={n.key} onClick={() => kiesNiveau(klasKey, n.key)} style={{ ...pillStyle("#7c3aed"), flex: "1 1 28%", minWidth: 90 }}>
               {n.label}
             </button>
           ))}
+        </div>
+        <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 8, lineHeight: 1.4 }}>
+          Zit je in een gemengde brugklas? Kies <strong>HAVO/VWO</strong>.
         </div>
       </div>
     );
