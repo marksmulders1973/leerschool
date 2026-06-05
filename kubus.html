@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1729" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Hoe groot wordt een kubus? — Leerkwartier</title>
+    <meta name="description" content="Een kubus die groeit en krimpt — zie de inhoud (cm³) meegroeien. Tik en speel zelf op Leerkwartier." />
+    <link rel="canonical" href="https://leerkwartier.app/kubus.html" />
+
+    <!-- Social preview -->
+    <meta property="og:title" content="Hoe groot wordt een kubus? 🧊" />
+    <meta property="og:description" content="Zie de inhoud meegroeien — tik op de kubus en speel zelf op Leerkwartier." />
+    <meta property="og:image" content="https://leerkwartier.app/logo.jpg" />
+    <meta property="og:url" content="https://leerkwartier.app/kubus.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Leerkwartier" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --font-display: 'Fredoka', system-ui, sans-serif;
+        --font-body: 'Nunito', system-ui, sans-serif;
+        --color-text: #e0e6f0;
+        --color-text-strong: #ffffff;
+        --color-text-muted: rgba(224,230,240,0.7);
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka:wght@500;600;700&display=swap');
+      body {
+        font-family: var(--font-body), system-ui, sans-serif;
+        background: linear-gradient(160deg, #0f1729 0%, #162033 50%, #1a2744 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        -webkit-tap-highlight-color: transparent;
+      }
+      #root { width: 100%; max-width: 440px; }
+      .lk-intro {
+        text-align: center;
+        color: var(--color-text-muted);
+        font-size: 13px;
+        margin: 12px 4px 0;
+        line-height: 1.5;
+      }
+      .lk-intro a { color: #ffd54f; text-decoration: none; font-weight: 700; }
+      @keyframes lk-kubus-pop {
+        0%   { transform: scale(0.85); }
+        60%  { transform: scale(1.06); }
+        100% { transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/kubus.jsx"></script>
+  </body>
+</html>

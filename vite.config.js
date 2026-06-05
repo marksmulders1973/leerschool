@@ -88,6 +88,12 @@ export default defineConfig({
         ),
     },
     rollupOptions: {
+      // Multi-page: naast de hoofd-app ook de deelbare hook-pagina /kubus.html
+      // meebouwen zodat hij live komt op leerkwartier.app/kubus.html.
+      input: {
+        main: resolve('index.html'),
+        kubus: resolve('kubus.html'),
+      },
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
