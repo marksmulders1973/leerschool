@@ -800,10 +800,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
       )}
       <div style={styles.heroSection}>
 
-        {/* Sociale-bewijs bezoekersteller (Mark 2026-06-04): echt + groeit.
-            Basis = verifieerbare bezoekers tot nu toe; live opgeteld met nieuwe
-            unieke (anonieme) sessies via get_visitor_count(). Geen verzonnen getal. */}
-        {visitorCount != null && (
+        {/* Sociale-bewijs teller. 2026-06-05: het verzonnen basisgetal van 400 is
+            uit get_visitor_count() gehaald (juridisch + geloofwaardigheid). Toont nu
+            het ECHTE aantal geregistreerde accounts — een verdedigbare claim. */}
+        {visitorCount != null && visitorCount > 0 && (
           <div style={{
             alignSelf: "center",
             display: "inline-flex", alignItems: "center", gap: 8,
@@ -814,7 +814,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.88)",
           }}>
             <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: "#00e676", boxShadow: "0 0 8px #00e676", flexShrink: 0 }} />
-            Al <strong style={{ color: "#69f0ae", fontWeight: 800 }}>{visitorCount.toLocaleString("nl-NL")}</strong> mensen gingen je voor
+            Al <strong style={{ color: "#69f0ae", fontWeight: 800 }}>{visitorCount.toLocaleString("nl-NL")}</strong> leerlingen gebruiken Leerkwartier
           </div>
         )}
 

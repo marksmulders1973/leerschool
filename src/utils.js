@@ -39,6 +39,20 @@ function _source() {
   return null;
 }
 
+// Campagne-labels uit de URL (?bron=qr, ?pad=<id>, utm_*). Zo worden QR-stickers,
+// social-posts en leerpad-deeplinks meetbaar in events.props (2026-06-05).
+function _campaignParams() {
+  try {
+    const sp = new URLSearchParams(location.search);
+    const out = {};
+    for (const k of ["bron", "pad", "utm_medium", "utm_campaign"]) {
+      const v = sp.get(k);
+      if (v) out[k] = v.slice(0, 60);
+    }
+    return out;
+  } catch { return {}; }
+}
+
 export function track(event, params = {}) {
   // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)
   try { window.gtag?.("event", event, params); } catch (e) {}
@@ -46,7 +60,7 @@ export function track(event, params = {}) {
   try {
     supabase.from("events").insert({
       name: String(event).slice(0, 60),
-      props: _cleanProps(params),
+      props: _cleanProps({ ..._campaignParams(), ...params }),
       path: typeof location !== "undefined" ? location.pathname.slice(0, 120) : null,
       source: _source(),
       session: _sessionId(),
