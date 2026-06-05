@@ -54,6 +54,7 @@ export const PAGE_TO_PATH = {
   pro: "/pro",
   upgrade: "/upgrade",
   "admin-feedback": "/admin/feedback",
+  "admin-stats": "/admin/stats",
   "admin-ai-referrers": "/admin/ai-referrers",
   wishes: "/tips",
 };

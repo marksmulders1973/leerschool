@@ -65,6 +65,7 @@ const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const ObliteratorGame = lazy(() => import("./components/ObliteratorGame.jsx"));
 const PvPLobby = lazy(() => import("./games/obliterator/PvPLobby.jsx"));
 const AdminFeedback = lazy(() => import("./components/AdminFeedback.jsx"));
+const AdminStats = lazy(() => import("./components/AdminStats.jsx"));
 const AdminAIReferrers = lazy(() => import("./components/AdminAIReferrers.jsx"));
 const LearnPath = lazy(() => import("./features/learn/LearnPath.jsx"));
 const LearnPathsHub = lazy(() => import("./features/learn/LearnPathsHub.jsx"));
@@ -1102,6 +1103,7 @@ export default function App() {
           onOnboardingStart={() => { onboardingActiveRef.current = true; }}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onAdminFeedback={() => setPage("admin-feedback")}
+          onAdminStats={() => setPage("admin-stats")}
           onPlayObliterator={() => setPage("obliteratorPlay")}
           onPro={() => setPage("pro")}
           onLearnPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("home"); setPage("learn-path"); }}
@@ -1781,6 +1783,12 @@ export default function App() {
       {page === "oefenpakket" && <OefenpakketPage setPage={setPage} />}
       {page === "admin-feedback" && (
         <AdminFeedback
+          onBack={() => setPage("home")}
+          onHome={goHome}
+        />
+      )}
+      {page === "admin-stats" && (
+        <AdminStats
           onBack={() => setPage("home")}
           onHome={goHome}
         />

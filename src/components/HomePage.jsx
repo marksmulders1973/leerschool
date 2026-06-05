@@ -331,7 +331,7 @@ const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -1588,6 +1588,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               >
                 <span>📬</span>
                 Tips lezen (admin)
+              </button>
+            )}
+            {isAdmin && onAdminStats && (
+              <button
+                type="button"
+                style={{ background: "none", border: "none", color: "var(--color-brand-primary-100)", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
+                onClick={onAdminStats}
+              >
+                <span>📊</span>
+                Statistieken (admin)
               </button>
             )}
           </div>
