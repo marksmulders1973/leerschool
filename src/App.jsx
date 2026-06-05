@@ -95,6 +95,7 @@ import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
 import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
+import { flushPendingScores } from "./games/obliterator/scores.js";
 import DeepVraag from "./components/DeepVraag.jsx";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
@@ -443,6 +444,18 @@ export default function App() {
     const onNaam = (e) => { const n = (e.detail || "").trim(); if (n) setUserName(n); };
     window.addEventListener("obliterator-naam-update", onNaam);
     return () => window.removeEventListener("obliterator-naam-update", onNaam);
+  }, []);
+
+  // OBLITERATOR-score-vangnet (Mark-bug 2026-06-05: "6 speelden, ik zie 1 score").
+  // Een score die bij game-over faalt te uploaden (flaky verbinding) wordt lokaal
+  // gequeued en synct normaal pas als het kind het SPEL heropent. Hier flushen we
+  // de queue al bij elke app-start (welke pagina dan ook) + zodra de verbinding
+  // terugkomt, zodat vastgelopen scores veel sneller alsnog meetellen.
+  useEffect(() => {
+    flushPendingScores().catch(() => {});
+    const opOnline = () => { flushPendingScores().catch(() => {}); };
+    window.addEventListener("online", opOnline);
+    return () => window.removeEventListener("online", opOnline);
   }, []);
 
   useEffect(() => { try { localStorage.setItem("ls_quizzes", JSON.stringify(quizzes)); } catch {} }, [quizzes]);
