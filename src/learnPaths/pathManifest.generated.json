@@ -7334,6 +7334,22 @@
     "estimatedMinutes": 5
   },
   {
+    "id": "topografie-wereld-werelddelen-po",
+    "file": "./topografieWereldWerelddelenPo.jsx",
+    "title": "Topografie Wereld — de werelddelen",
+    "subject": "aardrijkskunde",
+    "level": "groep8",
+    "emoji": "",
+    "referentieNiveau": null,
+    "sloThema": "aardrijkskunde-topografie-wereld",
+    "triggerKeywords": [],
+    "intro": "",
+    "stepCount": 5,
+    "checkCount": 5,
+    "chapterCount": 3,
+    "estimatedMinutes": 5
+  },
+  {
     "id": "trappen-van-vergelijking-po",
     "file": "./trappenVanVergelijkingPo.js",
     "title": "Trappen van vergelijking",
