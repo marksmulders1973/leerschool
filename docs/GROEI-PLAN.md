@@ -135,8 +135,10 @@ Threads beloont in 2026 drie dingen: **replies in grote threads**, **engagement-
 > Groet, Mark Smulders — leerkwartier.app
 > _Geen prijs op verdere berichten? Antwoord met "afmelden"._
 
-**T5 — Influencer shout-out-ruil (DM):**
-> Hoi [naam], ik ben Mark — maker van Leerkwartier, een gratis oefen-app voor de Doorstroomtoets (groep 6-8). Jouw volgers zijn precies de ouders die dit nodig hebben. Zin in een shout-out-ruil? Jij deelt één van onze dagelijkse examenvragen (kant-en-klare post lever ik), ik tag jou terug + noem je in mijn nieuwsbrief. Geen kosten, geen verplichtingen. Groet, Mark | leerkwartier.app
+**T5 — Influencer shout-out-ruil (DM/mail):**
+> Hoi [naam], ik ben Mark — maker van Leerkwartier, een gratis oefen-app voor de Doorstroomtoets (groep 6-8). Jouw volgers zijn precies de ouders die dit nodig hebben. Zin in een shout-out-ruil? Jij deelt één van onze dagelijkse examenvragen (kant-en-klare post lever ik). **Als dank vermeld ik je een jaar lang (12 maanden) gratis met je naam + link op een vaste "met dank aan"-plek in de app**, plus een tag terug. Geen kosten, geen verplichtingen. Groet, Mark | leerkwartier.app
+
+> **Vaste reciprociteit (Mark 2026-06-05):** bij élke influencer-outreach het aanbod "12 maanden gratis naam + link in de app" meenemen — sterke, gratis tegenprestatie. Grote/geverifieerde namen: mail naar hun zakelijke adres (DM verdwijnt). NB: de "met dank aan / partners"-plek in de app moet nog gebouwd worden zodra de eerste influencer ja zegt.
 
 ---
 
