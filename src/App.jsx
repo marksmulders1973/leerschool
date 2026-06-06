@@ -1766,6 +1766,7 @@ export default function App() {
             startGame({ ...currentQuiz, id: currentQuiz.id + "-replay-" + Date.now(), preGeneratedQuestions: latest.questions }, "self");
           }}
           onLeaderboard={() => setPage("leaderboard")}
+          onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
           onNextTafel={(() => {
             const topic = currentQuiz?.topic;
             if (!topic?.startsWith("tafel van ")) return undefined;

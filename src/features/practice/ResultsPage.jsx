@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
-import { SoundEngine } from "../../utils.js";
+import { SoundEngine, track, getMyRefCode } from "../../utils.js";
 import ObliteratorGame from "../../components/ObliteratorGame.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import supabase from "../../supabase.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../../shared/featureFlags.js";
 
-export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel }) {
+export default function ResultsPage({ results, quiz, userName, authUser, onLogin, onBack, onHome, onRetry, onReplay, onLeaderboard, onNextTafel, onOpenLeerpad }) {
   const latest = results[results.length - 1];
   if (!latest) return null;
 
@@ -94,6 +94,18 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
 
   const subjLabel = latest.topic || SUBJECTS.find((s) => s.id === latest.subject)?.label || latest.subject;
   const wrongCount = latest.answers.filter(a => !a.isCorrect).length;
+
+  // Leer-bal sluiten (koersplan 2026-06-06): welke concept-leerpaden horen bij de
+  // fout beantwoorde vragen? Zo kan de leerling ná de toets dóór naar "leer dit".
+  const conceptPaden = [];
+  {
+    const gezien = new Set();
+    for (const a of latest.answers) {
+      if (a.isCorrect) continue;
+      const lp = latest.questions?.[a.questionIndex]?.leerpadLink;
+      if (lp?.id && lp?.title && !gezien.has(lp.id)) { gezien.add(lp.id); conceptPaden.push(lp); }
+    }
+  }
 
   const stripHtml = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
   const wrongDetails = latest.answers
@@ -356,23 +368,59 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
-        {/* Daag vrienden uit (bij goede score) */}
-        {latest.percentage >= 80 && (() => {
-          const challengeText = `🏆 Kijk eens! Ik heb ${latest.percentage}% gehaald op ${BRAND.name}!\n\n${userName || "Ik"} · ${subjLabel}${latest.timeTaken > 0 ? ` · ${latest.timeTaken < 60 ? latest.timeTaken + "s" : Math.floor(latest.timeTaken / 60) + "m " + (latest.timeTaken % 60) + "s"}` : ""}\n\nKun jij dit ook? Daag mij uit! 🎯\nhttps://${BRAND.domain}`;
+        {/* Leer-bal: ná de toets dóór naar het concept-leerpad van wat fout ging.
+            Sluit de loop test → leren (koersplan-Sprint-0, 2026-06-06). */}
+        {onOpenLeerpad && conceptPaden.length > 0 && (
+          <div style={{ marginTop: 16, padding: 16, borderRadius: 16, background: "rgba(0,200,83,0.07)", border: "1.5px solid rgba(0,200,83,0.30)" }}>
+            <p style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, color: "var(--color-brand-primary-100)", textAlign: "center", margin: "0 0 4px" }}>
+              📚 Snap je nu waaróm?
+            </p>
+            <p style={{ fontSize: 12.5, color: "var(--color-text-muted)", textAlign: "center", margin: "0 0 12px", lineHeight: 1.5 }}>
+              Leer het onderwerp helemaal — stap voor stap, met uitleg op 3 niveaus.
+            </p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {conceptPaden.slice(0, 3).map((lp) => (
+                <button
+                  key={lp.id}
+                  type="button"
+                  onClick={() => { track("results_leerpad", { pad: lp.id, subject: latest.subject }); onOpenLeerpad(lp.id); }}
+                  style={{
+                    display: "block", width: "100%", padding: "12px 14px", borderRadius: 12, cursor: "pointer",
+                    background: "rgba(0,200,83,0.10)", border: "1.5px solid var(--color-brand-primary)",
+                    color: "var(--color-brand-primary-100)", fontFamily: "var(--font-body)", fontSize: 14.5, fontWeight: 800,
+                  }}
+                >
+                  📚 Leer dit: {lp.title} →
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Daag vrienden uit — bij ELKE score (mond-tot-mond/referral, koersplan
+            2026-06-06). Tekst past zich aan: brag bij hoge score, uitnodiging bij lage. */}
+        {(() => {
+          const goed = latest.percentage >= 80;
+          const url = `https://${BRAND.domain}/?ref=${getMyRefCode()}&utm_source=challenge`;
+          const challengeText = goed
+            ? `🏆 Ik haalde ${latest.percentage}% op ${BRAND.name}! (${subjLabel}) Kun jij dit ook? Daag mij uit! 🎯 ${url}`
+            : `Ik oefen voor de Doorstroomtoets op ${BRAND.name} (${subjLabel}). Probeer deze vragen — kun jij hoger scoren? 🎯 ${url}`;
           return (
             <div style={{ marginTop: 20, padding: 16, borderRadius: 16, background: "linear-gradient(135deg, #1a2a0a, #0f1a06)", border: "2px solid rgba(0,200,83,0.4)" }}>
               <p style={{ fontSize: 14, color: "var(--color-brand-primary-100)", fontWeight: 800, textAlign: "center", margin: "0 0 10px" }}>
-                🎯 Daag vrienden uit!
+                🎯 {goed ? "Daag vrienden uit!" : "Daag een vriend uit"}
               </p>
               <p style={{ fontSize: 11, color: "var(--color-text-muted)", textAlign: "center", margin: "0 0 10px" }}>
-                Deel je score — kunnen zij dit ook halen?
+                {goed ? "Deel je score — kunnen zij dit ook halen?" : "Deel deze quiz — wie van jullie scoort het hoogst?"}
               </p>
               <div style={{ display: "flex", gap: 8 }}>
                 <a href={`https://wa.me/?text=${encodeURIComponent(challengeText)}`} target="_blank" rel="noopener noreferrer"
+                  onClick={() => track("challenge_share", { via: "whatsapp", goed })}
                   style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#25D366", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   📱 WhatsApp
                 </a>
-                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://${BRAND.domain}`)}`} target="_blank" rel="noopener noreferrer"
+                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer"
+                  onClick={() => track("challenge_share", { via: "facebook", goed })}
                   style={{ flex: 1, padding: "12px 8px", border: "none", borderRadius: 12, background: "#1877F2", color: "var(--color-text-strong)", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, textDecoration: "none", textAlign: "center", display: "block" }}>
                   👍 Facebook
                 </a>
