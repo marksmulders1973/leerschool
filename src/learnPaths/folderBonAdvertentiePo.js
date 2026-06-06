@@ -83,6 +83,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Je koopt 2 pakken melk van €0,90 per stuk. Hoeveel kost de melk samen?",
+        options: ["€1,80", "€0,90", "€2,70", "€1,60"],
+        answer: 0,
+        wrongHints: [null, "Dat is de prijs van één pak.", "Dat zijn er drie.", "Reken nog eens: 2 × €0,90."],
+        uitlegPad: {
+          stappen: [{ titel: "Aantal × prijs", tekst: "2 × €0,90 = €1,80 (0,90 + 0,90)." }],
+          niveaus: {
+            basis: "2 pakken × €0,90 = €1,80.",
+            simpeler: "Tel twee keer €0,90 op.",
+            nogSimpeler: "0,90 + 0,90 = ?",
+          },
+        },
+      },
+      {
+        q: "Het totaalbedrag is €6,75. Je betaalt met €7,00. Hoeveel wisselgeld krijg je?",
+        options: ["€0,25", "€0,75", "€1,25", "€0,35"],
+        answer: 0,
+        wrongHints: [null, "Reken nog eens: €7,00 − €6,75.", "Te veel terug.", "Let op de centen."],
+        uitlegPad: {
+          stappen: [{ titel: "Betaald − totaal", tekst: "€7,00 − €6,75 = €0,25 wisselgeld (van 6,75 naar 7,00 is 25 cent)." }],
+          niveaus: {
+            basis: "Wisselgeld = €7,00 − €6,75 = €0,25.",
+            simpeler: "Van €6,75 naar €7,00: hoeveel cent erbij?",
+            nogSimpeler: "€6,75 + … = €7,00?",
+          },
+        },
+      },
     ],
   },
 
@@ -152,6 +180,34 @@ const steps = [
             basis: "Besparing = €12 − €9 = €3.",
             simpeler: "Hoeveel zit er tussen €12 en €9?",
             nogSimpeler: "€12 − €9 = ?",
+          },
+        },
+      },
+      {
+        q: "Er is 50% korting op een tas van €30. Hoeveel korting is dat in euro's?",
+        options: ["€15", "€30", "€10", "€50"],
+        answer: 0,
+        wrongHints: [null, "Dat is de volle prijs — er gaat juist iets af.", "Dat is maar een derde eraf.", "50% is geen 50 euro, maar de helft."],
+        uitlegPad: {
+          stappen: [{ titel: "50% = de helft", tekst: "50% van €30 = de helft = €30 ÷ 2 = €15 korting." }],
+          niveaus: {
+            basis: "Helft van €30 = €15 korting.",
+            simpeler: "Wat is de helft van €30?",
+            nogSimpeler: "€30 ÷ 2 = ?",
+          },
+        },
+      },
+      {
+        q: "Een step was €25 en is nu €20. Hoeveel bespaar je?",
+        options: ["€5", "€20", "€25", "€45"],
+        answer: 0,
+        wrongHints: [null, "Dat is de nieuwe prijs, niet de besparing.", "Dat is de oude prijs.", "Dat is alles opgeteld — niet de besparing."],
+        uitlegPad: {
+          stappen: [{ titel: "Oude − nieuwe prijs", tekst: "€25 − €20 = €5 bespaard." }],
+          niveaus: {
+            basis: "Besparing = €25 − €20 = €5.",
+            simpeler: "Hoeveel zit er tussen €25 en €20?",
+            nogSimpeler: "€25 − €20 = ?",
           },
         },
       },
@@ -225,6 +281,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke zin uit een advertentie is reclame-taal (geen feit)?",
+        options: [
+          "Onze schoenen zijn fantastisch en uniek!",
+          "De schoenen zijn van leer.",
+          "De schoenen zijn er in maat 38.",
+          "De schoenen kosten €50.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Van welk materiaal iets is, kun je controleren — een feit.", "Een maat kun je nameten — een feit.", "Een prijs is een feit, geen overdreven taal."],
+        uitlegPad: {
+          stappen: [{ titel: "Overdreven = mening", tekst: "'Fantastisch en uniek' is niet te bewijzen en bedoeld om je te verleiden — reclame-taal. De rest zijn controleerbare feiten." }],
+          niveaus: {
+            basis: "'Fantastisch en uniek!' is reclame-taal, geen feit.",
+            simpeler: "Welke zin kun je niet nameten of controleren?",
+            nogSimpeler: "Is 'fantastisch en uniek' een feit of reclame?",
+          },
+        },
+      },
+      {
+        q: "Een advertentie laat alleen maar blije, lachende mensen zien. Waarom doen ze dat?",
+        options: [
+          "om het product aantrekkelijk te maken",
+          "omdat dat wettelijk verplicht is",
+          "om je te waarschuwen voor nadelen",
+          "om ruimte op te vullen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Blije modellen zijn niet verplicht.", "Reclame toont juist géén nadelen.", "Het is met opzet gekozen, niet zomaar opvulling."],
+        uitlegPad: {
+          stappen: [{ titel: "Goed gevoel = kopen", tekst: "Blije mensen geven jou een goed gevoel bij het product, zodat je het eerder koopt. Reclame laat alleen de mooie kant zien." }],
+          niveaus: {
+            basis: "Blije mensen maken het product aantrekkelijk → kopen.",
+            simpeler: "Wil reclame je een goed of een slecht gevoel geven bij het product?",
+            nogSimpeler: "Laat reclame de mooie of de minder mooie kant zien?",
+          },
+        },
+      },
     ],
   },
 
@@ -291,6 +385,48 @@ const steps = [
             basis: "€30 − €3 (10%) = €27, plus €2 verzending = €29.",
             simpeler: "Eerst korting eraf (€3), dan verzendkosten erbij (€2).",
             nogSimpeler: "30 − 3 = 27, en 27 + 2 = ?",
+          },
+        },
+      },
+      {
+        q: "Een tas kost €60. Er is 25% korting. Wat betaal je?",
+        options: ["€45", "€15", "€50", "€48"],
+        answer: 0,
+        wrongHints: [null, "Dat is alleen de korting, niet wat je betaalt.", "Dat is maar een klein beetje eraf.", "Reken: 25% (een kwart) eraf van €60."],
+        uitlegPad: {
+          stappen: [{ titel: "Korting eraf", tekst: "25% van €60 = €60 ÷ 4 = €15 korting. €60 − €15 = €45 betalen." }],
+          niveaus: {
+            basis: "Korting €15 (een kwart van €60); je betaalt €60 − €15 = €45.",
+            simpeler: "Reken eerst de korting (een kwart van €60), trek die er dan af.",
+            nogSimpeler: "€60 − €15 = ?",
+          },
+        },
+      },
+      {
+        q: "Eén potlood kost €1. Aanbieding: 5 potloden voor €4. Hoeveel bespaar je bij 5 potloden?",
+        options: ["€1", "€4", "€5", "€2"],
+        answer: 0,
+        wrongHints: [null, "Dat is de aanbiedingsprijs, niet de besparing.", "Dat is de normale prijs van 5.", "Reken: normale prijs − aanbiedingsprijs."],
+        uitlegPad: {
+          stappen: [{ titel: "Normaal − aanbieding", tekst: "Normaal: 5 × €1 = €5. Aanbieding: €4. Je bespaart €5 − €4 = €1." }],
+          niveaus: {
+            basis: "Normaal €5, nu €4 → €1 bespaard.",
+            simpeler: "Wat kosten 5 potloden normaal? En nu? Het verschil is de besparing.",
+            nogSimpeler: "€5 − €4 = ?",
+          },
+        },
+      },
+      {
+        q: "Een shirt kost €18. Aanbieding: 2e shirt halve prijs. Wat betaal je voor 2 shirts?",
+        options: ["€27", "€36", "€18", "€9"],
+        answer: 0,
+        wrongHints: [null, "Dat is de volle prijs voor twee — het tweede is goedkoper.", "Dat is voor maar één shirt.", "Dat is alleen het tweede shirt."],
+        uitlegPad: {
+          stappen: [{ titel: "Vol + half", tekst: "Eerste shirt €18 (vol), tweede €9 (halve prijs). Samen €18 + €9 = €27." }],
+          niveaus: {
+            basis: "€18 (vol) + €9 (half) = €27.",
+            simpeler: "Eén shirt vol (€18), één voor de helft (€9). Tel op.",
+            nogSimpeler: "18 + 9 = ?",
           },
         },
       },
