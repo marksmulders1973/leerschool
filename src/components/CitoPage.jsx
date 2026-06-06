@@ -4,6 +4,7 @@ import { SoundEngine } from "../utils.js";
 import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import VraagVanDeDag from "./VraagVanDeDag.jsx";
 
 // Doorstroomtoets-voorbereidingsflow (gecombineerd 2026-05-16, idem ExamensPage):
 //   Boven: 3 grote banners — Stap 1 (aanpak) / Stap 3 (50-simulatie) / Bonus
@@ -240,6 +241,10 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
               : "📅 Groep 8 = dit jaar Doorstroomtoets, begin februari. Je vooruitgang per groep wordt apart bijgehouden."}
           </div>
         </div>
+
+        {/* Doorstroomtoets-vraag van de dag — instant actie + dagelijkse haak
+            (2026-06-06). Hergebruikt de /v/-pool, kost niets. */}
+        <VraagVanDeDag />
 
         {/* ── Stap 1 + Stap 3 + Bonus banners ───────────────────────── */}
         <button
