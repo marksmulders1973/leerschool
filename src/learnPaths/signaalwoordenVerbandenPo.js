@@ -26,7 +26,7 @@ const steps = [
         q: "Welk woord past? *Ik wilde naar buiten, ___ het regende.*",
         options: ["maar", "en", "omdat", "dus"],
         answer: 0,
-        wrongHints: [null, "Dat zou er iets bij optellen, maar deze delen botsen juist.", "Dat geeft een reden — wordt hier een reden gegeven?", "Dat geeft een gevolg."],
+        wrongHints: [null, "Dat zou er iets bij optellen — terwijl deze twee delen juist botsen.", "Dat geeft een reden — wordt hier een reden gegeven?", "Dat geeft een gevolg."],
         uitlegPad: {
           stappen: [{ titel: "De delen botsen → tegenstelling", tekst: "Je wilde naar buiten, maar het tegenovergestelde gebeurt (het regent). Dat is een tegenstelling: 'maar'." }],
           niveaus: {
