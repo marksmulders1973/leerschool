@@ -84,6 +84,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Trein B vertrekt om 9:40 uit Utrecht en komt om 10:30 aan in Zwolle. Hoe lang duurt die reis?",
+        options: ["50 minuten", "60 minuten", "40 minuten", "45 minuten"],
+        answer: 0,
+        wrongHints: [null, "Dat zou tot 10:40 zijn.", "Dat zou tot 10:20 zijn.", "Reken nog eens precies."],
+        uitlegPad: {
+          stappen: [{ titel: "Aankomst − vertrek", tekst: "Van 9:40 tot 10:30: eerst 9:40 → 10:00 = 20 min, dan 10:00 → 10:30 = 30 min. Samen 50 min." }],
+          niveaus: {
+            basis: "9:40 → 10:00 (20 min) + 10:00 → 10:30 (30 min) = 50 min.",
+            simpeler: "Tel van 9:40 omhoog tot 10:30 — hoeveel minuten?",
+            nogSimpeler: "Hoeveel minuten van 9:40 tot 10:30?",
+          },
+        },
+      },
+      {
+        q: "De treinen vertrekken om 9:10, 9:40 en 10:10. Je bent er om 9:45. Hoe lang wacht je op de volgende trein?",
+        options: ["25 minuten", "30 minuten", "15 minuten", "5 minuten"],
+        answer: 0,
+        wrongHints: [null, "Reken van 9:45 tot de eerstvolgende vertrektijd.", "De trein van 9:40 is al weg.", "Te kort — kijk welke trein als eerste ná 9:45 komt."],
+        uitlegPad: {
+          stappen: [{ titel: "Eerstvolgende ná 9:45", tekst: "9:10 en 9:40 zijn al weg. De volgende is 10:10. Van 9:45 tot 10:10 = 25 minuten." }],
+          niveaus: {
+            basis: "Eerstvolgende trein ná 9:45 is 10:10. 10:10 − 9:45 = 25 min.",
+            simpeler: "Welke vertrektijd komt net ná 9:45? Hoeveel minuten is dat nog?",
+            nogSimpeler: "Van 9:45 tot 10:10 is hoeveel minuten?",
+          },
+        },
+      },
     ],
   },
 
@@ -155,6 +183,34 @@ const steps = [
             basis: "Gym = 3e uur. Het 2e uur (ervoor) is taal.",
             simpeler: "Welk vak staat net boven gym op maandag?",
             nogSimpeler: "Wat heb je het 2e uur op maandag?",
+          },
+        },
+      },
+      {
+        q: "Gym staat op maandag het 3e uur en op woensdag het 1e uur. Hoe vaak heb je deze week (ma–wo) gym?",
+        options: ["2 keer", "3 keer", "1 keer", "4 keer"],
+        answer: 0,
+        wrongHints: [null, "Tel alleen de dagen waar gym écht staat.", "Er zijn meer dan dat genoemd.", "Er zijn er twee genoemd, niet meer of minder."],
+        uitlegPad: {
+          stappen: [{ titel: "Tel de gym-dagen", tekst: "Maandag (1×) en woensdag (1×) = 2 keer gym." }],
+          niveaus: {
+            basis: "Gym staat op maandag en woensdag → 2 keer.",
+            simpeler: "Op hoeveel dagen staat gym genoemd?",
+            nogSimpeler: "1 + 1 = ?",
+          },
+        },
+      },
+      {
+        q: "Dinsdag is: 1e uur taal, 2e uur rekenen, 3e uur wereld. Welk vak heb je dinsdag als laatste?",
+        options: ["wereld", "taal", "rekenen", "gym"],
+        answer: 0,
+        wrongHints: [null, "Dat is het 1e uur.", "Dat is het 2e uur.", "Dat staat dinsdag niet in het rooster."],
+        uitlegPad: {
+          stappen: [{ titel: "Het laatste uur", tekst: "Het laatste (3e) uur op dinsdag is wereld." }],
+          niveaus: {
+            basis: "Dinsdag 3e (laatste) uur = wereld.",
+            simpeler: "Welk vak staat onderaan onder dinsdag?",
+            nogSimpeler: "Wat is het laatste vak op dinsdag?",
           },
         },
       },
@@ -232,6 +288,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Een snackbar is open van 12:00 tot 21:00. Hoeveel uur is dat?",
+        options: ["9 uur", "8 uur", "10 uur", "7 uur"],
+        answer: 0,
+        wrongHints: [null, "Tel nog eens van 12 naar 21.", "Iets te veel.", "Te weinig — tel de uren opnieuw."],
+        uitlegPad: {
+          stappen: [{ titel: "Sluiting − opening", tekst: "Van 12:00 tot 21:00 = 21 − 12 = 9 uur." }],
+          niveaus: {
+            basis: "21:00 − 12:00 = 9 uur open.",
+            simpeler: "Tel van 12 naar 21: hoeveel stappen?",
+            nogSimpeler: "21 − 12 = ?",
+          },
+        },
+      },
+      {
+        q: "Een winkel is open van 9:00 tot 18:00. Het is nu 18:30. Kun je nog naar binnen?",
+        options: ["Nee, het is na sluitingstijd", "Ja, het is nog open", "Ja, nog 30 minuten", "Alleen met een afspraak"],
+        answer: 0,
+        wrongHints: [null, "18:30 is ná 18:00 — dan is het dicht.", "De winkel sluit juist om 18:00.", "Daar staat niets over; het is gewoon gesloten."],
+        uitlegPad: {
+          stappen: [{ titel: "Valt jouw tijd binnen de openingstijd?", tekst: "De winkel sluit om 18:00. 18:30 is later, dus de winkel is dicht." }],
+          niveaus: {
+            basis: "Open tot 18:00; 18:30 is later → dicht.",
+            simpeler: "Is 18:30 vóór of ná de sluitingstijd 18:00?",
+            nogSimpeler: "Komt 18:30 vóór of na 18:00?",
+          },
+        },
+      },
     ],
   },
 
@@ -298,6 +382,48 @@ const steps = [
             basis: "Een kwartier (15 min) vóór 15:00 is 14:45.",
             simpeler: "Trek 15 minuten af van 15:00.",
             nogSimpeler: "15:00 min 15 minuten = ?",
+          },
+        },
+      },
+      {
+        q: "Een trein vertrekt om 14:20 en de reis duurt 35 minuten. Hoe laat kom je aan?",
+        options: ["14:55", "15:55", "14:45", "15:05"],
+        answer: 0,
+        wrongHints: [null, "Dat is een heel uur erbij, niet 35 minuten.", "Dat is maar 25 minuten erbij.", "Iets te veel — tel precies 35 minuten."],
+        uitlegPad: {
+          stappen: [{ titel: "Vertrek + reistijd", tekst: "14:20 + 35 min: 14:20 → 14:40 is 20 min, nog 15 min → 14:55." }],
+          niveaus: {
+            basis: "14:20 + 35 minuten = 14:55.",
+            simpeler: "Tel 35 minuten verder vanaf 14:20.",
+            nogSimpeler: "14:20 + 35 min = ?",
+          },
+        },
+      },
+      {
+        q: "Een feestje begint om 14:00. De reis duurt 40 minuten en je wilt 10 minuten eerder aankomen. Hoe laat vertrek je uiterlijk?",
+        options: ["13:10", "13:20", "13:30", "12:50"],
+        answer: 0,
+        wrongHints: [null, "Je vergeet de 10 minuten eerder aankomen.", "Reken nog eens: eerst aankomsttijd, dan reistijd eraf.", "Te vroeg — tel precies terug."],
+        uitlegPad: {
+          stappen: [{ titel: "Eerst aankomst, dan terugtellen", tekst: "10 min vóór 14:00 = 13:50 aankomen. 40 min reizen eraf: 13:50 − 40 min = 13:10 vertrekken." }],
+          niveaus: {
+            basis: "Aankomen om 13:50, 40 min reizen → vertrek 13:10.",
+            simpeler: "Reken eerst de aankomsttijd (13:50), trek dan de reistijd af.",
+            nogSimpeler: "13:50 − 40 minuten = ?",
+          },
+        },
+      },
+      {
+        q: "Een les duurt van 13:15 tot 14:00. Hoe lang duurt de les?",
+        options: ["45 minuten", "60 minuten", "30 minuten", "50 minuten"],
+        answer: 0,
+        wrongHints: [null, "Dat zou tot 14:15 zijn.", "Dat zou tot 13:45 zijn.", "Reken nog eens precies."],
+        uitlegPad: {
+          stappen: [{ titel: "Eind − begin", tekst: "Van 13:15 tot 14:00: 13:15 → 13:45 is 30 min, dan 13:45 → 14:00 is 15 min. Samen 45 min." }],
+          niveaus: {
+            basis: "13:15 → 14:00 = 45 minuten.",
+            simpeler: "Tel van 13:15 omhoog tot 14:00.",
+            nogSimpeler: "Hoeveel minuten van 13:15 tot 14:00?",
           },
         },
       },
