@@ -96,6 +96,7 @@ import { insertProgress } from "./data/repos/progressRepo.js";
 import { getStreakInfo, updateStreak, upsertProfile, updateSchoolLogo } from "./data/repos/profilesRepo.js";
 import { getInitialPvpJoinCode, getInitialPage, parseVraagId, getInitialLeerpadId } from "./app/initialPage.js";
 import { flushPendingScores } from "./games/obliterator/scores.js";
+import { vraagVanVandaagId } from "./socialVragen.js";
 import DeepVraag from "./components/DeepVraag.jsx";
 import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
@@ -952,6 +953,15 @@ export default function App() {
       {page === "vraag" && (
         <DeepVraag
           id={parseVraagId(location.pathname)}
+          setPage={setPage}
+          onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
+        />
+      )}
+      {/* /vandaag — vaste funnel-URL die altijd de vraag-van-de-dag toont
+          (deelbaar op social; rouleert per dag door de /v/-pool). */}
+      {page === "vandaag" && (
+        <DeepVraag
+          id={vraagVanVandaagId()}
           setPage={setPage}
           onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
         />

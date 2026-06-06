@@ -59,6 +59,7 @@ export const PAGE_TO_PATH = {
   wishes: "/tips",
   actie: "/actie",
   dank: "/dank",
+  vandaag: "/vandaag",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

@@ -583,3 +583,14 @@ export function getSocialVraag(id) {
   if (!id) return null;
   return SOCIAL_VRAGEN[id] || null;
 }
+
+// Deterministische "vraag van de dag"-id: iedereen ziet op dezelfde dag dezelfde
+// vraag, die per dag door de pool rouleert. Gebruikt door VraagVanDeDag (in-app)
+// én de /vandaag-funnel-URL (deelbaar op social).
+export function vraagVanVandaagId() {
+  const ids = Object.keys(SOCIAL_VRAGEN);
+  if (!ids.length) return null;
+  const d = new Date();
+  const dagNr = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+  return ids[((dagNr % ids.length) + ids.length) % ids.length];
+}

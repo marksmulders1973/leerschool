@@ -48,6 +48,7 @@ export function parseInitialPage({ pathname = "", search = "" } = {}) {
   if (parseLeerpadId(search)) return "learn-path";
   if (/^\/actie(\/|$)/.test(pathname)) return "actie";
   if (/^\/dank(\/|$)/.test(pathname)) return "dank";
+  if (/^\/vandaag(\/|$)/.test(pathname)) return "vandaag";
   try {
     const sp = new URLSearchParams(search);
     if (sp.get("play") === "obliterator") return "obliteratorDirect";
