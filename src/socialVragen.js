@@ -576,6 +576,157 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Pool-uitbreiding 2026-06-06 (deel 3) ──
+
+  "rekenen8": {
+    vak: "rekenen",
+    leerpadLink: { id: "doorstroomtoets-rekenen-g8", title: "Vermenigvuldigen & redactiesommen (groep 7-8)" },
+    vraag: "In een doos zitten **6 rijen** met elk **8 koekjes**. **Hoeveel koekjes zijn dat in totaal?**",
+    options: ["48", "14", "42", "56"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Je telde 6 + 8 op — maar bij 'rijen × per rij' moet je vermenigvuldigen.",
+      "Bijna: 6 × 8 is niet 42.",
+      "Dat is 7 × 8; tel de rijen nog eens.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Rijen × per rij", tekst: "6 rijen van 8 koekjes = 6 × 8." },
+        { titel: "Uitrekenen", tekst: "6 × 8 = 48 koekjes." },
+      ],
+      niveaus: {
+        basis: "6 rijen × 8 per rij = 6 × 8 = 48.",
+        simpeler: "Elke rij heeft 8 koekjes. Er zijn 6 rijen. 6 keer 8 = 48.",
+        nogSimpeler: "6 × 8 = 48.",
+      },
+    },
+  },
+
+  "rekenen9": {
+    vak: "rekenen",
+    leerpadLink: { id: "doorstroomtoets-rekenen-g8", title: "Kommagetallen afronden (groep 8)" },
+    vraag: "Rond **3,7** af op een **heel getal**.",
+    options: ["4", "3", "3,5", "37"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "3,7 ligt dichter bij 4 dan bij 3 — kijk naar het cijfer achter de komma.",
+      "Afronden op een heel getal betekent: geen komma meer.",
+      "Je hebt de komma weggelaten in plaats van afgerond.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Kijk achter de komma", tekst: "Het cijfer achter de komma is 7. Bij 5 of meer rond je naar boven af." },
+        { titel: "Naar boven", tekst: "7 is meer dan 5, dus 3,7 wordt 4." },
+      ],
+      niveaus: {
+        basis: "Achter de komma staat 7 (= 5 of meer) → naar boven afronden: 3,7 wordt 4.",
+        simpeler: "3,7 ligt bijna bij 4. Het cijfer achter de komma (7) is groot, dus afronden naar boven: 4.",
+        nogSimpeler: "3,7 → dichtstbij is 4.",
+      },
+    },
+  },
+
+  "spelling3": {
+    vak: "spelling",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Werkwoordspelling (groep 8)" },
+    vraag: "Welke zin is **goed gespeld**?",
+    options: ["Wat vind jij ervan?", "Wat vindt jij ervan?", "Wat vint jij ervan?", "Wat viend jij ervan?"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Let op: als 'jij' ACHTER het werkwoord staat, valt de -t weg!",
+      "De stam is 'vind', niet 'vint'.",
+      "Let op de spelling: het is gewoon 'vind'.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Jij achter het werkwoord", tekst: "Normaal: 'jij vindt'. Maar als 'jij' ACHTER het werkwoord komt (zoals in een vraag), valt de -t weg: 'vind jij'." },
+        { titel: "Dus", tekst: "'Wat vind jij ervan?' is goed gespeld." },
+      ],
+      niveaus: {
+        basis: "Bij 'jij' áchter het werkwoord valt de -t weg: 'vind jij' (niet 'vindt jij'). Antwoord A.",
+        simpeler: "Vergelijk: 'jij vindt' (jij vooraan, mét t) maar 'vind jij?' (jij achteraan, zónder t).",
+        nogSimpeler: "'Vind jij' — zonder t. Antwoord A.",
+      },
+    },
+  },
+
+  "begrijpendlezen5": {
+    vak: "begrijpend lezen",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Feit en mening (groep 8)" },
+    vraag: "Welke zin is een **mening** (en geen feit)?",
+    options: ["Voetbal is de leukste sport die er is", "Een voetbalwedstrijd duurt 90 minuten", "Een voetbalteam bestaat uit 11 spelers", "Een voetbal is rond"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Dat kun je op de klok nameten — dat is een feit.",
+      "Dat is een vaste regel die altijd klopt — een feit.",
+      "Dat kun je zien en controleren — een feit.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Feit of mening?", tekst: "Een feit kun je controleren (waar voor iedereen). Een mening is wat iemand vindt — daar kun je het oneens mee zijn." },
+        { titel: "Welke is een mening?", tekst: "'Voetbal is de leukste sport' vindt niet iedereen. Dat is dus een mening." },
+      ],
+      niveaus: {
+        basis: "Een mening is wat iemand vindt; daar kun je het oneens mee zijn. 'Voetbal is de leukste sport' is een mening (A).",
+        simpeler: "Kun je het nameten of controleren? Dan is het een feit. 'Leukste sport' kun je niet meten — dat is een mening.",
+        nogSimpeler: "'Leukste' = mening. Antwoord A.",
+      },
+    },
+  },
+
+  "studie6": {
+    vak: "studievaardigheden",
+    leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Inhoudsopgave & opzoeken (groep 8)" },
+    vraag: "In een inhoudsopgave staat: _Hoofdstuk 3 — Vulkanen ........ blz. 24_. **Wat betekent dit?**",
+    options: ["Hoofdstuk 3 over vulkanen begint op bladzijde 24", "Er bestaan 24 vulkanen", "Hoofdstuk 24 gaat over vulkanen", "Je moet 24 bladzijden lezen"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "24 is een bladzijdenummer, niet een aantal vulkanen.",
+      "3 is het hoofdstuknummer, 24 de bladzijde.",
+      "24 is waar het hoofdstuk begint, niet hoeveel je moet lezen.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Wat is een inhoudsopgave?", tekst: "Die laat zien WAAR je iets vindt: welk hoofdstuk en op welke bladzijde het begint." },
+        { titel: "Lezen", tekst: "Hoofdstuk 3 (Vulkanen) begint op bladzijde 24." },
+      ],
+      niveaus: {
+        basis: "Een inhoudsopgave zegt waar iets begint: hoofdstuk 3 over vulkanen start op bladzijde 24 (A).",
+        simpeler: "Het getal achteraan is het bladzijdenummer waar het hoofdstuk begint. Dus: blz. 24.",
+        nogSimpeler: "Hoofdstuk 3 begint op blz. 24. Antwoord A.",
+      },
+    },
+  },
+
+  "taal4": {
+    vak: "taal",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Uitdrukkingen (groep 8)" },
+    vraag: "Wat betekent **'ergens een hekel aan hebben'**?",
+    options: ["Iets echt niet leuk vinden", "Ergens heel goed in zijn", "Iets heel graag willen", "Ergens bang voor zijn"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Dat zou betekenen dat je het juist leuk vindt — het is andersom.",
+      "Een hekel is geen verlangen; het is het tegenovergestelde.",
+      "Het gaat niet om angst, maar om iets niet leuk vinden.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Betekenis", tekst: "'Een hekel aan iets hebben' = iets echt niet leuk vinden, het vervelend vinden." },
+      ],
+      niveaus: {
+        basis: "'Een hekel aan iets hebben' betekent: iets echt niet leuk vinden (A).",
+        simpeler: "Als je een hekel aan iets hebt, baal je ervan / vind je het naar.",
+        nogSimpeler: "Hekel = niet leuk vinden. Antwoord A.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
