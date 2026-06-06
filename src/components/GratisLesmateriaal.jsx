@@ -33,7 +33,7 @@ const GROEPEN = [
 ];
 const MAX_VAKKEN = 3;
 
-export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket, compact = false }) {
+export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket, compact = false, title }) {
   const doneKey = "lk_lesmateriaal_aangemeld";
   const [step, setStep] = useState("email"); // email | profiel | done
   const [email, setEmail] = useState("");
@@ -119,7 +119,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
 
   return (
     <div style={wrap}>
-      <div style={titel}><span aria-hidden="true">📩</span> Elke week 15 minuten gratis extra lesmateriaal</div>
+      <div style={titel}>{title || <><span aria-hidden="true">📩</span> Elke week 15 minuten gratis extra lesmateriaal</>}</div>
 
       {step === "email" && (
         <>

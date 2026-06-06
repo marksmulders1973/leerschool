@@ -4,6 +4,7 @@ import { SUBJECTS, LEVELS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { SoundEngine } from "../../utils.js";
 import ObliteratorGame from "../../components/ObliteratorGame.jsx";
+import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import supabase from "../../supabase.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../../shared/featureFlags.js";
@@ -179,6 +180,13 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         <div style={styles.scoreCircle}>
           <div style={styles.scoreNumber}>{latest.percentage}%</div>
           <div style={styles.scoreDetail}>{grade}</div>
+        </div>
+
+        {/* E-mail-magneet (Mark 2026-06-06): op het resultaat-moment — hoogste
+            motivatie — de uitslag + wekelijkse gratis oefentips per mail aanbieden.
+            GratisLesmateriaal onthoudt zelf of iemand al aangemeld is. */}
+        <div style={{ margin: "18px 0 6px" }}>
+          <GratisLesmateriaal source="resultaat" compact title="📩 Wil je de uitslag + elke week gratis oefentips per mail?" />
         </div>
 
         {/* Cito-eindtoets-simulatie advies-banner: bij ≥50 vragen op
