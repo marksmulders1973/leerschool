@@ -35,16 +35,15 @@ ingang prima; de uitgang/terugkeer niet.
 
 ### Sprint 0 — MAAK DE BAL ROND (hoogste prio, grotendeels code)
 Sluit de twee lekken die alles ondermijnen.
-- **[bal 1] Terug-link na leerpad/quiz** → "Snap je 'm nu? Terug naar de vraag" + bij
-  fout in examen/oefentoets een "📚 Ga dit eerst leren"-CTA naar het concept-leerpad.
-  *(ResultsPage.jsx, LearnPath.jsx AllDone, DeepVraag.jsx)*
-- **[bal 2] "Deel deze vraag"-knop** op DeepVraag + VraagVanDeDag (native share + WhatsApp),
-  met `?ref=<code>`. Mond-tot-mond op het sterkste kanaal (WhatsApp-oudergroepen). ✅ *gedaan 2026-06-06*
-- **[bal 2] Referral repareren** → `get_ref_count` RPC bouwen + ontvanger-incentive (3 dagen
-  Pro-preview) + teller zichtbaar voor de deler. *(migration + ActieVoorwaarden.jsx)*
-- **[bal 1] "Daag vrienden uit" bij ÉLKE score** (nu alleen ≥80%) met score-embed `?score=&subject=`.
-- **Retentie-trigger** → AllDone "🔔 Kom morgen terug — dit is over 1 dag weer due" + prominente
-  "verdwijnt morgen"-banner op StudentHome (spaced-rep code bestaat al, alleen UI-connect).
+- ✅ **[bal 1] Terug-link na de toets** → ResultsPage "📚 Snap je nu waaróm? Leer dit: <concept>"
+  naar het leerpad achter elke fout beantwoorde vraag. *Gedaan 2026-06-06.*
+- ✅ **[bal 2] "Deel deze vraag"-knop** op DeepVraag + VraagVanDeDag (native share + WhatsApp),
+  met `?ref=<code>`. *Gedaan 2026-06-06.*
+- ✅ **[bal 2] Referral-teller gerepareerd** → `get_ref_count` RPC live (bestond niet). *Gedaan 2026-06-06.*
+- ✅ **[bal 2] "Daag vrienden uit" bij ÉLKE score** (was ≥80%), deel-link met `?ref=` + utm. *Gedaan 2026-06-06.*
+- ✅ **Retentie-urgentie** op de herhaal-kaart (StudentHome): verlies-framing "doe ze nu, anders
+  zakt het weg". *Gedaan 2026-06-06.* → Nog open: AllDone "kom morgen terug" + ontvanger-incentive referral.
+- ⏳ **Resterend:** ontvanger-incentive bij referral (3 dagen Pro-preview); AllDone-urgentie in LearnPath.
 
 ### Sprint 1 — VUL DE GROEIMACHINE (e-mail + SEO-instroom)
 - **E-mail live** (Resend): welkomstmail dag-1 + wekelijkse oefenvraag op groep/vakken.

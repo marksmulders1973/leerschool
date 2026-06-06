@@ -1023,10 +1023,10 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 26 }} aria-hidden="true">🔄</span>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#a78bfa" }}>
-                Herhaling — {dueCount} {dueCount === 1 ? "onderwerp" : "onderwerpen"} klaar
+                ⏳ Herhaal vandaag — {dueCount} {dueCount === 1 ? "onderwerp" : "onderwerpen"} klaar
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.55)", marginTop: 2 }}>
-                Vragen gemixed uit alles wat je herhaling nodig heeft (~5 min)
+                Doe ze nu, dan blijft het hangen — wacht je te lang, dan zakt het weer weg. (~5 min)
               </div>
             </div>
             <span style={{ fontSize: 13, fontWeight: 700, color: "#a78bfa", background: "rgba(124,77,255,0.25)", borderRadius: 999, padding: "5px 11px", whiteSpace: "nowrap" }}>
