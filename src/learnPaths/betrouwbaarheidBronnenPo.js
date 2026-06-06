@@ -95,6 +95,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wie kun je het best vertrouwen over hoe je een wond verzorgt?",
+        options: [
+          "een huisarts",
+          "een influencer die pleisters verkoopt",
+          "een willekeurig forum",
+          "een stripverhaal",
+        ],
+        answer: 0,
+        wrongHints: [null, "Die wil vooral pleisters verkopen.", "Op een forum kan iedereen zomaar iets roepen.", "Een stripverhaal is verzonnen, geen medische bron."],
+        uitlegPad: {
+          stappen: [{ titel: "Deskundige = arts", tekst: "Een huisarts heeft er medisch verstand van en wil je niets verkopen — de betrouwbaarste bron over wondverzorging." }],
+          niveaus: {
+            basis: "Een arts is de deskundige bron over een wond.",
+            simpeler: "Wie heeft er medisch verstand van én verkoopt je niets?",
+            nogSimpeler: "Wie weet het best hoe je een wond verzorgt?",
+          },
+        },
+      },
+      {
+        q: "Twee websites zeggen iets anders. Welke vertrouw je eerder?",
+        options: [
+          "de site met een auteur én bronvermelding",
+          "de site zonder auteur",
+          "de site met de meeste reclame",
+          "de site met de grootste letters",
+        ],
+        answer: 0,
+        wrongHints: [null, "Zonder auteur weet je niet wie het zegt.", "Veel reclame is juist een waarschuwing.", "Lettergrootte zegt niets over betrouwbaarheid."],
+        uitlegPad: {
+          stappen: [{ titel: "Auteur + bron", tekst: "Een site die laat zien wie het schreef en waar de info vandaan komt, kun je controleren — dus betrouwbaarder." }],
+          niveaus: {
+            basis: "De site met auteur én bronvermelding is betrouwbaarder.",
+            simpeler: "Welke site kun je nacontroleren: met of zonder bron?",
+            nogSimpeler: "Vertrouw je een site mét of zónder auteur eerder?",
+          },
+        },
+      },
     ],
   },
 
@@ -180,6 +218,44 @@ const steps = [
             basis: "Het controleerbare feit over de maan is de betrouwbare zin.",
             simpeler: "Welke zin is een feit en geen reclame of mening?",
             nogSimpeler: "Welke zin kun je opzoeken/controleren?",
+          },
+        },
+      },
+      {
+        q: "Welke zin is een mening?",
+        options: [
+          "Dit is het leukste boek ooit.",
+          "Het boek heeft 200 bladzijden.",
+          "Het boek kwam uit in 2020.",
+          "De schrijver heet Anna.",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het aantal bladzijden kun je tellen — dat is een feit.", "Een jaartal kun je nakijken — een feit.", "De naam van de schrijver is een feit."],
+        uitlegPad: {
+          stappen: [{ titel: "Mening = wat iemand vindt", tekst: "'Het leukste ooit' is wat iemand víndt — niet voor iedereen waar. Dat is een mening; de rest zijn controleerbare feiten." }],
+          niveaus: {
+            basis: "'Leukste boek ooit' is een mening, geen feit.",
+            simpeler: "Welke zin is wat iemand vindt, en kun je niet bewijzen?",
+            nogSimpeler: "Is 'het leukste ooit' een feit of een mening?",
+          },
+        },
+      },
+      {
+        q: "'Nu 50% korting — koop snel!' Wat voor tekst is dit?",
+        options: [
+          "reclame",
+          "een feit",
+          "een nieuwsbericht",
+          "een mening van een deskundige",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een feit kun je controleren; dit wil je iets laten kopen.", "Een nieuwsbericht informeert, dit verkoopt.", "Een deskundige geeft uitleg, geen kortingsactie."],
+        uitlegPad: {
+          stappen: [{ titel: "Verkopen = reclame", tekst: "'Koop snel!' met korting wil je iets laten kopen — dat is reclame, geen betrouwbare informatie." }],
+          niveaus: {
+            basis: "Een kortingsoproep om te kopen = reclame.",
+            simpeler: "Wil deze tekst je informeren of iets verkopen?",
+            nogSimpeler: "Is 'koop snel met korting' reclame?",
           },
         },
       },
@@ -272,6 +348,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Waarom is de datum van een artikel belangrijk?",
+        options: [
+          "informatie kan na verloop van tijd verouderen",
+          "langere teksten zijn altijd beter",
+          "oude teksten zijn altijd fout",
+          "de datum maakt de tekst mooier",
+        ],
+        answer: 0,
+        wrongHints: [null, "Lengte zegt niets over of het klopt.", "Oud is niet automatisch fout, maar kan wel verouderd zijn.", "Een datum is voor controle, niet voor de sier."],
+        uitlegPad: {
+          stappen: [{ titel: "Actueel?", tekst: "Met de datum zie je of informatie nog actueel is. Sommige feiten veranderen (records, techniek, prijzen)." }],
+          niveaus: {
+            basis: "De datum laat zien of de info nog actueel is.",
+            simpeler: "Kan informatie na een tijd verouderd raken?",
+            nogSimpeler: "Helpt de datum om te zien of iets nog klopt?",
+          },
+        },
+      },
+      {
+        q: "Eén bericht zegt dat een bekende diersoort plots is uitgestorven. Wat doe je het best?",
+        options: [
+          "checken bij een betrouwbare nieuws- of natuurbron",
+          "het meteen geloven",
+          "het direct doorsturen naar iedereen",
+          "er meteen ruzie over maken",
+        ],
+        answer: 0,
+        wrongHints: [null, "Eén bericht zonder check kan nepnieuws zijn.", "Doorsturen vóór de check verspreidt mogelijk onzin.", "Eerst nagaan of het klopt gaat vóór een reactie."],
+        uitlegPad: {
+          stappen: [{ titel: "Eerst checken", tekst: "Groot nieuws uit één bron eerst controleren bij een betrouwbare bron voor je het gelooft of deelt." }],
+          niveaus: {
+            basis: "Eén bron met groot nieuws: eerst checken bij een betrouwbare bron.",
+            simpeler: "Geloof je groot nieuws uit één bron meteen, of check je het?",
+            nogSimpeler: "Eerst checken of meteen doorsturen?",
+          },
+        },
+      },
     ],
   },
 
@@ -358,6 +472,63 @@ const steps = [
             basis: "Vraag eerst: wie zegt dit en waarom?",
             simpeler: "Wat zegt het meest over betrouwbaarheid: de auteur of de kleur?",
             nogSimpeler: "Is 'wie schreef het?' een goede eerste vraag?",
+          },
+        },
+      },
+      {
+        q: "Voor een spreekbeurt over gezonde tanden, welke bron is het best?",
+        options: [
+          "een tandarts of het Voedingscentrum",
+          "een snoepreclame",
+          "een grappig filmpje zonder uitleg",
+          "een losse mening op social media",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een snoepreclame wil verkopen.", "Een grappig filmpje leert je niets betrouwbaars.", "Een losse mening is niet per se waar."],
+        uitlegPad: {
+          stappen: [{ titel: "Deskundige bron", tekst: "Een tandarts of het Voedingscentrum heeft echte kennis over gezonde tanden en wil je niets verkopen." }],
+          niveaus: {
+            basis: "Een tandarts/Voedingscentrum is de deskundige bron.",
+            simpeler: "Welke bron heeft er verstand van én verkoopt niets?",
+            nogSimpeler: "Wie weet het meest over tanden: een tandarts of een reclame?",
+          },
+        },
+      },
+      {
+        q: "Wat is JUIST GEEN teken van een betrouwbare bron?",
+        options: [
+          "veel uitroeptekens en 'koop nu!'",
+          "een genoemde auteur",
+          "een bronvermelding",
+          "een recente datum",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een auteur maakt een bron juist betrouwbaarder.", "Een bronvermelding is juist een goed teken.", "Een recente datum is juist gunstig."],
+        uitlegPad: {
+          stappen: [{ titel: "Reclame-taal = waarschuwing", tekst: "Uitroeptekens en 'koop nu!' horen bij reclame. Auteur, bronvermelding en een recente datum zijn juist góede tekens." }],
+          niveaus: {
+            basis: "'Koop nu!' met uitroeptekens is geen teken van betrouwbaarheid.",
+            simpeler: "Welk kenmerk hoort bij reclame in plaats van bij een betrouwbare bron?",
+            nogSimpeler: "Is 'koop nu!!!' een teken van een betrouwbare bron?",
+          },
+        },
+      },
+      {
+        q: "Onderaan een artikel staat een lijst met bronnen. Waarom is dat handig?",
+        options: [
+          "je kunt nakijken waar de informatie vandaan komt",
+          "het maakt het artikel langer",
+          "het staat gewoon mooi",
+          "het is verplicht voor plaatjes",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het gaat niet om lengte, maar om controleerbaarheid.", "Niet voor de sier, maar om te kunnen controleren.", "Bronnen gaan over de inhoud, niet over plaatjes."],
+        uitlegPad: {
+          stappen: [{ titel: "Controleerbaar", tekst: "Met een bronnenlijst kun je zelf nakijken waar de informatie vandaan komt — dat maakt het betrouwbaarder." }],
+          niveaus: {
+            basis: "Een bronnenlijst laat je nacontroleren waar de info vandaan komt.",
+            simpeler: "Helpt een bronnenlijst om de informatie te checken?",
+            nogSimpeler: "Kun je met bronnen nakijken of iets klopt?",
           },
         },
       },
