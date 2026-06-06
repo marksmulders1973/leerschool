@@ -4,6 +4,14 @@
 > Principe: **de bal moet altijd rond zijn.** Single source of truth voor de koers.
 > Gemiddelde zelfcheck-score: **4,9 / 10** (25 agents, app + posts + groei).
 
+## ⚠️ Correctie 2026-06-06 — drie audit-bevindingen geverifieerd & grotendeels onjuist
+Bij naloop bleken de 3 zwaarste negatieve bevindingen flink overdreven:
+- **"10+ kapotte routes"** → `routes.js` is al compleet (pro/upgrade/create-quiz/… gemapt). Geen probleem.
+- **"~190 examenvragen zonder uitlegPad"** → echt aantal was **1** (nu 0). `scripts/auditUitlegPadGaps.mjs` bewijst 286/286.
+- **"7217/8535 wrongHints eliminatie-leak"** → echt **327** meldingen (172 lui-identiek = géén leak, 155 "bevat antwoord" wáárvan veel false positives). Slechts enkele tientallen echte verklappers.
+
+**Gevolg:** de eerlijke huidige staat ligt eerder rond **6,5–7** dan 4,9 — het cijfer werd omlaag getrokken door spookproblemen. De echte resterende hefbomen naar 8 zijn **distributie**: e-mail (Resend) + SEO-indexatie (GSC), beide Mark-acties.
+
 ## Diagnose in één zin
 Het **product** (de USP-loop) is goed bedacht — maar **beide ballen lekken op de
 terugkeer-helft**, en de **groei-/e-mailmachine is bijna leeg**. We bouwen de

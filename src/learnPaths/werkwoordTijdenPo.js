@@ -203,7 +203,7 @@ const steps = [
         q: "Verleden tijd van **'gaan'** voor 'wij':",
         options: ["gingen","gaanden","gaden","gaan"],
         answer: 0,
-        wrongHints: [null,"Niet — 'gaan' is onregelmatig: gingen.","Geen ding.","Dat is hele werkwoord."],
+        wrongHints: [null,"'gaan' is onregelmatig — de klinker verandert helemaal. Hoe klinkt het in de verleden tijd?","Deze vorm bestaat niet; 'gaan' volgt geen gewone -de/-te-regel.","Dat is het hele werkwoord, geen verleden tijd."],
         uitlegPad: {
           stappen: [{ titel: "Gaan → gingen", tekst: "Gaan = sterk + onregelmatig. Wij gingen." }],
           woorden: [{ woord: "gingen", uitleg: "Meervoud verleden tijd van gaan. Onregelmatig." }],
