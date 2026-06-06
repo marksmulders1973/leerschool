@@ -474,6 +474,108 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Pool-uitbreiding 2026-06-06 (deel 2) ──
+
+  "rekenen7": {
+    vak: "rekenen",
+    leerpadLink: { id: "breuken-po", title: "Breuken vergelijken (groep 7-8)" },
+    vraag: "Welke breuk is het **grootst**?",
+    options: ["½", "⅓", "¼", "⅕"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "⅓ is kleiner dan ½ — bij breuken met een 1 bovenaan geldt: hoe groter het onderste getal, hoe kleiner de breuk.",
+      "¼ betekent: in 4 stukjes. Die zijn kleiner dan in 2 stukjes.",
+      "⅕ is juist het kleinst van deze rij.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Bovenste getal is overal 1", tekst: "Bij ½, ⅓, ¼ en ⅕ is het bovenste getal (de teller) steeds 1. Dan bepaalt het onderste getal de grootte." },
+        { titel: "Meer stukjes = kleiner", tekst: "Een taart in 2 stukken → grote stukken. In 5 stukken → kleine stukjes. Dus ½ is het grootst." },
+      ],
+      niveaus: {
+        basis: "Bij breuken met een 1 bovenaan: hoe kleiner het onderste getal, hoe groter de breuk. ½ heeft het kleinste onderste getal → grootst.",
+        simpeler: "Denk aan een taart: in 2 delen zijn de stukken groter dan in 5 delen. Dus ½ > ⅓ > ¼ > ⅕.",
+        nogSimpeler: "½ is het meeste. Antwoord A.",
+      },
+    },
+  },
+
+  "taal3": {
+    vak: "taal",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Woordenschat & tegenstellingen (groep 8)" },
+    vraag: "Wat is het **tegenovergestelde** van 'tijdelijk'?",
+    options: ["blijvend", "kortstondig", "langzaam", "plotseling"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Kortstondig betekent juist bijna hetzelfde als tijdelijk (kort).",
+      "Langzaam gaat over snelheid, niet over hoe lang iets duurt.",
+      "Plotseling gaat over hoe iets begint, niet over de duur.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Wat betekent tijdelijk?", tekst: "Tijdelijk = voor een korte tijd, niet voor altijd." },
+        { titel: "Het tegenovergestelde", tekst: "Niet voor even, maar voor altijd = blijvend." },
+      ],
+      niveaus: {
+        basis: "Tijdelijk = voor even. Het tegenovergestelde is 'blijvend' (voor altijd). Antwoord A.",
+        simpeler: "Tijdelijk betekent kort / niet voor altijd. Het tegenovergestelde is iets dat wél blijft: blijvend.",
+        nogSimpeler: "Tijdelijk ↔ blijvend. Antwoord A.",
+      },
+    },
+  },
+
+  "begrijpendlezen4": {
+    vak: "begrijpend lezen",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen — verbanden (groep 8)" },
+    vraag: "Lees: _'Tim had de hele week hard getraind. Op zaterdag won hij de wedstrijd.'_\n\n**Welk verband is er tussen de twee zinnen?**",
+    options: ["Doordat hij hard trainde, won hij", "Hij won, dus daarna ging hij trainen", "Er is geen verband", "Hij verloor de wedstrijd"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Kijk naar de volgorde: eerst trainen, dáárna winnen. Wat is dan de oorzaak?",
+      "De twee zinnen horen wél bij elkaar — trainen en winnen.",
+      "In de tekst staat dat hij wón, niet verloor.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Oorzaak en gevolg", tekst: "De ene zin is de oorzaak, de andere het gevolg. Eerst hard trainen (oorzaak), daarna winnen (gevolg)." },
+        { titel: "Het verband", tekst: "Doordat Tim hard trainde, won hij. Dat is een oorzaak-gevolg-verband." },
+      ],
+      niveaus: {
+        basis: "Eerst trainen, dan winnen: het trainen is de oorzaak van het winnen. Antwoord A.",
+        simpeler: "Vraag: waaróm won hij? Omdat hij hard trainde. Trainen → winnen.",
+        nogSimpeler: "Hard trainen zorgde dat hij won. Antwoord A.",
+      },
+    },
+  },
+
+  "studie5": {
+    vak: "studievaardigheden",
+    leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Kaartlezen & windrichtingen (groep 8)" },
+    vraag: "Op een kaart wijst de pijl van de windroos naar **boven**. **Welke windrichting is dat meestal?**",
+    options: ["Het noorden", "Het zuiden", "Het oosten", "Het westen"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Het zuiden ligt op een kaart juist onderaan.",
+      "Het oosten ligt rechts op de kaart.",
+      "Het westen ligt links op de kaart.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "De windroos", tekst: "Op bijna elke kaart wijst 'boven' naar het noorden. Dat is een vaste afspraak." },
+        { titel: "Onthouden", tekst: "Boven = noord, onder = zuid, rechts = oost, links = west." },
+      ],
+      niveaus: {
+        basis: "Op een kaart is 'boven' het noorden. De pijl naar boven = het noorden (A).",
+        simpeler: "Vaste afspraak: de bovenkant van een kaart is het noorden.",
+        nogSimpeler: "Boven op de kaart = noorden. Antwoord A.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.

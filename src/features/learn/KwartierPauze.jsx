@@ -6,6 +6,7 @@
 // exact daar verder kan.
 
 import { useState, useEffect, useRef } from "react";
+import { getDayStreak } from "../../shared/dailyGoal.js";
 
 const KWARTIER_MS = 15 * 60 * 1000;
 const SNOOZE_MS = 5 * 60 * 1000;
@@ -64,6 +65,8 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
 
   if (!show) return null;
 
+  const streak = getDayStreak();
+
   const handleStop = () => {
     saveResume(player, pathId, stepIdx);
     setShow(false);
@@ -117,8 +120,20 @@ export default function KwartierPauze({ player, pathId, stepIdx, onStopForToday,
         }}>
           Kwartier gehaald!
         </h2>
+        {streak.current > 0 && (
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: 6, marginBottom: 10,
+            background: "rgba(255,138,0,0.15)", border: "1px solid rgba(255,138,0,0.45)",
+            borderRadius: 999, padding: "5px 12px", fontFamily: "var(--font-display)",
+            fontSize: 13.5, fontWeight: 800, color: "#ffb74d",
+          }}>
+            🔥 {streak.current} {streak.current === 1 ? "dag" : "dagen"} op rij!
+          </div>
+        )}
         <p style={{ fontSize: 14, lineHeight: 1.5, margin: "0 0 18px", color: "#cdd6e2" }}>
-          Je hebt 15 minuten geleerd. Pauze of doorgaan?
+          Je hebt 15 minuten geleerd — top! {streak.current > 0
+            ? "Kom morgen terug om je reeks te verlengen."
+            : "Kom morgen terug voor je volgende kwartier."} Pauze of doorgaan?
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
