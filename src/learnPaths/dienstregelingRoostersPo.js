@@ -60,7 +60,7 @@ const steps = [
         q: "Je moet uiterlijk 10:15 in Zwolle zijn. Trein A komt om 10:00 aan, trein B om 10:30. Welke trein neem je?",
         options: ["Trein A", "Trein B", "Allebei kan", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "10:30 is ná 10:15 — dan ben je te laat.", "Trein B is te laat (10:30).", "Trein A is op tijd (10:00)."],
+        wrongHints: [null, "10:30 is ná 10:15 — dan ben je te laat.", "Maar één van de twee komt op tijd aan, niet allebei.", "Eén trein komt wél vóór 10:15 aan — dus dit klopt niet."],
         uitlegPad: {
           stappen: [{ titel: "Welke komt nog op tijd aan?", tekst: "Je moet vóór 10:15 er zijn. Trein A (10:00) is op tijd, trein B (10:30) is te laat. Dus trein A." }],
           niveaus: {
