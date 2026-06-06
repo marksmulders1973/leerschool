@@ -906,6 +906,33 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
+        {/* Sociale-bewijs-contrast (Mark 2026-06-06): echte ouder-klachten over de
+            abonnement-val bij betaalde oefen-apps + "hier doen wij niet aan mee".
+            Juridisch veilig: geanonimiseerd, niet bij merknaam op de homepage (de
+            naam-versie staat met disclaimer op /gratis-alternatief-squla.html). */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.55)", fontWeight: 700, textAlign: "center", marginBottom: 8, textTransform: "uppercase", letterSpacing: 0.4 }}>
+              Wat ouders schrijven over de bekende betaalde oefen-apps
+            </div>
+            {[
+              "“Abonnement wordt automatisch verlengd — ook al gebruik je het al een jaar niet, ben je zo €225 kwijt.”",
+              "“Opzeggen gaat heel moeilijk… je moet er een apart ouderaccount voor aanmaken.”",
+              "“Ik had opgezegd, maar ze bleven gewoon jaren doorafschrijven.”",
+            ].map((q, i) => (
+              <div key={i} style={{
+                fontFamily: "var(--font-body)", fontSize: 13, fontStyle: "italic",
+                color: "rgba(255,255,255,0.7)", background: "rgba(255,82,82,0.06)",
+                border: "1px solid rgba(255,82,82,0.18)", borderRadius: 10,
+                padding: "8px 12px", marginBottom: 6, lineHeight: 1.45,
+              }}>{q}</div>
+            ))}
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14.5, color: "#69f0ae", textAlign: "center", marginTop: 8 }}>
+              👉 Hier doen wij niet aan mee.
+            </div>
+          </div>
+        )}
+
         {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
             show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
             nieuwe ouder binnen 30 sec ziet waarom dit beter is dan YouTube/ChatGPT.
