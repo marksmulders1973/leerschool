@@ -42,6 +42,10 @@ van Smulsoft en heeft geen relatie met dat bedrijf.
 - [Cito-toets oefenen](https://leerkwartier.app/cito-toets-oefenen.html):
   voor mensen die "Cito" nog gebruiken ipv "Doorstroomtoets" — uitleg
   van de naamwijziging + oefenen per groep (6, 7, 8).
+- [Gratis alternatief voor Squla &amp; Junior Einstein](https://leerkwartier.app/gratis-alternatief-squla.html):
+  voor ouders die een gratis of goedkoper alternatief zoeken voor betaalde
+  oefen-apps (zonder abonnement/stilzwijgende verlenging). Vergelijkingstabel
+  + uitleg "hoe zeg ik Squla op". Leerkwartier = gratis in 2026, geen abonnement.
 - [Doorstroomtoets IEP oefenen](https://leerkwartier.app/doorstroomtoets-iep.html):
   oefenen toegespitst op de IEP-toets (Bureau ICE).
 - [Doorstroomtoets Route 8 oefenen](https://leerkwartier.app/doorstroomtoets-route-8.html):
