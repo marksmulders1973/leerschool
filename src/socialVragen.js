@@ -272,6 +272,208 @@ export const SOCIAL_VRAGEN = {
       },
     },
   },
+
+  // ── Pool-uitbreiding 2026-06-06: extra dagvragen + Threads-brandstof ──
+
+  "begrijpendlezen2": {
+    vak: "begrijpend lezen",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen (groep 8)" },
+    vraag: "Lees: _'Bijen zijn heel belangrijk. Ze brengen stuifmeel van bloem naar bloem, waardoor planten vrucht kunnen maken. Zonder bijen zouden veel groenten en fruit verdwijnen. Daarom maken mensen zich zorgen nu er steeds minder bijen zijn.'_\n\n**Wat is de hoofdgedachte van deze tekst?**",
+    options: ["Bijen maken honing", "Bijen zijn belangrijk voor planten en ons eten", "Er komen steeds meer bloemen bij", "Mensen houden van fruit"],
+    answer: 1,
+    wrongHints: [
+      "Honing wordt niet eens genoemd — kijk waar de tekst écht over gaat.",
+      null,
+      "De tekst zegt juist dat er minder bíjen zijn, niet meer bloemen.",
+      "Dat is hooguit een detail, niet waar de hele tekst over gaat.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Wat is een hoofdgedachte?", tekst: "De hoofdgedachte is waar de HELE tekst over gaat — het belangrijkste, niet één detail." },
+        { titel: "De rode draad", tekst: "Elke zin gaat over hoe belangrijk bijen zijn voor planten en ons eten. Dat is dus de hoofdgedachte." },
+      ],
+      niveaus: {
+        basis: "De hoofdgedachte is de rode draad door alle zinnen. Hier draait alles om: bijen zijn belangrijk voor planten en ons eten (B).",
+        simpeler: "Vraag jezelf: waar gaat het in ELKE zin over? Steeds over hoe belangrijk bijen zijn. Dat is de hoofdgedachte.",
+        nogSimpeler: "Waar gaat de hele tekst over? Over bijen die belangrijk zijn. Antwoord B.",
+      },
+    },
+  },
+
+  "begrijpendlezen3": {
+    vak: "begrijpend lezen",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Begrijpend lezen (groep 8)" },
+    vraag: "Lees: _'De oude brug was bouwvallig. Niemand durfde er nog overheen te lopen, bang dat hij zou instorten.'_\n\n**Wat betekent het woord 'bouwvallig'?**",
+    options: ["gloednieuw", "op instorten / vervallen", "heel breed", "gloeiend heet"],
+    answer: 1,
+    wrongHints: [
+      "Lees verder: niemand durft erover omdat hij kan instorten — klinkt dat als nieuw?",
+      null,
+      "Over de breedte staat niets; het gaat over de staat van de brug.",
+      "Temperatuur speelt hier geen rol.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Gebruik de omgeving", tekst: "Je hoeft het woord niet te kennen. De zin eromheen geeft de betekenis: 'bang dat hij zou instorten'." },
+        { titel: "Dus...", tekst: "Een brug waarvan je bang bent dat hij instort, is vervallen / op instorten. Dat is 'bouwvallig'." },
+      ],
+      niveaus: {
+        basis: "Lees de context: 'bang dat hij zou instorten'. Bouwvallig = vervallen, op instorten (B).",
+        simpeler: "Je kent het woord misschien niet — kijk naar de zin ernaast. Die zegt: kan instorten. Dus bouwvallig = bijna kapot.",
+        nogSimpeler: "De brug kan instorten → bouwvallig betekent: bijna kapot. Antwoord B.",
+      },
+    },
+  },
+
+  "rekenen5": {
+    vak: "rekenen",
+    leerpadLink: { id: "doorstroomtoets-rekenen-g8", title: "Rekenen met geld & kommagetallen (groep 8)" },
+    vraag: "Je koopt een schrift van **€1,75** en een pen van **€0,90**. Je betaalt met **€5**. **Hoeveel krijg je terug?**",
+    options: ["€2,35", "€2,65", "€3,35", "€1,35"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Je trok één bedrag te weinig af — tel eerst schrift én pen samen.",
+      "Dat is €5 − €1,75; je vergat de pen erbij op te tellen.",
+      "Reken nog eens: €1,75 + €0,90 is meer dan je dacht.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Eerst samen", tekst: "€1,75 + €0,90 = €2,65 (samen betaald)." },
+        { titel: "Dan terug", tekst: "€5,00 − €2,65 = €2,35 terug." },
+      ],
+      niveaus: {
+        basis: "Tel eerst op: 1,75 + 0,90 = 2,65. Dan 5,00 − 2,65 = 2,35.",
+        simpeler: "Twee dingen samen kosten €2,65. Je gaf €5. Wat blijft over? 5 − 2,65 = 2,35.",
+        nogSimpeler: "Samen €2,65. Van €5 af: €2,35 terug.",
+      },
+    },
+  },
+
+  "rekenen6": {
+    vak: "rekenen",
+    leerpadLink: { id: "doorstroomtoets-rekenen-g8", title: "Rekenen met tijd (groep 8)" },
+    vraag: "Een film begint om **19:45** en duurt **1 uur en 30 minuten**. **Hoe laat is de film afgelopen?**",
+    options: ["21:15", "20:15", "21:45", "21:00"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Je telde maar 30 minuten op — er komt ook nog een heel uur bij.",
+      "Je telde 2 uur op in plaats van 1 uur en 30 minuten.",
+      "Tel de 30 minuten ook mee, ná het hele uur.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Eerst het hele uur", tekst: "19:45 + 1 uur = 20:45." },
+        { titel: "Dan de 30 minuten", tekst: "20:45 + 30 minuten = 21:15." },
+      ],
+      niveaus: {
+        basis: "19:45 + 1 uur = 20:45. Dan + 30 min = 21:15.",
+        simpeler: "Tel eerst het uur erbij (20:45), dan de halve (30 min) erbij: 21:15.",
+        nogSimpeler: "19:45 → +1u → 20:45 → +30min → 21:15.",
+      },
+    },
+  },
+
+  "taal2": {
+    vak: "taal",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Taal & uitdrukkingen (groep 8)" },
+    vraag: "Wat betekent de uitdrukking **'de kat uit de boom kijken'**?",
+    options: ["Eerst rustig afwachten hoe iets loopt", "Een dier uit een boom halen", "Heel snel een beslissing nemen", "Bang zijn voor katten"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "Een uitdrukking betekent meestal niet letterlijk wat er staat.",
+      "Het is juist het tegenovergestelde van snel.",
+      "Het gaat niet echt over katten.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Niet letterlijk", tekst: "Een uitdrukking heeft een verborgen betekenis, niet de letterlijke." },
+        { titel: "Betekenis", tekst: "'De kat uit de boom kijken' = eerst afwachten en kijken hoe iets gaat vóór je iets doet." },
+      ],
+      niveaus: {
+        basis: "Een uitdrukking is niet letterlijk. 'De kat uit de boom kijken' betekent: eerst rustig afwachten (A).",
+        simpeler: "Het gaat niet echt over een kat. Het betekent: je doet nog niks, je kijkt eerst de situatie aan.",
+        nogSimpeler: "Het betekent: eerst afwachten. Antwoord A.",
+      },
+    },
+  },
+
+  "spelling2": {
+    vak: "spelling",
+    leerpadLink: { id: "doorstroomtoets-taal-g8", title: "Spelling & werkwoorden (groep 8)" },
+    vraag: "Welke zin is **goed gespeld**?",
+    options: ["Wat is er gisteren gebeurd?", "Wat is er gisteren gebeurt?", "Wat is er gisteren gebeurdt?", "Wat is er gisteren gebeird?"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "'Er is gebeurd' is voltooid — net als 'gewerkt', niet 'werkt'. Welke uitgang past dan?",
+      "Een voltooid deelwoord eindigt nooit op -dt.",
+      "Let op de klank: het is 'eu', niet 'ei'.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Voltooid deelwoord", tekst: "'Wat is er gebeurd?' is een voltooid deelwoord, net als gewerkt en gespeeld. Die eindigen op -d of -t, nooit op -dt." },
+        { titel: "d of t?", tekst: "Stam van 'gebeuren' is 'gebeur'. De 'r' zit niet in 't kofschip → voltooid deelwoord met -d: gebeurd." },
+      ],
+      niveaus: {
+        basis: "'Gebeurd' is een voltooid deelwoord (zoals 'gewerkt'). Stam 'gebeur' + d = gebeurd. Antwoord A.",
+        simpeler: "Vergelijk met 'gespeeld' en 'gewerkt': 'er is gebeurd' hoort in dat rijtje, met -d aan het eind.",
+        nogSimpeler: "Het is 'gebeurd' (zoals 'gewerkt'). Antwoord A.",
+      },
+    },
+  },
+
+  "studie3": {
+    vak: "studievaardigheden",
+    leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Grafieken lezen (groep 8)" },
+    vraag: "Een staafdiagram toont verkochte ijsjes: maandag **20**, dinsdag **35**, woensdag **50**, donderdag **15**. **Op welke dag werden de meeste ijsjes verkocht?**",
+    options: ["woensdag", "dinsdag", "maandag", "donderdag"],
+    answer: 0,
+    wrongHints: [
+      null,
+      "35 is veel, maar er is een dag met een nóg hogere staaf.",
+      "20 is niet de hoogste — zoek het grootste getal.",
+      "15 is juist het minst.",
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Meeste = hoogste staaf", tekst: "De 'meeste' hoort bij de hoogste staaf, oftewel het grootste getal." },
+        { titel: "Vergelijk", tekst: "20, 35, 50 en 15 → het grootste is 50, en dat is woensdag." },
+      ],
+      niveaus: {
+        basis: "Meeste = grootste getal. Van 20, 35, 50, 15 is 50 het grootst: woensdag.",
+        simpeler: "Zoek de hoogste staaf (= grootste getal). Dat is 50, op woensdag.",
+        nogSimpeler: "Grootste getal = 50 = woensdag.",
+      },
+    },
+  },
+
+  "studie4": {
+    vak: "studievaardigheden",
+    leerpadLink: { id: "doorstroomtoets-studievaardigheden-g8", title: "Woordenboek & alfabet (groep 8)" },
+    vraag: "In een woordenboek staan woorden op alfabetische volgorde. **Welk woord staat het éérst?**",
+    options: ["appel", "auto", "ananas", "abrikoos"],
+    answer: 3,
+    wrongHints: [
+      "Appel begint met 'ap' — er is een woord dat met 'ab' begint, en dat komt eerder.",
+      "Auto begint met 'au' — dat is juist laat in het alfabet.",
+      "Ananas begint met 'an'; 'ab' komt daar nog vóór.",
+      null,
+    ],
+    uitlegPad: {
+      stappen: [
+        { titel: "Eerste letter gelijk", tekst: "Alle woorden beginnen met 'a'. Kijk dan naar de TWEEDE letter." },
+        { titel: "Tweede letter", tekst: "b (abrikoos), n (ananas), p (appel), u (auto). In het alfabet komt 'b' het eerst → abrikoos." },
+      ],
+      niveaus: {
+        basis: "Alle met 'a' → kijk naar de 2e letter: b, n, p, u. 'b' komt eerst → abrikoos (D).",
+        simpeler: "De eerste letter is overal 'a'. Vergelijk de tweede letter: b komt vóór n, p en u. Dus abrikoos.",
+        nogSimpeler: "Tweede letters: b, n, p, u. b is eerst → abrikoos.",
+      },
+    },
+  },
 };
 
 // Pak een vraag op id; null als 'ie niet bestaat.
