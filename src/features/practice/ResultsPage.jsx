@@ -20,6 +20,12 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   const [showIosInstall, setShowIosInstall] = useState(false);
   const [installed, setInstalled] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Zachte e-mail-gate (Mark 2026-06-06): score is gratis, maar het fouten-
+  // overzicht + de uitleg per vraag zien we pas na e-mail (of bij ingelogde).
+  const [unlocked, setUnlocked] = useState(() => {
+    if (authUser) return true;
+    try { return !!localStorage.getItem("lk_lesmateriaal_aangemeld"); } catch { return false; }
+  });
   // M2 audit-3: 'Deel de app'-sectie default ingeklapt om ResultsPage-clutter
   // weg te halen. Gebruiker die wil delen klikt zelf de toggle open.
   const [showDeelApp, setShowDeelApp] = useState(false);
@@ -185,9 +191,12 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
         {/* E-mail-magneet (Mark 2026-06-06): op het resultaat-moment — hoogste
             motivatie — de uitslag + wekelijkse gratis oefentips per mail aanbieden.
             GratisLesmateriaal onthoudt zelf of iemand al aangemeld is. */}
-        <div style={{ margin: "18px 0 6px" }}>
-          <GratisLesmateriaal source="resultaat" compact title="📩 Wil je de uitslag + elke week gratis oefentips per mail?" />
-        </div>
+        {!unlocked && (
+          <div style={{ margin: "18px 0 6px" }}>
+            <GratisLesmateriaal source="resultaat" compact onSubmitted={() => setUnlocked(true)}
+              title="🔓 Zie wélke vragen fout gingen + de uitleg — laat je e-mail achter" />
+          </div>
+        )}
 
         {/* Cito-eindtoets-simulatie advies-banner: bij ≥50 vragen op
             cito-onderwerp tonen we een richt-advies vmbo/havo/vwo gebaseerd op
@@ -303,25 +312,49 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
-        <div style={styles.resultDetails}>
-          {latest.answers.map((a, i) => {
-            const q = latest.questions?.[a.questionIndex ?? i];
-            return (
-              <div key={i} style={{ ...styles.resultRow, flexDirection: "column", alignItems: "flex-start", gap: 4 }}>
-                <div style={{ display: "flex", alignItems: "flex-start", gap: 8, width: "100%" }}>
-                  <span style={{ width: 24, flexShrink: 0, textAlign: "center", marginTop: 1 }}>{a.isCorrect ? "✅" : "❌"}</span>
-                  <span style={{ flex: 1, fontSize: 13, color: "#c0d0e0", lineHeight: 1.4 }}>{q?.q || `Vraag ${i + 1}`}</span>
-                </div>
-                {!a.isCorrect && q && (
-                  <div style={{ marginLeft: 32, fontSize: 12, color: "var(--color-brand-primary-100)" }}>
-                    ✔ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
-                    {a.selected >= 0 && <span style={{ color: "#ff7070" }}> · Jij: {q.options?.[a.selected]}</span>}
+        {unlocked ? (
+          <div style={styles.resultDetails}>
+            {latest.answers.map((a, i) => {
+              const q = latest.questions?.[a.questionIndex ?? i];
+              return (
+                <div key={i} style={{ ...styles.resultRow, flexDirection: "column", alignItems: "flex-start", gap: 4 }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: 8, width: "100%" }}>
+                    <span style={{ width: 24, flexShrink: 0, textAlign: "center", marginTop: 1 }}>{a.isCorrect ? "✅" : "❌"}</span>
+                    <span style={{ flex: 1, fontSize: 13, color: "#c0d0e0", lineHeight: 1.4 }}>{q?.q || `Vraag ${i + 1}`}</span>
                   </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
+                  {!a.isCorrect && q && (
+                    <div style={{ marginLeft: 32, fontSize: 12, color: "var(--color-brand-primary-100)" }}>
+                      ✔ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
+                      {a.selected >= 0 && <span style={{ color: "#ff7070" }}> · Jij: {q.options?.[a.selected]}</span>}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          // Slot-teaser: de score zien ze gratis, het fouten-overzicht + uitleg
+          // per vraag pas na e-mail (formulier staat hierboven). Mark 2026-06-06.
+          <div
+            style={{
+              ...styles.resultDetails,
+              textAlign: "center",
+              padding: "22px 18px",
+              border: "1.5px dashed rgba(0,200,83,0.4)",
+              background: "rgba(0,200,83,0.05)",
+            }}
+          >
+            <div style={{ fontSize: 26, marginBottom: 6 }} aria-hidden="true">🔒</div>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#69f0ae", marginBottom: 6 }}>
+              {wrongCount === 0
+                ? "Bekijk je antwoorden per vraag"
+                : `Zie precies wélke ${wrongCount === 1 ? "vraag fout ging" : `${wrongCount} vragen fout gingen`} + de uitleg`}
+            </div>
+            <div style={{ fontSize: 12.5, color: "var(--color-text-muted)", lineHeight: 1.5, maxWidth: 360, margin: "0 auto" }}>
+              Vul hierboven je e-mail in om het overzicht met het juiste antwoord per vraag te ontgrendelen — plus elke week een gratis oefenkwartiertje.
+            </div>
+          </div>
+        )}
 
         {/* Daag vrienden uit (bij goede score) */}
         {latest.percentage >= 80 && (() => {

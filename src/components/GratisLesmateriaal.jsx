@@ -33,7 +33,7 @@ const GROEPEN = [
 ];
 const MAX_VAKKEN = 3;
 
-export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket, compact = false, title }) {
+export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket, compact = false, title, onSubmitted }) {
   const doneKey = "lk_lesmateriaal_aangemeld";
   const [step, setStep] = useState("email"); // email | profiel | done
   const [email, setEmail] = useState("");
@@ -85,6 +85,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
       try { localStorage.setItem(doneKey, "1"); } catch {}
       track("lesmateriaal_signup", { source, groep: groep || "", vakken: vakken.length });
       setStep("done");
+      onSubmitted?.();
     } catch {
       setStatus("error");
       setFout("Kon je niet aanmelden. Probeer het zo nog eens.");
