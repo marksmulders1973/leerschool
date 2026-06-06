@@ -65,7 +65,23 @@ function _campaignParams() {
   } catch { return {}; }
 }
 
+// Interne-check-vlag (Mark 2026-06-06): de Claude-Chrome (of Mark zelf) opent de
+// site één keer met ?ic=1 → die browser markeert zich als "intern" en telt dan
+// NERGENS meer mee. track() vuurt niets af, dus er komen geen events → geen
+// vervuiling van het dagrapport/bronnen door eigen check-bezoeken. ?ic=0 = weer aan.
+// Persistent in localStorage zodat de markering blijft staan voor die browser.
+export function isInternalVisit() {
+  try {
+    const v = new URLSearchParams(location.search).get("ic");
+    if (v === "1") localStorage.setItem("lk_internal", "1");
+    else if (v === "0") localStorage.removeItem("lk_internal");
+    return localStorage.getItem("lk_internal") === "1";
+  } catch { return false; }
+}
+
 export function track(event, params = {}) {
+  // Interne check (Claude/Mark) telt nergens mee — geen GA, geen events-insert.
+  if (isInternalVisit()) return;
   // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)
   try { window.gtag?.("event", event, params); } catch (e) {}
   // (2) eigen, anonieme eerstepartij-log in Supabase (fire-and-forget, blokkeert niets)
