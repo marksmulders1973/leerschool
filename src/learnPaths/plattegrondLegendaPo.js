@@ -369,7 +369,7 @@ const steps = [
         q: "In een dierentuin liggen de apen tussen de ingang en het restaurant. Je staat bij de ingang. Je loopt richting...",
         options: ["het restaurant", "de uitgang", "de parkeerplaats", "terug naar buiten"],
         answer: 0,
-        wrongHints: [null, "De apen liggen op weg naar het restaurant, niet de uitgang.", "Daar liggen de apen niet tussenin.", "Je hoeft niet terug — de apen zijn vóór je."],
+        wrongHints: [null, "De apen liggen niet richting de uitgang.", "Daar liggen de apen niet tussenin.", "Je hoeft niet terug — de apen zijn vóór je."],
         uitlegPad: {
           stappen: [{ titel: "Tussen ingang en restaurant", tekst: "De apen liggen tussen de ingang (waar jij staat) en het restaurant, dus je loopt richting het restaurant." }],
           niveaus: {
