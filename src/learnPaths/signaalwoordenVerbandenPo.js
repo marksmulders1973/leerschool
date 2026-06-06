@@ -78,6 +78,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk woord past? *Ik hou van zwemmen ___ van voetballen.*",
+        options: ["en", "maar", "omdat", "dus"],
+        answer: 0,
+        wrongHints: [null, "Dat zou een tegenstelling zijn; hier komt er gewoon iets bij.", "Dat geeft een reden.", "Dat geeft een gevolg."],
+        uitlegPad: {
+          stappen: [{ titel: "Allebei leuk → opsomming", tekst: "Je houdt van twee dingen; het tweede komt erbij. Dat is een opsomming: 'en'." }],
+          niveaus: {
+            basis: "Er wordt iets toegevoegd (allebei leuk) → 'en'.",
+            simpeler: "Komt er iets bij, of botst het? Het komt erbij.",
+            nogSimpeler: "Zwemmen … voetballen — welk woord telt op?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *Hij is aardig ___ behulpzaam.*",
+        options: ["en", "maar", "want", "dus"],
+        answer: 0,
+        wrongHints: [null, "Allebei positief — er botst niets, dus geen tegenstelling.", "Dat geeft een reden.", "Dat geeft een gevolg."],
+        uitlegPad: {
+          stappen: [{ titel: "Twee pluspunten → opsomming", tekst: "Aardig én behulpzaam zijn allebei positief; het tweede komt erbij. Opsomming: 'en'." }],
+          niveaus: {
+            basis: "Twee eigenschappen die bij elkaar passen → 'en'.",
+            simpeler: "Botsen 'aardig' en 'behulpzaam'? Nee → er komt iets bij.",
+            nogSimpeler: "aardig … behulpzaam — welk woordje telt op?",
+          },
+        },
+      },
     ],
   },
 
@@ -150,6 +178,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welk woord past? *Ze was moe, ___ ging ze vroeg naar bed.*",
+        options: ["daarom", "maar", "hoewel", "of"],
+        answer: 0,
+        wrongHints: [null, "Dat is een tegenstelling; hier komt een gevolg.", "Ook een tegenstelling.", "Dat geeft een keuze."],
+        uitlegPad: {
+          stappen: [{ titel: "Moe → vroeg naar bed (gevolg)", tekst: "Het moe-zijn had een gevolg: vroeg naar bed. 'Daarom' wijst op dat gevolg." }],
+          niveaus: {
+            basis: "Het tweede deel is het gevolg van het eerste → 'daarom'.",
+            simpeler: "Wat is het gevolg van moe zijn? Welk woord wijst daarop?",
+            nogSimpeler: "Welk woord betekent 'om die reden'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord geeft een **reden/oorzaak** aan (waaróm)?",
+        options: ["doordat", "daardoor", "dus", "daarom"],
+        answer: 0,
+        wrongHints: [null, "Dat wijst juist op het gevolg.", "Ook een gevolg-woord.", "Ook een gevolg-woord."],
+        uitlegPad: {
+          stappen: [{ titel: "Doordat = oorzaak", tekst: "'Doordat' geeft de oorzaak/reden. 'Daardoor/dus/daarom' wijzen juist op het gevolg." }],
+          niveaus: {
+            basis: "'Doordat' geeft de oorzaak; de andere drie geven het gevolg.",
+            simpeler: "Welk woord geeft antwoord op 'waarom?' i.p.v. 'en wat dan?'",
+            nogSimpeler: "Welk woord lijkt op 'omdat'?",
+          },
+        },
+      },
     ],
   },
 
@@ -215,6 +271,34 @@ const steps = [
             basis: "Het is de volgende stap in het recept → 'Daarna'.",
             simpeler: "Welk woord betekent 'als volgende stap'?",
             nogSimpeler: "Eerst mengen, … de eieren erbij. Welk woord betekent 'vervolgens'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord past? *We aten eerst soep. ___ kwam het hoofdgerecht.*",
+        options: ["Daarna", "Maar", "Omdat", "Hoewel"],
+        answer: 0,
+        wrongHints: [null, "Dat is een tegenstelling; hier komt de volgende gang.", "Dat geeft een reden.", "Ook een tegenstelling."],
+        uitlegPad: {
+          stappen: [{ titel: "Volgende stap", tekst: "Na de soep komt de volgende gang. 'Daarna' geeft die volgorde aan." }],
+          niveaus: {
+            basis: "Het is de volgende stap in de tijd → 'Daarna'.",
+            simpeler: "Welk woord betekent 'als volgende'?",
+            nogSimpeler: "Eerst soep, … hoofdgerecht. Welk woord betekent 'vervolgens'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord hoort NIET bij tijd/volgorde?",
+        options: ["echter", "eerst", "daarna", "ten slotte"],
+        answer: 0,
+        wrongHints: [null, "Dat is juist de eerste stap (volgorde).", "Dat is een volgende stap (volgorde).", "Dat is de laatste stap (volgorde)."],
+        uitlegPad: {
+          stappen: [{ titel: "Echter = tegenstelling", tekst: "'Echter' geeft een tegenstelling, geen volgorde. 'Eerst/daarna/ten slotte' horen wél bij tijd/volgorde." }],
+          niveaus: {
+            basis: "'Echter' hoort bij tegenstelling, niet bij volgorde.",
+            simpeler: "Welk woord betekent 'maar' i.p.v. een stap in de tijd?",
+            nogSimpeler: "Drie woorden zijn stappen; welke is dat niet?",
           },
         },
       },
@@ -285,6 +369,48 @@ const steps = [
             basis: "Stappen na elkaar in de tijd → tijd/volgorde.",
             simpeler: "De woorden 'eerst' en 'vervolgens' horen bij welk verband?",
             nogSimpeler: "Gaat het hier over de volgorde van stappen?",
+          },
+        },
+      },
+      {
+        q: "*Ik wil een ijsje, en ook patat.* Welk verband geeft 'en ook' aan?",
+        options: ["opsomming", "tegenstelling", "oorzaak en gevolg", "tijd/volgorde"],
+        answer: 0,
+        wrongHints: [null, "Er botst niets — er komt iets bij.", "Er wordt geen reden of gevolg gegeven.", "Er is geen sprake van stappen in de tijd."],
+        uitlegPad: {
+          stappen: [{ titel: "Erbij = opsomming", tekst: "Bij het ijsje komt patat erbij. 'En ook' telt iets op: dat is een opsomming." }],
+          niveaus: {
+            basis: "Er wordt iets toegevoegd → opsomming.",
+            simpeler: "Komt patat erbij, of botst het met het ijsje? Het komt erbij.",
+            nogSimpeler: "Welk verband hoort bij 'en ook'?",
+          },
+        },
+      },
+      {
+        q: "*Hoewel het regende, gingen we toch wandelen.* Welk verband geeft 'hoewel' aan?",
+        options: ["tegenstelling", "opsomming", "oorzaak en gevolg", "voorbeeld"],
+        answer: 0,
+        wrongHints: [null, "Er wordt niets opgesomd.", "Er wordt geen reden of gevolg gegeven.", "Er wordt geen voorbeeld gegeven."],
+        uitlegPad: {
+          stappen: [{ titel: "Regen ↔ toch wandelen", tekst: "Je zou bij regen binnen blijven, maar je gaat tóch. Dat botst: 'hoewel' geeft een tegenstelling." }],
+          niveaus: {
+            basis: "Iets gebeurt tegen de verwachting in → tegenstelling.",
+            simpeler: "Past 'regen' en 'toch wandelen' bij elkaar of botst het?",
+            nogSimpeler: "'Hoewel' lijkt op welk verband-woord: maar, of en?",
+          },
+        },
+      },
+      {
+        q: "*De plant ging dood doordat hij geen water kreeg.* Welk verband geeft 'doordat' aan?",
+        options: ["oorzaak en gevolg", "tegenstelling", "opsomming", "tijd/volgorde"],
+        answer: 0,
+        wrongHints: [null, "Er botst niets.", "Er wordt niets opgesomd.", "Er is geen sprake van stappen in de tijd."],
+        uitlegPad: {
+          stappen: [{ titel: "Geen water → dood", tekst: "Het geen-water-krijgen is de oorzaak van het doodgaan. 'Doordat' wijst op oorzaak en gevolg." }],
+          niveaus: {
+            basis: "Het een veroorzaakt het ander → oorzaak en gevolg.",
+            simpeler: "Waaróm ging de plant dood? Dan is het oorzaak-gevolg.",
+            nogSimpeler: "Wat zorgde ervoor dat de plant doodging?",
           },
         },
       },
