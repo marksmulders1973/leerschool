@@ -258,7 +258,7 @@ const steps = [
         q: "Bij welk woord hoort het verwijswoord 'dat' (in plaats van 'die')?",
         options: ["het huis", "de boom", "de hond", "de tafel"],
         answer: 0,
-        wrongHints: [null, "Klopt — 'het huis' → 'dat'.", "Een 'de'-woord krijgt 'die', niet 'dat'.", "Een 'de'-woord krijgt 'die'."],
+        wrongHints: [null, "Een 'de'-woord (de boom) krijgt 'die', niet 'dat'.", "Ook een 'de'-woord — dus 'die'.", "'de tafel' is ook een 'de'-woord → 'die'."],
         uitlegPad: {
           stappen: [{ titel: "'het'-woord → dat", tekst: "Bij een 'het'-woord (het huis) past 'dat'. Bij 'de'-woorden (de boom, de hond, de tafel) past 'die'." }],
           niveaus: {
