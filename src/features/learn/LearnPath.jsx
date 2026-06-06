@@ -20,6 +20,7 @@ import {
   peekDueRetrieval,
 } from "../../shared/adaptiveStore.js";
 import { recordSeen as srRecordSeen } from "../../shared/spacedRepetition.js";
+import { getDayStreak } from "../../shared/dailyGoal.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { shuffleOptions } from "../../shared/shuffleOptions.js";
 import VraagUitlegPad, { bumpVraagFouten } from "./VraagUitlegPad.jsx";
@@ -1783,6 +1784,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
   // A6: toon score + suggestie volgend examen-/leerpad.
   const pct = score?.total > 0 ? Math.round((score.correct / score.total) * 100) : null;
   const isExamen = (path.id || "").startsWith("examen-");
+  const streak = getDayStreak();
   return (
     <div style={{ textAlign: "center", padding: "30px 12px" }}>
       <div style={{ fontSize: 64, marginBottom: 12 }}>🎉</div>
@@ -1806,6 +1808,18 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
           Je had <span style={{ fontSize: 20 }}>{score.correct}</span> van de {score.total} vragen meteen goed
           <span style={{ display: "block", fontSize: 12, fontWeight: 500, marginTop: 2, color: C.muted }}>
             {pct}% — {pct >= 90 ? "uitstekend" : pct >= 70 ? "goed bezig" : "blijf herhalen"}
+          </span>
+        </div>
+      )}
+      {streak.current > 0 && (
+        <div style={{
+          marginBottom: 18, padding: "10px 14px", borderRadius: 12,
+          background: "rgba(255,138,0,0.10)", border: "1px solid rgba(255,138,0,0.40)",
+          color: "#ffb74d", fontSize: 14, fontWeight: 700, fontFamily: "var(--font-display)",
+        }}>
+          🔥 {streak.current} {streak.current === 1 ? "dag" : "dagen"} op rij
+          <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 500, color: "var(--color-text-soft, #cdd6e2)", marginTop: 2 }}>
+            Kom morgen terug om je reeks te verlengen!
           </span>
         </div>
       )}
