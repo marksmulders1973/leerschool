@@ -887,6 +887,25 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
+        {/* Gratis-belofte + eerlijk model (Mark 2026-06-06): onbeperkt gratis tot
+            2027; daarna basis gratis + Pro-extra's per kwartier (betaal alleen voor
+            echt gebruik, geen abonnement). Onderscheidend tov de abonnement-apps. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{
+            margin: "0 auto 18px", maxWidth: 520,
+            background: "linear-gradient(135deg, rgba(0,200,83,0.14), rgba(255,213,79,0.08))",
+            border: "1px solid rgba(0,200,83,0.35)", borderRadius: 16,
+            padding: "14px 18px", textAlign: "center",
+          }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, color: "#69f0ae", marginBottom: 4 }}>
+              🎉 Nu helemaal gratis &amp; onbeperkt — tot 2027
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>
+              Daarna blijft de basis gratis. Alleen Pro-extra's koop je <strong style={{ color: "#fff" }}>per kwartier</strong> — je betaalt dus alléén voor wat je écht gebruikt. <strong style={{ color: "#fff" }}>Geen abonnement, geen verrassingen.</strong>
+            </div>
+          </div>
+        )}
+
         {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
             show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
             nieuwe ouder binnen 30 sec ziet waarom dit beter is dan YouTube/ChatGPT.
