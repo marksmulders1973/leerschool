@@ -76,6 +76,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Welke letter komt vlak vóór de S?",
+        options: ["T", "R", "U", "Q"],
+        answer: 1,
+        wrongHints: ["T komt juist ná S.", null, "U komt later.", "Q komt eerder dan R."],
+        uitlegPad: {
+          stappen: [{ titel: "…Q R S T…", tekst: "In het alfabet komt vlak vóór de S de R (… Q R S T …)." }],
+          niveaus: {
+            basis: "Vóór S komt R (… R S T …).",
+            simpeler: "Zeg op: …R, S, T… welke staat vlak vóór S?",
+            nogSimpeler: "Welke letter komt net voor S?",
+          },
+        },
+      },
+      {
+        q: "Zet op alfabet: vis, eend, geit. Welk woord komt het laatst?",
+        options: ["eend", "geit", "vis", "ze zijn gelijk"],
+        answer: 2,
+        wrongHints: ["e komt juist vooraan.", "g komt vóór v.", null, "Ze beginnen met verschillende letters."],
+        uitlegPad: {
+          stappen: [{ titel: "v komt het laatst", tekst: "Eerste letters: e, g, v. V staat het verst in het alfabet, dus 'vis' komt het laatst." }],
+          niveaus: {
+            basis: "'vis' (v) staat het verst in het alfabet → komt laatst.",
+            simpeler: "Welke beginletter komt het laatst: e, g of v?",
+            nogSimpeler: "e, g of v — welke is de laatste?",
+          },
+        },
+      },
     ],
   },
 
@@ -146,6 +174,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "Bij welke letter zoek je het woord 'ziekenhuis'?",
+        options: ["S", "Z", "C", "H"],
+        answer: 1,
+        wrongHints: ["Het begint niet met een s, maar met z.", null, "Niet met een c.", "De h zit midden in het woord, niet vooraan."],
+        uitlegPad: {
+          stappen: [{ titel: "Eerste letter", tekst: "'Ziekenhuis' begint met de letter z, dus je zoekt het achteraan bij de Z." }],
+          niveaus: {
+            basis: "'ziekenhuis' begint met z → zoek bij Z.",
+            simpeler: "Met welke letter begint 'ziekenhuis'?",
+            nogSimpeler: "Wat is de eerste letter van 'ziekenhuis'?",
+          },
+        },
+      },
+      {
+        q: "Welk woord vind je het laatst in het woordenboek?",
+        options: ["kabel", "raket", "vlieger", "zebra"],
+        answer: 3,
+        wrongHints: ["k staat in het midden.", "r staat verderop, maar niet het laatst.", "v komt nog vóór z.", null],
+        uitlegPad: {
+          stappen: [{ titel: "z is de laatste letter", tekst: "Beginletters k, r, v, z. Z staat het verst, dus 'zebra' komt het laatst in het woordenboek." }],
+          niveaus: {
+            basis: "'zebra' begint met z → helemaal achteraan.",
+            simpeler: "Welke beginletter komt het laatst: k, r, v of z?",
+            nogSimpeler: "Welk woord begint met de z?",
+          },
+        },
+      },
     ],
   },
 
@@ -210,6 +266,34 @@ const steps = [
             basis: "Tweede letters a, i, o → 'toren' (o) komt het laatst.",
             simpeler: "De t's zijn gelijk. Welke tweede letter komt het laatst: a, i of o?",
             nogSimpeler: "Welke is de laatste: a, i of o?",
+          },
+        },
+      },
+      {
+        q: "Welk woord komt eerst: planten of plein?",
+        options: ["planten", "plein", "ze zijn gelijk", "plein, want korter"],
+        answer: 0,
+        wrongHints: [null, "Bij de derde letter komt a vóór e.", "Ze verschillen bij de derde letter.", "Lengte bepaalt de volgorde niet."],
+        uitlegPad: {
+          stappen: [{ titel: "pl gelijk, dan a vóór e", tekst: "Beide beginnen met 'pl'. Derde letters: a (planten) en e (plein). A komt eerst, dus 'planten'." }],
+          niveaus: {
+            basis: "Eerste twee letters 'pl' gelijk; derde letter a < e → 'planten' eerst.",
+            simpeler: "De 'pl' is gelijk. Kijk naar de derde letter: a of e?",
+            nogSimpeler: "Wat komt eerst: a of e?",
+          },
+        },
+      },
+      {
+        q: "Zet op alfabet: storm, station, stoel. Welk woord komt het eerst?",
+        options: ["station", "stoel", "storm", "ze zijn gelijk"],
+        answer: 0,
+        wrongHints: [null, "Derde letter o komt ná de a.", "Ook hier komt o ná de a.", "Ze verschillen al bij de derde letter."],
+        uitlegPad: {
+          stappen: [{ titel: "st gelijk, dan a vóór o", tekst: "Alle drie beginnen met 'st'. Derde letters: a (station), o (stoel), o (storm). A komt eerst, dus 'station'." }],
+          niveaus: {
+            basis: "Derde letter a komt vóór o → 'station' eerst.",
+            simpeler: "De 'st' is gelijk. Welke derde letter komt eerst: a of o?",
+            nogSimpeler: "a of o — welke komt eerst?",
           },
         },
       },
@@ -282,13 +366,55 @@ const steps = [
         q: "Bovenaan een woordenboekpagina staan de kopwoorden 'kraan' en 'kruik'. Welk woord staat op deze pagina?",
         options: ["krokus", "kaars", "lamp", "kwartet"],
         answer: 0,
-        wrongHints: [null, "'krokus' (kro…) zit tussen kraan en kruik in.", "'kaars' (kaa…) komt vóór 'kraan'.", "'lamp' begint met l, een latere letter."],
+        wrongHints: [null, "'kaars' (kaa…) komt vóór 'kraan' — dus niet op deze pagina.", "'lamp' begint met l, een latere letter dan kr-.", "'kwartet' (kw…) komt ná 'kruik'."],
         uitlegPad: {
           stappen: [{ titel: "Tussen de kopwoorden", tekst: "Op de pagina staan woorden tussen 'kraan' en 'kruik'. 'Krokus' (kro…) past daartussen; 'kaars' komt eerder, 'lamp' en 'kwartet' later." }],
           niveaus: {
             basis: "'krokus' valt alfabetisch tussen 'kraan' en 'kruik'.",
             simpeler: "Welk woord komt ná 'kraan' maar vóór 'kruik'?",
             nogSimpeler: "kraan – krokus – kruik: past 'krokus' ertussen?",
+          },
+        },
+      },
+      {
+        q: "Bovenaan een pagina staan de kopwoorden 'appel' en 'arm'. Welk woord staat op deze pagina?",
+        options: ["arend", "auto", "ananas", "beer"],
+        answer: 0,
+        wrongHints: [null, "'auto' (au…) komt ná 'arm'.", "'ananas' (an…) komt vóór 'appel'.", "'beer' begint met b, een latere letter."],
+        uitlegPad: {
+          stappen: [{ titel: "Tussen de kopwoorden", tekst: "Op de pagina staan woorden tussen 'appel' en 'arm'. 'Arend' (ar-e) past daartussen: ná 'appel' (ap-) en vóór 'arm' (ar-m)." }],
+          niveaus: {
+            basis: "'arend' valt alfabetisch tussen 'appel' en 'arm'.",
+            simpeler: "Welk woord komt ná 'appel' maar vóór 'arm'?",
+            nogSimpeler: "appel – arend – arm: past 'arend' ertussen?",
+          },
+        },
+      },
+      {
+        q: "Je wilt weten hoe je een moeilijk woord schrijft. Wat pak je het best?",
+        options: ["een woordenboek", "een atlas", "een stripboek", "een telefoongids"],
+        answer: 0,
+        wrongHints: [null, "Een atlas heeft kaarten, geen spelling.", "Een stripboek geeft geen schrijfwijze van woorden.", "Een telefoongids heeft namen en nummers."],
+        uitlegPad: {
+          stappen: [{ titel: "Woordenboek = spelling + betekenis", tekst: "In een woordenboek staat hoe je een woord schrijft én wat het betekent." }],
+          niveaus: {
+            basis: "Voor de spelling van een woord gebruik je een woordenboek.",
+            simpeler: "Welk boek geeft de schrijfwijze van woorden?",
+            nogSimpeler: "Waar zoek je hoe een woord geschreven wordt?",
+          },
+        },
+      },
+      {
+        q: "Je zoekt het woord 'liep' (van lopen). Onder welk woord vind je de betekenis meestal?",
+        options: ["lopen", "liep", "geliepen", "loopt"],
+        answer: 0,
+        wrongHints: [null, "Een woordenboek zet werkwoorden onder het hele werkwoord, niet de verleden tijd.", "Dat is geen bestaand woord.", "De vorm met -t staat ook niet apart als trefwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Hele werkwoord = trefwoord", tekst: "Werkwoorden staan in het woordenboek onder het hele werkwoord (de ik-vorm met -en). 'liep' zoek je dus onder 'lopen'." }],
+          niveaus: {
+            basis: "Werkwoorden staan onder het hele werkwoord → 'lopen'.",
+            simpeler: "Onder welke vorm staat een werkwoord: de verleden tijd of het hele werkwoord?",
+            nogSimpeler: "Zoek je 'liep' onder 'liep' of onder 'lopen'?",
           },
         },
       },
