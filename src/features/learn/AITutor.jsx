@@ -9,6 +9,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import ProBadge from "../../subscription/ProBadge.jsx";
+import { trackProUse } from "../../subscription/proPlan.js";
 
 const STORAGE_PREFIX = "studiebol_tutor_chat_";
 
@@ -71,6 +73,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     setInput("");
     setBusy(true);
     setError(null);
+    // Pro-meting (Mark 2026-06-06): elke échte AI-vraag = 1 gebruik.
+    trackProUse("ai-tutor", { pathId });
 
     // Audit fix 2026-05-14: correctOption NIET meer in payload. AI moet uit
     // uitleg + opties zelf afleiden welke optie correct is, anders kan een
@@ -156,8 +160,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               boxShadow: "0 0 8px rgba(0,200,83,0.7)",
             }} />
             <div style={{ minWidth: 0 }}>
-              <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 AI-leerbegeleider
+                <ProBadge feature="ai-tutor" />
               </div>
               <div style={{
                 fontSize: 11,

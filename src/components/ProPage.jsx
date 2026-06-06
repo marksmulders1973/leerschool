@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import supabase from "../supabase.js";
 import Header from "./Header.jsx";
 import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
+import { track } from "../utils.js";
+import { PAYWALL_ACTIVE } from "../subscription/config.js";
+import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL } from "../subscription/proPlan.js";
 
 const PLANS = [
   {
@@ -123,6 +126,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
 
   const plan = PLANS.find(p => p.id === selected);
 
+  useEffect(() => { try { track("pro_page_view"); } catch {} }, []);
+
   const handleStartTrial = async () => {
     if (!authUser) { onLogin?.(); return; }
     setLoading(true);
@@ -141,44 +146,86 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
   const handleWaitlist = async () => {
     if (!email.includes("@")) return;
     setLoading(true);
-    await supabase.from("upgrade_waitlist").insert({ email, plan: selected }).catch(() => {});
+    await supabase.from("upgrade_waitlist").insert({ email, plan: PAYWALL_ACTIVE ? selected : "pro-kwartier" }).catch(() => {});
     setSent(true);
     setLoading(false);
   };
 
   return (
     <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg, #08101e 0%, #0d1a2e 60%, #120820 100%)" }}>
-      <Header title={`${BRAND.name} Pro ✨`} subtitle="Meer voor jou, beter voor je kind" onBack={onBack} onHome={onHome} />
+      <Header title={`${BRAND.name} Pro ✨`} subtitle="Wat je nu gratis hebt — en straks per kwartier" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 60px", maxWidth: 500, margin: "0 auto" }}>
 
-        {/* Hero banner */}
+        {/* Hero banner — per-kwartier-model (Mark 2026-06-06) */}
         <div style={{ textAlign: "center", marginBottom: 24 }}>
-          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: isLaunchPromoActive() ? "rgba(124,58,237,0.18)" : "rgba(0,200,83,0.15)", border: isLaunchPromoActive() ? "1px solid rgba(167,139,250,0.5)" : "1px solid rgba(0,200,83,0.3)", fontFamily: "var(--font-body)", fontSize: 12, color: isLaunchPromoActive() ? "#c4b5fd" : "var(--color-brand-primary-100)", fontWeight: 700, marginBottom: 10 }}>
-            {isLaunchPromoActive() ? "🎉 LANCERING — ALLES GRATIS IN 2026" : "1 MAAND GRATIS PROBEREN"}
+          <div style={{ display: "inline-block", padding: "4px 14px", borderRadius: 20, background: "rgba(0,200,83,0.15)", border: "1px solid rgba(0,200,83,0.3)", fontFamily: "var(--font-body)", fontSize: 12, color: "var(--color-brand-primary-100)", fontWeight: 700, marginBottom: 10 }}>
+            🎉 Nu gratis &amp; onbeperkt — t/m 2026
           </div>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "var(--color-text-strong)", lineHeight: 1.2, marginBottom: 6 }}>
-            {isLaunchPromoActive() ? <>Alle Pro-functies<br />gratis t/m 31 dec 2026</> : <>{BRAND.name} is gratis.<br />Pro maakt het krachtig.</>}
+            Alles is nu gratis.<br />Dit zijn de Pro-extra's.
           </div>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.45)" }}>
-            {isLaunchPromoActive()
-              ? "Geen betaling, geen creditcard. Prijzen hieronder starten pas in 2027."
-              : "Basis-oefenen blijft gratis — Pro voegt extra's toe voor ouders en leerkrachten"}
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
+            Vanaf 2027 blijft de basis gratis. Pro-extra's koop je dan <strong style={{ color: "#ffce80" }}>per kwartier</strong> bij —
+            geen abonnement, geen automatische verlenging. Je betaalt alléén voor wat je écht gebruikt.
           </div>
         </div>
 
-        {/* Gratis overzicht */}
-        <div style={{ borderRadius: 16, border: "1px solid rgba(105,240,174,0.2)", background: "rgba(105,240,174,0.04)", padding: "14px 16px", marginBottom: 20 }}>
+        {/* Gratis-basis */}
+        <div style={{ borderRadius: 16, border: "1px solid rgba(105,240,174,0.2)", background: "rgba(105,240,174,0.04)", padding: "14px 16px", marginBottom: 16 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "var(--color-brand-primary-100)", marginBottom: 10 }}>
-            🆓 Gratis-basis — voor iedereen, ook na 2026
+            🆓 Altijd gratis — de basis
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4 }}>
-            {FREE_FEATURES.map((f, i) => (
-              <div key={i} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)" }}>{f}</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {PRO_GRATIS_BASIS.map((f, i) => (
+              <div key={i} style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", display: "flex", gap: 8 }}>
+                <span style={{ color: "#69f0ae" }}>✓</span> {f}
+              </div>
             ))}
           </div>
         </div>
 
+        {/* Pro-extra's — wat je straks "wint" (nu gratis preview) */}
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffce80", marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
+          ✨ Pro-extra's
+          <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>nu nog gratis</span>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
+          {Object.values(PRO_FEATURES).map((f) => (
+            <div key={f.id} style={{ borderRadius: 14, border: "1px solid rgba(255,183,77,0.22)", background: "rgba(255,183,77,0.05)", padding: "12px 14px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
+                <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{f.label}</span>
+                <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 10.5, fontWeight: 700, color: f.status === "live" ? "#69f0ae" : "rgba(255,255,255,0.4)" }}>
+                  {f.status === "live" ? "✓ nu gratis" : "binnenkort"}
+                </span>
+              </div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>{f.blurb}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Per-kwartier-model uitgelegd */}
+        <div style={{ borderRadius: 16, border: "1px solid rgba(255,206,128,0.3)", background: "rgba(255,183,77,0.07)", padding: "16px 18px", marginBottom: 20 }}>
+          <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ffce80", marginBottom: 8 }}>
+            ⏱️ Hoe werkt "per kwartier"?
+          </div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.6, marginBottom: 10 }}>
+            Vanaf 2027 koop je losse kwartiertjes (bv. een bundel van 10). Zolang je saldo loopt, gebruik je de Pro-extra's. Is het op? Dan stopt het gewoon — jij beslist zelf of je bijkoopt.
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {["Je saldo staat altijd in beeld — geen verrassingen", "Nooit een automatische verlenging of stilzwijgend abonnement", "Je betaalt alléén voor wat je écht gebruikt"].map((t, i) => (
+              <div key={i} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", display: "flex", gap: 8 }}>
+                <span style={{ color: "#69f0ae" }}>✓</span> {t}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Abonnement-keuzemenu + proef — alleen tonen als de paywall live is.
+            Nu (per-kwartier-model, paywall uit) verbergen we de oude
+            maand/jaar-prijzen om geen tegenstrijdige belofte te doen. */}
+        {PAYWALL_ACTIVE && (<>
         {/* Plan selector */}
         <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
           {/* Rij 1: Ouder + Leerkracht */}
@@ -300,6 +347,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             )}
           </div>
         )}
+        </>)}
 
         {/* Waitlist */}
         {!sent ? (
@@ -308,7 +356,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Leerkwartier is gratis tot januari 2027. Premium start dan met €5,99/maand of €19,95 voor de hele examenperiode — geen auto-renewal.
+              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis en koop je Pro-extra's per kwartier bij — geen abonnement, geen automatische verlenging. We sturen je één berichtje als het zover is.
             </div>
             <input
               type="email"

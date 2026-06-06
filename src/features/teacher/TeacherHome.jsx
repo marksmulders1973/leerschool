@@ -5,6 +5,7 @@ import { BRAND } from "../../brand.js";
 import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
+import ProBadge from "../../subscription/ProBadge.jsx";
 
 export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, onViewProgress, onManageClasses, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
@@ -276,10 +277,11 @@ export default function TeacherHome({ userName, quizzes, classes, onCreateQuiz, 
         {!isTeacherPro && (
           <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 12, background: quizLimitReached ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.04)", border: `1px solid ${quizLimitReached ? "rgba(255,107,53,0.4)" : "rgba(255,255,255,0.1)"}`, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
             <div>
-              <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: quizLimitReached ? "#ff8c42" : "rgba(255,255,255,0.5)", fontWeight: 700 }}>
+              <span style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 13, color: quizLimitReached ? "#ff8c42" : "rgba(255,255,255,0.5)", fontWeight: 700 }}>
                 {quizLimitReached ? "⚠️ Limiet bereikt" : `📝 ${quizCount}/${quizLimit} toetsen`}
+                <ProBadge feature="teacher-tools" showFree={false} onInfo={onUpgrade} />
               </span>
-              {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Gratis tot {quizLimit} toetsen</div>}
+              {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Onbeperkt toetsen is straks Pro — nu gratis tot {quizLimit}</div>}
             </div>
             <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#ff6b35" : "rgba(255,107,53,0.2)", color: quizLimitReached ? "var(--color-text-strong)" : "#ff8c42", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
               {quizLimitReached ? "Upgrade →" : "Pro: onbeperkt"}

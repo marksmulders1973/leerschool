@@ -5,6 +5,12 @@
 
 import { useEffect, useState, useCallback } from "react";
 import supabase from "../supabase.js";
+import { getProFeature } from "../subscription/proPlan.js";
+
+function proLabel(id) {
+  const f = getProFeature(id);
+  return f ? `${f.icon} ${f.label}` : id;
+}
 
 function fmtDuur(sec) {
   sec = Math.round(sec || 0);
@@ -102,6 +108,24 @@ export default function AdminStats({ onBack, onHome }) {
                 <H>🖱️ Meest gebruikte acties</H>
                 <Lijst rows={(stats.top_events || []).map(r => [r.name, r.n])} eenheid="x" />
               </div>
+            </div>
+
+            {/* Pro-feature gebruik (Mark 2026-06-06) — meten wat straks Pro is */}
+            <div style={{ ...card, borderColor: "rgba(255,206,128,0.3)", background: "rgba(255,183,77,0.05)" }}>
+              <div style={{ fontFamily: "'Fredoka',sans-serif", fontSize: 15, fontWeight: 700, color: "#ffce80", marginBottom: 10 }}>✨ Pro-extra's — gebruik</div>
+              {(stats.pro_gebruik || []).length === 0 ? (
+                <div style={{ color: "rgba(231,237,246,0.5)", fontSize: 13 }}>Nog geen Pro-feature gebruikt.</div>
+              ) : (
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {(stats.pro_gebruik || []).map((r, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <div style={{ flex: 1, fontSize: 13, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{proLabel(r.feature)}</div>
+                      <div style={{ fontSize: 13, fontWeight: 800, color: "#ffd54f", minWidth: 90, textAlign: "right" }}>{r.gebruikt}× · {r.personen}p</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div style={{ marginTop: 8, fontSize: 11, color: C.muted }}>× = keer gebruikt · p = unieke personen. Gezien-in-beeld: {(stats.pro_gezien || []).reduce((a, r) => a + (Number(r.personen) || 0), 0)} personen totaal.</div>
             </div>
 
             {/* Feedback */}

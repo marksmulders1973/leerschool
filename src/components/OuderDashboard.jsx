@@ -5,6 +5,8 @@ import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
 import { clearAll as clearAdaptive } from "../shared/adaptiveStore.js";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
+import ProBadge from "../subscription/ProBadge.jsx";
+import { trackProUse } from "../subscription/proPlan.js";
 
 const SUBJECT_LABELS = {
   rekenen: "Rekenen", taal: "Taal", aardrijkskunde: "Aardrijkskunde",
@@ -58,6 +60,9 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
   // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
   // naam-in-app van kind opgeven vóór code-generatie.
   const [inviteChildName, setInviteChildName] = useState("");
+
+  // Pro-meting (Mark 2026-06-06): ouder opent het inzicht-dashboard.
+  useEffect(() => { trackProUse("parent-dashboard"); }, []);
 
   // Laad gekoppelde kinderen
   useEffect(() => {
@@ -254,6 +259,15 @@ export default function OuderDashboard({ onBack, onHome, authUser, subscription,
       <Header title="Ouder Dashboard 👨‍👩‍👧" subtitle="Volg de voortgang van je kind" onBack={onBack} onHome={onHome} />
 
       <div style={{ padding: "16px 20px 48px", maxWidth: 480, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
+
+        {/* Pro-label (Mark 2026-06-06): ouder-inzicht is straks een Pro-extra,
+            nu nog gratis. Badge laat de waarde zien + meet het gebruik. */}
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", padding: "10px 14px", borderRadius: 12, background: "rgba(255,183,77,0.06)", border: "1px solid rgba(255,183,77,0.22)" }}>
+          <ProBadge feature="parent-dashboard" size="md" onInfo={onUpgrade} />
+          <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
+            Dit ouder-inzicht is straks een Pro-extra — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
+          </span>
+        </div>
 
         {/* Welkom-paneel — voordelen voor ouder + kind */}
         <div style={{
