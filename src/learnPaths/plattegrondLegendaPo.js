@@ -85,6 +85,44 @@ const steps = [
           },
         },
       },
+      {
+        q: "Wat kun je doen met een plattegrond van een dierentuin?",
+        options: [
+          "zien waar de dieren en de uitgang liggen",
+          "horen welke geluiden de dieren maken",
+          "weten hoe oud de dieren zijn",
+          "de dieren voeren",
+        ],
+        answer: 0,
+        wrongHints: [null, "Geluiden hoor je niet op een tekening.", "Leeftijden staan niet op een plattegrond.", "Voeren doe je niet via een kaart."],
+        uitlegPad: {
+          stappen: [{ titel: "Zien waar alles ligt", tekst: "Op de plattegrond zie je waar de dieren, de ingang en de uitgang liggen, zodat je de weg vindt." }],
+          niveaus: {
+            basis: "Een plattegrond laat zien waar alles ligt.",
+            simpeler: "Wat laat een plattegrond zien: waar dingen zijn of hoe oud dieren zijn?",
+            nogSimpeler: "Zie je op een plattegrond waar de dieren liggen?",
+          },
+        },
+      },
+      {
+        q: "Een plattegrond lijkt nog het meest op...",
+        options: [
+          "een foto recht van bovenaf (vanuit een drone)",
+          "een selfie",
+          "een filmpje",
+          "een geschilderd portret",
+        ],
+        answer: 0,
+        wrongHints: [null, "Een selfie is van voren, niet van boven.", "Een plattegrond beweegt niet.", "Een portret toont een gezicht, geen indeling."],
+        uitlegPad: {
+          stappen: [{ titel: "Bovenaanzicht", tekst: "Een plattegrond is als een foto recht van bovenaf: je ziet de indeling van boven." }],
+          niveaus: {
+            basis: "Een plattegrond is een bovenaanzicht, als een drone-foto.",
+            simpeler: "Vanaf welke kant kijk je: van boven of van voren?",
+            nogSimpeler: "Is een plattegrond van bovenaf?",
+          },
+        },
+      },
     ],
   },
 
@@ -166,6 +204,39 @@ const steps = [
           },
         },
       },
+      {
+        q: "In de legenda staat 🚻 = toilet. Je ziet 🚻 op de plattegrond. Wat is daar?",
+        options: ["een toilet", "een restaurant", "de ingang", "een parkeerplaats"],
+        answer: 0,
+        wrongHints: [null, "Een restaurant heeft het mes-en-vork-teken.", "De ingang heeft een eigen pijl.", "Parkeren heeft het 🅿️-teken."],
+        uitlegPad: {
+          stappen: [{ titel: "Symbool opzoeken", tekst: "🚻 betekent volgens de legenda 'toilet'. Waar je dat teken ziet, is dus een toilet." }],
+          niveaus: {
+            basis: "🚻 = toilet volgens de legenda.",
+            simpeler: "Wat betekent het 🚻-teken volgens de legenda?",
+            nogSimpeler: "Hoort 🚻 bij het toilet?",
+          },
+        },
+      },
+      {
+        q: "Je ziet op de plattegrond een symbool dat je niet kent. Wat doe je?",
+        options: [
+          "in de legenda kijken wat het betekent",
+          "het symbool maar negeren",
+          "de plattegrond weggooien",
+          "zomaar wat raden en doorlopen",
+        ],
+        answer: 0,
+        wrongHints: [null, "Negeren helpt je niet verder.", "Juist de legenda heb je nu nodig.", "Raden kan je de verkeerde kant op sturen."],
+        uitlegPad: {
+          stappen: [{ titel: "Legenda raadplegen", tekst: "Ken je een symbool niet? Kijk in de legenda; daar staat wat het betekent." }],
+          niveaus: {
+            basis: "Onbekend symbool → kijk in de legenda.",
+            simpeler: "Waar zoek je op wat een onbekend teken betekent?",
+            nogSimpeler: "Helpt de legenda bij een onbekend symbool?",
+          },
+        },
+      },
     ],
   },
 
@@ -231,6 +302,34 @@ const steps = [
             basis: "Noord boven → onder is zuid.",
             simpeler: "Tegenover het noorden (boven) ligt het zuiden (onder).",
             nogSimpeler: "Boven is noord, onder is …?",
+          },
+        },
+      },
+      {
+        q: "Het noorden is boven. Je moet naar het westen. Welke kant op de kaart is dat?",
+        options: ["naar links", "naar rechts", "naar boven", "naar onderen"],
+        answer: 0,
+        wrongHints: [null, "Rechts is het oosten.", "Boven is het noorden.", "Onderen is het zuiden."],
+        uitlegPad: {
+          stappen: [{ titel: "West = links", tekst: "Met het noorden boven is het westen links (N boven, O rechts, Z onder, W links)." }],
+          niveaus: {
+            basis: "Noord boven → west is links.",
+            simpeler: "N boven, O rechts, Z onder, W links. Waar is west?",
+            nogSimpeler: "Met noord boven: is west links of rechts?",
+          },
+        },
+      },
+      {
+        q: "De route is: ga rechtdoor, dan rechtsaf, en dan ben je er. Wat is de laatste stap vóór je doel?",
+        options: ["rechtsaf", "rechtdoor", "linksaf", "terug"],
+        answer: 0,
+        wrongHints: [null, "Dat is de eerste stap, niet de laatste.", "Linksaf staat niet in de route.", "Je gaat vooruit, niet terug."],
+        uitlegPad: {
+          stappen: [{ titel: "Stap voor stap", tekst: "De route is rechtdoor (1) en dan rechtsaf (2). De laatste stap is dus rechtsaf." }],
+          niveaus: {
+            basis: "De laatste stap van de route is rechtsaf.",
+            simpeler: "Wat staat er als tweede/laatste in de route?",
+            nogSimpeler: "Wat doe je als láátste?",
           },
         },
       },
@@ -315,6 +414,58 @@ const steps = [
             basis: "Zoek het 🚻-teken op de kaart om het toilet te vinden.",
             simpeler: "Welk teken hoort bij het toilet, en waar staat dat op de kaart?",
             nogSimpeler: "Zoek je het toilet via het 🚻-symbool?",
+          },
+        },
+      },
+      {
+        q: "Je zoekt de speeltuin in een park. In de legenda staat een glijbaan-symbool. Wat doe je?",
+        options: [
+          "het glijbaan-symbool op de kaart opzoeken",
+          "naar de uitgang lopen",
+          "de legenda overslaan",
+          "bij de ingang blijven wachten",
+        ],
+        answer: 0,
+        wrongHints: [null, "De uitgang is niet de speeltuin.", "Juist de legenda wijst je het symbool.", "Wachten brengt je niet bij de speeltuin."],
+        uitlegPad: {
+          stappen: [{ titel: "Symbool → plek", tekst: "Je weet uit de legenda welk teken bij de speeltuin hoort. Zoek dat teken op de kaart en loop ernaartoe." }],
+          niveaus: {
+            basis: "Zoek het glijbaan-teken op de kaart om de speeltuin te vinden.",
+            simpeler: "Welk teken hoort bij de speeltuin, en waar staat dat op de kaart?",
+            nogSimpeler: "Gebruik je het glijbaan-symbool om de speeltuin te vinden?",
+          },
+        },
+      },
+      {
+        q: "Het noorden is boven. De uitgang ligt in het zuiden van het gebouw. Waar op de kaart zoek je 'm?",
+        options: ["onderaan", "bovenaan", "links", "rechts"],
+        answer: 0,
+        wrongHints: [null, "Bovenaan is het noorden.", "Links is het westen.", "Rechts is het oosten."],
+        uitlegPad: {
+          stappen: [{ titel: "Zuid = onder", tekst: "Met het noorden boven ligt het zuiden onderaan. De uitgang in het zuiden zoek je dus onderaan de kaart." }],
+          niveaus: {
+            basis: "Noord boven → zuiden is onderaan.",
+            simpeler: "Waar ligt het zuiden als het noorden boven is?",
+            nogSimpeler: "Noord = boven, zuid = …?",
+          },
+        },
+      },
+      {
+        q: "Wat zijn de 3 slimme stappen om iets te vinden op een plattegrond?",
+        options: [
+          "je startplek zoeken, je doel via de legenda, dan de route bepalen",
+          "de kaart omdraaien en gokken",
+          "alleen de titel lezen",
+          "de schaal opmeten",
+        ],
+        answer: 0,
+        wrongHints: [null, "Omdraaien en gokken is geen plan.", "De titel helpt je niet de weg te vinden.", "De schaal gaat over afstanden, niet over de route."],
+        uitlegPad: {
+          stappen: [{ titel: "Start → doel → route", tekst: "1) Zoek de 'je bent hier'-stip. 2) Zoek je doel met de legenda. 3) Bepaal de route ernaartoe." }],
+          niveaus: {
+            basis: "Eerst je plek, dan je doel (via legenda), dan de route.",
+            simpeler: "Begin je bij je eigen plek, je doel en de route — of bij de titel?",
+            nogSimpeler: "Zoek je eerst waar je staat?",
           },
         },
       },
