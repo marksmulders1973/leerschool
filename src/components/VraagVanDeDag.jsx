@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SOCIAL_VRAGEN } from "../socialVragen.js";
 import { track } from "../utils.js";
+import DeelVraagKnop from "./DeelVraagKnop.jsx";
 
 // "Doorstroomtoets-vraag van de dag" — een dagelijkse, lichte reden om de app te
 // openen, ook zonder een heel leerpad te doen. Hergebruikt de /v/-vragenpool
@@ -130,9 +131,11 @@ export default function VraagVanDeDag() {
               </div>
             </>
           )}
-          <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", marginTop: 10 }}>
+          <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.55)", marginTop: 10, marginBottom: 10 }}>
             ✅ Klaar voor vandaag — morgen staat er een nieuwe vraag klaar.
           </div>
+          {/* Mond-tot-mond: laat ouders de vraag van vandaag doorsturen. */}
+          <DeelVraagKnop id={vraag.id} />
         </div>
       )}
     </div>

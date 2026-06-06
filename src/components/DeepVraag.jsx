@@ -3,6 +3,7 @@ import { getSocialVraag } from "../socialVragen.js";
 import { track } from "../utils.js";
 import { BRAND } from "../brand.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import DeelVraagKnop from "./DeelVraagKnop.jsx";
 
 /**
  * DeepVraag — landingspagina voor de social-deep-link /v/<id>.
@@ -187,6 +188,10 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad }) {
           <PrimaryCTA onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "toets" }); setPage && setPage("cito-leerpad-toets"); }}>
             Doe de gratis oefentoets →
           </PrimaryCTA>
+          {/* Mond-tot-mond: deel-knop sluit de groei-bal (bezoek → nieuwe bezoeker). */}
+          <div style={{ marginTop: 10 }}>
+            <DeelVraagKnop id={id} />
+          </div>
           <button type="button"
             onClick={() => { track("deeplink_cta", { id: String(id).slice(0, 40), naar: "home" }); setPage && setPage("home"); }}
             style={{
