@@ -90,6 +90,30 @@ const steps = [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'bewustwording', 'grote/kleine hersenen', 'hersenstam'" },
           { id: "mens-biologie-vmbo", title: "Mens-biologie — zenuwstelsel", niveau: "vmbo-2", why: "hersenen-onderdelen + functies — kern van deze vraag" },
         ],
+        uitlegPad: {
+          stappen: [
+            { titel: "De 3 hersendelen + hun taak", tekst: "1. **Grote hersenen** (cortex): alles wat je BEWUST doet, denkt en voelt — zien, horen, ruiken, proeven, voelen, beslissen.\n2. **Kleine hersenen**: balans, houding en het soepel maken van bewegingen (coördinatie).\n3. **Hersenstam**: onbewuste, automatische functies — ademhaling, hartslag, reflexen." },
+            { titel: "Welke past bij 'een vol gevoel'?", tekst: "Een vol gevoel is iets wat Carola BEWUST merkt. Bewust = grote hersenen. Dus het antwoord is de grote hersenen." },
+          ],
+          woorden: [
+            { woord: "bewustwording", uitleg: "Dat je iets dóórhebt / merkt — daar zijn de grote hersenen voor." },
+            { woord: "grote hersenen", uitleg: "Het grootste deel; verzorgt alle bewuste zintuigen, gedachten en gevoel." },
+            { woord: "kleine hersenen", uitleg: "Achteronder; regelt balans en vloeiende bewegingen." },
+            { woord: "hersenstam", uitleg: "Verbinding met het ruggenmerg; regelt onbewuste functies zoals ademen." },
+          ],
+          theorie: "Vuistregel: alles wat je BEWUST voelt of merkt → grote hersenen. Balans/bewegen → kleine hersenen. Vanzelf (ademen, hartslag) → hersenstam.",
+          voorbeelden: [
+            { type: "stap", tekst: "Je voelt dat je buik vol zit (bewust) → grote hersenen." },
+            { type: "stap", tekst: "Je houdt je evenwicht op de fiets (balans) → kleine hersenen." },
+            { type: "stap", tekst: "Je ademt door terwijl je slaapt (vanzelf) → hersenstam." },
+          ],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "BEWUST voelen = GROTE hersenen. Onthoud: bewust en groot horen bij elkaar." }],
+          niveaus: {
+            basis: "Bewust voelen (zoals een vol gevoel) gebeurt in de grote hersenen. Antwoord A.",
+            simpeler: "Grote hersenen = bewust (voelen, denken). Kleine hersenen = balans. Hersenstam = ademen/hartslag. Een vol gevoel voel je bewust → grote hersenen. Antwoord A.",
+            nogSimpeler: "Bewust voelen = grote hersenen = A.",
+          },
+        },
       },
     ],
   },
