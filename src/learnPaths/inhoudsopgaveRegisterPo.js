@@ -85,6 +85,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "In de inhoudsopgave staat: 'Hoofdstuk 3. Het weer ... 40'. Op welke pagina begint dat hoofdstuk?",
+        options: ["pagina 40", "pagina 3", "pagina 1", "de laatste pagina"],
+        answer: 0,
+        wrongHints: [null, "De 3 is het hoofdstuknummer, niet de pagina.", "Vooraan staat hoofdstuk 1.", "Het hoofdstuk staat niet achteraan."],
+        uitlegPad: {
+          stappen: [{ titel: "Het getal achteraan", tekst: "Achter 'Het weer' staat 40: dat is de pagina waar het hoofdstuk begint." }],
+          niveaus: {
+            basis: "Hoofdstuk 'Het weer' begint op pagina 40.",
+            simpeler: "Welk getal is de pagina: 3 of 40?",
+            nogSimpeler: "Op welke pagina begint het weer-hoofdstuk?",
+          },
+        },
+      },
+      {
+        q: "Welk hoofdstuk staat in de inhoudsopgave vlak vóór hoofdstuk 2?",
+        options: ["hoofdstuk 1", "hoofdstuk 3", "het register", "het laatste hoofdstuk"],
+        answer: 0,
+        wrongHints: [null, "Hoofdstuk 3 komt juist ná 2.", "Het register staat niet in de hoofdstukken-rij.", "Dat staat helemaal aan het eind."],
+        uitlegPad: {
+          stappen: [{ titel: "Boekvolgorde", tekst: "De inhoudsopgave volgt 1, 2, 3… Vlak vóór hoofdstuk 2 staat dus hoofdstuk 1." }],
+          niveaus: {
+            basis: "Vóór hoofdstuk 2 komt hoofdstuk 1.",
+            simpeler: "Welk hoofdstuk komt net vóór 2?",
+            nogSimpeler: "1, 2, 3 — wat komt vóór de 2?",
+          },
+        },
+      },
     ],
   },
 
@@ -167,6 +195,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "In het register staat: 'bij ... 12, 30'. Op hoeveel pagina's wordt 'bij' genoemd?",
+        options: ["2", "12", "30", "42"],
+        answer: 0,
+        wrongHints: [null, "Dat is het éérste paginanummer, geen aantal.", "Dat is het tweede paginanummer.", "Je hoeft de pagina's niet op te tellen."],
+        uitlegPad: {
+          stappen: [{ titel: "Tel de paginanummers", tekst: "Er staan twee pagina's genoemd (12 en 30), dus 'bij' komt op 2 pagina's voor." }],
+          niveaus: {
+            basis: "Twee paginanummers (12 en 30) → 2 pagina's.",
+            simpeler: "Hoeveel getallen staan er achter 'bij'?",
+            nogSimpeler: "12 en 30 — dat zijn hoeveel pagina's?",
+          },
+        },
+      },
+      {
+        q: "Welk onderwerp staat in een alfabetisch register het eerst: zon, bij of vulkaan?",
+        options: ["bij", "vulkaan", "zon", "ze staan door elkaar"],
+        answer: 0,
+        wrongHints: [null, "v komt later dan b.", "z is juist de laatste letter.", "Een register staat netjes op alfabet."],
+        uitlegPad: {
+          stappen: [{ titel: "Op alfabet: b, v, z", tekst: "Beginletters b (bij), v (vulkaan), z (zon). B komt het eerst, dus 'bij' staat vooraan." }],
+          niveaus: {
+            basis: "'bij' (b) komt het eerst in het alfabet.",
+            simpeler: "Welke beginletter komt het vroegst: b, v of z?",
+            nogSimpeler: "b, v of z — welke eerst?",
+          },
+        },
+      },
     ],
   },
 
@@ -237,6 +293,34 @@ const steps = [
             basis: "Een onderwerp als 'bijen' zoek je in het register.",
             simpeler: "Staat 'bijen' als los onderwerp in het register of als hoofdstuk?",
             nogSimpeler: "Waar vind je alle pagina's over bijen?",
+          },
+        },
+      },
+      {
+        q: "Je wilt het hele hoofdstuk over het heelal lezen. Wat gebruik je het best?",
+        options: ["de inhoudsopgave", "het register", "de achterflap", "alleen de plaatjes"],
+        answer: 0,
+        wrongHints: [null, "Het register geeft losse onderwerpen, geen heel hoofdstuk.", "De achterflap geeft maar een korte beschrijving.", "Plaatjes geven geen hoofdstuk-overzicht."],
+        uitlegPad: {
+          stappen: [{ titel: "Heel hoofdstuk → inhoudsopgave", tekst: "Een heel hoofdstuk zoek je via de inhoudsopgave; daar staat op welke pagina het begint." }],
+          niveaus: {
+            basis: "Een heel hoofdstuk → inhoudsopgave.",
+            simpeler: "Zoek je een hoofdstuk of een los woord? Een hoofdstuk → inhoudsopgave.",
+            nogSimpeler: "Waar vind je waar een hoofdstuk begint?",
+          },
+        },
+      },
+      {
+        q: "Je zoekt alléén de pagina waar het woord 'magneet' wordt uitgelegd. Wat gebruik je?",
+        options: ["het register", "de inhoudsopgave", "het voorwoord", "de titelpagina"],
+        answer: 0,
+        wrongHints: [null, "De inhoudsopgave geeft hoofdstukken, geen losse woorden.", "Het voorwoord gaat over het boek zelf.", "De titelpagina helpt niet bij opzoeken."],
+        uitlegPad: {
+          stappen: [{ titel: "Los woord → register", tekst: "Eén bepaald woord als 'magneet' zoek je in het register (op alfabet)." }],
+          niveaus: {
+            basis: "Een los woord → register.",
+            simpeler: "Waar staan losse onderwerpen op alfabet?",
+            nogSimpeler: "Zoek je 'magneet' in het register of de inhoudsopgave?",
           },
         },
       },
@@ -315,6 +399,53 @@ const steps = [
             basis: "Register: achteraan, op alfabet.",
             simpeler: "Waar staat het register, en hoe is het geordend?",
             nogSimpeler: "Achteraan en op alfabet — klopt dat voor het register?",
+          },
+        },
+      },
+      {
+        q: "In het register staat: 'rivier ... 22, 56'. Waar kijk je voor informatie over rivieren?",
+        options: ["pagina 22 en pagina 56", "pagina 2", "hoofdstuk 22", "alleen pagina 1"],
+        answer: 0,
+        wrongHints: [null, "Er staan twee volle paginanummers, niet pagina 2.", "Het zijn pagina's, geen hoofdstuknummers.", "Er worden twee pagina's genoemd."],
+        uitlegPad: {
+          stappen: [{ titel: "Naar de genoemde pagina's", tekst: "Achter 'rivier' staan pagina 22 en 56. Daar vind je de informatie over rivieren." }],
+          niveaus: {
+            basis: "Informatie over rivieren staat op pagina 22 en 56.",
+            simpeler: "Welke twee pagina's staan er achter 'rivier'?",
+            nogSimpeler: "22 en 56 — zijn dat de pagina's?",
+          },
+        },
+      },
+      {
+        q: "Je hebt nog 5 minuten en wilt snel één feit over de maan vinden in een dik boek. Wat doe je?",
+        options: [
+          "in het register zoeken bij 'maan'",
+          "het hele boek van voor tot achter lezen",
+          "bij het voorwoord beginnen",
+          "alleen de kaft bekijken",
+        ],
+        answer: 0,
+        wrongHints: [null, "Het hele boek lezen kost veel te veel tijd.", "Het voorwoord gaat over het boek, niet over de maan.", "De kaft helpt niet bij opzoeken."],
+        uitlegPad: {
+          stappen: [{ titel: "Register → snel", tekst: "Met het register vind je meteen de pagina('s) over 'maan', zonder te bladeren." }],
+          niveaus: {
+            basis: "Zoek 'maan' op in het register voor de snelste route.",
+            simpeler: "Wat is sneller: het register of het hele boek lezen?",
+            nogSimpeler: "Vind je 'maan' sneller via het register?",
+          },
+        },
+      },
+      {
+        q: "Wat staat vooraan in het boek, op volgorde van de hoofdstukken?",
+        options: ["de inhoudsopgave", "het register", "een onderwerpenlijst op alfabet", "de laatste bladzijde"],
+        answer: 0,
+        wrongHints: [null, "Het register staat juist achteraan.", "Een alfabetische onderwerpenlijst is het register (achteraan).", "Dat staat helemaal aan het eind."],
+        uitlegPad: {
+          stappen: [{ titel: "Voor + boekvolgorde", tekst: "De inhoudsopgave staat vooraan en volgt de volgorde van de hoofdstukken." }],
+          niveaus: {
+            basis: "Vooraan + op hoofdstuk-volgorde = de inhoudsopgave.",
+            simpeler: "Welke lijst staat vooraan op boekvolgorde?",
+            nogSimpeler: "Is de inhoudsopgave vooraan op boekvolgorde?",
           },
         },
       },
