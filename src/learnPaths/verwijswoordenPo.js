@@ -86,6 +86,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "*Sara fietst naar school. Ze is laat.* Naar wie verwijst 'Ze'?",
+        options: ["Sara", "de school", "laat", "niemand"],
+        answer: 0,
+        wrongHints: [null, "Een school fietst niet — wie wel?", "Dat zegt hóé ze is, geen persoon.", "Er is wél iemand: kijk in de zin ervoor."],
+        uitlegPad: {
+          stappen: [{ titel: "Wie is er laat?", tekst: "'Ze' is een persoon die fietst en laat is. In de zin ervoor staat 'Sara'." }],
+          niveaus: {
+            basis: "'Ze' verwijst naar de persoon ervoor: Sara.",
+            simpeler: "Wie fietst er naar school?",
+            nogSimpeler: "Over wie gaat 'ze': Sara of de school?",
+          },
+        },
+      },
+      {
+        q: "Welk woord is GEEN verwijswoord?",
+        options: ["tafel", "hij", "die", "het"],
+        answer: 0,
+        wrongHints: [null, "Dat is wél een verwijswoord (verwijst naar een man/de-woord).", "Dat is wél een verwijswoord.", "Dat is wél een verwijswoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Zelfstandig naamwoord vs verwijswoord", tekst: "'Tafel' is een gewoon ding (zelfstandig naamwoord). 'Hij, die, het' wijzen terug naar iets — dat zijn verwijswoorden." }],
+          niveaus: {
+            basis: "'Tafel' is een ding zelf, geen verwijswoord.",
+            simpeler: "Welk woord noemt een ding, in plaats van ernaar terug te wijzen?",
+            nogSimpeler: "Drie woorden wijzen terug; welk woord is gewoon een ding?",
+          },
+        },
+      },
     ],
   },
 
@@ -153,6 +181,34 @@ const steps = [
             basis: "'Hem' verwijst naar de fiets; 'hij' naar opa.",
             simpeler: "Wat gebruikt opa elke dag?",
             nogSimpeler: "Wat wordt er gebruikt: opa of de fiets?",
+          },
+        },
+      },
+      {
+        q: "*De kat ligt op de bank. Hij slaapt lekker.* Waar verwijst 'Hij' naar?",
+        options: ["de kat", "de bank", "slaapt", "niemand"],
+        answer: 0,
+        wrongHints: [null, "Een bank slaapt niet — wat wel?", "Dat is een werkwoord.", "Er is wél een dier: kijk ervoor."],
+        uitlegPad: {
+          stappen: [{ titel: "Wat slaapt er?", tekst: "De kat slaapt. 'Hij' verwijst naar de kat (een 'de'-woord)." }],
+          niveaus: {
+            basis: "'Hij' verwijst naar de kat.",
+            simpeler: "Wat ligt er lekker te slapen?",
+            nogSimpeler: "Waar gaat 'hij' over: de kat of de bank?",
+          },
+        },
+      },
+      {
+        q: "*Sophie heeft een nieuwe jas. Ze draagt hem vaak.* Waar verwijst 'hem' naar?",
+        options: ["de jas", "Sophie", "vaak", "draagt"],
+        answer: 0,
+        wrongHints: [null, "Sophie is degene die draagt (ze), niet wat gedragen wordt.", "Dat zegt hoe váák.", "Dat is een werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Twee verwijswoorden", tekst: "'Ze' = Sophie (die draagt). 'Hem' = de jas (die gedragen wórdt). 'Hem' verwijst naar de jas." }],
+          niveaus: {
+            basis: "'Hem' verwijst naar de jas; 'ze' naar Sophie.",
+            simpeler: "Wat draagt Sophie vaak?",
+            nogSimpeler: "Wat wordt er gedragen: Sophie of de jas?",
           },
         },
       },
@@ -226,6 +282,34 @@ const steps = [
           },
         },
       },
+      {
+        q: "*Ik kocht een boek. Dit lees ik nu.* Waar verwijst 'Dit' naar?",
+        options: ["het boek", "ik", "nu", "kopen"],
+        answer: 0,
+        wrongHints: [null, "Dat is de lezer, niet wat gelezen wordt.", "Dat zegt wannéér.", "Dat is een werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Wat lees je nu?", tekst: "Je leest het boek. 'Dit' verwijst naar het boek (een 'het'-woord, dus 'dit')." }],
+          niveaus: {
+            basis: "'Dit' verwijst naar het boek.",
+            simpeler: "Wat heb je gekocht en lees je nu?",
+            nogSimpeler: "Waar gaat 'dit' over: het boek of nu?",
+          },
+        },
+      },
+      {
+        q: "Bij welk woord hoort het verwijswoord 'die' (in plaats van 'dat')?",
+        options: ["de fiets", "het huis", "het kind", "het raam"],
+        answer: 0,
+        wrongHints: [null, "Een 'het'-woord krijgt 'dat', niet 'die'.", "Ook een 'het'-woord → 'dat'.", "Ook een 'het'-woord → 'dat'."],
+        uitlegPad: {
+          stappen: [{ titel: "'de'-woord → die", tekst: "Bij een 'de'-woord (de fiets) past 'die'. Bij 'het'-woorden (het huis, het kind, het raam) past 'dat'." }],
+          niveaus: {
+            basis: "'de fiets' → 'die'. 'het'-woorden krijgen 'dat'.",
+            simpeler: "Welk woord is een 'de'-woord? Daar hoort 'die' bij.",
+            nogSimpeler: "Zeg je 'de fiets' of 'het fiets'? Dan hoort 'die' erbij.",
+          },
+        },
+      },
     ],
   },
 
@@ -292,6 +376,48 @@ const steps = [
             basis: "'Er … mee' verwijst naar de telefoon.",
             simpeler: "Wat heeft ze gekocht waar ze blij mee is?",
             nogSimpeler: "Waar is je zus blij mee: de telefoon of het kopen?",
+          },
+        },
+      },
+      {
+        q: "*De meisjes zingen in het koor. Ze oefenen elke week.* Naar wie verwijst 'Ze'?",
+        options: ["de meisjes", "het koor", "elke week", "zingen"],
+        answer: 0,
+        wrongHints: [null, "Een koor is de groep/plek; wie oefenen er?", "Dat zegt hoe váák.", "Dat is een werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Wie oefenen er?", tekst: "'Ze' (meervoud) verwijst naar de meisjes, die zingen en oefenen." }],
+          niveaus: {
+            basis: "'Ze' verwijst naar de meisjes.",
+            simpeler: "Wie zingen er en oefenen elke week?",
+            nogSimpeler: "Over wie gaat 'ze': de meisjes of het koor?",
+          },
+        },
+      },
+      {
+        q: "*Tom geeft Lisa een cadeau. Hij heeft het zelf ingepakt.* Waar verwijst 'het' naar?",
+        options: ["het cadeau", "Tom", "Lisa", "inpakken"],
+        answer: 0,
+        wrongHints: [null, "Tom is degene die inpakt (hij), niet wat ingepakt is.", "Lisa krijgt het, maar 'het' is het voorwerp.", "Dat is een werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Wat is er ingepakt?", tekst: "Tom pakte het cadeau in. 'Het' verwijst naar het cadeau ('hij' = Tom)." }],
+          niveaus: {
+            basis: "'Het' verwijst naar het cadeau.",
+            simpeler: "Wat heeft Tom ingepakt?",
+            nogSimpeler: "Wat is er ingepakt: Tom of het cadeau?",
+          },
+        },
+      },
+      {
+        q: "*We gingen naar het strand. Daar bouwden we een zandkasteel.* Waar verwijst 'Daar' naar?",
+        options: ["het strand", "het zandkasteel", "wij", "bouwen"],
+        answer: 0,
+        wrongHints: [null, "Het zandkasteel maakten jullie dáár — 'daar' is de plek.", "'Daar' is een plaats, geen personen.", "Dat is een werkwoord."],
+        uitlegPad: {
+          stappen: [{ titel: "Waar bouwden jullie?", tekst: "'Daar' wijst naar een plaats: het strand. Op het strand bouwden jullie het zandkasteel." }],
+          niveaus: {
+            basis: "'Daar' verwijst naar de plaats: het strand.",
+            simpeler: "Op welke plek bouwden jullie het zandkasteel?",
+            nogSimpeler: "Waar gaat 'daar' over: het strand (plek) of het zandkasteel?",
           },
         },
       },
