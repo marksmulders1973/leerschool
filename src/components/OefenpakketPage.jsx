@@ -129,6 +129,29 @@ const PRINT_CSS = `
 
 const MAIL_DONE_KEY = "lk_oefenpakket_mail";
 
+// Bron van de lead bepalen (Mark 2026-06-07): voorheen werd `source` nooit
+// opgeslagen, dus we wisten niet via welk kanaal iemand binnenkwam. Volgorde:
+// 1) UTM uit de URL (betaalde/social-campagnes), 2) interne home-CTA-vlag,
+// 3) externe referrer-hostname, 4) anders 'oefenpakket-direct'.
+function leadSource() {
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const utm = p.get("utm_source");
+    if (utm) {
+      const camp = p.get("utm_campaign");
+      return `utm:${utm}${camp ? "/" + camp : ""}`.slice(0, 80);
+    }
+    const intern = sessionStorage.getItem("lk_lead_src");
+    if (intern) return intern.slice(0, 80);
+    const ref = document.referrer;
+    if (ref) {
+      const h = new URL(ref).hostname.replace(/^www\./, "");
+      if (h && !h.includes("leerkwartier")) return `ref:${h}`.slice(0, 80);
+    }
+  } catch {}
+  return "oefenpakket-direct";
+}
+
 export default function OefenpakketPage({ setPage } = {}) {
   const [actief, setActief] = useState({ rekenen: true, taal: true, studie: true });
   const [omvang, setOmvang] = useState("normaal");
@@ -161,13 +184,14 @@ export default function OefenpakketPage({ setPage } = {}) {
     }
     setMailStatus("busy");
     try {
+      const source = leadSource();
       const { error } = await supabase
         .from("upgrade_waitlist")
-        .insert({ email: adres, plan: "oefenpakket" });
+        .insert({ email: adres, plan: "oefenpakket", source });
       // Dubbele inschrijving (unique-constraint) telt als succes.
       if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
       try { localStorage.setItem(MAIL_DONE_KEY, "1"); } catch {}
-      track("oefenpakket_mail_signup", { omvang });
+      track("oefenpakket_mail_signup", { omvang, source });
       setMailStatus("done");
     } catch {
       setMailStatus("error");

@@ -331,7 +331,7 @@ const ONBOARDING_STEPS = [
   { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
 ];
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPlayObliterator, onPro, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -538,6 +538,16 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const handleLerenClick = () => {
     track("home_cta_leren");
     onLearnPathsHub?.();
+  };
+
+  // Lead-magnet CTA (Mark 2026-06-07): de /oefenpakket-pagina had geen enkele
+  // ingang vanaf de homepage — 302 home-bezoekers zagen 'm niet. We zetten een
+  // bron-vlag zodat we in upgrade_waitlist.source zien dat de lead via de
+  // homepage-CTA kwam (i.p.v. social-bio/direct).
+  const handleOefenpakketClick = () => {
+    try { sessionStorage.setItem("lk_lead_src", "home_cta"); } catch {}
+    track("home_cta_oefenpakket");
+    onOefenpakket?.();
   };
 
   // Helper voor inline link-knoppen in hero-zin (Mark 2026-05-15): doorklikbare
@@ -903,6 +913,35 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.5 }}>
               Daarna blijft de basis gratis. Alleen Pro-extra's koop je <strong style={{ color: "#fff" }}>per kwartier</strong> — je betaalt dus alléén voor wat je écht gebruikt. <strong style={{ color: "#fff" }}>Geen abonnement, geen verrassingen.</strong>
             </div>
+          </div>
+        )}
+
+        {/* Gratis oefenpakket-CTA (Mark 2026-06-07): lead-magnet was onzichtbaar op
+            de homepage (302 bezoekers, 0 ingang). Prominente kaart die naar het
+            printbare Doorstroomtoets-werkboek + e-mail-opt-in leidt. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
+            <button
+              onClick={handleOefenpakketClick}
+              style={{
+                width: "100%", display: "flex", alignItems: "center", gap: 14,
+                textAlign: "left", cursor: "pointer",
+                background: "linear-gradient(135deg, rgba(66,165,245,0.18), rgba(0,200,83,0.10))",
+                border: "1px solid rgba(66,165,245,0.45)", borderRadius: 16,
+                padding: "14px 16px",
+              }}
+            >
+              <span aria-hidden="true" style={{ fontSize: 34, flexShrink: 0 }}>📄</span>
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, color: "#fff", marginBottom: 2 }}>
+                  Gratis Doorstroomtoets-oefenpakket
+                </span>
+                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.82)", lineHeight: 1.45 }}>
+                  Print thuis een compleet oefenwerkboek voor groep 7 &amp; 8 — rekenen, taal &amp; studievaardigheden, mét antwoordsleutel.
+                </span>
+              </span>
+              <span aria-hidden="true" style={{ fontSize: 20, color: "#69f0ae", flexShrink: 0 }}>→</span>
+            </button>
           </div>
         )}
 
