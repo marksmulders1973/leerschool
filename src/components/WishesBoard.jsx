@@ -22,6 +22,28 @@ function bevatScheldwoord(tekst) {
   return BAD_WORDS.some((w) => t.includes(" " + w + " ") || t.includes(w));
 }
 
+// Maakt http(s)-links in berichten klikbaar (Mark 2026-06-07: een maker-reactie
+// kan zo direct naar de nieuwe feature linken, zodat melders zien dat hun tip
+// echt is opgepakt). Splitst de tekst op URL's en rendert die als <a>.
+function Linkify({ text }) {
+  const parts = String(text || "").split(/(https?:\/\/[^\s]+)/g);
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a
+        key={i}
+        href={part}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#69f0ae", textDecoration: "underline", wordBreak: "break-all" }}
+      >
+        {part}
+      </a>
+    ) : (
+      part
+    )
+  );
+}
+
 const VOORBEELDEN = [
   "Ik mis uitleg over…",
   "Het zou fijn zijn als…",
@@ -233,7 +255,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                   <div style={{ fontSize: 11, color: "rgba(255,255,255,0.5)", marginBottom: 4 }}>
                     {w.parent_id ? "↳ reactie · " : ""}{w.display_name || "anoniem"} · {fmt(w.created_at)} {w.rating ? `· ${sterren(w.rating)}` : ""}
                   </div>
-                  <div style={{ fontSize: 14, marginBottom: 8, whiteSpace: "pre-wrap" }}>{w.message}</div>
+                  <div style={{ fontSize: 14, marginBottom: 8, whiteSpace: "pre-wrap" }}><Linkify text={w.message} /></div>
                   <div style={{ display: "flex", gap: 8 }}>
                     <button onClick={() => modereer(w.id, "approved")} style={btnApprove}>✅ Goedkeuren</button>
                     <button onClick={() => modereer(w.id, "rejected")} style={btnReject}>❌ Afwijzen</button>
@@ -262,7 +284,7 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                     <strong style={{ color: "#9be069" }}>{w.display_name || "anoniem"}</strong>
                     <span>{w.rating ? <span style={{ color: "#ffd54f" }}>{sterren(w.rating)}</span> : null} · {fmt(w.created_at)}</span>
                   </div>
-                  <div style={{ fontSize: 15, lineHeight: 1.45, whiteSpace: "pre-wrap", marginBottom: 10 }}>{w.message}</div>
+                  <div style={{ fontSize: 15, lineHeight: 1.45, whiteSpace: "pre-wrap", marginBottom: 10 }}><Linkify text={w.message} /></div>
                   <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
                     <button onClick={() => steun(w.id)} disabled={heeftGesteund} style={{
                       ...btnGhost, color: heeftGesteund ? "#69f0ae" : "#e7edf6",
@@ -306,13 +328,13 @@ export default function WishesBoard({ authUser, userName, onBack, onHome }) {
                               <span style={{ fontSize: 10, fontWeight: 800, color: "#0a0e1a", background: "#ffd54f", borderRadius: 999, padding: "1px 6px" }}>✔ maker</span>
                               <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}>· {fmt(r.created_at)}</span>
                             </div>
-                            <div style={{ whiteSpace: "pre-wrap", color: "#fff" }}>{r.message}</div>
+                            <div style={{ whiteSpace: "pre-wrap", color: "#fff" }}><Linkify text={r.message} /></div>
                           </div>
                         ) : (
                           <div key={r.id} style={{ fontSize: 13.5 }}>
                             <strong style={{ color: "#9be069" }}>{r.display_name || "anoniem"}</strong>
                             <span style={{ color: "rgba(231,237,246,0.45)", fontSize: 11 }}> · {fmt(r.created_at)}</span>
-                            <div style={{ whiteSpace: "pre-wrap", color: "rgba(231,237,246,0.85)" }}>{r.message}</div>
+                            <div style={{ whiteSpace: "pre-wrap", color: "rgba(231,237,246,0.85)" }}><Linkify text={r.message} /></div>
                           </div>
                         )
                       ))}
