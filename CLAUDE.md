@@ -40,6 +40,19 @@
 
 Dit is **geen** automatische cron — het draait wanneer Mark een sessie opent. "Elke dag" = elke werkdag/sessie, 1× checken aan het begin.
 
+### Dagelijkse social-groei-check (tot 100+ volgers per kanaal — Mark vroeg dit 2026-06-07)
+
+**Onderdeel van het dagrapport.** Doel: Threads, Instagram (@leerkwartier) en Facebook (pagina Leerkwartier) laten groeien naar een flink aantal volgers (eerste mijlpaal 100/kanaal). Volledige plannen + dagelijks logboek staan in **`docs/SOCIAL-GROEI-TRACKER.md`** — dit is de single source of truth.
+
+**Elke sessie (als Chrome-voor-Claude draait):**
+1. Lees `docs/SOCIAL-GROEI-TRACKER.md` (plannen + laatste cijfers).
+2. Voer per kanaal een **engagement-batch** uit via Mark's ingelogde Chrome (Playwright/CDP): oprechte reacties + ICP-volgers + likes. **Account-veilig tempo:** max ~20 follows + ~15 reacties per kanaal per dag. Waarde eerst, **geen linkspam**.
+3. Noteer de actuele volger-aantallen + wat je deed in het **logboek** onderaan de tracker (nieuwe rij per dag).
+4. Volg terug wie ons volgde.
+5. Meld kort aan Mark: huidige volgers per kanaal + delta sinds gisteren + wat gedaan.
+
+**Posting/engagement-werkwijze per kanaal** staat in [[project_studiebol_autopost]] (memory) — Claude post/engaget zelf via de browser, niet automatisch op de achtergrond. **Stoppen met deze dagelijkse taak** zodra de mijlpalen gehaald zijn (dan herijken met Mark). Draait Chrome niet? Meld dat de social-groei-batch Chrome nodig heeft en sla 'm over die dag.
+
 ## Autonome modus (actief tot app gevuld — geen einddatum)
 
 Mark heeft Claude Code **vrij baan** gegeven voor content-werk. Geen mening vragen, gewoon doorpakken. Doel: app helemaal vullen met paden + vragen vóór fine-tuning. Mark wil **maximaal-lang autonoom werk per sessie**, zelfs als hij offline is — dus nooit pauzeren om input te vragen als er nog andere taken zijn die wél kunnen.
