@@ -200,7 +200,8 @@ import {
   schrijfPendingScores,
   pushNaarPendingQueue,
 } from "../games/obliterator/storage.js";
-import { laadTopScores, laadTopScoresVandaag, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
+import { laadTopScores, laadTopScoresVandaag, laadTopScoresWeek, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
+import { rangVoorLevel, volgendeRang } from "../games/obliterator/rank.js";
 import { makeMulberry32, moeilijkheidEmoji } from "../games/obliterator/rng.js";
 
 export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose, onChallengeFriend, pvpMatch, pvpSub, pvpRole, pvpStartsAt }) {
@@ -309,6 +310,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const [highscores, setHighscores] = useState([]);
   // 2026-05-18 — daily-leaderboard naast all-time
   const [highscoresVandaag, setHighscoresVandaag] = useState([]);
+  // 2026-06-07 (15-agent) — week-leaderboard + tab-keuze (default 'week')
+  const [highscoresWeek, setHighscoresWeek] = useState([]);
+  const [bordTab, setBordTab] = useState("week"); // 'vandaag' | 'week' | 'alltime'
   const [nieuwRecord, setNieuwRecord] = useState(false);
   const [laden, setLaden] = useState(true);
 
@@ -717,6 +721,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       if (namen.length > 0) topSpelersRef.current = namen;
     });
     laadTopScoresVandaag().then(s => { if (actief) setHighscoresVandaag(s); });
+    laadTopScoresWeek().then(s => { if (actief) setHighscoresWeek(s); });
     return () => { actief = false; };
   }, [fase]);
 
@@ -734,6 +739,16 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   const persoonlijkRecord = highscores
     .filter(h => h.naam === (userName || "Speler"))
     .reduce((m, h) => Math.max(m, h.score), 0);
+  // Hoogst-behaald level van deze speler (basis voor de rang — eerlijker dan
+  // score, want score is via anon-INSERT vervalsbaar). Combineer bord-data met
+  // de live level-records die de speler in deze sessie haalde.
+  const mijnBesteLevel = Math.max(
+    0,
+    ...highscores.filter(h => h.naam === (userName || "Speler")).map(h => h.level || 0),
+    ...Object.keys(levelRecords || {}).map(Number).filter(n => !Number.isNaN(n)),
+  );
+  const mijnRang = mijnBesteLevel > 0 ? rangVoorLevel(mijnBesteLevel) : null;
+  const mijnVolgende = mijnBesteLevel > 0 ? volgendeRang(mijnBesteLevel) : null;
   const wereldRecord = highscores[0]?.score || 0;
   useEffect(() => { prRef.current = persoonlijkRecord; wrRef.current = wereldRecord; }, [persoonlijkRecord, wereldRecord]);
 
@@ -946,7 +961,10 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     // oude high-scores onverslaanbaar voor nieuwe spelers; binnen 10 min
     // moet je nu eroverheen kunnen. Alle score-bonussen vermenigvuldigd
     // met deze constante op uitgifte-moment.
-    const SCORE_MUL = 10;
+    // 2026-06-07 (Mark-wens, 15-agent-analyse): 10→11 = +10% score-output.
+    // Balans-veilig (elke bron schaalt identiek, level-curve onveranderd).
+    // Bestaande DB-scores worden NIET gemigreerd (historie heilig).
+    const SCORE_MUL = 11;
     // PvP forceert L1 zodat beide spelers identieke start-condities hebben.
     let huidigLevel = pvpMatch ? 1 : (startLevelRef.current || 1);
     // ── CUSTOM LEVEL ── speel een door iemand gemaakt level uit DB
@@ -9051,77 +9069,87 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
             {persoonlijkRecord > 0 && (
               <div style={{ marginBottom: 18, color: "#ffcc40", fontFamily: "'Fredoka', sans-serif" }}>
                 <div style={{ fontSize: 12, opacity: 0.7, letterSpacing: 1.5, textTransform: "uppercase" }}>Jouw record</div>
-                <div style={{ fontSize: 32, fontWeight: 800, textShadow: "0 0 14px rgba(255,204,64,0.5)" }}>{persoonlijkRecord}</div>
+                <div style={{ fontSize: 32, fontWeight: 800, textShadow: "0 0 14px rgba(255,204,64,0.5)", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
+                  <span>{persoonlijkRecord}</span>
+                  {mijnRang && (
+                    <span style={{ fontSize: 16, fontWeight: 700, color: mijnRang.kleur, display: "inline-flex", alignItems: "center", gap: 4 }}>
+                      {mijnRang.emoji} {mijnRang.label}
+                    </span>
+                  )}
+                </div>
+                {mijnVolgende && (
+                  <div style={{ fontSize: 11, opacity: 0.7, marginTop: 4 }}>
+                    Nog {mijnVolgende.levelsTeGaan} {mijnVolgende.levelsTeGaan === 1 ? "level" : "levels"} tot {mijnVolgende.rang.emoji} {mijnVolgende.rang.label}
+                  </div>
+                )}
               </div>
             )}
 
-            {/* 2026-05-18 dual leaderboard — Mark wens 'daily naast all-time'. */}
-            {(highscores.length > 0 || highscoresVandaag.length > 0) && (() => {
+            {/* 2026-06-07 (15-agent-review): segment-control Vandaag/Week/Aller-tijden,
+                één volle-breedte lijst (geen smalle kolommen die namen afkappen op
+                mobiel). Default = Week (vers genoeg + op rustige dag tóch gevuld).
+                Rang-badge (🥉…👑) op hoogst-behaald level naast elke score. */}
+            {(highscores.length > 0 || highscoresVandaag.length > 0 || highscoresWeek.length > 0) && (() => {
               const myNaam = (userName || "").trim().toLowerCase();
               const medals = ["🥇","🥈","🥉"];
+              const tabs = [
+                { id: "vandaag", label: "⚡ Vandaag", lijst: highscoresVandaag, accent: "#69f0ae" },
+                { id: "week",    label: "📅 Week",    lijst: highscoresWeek,    accent: "#8ab4ff" },
+                { id: "alltime", label: "🏆 Aller tijden", lijst: highscores,   accent: "#ffcc40" },
+              ];
+              const actief = tabs.find(t => t.id === bordTab) || tabs[1];
               const renderRij = (s, i) => {
                 const isMe = !!s && myNaam && myNaam === (s.naam || "").trim().toLowerCase();
+                const rang = s && s.level ? rangVoorLevel(s.level) : null;
                 return (
                   <li key={i} style={{
                     display: "flex", justifyContent: "space-between", alignItems: "center",
-                    padding: "4px 6px", marginBottom: 1, borderRadius: 5,
+                    padding: "5px 8px", marginBottom: 1, borderRadius: 6,
                     background: isMe ? "rgba(255,204,64,0.18)" : "transparent",
-                    fontSize: 12,
+                    fontSize: 13,
                   }}>
-                    <span style={{ fontWeight: 700, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 90 }}>
+                    <span style={{ fontWeight: 700, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: 200 }}>
                       {s ? `${medals[i] || `${i + 1}.`} ${s.naam || "Speler"}` : <span style={{ opacity: 0.3 }}>—</span>}
                     </span>
-                    <span style={{ fontWeight: 800, color: "#ffcc40", flexShrink: 0 }}>{s ? s.score : ""}</span>
+                    <span style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
+                      <span style={{ fontWeight: 800, color: "#ffcc40" }}>{s ? s.score : ""}</span>
+                      {rang && <span title={rang.label} aria-label={rang.label} style={{ fontSize: 13 }}>{rang.emoji}</span>}
+                    </span>
                   </li>
                 );
               };
               const tien = (arr) => Array.from({ length: 10 }, (_, i) => arr[i] || null);
               return (
-                <div style={{
-                  width: "100%", maxWidth: 360, marginBottom: 18,
-                  display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10,
-                }}>
-                  {/* Vandaag — met empty-state als nog niemand gespeeld heeft */}
+                <div style={{ width: "100%", maxWidth: 360, marginBottom: 18 }}>
+                  {/* Segment-control */}
+                  <div style={{ display: "flex", gap: 4, marginBottom: 8, background: "rgba(255,255,255,0.05)", borderRadius: 10, padding: 3 }}>
+                    {tabs.map(t => (
+                      <button key={t.id} onClick={() => setBordTab(t.id)} style={{
+                        flex: 1, padding: "6px 4px", borderRadius: 8, border: "none", cursor: "pointer",
+                        background: bordTab === t.id ? "rgba(255,255,255,0.14)" : "transparent",
+                        color: bordTab === t.id ? t.accent : "rgba(255,255,255,0.6)",
+                        fontFamily: "'Fredoka', sans-serif", fontWeight: 700, fontSize: 11,
+                        letterSpacing: 0.3, minHeight: 32,
+                      }}>{t.label}</button>
+                    ))}
+                  </div>
+                  {/* Actieve lijst */}
                   <div style={{
                     padding: "10px 10px", borderRadius: 10,
-                    background: "rgba(105,240,174,0.06)",
-                    border: "1px solid rgba(105,240,174,0.25)",
+                    background: "rgba(255,255,255,0.04)",
+                    border: `1px solid ${actief.accent}40`,
                   }}>
-                    <div style={{ color: "#69f0ae", fontSize: 10, fontWeight: 700, letterSpacing: 1.2, marginBottom: 6, textAlign: "center", textTransform: "uppercase" }}>
-                      ⚡ Vandaag
-                    </div>
-                    {highscoresVandaag.length === 0 ? (
-                      <div style={{
-                        textAlign: "center", padding: "16px 4px",
-                        color: "rgba(255,255,255,0.85)",
-                        fontFamily: "'Fredoka', sans-serif",
-                      }}>
+                    {actief.lijst.length === 0 ? (
+                      <div style={{ textAlign: "center", padding: "16px 4px", color: "rgba(255,255,255,0.85)", fontFamily: "'Fredoka', sans-serif" }}>
                         <div style={{ fontSize: 32, marginBottom: 6 }}>🌅</div>
-                        <div style={{ fontSize: 12, fontWeight: 800, color: "#69f0ae", marginBottom: 2 }}>
-                          Nog niemand!
-                        </div>
-                        <div style={{ fontSize: 10, opacity: 0.75, lineHeight: 1.35 }}>
-                          Wees de eerste vandaag — pak een goede score voor de top!
-                        </div>
+                        <div style={{ fontSize: 13, fontWeight: 800, color: actief.accent, marginBottom: 2 }}>Nog niemand!</div>
+                        <div style={{ fontSize: 11, opacity: 0.75, lineHeight: 1.35 }}>Wees de eerste — pak een goede score voor de top!</div>
                       </div>
                     ) : (
                       <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
-                        {tien(highscoresVandaag).map(renderRij)}
+                        {tien(actief.lijst).map(renderRij)}
                       </ol>
                     )}
-                  </div>
-                  {/* Aller Tijden */}
-                  <div style={{
-                    padding: "10px 10px", borderRadius: 10,
-                    background: "rgba(255,204,64,0.06)",
-                    border: "1px solid rgba(255,204,64,0.25)",
-                  }}>
-                    <div style={{ color: "#ffcc40", fontSize: 10, fontWeight: 700, letterSpacing: 1.2, marginBottom: 6, textAlign: "center", textTransform: "uppercase" }}>
-                      🏆 Aller Tijden
-                    </div>
-                    <ol style={{ listStyle: "none", margin: 0, padding: 0, color: "#fff", fontFamily: "'Fredoka', sans-serif" }}>
-                      {tien(highscores).map(renderRij)}
-                    </ol>
                   </div>
                 </div>
               );

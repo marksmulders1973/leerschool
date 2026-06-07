@@ -25,17 +25,29 @@ export async function laadTopScores() {
   }
 }
 
-// Daily-leaderboard: alleen scores van vandaag (in UTC, eenvoudig + universeel).
-// 2026-05-18 Mark wens: 'extra scorebord — 1 dag record (10) + all-time (10)'.
-export async function laadTopScoresVandaag() {
+// Start van vandaag, 00:00 LOKALE tijd (NL). Bewust niet UTC: een kind dat
+// 23:30 NL speelt viel met UTC al in 'morgen' → dag-bord-bug (15-agent-review
+// 2026-06-07, QA + Critical Reviewer). new Date(y,m,d) = lokale middernacht;
+// .toISOString() rekent dat correct om naar UTC voor de query.
+function dagStartISO() {
+  const nu = new Date();
+  return new Date(nu.getFullYear(), nu.getMonth(), nu.getDate()).toISOString();
+}
+
+// Start van deze week (maandag 00:00 lokale tijd).
+function weekStartISO() {
+  const nu = new Date();
+  const dag = (nu.getDay() + 6) % 7; // ma=0 ... zo=6
+  const maandag = new Date(nu.getFullYear(), nu.getMonth(), nu.getDate() - dag);
+  return maandag.toISOString();
+}
+
+async function laadTopScoresVanaf(vanafISO) {
   try {
-    const nu = new Date();
-    // Start van vandaag 00:00 UTC
-    const dagStart = new Date(Date.UTC(nu.getUTCFullYear(), nu.getUTCMonth(), nu.getUTCDate())).toISOString();
     const { data, error } = await supabase
       .from("obliterator_scores")
       .select("player_name, score, level, created_at")
-      .gte("created_at", dagStart)
+      .gte("created_at", vanafISO)
       .order("score", { ascending: false })
       .order("created_at", { ascending: true })
       .limit(TOP_LIMIT);
@@ -49,6 +61,18 @@ export async function laadTopScoresVandaag() {
   } catch {
     return [];
   }
+}
+
+// Daily-leaderboard: alleen scores van vandaag (lokale daggrens).
+// 2026-05-18 Mark wens: 'extra scorebord — 1 dag record (10) + all-time (10)'.
+export async function laadTopScoresVandaag() {
+  return laadTopScoresVanaf(dagStartISO());
+}
+
+// Week-leaderboard (15-agent-review 2026-06-07): vers genoeg om haalbaar te
+// voelen, breed genoeg om op een rustige dag tóch gevuld te zijn.
+export async function laadTopScoresWeek() {
+  return laadTopScoresVanaf(weekStartISO());
 }
 
 export async function schrijfScore(naam, userId, score, level) {
