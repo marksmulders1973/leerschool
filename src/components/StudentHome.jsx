@@ -11,6 +11,7 @@ import Header from "./Header.jsx";
 import KindAcceptBanner from "./KindAcceptBanner.jsx";
 import KoppelcodeBanner from "./KoppelcodeBanner.jsx";
 import NiveauWizardBanner from "./NiveauWizardBanner.jsx";
+import NieuwTopografieBanner from "./NieuwTopografieBanner.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import VraagVanDeDag from "./VraagVanDeDag.jsx";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
@@ -243,6 +244,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
       <div style={styles.content}>
         <KindAcceptBanner userName={userName} />
         <KoppelcodeBanner userName={userName} />
+        <NieuwTopografieBanner />
         {/* P0-4 (4-agent-audit 2026-05-18): niveau-wizard verschijnt alleen
             als userLevel nog leeg is + wizard niet eerder gedismissed via
             localStorage-flag. Zet userLevel + userSchoolType automatisch. */}
