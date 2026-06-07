@@ -75,6 +75,16 @@ export async function laadTopScoresWeek() {
   return laadTopScoresVanaf(weekStartISO());
 }
 
+// Unieke run-sleutel zodat een dubbel-geflushte offline-score niet als twee
+// topscores binnenkomt (DB-index uniq_obliterator_client_key dedupliceert).
+// 2026-06-07 — hoort bij migratie 20260607_obliterator_hardening.sql (Fix 3).
+function maakClientKey() {
+  try {
+    if (typeof crypto !== "undefined" && crypto.randomUUID) return crypto.randomUUID();
+  } catch { /* ignore */ }
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 export async function schrijfScore(naam, userId, score, level) {
   if (!score || score <= 0) return;
   const payload = {
@@ -82,6 +92,7 @@ export async function schrijfScore(naam, userId, score, level) {
     user_id: userId || null,
     score,
     level: level || null,
+    client_key: maakClientKey(),
   };
   // Direct queue-en zodra offline; vermijdt onnodige network-call die zeker faalt.
   if (typeof navigator !== "undefined" && navigator.onLine === false) {
@@ -109,8 +120,11 @@ export async function flushPendingScores() {
         user_id: item.user_id,
         score: item.score,
         level: item.level,
+        client_key: item.client_key || maakClientKey(),
       });
-      if (error) overgebleven.push(item);
+      // 23505 = unique_violation = deze score is al binnen (dubbele flush) → als
+      // 'verwerkt' beschouwen, niet opnieuw in de wachtrij houden.
+      if (error && error.code !== "23505") overgebleven.push(item);
     } catch {
       overgebleven.push(item);
     }
