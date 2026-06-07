@@ -69,9 +69,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "algebra-vergelijkingen-havo-vwo",
@@ -606,9 +606,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "bevolking-migratie-aardrijkskunde",
@@ -1324,9 +1324,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "dieren-seizoenen-natuur",
@@ -3256,9 +3256,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "fotosynthese-biologie",
@@ -3930,9 +3930,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "integralen-havo-vwo",
@@ -5406,6 +5406,35 @@
     "estimatedMinutes": 10
   },
   {
+    "id": "onderwijs-niveaus-vmbo-havo-vwo",
+    "file": "./onderwijsNiveausVmboHavoVwo.js",
+    "title": "Wat is vmbo, havo en vwo? (en wat kun je ermee)",
+    "subject": "studievaardigheden",
+    "level": "groep8",
+    "emoji": "🏫",
+    "referentieNiveau": "1F/1S",
+    "sloThema": "Studievaardigheden — schoolniveaus en vervolgopleidingen",
+    "triggerKeywords": [
+      "vmbo",
+      "havo",
+      "vwo",
+      "mavo",
+      "gymnasium",
+      "atheneum",
+      "schoolniveaus",
+      "middelbare school niveau",
+      "wat is vmbo",
+      "wat is havo",
+      "wat is vwo",
+      "mbo"
+    ],
+    "intro": "Wat zijn vmbo, havo en vwo precies — en wat kun je er later mee? Uitleg voor groep 6-8 die nadenkt over de keuze na de Doorstroomtoets: de drie niveaus, de vier vmbo-leerwegen, profielen op havo/vwo, ",
+    "stepCount": 5,
+    "checkCount": 20,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "onregelmatige-werkwoorden-engels",
     "file": "./onregelmatigeWerkwoordenEngels.js",
     "title": "Onregelmatige werkwoorden (irregular verbs)",
@@ -5986,9 +6015,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "politiek-democratie-po",
@@ -6598,9 +6627,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "sociale-zekerheid-nl",
@@ -7640,9 +7669,9 @@
     "triggerKeywords": [],
     "intro": "",
     "stepCount": 4,
-    "checkCount": 16,
+    "checkCount": 25,
     "chapterCount": 4,
-    "estimatedMinutes": 10
+    "estimatedMinutes": 15
   },
   {
     "id": "vlakke-figuren",

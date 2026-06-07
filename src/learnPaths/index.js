@@ -277,6 +277,7 @@ import bbpConjunctuurEconomie from "./bbpConjunctuurEconomie.js";
 import cseSchrijfvaardigheidNederlands from "./cseSchrijfvaardigheidNederlands.js";
 import financieleVormingPo from "./financieleVormingPo.js";
 import brugklasOrientatie from "./brugklasOrientatie.js";
+import onderwijsNiveausVmboHavoVwo from "./onderwijsNiveausVmboHavoVwo.js";
 import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
 import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
 import energiebronnenPo from "./energiebronnenPo.js";
@@ -519,6 +520,7 @@ export const ALL_LEARN_PATHS = {
   "cse-schrijfvaardigheid-nederlands": cseSchrijfvaardigheidNederlands,
   "financiele-vorming-po": financieleVormingPo,
   "brugklas-orientatie": brugklasOrientatie,
+  "onderwijs-niveaus-vmbo-havo-vwo": onderwijsNiveausVmboHavoVwo,
   "media-wijsheid-maatschappijleer": mediaWijsheidMaatschappijleer,
   literatuurgeschiedenis,
   "woordsoorten-nederlands": woordsoortenNederlands,
