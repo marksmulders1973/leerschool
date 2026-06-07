@@ -27,6 +27,7 @@ Engagement is dé motor (link in caption is klikbaar = bonus).
 6. Volg terug wie jou volgt (check /activity).
 
 ## 📘 Facebook — plan (pagina, organisch bereik laag → andere hefbomen)
+> ⚠️ **Belangrijk (vastgesteld 2026-06-07):** Claude kan op FB *als pagina* NIET reageren/volgen op posts van personen of in groepen (FB staat pagina-identiteit daar niet toe). Daardoor is browser-engagement op FB beperkt tot reageren op andere *pagina's* + eigen comments/DM's beantwoorden. De echte FB-groei-hefbomen zijn daarom **Mark's handwerk** (punten 1 & 3 hieronder). Claude kan wél: posten als pagina, reacties op eigen posts beantwoorden, andere pagina's liken/volgen.
 1. **Uitnodigen:** Mark nodigt FB-vrienden uit de pagina te liken (knop "Vrienden uitnodigen" op de pagina) — 10-20/dag.
 2. **Posten:** 3-4×/week een waarde-post (zelfde creatives als Threads/IG).
 3. **Groepen:** Mark (persoonlijk profiel) lid worden van NL-oudergroepen ("Ouders groep 8", "Cito-ouders", "Voortgezet onderwijs ouders", regio-/dorpsgroepen) en daar **oprecht meehelpen** met antwoorden — geen linkdumps, geen bulk-posten (zie [[feedback_studiebol_jingle_default]] posting-grens). 1 echte, behulpzame reactie > 10 promo's.
@@ -50,4 +51,4 @@ Engagement + Reels zijn de hefbomen.
 
 | Datum | Threads | Instagram | Facebook | Opmerking |
 |---|---|---|---|---|
-| 2026-06-07 | 3 volgers · 1 reactie (14K-views-thread) + 4 follows (lifeisacatwalk1, jufan1983, ninkey84, imaraveira) | 66 volgers (18 posts, 184 following) · niveaus-reclame gepost | 32 volgers · niveaus-reclame gepost | Start van de tracker. Niveaus-reclame live op alle 3. IG-baseline vastgesteld. |
+| 2026-06-07 | 3 volgers · 1 reactie (14K-views-thread) + 6 follows (lifeisacatwalk1, jufan1983, ninkey84, imaraveira, natascha_ngwebdesign, semke1981) | 66 volgers · niveaus-reclame gepost + 1 like/reactie/follow (@vriendenboeken, groep-8) | 32 volgers · niveaus-reclame gepost | Start tracker. Niveaus-reclame live op alle 3. IG-baseline 66. **FB-engagement via pagina = beperkt** (kan niet als pagina reageren op posts van personen/groepen) → FB-groei = Mark's handwerk (zie ⚠️ onder). |
