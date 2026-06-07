@@ -599,7 +599,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
     const recordKeys = Object.keys(levelRecords || {}).map(Number).filter((n) => !isNaN(n));
     const recordsMax = recordKeys.length > 0 ? Math.max(...recordKeys) : 0;
     const maxBereikt = Math.max(anonMaxLevel || 0, recordsMax);
-    if (maxBereikt < 10) return;
+    if (maxBereikt < 2) return; // 2026-06-07: was 10 — beginners moeten de nieuwe lage-level-skins óók retroactief krijgen
     const eligible = SKINS.filter((s) => s.unlockLevel != null && s.unlockLevel <= maxBereikt);
     if (eligible.length === 0) return;
     setUnlockedSkins((prev) => {

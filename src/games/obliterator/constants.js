@@ -217,18 +217,32 @@ export const PRESET_LEVELS = [
 
 // Speler-skins. unlockLevel = level dat behaald moet zijn (1 = altijd open,
 // null = via speciale unlock zoals Oblivion Pulse).
+// 2026-06-07 (15-agent-analyse + kritische review): catalog UITGEBREID, niet
+// herbouwd. Zachtere vroege curve zodat een beginner snel een 2e/3e skin krijgt
+// (analyse: oude poort lvl10 = beginner kreeg nooit variatie) + 7 nieuwe themed
+// skins. Prestige-top (💎 lvl100 + 🕳️ Oblivion) behouden. Bestaande id's intact
+// (geen regressie op reeds vrijgespeelde skins). unlockLevel UNIEK per skin
+// (de live "ontgrendeld!"-celebratie matcht op exact level). 100% cosmetisch,
+// gratis, kind-veilig. Emoji's bewust enkel-codepoint (canvas fillText, geen ZWJ).
 export const SKINS = [
-  { id: "default",   label: BRAND.name,  emoji: "🔴", unlockLevel: 1 },
-  { id: "spider",    label: "Spin",       emoji: "🕷️", unlockLevel: 10 },
-  { id: "popje",     label: "Popje",      emoji: "🪆", unlockLevel: 20 },
-  { id: "elephant",  label: "Olifant",    emoji: "🐘", unlockLevel: 30 },
-  { id: "trollface", label: "Trollface",  emoji: "😈", unlockLevel: 40 },
-  { id: "triangle",  label: "Driehoek",   emoji: "🔺", unlockLevel: 50 },
-  { id: "xbox",      label: "Xbox",       emoji: "🎮", unlockLevel: 60 },
-  { id: "gorilla",   label: "Gorilla",    emoji: "🦍", unlockLevel: 70 },
-  { id: "yinyang",   label: "Yin Yang",   emoji: "☯️", unlockLevel: 80 },
-  { id: "eye",       label: "Oog",         emoji: "👁️", unlockLevel: 90 },
-  { id: "lvl100",    label: "Level 100",  emoji: "💎", unlockLevel: 100 },
-  { id: "blackhole", label: "Black Hole", emoji: "🕳️", unlockLevel: null },
+  { id: "default",   label: BRAND.name,    emoji: "🔴", unlockLevel: 1 },
+  { id: "spider",    label: "Spin",         emoji: "🕷️", unlockLevel: 3 },
+  { id: "robot",     label: "Robot",        emoji: "🤖", unlockLevel: 5 },
+  { id: "popje",     label: "Popje",        emoji: "🪆", unlockLevel: 8 },
+  { id: "ninja",     label: "Ninja",        emoji: "🥷", unlockLevel: 12 },
+  { id: "elephant",  label: "Olifant",      emoji: "🐘", unlockLevel: 16 },
+  { id: "professor", label: "Professor",    emoji: "🎓", unlockLevel: 22 },
+  { id: "trollface", label: "Trollface",    emoji: "😈", unlockLevel: 28 },
+  { id: "astronaut", label: "Ruimtevaarder", emoji: "🚀", unlockLevel: 35 },
+  { id: "triangle",  label: "Driehoek",     emoji: "🔺", unlockLevel: 42 },
+  { id: "xbox",      label: "Xbox",         emoji: "🎮", unlockLevel: 50 },
+  { id: "pharaoh",   label: "Farao",        emoji: "🏺", unlockLevel: 58 },
+  { id: "dragon",    label: "Drakenmeester", emoji: "🐉", unlockLevel: 66 },
+  { id: "gorilla",   label: "Gorilla",      emoji: "🦍", unlockLevel: 72 },
+  { id: "yinyang",   label: "Yin Yang",     emoji: "☯️", unlockLevel: 80 },
+  { id: "eye",       label: "Oog",           emoji: "👁️", unlockLevel: 88 },
+  { id: "champion",  label: "Kampioen",     emoji: "🏆", unlockLevel: 94 },
+  { id: "lvl100",    label: "Level 100",    emoji: "💎", unlockLevel: 100 },
+  { id: "blackhole", label: "Black Hole",   emoji: "🕳️", unlockLevel: null },
 ];
 export const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
