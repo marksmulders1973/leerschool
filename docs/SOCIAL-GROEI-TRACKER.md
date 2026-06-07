@@ -5,7 +5,7 @@
 
 ## Mijlpalen (eerste doel)
 - **Threads:** 3 → **100** volgers
-- **Instagram (@leerkwartier):** ? → **100** volgers
+- **Instagram (@leerkwartier):** 66 → **100** volgers (baseline 2026-06-07)
 - **Facebook (pagina Leerkwartier):** 32 → **100** volgers
 Daarna herijken (volgende doel bv. 250 / 500).
 
@@ -50,4 +50,4 @@ Engagement + Reels zijn de hefbomen.
 
 | Datum | Threads | Instagram | Facebook | Opmerking |
 |---|---|---|---|---|
-| 2026-06-07 | 3 volgers · 1 reactie (14K-views-thread) + 4 follows (lifeisacatwalk1, jufan1983, ninkey84, imaraveira) | (baseline nog vaststellen) · niveaus-reclame gepost | 32 volgers · niveaus-reclame gepost | Start van de tracker. Niveaus-reclame live op alle 3. |
+| 2026-06-07 | 3 volgers · 1 reactie (14K-views-thread) + 4 follows (lifeisacatwalk1, jufan1983, ninkey84, imaraveira) | 66 volgers (18 posts, 184 following) · niveaus-reclame gepost | 32 volgers · niveaus-reclame gepost | Start van de tracker. Niveaus-reclame live op alle 3. IG-baseline vastgesteld. |
