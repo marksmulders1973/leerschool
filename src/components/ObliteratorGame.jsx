@@ -202,6 +202,7 @@ import {
 } from "../games/obliterator/storage.js";
 import { laadTopScores, laadTopScoresVandaag, laadTopScoresWeek, schrijfScore, flushPendingScores } from "../games/obliterator/scores.js";
 import { rangVoorLevel, volgendeRang } from "../games/obliterator/rank.js";
+import { getDayStreak } from "../shared/dailyGoal.js";
 import { makeMulberry32, moeilijkheidEmoji } from "../games/obliterator/rng.js";
 
 export default function ObliteratorGame({ userName, authUser, wrongQuestions, vanDeelLink, onNaarStudiebol, onClose, onChallengeFriend, pvpMatch, pvpSub, pvpRole, pvpStartsAt }) {
@@ -1247,6 +1248,9 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
       // groot hoera-moment
       bossActief = false;
       bossWinAnim = 180; // 3 sec
+      // Achievement-skin "Boss Slayer": markeer dat deze speler ooit een boss
+      // versloeg (vlag overleeft de run; useEffect ontgrendelt bij fase-wissel).
+      try { localStorage.setItem("obliterator-boss-verslagen", "1"); } catch { /* ignore */ }
       // mega-explosie waar boss stond
       for (let i = 0; i < 80; i++) {
         const k = ["#ffd700", "#69f0ae", "#ff4040", "#ffaa20", "#ffffff"][i % 5];
@@ -8782,6 +8786,23 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
   useEffect(() => {
     try { localStorage.setItem("obliterator-letters", JSON.stringify(verzameldeLetters)); } catch {}
   }, [verzameldeLetters]);
+
+  // Achievement-skins (2026-06-07, 15-agent-advies): tweede unlock-route náást
+  // level. Herchecken bij fase-wissel (start/eind run) + als letters wijzigen.
+  // Eenmaal verdiend = nooit afgepakt (best-streak, persistente vlaggen).
+  useEffect(() => {
+    const teOntgrendelen = [];
+    if (verzameldeLetters.length >= MISSIE_LETTERS.length) teOntgrendelen.push("woordmeester");
+    try { if (localStorage.getItem("obliterator-boss-verslagen") === "1") teOntgrendelen.push("boss_slayer"); } catch { /* ignore */ }
+    try { if ((getDayStreak().best || 0) >= 3) teOntgrendelen.push("vuurtje"); } catch { /* ignore */ }
+    if (teOntgrendelen.length === 0) return;
+    setUnlockedSkins((prev) => {
+      const next = new Set(prev);
+      let changed = false;
+      for (const id of teOntgrendelen) if (!next.has(id)) { next.add(id); changed = true; }
+      return changed ? [...next] : prev;
+    });
+  }, [fase, verzameldeLetters]);
   // Bridge naar game-loop voor missie-updates
   const missieUpdateRef = useRef(() => {});
   useEffect(() => {
@@ -9588,13 +9609,13 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
                               cursor: ontgrendeld ? "pointer" : "not-allowed",
                               filter: ontgrendeld ? "none" : "grayscale(0.85)",
                             }}
-                            title={ontgrendeld ? s.label : `Ontgrendel bij Level ${s.unlockLevel ?? "?"}`}
+                            title={ontgrendeld ? s.label : (s.unlockHint || `Ontgrendel bij Level ${s.unlockLevel ?? "?"}`)}
                           >
                             <div style={{ fontSize: 22, marginBottom: 2 }}>{s.emoji}</div>
                             <div style={{ fontSize: 9, lineHeight: 1.2 }}>{s.label}</div>
                             {!ontgrendeld && (
                               <div style={{ fontSize: 8, opacity: 0.7, marginTop: 2 }}>
-                                🔒 {s.unlockLevel != null ? `L${s.unlockLevel}` : "Oblivion"}
+                                🔒 {s.unlockHint ? s.unlockHint : (s.unlockLevel != null ? `L${s.unlockLevel}` : "Oblivion")}
                               </div>
                             )}
                           </button>

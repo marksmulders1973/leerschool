@@ -243,6 +243,13 @@ export const SKINS = [
   { id: "eye",       label: "Oog",           emoji: "👁️", unlockLevel: 88 },
   { id: "champion",  label: "Kampioen",     emoji: "🏆", unlockLevel: 94 },
   { id: "lvl100",    label: "Level 100",    emoji: "💎", unlockLevel: 100 },
-  { id: "blackhole", label: "Black Hole",   emoji: "🕳️", unlockLevel: null },
+  // Prestige + achievement-skins (unlockLevel null = niet via level). De
+  // achievement-skins (2026-06-07, 15-agent-advies) geven een tweede unlock-
+  // route náást level, zodat ook een speler die geen hoog level haalt skins
+  // kan verdienen via vaardigheid/trouw. unlockHint = picker-label.
+  { id: "blackhole",    label: "Black Hole",   emoji: "🕳️", unlockLevel: null, unlockHint: "Overleef Oblivion" },
+  { id: "boss_slayer",  label: "Boss Slayer",  emoji: "⚔️", unlockLevel: null, unlockHint: "Versla je 1e boss" },
+  { id: "woordmeester", label: "Woordmeester", emoji: "📚", unlockLevel: null, unlockHint: "Spel LEERKWART" },
+  { id: "vuurtje",      label: "Vuurtje",      emoji: "🔥", unlockLevel: null, unlockHint: "3 dagen op rij" },
 ];
 export const SKIN_BY_ID = Object.fromEntries(SKINS.map((s) => [s.id, s]));
