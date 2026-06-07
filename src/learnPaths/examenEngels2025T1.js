@@ -60,7 +60,7 @@ const steps = [
           { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'shun', 'thinly populated', 'seldom disturb' — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Shun cities = donker", tekst: "'UFOs shun big cities (lots of lights)' + 'thinly populated northern part' → UFO's gaan naar donkere plekken. → optie B." }],
+          stappen: [{ titel: "Shun cities = donker", tekst: "'UFOs shun big cities (lots of lights)' + 'thinly populated northern part' → UFO's gaan naar donkere plekken. →" }],
           woorden: [{ woord: "shun", uitleg: "Mijden, vermijden." }, { woord: "thinly populated", uitleg: "Dunbevolkt." }],
           theorie: "Examen Engels: zoek SLEUTELZIN. Hier 'shun cities' = mijdt licht.",
           voorbeelden: [{ type: "logica", tekst: "Geen kunstlicht (B) past bij 'thinly populated' + 'shun cities'." }],

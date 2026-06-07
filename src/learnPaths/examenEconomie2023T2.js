@@ -61,7 +61,7 @@ const steps = [
             { onderwerp: "Wat is een belasting?", uitleg: "Verplichte betaling aan de overheid waar je geen directe tegenprestatie voor krijgt — gebruikt voor algemene voorzieningen (wegen, onderwijs, defensie)." },
           ],
           niveaus: {
-            basis: "Gemeentebelasting → afvalstoffenheffing. Antwoord A.",
+            basis: "Gemeentebelasting → afvalstoffenheffing.",
             simpeler: "Wat doet je gemeente voor jou? Vuilnis ophalen. Wie betaalt dat? Jouw huishouden, via afvalstoffenheffing op de gemeentelijke aanslag. BTW, loonheffing en VPB gaan naar het Rijk (Belastingdienst), niet naar de gemeente.",
             nogSimpeler: "Vuilnis = gemeente = afvalstoffenheffing",
           },
@@ -119,7 +119,7 @@ const steps = [
             { onderwerp: "Inkomstenbelasting basics", uitleg: "Iedereen met inkomen betaalt IB. Hoe hoger je inkomen, hoe meer % belasting. Aftrekposten verlagen je belastbaar inkomen → minder belasting." },
           ],
           niveaus: {
-            basis: "WOZ × percentage = eigenwoningforfait → bij inkomen → IB-berekening. Antwoord D.",
+            basis: "WOZ × percentage = eigenwoningforfait → bij inkomen → IB-berekening.",
             simpeler: "Bezit je een huis? Dan rekent de Belastingdienst alsof je dat huis je 'inkomen' geeft (een fictief bedrag). Dat heet eigenwoningforfait — en wordt berekend met de WOZ-waarde. Dus de WOZ heeft de Belastingdienst nodig om dat bedrag te bepalen.",
             nogSimpeler: "WOZ → eigenwoningforfait → D.",
           },
@@ -177,7 +177,7 @@ const steps = [
             { onderwerp: "Box 1, 2, 3 in IB", uitleg: "Box 1 = inkomen uit arbeid + huis. Box 2 = aanmerkelijk belang in bedrijf. Box 3 = vermogen (spaargeld + beleggingen)." },
           ],
           niveaus: {
-            basis: "Belasting over spaargeld = vermogensrendementsheffing. Antwoord D.",
+            basis: "Belasting over spaargeld = vermogensrendementsheffing.",
             simpeler: "BTW = op aankopen. Loonheffing = op je loon. OZB = op je huis. Maar hier gaat het over je SPAARGELD = vermogen → vermogensrendementsheffing.",
             nogSimpeler: "Spaargeld = vermogen",
           },
@@ -233,7 +233,7 @@ const steps = [
             { onderwerp: "Verschil nominaal en reëel", uitleg: "Nominaal = in euro's. Reëel = in wat je ervan kan kopen. Bij inflatie verschillen die twee — reëel is lager dan nominaal." },
           ],
           niveaus: {
-            basis: "Loon stijgt > inflatie → koopkracht stijgt. Antwoord B.",
+            basis: "Loon stijgt > inflatie → koopkracht stijgt.",
             simpeler: "Stel: vorig jaar kocht je voor €100 boodschappen. Dit jaar zijn dezelfde boodschappen €105 (5% inflatie). Krijgt jouw loon ook +5%? Dan blijft koopkracht gelijk. Krijg je MEER (+7%)? Dan stijgt koopkracht. Minder of niks? Dan daalt koopkracht.",
             nogSimpeler: "Loonstijging > inflatie = koopkracht stijgt",
           },
@@ -350,7 +350,7 @@ const steps = [
             { onderwerp: "Vraag en aanbod", uitleg: "Als prijs van A stijgt, schuiven kopers naar B (substitutie). Hier: Chinees staal duurder → kopers schuiven naar Amerikaans staal." },
           ],
           niveaus: {
-            basis: "Heffing op Chinees staal → Chinees duurder → VS-bedrijven kopen meer eigen staal. Antwoord B.",
+            basis: "Heffing op Chinees staal → Chinees duurder → VS-bedrijven kopen meer eigen staal.",
             simpeler: "Stel je voor: Chinees staal kostte $1.000/ton. VS heft 25% heffing → kost nu $1.250 voor VS-bedrijven. Amerikaans staal kostte $1.100/ton — was te duur, nu goedkoper. VS-bedrijven schuiven over naar Amerikaans staal.",
             nogSimpeler: "Heffing maakt China duurder → koop meer eigen → B.",
           },
@@ -391,7 +391,7 @@ const steps = [
           stappen: [
             { titel: "Wat doet China?", tekst: "China KOOPT in grote hoeveelheden dollars. Kopen = vraag." },
             { titel: "Wat gebeurt met de koers bij meer vraag?", tekst: "Bij meer vraag naar iets stijgt de prijs (= koers). Dat is de wet van vraag en aanbod." },
-            { titel: "Conclusie", tekst: "China koopt = vraag naar dollars stijgt = dollarkoers STIJGT. Antwoord B." },
+            { titel: "Conclusie", tekst: "China koopt = vraag naar dollars stijgt = dollarkoers STIJGT." },
           ],
           woorden: [
             { woord: "wisselkoers", uitleg: "De prijs van een vreemde valuta uitgedrukt in eigen valuta. Bv. $1 = €0,92." },
@@ -408,7 +408,7 @@ const steps = [
             { onderwerp: "Wet van vraag en aanbod", uitleg: "Werkt op alle markten: meer vraag = duurder, meer aanbod = goedkoper. Geldt ook voor valuta." },
           ],
           niveaus: {
-            basis: "China KOOPT (= vraag) dollars → vraag dollars stijgt → koers dollar stijgt. Antwoord B.",
+            basis: "China KOOPT (= vraag) dollars → vraag dollars stijgt → koers dollar stijgt.",
             simpeler: "Stel je voor: een land koopt veel iPhones. Wat doet de iPhone-prijs? Stijgen, want iedereen wil ze. Hetzelfde met dollars: China koopt veel dollars → veel vraag → dollar wordt duurder = stijgt in waarde.",
             nogSimpeler: "Kopen = vraag = prijs omhoog",
           },

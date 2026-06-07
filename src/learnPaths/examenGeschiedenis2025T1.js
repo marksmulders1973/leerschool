@@ -84,7 +84,7 @@ const steps = [
           { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "interbellum + opkomst Hitler + appeasement-beleid UK/FR — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Cartoon = appeasement-kritiek", tekst: "Stapel laffe leiders + Hitler bovenop = leiders verzetten zich NIET tegen Hitler's groei. → optie C." }],
+          stappen: [{ titel: "Cartoon = appeasement-kritiek", tekst: "Stapel laffe leiders + Hitler bovenop = leiders verzetten zich NIET tegen Hitler's groei. →" }],
           woorden: [{ woord: "appeasement", uitleg: "Beleid: Hitler tegemoetkomen om oorlog te vermijden." }, { woord: "machtsuitbreiding", uitleg: "Gebied/macht groter maken." }],
           theorie: "Cartoon-vraag: zoek wat HET BEELD letterlijk laat zien. Hitler op leiders = leiders dragen Hitler = passieve houding.",
           voorbeelden: [{ type: "context", tekst: "1936 Rijnland, 1938 Anschluss + Sudetenland — telkens niet ingegrepen." }],

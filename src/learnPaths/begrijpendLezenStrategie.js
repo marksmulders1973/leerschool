@@ -91,7 +91,7 @@ const steps = [
           voorbeelden: [{ type: "kern", tekst: "Tekst lezen + er een vraag over kunnen beantwoorden = begrijpend gelezen." }],
           basiskennis: [{ onderwerp: "Lezen ≠ snappen", uitleg: "Je kunt woorden hardop voorlezen zonder te snappen wat er staat." }],
           niveaus: {
-            basis: "Begrijpend = snappen. Antwoord B.",
+            basis: "Begrijpend = snappen.",
             simpeler: "Het woord zegt het al: 'begrijpend' = begrijpen. Lezen + snappen wat er staat.",
             nogSimpeler: "Snappen",
           },

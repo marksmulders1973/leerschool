@@ -64,8 +64,8 @@ const steps = [
             { onderwerp: "Geslachtscellen vs lichaamscellen", uitleg: "Mutatie in lichaamscel = blijft in dat individu. Mutatie in geslachtscel = wordt doorgegeven aan nakomelingen." },
           ],
           niveaus: {
-            basis: "DNA verandert = mutatie. Antwoord B.",
-            simpeler: "Stel je voor: het DNA is een lange code. Röntgenstraling 'knalt' tegen die code en verandert een letter. Die verandering noemen we een mutatie. Antwoord B.",
+            basis: "DNA verandert = mutatie.",
+            simpeler: "Stel je voor: het DNA is een lange code. Röntgenstraling 'knalt' tegen die code en verandert een letter. Die verandering noemen we een mutatie.",
             nogSimpeler: "DNA-verandering = mutatie",
           },
         },
@@ -124,7 +124,7 @@ const steps = [
           ],
           niveaus: {
             basis: "X-sperma heeft rode-ogen-DNA, Y-sperma niet. 50/50 → antwoord B.",
-            simpeler: "Stel je voor 100 spermacellen van dit mannetje. 50 zijn X (met oogkleur-gen), 50 zijn Y (zonder). Dus in 50% zit het stukje DNA voor rode ogen. Antwoord B.",
+            simpeler: "Stel je voor 100 spermacellen van dit mannetje. 50 zijn X (met oogkleur-gen), 50 zijn Y (zonder). Dus in 50% zit het stukje DNA voor rode ogen.",
             nogSimpeler: "50% (alleen de X-helft)",
           },
         },
@@ -183,8 +183,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Dierlijke cellen → kern + cytoplasma + celmembraan. Géén losse chromosomen, géén celwand." },
           ],
           niveaus: {
-            basis: "Beiden hebben het mis. Antwoord A.",
-            simpeler: "Kweekvlees is uit DIERLIJKE spiercellen. Die hebben een celkern (chromosomen liggen daar IN, niet los) én geen celwand. Liam en Sophie hebben dus allebei het mis. Antwoord A.",
+            basis: "Beiden hebben het mis.",
+            simpeler: "Kweekvlees is uit DIERLIJKE spiercellen. Die hebben een celkern (chromosomen liggen daar IN, niet los) én geen celwand. Liam en Sophie hebben dus allebei het mis.",
             nogSimpeler: "Beiden fout",
           },
         },
@@ -243,8 +243,8 @@ const steps = [
             { onderwerp: "Vergelijking", uitleg: "Sterilisatie = doorknippen leider. Castratie = orgaan weghalen. Heel verschillend resultaat." },
           ],
           niveaus: {
-            basis: "Beide zaadcellen + testosteron worden nog gemaakt. Beiden fout. Antwoord A.",
-            simpeler: "Bij sterilisatie wordt alleen de UITGANG van de zaadcellen geblokkeerd. De TESTIKELS werken gewoon door: zaadcellen worden nog steeds gemaakt, en testosteron óók. Hans denkt aan productie-stop (fout), Karlijn ook (fout). Antwoord A.",
+            basis: "Beide zaadcellen + testosteron worden nog gemaakt. Beiden fout.",
+            simpeler: "Bij sterilisatie wordt alleen de UITGANG van de zaadcellen geblokkeerd. De TESTIKELS werken gewoon door: zaadcellen worden nog steeds gemaakt, en testosteron óók. Hans denkt aan productie-stop (fout), Karlijn ook (fout).",
             nogSimpeler: "Beiden fout",
           },
         },
@@ -300,7 +300,7 @@ const steps = [
             { onderwerp: "Bron versus filter", uitleg: "Lever = bron (maakt). Nier = filter (verwijdert). Bij examen vragen 'waar ontstaat' = bron = lever." },
           ],
           niveaus: {
-            basis: "Ureum ontstaat in de lever (bij eiwit-afbraak). Antwoord B.",
+            basis: "Ureum ontstaat in de lever (bij eiwit-afbraak).",
             simpeler: "Eiwitten worden afgebroken tot aminozuren. De lever verwerkt aminozuren en maakt daarbij ureum (een afvalstof). De nieren halen het ureum daarna uit het bloed. Antwoord B: lever.",
             nogSimpeler: "Lever maakt ureum",
           },
@@ -342,7 +342,7 @@ const steps = [
           stappen: [
             { titel: "Centraal zenuwstelsel = hersenen + ruggenmerg", tekst: "Het CZS bestaat uit hersenen + ruggenmerg. De hersenen splitsen we in 3 delen: GROTE hersenen, KLEINE hersenen, en HERSENSTAM." },
             { titel: "Wat doet wat?", tekst: "**Grote hersenen** = denken, herinneren, bewust ervaren (zien, horen, voelen).\n**Kleine hersenen** = evenwicht + coördinatie van beweging.\n**Hersenstam** = automatische functies (ademen, hartslag).\n**Ruggenmerg** = transportkabel voor signalen + reflexen." },
-            { titel: "Antwoord", tekst: "Bewust HOREN = bewustwording = grote hersenen. Antwoord A." },
+            { titel: "Antwoord", tekst: "Bewust HOREN = bewustwording = grote hersenen." },
           ],
           woorden: [
             { woord: "centraal zenuwstelsel", uitleg: "Hersenen + ruggenmerg — verwerkt en stuurt zenuwsignalen." },
@@ -359,8 +359,8 @@ const steps = [
             { onderwerp: "Bewust = grote hersenen", uitleg: "Alle 'ik weet dat ik dit zie/hoor/voel' = grote hersenen." },
           ],
           niveaus: {
-            basis: "Bewustwording = grote hersenen. Antwoord A.",
-            simpeler: "Bewust horen gebeurt in de grote hersenen — de 'denker'. Andere delen sturen onbewuste functies of geleiden signalen. Antwoord A.",
+            basis: "Bewustwording = grote hersenen.",
+            simpeler: "Bewust horen gebeurt in de grote hersenen — de 'denker'. Andere delen sturen onbewuste functies of geleiden signalen.",
             nogSimpeler: "Bewust = grote hersenen",
           },
         },
@@ -416,8 +416,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Zenuwen + bloedvaten zitten samen in de centrale holte. Buitenkant van een tand is 'dood'." },
           ],
           niveaus: {
-            basis: "Alleen in de tandholte. Antwoord B.",
-            simpeler: "Zenuwen zitten alleen in de zachte kern van de tand (de tandholte). Het tandbeen eromheen is hard en zonder zenuwen. Antwoord B.",
+            basis: "Alleen in de tandholte.",
+            simpeler: "Zenuwen zitten alleen in de zachte kern van de tand (de tandholte). Het tandbeen eromheen is hard en zonder zenuwen.",
             nogSimpeler: "Alleen tandholte",
           },
         },
@@ -459,7 +459,7 @@ const steps = [
             { titel: "Twee transportsystemen", tekst: "Lichaam heeft 2 vloeistof-systemen:\n• **Bloed** in slagaders + aders + haarvaten → aangedreven door HART.\n• **Lymfe** in lymfevaten → NIET aangedreven door hart." },
             { titel: "Waar komt lymfe vandaan?", tekst: "Uit weefselvocht (vloeistof tussen cellen). Lymfevaten zuigen dat op en transporteren het terug naar grote aders bij hartwerking-gebied. Dus wel uiteindelijk naar bloed, maar niet ÍN bloed." },
             { titel: "Wat duwt lymfe vooruit?", tekst: "1. **Druk** uit weefsel\n2. **Spier-bewegingen** (lopen, ademen) knijpen lymfevaten samen\n3. **Kleppen** in lymfevaten zorgen dat lymfe niet terug stroomt — alleen vooruit\n\nHet hart speelt hier GEEN rol." },
-            { titel: "Conclusie", tekst: "Julia (kleppen → goede richting): klopt. Finn (hart pompt): klopt NIET. Antwoord B." },
+            { titel: "Conclusie", tekst: "Julia (kleppen → goede richting): klopt. Finn (hart pompt): klopt NIET." },
           ],
           woorden: [
             { woord: "lymfevaten", uitleg: "Buisjes-systeem dat weefselvocht terugbrengt naar de bloedbaan." },
@@ -475,8 +475,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Hart pompt alleen BLOED. Lymfe gebruikt spierwerking + kleppen." },
           ],
           niveaus: {
-            basis: "Alleen Julia. Antwoord B.",
-            simpeler: "Het hart pompt alleen BLOED. Lymfe stroomt door spier-bewegingen en kleppen. Julia (kleppen) heeft gelijk, Finn (hartpomp) niet. Antwoord B.",
+            basis: "Alleen Julia.",
+            simpeler: "Het hart pompt alleen BLOED. Lymfe stroomt door spier-bewegingen en kleppen. Julia (kleppen) heeft gelijk, Finn (hartpomp) niet.",
             nogSimpeler: "Julia ja, Finn nee",
           },
         },
@@ -530,8 +530,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Lymfe = witte cellen ✓, rode cellen + plaatjes ✗." },
           ],
           niveaus: {
-            basis: "Alleen witte bloedcellen. Antwoord A.",
-            simpeler: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen en zo in lymfe komen. De rest van het bloed blijft binnen het vat. Antwoord A.",
+            basis: "Alleen witte bloedcellen.",
+            simpeler: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen en zo in lymfe komen. De rest van het bloed blijft binnen het vat.",
             nogSimpeler: "Alleen wit",
           },
         },
@@ -589,8 +589,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Maag = zuur = eiwit-vertering. Dunne darm = neutraal = alle drie." },
           ],
           niveaus: {
-            basis: "Maagsap verteert eiwitten (pepsine). Antwoord A.",
-            simpeler: "Maagsap bevat het enzym pepsine, dat eiwitten afbreekt. Koolhydraten/vetten/vezels worden ELDERS verwerkt. Antwoord A.",
+            basis: "Maagsap verteert eiwitten (pepsine).",
+            simpeler: "Maagsap bevat het enzym pepsine, dat eiwitten afbreekt. Koolhydraten/vetten/vezels worden ELDERS verwerkt.",
             nogSimpeler: "Eiwitten",
           },
         },
@@ -629,7 +629,7 @@ const steps = [
           stappen: [
             { titel: "3 lagen van een nier", tekst: "Van buiten naar binnen:\n1. **Nierschors** — buitenste laag, hier komen de meeste filter-units (nefronen).\n2. **Niermerg** — middenstuk, waar water + nuttige stoffen terug-opgenomen worden.\n3. **Nierbekken** — holle ruimte binnenin, hier komt klare urine in voordat 'ie naar de urineleider gaat." },
             { titel: "Wat filtert wat?", tekst: "Het **nefron** (microscopisch filter-eenheid) zit half in schors + half in merg. Bloed wordt eerst in schors gefilterd, dan loopt het door het merg waar bruikbare stoffen + water terug naar bloed gaan. Wat overblijft = urine." },
-            { titel: "Antwoord", tekst: "Filtering = schors + merg samen. Antwoord C." },
+            { titel: "Antwoord", tekst: "Filtering = schors + merg samen." },
           ],
           woorden: [
             { woord: "nierschors", uitleg: "Buitenste laag van nier — start van filteren." },
@@ -646,8 +646,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Schors + merg = filteren. Bekken = verzamelen." },
           ],
           niveaus: {
-            basis: "Nierschors + niermerg. Antwoord C.",
-            simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet. Antwoord C.",
+            basis: "Nierschors + niermerg.",
+            simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet.",
             nogSimpeler: "Schors + merg",
           },
         },
@@ -704,8 +704,8 @@ const steps = [
             { onderwerp: "Onthoud", uitleg: "Clicker + beloning = conditionering. Pavlov-experiment is hét standaard-voorbeeld." },
           ],
           niveaus: {
-            basis: "Conditionering. Antwoord A.",
-            simpeler: "De hond leert: click = snoepje. Een gekoppelde reactie op een prikkel = conditionering (zoals Pavlov's bel-experiment). Antwoord A.",
+            basis: "Conditionering.",
+            simpeler: "De hond leert: click = snoepje. Een gekoppelde reactie op een prikkel = conditionering (zoals Pavlov's bel-experiment).",
             nogSimpeler: "Click + snoepje = conditionering",
           },
         },

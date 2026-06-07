@@ -34,9 +34,18 @@ const SKIP = new Set([
   "subjectMapping.js", "subjectMapping.test.js", "questionPathMap.generated.js",
 ]);
 
-// Token: inhoud-char, dan optionele whitespace, "=", whitespace, keuze-letter,
-// punt, optionele whitespace, sluit-quote. Vervang door inhoud-char + quote.
-const LEAK = /([^"\s])\s*=\s*([A-D])\.\s*"/g;
+// Drie hoog-precieze antwoord-letter-lek-vormen aan het EIND van een
+// string-literal (allemaal vlak vóór de sluit-quote). De ([^"]) / ([^"\s])
+// lead-guard voorkomt een lege resultaat-string.
+//   1) "...= A."        → keuze-letter na een '=' (bv. "3 cm = 3 km. = A.")
+//   2) "...Antwoord A."  → expliciete "Antwoord <letter>."-verklap
+//   3) "...optie A."     → expliciete "optie <letter>."-verklap
+// NIET geraakt (bewust): losse " B." (kan Ampère/bloedgroep/wis-A-en-B zijn).
+const LEAKS = [
+  /([^"\s])\s*=\s*[A-D]\.\s*"/g,
+  /([^"])\s*Antwoord [A-D]\.\s*"/g,
+  /([^"])\s*[Oo]ptie [A-D]\.\s*"/g,
+];
 
 const files = fs.readdirSync(ROOT).filter(
   (f) => f.endsWith(".js") && !SKIP.has(f) && !f.includes(".test.")
@@ -50,13 +59,16 @@ for (const file of files) {
   const full = path.join(ROOT, file);
   const src = fs.readFileSync(full, "utf8");
   let count = 0;
-  const out = src.replace(LEAK, (m, lead) => {
-    count++;
-    if (samples.length < 25) {
-      samples.push(`${file}: …${m.trim()}  →  …${lead}"`);
-    }
-    return `${lead}"`;
-  });
+  let out = src;
+  for (const LEAK of LEAKS) {
+    out = out.replace(LEAK, (m, lead) => {
+      count++;
+      if (samples.length < 25) {
+        samples.push(`${file}: …${m.trim()}  →  …${lead}"`);
+      }
+      return `${lead}"`;
+    });
+  }
   if (count > 0) {
     totalFixed += count;
     filesTouched++;

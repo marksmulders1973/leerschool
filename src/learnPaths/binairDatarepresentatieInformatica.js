@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [null, "A is geen 1 — het komt ná de 9.", "Dat is B.", "16 is het grondtal; A zelf is kleiner."],
         uitlegPad: {
           stappen: [{ titel: "Na de 9 komen letters", tekst: "Hexadecimaal heeft 16 cijfers. Na 0-9 ga je verder met letters: **A = 10**, B = 11, C = 12, D = 13, E = 14, F = 15. Zo passen er 16 waarden in één teken." }],
-          niveaus: { basis: "A = 10. A.", simpeler: "Hex A = 10 = optie A.", nogSimpeler: "A." },
+          niveaus: { basis: "A = 10. A.", simpeler: "Hex A = 10 =", nogSimpeler: "A." },
         },
       },
       {

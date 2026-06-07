@@ -89,7 +89,7 @@ const steps = [
           niveaus: {
             basis: "Zweden is EU maar geen EMU → eigen munt = kroon → antwoord C.",
             simpeler: "Niet elk EU-land heeft de euro. Zweden was er bij vanaf 1995 (EU) maar wilde de eigen kroon houden. Een land heeft 1 wettig betaalmiddel — Zweden = kroon, geen euro.",
-            nogSimpeler: "Zweden = EU + kroon, geen euro. Antwoord C.",
+            nogSimpeler: "Zweden = EU + kroon, geen euro.",
           },
         },
       },
@@ -146,7 +146,7 @@ const steps = [
             { onderwerp: "Differentiatie", uitleg: "Aanbieders maken hun product net IETS anders om zich te onderscheiden — sfeer, doelgroep, prijs, kwaliteit." },
           ],
           niveaus: {
-            basis: "Paar omroepen + verschillend = oligopolie. Antwoord C.",
+            basis: "Paar omroepen + verschillend = oligopolie.",
             simpeler: "Stel je voor: 10 supermarktketens in NL — niet 1 (monopolie), niet 1000 (volkomen concurrentie). Een PAAR. Elke ketens heeft eigen sfeer (Lidl = goedkoop, AH = midden, Jumbo = vriendelijk). Hetzelfde geldt voor publieke omroepen — paar spelers, elk met eigen karakter = oligopolie.",
             nogSimpeler: "Paar spelers + verschillend = oligopolie",
           },
@@ -205,7 +205,7 @@ const steps = [
             { onderwerp: "Inflatie", uitleg: "Gemiddelde stijging van prijzen per jaar. Bij hoge inflatie wordt geld minder waard." },
           ],
           niveaus: {
-            basis: "Koopkracht = reëel inkomen = inkomen na inflatie-correctie. Antwoord D.",
+            basis: "Koopkracht = reëel inkomen = inkomen na inflatie-correctie.",
             simpeler: "Op Prinsjesdag wil iedereen weten: 'kan ik volgend jaar nog evenveel boodschappen doen?'. Dat hangt af van loon ÉN prijzen. Het inkomen 'na prijsstijging' = reëel inkomen = koopkracht.",
             nogSimpeler: "Koopkracht = reëel inkomen",
           },
@@ -261,7 +261,7 @@ const steps = [
             { onderwerp: "Hoe leent een land?", uitleg: "Door staatsobligaties uit te geven. Beleggers (banken, pensioenfondsen) lenen geld aan de overheid en krijgen rente." },
           ],
           niveaus: {
-            basis: "Uitgaven > inkomsten → tekort → bijlenen → schuld stijgt. Antwoord B.",
+            basis: "Uitgaven > inkomsten → tekort → bijlenen → schuld stijgt.",
             simpeler: "Stel je voor: jij geeft elke maand €1.500 uit maar verdient maar €1.300. Tekort €200/maand → moet bijlenen → schuld groeit. Hetzelfde met Italië: meer uitgaven dan belastinginkomsten = bijlenen = schuld stijgt.",
             nogSimpeler: "Meer uitgeven dan binnenhalen = lenen = schuld stijgt",
           },
@@ -320,7 +320,7 @@ const steps = [
             { onderwerp: "Waarom begroten?", uitleg: "Om vooraf te zien of je inkomsten genoeg zijn. Onderschatte uitgaven = aan einde maand niets meer over of zelfs lenen." },
           ],
           niveaus: {
-            basis: "Citaat noemt fiets-reparatie (incidenteel) + lunch/koffie (dagelijks huishoudelijk). Antwoord B.",
+            basis: "Citaat noemt fiets-reparatie (incidenteel) + lunch/koffie (dagelijks huishoudelijk).",
             simpeler: "Het Nibud zegt: studenten onderschatten 2 dingen: (a) onverwachte kosten (fiets stuk) en (b) kleine dagelijkse kosten (broodje, koffie). Vaste lasten zoals huur zien ze WEL — die staan elke maand in de bank.",
             nogSimpeler: "Citaat = incidenteel + dagelijks",
           },
@@ -378,7 +378,7 @@ const steps = [
             { onderwerp: "Waarom verplaatsen bedrijven?", uitleg: "Lagere lonen, minder regelgeving, dichter bij grondstoffen of klanten. Vaak naar Azië of Oost-Europa." },
           ],
           niveaus: {
-            basis: "Bedrijven WEG = blijvend = structureel. Aanbodkant van productie. Antwoord C.",
+            basis: "Bedrijven WEG = blijvend = structureel. Aanbodkant van productie.",
             simpeler: "Verschil: conjunctureel = tijdelijk (slechte economie, komt weer goed). Structureel = blijvend (bedrijf is WEG, komt niet terug). Een bedrijf dat naar buitenland verhuist = blijvend = structureel.",
             nogSimpeler: "Bedrijf verdwijnt = structureel + aanbod",
           },

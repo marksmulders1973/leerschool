@@ -164,7 +164,7 @@ const steps = [
             { onderwerp: "Indexcijfers", uitleg: "Manier om verandering in % uit te drukken. CPI = 100 in basisjaar; CPI = 105 = 5% prijsstijging." },
           ],
           niveaus: {
-            basis: "Reëel = gecorrigeerd voor PRIJZEN (inflatie). Antwoord C.",
+            basis: "Reëel = gecorrigeerd voor PRIJZEN (inflatie).",
             simpeler: "Stel: jij verdiende €1.000, nu €1.050 (+5%). Maar boodschappen zijn 4% duurder. Reëel: je hebt 1% méér koopkracht. We trekken 'veranderde prijzen' eraf om reëel te krijgen.",
             nogSimpeler: "Reëel = nominaal − inflatie = veranderde prijzen",
           },
@@ -207,7 +207,7 @@ const steps = [
             { titel: "Wie KOOPT?", tekst: "De toerist (buitenlander) — geld komt vanuit het buitenland." },
             { titel: "Waar wordt gekocht?", tekst: "Op Sint-Maarten — bij een lokaal bedrijf." },
             { titel: "Goed of dienst?", tekst: "Een SOUVENIR = tastbaar voorwerp = goed. Niet een dienst (=ervaring)." },
-            { titel: "Export of import voor Sint-Maarten?", tekst: "Geld komt SX BINNEN → EXPORT van goederen DOOR Sint-Maarten. Antwoord B." },
+            { titel: "Export of import voor Sint-Maarten?", tekst: "Geld komt SX BINNEN → EXPORT van goederen DOOR Sint-Maarten." },
           ],
           woorden: [
             { woord: "goed", uitleg: "Tastbaar voorwerp dat je vast kunt pakken: souvenir, kleding, eten." },
@@ -224,7 +224,7 @@ const steps = [
             { onderwerp: "Vanuit wiens kant?", uitleg: "Bij export/import-vragen: bedenk altijd OF je vanuit het verkoopland of koopland kijkt. De vraag specificeert vaak 'door land X'." },
           ],
           niveaus: {
-            basis: "Souvenir = goed. Toerist koopt in SX = SX verkoopt = export goed door SX. Antwoord B.",
+            basis: "Souvenir = goed. Toerist koopt in SX = SX verkoopt = export goed door SX.",
             simpeler: "Een souvenir kun je vasthouden (= goed, niet dienst). De toerist KOOPT van een SX-winkel → SX VERKOOPT aan buitenland → dat heet export. Dus: export van goederen.",
             nogSimpeler: "Souvenir = goed + verkocht aan buitenlander = export goed",
           },
@@ -283,7 +283,7 @@ const steps = [
             { onderwerp: "Decentralisatie", uitleg: "Sinds 2015 doen gemeenten meer (jeugdzorg, WMO) — bedoeld om zorg dichter bij burger te brengen." },
           ],
           niveaus: {
-            basis: "Paspoort/ID/rijbewijs = burgerzaken = gemeente. Antwoord B.",
+            basis: "Paspoort/ID/rijbewijs = burgerzaken = gemeente.",
             simpeler: "Waar haal jij je paspoort? Niet bij de premier in Den Haag, niet bij het waterschap — bij het GEMEENTEHUIS in jouw woonplaats. Dat is gemeentelijke taak.",
             nogSimpeler: "Paspoort = gemeente",
           },
@@ -340,7 +340,7 @@ const steps = [
             { onderwerp: "WOZ-waarde", uitleg: "Geschatte marktwaarde van je huis door de gemeente. Basis voor OZB en eigenwoningforfait IB." },
           ],
           niveaus: {
-            basis: "OZB = gemeente. Antwoord C.",
+            basis: "OZB = gemeente.",
             simpeler: "OZB betekent letterlijk 'Onroerendezaakbelasting' — belasting op je huis. Die wordt door de GEMEENTE geheven (zij innen het, gebruiken het voor lokale voorzieningen). De andere drie zijn allemaal Rijksbelastingen.",
             nogSimpeler: "OZB = gemeente",
           },
@@ -382,7 +382,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een overdrachtsinkomen?", tekst: "Geld dat je krijgt ZONDER er een productiefactor (arbeid, kapitaal, natuur, ondernemerschap) tegenover te zetten. Vaak van overheid of familie." },
             { titel: "Wat is GEEN overdrachtsinkomen?", tekst: "Loon (= arbeid). Rente (= kapitaal/spaargeld). Winst (= ondernemerschap). Allemaal primair inkomen." },
-            { titel: "Welke optie past?", tekst: "Zakgeld krijg je van ouders zonder productiefactor → overdrachtsinkomen. Antwoord D." },
+            { titel: "Welke optie past?", tekst: "Zakgeld krijg je van ouders zonder productiefactor → overdrachtsinkomen." },
           ],
           woorden: [
             { woord: "primair inkomen", uitleg: "Inkomen dat je verdient MET een productiefactor: loon (arbeid), rente (kapitaal), huur (natuur), winst (ondernemerschap)." },
@@ -400,7 +400,7 @@ const steps = [
             { onderwerp: "Loon vs zakgeld", uitleg: "Loon krijg je voor WERK. Zakgeld krijg je gewoon, zonder dat je iets terug levert. Daarom is loon primair en zakgeld overdracht." },
           ],
           niveaus: {
-            basis: "Zakgeld = krijg je zonder tegenprestatie = overdrachtsinkomen. Antwoord D.",
+            basis: "Zakgeld = krijg je zonder tegenprestatie = overdrachtsinkomen.",
             simpeler: "Vraag jezelf bij elke optie: 'lever ik er iets voor?' Loon = ja (werk). Rente = ja (geld op de bank). Winst = ja (ondernemerschap). Zakgeld = nee, krijg je gewoon. Dat 'gewoon krijgen' = overdrachtsinkomen.",
             nogSimpeler: "Niets gedaan + krijg geld = overdracht = zakgeld",
           },
@@ -442,7 +442,7 @@ const steps = [
           stappen: [
             { titel: "Hoeveel eigenaren?", tekst: "ALLE leerlingen van de klas = meerdere personen. Dus geen eenmanszaak (= 1 persoon)." },
             { titel: "Hoofdelijk aansprakelijk?", tekst: "Allen PRIVÉ aansprakelijk = ja, hoofdelijk. Dus geen BV of NV (= rechtspersoon, juist NIET privé aansprakelijk)." },
-            { titel: "Welke ondernemingsvorm dan?", tekst: "Meerdere eigenaren + allen privé aansprakelijk = VOF (vennootschap onder firma). Antwoord D." },
+            { titel: "Welke ondernemingsvorm dan?", tekst: "Meerdere eigenaren + allen privé aansprakelijk = VOF (vennootschap onder firma)." },
           ],
           woorden: [
             { woord: "VOF", uitleg: "Vennootschap onder firma — 2+ personen samen ondernemen, allen hoofdelijk aansprakelijk." },
@@ -460,7 +460,7 @@ const steps = [
             { onderwerp: "Rechtspersoon", uitleg: "BV/NV is juridisch een aparte 'persoon'. Heeft eigen vermogen, kan failliet gaan zonder eigenaar mee te trekken." },
           ],
           niveaus: {
-            basis: "Meerdere personen + allen privé aansprakelijk = VOF. Antwoord D.",
+            basis: "Meerdere personen + allen privé aansprakelijk = VOF.",
             simpeler: "De klas is GEEN BV opgericht (= geen rechtspersoon). Met meerdere mensen samen ondernemen + privé aansprakelijk → VOF.",
             nogSimpeler: "Veel + privé = VOF",
           },
@@ -515,7 +515,7 @@ const steps = [
             { onderwerp: "Verschil volume en waarde", uitleg: "Volume = aantal stuks. Waarde = aantal × prijs. Bij prijsstijging blijft volume gelijk maar groeit waarde." },
           ],
           niveaus: {
-            basis: "Overschot in € groeit ondanks meer import-volume → exportprijs moet harder zijn gestegen dan importprijs. Antwoord B.",
+            basis: "Overschot in € groeit ondanks meer import-volume → exportprijs moet harder zijn gestegen dan importprijs.",
             simpeler: "Stel: NL verkoopt 10 ton bloemen voor €100/kg = €1.000.000. Dit jaar 8 ton voor €200/kg = €1.600.000. Volume DAALT maar waarde STIJGT door prijs. Hetzelfde principe hier: prijs export ↑ harder dan prijs import → waarde-overschot ↑.",
             nogSimpeler: "Volume export laag, waarde stijgt → exportprijs ↑ meer",
           },
@@ -559,7 +559,7 @@ const steps = [
           stappen: [
             { titel: "Wat zegt Germaine?", tekst: "1. Spaarrente is laag. 2. Investeer geld in warmtepomp. 3. Dat levert meer op." },
             { titel: "Hoe levert een warmtepomp 'op'?", tekst: "Door BESPARING op energiekosten elk jaar. Geen rente, maar minder uitgaven." },
-            { titel: "Wat is dus de samenvatting?", tekst: "BESPARING op energie > rente op spaargeld → warmtepomp is beter dan sparen. Antwoord A." },
+            { titel: "Wat is dus de samenvatting?", tekst: "BESPARING op energie > rente op spaargeld → warmtepomp is beter dan sparen." },
           ],
           woorden: [
             { woord: "spaarrente", uitleg: "Vergoeding die de bank betaalt over je spaargeld. In 2024-2025 erg laag (0-2%)." },
@@ -575,8 +575,8 @@ const steps = [
             { onderwerp: "Tijdsvoorkeur", uitleg: "Geld nu vs later. Investeringen vragen geld nu maar leveren later structureel op. Als opbrengst > rente, loont het." },
           ],
           niveaus: {
-            basis: "Germaine zegt: warmtepomp-besparing > spaarrente → investeren loont. Antwoord A.",
-            simpeler: "Germaine vergelijkt 2 opties: 1) sparen (krijg je rente, weinig). 2) warmtepomp kopen (bespaar je energiekosten, veel). Optie 2 is beter omdat besparing > rente. Antwoord A.",
+            basis: "Germaine zegt: warmtepomp-besparing > spaarrente → investeren loont.",
+            simpeler: "Germaine vergelijkt 2 opties: 1) sparen (krijg je rente, weinig). 2) warmtepomp kopen (bespaar je energiekosten, veel). Optie 2 is beter omdat besparing > rente.",
             nogSimpeler: "Energie-besparing > rente = warmtepomp wint",
           },
         },

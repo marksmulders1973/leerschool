@@ -114,7 +114,7 @@ const steps = [
             { onderwerp: "Eerst zoeken, dan kiezen", uitleg: "Bij een letterlijke vraag: zoek EERST het antwoord in de tekst. Pas DAARNA kijk je naar de antwoordopties." },
           ],
           niveaus: {
-            basis: "Letterlijke vraag → vind 'eerste fiets uitgevonden' in de tekst. Zin: '1817 door Karl von Drais'. Antwoord A.",
+            basis: "Letterlijke vraag → vind 'eerste fiets uitgevonden' in de tekst. Zin: '1817 door Karl von Drais'.",
             simpeler: "De vraag wil weten WANNEER de eerste fiets er was. Lees de tekst, zoek de eerste keer dat een fiets genoemd wordt. Eerste zin van alinea 1: 1817. Klaar.",
             nogSimpeler: "Eerste = 1817",
           },
@@ -159,8 +159,8 @@ const steps = [
             { onderwerp: "Verschil letterlijk vs inferentie", uitleg: "Letterlijke vraag = staat in tekst. Inferentie-vraag = je moet het AFLEIDEN. Beide moeten ondersteund worden door de tekst." },
           ],
           niveaus: {
-            basis: "Tekst geeft de hint: groot wiel → meer afstand per trap → sneller. Antwoord A.",
-            simpeler: "Stel je voor: een klein wiel maakt 1 rondje = je gaat 50 cm verder. Een GROOT wiel maakt 1 rondje = je gaat 2 meter verder. Sneller dus. Daarom maakten ze het wiel groot. Antwoord A.",
+            basis: "Tekst geeft de hint: groot wiel → meer afstand per trap → sneller.",
+            simpeler: "Stel je voor: een klein wiel maakt 1 rondje = je gaat 50 cm verder. Een GROOT wiel maakt 1 rondje = je gaat 2 meter verder. Sneller dus. Daarom maakten ze het wiel groot.",
             nogSimpeler: "Groot wiel = sneller",
           },
         },
@@ -187,7 +187,7 @@ const steps = [
             { titel: "Welk type vraag?", tekst: "Een woordbetekenis-vraag. Je hoeft het woord NIET uit het hoofd te kennen — je leidt de betekenis af uit de TEKST eromheen (= context)." },
             { titel: "Splits het woord", tekst: "Een lang woord = vaak 2 of meer kleine woorden geplakt. 'pedaalomwenteling' = pedaal + omwenteling." },
             { titel: "Wat betekent elk deel?", tekst: "PEDAAL = waar je met je voeten op trapt. OMWENTELING = 1 keer rond. Samen: 1 keer rond trappen met de pedalen." },
-            { titel: "Toets in context", tekst: "Tekst zegt: '1 pedaalomwenteling = meer afstand'. Past bij '1x trappen'. Antwoord A." },
+            { titel: "Toets in context", tekst: "Tekst zegt: '1 pedaalomwenteling = meer afstand'. Past bij '1x trappen'." },
           ],
           woorden: [
             { woord: "context", uitleg: "De tekst RONDOM een woord. Vaak helpt de zin ervoor en erna om te raden wat een nieuw woord betekent." },
@@ -203,7 +203,7 @@ const steps = [
             { onderwerp: "Niet alle woorden hoef je te kennen", uitleg: "Bij een toets is het OK om woorden tegen te komen die je nog nooit gezien hebt. De tekst geeft genoeg hints — je kunt het altijd oplossen." },
           ],
           niveaus: {
-            basis: "Pedaal + omwenteling = 1x trappen rond. Antwoord A.",
+            basis: "Pedaal + omwenteling = 1x trappen rond.",
             simpeler: "Lang woord? Splits 'm op. Pedaal = waar je trapt. Omwenteling = 1x rond. Samen: 1x rond trappen met de pedalen. Dat is A.",
             nogSimpeler: "Pedaal + rondje = trappen",
           },
@@ -290,14 +290,14 @@ const steps = [
           ],
           theorie: "**Bij instructieve teksten staat het antwoord vaak in een opsomming** (een lijstje na een dubbele punt). Zoek naar:\n- 'Je hebt nodig:'\n- 'Wat je gebruikt:'\n- 'Materialen:'\nWat erna komt, is meestal het antwoord.\n\nValstrikken: andere opties zien er plausibel uit (naald, garen) maar staan NIET in deze tekst.",
           voorbeelden: [
-            { type: "vinden", tekst: "Tekst: 'Je hebt nodig: 20 paperclips, touw, schaar.' = letterlijke kopie in optie A." },
+            { type: "vinden", tekst: "Tekst: 'Je hebt nodig: 20 paperclips, touw, schaar.' = letterlijke kopie in" },
           ],
           basiskennis: [
             { onderwerp: "Antwoord = wat in tekst staat", uitleg: "Bij begrijpend lezen mag je NIETS zelf bedenken. Het antwoord moet in de tekst staan of erop gebaseerd zijn." },
           ],
           niveaus: {
             basis: "Tekst: '20 paperclips + touw + schaar'. Optie A is 1-op-1 = juist.",
-            simpeler: "Zoek de zin met 'je hebt nodig'. Lees wat erachter komt: 20 paperclips, touw, schaar. Dat staat letterlijk in optie A.",
+            simpeler: "Zoek de zin met 'je hebt nodig'. Lees wat erachter komt: 20 paperclips, touw, schaar. Dat staat letterlijk in",
             nogSimpeler: "Lijstje uit tekst",
           },
         },
@@ -330,13 +330,13 @@ const steps = [
           ],
           theorie: "**Bij 'waarom?'-vragen** zoek je het 'omdat' of de uitleg ERNA in de tekst.\n\nFormules om naar te zoeken:\n- 'omdat...'\n- 'als ... dan ...'\n- 'door...'\n- 'daarom...'\n\nValstrikken: andere opties klinken aannemelijk (zere vingers? klinkt logisch) maar staan NIET in deze specifieke tekst.",
           voorbeelden: [
-            { type: "match", tekst: "Tekst: 'als je gehaast bent gaan de clips uit elkaar' = direct gekoppeld aan optie A." },
+            { type: "match", tekst: "Tekst: 'als je gehaast bent gaan de clips uit elkaar' = direct gekoppeld aan" },
           ],
           basiskennis: [
             { onderwerp: "Begrijpend lezen vs algemene kennis", uitleg: "Het antwoord moet uit DEZE tekst komen — niet uit wat jij denkt of weet. Soms ligt iets voor de hand maar staat het er niet." },
           ],
           niveaus: {
-            basis: "Tekst zegt 'gehaast → clips uit elkaar'. Antwoord A.",
+            basis: "Tekst zegt 'gehaast → clips uit elkaar'.",
             simpeler: "De vraag is 'waarom rustig werken?'. Zoek het woord 'rustig' in de tekst. Direct erna staat de reden: 'als je gehaast bent gaan de clips uit elkaar'. Dat is A.",
             nogSimpeler: "Gehaast = clips kapot",
           },
@@ -363,7 +363,7 @@ const steps = [
           stappen: [
             { titel: "Welk type?", tekst: "Een 'volgorde-vraag': je moet de stappen in de juiste volgorde hebben. Niet alleen wat, maar WANNEER." },
             { titel: "Zoek de sluiting-stap", tekst: "Tekst zegt: 'Maak nu de sluiting. Knip een stukje touw...' = sluiting is na het meten." },
-            { titel: "Wat staat ER VOOR?", tekst: "Vlak voor 'maak nu de sluiting' staat: 'Meet het door de keten om je pols te leggen.' = optie A." },
+            { titel: "Wat staat ER VOOR?", tekst: "Vlak voor 'maak nu de sluiting' staat: 'Meet het door de keten om je pols te leggen.' =" },
             { titel: "Toets andere opties", tekst: "Verven = stap VOORDAT je begint (alinea 1). Knoop = AT de sluiting zelf, niet ervoor. Schaar knippen = nergens." },
           ],
           woorden: [
@@ -378,7 +378,7 @@ const steps = [
             { onderwerp: "Tekst lezen = volgorde respecteren", uitleg: "Een instructieve tekst geeft stappen in de juiste volgorde. Lees 'm zo." },
           ],
           niveaus: {
-            basis: "Vlak voor 'sluiting maken' staat 'meet om pols'. Antwoord A.",
+            basis: "Vlak voor 'sluiting maken' staat 'meet om pols'.",
             simpeler: "Stel je voor: jij maakt de armband zelf. Eerst hak je clips, dan check je of het past om je pols, DAARNA maak je het slot. 'Vlak voor het slot' = check je pols-maat = meten",
             nogSimpeler: "Voor sluiting = meten",
           },
@@ -404,7 +404,7 @@ const steps = [
           stappen: [
             { titel: "Wat zoeken we?", tekst: "Het DOEL van de tekst — waarom heeft de schrijver deze tekst gemaakt?" },
             { titel: "4 hoofd-doelen herkennen", tekst: "Informeren (uitleggen wat iets is) / Instrueren (hoe doe je iets) / Overtuigen (mening) / Vermaken (verhaal)." },
-            { titel: "Welk doel past hier?", tekst: "Tekst geeft STAPPEN ('begin met de eerste paperclip', 'doe nu', 'maak nu de sluiting'). Dat is INSTRUEREN = optie A." },
+            { titel: "Welk doel past hier?", tekst: "Tekst geeft STAPPEN ('begin met de eerste paperclip', 'doe nu', 'maak nu de sluiting'). Dat is INSTRUEREN =" },
             { titel: "Toets andere opties", tekst: "Geschiedenis paperclips: nergens. Vergelijking met andere armbanden: nergens. Verhaal met personage (Sara, Tom): nergens. Alleen instructies." },
           ],
           woorden: [
@@ -457,7 +457,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een 'standpunt'?", tekst: "De MENING van de schrijver. Wat hij vindt en wil verdedigen." },
             { titel: "Zoek de mening-zin", tekst: "Bij betogende teksten staat het standpunt vaak vroeg in de tekst, met woorden als 'ik vind', 'ik ben van mening', 'mijn standpunt is'." },
-            { titel: "Vergelijk met opties", tekst: "Tekst zegt: 'Ik ben van mening... Telefoons horen niet thuis op de basisschool.' = letterlijk optie A." },
+            { titel: "Vergelijk met opties", tekst: "Tekst zegt: 'Ik ben van mening... Telefoons horen niet thuis op de basisschool.' = letterlijk" },
           ],
           woorden: [
             { woord: "standpunt", uitleg: "De mening van iemand — wat hij of zij ergens van vindt." },
@@ -472,7 +472,7 @@ const steps = [
             { onderwerp: "Standpunt vs argument", uitleg: "Standpunt = WAT je vindt. Argument = WAAROM je dat vindt. Een tekst heeft 1 standpunt en meerdere argumenten." },
           ],
           niveaus: {
-            basis: "Tekst zegt: 'telefoons horen niet thuis op de basisschool' (mening). Antwoord A.",
+            basis: "Tekst zegt: 'telefoons horen niet thuis op de basisschool' (mening).",
             simpeler: "Wat vindt de schrijver? Lees de eerste alinea. 'Ik ben van mening... telefoons NIET op basisschool'. Dat is zijn standpunt",
             nogSimpeler: "Mening = telefoons niet op school",
           },
@@ -554,7 +554,7 @@ const steps = [
             { onderwerp: "Genuanceerd standpunt", uitleg: "De schrijver is niet 'zwart-wit'. Hij erkent een gedeelte van wat de tegenstander zegt, maar verfijnt het." },
           ],
           niveaus: {
-            basis: "Schrijver: 'klopt, maar thuis ipv school' = erkennen + verschuiven. Antwoord A.",
+            basis: "Schrijver: 'klopt, maar thuis ipv school' = erkennen + verschuiven.",
             simpeler: "De schrijver zegt: 'ja, dat klopt' (= erkent het) maar voegt toe 'thuis kan dat ook' (= niet op school). Hij negeert het niet, hij denkt mee. A.",
             nogSimpeler: "Erkent + verschuift naar thuis",
           },
@@ -580,7 +580,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een 'houding'?", tekst: "De manier waarop de schrijver schrijft. Klinkt hij zeker, twijfelend, boos, droevig, ironisch?" },
             { titel: "Welke woorden vertellen je dit?", tekst: "Stellige woorden: 'daarom', 'moet', 'recht op'. Twijfel-woorden: 'misschien', 'lijkt'. Spot: ironische opmerkingen." },
-            { titel: "Pas toe op deze tekst", tekst: "Tekst gebruikt 'Ik ben van mening', 'Daarom', 'Onze kinderen hebben recht op'. Allemaal STELLIG. Antwoord A." },
+            { titel: "Pas toe op deze tekst", tekst: "Tekst gebruikt 'Ik ben van mening', 'Daarom', 'Onze kinderen hebben recht op'. Allemaal STELLIG." },
           ],
           woorden: [
             { woord: "houding", uitleg: "De toon van de schrijver — zeker, twijfelend, boos, etc." },
@@ -596,7 +596,7 @@ const steps = [
             { onderwerp: "Toon vs inhoud", uitleg: "De TOON is hoe de schrijver schrijft. De INHOUD is wat hij zegt. Beide kun je los van elkaar beoordelen." },
           ],
           niveaus: {
-            basis: "Tekst gebruikt 'daarom', 'moet', 'recht op' = stellige toon. Antwoord A.",
+            basis: "Tekst gebruikt 'daarom', 'moet', 'recht op' = stellige toon.",
             simpeler: "Klinkt de schrijver zeker of twijfelend? Lees: 'Ik ben van mening DAT...', 'Daarom: laat de telefoon thuis'. Dat zijn beslissende woorden. Stellig en overtuigd",
             nogSimpeler: "Beslissende woorden = stellig",
           },
@@ -631,7 +631,7 @@ const steps = [
           stappen: [
             { titel: "Letterlijke vraag", tekst: "Antwoord staat ergens in de tekst — zoeken." },
             { titel: "Welk kernwoord?", tekst: "'Sara's rugzak' — zoek in de tekst waar haar rugzak voorkomt." },
-            { titel: "Vind de zin", tekst: "Tekst alinea 1: 'voelde ze in haar rugzak — geen lunchtrommel.' Antwoord A." },
+            { titel: "Vind de zin", tekst: "Tekst alinea 1: 'voelde ze in haar rugzak — geen lunchtrommel.'" },
           ],
           woorden: [
             { woord: "lunchtrommel", uitleg: "Een doosje waarin je je lunch (boterham) meeneemt naar school." },
@@ -679,7 +679,7 @@ const steps = [
           ],
           theorie: "**Bij verhalen gebruikt schrijver vaak figuurlijk taalgebruik om gevoelens uit te drukken.**\n\nVoorbeelden:\n- 'schaapachtig' = verlegen / beschaamd\n- 'rood worden' = zich schamen\n- 'in de wolken' = heel blij\n- 'op zijn hondjes' = slecht gestemd\n\nLees de zin in CONTEXT — wat past bij wat de personage net heeft meegemaakt?",
           voorbeelden: [
-            { type: "context", tekst: "Sara had geen brood, Tom vroeg of ze geen brood had. Ze wilde dat liever niet toegeven. Schaamtegevoel = optie A." },
+            { type: "context", tekst: "Sara had geen brood, Tom vroeg of ze geen brood had. Ze wilde dat liever niet toegeven. Schaamtegevoel =" },
           ],
           basiskennis: [
             { onderwerp: "Letterlijk vs figuurlijk", uitleg: "Bij verhalen mag je niet alle woorden letterlijk nemen. 'In tranen uitbarsten' = niet echt exploderen." },
@@ -712,7 +712,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een 'motief'?", tekst: "De REDEN waarom een personage iets doet. In verhalen moet je vaak afleiden uit gedrag." },
             { titel: "Wat doet Tom precies?", tekst: "Hij geeft brood, draait zich om en eet zelf verder. GEEN drama, geen aandacht trekken." },
-            { titel: "Waarom op die manier?", tekst: "Als je 'er een punt van maakt', voelt iemand zich ongemakkelijk. Tom doet juist niet zo → hij wil Sara's gevoel sparen. Antwoord A." },
+            { titel: "Waarom op die manier?", tekst: "Als je 'er een punt van maakt', voelt iemand zich ongemakkelijk. Tom doet juist niet zo → hij wil Sara's gevoel sparen." },
           ],
           woorden: [
             { woord: "motief", uitleg: "De drijfveer — waarom doet iemand iets?" },
@@ -753,7 +753,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een 'boodschap'?", tekst: "De LES of WIJSHEID die de schrijver wil overbrengen — wat blijft hangen na het verhaal." },
             { titel: "Wat gebeurt er?", tekst: "Tom's KLEINE actie (halve boterham, geen drama) maakt voor Sara een GROTE indruk. Ze schrijft een dankbriefje. Tom schrijft terug." },
-            { titel: "Wat leert dit?", tekst: "Een kleine vriendelijkheid kan veel impact hebben → optie A." },
+            { titel: "Wat leert dit?", tekst: "Een kleine vriendelijkheid kan veel impact hebben →" },
             { titel: "Toets andere opties", tekst: "B 'vergeet je lunch nooit' = praktisch advies, geen wijsheid. C 'boterhammen lekker gedeeld' = klein detail. D 'leraren meer eten' = leraren zijn er niet." },
           ],
           woorden: [
@@ -808,7 +808,7 @@ const steps = [
             { woord: "stelling", uitleg: "Een uitspraak die juist of fout kan zijn. Vaak in de vorm: 'X is zo'." },
             { woord: "uniek", uitleg: "Niet ergens anders zo — alleen op deze plek." },
           ],
-          theorie: "Bij stelling-vragen: zoek de zin in de tekst die de stelling bevestigt of weerlegt. Hier: 'uniek in de wereld' = alleen NL → optie A.",
+          theorie: "Bij stelling-vragen: zoek de zin in de tekst die de stelling bevestigt of weerlegt. Hier: 'uniek in de wereld' = alleen NL →",
           voorbeelden: [
             { type: "match", tekst: "Tekst noemt EXACT 'meer fietsen dan inwoners' + 'uniek in de wereld'. Dat past bij A." },
           ],

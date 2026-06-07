@@ -101,7 +101,7 @@ const steps = [
         { id: "cel-biologie", title: "Cellen", niveau: "VMBO klas 1-2", why: "celkern = waar DNA zit — rode bloedcellen zijn uitzondering (geen kern)" },
       ],
       uitlegPad: compact(
-        "DNA + chromosomen zitten in de celkern. Bloeddeeltjes: bloedplaatjes (geen kern), rode bloedcellen (kernloos bij mensen — uniek!), witte bloedcellen (wel kern). Antwoord C.",
+        "DNA + chromosomen zitten in de celkern. Bloeddeeltjes: bloedplaatjes (geen kern), rode bloedcellen (kernloos bij mensen — uniek!), witte bloedcellen (wel kern).",
         { basis: "Witte bloedcellen (hebben kern).", simpeler: "Alleen witte bloedcellen hebben een kern → chromosomen → DNA.", nogSimpeler: "Witte" },
         [{ woord: "celkern", uitleg: "Waar het DNA zit." }, { woord: "leukocyt", uitleg: "Witte bloedcel — verdedigt tegen ziekten." }],
       ),
@@ -130,7 +130,7 @@ const steps = [
         { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid", niveau: "groep 6-8", why: "organen + functies spijsvertering" },
       ],
       uitlegPad: compact(
-        "Water wordt opgenomen in het bloed via de darmwand (vooral dikke darm). Lever ontgift, maag verteert, nier filtert (water naar URINE). Antwoord A.",
+        "Water wordt opgenomen in het bloed via de darmwand (vooral dikke darm). Lever ontgift, maag verteert, nier filtert (water naar URINE).",
         { basis: "De darm.", simpeler: "Darm neemt water op uit voedsel naar bloed.", nogSimpeler: "Darm" },
       ),
     }],

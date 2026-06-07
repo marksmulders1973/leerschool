@@ -160,7 +160,7 @@ const steps = [
           stappen: [
             { titel: "Nederland 1914-1918 = neutraal", tekst: "Nederland deed niet mee aan WO1. Maar lag tussen Duitsland (vechtkamp 1) en België/Frankrijk/UK (kamp 2) in. Onze schepen werden door beide kanten lastig gevallen." },
             { titel: "Handelsbelemmeringen = blokkades", tekst: "**Engelse marine** sloot Noordzee af om Duitse aanvoer te stoppen. **Duitsland** vuurde duikboten op alles wat naar Engeland voer (onbeperkte duikbootoorlog vanaf 1917). Nederlandse handel klem → import valt weg." },
-            { titel: "Wat kwam erna?", tekst: "Distributiesysteem (= rantsoenering = bonnen voor brood, kolen, suiker) was het GEVOLG van het tekort, niet de oorzaak. Vandaar foute optie C." },
+            { titel: "Wat kwam erna?", tekst: "Distributiesysteem (= rantsoenering = bonnen voor brood, kolen, suiker) was het GEVOLG van het tekort, niet de oorzaak. Vandaar foute" },
           ],
           woorden: [
             { woord: "handelsbelemmering", uitleg: "Iets wat handel hindert (blokkade, tarief, embargo)." },

@@ -46,8 +46,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Twentse textielfabrieken vanaf ~1860 — kinderen + vrouwen werkten lange dagen aan stoom-aangedreven weefgetouwen. Klassiek industrialisatie-NL." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Industrie = fabriek. -satie = proces erheen." }],
           niveaus: {
-            basis: "Industrialisatie. Antwoord B.",
-            simpeler: "Fabrieken + machines in plaats van handwerk = industrialisatie. Antwoord B.",
+            basis: "Industrialisatie.",
+            simpeler: "Fabrieken + machines in plaats van handwerk = industrialisatie.",
             nogSimpeler: "Fabrieken = industrialisatie",
           },
         },
@@ -96,8 +96,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "NSDAP verkiezing 1928: 2,6%. 1930: 18%. Juli 1932: 37%. Crisis-jaren = sprongetjes naar nazi-aanhang." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Crisis + werkloosheid → mensen vluchten naar extreme partijen." }],
           niveaus: {
-            basis: "Antidemocratische partijen groter. Antwoord A.",
-            simpeler: "Economische crisis → werkloosheid → vertrouwen in democratie weg → mensen stemmen op extremen (nazi's). Antwoord A.",
+            basis: "Antidemocratische partijen groter.",
+            simpeler: "Economische crisis → werkloosheid → vertrouwen in democratie weg → mensen stemmen op extremen (nazi's).",
             nogSimpeler: "Crisis → extremen groter",
           },
         },
@@ -140,8 +140,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Anne Frank en haar familie werden in 1944 opgepakt door politie + Gestapo, na verraad door een nog onbekende tipgever." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Gestapo = 'Geheime' politie = OPSPOREN. Jugend = Jeugd. NSB = NL. NSDAP = Duits." }],
           niveaus: {
-            basis: "Gestapo. Antwoord A.",
-            simpeler: "Gestapo = nazi-geheime politie die politieke vijanden opspoorde. Antwoord A.",
+            basis: "Gestapo.",
+            simpeler: "Gestapo = nazi-geheime politie die politieke vijanden opspoorde.",
             nogSimpeler: "Geheime politie = Gestapo",
           },
         },

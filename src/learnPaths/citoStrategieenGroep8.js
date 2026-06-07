@@ -401,7 +401,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Stap 1 — bereken de korting", tekst: "25% van €40 = €40 × 0,25 = €10 korting." },
-            { titel: "Stap 2 — trek af", tekst: "€40 − €10 = €30. Antwoord A." },
+            { titel: "Stap 2 — trek af", tekst: "€40 − €10 = €30." },
             { titel: "Sneltruc", tekst: "25% korting = je betaalt 75%. €40 × 0,75 = €30. Zelfde antwoord." },
           ],
           woorden: [
@@ -604,7 +604,7 @@ const steps = [
           ],
           theorie: "Doorstroomtoets-strategie:\n1. **Begin** bij vraag 1, ga **op tempo**\n2. Vraag te lastig (>1 min)? **Schat + markeer + door**\n3. **Maak eerste ronde** rust + simpel\n4. **Tweede ronde** terug naar lastige\n5. **Laatste 5 min**: controleer alle antwoorden — niet blanco laten",
           voorbeelden: [
-            { type: "stap", tekst: "Vraag: '12,5% van 240 = ?' Opties: 15, 30, 45, 60. Schat: 10% van 240 = 24. 12,5% ≈ 30. Antwoord B." },
+            { type: "stap", tekst: "Vraag: '12,5% van 240 = ?' Opties: 15, 30, 45, 60. Schat: 10% van 240 = 24. 12,5% ≈ 30." },
           ],
           basiskennis: [{ onderwerp: "Nooit blanco", uitleg: "Bij meerkeuze: ALTIJD invullen. Blanco = zeker 0 punten. Geschat = kans op punt." }],
           niveaus: { basis: "Schatten + markeren.", simpeler: "Lastige vraag: schat antwoord, markeer met rondje, ga door. Kom terug aan einde als tijd over.", nogSimpeler: "Schat + markeer" },

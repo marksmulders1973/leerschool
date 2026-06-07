@@ -59,7 +59,7 @@ const steps = [
             { onderwerp: "Inkomsten vs vermogen", uitleg: "Inkomsten = wat binnenkomt PER PERIODE (stroom). Vermogen = wat je HEBT op een moment (stand). Verschillende dingen." },
           ],
           niveaus: {
-            basis: "Begroting = vooraf inkomsten + uitgaven op rij. Antwoord D.",
+            basis: "Begroting = vooraf inkomsten + uitgaven op rij.",
             simpeler: "Stel je voor: aan het begin van de maand schrijf je op: 'wat krijg ik binnen?' (loon, zakgeld) en 'wat ga ik uitgeven?' (huur, boodschappen). Dat is begroten — vooruit kijken.",
             nogSimpeler: "Verwacht inkomsten + uitgaven",
           },
@@ -116,7 +116,7 @@ const steps = [
             { onderwerp: "Waarom productiviteit?", uitleg: "Een bedrijf kan alleen lonen blijven verhogen als er ook MEER opbrengsten zijn. Productiviteit is de bron van die extra opbrengst." },
           ],
           niveaus: {
-            basis: "Productiviteit > loonstijging → ruimte voor loonsverhoging. Antwoord A.",
+            basis: "Productiviteit > loonstijging → ruimte voor loonsverhoging.",
             simpeler: "Een werkgever kijkt: 'krijg ik genoeg terug voor wat ik betaal?' Als zijn mensen MEER gaan produceren (per uur), kan hij ze meer loon geven. Anders niet — anders maakt hij verlies.",
             nogSimpeler: "Productiviteit > loon = ruimte",
           },
@@ -175,7 +175,7 @@ const steps = [
             { onderwerp: "Progressief belastingstelsel", uitleg: "Hoger inkomen = hoger belasting%. Werkt nivellerend." },
           ],
           niveaus: {
-            basis: "Hogere korting voor laag = laag krijgt voordeel = verschil kleiner = nivellering. Antwoord D.",
+            basis: "Hogere korting voor laag = laag krijgt voordeel = verschil kleiner = nivellering.",
             simpeler: "Heffingskorting helpt vooral lage inkomens (zij krijgen meer korting). Verschil tussen arm en rijk wordt KLEINER = nivellering. En het voordeel zit bij de LAGE inkomens.",
             nogSimpeler: "Nivellering + voordeel laag",
           },
@@ -232,7 +232,7 @@ const steps = [
             { onderwerp: "Welke maat is 'eerlijkst'?", uitleg: "Voor 'gewone burger' geeft mediaan of modaal beter beeld dan gemiddelde — gemiddelde wordt vertekend door enkele zeer rijken." },
           ],
           niveaus: {
-            basis: "Modaal = meest voorkomend. Antwoord C.",
+            basis: "Modaal = meest voorkomend.",
             simpeler: "Modus betekent in statistiek 'wat het meest voorkomt'. Modaal inkomen = wat de meeste mensen verdienen. Niet het gemiddelde (dat trekken rijken op) en niet het minimum.",
             nogSimpeler: "Modaal = meest voorkomend",
           },
@@ -290,7 +290,7 @@ const steps = [
             { onderwerp: "CPI", uitleg: "Consumentenprijsindex — meet gemiddelde prijsverandering van een mandje boodschappen + diensten dat een gemiddeld huishouden koopt." },
           ],
           niveaus: {
-            basis: "Koopkracht corrigeert inkomen voor INFLATIE. Antwoord A.",
+            basis: "Koopkracht corrigeert inkomen voor INFLATIE.",
             simpeler: "Stel: jouw inkomen blijft gelijk maar boodschappen worden 10% duurder. Kun je nog evenveel kopen? Nee — je koopkracht is gedaald. Dat verschil komt door INFLATIE. Daarom moet je inflatie meenemen.",
             nogSimpeler: "Koopkracht corrigeren = inflatie",
           },

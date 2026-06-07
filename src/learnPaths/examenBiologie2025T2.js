@@ -190,7 +190,7 @@ const steps = [
           stappen: [
             { titel: "Zaadleider ≠ urineleider", tekst: "Veel kinderen verwarren deze. **Zaadleider** (Latijn: vas deferens) transporteert zaadcellen vanuit bijbal naar urinebuis. **Urineleider** (Latijn: ureter) transporteert urine vanuit nieren naar blaas. Helemaal andere route." },
             { titel: "Route zaadcellen", tekst: "Zaadballen → bijbal → **zaadleider** → prostaat (mengen) → **urinebuis** → uit penis. De urinebuis transporteert zowel urine (vanaf blaas) als sperma (vanaf zaadleider) — maar nooit tegelijk." },
-            { titel: "Volgorde antwoord", tekst: "Vraag vraagt 'in de juiste volgorde'. Eerst zaadleider (transporteert), daarna urinebuis (uitgang). Antwoord C." },
+            { titel: "Volgorde antwoord", tekst: "Vraag vraagt 'in de juiste volgorde'. Eerst zaadleider (transporteert), daarna urinebuis (uitgang)." },
           ],
           woorden: [
             { woord: "zaadleider", uitleg: "Buis van bijbal naar urinebuis — transporteert sperma." },

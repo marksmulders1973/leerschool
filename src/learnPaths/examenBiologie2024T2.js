@@ -47,7 +47,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een enzym?", tekst: "Een **enzym** is een eiwit-molecuul dat een chemische reactie versnelt. In je lichaam zijn duizenden enzymen — elk voor een eigen taak. In spijsvertering: enzymen breken voedsel af tot kleine stukjes." },
             { titel: "Maagsap bestaat uit 2 dingen", tekst: "1. **Maagzuur (HCl)** — doodt bacteriën + activeert het enzym\n2. **Pepsine** (een enzym) — breekt eiwitten af tot peptiden\nDe vraag gaat over de enzymen, niet over het maagzuur." },
-            { titel: "Antwoord", tekst: "Enzymen verteren voedingsstoffen. In het geval van maag = eiwitten. Antwoord D." },
+            { titel: "Antwoord", tekst: "Enzymen verteren voedingsstoffen. In het geval van maag = eiwitten." },
           ],
           woorden: [
             { woord: "enzym", uitleg: "Eiwit dat een chemische reactie versnelt." },
@@ -61,8 +61,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Enzymen = verteren. Per spijsverteringsorgaan andere enzymen." }],
           niveaus: {
-            basis: "Enzymen verteren voedingsstoffen. Antwoord D.",
-            simpeler: "Enzymen knippen voedsel-moleculen in kleine stukjes zodat het lichaam ze kan opnemen. Antwoord D.",
+            basis: "Enzymen verteren voedingsstoffen.",
+            simpeler: "Enzymen knippen voedsel-moleculen in kleine stukjes zodat het lichaam ze kan opnemen.",
             nogSimpeler: "Verteren",
           },
         },
@@ -103,7 +103,7 @@ const steps = [
           stappen: [
             { titel: "Centraal zenuwstelsel — 4 onderdelen", tekst: "**Grote hersenen** = bewust denken/waarnemen.\n**Kleine hersenen** = COÖRDINATIE + balans.\n**Hersenstam** = automatische functies (ademen, hartslag).\n**Ruggenmerg** = signaal-snelweg + reflexen." },
             { titel: "Waarom alcohol → wankelen", tekst: "Alcohol vertraagt signalen in de kleine hersenen. Daardoor wordt fijne coördinatie minder: precisie verloren, balans wankel, spraak minder duidelijk. Bij veel alcohol vallen mensen om." },
-            { titel: "Antwoord", tekst: "Coördinatie = kleine hersenen. Antwoord B." },
+            { titel: "Antwoord", tekst: "Coördinatie = kleine hersenen." },
           ],
           woorden: [
             { woord: "kleine hersenen (cerebellum)", uitleg: "Achter onder in schedel, regelt soepele coördinatie + balans." },
@@ -116,8 +116,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Coördinatie = kleine hersenen. Alcohol raakt vooral DAT." }],
           niveaus: {
-            basis: "Kleine hersenen. Antwoord B.",
-            simpeler: "Coördinatie + balans zit in de kleine hersenen. Daarom waggelt iemand die te veel gedronken heeft. Antwoord B.",
+            basis: "Kleine hersenen.",
+            simpeler: "Coördinatie + balans zit in de kleine hersenen. Daarom waggelt iemand die te veel gedronken heeft.",
             nogSimpeler: "Kleine hersenen",
           },
         },
@@ -158,7 +158,7 @@ const steps = [
           stappen: [
             { titel: "Luchtweg van neus naar long", tekst: "Inademen: neus/mond → keel → **luchtpijp** → splitst in 2 **bronchiën** (1 per long) → kleinere bronchiolen → eindigen bij **longblaasjes** (alveolen).\nDe eerste 4 stappen zijn ALLEEN transport. Uitwisseling pas op het einde." },
             { titel: "Waarom alleen in longblaasjes?", tekst: "Longblaasjes hebben een dunne wand (1 cel dik) en zijn omringd door haarvaten. Zo kunnen O₂ + CO₂ snel doorheen. De luchtwegen erboven hebben dikke wanden + slijm — geen uitwisseling mogelijk." },
-            { titel: "Antwoord", tekst: "Gaswisseling = longblaasjes. Antwoord B." },
+            { titel: "Antwoord", tekst: "Gaswisseling = longblaasjes." },
           ],
           woorden: [
             { woord: "gaswisseling", uitleg: "Uitwisseling O₂ ↔ CO₂ tussen lucht en bloed." },
@@ -172,8 +172,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Alleen longblaasjes wisselen gas uit. De rest is transport." }],
           niveaus: {
-            basis: "Longblaasjes. Antwoord B.",
-            simpeler: "Lucht reist door luchtpijp + bronchiën als 'snelweg'. Bij de longblaasjes komt de lucht aan en daar wordt zuurstof opgenomen + CO₂ afgegeven. Antwoord B.",
+            basis: "Longblaasjes.",
+            simpeler: "Lucht reist door luchtpijp + bronchiën als 'snelweg'. Bij de longblaasjes komt de lucht aan en daar wordt zuurstof opgenomen + CO₂ afgegeven.",
             nogSimpeler: "Longblaasjes",
           },
         },
@@ -214,7 +214,7 @@ const steps = [
           stappen: [
             { titel: "Wat zijn weeën?", tekst: "**Weeën** = sterke samentrekkingen van de baarmoeder. Komen in golven, worden steeds sterker en korter na elkaar. Doel: kind richting + door de baarmoederhals duwen (ontsluiting), en later het kind naar buiten persen (uitdrijving)." },
             { titel: "Welke spier?", tekst: "De baarmoeder bestaat uit een dikke laag GLADDE SPIER (myometrium). Die spier wordt onbewust aangestuurd door het hormoon **oxytocine**. Buikspieren + middenrif werken later mee bij persen (dat is bewust)." },
-            { titel: "Antwoord", tekst: "Onbewuste samentrekkingen tijdens weeën = baarmoederspieren. Antwoord A." },
+            { titel: "Antwoord", tekst: "Onbewuste samentrekkingen tijdens weeën = baarmoederspieren." },
           ],
           woorden: [
             { woord: "weeën", uitleg: "Onbewuste samentrekkingen van de baarmoeder bij bevalling." },
@@ -229,8 +229,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Weeën = baarmoeder = gladde spier = onbewust = oxytocine." }],
           niveaus: {
-            basis: "Baarmoederspieren. Antwoord A.",
-            simpeler: "Weeën zijn samentrekkingen van de baarmoeder zelf — die heeft een dikke spierlaag. Onbewust aangestuurd door het hormoon oxytocine. Antwoord A.",
+            basis: "Baarmoederspieren.",
+            simpeler: "Weeën zijn samentrekkingen van de baarmoeder zelf — die heeft een dikke spierlaag. Onbewust aangestuurd door het hormoon oxytocine.",
             nogSimpeler: "Baarmoeder",
           },
         },
@@ -285,8 +285,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Hormoon = altijd inwendig (eigen klier maakt het)." }],
           niveaus: {
-            basis: "Inwendige prikkels. Antwoord B.",
-            simpeler: "Hormonen komen van binnenuit (eigen klieren), niet van buiten. Dus de prikkel die ze geven is een INwendige prikkel. Antwoord B.",
+            basis: "Inwendige prikkels.",
+            simpeler: "Hormonen komen van binnenuit (eigen klieren), niet van buiten. Dus de prikkel die ze geven is een INwendige prikkel.",
             nogSimpeler: "Van binnen = inwendig",
           },
         },
@@ -325,7 +325,7 @@ const steps = [
           stappen: [
             { titel: "Twee soorten milieu-factoren", tekst: "**Abiotisch** = niet-levend (water, lucht, temperatuur, licht, bodem-stoffen, pH).\n**Biotisch** = levend (planten, dieren, bacteriën, schimmels)." },
             { titel: "Temperatuur = abiotisch", tekst: "Temperatuur is een meting van warmte — het heeft niets met leven te maken. Dus = abiotisch." },
-            { titel: "Antwoord", tekst: "Temperatuur is abiotisch. Geen biotische factor genoemd in deze context. Antwoord A." },
+            { titel: "Antwoord", tekst: "Temperatuur is abiotisch. Geen biotische factor genoemd in deze context." },
           ],
           woorden: [
             { woord: "abiotisch", uitleg: "Niet-levend onderdeel van milieu (T, water, lucht, bodem)." },
@@ -338,8 +338,8 @@ const steps = [
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Temperatuur/water/lucht/grond = ALTIJD abiotisch." }],
           niveaus: {
-            basis: "Abiotisch (temperatuur is niet-levend). Antwoord A.",
-            simpeler: "Temperatuur is warmte-meting — geen leven. Dus abiotisch. Antwoord A.",
+            basis: "Abiotisch (temperatuur is niet-levend).",
+            simpeler: "Temperatuur is warmte-meting — geen leven. Dus abiotisch.",
             nogSimpeler: "Temperatuur = abiotisch",
           },
         },

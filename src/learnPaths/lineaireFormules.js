@@ -419,7 +419,7 @@ ${baseAxes}
         q: "Los op: 7x − 4 = 3x + 8.",
         options: ["x = 3", "x = 4", "x = 1", "x = 12"],
         answer: 0,
-        wrongHints: [null, "Je rekent verkeerd. Probeer: −3x van beide → 4x − 4 = 8 → 4x = 12 → x = 3.", "Je hebt + 4 gedaan, maar de constanten vereenvoudigen anders: na 4x = 12 is x = 3.", "12 = 4x. Maar daarna nog delen door 4: x = 12/4 = 3."],
+        wrongHints: [null, "Bijna! Breng de x'en naar één kant: −3x van beide → 4x − 4 = 8. Werk nu verder.", "Je hebt + 4 gedaan. Je komt uit op 4x = 12 — wat is dan x?", "12 = 4x klopt. Maar je bent er nog niet: deel nog door 4."],
         uitlegPad: {
           stappen: [
             { titel: "−3x van beide", tekst: "7x − 4 = 3x + 8 → 4x − 4 = 8." },
@@ -453,7 +453,7 @@ ${baseAxes}
         q: "Los op: 3(x − 2) = 9.",
         options: ["x = 5", "x = 3", "x = 7", "x = 11"],
         answer: 0,
-        wrongHints: [null, "Werk eerst haakjes weg: 3(x−2) = 3x − 6. Dan: 3x − 6 = 9 → 3x = 15 → x = 5.", "Je rekent ergens verkeerd. Probeer: 3x − 6 = 9, dan +6 → 3x = 15, dan ÷3 → x = 5.", "11 = 9 + 2. Maar je moet de hele balans-methode toepassen, niet getallen optellen."],
+        wrongHints: [null, "Werk eerst de haakjes weg: 3(x−2) = 3x − 6. Dan: 3x − 6 = 9. Los nu op.", "Je rekent ergens verkeerd. Probeer: 3x − 6 = 9, dan +6 → 3x = 15. Deel nu door 3.", "11 = 9 + 2. Maar je moet de hele balans-methode toepassen, niet getallen optellen."],
         uitlegPad: {
           stappen: [
             { titel: "Haakjes wegwerken", tekst: "3(x − 2) = 3x − 6. Vermenigvuldig 3 met elk deel binnen haakje." },
@@ -520,7 +520,7 @@ ${baseAxes}
         q: "Een plant is 12 cm en groeit 3 cm per week. Lengte na 5 weken?",
         options: ["27 cm", "60 cm", "15 cm", "12 cm"],
         answer: 0,
-        wrongHints: [null, "Je hebt 12 · 5 gedaan. Maar de groei is 3 cm/week. Reken: 3·5 + 12 = 15 + 12 = 27.", "Je hebt alleen de groei (3·5=15) of alleen de start (12). Je moet beide optellen.", "12 is de start, maar er groeit ook bij. 3·5 = 15 erbij, dus 27 cm."],
+        wrongHints: [null, "Je hebt 12 · 5 gedaan. Maar de groei is 3 cm/week. Reken: eerst 3·5, dan + 12.", "Je hebt alleen de groei (3·5=15) of alleen de start (12). Je moet beide optellen.", "12 is de start, maar er groeit ook bij: 3·5 = 15 erbij. Tel die twee op."],
         uitlegPad: {
           stappen: [
             { titel: "Formule", tekst: "Start 12, groei 3/week. y = 3x + 12 (y=lengte, x=weken)." },
@@ -553,7 +553,7 @@ ${baseAxes}
         q: "Los op: 5x − 3 = 2x + 9.",
         options: ["x = 4", "x = 6", "x = 12", "x = 2"],
         answer: 0,
-        wrongHints: [null, "Reken: −2x → 3x − 3 = 9, +3 → 3x = 12, ÷3 → x = 4.", "Je hebt niet beide kanten 'op orde' gebracht. Probeer stap-voor-stap balans.", "Zonder de balansmethode te volgen kom je hier niet aan x = 2."],
+        wrongHints: [null, "Reken: −2x → 3x − 3 = 9, dan +3 → 3x = 12. Deel nu door 3.", "Je hebt niet beide kanten 'op orde' gebracht. Probeer stap-voor-stap balans.", "Zonder de balansmethode kom je hier niet uit. Volg de stappen."],
         uitlegPad: {
           stappen: [
             { titel: "−2x van beide", tekst: "5x − 3 = 2x + 9 → 3x − 3 = 9." },

@@ -60,9 +60,9 @@ const steps = [
             { onderwerp: "Wat is 'inkomen'?", uitleg: "Geld dat binnenkomt bij een huishouden in een bepaalde periode (week, maand, jaar)." },
           ],
           niveaus: {
-            basis: "Subsidie = geld van de overheid waar je niets voor hoeft te doen → categorie 'overdrachten'. Antwoord C.",
+            basis: "Subsidie = geld van de overheid waar je niets voor hoeft te doen → categorie 'overdrachten'.",
             simpeler: "De gemeente GEEFT je geld voor zonnepanelen — je werkt er niet voor, je verhuurt geen huis. Dat is een 'cadeau' van de overheid = overdracht. Net als kinderbijslag.",
-            nogSimpeler: "Geld van overheid + jij doet niks terug = overdrachtsinkomen. Antwoord C.",
+            nogSimpeler: "Geld van overheid + jij doet niks terug = overdrachtsinkomen.",
           },
         },
       },
@@ -118,7 +118,7 @@ const steps = [
             { onderwerp: "Wat is import?", uitleg: "Goederen IN het land halen vanuit het buitenland. Tegenovergestelde van export (uit het land verkopen)." },
           ],
           niveaus: {
-            basis: "BE-overheid heft → BE-importeur betaalt → BE-consument betaalt indirect via duurdere boter. Antwoord D.",
+            basis: "BE-overheid heft → BE-importeur betaalt → BE-consument betaalt indirect via duurdere boter.",
             simpeler: "Stel je voor: BE-importeur Frans haalt boter uit NL. BE-douane zegt 'jij moet €0,50 per kilo extra betalen'. Frans rekent dat door: in BE-winkel kost de boter nu €0,50 meer per kilo. De BE-consument betaalt dat. Niemand in NL doet eraan mee.",
             nogSimpeler: "BE heft = BE-importeur betaalt eerst = BE-consument betaalt uiteindelijk",
           },
@@ -191,7 +191,7 @@ const steps = [
           niveaus: {
             basis: "Influencers worden BETAALD door bedrijven (producenten) om producten aan te prijzen. Bedrijven willen meer verkopen = winst. Dus: het IS ook commerciële beïnvloeding (door producenten, met winstoogmerk) → antwoord B.",
             simpeler: "Stel: een YouTuber maakt een video over een blikje energy drink. Volgers vertrouwen die YouTuber (= sociaal). MAAR het merk heeft de YouTuber betaald om dat blikje te tonen (= commercieel). Allebei tegelijk! De YouTuber werkt voor het merk = doet PRODUCENT-werk. Het merk verdient eraan = WINSTOOGMERK. Antwoord B: 'Ja, beïnvloeding door producenten met winstoogmerk'.",
-            nogSimpeler: "Heel kort: bedrijf betaalt influencer → influencer = werkt voor bedrijf = producent-kant. Bedrijf wil verkoop = winst. Dus: JA + producenten + winstoogmerk = optie B.",
+            nogSimpeler: "Heel kort: bedrijf betaalt influencer → influencer = werkt voor bedrijf = producent-kant. Bedrijf wil verkoop = winst. Dus: JA + producenten + winstoogmerk =",
           },
         },
       },
@@ -248,7 +248,7 @@ const steps = [
             { onderwerp: "Concurrentie", uitleg: "Strijd tussen aanbieders om de gunst van de klant. Hoe meer aanbieders + hoe gelijker de producten, hoe scherper de concurrentie." },
           ],
           niveaus: {
-            basis: "Veel aanbieders + heterogene producten = monopolistische concurrentie. Antwoord B.",
+            basis: "Veel aanbieders + heterogene producten = monopolistische concurrentie.",
             simpeler: "Denk aan kappers in een grote stad: er zijn er HEEL VEEL (= veel aanbieders) en elke kapper is net iets anders (= heterogeen: prijs, sfeer, ervaring). Dat is precies monopolistische concurrentie.",
             nogSimpeler: "Veel + verschillend = monopolistische concurrentie",
           },
@@ -306,8 +306,8 @@ const steps = [
             { onderwerp: "Winst = omzet - kosten", uitleg: "Winstmarge per stuk = verkoopprijs - kostprijs per stuk. Totale winst = winstmarge × aantal stuks." },
           ],
           niveaus: {
-            basis: "Meer produceren → vaste kosten per stuk dalen → kostprijs daalt → bij gelijke verkoopprijs stijgt de winstmarge. Antwoord B.",
-            simpeler: "Stel: K2 maakt eerst 100 stuks. De fabriek-huur is €1.000/maand = €10 per product. Nu maakt K2 200 stuks → huur per product = €5. Verkoopprijs gelijk → winst per stuk groter. Antwoord B.",
+            basis: "Meer produceren → vaste kosten per stuk dalen → kostprijs daalt → bij gelijke verkoopprijs stijgt de winstmarge.",
+            simpeler: "Stel: K2 maakt eerst 100 stuks. De fabriek-huur is €1.000/maand = €10 per product. Nu maakt K2 200 stuks → huur per product = €5. Verkoopprijs gelijk → winst per stuk groter.",
             nogSimpeler: "Meer = goedkoper per stuk = grotere marge",
           },
         },

@@ -108,7 +108,7 @@ const steps = [
           { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab: 'hum', 'feature', 'landmark', 'improvisations' — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Sleutelzin zoeken", tekst: "'Features droning guitar improvisations over the eerie hum of the Bay Area landmark' = brug-geluid is basis. → optie C." }],
+          stappen: [{ titel: "Sleutelzin zoeken", tekst: "'Features droning guitar improvisations over the eerie hum of the Bay Area landmark' = brug-geluid is basis. →" }],
           woorden: [{ woord: "hum", uitleg: "Brommend/zoemend geluid." }, { woord: "feature", uitleg: "Bevatten, met als hoofdrol." }, { woord: "landmark", uitleg: "Beroemd herkenpunt (de brug)." }],
           theorie: "Examen Engels: zoek SLEUTELWOORDEN in tekst die naar antwoord wijzen. 'Hum of landmark' = geluid van brug.",
           voorbeelden: [{ type: "match", tekst: "'Hum' (brug) + 'guitar improvisations over' (gitaar erover) = brug-geluid + gitaar = album." }],

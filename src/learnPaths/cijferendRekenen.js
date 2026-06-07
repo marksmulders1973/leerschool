@@ -307,7 +307,7 @@ const steps = [
           theorie: "Rest 6 zou betekenen 12×6=72, en 78-72=6 over. Maar dan kun je nog 1 keer 6 erbij delen → 13. Dus rest 6 is fout.",
           voorbeelden: [{ type: "controle", tekst: "13×6=78 ✓. Klopt precies, geen rest." }],
           basiskennis: [{ onderwerp: "Wanneer rest?", uitleg: "Alleen als deling NIET netjes uitkomt. 78÷6 komt netjes uit op 13." }],
-          niveaus: { basis: "78÷6=13. A.", simpeler: "Probeer 13×6: 13×6=78 (precies). Geen rest. Antwoord A.", nogSimpeler: "13" },
+          niveaus: { basis: "78÷6=13. A.", simpeler: "Probeer 13×6: 13×6=78 (precies). Geen rest.", nogSimpeler: "13" },
         },
       },
     ],
@@ -342,7 +342,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "'Verdeeld' = delen. 180 ÷ 12." },
-            { titel: "Reken", tekst: "180÷12 = 15 (want 15×12=180). Antwoord A." },
+            { titel: "Reken", tekst: "180÷12 = 15 (want 15×12=180)." },
           ],
           woorden: [{ woord: "verdelen", uitleg: "Iets gelijk over groepen verdelen = delen (÷)." }],
           theorie: "Signaalwoord 'verdeeld over' / 'gelijk per' / 'hoeveel ieder' = altijd delen.",

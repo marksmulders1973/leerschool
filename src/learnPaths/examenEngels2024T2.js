@@ -83,7 +83,7 @@ const steps = [
           null,
           "De tekst noemt geen rekenfouten — wel snellere afhandeling, maar dat is geen 'correctie van fouten'.",
         ],
-        explanation: "Sleutel-zin alinea 3: '*Japan hopes that by introducing more robots into its workforce it can address the problem of its shrinking and rapidly ageing population*'. Vergrijzing + krimpende bevolking = minder werkenden beschikbaar → robots/AI moeten het personeelstekort opvangen. Antwoord C.",
+        explanation: "Sleutel-zin alinea 3: '*Japan hopes that by introducing more robots into its workforce it can address the problem of its shrinking and rapidly ageing population*'. Vergrijzing + krimpende bevolking = minder werkenden beschikbaar → robots/AI moeten het personeelstekort opvangen.",
         examenBron: BRON_LABEL(1),
         bronLink: BRON_LINK,
         bronTekst: tekst1,

@@ -608,7 +608,7 @@ const steps = [
             { type: "stap", tekst: "Tekst over fietshelm met 'daarom adviseren artsen helm' → hoofdgedachte = 'fietshelm dragen is verstandig'." },
           ],
           basiskennis: [{ onderwerp: "Hoofdgedachte = 1 zin", uitleg: "Hoofdgedachte is altijd kort + duidelijk samen te vatten in 1 zin. Geen ingewikkelde opties." }],
-          niveaus: { basis: "Mobielverbod positief.", simpeler: "'Dus' wijst op conclusie. Laatste zin: mobielverbod is goede zaak. Hoofdgedachte = dat = optie A.", nogSimpeler: "Verbod is goed" },
+          niveaus: { basis: "Mobielverbod positief.", simpeler: "'Dus' wijst op conclusie. Laatste zin: mobielverbod is goede zaak. Hoofdgedachte = dat =", nogSimpeler: "Verbod is goed" },
         },
       },
       {
